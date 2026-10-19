@@ -1,6 +1,6 @@
 # P123.087 — Boundary periodization and a weighted operator comparison
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY on a single-zero
+Status: PROVED-IN-REPOSITORY on a single-zero
 two-prime boundary, for integrable scalar coefficients and external
 Bruhat tests. This compares actual weighted normal compressions with
 the coefficient boundary trace. It is not a correspondence functor

@@ -20,7 +20,7 @@ Let
 corresponding to the integers `1,...,N`.  Put
 
 \[
- S_N=Q_NSQ_N,qquad V_{m,N}=Q_NV_mQ_N.             \tag{1.2}
+ S_N=Q_NSQ_N,\qquad V_{m,N}=Q_NV_mQ_N.             \tag{1.2}
 \]
 
 The support cutoff `n<e^(2T)` is of this form, up to the harmless strict

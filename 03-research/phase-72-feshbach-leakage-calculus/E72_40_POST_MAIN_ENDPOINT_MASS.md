@@ -1,7 +1,6 @@
 # E72.40 -- Post-main endpoint mass and the missing half-power
 
-**Date:** 2026-07-08.
-**Role:** estimate the post-main Chebyshev-discrepancy mass appearing in E72.39 and determine what
+**Purpose:** estimate the post-main Chebyshev-discrepancy mass appearing in E72.39 and determine what
 the compressed channel must supply.
 
 ## 0. The post-main scalar integral

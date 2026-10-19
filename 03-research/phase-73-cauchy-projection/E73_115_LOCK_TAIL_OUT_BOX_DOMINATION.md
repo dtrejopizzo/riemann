@@ -1,6 +1,5 @@
 # E73.115 - Box Domination for LOCK/TAIL/OUT
 
-Date: 2026-07-12.
 
 This note converts the remaining center-only parts of E73.114 into a
 finite box theorem.  The goal is to avoid more point experiments: after

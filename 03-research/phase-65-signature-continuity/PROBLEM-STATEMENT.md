@@ -1,6 +1,6 @@
 # Phase 65 — The Signature-Continuity Problem: precise statement, the object to build, and the new mathematics
 
-**Status:** open · started 2026-06-29 · pure mathematics only (no computation) · the sole objective of
+**Status:** open · started · pure mathematics only (no computation) · the sole objective of
 this phase is to construct one new mathematical object and prove one theorem, which together are RH.
 
 > **Governing principle (unchanged).** A false victory is worse than failure. Every conjecture is

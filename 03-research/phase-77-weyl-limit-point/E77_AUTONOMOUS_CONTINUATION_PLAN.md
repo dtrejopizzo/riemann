@@ -308,7 +308,7 @@ Build:
 
 ```text
 E77_5n_lead_1_over_n_cancel_probe.py
-E77_5N_LEAD_1_OVER_N_CANCEL.md
+E77_5N_1_OVER_N_CANCEL.md
 ```
 
 Measure by sigma, not only max rows:
@@ -322,7 +322,7 @@ candidate sigma profile from external tail asymptotics.
 If `C_N(sigma)` stabilizes, name its finite cell coefficient.  If it does
 not, autopsy and reduce to the true coefficient object.
 
-Status: completed in `E77_5N_LEAD_1_OVER_N_CANCEL.md`.  `C_N(sigma)` is
+Status: completed in `E77_5N_1_OVER_N_CANCEL.md`.  `C_N(sigma)` is
 positive and smooth for zeta, but it still drifts; a fixed leading
 coefficient closure is not licensed.
 

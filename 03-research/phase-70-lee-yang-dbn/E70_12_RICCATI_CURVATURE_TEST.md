@@ -1,7 +1,6 @@
 # E70.12 -- Riccati/curvature test for the Mobius connection
 
-**Date:** 2026-07-07.
-**Role:** compute the first structural identity after `V_Lambda = Z^{-1}delta Z` and test whether it
+**Purpose:** compute the first structural identity after `V_Lambda = Z^{-1}delta Z` and test whether it
 can generate the Gamma/polar majorant.
 
 ## Setup

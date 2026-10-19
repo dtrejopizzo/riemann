@@ -226,7 +226,7 @@ Since \(v_y\,d\mu_K=h(y)d\nu_y\), the sum of the last terms in
 
 \[
  -{h(y)^2\over2}
- \left{
+ \left\{
   \int|a|^2\,d\nu_y
   -\left|\int a\,d\nu_y\right|^2
  \right}.

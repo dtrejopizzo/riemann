@@ -1,7 +1,6 @@
 # E72.99 -- Weyl root structure audit
 
-**Date:** 2026-07-09.
-**Role:** test whether the transport vector `Z_x(tau_j)` already contains a simple Weyl-root factor.
+**Purpose:** test whether the transport vector `Z_x(tau_j)` already contains a simple Weyl-root factor.
 
 ## 0. Question
 

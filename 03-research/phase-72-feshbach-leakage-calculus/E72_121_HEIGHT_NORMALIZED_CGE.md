@@ -1,7 +1,6 @@
 # E72.121 -- Height-normalized CGE audit
 
-**Date:** 2026-07-09.
-**Role:** test and calibrate the natural height scale in the Cauchy graph-energy bound.
+**Purpose:** test and calibrate the natural height scale in the Cauchy graph-energy bound.
 
 ## 0. Motivation
 

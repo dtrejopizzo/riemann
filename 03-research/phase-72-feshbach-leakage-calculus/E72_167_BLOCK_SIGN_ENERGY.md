@@ -1,7 +1,6 @@
 # E72.167 -- Block sign-energy gate
 
-**Date:** 2026-07-09.
-**Role:** replace asymptotic `F2B-PSD` by a diagonal sign-energy estimate.
+**Purpose:** replace asymptotic `F2B-PSD` by a diagonal sign-energy estimate.
 
 ## 0. Definition
 

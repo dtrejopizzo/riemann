@@ -28,7 +28,7 @@ for NAME in sys.argv[1:]:
         lobes.append({"t": float(tg[a+i]), "val": float(seg[a and i or i]),
                       "sign": int(np.sign(seg.mean())),
                       "mass": float(np.trapz(seg, tg[a:b+1]))})
-    # [amended 2026-09-21 per R155_012] the [:24] cap made every run report exactly 12
+    # [amended per R155_012] the [:24] cap made every run report exactly 12
     # negative lobes (lobes alternate in sign).  No cap: count them all on [0,60].
     lobes = [l for l in lobes if abs(l["val"]) > 1e-12]
     neg = [l for l in lobes if l["sign"] < 0]
@@ -51,7 +51,7 @@ for NAME in sys.argv[1:]:
                          "gap_lo": float(lo), "gap_hi": float(hi),
                          "frac_in_gap": float((t0-lo)/(hi-lo)) if np.isfinite(hi) else None,
                          "top_terms": [[float(g[k]), float(terms[k])] for k in o],
-                         # [amended 2026-09-21 per R155_012] denominator = the first 60 zeros only: this is a
+                         # [amended per R155_012] denominator = the first 60 zeros only: this is a
                          # share WITHIN THE HEAD of the sum, not of the whole zero sum.
                          "top5_share_of_first60": float(np.abs(terms[o]).sum()/max(np.abs(terms).sum(), 1e-30))})
 

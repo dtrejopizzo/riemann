@@ -1,6 +1,6 @@
 # M5 — The Weil-residual classification program (pure theory): an arithmetic invariant separating RH-true from RH-false L-functions
 
-**Route B / creative frontier, pure-theory spine.** Author: David Alejandro Trejo Pizzo · 2026-06-03.
+**Route B / creative frontier, pure-theory spine.**
 Builds on: P7 (localized detector, forced negativity), P8 (Kreĭn/angular, Thm C), M1 (Connes residual,
 Prop B3.1.3), M3 (semi-local residual). Panel input: reframe to **classification, not RH**; the **tautology
 test** is mandatory and first.
@@ -31,7 +31,7 @@ the invariant and the theorems governing it; RH is the **north star**, not the t
 
 ---
 
-> **⚠️ FOUNDATION CORRECTION (hostile audit, 2026-06-03).** The first draft proposed working with a
+> **⚠️ FOUNDATION CORRECTION (audit).** The first draft proposed working with a
 > generalized Connes residual $K_{\mathrm{CC}}(L)$ via "CC eq. (14) with $\lambda(n)\to a_n(L)$." **That is an
 > error:** in CC eq. (14) the $\lambda(n)$ are the **prolate spheroidal eigenvalues** (Sonin geometry,
 > L-independent), *not* the L-function coefficients. The L-dependence of the semi-local residual enters

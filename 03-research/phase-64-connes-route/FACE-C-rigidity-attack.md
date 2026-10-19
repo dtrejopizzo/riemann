@@ -1,6 +1,6 @@
 # Rigidity attack on the isometry equivalent: must a positive-Hamiltonian reflection be isometric? — the de Branges theorem says YES for the structure Hamiltonian, and the audit pins the wall to a single new statement: **Hermite–Biehler survives renormalization $\Leftrightarrow$ RH**
 
-*Pure mathematics. Per the directive — stop seeking new roads, attack the equivalence "decomposition $=$
+* Per the directive — stop seeking new roads, attack the equivalence "decomposition $=$
 RH" directly and make it as sharp as possible — we take the isometry reformulation
 (`FACE-C-simple-crossings-audit.md` §5: RH $=$ the reflection $s\leftrightarrow1-s$ is an isometry of
 the primitive canonical kernel) and attack it with **rigidity**, a non-positivity tool. We find a real

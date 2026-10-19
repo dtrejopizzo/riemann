@@ -1,7 +1,6 @@
 # E72.84 -- Physical-height cofactor tightness
 
-**Date:** 2026-07-09.
-**Role:** correct E72.83 by replacing fixed Fourier-index tightness with the stable physical-height
+**Purpose:** correct E72.83 by replacing fixed Fourier-index tightness with the stable physical-height
 tightness.
 
 ## 0. Correction to E72.83

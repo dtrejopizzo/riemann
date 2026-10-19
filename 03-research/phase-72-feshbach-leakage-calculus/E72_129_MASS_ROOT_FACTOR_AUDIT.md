@@ -1,7 +1,6 @@
 # E72.129 -- Mass root-factor audit
 
-**Date:** 2026-07-09.
-**Role:** test whether the remaining mass gain is explained by a simple scalar root factor.
+**Purpose:** test whether the remaining mass gain is explained by a simple scalar root factor.
 
 ## 0. Question
 

@@ -1,6 +1,6 @@
 # E78.4d - Interface reset after the source/anchor scalar autopsies
 
-**Run:** 2026-07-18.
+**Run:**
 **Scope:** LP-interface front only.
 
 ## 1. Purpose

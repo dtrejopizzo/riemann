@@ -42,7 +42,7 @@ for NZ in (10, 100, 1000):
 tfar = np.arange(win.taumax, FAR, 0.005)
 ff = P.f_prime(win, y, x, tfar, ns, lam) + bet @ ghat(tfar)
 
-# norm budget (honest envelope threshold)  [amended 2026-09-21 per R155_012]
+# norm budget (honest envelope threshold) [amended per R155_012]
 # ||nu_w||_TV for nu_w = [1/2(1-w)K + 2w cosh(u/2)]1_{|u|>=2T}du - sum_{n not in N_T}(v_n/2)w(log n)delta_{+-log n}
 # The measure is EVEN: each a.c. piece counts twice (u and -u), and the atoms at +-log n
 # have total mass v_n|w(log n)| (not 2v_n: the atom mass is v_n/2 on each side).
@@ -61,7 +61,7 @@ out = {"name": NAME, "T": T, "beta": bet.tolist(),
        "c_lp": d["c_lp"], "certified_zero_side": d["certified"],
        "min_f_prime_coarse": float(fp_c.min()), "argmin_coarse": float(tauc[np.argmin(fp_c)]),
        "min_f_prime_fine": float(fp_f.min()), "argmin_fine": float(fine[np.argmin(fp_f)]),
-       # [amended 2026-09-21 per R155_012] the refinement covers only the 60 smallest coarse
+       # [amended per R155_012] the refinement covers only the 60 smallest coarse
        # nodes, so the (dc/50) pad is NOT an enclosure; the enclosure over the whole interval
        # uses the coarse spacing dc.  A genuine dense enclosure is computed by dense.py.
        "B2": d["B2"], "pad_localised_NOT_an_enclosure": d["B2"]*(d["dc"]/50.0)**2/8,

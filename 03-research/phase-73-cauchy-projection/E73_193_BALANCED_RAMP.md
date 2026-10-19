@@ -1,6 +1,5 @@
 # E73.193 - Balanced ramp
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

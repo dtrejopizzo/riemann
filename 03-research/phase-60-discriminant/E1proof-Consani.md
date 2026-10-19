@@ -1,4 +1,4 @@
-# E1 (real-rootedness) — lens: is the secular LINEAR or QUADRATIC? **Author of audit:** C. (with,), for the CCM zeta spectral-triple
+# E1 (real-rootedness) — lens: is the secular LINEAR or QUADRATIC? For the CCM zeta spectral-triple
 program. Cold candor. Scope: settle whether the validated engine's secular function is the
 *linear* form `Σ ξ_k/(s−d_k)` or the *quadratic resolvent* `Σ ξ_k²/(s−d_k)`, because the
 latter would close E1 elementarily (Herglotz), the former would not. --- ## 1. What the engine ACTUALLY computes (VERBATIM from the code) — DECISIVE File: `experiments/E4hp_convergence.py`, lines 64–66: ```python

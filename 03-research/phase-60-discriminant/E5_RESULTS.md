@@ -1,20 +1,20 @@
-# Phase 60 — E5: el violador L_DH. RESULTADOS (franco, inconcluso) **Fecha:** 2026-06-16 · **Código:** `E5_ldh_violator.py`, `E5b_*`, `E5c_dispersion_profile.py` ## Objetivo
-Testear el mapa a RH (Eslabon 2): el operador CCM es auto-adjunto -> espectro REAL siempre;
-L_DH tiene un cero OFF-line (85.699+0.3085i), que un autovalor real no puede igualar -> la
-convergencia DEBE romperse. Buscabamos el testigo numerico de "convergencia <=> RH". ## Lo construido (real, primero en el programa)
-- Engine CCM parametrizado en forma de Fourier (a, conductor, coeficientes, polo).
-- Operador CCM de **L_DH**: arquimediano a=3/4, conductor 5, sin polo (f entera), coeficientes b(n) = -f'/f (soporte denso en todo n), κ_DH=0.284079.
-- **Gate ζ PASA** en el engine nuevo: raiz exacta 14.1347 y, a altura 85, el cero on-line de ζ 84.7355 reproducido (disp 3e-4 sobre N=44..60). ## Resultado decisivo: NEGATIVO / inconcluso **E5b** (convergencia en N del autovalor): L_DH dispersa 0.13 en H=85.7 vs ~0.03 en control
-H=48 — peor, pero el control no quedo plano. **E5c** (perfil de dispersion vs altura, el test limpio): la dispersion de L_DH **NO tiene
-pico localizado en los ceros off-line (85.7, 114)**. Crece **suave y monotona con la altura**
-(0.005 en H=24 -> 0.1 en H=80 -> 16 en H=120). En H=84,86 es 0.04, *menor* que en H=74-80. Por criterio pre-registrado: crecimiento suave con H = resolucion/truncacion, **no** firma
-del cero off-line. **El testigo numerico de "convergencia <=> RH" NO queda establecido a λ=3.7.** ## Caveats que invalidan una conclusion fuerte (declarados)
-1. **λ=3.7 demasiado chico para L_DH:** b(n) denso truncado en n<=13 es burdo; explica la degradacion suave con la altura. La region H>100 esta directamente sin resolver.
-2. ~~a=3/4 NO validado~~ **CERRADO (E5d):** el arquimediano a=3/4 se valido sobre L(χ_-4) (caracter impar real mod 4, Euler, RH-true): ceros 6.0209, 10.2438, 12.9881, 16.3426 reproducidos a ~1e-6 (limitado por los valores de referencia, no el engine). Por tanto el operador de L_DH usa un arquimediano CORRECTO y el resultado negativo de E5 es real.
-3. **Metrica probablemente equivocada:** por Thm 1.1(iii) el cero off-line seria un autovalor FALTANTE (invisible al espectro real), no uno de alta dispersion. Diagnostico correcto: |ξ̂_{λ,N}(85.699+0.3085i)| (que no puede anularse) vs Ξ_DH(ahi)=0, y su no-convergencia a 0. ## Estado del mapa tras E5
-- Mecanismo matematico **intacto como teorema** (Hurwitz + Thm 1.1(iii)): aproximantes con solo raices reales no convergen a Ξ_DH (cero complejo). No depende del experimento.
-- Demostracion numerica del mecanismo: **abierta**. Requiere (a) validar a=3/4 sobre L(χ4); (b) λ grande con L_DH resuelto hasta H~85 (arith sums grandes + mpmath); (c) el diagnostico del determinante complejo (E6), no la dispersion. ## Franco
-No hubo victoria. Se construyo el instrumento correcto y el experimento decisivo salio
-inconcluso a parametros accesibles, con un caveat de validacion (a=3/4) que hay que cerrar
-antes de cualquier afirmacion. El siguiente paso real es E6 (determinante complejo) tras
-validar a=3/4 — no seguir forzando la metrica de dispersion.
+# Phase 60 — E5: the L_DH violator. RESULTS (honest, inconclusive) **Code:** `E5_ldh_violator.py`, `E5b_*`, `E5c_dispersion_profile.py` ## Objective
+Test the map to RH (Link 2): the CCM operator is self-adjoint -> spectrum always REAL;
+L_DH has an OFF-line zero (85.699+0.3085i), which a real eigenvalue cannot match -> the
+convergence MUST break. We were looking for the numerical witness of "convergence <=> RH". ## What was built (real, first in the program)
+- CCM engine parametrized in Fourier form (a, conductor, coefficients, pole).
+- CCM operator for **L_DH**: archimedean a=3/4, conductor 5, no pole (f entire), coefficients b(n) = -f'/f (dense support over all n), κ_DH=0.284079.
+- **ζ gate PASSES** in the new engine: exact root 14.1347 and, at height 85, the on-line zero of ζ 84.7355 reproduced (disp 3e-4 over N=44..60). ## Decisive result: NEGATIVE / inconclusive **E5b** (convergence in N of the eigenvalue): L_DH disperses 0.13 at H=85.7 vs ~0.03 in the control
+H=48 — worse, but the control did not level off. **E5c** (dispersion profile vs height, the clean test): the dispersion of L_DH **has NO
+peak localized at the off-line zeros (85.7, 114)**. It grows **smoothly and monotonically with height**
+(0.005 at H=24 -> 0.1 at H=80 -> 16 at H=120). At H=84,86 it is 0.04, *lower* than at H=74-80. By pre-registered criterion: smooth growth with H = resolution/truncation, **not** a signature
+of the off-line zero. **The numerical witness of "convergence <=> RH" is NOT established at λ=3.7.** ## Caveats that invalidate a strong conclusion (declared)
+1. **λ=3.7 too small for L_DH:** b(n) dense truncated at n<=13 is crude; this explains the smooth degradation with height. The region H>100 is directly unresolved.
+2. ~~a=3/4 NOT validated~~ **CLOSED (E5d):** the archimedean a=3/4 was validated on L(χ_-4) (odd real character mod 4, Euler, RH-true): zeros 6.0209, 10.2438, 12.9881, 16.3426 reproduced to ~1e-6 (limited by the reference values, not the engine). Therefore the L_DH operator uses a CORRECT archimedean factor and the negative result of E5 is real.
+3. **Metric probably wrong:** by Thm 1.1(iii) the off-line zero would be a MISSING eigenvalue (invisible to the real spectrum), not one of high dispersion. Correct diagnostic: |ξ̂_{λ,N}(85.699+0.3085i)| (which cannot vanish) vs Ξ_DH(there)=0, and its non-convergence to 0. ## State of the map after E5
+- Mathematical mechanism **intact as a theorem** (Hurwitz + Thm 1.1(iii)): approximants with only real roots do not converge to Ξ_DH (complex zero). Does not depend on the experiment.
+- Numerical demonstration of the mechanism: **open**. Requires (a) validating a=3/4 on L(χ4); (b) large λ with L_DH resolved up to H~85 (large arithmetic sums + mpmath); (c) the complex-determinant diagnostic (E6), not the dispersion. ## Honest assessment
+There was no victory. The correct instrument was built and the decisive experiment came out
+inconclusive at accessible parameters, with a validation caveat (a=3/4) that had to be closed
+before any claim. The real next step is E6 (complex determinant) after
+validating a=3/4 — not continuing to force the dispersion metric.

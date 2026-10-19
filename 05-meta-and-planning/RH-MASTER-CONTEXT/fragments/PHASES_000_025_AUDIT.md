@@ -1,197 +1,197 @@
-# Auditoría de fases 000–025
+# Audit of phases 000–025
 
-## Criterio y alcance
+## Criterion and scope
 
-Esta auditoría cubre cada directorio de `03-research` cuya fase numérica está entre 000 y 025. Las fases **001** y **002 no existen en el árbol**; se registra la ausencia, no se les atribuye trabajo ni resultado. Se leyeron los documentos Markdown sustantivos, incluidos planes, informes, veredictos, cierres, auditorías y bitácoras de prueba; los programas y datos se contrastaron sólo cuando el texto apoyaba un hecho numérico o reproducible. Los artefactos técnicos auxiliares (código, CSV, imagen, PDF/TeX, copia de seguridad y `.DS_Store`) no se cuentan como documentos matemáticos, salvo que su resultado estuviera incorporado y discutido en un Markdown.
+This audit covers every directory of `03-research` whose numeric phase is between 000 and 025. Phases **001** and **002 do not exist in the tree**; the absence is recorded, and no work or result is attributed to them. The substantive Markdown documents were read, including plans, reports, verdicts, closures, audits and proof logs; programs and data were cross-checked only when the text supported a numerical or reproducible fact. Auxiliary technical artifacts (code, CSV, image, PDF/TeX, backup and `.DS_Store`) are not counted as mathematical documents, unless their result was incorporated and discussed in a Markdown file.
 
-Leyenda: **PROBADO** = derivación interna completa o identidad clásica correctamente usada; **CONDICIONAL** = depende de una hipótesis declarada; **NUMÉRICO** = experimento, aunque sea reproducible; **CONJETURAL** = programa o implicación no demostrada; **REFUTADO** = el propio expediente invalida la vía; **EQUIVALENTE-A-RH** = la meta es otra formulación de RH; **INCOMPLETO** = falta un enlace necesario. “Probado” significa probado en el expediente y no certificación externa de todas las referencias o de cada paso largo.
+Legend: **PROVED** = complete internal derivation or correctly used classical identity; **CONDITIONAL** = depends on a stated hypothesis; **NUMERICAL** = experiment, even if reproducible; **CONJECTURAL** = unproved program or implication; **REFUTED** = the record itself invalidates the route; **EQUIVALENT-TO-RH** = the target is another formulation of RH; **INCOMPLETE** = a necessary link is missing. "Proved" means proved in the record, not external certification of every reference or every long step.
 
-## Cobertura documental
+## Document coverage
 
-| Fase | Cobertura de documentos sustantivos | Estado de cobertura |
+| Phase | Coverage of substantive documents | Coverage status |
 |---|---|---|
-| 000 | `0A1-weil-guinand-translation`; `0A2-connes-compression`; `0A3-debranges-structure-function`; `0B-cartography-first-pass`; `phase0-plan` | Completa: 5/5 |
-| 001 | Directorio ausente | Ausencia registrada |
-| 002 | Directorio ausente | Ausencia registrada |
-| 003 | `engine-spec`; `phase3-plan` | Completa: 2/2 |
-| 004 | `B2-THEOREM`; `B3-KREIN-STRUCTURE`; `PAPER-A`; `PHASE4-WORK-PROGRAM`; `RH-ENDGAME`; y en `proofs/`: `00-PROOF-LOG`, `A1-operator-and-compression`, `B2-semiboundedness`, `B2.4a-break-attempt`, `B2.4a-closability`, `B2.4a-de-branges-norm`, `CLOS1-audit-and-RFB`, `Day10-kernel-audit`, `Day11-theorem-audit`, `Day12-density-scaling-law`, `Day13-DENS1-audit`, `Day14-reduction-audit`, `Day15-K5-audit`, `Day16-carleson-and-RFB`, `Day17-verification`, `Day18-quadrature`, `Day19-pair-correlation-input`, `Day20-threshold-correction`, `Day21-offline-and-coercivity`, `Day22-coercivity`, `EF-identity-audit`, `closure-in-HEgamma`, `space-correction-strip-hardy` | Completa: 28/28; manual LaTeX excluido por no ser documento matemático independiente |
-| 005 | `B2-semilocal-residual`; `B3.1-connes-comparison`; `B3.2-de-branges-comparison`; `M5-T1-T2-proofs`; `M5-classification-pure-theory`; `Phase2-Rp-Euler`; `T3-anatomy`; `T4-seed`; `experiments/M4-D2-results`; `experiments/Phase3-results` | Completa: 10/10 |
-| 006 | `M-OS-1-S1-setup`; `M-OS-2-S2-local-REFUTATION`; `S2-followup-incoherence`; `S2f-PROGRESS-CANDID` | Completa: 4/4 |
-| 007 | `P7-OPEN-CORE-carleson-saturation`; `P7b-second-order-sinekernel-bridge`; `connes/P7c-connes-core-same-wall` | Completa: 3/3 |
-| 008 | `GATE-B-verdict-sixth-language`; `PLAN-RH-PHASE8-heat-flow`; `RT-coupled-verdict`; `SEED-results-and-candid-caveat`; `UPPER-TAIL-verdict` | Completa: 5/5 |
-| 009 | `M9.1-N6-spearhead-verdict`; `PLAN-RH-PHASE9-unconditional-universality`; `T9A-verdict-wrong-sign`; `T9cal-DELIVERABLE-exchange-rate` | Completa: 4/4 |
-| 010 | `DEEPRUN-analysis-M10.1-M10.3`; `M10.1-verdict-degenerate-hodge`; `M10.2-verdict-regularized-gap-survives`; `M10.3-verdict-uniform-frame-S(T)`; `M10.4-verdict-route-priced-capstone-holds`; `PHASE-10-NEW-MATHEMATICS-the-cohomological-turn`; `REPORT-M10.1-to-M10.3-cohomological-turn` | Completa: 7/7 |
-| 011 | `PLAN-RH-PHASE11-hyperbolicity-route`; `M11.2-verdict-interlacing-total-positivity`; `M11.3-verdict-preserver-blind-MSS-pivot`; `M11.4-5-verdict-capstone-holds-richest-positivity` | Completa: 4/4 |
-| 012 | `PLAN-RH-PHASE12-log-correlated-upper-bounds`; `M12-VERDICT-capstone-escaped-new-barrier`; `M12.8-verdict-freezing-live-frontier`; `M12.9-verdict-moment-problem-candid-status`; `M12.10-the-meta-obstruction`; `M12.11-N7-closure-attempt-littlewood` | Completa: 6/6 |
-| 013 | `RESULT-omega-class-structure-of-chaos` | Completa: 1/1 |
-| 014 | `ANCHOR-framework-a-classification-of-zero-absence`; `AUDIT-P7-structural-line-collapse`; `BREAK-N8-the-anchor-asymmetry`; `M14.1-verdict-additive-divisor-motohashi`; `M14.2-verdict-nontrivial-spectral-modification`; `M14.3-VERDICT-self-referential-close-the-line`; `N8-the-density-to-absence-gap`; `STAGE1-2-anchor-vs-definiteness-the-verdict`; `STRATEGIC-where-omega-touches-the-zeros` | Completa: 9/9 |
-| 015 | `00-PHASE-15-overview`; `M1-arithmetic-intersection-pairing`; `M2-ample-cone-edge-positivity`; `M3-arithmetic-hodge-index`; `M3-attempt5-arithmetic-hodge-index-exists`; `M3-attempt6-elliptic-control-heights-vs-zeros`; `M3-attempt7-constructing-the-zero-cohomology`; `M3-attempt8-the-kahler-form`; `M3-genuine-attempts-on-the-core`; `M4-the-chosen-direction-archimedean-modular-omega`; `M5-the-lefschetz-dichotomy-closure`; `M6-the-prismatic-route-assessment`; `M7-advisor-incompleteness-theorem-audit`; `M8-front1-proof-audit-REFUTED`; `M9-kosmos-run-1-assessment`; `M10-arakelov-equivalence-audit`; `SYNTHESIS-M1-to-M3-and-the-precise-gap` | Completa: 17/17 |
-| 016 | `00-SURF-SPEC-SHEET`; `01-pillar1-triage-three-routes`; `02-pillar2-prototype-resonance-wall`; `03-residue-pairing-nontrivial`; `04-MSZ-pairing-hits-CAP`; `05-resonance-pairing-definite-THEOREM`; `06-hunt-indefinite-object`; `07-pontryagin-the-indefinite-object`; `08-debranges-herglotz-clean-criterion`; `09-self-adjoint-construction` | Completa: 10/10 |
-| 017 | `00-SURF-2.0-design`; `01-SURF-A-triage`; `02-involution`; `03-route2-testbed`; `04-SURF-B-resolvent` | Completa: 5/5 |
-| 018 | `01-negative-directions-portrait`; `02-explicit-formula-coupling` | Completa: 2/2 |
-| 019 | `00-PHASE19-CLOSURE`; `01-camino3-forward-flow`; `02-omega-rate-freezing`; `03-bsmooth-freezing`; `04-random-mult-maximum`; `05-k2-from-erdjoskac` | Completa: 6/6 |
-| 020 | `00-PHASE20-DESIGN`; `00b-PASO0-analisis-dirichlet`; `01-proof-explicit-formula-omega`; `02-proof-error-correlation` | Completa: 4/4 |
-| 021 | `00-setup`; `01-parity-and-geometry`; `02-exclusion-principle` | Completa: 3/3 |
-| 022 | `00-setup`; `01-modified-explicit-formula`; `02-invariants`; `03-spectral-rigidity` | Completa: 4/4 |
-| 023 | `00-setup`; `01-exact-hadamard-effect`; `02-structure-function-analysis`; `03-barrier-formulation` | Completa: 4/4 |
-| 024 | `00-setup`; `01-lower-bounds-bj`; `02-local-profile`; `03-rigorous-chaos` | Completa: 4/4 |
-| 025 | `00-setup`; `01-audit-classical`; `02-deBruijn-Newman`; `03-krein-lp`; `04-verdict` | Completa: 5/5 |
+| 000 | `0A1-weil-guinand-translation`; `0A2-connes-compression`; `0A3-debranges-structure-function`; `0B-cartography-first-pass`; `phase0-plan` | Complete: 5/5 |
+| 001 | Directory absent | Absence recorded |
+| 002 | Directory absent | Absence recorded |
+| 003 | `engine-spec`; `phase3-plan` | Complete: 2/2 |
+| 004 | `B2-THEOREM`; `B3-KREIN-STRUCTURE`; `PAPER-A`; `PHASE4-WORK-PROGRAM`; `RH-ENDGAME`; and in `proofs/`: `00-PROOF-LOG`, `A1-operator-and-compression`, `B2-semiboundedness`, `B2.4a-break-attempt`, `B2.4a-closability`, `B2.4a-de-branges-norm`, `CLOS1-audit-and-RFB`, `Day10-kernel-audit`, `Day11-theorem-audit`, `Day12-density-scaling-law`, `Day13-DENS1-audit`, `Day14-reduction-audit`, `Day15-K5-audit`, `Day16-carleson-and-RFB`, `Day17-verification`, `Day18-quadrature`, `Day19-pair-correlation-input`, `Day20-threshold-correction`, `Day21-offline-and-coercivity`, `Day22-coercivity`, `EF-identity-audit`, `closure-in-HEgamma`, `space-correction-strip-hardy` | Complete: 28/28; LaTeX manual excluded as not an independent mathematical document |
+| 005 | `B2-semilocal-residual`; `B3.1-connes-comparison`; `B3.2-de-branges-comparison`; `M5-T1-T2-proofs`; `M5-classification-pure-theory`; `Phase2-Rp-Euler`; `T3-anatomy`; `T4-seed`; `experiments/M4-D2-results`; `experiments/Phase3-results` | Complete: 10/10 |
+| 006 | `M-OS-1-S1-setup`; `M-OS-2-S2-local-REFUTATION`; `S2-followup-incoherence`; `S2f-PROGRESS-CANDID` | Complete: 4/4 |
+| 007 | `P7-OPEN-CORE-carleson-saturation`; `P7b-second-order-sinekernel-bridge`; `connes/P7c-connes-core-same-wall` | Complete: 3/3 |
+| 008 | `GATE-B-verdict-sixth-language`; `PLAN-RH-PHASE8-heat-flow`; `RT-coupled-verdict`; `SEED-results-and-candid-caveat`; `UPPER-TAIL-verdict` | Complete: 5/5 |
+| 009 | `M9.1-N6-spearhead-verdict`; `PLAN-RH-PHASE9-unconditional-universality`; `T9A-verdict-wrong-sign`; `T9cal-DELIVERABLE-exchange-rate` | Complete: 4/4 |
+| 010 | `DEEPRUN-analysis-M10.1-M10.3`; `M10.1-verdict-degenerate-hodge`; `M10.2-verdict-regularized-gap-survives`; `M10.3-verdict-uniform-frame-S(T)`; `M10.4-verdict-route-priced-capstone-holds`; `PHASE-10-NEW-MATHEMATICS-the-cohomological-turn`; `REPORT-M10.1-to-M10.3-cohomological-turn` | Complete: 7/7 |
+| 011 | `PLAN-RH-PHASE11-hyperbolicity-route`; `M11.2-verdict-interlacing-total-positivity`; `M11.3-verdict-preserver-blind-MSS-pivot`; `M11.4-5-verdict-capstone-holds-richest-positivity` | Complete: 4/4 |
+| 012 | `PLAN-RH-PHASE12-log-correlated-upper-bounds`; `M12-VERDICT-capstone-escaped-new-barrier`; `M12.8-verdict-freezing-live-frontier`; `M12.9-verdict-moment-problem-candid-status`; `M12.10-the-meta-obstruction`; `M12.11-N7-closure-attempt-littlewood` | Complete: 6/6 |
+| 013 | `RESULT-omega-class-structure-of-chaos` | Complete: 1/1 |
+| 014 | `ANCHOR-framework-a-classification-of-zero-absence`; `AUDIT-P7-structural-line-collapse`; `BREAK-N8-the-anchor-asymmetry`; `M14.1-verdict-additive-divisor-motohashi`; `M14.2-verdict-nontrivial-spectral-modification`; `M14.3-VERDICT-self-referential-close-the-line`; `N8-the-density-to-absence-gap`; `STAGE1-2-anchor-vs-definiteness-the-verdict`; `STRATEGIC-where-omega-touches-the-zeros` | Complete: 9/9 |
+| 015 | `00-PHASE-15-overview`; `M1-arithmetic-intersection-pairing`; `M2-ample-cone-edge-positivity`; `M3-arithmetic-hodge-index`; `M3-attempt5-arithmetic-hodge-index-exists`; `M3-attempt6-elliptic-control-heights-vs-zeros`; `M3-attempt7-constructing-the-zero-cohomology`; `M3-attempt8-the-kahler-form`; `M3-genuine-attempts-on-the-core`; `M4-the-chosen-direction-archimedean-modular-omega`; `M5-the-lefschetz-dichotomy-closure`; `M6-the-prismatic-route-assessment`; `M7-advisor-incompleteness-theorem-audit`; `M8-front1-proof-audit-REFUTED`; `M9-kosmos-run-1-assessment`; `M10-arakelov-equivalence-audit`; `SYNTHESIS-M1-to-M3-and-the-precise-gap` | Complete: 17/17 |
+| 016 | `00-SURF-SPEC-SHEET`; `01-pillar1-triage-three-routes`; `02-pillar2-prototype-resonance-wall`; `03-residue-pairing-nontrivial`; `04-MSZ-pairing-hits-CAP`; `05-resonance-pairing-definite-THEOREM`; `06-hunt-indefinite-object`; `07-pontryagin-the-indefinite-object`; `08-debranges-herglotz-clean-criterion`; `09-self-adjoint-construction` | Complete: 10/10 |
+| 017 | `00-SURF-2.0-design`; `01-SURF-A-triage`; `02-involution`; `03-route2-testbed`; `04-SURF-B-resolvent` | Complete: 5/5 |
+| 018 | `01-negative-directions-portrait`; `02-explicit-formula-coupling` | Complete: 2/2 |
+| 019 | `00-PHASE19-CLOSURE`; `01-camino3-forward-flow`; `02-omega-rate-freezing`; `03-bsmooth-freezing`; `04-random-mult-maximum`; `05-k2-from-erdjoskac` | Complete: 6/6 |
+| 020 | `00-PHASE20-DESIGN`; `00b-step-0-analysis-of-the-dirichlet-series`; `01-proof-explicit-formula-omega`; `02-proof-error-correlation` | Complete: 4/4 |
+| 021 | `00-setup`; `01-parity-and-geometry`; `02-exclusion-principle` | Complete: 3/3 |
+| 022 | `00-setup`; `01-modified-explicit-formula`; `02-invariants`; `03-spectral-rigidity` | Complete: 4/4 |
+| 023 | `00-setup`; `01-exact-hadamard-effect`; `02-structure-function-analysis`; `03-barrier-formulation` | Complete: 4/4 |
+| 024 | `00-setup`; `01-lower-bounds-bj`; `02-local-profile`; `03-rigorous-chaos` | Complete: 4/4 |
+| 025 | `00-setup`; `01-audit-classical`; `02-deBruijn-Newman`; `03-krein-lp`; `04-verdict` | Complete: 5/5 |
 
-## Reconstrucción por fase
+## Reconstruction by phase
 
-### 000 — Traducción de Weil y cartografía
+### 000 — Weil translation and cartography
 
-**Objetivo.** Identificar el detector localizado como forma de Weil, y separar el error técnico de truncación de la positividad global.
+**Goal.** Identify the localized detector as the Weil form, and separate the technical truncation error from global positivity.
 
-**PROBADO / heredado clásico.** La fórmula explícita y el criterio de Weil dan `B ⪰ 0 ⇔ RH`; `Q` se interpreta como compresión localizada, no como objeto nuevo. La cartografía separa la estimación de colas, plausiblemente armónica e incondicional, de la positividad total.
+**PROVED / classical inheritance.** The explicit formula and the Weil criterion give `B ⪰ 0 ⇔ RH`; `Q` is interpreted as a localized compression, not as a new object. The cartography separates the tail estimate, plausibly harmonic and unconditional, from total positivity.
 
-**CONDICIONAL / CONJETURAL.** La identidad exacta con el operador de Connes, el dominio de formas, la completitud y ausencia de contaminación espectral siguen abiertos. La traducción de de Branges exige verificación especializada y supera el obstáculo Conrey–Li sólo si identifica una cadena nueva.
+**CONDITIONAL / CONJECTURAL.** The exact identity with the Connes operator, the form domain, completeness and absence of spectral contamination remain open. The de Branges translation requires specialized verification and only overcomes the Conrey–Li obstruction if it identifies a new chain.
 
-**Dependencia y herencia.** Funda 003–004; transmite el test decisivo: fidelidad no implica positividad, y positividad global es **EQUIVALENTE-A-RH**.
+**Dependency and inheritance.** Founds 003–004; passes on the decisive test: fidelity does not imply positivity, and global positivity is **EQUIVALENT-TO-RH**.
 
-**Reauditoría.** `0A1` usa alternativamente `Q=M_zeros-M_arith` y la forma de Weil; para la fórmula completa la diferencia es cero. Debe fijarse una sola convención, truncación y signo, antes de atribuir una matriz espectral al objeto de Connes.
+**Re-audit.** `0A1` uses `Q=M_zeros-M_arith` and the Weil form interchangeably; for the complete formula the difference is zero. A single convention, truncation and sign must be fixed before attributing a spectral matrix to the Connes object.
 
-### 003 — Desigualdad uniforme y especificación empírica
+### 003 — Uniform inequality and empirical specification
 
-**Objetivo.** Calibrar el detector y formular la desigualdad límite (LB).
+**Goal.** Calibrate the detector and formulate the limiting inequality (LB).
 
-**NUMÉRICO.** Los controles, la localidad, la ley aproximada en `δ²` y la amplificación en `J` son referencias de implementación, no teoremas sobre zeta. La especificación además documenta rutas ciegas: Li, Mercer/PSD construido, TDA y Gram sólo de ceros.
+**NUMERICAL.** The controls, locality, the approximate `δ²` law and the amplification in `J` are implementation references, not theorems about zeta. The specification also documents blind routes: Li, constructed Mercer/PSD, TDA and zero-only Gram.
 
-**PROBADO en el expediente / límite.** La reducción de (LB) a positividad de Weil es correcta: **EQUIVALENTE-A-RH**. El plan declara que computación finita no puede resolver el paso uniforme.
+**PROVED in the record / limit.** The reduction of (LB) to Weil positivity is correct: **EQUIVALENT-TO-RH**. The plan states that finite computation cannot resolve the uniform step.
 
-**Herencia.** Provee el instrumento para 004 y la taxonomía de falsificadores. No demuestra RH ni fidelidad de compresión.
+**Inheritance.** Supplies the instrument for 004 and the falsifier taxonomy. Does not prove RH nor compression fidelity.
 
-### 004 — Operador semibounded, Kreĭn y cierre de la rama
+### 004 — Semibounded operator, Kreĭn and branch closure
 
-**Objetivo.** Construir una realización operatorial de la forma de Weil, aislar coercividad, y atacar el signo mediante geometría de Kreĭn.
+**Goal.** Construct an operator realization of the Weil form, isolate coercivity, and attack the sign via Kreĭn geometry.
 
-**PROBADO en el dossier.** Integración por partes, estimaciones verticales, cuadratura, separación profundo/somero, realización con simetría fundamental y el no-go de la dependencia en profundidades se presentan como incondicionales. El no-go es el resultado más robusto: acotar `||K||≤1` desde ceros equivale a positividad aritmética, por tanto a RH.
+**PROVED in the dossier.** Integration by parts, vertical estimates, quadrature, deep/shallow separation, realization with fundamental symmetry and the no-go of depth dependence are presented as unconditional. The no-go is the most robust result: bounding `||K||≤1` from zeros is equivalent to arithmetic positivity, hence to RH.
 
-**CONDICIONAL.** La coercividad uniforme usa (H), una densidad de ceros en intervalos cortos uniforme; el expediente reconoce que no está establecida incondicionalmente. Bajo (H), la equivalencia entre RH y el signo del fondo espectral es una reformulación.
+**CONDITIONAL.** Uniform coercivity uses (H), a uniform zero density in short intervals; the record acknowledges this is not established unconditionally. Under (H), the equivalence between RH and the sign of the spectral floor is a reformulation.
 
-**REFUTADO / no-go.** La esperanza de extraer palanca de las profundidades fuera de línea queda cerrada por el teorema de no-go. Magnitud, muestreo y densidad no fuerzan el signo.
+**REFUTED / no-go.** The hope of extracting leverage from off-line depths is closed by the no-go theorem. Magnitude, sampling and density do not force the sign.
 
-**Herencia.** Entrega a 005–018 el muro CAP/SURF/de Branges: construir la realización es distinto de demostrar positividad. `RH-ENDGAME` deja como única ruta estructural una factorización positiva, que es **EQUIVALENTE-A-RH**.
+**Inheritance.** Hands 005–018 the CAP/SURF/de Branges wall: constructing the realization is distinct from proving positivity. `RH-ENDGAME` leaves a positive factorization as the only structural route, which is **EQUIVALENT-TO-RH**.
 
-**Reauditoría crítica.** `B2-THEOREM` llama a partes “incondicionales” y a la vez hace depender la coercividad central de (H); `PAPER-A` corrige el alcance, pero todo enunciado de “realización semibounded fiel” debe etiquetarse **CONDICIONAL en (H)** hasta revisión independiente. La bitácora muy extensa contiene correcciones sucesivas: se requiere revisión lineal de dominios, normalizaciones y la transición de formularios a operadores antes de convertirla en teorema externo.
+**Critical re-audit.** `B2-THEOREM` calls parts "unconditional" while making central coercivity depend on (H); `PAPER-A` corrects the scope, but every statement of "faithful semibounded realization" must be labeled **CONDITIONAL on (H)** pending independent review. The very extensive log contains successive corrections: a linear review of domains, normalizations and the transition from forms to operators is required before turning it into an external theorem.
 
-### 005–009 — Ramas estructurales, residuos, Carleson, calor y universalidad
+### 005–009 — Structural branches, residues, Carleson, heat and universality
 
-**Objetivo conjunto.** Buscar un mecanismo unilateral o geométrico que transforme información local/estadística en positividad uniforme.
+**Joint goal.** Look for a one-sided or geometric mechanism that turns local/statistical information into uniform positivity.
 
-**PROBADO / diagnóstico.** 005 clasifica formas residuales y compara Connes/de Branges; 006 **REFUTA** localmente S2 y documenta incoherencia; 007 identifica saturación Carleson y que el puente de segundo orden vuelve al mismo núcleo; 008 produce veredictos numéricos de flujo de calor, colas y acoplamiento; 009 formaliza la tasa de intercambio y el signo incorrecto de la correlación.
+**PROVED / diagnostic.** 005 classifies residual forms and compares Connes/de Branges; 006 locally **REFUTES** S2 and documents incoherence; 007 identifies Carleson saturation and that the second-order bridge returns to the same kernel; 008 produces numerical verdicts on heat flow, tails and coupling; 009 formalizes the exchange rate and the wrong sign of the correlation.
 
-**NUMÉRICO y CONJETURAL.** Los experimentos de 005, 007–009 ilustran escalas y controles; no prueban cotas uniformes. Los puentes Connes/de Branges y la universalidad requerida permanecen **INCOMPLETOS**.
+**NUMERICAL and CONJECTURAL.** The experiments in 005, 007–009 illustrate scales and controls; they do not prove uniform bounds. The required Connes/de Branges bridges and universality remain **INCOMPLETE**.
 
-**No-go y herencia.** La salida es el “wrong-sign capstone”: las herramientas disponibles dan cotas en la dirección equivocada. Se hereda a 010–014 como `U`, el control uniforme de clustering/correlación, no como avance hacia una prueba.
+**No-go and inheritance.** The output is the "wrong-sign capstone": the available tools give bounds in the wrong direction. It is inherited by 010–014 as `U`, the uniform clustering/correlation control, not as progress toward a proof.
 
-### 010 — Giro cohomológico y marco de Riesz
+### 010 — Cohomological turn and Riesz frame
 
-**Objetivo.** Reinterpretar la forma como índice de Hodge regularizado y hallar una herramienta bidireccional mediante marcos de Riesz, `A₂` y regularidad extremal de `S(T)`.
+**Goal.** Reinterpret the form as a regularized Hodge index and find a bidirectional tool via Riesz frames, `A₂` and extremal regularity of `S(T)`.
 
-**NUMÉRICO.** La envolvente lorentziana finita, su degeneración, el hueco regularizado y la ley `λ_min(G)=π² β_min²/6` se reportan como medidas. El análisis profundo corrige la lectura optimista de M10.3: los datos no alcanzan pares de Lehmer extremos.
+**NUMERICAL.** The finite Lorentzian envelope, its degeneration, the regularized gap and the law `λ_min(G)=π² β_min²/6` are reported as measurements. The deep analysis corrects M10.3's optimistic reading: the data do not reach extremal Lehmer pairs.
 
-**CONDICIONAL / EQUIVALENTE-A-RH.** `RH ⇔` hueco de marco uniforme `⇔ A₂` uniforme, bajo el diccionario funcional invocado; la uniformidad de `A₂` es abierta. Selberg controla comportamiento típico, no el extremo necesario.
+**CONDITIONAL / EQUIVALENT-TO-RH.** `RH ⇔` uniform frame gap `⇔` uniform `A₂`, under the invoked functional dictionary; uniformity of `A₂` is open. Selberg controls typical behavior, not the necessary extremal case.
 
-**Resultado franco.** El giro no cruza el muro: vuelve a `U` y sufre el mismo coste de resolución. Hereda a 011–012 una descripción más natural, no una prueba.
+**Candid result.** The turn does not cross the wall: it returns to `U` and suffers the same resolution cost. It hands 011–012 a more natural description, not a proof.
 
-### 011 — Hiperbolicidad, Jensen y MSS
+### 011 — Hyperbolicity, Jensen and MSS
 
-**Objetivo.** Evitar la positividad cuadrática usando entrelazamiento, preservadores y familias MSS.
+**Goal.** Avoid quadratic positivity using interlacing, preservers and MSS families.
 
-**PROBADO / NUMÉRICO.** Se observa entrelazamiento en el rango ensayado y se identifica el desplazamiento como derivación; el preservador es ciego a la aritmética. La equivalencia algebraica “raíces reales de un polinomio real ⇔ forma de Hermite semidefinida positiva” es clásica.
+**PROVED / NUMERICAL.** Interlacing is observed in the tested range and the shift is identified as a derivation; the preserver is blind to arithmetic. The algebraic equivalence "real roots of a real polynomial ⇔ positive semidefinite Hermite form" is classical.
 
-**REFUTADO como escape.** La ruta termina de nuevo en positividad total/Hermite y en `U`; la promesa de un mecanismo ajeno a positividad queda invalidada en el propio veredicto. Una realización MSS aritmética es sólo **CONJETURAL**.
+**REFUTED as an escape.** The route again ends up in total/Hermite positivity and in `U`; the promise of a mechanism unrelated to positivity is invalidated in the verdict itself. An arithmetic MSS realization is only **CONJECTURAL**.
 
-### 012–013 — Caos log-correlacionado y clase omega
+### 012–013 — Log-correlated chaos and the omega class
 
-**Objetivo.** Atacar extremos mediante cotas superiores deterministas, teoría de momentos y congelamiento; 013 aísla la estructura de la clase omega.
+**Goal.** Attack extremes via deterministic upper bounds, moment theory and freezing; 013 isolates the structure of the omega class.
 
-**PROBADO / aportación independiente.** La identificación del exponente diagonal `k²` a partir de la estructura multiplicativa/Poisson y parte de la taxonomía omega es independiente de posiciones de ceros.
+**PROVED / independent contribution.** The identification of the diagonal exponent `k²` from the multiplicative/Poisson structure, and part of the omega taxonomy, is independent of zero positions.
 
-**CONDICIONAL / CONJETURAL.** El paso que convertiría control estadístico de extremos en exclusión de ceros fuera de línea es N7 y está declarado heurístico. El problema supercrítico de momentos para órdenes altos y el congelamiento fino permanecen abiertos.
+**CONDITIONAL / CONJECTURAL.** The step that would turn statistical control of extremes into exclusion of off-line zeros is N7 and is declared heuristic. The supercritical moment problem for high orders and fine freezing remain open.
 
-**Resultado.** La fase evita formalmente el capstone de signo, pero no alcanza RH: es **INCOMPLETA**, con un segundo muro probabilístico–determinista. 014 cierra la pretensión de que omega por sí sola vea los ceros.
+**Result.** The phase formally avoids the sign capstone but does not reach RH: it is **INCOMPLETE**, with a second probabilistic–deterministic wall. 014 closes the claim that omega alone can see the zeros.
 
-### 014 — Anclas y cierre de omega→ceros
+### 014 — Anchors and closure of omega→zeros
 
-**Objetivo.** Distinguir densidad de ausencia y preguntar por un ancla de positividad en la línea crítica.
+**Goal.** Distinguish density from absence and ask for a positivity anchor on the critical line.
 
-**PROBADO / diagnóstico.** Motohashi y las identidades espectrales dan densidad, no ausencia. El peso omega resulta autorreferencial al expresarse por potencias de zeta; la línea omega→ceros queda **REFUTADA** para el objetivo de RH.
+**PROVED / diagnostic.** Motohashi and the spectral identities give density, not absence. The omega weight turns out to be self-referential when expressed via powers of zeta; the omega→zeros line is **REFUTED** for the RH goal.
 
-**CONJETURAL.** La clasificación de anclas (ACC) es evidencia metodológica, no teorema. El ancla central/Hodge global es una pregunta abierta.
+**CONJECTURAL.** The anchor classification (ACC) is methodological evidence, not a theorem. The central/global Hodge anchor is an open question.
 
-**EQUIVALENTE-A-RH.** La ausencia uniforme y la positividad de Weil reaparecen como la misma barrera; se transmite a 015 como búsqueda de una superficie aritmética.
+**EQUIVALENT-TO-RH.** Uniform absence and Weil positivity reappear as the same barrier; it is passed on to 015 as a search for an arithmetic surface.
 
-### 015 — Hodge aritmético, Lefschetz y superficie ausente
+### 015 — Arithmetic Hodge, Lefschetz and the missing surface
 
-**Objetivo.** Construir emparejamiento, cono amplio y parte primitiva que imiten el índice de Hodge de cuerpos de funciones.
+**Goal.** Construct a pairing, ample cone and primitive part that mimic the Hodge index of function fields.
 
-**PROBADO en el expediente.** M1–M2 construyen identidad de traza, efectividad y positividad del cono amplio; la síntesis afirma una reducción precisa de RH a positividad de la parte primitiva. Se corrige explícitamente una falsa bicondicional Arakelov–RH y se **REFUTA** el supuesto “Frente 1” de prueba.
+**PROVED in the record.** M1–M2 construct a trace identity, effectivity and ample-cone positivity; the synthesis asserts a precise reduction of RH to positivity of the primitive part. A false Arakelov–RH biconditional is explicitly corrected and the alleged "Front 1" proof is **REFUTED**.
 
-**EQUIVALENTE-A-RH / INCOMPLETO.** M3, el índice de Hodge aritmético, es RH en otra forma. Falta la superficie global que porte cohomología de ceros, Lefschetz y la relación alturas–ceros. La ruta prismática sólo da estructura local; no sustituye la realización global.
+**EQUIVALENT-TO-RH / INCOMPLETE.** M3, the arithmetic Hodge index, is RH in another form. The global surface carrying zero cohomology, Lefschetz and the height–zero relation is missing. The prismatic route only gives local structure; it does not substitute for the global realization.
 
-**Reauditoría.** Hay una tensión terminológica: “cohomología cero-portadora construida” no equivale a objeto geométrico con correspondencias y positividad. Deben separarse con rigor construcción funcional, interpretación geométrica y teorema de Hodge antes de reclamar una realización.
+**Re-audit.** There is a terminological tension: "constructed zero-carrying cohomology" is not the same as a geometric object with correspondences and positivity. Functional construction, geometric interpretation and Hodge theorem must be rigorously separated before claiming a realization.
 
-### 016–018 — SURF, resonancias e imagen de direcciones negativas
+### 016–018 — SURF, resonances and the picture of negative directions
 
-**Objetivo.** Realizar geométricamente el espacio indefinido y entender qué aspecto tendría un cero fuera de línea.
+**Goal.** Geometrically realize the indefinite space and understand what an off-line zero would look like.
 
-**PROBADO / diagnóstico.** 016 muestra que el emparejamiento natural Maass–Selberg–Zagier es definido/no diagonal para el fin deseado; se **REFUTA** como detector de índice negativo. También se registra que la condición específica de de Branges fue **REFUTADA** por Conrey–Li. 017 separa simetría de positividad y el testbed de Ruta 2 resulta ciego a `γ`; 018 demuestra que el perfil local de una dirección negativa no tiene protección local y vuelve a requerir correlación uniforme.
+**PROVED / diagnostic.** 016 shows the natural Maass–Selberg–Zagier pairing is definite/non-diagonal for the intended purpose; it is **REFUTED** as a negative-index detector. It is also recorded that the specific de Branges condition was **REFUTED** by Conrey–Li. 017 separates symmetry from positivity and the Route 2 testbed is blind to `γ`; 018 shows that the local profile of a negative direction has no local protection and again requires uniform correlation.
 
-**INCOMPLETO / EQUIVALENTE-A-RH.** Una realización de resonancias con el emparejamiento correcto implicaría RH, pero no está construida; el criterio Herglotz de `ξ'/ξ` es RH bajo otro nombre. Herencia: se abandona la obtención espectral directa y se abre el flujo directo omega de 019.
+**INCOMPLETE / EQUIVALENT-TO-RH.** A resonance realization with the correct pairing would imply RH, but it is not constructed; the Herglotz criterion on `ξ'/ξ` is RH under another name. Inheritance: direct spectral extraction is abandoned and the direct omega flow of 019 is opened.
 
-### 019–020 — Flujo directo omega y barrera de información
+### 019–020 — Direct omega flow and the information barrier
 
-**Objetivo.** Obtener matemáticas independientes desde primos hacia omega, momentos y caos, y medir si puede volver a los ceros.
+**Goal.** Obtain independent mathematics going from primes to omega, moments and chaos, and measure whether it can go back to the zeros.
 
-**PROBADO / NUMÉRICO.** Selberg–Delange respalda los promedios y la derivación de `k²`; los ensayos B-smooth y de máximos muestran regímenes preasintóticos, no congelamiento límite. 020 corrige el diseño inicial: `F_q=ζ^qG_q` hace que la información de ceros no entre como se suponía; establece identidades y separaciones de información dentro del marco declarado.
+**PROVED / NUMERICAL.** Selberg–Delange supports the averages and the derivation of `k²`; the B-smooth and maxima trials show pre-asymptotic regimes, not a limiting freeze. 020 corrects the initial design: `F_q=ζ^qG_q` means zero information does not enter as assumed; it establishes identities and information separations within the stated framework.
 
-**EQUIVALENTE-A-RH / INCOMPLETO.** La tasa de convergencia relevante de correlaciones es RH-equivalente; no hay puente inverso. El posible refinamiento cuantitativo de pesos multiplicativos queda abierto pero no es una prueba de RH.
+**EQUIVALENT-TO-RH / INCOMPLETE.** The relevant convergence rate of correlations is RH-equivalent; there is no inverse bridge. The possible quantitative refinement of multiplicative weights remains open but is not a proof of RH.
 
-### 021–023 — Defecto finito de Pontryagin y barrera explícita
+### 021–023 — Finite Pontryagin defect and the explicit barrier
 
-**Objetivo.** Suponer finitamente muchos paquetes fuera de línea, deducir su geometría y buscar una contradicción aritmética.
+**Goal.** Assume finitely many off-line packets, derive their geometry, and look for an arithmetic contradiction.
 
-**PROBADO en el expediente.** 021 obtiene paridad: una falla de RH cuesta pares de direcciones negativas, y formaliza el régimen de Pontryagin bajo finitud. 022 deduce la fórmula explícita modificada, oscilaciones y energía del defecto bajo Hipótesis D; identifica el límite Paley–Wiener. 023 calcula el efecto Hadamard y formula con precisión por qué las cotas incondicionales no contradicen el defecto.
+**PROVED in the record.** 021 obtains parity: an RH failure costs pairs of negative directions, and formalizes the Pontryagin regime under finiteness. 022 derives the modified explicit formula, oscillations and defect energy under Hypothesis D; it identifies the Paley–Wiener limit. 023 computes the Hadamard effect and precisely states why unconditional bounds do not contradict the defect.
 
-**CONDICIONAL.** Todo lo que usa Hipótesis D (finitud de las órbitas fuera de línea) sólo vale bajo ella; no puede concluir RH sin excluir también infinitud.
+**CONDITIONAL.** Everything using Hypothesis D (finiteness of off-line orbits) only holds under it; it cannot conclude RH without also excluding infiniteness.
 
-**CONJETURAL / INCOMPLETO.** EX/W4-RSRP y la rigidez espectral caos–defecto son candidatos, no teoremas. La barrera final exige F1, F2 o F3; F1 es esencialmente RH y F2/F3 están abiertos. La herencia a 024 es buscar una cota inferior para la distancia `b_j`.
+**CONJECTURAL / INCOMPLETE.** EX/W4-RSRP and chaos–defect spectral rigidity are candidates, not theorems. The final barrier requires F1, F2 or F3; F1 is essentially RH and F2/F3 are open. The inheritance to 024 is to seek a lower bound for the distance `b_j`.
 
-### 024 — Cotas para `b_j`, perfil local y caos riguroso
+### 024 — Bounds for `b_j`, local profile and rigorous chaos
 
-**Objetivo.** Excluir defectos minúsculos mediante una cota inferior incondicional de la distancia a la línea.
+**Goal.** Exclude tiny defects via an unconditional lower bound on the distance to the line.
 
-**PROBADO / negativo.** La auditoría muestra que los métodos disponibles no producen tal cota para un cero individual. El perfil local inducido por una órbita se deriva formalmente; las cotas y modelos conocidos no dominan la interferencia de ceros en línea en el punto requerido.
+**PROVED / negative.** The audit shows the available methods do not produce such a bound for an individual zero. The local profile induced by an orbit is formally derived; known bounds and models do not dominate the on-line zero interference at the required point.
 
-**CONDICIONAL.** Una cota de tipo polinómico se obtiene sólo bajo control puntual de `log|ζ|`/CLT de Selberg en alturas especiales. La compatibilidad con caos es no-excluyente incondicionalmente.
+**CONDITIONAL.** A polynomial-type bound is obtained only under pointwise control of `log|ζ|`/Selberg's CLT at special heights. Compatibility with chaos is non-exclusionary unconditionally.
 
-**Herencia.** 025 audita mecanismos clásicos restantes. El resultado es un no-go metodológico, no prueba de inexistencia de toda cota futura.
+**Inheritance.** 025 audits remaining classical mechanisms. The result is a methodological no-go, not proof of the non-existence of any future bound.
 
-### 025 — Auditoría final de mecanismos para `b_j`
+### 025 — Final audit of mechanisms for `b_j`
 
-**Objetivo.** Examinar mecanismos clásicos, de Bruijn–Newman y Laguerre–Pólya/Kreĭn para forzar una cota no trivial de `b_j`.
+**Goal.** Examine classical mechanisms, de Bruijn–Newman and Laguerre–Pólya/Kreĭn for forcing a nontrivial bound on `b_j`.
 
-**PROBADO / diagnóstico.** La auditoría descarta las familias examinadas como fuente de una cota de ese tipo. La relación de Bruijn–Newman da un vínculo cuantitativo bajo Hipótesis D; el análisis LP/Turán identifica circularidad al dividir por factores asociados a ceros fuera de línea.
+**PROVED / diagnostic.** The audit rules out the examined families as a source of such a bound. The de Bruijn–Newman relation gives a quantitative link under Hypothesis D; the LP/Turán analysis identifies circularity when dividing by factors associated with off-line zeros.
 
-**EQUIVALENTE-A-RH.** `Λ=0`, la pertenencia LP de xi y la desigualdad (LB) son reformulaciones de RH, no mecanismos independientes. El veredicto concluye correctamente que ningún mecanismo auditado fuerza el lower bound solicitado sin reintroducir RH.
+**EQUIVALENT-TO-RH.** `Λ=0`, the LP membership of xi, and inequality (LB) are reformulations of RH, not independent mechanisms. The verdict correctly concludes that no audited mechanism forces the requested lower bound without reintroducing RH.
 
-## Dependencias y mapa de herencia
+## Dependencies and inheritance map
 
-`000 → 003 → 004` fija Weil, truncación y la realización condicional. `004 → 005–011` produce el capstone de signo y pruebas de que localización, calor, correlación, marcos e hiperbolicidad no lo evitan. `012–014 → 019–020` conserva omega como matemática independiente pero cierra su uso inverso para localizar ceros. `015–018` buscan una realización geométrica; el resultado es SURF/CAP, no una realización. `021–025` adopta Hipótesis D para obtener consecuencias y termina en la imposibilidad actual de excluir distancias arbitrariamente pequeñas.
+`000 → 003 → 004` fixes Weil, truncation and the conditional realization. `004 → 005–011` produces the sign capstone and proofs that localization, heat, correlation, frames and hyperbolicity do not avoid it. `012–014 → 019–020` preserves omega as independent mathematics but closes its inverse use for locating zeros. `015–018` seek a geometric realization; the result is SURF/CAP, not a realization. `021–025` adopts Hypothesis D to obtain consequences and ends in the current impossibility of excluding arbitrarily small distances.
 
-El único cuello de botella que sobrevive a todas las traducciones es uno de estos dos, según la rama: (i) positividad global de Weil/operador/índice de Hodge, **EQUIVALENTE-A-RH**; o (ii) un principio nuevo de rigidez que excluya un defecto finito o infinitesimal, **CONJETURAL** y todavía sin puente incondicional.
+The only bottleneck that survives all the translations is one of these two, depending on the branch: (i) global positivity of Weil/operator/Hodge index, **EQUIVALENT-TO-RH**; or (ii) a new rigidity principle excluding a finite or infinitesimal defect, **CONJECTURAL** and still without an unconditional bridge.
 
-## Hallazgos críticos que requieren reauditoría
+## Critical findings requiring re-audit
 
-1. **Convención del objeto central.** Debe resolverse si `Q` es la forma aritmética, una compresión de ella, o el residuo entre lados truncados de la fórmula explícita. La igualdad completa de ambos lados impide tratarlos sin distinción.
-2. **Fase 004 y (H).** La presentación final es cuidadosa, pero versiones de “semiboundedness” y “fidelidad” deben auditarse contra la hipótesis de densidad uniforme y los dominios de operadores. Sin (H) no corresponde etiqueta incondicional.
-3. **Etiquetas numéricas.** Las leyes de escalamiento, estabilidad de `J`, huecos de Hodge y entrelazamiento explorado no son pruebas uniformes ni sustituyen un límite. Deben conservarse como **NUMÉRICO**.
-4. **Equivalencias geométricas.** Las fases 010, 015 y 016 mezclan a veces un diccionario/realización formal con una equivalencia funcional. Cada equivalencia debe separar: identidad algebraica, hipótesis de dominio/completitud, y positividad global.
-5. **Hipótesis D.** Las fases 021–025 aportan consecuencias nítidas bajo finitud, pero no justifican que el complemento de RH caiga en ese régimen. Los resultados no excluyen infinitas órbitas fuera de línea.
-6. **No-go no es imposibilidad absoluta.** Los cierres de 006, 011, 014, 016–018 y 025 descartan el mecanismo especificado; no demuestran que toda futura teoría en ese lenguaje sea imposible. Esta distinción es esencial para evitar sobreventa.
+1. **Convention of the central object.** It must be resolved whether `Q` is the arithmetic form, a compression of it, or the residue between truncated sides of the explicit formula. The full equality of both sides prevents treating them without distinction.
+2. **Phase 004 and (H).** The final presentation is careful, but versions of "semiboundedness" and "fidelity" must be audited against the uniform density hypothesis and operator domains. Without (H) no unconditional label is warranted.
+3. **Numerical labels.** The scaling laws, stability of `J`, Hodge gaps and explored interlacing are not uniform proofs nor do they substitute for a limit. They must be kept as **NUMERICAL**.
+4. **Geometric equivalences.** Phases 010, 015 and 016 sometimes mix a formal dictionary/realization with a functional equivalence. Each equivalence must separate: algebraic identity, domain/completeness hypothesis, and global positivity.
+5. **Hypothesis D.** Phases 021–025 supply sharp consequences under finiteness, but do not justify that RH's complement falls into that regime. The results do not exclude infinitely many off-line orbits.
+6. **A no-go is not absolute impossibility.** The closures of 006, 011, 014, 016–018 and 025 rule out the specified mechanism; they do not prove that every future theory in that language is impossible. This distinction is essential to avoid overselling.
 
-## Veredicto global
+## Global verdict
 
-El tramo 000–025 no contiene una prueba de RH. Sí contiene una cartografía amplia y, en varios casos, resultados internos útiles: reducciones explícitas, identidades de defecto, una paridad del índice negativo, diagnósticos de circularidad y no-go de rutas concretas. Las afirmaciones que pretenden cruzar de esas reducciones a positividad uniforme, exclusión de defectos o cotas de distancia son **CONDICIONALES**, **CONJETURALES**, **EQUIVALENTES-A-RH** o **INCOMPLETAS** según se indica arriba.
+The 000–025 stretch contains no proof of RH. It does contain a broad cartography and, in several cases, useful internal results: explicit reductions, defect identities, a negative-index parity, circularity diagnostics and no-gos for concrete routes. The claims that attempt to cross from those reductions to uniform positivity, defect exclusion or distance bounds are **CONDITIONAL**, **CONJECTURAL**, **EQUIVALENT-TO-RH** or **INCOMPLETE** as indicated above.

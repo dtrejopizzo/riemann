@@ -1,7 +1,6 @@
 # E72.48 -- Scalar endpoint discrepancy estimate
 
-**Date:** 2026-07-08.
-**Role:** isolate the remaining arithmetic estimate after the continuous endpoint operator has been
+**Purpose:** isolate the remaining arithmetic estimate after the continuous endpoint operator has been
 controlled by E72.47.
 
 ## 0. Scalar endpoint channel

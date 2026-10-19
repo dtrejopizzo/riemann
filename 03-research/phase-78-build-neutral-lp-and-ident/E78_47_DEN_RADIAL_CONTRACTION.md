@@ -1,6 +1,6 @@
 # E78.47 - The denominator modulus deficit is exactly a radial contraction law
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

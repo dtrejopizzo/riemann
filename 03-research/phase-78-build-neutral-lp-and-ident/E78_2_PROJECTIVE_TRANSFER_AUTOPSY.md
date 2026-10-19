@@ -1,8 +1,8 @@
 # E78.2 - PROJECTIVE-MU-TRANSFER is mu_L-location driven, not build-neutral
 # (autopsy of item 2, and unification with item 4)
 
-**Run:** 2026-07-18.
-**Target:** interface subclause (c) / Fable-5 item 2 -- `PROJECTIVE-MU-TRANSFER`:
+**Run:**
+**Target:** interface subclause (c) / item 2 -- `PROJECTIVE-MU-TRANSFER`:
 for each safe compact `K`, `sup_{z in K}|Pi_N(z;mu_L) - Pi_N(z;0)| -> 0`, where
 `Pi_N(z;mu)=T_N(z;mu)/T_N(z0;mu)` and `T_N(z;mu)=r_z A_N(mu)^{-1} b_N` (E77.7n).
 **Verdict:** the statement is **false for the plant** (defect plateaus at `~0.84`)
@@ -108,7 +108,7 @@ a detector, and here the separation is inherited from `mu_L` itself.
   LP through an interface subclause evaluated at mu_L.
 ```
 
-## 6. Flag for Fable-5 (consistent with E78.1 section 6)
+## 6. Flag for (consistent with E78.1 section 6)
 
 The plant defect plateau at `0.84` and the plant order-one ground gap (E78.1)
 are the same phenomenon: at the plant's own `mu_L ~ -1.74` the finite resolvent
@@ -139,7 +139,7 @@ unified:   items 2 and 4 both reduce to the mu_L-location/gap discriminant
            (~0 zeta, O(1) plant); the 'front A2 build-neutral' label is wrong for
            any subclause evaluated at mu_L;
 flagged:   plant bounded resolvent at its own mu_L (Outcome-B-flavored); data for
-           Fable-5, gate not reopened;
+gate not reopened;
 open:      whether the mu-free remnant (E77.7aj + NEUTRAL-GROUND-CAUCHY) suffices
            for the LP interface without any mu_L-pinned subclause.
 ```

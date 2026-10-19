@@ -1,7 +1,6 @@
 # E72.77 -- Displacement HPAC gate
 
-**Date:** 2026-07-08.
-**Role:** identify the displacement term as HPAC applied to `h_x=k_x-xi_x`, and prevent a circular
+**Purpose:** identify the displacement term as HPAC applied to `h_x=k_x-xi_x`, and prevent a circular
 closure by assuming full model/actual convergence.
 
 ## 0. HPAC functional for an even vector

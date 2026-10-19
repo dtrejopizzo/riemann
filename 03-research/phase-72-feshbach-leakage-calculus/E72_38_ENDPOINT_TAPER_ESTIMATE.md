@@ -1,7 +1,6 @@
 # E72.38 -- Endpoint taper estimate for normalized scalar WRL
 
-**Date:** 2026-07-08.
-**Role:** explain and partially prove the positive signal from E72.37. The finite CCM cell kernels
+**Purpose:** explain and partially prove the positive signal from E72.37. The finite CCM cell kernels
 vanish linearly at the endpoint `u=x`, and the normalized Mellin character `(u/x)^z` localizes near
 that endpoint when `Re z>0`.
 

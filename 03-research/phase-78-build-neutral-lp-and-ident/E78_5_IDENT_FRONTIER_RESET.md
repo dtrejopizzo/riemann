@@ -1,6 +1,6 @@
 # E78.5 - IDENT frontier reset: the absolute Euler tail is not the live object
 
-**Run:** 2026-07-18.
+**Run:**
 **Scope:** IDENT only (`FIXED-L-WEYL`, `SAFE-GAMMA-IDENT`, `OUTER-LIMIT`).
 
 ## 1. Purpose

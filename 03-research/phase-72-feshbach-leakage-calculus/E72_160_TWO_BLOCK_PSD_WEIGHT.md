@@ -1,7 +1,6 @@
 # E72.160 -- Two-block PSD weight audit
 
-**Date:** 2026-07-09.
-**Role:** optimize the coarse two-block PSD approximant for `PSD-DIST`.
+**Purpose:** optimize the coarse two-block PSD approximant for `PSD-DIST`.
 
 ## 0. Candidate
 

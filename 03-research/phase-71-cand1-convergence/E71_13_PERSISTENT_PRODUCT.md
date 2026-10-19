@@ -1,8 +1,7 @@
 # E71.13 -- persistent-divisor product probe
 
-**Date:** 2026-07-07.
 **Script:** `E71_13_persistent_product_probe.py`.
-**Role:** test whether the persistent clusters from E71.12 behave like the physical determinant
+**Purpose:** test whether the persistent clusters from E71.12 behave like the physical determinant
 divisor.
 
 ## Construction

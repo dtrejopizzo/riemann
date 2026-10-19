@@ -166,7 +166,7 @@ Frobenius structure is the identity. In the divisor dictionary that is `K = 0`.
 Independent corroboration: the CC corpus reaches genus `0` for `Spec Z` over
 `S` from a completely different direction (`2306.00456` Thm 1.1: *"a perfect
 analogy with the Riemann-Roch formula holding for curves of genus 0"*, recorded
-in `phase-39/120-inventario-CC-fuente.md`). Two independent routes to a
+in `phase-39/120-source-inventory-of-the-connes-consani-moscovici.md`). Two independent routes to a
 vanishing canonical term is weak evidence, but it is evidence, and it is the
 first time the two frameworks have agreed on a computed invariant.
 
@@ -363,7 +363,7 @@ RH.
 - `deg(x) = s(x,H) = x^(0) + x^(1)`; negative degree implies not effective;
   `H` effective with `F_H = 2 Phi` — 113_10.
 - CC's genus-0 verdict and the open status of RR on the square — via
-  `phase-39/120-inventario-CC-fuente.md`, a second-hand source, as flagged in
+  `phase-39/120-source-inventory-of-the-connes-consani-moscovici.md`, a second-hand source, as flagged in
   113_11 section 7.
 
 **Verified numerically:**

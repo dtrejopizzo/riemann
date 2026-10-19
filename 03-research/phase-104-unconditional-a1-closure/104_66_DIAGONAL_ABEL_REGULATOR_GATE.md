@@ -1,31 +1,32 @@
-# 104_66 — Diagonal regulador--Abel y gate de cancelación superexponencial
+# 104_66 — Diagonal regulator–Abel and superexponential cancellation gate
 
-**Resultado.** La diagonal sugerida por `104_64` sí puede tomarse
-rigurosamente. Si
+**Result.** The diagonal suggested by `104_64` can indeed be taken
+rigorously. If
 \[
  q=e^{-h},\qquad \varepsilon(h)=e^{-C/h},                 \tag{1}
 \]
-entonces, para un \(C>0\) universal explícito, los coeficientes regulados
-\(\lambda_{n,\varepsilon(h)}\) aproximan uniformemente a \(\lambda_n\) en
-la ventana principal \(n\le h^{-1}\). La media Fermi Abel puede escribirse
-con ese único regulador diagonal.
+then, for an explicit universal \(C>0\), the regulated coefficients
+\(\lambda_{n,\varepsilon(h)}\) uniformly approximate \(\lambda_n\) on
+the main window \(n\le h^{-1}\). The Abel Fermi average can be written
+with that single diagonal regulator.
 
-Esto no cierra RH. Antes de cancelar, el polo y el canal primo tienen tamaño
-\(\exp(C/h^2)\) para \(n\asymp h^{-1}\), mientras su diferencia emparejada
-tiene tamaño a lo sumo \(\exp(O(1/h))\). La fase requiere precisión relativa
-\(\exp(-C/h^2+O(1/h))\). Separar los canales es un no-go cuantitativo;
-mantenerlos juntos devuelve exactamente el observable Fermi desconocido.
+This does not close RH. Before cancellation, the pole and the prime
+channel have size \(\exp(C/h^2)\) for \(n\asymp h^{-1}\), while their
+paired difference has size at most \(\exp(O(1/h))\). The phase requires
+relative precision \(\exp(-C/h^2+O(1/h))\). Separating the channels is a
+quantitative no-go; keeping them together returns exactly the unknown
+Fermi observable.
 
 ---
 
-## 1. Generatriz emparejada exacta
+## 1. Exact paired generating function
 
-Sea
+Let
 \[
  F(s)=(s-1)\zeta(s),\qquad s=s(z)={1\over1-z},\qquad
  \tau={z\over1-z}=s-1.                                    \tag{2}
 \]
-Con la notación de `104_61`--`104_64`,
+With the notation of `104_61`--`104_64`,
 \[
  \lambda_{n,\varepsilon}
  =A_n+p_n(\varepsilon)-Q_{n,\varepsilon},\qquad
@@ -33,7 +34,7 @@ Con la notación de `104_61`--`104_64`,
  =\sum_{m\ge2}{\Lambda(m)\over m^{1+\varepsilon}}
  L_{n-1}^{(1)}(\log m).                                   \tag{3}
 \]
-Las generatrices exactas de `104_62` se combinan como
+The exact generating functions of `104_62` combine as
 \[
 \begin{aligned}
  \sum_{n\ge1}{p_n(\varepsilon)-Q_{n,\varepsilon}\over n}z^n
@@ -44,35 +45,36 @@ Las generatrices exactas de `104_62` se combinan como
  &=\log F(s+\varepsilon)-\log F(1+\varepsilon).
 \end{aligned}                                             \tag{4}
 \]
-Para \(\varepsilon=0\), el lado derecho es
-\(\log F(s)-\log F(1)\). Por tanto, si
+At \(\varepsilon=0\), the right-hand side is
+\(\log F(s)-\log F(1)\). Hence, if
 \[
  d_{n,\varepsilon}:=\lambda_{n,\varepsilon}-\lambda_n,
 \]
-entonces
+then
 \[
  \boxed{\sum_{n\ge1}{d_{n,\varepsilon}\over n}z^n
  =D_\varepsilon(z)
  :=\log{F(s(z)+\varepsilon)\over F(s(z))}
  -\log{F(1+\varepsilon)\over F(1)}.}                       \tag{5}
 \]
-La rama se normaliza por \(D_\varepsilon(0)=0\). Ésta es la cancelación
-que desaparece al separar \(p_n\) y \(Q_{n,\varepsilon}\).
+The branch is normalized by \(D_\varepsilon(0)=0\). This is the
+cancellation that disappears when \(p_n\) and \(Q_{n,\varepsilon}\) are
+separated.
 
 ---
 
-## 2. Disco cero-libre uniforme bajo desplazamiento
+## 2. Uniform zero-free disk under shift
 
-Todo cero no trivial \(\rho=\beta+i\gamma\) satisface
-\(0<\beta<1\) y \(|\gamma|>14\). La segunda cota es un input
-incondicional certificado, mucho más débil que la verificación de
-Platt--Trudgian registrada en `104_00`; no localiza aquí ningún cero fuera
-de ese rango. Para \(0\le u\le1/2\), el punto singular
-de \(F(s+u)\) en la variable \(z\) es
+Every nontrivial zero \(\rho=\beta+i\gamma\) satisfies
+\(0<\beta<1\) and \(|\gamma|>14\). The second bound is an
+unconditional certified input, much weaker than the Platt–Trudgian
+verification recorded in `104_00`; no zero is localized here beyond
+that range. For \(0\le u\le1/2\), the singular point
+of \(F(s+u)\) in the variable \(z\) is
 \[
  z_{\rho,u}=1-{1\over\rho-u}.                              \tag{6}
 \]
-Además,
+Moreover,
 \[
 \begin{aligned}
  |z_{\rho,u}|^2
@@ -80,33 +82,33 @@ Además,
  &\ge1-{1\over\gamma^2}>{195\over196}.                    \tag{7}
 \end{aligned}
 \]
-Si el numerador es negativo se usa
-\((\beta-u)^2+\gamma^2\ge\gamma^2\) y
-\(1-2\beta+2u\ge-1\); si es positivo, la cota es inmediata.
-Los ceros triviales \(\rho=-2k\) dan
+If the numerator is negative, use
+\((\beta-u)^2+\gamma^2\ge\gamma^2\) and
+\(1-2\beta+2u\ge-1\); if it is positive, the bound is immediate.
+The trivial zeros \(\rho=-2k\) give
 \[
  z_{\rho,u}=1+{1\over2k+u}>1.                              \tag{8}
 \]
-Así, con
+So, with
 \[
  r_0=\sqrt{195\over196},\qquad
  v_0=-\log r_0={1\over2}\log{196\over195}<0.00257,         \tag{9}
 \]
-las funciones \(F(s(z)+u)\) son cero-libres simultáneamente en
-\(|z|<r_0\), para \(0\le u\le1/2\), sin suponer RH.
+the functions \(F(s(z)+u)\) are simultaneously zero-free on
+\(|z|<r_0\), for \(0\le u\le1/2\), with no RH assumption.
 
-Fije \(0<r<r_0\). Por compacidad,
+Fix \(0<r<r_0\). By compactness,
 \[
  M_r:=\sup_{\substack{|z|\le r\\0\le u\le1/2}}
  \left|{F'\over F}(s(z)+u)\right|<\infty.                  \tag{10}
 \]
-La fórmula
+The formula
 \[
  D_\varepsilon(z)=\int_0^\varepsilon
  \left\{{F'\over F}(s(z)+u)-{F'\over F}(1+u)\right\}du    \tag{11}
 \]
-da \(\sup_{|z|\le r}|D_\varepsilon(z)|\le2M_r\varepsilon\).
-Cauchy aplicado a (5) prueba
+gives \(\sup_{|z|\le r}|D_\varepsilon(z)|\le2M_r\varepsilon\).
+Cauchy applied to (5) proves
 \[
  \boxed{|d_{n,\varepsilon}|
  \le2M_r\,n\,\varepsilon r^{-n}.}                          \tag{12}
@@ -114,80 +116,80 @@ Cauchy aplicado a (5) prueba
 
 ---
 
-## 3. Elección universal de la diagonal
+## 3. Universal choice of the diagonal
 
-Para \(n\le B/h\), (12) da
+For \(n\le B/h\), (12) gives
 \[
  \sup_{n\le B/h}|d_{n,\varepsilon(h)}|
  \le {2BM_r\over h}
  \exp\!\left(-{C-B\log(1/r)\over h}\right).                \tag{13}
 \]
-Por tanto basta \(C>Bv_0\) para elegir
-\(e^{-C/B}<r<r_0\). Para la ventana principal \(B=1\) puede tomarse
+Hence it suffices to have \(C>Bv_0\) to choose
+\(e^{-C/B}<r<r_0\). For the main window \(B=1\), one can take
 \[
  \boxed{r={199\over200},\qquad C={1\over100}.}              \tag{14}
 \]
-En efecto,
+Indeed,
 \[
  {199\over200}<\sqrt{195\over196},\qquad
  \eta:={1\over100}-\log{200\over199}>0.                    \tag{15}
 \]
-Con
+With
 \[
  \varepsilon(h)=\exp\!\left(-{1\over100h}\right),          \tag{16}
 \]
-que pertenece a \((0,1/2]\) para todo \(h\) suficientemente pequeño, se
-obtiene incondicionalmente
+which lies in \((0,1/2]\) for all sufficiently small \(h\), one
+unconditionally obtains
 \[
  \boxed{\sup_{1\le n\le1/h}
  |\lambda_{n,\varepsilon(h)}-\lambda_n|
  \le {2M_{199/200}\over h}e^{-\eta/h}\longrightarrow0.}   \tag{17}
 \]
-La constante \(M_{199/200}\) es finita sobre un compacto explícito y no
-depende de \(h\); su valor numérico no afecta el límite.
+The constant \(M_{199/200}\) is finite over an explicit compact set and
+does not depend on \(h\); its numerical value does not affect the limit.
 
 ---
 
-## 4. Un único límite diagonal para Fermi
+## 4. A single diagonal limit for Fermi
 
-Sea
+Let
 \[
  \ell(y)={1\over1+e^y},\qquad b_n=\log(n+1),
 \]
-y defina
+and define
 \[
  \mathfrak A_{t,\varepsilon}(h)
  ={1\over L(h)}\sum_{n\ge1}{e^{-hn}\over n}
  \ell\!\left(t(\lambda_{n,\varepsilon}+b_n)\right),
  \qquad L(h)=-\log(1-e^{-h}).                              \tag{18}
 \]
-Como \(|\ell'|\le1/4\), el bloque \(n\le1/h\) de la diferencia con la
-media no regulada está acotado por \(t/4\) veces (17). En la cola se usa
-solo \(0\le\ell\le1\):
+Since \(|\ell'|\le1/4\), the block \(n\le1/h\) of the difference from
+the unregulated average is bounded by \(t/4\) times (17). In the tail
+only \(0\le\ell\le1\) is used:
 \[
  {1\over L(h)}\sum_{n>1/h}{e^{-hn}\over n}
  \le {1\over L(h)}\int_{1/2}^\infty{e^{-u}\over u}\,du=o(1)
  \qquad(0<h\le1/2).                                       \tag{19}
 \]
-Luego, para todo \(t>0\),
+Hence, for every \(t>0\),
 \[
  \boxed{\mathfrak A_t(h)
  -\mathfrak A_{t,\varepsilon(h)}(h)\longrightarrow0.}      \tag{20}
 \]
-Por `104_64`,
+By `104_64`,
 \[
  \boxed{\mathrm {RH}\quad\Longleftrightarrow\quad
  \liminf_{h\downarrow0}\mathfrak A_{t,\varepsilon(h)}(h)=0.}
  \tag{21}
 \]
-El lado derecho contiene, para cada \(h>0\), una serie de Euler
-absolutamente convergente y ningún límite interno en \(\varepsilon\).
+The right-hand side contains, for each \(h>0\), an absolutely
+convergent Euler series and no internal limit in \(\varepsilon\).
 
 ---
 
-## 5. Pared de precisión al separar los canales
+## 5. Precision wall when separating the channels
 
-La primera generatriz de (4) da exactamente
+The first generating function of (4) gives exactly
 \[
 \begin{aligned}
  \sum_{n\ge1}{p_n(\varepsilon)\over n}z^n
@@ -196,123 +198,123 @@ La primera generatriz de (4) da exactamente
  -\log(1-z),
 \end{aligned}                                             \tag{22}
 \]
-y por ello
+and hence
 \[
  \boxed{p_n(\varepsilon)
  =1+(-1)^{n-1}\left({1-\varepsilon\over\varepsilon}\right)^n.}
  \tag{23}
 \]
-En la diagonal (16), para \(n\asymp h^{-1}\),
+On the diagonal (16), for \(n\asymp h^{-1}\),
 \[
  \log|p_n(\varepsilon(h))|
  ={1\over100h^2}+o(h^{-2}).                                \tag{24}
 \]
-Pero (3) equivale a
+But (3) is equivalent to
 \[
  Q_{n,\varepsilon}
  =p_n(\varepsilon)+A_n-\lambda_{n,\varepsilon}.            \tag{25}
 \]
-El bloque completo \(A_n-\lambda_{n,\varepsilon}\) tiene crecimiento
-\(\exp(O(n))\) en el disco uniforme anterior, mientras los dos términos
-que se cancelan en (25) tienen tamaño \(\exp(C/h^2)\). Recuperar su
-diferencia requiere precisión relativa
+The complete block \(A_n-\lambda_{n,\varepsilon}\) grows like
+\(\exp(O(n))\) on the earlier uniform disk, while the two terms that
+cancel in (25) have size \(\exp(C/h^2)\). Recovering their
+difference requires relative precision
 \[
  \boxed{\exp\{-C/h^2+O(1/h)\}.}                            \tag{26}
 \]
 
-La versión unitaria no cambia el requisito. El factor polar contiene
-\(\exp\{istp_n(\varepsilon(h))\}\). Incluso para la microfrecuencia
-\(s=\exp(-c/h)\) de `104_64`,
+The unitary version does not change the requirement. The polar factor
+contains \(\exp\{istp_n(\varepsilon(h))\}\). Even for the microfrequency
+\(s=\exp(-c/h)\) of `104_64`,
 \[
  s|p_n(\varepsilon(h))|
  =\exp\{C/h^2-c/h+o(h^{-2})\}\longrightarrow\infty.        \tag{27}
 \]
-El factor primo tiene la fase opuesta con la precisión (26). Tomar módulos,
-variación total o truncar una fase pierde la cancelación. Multiplicar primero
-de manera exacta da
+The prime factor has the opposite phase at precision (26). Taking
+moduli, total variation, or truncating a phase loses the cancellation.
+Multiplying first in exact form gives
 \[
  e^{ist(A_n+b_n+p_n-Q_{n,\varepsilon})}
  =e^{ist(\lambda_{n,\varepsilon}+b_n)},                    \tag{28}
 \]
-el observable desconocido de (18). Esto descarta una estimación separada,
-no una identidad nueva para el producto completo.
+the unknown observable of (18). This rules out a separate estimate, not
+a new identity for the complete product.
 
-### 5.1 Incompatibilidad con la amortiguación absoluta VK
+### 5.1 Incompatibility with the VK absolute damping
 
-El regulador tampoco convierte en útil la cota absoluta descartada en
-`103_56`. Allí, en
+The regulator also does not make useful the absolute bound discarded in
+`103_56`. There, with
 
 \[
  U_n=n^{5/3}(\log n)^{1/3},
 \]
 
-la carga positiva sin regulador satisface
+the unregulated positive charge satisfies
 
 \[
  \log\mathcal B_n\ge
  {2\over3}n\log n+{1\over3}n\log\log n-O(n).               \tag{28a}
 \]
 
-El factor \(m^{-\varepsilon}=e^{-\varepsilon u}\) solo resta
-\(\varepsilon U_n+O(\varepsilon)\) a ese exponente sobre
-\([U_n,U_n+1]\). Para reducir la propia carga absoluta a escala
-subexponencial sería necesario, como mínimo,
+The factor \(m^{-\varepsilon}=e^{-\varepsilon u}\) only subtracts
+\(\varepsilon U_n+O(\varepsilon)\) from that exponent over
+\([U_n,U_n+1]\). To reduce the absolute charge itself to subexponential
+scale would require, at minimum,
 
 \[
  \varepsilon U_n\ge
  {2\over3}n\log n+{1\over3}n\log\log n-O(n),
 \]
 
-es decir,
+that is,
 
 \[
  \boxed{\varepsilon\gtrsim
  n^{-2/3}(\log n)^{2/3}.}                                  \tag{28b}
 \]
 
-En la ventana \(n\asymp h^{-1}\), la diagonal que aproxima los coeficientes
-usa en cambio
+In the window \(n\asymp h^{-1}\), the diagonal that approximates the
+coefficients instead uses
 
 \[
  \varepsilon(h)=e^{-C/h}=e^{-Cn},
 \]
 
-que es menor que toda potencia de \(n^{-1}\). Por tanto ninguna elección
-cubierta por la garantía uniforme incondicional (13) puede ser
-simultáneamente:
+which is smaller than every power of \(n^{-1}\). Hence no choice
+covered by the unconditional uniform guarantee (13) can be
+simultaneously:
 
-1. suficientemente pequeña para la aproximación uniforme obtenida por
-   Cauchy; y
-2. suficientemente grande para reparar por módulo la carga VK--Laguerre.
+1. small enough for the uniform approximation obtained via Cauchy; and
+2. large enough to repair the VK–Laguerre charge in modulus.
 
-Esta incompatibilidad no afecta una estimación firmada del producto
-completo. Sí cierra la posibilidad de que el mero hecho de mantener
-\(\varepsilon>0\) vuelva viable el argumento de valores absolutos.
+This incompatibility does not affect a signed estimate of the full
+product. It does close the possibility that merely keeping
+\(\varepsilon>0\) makes the absolute-value argument viable.
 
 ---
 
-## 6. El regulador no borra un modo off-line
+## 6. The regulator does not erase an off-line mode
 
-Si hipotéticamente existe \(\rho\) con \(\Re\rho>1/2\), ponga
+If hypothetically \(\rho\) exists with \(\Re\rho>1/2\), set
 \[
  u_\rho={\rho\over\rho-1},\qquad |u_\rho|>1.
 \]
-El desplazamiento cambia el modo por
+The shift changes the mode by
 \[
  u_{\rho-\varepsilon}
  ={\rho-\varepsilon\over\rho-\varepsilon-1},\qquad
  \log u_{\rho-\varepsilon}-\log u_\rho=O_\rho(\varepsilon).
  \tag{29}
 \]
-Para \(n\le1/h\) y (16),
+For \(n\le1/h\) and (16),
 \[
  n\{\log u_{\rho-\varepsilon(h)}-\log u_\rho\}
  =O_\rho(h^{-1}e^{-1/(100h)})=o(1).                        \tag{30}
 \]
-El regulador diagonal conserva la amplitud y la fase exponenciales del
-modo off-line. Aproxima el criterio: no lo suaviza hasta volverlo verdadero.
+The diagonal regulator preserves the exponential amplitude and phase of
+the off-line mode. It approximates the criterion: it does not smooth it
+into becoming true.
 
-En contraste, la expansión exacta de primer orden es
+In contrast, the exact first-order expansion is
 
 \[
  \log u_{\rho-\varepsilon}-\log u_\rho
@@ -320,36 +322,37 @@ En contraste, la expansión exacta de primer orden es
  \tag{31}
 \]
 
-Con una amortiguación polinómica del tamaño (28b), se tiene
-\(n\varepsilon\to\infty\). Tal regulador altera el modo dominante por un
-factor exponencial no uniforme y no puede sustituirse en el detector
-coeficiente a coeficiente. Ésta es la misma incompatibilidad vista desde
-los ceros en vez de la carga VK.
+With a polynomial damping of size (28b), one has
+\(n\varepsilon\to\infty\). Such a regulator alters the dominant mode by
+a non-uniform exponential factor and cannot be substituted into the
+coefficient-by-coefficient detector. This is the same incompatibility
+seen from the zeros instead of from the VK charge.
 
 ---
 
-## 7. Veredicto
+## 7. Verdict
 
-**Probado:** la generatriz (5), el disco desplazado (7)--(9), la cota
-\(2M_rn\varepsilon r^{-n}\), la diagonal explícita (16), la equivalencia
-Fermi diagonal (20)--(21) y la pared (26).
+**Proved:** the generating function (5), the shifted disk (7)--(9), the
+bound \(2M_rn\varepsilon r^{-n}\), the explicit diagonal (16), the
+diagonal Fermi equivalence (20)--(21), and the wall (26).
 
-**Ganancia:** el frente Abel queda enteramente dentro del semiplano de
-convergencia absoluta de Euler, con un único regulador ligado a \(h\).
+**Gain:** the Abel front lies entirely within Euler's half-plane of
+absolute convergence, with a single regulator tied to \(h\).
 
-**No probado:** una cota para la fase completa (28), el límite Fermi, A1 o
-RH. La diagonal elimina un problema de intercambio de límites, no la
-cancelación aritmética.
+**Not proved:** a bound for the complete phase (28), the Fermi limit,
+A1, or RH. The diagonal removes a limit-interchange problem, not the
+arithmetic cancellation.
 
 ---
 
-## 8. Reproducción
+## 8. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 diagonal_abel_regulator_gate_check.py
 ```
 
-El checker verifica (23) contra la suma binomial con aritmética racional,
-las desigualdades de (14)--(15), la escala \(C/h^2\) y la estabilidad de
-un modo exterior desplazado. Las cotas analíticas se prueban en el texto.
+The checker verifies (23) against the binomial sum with rational
+arithmetic, the inequalities of (14)--(15), the \(C/h^2\) scale, and the
+stability of a shifted exterior mode. The analytic bounds are proved in
+the text.

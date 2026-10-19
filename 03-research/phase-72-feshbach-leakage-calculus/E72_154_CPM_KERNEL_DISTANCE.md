@@ -1,7 +1,6 @@
 # E72.154 -- CPM kernel distance
 
-**Date:** 2026-07-09.
-**Role:** test whether `CPM-Q` is equivalent to nearness of root packets to `ker M_x`.
+**Purpose:** test whether `CPM-Q` is equivalent to nearness of root packets to `ker M_x`.
 
 ## 0. Kernel formulation
 

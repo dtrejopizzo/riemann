@@ -1,0 +1,2485 @@
+                                                 EXPLICIT EXPONENTIAL SUM ESTIMATES AND APPROXIMATE
+                                                     FUNCTIONAL EQUATIONS FOR THE ZETA FUNCTION
+
+                                                          NATASHA DHIMAN, HABIBA KADIRI, AND EMILY QUESADA-HERRERA
+
+
+                                                  Abstract. We show an explicit version of the Van der Corput truncated Poisson summation for-
+                                                  mula (B-process). By using reﬁned explicit exponential sum estimates, this improves the error term
+                                                  of previous explicit results by Patel and Yang (2024) and Arias de Reyna (2024). As an application,
+arXiv:2609.00537v1 [math.NT] 1 Sep 2026
+
+
+
+
+                                                  we obtain ﬁne explicit estimates for the error terms in approximate functional equations for the
+                                                  Riemann zeta function, improving on previous explicit results of Simonič (2020) in certain ranges.
+
+
+
+
+                                                                                            Contents
+                                            1.  Introduction                                                                                             2
+                                               1.1. An explicit van der Corput approximate Poisson summation formula:                                    2
+                                               1.2. An explicit approximate functional equation of ﬁrst kind for ζ(s):                                   5
+                                               1.3. An explicit approximate functional equation of the second kind for ζ(s):                             5
+                                            2. Preliminary Lemmas                                                                                        8
+                                               2.1. Estimates of harmonic-like sums                                                                      8
+                                               2.2. Estimates of ﬁnite exponential sums                                                                  8
+                                               2.3. Estimates of tails of exponential sums                                                               9
+                                               2.4. A ﬁrst stationary phase estimate                                                                    10
+                                               2.5. Approximations for χ and Γ                                                                          12
+                                            3. An explicit van der Corput approximate Poisson summation formula                                         12
+                                               3.1. Statement of results                                                                                12
+                                               3.2. Proof of Theorem 8                                                                                  14
+                                               3.3. Proof of Corollary 0.2                                                                              21
+                                            4. A 1st explicit approximate functional equation                                                           22
+                                               4.1. Statement and proof of main result                                                                  22
+                                               4.2. Proof of Corollary 0.3                                                                              23
+                                            5. An explicit 2nd approximate functional equation                                                          25
+                                               5.1. Statement of result                                                                                 25
+                                               5.2. Proof of Theorem 10                                                                                 26
+                                            References                                                                                                  31
+                                            Appendix A. Proof of technical lemmas                                                                       32
+                                               A.1. Preliminary results about the Digamma function                                                      32
+                                               A.2. Estimates of harmonic-like sums                                                                     32
+                                               A.3. Estimates of ﬁnite exponential sums                                                                 35
+                                               A.4. Estimates of tails of exponential sums                                                              36
+                                               A.5. Approximations for χ and Gamma                                                                      37
+
+
+                                             2010 Mathematics Subject Classiﬁcation. Primary 11L07, 11M06; Secondary 11Y35 .
+                                             Key words and phrases. Van der Corput estimate, exponential sums, Poisson summation, approximate functional
+                                          equation, Riemann zeta function, explicit results.
+                                                                                                  1
+              EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                             2
+
+                                             1. Introduction
+  The Riemann zeta function ζ(s) can be expressed in terms of its Dirichlet series
+                                              X
+                                       ζ(s) =     n−s
+                                                        n≥1
+
+when σ > 1, where s = σ + it is a complex number. The functional equation for ζ(s) implies that
+we can also express it as a convergent Dirichlet series when σ < 0:
+                              X                                              πs 
+                 ζ(s) = χ(s)      ns−1 , where χ(s) = 2s π s−1 Γ(1 − s) sin        .
+                                                                              2
+                                 1≤n
+
+Understanding ζ(s) in the critical strip {s ∈ C : 0 < σ < 1}, where all non-trivial zeros of ζ(s) lie,
+is a more subtle problem in analytic number theory. An approximate functional equation (AFE)
+approximates ζ(s) in the critical strip by ﬁnite Dirichlet sums. These approximate formulas are
+classical tools for bounding zeta inside the critical strip, for establishing zero-density estimates, and
+for Dirichlet divisor problems (see, for instance, [15]).
+   Hardy and Littlewood proved in [5, 6] two approximations in the critical strip:
+                                          X            x1−s             
+                                 ζ(s) =        n−s −          + O x−σ ,                              (1.1)
+                                                       1−s
+                                           1≤n≤x
+
+valid for σ ≥ σ0 > 0 and |t| ≤ 2πx/C (where C > 1); and, for 0 < σ < 1 and 2πxy = |t|,
+                         X               X                                  
+                 ζ(s) =       n−s + χ(s)     ns−1 + O x−σ + O |t|1/2−σ y σ−1 .                      (1.2)
+                          1≤n≤x               1≤n≤y
+
+We refer to (1.1) as the AFE of the “ﬁrst kind” and to (1.2) as the AFE of the “second kind”.1
+Note that, in [5], a previous version of (1.2) had (log t)-factors in the error terms.
+  We prove explicit versions of (1.1) and (1.2) by means of explicit B-estimates for oscillatory
+exponential sums of the shape               X
+                                                g(n)e2πif (n) ,                             (1.3)
+                                             a<n≤b
+where f and g are real-valued functions with g positive, satisfying monotonicity conditions up to
+their second derivatives. Our results impose no restriction on the length of the interval (a, b).
+Notation:
+Throughout the article, we write
+                     f = O∗ (g) if |f (x)| ≤ g(x) for all x in the relevant domain.
+We also use Vinogradov notation f ≪ g and f = O(g) interchangeably.
+
+1.1. An explicit van der Corput approximate Poisson summation formula:
+The classical Poisson summation formula states that, under reasonable decay and regularity condi-
+tions for a function F : R → C, we have
+                                      X          X
+                                         F (n) =     Fb(ν),                                 (1.4)
+                                            n∈Z          ν∈Z
+                 R
+where Fb(y) := R F (x)e−2πixy dx is the Fourier transform of F . Meanwhile, the B-process of van
+der Corput transforms an exponential sum into a shorter one, indexed by the integers in the range
+of f ′ . The ﬁrst step in the B-process is a truncated version of (1.4) due to van der Corput (see,
+for instance, [7, Section 8.3]). For a phase function f (x) with a monotonic derivative, such an
+  1We caution the reader that this terminology is non-standard.
+                EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                           3
+
+approximate Poisson formula transforms the sum (1.3) into a sum of truncated Fourier integrals
+over a much shorter range.
+  Our ﬁrst main result (Theorem 8) is of the shape:
+                                                     ⌊f ′ (a)⌋ Z b
+                         X                             X
+                                      2πif (n)
+                                 g(n)e           =                    g(x)e2πi(f (x)−νx) dx + T0 (a, b),             (1.5)
+                        a<n≤b                          ν=0        a
+
+where T0 is an explicitly bounded error term. Classically, when f ′ (b) → 0 while f ′ (a) is large, we
+can prove the asymptotic bound as in [15, Lemma 4.7] or [7, Proposition 8.7]:
+                                                 T0 (a, b) ≪g log(f ′ (a)).
+In Theorem 8, we prove two distinct explicit estimates for T0 (a, b) depending on the size of f ′ (a).
+We state it here for the case when g(n) is constant:
+Corollary 0.1 (An explicit Poisson summation formula). Let f (x) be a real function with con-
+tinuous, positive and strictly decreasing derivative f ′ (x) in [a, b]. If a, b ∈ Z + 12 , then for δ =
+1 − (f ′ (a) − ⌊f ′ (a)⌋), we have:
+                                            ⌊f ′ (a)⌋ Z b
+                            X                X                                            
+                                 2πif (n)
+                                e         =               e2πi(f (x)−νx) dx + O∗ T0 (a, b)
+                           a<n≤b                  ν=0        a
+
+where
+                            1
+                   T0 (a, b) =   log(1 + f ′ (a)) + log(1 + ⌊f ′ (a)⌋) + γ
+                            π
+                                        1                   1          Γ′                        1 
+                            −                      −                 −    (δ)   + log  2  +           .
+                                2(1 + ⌊f ′ (a)⌋) 2(1 + f ′ (a))         Γ                     f ′ (a)
+If, in addition, we assume the function f ∈ C 2 (a, b) and |f ′′ | is positive and decreasing on [a, b],
+then, we replace the deﬁnition of T0 (a, b) with
+             log 2 |f ′ (b)|Bf ′ (b) + |f ′ (a)|Bf ′ (a)       1         |f ′′ (a)|  E1 (δ, f ′ (a))             ′
+                                                                                                                        
+ T0 (a, b) =      +                                      +             +                              + E 2 (δ, f   (a))  ,
+              2π                     2π                    2π(f ′ (a))     2π 2           f ′ (a)
+where Bf′ , E1 and E2 are respectively deﬁned in (3.6), (3.50) and (3.51) with N = 0.
+    Recently, Patel [10, Lemma 2.26] and Patel with Yang [11, Lemma 2.1], as well as Arias de Reyna
+                                                                                3
+ [3, Lemma 4], establish similar bounds with an explicit leading factor of log(f ′ (a) + 1) (with
+                                                                                π
+ secondary error terms of constant size). In comparison, Corollary 0.1 gives two approximations,
+ depending on the magnitude of f ′ (a), namely:
+                     2
+Part I. T0 (a, b) ≈ log(1 + f ′ (a)) when f ′ (a) is not too large,
+                     π
+                     log 2
+Part II. T0 (a, b) ≈       when f ′ (a) is large.
+                      2π
+ More precisely, we note that Part II gives the uniform bound below.2 We prove Theorem 8 directly
+ for a generic weight function g(x), rather than deriving the weighted case from the constant g(n) = 1
+ case via partial summation (as done in [15, Lemma 4.10] or [3, Lemma 5]). We observed that
+   2Part II gives the uniform bound:
+                                                                                               
+                                                                    1                |f ′′ (a)|
+                                         T0 (a, b) ≪    1+                      1+                    .
+                                                                 f ′ (a)                 δ3
+The factor of δ −3 , instead of δ −1 as in Part 1 and other works, is a tradeoﬀ we choose to remove the log(f ′ (a)) terms.
+In our applications, we take δ = 1/2.
+                EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                            4
+
+this discards signiﬁcant oscillatory cancellation. Instead, we incorporated g(x) directly into the
+stationary-phase integral analysis, obtaining sharper, fully explicit bounds.
+   Relative to previous work of [9, Lemma 6-7], [10, Lemma 2.26], [11, Lemma 2.1], as well as [3,
+Lemma 4-5], Theorem 8 and Corollary 0.1 improve the leading logarithmic dependence in both
+parts. In Part I, we reduce the constant in front of the log f ′ (a)-term, from π3 to π2 , and in Part
+II, we remove the log f ′ (a) dependence entirely, in both cases under derivative conditions typical of
+applications.3 The generic case, Theorem 8, is stated in Section 3 and proved in Section 3.2.
+     Theorem 8 also reﬁnes the explicit Poisson summation formula of KAratsuba and Korolev [9,
+Theorem] and Patel and Yang [11, Lemma 2.3]. The latter is used to obtain explicit bounds for
+|ζ(1/2 + it)|. The following version, proved in Section 3.3, reduces the coeﬃcient of the log(f ′ (a) −
+f ′ (b)) term:
+
+Corollary 0.2 (A van der Corput B-process). Let a, b ∈ Z + 21 with a < b. Let f (x) be a real-
+valued, three times diﬀerentiable function on [a, b] with continuous, positive, and strictly decreasing
+derivative f ′ (x) with 0 < f ′ (b) < 1. Let δ = 1 − (f ′ (a) − ⌊f ′ (a)⌋). For each integer ν ∈ (0, ⌊f ′ (a)⌋],
+let xν ∈ [a, b] be the unique point such that f ′ (xν ) = ν. Furthermore, suppose that for all x ∈ [a, b]:
+
+                                   λ2 ≤ |f ′′ (x)| ≤ h2 λ2   and    |f ′′′ (x)| ≤ h3 λ3 .
+
+Then
+       X                       X         e2πi(f (xν )−νxν −1/8)   2.686 2 · 32/3  1/3       1/3
+           e2πif (n) −                                          ≤ √     + 2/3 h2 h3 (b − a)λ3
+                                             |f ′′ (xν )|1/2         λ2   π
+   a<n≤b                 0<ν≤⌊f ′ (a)⌋
+                                                                                  2
+                                                                              +     log(f ′ (a) − f ′ (b)) + Df (a, b),
+                                                                                  π
+with
+              |f ′ (a)|Bf ′ (a) + |f ′ (b)|Bf ′ (b) h2 λ2 E1 (δ, f ′ (a)) h2 λ2 E2 (δ, f ′ (a))      1            log 2
+Df (a, b) =                                        +       2   ′
+                                                                         +           2
+                                                                                                +     ′
+                                                                                                          +1.251+       .
+                               2π                       2π f (a)                 2π               2πf (a)          2π
+
+  For simplicity, we reiterate the uniform bound
+                                                             
+                                                 1        h2 λ2
+                               Df (a, b) ≪ 1 + ′        1+ 3      .
+                                               f (a)       δ
+
+Replacing [11, Lemma 2.3] with this Corollary could reﬁne Patel and Yang’s subconvexity bound
+for zeta on the critical line [11, Theorem 1.1], as van der Corput is applied in their Lemma 3.4,
+                                                          P
+which evaluates the contribution from sums of the shape t7/17 ≪n≪√t n−1/2−it .
+  As a natural application of Theorem 8, we establish explicit approximate functional equations of
+both the ﬁrst and second kind for the Riemann zeta function. In this context, the sum (1.3) takes
+                                                                       t
+                                            g(u) = u−σ and f (u) =       log u.
+                                                                      2π
+For the approximate functional equation of the ﬁrst kind, Part I is the appropriate estimate: with
+                         t     1
+a ≍ t we have f ′ (a) = 2πa ≈ 2π  < 1, so that ⌊f ′ (a)⌋ = 0 and the sum of Fourier integrals in (1.5)
+                                                                          √                  t
+                                                                                                  √
+reduces to a single term. For the second kind we apply Part II, since a ≍ t gives f ′ (a) = 2πa ≍ t.
+
+  3More precisely, as − Γ′ (δ) = 1 − γ + O(δ), we require δ ≫ 1/ log(1 + f ′ (a)), a condition satisﬁed here.
+                           Γ        δ
+               EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                         5
+
+1.2. An explicit approximate functional equation of ﬁrst kind for ζ(s):
+We establish here an explicit version of (1.1).
+Corollary 0.3. Let s = σ + it with σ ∈ (0, 1] and t ≥ t0 ≥ 14. We have
+                                            X
+                                   ζ(s) −       n−s ≤ c0 t−σ ,                                                    (1.6)
+                                                    1≤n≤t
+
+where c0 is deﬁned in (4.7) and is computable for chosen values of t0 . For instance,
+                                           c0 = 1.2552 for t0 = 14.13472,
+                                           c0 = 1.2127 for t0 = 3 · 1012 .
+   The numerical thresholds for t0 correspond, respectively, to a value just below the ordinate of
+the ﬁrst non-trivial zero of ζ(s) (γ1 = 14.134725 . . . ), and the height up to which the Riemann
+Hypothesis has been veriﬁed [12].
+   Applying Theorem 8 oﬀers an alternative to the methods of Kadiri [8, Corollary 1.3] and Simonič
+[14, Corollary 2], who obtained c0 = 2.1946 and c0 = 1.755, respectively, when t0 = 14.13472.
+In addition, it reﬁnes the explicit constant 1 + 29/14 ≈ 3.0714 announced by Arias de Reyna
+[3, Theorem 6], which was proven using [3, Lemma 4]– an explicit version of the van der Corput
+approximate Poisson summation of [15, Lemma 4.7].
+   Theorem 9 establishes the approximate functional equation under the assumption that x ∈ Z +
+1/2. Our above corollary removes this condition at a minor cost to the explicit constant. Proofs of
+Theorem 9 and Corollary 0.3 are given in Section 4.
+
+1.3. An explicit approximate functional equation of the second kind for ζ(s):
+The next two results give explicit versions of (1.2) with logarithmic factors, and then with absolute
+constants on a bounded range. The logarithm is intrinsic to the Poisson Formula route. The gain
+is that the resulting constants are much smaller than those obtained by contour integral methods
+throughout the range of computational interest.
+   The ﬁrst is a simpliﬁed numerical version of the approximate functional equation established in
+Theorem 10 (see Section 5):
+Corollary 0.4 (An explicit AFE 2 with log-factors). Let s = σ + it with 1/2 ≤ σ ≤ 1 and
+|t| ≥ t0 ≥ 2π. Assume x, y ∈ Z + 1/24 satisfy 2πxy = |t| with x, y ≥ h ≥ 1.55. We have the
+approximate functional equation
+                                X             X
+                       ζ(s) =     n−s + χ(s)      ms−1 + E(σ, t, x, y),              (1.7)
+                                     1≤n≤x                1≤m≤y
+
+where the error term E(σ, t, x, y) satisﬁes
+                                                          
+                                        (1+δ0 ) log x + ǫ0 x−σ                    if x < y,
+                                               π
+                     |E(σ, t, x, y)| ≤  log y             
+                                                         t 1/2−σ σ−1
+                                            π  +   ǫ 0   2π      y                 if x ≥ y,
+with the constants ǫ0 = ǫ0 (h, t0 ) and δ0 = δ0 (t0 ) respectively deﬁned by
+                            ǫ0 = max E0 (σ, h, t0 ), and δ0 = max C0 (σ, t0 ) − 1.                                (1.8)
+                                  1                                 1
+                                  2
+                                    ≤σ≤1                            2
+                                                                      ≤σ≤1
+
+   4It should be possible to remove, a posteriori, the condition that x, y ∈ Z + 1/2, while retaining constants that are
+very close to those in Table 1, by carrying out an analysis similar to that of Section 4.2 to obtain Corollary 0.3. This
+would require more work than this case, and we leave it to the interested reader. Otherwise, our proof methods can
+be relaxed to requiring, say, max(x, y) ∈ Z + 21 and (min(x, y) − ⌊min(x, y)⌋) ∈ [ε, 1 − ε], with an extra error term of
+               1
+size ≪ 1ε + (1−ε) 3.
+   5Since x, y are positive half-integers, with x, y ≥ 1, then taking h ≥ 1.5 is not an additional assumption.
+             EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                             6
+
+Here, C0 is deﬁned in (2.17) and E0 in (5.2). Table 1 displays values for ǫ0 and δ0 , which hold
+uniformly for 1/2 ≤ σ ≤ 1 and vary with t0 , and depending with the relative size of x and y.
+
+        Table 1. Corollary 0.4: Values for ǫ0 and δ0 as deﬁned in (1.8)
+
+                     t0    ǫ0 (x < y) ǫ0 (x = y) ǫ0 (x > y)     δ0 (t0 )
+                     2π     2.264445   2.265204   2.265204 5.961915 × 10−2
+                    10 3    1.792711   1.265977   1.792736 3.692900 × 10−4
+                    1010    1.750701   1.160079   1.750701 3.692588 × 10−11
+                  3 × 1012 1.750689    1.160048   1.750689 1.230863 × 10−13
+                                                                             q
+                                                                               t0
+  Values of ǫ0 in Table 1 are calculated using h = 1.5 when x 6= y, and h = ⌊ 2π  ⌋ + 0.5 when
+x = y.
+  The following formulation of Corollary 0.4 gives an explicit version of (1.2) when min(x, y) is in
+a bounded range.
+Corollary 0.5 (An explicit AFE 2 with absolute constants). Let s = σ + it with 1/2 ≤ σ ≤ 1 and
+|t| ≥ t0 ≥ 2π. Assume x, y ∈ Z + 1/2 satisfy 2πxy = |t| with x, y ≥ h ≥ 1.5. Let k ∈ Z+ be such
+that 1 ≤ k ≤ 50 and deﬁne hk = ⌊ek−1 ⌋ + 0.5 and Hk = ek . If hk ≤ min(x, y) ≤ Hk , then (1.7)
+holds with                                    (
+                                                ǫk x−σ               if x < y,
+                            |E(σ, t, x, y)| ≤            
+                                                       t 1/2−σ σ−1
+                                                ǫk 2π          y     if y ≤ x.
+The constant ǫk = ǫk (hk , t0 ) is deﬁned by
+                                            (
+                                              k(1+δ0 )
+                                                        + ǫ0 if x < y,
+                                      ǫk = k π                                             (1.9)
+                                              π + ǫ0         if y ≤ x,
+with ǫ0 and δ0 as in (1.8). Tables 2 and 3 display values for the constant ǫk .
+
+        Table 2. Corollary 0.5: Values for ǫk as deﬁned in (1.9) with t0 = 1010
+
+                           k     h     H = ek ǫk (x < y) ǫk (x ≥ y)
+                            1   1.50     2.72  2.069008   2.069011
+                            2   2.50     7.39  2.132265   2.132269
+                            3   7.50    20.09  2.222296   2.222299
+                            4  20.50    54.60  2.472235   2.472238
+                            5  54.50   148.41  2.766222   2.766225
+                            6 148.50   403.43  3.075276   3.075279
+                            7 403.50 1096.63   3.390198   3.390201
+                            8 1096.50 2980.96  3.707261   3.707264
+                            9 2980.50 8103.08  4.025112   4.025115
+                           10 8103.50 22026.47 4.343253   4.343256
+
+  Note that the ﬂuctuations in the ǫk -values, for small values of k, are related to the balance between
+the linear growth of k in these dyadic intervals (coming from the logarithmic term in Corollary 0.4,
+and the decreasing term ǫ0 ). The term ǫ0 (hk ) varies by less than 10−4 once k ≥ 10. We also note
+that, for t0 = 1010 and k ≤ 50, we have kδπ0 < 10−8 . Therefore, for all 11 ≤ k ≤ 50, we have, in all
+cases with t0 = 1010 , the bound
+                                                 k
+                                           ǫk ≤ + 1.1601.                                          (1.10)
+                                                 π
+             EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                         7
+
+Table 3 gives upper bounds for ǫk in certain larger ranges of k.
+
+       Table 3. Corollary 0.5: Upper bounds for ǫk as deﬁned in (1.9) with t0 = 1010 .
+
+                                             k             ǫk
+                                        11 ≤ k ≤ 15    5.9346959
+                                        16 ≤ k ≤ 20    7.5262442
+                                        21 ≤ k ≤ 25    9.1177936
+                                        26 ≤ k ≤ 30   10.7093431
+                                        31 ≤ k ≤ 35   12.3008925
+                                        36 ≤ k ≤ 40   13.8924419
+                                        41 ≤ k ≤ 45   15.4839914
+                                        46 ≤ k ≤ 50   17.0755408
+
+  To further illustrate this, we highlight the following simple bound. Let 1/2 ≤ σ ≤ 1, |t| ≥ 2π,
+and x, y ∈ Z + 1/2 such that 2πxy = |t| with x, y ≥ 1. Assume that min(x, y) ≤ 106 . Then,
+                                             (
+                                               6 x−σ            if x < y,
+                           |E(σ, t, x, y)| ≤         
+                                                   t 1/2−σ σ−1
+                                                                                            (1.11)
+                                               6 2π       y     if y ≤ x.
+Corollary 0.5 allows for direct comparison with Simonič [14, Theorem 4, Theorem 6, Tables 2–4].
+His argument in the non-symmetric case follows that of Hardy and Littlewood [6, Theorem A]. He
+also complements his work by calculating numerical bounds for the error terms in the Riemann–
+Siegel formula as proven by Arias de Reyna [2, Theorems 4.1 and 4.2] in 2011. The error term
+E(σ, t, x, y) is denoted R1 (s; x, y) in [14] with
+                                                         1/2−σ
+                                                   −σ    |t|
+                                |R1 (s; x, y)| ≤ Ex + F          y σ−1 .
+                                                         2π
+We reproduce the values of E + F in Table 4. (We recall that the case x = y is derived from [2].)
+
+       Table 4. Values for E + F from [14, Tables 2–4]
+
+                                  t0      x<y         x=y    x>y
+                                  2π       36.094  4.257 127.126
+                                 103       10.983  1.195  15.726
+                                 1010     10.7502 1.00007 15.203
+
+   These values are directly comparable to our ǫk from Table 2 and (1.10). For instance, our
+estimates are ﬁner than [14] in Table 4 in low ranges of min(x, y) where calculations are feasible:
+ǫk < 15.203 for k ≤ 44 , while ǫk < 10.7502 for k ≤ 30. Note that these points, min(x, y) ≈
+e44 ≈ 1019.10 and min(x, y) ≈ e30 ≈ 1013.02 , respectively, are the thresholds where Theorem 10
+provides ﬁner explicit estimates. These are in the range in which ζ(s) has been computed, since
+our thresholds cover up to at least t = 2πxy ≈ 1026 . In the symmetric case x = y, the constants
+of [14], derived from the Riemann–Siegel bounds of Arias de Reyna [2, Theorems 4.1 and 4.2],
+remain sharper than ours when t0 ≥ 103 . If t0 = 2π, Corollary 0.4 produces sharper bounds in the
+symmetric case, in the range 1 ≤ x = y ≤ 3000.
+   Python code to verify the numerical constants in Table 1, 2 and 3 from Corollary 0.4 and 0.5 can
+be found in the arXiv version of this paper (using ﬂoating-point arithmetic). The constants in the
+simple result stated in (1.11) follow from Corollary 0.5, for t0 = 1010 , by taking k ≤ 15 in Table 2
+              EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                      8
+
+and 3. This remains true for t0 = 2π by taking k ≤ 14, as can be veriﬁed with the code, and noting
+106 < e14 .
+
+                                          2. Preliminary Lemmas
+2.1. Estimates of harmonic-like sums. The following bounds are useful to establishing an ex-
+plicit van der Corput B estimate (Theorem 8).
+Lemma 1. Let N be a positive integer and 0 < y < N + 1, and ∆ = N + 1 − y. We have the
+following estimates:
+             1       1 Γ′       X    1     1                   1      1 Γ′
+       −          −       (∆) ≤           − log(N + 1) ≤ −          −      (∆).  (2.1)
+         y(N + 1) y Γ             ν(ν − y) y               2y(N + 1) y Γ
+                                    ν>N
+
+       X                                                                            
+                 1       1       1        1        1      1                    1   Γ′
+                     2
+                       ≤           2
+                                     +        2
+                                                +     − 2 log(N + 1) −            − (∆) . (2.2)
+             ν(ν − y)    y       ∆     (∆ + 1)    ∆+1     y                  N +1  Γ
+       ν>N
+       X                                                                    
+               1        1    1        1             1          1   1        1
+                    3
+                      ≤       3
+                                 +        3
+                                            +          2
+                                                            − 2      2
+                                                                       +
+           ν(ν − y)     y ∆        (∆ + 1)    2(∆ + 1)         y   ∆       ∆+1
+       ν>N
+                                                                
+                           1                      1        Γ′
+                        + 3 log(N + 1) −               − (∆) .                            (2.3)
+                           y                 2(N + 1)      Γ
+        X      1        log(y + 1) + γ        qk (y)
+                   k
+                      ≤          k
+                                       − k              , for k = 1, 2, 3,                (2.4)
+           ν(ν + y)            y          2y (y + 1)k−1
+       ν≥1
+
+with q1 (y) = (y + 1)−1 , q2 (y) = 1 + 2y, q3 (y) = 1 + 3y + 3y 2 .
+Proof. We establish the above bounds via partial fraction decomposition, properties of the digamma
+           ′
+function ΓΓ , and integral comparison. Details can be found in Appendix A of the ArXiv version of
+this paper.                                                                                      
+   The following two sections provide estimates for exponential sums (Lemmas 2 and 3) crucial for
+establishing an explicit van der Corput B estimate (Theorem 8).
+2.2. Estimates of ﬁnite exponential sums. We ﬁrst need some auxiliary bounds on a geometric
+exponential sum and a twisted harmonic sum, which will appear in the proof of the next lemmas.
+   For x, y ∈ R, and speciﬁcally for x not being an integer, we consider the ﬁnite sums
+                                   X                              X e−2πiνx
+                      S0 (x, y) =       e−2πiνx and S1 (x, y) =               .           (2.5)
+                                                                          ν
+                                     1≤ν≤y                            1≤ν≤y
+
+For y < 1, we have the empty sums S0 (x, y) = S1 (x, y) = 0. Furthermore, we note that Titchmarsh
+([15]) and Arias de Reyna ([3]) use the bound S1 (x, y) ≤ log(1 + |y|).
+   This is essentially tight when x ∈ Z. For non-integer x, we will prove some stronger bounds that
+take advantage of cancellation in the oscillations, which are our main source of improvement from
+previous results. A generic bound for Z follows from one for S by partial summation, and we can
+obtain a tighter bound when x is a half-integer.
+Lemma 2. For x, y ∈ R with x ∈  / Z and y > 0, we have the bounds:
+                                                 (
+                                                       1
+                                 sin(πx⌊y⌋)                   if y ≥ 1,
+                  |S0 (x, y)| =               ≤ | sin πx|                                     (2.6)
+                                     sin πx         0         if 0 < y < 1,
+                                            (                
+                                                  1      1
+                                                           + 1     if y ≥ 1,
+                  |S1 (x, y)| ≤ S˜1 (x, y) = | sin(πx)| y                                     (2.7)
+                                              0                    if 0 < y < 1.
+             EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                             9
+
+
+
+                             6
+
+
+
+
+                             5
+
+
+
+
+                             4
+
+
+
+
+                             3
+
+
+
+
+                             2
+
+
+
+
+                             1
+
+
+
+
+                             0
+                                      0.2       0.4      0.6      0.8
+
+
+
+
+        Figure 1
+Plot of |S0 (x, y)| as a function of x, in the case ⌊y⌋ = 21, in blue. In purple, the bound 1/| sin(πx)|.
+
+Moreover, in the special case where x = n + 1/2 (n ∈ Z) and y ≥ 1, we can replace the deﬁnition of
+S˜1 with the slightly stronger bound:
+                                                                
+                                   ˜                          ∗ 1
+                                  S1 (n + 1/2, y) = log 2 + O      .                         (2.8)
+                                                                y
+Proof. We establish the above bounds via geometric summation for S0 and integrating by parts
+with the resulting bound for S1 , via a Riemann-Stieltjes integral. Details can be found in Appendix
+A of the ArXiv version of this paper.                                                             
+Remark. The ﬁner behavior of S0 (x, y) (and S1 (x, y)) depend strongly on the shape of x, particularly
+on how close it is to fractions of denominator ⌊y⌋, as well as the parity of ⌊y⌋. See Figure 1 for
+a plot of |S0 (x, y)| as a function of x, when ⌊y⌋ = 21. It might be possible to decrease the factor
+(1/y + 1) in the generic bound (2.7) to (1/y + log 2), but we were not able to show this, other than
+the special case x = n + 1/2, n ∈ Z in (2.8). Such a general improvement would possibly require
+a ﬁner Diophantine analysis on x and y. See Figure 2 for a plot of |S1 (x, y)|, compared to this
+conjectural bound. This, along with the equality (2.8), suggests that the generic bound given in
+(2.7) is strong.
+2.3. Estimates of tails of exponential sums. Let N be a non-negative integer, and x, y ∈ R
+satisfying x is not an integer and y < N + 1.
+Lemma 3. Let x, y ∈ R with 1 ≤ y < N + 1, x ∈  / Z, and let N be a non-negative integer. Then
+              X e−2πiνx                                                      
+                                                     1         1          1
+                            ≤ Z0 (N, x, y) =                         +           ;          (2.9)
+                   ν(ν − y)                    y| sin(πx)| N + 1 − y N + 1
+             ν>N
+             X∞                                                 
+                   e−2πiνx                      1            1
+                            ≤ Z1 (x, y) =                1+        .                       (2.10)
+                  ν(ν + y)                y| sin(πx)|       1+y
+                 ν=1
+
+In the special case where x ∈ Z + 12 and N + 1 − y ≥ 12 , the deﬁnitions can be replaced by the stronger
+estimates
+                                                                                               
+                     1 Γ′               Γ′ N + 2 − y                     1        1 π         1
+    Z0 (N, x, y) =        (N + 1 − y) −                    − log 2 +           ≤        +           ;
+                     y Γ                Γ       2                    y(N + 1)     y 2 N +1
+                 log 2        3
+    Z1 (x, y) =        +            ;
+                   y      2y(y + 1)
+             EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                         10
+
+                            5.0
+
+
+
+
+                            4.5
+
+
+
+
+                            4.0
+
+
+
+
+                            3.5
+
+
+
+
+                            3.0
+
+
+
+
+                            2.5
+
+
+
+
+                            2.0
+
+
+
+
+                            1.5
+
+
+
+
+                            1.0
+
+
+
+
+                                      0.2      0.4       0.6     0.8
+
+
+
+
+       Figure 2
+Plot of |S1 (x, y)| as a function of x, in the case ⌊y⌋ = 21, in blue. In green, the conjectural bound
+         (1/y + log 2)/| sin(πx)|, which we proved in the special case x = n + 1/2, n ∈ Z.
+
+Proof. We compare our sums with a Riemann–Stieltjes integral involving S0 and S1 , integrate by
+parts, and use the bounds of Lemma 2. Details can be found in Appendix A of the ArXiv version
+of this paper.                                                                                
+
+2.4. A ﬁrst stationary phase estimate. We ﬁrst recall a bound on oscillatory integrals. Arias
+de Reyna gives an explicit version of [15, Lemma 4.3] with an optimal constant of 2 (improving
+upon the constant 4 in the original formulation):
+Lemma 4. [3, Lemma 2] Let f (x) and g(x) be continuous real functions deﬁned in a closed interval
+[a, b]. Assume that f has a non-null continuous derivative f ′ (x) and that fg(x)
+                                                                              ′ (x) is non-zero and
+monotonic. Then               Z b
+                                                                g(x)
+                                  g(x)eif (x) dx ≤ 2 maxa≤x≤b ′
+                               a                               f (x)
+  For m a positive integer, s = σ + it with σ > 0, and 0 ≤ a < b (with b symbolically possibly
+being ∞), we introduce the notation
+                                              Z b
+                                 J(a, b, m) =     u−s e2πimu du.                        (2.11)
+                                                     a
+We apply the above lemma, and integration by parts, to estimate the following oscillatory sums and
+integrals.
+Lemma 5. Let x ≥ 1 with x ∈ Z + 12 , s = σ + it with 0 < σ < 1, and deﬁne y by the equation
+2πxy = |t|. Assume additionally that y ≥ 1 and y ∈ Z + 12 . Let m ≥ 1 be an integer. Then, we have
+the following estimates:
+                                                                                  !
+                X                       log y   1                 3      3      3
+                     J(0, x, m) ≤ x−σ         +     γ + 2 log 2 −     +     +         ,     (2.12)
+                                          π     π                 2     4πy 8πy 2
+              1≤m<y
+               X                       N −σ                       t
+                      J(N, ∞, m) ≤ 2        log y + 1 for all N >    .                          (2.13)
+                                        π                         πm
+              1≤m≤y
+                                                   P
+Remark. Note that the (log y)-term arising from the 1≤m<y J(0, x, m) is the one appearing in the
+error term E in our main Theorem 10, and Corollary 0.4.
+             EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                      11
+
+Proof. Integrating by parts twice and using that x ∈ Z + 12 , so that e2πimx = (−1)m , we ﬁnd that
+                                                                      Z x
+                    x1−s (−1)m    2πim x2−s (−1)m        4π 2 m2
+       J(0, x, m) =            −                   −                      u2−s e2πimu du.    (2.14)
+                       1−s         (1 − s)(2 − s)    (1 − s)(2 − s) 0
+To bound the resulting integral, set F (u) = 2πmu − t log u and G(u) = u2−σ . The ratio
+                                           G(u)          u3−σ
+                                                   =
+                                           F ′ (u)   |t| − 2πmu
+is non-negative and strictly increasing on (0, x], so applying Lemma 4 leads to:
+                           Z x
+                                                        x3−σ       x2−σ
+                               u2−s e2πimu du ≤ 2              =          .
+                            0                       |t| − 2πmx   π(y − m)
+Using |1 − s||2 − s| ≥ |t|2 = (2πxy)2 , the integral expression is simpliﬁed as follows:
+                    4π 2 m2       x2−σ         4π 2 m2 x2−σ         m2 x−σ
+                               ·         ≤                   =               .
+                 |1 − s||2 − s| π(y − m)    (2πxy)2 π(y − m)    y 2 π(y − m)
+                                    P         m ≤ 1, and
+                                                            P           m      y+1
+Summing over 1 ≤ m < y, and using     m<y (−1)                m<y (−1) m ≤ 2 , and
+                             X           m2                            3  1
+                                                ≤ log y + γ + 2 log 2 − + 2 ,                (2.15)
+                                    y 2 (y − m)                        2 8y
+                            1≤m<y
+
+we obtain the bound for (2.14):
+            X                                                                   
+                               x−σ   x−σ (y + 1) x−σ                        3  1
+                J(0, x, m) ≤       +            +      log y + γ + 2 log 2 − + 2
+                               2πy     4πy 2      π                         2 8y
+           1≤m<y
+
+which gives the announced bound. It remains to show the sum bound (2.15). We can rewrite the
+summand
+                                   m2           1     1 m
+                                 2
+                                          =        − − 2
+                                y (y − m)    y−m y y
+Therefore, the sum
+                     X       m2         X       1     ⌊y⌋ ⌊y⌋(⌊y⌋ + 1)
+                           2
+                                     =             −      −            .
+                          y (y − m)          y−m       y       2y 2
+                       1≤m<y                  1≤m<y
+
+Using properties of the digamma function (see Appendix A.1 in the ArXiv version of this paper),
+we ﬁnd
+                     X      1     Γ′      Γ′                   1   Γ′
+                               = (y) − (y − ⌊y⌋) < log y −       − (1/2).
+                          y−m     Γ       Γ                   2y    Γ
+                     1≤m<y
+This implies that
+                     X         m2                1   Γ′         ⌊y⌋ ⌊y⌋(⌊y⌋ + 1)
+                             2
+                                      ≤ log y −    −    (1/2) −    −             .
+                            y (y − m)           2y   Γ           y      2y 2
+                    1≤m<y
+                                    ′
+Using that ⌊y⌋ = y − 12 and − ΓΓ (1/2) = γ + 2 log 2, we obtain the announced bound (2.15) upon
+simpliﬁcation.
+   We now apply Lemma 4 to bound J(N, ∞, m)6. For F (u) = 2πmu − t log u and G(u) = u−s , we
+                         |u−s |
+observe that FG(u)
+               ′ (u) =
+                       |2πm− ut |
+                                                                                        t
+                                  is positive and decreasing for 0 < σ < 1 and u ≥ N > πm . Thus
+                                                         
+                                                   u−σ          2N −σ        N −σ
+                     |J(N, ∞, m)| ≤ 2 max                   =           ≤  2      .
+                                          u≥N    2πm − ut     2πm − Nt       πm
+  6Strictly speaking, we apply Lemma 4 to the closed interval [N, N ] and then let N → ∞.
+                                                                   1                1
+              EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                      12
+                                    P         1
+ We conclude to (2.13) by using         1≤m≤y m ≤ log y + 1.                                                      
+   Finally, the following results will be useful for bounding components appearing in the functional
+ equation of the Riemann zeta function.
+
+ 2.5. Approximations for χ and Γ. The χ function provides a simple way of expressing the
+ functional equation of the Riemann zeta function. For all complex value s,
+                                             ζ(1 − s) = χ(s)ζ(s),
+ where χ is deﬁned as                                                   πs 
+                                      χ(s) = 2s π s−1 Γ(1 − s) sin              ,                             (2.16)
+                                                                          2
+ and satisﬁes (see [15, Eq. 4.12.3]), as t → ∞:
+                                                                     σ− 1           −it
+                                                                2π        2      |t|                   π
+                   χ(s) ∼ χ̃(s),    where χ̃(σ + it) =                                        esgn(t) 4 i .
+                                                                |t|             2πe
+ We recall here the explicit version from [14, Proposition 1].
+ Lemma 6. Let s = σ + it with 1/2 ≤ σ ≤ 1 and |t| ≥ t0 ≥ 1/π. Then
+                                                      σ−1/2
+                                                      2π
+                                |χ(s)| ≤ C0 (σ, t0 )          ,
+                                                      |t|
+ with
+                             1                                           
+          C0 (σ, t0 ) = 1 +      C1 (σ, t0 ) 1 + e−πt0 C2 (t0 ) + C3 (t0 ) ,                                  (2.17)
+                             t0
+                                                                               
+                                2 1       2                    1  π 2 1 − σ
+          C1 (σ, t0 ) = (1 − σ)       +        + (1 − σ)(σ − )              +       ,
+                                    2 π                        2      2       2t0
+                                                                               
+                              1       1                   C2 (t0 ) − 1 1       1
+          C2 (t0 ) = exp         +           , C3 (t0 ) =                   +       + t0 e−πt0 C2 (t0 ).
+                            12t0 90t30                    log C2 (t0 ) 12 90t20
+   Rearranging deﬁnition (2.16) yields the following expression for Γ(1 − s):
+ Lemma 7. Let s = σ + it with 0 ≤ σ ≤ 1 and |t| ≥ t0 ≥ π1 . We have
+                                s−1                               
+                                 2π                     ∗     e−πt
+                     Γ(1 − s)           = χ(s) 1 + O                     .
+                                  i                         1 − e−πt0
+
+         3. An explicit van der Corput approximate Poisson summation formula
+    Our ﬁrst main theorem provides estimates that are essential for evaluating the sums found in the
+ explicit Approximate Functional Equations (Theorem 9 and Theorem 10). This explicit result can
+ also be of independent interest and applied in other contexts.
+
+ 3.1. Statement of results.
+ Theorem 8.
+Part I. Let f (x) be a real function with continuous, positive, and strictly decreasing derivative f ′ (x)
+        in [a, b]. Let g(x) be a real positive decreasing function with a continuous derivative g ′ (x).
+        Let N be a non-negative integer with N < f ′ (b), and deﬁne δ = 1 − (f ′ (a) − ⌊f ′ (a)⌋), we
+        have:                 X
+                                   g(x)e2πif (n) = RN (a, b) + O∗ (TN (a, b)) ,                    (3.1)
+                              a<n≤b
+                   EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                               13
+
+           where
+
+                 ⌊f ′ (a)⌋ Z b
+                  X
+  RN (a, b) =                    g(x)e2πi(f (x)−νx) dx,                                                                     (3.2)
+                  ν=N    a
+                                                 
+                 |g (a)| + 2πg(a) (f ′ (a) − N )
+                   ′                                                                                             Γ′
+   TN (a, b) =                                            log(1 + f ′ (a) − N ) + γ + log(1 + ⌊f ′ (a)⌋) −          (δ)
+                         2π 2 (f ′ (a) − N )                                                                     Γ
+                                                                 
+                         1                1                              g(b)|S˜1 (b, f ′ (a) − N )| + g(a)|S˜1 (a, f ′ (a) − N )|
+                 −         ′
+                                 −       ′
+                                                                     +
+                   2(1 + ⌊f (a)⌋) 2(1 + f (a) − N )                                                  2π
+
+                 + G(a, b),                                                                                                 (3.3)
+
+
+           and G and S˜1 are respectively deﬁned in (3.8) and Lemma 2.
+             In particular, if a, b ∈ Z + 12 , the deﬁnition of TN (a, b) simpliﬁes to
+
+                                                    
+                   |g′ (a)| + 2πg(a) (f ′ (a) − N )             ′                              ′         Γ′
+       TN (a, b) =                                    log(1 + f   (a) − N ) + γ +  log(1 + ⌊f    (a)⌋) −    (δ)
+                           2π 2 (f ′ (a) − N )                                                            Γ
+                                                                                                      
+                               1                    1               g(a) + g(b)                   1
+                   −                      −                     +                 log 2 +                 .
+                       2(1 + ⌊f ′ (a)⌋) 2(1 + f ′ (a) − N )             2π                f ′ (a) − N
+
+
+Part II. If, alongside the assumptions of Part I, we assume the functions g and f are in C 2 (a, b) and
+         |g′ |, |f ′′ |, g′′ , and |g′ f ′ + gf ′′ | are all positive and decreasing on [a, b], then the deﬁnition of
+         TN (a, b) simpliﬁes to:
+
+
+                      g(b)|S̃1 (b, f ′ (a) − N )| + g(a)|S̃1 (a, f ′ (a) − N )|
+       TN (a, b) =                                                              + G(a, b)
+                                                  2π                                                                        (3.4)
+                         H(b)Bf ′ (b) + H(a)Bf ′ (a) H1 (a)E1 (δ, f ′ (a)) + H(a)|f ′′ (a)|E2 (δ, f ′ (a))
+                      +                                  +                                                 ,
+                                         4π 2                                    4π 3 f ′ (a)
+
+
+           where γ is Euler’s constant, and the bounds G and S˜1 are respectively deﬁned in (3.8) and
+           Lemma 2. Here, H, H1 , Bf ′ , E1 , and E2 are respectively deﬁned in (3.38), (3.39), (3.49),(3.50),
+           and (3.51).
+             In particular, if a, b ∈ Z + 21 (3.4) simpliﬁes to
+
+                                  log 2       1                             H(b)               H(a)
+              TN (a, b) =                  + ′
+                                                          (g(b) + g(a)) +           2
+                                                                                      Bf ′ (b) +      Bf ′ (a)
+                                  2π    2π (f (a) − N )                        4π                4π 2
+                                                                                                                            (3.5)
+                                   H1 (a)                 H(a)|f ′′ (a)|
+                                 + 3 ′ E1 (δ, f ′ (a)) +                 E2 (δ, f ′ (a)).
+                                  4π f (a)                 4π 3 f ′ (a)
+
+  Remark. For simplicity, we stated the case where N = 0 in Corollary 0.1 in the Introduction. The
+  general case for N < f ′ (b) is easily recovered without loss of generality by replacing f (x) with
+  f (x) − N x. The condition N < f ′ (b) is required so that f (x) − N x has a positive derivative.
+              EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                   14
+
+Corollary 8.1. Under the same assumptions as in Theorem 8 Part-II, and for δ = 12 , we have:
+
+                       1 π              1                               3       
+          Bf ′ (x) =          +                       +  log 2 +                  ,                   (3.6)
+                   f ′ (x) 2 (⌊f ′ (a)⌋ − N + 1)                  2(f ′ (x) + 1)
+                 46          1                                             1         Γ′
+           ′
+ E1 1/2, f (a) = − ′                  log(⌊f ′ (a)⌋ − N + 1) − ′                     − (1/2)
+                   9      f (a) − N                                ⌊f (a)⌋ − N + 1      Γ
+                                                       ′
+                                             1 + 2(f (a) − N )     
+                   + log(f ′ (a) + 1) + γ −                          ,
+                                             2(1 + f ′ (a) − N )
+                 230            14                 1                                           1
+ E2 1/2, f ′ (a) =       −     ′
+                                         +      ′          2
+                                                               log(⌊f ′ (a)⌋ − N + 1) −     ′
+                   27      3(f (a) − N ) (f (a) − N )                                   2(⌊f (a)⌋ − N + 1)
+
+                           Γ′                                    3(f ′ (a) − N ) + 3(f ′ (a) − N )2 + 1 
+                       −      (1/2) + log(f ′ (a) − N + 1) + γ −                                         .
+                           Γ                                              2(1 + (f ′ (a) − N ))2
+Remark (Comparison with similar Theorems). Theorem 8 and Corollary 8.1 improve Arias de
+Reyna’[3, Lemmas 4 and 5]. Lemma 4 establishes the estimate (3.1) in the case g(n) = 1, with
+                                         G                              1
+                           T0 (a, b) =     3 log(1 + f ′ (a)) + π + 3γ +    and G = 1.
+                                         π                               δ
+Lemma 5 generalizes this via partial summation, with
+                                             Z b
+                                G = |g(b)| +     |g′ (x)|dx = g(a)
+                                                              a
+
+when g is positive and decreasing. For instance, for σ ≥ 0, G = a−σ when g(u) = u−σ . Thus, for
+f ′ (a) large enough,
+                                         lim T0 (a, b) ≈ C log(1 + f ′ (a))a−σ
+                                         b→∞
+
+with
+                                                             3 2
+                                                   C=         , , and 0
+                                                             π π
+respectively in [3, Lemma 5], Part I and Part II of Theorem 8 (choosing δ away from 0).
+
+3.2. Proof of Theorem 8.
+
+Proof. The primary objective of this proof is to approximate the sum by an integral and rigorously
+bound the resulting error terms. We may assume without loss of generality that the non-negative
+integer N is equal to zero. This is a valid assumption because the original inequality remains
+unchanged if we replace f (x) with f (x) − N x and N with 0. Note that this substitution does not
+aﬀect the derivative. This implies that the ﬂoor function of the absolute value of the new derivative,
+⌊|f ′ (x) − N |⌋, simpliﬁes to ⌊|f ′ (x)|⌋ − N , which is non-negative.
+  The Euler-Maclaurin formula relates a sum to an integral:
+
+   X                         Z b                                                               
+                                                               1                                1
+          g(x)e2πif (n) −          g(x)e2πif (x) dx =              g(b)e2πif (b) − ⌊a⌋ − a +
+                                                            ⌊b⌋ − b +                               g(a)e2πif (a)
+                              a                                2                                2
+  a<n≤b
+                                                  Z b             
+                                                                 1
+                                                −      ⌊x⌋ − x +     (g′ (x) + 2πig(x)f ′ (x))e2πif (x) dx. (3.7)
+                                                   a             2
+             EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                               15
+
+We apply a trivial bound to the ﬁrst two boundary terms via the triangle inequality, deﬁning G(a, b)
+as:
+                                                                     
+                                       1         2πif (b)             1
+                G(a, b) =    ⌊b⌋ − b +     g(b)e          − ⌊a⌋ − a +     g(a)e2πif (a)
+                                       2                              2
+                          (                                                                 (3.8)
+                            O∗ g(b)+g(a)
+                                     2      ,
+                        =
+                            0                  if a, b ∈ Z + 21 .
+Next, we substitute the Fourier series representation of (⌊x⌋ − x + 12 ) into the left integral of (3.7).
+                             1  1 X sin(2πνx)
+                                                              ∞
+                                                          1 X −2πiνx                
+                − ⌊x⌋ − x +       =                   =           e        − e2πiνx .               (3.9)
+                              2      π         ν         2πi ν=1
+                                                ν≥1
+
+Applying the Dominated Convergence Theorem justiﬁes interchanging the order of summation and
+integration. By combining the boundary term estimate from (3.8) with the Fourier expansion (3.9),
+we rewrite (3.7) as:
+                     X                   Z b
+                              2πif (n)
+                         g(x)e         −     g(x)e2πif (x) dx = S1 − S2 + G(a, b),        (3.10)
+                     a<n≤b                           a
+
+where G(a, b) is deﬁned in (3.8), and
+                           X∞       Z b
+                                 1                             
+                     S1 =               g′ (x) + 2πig(x)f ′ (x) e2πi(f (x)−νx) dx,
+                           ν=1
+                               2πiν a
+                           X∞       Z b
+                                 1                             
+                     S2 =               g′ (x) + 2πig(x)f ′ (x) e2πi(f (x)+νx) dx.
+                           ν=1
+                               2πiν a
+The behavior of each integral in the sum S1 depends critically on the sign of the derivative of the
+exponent, given by f ′ (x)−v. Since f ′ (x) is a strictly decreasing function, we must partition the sum
+into two distinct parts at the point where this term might change its sign. Therefore, we truncate
+the sum S1 at ⌊f ′ (a)⌋:
+                                             S1 = S11 + S12 ,                                      (3.11)
+where                                      Z b
+                            X         1                                 
+                  S11 =                          g′ (x) + 2πig(x)f ′ (x) e2πi(f (x)−νx) dx,        (3.12)
+                                   2πiν a
+                         1≤ν≤⌊f (a)⌋
+                               ′
+
+and                                             Z b
+                              X           1                                     
+                   S12 =                                 g′ (x) + 2πig(x)f ′ (x) e2πi(f (x)−νx) dx.   (3.13)
+                                         2πiν    a
+                           ν>⌊f ′ (a)⌋
+Rewriting and using integration by parts, we get:
+                               Z                            !
+                      X       1 b −2πiνx      g(x)e2πif (x)
+            S11 =                  e      d                   = Σ11 (b) − Σ11 (a) + Σ12 ,             (3.14)
+                              ν a                 2πi
+                    1≤ν≤⌊f (a)⌋
+                         ′
+
+
+where
+                                  X          g(x)e2πi(f (x)−νx)   g(x)e2πif (x)
+                 Σ11 (x) =                                      =               S1 (x, ⌊f ′ (a)⌋)
+                                                   2πiν               2πi
+                             1≤ν≤⌊f ′ (a)⌋
+with S1 (x, ⌊f ⌋′ (a)) deﬁned in (2.5), and
+                                           X                Z b
+                                Σ12 =                             g(x)e2πi(f (x)−νx) dx.              (3.15)
+                                           1≤ν≤⌊f ′ (a)⌋      a
+               EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                              16
+
+Together with (3.10), (3.11), and (3.14), we have:
+
+    X                          Z b
+                2πif (n)
+          g(x)e            −            g(x)e2πif (x) dx = (Σ11 (b) − Σ11 (a)) + Σ12 + S12 − S2 + G(a, b). (3.16)
+  a<n≤b                            a
+
+From the deﬁnition (3.15) of Σ12 , we observe that
+                           Z b                                        ⌊f ′ (a)⌋ Z b
+                                                                          X
+                                           2πif (x)
+                                   g(x)e              dx + Σ12 =                      g(x)e2πi(f (x)−νx) dx,
+                               a                                          ν=0   a
+
+so that with (3.16),
+
+                               ⌊f ′ (a)⌋ Z b
+    X                              X
+                2πif (n)
+          g(x)e            =                    g(x)e2πi(f (x)−νx) dx + (Σ11 (b) − Σ11 (a)) + S12 − S2 + G(a, b). (3.17)
+  a<n≤b                            ν=0     a
+
+Applying (2.7) from Lemma 2 to evaluate Σ11 :
+                                       1                                                    
+                |Σ11 (b) − Σ11 (a)| ≤     g(b)|S˜1 (b, ⌊f ′ (a)⌋)| + g(a)|S˜1 (a, ⌊f ′ (a)⌋)| .
+                                      2π
+Denoting
+                                                          ⌊f ′ (a)⌋ Z b
+                                                              X
+                                           R0 (a, b) =                    g(x)e2πi(f (x)−νx) dx,                      (3.18)
+                                                              ν=0    a
+
+we conclude with (3.17) that
+  X                                             1                                                    
+         g(x)e2πif (n)−R0 (a, b) ≤                 g(b)|S˜1 (b, ⌊f ′ (a)⌋)| + g(a)|S˜1 (a, ⌊f ′ (a)⌋)| +|S12 |+|S2 |+G(a, b).
+                                               2π
+ a<n≤b
+                                                                                                                      (3.19)
+   We are separating the cases for study of S12 and S2 for part I. and part II. to give better
+approximations respectively when f ′ (a) is small (which is the case in AFE1) and large (in the case
+of AFE2).
+
+3.2.1. Proof of Part I. of Theorem 8.
+      • Study of S12 :
+        From the deﬁnition (3.13):
+                                                   X           1                           
+                                        S12 =                      Ig′ (−ν) + 2πiIgf ′ (−ν) .                         (3.20)
+                                                              2πiν
+                                                ν>⌊f ′ (a)⌋
+
+         where,
+                                                               Z b
+                                                Ih (−ν) =            h(x)e2πi(f (x)−νx) dx                            (3.21)
+                                                                a
+                                               h(x)
+            For ν > ⌊f ′ (a)⌋, the function π(ν−f ′ (x)) is decreasing and positive. Applying Lemma 4 on
+
+         integral Ih (−ν) deﬁned in (3.21) gives:
+                                                                     h(x)                    |h(a)|
+                                       |Ih (−ν)| ≤ max                                =                  .            (3.22)
+                                                      a≤x≤b π (f ′ (x) − ν)               π(ν − f ′ (a))
+                EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                          17
+
+        By substituting h(x) with g ′ (x) and g(x)f ′ (x) in (3.22), we obtain a bound for the integral
+        component Ig′ and Igf ′ in (3.20). This allows us to bound the second error sum:
+                                   X        1                          
+                        |S12 | ≤                (Ig′ (ν) + 2π Igf ′ (ν)
+                                           2πν
+                                      ν>⌊f (a)⌋
+                                      ′
+
+
+                                      |g ′ (a)| + 2πg(a)f ′ (a)      X               1
+                                  ≤
+                                                 2π 2                           ν(ν − f ′ (a))
+                                                                  ν>⌊f ′ (a)⌋
+                   P                   1
+        The sum        ν>⌊f ′ (a)⌋ ν(ν−f ′ (a)) can be bounded using (2.1) from Lemma 1
+
+                X                                                                             
+                               1           1                 ′                   1         Γ′
+                                 ′
+                                       ≤ ′            log(⌊f (a)⌋ + 1) −                  − (δ) ,
+                          ν(ν − f (a))  f (a)                            2(⌊f ′ (a)⌋ + 1)  Γ
+            ν>⌊f ′ (a)⌋
+
+        where δ = 1 − (f ′ (a) − ⌊f ′ (a)⌋). We conclude
+                                                                                        
+                     |g′ (a)| + 2πg(a)f ′ (a)         ′                    1         Γ′
+            |S12 | ≤                            log(⌊f (a)⌋ + 1) −                  − (δ) .                         (3.23)
+                             2π 2 f ′ (a)                          2(⌊f ′ (a)⌋ + 1)  Γ
+     • Study of S2 :
+         Consider the sum from (3.12)
+                                          ∞
+                                          X      1                           
+                                  S2 =               Ig′ (+ν) + 2πiIgf ′ (+ν) ,                                     (3.24)
+                                                2πiν
+                                          ν=1
+
+        where
+                                                    Z b
+                                        Ih (+ν) =         h(x)e2πi(f (x)+νx) dx,
+                                                      a
+
+                                                                                           h(x)
+        Here, the function f ′ (x) + ν, is non-null and continuous and                 π(f ′ (x)+ν)   is also non-zero and
+        decreasing for h = g ′ and h = gf ′ . So, by Lemma 4:
+                                                           h(x)              |h(a)|
+                               |Ih (+ν)| ≤ max                        =                  .                          (3.25)
+                                            a≤x≤b π(f ′ (x) + ν)          π(f ′ (a) + ν)
+       Thus, S2 as deﬁned in (3.24) can be bounded by using (3.25) and (2.4).
+                                                                                                      
+        1 X |g ′ (a)| + 2πg(a)f ′ (a)   |g′ (a)| + 2πg(a)f ′ (a)                ′              1
+|S2 | ≤ 2                             ≤                            γ + log(1 + f (a)) −                  .
+       2π          ν(f ′ (a) + ν)               2π 2 f ′ (a)                            2(f ′ (a) + 1)
+            ν≥1
+                                                                                                                    (3.26)
+Finally, we combine the bounds for S12 , S2 from (3.23) and (3.26) and substitute them in (3.19):
+                           X
+                                g(x)e2πif (n) = R0 (a, b) + O∗ (T0 (a, b)) ,                (3.27)
+                                a<n≤b
+
+where R0 is deﬁned in (3.18) and
+
+                g(b)|S˜1 (b, f ′ (a))| + g(a)|S˜1 (a, f ′ (a))|
+  T0 (a, b) =                                                   + G(a, b)
+                                      2π                                                                      
+  |g′ (a)| + 2πg(a)f ′ (a)                      ′                 ′               1               1        Γ′
++                                γ + log(1 + f (a)) + log(⌊f (a)⌋ + 1) −                  −               − (δ) .
+          2π 2 f ′ (a)                                                    2(⌊f ′ (a)⌋ + 1) 2(f ′ (a) + 1)  Γ
+                 EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                                 18
+
+3.2.2. Proof of Part II. of Theorem 8. Starting from (3.19), the proof diﬀers from Part I in the
+estimate for S12 , and consequently S2 and T0 . We rewrite the deﬁnition of Ih (−ν) from (3.21):
+                              Z b                                               
+                                      h(x)              ′          2πi(f (x)−νx)
+                    Ih (−ν) =          ′
+                                                  2πi(f   (x) − ν)e                dx.
+                               a 2πi(f (x) − ν)
+
+We integrate by parts and obtain:
+                                                                   Z b
+                  1 h(b)e2πi(f (b)−νb)   h(a)e2πi(f (a)−νa)       1        h′ (x) 2πi(f (x)−νx)
+   Ih (−ν) −                           −                       ≤                    e             dx
+                 2π    f ′ (b) − ν          f ′ (a) − ν          2π a f ′ (x) − ν
+                                                                 Z b
+                                                               1      h(x)f ′′ (x) 2πi(f (x)−νx)
+                                                            +                      e             dx . (3.28)
+                                                              2π a (f ′ (x) − ν)2
+
+Since |h′ (x)| and |h(x)f ′′ (x)| are positive and decreasing for the choices h = g′ and h = gf ′ ,
+                                                                     ′ (x)                   ′′ (x)
+we analyze the monotonicity of the integrands. Let G(x) = f ′h(x)−ν        or G(x) = h(x)f
+                                                                                      f ′ (x)−ν , and
+F ′ (x) = 2π(f ′ (x) − ν). The corresponding quotients
+
+                                           |h′ (x)|                    |h(x)f ′′ (x)|
+                                                              and
+                                       2π(ν − f ′ (x))2               2π(ν − f ′ (x))3
+are strictly monotonic, both achieving their maximum values at x = a. Applying Lemma 4, we
+obtain the following bounds for the integrals:
+                     Z b
+                            h′ (x) 2πi(f (x)−νx)        G(a)         |h′ (a)|
+                          ′
+                                   e             dx ≤ 2         =                 , (3.29)
+                      a f (x) − ν                       F ′ (a)   π(ν − f ′ (a))2
+and
+                              Z b
+                                     h(x)f ′′ (x) 2πi(f (x)−νx)       |h(a)f ′′ (a)|
+                                      ′          2
+                                                   e            dx ≤                 .                                      (3.30)
+                                  a (f (x) − ν)                      π(ν − f ′ (a))3
+Substituting the bounds from (3.29) and (3.30) into (3.28):
+                                                   
+            1 h(b)e2πi(f (b)−νb) h(a)e2πi(f (a)−νa)      1      |h′ (a)|     1 |h(a)f ′′ (a)|
+ Ih (−ν)−                       −                     ≤                    +                    . (3.31)
+           2π      f ′ (b) − ν       f ′ (a) − ν        2π 2 (ν − f ′ (a))2 2π 2 (ν − f ′ (a))3
+
+To bound S12 as given in (3.20) using (3.31), we sum over ν:
+      X          1            h(b)          X          e2πi(f (b)−νb)   h(a)          X     e2πi(f (a)−νa)
+                    Ih (−ν) ≤                                         +
+                2πν           4π 2 ν                    f ′ (b) − ν     4π 2 ν               f ′ (a) − ν
+  ν>⌊f ′ (a)⌋                            ν>⌊f ′ (a)⌋                            ν>⌊f ′ (a)⌋
+                                                                                                                            (3.32)
+                             |h′ (a)|           X           1              |h(a)f ′′ (a)| X                  1
+                           +                                           +                                                .
+                               4π 3                    ν(ν − f ′ (a))2         4π 3                     ν(ν − f ′ (a))3
+                                         ν>⌊f ′ (a)⌋                                      ν>⌊f ′ (a)⌋
+
+We use (2.9) in Lemma 3 to bound the following sums:
+
+                           h(b)      X          e2πi(f (b)−νb)   |h(b)|
+                                                               ≤        Z0 (⌊f ′ (a)⌋, b, f ′ (b)),                         (3.33)
+                           4π 2                 ν(f ′ (b) − ν)    4π 2
+                                  ν>⌊f ′ (a)⌋
+
+                          h(a)       X          e2πi(f (a)−νa)   |h(a)|
+                                                               ≤        Z0 (⌊f ′ (a)⌋, a, f ′ (a)).                         (3.34)
+                          4π 2                      ′
+                                                ν(f (a) − ν)      4π 2
+                                  ν>⌊f ′ (a)⌋
+               EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                       19
+
+Substituting the estimates for sums (2.2) and (2.3) in Lemma 1 into the remaining terms of (3.32),
+we obtain the following bounds for the error sums over ν > ⌊f ′ (a)⌋
+                                                                           
+  |h′ (a)| X               1            |h′ (a)|      1         1         1
+                                      ≤ 3 ′               +          +
+    4π 3              ν(ν − f ′ (a))2  4π f (a)       δ2 (δ + 1)2       δ+1
+          ν>⌊f ′ (a)⌋
+                                                                                            
+                                                  1            ′                 1       Γ′
+                                              − ′        log(⌊f (a)⌋ + 1) − ′           − (δ) , (3.35)
+                                                f (a)                       ⌊f (a)⌋ + 1  Γ
+and
+                   X                                         
+  |h(a)f ′′ (a)|                 1             |h(a)f ′′ (a)| 1         1              1
+                                            ≤                      +           +
+      4π 3                 ν(ν − f ′ (a))3      4π 3 f ′ (a)   δ 3   (δ + 1)3    2(δ   + 1)2
+               ν>⌊f ′ (a)⌋
+                                                                                                
+                  1        1       1            1              ′                     1         Γ′
+              − ′             +            + ′ 2 log(⌊f (a)⌋ + 1) −                           − (δ) . (3.36)
+                f (a) δ2        δ+1          f (a)                           2(⌊f ′ (a)⌋ + 1)  Γ
+Representing the components of S12 from (3.20) in terms of the general integral Ih (−ν) for h = g ′
+and h = gf ′ , we obtain from (3.33), (3.34), (3.35), (3.36):
+        H(b)                               H(a)
+  |S12 | ≤  2
+              Z0 (⌊f ′ (a)⌋, b, f ′ (b)) +        Z0 (⌊f ′ (a)⌋, a, f ′ (a))
+         4π                                 4π 2
+        H1 (a) h 1               1         1           1              ′                        1         Γ′ i
+      + 3 ′             +               +          −           log(⌊f      (a)⌋  +  1) −                 −    (δ)
+       4π f (a) δ2 (δ + 1)2 δ + 1                     f ′ (a)                              ⌊f ′ (a)⌋ + 1    Γ
+                    H(a)|f ′′ (a)| h 1            1              1               1 1             1 
+                 +                         +             +                 −                +
+                        4π 3 f ′ (a) δ3 (δ + 1)3            2(δ + 1)2         f ′ (a) δ2        δ+1
+                                                1                                         1            Γ′ i
+                                          + ′ 2 log(⌊f ′ (a)⌋ + 1) −                                 −     (δ) , (3.37)
+                                             f (a)                                 2(⌊f ′ (a)⌋ + 1)      Γ
+where
+                                        H(x) = |g ′ (x)| + 2π|g(x)f ′ (x)|,                                    (3.38)
+and
+                             H1 (x) = |g ′′ (x)| + 2π(|g(x)f ′′ (x)| + |g ′ (x)f ′ (x)|).                      (3.39)
+
+  In a similar manner, to establish the bound for the sum S2 in (3.24), we ﬁrst derive an explicit
+expression for the general integral Ih (+ν) involving positive frequencies. By applying integration
+by parts to the oscillatory factor as done for Ih (+ν), we obtain:
+                                                             !
+              1 h(b)e2πi(f (b)+νb)        h(a)e2πi(f (a)+νa)
+   Ih (+ν) −                            −
+             2π        f ′ (b) + ν           f ′ (a) + ν
+                           Z b                                    Z b
+                      1           h′ (x) 2πi(f (x)+νx)          1     h(x)f ′′ (x) 2πi(f (x)+νx)
+                 ≤                        e             dx  +                      e             dx . (3.40)
+                    2π a f ′ (x) + ν                           2π a (f ′ (x) + ν)2
+Under the assumptions that h and |f ′′ | are decreasing, and since f ′ (x) + ν is positive and decreasing
+for ν ≥ 1, the quotients
+                                      |h′ (x)|                     |h(x)f ′′ (x)|
+                                                        and
+                                (2π)2 (f ′ (x) + ν)2            (2π)2 (f ′ (x) + ν)3
+are monotonic. Applying Lemma 4, we obtain the following bounds for the remaining integrals in
+(3.40), we obtain:
+                         Z b
+                       1       h′ (x) 2πi(f (x)+νx)            |h′ (a)|
+                                       e            dx ≤                     ,          (3.41)
+                      2π a f ′ (x) + ν                   2π 2 (f ′ (a) + ν)2
+               EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                               20
+
+and
+                                 Z b
+                             1       h(x)f ′′ (x) 2πi(f (x)+νx)        |h(a)f ′′ (a)|
+                                      ′          2
+                                                   e            dx ≤                     .                          (3.42)
+                            2π    a (f (x) + ν)                      2π 2 (f ′ (a) + ν)3
+Combining the bounds from (3.41) and (3.42) to (3.40), we have:
+
+   ∞
+   X                      ∞                         ∞
+      1            |h(b)| X    e2πiνb        |h(a)| X    e2πiνa
+         Ih (+ν) ≤                         +
+     2πν            4π 2    ν(f ′ (b) + ν)    4π 2    ν(f ′ (a) + ν)
+   ν=1                              ν=1                               ν=1
+                                                                          ∞
+                                                                 |h′ (a)| X          1         |h(a)f ′′ (a)|
+                                                             +                               +                . (3.43)
+                                                                  4π 3   ν=1
+                                                                             ν(f ′ (a) + ν)2       4π 3
+
+To estimate the boundary terms in (3.43), we invoke the bound (2.10) for Z1 (x, y) from Lemma 3,
+yielding the following:
+                                           ∞
+                                    h(b) X    e2πiνb        |h(b)|
+                                                          ≤        Z1 (b, f ′ (b)),                                 (3.44)
+                                    4π 2   ν(f ′ (b) + ν)    4π 2
+                                          ν=1
+
+and
+                                          ∞
+                                   h(a) X    e2πiνa      |h(a)|
+                                      2      ′
+                                                       ≤        Z1 (a, f ′ (a)).                                    (3.45)
+                                   4π     ν(f (a) + ν)    4π 2
+                                          ν=1
+
+Next, we address the residual sums in (3.43) using the bounds from (2.4) in Lemma 1:
+                   ∞                                                                      
+          |h′ (a)| X      1            |h′ (a)| log(f ′ (a) + 1) + γ      1 + 2f ′ (a)
+                                     ≤                               − ′ 2                   ,                      (3.46)
+            4π 3     ν(ν + f ′ (a))2     4π 3           f ′ (a)2      2f (a) (1 + f ′ (a))
+                  ν=1
+
+and
+                 ∞                                                                                  
+  |h(a)f ′′ (a)| X      1            |h(a)f ′′ (a)| log(f ′ (a) + 1) + γ   3f ′ (a) + 3f ′ (a)2 + 1
+                                   ≤                                     −                             . (3.47)
+      4π 3         ν(ν + f ′ (a))3       4π 3               f ′ (a)3        2f ′ (a)3 (1 + f ′ (a))2
+                ν=1
+
+
+   This allows us to get the ﬁnal estimate for |S2 | as deﬁned in (3.24) from from (3.44), (3.45),
+(3.46) and (3.47) for h = g ′ and h = gf ′ :
+                                                                                                                    
+           H(b)          ′        H(a)              ′        H1 (a) log(f ′ (a) + 1) + γ           1 + 2f ′ (a)
+   |S2 | ≤      Z1 (b, f   (b)) +         Z 1 (a, f   (a)) +                               −
+           4π 2                   4π 2                        4π 3              f ′ (a)2     2f ′ (a)2 (1 + f ′ (a))
+                      ′′           ′                         ′           ′     2      
+             H(a)|f (a)| log(f (a) + 1) + γ 3f (a) + 3f (a) + 1
+           +                                             −                               ,
+                  4π 3                f ′ (a)3              2f ′ (a)3 (1 + f ′ (a))2
+                                                                                                                  (3.48)
+
+where H(x) and H1 (x) are deﬁned in (3.38) and (3.39), respectively. We conclude by substituting
+the bounds (3.37) and (3.48) for, respectively, S12 and S2 , into (3.19):
+
+      X                                                  1                                                    
+           g(n)e2πif (n) − R0 (a, b) ≤ G(a, b) +            g(b)|S̃1 (b, ⌊f ′ (a)⌋)| + g(a)|S̃1 (a, ⌊f ′ (a)⌋)|
+                                                        2π
+   a<n≤b
+                            H(b)Bf ′ (b) + H(a)Bf ′ (a)    H1 (a)                ′        H(a)|f ′′ (a)|
+                        +                               +              E 1 (δ, f   (a)) +                E2 (δ, f ′ (a)),
+                                        4π 2              4π 3 f ′ (a)                     4π 3 f ′ (a)
+              EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                   21
+
+where
+      Bf ′ (x) = Z0 (⌊f ′ (a)⌋, x, f ′ (x)) + Z1 (x, f ′ (x)),                                            (3.49)
+                  1          1            1
+E1 (δ, f ′ (a)) = 2 +            2
+                                     +
+                 δ     (δ + 1)          δ+1
+                                                                                                             
+                    1              ′                      1         Γ′               ′          1 + 2f ′ (a)
+                − ′        log(⌊f (a)⌋ + 1) − ′                   − (δ) + log(f (a) + 1) + γ −                  ,
+                 f (a)                            ⌊f (a)⌋ + 1        Γ                         2(1 + f ′ (a))
+                                                                                                           (3.50)
+                                                                             
+                  1          1              1             1      1        1
+E2 (δ, f ′ (a)) = 3 +            3
+                                     +          2
+                                                   − ′            2
+                                                                    +
+                 δ     (δ + 1)          2(δ + 1)      f (a) δ           δ+1
+                          
+                    1                                        1            Γ′
+                + ′ 2 log(⌊f ′ (a)⌋ + 1) −                             −     (δ)
+                 f (a)                             2(⌊f ′ (a)⌋ + 1)       Γ
+                                                                                 
+                                     ′                 3f ′ (a) + 3f ′ (a)2 + 1
+                          + log(f (a) + 1) + γ −                                   ,                      (3.51)
+                                                             2(1 + f ′ (a))2
+and Z0 , Z1 are deﬁned in Lemma 3. The general result follows from replacing f ′ (a) with f ′ (a) − N .
+We conclude to (3.27) with the alternate deﬁnition for T0 as given in (3.4).                         
+
+3.3. Proof of Corollary 0.2.
+
+Proof. Using Corollary 0.1, we replace the π3 log(β − α + 2) + 4.0 term found in [11, Lemma 2.1]
+with our explicit remainder terms. For each integer frequency 0 ≤ ν ≤ ⌊f ′ (a)⌋, let xν ∈ [a, b] satisfy
+f ′ (xν ) = ν. We evaluate each integral in the frequency sum using stationary phase approximation
+[11, Lemma 2.2]. Summing these evaluations, we partition the remaining error into S1 , S2 , and S3
+as in [11, eq. (2.32)] to obtain:
+                               ⌊f ′ (a)⌋−1 Z b
+                                  X
+                                                 e2πi(f (x)−νx) dx = S1 + S2 + S3 .
+                                  ν=1      a
+
+Here, we have
+                                               ⌊f ′ (a)⌋−1
+                                                  X          e2πi(f (xν )−νxν −1/8)
+                                     S1 =                                           ,                     (3.52)
+                                                  ν=1
+                                                                 |f ′′ (xν )|1/2
+S2 is bounded as in [11, eq. (2.34)], and S3 satisﬁes:
+                                               2                      
+                                    |S3 | ≤      log f ′ (a) − f ′ (b) + 1.251.                           (3.53)
+                                               π
+The constant 1.251 in (3.53) is obtained by explicitly evaluating the Digamma identity − π2 ψ(1/2) =
+ 2
+π (γ +2 log 2) ≈ 1.250009, which reﬁnes the bound utilized in [11, eq. (2.35)]. Note that our equation
+(3.52) can be compared with [11, eq. (2.33)]. Because of the way we state our Corollaries 0.1 and 0.2
+with speciﬁc integer limits in the sums, we do not need to consider the extra terms in the boundary
+in the same way as Patel and Yang. The tradeoﬀ for this is our parameter δ in our error terms. To
+obtain Patel and Yang’s [11, eq. (2.34)], in our case, we use the following inequality:
+                                ⌊f ′ (a)⌋ − 1 ≤ f ′ (a) − f ′ (b) ≤ (b − a)h2 λ2 ,
+since we are considering (for simplicity) the case 0 < f ′ (b) < 1.
+   Following [11, eq.(2.36)], extending the interior integral sum over 1 ≤ ν ≤ ⌊f ′ (a)⌋ − 1 to the
+full frequency range 0 ≤ ν ≤ ⌊f ′ (a)⌋ involves adding the two boundary frequencies ν = 0 and
+             EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                             22
+
+ν = ⌊f ′ (a)⌋. Applying Kershner’s second-derivative estimate [11, eq.(2.2)] to each endpoint integral
+yields:
+                ⌊f ′ (a)⌋−1 Z b
+                    X                               ⌊f ′ (a)⌋ Z b
+                                                     X                                         
+                                 2πi(f (x)−νx)                     2πi(f (x)−νx)        ∗ 2.686
+                                e              dx =               e              dx + O    √      . (3.54)
+                    ν=1      a                       ν=0       a                             λ2
+Combining Corollary 0.1 with the boundary integral relation (3.54), the bounds on S1 and S2 from
+[11], and the reﬁned estimate (3.53) completes the proof.                                      
+
+                      4. A 1st explicit approximate functional equation
+   The Approximate Functional Equation of the First Kind (AFE1) was established by Hardy and
+Littlewood in their 1921 memoir [5] (received in 1920). Speciﬁcally, [5, Lemma 2] provides an
+explicit bound for the error term under the condition |t| < 2πx/C for C > 1. The result states that
+for σ ≥ σ0 > 0 and |s − 1| ≥ δ > 0,
+                                              X             x1−s
+                                     ζ(s) =         n−s −        + O(x−σ )
+                                                            1−s
+                                              n≤x
+
+holds uniformly in s [5, Lemma 2]. This fundamental result is presented as [15, Theorem 4.11].
+
+4.1. Statement and proof of main result. In this section, we utilize our optimized explicit
+van der Corput B-process (Theorem 8) to provide a further sharpened version of the AFE1. We
+establish the following theorem, which oﬀers signiﬁcantly tighter constants.
+                                                                  1
+Theorem 9. Let s = σ + it with σ ∈ (0, 1] and t ≥ t0 > 0. If c > 2π and (ct) ∈ Z + 12 , then
+                                                X
+                                     ζ(s) −            n−s ≤ m(c)(ct)−σ ,
+                                              1<n≤ct
+
+with
+                                                                            !
+                  1       1               1        Γ′       1          1        1
+       m(c) = c +            +1  log 1 +       +γ−      1−       −        1   −     .               (4.1)
+                  π       t0             2πc       Γ       2πc     2(1 + 2πc ) 2
+For instance,
+                                    m(1) ≈ 1.22773 for t0 = 14.13473,
+                                    m(1) ≈ 1.21268 for t0 = 3 · 1012 .
+
+Proof. Let x, M ∈ Z + 12 and 1 < x < M . A classical Euler-Maclaurin summation formula leads to
+                         X 1        X 1          Z ∞
+                                                      ((u))      M 1−s 1 −s
+                ζ(s) −          =            + s            du −       − M ,
+                             ns          ns       M u
+                                                        s+1      1−s    2
+                           1≤n≤x       x<n≤M
+
+where ((u)) = [u] − u + 1/2. Together with the bounds
+                                                Z ∞
+                           ((M ))    1/2            ((u))        |s|
+                               s
+                                  ≤ σ and s           s+1
+                                                          du ≤       ,
+                             M      M            M u           2σM σ
+we obtain the approximation
+                            X               X                                              
+                                                            M 1−s             1       |s|
+                  ζ(s) −           n−s =            n−s +         + O∗            +             .   (4.2)
+                                                            s−1              2M σ   2σM σ
+                           1≤n≤x           x<n≤M
+              EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                23
+
+                                        P                 P
+We apply Theorem 8 to the sum x<n≤M n−s = x<n≤M n−σ eit log n with a = x, b = M, N =
+                                              t                       t
+0, g(y) = y −σ , g′ (y) = −σy −σ−1 , f (y) = 2π log y, and f ′ (y) = 2πy . Hence
+                                  X
+                                         n−s = R0 (x, M ) + O∗ (T0 (x, M )),     (4.3)
+                                 x<n≤M
+
+where R0 and T0 are respectively deﬁned in (3.2) and (3.3). First,
+                                         Z M
+                                                      x1−s − M 1−s
+                            R0 (x, M ) =     u−s du =              .                                    (4.4)
+                                          x                s−1
+Putting together (4.2) with (4.3), and (4.4), the M 1−s -terms cancel out, and we get
+                        X                                       
+                                     x1−s           1        |s|
+               ζ(s) −        n−s =        + O∗           +         + O∗ (T0 (x, M )).                   (4.5)
+                                     s−1          2M σ     2σM σ
+                         1≤n≤x
+                                                  t                           1
+Since, for y ∈ [x, M ], the assumption x > 2π        ensures 0 < f ′ (ct) = 2πc  < 1, then the deﬁnition (2.7)
+gives S˜1 (u, f ′ (ct)) = 0 for u = ct or M . In addition, the assumption for M and ct to be in Z + 12
+ensures G(ct, M ) = 0. This simpliﬁes the expression (3.3):
+                                                                                                       !
+                                            1
+                  σ(ct)−σ−1 + 2π(ct)−σ 2πc                   1             Γ′        1             1      1
+ T0 (ct, M ) =                   1
+                                                 log 1 +         +γ−           1−         −         1  −
+                           2π 2 2πc                        2πc             Γ        2πc      2(1 + 2πc ) 2
+                                                                                            !
+                  (ct)−σ σ                      1          Γ′          1            1         1
+             ≤                +1      log(1 +       )+γ−         1−          −         1   −      .
+                     π     t0                  2πc          Γ         2πc       2(1 + 2πc ) 2
+Together with (4.5), while letting M → ∞, this gives
+       X              (ct)1−s    (ct)−σ  σ            1       Γ′     1        1       1
+                                                                                               
+              −s
+ ζ(s)−      n     ≤           +              +1   log 1+      +γ −     1−      −        1 −2 ,
+                       s−1          π     t0             2πc       Γ      2πc    2(1 + 2πc )
+       1<n≤ct
+
+which leads to the announced bound.                                                                         
+
+4.2. Proof of Corollary 0.3.
+Proof. For t ∈ Z + 12 , with t ≥ t0 , the bound (4.1) with c = 1 becomes
+                         1 1                 1        Γ′      1        1      1
+                                                                                       
+           m(1) = 1 +          +1       log 1 +      +γ−        1−      −        1 − 2 .
+                         π t0                   2π          Γ      2π     2(1 + 2π )
+  Case 1. First, consider the case where t − ⌊t⌋ ∈ [0, 12 ]. Then, we can write N ≤ t ≤ N + 12 , for
+some integer N with N ≥ ⌊t0 ⌋ ≥ 14. Let t2 = N + 12 ≥ t. Deﬁne c ∈ [1, 14.5/14] by t2 = ct. Then,
+we have
+                          X                    X
+                  ζ(s) −      n−s = ζ(s) −          n−s ≤ m(c) t−σ  2 ≤ m(c) t
+                                                                               −σ
+                                                                                  .
+                            1≤n≤t                  1≤n≤t2
+Below, we show that m(c) is increasing for c on the interval [1, 14.5/14]. Therefore, if N = ⌊t0 ⌋, for
+any t such that N ≤ t ≤ N + 12 , we obtain the inequality (1.6) with constant
+                                                       !                  !
+                                            ⌊t0 ⌋ + 12         ⌊t0 ⌋ + 12
+                         c0 = m(c) = m                   ≤m                 .
+                                                 t                 t0
+
+Similarly, if N ≥ ⌊t0 ⌋ + 1, for any t such that N ≤ t ≤ N + 12 , we obtain the inequality (1.6) with
+                        
+                   N+ 1
+constant c0 = m N 2 . Since m(c) is increasing, this takes its maximum value at N = ⌊t0 ⌋ + 1.
+             EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                            24
+
+Combining both estimates, for any t such that N ≤ t ≤ N + 21 and N ≥ ⌊t0 ⌋ ≥ 14, we obtain
+                                                                   
+                                        ⌊t0 ⌋ + 1/2        ⌊t0 ⌋ + 3/2
+                       c0 = max m                     ,m                  .                (4.6)
+                                              t0            ⌊t0 ⌋ + 1
+   Case 2. Now, consider the case where t − ⌊t⌋ ∈ ( 21 , 1). Then, we can write N + 12 < t < N + 1
+for some ﬁxed integer N ≥ 14. Let f = t − N − 12 , so that 0 < f < 12 , and let c = 1 − ft . Note that
+ct = t − f = N + 12 ∈ Z + 12 . Applying Theorem 9 with x = ct, and since ⌊ct⌋ = ⌊t⌋ = N , we obtain
+                                 X                    X
+                         ζ(s) −       n−s = ζ(s) −           n−s ≤ A(f )t−σ ,
+                                  1≤≤t                1≤n≤ct
+where                            f     f −σ         f     f −1
+                   A(f ) = m 1 −      1−        ≤m 1−        1−        ,
+                                t       t              t       t
+and m 1 − ft is deﬁned in (4.1) (we may take t0 = 14.5). We claim that A(f ) is an increasing
+function of f ∈ (0, 12 ). Indeed, consider c = 1 − N +f1 +f as a decreasing function of f , and note
+                                                            2
+
+that A(f ) = B(c) = m(c)c . We take derivatives to show that B is a decreasing function of c (and
+                                                                                        1
+therefore A is an increasing function of f ). Note that, for N ≥ 14 we have 1 ≥ c ≥ 1 − 30 , and we
+restrict to this domain. As
+                                                m′ (c) · c − m(c)
+                                     B ′ (c) =                    ,
+                                                         c2
+it therefore suﬃces to show that
+                                           m′ (c) · c < m(c).
+                                                        ′
+                                                        y
+                       1                  1                       1
+Note that, if y = 1 + 2πc , then y ′ = − 2πc 2 < 0, and y = − c(2πc+1) . From (4.1), we ﬁnd
+                                                                                   
+               ′            1 1               −1               1        1        πc
+             m (c)c = c +         +1                − ψ1 1 −         ·     −              .
+                            π t0           2πc + 1           2πc       2πc (2πc + 1)2
+Here, ψ1 (x) is the trigamma function - the second derivative of log Γ(x). By using interval arith-
+                                                                                            1
+metic,7 we rigorously verify the following inequality numerically on the interval c ∈ [1 − 30 , 1]:
+                                                                           
+           1          Γ′       1            1       1     −1                 1       1         πc
+log 1 +         +γ −      1−         −        1   − >            − ψ1 1 −         ·     −           .
+          2πc          Γ      2πc      2(1 + 2πc ) 2    2πc + 1             2πc     2πc (2πc + 1)2
+It follows that m′ (c) · c < m(c), and therefore B(c) is decreasing with c in this interval, for any ﬁxed
+value of t0 > 0. We similarly verify that m′ (c) > 0 for c ∈ [1, 14.514 ] with interval arithmetic, and
+therefore m(c) is increasing in this interval. We conclude
+                                                                  
+                                               1                 1
+                                   A(f ) ≤ A      =B 1−
+                                               2              2N + 2
+since N ≥ 14. Since B(c) is decreasing in the interval c ∈ [1 − 2(N1+1) , 1] ⊂ [1 − 30
+                                                                                     1
+                                                                                       , 1] we obtain the
+inequality (1.6) with constant
+                                                                    
+                                             1                   1
+                            c0 = m 1 −              / 1−                   .
+                                         2(N + 1)            2(N + 1)
+The maximum value occurs at N = ⌊t0 ⌋. We combine this with (4.6) to obtain the following constant,
+valid for any real t ≥ t0 ≥ 14:
+                                                                             
+                      N + 1/2        N + 3/2               1                   1
+     c0 = max m                 ,m             , m 1−              / 1−                  ,    (4.7)
+                         t0           N +1             2(N + 1)            2(N + 1)
+  7We use the MPFI library [13] on Sagemath 10.8.
+              EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                              25
+
+where N = ⌊t0 ⌋ and m is deﬁned in (4.1). We conclude to the announced values for c0 taking
+t0 = 14.13473 and t0 = 3 · 1012 , respectively.                                           
+
+
+                    5. An explicit 2nd approximate functional equation
+   In 1921-1923, Hardy and Littlewood established the approximate functional equation in two
+forms. Lemma 15 of [5] states that for 0 < σ < 1 and 2πxy = |t|,
+                    X              X
+             ζ(s) =    n−s + χ(s)      ns−1 + O(x−σ log |t|) + O(|t|1/2−σ y σ−1 log |t|),
+                       n≤x                   n≤y
+
+a version they described “imperfect” , but “which follows more naturally from our previous analysis
+and is suﬃcient for our immediate purpose” (namely, bounding zeta inside the critical strip and
+counting its zeros on the 1/2-line.) The proof truncates the Dirichlet series and its functional-
+equation dual, and bounds the leftover tails with exponential-sum estimates, which is where the
+logarithmic factor arises. In [6, Theorem A], they remove the log |t| factor and apply the result to
+divisor problems. The method starts from the contour-integral representation of zeta and evaluates
+it by the saddle point, so that the remainder is an asymptotic expansion in negative powers of
+(t/2π), and thus without log t-factor. Both versions are classical (see [15, Theorem 4.13, Theorem
+4.15]).
+   Simonič [14, Theorem 4] gives an explicit version of the log-free form. We give here an explicit
+version of [5, Lemma 15]-[15, Theorem 4.13], based on the van der Corput estimates of Theorem 8.
+Although our error term retains a factor log x (respectively log y), its constants are small enough
+(see Corollary 0.4) that it improves on [14, Theorem 4] in a range made explicit in Corollary 0.5.
+
+5.1. Statement of result.
+
+Theorem 10. . Let s = σ + it with 1/2 ≤ σ ≤ 1 and |t| ≥ t0 ≥ 2π. Also, assume that x, y are in
+Z + 12 and satisfy 2πxy = |t| and x, y ≥ h ≥ 1.5. We have the Approximate Functional Equation:
+                                         X                    X
+                           ζ(s) =              n−s + χ(s)              ms−1 + E(σ, t, x, y),
+                                     1≤n≤x                  1≤m≤y
+
+where the error term E(σ, t, x, y) satisﬁes the following bounds:
+                                                          1/2−σ
+                                    log y + E (σ, h, t )      t
+                                                                        y σ−1              if x ≥ y,
+                                                 0       0
+                  |E(σ, t, x, y)| ≤  π                       2π                                      (5.1)
+                                    C0 (σ,t0 ) (log x) + E (σ, h, t ) x−σ                 if x < y.
+                                                   π               0         0
+
+
+with
+                                     (
+                                         A0 (1 − σ, h, t0 )C0 (σ, t0 ) + B0 (1 − σ, t0 )   if x ≥ y,
+                  E0 (σ, h, t0 ) =                                                                     (5.2)
+                                         A0 (σ, h, t0 ) + C0 (σ, t0 )B0 (σ, t0 )           if x < y.
+
+Here, (A0 , B0 , C0 ) are deﬁned in (5.22), (5.23), and (2.17) respectively.
+
+Remark. We note that we have the following approximations when t0 is large enough, and that they
+are valid uniformly for values of σ ∈ [1/2, 1]:
+
+                                         C0 (σ, t0 ) ≈ 1 and B0 (σ, t0 ) ≈ 0,
+              EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                               26
+
+rendering A0 (σ, h, t0 ) (when x > y) and A0 (1 − σ, h, t0 )C0 (σ, t0 ) (when x < y) practically identical
+to E0 (σ, h, t0 ). In addition,
+                             1 1       7        3     115        7         3          7
+                  E0 ≈ A0 ≈ +        γ + log 2 −     +       +          +          +
+                             4 π        2        2     27π 2 4πh 4π(1 + h) 8πh2
+                                        0.557042 0.238732 0.278521
+                          ≈ 1.160046 +           +            +
+                                            h        1+h              h2
+                             (
+                                1.750688 if h = 1.5 (cases x 6= y),
+                          ≈                     √
+                                1.160046 if h ≍ t0 (case x = y).
+This leads to the following estimate for error term (5.1):
+                                                         
+                                         (log x)
+                                     
+                                     
+                                                + 1.750688  x−σ                  if x > y,
+                                      π                  
+                                         (log x)
+                   |E(σ, t, x, y)| ≤        π    + 1.160046 x−σ                   if x = y,
+                                     
+                                                         1/2−σ
+                                      log y
+                                                             t
+                                           π   + 1.750688    2π     y σ−1         if x < y.
+Thus, for max(log x, log y) small enough, our error term competes with previous work. Corollary 0.4
+and Corollary 0.5 provide precise numerical insight about this.
+5.2. Proof of Theorem 10.
+Proof. We recall that s = σ + it, with 0 ≤ σ ≤ 1 and t > t0 ≥ 2π. Let h ≥ 1. We assume x and
+y are positive numbers in Z + 1/2 satisfying the relation 2πxy = |t|, along with x, y ≥ h. For a
+suﬃciently large integer N ≥ 1, the Riemann zeta function ζ(s) can be expressed as:
+                               X 1         X 1                X 1
+                        ζ(s) =          +          + ζ(s) −              .                  (5.3)
+                                     ns         ns                   ns
+                                 1≤n≤x        x<n≤N                     1≤n≤N
+The central sum
+                            X              X                        X              tlog n
+                     S=           n−s =           n−σ eit logn =           n−σ e2πi( 2π     )
+                                                                                                       (5.4)
+                          x<n≤N           x<n≤N                    x<n≤N
+
+is analyzed by applying the explicit Van der Corput B established in Theorem 8 (Part-II). We must
+verify that the functions
+                                                                   t log u
+                                          g(u) = u−σ and f (u) =
+                                                                      2π
+satisfy the necessary smoothness and monotonicity conditions on the interval [x, N ].
+   For u ∈ [x, N ] and s = σ + it with |t| > 2π and σ > 0:
+      • We observe that f ′ (u) is positive and strictly decreasing, while the magnitude of its second
+                                    t
+         derivative, |f ′′ (u)| = 2πu 2 , is likewise positive and steadily decreasing.
+
+      • For σ > 0, g(u) is a positive, decreasing function. Its ﬁrst two derivatives |g ′ (u)| = σu−σ−1
+         and g ′′ (u) = σ(σ + 1)u−σ−2 are both positive and strictly decreasing on [x, N ].
+                                                                             t(σ+1)
+      • Additionally, we note that |g ′ (u)f ′ (u) + g(u)f ′′ (u) = − 2πu       σ+2  is strictly positive and
+         monotonically decreasing on [x, N ]
+Thus, the expression for S from (5.4) become:
+                                     S = RM (x, N ) + O∗ (TM (x, N ))
+                                                                                          t
+where RM (x, N ) and TM (x, N ) are deﬁned in (3.2) and (3.5). Here, M ≤ ⌊f ′ (N )⌋ = ⌊ 2πN ⌋ is a
+                                                   ′          ′
+non-negative integer and δ is deﬁned as δ = 1 − (f (x) − ⌊f (x)⌋) = 1 − (y − ⌊y⌋) = 1 − η . Take
+M = 0, we have
+                                  S = R0 (x, N ) + O∗ (T0 (x, N ))                           (5.5)
+             EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                      27
+
+We recall that
+                        ⌊f ′ (x)⌋ Z N                                       ⌊f ′ (x)⌋ Z N
+                         X                                                   X
+                                             −σ −2πi( t log u
+                                                              −mu)
+                 R0 =                    u      e        2π          du =                   u−s e2πimu du.
+                         m=0       x                                         m=0     x
+
+We isolate the m = 0 term:
+                Z N         1−s N                             1−σ 
+                      −s    u         N 1−s   x1−s   N 1−s    ∗ x
+                    u du =          =       −      =       +O          .                                      (5.6)
+                 x          1−s x     1−s     1−s    1−s          |t|
+                                                                                            1−s
+Using (4.2) from Theorem 9 and rearranging to get expression for N1−s :
+                                 X 1                                
+                        N 1−s                      ∗    1       |s|
+                              =         − ζ(s) + O          +          ,
+                        1−s          ns                2N σ   2σN σ
+                                             n≤N
+
+and substitute it into (5.6)
+                 Z N         X 1                                   1−σ 
+                       −s                    ∗    1      |s|       ∗ x
+                      u du =      − ζ(s) + O          +         +O         .                                  (5.7)
+                   x           ns                2N σ   2σN σ          |t|
+                                   n≤N
+
+Together with (5.7) and (5.5), we get:
+    X 1                X      Z N                                        1−σ 
+                                    −s 2πimu      ∗    1      |s|        ∗ x
+S=          −ζ(s)+                 u e       du+O          +          +O          +O∗ (T0 (x, N )).
+         ns                t    x                     2N σ   2σN  σ          |t|
+       n≤N           1≤m≤⌊ 2πx ⌋
+
+Substituting this sum into (5.3), the equation for ζ(s) takes the form:
+                          X              X      Z N
+                                 −s
+                  ζ(s) =       n +                   u−s e2πimu du + E1 + E2 + E3                             (5.8)
+                          1≤n≤x                        t      x
+                                                1≤m≤⌊ 2πx ⌋
+
+with
+                                                              
+                                                  1 ∗     |s|
+                                       E1 = O         +          ,                                            (5.9)
+                                                2N σ     2σN σ
+                                                1−σ 
+                                              ∗ x
+                                       E2 = O          ,                                                     (5.10)
+                                                  |t|
+                                       E3 = O∗ (T0 (x, N )) = O∗ (T0 (x, N )),                               (5.11)
+and T0 (x, N ) ∈ R is as deﬁned in (3.5). Using the notation (2.11), we recognize J(x, N, m) as the
+integral in (5.8), and rewrite
+                        J(x, N, m) = J(0, ∞, m) − J(0, x, m) − J(N, ∞, m).
+Lemma 5 took care of estimating the secondary terms J(0, x, m) and J(N, ∞, m). The central
+challenge in evaluating the integral J(0, ∞, m) is its complex exponential term. We ﬁrst relate it to
+the Gamma function (we use complex contour integration and the change of variable t = −2πimu:
+                             Z −i∞                                   
+                                       −t −s −t         −1            2πm s−1
+              J(0, ∞, m) =                     e               dt =            Γ(1 − s).
+                              0      2πim             2πim              i
+Lemma 7 then gives                                                
+                                                      ∗     e−πt
+                          J(0, ∞, m) = χ(s) 1 + O                      ms−1 .
+                                                          1 − e−πt0
+Finally, we evaluate the sum:
+               X                        X                                    X         
+                                                                     e−πt
+                    J(0, ∞, m) = χ(s)         ms−1 + O∗ |χ(s)|                    m s−1
+                                                                                              (5.12)
+                                                                  1 − e−πt0
+             1≤m≤y                              1≤m≤y                                             1≤m≤y
+                EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                       28
+          P
+We bound 1≤m≤y ms−1 uniformly for σ ∈ [0, 1] as follows. Separating the term m = 1 and using
+        σ
+mσ−1 ≤ ym for 2 ≤ m ≤ y, we obtain:
+                 X                  X                  X 1
+                     ms−1 ≤ 1 +       mσ−1 ≤ 1 + y σ           ≤ y σ (log y) + 1.
+                                                            m
+                   1≤m≤y                         2≤m≤y                       2≤m≤y
+
+Using the above estimate to bound (5.12), we obtain
+      X                       X                                                                           
+                                     s−1     ∗                             e−πt      σ−1             1−σ
+                                                                                                         
+            J(0, ∞, m) =χ(s)       m     + O |χ(s)|                                y     y log y + y         .   (5.13)
+                                                                         1 − e−πt0
+   1≤m≤y−η                             1≤m≤y
+
+Together with the bounds (2.12), (2.13), amd (5.13) we conclude:
+                    X Z N                          X
+                             u−s e2πimu du = χ(s)       ms−1 + E4 + E5 + E6 ,
+                     1≤m≤y        x                              1≤m≤y
+
+where
+                                                                  
+                                                         e−πt
+                   E4 = O∗ |χ(s)|y σ−1 y log y + y 1−σ               ,                                           (5.14)
+                                                         1 − e−πt0
+                                                                           
+                         ∗   −σ   1          1                 3       3   3
+                   E5 = O x          log y +     γ + 2 log 2 −     +     +        ,                              (5.15)
+                                  π          π                 2     4πy 8πy 2
+                                           
+                         ∗     −σ
+                   E6 = O 2N        log y + 1 .                                                                  (5.16)
+
+Therefore, (5.8) becomes
+                                            X                       X                X
+                              ζ(s) =               n−s + χ(s)            ms−1 +              Ej ,                (5.17)
+                                           1≤n≤x                 1≤m≤y               1≤j≤6
+
+where the Ej ’s are respectively deﬁned in (5.9), (5.10), (5.11), (5.14), (5.15), and (5.16). Note that,
+taking N → ∞, we immediately have
+                                              lim E1 = 0 and lim E6 = 0.
+                                             N →∞                   N →∞
+
+For E3 = O∗ (T0 (x, N )) as deﬁned in (3.5), we get
+                                                                                                    
+                log 2    1            −σ     (σ + t)x−σ−1        π     1                    3
+ lim E3 =             +           x        +                       +          + log 2 +
+N →∞             2π     2πy                      4π 2 y          2 y(⌊y⌋ + 1)           2(y + 1)
+                                                                         1       Γ′ 1
+                                                                                                                      !
+           (σ + t)(σ + 1)x−σ−2               46 log(⌊y⌋ + 1) − ⌊y⌋+1 − Γ ( 2 ) log(y + 1) + γ    1 + 2y
+         +                                      −                             +               −
+                   4π 3 y                     9               y                      y          2y(1 + y)
+                                                                             1        Γ′ 1
+                                                                                                                          !
+           (σ + t)x−σ−3 t  230 14 log(⌊y⌋ + 1) − 2(⌊y⌋+1) − Γ ( 2 ) log(y + 1) + γ 3y + 3y 2 + 1
+         +                      −     +                                  +               −                                    .
+               8π 4 y       27     3y                  y2                        y2        2y 2 (1 + y)2
+                                                                                            (5.18)
+We can simplify this expression signiﬁcantly, as for y ≥ 1, the terms in the parentheses
+                                          1              ′
+                         log(⌊y⌋ + 1) − ⌊y⌋+1 − ΓΓ ( 12 )            log(y + 1) + γ    1 + 2y
+                     −                                           +                  −
+                                             y                             y          2y(1 + y)
+and
+                                                    1        Γ′ 1
+                 14 log(⌊y⌋ + 1) − 2(⌊y⌋+1) − Γ ( 2 ) log(y + 1) + γ 3y + 3y 2 + 1
+                − +                                  +              −
+                 3y               y2                        y2        2y 2 (1 + y)2
+              EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                29
+
+are both strictly negative. Dropping these negative parts we replace the bound in (5.18) by:
+                                                                                        
+                 log 2    1          (σ + t)x−σ−1 π               1                  3
+    lim E3 ≤           +       x−σ +                    +              + log 2 +
+  N →∞            2π     2πy             4π 2 y       2 y(⌊y⌋ + 1)               2(y + 1)
+                                                46 (σ + t)(σ + 1)x  −σ−2   230 (σ + t)x−σ−3 t
+                                            +                            +                    . (5.19)
+                                                 9         4π 3 y           27      8π 4 y
+Therefore, (5.17) can be written as:
+                     X               X
+             ζ(s) =       n−s + χ(s)   ms−1 + O∗ (E(σ, t, x, y)), for all 0 ≤ σ ≤ 1,                    (5.20)
+                       1≤n≤x             1≤m≤y
+
+where
+                             1
+              E(σ, t, x, y) =  (log y)x−σ + A(σ, t, x, y)x−σ + |χ(σ + it)|B(σ, t, x, y)y σ−1 . (5.21)
+                            π
+Note that E2 , E3 and E5 , as deﬁned in (5.10), (5.19), and (5.15), contribute towards the deﬁnition
+of A, while E4 , as given in (5.14), deﬁnes B:
+                                                                        e−πt
+                                 B(σ, t, x, y) = y log y + y 1−σ                 .
+                                                                       1 − e−πt0
+                 t      x     1     1
+and, since xy = 2π and |t| + 2πy = πy , then
+                                            
+                     1   1                 3      3      3      2 log 2
+  A(σ, t, x, y) =      +     γ + 2 log 2 −     +     +       +
+                    πy π                   2     4πy 8πy 2        2π
+                                                              
+                           (σ + t) π       1              3          23 (σ + t)(σ + 1)    115 σ + t
+                         +              + 2 + log 2 +            + 2                   +            .
+                             2πt     2    y           2(y + 1)      9π        xt         54π 3 x2
+Regrouping the terms, we obtain:
+
+                    1 γ + 27 log 2 − 23    115 t    7         3         7
+  A(σ, t, x, y) =     +                 +         +     +           +
+                    4          π          54π 3 x2 4πy 4π(y + 1) 8πy 2
+                        23(σ + 1)    115σ       σ   σ      σ(log 2)       3σ       23σ(σ + 1) 1
+                      +      2
+                                  +     3 2
+                                            +     +   2
+                                                         +          +            +               .
+                          9π x      54π x      4t 2πy t      2πt      4π(y + 1)t      9π 2    xt
+We now study the bound (5.21) depending on whether x < y, x = y, or x > y.
+   1. The Region x > y: We introduce the parameter h and assume
+                                       r
+                                          t             t                     t
+                       1.5 ≤ h ≤ y ≤         <x=           , t ≥ t0 > 0, and 2 ≤ 2π.
+                                         2π           2πy                    x
+                          
+                         t −σ σ
+                                       
+                                      t 1/2−σ σ−1
+In this case, x−σ = 2π        y ≤ 2π           y     , so that (5.21) becomes
+                           (log y)                 t 1/2−σ                              
+          E(σ, t, x, y) ≤            + A(σ, t, x, y)               + |χ(σ + it)|B(σ, t, x, y) y σ−1 .
+                                π                       2π
+We then apply the approximation for |χ(s)| from Lemma 6, for 21 ≤ σ ≤ 1:
+                                                             t 1/2−σ
+                                   |χ(σ + it)| ≤ C0 (σ, t0 )             ,
+                                                             2π
+so that
+                           (log y)                                            t 1/2−σ
+          E(σ, t, x, y) ≤           + A(σ, t, x, y) + C0 (σ, t0 )B(σ, t, x, y)            y σ−1 .
+                               π                                                2π
+               EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                             30
+                                                                                                  q
+                                                                                           t0
+Since all terms in A(σ, t, x, y) decrease with y and x where y ≥ h and x ≥ x0 = max h, 2π       ,
+we then can bound A and B by the following constants (depending on the values for h, σ, and t0 ).
+First, we obtain
+                                      A(σ, t, x, y) ≤ A0 (σ, h, t0 ),
+with
+                  1 γ + 27 log 2 − 23      115      7            3           7
+  A0 (σ, h, t0 ) =  +                   +      2
+                                                 +       +             +
+                  4           π           27π      4πh 4π(h + 1) 8πh2
+          23(σ + 1)      115σ       σ         σ       σ(log 2)         3σ          23σ(σ + 1) 1
+       +             +           +      +          +            +               +                   . (5.22)
+            9π 2 x0     54π 3 x20 4t0 2πh2 t0           2πt0       4π(h + 1)t0        9π 2   x0 t 0
+                                         q                     
+                                                              t (1−σ)/2
+In addition, since y(log y) + y 1−σ ≤ 12 2π t       t
+                                               log 2π    + 2π           , where 1 − σ ≥ 0 then
+                                               r             t                  
+                                    
+                                 1−σ −πt         1   t                   t (1−σ)/2 −πt
+                    y(log y) + y      e    ≤             log        +                e .
+                                                 2 2π          2π      2π
+As the right expression decreases with t > 2π, then B(σ, t, x, y) ≤ B0 (σ, t0 ) with
+                                        q                        
+                                        1  t0     t0     t0 (1−σ)/2
+                                        2  2π log 2π   + 2π           e−πt0
+                         B0 (σ, t0 ) =                                      .                        (5.23)
+                                                  (1 − e−πt0 )
+Therefore
+                                            (log y)                    t 1/2−σ
+                         E(σ, t, x, y) ≤               + E0 (σ, h, t0 )            y σ−1 ,           (5.24)
+                                               π                         2π
+where
+                             E0 (σ, h, t0 ) = A0 (σ, h, t0 ) + C0 (σ, t0 )B0 (σ, t0 ).               (5.25)
+  2. The Region x = y: In this case, the bound (5.24) is still valid, and has the speciﬁc shape
+                                            (log y)                 
+                           E(σ, t, x, y) ≤           + E0 (σ, h, t0 ) y −σ ,
+                                                π
+           q
+             t0
+where h = ⌊ 2π  ⌋ + 1/2, and E0 is given in (5.25).
+  3. The Region y > x: Here, we introduce h ≥ 1.5 such that:
+                                  r
+                                     t          t
+                         h≤x≤          <y=        , t ≥ t0 > 0.
+                                    2π        2πx
+We rewrite (5.20) for ζ(1 − σ), swap x and y, and multiply the equation by χ(s). Taking advantage
+of the functional equation ζ(s) = χ(s)ζ(1 − s) and of the identity χ(s)χ(1 − s) = 1, we obtain:
+                           X               X
+                    ζ(s) =      m−s + χ(s)     ns−1 + O∗ (|χ(s)|E(1 − σ, t, y, x))
+                             m≤x                   n≤y
+
+where, thanks to (5.21),
+                                                             |χ(s)|y σ−1                    
+                                              (log y)
+E(σ, t, x, y) ≤ |χ(s)|E(1−σ, t, y, x) =    + A(1 − σ, t, y, x)              + B(1 − σ, t, y, x) x−σ .
+                                        π                          x−σ
+                                                                                              (5.26)
+                                   |t|       −σ+1/2 y σ−1        
+                                                               x 1/2
+Using Lemma 6 together with 2π = xy with (xy)       x−σ
+                                                           = y       < 1, we ﬁnd
+
+                          |χ(s)|y σ−1                     −σ+1/2 y
+                                                                   σ−1
+                                      ≤ C 0 (σ, t 0 ) (xy)             ≤ C0 (σ, t0 ).
+                             x−σ                                 x−σ
+               EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                                     31
+
+Finally, we note that the bounds (A0 , B0 ) for (A, B) as deﬁned in (5.22) and (5.23) are still valid.
+Consequently, for y > x and 1/2 ≤ σ ≤ 1, (5.26) gives
+                                                                             
+                                          C0 (σ, t0 )
+                        E(σ, t, y, x) ≤               (log x) + E0 (σ, h, t0 ) x−σ ,
+                                              π
+where here we deﬁne
+                           E0 (σ, h, t0 ) = A0 (1 − σ, h, t0 )C0 (σ, t0 ) + B0 (1 − σ, t0 ).
+                                                                                                                  
+Proof of Corollary 0.4 and 0.5. For Corollary 0.4, for the stated values of h and t0 , we ﬁnd the
+maximum values that deﬁne ǫ0 and δ0 using Brent’s method [4]. For Corollary 0.5, we note that,
+for hk ≤ min(x, y) ≤ Hk , we have min(log x, log y) ≤ k. We use the value of h = hk to compute
+the corresponding value of ǫ0 , and the value of ǫk follows directly. Python code is attached to the
+arXiv version of this paper.                                                                      
+
+                                                   References
+ [1] M. Abramowitz and I. A. Stegun. Handbook of Mathematical Functions: With Formulas, Graphs, and
+     Mathematical Tables. Applied mathematics series. Dover Publications, 1965.
+ [2] J. Arias de Reyna. High precision computation of Riemann’s zeta function by the Riemann-Siegel formula, I.
+     Math. Comp., 80(274):995–1009, 2011.
+ [3] J. Arias de Reyna. On the approximation of the zeta function by dirichlet polynomials, 2024. preprint available
+     at arXiv:2406.16667.
+ [4] R. P. Brent. Algorithms for minimization without derivatives, chapter 4. Prentice-Hall Series in Automatic
+     Computation. Prentice-Hall, Inc., Englewood Cliﬀs, N.J., 1973.
+ [5] G.H. Hardy and J.E. Littlewood. The zeros of riemann’s zeta-function on the critical line. Mathematische
+     Zeitschrift, 10:283–317, 1921.
+ [6] G.H. Hardy and J.E. Littlewood. The approximate functional equation in the theory of the zeta-function, with
+     applications to the divisor-problems of dirichlet and piltz. Proceedings of the London Mathematical Society,
+     s2-21(1):39–74, 1923.
+ [7] H. Iwaniec and E. Kowalski. Analytic Number Theory, volume 53 of American Mathematical Society Colloquium
+     Publications. American Mathematical Society, Providence, RI, 2004.
+ [8] H. Kadiri. A zero density result for the Riemann zeta function. Acta Arith., 160(2):185–200, 2013.
+ [9] A. A. Karatsuba and M. A. Korolëv. A theorem on the approximation of a trigonometric sum by a shorter one.
+     Izv. Ross. Akad. Nauk Ser. Mat., 71(2):123–150, 2007.
+[10] D. Patel. Explicit sub-Weyl bound for the Riemann zeta function. PhD thesis, The Ohio State University, 2021.
+[11] D. Patel and A. Yang. An explicit sub-Weyl bound for ζ(1/2 + it). Journal of Number Theory, 262:301–334,
+     2024.
+[12] D.J. Platt and T.S. Trudgian. The Riemann hypothesis is true up to 3·1012 . Bulletin of the London Mathematical
+     Society, 53:792–797, 2021.
+[13] N. Revol and F. Rouillier. Motivations for an arbitrary precision interval arithmetic and the MPFI library.
+     Reliable Computing, 11:275–290, 2005.
+[14] A. Simonić. Explicit zero density estimate for the Riemann zeta-function near the critical line. J. Math. Anal.
+     Appl., 491(1):124303, 41, 2020.
+[15] E. C. Titchmarsh. The theory of the Riemann zeta-function. The Clarendon Press, Oxford University Press, New
+     York, second edition, 1986.
+             EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                             32
+
+                           Appendix A. Proof of technical lemmas
+  We prove here the Lemmas stated in Section 2.
+
+A.1. Preliminary results about the Digamma function. We recall the deﬁnition of the
+                   ′
+Digamma function ΓΓ (z), where
+                                      Z ∞
+                               Γ(z) =     tz−1 e−t dt for Rez > 0.
+                                             0
+For x > 0, we rely on the following key inequality (see [1]):
+                                      1   Γ′                1
+                                   log x −
+                                        < (x) < log x −       .                            (A.1)
+                                      x    Γ               2x
+The Digamma function has a well-known series representation, which is valid for all x > −1
+                                  X∞                    X∞                
+                Γ′                       x                    1       1
+                   (1 + x) = −γ +               = −γ +          −            ,             (A.2)
+                Γ                 n=1
+                                      n(n + x)          n=1
+                                                              n (n + x)
+where γ is the Euler-Mascheroni constant.
+                         X∞                
+                                 1        1    Γ′        Γ′
+                                    −         = (b + 1) − (a + 1).                                  (A.3)
+                              k+a k+b          Γ         Γ
+                            k=1
+Finally, the function satisﬁes the functional equation
+                                 Γ′          1 Γ′
+                                    (x + 1) = + (x).
+                                  Γ          x Γ
+and the Digamma Duplication Formula
+                                 Γ′        1 Γ′       1 Γ′     1
+                                    (2z) =      (z) +      (z + ) + log 2.                           (A.4)
+                                 Γ         2Γ         2Γ       2
+These identities are useful for evaluating various quantities arising in our proof, including to estimate
+the following sums.
+
+A.2. Estimates of harmonic-like sums. For k = 1, 2, 3, and N a positive integer, we study sums
+of the shape
+                                    X       1
+                                                   .
+                                        ν(ν ± y)k
+                                                 ν>N
+
+Proof of Lemma 1.
+                                    P         1
+     • Bounding sums of the shape ν>N ν(ν−y)    k for k = 0, 1, 2:
+
+       Using partial fraction decomposition, and (A.3), we can rewrite
+      X                                                                      
+             1        1X          1          1       1 Γ′             Γ′
+                   =                   −           =       (N + 1) − (N + 1 − y) .                  (A.5)
+          ν(ν − y)    y       ν +N −y ν +N           y Γ               Γ
+     ν>N                 ν≥1
+
+        Substituting the standard bounds (A.1) into (A.5) and setting ∆ = N + 1 − y, we establish:
+            1                  1     Γ′    X          1
+                log(N + 1) −        − (∆) ≤
+            y                N +1     Γ              ν(ν − y)
+                                                ν>N
+                                                                                            (A.6)
+                                                 1                   1      Γ′    
+                                             ≤      log(N + 1) −           − (∆) ,
+                                                 y                2(N + 1)   Γ
+        which achieves proving (2.1).
+            EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                          33
+
+         Before moving onto higher power of (ν − y), we note that, for k ≥ 2,
+                X      1             1               1          X         1
+                           k
+                             =            k
+                                            +              k
+                                                             +                  .
+                    (ν − y)    (N + 1 − y)     (N + 2 − y)             (ν − y)k
+                ν>N                                                 ν>N +2
+      Standard integral comparison estimates directly imply:
+                    1      1      X       1        1         1      1
+                     2
+                       +       <              2
+                                                < 2+           2
+                                                                 +     ,                       (A.7)
+                   ∆     ∆+1           (ν − y)    ∆     (∆ + 1)    ∆+1
+                                     ν>N
+      and                         X
+                1         1            1       1     1           1
+                  3
+                    +         2
+                                <          3
+                                             < 3+        3
+                                                           +           .                       (A.8)
+                ∆     2(∆ + 1)      (ν − y)   ∆   (∆ + 1)    2(∆ + 1)2
+                                     ν>N
+      As partial fraction decomposition allows to rewrite
+                      X        1         1 X       1      1 X    1
+                                   2
+                                     = −                +              ,
+                           ν(ν − y)      y     ν(ν − y) y     (ν − y)2
+                        ν>N                  ν>N               ν>N
+      we conclude to (2.2) by combining (2.1) and (A.7). Similarly, we combine
+            X        1        1 X       1       1 X        1        1 X     1
+                         3
+                           =    2
+                                              −  2            2
+                                                                +
+                ν(ν − y)      y     ν(ν − y) y         (ν − y)      y    (ν − y)3
+             ν>N                   ν>N                ν>N                ν>N
+      with (A.6), (A.7) and (A.8) to
+                                  Pconclude    to (2.3).
+    • Bounding sums of the shape ∞          1
+                                     ν=1 ν(ν+y)k for k = 0, 1, 2:
+
+       For k = 0, we proceed as similarly as above: we apply partial fraction decomposition,
+       recognize Digamma terms using (A.2), and applying the dedicated bounds (A.1). We ob-
+       tain
+                         ∞               
+                                               1  Γ′             log(y + 1) + γ
+     X∞
+             1        1X 1            1                                                  1
+                   =            −           =         (y + 1) + γ ≤                −           .
+     ν=1
+         ν(ν + y)     y ν=1 ν ν + y            y Γ                        y          2y(y + 1)
+                                                                                        P
+       In addition, for k = 2, we utilize the decomposition and the integral lower bound ∞       1
+                                                                                           ν=1 (ν+y)2 ≥
+         1
+       (1+y) . We obtain
+        ∞
+        X                     ∞                ∞
+                 1        1X       1        1X       1       log(y + 1) + γ      1 + 2y
+                     2
+                       =                 −               2
+                                                           ≤         2
+                                                                            − 2            .
+            ν(ν + y)      y     ν(ν + y) y        (ν + y)          y          2y (y + 1)
+       ν=1                  ν=1               ν=1
+                                                                P
+      Finally, for k = 3, we also use the integral lower bound ∞        1          1
+                                                                  ν=1 (ν+y)3 ≥ 2(1+y)2 , so that:
+               ∞
+               X                     ∞                    ∞              ∞
+                         1       1 X    1      1 X    1      1X    1
+                               =             −             −
+                     ν(ν + y)3   y2  ν(ν + y) y 2  (ν + y)2 y   (ν + y)3
+               ν=1                  ν=1               ν=1                ν=1
+                                log(y + 1) + γ 1 + 3y + 3y 2
+                              ≤               −               .
+                                      y3        2y 3 (y + 1)2
+                                                                                                    
+Lemma 11. Let N be a positive integer and 0 < y < N + 1, and ∆ = N + 1 − y. Then
+               X (−1)ν                              
+                                1 Γ′        Γ′ ∆ + 1                1
+                              ≤      (∆) −             − log 2 +          ,                    (A.9)
+                   ν(ν − y)     y Γ         Γ     2              y(N + 1)
+                     ν>N
+                      ∞
+                      X   (−1)ν     log 2       3
+                                  ≤       +           .                                       (A.10)
+                     ν=1
+                         ν(ν + y)     y     2y(y + 1)
+Proof of Lemma 11.
+         EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                         34
+
+                                   P∞     (−1)ν
+• Bounding the alternating sum       ν=1 ν(ν−y) : We apply the partial fraction identity:
+                                                                   
+                                  1       1            1   1
+                                        =                −               .
+                               ν(ν − y)   y           ν−y ν
+  Thus                                     "                                     #
+                     X (−1)ν     1             X (−1)ν             X (−1)ν
+                               =                               −                     .      (A.11)
+                      ν(ν − y)   y                    ν−y                    ν
+                     ν>N                       ν>N                 ν>N
+  By the Alternating Series Estimation Theorem, the second term is bounded by its ﬁrst term:
+                                 X (−1)ν         1
+                                            ≤        .
+                                        ν     N +1
+                                    ν>N
+
+  For the ﬁrst term in (A.11), let ∆ = N + 1 − y. Shifting the index by ν = v + N yields:
+                             X (−1)ν                     ∞
+                                                         X
+                                                     N          (−1)v
+                                          = (−1)                      .
+                                   ν−y                         v−1+∆
+                             ν>N                         v=1
+
+  Using parity in the above inﬁnite sum allows to recognize Digamma terms:
+    ∞                  ∞
+                                                !                       
+   X     (−1)v       1X        1           1         1 Γ′ ∆        Γ′ ∆ + 1
+                  =                  −             =             −             .
+   v=1
+       v−1+∆         2
+                       k=1
+                            k + ∆−1
+                                  2    k + ∆−2
+                                             2
+                                                     2 Γ 2         Γ    2
+  Then, the Digamma Duplication Formula (A.4) gives:
+                  ∞
+                  X                                 
+                      (−1)v       Γ′      Γ′ ∆ + 1
+                                = (∆) −                − log 2.
+                     v−1+∆        Γ       Γ      2
+                    v=1
+  Substituting this into (A.11) leads to the explicit bound:
+             X (−1)ν                                  
+                               1 Γ′        Γ′ ∆ + 1                   1
+                            ≤       (∆) −                − log 2 +          .
+                  ν(ν − y)     y Γ         Γ      2                y(N + 1)
+              ν>N
+                            P      (−1)ν
+• Bounding alternating sum ∞  ν=1 ν(ν+y)
+                          P      (−1)ν
+    We evaluate the sum ∞   ν=1 ν(ν+y) for y > 0. Using partial fraction decomposition, the
+  inﬁnite sum can be written as:
+                     ∞
+                                       "∞           ∞
+                                                              #
+                     X    (−1)ν      1 X (−1)ν X (−1)ν
+                                  =               −             .                    (A.12)
+                         ν(ν + y)    y        ν         ν+y
+                      ν=1                      ν=1                 ν=1
+  The ﬁrst term is the alternating harmonic series, which evaluates to:
+                                    ∞
+                                    X (−1)ν
+                                                     = − log 2.                             (A.13)
+                                    ν=1
+                                           ν
+  For the second sum, we regroup terms by parity and recognize Digamma terms as deﬁned
+  in (A.3):
+       ∞              ∞
+                                          !                          
+      X   (−1)ν    1X      1         1        1 Γ′ y + 1        Γ′ y + 2
+                =               −           =                −              .
+          ν+y      2     k + y2   k + y−1
+                                       2
+                                              2 Γ       2       Γ    2
+      ν=1            k=1
+
+  As previously, the Digamma Duplication Formula (A.4) applies. Thus
+                     X∞                  
+                         (−1)ν   Γ′ y + 1    Γ′
+                               =            − (y + 1) + log 2.                              (A.14)
+                         ν+y     Γ     2      Γ
+                     ν=1
+             EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                         35
+
+        Substituting results from (A.13) and (A.14) back into (A.12), yields the ﬁnal identity:
+                           X∞                                    
+                                (−1)ν     1 Γ′            Γ′ y + 1
+                                        =       (y + 1) −               .
+                           ν=1
+                               ν(ν + y)   y   Γ           Γ     2
+                                                               ′
+        Applying the inequalities in (A.1), and using that ΓΓ is increasing, we obtain
+                                  ∞
+                                  X  (−1)ν     log 2       3
+                                             ≤       +           .
+                                    ν(ν + y)     y     2y(y + 1)
+                                  ν=1
+
+        For large y, this shows that the sum behaves asymptotically as logy 2 + O(y −2 ).
+                                                                                                    
+A.3. Estimates of ﬁnite exponential sums. We recall the deﬁnitions (2.5) :
+                               X                         X e−2πiνx
+                   S0 (x, y) =   e−2πiνx and S1 (x, y) =             .
+                                                                ν
+                                  1≤ν≤y                            1≤ν≤y
+
+Proof of Lemma 2. First, note that for 0 ≤ y < 1, we have S0 (x, y) = 0, and (2.6) is trivially true.
+Now, for x ∈/ Z and y ≥ 1, we consider S0 (x, y) as a geometric sum, which yields
+                                                                     
+                                               e−2πix e−2πix⌊y⌋ − 1
+                                   S0 (x, y) =                         .
+                                                      e−2πix − 1
+We take appropriate exponential factors in the numerator and denominator to use the identity
+e−iθ − eiθ = −2i sin(θ) twice:
+                                                            
+                        e−2πix e−πix⌊y⌋ e−πix⌊y⌋ − eπix⌊y⌋       e−2πix e−πix⌊y⌋ sin(πx⌊y⌋)
+            S0 (x, y) =                                       =                 ·           .
+                                e−πix (e−πix − eπix )                e−πix         sin(πx)
+Inequality (2.6) follows immediately.
+  Now we ﬁx a parameter x ∈  / Z, and use this to express S1 (x, y) as a Riemann-Stieltjes integral:
+                                               Z y+
+                                                    1
+                                   S1 (x, y) =        du S0 (x, u).
+                                                1−  u
+Here, the notation du S0 (x, u) is to clarify that the integration is with respect to the variable u.
+Furthermore, 1− and y + denote that we take the appropriate directional limits. We then integrate
+by parts and use that S0 (x, u) = 0 for u < 1 to obtain
+                                                        Z y
+                                            S0 (x, y)       S0 (x, u)
+                                S1 (x, y) =           +               du.
+                                                y        1     u2
+and thus Applying the bound (2.6) for S0 (x, y) yields
+                                                     Z ∞                     
+                                 1     1       1         du        1      1
+              |S1 (x, y)| ≤           · +                   =               +1 .
+                            | sin(πx)| y | sin(πx)| 1 u2      | sin(πx)| y
+Hence, (2.7) holds.
+  Finally, we consider the case x = n + 1/2, n ∈ Z. In this case, for ν ∈ Z, we have e−2πiνx = (−1)ν .
+Therefore,
+                           X (−1)ν       X∞
+                                             (−1)ν X (−1)ν                   X (−1)ν
+               S1 (x, y) =             =            −              = log 2 −          ,
+                                  ν             ν     ν>y
+                                                             ν               ν>y
+                                                                                  ν
+                          1≤ν≤y               ν=1
+
+where
+                                        X (−1)ν            1     1
+                                                    ≤           < .
+                                        ν>y
+                                               ν        ⌊y⌋ + 1  y
+               EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA                   36
+
+Hence, (2.8) holds.                                                                             
+
+A.4. Estimates of tails of exponential sums. We study here
+                                   X e−2πiνx                ∞
+                                                            X e−2πiνx
+                                                    and                      .
+                                        ν(ν − y)            ν=1
+                                                                  ν(ν + y)
+                                  ν>N
+
+Proof of Lemma 3. Let N be a non-negative integer, and x, y ∈ R satisfying x is not an integer and
+1 ≤ y < N + 1. The case x ∈ Z + 12 is Lemma 11, equations (A.9) and (A.10). For the generic case,
+we decompose in partial fractions to obtain
+                                            ∞               ∞
+                                                                        !
+                     X e−2πiνx         1    X  e−2πiνx     X    e−2πiνx
+                                    =                  −                   .                (A.15)
+                          ν(ν − y)     y        ν−y                ν
+                      ν>N                     ν=N +1                  ν=N +1
+
+We estimate each tail in the right-hand side similarly to Lemma 2. For u ∈ R, let
+                                                 X
+                                    S(x, u) =           e−2πikx ,
+                                                   N +1≤k≤u
+
+so that by Lemma 2, we have
+                                                              1
+                                           |S(x, u)| ≤              ,
+                                                         | sin(πx)|
+and S(x, u) = 0 for u < N + 1. We integrate by parts with a Riemann-Stieltjes integral, and note
+that the boundary terms vanish in the respective limits:
+        X∞               Z ∞                  Z ∞                                       
+             e−2πiνx            du S(x, u)            S(x, u)            1        1
+                      =                    =                 2
+                                                               du ≤                        .
+              ν−y         N +1−   u−y           N +1 (u − y)        | sin(πx)| N + 1 − y
+      ν=N +1
+
+Similarly, we estimate the second sum by
+                                   ∞
+                                   X e−2πiνx           1
+                                             ≤                   .                         (A.16)
+                                        ν      | sin(πx)|(N + 1)
+                                  ν=N +1
+
+Substituting these into (A.15) and applying the triangle inequality yields
+                         X e−2πiνx                                        
+                                              1           1           1
+                                      ≤                          +           .
+                            ν(ν − y)    y| sin(πx)| N + 1 − y N + 1
+                        ν>N
+
+Analogously, we use the decomposition
+                          ∞                      ∞ −2πiνx             ∞ −2πiνx
+                                                                                  !
+                          X e−2πiνx        1     X e                  X e
+                                         =                        −                   .
+                                ν(ν + y)   y              ν                 ν+y
+                          ν=1                    ν=1                  ν=1
+
+For the second sum in the right-hand side, we similarly obtain
+            ∞ −2πiνx
+            X              Z ∞                  Z ∞                                 
+               e                du S0 (x, u)         S0 (x, u)           1       1
+                        =                    =                 du ≤                    ,
+                ν+y          1−    u+y           1   (u + y)2       | sin(πx)| 1 + y
+            ν=1
+
+where S0 (x, u) is deﬁned in (2.5). Combining with the estimate (A.16), we conclude
+                              X∞                                  
+                                   e−2πiνx          1           1
+                                            ≤               1+       .
+                              ν=1
+                                   ν(ν + y)   y| sin(πx)|      1+y
+
+                                                                                                
+              EXPONENTIAL SUMS AND APPROXIMATE FUNCTIONAL EQUATIONS FOR ZETA              37
+
+A.5. Approximations for χ and Gamma. We recall that the χ function is deﬁned as in (2.16):
+                                                             πs 
+                               χ(s) = 2s π s−1 Γ(1 − s) sin        .
+                                                              2
+We can manipulate the deﬁnition (2.16) to express the Gamma function Γ(1 − s) as in Lemma 7.
+Proof of Lemma 7. Note that
+                                     −iπs
+                                                        πs 
+                          i−s+2 = −e 2 ;      2i sin            = i−s+2 (1 − eiπs ).
+                                                         2
+Inserting the latter equation into (2.16), we ﬁnd
+                                         s−1
+                                           2π
+                                 χ(s) =           Γ(1 − s)(1 − eiπs ).
+                                            i
+Finally, we conclude by using the identity
+                                          1             eiπs
+                                                = 1 +
+                                       1 − eiπs       1 − eiπs
+together with |eiπs | ≤ e−πt .                                                            
+
+  Department of Mathematics and Computer Science, University of Lethbridge, 4401 University
+Drive, Lethbridge, Alberta, T1K 3M4 Canada
+  Email address: natasha.dhiman@uleth.ca
+
+  Department of Mathematics and Computer Science, University of Lethbridge, 4401 University
+Drive, Lethbridge, Alberta, T1K 3M4 Canada
+  Email address: habiba.kadiri@uleth.ca
+
+  Department of Mathematics and Computer Science, University of Lethbridge, 4401 University
+Drive, Lethbridge, Alberta, T1K 3M4 Canada
+  Email address: emily.quesadaherrera@uleth.ca
+

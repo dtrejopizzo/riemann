@@ -1,14 +1,14 @@
 """
-GUE no es 'la respuesta': es una CLASE de universalidad, no un operador.
+GUE is not 'the answer': it is a universality CLASS, not an operator.
 
-Generamos 3 matrices GUE independientes. Las 3 tienen la MISMA estadistica
-(la de los ceros), pero sus autovalores son TODOS DISTINTOS entre si y
-distintos de los ceros. 'GUE' nombra una distribucion con infinitos miembros;
-los ceros son UN miembro determinista, elegido por la aritmetica (los primos).
+Three independent GUE matrices are generated. All three have the SAME statistics
+(those of the zeros), but their eigenvalues are ALL DIFFERENT from each other and
+from the zeros. 'GUE' names a distribution with infinitely many members;
+the zeros are ONE deterministic member, selected by the arithmetic (the primes).
 
-'Afinar el mecanismo' para pasar de la clase GUE al miembro exacto = inyectar
-los primos = construir el operador aritmetico = RH. No es una perilla; es la
-montania entera.
+'Tuning the mechanism' to pass from the GUE class to the exact member means
+injecting the primes, i.e. building the arithmetic operator. It is not a knob;
+it is the whole mountain.
 """
 import math
 import numpy as np
@@ -23,16 +23,16 @@ def gue_spectrum(seed, N):
     ev = np.sort(np.linalg.eigvalsh(M))
     return (ev - ev.min())/(ev.max()-ev.min())*(g[N-1]-g[0]) + g[0]
 
-print("Ceros de Riemann (fijos, deterministas):")
+print("Riemann zeros (fixed, deterministic):")
 print("  ", np.round(g[:N], 3), "\n")
 
 for s in [1, 2, 3]:
     ev = gue_spectrum(s, N)
-    print(f"GUE draw #{s} (misma estadistica, mismo rango):")
+    print(f"GUE draw #{s} (same statistics, same range):")
     print("  ", np.round(ev, 3))
 print()
-print("Las 3 tiradas GUE: estadistica identica, autovalores TODOS distintos.")
-print("Ninguna reproduce los ceros. GUE = distribucion, no operador.")
+print("The 3 GUE draws: identical statistics, ALL eigenvalues different.")
+print("None reproduces the zeros. GUE = distribution, not operator.")
 print()
-print("Lo que SELECCIONA el miembro correcto de la clase = los primos.")
-print("Ese selector es el operador aritmetico que falta. Ahi esta TODO el problema.")
+print("What SELECTS the correct member of the class = the primes.")
+print("That selector is the missing arithmetic operator. That is where the WHOLE problem lies.")

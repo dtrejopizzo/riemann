@@ -1,6 +1,5 @@
 # E73.155 Results - RCE component split
 
-Date: 2026-07-12.
 
 Script:
 

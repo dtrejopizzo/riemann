@@ -1,115 +1,114 @@
-# 104_59 — Gate de mayorización pre-log y Schur-convexidad
+# 104_59 — Pre-log majorization and Schur-convexity gate
 
-**Rol.** Auditar la última familia clásica propuesta para la ley
-\(X=\log N\) antes de extraer el coeficiente Laguerre: mayorización de
-vectores de masas, orden convexo de leyes y Schur-convexidad del test.
+**Role.** Audit the last classical family proposed for the law
+\(X=\log N\) before extracting the Laguerre coefficient: majorization of
+mass vectors, convex order of laws, and Schur-convexity of the test.
 
-**Veredicto.** La capa probabilística ya estaba construida en 104_21 y
-104_43. La mayorización clásica no lee el observable de A1:
+**Verdict.** The probabilistic layer was already built in 104_21 and
+104_43. Classical majorization does not read the A1 observable:
 
-1. mayorización de las **masas** olvida qué masa está unida a cada
-   \(\log m\), mientras el momento Laguerre depende de esa unión;
-2. mayorización de los **puntos de soporte** solo ordena funciones convexas
-   o cóncavas, pero
-   \(\varphi_n=L_{n-1}^{(1)}-n\) tiene curvatura de ambos signos para todo
+1. majorization of the **masses** forgets which mass is attached to each
+   \(\log m\), while the Laguerre moment depends on that attachment;
+2. majorization of the **support points** only orders convex or
+   concave functions, but
+   \(\varphi_n=L_{n-1}^{(1)}-n\) has curvature of both signs for every
    \(n\ge4\);
-3. en la desintegración aritmética real, el selector divisor queda por
-   encima del selector uniforme en \(N=2\) y por debajo en \(N=30\), ya
-   para el test lineal.
+3. in the real arithmetic disintegration, the divisor selector lies
+   above the uniform selector at \(N=2\) and below it at \(N=30\), already
+   for the linear test.
 
-Por tanto la familia clásica no aporta una desigualdad para A1. No queda
-refutada una comparación global **firmada, dependiente de las posiciones y
-específica de \(\Lambda\)**; pero al conservar esos datos su transformada
-es exactamente el funcional \(R\) de 104_43, y su proyección Laguerre
-vuelve al margen abierto. Este documento no prueba A1 ni RH.
+Hence the classical family contributes no inequality for A1. What is not
+ruled out is a **signed, position-dependent, \(\Lambda\)-specific** global
+comparison; but by keeping that data its transform is exactly the
+functional \(R\) of 104_43, and its Laguerre projection returns to the
+open margin. This document proves neither A1 nor RH.
 
-## 1. Qué significa «mayorizar una ley»
+## 1. What "majorizing a law" means
 
-Hay dos interpretaciones canónicas, y conviene no mezclarlas.
+There are two canonical readings, and they should not be mixed.
 
-### 1.1 Mayorización del vector de probabilidades
+### 1.1 Majorization of the probability vector
 
-Para una ley atómica
+For an atomic law
 
 \[
  \mu=\sum_jp_j\delta_{x_j},                                      \tag{1}
 \]
 
-puede mayorizarse el vector no etiquetado \(p=(p_j)\). Toda función
-Schur-convexa de \(p\) es simétrica: una permutación de las masas deja su
-valor invariante.
+one can majorize the unlabeled vector \(p=(p_j)\). Every Schur-convex
+function of \(p\) is symmetric: a permutation of the masses leaves its
+value invariant.
 
-El observable que aparece antes del límite regulado es, en cambio,
+The observable that appears before the regulated limit is, instead,
 
 \[
  \mathcal L_n(\mu)=\sum_jp_j\varphi_n(x_j),
  \qquad \varphi_n(x)=L_{n-1}^{(1)}(x)-n.                       \tag{2}
 \]
 
-La asociación \(p_j\leftrightarrow x_j\) es parte esencial de (2). Por
-ello (2) no es una función Schur del vector de masas.
+The association \(p_j\leftrightarrow x_j\) is an essential part of (2). So
+(2) is not a Schur function of the mass vector.
 
-El contraejemplo mínimo es exacto. Sobre los soportes
-\((0,\ell)\), \(\ell=\log2>0\), tómense
+The minimal counterexample is exact. On the supports
+\((0,\ell)\), \(\ell=\log2>0\), take
 
 \[
  p=(3/4,1/4),\qquad q=(1/4,3/4).                               \tag{3}
 \]
 
-Los vectores son permutaciones, luego \(p\succ q\) y \(q\succ p\). Para
+The vectors are permutations, so \(p\succ q\) and \(q\succ p\). For
 \(n=2\),
 
 \[
  \varphi_2(x)=L_1^{(1)}(x)-2=-x,
 \]
 
-y sin embargo
+and yet
 
 \[
  \mathcal L_2(p)=-{\ell\over4},\qquad
  \mathcal L_2(q)=-{3\ell\over4}.                              \tag{4}
 \]
 
-Así la mayorización de masas por sí sola ha descartado precisamente la
-información que se necesita proyectar.
+So mass majorization alone has already discarded precisely the
+information that needs to be projected.
 
-### 1.2 Mayorización de los puntos u orden convexo de medidas
+### 1.2 Majorization of points, or convex order of measures
 
-La segunda interpretación conserva las posiciones. Para dos vectores con
-la misma suma, \(x\succ y\), Karamata produce
+The second reading keeps the positions. For two vectors with the
+same sum, \(x\succ y\), Karamata gives
 
 \[
  \sum_j\phi(x_j)\ge\sum_j\phi(y_j)                              \tag{5}
 \]
 
-cuando \(\phi\) es convexa; invierte (5) cuando es cóncava. En lenguaje de
-leyes, \(\mu\succeq_{\rm cx}\nu\) controla exactamente los tests convexos.
-Las variantes de mayorización débil añaden monotonía al requisito.
+when \(\phi\) is convex; it reverses (5) when \(\phi\) is concave. In the
+language of laws, \(\mu\succeq_{\rm cx}\nu\) controls exactly the convex
+tests. The weak-majorization variants add monotonicity to the requirement.
 
-Para el test real,
+For the actual test,
 
 \[
  \varphi_n''(x)=L_{n-3}^{(3)}(x)\qquad(n\ge3).                  \tag{6}
 \]
 
-Si \(n\ge4\), el Laguerre del lado derecho tiene \(n-3\) ceros simples
-positivos. Su signo alterna entre ellos. En consecuencia, para **cada**
-\(n\ge4\), y por tanto para cada \(n\ge150\), \(\varphi_n\) no es
-globalmente convexa ni globalmente cóncava. Además
-\(\varphi_n'=-L_{n-2}^{(2)}\) cambia de signo, por lo que tampoco pertenece
-a las clases creciente-convexa o decreciente-convexa de los órdenes
-débiles.
+If \(n\ge4\), the Laguerre polynomial on the right has \(n-3\) simple
+positive zeros. Its sign alternates between them. Consequently, for
+**every** \(n\ge4\), and hence for every \(n\ge150\), \(\varphi_n\) is
+neither globally convex nor globally concave. Moreover
+\(\varphi_n'=-L_{n-2}^{(2)}\) changes sign, so it also fails to belong
+to the increasing-convex or decreasing-convex classes of the weak orders.
 
-Esto no es una objeción asintótica. El primer caso, \(n=4\), ya da dos
-testigos cerrados:
+This is not an asymptotic objection. The first case, \(n=4\), already gives
+two closed-form witnesses:
 
 \[
  \varphi_4(x)=-6x+2x^2-{x^3\over6},\qquad
  \varphi_4''(x)=4-x.                                          \tag{7}
 \]
 
-Para cualquier \(a\ge h\ge0\), el vector
-\((a-h,a+h)\) mayoriza a \((a,a)\), y el defecto de Karamata es
+For any \(a\ge h\ge0\), the vector
+\((a-h,a+h)\) majorizes \((a,a)\), and the Karamata defect is
 
 \[
  \boxed{
@@ -117,64 +116,64 @@ Para cualquier \(a\ge h\ge0\), el vector
  =h^2(4-a).}                                                   \tag{8}
 \]
 
-Con \((a,h)=(1,1)\), (8) vale \(3>0\); con \((a,h)=(5,1)\), vale
-\(-1<0\). La misma relación de mayorización exige orientaciones opuestas.
+With \((a,h)=(1,1)\), (8) equals \(3>0\); with \((a,h)=(5,1)\), it equals
+\(-1<0\). The same majorization relation demands opposite orientations.
 
-El cambio de signo también ocurre sobre logaritmos de enteros. Si
-\(\ell=\log2\), entonces
+The sign change also occurs on logarithms of integers. If
+\(\ell=\log2\), then
 
 \[
  (\log1,\log4)\succ(\log2,\log2)
 \]
 
-y (8) vale
+and (8) equals
 
 \[
  \ell^2(4-\ell)>0.                                             \tag{9}
 \]
 
-En cambio,
+On the other hand,
 
 \[
  (\log64,\log256)\succ(\log128,\log128)
 \]
 
-y el mismo defecto vale
+and the same defect equals
 
 \[
  \ell^2(4-7\ell)<0.                                           \tag{10}
 \]
 
-Los signos de (9)--(10) no usan decimales: \(2<e\) da
-\(\ell<1\), mientras \(e<3\) y \(3^4=81<128=2^7\) dan
+The signs of (9)--(10) use no decimals: \(2<e\) gives
+\(\ell<1\), while \(e<3\) and \(3^4=81<128=2^7\) give
 \(4<7\ell\).
 
-Por tanto no existe una orientación Schur universal para la familia de
-tests que contiene A1. Partir el eje en intervalos de curvatura constante
-no resuelve el problema: introduce términos de borde con signos alternos y
-se convierte en la comparación firmada por lóbulos de 103_64.
+Hence there is no universal Schur orientation for the family of tests
+that contains A1. Splitting the axis into intervals of constant curvature
+does not resolve the problem: it introduces boundary terms with
+alternating signs and turns into the signed lobe comparison of 103_64.
 
-## 2. La ley pre-log ya estaba disponible
+## 2. The pre-log law was already available
 
-La propuesta no duplica el Schur **matricial** de 104_34; ese documento
-usa un complemento de Schur en dos rayos adyacentes. Tampoco duplica la
-función de Schur analítica pre-log de 103_24 §6. Sí coincide con dos
-construcciones probabilísticas previas:
+The proposal does not duplicate the **matrix** Schur complement of 104_34;
+that document uses a Schur complement on two adjacent rays. Nor does it
+duplicate the analytic pre-log Schur function of 103_24 §6. It does
+coincide with two earlier probabilistic constructions:
 
-1. 104_21 §1--§2 normaliza el producto Euler y prueba que
-   \(X=\log N\) es compound-Poisson. Para \(u_2>u_1\) construye el
-   acoplamiento exacto
+1. 104_21 §1--§2 normalizes the Euler product and proves that
+   \(X=\log N\) is compound-Poisson. For \(u_2>u_1\) it builds the
+   exact coupling
 
    \[
     X(u_2)=X(u_1)+Z_{u_1,u_2},\qquad Z_{u_1,u_2}\ge0.          \tag{11}
    \]
 
-   Esto ya da orden estocástico y sus refinamientos convexos. El propio
-   documento registra que los Laguerre oscilatorios no pertenecen a esas
-   clases.
+   This already gives stochastic order and its convex refinements. The
+   document itself records that the oscillatory Laguerre functions do not
+   belong to those classes.
 
-2. 104_43 y 104_44 trabajan antes de separar el entero producto. La
-   identidad \(\Lambda*1=\log\) da
+2. 104_43 and 104_44 work before separating out the integer's product. The
+   identity \(\Lambda*1=\log\) gives
 
    \[
     N^\star=DN',\qquad
@@ -182,29 +181,29 @@ construcciones probabilísticas previas:
       ={\Lambda(d)\over\log N}{\bf1}_{d\mid N}.                \tag{12}
    \]
 
-   El comparador polar selecciona uniformemente un punto de
-   \([0,\log N]\). Ésta es precisamente la casilla natural donde intentar
-   una mayorización pre-log aritmética.
+   The polar comparator selects a point of
+   \([0,\log N]\) uniformly. This is precisely the natural slot where an
+   arithmetic pre-log majorization should be attempted.
 
-Además, 103_64 §6 ya audita el orden convexo después de la descomposición
-en celdas: el costo es separable, su diferencia de Monge es cero y la
-primitiva aritmética cambia de signo, con certificados reales
-\(G(2976)>10\) y \(G(4000)<-3700\). 104_14 importa ese stop-gate al mapa
-de Phase 104.
+Moreover, 103_64 §6 already audits the convex order after the
+decomposition into cells: the cost is separable, its Monge difference is
+zero, and the arithmetic primitive changes sign, with real certificates
+\(G(2976)>10\) and \(G(4000)<-3700\). 104_14 imports that stop-gate into the
+Phase 104 map.
 
-## 3. El comparador aritmético real no tiene orientación
+## 3. The real arithmetic comparator has no orientation
 
-La falta de convexidad del test ya impide usar Karamata. Hay además una
-obstrucción anterior: ni siquiera el selector divisor real posee una
-orientación uniforme respecto del selector continuo.
+The lack of convexity of the test already prevents using Karamata. There
+is a further, earlier obstruction: not even the real divisor selector has
+a uniform orientation relative to the continuous selector.
 
-Condicionado a \(N\), sea
+Conditioned on \(N\), let
 
 \[
  Y=\log D,\qquad U_N\sim{\rm Unif}[0,\log N].                   \tag{13}
 \]
 
-Para el test lineal \(f(y)=y\), 104_43 obtiene
+For the linear test \(f(y)=y\), 104_43 obtains
 
 \[
  2L\{\mathbb E(Y\mid N)-\mathbb E U_N\}
@@ -212,95 +211,93 @@ Para el test lineal \(f(y)=y\), 104_43 obtiene
  \quad N=\prod_pp^{a_p},\quad L=\log N.                       \tag{14}
 \]
 
-En \(N=2\), (14) es \((\log2)^2>0\). En \(N=30\), poniendo
-\(a=\log2,b=\log3,c=\log5\), es
+At \(N=2\), (14) is \((\log2)^2>0\). At \(N=30\), setting
+\(a=\log2,b=\log3,c=\log5\), it is
 
 \[
  a^2+b^2+c^2-2ab-2ac-2bc
  =(a+b-c)^2-4ab<0.                                             \tag{15}
 \]
 
-La última desigualdad es exacta: \(0<a+b-c=\log(6/5)<a\), luego
-\((a+b-c)^2<a^2<4ab\). Así fallan ambas orientaciones uniformes ya
-para una función simultáneamente creciente, convexa y cóncava.
+The last inequality is exact: \(0<a+b-c=\log(6/5)<a\), hence
+\((a+b-c)^2<a^2<4ab\). Thus both uniform orientations already fail
+for a function that is simultaneously increasing, convex and concave.
 
-Este testigo usa los pesos reales
-\(\Lambda(2),\Lambda(3),\Lambda(5)\); no sustituye la aritmética por una
-ley abstracta.
+This witness uses the real weights
+\(\Lambda(2),\Lambda(3),\Lambda(5)\); it does not replace arithmetic with
+an abstract law.
 
-## 4. El candidato mínimo y su no-go
+## 4. The minimal candidate and its no-go
 
-El uso clásico más fuerte que puede hacerse sin añadir estructura nueva es:
+The strongest classical use that can be made without adding new structure
+is:
 
-> **Candidato PM.** Construir un orden de mayorización entre la ley
-> aritmética pre-log y una ley de referencia, y aplicar Karamata o
-> Schur-convexidad para ordenar sus momentos \(\mathcal L_n\).
+> **Candidate PM.** Build a majorization order between the arithmetic
+> pre-log law and a reference law, and apply Karamata or
+> Schur-convexity to order their moments \(\mathcal L_n\).
 
-El candidato PM falla de dos maneras independientes:
+Candidate PM fails in two independent ways:
 
-* si se mayoriza el vector de masas, (3)--(4) prueban que el observable no
-  desciende al cociente por permutaciones;
-* si se mayoriza la variable aleatoria, (6)--(10) prueban que el observable
-  no pertenece al cono dual del orden, para ninguno de los índices del
-  rango objetivo.
+* if the mass vector is majorized, (3)--(4) prove the observable does not
+  descend to the quotient by permutations;
+* if the random variable is majorized, (6)--(10) prove the observable does
+  not lie in the order's dual cone, for any index in the target range.
 
-La versión condicionada a las factorizaciones reales falla además por
-(14)--(15). Por ello no hay un teorema útil de la familia clásica que
-derive A1 después de establecer una sola relación de mayorización.
+The version conditioned on the real factorizations fails further by
+(14)--(15). Hence there is no useful theorem from the classical family
+deriving A1 after establishing a single majorization relation.
 
-## 5. Qué no queda descartado
+## 5. What is not ruled out
 
-Los testigos no excluyen una identidad que haga simultáneamente lo
-siguiente:
+These witnesses do not exclude an identity that simultaneously:
 
-1. conserve la etiqueta \(m\mapsto\log m\);
-2. distinga cada intervalo de curvatura de \(\varphi_n\);
-3. compense los signos entre distintas factorizaciones \(N=dk\);
-4. mantenga unidos el polo, Gamma y todos los pesos \(\Lambda(p^j)\).
+1. keeps the label \(m\mapsto\log m\);
+2. distinguishes every curvature interval of \(\varphi_n\);
+3. compensates the signs across different factorizations \(N=dk\);
+4. keeps the pole, Gamma and all the weights \(\Lambda(p^j)\) bound together.
 
-Pero esto ya no es Schur-convexidad ni Karamata. Al promediar globalmente
-la comparación (12), 104_43 §5 demuestra que su transformada de Laplace
-es exactamente
+But that is no longer Schur-convexity nor Karamata. Averaging the
+comparison (12) globally, 104_43 §5 shows that its Laplace transform is
+exactly
 
 \[
  R(t)=-{\zeta'\over\zeta}(1+t)-{1\over t},                    \tag{16}
 \]
 
-y que la proyección Laguerre produce
-\(\Delta A_n-\Delta\lambda_n\). Por tanto una desigualdad firmada especial
-para (16) sigue siendo un frente legítimo, pero no es una consecuencia de
-mayorización: es el contenido aritmético abierto.
+and that the Laguerre projection produces
+\(\Delta A_n-\Delta\lambda_n\). So a special signed inequality for
+(16) remains a legitimate front, but it is not a consequence of
+majorization: it is the open arithmetic content.
 
-El falsificador off-line sigue siendo vinculante para cualquier sucesor.
-Las propiedades positivas de la ley Euler y las relaciones de
-mayorización anteriores no ven por sí solas el cuarteto
-\(4-4\cosh(n\alpha)\cos(n\theta)\); una inferencia que también lo aceptara
-no podría cerrar A1.
+The off-line falsifier remains binding for any successor. The positive
+properties of the Euler law and the earlier majorization relations do not
+by themselves see the quadruple
+\(4-4\cosh(n\alpha)\cos(n\theta)\); an inference that also accepted it
+could not close A1.
 
-## 6. Verificación exacta
+## 6. Exact verification
 
-Ejecutar
+Run
 
     cd 03-research/phase-104-unconditional-a1-closure
     python3 tools/prelog_majorisation_gate_check.py
 
-El verificador usa Fraction para:
+The verifier uses Fraction for:
 
-* los defectos \(+3\) y \(-1\) de (8);
-* las factorizaciones formales (9)--(10);
-* la obstrucción por permutación (4);
-* intervalos outward por la serie de artanh para certificar los signos
-  reales de (14)--(15).
+* the defects \(+3\) and \(-1\) of (8);
+* the formal factorizations (9)--(10);
+* the permutation obstruction (4);
+* outward intervals via the artanh series to certify the real
+  signs of (14)--(15).
 
-No evalúa \(\zeta\), coeficientes de Li, A1 ni RH.
+It evaluates neither \(\zeta\), nor Li coefficients, nor A1, nor RH.
 
-## Estado
+## Status
 
-* **Duplicación localizada:** la ley pre-log y sus acoplamientos ya están
-  en 104_21, 104_43 y 104_44.
-* **Descartado:** mayorización clásica seguida de Schur-convexidad,
-  Karamata, orden estocástico o convexo del test Laguerre.
-* **No descartado:** una comparación global firmada, etiquetada y
-  específica de \(\Lambda\); por (16), sigue siendo el mismo gate
-  aritmético de fuerza A1.
-* **Cierre:** no se prueba A1 ni RH.
+* **Duplication located:** the pre-log law and its couplings are already
+  in 104_21, 104_43 and 104_44.
+* **Ruled out:** classical majorization followed by Schur-convexity,
+  Karamata, stochastic or convex order of the Laguerre test.
+* **Not ruled out:** a labeled, \(\Lambda\)-specific signed global
+  comparison; by (16), it remains the same A1-strength arithmetic gate.
+* **Closure:** neither A1 nor RH is proved.

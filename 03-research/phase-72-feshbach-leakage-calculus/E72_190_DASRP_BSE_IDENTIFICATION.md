@@ -1,7 +1,6 @@
 # E72.190 -- D-ASRP and BSE identification
 
-**Date:** 2026-07-09.
-**Role:** identify the diagonal adaptive SRP energy with the earlier block sign energy.
+**Purpose:** identify the diagonal adaptive SRP energy with the earlier block sign energy.
 
 ## 0. Question
 

@@ -1,7 +1,6 @@
 # E72.30 -- Weyl-weak Feshbach theorem
 
-**Date:** 2026-07-08.
-**Role:** replace norm convergence of ground vectors by the weakest convergence needed for divisor
+**Purpose:** replace norm convergence of ground vectors by the weakest convergence needed for divisor
 currents.
 
 ## 0. Endpoint from E72.29

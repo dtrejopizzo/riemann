@@ -1,6 +1,6 @@
 # P123.061 — Integral deformation from power maps to normal dilation
 
-Date: 2026-09-05. Status: PROVED for the composable polynomial family
+Status: PROVED for the composable polynomial family
 and its primitive relative-fiber contact. Trace specialization and the
 global diagonal comparison remain open.
 

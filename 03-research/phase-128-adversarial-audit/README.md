@@ -1,6 +1,6 @@
 # Phase 128 — adversarial audit of rows A, B, C, and its corrections
 
-Opened 2026-09-12.  Three hostile-referee audits were run against
+Three audits were run against
 [Paper 43](../../04-papers/43-row-a-torsion-theory/main.md) (row A),
 [Paper 44](../../04-papers/44-row-b-arithmetic-family/main.md) (row B) and
 [Paper 45](../../04-papers/45-row-c-explicit-formula/main.md) (row C).

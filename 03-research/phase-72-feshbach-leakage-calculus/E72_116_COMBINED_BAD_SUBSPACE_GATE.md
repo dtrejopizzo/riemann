@@ -1,7 +1,6 @@
 # E72.116 -- Combined bad-subspace gate
 
-**Date:** 2026-07-09.
-**Role:** unify the mass and energy alignment conditions into one finite orthogonality statement.
+**Purpose:** unify the mass and energy alignment conditions into one finite orthogonality statement.
 
 ## 0. The bad subspace
 

@@ -1,6 +1,5 @@
-# R153.018 — Lead blueprint, round 6: the prime-free body W_T and the arithmetic half-space
+# R153.018 — Blueprint, round 6: the prime-free body W_T and the arithmetic half-space
 
-*Lead: Fable 5.1, 2026-09-19. Repair of round 5's failure (pointwise minorants are impossible by Bochner): use the support as structure.*
 
 ## 0. Object
 On the unit sphere of `P_T` (L²) define `x(F) := (x_0, x_n)_{n<e^{2T}}`, `x_0 = ⟨(G_{Γ,T} − m_0)F,F⟩`, `x_n = c_F(log n) = ∫F(t)F(t−log n)dt`.

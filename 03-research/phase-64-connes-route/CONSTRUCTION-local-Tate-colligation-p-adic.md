@@ -13,7 +13,7 @@
 
 # The local $p$-adic Tate colligation with positive defect kernel (Stages 1–2) [SUPERSEDED]
 
-*Pure mathematics. This is the atomic cell of the Critical Tate–Weil Hodge Module $\mathsf{TW}_\Z$
+* This is the atomic cell of the Critical Tate–Weil Hodge Module $\mathsf{TW}_\Z$
 requested by Connes: a single local $p$-adic colligation $\mathfrak U_p$ on $\ell^2(\Z)$ with a
 positive defect kernel, and the Redheffer-product theorem that finite products of passive cells stay
 passive. Both are finite and auditable. The positivity is rooted in the same fact as the curvature

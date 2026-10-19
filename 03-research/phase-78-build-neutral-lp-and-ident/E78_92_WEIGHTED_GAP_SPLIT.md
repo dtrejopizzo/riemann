@@ -1,6 +1,6 @@
 # E78.92 - The weighted modulus quotient is exactly a prefactor divided by `U-RADIAL-GAP`
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

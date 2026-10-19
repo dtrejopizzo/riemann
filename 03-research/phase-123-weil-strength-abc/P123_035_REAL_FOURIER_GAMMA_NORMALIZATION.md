@@ -1,6 +1,6 @@
 # P123.035 — real Fourier normalization, source coefficient audit and Gamma symbol
 
-Date: 2026-09-05. Status: PROVED for the Fourier-normalized scalar
+Status: PROVED for the Fourier-normalized scalar
 distribution and its Gamma symbol below. The literal off-origin
 coefficient in the cited Meyer computation fails the explicit Gaussian
 check under its stated Fourier convention. This isolates a normalization

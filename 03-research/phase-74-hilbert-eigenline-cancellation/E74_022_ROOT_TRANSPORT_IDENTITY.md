@@ -1,6 +1,5 @@
 # E74.22 - Critical root transport identity
 
-Date: 2026-07-16.
 
 ## Exact relation
 

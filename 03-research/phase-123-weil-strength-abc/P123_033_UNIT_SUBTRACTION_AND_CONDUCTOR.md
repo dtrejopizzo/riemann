@@ -1,6 +1,6 @@
 # P123.033 — unit subtraction, conductor test and finite-place distribution
 
-Date: 2026-09-05. Status: PROVED for the explicitly normalized unit
+Status: PROVED for the explicitly normalized unit
 functional and its conductor values. Comparison with the common-carrier
 shadow and the imported cutoff normalization is not asserted.
 

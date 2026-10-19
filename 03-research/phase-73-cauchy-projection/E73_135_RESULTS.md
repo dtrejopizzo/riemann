@@ -1,6 +1,5 @@
 # E73.135 Results - Constrained Evaluation Gap
 
-Date: 2026-07-12.
 
 Script:
 

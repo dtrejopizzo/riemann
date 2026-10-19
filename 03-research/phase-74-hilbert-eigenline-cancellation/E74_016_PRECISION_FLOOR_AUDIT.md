@@ -1,6 +1,5 @@
 # E74.16 - Precision-floor audit
 
-Date: 2026-07-16.
 
 ## Purpose
 

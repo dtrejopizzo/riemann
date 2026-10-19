@@ -174,7 +174,7 @@ Then:
 * $\hat f\not\equiv0$ (a product of two functions not identically zero);
 * $\hat f(\rho)=\xi(\rho)\cdot\sqrt\pi e^{\rho^2/4}=0$ for **every** zero
   $\rho$ of $\xi$ — ξ-divisibility holds, by construction, exactly as the
-  general mechanism of the phase prompt predicts;
+  general mechanism of the phase statement predicts;
 * on every vertical line $\mathrm{Re}(w)=\sigma$ fixed, $|\hat
   f(\sigma+i\tau)|\to0$ **superexponentially** as $|\tau|\to\infty$ (the
   Gaussian factor $e^{-\tau^2/4}$ overwhelms $\xi$'s own $e^{-\pi|\tau|/4}$

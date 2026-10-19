@@ -1,7 +1,6 @@
 # E72.150 -- CPM factor split
 
-**Date:** 2026-07-09.
-**Role:** reduce the post-main source scale in `MSB` to an operator factor bound.
+**Purpose:** reduce the post-main source scale in `MSB` to an operator factor bound.
 
 ## 0. Source vector
 

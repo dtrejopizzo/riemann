@@ -1,7 +1,6 @@
 # E72.184 -- Unified arithmetic certificate
 
-**Date:** 2026-07-09.
-**Role:** combine the pre-stable direct certificate with the stable trace-cycle certificate.
+**Purpose:** combine the pre-stable direct certificate with the stable trace-cycle certificate.
 
 ## 0. Certificate split
 

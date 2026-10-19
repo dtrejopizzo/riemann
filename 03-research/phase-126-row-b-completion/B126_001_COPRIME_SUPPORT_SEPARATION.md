@@ -1,6 +1,6 @@
 # B126.001 — the two contacts have coprime support
 
-Date: 2026-09-12.  Status: `PROVED`.  Full statement and proof: Paper 44 §3.
+Status: `PROVED`. Full statement and proof: Paper 44 §3.
 
 ## The reading that blocked row B
 

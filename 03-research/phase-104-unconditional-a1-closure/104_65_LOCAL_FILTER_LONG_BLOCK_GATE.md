@@ -1,89 +1,90 @@
-# 104_65 — Gate de filtros locales y detector logarítmico de tasa
+# 104_65 — Local filter gate and long-block rate detector
 
-**Pregunta.** ¿Puede obtenerse un bloque consecutivo, arbitrariamente
-largo, en el que
+**Question.** Can a consecutive, arbitrarily long block be obtained in
+which
 
 \[
  \lambda_n\geq-1,                                           \tag{1}
 \]
 
-controlando primero medias móviles, diferencias finitas o una generatriz
-local de los coeficientes?
+by first controlling moving averages, finite differences, or a local
+generating function of the coefficients?
 
-**Veredicto.** No mediante un filtro lineal finito fijo. Si RH es falsa,
-todo filtro cuya función de transferencia no anule los modos exteriores
-máximos conserva excursiones negativas exponenciales sobre un conjunto
-sindético. Esto incluye todas las diferencias finitas de orden fijo y todas
-las medias móviles uniformes de longitud fija. Si el filtro sí anula el modo,
-puede borrar por completo el falsificador: para el cuarteto \(w=2i\),
-\(E^2+4\) deja una sucesión estrictamente positiva aunque la original sea
-negativa en cada cuarto índice.
+**Verdict.** Not via a fixed finite linear filter. If RH is false,
+every filter whose transfer function does not kill the maximal exterior
+modes retains exponential negative excursions on a syndetic set. This
+includes all fixed-order finite differences and all fixed-length uniform
+moving averages. If the filter does kill the mode, it can erase the
+falsifier completely: for the quadruple \(w=2i\),
+\(E^2+4\) leaves a strictly positive sequence even though the original
+is negative at every fourth index.
 
-Se construye además un detector acotado de **tasa exponencial negativa**,
+A bounded **negative exponential rate** detector is also constructed,
 
 \[
  \Psi_{V,n}(x)=\min\!\left\{V,{1\over n}\log\max(1,-x)\right\},
                                                                \tag{2}
 \]
 
-cuya media logarítmica tiene límite inferior cero si y solo si RH. A
-diferencia de la logística de `104_61`--`104_64`, (2) no necesita resolver
-una microfrecuencia \(e^{-cn}\): mide directamente la tasa \(c\). Pero su
-representación prima--Laguerre conserva intacta la cancelación de parte
-finita; separar polo y primos vuelve a costar \(\log(1/\varepsilon)\).
+whose logarithmic average has lower limit zero if and only if RH. Unlike
+the logistics of `104_61`--`104_64`, (2) does not need to resolve a
+microfrequency \(e^{-cn}\): it measures the rate \(c\) directly. But its
+prime–Laguerre representation keeps the finite-part cancellation
+intact; separating pole and primes again costs
+\(\log(1/\varepsilon)\).
 
-Este documento prueba un no-go cuantitativo y una coordenada exacta. No
-prueba (1), A1 ni RH.
+This document proves a quantitative no-go and an exact coordinate. It
+proves neither (1), A1, nor RH.
 
 ---
 
-## 1. Auditoría lógica y falsificador obligatorio
+## 1. Logical audit and mandatory falsifier
 
-La dirección correcta es
+The correct direction is
 
 \[
  \boxed{
- \text{bloques de (1) de longitud no acotada}
+ \text{blocks of (1) of unbounded length}
  \ \Longrightarrow\ \mathrm{RH}.}                          \tag{3}
 \]
 
-Bajo RH, (1) vale en toda la semirrecta porque \(\lambda_n\geq0\). Si RH
-es falsa, `104_56`, Teorema 3.1, produce un conjunto sindético en el que
-\(\lambda_n\leq-cR^n\), con \(R>1\). Por ello (1) falla al menos una vez
-en todo intervalo suficientemente largo. La ocurrencia de los bloques no
-es una firma de falsedad de RH, sino un criterio suficiente para su verdad.
+Under RH, (1) holds on the whole half-line because \(\lambda_n\geq0\). If
+RH is false, `104_56`, Theorem 3.1, produces a syndetic set on which
+\(\lambda_n\leq-cR^n\), with \(R>1\). So (1) fails at least once in
+every sufficiently long interval. The occurrence of the blocks is not a
+signature of RH's falsity, but a sufficient criterion for its truth.
 
-Todo mecanismo local ensayado aquí debe rechazar el cuarteto racional
+Every local mechanism tested here must reject the rational quadruple
 
 \[
  w=2i,\qquad
  Q_n=4-2\mathrm{Re}(w^n+w^{-n}).                    \tag{4}
 \]
 
-Para \(n\equiv0\pmod4\),
+For \(n\equiv0\pmod4\),
 
 \[
  Q_n=4-2(2^n+2^{-n})<-1\qquad(n\geq4),                    \tag{5}
 \]
 
-mientras en las otras tres clases \(Q_n\geq4\). No existe, pues, un
-bloque bueno de longitud cuatro en la cola de (4).
+while in the other three classes \(Q_n\geq4\). So there is no
+good block of length four in the tail of (4).
 
 ---
 
-## 2. Teorema de rigidez bajo filtros locales
+## 2. Rigidity theorem under local filters
 
-Sea \(E\) el desplazamiento \((Ea)_n=a_{n+1}\), y sea
+Let \(E\) be the shift \((Ea)_n=a_{n+1}\), and let
 
 \[
  P(z)=\sum_{h=0}^Jp_hz^h\in\mathbb R[z],\qquad
  (P(E)a)_n=\sum_{h=0}^Jp_ha_{n+h}.                          \tag{6}
 \]
 
-Suponga que RH es falsa. Use la descomposición dominante de `104_56` y
-agrupe conjugados y multiplicidades. Existen \(R>1\), \(1<R_1<R\),
-ángulos no nulos \(\phi_1,\ldots,\phi_K\), multiplicidades
-\(m_j>0\), y una constante \(C_0\), tales que
+Suppose RH is false. Use the dominant decomposition of `104_56` and
+group conjugates and multiplicities. There exist \(R>1\),
+\(1<R_1<R\), nonzero angles \(\phi_1,\ldots,\phi_K\), multiplicities
+\(m_j>0\), and a constant \(C_0\), such that
 
 \[
  \lambda_n=C_0-2R^n\mathrm{Re}
@@ -91,8 +92,8 @@ agrupe conjugados y multiplicidades. Existen \(R>1\), \(1<R_1<R\),
  +O(n^2R_1^n+n^2).                                          \tag{7}
 \]
 
-Aquí se han combinado los caracteres iguales; dos ángulos opuestos
-pertenecen al mismo par real. Ponga
+Here equal characters have been combined; two opposite angles belong to
+the same real pair. Set
 
 \[
  u_j=Re^{i\phi_j},\qquad
@@ -100,7 +101,7 @@ pertenecen al mismo par real. Ponga
  \sum_{j=1}^Km_jP(u_j)e^{ix_j}.                             \tag{8}
 \]
 
-Aplicar (6) a (7) da exactamente
+Applying (6) to (7) gives exactly
 
 \[
  \boxed{
@@ -108,136 +109,138 @@ Aplicar (6) a (7) da exactamente
  +O_P(n^2R_1^n+n^2).}                                      \tag{9}
 \]
 
-**Teorema 2.1 (dicotomía filtro--modo).** Se cumple una de las dos
-alternativas siguientes:
+**Theorem 2.1 (filter–mode dichotomy).** One of the following two
+alternatives holds:
 
-1. \(P(u_j)=0\) para cada modo exterior máximo;
-2. existen \(c_P>0\), \(n_P\) y un conjunto sindético
-   \(D_P\subset\mathbb N\), de densidad natural positiva, tales que
+1. \(P(u_j)=0\) for every maximal exterior mode;
+2. there exist \(c_P>0\), \(n_P\) and a syndetic set
+   \(D_P\subset\mathbb N\), of positive natural density, such that
 
    \[
     (P(E)\lambda)_n\leq-c_PR^n
     \qquad(n\in D_P,\ n\geq n_P).                          \tag{10}
    \]
 
-**Demostración.** Sea
+**Proof.** Let
 
 \[
  H=\overline{\{n\phi:n\in\mathbb Z\}}\subset\mathbb T^K.
 \]
 
-Los caracteres distintos de un grupo compacto son linealmente
-independientes. Como los conjugados ya fueron agrupados, \(F_P\) es
-idénticamente cero en \(H\) exactamente cuando todos los coeficientes
-\(P(u_j)\) se anulan. Si no se anulan todos, \(F_P\) es una función real
-continua no nula. Cada carácter de (8) es no trivial —los ceros no
-triviales tienen ordenada no nula—, de modo que la integral de Haar de
-\(F_P\) es cero. Por tanto \(F_P\) toma algún valor positivo.
+Distinct characters of a compact group are linearly
+independent. Since the conjugates were already grouped, \(F_P\) is
+identically zero on \(H\) exactly when all coefficients
+\(P(u_j)\) vanish. If not all vanish, \(F_P\) is a nonzero continuous
+real function. Each character of (8) is nontrivial —the nontrivial
+zeros have nonzero ordinate—, so the Haar integral of
+\(F_P\) is zero. Hence \(F_P\) attains some positive value.
 
-Elija \(\eta>0\) tal que
+Choose \(\eta>0\) such that
 
 \[
  U=\{x\in H:F_P(x)>2\eta\}
 \]
 
-sea no vacío y su frontera tenga medida de Haar cero. Los retornos de la
-rotación mínima a \(U\) tienen densidad natural positiva y forman un
-conjunto sindético, por el mismo argumento compacto de `104_56`, §3. En
-ese conjunto, (9) y \(R_1<R\) dan, después de aumentar el umbral,
+is nonempty and its boundary has zero Haar measure. The returns of the
+minimal rotation to \(U\) have positive natural density and
+form a syndetic set, by the same compact argument of `104_56`, §3. On
+that set, (9) and \(R_1<R\) give, after raising the threshold,
 
 \[
  (P(E)\lambda)_n\leq-\eta R^n.
 \]
 
-Esto prueba (10), con \(c_P=\eta\). \(\square\)
+This proves (10), with \(c_P=\eta\). \(\square\)
 
-La primera alternativa no es una ganancia: el filtro ha incorporado como
-ceros precisamente los modos que debía detectar. Si quedan otros modos
-exteriores, se repite el argumento con el siguiente módulo. Anularlos todos
-requiere conocer un divisor off-line finito que la aritmética no entrega.
+The first alternative is no gain: the filter has incorporated as
+zeros precisely the modes it was supposed to detect. If other exterior
+modes remain, the argument is repeated with the next modulus. Killing
+them all requires knowing a finite off-line divisor that arithmetic does
+not supply.
 
-### 2.1 Diferencias y medias móviles
+### 2.1 Differences and moving averages
 
-Para una diferencia fija de orden \(k\),
+For a fixed difference of order \(k\),
 
 \[
  P(z)=(z-1)^k.                                               \tag{11}
 \]
 
-Su único cero es \(1\), luego no anula ningún \(|u_j|>1\). Para la media
-móvil uniforme de longitud \(J+1\),
+Its only zero is \(1\), so it does not kill any \(|u_j|>1\). For the
+uniform moving average of length \(J+1\),
 
 \[
  P_J(z)={1+z+\cdots+z^J\over J+1}.                          \tag{12}
 \]
 
-Todos sus ceros están en \(|z|=1\), así que tampoco anula un modo exterior.
-Más aún, si \(|u|=R>1\),
+All its zeros lie on \(|z|=1\), so it also does not kill an exterior
+mode. Moreover, if \(|u|=R>1\),
 
 \[
  |P_J(u)|={|u^{J+1}-1|\over(J+1)|u-1|}
  \geq {R^{J+1}-1\over(J+1)(R+1)}.                           \tag{12a}
 \]
 
-Así una ventana más larga no amortigua el modo exterior: a módulo fijo lo
-amplifica exponencialmente, aunque puede cambiar su fase.
-El Teorema 2.1 implica, para cada \(k,J\) fijo:
+So a longer window does not dampen the exterior mode: at fixed modulus
+it amplifies it exponentially, though it may change its phase.
+Theorem 2.1 implies, for each fixed \(k,J\):
 
 \[
 \boxed{
 \begin{aligned}
  \mathrm {RH}\quad\Longleftrightarrow\quad&
  \Delta^k\lambda_n\geq-e^{\sqrt n}
- \text{ en bloques de longitud no acotada},\tag{13a}\\
+ \text{ on blocks of unbounded length},\tag{13a}\\
  \mathrm {RH}\quad\Longleftrightarrow\quad&
  {1\over J+1}\sum_{h=0}^J\lambda_{n+h}\geq-1
- \text{ en bloques de longitud no acotada}.\tag{13b}
+ \text{ on blocks of unbounded length}.\tag{13b}
 \end{aligned}}
 \]
 
-Bajo RH, \(\lambda_n=O(n\log n)\), de modo que toda combinación finita
-\(\Delta^k\lambda_n\) es \(O_k(n\log n)\) y satisface la barrera
-subexponencial de (13a). En (13b), RH hace no negativo cada sumando. Las
-direcciones hacia RH siguen de (10): bajo no-RH la excursión filtrada de
-tasa \(R^n\) vence \(e^{\sqrt n}\) y toda constante sobre un conjunto
-sindético. No se pone la barrera \(-1\) en (13a), porque la positividad de
-\(\lambda_n\) no da signo a sus diferencias finitas.
+Under RH, \(\lambda_n=O(n\log n)\), so every finite combination
+\(\Delta^k\lambda_n\) is \(O_k(n\log n)\) and satisfies the
+subexponential barrier of (13a). In (13b), RH makes every term
+nonnegative. The directions toward RH follow from (10): under non-RH
+the filtered excursion of rate \(R^n\) beats \(e^{\sqrt n}\) and any
+constant on a syndetic set. The barrier \(-1\) is not set in (13a),
+because the positivity of \(\lambda_n\) gives no sign to its finite
+differences.
 
-En particular, ni diferenciar ni promediar reduce la tasa \(R\). Solo
-multiplica su amplitud por \(P(u_j)\).
+In particular, neither differencing nor averaging reduces the rate
+\(R\). It only multiplies its amplitude by \(P(u_j)\).
 
-### 2.2 La generatriz conserva el mismo polo
+### 2.2 The generating function keeps the same pole
 
-Sea
+Let
 
 \[
  G(z)=\sum_{n\geq1}\lambda_nz^n.
 \]
 
-Salvo un polinomio de borde,
+Up to a boundary polynomial,
 
 \[
  \sum_{n\geq1}(P(E)\lambda)_nz^n=P(z^{-1})G(z).             \tag{14}
 \]
 
-Si \(z_0=u_j^{-1}\) es un polo interior producido por un modo máximo, su
-residuo en (14) queda multiplicado por \(P(u_j)\). Por tanto el radio de
-convergencia no mejora salvo anulación exacta. Las cotas de Cauchy para la
-generatriz filtrada enfrentan el mismo polo que las de `104_63`; no fabrican
-los bloques de (1).
+If \(z_0=u_j^{-1}\) is an interior pole produced by a maximal mode, its
+residue in (14) gets multiplied by \(P(u_j)\). Hence the radius of
+convergence does not improve except by exact cancellation. The Cauchy
+bounds for the filtered generating function face the same pole as those
+of `104_63`; they do not manufacture the blocks of (1).
 
 ---
 
-## 3. Un aniquilador que pasa de largo el cuarteto
+## 3. An annihilator that bypasses the quadruple
 
-La alternativa de anulación es un fallo real, no una formalidad. En (4),
-tome
+The cancellation alternative is a real failure, not a formality. In (4),
+take
 
 \[
  P(z)=z^2+4.                                                 \tag{15}
 \]
 
-Como \(P(2i)=P(-2i)=0\), los dos modos exteriores desaparecen y
+Since \(P(2i)=P(-2i)=0\), the two exterior modes disappear and
 
 \[
 \begin{aligned}
@@ -247,15 +250,15 @@ Como \(P(2i)=P(-2i)=0\), los dos modos exteriores desaparecen y
 \end{aligned}
 \]
 
-De aquí
+Hence
 
 \[
  \boxed{(P(E)Q)_n\geq20-{15\over2^{n+1}}>0\qquad(n\geq1),} \tag{17}
 \]
 
-aunque (5) impide bloques buenos de longitud cuatro para \(Q_n\).
+even though (5) forbids good blocks of length four for \(Q_n\).
 
-Más generalmente, para cualquier \(P\in\mathbb R[z]\),
+More generally, for any \(P\in\mathbb R[z]\),
 
 \[
  \boxed{
@@ -263,32 +266,32 @@ Más generalmente, para cualquier \(P\in\mathbb R[z]\),
  \{w^nP(w)+w^{-n}P(w^{-1})\}.}                              \tag{18}
 \]
 
-Si \(P(w)\ne0\), una de las cuatro clases módulo cuatro hace positiva
-\(\mathrm{Re}(i^nP(w))\). En esa clase, (18) satisface
+If \(P(w)\ne0\), one of the four classes mod four makes
+\(\mathrm{Re}(i^nP(w))\) positive. On that class, (18) satisfies
 
 \[
  (P(E)Q)_n\leq-c_P2^n                                      \tag{19}
 \]
 
-para todo \(n\) suficientemente grande, con
+for every sufficiently large \(n\), with
 
 \[
  c_P=\max\{|\mathrm{Re}\,P(2i)|,
              |\mathrm{Im}\,P(2i)|\}>0                 \tag{20}
 \]
 
-después de reducir la constante por un factor fijo. El conjunto de (19)
-tiene densidad \(1/4\) y huecos a lo sumo cuatro. Si \(P(w)=0\), (16)
-muestra que el filtro puede resultar estrictamente positivo. Éste es el
-testigo cuantitativo de la dicotomía del Teorema 2.1.
+after reducing the constant by a fixed factor. The set of (19)
+has density \(1/4\) and gaps of at most four. If \(P(w)=0\), (16)
+shows the filter can end up strictly positive. This is the
+quantitative witness of Theorem 2.1's dichotomy.
 
 ---
 
-## 4. Detector logarítmico de la tasa negativa
+## 4. Logarithmic negative-rate detector
 
-Fije \(V>0\) y defina (2). Es una función continua, acotada entre \(0\) y
-\(V\), y se anula exactamente cuando \(x\geq-1\). Posee la identidad de
-capa
+Fix \(V>0\) and define (2). It is a continuous function, bounded between
+\(0\) and \(V\), vanishing exactly when \(x\geq-1\). It has the layer
+identity
 
 \[
  \boxed{
@@ -296,12 +299,12 @@ capa
  {\bf1}_{\{x<-e^{nv}\}}\,dv.}                              \tag{21}
 \]
 
-La tasa puntual \(n^{-1}\log(1+\lambda_n^-)\) ya aparece en `104_61`,
-(9). Lo nuevo de esta sección es solo su truncación acotada, su promedio
-logarítmico y la identidad de gran desviación (21); no se reclama un nuevo
-criterio de ceros independiente de Bombieri--Lagarias.
+The pointwise rate \(n^{-1}\log(1+\lambda_n^-)\) already appears in
+`104_61`, (9). What is new in this section is only its bounded
+truncation, its logarithmic average, and the large-deviation identity
+(21); no new zero criterion independent of Bombieri–Lagarias is claimed.
 
-Con \(H_X=\sum_{n\leq X}1/n\), ponga
+With \(H_X=\sum_{n\leq X}1/n\), set
 
 \[
  \boxed{
@@ -309,7 +312,7 @@ Con \(H_X=\sum_{n\leq X}1/n\), ponga
  \sum_{n\leq X}{\Psi_{V,n}(\lambda_n)\over n}.}            \tag{22}
 \]
 
-**Teorema 4.1 (criterio de tasa logarítmica).** Para cada \(V>0\),
+**Theorem 4.1 (logarithmic-rate criterion).** For each \(V>0\),
 
 \[
  \boxed{
@@ -318,33 +321,34 @@ Con \(H_X=\sum_{n\leq X}1/n\), ponga
  \liminf_{X\to\infty}\mathfrak R_V(X)=0.}                 \tag{23}
 \]
 
-**Demostración.** Bajo RH, \(\lambda_n\geq0\), luego (22) es cero para
-todo \(X\). Si RH es falsa, `104_56` da \(R>1\), \(c>0\) y un conjunto
-sindético \(D\) de densidad natural y logarítmica \(d>0\) tal que
-\(\lambda_n\leq-cR^n\) en \(D\). Ponga \(a=\log R\). Para \(n\) grande
-en \(D\),
+**Proof.** Under RH, \(\lambda_n\geq0\), so (22) is zero for
+all \(X\). If RH is false, `104_56` gives \(R>1\), \(c>0\) and a
+syndetic set \(D\) of natural and logarithmic density \(d>0\) such that
+\(\lambda_n\leq-cR^n\) on \(D\). Set \(a=\log R\). For \(n\) large
+in \(D\),
 
 \[
  {1\over n}\log(-\lambda_n)\geq {a\over2}.
 \]
 
-Así
+So
 
 \[
  \liminf_{X\to\infty}\mathfrak R_V(X)
  \geq d\min\!\left(V,{a\over2}\right)>0,                  \tag{24}
 \]
 
-contradiciendo el segundo miembro de (23). \(\square\)
+contradicting the second side of (23). \(\square\)
 
-Para el cuarteto (4), las tres clases no negativas no contribuyen y
+For the quadruple (4), the three nonnegative classes do not contribute
+and
 
 \[
  {1\over n}\log(-Q_n)\longrightarrow\log2
  \qquad(4\mid n).
 \]
 
-Por tanto
+Hence
 
 \[
  \boxed{
@@ -352,24 +356,24 @@ Por tanto
  {1\over4}\min(V,\log2).}                                  \tag{25}
 \]
 
-La variable \(v\) de (21) es la tasa diagonal de `104_62`, pero aquí no se
-introduce una transformada oscilatoria. La afirmación que faltaría probar
-es la gran desviación unilateral
+The variable \(v\) of (21) is the diagonal rate of `104_62`, but here
+no oscillatory transform is introduced. The statement that would still
+need proving is the one-sided large deviation
 
 \[
  {1\over H_X}\sum_{n\leq X}{1\over n}
  {\bf1}_{\{\lambda_n<-e^{nv}\}}\longrightarrow0
- \quad\text{para casi todo }v\in(0,V),                    \tag{26}
+ \quad\text{for almost every }v\in(0,V),                    \tag{26}
 \]
 
-o directamente la integral (22). El Teorema 4.1 muestra que (26) sigue
-teniendo fuerza RH; no la demuestra.
+or directly the integral (22). Theorem 4.1 shows that (26) still
+carries RH strength; it does not prove it.
 
 ---
 
-## 5. Forma aritmética emparejada y gate del regulador
+## 5. Paired arithmetic form and regulator gate
 
-Use la convención de `104_61`:
+Use the convention of `104_61`:
 
 \[
 \begin{aligned}
@@ -382,7 +386,7 @@ Use la convención de `104_61`:
 \end{aligned}                                               \tag{27}
 \]
 
-Como la suma exterior de (22) es finita y \(\Psi_{V,n}\) es continua,
+Since the outer sum of (22) is finite and \(\Psi_{V,n}\) is continuous,
 
 \[
 \boxed{
@@ -393,11 +397,11 @@ Como la suma exterior de (22) es finita y \(\Psi_{V,n}\) es continua,
  L_{n-1}^{(1)}(\log m)\right).}                             \tag{28}
 \]
 
-La fórmula (28) conserva polo, bloque arquimediano, primos y potencias
-primas hasta después de aplicar el detector.
+Formula (28) keeps the pole, archimedean block, primes, and prime
+powers together until after applying the detector.
 
-La concavidad de la raíz o del logaritmo no permite separarlos. Para \(n\)
-fijo, `104_63`, (20), da
+Concavity of the root or of the logarithm does not allow separating
+them. For fixed \(n\), `104_63`, (20), gives
 
 \[
 \begin{aligned}
@@ -408,7 +412,7 @@ fijo, `104_63`, (20), da
 \end{aligned}
 \]
 
-Por consiguiente,
+Consequently,
 
 \[
  {1\over n}\log(1+|p_n(\varepsilon)|)
@@ -417,54 +421,57 @@ Por consiguiente,
  =\log{1\over\varepsilon}+o_n(1).                         \tag{30}
 \]
 
-El miembro emparejado de (28) tiene límite finito, pero cualquier
-triángulo aplicado antes de emparejar introduce una tasa que diverge como
-\(\log(1/\varepsilon)\). En la coordenada de raíces, la misma pérdida es
+The paired term of (28) has a finite limit, but any triangle
+inequality applied before pairing introduces a rate that diverges like
+\(\log(1/\varepsilon)\). In the root coordinate, the same loss is
 
 \[
  |p_n(\varepsilon)|^{1/n},
  |Q_{n,\varepsilon}|^{1/n}\sim\varepsilon^{-1}.             \tag{31}
 \]
 
-Esto cierra el ataque elemental «subaditividad de la raíz \(n\)-ésima».
-No es un no-go para una desigualdad nueva aplicada directamente a la parte
-finita emparejada de (28).
+This closes the elementary "\(n\)-th root subadditivity" attack. It is
+not a no-go for a new inequality applied directly to the finite paired
+part of (28).
 
 ---
 
 ## 6. Balance
 
-**Probado.** La dicotomía general (9)--(10), su especialización a
-diferencias y medias móviles, la conservación del polo en la generatriz,
-el aniquilador exacto (16)--(17), el criterio de tasa (21)--(24), el valor
-off-line (25) y el gate de regulador (29)--(31).
+**Proved.** The general dichotomy (9)--(10), its specialization to
+differences and moving averages, the preservation of the pole in the
+generating function, the exact annihilator (16)--(17), the rate
+criterion (21)--(24), the off-line value (25), and the regulator gate
+(29)--(31).
 
-**Descartado como atajo.** Cualquier número fijo de diferencias; cualquier
-media móvil de longitud fija; estimar la generatriz filtrada en vez de la
-original; o separar la raíz/logaritmo del polo y la suma de Mangoldt.
+**Ruled out as a shortcut.** Any fixed number of differences; any
+fixed-length moving average; estimating the filtered generating
+function instead of the original; or separating the root/logarithm from
+the pole and the Mangoldt sum.
 
-**Frente que sobrevive.** Una desigualdad de gran desviación para la parte
-finita **emparejada** de (28), suficiente para (26), o una construcción
-directa de bloques de (1). A diferencia de Fermi, el detector (22) ya está
-en la escala exponencial correcta y no paga microfrecuencia; a diferencia
-de una energía \(H^2\), está acotado y unilateral. No se obtuvo la cota
-aritmética.
+**Front that survives.** A large-deviation inequality for the
+**paired** finite part of (28), sufficient for (26), or a direct
+construction of blocks of (1). Unlike Fermi, detector (22) is already
+at the correct exponential scale and pays no microfrequency; unlike an
+\(H^2\) energy, it is bounded and one-sided. The arithmetic bound was
+not obtained.
 
-**No probado.** La existencia de un solo bloque nuevo para los coeficientes
-reales más allá de los rangos certificados, el límite cero de (22), A1 o
+**Not proved.** The existence of even one new block for the real
+coefficients beyond the certified ranges, the zero limit of (22), A1, or
 RH.
 
 ---
 
-## 7. Reproducción
+## 7. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 local_filter_long_block_check.py
 ```
 
-El checker usa `Fraction` y enteros gaussianos racionales. Verifica (4)--
-(5), la identidad de filtro (18), el aniquilador (16)--(17), la ausencia de
-ceros exteriores de (11)--(12) en el test \(w=2i\), y las excursiones
-periódicas de los filtros no aniquiladores. El Teorema 2.1 y los límites
-logarítmicos se prueban en el texto; no se certifican por muestreo.
+The checker uses `Fraction` and rational Gaussian integers. It verifies
+(4)--(5), the filter identity (18), the annihilator (16)--(17), the
+absence of exterior zeros of (11)--(12) at the test \(w=2i\), and the
+periodic excursions of the non-annihilating filters. Theorem 2.1 and the
+logarithmic limits are proved in the text; they are not certified by
+sampling.

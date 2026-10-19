@@ -1,6 +1,6 @@
 # P123.047 — The two-prime double-zero complement as a rotation groupoid
 
-Date: 2026-09-05. Status: PROVED for the explicit groupoid reduction,
+Status: PROVED for the explicit groupoid reduction,
 its compact transversal algebra and trace. Transport of the desired
 relative shadow to this complement remains open.
 

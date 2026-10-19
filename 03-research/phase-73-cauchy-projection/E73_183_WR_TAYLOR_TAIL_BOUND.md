@@ -1,6 +1,5 @@
 # E73.183 - WR Taylor-tail bound
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

@@ -1,6 +1,6 @@
 # P123.053 — Unital integrable source and completed external bimodules
 
-Date: 2026-09-05. Status: PROVED for the fixed two-prime domain of
+Status: PROVED for the fixed two-prime domain of
 P123.051. This resolves its unital bimodule formulation; semilocal and
 integral-contact comparisons remain open.
 

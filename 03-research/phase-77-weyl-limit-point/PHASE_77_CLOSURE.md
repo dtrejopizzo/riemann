@@ -1,6 +1,6 @@
 # Phase 77 - Closure
 
-**Closed:** 2026-07-18.  Continued in `phase-78-build-neutral-lp-and-ident/`.
+Continued in `phase-78-build-neutral-lp-and-ident/`.
 
 ## What this phase set out to do
 

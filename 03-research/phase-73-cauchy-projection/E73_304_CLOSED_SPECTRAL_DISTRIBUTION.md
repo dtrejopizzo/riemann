@@ -1,6 +1,5 @@
 # E73.304 - Closed spectral distribution
 
-Date: 2026-07-16.
 
 ## 1. Purpose
 

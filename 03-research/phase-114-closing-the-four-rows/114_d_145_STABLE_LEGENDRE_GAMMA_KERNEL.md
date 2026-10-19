@@ -94,7 +94,7 @@ Define
 It satisfies
 
 \[
- q_n'+kq_n=P_n,qquad q_n(-1)=0.                      \tag{2.2}
+ q_n'+kq_n=P_n,\qquad q_n(-1)=0.                      \tag{2.2}
 \]
 
 Comparison with (0.3) gives the exact identity

@@ -240,7 +240,7 @@ mechanism rejects the proposal.
 
 ## Initial option-search request
 
-Search for mechanisms satisfying the following prompt:
+Search for mechanisms satisfying the following criterion:
 
 > Propose source-side mathematical mechanisms which rule out a hypothetical
 > negative mixed primitive direction for the Riemann Weil form.  Do not

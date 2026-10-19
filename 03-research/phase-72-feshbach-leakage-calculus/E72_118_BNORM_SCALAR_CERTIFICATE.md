@@ -1,7 +1,6 @@
 # E72.118 -- Scalar BNORM certificate
 
-**Date:** 2026-07-09.
-**Role:** isolate the norm side of the final bad-subspace gate as three scalar finite bounds.
+**Purpose:** isolate the norm side of the final bad-subspace gate as three scalar finite bounds.
 
 ## 0. BNORM from E72.116
 

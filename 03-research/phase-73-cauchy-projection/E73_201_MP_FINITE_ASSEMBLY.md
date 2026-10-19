@@ -1,6 +1,5 @@
 # E73.201 - Multiprecision finite assembly
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

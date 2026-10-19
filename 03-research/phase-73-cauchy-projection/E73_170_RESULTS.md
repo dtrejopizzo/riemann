@@ -1,6 +1,5 @@
 # E73.170 results - quotient budget
 
-Date: 2026-07-14.
 
 Script:
 

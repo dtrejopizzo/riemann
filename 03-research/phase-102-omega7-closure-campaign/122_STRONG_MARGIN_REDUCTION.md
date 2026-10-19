@@ -69,5 +69,5 @@ off-line discriminator as A1.
 ## Status
 
 The strong margin gate is reduced to the sharper signed lower bound (1). It
-is a legitimate force-RH target, but it is not supplied by existing absolute
+is a legitimate RH-strength target, but it is not supplied by existing absolute
 or truncation estimates.

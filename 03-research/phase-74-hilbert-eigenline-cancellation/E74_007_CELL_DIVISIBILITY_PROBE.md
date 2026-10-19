@@ -1,6 +1,5 @@
 # E74.7 - Cell divisibility probe target
 
-Date: 2026-07-16.
 
 ## Question
 

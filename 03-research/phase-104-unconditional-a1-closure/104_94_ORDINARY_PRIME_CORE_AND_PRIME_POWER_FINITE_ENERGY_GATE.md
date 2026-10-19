@@ -1,8 +1,8 @@
-# 104_94 — Núcleo de primos ordinarios y energía finita de las potencias
+# 104_94 — Core of ordinary primes and finite energy of the powers
 
-## Resultado
+## Result
 
-Ponga
+Put
 
 \[
  S_m=\sum_{n=2}^m{1\over\log n},\qquad
@@ -10,7 +10,7 @@ Ponga
  \tag{1}
 \]
 
-y
+and
 
 \[
  Q_m=\sum_{2\le k\le \log_2m}{1\over k}\,
@@ -18,17 +18,17 @@ y
  \tag{2}
 \]
 
-Las raíces y el límite superior de (2) se entienden en el sentido
-exacto: \(\pi(m^{1/k})\) cuenta los primos \(p\) tales que \(p^k\le m\).
-Entonces el vector de `104_93` se descompone exactamente como
+The roots and the upper limit of (2) are understood in the exact
+sense: \(\pi(m^{1/k})\) counts the primes \(p\) such that \(p^k\le m\).
+Then the vector of `104_93` decomposes exactly as
 
 \[
  \boxed{B_m=P_m+Q_m.}
  \tag{3}
 \]
 
-El bloque entero de potencias propias tiene energía finita
-incondicionalmente:
+The whole block of proper powers has finite energy
+unconditionally:
 
 \[
  \boxed{
@@ -36,7 +36,7 @@ incondicionalmente:
  \tag{4}
 \]
 
-En consecuencia, si
+Consequently, if
 
 \[
  \mathcal E_B(N)=\sum_{m\le N}{B_m^2\over m(m+1)},
@@ -45,7 +45,7 @@ En consecuencia, si
  \tag{5}
 \]
 
-entonces
+then
 
 \[
  \boxed{
@@ -55,7 +55,7 @@ entonces
  \tag{6}
 \]
 
-y
+and
 
 \[
  \boxed{
@@ -65,8 +65,8 @@ y
  \tag{7}
 \]
 
-Si \(L_2(x)=\int_2^xdt/\log t\), el reemplazo de \(S_m\) por
-\(L_2(m)\) también es una perturbación de energía finita. Por tanto
+If \(L_2(x)=\int_2^xdt/\log t\), replacing \(S_m\) by
+\(L_2(m)\) is also a finite-energy perturbation. Therefore
 
 \[
  \boxed{
@@ -76,12 +76,12 @@ Si \(L_2(x)=\int_2^xdt/\log t\), el reemplazo de \(S_m\) por
  \tag{8}
 \]
 
-Junto con `104_93`, (8) sigue siendo equivalente a RH. No es una prueba
-de (8). Su contenido nuevo es localizar con exactitud el obstáculo:
-**todas las potencias \(p^k\), \(k\ge2\), forman una perturbación de
-energía finita; el exponente posible vive ya en los primos \(p\)**.
+Together with `104_93`, (8) remains equivalent to RH. It is not a proof
+of (8). Its new content is locating exactly the obstacle:
+**all powers \(p^k\), \(k\ge2\), form a finite-energy
+perturbation; the possible exponent already lives in the primes \(p\)**.
 
-La identidad de lcm/factorial no evade esta reducción. En efecto,
+The lcm/factorial identity does not evade this reduction. Indeed,
 
 \[
  \psi(x)=\log\mathrm{lcm}(1,\ldots,\lfloor x\rfloor),
@@ -90,7 +90,7 @@ La identidad de lcm/factorial no evade esta reducción. En efecto,
  \tag{9}
 \]
 
-y
+and
 
 \[
  J(x)-\pi(x)
@@ -99,25 +99,25 @@ y
  \tag{10}
 \]
 
-Así, pasar del radical del factorial al lcm añade precisamente el bloque
-de energía finita (2), y nada más.
+Thus, passing from the radical of the factorial to the lcm adds precisely
+the finite-energy block (2), and nothing more.
 
-**Estado.** Se obtiene una reducción exacta y un no-go de coordenada para
-las identidades \(J\), lcm y factorial. No se demuestra
-\(\mathcal E_B(N)=N^{o(1)}\), Deep-\(\Lambda\), A1 ni RH.
+**Status.** An exact reduction and a coordinate no-go are obtained for
+the \(J\), lcm and factorial identities. It is not proved that
+\(\mathcal E_B(N)=N^{o(1)}\), Deep-\(\Lambda\), A1, or RH.
 
 ---
 
-## 1. Descomposición combinatoria exacta
+## 1. Exact combinatorial decomposition
 
-En una potencia prima \(n=p^k\),
+At a prime power \(n=p^k\),
 
 \[
  {\Lambda(n)\over\log n}={\log p\over k\log p}={1\over k},
  \tag{11}
 \]
 
-y el cociente es cero fuera de las potencias primas. Por tanto
+and the quotient is zero outside the prime powers. Therefore
 
 \[
  \begin{aligned}
@@ -129,10 +129,10 @@ y el cociente es cero fuera de las potencias primas. Por tanto
  \tag{12}
 \]
 
-Como \(B_m=J(m)-S_m\), (12) prueba (3).
+Since \(B_m=J(m)-S_m\), (12) proves (3).
 
-La transformación de torres no pierde información. La inversión de
-Möbius da, también con sumas finitas,
+The tower transformation loses no information. Möbius inversion gives,
+also with finite sums,
 
 \[
  \boxed{
@@ -140,8 +140,8 @@ Möbius da, también con sumas finitas,
  \tag{13}
 \]
 
-En efecto, el coeficiente de \(\pi(x^{1/r})\) al sustituir (12) en el
-lado derecho es
+Indeed, the coefficient of \(\pi(x^{1/r})\) when substituting (12) into the
+right-hand side is
 
 \[
  {1\over r}\sum_{k\mid r}\mu(k)
@@ -149,25 +149,25 @@ lado derecho es
  \tag{14}
 \]
 
-Por ello (12) no puede crear por sí sola una ganancia: es un cambio de
-coordenadas finito e invertible.
+Hence (12) cannot by itself create a gain: it is a finite, invertible
+change of coordinates.
 
-## 2. Las potencias propias tienen energía finita
+## 2. The proper powers have finite energy
 
-Usaremos solamente la cota elemental de Chebyshev
+We will only use the elementary Chebyshev bound
 
 \[
  \pi(y)\le C_\pi {y\over\log y}\qquad(y\ge2),
  \tag{15}
 \]
 
-con una constante absoluta. Por ejemplo, se puede tomar una constante
-explícita grande: el hecho de que cada primo \(n<p\le2n\) divide
-\({2n\choose n}<4^n\), seguido de una suma diádica, da
-\(\vartheta(y)\ll y\); separar los primos \(p\le\sqrt y\) de los
-restantes da (15). No se usa PNT ni localización de ceros.
+with an absolute constant. For instance, one can take a large explicit
+constant: the fact that every prime \(n<p\le2n\) divides
+\({2n\choose n}<4^n\), followed by a dyadic sum, gives
+\(\vartheta(y)\ll y\); separating the primes \(p\le\sqrt y\) from the
+remaining ones gives (15). Neither PNT nor zero localization is used.
 
-Para cada término de (2), (15) da
+For each term of (2), (15) gives
 
 \[
  {1\over k}\pi(m^{1/k})
@@ -175,7 +175,7 @@ Para cada término de (2), (15) da
  \tag{16}
 \]
 
-Si \(K=\lfloor\log_2m\rfloor\), entonces
+If \(K=\lfloor\log_2m\rfloor\), then
 
 \[
  \sum_{k=2}^{K}m^{1/k}
@@ -184,7 +184,7 @@ Si \(K=\lfloor\log_2m\rfloor\), entonces
  \tag{17}
 \]
 
-De (16)--(17),
+From (16)--(17),
 
 \[
  0\le Q_m\le
@@ -193,7 +193,7 @@ De (16)--(17),
  \tag{18}
 \]
 
-Finalmente,
+Finally,
 
 \[
  {Q_m^2\over m(m+1)}
@@ -203,19 +203,19 @@ Finalmente,
  \tag{19}
 \]
 
-Ambas series convergen. Esto prueba (4).
+Both series converge. This proves (4).
 
-## 3. Equivalencia de las energías
+## 3. Equivalence of the energies
 
-Para una sucesión real \(U=(U_m)\), escriba
+For a real sequence \(U=(U_m)\), write
 
 \[
  \|U\|_N^2=\sum_{m=2}^{N}{U_m^2\over m(m+1)}.
  \tag{20}
 \]
 
-Es una norma euclínea finita con pesos positivos. De (3), la desigualdad
-triangular y (4),
+This is a finite Euclidean norm with positive weights. From (3), the
+triangle inequality and (4),
 
 \[
  \big|\|B\|_N-\|P\|_N\big|
@@ -223,8 +223,8 @@ triangular y (4),
  \tag{21}
 \]
 
-La equivalencia (6) es inmediata. Si una de las dos energías es
-\(N^{o(1)}\), entonces para cada \(\varepsilon>0\)
+Equivalence (6) is immediate. If one of the two energies is
+\(N^{o(1)}\), then for every \(\varepsilon>0\)
 
 \[
  \|P\|_N^2
@@ -233,10 +233,10 @@ La equivalencia (6) es inmediata. Si una de las dos energías es
  \tag{22}
 \]
 
-y recíprocamente. Esto prueba (7).
+and conversely. This proves (7).
 
-Para comparar la suma y la integral del comparador, la monotonía de
-\(1/\log x\) da exactamente
+To compare the sum and the integral of the comparator, the monotonicity
+of \(1/\log x\) gives exactly
 
 \[
  0\le
@@ -245,7 +245,7 @@ Para comparar la suma y la integral del comparador, la monotonía de
  \tag{23}
 \]
 
-Luego
+Hence
 
 \[
  \sum_{m=2}^{\infty}{D_m^2\over m(m+1)}
@@ -253,17 +253,17 @@ Luego
  \tag{24}
 \]
 
-Aplicando otra vez (21) con \(D\) se obtiene (8).
+Applying (21) once more with \(D\) gives (8).
 
-## 4. Lcm, radical del factorial y el mismo bloque
+## 4. Lcm, radical of the factorial, and the same block
 
-Las identidades de factorización prima dan (9): el máximo exponente de
-\(p\) que divide \(1,\ldots,m\) produce \(\psi(m)\), mientras el
-radical de \(m!\) contiene una sola copia de cada primo \(p\le m\) y
-produce \(\vartheta(m)\).
+The prime factorization identities give (9): the maximum exponent of
+\(p\) dividing \(1,\ldots,m\) produces \(\psi(m)\), while the radical of
+\(m!\) contains a single copy of each prime \(p\le m\) and
+produces \(\vartheta(m)\).
 
-Como los saltos de \(\psi\) en \(p^k\) pesan \(\log p\), y los de
-\(\vartheta\) solamente en \(p\),
+Since the jumps of \(\psi\) at \(p^k\) weigh \(\log p\), and those of
+\(\vartheta\) only at \(p\),
 
 \[
  \int_{2^-}^x{d\psi(t)\over\log t}=J(x),
@@ -272,59 +272,60 @@ Como los saltos de \(\psi\) en \(p^k\) pesan \(\log p\), y los de
  \tag{25}
 \]
 
-Su diferencia es (10), y la Sección 2 prueba que esa diferencia tiene
-energía finita. En particular:
+Their difference is (10), and Section 2 proves that this difference has
+finite energy. In particular:
 
-* el lcm conserva todas las potencias primas, pero las potencias propias
-  no pueden ser el origen de un exponente positivo de \(\mathcal E\);
-* el radical del factorial conserva exactamente el canal \(k=1\), que sí
-  contiene todo el obstáculo;
-* invertir (12) mediante (13) recupera ese mismo canal y no aporta una
-  desigualdad de signo.
+* the lcm retains all the prime powers, but the proper powers
+  cannot be the origin of a positive exponent for \(\mathcal E\);
+* the radical of the factorial retains exactly the channel \(k=1\), which
+  does contain the whole obstacle;
+* inverting (12) via (13) recovers that same channel and does not
+  contribute a sign inequality.
 
-Esta es la razón exacta por la que las identidades combinatorias
-lcm/factorial no cierran (8): después de quitar una perturbación de
-energía finita queda el error cuadrático de los primos ordinarios.
+This is the exact reason why the lcm/factorial combinatorial identities
+do not close (8): after removing a finite-energy perturbation, the
+quadratic error of the ordinary primes remains.
 
-## 5. Qué tendría que aportar un sucesor
+## 5. What a successor would need to contribute
 
-La cota buscada ya puede escribirse sin potencias propias:
+The sought bound can already be written without proper powers:
 
 \[
  \sum_{m\le N}{\{\pi(m)-L_2(m)\}^2\over m(m+1)}=N^{o(1)}.
  \tag{26}
 \]
 
-No basta una cota de magnitud PNT. Por ejemplo, un error
-\(O(xe^{-c(\log x)^{3/5}(\log\log x)^{-1/5}}/\log x)\) todavía produce,
-por sustitución directa en (26), una cota con exponente logarítmico
-superior igual a \(1\), no \(0\). El sucesor debe usar cancelación
-cuadrática real de la colocación de los primos, no solamente el PNT ni
-la contabilidad de sus potencias.
+A PNT-magnitude bound is not enough. For instance, an error
+\(O(xe^{-c(\log x)^{3/5}(\log\log x)^{-1/5}}/\log x)\) still produces,
+by direct substitution in (26), a bound with logarithmic exponent
+superior equal to \(1\), not \(0\). The successor must use real
+quadratic cancellation of the placement of the primes, not merely PNT nor
+the accounting of its powers.
 
-## 6. Auditoría de duplicación
+## 6. Duplication audit
 
-* `103_66` ya prueba la telescopía de torres a
-  \(\psi=\log\mathrm{lcm}\,\), pero no elimina el bloque
-  \(k\ge2\) en la norma de Cramér.
-* `E101_090` aísla la covarianza multiplicativa de cociente para
-  \(\Lambda-1\), con otro cutoff y otra norma.
-* `104_89` y `104_93` identifican la energía de Cramér y su equivalencia
-  con RH.
+* `103_66` already proves the telescoping of towers to
+  \(\psi=\log\mathrm{lcm}\,\), but does not eliminate the block
+  \(k\ge2\) in the Cramér norm.
+* `E101_090` isolates the multiplicative ratio covariance for
+  \(\Lambda-1\), with another cutoff and another norm.
+* `104_89` and `104_93` identify the Cramér energy and its equivalence
+  with RH.
 
-Lo adicional aquí es (3)--(8): la separación exacta del canal
-\(p\) y la prueba incondicional de que **todo** \(p^k\), \(k\ge2\), es
-una perturbación de energía finita en la norma discreta exacta.
+What is additional here is (3)--(8): the exact separation of the
+\(p\) channel and the unconditional proof that **every**
+\(p^k\), \(k\ge2\), is a finite-energy perturbation in the exact discrete
+norm.
 
-## 7. Reproducción
+## 7. Reproduction
 
-Desde `tools`:
+From `tools`:
 
 ```bash
 python3 ordinary_prime_core_energy_check.py
 ```
 
-El checker verifica con aritmética racional las identidades finitas
-(12)--(14), comprueba (3) para cada prefijo y muestra separadamente las
-energías de \(B\), \(P\), \(Q\) y el borde de Minkowski. La tabla
-numérica es diagnóstica; las pruebas de (4)--(8) son las anteriores.
+The checker verifies with rational arithmetic the finite identities
+(12)--(14), checks (3) for each prefix and shows separately the
+energies of \(B\), \(P\), \(Q\) and the Minkowski edge. The numerical
+table is diagnostic; the proofs of (4)--(8) are the ones above.

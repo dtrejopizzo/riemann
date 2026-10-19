@@ -40,14 +40,14 @@ without making any spectral assumption.  No paper file is modified.
 Fix \(p\), and put
 
 \[
- a=\log p,qquad r=p^{-1/2},qquad C_p=\mathbb R/a\mathbb Z. \tag{1.1}
+ a=\log p,\qquad r=p^{-1/2},\qquad C_p=\mathbb R/a\mathbb Z. \tag{1.1}
 \]
 
 In the Zak coordinates of D.196, take a test supported only in the cells
 \(j=0,1\):
 
 \[
- f_u(0)=f_0(u),\qquad f_u(1)=f_1(u),qquad0\le u<a.        \tag{1.2}
+ f_u(0)=f_0(u),\qquad f_u(1)=f_1(u),\qquad0\le u<a.        \tag{1.2}
 \]
 
 The two tail functions are
@@ -81,7 +81,7 @@ No completion or limiting argument is involved.
 D.196 identifies the two moments as
 
 \[
- M_+(F)=\langle b_+,e^{u/2}\rangle,qquad
+ M_+(F)=\langle b_+,e^{u/2}\rangle,\qquad
  M_-(F)=\langle b_-,e^{-u/2}\rangle.                      \tag{2.1}
 \]
 

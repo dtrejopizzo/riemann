@@ -1,7 +1,6 @@
 # E72.137 -- Model coercivity by Gershgorin
 
-**Date:** 2026-07-09.
-**Role:** convert model complement coercivity into explicit entrywise inequalities.
+**Purpose:** convert model complement coercivity into explicit entrywise inequalities.
 
 ## 0. Entrywise theorem
 

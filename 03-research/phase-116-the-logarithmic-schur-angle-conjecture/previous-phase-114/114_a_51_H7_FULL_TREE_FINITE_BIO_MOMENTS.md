@@ -36,7 +36,7 @@ Let `p` be the least prime congruent to `a` modulo `N`. Linnik's theorem
 gives absolute `L,C` such that
 
 \[
- p\equiv a\pmod N,qquad p\le C N^L.                                    \tag{1.2}
+ p\equiv a\pmod N,\qquad p\le C N^L.                                    \tag{1.2}
 \]
 
 Since `p` is either `a` itself or at least `a+N`, one has `p>A`. Moreover,
@@ -72,7 +72,7 @@ modulo `p`. It does not change (1.5).
 For every odd `s` in (1.4), let `e_s` be its inverse modulo `p-1` and define
 
 \[
- T_s(x)=x^{e_s},qquad U_s(x)=x^s                                      \tag{2.1}
+ T_s(x)=x^{e_s},\qquad U_s(x)=x^s                                      \tag{2.1}
 \]
 
 on `F_p`, with both maps fixing zero. They are inverse multiplicative

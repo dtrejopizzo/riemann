@@ -1,0 +1,15 @@
+T=0.40 mu0=0.402825 (N14 0.402834) S=0.135216 a_T(phi0)=2.676e-01  lamA_gal=2.254e-01 | a_3: S=0.0000 margin=4.028e-01 | poisson0 margin=3.833e-01
+T=0.45 mu0=0.284090 (N14 0.284135) S=0.203900 a_T(phi0)=8.019e-02  lamA_gal=6.609e-02 | a_3: S=0.0000 margin=2.841e-01 | poisson0 margin=7.713e-02
+T=0.50 mu0=0.177720 (N14 0.177729) S=0.138039 a_T(phi0)=3.968e-02  lamA_gal=1.189e-02 | a_3: S=0.0000 margin=1.777e-01 | poisson0 margin=-3.469e-01
+T=0.55 mu0=0.081099 (N14 0.081237) S=-0.010151 a_T(phi0)=9.125e-02  lamA_gal=7.884e-04 | a_3: S=0.0003 margin=8.079e-02 | poisson0 margin=-5.383e-01
+T=0.60 mu0=-0.007125 (N14 -0.007103) S=-0.086108 a_T(phi0)=7.898e-02  lamA_gal=5.344e-05 | a_3: S=0.0948 margin=-1.019e-01 | poisson0 margin=-4.387e-01
+T=0.65 mu0=-0.088639 (N14 -0.088632) S=-0.130347 a_T(phi0)=4.171e-02  lamA_gal=1.305e-06 | a_3: S=0.2054 margin=-2.941e-01 | poisson0 margin=-1.434e-01
+T=0.70 mu0=-0.164422 (N14 -0.164394) S=-0.197897 a_T(phi0)=3.347e-02  lamA_gal=-1.450e-05 | a_3: S=0.2577 margin=-4.221e-01 | poisson0 margin=1.881e-01
+T=0.75 mu0=-0.235291 (N14 -0.235221) S=-0.263724 a_T(phi0)=2.843e-02  lamA_gal=-2.411e-05 | a_3: S=0.2357 margin=-4.710e-01 | poisson0 margin=4.587e-01
+T=0.80 mu0=-0.301804 (N14 -0.301788) S=-0.347851 a_T(phi0)=4.605e-02  lamA_gal=-8.517e-06 | a_3: S=0.1532 margin=-4.550e-01 | poisson0 margin=6.957e-01
+T=0.85 mu0=-0.364681 (N14 -0.364649) S=-0.402278 a_T(phi0)=3.760e-02  lamA_gal=-6.245e-06 | a_3: S=0.0878 margin=-4.525e-01 | poisson0 margin=9.088e-01
+T=0.90 mu0=-0.424275 (N14 -0.424266) S=-0.440437 a_T(phi0)=1.616e-02  lamA_gal=-1.380e-05 | a_3: S=0.0411 margin=-4.654e-01 | poisson0 margin=1.098e+00
+T=0.95 mu0=-0.481134 (N14 -0.481030) S=-0.498078 a_T(phi0)=1.694e-02  lamA_gal=-1.346e-04 | a_3: S=-0.0174 margin=-4.638e-01 | poisson0 margin=1.261e+00
+T=1.00 mu0=-0.535316 (N14 -0.535274) S=-0.565683 a_T(phi0)=3.037e-02  lamA_gal=-3.614e-05 | a_3: S=-0.0779 margin=-4.574e-01 | poisson0 margin=1.390e+00
+T=1.05 mu0=-0.587361 (N14 -0.587284) S=-0.613169 a_T(phi0)=2.581e-02  lamA_gal=-5.662e-05 | a_3: S=-0.1154 margin=-4.720e-01 | poisson0 margin=1.484e+00
+T=1.10 mu0=-0.637322 (N14 -0.637310) S=-0.657125 a_T(phi0)=1.980e-02  lamA_gal=-1.120e-04 | a_3: S=-0.1641 margin=-4.732e-01 | poisson0 margin=1.541e+00

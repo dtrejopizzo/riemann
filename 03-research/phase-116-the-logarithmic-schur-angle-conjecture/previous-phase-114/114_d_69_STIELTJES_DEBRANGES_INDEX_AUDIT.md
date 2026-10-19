@@ -128,7 +128,7 @@ Whenever differentiation is justified, and otherwise by monotone
 comparison of the integrands,
 
 \[
- q(\tau_2)\le q(\tau_1)qquad(0\le\tau_1\le\tau_2).        \tag{2.2}
+ q(\tau_2)\le q(\tau_1)\qquad(0\le\tau_1\le\tau_2).        \tag{2.2}
 \]
 
 Equivalently, mixtures of the corresponding exponential Green kernels
@@ -164,7 +164,7 @@ For either parity `epsilon`, normalize the corresponding jet vector `u`
 and decompose
 
 \[
- H_\epsilon=\mathbb C u\oplus u^\perp,qquad
+ H_\epsilon=\mathbb C u\oplus u^\perp,\qquad
  B_\epsilon=
  \begin{pmatrix}a&b^*\\b&D\end{pmatrix}.                 \tag{3.3}
 \]
@@ -199,7 +199,7 @@ relative determinant is defined.
 Assume first that `D<=0`.  Let `E_D` be its spectral measure and put
 
 \[
- d\mu(t)=d\langle b,E_D(-t)b\rangle,qquad t\ge0.          \tag{4.1}
+ d\mu(t)=d\langle b,E_D(-t)b\rangle,\qquad t\ge0.          \tag{4.1}
 \]
 
 Then for `z>0`,
@@ -255,7 +255,7 @@ Cyclicity cannot be silently omitted.  Consider
 Then relative to `C u direct-sum u^perp`, one has
 
 \[
- a=2,\qquad b=0,qquad D=\mathrm{diag}(1,-1),
+ a=2,\qquad b=0,\qquad D=\mathrm{diag}(1,-1),
  \qquad s(z)=2-z.                                          \tag{5.2}
 \]
 

@@ -7,7 +7,7 @@ the \(170\)-mode endpoint it is quantitatively almost orthogonal to the low
 Legendre space.  If
 
 \[
- y=u+q\in\mathcal P_T\cap V_N^\perp,qquad
+ y=u+q\in\mathcal P_T\cap V_N^\perp,\qquad
  u\in L_N,quad q\in L_N^\perp,
 \]
 
@@ -38,7 +38,7 @@ Let
 
 \[
  h_\pm(t)=e^{\pm t/2},\qquad
- \phi_n(t)=\sqrt{{2n+1\over2T}}P_n(t/T),qquad
+ \phi_n(t)=\sqrt{{2n+1\over2T}}P_n(t/T),\qquad
  k={T\over2}.                                          \tag{1.1}
 \]
 
@@ -58,7 +58,7 @@ where \(i_n\) is the modified spherical Bessel function.  Reflection gives
 Let \(M_Q=M|_{L_N^\perp}\).  Its two-by-two Gram matrix is
 
 \[
- M_QM_Q^*=\begin{pmatrix}a_N&b_N\\b_N&a_N\end{pmatrix},qquad
+ M_QM_Q^*=\begin{pmatrix}a_N&b_N\\b_N&a_N\end{pmatrix},\qquad
  a_N=\sum_{n\ge N}g_n^2,quad
  b_N=\sum_{n\ge N}(-1)^ng_n^2.                        \tag{1.4}
 \]
@@ -133,8 +133,8 @@ Every quantity in (3.3) is an elementary expression in \(\log5\), integer
 factorials and exponentials.  Arb evaluation at 1000 decimal digits gives
 
 \[
- \log_{10}g_{170}<-425.05,qquad
- \log_{10}a_{170}<-850.10,qquad
+ \log_{10}g_{170}<-425.05,\qquad
+ \log_{10}a_{170}<-850.10,\qquad
  \log_{10}\eta_{170}<-424.52,                         \tag{3.4}
 \]
 
@@ -153,7 +153,7 @@ Legendre-complement estimate is
 If
 
 \[
- \|A_Tu\|\le C_N\|u\|\quad(u\in U_N),qquad
+ \|A_Tu\|\le C_N\|u\|\quad(u\in U_N),\qquad
  \langle A_Tu,u\rangle\ge-M\|u\|^2,                  \tag{4.2}
 \]
 

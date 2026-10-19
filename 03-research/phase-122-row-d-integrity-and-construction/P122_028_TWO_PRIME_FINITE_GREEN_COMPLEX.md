@@ -112,7 +112,7 @@ In particular,
 Let
 
 \[
- x=E_{p,T}\mathfrak h_F,qquad
+ x=E_{p,T}\mathfrak h_F,\qquad
  y=E_{q,T}\mathfrak h_F                            \tag{4.1}
 \]
 

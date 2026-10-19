@@ -1,6 +1,6 @@
 # M1 — The index-graded category $\mathcal G$: language for signature-continuity
 
-**Phase 65, milestone M1.** Pure mathematics. Goal: define the category in which the Signature-Continuity
+**Phase 65, milestone M1.** Goal: define the category in which the Signature-Continuity
 Theorem (`PROBLEM-STATEMENT.md` §4) is even a statement — objects that are entire functions *carrying* a
 Kreĭn–Langer index, morphisms that *track* the index, and the index realized as a functor. We prove the
 structural lemmas that are provable at the language level and state precisely the two interfaces M2

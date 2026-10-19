@@ -1,7 +1,6 @@
 # E72.102 -- Matched-roots audit
 
-**Date:** 2026-07-09.
-**Role:** test whether the model `D2` defect is caused by evaluating the model complement at actual
+**Purpose:** test whether the model `D2` defect is caused by evaluating the model complement at actual
 finite roots instead of model finite roots.
 
 ## 0. Question

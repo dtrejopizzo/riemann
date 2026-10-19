@@ -1,6 +1,5 @@
 # E73.134 Results - Rowwise Kernel Margin
 
-Date: 2026-07-12.
 
 Script:
 

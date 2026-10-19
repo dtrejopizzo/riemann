@@ -1,6 +1,5 @@
 # E73.144 Results - Optimized Two-Row Pair Forcing
 
-Date: 2026-07-12.
 
 Script:
 

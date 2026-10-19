@@ -165,7 +165,7 @@ Flank I over Flank II.
 Phase 3 can do is convert RH into the single most structurally natural positivity and hand a
 working specialist an explicit finite-dimensional ladder ($Q(T_0,\sigma,J)$) climbing toward
 it. That is the maximal candid aim — and it requires the community step of PLAN §Phase 4: this
-will not be finished by a closed AI+cloud loop.
+will not be finished by a single closed research loop.
 
 ---
 

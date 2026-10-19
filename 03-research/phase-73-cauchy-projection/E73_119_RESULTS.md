@@ -1,6 +1,5 @@
 # E73.119 Results - Low-Scale LOCK Alpha-Interval Certificate
 
-Date: 2026-07-12.
 
 Script:
 

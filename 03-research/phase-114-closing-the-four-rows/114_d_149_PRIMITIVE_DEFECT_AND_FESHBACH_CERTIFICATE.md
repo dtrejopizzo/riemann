@@ -12,7 +12,7 @@ be the two-Tate primitive space.  Eliminating two Legendre coefficients,
 as in D.148, certifies the compression on
 
 \[
- V_N=L_N\cap\mathcal P_T,qquad \dim V_N=N-2.          \tag{0.1}
+ V_N=L_N\cap\mathcal P_T,\qquad \dim V_N=N-2.          \tag{0.1}
 \]
 
 It does **not** yield a low/high decomposition whose complementary space is
@@ -59,7 +59,7 @@ No sign is assumed, and the paper is not modified.
 Let \(H=L^2([-T,T])\), and let
 
 \[
- M:H\longrightarrow\mathbb C^2,qquad
+ M:H\longrightarrow\mathbb C^2,\qquad
  MF=(M_-(F),M_+(F)).                                    \tag{1.1}
 \]
 
@@ -143,13 +143,13 @@ and assume \(W=\mathrm{Ran}\,S\subset\mathrm{Dom}\,A\), with
 \(S:\mathbb C^N\to H_0\) injective.  Put
 
 \[
- G=S^*S,qquad P=SG^{-1}S^*,qquad Q=I-P,qquad B=S^*AS.              \tag{3.1}
+ G=S^*S,\qquad P=SG^{-1}S^*,\qquad Q=I-P,\qquad B=S^*AS.              \tag{3.1}
 \]
 
 Assume the directed complement estimate
 
 \[
- QAQ\ge\delta Q,qquad\delta>0.                        \tag{3.2}
+ QAQ\ge\delta Q,\qquad\delta>0.                        \tag{3.2}
 \]
 
 For \(x=Sc\in W\) and \(y\in QH_0\), completion of the square gives

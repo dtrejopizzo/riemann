@@ -1,6 +1,5 @@
 # E73.198 - Digamma form of the signed WR tail
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

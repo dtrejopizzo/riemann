@@ -1,6 +1,5 @@
 # E73.263 - Commutator-Schur residual form of UNIF-ETA
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

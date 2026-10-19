@@ -1,6 +1,6 @@
-# R153.016 — Round 5, builder: the truncated Weil symbol `σ_T`, its negative set, the prime bands `Φ_2, Φ_3`, and the attempted mesh-free endpoint proof
+# R153.016 — Round 5, construction: the truncated Weil symbol `σ_T`, its negative set, the prime bands `Φ_2, Φ_3`, and the attempted mesh-free endpoint proof
 
-*Builder: Opus 5. 2026-09-19. Orders: R153_015 (lead). Scripts: `scripts/round5/`.*
+* Scripts: `scripts/round5/`.*
 
 **One-line result.** The symbol object is built and three new exact identities are proved (reduced symbol, autocorrelation/Krein reformulation, explicit `τ_1`). The hand proof **does not close at either endpoint**, and the reason is now a theorem, not a guess: the negative set `N_T` is *not* a neighbourhood of `0` — it extends to `τ ≈ 16.75` at `½log3` and `τ ≈ 59.54` at `log 2`, while the entire uncertainty budget of type-`T` functions is `|τ| ≲ π/(2T) ≈ 2.3`. Every uncertainty/domination argument is therefore vacuous by more than an order of magnitude, at both endpoints. As a by-product `Ξ_{0.45}` is shown to **satisfy** the width condition that `ζ` violates, which kills the width reading of Theorem A.
 
@@ -12,8 +12,8 @@
 |---|---|---|---|
 | Symbol of the Weil form | `03-research/phase-60-discriminant/RH-PROOF-PAPER.md:46` — "the archimedean symbol is `Ω̃(t) = −log π + Re ψ_Γ(1/4+it/2)`; the prime symbol is `D_λ(t) = Σ_{n≤λ²}Λ(n)n^{−1/2}cos(t log n)`" (identical to `σ_T`, one prefactor apart), and the same line in `phase-61-open-problems/RH-PROOF-PAPER.md:46` | the symbol exists verbatim, for the **band-limited** space `E_λ` (spectral support), together with its no-go | the symbol here is attached to the **compactly supported, two-moment** space `P_T` of Paper 42, i.e. to a *certified* operator; `N_T`, the well/band table, `τ_0`, `τ_1` and the width ratio are new |
 | Deficit window `Ω_Γ`, `g_Γ(τ_Γ)=1` | `04-papers/42-arithmetic-lefschetz-programme/main.tex:6332–6340` (`τ_Γ=0.2860886…`, weights `w_±`, band coherence, width `log(3/2)`) | the split of `g_Γ−1` into `w_±` on `Ω_Γ` for the *leakage* problem | that split is against the constant `1` (Gamma–Tate source estimate), not against `m_0 + primes`; `σ_T` and `N_T` are a different decomposition |
-| Truncation deficit `Ω(0) − B_S` | `03-research/phase-46*/142-ataque-gap135B-semilocal.md:155,175–178,206` — `B_{\{2,3\}} ≈ 6.3485`, `Q_S(f_T) → Ω(0) − B_S < 0` | the semilocal object is negative once the primes in `S` are switched on **without** the support restriction | `σ_T(0) = −7.6210…` at `log 2` is the *same* phenomenon read at frequency `0`; the new content is that the support restriction `T = log 2` is what saves it, quantified by `τ_0 T` |
-| Archimedean domination = blindness | `03-research/phase-36*/108-puente-criba-indice.md:324,330` ("la dominación arquimediana y la ceguera son el mismo fenómeno", Thm 3.3) | absolute domination fails; negativity is second-order cancellation | confirmed independently here: `‖σ_T^-‖_{L¹}` beats every floor by a factor `≳ 10` |
+| Truncation deficit `Ω(0) − B_S` | `03-research/phase-46*/142-attack-on-gap-135-b-the-semilocal.md:155,175–178,206` — `B_{\{2,3\}} ≈ 6.3485`, `Q_S(f_T) → Ω(0) − B_S < 0` | the semilocal object is negative once the primes in `S` are switched on **without** the support restriction | `σ_T(0) = −7.6210…` at `log 2` is the *same* phenomenon read at frequency `0`; the new content is that the support restriction `T = log 2` is what saves it, quantified by `τ_0 T` |
+| Archimedean domination = blindness | `03-research/phase-36*/108-sieve-index-bridge-formulation-unconditional-inventory.md:324,330` ("la dominación arquimediana y la ceguera son el mismo fenómeno", Thm 3.3) | absolute domination fails; negativity is second-order cancellation | confirmed independently here: `‖σ_T^-‖_{L¹}` beats every floor by a factor `≳ 10` |
 | Slepian budget | `phase-106*/106_16_LOCAL_LOGARITHMIC_PRIME_GAMMA_SCALE.md:121,197`; `R153_012_ROUND4_DECAY_LAW.md:82–97,283` (P-Slepian **REFUTED**) | prolate concentration already used, and already refuted as the *rate* mechanism | here it is used as an *inequality*, not a rate; it is refuted again, for a different and sharper reason |
 | Compact polar potential | `main.tex:4088–4114` (`F = (−d²/dt²+¼)G`, `G ∈ C_c^∞(I_T)`, Green kernel `e^{−|t|/2}`) | the lemma | its use to **eliminate the two constraints** from the quadratic form (§2.2) is new |
 
@@ -38,9 +38,9 @@ Normalisations. `F̂(τ) = ∫_ℝ F(t)e^{−iτt}dt`, `‖F‖² = (2π)^{-1}�
 
 So `σ_T` is *exactly* the classical archimedean Weil symbol minus the truncated prime symbol — the `Ω̃ − 2D_λ` of phase 60, with no residual constant. The `−ψ(¼)` bookkeeping of Paper 42 cancels identically. In particular `σ_T(0) = Re ψ(¼) − log π − 2Σw_n = −5.3721834192… − 2Σw_n`.
 
-Numerically: at `T = ½log3` (only `n = 2`, since `n < e^{2T} = 3`) `2Σw_n = 0.98025814`, `σ(0) = −6.35244156`; at `T = log 2` (`n = 2,3`) `2Σw_n = 2.24882634`, `σ(0) = −7.62100976` (matches the lead's `≈ −7.6`).
+Numerically: at `T = ½log3` (only `n = 2`, since `n < e^{2T} = 3`) `2Σw_n = 0.98025814`, `σ(0) = −6.35244156`; at `T = log 2` (`n = 2,3`) `2Σw_n = 2.24882634`, `σ(0) = −7.62100976` (matches the review's `≈ −7.6`).
 
-**Prime bands.** `Φ_n(τ) := −2w_n cos(τ log n)`, period `2π/log n`. `Φ_2` has period `9.0647` and amplitude `0.98026`; `Φ_3` has period `5.7192` and amplitude `1.26857`. `Φ_n > 0` exactly on `cos(τ log n) < 0`. At `T = log 2` both are positive on `τ ∈ (π/(2log2), 3π/(2log3)) = (2.26618, 4.28937)` — the lead's window, confirmed — and `σ_{log2} > 0` there although `g_Γ − m_0 < 0` on all of it. **This is the display of "the primes pay Gamma's deficit": it happens on one band, `(2.2775, 4.8160)`, and nowhere else below `τ = 11.97`.**
+**Prime bands.** `Φ_n(τ) := −2w_n cos(τ log n)`, period `2π/log n`. `Φ_2` has period `9.0647` and amplitude `0.98026`; `Φ_3` has period `5.7192` and amplitude `1.26857`. `Φ_n > 0` exactly on `cos(τ log n) < 0`. At `T = log 2` both are positive on `τ ∈ (π/(2log2), 3π/(2log3)) = (2.26618, 4.28937)` — the review's window, confirmed — and `σ_{log2} > 0` there although `g_Γ − m_0 < 0` on all of it. **This is the display of "the primes pay Gamma's deficit": it happens on one band, `(2.2775, 4.8160)`, and nowhere else below `τ = 11.97`.**
 
 ### 2.2 Reduced symbol: the constraints disappear (new, PROVED)
 
@@ -106,7 +106,7 @@ From the series `ψ(¼+iy) = −γ + Σ_{k≥0}[1/(k+1) − 1/(k+¼+iy)]`,
 
 Orientation: `½log5` (`n=2,3,4`): 15 sign changes, `sup N = 108.95`, `σ(0) = −8.31416`. `½log7` (`n=2,3,4,5`): 33 sign changes, `sup N = 199.7`, `σ(0) = −9.75368`.
 
-**First, decisive structural fact.** `N_T` is **not** a neighbourhood of `0`. The lead's expectation ("a neighbourhood of `0` plus whatever else") understates it: at `log 2` there are six disjoint wells reaching to `τ = 46.13`, and their union has measure `≈ 10.0` out of `[0, 59.54]`. The far wells are shallow (depth `0.23`–`1.07`) but they are exactly where `(τ²+¼)²` is large, so in the reduced symbol `ρ_T` they are catastrophic: `max_{N}|ρ_T| = 1.01·10⁶` is attained at `τ ≈ 46`, not at `τ = 0` (where `|ρ_T| = σ(0)/16 = 0.476`). **The `(τ²+¼)²` suppression, which was the lead's hoped-for lever, cures the deep well at the origin completely and creates a far worse problem at the far wells.**
+**First, decisive structural fact.** `N_T` is **not** a neighbourhood of `0`. The review's expectation ("a neighbourhood of `0` plus whatever else") understates it: at `log 2` there are six disjoint wells reaching to `τ = 46.13`, and their union has measure `≈ 10.0` out of `[0, 59.54]`. The far wells are shallow (depth `0.23`–`1.07`) but they are exactly where `(τ²+¼)²` is large, so in the reduced symbol `ρ_T` they are catastrophic: `max_{N}|ρ_T| = 1.01·10⁶` is attained at `τ ≈ 46`, not at `τ = 0` (where `|ρ_T| = σ(0)/16 = 0.476`). **The `(τ²+¼)²` suppression, which was the review's hoped-for lever, cures the deep well at the origin completely and creates a far worse problem at the far wells.**
 
 ---
 
@@ -203,4 +203,4 @@ At `T = log 2`: `2S^{(0.45)} = 4.910213`, `σ^{(0.45)}(0) = −49.8289` (vs `−
 
 **New open items.**
 * (P153.14) The multi-interval Slepian problem for `𝒦_{2T}`: a joint bound on `(m_1,…,m_k)` over the wells of `σ_T`. By §2.3 this is equivalent to the compression problem, so it is a reformulation, not a route — record it as such.
-* (P153.15) Is `T ↦ R(T) = 2Tτ_0(T)/π` crossing `1` at `T_c = 0.689803` related to the criticality `λ_min ≈ 10⁻⁷` at `log 2`, or is the `0.5 %` agreement a coincidence? Testable: compute `λ_min(A_T|P_T)` at `T = T_c` and check whether the `c(T)` peak of R153_012 (`≈ 93` near `T = 0.689`) sits at `T_c`. **`R153_014:10` already records the peak at `T ≈ 0.689`.** This is the one lead of round 5 worth pursuing.
+* (P153.15) Is `T ↦ R(T) = 2Tτ_0(T)/π` crossing `1` at `T_c = 0.689803` related to the criticality `λ_min ≈ 10⁻⁷` at `log 2`, or is the `0.5 %` agreement a coincidence? Testable: compute `λ_min(A_T|P_T)` at `T = T_c` and check whether the `c(T)` peak of R153_012 (`≈ 93` near `T = 0.689`) sits at `T_c`. **`R153_014:10` already records the peak at `T ≈ 0.689`.** This is the one review of round 5 worth pursuing.

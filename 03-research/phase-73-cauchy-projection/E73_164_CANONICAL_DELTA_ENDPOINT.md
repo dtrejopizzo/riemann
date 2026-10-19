@@ -1,6 +1,5 @@
 # E73.164 - Canonical delta endpoint
 
-Date: 2026-07-12.
 
 ## 1. Purpose
 

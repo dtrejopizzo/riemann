@@ -1,6 +1,5 @@
 # E73.174 - QG quadrature form
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

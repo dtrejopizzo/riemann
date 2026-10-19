@@ -1,6 +1,6 @@
 # E77.7g - BTG-DIV and true-mu sensitivity
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

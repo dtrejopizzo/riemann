@@ -1,78 +1,76 @@
-# 104_109 — Residuo bajo, barrera por bloques y gate del promedio de transporte
+# 104_109 — Low residue, block barrier, and the transport-average gate
 
-**Pregunta.** Combinar la relajación por bloques de `104_67` con la
-fórmula frontera--residuos de `104_33`--`104_41`: ¿basta promediar el
-defecto de transporte sobre grados consecutivos y usar la cota
+**Question.** Combining the block relaxation of `104_67` with the
+boundary–residue formula of `104_33`–`104_41`: does averaging the
+transport defect over consecutive degrees and using the bound
 
 \[
  |\mathcal B_{n,a}|\leq3n\qquad(a\geq4)                    \tag{1}
 \]
 
-para obtener la barrera superior
-\(\lambda_n\leq e^{\sqrt n}\) en bloques arbitrariamente largos?
+suffice to obtain the upper barrier
+\(\lambda_n\leq e^{\sqrt n}\) on arbitrarily long blocks?
 
-**Resultado.** La combinación sí reduce el criterio, con margen
-exponencial, a una suma **finita** de residuos exteriores de altura
-\(\gamma\leq(2N)^{1/4}\). Ésta es la escala correcta para la barrera
-\(e^{\sqrt n}\); la escala \(\sqrt n\) corresponde solo al inicio de la
-amplificación radial \(na_\rho\asymp1\), no a este umbral profundo.
+**Result.** The combination does reduce the criterion, with exponential
+margin, to a **finite** sum of exterior residues of height
+\(\gamma\leq(2N)^{1/4}\). This is the correct scale for the barrier
+\(e^{\sqrt n}\); the scale \(\sqrt n\) corresponds only to the onset of
+the radial amplification \(na_\rho\asymp1\), not to this deep threshold.
 
-El promedio lineal sobre el bloque no conserva, sin embargo, la barrera
-grado a grado. Un cuarteto racional con
+The linear average over the block, however, does not preserve the
+degree-by-degree barrier. A rational quartet with
 
 \[
  w={4i\over5},\qquad
  \rho={1\over1-w}={25+20i\over41}                         \tag{2}
 \]
 
-tiene excursiones positivas exponenciales en cada clase
-\(n\equiv2\pmod4\), pero posee bloques linealmente promediados de longitud
-arbitraria cuyo promedio es negativo. Además, la transformación
-binomial negativa de (1) convierte sus dos modos peligrosos en modos
-estrictamente contractivos y satisface \(|T_4b_n|\leq3n\) para todo
-\(n\geq2\). Así, ni el promedio ordinario del defecto ni (1), aun cuando
-la identidad de transformación converge absolutamente, prueban la barrera
-de `104_67`.
+has exponential positive excursions in every class
+\(n\equiv2\pmod4\), yet has linearly averaged blocks of arbitrary length
+whose average is negative. Moreover, the negative binomial transform of
+(1) turns its two dangerous modes into strictly contractive modes and
+satisfies \(|T_4b_n|\leq3n\) for every \(n\geq2\). So neither the ordinary
+average of the defect nor (1), even though the transform identity
+converges absolutely, proves the barrier of `104_67`.
 
-El blanco mínimo que queda es no lineal: controlar el máximo, o la parte
-positiva, de la forma prima--Laguerre completa en un bloque. Este documento
-no prueba ese control, A1 ni RH.
-
----
-
-## 1. Auditoría interna y alcance
-
-Este ataque no vuelve a abrir las rutas ya cerradas:
-
-* `104_65` prueba que todo filtro lineal fijo conserva un modo exterior o
-  lo anula artificialmente;
-* `104_67` prueba que una barrera **superior** en bloques de longitud no
-  acotada equivale a RH;
-* `104_74` separa, sobre un bloque, un contorno polinómico de la suma finita
-  de polos interiores;
-* `104_76` acota absolutamente la cola de altura alta en la escala
-  profunda;
-* `104_33` y `104_41` identifican el defecto de transporte con el núcleo de
-  Fejér meromorfo;
-* `104_106` ya prueba la identidad para un filtro finito arbitrario, la
-  dualidad con todos los selectores y el gate de la media firmada;
-* `104_107` ya obtiene el promedio triangular de Fejér y su cota de fase
-  \(O(N/L+1)\), y demuestra que el residuo exterior sobrevive.
-
-Lo nuevo aquí respecto de `104_106`--`104_107` es la localización uniforme
-del selector en el **residuo bajo** de altura \(O(N^{1/4})\), con la cola
-complementaria separada por un margen exponencial, y el gate adicional de
-la transformación binomial negativa que conecta directamente con la cota
-en \(a=4\). El ejemplo de promedio de §5 vuelve a registrarse solo porque el
-mismo cuarteto satisface además, de manera absolutamente convergente, el
-gate de \(a=4\) de §6. No se reclama novedad bibliográfica para la fórmula
-de Li ni para esa transformación.
+The minimal remaining target is nonlinear: controlling the maximum, or
+the positive part, of the full prime–Laguerre form on a block. This
+document does not prove that control, nor A1, nor RH.
 
 ---
 
-## 2. Identidad exacta del residuo exterior bajo
+## 1. Internal audit and scope
 
-Para un cero \(\rho=\beta+i\gamma\), \(\beta>1/2\), \(\gamma>0\), ponga
+This attack does not reopen routes already closed:
+
+* `104_65` proves that every fixed linear filter preserves an exterior
+  mode or artificially cancels it;
+* `104_67` proves that an **upper** barrier on blocks of unbounded length
+  is equivalent to RH;
+* `104_74` separates, on a block, a polynomial contour from the finite
+  sum of interior poles;
+* `104_76` absolutely bounds the high-height tail at the deep scale;
+* `104_33` and `104_41` identify the transport defect with the
+  meromorphic Fejér kernel;
+* `104_106` already proves the identity for an arbitrary finite filter,
+  the duality with all selectors, and the signed-average gate;
+* `104_107` already obtains the Fejér triangular average and its phase
+  bound \(O(N/L+1)\), and shows that the exterior residue survives.
+
+What is new here relative to `104_106`–`104_107` is the uniform
+localization of the selector in the **low residue** of height
+\(O(N^{1/4})\), with the complementary tail separated by an exponential
+margin, and the additional gate of the negative binomial transform that
+connects directly to the bound at \(a=4\). The averaging example of §5 is
+recorded again only because the same quartet also satisfies, absolutely
+convergently, the \(a=4\) gate of §6. No bibliographic novelty is claimed
+for Li's formula nor for that transform.
+
+---
+
+## 2. Exact identity of the low exterior residue
+
+For a zero \(\rho=\beta+i\gamma\), \(\beta>1/2\), \(\gamma>0\), set
 
 \[
  w_\rho=1-{1\over\rho},
@@ -80,16 +78,16 @@ Para un cero \(\rho=\beta+i\gamma\), \(\beta>1/2\), \(\gamma>0\), ponga
  \mathcal F_n(w)=n+\sum_{d=1}^{n-1}(n-d)(w^d+w^{-d}).     \tag{3}
 \]
 
-La identidad algebraica de `104_33` es
+The algebraic identity of `104_33` is
 
 \[
  {\mathcal F_n(w_\rho)\over\rho(\rho-1)}
  =w_\rho^n+w_\rho^{-n}-2.                                \tag{4}
 \]
 
-Sea \(\mathscr Z_+(Y)\) el multiconjunto de ceros con
-\(\beta>1/2\), \(0<\gamma\leq Y\), uno por cada miembro derecho de
-ordenada positiva. Defina el defecto de transporte truncado
+Let \(\mathscr Z_+(Y)\) be the multiset of zeros with
+\(\beta>1/2\), \(0<\gamma\leq Y\), one per right-hand member of positive
+ordinate. Define the truncated transport defect
 
 \[
  \boxed{
@@ -97,14 +95,14 @@ ordenada positiva. Defina el defecto de transporte truncado
  {m_\rho\mathcal F_n(w_\rho)\over\rho(\rho-1)}.}         \tag{5}
 \]
 
-Por (4), el sumando correspondiente a la órbita funcional completa es
+By (4), the summand corresponding to the full functional orbit is
 
 \[
  2m_\rho\Re(w_\rho^n+w_\rho^{-n}-2),                     \tag{6}
 \]
 
-que es el negativo de la contribución de ese cuarteto al coeficiente de
-Li. Si
+which is the negative of that quartet's contribution to the Li
+coefficient. If
 
 \[
  C_n(Y)=\sum_{\substack{\rho=1/2+i\gamma\\0<\gamma\leq Y}}
@@ -112,20 +110,20 @@ Li. Si
  \qquad w_\rho=e^{i\theta_\rho},                         \tag{7}
 \]
 
-y \(H_n(Y)\) es la suma, por órbitas completas, de todos los ceros con
-\(\gamma>Y\), la fórmula de Li agrupada funcionalmente da exactamente
+and \(H_n(Y)\) is the sum, by complete orbits, over all zeros with
+\(\gamma>Y\), Li's formula grouped functionally gives exactly
 
 \[
  \boxed{\lambda_n=-D_n(Y)+C_n(Y)+H_n(Y).}                \tag{8}
 \]
 
-No se ha supuesto RH. Además,
+RH has not been assumed. Moreover,
 
 \[
  0\leq C_n(Y)\leq4N_\zeta(Y).                            \tag{9}
 \]
 
-Por el Lema 2.1 de `104_76`, uniformemente para \(1\leq n\leq X\) y
+By Lemma 2.1 of `104_76`, uniformly for \(1\leq n\leq X\) and
 \(2\leq Y\leq2X\),
 
 \[
@@ -133,7 +131,7 @@ Por el Lema 2.1 de `104_76`, uniformemente para \(1\leq n\leq X\) y
  \left\{1+\exp\left({X\over2Y^2}\right)\right\}.       \tag{10}
 \]
 
-Junto con \(N_\zeta(Y)\ll Y\log(Y+2)\), (8)--(10) prueban
+Together with \(N_\zeta(Y)\ll Y\log(Y+2)\), (8)–(10) prove
 
 \[
  \boxed{
@@ -142,41 +140,42 @@ Junto con \(N_\zeta(Y)\ll Y\log(Y+2)\), (8)--(10) prueban
  \left\{1+e^{X/(2Y^2)}\right\}.}                         \tag{11}
 \]
 
-La parte crítica se mantuvo con su signo en (8); solo se usó su módulo
-para la cota uniforme (11).
+The critical part was kept with its sign in (8); only its modulus was
+used for the uniform bound (11).
 
 ---
 
-## 3. El criterio mínimo de bloque
+## 3. The minimal block criterion
 
-Tome
+Take
 
 \[
  X=2N,\qquad Y_N=(2N)^{1/4}.                             \tag{12}
 \]
 
-El miembro derecho de (11) es
+The right-hand side of (11) is
 
 \[
  O\!\left(N\log(N+2)e^{\sqrt{2N}/2}\right)
  =o(e^{\sqrt N}).                                        \tag{13}
 \]
 
-Por tanto existe un \(N_0\) absoluto tal que, para \(N\geq N_0\),
+Hence there is an absolute \(N_0\) such that, for \(N\geq N_0\),
 
 \[
  \sup_{N\leq n\leq2N}|\lambda_n+D_n(Y_N)|
  \leq{1\over2}e^{\sqrt N}.                              \tag{14}
 \]
 
-La constante \(1/2\) no es intrínseca: cualquier constante fija entre
-\(0\) y \(1\) sirve después de aumentar \(N_0\).
+The constant \(1/2\) is not intrinsic: any fixed constant between
+\(0\) and \(1\) works after increasing \(N_0\).
 
-**Teorema 3.1 (criterio de residuo bajo en bloques).** Son equivalentes:
+**Theorem 3.1 (low-residue block criterion).** The following are
+equivalent:
 
 1. RH;
-2. existen \(N_j\to\infty\) e intervalos consecutivos
-   \(I_j\subset[N_j,2N_j]\), con \(|I_j|\to\infty\), tales que
+2. there exist \(N_j\to\infty\) and consecutive intervals
+   \(I_j\subset[N_j,2N_j]\), with \(|I_j|\to\infty\), such that
 
    \[
    \boxed{
@@ -184,38 +183,36 @@ La constante \(1/2\) no es intrínseca: cualquier constante fija entre
    \quad(n\in I_j).}                                    \tag{15}
    \]
 
-*Demostración.* Bajo RH, \(\mathscr Z_+(Y)\) es vacío para cada \(Y\),
-de modo que \(D_n(Y)=0\) y (15) vale en cualquier intervalo.
+*Proof.* Under RH, \(\mathscr Z_+(Y)\) is empty for every \(Y\), so
+\(D_n(Y)=0\) and (15) holds on any interval.
 
-Recíprocamente, (14)--(15) implican, para \(n\in I_j\),
+Conversely, (14)–(15) imply, for \(n\in I_j\),
 
 \[
  \lambda_n\leq-D_n(Y_{N_j})+{1\over2}e^{\sqrt{N_j}}
  \leq e^{\sqrt{N_j}}\leq e^{\sqrt n}.                   \tag{16}
 \]
 
-Así existen bloques de longitud no acotada que satisfacen la barrera
-superior de `104_67`, Corolario 2.1, y por ese corolario vale RH.
-\(\square\)
+So there are blocks of unbounded length satisfying the upper barrier of
+`104_67`, Corollary 2.1, and by that corollary RH holds. \(\square\)
 
-La reducción (15) no pide controlar todos los ceros. Para el nivel
-\(e^{\sqrt n}\), toda contribución que aún pueda cruzar el umbral se ha
-concentrado en \(\gamma\ll n^{1/4}\). Las otras dos escalas que pueden
-confundirse con ésta son:
+Reduction (15) does not require controlling all the zeros. For level
+\(e^{\sqrt n}\), every contribution that could still cross the threshold
+has been concentrated in \(\gamma\ll n^{1/4}\). The two other scales that
+could be confused with this one are:
 
-* \(\gamma\asymp\sqrt n\), donde comienza
-  \(na_\rho\asymp1\);
-* \(\gamma\asymp\sqrt{n/\log n}\), donde una cota absoluta radial baja
-  hasta tamaño polinómico.
+* \(\gamma\asymp\sqrt n\), where \(na_\rho\asymp1\) begins;
+* \(\gamma\asymp\sqrt{n/\log n}\), where an absolute radial bound drops to
+  polynomial size.
 
-Para la barrera profunda usada en `104_67`, la escala pertinente es
-\(n^{1/4}\), como muestran (10)--(13).
+For the deep barrier used in `104_67`, the relevant scale is
+\(n^{1/4}\), as shown by (10)–(13).
 
 ---
 
-## 4. La forma aritmética que realmente habría que acotar
+## 4. The arithmetic form that would actually need to be bounded
 
-Use exactamente la regularización de `104_61` y `104_67`:
+Use exactly the regularization of `104_61` and `104_67`:
 
 \[
 \begin{aligned}
@@ -229,7 +226,7 @@ Use exactamente la regularización de `104_61` y `104_67`:
 \end{aligned}
 \]
 
-Para un intervalo finito \(I\), continuidad de la parte positiva da
+For a finite interval \(I\), continuity of the positive part gives
 
 \[
 \boxed{
@@ -243,52 +240,51 @@ Para un intervalo finito \(I\), continuidad de la parte positiva da
  \right)_+.}                                             \tag{18}
 \]
 
-La barrera en todo el bloque equivale a que (18) sea cero. La expresión
-conserva el polo, el bloque arquimediano, los primos, las potencias primas
-y la fase Laguerre hasta después de tomar la parte positiva. Probar que el
-miembro derecho se anula para bloques de longitud no acotada cerraría RH
-por `104_67`.
+The barrier over the whole block is equivalent to (18) being zero. The
+expression preserves the pole, the archimedean block, the primes, the
+prime powers, and the Laguerre phase right up until the positive part is
+taken. Proving that the right-hand side vanishes on blocks of unbounded
+length would close RH via `104_67`.
 
-Un promedio lineal no sustituye (18). La razón no es una desigualdad
-perdida, sino el siguiente falsificador exacto.
+A linear average does not substitute for (18). The reason is not a lost
+inequality, but the following exact falsifier.
 
 ---
 
-## 5. Falsificador racional del promedio de bloque
+## 5. Rational falsifier of the block average
 
-Considere (2). Se tiene
+Consider (2). One has
 
 \[
  \Re\rho={25\over41}>{1\over2},
  \qquad |w|^2={16\over25}<1.                              \tag{19}
 \]
 
-La contribución de su cuarteto a Li es
+Its quartet's contribution to Li is
 
 \[
  q_n=4-2\Re(w^n+w^{-n}).                                  \tag{20}
 \]
 
-Escribiendo \(r=5/4\),
+Writing \(r=5/4\),
 
 \[
  q_n=
  \begin{cases}
  4-2(r^n+r^{-n}),&n\equiv0\pmod4,\\
  4+2(r^n+r^{-n}),&n\equiv2\pmod4,\\
- 4,&n\text{ impar}.
+ 4,&n\text{ odd}.
  \end{cases}                                             \tag{21}
 \]
 
-En particular, cada cuatro enteros consecutivos contienen un índice en el
-que
+In particular, every four consecutive integers contain an index at which
 
 \[
  q_n>2(5/4)^n.                                            \tag{22}
 \]
 
-No hay bloques punto a punto para la barrera superior. Sin embargo, para
-\(K\geq0\), \(M\geq1\), la suma lineal exacta es
+There are no pointwise blocks for the upper barrier. However, for
+\(K\geq0\), \(M\geq1\), the exact linear sum is
 
 \[
 \begin{aligned}
@@ -301,26 +297,27 @@ No hay bloques punto a punto para la barrera superior. Sin embargo, para
 \end{aligned}
 \]
 
-Para cada \(M\), (23) tiende a \(-\infty\) cuando \(K\to\infty\).
-Por consiguiente hay intervalos tan largos y tan alejados como se quiera
-en los que el **promedio** de \(q_n\) es negativo, aunque (22) viola la
-barrera en cada subintervalo de longitud cuatro.
+For each \(M\), (23) tends to \(-\infty\) as \(K\to\infty\).
+Consequently there are intervals as long and as far away as desired on
+which the **average** of \(q_n\) is negative, even though (22) violates
+the barrier in every subinterval of length four.
 
-Así, una cota para
+Thus, a bound on
 
 \[
  {1\over|I|}\sum_{n\in I}D_n(Y)                           \tag{24}
 \]
 
-no implica la cota mínima (15). Debe controlarse la parte negativa grado a
-grado, equivalentemente el máximo o la parte positiva de (18).
+does not imply the minimal bound (15). The negative part must be
+controlled degree by degree, equivalently the maximum or the positive
+part of (18).
 
 ---
 
-## 6. Por qué la cota en \(a=4\) no repara el promedio
+## 6. Why the bound at \(a=4\) does not repair the average
 
-Cuando la expansión converge, (4a) de `104_41` puede escribirse como el
-promedio binomial negativo
+When the expansion converges, (4a) of `104_41` can be written as the
+negative binomial average
 
 \[
  T_aB(n):=\sum_{k\geq n}\pi_{n,k}^{(a)}B_k,
@@ -329,13 +326,13 @@ promedio binomial negativo
  \left(1-{1\over a}\right)^{k-n},                        \tag{25}
 \]
 
-con \(\sum_{k\geq n}\pi_{n,k}^{(a)}=1\), y
+with \(\sum_{k\geq n}\pi_{n,k}^{(a)}=1\), and
 
 \[
  \mathcal B_{n,a}=T_aB(n).                               \tag{26}
 \]
 
-Para un modo geométrico \(v^k\),
+For a geometric mode \(v^k\),
 
 \[
  \boxed{
@@ -344,22 +341,22 @@ Para un modo geométrico \(v^k\),
  \tau_a(v)={v\over a-(a-1)v},}                           \tag{27}
 \]
 
-si \(|(1-1/a)v|<1\).
+if \(|(1-1/a)v|<1\).
 
-En el cuarteto (2), el defecto de \(B=A-\lambda\) es
+In quartet (2), the defect of \(B=A-\lambda\) is
 
 \[
- b_n=-q_n=-4+2\Re(w^n+w^{-n}).                           \tag{28}
+ b_n=-q_n=-4+2\Re(w^n+w^{-n}).                            \tag{28}
 \]
 
-Para \(a=4\), incluso el modo dominante está dentro del dominio de
-convergencia, pues
+For \(a=4\), even the dominant mode lies within the domain of
+convergence, since
 
 \[
  {3\over4}|w^{-1}|={15\over16}<1.                         \tag{29}
 \]
 
-No obstante,
+Nevertheless,
 
 \[
 \begin{aligned}
@@ -370,13 +367,13 @@ No obstante,
 \end{aligned}
 \]
 
-Por (27)--(28),
+By (27)–(28),
 
 \[
  T_4b(n)=-4+2\Re\{\tau_4(w)^n+\tau_4(w^{-1})^n\}.       \tag{31}
 \]
 
-Los dos modos de (31) son contractivos. En particular,
+Both modes of (31) are contractive. In particular,
 
 \[
 \begin{aligned}
@@ -387,67 +384,68 @@ Los dos modos de (31) son contractivos. En particular,
 \end{aligned}                                             \tag{31a}
 \]
 
-es decir,
+that is,
 
 \[
  \boxed{|T_4b(n)|\leq3n\qquad(n\geq2),}                 \tag{32}
 \]
 
-mientras (22) conserva excursiones positivas de tamaño \((5/4)^n\) con
-huecos cuatro. El transporte hasta \(a=4\) ha amortiguado precisamente el
-modo que la barrera debía detectar. Invertirlo es inestable y vuelve a
-cruzar el polo interior de `104_41`.
+while (22) keeps positive excursions of size \((5/4)^n\) with gaps of
+four. Transporting down to \(a=4\) has precisely damped the mode that the
+barrier was supposed to detect. Inverting it is unstable and crosses the
+interior pole of `104_41` again.
 
-El cuarteto (2) no tiene los pesos de Euler de los primos ordinarios. Por
-ello (19)--(32) no refutan (18) para la \(zeta\) real. Sí refutan la
-inferencia
+Quartet (2) does not have the Euler weights of the ordinary primes.
+Hence (19)–(32) do not refute (18) for the real zeta. They do refute the
+inference
 
 \[
  |\mathcal B_{n,4}|\leq3n
- \quad+\quad\text{promedio lineal en }n
- \quad\Longrightarrow\quad\text{barrera de bloque}.      \tag{33}
+ \quad+\quad\text{linear average in }n
+ \quad\Longrightarrow\quad\text{block barrier}.      \tag{33}
 \]
 
-Una prueba para los \(\Lambda(m)\) reales debe usar información aritmética
-que no está contenida en (1), (25) ni en el promedio (24).
+A proof for the real \(\Lambda(m)\) must use arithmetic information not
+contained in (1), (25), or the average (24).
 
 ---
 
-## 7. Veredicto
+## 7. Verdict
 
-**Probado.** La identidad de residuo bajo (8), la cota uniforme (11), el
-criterio equivalente de bloques (15), la escala \(n^{1/4}\), la forma
-prima--Laguerre mínima (18), el promedio engañoso (23) y la contracción
-exacta bajo \(T_4\) (30)--(32).
+**Proved.** The low-residue identity (8), the uniform bound (11), the
+equivalent block criterion (15), the \(n^{1/4}\) scale, the minimal
+prime–Laguerre form (18), the misleading average (23), and the exact
+contraction under \(T_4\) (30)–(32).
 
-**Ganancia.** Al volver de la energía de Cramér al andamiaje Li--Laguerre,
-la barrera superior queda localizada en una suma finita de residuos de
-altura \(O(n^{1/4})\), mientras todo el bloque alto posee margen
+**Gain.** Returning from the Cramér energy to the Li–Laguerre scaffolding,
+the upper barrier is localized to a finite sum of residues of height
+\(O(n^{1/4})\), while the entire high block has margin
 \(e^{-(1-1/\sqrt2)\sqrt n+O(\log n)}\).
 
-**Gate exacto.** `104_67` requiere una desigualdad para cada grado del
-bloque. Un promedio lineal puede tener el signo correcto en bloques
-arbitrariamente largos y simultáneamente fallar cada cuatro grados. La
-cota de fase en \(a=4\) también puede coexistir con ese fallo porque la
-transformación (27) vuelve contractivo el modo exterior.
+**Exact gate.** `104_67` requires an inequality for every degree of the
+block. A linear average can have the correct sign over arbitrarily long
+blocks while simultaneously failing every four degrees. The phase bound
+at \(a=4\) can also coexist with that failure because transform (27)
+makes the exterior mode contractive.
 
-**Sobrevive.** Probar que (18) se anula en bloques de longitud no acotada,
-o directamente (15), usando una identidad no lineal y específica de los
-pesos ordinarios \(\Lambda(m)\).
+**Remains.** Proving that (18) vanishes on blocks of unbounded length, or
+directly (15), using a nonlinear identity specific to the ordinary
+weights \(\Lambda(m)\).
 
-**No probado.** (15) para la zeta ordinaria sin asumir RH, la anulación de
-(18), A1 o RH.
+**Not proved.** (15) for the ordinary zeta without assuming RH,
+vanishing of (18), A1, or RH.
 
 ---
 
-## 8. Reproducción
+## 8. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 low_residue_block_transport_gate_check.py
 ```
 
-El checker usa únicamente `Fraction`. Verifica (2), (19), (21)--(23), los
-dos factores contractivos de (30), (31)--(32), la excursión positiva en
-cada clase \(2\pmod4\) y la existencia de promedios negativos sobre bloques
-de longitudes crecientes.
+The checker uses only `Fraction`. It verifies (2), (19), (21)–(23), the
+two contractive factors of (30), (31)–(32), the positive excursion in
+every class \(2\pmod4\), and the existence of negative averages over
+blocks of increasing lengths.
+</content>

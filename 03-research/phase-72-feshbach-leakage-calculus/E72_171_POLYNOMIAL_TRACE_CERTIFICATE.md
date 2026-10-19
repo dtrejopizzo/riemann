@@ -1,7 +1,6 @@
 # E72.171 -- Fixed polynomial trace certificate
 
-**Date:** 2026-07-09.
-**Role:** replace the sign-energy gate by fixed trace polynomial majorants.
+**Purpose:** replace the sign-energy gate by fixed trace polynomial majorants.
 
 ## 0. Idea
 

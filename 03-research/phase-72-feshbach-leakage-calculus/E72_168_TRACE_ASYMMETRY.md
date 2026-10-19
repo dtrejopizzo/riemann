@@ -1,7 +1,6 @@
 # E72.168 -- Trace asymmetry form of BSE
 
-**Date:** 2026-07-09.
-**Role:** rewrite the block sign-energy gate as trace asymmetry plus size estimates.
+**Purpose:** rewrite the block sign-energy gate as trace asymmetry plus size estimates.
 
 ## 0. Scalar identity
 

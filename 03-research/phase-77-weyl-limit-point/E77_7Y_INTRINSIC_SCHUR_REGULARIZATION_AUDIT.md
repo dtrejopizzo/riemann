@@ -1,6 +1,6 @@
 # E77.7y - Intrinsic Schur regularization audit
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

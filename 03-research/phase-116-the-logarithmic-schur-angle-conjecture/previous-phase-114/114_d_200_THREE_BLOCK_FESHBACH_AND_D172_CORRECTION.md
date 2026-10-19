@@ -81,7 +81,7 @@ Define
 Then
 
 \[
- A_{QS}A_{SS}^{-1}A_{SQ}\le\kappa I_Q,qquad
+ A_{QS}A_{SS}^{-1}A_{SQ}\le\kappa I_Q,\qquad
  Q_S\ge(\delta-\kappa)I_Q.                            \tag{1.6}
 \]
 
@@ -101,7 +101,7 @@ bounded-form Schur argument on the indicated finite ranges.
 Let `V=D direct-sum S` and
 
 \[
- B=V^*AV,qquad R=(QAV)^*(QAV).                        \tag{2.1}
+ B=V^*AV,\qquad R=(QAV)^*(QAV).                        \tag{2.1}
 \]
 
 From `QAQ>=delta Q`, completion of the square gives

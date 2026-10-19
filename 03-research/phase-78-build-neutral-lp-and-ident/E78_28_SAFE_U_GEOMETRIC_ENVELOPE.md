@@ -1,6 +1,6 @@
 # E78.28 - Geometric-envelope form of the `safe_u` sign front
 
-**Run:** 2026-07-18.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

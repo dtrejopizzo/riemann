@@ -1,6 +1,6 @@
 # P123.100 — Derived finite-unit transitions with every deck graph retained
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for finite unit
+Status: PROVED-IN-REPOSITORY for finite unit
 refinements of the smooth boundary mapping tori. The completion over
 all levels and the arithmetic normal determinant remain separate.
 

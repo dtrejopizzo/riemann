@@ -1,6 +1,6 @@
 # E77.7i - Safe limit-point endpoint audit
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Reason for the audit
 

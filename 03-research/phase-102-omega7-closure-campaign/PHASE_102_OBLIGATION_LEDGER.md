@@ -78,7 +78,7 @@ The surviving nonlocal mechanisms have now been normalized:
 - `115_WEIL_HERGLOTZ_REDUCTION.md` reduces the Weil/Herglotz route to the
   construction of a positive Euler--Gamma boundary measure.
 - `116_POSITIVE_BOUNDARY_MEASURE_TARGET.md` states the cleanest current
-  force-RH target: construct that positive boundary measure from Euler--Gamma
+  RH-strength target: construct that positive boundary measure from Euler--Gamma
   data.
 - `117_EULER_PRODUCT_POSITIVE_WEIGHT_AUDIT.md` eliminates direct positivity
   of Euler-product weights as a closure route.

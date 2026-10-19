@@ -1,6 +1,5 @@
 # E73.162 - Coefficient defect identity
 
-Date: 2026-07-12.
 
 ## 1. Why this note is needed
 

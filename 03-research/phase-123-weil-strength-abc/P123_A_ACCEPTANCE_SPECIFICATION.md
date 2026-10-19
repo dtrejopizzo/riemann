@@ -91,15 +91,14 @@ nonzero and carries a nondegenerate induced pairing.  No splitting of this
 sequence is required.  The topology and continuity of all operations are
 explicit.
 
-> **Amendment record (2026-09-12).**  The previous wording "contains the
+> **Amendment record.** The previous wording "contains the
 > ruling plane and a nonzero completed mixed sector" was replaced by the
 > exact-sequence formulation above.  Reason: Paper 43, Theorem 9.13(a),
 > proves that on the row-A carrier no `D_A`-module subobject isomorphic to
 > the Tate boundary exists (a `D_A`-eigenvector with eigenvalue
 > `a-hat(-/+ i/2)` off the unitary axis cannot exist), while Theorem 9.12
 > proves that `B_T` is canonically the quotient by the primitive sector.
-> The new text is P123.017 section 4's own formulation.  Decision by the
-> repository owner (D. Trejo Pizzo), recorded in
+> The new text is P123.017 section 4's own formulation.  Decision recorded in
 > `03-research/phase-129-row-a-rebuild/README.md`.
 
 ### A.7 Effectivity
@@ -115,9 +114,9 @@ admissible mixed sector.  Principal invariance, additivity/biextension,
 restriction, convergence and an equality formula in `T_A` are proved.
 This clause supplies no Hodge-index sign.
 
-> **Amendment record (2026-09-12).  [phase 133, amendment accepted
-> 2026-09-12]**  The clause text above is kept unchanged.  The amended
-> wording, proposed by the phase-133 review panel and adopted by the lead in
+> **Amendment record. [phase 133, amendment accepted
+> ]** The clause text above is kept unchanged. The amended
+> wording, proposed by the phase-133 review panel and adopted in
 > `03-research/phase-133-abc-review-panel/PANEL_SYNTHESIS.md` section 4.2, is:
 > "`lambda_RR` is a based Hermitian biextension into `Pic_b(B_T)` whose Tate
 > component is the ruling determinant (Def 10.6c), consistent with the test
@@ -125,10 +124,9 @@ This clause supplies no Hodge-index sign.
 > rulings (Thm 10.8), so the extension of the *scalar* determinant demanded by
 > the original clause does not exist."  Reason: Paper 43 Theorem 10.8 proves
 > that no scalar determinant extends to the rulings, while Theorem 10.7 proves
-> the vector-valued biextension with target `Pic_b(B_T)`; the round-1 hostile
-> audit `R130.002` dissented from the lead's ruling and the review panel
-> (PANEL_3 section 3) sides with the dissent.  **Decision by the repository
-> owner (D. Trejo Pizzo), 2026-09-12: the amendment is ACCEPTED.**  Grading:
+> the vector-valued biextension with target `Pic_b(B_T)`; the round-1
+> audit `R130.002` dissented from `R130.005`'s ruling and the review panel
+> (PANEL_3 section 3) sides with the dissent.  **The amendment is ACCEPTED.** Grading:
 > `REFUTED AS STATED (scalar extension) + PROVED AS AMENDED`.
 
 ### A.9 Classical control
@@ -147,7 +145,7 @@ belong to B and C.
 
 ## 3. Audited comparison with the present constructions
 
-Updated 2026-09-05 against P123.018–027. The former table reporting
+against P123.018–027. The former table reporting
 A.1–A.6 as PROVED and A.9 as PASS is superseded. Clauses above are the
 unchanged acceptance requirements; local repairs do not satisfy their
 full scope automatically.
@@ -159,9 +157,9 @@ full scope automatically.
 | A.3 | P123.019: continuous local balanced tensor with unit; P123.020: gauge coherence | PARTIAL: extend composition to the common mixed carrier with the required base change |
 | A.4 | P123.019: local dagger and inverse twisted bimodules | PARTIAL: extend to the same mixed category and completion |
 | A.5 | P123.023: compatible integrated coefficient actions; P123.025–026: integral unit-contact and gluing triangles | OPEN: one cyclic diagonal shadow and its analytic/determinant comparison; these are currently different targets |
-| A.6 | Paper 43 (phase 129): Theorem 9.8 `N = 0` (import-free), Theorems 9.11-9.14: exact sequence `0 -> N_A^prim -> N_A -> B_T -> 0`, hyperbolic `B_T`, dagger exchange, nondegenerate primitive pairing, separated completion | PROVED under the amended wording (amendment of 2026-09-12, above) |
+| A.6 | Paper 43 (phase 129): Theorem 9.8 `N = 0` (import-free), Theorems 9.11-9.14: exact sequence `0 -> N_A^prim -> N_A -> B_T -> 0`, hyperbolic `B_T`, dagger exchange, nondegenerate primitive pairing, separated completion | PROVED under the amended wording (amendment, above) |
 | A.7 | P123.021: source squares and effective graph cycles differ already on two points | OPEN: construct geometric effectivity and prove the required descent/RR compatibility |
-| A.8 | Paper 43 (phase 130): Theorem 10.7 (vector-valued Riemann-Roch biextension with target `Pic_b(B_T)`), Theorem 10.8 (the scalar determinant is trivial on the rulings), Theorems 9.14a, 9.14c' (consistency with the test sector) | `REFUTED AS STATED (scalar extension) + PROVED AS AMENDED` (amendment of 2026-09-12, above; accepted by the owner D. Trejo Pizzo) **[phase 133, amendment accepted 2026-09-12]** |
+| A.8 | Paper 43 (phase 130): Theorem 10.7 (vector-valued Riemann-Roch biextension with target `Pic_b(B_T)`), Theorem 10.8 (the scalar determinant is trivial on the rulings), Theorems 9.14a, 9.14c' (consistency with the test sector) | `REFUTED AS STATED (scalar extension) + PROVED AS AMENDED` (amendment, above) **[phase 133, amendment accepted]** |
 | A.9 | P123.021: literal cone comparison and integral Frobenius-inverse analogy fail | NOT PASSED: supply a correctly typed classical comparison; the counterexamples do not rule out every comparison |
 | A.10 | The repaired local algebra and normalization are independent of RH/sign data | PARTIAL: audit independence for the eventual full A.1–A.9 construction |
 
@@ -179,7 +177,7 @@ ROW A: CONSTRUCTED UNDER def:strongrowa;
        WEIL-STRENGTH EXTENSION OPEN.
 ```
 
-## 5. Phase-125 campaign (2026-09-12)
+## 5. Phase-125 campaign
 
 See [A125.015](../phase-125-row-a-completion/A125_015_WEIL_STRENGTH_LABEL.md).
 On the graph sector `G` with its Fell completion, the full cyclic shadow and
@@ -190,13 +188,13 @@ as its only inputs beyond the repository.  The audit of section 3 above is
 superseded on that category.  Clause texts of section 2 and the closure rule
 of section 4 are unchanged.
 
-## 6. Phase-130 campaign (2026-09-12)
+## 6. Phase-130 campaign
 
 The phase-125 grant of section 5 was withdrawn by the phase-128 audit.  After
 the phase-129 rebuild and the phase-130 closure of
-[Paper 43](../../04-papers/43-row-a-torsion-theory/main.md) (builder/auditor
+[Paper 43](../../04-papers/43-row-a-torsion-theory/main.md) (construction/audit
 loop, `R130.000`–`R130.005`), the adversarial audit of record
-([R130.005](../phase-130-row-a-closure/R130_005_LEAD_FINAL_AUDIT_AND_LABEL.md))
+([R130.005](../phase-130-row-a-closure/R130_005_FINAL_AUDIT_AND_LABEL.md))
 finds A.1–A.10 proved on the declared carrier — a fixed finite chart `S`
 with the chart system and its colimit as additional structure, invertible
 sector — with A.6 under the amendment of section 2 and A.8 with the
@@ -205,7 +203,7 @@ none of A.2–A.8 a renaming of the scalar explicit formula.  Label granted:
 
 ```text
 ROW A: WEIL-STRENGTH-COMPLETE (declared carrier; A.6 amended; A.8 with
-       target Pic_b(B_T)).  Dissent of the round-1 hostile audit on A.8
+       target Pic_b(B_T)).  Dissent of the round-1 audit on A.8
        recorded in Paper 43 section 10.3.3.
 ```
 
@@ -216,30 +214,28 @@ effective descent along a stack covering.  Theorem 10.8b of Paper 43
 (Mertens) is `CLASSICAL` and counts toward no clause.  The table of section 3
 is superseded by Paper 43 section 14.
 
-## 7. Phase-133 amendment (2026-09-12)
+## 7. Phase-133 amendment
 
-**[phase 133, amendment accepted 2026-09-12]**  The phase-133 review panel
+**[phase 133, amendment accepted ]** The phase-133 review panel
 (`03-research/phase-133-abc-review-panel/`, PANEL_3 section 3 and
-PANEL_SYNTHESIS section 4.2) found that the A.8 dissent of the round-1 hostile
-audit `R130.002` had been resolved by a lead ruling where A.6 had gone to the
-owner as an amendment, and that the two are the same logical situation.  The
-lead therefore referred A.8 to the repository owner with the amended wording
-reproduced in the amendment record of section 2 above.
+PANEL_SYNTHESIS section 4.2) found that the A.8 dissent of the round-1
+audit `R130.002` had been resolved by `R130.005`'s ruling where A.6 had gone
+through an amendment, and that the two are the same logical situation.  A.8
+was therefore referred, with the amended wording reproduced in the amendment
+record of section 2 above.
 
-**The repository owner (D. Trejo Pizzo) accepted the amendment on
-2026-09-12.**  Consequently:
+**The amendment was accepted.** Consequently:
 
 * clause A.8 is graded `REFUTED AS STATED (scalar extension) + PROVED AS
   AMENDED`; the original clause text is kept in section 2 as the text that was
   amended;
-* the lead's ruling of `R130.005` (A.8 `PROVED WITH TARGET Pic_b(B_T)`, with
-  the dissent recorded) is superseded by the owner's decision, and an addendum
+* the ruling of `R130.005` (A.8 `PROVED WITH TARGET Pic_b(B_T)`, with
+  the dissent recorded) is superseded by this decision, and an addendum
   to that effect is appended to `R130.005`;
 * the row-A label stands **unconditionally**:
 
 ```text
-ROW A: WEIL-STRENGTH-COMPLETE (declared carrier; A.6 amended; A.8 amended
-       (owner, 2026-09-12)).
+ROW A: WEIL-STRENGTH-COMPLETE (declared carrier; A.6 amended; A.8 amended).
 ```
 
 No theorem, no proof and no other clause grading is changed by this record.

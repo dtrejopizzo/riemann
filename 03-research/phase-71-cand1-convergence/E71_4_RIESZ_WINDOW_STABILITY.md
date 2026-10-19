@@ -1,8 +1,7 @@
 # E71.4 -- Riesz-window stability for the CAND-1 convergence front
 
-**Date:** 2026-07-07.
 **Script:** `E71_4_riesz_window_stability.py`.
-**Role:** replace nearest-root matching by the finite-dimensional Riesz projection criterion.
+**Purpose:** replace nearest-root matching by the finite-dimensional Riesz projection criterion.
 
 ## Why E71.4 is needed
 

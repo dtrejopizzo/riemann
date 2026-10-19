@@ -1,6 +1,6 @@
 # E78.20 - Balanced denominator as the exact side condition for LOGT-CANCEL
 
-**Run:** 2026-07-18.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

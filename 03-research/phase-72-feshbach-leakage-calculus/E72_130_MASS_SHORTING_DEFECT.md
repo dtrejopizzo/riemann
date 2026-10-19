@@ -1,7 +1,6 @@
 # E72.130 -- Mass shorting defect
 
-**Date:** 2026-07-09.
-**Role:** decide where the remaining mass leakage is created.
+**Purpose:** decide where the remaining mass leakage is created.
 
 ## 0. Three masses
 

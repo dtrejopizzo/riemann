@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 # ======================================================================================
-# Phase 60 — CCM REAL.  Implementacion honesta del spectral triple H_x (CAND-1).
+# Phase 60 — actual CCM.  Faithful implementation of the spectral triple H_x (CAND-1).
 #
-# Todas las versiones connes_hx_*.py de nemotron CALCULAN la von Mangoldt y la DESCARTAN
-# (QW = Q_arch*0.5), dando la escalera pelada de D_log, NO los ceros. Aqui implementamos
-# la forma documentada (CCM arXiv:2511.22755, Prop 1) que nunca se ejecuto:
+# All earlier versions connes_hx_*.py COMPUTE the von Mangoldt function and then DISCARD it
+# (QW = Q_arch*0.5), giving the bare staircase of D_log, NOT the zeros. Here we implement
+# the documented form (CCM arXiv:2511.22755, Prop 1), which had never been run:
 #
 #   L = 2 log λ ;  base V_n, n=-N..N
 #   b_n = (1/L) Σ_{k>=2} Λ(k)/√k · sin(2π k n / L)         [cutoff k <= K]
 #   QW_{n,n} = log(λ)/2 ;  QW_{n,m} = (b_n - b_m)/(n-m)    (Cauchy-Toeplitz)
-#   minimizador RESTRINGIDO  ξ = QW^{-1} δ / (δ^T QW^{-1} δ)   (Lagrange; el stub usaba
-#       el min-eigvector, que es INCORRECTO bajo la restriccion δ_N(ξ)=1)
+#   CONSTRAINED minimiser  ξ = QW^{-1} δ / (δ^T QW^{-1} δ)   (Lagrange; the stub used
+#       the min-eigenvector, which is INCORRECT under the constraint δ_N(ξ)=1)
 #   H_x = D_log - |D_log ξ⟩⟨δ_N|   ;  D_log = diag(2π n / L)
 #
-# GATE (falsable, duro): ¿el espectro de H_x se aproxima a los ceros γ_ρ = 14.13, 21.02,...?
-# Si NO para ningun (λ,N,K) razonable -> la forma documentada NO es suficiente / mal leida,
-# y hay que traer el paper. Lo reportamos honestamente; no fabricamos coincidencia.
+# GATE (falsifiable, hard): does the spectrum of H_x approximate the zeros γ_ρ = 14.13, 21.02,...?
+# If NOT for any reasonable (λ,N,K) -> the documented form is NOT sufficient / misread,
+# and the paper must be consulted. Reported as found; no coincidence is manufactured.
 # ======================================================================================
 import numpy as np
 
@@ -60,9 +60,9 @@ def Hx_spectrum(lam,N,K):
     return ev
 
 print("="*78)
-print(" E3: CCM H_x REAL (forma documentada Cauchy-Toeplitz) vs ceros de zeta")
+print(" E3: actual CCM H_x (documented Cauchy-Toeplitz form) vs zeta zeros")
 print("="*78)
-print(f" ceros objetivo: {ZEROS[:6]}\n")
+print(f" target zeros: {ZEROS[:6]}\n")
 
 best=None
 for lam in [2.0,3.0,5.0,7.0,11.0,20.0,50.0]:
@@ -70,27 +70,27 @@ for lam in [2.0,3.0,5.0,7.0,11.0,20.0,50.0]:
         for K in [int(lam**2), max(50,int(lam**2)), 500, 2000]:
             ev=Hx_spectrum(lam,N,K)
             if ev is None: continue
-            # buscar autovalores reales positivos cercanos a ceros
+            # look for positive real eigenvalues near the zeros
             re=np.sort(ev.real[np.abs(ev.imag)<1e-6])
             pos=re[(re>5)&(re<50)]
             if len(pos)==0: continue
-            # distancia del primer "candidato" al primer cero
+            # distance from the first "candidate" to the first zero
             d1=np.min(np.abs(pos-ZEROS[0])) if len(pos) else 1e9
             if best is None or d1<best[0]:
                 best=(d1,lam,N,K,pos[:6].copy())
 
-print(" Mejor aproximacion encontrada al primer cero (14.1347):")
+print(" Best approximation found to the first zero (14.1347):")
 if best:
     d1,lam,N,K,pos=best
     print(f"   lam={lam}, N={N}, K={K}")
-    print(f"   autovalores reales de H_x en (5,50): {np.round(pos,3)}")
+    print(f"   real eigenvalues of H_x in (5,50): {np.round(pos,3)}")
     print(f"   |primer candidato - 14.1347| = {d1:.4f}")
 else:
-    print("   NINGUN autovalor real de H_x cayo en (5,50). La construccion documentada")
-    print("   NO reproduce los ceros tal como esta. Hace falta el paper (prolate/scaling).")
+    print("   NO real eigenvalue of H_x fell in (5,50). The documented construction")
+    print("   does NOT reproduce the zeros as it stands. The paper is needed (prolate/scaling).")
 
 print("\n" + "="*78)
-print(" Diagnostico adicional: estructura del espectro para lam=5,N=40,K=25")
+print(" Additional diagnostic: spectrum structure for lam=5,N=40,K=25")
 print("="*78)
 ev=Hx_spectrum(5.0,40,25)
 re=np.sort(ev.real)

@@ -1,6 +1,6 @@
 # E78.139 - Von Mangoldt pointwise quasimode: autopsy
 
-**Run:** probe executed 2026-07-18/19, results read and verified 2026-07-20.
+**Run:** probe executed, results read and verified .
 **Question:** does the naive pointwise von Mangoldt vector `u_N(n) =
 Lambda(|n|)` (zero-padded at non-prime-powers) on the mesh `d_n = 2 pi n / L`
 serve as an approximate zero-energy eigenvector of the inner-block operator
@@ -64,7 +64,7 @@ against `N = 6, 8, 10, 12, 14, 16`, `L in {4, 6, 8}`, both the zeta build and
 the `PLANTED = ("14.134725141734693790", "0.30", "5.0")` falsifier build, at
 `dps=70`, `lambda=6`. Source: `E78_138_quasimode_probe.py` (script) and
 `E78_138_quasimode_results.json` (data, both already on disk from a prior
-session, cross-checked before writing this document).
+record, cross-checked before writing this document).
 
 **Result -- zeta build, L=4** (`eps_N`, `N=6..16`):
 ```text
@@ -118,7 +118,7 @@ mathematically correct, not an artifact:
   though `u_N` itself gained no new mass there. So `eps_N` correctly still
   changes between `N=14` and `N=16`, and it does (`2.6350 -> 2.7195` at
   zeta `L=4`). This is recorded here explicitly so it is not mistaken for a
-  bug in a future session.
+  bug in a future review.
 
 ## 3. Diagnosis: why this specific ansatz fails
 
@@ -169,7 +169,7 @@ This diagnosis is offered as a REASONED CANDIDATE explanation, checked
 against the operator's own on-record formula, not as a proven cause of the
 failure. No independent numerical test isolating this specific mismatch
 (e.g. comparing against a kernel-sampled trial vector) was run in this
-session; that is exactly the next open step (section 4 below).
+record; that is exactly the next open step (section 4 below).
 
 ## 4. Falsifier note
 

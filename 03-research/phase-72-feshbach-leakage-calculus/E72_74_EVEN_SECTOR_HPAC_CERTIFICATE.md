@@ -1,7 +1,6 @@
 # E72.74 -- Even-sector HPAC certificate
 
-**Date:** 2026-07-08.
-**Role:** collapse the full two-resolvent HPAC certificate to a single even-sector scalar identity.
+**Purpose:** collapse the full two-resolvent HPAC certificate to a single even-sector scalar identity.
 
 ## 0. Even vectors
 

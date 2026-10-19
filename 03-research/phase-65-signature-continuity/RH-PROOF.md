@@ -8,7 +8,7 @@
 > `M_Ξ` vs two-variable Pick kernel `K_Ξ`; source core `a>1/4`; constructive Mellin-bump residue. See
 > [`CORRECTIONS-CONNES-R3.md`](CORRECTIONS-CONNES-R3.md). The single load-bearing input is **H1 ⇐ G2**.
 
-> **[STATUS NOTE — phase 137, rounds 1–3, item D.0 (hostile audit). Placed after the R3 banner because
+> **[STATUS NOTE — phase 137, rounds 1–3, item D.0 (audit). Placed after the R3 banner because
 > it audits BOTH versions of the chain.]**
 >
 > **This document is NOT a proof of the Riemann Hypothesis.** Its self-description as "a complete,
@@ -46,15 +46,15 @@
 > transferring with a factor `[K:Q]` — but **no member with proven off-line zeros is known** (GRH for
 > `ζ_K` is open). So the falsifier test cannot adjudicate this chain; and if the chain were sound it would
 > prove GRH for every number field. The verdict rests on the fork, which is internal. [Corrected per
-> `R137_006` finding N9, 2026-09-13.]
+> `R137_006` finding N9.]
 >
-> Full verdict with quoted lines: `03-research/phase-137-row-d-canonical-coupling/R137_001_BUILDER_ROUND1.md`
-> §1, as repaired by `R137_003_BUILDER_ROUND2.md` §1 and **decided** by `R137_005_BUILDER_ROUND3.md` §1;
+> Full verdict with quoted lines: `03-research/phase-137-row-d-canonical-coupling/R137_001_ROUND1.md`
+> §1, as repaired by `R137_003_ROUND2.md` §1 and **decided** by `R137_005_ROUND3.md` §1;
 > ledger entry in `NO-GO-LIST.md`, heading "[phase 137] audit of phase-65 RH-PROOF.md".
 >
 > **Label: `REFUTED` as a proof of RH; `PARTIAL-SUCCESS` as a localization of the wall.**
 
-**Phase 65 / Signature-Continuity Package.** Pure mathematics. This is the capstone: the full chain from
+**Phase 65 / Signature-Continuity Package.** This is the capstone: the full chain from
 the proved inputs (G1–G5, Phases 60–64) to RH, assembled from the package documents, with Check 4 now a
 theorem (D8.5d) and Connes' audit fixes A–E applied. Every load-bearing step lives in the
 absolute-convergence region `Re s > 1` (no zeros) or is automatic from self-adjointness — the structural
@@ -63,7 +63,7 @@ fix D) here, then close, then give the candid flagged-items ledger.
 
 > **Status.** The spine is complete and RH-free. What remains are standard analytic estimates in
 > `Re s > 1` (the flagged ledger, §6), none of which can encode zero locations. We present this for audit
-> by Connes and the user — not as a peer-reviewed certainty, but as a fully-written chain whose only
+> by Connes — not as a peer-reviewed certainty, but as a fully-written chain whose only
 > residuals are named, local, and zero-free.
 
 ---
@@ -164,7 +164,7 @@ absolute convergence. This is the structural guarantee that the proof is not cir
 \textbf{End-state.} The chain `G1–G5 ⟹ §2 ⟹ §3 (Check 4 theorem) ⟹ §4 ⟹ §5 (Vitali) ⟹ RH` is fully
 written. The only residuals (L1–L3) are standard analytic facts in `Re s > 1`, named and zero-free. We do
 not assert this is a verified proof; we assert it is a **complete, RH-free chain modulo three standard
-local estimates**, handed to Connes and the user for audit. If L1–L3 hold as expected, RH follows.
+local estimates**, handed to Connes for audit. If L1–L3 hold as expected, RH follows.
 \end{resultbox}
 
 ---

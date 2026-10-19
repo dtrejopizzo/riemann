@@ -1,7 +1,6 @@
 # E71.17 -- Stable Divisor Identification reduced to a ground-state estimate
 
-**Date:** 2026-07-07.
-**Role:** convert the source audit from E71.16 into a precise theorem with proof, and isolate the
+**Purpose:** convert the source audit from E71.16 into a precise theorem with proof, and isolate the
 single analytic estimate that remains unproved.
 
 ## Source status

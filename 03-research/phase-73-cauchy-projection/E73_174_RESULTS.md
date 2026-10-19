@@ -1,6 +1,5 @@
 # E73.174 results - QG quadrature form
 
-Date: 2026-07-14.
 
 Script:
 

@@ -1,7 +1,6 @@
 # E72.72 -- Weyl-null split of the two-resolvent certificate
 
-**Date:** 2026-07-08.
-**Role:** separate the HPAC residual at finite roots into an actual-divisor core and a model/actual
+**Purpose:** separate the HPAC residual at finite roots into an actual-divisor core and a model/actual
 ground-state displacement term.
 
 ## 0. Starting point

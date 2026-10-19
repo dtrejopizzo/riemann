@@ -74,7 +74,9 @@ Your Sonin spectrum at finite `λ` gives eigenvalues `−ξ_n(λ)` that **scale 
 ```
 λ → ∞, ξ/λ² → fixed
 ```
-**Literature:** CCM 2024 (arXiv:2310.18423) shows the negative spectrum of `W_sa` has counting function matching `N(E)` with density `~0.9`. The individual correspondence requires **inverse spectral theory** for the indefinite canonical system — which is exactly the `κ=0` problem. **Don't spend time here.** It's not a separate problem; it's the wall in different language. --- ## 6. Immediate Next Steps for Your Session with ### Week 1–2: Close O1–O4 (Write the 3-line proofs)
+**Literature:** CCM 2024 (arXiv:2310.18423) shows the negative spectrum of `W_sa` has counting function matching `N(E)` with density `~0.9`. The individual correspondence requires **inverse spectral theory** for the indefinite canonical system — which is exactly the `κ=0` problem. **Don't spend time here.** It's not a separate problem; it's the wall in different language. --- ## 6. Immediate Next Steps
+
+### Week 1–2: Close O1–O4 (Write the 3-line proofs)
 - O1: Tate local factor check (1 page)
 - O2: Incomplete gamma uniform bound (1 page)
 - O3: Harmonic measure explicit (1 page)
@@ -95,30 +97,30 @@ def T_p(z, p): c = (1 - p**(-0.5))**(-0.5) return c * np.array([[1, -p**(-0.5 + 
 | `H_S(x) ≥ 0` | de Branges positivity | **DEAD** (Conrey-Li) |
 | `κ(completed) = 0` | Indefinite de Branges / Pontryagin | **CORRECT REFORMULATION** |
 | `T_S` J-unitary on ℝ, `κ = κ₀ + |S|` | Tate transfer matrix + Potapov-Ginzburg | **COMPUTED** |
-| Besicovitch strong resolvent gap | Ergodic operator convergence | **DOABLE** | **You have localized RH to a precise, computable invariant (`κ`) in a rigorous framework (indefinite canonical systems) that respects the arithmetic structure (Tate, Bost-).** This is a genuine contribution regardless of whether `κ=0` is ever proven. --- ## 8. Recommended Reading for the Session 1. **Kaltenbäck-Woracek, "Pontryagin spaces of entire functions I"** (Integral Equations Operator Theory 1999) — the bible for `κ > 0` de Branges.
+| Besicovitch strong resolvent gap | Ergodic operator convergence | **DOABLE** | **You have localized RH to a precise, computable invariant (`κ`) in a rigorous framework (indefinite canonical systems) that respects the arithmetic structure (Tate, Bost-).** This is a genuine contribution regardless of whether `κ=0` is ever proven. --- ## 8. Recommended Reading 1. **Kaltenbäck-Woracek, "Pontryagin spaces of entire functions I"** (Integral Equations Operator Theory 1999) — the bible for `κ > 0` de Branges.
 2. **Remling, "Inverse spectral theory for canonical systems"** (arXiv:1408.6022) — modern canonical system theory.
 3. **-, "The BC-system and L-functions"** (alainconnes.org) — dynamical symmetry at `β=1`.
 4. **Avila-Damanik, "Spectral theory of limit-periodic operators"** — strong resolvent convergence for almost-periodic.
-5. **Burnol, "Two complete and minimal systems associated with the zeros of the Riemann zeta function"** (J. Funct. Anal. 2004) — the `2×2` Tate matrix for `ζ`. --- **Bottom line:** The positive Hamiltonian route is a trap (Conrey-Li proved it's false). Your computed **finite Pontryagin index `κ = κ₀ + |S|` is the correct object**. The wall is `κ → 0` in the completion. The uniform gap (O5) is the only RH-neutral analytic problem left — solve it via **Besicovitch strong resolvent convergence**. Everything else is the wall in different guises. I can generate the explicit `H_S(x)` computation code if you want, or draft the O1–O4 closure proofs. What's most useful for your session? #################
+5. **Burnol, "Two complete and minimal systems associated with the zeros of the Riemann zeta function"** (J. Funct. Anal. 2004) — the `2×2` Tate matrix for `ζ`. --- **Bottom line:** The positive Hamiltonian route is a trap (Conrey-Li proved it's false). Your computed **finite Pontryagin index `κ = κ₀ + |S|` is the correct object**. The wall is `κ → 0` in the completion. The uniform gap (O5) is the only RH-neutral analytic problem left — solve it via **Besicovitch strong resolvent convergence**. Everything else is the wall in different guises. I can generate the explicit `H_S(x)` computation code if you want, or draft the O1–O4 closure proofs. What's the most useful next step? #################
 MATEMATICO 2: I'll invoke the fusion panel to pull in multiple expert perspectives — this is exactly the kind of specialized, multi-domain question (indefinite de Branges / Pontryagin theory, Bost– adelic dynamics, canonical-system inverse spectral theory, – prolate framework) where I'd rather see what several research-grade models converge on before I commit to a direction. Let me verify the most consequential citations before passing things along — the panel flagged that several "2026" arXiv numbers look fabricated, and I want to give you only references I can stand behind. Good — arXiv:2604.00541 (Langer–Woracek, indefinite canonical systems) is **real**, and so are the older Langer–Woracek papers cited (2011 *Function space model*, 2013 *Indefinite Hamiltonian systems*, the Edinburgh Math. Soc. paper on singular interface conditions). Let me verify the remaining critical ones. Excellent — `arXiv:2604.00541`, `2504.00182`, and `2412.20124` are all genuine and exactly on point. Let me verify one more critical reference (Kulikov on prolate/localization eigenvalues for the gap problem) before synthesizing. All the central technical references the panel pointed to are **real and on-target**. Here is the synthesis — what I judge most likely to actually move each open point — with citations I have verified and explicit warnings on what each model got wrong. --- # Plan to close (or sharpen) the six open points I'll go in dependency order: (11.5) → enables (11.7) and (12.3); (2.3) → (3.2); (11.6) is the bridge from finite-κ to RH. The literature has moved very recently in exactly the direction you need. Three Woracek-school papers (one preprint of the present year) constitute the right toolkit you have not yet bolted on: - **L1**: Langer–Woracek, *The direct spectral problem for indefinite canonical systems*, **arXiv:2604.00541** (verified). Constructs the monodromy of an indefinite canonical system with an inner singularity as a product separating Hamiltonian contributions from the *finitely many discrete parameters at the singularity*. This is **exactly the algebraic structure your $T_S$ has by construction**.
 - **L2**: Reiffenstein–Woracek, *Spectral properties of canonical systems: discreteness and distribution of eigenvalues*, **arXiv:2504.00182** (verified). 101pp survey covering Pontryagin-type Hamiltonians and Hamburger moment problems in the same framework. Treats your $J_S$ and your transfer-side simultaneously.
 - **L3**: Langer–Reiffenstein–Woracek, *Eigenvalue distribution of canonical systems: trace class and sparse spectrum*, **arXiv:2412.20124** (verified). Provides the **algorithm for the growth of the monodromy matrix up to a small error** in the limit-circle case — directly applicable to $W_\lambda$ at the LCO endpoint $q=\lambda$.
 - **K1**: Kulikov, *Sharp estimates for eigenvalues of localization operators before the plunge region*, **arXiv:2603.07407** (verified). Gives the **sharp two-sided asymptotic** $$-\log(1-\lambda_n(c)) \asymp \frac{c-n}{\log\!\frac{2c}{c-n}}\qquad(n<c-c^{0.99})$$ for the time-frequency PSWF eigenvalues. The exponentially small regime relevant to your $\varepsilon_0(\lambda)$ is the *complementary* post-plunge tail; the relevant pre-plunge result for $\varepsilon_k/\varepsilon_0$ comes from this paper plus Bonami–Karoui. Two of the panel's citations I judge **fabricated** (cannot be verified): "arXiv:2602.04022" and "High-precision approximation arXiv:2605.20224". **Do not** rely on those; use the verified set above. --- ## 11.5 — Extracting $H_S(x)$ explicitly This is the most actionable open point. Here is what to do, in operational order. ### (i) The Lorentz-boost normal form (verify in 30 seconds) Set $r_p:=p^{-1/2}$, $\ell_p:=\log p$, $c_p:=(1-r_p^2)^{-1/2}$, $\rho_p:=\mathrm{arctanh}(p^{-1/2})$. Then a direct conjugation gives
 $$T_p(z)=D_{\ell_p/2}(z)\,B_p\,D_{\ell_p/2}(z)^{-1},\qquad D_a(z):=\mathrm{diag}(e^{iza},e^{-iza}),\qquad B_p=e^{-\rho_p\sigma_x},$$
-with $\sigma_x=\begin{psmallmatrix}0&1\\1&0\end{psmallmatrix}$. Verification: $(D_aBD_a^{-1})_{12}=e^{iza}\cdot(-r_p)\cdot e^{iza}=-r_p e^{iz\ell_p}$ ✓, and $B_p=\cosh\rho_p\,I-\sinh\rho_p\,\sigma_x$ has eigenvalues $e^{\mp\rho_p}$, hence is $J$-unitary (since $\sigma_x J+J\sigma_x=0$). This identifies each Euler factor as **a Lorentz boost of rapidity $\rho_p=\mathrm{arctanh}(p^{-1/2})$ sandwiched between free propagations of length $\ell_p/2=(\log p)/2$**. This is not cosmetic; it forces the structural conclusion below. ### (ii) The structural fact: $H_S$ is **not** an $L^1$ Hamiltonian Note $T_p(0)=B_p\neq I$. A regular canonical system $J\dot Y=zH Y$, $Y(0)=I$ has monodromy $M(L;0)=I$ at $z=0$ identically. Therefore **no choice of continuous integrable $H_S(x)$ has monodromy $T_S(z)$ as a regular canonical system normalized at $x=0$**. The proper object is the **Langer–Woracek indefinite Hamiltonian**: an ordinary positive Hamiltonian on intervals between $|S|$ inner singularities $x_{p_1}<\dots<x_{p_{|S|}}$, plus **$|S|$ Dirac interface conditions** at the singularities, each carrying one discrete parameter (the $\kappa=1$ negative square of $T_p$). Note Gemini's claim that $H_S$ is "identically a step function with $|S|$ Dirac interfaces" is too strong: by [L1] the ordinary Hamiltonian segments between singularities are genuinely continuous; what is discrete is the *interface data*. ### (iii) Concrete extraction algorithm (constructive from L1 + L3) Order primes $p_1<\dots<p_K$ in $S$. The interface position $x_{p_k}$ and the regular Hamiltonian on $[x_{p_{k-1}},x_{p_k}]$ are determined by the following inductive procedure (this is the Schur-step recursion in the Krein–Langer / Arov–Dym setting, made constructive by [L1]): 1. **Normalize**. Set $\widetilde T_S(z):=T_S(z)T_S(0)^{-1}$ so $\widetilde T_S(0)=I$.
+with $\sigma_x=\begin{psmallmatrix}0&1\\1&0\end{psmallmatrix}$. Verification: $(D_aBD_a^{-1})_{12}=e^{iza}\cdot(-r_p)\cdot e^{iza}=-r_p e^{iz\ell_p}$ ✓, and $B_p=\cosh\rho_p\,I-\sinh\rho_p\,\sigma_x$ has eigenvalues $e^{\mp\rho_p}$, hence is $J$-unitary (since $\sigma_x J+J\sigma_x=0$). This identifies each Euler factor as **a Lorentz boost of rapidity $\rho_p=\mathrm{arctanh}(p^{-1/2})$ sandwiched between free propagations of length $\ell_p/2=(\log p)/2$**. This is not cosmetic; it forces the structural conclusion below. ### (ii) The structural fact: $H_S$ is **not** an $L^1$ Hamiltonian Note $T_p(0)=B_p\neq I$. A regular canonical system $J\dot Y=zH Y$, $Y(0)=I$ has monodromy $M(L;0)=I$ at $z=0$ identically. Therefore **no choice of continuous integrable $H_S(x)$ has monodromy $T_S(z)$ as a regular canonical system normalized at $x=0$**. The proper object is the **Langer–Woracek indefinite Hamiltonian**: an ordinary positive Hamiltonian on intervals between $|S|$ inner singularities $x_{p_1}<\dots<x_{p_{|S|}}$, plus **$|S|$ Dirac interface conditions** at the singularities, each carrying one discrete parameter (the $\kappa=1$ negative square of $T_p$). Note that the claim that $H_S$ is "identically a step function with $|S|$ Dirac interfaces" is too strong: by [L1] the ordinary Hamiltonian segments between singularities are genuinely continuous; what is discrete is the *interface data*. ### (iii) Concrete extraction algorithm (constructive from L1 + L3) Order primes $p_1<\dots<p_K$ in $S$. The interface position $x_{p_k}$ and the regular Hamiltonian on $[x_{p_{k-1}},x_{p_k}]$ are determined by the following inductive procedure (this is the Schur-step recursion in the Krein–Langer / Arov–Dym setting, made constructive by [L1]): 1. **Normalize**. Set $\widetilde T_S(z):=T_S(z)T_S(0)^{-1}$ so $\widetilde T_S(0)=I$.
 2. **Cayley to the disk**. Let $\zeta=(z-i)/(z+i)$; write $\widetilde\Theta_S(\zeta)$ for $\widetilde T_S$ in disk coordinates.
 3. **Krein–Langer coprime factorization**. Compute the finite Blaschke–Potapov denominator $$\widetilde\Theta_S(\zeta)=\Theta_-(\zeta)^{-1}\Theta_0(\zeta),\qquad \deg\Theta_-=\kappa(T_S)=\kappa_0+|S|,$$ where $\Theta_0$ is $J$-contractive in the disk and $\Theta_-$ is a finite Blaschke–Potapov product. **This step is constructive**: the zeros of $\det\Theta_-$ are the points $\zeta_{p_k}\in\mathbb D$ where $T_p(z)$ inverts $J$-signature (located numerically by detecting negative inertia in the Pick kernel $K_{T_S}(z,w)$).
 4. **Schur recursion on $\Theta_0$**. Each elementary Schur step extracts one regular Hamiltonian segment (continuous on $[x_{p_{k-1}},x_{p_k}]$) plus its right-endpoint Weyl coefficient.
 5. **Glue with interface conditions from [L1]**. At each $x_{p_k}$, attach the discrete parameter from the Krein–Langer block of $\Theta_-$ associated to $\zeta_{p_k}$. The Langer–Woracek generalized boundary values at $x_{p_k}^-$ and $x_{p_k}^+$ are related linearly by a $2\times 2$ interface matrix $\Gamma_{p_k}$, whose explicit form is given in [L1] Theorem 1.x (the monodromy product formula). ### (iv) Falsifiable numerical test Compute, for each $z_i$ in a $\mathbb C_+$ grid, the **Pick matrix**
 $$\mathbf K_N(T_S)=\left[\frac{J-T_S(z_i)JT_S(z_j)^*}{-i(z_i-\overline{z_j})}\right]_{i,j=1}^N.$$
 **Prediction**: the negative inertia $\nu_-(\mathbf K_N)$ is bounded and equals $\kappa_0+|S|$ for $N$ large, *stable under refinement* (you have already reported this empirically — make it rigorous as a falsification test for the construction). Equivalently, $\Theta_-$ has exactly $\kappa_0+|S|$ Blaschke–Potapov factors, each localizable. ### (v) Critical caveat that the panel collectively missed The standard Langer–Woracek theory requires $\kappa$ **finite**. Your $\kappa = \kappa_0 + |S|$ **diverges** as $|S|\to\infty$. This is a real obstruction at the completion step. There are two ways through it: - **(a) Renormalized $\kappa$**: define $\kappa^{\mathrm{ren}}(\lambda):=\kappa(T_S)-|S|$ (subtract the $\zeta$-pole contribution that is RH-neutral). The wall becomes $\kappa^{\mathrm{ren}}(\infty)=0$. This corresponds to subtracting the Euler-pole part: $\kappa^{\mathrm{ren}}$ counts only the "anomalous" negative squares.
-- **(b) Krein–Langer's "infinite κ" theory**: there is a Krein–Langer–Arov theory for **generalized Schur functions with $\kappa=\infty$** with appropriate growth control. This is exactly what L2 §C handles for *Pontryagin-type Hamiltonians*: the Weyl coefficient is allowed to be a generalized Nevanlinna function with $\kappa=\infty$ provided the negative-square decomposition has finite type. **The relevant condition for $T_S$ is whether the local negative-square contributions are summable in a Krein–Langer-renormalized sense, e.g., whether $\sum_p \rho_p^2=\sum_p\mathrm{arctanh}(p^{-1/2})^2$ controls something useful.** Note $\rho_p\sim p^{-1/2}$, so $\sum\rho_p^2\sim\sum p^{-1}=\infty$; this is the technical obstruction. I think (a) is the cleaner road, but (b) is the structurally correct one if the right invariant is available. --- ## 12.3 — The wall as the Pontryagin contour integral The cleanest computable form of the wall (corroborating your `κ(completed) = 0 ⟺ RH` statement) is: $$\boxed{\kappa(T_S)=\deg \Theta_-=\frac{1}{2\pi i}\oint_{\partial\Omega_+}\partial_z\log\det\Theta_-(z)\,dz}$$ for any contour $\partial\Omega_+\subset\mathbb C_+$ enclosing the Blaschke zeros (= negative-square locations). Crucially: ### (i) Compatibility check with the marginality theorem 12.2 Your file rightly insists any new RH-equivalent formulation **must use phase**, since Davenport–Heilbronn has identical $\{|\Lambda(n)|\}$ but $\varepsilon_0<0$. **Sanity test**: compute $\kappa(T_S^{DH})$ for the Davenport–Heilbronn transfer (built from the same Euler-like factors but without the functional equation). If your $\kappa$-construction is faithful, you must get $\kappa(T_S^{DH})>\kappa_0+|S|$ — i.e. **extra** negative squares from the off-line zeros — *even though the magnitudes are identical*. The mechanism: the off-line zeros of $L_{DH}$ become poles of the scalar Schur quotient $\Theta_S^{DH}$ in $\mathbb C_+$ that are not absorbed into the Euler/archimedean negative squares. If this sanity test passes, your $\kappa$ is a phase invariant and 12.3 is genuinely a faithful reformulation. ### (ii) The $T_{22}$ winding formula needs caveat Gemini's claim $\kappa=(1/2\pi i)\int_{\mathbb R}d\log\det((T_S)_{22})\,dx$ is **only the boundary signature**, not $\kappa$. On the real line $\det T_S=1$ (since $T_S\in SU(1,1)$), and the winding of $(T_S)_{22}$ counts the total phase, not the negative-square index. The correct contour formula is the one above, in the interior $\mathbb C_+$. ### (iii) The argument-principle form for the scalar shadow If you take the **scalar shadow** $\theta_S(z):=(T_S)_{12}(z)/(T_S)_{22}(z)$ (the Möbius image of $\Theta_S$), then $\theta_S$ is the generalized Schur function in $\mathbb C_+$ with $\kappa$ poles in $\mathbb C_+$, and
+- **(b) Krein–Langer's "infinite κ" theory**: there is a Krein–Langer–Arov theory for **generalized Schur functions with $\kappa=\infty$** with appropriate growth control. This is exactly what L2 §C handles for *Pontryagin-type Hamiltonians*: the Weyl coefficient is allowed to be a generalized Nevanlinna function with $\kappa=\infty$ provided the negative-square decomposition has finite type. **The relevant condition for $T_S$ is whether the local negative-square contributions are summable in a Krein–Langer-renormalized sense, e.g., whether $\sum_p \rho_p^2=\sum_p\mathrm{arctanh}(p^{-1/2})^2$ controls something useful.** Note $\rho_p\sim p^{-1/2}$, so $\sum\rho_p^2\sim\sum p^{-1}=\infty$; this is the technical obstruction. I think (a) is the cleaner road, but (b) is the structurally correct one if the right invariant is available. --- ## 12.3 — The wall as the Pontryagin contour integral The cleanest computable form of the wall (corroborating your `κ(completed) = 0 ⟺ RH` statement) is: $$\boxed{\kappa(T_S)=\deg \Theta_-=\frac{1}{2\pi i}\oint_{\partial\Omega_+}\partial_z\log\det\Theta_-(z)\,dz}$$ for any contour $\partial\Omega_+\subset\mathbb C_+$ enclosing the Blaschke zeros (= negative-square locations). Crucially: ### (i) Compatibility check with the marginality theorem 12.2 Your file rightly insists any new RH-equivalent formulation **must use phase**, since Davenport–Heilbronn has identical $\{|\Lambda(n)|\}$ but $\varepsilon_0<0$. **Sanity test**: compute $\kappa(T_S^{DH})$ for the Davenport–Heilbronn transfer (built from the same Euler-like factors but without the functional equation). If your $\kappa$-construction is faithful, you must get $\kappa(T_S^{DH})>\kappa_0+|S|$ — i.e. **extra** negative squares from the off-line zeros — *even though the magnitudes are identical*. The mechanism: the off-line zeros of $L_{DH}$ become poles of the scalar Schur quotient $\Theta_S^{DH}$ in $\mathbb C_+$ that are not absorbed into the Euler/archimedean negative squares. If this sanity test passes, your $\kappa$ is a phase invariant and 12.3 is genuinely a faithful reformulation. ### (ii) The $T_{22}$ winding formula needs caveat The claim $\kappa=(1/2\pi i)\int_{\mathbb R}d\log\det((T_S)_{22})\,dx$ is **only the boundary signature**, not $\kappa$. On the real line $\det T_S=1$ (since $T_S\in SU(1,1)$), and the winding of $(T_S)_{22}$ counts the total phase, not the negative-square index. The correct contour formula is the one above, in the interior $\mathbb C_+$. ### (iii) The argument-principle form for the scalar shadow If you take the **scalar shadow** $\theta_S(z):=(T_S)_{12}(z)/(T_S)_{22}(z)$ (the Möbius image of $\Theta_S$), then $\theta_S$ is the generalized Schur function in $\mathbb C_+$ with $\kappa$ poles in $\mathbb C_+$, and
 $$\kappa=\frac{1}{2\pi i}\oint_{\partial\Omega_+}\frac{\theta_S'(z)}{\theta_S(z)-\theta_S(\bar z_0)}\,dz\quad(\text{for generic }z_0\in\mathbb R).$$
 This is the **Krein–Langer scalar argument principle**, computable directly from $T_p$. --- ## 11.7 — Individual eigenvalues from inverse spectral theory Once $H_S(x)$ is extracted (11.5), the inverse spectral theorem for indefinite canonical systems (L1, L2 Thm C.12) gives a **bijection**
 $$\{\text{Pontryagin-type Hamiltonians}\}\;\longleftrightarrow\;\{\text{Weyl coefficients in }\mathcal N_\kappa\}.$$
 The discrete spectrum of $(W_{S,\mathrm{ext}})$ on the indefinite Hilbert space is then in bijection with the poles of the Weyl coefficient. **If** the completion at $S=\mathbb P$ produces the Weyl coefficient
 $$q_{H_{\mathbb P}}(z)=-\frac{\Xi'(1/2+iz)}{\Xi(1/2+iz)}\qquad\text{(or a Cayley transform thereof)},$$
-then 11.7 closes by inverse-spectral uniqueness: individual eigenvalues $-\gamma_n^2$ are determined by the individual poles of $q_{H_{\mathbb P}}$. **This is conditional on (i) the completion limit existing in the $\kappa=\infty$ Krein–Langer theory of §11.5(v), and (ii) the identification of the limit Weyl coefficient with the logarithmic derivative of $\Xi$**. The CCM Sonin density match at the Weyl level (your 11.3-bis) is consistent with this; verifying it at the spectral-measure level is the precise next computational target. A concrete intermediate: at finite $S$, compute the Weyl coefficient $q_{H_S}(z)$ from $T_S$ via the canonical Möbius formula $q_{H_S}=(T_S(z)\binom01)\big/\bigl((T_S(z)\binom01)\bigr)$, and check whether $q_{H_S}\to-\Xi'/\Xi$ in the Stieltjes-class limit as $|S|\uparrow\mathbb P$ (in a Cayley-transformed sense matching the $\Xi$-side). I expect this to fail at finite $S$ in a controlled way that quantifies the prime cutoff error. --- ## 2.3 — Uniformity of the gap This is the open point where I think the panel collectively *misled*, and where I want to plant a flag. ### (i) The (k+1)² ladder is **not** the standard PSWF/Slepian eigenvalue ladder GPT's warning here is correct and I want to amplify it. The Slepian–Pollak prolate concentration eigenvalues $\lambda_n(c)$ have the Landau–Widom plunge profile, with $-\log(1-\lambda_n(c))\asymp (c-n)/\log(2c/(c-n))$ in the pre-plunge regime (K1) and double-exponential decay in the post-plunge regime. The differential-operator eigenvalues $\chi_n(c)$ satisfy $\chi_n(c)=-c^2+(2n+1)c+\beta_0(n)+O(1/c)$ (DLMF §30.9), giving **linear-in-$n$** gaps, not $(k+1)^2$. Gemini's "Gerschgorin in Legendre basis forces gap $\geq 2.5$" cites the **small-$c$** limit $\chi_n\to n(n+1)$, which is irrelevant: your regime is $c=\lambda^2\to\infty$. **So the $(k+1)^2$ ladder you observe is NOT prolate-controlled in the standard sense.** It must come from an *arithmetic deformation* of the prolate spectrum — almost certainly from the **rescaling** $B_\lambda=\lambda^2 A_\lambda$ combined with the *Jacobi structure* in 9.6, where $I_n(L)=[\cos(LJ)]_{n,n}-[\cos(LJ)]_{n-1,n-1}$. The Jacobi matrix $J_S$ has $a_n=\sqrt{(n-1/2)n}$ giving $J^2$-spectrum locally like $n^2$, and an operator of the form $J^2+\text{small perturbations}$ would generate the $(k+1)^2$ ladder. ### (ii) Concrete candidate for the limit operator I conjecture (and it is testable) that the rescaled $B_\lambda$, projected on its $k\leq c_0$-dimensional ground-state subspace, converges in the *operator-norm-on-the-subspace* sense (a weaker SOT-with-projection statement) to
+then 11.7 closes by inverse-spectral uniqueness: individual eigenvalues $-\gamma_n^2$ are determined by the individual poles of $q_{H_{\mathbb P}}$. **This is conditional on (i) the completion limit existing in the $\kappa=\infty$ Krein–Langer theory of §11.5(v), and (ii) the identification of the limit Weyl coefficient with the logarithmic derivative of $\Xi$**. The CCM Sonin density match at the Weyl level (your 11.3-bis) is consistent with this; verifying it at the spectral-measure level is the precise next computational target. A concrete intermediate: at finite $S$, compute the Weyl coefficient $q_{H_S}(z)$ from $T_S$ via the canonical Möbius formula $q_{H_S}=(T_S(z)\binom01)\big/\bigl((T_S(z)\binom01)\bigr)$, and check whether $q_{H_S}\to-\Xi'/\Xi$ in the Stieltjes-class limit as $|S|\uparrow\mathbb P$ (in a Cayley-transformed sense matching the $\Xi$-side). I expect this to fail at finite $S$ in a controlled way that quantifies the prime cutoff error. --- ## 2.3 — Uniformity of the gap This is the open point where I think the panel collectively *misled*, and where I want to plant a flag. ### (i) The (k+1)² ladder is **not** the standard PSWF/Slepian eigenvalue ladder This warning is correct and worth amplifying. The Slepian–Pollak prolate concentration eigenvalues $\lambda_n(c)$ have the Landau–Widom plunge profile, with $-\log(1-\lambda_n(c))\asymp (c-n)/\log(2c/(c-n))$ in the pre-plunge regime (K1) and double-exponential decay in the post-plunge regime. The differential-operator eigenvalues $\chi_n(c)$ satisfy $\chi_n(c)=-c^2+(2n+1)c+\beta_0(n)+O(1/c)$ (DLMF §30.9), giving **linear-in-$n$** gaps, not $(k+1)^2$. "Gerschgorin in Legendre basis forces gap $\geq 2.5$" cites the **small-$c$** limit $\chi_n\to n(n+1)$, which is irrelevant: your regime is $c=\lambda^2\to\infty$. **So the $(k+1)^2$ ladder you observe is NOT prolate-controlled in the standard sense.** It must come from an *arithmetic deformation* of the prolate spectrum — almost certainly from the **rescaling** $B_\lambda=\lambda^2 A_\lambda$ combined with the *Jacobi structure* in 9.6, where $I_n(L)=[\cos(LJ)]_{n,n}-[\cos(LJ)]_{n-1,n-1}$. The Jacobi matrix $J_S$ has $a_n=\sqrt{(n-1/2)n}$ giving $J^2$-spectrum locally like $n^2$, and an operator of the form $J^2+\text{small perturbations}$ would generate the $(k+1)^2$ ladder. ### (ii) Concrete candidate for the limit operator I conjecture (and it is testable) that the rescaled $B_\lambda$, projected on its $k\leq c_0$-dimensional ground-state subspace, converges in the *operator-norm-on-the-subspace* sense (a weaker SOT-with-projection statement) to
 $$\boxed{B_\infty\big|_{\mathcal E_K}=\tfrac{\pi^2}{4}\,(N+1)^2\quad\text{on a basis }\{\phi_k\}_{k=0}^{K-1}\text{ adapted to the Jacobi grading}}$$
 where $N=\mathrm{diag}(n)$ in the cyclic Hilbert basis built from $\xi_S$ (the constant function under the CCM cyclic vector convention), and the constant $\pi^2/4$ is the Dirichlet-eigenvalue normalization. The **eigenvectors are not Dirichlet sines** because the basis is the orthogonal-polynomial / Meixner–Pollaczek basis, not the position basis. This explains your "non-trivial carrier" observation. ### (iii) Falsifiable computational test (please run) Form the PSWF eigenfunctions $\psi_m^{(c)}(x)$ for $c=\lambda^2$ (commuting differential operator — Bouwkamp / Osipov–Xiao–Rokhlin recurrence, available in `mpmath`). Compute the matrix elements
 $$M_{mn}(\lambda):=\bigl\langle\psi_m^{(c)},A_\lambda\psi_n^{(c)}\bigr\rangle,\qquad m,n=0,1,2,3.$$
@@ -139,15 +141,15 @@ This is a **finite-level falsifiable test** — you can compute both sides for $
 - #5 is the bridge to 11.6/12.3 — interesting if positive, structurally informative if negative. --- ## Audit and candid caveats What I'm confident about, in decreasing order: - The verified arXiv references (L1, L2, L3, K1, K2, K3, Conrey–Li) are real and on point. The Langer–Woracek framework for indefinite canonical systems with inner singularities is precisely the technology you need for 11.5, and it is *constructive* (the algorithms in L1 + L3 are implementable).
 - The Lorentz-boost decomposition of $T_p$ is a real algebraic identity that exposes the structure decisively.
 - The structural fact $T_p(0)\neq I\Rightarrow H_S$ is not a regular $L^1$ Hamiltonian is correct and is the right reformulation.
-- Gemini's "Legendre Gerschgorin" argument for 2.3 is **wrong** (small-$c$ limit, irrelevant regime).
+- The "Legendre Gerschgorin" argument for 2.3 is **wrong** (small-$c$ limit, irrelevant regime).
 - The Pontryagin contour integral for $\kappa$ is the right reformulation of the wall. What I'm uncertain about: - The $\kappa=\infty$ completion limit (11.5(v)): the standard Langer–Woracek theory needs $\kappa<\infty$, and the renormalization is not standard. This is a real technical hurdle, *not* a fabrication of the problem — it is plausibly hard.
 - The Tomita–Takesaki mechanism (11.6.i): plausible, falsifiable, but no theorem in the literature does it. ' BC framework is the right ambient setting; the explicit statement at the transfer-matrix level is a research conjecture.
 - The (k+1)² ladder mechanism (2.3): I have given a *candidate* limit operator ($\pi^2(N+1)^2/4$ on the Meixner–Pollaczek basis), but it is a conjecture suggested by the structure, not a theorem. What's still beyond reach: - 12.3 itself (= RH). The κ-reformulation is *equivalent*, not a proof. Even if every diagnostic above passes, the final $\kappa^{\mathrm{ren}}(\infty)=0$ is the wall. The marginality theorem 12.2 is irreversible: any new functional **must** use phase, and the only phase-respecting structural input I can see is the Bost– / Tomita modular conjugation at $\beta=1$. **No fabrication possible.** Tell me which of #1–#5 you'd like me to write out fully — in particular, I'm happy to write the Krein–Langer Schur recursion (item #3) as actual mpmath code, or to set up the BC-Tomita test (#5) in explicit form. The DH sanity check (#4) is the most important falsification test and I'd put it at the top of the queue. ##########################
-MATEMATICO 3: David, hice una búsqueda rápida y el cuadro que tenéis está bien orientado. Lo más útil ahora no es abrir más frentes, sino **cambiar la formulación técnica de dos puntos**: 1. **O5/O11:** no buscar norma-resolvente; usar **transformada de Doob por el estado fundamental** y convergencia Mosco de formas. Eso explica naturalmente el ladder \((k+1)^2\).
-2. **11.5/11.6:** no intentar sacar un Hamiltoniano positivo del \(T_S\) de Tate tal como está; \(T_S\) es un objeto de **sistema canónico con interfaces/Pontryagin**, no un Hamiltoniano \(H\ge0\) ordinario. La extracción explícita sí se puede hacer como producto de propagaciones libres e interfaces \(J\)-unitarias. Abajo dejo un plan concreto para los seis abiertos. --- # 1. Resultado de la búsqueda arXiv / literatura relevante Las piezas externas correctas para atacar los pendientes son: - **––, arXiv:2511.22755**, *Zeta Spectral Triples*: confirma la fórmula \[ \det_{\rm reg}(D_{\log}^{(\lambda,N)}-z) = -i\,\lambda^{-iz}\widehat\xi_{\lambda,N}(z), \] y que la convergencia de esos determinantes hacia \(\Xi\) es la ruta determinantal natural. - **–van Suijlekom, arXiv:2511.23257 / CMP 2025**: real-rootedness finita por estructura Toeplitz/convolución. - **––, arXiv:2310.18423**: Sonin/prolato semilocal y la separación positivo/Sonin. - **Kreĭn–Langer / Potapov / Arov–Dym**: factorization de funciones Schur generalizadas: \[ s\in S_\kappa \Longleftrightarrow s=B_\ell^{-1}s_0=s_0'B_r^{-1}, \] con \(B_{\ell,r}\) productos Blaschke–Potapov de grado \(\kappa\). - **Kaltenbäck–Woracek**: sistemas canónicos indefinidos, espacios de de Branges–Pontryagin, índice negativo igual al número de cuadrados negativos del kernel. Es exactamente vuestra reformulación actual: **el muro es un índice de Pontryagin / factor Blaschke–Potapov**. --- # 2. O5/O11 — Gap uniforme: cambiar a transformada de Doob El test de autovectores contra modos seno falla por una razón estructural: los autovectores crudos contienen un carrier. La forma correcta es dividir por el estado fundamental. Sea \(u_{0,\lambda}>0\) el eigenvector fundamental:
+MATEMATICO 3: David, I did a quick search and the picture you have is well oriented. The most useful thing now is not to open more fronts, but to **change the technical formulation of two points**: 1. **O5/O11:** do not look for norm-resolvent; use the **Doob transform by the ground state** and Mosco convergence of forms. That naturally explains the ladder \((k+1)^2\).
+2. **11.5/11.6:** do not try to extract a positive Hamiltonian from Tate's \(T_S\) as it stands; \(T_S\) is a **canonical system object with interfaces/Pontryagin**, not an ordinary Hamiltonian \(H\ge0\). The explicit extraction CAN be done as a product of free propagations and \(J\)-unitary interfaces. Below I leave a concrete plan for the six open points. --- # 1. Result of the arXiv / relevant literature search The correct external pieces to attack the pending items are: - **––, arXiv:2511.22755**, *Zeta Spectral Triples*: confirms the formula \[ \det_{\rm reg}(D_{\log}^{(\lambda,N)}-z) = -i\,\lambda^{-iz}\widehat\xi_{\lambda,N}(z), \] and that the convergence of those determinants toward \(\Xi\) is the natural determinantal route. - **–van Suijlekom, arXiv:2511.23257 / CMP 2025**: finite real-rootedness via Toeplitz/convolution structure. - **––, arXiv:2310.18423**: semilocal Sonin/prolate and the positive/Sonin separation. - **Kreĭn–Langer / Potapov / Arov–Dym**: factorization of generalized Schur functions: \[ s\in S_\kappa \Longleftrightarrow s=B_\ell^{-1}s_0=s_0'B_r^{-1}, \] with \(B_{\ell,r}\) Blaschke–Potapov products of degree \(\kappa\). - **Kaltenbäck–Woracek**: indefinite canonical systems, de Branges–Pontryagin spaces, negative index equal to the number of negative squares of the kernel. This is exactly your current reformulation: **the wall is a Pontryagin index / Blaschke–Potapov factor**. --- # 2. O5/O11 — Uniform gap: switch to the Doob transform The test of eigenvectors against sine modes fails for a structural reason: the raw eigenvectors contain a carrier. The correct form is to divide by the ground state. Let \(u_{0,\lambda}>0\) be the ground eigenvector:
 \[
 A_\lambda u_{0,\lambda}=\varepsilon_0(\lambda)u_{0,\lambda}.
-\] Definid la forma transformada de Doob:
+\] Define the transformed Doob form:
 \[
 \mathcal G_\lambda(v,v):=
 \frac{
@@ -157,7 +159,7 @@ A_\lambda(u_{0,\lambda}v,u_{0,\lambda}v)
 }{
 |\varepsilon_0(\lambda)|\|u_{0,\lambda}\|^2
 }.
-\] Entonces
+\] Then
 \[
 \mathrm{Spec}(\mathcal G_\lambda)
 =
@@ -165,18 +167,18 @@ A_\lambda(u_{0,\lambda}v,u_{0,\lambda}v)
 \frac{\varepsilon_k(\lambda)-\varepsilon_0(\lambda)}
 {|\varepsilon_0(\lambda)|}
 \right\}_{k\ge0}.
-\] Numéricamente tenéis
+\] Numerically you have
 \[
 \frac{\varepsilon_k}{\varepsilon_0}\to(k+1)^2.
 \]
-Equivalente, después de restar el fundamental:
+Equivalently, after subtracting the ground mode:
 \[
 \frac{\varepsilon_k-\varepsilon_0}{|\varepsilon_0|}
 \to
 (k+1)^2-1
 =
 k(k+2).
-\] Ese espectro no es el de la caja Dirichlet cruda, sino el de la **transformada de Doob de la caja Dirichlet**. El operador límite esperado es
+\] That spectrum is not the raw Dirichlet box's, but that of the **Doob transform of the Dirichlet box**. The expected limit operator is
 \[
 L_\infty v
 =
@@ -186,60 +188,60 @@ L_\infty v
 \right),
 \qquad 0<\theta<\pi,
 \]
-en
+on
 \[
 L^2\!\left([0,\pi],\sin^2\theta\,d\theta\right).
-\] Sus eigenvalores son
+\] Its eigenvalues are
 \[
 0,3,8,15,\dots,k(k+2),
 \]
-y por tanto los eigenvalores no transformados son
+and therefore the untransformed eigenvalues are
 \[
 1,4,9,16,\dots,(k+1)^2.
-\] Esto explica simultáneamente: - por qué aparece \((k+1)^2\);
-- por qué los autovectores no parecen senos;
-- por qué al dividir por \(u_0\) deberían aparecer polinomios de Gegenbauer/Chebyshev de segunda especie: \[ \frac{u_{k,\lambda}}{u_{0,\lambda}} \longrightarrow U_k(\cos\theta). \] ## Test numérico inmediato Antes de escribir prueba larga, probad esto: 1. Calculad \[ r_{k,\lambda}(j)=\frac{u_{k,\lambda}(j)}{u_{0,\lambda}(j)}. \] 2. Normalizad \(r_{1,\lambda}\) para que tome valores aproximadamente en \([-2,2]\), y definid \[ x_j:=\frac{r_{1,\lambda}(j)}2. \] 3. Comparad: \[ r_{2,\lambda}(j)\stackrel{?}{\approx}4x_j^2-1, \] \[ r_{3,\lambda}(j)\stackrel{?}{\approx}8x_j^3-4x_j. \] Si esto pasa, O5 tiene una ruta muy clara: no identificar los autovectores crudos, sino el **proceso ground-state-transformed**. ## Teorema que hay que probar Basta probar convergencia Mosco:
+\] This simultaneously explains: - why \((k+1)^2\) appears;
+- why the eigenvectors do not look like sines;
+- why dividing by \(u_0\) should bring up Gegenbauer/Chebyshev polynomials of the second kind: \[ \frac{u_{k,\lambda}}{u_{0,\lambda}} \longrightarrow U_k(\cos\theta). \] ## Immediate numerical test Before writing a long proof, try this: 1. Compute \[ r_{k,\lambda}(j)=\frac{u_{k,\lambda}(j)}{u_{0,\lambda}(j)}. \] 2. Normalize \(r_{1,\lambda}\) so that it takes values approximately in \([-2,2]\), and define \[ x_j:=\frac{r_{1,\lambda}(j)}2. \] 3. Compare: \[ r_{2,\lambda}(j)\stackrel{?}{\approx}4x_j^2-1, \] \[ r_{3,\lambda}(j)\stackrel{?}{\approx}8x_j^3-4x_j. \] If this holds, O5 has a very clear route: do not identify the raw eigenvectors, but the **ground-state-transformed process**. ## Theorem that needs to be proved It suffices to prove Mosco convergence:
 \[
 \mathcal G_\lambda
 \overset{\rm Mosco}{\longrightarrow}
 \mathcal G_\infty,
 \]
-donde
+where
 \[
 \mathcal G_\infty(v,v)
 =
 \int_0^\pi |v'(\theta)|^2\sin^2\theta\,d\theta.
-\] Entonces, por convergencia espectral de formas cerradas,
+\] Then, by spectral convergence of closed forms,
 \[
 \frac{\varepsilon_1-\varepsilon_0}{|\varepsilon_0|}
 \to3,
 \]
-y en particular
+and in particular
 \[
 \liminf_\lambda
 \frac{\varepsilon_1-\varepsilon_0}{|\varepsilon_0|}
 >0.
-\] Esta ruta evita la norma-resolvente global, que efectivamente falla por recurrencia de Kronecker. La topología correcta es: \[
+\] This route avoids the global norm-resolvent, which indeed fails due to Kronecker recurrence. The correct topology is: \[
 \boxed{\text{Doob transform + Mosco convergence + compactness}}
-\] no norma de operador. --- # 3. O3.2 — Real-rootedness en el límite Una vez cerrado O5 en la forma anterior, O3.2 se reduce a un lema normal-family. Sea
+\] not operator norm. --- # 3. O3.2 — Real-rootedness in the limit Once O5 is closed in the above form, O3.2 reduces to a normal-family lemma. Let
 \[
 F_\lambda(z)
 =
 c_\lambda e^{a_\lambda z}
 \widehat\xi_\lambda(z)
 \]
-con normalización, por ejemplo \(F_\lambda(0)=1\). Si: 1. cada \(F_\lambda\) tiene sólo ceros reales;
-2. \(F_\lambda\to F\) uniformemente en compactos;
-3. \(F\not\equiv0\); entonces por Hurwitz,
+with normalization, for example \(F_\lambda(0)=1\). If: 1. each \(F_\lambda\) has only real zeros;
+2. \(F_\lambda\to F\) uniformly on compacta;
+3. \(F\not\equiv0\); then by Hurwitz,
 \[
-F \text{ tiene sólo ceros reales.}
-\] La única parte no automática es la convergencia compacta. Ahí entra O5: el gap uniforme da estabilidad de la proyección espectral fundamental y evita que el ground state salte entre ramas. Así que O3.2 no debe atacarse directamente. Debe escribirse como: \[
+F \text{ has only real zeros.}
+\] The only non-automatic part is the compact convergence. That is where O5 comes in: the uniform gap gives stability of the ground spectral projection and prevents the ground state from jumping between branches. So O3.2 should not be attacked directly. It should be written as: \[
 \boxed{
-\text{O5 + convergencia determinantal compacta}
+\text{O5 + compact determinantal convergence}
 \Longrightarrow
 \text{O3.2}.
 }
-\] --- # 4. O11.5 — Extraer \(H_S\) de \(T_S\): factorizar en propagación libre + interfaces Vuestro factor local es
+\] --- # 4. O11.5 — Extracting \(H_S\) from \(T_S\): factor into free propagation + interfaces Your local factor is
 \[
 T_p(z)
 =
@@ -248,7 +250,7 @@ T_p(z)
 1&-p^{-1/2+iz}\\
 -p^{-1/2-iz}&1
 \end{pmatrix}.
-\] Poned
+\] Set
 \[
 r_p=p^{-1/2},
 \qquad
@@ -274,7 +276,7 @@ C_p
 \end{pmatrix}
 =
 \exp(-\eta_p\sigma_x).
-\] Entonces la identidad exacta es:
+\] Then the exact identity is:
 \[
 \boxed{
 T_p(z)=D_{\ell_p}(z)\,C_p\,D_{\ell_p}(z)^{-1}.
@@ -285,7 +287,7 @@ S=\{p_1,\dots,p_m\},
 \qquad
 \ell_1<\ell_2<\cdots<\ell_m,
 \]
-entonces
+then
 \[
 T_{p_1}\cdots T_{p_m}
 =
@@ -297,7 +299,7 @@ C_{p_2}
 D_{\ell_m-\ell_{m-1}}
 C_{p_m}
 D_{-\ell_m}.
-\] Por tanto, salvo gauges de borde,
+\] Therefore, up to boundary gauges,
 \[
 D_{-\ell_1}T_SD_{\ell_m}
 =
@@ -307,9 +309,9 @@ C_{p_2}
 \cdots
 D_{\ell_m-\ell_{m-1}}
 C_{p_m}.
-\] Interpretación: - \(D_{\Delta \ell}\) es propagación libre de un sistema canónico positivo.
-- \(C_p\) es una interfaz \(J\)-unitaria independiente de \(z\).
-- La parte indefinida no está en la propagación libre, sino en las **interfaces**. Así que \(H_S\) no debe buscarse como Hamiltoniano ordinario \(H(x)\ge0\) con densidad \(L^1\). El objeto correcto es un **sistema canónico con interfaces**, o en lenguaje Kaltenbäck–Woracek, un **Hamiltoniano indefinido elemental** con datos discretos:
+\] Interpretation: - \(D_{\Delta \ell}\) is free propagation of a positive canonical system.
+- \(C_p\) is a \(z\)-independent \(J\)-unitary interface.
+- The indefinite part is not in the free propagation, but in the **interfaces**. So \(H_S\) should not be sought as an ordinary Hamiltonian \(H(x)\ge0\) with \(L^1\) density. The correct object is a **canonical system with interfaces**, or in Kaltenbäck–Woracek language, an **elementary indefinite Hamiltonian** with discrete data:
 \[
 \boxed{
 \mathfrak h_S
@@ -318,52 +320,52 @@ C_{p_m}.
 \{(\ell_p,\eta_p)\}_{p\in S}
 \right).
 }
-\] En gauge estándar \(J_0=\begin{pmatrix}0&-1\\1&0\end{pmatrix}\), mediante Cayley, la propagación libre corresponde a
+\] In standard gauge \(J_0=\begin{pmatrix}0&-1\\1&0\end{pmatrix}\), via Cayley, the free propagation corresponds to
 \[
 H_{\rm free}=\frac12 I.
-\] Las interfaces satisfacen
+\] The interfaces satisfy
 \[
 Y(\ell_p+)=C_pY(\ell_p-).
-\] Esto cierra O11.5 en la categoría correcta: \[
+\] This closes O11.5 in the correct category: \[
 \boxed{
 T_S
 =
-\text{monodromía de un sistema canónico libre con interfaces }J\text{-unitarias}.
+\text{monodromy of a free canonical system with }J\text{-unitary interfaces}.
 }
-\] No es un \(H_S\succeq0\) ordinario; es un sistema de Pontryagin. --- # 5. Audit importante: orden y gauge de \(T_S\) Hay un punto delicado: los \(T_p(z)\) no conmutan como matrices. Por tanto, el producto
+\] It is not an ordinary \(H_S\succeq0\); it is a Pontryagin system. --- # 5. Important audit: order and gauge of \(T_S\) There is a delicate point: the \(T_p(z)\) do not commute as matrices. Therefore, the product
 \[
 T_S=\prod_{p\in S}T_p
 \]
-debe tener orden especificado. La elección natural, si \(T_S\) es una transferencia espacial, es ordenar por longitud:
+must have a specified order. The natural choice, if \(T_S\) is a spatial transfer, is to order by length:
 \[
 \log p_1<\log p_2<\cdots<\log p_m.
-\] Si se cambia el orden, se cambia el sistema con interfaces. El escalar Euleriano sí es conmutativo; la elevación \(2\times2\) no lo es. Recomendación para el paper: - definir \(T_S\) como producto cronológico por longitudes \(\ell_p=\log p\);
-- declarar explícitamente que otros órdenes son gauges/modelos diferentes;
-- formular los invariantes en términos del **PG transform / característica**, no de una matriz \(T_S\) dependiente de gauge. Esto evita introducir índice \(\kappa\) artificial por una elección de orden. --- # 6. O11.6 / O12.3 — Control de \(\kappa\): usar Kreĭn–Langer explícitamente Sea \(s(z)\) el Potapov–Ginzburg transform del objeto completado. Entonces: \[
+\] If the order is changed, the system with interfaces changes. The Eulerian scalar is indeed commutative; the \(2\times2\) lift is not. Recommendation for the paper: - define \(T_S\) as a chronological product by lengths \(\ell_p=\log p\);
+- explicitly state that other orderings are different gauges/models;
+- formulate the invariants in terms of the **PG transform / characteristic**, not of a gauge-dependent matrix \(T_S\). This avoids introducing an artificial \(\kappa\) index via a choice of order. --- # 6. O11.6 / O12.3 — Controlling \(\kappa\): use Kreĭn–Langer explicitly Let \(s(z)\) be the Potapov–Ginzburg transform of the completed object. Then: \[
 s\in S_\kappa
 \Longleftrightarrow
 s=B_\ell^{-1}s_0=s_0'B_r^{-1},
 \]
-donde \(s_0,s_0'\in S_0\) son Schur ordinarios y \(B_\ell,B_r\) son Blaschke–Potapov de grado \(\kappa\). Por tanto:
+where \(s_0,s_0'\in S_0\) are ordinary Schur functions and \(B_\ell,B_r\) are Blaschke–Potapov products of degree \(\kappa\). Therefore:
 \[
 \boxed{
 \kappa=0
 \Longleftrightarrow
 s\in S_0
 \Longleftrightarrow
-\text{no hay denominador Blaschke–Potapov}
+\text{there is no Blaschke–Potapov denominator}
 }
-\] Para el objeto completado asociado a \(\xi\), por teoría de de Branges–Pontryagin:
+\] For the completed object associated to \(\xi\), by de Branges–Pontryagin theory:
 \[
 \mathrm{ind}_- K_E
 =
 \#\{z\in\mathbb C_+:E(z)=0\},
 \]
-contando multiplicidad, siempre que \(E\) y \(E^\#\) no compartan ceros no reales. Tomando
+counting multiplicity, provided \(E\) and \(E^\#\) share no non-real zeros. Taking
 \[
 E(z)=\xi\!\left(\frac12-iz\right),
 \]
-los ceros fuera de la recta crítica son exactamente ceros no reales de \(E\). Así:
+the zeros off the critical line are exactly the non-real zeros of \(E\). Thus:
 \[
 \boxed{
 RH
@@ -372,45 +374,45 @@ RH
 \Longleftrightarrow
 \kappa=0.
 }
-\] Cuidado sólo con el factor de conteo: según convención,
+\] Careful only with the counting factor: by convention,
 \[
 \kappa
 =
 \#\{z\in\mathbb C_+:E(z)=0\},
 \]
-que corresponde a la mitad del cuarteto funcional de ceros off-line. Conviene fijar si en el texto decís “\(\times2\)” o “mitad del conteo total”. ## Ruta concreta para intentar colapsar \(\kappa\) No intentaría probar directamente \(\kappa=0\). La forma operativa es: 1. Para \(S\) finito, calcular la factorización Kreĭn–Langer: \[ s_S=B_S^{-1}s_{0,S}. \] 2. Estudiar si bajo completación funcional: \[ B_S \to \text{constante unitaria} \] en topología Smirnov/locally uniform. 3. Equivalentemente, probar una cota de pasividad: \[ I-s(z)s(w)^* \quad\text{tiene kernel positivo en }\mathbb C_+. \] Si esa pasividad se obtiene de Bost–/KMS, entonces cruza el muro. El lema objetivo sería: > **Lema KMS–passivity.** El transfer global completado por la simetría modular \(s\leftrightarrow1-s\) es la función característica de una coligación pasiva. Por tanto su PG transform pertenece a \(S_0\). Ese lema implica:
+which corresponds to half of the functional quartet of off-line zeros. It is worth fixing whether in the text you say "\(\times2\)" or "half of the total count". ## Concrete route for trying to collapse \(\kappa\) I would not try to prove \(\kappa=0\) directly. The operative approach is: 1. For finite \(S\), compute the Kreĭn–Langer factorization: \[ s_S=B_S^{-1}s_{0,S}. \] 2. Study whether, under functional completion: \[ B_S \to \text{unitary constant} \] in the Smirnov/locally uniform topology. 3. Equivalently, prove a passivity bound: \[ I-s(z)s(w)^* \quad\text{has positive kernel on }\mathbb C_+. \] If that passivity is obtained from Bost–/KMS, then it crosses the wall. The target lemma would be: > **KMS–passivity lemma.** The global transfer completed by the modular symmetry \(s\leftrightarrow1-s\) is the characteristic function of a passive colligation. Hence its PG transform belongs to \(S_0\). That lemma implies:
 \[
 s\in S_0
 \Longrightarrow
 \kappa=0
 \Longrightarrow
 RH.
-\] Ése es el punto exacto donde una simetría dinámica podría hacer trabajo real. --- # 7. O11.7 — Ceros individuales: ruta determinantal El conteo Weyl nunca dará ceros individuales. Lo correcto es usar determinantes. Por CCM:
+\] That is the exact point where a dynamical symmetry could do real work. --- # 7. O11.7 — Individual zeros: determinantal route Weyl counting will never give individual zeros. The correct approach is to use determinants. By CCM:
 \[
 \det_{\rm reg}(D_{\log}^{(\lambda,N)}-z)
 =
 -i\,\lambda^{-iz}\widehat\xi_{\lambda,N}(z).
-\] Definid la normalización:
+\] Define the normalization:
 \[
 F_{\lambda,N}(z)
 =
 C_{\lambda,N}e^{a_{\lambda,N}z+b_{\lambda,N}}
 \det_{\rm reg}(D_{\log}^{(\lambda,N)}-z).
-\] El teorema necesario es: > Si \(F_{\lambda,N}\to \Xi\) uniformemente en compactos y los \(F_{\lambda,N}\) tienen sólo ceros reales, entonces los eigenvalores de \(D_{\log}^{(\lambda,N)}\) convergen individualmente a los \(\gamma_n\). La prueba es Rouché/Hurwitz: - tomad discos pequeños alrededor de cada cero simple \(\gamma_n\);
-- por convergencia compacta, para \(\lambda,N\) grandes hay exactamente un cero dentro;
-- como los ceros aproximantes son reales, el cero converge a \(\gamma_n\). Equivalente vía log-derivadas:
+\] The needed theorem is: > If \(F_{\lambda,N}\to \Xi\) uniformly on compacta and the \(F_{\lambda,N}\) have only real zeros, then the eigenvalues of \(D_{\log}^{(\lambda,N)}\) converge individually to the \(\gamma_n\). The proof is Rouché/Hurwitz: - take small disks around each simple zero \(\gamma_n\);
+- by compact convergence, for large \(\lambda,N\) there is exactly one zero inside;
+- since the approximating zeros are real, the zero converges to \(\gamma_n\). Equivalently via log-derivatives:
 \[
 \frac{F'_{\lambda,N}}{F_{\lambda,N}}(z)
 \to
 \frac{\Xi'}{\Xi}(z)
 \]
-localmente fuera del eje real, más una normalización en un punto. Así que O11.7 debe reformularse como: \[
+locally off the real axis, plus a normalization at one point. So O11.7 should be reformulated as: \[
 \boxed{
-\text{convergencia determinantal en clase Cartwright}
+\text{determinantal convergence in Cartwright class}
 \Longrightarrow
 -\gamma_n^2\text{ individual}.
 }
-\] Y sí: si esa convergencia se prueba incondicionalmente, se obtiene RH, porque el límite de funciones con ceros reales tendría ceros reales. Es una forma exacta del muro. --- # 8. Pequeño audit sobre O6 La identidad
+\] And yes: if that convergence is proved unconditionally, RH is obtained, because the limit of functions with real zeros would have real zeros. It is an exact form of the wall. --- # 8. Small audit on O6 The identity
 \[
 I_n(L)
 =
@@ -418,13 +420,13 @@ I_n(L)
 -
 [\cos(LJ)]_{n-1,n-1}
 \]
-es correcta. Pero evitaría escribir que el líder Bessel se refuta “porque \(\cos(LJ)\) es acotado”. La acotación no impide decaimiento \(n^{-1/2}\). Lo que refuta el Bessel es el cómputo/asintótica real de esos elementos diagonales, no la mera norma
+is correct. But I would avoid writing that the Bessel ansatz is refuted "because \(\cos(LJ)\) is bounded". Boundedness does not preclude \(n^{-1/2}\) decay. What refutes Bessel is the real computation/asymptotics of those diagonal elements, not the mere norm
 \[
 \|\cos(LJ)\|\le1.
-\] Recomendación de frase: > La identidad exacta reduce la asintótica de \(I_n(L)\) a la diagonal del propagador \(\cos(LJ)\). La conjetura \(C_0J_2(2nL)\) queda refutada por evaluación directa/asintótica de dichos elementos diagonales, no por una consideración de norma. --- # 9. Plan de trabajo inmediato con Alain ## Prioridad 1 — cerrar O5 Haced el test:
+\] Suggested phrasing: > The exact identity reduces the asymptotics of \(I_n(L)\) to the diagonal of the propagator \(\cos(LJ)\). The conjecture \(C_0J_2(2nL)\) is refuted by direct evaluation/asymptotics of those diagonal elements, not by a norm consideration. --- # 9. Immediate work plan with Alain ## Priority 1 — close O5 Run the test:
 \[
 u_k/u_0 \quad\text{vs}\quad U_k(\cos\theta).
-\] Si pasa, escribir la prueba por: \[
+\] If it passes, write the proof via: \[
 \text{Doob transform}
 \Rightarrow
 \text{Mosco convergence}
@@ -432,30 +434,30 @@ u_k/u_0 \quad\text{vs}\quad U_k(\cos\theta).
 \text{radial }S^3
 \Rightarrow
 g_\lambda\to3.
-\] Éste es el punto técnico más prometedor y no toca directamente RH. ## Prioridad 2 — cerrar 11.5 formalmente Escribir \(T_p=D_{\ell_p}C_pD_{-\ell_p}\) y declarar que \(T_S\) es monodromía de un sistema libre con interfaces. Eso convierte 11.5 de “abierto” a “construido en categoría Pontryagin”. ## Prioridad 3 — convertir 11.6 en factorización Kreĭn–Langer Para cada \(S\):
+\] This is the most promising technical point and does not touch RH directly. ## Priority 2 — formally close 11.5 Write \(T_p=D_{\ell_p}C_pD_{-\ell_p}\) and state that \(T_S\) is the monodromy of a free system with interfaces. That turns 11.5 from "open" into "built in the Pontryagin category". ## Priority 3 — turn 11.6 into a Kreĭn–Langer factorization For each \(S\):
 \[
 s_S=B_S^{-1}s_{0,S}.
-\] El muro es:
+\] The wall is:
 \[
 \deg B_{\rm completed}=0.
-\] Esto hace \(\kappa\) computable, estable y comparable con Davenport–Heilbronn/sintéticos. ## Prioridad 4 — O11.7 por determinantes Formular el teorema Cartwright/Rouché y dejar claro: \[
+\] This makes \(\kappa\) computable, stable and comparable against Davenport–Heilbronn/synthetic models. ## Priority 4 — O11.7 via determinants Formulate the Cartwright/Rouché theorem and make clear: \[
 F_{\lambda,N}\to\Xi
 \Longrightarrow
-\text{ceros individuales}.
-\] Ese enunciado es limpio y exactamente equivalente al muro cuando se combina con real-rootedness finita. --- # 10. Resumen corto Los seis abiertos quedan así: \[
+\text{individual zeros}.
+\] That statement is clean and exactly equivalent to the wall when combined with finite real-rootedness. --- # 10. Short summary The six open points stand as follows: \[
 \begin{array}{c|c|c}
-\text{Punto} & \text{Ruta correcta} & \text{Naturaleza} \\
+\text{Point} & \text{Correct route} & \text{Nature} \\
 \hline
-2.3 & \text{Doob + Mosco} \to \text{radial }S^3 & \text{cerrable técnico} \\
-3.2 & \text{Hurwitz + normal family} & \text{depende de 2.3/determinantes} \\
-11.5 & T_p=D_\ell C_pD_{-\ell} & \text{cerrable en Pontryagin} \\
-11.6 & \kappa=\deg B_{\rm KL} & \text{muro} \\
-11.7 & \det_{\rm reg}\to\Xi & \text{muro} \\
-12.3 & \kappa=0\Longleftrightarrow RH & \text{muro exacto} \\
+2.3 & \text{Doob + Mosco} \to \text{radial }S^3 & \text{technically closable} \\
+3.2 & \text{Hurwitz + normal family} & \text{depends on 2.3/determinants} \\
+11.5 & T_p=D_\ell C_pD_{-\ell} & \text{closable in Pontryagin} \\
+11.6 & \kappa=\deg B_{\rm KL} & \text{wall} \\
+11.7 & \det_{\rm reg}\to\Xi & \text{wall} \\
+12.3 & \kappa=0\Longleftrightarrow RH & \text{exact wall} \\
 \end{array}
-\] La idea nueva más concreta para destrabar trabajo técnico es: \[
+\] The most concrete new idea for unblocking technical work is: \[
 \boxed{
-\text{No mirar }u_k.
-\text{ Mirar }u_k/u_0.
+\text{Do not look at }u_k.
+\text{ Look at }u_k/u_0.
 }
-\] Ahí el ladder \((k+1)^2\) se vuelve \(k(k+2)\), que es el espectro radial de \(S^3\). Esa estructura puede dar la prueba uniforme del gap sin norma-resolvente global.
+\] There the ladder \((k+1)^2\) becomes \(k(k+2)\), which is the radial spectrum of \(S^3\). That structure can give the uniform gap proof without the global norm-resolvent.

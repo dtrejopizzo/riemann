@@ -99,7 +99,7 @@ Hilbert-space coefficient.
 Viewed instead as elements of `C((z))`,
 
 \[
- v_z(e_r^+)=0,qquad v_z(e_r^-)=-1,qquad e_r^+(0)=1.
+ v_z(e_r^+)=0,\qquad v_z(e_r^-)=-1,\qquad e_r^+(0)=1.
 \]
 
 The field-valued Contou--Carrere symbol specializes to the tame symbol, so

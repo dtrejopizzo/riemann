@@ -102,7 +102,7 @@ Condition (2.2) has two independent components.  For `F in N_T`, it
 requires
 
 \[
- BC_TF=0,qquad P\mathscr A_TC_TF=0.                \tag{3.1}
+ BC_TF=0,\qquad P\mathscr A_TC_TF=0.                \tag{3.1}
 \]
 
 The first is not formal.  By (1.4),

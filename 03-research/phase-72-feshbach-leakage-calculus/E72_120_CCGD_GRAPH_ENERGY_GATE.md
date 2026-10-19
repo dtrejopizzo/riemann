@@ -1,7 +1,6 @@
 # E72.120 -- Graph-energy gate for CCGD
 
-**Date:** 2026-07-09.
-**Role:** reduce the Cauchy physical-tail condition `C-FIN` to a finite graph-energy bound.
+**Purpose:** reduce the Cauchy physical-tail condition `C-FIN` to a finite graph-energy bound.
 
 ## 0. Setup
 

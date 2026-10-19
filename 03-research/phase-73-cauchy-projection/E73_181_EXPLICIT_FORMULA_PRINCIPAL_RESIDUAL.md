@@ -1,6 +1,5 @@
 # E73.181 - Explicit-formula principal residual
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

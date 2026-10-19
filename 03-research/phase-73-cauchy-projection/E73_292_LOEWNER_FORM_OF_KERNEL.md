@@ -1,6 +1,5 @@
 # E73.292 - Loewner form of the kernel theorem
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

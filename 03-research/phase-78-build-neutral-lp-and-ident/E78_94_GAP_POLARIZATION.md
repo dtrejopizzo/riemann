@@ -1,6 +1,6 @@
 # E78.94 - `U-RADIAL-GAP` polarizes exactly into numerator gain plus denominator deficit
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

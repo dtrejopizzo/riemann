@@ -1,6 +1,6 @@
 # P123.112 — The anomaly radical fails composition stability on local normal tests
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY on the compact
+Status: PROVED-IN-REPOSITORY on the compact
 multiplicative Bruhat test algebra of Q_q^*. This distinguishes the
 local anomaly energy from a trace-of-product intersection. It does
 not assert that every normal test has already been lifted to a scalar

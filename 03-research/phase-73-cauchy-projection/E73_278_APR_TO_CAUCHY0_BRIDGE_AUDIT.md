@@ -1,6 +1,5 @@
 # E73.278 - APR-to-cauchy0 bridge audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

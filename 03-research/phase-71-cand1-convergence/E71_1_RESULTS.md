@@ -1,6 +1,5 @@
 # E71.1 -- CAND-1 reality mechanism: self-adjointness is algebraic, not positivity
 
-**Date:** 2026-07-07.
 **Script:** E71_1_reality_mechanism.py.
 **Question:** is the CCM "self-adjoint by construction" genuinely off the Weil-positivity wall
 (MW-1), or is it positivity in disguise?

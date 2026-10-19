@@ -1,6 +1,5 @@
 # Phase 117 — the transfer comparison, measured
 
-Date: 2026-08-17.
 
 Phase 116 left row (d) resting on two inputs, of which the second —
 the comparison carrying the Gamma–Tate *source model* to the *exact* threshold

@@ -1,5 +1,5 @@
 """Independent audit of the FATAL check: lmin(Q_T) at T=log2, a=0.45, gamma0=300.
-Own quadrature: tanh-graded panels, different npan/ng/taumax from builder's.
+Own quadrature: tanh-graded panels, different npan/ng/taumax from the original script's.
 Own basis_hat via direct numerical integration cross-check on a few modes."""
 import math, numpy as np, scipy.linalg as sla
 from scipy.special import psi as digamma

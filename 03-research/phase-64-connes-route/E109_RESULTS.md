@@ -1,6 +1,6 @@
 # E109 — finite-prime colligation: the scalar route fails at ω=0 (matrix colligation is essential)
 
-**Date:** 2026-06-28 · mpmath dps=25 · Connes §7.2 (finite-prime + normal-convergence criterion).
+mpmath dps=25 · Connes §7.2 (finite-prime + normal-convergence criterion).
 
 ## The criterion (Connes, Montel)
 

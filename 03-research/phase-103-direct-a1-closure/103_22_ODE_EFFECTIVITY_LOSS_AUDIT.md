@@ -226,7 +226,7 @@ Let \(N\ge149\), and put \(T=2\nu^{2/3}>8\).  Variation of constants on
 \]
 because
 \[
- {\pi\over2}|\phi(r)\chi(t)-\chi(r)\phi(t)|\le\pi B^2,qquad
+ {\pi\over2}|\phi(r)\chi(t)-\chi(r)\phi(t)|\le\pi B^2,\qquad
  \int_1^{2\nu^{2/3}}{r^2\over16\nu^2}\,dr\le{1\over6}.          \tag{17}
 \]
 This constant is enormous but numerical and uniform.  Differentiating the
@@ -311,8 +311,8 @@ and integrating (24) yields
 \]
 Consequently, since \(A_{N,2}\le4\sqrt N\),
 \[
- |v(x)|\le G N^{2/3}x^{1/2},qquad
- G=40K_1,qquad x_0\le x\le M.                                   \tag{27}
+ |v(x)|\le G N^{2/3}x^{1/2},\qquad
+ G=40K_1,\qquad x_0\le x\le M.                                   \tag{27}
 \]
 This uses no oscillatory cancellation: it is a positive energy transport
 estimate over just the short mesoscopic interval.

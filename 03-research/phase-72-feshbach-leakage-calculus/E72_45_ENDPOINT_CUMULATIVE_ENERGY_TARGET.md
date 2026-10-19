@@ -1,7 +1,6 @@
 # E72.45 -- Endpoint cumulative-energy target
 
-**Date:** 2026-07-08.
-**Role:** isolate the exact estimate needed after the Green pairing identity E72.44.
+**Purpose:** isolate the exact estimate needed after the Green pairing identity E72.44.
 
 ## 0. Endpoint source
 

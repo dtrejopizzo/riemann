@@ -1,6 +1,6 @@
 # P123.064 — A stable enlargement of the repaired twisted correspondences
 
-Date: 2026-09-06. Status: CONSTRUCTED at fixed S, with continuous dg
+Status: CONSTRUCTED at fixed S, with continuous dg
 composition and a tensor unit. This addresses the stable-category part
 of A.2–A.3, not the whole localization, descent or RR contract of A.
 

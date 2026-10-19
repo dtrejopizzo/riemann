@@ -64,7 +64,7 @@ For
 functoriality of pullback gives canonical equivalences
 
 \[
- j_1^*A_p\simeq\pi_2^*L_p^{-1},qquad
+ j_1^*A_p\simeq\pi_2^*L_p^{-1},\qquad
  j_2^*A_p\simeq\pi_1^*L_p.                                           \tag{2.2}
 \]
 
@@ -72,7 +72,7 @@ For a finite vector `a=(a_p)`, put `L_a=tensor_p L_p^(a_p)`.  Tensoring
 (2.2) gives
 
 \[
- j_1^*\delta_{\rm pr}(a)=\pi_2^*L_a^{-1},qquad
+ j_1^*\delta_{\rm pr}(a)=\pi_2^*L_a^{-1},\qquad
  j_2^*\delta_{\rm pr}(a)=\pi_1^*L_a.                                 \tag{2.3}
 \]
 

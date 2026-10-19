@@ -1,0 +1,1574 @@
+                                              A new hyperbolicity wedge and a joint semicircle limit for
+                                                    Jensen polynomials of Riemann’s ξ-function
+                                                                                       Jonathan Holland
+
+                                                                                        3 August 2026
+
+
+                                                                                              Abstract
+                                                   Let
+                                                                                                                   d  
+                                                             1              X γ(n)
+                                                                                        2n              d,n
+                                                                                                                    X   d
+                                                           ξ   +z       =               z ,         J         (X) =       γ(n + j)X j .
+                                                             2                    n!                                j=0
+                                                                                                                        j
+                                                                            n≥0
+arXiv:2608.08682v1 [math.NT] 9 Aug 2026
+
+
+
+
+                                                The Riemann hypothesis is equivalent to the hyperbolicity of J d,n for every d, n ≥ 0.
+                                                We prove that there is an absolute constant K > 0 such that
+
+                                                                  n3 log2 (n + 2) ≥ Kd5             =⇒          J d,n is hyperbolic.
+
+                                                Along every sequence with n, d → ∞ in this region, the empirical measure of the
+                                                naturally centered and scaled zeros also converges to Wigner’s semicircle law. This
+                                                gives a simultaneous degree–derivative version of the global semicircle consequence of
+                                                the fixed-degree Hermite limit of Griffin, Ono, Rolen, and Zagier.
+
+
+                                          1    Introduction and statement of the result
+                                          Riemann’s completed zeta-function is
+                                                                                  1                s
+                                                                            ξ(s) = s(s − 1)π −s/2 Γ    ζ(s).
+                                                                                  2                 2
+                                          Its functional equation implies that
+                                                                                                             ∞
+                                                                                              1                X γ(n)
+                                                                            ξc (z) := ξ         +z       =                z 2n
+                                                                                              2                      n!
+                                                                                                               n=0
+
+                                          is an even real entire function. The coefficients satisfy γ(n) > 0. For integers d, n ≥ 0,
+                                          define
+                                                                                   d  
+                                                                         d,n
+                                                                                  X     d
+                                                                        J (X) :=           γ(n + j)X j .
+                                                                                        j
+                                                                                              j=0
+
+                                          A real polynomial is called hyperbolic if all its zeros are real. Pólya’s Jensen criterion [7]
+                                          says that the Riemann hypothesis is equivalent to the hyperbolicity of J d,n for all d, n.
+                                             Our main result is the following unconditional region in the (d, n)-plane.
+                                          Theorem 1.1 (Main theorem). There is an absolute constant K > 0 such that, for all
+                                          integers d ≥ 1 and n ≥ 0 satisfying
+
+                                                                                  n3 log2 (n + 2) ≥ Kd5 ,
+
+                                          the Jensen polynomial J d,n has d distinct negative real zeros.
+
+                                                                                                    1
+    Thus hyperbolicity holds uniformly for
+
+                                          d ≤ c n3/5 log2/5 (n + 2)
+
+with a suitable absolute c > 0.
+    There is also a consequence for the derivative-aspect random-matrix picture. Griffin, Ono,
+Rolen, and Zagier proved that, for each fixed d, a centered and scaled Jensen polynomial
+tends to a Hermite polynomial as n → ∞ [2, Theorem 3]. The semicircle law for Hermite
+zeros then gives a global GUE statement after taking d → ∞ in a second limit. The uniform
+comparison used here allows the two parameters to tend to infinity together.
+
+Theorem 1.2 (Joint semicircle limit). Let K be as in Theorem 1.1, and let (nν , dν ) be any
+sequence of positive integers such that
+
+                      nν −→ ∞,            dν −→ ∞,           n3ν log2 (nν + 2) ≥ Kd5ν .
+
+Write ρ1,ν , . . . , ρdν ,ν for the zeros of J dν ,nν and put
+                                                                  r
+                                γ(nν + 1)                             nν              
+                        R1,ν :=           ,           λj,ν :=            1 + R1,ν ρj,ν .
+                                  γ(nν )                              dν
+
+Then, for every bounded continuous function f : R → R,
+                                 ν   d                      Z 2
+                               1 X              1                      p
+                           lim     f (λj,ν ) =                    f (x) 4 − x2 dx.
+                          ν→∞ dν               2π            −2
+                                    j=1
+
+    Theorem 1.2 concerns the global empirical measure. It does not assert local sine-kernel
+statistics, eigenvalue-spacing laws, or edge universality.
+    The proof separates the construction of a real-rooted comparison polynomial from the
+stability of its zeros under the remaining coefficient perturbation. Section 2 introduces the
+quotient coordinates that organize the construction, displays the three nested comparison
+families, and proves the abstract stability principle used at the end. The subsequent sections
+verify its hypotheses. The analytic input is the complex form of the saddle estimate in
+[3, Section 3]; the algebraic input consists of Jacobi root estimates and the real-root and
+logarithmic-mesh properties of finite-free multiplicative convolution [4, Propositions 2.7 and
+2.17]. After the hyperbolicity proof is complete, Section 11 identifies the semicircle law for
+the comparison model and transfers it to the Jensen zeros.
+
+
+2     Comparison coordinates and proof architecture
+Fix n and normalize the coefficient sequence by
+                                                                      2
+                                                                    Rk+1
+                                         γ(n + j)
+               R0 := 1,       Rj :=               ,        qk :=                (j ≥ 1, k ≥ 0).   (1)
+                                           γ(n)                    Rk Rk+2
+
+Then
+                                                    d  
+                                         J d,n (X) X d
+                                                  =      Rj X j .
+                                           γ(n)        j
+                                                      j=0
+
+Multiplying Rj by S j only rescales the polynomial variable and does not change any qk .
+These quotient invariants are the natural coordinates for the comparison.
+   We note the following, whose proof is immediate:
+
+                                                       2
+Lemma 2.1 (Quotient coordinates). Let R
+                                      e0 = R0 = 1 and R
+                                                      e1 = R1 . If
+
+                                 Re2
+                                   k+1
+                                        = qk              (0 ≤ k ≤ m − 2),
+                                Rk R
+                                e  ek+2
+
+     ej = Rj for 0 ≤ j ≤ m.
+then R
+
+   The construction passes through three nested ratio families:
+
+                                     Sj
+                     Lj (B, S) :=        ,                                 B, S > 0,            (2)
+                                    (B)j
+                                    S j (A)j
+                  Jj (A, B, S) :=              ,                           A, B, S > 0,         (3)
+                                    Aj (B)j
+
+                                      j
+                                           (A)j (C)j Dj
+            Fj (A, B, C, D, S) := S                           ,            A, B, C, D, S > 0.   (4)
+                                          Aj C j (B)j (D)j
+
+The Laguerre family is the limit of the Jacobi family as A → ∞, while
+
+                                 Fj (A, B, C, C, S) = Jj (A, B, S).
+
+The polynomial associated with the first family is
+                          d  
+                          X  d
+                               Lj (B, S)X j = 1 F1 (−d; B; −SX)
+                             j
+                          j=0
+                                                            d!
+                                                      =        L B−1 (−SX),                     (5)
+                                                           (B)d d
+
+so it has d simple negative zeros.
+     The role of the three families can now be stated without their parameter calculations.
+The Laguerre family is scaled to match R1 and R2 . Its error at R3 has a definite positive
+sign; that sign permits a Jacobi parameter A > 0 to match R1 , R2 , R3 . The Jacobi model
+has a defect of the opposite sign at R4 . A second Jacobi factor, introduced through finite-free
+multiplicative convolution, absorbs that defect and produces a model matching R0 , . . . , R4
+exactly. Lemma 2.1 reduces each matching assertion to the corresponding equations for the
+qk .
+     It remains to explain why matching five coefficients is enough. The following proposition
+isolates the final argument from the special functions used to construct the model.
+
+Proposition 2.2 (Fifth-order multiplier stability). Let d ≥ 5, and let
+                                                      d
+                                                      X
+                                             p(y) =         pj y j
+                                                      j=0
+
+be a real polynomial with d simple positive zeros and p(0) ̸= 0. For r > 0, put
+
+                                Ωr := {z ∈ C : dist(z, [0, d]) ≤ 2r}.
+
+Suppose that c is holomorphic on a neighborhood of Ωr , that c(0), . . . , c(d) are real, and that
+
+                c(0) = · · · = c(4) = 1,           c(d) > 0,         sup |c − 1| ≤ ε < 16.
+                                                                     Ωr
+
+
+                                                      3
+Define
+                                                      d
+                                                      X
+                                       P (y) :=             pj c(j)y j .
+                                                      j=0
+
+If, at every critical point y of p,
+
+                                y k p(k) (y)
+                                             ≤ rk               (0 ≤ k ≤ d),             (6)
+                                    p(y)
+
+then P has d simple positive zeros. Moreover, if NQ (t) denotes the number of zeros of a
+polynomial Q in (0, t], counted with multiplicity, then
+
+                                      sup |NP (t) − Np (t)| ≤ 1.                         (7)
+                                      t>0
+
+Proof. Write
+                                          k         
+                                                k−ℓ k
+                                          X
+                                  k
+                                ∆ c(0) :=   (−1)      c(ℓ).
+                                                    ℓ
+                                                 ℓ=0
+
+Newton interpolation gives
+                                                d
+                                                X               y k p(k) (y)
+                                 P (y) =              ∆k c(0)                .           (8)
+                                                                     k!
+                                                k=0
+
+Indeed, substitute c(j) = jk=0 kj ∆k c(0) and interchange the two finite sums.
+                          P       
+
+   For k ≥ 1, repeated use of the fundamental theorem of calculus gives
+                                 Z
+                         k
+                        ∆ c(0) =      c(k) (t1 + · · · + tk ) dt1 · · · dtk .
+                                       [0,1]k
+
+Cauchy’s estimate on disks of radius ρ < 2r centered on [0, d], followed by ρ ↑ 2r, therefore
+yields
+                                    |∆k c(0)|     ε
+                                              ≤       .                                   (9)
+                                       k!       (2r)k
+The five matching conditions imply
+
+                          ∆0 c(0) = 1,           ∆k c(0) = 0          (1 ≤ k ≤ 4).
+
+At a critical point of p, equations (8)–(9) and (6) give
+                                                        d
+                                P (y)       X        ε
+                                      −1 ≤ε   2−k <    < 1.
+                                p(y)                16
+                                                       k=5
+
+Thus P and p have the same sign at every critical point. They also have the same sign
+at 0 and for large positive y, because c(0) = 1 and c(d) > 0. The signs of p at 0, at its
+d − 1 critical points, and at +∞ alternate. Hence the intermediate value theorem gives a
+sign-changing zero of P in each of the d intervening intervals. These exhaust its degree, so
+all are simple. The zeros of p′ strictly interlace those of p, so p also has one zero in each
+of these intervals. If t lies in one of them, p and P have the same number of zeros in all
+preceding intervals, and their counts inside the interval containing t differ by at most one.
+This proves (7).
+
+
+                                                        4
+    The rest of the proof verifies the hypotheses of Proposition 2.2. The saddle estimate
+gives the two defect signs needed to choose the model parameters and, after exact matching
+through R4 , the bound
+                                                  d5/2
+                               sup |c − 1| ≪ 3/2           .
+                                Ωr           n log(n + 2)
+The finite-free factorization gives the required positive roots, and a perturbed Jacobi
+equation gives (6). The condition that the displayed error be uniformly small is exactly
+d5 ≪ n3 log2 (n + 2).
+
+
+3       Moment representation and the Laguerre baseline
+The integral representation below explains the distinguished Laguerre normalization used
+to identify the positive defect at R3 .
+    Write                                             
+                                                 1
+                                     Ξ(t) := ξ     + it .
+                                                 2
+Riemann’s standard integral representation has the form
+                              Z ∞
+                       Ξ(t) =      Φ(u) cos(tu) du,    Φ(u) > 0,
+                                 0
+
+where Φ is the kernel obtained from the Jacobi theta series; the integral and all the
+differentiations used below converge absolutely. Put
+                                        Z ∞
+                                  Mn :=      Φ(u)u2n du.
+                                            0
+
+Since ξc (z) = Ξ(−iz), comparison of the expansions of cosh(zu) and ξc (z) gives
+                                                    n!
+                                       γ(n) =           Mn .                          (10)
+                                                  (2n)!
+    Define the tilted kernel probability measure
+                                                  Φ(u)u2n
+                                     dPn (u) :=           du
+                                                    Mn
+and let U denote its coordinate random variable. Legendre’s duplication formula
+                                                   √
+                                        
+                                       1
+                            Γ(z)Γ z +      = 21−2z π Γ(2z)
+                                       2
+gives
+                              γ(n + j)     1
+                                       = j       En [U 2j ].                         (11)
+                                γ(n)    4 n + 21 j
+Consequently,
+                                                              
+                                          d  
+                        J d,n (X)        X    d   (XU    2 )j
+                                  = En                       
+                          γ(n)                j 4j n + 12 j
+                                         j=0
+
+                                                     1 XU 2
+                                                                
+                                  = En 1 F1 −d; n + ; −
+                                                     2         4
+                                                              XU 2
+                                                                 
+                                        d!         n− 21
+                                  =         En Ld          −         .               (12)
+                                     n + 21 d                   4
+
+
+                                                  5
+For every fixed U > 0, the polynomial inside the expectation in (12) has d distinct negative
+roots, although averaging does not in general preserve hyperbolicity.
+   There is, however, an exact hyperbolicity-preserving random-dilation model. Let
+                                           1
+                                  b := n + ,      B > b,
+                                           2
+and let Z have the beta distribution Beta(b, B − b). Then
+                                                     (b)j
+                                         E[Z j ] =          .
+                                                     (B)j
+It follows immediately that, for a > 0,
+                                                           
+                                      aZX                    aX
+                     E 1 F1 −d; b; −         = 1 F1 −d; B; −      .                      (13)
+                                        4                     4
+This is the beta–Sonine index-raising operation for Laguerre polynomials. With S = a/4,
+it realizes the Laguerre family (2) as a scaled beta dilation of the baseline in (12). This
+explains why that family is the first comparison model; no factorization of the tilted kernel
+measure is asserted.
+
+
+4    The analytic saddle and the first defect
+The saddle calculation is used in three places: to determine the sign of the Laguerre error
+at R3 , to determine the sign of the Jacobi error at R4 , and to bound the fifth derivative of
+the final residual multiplier. We record all the required derivative information here.
+   Continue the moment in (10) by its absolutely convergent Mellin integral and define
+                                              Γ(z + 1)
+                                   γ(z) :=              Mz .
+                                              Γ(2z + 1)
+The same duplication formula gives
+                             √                                  Z ∞
+                               π Mz
+                    γ(z) = z            ,        Mz :=                Φ(u)u2z du.        (14)
+                           4 Γ(z + 21 )                         0
+
+To identify this continuation with the saddle formula in [3, Section 3], set
+                                    Z ∞
+                                                             2
+                                                       X
+                           F (s) :=     (log t)s t−3/4   e−πk t dt.
+                                     1                      k≥1
+
+The continuation of the exact kernel identity in [3, (3.1)], with the normalization corrected
+as explained below, is
+                                                                 
+                              −2z−2       2z
+                       Mz = 2         32       F (2z − 2) − F (2z) .                     (15)
+                                           2
+For real x > 3, let Lx be the positive solution of
+                                                    
+                                                Lx 3
+                                    x = Lx πe +        .                                 (16)
+                                                   4
+For complex x in the right half-plane, Lx denotes the branch of the holomorphic continuation
+used in [3, Section 3]. Put
+                                                      3
+                                   Qx := (1 + Lx )x − L2x .
+                                                      4
+The main saddle term is
+                                                  Lx    x     1
+                       G0 (x) := (x + 1) log Lx +    −      − log Qx .                  (17)
+                                                   4    Lx 2
+
+                                                6
+Proposition 4.1 (Sectorial logarithmic saddle). There are 0 < θ < π/2 and x0 > 0 such
+that Mz is nonzero in
+                        Sθ := {z ∈ C : |z| ≥ x0 , | arg z| ≤ θ}.
+On this sector, let h(z) = log Mz be the branch real on the positive axis. If N = 2z − 2, then
+                                      
+                                          2z
+               h(z) = G0 (N ) + log 32          − (2z + 2) log 2 + csad + R(z),            (18)
+                                           2
+where csad is real. For every fixed 0 < ε0 < 1/2 and 0 ≤ r ≤ 5,
+                                R(r) (z) = Oε0 ,r,θ |z|−r−1+ε0
+                                                               
+                                                                                              (19)
+uniformly on a slightly smaller closed sector.
+   Here h is the exact logarithm of the continued moment, whereas G0 is only its principal
+saddle contribution, evaluated at N = 2z − 2. The remaining explicit terms account for
+normalization, and R is the controlled analytic remainder.
+
+Proof. Write N = 2z − 2 and
+                                                3  QN
+                              KN := L−1   −2
+                                             
+                                     N + LN N −   = 2 .
+                                                4  LN
+The complex form of [3, (3.2)], stated in the sentence following that equation, is uniform on
+every fixed closed sector in ℜz > 1 and reads, in the normalization of this paper,
+                           ez−2 z z+1/2 LN   2π 1/2
+                                                                       
+                                         N                  LN    N     3
+                  γ(z) = 2z−2 N +1/2                  exp      −     +
+                           2      N          KN              4   LN     4
+                                            −1+ε0
+                                                   
+                             × 1 + Oε0 (|z|       ) .                                     (20)
+Here all powers use the branches obtained by continuation from the positive axis. The
+factor 22z−2 incorporates a normalization that is easy to miss: with Λ(s) = π −s/2 Γ(s/2)ζ(s),
+the coefficients in [2] are those of (4w2 − 1)Λ( 12 + w) = 8ξ( 12 + w). Thus the right sides of [3,
+(3.1)–(3.2)], when used for the coefficients defined here, are divided by 8. This affects only
+an additive constant after taking logarithms. It does not affect the results of [3], whose use
+of these coefficients in Section 3 is through ratios in which the constant cancels.
+    The leading factor in (20) is holomorphic and nonzero on a sufficiently small fixed
+sector. For large |z| the relative error has modulus below 1/2, so γ(z) and, by (14), Mz are
+nonzero there. Taking the logarithm, using KN = QN /L2N , and applying sectorial Stirling
+asymptotics to Γ(z + 12 ) in (14) gives (18). Consolidating the remaining elementary terms
+into the explicit terms following G0 (N ) changes only csad + O(|z|−1 ).
+    The difference between the two sides of (20), divided by its nonzero leading factor, is
+holomorphic. Hence so is the logarithmic remainder R. A disk |ζ − z| ≤ δ|z| about a
+point in a smaller closed sector stays in the original sector, and |ζ| ≍ |z| there. Cauchy’s
+inequalities applied to the O(|z|−1+ε0 ) remainder prove (19).
+
+Lemma 4.2 (Signed moment-saddle derivatives). Put
+                                          Lx := L2x−2 .
+As x → +∞,
+                                                
+                                 ′′     2        1
+                               h (x) =      1+O        ,                                      (21)
+                                       xLx       Lx
+                                                  
+                                ′′′       2         1
+                               h (x) = − 2    1+O        .                                    (22)
+                                        x Lx        Lx
+
+
+                                                7
+In addition,                                                   
+                                  (4)          4                1
+                              h         (x) = 3            1+O      .                                 (23)
+                                             x Lx               Lx
+There are absolute constants η, C > 0 such that
+                                                                  C
+                                        |h(4) (x + w)| ≤                ,                             (24)
+                                                             x3 log x
+                                                                C
+                                        |h(5) (x + w)| ≤                                              (25)
+                                                             x4 log x
+
+whenever |w| ≤ ηx.
+
+Proof. Differentiating the saddle equation gives
+                                                           LN
+                                                L′N =         .
+                                                           QN
+Using this identity in G0 gives
+                                         1
+                              G′′0 (N ) =    + O(N −2 ),                                              (26)
+                                        QN
+                                             1
+                             G′′′                  1 + O(L−1
+                                                              
+                               0 (N ) = − 2               N ) ,                                       (27)
+                                          N LN
+                              (4)          2
+                                                 1 + O(L−1
+                                                            
+                             G0 (N ) = 3                 N ) ,                                        (28)
+                                        N LN
+                                                  
+                              (5)              1
+                             G0 (N ) = O             .                                                (29)
+                                            N 4 LN
+
+Indeed, QN = N LN (1 + O(L−1             ′                −1
+                               N )) and QN = LN (1 + O(LN )); the last two formulas follow
+by further differentiation of (27).
+    The asserted estimates follow from Proposition 4.1 and (26)–(29); the chain rule con-
+tributes the factors 2m . The elementary terms following G0 (2z − 2) in (18), and the
+remainder controlled by (19), are of lower order. A sufficiently small fixed η > 0 makes
+every disk |w| ≤ ηx lie in the sector, which proves the two uniform bounds.
+
+Lemma 4.3 (Positive Laguerre defect at R3 ). For all sufficiently large n, q0 > 1. Set
+                                                                            (L)
+                BL := (q0 − 1)−1 ,             SL := BL R1 ,           Rj         := Lj (BL , SL ).
+
+Then the Laguerre model matches the first two normalized coefficients,
+                                        (L)                  (L)
+                                    R1        = R1 ,        R2     = R2 ,
+
+and predicts
+                                              (L)
+                             (L)         (R2 )2            BL + 2    1
+                            q1 :=         (L) (L)
+                                                       =          =2− .
+                                         R1 R3             BL + 1    q0
+Moreover,
+                                                    (L)                    
+                                  R3    q     2                              1
+                     Dn := log (L) = log 1 = 2                         1+O      .                     (30)
+                              R          q1 n Ln                            Ln
+                                   3
+In particular, Dn > 0 for all sufficiently large n.
+
+
+
+                                                       8
+Proof. Put b = n + 21 and
+
+                ℓ(x) := log(1 + x−1 ),                δ0 := h(n + 2) − 2h(n + 1) + h(n),
+
+                               δ1 := h(n + 3) − 2h(n + 2) + h(n + 1).
+Equation (14) gives
+
+                         log q0 = ℓ(b) − δ0 ,             log q1 = ℓ(b + 1) − δ1 .           (31)
+
+Lemma 4.2 and the integral formulas for finite differences give
+                                             2
+                                                 1 + O(L−1
+                                                            
+                                          δ0 =           n ) ,                               (32)
+                                            nLn
+                                               2
+                                                    1 + O(L−1
+                                                               
+                                  δ1 − δ0 = − 2            n ) .                             (33)
+                                             n Ln
+
+Since ℓ(b) ∼ n−1 , equations (31) and (32) show that q0 > 1 for all sufficiently large n. Direct
+                            (L)         (L)                                          (L)
+substitution in (2) gives R1 = R1 , R2 = R2 , and the displayed formula for q1 .
+                                                        (L)
+   Define F(x) := log(2 − e−x ). The exact relation q1 = 2 − q0−1 and F(ℓ(b)) = ℓ(b + 1)
+imply
+
+                                 Dn = F(ℓ(b) − δ0 ) − ℓ(b + 1) + δ1
+                                             b
+                                    = δ1 −        δ0 + O(δ02 )
+                                           b+2
+                                                     2
+                                    = (δ1 − δ0 ) +      δ0 + O(δ02 ).
+                                                   b+2
+Substitution of (32) and (33) gives (30).
+
+
+5    First correction: the three-coefficient Jacobi model
+We now absorb the positive R3 defect in Lemma 4.3. For the Jacobi family (3), the first
+two quotient invariants are
+
+                                    (J)         A(B + 1)
+                                   q0 (A, B) :=          ,                                   (34)
+                                                B(A + 1)
+                                    (J)         (A + 1)(B + 2)
+                                   q1 (A, B) :=                .                             (35)
+                                                (B + 1)(A + 2)
+
+They satisfy
+                                          (J)                       
+                                     q0 − 1              (J)       2
+                                          (J)
+                                                      = q0      1+     .                     (36)
+                                     q1 − 1                        A
+                         (J)                    (J)
+Consequently, solving q0 = q0 and q1 = q1 gives the following formulas. Put
+
+                                                         q0 − 1
+                                                  T :=          .                            (37)
+                                                         q1 − 1
+For all sufficiently large n, define
+                                                         
+                       2q0                1            1
+                AJ :=        ,               := q0 1 +      − 1,             SJ := BJ R1 .   (38)
+                      T − q0              BJ           AJ
+
+                                                         9
+Lemma 5.1 (Positive Jacobi parameters). The parameters in (38) are positive and satisfy
+                                                                 
+                                                   1            n
+            AJ ∼ nLn ,       BJ ∼ n,     BJ − n +       =O            .            (39)
+                                                   2          log n
+             (L)
+Proof. Let q1 = 2 − q0−1 . Since (31), (32), and (33) give log q1 ∼ n−1 , we have q1 > 1. On
+                           (L)                      (L)
+the other hand, Dn = log(q1 /q1 ) > 0 gives q1 < q1 . The identity
+
+                                            (L)            q0 − 1
+                                           q1     −1=
+                                                             q0
+then gives T > q0 . Thus AJ > 0, and the remaining two parameters in (38) are positive.
+   For later use, observe that
+                                                             (L)
+                                                  (q0 − 1)(q1   − q1 )
+                                    T − q0 =                (L)
+                                                                       .                (40)
+                                                  (q1 − 1)(q1 − 1)
+
+Equations (31) and (32) imply q0 − 1 ∼ n−1 . Lemma 4.3 gives
+
+                                (L)             (L)                   2
+                               q1     − q1 = q1 (1 − e−Dn ) ∼             .
+                                                                    n2 Ln
+                   (L)
+Both q1 − 1 and q1       − 1 are asymptotic to n−1 . Hence (40) gives
+                                                            2
+                                            T − q0 ∼           ,
+                                                           nLn
+and therefore AJ ∼ nLn .
+   The second equation in (38), together with q0 − 1 ∼ n−1 and AJ ≍ n log n, gives BJ ∼ n.
+More precisely, (31) shows
+                                                          
+                                         1            1
+                             q0 − 1 =        +O              .
+                                      n + 12       n log n
+
+It follows that                                               
+                                      1      1            1
+                                         =        +O             ,
+                                      BJ   n + 12      n log n
+which proves the last estimate in (39).
+
+Lemma 5.2 (Refined Jacobi scales). As n → ∞,
+
+                                    AJ = nLn 1 + O(L−1
+                                                        
+                                                     n ) ,                              (41)
+                                             n
+                                                1 + O(L−1
+                                                           
+                                    BJ = n +            n ) .                           (42)
+                                             Ln
+
+Consequently, with b = n + 12 ,
+                                                  n
+                                                     1 + O(L−1
+                                                               
+                                      BJ − b =              n ) .
+                                                  Ln
+Proof. Keep the notation in the proof of Lemma 5.1. Equations (32), (33), and (30), with
+one further term absorbed in their relative O(L−1
+                                               n ) errors, give
+
+                                                   2
+                                                      1 + O(L−1
+                                                                
+                                    T − q0 =                 n ) .
+                                                  nLn
+
+                                                      10
+The first formula in (38) proves (41).
+   Also,                                                      
+                                                          1
+                                           q0 =        1+          e−δ0 ,
+                                                          b
+and hence                                                    
+                                           1   2       1    1
+                                q0 − 1 =     −   +O       +     .
+                                           n nLn      nL2n n2
+Using (41) in the second formula of (38) yields
+                                                        
+                                  1   1  1        1    1
+                                     = −    +O       +     .
+                                  BJ  n nLn      nL2n n2
+Inversion proves (42).
+
+   Define the Jacobi model ratios
+                                           (J)
+                                          Rj     := Jj (AJ , BJ , SJ ).                  (43)
+
+Lemma 5.3 (Exact matching through R3 ). For j = 0, 1, 2, 3,
+                                                    (J)
+                                                  Rj       = Rj .
+
+Proof. The choice SJ = BJ R1 matches R1 . Equations (38) and (36) match q0 and q1 .
+Lemma 2.1 now gives the assertion.
+
+    To determine whether a second positive Jacobi factor can correct R4 , continue the
+logarithm of the ratio between the actual coefficients and the first Jacobi model. For z in a
+fixed neighborhood of {0, 1, 2, 3, 4}, define
+
+              EJ (z) := log γ(n + z) − log γ(n) − z log SJ + z log AJ
+                       + log Γ(BJ + z) − log Γ(BJ ) − log Γ(AJ + z) + log Γ(AJ ),        (44)
+
+where the branches are real on the positive axis. We write ψ = Γ′ /Γ and ψ (m) for its mth
+derivative. For integer j ≥ 0,
+                                                  Rj
+                                    EJ (j) = log (J) .
+                                                 Rj
+Lemma 5.3 therefore gives
+
+                                 EJ (0) = EJ (1) = EJ (2) = EJ (3) = 0.                  (45)
+
+Writing b = n + 21 , four differentiations of (44) and (14) give
+                         (4)
+                      EJ (z) = h(4) (n + z) + ψ (3) (BJ + z) − ψ (3) (b + z)
+                                                           − ψ (3) (AJ + z).             (46)
+
+Lemma 5.4 (Negative Jacobi defect at R4 ). For fixed z in a bounded set,
+                                    (4)                2
+                                                               1 + O(L−1
+                                                                         
+                                   EJ (z) = −                         n ) .              (47)
+                                                   n3 Ln
+In particular,
+                                                       2            −1
+                                                                         
+                               Qn := −EJ (4) =              1 + O(L n  )   >0            (48)
+                                                     n3 L n
+for all sufficiently large n.
+
+                                                          11
+Proof. Equation (46), together with (23), gives
+                                                 4
+                              h(4) (n + z) =           1 + O(L−1
+                                                                 
+                                                              n )
+                                               n3 Ln
+uniformly for bounded z. By Lemma 5.2 and the mean-value formula,
+                                                                        
+       (3)            (3)                (4)                   2    (5)
+      ψ (BJ + z) − ψ (b + z) = (BJ − b)ψ (b + z) + O (BJ − b) sup |ψ (u)|
+                                                                               u≍n
+                                         6
+                                            1 + O(L−1
+                                                      
+                                     =− 3          n ) .
+                                       n Ln
+Here we used
+                                    6
+                      ψ (4) (u) = − 4 + O(u−5 ),        ψ (5) (u) = O(u−5 ).
+                                   u
+Finally, ψ (3) (AJ + z) = O(n−3 L−3
+                                  n ). This proves (47).
+    Since EJ vanishes at 0, 1, 2, 3 by (45), the Hermite–Genocchi formula writes EJ (4) as
+                   (4)
+the average of EJ over the simplex spanned by 0, 1, 2, 3, 4. The same uniform asymptotic
+therefore proves (48).
+
+
+6    Second correction: the four-coefficient finite-free model
+We now use the sign in Lemma 5.4 to match R4 . For U, V > 0, define
+
+                                              (U + k)(V + k + 1)
+                              qk (U, V ) :=                      .                     (49)
+                                              (V + k)(U + k + 1)
+
+This is the kth quotient invariant of the Jacobi family Jj (U, V, S). Since
+
+                        Fj (A, B, C, D, S) = Jj (A, B, S)Jj (C, D, D),
+
+the kth quotient invariant of the finite-free family is
+
+                                        qk (A, B)qk (C, D).
+
+For the first Jacobi model,
+
+                               qk = qk (AJ , BJ )      (k = 0, 1).
+
+Moreover, because the Jacobi model agrees with Rj for 0 ≤ j ≤ 3,
+                                          q2
+                               log                 = −EJ (4) = Qn .                    (50)
+                                     q2 (AJ , BJ )
+
+    Fix
+                                              1
+                                        D := BJ .                                       (51)
+                                              2
+This convenient choice places the second Jacobi factor on the same n-scale as the first and
+leaves three unknown parameters for the three quotient equations. By Lemma 2.1, matching
+through R4 now reduces to finding A, B, C > 0 satisfying
+
+                           qk (A, B)qk (C, D) = qk ,       k = 0, 1, 2.                (52)
+
+
+
+
+                                                12
+Lemma 6.1 (Four-coefficient parameter matching). There is an absolute constant Kr ≥ 32
+such that, for all sufficiently large n, system (52) has a real solution with
+                                         6
+                                     A = AJ 1 + O(L−1
+                                                        
+                                                     n ) ,                                     (53)
+                                         5
+                                           n
+                                              1 + O(L−1
+                                                        
+                                B − BJ =             n ) ,                                     (54)
+                                         3Ln
+                                           n
+                                               1 + O(L−1
+                                                          
+                                C −D =                n ) .                                    (55)
+                                         24Ln
+If
+                                       n3 log2 (n + 2) ≥ K4 d5                                 (56)
+with K4 sufficiently large, then
+                                                                            1
+                   A ≥ 8B,      B ≥ Kr d,     D ≥ Kr d,         4d ≤ C − D ≤ D.                (57)
+                                                                            4
+Proof. Put
+                                                         U +k
+                                      fk (U ) := log          .
+                                                       U +k+1
+After taking logarithms, (52) becomes
+
+                           fk (A) − fk (B) + fk (C) − fk (D) = log qk .                        (58)
+
+Set L = Ln and introduce scaled variables by
+                                                       bn                   cn
+                        A = aAJ ,        B = BJ +         ,       C =D+        .
+                                                       L                    L
+The expansion
+                                      1   k + 12    k 2 + k + 31
+                        fk (U ) = −     +        −               + O(U −4 )                     (59)
+                                     U     U2            U3
+is uniform, together with its first derivatives in the scaled variables, when k = 0, 1, 2 and
+(a, b, c) ranges over a fixed compact subset of (0, ∞) × R2 .
+     To make the implicit-function step explicit, subtract the Jacobi model and set
+                                             
+                                           bn               cn 
+    Hn,k (a, b, c) := fk (aAJ ) − fk BJ +        + fk D +         − fk (D) − fk (AJ ) + fk (BJ ).
+                                           L                 L
+
+Equations (58) and (50) are equivalent to
+
+                               Hn,0 = Hn,1 = 0,               Hn,2 = Qn .
+
+The value and the first two finite differences in k occur at successive powers of n−1 . Introduce
+the correspondingly rescaled map
+
+          Gn (a, b, c) := nLHn,0 , n2 L(Hn,1 − Hn,0 ), n3 L(Hn,2 − 2Hn,1 + Hn,0 ) .
+                                                                                    
+
+By Lemma 5.4, the required target is
+
+                               0, 0, n3 LQn = 0, 0, 2 + O(L−1 ) .
+                                                              
+
+The expansion (59) and Lemma 5.2 show, uniformly with first derivatives on a neighborhood
+of the limiting solution, that
+
+              Gn (a, b, c) = 1 − a−1 − b + 4c, 2b − 16c, −6b + 96c + O(L−1 ).
+                                                                  
+
+
+                                                  13
+Thus the limiting equations are
+
+                                      1 − a−1 − b + 4c = 0,                          (60)
+                                                2b − 16c = 0,                        (61)
+                                              −6b + 96c = 2.                         (62)
+
+The unique solution is                                                
+                                                              6 1 1
+                                x∗ := (a∗ , b∗ , c∗ ) =        , ,         .
+                                                              5 3 24
+   We now quantify the perturbation argument. Let Φn be Gn minus its required target
+and let Φ∞ be the vector of the three limiting left sides in (60)–(62). Thus
+
+               Φn (a, b, c) = Gn (a, b, c) − 0, 0, n3 LQn ,
+                                                         
+
+               Φ∞ (a, b, c) = 1 − a−1 − b + 4c, 2b − 16c, −6b + 96c − 2 .
+                                                                          
+
+
+Write ∥ · ∥∞ for the maximum norm and its induced matrix norm, and set
+                                                       
+                                     3                3
+                           B := x ∈ R : ∥x − x∗ ∥∞ ≤      .
+                                                     20
+
+Define the actual C 1 error on this cube by
+
+               εn := sup max {∥Φn (x) − Φ∞ (x)∥∞ , ∥DΦn (x) − DΦ∞ (x)∥∞ } .          (63)
+                     x∈B
+
+The uniform expansions above say precisely that εn = O(L−1 ). At x∗ the limiting Jacobian
+and its inverse are
+                                                                             
+                         25/36 −1       4                   36/25 27/25 3/25
+       J := DΦ∞ (x∗ ) =  0       2 −16 ,         J −1 =  0        1     1/6  .
+                           0     −6 96                        0    1/16 1/48
+
+In particular, ∥J −1 ∥∞ = 66/25. Moreover, if x = (a, b, c) ∈ B, then
+
+                                                       36 −2 25   15
+                         ∥I − J −1 DΦ∞ (x)∥∞ =            a −    ≤ .                 (64)
+                                                       25     36  49
+
+   Take n large enough that εn ≤ 1/30. The map
+
+                                     Tn (x) := x − J −1 Φn (x)
+
+satisfies, by (63) and (64),
+                                             15 66    15   11  2
+                      sup ∥DTn (x)∥∞ ≤         + εn ≤    +    < .
+                      x∈B                    49 25    49 125   5
+
+Also
+                                                          66      11
+                                ∥Tn (x∗ ) − x∗ ∥∞ ≤          εn ≤     .
+                                                          25      125
+It follows that, for every x ∈ B,
+                                               11   2 3   37   3
+                           ∥Tn (x) − x∗ ∥∞ ≤      +     =     < .
+                                               125 5 20   250  20
+
+
+                                                  14
+Thus Tn maps B into itself and is a contraction. Its unique fixed point xn solves the exact
+system, and the contraction estimate gives
+
+                                             (66/25)εn  22
+                         ∥xn − x∗ ∥∞ ≤                 = εn = O(L−1 ).                  (65)
+                                              1 − 2/5   5
+
+This proves (53)– (55) without a qualitative implicit-function argument.
+    Finally, (56) gives d = O(n3/5 log2/5 n) = o(n/ log n). Since A/B ∼ (6/5)Ln , we also
+have A ≥ 8B beyond a fixed threshold. Equations (53)– (55), after increasing K4 and
+excluding a fixed finite range of n, imply (57). The finite range is absorbed by one further
+increase of the eventual absolute constant.
+
+   Put
+                                                 S := BR1                               (66)
+and define the model ratios
+                                       (F)
+                                   Rj        := Fj (A, B, C, D, S).                     (67)
+               (F)
+The identity R1      = S/B = R1 , together with (52), gives the following.
+
+Lemma 6.2 (Exact matching through R4 ). For 0 ≤ j ≤ 4,
+                                                     (F)
+                                                 Rj        = Rj .
+
+Proof. The assertion holds at j = 0, 1. For the sequence in (67), its three consecutive
+quotient invariants are precisely
+                                    (F)
+                                 (Rk+1 )2
+                                  (F)     (F)
+                                                 = qk (A, B)qk (C, D).
+                                Rk Rk+2
+
+Apply (52) successively for k = 0, 1, 2.
+
+   Make the change X = −y/S and put
+
+                                      J d,n (−y/S)
+                           PF (y) :=                ,                                   (68)
+                                           γ(n)
+                                        d
+                                                        (A)j (C)j Dj j
+                                                  
+                                               j d
+                                      X
+                            pF (y) :=     (−1)                       y
+                                                  j Aj C j (B)j (D)j
+                                      j=0
+                                                          
+                                             −d, A, C Dy
+                                   = 3 F2             ;       .                         (69)
+                                              B, D AC
+
+Define
+                                                 (F)         Rj
+                                                cj     :=     (F)
+                                                                    .                   (70)
+                                                            Rj
+                                                                           (F)
+Then PF is obtained from pF by the coefficient multiplier cj , and
+
+                                         (F)                  (F)
+                                        c0      = · · · = c4        = 1.                (71)
+
+
+
+
+                                                       15
+7      Real-rootedness and localization of the comparison model
+The parameter construction has so far matched coefficients. Its second purpose is algebraic:
+after the change of variable X = −y/S, the finite-free family becomes a coefficientwise
+convolution of two Jacobi polynomials with positive zeros.
+    For polynomials written in the normalized form
+                         d                            d         
+                                j d                             j d
+                        X                              X
+                                         j
+                 p(y) =    (−1)      aj y ,    q(y) =     (−1)       bj y j ,
+                                   j                               j
+                           j=0                                     j=0
+
+their multiplicative finite-free convolution is
+                                                d       
+                                                      j d
+                                                X
+                                 (p ⊠d q)(y) :=   (−1)     aj bj y j .
+                                                        j
+                                                 j=0
+
+This operation preserves positive real-rootedness [4, Proposition 2.7]. Its logarithmic-mesh
+property preserves simplicity when one factor has distinct positive roots [4, Proposition 2.17].
+Lemma 7.1 (Multiplicative interval bound). Suppose the roots of p lie in [u− , u+ ] ⊂ (0, ∞)
+and the roots of q lie in [v− , v+ ] ⊂ (0, ∞). Then every root of p ⊠d q lies in
+                                            [u− v− , u+ v+ ].
+Proof. For a polynomial with nonzero constant term, let
+                                                     xd p(1/x)
+                                         p∨ (x) :=             .
+                                                        p(0)
+A coefficient calculation shows that (p⊠d q)∨ = p∨ ×d q ∨ , where ×d is the monic normalization
+of the same multiplicative convolution. The largest-root inequality
+                                  λmax (f ×d g) ≤ λmax (f )λmax (g)
+is [5, Theorem 1.13]. Applied to p∨ , q ∨ , it gives the lower endpoint u− v− . Applying it once
+more after taking reciprocal polynomials gives the upper endpoint u+ v+ .
+Lemma 7.2 (Ordered multiplicative bound). Let
+                           0 < u1 ≤ · · · ≤ ud ,        0 < w1 ≤ · · · ≤ wd
+be the ordered roots of p and p ⊠d q, respectively. If all roots of q belong to [v− , v+ ] ⊂ (0, ∞),
+then
+                              v− ui ≤ wi ≤ v+ ui       (1 ≤ i ≤ d).                             (72)
+Proof. We first recall a consequence of preservation of interlacing. Give positive-rooted
+monic polynomials the coordinatewise root order. If f precedes g in this order, one can
+pass from f to g by moving the roots, one at a time, from the largest to the smallest. Each
+consecutive pair in this finite chain interlaces. Multiplicative finite-free convolution with a
+positive-rooted polynomial preserves the direction of interlacing [4, Proposition 2.11]; hence
+it also preserves the coordinatewise root order.
+    Apply this observation to the reciprocal polynomials used in the proof of Lemma 7.1.
+                          −1 −1
+The roots of q ∨ lie in [v+ , v− ], so monotonicity and the identity
+                                      f ×d (x − a)d = ad f (x/a)
+give
+                             −1                            −1
+                                λi (p∨ ) ≤ λi (p ⊠d q)∨ ≤ v−  λi (p∨ ).
+                                                       
+                            v+
+Reciprocating and reversing the indices proves (72).
+
+                                                   16
+Lemma 7.3 (Finite-free model roots). Under (57), the polynomial pF has d distinct positive
+roots. Every root and every critical point y satisfies
+                                            √                     1
+                              |y − B| ≤ Cloc Bd,                    B ≤ y ≤ 2B                             (73)
+                                                                  4
+with an absolute constant Cloc .
+Proof. Factor (69) as
+                                                 pF = p1 ⊠d p2 ,                                           (74)
+where                                                                                             
+                                           y                                                Dy
+              p1 (y) = 2 F1       −d, A; B;    ,              p2 (y) = 2 F1         −d, C; D;          .
+                                            A                                                 C
+For U, V > 0, write
+                                                                                   
+                                                 y    d!    (V −1,U −V −d)     2y
+              qU,V (y) := 2 F1        −d, U ; V ;    =      P                 1−      .
+                                                  U    (V )d d                   U
+Put α = V − 1, β = U − V − d, and H = α + β = U − d − 1. After transporting the standard
+Jacobi matrix [8, Chapter IV] by y = U (1 − t)/2, its kth diagonal entry is
+
+                                            H(V + 2k) + 2k(k + 1)
+                                        U                         .                                        (75)
+                                            (H + 2k)(H + 2k + 2)
+Its off-diagonal entry between rows k − 1 and k is
+                                                                    1/2
+                    U          k(k + α)(k + β)(k + H)
+                                                                            ,         1 ≤ k < d.           (76)
+                 2k + H       (2k + H − 1)(2k + H + 1)
+We record a ratio-free estimate for this matrix. Suppose that
+
+                                        U ≥ V + d,              V ≥ 32d.                                   (77)
+
+Then H ≥ V − 1 ≥ 31d. Subtracting V from (75) gives the exact expression
+
+                              2k(k + H + 1)(U − 2V ) + V H(d − 1)
+                                                                  .                                        (78)
+                                     (H + 2k)(H + 2k + 2)
+
+Since |U − 2V | ≤ U , U = H + d + 1, and V ≤ H + 1, the two terms in the absolute value of
+(78) are bounded respectively by
+                                                 32 33             32
+                                            2d           and          d.
+                                                 31 31             31
+Here we used k + H + 1 ≤ H + d ≤ (32/31)H, U ≤ H + 2d ≤ (33/31)H, and V ≤ H + d ≤
+(32/31)H. Their sum is less than 4d. For an off-diagonal entry put β = U −V −d = H +1−V .
+Under (77), 0 ≤ β ≤ H, and
+
+                                           (k + β)(k + H)
+                                                               ≤ 1.
+                                      (2k + H − 1)(2k + H + 1)
+
+Also U/(2k + H) √ ≤ 33/31 and k + V − 1 ≤ V + d ≤ (33/32)V . Hence every off-diagonal
+                                                                                √
+entry is at most 2 V d, and the two entries adjacent to a row have sum at most 4 V d.
+   Gershgorin’s theorem therefore gives
+                                              √             √
+                        roots(qU,V ) ⊂ [V − CJ V d, V + CJ V d]                    (79)
+
+                                                         17
+with, for example, CJ = 8. Indeed, A ≥ 8B, B ≥ Kr d, and Kr ≥ 32 imply (77) for
+(U, V ) = (A, B), so this applies to p1 = qA,B .
+    For the second factor, use
+                                                              
+                                     d!   (D−1,C−D−d)      2Dy
+                          p2 (y) =      Pd              1−       .
+                                   (D)d                     C
+Both Jacobi parameters exceed −1. The inequalities D ≥ Kr d and C − D ≥ 4d imply (77)
+for (U, V ) = (C, D). We need a sharper estimate than (79) for the semicircle limit. Set
+G := C − D and H = C − d − 1 = D + G − d − 1. Under (57),
+                                                                    C  17
+                            H ≥ D,          |C − 2D| ≤ D,             ≤ .
+                                                                    H  16
+The exact difference (78), now with (U, V ) = (C, D), is bounded in absolute value by 4d.
+Indeed, k + H + 1 ≤ H + d ≤ (33/32)H, so its two numerator terms, after division by the
+denominator, are at most (66/32)d and d.
+   For the off-diagonal entries, β = G − d and
+                                    33                                      33
+                  k+D−1≤               D,       k + β ≤ G,          k+H ≤      H.
+                                    32                                      32
+Both denominator factors inside √the square root in (76) are at least H. It follows that every
+off-diagonal entry is at most 2 Gd. Gershgorin’s theorem therefore gives
+                                                √                 √
+                      roots(qC,D ) ⊂ [D − 4d − 4 Gd, D + 4d + 4 Gd].
+Since p2 (y) = qC,D (Dy),
+                                                                    p
+                                                            4(d +    (C − D)d)  1
+               roots(p2 ) ⊂ [1 − η, 1 + η],          η :=                      < .       (80)
+                                                                      D         2
+The last inequality follows from d/D ≤ 1/32 and (C − D)/D ≤ 1/4. Both factors have
+simple positive roots. The cited positivity and logarithmic-mesh theorems give simplicity
+                                                                                 √
+and positivity for (74). Lemma 7.1, together with D ≍ B, gives |y − B| ≤ Cloc Bd for
+every root. Critical points lie between consecutive roots. Fixing Kr after Cloc makes the
+last two inequalities in (73) follow from B ≥ Kr d.
+
+
+8     The fifth-order residual multiplier
+We have constructed a positive-rooted model whose normalized coefficients agree with those
+of the Jensen polynomial at j = 0, 1, 2, 3, 4. We now continue the logarithm of their ratio
+away from the integers and use those five zeros to control the entire coefficient multiplier.
+Lemma 8.1 (Fifth-order residual bound). There are absolute constants K5 , Cdef > 0 with
+the following property. Suppose d ≥ 5 and
+                                      n3 log2 (n + 2) ≥ K5 d5 .
+Put                       √
+                  rF := K6 Bd,              ΩF := {z ∈ C : dist(z, [0, d]) ≤ 2rF },
+where K6 is a sufficiently large absolute constant. There is a holomorphic function cF on a
+                                         (F)
+neighborhood of ΩF such that cF (j) = cj for 0 ≤ j ≤ d and
+
+                                                              d5/2
+                              sup |cF − 1| ≤ Cdef                       .                (81)
+                               ΩF                       n3/2 log(n + 2)
+
+                                                   18
+Proof. On the sector in Proposition 4.1, let g = log γ be the branch real on the positive
+axis. Define
+
+              EF (z) := g(n + z) − g(n) − z log S + z log A + z log C − z log D
+                        + log Γ(B + z) − log Γ(B) − log Γ(A + z) + log Γ(A)
+                        + log Γ(D + z) − log Γ(D) − log Γ(C + z) + log Γ(C).                 (82)
+                                            (F)
+At every integer 0 ≤ j ≤ d, eEF (j) = cj .
+   The fifth-wedge hypothesis and Lemma 6.1 imply
+
+                      A ≍ n log n,        B ≍ C ≍ D ≍ n,      d + 2rF = o(n).
+
+After increasing K5 , the set n + ΩF lies in the sectorial neighborhood on which g is defined,
+and every term in (82) is holomorphic on a neighborhood of ΩF .
+   Let b = n + 12 . Five differentiations, followed by (14), give
+                (5)
+              EF (z) = h(5) (n + z) + ψ (4) (B + z) − ψ (4) (b + z) − ψ (4) (A + z)
+                         + ψ (4) (D + z) − ψ (4) (C + z).                                    (83)
+
+Equation (25) bounds the first term by C∗ /(n4 log n). The parameter asymptotics give
+                                                             C∗ n
+                                   |B − b| + |C − D| ≤            .
+                                                            log n
+
+The series for ψ (5) and the mean-value formula therefore give
+                                                                                    C∗
+           |ψ (4) (B + z) − ψ (4) (b + z)| + |ψ (4) (D + z) − ψ (4) (C + z)| ≤    4
+                                                                                         .
+                                                                                 n log n
+
+Finally, |ψ (4) (A + z)| ≤ C∗ /A4 . Consequently
+
+                                             (5)       C∗
+                                   sup |EF | ≤      4
+                                                                .                            (84)
+                                     ΩF            n log(n + 2)
+
+   By (71), the real value of EF vanishes at 0, 1, 2, 3, 4. The set ΩF is convex, so the
+Hermite–Genocchi formula and (84) give
+                                       C∗
+                  |EF (z)| ≤                    |z(z − 1)(z − 2)(z − 3)(z − 4)|.
+                               5! n4 log(n + 2)
+Since rF ≥ d and B ≍ n,
+
+                                               rF5              d5/2
+                      sup |EF | ≤ C∗       4
+                                                       ≤ C∗ 3/2         .
+                       ΩF                 n log(n + 2)     n log(n + 2)
+
+For K5 large the last expression is at most 1/2. Taking cF = eEF and using |ew − 1| ≤ 2|w|
+for |w| ≤ 1/2 proves (81).
+
+
+9    Critical-point derivative bounds
+The multiplier estimate in Lemma 8.1 verifies the analytic hypothesis of Proposition 2.2.
+It remains to verify the derivative-ratio hypothesis at the critical points of the finite-free
+model.
+
+                                                   19
+Lemma 9.1 (Critical-point derivative ratios). Let the parameters be the solution supplied
+by Lemma 6.1, and assume (56) with its constant sufficiently large. Let y be a critical point
+of pF and put
+                                               (k)
+                                          y k pF (y)
+                                   Tk :=             .
+                                             pF (y)
+If K6 in the definition of rF is sufficiently large, then, for all sufficiently large n,
+
+                                   |Tk | ≤ rFk       (0 ≤ k ≤ d).                           (85)
+
+Proof. The hypergeometric equation is a small perturbation of the Jacobi equation because
+(C − D)/C = O(L−1  n ). We first control the failure of pF to satisfy the Jacobi equation and
+then use the differentiated Jacobi recurrence to bound all the ratios Tk .
+   Write E = y d/ dy for the Euler operator and
+                                                                
+                                  y  ′′               (d − 1)y
+                    J p := y 1 −      p + B−y+                     p′ + dp.
+                                  A                        A
+The hypergeometric equation for (69) is
+                                                               
+                                        Dy
+             E(E + B − 1)(E + D − 1) −     (E − d)(E + A)(E + C) pF = 0.
+                                        AC
+Put εp = (C − D)/C. Since D/C = 1 − εp and (E + D − 1)y = y(E + D), the equation
+factors exactly as
+                                            εp
+                        (E + D)J pF = − E(E − d)(E + A)pF .                 (86)
+                                            A
+    Set W = J pF and, at the fixed critical point,
+
+                                                 y m W (m) (y)
+                                      Um :=                    .
+                                                     pF (y)
+Differentiating (86) m times gives
+
+                                 Um+1 + (D + m)Um = −εp Vm ,                                (87)
+
+where
+                                   ym
+                         Vm :=            {E(E − d)(E + A)pF }(m) (y).
+                                 A pF (y)
+Since W has degree at most d, Ud+1 = 0.
+   Write r = rF and let
+                                                      |Tk |
+                                        M := max            .
+                                                 0≤k≤d r k
+
+Expanding the cubic Euler operator and differentiating monomials gives, with Tk = 0 for
+k > d,
+                     1
+              Vm = {Tm+3 + (A − d + 3 + 3m)Tm+2 + βm Tm+1 + γm Tm },
+                     A
+where the coefficients are explicitly
+
+     βm = A(2m + 1 − d) − d(2m + 1) + 3m2 + 3m + 1,                 γm = m(m − d)(m + A).
+
+For 0 ≤ m ≤ d, the bounds in (57) imply |βm | ≤ C∗ Ad and |γm | ≤ C∗ Ad2 . Consequently
+
+                                                        d d2
+                                                              
+                                    m+2        r   d
+                      |Vm | ≤ C∗ Mr      1+ + + + 2 .                                (88)
+                                              A A r         r
+
+                                                  20
+If r/D ≤ 1/4, backward substitution in (87), beginning with Ud+1 = 0, gives
+
+                                                             d d2
+                                                                  
+                            C ∗ εp       m+2        r   d
+                 |Um | ≤             Mr        1+ + + + 2 .                            (89)
+                         D(1 − r/D)                A A r         r
+
+   On the other hand, differentiating the Jacobi operator gives the exact identity
+                                                                   
+                         y                         (d − 1 − 2m)y
+             yUm = 1 −        Tm+2 + B + m − y +                      Tm+1
+                          A                                 A
+                                    m 
+                   + (d − m) 1 +         yTm .                                         (90)
+                                     A
+Since y ≤ 2B and A ≥ 8B, we have 1 − y/A ≥ 3/4. For 0 ≤ m ≤ d − 2, define
+
+                               |B + m − y + (d − 1 − 2m)y/A|
+                         am :=                               ,
+                                         (1 − y/A)r
+                               (d − m)(1 + m/A)y
+                         bm :=                    .
+                                   (1 − y/A)r2
+                    √
+Lemma 7.3 and r = K6 Bd give the explicit bounds
+                                                    
+                                4 Cloc d 6dB
+                          am ≤           + +           ,                               (91)
+                                3 K6        r     Ar
+                                             
+                                  8         d
+                          bm ≤         1 +      .                                      (92)
+                                3K62       A
+
+The contribution of yUm in (90), after division by (1 − y/A)rm+2 , is at most ϑn,d M, where
+
+                                                   d d2
+                                                       
+                             4C∗ εp y/D        r d
+                     ϑn,d :=                 1+ + + + 2 .                              (93)
+                               3 1 − r/D       A A r r
+
+   The wedge hypothesis implies
+                              d    −1/5
+                                ≤ K4 n−2/5 log2/5 (n + 2).
+                              n
+Together with the parameter asymptotics, this shows uniformly in the wedge that
+
+               r d d d2 r                                       y
+                , , ,  ,  −→ 0,              εp = O(L−1
+                                                     n ),         = O(1).
+               A A r r2 D                                       D
+Choose K6 so that the fixed terms in (91)–(92) are small, and then choose n large enough
+that
+                                1             1             1
+                           am ≤ ,       bm ≤ ,       ϑn,d ≤
+                                4             4             4
+for every admissible d and m. Equations (89) and (90) now show
+
+                           |Tm+2 |   1 |Tm+1 | 1 |Tm | 1
+                              m+2
+                                   ≤          +       + M.
+                            r        4 rm+1     4 rm   4
+Now T0 = 1 and T1 = 0. If M > 1, choose an index at which the maximum is attained.
+It is at least 2, and the last inequality gives M ≤ 3M/4, a contradiction. Thus M ≤ 1,
+proving (85).
+
+
+
+                                            21
+10     Completion of the proof
+Proof of Theorem 1.1. Let n0 exceed all fixed thresholds in the preceding lemmas. Choose
+K larger than K4 , K5 , the constants required in the root and derivative-ratio estimates, and
+
+                                 1 + max m3 log2 (m + 2).
+                                       0≤m<n0
+
+Increase it once more so that (81) is at most 1/2 whenever the main hypothesis holds. Then
+n3 log2 (n + 2) ≥ Kd5 implies n ≥ n0 .
+    If d ≤ 4, then Lemma 6.2 matches every coefficient of the two degree-d polynomials, so
+PF = pF . Lemma 7.3 proves the conclusion directly.
+    Suppose d ≥ 5. Lemma 7.3 gives d simple positive zeros for pF . Lemma 8.1 supplies a
+holomorphic multiplier cF on ΩF with
+                                                         1
+                                           sup |cF − 1| ≤ .
+                                            ΩF           2
+
+                                (F)
+At the integers, cF (j) = Rj /Rj > 0, and (71) gives cF (0) = · · · = cF (4) = 1. Lemma 9.1
+verifies (6) with r = rF . All the hypotheses of Proposition 2.2 are therefore satisfied, so PF
+has d simple positive zeros.
+    Finally,
+                                              J d,n (−y/S)
+                                     PF (y) =
+                                                   γ(n)
+with S > 0. Hence J d,n has d distinct negative real zeros.
+
+
+11     The joint semicircle limit
+Let µsc denote the probability measure
+                                             1 p
+                             dµsc (x) :=        4 − x2 1[−2,2] (x) dx.
+                                            2π
+Lemma 11.1 (Semicircle law for the comparison model). Suppose that n, d → ∞ through
+pairs satisfying the hypothesis of Theorem 1.1. If 0 < y1 ≤ · · · ≤ yd are the roots of pF , then
+                                       d
+                                  1X
+                                     δ(yi −B)/√Bd =⇒ µsc .                                  (94)
+                                  d
+                                      i=1
+
+Proof. The parameter asymptotics in Lemmas 5.2 and 6.1 give, with G := C − D,
+                    B                 D   1           B             G
+                      −→ 1,             −→ ,            −→ 0,         −→ 0.                 (95)
+                    n                 n   2           A             B
+The wedge gives d/B → 0.
+    First consider the roots u1 ≤ · · · ≤ ud of p1 = qA,B . Let J1 be the Jacobi matrix with
+entries (75) and (76), for (U, V ) = (A, B), and write its diagonal and off-diagonal entries as
+  (1)       (1)
+Dk and Ek . The estimate proved before (79) gives
+                                      (1)      r
+                                    |Dk − B|     d
+                               max    √      ≤4    = o(1).                                  (96)
+                              0≤k<d      Bd      B
+
+
+
+                                                 22
+If H = A − d − 1, the exact off-diagonal formula gives, uniformly for 1 ≤ k < d,
+                   (1)
+                 (Ek )2      A2      B + k − 1 (H + k + 1 − B)(H + k)
+                        =          2
+                   Bk     (H + 2k)       B     (H + 2k − 1)(H + 2k + 1)
+                                        
+                                 d     B
+                        =1+O         +     = 1 + o(1).                                    (97)
+                                B      A
+
+Here A/(H + 2k) = 1 + O(d/A), (B + k − 1)/B = 1 + O(d/B), and the final quotient on
+the first line is 1 + O(B/A + d/A), all uniformly in k.                              √
+   Let Hd be the d × d tridiagonal matrix with zero diagonal and off-diagonal entries k
+between rows k − 1 and k, 1 ≤ k < d. Equations (96) and (97) imply
+
+                                  J1 − BI  Hd
+                                   √      −√      = o(1).                                 (98)
+                                     Bd      d op
+
+We used here the elementary bound that the norm of a symmetric tridiagonal matrix is at
+most the largest absolute diagonal entry plus twice the largest absolute off-diagonal entry.
+The characteristic polynomial of Hd is the monic probabilists’ Hermite polynomial. Its
+normalized empirical spectral measure tends to µsc . For completeness, this follows directly
+from traces: a nearest-neighbor walk count gives, for every fixed m ≥ 0,
+
+                             Hd 2m
+                                             
+                      1                  1     2m
+                  lim tr √          =               ,     tr(Hd2m+1 ) = 0.
+                 d→∞ d        d        m +  1  m
+Indeed, away from the two boundary rows, each closed walk of length 2m has m upward and
+m downward steps and                     m         −1
+                     contributes (k/d) + Om (d
+                  2m R 1 m
+                                                 √ ) when it starts in row k; averaging
+over k produces m 0 x dx. The matrices Hd / d have norm at most 2, so the moment
+limits give weak convergence. Weyl’s inequality and (98) now show that
+                                    d
+                                 1X
+                                    δ(ui −B)/√Bd =⇒ µsc .                                 (99)
+                                 d
+                                   i=1
+
+   It remains to check that the second finite-free factor is negligible on this scale. By (80)
+and Lemma 7.2,                                             √
+                                                    4(d + Gd)
+                           |yi − ui | ≤ ηui ,   η=               .
+                                                         D
+                                   √
+Equation (79) gives ui ≤ B + CJ Bd. Since B/D stays bounded,
+                                           √        √
+                        |yi − ui |     d + Gd B + Bd
+                   max √           ≪             √
+                  1≤i≤d      Bd           D        Bd
+                                         r      r !         r !
+                                            d    G             d
+                                   ≪          +        1+           = o(1)
+                                           B     B             B
+
+by (95). Combining this uniform pairing with (99) proves (94).
+
+Proof of Theorem 1.2. Suppress the index ν. Let 0 < yb1 ≤ · · · ≤ ybd be the roots of PF . The
+proof of Theorem 1.1 applies Proposition 2.2 to pF and PF . Consequently, (7) gives
+
+                               1                 1               1
+                         sup     #{i : ybi ≤ t} − #{i : yi ≤ t} ≤ .                     (100)
+                         t>0   d                 d               d
+The same bound holds after any one-to-one affine change of variable.
+
+                                             23
+     If ρi is the Jensen zero corresponding to ybi , then S = BR1 and (68) give
+                                        r                    r
+                                ybi       n                    n ybi − B
+                       ρi = −       ,        (1 + R1 ρi ) = −      √     .
+                              BR1          d                   B     Bd
+Lemma 11.1, (100), and B/n → 1 show that the empirical measure of the expressions on
+the left converges to the reflection of µsc . The semicircle law is symmetric, so this reflection
+is µsc itself.
+
+
+12      Discussion
+The published theorem of Griffin, Ono, Rolen, Thorner, Tripp, and Wagner gives hyperbol-
+icity for n ≥ ced ; arXiv v3 records the sharper threshold n ≥ ced/2 [3, Theorem 1.1]. Their
+comparison is Hermite. Here the comparison stays in the positive-root class: the positive
+error at R3 selects the first Jacobi deformation, and the negative error at R4 is absorbed by
+the second finite-free factor.
+     Theorem 1.2 improves the order of limits in the global    p derivative-aspect GUE statement
+of [2]. In their   notation   δ(n) ∼ (2n)−1/2 , so the factor    n/d in Theorem 1.2 is the leading
+             √
+form of 1/( 2d δ(n)); centering at −1/R1 uses the exact first coefficient ratio. Their theorem
+first fixes d and lets n → ∞, obtaining a Hermite polynomial, after which the semicircle law
+is recovered as d → ∞. Here the two limits are simultaneous throughout the polynomial
+wedge. No claim is made about local GUE correlations.
+     After R1 , . . . , R4 have been matched, the logarithmic multiplier vanishes at five consecu-
+tive indices and has fifth derivative O(1/(n4 log    √ n)). The root localization and perturbed
+Jacobi equation give the derivative scale rF ≍ nd. Consequently the remaining error is
+                                        √      !                    !
+                                       ( nd)5              d5/2
+                                   O              =O                  ,
+                                      n4 log n           n3/2 log n
+
+which yields the stated wedge. The constants in the Jacobi localization can be taken
+explicitly; the proof above uses CJ = 8, and the localization itself requires only A ≥ B + d
+rather than A ≥ 64(B + d). The later differential recurrence is where the modest condition
+A ≥ 8B is used. No attempt is made to optimize the eventual absolute constant.
+    This result controls an asymptotic region and does not provide a converse route from
+partial Jensen hyperbolicity to the Riemann hypothesis; see Farmer [1]. O’Sullivan’s modified
+Pólya–Jensen criterion gives a complementary use of Hermite combinations [6].
+
+
+References
+ [1] D. W. Farmer, Jensen polynomials are not a plausible route to proving the Riemann
+     hypothesis, Adv. Math. 411 (2022), Paper No. 108781. https://arxiv.org/abs/
+     2008.07206.
+
+ [2] M. Griffin, K. Ono, L. Rolen, and D. Zagier, Jensen polynomials for the Riemann
+     zeta function and other sequences, Proc. Natl. Acad. Sci. USA 116 (2019), no. 23,
+     11103–11110. https://arxiv.org/abs/1902.07321.
+
+ [3] M. J. Griffin, K. Ono, L. Rolen, J. Thorner, Z. Tripp, and I. Wagner, Jensen polynomials
+     for the Riemann xi-function, Adv. Math. 397 (2022), Paper No. 108186. https:
+     //arxiv.org/abs/1910.01227.
+
+
+                                               24
+[4] A. Martı́nez-Finkelshtein, R. Morales, and D. Perales, Real roots of hypergeometric
+    polynomials via finite free convolution, Int. Math. Res. Not. IMRN (2024), no. 16,
+    11642–11687. https://arxiv.org/abs/2309.10970.
+
+[5] A. W. Marcus, D. A. Spielman, and N. Srivastava, Finite free convolutions of polyno-
+    mials, Probab. Theory Related Fields 182 (2022), 807–848. https://arxiv.org/abs/
+    1504.00350.
+
+[6] C. O’Sullivan, Zeros of Jensen polynomials and asymptotics for the Riemann xi function,
+    Res. Math. Sci. 8 (2021), Paper No. 46. https://arxiv.org/abs/2007.13582.
+
+[7] G. Pólya, Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion, Acta
+    Math. 48 (1926), 305–317.
+
+[8] G. Szegő, Orthogonal Polynomials, 4th ed., American Mathematical Society Colloquium
+    Publications, vol. 23, American Mathematical Society, Providence, RI, 1975.
+
+
+
+
+                                           25
+

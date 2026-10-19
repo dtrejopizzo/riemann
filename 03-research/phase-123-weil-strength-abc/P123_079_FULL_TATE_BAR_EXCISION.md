@@ -1,6 +1,6 @@
 # P123.079 — Full Tate bar comparison by the ideal-word filtration
 
-Date: 2026-09-06. Status: PROVED as a strict quasi-isomorphism of the
+Status: PROVED as a strict quasi-isomorphism of the
 displayed completed augmented bar complexes. A continuously split
 chain-homotopy equivalence or general mixed RR is not asserted.
 

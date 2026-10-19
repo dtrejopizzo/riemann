@@ -1,6 +1,6 @@
 # P123.089 — A covariant full-label normal boundary representation
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY on the two-prime
+Status: PROVED-IN-REPOSITORY on the two-prime
 boundary. Includes a finite normal-cutoff comparison for external
 parameters fixing the boundary quotient; full distributional descent
 and a determinant-valued comparison are not asserted.

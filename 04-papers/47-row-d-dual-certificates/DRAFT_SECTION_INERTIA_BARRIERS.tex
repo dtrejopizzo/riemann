@@ -1,0 +1,533 @@
+% =====================================================================
+% DRAFT SECTION FOR PAPER 47 -- NOT INTEGRATED INTO main.tex
+% Editor draft, 2026-10-12. Owner decides. Every statement below was
+% checked against the paper's own definitions (eq:symbol, eq:form, eq:W,
+% def:PD, def:W/eq:nuw, P_T, Gamma_T of prop:nodes, Pi_T of
+% subsec:arch, S_c of thm:P, V_T of prop:finite, lem:roughEF,
+% lem:monoT, cor:margin2). See CHECK_TABLE.md.
+% Macros used are those of main.tex (\PT, \IT, \cF, \Fh, \PiT, \Aconst,
+% \lamA, \Rel). New bib entry needed: Trudgian2014 (see flag below).
+% Lines starting with "% EDITOR FLAG" must be resolved before integration.
+% =====================================================================
+
+\section{Inertia, remainders and barrier theorems}\label{sec:inertia}
+
+This section records what the \emph{inertia} of the forms of this paper, that is, the number of
+negative directions rather than the value of the bottom, can and cannot decide. All forms are
+on $L^2(\IT)$ with the metric of $L^2(\IT)$; $n_-(\mathfrak q|V)$ is the largest dimension of a
+subspace of $V\cap$(form domain) on which $\mathfrak q<0$, as in Lemma~\ref{lem:parity}. Recall from
+\S\ref{subsec:arch} that $\mathfrak a_T=\Gamma_T+\PiT$ on $L^2(\IT)$, with
+$\Gamma_T(F)=\frac1{2\pi}\int m|\Fh|^2$ and $\PiT(F)=-\sum_{n\in\NT}v_n\Rel\cF(\log n)$.
+% EDITOR FLAG (notation, not normalization): main.tex l.2316 writes \PiT(F)=-\sum v_n c_F(\log n)
+% without Re; for complex F this is not real. All uses are for real F; add \Rel there.
+
+\subsection{The Sonin split of the truncated form}
+Connes and Consani \cite[Thm.~4.7, (83)--(84)]{ConnesConsani2021} define the Sonin projection $\mathbf S$
+and a real, even, continuous function $\varepsilon$ on $\R_+^*$ with
+$\operatorname{Tr}(\vartheta(f)\mathbf S)=W_\infty(f)+\int f(\rho^{-1})\varepsilon(\rho)\,d^*\rho$. In the additive
+variable ($f=g*g^*$, $F(t)=g(e^t)$ after the conjugation $\Delta^{1/2}$ of their Appendix~A) we write
+\[
+\mathrm{Son}(F):=\operatorname{Tr}\big(\vartheta(g)\mathbf S\vartheta(g)^*\big)\ge0,\qquad
+\mathfrak e(F):=\int_{-2T}^{2T}\cF(x)\,\varepsilon(e^{|x|})\,dx=\langle C_\varepsilon F,F\rangle ,
+\]
+where $C_\varepsilon$ is the integral operator on $L^2(\IT)$ with the continuous kernel $\varepsilon(e^{|x-y|})$;
+it is Hilbert--Schmidt, and we put $\kappa_T:=\|C_\varepsilon\|\le4T\max_{[1,e^{2T}]}|\varepsilon|$.
+
+\begin{theorem}[the Sonin split]\label{thm:inertia-split}
+For every $T>0$ and every $F\in C_c^\infty(\IT)$, with no moment condition,
+\[
+\mathfrak a_T(F)=\mathrm{Son}(F)+\mathfrak r_T(F),\qquad
+\mathfrak r_T(F):=-\mathfrak e(F)+\PiT(F)
+=-\int_{-2T}^{2T}\cF(x)\varepsilon(e^{|x|})\,dx-\sum_{n\in\NT}v_n\Rel\cF(\log n).
+\]
+\end{theorem}
+\begin{proof}
+See R183\_018 \S3 (hostile review R183\_020). We verify the normalization. In the dictionary of
+\cite[(152)--(154)]{ConnesConsani2021}, $W_\infty(g*g^*)=\frac1{2\pi}\int h_+|\Fh|^2$ with
+$h_+(\tau)=\Rel\psi(\frac14+\frac{i\tau}2)-\log\pi$, which is $m$ of \eqref{eq:symbol}; no polar term occurs, so
+$W_\infty(g*g^*)=\Gamma_T(F)$, not $\Ainf(F)$. By (83) and cyclicity, $\Gamma_T=\mathrm{Son}-\mathfrak e$. Adding
+$\PiT$ gives $\mathfrak a_T=\Gamma_T+\PiT$, which is \eqref{eq:form} since
+$\frac1{2\pi}\int\cos(\tau\log n)|\Fh|^2=\Rel\cF(\log n)$ and $v_n=2\Lambda(n)/\sqrt n$; the semilocal prime term of
+R183\_018, $-\sum_{p}2\log p\sum_{k\log p<2T}p^{-k/2}\Rel\cF(k\log p)$, is the same sum over $n=p^k\in\NT$.
+\end{proof}
+
+The prime form is bounded ($\|\PiT\|\le\Aconst$, \S\ref{subsec:arch}) but is not a compact perturbation.
+
+\begin{proposition}[the prime form at the first contact]\label{thm:inertia-B2}
+Let $\frac12\log2<T<\frac12\log3$, so $\NT=\{2\}$ and $\Aconst=v_2=\sqrt2\log2$. Then
+$\operatorname{spec}(\PiT)=\{-\frac{\log2}{\sqrt2},0,\frac{\log2}{\sqrt2}\}$, each point of infinite multiplicity,
+and $\|\PiT\|=\Aconst/2$. For every $T>\frac12\log2$, $\PiT$ has infinite positive and infinite negative index
+on $\PT\cap\{\int F=0\}$.
+\end{proposition}
+\begin{proof}
+Put $a=\log2$. For $r\in[0,a)$ the map $F\mapsto(F(-T+r+ja))_{j}$ is unitary from $L^2(\IT)$ onto
+$\int^\oplus_{[0,a)}\C^{n(r)}dr$ with $n(r)=2$ for $r<2T-a$ and $n(r)=1$ otherwise. Since
+$\cF(a)=\int F(t)\overline{F(t-a)}dt$ couples only $j$ and $j-1$ in a fibre, $\PiT$ acts on a $2$-dimensional fibre
+as $-v_2\begin{psmallmatrix}0&1/2\\1/2&0\end{psmallmatrix}$ and is $0$ on a $1$-dimensional one; both sets of $r$
+have positive measure. The last assertion is Theorem~\ref{thm:inertia-nogo} with $k=0$, and with the sign of one
+bump in each pair reversed for the positive index. (R183\_018 \S4, R183\_023 \S2.1.)
+\end{proof}
+
+\subsection{Infinite index of every bounded remainder, and finite index with a fraction of Sonin}
+
+\begin{theorem}[infinite negative index]\label{thm:inertia-nogo}
+Let $T>\frac12\log2$ and let $k\in L^\infty(-2T,2T)$ be real and even, with $C_k$ the operator with kernel
+$k(x-y)$ on $L^2(\IT)$. For every $N\ge1$ there is an $N$-dimensional subspace of
+$C_c^\infty(\IT)\cap\PT$ on which $-\langle C_kF,F\rangle+\PiT(F)<0$ for $F\ne0$. Hence
+$n_-\big(-C_k+\PiT\,\big|\,\PT\cap\{\int F=0\}\big)=\infty$. In particular (with $k=\varepsilon(e^{|\cdot|})$,
+Theorem~\ref{thm:inertia-split}) $n_-(\mathfrak a_T-\mathrm{Son}\,|\,\PT)=\infty$, and no inequality
+$\mathfrak a_T-\mathrm{Son}\ge-b|v\rangle\langle v|+c(I-|v\rangle\langle v|)$, $c>0$, nor any with finitely many
+negative directions, holds on $\PT$ for any inner product.
+\end{theorem}
+\begin{proof}
+See R183\_018 Thm 5.1 (independent second proof R183\_019 Thm 4.1; verified in R183\_020). Key computation in
+the present normalization: fix $c_0\in C_c^\infty(-1,1)$ real, $c_w=c_0(\cdot/w)$, $\beta=c_w''-\frac14c_w$. Two
+integrations by parts give $\int\beta e^{\pm t/2}=0$, so translates of $\beta$ lie in $\PT$. Put
+$h_j=\beta(\cdot-t_j)+\beta(\cdot-t_j-a)$, $a=\log2$, with $t_j$ chosen so that all mutual differences avoid
+$\{\pm\log n\pm\{0,a\}:n\in\NT\}$ by more than $4w$. For $x=\sum c_jh_j$ the only nonzero value of $c_x(\log n)$,
+$n\in\NT$, is the inner one at $\log2$, so $\PiT(x)=-v_2\|\beta\|_2^2\sum|c_j|^2=-\sqrt2\log2\,\|\beta\|_2^2\sum|c_j|^2$.
+Also $|\langle C_kx,x\rangle|\le\|k\|_\infty\|x\|_1^2\le4N\|k\|_\infty\|\beta\|_1^2\sum|c_j|^2$ and
+$\|\beta\|_1^2/\|\beta\|_2^2=O(w)$. For small $w$ the form is $\le-\frac12\sqrt2\log2\,\|\beta\|_2^2\sum|c_j|^2$.
+Imposing $\int x=0$ costs one dimension. A bound with $k'$ negative directions fails on a $(k'+1)$-dimensional
+such subspace by dimension count. That $\varepsilon(e^{|\cdot|})$ is bounded on $[0,2T]$ is its continuity
+\cite[(84)]{ConnesConsani2021} (also R183\_020, Lemma $\varepsilon$-$L^\infty$).
+\end{proof}
+\begin{remark}
+The theorem uses neither the sign of $\mathfrak a_T$ nor the identity of the prime: it says that the Sonin
+trace, subtracted \emph{in full}, leaves a remainder that no finite-rank correction controls once a contact is
+present. It does not contradict $\mathfrak a_T\ge0$: on the test pairs above,
+$\mathrm{Son}$ grows like $w^{-3}\log(1/w)$, the prime term like $w^{-3}$. At $T\le\frac12\log2$ the comb is
+empty and $\mathfrak r_T=-C_\varepsilon$ is compact, which is the regime of \cite[\S6]{ConnesConsani2021}.
+\end{remark}
+
+\begin{theorem}[relative bound $0$ and finite index]\label{thm:inertia-finite}
+Let $T>0$, $\eta\in(0,1]$, and let $k$ be as in Theorem~\ref{thm:inertia-nogo} with $\kappa:=\|C_k\|$. Put
+$A':=\kappa+\Aconst$, let $s_*$ be the least $s\ge0$ with $\eta\,m(s)\ge2A'$, put $L:=A'-\eta C_0>0$ and
+$c=Ts_*$. Then on the form domain
+\[
+\eta\,\Gamma_T-C_k+\PiT\ \ge\ A'\,I-(A'+L)\,S_c ,
+\]
+with $S_c$ the time--band operator of Theorem~\ref{thm:P}. Consequently
+\[
+n_-\big(\eta\Gamma_T-C_k+\PiT\,\big|\,L^2(\IT)\big)\le\#\{j:\lambda_j(S_c)\ge A'/(A'+L)\}
+\le\frac{A'+L}{A'}\cdot\frac{2Ts_*}{\pi},
+\]
+and the Ky Fan bound $\lambda_j(S_c)\le\Lambda_j(c)$ of Theorem~\ref{thm:P} applies. With
+$k=(1-\eta)\varepsilon(e^{|\cdot|})$, $\eta\Gamma_T-C_k+\PiT=\mathfrak a_T-(1-\eta)\mathrm{Son}$, so
+$n_-(\mathfrak a_T-(1-\eta)\mathrm{Son})<\infty$ for every $\eta>0$, while it is $\infty$ for $\eta=0$
+(Theorem~\ref{thm:inertia-nogo}). Since $m(s)=\log(|s|/2\pi)+O(s^{-2})$, $s_*=2\pi e^{2A'/\eta}(1+o(1))$ as $\eta\downarrow0$.
+\end{theorem}
+\begin{proof}
+Written in full (it is the argument of R183\_023 Thm 3.1 in the notation of this paper). By $\|C_k\|=\kappa$ and
+$\|\PiT\|\le\Aconst$, the form is $\ge\frac1{2\pi}\int(\eta m-A')|\Fh|^2$. By Theorem~\ref{thm:S}, $m-C_0=\varphi(\tau^2)$
+is increasing in $|\tau|$, so $\eta m-A'\ge A'$ for $|\tau|\ge s_*$ and $\eta m-A'\ge\eta C_0-A'=-L$ for
+$|\tau|<s_*$. Hence the form is $\ge A'\langle(I-S_c)F,F\rangle-L\langle S_cF,F\rangle$. On the span of the
+eigenvectors of $S_c$ with eigenvalue $<A'/(A'+L)$ this is positive definite, whence the count; the trace of $S_c$
+is $2c/\pi$ (Theorem~\ref{thm:P}).
+\end{proof}
+% EDITOR NOTE: R183_023 Thm 4.1 (n_- -> infinity as eta -> 0) and the threshold bound (4.1) on eta_1(T)
+% are NOT included: they rest on Lemma 4.0 (|m-check(u)| <= C/|u|), asserted from symbol calculus without
+% the integration by parts written out (R183_023, "para el revisor" item 2), and the rate is CONDITIONAL.
+
+\subsection{Quartets and the zero-side inertia}
+For a hypothetical zero $\rho=\frac12+z$, $z=\beta+i\gamma$, $0<\beta<\frac12$, $\gamma>0$, the four zeros
+$\frac12\pm z,\frac12\pm\bar z$ form a \emph{quartet}. For real $F$ put $\mathsf A_z(F):=\Phi_F(\frac12+z)$.
+
+\begin{lemma}[signature of a quartet]\label{thm:inertia-quartet}
+For real $F\in L^2(\IT)$ with $F=F_{\mathrm e}+F_{\mathrm o}$, the contribution of a quartet to
+$\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$ in \eqref{eq:W} is
+\[
+q_z(F)=4\Rel\big(\mathsf A_z(F_{\mathrm e})^2\big)-4\Rel\big(\mathsf A_z(F_{\mathrm o})^2\big),
+\]
+with no cross term between parities. For every $T>0$, $q_z$ has signature exactly $(2,2)$ on the real space
+$\PT$: one negative direction in $\PT^{\mathrm{ev}}$ and one in $\PT^{\mathrm{odd}}$.
+\end{lemma}
+\begin{proof}
+See R184\_004 Lemma 1, verified for all $T>0$ in R184\_091. Normalization: $\Phi_F(s)=\int F(t)e^{(s-\frac12)t}dt$ as
+in \eqref{eq:W}; $\Phi_F(\frac12-z)=\Phi_{F(-\cdot)}(\frac12+z)$, so the four terms are
+$2\mathsf A_z(F)\Phi_F(\frac12-z)+2\overline{(\cdot)}=4\Rel\big((\mathsf A_z(F_{\mathrm e})+\mathsf A_z(F_{\mathrm o}))(\mathsf A_z(F_{\mathrm e})-\mathsf A_z(F_{\mathrm o}))\big)$.
+$\Rel(w^2)$ has signature $(1,1)$ in $(\Rel w,\Iml w)$. Independence of $\Rel\mathsf A_z,\Iml\mathsf A_z$ on
+$\PT^{\mathrm{ev}}$: otherwise $a\cosh\beta t\cos\gamma t+b\sinh\beta t\sin\gamma t=c\cosh\frac t2$ on $(0,T)$, hence on
+$\R$ by analyticity; growth ($\beta<\frac12$) forces $c=0$, then $t=0$ gives $a=0$ and $b=0$. Likewise on
+$\PT^{\mathrm{odd}}$ with $\sinh\frac t2$.
+\end{proof}
+
+\begin{proposition}[finite modifications of the zero set]\label{thm:inertia-rank}
+Let $Z'$ arise from the zero multiset of $\zeta$ by adding $m$ quartets and removing $m$ pairs
+$\frac12\pm i\gamma^0_k$, and write $W^{Z'}_T(F)=\sum_{\rho\in Z'}\Phi_F(\rho)\Phi_F(1-\rho)$. On real $L^2(\IT)$,
+$W^{Z'}_T-W_T$ is a form of rank $\le6m$, and so are its changes on every Schur complement taken with invertible
+blocks; hence $|n_-(W^{Z'}_T|V)-n_-(W_T|V)|\le6m$ for every subspace $V$.
+\end{proposition}
+\begin{proof}
+Each quartet contributes $q_z$ (rank $4$), each removed pair $-2|\Phi_F(\frac12+i\gamma^0)|^2$ (rank $2$); Weyl
+interlacing. (R184\_004 Thm 4(a),(c).)
+\end{proof}
+
+\subsection{An effective detection law}
+% EDITOR FLAG: proof must be rewritten per R184_092 MAJOR-1 before integration (the far-zero
+% terms g(gamma+gamma'), |c|g(gamma') carry e^{2a'T} and must be charged to the exponential
+% budget; slack verified there: q <= -0.254 M_0^2 e^{2aT}). Trudgian constants CITED from memory:
+% verify against the source and add \bibitem{Trudgian2014}.
+Fix $\psi(u)=16u^2(1+u)^2$ on $[-1,0]$, $M_0=\|\psi\|_1=\frac8{15}$, $M_2=\|\psi''\|_1+\|\psi'\|_1+\|\psi\|_1$,
+$K=M_0^2+3M_2^2$, $C_\psi=67K/M_0^2$, and $L(\gamma)=1.1\log(\gamma+3)+5$. Say that a quartet with
+$z=a+i\gamma$ is \emph{maximal and $X$-isolated} if every zero $\frac12+\beta'+i\gamma'$ has $|\beta'|\le a$, and
+$\beta'=0$ whenever $|\gamma'-\gamma|\le X$, where $X^3\ge270(M_2/M_0)^2(L(\gamma)+2\log(X+3))$.
+
+\begin{theorem}[detection of a maximal isolated quartet]\label{thm:inertia-detect}
+If $\zeta$ has a maximal $X$-isolated quartet with $0<a<\frac12$ and $\gamma\ge100$, then $\lamA<0$ for every
+\[
+T\ \ge\ T^*(a,\gamma):=\max\Big\{1+\frac1a,\ \frac1{2a}\log\big(C_\psi L(\gamma)\big)\Big\}.
+\]
+Moreover $\lamA\le-c_\psi e^{2aT}+C_\psi'L(\gamma)$ with constants depending only on $\psi$, so
+$L^{\mathrm A}=-\infty$ in Corollary~\ref{cor:margin2}(ii) under this hypothesis.
+\end{theorem}
+\begin{proof}
+See R184\_006 Thm 1, with the bookkeeping of R184\_092. The test is the even, real
+$F=F_++F_+(-\cdot)$, $F_+(t)=\psi(t-T)(\sin\gamma t-c)$, with $c$ fixed by $\int F_+\cosh\frac t2=0$, so that
+$A(F)=B(F)=0$ and $F\in\PT$ (parity paragraph after Proposition~\ref{prop:nodes}); $|c|\le e^{1/2}M_2/(M_0\gamma^2)$.
+$F\in H^1$ with $|\Phi_F(\frac12+iy)|\ll y^{-2}$, so Lemma~\ref{lem:roughEF} gives
+$\mathfrak a_T(F)=\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$, and no smoothing to $C_c^\infty$ is needed. By
+Lemma~\ref{thm:inertia-quartet}, the quartet contributes $4\Rel(\mathsf A^2)\le-0.254\,M_0^2e^{2aT}$; on-line zeros
+within $X$ contribute $\le8K\,L(\gamma)$ (counting bound \cite[Thm.~1]{Trudgian2014}, CITED); the remaining zeros
+contribute $\le0.06\,M_0^2e^{2aT}$ plus the terms of R184\_092, which fit in the slack. Finally
+$\|F\|^2\le4\|\psi\|_2^2(1+|c|)^2$ is bounded in $T$; monotonicity is Lemma~\ref{lem:monoT}.
+\end{proof}
+\begin{remark}
+Contrapositively, $\lamA\ge0$ at $T_1$ excludes maximal isolated quartets with
+$a\ge\max\{(T_1-1)^{-1},\log(C_\psi L(\gamma))/(2T_1)\}$. Since $\log C_\psi\approx12$, this is empty for every window
+where the sign is known ($T_1\le\frac12\log5$). The mechanism is the qualitative direction
+$\neg\mathrm{RH}\Rightarrow L^{\mathrm A}<0$ of Corollary~\ref{cor:margin2}(iii); the theorem makes it effective, and
+says nothing in the direction of positivity.
+\end{remark}
+
+\subsection{What these theorems exclude}
+\emph{Inertia alone.} By Proposition~\ref{thm:inertia-rank}, any argument that uses only the decomposition
+$\mathfrak a_T=\Gamma_T-C_\varepsilon+\PiT$ with the operator properties of the pieces (the archimedean multiplier;
+$\PiT$ with exactly the weights $v_n$; a compact remainder continuous in $T$), inertia arithmetic (Sylvester,
+Haynsworth, interlacing, Lemma~\ref{lem:monoT}) and any property of $\PiT$ alone, applies verbatim to a model with
+the same $\Gamma_T$ and $\PiT$ and a finite-rank change of the compact term coming from $m$ added quartets
+(R184\_004 Thm 4(b), R162\_2501 Thm 3). If such an argument proved ``$\sup_Tn_-(\mathfrak a_T|\PT)<\infty
+\Rightarrow n_-\equiv0$'', applied to the model it would contradict that the model has $n_-=2m$ for large $T$
+(R162\_2602 Thm 6, CITED). Hence a valid argument of this class forces $\zeta$ to have infinitely many quartets;
+it cannot prove RH. The exclusion concerns the class \emph{as defined}: it does not cover arguments that use
+quantitative properties of the compact term itself (a $T$-uniform bound on $\|C_\varepsilon\|$, or a sign),
+which the model does not share (its compact term has norm $\asymp e^{2\beta T}$) (R184\_091).
+
+\emph{Sonin-norm bounds.} By Theorem~\ref{thm:inertia-nogo} no bound
+$\mathfrak a_T\ge\mathrm{Son}-(\text{finite rank})$ holds past $\frac12\log2$; by
+Theorem~\ref{thm:inertia-finite}, ceding any fraction $\eta>0$ of $\mathrm{Son}$ restores a finite index, but only
+up to $N\asymp Te^{2A'/\eta}$ directions, and positivity is then the positivity of an $N\times N$ Schur complement,
+the finite arena of \S\ref{subsec:arena} with a larger $N$. For a bound of the form
+$\|\mathfrak a_T-\mathrm{Pos}_T\|_{\PT}\le e^{o(T)}$ with $\mathrm{Pos}_T\ge0$ there are two readings
+(R184\_015 Thm 2): computed from the local data ($\Gamma$, the weights $v_n$) it is the same for $\zeta$ and for the
+models of Proposition~\ref{thm:inertia-rank}; computed as the difference of the forms, its lower half contains
+$\lamA\ge-e^{o(T)}$, which by Theorem~\ref{thm:inertia-detect} already fails under any maximal isolated quartet.
+% EDITOR FLAG: R184_015 states "Q <=> RH" for the lower half; the direction Q => RH for configurations
+% that are not maximal-isolated rests on R162_2501 Prop 1 (CITED, constants configuration-dependent);
+% cor:margin2 says explicitly "We do not know whether L^A=-infty when RH fails". Only the Max-Iso
+% version is stated here.
+
+\emph{The witness decorrelator.} The first-contact witness of \S\ref{sec:firstcontact} cannot be excluded by an
+inequality on the weights that is linear in $\Lambda$ (one test) or ranges over a family of power size, and is
+true for $\zeta$, unless it controls $\sum_n\Lambda(n)n^{-1/2+i\gamma}w(\log n)$ beyond the window with the exact
+strength of the absence of the zero (R166\_802, audited R166\_190); in the normalization of \eqref{eq:fw} this sum is
+$-\frac12$ times the prime term of $f_w$ at $\tau=-\gamma$. Together with Corollary~\ref{cor:void} (properties
+stable under finite modification of the weights decide no window), such inequalities are circular.
+
+\subsection{What remains}
+Within the witness architecture, one case is not covered by any of the barrier statements above or in
+Corollary~\ref{cor:void}: an inequality on the vector $(v_n)_{n\ge2}$, used beyond the window, that is
+\emph{non-linear} in $\Lambda$, is not a family of power size, and is not invariant under finite modifications of
+the weights (corpus label O166.802.1). In the language of Problem~\ref{prob:B}: a proof of $f_{w_T}\ge0$ on
+$[0,\tau_{\mathrm{env}}(T)]$ would have to use such a property of the primes outside the window. It is open
+whether any such property exists. Outside that architecture, other questions recorded in this paper are still
+open, namely $L^{\mathrm A}=-\infty$ under $\neg$RH in general (Corollary~\ref{cor:margin2}), and the
+finiteness questions on $n_-(\mathfrak a_T|\PT)$ as $T\to\infty$.
+
+% ---------------------------------------------------------------------
+% Optional addendum to prop:finite (not part of the section above):
+% \emph{(v)} $\mathcal V_T$ is compact (R184_007 Thm W(c), verified R184_092): for every
+% $\theta\in\R^{\NT}\setminus\{0\}$ there is a real $F\in\PT$ with $\sum\theta_n\cF(\log n)>0$
+% (take $F=g+\epsilon g(\cdot-\log n_0)$ with $|\theta_{n_0}|$ maximal, $\epsilon=\operatorname{sgn}\theta_{n_0}$,
+% $g$ a bump of width below all gaps, corrected into $\PT$ by two bumps placed so that no position
+% difference equals any $\log n$; all cross terms then vanish exactly), and the form tends to
+% $-\infty$ along $s\theta$.
+% ---------------------------------------------------------------------
+
+% =====================================================================
+% SECOND DRAFT SECTION (editor, 2026-10-13): phase-186 chain.
+% NOT INTEGRATED INTO main.tex. Sources: R186_007/093/094, R186_008/094,
+% R186_009/095, R186_010/096, R186_011/096, R186_012/097, R186_014/098,
+% R186_020 (literature check), R183_018. Check table: CHECK_TABLE.md,
+% part II. New bib entries needed (EDITOR FLAG: verify journal data):
+%   CCquasi2020  A. Connes, C. Consani, Quasi-inner functions and local factors, arXiv:2008.10974
+%   CCM2023      A. Connes, C. Consani, H. Moscovici, Zeta zeros and prolate wave operators, arXiv:2310.18423
+%   CCM2024      A. Connes, C. Consani, H. Moscovici, arXiv:2403.01247 (semilocal case S={p,infty};
+%                title to be copied from the source)
+%   Simon        B. Simon, Trace Ideals and Their Applications, 2nd ed., AMS, 2005
+% =====================================================================
+
+\section{The semilocal Sonin decomposition at the first prime}\label{sec:semilocal}
+
+Section~\ref{sec:inertia} showed that the archimedean Sonin trace, subtracted in full, leaves a
+remainder of infinite negative index as soon as the contact $n=2$ is present
+(Theorem~\ref{thm:inertia-nogo}). Here we replace the archimedean Sonin space by the semilocal one of
+Connes and Consani for $S=\{\infty,2\}$ and show that the comb of $2$ is then absorbed \emph{exactly},
+with a Hilbert--Schmidt remainder. The objects $F_S$, the quasi-inner function and the semilocal Sonin
+space are those of \cite{CCquasi2020,CCM2023}; what is new is listed in Remark~\ref{rem:sl-new}. No
+statement of this section bears on the sign of $\mathfrak a_T$.
+
+\subsection{Two models and their dictionary}\label{subsec:sl-dict}
+Paper~47 works on $L^2(\IT)$ in the additive variable $t$, with $\Fh(\tau)=\int Fe^{i\tau t}dt$,
+autocorrelation $\cF$, weights $v_n=2\Lambda(n)/\sqrt n$, and the forms
+$\Gamma_T(F)=\frac1{2\pi}\int m|\Fh|^2$, $\PiT(F)=-\sum_{n\in\NT}v_n\Rel\cF(\log n)$ of
+\S\ref{subsec:arch}. The operators below live in the \emph{u-model} $H=L^2(\R_+,du)$. The dictionary is:
+\begin{enumerate}
+\item[(D1)] $L^2(\R)^{\mathrm{ev}}\to H$, $\xi\mapsto\sqrt2\,\xi|_{\R_+}$, is unitary; it carries the
+Fourier transform $\xi\mapsto\int\xi(x)e^{-2\pi ixy}dx$ of \cite{ConnesConsani2021} to $F_\infty$, the
+operator with kernel $2\cos(2\pi ux)$, and the cut-off $\mathbf 1_{|x|\le\lambda}$ to
+$P=\mathbf 1_{(0,\lambda]}(u)$.
+\item[(D2)] $W:H\to L^2(\R,dt)$, $(W\xi)(t)=e^{t/2}\xi(e^t)$, is unitary; $P\mapsto\mathbf 1_{t\le a}$,
+$a=\log\lambda$; dilations become translations, and $D:=-i\,d/dt$.
+\item[(D3)] We use the scaling action of \cite[(61)]{ConnesConsani2021},
+$(\vartheta(\rho)\xi)(v)=\rho^{-1/2}\xi(\rho^{-1}v)$, $\vartheta(f)=\int f(\rho)\vartheta(\rho)d^*\rho$. The memos
+R186 use $\int h(a)a^{1/2}\xi(a\,\cdot)\,d^*a=\vartheta(\tilde h)$, $\tilde h(\rho)=h(\rho^{-1})$. Every
+functional below ($W_\infty$, the comb, $\int f(\rho^{-1})\varepsilon(\rho)d^*\rho$ with $\varepsilon$
+inversion-symmetric) is invariant under $f\mapsto\tilde f$, so the two conventions give the same identities.
+\item[(D4)] For $F\in C_c^\infty(\IT)$ put $g_F(\rho):=F(\log\rho)$ and $f_F:=g_F*g_F^*$, so that
+$f_F(e^x)=\cF(x)$ and $\int f_F(\rho^{-1})\varepsilon(\rho)d^*\rho=\int_{-2T}^{2T}\cF(x)\varepsilon(e^{|x|})dx
+=\langle C_\varepsilon F,F\rangle$ (notation of Theorem~\ref{thm:inertia-split}); and
+$W_\infty(f_F)=\Gamma_T(F)$ (proof of Theorem~\ref{thm:inertia-split}).
+\item[(D5)] For a projection $\Pi$ on $H$ we write $\mathrm{Son}_\Pi(F):=\operatorname{Tr}(\vartheta(g_F)\Pi\vartheta(g_F)^*)
+=\operatorname{Tr}(\vartheta(f_F)\Pi)\ge0$.
+\end{enumerate}
+\emph{Metric warning.} All operator statements of \S\S\ref{subsec:sl-dict}--\ref{subsec:sl-trace} are in $H$
+(equivalently $L^2(\R,dt)$); the forms of \S\ref{subsec:sl-split} are on $L^2(\IT)$ with the metric of
+$L^2(\IT)$, through (D4). No statement uses the $\xi$-metric of \cite[\S6]{ConnesConsani2021}.
+
+\subsection{The semilocal Fourier transform}
+\begin{definition}[\cite{CCM2023,CCquasi2020}]\label{def:FS}
+Let $D_2\xi(u)=\xi(2u)$ and $E:=\sum_{k\ge0}D_2^k$ on $H$, $E^{-1}=1-D_2$. The semilocal Fourier transform is
+$F_S:=EF_\infty E^{-1}$ (\cite[Prop.~4.1]{CCM2023}: $F_S\circ\eta_S=\eta_S\circ F_\infty$, with $\eta_S=E$ in the
+u-model). In Mellin form ($\operatorname{Re}s=\frac12$) $F_S$ is $F_\infty$ composed with the multiplier
+$(1-2^{-s})/(1-2^{-(1-s)})$; this is the factor $\rho_2$ of the quasi-inner function
+$u=\rho_\infty\prod_p\rho_p$, $\rho_p(z)=\gamma_p(z)/\gamma_p(1-z)$, of \cite[Lemma~3.1]{CCquasi2020}.
+Put $\widehat P^S:=F_SPF_S$, $Q_1:=1-P$, $Q_2:=1-\widehat P^S$, $A_S:=PF_SP$, and let $\Pi_S$ be the
+orthogonal projection on $\operatorname{ran}Q_1\cap\operatorname{ran}Q_2$, the semilocal Sonin space
+(\cite{CCquasi2020}, main theorem: Sonin $=\ker u_{22}$).
+\end{definition}
+
+\begin{lemma}[u-model form; scattering phase]\label{lem:sl-phase}
+In $L^2(\R,dt)$, $F_\infty=I\,m_\infty(D)$ with $I$ the reflection $t\mapsto-t$ and $|m_\infty|=1$, and
+$F_S=F_\infty U=I\,M(D)$, $M=m_\infty U$, $U=e^{i\varphi(D)}$ with
+\[
+\varphi'(t)=-\sum_{k\ge1}v_{2^k}\cos(kt\log2),\qquad\text{and for finite }S:\quad
+\varphi_S'(t)=-\sum_{p\in S}\sum_{k\ge1}v_{p^k}\cos(kt\log p).
+\]
+\end{lemma}
+\begin{proof}
+CITED \cite[Lemma~3.1]{CCquasi2020} ($U$ is $\rho_2$ in the variable $t$); we verify the normalization.
+$WD_2W^{-1}=q\,T$, $q=2^{-1/2}$, $T$ translation by $\log2$, so $E^{-1}=1-qT$, $F_\infty EF_\infty=E^*$ and
+$U=E^*E^{-1}=(1-qT)/(1-qT^{-1})$, a quotient of conjugates: $\varphi(t)=2\arg(1-qe^{it\log2})=-2\sum_kq^k\sin(kt\log2)/k$,
+whence $\varphi'$ with $2q^k\log2=v_{2^k}$. $IF_\infty$ commutes with translations and is unitary, hence a
+multiplier; its value is the Tate factor (R186\_096 \S1). For several primes $U_S=\prod_pU_p$.
+(R186\_008 Thm~C, R186\_094 m1, R186\_010 \S1.)
+\end{proof}
+% EDITOR FLAG: phi_S' is the UNTRUNCATED comb; in pairings with c_F only n in N_T survive (supp c_F in [-2T,2T]).
+
+\begin{proposition}\label{prop:sl-AS}
+\emph{(i)} $F_S$ is a unitary, self-adjoint involution and $F_S\vartheta(\rho)F_S=\vartheta(\rho^{-1})$; $F_S$ is real.
+\emph{(ii)} $A_S$ is compact, self-adjoint, $\|A_S\|<1$ and $\pm1$ are not eigenvalues.
+\emph{(iii)} $A_S$ is not Hilbert--Schmidt; $A_S\in\mathcal S_p$ for every $p>2$.
+\end{proposition}
+\begin{proof}
+(i) $F_S$ is similar to the involution $F_\infty$, and unitary by Lemma~\ref{lem:sl-phase}; unitary plus involutive is
+self-adjoint. $F_\infty\vartheta(\rho)F_\infty=\vartheta(\rho^{-1})$ and $U$ commutes with $\vartheta(\rho)$.
+(ii) Compactness is \cite[Thms.~2.1, 4.4]{CCquasi2020} (CITED); directly: the grouped kernel
+$\sum_{k\le K}(2c_k-c_{k-1})$, $c_k=\cos(2\pi2^kux)$, gives Hilbert--Schmidt operators converging in norm, with
+$\|PD_2^kF_\infty E^{-1}P\|\le(1+q)q^k$. No eigenvalue $\pm1$: by Paley--Wiener for $E^{-1}\xi$ (R186\_093 \S5).
+(iii) If $A_S$ had a kernel $\kappa\in L^2$, test against $\chi c_m$, $\chi\in C_c^\infty((\delta,\lambda-\delta)^2)$:
+non-stationary phase in the lacunary sum gives $\langle\kappa,\chi c_m\rangle\to\frac12\iint\chi\ne0$, while
+Riemann--Lebesgue gives $\to0$ (R186\_007 \S3, R186\_093 \S5). For $p>2$:
+$\|Pc_kP\|_{\mathcal S_p}\le\|Pc_kP\|^{1-2/p}\|Pc_kP\|_{\mathrm{HS}}^{2/p}\le(\tfrac12q^k)^{1-2/p}\lambda^{2/p}$ is summable
+(R186\_011 Sp, R186\_096).
+\end{proof}
+% EDITOR FLAG: (iii) is proved for S={infty,2} only; for |S|>=2 the lacunary cross sums must be redone
+% (R186_007 Sec.6, OPEN).
+
+\begin{lemma}[trace formula for the linear part]\label{lem:sl-linear}
+Let $h$ be such that $y\mapsto h(e^y)$ is Schwartz, and $S$ finite. Then $\vartheta(h)(\widehat P^S-\widehat P_\infty)$ is
+trace class, and for every $\lambda>0$
+\[
+\operatorname{Tr}\vartheta(h)(\widehat P^S-\widehat P_\infty)=\sum_{p\in S}\sum_{k\ge1}\log p\;p^{-k/2}\big(h(p^k)+h(p^{-k})\big)
+=\tfrac12\sum_{p\in S}\sum_{k\ge1}v_{p^k}\big(h(p^k)+h(p^{-k})\big).
+\]
+\end{lemma}
+\begin{proof}
+Write $U=\sum_ju_jT_{h_j}$ with $|U|=1$ and $\sum_j(1+|h_j|)|u_j|<\infty$ (for $S$ finite, $h_j$ ranges over
+$\pm\log n$, $n$ in the multiplicative semigroup of $S$, and $u_j$ is a product of geometric sequences, so the
+condition holds; the set of $h_j$ need not be a lattice). Then $UP_aU^*-P_a=\sum_{j,l}u_j\bar u_l(P_{a-h_j}-P_a)T_{h_j-h_l}$,
+$P_{a-h}-P_a=-\operatorname{sgn}(h)\mathbf 1_{I_h}$ with $|I_h|=|h|$. By \cite[Thm.~4.5]{Simon},
+$\|\widehat k(D)\mathbf 1_I\|_1\le C_k(1+|I|)$, so the series converges in trace norm, and
+$\operatorname{Tr}=-\sum h_ju_j\bar u_lk(h_j-h_l)=-\frac1{2\pi}\int\widehat k\,\varphi'$. Conjugating by $F_\infty$
+reverses $D$; Lemma~\ref{lem:sl-phase} gives the comb. (R186\_008 Thm~C$'$, corrected in R186\_094 m3--m5.)
+\end{proof}
+This is the dual form of the classical phase-shift trace formula and of R183\_015; it is the local
+term at $p$ of Connes' semilocal trace formula. It concerns the \emph{linear} part $1-\widehat P$ only, not the
+Sonin projection $\Pi_S$.
+
+\subsection{Gap and trace class}\label{subsec:sl-trace}
+Let $\{\xi_n\}$ be a real orthonormal eigenbasis of $A_S$ in $\operatorname{ran}P$, $A_S\xi_n=\lambda_n\xi_n$, ordered by
+$|\lambda_n|$ decreasing, $\lambda_1:=\|A_S\|$; for $\lambda_n\ne0$ put $\zeta_n:=(1-P)F_S\xi_n/(1-\lambda_n^2)^{1/2}$ and
+$\tau_n:=\lambda_n(1-\lambda_n^2)^{-1/2}$.
+
+\begin{theorem}[operator gap]\label{thm:sl-gap}
+In the Halmos decomposition of $(Q_1,Q_2)$ the angle operator satisfies $\cos^2\theta_n=\lambda_n^2$; the
+$\zeta_n$ are orthonormal; $Q_1Q_2Q_1=\Pi_S+\sum_n\lambda_n^2|\zeta_n\rangle\langle\zeta_n|$;
+$\operatorname{spec}(Q_1Q_2Q_1|_{\operatorname{ran}Q_1})\subset\{0\}\cup\{\lambda_n^2\}\cup\{1\}$ with
+$\sup_n\lambda_n^2=\lambda_1^2<1$. Hence $1$ is isolated, $\Pi_S$ is the Riesz projection of $Q_1Q_2Q_1$ at $1$, and
+$\|(Q_1Q_2Q_1)^n-\Pi_S\|=\lambda_1^{2n}$.
+\end{theorem}
+\begin{proof}
+On the generic part $Q_1=\mathrm{diag}(1,0)$, $Q_2=\begin{psmallmatrix}c^2&cs\\cs&s^2\end{psmallmatrix}$, so
+$Q_1Q_2Q_1=c^2\oplus0$ and $P\widehat P^SP=0\oplus c^2$; and $P\widehat P^SP=A_S^2$ by
+Proposition~\ref{prop:sl-AS}(i). $\|(1-P)F_S\xi_n\|^2=1-\lambda_n^2$ and $Q_1\widehat P^SQ_1\zeta_n=(1-\lambda_n^2)\zeta_n$.
+The gap is Proposition~\ref{prop:sl-AS}(ii). (R186\_009 H, G, D; R186\_095.)
+\end{proof}
+The gap is spectral (at $1$, for $Q_1Q_2Q_1$); it is not the gap in heights of the positivity
+requirement discussed in Remark~\ref{rem:sl-not} (R186\_095 M3). Since $\sum\lambda_n^2=\infty$, the operator
+$Q_1Q_2Q_1-\Pi_S$ is not trace class; it is Hilbert--Schmidt by Proposition~\ref{prop:sl-AS}(iii).
+
+\begin{lemma}[trace class]\label{lem:sl-TC}
+For $f\in C_c^\infty(\R_+^*)$: $\vartheta(g)Q_1Q_2$ is Hilbert--Schmidt, $\vartheta(f)Q_1Q_2Q_1$, $\vartheta(f)\Pi_S$ and
+$\vartheta(f)(\widehat P^S-\widehat P_\infty)$ are trace class, and $P\vartheta(f)P\,A_S^2\in\mathcal S_1$; in particular
+$\sum_n\lambda_n^2\langle\xi_n|\vartheta(f)\xi_n\rangle$ converges absolutely although $\sum\lambda_n^2=\infty$.
+\end{lemma}
+\begin{proof}
+By Lemma~\ref{lem:sl-phase} and (D2), $Q_1Q_2=I\,\mathbf 1_{t<-a}M(D)\mathbf 1_{t>a}M(D)^*I$. Split
+$\widehat{\tilde g}(D)\mathbf 1_{t<-a}M(D)\mathbf 1_{t>a}$ into a commutator, of Hilbert--Schmidt norm
+$\int|k|^2|x|dx$, and the Hankel block $\mathbf 1_{t<-a}(\widehat{\tilde g}M)(D)\mathbf 1_{t>a}$ of norm
+$\int|K_g|^2(-2a-x)_+dx$, finite because $\widehat{\tilde g}M\in\mathcal S$ ($m_\infty\in\mathcal O_M$ by Stirling,
+$U\in C_b^\infty$). Trace class of $\vartheta(f)Q_1Q_2Q_1$ via $f=g_1*g_2$, CC Lemma~D.1 for the commutators
+\cite{ConnesConsani2021} and Dixmier--Malliavin (CITED); $\vartheta(f)\Pi_S=\vartheta(f)Q_1Q_2Q_1\Pi_S$.
+The last claim: $P\vartheta(f)XP=\Theta_{00}(A_S^2-A_\infty^2)+\Theta_{01}X_{10}$ with $X=\widehat P^S-\widehat P_\infty$,
+$\Theta_{01}=P\vartheta(f)(1-P)\in\mathcal S_1$ \cite[Thm.~4.5]{Simon}, and $A_\infty\in\mathcal S_1$.
+(R186\_010/096; R186\_014 T1--T3/098.)
+\end{proof}
+
+\begin{theorem}[structure of the Halmos density]\label{thm:sl-L2}
+The series $E_S(f):=\sum_n\tau_n\big(\langle\xi_n|\vartheta(f)\zeta_n\rangle+\langle\zeta_n|\vartheta(f)\xi_n\rangle\big)$
+converges absolutely for every $f\in C_c^\infty(\R_+^*)$ and equals $\int f(\rho^{-1})d_S(\rho)d^*\rho$, where
+$d_S(\rho^{-1})=d_S(\rho)$ and, for $\rho\ge1$,
+$d_S(\rho)=\rho^{1/2}\int_{\lambda/\rho}^{\lambda}G(\rho x,x)\,dx$, $G=(1-P)F_SA_S(1-A_S^2)^{-1}P$. For every $R>1$,
+\[
+d_S(\rho)=\sum_{0\le j\le\log_2R}\beta_j\log^+\frac1{|\rho-2^j|}+O_R(1)\quad(1\le\rho\le R),\qquad
+\beta_j=2^{j/2}(1-2^{-j})\frac{\lambda^2}{2\log2},
+\]
+and $d_S(\rho)\sim b\,(\rho-1)\log\frac1{\rho-1}$ as $\rho\downarrow1$, $b=\lambda^2/(2\log2)$. Hence
+$d_S\in L^p_{\mathrm{loc}}(\R_+^*)$ for every $p<\infty$ and $d_S\notin L^\infty_{\mathrm{loc}}$; the pointwise series
+diverges to $+\infty$ at every $\rho=2^j$, $j\ge1$.
+\end{theorem}
+\begin{proof}
+Absolute convergence: the two cross series are traces of $\Theta_{01}G$ and $\Theta_{10}G^*$ in an orthonormal basis.
+$G=G_0(1+R)$, $R=A_S^2(1-A_S^2)^{-1}$ Hilbert--Schmidt by Proposition~\ref{prop:sl-AS}(iii), so the $R$-part has
+bounded density. The kernel of $G_0=(1-P)F_SPF_SP$ is
+$\frac12\sum_{k,l\ge-1}a_ka_l[S(2^ku-2^lz)+S(2^ku+2^lz)]$, $S(w)=\sin(2\pi\lambda w)/(2\pi w)$, $a_{-1}=-1$, $a_k=1$;
+the lacunary sum $\sum_{k\ge k_0}S(2^kt)=\lambda\,\#\{k\ge k_0:2^k|t|\le1\}+O(1)$, uniformly, gives
+$G_0(\rho x,x)=\frac{\lambda}{2\log2}\sum_i\log^+\frac1{|\rho-2^i|}+O_R(1)$ uniformly in $x\in[\lambda/R,\lambda]$;
+integrate over $[\lambda/\rho,\lambda]$. Divergence at $2^j$: the dyadic quasi-covariance
+$K_S(2^jx,y)=K_S(x,y)-B_j(x,y)$ ($B_j$ entire) reduces the pointwise term to $\|\mathbf 1_{I}A_S\|_{\mathrm{HS}}^2=\infty$
+(Proposition~\ref{prop:sl-AS}(iii) on $I=[2^{-j}\lambda,\lambda]$). (R186\_012/097, R186\_011 R, Q, NH, Div2/096,
+R186\_014 T4/098.)
+\end{proof}
+% EDITOR FLAG (MINOR, R186_097): write the lemma sup_u ||G_0(u,.)||_{L^2(0,lambda)} < infty (region y -> 0)
+% and the corrected constant of the lacunary lemma before integration.
+
+\begin{theorem}[the semilocal trace formula]\label{thm:sl-84}
+Let $S=\{\infty,2\}$, $\lambda>0$, $f\in C_c^\infty(\R_+^*)$, and
+$\mathrm{comb}_2(f):=\sum_{k\ge1}\log2\cdot2^{-k/2}(f(2^k)+f(2^{-k}))$.
+\emph{(i) Relative form (unconditional, every $\lambda$).}
+\[
+\operatorname{Tr}\vartheta(f)\Pi_S-E_S(f)=\operatorname{Tr}\vartheta(f)\Pi_\infty-E_\infty(f)-\mathrm{comb}_2(f).
+\]
+\emph{(ii) Absolute form.} If the archimedean formula \cite[Thm.~4.7, (83)]{ConnesConsani2021},
+$\operatorname{Tr}\vartheta(f)\Pi_\infty=W_\infty(f)+\int f(\rho^{-1})\varepsilon_\infty(\rho)d^*\rho$, holds at level $\lambda$, then
+\[
+\operatorname{Tr}\vartheta(f)\Pi_S=W_\infty(f)-\mathrm{comb}_2(f)+\int f(\rho^{-1})\,d_S(\rho)\,d^*\rho .
+\]
+At $\lambda=1$ this hypothesis is \cite[Thm.~4.7]{ConnesConsani2021} (Sonin space $S(1,1)$), CITED.
+\end{theorem}
+\begin{proof}
+For $f$ real with $\tilde f=f$, $[F,\vartheta(f)]=0$ for $F\in\{F_\infty,F_S\}$, and expanding
+$\langle\xi_n|F\vartheta(f)F\xi_n\rangle$ with $F\xi_n=\lambda_n\xi_n+(1-\lambda_n^2)^{1/2}\zeta_n$ gives, for each $n$,
+$\langle\zeta_n|\vartheta(f)\zeta_n\rangle=\langle\xi_n|\vartheta(f)\xi_n\rangle-\tau_n(c_n+c_n')$ (\cite[(87)]{ConnesConsani2021},
+exact, no summation). The four series (diagonal in $\xi$, two cross, diagonal in $\zeta$) converge absolutely by
+Lemma~\ref{lem:sl-TC}, so $\operatorname{Tr}\vartheta(f)(Q_1Q_2Q_1-\Pi_F)$ and the cross traces combine term by term into
+$\operatorname{Tr}\vartheta(f)Q_1Q_2Q_1-\operatorname{Tr}\vartheta(f)\Pi_F=\ldots-E_F(f)$; the diagonal $\lambda_n^2$ terms cancel
+$n$ by $n$ (the semilocal form of \cite[(89)--(90)]{ConnesConsani2021}). Subtracting the two cases,
+$Q_1Q_2^SQ_1-Q_1Q_2^\infty Q_1=-(1-P)X(1-P)$, whose $\vartheta(f)$-trace is computed blockwise and gives
+$-\mathrm{comb}_2(f)$ by Lemma~\ref{lem:sl-linear}. Antisymmetric $f$: both sides vanish ($F\Pi_F=\Pi_FF$). (ii) Insert
+(83). (R186\_014 \S\S5--7; R186\_098.)
+\end{proof}
+% EDITOR FLAG (normalization conflict, see check table II.N1): R186_098 states the absolute form "given CC
+% Thm 4.7 at lambda = 1/2". CC Thm 4.7 is stated for S(1,1), i.e. lambda = 1 in the u-model (D1), and
+% S(lambda,lambda) is not a dilate of S(1,1) unless lambda = 1. The numerics of R186_007/011 are at
+% lambda = 1/2; the proofs of this section hold for every lambda. Absolute form: lambda = 1 only (CITED).
+
+\subsection{The split of the truncated form}\label{subsec:sl-split}
+For $T>0$ let $\Pi^{(2)}_T(F):=-\sum_{k:\,2^k\in\NT}v_{2^k}\Rel\cF(k\log2)$ and
+$\Pi^{(\ne2)}_T:=\PiT-\Pi^{(2)}_T$, so that $\mathfrak a_T=\Gamma_T+\Pi^{(2)}_T+\Pi^{(\ne2)}_T$, and
+$\Pi^{(\ne2)}_T=0$ exactly when $T<\frac12\log3$. With (D4), $\mathrm{comb}_2(f_F)=-\Pi^{(2)}_T(F)$, since
+$v_{2^k}=2\log2\cdot2^{-k/2}$ and $\cF(-x)=\overline{\cF(x)}$.
+
+\begin{corollary}[semilocal Sonin split]\label{cor:sl-split}
+Let $\lambda=1$, $S=\{\infty,2\}$, $\varepsilon_S:=d_S$. For every $T>0$ and $F\in C_c^\infty(\IT)$,
+\[
+\Gamma_T(F)+\Pi^{(2)}_T(F)=\mathrm{Son}_{\Pi_S}(F)-\langle C_{\varepsilon_S}F,F\rangle ,
+\]
+and $C_{\varepsilon_S}$, the operator on $L^2(\IT)$ with kernel $\varepsilon_S(e^{|x-y|})$, is Hilbert--Schmidt. In
+particular, for $T<\frac12\log3$, $\mathfrak a_T=\mathrm{Son}_{\Pi_S}-C_{\varepsilon_S}$ with Hilbert--Schmidt remainder, on
+$L^2(\IT)$ and on $\PT$; for every $\delta>0$ the number of eigenvalues of $-C_{\varepsilon_S}|_{\PT}$ below $-\delta$ is
+finite, so $n_-\big(\mathfrak a_T-\mathrm{Son}_{\Pi_S}+\delta\|\cdot\|^2\,\big|\,\PT\big)<\infty$. The part
+$-C_{\varepsilon_S}+C_{\varepsilon_\infty}$ is Hilbert--Schmidt for every $\lambda$, unconditionally.
+\end{corollary}
+\begin{proof}
+Theorem~\ref{thm:sl-84}(ii) with $f=f_F$ and (D4), (D5). $\int_{I_T^2}|\varepsilon_S(e^{|x-y|})|^2\le2T\int_{-2T}^{2T}|\varepsilon_S(e^{|x|})|^2dx<\infty$
+by Theorem~\ref{thm:sl-L2} ($\log^+\frac1{|e^x-2^j|}\asymp\log^+\frac1{|x-j\log2|}$) and continuity of $\varepsilon_\infty$
+\cite[(84)]{ConnesConsani2021}. A compact self-adjoint operator has finitely many eigenvalues below $-\delta$.
+The last sentence uses only Theorem~\ref{thm:sl-84}(i) and Theorem~\ref{thm:sl-L2}.
+\end{proof}
+% EDITOR FLAG: R186_012 row "In" and R186_014 Sec.7 assert n_-(-C_eps_S | P_T) < infty "because compact".
+% Non sequitur: a compact self-adjoint operator may have infinitely many negative eigenvalues. Only the
+% delta-version above is proved. (n_-(a_T|P_T) < infty itself is trivial: Gamma_T has compact resolvent.)
+
+\begin{remark}[what this does not give]\label{rem:sl-not}
+(1) \emph{No sign.} The corollary writes $\mathfrak a_T$ ($T<\frac12\log3$) as a positive trace form minus a compact
+form; positivity of $\mathfrak a_T$ on $\PT$ is the statement that $\mathrm{Son}_{\Pi_S}$ dominates
+$C_{\varepsilon_S}$ there, window by window. Nothing here decides it; the singular part
+$\sum\beta_j\log^+$ of $\varepsilon_S$ is positive, so it lowers $\mathfrak a_T-\mathrm{Son}_{\Pi_S}$.
+(2) \emph{Comparison with Theorem~\ref{thm:inertia-nogo}.} For $\frac12\log2<T<\frac12\log3$,
+$\mathfrak a_T-\mathrm{Son}_{\Pi_\infty}$ has infinite negative index with eigenvalues bounded away from $0$, while
+$\mathfrak a_T-\mathrm{Son}_{\Pi_S}$ is compact: the contact $2$ is absorbed by the semilocal Sonin space. For
+$T>\frac12\log3$ the obstruction returns with $3$: $\mathfrak a_T-\mathrm{Son}_{\Pi_S}=-C_{\varepsilon_S}+\Pi^{(\ne2)}_T$,
+and the pairs of Theorem~\ref{thm:inertia-nogo} at distance $\log3$ are weakly null, so a compact $C_{\varepsilon_S}$
+contributes $o(\|x\|^2)$ while $\Pi^{(\ne2)}_T(x)=-v_3\|\beta\|_2^2\sum|c_j|^2$; the index is infinite. Each new contact
+requires enlarging $S$; Lemma~\ref{lem:sl-linear} holds for every finite $S$, but
+Proposition~\ref{prop:sl-AS}(iii) and Theorem~\ref{thm:sl-L2} are proved only for $S=\{\infty,2\}$
+($\{\infty,2,3\}$: ARGUED, $\log^2$ singularities on $\{2^a3^b\}$; $S(T)$ growing: OPEN).
+(3) \emph{The inertia of the remainder} must be absorbed by $\mathrm{Son}_{\Pi_S}$ window by window; there is no
+uniform-in-$T$ control of $\|C_{\varepsilon_S}\|$ ($\beta_j$ grows like $2^{j/2}$).
+(4) \emph{The gap requirement.} Theorem~\ref{thm:sl-gap} is a spectral gap at $1$; a positivity argument through
+$\Pi_S$ would need a gap of the density of $\Pi_S$ in the height variable, which is not addressed here.
+(5) \emph{Absolute form at $\lambda\ne1$} is conditional on an extension of \cite[Thm.~4.7]{ConnesConsani2021}.
+\end{remark}
+
+\begin{remark}[attribution]\label{rem:sl-new}
+From \cite{CCquasi2020,CCM2023,CCM2024}: $F_S$, the quasi-inner function and the factor $\rho_2$
+(Lemma~\ref{lem:sl-phase}), compactness of the Hankel block, the semilocal Sonin space, and the moment/Jacobi
+structure for $S=\{p,\infty\}$ \cite{CCM2024}. From \cite{ConnesConsani2021}: the archimedean (83)--(90) whose
+algebra Theorem~\ref{thm:sl-84} transports. New here: Proposition~\ref{prop:sl-AS}(iii) (non-Hilbert--Schmidt,
+$\mathcal S_p$, $p>2$), Theorem~\ref{thm:sl-gap} as stated, Lemma~\ref{lem:sl-TC} (in particular the absolute
+convergence of the diagonal series), Theorem~\ref{thm:sl-L2} with the constants $\beta_j$, and
+Theorem~\ref{thm:sl-84}. Lemma~\ref{lem:sl-linear} is not new in substance (phase-shift trace formula).
+\end{remark}

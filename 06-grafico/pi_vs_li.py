@@ -1,23 +1,23 @@
 """
-pi(x) vs Li(x): la funcion que cuenta primos frente a su aproximacion suave.
+pi(x) vs Li(x): the prime-counting function against its smooth approximation.
 
-- pi(x)  = cantidad de primos <= x  (funcion escalon, real)
-- x/ln x = primera aproximacion (teorema de los numeros primos)
-- Li(x)  = integral logaritmica, la MEJOR aproximacion suave a pi(x)
+- pi(x)  = number of primes <= x  (step function, actual)
+- x/ln x = first approximation (prime number theorem)
+- Li(x)  = logarithmic integral, the BEST smooth approximation to pi(x)
 
-La Hipotesis de Riemann equivale a decir que el error |pi(x) - Li(x)|
-es lo mas chico posible: crece como ~sqrt(x)*ln(x). Ese tamanio del error
-esta controlado por la parte real de los ceros de zeta. Si todos los ceros
-caen en Re(s)=1/2, el error queda acotado por sqrt(x); si alguno se saliera,
-el error seria mayor.
+The Riemann hypothesis is equivalent to the error |pi(x) - Li(x)| being
+as small as possible: it grows like ~sqrt(x)*ln(x). The size of the error
+is controlled by the real parts of the zeta zeros. If all zeros lie on
+Re(s)=1/2, the error is bounded by sqrt(x) up to logarithms; if one were off
+the line, the error would be larger.
 """
 import math
 import matplotlib.pyplot as plt
 
 X_MAX = 100000
-PASO = 200  # muestreamos x para las curvas suaves
+PASO = 200  # sampling step in x for the smooth curves
 
-# --- pi(x) via criba de Eratostenes ---
+# --- pi(x) via the sieve of Eratosthenes ---
 def criba(n):
     es = bytearray([1]) * (n + 1)
     es[0] = es[1] = 0
@@ -28,14 +28,14 @@ def criba(n):
 
 es_primo = criba(X_MAX)
 
-# pi(x) acumulado
+# cumulative pi(x)
 pi = [0] * (X_MAX + 1)
 c = 0
 for x in range(X_MAX + 1):
     c += es_primo[x]
     pi[x] = c
 
-# --- Li(x) = integral_2^x dt/ln(t)  (regla del trapecio) ---
+# --- Li(x) = integral_2^x dt/ln(t)  (trapezoidal rule) ---
 def Li(x):
     if x < 2:
         return 0.0
@@ -53,30 +53,30 @@ pi_vals = [pi[x] for x in xs]
 li_vals = [Li(x) for x in xs]
 pnt_vals = [x / math.log(x) for x in xs]  # x/ln(x)
 
-# --- Figura: dos paneles ---
+# --- Figure: two panels ---
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(13, 11))
 
-# Panel 1: las tres curvas
-ax1.plot(xs, pi_vals, color="#dc2626", linewidth=2.2, label=r"$\pi(x)$  (primos reales)")
-ax1.plot(xs, li_vals, color="#16a34a", linewidth=1.8, linestyle="--", label=r"$\mathrm{Li}(x)$  (mejor aprox. suave)")
-ax1.plot(xs, pnt_vals, color="#2563eb", linewidth=1.8, linestyle=":", label=r"$x/\ln x$  (aprox. simple)")
-ax1.set_title(r"$\pi(x)$ vs sus aproximaciones  —  hasta x = 100.000")
+# Panel 1: the three curves
+ax1.plot(xs, pi_vals, color="#dc2626", linewidth=2.2, label=r"$\pi(x)$  (actual primes)")
+ax1.plot(xs, li_vals, color="#16a34a", linewidth=1.8, linestyle="--", label=r"$\mathrm{Li}(x)$  (best smooth approx.)")
+ax1.plot(xs, pnt_vals, color="#2563eb", linewidth=1.8, linestyle=":", label=r"$x/\ln x$  (simple approx.)")
+ax1.set_title(r"$\pi(x)$ vs its approximations, up to x = 100,000")
 ax1.set_xlabel("x")
-ax1.set_ylabel("cantidad de primos <= x")
+ax1.set_ylabel("number of primes <= x")
 ax1.grid(True, alpha=0.3)
 ax1.legend()
 
-# Panel 2: el error pi(x) - Li(x) y la cota RH  ~sqrt(x)*ln(x)
+# Panel 2: the error pi(x) - Li(x) and the RH-type bound ~sqrt(x)*ln(x)
 error = [pi[x] - Li(x) for x in xs]
 cota_sup = [math.sqrt(x) * math.log(x) / (2 * math.pi) for x in xs]
 cota_inf = [-c for c in cota_sup]
 
-ax2.plot(xs, error, color="#7c3aed", linewidth=1.8, label=r"$\pi(x) - \mathrm{Li}(x)$  (error real)")
+ax2.plot(xs, error, color="#7c3aed", linewidth=1.8, label=r"$\pi(x) - \mathrm{Li}(x)$  (actual error)")
 ax2.plot(xs, cota_sup, color="#f59e0b", linewidth=1.5, linestyle="--",
-         label=r"cota tipo RH  $\pm\frac{\sqrt{x}\,\ln x}{2\pi}$")
+         label=r"RH-type bound  $\pm\frac{\sqrt{x}\,\ln x}{2\pi}$")
 ax2.plot(xs, cota_inf, color="#f59e0b", linewidth=1.5, linestyle="--")
 ax2.axhline(0, color="black", linewidth=0.8)
-ax2.set_title("El error queda ATRAPADO dentro de una banda ~sqrt(x) — eso es lo que garantiza la recta 1/2")
+ax2.set_title("The error stays TRAPPED inside a band ~sqrt(x): this is what the line 1/2 guarantees")
 ax2.set_xlabel("x")
 ax2.set_ylabel(r"$\pi(x) - \mathrm{Li}(x)$")
 ax2.grid(True, alpha=0.3)
@@ -85,7 +85,7 @@ ax2.legend()
 plt.tight_layout()
 plt.savefig("pi_vs_li.png", dpi=130)
 
-# --- Reporte ---
+# --- Report ---
 print(f"pi(100000)      = {pi[X_MAX]}")
 print(f"Li(100000)      = {Li(X_MAX):.1f}")
 print(f"100000/ln       = {X_MAX/math.log(X_MAX):.1f}")

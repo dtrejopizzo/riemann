@@ -283,8 +283,8 @@ If \(R_L<\beta_L\), the scalar Schur complement and min--max principle give
 Hence the exact sufficient package is
 
 \[
- R_L=O(d_4),qquad
- \beta_L\ge c d_8,qquad
+ R_L=O(d_4),\qquad
+ \beta_L\ge c d_8,\qquad
  \lambda^B\frac{\|b_L\|}{\beta_L-R_L}\longrightarrow0
  \quad(B<\tfrac12).
  \tag{24}

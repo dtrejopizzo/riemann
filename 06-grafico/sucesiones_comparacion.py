@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 
 CANTIDAD = 10000
 
-# --- Primeros 10000 pares (2n) ---
+# --- First 10000 even numbers (2n) ---
 pares = [2 * n for n in range(1, CANTIDAD + 1)]
 
-# --- Primeros 10000 primos (criba simple) ---
+# --- First 10000 primes (simple sieve) ---
 def primeros_primos(cantidad):
     primos = []
     candidato = 2
@@ -27,33 +27,33 @@ primos = primeros_primos(CANTIDAD)
 
 indices = list(range(1, CANTIDAD + 1))
 
-# --- Curva teorica del teorema de los numeros primos: p_n ~ n*ln(n) ---
+# --- Prime number theorem curve: p_n ~ n*ln(n) ---
 teorica = [n * math.log(n) for n in indices]
 
-# --- Aproximacion mejorada: p_n ~ n*(ln(n) + ln(ln(n))) ---
-# (n=1 no tiene ln(ln(n)); empezamos la formula desde n=2)
-mejorada = [None]  # placeholder para n=1
+# --- Improved approximation: p_n ~ n*(ln(n) + ln(ln(n))) ---
+# (ln(ln(n)) is undefined at n=1; the formula starts at n=2)
+mejorada = [None]  # placeholder for n=1
 mejorada += [n * (math.log(n) + math.log(math.log(n))) for n in indices[1:]]
 
-# --- Grafico unico, mismos ejes ---
+# --- Single plot, same axes ---
 plt.figure(figsize=(12, 8))
 
-plt.plot(indices, pares, color="#2563eb", linewidth=2, label="Pares (2n)")
-plt.scatter(indices, primos, s=3, color="#dc2626", label="Primos (n-ésimo primo)")
+plt.plot(indices, pares, color="#2563eb", linewidth=2, label="Evens (2n)")
+plt.scatter(indices, primos, s=3, color="#dc2626", label="Primes (n-th prime)")
 plt.plot(indices, teorica, color="#16a34a", linewidth=2, linestyle="--",
-         label="Aproximación  n·ln(n)")
+         label="Approximation  n·ln(n)")
 plt.plot(indices[1:], mejorada[1:], color="#9333ea", linewidth=2, linestyle=":",
-         label="Aproximación mejorada  n·(ln n + ln ln n)")
+         label="Improved approximation  n·(ln n + ln ln n)")
 
-plt.title("Pares vs Primos en el mismo plano (mismos ejes) — primeros 10000 términos")
-plt.xlabel("n (posición)")
-plt.ylabel("valor")
+plt.title("Evens vs primes on the same axes: first 10000 terms")
+plt.xlabel("n (position)")
+plt.ylabel("value")
 plt.grid(True, alpha=0.3)
 plt.legend()
 
 plt.tight_layout()
 plt.savefig("sucesiones_comparacion.png", dpi=130)
-print("Par 10000 =", pares[-1])
-print("Primo 10000 =", primos[-1])
-print("n*ln(n) en 10000 =", round(teorica[-1]))
-print("n*(ln n + ln ln n) en 10000 =", round(mejorada[-1]))
+print("Even 10000 =", pares[-1])
+print("Prime 10000 =", primos[-1])
+print("n*ln(n) at 10000 =", round(teorica[-1]))
+print("n*(ln n + ln ln n) at 10000 =", round(mejorada[-1]))

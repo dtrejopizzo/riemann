@@ -46,7 +46,7 @@ uniformly to \(\Xi\) in the topology defining the Laguerre--Pólya class.
 Then \(\Xi\in{\rm LP}\), all zeros of \(\Xi\) are real, Li positivity follows,
 and A1 follows through the phase-102 assembly.
 
-This is a valid force-RH target.  It is not circular if the hyperbolicity of
+This is a valid RH-strength target.  It is not circular if the hyperbolicity of
 all Jensen polynomials is proved directly from Euler--Gamma data, without
 using zero locations.
 

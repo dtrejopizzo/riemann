@@ -1,6 +1,6 @@
 # E77.7 - Fixed-L TRICOMI-LP Setup and Autopsy
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Real Spectral Target
 

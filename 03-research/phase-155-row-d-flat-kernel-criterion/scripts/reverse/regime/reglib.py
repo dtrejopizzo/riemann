@@ -9,7 +9,7 @@ Fixed C^2 flat-top class, comparable across every window T:
 
 h and J are FIXED (not M = 2T/h), so the admissible set is literally the same
 shape family at every T; only the edge position 2T moves.  This answers the
-hostile-audit point (R155_006 SS5) that a coefficient budget over an M-dependent
+audit point (R155_006 SS5) that a coefficient budget over an M-dependent
 lattice is not comparable across windows: here the lattice is T-independent and
 we additionally report the true norms ||w||_inf and int|w|.
 
@@ -127,7 +127,7 @@ def refine_min(W, gam, tau, f, dfine=0.005, dcoarse=0.02, kmax=250):
 # ------------------------------------------------------------------ prime side
 def f_prime_side(tau, W, y, x, ns, lam, gl_n=800):
     """Theorem Z (7.2), prime/Gamma side.  Gauss-Legendre order 800 on the
-    B-spline integrals (hostile-audit repair R155_006 SS3: order 200 gave a
+    B-spline integrals (audit repair R155_006 SS3: order 200 gave a
     7e-5 artefact)."""
     T, h, sv, ujs = W.T, W.h, W.sv, W.ujs
     tau = np.asarray(tau, float); logn = np.log(ns)

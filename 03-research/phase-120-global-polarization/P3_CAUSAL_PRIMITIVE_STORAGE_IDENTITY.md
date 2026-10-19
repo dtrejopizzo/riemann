@@ -138,7 +138,7 @@ unspecified Maslov remainder left.
 Now impose the primitive potential condition
 
 \[
- F=L_0G,\qquad L_0=-D^2+\tfrac14,qquad
+ F=L_0G,\qquad L_0=-D^2+\tfrac14,\qquad
  G\in C_c^\infty(-T,T).                              \tag{4.1}
 \]
 
@@ -161,7 +161,7 @@ Consequently the Gamma state has the exact primitive formula
 For \(n=0\), \(\lambda_0=1/2\), so the resolvent term disappears:
 
 \[
- \boxed{z_0=(-D+\tfrac12)G,qquad z_0(T)=0.}         \tag{4.4}
+ \boxed{z_0=(-D+\tfrac12)G,\qquad z_0(T)=0.}         \tag{4.4}
 \]
 
 This is an exact cancellation specific to the quarter twist.  For \(n\ge1\),
@@ -327,7 +327,7 @@ The same unification holds before taking the terminal trace.  For any time
 
 \[
  \mathscr X_{p,t}^{F}(z,u)
- =\sum_{j\ge0}r^jF(t-u-ja)z^j,qquad 0<u<a.          \tag{4.20}
+ =\sum_{j\ge0}r^jF(t-u-ja)z^j,\qquad 0<u<a.          \tag{4.20}
 \]
 
 Then the two state systems are the boundary value and radial Laplace

@@ -1,7 +1,6 @@
 # E67.3 — Choosing the non-group-like CQG for the prime current
 
-**Date:** 2026-07-06.
-**Role:** candidate map after the E67.2 group-like ansatz was rejected as Bost-Connes/Pontryagin-dual
+**Purpose:** candidate map after the E67.2 group-like ansatz was rejected as Bost-Connes/Pontryagin-dual
 in disguise.
 
 ## Decision criterion

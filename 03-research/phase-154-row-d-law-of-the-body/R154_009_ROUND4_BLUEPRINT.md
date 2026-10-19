@@ -1,4 +1,4 @@
-# R154.009 — Lead blueprint, round 4 of phase 154: close the certificate at T = ½log3. Date 2026-09-20.
+# R154.009 — Blueprint, round 4 of phase 154: close the certificate at T = ½log3.
 
 ## 0. State (R154_008)
 Theorem D1 PROVED (repair RJ: `M ⊆ cl(M_c)`, `int cl C = int C`; name the theorem: Rockafellar Cor. 31.2.1 / Slater conic form).
@@ -26,4 +26,4 @@ proof of Weil positivity with a prime coupled. Compare with Paper 42's Feshbach 
 
 ## 3. Rules
 Labels; FATAL rule (re-proving a certified endpoint by a new method is the point; no claim beyond `log 2`); every printed constant with its
-enclosure; corpus-check lines; deliverable `R154_010_BUILDER_ROUND4.md` (≤ 4000 words) + `scripts/round4/`.
+enclosure; corpus-check lines; deliverable `R154_010_ROUND4.md` (≤ 4000 words) + `scripts/round4/`.

@@ -83,7 +83,7 @@ Using (3.2) for `r<=2T` and the value `2` for `r>=2T`, one obtains
 \[
  \begin{aligned}
  \mathcal E_{\infty,T}(v_T)
- &=\sum_{j=0}^\infty\left{
+ &=\sum_{j=0}^\infty\left\{
  {1-(1+2Tb_j)e^{-2Tb_j}\over Tb_j^2}
        +{2e^{-2Tb_j}\over b_j}\right}\\
  &=\sum_{j=0}^\infty{1-e^{-2Tb_j}\over Tb_j^2}.              \tag{3.5}
@@ -298,7 +298,7 @@ The logical status is more precise than simply “equivalent to RH”:
 1. the primitive inequality of D.10/D.47 on every test is Weil's criterion
    and is equivalent to RH;
 2. the odd ordering inequality (4.5) is a different, nonprimitive
-   fixed-window spectral statement; no equivalence with RH alone is known;
+ fixed-window spectral statement; no equivalence with RH alone is known;
 3. (4.5) for all windows supplies the simple-even parity input only after
    a separate intra-even simplicity argument;
 4. combined with the expanding-window determinant convergence of D.48, it

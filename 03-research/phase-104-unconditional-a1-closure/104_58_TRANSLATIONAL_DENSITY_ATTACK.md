@@ -1,42 +1,42 @@
-# 104_58 — Ataque traslacional y criterio de densidad para el margen cuarto
+# 104_58 — Translational attack and density criterion for the quartic margin
 
-**Estado.** Este documento explota el objetivo relajado de `104_56A`,
+**Status.** This document exploits the relaxed target of `104_56A`,
 
 \[
  D_n:=4\lambda_n-A_n>0.                              \tag{1}
 \]
 
-Se obtiene un resultado útil pero no un cierre de (1): si RH es falsa,
-entonces \(D_n<0\) en un conjunto de enteros de densidad inferior positiva.
-Por tanto basta probar (1) fuera de un conjunto de densidad cero. La misma
-obstrucción sobrevive a toda ventana traslacional de longitud fija.
+A useful result is obtained, but not a closure of (1): if RH is false,
+then \(D_n<0\) on a set of integers of positive lower density. Hence it
+suffices to prove (1) outside a set of density zero. The same obstruction
+survives every translational window of fixed length.
 
-También se responde negativamente una pregunta distinta: la cota de fase
-\(|\mathcal B_{n,a}|\le3n\) de `104_41`, válida para \(a\ge4\), no puede
-transportarse a \(a=1\), ni siquiera «en densidad» o después de promediar en
-ventanas fijas, sin controlar los residuos cruzados. Un cuarteto racional lo
-prueba exactamente.
+A different question is also answered negatively: the phase bound
+\(|\mathcal B_{n,a}|\le3n\) of `104_41`, valid for \(a\ge4\), cannot be
+transported to \(a=1\), not even "in density" or after averaging over
+fixed windows, without controlling the cross residues. A rational
+quadruple proves this exactly.
 
-Nada de lo siguiente prueba que los \(D_n\) reales sean positivos en
-densidad uno. Por tanto este documento no prueba A1 ni RH.
+None of the following proves that the real \(D_n\) are positive in
+density one. Hence this document proves neither A1 nor RH.
 
-## 1. No duplicación con `104_17`
+## 1. No duplication with `104_17`
 
-`104_17` estudia las sumas iniciales
-\(\sum_{n\le N}Q_n\), sus medias triangulares y la positividad Abel radial.
-Aquí se estudian objetos diferentes:
+`104_17` studies the partial sums
+\(\sum_{n\le N}Q_n\), their triangular means and radial Abel positivity.
+Here different objects are studied:
 
-1. ventanas **trasladadas** \(\sum_{h<L}D_{N+h}\);
-2. la densidad natural del conjunto de signos malos;
-3. el conjunto finito de singularidades dominantes si RH falla;
-4. el cambio exacto de una ventana al mover la homotopía \(a\ge4\to1\).
+1. **translated** windows \(\sum_{h<L}D_{N+h}\);
+2. the natural density of the set of bad signs;
+3. the finite set of dominant singularities if RH fails;
+4. the exact change of a window when moving the homotopy \(a\ge4\to1\).
 
-No se intenta recuperar un coeficiente desde positividad Abel, que ya está
-descartado por `104_17`.
+No attempt is made to recover a coefficient from Abel positivity, which is
+already ruled out by `104_17`.
 
-## 2. Generatriz exacta de los bloques
+## 2. Exact generating function of the blocks
 
-Sea
+Let
 
 \[
  s(z)={1\over1-z},\qquad
@@ -44,28 +44,28 @@ Sea
  Y_4(s)={\xi(s)^4\over G(s)}.
 \]
 
-La identidad local de Li da
+Li's local identity gives
 
 \[
  \mathcal H(z):=\log{Y_4(s(z))\over Y_4(1)}
  =\sum_{n\ge1}{D_n\over n}z^n.                    \tag{2}
 \]
 
-Por tanto la generatriz ordinaria es
+Hence the ordinary generating function is
 
 \[
  \boxed{
  \mathcal D(z):=z\mathcal H'(z)=\sum_{n\ge1}D_nz^n.} \tag{3}
 \]
 
-Para \(L\ge1\), defínase la ventana que termina en \(N\)
+For \(L\ge1\), define the window ending at \(N\)
 
 \[
  S_{N,L}:=\sum_{h=0}^{L-1}D_{N-h},
  \qquad D_j:=0\quad(j\le0).
 \]
 
-Entonces
+Then
 
 \[
  \boxed{
@@ -73,27 +73,27 @@ Entonces
  ={1-z^L\over1-z}\,\mathcal D(z).}                \tag{4}
 \]
 
-Equivalentemente, para la ventana que empieza en \(N\),
+Equivalently, for the window starting at \(N\),
 
 \[
  U_{N,L}:=\sum_{h=0}^{L-1}D_{N+h}
  =[z^{N+L-1}],{1-z^L\over1-z}\mathcal D(z).       \tag{5}
 \]
 
-Así, promediar sobre una longitud fija solo multiplica cada singularidad
-por el polinomio
+Thus averaging over a fixed length only multiplies each singularity
+by the polynomial
 
 \[
  A_L(w):=1+w+\cdots+w^{L-1}={1-w^L\over1-w}.       \tag{6}
 \]
 
-Si \(|w|>1\), entonces \(A_L(w)\ne0\). Por consiguiente ninguna ventana
-fija anula un modo off-line exterior.
+If \(|w|>1\), then \(A_L(w)\ne0\). Consequently no fixed window
+cancels an off-line exterior mode.
 
-## 3. Lema de densidad para un polinomio trigonométrico
+## 3. Density lemma for a trigonometric polynomial
 
-**Lema 3.1.** Sean \(0<\theta_j<\pi\), distintos módulo el signo, y
-\(c_j>0\). Póngase
+**Lemma 3.1.** Let \(0<\theta_j<\pi\) be distinct up to sign, and
+\(c_j>0\). Set
 
 \[
  P_n=\sum_{j=1}^Jc_j\cos(n\theta_j),\qquad
@@ -101,7 +101,7 @@ fija anula un modo off-line exterior.
  \sigma^2={1\over2}\sum_jc_j^2.                  \tag{7}
 \]
 
-Entonces, con \(\varepsilon=\sigma^2/(4M)\),
+Then, with \(\varepsilon=\sigma^2/(4M)\),
 
 \[
  \boxed{
@@ -109,90 +109,90 @@ Entonces, con \(\varepsilon=\sigma^2/(4M)\),
  \{n:P_n>\varepsilon\}\ge {\sigma^2\over4M^2}>0.} \tag{8}
 \]
 
-**Demostración.** Las identidades elementales de Cesàro
+**Proof.** The elementary Cesàro identities
 
 \[
  {1\over N}\sum_{n\le N}e^{in\alpha}\longrightarrow0
  \qquad(\alpha\notin2\pi\mathbb Z)
 \]
 
-dan
+give
 
 \[
  {1\over N}\sum_{n\le N}P_n\to0,\qquad
  {1\over N}\sum_{n\le N}P_n^2\to\sigma^2.        \tag{9}
 \]
 
-Se agruparon previamente las frecuencias que representan el mismo coseno,
-por lo que no quedan términos cruzados constantes. Como
-\(|P_n|\le M\), se tiene \(P_n^2\le M|P_n|\). Escribiendo
-\(P_n=P_n^+-P_n^-\), (9) implica
+Frequencies representing the same cosine were grouped beforehand, so no
+constant cross terms remain. Since
+\(|P_n|\le M\), we have \(P_n^2\le M|P_n|\). Writing
+\(P_n=P_n^+-P_n^-\), (9) implies
 
 \[
  \liminf_{N\to\infty}{1\over N}\sum_{n\le N}P_n^+
  \ge {\sigma^2\over2M}.                           \tag{10}
 \]
 
-Finalmente,
+Finally,
 
 \[
  P_n^+\le\varepsilon+M\mathbf1_{\{P_n>\varepsilon\}}.
 \]
 
-Se promedia y se usa (10), obteniendo (8). \(\square\)
+Averaging and using (10) gives (8). \(\square\)
 
-La misma prueba vale para un polinomio real no nulo
-\(\mathrm{Re}\,\sum_jd_je^{in\theta_j}\), después de agrupar
-frecuencias. Lo único que cambia es la constante positiva.
+The same proof holds for a nonzero real polynomial
+\(\mathrm{Re}\,\sum_jd_je^{in\theta_j}\), after grouping
+frequencies. Only the positive constant changes.
 
-## 4. Teorema dominante: una violación de RH produce densidad mala positiva
+## 4. Dominant theorem: a violation of RH produces positive bad density
 
-**Teorema 4.1.** Si RH es falsa, existen \(r>1\), \(1<r_1<r\), un
-polinomio trigonométrico real no nulo \(P_n\), y una constante \(C\), tales
-que
+**Theorem 4.1.** If RH is false, there exist \(r>1\), \(1<r_1<r\), a
+nonzero real trigonometric polynomial \(P_n\), and a constant \(C\), such
+that
 
 \[
  \boxed{
  D_n=-8r^nP_n+O(r_1^n).}                           \tag{11}
 \]
 
-En particular,
+In particular,
 
 \[
  \boxed{
  \underline{\mathrm{dens}}\{n:D_n<0\}>0.} \tag{12}
 \]
 
-**Demostración.** Los ceros a la derecha de la línea crítica se transforman
-en
+**Proof.** The zeros to the right of the critical line are transformed
+into
 
 \[
  z_\rho=1-{1\over\rho},\qquad |z_\rho|<1.          \tag{13}
 \]
 
-Si existe alguno, el número
+If any exist, the number
 
 \[
  q:=\min_{\Re\rho>1/2}|z_\rho|<1                  \tag{14}
 \]
 
-se alcanza y el conjunto \(\mathcal Z_0\) de ceros que alcanzan el mínimo
-es finito: en todo disco compacto de la variable \(z\) hay solo finitos
-ceros, y \(|z_\rho|\to1\) cuando \(|\Im\rho|\to\infty\).
+is attained and the set \(\mathcal Z_0\) of zeros attaining the minimum
+is finite: every compact disk of the \(z\)-variable contains only
+finitely many zeros, and \(|z_\rho|\to1\) as \(|\Im\rho|\to\infty\).
 
-Elija \(q<q_1<1\) sin otras singularidades transformadas en
-\(|z|\le q_1\). Al retirar de \(Y_4(s(z))\) los factores de los ceros de
-\(\mathcal Z_0\), queda una función holomorfa y no nula en ese disco, con
-logaritmo holomorfo. De (2), la singularidad logarítmica de un cero de
-multiplicidad \(m_\rho\) da
+Choose \(q<q_1<1\) with no other transformed singularities in
+\(|z|\le q_1\). Removing from \(Y_4(s(z))\) the factors of the zeros of
+\(\mathcal Z_0\) leaves a function holomorphic and nonzero on that disk,
+with a holomorphic logarithm. From (2), the logarithmic singularity of a
+zero of multiplicity \(m_\rho\) gives
 
 \[
  D_n=-4\sum_{\rho\in\mathcal Z_0}m_\rho z_\rho^{-n}
      +O(r_1^n),                                    \tag{15}
 \]
 
-para algún \(1<r_1<q^{-1}\); el factor polinómico de una cota de Cauchy se
-absorbe agrandando \(r_1\). Agrupando conjugados y escribiendo
+for some \(1<r_1<q^{-1}\); the polynomial factor of a Cauchy bound is
+absorbed by enlarging \(r_1\). Grouping conjugates and writing
 \(z_\rho=q e^{i\theta_\rho}\),
 
 \[
@@ -200,31 +200,31 @@ absorbe agrandando \(r_1\). Agrupando conjugados y escribiendo
  m_\rho\cos(n\theta_\rho)+O(r_1^n).               \tag{16}
 \]
 
-No aparece una frecuencia \(0\) o \(\pi\), pues los ceros no triviales no
-son reales. Tras agrupar cosenos iguales, el Lema 3.1 da un conjunto de
-densidad inferior positiva donde el polinomio de (16) supera una constante
-positiva. Sobre ese conjunto el término principal domina al error para
-todo \(n\) suficientemente grande, y \(D_n<0\). \(\square\)
+No frequency \(0\) or \(\pi\) appears, since the nontrivial zeros are
+not real. After grouping equal cosines, Lemma 3.1 gives a set of
+positive lower density where the polynomial of (16) exceeds a positive
+constant. On that set the main term dominates the error for
+all sufficiently large \(n\), and \(D_n<0\). \(\square\)
 
-**Corolario 4.2 (criterio de densidad uno).** Si
+**Corollary 4.2 (density-one criterion).** If
 
 \[
  D_n>0
- \quad\hbox{para todo }n\notin\mathcal E,\qquad
+ \quad\hbox{for all }n\notin\mathcal E,\qquad
  \mathrm{dens}(\mathcal E)=0,               \tag{17}
 \]
 
-entonces RH es cierta.
+then RH is true.
 
-No se obtiene de esta prueba una constante universal \(\delta_0>0\) tal
-que baste \(\overline{\mathrm{dens}}(\mathcal E)<\delta_0\). La cota
-de (8) depende del número y de las multiplicidades de los ceros dominantes;
-sin una cota uniforme para ese dato puede ser arbitrariamente pequeña.
-La relajación robusta es «excepciones de densidad cero».
+This proof does not yield a universal constant \(\delta_0>0\) such
+that \(\overline{\mathrm{dens}}(\mathcal E)<\delta_0\) suffices. The
+bound of (8) depends on the number and multiplicities of the dominant
+zeros; without a uniform bound on that data it can be arbitrarily small.
+The robust relaxation is "zero-density exceptions."
 
-## 5. Las ventanas fijas tampoco esconden los residuos dominantes
+## 5. Fixed windows also fail to hide the dominant residues
 
-**Teorema 5.1.** Bajo la negación de RH, para cada longitud fija \(L\ge1\),
+**Theorem 5.1.** Under the negation of RH, for each fixed length \(L\ge1\),
 
 \[
  \boxed{
@@ -232,71 +232,71 @@ La relajación robusta es «excepciones de densidad cero».
  \left\{N:\sum_{h=0}^{L-1}D_{N+h}<0\right\}>0.}    \tag{18}
 \]
 
-**Demostración.** Se suma (16) en \(n=N,\ldots,N+L-1\). Si
-\(w_j=q^{-1}e^{-i\theta_j}\), el término dominante se convierte en
+**Proof.** Sum (16) over \(n=N,\ldots,N+L-1\). If
+\(w_j=q^{-1}e^{-i\theta_j}\), the dominant term becomes
 
 \[
  -8q^{-N}\mathrm{Re}
  \sum_jm_j e^{-iN\theta_j}A_L(w_j).                \tag{19}
 \]
 
-Cada \(A_L(w_j)\ne0\) por \(|w_j|>1\). Después de agrupar frecuencias,
-(19) es un polinomio trigonométrico real no nulo. Su parte positiva supera
-una constante en un conjunto de densidad inferior positiva por la prueba
-del Lema 3.1. El error sigue siendo \(O(r_1^N)\), pues \(L\) es fijo, y
-queda dominado por \(q^{-N}\). \(\square\)
+Each \(A_L(w_j)\ne0\) because \(|w_j|>1\). After grouping frequencies,
+(19) is a nonzero real trigonometric polynomial. Its positive part exceeds
+a constant on a set of positive lower density by the proof of Lemma 3.1.
+The error is still \(O(r_1^N)\), since \(L\) is fixed, and remains
+dominated by \(q^{-N}\). \(\square\)
 
-Por tanto un teorema que probara positividad de una sola longitud fija de
-ventanas fuera de un conjunto de densidad cero también probaría RH. Pero
-la ventana no reduce el residuo: solo rota y reescala su fase.
+Hence a theorem proving positivity for a single fixed window length
+outside a set of density zero would also prove RH. But the window does not
+reduce the residue: it only rotates and rescales its phase.
 
-## 6. Falsificador racional de toda ventana fija
+## 6. Rational falsifier for every fixed window
 
-Tómese el cuarteto de `104_17`
+Take the quadruple from `104_17`
 
 \[
  \rho={1+2i\over5},\qquad w=1-{1\over\rho}=2i.
 \]
 
-Su contribución al coeficiente de Li es
+Its contribution to the Li coefficient is
 
 \[
  Q_n=4-2\mathrm{Re}(w^n+w^{-n}),            \tag{20}
 \]
 
-y al margen (1) es \(D_n^{\mathcal O}=4Q_n\). Por tanto
+and to margin (1) it is \(D_n^{\mathcal O}=4Q_n\). Hence
 
 \[
  \boxed{
  \sum_{h=0}^{L-1}D_{N+h}^{\mathcal O}
- =16L-8\mathrm{Re}\,\left{
- w^NA_L(w)+w^{-N}A_L(w^{-1})\right}.}             \tag{21}
+ =16L-8\mathrm{Re}\,\left\{
+ w^NA_L(w)+w^{-N}A_L(w^{-1})\right\}.}             \tag{21}
 \]
 
-Escriba \(A_L(2i)=a_L+ib_L\). Es un entero gaussiano no nulo, porque
-\((2i)^L\ne1\). Alguna de las cuatro cantidades
-\(\mathrm{Re}(i^jA_L(2i))\) es estrictamente positiva. En la clase
-\(N\equiv j\pmod4\) correspondiente, el término dominante de (21) es
+Write \(A_L(2i)=a_L+ib_L\). It is a nonzero Gaussian integer, because
+\((2i)^L\ne1\). One of the four quantities
+\(\mathrm{Re}(i^jA_L(2i))\) is strictly positive. On the corresponding
+class \(N\equiv j\pmod4\), the dominant term of (21) is
 
 \[
  -8\,2^N\mathrm{Re}(i^jA_L(2i)),
 \]
 
-mientras el término recíproco tiende a cero. Así (21) es negativo para
-todo \(N\) suficientemente grande de esa clase, que tiene densidad
-exactamente \(1/4\). Esto vale para **cada** \(L\) fijo.
+while the reciprocal term tends to zero. So (21) is negative for
+all sufficiently large \(N\) in that class, which has density
+exactly \(1/4\). This holds for **every** fixed \(L\).
 
-## 7. La cota de fase no se transporta en densidad
+## 7. The phase bound does not transport in density
 
-Sea \(F(s)=(s-1)\zeta(s)\) y multiplíquese formalmente por
-\(Q_\rho(s)^M\), donde \(Q_\rho\) es el polinomio del cuarteto anterior.
-Para
+Let \(F(s)=(s-1)\zeta(s)\) and formally multiply by
+\(Q_\rho(s)^M\), where \(Q_\rho\) is the polynomial of the previous
+quadruple. For
 
 \[
  z_{\eta,a}:=1-{a\over\eta},
 \]
 
-la fórmula de coeficientes (8) de `104_41` da el cambio exacto
+the coefficient formula (8) of `104_41` gives the exact change
 
 \[
  \boxed{
@@ -305,35 +305,35 @@ la fórmula de coeficientes (8) de `104_41` da el cambio exacto
        \left(z_{\eta,a}^{-n}-1\right).}            \tag{22}
 \]
 
-Para \(a\ge4\), la identidad
+For \(a\ge4\), the identity
 
 \[
  |z_{\eta,a}|^2-1={a(a-2\Re\eta)\over|\eta|^2}>0  \tag{23}
 \]
 
-muestra que (22) es acotada en \(n\) y tiende a \(-4M\). En el extremo
-\(a=1\), la simetría recíproca da
+shows that (22) is bounded in \(n\) and tends to \(-4M\). At the
+endpoint \(a=1\), reciprocal symmetry gives
 
 \[
  \Delta\mathcal B_{n,1}=-M Q_n,\qquad
  \Delta D_n=4M Q_n.                               \tag{24}
 \]
 
-Para \(n\equiv0\pmod4\), \(n\ge4\),
+For \(n\equiv0\pmod4\), \(n\ge4\),
 
 \[
  Q_n=4-2(2^n+2^{-n})<0,                            \tag{25}
 \]
 
-de modo que el cambio en \(D_n\) es exponencialmente negativo sobre un
-conjunto de densidad \(1/4\), aunque en \(a\ge4\) el cambio de (22) sea
-solo acotado. Las ventanas fijas conservan la misma obstrucción por (21).
+so the change in \(D_n\) is exponentially negative on a
+set of density \(1/4\), even though for \(a\ge4\) the change of (22) is
+only bounded. Fixed windows retain the same obstruction by (21).
 
-Para \(M=1\), el factor de cuarteto por sí solo satisface incluso la misma
-cota numérica de salida que (19) de `104_41` en todos los grados objetivo.
-En \(a=4\), los cuatro módulos cuadrados de \(z_{\eta,4}\) son
-\(73,73,13,13\); por (23) solo aumentan al crecer \(a\). Por tanto, para
-\(a\ge4\) y \(n\ge2\),
+For \(M=1\), the quadruple factor alone satisfies even the same
+numerical output bound as (19) of `104_41` at all target degrees. At
+\(a=4\), the four squared moduli of \(z_{\eta,4}\) are
+\(73,73,13,13\); by (23) they only increase as \(a\) grows. Hence, for
+\(a\ge4\) and \(n\ge2\),
 
 \[
  |\Delta\mathcal B_{n,a}|
@@ -341,56 +341,57 @@ En \(a=4\), los cuatro módulos cuadrados de \(z_{\eta,4}\) son
  \le4+{2\over73}+{2\over13}<6\le3n.               \tag{25a}
 \]
 
-Así, ni siquiera conservar la desigualdad escalar exacta
-\(|\mathcal B_{n,a}|\le3n\) en el extremo Euler distingue el falsificador
-en los grados \(n\ge150\).
+So not even preserving the exact scalar inequality
+\(|\mathcal B_{n,a}|\le3n\) at the Euler endpoint distinguishes the
+falsifier at the target degrees \(n\ge150\).
 
-Además \(Q_\rho(1/2+it)>0\), así que la fase crítica permanece idéntica,
-como prueba `104_41`. Por tanto:
+Moreover \(Q_\rho(1/2+it)>0\), so the critical phase remains identical,
+as `104_41` proves. Hence:
 
 \[
  \boxed{
- \text{fase en el semiplano Euler + promedios traslacionales fijos}
+ \text{phase in the Euler half-plane + fixed translational averages}
  \not\Longrightarrow
- \text{control en densidad en }a=1}               \tag{26}
+ \text{density control at }a=1}               \tag{26}
 \]
 
-sin una estimación separada de los residuos cruzados.
+without a separate estimate of the cross residues.
 
-Este falsificador no tiene los pesos Euler exactos \(\Lambda(m)\). Por eso
-(26) descarta mecanismos basados solo en fase, homotopía y promediado; no
-descarta una desigualdad nueva específica para los pesos reales de zeta.
+This falsifier does not have the exact Euler weights \(\Lambda(m)\). That is
+why (26) rules out mechanisms based only on phase, homotopy and averaging; it
+does not rule out a new inequality specific to the real zeta weights.
 
 ## 8. Balance
 
-**Probado:**
+**Proved:**
 
-- generatriz exacta (3)--(5) de ventanas traslacionales;
-- criterio de densidad uno, Corolario 4.2;
-- persistencia de la obstrucción en toda longitud fija, Teorema 5.1;
-- falsificador racional de densidad \(1/4\);
-- imposibilidad de transportar \(|\mathcal B_{n,a}|\le3n\) en densidad o
-  en ventanas fijas sin controlar residuos.
+- exact generating function (3)--(5) of translational windows;
+- density-one criterion, Corollary 4.2;
+- persistence of the obstruction at every fixed length, Theorem 5.1;
+- rational falsifier of density \(1/4\);
+- impossibility of transporting \(|\mathcal B_{n,a}|\le3n\) in density or
+  in fixed windows without controlling residues.
 
-**No probado:**
+**Not proved:**
 
-- que \(D_n>0\) para una densidad uno de índices reales de zeta;
-- una cota de residuos usando los pesos exactos \(\Lambda(m)\);
-- A1 o RH.
+- that \(D_n>0\) for a density-one set of real zeta indices;
+- a residue bound using the exact weights \(\Lambda(m)\);
+- A1 or RH.
 
-El avance lógico sí es real: el cuantificador «todo \(n\ge150\)» puede
-reemplazarse por «todo \(n\) salvo densidad cero». El obstáculo que queda no
-es recuperar cada coeficiente desde un promedio, sino demostrar una cota
-media que excluya una **densidad positiva** de fallos.
+The logical advance is real: the quantifier "all \(n\ge150\)" can
+be replaced by "all \(n\) except a density-zero set." The remaining
+obstacle is not recovering each coefficient from an average, but
+proving an average bound that excludes a **positive density** of
+failures.
 
-## 9. Reproducción
+## 9. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 translational_density_attack_check.py
 ```
 
-El checker usa únicamente racionales y racionales gaussianos. Verifica
-(20)--(25) y las identidades de ventanas en una familia finita de valores;
-la densidad para todo \(L\) se prueba algebraicamente arriba, no por
-muestreo.
+The checker uses only rationals and Gaussian rationals. It verifies
+(20)--(25) and the window identities on a finite family of values;
+the density claim for every \(L\) is proved algebraically above, not by
+sampling.

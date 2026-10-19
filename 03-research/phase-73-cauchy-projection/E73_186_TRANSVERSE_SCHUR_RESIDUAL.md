@@ -1,6 +1,5 @@
 # E73.186 - Transverse Schur residual
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

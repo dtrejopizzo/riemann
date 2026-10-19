@@ -1,6 +1,6 @@
 # E78.13 - Transfer growth versus t0 and 1-theta
 
-**Run:** 2026-07-18.
+**Run:**
 **Scope:** IDENT transfer-scale geometry.
 
 ## 1. Purpose

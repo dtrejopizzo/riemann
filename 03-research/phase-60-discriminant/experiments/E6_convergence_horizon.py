@@ -1,24 +1,24 @@
 #!/usr/bin/env python3
 # ======================================================================================
-# Phase 60 — E6: el HORIZONTE de convergencia H(λ).  Ataque directo al Eslabon 2.
+# Phase 60 — E6: the convergence HORIZON H(λ).  Direct attack on Link 2.
 #
-# Objetivo (mapa a RH, Eslabon 2): caracterizar la convergencia ξ̂_{λ,N} -> Ξ.
-#   2a (N->inf, λ fijo): cada cero tiene un PISO-λ; N grande lo satura.
-#   2b (λ->inf): el piso-λ baja y el HORIZONTE de ceros resueltos H(λ) crece.
-# Fenomeno CCM: 1er cero ~1e-18 con primos<=13, pero la precision DEGRADA con la altura
-# (paper: ~1e-3 para el cero 50). => H(λ;ε) = altura hasta la que los ceros estan a <ε.
+# Goal (mapping to RH, Link 2): characterize the convergence ξ̂_{λ,N} -> Ξ.
+#   2a (N->inf, λ fixed): each zero has a λ-FLOOR; large N saturates it.
+#   2b (λ->inf): the λ-floor drops and the HORIZON of resolved zeros H(λ) grows.
+# CCM phenomenon: 1st zero ~1e-18 with primes<=13, but precision DEGRADES with height
+# (paper: ~1e-3 for the 50th zero). => H(λ;ε) = height up to which zeros are within <ε.
 #
-# E6 mide H(λ;ε): para cada λ, con N escalado para alcanzar altura ~110, contar cuantos
-# ceros CONSECUTIVOS desde abajo se reproducen a <ε. Tabular H(λ) vs λ. Crecimiento de
-# H(λ) = contenido empirico de 2b. (Pregunta de prueba: ¿H(λ)->inf por PNT, zero-indep?)
+# E6 measures H(λ;ε): for each λ, with N scaled to reach height ~110, count how many
+# CONSECUTIVE zeros from the bottom are reproduced to <ε. Tabulate H(λ) vs λ. Growth of
+# H(λ) = empirical content of 2b. (Test question: does H(λ)->inf by PNT, zero-independent?)
 # ======================================================================================
 import numpy as np, mpmath as mp
 from scipy.optimize import brentq
 mp.mp.dps=25
 
-# ceros de zeta de referencia (alta precision)
-print("cargando ceros zeta de referencia...",flush=True)
-ZJSON=[float(mp.im(mp.zetazero(k))) for k in range(1,60)]   # ~ hasta altura ~108
+# reference zeta zeros (high precision)
+print("loading reference zeta zeros...",flush=True)
+ZJSON=[float(mp.im(mp.zetazero(k))) for k in range(1,60)]   # ~ up to height ~108
 
 def q_func(m,n,L):
     if m==n: return lambda y: 2*(1-y/L)*np.cos(2*np.pi*n*y/L)
@@ -71,7 +71,7 @@ def horizon(lam, eps, Hmax=108):
     QW,idx,Ln=build_QW_zeta(lam,N,tgrid)
     w,V=np.linalg.eigh(QW); xi=V[:,0]
     r=all_roots(xi,idx,Ln,Hmax)
-    # contar ceros consecutivos resueltos a <eps
+    # count consecutive zeros resolved to <eps
     nres=0; lasth=0.0
     for z in ZJSON:
         if z>Hmax: break
@@ -83,13 +83,13 @@ def horizon(lam, eps, Hmax=108):
 
 if __name__=="__main__":
     print("="*78)
-    print(" E6: horizonte de convergencia H(λ) = ceros resueltos a <eps (Eslabon 2b)")
+    print(" E6: convergence horizon H(λ) = zeros resolved to <eps (Link 2b)")
     print("="*78)
     for eps in [1e-6, 1e-9]:
         print(f"\n--- eps={eps:.0e} ---")
-        print("   λ    N    #ceros_resueltos   altura_horizonte H(λ)")
+        print("   λ    N    #zeros_resolved   horizon_height H(λ)")
         for lam in [2.5,3.0,3.7,5.0,7.0]:
             N,nres,lasth,r=horizon(lam,eps)
             print(f"  {lam:4.1f}  {N:3d}        {nres:3d}            {lasth:7.3f}")
-    print("\n LECTURA: si H(λ) CRECE con λ -> evidencia de 2b (convergencia). Su tasa vs λ")
-    print(" es el objeto a acotar por PNT (lado-primo, zero-indep) para cerrar 2b -> RH.")
+    print("\n READING: if H(λ) GROWS with λ -> evidence of 2b (convergence). Its rate vs λ")
+    print(" is the object to bound via PNT (prime-side, zero-independent) to close 2b -> RH.")

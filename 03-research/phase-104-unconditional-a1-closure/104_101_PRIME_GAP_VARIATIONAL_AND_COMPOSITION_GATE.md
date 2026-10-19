@@ -1,8 +1,8 @@
-# 104_101 — Coordenada exacta de gaps, convexidad y gate de composición
+# 104_101 — Exact gap coordinate, convexity, and composition gate
 
-## Resultado
+## Result
 
-Ponga
+Set
 
 \[
  L(x)=\int_2^x{dt\over\log t},\qquad
@@ -11,8 +11,8 @@ Ponga
  \tag{1}
 \]
 
-Si \(p_k\) es el \(k\)-ésimo primo y
-\(g_k=p_{k+1}-p_k\), defina
+If \(p_k\) is the \(k\)-th prime and
+\(g_k=p_{k+1}-p_k\), define
 
 \[
  c_k=k-L(p_k),\qquad
@@ -20,14 +20,14 @@ Si \(p_k\) es el \(k\)-ésimo primo y
  \tag{2}
 \]
 
-Entonces, con
+Then, with
 
 \[
  R_k(N)=\min\{g_k-1,N-p_k\},
  \tag{3}
 \]
 
-se tiene la identidad finita exacta
+one has the exact finite identity
 
 \[
  \boxed{
@@ -38,14 +38,14 @@ se tiene la identidad finita exacta
  \tag{4}
 \]
 
-Los valores en los extremos satisfacen la recurrencia
+The endpoint values satisfy the recurrence
 
 \[
  \boxed{c_{k+1}=c_k+1-\ell_{k,g_k}.}
  \tag{5}
 \]
 
-En una celda completa, ponga
+On a complete cell, set
 
 \[
  w_{k,r}={1\over(p_k+r)(p_k+r+1)},\quad
@@ -61,7 +61,7 @@ En una celda completa, ponga
  \tag{7}
 \]
 
-La contribución de la celda es
+The cell's contribution is
 
 \[
  \boxed{
@@ -69,24 +69,24 @@ La contribución de la celda es
  \tag{8}
 \]
 
-Esta es la forma variacional exacta. Es estrictamente convexa en
-\(c_k\), pero la convexidad produce un **mínimo**, no una cota superior.
-El término que falta controlar es el error acumulado \(c_k\), y (5)
-muestra que eso exige cancelación entre los sesgos de muchos gaps.
+This is the exact variational form. It is strictly convex in
+\(c_k\), but the convexity produces a **minimum**, not an upper bound.
+The term that remains to be controlled is the accumulated error \(c_k\), and (5)
+shows that this requires cancellation among the biases of many gaps.
 
-La condición «los no-primos son compuestos» no suministra esa
-cancelación mediante una relajación convexa. Hay una dicotomía exacta:
+The condition "non-primes are composite" does not supply that
+cancellation through a convex relaxation. There is an exact dichotomy:
 
-* imponer simultáneamente «todo seleccionado es primo» y «todo omitido
-  es compuesto» deja un conjunto factible de un solo punto, la sucesión
-  prima literal;
-* la relajación natural que conserva cualquier rueda fija, densidad PNT
-  y gaps logarítmicos admite sucesiones \(0\)-\(1\) con energía
-  polinomial.
+* imposing simultaneously "everything selected is prime" and "everything omitted
+  is composite" leaves a feasible set of a single point, the literal prime
+  sequence;
+* the natural relaxation that preserves any fixed wheel, PNT density, and
+  logarithmic gaps admits \(0\)-\(1\) sequences with polynomial
+  energy.
 
-Más precisamente, para todo entero fijo \(W\ge2\), todo
-\(1/2<\beta<1\) y todo \(c>0\), existe una sucesión
-\(a_n\in\{0,1\}\) tal que, escribiendo
+More precisely, for every fixed integer \(W\ge2\), every
+\(1/2<\beta<1\), and every \(c>0\), there exists a sequence
+\(a_n\in\{0,1\}\) such that, writing
 
 \[
  A(x)=\sum_{n\le x}a_n,\qquad
@@ -94,7 +94,7 @@ Más precisamente, para todo entero fijo \(W\ge2\), todo
  \tag{9}
 \]
 
-se cumplen
+one has
 
 \[
  a_n=1\Longrightarrow(n,W)=1,\qquad
@@ -102,8 +102,8 @@ se cumplen
  \tag{10}
 \]
 
-y los gaps consecutivos del soporte son \(O_{W,\beta,c}(\log x)\).
-Sin embargo,
+and the consecutive gaps of the support are \(O_{W,\beta,c}(\log x)\).
+However,
 
 \[
  \boxed{
@@ -112,26 +112,26 @@ Sin embargo,
  \tag{11}
 \]
 
-Como \(S(x)-L(x)\) es acotada, (11) vale también con \(L\). Además,
-\(x^\beta=o(xe^{-C(\log x)^{3/5}(\log\log x)^{-1/5}})\); por tanto el
-modelo satisface PNT y cualquier envelope ordinario de tipo
-Vinogradov--Korobov, pese a violar el blanco \(N^{o(1)}\).
+Since \(S(x)-L(x)\) is bounded, (11) also holds with \(L\). Moreover,
+\(x^\beta=o(xe^{-C(\log x)^{3/5}(\log\log x)^{-1/5}})\); so the
+model satisfies PNT and any ordinary Vinogradov–Korobov-type envelope,
+despite violating the \(N^{o(1)}\) target.
 
-**Veredicto.** Reescribir la energía en gaps es exacto y útil: localiza
-el obstáculo en el paseo acumulado (5). Pero convexidad celular junto con
-una rueda fija, PNT/VK y hasta gaps \(O(\log x)\) no fuerza energía
-subpolinomial. `104_99` cubre por separado las cribas estables de nivel
-\(x^{1-\eta}\). La composición completa no da una nueva región
-variacional: identifica ya la sucesión prima y devuelve exactamente el
-problema original. Esto no es un no-go universal para toda desigualdad
-específica de los primos. Este documento no prueba (1) acotada,
-Deep-\(\Lambda\), A1 ni RH.
+**Verdict.** Rewriting the energy in gaps is exact and useful: it localizes
+the obstacle in the accumulated walk (5). But cellular convexity together with
+a fixed wheel, PNT/VK, and even \(O(\log x)\) gaps does not force subpolynomial
+energy. `104_99` separately covers the stable sieves at level
+\(x^{1-\eta}\). The full composition does not yield a new variational
+region: it already identifies the prime sequence and returns exactly the
+original problem. This is not a universal no-go for every prime-specific
+inequality. This document does not prove (1) bounded,
+Deep-\(\Lambda\), A1, or RH.
 
 ---
 
-## 1. Derivación de la identidad de gaps
+## 1. Derivation of the gap identity
 
-Si \(p_k\le m<p_{k+1}\), entonces \(\pi(m)=k\). Escribiendo
+If \(p_k\le m<p_{k+1}\), then \(\pi(m)=k\). Writing
 \(m=p_k+r\),
 
 \[
@@ -141,8 +141,8 @@ Si \(p_k\le m<p_{k+1}\), entonces \(\pi(m)=k\). Escribiendo
  \tag{12}
 \]
 
-Las celdas \([p_k,p_{k+1}-1]\) particionan los enteros \(m\ge2\).
-Truncarlas en \(N\) prueba (4). En el siguiente extremo,
+The cells \([p_k,p_{k+1}-1]\) partition the integers \(m\ge2\).
+Truncating them at \(N\) proves (4). At the next endpoint,
 
 \[
  c_{k+1}
@@ -151,9 +151,9 @@ Truncarlas en \(N\) prueba (4). En el siguiente extremo,
  \tag{13}
 \]
 
-que es (5).
+which is (5).
 
-La suma de los pesos telescopa:
+The sum of the weights telescopes:
 
 \[
  W_k=\sum_{m=p_k}^{p_{k+1}-1}
@@ -162,7 +162,7 @@ La suma de los pesos telescopa:
  \tag{14}
 \]
 
-Finalmente, expandir alrededor de la media ponderada da
+Finally, expanding around the weighted mean gives
 
 \[
  \sum_rw_{k,r}(c_k-\ell_{k,r})^2
@@ -171,10 +171,9 @@ Finalmente, expandir alrededor de la media ponderada da
  \tag{15}
 \]
 
-porque el término cruzado es cero. Esto prueba (8).
+because the cross term vanishes. This proves (8).
 
-Existe una versión completamente discreta, más cercana a `104_93`.
-Ponga
+There is a fully discrete version, closer to `104_93`. Set
 
 \[
  d_k=k-S(p_k),\qquad
@@ -182,51 +181,51 @@ Ponga
  \tag{16}
 \]
 
-Entonces (4)--(8) valen reemplazando \((c,\ell)\) por \((d,h)\), y
+Then (4)–(8) hold with \((c,\ell)\) replaced by \((d,h)\), and
 
 \[
  d_{k+1}=d_k+1-h_{k,g_k}.
  \tag{17}
 \]
 
-En particular \(1-h_{k,g_k}\) es el gap normalizado y centrado; el
-endpoint \(d_k\) es su suma acumulada, no una función convexa de un solo
+In particular \(1-h_{k,g_k}\) is the normalized, centered gap; the
+endpoint \(d_k\) is its accumulated sum, not a convex function of a single
 gap.
 
-## 2. Lo que la convexidad sí dice
+## 2. What convexity does say
 
-Para \(p_k,p_{k+1}\) fijos, (8) alcanza su mínimo en
-\(c_k=\bar\ell_k\), y el mínimo es \(V_k\ge0\). Por consiguiente
+For \(p_k,p_{k+1}\) fixed, (8) attains its minimum at
+\(c_k=\bar\ell_k\), and the minimum is \(V_k\ge0\). Consequently
 
 \[
  \mathcal E_k\ge V_k.
  \tag{18}
 \]
 
-La dirección es opuesta a la necesaria. Una cota superior requiere
-controlar \(|c_k-\bar\ell_k|\). Por (5), eso equivale a controlar
+The direction is opposite to what is needed. An upper bound requires
+controlling \(|c_k-\bar\ell_k|\). By (5), this amounts to controlling
 
 \[
  c_1+\sum_{i<k}\{1-\ell_{i,g_i}\}.
  \tag{19}
 \]
 
-Saber que todos los enteros interiores de la celda poseen un divisor no
-impone signo a (19), ni empareja los sesgos de celdas distintas. La
-inclusión--exclusión que conserva todos esos divisores es precisamente la
-identidad completa de Eratóstenes de `104_99`; truncarla pierde la
-información de paridad, y no aparece una desigualdad convexa adicional.
+Knowing that every interior integer of the cell has a divisor imposes no
+sign on (19), nor does it pair the biases of distinct cells. The
+inclusion–exclusion that keeps all those divisors is precisely the
+complete Eratosthenes identity of `104_99`; truncating it loses the
+parity information, and no additional convex inequality appears.
 
-## 3. Falsificador \(0\)-\(1\) con rueda y gaps logarítmicos
+## 3. \(0\)-\(1\) falsifier with wheel and logarithmic gaps
 
-Fije \(W,\beta,c\) como arriba y defina
+Fix \(W,\beta,c\) as above and define
 
 \[
  F(m)=S(m)+cm^\beta.
  \tag{20}
 \]
 
-Enumere, desde un punto suficientemente grande, los enteros coprimos con
+Enumerate, from a sufficiently large point, the integers coprime to
 \(W\):
 
 \[
@@ -234,7 +233,7 @@ Enumere, desde un punto suficientemente grande, los enteros coprimos con
  \tag{21}
 \]
 
-Se tiene \(r_{j+1}-r_j\le W\). Además,
+One has \(r_{j+1}-r_j\le W\). Moreover,
 
 \[
  F(r_{j+1})-F(r_j)
@@ -242,7 +241,7 @@ Se tiene \(r_{j+1}-r_j\le W\). Además,
  \tag{22}
 \]
 
-Tras aumentar el punto inicial, (22) es menor que uno. Defina
+After raising the starting point, (22) is less than one. Define
 
 \[
  a_{r_j}=\lfloor F(r_j)\rfloor-\lfloor F(r_{j-1})\rfloor,\qquad
@@ -250,16 +249,16 @@ Tras aumentar el punto inicial, (22) es menor que uno. Defina
  \tag{23}
 \]
 
-Entonces \(a_n\in\{0,1\}\). Si \(r(x)\) es el mayor candidato no mayor
-que \(x\), telescopar (23) da
+Then \(a_n\in\{0,1\}\). If \(r(x)\) is the largest candidate not exceeding
+\(x\), telescoping (23) gives
 
 \[
  A(x)=\lfloor F(r(x))\rfloor+C.
  \tag{24}
 \]
 
-Como \(0\le x-r(x)<W\), (22) y (24) prueban (10). Para ver el tamaño de
-los gaps del soporte, tome \(y=x+3\log x+W\). Para \(x\) grande,
+Since \(0\le x-r(x)<W\), (22) and (24) prove (10). To see the size of
+the support gaps, take \(y=x+3\log x+W\). For \(x\) large,
 
 \[
  F(y-W)-F(x)
@@ -267,18 +266,18 @@ los gaps del soporte, tome \(y=x+3\log x+W\). Para \(x\) grande,
  \tag{25}
 \]
 
-Hay un candidato entre \(y-W\) e \(y\); por (23), el piso debe saltar
-antes de \(y\). Así todo gap del soporte que empieza cerca de \(x\) es
+There is a candidate between \(y-W\) and \(y\); by (23), the floor must
+jump before \(y\). Thus every support gap starting near \(x\) is
 \(O(\log x)\).
 
-De (10),
+From (10),
 
 \[
  A(m)-S(m)=cm^\beta+O(1).
  \tag{26}
 \]
 
-Como \(1/2<\beta<1\), los términos cruzados son sumables y
+Since \(1/2<\beta<1\), the cross terms are summable and
 
 \[
 \begin{aligned}
@@ -289,16 +288,15 @@ Como \(1/2<\beta<1\), los términos cruzados son sumables y
 \tag{27}
 \]
 
-que prueba (11).
+which proves (11).
 
-Este falsificador no pretende que sus puntos sean primos: prueba
-exactamente que toda relajación que solo ve una rueda finita, densidad y
-gaps está demasiado abierta.
+This falsifier does not claim its points are primes: it proves
+exactly that every relaxation that only sees a finite wheel, density, and
+gaps is too loose.
 
-## 4. Por qué la composición completa no deja variaciones
+## 4. Why the full composition leaves no room for variation
 
-Para \(n\ge2\), sea \(q_n=\mathbf1_{\mathbb P}(n)\). La factorización
-elemental da
+For \(n\ge2\), let \(q_n=\mathbf1_{\mathbb P}(n)\). The elementary factorization gives
 
 \[
  \boxed{
@@ -306,7 +304,7 @@ elemental da
  \tag{28}
 \]
 
-Sea \(a_n\in\{0,1\}\). Las dos implicaciones exactas son
+Let \(a_n\in\{0,1\}\). The two exact implications are
 
 \[
  a_n=1\Longrightarrow q_n=1 \quad(a_n\le q_n),
@@ -315,26 +313,26 @@ Sea \(a_n\in\{0,1\}\). Las dos implicaciones exactas son
  \tag{29}
 \]
 
-Imponer ambas da \(a_n=q_n\) coordenada por coordenada. El politopo
-factible es el singleton \(\{q\}\); por tanto no existe una comparación
-variacional con otra configuración que conserve la composición exacta.
-Evaluar una desigualdad no trivial en ese singleton es ya estimar la
-sucesión prima literal.
+Imposing both gives \(a_n=q_n\) coordinate by coordinate. The feasible
+polytope is the singleton \(\{q\}\); therefore no variational comparison
+exists with another configuration that preserves the exact composition.
+Evaluating a nontrivial inequality on that singleton is already estimating
+the literal prime sequence.
 
-Cada mitad de (29), incluso acompañada por PNT, es insuficiente. Esto se
-ve sin modelos probabilísticos:
+Each half of (29), even accompanied by PNT, is insufficient. This can be
+seen without probabilistic models:
 
-* añada a todos los primos una subsucesión de enteros pares compuestos
-  cuya función de conteo sea
-  \(C(x)\sim x/\log^2x\). Entonces todo entero omitido es compuesto y
+* add to all the primes a subsequence of even composite integers whose
+  counting function is
+  \(C(x)\sim x/\log^2x\). Then every omitted integer is composite and
   \(A^+(x)-L(x)\sim x/\log^2x\);
-* borre los primos de índices
-  \(k_j=\lfloor j\log j\rfloor\). La cantidad borrada hasta \(x\) es
-  \(D(x)\sim\pi(x)/\log\pi(x)\sim x/\log^2x\). Entonces todo punto
-  seleccionado es primo y
+* delete the primes with indices
+  \(k_j=\lfloor j\log j\rfloor\). The amount deleted up to \(x\) is
+  \(D(x)\sim\pi(x)/\log\pi(x)\sim x/\log^2x\). Then every selected point
+  is prime and
   \(A^-(x)-L(x)\sim-x/\log^2x\).
 
-En ambos casos la PNT sigue válida, pero
+In both cases PNT remains valid, but
 
 \[
  \sum_{m\le N}{\{A^\pm(m)-L(m)\}^2\over m(m+1)}
@@ -342,46 +340,47 @@ En ambos casos la PNT sigue válida, pero
  \tag{30}
 \]
 
-que no es \(N^{o(1)}\). Para el primer caso puede elegirse el punto par
-\(2j\) cada vez que el piso de \(2j/\log^2(2j)\) aumenta; esto da
-\(C(x)=x/\log^2x+O(1)\). La inversión elemental de
-\(j\log j\) prueba la asintótica del segundo caso. La PNT con región
-libre de ceros hace \(\pi(x)-L(x)=o(x/\log^A x)\) para todo \(A\), de
-modo que no puede cancelar los términos añadidos.
+which is not \(N^{o(1)}\). For the first case, one can pick the even
+point \(2j\) each time the floor of \(2j/\log^2(2j)\) increases; this
+gives \(C(x)=x/\log^2x+O(1)\). The elementary inversion of
+\(j\log j\) proves the asymptotics of the second case. PNT with a
+zero-free region gives \(\pi(x)-L(x)=o(x/\log^A x)\) for every \(A\), so
+it cannot cancel the added terms.
 
-## 5. Auditoría de no duplicación
+## 5. Non-duplication audit
 
-`104_93` prueba la identidad max para los incrementos
-\((\Lambda(n)-1)/\log n\) y la equivalencia energética con RH.
-`104_94` elimina las potencias primas propias. `104_99` conserva la
-inclusión--exclusión completa y prueba el no-go de nivel
-\(x^{1-\eta}\) mediante las sucesiones \(1\pm\lambda_L\).
+`104_93` proves the max identity for the increments
+\((\Lambda(n)-1)/\log n\) and the energy equivalence with RH.
+`104_94` eliminates the proper prime powers. `104_99` keeps the full
+inclusion–exclusion and proves the level-\(x^{1-\eta}\) no-go
+via the sequences \(1\pm\lambda_L\).
 
-El contenido adicional de este documento es distinto y más estrecho:
+The additional content of this document is different and narrower:
 
-1. la identidad celular exacta (4)--(5) en gaps consecutivos;
-2. la completación cuadrática (8), que decide la dirección de la
-   convexidad;
-3. el falsificador **\(0\)-\(1\)** (10)--(11), con rueda arbitraria fija,
-   PNT/VK y gaps \(O(\log x)\);
-4. la dicotomía singleton (28)--(29) y los falsificadores PNT de cada
-   relajación unilateral.
+1. the exact cellular identity (4)–(5) over consecutive gaps;
+2. the quadratic completion (8), which decides the direction of
+   convexity;
+3. the **\(0\)-\(1\)** falsifier (10)–(11), with an arbitrary fixed wheel,
+   PNT/VK, and \(O(\log x)\) gaps;
+4. the singleton dichotomy (28)–(29) and the PNT falsifiers for each
+   one-sided relaxation.
 
-No se reclama como nuevo el hecho general de que una criba incompleta no
-caracteriza a los primos, ni la barrera de paridad. El resultado nuevo
-dentro de la fase es ubicar exactamente por qué la convexidad en gaps no
-da la cota de `104_93`.
+It is not claimed as new that an incomplete sieve does not characterize
+the primes, nor is the parity barrier. The new result within the phase is
+pinpointing exactly why gap convexity does not give the bound of
+`104_93`.
 
-## 6. Reproducción
+## 6. Reproduction
 
-Desde `tools/`:
+From `tools/`:
 
 ```bash
 python3 prime_gap_energy_variational_check.py
 ```
 
-El checker verifica numéricamente, hasta \(N=200000\), (4), (8) y el
-telescopado (6). Después construye el modelo (23) con
-\(W=30\), \(\beta=3/4\), verifica soporte, tracking acotado y gaps
-logarítmicos hasta \(10^6\). La prueba asintótica es (20)--(27), no una
-inferencia del rango finito.
+The checker numerically verifies, up to \(N=200000\), (4), (8), and the
+telescoping (6). It then builds the model (23) with
+\(W=30\), \(\beta=3/4\), checking support, bounded tracking, and
+logarithmic gaps up to \(10^6\). The asymptotic proof is (20)–(27), not an
+inference from the finite range.
+</content>

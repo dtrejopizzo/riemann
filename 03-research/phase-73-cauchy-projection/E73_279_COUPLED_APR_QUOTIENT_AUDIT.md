@@ -1,6 +1,5 @@
 # E73.279 - Coupled APR quotient audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

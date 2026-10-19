@@ -3,13 +3,13 @@
 `experiments/E11_relspec_prolate.py` (`q_func`, `QW_entry`, `spec`), venv at
 `…/investigacion-2/venv/bin/python`. **Goal (hypothesis of Theorem III, relative stability / Davis–Kahan on `Â_λ=A_λ/ε₀`):**
 > `ε₁(λ)/ε₀(λ) ≥ 1 + γ`, some fixed `γ>0`, uniformly as `λ→∞`. Markers: **[P]** proved · **[P\*]** proved modulo a standard classical result ·
-**[GAP]** well-posed missing lemma · **[!]** the single minimal residual. > **CANDOR NOTE on this session.** `Bash` execution was disabled in the working environment,
+**[GAP]** well-posed missing lemma · **[!]** the single minimal residual. > **CANDOR NOTE.** `Bash` execution was disabled in the working environment,
 > so I could **not** run fresh mpmath experiments. The empirical backbone below is the
 > **already-recorded high-precision data** in this repo (E11 / `relspec2.py`, mpmath dps 40–50,
 > `N≤20`, λ≤11), cited verbatim. A ready-to-run new experiment that measures `ε₀,ε₁,ε₂` and the
 > ratio across λ∈{3..12} with N-convergence is committed at
 > `experiments/E13_rel_gap_IV1star.py` (it reuses the validated engine) — **it has NOT been
-> executed this session.** Re-run it to extend the empirical law to λ=12 and confirm the
+> executed yet.** Re-run it to extend the empirical law to λ=12 and confirm the
 > minimum of the ratio. No claim below depends on running it; it would only tighten γ_emp. --- ## 0. The empirical law (recorded data — robust, improving with λ) From `2b_SCALING_LIMIT.md` (Frente #1, `relspec2.py`, mpmath dps=50, N≤20, λ≤11), table of
 `(ε_k/ε₀)/(k+1)²`: | λ\k | 1 | 2 | 3 | 4 |
 |---|---|---|---|---|

@@ -1,6 +1,6 @@
 # E78.89 - The isolated growth quotient is not the right sigma-monotone target
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

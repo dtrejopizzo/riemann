@@ -1,6 +1,6 @@
 # E99 — squaring lever: NO-GO, and the deepest statement of the wall (gaplessness = infinitude of zeros)
 
-**Date:** 2026-06-27 · Phase 63, R6 · ζ vs DH · engine A/J/parity-sector framework (mpmath build, float64 eig).
+Phase 63, R6 · ζ vs DH · engine A/J/parity-sector framework (mpmath build, float64 eig).
 
 ## The idea (a genuine new lever)
 

@@ -1,6 +1,6 @@
 # P123.052 — External action and gauge multipliers on the integrable source
 
-Date: 2026-09-05. Status: PROVED for the two-prime integrable domain of
+Status: PROVED for the two-prime integrable domain of
 P123.051. This supplies an A/C compatibility, not all of row A.
 
 ## 1. Normalized external action preserves the new domain

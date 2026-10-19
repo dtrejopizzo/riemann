@@ -1,7 +1,6 @@
 # E70.10 -- Dirichlet-square obstruction for the naive Euler-Gamma factor
 
-**Date:** 2026-07-07.
-**Role:** test the most direct Wiener-Hopf square after E70.9 and isolate the exact algebraic
+**Purpose:** test the most direct Wiener-Hopf square after E70.9 and isolate the exact algebraic
 obstruction.
 
 ## The tempting square

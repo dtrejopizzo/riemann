@@ -1,69 +1,71 @@
-# 104_48 — Fase cerrada por torre prima y gate de multiplicidad unitaria
+# 104_48 — Prime-tower closed phase and the unit-multiplicity gate
 
-**Objetivo del ataque.** Se intenta probar directamente
+**Objective of the attack.** A direct attempt is made to prove
 
 \[
  B_n=A_n-\lambda_n\le \kappa A_n,
  \qquad \kappa={1501\over2002},\qquad n\ge150,              \tag{1}
 \]
 
-usando la rigidez
+using the rigidity
 
 \[
  \Lambda(p^k)=\log p\qquad(k\ge1)                           \tag{2}
 \]
 
-antes de estimar. Se obtiene una suma cerrada por torre que conserva toda
-la fase Laguerre y una desigualdad unilateral exacta. Sin embargo, la
-desigualdad tiene la dirección incorrecta para (1), y sobrevive sin cambios
-esenciales al falsificador desplazado
+before estimating. A closed per-tower sum is obtained that preserves the
+entire Laguerre phase, along with an exact one-sided inequality. However,
+the inequality points the wrong direction for (1), and it survives with no
+essential change under the shifted falsifier
 
 \[
  \omega_c(m)=2\Lambda(m)\cosh(c\log m),\qquad 0<c<1/2.      \tag{3}
 \]
 
-También se obtiene un no-go cuantitativo más estrecho: positividad, soporte
-en las potencias primas, PNT y **constancia exacta a lo largo de cada
-torre** no bastan. Aumentar la multiplicidad de una sola torre completa
-rompe cualquier cota proporcional ya en \(n=151\), conservando todas esas
-propiedades. Por tanto el input futuro debe usar la multiplicidad unitaria
-exacta de cada primo, equivalentemente la identidad global de renovación
+A narrower quantitative no-go is also obtained: positivity, support on
+the prime powers, PNT, and **exact constancy along each tower** are not
+enough. Raising the multiplicity of a single complete tower breaks any
+proportional bound already at \(n=151\), while preserving all those
+properties. Hence any future input must use the exact unit multiplicity
+of each prime, equivalently the global renewal identity
 
 \[
  \sum_{d\mid m}\Lambda(d)=\log m.                           \tag{4}
 \]
 
-Pero (4) determina a \(\Lambda\) de manera única; al incorporarla mediante
-el selector divisor se vuelve exactamente a `104_43`--`104_47`. Este
-ataque no prueba (1), A1 ni RH.
+But (4) uniquely determines \(\Lambda\); incorporating it via the divisor
+selector returns exactly to `104_43`–`104_47`. This attack proves neither
+(1), A1, nor RH.
 
-## 0. Auditoría de no duplicación
+## 0. Non-duplication audit
 
-El documento 103_66 telescopa una torre en annuli multiplicativos y,
-después de sumar en todos los primos, obtiene el germ normalizado. No
-calcula la fase cerrada (12) de una torre individual. El documento 104_20
-factoriza diferencias locales de torres dentro de un cuadrado operacional
-y prueba ambos signos; no usa la suma de Poisson. El documento 104_47
-introduce ya el falsificador (3), pero no comprueba si una desigualdad
-firmada derivada de la constancia de torre lo acepta o lo rechaza.
+Document 103_66 telescopes a tower across multiplicative annuli and,
+after summing over every prime, obtains the normalized germ. It does not
+compute the closed phase (12) of a single tower. Document 104_20
+factorizes local tower differences inside an operational square and
+proves both signs; it does not use the Poisson summation formula.
+Document 104_47 already introduces falsifier (3), but does not check
+whether a signed inequality derived from tower constancy accepts or
+rejects it.
 
-La fibra singleton (33) y falsificadores asintóticos de coherencia de torre
-ya aparecen en E101_089, §§9--10. No se reclaman de nuevo. Las adiciones
-estrechas de este documento son: la fase cerrada (12), la prueba de que su
-signo automático acepta (3), y el testigo finito (24)--(31), que rompe el
-margen directamente en \(n=151\) alterando una sola torre completa.
+The singleton fiber (33) and asymptotic tower-coherence falsifiers
+already appear in E101_089, §§9–10. They are not claimed again. The
+narrow additions of this document are: the closed phase (12), the proof
+that its automatic sign accepts (3), and the finite witness (24)–(31),
+which breaks the margin directly at \(n=151\) by altering a single
+complete tower.
 
-## 1. Suma cerrada de una torre completa
+## 1. Closed sum of a complete tower
 
-Escribamos
+Write
 
 \[
  P_n(x)=L_{n-1}^{(1)}(x),\qquad
  \Phi_n(x)=\sum_{k\ge1}e^{-kx}P_n(kx),\qquad x>0.           \tag{5}
 \]
 
-Para \(a>2\), la forma Euler--polo completa de `104_41` se agrupa
-absolutamente por primos como
+For \(a>2\), the complete Euler–pole form of `104_41` groups absolutely
+by primes as
 
 \[
  \boxed{
@@ -73,7 +75,7 @@ absolutamente por primos como
  Q_{n,a}=a\int_0^\infty e^{-(a-1)u}P_n(au)\,du.            \tag{6}
 \]
 
-La transformada de Laplace de \(P_n\) es
+The Laplace transform of \(P_n\) is
 
 \[
  \int_0^\infty e^{-su}P_n(u)\,du
@@ -81,14 +83,14 @@ La transformada de Laplace de \(P_n\) es
  \qquad \Re s>0.                                           \tag{7}
 \]
 
-En particular,
+In particular,
 
 \[
  \boxed{Q_{n,a}=1-\left({-1\over a-1}\right)^n.}          \tag{8}
 \]
 
-La torre (5) tiene dos formas cerradas adicionales. La generatriz de
-Laguerre da
+Tower (5) has two further closed forms. The Laguerre generating function
+gives
 
 \[
  \boxed{
@@ -96,13 +98,13 @@ Laguerre da
  ={1\over(1-z)^2\{e^{x/(1-z)}-1\}}.}                       \tag{9}
 \]
 
-Si \(A_j(q)\) es el polinomio euleriano, normalizado por
+If \(A_j(q)\) is the Eulerian polynomial, normalized by
 
 \[
  \sum_{k\ge1}k^j q^k={qA_j(q)\over(1-q)^{j+1}},            \tag{10}
 \]
 
-entonces, con \(q=e^{-x}\),
+then, with \(q=e^{-x}\),
 
 \[
  \boxed{
@@ -111,17 +113,17 @@ entonces, con \(q=e^{-x}\),
  {qA_j(q)\over(1-q)^{j+1}}.}                               \tag{11}
 \]
 
-Las fórmulas (6), (9) y (11) no separan las potencias superiores ni toman
-valores absolutos. A diferencia del telescopado de annuli de `103_66`, (9)
-retiene explícitamente la fase de una torre individual. Al sumar en
-primos, naturalmente recompone el mismo germ normalizado de `103_66`; no
-se reclama una segunda reducción de A1.
+Formulas (6), (9), and (11) separate neither the higher powers nor take
+absolute values. Unlike the annulus telescoping of `103_66`, (9)
+explicitly retains the phase of a single tower. Summing over primes,
+it naturally recomposes the same normalized germ of `103_66`; no second
+reduction of A1 is claimed.
 
-## 2. Fórmula de Poisson y la única dirección automática
+## 2. Poisson's formula and the only automatic direction
 
-La función \(t\mapsto e^{-xt}P_n(xt){\bf1}_{t\ge0}\) tiene variación
-acotada y decaimiento exponencial. La fórmula de Poisson unilateral, con
-medio peso en cero, y (7) dan
+The function \(t\mapsto e^{-xt}P_n(xt){\bf1}_{t\ge0}\) has bounded
+variation and exponential decay. The one-sided Poisson formula, with half
+weight at zero, together with (7), gives
 
 \[
  \boxed{
@@ -133,8 +135,8 @@ medio peso en cero, y (7) dan
  w_\ell(x)={2\pi i\ell\over x+2\pi i\ell}.                \tag{12}
 \]
 
-La serie de (12) converge absolutamente: su sumando real es
-\(O_n(x^2/\ell^2)\). Además
+The series in (12) converges absolutely: its real summand is
+\(O_n(x^2/\ell^2)\). Moreover
 
 \[
  |w_\ell(x)|<1,
@@ -142,41 +144,41 @@ La serie de (12) converge absolutamente: su sumando real es
  \Re\{1-w_\ell(x)^n\}\ge1-|w_\ell(x)|^n>0.               \tag{13}
 \]
 
-Por consiguiente la rigidez de una torre sí produce un signo, pero es
+Consequently the rigidity of a tower does produce a sign, but it is
 
 \[
  \boxed{\Phi_n(x)>{1\over x}-{n\over2}.}                   \tag{14}
 \]
 
-La obligación (1) necesita una **cota superior** para la suma prima menos
-el polo. La desigualdad (14) es inferior. Tampoco puede invertirse por un
-signo puntual ni sumarse en (6): su lado derecho tiende a \(-n/2\) cuando
-\(x\to\infty\), de modo que la suma de esos minorantes sobre los primos
-diverge a \(-\infty\). Es una desigualdad exacta de una torre, no una
-minoración global finita. Además, como
+Requirement (1) needs an **upper** bound for the prime sum minus the
+pole. Inequality (14) is a lower one. It cannot be inverted by a
+pointwise sign nor summed in (6) either: its right-hand side tends to
+\(-n/2\) as \(x\to\infty\), so the sum of these lower bounds over the
+primes diverges to \(-\infty\). It is an exact single-tower inequality,
+not a finite global lower bound. Moreover, since
 
 \[
  P_n(x)={(-1)^{n-1}x^{n-1}\over(n-1)!}+O_n(x^{n-2}),       \tag{15}
 \]
 
-se tiene
+one has
 
 \[
  \Phi_n(x)=e^{-x}P_n(x)+O_n(e^{-2x}x^{n-1}),               \tag{16}
 \]
 
-y por tanto \(\Phi_n(x)\) tiene signo \((-1)^{n-1}\) para
-\(x\) suficientemente grande.
+and hence \(\Phi_n(x)\) has sign \((-1)^{n-1}\) for sufficiently large
+\(x\).
 
-## 3. El signo de fase también acepta los pesos desplazados
+## 3. The phase sign also accepts the shifted weights
 
-Para ver exactamente qué distingue (12), definamos, para \(r>0\),
+To see exactly what distinguishes (12), define, for \(r>0\),
 
 \[
  \Phi_{n,r}(x)=\sum_{k\ge1}e^{-rkx}P_n(kx).                \tag{17}
 \]
 
-La misma prueba da
+The same proof gives
 
 \[
 \begin{aligned}
@@ -190,17 +192,16 @@ La misma prueba da
 \end{aligned}
 \]
 
-La identidad elemental
+The elementary identity
 
 \[
  1-|w_{\ell,r}(x)|^2
  ={2r-1\over r^2+(2\pi\ell/x)^2}                           \tag{19}
 \]
 
-muestra que todos los sumandos de fase en (18) siguen siendo positivos
-para \(r>1/2\).
+shows that every phase summand of (18) remains positive for \(r>1/2\).
 
-Ahora, torre por torre,
+Now, tower by tower,
 
 \[
 \begin{aligned}
@@ -212,82 +213,82 @@ Ahora, torre por torre,
 \end{aligned}
 \]
 
-Como \(a>1\) y \(0<c<1/2\), las dos tasas de (20) son mayores que
-\(1/2\). Así, la positividad de fase (13) sobrevive completa al sistema
-desplazado. No puede ser el input que pruebe (1).
+Since \(a>1\) and \(0<c<1/2\), the two rates in (20) exceed
+\(1/2\). So phase positivity (13) survives entirely under the shifted
+system. It cannot be the input that proves (1).
 
-Esta conclusión no es solo diagnóstica. Póngase
+This conclusion is not merely diagnostic. Set
 
 \[
  \Xi_c(s)=\xi(s+c)\xi(s-c).                                \tag{21}
 \]
 
-Su derivada logarítmica de Euler tiene exactamente los pesos (3), y
-\(\Xi_c(1-s)=\Xi_c(s)\). Si
-\(\rho=1/2+i\gamma\) es un cero crítico de \(\xi\), (21) tiene el
-cuarteto
+Its Euler logarithmic derivative has exactly the weights (3), and
+\(\Xi_c(1-s)=\Xi_c(s)\). If
+\(\rho=1/2+i\gamma\) is a critical zero of \(\xi\), (21) has the
+quartet
 
 \[
  \rho-c,\quad\bar\rho-c,\quad\rho+c,\quad\bar\rho+c,      \tag{22}
 \]
 
-fuera de la línea de simetría. Para
-\(w=1-(\rho-c)^{-1}=e^{\alpha+i\theta}\), \(\alpha>0\), la respuesta
-de ese cuarteto al coeficiente de Li es
+off the line of symmetry. For
+\(w=1-(\rho-c)^{-1}=e^{\alpha+i\theta}\), \(\alpha>0\), that quartet's
+response in the Li coefficient is
 
 \[
  4-4\cosh(n\alpha)\cos(n\theta).                           \tag{23}
 \]
 
-El fallo ocurre en grados arbitrariamente grandes, no solo en un
-coeficiente inicial. En efecto, para los ceros \(\eta\) de (21) ponga
-\(w_\eta=1-\eta^{-1}\). Como \(|w_\eta|\to1\) cuando
-\(|\Im\eta|\to\infty\), el número
+The failure occurs at arbitrarily large degrees, not only at an initial
+coefficient. Indeed, for the zeros \(\eta\) of (21) set
+\(w_\eta=1-\eta^{-1}\). Since \(|w_\eta|\to1\) as
+\(|\Im\eta|\to\infty\), the number
 
 \[
  R=\max_\eta |w_\eta|>1                                   \tag{23a}
 \]
 
-se alcanza en un multiconjunto finito. Después de retirar ese conjunto,
-existe \(R_2<R\) que domina los restantes \(w_\eta\) exteriores al disco
-unidad. Si los dominantes son \(R e^{i\theta_1},\ldots,
-R e^{i\theta_M}\), la expansión de Darboux de la función generadora de Li
-(equivalentemente, separar esas singularidades finitas en el producto de
-Hadamard) da
+is attained on a finite multiset. After removing that set, there exists
+\(R_2<R\) dominating the remaining \(w_\eta\) outside the unit disc. If
+the dominant ones are \(R e^{i\theta_1},\ldots,
+R e^{i\theta_M}\), the Darboux expansion of Li's generating function
+(equivalently, separating those finitely many singularities in the
+Hadamard product) gives
 
 \[
  \lambda_n[\Xi_c]
  =-R^n\sum_{j=1}^{M}e^{in\theta_j}
-   +O(R_2^n)+O_c(n\log n).                                 \tag{23b}
+   +O(R_2^n)+O_c(n\log n).                                \tag{23b}
 \]
 
-El lado derecho es real porque el multiconjunto es estable por
-conjugación. La aproximación simultánea de Dirichlet proporciona
-infinitos \(n\) para los cuales todos los
-\(e^{in\theta_j}\) están arbitrariamente cerca de \(1\). En esa
-subsucesión,
+The right-hand side is real because the multiset is stable under
+conjugation. Simultaneous Dirichlet approximation provides infinitely
+many \(n\) for which every
+\(e^{in\theta_j}\) lies arbitrarily close to \(1\). Along that
+subsequence,
 
 \[
  \lambda_n[\Xi_c]\le-{M\over2}R^n                          \tag{23c}
 \]
 
-para \(n\) suficientemente grande. Ésta es también la prueba estándar de
-la dirección obstructiva del criterio de Bombieri--Lagarias en este caso.
-En particular, ninguna desigualdad proporcional positiva, uniforme para
-los grados grandes, vale para (3). Las ecuaciones (18)--(20) muestran que
-el signo automático obtenido por Poisson no detecta esa falsedad.
+for sufficiently large \(n\). This is also the standard proof of the
+obstructive direction of the Bombieri–Lagarias criterion in this case. In
+particular, no uniform positive proportional inequality holds for (3) at
+large degrees. Equations (18)–(20) show that the automatic sign obtained
+via Poisson does not detect that falsehood.
 
-## 4. No-go mínimo conservando torres completas
+## 4. Minimal no-go preserving complete towers
 
-El siguiente testigo conserva más estructura que el átomo primo simple de
-`104_35`. Fijemos un primo \(p_0\) y un entero \(t\ge1\), y reemplacemos
-solo su factor local por multiplicidad \(1+t\):
+The following witness preserves more structure than the simple prime
+atom of `104_35`. Fix a prime \(p_0\) and an integer \(t\ge1\), and
+replace only its local factor by multiplicity \(1+t\):
 
 \[
  \zeta_t(s)=\zeta(s)(1-p_0^{-s})^{-t}.                     \tag{24}
 \]
 
-Los pesos de su derivada logarítmica son
+The weights of its logarithmic derivative are
 
 \[
  \Lambda_t(p^k)=
@@ -298,26 +299,26 @@ Los pesos de su derivada logarítmica son
  \qquad k\ge1.                                             \tag{25}
 \]
 
-Así, (25) conserva positividad, el soporte exacto en potencias primas y la
-constancia en \(k\) de **cada torre completa**. También conserva PNT con el
-mismo término principal, pues
+So (25) preserves positivity, the exact support on prime powers, and the
+constancy in \(k\) of **every complete tower**. It also preserves PNT with
+the same leading term, since
 
 \[
  \psi_t(x)-\psi(x)
  =t(\log p_0)\left\lfloor{\log x\over\log p_0}\right\rfloor
- =O_{t,p_0}(\log x).                                       \tag{26}
+ =O_{t,p_0}(\log x).                                      \tag{26}
 \]
 
-Sin embargo, su cambio en el límite crítico de (6) es ordinariamente
-convergente y vale exactamente
+However, its change at the critical limit of (6) is ordinarily
+convergent and equals exactly
 
 \[
  \boxed{B_n[\Lambda_t]-B_n[\Lambda]
  =t(\log p_0)\Phi_n(\log p_0).}                            \tag{27}
 \]
 
-La positividad de (27) puede certificarse sin cálculo de raíces. Sea
-\(n=151\), \(N=n-1=150\), y escribamos
+Positivity of (27) can be certified with no root computation. Let
+\(n=151\), \(N=n-1=150\), and write
 
 \[
  P_{151}(x)=\sum_{j=0}^{N}(-1)^j a_j(x),
@@ -325,7 +326,7 @@ La positividad de (27) puede certificarse sin cálculo de raíces. Sea
  a_j(x)={151\choose j+1}{x^j\over j!}.                    \tag{28}
 \]
 
-Para \(0\le j<N\),
+For \(0\le j<N\),
 
 \[
  {a_{j+1}(x)\over a_j(x)}
@@ -333,111 +334,112 @@ Para \(0\le j<N\),
  \ge {x\over N(N+1)}.                                     \tag{29}
 \]
 
-Si \(x>N(N+1)=22650\), las magnitudes de (28) crecen
-estrictamente. Como \(N\) es par, emparejar desde el término principal da
+If \(x>N(N+1)=22650\), the magnitudes of (28) grow strictly. Since
+\(N\) is even, pairing from the leading term gives
 
 \[
  P_{151}(x)>0\qquad(x>22650).                               \tag{30}
 \]
 
-Por Bertrand existe un primo
+By Bertrand's postulate there is a prime
 
 \[
  2^{33977}<p_0<2^{33978}.
 \]
 
-La cota elemental \(\log2>2/3\) implica
-\(\log p_0>22651\). Por (30),
-\(P_{151}(k\log p_0)>0\) para todo \(k\ge1\), y entonces
+The elementary bound \(\log2>2/3\) implies
+\(\log p_0>22651\). By (30),
+\(P_{151}(k\log p_0)>0\) for every \(k\ge1\), and so
 
 \[
  \boxed{\Phi_{151}(\log p_0)>0.}                           \tag{31}
 \]
 
-Haciendo \(t\) arbitrariamente grande en (27) se viola cualquier cota
-\(B_{151}\le C A_{151}\) con \(C\) fijo. Por tanto
+Making \(t\) arbitrarily large in (27) violates any bound
+\(B_{151}\le C A_{151}\) with fixed \(C\). Hence
 
 ```text
-positividad + soporte p^k + constancia completa por torre + PNT
-    no implica una cota proporcional para B_n.
+positivity + p^k support + complete tower constancy + PNT
+    does not imply a proportional bound for B_n.
 ```
 
-El falsificador no satisface el valor unitario exacto de (2) en la torre
-\(p_0\). Ése es precisamente el borde lógico que identifica.
+The falsifier does not satisfy the exact unit value of (2) on tower
+\(p_0\). That is precisely the logical boundary it identifies.
 
-## 5. La multiplicidad unitaria no deja una familia intermedia
+## 5. Unit multiplicity leaves no intermediate family
 
-La propiedad global que fija simultáneamente esas multiplicidades es (4),
-o en convolución de Dirichlet,
+The global property fixing those multiplicities simultaneously is (4),
+or in Dirichlet convolution,
 
 \[
  \Lambda*{\bf1}=\log.                                      \tag{32}
 \]
 
-Como \({\bf1}^{-1}=\mu\), (32) tiene la única solución
+Since \({\bf1}^{-1}=\mu\), (32) has the unique solution
 
 \[
  \boxed{\Lambda=\mu*\log.}                                \tag{33}
 \]
 
-Esto ya fue aislado como «singleton fiber» en `E101_089`, §9. En
+This was already isolated as the "singleton fiber" in `E101_089`, §9. In
 particular:
 
-* usar solo constancia de torres deja entrar el testigo (24)--(31);
-* imponer (32) elimina el testigo, pero selecciona exactamente a
-  \(\Lambda\), sin un cono o una homotopía auxiliar;
-* desintegrar (32) produce el selector divisor exacto de `104_43`, y su
-  flujo firmado es el funcional equivalente al margen de `104_47`.
+* using only tower constancy lets in witness (24)–(31);
+* imposing (32) eliminates the witness, but selects exactly
+  \(\Lambda\), with no auxiliary cone or homotopy;
+* disintegrating (32) produces the exact divisor selector of `104_43`,
+  and its signed flux is the functional equivalent to the margin of
+  `104_47`.
 
-Por ello la suma cerrada (9)--(12) no suministra una nueva desigualdad
-coerciva. El teorema todavía faltante debe ser una comparación **global y
-no local** que use (32) junto con el test Laguerre, manteniendo el polo
-hasta el final, y que pruebe directamente (1). Eso es exactamente la pieza
-RH-strength aún abierta.
+Hence the closed sum (9)–(12) supplies no new coercive inequality. The
+still-missing theorem must be a **global, nonlocal** comparison using
+(32) together with the Laguerre test, keeping the pole to the end, and
+directly proving (1). That is exactly the still-open RH-strength piece.
 
-## 6. Veredicto
+## 6. Verdict
 
-Queda probado incondicionalmente:
+Proved unconditionally:
 
-1. el cierre exacto por torre (6), (9) y (11);
-2. la representación de fase de Poisson (12) y su cota unilateral (14);
-3. que ese signo también vale para las dos torres desplazadas de (3);
-4. el no-go de multiplicidad local (24)--(31), ya en \(n=151\);
-5. que la renovación exacta (32) tiene la fibra singleton (33).
+1. the exact per-tower closure (6), (9), and (11);
+2. the Poisson phase representation (12) and its one-sided bound (14);
+3. that this sign also holds for the two shifted towers of (3);
+4. the local-multiplicity no-go (24)–(31), already at \(n=151\);
+5. that exact renewal (32) has the singleton fiber (33).
 
-Queda descartado:
+Ruled out:
 
 ```text
-fase unilateral por torre
-+ positividad
-+ constancia de los pesos a lo largo de p^k
+one-sided per-tower phase
++ positivity
++ constancy of the weights along p^k
 + PNT
     => B_n <= (1501/2002) A_n.
 ```
 
-No queda descartada una desigualdad global que use la renovación exacta
-(32) de manera no local. No se ha probado (1), A1 ni RH.
+Not ruled out is a global inequality using exact renewal (32) in a
+nonlocal way. Neither (1), A1, nor RH has been proved.
 
-## 7. Verificación reproducible
+## 7. Reproducible verification
 
-`tools/prime_tower_signed_coercivity_gate_check.py` usa solo enteros,
-`Fraction` y aritmética gaussiana racional. Verifica:
+`tools/prime_tower_signed_coercivity_gate_check.py` uses only integers,
+`Fraction`, and rational Gaussian arithmetic. It checks:
 
-* los coeficientes de Laguerre y la transformada (7);
-* la suma euleriana cerrada (11) para varios grados racionales;
-* la identidad algebraica (19) y la positividad de los átomos de fase;
-* la separación desplazada (20) a truncación finita;
-* el crecimiento alternante (29)--(30) para \(n=151\);
-* la identidad del cuarteto (23) sobre el test racional de `104_41`.
+* the Laguerre coefficients and transform (7);
+* the closed Eulerian sum (11) for several rational degrees;
+* algebraic identity (19) and positivity of the phase atoms;
+* the shifted split (20) at finite truncation;
+* the alternating growth (29)–(30) for \(n=151\);
+* the quartet identity (23) on the rational test of `104_41`.
 
-El checker no pretende certificar una suma infinita por truncación. La
-fórmula de Poisson (12) se prueba analíticamente a partir de (7), y (31)
-se sigue término a término de (30); el programa comprueba las identidades
-algebraicas finitas que entran en esas dos pruebas.
+The checker does not claim to certify an infinite sum by truncation.
+Poisson's formula (12) is proved analytically from (7), and (31) follows
+term by term from (30); the program checks the finite algebraic identities
+entering those two proofs.
 
-Se reproduce con
+Reproduced with
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 prime_tower_signed_coercivity_gate_check.py
 ```
+</content>

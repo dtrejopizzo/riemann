@@ -1,6 +1,6 @@
 # P123.050 — Source boundary traces and an explicit transgression identity
 
-Date: 2026-09-05. Status: PROVED on the compact test crossed-product
+Status: PROVED on the compact test crossed-product
 algebras specified below. Extension to the full rapid topology and
 comparison with the Weil relative character remain open.
 

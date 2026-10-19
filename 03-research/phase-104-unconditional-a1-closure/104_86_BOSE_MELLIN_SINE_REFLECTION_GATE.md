@@ -1,20 +1,20 @@
-# 104_86 — Kernel Bose positivo y autorreflexión seno de Mellin
+# 104_86 — Positive Bose kernel and Mellin sine self-reflection
 
-**Resultado.** La continuación de \(\zeta\) en la franja crítica admite una
-representación de Mellin de signo único. Ponga
+**Result.** The continuation of \(\zeta\) in the critical strip admits a
+single-sign Mellin representation. Set
 
 \[
  q(x)={1\over x}-{1\over e^x-1}>0.                     \tag{1}
 \]
 
-Para \(0<\Re s<1\),
+For \(0<\Re s<1\),
 
 \[
  \boxed{
  \int_0^\infty x^{s-1}q(x)\,dx=-\Gamma(s)\zeta(s).}    \tag{2}
 \]
 
-La ecuación funcional es equivalente a la autorreflexión exacta
+The functional equation is equivalent to the exact self-reflection
 
 \[
  \boxed{
@@ -22,53 +22,53 @@ La ecuación funcional es equivalente a la autorreflexión exacta
  q(t)\sin\left({xt\over2\pi}\right)\,dt,}              \tag{3}
 \]
 
-con la integral entendida en el sentido impropio de Dirichlet.
+with the integral understood in the Dirichlet improper sense.
 
-Sin embargo, (1)--(3) no fuerzan los ceros a \(\Re s=1/2\). El kernel no es
-completamente monótono ni PF\(_\infty\), y existe un kernel positivo,
-decreciente, con los mismos asintóticos y la misma reflexión seno, cuya
-transformada posee cuartetos estrictamente fuera de la línea. Por tanto
-signo único, monotonicidad, log-concavidad, simetría funcional y
-autorreciprocidad no prueban Deep-\(\Lambda\) ni RH.
+However, (1)--(3) do not force the zeros to \(\Re s=1/2\). The kernel is not
+completely monotone nor PF\(_\infty\), and there exists a positive,
+decreasing kernel with the same asymptotics and the same sine
+reflection, whose transform has quartets strictly off the line. Hence
+single sign, monotonicity, log-concavity, functional symmetry, and
+self-reciprocity do not prove Deep-\(\Lambda\) or RH.
 
 ---
 
-## 1. Representación de signo único
+## 1. Single-sign representation
 
-La fórmula clásica de Mellin,
+The classical Mellin formula,
 
 \[
  \Gamma(s)\zeta(s)=\int_0^\infty {x^{s-1}\over e^x-1}\,dx
  \qquad(\Re s>1),                                      \tag{4}
 \]
 
-se renormaliza restando \(1/x\). La integral de (2) converge en
-\(0<\Re s<1\): cerca de cero,
+is renormalized by subtracting \(1/x\). The integral in (2) converges on
+\(0<\Re s<1\): near zero,
 
 \[
  q(x)={1\over2}-{x\over12}+{x^3\over720}
        -{x^5\over30240}+\cdots,                         \tag{5}
 \]
 
-y en infinito \(q(x)=x^{-1}+O(e^{-x})\). La continuación desde (4), o una
-integración por partes con corte, prueba (2). El signo es coherente con
-\(\zeta(\sigma)<0\) para \(0<\sigma<1\).
+and at infinity \(q(x)=x^{-1}+O(e^{-x})\). Continuation from (4), or an
+integration by parts with a cutoff, proves (2). The sign is consistent with
+\(\zeta(\sigma)<0\) for \(0<\sigma<1\).
 
-Hay además una ley de probabilidad exacta. Con \(x=e^u\), defina
+There is also an exact probability law. With \(x=e^u\), define
 
 \[
  Q(u)=1-{e^u\over e^{e^u}-1}=e^u q(e^u),               \tag{6}
 \]
 
-y
+and
 
 \[
  p(u)=Q'(u)
  ={x\{(x-1)e^x+1\}\over(e^x-1)^2}>0.                  \tag{7}
 \]
 
-Se tiene \(Q(-\infty)=0\), \(Q(+\infty)=1\), de modo que
-\(\int_\mathbb R p=1\). Integrar por partes en (2) da
+We have \(Q(-\infty)=0\), \(Q(+\infty)=1\), so that
+\(\int_\mathbb R p=1\). Integrating by parts in (2) gives
 
 \[
  \boxed{
@@ -76,19 +76,19 @@ Se tiene \(Q(-\infty)=0\), \(Q(+\infty)=1\), de modo que
  =\int_\mathbb R p(u)e^{(s-1)u}\,du.}                  \tag{8}
 \]
 
-Así los ceros de \(\zeta\) en la franja son ceros complejos de la función
-generadora de momentos de una probabilidad explícita. La positividad de
-una ley no excluye tales ceros.
+Thus the zeros of \(\zeta\) in the strip are complex zeros of the moment
+generating function of an explicit probability law. The positivity of a
+law does not exclude such zeros.
 
-## 2. Derivación de la reflexión seno
+## 2. Derivation of the sine reflection
 
-La ecuación funcional aplicada a (2) da
+The functional equation applied to (2) gives
 
 \[
  M(s)=R(s)M(1-s),\qquad M(s)=-\Gamma(s)\zeta(s),         \tag{9}
 \]
 
-con
+with
 
 \[
  R(s)=2^s\pi^{s-1}\Gamma(s)\sin{\pi s\over2}
@@ -96,88 +96,88 @@ con
  \qquad R(s)R(1-s)=1.                                  \tag{10}
 \]
 
-La función
+The function
 
 \[
  r(x)={1\over\pi}\sin{x\over2\pi}                    \tag{11}
 \]
 
-tiene transformada de Mellin \(R(s)\), por continuación desde su franja
-fundamental. Además,
+has Mellin transform \(R(s)\), by continuation from its
+fundamental strip. Moreover,
 
 \[
  \mathcal M[x^{-1}q(1/x)](s)=M(1-s).                    \tag{12}
 \]
 
-La convolución multiplicativa de (10)--(12), seguida del cambio
-\(t=1/y\), prueba (3). El núcleo \(r\) cambia de signo; la ecuación
-funcional es una simetría firmada, no un operador positivo.
+The multiplicative convolution of (10)--(12), followed by the change
+\(t=1/y\), proves (3). The kernel \(r\) changes sign; the functional
+equation is a signed symmetry, not a positive operator.
 
-## 3. Stop-gates de positividad
+## 3. Positivity stop-gates
 
-La expansión (5) da
+Expansion (5) gives
 
 \[
  q'''(0^+)={1\over120}>0,                               \tag{13}
 \]
 
-en contradicción con \((-1)^3q'''\ge0\), necesaria para complete
-monotonicity. Incluso el menor log-convexo de una transformada de Laplace
-positiva falla:
+contradicting \((-1)^3q'''\ge0\), necessary for complete
+monotonicity. Even the weaker log-convexity condition of a positive
+Laplace transform fails:
 
 \[
  \lim_{x\downarrow0}\{q(x)q''(x)-q'(x)^2\}
  =-{1\over144}<0.                                      \tag{14}
 \]
 
-En la coordenada logarítmica,
+In the logarithmic coordinate,
 
 \[
  K_a(u)=e^{au}q(e^u),\qquad0<a<1,                       \tag{15}
 \]
 
-sí es estrictamente log-cóncava; esto solo proporciona PF\(_2\). Su
-transformada bilateral es
+is indeed strictly log-concave; this only provides PF\(_2\). Its
+bilateral transform is
 
 \[
  \int_\mathbb R K_a(u)e^{zu}\,du
  =-\Gamma(a+z)\zeta(a+z).                              \tag{16}
 \]
 
-Para \(a=1/2\), (16) posee infinitos ceros sobre el eje imaginario por el
-teorema de Hardy. Una función de frecuencia de Pólya PF\(_\infty\) tendría
-transformada cero-libre en su franja fundamental. Por tanto el kernel real
-no es PF\(_\infty\); alguna menor superior debe fallar.
+For \(a=1/2\), (16) has infinitely many zeros on the imaginary axis by
+Hardy's theorem. A Pólya frequency function PF\(_\infty\) would have a
+zero-free transform in its fundamental strip. Hence the real kernel
+is not PF\(_\infty\); some upper minor must fail.
 
-## 4. Falsificador con la misma simetría
+## 4. Falsifier with the same symmetry
 
-Fije \(0<\eta<1/2\) y \(a>0\). Sea
+Fix \(0<\eta<1/2\) and \(a>0\). Let
 
 \[
  \nu=\delta_{-a}+\delta_a
       +\eta(\delta_{-2a}+\delta_{2a}),                  \tag{17}
 \]
 
-y elija \(c>0\) de modo que
+and choose \(c>0\) so that
 
 \[
  d\mu(v)=c e^{-v/2}\,d\nu(v)                           \tag{18}
 \]
 
-tenga la normalización requerida. Defina
+has the required normalization. Define
 
 \[
  \widetilde q(x)=\int q(xe^{-v})\,d\mu(v)>0.           \tag{19}
 \]
 
-Es decreciente, tiene \(\widetilde q(0^+)=1/2\) tras normalizar y
-\(x\widetilde q(x)\to1\). Su Mellin es
+It is decreasing, has \(\widetilde q(0^+)=1/2\) after normalizing and
+\(x\widetilde q(x)\to1\). Its Mellin transform is
 
 \[
  \widetilde M(s)=M(s)X(s),                             \tag{20}
 \]
 
-donde
+where
 
 \[
  X(s)=2c\left\{
@@ -186,43 +186,43 @@ donde
  \qquad X(1-s)=X(s).                                   \tag{21}
 \]
 
-Por (9) y (21), \(\widetilde M\) satisface la misma ecuación funcional y
-\(\widetilde q\) la misma autorreflexión (3). No obstante, escribiendo
-\(y=a(s-1/2)\), sus ceros adicionales cumplen
+By (9) and (21), \(\widetilde M\) satisfies the same functional equation and
+\(\widetilde q\) the same self-reflection (3). Nevertheless, writing
+\(y=a(s-1/2)\), its additional zeros satisfy
 
 \[
  2\eta\cosh^2y+\cosh y-\eta=0.                         \tag{22}
 \]
 
-La raíz
+The root
 
 \[
  x_-={-1-\sqrt{1+8\eta^2}\over4\eta}<-1               \tag{23}
 \]
 
-produce
+produces
 
 \[
  y=\pm\mathrm{arcosh}(-x_-)+(2k+1)\pi i.        \tag{24}
 \]
 
-Si \(a>2\mathrm{arcosh}(-x_-)\), esos ceros satisfacen
-\(0<\Re s<1\) y \(\Re s\ne1/2\).
+If \(a>2\mathrm{arcosh}(-x_-)\), those zeros satisfy
+\(0<\Re s<1\) and \(\Re s\ne1/2\).
 
-## 5. Decisión
+## 5. Decision
 
 ```text
-probado:
-  representación Mellin positiva (2) y probabilística (8);
-  autorreflexión seno exacta (3);
-  q no es CM, Stieltjes ni PF-infinito;
-  un kernel positivo con los mismos asintóticos y la misma reflexión
-  admite cuartetos off-line.
+proved:
+  positive Mellin representation (2) and probabilistic one (8);
+  exact sine self-reflection (3);
+  q is not CM, Stieltjes, nor PF-infinity;
+  a positive kernel with the same asymptotics and the same reflection
+  admits off-line quartets.
 
-descartado:
-  signo único + monotonía/log-concavidad + FE seno => RH.
+ruled out:
+  single sign + monotonicity/log-concavity + sine FE => RH.
 
-no probado:
-  una propiedad adicional específica del q aritmético que implique
-  Deep-Lambda, A1 o RH.
+not proved:
+  an additional property specific to the arithmetic q implying
+  Deep-Lambda, A1, or RH.
 ```

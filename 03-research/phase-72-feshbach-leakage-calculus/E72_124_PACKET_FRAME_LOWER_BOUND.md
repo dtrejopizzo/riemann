@@ -1,7 +1,6 @@
 # E72.124 -- Packet frame lower bound for YLOW
 
-**Date:** 2026-07-09.
-**Role:** identify the finite lower-bound theorem behind `YLOW`.
+**Purpose:** identify the finite lower-bound theorem behind `YLOW`.
 
 ## 0. Packet components
 

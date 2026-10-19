@@ -1,7 +1,6 @@
 # E72.143 -- Diagonal PSD certificate audit
 
-**Date:** 2026-07-09.
-**Role:** test whether the SDP certificate can be made diagonal in the current model-normalized basis.
+**Purpose:** test whether the SDP certificate can be made diagonal in the current model-normalized basis.
 
 ## 0. Question
 

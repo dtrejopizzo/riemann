@@ -1,6 +1,5 @@
 # E73.203 - Interval budget for the full certificate
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

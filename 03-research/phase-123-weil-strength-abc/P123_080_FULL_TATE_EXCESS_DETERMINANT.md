@@ -1,6 +1,6 @@
 # P123.080 — Full two-fiber Tate excess and its determinant line
 
-Date: 2026-09-06. Status: PROVED for the bar-defined Tate base-change
+Status: PROVED for the bar-defined Tate base-change
 object in the strict derived category. Identification with the physical
 ruling determinant or the global mixed RR metric remains open.
 

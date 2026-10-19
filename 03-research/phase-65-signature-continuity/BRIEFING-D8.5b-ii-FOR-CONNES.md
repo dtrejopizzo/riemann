@@ -11,7 +11,7 @@
 > Connes' #4: **build the pole-relative self-adjoint completion.** Parts I–II below stand; Parts III–IV
 > are superseded by `CORRECTIONS-CONNES-R2.md`.
 
-**Phase 65. Pure mathematics. Nothing committed.** This is a self-contained statement of where the
+**Phase 65. Nothing committed.** This is a self-contained statement of where the
 Witt–Nevanlinna sourced-determinant package stands: everything from D0 to D12 is proved **except one
 point, D8.5b-ii**, which is equivalent to RH and is the precise place where new mathematics is needed. We
 give the full chain, state the open point as a clean problem, prove why every standard tool fails on it,

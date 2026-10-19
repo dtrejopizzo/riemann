@@ -1,8 +1,8 @@
 # Phase 119 — what a finite compression certifies unconditionally
 
-Opened 2026-08-17, after `phase-118-the-exact-threshold-inequality` closed.
+after `phase-118-the-exact-threshold-inequality` closed.
 
-**Audit update (2026-08-25).** The coefficient-contact package does separate
+**Audit update.** The coefficient-contact package does separate
 zeta from Davenport–Heilbronn, but it is not sufficient for critical-line
 positivity and is not the universal function-field polarization. See
 [`RESULTS_119_SEPARATOR.md`](RESULTS_119_SEPARATOR.md). The next constructive

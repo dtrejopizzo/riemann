@@ -1,7 +1,6 @@
 # E70.7 — The AHM proof cannot be local per prime
 
-**Date:** 2026-07-07.
-**Role:** close the next tempting attack on the Hardy-Euler inequality: proving it by assigning an
+**Purpose:** close the next tempting attack on the Hardy-Euler inequality: proving it by assigning an
 independent positive archimedean budget to each prime.
 
 ## Target inequality

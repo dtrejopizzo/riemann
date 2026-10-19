@@ -11,7 +11,7 @@ Gevrey cutoff;
 Paley-Wiener compact-support cutoff.
 ```
 
-The hard cutoff preserves the Phase 71/72 CCM builder but gives boundary and
+The hard cutoff preserves the Phase 71/72 CCM construction but gives boundary and
 mesh tails that cannot be integrated by parts to all orders.
 
 Smooth and Gevrey cutoffs improve formal integration by parts, but they

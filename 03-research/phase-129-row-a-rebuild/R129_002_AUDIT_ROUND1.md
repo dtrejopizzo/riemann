@@ -1,6 +1,6 @@
-# R129.002 — auditor report, round 1 (on the builder's first rebuild of Paper 43)
+# R129.002 — audit report, round 1 (on the first rebuild of Paper 43)
 
-Date: 2026-09-12.  Auditor: hostile referee agent.  Target: Paper 43 after R129.001.
+Target: Paper 43 after R129.001.
 
 ## Headline
 The rebuild is a large honest improvement — the withdrawals are correct, Lemma 8.2

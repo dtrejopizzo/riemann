@@ -1,18 +1,18 @@
-# 104_20 — Cuadrado local de torres y gate global sobreviviente
+# 104_20 — Local tower square and the surviving global gate
 
-**Rol.** Explotar la fórmula especial de
-\(b_u=J_u*J_u\) para combinar una torre prima completa con los tres canales
-de `104_19` **antes** de estimar. El resultado es una factorización local
-exacta. El cuadrado obtenido es algebraico, no un cuadrado de norma, y los
-bloques locales de la sucesión aritmética real tienen ambos signos. Por
-tanto muere la estrategia ``signo por torre y suma''. La desigualdad global
-del cociclo completo permanece viva y es el frente siguiente.
+**Role.** Exploit the special formula of
+\(b_u=J_u*J_u\) to combine a complete prime tower with the three channels
+of `104_19` **before** estimating. The result is an exact local
+factorization. The square obtained is algebraic, not a norm square, and the
+local blocks of the real arithmetic sequence have both signs. Hence the
+"sign per tower and sum" strategy dies. The global inequality for the
+complete cocycle remains alive and is the next front.
 
-Este documento no prueba A1 ni RH.
+This document proves neither A1 nor RH.
 
-## 1. Operadores de traslación y el canal polar acoplado
+## 1. Translation operators and the coupled polar channel
 
-Sea
+Let
 
 \[
  N=-\partial_x,
@@ -23,14 +23,14 @@ Sea
  \mathsf U_\ell f(x):=\int_0^\ell f(x+t)\,dt.       \tag{1}
 \]
 
-Como
+Since
 
 \[
  (\varepsilon-\partial_x)^{-1}={1\over\varepsilon}
  \mathsf A_\varepsilon,
 \]
 
-el factor polar de un solo cociclo actúa sobre la variable Laguerre como
+the polar factor of a single cocycle acts on the Laguerre variable as
 
 \[
  \mathsf P_{\varepsilon,c}
@@ -39,14 +39,14 @@ el factor polar de un solo cociclo actúa sobre la variable Laguerre como
  \qquad u=c\varepsilon.                             \tag{2}
 \]
 
-Integración por partes en (1) da
+Integration by parts in (1) gives
 
 \[
  \mathsf A_\varepsilon N
  =\varepsilon(I-\mathsf A_\varepsilon),
 \]
 
-y por tanto la forma equivalente
+and hence the equivalent form
 
 \[
  \boxed{
@@ -54,12 +54,12 @@ y por tanto la forma equivalente
  =(1-c)I+{c\over\varepsilon}\mathsf A_\varepsilon N.} \tag{3}
 \]
 
-Todos los operadores de (1)--(3) son funciones de traslaciones y
-derivadas; conmutan en el espacio de polinomios donde se usarán.
+All the operators of (1)–(3) are functions of translations and
+derivatives; they commute on the polynomial space where they will be used.
 
-## 2. Segunda diferencia exacta en una torre prima
+## 2. Exact second difference on a prime tower
 
-Fijemos un primo \(p\) y pongamos
+Fix a prime \(p\) and set
 
 \[
  \ell=\log p,
@@ -68,8 +68,8 @@ Fijemos un primo \(p\) y pongamos
  \qquad (E_\ell f)(x)=f(x+\ell).                   \tag{4}
 \]
 
-Con la convención \(a_{-1}=a_{-2}=0\), sea
-\(\nabla^2a_k=a_k-2a_{k-1}+a_{k-2}\). La fórmula de `104_19` se refina a
+With the convention \(a_{-1}=a_{-2}=0\), let
+\(\nabla^2a_k=a_k-2a_{k-1}+a_{k-2}\). The formula of `104_19` refines to
 
 \[
  \boxed{
@@ -77,7 +77,7 @@ Con la convención \(a_{-1}=a_{-2}=0\), sea
  \qquad k\ge0.}                                     \tag{5}
 \]
 
-En consecuencia, para todo polinomio \(f\),
+Consequently, for every polynomial \(f\),
 
 \[
  \boxed{
@@ -86,26 +86,26 @@ En consecuencia, para todo polinomio \(f\),
    (I-\rho E_\ell)^2f(x+k\ell).}                  \tag{6}
 \]
 
-La identidad es una sumación discreta exacta: el factor
-\((I-\rho E_\ell)^2\) es la imagen operacional de la segunda diferencia
-de (5). Las dos series convergen absolutamente porque
+The identity is an exact discrete summation: the factor
+\((I-\rho E_\ell)^2\) is the operational image of the second difference of
+(5). Both series converge absolutely because
 
 \[
  Q\rho=p^{-1-(1-c)\varepsilon}<1.
 \]
 
-Además,
+Moreover,
 
 \[
  \boxed{
  I-\rho E_\ell=(1-\rho)I+\rho\mathsf U_\ell N,}   \tag{7}
 \]
 
-porque \(\mathsf U_\ell N=I-E_\ell\).
+because \(\mathsf U_\ell N=I-E_\ell\).
 
-## 3. Teorema del cuadrado local acoplado
+## 3. Coupled local square theorem
 
-Los operadores (3) y (7) conmutan. Defínase
+Operators (3) and (7) commute. Define
 
 \[
  \boxed{
@@ -115,8 +115,8 @@ Los operadores (3) y (7) conmutan. Defínase
                    \mathsf A_\varepsilon N\bigr).} \tag{8}
 \]
 
-**Teorema.** Una torre completa \(p^k\), incluidos los tres canales
-polares de `104_19`, satisface
+**Theorem.** A complete tower \(p^k\), including the three polar channels of
+`104_19`, satisfies
 
 \[
  \boxed{
@@ -126,23 +126,23 @@ polares de `104_19`, satisface
        \mathsf C_{p,\varepsilon,c}^{2}f(x+k\ell).} \tag{9}
 \]
 
-*Demostración.* Sustituir (6), conmutar
-\(\mathsf P_{\varepsilon,c}^2\) a través de las traslaciones y usar (7)
-produce (9). No se separa ninguno de los tres canales. \(\square\)
+*Proof.* Substituting (6), commuting
+\(\mathsf P_{\varepsilon,c}^2\) through the translations, and using (7)
+produces (9). None of the three channels is separated. \(\square\)
 
-La medida firmada de `104_19` ha desaparecido dentro de un cuadrado. Pero
-\(\mathsf C^2\) no es \(\mathsf C^*\mathsf C\): no define una norma ni tiene
-signo sobre polinomios oscilatorios.
+The signed measure of `104_19` has disappeared inside a square. But
+\(\mathsf C^2\) is not \(\mathsf C^*\mathsf C\): it defines no norm and has
+no sign on oscillatory polynomials.
 
-## 4. Expansión en Laguerres elevados
+## 4. Expansion in raised Laguerre functions
 
-Escribamos
+Write
 
 \[
  \mathsf C=a_0+a_1N+a_2N^2,                        \tag{10}
 \]
 
-donde
+where
 
 \[
 \begin{aligned}
@@ -154,14 +154,14 @@ donde
 \end{aligned}                                      \tag{11}
 \]
 
-Los \(a_j\) son combinaciones positivas de traslaciones y conmutan entre
-sí. Como
+The \(a_j\) are positive combinations of translations and commute with one
+another. Since
 
 \[
  N^jL_n=L_{n-j}^{(j)},                              \tag{12}
 \]
 
-con la convención de valor cero para \(j>n\), resulta
+with the convention of a zero value for \(j>n\), one obtains
 
 \[
 \boxed{
@@ -174,15 +174,15 @@ con la convención de valor cero para \(j>n\), resulta
 \end{aligned}}                                      \tag{13}
 \]
 
-Todos los pesos operatoriales de (13) son positivos. No obstante, cada
-Laguerre elevado conserva oscilaciones. El cuadrado local reorganiza la
-cancelación, pero no la convierte en positividad.
+All the operator weights in (13) are positive. Nevertheless, each raised
+Laguerre function retains oscillations. The local square reorganizes the
+cancellation, but does not turn it into positivity.
 
-## 5. Testigo exacto sobre la sucesión real \(b_u\)
+## 5. Exact witness on the real sequence \(b_u\)
 
-La falta de signo no es solo formal. Considérese una torre \(p^k\) sobre un
-fondo \(m\) coprimo con \(p\). Tras integrar la medida Beta del canal Gamma,
-el bloque de grado \(n=1\) es, salvo el prefactor positivo
+The loss of sign is not merely formal. Consider a tower \(p^k\) over a
+background \(m\) coprime to \(p\). After integrating the Beta measure of the
+Gamma channel, the degree-\(n=1\) block is, up to the positive prefactor
 \(b_u(m)m^{-1-\varepsilon}\),
 
 \[
@@ -192,7 +192,7 @@ el bloque de grado \(n=1\) es, salvo el prefactor positivo
  +{2c(1-c)\over\varepsilon}\right],}               \tag{14}
 \]
 
-donde
+where
 
 \[
 \begin{aligned}
@@ -206,10 +206,10 @@ donde
 \end{aligned}                                      \tag{15}
 \]
 
-Aquí \(M_p=\sum_{k\ge0}b_u(p^k)\rho^k\),
-\(\mu_p\) es el promedio exacto de \(k\) bajo esos pesos normalizados y
-\(\bar\eta\) es el promedio de \(-\frac12\log v\) bajo la medida Beta
-normalizada. Por tanto (14) cambia de signo exactamente al cruzar
+Here \(M_p=\sum_{k\ge0}b_u(p^k)\rho^k\),
+\(\mu_p\) is the exact average of \(k\) under those normalized weights, and
+\(\bar\eta\) is the average of \(-\frac12\log v\) under the normalized Beta
+measure. Hence (14) changes sign exactly upon crossing
 
 \[
  \boxed{
@@ -217,32 +217,31 @@ normalizada. Por tanto (14) cambia de signo exactamente al cruzar
        +{2c\over(1-c)\varepsilon}.}                 \tag{16}
 \]
 
-Fijados \(p\) y \(c\in(0,1)\), existe
-\(\varepsilon_0(p,c)>0\) tal que, para
-\(0<\varepsilon<\varepsilon_0(p,c)\), el bloque \(m=1\) queda del lado
-positivo y todo \(m\) coprimo suficientemente grande queda del lado
-negativo. En ese régimen ambos signos ocurren con los pesos aritméticos
-**reales** \(b_u\).
+With \(p\) and \(c\in(0,1)\) fixed, there exists
+\(\varepsilon_0(p,c)>0\) such that, for
+\(0<\varepsilon<\varepsilon_0(p,c)\), the block \(m=1\) is on the positive
+side and every sufficiently large coprime \(m\) is on the negative side. In
+that regime both signs occur with the **real** arithmetic weights \(b_u\).
 
-Más generalmente, el coeficiente líder en \(\log m\) del bloque de grado
-\(n\) es
+More generally, the leading coefficient in \(\log m\) of the degree-\(n\)
+block is
 
 \[
  \boxed{
  {K_0M_p(1-c)^2\over n!}(-1)^n.}                   \tag{17}
 \]
 
-Así, para cada \(n\) par, incluidos todos los pares \(n\ge150\), existen
-infinitos fondos coprimos cuyo bloque canónico es positivo. Por tanto el
-signo global no puede cerrarse imponiendo signo no positivo a **cada bloque
-canónico (14)**. Esto no descarta una renormalización o un reagrupamiento
-global entre fondos, incluido el término global \(-1/u\) de (20) en
-`104_19`.
+So, for every even \(n\), including every even \(n\ge150\), there are
+infinitely many coprime backgrounds whose canonical block is positive.
+Hence the global sign cannot be closed by imposing a non-positive sign on
+**each canonical block (14)**. This does not rule out a renormalization or
+a global regrouping across backgrounds, including the global \(-1/u\) term
+of (20) in `104_19`.
 
-## 6. Lo que no muere: el gate global
+## 6. What does not die: the global gate
 
-El testigo anterior **no** refuta el signo de la suma completa. La identidad
-global de `104_19` sigue siendo
+The witness above does **not** refute the sign of the complete sum. The
+global identity of `104_19` remains
 
 \[
  g_{n,\varepsilon,c}
@@ -252,7 +251,7 @@ global de `104_19` sigue siendo
  g_{n,\varepsilon,c}\longrightarrow-\Delta D_n.   \tag{18}
 \]
 
-Por tanto el enunciado, con sus cuantificadores completos,
+Hence the statement, with its complete quantifiers,
 
 \[
  \boxed{
@@ -260,14 +259,14 @@ Por tanto el enunciado, con sus cuantificadores completos,
  \limsup_{\varepsilon\downarrow0}g_{n,\varepsilon,c}\le0} \tag{19}
 \]
 
-es, punto a punto, equivalente a \(\Delta D_n\ge0\), porque el límite de
-(18) existe. La versión con \(g_{n,\varepsilon,c}\le0\) para
-\(0<\varepsilon<\varepsilon_0(n)\) es suficiente; no hace falta un
-\(\varepsilon_0\) uniforme en \(n\). Junto con el certificado finito,
-cualquiera de esas formas probaría el strong margin y A1.
+is, pointwise, equivalent to \(\Delta D_n\ge0\), because the limit in
+(18) exists. The version with \(g_{n,\varepsilon,c}\le0\) for
+\(0<\varepsilon<\varepsilon_0(n)\) suffices; a uniform
+\(\varepsilon_0\) in \(n\) is not needed. Together with the finite
+certificate, either of these forms would prove the strong margin and A1.
 
-**Diagnóstico, no teorema.** Una extracción Cauchy/Borwein en `float64`
-encontró \(g_{n,\varepsilon,c}<0\) hasta \(n=1200\) para
+**Diagnostic, not a theorem.** A Cauchy/Borwein extraction in `float64`
+found \(g_{n,\varepsilon,c}<0\) up to \(n=1200\) for
 
 \[
  (\varepsilon,c)\in
@@ -275,38 +274,39 @@ encontró \(g_{n,\varepsilon,c}<0\) hasta \(n=1200\) para
    (10^{-1},9/10)\}.
 \]
 
-Se reproduce con
+Reproduced with
 
 ```bash
 python3 tools/global_cocycle_probe.py --nmax 1200 --samples 32768 \
   --r1 0.99 --r2 0.985
 ```
 
-No es un intervalo certificado y no entra en ninguna demostración. Su único
-uso es direccional: no apareció un contraejemplo a la suma global, aun
-cuando (14)--(17) prueban rigurosamente que sus sumandos locales tienen
-ambos signos.
+This is not a certified interval and enters no proof. Its only use is
+directional: no counterexample to the global sum appeared, even though
+(14)–(17) rigorously prove that its local summands have both signs.
 
-## 7. Reformulación global exacta que queda
+## 7. Remaining exact global reformulation
 
-La factorización (9) expresa el mismo gate global en una coordenada local
-más estructurada, pero **no demuestra una reducción de dificultad respecto
-de \(\Delta D_n\ge0\)**. La pregunta inequívoca es:
+Factorization (9) expresses the same global gate in a more structured
+local coordinate, but **it does not demonstrate a reduction of difficulty
+relative to \(\Delta D_n\ge0\)**. The unambiguous question is:
 
 \[
  \boxed{
- \text{¿qué propiedad global de la convolución multiplicativa de todas
- las torres convierte la suma de }\mathsf C_p^2L_n
- \text{ en (19)?}}                                  \tag{20}
+ \text{What global property of the multiplicative convolution of all
+ towers turns the sum of }\mathsf C_p^2L_n
+ \text{ into (19)?}}                                  \tag{20}
 \]
 
-Una prueba no puede usar signo torre a torre, signo por fondo, ni una norma
-de \(\mathsf C\). Debe conservar las interacciones multiplicativas entre
-primos distintos. Ese es ahora el punto activo más estrecho del mecanismo.
+A proof cannot use tower-by-tower sign, sign per background, or a norm of
+\(\mathsf C\). It must preserve the multiplicative interactions between
+distinct primes. That is now the narrowest active point of the mechanism.
 
-`tools/local_tower_square_check.py` verifica con aritmética `Fraction`
-ingredientes algebraicos independientes: (3), (5), (7),
-\(\mathsf B^2\mathsf P^2=(\mathsf B\mathsf P)^2\) sobre polinomios de prueba
-y la recomposición de la fórmula lineal de grado uno a ambos lados de su
-umbral; también chequea el coeficiente líder hasta grado ocho. No verifica
-las series infinitas completas, (17) para todo grado, (19), A1 ni RH.
+`tools/local_tower_square_check.py` verifies with `Fraction` arithmetic
+independent algebraic ingredients: (3), (5), (7),
+\(\mathsf B^2\mathsf P^2=(\mathsf B\mathsf P)^2\) on test polynomials, and
+the recomposition of the degree-one linear formula on both sides of its
+threshold; it also checks the leading coefficient up to degree eight. It
+does not verify the complete infinite series, (17) for every degree, (19),
+A1, or RH.
+</content>

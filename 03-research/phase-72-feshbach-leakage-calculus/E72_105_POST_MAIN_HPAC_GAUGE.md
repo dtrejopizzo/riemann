@@ -1,7 +1,6 @@
 # E72.105 -- Post-main HPAC gauge correction
 
-**Date:** 2026-07-09.
-**Role:** correct the final HPAC target after the model-background audits E72.101--E72.104.
+**Purpose:** correct the final HPAC target after the model-background audits E72.101--E72.104.
 
 ## 0. Conflict exposed by the last audits
 

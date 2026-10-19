@@ -1,6 +1,5 @@
 # E73.117 Results - Exact Local Box Verifier
 
-Date: 2026-07-12.
 
 Script:
 

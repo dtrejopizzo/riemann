@@ -1,26 +1,26 @@
-# 104_29 — Corte compensado en \(\log2\) y gate de transporte firmado
+# 104_29 — Compensated split at \(\log2\) and the signed-transport gate
 
-**Rol.** Ejecutar la propuesta de separar la variable de Laplace en el primer
-átomo aritmético. El corte es natural y produce una identidad exacta. Sin
-embargo, una comparación de masas sin el test Laguerre es inválida e
-informativamente vacía; la versión compensada que conserva el test recompone
-exactamente el margen \(D_n^{[r]}=r\lambda_n-A_n\).
+**Role.** Execute the proposal of splitting the Laplace variable at the
+first arithmetic atom. The split is natural and produces an exact
+identity. However, a mass comparison without the Laguerre test function is
+invalid and informationally empty; the compensated version that keeps the
+test exactly recomposes the margin \(D_n^{[r]}=r\lambda_n-A_n\).
 
-Este documento no prueba A1 ni RH. Localiza MW-2 en el hueco
-\((0,\log2)\), cuantifica su acción sobre el vector real y muestra qué
-desigualdad firmada global seguiría siendo necesaria.
+This document proves neither A1 nor RH. It localizes MW-2 in the gap
+\((0,\log2)\), quantifies its action on the real vector, and shows what
+global signed inequality would still be needed.
 
-## 1. Generador completado antes de retirar el regulador
+## 1. Completed generator before removing the regulator
 
-Fijemos
+Fix
 
 \[
  r>1,\qquad s_0=1+\varepsilon,\qquad u=c\varepsilon,
  \qquad 0<c<1.
 \]
 
-La primera variación del cociclo real de 104_23--104_24 tiene la medida de
-Lévy completada
+The first variation of the real cocycle of 104_23–104_24 has the
+completed Lévy measure
 
 \[
  \boxed{
@@ -30,9 +30,9 @@ Lévy completada
   +(r-1){e^{-(3+\varepsilon)x}\over1-e^{-2x}}\,dx.}             \tag{1}
 \]
 
-La parte Gamma de (1) es \((r-1)/(2x)+O_r(1)\) cuando \(x\downarrow0\).
-Por ello (1) no tiene masa total finita cerca de cero. La acción correcta
-sobre un test \(\varphi\) es compensada:
+The Gamma part of (1) is \((r-1)/(2x)+O_r(1)\) as \(x\downarrow0\). Hence
+(1) has no finite total mass near zero. The correct action on a test
+function \(\varphi\) is compensated:
 
 \[
  \mathcal G_{r,\varepsilon}\varphi
@@ -40,24 +40,24 @@ sobre un test \(\varphi\) es compensada:
        \kappa_{r,\varepsilon}(dx).                              \tag{2}
 \]
 
-Para un polinomio, la diferencia en (2) es \(O(x)\), y
+For a polynomial, the difference in (2) is \(O(x)\), and
 
 \[
  \int_0^\infty x(1+x^k)|\kappa_{r,\varepsilon}|(dx)<\infty
 \]
 
-para todo \(k\) y todo \(\varepsilon>0\). Así (2), no una diferencia
-informal de masas infinitas, es el objeto legítimo.
+for every \(k\) and every \(\varepsilon>0\). Thus (2), not an informal
+difference of infinite masses, is the legitimate object.
 
-## 2. Identidad Laguerre exacta y corte en el primer primo
+## 2. Exact Laguerre identity and split at the first prime
 
-Pongamos
+Set
 
 \[
  \varphi_n(x)=L_{n-1}^{(1)}(x)-n,\qquad \varphi_n(0)=0.          \tag{3}
 \]
 
-La linealización normalizada del cociclo da
+The normalized linearization of the cocycle gives
 
 \[
  \boxed{
@@ -68,9 +68,9 @@ La linealización normalizada del cociclo da
  \qquad D_n^{[r]}=r\lambda_n-A_n.                              \tag{4}
 \]
 
-Sea \(a=\log2\). No hay átomos de \(d\psi(e^x)\) en \(0<x<a\), y el
-átomo \(m=2\) se asigna al bloque exterior. Por tanto (4) se parte
-exactamente como
+Let \(a=\log2\). There are no atoms of \(d\psi(e^x)\) in \(0<x<a\), and
+the atom \(m=2\) is assigned to the exterior block. Hence (4) splits
+exactly as
 
 \[
  -D_n^{[r]}=-nD_1^{[r]}
@@ -78,7 +78,7 @@ exactamente como
  \bigl(J_n^{<}(\varepsilon)+J_n^{\ge}(\varepsilon)\bigr),       \tag{5}
 \]
 
-donde
+where
 
 \[
  \boxed{
@@ -87,7 +87,7 @@ donde
  \left[-r+(r-1){e^{-3x}\over1-e^{-2x}}\right]dx}                \tag{6}
 \]
 
-y
+and
 
 \[
  \boxed{
@@ -100,8 +100,8 @@ y
  \end{aligned}}                                                 \tag{7}
 \]
 
-Las ecuaciones (5)--(7) conservan polo, Gamma, todos los primos y el test
-Laguerre. El teorema que cerraría el margen sería
+Equations (5)–(7) preserve the pole, Gamma, every prime, and the Laguerre
+test function. The theorem that would close the margin would be
 
 \[
  \boxed{
@@ -110,31 +110,31 @@ Laguerre. El teorema que cerraría el margen sería
  \qquad(n\ge150).}                                              \tag{8}
 \]
 
-Pero, por (5), (8) es exactamente \(D_n^{[r]}\ge0\). El corte organiza la
-cancelación; no la demuestra.
+But, by (5), (8) is exactly \(D_n^{[r]}\ge0\). The split organizes the
+cancellation; it does not prove it.
 
-## 3. La obstrucción localizada y su escala sobre el test real
+## 3. The localized obstruction and its scale on the real test
 
-En el hueco aritmético aparece la densidad
+In the arithmetic gap, the density
 
 \[
- b_r(x)=-r+(r-1){e^{-3x}\over1-e^{-2x}}.                       \tag{9}
+ b_r(x)=-r+(r-1){e^{-3x}\over1-e^{-2x}}                       \tag{9}
 \]
 
-El segundo término de (9) decrece estrictamente de \(+\infty\) a cero.
-Existe por tanto un único \(x_r>0\) con \(b_r(x_r)=0\). En
+appears. The second term of (9) strictly decreases from \(+\infty\) to
+zero. There is therefore a unique \(x_r>0\) with \(b_r(x_r)=0\). At
 \(x_0=\frac12\log2\),
 
 \[
  b_r(x_0)=-r+{r-1\over\sqrt2}<-1<0.                            \tag{10}
 \]
 
-Esto recupera el testigo de 104_23 y prueba que ningún argumento basado en
-positividad de la medida completada puede funcionar.
+This recovers the witness of 104_23 and proves that no argument based on
+positivity of the completed measure can work.
 
-Su acción sobre el test específico tiene una lectura distinta. En el
-intervalo fijo \([x_r,a]\), la asintótica de Laguerre a argumento fijo da,
-uniformemente lejos de cero,
+Its action on the specific test function has a different reading. On the
+fixed interval \([x_r,a]\), the Laguerre asymptotic at fixed argument
+gives, uniformly away from zero,
 
 \[
  L_{n-1}^{(1)}(x)=O_r(n^{1/4}),
@@ -142,27 +142,28 @@ uniformemente lejos de cero,
  \varphi_n(x)=-n+O_r(n^{1/4}).                                 \tag{11}
 \]
 
-En consecuencia, para
+Consequently, for
 
 \[
  M_r:=\int_{x_r}^{a}(-b_r(x))\,dx>0,
 \]
 
-se tiene
+one has
 
 \[
  \int_{x_r}^{a}\varphi_n(x)b_r(x)\,dx
  =nM_r+O_r(n^{1/4}).                                           \tag{12}
 \]
 
-El testigo local de no-positividad aporta sólo escala \(O_r(n)\), frente a
-\(A_n\asymp n\log n\). Es robusto como stop-gate de medidas positivas,
-pero no es por sí solo la obstrucción proporcional. La dificultad queda en
-el bloque exterior (7), donde polo y primos se cancelan a todos los órdenes.
+The local non-positivity witness only contributes scale \(O_r(n)\),
+against \(A_n\asymp n\log n\). It is robust as a positive-measure
+stop-gate, but it is not by itself the proportional obstruction. The
+difficulty remains in the exterior block (7), where the pole and the
+primes cancel to all orders.
 
-## 4. Por qué el balance de masas da un falso diagnóstico
+## 4. Why the mass balance gives a false diagnosis
 
-La masa prima positiva del generador para \(\varepsilon>0\) vale
+The positive prime mass of the generator for \(\varepsilon>0\) equals
 
 \[
  r\sum_{m\ge2}{\Lambda(m)\over m^{1+\varepsilon}}
@@ -170,71 +171,72 @@ La masa prima positiva del generador para \(\varepsilon>0\) vale
  \sim {r\over\varepsilon}.                                    \tag{13}
 \]
 
-La masa negativa de cualquier compacto dentro de \((0,\log2)\) es
-\(O_r(1)\). Así la parte aritmética «domina en masa» de manera automática,
-sin que ello implique ningún signo para (7). Sobre el camino
-\(u=c\varepsilon\) ocurre la misma falsa victoria después de normalizar:
-la masa aritmética de Lévy tiende a \(-r\log(1-c)>0\), mientras la masa
-negativa en un compacto del hueco es \(O(\varepsilon)\).
+The negative mass of any compact set inside \((0,\log2)\) is
+\(O_r(1)\). So the arithmetic part "dominates in mass" automatically,
+without this implying any sign for (7). On the path
+\(u=c\varepsilon\), the same false victory occurs after normalizing: the
+arithmetic Lévy mass tends to \(-r\log(1-c)>0\), while the negative mass on
+a compact set of the gap is \(O(\varepsilon)\).
 
-Al reponer el test Laguerre, separar primos y polo tampoco es posible. Como
-\(\varphi_n\) tiene grado \(n-1\),
+Restoring the Laguerre test function, separating primes and pole is
+likewise impossible. Since \(\varphi_n\) has degree \(n-1\),
 
 \[
  \int_0^\infty x^{n-1}e^{-\varepsilon x}\,dx
  ={(n-1)!\over\varepsilon^n}.                                  \tag{14}
 \]
 
-Los momentos principales del polo y de la suma prima son, por tanto, de
-orden \(\varepsilon^{-n}\) y se cancelan en la combinación completada.
-Tomar valores absolutos, masas o partes positivas antes de esa cancelación
-reproduce exactamente la pérdida de 103_53--103_57.
+The leading moments of the pole and of the prime sum are therefore of
+order \(\varepsilon^{-n}\) and cancel in the completed combination. Taking
+absolute values, masses, or positive parts before that cancellation
+exactly reproduces the loss of 103_53–103_57.
 
-## 5. Falsificador y frontera lógica
+## 5. Falsifier and logical boundary
 
-Toda inferencia que use únicamente:
+Every inference using only:
 
-* positividad de los coeficientes Euler;
-* el hueco de soporte \((0,\log2)\);
-* Gamma positiva y simetría funcional;
+* positivity of the Euler coefficients;
+* the support gap \((0,\log2)\);
+* positive Gamma and the functional symmetry;
 
-debe someterse al cuarteto off-line
+must be submitted to the off-line quartet
 
 \[
  w={1\over2}e^{74\pi i/75},\qquad \rho=(1-w)^{-1}.              \tag{15}
 \]
 
-Para \(n=150\), su contribución al margen de exponente \(r\) contiene
+For \(n=150\), its contribution to the exponent-\(r\) margin contains
 
 \[
  4r\bigl(1-\cosh(150\log2)\bigr)<0,                            \tag{16}
 \]
 
-y puede amplificarse por multiplicidad. Una prueba de (8) debe usar una
-propiedad cuantitativa especial de los pesos reales
-\(\Lambda(p^k)=\log p\) y debe fallar para (15).
+and can be amplified by multiplicity. A proof of (8) must use a special
+quantitative property of the real weights
+\(\Lambda(p^k)=\log p\) and must fail for (15).
 
-## 6. Relación con los gates anteriores
+## 6. Relation to the earlier gates
 
-* 104_23 ya prueba el testigo local (10).
-* La primera variación (1) es el kernel Stein--Mecke de 104_24.
-* El bloque (7), sin separar las torres primas, es el gate multiplicativo
-  global sobreviviente de 104_20.
-* Separar su parte prima de la polar repite la obstrucción de endpoint de
-  103_53--103_57.
+* 104_23 already proves the local witness (10).
+* The first variation (1) is the Stein–Mecke kernel of 104_24.
+* Block (7), with the prime towers not separated, is the surviving global
+  multiplicative gate of 104_20.
+* Separating its prime part from the polar part repeats the endpoint
+  obstruction of 103_53–103_57.
 
-Por tanto \(\log2\) es el corte geométrico correcto, pero no crea
-coercividad. El sucesor vivo sigue siendo una desigualdad firmada no local
-para (7), o equivalentemente una cota directa sobre el rayo hard-edge de
-104_28.
+Hence \(\log2\) is the correct geometric cut, but it creates no
+coercivity. The live successor remains a nonlocal signed inequality for
+(7), or equivalently a direct bound on the hard-edge ray of 104_28.
 
-## Estado
+## Status
 
-* **Probado:** generador compensado, corte exacto (5)--(7), unicidad del
-  cruce (9), escala local (12) y divergencia separada (14).
-* **Descartado:** comparar masas positivas y negativas sin el test Laguerre.
-* **No reducido:** la desigualdad útil (8) es exactamente
+* **Proved:** the compensated generator, the exact split (5)–(7), the
+  uniqueness of crossing point (9), the local scale (12), and the separate
+  divergence (14).
+* **Ruled out:** comparing positive and negative masses without the
+  Laguerre test function.
+* **Not reduced:** the useful inequality (8) is exactly
   \(D_n^{[r]}\ge0\).
-* **Frente vivo:** una cota firmada para la forma prima--polo renormalizada
-  sobre \(g_n\), usando interacción multiplicativa real entre torres.
-
+* **Live front:** a signed bound for the renormalized prime–pole form on
+  \(g_n\), using real multiplicative interaction between towers.
+</content>

@@ -1,6 +1,5 @@
 # E73.149 - Signed Forced Rowspace Lemma
 
-Date: 2026-07-12.
 
 ## 1. Setup
 

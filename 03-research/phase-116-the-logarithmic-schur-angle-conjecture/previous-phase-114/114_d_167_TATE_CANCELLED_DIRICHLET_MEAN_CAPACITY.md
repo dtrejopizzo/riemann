@@ -99,7 +99,7 @@ Pairing (2.2) with an old-core function produces, up to the two endpoint
 pieces of length at most (ell), exactly one of
 
 \[
- M_+(F)=\int e^{t/2}F(t)dt,qquad
+ M_+(F)=\int e^{t/2}F(t)dt,\qquad
  M_-(F)=\int e^{-t/2}F(t)dt.                          \tag{2.3}
 \]
 

@@ -1,7 +1,6 @@
 # E72.80 -- Root remainder certificate
 
-**Date:** 2026-07-09.
-**Role:** replace informal divisibility by an exact finite remainder on the finite Weyl roots.
+**Purpose:** replace informal divisibility by an exact finite remainder on the finite Weyl roots.
 
 ## 0. Input from E72.79
 

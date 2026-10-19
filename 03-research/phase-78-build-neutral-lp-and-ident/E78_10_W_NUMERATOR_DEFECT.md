@@ -1,6 +1,6 @@
 # E78.10 - Numerator-defect reduction of W-QUOTIENT-DELTA
 
-**Run:** 2026-07-18.
+**Run:**
 **Scope:** IDENT, fixed-L finite front.
 
 ## 1. Purpose

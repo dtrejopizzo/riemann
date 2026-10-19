@@ -1,17 +1,17 @@
-# 104_97 — Gate adversarial crítico para la constante diádica $1/8$
+# 104_97 — Critical adversarial gate for the dyadic constant $1/8$
 
-## Resultado
+## Result
 
-La cota candidata de `104_96`,
+The candidate bound from `104_96`,
 
 \[
  \Delta_j\le {1\over8j^2},
  \tag{C}
 \]
 
-es un blanco suficiente para RH, pero **no es una consecuencia de la
-escala crítica** \(\Re\rho=1/2\). Más precisamente, dados
-\(c>0\), \(\gamma>0\) y \(\phi\in\mathbb R\), defina
+is a sufficient target for RH, but **is not a consequence of the
+critical scale** \(\Re\rho=1/2\). More precisely, given
+\(c>0\), \(\gamma>0\) and \(\phi\in\mathbb R\), define
 
 \[
  B_m^{c,\gamma,\phi}
@@ -23,7 +23,7 @@ escala crítica** \(\Re\rho=1/2\). Más precisamente, dados
  \tag{1}
 \]
 
-Si \(L=\log2\), entonces
+If \(L=\log2\), then
 
 \[
  \boxed{
@@ -33,32 +33,31 @@ Si \(L=\log2\), entonces
  \tag{2}
 \]
 
-En particular,
+In particular,
 
 \[
  \liminf_{j\to\infty}j^2\Delta_j^{c,\gamma,\phi}
- \ge c^2\left{
+ \ge c^2\left\{
  {1\over2L}-{ |\sin(\gamma L)|\over2\gamma L^2}
  \right}.
  \tag{3}
 \]
 
-Para \(c=1\), \(\gamma=7\), el lado derecho de (3) es
+For \(c=1\), \(\gamma=7\), the right-hand side of (3) is
 
 \[
  0.5741254552\ldots>{1\over8}.
  \tag{4}
 \]
 
-Así, este control puramente crítico viola (C) para todo \(j\)
-suficientemente grande, aunque su energía total converge. La potencia
-\(j^{-2}\) es la escala correcta; la constante universal \(1/8\) no lo
-es.
+Thus, this purely critical control violates (C) for all sufficiently
+large \(j\), even though its total energy converges. The power
+\(j^{-2}\) is the correct scale; the universal constant \(1/8\) is not.
 
-Hay también una normalización que reproduce exactamente el residuo de un
-cero crítico. Un par de multiplicidad \(M\) en
-\(\rho=1/2\pm i\gamma\) aporta, en el primer término asintótico de la
-fórmula explícita de \(J(x)\),
+There is also a normalization that exactly reproduces the residue of a
+critical zero. A pair of multiplicity \(M\) at
+\(\rho=1/2\pm i\gamma\) contributes, in the first asymptotic term of the
+explicit formula for \(J(x)\),
 
 \[
  B_m^{[M,\gamma]}
@@ -67,15 +66,15 @@ fórmula explícita de \(J(x)\),
  \tag{5}
 \]
 
-Esto es (1) con
+This is (1) with
 
 \[
  c={2M\over\sqrt{1/4+\gamma^2}}
  \tag{6}
 \]
 
-y una fase fija. Tomando la primera ordenada de Riemann
-\(\gamma_1=14.13472514173469\ldots\) y \(M=4\), (3) da
+and a fixed phase. Taking the first Riemann ordinate
+\(\gamma_1=14.13472514173469\ldots\) and \(M=4\), (3) gives
 
 \[
  \liminf j^2\Delta_j^{[4,\gamma_1]}
@@ -83,15 +82,15 @@ y una fase fija. Tomando la primera ordenada de Riemann
  \tag{7}
 \]
 
-El ejemplo (5)--(7) es un **testigo espectral sobre la línea**, no la
-zeta de Riemann: el primer cero de \(\zeta\) es simple en el rango
-verificado, y modificar su multiplicidad modifica la función y sus pesos
-Euler. Por tanto (7) no refuta (C) para los pesos ordinarios. Sí refuta
-rigurosamente cualquier prueba que pretenda obtener la constante
-\(1/8\) usando solamente que todos los exponentes espectrales tienen
-parte real \(1/2\).
+Example (5)--(7) is a **spectral witness on the line**, not the
+Riemann zeta: the first zero of \(\zeta\) is simple in the verified range,
+and modifying its multiplicity modifies the function and its Euler
+weights. Hence (7) does not refute (C) for the ordinary weights. It does
+rigorously refute any proof that claims to obtain the constant
+\(1/8\) using only that all spectral exponents have real
+part \(1/2\).
 
-Si se desea realizar literalmente ese espectro como un completamiento,
+If one wishes to realize that spectrum literally as a completion,
 
 \[
  \Xi_{M,\gamma}(s)
@@ -99,33 +98,33 @@ Si se desea realizar literalmente ese espectro como un completamiento,
  \tag{7a}
 \]
 
-es entero, real-simétrico, satisface
-\(\Xi_{M,\gamma}(1-s)=\Xi_{M,\gamma}(s)\), y todos sus ceros son
-\(1/2\pm i\gamma\). Su derivada logarítmica tiene exactamente esos dos
-residuos de multiplicidad \(M\), que producen (5) en el lado espectral
-formal de una fórmula explícita. El modelo (7a) no tiene una aritmética
-prima asociada ni el producto de Euler ordinario; su única función es probar que
-«ecuación funcional + todos los ceros en la línea» tampoco determina la
-constante \(1/8\).
+is entire, real-symmetric, satisfies
+\(\Xi_{M,\gamma}(1-s)=\Xi_{M,\gamma}(s)\), and all its zeros are
+\(1/2\pm i\gamma\). Its logarithmic derivative has exactly those two
+residues of multiplicity \(M\), which produce (5) on the formal
+spectral side of an explicit formula. Model (7a) has no associated prime
+arithmetic nor the ordinary Euler product; its sole purpose is to prove that
+"functional equation + all zeros on the line" does not determine the
+constant \(1/8\) either.
 
-El estado correcto de (C) para \(\zeta\) queda entonces así:
+The correct status of (C) for \(\zeta\) is then as follows:
 
-* (C) para los pesos ordinarios implicaría RH por `104_93`;
-* RH implica \(\sum_j\Delta_j<\infty\), pero esa sumabilidad no implica
-  ninguna envolvente prefijada \(Cj^{-2}\);
-* ni `104_93`, ni la localización de los ceros en la línea, prueban (C);
-* (7) no es un contraejemplo a (C) para \(\zeta\).
+* (C) for the ordinary weights would imply RH by `104_93`;
+* RH implies \(\sum_j\Delta_j<\infty\), but that summability does not imply
+  any prescribed envelope \(Cj^{-2}\);
+* neither `104_93`, nor the localization of the zeros on the line, proves (C);
+* (7) is not a counterexample to (C) for \(\zeta\).
 
-En consecuencia, (C) debe retirarse como supuesto «control crítico» y
-conservarse solamente como conjetura aritmética adicional, falsable y de
-fuerza al menos RH. Este documento no prueba ni refuta (C) para los pesos
-ordinarios, y no prueba RH.
+Consequently, (C) must be withdrawn as a supposed "critical control" and
+kept only as an additional arithmetic conjecture, falsifiable and of
+at least RH-strength. This document neither proves nor refutes (C) for the
+ordinary weights, and does not prove RH.
 
 ---
 
-## 1. Prueba de la fórmula asintótica
+## 1. Proof of the asymptotic formula
 
-Ponga \(X=2^{j-1}\). El sumando de (1) es
+Set \(X=2^{j-1}\). The summand of (1) is
 
 \[
  {c^2\cos^2(\gamma\log m+\phi)
@@ -133,7 +132,7 @@ Ponga \(X=2^{j-1}\). El sumando de (1) es
  \tag{8}
 \]
 
-Reemplazar \((m+1)^{-1}\) por \(m^{-1}\) cuesta
+Replacing \((m+1)^{-1}\) by \(m^{-1}\) costs
 
 \[
  O_{c}\!\left(\sum_{X<m\le2X}{1\over m^2\log^2m}\right)
@@ -141,21 +140,21 @@ Reemplazar \((m+1)^{-1}\) por \(m^{-1}\) cuesta
  \tag{9}
 \]
 
-Para
+For
 
 \[
  f(x)={\cos^2(\gamma\log x+\phi)\over x\log^2x},
 \]
 
-se tiene, uniformemente en el bloque,
+one has, uniformly in the block,
 
 \[
  |f'(x)|\ll_\gamma {1\over x^2\log^2x}.
  \tag{10}
 \]
 
-Comparar cada \(f(m)\) con su integral en \([m-1,m]\), y sumar (10),
-da
+Comparing each \(f(m)\) with its integral on \([m-1,m]\), and summing (10),
+gives
 
 \[
  \sum_{X<m\le2X}f(m)
@@ -164,7 +163,7 @@ da
  \tag{11}
 \]
 
-Tras \(x=e^t\),
+After \(x=e^t\),
 
 \[
  \int_X^{2X}f(x)\,dx
@@ -172,16 +171,16 @@ Tras \(x=e^t\),
  \tag{12}
 \]
 
-En ese intervalo,
+On that interval,
 
 \[
  {j^2\over t^2}={1\over L^2}+O(1/j)
  \tag{13}
 \]
 
-uniformemente. Multiplicar (9)--(12) por \(j^2\) prueba (2).
+uniformly. Multiplying (9)--(12) by \(j^2\) proves (2).
 
-Finalmente,
+Finally,
 
 \[
  \begin{aligned}
@@ -193,14 +192,14 @@ Finalmente,
  \tag{14}
 \]
 
-La cota inferior de (14) prueba (3). Las evaluaciones (4) y (7) son
-mera sustitución en una expresión cerrada.
+The lower bound from (14) proves (3). Evaluations (4) and (7) are
+mere substitution into a closed expression.
 
-## 2. Relación exacta con la fórmula explícita
+## 2. Exact relation with the explicit formula
 
-La fórmula explícita para la función de Riemann \(J\) contiene
-\(-\mathrm{Li}(x^\rho)\) por cada cero, con emparejamiento
-simétrico. Para cualquier conjunto **finito** de ceros críticos,
+The explicit formula for Riemann's function \(J\) contains
+\(-\mathrm{Li}(x^\rho)\) for each zero, with symmetric
+pairing. For any **finite** set of critical zeros,
 
 \[
  \mathrm{Li}(x^\rho)
@@ -210,14 +209,14 @@ simétrico. Para cualquier conjunto **finito** de ceros críticos,
  \tag{15}
 \]
 
-El par \(1/2\pm i\gamma\), repetido \(M\) veces, produce (5) más un
-error de orden inferior. Esto justifica que (5) sea el control crítico
-con la normalización correcta de residuo, en vez de un simple perfil de
-potencia inventado.
+The pair \(1/2\pm i\gamma\), repeated \(M\) times, produces (5) plus a
+lower-order error. This justifies (5) as the critical control
+with the correct residue normalization, rather than a simple made-up
+power profile.
 
-Para la zeta ordinaria hay que sumar todos sus ceros y conservar los
-términos cruzados. Si, bajo RH, se trunca a \(0<\gamma\le T\), el
-polinomio principal es
+For the ordinary zeta one must sum all its zeros and keep the
+cross terms. If, under RH, one truncates to \(0<\gamma\le T\), the
+leading polynomial is
 
 \[
  F_T(t)=-2\Re\sum_{0<\gamma\le T}
@@ -225,23 +224,23 @@ polinomio principal es
  \tag{16}
 \]
 
-Su energía local es
+Its local energy is
 
 \[
  {1\over L^2}\int_{(j-1)L}^{jL}F_T(t)^2\,dt.
  \tag{17}
 \]
 
-Los términos cruzados de (17) no tienen signo. Por ello no es lícito
-sumar cotas individuales como (3), ni tampoco descartar un bloque finito
-para obtener una cota inferior del cuadrado completo. Pasar
-uniformemente de (17) a todos los ceros con una constante \(1/8\) es una
-desigualdad local de marco adicional; no es el contenido del enunciado
-RH.
+The cross terms of (17) have no sign. For this reason it is not legitimate to
+sum individual bounds like (3), nor to discard a finite block to obtain a
+lower bound of the full square. Passing
+uniformly from (17) to all zeros with a constant \(1/8\) is an
+additional-frame local inequality; it is not the content of the RH
+statement.
 
-## 3. Sustituto crítico válido
+## 3. Valid critical substitute
 
-El único control general que sí se deduce de `104_93` bajo RH es
+The only general control that does follow from `104_93` under RH is
 
 \[
  \boxed{
@@ -251,22 +250,22 @@ El único control general que sí se deduce de `104_93` bajo RH es
  \tag{18}
 \]
 
-No se puede promover (18), por pura teoría de series positivas, a
-\(O(j^{-2})\): una sucesión sumable puede tener picos arbitrariamente
-mayores que \(j^{-2}\) sobre una subsucesión dispersa. Para cerrar RH
-incondicionalmente sigue bastando cualquier mayorante sumable probado
-directamente para los pesos ordinarios, o la condición equivalente
-\(\sum_j\Delta_j<\infty\); el número \(1/8\) no debe tratarse como una
-constante impuesta por la línea crítica.
+One cannot promote (18), by pure positive-series theory, to
+\(O(j^{-2})\): a summable sequence can have peaks arbitrarily
+larger than \(j^{-2}\) on a sparse subsequence. To close RH
+unconditionally it still suffices to have any summable majorant proved
+directly for the ordinary weights, or the equivalent condition
+\(\sum_j\Delta_j<\infty\); the number \(1/8\) should not be treated as a
+constant imposed by the critical line.
 
-## 4. Reproducción
+## 4. Reproduction
 
-Desde `tools/`:
+From `tools/`:
 
 ```bash
 python3 dyadic_one_eighth_critical_gate_check.py
 ```
 
-El checker evalúa las constantes cerradas de (3), verifica el testigo
-normalizado (7), y compara (2) con las sumas discretas de (1). Sus
-cálculos son diagnósticos de la fórmula; la prueba es (8)--(14).
+The checker evaluates the closed-form constants of (3), verifies the normalized
+witness (7), and compares (2) with the discrete sums of (1). Its
+computations are diagnostics of the formula; the proof is (8)--(14).

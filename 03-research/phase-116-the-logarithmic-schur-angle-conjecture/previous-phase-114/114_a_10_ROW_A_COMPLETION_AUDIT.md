@@ -690,19 +690,19 @@ not turn the explicitly open H7-I7 constructions into theorems.
 
 The complete integrated 62-component suite through corrective `a_63`
 (including the three imported row-D acceptance controls) passed on
-2026-08-05 in `459.16s`. The run checks the narrowed `a_52`/`a_53` verdicts
+in `459.16s`. The run checks the narrowed `a_52`/`a_53` verdicts
 and the corrected completed-lattice scopes of `a_12`, `a_18`--`a_20` and
 `a_61`, rather than their retracted strong claims. The `a_64` and `a_65`
 verifiers then passed separately. After the type correction `a_66`, the
-fresh integrated suite of all 65 components passed on 2026-08-05 in
+fresh integrated suite of all 65 components passed in
 `460.31s`. The integrated 72-component suite through `a_73` then passed on
-2026-08-05 in `472.35s`. After integrating `a_74`--`a_76`, the complete
-75-component suite passed on 2026-08-05 in `484.86s`.  The `a_77` verifier
+in `472.35s`. After integrating `a_74`--`a_76`, the complete
+75-component suite passed in `484.86s`. The `a_77` verifier
 then passed separately, followed by the targeted `a_78`--`a_88` runs.  After
 integrating all corrections and scope guards through `a_88`, the complete
-87-component suite passed on 2026-08-05 in `521.68s`.  After the targeted
+87-component suite passed in `521.68s`. After the targeted
 `a_89`--`a_100` runs, the complete integrated suite of all 99 then-existing
-components passed on 2026-08-05 in `550.40s`.  The new `a_101` verifier
+components passed in `550.40s`. The new `a_101` verifier
 passed separately (6,380 coefficient systems and 29,504 exact scalar
 retractions).  The new `a_102` verifier also passed separately (8,640 finite
 abelian Tor controls plus split nonflat ring controls).  The new `a_103`
@@ -716,12 +716,12 @@ coupling controls; the symbolic `a_108` verifier then passed the explicit
 nonzero two-torsion theorem.  The `a_109` reflection and `a_110` pro/lattice
 verifiers passed separately (including 14,400 valuation tensor laws), and
 `a_111` passed its rank-two Cartier/contact controls. That 110-component
-single-process run passed on 2026-08-05 in 552.00 seconds. The meta-verifier
-The 119-component single-process suite through `a_120` passed on 2026-08-05
+single-process run passed in 552.00 seconds. The meta-verifier
+The 119-component single-process suite through `a_120` passed
 in 558.02 seconds.  A fresh 137-component snapshot through `a_138` then
-passed on 2026-08-05 in 569.19 seconds. The meta-verifier now enumerates 143
+passed in 569.19 seconds. The meta-verifier now enumerates 143
 components. The fresh full 143-component suite through `a_144` passed on
-2026-08-05 in 566.97 seconds, including the three imported row-D
+in 566.97 seconds, including the three imported row-D
 non-circularity controls.
 
 These verifiers cover their stated finite/algebraic claims. They do not prove

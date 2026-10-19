@@ -1,7 +1,6 @@
 # E72.54 -- Loewner commutator identity for the CCM overlap cells
 
-**Date:** 2026-07-08.
-**Role:** expose the finite commutator structure hidden in the Hilbert coefficients of E72.52.
+**Purpose:** expose the finite commutator structure hidden in the Hilbert coefficients of E72.52.
 
 ## 0. Mesh notation
 

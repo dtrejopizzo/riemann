@@ -87,7 +87,7 @@ More generally, let \(m(\tau)\) be any nonzero almost-everywhere coherent
 prime multiplier and put
 
 \[
- z_p(\tau)=a_p(\tau)\widehat{J_TF}(\tau),qquad
+ z_p(\tau)=a_p(\tau)\widehat{J_TF}(\tau),\qquad
  m(\tau)=\sum_p\sqrt{\log p}\,a_p(\tau).
 \]
 

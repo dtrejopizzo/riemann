@@ -131,7 +131,7 @@ Weil 1948 for the classical model.
 ## (b) Excluded items, one line each
 
 * **All status vocabulary, clause ledgers, obstacle tables, verdicts, audit
-  findings and dissents, panel records, owner decisions, amendment proposals
+  findings and dissents, panel records, author decisions, amendment proposals
   (§§12–14 of the Markdown), and every "[phase …]"/"[REBUILT …]" note** —
   research bookkeeping, not mathematics.
 * **§13.1–13.8 "What was tried and withdrawn"** — withdrawn routes, false
@@ -247,7 +247,7 @@ in displayed formulas, none exceeding the text block visibly.
 
 ## Repairs after review R1
 
-The hostile referee report `TEX_HOSTILE_REVIEW_R1.md` (verdict: major repairs
+The adversarial referee report `TEX_ADVERSARIAL_REVIEW_R1.md` (verdict: major repairs
 needed; one blocking finding B1, seven major findings M1–M7, one fidelity
 finding D1, nine minor findings) has been applied in full. Line numbers refer
 to the repaired `main.tex`.
@@ -420,3 +420,17 @@ labelled import, all three stated as such and all three localized:
 
 In addition, Proposition 6.8 carries the cutoff asymptotic as an explicit
 hypothesis, and nothing in the article depends on that proposition.
+
+
+---
+
+## Update 
+
+Items (c)1 and (c)3 are closed.  Hypothesis 3.1 is now Proposition `prop:hom`
+(proved; `E_R` redefined on `R^×`, since on `R_{>0}` the statement fails for
+`a=−γb`).  Hypothesis 5.9 is now Proposition `prop:crossed` (proved via a Koszul
+bimodule resolution).  Lemma `lem:hunital` for `E_P` now uses the `J=∅`
+partition.  An adversarial check of both proofs (verdict: correct with minor fixes,
+all applied) preceded the final version.  The article was also revised for
+readability (abstract, introduction, fewer subsections, notation: chart sets
+`S⊆S'⊆S''`, spread test function `ϑ`, completion section `ι`).

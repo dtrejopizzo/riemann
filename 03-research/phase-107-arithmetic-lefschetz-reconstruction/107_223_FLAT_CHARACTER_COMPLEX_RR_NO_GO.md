@@ -21,8 +21,8 @@ In \(K_0(O)\), independently of \(a,b\),
 If \((a,b)\ne(0,0)\), the cohomology calculation of 107_217 gives
 
 \[
- H^0=M/IM,qquad
- H^1=I^{-1}M/M,qquad H^2=0.
+ H^0=M/IM,\qquad
+ H^1=I^{-1}M/M,\qquad H^2=0.
 \]
 
 At every finite prime \(\mathfrak p\),

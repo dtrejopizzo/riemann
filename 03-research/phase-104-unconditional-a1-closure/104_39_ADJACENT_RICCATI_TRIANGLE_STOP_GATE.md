@@ -1,6 +1,6 @@
-# 104_39 — Riccati adyacente, triángulo discreto y stop-gate de necesidad
+# 104_39 — Adjacent Riccati, discrete triangle, and necessity stop-gate
 
-**Rol.** Auditar el criterio suficiente adyacente de `104_34`
+**Role.** Audit the adjacent sufficient criterion of `104_34`
 
 \[
  \mathcal T_n=4H_nd_n-(H_n+d_n-H_{n+1})^2\ge0,
@@ -10,37 +10,38 @@
  d_n={1501\over2002}\Delta A_n+\gamma,                 \tag{1}
 \]
 
-como una recurrencia de Riccati, y decidir si su positividad puede ser el
-objetivo final en lugar de la desigualdad escalar \(H_n\ge0\).
+as a Riccati recurrence, and decide whether its positivity can be the
+final goal instead of the scalar inequality \(H_n\ge0\).
 
-El resultado es preciso:
+The result is precise:
 
-1. (1) es exactamente una desigualdad triangular para
-   \(\sqrt{H_n},\sqrt{d_n},\sqrt{H_{n+1}}\), no una recurrencia con un
-   signo nuevo;
-2. es **estrictamente más fuerte** que \(H_n\ge0\): un aporte de cuarteto
-   enteramente sobre la línea crítica mantiene todos los márgenes
-   positivos y rompe (1) de forma exacta;
-3. bajo RH, para la zeta de Riemann, (1) sí vale para todo \(n\)
-   suficientemente grande, por lo que no hay una obstrucción asintótica;
-4. en consecuencia, (1) sigue siendo un criterio suficiente válido para
-   la zeta real, pero no debe confundirse con A1 ni tratarse como condición
-   necesaria. Probarlo exige regularidad aritmética adicional que el mero
-   soporte crítico y la positividad de Li no contienen.
+1. (1) is exactly a triangle inequality for
+   \(\sqrt{H_n},\sqrt{d_n},\sqrt{H_{n+1}}\), not a recurrence with a new
+   sign;
+2. it is **strictly stronger** than \(H_n\ge0\): a quartet contribution
+   lying entirely on the critical line keeps every margin positive and
+   exactly breaks (1);
+3. under RH, for the Riemann zeta function, (1) does hold for every
+   sufficiently large \(n\), so there is no asymptotic obstruction;
+4. consequently, (1) remains a valid sufficient criterion for the real
+   zeta function, but it must not be confused with A1 nor treated as a
+   necessary condition. Proving it requires additional arithmetic
+   regularity that mere critical support and Li positivity do not
+   contain.
 
-Este documento no prueba (1) para la zeta, A1 ni RH. Sí cierra el intento
-de obtener (1) solo mediante álgebra de Riccati, positividad de los
-coeficientes de Li o localización crítica término a término.
+This document proves neither (1) for zeta, nor A1, nor RH. It does close
+the attempt to obtain (1) solely via Riccati algebra, positivity of the Li
+coefficients, or term-by-term critical localization.
 
-## 1. Factorización exacta: la recurrencia es un triángulo
+## 1. Exact factorization: the recurrence is a triangle
 
-Supongamos \(H_n\ge0\), \(d_n>0\) y \(H_{n+1}\ge0\), y escribamos
+Suppose \(H_n\ge0\), \(d_n>0\), and \(H_{n+1}\ge0\), and write
 
 \[
  x_n=\sqrt{H_n},\qquad a_n=\sqrt{d_n},\qquad x_{n+1}=\sqrt{H_{n+1}}.
 \]
 
-La identidad algebraica
+The algebraic identity
 
 \[
 \boxed{
@@ -49,7 +50,7 @@ La identidad algebraica
  \bigl(x_{n+1}^2-(x_n-a_n)^2\bigr)}                         \tag{2}
 \]
 
-prueba las equivalencias
+proves the equivalences
 
 \[
 \boxed{
@@ -57,7 +58,7 @@ prueba las equivalencias
  \iff |x_n-a_n|\le x_{n+1}\le x_n+a_n}                     \tag{3}
 \]
 
-y
+and
 
 \[
 \boxed{
@@ -66,58 +67,59 @@ y
  (\sqrt{H_n}+\sqrt{d_n})^2.}                               \tag{4}
 \]
 
-Cuando \(H_nd_n>0\), existe por tanto un parámetro
+When \(H_nd_n>0\), there is therefore a parameter
 
 \[
  u_n={H_n+d_n-H_{n+1}\over2\sqrt{H_nd_n}}
 \]
 
-tal que
+such that
 
 \[
 \boxed{
  H_{n+1}=H_n+d_n-2\sqrt{H_nd_n}\,u_n,\qquad |u_n|\le1.}   \tag{5}
 \]
 
-Ésta es la forma Riccati completa. El parámetro \(u_n\) no recibe signo de
-la identidad: acotarlo por uno es exactamente la desigualdad de
-Cauchy--Schwarz para la compresión de `104_34`, no una consecuencia nueva
-de reescribirla.
+This is the complete Riccati form. The parameter \(u_n\) receives no
+sign from the identity: bounding it by one is exactly the
+Cauchy–Schwarz inequality for the compression of `104_34`, not a new
+consequence of rewriting it.
 
-En variables relativas \(r_n=H_{n+1}/H_n\) y
-\(\delta_n=d_n/H_n\), (3) dice
+In relative variables \(r_n=H_{n+1}/H_n\) and
+\(\delta_n=d_n/H_n\), (3) says
 
 \[
  (1-\sqrt{\delta_n})^2\le r_n\le
  (1+\sqrt{\delta_n})^2.                                    \tag{6}
 \]
 
-Para la escala esperada \(H_n\asymp n\log n\), \(d_n\asymp\log n\),
-se tiene \(\delta_n\asymp n^{-1}\). Así (1) exige una regularidad local
-de raíz cuadrada del margen, además de su positividad.
+For the expected scale \(H_n\asymp n\log n\), \(d_n\asymp\log n\),
+one has \(\delta_n\asymp n^{-1}\). So (1) demands a local
+square-root regularity of the margin, in addition to its positivity.
 
-## 2. No es una condición necesaria para el margen
+## 2. It is not a necessary condition for the margin
 
-La diferencia entre positividad y regularidad adyacente puede exhibirse
-con un cuarteto crítico exacto. Sea
+The difference between positivity and adjacent regularity can be
+exhibited with an exact critical quartet. Let
 
 \[
  L_n^{\rm crit}=4-4\cos(n\pi/2)\in\{0,4,8,4\}.              \tag{7}
 \]
 
-Es la contribución de Li de un cuarteto con \(|w|=1\), y en particular
+This is the Li contribution of a quartet with \(|w|=1\), and in
+particular
 
 \[
  L_n^{\rm crit}\ge0\qquad(n\ge1).                           \tag{8}
 \]
 
-Considérese primero el modelo normalizado
+Consider first the normalized model
 
 \[
  \widehat H_n=1+L_n^{\rm crit},\qquad \widehat d_n=1.       \tag{9}
 \]
 
-Todos los márgenes son al menos uno. Sin embargo, en \(n=4\),
+Every margin is at least one. However, at \(n=4\),
 
 \[
  \widehat H_4=1,\qquad \widehat H_5=5,\qquad
@@ -125,86 +127,86 @@ Todos los márgenes son al menos uno. Sin embargo, en \(n=4\),
  =4-(1+1-5)^2=-5<0.                                         \tag{10}
 \]
 
-La misma obstrucción no depende de la normalización. Sea una sucesión base
-con \(H_n\ge0\) y sea \(d_q>0\) fijo. Elija \(q\equiv0\pmod4\). Al
-añadir \(M L_n^{\rm crit}\), con multiplicidad entera \(M\ge1\), se tiene
-\(L_q^{\rm crit}=0\), \(L_{q+1}^{\rm crit}=4\), y se conserva
-\(H_n\ge0\) para todo \(n\), pero
+The same obstruction does not depend on the normalization. Let a base
+sequence have \(H_n\ge0\) and let \(d_q>0\) be fixed. Choose
+\(q\equiv0\pmod4\). Adding \(M L_n^{\rm crit}\), with integer multiplicity
+\(M\ge1\), gives \(L_q^{\rm crit}=0\), \(L_{q+1}^{\rm crit}=4\), and
+\(H_n\ge0\) is preserved for every \(n\), but
 
 \[
  \mathcal T_q(M)=4H_qd_q-
    (H_q+d_q-H_{q+1}-4M)^2\longrightarrow-\infty              \tag{11}
 \]
 
-cuando \(M\to\infty\) a través de los enteros.
+as \(M\to\infty\) through the integers.
 
-Por tanto:
+Hence:
 
 \[
 \boxed{
- H_n\ge0\ \hbox{para todo }n
+ H_n\ge0\ \hbox{for every }n
  \quad\not\Longrightarrow\quad
- \mathcal T_n\ge0\ \hbox{para todo }n.}                   \tag{12}
+ \mathcal T_n\ge0\ \hbox{for every }n.}                   \tag{12}
 \]
 
-El ejemplo no pretende ser otro producto de Euler: prueba exactamente que
-el criterio adyacente no se deduce de positividad de Li, simetría funcional
-y soporte crítico. Una prueba para la zeta debe usar la distribución y los
-pesos especiales de sus primos; no alcanza sumar contribuciones positivas
-de ceros críticos.
+The example does not claim to be another Euler product: it proves exactly
+that the adjacent criterion does not follow from Li positivity, functional
+symmetry, and critical support. A proof for zeta must use the special
+distribution and weights of its primes; summing positive critical-zero
+contributions is not enough.
 
-## 3. El falsificador fuera de la línea en forma racional
+## 3. The off-line falsifier in rational form
 
-Puede hacerse racional el testigo off-line de `104_34`. Tome
+The off-line witness of `104_34` can be made rational. Take
 
 \[
  w={5i\over4},\qquad
  \rho={1\over1-w}={16\over41}+{20\over41}i,                  \tag{13}
 \]
 
-de modo que \(0<\Re\rho<1/2\). La órbita funcional recíproca aporta
+so that \(0<\Re\rho<1/2\). The reciprocal functional orbit contributes
 
 \[
  L_n^{\rm off}
  =4-\left(w^n+\bar w^n+w^{-n}+\bar w^{-n}\right).           \tag{14}
 \]
 
-Para \(n=4k\),
+For \(n=4k\),
 
 \[
  L_{4k}^{\rm off}
  =4-2\left((5/4)^{4k}+(4/5)^{4k}\right),                    \tag{15}
 \]
 
-que es negativo y exponencial en módulo. Contra cualquier base
-polinómica existe entonces un primer cruce \(H_{N-1}\ge0>H_N\). Si
-\(\mathcal T_{N-1}\ge0\), (4) forzaría \(H_N\ge0\), contradicción. Por
-consiguiente \(\mathcal T_{N-1}<0\).
+which is negative and exponential in modulus. Against any polynomial
+base, there is then a first crossing \(H_{N-1}\ge0>H_N\). If
+\(\mathcal T_{N-1}\ge0\), (4) would force \(H_N\ge0\), a contradiction.
+Hence \(\mathcal T_{N-1}<0\).
 
-El verificador racional adjunto usa la base \(n^2\), encuentra el primer
-cruce exactamente en \(N=28\) y comprueba el determinante negativo sin
-punto flotante.
+The attached rational verifier uses base \(n^2\), finds the first
+crossing exactly at \(N=28\), and checks the negative determinant with no
+floating point.
 
-## 4. Bajo RH el gate es asintóticamente automático
+## 4. Under RH the gate is asymptotically automatic
 
-Esta sección solo clasifica la fuerza lógica de (1); no se usa como input
-incondicional.
+This section only classifies the logical strength of (1); it is not used
+as an unconditional input.
 
-Supongamos RH. Para cada cero \(1/2+i\gamma\), \(\gamma>0\), sea
+Assume RH. For each zero \(1/2+i\gamma\), \(\gamma>0\), let
 
 \[
  \vartheta_\gamma=2\arctan {1\over2\gamma},
  \qquad 0<\vartheta_\gamma\le {1\over\gamma}.
 \]
 
-La representación positiva de Li es
+The positive representation of Li is
 
 \[
  \lambda_n=2\sum_{\gamma>0}
        \bigl(1-\cos(n\vartheta_\gamma)\bigr).                \tag{16}
 \]
 
-La serie de la diferencia converge absolutamente y
+The difference series converges absolutely and
 
 \[
 \begin{aligned}
@@ -217,13 +219,14 @@ La serie de la diferencia converge absolutamente y
 \end{aligned}
 \]
 
-La cota clásica \(N(T)=O(T\log T)\), integrada por partes en (17), da
+The classical bound \(N(T)=O(T\log T)\), integrated by parts in (17),
+gives
 
 \[
  \boxed{\Delta\lambda_n=O(\log^2 n)\qquad({\rm RH}).}       \tag{18}
 \]
 
-Por otra parte,
+On the other hand,
 
 \[
  A_n={n\over2}(\log n+\gamma-1-\log2\pi)+O(\log n),
@@ -231,20 +234,20 @@ Por otra parte,
  \Delta A_n={1\over2}\log n+O(1),                          \tag{19}
 \]
 
-y el teorema condicional de Lagarias da
+and Lagarias's conditional theorem gives
 
 \[
  \lambda_n=A_n+O(\sqrt n\log n).                            \tag{20}
 \]
 
-Con \(c=501/2002\), \(\kappa=1-c\), se sigue
+With \(c=501/2002\), \(\kappa=1-c\), it follows that
 
 \[
  H_n={\kappa\over2}n\log n+O(n),\qquad
  d_n={\kappa\over2}\log n+O(1),                            \tag{21}
 \]
 
-mientras que
+while
 
 \[
  H_n+d_n-H_{n+1}
@@ -252,7 +255,7 @@ mientras que
  =O(\log^2 n).                                               \tag{22}
 \]
 
-Finalmente,
+Finally,
 
 \[
 \boxed{
@@ -261,69 +264,68 @@ Finalmente,
   +O(n\log n+\sqrt n\log^2 n+\log^4 n)>0}                  \tag{23}
 \]
 
-para todo \(n\) suficientemente grande bajo RH.
+for every sufficiently large \(n\) under RH.
 
-La conclusión correcta es doble. El gate no es demasiado fuerte en la
-escala asintótica real de zeta, pero sí añade una condición local finita
-que RH/positividad por sí solas no proporcionan. No se puede declarar
-\(\mathcal T_n\ge0\) equivalente a RH sin certificar además todos sus
-índices finitos.
+The correct conclusion is twofold. The gate is not too strong at the real
+asymptotic scale of zeta, but it does add a finite local condition that
+RH/positivity alone do not supply. \(\mathcal T_n\ge0\) cannot be declared
+equivalent to RH without also certifying all its finite indices.
 
-## 5. Libertad de la referencia: óptimo formal y circularidad
+## 5. Freedom of the reference: formal optimum and circularity
 
-La referencia diagonal de bandera de `104_34` no es la única forma
-positiva que interpola \(A_n\) sobre los prefijos. Esta libertad parece
-permitir mejorar el determinante, pero su optimización exacta muestra que
-no crea una desigualdad.
+The diagonal flag reference of `104_34` is not the only positive form
+interpolating \(A_n\) over the prefixes. This freedom seems to allow
+improving the determinant, but its exact optimization shows that it
+creates no inequality.
 
-Sea \(\mathsf A\) cualquier forma positiva con
-\(\mathsf A[g_n]=A_n\), y ponga
+Let \(\mathsf A\) be any positive form with
+\(\mathsf A[g_n]=A_n\), and set
 
 \[
  a_n=\mathsf A[\phi_n],\qquad D_n=\kappa a_n+\gamma.
 \]
 
-Como \(g_{n+1}=g_n+\phi_n\), se tiene
+Since \(g_{n+1}=g_n+\phi_n\), one has
 
 \[
  \mathsf A(g_n,\phi_n)={\Delta A_n-a_n\over2}.
 \]
 
-Para \(\mathsf M=\kappa\mathsf A-\mathsf Q_0\), la compresión sobre
-\(\mathrm{span}\,\{g_n,\phi_n\}\) tiene diagonal \(H_n,D_n\) y
-determinante, multiplicado por cuatro,
+For \(\mathsf M=\kappa\mathsf A-\mathsf Q_0\), the compression onto
+\(\mathrm{span}\,\{g_n,\phi_n\}\) has diagonal \(H_n,D_n\) and
+determinant, multiplied by four,
 
 \[
  F_n(D)=4H_nD-(H_n+D-H_{n+1})^2.                             \tag{24}
 \]
 
-Como función de \(D\), es una parábola cóncava y
+As a function of \(D\), this is a concave parabola, and
 
 \[
  \boxed{D_n^{\rm opt}=H_n+H_{n+1},\qquad
         \max_DF_n(D)=4H_nH_{n+1}.}                           \tag{25}
 \]
 
-El óptimo formal reduce el determinante exactamente a la positividad que
-se quiere propagar. Pero realizarlo exige elegir
+The formal optimum reduces the determinant exactly to the positivity one
+wants to propagate. But realizing it requires choosing
 
 \[
  a_n^{\rm opt}={H_n+H_{n+1}-\gamma\over\kappa},              \tag{26}
 \]
 
-que ya contiene \(H_{n+1}\). Es una codificación circular del objetivo,
-además de las restricciones globales que impondría construir una sola
-forma positiva con todas esas diagonales.
+which already contains \(H_{n+1}\). It is a circular encoding of the
+goal, in addition to the global constraints that building a single
+positive form with all those diagonals would impose.
 
-Hay una referencia fija extrema que sirve para comprobar que el cambio de
-gauge tampoco aporta signo. Declare ortogonales los prefijos \(g_k\) y
-déles normas cuadradas \(A_k\). Esta forma es positiva y
+There is a fixed extreme reference useful for checking that changing the
+gauge likewise supplies no sign. Declare the prefixes \(g_k\) orthogonal
+and give them squared norms \(A_k\). This form is positive, and
 
 \[
  a_n=A_n+A_{n+1}.
 \]
 
-En la base \(\{g_n,g_{n+1}\}\), su compresión es
+In the basis \(\{g_n,g_{n+1}\}\), its compression is
 
 \[
  \begin{pmatrix}
@@ -332,7 +334,7 @@ En la base \(\{g_n,g_{n+1}\}\), su compresión es
  \end{pmatrix},                                             \tag{27}
 \]
 
-porque
+because
 
 \[
  \mathsf Q_0(g_n,g_{n+1})
@@ -340,72 +342,74 @@ porque
  ={B_n+B_{n+1}+\gamma\over2}.
 \]
 
-Esto produce otro criterio suficiente,
+This produces another sufficient criterion,
 
 \[
  \boxed{
  \mathcal U_n:=4H_nH_{n+1}-(B_n+B_{n+1}+\gamma)^2\ge0.}     \tag{28}
 \]
 
-No es un teorema nuevo sobre zeta: la contribución crítica de la sección 2
-lo rompe para multiplicidad grande, pues el término cuadrático en \(M\)
-domina al lineal. Tampoco (28) se ordena en general con (1); controla el
-valor \(B_n+B_{n+1}\), mientras (1) controla la pendiente
-\(\Delta B_n\). La elección de referencia solo mueve la dificultad entre
-esas dos coordenadas.
+It is not a new theorem about zeta: the critical contribution of Section 2
+breaks it for large multiplicity, since the quadratic term in \(M\)
+dominates the linear one. Nor does (28) generally order against (1): it
+controls the value \(B_n+B_{n+1}\), while (1) controls the slope
+\(\Delta B_n\). The choice of reference only moves the difficulty between
+those two coordinates.
 
-Por tanto, optimizar la métrica de referencia no da un mecanismo
-coercivo. El óptimo es tautológico y las referencias fijas vuelven a pedir
-una desigualdad aritmética firmada no demostrada.
+Hence optimizing the reference metric produces no coercive mechanism. The
+optimum is tautological, and fixed references again require an unproved
+signed arithmetic inequality.
 
-## 6. Consecuencia para el frente de Phase 104
+## 6. Consequence for the Phase 104 front
 
-La inducción mínima que se desea es solo
+The minimal induction one wants is only
 
 \[
  H_{n+1}=H_n+d_n-(H_n+d_n-H_{n+1})\ge0.                      \tag{29}
 \]
 
-La cota de Schur sustituye el requisito unilateral de (29) por
+The Schur bound replaces the one-sided requirement of (29) with
 
 \[
  |H_n+d_n-H_{n+1}|\le2\sqrt{H_nd_n},                         \tag{30}
 \]
 
-que controla también el signo innecesario y es estrictamente más fuerte,
-como muestra (10). La forma Riccati no elimina esa pérdida.
+which also controls the unneeded sign and is strictly stronger, as (10)
+shows. The Riccati form does not remove that loss.
 
-Por tanto `104_34` queda como un criterio suficiente legítimo, pero no
-como el único frente. Tras el stop-gate Hankel de `104_37`, seguir buscando
-una prueba abstracta de (30) mediante PSD, suma de cuadrados o positividad
-de cuartetos críticos repetiría una categoría ya refutada. Solo tendría
-sentido retomarlo si aparece una desigualdad específica para los pesos
-\(\log p\) que controle la pendiente firmada
+Hence `104_34` stands as a legitimate sufficient criterion, but not as
+the only front. After the Hankel stop-gate of `104_37`, continuing to
+seek an abstract proof of (30) via PSD, sum of squares, or positivity of
+critical quartets would repeat an already-refuted category. It would only
+make sense to return to it if a specific inequality for the weights
+\(\log p\) appears that controls the signed slope
 
 \[
  \Delta B_n+\gamma.
 \]
 
-En ausencia de esa entrada, el objetivo matemáticamente más estrecho sigue
-siendo el margen escalar \(H_n\ge0\), equivalente al techo proporcional
-adoptado, no el determinante adyacente.
+In the absence of that input, the mathematically narrower goal remains
+the scalar margin \(H_n\ge0\), equivalent to the adopted proportional
+ceiling, not the adjacent determinant.
 
-## Verificación
+## Verification
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure
 python3 tools/adjacent_riccati_gate_check.py
 ```
 
-El script usa solo `Fraction` y verifica (2), el testigo crítico (10), el
-punto racional (13) y el primer cruce off-line de la sección 3.
+The script uses only `Fraction` and verifies (2), the critical witness
+(10), the rational point (13), and the first off-line crossing of
+Section 3.
 
-## Estado
+## Status
 
-* **Probado:** equivalencias triangulares (2)--(6).
-* **Probado exactamente:** margen positivo no implica el gate adyacente.
-* **Probado condicionalmente:** RH implica el gate para todo índice
-  suficientemente grande.
-* **Descartado:** obtener el gate solo de la forma Riccati, positividad de
-  Li o soporte crítico término a término.
-* **No probado:** el gate para la zeta en todo \(n\ge149\), A1 y RH.
+* **Proved:** the triangular equivalences (2)–(6).
+* **Proved exactly:** positive margin does not imply the adjacent gate.
+* **Proved conditionally:** RH implies the gate for every sufficiently
+  large index.
+* **Ruled out:** obtaining the gate solely from the Riccati form, Li
+  positivity, or term-by-term critical support.
+* **Not proved:** the gate for zeta at every \(n\ge149\), A1, and RH.
+</content>

@@ -1,6 +1,5 @@
 # E73.160 - Scalar dual termwise audit
 
-Date: 2026-07-12.
 
 ## 1. Purpose
 

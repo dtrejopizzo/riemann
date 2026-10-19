@@ -6,11 +6,11 @@ states the construction problem that remains.
 
 | File | What it is | Status |
 |---|---|---|
-| `R139_000_LEAD_BLUEPRINT.md` | Lead blueprint (Fable 5.1): standing rules, the three falsifier tests, D.19–D.21, the binding corpus consequences | input |
-| `R139_001_BUILDER_ROUND1.md` | **Builder report**: D.19 complete with **T2**; D.20 items 1–3; D.21 the consolidated ledger and **`(P139)`**; corpus check per idea; FATAL screen; paper-facing list; open list; label. **Round-2 repairs applied in place**, each marked by a bracketed `[…, round 2, finding H·]` note | delivered, repaired |
-| `R139_002_HOSTILE_AUDIT.md` | Hostile audit of round 1: 16 findings (7 MAJOR), no FATAL, verdict NOT CONFIRMED AS DELIVERED | delivered |
-| `R139_003_BUILDER_ROUND2.md` | **Builder, round 2**: the repair ledger — 16/16 findings addressed (11 repaired, 2 withdrawn, 3 sharpened), plus one further defect found while repairing H7 | delivered |
-| `R139_005_LEAD_CLOSING_DECISION.md` | Lead closing decision | pending |
+| `R139_000_BLUEPRINT.md` | Blueprint: the three falsifier tests, D.19–D.21, the binding corpus consequences | input |
+| `R139_001_ROUND1.md` | **Report**: D.19 complete with **T2**; D.20 items 1–3; D.21 the consolidated ledger and **`(P139)`**; corpus check per idea; FATAL screen; paper-facing list; open list; label. **Round-2 repairs applied in place**, each marked by a bracketed `[…, round 2, finding H·]` note | delivered, repaired |
+| `R139_002_AUDIT.md` | Audit of round 1: 16 findings (7 MAJOR), no FATAL, verdict NOT CONFIRMED AS DELIVERED | delivered |
+| `R139_003_ROUND2.md` | **Round 2**: the repair ledger — 16/16 findings addressed (11 repaired, 2 withdrawn, 3 sharpened), plus one further defect found while repairing H7 | delivered |
+| `R139_005_CLOSING_DECISION.md` | Closing decision | pending |
 
 Reference plans (outside this directory):
 `05-meta-and-planning/ABCD-CLOSURE-PLAN/ROW-D-COMPLETION-PLAN.md` §1 and
@@ -37,7 +37,7 @@ Reference plans (outside this directory):
 | D.20.3 | Epstein = the same Hecke L-functions read as a **sum**; `ζ_K` reads them as a **product**; `Z ↦ Ŵ^{(Z)}` is multiplicative-to-additive | `PROVED` |
 | D.21.2 | the consolidated line-by-line ledger W1–W8 of Weil's second proof, labelled PRESENT / PRESENT-CONDITIONAL / ABSENT | new (entries cited) |
 | D.21.3 | **Euler-product step = W4** (the Frobenius correspondence and its composition law); **field-uniform step = W2 + W5** (Riemann–Roch and Hodge index on the square) | `PROVED` |
-| D.21.4 | **`(P139)`** — construct a rule `Z ↦ h⁰_Z` *defined* for every `Z` satisfying A1, A2, A2⁺, A4, A5, A6 (A3 excluded, so that `Ξ_a ∈ 𝒵`; lead fix after R139_004 H17), satisfying (a),(b′),(c) for `Z = ξ_K`, with growth `\tfrac{r²}4m² + O(m)` (`¼m²` for `K = Q`) and the **naming clause (N)**; acceptance tests (AT-1) Epstein, (AT-2) `Ξ_a`, (AT-3) `ζ_K` non-distinction | `OPEN` |
+| D.21.4 | **`(P139)`** — construct a rule `Z ↦ h⁰_Z` *defined* for every `Z` satisfying A1, A2, A2⁺, A4, A5, A6 (A3 excluded, so that `Ξ_a ∈ 𝒵`; fix after R139_004 H17), satisfying (a),(b′),(c) for `Z = ξ_K`, with growth `\tfrac{r²}4m² + O(m)` (`¼m²` for `K = Q`) and the **naming clause (N)**; acceptance tests (AT-1) Epstein, (AT-2) `Ξ_a`, (AT-3) `ζ_K` non-distinction | `OPEN` |
 
 ## The axiom table (D.19.7a), in one line each
 

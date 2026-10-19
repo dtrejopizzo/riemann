@@ -1,14 +1,14 @@
-# 104_89 — Gate unilateral BSY para truncaciones Euler reales
+# 104_89 — One-sided BSY gate for real Euler truncations
 
-**Resultado.** Las truncaciones globales cero-libres de `104_85`,
-normalizadas en \(s=1\), tienen media logarítmica de Poisson exactamente
-cero. La función límite
+**Result.** The zero-free global truncations of `104_85`,
+normalized at \(s=1\), have exactly zero Poisson logarithmic mean. The
+limit function
 
 \[
  H(s)=(s-1)\zeta(s),\qquad H(1)=1,                       \tag{1}
 \]
 
-tiene media
+has mean
 
 \[
  D_B=-\log|B(0)|
@@ -16,7 +16,7 @@ tiene media
       \log { |\rho|\over|1-\rho|}\ge0.                  \tag{2}
 \]
 
-Por tanto, para **cada** truncación \(X\),
+Therefore, for **every** truncation \(X\),
 
 \[
  \boxed{
@@ -29,48 +29,50 @@ Por tanto, para **cada** truncación \(X\),
  {dt\over2\pi(t^2+1/4)}.}                               \tag{3}
 \]
 
-En consecuencia, basta construir una sucesión \(X_j\to\infty\) para la
-cual el miembro derecho de (3) tienda a cero. Éste es un target directo,
-unilateral y escrito solo con la zeta real y truncaciones de sus pesos
-\(\Lambda(m)\); implicaría \(D_B=0\) y, por tanto, RH.
+Consequently, it suffices to construct a sequence \(X_j\to\infty\) for
+which the right-hand side of (3) tends to zero. This is a direct,
+one-sided target, written only with the real zeta function and
+truncations of its weights \(\Lambda(m)\); it would imply \(D_B=0\) and,
+therefore, RH.
 
-La convergencia puntual, casi everywhere o en medida de los logaritmos no
-basta. Existe una familia explícita de funciones cero-libres, normalizadas,
-cuyas medias son cero y cuyos log-módulos convergen casi everywhere al
-módulo de una función con un cero interior. Toda la diferencia (2) escapa
-en un pozo de Poisson de medida decreciente y profundidad creciente en el
-punto de infinito de la recta crítica.
+Pointwise convergence, almost-everywhere convergence, or convergence in
+measure of the logarithms is not enough. There is an explicit family of
+zero-free, normalized functions whose means are zero and whose
+log-moduli converge almost everywhere to the modulus of a function with
+an interior zero. The whole difference (2) escapes into a Poisson well
+of decreasing measure and increasing depth at the point at infinity of
+the critical line.
 
-Además, polo, ecuación funcional y un canal Euler con soporte en las
-potencias de los primos ordinarios y pesos de Mangoldt estrictamente
-positivos tampoco fuerzan (3). La familia
+Moreover, a pole, a functional equation, and an Euler channel supported
+on ordinary prime powers with strictly positive Mangoldt weights also do
+not force (3). The family
 
 \[
  Z_a(s)=C_a{(s-1)^2-a^2\over s-1}\zeta(s-a)\zeta(s+a),
  \qquad0<a<{1\over2},                                   \tag{4}
 \]
 
-tiene esas propiedades, con pesos
+has these properties, with weights
 
 \[
  \Lambda(n)(n^a+n^{-a})>0,                              \tag{5}
 \]
 
-y posee ceros fuera de la línea. No conserva los pesos exactos
-\(\Lambda(n)\); por el teorema de unicidad de `104_88`, conservarlos
-literalmente fijaría la propia \(\zeta\).
+and has zeros off the line. It does not preserve the exact weights
+\(\Lambda(n)\); by the uniqueness theorem of `104_88`, preserving them
+literally would pin down \(\zeta\) itself.
 
-Este documento no prueba (3), Deep-\(\Lambda\) ni RH. Identifica la cota
-unilateral mínima para este ataque y demuestra por un falsificador exacto
-por qué no se sigue de Fatou, subarmonicidad, positividad Euler ni
-convergencia interior.
+This document does not prove (3), Deep-\(\Lambda\), or RH. It
+identifies the minimal one-sided bound for this attack and shows, by an
+exact falsifier, why it does not follow from Fatou's lemma,
+subharmonicity, Euler positivity, or interior convergence.
 
 ---
 
-## 1. Normalización global con media cero
+## 1. Global normalization with zero mean
 
-Sea \(F_X\) la función cero-libre de `104_85`. Al dividir por su valor en
-uno se obtiene
+Let \(F_X\) be the zero-free function of `104_85`. Dividing by its value
+at one gives
 
 \[
  \widehat F_X(s)={F_X(s)\over F_X(1)}=\exp L_X(s),       \tag{6}
@@ -82,24 +84,24 @@ uno se obtiene
  +\int_1^X{x^{-1}-x^{-s}\over\log x}\,dx.              \tag{7}
 \]
 
-La singularidad aparente del integrando en \(x=1\) es removible. Por ello
-\(L_X\) es entera, \(\widehat F_X\) es entera y cero-libre, y
+The apparent singularity of the integrand at \(x=1\) is removable.
+Hence \(L_X\) is entire, \(\widehat F_X\) is entire and zero-free, and
 \(\widehat F_X(1)=1\).
 
-Ponga
+Set
 
 \[
  d\nu(t)={dt\over2\pi(t^2+1/4)}.                        \tag{8}
 \]
 
-Es una probabilidad y su función característica es
+This is a probability measure and its characteristic function is
 
 \[
  \int_{\mathbb R}e^{ity}\,d\nu(t)=e^{-|y|/2}.          \tag{9}
 \]
 
-En la recta crítica, \(u_X(t)=\log|\widehat F_X(1/2+it)|\)
-vale
+On the critical line, \(u_X(t)=\log|\widehat F_X(1/2+it)|\)
+equals
 
 \[
 \begin{aligned}
@@ -111,8 +113,8 @@ vale
 \end{aligned}
 \]
 
-La ecuación (9) anula por separado la media de cada llave y de cada
-integrando:
+Equation (9) separately annihilates the mean of each bracket and each
+integrand:
 
 \[
  \int m^{-1/2}\cos(t\log m)d\nu(t)=m^{-1},
@@ -120,35 +122,33 @@ integrando:
  \int e^{y/2}\cos(ty)d\nu(t)=1.                        \tag{11}
 \]
 
-Las sumas e integrales son finitas, de modo que Fubini no presenta ningún
-problema. Así
+The sums and integrals are finite, so Fubini poses no issue. Thus
 
 \[
  \boxed{\int_{\mathbb R}u_X(t)d\nu(t)=0\quad(X<\infty).} \tag{12}
 \]
 
-Ésta es también la fórmula de Poisson para
-\(\log|\widehat F_X|\), vista desde \(s=1\), pero (10)--(11)
-comprueban directamente que no se omitió una masa en infinito en cada
-truncación.
+This is also the Poisson formula for \(\log|\widehat F_X|\), seen from
+\(s=1\), but (10)--(11) check directly that no mass was skipped at
+infinity in each truncation.
 
-## 2. El defecto exacto de la función límite
+## 2. The exact defect of the limit function
 
-Use el mapa del disco al semiplano
+Use the map from the disk to the half-plane
 
 \[
  s={1\over1-z}.                                         \tag{13}
 \]
 
-El centro \(z=0\) corresponde a \(s=1\), la circunferencia a
-\(s=1/2+it\), y la medida angular se transforma exactamente en (8).
-Los ceros de \(H\) con \(\Re\rho>1/2\) se transforman en
+The center \(z=0\) corresponds to \(s=1\), the circle to
+\(s=1/2+it\), and the angular measure transforms exactly into (8).
+The zeros of \(H\) with \(\Re\rho>1/2\) transform into
 
 \[
  w_\rho={\rho-1\over\rho},\qquad |w_\rho|<1.            \tag{14}
 \]
 
-Poisson--Jensen da
+Poisson--Jensen gives
 
 \[
  \boxed{
@@ -157,56 +157,56 @@ Poisson--Jensen da
  =D_B.}                                                  \tag{15}
 \]
 
-El factor \(s-1\) tiene media logarítmica cero, de manera que (15) es la
-forma normalizada del criterio Balazard--Saias--Yor. El crecimiento
-polinomial de la zeta elimina un factor singular adicional.
+The factor \(s-1\) has zero logarithmic mean, so (15) is the normalized
+form of the Balazard--Saias--Yor criterion. The polynomial growth of
+zeta removes an additional singular factor.
 
-Restando (12) de (15),
+Subtracting (12) from (15),
 
 \[
  \int(u-u_X)d\nu=D_B,
  \qquad u(t)=\log|H(1/2+it)|.                            \tag{16}
 \]
 
-Como \(f\le f_+\), (16) implica (3). También da
+Since \(f\le f_+\), (16) implies (3). It also gives
 
 \[
  \|u-u_X\|_{L^1(\nu)}\ge D_B.                           \tag{17}
 \]
 
-Hay una contabilidad aún más precisa. Si
+There is an even more precise bookkeeping. If
 
 \[
  I_X=\int (u-u_X)_+d\nu,
  \qquad J_X=\int (u_X-u)_+d\nu,                          \tag{17a}
 \]
 
-entonces (16) equivale exactamente a
+then (16) is exactly equivalent to
 
 \[
  \boxed{I_X=D_B+J_X.}                                    \tag{17b}
 \]
 
-En particular, el blanco \(I_{X_j}\to0\) exige simultáneamente
-\(D_B=0\) y \(J_{X_j}\to0\). Es una condición suficiente para RH, pero
-no se afirma aquí que RH por sí sola fuerce esa convergencia para esta
-familia concreta de truncaciones. Esa dirección también necesita una
-prueba de *tightness* de borde.
+In particular, the target \(I_{X_j}\to0\) simultaneously requires
+\(D_B=0\) and \(J_{X_j}\to0\). It is a sufficient condition for RH, but
+it is not claimed here that RH alone forces that convergence for this
+concrete family of truncations. That direction also needs a boundary
+tightness proof.
 
-Por ello cualquiera de las dos condiciones
+Hence either of the two conditions
 
 \[
  \|u-u_{X_j}\|_1\longrightarrow0,
- \qquad\hbox{o solamente}\qquad
+ \qquad\hbox{or only}\qquad
  \|(u-u_{X_j})_+\|_1\longrightarrow0                   \tag{18}
 \]
 
-implica RH. La segunda es estrictamente la obligación unilateral natural;
-controlar \((u_X-u)_+\) tiene la dirección equivocada.
+implies RH. The second is strictly the natural one-sided requirement;
+controlling \((u_X-u)_+\) goes in the wrong direction.
 
-### 2.1 El blanco no es más fuerte que RH si se permite una subsucesión
+### 2.1 The target is no stronger than RH if a subsequence is allowed
 
-Para cortes reales \(X\ge2\), defina
+For real cutoffs \(X\ge2\), define
 
 \[
  J(x)=\sum_{2\le m\le x}{\Lambda(m)\over\log m},
@@ -215,7 +215,7 @@ Para cortes reales \(X\ge2\), defina
  \qquad A(x)=J(x)-L_2(x).                               \tag{18a}
 \]
 
-Entonces
+Then
 
 \[
  \boxed{\mathrm{RH}\quad\Longleftrightarrow\quad
@@ -223,35 +223,34 @@ Entonces
  \|u-u_{X_j}\|_{L^1(\nu)}\to0.}                         \tag{18b}
 \]
 
-La implicación de derecha a izquierda ya es (17). Para la recíproca, bajo
-RH la cota cuadrática de Cramér da
+The right-to-left implication is already (17). For the converse, under
+RH the quadratic Cramér bound gives
 
 \[
  \int_2^\infty {A(x)^2\over x^2}\,dx<\infty.            \tag{18c}
 \]
 
-En efecto, la sumación parcial exacta
+Indeed, exact partial summation
 
 \[
  A(x)={\psi(x)-x\over\log x}
  +\int_2^x{\psi(t)-t\over t\log^2t}\,dt+{2\over\log2}   \tag{18d}
 \]
 
-y
-\(\int_Y^{2Y}|\psi(t)-t|^2dt\ll Y^2\) bajo RH hacen
-sumable el primer término por bloques diádicos; Cauchy--Schwarz da
+and \(\int_Y^{2Y}|\psi(t)-t|^2dt\ll Y^2\) under RH make the first term
+summable in dyadic blocks; Cauchy--Schwarz gives
 \[
  \int_2^x{\psi(t)-t\over t\log^2t}\,dt
  =O(\sqrt x/\log^2x),
 \]
-que trata el segundo.
+which handles the second.
 
-La energía finita (18c) permite elegir una sucesión no atómica con
+The finite energy (18c) allows choosing a non-atomic sequence with
 \[
  {A(X_j)^2\over X_j}\longrightarrow0.                  \tag{18e}
 \]
 
-Para \(s=1/2+it\), integración por partes en la cola da
+For \(s=1/2+it\), integration by parts in the tail gives
 
 \[
 \begin{aligned}
@@ -262,7 +261,7 @@ Para \(s=1/2+it\), integración por partes en la cola da
 \end{aligned}
 \]
 
-Mellin--Plancherel y la elección de \(\nu\) producen las identidades
+Mellin--Plancherel and the choice of \(\nu\) produce the identities
 
 \[
 \begin{aligned}
@@ -272,41 +271,42 @@ Mellin--Plancherel y la elección de \(\nu\) producen las identidades
 \end{aligned}
 \]
 
-El último término de (18f) tiende a cero por Cauchy--Schwarz. Las
-ecuaciones (18c), (18e) y (18g) dan convergencia en \(L^2(\nu)\), y por
-tanto en \(L^1(\nu)\), de las partes reales. Esto prueba (18b).
+The last term of (18f) tends to zero by Cauchy--Schwarz. Equations
+(18c), (18e), and (18g) give \(L^2(\nu)\) convergence, and hence
+\(L^1(\nu)\) convergence, of the real parts. This proves (18b).
 
-La equivalencia usa en la dirección RH \(\Rightarrow\) la estimación
-condicional de Cramér; no es un avance hacia una prueba incondicional.
-Su función aquí es demostrar que el gate unilateral con subsucesión tiene
-exactamente la fuerza correcta. Las fases 49 y 101 ya contienen criterios
-de energía de Cramér equivalentes; no se reclama aquí una nueva equivalencia,
-sino su traducción a las truncaciones duras concretas de (7).
+The equivalence uses, in the RH \(\Rightarrow\) direction, the
+conditional Cramér estimate; it is not progress toward an unconditional
+proof. Its role here is to show that the one-sided gate with a
+subsequence has exactly the right strength. Phases 49 and 101 already
+contain equivalent Cramér energy criteria; no new equivalence is
+claimed here, only its translation into the concrete hard truncations
+of (7).
 
-## 3. Escape de masa en el punto de infinito
+## 3. Mass escape at the point at infinity
 
-Sea \(b_a\) un factor de Blaschke elemental con \(0<|a|<1\), normalizado
-por \(b_a(0)=|a|\), y ponga
+Let \(b_a\) be an elementary Blaschke factor with \(0<|a|<1\),
+normalized by \(b_a(0)=|a|\), and set
 
 \[
  H_a(z)={b_a(z)\over|a|},
  \qquad D=-\log|a|>0.                                   \tag{19}
 \]
 
-Entonces \(H_a(0)=1\), tiene un cero interior y
+Then \(H_a(0)=1\), it has an interior zero, and
 
 \[
  \log|H_a(e^{i\theta})|=D                              \tag{20}
 \]
 
-casi everywhere. Para \(0<r<1\), defina
+almost everywhere. For \(0<r<1\), define
 
 \[
  F_r(z)=\exp\left\{
  D\left[1-{1+rz\over1-rz}\right]\right\}.             \tag{21}
 \]
 
-Cada \(F_r\) es cero-libre y \(F_r(0)=1\). En la frontera,
+Each \(F_r\) is zero-free and \(F_r(0)=1\). On the boundary,
 
 \[
  \log|F_r(e^{i\theta})|
@@ -315,52 +315,52 @@ Cada \(F_r\) es cero-libre y \(F_r(0)=1\). En la frontera,
  P_r(\theta)={1-r^2\over|1-re^{i\theta}|^2}.           \tag{22}
 \]
 
-Como \(\int P_r\,d\theta/(2\pi)=1\), cada media de (22) es cero.
-Pero \(P_r(\theta)\to0\) para todo \(\theta\ne0\), así que los
-log-módulos convergen casi everywhere y en medida a (20), cuya media es
-\(D\). Además,
+Since \(\int P_r\,d\theta/(2\pi)=1\), each mean in (22) is zero.
+But \(P_r(\theta)\to0\) for every \(\theta\ne0\), so the log-moduli
+converge almost everywhere and in measure to (20), whose mean is
+\(D\). Moreover,
 
 \[
  \int|D-\log|F_r||{d\theta\over2\pi}
  =D\int P_r{d\theta\over2\pi}=D.                       \tag{23}
 \]
 
-Toda la masa perdida vive en el pozo negativo \(-DP_r\), concentrado en
-\(z=1\), que mediante (13) es \(|t|=\infty\). Esto falsifica cualquier
-paso basado solo en convergencia casi everywhere, convergencia en medida,
-Fatou o subharmonicidad.
+All the lost mass lives in the negative well \(-DP_r\), concentrated at
+\(z=1\), which under (13) is \(|t|=\infty\). This falsifies any step
+based solely on almost-everywhere convergence, convergence in measure,
+Fatou's lemma, or subharmonicity.
 
-Visto desde el cociente \(Q_r=H_a/F_r\), se tiene exactamente
+Seen from the quotient \(Q_r=H_a/F_r\), one has exactly
 
 \[
  \log|Q_r(e^{i\theta})|=DP_r(\theta)\ge0,
  \qquad I_r=D,\quad J_r=0.                              \tag{23a}
 \]
 
-Así el falsificador satura (17b): el defecto interior completo reaparece
-en la parte positiva aunque el cociente tienda a uno casi everywhere.
+Thus the falsifier saturates (17b): the full interior defect
+reappears in the positive part even though the quotient tends to one
+almost everywhere.
 
-El falsificador puede hacerse localmente invisible dentro del disco:
+The falsifier can be made locally invisible inside the disk:
 
 \[
  S_{r,n}(z)=\exp\left\{
  D\left[1-{1+rz^n\over1-rz^n}\right]\right\}.          \tag{24}
 \]
 
-Si \(n\to\infty\), entonces \(S_{r,n}\to1\) uniformemente en todo
-compacto del disco. Eligiendo simultáneamente \(r=r_n\uparrow1\) con
-\(\sum_n\sqrt{1-r_n}<\infty\), Borel--Cantelli da
+If \(n\to\infty\), then \(S_{r,n}\to1\) uniformly on every compact
+subset of the disk. Choosing simultaneously \(r=r_n\uparrow1\) with
+\(\sum_n\sqrt{1-r_n}<\infty\), Borel--Cantelli gives
 
 \[
  \log|S_{r_n,n}(e^{i\theta})|\longrightarrow D          \tag{25}
 \]
 
-para casi todo \(\theta\), mientras cada media sigue siendo cero. Por
-tanto ni siquiera convergencia local interior más convergencia fronteriza
-casi everywhere proporciona la uniformidad integrable de (18).
+for almost every \(\theta\), while each mean remains zero. Therefore
+not even local interior convergence plus almost-everywhere boundary
+convergence provides the integrable uniformity of (18).
 
-El defecto puede sobrevivir incluso cuando el límite también es cero-libre.
-Ponga
+The defect can survive even when the limit is also zero-free. Set
 
 \[
  C_r(w)={1+rw\over1-rw},
@@ -368,43 +368,44 @@ Ponga
  G_{r,n}(z)=\exp\{D[C_r(z^n)-C_{-r}(z^n)]\}.             \tag{25a}
 \]
 
-Entonces \(G_{r,n}(0)=1\), no tiene ceros y su log-módulo de borde es
+Then \(G_{r,n}(0)=1\), it has no zeros, and its boundary log-modulus is
 
 \[
  \log|G_{r,n}(e^{i\theta})|
  =D\{P_r(n\theta)-P_{-r}(n\theta)\},                    \tag{25b}
 \]
 
-de media cero. Si \(n\to\infty\) y \(r=r_n\uparrow1\) con
-\(\sum_n\sqrt{1-r_n}<\infty\), entonces \(G_{r_n,n}\to1\)
-uniformemente en compactos y (25b) tiende a cero casi everywhere. Sin
-embargo, como el signo de \(P_r-P_{-r}\) es el de \(\cos\theta\),
+with zero mean. If \(n\to\infty\) and \(r=r_n\uparrow1\) with
+\(\sum_n\sqrt{1-r_n}<\infty\), then \(G_{r_n,n}\to1\)
+uniformly on compacts and (25b) tends to zero almost everywhere.
+However, since the sign of \(P_r-P_{-r}\) is the sign of
+\(\cos\theta\),
 
 \[
  \int(P_r-P_{-r})_+{d\theta\over2\pi}
  ={4\over\pi}\arctan{1+r\over1-r}-1\longrightarrow1.  \tag{25c}
 \]
 
-Por tanto
+Therefore
 
 \[
  \int\log^+|G_{r_n,n}|{d\theta\over2\pi}\longrightarrow D. \tag{25d}
 \]
 
-Este falsificador balanceado prueba que ni siquiera «defecto interior
-cero + límite cero-libre + convergencia local y fronteriza» fuerza por sí
-solo \(J_X\to0\) en (17b). Para las truncaciones Euler reales esa
-convergencia podría seguir siendo cierta, pero sería un teorema aritmético
-adicional y no un principio funcional general.
+This balanced falsifier proves that not even "zero interior defect +
+zero-free limit + local and boundary convergence" alone forces
+\(J_X\to0\) in (17b). For the real Euler truncations that convergence
+might still hold, but it would be an additional arithmetic theorem and
+not a general functional principle.
 
-## 4. Falsificador con soporte primo ordinario
+## 4. Falsifier with ordinary prime support
 
-Fije \(0<a<1/2\) y elija \(C_a\) para que (4) tenga residuo uno en
-\(s=1\). Los polos de \(\zeta(s-a)\) y \(\zeta(s+a)\), situados en
-\(1+a\) y \(1-a\), son cancelados por \((s-1)^2-a^2\). Queda solamente
-el polo explícito en \(s=1\).
+Fix \(0<a<1/2\) and choose \(C_a\) so that (4) has residue one at
+\(s=1\). The poles of \(\zeta(s-a)\) and \(\zeta(s+a)\), located at
+\(1+a\) and \(1-a\), are cancelled by \((s-1)^2-a^2\). Only the
+explicit pole at \(s=1\) remains.
 
-La función completada es
+The completed function is
 
 \[
  \Xi_a(s)={1\over4C_a}(s^2-a^2)(s-1)\pi^{-s}
@@ -413,32 +414,32 @@ La función completada es
  =\xi(s-a)\xi(s+a),                                    \tag{26}
 \]
 
-y satisface \(\Xi_a(s)=\Xi_a(1-s)\). En \(\Re s>1+a\), su canal Euler
-es
+and it satisfies \(\Xi_a(s)=\Xi_a(1-s)\). For \(\Re s>1+a\), its Euler
+channel is
 
 \[
  -{d\over ds}\log\{\zeta(s-a)\zeta(s+a)\}
  =\sum_{n\ge2}{\Lambda(n)(n^a+n^{-a})\over n^s}.       \tag{27}
 \]
 
-Los coeficientes del canal Euler son estrictamente positivos y viven en
-las potencias de los primos ordinarios; el factor racional de (4) forma
-parte del bloque de completamiento, no de ese canal. Como existen
-infinitos ceros
-\(\rho=1/2+i\gamma\) de \(\zeta\), (26) tiene ceros
+The coefficients of the Euler channel are strictly positive and live
+on ordinary prime powers; the rational factor of (4) belongs to the
+completion block, not to that channel. Since there are infinitely many
+zeros \(\rho=1/2+i\gamma\) of \(\zeta\), (26) has zeros
 
 \[
- \rho+a,qquad\rho-a,                                   \tag{28}
+ \rho+a,\qquad\rho-a,                                   \tag{28}
 \]
 
-fuera de la línea. Por tanto positividad, soporte, polo y ecuación funcional
-no controlan (3). El dato que (27) altera es exactamente la altura de cada
-salto: \(n^a+n^{-a}\) sustituye al peso unitario del canal zeta.
+off the line. Therefore positivity, support, pole, and functional
+equation do not control (3). What (27) alters is exactly the height of
+each jump: \(n^a+n^{-a}\) replaces the unit weight of the zeta
+channel.
 
-## 5. Las torres exactas tampoco tienen signo unilateral
+## 5. The exact towers also carry no one-sided sign
 
-La contribución completa de una torre prima ordinaria, antes de combinarla
-con las demás torres y con el comparador continuo, es
+The full contribution of an ordinary prime tower, before combining it
+with the other towers and with the continuous comparator, is
 
 \[
  \begin{aligned}
@@ -448,9 +449,9 @@ con las demás torres y con el comparador continuo, es
  \end{aligned}
 \]
 
-La imagen de \(t\log p\) módulo \(2\pi\) bajo \(\nu\) tiene densidad
-*wrapped-Cauchy* \(P_r(\theta)d\theta/(2\pi)\),
-\(r=p^{-1/2}\), porque sus momentos son \(r^{|k|}\). De aquí
+The image of \(t\log p\) modulo \(2\pi\) under \(\nu\) has
+wrapped-Cauchy density \(P_r(\theta)d\theta/(2\pi)\),
+\(r=p^{-1/2}\), because its moments are \(r^{|k|}\). From this,
 
 \[
  \int\tau_p\,d\nu=0,
@@ -460,8 +461,8 @@ La imagen de \(t\log p\) módulo \(2\pi\) bajo \(\nu\) tiene densidad
  \tau_p(\pi/\log p)=\log(1-p^{-1/2})<0.                \tag{30}
 \]
 
-Más cuantitativamente, para \(p\ge5\), sobre el tercio central del
-círculo se tiene \(P_r\ge1/3\) y \(-\tau_p\ge r/4\). Por la media cero,
+More quantitatively, for \(p\ge5\), on the central third of the circle
+one has \(P_r\ge1/3\) and \(-\tau_p\ge r/4\). By the zero mean,
 
 \[
  \boxed{
@@ -470,19 +471,19 @@ círculo se tiene \(P_r\ge1/3\) y \(-\tau_p\ge r/4\). Por la media cero,
  \ge {1\over36\sqrt p}.}                                \tag{31}
 \]
 
-En consecuencia, sumar los costos positivos torre por torre hasta \(P\)
-pierde al menos \(\gg\sqrt P/\log P\). La relación exacta
-\(\Lambda(p^k)=\log p\) no proporciona un signo local; cualquier prueba
-de (18) debe conservar la cancelación global entre torres y comparador.
+Consequently, summing the positive costs tower by tower up to \(P\)
+loses at least \(\gg\sqrt P/\log P\). The exact relation
+\(\Lambda(p^k)=\log p\) provides no local sign; any proof of (18) must
+preserve the global cancellation between towers and the comparator.
 
-La forma dual exhibe la misma obligación. Para \(f=u-u_X\),
+The dual form exhibits the same requirement. For \(f=u-u_X\),
 
 \[
  \int f_+d\nu
  =\sup_{0\le\varphi\le1}\int\varphi f\,d\nu.            \tag{32}
 \]
 
-Si
+If
 
 \[
  c_\varphi=\int\varphi d\nu,
@@ -490,7 +491,7 @@ Si
  K_\varphi(y)=\Re\int\varphi(t)e^{ity}d\nu(t),          \tag{33}
 \]
 
-entonces (10) da exactamente
+then (10) gives exactly
 
 \[
 \begin{aligned}
@@ -501,24 +502,23 @@ entonces (10) da exactamente
 \end{aligned}
 \]
 
-Para \(\varphi=1\), (9) hace cero cada llave: ésa es (12). Para el
-selector óptimo \(\varphi=\mathbf1_{\{u>u_X\}}\), tanto
-\(K_\varphi\) como \(e^{-|y|/2}-K_\varphi\) son definidas positivas, pero
-no tienen signo escalar. El hueco es, por tanto, una desigualdad uniforme
-sobre estas submedidas correlacionadas con la propia zeta, no otra identidad
-de media.
+For \(\varphi=1\), (9) makes each bracket zero: that is (12). For the
+optimal selector \(\varphi=\mathbf1_{\{u>u_X\}}\), both \(K_\varphi\)
+and \(e^{-|y|/2}-K_\varphi\) are positive definite, but have no scalar
+sign. The gap is, therefore, a uniform inequality over these
+submeasures correlated with zeta itself, not another mean identity.
 
-## 6. Energía de Cauchy y límite de las cotas PNT
+## 6. Cauchy energy and the limit of PNT bounds
 
-La medida (8) tiene el kernel exacto
+Measure (8) has the exact kernel
 
 \[
  \int u^{-1/2-it}v^{-1/2+it}d\nu(t)
  ={1\over\max(u,v)}.                                    \tag{35}
 \]
 
-Para una medida firmada truncada \(d\sigma\), con
-\(V(y)=\sigma([1,y])\), se sigue
+For a truncated signed measure \(d\sigma\), with
+\(V(y)=\sigma([1,y])\), it follows that
 
 \[
  \boxed{
@@ -526,44 +526,46 @@ Para una medida firmada truncada \(d\sigma\), con
  =\int_1^\infty{|V(y)|^2\over y^2}\,dy.}               \tag{36}
 \]
 
-Tomando \(d\sigma=\mathbf1_{[1,X]}(d\psi-dx)\), el miembro derecho es
+Taking \(d\sigma=\mathbf1_{[1,X]}(d\psi-dx)\), the right-hand side is
 
 \[
  \int_1^X{(\psi(y)-y+1)^2\over y^2}\,dy
  +{(\psi(X)-X+1)^2\over X}.                            \tag{37}
 \]
 
-La cota inferior incondicional de energía prima registrada en `103_71`
-implica que (31) crece al menos como \(c\log X\). En particular, esta
-familia de derivadas logarítmicas ni siquiera está acotada en
-\(L^2(\nu)\), incluso en el escenario RH. Pasar de ellas a los logaritmos
-suaviza una potencia de \(\log x\), pero Vinogradov--Korobov sigue sin dar
-la cota de borde (18). La desigualdad unilateral no se obtiene elevando la
-topología de convergencia interior de `104_85` a una cota cuadrática cruda.
+The unconditional lower bound on prime energy recorded in `103_71`
+implies that (31) grows at least like \(c\log X\). In particular, this
+family of logarithmic derivatives is not even bounded in \(L^2(\nu)\),
+even in the RH scenario. Passing from them to logarithms smooths out a
+power of \(\log x\), but Vinogradov--Korobov still does not give the
+boundary bound (18). The one-sided inequality is not obtained by
+lifting the interior convergence topology of `104_85` to a crude
+quadratic bound.
 
-## 7. Estado exacto
+## 7. Exact status
 
-Se ha probado:
+It has been proved that:
 
 \[
- \text{cota unilateral (18)}\Longrightarrow D_B=0
+ \text{one-sided bound (18)}\Longrightarrow D_B=0
  \Longleftrightarrow \mathrm{RH}.                       \tag{38}
 \]
 
-También se ha probado que ninguna de las siguientes propiedades implica
-(18): cero-libertad de cada aproximante, normalización en \(s=1\),
-convergencia interior, convergencia fronteriza casi everywhere o en medida,
-positividad del canal Euler, soporte de ese canal en potencias primas,
-polo único y ecuación funcional. El input aún no probado debe impedir específicamente
-el escape de masa negativa de (22) para las alturas exactas
-\(\Lambda(m)\).
+It has also been proved that none of the following properties imply
+(18): zero-freeness of each approximant, normalization at \(s=1\),
+interior convergence, almost-everywhere or in-measure boundary
+convergence, positivity of the Euler channel, support of that channel
+on prime powers, a single pole, and functional equation. The input
+still not proved must specifically prevent the negative mass escape of
+(22) for the exact heights \(\Lambda(m)\).
 
-## 8. Reproducción
+## 8. Reproduction
 
-Desde el directorio tools:
+From the tools directory:
 
     python3 bsy_one_sided_euler_boundary_check.py
 
-El checker confirma la masa positiva cerrada del spike balanceado y la
-media cero con costos de ambos signos de las torres primas. Son controles
-numéricos de identidades ya demostradas arriba, no certificados de (18).
+The checker confirms the closed positive mass of the balanced spike and
+the zero mean with costs of both signs from the prime towers. These
+are numerical checks of identities already proved above, not
+certificates of (18).

@@ -18,13 +18,13 @@ P\subseteq\{\hat f=\xi\hat g\}$ for a geometrically defined $\mathcal P$ is
 possible without smuggling in RH, or without smuggling in the definition
 itself.
 
-## 1. Standing facts taken as given (quoted from the prompt / cited without
+## 1. Standing facts taken as given (quoted from the phase statement / cited without
 re-derivation)
 
 * $I_\partial(D_f,D_g)=\hat f(0)\overline{\hat g(0)}+\hat f(1)\overline{\hat
   g(1)}-\sum_\rho \hat f(\rho)\overline{\hat g(\rho)}$, sum over zeros $\rho$
   of $\xi$ with multiplicity (Weil explicit formula, cited from the phase
-  prompt, not re-derived here).
+  statement, not re-derived here).
 * $\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$, entire, functional
   equation $\xi(s)=\xi(1-s)$, $\xi(0)=\xi(1)=\tfrac12$ (standard normalization;
   verified numerically below, not re-derived from first principles of
@@ -105,7 +105,7 @@ either
   the zeros are*, hence provably not equivalent to (a disguised form of) RH.
 
 **What would show H is specifically "RH in disguise"** (the outcome the
-prompt asks to watch for and, if found, to stop at): a demonstration that the
+phase statement asks to watch for and, if found, to stop at): a demonstration that the
 *only* way to secure $\mathcal P_0\subseteq\{\hat f=\xi\hat g\}$ — after
 excluding (N1) and (N2) — requires, at some step, information about *where*
 the zeros $\rho$ lie (e.g. that they lie on $\mathrm{Re}=1/2$), or a
@@ -133,7 +133,7 @@ pre-registration stands.
 ## 3. What follows
 
 * Task 1 (110\_01): compute whether the graded family's point-mass
-  witnesses are ξ-divisible. Expected outcome per the prompt: no; this
+  witnesses are ξ-divisible. Expected outcome per the phase statement: no; this
   section proves it and identifies the precise mechanism (two independent
   obstructions are found: a category mismatch — point masses are
   distributions, not entire functions, so "$\hat f=\xi\hat g$" is not even

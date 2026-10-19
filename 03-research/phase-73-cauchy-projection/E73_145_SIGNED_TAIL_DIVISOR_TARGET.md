@@ -1,6 +1,5 @@
 # E73.145 - Signed Tail Divisor Target
 
-Date: 2026-07-12.
 
 ## 1. What E73.143--144 changed
 

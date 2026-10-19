@@ -101,7 +101,7 @@ Gamma heat module.  Set
 Put
 
 \[
- c_X=2A_X+m_0,qquad
+ c_X=2A_X+m_0,\qquad
  A_X=\sum_{2\leq n\leq X}{\Lambda(n)\over\sqrt n},
  \qquad m_0=\log\pi-\psi(1/4).                         \tag{2.3}
 \]
@@ -208,7 +208,7 @@ Its squared boundary symbol is the Poisson kernel
 Consequently
 
 \[
- \|A_p\|=\sqrt{{1+\rho\over1-\rho}}>1,qquad
+ \|A_p\|=\sqrt{{1+\rho\over1-\rho}}>1,\qquad
  \|A_p^{-1}\|=\sqrt{{1+\rho\over1-\rho}}>1.          \tag{5.3}
 \]
 

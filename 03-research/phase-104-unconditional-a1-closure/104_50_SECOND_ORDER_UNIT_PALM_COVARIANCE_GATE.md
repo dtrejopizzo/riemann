@@ -1,35 +1,35 @@
-# 104_50 — Palm unitario de segundo orden y gate de orientación
+# 104_50 — Second-order unit Palm and orientation gate
 
-**Resultado.** El selector unitario de `104_49` admite una extensión
-cuadrática exacta. Si la ley zeta se sesga por \((\log N)^2\) y,
-condicionado a \(N\), se eligen dos marcas unitarias independientes, entonces
+**Result.** The unit selector of `104_49` admits an exact quadratic
+extension. If the zeta law is size-biased by \((\log N)^2\) and,
+conditioned on \(N\), two independent unit marks are chosen, then
 
 \[
  m_2(s)\,\mathbb E_s^{[2]}\{f(Z_1)g(Z_2)\}
  =\mathbb E_s\{J_f(N)J_g(N)\}.                              \tag{1}
 \]
 
-Aquí \(J_f\) conserva simultáneamente todos los primos y todas sus
-potencias. Al centrar (1), sin embargo, las torres de primos distintos se
-cancelan exactamente por independencia. Una forma de reintroducirlas sin
-abandonar esta construcción es formar el defecto selector--continuo
+Here \(J_f\) simultaneously preserves all primes and all their powers.
+Centering (1), however, makes the towers of distinct primes cancel exactly
+by independence. One way to reintroduce them without abandoning this
+construction is to form the selector--continuous defect
 
 \[
  D_f(N)=J_f(N)-\int_0^{\log N}f(x)\,dx.                    \tag{2}
 \]
 
-Este defecto sí contiene correlaciones entre torres distintas. El polo se
-puede reinsertar sin separar canales, pero entonces la identidad bilineal
-completa es
+This defect does contain correlations between distinct towers. The pole can
+be reinserted without separating channels, but then the complete bilinear
+identity is
 
 \[
  \boxed{\mathbb E_s[Z_fZ_g]
  =\mathrm{Cov}_s(D_f,D_g)+M_s(f)M_s(g),}              \tag{3}
 \]
 
-donde \(M_s(f)\) es exactamente el funcional prima--polo de `104_45`.
-Para el test Laguerre fijo, \(sM_s(f_{n,s})=\mathcal B_{n,s}\to B_n\).
-Por tanto el cuadrado completado alrededor del margen requerido vale
+where \(M_s(f)\) is exactly the prime--pole functional of `104_45`.
+For the fixed Laguerre test, \(sM_s(f_{n,s})=\mathcal B_{n,s}\to B_n\).
+Therefore the completed square around the required margin equals
 
 \[
  \boxed{
@@ -39,65 +39,65 @@ Por tanto el cuadrado completado alrededor del margen requerido vale
  \qquad \kappa={1501\over2002}.                             \tag{4}
 \]
 
-La energía de segundo orden pierde exactamente la orientación del margen:
-no distingue \(\mathcal B_{n,s}-\kappa A_n\) de su opuesto. Polarizar con
-dos tests diferentes tampoco ayuda automáticamente: solo reemplaza el
-cuadrado por el producto de sus dos medias, como muestra (3). Los candidatos
-Stein naturales, la derivada y la primitiva del Laguerre, producen productos
-con otros coeficientes \(\mathcal B_{k,s}\) desconocidos, no un ancla de signo
-conocido.
+The second-order energy exactly loses the orientation of the margin: it
+does not distinguish \(\mathcal B_{n,s}-\kappa A_n\) from its opposite.
+Polarizing with two different tests does not help automatically either: it
+only replaces the square by the product of its two means, as shown by (3).
+The natural Stein candidates, the derivative and the primitive of the
+Laguerre test, produce products with other unknown coefficients
+\(\mathcal B_{k,s}\), not a known sign anchor.
 
-El gate es adversarialmente correcto. Una construcción Palm de segundo
-orden análoga y toda conclusión basada solo en positividad de covarianza
-también valen para
+The gate is adversarially correct. An analogous second-order Palm
+construction and every conclusion based solely on positivity of the
+covariance also hold for
 
 \[
  Z_c(s)=\zeta(s+c)\zeta(s-c),                               \tag{5}
 \]
 
-que tiene coeficientes y pesos logarítmicos positivos, pero cuya completada
-posee ceros fuera de la línea de simetría. Un ejemplo local completamente
-exacto, \(p=5\), \(5^c=2\), exhibe ya el selector desplazado y su covarianza
-positiva con probabilidades racionales. Por ello queda descartado cerrar A1
-mediante **positividad/PSD de la covarianza Palm cuadrática**, incluso
-conservando el test real y el polo. No queda descartada una desigualdad
-firmada adicional que correlacione una covarianza condicional con una función
-del entero total; eso sería un input de orden superior, no una consecuencia
-de (1)--(4).
+which has positive coefficients and logarithmic weights, but whose
+completion has zeros off the line of symmetry. A fully exact local example,
+\(p=5\), \(5^c=2\), already exhibits the shifted selector and its positive
+covariance with rational probabilities. For this reason closing A1 via
+**positivity/PSD of the quadratic Palm covariance** is ruled out, even while
+keeping the real test and the pole. What is not ruled out is an additional
+signed inequality correlating a conditional covariance with a function of
+the total integer; that would be a higher-order input, not a consequence of
+(1)--(4).
 
-Este documento no prueba
+This document does not prove
 
 \[
  B_n\le {1501\over2002}A_n,\qquad n\ge150,                  \tag{6}
 \]
 
-ni A1 ni RH.
+nor A1 nor RH.
 
-## 0. Auditoría interna de no duplicación
+## 0. Internal non-duplication audit
 
-`E101_089` §12 ya demuestra que tensorizar dos renovaciones produce en la
-rebanada hermítica solamente \(|\zeta|^2\) y pierde el factor interior de
-Hardy. No se reclama de nuevo ese no-go ni novedad general para Palm,
-size-bias o covarianzas. `104_43`--`104_45` construyen la primera marca y el
-Stein cruzado; `104_49` refina la marca a la altura uniforme dentro de cada
-torre y prueba la cancelación lineal momento--cumulante.
+`E101_089` §12 already shows that tensoring two renewals produces, in the
+Hermitian slice, only \(|\zeta|^2\) and loses the interior Hardy factor.
+That no-go is not claimed again, nor is any general novelty for Palm,
+size-bias, or covariances. `104_43`--`104_45` build the first mark and the
+crossed Stein; `104_49` refines the mark to the uniform height within each
+tower and proves the linear moment--cumulant cancellation.
 
-Lo que se añade aquí es estrecho: la ley Palm cuadrática (9)--(10), la
-diagonalización exacta (15)--(16), la covarianza multi-torre explícita del
-defecto (23), el colapso bilineal con el presupuesto real (29), la auditoría
-derivada/primitiva (30)--(34) y el test racional del divisor desplazado
+What is added here is narrow: the quadratic Palm law (9)--(10), the exact
+diagonalization (15)--(16), the explicit multi-tower covariance of the
+defect (23), the bilinear collapse with the real budget (29), the
+derivative/primitive audit (30)--(34), and the shifted-divisor rational test
 (39)--(43).
 
-## 1. Segunda ley de Palm del selector unitario
+## 1. Second Palm law of the unit selector
 
-Fijemos \(s=1+\varepsilon>1\) y
+Fix \(s=1+\varepsilon>1\) and
 
 \[
  \mathbb P_s(N=n)={n^{-s}\over\zeta(s)},\qquad
  N=\prod_p p^{A_p},\qquad X=\log N.                        \tag{7}
 \]
 
-Para una función de crecimiento polinómico, póngase
+For a function of polynomial growth, set
 
 \[
  \boxed{
@@ -106,7 +106,7 @@ Para una función de crecimiento polinómico, póngase
        =\sum_{d\mid n}\Lambda(d)f(\log d).}                \tag{8}
 \]
 
-En particular, la renovación unitaria da \(J_1(n)=\log n=X\). Sean
+In particular, the unit renewal gives \(J_1(n)=\log n=X\). Let
 
 \[
  m_j(s)=\mathbb E_sX^j,\qquad
@@ -114,62 +114,62 @@ En particular, la renovación unitaria da \(J_1(n)=\log n=X\). Sean
  ={(\log n)^2n^{-s}\over\zeta(s)m_2(s)}.                  \tag{9}
 \]
 
-Condicionado a \(N^{[2]}=n\), elija independientemente \(Z_1,Z_2\) en el
-multiconjunto
+Conditioned on \(N^{[2]}=n\), independently choose \(Z_1,Z_2\) in the
+multiset
 
 \[
  \mathcal M(n)=\{(p,k):p^{a_p}\parallel n,\ 1\le k\le a_p\}
 \]
 
-mediante
+via
 
 \[
  \boxed{
  \mathbb P(Z_i=k\log p\mid n)={\log p\over\log n}.}       \tag{10}
 \]
 
-La suma de (10) es uno por \(\sum_pa_p\log p=\log n\). Además,
+The sum in (10) is one since \(\sum_pa_p\log p=\log n\). Moreover,
 
 \[
  (\log n)^2\mathbb E\{f(Z_1)g(Z_2)\mid n\}=J_f(n)J_g(n).
 \]
 
-Promediar con (9) prueba (1). No se ha reemplazado una torre por su primer
-nivel ni se han separado los otros primos.
+Averaging with (9) proves (1). No tower has been replaced by its first
+level, nor have the other primes been separated out.
 
-El comparador polar es igualmente exacto. Si \(Y\sim\mathrm{Exp}
-(\varepsilon)\) y
+The polar comparator is equally exact. If \(Y\sim\mathrm{Exp}
+(\varepsilon)\) and
 
 \[
  C_f(Y)=\int_0^Y f(x)\,dx,                                  \tag{11}
 \]
 
-entonces \(\mathbb EY^2=2/\varepsilon^2\). Sesgar por \(Y^2\) da
-\(Y^{[2]}\sim\Gamma(3,\varepsilon)\); condicionado a \(Y^{[2]}=y\),
-elija \(U_1,U_2\) independientemente y uniformes en \([0,y]\). Se obtiene
+then \(\mathbb EY^2=2/\varepsilon^2\). Size-biasing by \(Y^2\) gives
+\(Y^{[2]}\sim\Gamma(3,\varepsilon)\); conditioned on \(Y^{[2]}=y\),
+independently choose \(U_1,U_2\) uniform on \([0,y]\). One obtains
 
 \[
  {2\over\varepsilon^2}\mathbb E\{f(U_1)g(U_2)\}
  =\mathbb E\{C_f(Y)C_g(Y)\}.                               \tag{12}
 \]
 
-## 2. Qué ocurre al centrar: diagonalización por torre
+## 2. What happens when centering: diagonalization by tower
 
-De \(\mathbb P_s(A_p\ge k)=p^{-ks}\),
+From \(\mathbb P_s(A_p\ge k)=p^{-ks}\),
 
 \[
  \mu_s^\Lambda(f):=\mathbb E_sJ_f
  =\sum_{d\ge2}{\Lambda(d)\over d^s}f(\log d).              \tag{13}
 \]
 
-La probabilidad de que dos potencias primas dividan simultáneamente a
-\(N\) es
+The probability that two prime powers simultaneously divide
+\(N\) is
 
 \[
  \mathbb P_s(d\mid N,\ e\mid N)=\mathrm{lcm}(d,e)^{-s}.
 \]
 
-Por tanto (1) posee la forma cerrada
+Hence (1) has the closed form
 
 \[
  \mathbb E_s[J_fJ_g]
@@ -177,7 +177,7 @@ Por tanto (1) posee la forma cerrada
              \mathrm{lcm}(d,e)^s}f(\log d)g(\log e). \tag{14}
 \]
 
-Al sustraer el producto de medias,
+Subtracting the product of means,
 
 \[
 \begin{aligned}
@@ -188,8 +188,8 @@ Al sustraer el producto de medias,
 \end{aligned}
 \]
 
-Como \(\Lambda\) está soportada en potencias primas, el corchete de (15)
-es cero si \(d\) y \(e\) pertenecen a torres distintas. Así
+Since \(\Lambda\) is supported on prime powers, the bracket in (15)
+is zero if \(d\) and \(e\) belong to distinct towers. Thus
 
 \[
  \boxed{
@@ -198,14 +198,14 @@ es cero si \(d\) y \(e\) pertenecen a torres distintas. Así
  \{p^{-s\max(k,l)}-p^{-s(k+l)}\},}                         \tag{16}
 \]
 
-donde \(\ell_p=\log p\). La forma es PSD, pues es la covarianza de los
-observables aditivos \(J_f,J_g\) bajo la ley base, pero es una suma directa
-de formas de una sola torre. No se afirma aquí que (15) sea la covarianza
-de \(Z_1,Z_2\) bajo la ley sesgada: sus marginales sesgadas son distintas.
-En particular, la forma centrada canónica inducida por (1) **no** puede ser
-el mecanismo global multi-torre buscado.
+where \(\ell_p=\log p\). The form is PSD, since it is the covariance of
+the additive observables \(J_f,J_g\) under the base law, but it is a direct
+sum of single-tower forms. It is not claimed here that (15) is the
+covariance of \(Z_1,Z_2\) under the biased law: their biased marginals are
+different. In particular, the canonical centered form induced by (1)
+**cannot** be the global multi-tower mechanism being sought.
 
-El lado continuo tiene exactamente la misma estructura de cola:
+The continuous side has exactly the same tail structure:
 
 \[
  \boxed{
@@ -215,29 +215,29 @@ El lado continuo tiene exactamente la misma estructura de cola:
  \,dx\,dy.}                                                \tag{17}
 \]
 
-Tanto (16) como (17) son PSD por separado. Su diferencia no posee signo.
-Por ejemplo, un test no nulo soportado dentro de
-\((0,\log2)\) anula (16) y hace (17) estrictamente positiva; un test
-concentrado en torno a un único nivel primo hace aparecer el signo opuesto
-en la diferencia. Esta observación solo descarta un orden operatorial; el
-test de A1 se trata sin localización en la sección siguiente.
+Both (16) and (17) are PSD separately. Their difference has no fixed sign.
+For example, a nonzero test supported inside
+\((0,\log2)\) annihilates (16) and makes (17) strictly positive; a test
+concentrated around a single prime level makes the opposite sign appear
+in the difference. This observation only rules out an operator ordering;
+the A1 test is treated without localization in the next section.
 
-## 3. Covarianza que sí conserva torres distintas y polo
+## 3. A covariance that does preserve distinct towers and the pole
 
-Defina
+Define
 
 \[
  U_f(x)=\int_0^x f(t)\,dt,\qquad
  D_f(N)=J_f(N)-U_f(X),                                     \tag{18}
 \]
 
-y el transporte determinista entre la ley total zeta y el polo
+and the deterministic transport between the total zeta law and the pole
 
 \[
  T_s(f)=\mathbb E_sU_f(X)-\mathbb E U_f(Y).                 \tag{19}
 \]
 
-Finalmente póngase
+Finally set
 
 \[
  Z_f=D_f+T_s(f),\qquad
@@ -245,16 +245,15 @@ Finalmente póngase
                                                                     \tag{20}
 \]
 
-Entonces
+Then
 
 \[
  \mathbb E_sZ_f=M_s(f).                                    \tag{21}
 \]
 
-La variable \(D_f\) es precisamente el defecto unitario condicionado de
-`104_49`; a diferencia de (16), su covarianza contiene el entero producto
-completo. En efecto, para cualquier \(h\), la identidad de Mecke divisora
-es
+The variable \(D_f\) is precisely the conditioned unit defect of
+`104_49`; unlike (16), its covariance contains the whole product integer.
+Indeed, for any \(h\), the divisor Mecke identity is
 
 \[
  \boxed{
@@ -263,7 +262,7 @@ es
        \mathbb E_s h(X+\log d).}                            \tag{22}
 \]
 
-Usando (14) y (22),
+Using (14) and (22),
 
 \[
 \begin{aligned}
@@ -278,11 +277,11 @@ Usando (14) y (22),
 \end{aligned}
 \]
 
-Los tres últimos términos de (23) retienen las interacciones entre todas
-las torres a través de la ley de \(X\). Esta es la identidad de segundo
-orden que no estaba en `104_49`.
+The last three terms of (23) retain the interactions between all towers
+through the law of \(X\). This is the second-order identity that was not
+present in `104_49`.
 
-Ahora centre (21). Para **todo par** de tests admisibles,
+Now center (21). For **every pair** of admissible tests,
 
 \[
 \begin{aligned}
@@ -292,25 +291,25 @@ Ahora centre (21). Para **todo par** de tests admisibles,
 \end{aligned}
 \]
 
-La segunda igualdad usa que \(T_s(f),T_s(g)\) son deterministas. Esta es
-la identidad bilineal general: ninguna elección de polarización evita el
-producto de las dos medias.
+The second equality uses that \(T_s(f),T_s(g)\) are deterministic. This is
+the general bilinear identity: no choice of polarization avoids the
+product of the two means.
 
-## 4. Test Laguerre fijo y auditoría de derivada/primitiva
+## 4. Fixed Laguerre test and derivative/primitive audit
 
-Sea
+Let
 
 \[
  P_n(x)=L_{n-1}^{(1)}(x),\qquad f_{n,s}(x)=P_n(sx).          \tag{25}
 \]
 
-Entonces
+Then
 
 \[
  U_{f_{n,s}}(X)={1-L_n(sX)\over s}                         \tag{26}
 \]
 
-y
+and
 
 \[
  \boxed{
@@ -320,17 +319,16 @@ y
  -{1-L_n(s\log N)\over s}.}                               \tag{27}
 \]
 
-Este es exactamente el defecto \(\Delta_{n,s}\) de `104_49`, sin tomar
-signos término a término. Además,
+This is exactly the defect \(\Delta_{n,s}\) of `104_49`, without taking
+signs term by term. Moreover,
 
 \[
  \boxed{sM_s(f_{n,s})=\mathcal B_{n,s},\qquad
         \mathcal B_{n,s}\longrightarrow B_n.}             \tag{28}
 \]
 
-Sustituir (28) en (24), primero con \(f=g=f_{n,s}\) y luego desplazando
-por el presupuesto determinista \(\kappa A_n/s\), prueba (4). Más
-generalmente,
+Substituting (28) into (24), first with \(f=g=f_{n,s}\) and then shifting
+by the deterministic budget \(\kappa A_n/s\), proves (4). More generally,
 
 \[
 \begin{aligned}
@@ -343,8 +341,8 @@ generalmente,
 \end{aligned}
 \]
 
-Por tanto la polarización solo produce productos de márgenes. Para
-descartar los dos anclajes Stein más naturales, usamos las identidades
+Hence polarization only produces products of margins. To rule out the two
+most natural Stein anchors, we use the identities
 
 \[
  f'_{n,s}(x)=-s\sum_{k=1}^{n-1}f_{k,s}(x),                  \tag{30}
@@ -355,7 +353,7 @@ descartar los dos anclajes Stein más naturales, usamos las identidades
                                                                     \tag{31}
 \]
 
-Por linealidad de \(M_s\),
+By linearity of \(M_s\),
 
 \[
  \boxed{
@@ -365,32 +363,32 @@ Por linealidad de \(M_s\),
                                                                     \tag{32}
 \]
 
-Así, polarizar con la derivada introduce el producto de
-\(\mathcal B_{n,s}\) con una suma de coeficientes anteriores; polarizar
-con la primitiva introduce el producto con una diferencia adyacente.
-Ninguno es un término lineal de signo conocido.
+Thus, polarizing with the derivative introduces the product of
+\(\mathcal B_{n,s}\) with a sum of earlier coefficients; polarizing
+with the primitive introduces the product with an adjacent difference.
+Neither is a linear term of known sign.
 
-La única ancla elemental con media conocida es \(f\equiv1\). En ese caso
+The only elementary anchor with known mean is \(f\equiv1\). In that case
 
 \[
  D_1=J_1-X=0,\qquad Z_1=M_s(1)=R(\varepsilon)<0,            \tag{33}
 \]
 
-y (24) se reduce a
+and (24) reduces to
 
 \[
  \mathbb E_s[Z_fZ_1]=R(\varepsilon)M_s(f).                 \tag{34}
 \]
 
-La ecuación (34) recupera orientación solo porque su lado izquierdo ya
-es el funcional buscado multiplicado por el escalar conocido
-\(R(\varepsilon)\): probarle el signo requerido es exactamente probar el
-signo de \(M_s(f)\). No aparece una desigualdad de covarianza, pues
-\(Z_1\) es constante. Esto cierra la auditoría derivada/primitiva/ancla.
+Equation (34) recovers orientation only because its left side is already
+the sought functional multiplied by the known scalar
+\(R(\varepsilon)\): proving the required sign for it is exactly proving the
+sign of \(M_s(f)\). No covariance inequality appears, since
+\(Z_1\) is constant. This closes the derivative/primitive/anchor audit.
 
-Hay otra polarización orientada natural: usar como segundo test el score
-total \(X=\log N\). Para un test \(f\) independiente de \(s\), derivar la
-familia exponencial y usar el comparador continuo da
+There is another natural oriented polarization: use as the second test the
+total score \(X=\log N\). For a test \(f\) independent of \(s\), differentiating
+the exponential family and using the continuous comparator gives
 
 \[
  \boxed{
@@ -399,58 +397,59 @@ familia exponencial y usar el comparador continuo da
  =-\partial_sM_s(f).}                                      \tag{34a}
 \]
 
-En efecto, \(\partial_s\mathbb E_sJ_f=-\mathrm{Cov}_s(J_f,X)\),
-mientras
+Indeed, \(\partial_s\mathbb E_sJ_f=-\mathrm{Cov}_s(J_f,X)\),
+while
 
 \[
  \mathrm{Cov}_\varepsilon(C_f(Y),Y)
  =\int_0^\infty xe^{-\varepsilon x}f(x)\,dx.
 \]
 
-Si el test depende de \(s\), el miembro derecho de (34a) se reemplaza por
+If the test depends on \(s\), the right side of (34a) is replaced by
 
 \[
  M_s(\partial_sf_s)-\partial_sM_s(f_s).                    \tag{34b}
 \]
 
-Para \(f_{n,s}=P_n(s\,\cdot)\), (34b) es exactamente otra escritura de
-la ley de flujo ya probada en `104_47`,
+For \(f_{n,s}=P_n(s\,\cdot)\), (34b) is exactly another way of writing
+the flow law already proved in `104_47`,
 
 \[
  s\,\partial_s\mathcal B_{n,s}
  =n(\mathcal B_{n+1,s}-\mathcal B_{n,s}).                  \tag{34c}
 \]
 
-Por tanto el score sí conserva una cantidad lineal orientada, pero es la
-derivada exacta del funcional de primer orden. Integrarla recompone
-\(\mathcal B_{n,s}\) y sus residuos; no aporta una desigualdad adicional.
+Therefore the score does preserve an oriented linear quantity, but it is
+the exact derivative of the first-order functional. Integrating it
+recomposes \(\mathcal B_{n,s}\) and its residues; it does not supply an
+additional inequality.
 
-## 5. Falsificador desplazado que pasa el gate PSD cuadrático
+## 5. Shifted falsifier that passes the quadratic PSD gate
 
-La identidad (24) es todavía más general. Sea
+Identity (24) is even more general. Let
 
 \[
  Z(s)=\sum_{n\ge1}{a(n)\over n^s},\qquad a(n)>0,
 \]
 
-y suponga la renovación positiva
+and suppose the positive renewal
 
 \[
  (\log n)a(n)=\sum_{d\mid n}\omega(d)a(n/d).               \tag{35}
 \]
 
-Defina
+Define
 
 \[
  J_f^Z(n)={1\over a(n)}\sum_{d\mid n}
        \omega(d)a(n/d)f(\log d).                            \tag{36}
 \]
 
-Entonces \(J_1^Z(n)=\log n\), y el Palm aritmético (9)--(10) y el
-álgebra bilineal (18)--(24) se repiten con la ley
-\(a(n)n^{-s}/Z(s)\). El comparador continuo se sustituye por los polos
-reales del sistema. Para (37), si
-\(\varepsilon_\pm=s-1\mp c\), se toma exactamente
+Then \(J_1^Z(n)=\log n\), and the arithmetic Palm (9)--(10) and the
+bilinear algebra (18)--(24) repeat with the law
+\(a(n)n^{-s}/Z(s)\). The continuous comparator is replaced by the real
+poles of the system. For (37), if
+\(\varepsilon_\pm=s-1\mp c\), one takes exactly
 
 \[
  T_{s,c}(f)=\mathbb E_{s,c}U_f(X)
@@ -458,140 +457,142 @@ reales del sistema. Para (37), si
                  +e^{-\varepsilon_+x}\}f(x)\,dx.           \tag{36a}
 \]
 
-Cada uno de los dos sumandos polares posee por separado la construcción
-Gamma de (11)--(12), y la identidad (24) sigue siendo puramente algebraica.
-En particular, toda positividad de covarianza Palm es una consecuencia
-genérica de (35), no de la ubicación de los ceros.
+Each of the two polar summands separately has the Gamma construction of
+(11)--(12), and identity (24) remains purely algebraic. In particular,
+every Palm covariance positivity is a generic consequence of (35), not of
+the location of the zeros.
 
-Tome ahora
+Now take
 
 \[
  Z_c(s)=\zeta(s+c)\zeta(s-c),\qquad 0<c<{1\over2}.          \tag{37}
 \]
 
-Sus coeficientes son positivos y
+Its coefficients are positive and
 
 \[
  \omega_c(d)=2\Lambda(d)\cosh(c\log d)>0                  \tag{38}
 \]
 
-satisface (35). Por tanto su segundo Palm, su matriz de covarianza y la
-identidad bilineal (24) son todos válidos en \(s>1+c\).
+satisfies (35). Hence its second Palm, its covariance matrix, and the
+bilinear identity (24) are all valid for \(s>1+c\).
 
-La diferencia con el selector unitario puede verse con racionales. Elija
+The difference with the unit selector can be seen with rationals. Choose
 
 \[
  p=5,\qquad 5^c=2,\qquad s=2.                             \tag{39}
 \]
 
-Como \(2<\sqrt5\), se tiene \(0<c<1/2\). Para el factor local desplazado,
-con \(r=5^c=2\),
+Since \(2<\sqrt5\), we have \(0<c<1/2\). For the shifted local factor,
+with \(r=5^c=2\),
 
 \[
  b_1=r+r^{-1}={5\over2},\qquad
  b_2=r^2+1+r^{-2}={21\over4}.                              \tag{40}
 \]
 
-Condicionado al exponente total dos, (35) da
+Conditioned on the total exponent being two, (35) gives
 
 \[
  \boxed{\pi(1)={25\over42},\qquad \pi(2)={17\over42}.}     \tag{41}
 \]
 
-En particular,
+In particular,
 
 \[
  \mathrm{Var}(K\mid A=2)
  ={25\cdot17\over42^2}={425\over1764}>0,                  \tag{42}
 \]
 
-mientras el selector unitario da \(1/4=441/1764\). El segundo orden
-detecta cuantitativamente que la marca desplazada no es uniforme, pero su
-conclusión automática sigue siendo solo PSD, y (42) la satisface. En la
-representación latente de dos colores, los parámetros geométricos locales
-son
+while the unit selector gives \(1/4=441/1764\). The second order
+quantitatively detects that the shifted mark is not uniform, but its
+automatic conclusion is still only PSD, and (42) satisfies it. In the
+two-color latent representation, the local geometric parameters
+are
 
 \[
  q_-={2\over25},\qquad q_+={1\over50},                     \tag{43}
 \]
 
-y la covarianza del **score coloreado antes de condicionar por el exponente
-total** es la suma de dos kernels PSD de la forma (16). Para un test general,
-la covarianza del selector condicionado \(J_f^Z\) no es igual a esa suma:
-por varianza total es menor o igual en la diagonal, y la diferencia es la
-varianza condicional perdida. La desigualdad puede ser estricta: para
-\(f(k\log p)=k\), condicionado a exponente total dos, el score latente toma
-los valores \(3,2,3\) en las particiones \((0,2),(1,1),(2,0)\), todas de
-probabilidad positiva. La conclusión necesaria aquí es solo que ambas
-covarianzas son PSD; no se usa una igualdad entre ellas.
+and the covariance of the **colored score before conditioning on the total
+exponent** is the sum of two PSD kernels of the form (16). For a general
+test, the covariance of the conditioned selector \(J_f^Z\) is not equal to
+that sum: by total variance it is less than or equal to it on the
+diagonal, and the difference is the lost conditional variance. The
+inequality can be strict: for
+\(f(k\log p)=k\), conditioned on total exponent two, the latent score takes
+the values \(3,2,3\) on the partitions \((0,2),(1,1),(2,0)\), all of
+positive probability. The only necessary conclusion here is that both
+covariances are PSD; no equality between them is used.
 
-Finalmente, la completada
+Finally, the completion
 
 \[
  \Xi_c(s)=\xi(s+c)\xi(s-c)                                 \tag{44}
 \]
 
-es simétrica respecto de \(1/2\) y posee ceros
-\(1/2\pm c+i\gamma\) fuera de esa línea. Para un cuarteto exterior,
-si \(1-1/\rho=e^{\alpha+i\theta}\), su respuesta de Li es
+is symmetric about \(1/2\) and has zeros
+\(1/2\pm c+i\gamma\) off that line. For an outer quartet,
+if \(1-1/\rho=e^{\alpha+i\theta}\), its Li response is
 
 \[
  4-4\cosh(n\alpha)\cos(n\theta).                           \tag{45}
 \]
 
-Si \(R>1\) es el módulo exterior máximo y su multiconjunto dominante tiene
-cardinal \(M\), la aproximación simultánea de Dirichlet da infinitos grados
-con
+If \(R>1\) is the maximal outer modulus and its dominant multiset has
+cardinality \(M\), simultaneous Dirichlet approximation gives infinitely
+many degrees with
 
 \[
  \lambda_n[\Xi_c]\le-{M\over2}R^n.                         \tag{46}
 \]
 
-Así, una inferencia que use solo (35), Palm de segundo orden y PSD
-probaría también una conclusión cuantitativamente falsa para (44). La
-igualdad especial de uniformidad puede excluir (41), pero una vez convertida
-solamente en covarianza positiva pierde esa distinción de signo.
+Thus an inference using only (35), second-order Palm, and PSD would also
+prove a quantitatively false conclusion for (44). The special uniformity
+equality can exclude (41), but once converted into mere positive
+covariance it loses that sign distinction.
 
-## 6. Veredicto
+## 6. Verdict
 
-Queda probado incondicionalmente:
+The following is proved unconditionally:
 
-1. el Palm unitario de segundo orden (1), (9)--(10);
-2. la forma cerrada de covarianza (14)--(17);
-3. la cancelación exacta entre torres distintas al centrar \(J_f\);
-4. la identidad multi-torre del defecto (22)--(23);
-5. la identidad bilineal completada (24) y su especialización al margen
-   Laguerre (4), (29);
-6. el colapso explícito de las polarizaciones derivada y primitiva (32);
-7. el colapso de la polarización con el score al flujo conocido
+1. the second-order unit Palm law (1), (9)--(10);
+2. the closed-form covariance (14)--(17);
+3. the exact cancellation between distinct towers when centering \(J_f\);
+4. the multi-tower identity of the defect (22)--(23);
+5. the completed bilinear identity (24) and its specialization to the
+   Laguerre margin (4), (29);
+6. the explicit collapse of the derivative and primitive polarizations (32);
+7. the collapse of the polarization with the score to the known flow
    (34a)--(34c);
-8. el gate desplazado racional (39)--(43).
+8. the rational shifted gate (39)--(43).
 
-Queda descartado:
+The following is ruled out:
 
 ```text
-segunda ley de Palm
-+ PSD/covarianza del selector unitario
-+ cuadrado o polarización del defecto completado
-    => cota unilateral B_n <= (1501/2002) A_n.
+second Palm law
++ PSD/covariance of the unit selector
++ square or polarization of the completed defect
+    => one-sided bound B_n <= (1501/2002) A_n.
 ```
 
-El sucesor que no queda refutado debe conservar la **orientación** antes
-de centrar: por ejemplo, una correlación firmada entre la varianza
-condicional de la marca uniforme y una función no constante del entero
-total. Debe usar la igualdad exacta de uniformidad, no solo su consecuencia
-PSD, y fallar para (41). Tal correlación es de orden superior al mecanismo
-auditado aquí.
+A successor that is not ruled out must preserve **orientation** before
+centering: for instance, a signed correlation between the conditional
+variance of the uniform mark and a nonconstant function of the total
+integer. It must use the exact uniformity equality, not merely its PSD
+consequence, and fail for (41). Such a correlation is of higher order than
+the mechanism audited here.
 
-## 7. Reproducción
+## 7. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 second_order_unit_palm_covariance_check.py
 ```
 
-El checker usa solo enteros, `Fraction` y polinomios racionales. Verifica
-la identidad Palm condicionada, la cancelación entre torres distintas en
-(15), las identidades Laguerre (26), (30)--(31), la descomposición
-bilineal (24), el selector desplazado (40)--(42) y la positividad exacta
-de los kernels locales racionales (43). No evalúa zeta, A1 ni RH.
+The checker uses only integers, `Fraction`, and rational polynomials. It
+verifies the conditioned Palm identity, the cancellation between distinct
+towers in (15), the Laguerre identities (26), (30)--(31), the bilinear
+decomposition (24), the shifted selector (40)--(42), and the exact
+positivity of the local rational kernels (43). It does not evaluate zeta,
+A1, or RH.

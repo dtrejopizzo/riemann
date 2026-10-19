@@ -1,6 +1,6 @@
 # E77.7h - Ritz bracket and bracketed low-mode BTG
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

@@ -1,6 +1,5 @@
 # E73.191 - Endpoint rank-one source
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

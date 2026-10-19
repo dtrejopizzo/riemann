@@ -1,10 +1,10 @@
 # R155_031 — Corpus synthesis: the funnel of 155 phases and a ranked path to row D
 
-Author: synthesis lead. Date: 2026-09-22. Status: **synthesis and plan. No new theorem, no label change,
+Status: **synthesis and plan. No new theorem, no label change,
 no sign for ζ beyond `T ≤ log 2`.** Every statement below is either cited to a file of record or marked
 `DIAGNOSTIC` / `HEURISTIC` / `PROPOSED`.
 
-Copy of record: `05-meta-and-planning/ABCD-CLOSURE-PLAN/PATH-TO-D-2026-09-22.md`.
+Copy of record: `05-meta-and-planning/ABCD-CLOSURE-PLAN/PATH-TO-D.md`.
 
 ---
 
@@ -16,21 +16,21 @@ Weil's 1948 method for curves over finite fields has four rows. The programme bu
 `Spec Z` (Paper 42 = Arc C, phases 107–119; rebuilt on the true carrier in phases 129–132).
 
 * **Row A — the correspondence algebra.** `04-papers/43-row-a-torsion-theory/main.md` (phase 130).
-  A determinant Banach algebra `𝓐_tr` with a canonical trace on the idele class group, `𝓝 = 0`,
-  rulings existing in the completion and splitting canonically, a Mittag-Leffler symbol with a
-  universal Tate residue, and Mertens giving the global hyperbolic ruling pairing.
-  Label: **`WEIL-STRENGTH-COMPLETE` on the declared carrier** (record `R130.005`; `A.8` amended,
-  owner-accepted phase 133).
+ A determinant Banach algebra `𝓐_tr` with a canonical trace on the idele class group, `𝓝 = 0`,
+ rulings existing in the completion and splitting canonically, a Mittag-Leffler symbol with a
+ universal Tate residue, and Mertens giving the global hyperbolic ruling pairing.
+ Label: **`WEIL-STRENGTH-COMPLETE` on the declared carrier** (record `R130.005`; `A.8` amended,
+ accepted phase 133).
 * **Row B — the Frobenius family.** `04-papers/44-row-b-arithmetic-family/main.md` (phase 131).
-  `Frob_n` as Haar measures of fixed-point strata, an inverse semigroup graded by prime sets, an
-  integral shadow `Sh_Z`, two Gram forms — the Weil kernel *is* the Gram form of `Frob ⋆ Δ^rad` —
-  and `vol(Z_p^×) = log p` forced by the universal Tate residue.
-  Label: **`WEIL-STRENGTH-COMPLETE` on the declared carrier** (`R131.019`). No sign, no zeros.
+ `Frob_n` as Haar measures of fixed-point strata, an inverse semigroup graded by prime sets, an
+ integral shadow `Sh_Z`, two Gram forms — the Weil kernel *is* the Gram form of `Frob ⋆ Δ^rad` —
+ and `vol(Z_p^×) = log p` forced by the universal Tate residue.
+ Label: **`WEIL-STRENGTH-COMPLETE` on the declared carrier** (`R131.019`). No sign, no zeros.
 * **Row C — the explicit formula.** `04-papers/45-row-c-explicit-formula/main.md` (phase 132).
-  The Weil explicit formula **proved inside the repository** (Thm 9.4), the comparison theorem
-  `T_∞(Γ_{F⋆F†}) = 2Φ_F(0)Φ_F(1) − Σ_ρ Φ_F(ρ)Φ_F(1−ρ)`, `c = 0` derived, Tate poles by residues of
-  the continued Euler-product symbol, and **sufficiency of primitive tests** (Thm 10.4).
-  Label: **`WEIL-STRENGTH-COMPLETE` on the declared carrier** (`R132.007`). No sign.
+ The Weil explicit formula **proved inside the repository** (Thm 9.4), the comparison theorem
+ `T_∞(Γ_{F⋆F†}) = 2Φ_F(0)Φ_F(1) − Σ_ρ Φ_F(ρ)Φ_F(1−ρ)`, `c = 0` derived, Tate poles by residues of
+ the continued Euler-product symbol, and **sufficiency of primitive tests** (Thm 10.4).
+ Label: **`WEIL-STRENGTH-COMPLETE` on the declared carrier** (`R132.007`). No sign.
 
 The carrier is declared, the trace exists, the family exists, and the trace formula is proved *in
 the repository*, not imported. Rows A–C are exactly Weil's rows (a)–(c) and they carry **no
@@ -49,7 +49,7 @@ where (Paper 47 §1, eqs. (1.1)–(1.3))
 Bombieri 2000 Thm 1). Equivalently, on the intersection-theoretic side: `RH ⟺ 𝔏 = −Π²(W_fin + ω_∞)`
 positive definite (Paper 46 §5, `RESTATEMENT`), a Hodge-index inequality on the adelic square.
 Unconditional positivity is known for `T ≤ log 2` (Paper 42; Yoshida 1992; Bombieri 2000) and,
-by certified matrix computation, at support `1.6` (Zhu, arXiv:2608.24827). **Nothing beyond.** **[amended 2026-09-23 per R156_004 A14: this is proved for the PRIMITIVE form on `P_T` only (Paper 42 is primitive-only; Yoshida/Bombieri give the complete form only for `T ≤ ½log2`). Complete form `λ^W ≥ 0`: `T ≤ ½log2` classical, `(½log2, 0.8]` Zhu 2026 Thm 1.2, cited not re-verified.]**
+by certified matrix computation, at support `1.6` (Zhu, arXiv:2608.24827). **Nothing beyond.[amended per R156_004 A14: this is proved for the PRIMITIVE form on `P_T` only (Paper 42 is primitive-only; Yoshida/Bombieri give the complete form only for `T ≤ ½log2`). Complete form `λ^W ≥ 0`: `T ≤ ½log2` classical, `(½log2, 0.8]` Zhu 2026 Thm 1.2, cited not re-verified.]**
 
 ### 1.3 The successive reductions, phases 134–155
 
@@ -57,12 +57,12 @@ by certified matrix computation, at support `1.6` (Zhu, arXiv:2608.24827). **Not
 |---|---|---|
 | 134 | Target boxed; `Π` a bijection onto the primitive class; swap law for `Σ(T)`; Thm 5.8 (finite inertia uninformative at small ε); five negatives, requirements (R1)–(R5) | `R134.007`, no label |
 | 135 | **Canonical class `K`** (Pólya), Weil completion, affine duality `σ_K`, **Hodge-index transfer theorem** (conditional on an `h⁰`), `Ξ_a` falsifier theorem | no label |
-| 136 | **The map**: five wall-maps over the whole corpus; `MAP_1_WALLS_AND_MASTER_DOCS.md`; sign = polar/Frobenius coupling; campaign S1–S4; `LEAD_NOTE_OFF_THE_PAGE_CANDIDATES.md` (D-HS, D-θ, D-K) | map only |
+| 136 | **The map**: five wall-maps over the whole corpus; `MAP_1_WALLS_AND_MASTER_DOCS.md`; sign = polar/Frobenius coupling; campaign S1–S4; `NOTE_OFF_THE_PAGE_CANDIDATES.md` (D-HS, D-θ, D-K) | map only |
 | 137–138 | Canonical coupling; **detecting cones**: primitive sector = `I_∞`-orthocomplement of the hyperbolic plane `Λ = span(K, K_odd)` (Thm D.15.1); polar block satisfies Hodge identically (does not detect); `RH ⟺ W(h_T) ≥ 0 ∀T` one-parameter Landau criterion | no label |
 | 139–146 | **Frame defect theorem** (no `h⁰` with (a),(b′),(c) for `ξ`, given simplicity of the first zero); cosh bound, `s₁ = 0.99846`; trace-positive cone + unconditional transfer theorem for it; fixed-index equivalences; function-field model with sharp constant `√(7/11)`; ideal-indexed Frobenius family + bidegree no-go; coupled degree form (zero-blind). **Conclusion of record: within the intersection-theoretic frame every construction is a restatement; the missing ingredient is an additive ring of correspondences.** | no label |
 | 147–149 | Galois group ring inert at ζ; mixed effectivity is tropical, cone unchanged; **the additive pencil**: Deligne extraction = a Hölder inequality, `κ(d) = d/φ(d)`, exponents add on the additive square and subtract on the multiplicative; **(P149) = the k-tuple conjecture** | no label |
 | 150 | **Method theorems**: **T5 PROVED** (no single-fibre extraction from any `L²`-orthogonality moment, uniformly in moment order/family size/type); **T4 downgraded → the classical polar-at-zeros / entire-at-zeros classification** (Thms 27.10–27.11); **T3 conditional** on (H-DMV), blocking O-150.1 | `R150_005` |
-| — | **Owner decision 2026-09-19: row D CLOSED IN THE MAP.** Paper 46 Part IV §§24–28; the wall = T1 + T2 + T5 + the polar/entire classification (§28.2); six-clause reopening criterion (§28.4) | no label, no sign |
+| — | **Decisions : row D CLOSED IN THE MAP.** Paper 46 Part IV §§24–28; the wall = T1 + T2 + T5 + the polar/entire classification (§28.2); six-clause reopening criterion (§28.4) | no label, no sign |
 | 151 | T6: no nonnegative family supplies Deligne's a priori pole over `Z`; ascent `σ_{2k} ≥ 2kσ_2` | `R151` |
 | 152 | Round 0 on two never-analysed mechanisms (FUP/resonances; Berkovich–Poineau): Prop A.4 (Gauss-map branch series has abscissa `Re s = ½`), Prop B.3 (tree potential theory is per-branch, blind to cross-place coupling). No route, no impossibility | `R152_005` |
 | 153 | **First sign-carrying theorem.** **Theorem A** (`A_T^{(a)} = E_{−a}A_T E_a + E_a A_T E_{−a}`: the falsifier's form is a *cross term*, never a sum of squares) ⟹ **D.12-α PROVED at `(S,T) = ({∞,2,3}, log 2)`**: a finite window separating ζ from `Ξ_a` by a sign. `T*(a)` detection threshold. Closed negative: single-pair detection, the needle, Slepian/origin-gap, projection-only arguments (round 6: `W_T` is not the `cos(π/m)` box, deficit 1.28 vs truth 1e−7) | `R153_005/010/017/021` |
@@ -70,7 +70,7 @@ by certified matrix computation, at support `1.6` (Zhu, arXiv:2608.24827). **Not
 | 155 r1–2 | **Theorem TK** (Toeplitz ceiling: `c ≤ λ_min(C_M(τ₀,β))`, class ceiling depends only on `M`); **Theorem N** (`Ceil(8, ½log3) ≤ −5.70e−3`: no lattice class `M ≤ 8` certifies at ½log3); **Theorem B** (a priori `|β|` box); **Theorem SC** (any non-negative sub-comb of mass `A < 5.372` is eventually negative — *positivity is collective, never prime by prime*); **Lemma R / Cor** (no non-trivial flat-top `w` has `ŵ ≥ 0` — positivity is never termwise in the zeros); **Theorem R** (ceilings → `λ^P`); `thm:finZ` (**no finite zero set carries a flat-top certificate**), `cor:infinite` (row D is intrinsically infinite); Bernstein grid lemma; smoothness/far-zero lemma | `R155_010/018` |
 | 155 r3 | **Two archimedean thresholds** (Prop arch): `A_∞` alone becomes indefinite; `T*_∞ ≤ 0.3716` (L²), `T*_{∞,P} ≤ 0.5958` (on `P_T`) — **below `T*_{∞,P}` primes are a COST, above it primes are NECESSARY**; **Theorem N′** (no lattice class `M ≤ 24` certifies at `0.68` or `log 2`, 32 interval enclosures); **Theorem 3.3ᴾ** (concentration radius); **Schur reduction + parity splitting** (Prop 3c.1); **Theorem 3c.3**: `W_{log2}[F*] ∈ [0.0342113430, 0.0342182500]` for one archived even degree-17 direction — *one direction, not a sign*. **The obstruction at log 2 lives in the even Schur complement near the 3rd archimedean eigenvector, and is pure cancellation.** | `R155_029` |
 
-Files: `04-papers/46-row-d-the-sign/main.md` (Parts I–IV, §28 = the wall),
+Files: `04-papers/46-intersection-frame-defect/archive/main.md` (Parts I–IV, §28 = the wall),
 `04-papers/47-row-d-dual-certificates/main.tex` (36 pp.),
 `03-research/phase-13x…15x-row-d-*/R*_LEAD_CLOSING_DECISION*.md` (documents of record).
 
@@ -92,7 +92,7 @@ Files: `04-papers/46-row-d-the-sign/main.md` (Parts I–IV, §28 = the wall),
 | W8 | **TK / N / N′** | Ceiling `Ceil(M,T) = sup_β inf_{τ₀} λ_min(C_M)`; `Ceil(8, ½log3) < 0`; `Ceil(M ≤ 24, 0.68) < 0` and `< 0` at `log 2` | all lattice certificate classes of order `M ≤ 8` (½log3), `M ≤ 24` (0.68, log 2) | P47 Prop TK, Thm N, Thm N′ |
 | W9 | **finZ** | No finite symmetric zero multiset carries a flat-top certificate; every truncation of `Σ_ρ ŵ(τ−γ_ρ)` at height `Γ` goes negative (at `|τ| ≳ Γ/2`) | *all* finite-zero-data arguments; row D is intrinsically infinite | P47 thm:finZ, cor:infinite |
 | W10 | **non-termwise (Lemma R)** | No non-trivial flat-top `w` has `ŵ ≥ 0` | any termwise-in-the-zeros certificate | P47 lem:Rrig, cor:nontermwise |
-| W11 | **SC, collective positivity** | Any non-negative sub-comb of mass `A < 5.372` is eventually negative, with explicit `T₀(A)` | "positivity prime by prime"; the owner's "ten random primes" question answered negatively | P47 Thm SC |
+| W11 | **SC, collective positivity** | Any non-negative sub-comb of mass `A < 5.372` is eventually negative, with explicit `T₀(A)` | "positivity prime by prime"; the "ten random primes" question answered negatively | P47 Thm SC |
 | W12 | **envelope / pointwise** | `A_T` is the exact sup of the prime comb, `A_T ∼ 4e^T`; the pointwise threshold `2πe^{A_T}` cannot be lowered — doubly exponential in `T` | pointwise-envelope closing arguments (independently Zhu Thm 1.4) | P47 Prop env |
 | W13 | **circularity / no-go on the zero side** | The zero side alone cannot decide the sign; zero-side LP learns a universal profile that is negative at all 103 windows because its effective order `M ≈ 4.4` sits inside Theorem N's impossible class | zero-side-only reverse engineering | Paper 08; `R155_010`, `R155_018` |
 | W14 | **no ring of correspondences** | Five independent mechanisms close five enlargements of the frame (no ring on `Spec Z`; where a ring exists it is invisible on the radial carrier; where a carrier sees it, it acts away from the zeros; full-square positivity constraints are vacuous or infinite; the additive coinvariant block is computable but zero-blind) | all frame enlargements tried in phases 147–149 | P46 §28.4 record |
@@ -101,21 +101,21 @@ Files: `04-papers/46-row-d-the-sign/main.md` (Parts I–IV, §28 = the wall),
 ### 2.B Conjectural
 
 * **Zhu's Landau–Widom law** (`Conj. 12.1`, arXiv:2608.24827): `−log λ^P ≍ e^{2T}`, `T* = 2πe^{2L}`.
-  If true, the effort in Problem A grows at least like `e^{2T}`: finite for each `T`, **never uniform**.
-  Cited in P47 §8.4 as the reason the dual method cannot itself supply uniformity.
+ If true, the effort in Problem A grows at least like `e^{2T}`: finite for each `T`, **never uniform**.
+ Cited in P47 §8.4 as the reason the dual method cannot itself supply uniformity.
 * **(H1)** `n₋(A_∞|P_T) = 1` on `(T*_{∞,P}, 0.80]` — computed, **not proved** (`R155_029` §1).
 * **(H-DMV)** blocks T3; O-150.1 (read Diamond–Montgomery–Vorhauer 2006) still open (P46 §28.3 item 41).
 * The even-sector obstruction data at `log 2` (`w₁₁/λ_min`, failure of the crude condition by
-  1.07–1.49, 99.46 % of the `S` ground state on the 3rd archimedean eigenvector) — all `DIAGNOSTIC`.
+ 1.07–1.49, 99.46 % of the `S` ground state on the 3rd archimedean eigenvector) — all `DIAGNOSTIC`.
 
 ### 2.C Computational (a solver/budget limit, not a theorem)
 
 * Two-prime windows: best certified value at `T = 0.58` is `−3.18e−3` against a Galerkin upper bound
-  `2.16e−4`; column-generation LPs unconverged for `M ≥ 32`; clustering **refuted**; the wall there is the
-  atom budget `M`, and after Theorem N′ it is *also* a theorem for `M ≤ 24`.
+ `2.16e−4`; column-generation LPs unconverged for `M ≥ 32`; clustering **refuted**; the wall there is the
+ atom budget `M`, and after Theorem N′ it is *also* a theorem for `M ≤ 24`.
 * `T*_∞ ≤ 0.3716`, `T*_{∞,P} ≤ 0.5958` are Galerkin **upper** bounds; a certified lower bound needs a
-  Temple/Kato instrument (round-4 order (d)).
-* Local heavy compute is forbidden by owner rule; off-machine package in `scripts/offmachine/`.
+ Temple/Kato instrument (round-4 order (d)).
+* Local heavy compute is forbidden by rule; off-machine package in `scripts/offmachine/`.
 
 ### 2.D How phases 154–155 relate to the phase-136/§28 wall
 
@@ -123,23 +123,23 @@ Files: `04-papers/46-row-d-the-sign/main.md` (Parts I–IV, §28 = the wall),
 now *localised and quantified* rather than only classified.** Precisely:
 
 * **Same wall.** Theorem Z says the dual certificate *is* the explicit formula; Corollary `cor:zeros`
-  says every certificate is an unconditional statement about the zeros; so a certificate for all `T`
-  is `ψ(x) − x ≪ x^{½+ε}`, which is W4 verbatim. Theorem Z therefore does **not** evade §28.2: it
-  re-expresses it. Likewise W6 (non-attainment) is the analytic shadow of W5 (the frame defect):
-  both say "no finite/closed object realises the required invariant exactly".
+ says every certificate is an unconditional statement about the zeros; so a certificate for all `T`
+ is `ψ(x) − x ≪ x^{½+ε}`, which is W4 verbatim. Theorem Z therefore does **not** evade §28.2: it
+ re-expresses it. Likewise W6 (non-attainment) is the analytic shadow of W5 (the frame defect):
+ both say "no finite/closed object realises the required invariant exactly".
 * **New information the dual theory adds that §28 did not have.**
-  (i) The wall is *finite per window and decidable* (P47 Prop decide) — the difficulty is exactly
-  **uniformity in `T`**, nothing else. §28 did not isolate that.
-  (ii) The wall is *located*: the work lies in `[2πe^{2T}, 2πe^{A_T}]`, at the ordinates where the
-  prime phases `τ log p` are nearly aligned mod `2π`. §28 gave no interval.
-  (iii) The wall has a *proved sign flip*: below `T*_{∞,P}` the archimedean form alone is positive on
-  `P_T` and primes are a cost; above it the primes are **necessary**. That is a structural statement
-  about *which* ingredient must do the work, and it is new (round 3, `R155_029` §2.2).
-  (iv) The impossibilities are now *class-indexed with explicit ceilings* (TK/N/N′) instead of being
-  "the optimiser failed".
+ (i) The wall is *finite per window and decidable* (P47 Prop decide) — the difficulty is exactly
+ **uniformity in `T`**, nothing else. §28 did not isolate that.
+ (ii) The wall is *located*: the work lies in `[2πe^{2T}, 2πe^{A_T}]`, at the ordinates where the
+ prime phases `τ log p` are nearly aligned mod `2π`. §28 gave no interval.
+ (iii) The wall has a *proved sign flip*: below `T*_{∞,P}` the archimedean form alone is positive on
+ `P_T` and primes are a cost; above it the primes are **necessary**. That is a structural statement
+ about *which* ingredient must do the work, and it is new (round 3, `R155_029` §2.2).
+ (iv) The impossibilities are now *class-indexed with explicit ceilings* (TK/N/N′) instead of being
+ "the optimiser failed".
 * **Conclusion of record.** Rows 136 and 154/155 are two coordinate systems on one wall. The dual
-  theory does not lower the wall; it tells you where on the wall to stand, and it proves that the
-  standing place is arithmetic (W11 + the `T*_{∞,P}` flip), not analytic.
+ theory does not lower the wall; it tells you where on the wall to stand, and it proves that the
+ standing place is arithmetic (W11 + the `T*_{∞,P}` flip), not analytic.
 
 ---
 
@@ -148,34 +148,34 @@ now *localised and quantified* rather than only classified.** Precisely:
 ### 3.1 Necessary features of any proof of D for ζ — derived from the proved record
 
 1. **Never termwise in the zeros.** `Lemma R`: no flat-top weight has `ŵ ≥ 0`. A certificate is
-   always a statement of *cancellation across zeros*.
+ always a statement of *cancellation across zeros*.
 2. **Never termwise in the primes, and never a sub-family.** `Theorem SC`: any non-negative sub-comb
-   of mass `< 5.372` eventually goes negative. Positivity is **collective over the full initial
-   segment** of the comb.
+ of mass `< 5.372` eventually goes negative. Positivity is **collective over the full initial
+ segment** of the comb.
 3. **Collective over an infinite zero set.** `thm:finZ` + `cor:infinite`: no finite zero set carries a
-   certificate; truncating at height `Γ` produces negativity at `|τ| ≳ Γ/2`. Row D is intrinsically
-   infinite; no amount of computed zeros is a proof or even a fair model.
+ certificate; truncating at height `Γ` produces negativity at `|τ| ≳ Γ/2`. Row D is intrinsically
+ infinite; no amount of computed zeros is a proof or even a fair model.
 4. **The primes must supply positivity past `T*_{∞,P} ≈ 0.596`.** Below it the archimedean form on
-   `P_T` is already positive (≈ 0.083 at ½log3) and Theorem C pays for the primes; above it the
-   archimedean deficit is `η_P ≈ 0.154` and the prime term on the archimedean ground state is `0.188`.
-   **Any construction of D at `log 2` and beyond must USE the prime atoms** — which is why the
-   comb-vanishing class (`R155_016`) failed structurally.
+ `P_T` is already positive (≈ 0.083 at ½log3) and Theorem C pays for the primes; above it the
+ archimedean deficit is `η_P ≈ 0.154` and the prime term on the archimedean ground state is `0.188`.
+ **Any construction of D at `log 2` and beyond must USE the prime atoms** — which is why the
+ comb-vanishing class (`R155_016`) failed structurally.
 5. **The certificate must be a one-sided smoothing of the full zero measure** (Theorem Z,
-   Cor RH): `∃ w_T` flat-top with `Σ_ρ ŵ_T(τ − γ_ρ) ≥ 0` on `ℝ`, for every `T`.
+ Cor RH): `∃ w_T` flat-top with `Σ_ρ ŵ_T(τ − γ_ρ) ≥ 0` on `ℝ`, for every `T`.
 6. **The high-frequency regime is PROVED, for every window**: for `|τ| ≳ 2πe^{A_T}` the archimedean
-   `m(τ) ≥ log(τ/2π) − 1/τ − 1/2τ²` beats the bounded comb (`|comb| ≤ A_T`) — P47 Lemma 4.1, Prop env.
-   Nothing remains to be done there.
+ `m(τ) ≥ log(τ/2π) − 1/τ − 1/2τ²` beats the bounded comb (`|comb| ≤ A_T`) — P47 Lemma 4.1, Prop env.
+ Nothing remains to be done there.
 7. **The low-frequency regime is a finite, decidable problem per window** (Prop decide) with
-   **exponentially small margins** (`λ ≈ 1e−3` at ½log3, `≈ 1e−7` at log 2; `−log λ^P ≍ e^{2T}` if Zhu's
-   law holds).
+ **exponentially small margins** (`λ ≈ 1e−3` at ½log3, `≈ 1e−7` at log 2; `−log λ^P ≍ e^{2T}` if Zhu's
+ law holds).
 8. **Class-dependent LOWER bounds are the missing half.** Rounds 1–3 of phase 155 are *entirely*
-   upper-bound-side (TK, N, N′, ceilings). Problem A — an explicit `D(T,d,U) → 0` with
-   `c(T,d,U) ≥ λ^P − D` — is untouched. That is the tractable half of the whole enterprise.
+ upper-bound-side (TK, N, N′, ceilings). Problem A — an explicit `D(T,d,U) → 0` with
+ `c(T,d,U) ≥ λ^P − D` — is untouched. That is the tractable half of the whole enterprise.
 9. **It must name a property separating `ξ` from every `ξ_K`** (T1) and must invoke A3 and one of
-   A7/A8/A9 (T2). In the analytic language: the proof must use `Λ(n) ≥ 0` and/or the zero-free line
-   `Re s ≥ 1` at a load-bearing step, not merely the functional equation and the pole.
+ A7/A8/A9 (T2). In the analytic language: the proof must use `Λ(n) ≥ 0` and/or the zero-free line
+ `Re s ≥ 1` at a load-bearing step, not merely the functional equation and the pole. **[amended per R157_004: T1 does not forbid a field-uniform proof — such a proof is admissible and proves GRH for all K (P46 Rem 18.1a); what T1 excludes is a derivation from properties shared by all ξ_K that stops short of GRH for all K. T2 (A3 + one of A7/A8/A9) stands.]**
 10. **It cannot be an induction upward in `T`** (W15), a mass-based rate (W7), a pointwise envelope
-    (W12), or an identity (W6).
+ (W12), or an identity (W6).
 
 ### 3.2 Formulations in which D has NOT yet been attacked (grep-confirmed)
 
@@ -183,10 +183,10 @@ now *localised and quantified* rather than only classified.** Precisely:
 |---|---|---|---|
 | (i) | **Problem A lower bound on the archimedean form alone.** `A_∞|P_T` is explicit (Lévy energy `C₀ + ∫(‖F‖²−c_F)K`, `K` completely monotone), contains no primes, and its class-dependent lower bound is a pure one-sided-approximation question | ordered as round-4 (c) in `R155_029`, **never attempted**; all of rounds 1–3 are ceilings | **OPEN, tractable, highest value** |
 | (ii) | **Operator-theoretic / Hilbert–Pólya: `A_T` as a compression of an explicit self-adjoint operator on the declared carrier, positivity via a spectral realisation (Connes–Consani semi-local)** | Connes–Consani appears in phases 130, 135–137, 140 as *comparison and import*; the semi-local trace formula is read (`cc_2006.13771_text.txt`) but no realisation of `A_T` as a compression of a carrier operator with independently proved positivity was ever built. Paper 08's no-go is about the **zero side**, not about this | **OPEN**, but note the frame-defect wall W5 applies to any `h⁰`-style invariant; the realisation must be analytic, not intersection-theoretic |
-| (iii) | **The even-sector Schur complement as an operator whose positivity follows from a structural identity** (3rd archimedean eigenvector coupling to the atoms `v_2`, `v_3`) | Prop 3c.1 built the reduction *2026-09-22*, one day old; the even sector's ground state is characterised only `DIAGNOSTIC`ally (99.46 % on the 3rd archimedean eigenvector); **no identity attempted** | **OPEN, one round old, exactly at the obstruction** |
+| (iii) | **The even-sector Schur complement as an operator whose positivity follows from a structural identity** (3rd archimedean eigenvector coupling to the atoms `v_2`, `v_3`) | Prop 3c.1 built the reduction **, one day old; the even sector's ground state is characterised only `DIAGNOSTIC`ally (99.46 % on the 3rd archimedean eigenvector); **no identity attempted** | **OPEN, one round old, exactly at the obstruction** |
 | (iv) | **de Branges / Kreĭn: the flat-top certificate as a Kreĭn extension problem in the indeterminate case** | `R155_014` §2.1 states the equivalence explicitly and notes Kreĭn's theorem does *not* forbid the extension; Remark 2.5 says finite zero sets are the **determinate** Carathéodory–Fejér/Kreĭn case (that is `thm:finZ`), and that for ζ "the extension problem is indeterminate at every scale" — but that sentence is **labelled `HEURISTIC`** (amended per `R155_015`). P47 open item (5) is exactly "the distributional Kreĭn extension route to Theorem D1" | **OPEN**; the determinate/indeterminate dichotomy is the right frame and has never been proved for ζ. Caveat: indeterminacy is *necessary*, not sufficient — see §4 |
 | (v) | **Li/Keiper coefficients or Báez-Duarte-type sequential criteria recast as dual certificates** | Li–Keiper is the endpoint of Paper 36 (the corpus's *other* culmination) and appears in the row-D phases only in the phase-136/138 maps as history. **Zero hits in phases 147–155.** Báez-Duarte: no hits anywhere in the row-D arc | **OPEN and structurally attractive**: it is the one move that would connect the corpus's two culminations (36 and 42/47) in one language |
-| (vi) | **Arithmetic-geometry side (phase 149 additive pencil, Deligne route)** | Corpus concluded: the Deligne extraction is a Hölder inequality; `κ(d) = d/φ(d)`; exponents add on the additive square and subtract on the multiplicative; **(P149) = the k-tuple conjecture**; **T5 PROVED** kills single-fibre extraction from any `L²` moment; T6 (phase 151) kills every nonnegative family | **CLOSED as a route.** The dual-certificate language does **not** change it: Theorem Z shows a certificate is `ψ(x)−x ≪ x^{½+ε}`, i.e. W4, which is what T5/T6 were already saying. *One residue survives*: the never-run kill tests T1–T5 of candidate **D-HS** (fibrewise Connes–Consani `h⁰` on the `S`-square with Frobenius transport, `LEAD_NOTE_OFF_THE_PAGE_CANDIDATES.md` §1) — but it must first clear the frame defect theorem W5, which post-dates that note |
+| (vi) | **Arithmetic-geometry side (phase 149 additive pencil, Deligne route)** | Corpus concluded: the Deligne extraction is a Hölder inequality; `κ(d) = d/φ(d)`; exponents add on the additive square and subtract on the multiplicative; **(P149) = the k-tuple conjecture**; **T5 PROVED** kills single-fibre extraction from any `L²` moment; T6 (phase 151) kills every nonnegative family | **CLOSED as a route.** The dual-certificate language does **not** change it: Theorem Z shows a certificate is `ψ(x)−x ≪ x^{½+ε}`, i.e. W4, which is what T5/T6 were already saying. *One residue survives*: the never-run kill tests T1–T5 of candidate **D-HS** (fibrewise Connes–Consani `h⁰` on the `S`-square with Frobenius transport, `NOTE_OFF_THE_PAGE_CANDIDATES.md` §1) — but it must first clear the frame defect theorem W5, which post-dates that note |
 
 ---
 
@@ -286,7 +286,7 @@ bookkeeping.
 positive-definite datum `g_Z|[−2T,2T]` is in the **indeterminate** case of the Kreĭn extension problem
 (equivalently: the associated Toeplitz forms have full rank at every scale and no finite linear
 recursion propagates), so that the finZ obstruction *provably does not apply*.
-**Why now.** `R155_014` Remark 2.5 identifies this dichotomy as the answer to the owner's question,
+**Why now.** `R155_014` Remark 2.5 identifies this dichotomy as the answer to the the question,
 but the ζ half is explicitly labelled `HEURISTIC` and the citation is unverified. P47 open item (5)
 is the same route. Proving indeterminacy would convert `thm:finZ` from a bare negative into a
 **dichotomy theorem**, and would make precise why the finite-zero intuition is not merely
@@ -314,7 +314,7 @@ zero-side inequality. This item names the arithmetic input the whole arc has bee
 **Success.** A clean conditional reduction: D ⟸ X, with X an isolated arithmetic statement.
 **Failure — likely and expected.** X turns out to be RH-equivalent (this is what W4 predicts). Then
 the item has still produced the **exact** arithmetic content of the sign, which §28.2 states only
-qualitatively. **Be explicit with the owner: P6 is the item most likely to yield only a negative or
+qualitatively. **Be explicit with : P6 is the item most likely to yield only a negative or
 an equivalence, and it should not be run before P1–P3.**
 **Difficulty.** Hard.
 **Type.** PM.
@@ -322,10 +322,10 @@ an equivalence, and it should not be run before P1–P3.**
 ---
 
 ### P7 — D-HS kill tests, run against the frame defect theorem — **rank 7, negatives only**
-**Statement.** Run kill tests T1–T5 of `LEAD_NOTE_OFF_THE_PAGE_CANDIDATES.md` §1 on the fibrewise
+**Statement.** Run kill tests T1–T5 of `NOTE_OFF_THE_PAGE_CANDIDATES.md` §1 on the fibrewise
 Connes–Consani `h⁰` with Frobenius transport (`h⁰(mK) ≳ m²/4`?), and check first whether the frame
 defect theorem (P46 Thm 19.25, and Thm 21.15 on the curve) already excludes it.
-**Why.** It is the one arithmetic-geometry candidate in the corpus never built; its tensor-square reading was already refuted in phase 140 (Prop D.24.10, P46 §19bis), and the fibrewise reading was killed in round 8 (`R155_054`, audited `R155_057`) [amended 2026-09-22]. But
+**Why.** It is the one arithmetic-geometry candidate in the corpus never built; its tensor-square reading was already refuted in phase 140 (Prop D.24.10, P46 §19bis), and the fibrewise reading was killed in round 8 (`R155_054`, audited `R155_057`) [amended ]. But
 it was proposed in phase 136, *before* the frame defect theorem, and W5 is likely fatal.
 **Success.** Almost certainly none. **This item can only yield a negative**, and its value is closing
 the last open square of the geometric arc so that §28.4's six clauses can never be reopened by it.
@@ -340,7 +340,7 @@ side-tracks; **P6 last**, with the negative expectation stated in advance.
 
 ---
 
-## §5 Honest paragraph for the owner
+## §5 Honest paragraph for 
 
 The map now proves something sharp about where row D lives, and it is worth stating without
 decoration. Rows A, B and C are finished on the declared carrier: the algebra, the Frobenius family

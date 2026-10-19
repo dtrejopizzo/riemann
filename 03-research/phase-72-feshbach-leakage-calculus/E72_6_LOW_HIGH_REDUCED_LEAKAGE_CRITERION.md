@@ -1,7 +1,6 @@
 # E72.6 -- Low/high criterion for reduced leakage
 
-**Date:** 2026-07-08.
-**Role:** turn the reduced leakage target into a finite-dimensional cancellation problem plus a uniform
+**Purpose:** turn the reduced leakage target into a finite-dimensional cancellation problem plus a uniform
 tail estimate, without diagonalizing zeros or using additive Green assembly.
 
 ## 0. Why this criterion is needed

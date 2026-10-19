@@ -1,17 +1,17 @@
-# 104_116 — Identidad Mecke de intercambio triangular y gate fuente--circulación
+# 104_116 — Triangular-exchange Mecke identity and the source–circulation gate
 
-## Resultado
+## Result
 
-La identidad Mecke pedida para el pivote de `104_115` existe y se prueba
-en forma cerrada. Sea (s=1+\varepsilon>1), sea
+The Mecke identity requested for the `104_115` pivot exists and is proved
+in closed form. Let (s=1+\varepsilon>1), let
 
 \[
  \mathbb P_s(N=n)={n^{-s}\over\zeta(s)},
  \qquad N=\prod_pp^{A_p},                                  \tag{1}
 \]
 
-y sea (\omega=(\omega_{pq})) una matriz antisimétrica de soporte
-finito. Defina
+and let (\omega=(\omega_{pq})) be an antisymmetric matrix of finite
+support. Define
 
 \[
  (J_\omega G)(N)
@@ -20,7 +20,7 @@ finito. Defina
    \mathbf1_{A_q\ge1}\,G(Np/q).                          \tag{2}
 \]
 
-Entonces
+Then
 
 \[
  \boxed{
@@ -29,15 +29,15 @@ Entonces
    \mathbb E_s\{\overline{F(qN)}G(pN)\}.}                \tag{3}
 \]
 
-El operador es antiautoadjunto. Además (J_\omega\mathbf1=0) si y solo
-si, con (u_p=p^{-s/2}),
+The operator is anti-self-adjoint. Moreover (J_\omega\mathbf1=0) if and
+only if, with (u_p=p^{-s/2}),
 
 \[
  \omega u=0.                                               \tag{4}
 \]
 
-En una terna (a<b<c), (4) fija, salvo un escalar (\kappa), la corriente
-local
+On a triple (a<b<c), (4) fixes, up to a scalar (\kappa), the local
+current
 
 \[
  \omega_{ab}=\kappa c^{-s/2},\qquad
@@ -45,7 +45,7 @@ local
  \omega_{ca}=\kappa b^{-s/2}.                             \tag{5}
 \]
 
-Su forma bilineal es el determinante cíclico
+Its bilinear form is the cyclic determinant
 
 \[
 \boxed{
@@ -59,29 +59,29 @@ Su forma bilineal es el determinante cíclico
 \end{aligned}}
 \]
 
-La identidad (3)--(6) conserva los otros primos dentro de (N), es
-firmada y no usa módulos. Sin embargo, no produce el puente afirmado en
-`104_115`: es una **circulación bilineal**, mientras
-(B_{n,s}) es una **fuente lineal prima--polo**. La diferencia no es un
-resto Hardy automáticamente positivo. El borde que convertiría una
-circulación en una fuente recompone exactamente el funcional
-prima--polo (B_{n,s}), cuyo signo es A1.
+Identity (3)–(6) preserves the other primes inside (N), is signed, and
+uses no absolute values. However, it does not produce the bridge claimed
+in `104_115`: it is a **bilinear circulation**, whereas
+(B_{n,s}) is a **linear prime–pole source**. The difference is not an
+automatically positive Hardy remainder. The boundary term that would turn
+a circulation into a source exactly reconstitutes the prime–pole
+functional (B_{n,s}), whose sign is A1.
 
-Por tanto queda demostrada la identidad Mecke, pero queda refutado que
-ella, por sí sola, complete el certificado resolvente. Este documento no
-prueba A1 ni RH.
+Hence the Mecke identity is proved, but it is refuted that it, by itself,
+completes the resolvent certificate. This document proves neither A1 nor
+RH.
 
 ---
 
-## 1. Mecke para retirar una unidad de una torre
+## 1. Mecke's formula for removing one unit from a tower
 
-Los exponentes de (1) son independientes y
+The exponents in (1) are independent and
 
 \[
  \mathbb P_s(A_p=k)=(1-p^{-s})p^{-ks},\qquad k\ge0.        \tag{7}
 \]
 
-Para toda función integrable (H), desplazar (A_q=k+1) a (k) da
+For every integrable function (H), shifting (A_q=k+1) to (k) gives
 
 \[
  \boxed{
@@ -89,13 +89,13 @@ Para toda función integrable (H), desplazar (A_q=k+1) a (k) da
  =q^{-s}\mathbb E_s\{H(qN)\}.}                           \tag{8}
 \]
 
-Aplicando (8) a
+Applying (8) to
 
 \[
  H(N)=\overline{F(N)}G(Np/q)
 \]
 
-se obtiene
+gives
 
 \[
 \begin{aligned}
@@ -106,12 +106,12 @@ se obtiene
 \end{aligned}
 \]
 
-Multiplicar por
-(\omega_{pq}(q/p)^{s/2}) y sumar prueba (3).
+Multiplying by
+(\omega_{pq}(q/p)^{s/2}) and summing proves (3).
 
-## 2. Antiautoadjunción y conservación
+## 2. Anti-self-adjointness and conservation
 
-Agrupando en (3) los pares ((p,q)) y ((q,p)),
+Grouping in (3) the pairs ((p,q)) and ((q,p)),
 
 \[
 \begin{aligned}
@@ -123,35 +123,35 @@ Agrupando en (3) los pares ((p,q)) y ((q,p)),
 \end{aligned}
 \]
 
-Intercambiar (F,G) y conjugar prueba
+Swapping (F,G) and conjugating proves
 
 \[
  J_\omega^*=-J_\omega.                                   \tag{11}
 \]
 
-Por otra parte, directamente desde (2),
+On the other hand, directly from (2),
 
 \[
  (J_\omega\mathbf1)(N)
- =\sum_{q:A_q\ge1}q^{s/2}sum_p\omega_{pq}p^{-s/2}.       \tag{12}
+ =\sum_{q:A_q\ge1}q^{s/2}\sum_p\omega_{pq}p^{-s/2}.       \tag{12}
 \]
 
-Esto se anula para todo (N) exactamente cuando (\omega u=0), pues
-la antisimetría hace equivalentes el núcleo derecho y el izquierdo.
+This vanishes for every (N) exactly when (\omega u=0), since
+antisymmetry makes the right and left kernels equivalent.
 
-En dimensión tres, toda matriz antisimétrica no nula tiene núcleo de
-dimensión uno. Sustituir (5) muestra directamente que su vector de núcleo
-es
+In dimension three, every nonzero antisymmetric matrix has a
+one-dimensional kernel. Substituting (5) directly shows that its kernel
+vector is
 
 \[
  (a^{-s/2},b^{-s/2},c^{-s/2}),                            \tag{13}
 \]
 
-lo que prueba la unicidad de (5). Insertarla en (10) prueba (6).
+which proves the uniqueness of (5). Inserting it into (10) proves (6).
 
-## 3. Especialización Laguerre
+## 3. Laguerre specialization
 
-Tome
+Take
 
 \[
  F_n(N)=L_{n-1}^{(1)}(\log N),\qquad
@@ -159,26 +159,26 @@ Tome
  L_{n-1}^{(1)}(x)\bigg|_{x=\log N}.                       \tag{14}
 \]
 
-Entonces (6) es un promedio exacto de áreas orientadas de la curva
+Then (6) is an exact average of signed areas of the curve
 
 \[
  x\longmapsto
  \bigl(L_{n-1}^{(1)}(x),L_{n-2}^{(2)}(x)\bigr)            \tag{15}
 \]
 
-evaluada en los tres desplazamientos
+evaluated at the three shifts
 
 \[
  x+\log a,\qquad x+\log b,\qquad x+\log c.                \tag{16}
 \]
 
-Ésta explica el cruzado no nulo observado en `104_115`. También explica
-por qué no aparece un signo global gratuito: la curva (15) gira cada vez
-que el Laguerre cruza uno de sus ceros.
+This explains the nonzero cross term observed in `104_115`. It also
+explains why no free global sign appears: curve (15) turns every time the
+Laguerre function crosses one of its zeros.
 
-## 4. Por qué no aparece (B_{n,s})
+## 4. Why (B_{n,s}) does not appear
 
-La forma prima--polo regularizada es lineal en el test:
+The regularized prime–pole form is linear in the test function:
 
 \[
  M_s(f)
@@ -187,7 +187,7 @@ La forma prima--polo regularizada es lineal en el test:
  \qquad B_{n,s}=sM_s(f_{n,s}).                            \tag{17}
 \]
 
-En cambio, (3) es alternante y bilineal:
+In contrast, (3) is alternating and bilinear:
 
 \[
  \langle F,J_\omega F\rangle_s=0,
@@ -196,68 +196,67 @@ En cambio, (3) es alternante y bilineal:
  =\langle F,J_\omega G\rangle_s.                         \tag{18}
 \]
 
-También anula constantes por construcción. El funcional (17) no lo hace:
+It also annihilates constants by construction. Functional (17) does not:
 
 \[
  M_s(1)=-{\zeta'(s)\over\zeta(s)}-{1\over s-1},          \tag{19}
 \]
 
-que no es idénticamente cero. Por ello no existe una identificación
-natural de (3) con (M_s) en una clase lineal de tests que contenga las
-constantes. Hace falta añadir una corriente abierta hacia el comparador
-continuo.
+which is not identically zero. Hence there is no natural identification
+of (3) with (M_s) on a linear test class containing the constants. An
+open current toward the continuous comparator would need to be added.
 
-Sea (J^{\rm open}) esa extensión hipotética. La identidad de divergencia
-discreta--continua tendría necesariamente la forma
+Let (J^{\rm open}) be that hypothetical extension. The
+discrete–continuous divergence identity would necessarily have the form
 
 \[
  \langle\mathbf1,J^{\rm open}f\rangle=M_s(f).             \tag{20}
 \]
 
-Pero (20), con el test Laguerre, es precisamente el funcional que se desea
-acotar. Cerrar la corriente para recuperar positividad elimina (20);
-abrirla para recuperar (17) vuelve a introducir (B_{n,s}) con su signo
-desconocido. Éste es el gate fuente--circulación.
+But (20), with the Laguerre test function, is precisely the functional
+one wants to bound. Closing the current to recover positivity eliminates
+(20); opening it to recover (17) reintroduces (B_{n,s}) with its unknown
+sign. This is the source–circulation gate.
 
-La identidad general de Palm de segundo orden de `104_50` expresa la misma
-obstrucción en coordenadas de covarianza:
+The general second-order Palm identity of `104_50` expresses the same
+obstruction in covariance coordinates:
 
 \[
  \mathbb E_s[Z_fZ_g]
  =\mathrm{Cov}_s(D_f,D_g)+M_s(f)M_s(g).             \tag{21}
 \]
 
-La nueva fórmula (3) no contradice (21): extrae la parte alternante de los
-intercambios, mientras (21) extrae la parte simétrica. Ninguna de las dos
-orienta por sí sola el término lineal (M_s(f)).
+The new formula (3) does not contradict (21): it extracts the alternating
+part of the exchanges, while (21) extracts the symmetric part. Neither of
+the two by itself orients the linear term (M_s(f)).
 
-## 5. Consecuencia para el certificado de `104_115`
+## 5. Consequence for the `104_115` certificate
 
-El bloque matricial
+The matrix block
 
 \[
  \begin{pmatrix}-S&\eta J_\omega\\-\eta J_\omega&-S\end{pmatrix}
                                                                \tag{22}
 \]
 
-puede ser positivo por Schur, y su cruzado se calcula exactamente con
-(6). Pero no existe la identidad afirmada
+can be positive by Schur's criterion, and its cross term is computed
+exactly by (6). But the claimed identity
 
 \[
  {3\over4}A_n-\delta_n-B_{n,s}
  =\langle G_n,(22)G_n\rangle+\mathcal R_{n,s}             \tag{23}
 \]
 
-con (\mathcal R_{n,s}\ge0) como consecuencia de Mecke. Definir
-\(\mathcal R_{n,s}\) por (23) solo renombra A1. Para sostener (23) haría
-falta un teorema adicional que compare la fuente abierta (20) con la
-energía de circulación (22); ésa es nuevamente una desigualdad firmada
-prima--polo, no una identidad.
+with (\mathcal R_{n,s}\ge0) does not exist as a consequence of Mecke's
+formula. Defining \(\mathcal R_{n,s}\) by (23) merely renames A1. To
+support (23) one would need an additional theorem comparing the open
+source (20) with the circulation energy (22); that is again a signed
+prime–pole inequality, not an identity.
 
-## Reproducción
+## Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 triangle_exchange_mecke_check.py
 ```
-
+</content>

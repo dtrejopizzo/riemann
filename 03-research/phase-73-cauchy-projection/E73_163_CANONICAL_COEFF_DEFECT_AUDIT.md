@@ -1,6 +1,5 @@
 # E73.163 - Canonical coefficient-defect audit
 
-Date: 2026-07-12.
 
 ## 1. Purpose
 

@@ -1,7 +1,6 @@
 # E72.161 -- Two-block PSD certificate
 
-**Date:** 2026-07-09.
-**Role:** replace abstract `PSD-DIST` by a constructive two-block certificate.
+**Purpose:** replace abstract `PSD-DIST` by a constructive two-block certificate.
 
 ## 0. Blocks
 

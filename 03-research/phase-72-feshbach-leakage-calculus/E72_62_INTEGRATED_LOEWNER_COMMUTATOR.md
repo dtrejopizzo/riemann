@@ -1,7 +1,6 @@
 # E72.62 -- Integrated Loewner commutator for the endpoint discrepancy
 
-**Date:** 2026-07-08.
-**Role:** convert the reflected LFDC operator into an exact finite commutator equation.
+**Purpose:** convert the reflected LFDC operator into an exact finite commutator equation.
 
 ## 0. Reflected discrepancy operator
 

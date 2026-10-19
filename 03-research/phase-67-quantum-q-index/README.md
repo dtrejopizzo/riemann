@@ -1,6 +1,5 @@
 # Phase 67 — Quantum q-index route for Omega_7
 
-**Opened:** 2026-07-06.
 **Route:** quantum algebra / q-deformation, not Bost-Connes KMS and not Berry-Keating CCR.
 **Status:** candidate only. The phase isolates two auditable inputs: a prime current must first be
 constructed as a genuine compact-quantum-group coefficient without reverse-engineering the Pick jet,

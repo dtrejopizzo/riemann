@@ -1,6 +1,6 @@
 # P123.088 — Full-label boundary representation in integrable trace-class fields
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for the two-prime
+Status: PROVED-IN-REPOSITORY for the two-prime
 integrable boundary domain. The trace is an integrated fiber trace,
 not the ordinary Hilbert-space trace of a decomposable operator.
 

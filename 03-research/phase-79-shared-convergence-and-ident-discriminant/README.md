@@ -1,10 +1,10 @@
 # Phase 79 - The shared convergence lemma (GAP-Z) and the IDENT discriminant
 
-**Opened:** 2026-07-22. Continues `phase-78-build-neutral-lp-and-ident/`.
+Continues `phase-78-build-neutral-lp-and-ident/`.
 
 ## Why this phase exists
 
-Phase 78 (with the program author's spectral-shift reformulation) collapsed the
+Phase 78 (with the spectral-shift reformulation) collapsed the
 program's diffuse open frontier into **two precisely-stated analytic objects**
 and closed/reduced the rest. Everything now hangs on:
 

@@ -1,4 +1,4 @@
-# Lead's independent check of the Weil explicit formula in the corpus convention
+# Independent check of the Weil explicit formula in the corpus convention
 #   Phi_F(s) = int F(t) e^{(s-1/2)t} dt ,  g(s) = Phi_F(s) Phi_F(1-s)
 #   sum_rho g(rho) = 2 Phi_F(0) Phi_F(1) + <A F, F>
 #   <A F,F> = (1/2pi) int |F^(tau)|^2 [Re psi(1/4+i tau/2) - log pi] dtau

@@ -177,8 +177,8 @@ infinite-dimensional pseudoinverse.
 At (T=\frac12\log6), take
 
 \[
-E=V_{200}\cap\mathcal P_T,qquad
-W=(V_{600}\ominus V_{200})\cap\mathcal P_T,qquad
+E=V_{200}\cap\mathcal P_T,\qquad
+W=(V_{600}\ominus V_{200})\cap\mathcal P_T,\qquad
 Z=V_{600}^\perp\cap\mathcal P_T.
 \]
 

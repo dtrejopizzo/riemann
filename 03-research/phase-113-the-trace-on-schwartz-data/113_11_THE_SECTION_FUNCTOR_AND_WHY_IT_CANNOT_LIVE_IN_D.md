@@ -18,7 +18,7 @@ REDIRECTION:           the Z-structure O1 demands already exists in the corpus:
 
 Depends on: 113_08 (rulings, formula (2.2)), 113_09 (rad = the xi-ideal; rulings
 realised in `D`), 113_10 (degree, effective cone, (R), obstruction O1),
-39/120 (`120-inventario-CC-fuente.md`, the corpus's verified reading of the
+39/120 (`120-source-inventory-of-the-connes-consani-moscovici.md`, the corpus's verified reading of the
 Connes–Consani Riemann–Roch papers).
 
 Verifier: `113_11_the_section_functor.py`
@@ -258,7 +258,7 @@ acceptance test for any future `h^1`, and it is new:
 If `h^0` cannot be built inside `D`, the natural move is to import one. The
 corpus already contains a careful, source-verified inventory of every
 Riemann–Roch theorem in the Connes–Consani programme
-(`03-research/phase-39-G1G2-interface/120-inventario-CC-fuente.md`). Read against
+(`03-research/phase-39-G1G2-interface/120-source-inventory-of-the-connes-consani-moscovici.md`). Read against
 the requirements of row (d), all four are insufficient, and for the same reason.
 
 | source | dimension theory | RR formula | pairing |
@@ -418,7 +418,7 @@ Pre-registered refutation conditions for this file's own claims:
 
 - The four CC Riemann–Roch theorems, their dimension theories, their formulas,
   and the absence of any signature-carrying form: all from
-  `phase-39-G1G2-interface/120-inventario-CC-fuente.md`, whose own markings
+  `phase-39-G1G2-interface/120-source-inventory-of-the-connes-consani-moscovici.md`, whose own markings
   distinguish `[VERIFICADO]` from `[INTERPRETACIÓN]`. The three quotations used
   in section 4 are all from `[VERIFICADO]` lines. **This file did not re-read the
   CC papers themselves**; it relies on the corpus inventory, which is a

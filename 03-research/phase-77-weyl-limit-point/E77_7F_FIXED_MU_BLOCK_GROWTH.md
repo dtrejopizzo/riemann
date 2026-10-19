@@ -1,6 +1,6 @@
 # E77.7f - Fixed-mu block growth and boundary-trace autopsy
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

@@ -1,6 +1,5 @@
 # E73.196 - WR tail certification for the finite-frequency endpoint
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

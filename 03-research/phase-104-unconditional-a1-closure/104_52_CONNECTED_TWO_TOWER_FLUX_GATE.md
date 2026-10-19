@@ -1,15 +1,15 @@
-# 104_52 — Hessiano conectado de dos torres y gate de flujo cuadrático
+# 104_52 — Connected two-tower Hessian and quadratic flux gate
 
-**Objetivo del ataque.** Construir una forma de segundo orden que mantenga
-simultáneamente los pesos reales \(\Lambda(p^k)=\log p\), el polo, el factor
-Gamma y la fase Laguerre, y buscar en ella una cota coerciva para
+**Attack goal.** Construct a second-order form that simultaneously keeps
+the real weights \(\Lambda(p^k)=\log p\), the pole, the Gamma factor, and
+the Laguerre phase, and search within it for a coercive bound for
 
 \[
  H_n:=\lambda_n-{501\over2002}A_n
  ={1501\over2002}A_n-B_n\ge0,\qquad n\ge150.              \tag{1}
 \]
 
-Se obtiene una representación exacta. Sea
+An exact representation is obtained. Let
 
 \[
  F(s)=(s-1)\zeta(s),\qquad
@@ -17,8 +17,8 @@ Se obtiene una representación exacta. Sea
  \kappa={1501\over2002},                                  \tag{2}
 \]
 
-y \(J_\kappa=\log F+\kappa\log G\), con las ramas reales en
-\(s>1\). Entonces el Hessiano conectado completo es
+and \(J_\kappa=\log F+\kappa\log G\), with the real branches on
+\(s>1\). Then the complete connected Hessian is
 
 \[
  \boxed{
@@ -29,73 +29,73 @@ y \(J_\kappa=\log F+\kappa\log G\), con las ramas reales en
  +\kappa\sum_{r\ge1}{1\over(s+2r)^2}.}                   \tag{3}
 \]
 
-La primera suma es un par ordenado **anidado dentro de una misma torre**;
-la segunda es su análogo continuo polar y la tercera conserva exactamente
-el canal Gamma. La conclusión decisiva es negativa: antes de llegar a
-(3), todos los pares entre torres primas distintas y todos los cruces
-primo--polo se cancelan idénticamente al pasar del segundo momento al
-Hessiano de \(\log F\). No queda una covarianza entre \(p\ne q\) sobre la
-que pueda actuar una cota de no alineación.
+The first sum is a pair ordered **nested within the same tower**;
+the second is its continuous polar analogue and the third preserves exactly
+the Gamma channel. The decisive conclusion is negative: before reaching
+(3), all pairs between distinct prime towers and all prime--pole crossings
+cancel identically when passing from the second moment to the Hessian of
+\(\log F\). No covariance between \(p\ne q\) remains for a
+non-alignment bound to act on.
 
-Además, el miembro derecho de (3) no tiene signo ni siquiera en el rayo
-real: su prolongación vale \(<0\) en \(s=1\) y \(>0\) en \(s=10\), con
-certificados racionales. El cociclo mixto del test Laguerre también posee
-ambos signos para cada \(n\ge4\). Por tanto la representación no produce
-la coercividad proporcional de (1). El mismo mecanismo conectado existe
-para \(\zeta(s+c)\zeta(s-c)\), cuyo sistema completado tiene ceros fuera de
-la línea crítica.
+Moreover, the right side of (3) has no fixed sign even on the real ray: its
+continuation is \(<0\) at \(s=1\) and \(>0\) at \(s=10\), with
+rational certificates. The mixed cocycle of the Laguerre test also has
+both signs for every \(n\ge4\). Hence the representation does not produce
+the proportional coercivity of (1). The same connected mechanism exists
+for \(\zeta(s+c)\zeta(s-c)\), whose completed system has zeros off
+the critical line.
 
-Queda descartado el mecanismo estrecho
+The narrow mechanism
 
 ```text
-segundo momento de dos marcas / covarianza de dos torres
-+ sustracción conectada
-+ signo del Hessiano real o del cociclo mixto Laguerre
+second moment of two marks / two-tower covariance
++ connected subtraction
++ sign of the real Hessian or the mixed Laguerre cocycle
     => H_n >= 0.
 ```
 
-La misma cancelación se extiende a todo cumulante conectado de orden finito
-de la jerarquía derivativa de \(\log F\): subir simplemente de dos a tres o
-más marcas del observable aditivo \(\log N\) tampoco crea una interacción
-entre primos distintos. Esto no habla de cumulantes de observables no
-lineales arbitrarios de \(N\). No se descarta una desigualdad no lineal
-sobre momentos **desconectados** que se aplique antes del logaritmo y
-sobreviva a la cancelación. Este documento no prueba (1), A1 ni RH.
+is ruled out. The same cancellation extends to every finite-order connected
+cumulant of the derivative hierarchy of \(\log F\): simply raising from two
+to three or more marks of the additive observable \(\log N\) also creates
+no interaction between distinct primes. This says nothing about cumulants
+of arbitrary nonlinear observables of \(N\). A nonlinear inequality on
+**disconnected** moments applied before the logarithm and surviving the
+cancellation is not ruled out. This document does not prove (1), A1, or RH.
 
-## 0. Auditoría de no duplicación
+## 0. Non-duplication audit
 
-`103_68` ya factoriza una función completada como cociente de transformadas
-de Laplace y calcula sus dos primeros cumulantes. `104_43`--`104_45`
-construyen una sola marca size-biased; `104_49` prueba la cancelación de los
-momentos completos contra los cumulantes grado por grado. No se cuentan de
-nuevo esos resultados.
+`103_68` already factors a completed function as a quotient of Laplace
+transforms and computes its first two cumulants. `104_43`--`104_45`
+build a single size-biased mark; `104_49` proves the cancellation of the
+full moments against the cumulants order by order. Those results are not
+recounted here.
 
-La adición estrecha aquí es distinta: se polariza literalmente el segundo
-momento en dos marcas de torres, se calcula qué parte conectada sobrevive al
-logaritmo y se incorpora el factor Gamma con el coeficiente exacto
-\(1501/2002\) exigido por A1. La cancelación de todos los pares
-\(p\ne q\), la fórmula completa (3), su cambio de signo racional y el flujo
-cuadrático de la sección 6 son el contenido de este gate.
+The narrow addition here is different: the second moment is literally
+polarized in two tower marks, the connected part surviving the logarithm is
+computed, and the Gamma factor is incorporated with the exact coefficient
+\(1501/2002\) required by A1. The cancellation of all pairs
+\(p\ne q\), the complete formula (3), its rational sign change, and the
+quadratic flux of section 6 are the content of this gate.
 
-## 1. Dos marcas divisor y el kernel `lcm`
+## 1. Two divisor marks and the `lcm` kernel
 
-Fijemos \(s>1\). Bajo la ley zeta
+Fix \(s>1\). Under the zeta law
 
 \[
  \mathbb P_s(N=m)={m^{-s}\over\zeta(s)},\qquad X=\log N,  \tag{4}
 \]
 
-condicionado a \(N\), elija dos marcas \(D_1,D_2\) independientes con
+conditioned on \(N\), choose two independent marks \(D_1,D_2\) with
 
 \[
  \mathbb P(D_i=d\mid N)
  ={\Lambda(d)\over X}\mathbf1_{d\mid N}.                 \tag{5}
 \]
 
-La identidad \(\sum_{d\mid N}\Lambda(d)=\log N\) hace de (5) una
-probabilidad cuando \(N>1\); en \(N=1\) se usa un estado cementerio, cuya
-contribución desaparece por el factor \(X^2\). Para todo test \(Q\) para el
-cual las sumas converjan,
+The identity \(\sum_{d\mid N}\Lambda(d)=\log N\) makes (5) a
+probability when \(N>1\); at \(N=1\) a cemetery state is used, whose
+contribution vanishes due to the factor \(X^2\). For every test \(Q\) for
+which the sums converge,
 
 \[
  \boxed{
@@ -104,13 +104,13 @@ cual las sumas converjan,
        \mathrm{lcm}(d,e)^s}Q(\log d,\log e).}       \tag{6}
 \]
 
-En efecto, después de cancelar \(X^2\), la suma sobre los múltiplos de
-\(\mathrm{lcm}(d,e)\) vale
+Indeed, after canceling \(X^2\), the sum over multiples of
+\(\mathrm{lcm}(d,e)\) equals
 \(\zeta(s)\mathrm{lcm}(d,e)^{-s}\).
 
-El comparador polar tiene una fórmula exactamente paralela. Sea
-\(X_0\sim\mathrm{Exp}(s-1)\) y, condicionado a \(X_0=L\), elija
-\(U_1,U_2\) independientes y uniformes en \([0,L]\). Entonces
+The polar comparator has an exactly parallel formula. Let
+\(X_0\sim\mathrm{Exp}(s-1)\) and, conditioned on \(X_0=L\), choose
+\(U_1,U_2\) independent and uniform on \([0,L]\). Then
 
 \[
  \boxed{
@@ -119,40 +119,40 @@ El comparador polar tiene una fórmula exactamente paralela. Sea
  e^{-(s-1)\max(x,y)}Q(x,y)\,dx\,dy.}                     \tag{7}
 \]
 
-Las ecuaciones (6)--(7) son una comparación de dos marcas completa; no
-separan potencias primas ni toman valores absolutos.
+Equations (6)--(7) are a complete two-mark comparison; they do not
+separate prime powers nor take absolute values.
 
-Pero su parte conectada ya es local a una torre. Al sustraer el producto
-de las intensidades de una marca, el kernel aritmético es
+But their connected part is already local to a single tower. Subtracting
+the product of the one-mark intensities, the arithmetic kernel is
 
 \[
  C_s(d,e)=\Lambda(d)\Lambda(e)
  \{\mathrm{lcm}(d,e)^{-s}-(de)^{-s}\}.             \tag{8}
 \]
 
-Si \(d=p^k,e=q^\ell\) y \(p\ne q\), entonces
-\(\mathrm{lcm}(d,e)=de\), luego
+If \(d=p^k,e=q^\ell\) and \(p\ne q\), then
+\(\mathrm{lcm}(d,e)=de\), so
 
 \[
  \boxed{C_s(p^k,q^\ell)=0\qquad(p\ne q).}                \tag{9}
 \]
 
-Si \(p=q\), (8) es positivo y depende de \(\max(k,\ell)\). Así la
-covarianza de divisibilidad detecta repeticiones dentro de una torre, no
-una interacción entre torres diferentes. Esto es también consecuencia
-directa de la independencia de los exponentes geométricos \(A_p\) en (4).
+If \(p=q\), (8) is positive and depends on \(\max(k,\ell)\). Thus the
+divisibility covariance detects repetitions within a tower, not an
+interaction between different towers. This is also a direct consequence of
+the independence of the geometric exponents \(A_p\) in (4).
 
-## 2. Cancelación exacta de los pares desconectados
+## 2. Exact cancellation of the disconnected pairs
 
-Escribamos
+Write
 
 \[
  \mathcal L(s)=\sum_{m\ge2}{\Lambda(m)\over m^s},\qquad
  \mathcal K_2(s)=\sum_{m\ge2}{\Lambda(m)\log m\over m^s}.\tag{10}
 \]
 
-Puesto que \(\zeta'/\zeta=-\mathcal L\), la diferenciación absoluta en
-\(s>1\) da
+Since \(\zeta'/\zeta=-\mathcal L\), absolute differentiation at
+\(s>1\) gives
 
 \[
  {F''(s)\over F(s)}
@@ -160,9 +160,9 @@ Puesto que \(\zeta'/\zeta=-\mathcal L\), la diferenciación absoluta en
        -{2\mathcal L(s)\over s-1}.                        \tag{11}
 \]
 
-Los tres términos de (11) son, respectivamente, los pares de potencias
-primas independientes, la colisión anidada y los dos cruces primo--polo.
-Por otro lado,
+The three terms of (11) are, respectively, pairs of independent prime
+powers, the nested collision, and the two prime--pole crossings. On the
+other hand,
 
 \[
  \left({F'(s)\over F(s)}\right)^2
@@ -170,19 +170,19 @@ Por otro lado,
        -{2\mathcal L(s)\over s-1}.                        \tag{12}
 \]
 
-Restando (12) de (11),
+Subtracting (12) from (11),
 
 \[
  \boxed{(\log F)''(s)=\mathcal K_2(s)-{1\over(s-1)^2}.}  \tag{13}
 \]
 
-En particular, \(\mathcal L^2\), incluidos todos los productos
-\(p^{-ks}q^{-\ell s}\) con \(p\ne q\), desaparece con coeficiente
-**exactamente cero**. Lo mismo ocurre con los cruces primo--polo. No es una
-cota ni una pérdida causada por Cauchy--Schwarz: es la sustracción
-momento--cumulante que define el logaritmo.
+In particular, \(\mathcal L^2\), including all products
+\(p^{-ks}q^{-\ell s}\) with \(p\ne q\), vanishes with
+**exactly zero** coefficient. The same happens with the prime--pole
+crossings. This is not a bound or a loss caused by Cauchy--Schwarz: it is
+the moment--cumulant subtraction that defines the logarithm.
 
-La renovación unitaria vuelve (13) una forma de pares anidados:
+The unit renewal turns (13) into a nested-pair form:
 
 \[
  \begin{aligned}
@@ -195,13 +195,14 @@ La renovación unitaria vuelve (13) una forma de pares anidados:
  \end{aligned}
 \]
 
-Como \(\Lambda(m)\ne0\) obliga a \(m=p^k\), el divisor marcado en (14)
-pertenece necesariamente a la misma torre que el divisor exterior.
+Since \(\Lambda(m)\ne0\) forces \(m=p^k\), the marked divisor in (14)
+necessarily belongs to the same tower as the outer divisor.
 
-### 2.1. La obstrucción vale en todo orden conectado
+### 2.1. The obstruction holds at every connected order
 
-No se recuperan interacciones entre torres pasando al tercer cumulante. Para
-todo entero \(r\ge2\), la diferenciación absoluta en \(s>1\) da
+Interactions between towers are not recovered by passing to the third
+cumulant. For every integer \(r\ge2\), absolute differentiation at
+\(s>1\) gives
 
 \[
  \boxed{
@@ -212,7 +213,7 @@ todo entero \(r\ge2\), la diferenciación absoluta en \(s>1\) da
  \right\}.}                                               \tag{15a}
 \]
 
-Si \(m=p^k\), entonces
+If \(m=p^k\), then
 
 \[
  \Lambda(m)(\log m)^{r-1}
@@ -220,20 +221,20 @@ Si \(m=p^k\), entonces
  \sum_{j_1,\ldots,j_{r-1}=1}^{k}1.                       \tag{15b}
 \]
 
-Así cada cumulante de orden \(r\) es una marca exterior y \(r-1\) marcas
-anidadas en **la misma** torre. Esto no es peculiar del segundo orden: es
-la aditividad de \(\log\zeta=\sum_p-\log(1-p^{-s})\). Todos los cumulantes
-mixtos de factores Euler distintos son cero.
+Thus each order-\(r\) cumulant is an outer mark plus \(r-1\) marks nested
+in **the same** tower. This is not peculiar to second order: it is the
+additivity of \(\log\zeta=\sum_p-\log(1-p^{-s})\). All mixed cumulants of
+distinct Euler factors are zero.
 
-El factor Gamma tampoco cambia esa conclusión. Derivando (18), para
-\(r\ge2\),
+The Gamma factor does not change this conclusion either. Differentiating
+(18), for \(r\ge2\),
 
 \[
  (\log G)^{(r)}(s)
  =(-1)^r(r-1)!\sum_{j\ge1}{1\over(s+2j)^r}.               \tag{15c}
 \]
 
-Por consiguiente
+Consequently
 
 \[
  \boxed{
@@ -244,31 +245,31 @@ Por consiguiente
  \right\}.}                                               \tag{15d}
 \]
 
-Por tanto ningún cumulante conectado de orden finito **de esta jerarquía
-aditiva** puede ser el mecanismo multitorre faltante. Una ruta futura podría
-usar un observable no lineal distinto; si permanece en la jerarquía de
-\(\log F\), tendría que aplicar una desigualdad a los momentos desconectados
-antes de que el logaritmo los elimine y controlar conjuntamente los términos
-que después se cancelan.
+Therefore no finite-order connected cumulant **of this additive
+hierarchy** can be the missing multi-tower mechanism. A future route could
+use a different nonlinear observable; if it stays within the hierarchy of
+\(\log F\), it would have to apply an inequality to the disconnected
+moments before the logarithm removes them, and jointly control the terms
+that afterward cancel.
 
-## 3. Incorporación exacta de Gamma y el margen de A1
+## 3. Exact incorporation of Gamma and the A1 margin
 
-La factorización completada es \(\xi=FG\), salvo la constante ya incluida
-en (2). Con la normalización de Phase 104,
+The completed factorization is \(\xi=FG\), up to the constant already
+included in (2). With the Phase 104 normalization,
 
 \[
  A_n=n[z^n]\log G((1-z)^{-1}),\qquad
  B_n=-n[z^n]\log F((1-z)^{-1}).                           \tag{16}
 \]
 
-Por tanto (1) equivale exactamente a
+Hence (1) is exactly equivalent to
 
 \[
  \boxed{H_n=n[z^n]J_\kappa((1-z)^{-1})\ge0.}              \tag{17}
 \]
 
-No se ha aproximado el bloque Gamma. Su Hessiano es explícito. Si
-\(\psi_1\) denota la trigamma,
+The Gamma block has not been approximated. Its Hessian is explicit. If
+\(\psi_1\) denotes the trigamma function,
 
 \[
  \begin{aligned}
@@ -279,26 +280,26 @@ No se ha aproximado el bloque Gamma. Su Hessiano es explícito. Si
  \end{aligned}
 \]
 
-Combinar (13), (14), (15) y (18) prueba (3). También el canal Gamma es una
-forma de par continuo, pues
+Combining (13), (14), (15), and (18) proves (3). The Gamma channel is also
+a continuous pair form, since
 
 \[
  {1\over(s+2r)^2}
  =\int_{0\le y\le x<\infty}e^{-(s+2r)x}\,dy\,dx.         \tag{19}
 \]
 
-Así (3) mantiene realmente acoplados, en una sola forma firmada, torres
-primas, polo y Gamma.
+Thus (3) genuinely keeps prime towers, pole, and Gamma coupled in a
+single signed form.
 
-Para evitar cualquier uso ilegítimo de la serie Euler en \(s=1\), tome
-\(a>1\), \(s_a(z)=a/(1-z)\), y defina
+To avoid any illegitimate use of the Euler series at \(s=1\), take
+\(a>1\), \(s_a(z)=a/(1-z)\), and define
 
 \[
  \mathcal H_{n,a}=n[z^n]J_\kappa(s_a(z)).                 \tag{20}
 \]
 
-En un disco pequeño todo el trayecto entre \(a\) y \(s_a(z)\) queda en
-\(\Re s>1\), y
+On a small disk the whole path between \(a\) and \(s_a(z)\) remains in
+\(\Re s>1\), and
 
 \[
  \boxed{
@@ -307,20 +308,21 @@ En un disco pequeño todo el trayecto entre \(a\) y \(s_a(z)\) queda en
  \left\{J_\kappa'(a)+\int_a^{s_a(z)}J_\kappa''(u)\,du\right\}.} \tag{21}
 \]
 
-La expresión entre llaves es \(J_\kappa'(s_a(z))\). Al retirar
-\(a\downarrow1\), (20)--(21) convergen coeficiente a coeficiente a (17).
-Ésta es la representación exacta de dos torres solicitada. Probar que su
-límite es no negativo para todo \(n\ge150\) sigue siendo exactamente (1).
+The expression in braces is \(J_\kappa'(s_a(z))\). Letting
+\(a\downarrow1\), (20)--(21) converge coefficient by coefficient to (17).
+This is the requested exact two-tower representation. Proving that its
+limit is nonnegative for every \(n\ge150\) is still exactly (1).
 
-## 4. El Hessiano completo tiene ambos signos
+## 4. The complete Hessian has both signs
 
-La prolongación analítica de (3) a \(s=1\) puede evaluarse con la expansión
+The analytic continuation of (3) to \(s=1\) can be evaluated with the
+expansion
 
 \[
  (s-1)\zeta(s)=1+\gamma(s-1)-\gamma_1(s-1)^2+O((s-1)^3).
 \]
 
-De aquí y (18),
+From this and (18),
 
 \[
  \boxed{
@@ -328,8 +330,8 @@ De aquí y (18),
       +\kappa\left({\pi^2\over8}-1\right)<0.}             \tag{22}
 \]
 
-El signo no depende de decimales de punto flotante. Las cotas racionales
-ya usadas en `103_68`,
+The sign does not depend on floating-point decimals. The rational bounds
+already used in `103_68`,
 
 \[
  \gamma>{577\over1000},\qquad
@@ -337,7 +339,7 @@ ya usadas en `103_68`,
  \pi^2<{987\over100},                                    \tag{23}
 \]
 
-dan el techo exacto
+give the exact ceiling
 
 \[
  J_\kappa''(1)
@@ -346,7 +348,7 @@ dan el techo exacto
  =-{531207\over45500000}<0.                               \tag{24}
 \]
 
-En la otra dirección, (3) y (18) implican
+In the other direction, (3) and (18) imply
 
 \[
  J_\kappa''(10)
@@ -354,31 +356,31 @@ En la otra dirección, (3) y (18) implican
  \ge-{1\over81}+{\kappa\over24}>0,                      \tag{25}
 \]
 
-porque para la función decreciente \((10+2x)^{-2}\),
-la suma desde \(r=1\) domina su integral desde \(1\), que vale \(1/24\),
-y \(81\cdot1501>24\cdot2002\). El término \(\mathcal K_2(10)\) es
-positivo y solo mejora (25).
+because for the decreasing function \((10+2x)^{-2}\),
+the sum from \(r=1\) dominates its integral from \(1\), which equals
+\(1/24\), and \(81\cdot1501>24\cdot2002\). The term \(\mathcal K_2(10)\) is
+positive and only improves (25).
 
-Por continuidad, el Hessiano del **funcional exacto del margen** cambia de
-signo en \((1,10)\). No existe una convexidad real global que pueda
-proporcionar (1).
+By continuity, the Hessian of the **exact margin functional** changes
+sign on \((1,10)\). There is no global real convexity that could
+supply (1).
 
-## 5. El cociclo de fase Laguerre tampoco tiene signo
+## 5. The Laguerre phase cocycle also has no fixed sign
 
-La interacción natural de dos incrementos de torres \(x,y>0\) sobre
+The natural interaction of two tower increments \(x,y>0\) on
 
 \[
  P_n(t)=L_{n-1}^{(1)}(t)
 \]
 
-es el cociclo mixto
+is the mixed cocycle
 
 \[
  \Delta_{x,y}P_n(t)
  =P_n(t+x+y)-P_n(t+x)-P_n(t+y)+P_n(t).                    \tag{26}
 \]
 
-Para \(n\ge3\), la identidad de derivación Laguerre da
+For \(n\ge3\), the Laguerre derivative identity gives
 
 \[
  \boxed{
@@ -386,26 +388,26 @@ Para \(n\ge3\), la identidad de derivación Laguerre da
  =\int_0^x\!\int_0^y L_{n-3}^{(3)}(t+u+v)\,dv\,du.}       \tag{27}
 \]
 
-Si \(n\ge4\), \(L_{n-3}^{(3)}\) posee \(n-3\) ceros positivos simples y
-alterna signo entre ellos. Eligiendo \(t\) dentro de un intervalo de signo
-y luego \(x,y>0\) suficientemente pequeños, (27) adopta ambos signos. Esto
-incluye cada grado \(n\ge150\).
+If \(n\ge4\), \(L_{n-3}^{(3)}\) has \(n-3\) simple positive zeros and
+alternates sign between them. Choosing \(t\) inside an interval of fixed
+sign and then \(x,y>0\) sufficiently small, (27) takes both signs. This
+includes every degree \(n\ge150\).
 
-El fenómeno ya se ve sin asintótica:
+The phenomenon is already visible without asymptotics:
 
 \[
  P_4(t)=4-6t+2t^2-{t^3\over6},\qquad
  \Delta_{x,y}P_4(t)=xy\left(4-t-{x+y\over2}\right).       \tag{28}
 \]
 
-Por tanto ni la parte conectada de dos marcas ni su test Laguerre poseen
-el signo necesario para una desigualdad punto a punto. Integrarlos sin
-separarlos devuelve exactamente (21).
+Hence neither the connected part of the two marks nor its Laguerre test
+has the sign needed for a pointwise inequality. Integrating them without
+separating them returns exactly (21).
 
-## 6. Flujo de homotopía de segundo orden
+## 6. Second-order homotopy flux
 
-Sea \(D=a\partial_a\). La ley de primer orden de `104_47` vale para
-cualquier logaritmo compuesto con \(a/(1-z)\), en particular para
+Let \(D=a\partial_a\). The first-order law of `104_47` holds for
+any logarithm composed with \(a/(1-z)\), in particular for
 \(\mathcal H_{n,a}\):
 
 \[
@@ -413,7 +415,7 @@ cualquier logaritmo compuesto con \(a/(1-z)\), en particular para
  =n(\mathcal H_{n+1,a}-\mathcal H_{n,a}).                 \tag{29}
 \]
 
-Aplicándola una segunda vez y restando (29),
+Applying it a second time and subtracting (29),
 
 \[
  \boxed{
@@ -423,28 +425,28 @@ Aplicándola una segunda vez y restando (29),
                          +\mathcal H_{n,a}\}.}            \tag{30}
 \]
 
-Éste es el flujo cuadrático exacto. No crea una energía positiva: el lado
-derecho es una segunda diferencia firmada, y por (21) su integral con los
-datos de borde reconstruye \(H_n\) sin resto. Estimarlo con un signo sería
-otra formulación de la coercividad faltante, no una consecuencia de la
-identidad.
+This is the exact quadratic flux. It does not create a positive energy: the
+right side is a signed second difference, and by (21) its integral with
+the boundary data reconstructs \(H_n\) without remainder. Estimating it
+with a fixed sign would be another formulation of the missing coercivity,
+not a consequence of the identity.
 
-## 7. Falsificador desplazado
+## 7. Shifted falsifier
 
-Para \(0<c<1/2\), normalice
+For \(0<c<1/2\), normalize
 
 \[
  F_c(s)=\{s-1-c\}\{s-1+c\}\zeta(s+c)\zeta(s-c).          \tag{31}
 \]
 
-En su semiplano Euler,
+In its Euler half-plane,
 
 \[
  \mathcal L_c(s)=\mathcal L(s-c)+\mathcal L(s+c)
  =\sum_m{2\Lambda(m)\cosh(c\log m)\over m^s}.            \tag{32}
 \]
 
-La misma cancelación de (11)--(13) da
+The same cancellation as (11)--(13) gives
 
 \[
  \boxed{
@@ -453,55 +455,56 @@ La misma cancelación de (11)--(13) da
  -{1\over(s-1-c)^2}-{1\over(s-1+c)^2}.}                  \tag{33}
 \]
 
-El completado tampoco introduce pares cruzados:
+The completion also introduces no crossed pairs:
 
 \[
  \{\log G(s+c)+\log G(s-c)\}''
  =(\log G)''(s+c)+(\log G)''(s-c).                        \tag{33a}
 \]
 
-Otra vez no sobreviven pares entre primos distintos. Además
-\(\log(p^k)=\sum_{j=1}^k\log p\), de modo que el primer término de (33)
-admite el mismo marcado uniforme anidado que (14), aunque su peso exterior
-dependa de \(k\). El completado \(\xi(s+c)\xi(s-c)\) tiene ceros a ambos
-lados de \(\Re s=1/2\) y coeficientes de Li exponencialmente negativos en
-una subsucesión (`104_48`, (21)--(23c)).
+Again, no pairs between distinct primes survive. Moreover
+\(\log(p^k)=\sum_{j=1}^k\log p\), so the first term of (33)
+admits the same uniform nested marking as (14), even though its outer
+weight depends on \(k\). The completion \(\xi(s+c)\xi(s-c)\) has zeros on
+both sides of \(\Re s=1/2\) and exponentially negative Li coefficients
+along a subsequence (`104_48`, (21)--(23c)).
 
-Así, segundo momento, sustracción conectada, marca interior uniforme,
-canales polares y Gamma no bastan como axiomas abstractos. Una desigualdad
-válida todavía podría usar el valor exterior exacto
-\(\Lambda(p^k)=\log p\), que (32) pierde; pero el Hessiano de segundo orden
-no genera interacción alguna entre torres para explotarlo.
+Thus second moment, connected subtraction, uniform interior mark, and
+polar and Gamma channels do not suffice as abstract axioms. A valid
+inequality could still use the exact outer value
+\(\Lambda(p^k)=\log p\), which (32) loses; but the second-order Hessian
+generates no interaction between towers to exploit it.
 
-## 8. Veredicto
+## 8. Verdict
 
-Queda probado incondicionalmente:
+The following is proved unconditionally:
 
-1. el selector exacto de dos marcas y sus kernels `lcm` (6)--(9);
-2. la cancelación conectada de todos los pares \(p\ne q\) y de los cruces
-   primo--polo (11)--(13);
-3. la forma anidada torre--polo--Gamma (3), (14)--(19);
-4. la reconstrucción exacta del margen (17), (20)--(21);
-5. el cambio de signo racional del Hessiano completo (22)--(25);
-6. los dos signos del cociclo Laguerre (26)--(28);
-7. el flujo cuadrático (30) y su análogo desplazado (33).
+1. the exact two-mark selector and its `lcm` kernels (6)--(9);
+2. the connected cancellation of all pairs \(p\ne q\) and of the
+   prime--pole crossings (11)--(13);
+3. the nested tower--pole--Gamma form (3), (14)--(19);
+4. the exact reconstruction of the margin (17), (20)--(21);
+5. the rational sign change of the complete Hessian (22)--(25);
+6. both signs of the Laguerre cocycle (26)--(28);
+7. the quadratic flux (30) and its shifted analogue (33).
 
-El resultado no es la cota (1). El frente superviviente se estrecha una
-vez más: una cota proporcional debe retener una correlación **desconectada
-y no lineal** antes de que el logaritmo elimine las interacciones entre
-torres. Aumentar el orden del cumulante conectado del observable aditivo
-\(\log N\) no sirve, por (15a)--(15d). El mecanismo debe además usar la
-multiplicidad exterior unitaria para rechazar (32). No se ha construido esa
-desigualdad.
+The result is not the bound (1). The surviving front narrows once more:
+a proportional bound must retain a **disconnected and nonlinear**
+correlation before the logarithm removes the interactions between towers.
+Raising the order of the connected cumulant of the additive observable
+\(\log N\) does not help, by (15a)--(15d). The mechanism must also use the
+unit outer multiplicity to reject (32). That inequality has not been
+constructed.
 
-## 9. Reproducción
+## 9. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 connected_two_tower_flux_gate_check.py
 ```
 
-El checker usa solo enteros y `Fraction`. Verifica la cancelación simbólica
-de (11)--(13), la renovación anidada finita, el kernel `lcm`, los
-certificados racionales (24)--(25), los dos signos exactos del cociclo
-Laguerre en grado 151 y la identidad de flujo (30). No evalúa A1 ni RH.
+The checker uses only integers and `Fraction`. It verifies the symbolic
+cancellation of (11)--(13), the finite nested renewal, the `lcm` kernel,
+the rational certificates (24)--(25), the two exact signs of the Laguerre
+cocycle at degree 151, and the flux identity (30). It does not evaluate A1
+or RH.

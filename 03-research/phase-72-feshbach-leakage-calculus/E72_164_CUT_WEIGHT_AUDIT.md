@@ -1,7 +1,6 @@
 # E72.164 -- Cut-weight audit for F2B-PSD
 
-**Date:** 2026-07-09.
-**Role:** test whether the two-block cut `L/2` is optimal for fixed weights.
+**Purpose:** test whether the two-block cut `L/2` is optimal for fixed weights.
 
 ## 0. Question
 

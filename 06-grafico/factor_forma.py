@@ -1,16 +1,16 @@
 """
-Factor de forma espectral K(tau): el diagnostico central del caos cuantico.
+Spectral form factor K(tau): the central diagnostic of quantum chaos.
 
-K(tau) = (1/N) | sum_j exp(i 2pi tau w_j) |^2   sobre los ceros desdoblados w_j.
+K(tau) = (1/N) | sum_j exp(i 2pi tau w_j) |^2   over the unfolded zeros w_j.
 
-Firma del CAOS CUANTICO (Bohigas-Giannoni-Schmit):
-  - 'rampa' lineal K(tau) ~ tau para tau < 1  (correlaciones GUE)
-  - 'meseta' K(tau) ~ 1 para tau > 1          (rigidez, tiempo de Heisenberg)
-A tau chico, las desviaciones estan gobernadas por los PRIMOS (orbitas
-periodicas, aproximacion diagonal de Berry).
+Signature of QUANTUM CHAOS (Bohigas-Giannoni-Schmit):
+  - linear 'ramp' K(tau) ~ tau for tau < 1  (GUE correlations)
+  - 'plateau' K(tau) ~ 1 for tau > 1        (rigidity, Heisenberg time)
+At small tau the deviations are governed by the PRIMES (periodic
+orbits, Berry's diagonal approximation).
 
-Si los ceros muestran rampa+meseta, son un espectro de caos cuantico:
-autovalores de un operador autoadjunto de un sistema clasico caotico.
+If the zeros show ramp+plateau, they are a quantum-chaos spectrum:
+eigenvalues of a self-adjoint operator of a chaotic classical system.
 """
 import math
 import numpy as np
@@ -22,29 +22,29 @@ def N_smooth(t):
 w = np.array([N_smooth(t) for t in g]); w = w[np.isfinite(w)]
 N = len(w)
 
-# K(tau) cruda
+# raw K(tau)
 taus = np.linspace(0.001, 2.5, 4000)
 K = np.empty_like(taus)
 for i, tau in enumerate(taus):
     K[i] = np.abs(np.sum(np.exp(1j*2*np.pi*tau*w)))**2 / N
 
-# suavizado (media movil) para ver rampa+meseta bajo el ruido
+# smoothing (moving average) to see ramp+plateau under the noise
 def smooth(y, win):
     k = np.ones(win)/win
     return np.convolve(y, k, mode="same")
 Ks = smooth(K, 80)
 
-# GUE teorico: K_connected(tau) = min(tau,1); K = min(tau,1) + delta-parte
+# theoretical GUE: K_connected(tau) = min(tau,1); K = min(tau,1) + delta part
 gue = np.minimum(taus, 1.0)
 
 fig, ax = plt.subplots(figsize=(14, 7))
-ax.plot(taus, K, color="#c4b5fd", linewidth=0.5, alpha=0.6, label="K(tau) cruda (10000 ceros)")
-ax.plot(taus, Ks, color="#7c3aed", linewidth=2.2, label="K(tau) suavizada")
+ax.plot(taus, K, color="#c4b5fd", linewidth=0.5, alpha=0.6, label="raw K(tau) (10000 zeros)")
+ax.plot(taus, Ks, color="#7c3aed", linewidth=2.2, label="smoothed K(tau)")
 ax.plot(taus, gue, color="#dc2626", linewidth=2.2, linestyle="--",
-        label="GUE: rampa min(tau,1) + meseta")
-ax.axvline(1.0, color="#16a34a", linewidth=1.2, linestyle=":", label="tau=1 (tiempo de Heisenberg)")
-ax.set_title("Factor de forma K(tau): RAMPA + MESETA = firma de caos cuantico en los ceros")
-ax.set_xlabel("tau  (tiempo, en unidades del tiempo de Heisenberg)")
+        label="GUE: ramp min(tau,1) + plateau")
+ax.axvline(1.0, color="#16a34a", linewidth=1.2, linestyle=":", label="tau=1 (Heisenberg time)")
+ax.set_title("Form factor K(tau): RAMP + PLATEAU = quantum-chaos signature in the zeros")
+ax.set_xlabel("tau  (time, in units of the Heisenberg time)")
 ax.set_ylabel("K(tau)")
 ax.set_ylim(0, 1.6)
 ax.grid(True, alpha=0.3)
@@ -52,9 +52,9 @@ ax.legend(loc="lower right")
 
 plt.tight_layout()
 plt.savefig("factor_forma.png", dpi=130)
-print("Guardado: factor_forma.png")
+print("Saved: factor_forma.png")
 
-# diagnostico rampa
+# ramp diagnostic
 for t in [0.25, 0.5, 0.75, 1.0, 1.5, 2.0]:
     i = np.argmin(np.abs(taus-t))
     print(f"  tau={t:.2f}:  K={Ks[i]:.3f}   GUE={gue[i]:.3f}")

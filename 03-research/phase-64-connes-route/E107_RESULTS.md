@@ -1,6 +1,6 @@
 # E107 — the ω↓0 continuation margin: a regularized positivity that survives the limit
 
-**Date:** 2026-06-28 · mpmath dps=40 · the RH-strength probe of Connes' regularized continuation.
+mpmath dps=40 · the RH-strength probe of Connes' regularized continuation.
 
 ## Question
 

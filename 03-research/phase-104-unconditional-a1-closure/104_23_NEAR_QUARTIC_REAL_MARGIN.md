@@ -1,44 +1,45 @@
-# 104_23 — Margen real casi cuártico y polo hipergeométrico
+# 104_23 — Near-quartic real margin and the hypergeometric pole
 
-> **Corrección vinculante (`104_56A`).** Las identidades y el Teorema 1.1
-> de este documento siguen siendo correctos para la transferencia uniforme
-> obtenida del único dato bruto \(T_n\ge1000\). Lo que se retira es su
-> interpretación como frente intrínseco. A0 es válido para todo cutoff mayor:
-> si \(4\lambda_n>A_n\), un cutoff adaptado suficientemente grande cierra A1.
-> Además \(4\lambda_n-A_n\ge0\) para todos los índices prueba RH directamente,
-> aunque no fuerce A1 en un cutoff finito prefijado mediante la sola cota
-> bilateral de A0.
+> **Binding correction (`104_56A`).** The identities and Theorem 1.1
+> of this document remain correct for the uniform transfer obtained from the
+> single raw datum \(T_n\ge1000\). What is withdrawn is its interpretation as
+> an intrinsic front. A0 holds for every larger cutoff: if \(4\lambda_n>A_n\),
+> a sufficiently large adapted cutoff closes A1.
+> Moreover \(4\lambda_n-A_n\ge0\) for every index directly proves RH,
+> even though it does not force A1 at a prefixed finite cutoff through A0's
+> two-sided bound alone.
 
-**Rol.** Extraer una elección uniforme más débil a partir de la mejora de
-`104_22` y del piso declarado \(T_n\ge1000\). Con el cutoff efectivo
-prefijado por ese único piso, la A1 original no requiere siquiera
-\(3\lambda_n-A_n\ge0\): basta un margen real con exponente
+**Role.** Extract a weaker uniform choice from the improvement of
+`104_22` and from the declared floor \(T_n\ge1000\). With the effective
+cutoff fixed by that single floor, the original A1 does not even require
+\(3\lambda_n-A_n\ge0\): a real margin with exponent
 
 \[
  r_*={2002\over501}=3.996007984\ldots<4.          \tag{1}
 \]
 
-Los canales Euler y Gamma conservan positividad para exponentes reales por
-divisibilidad infinita. El precio es que el polo deja de tener cuatro
-canales y pasa a una densidad hipergeométrica firmada. Este documento prueba
-la reducción y la positividad de los dos canales aritmético--Gamma; no prueba
-el signo final del polo acoplado, A1 ni RH.
+suffices. The Euler and Gamma channels preserve positivity for real
+exponents by infinite divisibility. The price is that the pole no longer
+has four channels and instead becomes a signed hypergeometric density.
+This document proves the reduction and the positivity of the two
+arithmetic–Gamma channels; it does not prove the final sign of the coupled
+pole, A1, or RH.
 
-## 1. Familia deducida de A0 y del piso del cutoff
+## 1. Family deduced from A0 and from the cutoff floor
 
-Por `104_22`, para todo cutoff de Phase 104,
+By `104_22`, for every Phase 104 cutoff,
 
 \[
  |R_n(T_n)|\le {A_n\over4(1+T_n)}.                \tag{2}
 \]
 
-Sea \(r>1\) y supóngase
+Let \(r>1\) and suppose
 
 \[
  D_n^{[r]}:=r\lambda_n-A_n\ge0.                  \tag{3}
 \]
 
-Entonces
+Then
 
 \[
  \begin{aligned}
@@ -49,64 +50,65 @@ Entonces
  \end{aligned}
 \]
 
-El lado derecho es no negativo exactamente cuando
+The right-hand side is non-negative exactly when
 
 \[
  \boxed{r\le r_{\max}(T_n):={4(1+T_n)\over T_n+2}.} \tag{5}
 \]
 
-La función \(r_{\max}(T)\) es creciente. La tripla efectiva vinculante de
-`104_01` impone \(T_n\ge U_0=1000\), de modo que el valor fijo
+The function \(r_{\max}(T)\) is increasing. The binding effective triple
+of `104_01` imposes \(T_n\ge U_0=1000\), so that the fixed value
 
 \[
  \boxed{r_*:=r_{\max}(1000)={4\cdot1001\over1002}
  ={2002\over501}}                                  \tag{6}
 \]
 
-sirve simultáneamente para todo \(n\). Así:
+serves simultaneously for every \(n\). Thus:
 
-**Teorema 1.1.** Para cada \(n\ge150\),
+**Theorem 1.1.** For every \(n\ge150\),
 
 \[
  D_n^{[r_*]}\ge0\quad\Longrightarrow\quad C_n(T_n)\ge0. \tag{7}
 \]
 
-Independientemente, por la identidad compacta ya probada,
-\(C_n(T_n)\ge0\Longleftrightarrow\mathrm{A1}_n\). Por tanto (7) implica
-la A1 original.
+Independently, by the already-proved compact identity,
+\(C_n(T_n)\ge0\Longleftrightarrow\mathrm{A1}_n\). Hence (7) implies
+the original A1.
 
-El target (7) es estrictamente más débil que el cúbico: de
-\(3\lambda_n-A_n\ge0\) se sigue
-\(r_*\lambda_n-A_n\ge(r_*/3-1)A_n>0\), pero no recíprocamente.
+Target (7) is strictly weaker than the cubic one: from
+\(3\lambda_n-A_n\ge0\) it follows that
+\(r_*\lambda_n-A_n\ge(r_*/3-1)A_n>0\), but not conversely.
 
-## 2. Germen completado para exponente real
+## 2. Completed germ for a real exponent
 
-Con
+With
 
 \[
  G(s)=s\pi^{-s/2}\Gamma(s/2),\qquad
  Y_r(s)={\xi(s)^r\over G(s)},                     \tag{8}
 \]
 
-la potencia se entiende como el germen analítico determinado por
-\(r\log\xi(s)-\log G(s)\) alrededor de \(s=1\). No se afirma que
-\(Y_r\) sea una función entera cuando \(r\notin\mathbb Z\); solo se usa su logaritmo
-local, que es monovaluado porque \(\xi(1)\ne0\). Se tiene exactamente
+the power is understood as the analytic germ determined by
+\(r\log\xi(s)-\log G(s)\) around \(s=1\). It is not claimed that
+\(Y_r\) is an entire function when \(r\notin\mathbb Z\); only its local
+logarithm is used, which is single-valued because \(\xi(1)\ne0\). One has
+exactly
 
 \[
  \log{Y_r((1-z)^{-1})\over Y_r(1)}
  =\sum_{n\ge1}{r\lambda_n-A_n\over n}z^n.         \tag{9}
 \]
 
-En el semiplano real \(s>1+u\), donde todos los factores son positivos, el
-cociclo es inequívoco y
+In the real half-plane \(s>1+u\), where every factor is positive, the
+cocycle is unambiguous and
 
 \[
  \boxed{
  {Y_r(s-u)\over Y_r(s)}=H_u(s)^rK_u(s)^{r-1}.}    \tag{10}
 \]
 
-La normalización directa
+The direct normalization
 
 \[
  {Y_r(s_\varepsilon(z)-u)/Y_r(s_\varepsilon(z))-1
@@ -115,7 +117,7 @@ La normalización directa
  \quad u=c\varepsilon,                            \tag{11}
 \]
 
-satisface
+satisfies
 
 \[
  \boxed{
@@ -123,19 +125,19 @@ satisface
  \longrightarrow-(r\lambda_n-A_n).}              \tag{12}
 \]
 
-Por (7), probar que el límite de (11) es no positivo para \(r=r_*\) y
-\(n\ge150\) prueba la A1 original.
+By (7), proving that the limit of (11) is non-positive for \(r=r_*\) and
+\(n\ge150\) proves the original A1.
 
-## 3. Positividad Euler para toda potencia real
+## 3. Euler positivity for every real power
 
-Póngase \(A_u(s)=\zeta(s-u)/\zeta(s)\). En \(\Re s>1+u\),
+Set \(A_u(s)=\zeta(s-u)/\zeta(s)\). In \(\Re s>1+u\),
 
 \[
  \log A_u(s)
  =\sum_p\sum_{k\ge1}{p^{ku}-1\over k p^{ks}},     \tag{13}
 \]
 
-y cada coeficiente es no negativo. Para todo \(r>0\),
+and every coefficient is non-negative. For every \(r>0\),
 
 \[
  A_u(s)^r
@@ -144,10 +146,10 @@ y cada coeficiente es no negativo. Para todo \(r>0\),
  \right)                                          \tag{14}
 \]
 
-tiene una serie de Dirichlet con coeficientes no negativos: se obtiene
-exponenciando, primo por primo, series con coeficientes no negativos y
-término constante uno. En lenguaje probabilístico, la ley de \(\log N\)
-es compound-Poisson con medida de Lévy
+has a Dirichlet series with non-negative coefficients: this follows from
+exponentiating, prime by prime, series with non-negative coefficients and
+constant term one. In probabilistic language, the law of \(\log N\) is
+compound-Poisson with Lévy measure
 
 \[
  \boxed{
@@ -157,12 +159,12 @@ es compound-Poisson con medida de Lévy
  \delta_{k\log p}.}                               \tag{15}
 \]
 
-No se necesita que \(r\) sea entero.
+\(r\) need not be an integer.
 
-## 4. Positividad Gamma para toda potencia real
+## 4. Gamma positivity for every real power
 
-La razón Gamma normalizada de `104_21` es infinitamente divisible. Su
-medida de Lévy es
+The normalized Gamma ratio of `104_21` is infinitely divisible. Its Lévy
+measure is
 
 \[
  \nu_K(x)\,dx
@@ -170,24 +172,23 @@ medida de Lévy es
    \over x(1-e^{-2x})}\,dx\ge0.                  \tag{16}
 \]
 
-Por tanto \(K_u^{r-1}\), normalizada en \(s=1+\varepsilon\), es una
-transformada de Laplace de medida positiva para todo \(r>1\), con medida de
-Lévy \((r-1)\nu_K\). En particular esto vale para \(r_*\).
+Hence \(K_u^{r-1}\), normalized at \(s=1+\varepsilon\), is the Laplace
+transform of a positive measure for every \(r>1\), with Lévy measure
+\((r-1)\nu_K\). In particular this holds for \(r_*\).
 
-Las secciones 3--4 prueban que pasar de \(r=3\) a \(r_*\) no pierde la
-positividad de Euler ni de Gamma. El único canal firmado sigue siendo el
-polo.
+Sections 3–4 prove that passing from \(r=3\) to \(r_*\) loses neither
+Euler nor Gamma positivity. The only signed channel remains the pole.
 
-## 5. Densidad exacta del polo real
+## 5. Exact density of the real pole
 
-Para \(s-1=\varepsilon+t\),
+For \(s-1=\varepsilon+t\),
 
 \[
  \left(1-{u\over s-1}\right)^r
  =\sum_{j\ge0}(-1)^j{r\choose j}{u^j\over(\varepsilon+t)^j}. \tag{17}
 \]
 
-Su transformada inversa de Laplace es
+Its inverse Laplace transform is
 
 \[
  \delta_0(dy)+e^{-\varepsilon y}
@@ -195,24 +196,24 @@ Su transformada inversa de Laplace es
  {u^jy^{j-1}\over(j-1)!}\,dy.                    \tag{18}
 \]
 
-Tras \(u=c\varepsilon\) y \(q=\varepsilon y\), la densidad continua se
-suma exactamente como
+After \(u=c\varepsilon\) and \(q=\varepsilon y\), the continuous density
+sums exactly to
 
 \[
  \boxed{
  -rc\,e^{-q}\,{}_1F_1(1-r;2;cq)\,dq.}            \tag{19}
 \]
 
-Para \(3<r<4\), los canales \(j=1,3\) de (18) son negativos y los canales
-\(j=2\) y \(j\ge4\) son positivos. En particular (19) es negativa en
-\(q=0\); no es una medida positiva y no permite una prueba canal a canal.
-La serie converge para todo \(q\), así que (19) es una identidad, no una
-expansión asintótica.
+For \(3<r<4\), channels \(j=1,3\) of (18) are negative and channels
+\(j=2\) and \(j\ge4\) are positive. In particular (19) is negative at
+\(q=0\); it is not a positive measure and does not allow a
+channel-by-channel proof. The series converges for every \(q\), so (19)
+is an identity, not an asymptotic expansion.
 
-## 6. Stop-gate uniforme de medida positiva
+## 6. Uniform positive-measure stop-gate
 
-El defecto no desaparece al multiplicar por los canales aritmético y Gamma.
-Normalicemos en \(s_0=1+\varepsilon\) el producto polo--Gamma
+The defect does not disappear upon multiplying by the arithmetic and Gamma
+channels. Normalize at \(s_0=1+\varepsilon\) the pole–Gamma product
 
 \[
  B_{r,u}(t)=\left({P_u(s_0+t)\over P_u(s_0)}\right)^r
@@ -220,8 +221,8 @@ Normalicemos en \(s_0=1+\varepsilon\) el producto polo--Gamma
  \qquad P_u(s)=1-{u\over s-1}.                    \tag{20}
 \]
 
-En \(u=0\), la parte continua de la transformada inversa de Laplace de
-\(\partial_uB_{r,u}|_{u=0}\) es
+At \(u=0\), the continuous part of the inverse Laplace transform of
+\(\partial_uB_{r,u}|_{u=0}\) is
 
 \[
  \boxed{
@@ -230,7 +231,7 @@ En \(u=0\), la parte continua de la transformada inversa de Laplace de
  +(r-1){e^{-(3+\varepsilon)x}\over1-e^{-2x}}.}    \tag{21}
 \]
 
-En \(x_0=\frac12\log2\), antes del primer átomo primo,
+At \(x_0=\frac12\log2\), before the first prime atom,
 
 \[
  f_{r,\varepsilon}(x_0)
@@ -238,22 +239,23 @@ En \(x_0=\frac12\log2\), antes del primer átomo primo,
  \qquad(r>1).                                     \tag{22}
 \]
 
-El factor aritmético normalizado \(A_u^r\) tiene masa positiva en cero y
-todo su soporte restante en \([\log2,\infty)\). Por ello no puede alterar
-la densidad en un entorno de \(x_0\). Tomando un test no negativo soportado
-en ese entorno, (22) prueba que, para cada \(r>1\) y \(\varepsilon>0\)
-fijos, existe \(u_0(r,\varepsilon)>0\) tal que para
-\(0<u<u_0(r,\varepsilon)\) el cociclo completado normalizado no es la
-transformada de Laplace de una medida positiva.
+The normalized arithmetic factor \(A_u^r\) has positive mass at zero and
+all its remaining support in \([\log2,\infty)\). Hence it cannot alter the
+density in a neighborhood of \(x_0\). Taking a non-negative test function
+supported in that neighborhood, (22) proves that, for each fixed \(r>1\)
+and \(\varepsilon>0\), there exists \(u_0(r,\varepsilon)>0\) such that for
+\(0<u<u_0(r,\varepsilon)\) the normalized completed cocycle is not the
+Laplace transform of a positive measure.
 
-Los cuantificadores también cubren el camino correlacionado, pero esto no se
-deduce de un Taylor uniforme en \(u\): la normalización polar contiene
-\((1-c)^{-r}\). Se verifica directamente. Sea \(\varphi\ge0\) suave, no nula,
-con soporte en un intervalo compacto alrededor de \(x_0\) contenido en
-\((0,\log2)\), y sea \(\mu_{r,c\varepsilon,\varepsilon}\) la inversa de
-Laplace del cociclo completo normalizado. Como no hay átomos aritméticos en
-ese soporte, y la masa en cero del canal Euler tiende a \((1-c)^r\) y cancela
-el factor polar \((1-c)^{-r}\), la expansión diagonal da
+The quantifiers also cover the correlated path, but this does not follow
+from a Taylor expansion uniform in \(u\): the polar normalization contains
+\((1-c)^{-r}\). It is checked directly. Let \(\varphi\ge0\) be smooth,
+nonzero, with support in a compact interval around \(x_0\) contained in
+\((0,\log2)\), and let \(\mu_{r,c\varepsilon,\varepsilon}\) be the inverse
+Laplace transform of the full normalized cocycle. Since there are no
+arithmetic atoms in that support, and the mass at zero of the Euler
+channel tends to \((1-c)^r\) and cancels the polar factor
+\((1-c)^{-r}\), the diagonal expansion gives
 
 \[
  \langle\varphi,\mu_{r,c\varepsilon,\varepsilon}\rangle
@@ -261,26 +263,26 @@ el factor polar \((1-c)^{-r}\), la expansión diagonal da
  \left[-r+(r-1){e^{-3x}\over1-e^{-2x}}\right]dx+o(\varepsilon). \tag{22a}
 \]
 
-El corchete de (22a) vale \(-r+(r-1)/\sqrt2<0\) en \(x_0\), y sigue siendo
-negativo en un soporte suficientemente pequeño. Por ello el lado izquierdo
-es negativo para todo \(\varepsilon>0\) suficientemente pequeño sobre
-\(u=c\varepsilon\). Aquí el \(o(\varepsilon)\) se entiende para
-\(c,r\) y el test compacto \(\varphi\) fijos.
+The bracket in (22a) equals \(-r+(r-1)/\sqrt2<0\) at \(x_0\), and remains
+negative on a sufficiently small support. Hence the left-hand side is
+negative for every sufficiently small \(\varepsilon>0\) along
+\(u=c\varepsilon\). Here \(o(\varepsilon)\) is understood for fixed
+\(c,r\) and fixed compact test function \(\varphi\).
 
-Así quedan descartadas uniformemente las rutas Bernstein, medida positiva
-y orden estocástico, incluso en el régimen \(u\downarrow0\) que extrae
-(12). Esto no decide los coeficientes Cayley individuales.
+Thus the Bernstein, positive-measure, and stochastic-order routes are
+uniformly ruled out, even in the regime \(u\downarrow0\) that extracts
+(12). This does not decide the individual Cayley coefficients.
 
-## 7. Diagnóstico y frente exacto
+## 7. Diagnostic and exact front
 
-Para exponente real, una extracción de Cauchy requiere continuar de forma
-coherente la rama de \(r\log\xi\) a lo largo de todo el contorno. La versión
-actual de `tools/cubic_cocycle_probe.py` usa logaritmos principales punto a
-punto; sus filas no enteras se consideran exploratorias y **no se usan como
-evidencia** en este documento.
+For a real exponent, a Cauchy extraction requires coherently continuing
+the branch of \(r\log\xi\) along the whole contour. The current version of
+`tools/cubic_cocycle_probe.py` uses pointwise principal logarithms; its
+non-integer rows are considered exploratory and **are not used as
+evidence** in this document.
 
-La elección uniforme obtenida usando únicamente el piso declarado
-\(T_n\ge1000\) es
+The uniform choice obtained using only the declared floor
+\(T_n\ge1000\) is
 
 \[
  \boxed{
@@ -288,15 +290,17 @@ La elección uniforme obtenida usando únicamente el piso declarado
  \quad r_*={2002\over501}.}                       \tag{23}
 \]
 
-Equivalentemente, hay que controlar globalmente (11) después de combinar
-la ley compound-Poisson (15), la ley Gamma (16) y la densidad polar (19).
-El gate es RH-strength, pero es cuantitativamente más débil que todos los
-márgenes usados antes en la fase.
+Equivalently, one must globally control (11) after combining the
+compound-Poisson law (15), the Gamma law (16), and the polar density
+(19). The gate is RH-strength, but it is quantitatively weaker than every
+margin used earlier in the phase.
 
-## Estado
+## Status
 
-- **Probado:** Teorema 1.1, el cociclo real local, la positividad
-  infinitamente divisible de Euler--Gamma y la fórmula polar (19).
-- **Avance:** usando solo \(T_n\ge1000\), el coeficiente exigido baja de \(1/3\) a
-  \(1/r_*=501/2002\approx0.25024975\), muy cerca del mínimo \(1/4\).
-- **Abierto:** el signo global de (11); no se reclama A1 ni RH.
+- **Proved:** Theorem 1.1, the local real cocycle, the infinitely
+  divisible Euler–Gamma positivity, and the polar formula (19).
+- **Progress:** using only \(T_n\ge1000\), the required coefficient drops
+  from \(1/3\) to \(1/r_*=501/2002\approx0.25024975\), very close to the
+  minimum \(1/4\).
+- **Open:** the global sign of (11); neither A1 nor RH is claimed.
+</content>

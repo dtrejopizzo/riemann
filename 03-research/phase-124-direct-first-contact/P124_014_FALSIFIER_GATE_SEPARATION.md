@@ -94,7 +94,7 @@ for `a=0.35`, `\lambda_{\min}(\mathcal W)` is still positive
 `T_{\mathcal W}<T_q\approx1.742`.  This is case 2, "shielding", observed
 directly.
 
-**[phase 134, 2026-09-12 — resolution note of record, from Paper 46 §9.3(3)
+**[phase 134 — resolution note of record, from Paper 46 §9.3(3)
 and `R134_002` §6(3), each an independent re-run.  Section 3 already declares
 "one resolution only, no convergence study", so this note is **within** the
 declared scope and does not contradict it; it records what that disclaimer

@@ -1,0 +1,45 @@
+{
+  "status": "PASS: covariance/compensation checks; no arithmetic sign law proved",
+  "maximum_twisted_divisor_error": 5.236911533344271e-15,
+  "contact_compensation": {
+    "schur_residual": 0.0,
+    "exact_compensation": "19/18",
+    "first_derivative_error": 4.418053285847864e-07,
+    "second_coefficient_error": 1.2994901744082057e-07
+  },
+  "negative_spectrum_orbits": [
+    {
+      "theta": 0.0,
+      "eigenvalues": [
+        -1.0000000000000009,
+        1.9999999999999984,
+        5.000000000000001
+      ]
+    },
+    {
+      "theta": 0.3,
+      "eigenvalues": [
+        -1.0000000000000007,
+        1.9999999999999967,
+        5.000000000000002
+      ]
+    },
+    {
+      "theta": 1.2,
+      "eigenvalues": [
+        -1.0000000000000002,
+        1.999999999999999,
+        5.000000000000001
+      ]
+    },
+    {
+      "theta": -2.0,
+      "eigenvalues": [
+        -0.9999999999999998,
+        1.9999999999999998,
+        5.000000000000002
+      ]
+    }
+  ],
+  "scope": "Finite matrix models test operator algebra, not a continuum Galerkin enclosure."
+}

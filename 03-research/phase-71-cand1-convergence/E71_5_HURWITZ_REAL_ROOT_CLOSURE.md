@@ -1,7 +1,6 @@
 # E71.5 -- Hurwitz real-root closure theorem for CAND-1
 
-**Date:** 2026-07-07.
-**Role:** remove the circular use of pre-known zero centers in E71.4 and state the clean complex
+**Purpose:** remove the circular use of pre-known zero centers in E71.4 and state the clean complex
 analytic closure theorem.
 
 ## Why this is the right upgrade

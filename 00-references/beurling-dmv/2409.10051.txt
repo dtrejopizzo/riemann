@@ -1,0 +1,2858 @@
+ON ZERO-DENSITY ESTIMATES FOR BEURLING ZETA FUNCTIONS
+FREDERIK BROUCKE
+
+arXiv:2409.10051v1 [math.NT] 16 Sep 2024
+
+Abstract. We show the zero-density estimate
+4(1−α)
+
+N (ζP ; α, T ) ≪ T 3−2α−θ (log T )9
+
+for Beurling zeta functions ζP attached to Beurling generalized number systems with integers
+distributed as NP (x) = Ax + O(xθ ). We also show a similar zero-density estimate for a
+broader class of general Dirichlet series, consider improvements conditional on finer pointwise
+or L2k -bounds of ζP , and discuss some optimality questions.
+
+1. Introduction
+A Beurling generalized number system is a pair (P, N ), where P = (pj )j , the sequence
+of generalized primes, consists of real numbers pj with 1 < p1 ≤ p2 ≤ · · · and pj → ∞,
+and N = (nj )j , the sequence of generalized integers, consists of all possible products of the
+generalized primes, including 1. One also orders this sequence in a non-decreasing fashion.
+We allow repetitions in both sequences; in the sequence N , a real number occurs as many
+times as its number of distinct factorizations into generalized primes.
+This notion was introduced by Beurling [1], who wanted to investigate the P
+minimal assumptions needed to show the prime number theorem. Denoting πP (x) =
+pj ≤x 1 and
+P
+−γ
+NP (x) = nj ≤x 1, his theorem states the asymptotic NP (x) = Ax + O(x(log x) ) where A
+is some positive constant and γ > 3/2, yields the prime number theorem in the form
+(1.1)
+Rx
+
+−1
+
+πP (x) ∼ Li(x).
+
+Here, Li(x) = 2 (log u) du stands for the logarithmic integral.
+We consider Beurling generalized number systems (P, N ) for which the integers are wellbehaved, meaning that there exists a number θ ∈ [0, 1) for which
+(1.2)
+
+NP (x) = Ax + O(xθ ),
+
+for some constant A > 0, the density of the integers. If we want to mention the exponent
+θ, we will say the the integers are θ-well-behaved. This assumption is quite natural, for
+A
+instance it readily yields the analytic continuation of ζP (s) − s−1
+to the half-plane Re s > θ.
+Here ζP (s) is the Beurling zeta function associated with the system (P, N ):
+∞
+∞
+Y
+X
+1
+1
+=
+ζP (s) =
+, Re s > 1.
+s
+n
+1 − p−s
+j
+j=1
+j=1 j
+Besides being of independent interest, the class of Beurling zeta functions coming from
+well-behaved integers is also an interesting “testing ground” to analyze the strength of the
+analytic techniques used occurring in the study of the Riemann zeta function in the critical
+2020 Mathematics Subject Classification. Primary 11N80, Secondary 11M26, 11M41.
+Key words and phrases. Beurling generalized prime number systems, well-behaved integers, zero-density
+estimates.
+1
+
+2
+
+F. BROUCKE
+
+strip and the distribution of prime numbers. For example, the results of this paper can
+be regarded as a study on how far the classical zero-detection methods can be pushed in a
+general setting: our results apply to a very broad class of (general) Dirichlet series, which
+also includes many of the classical L-functions, see Theorem 1.3 and Remark 4.4 below.
+Our main goal is to obtain zero-density estimates. These are bounds for the number of
+zeros of ζP (s) in rectangles: let α > θ, T > 0, then we denote
+N(ζP ; α, T ) = #{ρ = β + iγ : ζP (ρ) = 0, β ≥ α, |γ| ≤ T }.
+We often simply write N(α, T ) if the Beurling zeta function is clear from the context. Classically, one can use such zero-density estimates to study the distribution of prime numbers in
+short intervals. This application is also present in the Beurling case. We refer to [2, Section
+4] for more details.
+From the Euler product representation of ζP (s), it is immediate that ζP (s) has no zeros
+with β > 1. Actually, the well-havedness of the integers (1.2) implies the zero-free region
+σ >1−
+
+C(1 − θ)
+, |t| ≥ T0 ,
+log|t|
+
+for some absolute constant C and some T0 depending on the system (P, N ). This was first
+shown by Landau [10] for Dedekind zeta functions attached to number fields, but his method
+readily applies to the Beurling case.
+We are thus interested in bounds of N(α, T ) in the critical range θ < α < 1. The local
+number of zeros can be bounded by an application of Jensen’s formula, see e.g. Lemma 4.3
+below, or [15, Lemma 3.3].
+Lemma 1.1. Let ζP (s) be the Beurling zeta function associated with a number system (P, N )
+with θ-well-behaved integers. For each T > 2 and α > θ, the number of zeros ρ = β + iγ of
+ζP (s) with β ≥ α and |γ| ∈ [T, T + 1] is bounded by Oα (log T ).
+From this lemma we see that N(α, T ) ≪α T log T . The goal of zero-density estimates
+is to improve upon this “trivial” estimate. More precisely, our goal is to find an abscissa
+σ0 ∈ (θ, 1) and a function c(α) < 1 for which a bound of the form
+N(α, T ) ≪ T c(α) (log T )O(1)
+
+or N(α, T ) ≪ε T c(α)+ε , for every ε > 0,
+
+holds uniformly for α > σ0 .
+For zeta functions of well-behaved number systems, a zero-density estimate was first shown
+by Sz. Révész in [16] under the additional assumptions N ⊆ N (the so-called integrality
+assumption) and a sort of “Ramanujan condition” expressing that N does not have too many
+repeated values. A little later, these restrictions could be removed, as found independently
+by Révész in [17] and by G. Debruyne and the author in [2], where the admissible values
+(1.3)
+
+σ0 =
+
+11 + θ
+,
+12
+
+c(α) =
+
+12(1 − α)
+,
+1−θ
+
+and σ0 =
+
+2+θ
+,
+3
+
+c(α) =
+
+c1 (α)(1 − α)
+,
+1−θ
+
+respectively, with c1 (α) an increasing function with c1 ( 2+θ
+) = 3 and c1 (1) = 4, were estab3
+lished. With the integrality assumption and the Ramanujan condition, the value of c(α) can
+be lowered further when α is sufficiently close to 1, as shown by J. Pintz and Révész in the
+2(1−α)
+recent preprint [14]. For example, they obtained N(α, T ) ≪ε T α−θ +ε when α is sufficiently
+close to 1.
+
+ON ZERO-DENSITY ESTIMATES FOR BEURLING ZETA FUNCTIONS
+
+3
+
+In this paper, we keep the general setup of θ-well-behaved integers without imposing
+additional assumptions. We obtain a zero-density estimate in the widest possible range
+α > σ0 = 1+θ
+and also lower the value of the function c(α) in (1.3). Our main result is
+2
+Theorem 1.2. Let (P, N ) be a Beurling number system satisfying (1.2) for some θ ∈ [0, 1).
+Then we have uniformly for α ≥ 1+θ
+and T ≥ 2,
+2
+(1.4)
+
+4(1−α)
+
+N(ζP ; α, T ) ≪ T 3−2α−θ (log T )9 .
+
+Applying this to the system (P, N) of rational primes and integers, for which we can take
+4(1−α)
+θ = 0, we obtain the estimate N(ζ; α, T ) ≪ T 3−2α (log T )9 for the number of zeros of the
+Riemann zeta function. This estimate was first shown by Titchmarsh [18] (with the power of
+log T replaced by T ε ), whose proof uses the approximate functional equation of the Riemann
+zeta function, which is in general not available for Beurling zeta functions.
+Our proof of Theorem 1.2 does not require any (approximate) functionalPequation and
+−s
+actually applies to quite a broad class of general Dirichlet series F (s) =
+j aj nj . An
+important aspect in the proof is the existence of the inverse of F , G(s) = 1/F (s) as a general
+Dirichlet series, so it is sensible to assume that (nj )j is a sequence of Beurling generalized
+integers. In fact, if it is not, we can without loss of generality consider F as a Dirichlet series
+over the multiplicative semigroup generated by (nj )j .
+Theorem 1.3. Let (nj )j≥1 (with n1 = 1) be a sequence of Beurling generalized integers
+satisfying N(x + xθ ) − N(x − xθ ) ≪ε xθ+ε for some θ ∈ [0, 1) and for every ε > 0. Let
+∞
+∞
+X
+X
+aj
+1
+bj
+F (s) = 1 +
+, G(s) =
+=1+
+s
+n
+F (s)
+ns
+j=2 j
+j=2 j
+be (general) Dirichlet series satisfying aj ≥ 0 and the “Ramanujan bound” aj ≪ε nεj , and
+bj ≪ε nεj for every ε > 0. Suppose further that
+X
+
+(1.5)
+A(x) :=
+aj = xP (log x) + O xθ (log x)q
+nj ≤x
+
+for a certain polynomial P of degree d and some q ∈ R. Then F (s) has meromorphic
+continuation to Re s > θ whose only singularity is a pole of order d at s = 1, and
+4(1−α)
+
+uniformly for α ≥ 1+θ
+.
+2
+
+N(F ; α, T ) ≪ε T 3−2α−θ +ε ;
+
+for every ε > 0,
+
+It is an interesting question whether some specific structure of the Beurling zeta function
+ζP (s), e.g. the fact that aj ≡ 1, or ζP having an Euler product, or simply having multiplicative
+coefficients, can be leveraged in some way to obtain a better zero-density estimate, or whether
+the number of zeros of ζP (s) can in general be as large (up to a factor T ε ) as the number of
+zeros of more general Dirichlet series F (s).
+If more analytic information of ζP (s) is available, then Theorem 1.2 can be improved. We
+,
+investigate the case of higher moment estimates or pointwise bounds on the line σ = 1+β
+2
+resulting in Theorems 5.1 and 5.2, respectively.
+The paper is organized as follows. First we discuss some preliminary results in Section 2.
+The two main technical ingredients are a mean value theorem for general Dirichlet polynomials and a second moment estimate for Beurling zeta functions. Next, we prove Theorem 1.2
+
+4
+
+F. BROUCKE
+
+in Section 3. We follow this up with Section 4, where we discuss the proof of Theorem 1.3.
+In Section 5 we prove the conditional improvements of Theorem 1.2, namely Theorems 5.1
+and 5.2. We also discuss a hypothetical improved mean value theorem in the style of Montgomery’s conjecture for Dirichlet polynomials. As alluded to, the range of validity α > 1+θ
+of
+2
+density estimates is optimal. When θ = 0, this follows simply from considering the Riemann
+zeta function. In the final section, we indicate why this range should be optimal for any
+value of θ, and prove this when θ > 1/2. We also make some comments on the question of
+the optimal value of c(α).
+2. Preliminary results
+The proof of Theorem 1.2 rests upon two main results: a mean value theorem for general
+Dirichlet polynomials, and a mean value theorem for Beurling zeta functions.
+The classical
+value theorem (see e.g. [12, Theorem 6.1]) for ordinary Dirichlet
+P mean
+−it
+polynomials
+relies on the separation of the frequencies log n, n ∈ N (see also
+n an n
+[13, Corollary 2]). A generalization of this result was established in [2], where the lack of
+separation of general frequencies log nj was remedied by introducing a factor χ, which counts
+the size of “local clusters” of nj ’s. Theorem 2.1 of [2] states:
+Theorem 2.1. Let N ≥ 2 and suppose that 1 ≤ n1 ≤ n2 ≤ . . . ≤ nJ ≤ N are real numbers.
+For λ > 0 denote by χ(x, λ) the number of nj ’s within distance λ of x:
+χ(x, λ) = #{j : |x − nj | ≤ λ}.
+
+Suppose aj (j = 1, . . . , J) are complex numbers, and set
+S(it) =
+
+J
+X
+aj
+
+nit
+j=1 j
+
+.
+
+Then for T0 ∈ R, T > 0, and η > 0 we have
+
+ J
+Z T0 +T
+1 X
+2
+2
+S(it) dt ≪ T +
+χ(nj , ηN) aj .
+η j=1
+T0
+Estimating a sum over well-spaced points by an integral, one obtains the following discrete
+variant, see [2, Theorem 2.2].
+Theorem 2.2. With the same notation as in Theorem 2.1, let δ > 0, and let T ⊂ [T0 +
+δ/2, T0 + T − δ/2] be a set of δ-well-spaced points, meaning that |t − t′ | ≥ δ whenever t, t′ ∈ T
+with t 6= t′ . Then
+
+
+ J
+X
+1
+1 X
+2
+2
+S(it) ≪ T +
+log N +
+χ(nj , ηN) aj .
+η
+δ j=1
+t∈T
+We shall also need an estimate for the sum over complex numbers s = σ + it with wellspaced imaginary parts, but for which the real parts need not be the same.
+Theorem 2.3. Let α > 0, δ > 0, and S a set of complex numbers s = σ + it satisfying
+σ ≥ α,
+
+T0 + δ/2 ≤ t ≤ T0 + T − δ/2,
+
+and with the property that ∀s, s′ ∈ S: s 6= s′ =⇒ |Im s − Im s′ | ≥ δ.
+
+ON ZERO-DENSITY ESTIMATES FOR BEURLING ZETA FUNCTIONS
+
+5
+
+Suppose that N ≥ 2, N ≤ n1 ≤ . . . ≤ nJ ≤ 2N, and let aj (j = 1, . . . , J) be complex
+P
+numbers. Write S(s) = Jj=1 aj n−s
+j . Then for every η > 0
+X
+
+S(s)
+
+
+
+ J
+2
+aj
+1
+1 X
+≪ T+
+log N +
+χ(nj , ηN) 2α .
+η
+δ j=1
+N
+
+2
+
+s∈S
+
+Proof. Write
+S(s, x) =
+
+aj
+.
+s
+n
+j
+N ≤n ≤x
+X
+j
+
+Integrating by parts we get for s ∈ S
+Z 2N
+Z 2N
+α−σ
+α−σ
+S(s) =
+x
+dS(α + it, x) = (2N) S(α + it) + (σ − α)
+xα−σ−1 S(α + it, x) dx
+N−
+
+N
+
+≪ S(α + it) +
+
+1
+N
+
+Z 2N
+
+S(α + it, x) dx.
+
+N
+
+By Cauchy–Schwarz,
+S(s)
+
+2
+
+1
+≪ S(α + it) +
+N
+2
+
+Z 2N
+
+2
+
+S(α + it, x) dx.
+
+N
+
+We now apply Theorem 2.2 to the sums S(α + it, x) with coefficients bj = aj n−2α
+if N ≤
+j
+nj ≤ x, and bj = 0 else.
+
+The second ingredient is a mean value theorem for the Beurling zeta function. Recently in
+[3], the maximal rate of growth of the mean square for a general class of Dirichlet series was
+established. Applying Theorem 1.1 and Theorem 1.1+ of [3] to ζP (s) and −ζP′ (s) respectively,
+we obtain:
+Theorem 2.4. Let ζP (s) be the Beurling zeta function associated to a number system (P, N )
+with θ-well-behaved integers. Then
+Z
+Z
+2
+2
+1 T 1 + θ
+1 T ′ 1 + θ
+ζP
+ζP
++ it dt ≪ log T,
++ it dt ≪ (log T )3 .
+T 0
+2
+T 0
+2
+3. Proof of the zero-density estimate
+We now prove Theorem 1.2, following the classical procedure from [12, Chapter 12]. In
+what follows, the implicit constants in the O-estimates may depend on the number system
+(P, N ), but are independent of α.
+< α < 1 and T ≥ 2. We let 2 ≤ X ≤ Y ≤ T O(1) be parameters to
+3.1. The setup. Let 1+θ
+2
+be determined, and we set
+X µ(nj )
+.
+MX (s) =
+s
+n
+j
+n ≤X
+j
+
+6
+
+F. BROUCKE
+
+Here µ is the Möbius function associated with the system (P, N ): µ(nj ) = (−1)ν if nj is the
+product of ν distinct generalized primes, and µ(nj ) = 0 otherwise, i.e. if nj is not squarefree1.
+Then
+∞
+X
+aj
+ζP (s)MX (s) =
+,
+s
+n
+j
+j=1
+where a1 = 1, aj = 0 for 1 < nj ≤ X, and |aj | ≤ d(nj ) for nj > X. Here d(nj ) = #{(m, l) :
+nm nl = nj } denotes the divisor function of the system (P, N ).
+Using the inverse Mellin transform of the Gamma function
+Z κ+i∞
+1
+−1/x
+Γ(w)xw dw, κ > 0,
+e
+=
+2πi κ−i∞
+we obtain (with s = σ + it)
+Z κ+i∞
+X aj e−nj /Y
+1
+−1/Y
+(3.1) e
++
+=
+ζP (s + w)MX (s + w)Γ(w)Y w dw,
+s
+n
+2πi
+κ−i∞
+j
+n >X
+j
+
+κ > 1 − σ.
+
+We assume that α ≤ σ < 1, and shift the contour of integration to the line Re w = 1+θ
+− σ.
+2
+As ζP is polynomially bounded, this is allowed in view of the exponential decay in vertical
+strips of the Gamma function. We pick up two residues at w = 1 − s and w = 0 to get
+e−1/Y +
++
+
+1
+2π
+
+X aj e−nj /Y
+
+nj >X
+
+nsj
+
+= AMX (1)Γ(1 − s)Y 1−s + ζP (s)MX (s)
+
+Z ∞
+
+1 + θ
+
+
+1 + θ
+ 1 + θ
+ 1+θ
++ i(t + v) MX
++ i(t + v) Γ
+− σ + iv Y 2 −σ+iv dv.
+2
+2
+
+ζP
+
+−∞
+
+2
+
+Let now s = ρ = β + iγ be a zero of ζP with β ≥ α and |γ| ≤ T . Then
+(3.2) e−1/Y +
++
+
+1
+2π
+
+Z ∞
+
+−∞
+
+X aj e−nj /Y
+
+= AMX (1)Γ(1 − ρ)Y 1−ρ
+
+nj >X
+
+nρj
+
+1 + θ
+
+
+1 + θ
+ 1 + θ
+ 1+θ
++ i(γ + v) MX
++ i(γ + v) Γ
+− β + iv Y 2 −β+iv dv.
+2
+2
+
+ζP
+
+2
+
+The first term on the right hand side of (3.2) is in absolute value at most 1/6, provided that
+|γ| ≥ C1 log T for a suitable constant C1 . Also, setting Z = C2 log T for a sufficiently large
+constant C2 , we get
+Z
+1 + θ
+
+1 + θ
+ 1 + θ
+ 1+θ
+1
+1
+ζP
++ i(γ + v) MX
++ i(γ + v) Γ
+− β + iv Y 2 −β+iv dv ≤ .
+2π |v|≥Z
+2
+2
+2
+6
+Both estimates are due to the exponential decay of Γ. Furthermore, if Y is sufficiently large,
+we have
+X aj e−nj /Y
+1
+5
+≤
+and e1/Y ≥ .
+ρ
+nj
+6
+6
+2
+nj >Y
+
+1Strictly speaking µ should be defined as a function of j instead of n , as unique factorization of Beurling
+j
+integers need not hold. For example, we can have µ(p1 p3 ) = 1, µ(p22 ) = 0, even if p1 p3 and p22 happen to
+have the same numerical value. We will continue this slight abuse of notation, as sums over µ(nj ) are always
+well-defined.
+
+ON ZERO-DENSITY ESTIMATES FOR BEURLING ZETA FUNCTIONS
+
+7
+
+We conclude that for a zero ρ = β + iγ with β ≥ α and C1 log T ≤ |γ| ≤ T we either have
+X aj e−nj /Y
+1
+(3.3)
+≥ ,
+ρ
+nj
+6
+2
+X<nj ≤Y
+
+or
+(3.4)
+Z Z
+
+−Z
+
+ζP
+
+1 + θ
+2
+
+
+1 + θ
+ 1 + θ
+ 1+θ
+2π
++ i(γ + v) MX
++ i(γ + v) Γ
+− β + iv Y 2 −β+iv dv ≥
+.
+2
+2
+6
+
+From the set of all such ζP -zeros, we select a subset R of 3Z-well-spaced zeros (meaning
+that |γ − γ ′ | ≥ 3Z if β + iγ and β ′ + iγ ′ are distinct elements from R) in such a way that
+N(α, T ) ≪ (log T )2 + |R|(log T )2 .
+
+, C1 log T ) ≪ (log T )2 .
+This is possible in view of Lemma 1.1 and the trivial estimate N( 1+θ
+2
+Let R1 and R2 be the subsets of R for which (3.3) and (3.4) hold respectively, and denote
+their respective sizes by R1 and R2 .
+3.2. The estimation of R1 . To estimate R1 , we decompose each sum satisfying (3.3) into
+O(log Y ) = O(log T ) dyadic subsums. By the pigeonhole principle, there is a number N,
+X ≤ N ≤ Y 2 , such that
+X aj e−nj /Y
+1
+≫
+ρ
+nj
+log T
+N <n ≤2N
+j
+
+holds for ≫ R1 (log T )
+(3.5)
+
+−1
+
+zeros ρ ∈ R1 . Hence we have
+aj e−nj /Y
+R1 ≪ (log T )
+nρj
+ρ∈R N <n ≤2N
+3
+
+X
+
+1
+
+X
+
+2
+
+.
+
+j
+
+We now apply Theorem 2.3 with η = N θ−1 . In view of the θ-well-behavedness (1.2),
+χ(nj , N θ ) ≪ N θ for N < nj ≤ 2N. This yields
+X
+|aj |2 e−2nj /Y
+R1 ≪ (log T )3 (T + N 1−θ )(log T )
+Nθ
+N 2α
+N <n ≤2N
+j
+
+≪ (T N
+
+1+θ−2α
+
++N
+
+2−2α
+
+7 −2N/Y
+
+)(log T ) e
+
+.
+
+2
+3
+In the last step we used the estimate
+nj ≤x d(nj ) ≪ x(log x) , which follows from [9,
+Proposition 4.4.1] (in fact an asymptotic is shown there). As N ≥ X, we conclude that
+
+P
+
+(3.6)
+
+R1 ≪ (T X 1+θ−2α + Y 2−2α )(log T )7 .
+
+3.3. The estimation of R2 . Let us now treat the zeros in R2 . For each zero
+β + iγ sat ρ = 1+θ
+
++
+it
++ itρ
+M
+isfying (3.4), let tρ be a real number with |γ −tρ | ≤ Z for which ζP 1+θ
+ρ
+X
+2
+2
++ (log T )−1 , which we may,
+is maximal on [γ − Z, γ + Z]. We now also assume that α ≥ 1+θ
+2
+as our zero-density estimate follows from the trivial estimate N(α, T ) ≪ T log T in the range
+α < 1+θ
++ (log T )−1 . With this restriction on α,
+2
+Z Z 
+
+1+θ
+− β + iv dv ≪ log T, whenever β ≥ α.
+Γ
+2
+−Z
+
+8
+
+F. BROUCKE
+
+Hence, (3.4) implies that for each ρ ∈ R2 ,
+1 + θ
+
+1 + θ
+
+1+θ
+ζP
+(3.7)
++ itρ MX
++ itρ ≫ Y β− 2 (log T )−1 ,
+2
+2
+from which we get that
+R2 ≪ Y
+
+(3.8)
+
+1+θ
+−α
+2
+
+(log T )
+
+X
+
+ρ∈R2
+
+ζP
+
+1 + θ
+2
+
+
+1 + θ
+
++ itρ MX
++ itρ .
+2
+
+From the 3Z-well-spacedness of the numbers γ, it follows that the tρ are Z-well-spaced.
+This allows us to estimate the sum of ζP -values by an integral by an elementary lemma of
+Gallagher (see e.g. [12, Lemma 1.2]):
+Z T +Z  
+1 + θ
+2
+2
+ 1 + θ
+
+1 + θ
+X
+1+θ
+′
+ζP
++ itρ
++ it
++ it ζP
++ it
+≪
++ ζP
+dt
+ζP
+2
+2
+2
+2
+−T −Z
+ρ∈R
+2
+
+≪ T (log T )2 ,
+
+(3.9)
+
+where in the last step we used Theorem 2.4 and Cauchy–Schwarz. P
+For MX , we perform a dyadic splitting and write MX (s) = 1 + Ll=0 Dl (s), where L =
+X
+⌊ log
+⌋ ≪ log T and
+log 2
+Dl (s) =
+
+X
+
+µ(nj )
+,
+nsj
+l+1
+
+l = 0, 1, . . . , L − 1,
+
+2l <nj ≤2
+
+DL (s) =
+
+X
+
+µ(nj )
+.
+nsj
+
++ itρ
+
+2
+
+2L <nj ≤X
+
+Hence by Cauchy–Schwarz,
+X
+
+(3.10)
+
+MX
+
+ρ∈R2
+
+1 + θ
+2
+
++ itρ
+
+2
+
+≪ R2 + log T
+
+L X
+X
+
+Dl
+
+l=0 ρ∈R2
+
+1 + θ
+2
+
+.
+
+We estimate the inner sum by Theorem 2.2, with η = (2l+1 )θ−1 , for which χ(nj , η2l+1) ≪
+(2 ) (when 2l < nj ≤ 2l+1 ). This yields
+l θ
+
+X
+
+ρ∈R2
+
+Dl
+
+1 + θ
+2
+
++ itρ
+
+2
+
+
+≪ T + (2l )1−θ (log T )
+
+X
+
+2l <nj ≤2l+1
+
+(2l )θ
+
+1
+(2l )1+θ
+
+
+≪ T + (2l )1−θ (log T ).
+
+We conclude in view of the trivial estimate R2 ≤ T that
+(3.11)
+
+X
+
+ρ∈R2
+
+MX
+
+1 + θ
+2
+
++ itρ
+
+2
+
+≪ T + (log T )
+
+2
+
+L
+X
+l=0
+
+
+T + (2l )1−θ ≪ (T + X 1−θ )(log T )3 .
+
+Inserting the estimates (3.9) and (3.11) in (3.8) after another application of Cauchy–
+Schwarz yields
+
+1+θ
+(3.12)
+R2 ≪ Y 2 −α T + (T X 1−θ )1/2 (log T )7/2 .
+
+ON ZERO-DENSITY ESTIMATES FOR BEURLING ZETA FUNCTIONS
+
+9
+1
+
+3.4. Conclusion. To conclude the proof of Theorem 1.2, we take X = T 1−θ and Y =
+2
+T 3−2α−θ . Note that X < Y and log Y ≪ log T uniformly in α. Substituting these values in
+(3.6) and (3.12) yields
+4(1−α)
+
+|R| ≤ R1 + R2 ≪ T 3−2α−θ (log T )7 ,
+from which we finally obtain (1.4).
+RT
+1+θ−2σ0
+2
+Remark 3.1. In [3], also the (sharp) upper bounds T1 0 ζP (σ0 + it) dt ≪ T 1−θ ,
+RT ′
+1+θ−2σ0
+2
+1
+1−θ
+(log T )2 for θ < σ0 < 1+θ
+ζ
+(σ
++
+it)
+dt
+≪
+T
+were established. One can check
+0
+P
+T 0
+2
+− σ in (3.1) and using the
+that shifting to the line Re w = σ0 − σ instead of Re w = 1+θ
+2
+above second moment estimates leads to inferior results.
+
+4. Proof of Theorem 1.3
+The proof of the more general Theorem 1.3 follows without much effort along the same
+lines as in Section 3. We recall our setup: (n
+a sequence of Beurling integers satisfying
+Pj )j≥1 is −s
+θ
+θ
+θ+ε
+N(x + x ) − N(x − x ) ≪ε x , F (s) = j≥1 aj nj is a Dirichlet series with non-negative
+coefficients satisfying a1 = 1, aj ≪ε nεj , and A(x) = xP (log x) + O(xθ (log x)q ), and G(s) =
+P
+ε
+1/F (s) = j≥1 bj n−s
+j satisfies bj ≪ε nj .
+
+Remark 4.1. The sequence of Beurling integers (nj )j is not necessarily strictly increasing
+and can have repeated values. In this situation, there is not a unique choice of coefficients
+aj . For Theorem 1.3 it suffices that there is some choice of coefficients aj satisfying aj ≪ε nεj .
+The same remark applies to G. Hence, if the integer nj0 has multiplicity mj0 (which can be
+θ+ε
+up
+we can allow following bound for the “total coefficient”:
+P to nj0 on our assumptions),
+ε
+j:nj =nj aj ≪ε mj0 nj0 , for every ε > 0.
+0
+
+Note that N(x+ xθ ) −N(x−xθ ) ≪ε xθ+ε implies that N(x) ≪ε x1+ε . In combination with
+the Ramanujan condition bj ≪ε nεj , this implies that G(s) converges absolutely for Re s > 1
+and is analytic there. The absolute convergence of F (s) for Re s > 1 already followed from
+(1.5). From F (s)G(s) = 1 it follows that F has no zeros for Re s > 1.
+4.1. Auxiliary lemmas. We begin by establishing a bound for the local number of zeros
+of F as in Lemma 1.1. It results from combining Jensen’s formula with a polynomial bound
+for F (s).
+P
+−s
+Lemma 4.2. Suppose F (s) =
+has non-negative coefficients aj whose counting
+j aj nj
+function A(x) satisfies (1.5). Then for every δ > 0 we have uniformly for θ + δ ≤ σ ≤ 1 − δ,
+|t| ≥ 2:
+1−σ
+
+F (σ + it) ≪δ |t| 1−θ (log|t|)max{d,q} ,
+and uniformly for σ ≥ 1+θ
+, |t| ≥ 2:
+2
+1−σ
+
+F (σ + it) ≪ |t| 1−θ (log|t|)max{d+1,q} + (log|t|)d+1 .
+
+10
+
+F. BROUCKE
+
+Proof. Writing A(x) = xP (log x) + E(x) with deg P = d and E(x) ≪ xθ (log x)q , we have for
+σ > 1 and fixed x > 1,
+ Z ∞
+X aj Z ∞ d uP (log u)
+dE(u)
+F (s) =
++
++
+s
+s
+n
+u
+us
+x
+x
+nj ≤x j
+
+
+Z ∞
+X aj
+Qd+1 (log x)
+E(x)
+E(u)
+1−s Q1 (log x)
++x
++···+
+−
++
+s
+du.
+=
+s
+d+1
+s
+s+1
+n
+1
+−
+s
+(1
+−
+s)
+x
+u
+x
+j
+n ≤x
+j
+
+Here, the Qj are certain polynomials of degree at most d + 1 − j. For fixed x, the above
+expression has analytic continuation to Re s > θ with the exception of s = 1. The result
+follows from inserting the bounds
+X aj
+
+ns
+n ≤x j
+j
+
+≤
+
+X aj
+
+≪
+σ
+n
+j
+n ≤x
+j
+
+x1−σ − 1
+(log x)d ,
+1−σ
+
+E(x) ≪ xθ (log x)q
+
+1
+
+and by selecting x = |t| 1−θ . Note that we may assume |s| ≪ |t| as the result is trivial for
+σ > 2.
+
+Lemma 4.3. With the same assumptions as in the previous lemma, we have the local bound
+N(F ; α, T + 1) − N(F ; α, T ) ≪α log T.
+Proof. It suffices to show that for large T and for every δ > 0 and 0 < r ≤ 2 − θ − δ,
+the number of zeros of F in the disk |s − 2 − iT | ≤ r is Oδ (log T ). Let ρ1 , . . . , ρK be an
+enumeration of the zeros of F in this disk, and set rk = |ρk − 2 − iT |. Setting R = r + δ/2,
+it follows from Jensen’s formula that
+Z 2π
+1
+R
+1
+R
+.
+log F (2 + iT + Reiθ ) dθ + log
+≤
+log + · · · + log
+r1
+rK
+2π 0
+F (2 + iT )
+The left hand side is ≫δ K, while the right hand side is ≤ Oδ (log T ), in view of Lemma 4.2
+and
+∞
+X
+bj
+1
+= G(2 + iT ) ≤
+< ∞.
+n2j
+F (2 + iT )
+j=1
+
+The final preliminary result we require is the mean value estimate for F and F ′ . Integrating
+by parts yields
+Z x
+X
+
+
+aj log nj = xP (log x) log x−
+P (log u) du+O xθ (log x)q+1 = xP̃ (log x)+O xθ (log x)q+1
+nj ≤x
+
+1
+
+for a certain polynomial P̃ of degree d + 1. Therefore [3, Theorem 1.1+] yields
+(4.1)
+Z
+Z
+2
+2
+1 T ′ 1 + θ
+1 T 1 + θ
+d+q+1
+F
+F
++ it dt ≪ (log T )
++ it dt ≪ (log T )d+q+3 .
+,
+T 0
+2
+T 0
+2
+
+ON ZERO-DENSITY ESTIMATES FOR BEURLING ZETA FUNCTIONS
+
+11
+
+4.2. Proof of Theorem 1.3: required modifications. Fix a small ε > 0. In the setup
+of the proof, we replace MX (s) by
+X bj
+GX (s) =
+ns
+nj ≤X j
+P
+and write F (s)GX (s) = j≥1 cj n−s
+j , where c1 = 1, cj = 0 for 1 < nj ≤ X, and cj ≪ε
+′
+ε
+ε
+nj d(nj ) ≪ε′ nj . Here and in what follows, ε′ denotes a (small) positive number, not necessarily the same at each occurrence, and which is at most a bounded multiple of ε.
+When switching contours in (3.1), the residue at w = 1 − s now not only involves the
+value of GX (s + w)Γ(w)Y w at w = 1 − s, but also that of its derivatives up to the order d.
+Due to the exponential decay of Γ and its derivatives, this residue, when s = ρ = β + iγ is a
+zero of F , is at most 1/6 in absolute value if |γ| ≥ C1 log T for a suitable constant C1 . Due
+to Lemma 4.3, we may again select a suitable subset of a 3Z-well-spaced zeros of F , and we
+similarly consider the subsets R1 and R2 .
+The estimation of R1 can be done analogously to Section 3: starting from (3.5) (with
+coefficients cj instead of aj ), the assumption N(x + xθ ) − N(x − xθ ) ≪ε xθ+ε allows us
+to apply Theorem 2.3 with η = N θ−1 and χ(nj , N θ ) ≪ε N θ+ε . We now simply bound
+P
+′
+2
+by Oε′ (N 1+ε ). Hence we obtain (3.6), with the modification of replacing the
+N <nj ≤2N cj
+′
+factor (log T )7 by T ε .
+The estimation of R2 also goes through as before, using the second moment bounds (4.1).
+The dyadic subsums are now
+X
+bj
+Dl (s) =
+,
+nsj
+l
+l+1
+2 <nj ≤2
+
+′
+
+whose coefficients are Oε (X ε ). Hence we arrive at (3.12), where (log T )7/2 is replaced by T ε .
+The selection of the parameters X and Y is unchanged, and combining the modified
+equations (3.6) and (3.12) we arrive at
+4(1−α)
+
+′
+
+N(F ; α, T ) ≪ε′ T 3−2α−θ +ε .
+
+Remark 4.4. The non-negativity of the coefficients aj and (1.5) were used to obtain polynomial bounds for F and the second moment estimates (4.1). These assumptions can be
+replaced by the
+ones, without affecting the conclusion of Theorem 1.3. Suppose
+P∞following
+−s
+F (s) = 1 + j=2 aj nj is a general Dirichlet series with complex coefficients satisfying
+aj ≪ε nεj for every ε > 0. Suppose F (s) has analytic continuation, with the exception of a possible pole at s = 1, to a half-plane Re s > σf , σf < 1+θ
+, where it satisfies
+2
+Oδ (1)
+F (σ + it) ≪δ |t|
+for σ ≥ σf + δ and for every δ > 0, and the second moment estimates
+Z T 
+
+ 2
+1 + θ 2
+1
+′ 1+θ
++F
+dt ≪ε T ε , for every ε > 0.
+F
+2T −T
+2
+2
+5. Conditional improvements
+For the Riemann zeta function, we currently have a fourth moment estimate on the 1/2line, and this stronger piece of information yields a better zero-density estimate. In general,
+better growth bounds on the Beurling zeta function will lead to improvements in the zerodensity estimates. In this section we investigate such conditional improvements. We focus
+on two kinds of growth bounds: higher order moment estimates and subconvexity bounds.
+
+12
+
+F. BROUCKE
+
+Theorem 5.1. Let (P, N ) be a Beurling number system satisfying (1.2) and the moment
+estimates
+Z
+ 2k
+1 T 1 + θ
+ζP
++ it
+(5.1)
+dt ≪k (log T )Ok (1) ,
+T 0
+2
+Z T 
+ 2k
+1
+1+θ
+ζP′
++ it
+(5.2)
+dt ≪k (log T )Ok (1) ,
+T 0
+2
+,
+for some (real) k ≥ 1. Then we have uniformly for α ≥ 1+θ
+2
+2(k+1)(1−α)
+
+N(α, T ) ≪k T 2(1−α)+k(1−θ) (log T )Ok (1) ;
+
+(5.3)
+
+and uniformly for α ≥ 3k−1+(k−1)θ
+,
+4k−2
+(5.4)
+
+4(3α−2−θ)(1−α)
+
+N(α, T ) ≪k T k(2α−1−θ)(4α−3−θ)+4(3α−2−θ)(1−α) (log T )Ok (1) .
+
+Furthermore, if 2k is an integer, the assumption (5.2) may be omitted.
+
+When k = 1, (5.3) reduces to (1.4), while (5.4) is stricty weaker. A fourth moment estimate
+3(1−α)
+(k = 2) would yield N(α, T ) ≪ T 2−α−θ (log T )O(1) , which for θ = 0 corresponds to Ingham’s
+zero-density estimate for the Riemann zeta function [7]. When α → 1, the exponent of T in
+the estimate (5.4) is ∼ 4(1−α)
+.
+k(1−θ)
+Any Beurling zeta function of θ-well-behaved integers satisfies the “convexity bound”
+1−σ
+ζP (σ + it) ≪σ |t| 1−θ (see e.g. [15, Lemma 2.6] or Lemma 4.2). On the 1+θ
+-line this gives a
+2
+square root bound. Assuming a smaller pointwise bound, we obtain the following improvement.
+Theorem 5.2. Let (P, N ) be a Beurling number system satisfying (1.2) and the subconvexity
+bound
+
+1 + θ
++ it ≪B |t|B
+(5.5)
+ζP
+2
+,
+for some 0 < B < 1/2. Then uniformly for α ≥ 1+θ
+2
+(5.6)
+and uniformly for α ≥ 3+θ
+,
+4
+
+N(α, T ) ≪B T
+
+2(1+2B)(1−α)
+1−θ
+
+(log T )9 ;
+
+8B(3α−2−θ)(1−α)
+
+N(α, T ) ≪B T (2α−1−θ)(4α−3−θ) (log T )OB (1) .
+
+(5.7)
+
+For the Riemann zeta function, the conditional estimates (5.6) and (5.7) (with θ = 0
+and up to some power of log T ) were first established by Ingham [6] and Montgomery [11]
+respectively. In view of N(α, T ) ≪ T log T , (5.7) is non-trivial only if α is some distance
+away from 3+θ
+. When α → 1, the exponent of T in (5.7) is ∼ 8B(1−α)
+. Note that for α close
+4
+1−θ
+1
+to 1, (5.4) and (5.7) are of similar quality when B = 2k .
+Assuming a form of the Lindelöf Hypothesis2 for the Beurling zeta function, we obtain:
+Corollary 5.3. Assume that (5.5) holds with arbitrarily small B. Then we have for every
+ε > 0 and δ > 0,
+3 + θ
+
+2(1−α)
+N(α, T ) ≪ε T 1−θ +ε and N
++ δ, T ≪ε,δ T ε .
+4
+ε
+1
+1+θ
+P ( 2 +it) ≪ε |t| is equivalent with ∀ε > 0, k ≥ 1 : T
+
+2Note that ∀ε > 0 : ζ
+
+RT
+0
+
+ζP ( 1+θ
+2 + it)
+
+2k
+
+dt ≪ε,k T ε .
+
+ON ZERO-DENSITY ESTIMATES FOR BEURLING ZETA FUNCTIONS
+
+13
+
+In analogy with the Riemann zeta function, we refer to the statement “N(ζP ; α, T ) ≪ε
+for every ε > 0” as the density hypothesis for the Beurling zeta function ζP (s).
+T
+2(1−α)
++ε
+1−θ
+
+The proofs of (5.4) and (5.7) require another technical tool, the Halász–Montgomery
+inequality, which we adapt to the Beurling setting.
+5.1. The Halász–Montgomery inequality. This inequality is an alternative for bounding
+discrete mean values of Dirichlet polynomials. It is based on
+space inequality, and
+Pa Hilbert
+−it
+allows one to exploit good bounds for (sums of) zeta sums nj ≤N nj (or smoothed version
+thereof), if available. Higher order moment estimates and subconvexity bounds lead to such
+“good bounds” which are of sufficient quality to obtain an improvement of Theorem 2.2 in
+certain ranges of the involved parameters.
+The basic inequality we shall use is [12, Lemma 1.5], which states that
+R
+X
+
+(5.8)
+
+r=1
+
+hξ, ϕr i
+
+2
+
+2
+
+≤ kξk max
+r
+
+R
+X
+s=1
+
+hϕr , ϕs i ,
+
+P
+for vectors ξ, ϕr , r = 1, . . . , R, in an inner product space. We set S(s) = N <nj ≤2N aj n−s
+j ,
+where aj are complex numbers and nj are Beurling integers of a number system satisfying
+(1.2). Letting T = {tr : r = 1, . . . , R} ⊆ [0, T ] be a set of 1-well-spaced points, we apply
+(5.8) with
+
+
+p
+
+aj IN <nj ≤2N
+−itr
+−n
+/(2N
+)
+−n
+/N
+j
+j
+ξ= √
+, ϕr =
+e
+−e
+nj
+.
+j≥1
+e−nj /(2N ) − e−nj /N j≥1
+√
+Here IN <nj ≤2N = 1 if N < nj ≤ 2N and 0 else. Note that e−nj /(2N ) − e−nj /N ≍ 1 for
+N < nj ≤ 2N; this smoothing factor is introduced to obtain faster convergence in the Mellin
+transform. The inequality (5.8) thus yields
+R
+X
+
+S(itr )
+
+r=1
+
+2
+
+≪
+
+
+
+X
+
+aj
+
+N <nj ≤2N
+
+2
+
+
+
+max
+r
+
+∞
+R X
+X
+s=1 j=1
+
+ −i(t −t )
+e−nj /(2N ) − e−nj /N nj r s .
+
+The inner-most sum can be written as
+Z 2+i∞
+
+
+1
+ζP w + i(tr − ts ) (2N)w − N w Γ(w) dw.
+2πi 2−i∞
+. We pick up a residue at
+In this integral, we shift the contour to the line Re w = 1+θ
+2
+w = 1 − i(tr − ts ), so that for each r = 1, . . . , R,
+(5.9)
+
+∞
+R X
+X
+s=1 j=1
+
+≪N
+
+R
+X
+s=1
+
+ −i(t −t )
+e−nj /(2N ) − e−nj /N nj r s
+
+
+Γ 1 − i(tr − ts ) + N
+
+1+θ
+2
+
+R Z ∞
+X
+s=1
+
+−∞
+
+ζP
+
+1 + θ
+2
+
+ 1 + θ
+
++ i(v + tr − ts ) Γ
++ iv dv.
+2
+
+14
+
+F. BROUCKE
+
+At this point we insert a pointwise or moment bound of ζP . If we assume (5.5), then it
+follows that
+R
+X
+
+(5.10)
+
+S(itr )
+
+2
+
+r=1
+
+1+θ
+
+≪B N + N 2 T B R
+
+as the 1-well-spacedness of T ensures that
+
+
+
+2
+
+X
+
+aj ,
+
+N <nj ≤2N
+
+PR
+
+
+Γ
+1
+−
+i(t
+−
+t
+)
+≪ 1.
+r
+s
+s=1
+
+Suppose on the other hand that we have the moment bound (5.1) for some k ≥ 1/2. We
+truncate the integral in (5.9) to |Im w| ≤ Z = C2 log T for some sufficiently large constant
+C2 . Applying Hölder’s inequality twice and using the 1-well-spacedness of T in (5.9), we
+obtain
+∞
+R X
+X
+
+−nj /(2N )
+
+e
+
+s=1 j=1
+
+−nj /N
+
+−e
+
+R
+X
+ −i(tr −ts )
+1+θ
+nj
+≪ N +N 2
+
+ζP
+
+1 + θ
+
+1 + θ
+
+ 2k
+
+dv
+
+X
+
+aj .
+
+s=1
+
+≪N +N
+
+1+θ
+2
+
+Z T +Z
+
+ζP
+
+−T −Z
+
+Z Z
+
+−Z
+
+2
+
++ i(v + tr − ts )
+
+2
+
++ iv
+
+ 2k1
+
+
+
+dv
+
+2k−1
+
+R 2k log T.
+
+Hence we get
+(5.11)
+
+R
+X
+
+S(itr )
+
+2
+
+r=1
+
+1+θ
+
+1
+
+2k−1
+
+≪k N + N 2 T 2k R 2k (log T )Ok (1)
+
+
+
+2
+
+N <nj ≤2N
+
+Remark 5.4. In any case, (5.5) always holds with B = 1/2, while Theorem 2.4 yields (5.1)
+with k = 1. Hence we obtain from (5.11)
+(5.12)
+
+R
+X
+
+S(itr )
+
+r=1
+
+2
+
+1+θ
+
+≪ N + N 2 T 1/2 R1/2 (log T )O(1)
+
+
+
+2
+
+X
+
+aj .
+
+N <nj ≤2N
+
+This estimate is superior to the estimate
+(5.13)
+
+R
+X
+
+S(itr )
+
+2
+
+r=1
+
+≪ (N + T N θ )(log N)
+
+X
+
+aj
+
+2
+
+N <nj ≤2N
+
+obtained from Theorem 2.2 only if R ≪ T N θ−1 and N 1−θ = o(T ) (disregarding logarithmic
+factors). However, in this regime, both (5.12) and (5.13) follow from the trivial estimate by
+Cauchy–Schwarz
+R
+X
+X
+2
+2
+S(itr ) ≪ RN
+aj .
+r=1
+
+nj ≤N
+
+Thus, without posing additional assumptions on the Beurling zeta function besides wellbehavedness of the integers, the Halász–Montgomery inequality does not seem to supply
+new information.
+We finally need the following modifications of (5.10) and (5.11). Let {sr : 1 ≤ r ≤ R}
+be a set of complex numbers satisfying Re sr ≥ α and |Im sr − Im sr′ | ≥ 1 whenever r 6= r ′ .
+
+ON ZERO-DENSITY ESTIMATES FOR BEURLING ZETA FUNCTIONS
+
+15
+
+Then (5.5) and (5.1) imply
+R
+X
+
+(5.14)
+
+2
+
+S(sr )
+
+r=1
+
+2
+
+≪B N + N
+
+1+θ
+2
+
+aj
+T R
+N 2α
+N <n ≤2N
+B
+
+
+
+X
+j
+
+and
+(5.15)
+
+R
+X
+
+2
+
+S(sr )
+
+2
+
+r=1
+
+≪k N + N
+
+1+θ
+2
+
+T
+
+1
+2k
+
+R
+
+2k−1
+2k
+
+
+
+(log T )
+
+Ok (1)
+
+aj
+,
+N 2α
+N <n ≤2N
+X
+j
+
+respectively. This follows from (5.10) and (5.11) respectively, along the same lines as the
+proof of Theorem 2.3.
+5.2. Proofs. We are now ready to prove Theorems 5.1 and 5.2.
+Proof of Theorem 5.1. To prove (5.3), we go straight to the estimation of R2 . Raising (3.7)
+2k
+to the power k+1
+, summing over R2 , and applying Hölder’s inequality gives
+(5.16)
+1 
+k
+X
+1 + θ
+1 + θ
+ 2k  k+1
+ 2  k+1
+X
+2k 1+θ
+(
+−α)
+MX
+ζP
+(log T )O(1) .
+R2 ≪ Y k+1 2
++ itρ
++ itρ
+2
+2
+ρ∈R
+ρ∈R
+2
+
+2
+
+Applying Gallagher’s lemma ([12, Lemma 1.2]), Hölder’s inequality, and (5.1)-(5.2), we find
+ 2k
+1 + θ
+X
++ itρ
+≪k T (log T )Ok (1) .
+ζP
+2
+ρ∈R
+2
+
+1
+
+Inserting this estimate and (3.11) into (5.16) gives, upon selecting once again X = T 1−θ ,
+(5.17)
+
+2k
+
+1+θ
+
+R2 ≪k Y k+1 ( 2 −α) T (log T )Ok (1) .
+
+k+1
+
+Comparing with the estimate (3.6) for R1 now yields the optimal choice Y = T 2(1−α)+k(1−θ) ,
+from which (5.3) follows.
+(> 3+θ
+). We apply (5.15) to bound the
+To prove (5.4), we assume that α ≥ 3k−1+(k−1)θ
+4k−2
+4
+right hand sides of (3.5) and (3.10), and insert the obtained upper bound in the latter case
+into (5.16). After some calculations, again assuming log X ≤ log Y ≪k log T , we get
+
+R1 ≪k Y 2−2α + T X −k(4α−3−θ) (log T )Ok (1) ,
+(5.18)
+
+k(2α−1−θ)
+k(1−θ)
+k(1−θ)
+2k(2α−1−θ)
+1
+3
+R2 ≪k X k+1 Y − k+1 T k+1 + X 3 Y −
+(5.19)
+T (log T )Ok (1) ,
+which can be compared with (3.6) and (5.17) respectively. We now set
+2α−1−θ
+
+X = T k(2α−1−θ)(4α−3−θ)+4(3α−2−θ)(1−α)
+
+2(3α−2−θ)
+
+and Y = T k(2α−1−θ)(4α−3−θ)+4(3α−2−θ)(1−α) .
+
+, and log Y ≪k log T . With these choices, both terms in the
+Note that X < Y as α > 3+θ
+4
+right hand side of (5.18) are equal, while the second term in the right hand side of (5.19)
+dominates the first (again since α > 3+θ
+), and we obtain (5.4).
+4
+When 2k is an integer, we may avoid Gallagher’s lemma, which requires information on
+the derivative. Instead, we will bound the sum of well-spaced ζP2k -values by a lemma of Ivić,
+[8, Lemma 7.1]:
+
+16
+
+F. BROUCKE
+
+Lemma 5.5. Let T be large. Uniformly for |t| ≤ T , and with Z = C2 log T , C2 a sufficiently
+large constant (depending on k), we have
+Z Z/2 
+1 + θ
+ 2k
+ 2k
+1
+1+θ
+ζP
++
++ it
++ it + iv
+≪k 1 + log T
+e−|v| dv.
+ζP
+2
+log T
+2
+−Z/2
+The lemma follows upon writing, with s = 1+θ
++ log1 T + it,
+2
+Z 1+i∞
+∞
+X
+1
+2k
+−nj
+ζP (s + w) Γ(w) dw =
+d2k (nj )n−s
+≪k 1,
+j e
+2πi 1−i∞
+j=1
+and shifting the contour to Re w = − log1 T . Here d2k is the 2k-fold divisor function of the
+number system (P, N ). The switching of contours picks up two residues; for w = 0 the
+residu is ζP (s)2k , and for w = 1 − s the residu is Ok (1), in view of the exponential decay of
+the gamma function and its derivatives. For the same reason, we can truncate the remaining
+integral to the interval [−Z/2, Z/2], and the lemma then follows from inserting the estimate
+Γ(u + iv) ≪ e−|v| |u + iv|−1 , which holds uniformly for v ∈ R and u in compacts.
+
++ log2 T and shift the
+In the proof of the zero-density estimate, we now assume that α ≥ 1+θ
+2
+contour in (3.1) to Re w = 1+θ
++ log1 T − σ. We similarly obtain the estimate (5.16), but with
+2
+1+θ
+replaced by 1+θ
++ log1 T . Recalling that the tρ ’s are Z-well-spaced, we may estimate the
+2
+2
+sum of the ζP2k -values by the 2k-th moment of ζP , in view of Ivić’ lemma, while we can keep
+the previously obtained bounds for the sum involving MX in both cases. As Y ≤ T Ok (1) we
+1
+
+have Y log T ≪k 1, so that we may complete the proof in the same way as before.
+Proof of Theorem 5.2. To estimate R2 , we will use the subconvexity bound (5.5) instead of
+the second moment estimate to treat the contribution of ζP (s). For zeros ρ = β + iγ ∈ R2 ,
++ itρ is maximal on
+we let tρ be a real number with γ − tρ ≤ Z for which MX 1+θ
+2
+[γ − Z, γ + Z]. We recall that Z = C2 log T for some large constant C2 . Employing the
+subconvexity bound (5.5) in (3.4) yields
+1 + θ
+
+1+θ
+MX
+(5.20)
++ itρ ≫B Y α− 2 T −B (log T )−1 .
+2
+To prove (5.6), we combine (5.20) with (3.11) to obtain
+R2 ≪B Y 1+θ−2α T 2B (T + X 1−θ )(log T )5 .
+1
+
+1+2B
+
+Keeping the bound (3.6) for R1 and setting X = T 1−θ and Y = T 1−θ , we obtain (5.6).
++ δ for some δ = δ(B) > 0, because otherwise
+To prove (5.7), we may assume that α ≥ 3+θ
+4
+(5.7) is trivial. Applying (5.14) to the right hand side of (3.5), we get that for some N with
+X ≤ N ≤ Y 2,
+
+
+1+θ
+3+θ
+R1 ≪B (log T )3 N + N 2 T B R1 N 1−2α (log N)3 ≪B N 2−2α + N 2 −2α T B R1 (log T )6 .
+
+Here we used that log Y ≪B log T , which will follow from our choice of Y later on. If
+3+θ
+X 2α− 2 ≥ T B (log T )7 say, then the second term involving R1 is negligible, so that
+(5.21)
+
+R1 ≪B Y 2−2α (log T )6 .
+
+ON ZERO-DENSITY ESTIMATES FOR BEURLING ZETA FUNCTIONS
+
+17
+
+For R2 , we perform a dyadic subdivision of (5.20) to see that there is some K ≤ X such
+that
+X
+1+θ
+µ(nj )
+≫B Y α− 2 T −B (log T )−1 (log X)−1
+1+θ
++itρ
+2
+K<nj ≤2K nj
+holds for ≫ R2 (log X)−1 zeros. Applying (5.14) and log X ≤ log Y ≪B log T yields
+2
+
+R2 ≪B
+
+X
+
+X
+
+µ(nj )
+1+θ
++itρ
+2
+
+Y 1+θ−2α T 2B (log T )5
+
+ρ∈R2 K<nj ≤2K nj
+
+
+1+θ
+≪ K + K 2 T B R2 K 1−(1+θ) Y 1+θ−2α T 2B (log T )5
+
+1−θ
+≪ X 1−θ Y 1+θ−2α T 2B + X 2 Y 1+θ−2α T 3B R2 (log T )5 .
+1−θ
+
+The second term involving R2 is negligible if Y 2α−1−θ ≥ X 2 T 3B (log T )6 say, in which case
+we get
+R2 ≪B X 1−θ Y 1+θ−2α T 2B (log T )5 .
+
+(5.22)
+
+We now choose X and Y so that
+3+θ
+
+X 2α− 2 = T B (log T )7
+
+and
+
+2B
+
+X = T 4α−3−θ (log T )OB (1)
+
+and
+
+1−θ
+
+Y 2α−1−θ = X 2 T 3B (log T )6 ,
+
+i.e.
+
+4B(3α−2−θ)
+
+Y = T (4α−3−θ)(2α−1−θ) (log T )OB (1) .
+
+Note that X < Y and log Y ≪B log T , as we assumed that α > 3+θ
++ δ(B). Inserting these
+4
+values into (5.21) and (5.22) we obtain after some calculations that
+8B(3α−2−θ)(1−α)
+
+R1 ≪B T (2α−1−θ)(4α−3−θ) (log T )OB (1) ,
+
+4B(1−α)
+
+R2 ≪B T 4α−3−θ (log T )OB (1) .
+
+As α > 3+θ
+, the bound for R1 is the dominant quantity, and we obtain (5.7).
+4
+
+
+
+Remark 5.6. It could happen that one has a subconvexity bound, not on the line σ = 1+θ
+,
+2
+but for some σ closer to 1, maybe with σ = σ(T ) even depending on T . It should be possible
+to obtain zero-density estimates in terms of the quantity sup|t|≤T,σ≥σ0 ζP (σ + it) , by shifting
+the contour of integration in the proofs to the line σ = σ0 .
+5.3. A conjecture in the style of Montgomery. We shall later see in Subsection 6.2
+that both the moment estimate (5.1) with k > 1 and the subconvexity bound (5.5) with
+B < 1/2 may fail. Another path to the density hypothesis is by assuming a stronger mean
+value theorem for (general) Dirichlet polynomials. Inspired by Montgomery’s conjecture [12,
+Conjecture 9.2] we may formulate:
+Conjecture 5.7. Let N = (nj )j be a sequence of θ-well-behaved Beurling integers, and let
+aj be complex numbers with |aj | ≤ 1. Then uniformly for ν ∈ [1, 2] and for every ε > 0,
+Z T0 +T X
+2ν
+aj n−it
+dt ≪ε (T N νθ + N ν )N ν+ε .
+j
+T0
+
+nj ≤N
+
+P
+ν
+The idea is that we may treat ( nj ≤N aj n−it
+j ) as if it were a Dirichlet polynomial of
+ν
+length N , even when ν is not an integer.
+
+18
+
+F. BROUCKE
+
+From this one can again show that
+X X
+2ν
+(5.23)
+aj n−s
+≪ε (T N νθ + N ν )N ν(1−2α)+ε ,
+j
+s∈S N <nj ≤2N
+
+whenever S is a set of points s = σ + it, with σ ≥ α and t ∈ [−T, T ] well-spaced, in the
+sense that for s, s′ ∈ S with s 6= s′ we have |t − t′ | ≥ 1.
+This generalization of Montgomery’s conjecture leads to the density hypothesis for Beurling zeta functions. Indeed, following the proof of Section 3, we now fix some ε > 0 and set
+X = T ε . Then trivially MX ( 1+θ
++ itρ ) ≪ T ε . Inserting this bound in (3.4) and letting tρ
+2
+
++ itρ is maximal, we may use the second moment estimate of ζP
+now be such that ζP 1+θ
+2
+to see that
+′
+R2 ≪ε Y 1+θ−2α T 1+ε .
+We again use the convention that ε′ denotes a (small) positive number, not necessarily the
+same at each occurrence, and which is at most a bounded multiple of the previously fixed ε.
+Again we may find an N and ≫ R1 / log T zeros ρ for which
+X aj e−nj /Y
+1
+≫
+.
+ρ
+nj
+log T
+N <n ≤2N
+j
+
+We may in fact assume that X ≤ N ≤ Y (log Y )2 (and could also have done so in Section
+P
+−nj /Y −ρ
+3), as
+nj ≤ 1/6 if Y is sufficiently large. We first choose an integer
+nj >Y (log Y )2 aj e
+
+m so that N m ≤ Y (log Y )2 < N m+1 , and subsequently a number ν ∈ [1, 2] so that N mν =
+Y (log Y )2 . Note that m ≪ε 1. Applying then (5.23) to the Dirichlet polynomials
+ X
+m
+X
+aj e−nj /Y
+bj
+,
+=
+ρ
+nj
+nρj
+m
+m
+N <n ≤2N
+N <nj ≤(2N )
+
+j
+
+′
+
+whose coefficients bj satisfy bj ≤ d2m (nj ) ≪ε,ε′ nεj , yields
+′
+
+′
+
+R1 ≪ε T ε (T Y θ + Y )Y 1−2α+ε ,
+
+from which
+
+2(1−α)
+
+1
+
+upon choosing Y = T 1−θ .
+
+′
+
+N(α, T ) ≪ε T 1−θ +ε ,
+
+6. Limitations for zero-density estimates
+6.1. Sharpness of the range of validity α ≥ 1+θ
+. First we indicate why it is not possible
+2
+. In the case θ = 0, this is evident
+to obtain a zero-density estimate beyond the line σ = 1+θ
+2
+T
+T
+from the Riemann zeta function ζ, for which it is known that N(ζ; 1/2, T ) ∼ 2π
+log 2π
+.
+In the case θ > 0, we consider a suitable rescaling of ζ(s). Set
+
+X X
+mθ
+∞
+∞
+s − θ  X
+s
+θ
+p 1−θ − ms
+−
+=
+n 1−θ n 1−θ = exp
+(6.1)
+ζθ (s) := ζ
+p 1−θ , Re s > 1.
+1−θ
+m
+p m=1
+n=1
+We want to see this as the Beurling zeta function of a number system; such a system would
+θ
+1
+have as its generalized integers the numbers n 1−θ , n ∈ N, with “multiplicity” n 1−θ . Unfortunately, there is not an actual sequence of primes P which yields such integers: for starters the
+
+ON ZERO-DENSITY ESTIMATES FOR BEURLING ZETA FUNCTIONS
+
+19
+
+1
+
+“multiplicities” n 1−θ are in general not integral. However, the definition of Beurling number
+systems may be generalized as follows: a Beurling number system in the extended sense
+is a pair of non-decreasing right-continuous unbounded functions (Π(x), N(x)), satisfying
+Π(1) = 0, N(1) = 1, and linked via the identity
+Z ∞
+Z ∞
+−s
+ζ(s) :=
+x dN(x) = exp
+x−s dΠ(x)
+1−
+
+1
+
+whenever the integrals converge. Equivalently,
+∗
+
+dN(x) = exp (dΠ(x)) = δ1 (x) +
+
+∞
+X
+1
+
+m=1
+
+m!
+
+(dΠ(x))∗m ,
+
+where δy (x) denotes the Dirac delta measure concentrated at y, and (dF )∗m denotes the
+m-th convolution power with respect to the multiplicative convolution of measures ∗, which
+is defined as
+Z
+ZZ
+dF ∗ dG =
+dF (u) dG(v).
+E
+
+uv∈E
+
+This convolution naturally generalizes Dirichlet convolution. We refer to [5, Chapters 2–3]
+for more background on this notion.
+In our case, we set
+mθ
+∞
+∞
+XX
+X
+θ
+p 1−θ
+m (x),
+1 (x).
+dΠθ (x) =
+dNθ (x) =
+n 1−θ δ 1−θ
+δp 1−θ
+n
+m
+p m=1
+n=1
+This system has associated zeta function ζθ (s), given by (6.1). Note that
+X
+θ
+n 1−θ = (1 − θ)x + O(xθ ),
+(6.2)
+Nθ (x) =
+1
+
+n 1−θ ≤x
+
+and
+
+ 1 + θ  (1 − θ)T
+(1 − θ)T
+,T ∼
+log
+,
+N ζθ ;
+2
+2π
+2π
+so that for this system in the extended sense, no zero density estimate beyond the “critical
+is possible.
+line” σ = 1+θ
+2
+We will now construct a sequence of Beurling primes P for which ζP (s) has the same zeros
+as ζθ (s), and for which the integers are also θ-well-behaved. For this however, we will assume
+that θ ≥ 1/2.
+P
+πθ (x1/m )
+First, we define a “prime-counting” function πθ (x) for which Πθ (x) = ∞
+. By
+m=1
+m
+Möbius inversion we obtain, with µ now denoting the classical Möbius function,
+∞
+∞
+X
+XX
+µ(k)
+1/k
+m (x),
+dπθ (x) =
+dΠθ (x ) =
+ap,m δp 1−θ
+k
+p m=1
+k=1
+where
+ap,m :=
+
+mθ 1/k
+1 X
+.
+µ(k) p 1−θ
+m
+
+k|m
+
+Lemma 6.1. Let m ∈ N and u > 1. Then
+X
+µ(k)u1/k > 0.
+k|m
+
+20
+
+F. BROUCKE
+
+Proof. The lemma is trivialP
+in case that m = 1, so we assume m ≥ 2. Set f0 (u) =
+P
+1/k
+. As f0 (1) = k|m µ(m) = 0, it suffices to show that f0′ (u) > 0 for u > 1.
+k|m µ(k)u
+Write
+X µ(k)
+f1 (u)
+f0′ (u) =
+u1/k−1 =:
+.
+k
+u
+k|m
+
+Now we indeed have f1 (u) > 0 for u ≥ 1:
+X µ(k) Y
+1
+> 0,
+=
+1−
+f1 (1) =
+k
+p
+p|m
+
+k|m
+
+and
+f1′ (u) =
+
+X µ(k)
+k|m
+
+k2
+
+u
+
+1/k−1
+
+≥1−
+
+∞
+X
+1
+k=2
+
+k2
+
+> 0.
+
+
+By the lemma, the coefficients ap,m are positive and dπθ (x) is a positive measure. We
+m
+now construct our sequence of generalized primes P as the sequence of numbers p 1−θ with
+multiplicity ⌊ap,m ⌋. Hence
+dπP (x) =
+
+∞
+XX
+p
+
+m=1
+
+m (x).
+⌊ap,m ⌋δp 1−θ
+
+x
+Note that πR (x) := πθ (x) − πP (x) ≥ 0. Setting M = Mx = ⌊(1 − θ) log
+⌋, we have the upper
+log 2
+bound
+ x1−θ 
+X
+1−θ
+1−θ
+πR (x) ≤
+,
+1 = π(x1−θ ) + π(x 2 ) + · · · + π(x M ) ≤ Li(x1−θ ) + O
+(log x)2
+m
+p 1−θ ≤x
+
+by a weak form of the prime number theorem with remainder. Consequently, we also have
+∞
+ x1−θ 
+X
+πR (x1/m )
+(6.3)
+ΠR (x) :=
+≤ Li(x1−θ ) + O
+.
+2
+m
+(log
+x)
+m=1
+We will now consider πR (x) as the “prime-counting function” of a system in the extended
+sense. The system (P, N ) is then obtained by removing the “primes” of the system given
+by πR (x) from the “primes” of the system given by πθ . Consequently, we may calculate
+the integer-counting function NP (x) of the system (P, N ) as a convolution of dNθ with the
+“Möbius function” of πR .
+Let NR (x) be the “integer-counting” function associated with ΠR (x): dNR (x) = exp∗ (dΠR (x)),
+or equivalently, NR (x) is the unique function with NR (1) = 1 and for which
+Z ∞
+Z ∞
+−s
+ζR (s) :=
+x dNR (x) = exp
+x−s dΠR (x).
+1−
+
+1
+
+Using a criterium for so-called “O-density” of integers by Diamond and Zhang, we show:
+Lemma 6.2. We have the upper bound
+NR (x) ≪ x1−θ .
+
+ON ZERO-DENSITY ESTIMATES FOR BEURLING ZETA FUNCTIONS
+
+21
+
+Proof. In order to apply the criterium of Diamond and Zhang, we first perform a rescaling
+and set
+1
+Π̃(x) := ΠR (x 1−θ ), dÑ(x) := exp∗ (dΠ̃(x)).
+Rx
+1
+Then Ñ(x) = NR (x 1−θ ). Setting ψ̃(x) := 1 log u dΠ̃(u), the bound (6.3) yields
+ x 
+ψ̃(x) ≤ x + O
+.
+log x
+By [5, Prop. 6.11], it follows that Ñ(x) ≪ x.
+
+
+
+Next, we set dMR (x) := (dNR (x))∗−1 , the convolution inverse of dNR (x). The function
+MR (x) is the natural analogue of the summatory function of the Möbius function and we
+have
+Z ∞
+1
+.
+x−s dMR (x) =
+ζR (s)
+1−
+As dMR (u) = exp∗ (− dΠR (u)) ≤ exp∗ (dΠR (u)) = dNR (u) and NR (x) ≪ x1−θ , the above
+integral converges absolutely for Re s > 1 − θ. The counting measure of the integers of our
+system (P, N ) is now given as the convolution dNP (x) = dNθ (x) ∗ dMR (x). On the zeta-side
+this equation translates to ζP (s) = ζθ (s)/ζR(s). We now estimate this convolution:
+Z x
+Z x
+NP (x) =
+dNθ ∗ dMR =
+Nθ (x/u) dMR (u)
+1−
+1−
+Z x
+
+=
+(1 − θ)x/u + O (x/u)θ dMR (u)
+1−
+ Z ∞
+
+Z x
+(1 − θ)x
+dNR (u)
+θ
+−θ
+=
++O x
++x
+u dNR (u) ,
+ζR (1)
+u
+1−
+x
+where in the second line we used (6.2), and in the third line we used dMR (u) ≤ dNR (u).
+Integrating by parts, using Lemma 6.2, and recalling that we assumed θ ≥ 1/2, we see that
+the above error term is
+Z
+x
+
+≪ x1−θ + xθ
+
+θ
+
+1/2
+
+which is ≪ x if θ > 1/2, and ≪ x
+NP (x) =
+
+u−2θ du,
+
+1
+
+log x if θ = 1/2. Hence we obtain
+
+
+1−θ
+x + O xθ (1 + Iθ=1/2 log x) ,
+ζR (1)
+
+where Iθ=1/2 = 1 if θ = 1/2 and 0 else.
+Finally,
+ Z ∞
+
+ζθ (s)
+−s
+= ζθ (s) exp −
+ζP (s) =
+x dΠR (x) .
+ζR (s)
+1
+R∞
+From (6.3) we see that 1 x−s dΠR (x) is analytic in Re s > 1 − θ, so that in particular,
+ 1 + θ  (1 − θ)T
+
+(1 − θ)T
+1+θ 
+, T = N ζθ ;
+,T ∼
+log
+.
+N ζP ;
+2
+2
+2π
+2π
+We have thus proved:
+
+22
+
+F. BROUCKE
+
+Theorem 6.3. Let θ ∈ [1/2, 1). Then there exists a Beurling number system (P, N ) for
+which
+
+NP (x) = Ax + O xθ (1 + Iθ=1/2 log x)
+
+for some A > 0, and whose zeta function ζP (s) satisfies
+
+1 + θ  (1 − θ)T
+(1 − θ)T
+N ζP ;
+,T ∼
+log
+.
+2
+2π
+2π
+6.2. The extremal Diamond–Montgomery–Vorhauer-example. Consider a density
+estimate of the form
+c1 (α)(1−α)
+1+θ
+≤ α ≤ 1,
+N(ζP ; α, T ) ≪ε,P T 1−θ +ε ,
+2
+for every ε > 0 and every number system (P, N ) with θ-well-behaved integers. It is an
+interesting question what the optimal value for c1 (α) is. Theorem 1.2 shows that c1 (α) =
+4(1−θ)
+, which increases from 2 to 4 as α increases from 1+θ
+to 1, is admissible.
+3−2α−θ
+2
+Regarding lower bounds, Diamond, Montgomery, and Vorhauer [4] showed that c1 (α) ≥ 1,
+at least when θ > 1/2. In their paper, they constructed for every θ ∈ (1/2, 1) a Beurling
+number system (PDMV , NDMV ) with NDMV (x) = Ax + O(xθ ) for some A > 0 and for which
+a
+ζDMV (s) has infinitely many zeros on the contour σ = 1 − log(|t|+2)
+, for some constant a > 0.
+They showed√that, asa result, no better remainder than the de la Vallée-Poussin remainder
+O x exp(−2 a log x) can be obtained in the prime number theorem (1.1). The authors also
+compute that for fixed α > θ,
+N(ζDMV ; α, T ) = Ω(T 2λ(1−α) ).
+1
+is a parameter occurring in the definition of the number system which can
+Here λ < 2(1−θ)
+1
+1
+be chosen arbitrarily close to 2(1−θ)
+. (In [4], this parameter is called α.) Taking λ = 2(1−θ)
+yields
+1−α 
+N(ζDMV ; α, T ) = Ω T 1−θ ,
+
+at the cost of only having the slightly weaker NDMV (x) = Ax + Oε (xθ+ε ), for every ε > 0.
+(Probably the error term O xθ exp(c(log x)2/3 ) with some c > 0 is possible, see [5, Chapter
+17] for the case θ = 1/2.) It would be interesting to construct examples of Beurling zeta
+functions, or even general Dirichlet series as in the statement of Theorem 1.3, which exhibit
+c1 (α) > 1 or perhaps even c1 (α) ≥ 2.
+One possible limiting factor to the amount of zeros of ζDMV is the fact that it is an
+approximation of a “continuous system”; more precisely, ζDMV (s) = ζc (s)eZ(s) , where ζc (s) is
+the Mellin–Stieltjes
+transform of an absolutely continuous measure dNc (and Z(s) satisfies
+p
+Z(σ + it) ≪σ R log(|t| + 2) for Rσ > 1/2). One might expect that Mellin–Stieltjes transforms
+∞
+∞
+of the form 1 x−s df (x) = 1 x−s f ′ (x) dx have in general fewer zeros than (discrete)
+R 2N
+Dirichlet series, for instance because of the fact that the mean values of N x−s f ′ (x) dx are
+P
+better behaved (assuming f is sufficiently “nice”) than those of N <nj ≤2N aj n−s
+j .
+1
+The zeta function ζDMV (s) (with λ = 2(1−θ)
+) exhibits some other interesting extremal
+properties, which can be shown via routine calculations which we omit. For fixed σ ∈ (θ, 1),
+it satisfies
+
+1−σ
+ζDMV (σ + it) = Ωε |t| 1−θ −ε , for every ε > 0.
+
+ON ZERO-DENSITY ESTIMATES FOR BEURLING ZETA FUNCTIONS
+
+23
+
+1−σ
+
+This shows that the classical convexity bound ζP (σ + it) ≪σ |t| 1−θ , θ < σ < 1 is essentially
+sharp for Beurling zeta functions ζP (s), and that the subconvexity bound (5.5) with some
+B < 1/2 may fail to hold.
+= 2k−1+θ
+, one may verify that
+Furthermore, letting k > 1/2 and θ < σ < 1 − 1−θ
+2k
+2k
+Z T
+
+2k−1+θ−2kσ
+1
+2k
+−ε
+1−θ
+, for every ε > 0.
+ζDMV (σ + it) dt = Ωε T
+T 0
+
+for having at most logarithmic growth of the
+Setting k = 1 gives that the condition σ ≥ 1+θ
+2
+RT
+2
+1
+second moment T 0 ζP (σ + it) dt in the class of θ-well-behaved Beurling zeta functions
+was already shown to be sharp in a
+ζP (s), θ > 1/2, is sharp. (In [3], the range σ ≥ 1+θ
+2
+broader class of general Dirichlet series and for any 0 ≤ θ < 1.) The Diamond–Montgomery–
+Vorhauer example also shows that higher order moment estimates (5.1) with k > 1 are not
+available in general.
+Even if one is able to show a logarithmic bound for a higher order moment for all Beurling
+zeta functions on a line to the right of σ = 1+θ
+, this example shows that this line should be
+2
+so close to 1 that it most likely will not lead to an improvement in the zero-density estimate,
+at least not via the method of Section 3. More precisely, say that one is able to prove that
+for some σ1 ∈ (θ, 1) and for some k > 1, every Beurling zeta function ζP with θ-well-behaved
+integers satisfies
+Z
+ 2k
+1 T
+ζP σ1 + it
+dt ≪ (log T )O(1) .
+T 0
+The zeta function ζDMV of Diamond, Montgomery, and Vorhauer then implies that σ1 ≥
+1 − 1−θ
+. If one would like to exploit this 2k-th moment, one would shift the contour in (3.1)
+2k
+to the line Re w = σ1 − σ. Estimating R2 similarly as in the proof of Theorem 5.1 would
+now only give
+ k
+1
+2k
+R2 ≪ Y k+1 (σ1 −α) T k+1 T + X 2−2σ1 k+1 (log T )O(1) ,
+1
+
+1
+
+which is non-trivial only if α > σ1 . Choosing any X ∈ [T 1−θ , T 2−2σ1 ] and comparing with
+, to an estimate which is at best
+the estimate (3.6) of R1 leads, in view of σ1 ≥ 1 − 1−θ
+2k
+N(ζP ; α, T ) ≪ T
+
+2(k+1)(1−α)
+3−2α−θ
+
+(log T )O(1) ,
+
+and hence inferior to the one provided by Theorem 1.2.
+Funding. This work was supported by the Research Foundation – Flanders [grant number
+12ZZH23N].
+Acknowledgements. The author would like to thank Gregory Debruyne for his helpful
+comments.
+References
+[1] A. Beurling, Analyse de la loi asymptotique de la distribution des nombres premiers généralisés. I, Acta
+Math. 68 (1937), 255–291.
+[2] F. Broucke, G. Debruyne, On zero-density estimates and the PNT in short intervals for Beurling generalized numbers, Acta Arith. 207, no. 4 (2023), 365–391.
+[3] F. Broucke, T. Hilberdink, A mean value theorem for general Dirichlet series, to appear in Quart. J.
+Math. Preprint available at arXiv:2409.06301 (2024).
+[4] H. G. Diamond, H. L. Montgomery, U. M. A. Vorhauer, Beurling primes with large oscillation, Math.
+Ann. 334 (2006), 1–36.
+
+24
+
+F. BROUCKE
+
+[5] H. G. Diamond, W.-B. Zhang, Beurling generalized numbers, Mathematical Surveys and Monographs
+series, American Mathematical Society, Providence, RI, 2016.
+[6] A. E. Ingham, On the difference between consecutive primes, Quart. J. Math. Oxford Ser. 8 (1937),
+255–266.
+[7] A. E. Ingham, On the estimation of N (σ, T ), Quart. J. Math. Oxford Ser. 11 (1940), 291–292.
+[8] A. Ivić, The Riemann Zeta-Function. Theory and Applications, Dover Publications, Mineola, New York,
+2003.
+[9] J. Knopfmacher, Abstract Analytic Number Theory, North-Holland, Amsterdam, and Elsevier, New
+York, 1975.
+[10] E. Landau, Neuer Beweis des Primzahlsatzes und Beweis des Primidealsatzes, Math. Ann. 56 (1903),
+46–58.
+[11] H. G. Montgomery, Zeros of L-functions, Invent. Math. 8 (1969), 346–354.
+[12] H. G. Montgomery, Topics in Multiplicative Number Theory, Lecture Notes in Math. 227, Springer,
+Berlin, 1971.
+[13] H. G. Montgomery, R. C. Vaughan, Hilbert’s inequality, J. London Math. Soc. (2) 8 (1974), 73–82.
+[14] J. Pintz, Sz. Gy. Révész, New zero-density estimates for the Beurling ζ function, preprint available at
+arXiv:2407.12746 (2024).
+[15] Sz. Gy. Révész, A Riemann–von Mangoldt-type formula for the distribution of Beurling primes, Math.
+Pannon. (N.S.) 27 (2021), 204–232.
+[16] Sz. Gy. Révész, Density estimates for the zeros of the Beurling ζ function in the critical strip, Mathematika 68 (2022), 1045–1072.
+[17] Sz. Gy. Révész, The Carlson-type zero-density estimate for the Beurling ζ function, preprint available
+at arXiv:2209.01689 (2022).
+[18] E. C. Titchmarsh, On the zeros of Riemann’s zeta-function, Proc. London Math. Soc. s2-30 (1930),
+319–321.
+Department of Mathematics: Analysis, Logic and Discrete Mathematics, Ghent University, Krijgslaan 281, 9000 Gent, Belgium
+Email address: fabrouck.broucke@ugent.be
+
+

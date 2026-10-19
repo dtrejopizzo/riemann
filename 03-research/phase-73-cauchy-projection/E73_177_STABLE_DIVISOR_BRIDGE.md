@@ -1,6 +1,5 @@
 # E73.177 - Stable divisor bridge for BT-QG
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

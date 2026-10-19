@@ -1,6 +1,5 @@
 # Phase 141 — Row D: an `h⁰` that reads the Frobenius traces
 
-Lead: Fable 5.1. Builder: Claude Opus 5. Hostile auditor: Claude Opus 5. Date 2026-09-13.
 Target of the phase: **O-14′** (well-posed per `R140_004` residue R11), with **O-15** (the moment
 cone) as a tool and **O-17** (the `Ξ_Q`-primitive bridge, residue R8) as the falsifier-side
 prerequisite.
@@ -17,12 +16,12 @@ new open item **O-18**. **No sign is proved and none is claimed; row D keeps its
 
 | file | contents | status |
 |---|---|---|
-| `R141_000_LEAD_BLUEPRINT.md` | the lead's blueprint: the object (R11 made well-posed), D.26–D.29; standing rules, three falsifiers, corpus-grep instruction, FATAL rule, the 8bis.4a warning | input of record |
-| `R141_001_BUILDER_ROUND1.md` | **the mathematics of record, rounds 1 and 2.** D.26 (the Frobenius traces; `\ker T = 𝓝_∞`; the moment cone `𝔐`; (b′) as a containment; necessary conditions; transport to the falsifiers). D.27 (the quadratic ansatz: (c) as an inequality between quadratic forms; the case (A)/(B) analysis; `h⁰_{\deg}`; the Paper-44 Gram kernel `C^{Frob}` with residue R2 and Thm 8bis.4a). D.28 (**O-17 closed**). **§D.30 (new in round 2): the Riemann–Roch candidate, (a) and (c) unconditional, the clause (b′)⁺, the stable form, the falsifiers, O-18.** D.29 (synthesis, rewritten). Corpus check per idea, paper-facing list, open list, `§ Label`. Round-2 repairs are in place with bracketed notes | delivered (round 2) |
-| `R141_002_HOSTILE_AUDIT.md` | hostile audit of round 1: 0 FATAL, 7 MAJOR (H1–H7), 7 MINOR (H8–H14); verdict **REVISE**; the D.29 recommendation rejected and the missing candidate supplied (H6) | delivered |
-| `R141_003_BUILDER_ROUND2.md` | **repair ledger**: per-finding status (all 14 CLOSED, none contested), the new §D.30 result table, and the exact status of `RH ⟹ (b′)⁺` | delivered |
-| `R141_004_HOSTILE_CONFIRMATION.md` | confirmation | pending |
-| `R141_005_LEAD_CLOSING_DECISION.md` | lead's closing decision | pending |
+| `R141_000_BLUEPRINT.md` | the blueprint (R141_000): the object (R11 made well-posed), D.26–D.29; three falsifiers, corpus-grep instruction, FATAL-flag convention, the 8bis.4a warning | input of record |
+| `R141_001_ROUND1.md` | **the mathematics of record, rounds 1 and 2.** D.26 (the Frobenius traces; `\ker T = 𝓝_∞`; the moment cone `𝔐`; (b′) as a containment; necessary conditions; transport to the falsifiers). D.27 (the quadratic ansatz: (c) as an inequality between quadratic forms; the case (A)/(B) analysis; `h⁰_{\deg}`; the Paper-44 Gram kernel `C^{Frob}` with residue R2 and Thm 8bis.4a). D.28 (**O-17 closed**). **§D.30 (new in round 2): the Riemann–Roch candidate, (a) and (c) unconditional, the clause (b′)⁺, the stable form, the falsifiers, O-18.** D.29 (synthesis, rewritten). Corpus check per idea, paper-facing list, open list, `§ Label`. Round-2 repairs are in place with bracketed notes | delivered (round 2) |
+| `R141_002_AUDIT.md` | audit of round 1: 0 FATAL, 7 MAJOR (H1–H7), 7 MINOR (H8–H14); verdict **REVISE**; the D.29 recommendation rejected and the missing candidate supplied (H6) | delivered |
+| `R141_003_ROUND2.md` | **repair ledger**: per-finding status (all 14 CLOSED, none contested), the new §D.30 result table, and the exact status of `RH ⟹ (b′)⁺` | delivered |
+| `R141_004_CONFIRMATION.md` | confirmation | pending |
+| `R141_005_CLOSING_DECISION.md` | closing decision (R141_005) | pending |
 
 No `scripts/` directory: every constant of the phase (`γ_C`, `χ = 3/16` and its optimality at `E = ½K`,
 `−1/16`) is an exact closed form.

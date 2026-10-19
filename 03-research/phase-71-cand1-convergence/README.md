@@ -1,6 +1,6 @@
 # Phase 71 -- CAND-1: zeta spectral triples, the operator-convergence front
 
-**Opened:** 2026-07-07. Route: **CAND-1** (NO-GO-LIST §VII) -- Connes-Consani-Moscovici
+Route: **CAND-1** (NO-GO-LIST §VII) -- Connes-Consani-Moscovici
 "Zeta Spectral Triples" (arXiv:2511.22755, 2602.04022). Chosen deliberately because it is the
 **one live candidate that is NOT on the positivity wall**: the operators `H_x` are self-adjoint
 **by construction**, so there is no Weil-positivity inequality to prove; the open obstacle is

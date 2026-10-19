@@ -1,6 +1,5 @@
 # E73.284 - Frequency moment quotient audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

@@ -1,6 +1,6 @@
 # Phase 2 — The anatomy profile vs the local Euler factor: Slepian, the $R_p\leftrightarrow a_p$ factorization, and a stability theorem
 
-**Route B / M5, Phase 2 (analytic, no engine).** Author: David Alejandro Trejo Pizzo · 2026-06-03.
+**Route B / M5, Phase 2 (analytic, no engine).**
 Follows T3 (`T3-anatomy.md`). Steps A/B/C per the advisor. **The question Phase 2 must answer candidly:**
 *does the anatomy profile $\{R_p\}$ carry new information, or is it merely the coefficients $\{a_p\}$
 re-packaged?*

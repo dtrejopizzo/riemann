@@ -1,7 +1,6 @@
 # E72.136 -- Model coercivity first audit
 
-**Date:** 2026-07-09.
-**Role:** test whether model complement coercivity has an elementary diagonal-dominance proof.
+**Purpose:** test whether model complement coercivity has an elementary diagonal-dominance proof.
 
 ## 0. Target
 

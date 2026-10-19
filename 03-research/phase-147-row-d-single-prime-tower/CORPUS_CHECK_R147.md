@@ -1,6 +1,6 @@
 # CORPUS_CHECK_R147 — the Frobenius diagonal, single-prime towers, and Frob ⋆ Δ^rad
 
-Author: David Alejandro Trejo Pizzo · dtrejo@biomakers.net
+dtrejo@biomakers.net
 Purpose: pre-phase-147 corpus check for row D, item "single-prime tower / Frob ⋆ Δ^rad".
 
 ---
@@ -91,7 +91,7 @@ conflated the two.
 
 **The precedent is not inside Paper 44** but in the earlier "Arith" category documents:
 
-**Doc 131** = `03-research/phase-44-new-mathematics/131-algebra-correspondencias.md`.
+**Doc 131** = `03-research/phase-44-new-mathematics/131-algebra-of-arithmetic-correspondences-the-category.md`.
 **[THEOREM 6.7]** (`:791-793`, "pureza local: H es decidible en la subcategoría de un primo"):
 for the single-Euler-factor object `F_{p,α}` (weights `c_m = α^m + (p/ᾱ)^m`, i.e. exactly
 `Λ(p^k)(p^{ka}+p^{-ka})`-type data with `α=p^a`, `1<|α|<p`):
@@ -110,7 +110,7 @@ product, functional equation, positive diagonal mass, **and violates H**; purity
 not multiplicativity, is what decides the sign. The bound is **exactly** Ramanujan `|c_m|≤2p^{m/2}`,
 and at the boundary positivity is "as tight as it can be" (exact Cauchy–Schwarz).
 
-**Doc 135** = `03-research/phase-45-fredholm/135-teorema-dos-primos.md`. Extends Thm 6.7 to **two**
+**Doc 135** = `03-research/phase-45-fredholm/135-two-prime-theorem-positivity-for-pure.md`. Extends Thm 6.7 to **two**
 inconmensurable primes: **Teorema A (3.1)** = bilateral purity ⟹ H, exact spectral identity;
 **Teorema B (4.1) + Corolario 4.2** (`:346-357`) = impurity of *either* factor ⟹ ¬H, with the
 Ramanujan barrier of the two-bump test shifted from `2p^{M/2}` to `2p^{M/2}(1+L_q/L_p)` — a foreign
@@ -178,7 +178,7 @@ never a finite value.
 
 ## 4. Paper 46 open item (21) — the archimedean slot
 
-File: `04-papers/46-row-d-the-sign/main.md:3809-3816` (§14.5, item 21; discussion at `:2612-2622`,
+File: `04-papers/46-intersection-frame-defect/archive/main.md:3809-3816` (§14.5, item 21; discussion at `:2612-2622`,
 Remark 11.14a′).
 
 Exact statement (quoted): the **kernel representation of `ω_∞` on `D^W`** — whether
@@ -204,9 +204,9 @@ it is inferred here as a genuine open link a phase-147 note could name.
 
 ## 5. Phase 137 D.12 — semilocal `W_S`, `S={∞},{∞,2},{∞,2,3}`
 
-Files: `03-research/phase-137-row-d-canonical-coupling/R137_000_LEAD_BLUEPRINT.md:13-19`;
-`R137_001_BUILDER_ROUND1.md:360-475`; `R137_002_HOSTILE_AUDIT.md` (confirms with repairs);
-`R137_007_LEAD_CLOSING_DECISION.md:15`.
+Files: `03-research/phase-137-row-d-canonical-coupling/R137_000_BLUEPRINT.md:13-19`;
+`R137_001_ROUND1.md:360-475`; `R137_002_AUDIT.md` (confirms with repairs);
+`R137_007_CLOSING_DECISION.md:15`.
 
 Definition: `W_S(F) := Σ_{v∈S}⟨F⋆F^∨,W_v⟩ − 2Φ_F(0)Φ_F(1)` (blueprint sign was refuted and
 corrected in round 1/round-2 audit: the identity actually proved is
@@ -279,10 +279,10 @@ reproduces an already-closed question.**
 | 1b | Dependence on `n` through `P(n)` only | `TRIED–PROVED` | `main.md:3436-3438` (Thm 8bis.1b(ii)) |
 | 1c | Diagonal differences `δ_m−δ_n` | **NEW** — not computed anywhere found | closest is off-diagonal Thm 8bis.1 (`main.md:3317-3414`), a different quantity |
 | 1d | Gram restricted to single prime `{Frob_{p^k}}_k` inside Paper 44 | not separately isolated in Paper 44 | precedent is Doc 131 instead (§2) |
-| 2 | Single-prime tower positivity, `Ξ_a`-sensitivity | `TRIED–PROVED` (Thm 6.7, iff classification) + `TRIED–NO-GO` (transfer to ζ's destructive regime) | `03-research/phase-44-new-mathematics/131-algebra-correspondencias.md:789-831`; two/n-prime extension `03-research/phase-45-fredholm/135-teorema-dos-primos.md:346-461,690-712` |
+| 2 | Single-prime tower positivity, `Ξ_a`-sensitivity | `TRIED–PROVED` (Thm 6.7, iff classification) + `TRIED–NO-GO` (transfer to ζ's destructive regime) | `03-research/phase-44-new-mathematics/131-algebra-of-arithmetic-correspondences-the-category.md:789-831`; two/n-prime extension `03-research/phase-45-fredholm/135-two-prime-theorem-positivity-for-pure.md:346-461,690-712` |
 | 3 | Finite renormalization of the diagonal | `TRIED–NO-GO` (no canonical finite value exists; only divergence, both conventions) | `main.md:3514-3798` (Cor 8bis.1b′, Thm 8bis.2, Cor/Rem 8bis.2a/b) |
-| 4 | Paper 46 open item (21), archimedean kernel slot | `OPEN`, unused, link to diagonal inferred not stated | `04-papers/46-row-d-the-sign/main.md:2612-2622,3809-3816` |
-| 5 | Phase 137 D.12 semilocal `W_S` | `TRIED–PARTIAL/NO-GO` beyond `S={∞}`; imports Thm 8bis.4a as the operative obstruction | `03-research/phase-137-row-d-canonical-coupling/R137_001_BUILDER_ROUND1.md:360-475`; `R137_007_LEAD_CLOSING_DECISION.md:15` |
+| 4 | Paper 46 open item (21), archimedean kernel slot | `OPEN`, unused, link to diagonal inferred not stated | `04-papers/46-intersection-frame-defect/archive/main.md:2612-2622,3809-3816` |
+| 5 | Phase 137 D.12 semilocal `W_S` | `TRIED–PARTIAL/NO-GO` beyond `S={∞}`; imports Thm 8bis.4a as the operative obstruction | `03-research/phase-137-row-d-canonical-coupling/R137_001_ROUND1.md:360-475`; `R137_007_CLOSING_DECISION.md:15` |
 | 6 | Phase-60 / P122.028 admissibility vs pure-magnitude single-prime forms | `TRIED–NO-GO` (both proved, both apply directly) | `03-research/phase-136-row-d-map/PHASE_136_MAP_SYNTHESIS_AND_PLAN.md:22,57`; `P122_028_TWO_PRIME_FINITE_GREEN_COMPLEX.md:168-186` |
 
 ---

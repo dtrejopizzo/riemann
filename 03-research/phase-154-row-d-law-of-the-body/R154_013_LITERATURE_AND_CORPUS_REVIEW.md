@@ -1,6 +1,6 @@
 # R154.013 — (P154.2) Literature and corpus review for Theorems A / O / D1 / C(½log3)
 
-*Date 2026-09-20. Task P154.2. Method: WebSearch/WebFetch (13 query families) + exhaustive grep of
+* Task P154.2. Method: WebSearch/WebFetch (13 query families) + exhaustive grep of
 `03-research`, `04-papers`, `00-references`, `05-meta-and-planning`. Rule applied: nothing is
 recorded as EXISTS unless the primary statement was read or quoted from a primary source; claims
 seen only in a search-engine summary are marked UNVERIFIED and carry no weight.*

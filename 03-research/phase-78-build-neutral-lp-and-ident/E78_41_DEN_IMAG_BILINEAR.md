@@ -1,6 +1,6 @@
 # E78.41 - `Im(q_b,N)` is an exact bilinear quotient
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

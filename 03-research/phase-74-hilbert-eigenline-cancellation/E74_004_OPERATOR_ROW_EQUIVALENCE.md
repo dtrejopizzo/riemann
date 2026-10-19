@@ -1,6 +1,5 @@
 # E74.4 - Harmonic row equals the CCM operator row
 
-Date: 2026-07-16.
 
 ## Purpose
 

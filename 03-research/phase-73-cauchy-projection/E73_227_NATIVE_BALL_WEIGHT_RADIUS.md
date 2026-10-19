@@ -1,6 +1,5 @@
 # E73.227 - Native-ball weight radius budget
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

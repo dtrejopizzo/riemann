@@ -1,6 +1,6 @@
 # C127.002 — the archimedean term is a determinant, not a fixed point
 
-Date: 2026-09-12.  Status: `PROVED`.  Full statement: Paper 45 §7.
+Status: `PROVED`. Full statement: Paper 45 §7.
 
 No note in the corpus proves an archimedean dilation trace on the A-carrier, and
 none can: the real coordinate is `R_{>0}`, the **modulus group**, with no zero

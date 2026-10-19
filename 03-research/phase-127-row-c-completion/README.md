@@ -1,6 +1,6 @@
 # Phase 127 — Row C completion
 
-Opened 2026-09-12.  Status: **ROW C WEIL-STRENGTH-COMPLETE**, with no analytic
+Status: **ROW C WEIL-STRENGTH-COMPLETE**, with no analytic
 black box.  Deliverable: [Paper 45](../../04-papers/45-row-c-explicit-formula/main.md).
 
 | note | content |

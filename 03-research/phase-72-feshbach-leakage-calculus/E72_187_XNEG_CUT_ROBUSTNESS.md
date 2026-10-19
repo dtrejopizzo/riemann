@@ -1,7 +1,6 @@
 # E72.187 -- XNEG cut robustness
 
-**Date:** 2026-07-09.
-**Role:** test whether the mixed sign `Tr(G_0G_1)<=0` is specific to the cut `0.60L`.
+**Purpose:** test whether the mixed sign `Tr(G_0G_1)<=0` is specific to the cut `0.60L`.
 
 ## 0. Question
 

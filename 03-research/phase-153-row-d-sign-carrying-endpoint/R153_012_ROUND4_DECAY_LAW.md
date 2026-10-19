@@ -1,12 +1,11 @@
-# R153.012 — Round 4 (builder): the decay law of `λ(T) = λ_min(A_T|P_T)` on `[0.30, log 2]`
+# R153.012 — Round 4 (construction): the decay law of `λ(T) = λ_min(A_T|P_T)` on `[0.30, log 2]`
 
-*Builder, round 4 of phase 153. Date 2026-09-19. Model: Claude Opus 5. Orders: `R153_011_ROUND4_BLUEPRINT.md`.
 Scripts: `scripts/round4/` (`core.py`, `scan.py`, `dense.py`, `mu.py`, `second.py`, `rate.py`, `table.py`, `zeroprofile.py`, `boundary.py`),
 reusing `scripts/audit/aud_spectral.py` (`basis_hat`, `moments`) verbatim as the discretisation of record.*
 
 ## 0. Corpus check (run before building)
 
-`grep -rIl "Slepian"` → `phase-7/connes/prolate_bridge.py`, `phase-73/E73_277` (a declared bridge, no
+`grep -rIl "Slepian"` → `phase-7-weil-carleson-sine-kernel/connes/prolate_bridge.py`, `phase-73/E73_277` (a declared bridge, no
 computation), `phase-5/M5`, `phase-137` (a CC preprint), `R153_011`. `"decay rate of λ"`, `"c(T)"` as an exponent
 → **no hits**; `"boundary exponent"` only `P122_019` and a phase-114 Carleson script. Phase 118 `SPEC.md:70`
 records `lam_min_norm` decreasing under refinement in a *different* normalisation, limit left open

@@ -1,4 +1,4 @@
-"""Phase 130 builder's independent check of the Mittag-Leffler expansions
+"""Phase 130 independent check of the Mittag-Leffler expansions
 of the local symbols Whatp, Whatinfty of Paper 43 Theorem 9.7, and of the
 Poisson/contour identity of Theorem 9.7b.  Numerics only; not a proof."""
 import mpmath as mp

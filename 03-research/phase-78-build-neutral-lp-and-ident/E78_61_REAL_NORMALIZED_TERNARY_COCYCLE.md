@@ -1,6 +1,6 @@
 # E78.61 - The real denominator core is still a genuinely ternary normalized cocycle
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

@@ -1,7 +1,6 @@
 # E72.43 -- Endpoint coborder lemma for scalar WRL
 
-**Date:** 2026-07-08.
-**Role:** formulate the renormalized coborder that would prove scalar endpoint orthogonality.
+**Purpose:** formulate the renormalized coborder that would prove scalar endpoint orthogonality.
 
 ## 0. Endpoint scalar orthogonality
 

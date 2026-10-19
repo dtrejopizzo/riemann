@@ -1,6 +1,6 @@
 # C127.001 — there are no corner terms, and the reason is irrationality
 
-Date: 2026-09-12.  Status: `PROVED`.  Full statement: Paper 45 §5, Thm. 5.4.
+Status: `PROVED`. Full statement: Paper 45 §5, Thm. 5.4.
 
 ## The discrepancy nobody had computed
 

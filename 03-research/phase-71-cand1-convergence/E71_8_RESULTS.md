@@ -1,6 +1,5 @@
 # E71.8 -- canonical-product determinant probe results
 
-**Date:** 2026-07-07.
 **Script:** `E71_8_canonical_product_probe.py`.
 
 ## Output

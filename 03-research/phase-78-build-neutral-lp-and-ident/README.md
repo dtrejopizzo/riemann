@@ -1,6 +1,6 @@
 # Phase 78 - Build-neutral LP and the IDENT discriminant
 
-**Opened:** 2026-07-18.  Continues `phase-77-weyl-limit-point/`
+Continues `phase-77-weyl-limit-point/`
 (see `PHASE_77_CLOSURE.md` and `E77_7AZ_ATTRIBUTION_GATE.md`).
 
 ## Why this phase exists
@@ -35,7 +35,7 @@ LP + IDENT + RDP-SHELL + (PROLATE + WEIL-TAIL)
 => Omega7 (Li-Keiper lambda_n >= 0) => RH.
 ```
 
-## Open objects handed over (Fable-5 pending list, updated by Phase 77)
+## Open objects handed over ( pending list, updated by Phase 77)
 
 ### Front A1 - LP, BTG side  [RE-ROUTED by E77.7az]
 ```text

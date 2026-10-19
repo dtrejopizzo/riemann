@@ -1,6 +1,5 @@
 # E74.25 - Euler/Gamma error-formula audit
 
-Date: 2026-07-16.
 
 ## Question
 

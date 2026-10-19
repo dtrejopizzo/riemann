@@ -1,6 +1,6 @@
 # Rigorous foundation of $\mathsf{TW}^{\mathrm{can}}_\Z$: the canonical Gram identity, and Stages 3, 5, 6
 
-*Pure mathematics. After the correction (scalar Euler cells withdrawn; positive Hamiltonian canonical
+* After the correction (scalar Euler cells withdrawn; positive Hamiltonian canonical
 system adopted), this note makes the corrected positivity **airtight** — a full proof of the
 canonical Gram identity (de Branges' Lagrange identity), which is the load-bearing claim §3 of
 `CONSTRUCTION-TW-canonical-system.md` stated schematically. It then secures the two "known-mathematics"

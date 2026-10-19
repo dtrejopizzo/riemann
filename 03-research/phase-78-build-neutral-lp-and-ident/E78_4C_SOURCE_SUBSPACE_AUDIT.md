@@ -1,6 +1,6 @@
 # E78.4c - Source/subspace audit for neutral-ground-Cauchy
 
-**Run:** 2026-07-18.
+**Run:**
 **Target:** the remaining source/subspace side in
 
 ```text

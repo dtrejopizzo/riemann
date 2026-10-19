@@ -31,7 +31,7 @@ Pi_mu=Res_{lambda=mu}(lambda I-H)^(-1).
 
 ## Dependency result
 
-The actual CCM builder uses only the cell kernel, the archimedean terms, and
+The actual CCM construction uses only the cell kernel, the archimedean terms, and
 prime powers.  It receives no zero ordinates.  The `GAMMAS` table is imported
 only after `H_L` is built and is used as an evaluation set.  Thus the probe
 does not insert the tested roots directly.

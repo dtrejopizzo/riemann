@@ -1,6 +1,5 @@
 # Phase 138 — Row D: the primitive radial sector and detecting cones
 
-*Lead: Fable 5.1. Builder round 1: Opus 5 (1M). Opened 2026-09-13.*
 
 **Question of the phase (Q).** Is there a convex cone `C ⊂ D^W` that is (i) *detecting* (every off-line
 zero is witnessed by a failure of `I_∞(F,F) ≤ ½(deg F)²` at some `F ∈ C`), (ii) defined without
@@ -8,7 +7,7 @@ reference to zeros, and (iii) such that the inequality on `C` follows from a str
 (polar block, Frobenius lattice, positivity of kernels, convexity) rather than from the explicit
 formula plus zero information?
 
-**Answer after rounds 1–2 (hostile audit: CONFIRMED WITH REPAIRS, no FATAL).** No such cone is
+**Answer after rounds 1–2 (audit: CONFIRMED WITH REPAIRS, no FATAL).** No such cone is
 produced, and (i) and (iii) are proved to live on **complementary `I_∞`-orthogonal summands**:
 `D^W = Λ ⊥ P^W` with `Λ = span(K,K_odd)` a hyperbolic plane reading only the ruling datum
 `M(F) ∈ R²`, and `P^W` carrying the pure zero form. The polar block satisfies the Hodge-index
@@ -21,16 +20,16 @@ exponents** `|p−½|`, with the explicit ceiling that it cannot separate `ξ` f
 
 ## Files
 
-| file | author / round | content |
+| file | round | content |
 |---|---|---|
-| `R138_000_LEAD_BLUEPRINT.md` | lead, round 0 | the blueprint: setting, Definition 0.1 (detecting cone), Observation 0.2, items D.15–D.18, standing rules and warnings |
-| `CORPUS_CHECK_R138.md` | corpus-search agent | which of the nine candidate ideas were already attempted, with verdicts and paths (Pólya cone and support-growth NEW; Chebyshev/PNT a recorded no-go; Hilbert–Pólya and Laguerre–Pólya closed) |
-| `R138_005_LEAD_CLOSING_DECISION.md` | lead | closing decision: answer to Q (PROVED restricted / OPEN clause (iii) on `E`), corpus discipline, paper-facing list, phase-139 recommendation; residuals C1–C4 applied by the lead in place | delivered |
-| `R138_001_BUILDER_ROUND1.md` | builder, rounds 1+2 | the mathematics: D.15 complete (five items); D.16 items 1–3; D.17 items 1–4; §5 the answer to Q; §6 paper- and blueprint-facing corrections; §6bis corpus check; §7 open list; §7bis **the answer to Q after audit**; §8 label. **All round-2 repairs are applied in place, each marked with a bracketed `[…, round 2, finding H<n>]` note — no silent edits.** |
-| `R138_002_HOSTILE_AUDIT.md` | hostile auditor, round 2 | verdict **CONFIRMED WITH REPAIRS**, no FATAL; 4 MAJOR (H1–H4), 9 MINOR (H5–H13); §0 lists what survived independent re-derivation |
-| `R138_003_BUILDER_ROUND2.md` | builder, round 2 | cover note: the repair ledger H1–H13 (what changed, where, and what it cost), and what survives unchanged |
+| `R138_000_BLUEPRINT.md` | round 0 | the blueprint: setting, Definition 0.1 (detecting cone), Observation 0.2, items D.15–D.18, and warnings |
+| `CORPUS_CHECK_R138.md` | corpus check | which of the nine candidate ideas were already attempted, with verdicts and paths (Pólya cone and support-growth NEW; Chebyshev/PNT a recorded no-go; Hilbert–Pólya and Laguerre–Pólya closed) |
+| `R138_005_CLOSING_DECISION.md` | round 3 | closing decision: answer to Q (PROVED restricted / OPEN clause (iii) on `E`), corpus discipline, paper-facing list, phase-139 recommendation; residuals C1–C4 applied in place | delivered |
+| `R138_001_ROUND1.md` | rounds 1+2 | the mathematics: D.15 complete (five items); D.16 items 1–3; D.17 items 1–4; §5 the answer to Q; §6 paper- and blueprint-facing corrections; §6bis corpus check; §7 open list; §7bis **the answer to Q after audit**; §8 label. **All round-2 repairs are applied in place, each marked with a bracketed `[…, round 2, finding H<n>]` note — no silent edits.** |
+| `R138_002_AUDIT.md` | round 2 | verdict **CONFIRMED WITH REPAIRS**, no FATAL; 4 MAJOR (H1–H4), 9 MINOR (H5–H13); §0 lists what survived independent re-derivation |
+| `R138_003_ROUND2.md` | round 2 | cover note: the repair ledger H1–H13 (what changed, where, and what it cost), and what survives unchanged |
 
-*(Later: `R138_004` confirmation, `R138_005` lead decision. No `scripts/` directory: nothing in
+*(Later: `R138_004` confirmation, `R138_005` closing decision. No `scripts/` directory: nothing in
 rounds 1–2 requires a certified constant — every statement is symbolic.)*
 
 ## Main statements of round 1, with labels
@@ -67,10 +66,10 @@ Turán / Li / Keiper (phase 28, 103); extending the certified window past `T = l
 
 ## Status after round 2
 
-Hostile verdict **CONFIRMED WITH REPAIRS**, no FATAL. The two substantive contributions — the
+Verdict **CONFIRMED WITH REPAIRS**, no FATAL. The two substantive contributions — the
 `I_∞`-orthogonal splitting into a hyperbolic plane and the zero form (hence: no ruling-side structure
-can detect), and the equimodularity criterion with its `ζ_K` ceiling — survived hostile re-derivation
-intact; the negative answer to **Q** (§7bis of `R138_001`, written after the audit) was confirmed in restricted form by `R138_004` and its label split by the lead (PROVED restricted / OPEN unrestricted, clause (iii) on `E`). No MAJOR finding touched a proof:
+can detect), and the equimodularity criterion with its `ζ_K` ceiling — survived re-derivation
+intact; the negative answer to **Q** (§7bis of `R138_001`, written after the audit) was confirmed in restricted form by `R138_004` and its label split (PROVED restricted / OPEN unrestricted, clause (iii) on `E`). No MAJOR finding touched a proof:
 H1 and H4 are statement/quantifier repairs, H2 withdrew an overreaching claim of record whose
 load-bearing half is proved, H3 was a mislabel.
 

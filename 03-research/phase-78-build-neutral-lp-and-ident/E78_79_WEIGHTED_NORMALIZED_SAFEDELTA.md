@@ -1,6 +1,6 @@
 # E78.79 - The normalized shell derivative is closer to an `N^{-1}` law than to a sigma law
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

@@ -88,7 +88,7 @@ hyperbolic pairing between the two rulings.  The mixed ruling--correspondence
 blocks can be supported only at the polar characters:
 
 \[
- W_{13}:s=1,qquad W_{23}:s=0.                              \tag{2.2}
+ W_{13}:s=1,\qquad W_{23}:s=0.                              \tag{2.2}
 \]
 
 They do not couple the rulings to a nontrivial correspondence parameter.

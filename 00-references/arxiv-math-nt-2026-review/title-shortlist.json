@@ -1,0 +1,1652 @@
+[
+  {
+    "id": "2606.01115",
+    "title": "Piatetski-Shapiro Primes in short intervals",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.01384",
+    "title": "Sums of Apostol's Möbius functions of order $k$",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.01514",
+    "title": "High moments of random multiplicative functions twisted by Fourier coefficients of modular forms",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.02407",
+    "title": "Analogues of the Lindelöf Hypothesis for the Barnes multiple zeta function and related problems",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.03781",
+    "title": "Pair correlation of $αn^θ$ for random $θ$",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.04677",
+    "title": "An Explicit Surjectivity Threshold for Digit Sums of Primes",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.04744",
+    "title": "Representations of positive integers by three almost-prime squares",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.05340",
+    "title": "Hasse-Weil Zeta Functions Modulo a Prime",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.06068",
+    "title": "An Elementary Analysis of the Prime Partition Function",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.07312",
+    "title": "Connection between the Riemann zeta-function and random matrices via hyperfunctions",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.07329",
+    "title": "Twisted Moments of Rankin-Selberg $L$-functions in the Prime-Power Level Aspect",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.08216",
+    "title": "Erdős Problem 684 at Density One: Small-prime Parts of Binomial Coefficients and Gaussian Fluctuations",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.08848",
+    "title": "Zeta functions over curves",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.09096",
+    "title": "Weil's quadratic form via the screw function",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.09544",
+    "title": "Multiple zeta values ending with a fixed string",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.09818",
+    "title": "A note on large values of Dirichlet $L$-functions for characters of fixed order at $1/2<σ\\leq 1$",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.10041",
+    "title": "On partial T-adic exponential sums and partial exponential sums with p-power conductor",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.10331",
+    "title": "Prime Quadruplets and Jump Conditions on Arithmetic Functions",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.10523",
+    "title": "On the Ekedahl sieve for the singular locus of the discriminant polynomial",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.13018",
+    "title": "Multi-target hyperbolic sieves and elliptic trace obstructions",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.13619",
+    "title": "Split primes and the Elekes-Rónyai problem",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.15159",
+    "title": "Every natural number is a sum of distinct semiprime unit fractions",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.15635",
+    "title": "Large values of quadratic Dirichlet $L$-functions of prime-related moduli",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.15698",
+    "title": "The Bateman-Horn conjecture on average for generalized von Mangoldt Functions",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.16627",
+    "title": "Divided differences and complex variations of multiple zeta-star values",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.17487",
+    "title": "A combinatorial large sieve for Sidon sets, distances, and norm forms",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.17955",
+    "title": "An Average-Order Theorem for a Shifted Pairwise-Coprime Extremal Problem",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.19863",
+    "title": "Consecutive integers free of certain prime factors",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.22851",
+    "title": "Faster enumeration of primes",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.23485",
+    "title": "The Brocard Problem: Structural Invariants, p-Adic Density, and the Generative Sieve",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.23661",
+    "title": "Prime-Power Rarefaction and a Density-One Lower Bound for Erdős Problem 400",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.24536",
+    "title": "Zeta-regularization and natural boundaries: Sums and products of integers and primes",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.25109",
+    "title": "Binomial sequences over prime fields",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.27323",
+    "title": "Amplified moments of the Riemann zeta function",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.27516",
+    "title": "Sharp Upper Bounds for Moments of Dedekind Zeta Functions",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.28989",
+    "title": "Point counts of abelian varieties over finite fields determining their zeta function",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.29040",
+    "title": "Distribution of random multiplicative functions in short intervals, with proper normalization",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.29294",
+    "title": "Quantum models of the Riemann zeta function, lattice spin models and algebraic models of entanglement",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.29507",
+    "title": "Multiplicative functions additive on partitions of $2k$ nonzero squares",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.29555",
+    "title": "Finite-core Volterra reductions for a Weyl-positive Riemann phase kernel",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.29559",
+    "title": "On the level of distribution of Goldbach primes and its applications",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.30232",
+    "title": "Structured Solutions of Prime-Base Binomial Congruences",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.30428",
+    "title": "Computing sieve integrals using LattE, and the density of integers with a localized divisor",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.30567",
+    "title": "Products of prime ideals in ray class groups",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.31761",
+    "title": "An Efficient Algorithm for Estimating Prime Counts",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.00410",
+    "title": "The Primes are $2$-Accessible",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.17494",
+    "title": "Spectral interpretation of Riemann zeta zeros",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.21442",
+    "title": "Global Extrema of the Zeta Regularized Determinant on Orthogonal Flat Tori",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.25457",
+    "title": "Kontsevich graphs associated with specific multiple zeta values",
+    "listing_month": "06"
+  },
+  {
+    "id": "2606.27827",
+    "title": "Analytic properties of the parametric harmonic zeta function, with applications to harmonic Stieltjes constants",
+    "listing_month": "06"
+  },
+  {
+    "id": "2607.01126",
+    "title": "Distribution of Selmer ranks in prime cyclic extensions",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.02828",
+    "title": "A finite Guinand-Weil dictionary and archimedean tail order for the truncated Weil quadratic form",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.03490",
+    "title": "Ramanujan-type identities for alternating Hurwitz zeta functions",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.03654",
+    "title": "Extreme values of the real part of the Riemann zeta function",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.04316",
+    "title": "A Gaussian-Perron Prime-Side Defect and Local Profiles Near Critical-Line Zeros of the Riemann Zeta Function",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.04338",
+    "title": "A proof of Riemann's hypothesis via Hadamard-Weierstrass factorization",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.04632",
+    "title": "A decades-long breakthrough in zero-density estimates and primes in short intervals",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.04903",
+    "title": "Pythagorean triples in level sets of completely multiplicative functions",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.04960",
+    "title": "Truncated Multiple Zeta Values",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.05707",
+    "title": "A weaker but simpler sieve inequality",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.06285",
+    "title": "The Siegel-Weil formula in geometry and arithmetic",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.06398",
+    "title": "Random Multiplicative Functions and Making Squares from Polynomial Values",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.07911",
+    "title": "Non-orthogonality of the cubic and quartic large sieves via Rankin-Selberg",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.08982",
+    "title": "Joint level-weight murmurations: prime averaging and the cubic pointwise range",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.08985",
+    "title": "Moments of the number of representations as sums of two prime squares",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.09110",
+    "title": "Averages of diagonal Elliott-Halberstam problem twisted by Möbius function with Sobolev and Hölder-Zygmund weights",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.10654",
+    "title": "The Prime Digit Distribution Conjecture: A Formal Proof of Average Digit Equidistribution in the Prime Numbers",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.10773",
+    "title": "Weak Inhomogeneous Poissonian Pair Correlation and Equidistribution",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.10862",
+    "title": "Kloosterman sign changes with moduli having at most five prime factors",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.11068",
+    "title": "Exact Frequencies of Consecutive Quadratic Residue and Nonresidue Patterns Modulo a Prime",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.11248",
+    "title": "Unexpected primes of good reduction in quotients of modular and Shimura curves",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.12302",
+    "title": "Solomon zeta functions over arithmetic orders",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.14515",
+    "title": "Beyond the Riemann Hypothesis bounds: A pair-correlation approach to the least prime in arithmetic progression and the smallest quadratic non-residue",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.15137",
+    "title": "A Bombieri-Vinogradov theorem for exponential sums over products of k primes",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.15305",
+    "title": "A counterexample to a conjecture of Thakur on Carlitz-Wieferich primes",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.15311",
+    "title": "A sharp inverse theorem for the quadratic large sieve",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.15574",
+    "title": "Improved bounds for multiplicative functions in almost all short intervals",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.16032",
+    "title": "An improvement on the largest prime factors of consecutive integers",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.16336",
+    "title": "Non-ordinary primes and congruences for weakly holomorphic modular forms of level 2",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.16795",
+    "title": "An explicit uniform cubic wedge for consecutive Toeplitz minors of the Riemann xi coefficients",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.16893",
+    "title": "Twisted Siegel-Weil formulas for $\\mathrm{GL}_2$ over non-Galois quartic CM fields",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.19525",
+    "title": "Additive and multiplicative densities, prime valuations and symbolic models",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.20041",
+    "title": "On the value distribution of the Riemann zeta-function with general shifts",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.20758",
+    "title": "Zeros of the Dirichlet series of even zeta values",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.21262",
+    "title": "Zeta functions of $\\mathrm{PGL}_n$ over non-Archimedean local fields",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.21979",
+    "title": "Factorial Calculi and the Canonical Stirling Defect of the Prime Bhargava Factorial",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.22347",
+    "title": "Prime-Interval Algebras",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.22363",
+    "title": "Playing with additivity conditions in multiplicative functions",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.23150",
+    "title": "On the role of higher roots in prime ideal races",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.24048",
+    "title": "Larger sieve with height function and uniform bounds for integral points on curves over number fields",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.25403",
+    "title": "Extreme values of quadratic Dirichlet $L$-functions with prime-related moduli",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.25671",
+    "title": "Short Quartic Exponential Sums in an Intermediate Range and Waring's Problem for Fourth Powers with Almost Equal Summands",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.25910",
+    "title": "$d$-Translated Unit Sensitive Primes",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.28091",
+    "title": "Random linear configurations in dense sets and primes",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.28433",
+    "title": "Vertex volumes, lattice-minima tails, and height zeta functions for the standard arithmetic quotient of $\\operatorname{PGL}_d$",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.28931",
+    "title": "The Fine-Structure Hierarchy of Prime Biases and the Universal Dominance of $-1 \\pmod N$",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.29329",
+    "title": "Generalized Wieferich primes and monogenic trinomials",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.29429",
+    "title": "A sharp almost sure upper bound for partial sums of random multiplicative functions",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.05560",
+    "title": "A Variation Norm Carleson Theorem Along the Primes",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.05656",
+    "title": "Degenerations of flat connections on Riemann surfaces",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.06092",
+    "title": "Generalisation of Baker's Forcing Method to Arbitrary Prime and NP-hardness of Several $p$-adic Optimisations",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.12728",
+    "title": "A universal leading-residue formula for Witten zeta functions",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.18945",
+    "title": "Generic polar divisors and flag residues for root-system zeta functions",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.23453",
+    "title": "Tiling a triangle into a prime number of congruent triangles",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.24270",
+    "title": "Multiplicative Subgroups of Prime Fields Are Not Sumsets",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.25002",
+    "title": "How Random Is the Möbius Function? Smoothing, Probability, and the Riemann Hypothesis",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.25595",
+    "title": "Graph integrals, Feynman periods, and single-valued multiple zeta values",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.26534",
+    "title": "Fuglede's Conjecture on Cyclic Groups of Square-Free Order: The Case of Rapidly Growing Prime Factors",
+    "listing_month": "07"
+  },
+  {
+    "id": "2607.26779",
+    "title": "Asymptotics of the spectral determinant of the weighted Laplacian for a sequence of compact Riemann surfaces of infinitely growing volume",
+    "listing_month": "07"
+  },
+  {
+    "id": "2608.00184",
+    "title": "Random Multiplicative Functions with Periodic Weights",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.01781",
+    "title": "Factorial residues modulo a prime: beyond the square-root bound",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.02066",
+    "title": "Every quasiperfect number has at least eight distinct prime factors",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.02230",
+    "title": "Multiple Zeta Values",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.02381",
+    "title": "An intermediate conjecture between Goldbach and Dubner: every even number is the sum of a prime and a twin prime",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.03268",
+    "title": "On pairs of primes with small order reciprocity",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.04241",
+    "title": "Rational spanning sets of level-one cusp forms from Eisenstein series at prime levels",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.05191",
+    "title": "Rigidity of Averages over the Two Largest Prime Factors",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.05319",
+    "title": "The sesquicentennial of the prime number $2^{127} - 1$",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.05961",
+    "title": "Bounds for moments of twisted quadratic characters of prime modulus",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.06054",
+    "title": "Strong Weil Degree Divisibility at Higher Levels",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.06879",
+    "title": "Anticyclotomic Iwasawa theory of CM elliptic curves at ramified primes",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.07094",
+    "title": "An extension of Ramanujan-Guinand identity for the Dedekind zeta function and a new formula for $ζ_\\mathbb{F}(2)$ and $ζ_\\mathbb{F}(2m+1)$",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.07399",
+    "title": "Siegel zeros and small gaps between zeros of the Riemann zeta function",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.07804",
+    "title": "Zeta zeros of function fields heuristically equidistribute as genus goes to infinity",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.08098",
+    "title": "Binomial coefficients coprime to 6",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.08682",
+    "title": "A new hyperbolicity wedge and a joint semicircle limit for Jensen polynomials of Riemann's $ξ$-function",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.09488",
+    "title": "A Sharper Explicit Result for the Sum of Two Almost Primes",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.10675",
+    "title": "A proof of a weighted sum conjecture for finite multiple zeta values of level two",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.12041",
+    "title": "Duality formulas for $\\widehat{\\mathcal{Q}}$-multiple zeta values",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.12400",
+    "title": "A conditional arithmetic obstruction to the prime numbers as a spectrum of a probability measure",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.12709",
+    "title": "Uniform bounds on prime levels of abelian division fields of elliptic curves over number fields without rationally defined CM",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.13371",
+    "title": "Gross vectors modulo 2 and elliptic curves of prime conductor",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.13637",
+    "title": "More than two thirds of the zeta zeros are simple and on the critical line",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.14190",
+    "title": "A Kubilius model for sieve-theoretic sequences",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.14777",
+    "title": "Exponential sums over primes",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.14852",
+    "title": "Reciprocity for The Short Twisted Second Moment of The Riemann Zeta Function",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.15480",
+    "title": "Formal finite multiple zeta values",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.15773",
+    "title": "Large values of quadratic character sums",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.16034",
+    "title": "Simple and distinct zeros in a prime-modulus Dirichlet family from near-microscopic to polylogarithmic heights",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.16679",
+    "title": "Subconvexity of Short $k$-Free Exponential Sums",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.17045",
+    "title": "Prime-Exponent Transition Geometry and Divisor Barriers Between Consecutive Highly Composite Numbers",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.17265",
+    "title": "A central limit theorem for prime geodesics on random surfaces of large genus",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.17639",
+    "title": "Infinitely many primes with a fixed Frobenius field for an elliptic curve over $\\mathbb{Q}$",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.18197",
+    "title": "On sums of two primes and six Fibonacci numbers",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.18892",
+    "title": "Universal Ramanujan-type congruences for prime-detecting quasimodular forms",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.19058",
+    "title": "The Position-wise Prime Digit Distribution Theorem: A Formal Proof of Position-wise Digit Equidistribution in the Prime Numbers",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.19262",
+    "title": "Many Representations as Sums of Three Prime Cubes",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.19525",
+    "title": "Quantitative bounds for sets lacking polynomial progressions with shifted prime difference",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.20125",
+    "title": "Modularity theorems for Eisenstein congruences in prime-power level",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.21346",
+    "title": "Sums of products of Kloosterman sums to prime power moduli",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.21354",
+    "title": "Almost sure upper bound for sums of random multiplicative functions and critical chaos",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.21573",
+    "title": "A non-abelian large sieve and Artin's primitive root conjecture",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.22119",
+    "title": "Prime multipliers of order ten: norm spectra, local charts, and selective lifting",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.22373",
+    "title": "The normalized approximation function for multiple zeta-star values",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.22431",
+    "title": "Yun's zeta function and the overorder zeta function for Gorenstein cubic orders",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.22738",
+    "title": "Cyclotomic norm congruences for zeta values and modular $L$-values",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.23996",
+    "title": "Geometric Realization of Finite Residue Casimirs and Weil Operators via Szegő Kernels",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.24035",
+    "title": "Sieve dimension and search depth for the Erdős-Straus conjecture, $n \\equiv 1 \\pmod{24}$",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.24827",
+    "title": "Weil positivity in compact windows: a finite reduction, certified two-sided bounds, and a Landau-Widom decay law",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.24878",
+    "title": "Oscillation of partial sums of the Möbius function and zeros of Riemann's zeta function",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.24930",
+    "title": "On the sum of least prime factors in short intervals",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.24932",
+    "title": "Transcendence of Tonelli--Shanks Power Modulo Infinitely Large Primes",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.25406",
+    "title": "An elliptic K3 surface X/Q(t) with Mordell-Weil rank 17, I: Formulas for X and base changes of rank 18 and 19",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.25721",
+    "title": "The Mixed Second Moment of Quadratic Dirichlet $L$-functions with Prime Conductors",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.26384",
+    "title": "Discrete dynamics of Eratosthenes sieve",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.26636",
+    "title": "$\\mathbb{F}_q$-linear relations among Thakur's multiple zeta values in positive characteristic",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.26814",
+    "title": "Two-point correlations of multiplicative functions with dense orbits",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.27058",
+    "title": "Modular periodicity of the Euler up/down numbers at odd prime powers",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.27323",
+    "title": "On Piatetski-Shapiro primes from almost primes",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.27356",
+    "title": "Integers divisible by a shifted prime in a given interval",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.27418",
+    "title": "Value distribution of multiplicative functions along linear fractional sequences",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.29558",
+    "title": "Luo's Spectral Large Sieve Inequality on Short Intervals",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.29938",
+    "title": "Average twin prime conjecture for elliptic curves in arithmetic progressions",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.30920",
+    "title": "Counting solutions to quadratic forms in eight prime variables of off-diagonal rank $3$",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.30942",
+    "title": "Subconvexity of Short $k$-Free Exponential Sums in $\\mathbb{F}_q[t]$",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.31060",
+    "title": "Large zeta sums and zeros of the Riemann zeta function",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.31126",
+    "title": "Bounded gaps between primes",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.00470",
+    "title": "Arithmetic hypergeometric $\\mathcal {D}$-modules and exponential sums on reductive groups",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.13687",
+    "title": "Multiplicative chaos from random multiplicative functions",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.13768",
+    "title": "Algebraic curves admitting automorphism groups of large prime square order",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.14931",
+    "title": "Möbius Covariance and Coefficient Duality: From Bernoulli Series to Enumerative Applications",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.27983",
+    "title": "On the number of $2$-dice games with prime power dice-size",
+    "listing_month": "08"
+  },
+  {
+    "id": "2608.30097",
+    "title": "Prime and Touchard Congruences of Mixed-Type Bell Numbers",
+    "listing_month": "08"
+  },
+  {
+    "id": "2609.00537",
+    "title": "Explicit Exponential Sum Estimates and Approximate Functional Equations for the Zeta Function",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.01101",
+    "title": "Sharp lower bounds for shifted moments of Dedekind zeta functions",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.01327",
+    "title": "An improvement on the largest prime factor of $n^2+1$",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.01458",
+    "title": "Confluence relations for $q$-analogues of multiple zeta values",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.02346",
+    "title": "Regularised double shuffle relations for planar Arborified Zeta Values",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.02392",
+    "title": "Large values of cubic and quartic Dirichlet $L$-functions of prime moduli",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.02412",
+    "title": "A Two-Variable Zeta Function for a Parity-Perturbed Hofstadter Q-Recursion: The Exceptional t = -1 Slice and Gaussian Boundary Layers",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.02713",
+    "title": "On divergence related to Riemann--von Mangoldt's explicit formula of the prime-counting function",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.02882",
+    "title": "A new proof that more than $2/3$ of the zeros of the Riemann zeta function are simple and on the critical line",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.03091",
+    "title": "Perfect numbers, Wieferich primes and the solutions of $\\binom{2n}{n}\\equiv 2^n \\bmod n$",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.03112",
+    "title": "Poissonian pair correlations for the three-particle Sutherland model",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.03448",
+    "title": "Prime-power Diophantine tuples",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.03954",
+    "title": "Galois representations ramified at one prime via relative deformation theory",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.03961",
+    "title": "On the exponential sum over squarefree integers",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.04424",
+    "title": "Multiple zeta values in $λ$-rings",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.04993",
+    "title": "The Right Edge of the Zero Set of the Fibonacci Zeta Function",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.05810",
+    "title": "Primes with Restricted-Digit Differences",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.06068",
+    "title": "Infinite-order $p$-adic differential equations for Hurwitz-type Euler zeta functions: Uniqueness and higher-dimensional extensions",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.06576",
+    "title": "Optimization of Quadratic Sieve Algorithm Implementation for Large Integer Factorization",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.06677",
+    "title": "Unsupported Cyclotomic Divisors in Three-Prime Integer Tilings",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.06822",
+    "title": "High dimensional Riemann--Roch spaces in linear spaces with small squares",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.07371",
+    "title": "Prime pairs along rays of prime indices",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.07918",
+    "title": "Simple critical zeros and distinct zeros of the Riemann zeta-function in short intervals",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.08137",
+    "title": "The Fibonacci numbers are not an additive uniqueness set for multiplicative functions",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.08263",
+    "title": "Todd's relation conjecture and binary relations for multiple zeta values in positive characteristic",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.08528",
+    "title": "Counting Residue-Class Survivor Sets: An Asymptotic Comparison with Prime-Admissible Sets",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.08595",
+    "title": "Four explicit continued fractions for values of the Lerch transcendent and the Hurwitz zeta function",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.10010",
+    "title": "Diophantine approximation with primes in an arithmetic progression",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.11037",
+    "title": "Ordinary 3-Isogeny Graphs and Improvement of Supersingularity Testing for Twisted Hessian Curves over Prime Fields",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.11070",
+    "title": "Effective estimates for exponential sums with multiplicative coefficients",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.11072",
+    "title": "Rational Approximations for Reciprocals of Multiple Zeta Values and Trivariate Cauchy Numbers",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.12940",
+    "title": "Large fluctuations of extended Rademacher random multiplicative functions",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.13063",
+    "title": "Iwasawa theory of CM elliptic curves at potentially supersingular primes",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.13088",
+    "title": "Kolyvagin's conjecture at non-ordinary primes",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.13429",
+    "title": "Theta functions after Weil",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.13435",
+    "title": "Arithmetic Siegel-Weil for the spherical Hecke algebra",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.13852",
+    "title": "Prime and Nonprime Totatives: A Sharp Construction and Exact Thresholds",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.13904",
+    "title": "Generalized Wieferich primes and monogenic polynomials",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.14188",
+    "title": "Golden-ratio growth of Conway's subprime closure",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.14224",
+    "title": "A Central Limit Theorem for Coprime Pair Counts in Randomly Translated Disks",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.14471",
+    "title": "An explicit power-saving bound for Sárközy's Theorem on shifted primes, assuming GRH",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.14714",
+    "title": "Prime Plus a Non-Square-Free Integer: An Elementary Approach",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.14822",
+    "title": "Transcendence of Montgomery Reduction Factor in the Ring of Integers Modulo Infinitely Large Primes",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.15052",
+    "title": "Laurent coefficients of Zagier-type zeta function {à} la Ishibashi and arithmetic aspects of extended Ramanujan period function",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.15166",
+    "title": "On the largest prime factors less than $y$ of consecutive shifted primes",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.15597",
+    "title": "Long runs of integers with small prime factors and the divisor function of $n!$",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.15862",
+    "title": "Cauchy laws for zeta logarithmic derivatives and stationary Stieltjes transforms",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.16048",
+    "title": "The Waring-Goldbach problem in short intervals under the Generalized Riemann Hypothesis",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.16181",
+    "title": "Mean Lindelöf Hypothesis and Prime Geodesic Theorem on Bianchi Manifolds",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.16699",
+    "title": "Laurent series expansions for the Barnes multiple zeta function",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.16700",
+    "title": "Triple divisor type functions in arithmetic progressions to prime power moduli",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.16750",
+    "title": "Prime-power congruences for level-one eigenforms",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.17819",
+    "title": "Only finitely many modular Jacobians are supersingular modulo a given prime",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.17875",
+    "title": "Zero-Density Concentration for Dirichlet Polynomials",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.18414",
+    "title": "Bounded intervals containing a given number of primes",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.18480",
+    "title": "Cyclotomic Prime Extractors",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.18938",
+    "title": "An Omega result for partial sums of the Riemann zeta function",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.19434",
+    "title": "Asymptotic counting of integers with prime factors $p_{r^a s^b}$",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.20208",
+    "title": "A characterization of Sophie Germain primes - II",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.20367",
+    "title": "The Three Gates: A Rooted-Operator Approach to Weil Positivity",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.20460",
+    "title": "Low moments of automorphic random multiplicative function sums",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.20505",
+    "title": "Computational results on sums of a prime with squares or cubes",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.21195",
+    "title": "The large sieve for square moduli under Hooley's hypothesis $R^*$",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.21689",
+    "title": "On low-discrepancy sequences and Poissonian pair correlation",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.22364",
+    "title": "On periods of the Tribonacci sequence modulo primes",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.22624",
+    "title": "Zero density theorems for short intervals",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.22777",
+    "title": "On a Turán's theorem for small primes",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.23222",
+    "title": "Explicit bounds for the prime number theorem",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.23233",
+    "title": "Wave Numbers: Discrete Sequence Algebras, Sieve Projectors, and Dynamical Geometry",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.23343",
+    "title": "Critical Pairs for Mixed Restricted Sumsets in Prime Fields",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.23390",
+    "title": "Large values of quadratic Hecke $L$-functions with prime-related moduli of the Gaussian field",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.23413",
+    "title": "Lower-order terms in mean-square formulas for the Euler--Zagier double zeta-function and regularized multiple zeta values",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.23562",
+    "title": "Refined sum formulas for finite multiple zeta values of level two",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.24051",
+    "title": "The exceptional set of a prime and a square",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.24082",
+    "title": "On existence of generalised Lehmer numbers modulo primes",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.24123",
+    "title": "A fully faithful p-adic Riemann--Hilbert functor for filtered coherent D-modules",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.24167",
+    "title": "Proportions of the non-trivial zeros of the Riemann zeta function",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.24248",
+    "title": "Selberg sieve weights and sign changes of Kloosterman sums. I. Uniform asymptotics for shifted weights",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.24255",
+    "title": "Selberg sieve weights and sign changes of Kloosterman sums. II. Square-free moduli with at most four prime factors",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.24347",
+    "title": "The lower bound of shifted primes with large prime factors",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.24773",
+    "title": "A polynomial basis for the multizeta algebra in positive characteristic",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.25171",
+    "title": "A density version for the sum of nine cubes of primes",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.25341",
+    "title": "Distinct exponents in the prime factorization",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.25393",
+    "title": "On the generation of multiplicative groups by small primes",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.25628",
+    "title": "A surprising generalization of the Möbius function",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.25879",
+    "title": "The large sieve through Parseval, Large sifted sets are regular",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.25885",
+    "title": "The weighted large sieve through Parseval",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.25985",
+    "title": "Large values of the Hurwitz zeta function with rational parameter",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.26787",
+    "title": "A finite arithmetic form of Robin's inequality and its equivalence to the Riemann hypothesis",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.26980",
+    "title": "A new upper bound for the irrationality exponent of zeta(3)",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.27715",
+    "title": "Zero density estimates for $\\mathrm{GL}_2$ automorphic $L$-functions",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.27808",
+    "title": "Gevrey localization for simple and distinct zeros in a prime-modulus Dirichlet family",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.27834",
+    "title": "Shifted log-sine integrals and multiple zeta values",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.27962",
+    "title": "Morse Topology, Zero Products, and Elliptic Prime Crossings",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.28200",
+    "title": "On the hyperbolic prime number theorem",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.28253",
+    "title": "A tyro's approach to the tilted sieve: beyond the Erdős--Rankin bound",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.28284",
+    "title": "Counting $k$-tuples of positive integers such that the values of several polynomials of $k$ variables are relatively prime",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.28354",
+    "title": "Trivial zeros of zeta functions of type $\\mathrm{A}_r$",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.29574",
+    "title": "Lie algebras for multiple Eisenstein series and multiple q-zeta values",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.29594",
+    "title": "Reducibility of $rx^m+p^e f(x)$ for Large Primes $p$",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.30207",
+    "title": "Diophantine approximation by primes and Landau--Siegel zeros",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.30823",
+    "title": "Mishiba's Conjecture on the Coaction of $\\infty$-adic Multiple Zeta Values",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.31249",
+    "title": "The derivative function of the zeta-star correspondence",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.32053",
+    "title": "Quasimodular Forms, Partitions, and Primes in Intervals",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.32140",
+    "title": "Unit fractions with semiprime denominators: an elementary proof of Erdős Problem #306",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.33019",
+    "title": "A Unified Approach to Formal Arakawa-Kaneko Type Zeta Values via Iterated Integrals",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.33043",
+    "title": "More than 83.69% of the zeros of the Riemann zeta function are distinct",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.33111",
+    "title": "Dynamics of multiples of zeta by exponential functions",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.33162",
+    "title": "Stacky Heights, Entropy, and Zeta Functions of Weighted Hypersurfaces over Finite Fields",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.33278",
+    "title": "Prime-Detecting Identities from Dirichlet Inversion",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.33324",
+    "title": "On the distribution of the zeros of the Euler double zeta-function $ζ_2(s,s)$",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.33564",
+    "title": "Cancellation profiles of Fibonacci-Lucas zeta sums",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.33692",
+    "title": "Biases in the distribution of primes in short intervals",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.33953",
+    "title": "Sums of von Mangoldt convolutions via trace-sum averages over $U(N)$",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.34093",
+    "title": "Density of $μ$-ordinary Primes for K3 Surfaces",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.35187",
+    "title": "Moments of random multiplicative functions with polynomial coefficients",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.35610",
+    "title": "On the largest prime factors of $p-1$ and $p+1$",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.35950",
+    "title": "Primes in arithmetic progressions and Siegel zeroes",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.36200",
+    "title": "On closed-form expressions for weighted mean square of the Riemann zeta function and Dirichlet $L-$functions",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.36467",
+    "title": "Reduction of Weil-Deligne Representations",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.37301",
+    "title": "The Algebra of Parity-Twisted Crank Moments and a Prime-Detecting Expression",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.37450",
+    "title": "Multiple Zeta Values in Positive Characteristic: A Kaneko-Zagier-Type Conjecture",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.37460",
+    "title": "Weighted equidistribution of factorial prime valuations in fixed power bands",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.37615",
+    "title": "On minima of theta and Epstein zeta functions in dimension four",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.37754",
+    "title": "Restricted Binomial GCDs at Primes Congruent to -1",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.38558",
+    "title": "Zeta elements for $p$-ordinary modular forms over imaginary quadratic fields and applications",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.39725",
+    "title": "Atkin--Lehner Quotients of Modular Curves at Primes of Bad Reduction",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.40282",
+    "title": "On Greenberg's conjecture for rational elliptic curves at Eisenstein primes",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.00290",
+    "title": "Shifted poles and chamber cancellation for classical Witten zeta functions",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.03801",
+    "title": "From Ordered Bernoulli Levels to Critical-Line Geometry: Integer Quantization, Bernoulli Residual Phase, and Prime-Power Spectra",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.03896",
+    "title": "The Prime Clockwork: A Dynamic Representation of Modular and Multiplicative Arithmetic",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.18918",
+    "title": "Graph lattice sums and graph zeta functions for long-range interacting quantum lattice models",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.20522",
+    "title": "Infinite prime sumsets in structured and $U^k(Φ)$-uniform sets",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.20740",
+    "title": "Combinatorics of hyperplane arrangements and Witten zeta function at the origin",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.25045",
+    "title": "An irreducible decomposition of the Weil representation restricted to open compact subgroups",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.25742",
+    "title": "Zero-Run Spectra of the $(3,2)$ Raney numbers Modulo Primes",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.28282",
+    "title": "Computation of anisotropic singular sums from high-order derivatives of Epstein zeta functions",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.28677",
+    "title": "The Schur multiplier of $\\rm{SL}_2$, $K_2$, and Dedekind zeta-functions over $S$-integers",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.33327",
+    "title": "A planar algebraic Zarankiewicz theorem over prime fields",
+    "listing_month": "09"
+  },
+  {
+    "id": "2609.33660",
+    "title": "$p$-adic spectral zeta functions via the inverse Stieltjes transform",
+    "listing_month": "09"
+  },
+  {
+    "id": "2610.00765",
+    "title": "Perfect squares in reciprocal-sum sequences and primes that are inert in quadratic fields",
+    "listing_month": "10"
+  },
+  {
+    "id": "2610.01035",
+    "title": "The sixth moment of the Riemann zeta function",
+    "listing_month": "10"
+  },
+  {
+    "id": "2610.01091",
+    "title": "Translation invariant quadratic forms in $8$ variables and dense sets of primes",
+    "listing_month": "10"
+  },
+  {
+    "id": "2610.01422",
+    "title": "A Prime-Power Dichotomy for Nekrasov--Okounkov Hook Lengths and $t$-Core Partitions",
+    "listing_month": "10"
+  },
+  {
+    "id": "2610.01748",
+    "title": "Uniform estimate of Lang-Weil type for counting points of schemes over finite rings",
+    "listing_month": "10"
+  },
+  {
+    "id": "2610.01795",
+    "title": "Quadratic distances in even dimensions over prime fields",
+    "listing_month": "10"
+  },
+  {
+    "id": "2610.01998",
+    "title": "On the prime geodesic theorem",
+    "listing_month": "10"
+  }
+]

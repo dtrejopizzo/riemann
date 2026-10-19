@@ -1,6 +1,6 @@
 # M3 — Signature closedness: does a positive rank-one divergence preserve the index? — the candid crux
 
-**Phase 65, milestone M3 (the conceptual heart).** Pure mathematics. The single remaining question
+**Phase 65, milestone M3 (the conceptual heart).** The single remaining question
 (M2): does the positive, rank-one pole divergence create a negative square in the $\tau_0$-limit? We
 prove the half that the definite sign genuinely buys — **each finite operator is self-adjoint, so its
 determinant has only real zeros (is Hermite–Biehler), and Davenport–Heilbronn fails here exactly** — and

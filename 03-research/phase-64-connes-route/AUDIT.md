@@ -1,4 +1,4 @@
-# Phase 64 audit (2026-06-28)
+# Phase 64 audit
 
 Critical re-check of all Connes-route results. Headline: the **qualitative picture is robust; the
 marginal-positivity claims require high precision** (float64 is insufficient for the edge).

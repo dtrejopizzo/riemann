@@ -231,7 +231,7 @@ This lemma is exactly the variational version of the symmetrized Mellin
 boundary positivity gate in `124_A1_GATE_IMPLICATION_GRAPH.md`.  It is also
 the non-tautological part of the bordered-current route: the Schur complement
 formula is automatic, while coercivity of the completed energy is the
-force-RH step.
+RH-strength step.
 
 ## Why this does not close A1
 

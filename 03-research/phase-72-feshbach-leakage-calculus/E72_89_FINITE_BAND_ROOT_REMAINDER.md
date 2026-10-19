@@ -1,7 +1,6 @@
 # E72.89 -- Finite-band root remainder
 
-**Date:** 2026-07-09.
-**Role:** state the current minimal finite identity after the CCGD and finite-band reductions.
+**Purpose:** state the current minimal finite identity after the CCGD and finite-band reductions.
 
 ## 0. Input
 

@@ -1,6 +1,5 @@
 # E73.168 - Quotient dual audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

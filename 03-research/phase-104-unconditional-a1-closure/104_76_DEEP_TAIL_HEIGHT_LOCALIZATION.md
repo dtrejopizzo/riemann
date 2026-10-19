@@ -1,6 +1,6 @@
-# 104_76 — Localización en altura de la cola profunda y gate de momentos
+# 104_76 — Height localization of the deep tail and moment gate
 
-**Resultado.** El target aritmético extremadamente débil de `104_75`,
+**Result.** The extremely weak arithmetic target of `104_75`,
 
 \[
  {1\over H_X}\sum_{n\le X}{1\over n}
@@ -9,55 +9,55 @@
  \longrightarrow0,                                      \tag{1}
 \]
 
-no requiere controlar colectivamente todos los ceros. Uniformemente para
-\(1\le n\le X\), la contribución de los ceros de altura
-\(\gamma>X^{1/4}\) satisface
+does not require controlling all the zeros collectively. Uniformly for
+\(1\le n\le X\), the contribution of zeros of height
+\(\gamma>X^{1/4}\) satisfies
 
 \[
  \boxed{|\lambda_n^{(>X^{1/4})}|
  \ll X\log(X+2)\exp(\tfrac12\sqrt X).}                  \tag{2}
 \]
 
-Por tanto, si todos los ceros con \(0<\gamma\le X^{1/4}\) están en la
-recta crítica, entonces, para \(X\) suficientemente grande, el indicador
-de (1) es idénticamente cero para **cada** \(n\le X\). En particular, la
-cola alta ya tiene margen exponencial \(e^{-\sqrt X/2+O(\log X)}\) respecto
-del umbral.
+Therefore, if every zero with \(0<\gamma\le X^{1/4}\) lies on the
+critical line, then, for \(X\) sufficiently large, the indicator of
+(1) is identically zero for **every** \(n\le X\). In particular, the
+high tail already has exponential margin \(e^{-\sqrt X/2+O(\log X)}\)
+with respect to the threshold.
 
-Esto localiza exactamente el hueco: para probar (1) asintóticamente queda
-excluir los modos exteriores de altura \(\gamma\le X^{1/4}\) cuando
-\(X\to\infty\). Esa obligación recorre todas las alturas y no es un input
-incondicional conocido. Un argumento de segundo momento, Markov o Chernoff
-no falla por los ceros altos: falla precisamente si no controla este bloque
-bajo. El cuarteto exterior fijo muestra que ningún bound que use solo (2)
-puede cerrar (1).
+This exactly localizes the gap: to prove (1) asymptotically, what
+remains is to exclude exterior modes of height \(\gamma\le X^{1/4}\)
+as \(X\to\infty\). That requirement runs over every height and is not
+a known unconditional input. A second-moment, Markov, or Chernoff
+argument does not fail because of the high zeros: it fails precisely
+if it does not control this low block. The fixed exterior quartet
+shows that no bound using only (2) can close (1).
 
-Este documento prueba una localización cuantitativa nueva dentro de la fase;
-no prueba (1), A1 ni RH.
+This document proves a new quantitative localization within the
+phase; it does not prove (1), A1, or RH.
 
-**No duplicación interna.** `104_63` identifica la energía completa y el
-colapso de Parseval/Christoffel--Darboux; `104_70` estudia temperatura
-variable; `104_73`, la presión Bernstein; y `104_75`, el gate profundo y la
-media lineal de Bessel. Aquí no se introduce otro observable: se demuestra
-que el nivel \(e^{\sqrt X}\) localiza toda posible violación en alturas
-\(O(X^{1/4})\), con la cola complementaria sumada absolutamente por
-cuartetos funcionales.
+**No internal duplication.** `104_63` identifies the full energy and
+the Parseval/Christoffel--Darboux collapse; `104_70` studies variable
+temperature; `104_73`, the Bernstein pressure; and `104_75`, the deep
+gate and the linear Bessel mean. Here no other observable is
+introduced: it is shown that the level \(e^{\sqrt X}\) localizes every
+possible violation at heights \(O(X^{1/4})\), with the complementary
+tail summed absolutely by functional quartets.
 
 ---
 
-## 1. Cuartetos funcionales y su tamaño
+## 1. Functional quartets and their size
 
-Sea \(\rho=\beta+i\gamma\), con \(\gamma>0\) y
-\(1/2\le\beta<1\), un representante de una órbita bajo conjugación y
-\(\rho\mapsto1-\rho\). Ponga
+Let \(\rho=\beta+i\gamma\), with \(\gamma>0\) and
+\(1/2\le\beta<1\), be a representative of an orbit under conjugation
+and \(\rho\mapsto1-\rho\). Set
 
 \[
  w_\rho=1-{1\over\rho}={\rho-1\over\rho}
            =e^{-a_\rho+i\theta_\rho},\qquad a_\rho\ge0. \tag{3}
 \]
 
-Si la órbita tiene cuatro elementos, su contribución al coeficiente de Li
-es
+If the orbit has four elements, its contribution to the Li coefficient
+is
 
 \[
  q_n(\rho)
@@ -65,15 +65,15 @@ es
  =4-4\cosh(na_\rho)\cos(n\theta_\rho).                  \tag{4}
 \]
 
-En la recta crítica la órbita tiene dos elementos y la contribución es
-la mitad de (4). En particular es no negativa:
+On the critical line the orbit has two elements and the contribution
+is half of (4). In particular it is non-negative:
 
 \[
  q_n(\tfrac12+i\gamma)/2
  =2\{1-\cos(n\theta_\rho)\}\ge0.                        \tag{5}
 \]
 
-La desviación radial posee la cota universal
+The radial deviation has the universal bound
 
 \[
 \begin{aligned}
@@ -84,52 +84,52 @@ La desviación radial posee la cota universal
 \end{aligned}                                            \tag{6}
 \]
 
-y por ello
+and therefore
 
 \[
  \boxed{0\le a_\rho\le{1\over2\gamma^2}.}              \tag{7}
 \]
 
-De (4) y (7), contando multiplicidades,
+From (4) and (7), counting multiplicities,
 
 \[
  |q_n(\rho)|\le4+4e^{n/(2\gamma^2)}.                     \tag{8}
 \]
 
-La desigualdad conserva la amplificación radial que produce una excursión
-exterior; no reemplaza \(w_\rho\) por un módulo unitario.
+The inequality preserves the radial amplification produced by an
+exterior excursion; it does not replace \(w_\rho\) by a unit modulus.
 
 ---
 
-## 2. La cola por encima de una altura móvil
+## 2. The tail above a moving height
 
-Escriba \(N(T)\) para el conteo de ceros con multiplicidad. Solo usaremos
-la consecuencia incondicional de Riemann--von Mangoldt
+Write \(N(T)\) for the zero count with multiplicity. We will only use
+the unconditional consequence of Riemann--von Mangoldt
 
 \[
  N(T)\ll T\log(T+2).                                     \tag{9}
 \]
 
-Para \(2\le Y\le2X\), parta la suma simétrica por ceros en
-\(Y<\gamma\le2X\) y \(\gamma>2X\). La primera parte es finita. Por (8)
-y (9), uniformemente para \(n\le X\),
+For \(2\le Y\le2X\), split the symmetric sum over zeros into
+\(Y<\gamma\le2X\) and \(\gamma>2X\). The first part is finite. By (8)
+and (9), uniformly for \(n\le X\),
 
 \[
  \sum_{Y<\gamma\le2X}|q_n(\rho)|
  \ll X\log(X+2)\{1+e^{X/(2Y^2)}\}.                      \tag{10}
 \]
 
-La parte infinita converge absolutamente después de agrupar por órbitas.
-En efecto, si \(\gamma>2X\), entonces
-\(|1-w_\rho|=|\rho|^{-1}\le\gamma^{-1}<1/2\), y la serie
-de \(\log(1-1/\rho)\) da
+The infinite part converges absolutely after grouping by orbits.
+Indeed, if \(\gamma>2X\), then
+\(|1-w_\rho|=|\rho|^{-1}\le\gamma^{-1}<1/2\), and the series
+for \(\log(1-1/\rho)\) gives
 
 \[
- |\theta_\rho|\le {2\over\gamma},qquad
+ |\theta_\rho|\le {2\over\gamma},\qquad
  a_\rho\le {1\over2\gamma^2}.                           \tag{11}
 \]
 
-Como \(n|\theta_\rho|\le1\) y \(na_\rho\le1/8\), (4) implica
+Since \(n|\theta_\rho|\le1\) and \(na_\rho\le1/8\), (4) implies
 
 \[
  |q_n(\rho)|
@@ -137,30 +137,30 @@ Como \(n|\theta_\rho|\le1\) y \(na_\rho\le1/8\), (4) implica
  \ll {n^2\over\gamma^2}.                                \tag{12}
 \]
 
-La sumación parcial en (9) da
+Partial summation in (9) gives
 
 \[
  \sum_{\gamma>T}{m_\rho\over\gamma^2}
  \ll {\log(T+2)\over T},                                \tag{13}
 \]
 
-de donde
+whence
 
 \[
  \sum_{\gamma>2X}|q_n(\rho)|\ll X\log(X+2).             \tag{14}
 \]
 
-La fórmula incondicional de Li por ceros se interpreta con el corte
-simétrico en altura. Ese corte contiene cada órbita funcional completa o
-no contiene ninguno de sus elementos, porque todos tienen la misma
-ordenada en valor absoluto. Para cada (n) fijo, (12)--(13) prueban la
-convergencia absoluta de la serie ya agrupada por órbitas; por tanto esta
-agrupación no introduce una convención nueva y su suma es precisamente el
-coeficiente de Li usual \(\lambda_n\).
+The unconditional Li formula over zeros is interpreted with the
+symmetric cutoff in height. That cutoff contains each full functional
+orbit or contains none of its elements, because all its elements have
+the same ordinate in absolute value. For each fixed \(n\), (12)--(13)
+prove the absolute convergence of the series once grouped by orbits;
+hence this grouping introduces no new convention and its sum is
+precisely the usual Li coefficient \(\lambda_n\).
 
-Las ecuaciones (10) y (14) prueban el siguiente lema.
+Equations (10) and (14) prove the following lemma.
 
-**Lema 2.1 (localización uniforme).** Para \(2\le Y\le2X\),
+**Lemma 2.1 (uniform localization).** For \(2\le Y\le2X\),
 
 \[
  \boxed{
@@ -168,85 +168,86 @@ Las ecuaciones (10) y (14) prueban el siguiente lema.
  \ll X\log(X+2)\{1+e^{X/(2Y^2)}\}.}                    \tag{15}
 \]
 
-La notación \(\lambda_n^{(>Y)}\) significa la suma por órbitas de los
-ceros con ordenada positiva mayor que \(Y\). La cota demuestra además que
-esa cola no depende de una convención de sumación.
+The notation \(\lambda_n^{(>Y)}\) means the sum over orbits of zeros
+with ordinate larger than \(Y\). The bound further shows that this
+tail does not depend on a summation convention.
 
-Tomando \(Y=X^{1/4}\) en (15) se obtiene (2). Más generalmente, para el
-umbral \(e^{X^\alpha}\), \(0<\alpha<1\), la elección natural es
+Taking \(Y=X^{1/4}\) in (15) gives (2). More generally, for the
+threshold \(e^{X^\alpha}\), \(0<\alpha<1\), the natural choice is
 
 \[
- Y=X^{(1-\alpha)/2},qquad
+ Y=X^{(1-\alpha)/2},\qquad
  {X\over2Y^2}={1\over2}X^\alpha.                         \tag{16}
 \]
 
-Así el exponente \(1/4\) no es accidental: es la escala dual del gate
-\(e^{\sqrt X}\).
+Thus the exponent \(1/4\) is not accidental: it is the dual scale of
+the gate \(e^{\sqrt X}\).
 
 ---
 
-## 3. Consecuencia para los pesos reales \(\Lambda(m)\)
+## 3. Consequence for the real weights \(\Lambda(m)\)
 
-Suponga que todos los ceros con \(0<\gamma\le X^{1/4}\) están en la
-recta crítica. Por (5), su contribución a cada \(\lambda_n\) es no
-negativa. El Lema 2.1 da entonces, uniformemente para \(n\le X\),
+Suppose that every zero with \(0<\gamma\le X^{1/4}\) lies on the
+critical line. By (5), its contribution to each \(\lambda_n\) is
+non-negative. Lemma 2.1 then gives, uniformly for \(n\le X\),
 
 \[
  \lambda_n\ge
  -C X\log(X+2)e^{\sqrt X/2}.                              \tag{17}
 \]
 
-Para \(X\) suficientemente grande, el lado de error de (17) es menor que
+For \(X\) sufficiently large, the error side of (17) is smaller than
 \(e^{\sqrt X}/2\).
 
-Use ahora la diagonal real de `104_69`--`104_75`,
+Now use the real diagonal of `104_69`--`104_75`,
 
 \[
  \lambda_{n,\varepsilon_X}
- =A_n+p_n(\varepsilon_X)-Q_{n,\varepsilon_X},qquad
+ =A_n+p_n(\varepsilon_X)-Q_{n,\varepsilon_X},\qquad
  \varepsilon_X=e^{-X/100},                               \tag{18}
 \]
 
-para la cual
+for which
 
 \[
  \sup_{n\le X}|\lambda_{n,\varepsilon_X}-\lambda_n|=o(1). \tag{19}
 \]
 
-De (17)--(19), también para todo \(n\le X\),
+From (17)--(19), also for every \(n\le X\),
 
 \[
  \lambda_{n,\varepsilon_X}+\log(n+1)>-e^{\sqrt X}.       \tag{20}
 \]
 
-Como el evento de (1) equivale exactamente a la desigualdad opuesta en
-(20), queda probado:
+Since the event of (1) is exactly equivalent to the opposite
+inequality in (20), it is proved:
 
-**Teorema 3.1 (anulación finita del observable profundo).** Existe
-\(X_0\) absoluto tal que, si \(X\ge X_0\) y RH está verificada hasta
-altura \(X^{1/4}\), entonces el observable de (1) vale exactamente cero.
+**Theorem 3.1 (finite vanishing of the deep observable).** There
+exists an absolute \(X_0\) such that, if \(X\ge X_0\) and RH is
+verified up to height \(X^{1/4}\), then the observable of (1) is
+exactly zero.
 
-Este teorema usa los pesos reales \(\Lambda(m)\) en (18), no un competidor
-de soporte primo. Pero su hipótesis de altura no puede hacerse
-asintótica a partir de una verificación finita fija.
+This theorem uses the real weights \(\Lambda(m)\) in (18), not a
+prime-support competitor. But its height hypothesis cannot be made
+asymptotic from a fixed finite verification.
 
 ---
 
-## 4. Qué obtiene un ataque de momentos
+## 4. What a moment attack obtains
 
-Ponga
+Set
 
 \[
- Z_{n,X}=\{-\lambda_n-\log(n+1)\}_+,qquad S_X=e^{\sqrt X}. \tag{21}
+ Z_{n,X}=\{-\lambda_n-\log(n+1)\}_+,\qquad S_X=e^{\sqrt X}. \tag{21}
 \]
 
-Bajo la hipótesis parcial del Teorema 3.1, (17) implica
+Under the partial hypothesis of Theorem 3.1, (17) implies
 
 \[
  \sup_{n\le X}Z_{n,X}\ll X\log(X+2)e^{\sqrt X/2}.       \tag{22}
 \]
 
-Por consiguiente,
+Consequently,
 
 \[
  {1\over H_X}\sum_{n\le X}{Z_{n,X}^2\over n}
@@ -254,75 +255,78 @@ Por consiguiente,
  =o(e^{2\sqrt X}).                                       \tag{23}
 \]
 
-Chebyshev aplicado a (23), junto con el error uniforme (o(1)) de (19),
-prueba (1): desplazar el umbral (e^{\sqrt X}) en (o(1)) no altera la
-cota de Markov. La ganancia es diagnóstica: el segundo momento ya posee la
-escala pedida una vez eliminados los ceros exteriores bajos; los ceros
-altos no exigen una cancelación adicional.
+Chebyshev applied to (23), together with the uniform error \(o(1)\)
+of (19), proves (1): shifting the threshold \(e^{\sqrt X}\) by
+\(o(1)\) does not alter the Markov bound. The gain is diagnostic: the
+second moment already has the required scale once the low exterior
+zeros are removed; the high zeros do not demand any additional
+cancellation.
 
-Sin esa hipótesis, `104_63` da la identidad exacta de Parseval/CD, pero
-acotarla por \(o(e^{2\sqrt X})\) excluiría precisamente un modo bajo
-exterior. Lo mismo ocurre con Chernoff a temperatura
-\(t_X=e^{-\sqrt X}\): una cota del momento exponencial controla (1), pero
-un modo fijo de tasa \(R>1\) hace que ese momento explote en un conjunto de
-densidad positiva. No hay una inferencia desde el primer momento lineal de
-`104_75` hasta (23).
+Without that hypothesis, `104_63` gives the exact Parseval/CD
+identity, but bounding it by \(o(e^{2\sqrt X})\) would precisely
+exclude a low exterior mode. The same happens with Chernoff at
+temperature \(t_X=e^{-\sqrt X}\): a bound on the exponential moment
+controls (1), but a fixed mode of rate \(R>1\) makes that moment
+explode on a set of positive density. There is no inference from the
+first linear moment of `104_75` to (23).
 
 ---
 
-## 5. Falsificador localizado
+## 5. Localized falsifier
 
-Tome un cuarteto exterior fijo \(w=e^{-a+i\theta}\), \(a>0\). Su
-contribución es
+Take a fixed exterior quartet \(w=e^{-a+i\theta}\), \(a>0\). Its
+contribution is
 
 \[
  q_n=4-4\cosh(an)\cos(n\theta).                           \tag{24}
 \]
 
-Los retornos de la rotación \(n\theta\) a una vecindad de cero forman un
-conjunto sindético de densidad positiva; allí
+The returns of the rotation \(n\theta\) to a neighborhood of zero form
+a syndetic set of positive density; there
 
 \[
  q_n\le-c e^{an}.                                        \tag{25}
 \]
 
-Para \(n\ge2\sqrt X/a\), (25) cruza el umbral
-\(-e^{\sqrt X}\). Eliminar los primeros \(O(\sqrt X)\) grados solo quita
-la mitad asintótica de la masa armónica hasta \(X\), de modo que persiste
-una densidad logarítmica positiva. En el ejemplo racional \(w=2i\) de
-`104_75`, la densidad profunda es exactamente \(1/8\).
+For \(n\ge2\sqrt X/a\), (25) crosses the threshold
+\(-e^{\sqrt X}\). Removing the first \(O(\sqrt X)\) degrees only
+removes asymptotically half of the harmonic mass up to \(X\), so a
+positive logarithmic density persists. In the rational example
+\(w=2i\) of `104_75`, the deep density is exactly \(1/8\).
 
-Este cuarteto satisface todas las cotas de cola usadas en el Lema 2.1 una
-vez que se lo coloca en el bloque bajo. Por tanto (15) no puede, por sí
-sola, probar (1): el paso que queda es un teorema aritmético que excluya
-esos modos bajos para la zeta real. Esto es una localización del hueco, no
-una afirmación de imposibilidad para toda identidad aritmética futura.
-
----
-
-## 6. Veredicto
-
-**Probado:** la cota radial (7), la suma absoluta de la cola (15), la
-escala dual general (16), la anulación del indicador bajo RH parcial hasta
-\(X^{1/4}\), y el bound de segundo momento (23) bajo la misma hipótesis.
-
-**Ganancia:** el ataque de gran desviación queda reducido al bloque de
-ceros con \(\gamma\le X^{1/4}\). Los ceros por encima de esa altura tienen
-margen exponencial suficiente aun tomándolos en valor absoluto por
-cuartetos completos.
-
-**No probado:** un control incondicional de ese bloque bajo cuando
-\(X\to\infty\), el límite (1), A1 o RH. Una verificación de altura fija
-solo da un rango finito, por grande que sea.
+This quartet satisfies every tail bound used in Lemma 2.1 once placed
+in the low block. Therefore (15) cannot, by itself, prove (1): what
+remains is an arithmetic theorem excluding those low modes for the
+real zeta function. This is a localization of the gap, not a claim of
+impossibility for every future arithmetic identity.
 
 ---
 
-## 7. Reproducción
+## 6. Verdict
+
+**Proved:** the radial bound (7), the absolute tail sum (15), the
+general dual scale (16), the vanishing of the indicator under partial
+RH up to \(X^{1/4}\), and the second-moment bound (23) under the same
+hypothesis.
+
+**Gain:** the large-deviation attack is reduced to the block of zeros
+with \(\gamma\le X^{1/4}\). Zeros above that height have sufficient
+exponential margin even when taken in absolute value by full
+quartets.
+
+**Not proved:** an unconditional control of that low block as
+\(X\to\infty\), the limit (1), A1, or RH. A fixed-height verification
+only gives a finite range, however large.
+
+---
+
+## 7. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 deep_tail_height_localization_check.py
 ```
 
-El checker verifica la identidad de cuarteto, (7), la cota elemental de la
-cola muy alta y la separación exponencial entre (2) y el umbral de (1).
+The checker verifies the quartet identity, (7), the elementary bound
+of the very high tail, and the exponential separation between (2) and
+the threshold of (1).

@@ -1,6 +1,5 @@
 # E74.10 - Residual-slot closure ledger for Omega7
 
-Date: 2026-07-16.
 
 ## Purpose
 

@@ -1,6 +1,6 @@
 # P123.036 — normalization reaches the existing D operator; endpoint replay
 
-Date: 2026-09-05. Status: PROVED for the scalar normalization dictionary
+Status: PROVED for the scalar normalization dictionary
 and its match to the inspected operator/assembly. Tier-1 endpoint
 recombination and five manifest hashes PASS. All seven Tier-2 jobs have
 completed successfully, their enclosures have been checked against the
@@ -85,8 +85,8 @@ claim covers these inspected definitions, not every historical document.
 
 ## 4. Endpoint verification layers
 
-The five SHA-256 pins in the packaged log2 manifest all matched in this
-session. The original Tier-1 recombination script exited successfully:
+The five SHA-256 pins in the packaged log2 manifest all matched. The
+original Tier-1 recombination script exited successfully:
 
     final capacity margin > 8.6338602209512485e-8,
     odd final lower       > 8.1385617547899804e-6.

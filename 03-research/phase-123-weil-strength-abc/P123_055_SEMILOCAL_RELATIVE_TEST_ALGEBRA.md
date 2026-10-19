@@ -1,6 +1,6 @@
 # P123.055 — Semilocal assembly of the relative test algebras
 
-Date: 2026-09-05. Status: CONSTRUCTED with continuous crossed product,
+Status: CONSTRUCTED with continuous crossed product,
 involution and coherent injective chart maps. Faithfulness of its map
 to the original coefficient completion is a separate requirement.
 

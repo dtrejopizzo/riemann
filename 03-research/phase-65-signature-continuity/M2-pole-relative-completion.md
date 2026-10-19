@@ -1,6 +1,6 @@
 # M2 — The pole-relative completion: making the renormalization a genuine limit, and a structural correction to the plan
 
-**Phase 65, milestone M2.** Pure mathematics. Goal: construct the topology/completion in which the
+**Phase 65, milestone M2.** Goal: construct the topology/completion in which the
 finite tower $\{\mathsf E_P\}$ converges to the $\Xi$-object (interface T2 of M1). In doing so we reach a
 **structural fact that corrects the original plan**: there is provably *no single topology* with both
 (T1) closedness of $\mathcal N_0$ and (T2) convergence of the arithmetic renormalization — they are in

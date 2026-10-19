@@ -1,6 +1,6 @@
 # E78.33 - The angular correction is exactly an `eps_N` drift
 
-**Run:** 2026-07-18.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

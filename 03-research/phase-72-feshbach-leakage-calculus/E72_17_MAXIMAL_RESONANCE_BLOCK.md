@@ -1,7 +1,6 @@
 # E72.17 -- Maximal resonance block and the failure of automatic symmetry cancellation
 
-**Date:** 2026-07-08.
-**Role:** test the last possible non-circular escape left by E72.16: cancellation of the maximal
+**Purpose:** test the last possible non-circular escape left by E72.16: cancellation of the maximal
 off-critical resonance block by finite CCM/prolate symmetry.
 
 ## 0. Setup

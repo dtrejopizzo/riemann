@@ -2,7 +2,7 @@
 <conclusion>
 At the single reference point (T0=85.7, σ=2, J=16) I implemented and validated the L(Δ,s) Weil quadratic-form engine — passing the trace-identity gate tr(M_zeros) − tr(M_arith) ≈ −5.1×10⁻¹³ and yielding λ_min(Q) ≈ −3.6×10⁻¹³ (|λ_min|/tr ≈ 2.6×10⁻¹⁴), consistent with the GRH "numerical floor" expected for L(Δ); however, the full (T0, σ, J) grid required by the research objective could not be completed within the runtime budget, so the hypothesis is supported only at this single anchor point and is not yet tested across T0 or for σ ≤ 1.
 </conclusion> <methods>
-1. **Workspace audit:** Re-read engine-spec.md and validated tau_table.pkl (τ(1..5) matched canonical values). Recovered a partial L(Δ) Hardy-function workflow from a sibling subagent task (bb9c9b86…) — no Q-matrix code was persisted there either.
+1. **Workspace audit:** Re-read engine-spec.md and validated tau_table.pkl (τ(1..5) matched canonical values). Recovered a partial L(Δ) Hardy-function workflow from a sibling sub-task task (bb9c9b86…) — no Q-matrix code was persisted there either.
 2. **L(Δ,s) evaluator** (classical normalization, k=12, level 1, ε=+1): * Λ(k/2+it) = Σ_{n≥1} 2 τ(n) Re[(2πn)^{-(6+it)} Γ(6+it, 2πn)] (truncated; integrand decays as e^{-2πn}, 40 terms suffice). * Hardy rescaling ZH(t) = Λ(6+it)/|γ(6+it)| with |γ(s)| computed via mpmath.loggamma for stability. * Adaptive dps schedule (~0.85|t|+30) to handle cancellation in Λ at high t; verified ZH(9.2223793999) ≈ 2×10⁻¹¹ (first analytic zero) and matched expected sign pattern at t∈{30, 46.13, 60, 85.7, 120}.
 3. **Zero-finding at T0=85.7:** grid scan with step 0.3 over [61.7, 109.7], sign-change bracketing, manual bisection refinement (illinois solver tolerance too strict for the rescaled amplitude). Recovered 40 zeros with |ZH(γ)| ≤ 1×10⁻¹² at refined locations — count matches Weyl prediction (≈40 in the window).
 4. **Hermite–Gauss basis** ψ_j(x) built by the stable three-term recurrence; φ_j(t)=σ^{-1/2} ψ_j((t−T0)/σ). Orthonormality verified to 4×10⁻¹⁴ on a 32001-point grid spanning ±24 around T0.
@@ -30,7 +30,7 @@ The single, fully-validated data point I produced is exactly consistent with the
 <artifact>
 <file-name>partial_results.pkl</file-name>
 <artifact-type>agent_produced</artifact-type>
-<artifact-description>Pickle containing the 40 high-precision L(Δ) zero imaginary parts found in [61.7, 109.7] (window around T0=85.7), each refined to |ZH(γ)| ≤ 10⁻¹², together with the validated trace values tr(M_zeros)=13.4655, tr(M_arith)=13.4655, residual −5.1×10⁻¹³, and the reference λ_min = −3.57×10⁻¹³ at (T0=85.7, σ=2, J=16, X=10⁵). Generated in this session from scratch using mpmath (adaptive dps), numpy/scipy for matrix algebra, and the supplied tau_table.pkl for τ(n).</artifact-description>
+<artifact-description>Pickle containing the 40 high-precision L(Δ) zero imaginary parts found in [61.7, 109.7] (window around T0=85.7), each refined to |ZH(γ)| ≤ 10⁻¹², together with the validated trace values tr(M_zeros)=13.4655, tr(M_arith)=13.4655, residual −5.1×10⁻¹³, and the reference λ_min = −3.57×10⁻¹³ at (T0=85.7, σ=2, J=16, X=10⁵). Generated in this run from scratch using mpmath (adaptive dps), numpy/scipy for matrix algebra, and the supplied tau_table.pkl for τ(n).</artifact-description>
 </artifact>
 <artifact>
 <file-name>LDelta_trace_gate_diagnostic.png</file-name>

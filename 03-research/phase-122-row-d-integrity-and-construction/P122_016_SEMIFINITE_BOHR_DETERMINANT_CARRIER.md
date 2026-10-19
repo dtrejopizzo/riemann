@@ -45,7 +45,7 @@ factor.  More explicitly, use the Floquet decomposition
 Then
 
 \[
- P_+=I_{L^2([0,a))}\otimes P_{\mathbb N_0},qquad
+ P_+=I_{L^2([0,a))}\otimes P_{\mathbb N_0},\qquad
  U_a=I_{L^2([0,a))}\otimes S_{\mathbb Z}.         \tag{1.2}
 \]
 
@@ -108,7 +108,7 @@ sensitive.
 Let `S` be a finite set of active primes and put
 
 \[
- X_S=\mathbb T^S,qquad
+ X_S=\mathbb T^S,\qquad
  \alpha_t((z_p)_{p\in S})=(e^{it\log p}z_p)_{p\in S}. \tag{3.1}
 \]
 
@@ -123,7 +123,7 @@ Hence the flow is ergodic, indeed uniquely ergodic, for Haar measure.  Its
 smooth algebra carries the source derivation
 
 \[
- \delta_S(z^n)=i\omega_nz^n,qquad
+ \delta_S(z^n)=i\omega_nz^n,\qquad
  \omega_n=\sum_{p\in S}n_p\log p.                 \tag{3.3}
 \]
 
@@ -184,7 +184,7 @@ On `X_S`, define
 
 \[
  c_p(z_p)={1-p^{-1/2}z_p^{-1}\over
-                 1-p^{-1/2}z_p},qquad
+                 1-p^{-1/2}z_p},\qquad
  c_S(z)=\prod_{p\in S}c_p(z_p)^{-1}.              \tag{4.1}
 \]
 

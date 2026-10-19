@@ -1,6 +1,6 @@
 # E78.143 - Autopsy of the elementary-self-adjointness (deficiency-index) route to `SAFE-LIMIT-POINT`
 
-**Run:** 2026-07-21.
+**Run:**
 **Scope:** LP-interface front, `BORDERED-WEYL-COMPLETENESS` / `SAFE-LIMIT-POINT`.
 **Class:** AUTOPSIA theorem-grade.
 **What we know after this doc that we did not know before:** the elementary
@@ -222,8 +222,8 @@ E78_4a_neutral_ground_cauchy_probe.py / E78_4a_..._results.json:
   4.5e-3 .. 7.8e-1 range across N=6..16, no collapse.
 ```
 
-These two independently-run probes (different scripts, different authors'
-sessions within the ledger, different intermediate quantities: eigenvalue
+These two independently-run probes (different scripts, different
+records within the ledger, different intermediate quantities: eigenvalue
 GAP in E78.1c versus smallest-|eigenvalue| of the shifted inner block in
 E78.4a) agree on the qualitative build-discriminating collapse pattern,
 which is the load-bearing empirical fact behind section 4's claim that (e) is

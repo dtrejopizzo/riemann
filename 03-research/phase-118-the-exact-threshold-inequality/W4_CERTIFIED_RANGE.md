@@ -120,7 +120,7 @@ partial run disagrees with the pinned numbers.
 
 The finite space is fixed by design at 96 cells × Legendre degree 9 = 960
 total dimensions (480 per parity). The filename `..._degree23_...` and the
-`D84_DEG` environment variable show the certificate's author *tried* a
+`D84_DEG` environment variable show that the certificate *tried* a
 degree-23 upgrade path, but the manifest's pinned commands all pass
 `D84_DEG=9` — the actual proof uses degree 9. I did not re-run degree 23
 myself (a single degree-9 parity block already costs ~14 minutes at 512-bit
@@ -242,7 +242,7 @@ limit) — it is an **incomplete proof**: two specific cross-terms were never
 derived. Redoing them requires the same kind of closed-form Legendre/Bessel
 work as D.77/D.79/D.85, which is a multi-note undertaking (three phase-114
 notes for the log2 endpoint alone), not a parameter sweep. I judge this is
-not achievable at research-grade rigor inside this session, and I am
+not achievable at research-grade rigor inside this phase, and I am
 reporting that rather than producing a weaker, unrigorous substitute.
 
 **What I did instead**: floating-point (non-certified, diagnostic only, per
@@ -285,7 +285,7 @@ single near-null direction (`v1`), rescued by an exact positive-capacity
 identity specific to that direction and that window. That is exactly the
 mechanism SPEC's own §2 diagnosis (`lam_min_norm -> 0` under refinement,
 "the proof must be an identity... no estimate that loses a constant factor
-can work") predicts is necessary — and it is what the certificate's authors
+can work") predicts is necessary — and it is what the certificate itself
 actually built, independently, via a different (Legendre/Arb) route than
 `rowd_threshold.py`'s Schur target.
 

@@ -1,6 +1,6 @@
 # P123.038 — realize the cotangent cube on the external arithmetic carrier
 
-Date: 2026-09-05. Status: CONSTRUCTED for the arithmetic external family,
+Status: CONSTRUCTED for the arithmetic external family,
 its gauge-independent lattice index and the natural derived comparison
 below. A cyclic diagonal shadow on all admissible mixed kernels remains
 OPEN. No full row is declared closed.

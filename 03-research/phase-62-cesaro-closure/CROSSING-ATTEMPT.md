@@ -1,6 +1,6 @@
 # MW-5 crossing attempt — V₊ positivity margin (E95, E96): NO-GO, the wall confirmed
 
-**Date:** 2026-06-26 · Phase 62 · follows E94 (quaternionic Hodge–Riemann positivity present but gapless).
+Phase 62 · follows E94 (quaternionic Hodge–Riemann positivity present but gapless).
 
 ## Goal
 

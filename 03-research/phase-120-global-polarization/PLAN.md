@@ -327,7 +327,7 @@ Phase 120 succeeds only if it produces all four statements:
 Anything less is a candidate, an equivalent reformulation, or numerical
 evidence—not closure of row (d).
 
-## 8A. Anthropic rank–trace benchmark
+## 8A. Alpöge–Furman rank–trace benchmark
 
 The 2026 two-thirds argument compresses the Weil form and uses only its
 zero-side inertia blocks plus prime-side trace and Hilbert–Schmidt norm. It

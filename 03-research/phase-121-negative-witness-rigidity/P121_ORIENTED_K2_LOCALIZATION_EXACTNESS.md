@@ -616,7 +616,7 @@ Put
 
 \[
  v(q)=P_T(e^{-(a+q)t})
-     =\sum_{m\ge1}q^m v_m,qquad a=-1/2.
+     =\sum_{m\ge1}q^m v_m,\qquad a=-1/2.
 \tag{8.6}
 \]
 

@@ -1,6 +1,5 @@
 # E73.188 - Transverse eigen-branch and the anti-circular target
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

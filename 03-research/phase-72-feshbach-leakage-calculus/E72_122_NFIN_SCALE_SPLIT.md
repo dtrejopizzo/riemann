@@ -1,7 +1,6 @@
 # E72.122 -- Scale split for N-FIN
 
-**Date:** 2026-07-09.
-**Role:** separate the arithmetic size of the packet from the geometric decay of the shorted maps.
+**Purpose:** separate the arithmetic size of the packet from the geometric decay of the shorted maps.
 
 ## 0. N-FIN factors
 

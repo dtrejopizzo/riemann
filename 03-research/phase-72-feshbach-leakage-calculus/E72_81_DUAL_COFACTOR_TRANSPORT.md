@@ -1,7 +1,6 @@
 # E72.81 -- Dual cofactor transport identity
 
-**Date:** 2026-07-09.
-**Role:** factor the bordered-minor certificate into a scalar transport identity involving three Cauchy
+**Purpose:** factor the bordered-minor certificate into a scalar transport identity involving three Cauchy
 transforms.
 
 ## 0. From minors to a dual cofactor vector

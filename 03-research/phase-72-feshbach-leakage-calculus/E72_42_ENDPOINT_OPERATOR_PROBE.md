@@ -1,7 +1,6 @@
 # E72.42 -- Endpoint operator probe
 
-**Date:** 2026-07-08.
-**Role:** test whether endpoint tightness is an operator-norm fact or only a scalar/channel fact.
+**Purpose:** test whether endpoint tightness is an operator-norm fact or only a scalar/channel fact.
 
 ## 0. Endpoint operator
 

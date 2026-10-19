@@ -1,7 +1,7 @@
 Question: 
 Your goal is to write a clear and thorough literature review for this primary objective that others can easily use for future work. The primary research objective is: Constructing the geometric class K_geom / SURF behind the Riemann Hypothesis
 
-You are an autonomous mathematics research agent. Work rigorously; report only what you can justify. A FALSE PROOF IS WORSE THAN AN CANDID NEGATIVE RESULT: never present an unproven step as proven, never cite an open conjecture as if established. This prompt is fully self-contained; assume no external context.
+You are an autonomous mathematics research run. Work rigorously; report only what you can justify. A FALSE PROOF IS WORSE THAN AN CANDID NEGATIVE RESULT: never present an unproven step as proven, never cite an open conjecture as if established. This task statement is fully self-contained; assume no external context.
 
 1. SETTING (definitions).
 Riemann zeta ζ(s), nontrivial zeros ρ = 1/2 + iγ_ρ. The Weil explicit formula: for test f with Fourier transform f̂, Σ_ρ f̂(γ_ρ) = A_∞(f) + (poles at s=0,1) − 2 Σ_n Λ(n) n^{−1/2} g(log n), where Λ = von Mangoldt, g = Fourier transform of f̂, and the archimedean density is Ψ(r) = Re ψ(1/4 + ir/2) − log π (ψ = digamma). Define the Weil pairing ⟨f,h⟩ = Σ_ρ f̂(γ_ρ) conj(ĥ(γ_ρ)); complete to a Kreĭn space H_W with indefinite form Q whose negative index κ = #(zeros off the critical line). There is a self-adjoint "Frobenius" operator T on H_W with spectrum {γ_ρ}, and a complex structure J from the spectral splitting. Let Π⊥ = primitive part (orthocomplement of the rank-2 pole part).
@@ -50,9 +50,9 @@ Be as thorough as possible to ensure future analyses have all necessary context.
 
 ## Setup
 
-This review addresses the research objective: constructing a geometric class (a “geometric cohomology object” with Hard Lefschetz and Hodge–Riemann positivity) that would realize the Kreĭn-space/Weil-explicit-formula formulation of the Riemann Hypothesis (RH) as a Standard-Conjectures-type positivity statement. Your prompt fixes a reduction: RH ⇔ existence of a Hard-Lefschetz \(\mathfrak{sl}_2\)-triple \((L,\Lambda,H)\) on the primitive part \(\Pi^\perp\) with a positive form \(\omega(x,y)=Q(JLx,y)\), and it imposes stringent anti-circularity gates: in particular \(L\notin W^*(T)\) (independence) and integrality of the Lefschetz grading must come from genuine compact/finite geometry.
+This review addresses the research objective: constructing a geometric class (a “geometric cohomology object” with Hard Lefschetz and Hodge–Riemann positivity) that would realize the Kreĭn-space/Weil-explicit-formula formulation of the Riemann Hypothesis (RH) as a Standard-Conjectures-type positivity statement. Your task statement fixes a reduction: RH ⇔ existence of a Hard-Lefschetz \(\mathfrak{sl}_2\)-triple \((L,\Lambda,H)\) on the primitive part \(\Pi^\perp\) with a positive form \(\omega(x,y)=Q(JLx,y)\), and it imposes stringent anti-circularity gates: in particular \(L\notin W^*(T)\) (independence) and integrality of the Lefschetz grading must come from genuine compact/finite geometry.
 
-Given the state of the field (2026) and the explicit “LI/Lefschetz dichotomy” in the prompt, the most evidence-supported route for *rigorous* progress is **Route C (Connes’ adèle class space / scaling site)**, but in the form of a **precise obstruction theorem**: the currently constructed characteristic-one/tropical geometries naturally produce *type II (real-valued) dimensions* and require *infrared/ultraviolet cutoffs*; these features are structurally incompatible with the requested **integer-graded, lowest-weight Hard Lefschetz package** needed for Hodge–Riemann positivity.
+Given the state of the field (2026) and the explicit “LI/Lefschetz dichotomy” in the task statement, the most evidence-supported route for *rigorous* progress is **Route C (Connes’ adèle class space / scaling site)**, but in the form of a **precise obstruction theorem**: the currently constructed characteristic-one/tropical geometries naturally produce *type II (real-valued) dimensions* and require *infrared/ultraviolet cutoffs*; these features are structurally incompatible with the requested **integer-graded, lowest-weight Hard Lefschetz package** needed for Hodge–Riemann positivity.
 
 Deliverable type: **(ii) precise obstruction theorem** (proved statement) for Route C, together with a literature mapping to G1–G4 and future directions.
 
@@ -67,7 +67,7 @@ For curves over finite fields, RH for the zeta function is proved by importing g
 - **G3**: Tate twist compatibility \([T,L]=cL\).
 - **G4**: Hodge–Riemann positivity \(\omega\succ 0\) on primitives.
 
-But your prompt emphasizes: (a) positivity statements derived from the Weil distribution are *equivalent to RH* and can be circular; (b) spectral models built from \(T\) alone cannot generate an independent Lefschetz operator; (c) continuous-spectrum settings naturally produce principal series, not lowest-weight Hodge modules.
+But your task statement emphasizes: (a) positivity statements derived from the Weil distribution are *equivalent to RH* and can be circular; (b) spectral models built from \(T\) alone cannot generate an independent Lefschetz operator; (c) continuous-spectrum settings naturally produce principal series, not lowest-weight Hodge modules.
 
 The Connes program supplies a *rigorous spectral/trace-formula framework* for the explicit formula and attempts to build an “absolute geometry” (arithmetic site/scaling site) over characteristic one. The key question is whether this framework can supply G1–G4 without violating the gates.
 
@@ -245,7 +245,7 @@ The following table summarizes the state of Route C against your target properti
 
 - However, **within the presently built Route C geometry**, there is a **proved obstruction** to obtaining the required **integer-graded, lowest-weight Hard Lefschetz** package from the periodic-orbit \(C_p\) geometry, because the native Riemann–Roch theory uses real degrees and real (type-II) dimensions. (connes2017geometryofthe pages 3-6)
 
-- The key remaining tasks to reach the prompt’s (G1–G4) are OPEN and coincide with Standard-Conjectures-type desiderata for an “absolute surface”: constructing a diagonal intersection theory with Hodge index positivity and producing an independent Lefschetz operator outside \(W^*(T)\), while also overcoming the cutoff/continuous-scaling nature of the current spectral setting. (connes2016anessayon pages 18-21, connes2000noncommutativegeometryyear pages 55-58)
+- The key remaining tasks to reach the task statement’s (G1–G4) are OPEN and coincide with Standard-Conjectures-type desiderata for an “absolute surface”: constructing a diagonal intersection theory with Hodge index positivity and producing an independent Lefschetz operator outside \(W^*(T)\), while also overcoming the cutoff/continuous-scaling nature of the current spectral setting. (connes2016anessayon pages 18-21, connes2000noncommutativegeometryyear pages 55-58)
 
 
 References

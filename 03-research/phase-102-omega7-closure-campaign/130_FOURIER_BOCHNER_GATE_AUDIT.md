@@ -86,7 +86,7 @@ property, for example:
    forcing the transform into the Laguerre--Pólya class.
 
 Any of these would imply real zeros of \(\Xi\), hence Li positivity and A1
-through the phase-102 assembly.  But each is a force-RH theorem, not a
+through the phase-102 assembly.  But each is a RH-strength theorem, not a
 consequence of ordinary Bochner positivity.
 
 ## Relation to existing gates

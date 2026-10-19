@@ -1,6 +1,6 @@
 # P123.031 — continuous ideal traces extend, but local Jacobians do not glue
 
-Date: 2026-09-05. Status: PROVED for the trace-extension theorem and
+Status: PROVED for the trace-extension theorem and
 the explicit chart counterexample. The external nuclear trace comparison
 remains OPEN.
 

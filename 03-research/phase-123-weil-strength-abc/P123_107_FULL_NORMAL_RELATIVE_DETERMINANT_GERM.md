@@ -1,6 +1,6 @@
 # P123.107 — Convergence of the full normal relative determinant germ
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for each compact
+Status: PROVED-IN-REPOSITORY for each compact
 multiplicative Bruhat test on Q_q^*, with the normal cutoff of P123.042.
 The limit is local in the determinant variable. Global meromorphic
 continuation, multiplicativity and the arithmetic RR comparison are not

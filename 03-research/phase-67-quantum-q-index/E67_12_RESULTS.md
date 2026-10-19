@@ -1,6 +1,5 @@
 # E67.12 Results — twisted root-of-unity Shapovalov (model twist): NEGATIVE, informative
 
-**Date:** 2026-07-06.
 **Script:** [E67_12_twisted_shapovalov.py](E67_12_twisted_shapovalov.py).
 
 ## Test

@@ -1,7 +1,7 @@
 # E77.7az - Attribution gate for the shell-mismatch cascade
 
-**Run:** 2026-07-18.
-**Role:** decide, before any further BTG-side work on `SIGNED-ACTIVE-BRANCH-DEFECT`,
+**Run:**
+**Purpose:** decide, before any further BTG-side work on `SIGNED-ACTIVE-BRANCH-DEFECT`,
 whether the plant's order-one failure on the shell-mismatch front is (a) a
 detector to be archived, or (b) a genuine relocation of the arithmetic
 discriminant from IDENT into LP, formally sanctioned by the E72.16 zero-filter

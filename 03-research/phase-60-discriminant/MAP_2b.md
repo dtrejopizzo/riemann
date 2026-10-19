@@ -1,79 +1,80 @@
-# Eslabón 2b (λ→∞): reformulación como límite de Szegő y target concreto **Estado del mapa:** Eslabones 1,3,4 cerrados (CCM + clásico). 2a: simplicidad cerrada (H1
-probado); convergencia N→∞ vía proyectores de Perron–Frobenius (fondo no aislado). **2b es el
-único crux** = problema abierto de ("missing step"). --- ## 1. Qué es 2b, precisado ξ̂_{λ,∞}(z) → Ξ(z) localmente uniforme cuando λ→∞. Por H1 + Thm 1.1(iii) — **ahora que H1 está
-probado** — cada ξ̂_{λ,∞} tiene SOLO raíces reales (incondicional). Por Hurwitz, si converge
-localmente uniforme a Ξ≢0, entonces Ξ es real-rooted ⟹ **RH**. Así que: **2b (convergencia) ⟹ RH**, y es lo único que falta. ## 2. Por qué NO es truncación del explicit formula Dato duro (E4hp): el 1er cero sale a ~1e-18 con primos ≤13. La truncación de primos en X=13
-daría error O(ψ(X)−X)~O(1). La precisión real es exponencialmente mejor ⟹ el mecanismo es la
-**rigidez de Carathéodory–Fejér** (CF), no la truncación. La forma de Weil localizada minimiza,
-y la minimización pin-ea los ceros con precisión exponencial. ## 3. Reformulación: límite de determinantes de Toeplitz/Hankel La matriz QW en base V_k es **Cauchy–Toeplitz/Loewner**: τ_{n,n}=log(λ)/2,
-τ_{n,m}=(b_n−b_m)/(n−m), con b_n=(1/L)Σ_k Λ(k)/√k·sin(2πkn/L) (dato de primos, L=2logλ).
-Por Thm 1.1(ii), det_reg(D_λ−z) = −iλ^{−iz} ξ̂_λ(z): **el determinante regularizado de la
-estructura Toeplitz/Loewner de los primos**. CF (ref [7] del paper) conecta Toeplitz↔símbolo y
-da la auto-adjuntez. Entonces: **2b ⟸ teorema límite tipo Szegő/Carathéodory–Fejér:** los determinantes de Toeplitz de la forma de Weil localizada, con símbolo = dato de primos (b_n), convergen (λ→∞) a Ξ(z). Esto reemplaza "convergencia" abstracta por una pregunta de **análisis clásico** (asintótica de
-determinantes de Toeplitz), donde entra la distribución de primos vía el símbolo. ## 4. El horizonte H(λ) (contenido cuantitativo de 2b) Los ceros bajos ya están resueltos; el contenido de 2b está en los altos. Definir
-H(λ;ε) = altura hasta la que ξ̂_λ resuelve ceros a <ε. 2b ⟺ H(λ)→∞. **Conjetura del mecanismo (zero-independiente):** el operador "fija" un cero por cada
-constraint de primo independiente; igualando conteos, N(H(λ)) ≈ π(λ²), con N(T)~(T/2π)log(T/2π) (conteo de ceros), π(λ²)~λ²/(2logλ) (primos).
-⟹ H(λ) crece (despejando), gobernado por **conteo de primos = PNT** ⟹ **zero-independiente** ⟹
-ruta NO circular a RH. **Datos E7 (alta precisión):** [se completa al terminar E7] ## 5. Riesgo (el único que decide si 2b→RH es real o circular) ¿La asintótica de Szegő/CF requiere control fino del símbolo que secretamente equivalga a
-regiones libres de ceros (RH)? Si la convergencia se controla por π(λ²)+propiedades analíticas
-del símbolo INDEPENDIENTES de los ceros ⟹ no circular. Si requiere RH ⟹ circular (no-go).
-**Decidir esto = la pregunta de prueba pura central.** El contraste con un símbolo de
-L-función-violadora (L_DH) ayudaría: si su determinante de Toeplitz NO converge a una función
-real-rooted, confirma que la convergencia codifica la realidad de los ceros. ## 6. Targets concretos
-- **T1:** confirmar H(λ)→∞ limpio (mpmath, E7) y testear N(H(λ))≈π(λ²). [E7 bloqueado: mpmath eigsy a dim>100 es horas; conditioning exp-malo. Pendiente método estable, sector par.]
-- **T2:** escribir el determinante det_reg(D_λ−z) como determinante de Toeplitz explícito en el símbolo b_n; identificar la clase de Szegő aplicable.
-- **T3:** la pregunta de circularidad (símbolo zero-independiente). --- ## 7. AVANCE: localización de la dificultad de 2b (la split (i)/(ii)) 2b = convergencia del **ground state** ξ_λ de la forma de Weil A_λ. Se parte en dos, con
-estatus de circularidad OPUESTO: **(i) Convergencia de la FORMA A_λ → A_∞.** El defecto es la cola de primos
-Σ_{n>λ²} Λ(n) T(n). Por el explicit formula aplicado a un test function fijo (altura acotada),
-esta cola está controlada por **PNT** (error ψ(x)−x), que es **zero-independiente**.
-⟹ **(i) es NO CIRCULAR** (lado-primo puro). Esto es real y limpio. **(ii) Estabilidad del MINIMIZADOR ξ_λ, dada (i).** Es perturbación de autovector. Cota
-estándar: ‖δξ‖ ≲ ‖δA‖ / gap. **PERO el gap ε_1(λ)−ε_0(λ) es EXPONENCIALMENTE PEQUEÑO**
-(descubierto al probar H1: el espectro de QW decae geométricamente a 0). ⟹ la cota ingenua
-1/gap es **inútil**. La estabilidad del minimizador NO sale por perturbación estándar. > **Esto localiza el problema abierto de:** 2b no falla por la forma (i, limpia/PNT)
-> sino por la **estabilidad del minimizador bajo gap exponencialmente pequeño (ii)**. Ahí, y
-> solo ahí, puede entrar RH. **Hecho empírico que acota el problema:** el minimizador ES estable (E4: ceros reproducidos a
-1e-15 establemente en N). Entonces (ii) se cumple — pero por un **mecanismo especial**, no por
-la cota 1/gap. Identificar ese mecanismo = resolver 2b. **Reformulación prometedora hacia (ii):** los CEROS de ξ̂_λ (= espectro del operador de scaling
-perturbado D_λ) son un funcional MÁS ROBUSTO del operador que el autovector ξ_λ de QW. La
-convergencia espectral de operadores auto-adjuntos es más estable que la de autovectores. ⟹
-atacar (ii) vía convergencia del **espectro de D_λ** (no del ground state de QW). Posible vuelta
-al gap exponencial. **Veredicto de circularidad (provisional, franco):**
-- (i) forma: no circular (PNT). ✔
-- (ii) minimizador: el mecanismo de estabilidad es el crux abierto; si se controla por la estructura CF (que produce los ceros como OUTPUT del símbolo de primos) ⟹ no circular; si requiere cota de gap que equivalga a regiones libres de ceros ⟹ circular. **Indeciso, pero la estructura (ceros como output, no input) inclina a no-circular** — consistente con. ## 8. RESULTADO: el gap relativo es O(1) — (ii) probablemente auto-controlada Medición (gap.py, mpmath dps=40, N=12): | λ | primos≤λ² | ε0 | gap=ε1−ε0 | gap/ε0 |
+# Link 2b (λ→∞): reformulation as a Szegő limit and concrete target **Map status:** Links 1,3,4 closed (CCM + classical). 2a: simplicity closed (H1
+proved); N→∞ convergence via Perron–Frobenius projectors (non-isolated ground level). **2b is the
+only crux** = open problem of ("missing step"). --- ## 1. What 2b is, precisely ξ̂_{λ,∞}(z) → Ξ(z) locally uniform as λ→∞. By H1 + Thm 1.1(iii) — **now that H1 is
+proved** — each ξ̂_{λ,∞} has ONLY real roots (unconditional). By Hurwitz, if it converges
+locally uniformly to Ξ≢0, then Ξ is real-rooted ⟹ **RH**. So: **2b (convergence) ⟹ RH**, and it is the only thing missing. ## 2. Why it is NOT truncation of the explicit formula Hard datum (E4hp): the 1st zero comes out at ~1e-18 with primes ≤13. Truncating primes at X=13
+would give error O(ψ(X)−X)~O(1). The real precision is exponentially better ⟹ the mechanism is
+**Carathéodory–Fejér (CF) rigidity**, not truncation. The localized Weil form minimizes,
+and the minimization pins the zeros with exponential precision. ## 3. Reformulation: limit of Toeplitz/Hankel determinants The matrix QW in basis V_k is **Cauchy–Toeplitz/Loewner**: τ_{n,n}=log(λ)/2,
+τ_{n,m}=(b_n−b_m)/(n−m), with b_n=(1/L)Σ_k Λ(k)/√k·sin(2πkn/L) (prime data, L=2logλ).
+By Thm 1.1(ii), det_reg(D_λ−z) = −iλ^{−iz} ξ̂_λ(z): **the regularized determinant of the
+Toeplitz/Loewner structure of the primes**. CF (ref [7] of the paper) connects Toeplitz↔symbol and
+gives self-adjointness. So: **2b ⟸ Szegő/Carathéodory–Fejér-type limit theorem:** the Toeplitz determinants of the localized Weil form, with symbol = prime data (b_n), converge (λ→∞) to Ξ(z). This replaces abstract "convergence" with a question of **classical analysis**
+(asymptotics of Toeplitz determinants), where the prime distribution enters via the symbol. ## 4. The horizon H(λ) (quantitative content of 2b) The low zeros are already resolved; the content of 2b lies in the high ones. Define
+H(λ;ε) = height up to which ξ̂_λ resolves zeros to <ε. 2b ⟺ H(λ)→∞. **Mechanism conjecture (zero-independent):** the operator "fixes" one zero per
+independent prime constraint; equating counts, N(H(λ)) ≈ π(λ²), with N(T)~(T/2π)log(T/2π) (zero count), π(λ²)~λ²/(2logλ) (primes).
+⟹ H(λ) grows (solving for it), governed by **prime counting = PNT** ⟹ **zero-independent** ⟹
+a NON-circular route to RH. **Data E7 (high precision):** [to be filled in once E7 finishes] ## 5. Risk (the only one that decides whether 2b→RH is real or circular) Does the Szegő/CF asymptotic require fine control of the symbol that secretly amounts to
+zero-free regions (RH)? If convergence is controlled by π(λ²)+analytic properties of the
+symbol INDEPENDENT of the zeros ⟹ not circular. If it requires RH ⟹ circular (no-go).
+**Deciding this = the central pure-proof question.** Contrasting with a symbol of an
+L-function violator (L_DH) would help: if its Toeplitz determinant does NOT converge to a
+real-rooted function, it confirms that convergence encodes the reality of the zeros. ## 6. Concrete targets
+- **T1:** confirm clean H(λ)→∞ (mpmath, E7) and test N(H(λ))≈π(λ²). [E7 blocked: mpmath eigsy at dim>100 takes hours; exp-bad conditioning. Pending a stable method, even sector.]
+- **T2:** write the determinant det_reg(D_λ−z) as an explicit Toeplitz determinant in the symbol b_n; identify the applicable Szegő class.
+- **T3:** the circularity question (zero-independent symbol). --- ## 7. PROGRESS: localizing the difficulty of 2b (the (i)/(ii) split) 2b = convergence of the **ground state** ξ_λ of the Weil form A_λ. It splits in two, with
+OPPOSITE circularity status: **(i) Convergence of the FORM A_λ → A_∞.** The defect is the prime tail
+Σ_{n>λ²} Λ(n) T(n). By the explicit formula applied to a fixed test function (bounded height),
+this tail is controlled by **PNT** (error ψ(x)−x), which is **zero-independent**.
+⟹ **(i) is NOT CIRCULAR** (pure prime side). This is real and clean. **(ii) Stability of the MINIMIZER ξ_λ, given (i).** This is eigenvector perturbation. Standard
+bound: ‖δξ‖ ≲ ‖δA‖ / gap. **BUT the gap ε_1(λ)−ε_0(λ) is EXPONENTIALLY SMALL**
+(discovered while proving H1: the spectrum of QW decays geometrically to 0). ⟹ the naive
+1/gap bound is **useless**. Minimizer stability does NOT come from standard perturbation. > **This localizes the open problem:** 2b does not fail because of the form (i, clean/PNT)
+> but because of **minimizer stability under an exponentially small gap (ii)**. There, and
+> only there, can RH enter. **Empirical fact bounding the problem:** the minimizer IS stable (E4: zeros reproduced to
+1e-15 stably in N). So (ii) holds — but by a **special mechanism**, not the 1/gap bound.
+Identifying that mechanism = solving 2b. **Promising reformulation toward (ii):** the ZEROS of ξ̂_λ (= spectrum of the perturbed
+scaling operator D_λ) are a MORE ROBUST functional of the operator than the eigenvector ξ_λ of QW. Spectral
+convergence of self-adjoint operators is more stable than eigenvector convergence. ⟹
+attack (ii) via convergence of the **spectrum of D_λ** (not of the ground state of QW). Possible
+return to the exponential gap. **Circularity verdict (provisional, candid):**
+- (i) form: not circular (PNT). ✔
+- (ii) minimizer: the stability mechanism is the open crux; if controlled by the CF structure (which produces the zeros as OUTPUT of the prime symbol) ⟹ not circular; if it requires a gap bound equivalent to zero-free regions ⟹ circular. **Undecided, but the structure (zeros as output, not input) leans toward non-circular** — consistent with the earlier conviction. ## 8. RESULT: the relative gap is O(1) — (ii) probably self-controlled Measurement (gap.py, mpmath dps=40, N=12): | λ | primes≤λ² | ε0 | gap=ε1−ε0 | gap/ε0 |
 |---|---|---|---|---|
 | 2.5 | 6 | 6.1e-20 | 4.2e-18 | 68.2 |
 | 3.0 | 9 | 2.8e-20 | 1.1e-19 | 3.92 |
 | 3.7 | 13 | 1.7e-20 | 6.0e-20 | 3.58 |
 | 5.0 | 25 | 1.0e-20 | 3.4e-20 | 3.33 |
-| 7.0 | 49 | 6.5e-21 | 2.0e-20 | 3.07 | **Hallazgo:** el gap es exp-pequeño en ABSOLUTO (~1e-20) pero **gap/ε0 ≈ 3, O(1) y estable en λ**. **Consecuencia para (ii):** la rotación del autovector es ‖δA_eff‖/gap, pero δA_eff (proyección
-de la cola de primos sobre el near-null space del ground state) vive en la escala ε0. Entonces
-la perturbación RELATIVA ~ ε0/gap ~ O(1) — **acotada, no explota por 1/gap**. El ground state
-está bien separado a su propia escala. ⟹ mi preocupación previa (fragilidad por gap exp-chico)
-queda **desactivada**: (ii) es probablemente AUTO-CONTROLADA por el gap relativo, propiedad
-estructural del espectro geométrico, NO de RH. **Veredicto de circularidad (actualizado, franco):**
-- (i) forma: NO circular (PNT). ✔
-- (ii) minimizador: gap relativo O(1) ⟹ estabilidad probablemente auto-controlada, **NO circular**.
-- ⟹ la evidencia inclina a **2b NO circular** — el programa CCM puede llegar a RH. Consistente con la convicción de. **Caveat franco:** gap/ε0 decrece lento (68→3.9→3.6→3.3→3.1); falta confirmar que se estabiliza
-en O(1) y no decae a 0 asintóticamente. Y falta la cota rigurosa de perturbación de autovector
-en la escala relativa (que δA_eff proyectado sí escala como ε0). Pero la dirección es buena. ## 9. (i) CERRADO exacto + (ii) reformulado correctamente **(i) [CERRADO]** — ver `2b_part_i_EXACT.md`. A_λ = A_∞|_{E_λ} EXACTO (verificado 0.00e+00):
-los primos >λ² contribuyen cero por soporte (f**g ⊂ [λ⁻²,λ²]). NO hay cola de primos / defecto
-PNT — la truncación es exacta. ⟹ 2b NO es perturbación de primos sino **convergencia de
-Galerkin del minimizador a un fondo NO aislado de A_∞** (autovalores acumulan en 0). **(ii) [GRAN AVANCE]** — el objeto correcto es el ESPECTRO RELATIVO {ε_k(λ)/ε_0(λ)}, que
-determina ξ̂_λ vía el determinante. Medición (relspec.py, mpmath dps=45, N=14): | λ | ε1/ε0 | ε2/ε0 | ε3/ε0 | ε4/ε0 | ε5/ε0 |
+| 7.0 | 49 | 6.5e-21 | 2.0e-20 | 3.07 | **Finding:** the gap is exp-small in ABSOLUTE terms (~1e-20) but **gap/ε0 ≈ 3, O(1) and stable in λ**. **Consequence for (ii):** eigenvector rotation is ‖δA_eff‖/gap, but δA_eff (projection
+of the prime tail onto the near-null space of the ground state) lives at scale ε0. So
+the RELATIVE perturbation ~ ε0/gap ~ O(1) — **bounded, does not blow up by 1/gap**. The ground state
+is well separated at its own scale. ⟹ my earlier concern (fragility from the exp-small gap)
+is **deactivated**: (ii) is probably SELF-CONTROLLED by the relative gap, a structural
+property of the geometric spectrum, NOT of RH. **Circularity verdict (updated, candid):**
+- (i) form: NOT circular (PNT). ✔
+- (ii) minimizer: O(1) relative gap ⟹ stability probably self-controlled, **NOT circular**.
+- ⟹ the evidence leans toward **2b NOT circular** — the CCM program can reach RH. Consistent with the earlier conviction. **Candid caveat:** gap/ε0 decreases slowly (68→3.9→3.6→3.3→3.1); still need to confirm it
+stabilizes at O(1) and does not decay to 0 asymptotically. Also the rigorous eigenvector
+perturbation bound at the relative scale (that projected δA_eff does scale as ε0) is still
+missing. But the direction is good. ## 9. (i) exact CLOSED + (ii) correctly reformulated **(i) [CLOSED]** — see `2b_part_i_EXACT.md`. A_λ = A_∞|_{E_λ} EXACT (verified 0.00e+00):
+primes >λ² contribute zero by support (f**g ⊂ [λ⁻²,λ²]). There is NO prime tail / PNT
+defect — the truncation is exact. ⟹ 2b is NOT prime perturbation but **Galerkin
+convergence of the minimizer to a NON-isolated ground level of A_∞** (eigenvalues accumulate at 0). **(ii) [MAJOR PROGRESS]** — the correct object is the RELATIVE SPECTRUM {ε_k(λ)/ε_0(λ)}, which
+determines ξ̂_λ via the determinant. Measurement (relspec.py, mpmath dps=45, N=14): | λ | ε1/ε0 | ε2/ε0 | ε3/ε0 | ε4/ε0 | ε5/ε0 |
 |---|---|---|---|---|---|
 | 3.0 | 3.88 | 9.39 | 16.67 | 957 | — |
 | 3.7 | 3.74 | 9.14 | 15.17 | 26.35 | 35.18 |
 | 5.0 | 4.08 | 9.07 | 16.51 | 25.61 | 37.95 |
-| 7.0 | 4.07 | 9.05 | 16.40 | 25.40 | 37.42 | **(a) El espectro relativo CONVERGE** — cada columna se estabiliza al crecer λ, de abajo hacia
-arriba (horizonte avanzando). A λ=5,7 las primeras 5 razones coinciden a ~1%. Esto es
-EXACTAMENTE lo que (ii) necesita: la estructura espectral relativa converge a un límite
-**zero-independiente** ⟹ ξ̂_λ converge ⟹ evidencia fuerte de que **2b-(ii) se cierra sin RH**. **(b) Límite con forma cerrada: ε_k/ε_0 ≈ (k+1)²** (4, 9, 16, 25, ~36). La "geometricidad"
-previa en float64 era ruido; la estructura real (mpmath) es **ε_k ≈ ε_0·(k+1)²**. Una forma
-cerrada es un HANDLE DE PRUEBA: si el espectro relativo de A_∞ es {(k+1)²}, su convergencia
-(y la de ξ̂_λ) es demostrable analíticamente. **Veredicto de circularidad (actualizado):** (i) exacto/zero-indep ✔; (ii) espectro relativo
-converge a límite estructural con forma cerrada ⟹ **2b parece NO circular y CERRABLE**. El
-programa CCM puede llegar a RH. ## 10. Próximos pasos (cierre de 2b)
-- **(ii)-T1:** confirmar ε_k/ε_0 → (k+1)² rigurosamente (verificar más k, más λ, convergencia N).
-- **(ii)-T2:** PROBAR que el espectro relativo de A_∞ es {(k+1)²} (o lo que sea) analíticamente — vía la estructura Cauchy-Toeplitz/Loewner de QW. Esto cierra (ii).
-- **(ii)-T3:** linkear rigurosamente "espectro relativo de A_λ converge" ⟹ "ξ̂_λ→Ξ" (vía el determinante det(D_λ−z), Thm 1.1.ii).
-- Con (i) exacto + (ii) cerrado ⟹ **2b ⟹ RH**.
+| 7.0 | 4.07 | 9.05 | 16.40 | 25.40 | 37.42 | **(a) The relative spectrum CONVERGES** — each column stabilizes as λ grows, from the bottom
+up (an advancing horizon). At λ=5,7 the first 5 ratios agree to ~1%. This is
+EXACTLY what (ii) needs: the relative spectral structure converges to a
+**zero-independent** limit ⟹ ξ̂_λ converges ⟹ strong evidence that **2b-(ii) closes without RH**. **(b) Limit with closed form: ε_k/ε_0 ≈ (k+1)²** (4, 9, 16, 25, ~36). The earlier
+"geometricity" in float64 was noise; the real structure (mpmath) is **ε_k ≈ ε_0·(k+1)²**. A
+closed form is a PROOF HANDLE: if the relative spectrum of A_∞ is {(k+1)²}, its convergence
+(and that of ξ̂_λ) is analytically demonstrable. **Circularity verdict (updated):** (i) exact/zero-indep ✔; (ii) relative spectrum
+converges to a structural limit with closed form ⟹ **2b appears NOT circular and CLOSABLE**. The
+CCM program can reach RH. ## 10. Next steps (closing 2b)
+- **(ii)-T1:** confirm ε_k/ε_0 → (k+1)² rigorously (check more k, more λ, N-convergence).
+- **(ii)-T2:** PROVE that the relative spectrum of A_∞ is {(k+1)²} (or whatever it is) analytically — via the Cauchy-Toeplitz/Loewner structure of QW. This closes (ii).
+- **(ii)-T3:** rigorously link "relative spectrum of A_λ converges" ⟹ "ξ̂_λ→Ξ" (via the determinant det(D_λ−z), Thm 1.1.ii).
+- With (i) exact + (ii) closed ⟹ **2b ⟹ RH**.

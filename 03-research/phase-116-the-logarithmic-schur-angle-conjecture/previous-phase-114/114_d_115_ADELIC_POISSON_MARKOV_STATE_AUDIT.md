@@ -106,7 +106,7 @@ A--B--C.
 The additive periodization map is
 
 \[
- (\mathcal Pf)(x)=\sum_{q\in\mathbb Q}f(x+q),qquad
+ (\mathcal Pf)(x)=\sum_{q\in\mathbb Q}f(x+q),\qquad
  x\in\mathbb A/\mathbb Q.                              \tag{3.1}
 \]
 
@@ -136,7 +136,7 @@ The supports are disjoint, so
 
 \[
  \|f_{N,\varepsilon}\|_2^2
- ={2\over3}N\varepsilon,qquad
+ ={2\over3}N\varepsilon,\qquad
  \sum_{k\in\mathbb Z}|\widehat f_{N,\varepsilon}(k)|^2=N.           \tag{3.5}
 \]
 
@@ -175,7 +175,7 @@ common multiples.  At the formal Dirichlet-series level,
 For example
 
 \[
- d(6)=4,qquad \Lambda(6)=0.                            \tag{4.3}
+ d(6)=4,\qquad \Lambda(6)=0.                            \tag{4.3}
 \]
 
 Thus the positive comb covariance has the wrong local contact.

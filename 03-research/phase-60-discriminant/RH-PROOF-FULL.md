@@ -1,187 +1,192 @@
-# La Hipótesis de Riemann vía tripletes espectrales zeta (CCM)
-## Cadena completa Eslabón 0 → Eslabón 4 — estado auditado **Autor:** David Alejandro Pizzo · **Programa:** `riemann-program/phase-60-discriminant` > **AUDITORÍA DEL TRIBUNAL (··), ver `tribunal-VEREDICTO.md`.**
-> Correcciones aplicadas: (C.1) el **déficit de frame `g₀=Ξ_T` es RH-hard**, NO cerrable por
-> Landau–Beurling — `S_λ` tiene núcleo de dim `≈2λ²`, `Ξ_T` es uno de `≈2λ²` candidatos; la
-> selección requiere la forma de Weil completa PSD = RH-local. (C.2) Distinguir
-> `λ_min(S_λ)=0` (frame de ceros, trivial) de `ε_0=λ_min(QW)` (forma de Weil, signo=RH).
-> (C.3) **E1 es cita obligada CCM Thm 1.1(iii)**, NO "reparación cerrable" (, severo);
-> el sub-caso `ξ_k>0` SÍ es elemental (Lema M1, Herglotz). (C.4) **`γ=3` NO está derivado**
-> (numérico; la compacidad obstruye derivar `n²`). Expositivas: **retirar `Γ=O(1)`** (sólo
-> `O(logλ)` probado, y alcanza); lema del horizonte corregido a **sub-crítico**
-> (`densidad ceros/Nyquist = 1−1/(2logλ) < 1`, defecto `≈2λ²`); normalización libre **módulo
-> límite no degenerado**. Documento maestro: ensambla la cadena deductiva del programa ––
-(arXiv:2511.22755) desde la construcción del operador de Weil finito hasta RH, **con el
-estado franco de cada pieza tras auditoría matemática**. No se reclama prueba de RH: el
-núcleo es RH-equivalente. El valor es la **localización** del problema y un andamiaje de
-aproximación genuinamente probado alrededor de un único núcleo. Notación: `ξ(s)=½s(s−1)π^{−s/2}Γ(s/2)ζ(s)`, `Ξ(t)=ξ(½+it)` (entera, orden 1, par, real en
-ℝ). `RH ⟺ Ξ∈LP` (clase de Laguerre–Pólya, real-rooted). `λ>1`, `L=2logλ`, `d_k=2πk/L`,
-`Ω=logλ`, `T*=2πλ²` (horizonte de Nyquist). --- ## 0. CUADRO DE SITUACIÓN (post-auditoría) Leyenda: **✅ probado** · **✅\*** probado módulo resultado clásico estándar ·
-**⟂ condicional** (implicación correcta, hipótesis no probadas) · **🔧 reparación pendiente**
-(cierto pero sin prueba propia) · **🟥 núcleo RH-hard** · **⬚ abierto (análisis)**. | # | Pieza | Estado | Nota de auditoría |
+# The Riemann Hypothesis via zeta spectral triples (CCM)
+## Full chain Link 0 → Link 4 — audited status **Program:** `riemann-program/phase-60-discriminant` > **TRIBUNAL AUDIT (··), see `tribunal-VEREDICTO.md`.**
+> Corrections applied: (C.1) the **frame deficit `g₀=Ξ_T` is RH-hard**, NOT closable by
+> Landau–Beurling — `S_λ` has a kernel of dim `≈2λ²`, `Ξ_T` is one of `≈2λ²` candidates; the
+> selection requires the full Weil form to be PSD = local-RH. (C.2) Distinguish
+> `λ_min(S_λ)=0` (zero frame, trivial) from `ε_0=λ_min(QW)` (Weil form, sign=RH).
+> (C.3) **E1 is a mandatory citation, CCM Thm 1.1(iii)**, NOT a "closable repair" (, severe);
+> the sub-case `ξ_k>0` IS elementary (Lemma M1, Herglotz). (C.4) **`γ=3` is NOT derived**
+> (numerical; compactness obstructs deriving `n²`). Expository: **withdraw `Γ=O(1)`** (only
+> `O(logλ)` is proved, and it suffices); horizon lemma corrected to **subcritical**
+> (`zero/Nyquist density = 1−1/(2logλ) < 1`, deficit `≈2λ²`); free normalization **modulo
+> a non-degenerate limit**. Master document: assembles the deductive chain of the –– program
+(arXiv:2511.22755) from the construction of the finite Weil operator to RH, **with the
+frank status of each piece after mathematical audit**. No proof of RH is claimed: the
+core is RH-equivalent. The value is the **localization** of the problem and a genuinely proved
+approximation scaffolding around a single core. Notation: `ξ(s)=½s(s−1)π^{−s/2}Γ(s/2)ζ(s)`, `Ξ(t)=ξ(½+it)` (entire, order 1, even, real on
+ℝ). `RH ⟺ Ξ∈LP` (Laguerre–Pólya class, real-rooted). `λ>1`, `L=2logλ`, `d_k=2πk/L`,
+`Ω=logλ`, `T*=2πλ²` (Nyquist horizon). --- ## 0. STATUS BOARD (post-audit) Legend: **✅ proved** · **✅\*** proved modulo a standard classical result ·
+**⟂ conditional** (correct implication, unproved hypotheses) · **🔧 pending repair**
+(true but without its own proof) · **🟥 RH-hard core** · **⬚ open (analysis)**. | # | Piece | Status | Audit note |
 |---|---|---|---|
-| **E0** | Construcción CCM (forma de Weil `QW`, `ξ̂_{λ,N}`) | **✅** | definición; motor validado reproduce ceros |
-| **E1** | Real-rootedness de `ξ̂_{λ,N}` | **🔧** | prueba registrada (interlacing) **REFUTADA** por contraejemplo; cierta vía CCM Thm 1.1(iii)/Hermite–Biehler; prueba propia abierta |
-| └ H1 | fondo simple + autovector positivo (envolvente) | **✅** (estructura) | **NO** da PSD — corrección: PF ⟹ estructura, no `ε_0≥0` |
-| └ H1′ | `QW` PSD (`ε_0≥0`) | **= RH** | `QW=`forma de Weil ⟹ PSD ⟺ Weil-pos ⟺ RH-hasta-T* (NO incondicional) |
-| **E2** | Convergencia `ξ̂_{λ,N} → Ξ` | andamiaje + núcleo | ↓ |
-| └ E2.a/c/horizonte | límite N / Re s≥1+ε / `T*~2πλ²` | **✅** | |
-| └ N0 | `Ξ_T→Ξ` strip-uniforme (Fourier, Φ doble-exp) | **✅** | demostración robusta |
-| └ N1 | transfer eje→off-axis (medida armónica) | **✅\*** | módulo Boas (clásico) |
-| └ N2 | amplitud global `Γ=O(1)` | **✅** | con normalización `ξ̂(0)=Ξ(0)` |
-| └ N3 | amplificación `λ^{y≤½}` | **✅\*** | Boas/Phragmén–Lindelöf |
-| └ N5 reducción | `RH ⟸ ε_loc=o(λ^{−½})` | **✅** | módulo E1 (Hurwitz) |
-| └ III | estabilidad relativa `ε_loc ≤ C√(logλ)‖Â_λ−Â_∞‖` | **⟂** | hipótesis (H-gap)+(H-lim)+(`ε_0>0`), sólo numéricas |
-| └ N5b | borde absorbido | **✅** | reducción válida |
-| └ N5c | discriminación β (RH-falso no converge) | **✅\*** | módulo real-rootedness + conv-eje |
-| └ **IV.1** | identificar operador límite `Â_∞` | **⬚** | 2º-orden SL fenomenológico; id. de coef. constante refutadas |
-| └ **IV.2 ≡ §V** | `ξ̂_∞=Ξ` y tasa `o(λ^{−½})` | **🟥** | **RH-equivalente** (variacional) |
-| **E3** | Hurwitz | **✅** | clásico, módulo E1 |
-| **E4** | `Ξ∈LP ⟺ RH` | **✅** | clásico | **Resumen en una línea:** andamiaje de aproximación (N0,N1,N2,N3) **probado**; E1 con prueba
-propia **rota** (cierta vía CCM); III **condicional**; el núcleo **IV.2≡§V es RH-equivalente**;
-IV.1 es análisis **abierto**. La positividad de Weil (=RH) aparece, tras auditoría, en H1′
-y en `/ε_0`. --- ## 1. Eslabón 0 — el operador de Weil finito **Def 0.1 (forma de Weil CCM).** Para `|m|,|n|≤N`, núcleo de diferencia dividida de seno
+| **E0** | CCM construction (Weil form `QW`, `ξ̂_{λ,N}`) | **✅** | definition; validated engine reproduces zeros |
+| **E1** | Real-rootedness of `ξ̂_{λ,N}` | **🔧** | registered proof (interlacing) **REFUTED** by counterexample; true via CCM Thm 1.1(iii)/Hermite–Biehler; own proof open |
+| └ H1 | simple ground state + positive eigenvector (envelope) | **✅** (structure) | does **NOT** give PSD — correction: PF ⟹ structure, not `ε_0≥0` |
+| └ H1′ | `QW` is PSD (`ε_0≥0`) | **= RH** | `QW=`Weil form ⟹ PSD ⟺ Weil-positivity ⟺ RH-up-to-T* (NOT unconditional) |
+| **E2** | Convergence `ξ̂_{λ,N} → Ξ` | scaffolding + core | ↓ |
+| └ E2.a/c/horizon | limit N / Re s≥1+ε / `T*~2πλ²` | **✅** | |
+| └ N0 | `Ξ_T→Ξ` strip-uniform (Fourier, double-exp Φ) | **✅** | robust proof |
+| └ N1 | axis→off-axis transfer (harmonic measure) | **✅\*** | modulo Boas (classical) |
+| └ N2 | global amplitude `Γ=O(1)` | **✅** | with normalization `ξ̂(0)=Ξ(0)` |
+| └ N3 | amplification `λ^{y≤½}` | **✅\*** | Boas/Phragmén–Lindelöf |
+| └ N5 reduction | `RH ⟸ ε_loc=o(λ^{−½})` | **✅** | modulo E1 (Hurwitz) |
+| └ III | relative stability `ε_loc ≤ C√(logλ)‖Â_λ−Â_∞‖` | **⟂** | hypotheses (H-gap)+(H-lim)+(`ε_0>0`), numerical only |
+| └ N5b | boundary absorbed | **✅** | valid reduction |
+| └ N5c | discrimination β (RH-false does not converge) | **✅\*** | modulo real-rootedness + axis-convergence |
+| └ **IV.1** | identify the limit operator `Â_∞` | **⬚** | phenomenological 2nd-order SL; constant-coefficient identifications refuted |
+| └ **IV.2 ≡ §V** | `ξ̂_∞=Ξ` and rate `o(λ^{−½})` | **🟥** | **RH-equivalent** (variational) |
+| **E3** | Hurwitz | **✅** | classical, modulo E1 |
+| **E4** | `Ξ∈LP ⟺ RH` | **✅** | classical | **One-line summary:** approximation scaffolding (N0,N1,N2,N3) **proved**; E1 with its own
+proof **broken** (true via CCM); III **conditional**; the **IV.2≡§V core is RH-equivalent**;
+IV.1 is **open** analysis. Weil positivity (=RH) appears, after audit, in H1′
+and in `/ε_0`. --- ## 1. Link 0 — the finite Weil operator **Def 0.1 (CCM Weil form).** For `|m|,|n|≤N`, divided-difference sine kernel
 ``` q_{mn}(y) = (sin(2πmy/L)−sin(2πny/L))/(π(n−m)) (m≠n), q_{nn}(y) = 2(1−y/L)cos(2πny/L).
 ```
-`QW = A_λ^N = (𝒲_{mn})`, real simétrica `(2N+1)²`:
+`QW = A_λ^N = (𝒲_{mn})`, real symmetric `(2N+1)²`:
 ``` 𝒲_{mn} = ∫_0^L q_{mn}(y) w_arch(y) dy − Σ_{n'≤λ²} (Λ(n')/√n') q_{mn}(log n') + 𝒫_{mn},
 ```
-`w_arch` peso arquimediano regularizado, `Λ` von Mangoldt, `𝒫` término de polo de ζ. **Def 0.2 (función espectral band-limited).** `ξ` autovector del menor autovalor
-`ε_0=ε_0(λ,N)` de `QW`. **Normalización canónica** (ver §2.0): se reescala `ξ` para
-`ξ̂(0)=Ξ(0)`. Sea
+`w_arch` regularized archimedean weight, `Λ` von Mangoldt, `𝒫` the pole term of ζ. **Def 0.2 (band-limited spectral function).** `ξ` eigenvector of the smallest eigenvalue
+`ε_0=ε_0(λ,N)` of `QW`. **Canonical normalization** (see §2.0): `ξ` is rescaled so that
+`ξ̂(0)=Ξ(0)`. Let
 ``` ξ̂_{λ,N}(s):= sin(Ls/2) · Σ_{|k|≤N} ξ_k/(s − d_k).
-``` **Prop 0.3 [✅].** `ξ̂_{λ,N}` es entera de tipo exponencial `Ω=logλ`, real en ℝ; sus ceros
-reales son las raíces de la secular `f(s)=Σ_k ξ_k/(s−d_k)` (los `ρ̂_n`). *Prueba:*
-`sin(Ls/2)` se anula en `d_k=2πk/L` (`sin(πk)=0`), cancela los polos; Paley–Wiener da tipo
-`L/2`. ∎ **Identidad clave [✅, fórmula explícita].** Para `g∈PW_Ω`,
+``` **Prop 0.3 [✅].** `ξ̂_{λ,N}` is entire of exponential type `Ω=logλ`, real on ℝ; its real
+zeros are the roots of the secular equation `f(s)=Σ_k ξ_k/(s−d_k)` (the `ρ̂_n`). *Proof:*
+`sin(Ls/2)` vanishes at `d_k=2πk/L` (`sin(πk)=0`), cancelling the poles; Paley–Wiener gives
+type `L/2`. ∎ **Key identity [✅, explicit formula].** For `g∈PW_Ω`,
 ``` ⟨ξ, QW ξ⟩ = A_λ(g,g) = Σ_ρ g(γ_ρ) conj(g(conj γ_ρ)), g=ξ̂,
 ```
-y `A_λ = A_∞|_{E_λ}` exacto (primos `>λ²` no contribuyen por soporte). **`QW` ES la forma
-de Weil del lado-ceros** — esto será central en §4 (núcleo) y en la auditoría de H1. --- ## 2. Eslabón 1 — real-rootedness finita 🔧 **Enunciado.** Para todo `λ,N`, todas las raíces de `ξ̂_{λ,N}` son reales (`ξ̂_{λ,N}∈LP`). **Estado tras auditoría: cierto, pero la prueba registrada es FALSA.** **🔴 Contraejemplo que refuta la prueba vieja.** La prueba registrada usaba "con `ξ_k>0`,
-la secular va `+∞→−∞` entre polos ⟹ una raíz por hueco". Pero el autovector fundamental
-**no** es de signo definido (tiene un carrier de borde `ω*≈0.966π`, ~`N` cambios de signo).
-Y sin `ξ_k>0` el argumento falla: tomar `ξ=(−1,2,−1)`, `d=(−1,0,1)`:
-``` f(s) = −1/(s+1)+2/s−1/(s−1) = −2/(s³−s) → numerador constante, CERO raíces reales.
-``` **Mecanismo correcto (Hermite–Biehler / auto-adjunto, NO Perron–Frobenius).** La
-real-rootedness vale también para `L_DH` (RH-falsa, `b(n)` con signos, donde PF falla) —
-empíricamente las raíces DH son reales. ⟹ **no depende del signo de los coeficientes**, luego
-**no es Perron–Frobenius**; es la realización espectral **auto-adjunta** de CCM (las raíces
-seculares como espectro real) / la propiedad de **Hermite–Biehler** de `ξ̂`. - **H1 [✅, corregido]:** PF (`Λ(n)≥0`, vía Lévy–Khintchine + Schoenberg + Trotter) da el fondo **simple** con **autovector de envolvente positiva** (en la base de-modulada). Esto es **estructura del ground state**, y es lo que el programa probó.
-- **H1′ [= RH, NO incondicional]:** que `QW` sea **PSD** (`ε_0≥0`) NO se sigue de PF. Como `QW=`forma de Weil, `QW` PSD ⟺ Weil-positividad ⟺ RH-hasta-T*. (El memo que decía "H1 prueba QW PSD incondicional" **sobre-afirma**: PF≠PSD.) **Lema M1 [✅, sub-caso, asentado por el tribunal].** Si todos los residuos `ξ_k>0`, entonces
-`f(s)=Σξ_k/(s−d_k)` es Herglotz (`Im f<0` en el semiplano superior) ⟹ **sólo ceros reales**,
-con interlacing estricto. Elemental, self-contained, sin citar CCM. *Limitación:* NO cubre el
-ground state real (carrier de borde `ω*≈0.966π`: ni `ξ_k>0` ni `(−1)^kξ_k>0`, desajuste de fase). **Teorema de obstrucción [✅, tribunal — ver `E1-VEREDICTO-tribunal.md`].** **No existe
-construcción universal** que realice las raíces de `f(s)=Σξ_k/(s−d_k)` como espectro
-auto-adjunto a partir de los datos aislados `(ξ_k,d_k)`. *Prueba:* el contraejemplo
-`ξ=(−1,2,−1)` **es el ground state del Laplaciano de Dirichlet** `tridiag(−1,2,−1)` (autovector
-real legítimo) y su secular `−2/(s³−s)` no tiene raíces reales; la matriz-flecha `[[D,ξ],[e^T,0]]`
-(espectro = raíces de `f`) es no-simétrica con espectro no-real. ∎ ⟹ la real-rootedness debe
-usar info ESPECÍFICA del ground state de Weil que `(−1,2,−1)` no posee (no es signo de `ξ` —DH
-vale—, ni total-positividad —refutada—, ni PF solo). El rescate cuadrático `Σξ_k²/(s−d_k)`
-(Herglotz) es **otro objeto** (sus ceros ≠ los de `ξ̂`; cuadrar rompe la identidad de Weil).
-La vía de Branges existe pero verificar HB `|E(s̄)|<|E(s)|` **es lógicamente equivalente a E1**
-(el carrier `ω*≈0.966π≠π` impide traducir la positividad PF de la envolvente a los residuos). **Veredicto E1 [🔧 = cita obligada DEMOSTRADA].** Real-rootedness **cierta** = **CCM Thm
-1.1(iii)** (m-función de Nevanlinna auto-adjunta / `H(E)` de de Branges), dado H1+H2. El
-tribunal **probó** que la cita es **necesaria**, no pereza: prueba propia al nivel
-Herglotz/HB **imposible** (teorema de obstrucción). Sub-caso `ξ_k>0` cerrado (Lema M1). E3 y
-N5c heredan "módulo E1". **RH-neutral** (vale para DH) ⟹ usar E1 **no es circular**. --- ## 3. Eslabón 2 — convergencia (andamiaje probado + núcleo RH) ### 2.0 Normalización [✅, resuelve cabo]
-La conclusión final es **Hurwitz**, invariante por constante no nula: si `c_λ ξ̂_λ→Ξ`
-uniforme con `c_λ≠0` y `ξ̂_λ` real-rooted, entonces `Ξ` real-rooted. ⟹ la normalización es
-**libre**; se fija `ξ̂_λ(0)=Ξ(0)`. Con ella `Γ=sup|ξ̂_λ|=O(1)`, y `ε_loc=sup|ξ̂_λ−Ξ|` queda
-bien definido. Cabo cerrado para N2, III, reducción. ### 2.1 El objeto y la reducción
+and `A_λ = A_∞|_{E_λ}` exactly (primes `>λ²` do not contribute, by support). **`QW` IS the
+Weil form on the zero side** — this will be central in §4 (the core) and in the audit of H1. --- ## 2. Link 1 — finite real-rootedness 🔧 **Statement.** For all `λ,N`, all roots of `ξ̂_{λ,N}` are real (`ξ̂_{λ,N}∈LP`). **Status after audit: true, but the registered proof is FALSE.** **🔴 Counterexample refuting the old proof.** The registered proof used "with `ξ_k>0`,
+the secular function runs `+∞→−∞` between poles ⟹ one root per gap." But the fundamental
+eigenvector is **not** of definite sign (it has a boundary carrier `ω*≈0.966π`, ~`N` sign
+changes). And without `ξ_k>0` the argument fails: take `ξ=(−1,2,−1)`, `d=(−1,0,1)`:
+``` f(s) = −1/(s+1)+2/s−1/(s−1) = −2/(s³−s) → constant numerator, ZERO real roots.
+``` **Correct mechanism (Hermite–Biehler / self-adjoint, NOT Perron–Frobenius).**
+Real-rootedness also holds for `L_DH` (RH-false, `b(n)` with signs, where PF fails) —
+empirically the DH roots are real. ⟹ **it does not depend on the sign of the coefficients**,
+so **it is not Perron–Frobenius**; it is CCM's **self-adjoint** spectral realization (secular
+roots as a real spectrum) / the **Hermite–Biehler** property of `ξ̂`. - **H1 [✅, corrected]:** PF (`Λ(n)≥0`, via Lévy–Khintchine + Schoenberg + Trotter) gives a **simple** ground state with **positive-envelope eigenvector** (in the de-modulated base). This is **ground-state structure**, and is what the program proved.
+- **H1′ [= RH, NOT unconditional]:** that `QW` be **PSD** (`ε_0≥0`) does NOT follow from PF. Since `QW=`Weil form, `QW` PSD ⟺ Weil-positivity ⟺ RH-up-to-T*. (The memo stating "H1 proves QW PSD unconditionally" **overclaims**: PF≠PSD.) **Lemma M1 [✅, sub-case, settled by the tribunal].** If all residues `ξ_k>0`, then
+`f(s)=Σξ_k/(s−d_k)` is Herglotz (`Im f<0` in the upper half-plane) ⟹ **only real zeros**,
+with strict interlacing. Elementary, self-contained, without citing CCM. *Limitation:* it does
+NOT cover the real ground state (boundary carrier `ω*≈0.966π`: neither `ξ_k>0` nor
+`(−1)^kξ_k>0`, phase mismatch). **Obstruction theorem [✅, tribunal — see `E1-VEREDICTO-tribunal.md`].** **There is no
+universal construction** realizing the roots of `f(s)=Σξ_k/(s−d_k)` as a self-adjoint
+spectrum from the isolated data `(ξ_k,d_k)`. *Proof:* the counterexample
+`ξ=(−1,2,−1)` **is the ground state of the Dirichlet Laplacian** `tridiag(−1,2,−1)` (a
+legitimate real eigenvector) and its secular function `−2/(s³−s)` has no real roots; the
+arrow matrix `[[D,ξ],[e^T,0]]` (spectrum = roots of `f`) is non-symmetric with non-real
+spectrum. ∎ ⟹ real-rootedness must use SPECIFIC information about the Weil ground state that
+`(−1,2,−1)` does not have (it is not the sign of `ξ` — DH holds —, nor total positivity —
+refuted —, nor PF alone). The quadratic rescue `Σξ_k²/(s−d_k)` (Herglotz) is **a different
+object** (its zeros ≠ those of `ξ̂`; squaring breaks the Weil identity).
+The de Branges route exists but verifying HB `|E(s̄)|<|E(s)|` **is logically equivalent to E1**
+(the carrier `ω*≈0.966π≠π` prevents translating the PF positivity of the envelope into the
+residues). **Verdict on E1 [🔧 = mandatory citation, PROVED].** Real-rootedness **true** = **CCM Thm
+1.1(iii)** (self-adjoint Nevanlinna m-function / de Branges `H(E)`), given H1+H2. The
+tribunal **proved** that the citation is **necessary**, not laziness: an own proof at the
+Herglotz/HB level is **impossible** (obstruction theorem). The `ξ_k>0` sub-case is closed
+(Lemma M1). E3 and N5c inherit "modulo E1." **RH-neutral** (holds for DH) ⟹ using E1 is
+**not circular**. --- ## 3. Link 2 — convergence (proved scaffolding + RH core) ### 2.0 Normalization [✅, loose end resolved]
+The final conclusion is **Hurwitz**, invariant under a nonzero constant: if `c_λ ξ̂_λ→Ξ`
+uniformly with `c_λ≠0` and `ξ̂_λ` real-rooted, then `Ξ` is real-rooted. ⟹ the normalization is
+**free**; it is fixed by `ξ̂_λ(0)=Ξ(0)`. With it `Γ=sup|ξ̂_λ|=O(1)`, and `ε_loc=sup|ξ̂_λ−Ξ|`
+is well defined. Loose end closed for N2, III, reduction. ### 2.1 The object and the reduction
 ``` ε_loc(λ):= sup_{|t|≤T*} |ξ̂_λ(t) − Ξ(t)|, ξ̂_λ = lim_N ξ̂_{λ,N}.
-``` **Teorema N0 [✅] (truncación de Fourier strip-uniforme).** `Ξ(z)=∫Φ(u)e^{izu}du`,
-`Ξ_T(z)=∫_{−T}^{T}Φ e^{izu}du`, `T=logλ`. Para todo `δ≥0`:
+``` **Theorem N0 [✅] (strip-uniform Fourier truncation).** `Ξ(z)=∫Φ(u)e^{izu}du`,
+`Ξ_T(z)=∫_{−T}^{T}Φ e^{izu}du`, `T=logλ`. For every `δ≥0`:
 ``` sup_{|Im z|≤δ} |Ξ−Ξ_T| ≤ C_δ λ^{5/2+δ} e^{−πλ²}.
 ```
-*Prueba:* `Φ(u)≤Ce^{9u/2}e^{−πe^{2u}}` (doble-exp), par; `|Ξ−Ξ_T|≤2∫_T^∞Φ(u)e^{δu}du
-≤ C∫_{e^{2T}}^∞ v^{5/4+δ/2}e^{−πv}dv ≤ C'λ^{5/2+δ}e^{−πλ²}`. ∎ **Lema N1 [✅\*] (transfer off-axis).** `F` entera tipo `τ`, `|F|≤Γ` en ℝ, `|F|≤ε` en
-`[−R,R]`. Entonces para `|x₀|≤R/2`, `0<y₀≤δ`:
+*Proof:* `Φ(u)≤Ce^{9u/2}e^{−πe^{2u}}` (double-exp), even; `|Ξ−Ξ_T|≤2∫_T^∞Φ(u)e^{δu}du
+≤ C∫_{e^{2T}}^∞ v^{5/4+δ/2}e^{−πv}dv ≤ C'λ^{5/2+δ}e^{−πλ²}`. ∎ **Lemma N1 [✅\*] (off-axis transfer).** `F` entire of type `τ`, `|F|≤Γ` on ℝ, `|F|≤ε` on
+`[−R,R]`. Then for `|x₀|≤R/2`, `0<y₀≤δ`:
 ``` |F(x₀+iy₀)| ≤ e^{τy₀} ε^{ω} Γ^{1−ω}, ω=ω_{[−R,R]}(x₀+iy₀) ≥ 1−(2/π)(y₀/R).
 ```
-*Prueba:* `log|F|−τ Im z` subarmónica en `H`, acotada (Boas); teorema de las dos constantes
-+ medida armónica del segmento. ∎ **Lema N2 [✅] (amplitud).** `Γ=sup_ℝ|ξ̂_λ|=O(logλ)` por Plancherel–Pólya (`‖ξ̂‖_{L²}²=πlogλ`)
-+ Nikolskii. **[Tribunal: el `Γ=O(1)` que se afirmaba antes NO está probado; retirado. El
-`O(logλ)` es lo probado y alcanza.]** En N1, `Γ^{1−ω}=exp(O(λ^{−2}loglogλ))→1` pues `1−ω~λ^{−2}`. **Teorema N3 [✅\*] (amplificación, Boas).** `F` tipo `τ`, `|F|≤M` en ℝ ⟹ `|F(x+iy)|≤Me^{τ|y|}`.
-*Prueba:* `g=Fe^{iτz}` acotada en ℝ por `M`, Phragmén–Lindelöf en `H`. ∎ (Da el factor
-`λ^{y≤½}`.) **Teorema (Reducción) [✅, módulo E1].** Los ceros de `Ξ` están en `|Im z|≤½`, y
+*Proof:* `log|F|−τ Im z` subharmonic in `H`, bounded (Boas); two-constants theorem
++ harmonic measure of the segment. ∎ **Lemma N2 [✅] (amplitude).** `Γ=sup_ℝ|ξ̂_λ|=O(logλ)` by Plancherel–Pólya (`‖ξ̂‖_{L²}²=πlogλ`)
++ Nikolskii. **[Tribunal: the previously claimed `Γ=O(1)` is NOT proved; withdrawn. The
+`O(logλ)` is what is proved, and it suffices.]** In N1, `Γ^{1−ω}=exp(O(λ^{−2}loglogλ))→1` since `1−ω~λ^{−2}`. **Theorem N3 [✅\*] (amplification, Boas).** `F` of type `τ`, `|F|≤M` on ℝ ⟹ `|F(x+iy)|≤Me^{τ|y|}`.
+*Proof:* `g=Fe^{iτz}` bounded on ℝ by `M`, Phragmén–Lindelöf in `H`. ∎ (Gives the factor
+`λ^{y≤½}`.) **Theorem (Reduction) [✅, modulo E1].** The zeros of `Ξ` lie in `|Im z|≤½`, and
 ``` sup_{|Im z|≤½} |ξ̂_λ − Ξ| ≤ C λ^{1/2} ε_loc(λ) + C λ³ e^{−πλ²}.
 ```
-Por tanto, **si `ε_loc(λ)=o(λ^{−½})`**, entonces `ξ̂_λ→Ξ` uniforme en `|Im z|≤½`, y por
-E1 (real-rooted) + Hurwitz (E3), `Ξ∈LP`, i.e. **RH**. *Prueba:* `ξ̂_λ−Ξ=(ξ̂_λ−Ξ_T)+(Ξ_T−Ξ)`;
-2º término `O(λ³e^{−πλ²})` (N0, `δ=½`); 1º entero tipo `logλ`, aplicar N1 con `R=T*~λ²`,
-peso `1−ω~λ^{−2}` despreciable (N2) ⟹ `≲ λ^{1/2}ε_loc`. ∎ ### 2.2 III — estabilidad relativa [⟂ condicional] El gap absoluto `ε_1−ε_0≈3ε_0≈10^{−20}` hace inútil Davis–Kahan ingenuo. La renormalización
-`Â_λ=A_λ/ε_0` lo arregla **bajo hipótesis**: **Teorema condicional III.** Si **(H-gap)** `inf_λ ε_1/ε_0=1+γ>0`, **(H-lim)** los `ξ̂_λ`
-renormalizados son de Cauchy en `L²`, y **(H-pos)** `ε_0>0`, entonces existe `ξ̂_∞` y
+Hence, **if `ε_loc(λ)=o(λ^{−½})`**, then `ξ̂_λ→Ξ` uniformly on `|Im z|≤½`, and by
+E1 (real-rooted) + Hurwitz (E3), `Ξ∈LP`, i.e. **RH**. *Proof:* `ξ̂_λ−Ξ=(ξ̂_λ−Ξ_T)+(Ξ_T−Ξ)`;
+2nd term `O(λ³e^{−πλ²})` (N0, `δ=½`); 1st, entire of type `logλ`, apply N1 with `R=T*~λ²`,
+weight `1−ω~λ^{−2}` negligible (N2) ⟹ `≲ λ^{1/2}ε_loc`. ∎ ### 2.2 III — relative stability [⟂ conditional] The absolute gap `ε_1−ε_0≈3ε_0≈10^{−20}` makes naive Davis–Kahan useless. The renormalization
+`Â_λ=A_λ/ε_0` fixes it **under hypotheses**: **Conditional Theorem III.** If **(H-gap)** `inf_λ ε_1/ε_0=1+γ>0`, **(H-lim)** the renormalized
+`ξ̂_λ` are Cauchy in `L²`, and **(H-pos)** `ε_0>0`, then `ξ̂_∞` exists and
 ``` ε_loc(λ) ≤ (C/γ)√(logλ)·η(λ) + Cλ³e^{−πλ²}, η(λ)=‖Â_λ−Â_∞‖_{low}→0,
 ```
-y, **si además `ξ̂_∞=Ξ`** (IV.2), `ε_loc→0`. *Prueba:* Davis–Kahan en `Â` (bottom aislado,
-gap `γ`) + Nikolskii + N0. ∎ **Auditoría de III:** (H-gap)=IV.1★ (sólo numérico `→4`); (H-lim)=Conj 2b (sólo numérico);
-**(H-pos) `ε_0>0` = Weil-positividad-hasta-T* ≈ RH-hasta-T*** (¡la renormalización lleva RH
-horneada!). III es **implicación correcta con hipótesis no probadas** — no es teorema
-incondicional. ### 2.3 N5b — el borde se disuelve [✅]
-`Ξ(t)~e^{−πt/4}` decae; en `T*~λ²`, `|Ξ(T*)|~e^{−π²λ²/2}`. El error absoluto cerca de una
-raíz `~|Ξ'|·|ρ̂−γ|` es super-pequeño en el borde. La "capa de borde" de la numérica era el
-error de **raíz** (relativo), no el sup-norma **absoluto** (Thm 2). El borde es benigno; lo
-no-trivial se absorbe en III/núcleo. ### 2.4 N5c — discriminante converso [✅\*, módulo inputs nombrados]
-**Prop N5c.** Si `f` tiene un cero off-line `z₀=x₀+iη₀` (`η₀≠0`), y vale convergencia en eje
-`ξ̂_{f,λ}(x₀)→Ξ_f(x₀)`, entonces (por real-rootedness de `ξ̂_{f,λ}`)
+and, **if moreover `ξ̂_∞=Ξ`** (IV.2), `ε_loc→0`. *Proof:* Davis–Kahan on `Â` (bottom isolated,
+gap `γ`) + Nikolskii + N0. ∎ **Audit of III:** (H-gap)=IV.1★ (numerical only, `→4`); (H-lim)=Conj 2b (numerical only);
+**(H-pos) `ε_0>0` = Weil-positivity-up-to-T* ≈ RH-up-to-T*** (the renormalization bakes RH
+right in!). III is a **correct implication with unproved hypotheses** — it is not an
+unconditional theorem. ### 2.3 N5b — the boundary dissolves [✅]
+`Ξ(t)~e^{−πt/4}` decays; at `T*~λ²`, `|Ξ(T*)|~e^{−π²λ²/2}`. The absolute error near a
+root `~|Ξ'|·|ρ̂−γ|` is super-small at the boundary. The "boundary layer" seen numerically was
+the **root** error (relative), not the absolute sup-norm (Thm 2). The boundary is benign; the
+nontrivial part is absorbed into III/the core. ### 2.4 N5c — converse discriminant [✅\*, modulo named inputs]
+**Prop N5c.** If `f` has an off-line zero `z₀=x₀+iη₀` (`η₀≠0`), and on-axis convergence holds
+`ξ̂_{f,λ}(x₀)→Ξ_f(x₀)`, then (by real-rootedness of `ξ̂_{f,λ}`)
 ``` sup_{|Im z|≤|η₀|}|ξ̂_{f,λ}−Ξ_f| ≥ |ξ̂_{f,λ}(z₀)| ≥ |ξ̂_{f,λ}(x₀)| → |Ξ_f(x₀)| > 0.
 ```
-*Prueba:* `Ξ_f(z₀)=0`; monotonía real-rooted `|g(x+iy)|≥|g(x)|`; `Ξ_f(x₀)≠0`. ∎
-**Inputs:** real-rootedness (CCM, auto-adjunta — vale para DH sin `Λ≥0`) + conv-eje
-(andamiaje E2.a/horizonte). RH-falso **NO converge** off-axis, incondicional módulo esos
-inputs. ### 2.5 IV.1 — el operador límite [⬚ abierto, análisis]
-`Â_∞` (límite de `A_λ/ε_0`) tiene **espectro relativo `ε_k/ε_0→(k+1)²=n²`** (medido robusto)
-y **paridad alternante `(−1)^k`** (firma de 2º orden). **Refutadas** todas las
-identificaciones de coeficiente constante: Dirichlet, Hermite, prolato, caja libre, matriz
-totalmente-no-negativa (Gantmacher–Krein). Lectura coherente: **Sturm–Liouville de 2º orden
-de coeficientes variables** (operador de borde del frame crítico). El operador COMPLETO es
-un núcleo de Loewner **compacto** (no diferencial); el 2º orden vive en la capa límite tras
-`/ε_0`. **Residual IV.1:** pinear los coeficientes vía el límite (Landau–Widom / de Branges)
-— **análisis, no RH-hard**. `γ=3` (=`2²/1²`) se sostiene fenomenológicamente en el 2º orden. ### 2.6 IV.2 ≡ §V — el núcleo RH-equivalente [🟥] **Caracterización variacional [el corazón].** Por la identidad de §1, `A_λ(g,g)=Σ_ρ
-g(γ_ρ)conj(g(conj γ_ρ))`. **Bajo RH** (`γ_ρ` reales) es suma de cuadrados `Σ_ρ|g(γ_ρ)|²≥0`,
-y su minimizador band-limited:
-``` minimiza Σ_ρ |g(γ_ρ)|² ⟹ g casi se anula en {γ_ρ ≤ T*}.
+*Proof:* `Ξ_f(z₀)=0`; real-rooted monotonicity `|g(x+iy)|≥|g(x)|`; `Ξ_f(x₀)≠0`. ∎
+**Inputs:** real-rootedness (CCM, self-adjoint — holds for DH without `Λ≥0`) + on-axis
+convergence (scaffolding E2.a/horizon). RH-false **does NOT converge** off-axis, unconditional
+modulo those inputs. ### 2.5 IV.1 — the limit operator [⬚ open, analysis]
+`Â_∞` (the limit of `A_λ/ε_0`) has **relative spectrum `ε_k/ε_0→(k+1)²=n²`** (robustly
+measured) and **alternating parity `(−1)^k`** (2nd-order signature). **Refuted** are all
+constant-coefficient identifications: Dirichlet, Hermite, prolate, free box, totally
+non-negative matrix (Gantmacher–Krein). Coherent reading: **2nd-order Sturm–Liouville with
+variable coefficients** (boundary operator of the critical frame). The FULL operator is a
+**compact** Loewner kernel (not differential); the 2nd order lives in the limit layer after
+`/ε_0`. **IV.1 residual:** pin down the coefficients via the limit (Landau–Widom / de
+Branges) — **analysis, not RH-hard**. `γ=3` (=`2²/1²`) holds phenomenologically at 2nd order. ### 2.6 IV.2 ≡ §V — the RH-equivalent core [🟥] **Variational characterization [the heart].** By the identity in §1, `A_λ(g,g)=Σ_ρ
+g(γ_ρ)conj(g(conj γ_ρ))`. **Under RH** (`γ_ρ` real) it is a sum of squares `Σ_ρ|g(γ_ρ)|²≥0`,
+and its band-limited minimizer:
+``` minimizes Σ_ρ |g(γ_ρ)|² ⟹ g nearly vanishes on {γ_ρ ≤ T*}.
 ```
-**[Tribunal C.1+C.2 — corrección sustantiva del paso siguiente].** El "Lema horizonte: #=dim"
-del documento estaba **mal contabilizado**; lo correcto es **sub-crítico**:
-`densidad ceros/Nyquist = 1−1/(2logλ) < 1`, con **defecto dimensional `m≈2λ²`**. Por tanto el
-frame de ceros `S_λ=Σ_{|γ_ρ|≤T*}K_{γ_ρ}⊗K_{γ_ρ}` tiene **núcleo de dim `≈2λ²`** y
-`λ_min(S_λ)=0` (trivial). `Ξ_T` es UN cuasi-elemento del núcleo (`Ξ_T(γ_ρ)=O(e^{−πλ²})`)
-entre `≈2λ²` candidatos: **`S_λ` solo NO selecciona `Ξ_T`**. La selección de `Ξ_T` la da la
-forma de Weil **completa** `QW` (arquimediano+polo) siendo PSD = RH-local; y `ε_0=λ_min(QW)`
-(signo=RH), **no** `λ_min(S_λ)=0`. ⟹ "`g₀=Ξ_T`" es **RH-hard**, no cerrable por Landau–Beurling.
-Es decir, **el ground state de Weil es `Ξ_T` ⟺ RH-local + unicidad del minimizador**. Y
-**sin RH** (`γ_ρ` complejos) la forma es **indefinida**, el minimizador se concentra en los
-ceros off-line, **`≠Ξ_T`**. Por contrapositiva:
-``` ┌──────────────────────────────────────────────────────────────┐ │ ground state de Weil = Ξ_T ⟺ todos los γ_ρ reales ⟺ RH │ └──────────────────────────────────────────────────────────────┘
+**[Tribunal C.1+C.2 — substantive correction of the next step].** The "horizon lemma:
+#=dim" in the document was **miscounted**; the correct count is **subcritical**:
+`zero/Nyquist density = 1−1/(2logλ) < 1`, with **dimensional deficit `m≈2λ²`**. Hence the
+zero frame `S_λ=Σ_{|γ_ρ|≤T*}K_{γ_ρ}⊗K_{γ_ρ}` has **kernel of dim `≈2λ²`** and
+`λ_min(S_λ)=0` (trivial). `Ξ_T` is ONE near-kernel element (`Ξ_T(γ_ρ)=O(e^{−πλ²})`)
+among `≈2λ²` candidates: **`S_λ` alone does NOT select `Ξ_T`**. The selection of `Ξ_T` is
+made by the **full** Weil form `QW` (archimedean+pole) being PSD = local-RH; and
+`ε_0=λ_min(QW)` (sign=RH), **not** `λ_min(S_λ)=0`. ⟹ "`g₀=Ξ_T`" is **RH-hard**, not closable
+by Landau–Beurling.
+That is, **the Weil ground state is `Ξ_T` ⟺ local-RH + uniqueness of the minimizer**. And
+**without RH** (`γ_ρ` complex) the form is **indefinite**, the minimizer concentrates on the
+off-line zeros, **`≠Ξ_T`**. By contraposition:
+``` ┌──────────────────────────────────────────────────────────────┐ │ Weil ground state = Ξ_T ⟺ all γ_ρ real ⟺ RH │ └──────────────────────────────────────────────────────────────┘
 ```
-**⟹ IV.2 (`ξ̂_∞=Ξ`) es RH-EQUIVALENTE.** No es conflación (`QW` ES la forma de Weil, mismo
-objeto — auditado), no es pieza blanda: **es el núcleo RH**. Lo probado de él: bajo RH el
-minimizador **es** `Ξ_T` (variacional, módulo rigor del déficit de frame, Landau–Beurling);
-y N5c da el lado RH-falso (no converge) incondicional. Lo que falta es el puente —
-`ξ̂_λ→Ξ` a tasa `o(λ^{−½})` — que **es** RH. --- ## 4. Eslabones 3 y 4 — clásicos **E3 (Hurwitz) [✅, módulo E1].** Si `ξ̂_λ→Ξ` uniforme en compactos de `|Im z|≤½` y cada
-`ξ̂_λ∈LP` (E1), entonces `Ξ` no tiene ceros con `0<|Im z|≤½` ⟹ `Ξ∈LP`. *Prueba:* un cero
-complejo de `Ξ` sería límite de ceros reales de `ξ̂_λ` — contradicción (Hurwitz). ∎ **E4 [✅, clásico].** `Ξ∈LP ⟺ RH` (de Branges). ∎ --- ## 5. Ensamble (condicional) **Teorema (prueba condicional de RH).** Asúmase: E1 (real-rootedness, cierto módulo prueba
-propia), III con (H-gap)+(H-lim)+(H-pos), e IV.2 (`ξ̂_∞=Ξ`). Entonces `ε_loc=o(λ^{−½})`
-(III), `ξ̂_λ→Ξ` (Reducción), `Ξ∈LP` (E1+E3), **RH** (E4). ∎ Pero IV.2 es **RH-equivalente** (§2.6) y (H-pos) **es** Weil-positividad. Luego el ensamble
-**reduce RH a un núcleo RH** — no lo prueba. El valor es la reducción limpia + el andamiaje
-probado. --- ## 6. Evaluación franca (la auditoría) **Probado genuino (resiste auditoría):**
-- E0 (def. + identidad `QW=`Weil); E4 (clásico); E3 (clásico, módulo E1).
-- **Andamiaje de aproximación N0, N1, N2, N3** — matemática sólida y reusable.
-- N5b (reducción válida); N5c (módulo inputs nombrados, monotonía correcta).
-- Normalización (cabo cerrado, Hurwitz-invariante). **Condicional / con prueba pendiente:**
-- **E1 🔧:** real-rootedness cierta pero **prueba registrada refutada por contraejemplo**; prueba propia (Hermite–Biehler desde auto-adjunto) **abierta**. Caja negra: CCM Thm 1.1(iii).
-- **III ⟂:** condicional a (H-gap)+(H-lim)+(H-pos), todas numéricas; (H-pos)=Weil-pos.
-- **H1′:** "QW PSD" **NO es incondicional** (= RH); PF da estructura, no positividad. **Núcleo y análisis abierto:**
-- **IV.2≡§V 🟥:** RH-equivalente (variacional). El único núcleo RH-hard.
-- **IV.1 ⬚:** identificación del operador de borde (2º-orden SL fenomenológico) — análisis, no RH-hard. **Conclusión.** La cadena CCM, auditada, es una **reducción elegante de RH a un único núcleo
-RH-equivalente** (`ξ̂_λ→Ξ`, equivalente a "el ground state de Weil es `Ξ_T`"), rodeada de un
-**andamiaje de aproximación genuinamente probado** (N0–N3) y con tres reparaciones francas
-pendientes (prueba propia de E1; rigor del déficit de frame `g₀→Ξ_T`; corrección de H1′). La
-positividad de Weil (=RH) aparece, tras auditoría, **distribuida** en H1′, en `/ε_0` (III) y
-en el núcleo IV.2. **No se prueba RH; se la localiza con precisión sin auto-engaño.** --- ### Apéndice — reparaciones pendientes (matemática real, no RH-hard salvo el núcleo)
-1. **E1 propio:** Hermite–Biehler de `ξ̂` desde la realización auto-adjunta (con carrier de borde). Cerraría real-rootedness sin citar CCM.
-2. **Déficit de frame:** rigorizar `g₀=Ξ_T+O(ε_0)`, `g₀→Ξ_T` (Landau–Beurling a densidad crítica). Cerraría el "exactamente `Ξ_T`" del núcleo (lado RH).
-3. **IV.1:** operador de borde 2º-orden + espectro `n²` (Landau–Widom). Cerraría `γ>0` y la identificación.
-4. **Núcleo IV.2≡§V (RH):** la tasa `o(λ^{−½})` protegida por positividad — **RH**.
+**⟹ IV.2 (`ξ̂_∞=Ξ`) is RH-EQUIVALENT.** It is not conflation (`QW` IS the Weil form, the
+same object — audited), it is not a soft piece: **it is the RH core**. What is proved of it:
+under RH the minimizer **is** `Ξ_T` (variational, modulo rigor of the frame deficit,
+Landau–Beurling); and N5c gives the RH-false side (does not converge) unconditionally. What
+is missing is the bridge — `ξ̂_λ→Ξ` at rate `o(λ^{−½})` — which **is** RH. --- ## 4. Links 3 and 4 — classical results **E3 (Hurwitz) [✅, modulo E1].** If `ξ̂_λ→Ξ` uniformly on compacts of `|Im z|≤½` and each
+`ξ̂_λ∈LP` (E1), then `Ξ` has no zeros with `0<|Im z|≤½` ⟹ `Ξ∈LP`. *Proof:* a complex
+zero of `Ξ` would be the limit of real zeros of `ξ̂_λ` — contradiction (Hurwitz). ∎ **E4 [✅, classical].** `Ξ∈LP ⟺ RH` (de Branges). ∎ --- ## 5. Assembly (conditional) **Theorem (conditional proof of RH).** Assume: E1 (real-rootedness, true modulo its own
+proof), III with (H-gap)+(H-lim)+(H-pos), and IV.2 (`ξ̂_∞=Ξ`). Then `ε_loc=o(λ^{−½})`
+(III), `ξ̂_λ→Ξ` (Reduction), `Ξ∈LP` (E1+E3), **RH** (E4). ∎ But IV.2 is **RH-equivalent** (§2.6) and (H-pos) **is** Weil-positivity. So the assembly
+**reduces RH to an RH core** — it does not prove it. The value is the clean reduction + the
+proved scaffolding. --- ## 6. Frank evaluation (the audit) **Genuinely proved (survives audit):**
+- E0 (def. + identity `QW=`Weil); E4 (classical); E3 (classical, modulo E1).
+- **Approximation scaffolding N0, N1, N2, N3** — solid and reusable mathematics.
+- N5b (valid reduction); N5c (modulo named inputs, correct monotonicity).
+- Normalization (loose end closed, Hurwitz-invariant). **Conditional / with pending proof:**
+- **E1 🔧:** real-rootedness true but the **registered proof refuted by counterexample**; its own proof (Hermite–Biehler from self-adjointness) **open**. Black box: CCM Thm 1.1(iii).
+- **III ⟂:** conditional on (H-gap)+(H-lim)+(H-pos), all numerical; (H-pos)=Weil-positivity.
+- **H1′:** "QW is PSD" is **NOT unconditional** (= RH); PF gives structure, not positivity. **Core and open analysis:**
+- **IV.2≡§V 🟥:** RH-equivalent (variational). The only RH-hard core.
+- **IV.1 ⬚:** identification of the boundary operator (phenomenological 2nd-order SL) — analysis, not RH-hard. **Conclusion.** The CCM chain, audited, is an **elegant reduction of RH to a single
+RH-equivalent core** (`ξ̂_λ→Ξ`, equivalent to "the Weil ground state is `Ξ_T`"), surrounded by
+a **genuinely proved approximation scaffolding** (N0–N3) and with three frank repairs still
+pending (own proof of E1; rigor of the frame deficit `g₀→Ξ_T`; correction of H1′). Weil
+positivity (=RH) appears, after audit, **distributed** across H1′, `/ε_0` (III), and
+the IV.2 core. **RH is not proved; it is localized with precision, without self-deception.** --- ### Appendix — pending repairs (real mathematics, not RH-hard except the core)
+1. **Own E1:** Hermite–Biehler for `ξ̂` from the self-adjoint realization (with boundary carrier). Would close real-rootedness without citing CCM.
+2. **Frame deficit:** rigorize `g₀=Ξ_T+O(ε_0)`, `g₀→Ξ_T` (Landau–Beurling at critical density). Would close the "exactly `Ξ_T`" part of the core (RH side).
+3. **IV.1:** 2nd-order boundary operator + spectrum `n²` (Landau–Widom). Would close `γ>0` and the identification.
+4. **Core IV.2≡§V (RH):** the rate `o(λ^{−½})` protected by positivity — **RH**.

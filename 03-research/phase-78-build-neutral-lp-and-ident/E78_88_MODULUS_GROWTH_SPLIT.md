@@ -1,6 +1,6 @@
 # E78.88 - The modulus quotient has an exact growth/sector split, but the sector factor is an old detector
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

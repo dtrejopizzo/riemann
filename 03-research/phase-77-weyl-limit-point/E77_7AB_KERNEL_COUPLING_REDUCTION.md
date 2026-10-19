@@ -1,6 +1,6 @@
 # E77.7ab - Kernel coupling reduction of the Schur anchor
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

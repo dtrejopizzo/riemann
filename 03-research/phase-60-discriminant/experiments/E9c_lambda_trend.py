@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 # ======================================================================================
-# Phase 60 — E9c: el DISCRIMINANTE decisivo, libre de normalizacion. Tendencia en lambda.
+# Phase 60 — E9c: the decisive DISCRIMINANT, free of normalization. Trend in lambda.
 #
-# E9/E9b (lambda=6): ξ̂_DH pone una raiz real en 85.731 (proyeccion real del cero off-line
-# 85.699), convergente en N. ¿Escenario A o B? Lo decide la TENDENCIA EN LAMBDA del hueco
-#   gap(lambda) = |raiz_real_mas_cercana(ξ̂_DH) - 85.699|.
+# E9/E9b (lambda=6): ξ̂_DH places a real root at 85.731 (real projection of the off-line
+# zero 85.699), convergent in N. Scenario A or B? Decided by the TREND IN LAMBDA of the gap
+#   gap(lambda) = |closest_real_root(ξ̂_DH) - 85.699|.
 #
-#   Escenario B (ciega): gap(lambda) -> 0  (ξ̂ converge su raiz a la proyeccion real, como
-#       si el cero fuera on-line). El "puente convergencia=>RH" es ilusion.
-#   Escenario A (ve posicion): gap(lambda) NO -> 0 / crece (Hurwitz: real-rooted no puede
-#       converger a un cero complejo). -> Teorema 2 con dientes.
+#   Scenario B (blind): gap(lambda) -> 0  (ξ̂ converges its root to the real projection, as
+#       if the zero were on-line). The "convergence=>RH bridge" is an illusion.
+#   Scenario A (sees position): gap(lambda) does NOT -> 0 / it grows (Hurwitz: real-rooted
+#       cannot converge to a complex zero). -> Theorem 2 with teeth.
 #
-# Control: misma medida para un cero ON-line de L_DH a altura interior (debe -> 0 en ambos).
-# Y off-axis residual |f_DH(85.699-0.3085i)| normalizado por |f_DH| tipico a esa profundidad.
+# Control: same measure for an ON-line zero of L_DH at interior height (must -> 0 in both).
+# And off-axis residual |f_DH(85.699-0.3085i)| normalized by the typical |f_DH| at that depth.
 # ======================================================================================
 import numpy as np, importlib.util
 spec=importlib.util.spec_from_file_location("e5","/Users/dt/riemann/riemann-program/phase-60-discriminante/experiments/E5_ldh_violator.py")
@@ -43,7 +43,7 @@ def real_roots(xi,d,lo,hi):
 def fc(xi,d,s): return np.sum(xi/(s-d))
 
 print("="*82)
-print(" E9c: tendencia en lambda del hueco al cero off-line de L_DH (t=85.699)")
+print(" E9c: trend in lambda of the gap to the off-line zero of L_DH (t=85.699)")
 print("="*82)
 print(f"{'lambda':>7} {'T*':>7} {'x=85.7/T*':>10} {'N':>4} | {'raiz~85.7':>11} {'gap':>9} | {'|f(rho0)|':>11} {'|f|tipico':>10} {'ratio':>8}",flush=True)
 
@@ -53,14 +53,14 @@ for lam in [3.5,4.0,4.5,5.0,6.0,7.0,8.0]:
     xi,d=build_xi(lam,N)
     rr=real_roots(xi,d,78,94)
     if len(rr)==0:
-        print(f"{lam:7.1f} {Tstar:7.1f} {OFF_IM/Tstar:10.3f} {N:4d} |  (sin raices)",flush=True); continue
+        print(f"{lam:7.1f} {Tstar:7.1f} {OFF_IM/Tstar:10.3f} {N:4d} |  (no roots)",flush=True); continue
     near=rr[np.argmin(np.abs(rr-OFF_IM))]; gap=abs(near-OFF_IM)
     foff=abs(fc(xi,d,rho0))
-    # |f| tipico a profundidad OFF_DEPTH: mediana sobre t en [70,100] lejos de 85.7
+    # typical |f| at depth OFF_DEPTH: median over t in [70,100] away from 85.7
     ts=np.arange(70,100,0.7)
     typ=np.median([abs(fc(xi,d,t-1j*OFF_DEPTH)) for t in ts if abs(t-OFF_IM)>2])
     print(f"{lam:7.1f} {Tstar:7.1f} {OFF_IM/Tstar:10.3f} {N:4d} | {near:11.5f} {gap:9.5f} | {foff:11.4e} {typ:10.3e} {foff/typ:8.3f}",flush=True)
 
-print("\n LECTURA:")
-print("  gap(lambda) -> 0  => Escenario B (ξ̂ converge su raiz a la proyeccion real = ciega).")
-print("  gap(lambda) plano/crece, o ratio |f(rho0)|/tipico -> 0 (residuo anomalo) => Escenario A.")
+print("\n READING:")
+print("  gap(lambda) -> 0  => Scenario B (ξ̂ converges its root to the real projection = blind).")
+print("  gap(lambda) flat/growing, or ratio |f(rho0)|/typical -> 0 (anomalous residual) => Scenario A.")

@@ -1,7 +1,6 @@
 # E72.15 -- Resonance barrier for the Abel-Chebyshev estimate
 
-**Date:** 2026-07-08.
-**Role:** test whether the Abel-Chebyshev discrepancy estimate from E72.14 is genuinely weaker than
+**Purpose:** test whether the Abel-Chebyshev discrepancy estimate from E72.14 is genuinely weaker than
 the Hardy-Euler/Abel boundary obstruction of Phase 70.
 
 ## 0. The target from E72.14

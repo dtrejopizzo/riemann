@@ -1,6 +1,6 @@
 # P123.120 — Smooth source corner with the original completed composition
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY on the single-zero,
+Status: PROVED-IN-REPOSITORY on the single-zero,
 two-prime boundary. This compares the smooth boundary algebra of
 P123.118 with an explicit subalgebra of the original source. It does
 not extend this boundary equivalence over the other arithmetic strata.

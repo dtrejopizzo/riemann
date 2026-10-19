@@ -1,8 +1,8 @@
-# 104_35 — Canal primos simples--polo y gate Selberg colectivo
+# 104_35 — Simple-prime–pole channel and the collective Selberg gate
 
-**Estado.** La reducción de `104_32` admite una representación exacta en
-términos de \(\theta(x)-x\), con el borde \(-n\) conservado. Esto localiza
-la obligación cuártica exclusivamente en los primos simples:
+**Status.** The reduction of `104_32` admits an exact representation in
+terms of \(\theta(x)-x\), with the boundary term \(-n\) kept. This
+localizes the quartic obligation exclusively to the simple primes:
 
 \[
  B_n^{(p+\mathrm{pole})}
@@ -10,58 +10,59 @@ la obligación cuártica exclusivamente en los primos simples:
              L_{n-1}^{(2)}(u)\,du.                         \tag{1}
 \]
 
-Se atacó (1) con la identidad de Selberg construida **solo** con la medida
-de primos simples. Su medida no centrada es positiva y está soportada en
-primos y semiprimos. Invirtiendo el operador lineal de Selberg antes de
-tomar signos se obtiene una identidad colectiva lineal--cuadrática exacta.
-El núcleo de Hankel de esa identidad no es coercivo: para todo índice par
-es positivo en el origen y negativo en la cola. Además, aun fijando el
-soporte en los primos verdaderos, positividad, PNT y la escala de simetría
-de Selberg sobreviven al aumento de un solo peso primo, mientras (1) puede
-hacerse arbitrariamente negativa para infinitos índices del rango objetivo.
+Equation (1) was attacked with the Selberg identity built **only** from
+the simple-prime measure. Its non-centered measure is positive and
+supported on primes and semiprimes. Inverting the linear Selberg operator
+before taking signs gives an exact linear–quadratic collective identity.
+The Hankel kernel of that identity is not coercive: for every even index
+it is positive at the origin and negative in the tail. Moreover, even
+keeping the support on the real primes, positivity, PNT, and the Selberg
+symmetry scale survive raising a single prime weight, while (1) can be
+made arbitrarily negative for infinitely many indices in the target range.
 
-Por tanto, retirar las potencias primas superiores no repara la ruta
-Selberg/Vaughan. Una desigualdad proporcional todavía tendría que usar los
-valores exactos \(\log p\) de todos los pesos, de manera firmada y global.
-No se prueba (26) de `104_32`, A1 ni RH.
+Hence, removing the higher prime powers does not repair the
+Selberg/Vaughan route. A proportional inequality would still have to use
+the exact values \(\log p\) of every weight, in a signed and global way.
+Neither (26) of `104_32`, nor A1, nor RH is proved.
 
-## 1. Auditoría de no duplicación y falsificador
+## 1. Non-duplication audit and falsifier
 
-`103_17` estudia la positividad local de
-\(\Lambda\log+\Lambda*\Lambda\); `103_63` invierte el operador de Selberg
-para la medida completa de potencias primas; `103_70` audita Vaughan y la
-geometría de fase de sus bloques; `104_13` da la recurrencia Riccati de la
-misma medida completa; `104_32` separa finalmente las potencias
+`103_17` studies local positivity of
+\(\Lambda\log+\Lambda*\Lambda\); `103_63` inverts the Selberg operator for
+the complete prime-power measure; `103_70` audits Vaughan and the phase
+geometry of its blocks; `104_13` gives the Riccati recurrence for the same
+complete measure; `104_32` finally separates the powers
 \(p^k,\ k\ge2\).
 
-Lo nuevo aquí es:
+What is new here is:
 
-1. la fórmula exacta (1) para el canal residual de **primos simples--polo**,
-   incluidos sus dos bordes;
-2. la identidad colectiva de Selberg formada únicamente por primos y
-   semiprimos;
-3. el signo explícito del núcleo inverso en el origen y en la cola;
-4. un testigo que mantiene el soporte en los primos verdaderos y conserva
-   las escalas PNT/Selberg, pero cambia sin cota el funcional buscado.
+1. the exact formula (1) for the residual **simple-prime–pole** channel,
+   including both boundary terms;
+2. the collective Selberg identity formed only from primes and
+   semiprimes;
+3. the explicit sign of the inverse kernel at the origin and in the tail;
+4. a witness that keeps the support on the real primes and preserves the
+   PNT/Selberg scales, yet changes the sought functional without bound.
 
-El cuarteto fuera de línea no posee el producto de Euler de primos simples
-con pesos \(\log p\). Por eso una futura desigualdad que use realmente esos
-pesos no se aplicaría automáticamente al falsificador. En cambio, todo el
-paquete más débil probado abajo ---soporte primo, positividad de Selberg y
-sus escalas sumatorias--- también vale para el testigo de la Sección 6 y no
-determina el signo. Así se evita un falso positivo: no se atribuye a esos
-axiomas la información que solo podría estar en los pesos exactos.
+The off-line quartet does not have the Euler product of simple primes with
+weights \(\log p\). Hence a future inequality that actually uses those
+weights would not automatically apply to the falsifier. By contrast, the
+entire weaker package proved below — prime support, Selberg positivity,
+and its summatory scales — also holds for the witness of Section 6 and
+does not determine the sign. This avoids a false positive: the
+information that could only lie in the exact weights is not attributed to
+those axioms.
 
-## 2. Correlación exacta con \(\theta-x\)
+## 2. Exact correlation with \(\theta-x\)
 
-Sea
+Let
 
 \[
  \theta(x)=\sum_{p\le x}\log p,
  \qquad N=n-1,
 \]
 
-y, para \(a>1\), defínase
+and, for \(a>1\), define
 
 \[
  w_{n,a}(u)=a e^{-au}L_N^{(1)}(au),                         \tag{2}
@@ -73,7 +74,7 @@ y, para \(a>1\), defínase
  \qquad d\mu=d\alpha-d\beta.                              \tag{3}
 \]
 
-La transformada de Laguerre del continuo se calcula sin aproximaciones:
+The continuous Laguerre transform is computed with no approximations:
 
 \[
 \begin{aligned}
@@ -84,16 +85,16 @@ La transformada de Laguerre del continuo se calcula sin aproximaciones:
 \end{aligned}
 \]
 
-La igualdad central usa la generatriz de Laguerre; equivalentemente, tras
-\(v=au\), es la transformada de Laplace elemental de
-\(L_N^{(1)}\). Por otra parte,
+The central equality uses the Laguerre generating function; equivalently,
+after \(v=au\), it is the elementary Laplace transform of
+\(L_N^{(1)}\). On the other hand,
 
 \[
  \langle w_{n,a},\alpha\rangle
  =a\sum_p{\log p\over p^a}L_N^{(1)}(a\log p).                \tag{5}
 \]
 
-Por (22) de `104_32`, (4)--(5) prueban
+By (22) of `104_32`, (4)–(5) prove
 
 \[
  B_{n,a}^{(p+\mathrm{pole})}
@@ -103,33 +104,33 @@ Por (22) de `104_32`, (4)--(5) prueban
                                                                     \tag{6}
 \]
 
-Para exhibir el borde, póngase
-\(E_\theta(u)=\theta(e^u)-e^u\). La primitiva de \(\mu\) desde cero es
+To display the boundary term, set
+\(E_\theta(u)=\theta(e^u)-e^u\). The primitive of \(\mu\) from zero is
 
 \[
  \mu([0,u])=E_\theta(u)+1.                                  \tag{7}
 \]
 
-La integración de Stieltjes de (6), primero con \(a>1\), no tiene borde
-en cero porque (7) se anula allí. Además,
+Stieltjes integration of (6), first with \(a>1\), has no boundary term at
+zero because (7) vanishes there. Moreover,
 
 \[
  {d\over du}\{e^{-u}L_N^{(1)}(u)\}
  =-e^{-u}L_N^{(2)}(u).                                       \tag{8}
 \]
 
-La cota PNT efectiva usada en `104_01` justifica el límite dominado después
-de la cancelación en (7). Como
+The effective PNT bound used in `104_01` justifies dominated convergence
+after the cancellation in (7). Since
 
 \[
  \int_0^\infty e^{-u}L_N^{(2)}(u)\,du=N+1=n,                 \tag{9}
 \]
 
-(6)--(9) dan exactamente (1). En particular, el borde es \(-n\), no
+(6)–(9) give exactly (1). In particular, the boundary term is \(-n\), not
 \(-1\).
 
-Debajo del primer primo, \(E_\theta(u)=-e^u\). Usando
-\((L_n^{(1)})'=-L_{n-1}^{(2)}\), (1) tiene también la forma
+Below the first prime, \(E_\theta(u)=-e^u\). Using
+\((L_n^{(1)})'=-L_{n-1}^{(2)}\), (1) also has the form
 
 \[
  \boxed{
@@ -139,19 +140,19 @@ Debajo del primer primo, \(E_\theta(u)=-e^u\). Usando
                        L_{n-1}^{(2)}(u)\,du.}                 \tag{10}
 \]
 
-No se ha separado una cantidad divergente en (1) o (10).
+No divergent quantity has been separated in (1) or (10).
 
-## 3. La obligación proporcional en coordenada \(\theta\)
+## 3. The proportional obligation in the \(\theta\) coordinate
 
-Sea \(R_N=P_N^{(\ge2)}(1)\), la corrección absolutamente convergente de
-`104_32`. Su ecuación (26) es
+Let \(R_N=P_N^{(\ge2)}(1)\), the absolutely convergent correction of
+`104_32`. Its equation (26) is
 
 \[
  3A_n+4B_n^{(p+\mathrm{pole})}
  \ge {A_n\over1001}+4R_N.                                   \tag{11}
 \]
 
-Al insertar (10), (11) equivale a una sola correlación de primos simples:
+Inserting (10), (11) is equivalent to a single simple-prime correlation:
 
 \[
 \boxed{
@@ -161,20 +162,20 @@ Al insertar (10), (11) equivale a una sola correlación de primos simples:
  +1-L_n^{(1)}(\log2)-R_N.}                                  \tag{12}
 \]
 
-El término \(R_N\) satisface \(|R_N|<14n+1\), pero no se omite ni se
-absorbe para \(150\le n<e^{112116}\). Probar (12) uniformemente es
-exactamente el frente proporcional; (10) no lo abarata por sí sola.
+The term \(R_N\) satisfies \(|R_N|<14n+1\), but it is neither omitted nor
+absorbed for \(150\le n<e^{112116}\). Proving (12) uniformly is exactly
+the proportional front; (10) does not by itself cheapen it.
 
-## 4. Selberg formado solo por primos y semiprimos
+## 4. Selberg formed only from primes and semiprimes
 
-Para \(\Re s>1\), sea
+For \(\Re s>1\), let
 
 \[
  Q(s)=\int e^{-su}\,d\alpha(u)=\sum_p{\log p\over p^s}.
                                                                     \tag{13}
 \]
 
-La identidad prima--Selberg es
+The prime–Selberg identity is
 
 \[
  -Q'(s)+Q(s)^2=\int e^{-su}\,d\mathcal A_p(u),                \tag{14}
@@ -184,37 +185,37 @@ La identidad prima--Selberg es
  d\mathcal A_p=u\,d\alpha+\alpha*\alpha\ge0.                \tag{15}
 \]
 
-La medida de (15) está soportada únicamente en primos y semiprimos. Sus
-pesos son
+The measure of (15) is supported only on primes and semiprimes. Its
+weights are
 
 \[
  \begin{array}{c|c}
- \text{punto}&\text{peso}\ \\ \hline
+ \text{point}&\text{weight}\ \\ \hline
  \log p&(\log p)^2,\\
  2\log p&(\log p)^2,\\
  \log p+\log q&2\log p\log q\quad(p\ne q).
  \end{array}                                                   \tag{16}
 \]
 
-Como \((\beta*\beta)(du)=u e^u du=u\,d\beta\), la referencia continua
-de (15) es \(2u\,d\beta\). Definiendo
+Since \((\beta*\beta)(du)=u e^u du=u\,d\beta\), the continuous reference
+of (15) is \(2u\,d\beta\). Defining
 
 \[
  d\mathcal B_p=d\mathcal A_p-2u\,d\beta,                     \tag{17}
 \]
 
-la sustitución \(\alpha=\beta+\mu\) produce, sin estimar ninguna pieza,
+the substitution \(\alpha=\beta+\mu\) produces, with no piece estimated,
 
 \[
  \boxed{d\mathcal B_p=u\,d\mu+2\beta*\mu+\mu*\mu.}         \tag{18}
 \]
 
-Esta es la identidad de Selberg centrada después de retirar todas las
-potencias primas superiores.
+This is the Selberg identity centered after removing all higher prime
+powers.
 
-## 5. Inversión colectiva y pérdida exacta de coercividad
+## 5. Collective inversion and exact loss of coercivity
 
-Para una función \(g\) de decaimiento suficiente, (18) da
+For a function \(g\) with sufficient decay, (18) gives
 
 \[
  \langle g,\mathcal B_p\rangle
@@ -228,13 +229,13 @@ Para una función \(g\) de decaimiento suficiente, (18) da
  \mathcal Q_g(\mu)=\iint g(u+v)\,d\mu(u)d\mu(v).             \tag{20}
 \]
 
-En vez de separar los tres sumandos de (18), resolvemos
+Instead of separating the three summands of (18), we solve
 
 \[
  \mathcal Tg=w_{n,a}.                                         \tag{21}
 \]
 
-La solución que decae en infinito es explícita:
+The solution decaying at infinity is explicit:
 
 \[
 \boxed{
@@ -243,18 +244,18 @@ La solución que decae en infinito es explícita:
  {e^t w_{n,a}(t)\over t^3}\,dt\right].}                     \tag{22}
 \]
 
-La singularidad aparente en cero es removible. La prueba consiste en
-diferenciar
+The apparent singularity at zero is removable. The proof consists of
+differentiating
 
 \[
  H(v)=v^2e^{-v}\int_v^\infty{e^tw_{n,a}(t)\over t^3}\,dt
 \]
 
-y comprobar que \(H'=(2/v-1)H-w/v\). Entonces
-\(g=-H'-H\), y una integración desde infinito recupera (20)--(21).
-Todas las integrales son absolutamente convergentes para \(a>1\).
+and checking that \(H'=(2/v-1)H-w/v\). Then
+\(g=-H'-H\), and integrating from infinity recovers (20)–(21).
+All the integrals converge absolutely for \(a>1\).
 
-Al insertar (21) en (19), el canal regulado queda acoplado exactamente:
+Inserting (21) into (19), the regulated channel is exactly coupled:
 
 \[
  \boxed{
@@ -263,17 +264,17 @@ Al insertar (21) en (19), el canal regulado queda acoplado exactamente:
    +\mathcal Q_{g_{n,a}}(\mu).}                               \tag{23}
 \]
 
-La identidad (23) es el ataque sin valores absolutos solicitado. No
-produce una cota inferior porque su forma cuadrática no es positiva. En
-efecto, de \(L_N^{(1)}(0)=n\) y
-\(L_N^{(2)}(0)=n(n+1)/2\) se obtiene
+Identity (23) is the absolute-value-free attack sought. It produces no
+lower bound because its quadratic form is not positive. Indeed, from
+\(L_N^{(1)}(0)=n\) and
+\(L_N^{(2)}(0)=n(n+1)/2\) one obtains
 
 \[
  \boxed{
  g_{n,a}(0)=an\left({a(n+1)\over2}-1\right)>0.}               \tag{24}
 \]
 
-Para \(N=n-1\ge1\), el término principal en infinito es
+For \(N=n-1\ge1\), the leading term at infinity is
 
 \[
  \boxed{
@@ -282,86 +283,86 @@ Para \(N=n-1\ge1\), el término principal en infinito es
    \{1+O_{n,a}(v^{-1})\}.}                                   \tag{25}
 \]
 
-Por tanto, para cada \(n\) par existe \(R_{n,a}\) tal que
+Hence, for each even \(n\) there exists \(R_{n,a}\) such that
 
 \[
  g_{n,a}(2R)<0\qquad(R\ge R_{n,a}).                           \tag{26}
 \]
 
-Tomando \(\sigma=c\delta_R\), \(c>0\),
+Taking \(\sigma=c\delta_R\), \(c>0\),
 
 \[
  \mathcal Q_{g_{n,a}}(\sigma)=c^2g_{n,a}(2R)<0.               \tag{27}
 \]
 
-Así, ni siquiera en el canal exclusivamente primo la convolución de
-Selberg es una energía coerciva. La pérdida ocurre después de mantener
-acoplados el término lineal y el cuadrático; no es consecuencia de haber
-tomado valores absolutos.
+So, even in the exclusively prime channel, the Selberg convolution is not
+a coercive energy. The loss occurs after keeping the linear and quadratic
+terms coupled; it is not a consequence of having taken absolute values.
 
-## 6. Testigo sobre el soporte primo real
+## 6. Witness on the real prime support
 
-La falta de signo tampoco puede repararse usando solo que los átomos están
-en primos. Fíjese un primo real \(p_0\), \(R=\log p_0\), y aumente solo su
-peso:
+The loss of sign cannot be repaired either by using only the fact that
+the atoms are on primes. Fix a real prime \(p_0\), \(R=\log p_0\), and
+raise only its weight:
 
 \[
  d\alpha_c=d\alpha+c\delta_R,
  \qquad c>0.                                                   \tag{28}
 \]
 
-La medida sigue siendo positiva y su soporte sigue siendo exactamente un
-subconjunto de los primos verdaderos. Su función de Chebyshev cambia por
-el escalón acotado \(c\mathbf1_{u\ge R}\); por tanto conserva el mismo
-orden y toda relación asintótica eventual de tipo PNT. No se afirma que
-conserve las mismas constantes efectivas ni el mismo rango inicial de una
-desigualdad PNT fijada.
+The measure remains positive, and its support remains exactly a subset of
+the real primes. Its Chebyshev function changes by the bounded step
+\(c\mathbf1_{u\ge R}\); hence it preserves the same order and every
+eventual PNT-type asymptotic relation. It is not claimed to preserve the
+same effective constants nor the same initial range of a fixed PNT
+inequality.
 
-La medida Selberg no centrada permanece positiva y su variación es
+The non-centered Selberg measure remains positive, and its variation is
 
 \[
  d\mathcal A_{p,c}-d\mathcal A_p
  =cR\delta_R+2c\,\alpha*\delta_R+c^2\delta_{2R}.               \tag{29}
 \]
 
-Usando la cota elemental
-\(\theta(x)\le2(\log2)x\), su masa acumulada hasta \(U\) es a lo sumo
+Using the elementary bound
+\(\theta(x)\le2(\log2)x\), its accumulated mass up to \(U\) is at most
 
 \[
  cR+4c(\log2)e^{U-R}+c^2=O_{c,R}(e^U).                         \tag{30}
 \]
 
-Por ello también conserva la escala \(O(x)\) de la simetría centrada de
-Selberg.
+Hence it also preserves the \(O(x)\) scale of the centered Selberg
+symmetry.
 
-Sin embargo, (6) cambia exactamente en
+However, (6) changes exactly by
 
 \[
  B_{n,a}[\alpha_c]-B_{n,a}[\alpha]=-c\,w_{n,a}(R).             \tag{31}
 \]
 
-Como la perturbación es un solo átomo, el límite crítico es ordinario y
+Since the perturbation is a single atom, the critical limit is ordinary
+and
 
 \[
  B_n[\alpha_c]-B_n[\alpha]
  =-{c\over p_0}L_{n-1}^{(1)}(\log p_0).                        \tag{32}
 \]
 
-Si \(n\) es impar, entonces \(N=n-1\) es par y (2) es positiva para todo
-\(R\) suficientemente grande. Hay primos arbitrariamente grandes, de modo
-que para cada índice impar ---en particular para infinitos
-\(n\ge150\)--- se puede elegir un primo real en la cola y hacer (32)
-arbitrariamente negativa aumentando \(c\).
+If \(n\) is odd, then \(N=n-1\) is even and (2) is positive for every
+sufficiently large \(R\). There are arbitrarily large primes, so for each
+odd index — in particular for infinitely many
+\(n\ge150\) — a real prime can be chosen in the tail and (32) made
+arbitrarily negative by increasing \(c\).
 
-Este testigo no conserva el valor canónico \(\log p_0\); ése es
-precisamente su contenido lógico. Prueba que **soporte en primos +
-positividad + PNT + escala Selberg** no implican una cota proporcional.
-Un teorema que cierre (12) debe distinguir los pesos exactos \(\log p\)
-de (28).
+This witness does not preserve the canonical value \(\log p_0\); that is
+precisely its logical content. It proves that **prime support +
+positivity + PNT + Selberg scale** do not imply a proportional bound. A
+theorem closing (12) must distinguish the exact weights \(\log p\) from
+(28).
 
-## 7. Por qué Vaughan no gana una dirección nueva
+## 7. Why Vaughan gains no new direction
 
-Para cualquier peso \(W\), la separación tautológica es
+For any weight \(W\), the tautological split is
 
 \[
  \sum_p\log p\,W(p)
@@ -369,39 +370,40 @@ Para cualquier peso \(W\), la separación tautológica es
   -\sum_p\sum_{k\ge2}\log p\,W(p^k).                          \tag{33}
 \]
 
-En el peso Laguerre de este frente, el segundo término es exactamente
-\(R_N\), ya retirado y acotado por `104_32`. Aplicar Vaughan al primer
-término devuelve los bloques de `103_70`: en coordenadas logarítmicas su
-fase depende solo de la suma de las variables y su Hessiana tiene rango
-uno. La sustracción de \(R_N=O(n)\) no crea curvatura en las direcciones
-planas ni una estimación firmada entre shells. Por tanto, el canal simple
-no desbloquea el Type I/II estándar; el input que faltaría sigue siendo una
-cota conjunta sobre los pesos exactos.
+In the Laguerre weight of this front, the second term is exactly
+\(R_N\), already removed and bounded by `104_32`. Applying Vaughan to the
+first term returns the blocks of `103_70`: in logarithmic coordinates its
+phase depends only on the sum of the variables, and its Hessian has rank
+one. Subtracting \(R_N=O(n)\) creates no curvature in the flat directions
+nor a signed estimate between shells. Hence the simple channel does not
+unlock standard Type I/II; the missing input remains a joint bound on the
+exact weights.
 
-## 8. Decisión
+## 8. Decision
 
 ```text
-probado incondicionalmente:
-  fórmula θ--Laguerre exacta (1) y borde -n;
-  forma exterior exacta (10) y obligación proporcional (12);
-  Selberg positivo solo-primos/semiprimos (14)--(18);
-  identidad colectiva sin valores absolutos (23);
-  signo g(0)>0 y signo negativo de cola para todo n par;
-  testigo sobre soporte primo que conserva PNT y escala Selberg.
+proved unconditionally:
+  exact theta-Laguerre formula (1) and boundary term -n;
+  exact exterior form (10) and proportional obligation (12);
+  positive simple-prime/semiprime-only Selberg (14)--(18);
+  absolute-value-free collective identity (23);
+  sign g(0)>0 and negative tail sign for every even n;
+  witness on prime support preserving PNT and Selberg scale.
 
-descartado:
-  positividad de la medida Selberg simple como coercividad de (23);
-  soporte primo + escala PNT/Selberg como sustituto de los pesos log p;
-  Vaughan estándar como nueva dirección oscilatoria tras retirar p^k.
+ruled out:
+  positivity of the simple Selberg measure as coercivity of (23);
+  prime support + PNT/Selberg scale as a substitute for the log p weights;
+  standard Vaughan as a new oscillatory direction after removing p^k.
 
-permanece abierto:
-  una desigualdad firmada y global que use los pesos exactos log p y
-  pruebe (12), equivalentemente (26) de 104_32.
+remains open:
+  a signed, global inequality using the exact weights log p that proves
+  (12), equivalently (26) of 104_32.
 
-no probado:
-  la cota proporcional, A1 o RH.
+not proved:
+  the proportional bound, A1, or RH.
 ```
 
-`tools/simple_prime_pole_selberg_check.py` comprueba con `Fraction` las
-identidades polinómicas de borde de (8)--(9) y la expansión algebraica de
-la medida centrada en (18).
+`tools/simple_prime_pole_selberg_check.py` checks with `Fraction` the
+boundary polynomial identities of (8)–(9) and the algebraic expansion of
+the centered measure in (18).
+</content>

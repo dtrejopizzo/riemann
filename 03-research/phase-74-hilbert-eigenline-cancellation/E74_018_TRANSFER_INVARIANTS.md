@@ -1,6 +1,5 @@
 # E74.18 - Schur-transfer invariants and compression criterion
 
-Date: 2026-07-16.
 
 ## Exact reduction
 

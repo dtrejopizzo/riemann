@@ -1,7 +1,6 @@
 # E72.7 -- Non-circular gate for the Feshbach-Sonin variational identity
 
-**Date:** 2026-07-08.
-**Role:** prevent E72.6 from becoming a tautological restatement of reduced leakage; state exactly what
+**Purpose:** prevent E72.6 from becoming a tautological restatement of reduced leakage; state exactly what
 new arithmetic input must enter.
 
 ## 0. The danger

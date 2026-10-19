@@ -1,6 +1,6 @@
 # P123.085 — Localization acts exactly on integrable trace modules
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for a two-prime carrier.
+Status: PROVED-IN-REPOSITORY for a two-prime carrier.
 The construction is a module action of localized correspondences on
 trace domains. It does not assert that two integrable modules compose
 to an integrable module by an invertible multiplication map.

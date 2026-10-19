@@ -1,6 +1,6 @@
 # E78.51 - The quadratic radial increment splits into a dominant linear drift
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

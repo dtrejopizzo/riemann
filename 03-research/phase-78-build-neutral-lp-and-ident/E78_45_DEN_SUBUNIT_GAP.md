@@ -1,6 +1,6 @@
 # E78.45 - Centered denominator horizontality is a subunit real-gap condition
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

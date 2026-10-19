@@ -15,19 +15,19 @@ computation are already staged as the phase's own D.17, not found attempted in a
 
 - Pólya's criterion (even, `h(0)=1`, convex decreasing on `(0,∞)`, `h→0` ⟹ positive definite) appears
   in the corpus only inside the phase-138 blueprint itself:
-  `03-research/phase-138-row-d-detecting-cones/R138_000_LEAD_BLUEPRINT.md:89-91`:
+  `03-research/phase-138-row-d-detecting-cones/R138_000_BLUEPRINT.md:89-91`:
   > "**Pólya's criterion (CLASSICAL, Pólya 1949; Lukacs, *Characteristic functions*, Thm 4.3.1):** an
   > even real function `h` with `h(0) = 1`, convex and decreasing on `(0,∞)`, `h → 0` at `∞`, is positive
   > definite ... Define the **Pólya cone** `C_Pó` ..."
   No earlier phase (0–137) defines this cone or runs the triangle-function (`h_T=(1-|t|/T)_+`)
   computation; grep for "Polya cone", "convex decreasing", "triangle test function" outside
   phase-138 returns nothing relevant except the unrelated Laguerre–Pólya-class material (item 9
-  below) and a generic mention in `03-research/phase-16/00-SURF-SPEC-SHEET.md` (survey list, not
+  below) and a generic mention in `03-research/phase-16-surf-witness-variety/00-SURF-SPEC-SHEET.md` (survey list, not
   attempted).
 - The blueprint pre-computes the outcome it expects (D.17.3): the sign on `C_Pó` reduces to the
-  PNT error term (see item 2) — this is a *prediction*, not yet a recorded result, since no builder
+  PNT error term (see item 2) — this is a *prediction*, not yet a recorded result, since no round-1 memo
   round exists in phase-138 yet (`ls 03-research/phase-138-row-d-detecting-cones/` shows only
-  `R138_000_LEAD_BLUEPRINT.md`).
+  `R138_000_BLUEPRINT.md`).
 
 **Recommendation:** build. Nothing to reuse; this is the phase's own open task (D.17). Do not
 duplicate — proceed straight to the D.17.2/D.17.3 computation the blueprint already lays out.
@@ -108,7 +108,7 @@ detect, Connes–Consani cluster).**
   with `Re ρ_0 ≠ ½` there is a real primitive `F ∈ C_c^∞` with `I_∞(F,F) > 0`."
 - The complementary no-go — that a *finite window* of test functions cannot detect an off-line zero
   — is exactly the Connes–Consani `2T ≤ log 2` result (see item 6) and is cited by phase-136's map
-  as "cluster B ... no finite window detects" (`R138_000_LEAD_BLUEPRINT.md:39-40`, referencing the
+  as "cluster B ... no finite window detects" (`R138_000_BLUEPRINT.md:39-40`, referencing the
   phase-136 map).
 
 **Recommendation:** reuse Theorem F directly (already imported as RESTATEMENT/PROVED-IN-REPOSITORY in
@@ -124,7 +124,7 @@ zeros; bounded-support detectors)
 
 - `grep -rn "e^{a|u|}\|unbounded support.*detect\|bounded.support.*detect" 03-research` (excluding
   phase-138) returns **no hits**. The `e^{a|u|}` growth argument and the translation-closure question
-  (D.16) are original to phase-138's blueprint (`R138_000_LEAD_BLUEPRINT.md:65-85`, D.16 items 1-2).
+  (D.16) are original to phase-138's blueprint (`R138_000_BLUEPRINT.md:65-85`, D.16 items 1-2).
 
 **Recommendation:** build. This is genuinely new ground; there is no risk of duplicating prior work,
 but also no prior result to reuse — the phase must derive the translation/growth statement from
@@ -179,7 +179,7 @@ reopening, per the task's own instruction.**
   > "**[NG-E5] Hilbert–Pólya via OS reconstruction "for free"** — Attempted: from OS reflection
   > positivity + the reconstruction theorem, claim H ≥ 0 automatically. Why it fails: RETRACTED. The
   > two-point function is oscillatory, NOT OS-decreasing."
-- Other named phase attempts: phase-16 (Pontryagin/OS), phase-6 (M-OS-1/2, retracted), phase-64
+- Other named phase attempts: phase-16-surf-witness-variety (Pontryagin/OS), phase-6-osterwalder-schrader-reflection (M-OS-1/2, retracted), phase-64
   ("Connes route"), phase-71 (CCM zeta spectral triples, partial reduction, not closed — MAP_3 line
   50), phase-106 (white-light GNS, "no-sign theorem," item 3 above).
 
@@ -205,8 +205,8 @@ sharpening, not a duplicate.**
 - Phase 107's `107_241_HODGE_INDEX_FOR_THE_CORNER_PAIRING.md` and `107_24_PAPER_C_PRIMITIVE_DEGREE_ZERO_REDUCTION.md`
   already attempt a primitive/degree-zero reduction with a corner-pairing Hodge index statement (same
   shape as D.15.1-2, on an earlier candidate object).
-- `03-research/phase-15/M3-arithmetic-hodge-index.md`, `M2-ample-cone-edge-positivity.md` are the
-  earliest (phase-15) attempts at exactly this ample-cone / Hodge-index characterization, superseded
+- `03-research/phase-15-arithmetic-hodge-index/M3-arithmetic-hodge-index.md`, `M2-ample-cone-edge-positivity.md` are the
+  earliest (phase-15-arithmetic-hodge-index) attempts at exactly this ample-cone / Hodge-index characterization, superseded
   by the 107/113/135/137 machinery phase-138 now builds on.
 
 **Recommendation:** reuse 113_08/113_09's radical-is-`ξ`-ideal and two-rulings/hyperbolic-plane
@@ -224,7 +224,7 @@ independently flagged as RH-equivalent / insufficient at several later phases (1
 re-deriving the equivalence as if it were new; do not expect these criteria to give unconditional
 progress.**
 
-- `03-research/phase-28/07-lp-class-rh.md` (full document is the corpus's canonical treatment):
+- `03-research/phase-28-four-fronts/07-lp-class-rh.md` (full document is the corpus's canonical treatment):
   > "**Consecuencia directa de la Proposición 2:** `RH ⟺ f(t) = ξ(1/2+it) ∈ LP`." and "*Observación
   > histórica.* Esta equivalencia es la reformulación de de Bruijn (1950)." Also: "**Proposición 3**
   > (el muro final) ... Eliminar la posibilidad de pares complejos ES probar RH" (the wall is exactly
@@ -243,7 +243,7 @@ progress.**
 **Recommendation:** do not reopen Laguerre–Pólya/Jensen/Turán/Li/Keiper as a route to an unconditional
 sign; they are classical restatements of RH (phase 28) whose only unconditional descendant attempts
 (phase 103/104, theta-kernel Jensen minors) are recorded no-gos. If phase 138's `t`-concavity /
-curvature language (`𝒞(t) = (ξ'/ξ)'(1/2+it)`) resurfaces, cite phase-28 directly rather than
+curvature language (`𝒞(t) = (ξ'/ξ)'(1/2+it)`) resurfaces, cite phase-28-four-fronts directly rather than
 re-deriving the LP-class equivalence.
 
 ---
@@ -252,7 +252,7 @@ re-deriving the LP-class equivalence.
 
 | # | Idea | Status | Key file(s) | Recommendation |
 |---|---|---|---|---|
-| 1 | Pólya criterion / convex-decreasing cone, triangle/box test fns | NEW (staged as own D.17) | `phase-138/R138_000_LEAD_BLUEPRINT.md:87-119` | build |
+| 1 | Pólya criterion / convex-decreasing cone, triangle/box test fns | NEW (staged as own D.17) | `phase-138/R138_000_BLUEPRINT.md:87-119` | build |
 | 2 | Chebyshev/Mertens ⟹ unconditional Weil positivity; PNT error obstruction | TRIED–NO-GO | `phase-114/114_d_185_PNT_TATE_LOW_BLOCK_NOGO.md`; `phase-72/E72_49...md` | do not reopen as unconditional route; reuse no-go mechanism |
 | 3 | Hodge index/Lorentzian/Khovanskii–Teissier/effective cone | TRIED–PARTIAL | `phase-136-row-d-map/MAP_5_LITERATURE_VS_CORPUS.md`; `phase-113/113_10...md`; `phase-107/107_241...md` | build; reuse effective-cone (113_10) and tropical-Hodge citation (MAP_5) |
 | 4 | Sufficiency/detection theorem (Theorem F); finite-window insufficiency | TRIED–PROVED / TRIED–NO-GO | `04-papers/45.../main.tex:200,1995`; CC window (item 6) | reuse Theorem F, do not re-prove |
@@ -260,4 +260,4 @@ re-deriving the LP-class equivalence.
 | 6 | Connes–Consani window `2T ≤ log 2`; extension attempts | TRIED–PROVED (window) / TRIED–PARTIAL (extension) | `phase-118/W4_CERTIFIED_RANGE.md` | do not reopen extension; reuse certified `log 2` bound as data point |
 | 7 | Hilbert–Pólya self-adjoint realization | TRIED–NO-GO (Master Wall) | `NO-GO-LIST.md` MW-4, NG-E5 | do not reopen |
 | 8 | Radical/primitive sector, rulings, hyperbolic plane, K^⊥ | TRIED–PARTIAL (building blocks proved) | `phase-113/113_08...md`, `113_09...md`; `phase-107/107_241...md`, `107_24...md` | reuse 113_08/09 as D.15 starting data; build the Lorentzian criterion (new) |
-| 9 | Laguerre–Pólya / Jensen / Turán / Li / Keiper | TRIED–EQUIVALENT-TO-RH / TRIED–NO-GO (unconditional descendants) | `phase-28/07-lp-class-rh.md`; `phase-103/103_29...md` etc. | do not reopen; cite phase-28 if curvature language recurs |
+| 9 | Laguerre–Pólya / Jensen / Turán / Li / Keiper | TRIED–EQUIVALENT-TO-RH / TRIED–NO-GO (unconditional descendants) | `phase-28-four-fronts/07-lp-class-rh.md`; `phase-103/103_29...md` etc. | do not reopen; cite phase-28-four-fronts if curvature language recurs |

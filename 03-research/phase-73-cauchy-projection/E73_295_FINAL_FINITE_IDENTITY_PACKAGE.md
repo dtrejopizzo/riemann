@@ -1,6 +1,5 @@
 # E73.295 - Final finite identity package
 
-Date: 2026-07-16.
 
 ## 1. Purpose
 

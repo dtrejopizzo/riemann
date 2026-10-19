@@ -232,7 +232,7 @@ implies Gate R, and (3.2) refers only to the explicitly known data
 `\rho_{\pm,T}` (P124.005 (2.2)--(3.3)), the Gram matrix (2.3) and the
 resolvent of the strictly positive operator `L_T`.
 
-**[phase 134, 2026-09-12 — note of record, from Paper 46 Finding 4.8 and
+**[phase 134 — note of record, from Paper 46 Finding 4.8 and
 `R134_002` (M5).  It does not alter Corollary 3.3, and it corrects a
 round-1 claim of Paper 46 that did.]**
 

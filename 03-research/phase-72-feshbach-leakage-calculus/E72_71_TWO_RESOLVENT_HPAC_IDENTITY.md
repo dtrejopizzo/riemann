@@ -1,7 +1,6 @@
 # E72.71 -- Two-resolvent identity for HPAC
 
-**Date:** 2026-07-08.
-**Role:** collapse the half-power Abel concomitant from a full matrix transform to two diagonal
+**Purpose:** collapse the half-power Abel concomitant from a full matrix transform to two diagonal
 resolvents plus two rank-one terms.
 
 ## 0. One-sided translation overlap

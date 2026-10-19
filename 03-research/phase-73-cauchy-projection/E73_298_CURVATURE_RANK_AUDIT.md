@@ -1,6 +1,5 @@
 # E73.298 - Curvature rank audit
 
-Date: 2026-07-16.
 
 ## 1. Purpose
 

@@ -1,6 +1,6 @@
 # The symbol-positivity detector for Omega_7
 
-> **SCOPE (E68.5-E68.6, 2026-07-07): this detector is GAUGE-FRAGILE, not gauge-uniform.**
+> **SCOPE (E68.5-E68.6): this detector is GAUGE-FRAGILE, not gauge-uniform.**
 > The band-averaged symbol `sigma_A - sigma_P` is FAITHFUL at some gauges -- at t0 = 100, 200 it is
 > marginally `~ 0` for zeta (with clean interior extraction; the touch at 0 is the correct de Branges
 > marginality), matching the exact index. But at other gauges (t0 = 30, 50, 400) it goes spuriously

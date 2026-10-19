@@ -1,6 +1,5 @@
 # E73.166 - Projector moment audit
 
-Date: 2026-07-12.
 
 ## 1. Purpose
 

@@ -1,6 +1,5 @@
 # E73.120 Results - Finite GATE-73 Manifest Verifier
 
-Date: 2026-07-12.
 
 Script:
 

@@ -1,7 +1,6 @@
 # E72.112 -- Shorted pushforward bound
 
-**Date:** 2026-07-09.
-**Role:** isolate the operator estimate that would prove the finite-frequency energy bound.
+**Purpose:** isolate the operator estimate that would prove the finite-frequency energy bound.
 
 ## 0. From frequency data to centered flux
 

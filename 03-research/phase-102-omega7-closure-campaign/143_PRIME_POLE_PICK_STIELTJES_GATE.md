@@ -177,7 +177,7 @@ Thus no such zero exists.  The functional equation reflects zeros across the
 critical line, so no zero with \(\Re\rho<1/2\) exists either.  This is RH.
 \(\square\)
 
-This is not a contradiction; it is the exact force-RH content of the gate.
+This is not a contradiction; it is the exact RH-strength content of the gate.
 It shows that proving such a disk Pick/Schur theorem from Euler--Gamma data
 would close Omega7.  It also shows why the theorem cannot be replaced by a
 formal assertion that the transformed divisor is a boundary measure: that

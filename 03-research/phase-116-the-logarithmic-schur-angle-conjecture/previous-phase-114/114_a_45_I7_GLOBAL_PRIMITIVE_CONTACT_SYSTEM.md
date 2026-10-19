@@ -44,7 +44,7 @@ Thus
 
 \[
  \mathbb F_p\otimes_{\mathbb Z}\mathbb F_q=0
- \quad(p\ne q),qquad
+ \quad(p\ne q),\qquad
  \mathbb F_p\otimes_{\mathbb Z}\mathbb F_p\simeq\mathbb F_p.           \tag{2.2}
 \]
 

@@ -32,7 +32,7 @@ Specializing Haran 2022, (12.16), to the equal prime-power exponents
 The two ring characters of (12.22)--(12.30) are
 
 \[
- F_0(e_1)=p-1,qquad \mathrm{tr}(e_1)=-1.         \tag{1.3}
+ F_0(e_1)=p-1,\qquad \mathrm{tr}(e_1)=-1.         \tag{1.3}
 \]
 
 ## 2. Exact nodal presentation
@@ -63,7 +63,7 @@ The coordinate difference is `bp`, so the image lies in the fiber product.
 Conversely, if `r congruent s mod p`, put
 
 \[
- b=(r-s)/p,qquad a=s+b.                                \tag{2.3}
+ b=(r-s)/p,\qquad a=s+b.                                \tag{2.3}
 \]
 
 Then (2.2) is `(r,s)`, proving bijectivity. Both components are ring maps,

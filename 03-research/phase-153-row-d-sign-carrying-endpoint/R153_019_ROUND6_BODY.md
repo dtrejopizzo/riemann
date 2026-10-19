@@ -1,6 +1,6 @@
-# R153.019 — Round 6, builder: the prime-free body `W_T`, its facet at `w_ζ`, and the Krein bands
+# R153.019 — Round 6, construction: the prime-free body `W_T`, its facet at `w_ζ`, and the Krein bands
 
-*Builder: Opus 5. 2026-09-20. Orders: R153_018 (lead). Scripts: `scripts/round6/` (`core.py`, `validate.py`,
+* Scripts: `scripts/round6/` (`core.py`, `validate.py`,
 `t2_axis_lemma.py`, `t2_facet.py`, `t2_support.py`, `t3_band.py`, `t3_joint.py`, `t3_apex.py`, `t4_log5.py`, `prec.py`).*
 
 **One-line result.** The body is built and it is emphatically **not** the box: the axis projections are exactly `±cos(π/m)`
@@ -18,10 +18,10 @@ curved sliver that closes at `v_2 = 0.4901375`.
 
 | item | hit | pre-existing | new here |
 |---|---|---|---|
-| `cos(π/m)` lemma | `03-research/phase-147-row-d-galois-ring/R147_003_BUILDER_ROUND2.md:271–290` (Lemma A.6, `PROVED`), `R147_005_LEAD_CLOSING_DECISION.md:61` | `L(m) = min_θ max_k|cos(θ+2πk/m)| = cos(π/m)` (`m` even) / `cos(π/(2m))` (`m` odd) — a **Galois-orbit min-max**, about roots of unity | the projection lemma of §3 is a **different statement** (min of the autocorrelation at lag `a` over an interval of length `L`; value `−cos(π/(⌈L/a⌉+1))`, a Jacobi-chain eigenvalue). Same closed form, different object. Recorded as **not** a re-use: proved here from scratch. |
+| `cos(π/m)` lemma | `03-research/phase-147-row-d-galois-ring/R147_003_ROUND2.md:271–290` (Lemma A.6, `PROVED`), `R147_005_CLOSING_DECISION.md:61` | `L(m) = min_θ max_k|cos(θ+2πk/m)| = cos(π/m)` (`m` even) / `cos(π/(2m))` (`m` odd) — a **Galois-orbit min-max**, about roots of unity | the projection lemma of §3 is a **different statement** (min of the autocorrelation at lag `a` over an interval of length `L`; value `−cos(π/(⌈L/a⌉+1))`, a Jacobi-chain eigenvalue). Same closed form, different object. Recorded as **not** a re-use: proved here from scratch. |
 | Krein / positive extension | `03-research/phase-136-row-d-map/MAP_1_WALLS_AND_MASTER_DOCS.md:153` (ES-14, `ABANDONED`); `R153_017:16,26` | abstract Krein extension does not identify the arithmetic kernel; no soft minorant exists (Bochner) | the **band** here is not an extension problem: it is the exact dual description `{v : λ_min(M_0 − v·S) ≥ 0}`, computed, not postulated |
 | LP / autocorrelation reformulation | `R153_016_ROUND5_PHI_CONSTRUCTION.md:53–60` (`PROVED`) | `A_T ≥ 0 ⟺ ∫σ_TΦ ≥ 0` on `𝒦_{2T}`; no-soft-minorant corollary | `W_T` is the **finite-dimensional image** of that LP under the moment map `Φ ↦ (∫g Φ, Φ̌(log n))`; §2 shows the half-space question is unchanged by convexification |
-| detecting cones | `03-research/phase-138-row-d-detecting-cones/R138_005_LEAD_CLOSING_DECISION.md:39,44` (D.15.4c, D.16.2‴, D.16.2′ crossing height `2πe·e^{2T}`) | different objects (polar block, translation); `2πe·e^{2T}` = round 4's `H⋆` | **RESTATEMENT** noted for R153_014's next pass, as the lead asked |
+| detecting cones | `03-research/phase-138-row-d-detecting-cones/R138_005_CLOSING_DECISION.md:39,44` (D.15.4c, D.16.2‴, D.16.2′ crossing height `2πe·e^{2T}`) | different objects (polar block, translation); `2πe·e^{2T}` = round 4's `H⋆` | **RESTATEMENT** noted for R153_014's next pass, as the review asked |
 | support function | 3 files (`phase-142`, `phase-145`, `phase-151`), all about the **effective cone** of a curve | unrelated geometry | no collision |
 | rate decomposition, minimiser | `R153_012_ROUND4_DECAY_LAW.md` | `λ(log 2) ≈ 9.9·10⁻⁸` Richardson, minimiser even | reproduced independently here (§6: `9.899·10⁻⁸`); the minimiser's **coordinates** `x(F_min)` are new |
 
@@ -140,7 +140,7 @@ Lowest eigenvalues of `A_{\log2}` (`K = 480`): `1.0160·10⁻⁷` (even), `1.137
 
 (`K`-stability: 4 digits in `x_0, x_2`, 3 in `x_3` over `K = 240…480`.)
 
-**Answer to the lead's question.** The supporting hyperplane with normal `w_ζ` touches `\overline{W}_{\log2}` at a
+**Answer to the review's question.** The supporting hyperplane with normal `w_ζ` touches `\overline{W}_{\log2}` at a
 **single exposed point** `x(F_{\min}) = (0.08800, 0.074502, 0.011803)`, not at an edge or a facet: the minimal eigenvalue is
 simple with a spectral gap of `1.14·10⁻⁵`, `112×` the eigenvalue itself. But the touching is *almost* flat: the second
 extreme point `x(F_1)` lies at Euclidean distance `0.33` and is only `1.14·10⁻⁵` above the hyperplane. **So `W_{\log 2}` has
@@ -267,7 +267,7 @@ describe a body `1.2776` too large in the direction `w_ζ`; the whole of the pos
 relaxation leaves a deficit of `0.7171`, so at least `56%` of the coupling is irreducibly **three-way** (`x_0, x_2, x_3`
 together). The mechanism is visible in the contact point: the box's optimum wants `x_2 = x_3 = ½`, i.e. `F` simultaneously
 in phase with its `\log 2`- and `\log 3`-translates, while `F_{\min}` achieves `(0.0745, 0.0118)` — the shift
-`\log 3 − \log 2 = \log(3/2)` makes the two chain structures incompatible, exactly the lead's expectation. The coupling
+`\log 3 − \log 2 = \log(3/2)` makes the two chain structures incompatible, exactly the review's expectation. The coupling
 gap grows with `|v|` (`1.54` at `v = (2,2)`, `2.26` at `(5,5)`), so this is not a small-`v` artefact.
 
 **Falsifier (`Ξ_a`).** Its weights are `v_n = 2w_n(n^a+n^{-a})`: `(2.0031, 2.6762)` at `a = 0.30` and `(2.0567, 2.8536)` at

@@ -1,6 +1,5 @@
 # E67.18 -- the Szego law resolves the index puzzle and states the forcer cleanly
 
-**Date:** 2026-07-06.
 **Script:** [E67_18_szego_law.py](E67_18_szego_law.py).
 
 ## Result

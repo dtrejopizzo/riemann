@@ -1,6 +1,6 @@
 # P123.115 — An operator-defined boundary Gram metric and its Levi form
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY on each fixed external
+Status: PROVED-IN-REPOSITORY on each fixed external
 Bruhat test domain of the induced representation. This is a boundary
 metric, not an identification with the intrinsic arithmetic RR metric.
 

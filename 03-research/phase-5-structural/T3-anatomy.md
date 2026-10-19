@@ -1,6 +1,6 @@
 # T3 — The anatomy theorem: the per-prime decomposition of the localized Weil margin (analytic)
 
-**Route B / M5, pure-theory milestone T3.** Author: David Alejandro Trejo Pizzo · 2026-06-03.
+**Route B / M5, pure-theory milestone T3.**
 Foundation: $Q_{\mathrm{arith}}(L)=A_\infty-\sum_n\frac{\Lambda_L(n)}{\sqrt n}w_nw_n^*$ (P7; setup of
 `M5-T1-T2-proofs.md` §0). Motivation: the numerical D2 (`experiments/M4-D2-results.md`) **retired the scalar
 margin** (near-tautological off-line detector) and identified the **gradient/anatomy profile** as the

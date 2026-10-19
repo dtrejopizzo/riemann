@@ -10,7 +10,7 @@
 > - **Flagged ledger (§6):** L1 uniform Gram bound (=G4 Carleson), L2 per-word Tate identity, L3 `−ζ'/ζ=ΣΛ(n)n^{−s}` paired — all `Re s>1`, all zero-free. **The location of the zeros enters nowhere in L1–L3.**
 > - **DH (not gated):** breaks at §2 — signed `H^χ` is Pontryagin, not a bounded self-adjoint Hilbert resolvent.
 
-> **Candid posture:** not asserted as a verified/peer-reviewed proof — a complete, RH-free chain modulo three named standard estimates in the half-plane of absolute convergence, handed to Connes + the user to audit.
+> **Candid posture:** not asserted as a verified/peer-reviewed proof — a complete, RH-free chain modulo three named standard estimates in the half-plane of absolute convergence, handed to Connes to audit.
 
 > **Corrections applied:** R1 (no Euler product; 7 fixes), R2 (no-emergence; wall → strong-resolvent across strip), R3 (Check 4 must be a theorem — now proved via word expansion; fixes A–E: Schur-resolvent identity, Pick-form block 5, Check-3-via-words, endpoint richness, D9 sign).
 
@@ -336,7 +336,7 @@ pole-relative limit.
 
 # RH-PROOF — the closed chain (Signature-Continuity Package, capstone)
 
-**Phase 65 / Signature-Continuity Package.** Pure mathematics. This is the capstone: the full chain from
+**Phase 65 / Signature-Continuity Package.** This is the capstone: the full chain from
 the proved inputs (G1–G5, Phases 60–64) to RH, assembled from the package documents, with Check 4 now a
 theorem (D8.5d) and Connes' audit fixes A–E applied. Every load-bearing step lives in the
 absolute-convergence region `Re s > 1` (no zeros) or is automatic from self-adjointness — the structural
@@ -345,7 +345,7 @@ fix D) here, then close, then give the candid flagged-items ledger.
 
 > **Status.** The spine is complete and RH-free. What remains are standard analytic estimates in
 > `Re s > 1` (the flagged ledger, §6), none of which can encode zero locations. We present this for audit
-> by Connes and the user — not as a peer-reviewed certainty, but as a fully-written chain whose only
+> by Connes — not as a peer-reviewed certainty, but as a fully-written chain whose only
 > residuals are named, local, and zero-free.
 
 ---
@@ -446,7 +446,7 @@ absolute convergence. This is the structural guarantee that the proof is not cir
 \textbf{End-state.} The chain `G1–G5 ⟹ §2 ⟹ §3 (Check 4 theorem) ⟹ §4 ⟹ §5 (Vitali) ⟹ RH` is fully
 written. The only residuals (L1–L3) are standard analytic facts in `Re s > 1`, named and zero-free. We do
 not assert this is a verified proof; we assert it is a **complete, RH-free chain modulo three standard
-local estimates**, handed to Connes and the user for audit. If L1–L3 hold as expected, RH follows.
+local estimates**, handed to Connes for audit. If L1–L3 hold as expected, RH follows.
 \end{resultbox}
 
 ---
@@ -481,7 +481,7 @@ distinguishes `ζ` from Davenport–Heilbronn precisely at the self-adjointness 
 
 # D8.5d — The Fixed-Channel Resolvent Realization Theorem (Check 4, proved not defined)
 
-**Phase 65 / Signature-Continuity Package.** Pure mathematics. This replaces the illegitimate "Check 4 by
+**Phase 65 / Signature-Continuity Package.** This replaces the illegitimate "Check 4 by
 definition" (D8.5-COMPLETE §D) with a **theorem**, along the route Connes endorsed: the **word-level
 sourced Tate expansion**. We prove that the marked Tate–Weil pairing is the genuine compressed resolvent
 of the self-adjoint `A_P` on a fixed channel — so the Nevanlinna realization certificates R1–R4 hold
@@ -672,7 +672,7 @@ uniform-norm bound is discharged from the Pick-form block 5 (D8.5a fix B).
 
 # D8.5-COMPLETE — closing D8.5 via the Vitali resolvent bridge and the six audit checks
 
-**Phase 65 / Signature-Continuity Package.** Pure mathematics. This document closes D8.5 to the extent the
+**Phase 65 / Signature-Continuity Package.** This document closes D8.5 to the extent the
 construction allows, following Connes' Vitali-resolvent route: if the Feshbach-shorted primitive Green
 matrices are bounded matrix-Herglotz functions on a fixed source channel, converging on the
 absolute-convergence region below the strip, then Vitali continuation forbids off-real poles of the fixed
@@ -934,7 +934,7 @@ sentence:
 
 This is the cleanest and most concrete form the wall has taken: not an estimate, not a positivity bound,
 not an index — a \emph{realization} statement, in the absolute-convergence region, about a single
-self-adjoint operator and a fixed channel. It is handed to the auditors (Connes, and the user) as the one
+self-adjoint operator and a fixed channel. It is handed to the auditors (Connes) as the one
 thing to verify or break.
 
 
@@ -2431,7 +2431,7 @@ mathematical burden of the package.
 
 # D8 — Arithmetic sourced Feshbach convergence (the decisive deliverable)
 
-**Phase 65 / Signature-Continuity Package, deliverable D8.** Pure mathematics. This is the whole
+**Phase 65 / Signature-Continuity Package, deliverable D8.** This is the whole
 mathematical burden of the package: upgrade the *scalar* convergence G3 ($D_P^\circ\to\Xi$) to *sourced,
 pole-shorted kernel* convergence. We structure it into Connes/Consani's seven subclaims, **prove the five
 that are genuinely provable from G3+G4 + the machinery D2–D7**, and **isolate with full candor the one
@@ -2657,7 +2657,7 @@ positivity), D11 (assembly), D12 (audit, recording D8.5 as the load-bearing assu
 
 # D8.5a — Primitive marked Tate–Binet convergence (blocks 1–8)
 
-**Phase 65 / Signature-Continuity Package, deliverable D8.5a.** Pure mathematics. This is the
+**Phase 65 / Signature-Continuity Package, deliverable D8.5a.** This is the
 plausibly-local half of the load-bearing input: convergence of the Feshbach-shorted primitive Green
 matrices $G_P^\circ(z)\to G^{\lim}(z)$ for marked primitive sources, via Connes' eight theorem blocks.
 It does **not** identify the limit with the fixed endpoint $G_\Xi^{\mathrm{G5}}$ — that is D8.5b (block 9,
@@ -2925,7 +2925,7 @@ Next: D8.5b (block 9) — prove $G^{\lim}=G_\Xi^{\mathrm{G5}}$, with the decisiv
 > resolvent-convergence form). Read `CORRECTIONS-CONNES-R2.md` for the corrected analysis; the text below
 > is retained as the superseded round-1 reasoning.
 
-**Phase 65 / Signature-Continuity Package, deliverable D8.5b.** Pure mathematics. This is block 9 — the
+**Phase 65 / Signature-Continuity Package, deliverable D8.5b.** This is block 9 — the
 identification of the D8.5a limit $G^{\lim}$ with the *fixed* endpoint resolvent $G_\Xi^{\mathrm{G5}}$ —
 and it is where the RH-strength is concentrated (Connes R1 §1). We prove the identification *as
 meromorphic objects* (it plausibly holds, and we give the argument), then run the **decisive candor
@@ -3099,7 +3099,7 @@ not on a benign input), and record the residue as the program's current frontier
 
 # D8.5b-i — The pole-relative self-adjoint completion: candidates, flaws, and the robust wall
 
-**Phase 65 / Signature-Continuity Package.** Pure mathematics. After Connes R2, the wall is the
+**Phase 65 / Signature-Continuity Package.** After Connes R2, the wall is the
 strong-resolvent convergence of the positive von Mangoldt family across the critical strip — equivalently
 the essential self-adjointness of the limit operator $A_\infty^\circ$ with **spectrum equal to the zeros
 of $\Xi$**. This document attacks it. Operator theory offers several classical shortcuts that each
@@ -3467,7 +3467,7 @@ Next: D11 (assembly), D12 (audit — recording D8.5 as load-bearing and the DH c
 
 # D11 — Assembly: signature continuity implies RH
 
-**Phase 65 / Signature-Continuity Package, deliverable D11.** Pure mathematics. The final deduction. It is
+**Phase 65 / Signature-Continuity Package, deliverable D11.** The final deduction. It is
 short: once D0–D10 are in place, RH is a one-line corollary, **conditional on the single load-bearing
 input D8.5**. We state the assembly, then state with full candor exactly what is proved unconditionally
 and what rests on D8.5.

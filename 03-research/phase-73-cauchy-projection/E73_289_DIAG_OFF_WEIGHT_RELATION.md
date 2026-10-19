@@ -1,6 +1,5 @@
 # E73.289 - Diagonal/off-diagonal weight relation
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

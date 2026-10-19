@@ -1,7 +1,6 @@
 # E72.149 -- MSB scale split
 
-**Date:** 2026-07-09.
-**Role:** split the mass-source bound into separate finite scale estimates.
+**Purpose:** split the mass-source bound into separate finite scale estimates.
 
 ## 0. MSB
 

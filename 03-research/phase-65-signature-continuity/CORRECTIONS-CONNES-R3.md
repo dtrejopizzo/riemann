@@ -1,6 +1,6 @@
 # CORRECTIONS — Connes/Consani audit, round R3 (the log-derivative closure)
 
-**Phase 65 / Signature-Continuity Package.** Pure mathematics. This record captures the third correction
+**Phase 65 / Signature-Continuity Package.** This record captures the third correction
 round on P51 (the RH proof paper and its verification notebook) and the resolution adopted. The verdict of
 the round: **the Vitali bridge is correct and is the right closing mechanism, but the decisive step was
 *asserted, not proved*.** The fix replaces an arbitrary-pairing realization with the **log-derivative of

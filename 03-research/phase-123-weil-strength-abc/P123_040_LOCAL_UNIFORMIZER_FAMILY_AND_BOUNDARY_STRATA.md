@@ -1,6 +1,6 @@
 # P123.040 — local-uniformizer correspondences and their boundary strata
 
-Date: 2026-09-05. Status: CONSTRUCTED for the refined arithmetic family,
+Status: CONSTRUCTED for the refined arithmetic family,
 its lattice comparison, chart maps and codimension-one fixed loci.
 The full stratified trace/shadow theorem remains OPEN.
 

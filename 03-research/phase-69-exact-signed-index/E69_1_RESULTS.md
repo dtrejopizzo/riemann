@@ -1,6 +1,5 @@
 # E69.1 -- the gauge-invariant object: the Nevanlinna/Hermite-Biehler condition on -xi'/xi
 
-**Date:** 2026-07-07.
 **Scripts:** E69_1_nevanlinna.py (buggy, kept), [E69_1b_nevanlinna.py](E69_1b_nevanlinna.py) (correct).
 
 ## Result

@@ -1,6 +1,5 @@
 # E73.190 - Transverse convolution form
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

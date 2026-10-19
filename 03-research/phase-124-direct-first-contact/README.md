@@ -1,11 +1,11 @@
 # Phase 124 — Direct first-contact route
 
-Opened: 2026-09-09. Status: **ACTIVE EXPLORATION; no new positivity theorem proved.**
-GPT-5.5 execution is auditing the direct first-contact route; this opening
+Status: **ACTIVE EXPLORATION; no new positivity theorem proved.**
+This phase audits the direct first-contact route; this opening
 does not prove RH.
 
 This phase investigates the direct analytic route selected in the
-[September 8 plan](../../05-meta-and-planning/ABCD-CLOSURE-PLAN/PLAN_PRIORITARIO_2026-09-08.md).
+[September 8 plan](../../05-meta-and-planning/ABCD-CLOSURE-PLAN/PRIORITY_PLAN.md).
 Its goal is to exclude a nonzero primitive first-contact state by an
 arithmetic identity or inequality, without first completing the geometric
 theory A/B/C. The papers remain untouched.
@@ -86,7 +86,7 @@ and [P124.010](P124_010_TOEPLITZ_LEAKAGE_TEST.md) shows the one-prime
 Toeplitz test still needs an external centering not realized by the
 support-anomaly family.
 
-## New coordinate (2026-09-12)
+## New coordinate
 
 [P124.013](P124_013_ENTIRE_FORM_AND_SHIELDING_DICHOTOMY.md) rewrites the whole
 row-(d) target in the entire-function variable
@@ -108,9 +108,9 @@ shielding is observed.  This refutes the reading of Gate R as a structural
 theorem of the functional-equation class: R needs the same unimodular local
 roots that S needs.
 
-## Standing methodological note (2026-09-12, `[phase 134]`)
+## Standing methodological note (`[phase 134]`)
 
-Recorded from Paper 46 §9.3 (`04-papers/46-row-d-the-sign/main.md`) and from
+Recorded from Paper 46 §9.3 (`04-papers/46-intersection-frame-defect/archive/main.md`) and from
 the independent re-runs in `R134_002_AUDIT_ROUND1.md` §§4, 6.  It does not
 retract any result of this phase; it fixes how this phase's numbers may be
 read.

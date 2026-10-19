@@ -70,7 +70,7 @@ The results do not support the central hypothesis in a robust way. Explicit extr
 <artifact>
 <file-name>M_emp_200.npy</file-name>
 <artifact-type>external_source</artifact-type>
-<artifact-description>Prior-analysis empirical 8x8 top-200 zeta peak M_jk matrix already present in the workspace and used as the comparison target. It was not generated in this session but was loaded directly from disk.</artifact-description>
+<artifact-description>Prior-analysis empirical 8x8 top-200 zeta peak M_jk matrix already present in the workspace and used as the comparison target. It was not generated in this run but was loaded directly from disk.</artifact-description>
 </artifact>
 <artifact>
 <file-name>M_theory_tuned.npy</file-name>

@@ -1,7 +1,6 @@
 # E72.119 -- Final finite certificate for Phase 72
 
-**Date:** 2026-07-09.
-**Role:** package the current Phase 72 endpoint as one finite checklist.
+**Purpose:** package the current Phase 72 endpoint as one finite checklist.
 
 ## 0. Certificate data
 

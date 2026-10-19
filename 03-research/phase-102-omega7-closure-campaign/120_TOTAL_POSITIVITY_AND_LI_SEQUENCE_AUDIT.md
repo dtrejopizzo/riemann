@@ -72,5 +72,5 @@ Omega7. It is equivalent in strength to the positive boundary measure target.
 ## Status
 
 Finite total positivity routes are eliminated. Infinite total positivity is a
-valid force-RH target, but it is currently the same missing positive boundary
+valid RH-strength target, but it is currently the same missing positive boundary
 measure in transformed coordinates.

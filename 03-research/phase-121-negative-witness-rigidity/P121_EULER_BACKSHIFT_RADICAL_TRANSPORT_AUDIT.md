@@ -16,7 +16,7 @@ annular defects.
 Let
 
 \[
- (V_aF)(t)=F(t-a),\qquad a=\log p,qquad r=e^{-a/2},
+ (V_aF)(t)=F(t-a),\qquad a=\log p,\qquad r=e^{-a/2},
 \]
 
 and put
@@ -47,7 +47,7 @@ following are equivalent:
 When these conditions hold,
 
 \[
-                         F=E_p^+G,qquad
+                         F=E_p^+G,\qquad
  \operatorname {diam}\operatorname {supp}G
  \leq\operatorname {diam}\operatorname {supp}F-a. \tag{1.3}
 \]

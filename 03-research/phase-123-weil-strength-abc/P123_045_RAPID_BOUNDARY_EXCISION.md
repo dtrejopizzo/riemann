@@ -1,6 +1,6 @@
 # P123.045 — Strict rapid excision for the boundary cover and its complement
 
-Date: 2026-09-05. Status: PROVED for the explicit completed sequences
+Status: PROVED for the explicit completed sequences
 below. These are source-level excision data, not yet a localization
 theorem for the regularized shadow.
 

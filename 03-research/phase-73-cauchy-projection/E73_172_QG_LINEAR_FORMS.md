@@ -1,6 +1,5 @@
 # E73.172 - QG scalar linear forms
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

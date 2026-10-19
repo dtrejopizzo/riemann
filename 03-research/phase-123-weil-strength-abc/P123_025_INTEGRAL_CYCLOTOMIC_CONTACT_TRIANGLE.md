@@ -1,6 +1,5 @@
 # P123.025 — integral cyclotomic filtration and its contact triangle
 
-Date: 2026-09-05.
 
 ## Status
 

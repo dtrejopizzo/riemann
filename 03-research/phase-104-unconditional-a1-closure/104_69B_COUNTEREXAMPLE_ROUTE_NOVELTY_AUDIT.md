@@ -1,9 +1,9 @@
-# 104_69B — Auditoría de antecedentes de la ruta Fermi por contraejemplo
+# 104_69B — Background audit of the counterexample-route Fermi path
 
-## Veredicto ejecutivo
+## Executive verdict
 
-La búsqueda primaria dirigida no localizó una fuente que contenga la forma
-exacta
+The directed primary search did not locate a source containing the exact
+form
 
 \[
  a_n={1\over1+(n+1)e^{\lambda_n}},\qquad
@@ -16,38 +16,40 @@ exacta
  \prod_{n\in I_L}(1-a_n)\longrightarrow1,                \tag{2}
 \]
 
-ni la diagonal prima--Laguerre
+nor the prime–Laguerre diagonal
 
 \[
  \varepsilon_X=e^{-X/100},\qquad
  \varepsilon_L=e^{-(L^2+L-1)/100}=e^{-(1+o(1))L^2/100}.  \tag{3}
 \]
 
-Esto **no prueba prioridad**. El nivel de atribución que permiten las fuentes
-revisadas es más modesto:
+This **does not prove priority**. The attribution level the reviewed
+sources allow is more modest:
 
-1. la capa exterior dominante y la negatividad exponencial infinitas veces
-   bajo no-RH son conocidas desde Bombieri--Lagarias y están escritas en forma
-   trigonométrica explícita por Bucur--Ernvall-Hytönen--Odžak--Smajlović;
-2. el posible contenido sustantivo propio es el refuerzo de `104_56` desde
-   «infinitas veces» hasta un conjunto de densidad natural positiva y
-   sindético, siempre que esa prueba permanezca íntegra;
-3. la logística Fermi, el producto finito, la ventana cuadrática y la diagonal
-   Euler son *repackagings* o corolarios exactos de ese refuerzo, no una nueva
-   estimación sobre los ceros;
-4. la equivalencia entre las medias logarítmicas de Cesàro y Abel pertenece a
-   la teoría clásica de sumabilidad. Lo no localizado es su aplicación al
-   detector Fermi de los coeficientes de Li, no el teorema de sumabilidad.
+1. the dominant exterior shell and exponential negativity infinitely
+   often under non-RH are known from Bombieri–Lagarias and are written
+   in explicit trigonometric form by Bucur–Ernvall-Hytönen–Odžak–Smajlović;
+2. the possible genuine substantive content is the strengthening of
+   `104_56` from "infinitely often" to a positive natural-density and
+   syndetic set, provided that proof remains intact;
+3. the Fermi logistic, the finite product, the quadratic window, and the
+   Euler diagonal are exact *repackagings* or corollaries of that
+   strengthening, not a new estimate on the zeros;
+4. the equivalence between the logarithmic Cesàro and Abel averages
+   belongs to classical summability theory. What was not located is its
+   application to the Fermi detector of the Li coefficients, not the
+   summability theorem.
 
-Por tanto `104_68`--`104_69` deben presentarse como criterios acotados y
-normalizaciones finitas de la ruta del modo exterior. No prueban A1 ni RH y no
-aportan información nueva sobre la localización de ceros.
+Hence `104_68`--`104_69` must be presented as bounded criteria and finite
+normalizations of the exterior-mode route. They prove neither A1 nor RH
+and contribute no new information about zero localization.
 
 ---
 
-## 1. Objetos auditados
+## 1. Audited objects
 
-Además de (1)--(3), se buscaron las dos medias usadas en `104_64` y `104_69`:
+Besides (1)--(3), the two averages used in `104_64` and `104_69` were
+searched for:
 
 \[
  \mathfrak F(X)
@@ -61,7 +63,7 @@ Además de (1)--(3), se buscaron las dos medias usadas en `104_64` y `104_69`:
  \sum_{n\ge1}{e^{-hn}a_n\over n}.                       \tag{5}
 \]
 
-También se auditó la expansión finita llamada «polímero»:
+The finite expansion called "polymer" was also audited:
 
 \[
 \begin{aligned}
@@ -74,158 +76,162 @@ También se auditó la expansión finita llamada «polímero»:
 \end{aligned}
 \]
 
-La identidad (6) es la expansión elemental de un producto finito. Su lift
-prima--Laguerre conserva conjuntamente polo, bloque arquimediano, primos y
-potencias primas, pero no crea una interacción nueva: el producto vuelve a
-factorizar grado por grado.
+Identity (6) is the elementary expansion of a finite product. Its
+prime–Laguerre lift jointly preserves the pole, archimedean block,
+primes, and prime powers, but creates no new interaction: the product
+again factors degree by degree.
 
 ---
 
-## 2. Tabla de antecedentes
+## 2. Background table
 
-| objeto o afirmación | clasificación | antecedente y distinción exacta |
+| object or claim | classification | background and exact distinction |
 |---|---|---|
-| Criterio \(\mathrm{RH}\Longleftrightarrow\lambda_n\ge0\) para todo \(n\) | **conocido** | Li, JNT 65 (1997), 325--333, [DOI 10.1006/jnth.1997.2137](https://doi.org/10.1006/jnth.1997.2137) |
-| Multiconjunto abstracto, condición inferior subexponencial y excursiones negativas exponenciales i.o. | **conocido** | Bombieri--Lagarias, JNT 77 (1999), 274--287, [DOI 10.1006/jnth.1999.2392](https://doi.org/10.1006/jnth.1999.2392) |
-| Término dominante \(-2R^n\sum_j\cos(n\phi_j)\) para \(R>1\) | **conocido** | Bucur--Ernvall-Hytönen--Odžak--Smajlović, ec. (3.9), [PDF primario](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9D6498CFDB802707E1A0EDFFE5B81C34/S1461157016000115a.pdf/on-a-li-type-criterion-for-zerofree-regions-of-certain-dirichlet-series-with-real-coefficients.pdf), [DOI 10.1112/S1461157016000115](https://doi.org/10.1112/S1461157016000115) |
-| Criterios \(\tau\)-Li para semiplanos libres de ceros | **conocido** | Freitas, JLMS 73 (2006), 399--414, [arXiv:math/0507368](https://arxiv.org/abs/math/0507368), [DOI 10.1112/S0024610706022599](https://doi.org/10.1112/S0024610706022599) |
-| Intervalos finitos de índices que certifican regiones libres de ceros | **adyacente** | Palojärvi, Albanian J. Math. 14 (2020), 47--77, [arXiv:1807.01506](https://arxiv.org/abs/1807.01506), [PDF de revista](https://www.albanian-j-math.com/archives/2020-04.pdf). Sus intervalos explícitos \([N_1,N_2]\) no son las ventanas móviles \(I_L\) ni forman un criterio límite por productos |
-| Dicotomía asintótica \(n(A\log n+B)\) frente a oscilación no temperada | **conocido** | Voros, MPAG 9 (2006), 53--63, [arXiv:math/0506326](https://arxiv.org/abs/math/0506326), [DOI 10.1007/s11040-005-9002-8](https://doi.org/10.1007/s11040-005-9002-8) |
-| Criterio global \(\ell^2\) para el error de Keiper--Li | **adyacente** | Arias de Reyna, FACA 45 (2011), 7--21, [PDF institucional](https://idus.us.es/bitstream/handle/11441/47018/Asymptotics%20of%20Keiper-Li%20coefficients.pdf?sequence=1), [DOI 10.7169/facm/1317045228](https://doi.org/10.7169/facm/1317045228) |
-| Métodos logarítmicos \(\ell\), \(L\) y medias móviles | **conocido como sumabilidad** | Bingham--Gashi, JMAA 421 (2015), 1790--1802, [arXiv:1408.1301](https://arxiv.org/abs/1408.1301), [PDF de autor](https://www.ma.imperial.ac.uk/~bin06/Papers/BiG1.pdf), [DOI 10.1016/j.jmaa.2014.08.031](https://doi.org/10.1016/j.jmaa.2014.08.031) |
-| Negatividad exponencial en un conjunto de densidad positiva y sindético | **no localizada explícitamente** | refuerzo topológico-dinámico de `104_56` sobre el término dominante conocido; no es una nueva cota de ceros y no se reclama prioridad |
-| Detector fijo \(a_n=[1+(n+1)e^{\lambda_n}]^{-1}\) equivalente a RH | **no localizado exactamente** | corolario funcional de la positividad bajo RH y del refuerzo densidad/sindeticidad bajo no-RH |
-| Ventanas deterministas \([L^2,L^2+L)\) | **no localizadas exactamente** | corolario de sindeticidad más \(|I_L|/\min I_L\to0\); Palojärvi es solo adyacente |
-| Producto \(P_L\) y expansión de polímeros | **no localizados exactamente; repackaging algebraico** | \(P_L\to1\Longleftrightarrow\sum_{I_L}a_n\to0\) y (6) son identidades elementales para números no negativos |
-| Diagonal \(\varepsilon_X=e^{-X/100}\), o \(e^{-cL^2}\) en bloques | **no localizada exactamente; corolario técnico** | procede de la cota uniforme \(|\lambda_{n,\varepsilon}-\lambda_n|\ll n\varepsilon r^{-n}\), no es un criterio RH independiente |
-| Aplicación Li--Fermi de las medias log-Cesàro/Abel | **no localizada exactamente** | la maquinaria de sumabilidad es clásica; la sustitución \(s_n=a_n\) y el lift prima--Laguerre son la capa específica del proyecto |
+| Criterion \(\mathrm{RH}\Longleftrightarrow\lambda_n\ge0\) for all \(n\) | **known** | Li, JNT 65 (1997), 325--333, [DOI 10.1006/jnth.1997.2137](https://doi.org/10.1006/jnth.1997.2137) |
+| Abstract multiset, subexponential lower condition, and exponential negative excursions i.o. | **known** | Bombieri–Lagarias, JNT 77 (1999), 274--287, [DOI 10.1006/jnth.1999.2392](https://doi.org/10.1006/jnth.1999.2392) |
+| Dominant term \(-2R^n\sum_j\cos(n\phi_j)\) for \(R>1\) | **known** | Bucur–Ernvall-Hytönen–Odžak–Smajlović, eq. (3.9), [primary PDF](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9D6498CFDB802707E1A0EDFFE5B81C34/S1461157016000115a.pdf/on-a-li-type-criterion-for-zerofree-regions-of-certain-dirichlet-series-with-real-coefficients.pdf), [DOI 10.1112/S1461157016000115](https://doi.org/10.1112/S1461157016000115) |
+| \(\tau\)-Li criteria for zero-free half-planes | **known** | Freitas, JLMS 73 (2006), 399--414, [arXiv:math/0507368](https://arxiv.org/abs/math/0507368), [DOI 10.1112/S0024610706022599](https://doi.org/10.1112/S0024610706022599) |
+| Finite index intervals certifying zero-free regions | **adjacent** | Palojärvi, Albanian J. Math. 14 (2020), 47--77, [arXiv:1807.01506](https://arxiv.org/abs/1807.01506), [journal PDF](https://www.albanian-j-math.com/archives/2020-04.pdf). Her explicit intervals \([N_1,N_2]\) are not the moving windows \(I_L\) nor do they form a product limit criterion |
+| Asymptotic dichotomy \(n(A\log n+B)\) versus non-tempered oscillation | **known** | Voros, MPAG 9 (2006), 53--63, [arXiv:math/0506326](https://arxiv.org/abs/math/0506326), [DOI 10.1007/s11040-005-9002-8](https://doi.org/10.1007/s11040-005-9002-8) |
+| Global \(\ell^2\) criterion for the Keiper–Li error | **adjacent** | Arias de Reyna, FACA 45 (2011), 7--21, [institutional PDF](https://idus.us.es/bitstream/handle/11441/47018/Asymptotics%20of%20Keiper-Li%20coefficients.pdf?sequence=1), [DOI 10.7169/facm/1317045228](https://doi.org/10.7169/facm/1317045228) |
+| Logarithmic methods \(\ell\), \(L\), and moving averages | **known as summability** | Bingham–Gashi, JMAA 421 (2015), 1790--1802, [arXiv:1408.1301](https://arxiv.org/abs/1408.1301), [author PDF](https://www.ma.imperial.ac.uk/~bin06/Papers/BiG1.pdf), [DOI 10.1016/j.jmaa.2014.08.031](https://doi.org/10.1016/j.jmaa.2014.08.031) |
+| Exponential negativity on a positive-density, syndetic set | **not explicitly located** | topological-dynamical strengthening of `104_56` over the known dominant term; not a new zero bound, and no priority is claimed |
+| Fixed detector \(a_n=[1+(n+1)e^{\lambda_n}]^{-1}\) equivalent to RH | **not located exactly** | functional corollary of RH positivity and of the density/syndeticity strengthening under non-RH |
+| Deterministic windows \([L^2,L^2+L)\) | **not located exactly** | corollary of syndeticity plus \(|I_L|/\min I_L\to0\); Palojärvi is only adjacent |
+| Product \(P_L\) and polymer expansion | **not located exactly; algebraic repackaging** | \(P_L\to1\Longleftrightarrow\sum_{I_L}a_n\to0\) and (6) are elementary identities for nonnegative numbers |
+| Diagonal \(\varepsilon_X=e^{-X/100}\), or \(e^{-cL^2}\) in blocks | **not located exactly; technical corollary** | follows from the uniform bound \(|\lambda_{n,\varepsilon}-\lambda_n|\ll n\varepsilon r^{-n}\); it is not an independent RH criterion |
+| Li–Fermi application of the log-Cesàro/Abel averages | **not located exactly** | the summability machinery is classical; the substitution \(s_n=a_n\) and the prime–Laguerre lift are the project-specific layer |
 
-«No localizada» significa exclusivamente «no apareció en esta búsqueda primaria
-dirigida». No significa que no exista en toda la literatura.
+"Not located" means exclusively "did not appear in this directed primary
+search." It does not mean it does not exist in the literature at large.
 
 ---
 
-## 3. La ruta de contraejemplo que sí tiene antecedente directo
+## 3. The counterexample route that does have direct background
 
-### 3.1 Li y Bombieri--Lagarias
+### 3.1 Li and Bombieri–Lagarias
 
-Los coeficientes completos son
+The complete coefficients are
 
 \[
  \lambda_n=\sum_\rho
  \left[1-\left(1-{1\over\rho}\right)^n\right].           \tag{7}
 \]
 
-Li prueba que su no negatividad en todos los grados equivale a RH.
-Bombieri--Lagarias extiende el mecanismo a multiconjuntos abstractos y prueba
-una condición unilateral subexponencial equivalente a la localización. Cuando
-existe un punto transformado de módulo mayor que uno, la prueba separa los
-modos de radio exterior máximo y obtiene valores negativos exponenciales
-infinitas veces mediante aproximación diofántica simultánea.
+Li proves that their nonnegativity at every degree is equivalent to RH.
+Bombieri–Lagarias extends the mechanism to abstract multisets and proves
+a one-sided subexponential condition equivalent to the localization.
+When a transformed point of modulus greater than one exists, the proof
+separates the maximal exterior-radius modes and obtains exponential
+negative values infinitely often via simultaneous Diophantine
+approximation.
 
-Ésta es la fuente matemática de la dirección no-RH de `104_56`--`104_69`.
-No debe presentarse el mero hecho de que existan excursiones exponenciales como
-un resultado nuevo.
+This is the mathematical source of the non-RH direction of
+`104_56`--`104_69`. The mere fact that exponential excursions exist
+should not be presented as a new result.
 
-### 3.2 Forma trigonométrica publicada
+### 3.2 Published trigonometric form
 
-Para los coeficientes \(\tau\)-Li
+For the \(\tau\)-Li coefficients
 
 \[
  \lambda_F(n,\tau)
  =\sum_\rho\left[1-\left({\rho\over\rho-\tau}\right)^n\right], \tag{8}
 \]
 
-Bucur et al. prueban que una región libre de ceros equivale, entre otras
-formas, a
+Bucur et al. prove that a zero-free region is equivalent, among other
+forms, to
 
 \[
  \lambda_F(n,\tau)>-c(\delta)e^{\delta n}
- \quad\hbox{para todo }\delta>0,                          \tag{9}
+ \quad\hbox{for every }\delta>0,                          \tag{9}
 \]
 
-y a una condición de radio espectral
+and to a spectral-radius condition
 
 \[
  \limsup_{n\to\infty}|\lambda_F(n+1,\tau)|^{1/n}\le1.    \tag{10}
 \]
 
-Si
+If
 
 \[
  R=\max_\rho\left|{\rho\over\rho-\tau}\right|>1,       \tag{11}
 \]
 
-su ecuación (3.9) contiene el bloque dominante
+their equation (3.9) contains the dominant block
 
 \[
  -2R^n\sum_{j=1}^k\cos(n\phi_j),                         \tag{12}
 \]
 
-más radios estrictamente menores y términos polinómicos. Aplican aproximación
-simultánea para obtener negatividad exponencial infinitas veces. No enuncian
-allí densidad positiva, sindeticidad, el detector Fermi ni las ventanas (1).
+plus strictly smaller radii and polynomial terms. They apply
+simultaneous approximation to obtain exponential negativity infinitely
+often. They do not state there positive density, syndeticity, the Fermi
+detector, or the windows (1).
 
-### 3.3 Qué puede agregar `104_56`
+### 3.3 What `104_56` may add
 
-El paso adicional de `104_56` considera el cierre compacto
+The additional step of `104_56` considers the compact closure
 
 \[
  H=\overline{\{n\alpha:n\in\mathbb Z\}}\subset\mathbb T^k \tag{13}
 \]
 
-y un abierto de nivel regular
+and a regular-level open set
 
 \[
  U_\eta=\left\{x\in H:\sum_{j=1}^k\cos x_j>\eta\right\}. \tag{14}
 \]
 
-La minimalidad da retornos sindéticos; la única ergodicidad y la elección de
-un nivel con frontera de Haar nula dan densidad natural
-\(\mu_H(U_\eta)>0\). Si todos los detalles de ese argumento son correctos,
-éste es el salto potencialmente sustantivo respecto de las fuentes primarias:
+Minimality gives syndetic returns; unique ergodicity and the choice of
+a level with zero Haar boundary give positive natural density
+\(\mu_H(U_\eta)>0\). If every detail of that argument is correct,
+this is the potentially substantive jump relative to the primary
+sources:
 
 \[
  \neg\mathrm{RH}\Longrightarrow
  \lambda_n\le-cR^n
- \quad\hbox{en un conjunto sindético de densidad positiva}. \tag{15}
+ \quad\hbox{on a syndetic set of positive density}. \tag{15}
 \]
 
-Las ventanas (1) y la logística son consecuencias cortas de (15), no una
-nueva demostración del modo exterior.
+Windows (1) and the logistic are short consequences of (15), not a new
+proof of the exterior mode.
 
 ---
 
-## 4. Palojärvi: intervalos finitos, pero no bloques cuadráticos
+## 4. Palojärvi: finite intervals, but not quadratic blocks
 
-Palojärvi usa (8) y produce números explícitos \(N_1,N_2\) tales que la no
-negatividad de \(\Re\lambda_F(n,\tau)\) para
-\(N_1\le n\le N_2\) excluye ceros con
+Palojärvi uses (8) and produces explicit numbers \(N_1,N_2\) such that
+the nonnegativity of \(\Re\lambda_F(n,\tau)\) for
+\(N_1\le n\le N_2\) excludes zeros with
 
 \[
  \left|{\rho\over\rho-\tau}\right|\ge R.                \tag{16}
 \]
 
-También da intervalos explícitos \([n_1,n_2]\) en los que un coeficiente
-negativo fuerza la existencia de un cero en la región exterior estudiada.
-Por tanto es un antecedente directo de **usar varios índices consecutivos**.
+She also gives explicit intervals \([n_1,n_2]\) in which a negative
+coefficient forces the existence of a zero in the studied exterior
+region. She is therefore direct background for **using several
+consecutive indices**.
 
-No duplica (1)--(2): sus extremos dependen de los parámetros de la región
-libre de ceros, el enunciado es finito y computacional, y no aparece una
-familia cofinal de intervalos deterministas cortos ni una suma o producto
-Fermi sobre ellos.
+She does not duplicate (1)--(2): her endpoints depend on the parameters
+of the zero-free region, the statement is finite and computational, and
+no cofinal family of short deterministic intervals nor a Fermi sum or
+product over them appears.
 
 ---
 
-## 5. Bingham--Gashi: la capa log-Cesàro/Abel es clásica
+## 5. Bingham–Gashi: the log-Cesàro/Abel layer is classical
 
-Bingham--Gashi definen el método logarítmico \(\ell\) por
+Bingham–Gashi define the logarithmic method \(\ell\) by
 
 \[
  {1\over\log n}\sum_{i=0}^n{s_i\over i+1}\longrightarrow s, \tag{17}
 \]
 
-y el método logarítmico de Abel \(L\) por
+and the logarithmic Abel method \(L\) by
 
 \[
  {1\over-\log(1-x)}
@@ -233,7 +239,7 @@ y el método logarítmico de Abel \(L\) por
  \qquad(x\uparrow1).                                     \tag{18}
 \]
 
-Introducen además la media logarítmica móvil
+They further introduce the moving logarithmic average
 
 \[
  {1\over\log n}
@@ -241,62 +247,63 @@ Introducen además la media logarítmica móvil
  \longrightarrow(1-\lambda^{-1})s,\qquad\lambda>1,       \tag{19}
 \]
 
-y prueban su equivalencia con \(\ell\), junto con resultados Abelianos y
-Tauberianos. Tomando \(x=e^{-h}\), (18) tiene exactamente el normalizador
-de (5), salvo el corrimiento inofensivo de índices.
+and prove its equivalence with \(\ell\), together with Abelian and
+Tauberian results. Taking \(x=e^{-h}\), (18) has exactly the
+normalizer of (5), up to a harmless index shift.
 
-Para \(0\le a_n\le1\), la equivalencia del **límite cero** usada en
-`104_64` también se obtiene directamente por positividad: la dirección
-Cesàro--Abel es Abeliana y la inversa sigue tomando \(h=1/X\), pues
-\(e^{-hn}\ge e^{-1}\) para \(n\le X\). Por ello no debe reclamarse como
-nuevo el puente (4)--(5).
+For \(0\le a_n\le1\), the equivalence of the **zero limit** used in
+`104_64` is also obtained directly by positivity: the Cesàro–Abel
+direction is Abelian, and the converse follows by taking \(h=1/X\),
+since \(e^{-hn}\ge e^{-1}\) for \(n\le X\). Hence the bridge
+(4)--(5) should not be claimed as new.
 
-La especialización
+The specialization
 
 \[
  s_n=a_n={1\over1+(n+1)e^{\lambda_n}}                    \tag{20}
 \]
 
-y su representación prima--Laguerre regulada no fueron localizadas en las
-fuentes revisadas. Son una aplicación específica, no una extensión de la
-teoría Tauberiana.
+and its regulated prime–Laguerre representation were not located in the
+reviewed sources. They are a specific application, not an extension of
+Tauberian theory.
 
 ---
 
-## 6. Otros criterios promedio adyacentes
+## 6. Other adjacent average criteria
 
-Arias de Reyna usa la normalización de Keiper, en la que los coeficientes de
-Li son \(m\lambda_m^{K}\), y escribe
+Arias de Reyna uses Keiper's normalization, in which the Li coefficients
+are \(m\lambda_m^{K}\), and writes
 
 \[
  \lambda_m^{K}
  ={1\over2}\{\log m+\gamma-\log(2\pi)-1\}+y_m.           \tag{21}
 \]
 
-Prueba
+He proves
 
 \[
  \mathrm{RH}\quad\Longleftrightarrow\quad(y_m)\in\ell^2. \tag{22}
 \]
 
-Esto muestra que condiciones globales sobre toda la sucesión Li ya existen.
-No implica ni contiene el criterio Fermi: (22) mide error cuadrático respecto
-de una asintótica, mientras (4) aplica una no linealidad acotada que satura las
-excursiones negativas.
+This shows global conditions on the whole Li sequence already exist. It
+neither implies nor contains the Fermi criterion: (22) measures
+quadratic error relative to an asymptotic, while (4) applies a bounded
+nonlinearity that saturates the negative excursions.
 
 ---
 
-## 7. Diagonal Euler y producto: alcance correcto
+## 7. Euler diagonal and product: correct scope
 
-La diagonal (3) procede del estimado ya probado en `104_66`--`104_69`
+The diagonal (3) comes from the estimate already proved in
+`104_66`--`104_69`
 
 \[
  |\lambda_{n,\varepsilon}-\lambda_n|
  \le 2Mn\varepsilon r^{-n},\qquad r={199\over200}.        \tag{23}
 \]
 
-Para todos los grados \(n\le X\), elegir \(\varepsilon_X=e^{-X/100}\)
-da
+For all degrees \(n\le X\), choosing \(\varepsilon_X=e^{-X/100}\)
+gives
 
 \[
  \sup_{n\le X}|\lambda_{n,\varepsilon_X}-\lambda_n|
@@ -304,50 +311,52 @@ da
  \qquad \eta={1\over100}-\log{200\over199}>0.            \tag{24}
 \]
 
-En la ventana (1), \(X=L^2+L-1\), y aparece la escala
-\(e^{-cL^2}\). Esta elección hace simultáneamente convergentes las fórmulas
-Euler de una cantidad finita de grados. No añade una nueva implicación sobre
-ceros y no debe anunciarse como criterio independiente.
+In the window (1), \(X=L^2+L-1\), and the scale \(e^{-cL^2}\)
+appears. This choice makes the Euler formulas of a finite number of
+degrees converge simultaneously. It adds no new implication about zeros
+and should not be announced as an independent criterion.
 
-Análogamente, la equivalencia entre suma y producto usa solo
+Similarly, the equivalence between sum and product uses only
 
 \[
  {z\over1+z}\le\log(1+z)\le z\qquad(z\ge0),              \tag{25}
 \]
 
-y la desigualdad de unión
+and the union bound
 
 \[
  1-\sum_{n\in I_L}a_n
  \le\prod_{n\in I_L}(1-a_n)\le1.                        \tag{26}
 \]
 
-La terminología de polímero es útil para conservar los canales aritméticos en
-la fórmula exacta, pero no debe confundirse con una nueva estimación colectiva.
+The polymer terminology is useful for keeping the arithmetic channels
+together in the exact formula, but it should not be confused with a new
+collective estimate.
 
 ---
 
-## 8. Alcance de la búsqueda y lenguaje editorial
+## 8. Search scope and editorial language
 
-Hasta el 26 de julio de 2026 se buscaron en arXiv, revistas y repositorios
-institucionales combinaciones de *Li/Keiper coefficients* con
-*logistic*, *Fermi*, *Fermi--Dirac*, *partition function*, *polymer*,
+Up to the 26th, combinations of *Li/Keiper coefficients* with
+*logistic*, *Fermi*, *Fermi–Dirac*, *partition function*, *polymer*,
 *product criterion*, *syndetic*, *positive density*, *natural density*,
 *logarithmic density*, *arbitrarily long blocks*, *moving blocks*,
-*logarithmic Cesàro*, *logarithmic Abel* y regularizaciones diagonales. Se
-revisaron los textos primarios citados arriba y sus referencias próximas.
+*logarithmic Cesàro*, *logarithmic Abel*, and diagonal regularizations
+were searched on arXiv, journals, and institutional repositories. The
+primary texts cited above and their nearby references were reviewed.
 
-La redacción recomendada para un artículo es:
+The recommended wording for a paper is:
 
-> Partiendo del término exterior dominante conocido de
-> Bombieri--Lagarias y Bucur et al., un argumento de recurrencia en un toro
-> compacto refuerza, aparentemente de forma no registrada en las fuentes
-> revisadas, las excursiones negativas a un conjunto sindético de densidad
-> positiva. Los criterios Fermi, de bloques deterministas, producto finito y
-> diagonal Euler son corolarios y normalizaciones exactas de ese refuerzo.
-> La equivalencia log-Cesàro/Abel es una instancia de sumabilidad clásica.
+> Starting from the known dominant exterior term of
+> Bombieri–Lagarias and Bucur et al., a recurrence argument on a compact
+> torus strengthens, apparently in a way unrecorded in the reviewed
+> sources, the negative excursions to a syndetic set of positive density.
+> The Fermi, deterministic-block, finite-product, and Euler-diagonal
+> criteria are exact corollaries and normalizations of that
+> strengthening. The log-Cesàro/Abel equivalence is an instance of
+> classical summability.
 
-No debe usarse «primer criterio», «nuevo en la literatura» ni una afirmación
-de prioridad basada solo en esta búsqueda. Una reclamación editorial de
-novedad exigiría una búsqueda profesional adicional y consulta a
-especialistas.
+"First criterion," "new in the literature," or a priority claim based
+solely on this search should not be used. An editorial claim of novelty
+would require an additional professional search and consultation with
+specialists.

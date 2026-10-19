@@ -225,7 +225,7 @@ For the weight-one flow \(\vartheta_t=e^{t/2}\overline{\mathbb T}_t\),
 \[
  \boxed{
  \overline\Omega(\vartheta_tu,\vartheta_tv)
- =e^t\overline\Omega(u,v),qquad
+ =e^t\overline\Omega(u,v),\qquad
  \Theta^\dagger+\Theta=I.}                                   \tag{22}
 \]
 

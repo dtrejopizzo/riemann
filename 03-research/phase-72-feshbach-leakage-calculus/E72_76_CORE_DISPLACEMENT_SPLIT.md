@@ -1,7 +1,6 @@
 # E72.76 -- Core/displacement split of the even coborder
 
-**Date:** 2026-07-08.
-**Role:** split the even coborder source into an actual-divisor core and a rank-one-corrected
+**Purpose:** split the even coborder source into an actual-divisor core and a rank-one-corrected
 model/actual displacement source.
 
 ## 0. Source from E72.75

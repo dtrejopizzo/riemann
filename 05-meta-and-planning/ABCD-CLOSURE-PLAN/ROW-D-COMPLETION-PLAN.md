@@ -1,8 +1,7 @@
 # Row D completion plan — phases 139–143
 
-*Lead: Fable 5.1. Date 2026-09-13. Owner's brief: complete row D (the sign); new mathematics is required,
-little can be reused from outside; one builder agent and one hostile arbiter per round, both directed by
-the lead; every idea checked against the corpus before it is built (`CORPUS_CHECK_ROW_D_PLAN.md`).*
+*Brief: complete row D (the sign); new mathematics is required,
+little can be reused from outside; one construction memo and one adversarial audit per round; every idea checked against the corpus before it is built (`CORPUS_CHECK_ROW_D_PLAN.md`).*
 
 ## 0. Where we stand (from `R138_005`, the ASCII map)
 
@@ -90,18 +89,18 @@ Enter all corrections of record (P46-1…P46-4 and later), the method theorems T
 frame, and the outcome of 142. Label row D by the grep-verified record.
 
 ## 2. Rules for every phase
-1. Corpus check file before the blueprint; builder report has a "Corpus check" section per idea.
-2. Builder + hostile auditor per round; lead audit of record; repairs by construction; no relabeling.
+1. Corpus check file before the blueprint; construction memo has a "Corpus check" section per idea.
+2. Construction memo and adversarial audit per round; final audit of record; repairs by construction; no relabeling.
 3. Three falsifiers, always run: `Ξ_a` (non-equimodular polar block), Epstein `Z_Q` (no Euler product),
    and the `ζ_K` non-distinction test (a proof that distinguishes `Q` from `K` is suspect unless it names
    the distinguishing property).
 4. Nothing defined through zero locations; `ξ`, `ξ_K`, `Λ_Q` admissible as data.
 5. Numerics only to certify a constant, with a stated robustness margin.
 6. A statement that with Paper 46 Thm 3.7 would prove RH or ¬RH is FATAL: flag, do not fix.
-7. Each phase ends with a lead closing decision, PLAN.md paragraph, memory update.
+7. Each phase ends with a closing decision, PLAN.md paragraph, memory update.
 
 ## 3. What would count as completing row D
 A function `h⁰` (or an equivalent structure) on the field-uniform frame satisfying (a), (b′), (c) of
 Theorem 12.3 for every number field, whose construction uses the Euler product essentially (fails for
-Epstein) and the polar block's equimodularity (fails for `Ξ_a`), audited by the hostile arbiter, with the
+Epstein) and the polar block's equimodularity (fails for `Ξ_a`), audited by the adversarial arbiter, with the
 transfer theorem giving the sign. Anything less is labelled for what it is.

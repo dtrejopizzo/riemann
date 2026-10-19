@@ -1,6 +1,6 @@
-# R153.006 — Lead blueprint, round 3 (owner: same phase, two tracks). Date 2026-09-19.
+# R153.006 — Blueprint, round 3 (same phase, two tracks).
 
-Corpus check (lead, Explore sweep): no file treats a single off-line pair `½ ± a + iγ` with `γ ≠ 0`; all off-line studies
+Corpus check (review, Explore sweep): no file treats a single off-line pair `½ ± a + iγ` with `γ ≠ 0`; all off-line studies
 use `Ξ_a(s) = ξ(s+a)ξ(s−a)` (phases 119–124, 137–138, 153). DH retired (no pole). The bound
 "`λ_min(A_T) ≥ −Ce^{aT} ⟺ β ≤ (1+a)/2`" is NOT in the corpus in this form: prove or cite before use.
 

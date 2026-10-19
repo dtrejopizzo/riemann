@@ -1,18 +1,18 @@
 """
-PASO CONSTRUCTIVO HACIA EL CIERRE de 2.3.F-Loc (RH-neutral por R1: G_lambda >= 0 incondicional).
+CONSTRUCTIVE STEP TOWARD CLOSING 2.3.F-Loc (RH-neutral by R1: G_lambda >= 0 unconditional).
 
-Tesis: la escalera (k+1)^2 es el BORDE DE BANDA de la Jacobi intrinseca PERIOD-2 de G_lambda,
-y depende SOLO de los coeficientes PROMEDIADOS (Cesaro), no de sus fluctuaciones. Si al suavizar
-los coeficientes de Lanczos la escalera SOBREVIVE => la convergencia Cesaro/PNT basta =>
-2.3.F-Loc demostrado (incondicional), la fluctuacion aritmetica es irrelevante por construccion.
+Thesis: the (k+1)^2 ladder is the BAND EDGE of the intrinsic PERIOD-2 Jacobi of G_lambda,
+and depends ONLY on the AVERAGED (Cesaro) coefficients, not on their fluctuations. If, upon
+smoothing the Lanczos coefficients, the ladder SURVIVES => Cesaro/PNT convergence suffices =>
+2.3.F-Loc proved (unconditional), the arithmetic fluctuation is irrelevant by construction.
 
-Tres tests:
-  (T1) Lanczos exacto sobre A reproduce la escalera (k+1)^2 [confirmacion N1].
-  (T2) SUAVIZAR los coeficientes (separar paridades, promediar) y recomputar el espectro:
-       si los ratios siguen ~ (k+1)^2 => la escalera vive en el PROMEDIO.
-  (T3) Jacobi period-2 LIMITE (alpha_par_inf, alpha_impar_inf, beta_inf constantes del bulk)
-       sobre cadena finita con extremos Dirichlet: borde de banda => ratios (k+1)^2 predichos
-       desde el simbolo PROMEDIADO unicamente.
+Three tests:
+  (T1) exact Lanczos on A reproduces the (k+1)^2 ladder [N1 confirmation].
+  (T2) SMOOTH the coefficients (separate parities, average) and recompute the spectrum:
+       if the ratios still go ~ (k+1)^2 => the ladder lives in the AVERAGE.
+  (T3) LIMIT period-2 Jacobi (alpha_even_inf, alpha_odd_inf, beta_inf bulk constants)
+       on a finite chain with Dirichlet ends: band edge => (k+1)^2 ratios predicted
+       from the AVERAGED symbol alone.
 """
 import sys, numpy as np, mpmath as mp
 from engine_cache import get_matrices
@@ -48,19 +48,19 @@ def jac_eigs(alpha, beta):
 
 
 def ratios6(ev):
-    """ratio ABSOLUTO ev_k/ev_0 (= (k+1)^2 solo si ev_0 es el fondo de banda ~0)."""
+    """ABSOLUTE ratio ev_k/ev_0 (= (k+1)^2 only if ev_0 is the band bottom ~0)."""
     return [ev[k] / ev[0] for k in range(min(6, len(ev)))]
 
 
 def shifted_ratios6(ev):
-    """ratio DESPLAZADO de Doob (ev_k-ev_0)/(ev_1-ev_0) -> k(k+2): el SHAPE de borde de banda,
-    RH-neutral (R1), independiente de donde este el fondo de banda. target [0,1,2.667,5,8,11.667]."""
+    """Doob SHIFTED ratio (ev_k-ev_0)/(ev_1-ev_0) -> k(k+2): the band-edge SHAPE,
+    RH-neutral (R1), independent of where the band bottom lies. target [0,1,2.667,5,8,11.667]."""
     g = ev[1] - ev[0]
     return [(ev[k] - ev[0]) / g for k in range(min(6, len(ev)))]
 
 
 def parity_smooth(seq):
-    """separa subsecuencias par/impar, las suaviza (running mean 3) y reintercala = Cesaro period-2."""
+    """separates even/odd subsequences, smooths them (running mean 3) and reinterleaves = Cesaro period-2."""
     s = np.array(seq, dtype=float)
     out = s.copy()
     for par in (0, 1):
@@ -76,9 +76,9 @@ def parity_smooth(seq):
 
 
 def period2_limit_ladder(alpha, beta, M):
-    """Jacobi period-2 LIMITE: medias del bulk de las dos paridades, cadena de largo M, Dirichlet."""
+    """LIMIT period-2 Jacobi: bulk averages of the two parities, chain of length M, Dirichlet."""
     a = np.array(alpha); b = np.array(beta)
-    # bulk: descartar bordes (primeros/ultimos 2)
+    # bulk: discard edges (first/last 2)
     ae = np.mean(a[2:-2:2]) if len(a) > 6 else np.mean(a[0::2])
     ao = np.mean(a[3:-2:2]) if len(a) > 6 else np.mean(a[1::2])
     bb = np.mean(b[2:-2]) if len(b) > 6 else np.mean(b)
@@ -95,27 +95,27 @@ def run(lam, N):
     alpha, beta = lanczos(A, q0, n)
     print(f"\n{'='*72}\nlam={lam} N={N} (dim={n}, {len(alpha)} coef)")
     TGT = [0, 1, 2.667, 5, 8, 11.667]
-    # BOUNDEDNESS uniforme en lambda (eslabon critico de RH-neutralidad):
+    # uniform BOUNDEDNESS in lambda (critical link of RH-neutrality):
     maxA = max(abs(float(A[i, j])) for i in range(n) for j in range(n))
     print(f"  (B0) max|alpha|={max(abs(x) for x in alpha):.3f}  max|beta|={max(abs(x) for x in beta):.3f}  "
-          f"max|A_ij|={maxA:.3f}  (deben quedar O(1), NO crecer con lambda)")
+          f"max|A_ij|={maxA:.3f}  (must stay O(1), NOT grow with lambda)")
     ev = jac_eigs(alpha, beta)
-    print(f"  target k(k+2) desplazado:           [0, 1, 2.667, 5, 8, 11.667]")
-    print(f"  (T1) Lanczos exacto    SHIFT = {[round(r,3) for r in shifted_ratios6(ev)]}")
-    # T2: suavizado Cesaro period-2
+    print(f"  shifted k(k+2) target:           [0, 1, 2.667, 5, 8, 11.667]")
+    print(f"  (T1) exact Lanczos    SHIFT = {[round(r,3) for r in shifted_ratios6(ev)]}")
+    # T2: period-2 Cesaro smoothing
     a_s = parity_smooth(alpha); b_s = parity_smooth(beta)
     ev_s = jac_eigs(a_s, b_s)
     sr = shifted_ratios6(ev_s)
-    print(f"  (T2) Jacobi SUAVIZADA   SHIFT = {[round(r,3) for r in sr]}  "
-          f"=> {'SHAPE SOBREVIVE' if abs(sr[2]-2.667)<0.6 and abs(sr[3]-5)<1.2 else 'rota'}")
-    # T3: period-2 limite (shape de borde de banda desde coeficientes PROMEDIADOS solamente)
+    print(f"  (T2) SMOOTHED Jacobi   SHIFT = {[round(r,3) for r in sr]}  "
+          f"=> {'SHAPE SURVIVES' if abs(sr[2]-2.667)<0.6 and abs(sr[3]-5)<1.2 else 'breaks'}")
+    # T3: limit period-2 (band-edge shape from AVERAGED coefficients only)
     a = np.array(alpha); b = np.array(beta)
     ae = np.mean(a[2:-2:2]); ao = np.mean(a[3:-2:2]); bb = np.mean(b[2:-2])
     al = [ae if i % 2 == 0 else ao for i in range(n)]; be = [bb] * (n - 1)
     ev3 = jac_eigs(al, be); sr3 = shifted_ratios6(ev3)
-    print(f"  (T3) period-2 LIMITE    SHIFT = {[round(r,3) for r in sr3]}  "
-          f"(a_par={ae:.3f} a_impar={ao:.3f} b={bb:.3f}) "
-          f"=> {'SHAPE de borde de banda' if abs(sr3[2]-2.667)<0.7 else 'colapsa'}")
+    print(f"  (T3) LIMIT period-2    SHIFT = {[round(r,3) for r in sr3]}  "
+          f"(a_even={ae:.3f} a_odd={ao:.3f} b={bb:.3f}) "
+          f"=> {'band-edge SHAPE' if abs(sr3[2]-2.667)<0.7 else 'collapses'}")
     return shifted_ratios6(ev), sr, sr3
 
 
@@ -123,6 +123,6 @@ if __name__ == '__main__':
     lams = [(9.0, 16), (13.0, 18), (17.0, 20)]
     if len(sys.argv) > 1:
         lams = eval(sys.argv[1])
-    print("E85 — la escalera (k+1)^2 como BORDE DE BANDA de la Jacobi promediada (Cesaro/PNT)")
+    print("E85 — the (k+1)^2 ladder as the BAND EDGE of the averaged Jacobi (Cesaro/PNT)")
     for lam, N in lams:
         run(lam, N)

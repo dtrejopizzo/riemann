@@ -150,8 +150,8 @@ being inferred merely from positivity of the function for \(u\geq0\).
 It has the following direct finite-difference proof.  If
 
 \[
- n=\prod_{i=1}^r p_i^{a_i},qquad
- x=\log n,qquad h_i=\log p_i,
+ n=\prod_{i=1}^r p_i^{a_i},\qquad
+ x=\log n,\qquad h_i=\log p_i,
 \]
 
 then
@@ -203,7 +203,7 @@ positive Jordan cocycles.
 Put
 
 \[
- E=M_\eta,\qquad M=E^2=M_{\eta^2},qquad 0<M<I.
+ E=M_\eta,\qquad M=E^2=M_{\eta^2},\qquad 0<M<I.
  \tag{12}
 \]
 
@@ -353,13 +353,13 @@ and
 Again, (24) is a contraction in the wrong direction.  The scalar data
 
 \[
- A=1,qquad U=\sqrt3,qquad z=1,qquad\delta=\frac12
+ A=1,\qquad U=\sqrt3,\qquad z=1,\qquad\delta=\frac12
 \]
 
 satisfy every resolvent contraction above, while
 
 \[
- B=3,qquad G=(1+B)^{-1}=\frac14<\frac12=\delta.     \tag{25}
+ B=3,\qquad G=(1+B)^{-1}=\frac14<\frac12=\delta.     \tag{25}
 \]
 
 Thus the missing comparison with \(\delta\) is not contained in resolvent

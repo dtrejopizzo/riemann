@@ -1,6 +1,6 @@
 # Phase 63 — The MW-5 Realization Frontier: the missing Lefschetz operator
 
-**Status:** open · no proof reached · started 2026-06-26 · road chosen by David after Phase 62 closed.
+**Status:** open · no proof reached · started · road chosen by David after Phase 62 closed.
 
 ## Where we are
 

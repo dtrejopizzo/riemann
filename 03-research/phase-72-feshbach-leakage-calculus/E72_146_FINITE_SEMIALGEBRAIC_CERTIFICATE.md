@@ -1,7 +1,6 @@
 # E72.146 -- Finite semialgebraic certificate for scalar WRL
 
-**Date:** 2026-07-09.
-**Role:** state the current Phase 72 endpoint as one explicit finite certificate.
+**Purpose:** state the current Phase 72 endpoint as one explicit finite certificate.
 
 ## 0. Data
 

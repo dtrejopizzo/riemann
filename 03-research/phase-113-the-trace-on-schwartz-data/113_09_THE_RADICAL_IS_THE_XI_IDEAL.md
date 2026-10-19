@@ -149,7 +149,7 @@ $\widehat f/(s-\rho)^{k}$ — upgrades this to order $m_\rho$. $\square$
 > vanishing there — it never locates a zero, never assumes anything about
 > $\mathrm{Re}\,\rho$, and would read identically if RH were false. The
 > inclusion ($\supseteq$), which is the direction all later files use, mentions
-> no zero at all. Reviewers who wish to hold the rule at its strictest may read
+> no zero at all. Readers who wish to hold the rule at its strictest may read
 > Theorem 2.2 as the inclusion ($\supseteq$) plus the polar half of
 > ($\subseteq$), both of which are zero-free, and treat the zero-slot half as
 > conditional; nothing else in this file or in 113_10–113_14 changes.

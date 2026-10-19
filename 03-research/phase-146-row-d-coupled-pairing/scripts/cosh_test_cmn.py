@@ -2,7 +2,7 @@
 """R146 / D.45.2 -- the cosh test (Lemma D.31.4) on the would-be sum classes c_{m,n},
 plus the D.44.1 rank-2 would-be norm form and the D.45.1 indefiniteness witness.
 
-Objects (all defined in R146_001_BUILDER_ROUND1.md):
+Objects (all defined in R146_001_ROUND1.md):
   L(m,n)   = min(m,n)*Lambda(max/min)   if max/min is a prime power, else 0   (un-normalized
              off-diagonal Gram entry of Paper 44 Thm 8bis.1 = "deg(Frob_m - Frob_n)")
   G(m,n)   = (m + n - L(m,n))/2         (the would-be trace pairing)

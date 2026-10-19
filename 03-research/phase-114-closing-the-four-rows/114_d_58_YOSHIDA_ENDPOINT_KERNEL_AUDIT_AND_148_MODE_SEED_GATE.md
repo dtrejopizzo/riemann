@@ -39,7 +39,7 @@ The truncated Yoshida statement, as quoted and used by Connes--Consani, is
 Writing
 
 \[
- f=g*g^*,qquad
+ f=g*g^*,\qquad
  \mathrm{supp}\,g\subset[2^{-1/2},2^{1/2}],           \tag{2.2}
 \]
 
@@ -63,7 +63,7 @@ primitive condition.  There is no central zero in (2.1)--(2.3).
 By contrast, Connes--Consani, arXiv:2006.13771, Theorem 1, assumes
 
 \[
- \widehat g(i/2)=0,qquad\widehat g(0)=0                   \tag{2.5}
+ \widehat g(i/2)=0,\qquad\widehat g(0)=0                   \tag{2.5}
 \]
 
 and proves
@@ -194,7 +194,7 @@ rigorous interval computation of at most 148 modes must establish
  S_{2,o}&\leq-\gamma_2 I,\\
  Q_vS_{2,e}Q_v&\leq-\gamma_2 Q_v,\\
  \sigma_{2,e}&\geq\gamma_2,\\
- g_{2,e}&\geq\gamma_2,qquad g_{2,o}\leq-\gamma_2
+ g_{2,e}&\geq\gamma_2,\qquad g_{2,o}\leq-\gamma_2
  \end{aligned}                                             \tag{5.1}
 \]
 

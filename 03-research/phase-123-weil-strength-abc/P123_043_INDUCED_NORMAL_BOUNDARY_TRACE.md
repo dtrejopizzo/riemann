@@ -1,6 +1,6 @@
 # P123.043 — Induced normal boundary action and its relative character
 
-Date: 2026-09-05. Status: PROVED for the single-zero finite-place
+Status: PROVED for the single-zero finite-place
 normal model. This couples P123.041 and P123.042 in one representation
 of the external convolution algebra. Global localization is still open.
 

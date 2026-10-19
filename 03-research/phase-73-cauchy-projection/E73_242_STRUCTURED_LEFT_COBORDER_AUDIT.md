@@ -1,6 +1,5 @@
 # E73.242 - Structured left-coborder audit for the transverse residual
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

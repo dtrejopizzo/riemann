@@ -1,4 +1,4 @@
-"""Lead independent check (phase 135): the canonical class K with Phi_K = xi.
+"""Independent check (phase 135): the canonical class K with Phi_K = xi.
 
 Conventions: Phi_g(s) = int g(t) e^{(s-1/2)t} dt.  Want Phi_K(s) = xi(s), so
 Phi_K(1/2+i tau) = int K(t) e^{i tau t} dt = Xi(tau) := xi(1/2 + i tau).

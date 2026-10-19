@@ -1,6 +1,6 @@
 # E77.1b - Attribution envelopes
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Statement
 

@@ -1,6 +1,6 @@
 # E78.81 - The weighted normalized shell derivative decreases across the audited safe sigma slices
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

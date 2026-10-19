@@ -1,6 +1,5 @@
 # E73.270 - Loewner displacement audit for the master scalar
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

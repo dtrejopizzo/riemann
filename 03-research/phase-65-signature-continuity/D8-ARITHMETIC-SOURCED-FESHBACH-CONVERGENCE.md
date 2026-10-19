@@ -1,6 +1,6 @@
 # D8 — Arithmetic sourced Feshbach convergence (the decisive deliverable)
 
-**Phase 65 / Signature-Continuity Package, deliverable D8.** Pure mathematics. This is the whole
+**Phase 65 / Signature-Continuity Package, deliverable D8.** This is the whole
 mathematical burden of the package: upgrade the *scalar* convergence G3 ($D_P^\circ\to\Xi$) to *sourced,
 pole-shorted kernel* convergence. We structure it into Connes/Consani's seven subclaims, **prove the five
 that are genuinely provable from G3+G4 + the machinery D2–D7**, and **isolate with full candor the one

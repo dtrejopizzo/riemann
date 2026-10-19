@@ -1,6 +1,5 @@
 # E73.205 - Bordered eigenline conditioning audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

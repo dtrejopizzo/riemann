@@ -1,6 +1,6 @@
 # CORPUS_CHECK_R145 — prior art audit before building the function-field model of row D
 
-*Purpose: before building a function-field model of the row-D frame (`R145_000_LEAD_BLUEPRINT.md`), locate
+*Purpose: before building a function-field model of the row-D frame (`R145_000_BLUEPRINT.md`), locate
 everything already built or attempted along these lines. One section per requested item. Classification:
 `NEW` (nothing prior, build freely), `TRIED–PROVED` (already established, reuse), `TRIED–PARTIAL`
 (attempted, partial result, reuse the partial and extend), `TRIED–NO-GO` (attempted and refuted/blocked,
@@ -19,7 +19,7 @@ D^W, I_∞, 𝓝, Frob_n, Sh_Z) over F_q in one place:
 * **Phase 63 (Lefschetz realization) — the sharpest prior result.** Built the F_q control directly: for a
   real elliptic curve `E/F_q`, Frobenius is `J`-linear (`[F,J]=0` exactly) and a similitude of a
   positive-definite, gapped polarization, `|eig|=√q` exact (machine precision). Contrasted against ζ's
-  window, where the analogous scaling operator anti-commutes with `J` (ratio exactly 2.000) and the
+  window, where the analogous scaling operator anti-commutes with `J` (ratio exactly 2.000) and the **[scope note per R158_004: only for the phase-63 `J` (= σ × Hilbert-transform factor); no theorem extends this beyond that `J`.]**
   polarization is gapless.
   - `03-research/phase-63-lefschetz-realization/R3-VERDICT.md:1,25,33`: *"R3 verdict — F_q positive control:
     the contrast is exact, MW-5 made precise"*; table: `F_q curve (Frobenius) | commutes (linear) | PD,
@@ -68,13 +68,13 @@ D^W, I_∞, 𝓝, Frob_n, Sh_Z) over F_q in one place:
     at phase 122, only the requirement was stated. Build fresh per the blueprint.
 
 * **Phase 15, M3-attempt5/6** — early (pre-frame) elliptic-curve height/Frobenius sketches; superseded by
-  phase 63's exact computation. `03-research/phase-15/M3-attempt5-arithmetic-hodge-index-exists.md:11`:
+  phase 63's exact computation. `03-research/phase-15-arithmetic-hodge-index/M3-attempt5-arithmetic-hodge-index-exists.md:11`:
   *"Attempts 1–4 ... repeatedly said: 'in function fields the Hodge index is a general theorem'"* — a
   restatement, not a construction. **Do not reopen**; phase 63 supersedes it.
 
 * **Phase 25, Mechanism 11 audit** — classical statement of the Weil proof via Castelnuovo–Severi on `C×C`,
   and the explicit statement of the wall: *"The function field proof requires the FINITENESS of F_q, which
-  has no analogue over ℤ."* (`03-research/phase-25/01-audit-classical.md:142,146`). **Reuse** as the
+  has no analogue over ℤ."* (`03-research/phase-25-lower-bounds-bj-audit/01-audit-classical.md:142,146`). **Reuse** as the
   one-paragraph statement of why the geometric proof is qualitative and does not transport.
 
 No prior document builds `Frob_n`, `Sh_Z`, `T`, the Tate symbol, or `I_∞` *together* in the F_q setting in
@@ -91,7 +91,7 @@ side; the *function-field* side of the same comparison is exactly what D.41 item
 
 This is the freshest and most decisive material in the corpus — it is the direct genesis of phase 145.
 
-* `03-research/phase-144-row-d-fixed-index/R144_004_HOSTILE_CONFIRMATION.md:93-98` (hostile-confirmed):
+* `03-research/phase-144-row-d-fixed-index/R144_004_CONFIRMATION.md:93-98` (confirmed):
   *"the frame 'keeps the intersection theory of C×C and discards its linear systems', and on a curve over
   F_q the linear systems are present and Riemann–Roch is a theorem, so the near-certain outcome of (β) is
   that the frame defect theorem **fails** there ... (β)'s value is not the yes/no, it is that the comparison
@@ -105,12 +105,12 @@ This is the freshest and most decisive material in the corpus — it is the dire
   over F_q and check whether there the frame defect theorem holds too... Predicted answer: on a curve
   Riemann–Roch is a theorem, so the frame defect theorem will fail there."*
 
-* `03-research/phase-142-row-d-the-clause/R142_003_BUILDER_ROUND2.md:106,229` and
-  `R142_002_HOSTILE_AUDIT.md:302`: same diagnosis — *"discards its linear systems — it supplies far too
+* `03-research/phase-142-row-d-the-clause/R142_003_ROUND2.md:106,229` and
+  `R142_002_AUDIT.md:302`: same diagnosis — *"discards its linear systems — it supplies far too
   few effective classes (radial, pointwise ...)"*; *"D.32.2 diagnosis: moment cone vs positive cone; 'the
   frame keeps the intersection theory and discards the linear systems'."*
 
-* `04-papers/46-row-d-the-sign/main.md:2695` (§D.32): same sentence, paper-facing.
+* `04-papers/46-intersection-frame-defect/archive/main.md:2695` (§D.32): same sentence, paper-facing.
 
 * `03-research/phase-113-the-trace-on-schwartz-data/113_11_THE_SECTION_FUNCTOR_AND_WHY_IT_CANNOT_LIVE_IN_D.md`
   — title alone states the negative result for the *arithmetic* sections functor (read in full below,
@@ -129,12 +129,12 @@ function-field computation of the analogous `s_C` is compared. Do **not** re-der
 
 Searched `03-research/phase-41*` and neighboring phases; no file literally named "Doc 125" with a tropical
 toy model was found under that exact numbering in the current tree (phase-41 in the corpus concerns a
-different topic — the numbering in the prompt may refer to material later renumbered or absorbed). The
+different topic — the numbering cited may refer to material later renumbered or absorbed). The
 corpus's actual toy-model/sign-definite-Hodge-index material that plays this role is:
 
 * **The Connes–Deninger "geometric" foliated space over `E/F_q`** (phase 43), which *is* a literal
   toy model with a sign-definite Kähler metric, and whose non-transport obstruction is recorded precisely:
-  - `03-research/phase-43-hodge-foliated-specZ/130-test-circularidad-deninger.md:22,66,82`:
+  - `03-research/phase-43-hodge-foliated-specZ/130-circularity-to-destruction-test-of-deninger-s.md:22,66,82`:
     *"En el único caso aritmético realizado (math/0204194, curva elíptica), la métrica que hace al espacio
     Kähler–Riemann USA el teorema de Hasse |ξ|²=q como INPUT."* Verbatim source quote: *"According to a
     theorem of Hasse — the Riemann conjecture for elliptic curves over function fields — we have |ξ|²=q."*
@@ -178,7 +178,7 @@ itself to transport (already proved impossible, NG-63, `NO-GO-LIST.md:377-391`).
     needs.
 
 * **Phase-33 docs 74, 80 (Castelnuovo–Severi aritmético)** — not found under those exact numbers in
-  `phase-33-dbn/`; the phase-33 directory's contents (`70-dbn-flujo-traza-ccm.md`, etc.) are DBN-flow /
+  `phase-33-dbn/`; the phase-33 directory's contents (`70-de-bruijn-newman-and-the-ccm-trace.md`, etc.) are DBN-flow /
   trace material, unrelated to a Castelnuovo–Severi arithmetic analogue. **No hit** — treat as `NEW`
   territory if such an arithmetic Castelnuovo–Severi statement is wanted; nothing to reuse or avoid.
 
@@ -188,14 +188,14 @@ itself to transport (already proved impossible, NG-63, `NO-GO-LIST.md:377-391`).
   `107_146_cc_absolute_dimension_lib.py`) concerns Connes–Consani's absolute dimension and a local-Néron
   no-go; relevant to item 5, not item 3/4. **No doc 241 found** — likely a mislabeled reference.
 
-* **Phase-39 docs 119-120** — `03-research/phase-39-G1G2-interface/120-inventario-CC-fuente.md` exists and
+* **Phase-39 docs 119-120** — `03-research/phase-39-G1G2-interface/120-source-inventory-of-the-connes-consani-moscovici.md` exists and
   is highly relevant (a full inventory of the Connes–Consani source material, including the
   Pontryagin-duality construction for function fields):
-  - `03-research/phase-39-G1G2-interface/120-inventario-CC-fuente.md:267`: cites the abstract noting *"...
+  - `03-research/phase-39-G1G2-interface/120-source-inventory-of-the-connes-consani-moscovici.md:267`: cites the abstract noting *"...
     including the use of Pontryagin duality... construction for function fields"*.
-  - `119-*` not found by that exact name in phase-39; `121-analisis-gaps.md` is the paired gap-analysis
+  - `119-*` not found by that exact name in phase-39; `121-gap-analysis-the-cc-machinery-measured-against.md` is the paired gap-analysis
     file and should be read alongside 120 if phase 146 needs the CC dictionary in more depth.
-  - Recommendation: **reuse** `120-inventario-CC-fuente.md` as the indexed source list for item 5 below
+  - Recommendation: **reuse** `120-source-inventory-of-the-connes-consani-moscovici.md` as the indexed source list for item 5 below
     rather than re-extracting 2205.01391/2006.13771 from scratch.
 
 ---
@@ -203,7 +203,7 @@ itself to transport (already proved impossible, NG-63, `NO-GO-LIST.md:377-391`).
 ## 5. Connes–Consani, "Riemann–Roch for Spec Z̄" (2205.01391), and the row-D comparison
 
 **Status: TRIED–PARTIAL (fully catalogued and compared at the level of growth/statement; the actual
-row-D effective-cone comparison the prompt asks about was explicitly NOT done — recorded as a gap).**
+row-D effective-cone comparison asked about was explicitly NOT done — recorded as a gap).**
 
 * **`03-research/phase-136-row-d-map/MAP_5_LITERATURE_VS_CORPUS.md:12`** — the decisive line-item table
   entry, quoted in full:
@@ -234,14 +234,14 @@ row-D effective-cone comparison the prompt asks about was explicitly NOT done �
   there is **no, and here is why it fails structurally** (read this file in full before phase-146's item
   [Z] search — it is the direct predecessor of D.42).
 
-* **`03-research/phase-136-row-d-map/LEAD_NOTE_OFF_THE_PAGE_CANDIDATES.md:10,26,29,44,61`** — proposes CC's
+* **`03-research/phase-136-row-d-map/NOTE_OFF_THE_PAGE_CANDIDATES.md:10,26,29,44,61`** — proposes CC's
   `dim_S H⁰(D)` (linear in `deg D`) as a candidate `h⁰` for the row-D frame and immediately flags the open
   gate: *"S-module with dim_S finite. (If not definable: dead.)"* — i.e. the comparison was **proposed**,
   not completed; this is a live candidate thread, not a closed one.
 
 **Recommendation:** for D.42 ("naming the ingredient [Z]"), **reuse**
 `113_11_THE_SECTION_FUNCTOR_AND_WHY_IT_CANNOT_LIVE_IN_D.md` (the structural no-go for an arithmetic sections
-functor) and `LEAD_NOTE_OFF_THE_PAGE_CANDIDATES.md` (the still-open CC-`dim_S` candidate) as the two
+functor) and `NOTE_OFF_THE_PAGE_CANDIDATES.md` (the still-open CC-`dim_S` candidate) as the two
 bookends of the arithmetic-side search; do not re-derive CC's dim_S formulas — cite
 `114_d3_02_R16_LINEAR_AND_QUADRATIC_CHI.md`. **Build fresh** only the function-field-side `h⁰_C` computation
 of D.41.5, which has no precedent.
@@ -250,23 +250,23 @@ of D.41.5, which has no precedent.
 
 ## 6. A different pairing than I_∞ on the same carrier (coupled/cross-term/dominating form)
 
-**Status: TRIED–PARTIAL, with a precise, hostile-confirmed statement of what is unpaid — directly relevant
+**Status: TRIED–PARTIAL, with a precise, confirmed statement of what is unpaid — directly relevant
 to option (α), which phase 145 is explicitly deferring to phase 146.**
 
 * **Phase 137 (row-D canonical coupling) is the corpus's one real attempt at a coupled/cross-term pairing.**
-  `03-research/phase-137-row-d-canonical-coupling/R137_000_LEAD_BLUEPRINT.md:14` (D.12/S2) defines exactly
+  `03-research/phase-137-row-d-canonical-coupling/R137_000_BLUEPRINT.md:14` (D.12/S2) defines exactly
   a semilocal coupled form:
   > `W_S(F) := Σ_{v∈S} ⟨F⋆F^∨, W_v⟩ − 2Φ_F(0)Φ_F(1)` ... "(iii) the first S and T where positivity is not
   > provable by these means, and what exactly is unpaid (**the cross term prime×archimedean**)."
 
-  Outcome, per `R137_001_BUILDER_ROUND1.md:479` (quoted verbatim): the archimedean-only part is positive up
+  Outcome, per `R137_001_ROUND1.md:479` (quoted verbatim): the archimedean-only part is positive up
   to `T ≤ log 2` (Connes–Consani 2006.13771 and phase-118's own `T ≤ log 2` bound), and beyond `S = {∞,2}`
   the cross term prime × archimedean is explicitly the **unpaid** piece — no proof, no refutation delivered
-  in the round; `R137_005_BUILDER_ROUND3.md` closes the phase on a different sub-question (the `h⁰_Z(mK)`
+  in the round; `R137_005_ROUND3.md` closes the phase on a different sub-question (the `h⁰_Z(mK)`
   growth bootstrap, N1–N7) without resolving the cross-term positivity.
 
 * **`05-meta-and-planning/ABCD-CLOSURE-PLAN/ROW-D-SYNTHESIS-PHASES-135-144.md`, §3(α)** (post-137,
-  post-144, the most current statement of this exact idea, explicitly the one the prompt's item 6
+  post-144, the most current statement of this exact idea, explicitly the one item 6
   describes): 
   > *"the alternative is a different pairing J on the same carrier with `J ≥ I_∞` on `P^W` and `J ≤ 0`
   > provable there... Nothing in the corpus has attempted a pairing `I_∞^(coupled) := I_∞^prime + I_∞^arch`
@@ -278,7 +278,7 @@ to option (α), which phase 145 is explicitly deferring to phase 146.**
   one. This is a load-bearing correction: any future write-up of option α must state the inequality with
   this sign, not the naively "obvious" one.
 
-* **Frobenius Gram as a pairing** — `03-research/phase-141-row-d-frobenius-traces/R141_000_LEAD_BLUEPRINT.md:67`:
+* **Frobenius Gram as a pairing** — `03-research/phase-141-row-d-frobenius-traces/R141_000_BLUEPRINT.md:67`:
   *"The interaction with 8bis.4a: `C_{mn} = ` Paper 44's Frobenius Gram entries is the arithmetically..."*
   — records that the Frobenius Gram matrix `C_mn` (Paper 44 Thm 8bis.4a) is available as raw material for
   exactly this cross term, but phase 141 did not turn it into a coupled pairing with a proved sign; it
@@ -293,7 +293,7 @@ to option (α), which phase 145 is explicitly deferring to phase 146.**
   showing "coupled pairing" is a recurring but so-far-unclosed idea across the corpus.
 
 **Recommendation:** **do not reopen** phase 137's `W_S` positivity question inside phase 145 (it belongs to
-option α / phase 146, and is explicitly deferred by the owner's decision recorded in `R145_000`). **Reuse**:
+option α / phase 146, and is explicitly deferred by the decision recorded in `R145_000`). **Reuse**:
 (i) the corrected sign requirement (`J ≥ I_∞`, `J ≤ 0` provable) from the synthesis; (ii) the named
 unpaid cross term (prime × archimedean, `T > log 2`, `S ⊇ {∞,2}`) as the concrete open target for phase 146;
 (iii) Paper 44's Frobenius Gram `C_mn` as the candidate raw material for that cross term, still unassembled
@@ -308,12 +308,12 @@ into a pairing.
 | 1 | Objects over F_q / function field | TRIED–PARTIAL | phase-63 R3-VERDICT, phase-125 A125.009, phase-119 weil_case.py, phase-122 P122.007/PLAN/D_SPEC | Reuse Frobenius/polarization (63), dictionary template + gap (125), Weil-number generator (119); build the rest fresh per R145_000 |
 | 2 | Effective cone vs sections/linear systems on C×C | TRIED–PROVED (arithmetic side) | R144_004, ROW-D-SYNTHESIS §1–3, R142_003/002, Paper 46 §D.32, phase-113 doc 11 | Import `s₁=0.99846<1` and the diagnosis verbatim; build only the F_q-side `s_C` computation |
 | 3 | Tropical/toy sign-definite Hodge index (Doc 125) | TRIED–NO-GO (obstruction named; exact "Doc 125" not located, nearest analogues are Deninger toy model and phase-63 F_q control) | phase-43 doc 130 (Deninger/Hasse-circularity), phase-63 E99_RESULTS (finite-genus mismatch) | Do not transport either; phase 145's comparison is a different kind of move (cone comparison, not structure transport) |
-| 4 | Paper 42; phase-33 docs 74/80; phase-107 doc 241; phase-39 docs 119-120 | Mixed: Paper 42 = background obstruction only; docs 74/80/241/119 not found under those numbers; phase-39 doc 120 found and relevant | P122_007 (Paper 42 quote), phase-39 `120-inventario-CC-fuente.md` | Reuse doc 120 as CC source index; docs 74/80/241/119 likely renumbered/absent — flag to owner, treat as NEW if pursued |
+| 4 | Paper 42; phase-33 docs 74/80; phase-107 doc 241; phase-39 docs 119-120 | Mixed: Paper 42 = background obstruction only; docs 74/80/241/119 not found under those numbers; phase-39 doc 120 found and relevant | P122_007 (Paper 42 quote), phase-39 `120-source-inventory-of-the-connes-consani-moscovici.md` | Reuse doc 120 as CC source index; docs 74/80/241/119 likely renumbered/absent — flag for follow-up, treat as NEW if pursued |
 | 5 | Connes–Consani RR for Spec Z̄ (2205.01391) and function-field dictionary | TRIED–PARTIAL | MAP_5_LITERATURE_VS_CORPUS.md:12, 114_d3_02_R16 (dim_S formulas), phase-113 doc 11 (sections-functor no-go), LEAD_NOTE_OFF_THE_PAGE (open dim_S candidate) | Reuse: CC has no Hodge-index statement of its own (confirmed gap); arithmetic sections-functor no-go already proved; dim_S candidate still open — build only the F_q h⁰_C computation |
 | 6 | Alternative/coupled pairing J ≠ I_∞ (option α) | TRIED–PARTIAL, explicitly deferred | phase-137 R137_000/001/005 (W_S, unpaid cross term), ROW-D-SYNTHESIS §3(α) (sign correction), phase-141 R141_000 (Frobenius Gram C_mn raw material) | Do NOT reopen in phase 145 (belongs to phase 146/α); reuse the sign-corrected statement and the named unpaid cross term as phase 146's starting point |
 
 **Overall recommendation for phase 145:** proceed to build D.41 (the F_q model) as scoped in
-`R145_000_LEAD_BLUEPRINT.md`; the arithmetic-side half of the comparison (item 2) is already proved and
+`R145_000_BLUEPRINT.md`; the arithmetic-side half of the comparison (item 2) is already proved and
 should be imported, not rebuilt; items 3 and 6 are correctly fenced off by the existing blueprint (no-go /
 deferred to 146); item 5's gap (no CC self-intersection statement) means D.42's search for object [Z] has
 no ready-made answer to import — it is genuinely open, consistent with the blueprint's framing.

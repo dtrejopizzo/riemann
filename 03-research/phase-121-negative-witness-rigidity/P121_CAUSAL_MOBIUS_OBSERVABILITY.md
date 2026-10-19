@@ -96,7 +96,7 @@ with the finite divisor orbit is encoded by the samples
 
 \[
  b_{k,m}^+=y_k^+(-T+\log m),\qquad
- b_{k,m}^-=y_k^-(T-\log m),qquad m\in\mathcal M_T.  \tag{3.4}
+ b_{k,m}^-=y_k^-(T-\log m),\qquad m\in\mathcal M_T.  \tag{3.4}
 \]
 
 No norm or sign is assigned to these samples.

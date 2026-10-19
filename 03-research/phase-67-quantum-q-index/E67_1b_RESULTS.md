@@ -1,6 +1,5 @@
 # E67.1b Results — q-Gamma / Plancherel archimedean matching
 
-**Date:** 2026-07-06.
 **Script:** [E67_1b_qgamma_plancherel.py](E67_1b_qgamma_plancherel.py).
 **Exact source:** `../../04-papers/P52-riemann-proof-audit/h8lab.py`, using the exact
 `hA_taylor + pick_jet` archimedean jet.

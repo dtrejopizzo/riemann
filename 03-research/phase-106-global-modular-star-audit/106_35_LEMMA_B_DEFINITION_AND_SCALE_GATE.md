@@ -226,8 +226,8 @@ For every family of normalized even vectors \(q_L^+\), there are
 normalized real even functions
 
 \[
- g_L\in C_c^\infty((-1,1)),qquad
- g_L\perp q_L^+,qquad g_L\perp h_L,
+ g_L\in C_c^\infty((-1,1)),\qquad
+ g_L\perp q_L^+,\qquad g_L\perp h_L,
  \tag{16}
 \]
 

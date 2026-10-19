@@ -1,6 +1,6 @@
 # P123.063 — Include the original power map in the local trace conjugacy
 
-Date: 2026-09-06. Status: PROVED on the fixed smaller ball specified below.
+Status: PROVED on the fixed smaller ball specified below.
 This removes the parameter restriction excluding t=1 in P123.062, not
 the restriction to a neighborhood of the identity.
 

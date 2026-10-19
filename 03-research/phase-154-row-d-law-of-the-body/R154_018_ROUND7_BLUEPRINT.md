@@ -1,6 +1,6 @@
-# R154.018 — Lead blueprint, round 7 of phase 154: PURE MATHEMATICS — the approximation theory of the dual certificate. Date 2026-09-21.
+# R154.018 — Blueprint, round 7 of phase 154: PURE MATHEMATICS — the approximation theory of the dual certificate.
 
-*Owner's directive: pure mathematics; computation only when strictly necessary (identity checks at most; no LP, no B&B).*
+*pure mathematics; computation only when strictly necessary (identity checks at most; no LP, no B&B).*
 
 ## 0. What the data force us to understand
 At `T = ½log3` (one contact) lattice certificates with `M = 24` capture `c = 8.86·10⁻⁵` of `λ_min = 9.8·10⁻⁴` (9%). At `T = 0.58` (two
@@ -46,5 +46,5 @@ is the limit of the E-L multipliers `α, β` of Theorem W normalised by `λ`; co
 ## 3. Rules
 No computation except arithmetic on recorded numbers and at most identity checks with mpmath at a few points. Corpus-check lines
 (grep "Beurling–Selberg", "Vaaler", "spectral gap", "hueco espectral", "Logvinenko", "Jackson", "one-sided approximation", "minorant").
-Labels PROVED / RESTATEMENT / DIAGNOSTIC / OPEN; FATAL rule; no sign for ζ beyond `log 2`. Deliverable `R154_019_BUILDER_ROUND7.md`
-(≤ 5000 words) with complete proofs; a hostile audit follows.
+Labels PROVED / RESTATEMENT / DIAGNOSTIC / OPEN; FATAL rule; no sign for ζ beyond `log 2`. Deliverable `R154_019_ROUND7.md`
+(≤ 5000 words) with complete proofs; an audit follows.

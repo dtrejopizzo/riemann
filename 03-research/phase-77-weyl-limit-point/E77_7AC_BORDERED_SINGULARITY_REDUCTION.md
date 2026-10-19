@@ -1,6 +1,6 @@
 # E77.7ac - Bordered singularity reduction of kernel blindness
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

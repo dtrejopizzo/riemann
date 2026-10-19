@@ -1,7 +1,6 @@
 # E72.20 -- Poincare-Lelong criterion for CCM divisor-current convergence
 
-**Date:** 2026-07-08.
-**Role:** turn the divisor-current convergence needed in E72.19 into a concrete potential convergence
+**Purpose:** turn the divisor-current convergence needed in E72.19 into a concrete potential convergence
 statement for the finite CCM spectral functions.
 
 ## 0. Why this criterion matters

@@ -1,0 +1,10 @@
+Y1 delete q=3, T=0.75: T in [0.75,0.75] full deg<14 contacts=[2, 3, 4] Galerkin~-0.23242462 | CERT a_T(F)/||F||^2 in [-0.232424631, -0.2324246066] width 2.4e-8 NEGATIVE: PROVED
+Y1 delete q=3, T=1/2log5+0.01: T in [0.814718956217,0.814718956217] full deg<14 contacts=[2, 3, 4, 5] Galerkin~-0.38518296 | CERT a_T(F)/||F||^2 in [-0.3851829765, -0.3851829492] width 2.7e-8 NEGATIVE: PROVED
+Y1 top-layer delete q=7, T=1: T in [1.0,1.0] full deg<14 contacts=[2, 3, 4, 5, 7] Galerkin~-0.040165641 | CERT a_T(F)/||F||^2 in [-0.04016566175, -0.04016562122] width 4.1e-8 NEGATIVE: PROVED
+Y1 top-layer delete q=8, T=log3: T in [1.09861228867,1.09861228867] full deg<14 contacts=[2, 3, 4, 5, 7, 8] Galerkin~-0.017927848 | CERT a_T(F)/||F||^2 in [-0.01792785057, -0.01792784628] width 4.3e-9 NEGATIVE: PROVED
+AA odd, zero comb, T=1/2log5: T in [0.804718956217,0.804718956217] odd deg<24 contacts=[2, 3, 4] Galerkin~-0.0026652613 | CERT a_T(F)/||F||^2 in [-0.002665265111, -0.00266525746] width 7.7e-9 NEGATIVE: PROVED
+AA odd, zero comb, T=1: T in [1.0,1.0] odd deg<24 contacts=[2, 3, 4, 5, 7] Galerkin~-0.22246712 | CERT a_T(F)/||F||^2 in [-0.2224671275, -0.2224671214] width 6.1e-9 NEGATIVE: PROVED
+AA odd, a_2 (p=2 deleted), T=1: T in [1.0,1.0] odd deg<24 contacts=[2, 3, 4, 5, 7] Galerkin~-0.52278398 | CERT a_T(F)/||F||^2 in [-0.5227839785, -0.5227839763] width 2.2e-9 NEGATIVE: PROVED
+AA odd, 2Lambda, T=1: T in [1.0,1.0] odd deg<24 contacts=[2, 3, 4, 5, 7] Galerkin~-1.0465246 | CERT a_T(F)/||F||^2 in [-1.046524616, -1.046524612] width 3.9e-9 NEGATIVE: PROVED
+AA odd, a_3 (p=3 deleted), T=1/2log5: T in [0.804718956217,0.804718956217] odd deg<24 contacts=[2, 3, 4] Galerkin~-0.15877996 | CERT a_T(F)/||F||^2 in [-0.1587799643, -0.1587799518] width 1.2e-8 NEGATIVE: PROVED
+AA odd, 1.15Lambda, T=1: T in [1.0,1.0] odd deg<24 contacts=[2, 3, 4, 5, 7] Galerkin~-0.15260591 | CERT a_T(F)/||F||^2 in [-0.1526059164, -0.1526059126] width 3.9e-9 NEGATIVE: PROVED

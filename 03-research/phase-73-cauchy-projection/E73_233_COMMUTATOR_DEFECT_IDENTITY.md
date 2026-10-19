@@ -1,6 +1,5 @@
 # E73.233 - Canonical commutator defect identity for U4
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

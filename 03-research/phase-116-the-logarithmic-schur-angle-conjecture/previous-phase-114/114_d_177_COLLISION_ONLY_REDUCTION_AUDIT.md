@@ -51,8 +51,8 @@ With the notation of D.164,
 The exact support relations are
 
 \[
- (U_n^L)^*U_m^L=\delta_{nm}I,qquad
- (U_n^R)^*U_m^R=\delta_{nm}I,qquad
+ (U_n^L)^*U_m^L=\delta_{nm}I,\qquad
+ (U_n^R)^*U_m^R=\delta_{nm}I,\qquad
  (U_n^L)^*U_m^R=\mathbf1_{nm=N}I.                   \tag{1.2}
 \]
 
@@ -152,7 +152,7 @@ to control diagonal words by (V_N) and the sole left--right collision by
 
 \[
  q_{E_N}^*T^kq_{E_N}
- \le a_k(N),qquad \sum_{k\ge0}a_k(N)<\infty,         \tag{4.2}
+ \le a_k(N),\qquad \sum_{k\ge0}a_k(N)<\infty,         \tag{4.2}
 
 with the endpoint pieces treated separately.  Replacing (q_{E_N}) by a
 rank-two collision channel would discard the diagonal (V_N) contribution

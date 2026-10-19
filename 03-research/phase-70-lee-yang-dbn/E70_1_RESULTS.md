@@ -1,6 +1,5 @@
 # E70.1 -- de Bruijn-Newman connection: Omega_7 = (Lambda <= 0), and the direction problem
 
-**Date:** 2026-07-07.
 **Scripts:** E70_1_heatflow.py, E70_1b_heatflow.py, dbg.py.
 
 ## Numerics (self-corrected)

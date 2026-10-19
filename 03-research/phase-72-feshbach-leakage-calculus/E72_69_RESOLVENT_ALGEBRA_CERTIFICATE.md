@@ -1,7 +1,6 @@
 # E72.69 -- Resolvent algebra certificate for half-power Abel divisibility
 
-**Date:** 2026-07-08.
-**Role:** turn the half-power Abel concomitant into a finite rational/exponential certificate.
+**Purpose:** turn the half-power Abel concomitant into a finite rational/exponential certificate.
 
 ## 0. Object
 

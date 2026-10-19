@@ -1,6 +1,6 @@
 # Phase 70 -- Lee-Yang / de Bruijn-Newman heat-flow forcing of Omega_7
 
-**Opened:** 2026-07-07. Direction suggested by arXiv:2511.11199 (RH as DQPTs) -- specifically its
+Direction suggested by arXiv:2511.11199 (RH as DQPTs) -- specifically its
 Lee-Yang analogy, which the paper notes but does not exploit for a proof.
 
 ## The idea (a forcer, not a restatement)

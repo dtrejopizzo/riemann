@@ -6,12 +6,12 @@ degenerate twice). Rounds 1–2 complete.
 
 | file | contents |
 |---|---|
-| `R146_000_LEAD_BLUEPRINT.md` | lead blueprint: the object, D.44 (Q0), D.45 (Q1, items 1–4), D.46, warnings, falsifier protocol |
+| `R146_000_BLUEPRINT.md` | blueprint: the object, D.44 (Q0), D.45 (Q1, items 1–4), D.46, warnings, falsifier protocol |
 | `CORPUS_CHECK_R146.md` | prior art for the "coupled pairing `J`" framing of α |
 | `CORPUS_CHECK_R146b.md` | prior art for the redefined α: what is NEW, and that `Δ·Δ = −∞` is settled |
-| `R146_001_BUILDER_ROUND1.md` | builder round 1 — D.44, D.45, D.46, corpus check, paper-facing, open items. **Repaired in place**; every round-2 correction is marked `[R2: …]`. Read only together with `R146_003`. |
-| `R146_002_HOSTILE_AUDIT.md` | hostile audit: **14 MAJOR, no FATAL**; FATAL screen passes; script clean |
-| `R146_003_BUILDER_ROUND2.md` | **builder round 2** — finding-by-finding disposition (M1–M14, m1–m6), **§D.47 the single-prime tower** (the new work), §D.48 (`Sh_Z` restated), §D.49 (synthesis and the phase-147 recommendation), paper-facing revision, open items, §Label |
+| `R146_001_ROUND1.md` | round 1 — D.44, D.45, D.46, corpus check, paper-facing, open items. **Repaired in place**; every round-2 correction is marked `[R2: …]`. Read only together with `R146_003`. |
+| `R146_002_AUDIT.md` | audit: **14 MAJOR, no FATAL**; FATAL screen passes; script clean |
+| `R146_003_ROUND2.md` | **round 2** — finding-by-finding disposition (M1–M14, m1–m6), **§D.47 the single-prime tower** (the new work), §D.48 (`Sh_Z` restated), §D.49 (synthesis and the phase-147 recommendation), paper-facing revision, open items, §Label |
 | `scripts/cosh_test_cmn.py` | round 1 (`--fast`): cosh-test margins on `c_{m,n}`; the rank-2 would-be norm form; the indefiniteness witness |
 | `scripts/tower_gram.py` | round 2 (`--fast`): tower thresholds `τ_±(p)`, finite-section eigenvalues, the `Ξ_a` threshold table, the model-vs-arithmetic kernel comparison, the `ℓ=2` over-determination, the two degree normalizations |
 

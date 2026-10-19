@@ -1,6 +1,6 @@
 # E78.4 - Crosswalk: the E77 shell cascade after the Phase-78 correction
 
-**Run:** 2026-07-18.
+**Run:**
 **Purpose:** record, once and cleanly, how the late E77 shell-reduction chain
 should be used after the Phase-78 build-neutral LP correction, so that its
 exact identities remain available without reintroducing it as an LP forcing

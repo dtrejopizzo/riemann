@@ -1,6 +1,6 @@
 # E78.86 - The angular denominator factor is exactly a one-scalar alpha law
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

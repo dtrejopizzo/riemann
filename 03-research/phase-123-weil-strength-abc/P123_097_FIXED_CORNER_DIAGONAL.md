@@ -1,6 +1,6 @@
 # P123.097 — The fixed corner diagonal in the continuous topology
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for the completed
+Status: PROVED-IN-REPOSITORY for the completed
 projective Hochschild chain complex of B=C(B_q). The equivalence is
 strict quasi-isomorphism; a continuous linear contraction is not claimed.
 

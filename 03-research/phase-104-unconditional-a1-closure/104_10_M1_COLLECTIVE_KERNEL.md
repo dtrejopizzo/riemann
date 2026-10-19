@@ -1,54 +1,54 @@
-# 104_10 — M1: núcleo colectivo max(i,j)
+# 104_10 — M1: collective kernel max(i,j)
 
-**Estado:** preregistro ejecutado; la versión local-PSD de M1 queda descartada con testigos
-exactos. La versión global también queda cerrada como mecanismo: `104_11` prueba que el
-compensador es la energía del mismo kernel `max` y que las dos Hessianas se cancelan
-idénticamente, incluido el borde finito. No se prueba A1 ni RH.
+**Status:** preregistration executed; the local-PSD version of M1 is ruled out with exact
+witnesses. The global version is also closed as a mechanism: `104_11` proves that the
+compensator is the energy of the same `max` kernel and that the two Hessians cancel
+identically, boundary term included. Neither A1 nor RH is proved.
 
-## 1. Meta e implicación
+## 1. Goal and implication
 
-Se fija \(\theta=1/4\). M1 no ataca A1 directamente: intenta probar la condición suficiente
-más fuerte
+\(\theta=1/4\) is fixed. M1 does not attack A1 directly: it attempts to prove the stronger
+sufficient condition
 
 \[
  \Delta D_n\ge0,\qquad D_n=2\lambda_n-A_n,\qquad n\ge149.
 \tag{1}
 \]
 
-Como \(D_{149}>0\) está certificado en 103_51, (1) implicaría \(D_n>0\) para todo
-\(n\ge149\), luego el strong margin \(\lambda_n\ge A_n/2\), A1 con A0 y finalmente RH. La
-implicación es correcta, pero 103_59 ya prueba que (1) es estructuralmente más fuerte que RH
-para funciones enteras simétricas generales.
+Since \(D_{149}>0\) is certified in 103_51, (1) would imply \(D_n>0\) for every
+\(n\ge149\), hence the strong margin \(\lambda_n\ge A_n/2\), A1 together with A0, and finally
+RH. The implication is correct, but 103_59 already proves that (1) is structurally stronger
+than RH for general symmetric entire functions.
 
-## 2. Axiomas e inputs
+## 2. Axioms and inputs
 
-Cada uso de M1 debe declarar cuál de estos niveles emplea.
+Every use of M1 must declare which of these levels it employs.
 
-**Nivel algebraico finito.**
+**Finite algebraic level.**
 
-1. \(q_1<\cdots<q_M\) son números reales \(>1\).
-2. \(\ell_j>0\), \(\Psi_j=\sum_{i\le j}\ell_i\), y
+1. \(q_1<\cdots<q_M\) are real numbers \(>1\).
+2. \(\ell_j>0\), \(\Psi_j=\sum_{i\le j}\ell_i\), and
    \(d_j=q_j-1-\Psi_{j-1}-\ell_j/2\).
-3. \(w_1,\ldots,w_M\) son números reales arbitrarios.
+3. \(w_1,\ldots,w_M\) are arbitrary real numbers.
 
-**Nivel aritmético regulado.**
+**Regulated arithmetic level.**
 
-4. \(q_j\) recorre las potencias primas y \(\ell_j=\Lambda(q_j)\).
-5. Para \(n\ge0,\varepsilon>0\),
+4. \(q_j\) ranges over the prime powers and \(\ell_j=\Lambda(q_j)\).
+5. For \(n\ge0,\varepsilon>0\),
    \[
    \tau(x)=x^{-1-\varepsilon}L_n(\log x),\qquad w(x)=\tau'(x),
    \qquad E(x)=\psi(x)-x+1.
    \tag{2}
    \]
-6. Solo se usa PNT para hacer desaparecer el borde al enviar \(X\to\infty\) con
-   \(\varepsilon>0\). No se usa la tripla PNT efectiva declarada en 104_01.
+6. PNT is used only to make the boundary term vanish as \(X\to\infty\) with
+   \(\varepsilon>0\). The effective PNT triple declared in 104_01 is not used.
 
-El dato especial del nivel 4 no puede sustituirse por «medida atómica positiva»: ésa sería una
-relajación estricta y 103_59 ya muestra que el transporte resultante tiene ambos signos.
+The special datum of level 4 cannot be replaced by "positive atomic measure": that would be a
+strict relaxation, and 103_59 already shows that the resulting transport has both signs.
 
-## 3. Identidad finita regulada, con el borde que faltaba
+## 3. Finite regulated identity, with the missing boundary term
 
-Sea \(X>1\) que no sea potencia prima, y defínase
+Let \(X>1\) not be a prime power, and define
 
 \[
  C_{n,\varepsilon}(X):=-\int_1^X E(x)\tau'(x)\,dx,\qquad
@@ -56,14 +56,14 @@ Sea \(X>1\) que no sea potencia prima, y defínase
 \tag{3}
 \]
 
-Póngase
+Set
 
 \[
  \mathcal H(X)=\sum_{q_j\le X}\ell_j(q_j-1)-{\psi(X)^2\over2}.
 \tag{4}
 \]
 
-Como se prueba en 103_67,
+As proved in 103_67,
 
 \[
  \mathcal H(X)=-G(X)-{E(X)^2\over2},\qquad
@@ -71,7 +71,7 @@ Como se prueba en 103_67,
 \tag{5}
 \]
 
-Dos integraciones por partes **en el intervalo finito** dan
+Two integrations by parts **on the finite interval** give
 
 \[
  \boxed{
@@ -82,17 +82,17 @@ Dos integraciones por partes **en el intervalo finito** dan
 \tag{6}
 \]
 
-*Prueba.* De \(G'=E\),
+*Proof.* From \(G'=E\),
 \[
  C(X)=-G(X)w(X)+\int_1^XG(x)\tau''(x)\,dx.
 \]
-Insertando \(G=-\mathcal H-E^2/2\) e integrando
-\(-\int\mathcal H\tau''\) en sentido de Stieltjes aparece
-\(-\mathcal H(X)w(X)+\int w\,d\mathcal H\). Por (5), los dos bordes suman
-\(-[G(X)+\mathcal H(X)]w(X)=E(X)^2w(X)/2\), y resulta (6). \(\square\)
+Inserting \(G=-\mathcal H-E^2/2\) and integrating
+\(-\int\mathcal H\tau''\) in the Stieltjes sense yields
+\(-\mathcal H(X)w(X)+\int w\,d\mathcal H\). By (5), the two boundary terms add to
+\(-[G(X)+\mathcal H(X)]w(X)=E(X)^2w(X)/2\), giving (6). \(\square\)
 
-El último término de (6) es obligatorio en toda truncación. Para
-\(\varepsilon>0\) tiende a cero al enviar \(X\to\infty\), y se recupera la identidad de
+The last term of (6) is mandatory in every truncation. For
+\(\varepsilon>0\) it tends to zero as \(X\to\infty\), recovering the identity of
 103_67:
 
 \[
@@ -101,12 +101,12 @@ El último término de (6) es obligatorio en toda truncación. Para
 \tag{7}
 \]
 
-Separar los dos términos de (7) y tomar valores absolutos está prohibido: su integración por
-partes inversa reconstruye exactamente \(C_{n,\varepsilon}\).
+Separating the two terms of (7) and taking absolute values is forbidden: their reverse
+integration by parts exactly reconstructs \(C_{n,\varepsilon}\).
 
-## 4. Identidad max(i,j) y todos los bordes discretos
+## 4. The max(i,j) identity and all the discrete boundary terms
 
-En el nivel algebraico finito,
+At the finite algebraic level,
 
 \[
  \boxed{
@@ -116,12 +116,12 @@ En el nivel algebraico finito,
 \tag{8}
 \]
 
-Sea
+Let
 \[
  H_j=\sum_{i\le j}\ell_i(q_i-1)-{\Psi_j^2\over2},\qquad H_0=0.
 \tag{9}
 \]
-Entonces, sin límite implícito,
+Then, with no implicit limit,
 \[
  \boxed{
  \sum_{j=1}^M\ell_jd_jw_j
@@ -129,18 +129,18 @@ Entonces, sin límite implícito,
 \tag{10}
 \]
 
-El término \(H_Mw_M\) es el borde discreto. Escribir solamente
-\(\sum H_j(w_j-w_{j+1})\) en un prefijo finito es incorrecto.
+The term \(H_Mw_M\) is the discrete boundary term. Writing only
+\(\sum H_j(w_j-w_{j+1})\) on a finite prefix is incorrect.
 
-### Descomposición exacta por bloques
+### Exact block decomposition
 
-Sea \(0=m_0<m_1<\cdots<m_B=M\), \(I_b=(m_{b-1},m_b]\),
+Let \(0=m_0<m_1<\cdots<m_B=M\), \(I_b=(m_{b-1},m_b]\),
 \[
  P_{b-1}=\sum_{i\le m_{b-1}}\ell_i,\qquad
  L_{b,k}=\sum_{m_{b-1}<i\le k}\ell_i,\qquad L_b=L_{b,m_b}.
 \tag{11}
 \]
-La forma cuadrática de (8) se descompone exactamente como
+The quadratic form of (8) decomposes exactly as
 \[
  \begin{split}
  {1\over2}\sum_{i,j\le M}\ell_i\ell_jw_{\max(i,j)}
@@ -153,97 +153,99 @@ La forma cuadrática de (8) se descompone exactamente como
 \tag{12}
 \]
 
-*Prueba.* Dentro de un bloque,
+*Proof.* Within a block,
 \[
  w_{\max(i,j)}
  =w_{m_b}+\sum_{k=\max(i,j)}^{m_b-1}(w_k-w_{k+1}).
 \]
-Sumar en \(i,j\in I_b\) da los dos últimos términos de (12). Si \(i\) está en un
-bloque anterior y \(j\in I_b\), entonces \(w_{\max(i,j)}=w_j\); las dos orientaciones del par
-cancelan el factor \(1/2\) y dan el primer término. \(\square\)
+Summing over \(i,j\in I_b\) gives the last two terms of (12). If \(i\) is in an
+earlier block and \(j\in I_b\), then \(w_{\max(i,j)}=w_j\); the two orientations of the pair
+cancel the factor \(1/2\) and give the first term. \(\square\)
 
-Para una sucesión infinita globalmente no creciente con límite \(w_\infty\),
+For a globally non-increasing infinite sequence with limit \(w_\infty\),
 \[
  w_{\max(i,j)}
  =w_\infty+\sum_{k\ge\max(i,j)}(w_k-w_{k+1}).
 \tag{13}
 \]
-Así, la forma es PSD si \(w_\infty\ge0\) y todas las diferencias son no negativas. En el
-kernel real \(w=\tau'\), \(w_\infty=0\), pero \(w\) alterna monotonía: (13) no da PSD global.
+Thus the form is PSD if \(w_\infty\ge0\) and all the differences are non-negative. In the
+real kernel \(w=\tau'\), \(w_\infty=0\), but \(w\) alternates in monotonicity: (13) does not
+give global PSD.
 
-## 5. No-go exacto para la estrategia local-PSD
+## 5. Exact no-go for the local-PSD strategy
 
-La frase «cada bloque decreciente da una forma PSD» omite tres términos que deciden el signo:
+The phrase "each decreasing block gives a PSD form" omits three terms that decide the sign:
 
-1. el rango uno \(w_{m_b}L_b^2/2\), que es negativo si \(w_{m_b}<0\);
-2. los términos de cruce
-   \(P_{b-1}\sum_{j\in I_b}\ell_jw_j\), sin signo;
-3. los bloques crecientes, donde \(w_k-w_{k+1}<0\).
+1. the rank-one term \(w_{m_b}L_b^2/2\), which is negative if \(w_{m_b}<0\);
+2. the cross terms
+   \(P_{b-1}\sum_{j\in I_b}\ell_jw_j\), with no fixed sign;
+3. the increasing blocks, where \(w_k-w_{k+1}<0\).
 
-Por (10), conservar juntos el primer momento y la forma max no elimina el problema: los
-colapsa al correlador firmado \(H_j(w_j-w_{j+1})\). Y \(H_j\) tampoco tiene signo fijo para
-los pesos **reales** de von Mangoldt.
+By (10), keeping the first moment and the max form together does not remove the problem: it
+collapses them into the signed correlator \(H_j(w_j-w_{j+1})\). And \(H_j\) also has no fixed
+sign for the **real** von Mangoldt weights.
 
-La herramienta tools/m1_cumulative_sign_certificate.py usa solo aritmética racional outward
-para los logaritmos de los primos y certifica
+The tool tools/m1_cumulative_sign_certificate.py uses only outward rational arithmetic for
+the logarithms of the primes and certifies
 \[
  \boxed{H(2969)<-21,\qquad H(3167)>110.}
 \tag{14}
 \]
-Aquí \(H(x)=\sum_{q\le x}\Lambda(q)(q-1)-\psi(x)^2/2\). Por tanto ni una orientación global
-de \(H\), ni una orientación global de \(w_j-w_{j+1}\), ni PSD por bloques puede probar (7).
+Here \(H(x)=\sum_{q\le x}\Lambda(q)(q-1)-\psi(x)^2/2\). Therefore neither a global
+orientation of \(H\), nor a global orientation of \(w_j-w_{j+1}\), nor blockwise PSD can
+prove (7).
 
-**Veredicto M1-local:** descartado con el testigo (12)–(14). Una suma global entre bloques
-podría todavía cancelar, pero eso exige una desigualdad correlacionada nueva; no es
-consecuencia de PSD.
+**M1-local verdict:** ruled out by witness (12)–(14). A global sum across blocks might still
+cancel, but that requires a new correlated inequality; it is not a consequence of PSD.
 
-## 6. Falsificadores y alcance correcto
+## 6. Falsifiers and correct scope
 
-### 6.1 Falsificador de relajaciones aritméticas
+### 6.1 Falsifier of arithmetic relaxations
 
-Si un paso usa solo los axiomas 1–3 (átomos positivos ordenados), se le aplica el movimiento
-de una masa \(W\) de \(b\) a \(a<b\) de 103_59:
+If a step uses only axioms 1–3 (ordered positive atoms), the mass-move falsifier of 103_59
+applies: moving a mass \(W\) from \(b\) to \(a<b\) gives
 \[
  \delta C=W\{\tau(a)-\tau(b)\}.
 \tag{15}
 \]
-Para \(n=1\) el kernel tiene un cero explícito y (15) toma ambos signos. Satisface exactamente
-los axiomas algebraicos relajados y mata cualquier conclusión basada solo en positividad,
-monotonía de la función de conteo o soporte atómico.
+For \(n=1\) the kernel has an explicit zero and (15) takes both signs. It satisfies exactly
+the relaxed algebraic axioms and kills any conclusion based solely on positivity, monotonicity
+of the counting function, or atomic support.
 
-### 6.2 Falsificador espectral
+### 6.2 Spectral falsifier
 
-Si un paso deja de usar el nivel 4 y usa solo simetría funcional/localización crítica, se
-aplica
+If a step stops using level 4 and uses only functional symmetry/critical localization, apply
 \[
  X(s)=\left(s-\tfrac12\right)^2+\tfrac14.
 \tag{16}
 \]
-Todos sus ceros están sobre la línea, pero \(\Delta\lambda_2[X]=-2\). Esto mata cualquier
-derivación de (1) desde RH o desde cuadrados por cero individual.
+All its zeros lie on the line, but \(\Delta\lambda_2[X]=-2\). This kills any derivation of
+(1) from RH or from squares of an individual zero.
 
-El cuarteto off-line
+The off-line quartet
 \[
  8-8\cosh(n\alpha)\cos(n\vartheta)
 \tag{17}
 \]
-se usa de igual modo contra pasos que retengan solo conjugación y ecuación funcional.
+is used in the same way against steps that retain only conjugation and the functional
+equation.
 
-### 6.3 Límite lógico del requisito «mismos axiomas»
+### 6.3 Logical limit of the "same axioms" requirement
 
-El nivel 4 fija literalmente \(q=p^k\) y \(\ell=\log p\): fija la aritmética de \(\zeta\).
-Un «divisor off-line» que satisfaga también ese mismo axioma sería la propia \(\zeta\) con un
-cero off-line, cuya existencia es justamente la cuestión. Por eso (17) **no puede exigirse**
-francamente como modelo que satisfaga el nivel 4 sin presuponer la negación de RH.
+Level 4 literally fixes \(q=p^k\) and \(\ell=\log p\): it fixes the arithmetic of \(\zeta\).
+An "off-line divisor" also satisfying that same axiom would be \(\zeta\) itself with an
+off-line zero, whose existence is exactly the question at hand. That is why (17) **cannot
+honestly be required** as a model satisfying level 4 without presupposing the negation of
+RH.
 
-La regla válida es: cada vez que una estimación relaje el nivel 4, debe pasar el falsificador
-correspondiente a los axiomas que realmente conserve. Un argumento que use una propiedad
-cuantitativa especial de los pesos reales no queda refutado por (15)–(17), pero debe declarar
-y demostrar esa propiedad.
+The valid rule is: whenever an estimate relaxes level 4, it must pass the falsifier
+corresponding to the axioms it actually retains. An argument using a special quantitative
+property of the real weights is not refuted by (15)–(17), but must declare and prove that
+property.
 
-## 7. Correlador global: stop-gate posterior
+## 7. Global correlator: later stop-gate
 
-Después del no-go local, quedaba planteado probar directamente y uniformemente
+After the local no-go, what remained was to directly and uniformly prove
 \[
  \limsup_{\varepsilon\downarrow0}
  \left[
@@ -253,31 +255,32 @@ Después del no-go local, quedaba planteado probar directamente y uniformemente
  \le {1\over2}\Delta A_n,\qquad n\ge149,
 \tag{18}
 \]
-con el borde de (6) controlado antes de cada límite.
+with the boundary term of (6) controlled before each limit.
 
-`104_11`, Teoremas 1--2, identifica el segundo término y su borde con la energía
-`max` de \(d\psi-dx\). Al sumarlo al primer término, la componente cuadrática se
-cancela exactamente y (18) vuelve a
+`104_11`, Theorems 1–2, identifies the second term and its boundary term with the `max`
+energy of \(d\psi-dx\). Adding it to the first term, the quadratic component cancels
+exactly and (18) reduces back to
 
 \[
  -\int_1^\infty E(x)\tau'(x)\,dx\le {1\over2}\Delta A_n.
 \]
 
-Por tanto (18) no es una versión global viva de M1: es el objetivo lineal de
-primera diferencia sin coercividad residual. Probarlo seguiría siendo suficiente
-para A1, pero ya no sería una consecuencia del mecanismo `max`. M1 queda
-descartado; el sucesor se registra en `104_11` y se desarrolla separadamente.
+Therefore (18) is not a living global version of M1: it is the linear first-difference
+target with no residual coercivity. Proving it would still be sufficient for A1, but it
+would no longer be a consequence of the `max` mechanism. M1 is ruled out; its successor is
+recorded in `104_11` and developed separately.
 
-## Estado
+## Status
 
-| ítem | resultado |
+| item | result |
 |---|---|
-| identidad regulada finita con borde | probada, (6) |
-| identidad max y borde \(H_Mw_M\) | probada, (8)–(10) |
-| bloques, cruces y rango uno | probados, (12) |
-| PSD global | falso para el \(w\) oscilatorio |
-| signo de \(H\) real | falso, certificado (14) |
-| M1 local-PSD | descartado |
-| Hessiana global de (18) | nula exactamente, con borde (`104_11`) |
-| M1 global | descartado: colapsa al funcional lineal original |
-| A1/RH | no probada |
+| finite regulated identity with boundary term | proved, (6) |
+| max identity and boundary term \(H_Mw_M\) | proved, (8)–(10) |
+| blocks, cross terms, and rank one | proved, (12) |
+| global PSD | false for the oscillatory \(w\) |
+| sign of real \(H\) | false, certified (14) |
+| M1 local-PSD | ruled out |
+| global Hessian of (18) | exactly zero, boundary term included (`104_11`) |
+| M1 global | ruled out: collapses to the original linear functional |
+| A1/RH | not proved |
+</content>

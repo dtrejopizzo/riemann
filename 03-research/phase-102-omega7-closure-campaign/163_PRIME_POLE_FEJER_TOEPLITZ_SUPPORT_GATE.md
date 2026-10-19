@@ -223,7 +223,7 @@ nontrivial zero satisfies
 which is equivalent to \(\Re\rho=1/2\).  Therefore RH follows, and Omega7
 follows from Li.
 
-This is a valid force-RH theorem if proved from Euler--Gamma data.  It is
+This is a valid RH-strength theorem if proved from Euler--Gamma data.  It is
 circular only if the construction of \(\{m_n\}\), the proof of (15), or the
 singularity identification already assumes boundary support.
 

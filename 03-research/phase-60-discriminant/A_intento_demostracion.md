@@ -1,30 +1,30 @@
-# Objetivo A — intento de demostración (matemática pura, pasos probados + [GAP] franco) **Meta:** demostrar A_λ(f,f) ≥ 0 (positividad de Weil localizada), idealmente con margen
-≥ c·ε₀·𝓔_D, desde el lado-primo. [P]=probado · [GAP]=paso abierto. --- ## Paso 1 [P] — Reducción de Fourier de A_λ al símbolo arquimediano − ζ'/ζ Partimos de la descomposición de Beurling–Deny (probada): A_λ(f,f) = ∫(Ω(0)−2M_0(w))|f|²dw + 𝓔_θ(f) + 𝓔_prime(f). Usando ∫|f(w)−f(w+h)|²dw = (1/2π)∫|f̂(t)|²·2(1−cos th)dt (Plancherel), las dos formas de salto
-son multiplicadores de Fourier: 𝓔_θ(f) = (1/2π)∫|f̂(t)|²·[∫2(1−cos tξ)dν(ξ)]dt = (1/2π)∫|f̂(t)|²(Ω(t)−Ω(0))dt, 𝓔_prime(f) = (1/2π)∫|f̂(t)|²·[2Σ_n (Λ(n)/√n)(1−cos(t log n))]dt (ignorando la frontera; ver Paso 4). El término de pozo (sin frontera): 2∫M_0|f|² = (1/π)(Σ_n Λ(n)/√n)‖f‖². Combinando con 𝓔_prime: 𝓔_prime − 2∫M_0|f|² (parte de primos) = −(1/π)∫|f̂(t)|²·[Σ_n (Λ(n)/√n)cos(t log n)]dt. Y **el corazón:** Σ_n (Λ(n)/√n) cos(t log n) = Re Σ_n Λ(n) n^{−(1/2+it)} = **Re[−ζ'/ζ(1/2+it)]** (cutoff n≤λ²). Por tanto, juntando todo (el arquimediano da Ω(t)=2θ'(t)): **A_λ(f,f) = (1/2π)∫ |f̂(t)|² · W_λ(t) dt, W_λ(t) = 2θ'(t) − 2·Re[−ζ'/ζ]_{≤λ²}(1/2+it).** Esto es EXACTAMENTE la fórmula explícita de Weil en forma espectral. [P] (es la identidad de Weil
-reescrita; recupera lo que ya sabíamos, pero ahora con el "potencial de Fourier" W_λ(t) explícito.) ## Paso 2 [P] — Dónde está la (in)definición: los polos de ζ'/ζ en los ceros W_λ(t) = 2θ'(t) − 2Re[−ζ'/ζ]_{≤λ²}(1/2+it). El término −ζ'/ζ(1/2+it) tiene **polos en los ceros**
-ρ=1/2+iγ (residuo +1): cerca de t=γ, Re[−ζ'/ζ] → +∞. Como entra con signo −, **W_λ(t) → −∞ cerca
-de cada cero on-line.** Para ceros OFF-line ρ=1/2+β+iγ, el polo está desplazado a t=γ con parte
-real que no diverge igual; la estructura es distinta — y ahí vive la (in)definición. ⟹ **La positividad A_λ≥0 ⟺ W_λ(t) integrado contra |f̂|² es ≥0 para todo f∈PW_{L/2}.** Pero W_λ
-tiene singularidades negativas en los ceros. La positividad NO es puntual (W_λ no es ≥0 puntual);
-es una positividad INTEGRAL que depende de cómo los polos (ceros) se distribuyen. ## Paso 3 [intento] — Atacar la positividad integral **Técnica 3a (completar cuadrado / 𝒯=A*A):** escribir A_λ = B*B. Por P8 (Teorema C, probado),
-el lado-cero NO puede dar el signo; la estructura de cuadrado debe construirse INDEPENDIENTE de
-los ceros (Route B). Esto es el muro conocido. **No cierra por esta vía.** **Técnica 3b (Hardy/Poincaré con constante):** 𝓔_θ+𝓔_prime ≥ ∫(2M_0−Ω(0))|f|². Por desigualdad
-de Hardy para las formas de salto, 𝓔_prime(f) ≥ c·∫M_0|f|² con CIERTA constante c. **Cómputo del
-c alcanzable vs el c necesario:** - El c NECESARIO para A_λ≥0 es c=2 (más la ayuda de Ω(0) y 𝓔_θ). - El c ALCANZABLE por Hardy genérico es c<2 (la desigualdad de salto no es ajustada). - **El gap exacto entre c_alcanzable y c=2 ES el margen de positividad de Weil.** Sub-ajustado (c<2): da A_λ ≥ −(pequeño)‖f‖² — útil pero NO la positividad. La constante AJUSTADA c=2 ⟺ W_λ integra a ≥0 ⟺ ceros on-line ⟺ **RH**. **No cierra: la constante ajustada es RH.** **Técnica 3c (ecuación funcional s↔1−s):** la simetría empareja ρ con 1−ρ. Por NG-D4 (probado),
-J T_0 J = T_0 (la involución PRESERVA, no NIEGA, los autovalores) ⟹ la ecuación funcional NO
-fuerza positividad. **No cierra.** ## Paso 4 [GAP] — el único lugar no-circular posible: la FRONTERA (cutoff finito de primos) En los Pasos 1–3 ignoré la posición-dependencia de M_0 (la frontera, n≤λ²). **Ahí, y sólo ahí,
-está la esperanza no-circular**, porque:
-- El cutoff n≤λ² ⟺ tipo exponencial L/2 ⟺ horizonte T* (Lema 2, probado).
-- W_λ(t) usa SÓLO primos ≤λ² ⟹ es una APROXIMACIÓN FINITA de 2θ'−2Re[−ζ'/ζ], suave (sin los polos completos), controlada por PNT (la cola Σ_{n>λ²} es PNT, probado en B).
-- La positividad de la APROXIMACIÓN FINITA W_λ (con primos suaves, sin polos) podría ser demostrable desde PNT — y la convergencia a la positividad completa es el Eslabón 2 mismo. **[GAP] El paso que no tengo:** demostrar que la forma finita ∫|f̂|²W_λ(t)dt ≥ c·ε₀·𝓔_D(f) usando que W_λ es la aproximación-por-primos-≤λ² (suave, PNT-controlada) del símbolo de Weil, SIN usar la posición de los ceros. Equivale a: la positividad de la fórmula explícita TRUNCADA a primos ≤λ² se controla por la distribución de primos (PNT) hasta el horizonte T*. ## Diagnóstico franco del intento Deployé las tres técnicas estándar (cuadrado/P8, Hardy, ecuación funcional). **Cada una reduce A
-a un muro conocido o a la constante-ajustada=RH.** El intento PRUEBA:
-- [P] La reducción de Fourier A_λ = (1/2π)∫|f̂|²W_λ dt, W_λ=2θ'−2Re[−ζ'/ζ]_{≤λ²} (fórmula explícita).
-- [P] La (in)definición vive en los polos de ζ'/ζ en los ceros.
-- [P] Hardy da c<2 (positividad aproximada A_λ≥−ε); la constante AJUSTADA c=2 = RH.
-- **[GAP]** la positividad de la forma FINITA (primos ≤λ²) desde PNT, sin posición de ceros. **El [GAP] está localizado al milímetro:** es la positividad de la fórmula explícita truncada a
-primos ≤λ², controlada por PNT hasta T*. NO pude cerrarlo con técnicas elementales — y mostré por
-qué cada una falla (3a→P8, 3b→constante ajustada=RH, 3c→NG-D4). Si tiene la cota de Hardy
-AJUSTADA (c=2) desde el lado-primo finito, o la construcción del cuadrado 𝒯=A*A independiente de
-ceros (su programa de cancelación cross-place), ENCAJA en el [GAP] y A cierra. Yo no la tengo. **Esto NO es una demostración de A.** Es el intento franco: la reducción explícita + el mapa de
-por qué las técnicas elementales fallan + el [GAP] localizado. El ∎ de A requiere input que no
-poseo (la cota de Hardy ajustada / el cuadrado cross-place de).
+# Goal A — proof attempt (pure mathematics, proved steps + frank [GAP]) **Goal:** prove A_λ(f,f) ≥ 0 (localized Weil positivity), ideally with margin
+≥ c·ε₀·𝓔_D, from the prime side. [P]=proved · [GAP]=open step. --- ## Step 1 [P] — Fourier reduction of A_λ to the archimedean symbol − ζ'/ζ We start from the Beurling–Deny decomposition (proved): A_λ(f,f) = ∫(Ω(0)−2M_0(w))|f|²dw + 𝓔_θ(f) + 𝓔_prime(f). Using ∫|f(w)−f(w+h)|²dw = (1/2π)∫|f̂(t)|²·2(1−cos th)dt (Plancherel), both jump forms
+are Fourier multipliers: 𝓔_θ(f) = (1/2π)∫|f̂(t)|²·[∫2(1−cos tξ)dν(ξ)]dt = (1/2π)∫|f̂(t)|²(Ω(t)−Ω(0))dt, 𝓔_prime(f) = (1/2π)∫|f̂(t)|²·[2Σ_n (Λ(n)/√n)(1−cos(t log n))]dt (ignoring the boundary; see Step 4). The well term (without boundary): 2∫M_0|f|² = (1/π)(Σ_n Λ(n)/√n)‖f‖². Combining with 𝓔_prime: 𝓔_prime − 2∫M_0|f|² (prime part) = −(1/π)∫|f̂(t)|²·[Σ_n (Λ(n)/√n)cos(t log n)]dt. And **the heart:** Σ_n (Λ(n)/√n) cos(t log n) = Re Σ_n Λ(n) n^{−(1/2+it)} = **Re[−ζ'/ζ(1/2+it)]** (cutoff n≤λ²). Therefore, putting it all together (the archimedean part gives Ω(t)=2θ'(t)): **A_λ(f,f) = (1/2π)∫ |f̂(t)|² · W_λ(t) dt, W_λ(t) = 2θ'(t) − 2·Re[−ζ'/ζ]_{≤λ²}(1/2+it).** This is EXACTLY Weil's explicit formula in spectral form. [P] (it is Weil's identity
+rewritten; it recovers what we already knew, but now with the "Fourier potential" W_λ(t) explicit.) ## Step 2 [P] — Where the (in)definiteness lies: the poles of ζ'/ζ at the zeros W_λ(t) = 2θ'(t) − 2Re[−ζ'/ζ]_{≤λ²}(1/2+it). The term −ζ'/ζ(1/2+it) has **poles at the zeros**
+ρ=1/2+iγ (residue +1): near t=γ, Re[−ζ'/ζ] → +∞. Since it enters with a − sign, **W_λ(t) → −∞ near
+each on-line zero.** For OFF-line zeros ρ=1/2+β+iγ, the pole is shifted to t=γ with real part
+that does not diverge the same way; the structure is different — and that is where the (in)definiteness lives. ⟹ **Positivity A_λ≥0 ⟺ W_λ(t) integrated against |f̂|² is ≥0 for every f∈PW_{L/2}.** But W_λ
+has negative singularities at the zeros. Positivity is NOT pointwise (W_λ is not ≥0 pointwise);
+it is an INTEGRAL positivity that depends on how the poles (zeros) are distributed. ## Step 3 [attempt] — Attacking the integral positivity **Technique 3a (completing the square / 𝒯=A*A):** write A_λ = B*B. By P8 (Theorem C, proved),
+the zero side CANNOT give the sign; the square structure must be built INDEPENDENTLY of
+the zeros (Route B). This is the known wall. **Does not close this way.** **Technique 3b (Hardy/Poincaré with a constant):** 𝓔_θ+𝓔_prime ≥ ∫(2M_0−Ω(0))|f|². By a Hardy-type
+inequality for the jump forms, 𝓔_prime(f) ≥ c·∫M_0|f|² with SOME constant c. **Computation of the
+achievable c vs the needed c:** - The c NEEDED for A_λ≥0 is c=2 (plus the help of Ω(0) and 𝓔_θ). - The c ACHIEVABLE by generic Hardy is c<2 (the jump inequality is not sharp). - **The exact gap between c_achievable and c=2 IS the Weil-positivity margin.** Sub-sharp (c<2): gives A_λ ≥ −(small)‖f‖² — useful but NOT positivity. The SHARP constant c=2 ⟺ W_λ integrates to ≥0 ⟺ on-line zeros ⟺ **RH**. **Does not close: the sharp constant is RH.** **Technique 3c (functional equation s↔1−s):** the symmetry pairs ρ with 1−ρ. By NG-D4 (proved),
+J T_0 J = T_0 (the involution PRESERVES, does not NEGATE, the eigenvalues) ⟹ the functional
+equation does NOT force positivity. **Does not close.** ## Step 4 [GAP] — the only possible non-circular place: the BOUNDARY (finite prime cutoff) In Steps 1–3 I ignored the position-dependence of M_0 (the boundary, n≤λ²). **There, and only
+there, is the non-circular hope**, because:
+- The cutoff n≤λ² ⟺ exponential type L/2 ⟺ horizon T* (Lemma 2, proved).
+- W_λ(t) uses ONLY primes ≤λ² ⟹ it is a FINITE APPROXIMATION of 2θ'−2Re[−ζ'/ζ], smooth (without the full poles), controlled by PNT (the tail Σ_{n>λ²} is PNT, proved in B).
+- The positivity of the FINITE APPROXIMATION W_λ (with smooth primes, no poles) might be provable from PNT — and the convergence to full positivity is Link 2 itself. **[GAP] The step I do not have:** prove that the finite form ∫|f̂|²W_λ(t)dt ≥ c·ε₀·𝓔_D(f) using that W_λ is the primes-≤λ² approximation (smooth, PNT-controlled) of the Weil symbol, WITHOUT using the position of the zeros. This is equivalent to: the positivity of the explicit formula TRUNCATED to primes ≤λ² is controlled by the prime distribution (PNT) up to the horizon T*. ## Frank diagnosis of the attempt I deployed the three standard techniques (square/P8, Hardy, functional equation). **Each one reduces A
+to a known wall or to the sharp-constant=RH.** The attempt PROVES:
+- [P] The Fourier reduction A_λ = (1/2π)∫|f̂|²W_λ dt, W_λ=2θ'−2Re[−ζ'/ζ]_{≤λ²} (explicit formula).
+- [P] The (in)definiteness lives in the poles of ζ'/ζ at the zeros.
+- [P] Hardy gives c<2 (approximate positivity A_λ≥−ε); the SHARP constant c=2 = RH.
+- **[GAP]** the positivity of the FINITE form (primes ≤λ²) from PNT, without zero position. **The [GAP] is localized to the millimeter:** it is the positivity of the explicit formula truncated to
+primes ≤λ², controlled by PNT up to T*. I could not close it with elementary techniques — and I showed
+why each one fails (3a→P8, 3b→sharp constant=RH, 3c→NG-D4). If there is a SHARP Hardy
+bound (c=2) from the finite prime side, or the construction of the square 𝒯=A*A independent of
+zeros (your cross-place cancellation program), it fits into the [GAP] and A closes. I do not have it. **This is NOT a proof of A.** It is the frank attempt: the explicit reduction + the map of
+why the elementary techniques fail + the localized [GAP]. The ∎ of A requires input that I do not
+possess (the sharp Hardy bound / the cross-place square of).

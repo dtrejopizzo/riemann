@@ -28,7 +28,7 @@ Thus \(\tau_\Lambda(e_p)=\log p\) supplies the exact contact mass and
 The normalized operator
 
 \[
- C_p=c_p^{-1/2}A_p,qquad c_p={1+r_p\over1-r_p},           \tag{0.4}
+ C_p=c_p^{-1/2}A_p,\qquad c_p={1+r_p\over1-r_p},           \tag{0.4}
 \]
 
 is a contraction, and \(M_p=C_p^*C_p\) is the symmetric Poisson Markov
@@ -59,7 +59,7 @@ Recall the reduced-contact algebra
 
 \[
  \mathcal A_\Lambda=c_{00}(\mathbb P),\qquad
- e_pe_q=\delta_{pq}e_p,qquad
+ e_pe_q=\delta_{pq}e_p,\qquad
  \tau_\Lambda(e_p)=\log p.                               \tag{1.1}
 \]
 

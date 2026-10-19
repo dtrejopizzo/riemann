@@ -1,6 +1,5 @@
 # E73.122 Results - CRL Exponent Extractor
 
-Date: 2026-07-12.
 
 Script:
 

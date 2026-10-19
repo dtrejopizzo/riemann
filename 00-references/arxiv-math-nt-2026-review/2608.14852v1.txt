@@ -1,0 +1,1923 @@
+                                             RECIPROCITY FOR THE SHORT TWISTED SECOND MOMENT OF THE
+                                                              RIEMANN ZETA FUNCTION
+
+                                                                                             ZE SEN TANG
+
+
+                                                  Abstract. We prove a reciprocity formula for a twisted second moment of the Riemann zeta
+                                                  function over a short interval of length T δ , where δ ∈ ( 12 , 1), centered at height T on the critical
+                                                  line. This result extends Khan’s reciprocity formula to the short interval setting and makes explicit
+                                                  the relation between the twisting parameters and the interval length.
+
+
+
+
+                                                                                          1. Introduction
+arXiv:2608.14852v1 [math.NT] 14 Aug 2026
+
+
+
+
+                                              The Riemann zeta function occupies a central position in analytic number theory, and many
+                                           questions arise from the study of its behavior on the critical line Re(s) = 12 . For instance, the
+                                           famous Riemann Hypothesis predicts that all non-trivial zeros of the zeta-function lie on this line.
+                                           Beginning with Selberg [Sel42], one major direction toward this problem is to prove that a positive
+                                           proportion of the zeros lie on the critical line. Subsequently, twisted moments of the zeta-function
+                                           played an important role in this direction through Levinson [Lev74], who proved that more than
+                                           one third of the zeros lie on the line. Following Levinson’s method, Conrey [Con89] improved this
+                                           proportion to more than two fifths, Bui, Conrey and Young [BCY11] obtained more than 41.05%,
+                                           Feng [Fen12] improved to 41.28%, and Pratt, Robles, Zaharescu and Zeindler [PRZZ20] established
+                                           the record of more than five-twelfths. Very recently, a preprint authored by Claude [Cla26], an
+                                           artificial-intelligence developed by Anthropic, claimed an improvement of this record to 67.25%.
+                                           Moreover, the study of moments is closely connected with subconvexity problems. For example,
+                                           alternative proofs of the classical Hardy–Littlewood–Weyl bound, namely
+                                                                                                       1
+                                                                                    |ζ 21 + it | ≪ |t| 6 +ϵ ,
+                                                                                              
+                                           (1.1)
+                                           can be established through moments. Atkinson [Atk49] and Jutila [Jut83] gave a proof of this
+                                                                                                 1
+                                           bound from the short second moment of length T 3 . Heath-Brown [Hea78] obtained the bound
+                                           through the twelfth moment, while Iwaniec [Iwa80] obtained it from the short fourth moment of
+                                                    2
+                                           length T 3 . Jutila [Jut90] later gave a new proof of the same short fourth moment result.
+                                              The results discussed above motivated a deeper study of the structure of moments. In Conrey’s
+                                           unpublished work [Con07], he observed a reciprocity structure in the twisted second moment of
+                                           Dirichlet L-functions. For p and q distinct primes,
+                                                         1 X∗              1
+                                                                                    2             1 X∗                        2
+                                           (1.2)          1        χ(p) L  2 + it, χ   = main +     1        χ(−q) L 12 + it, χ + error.
+                                                        q 2χ mod q                                p 2χ mod p
+                                           This formula exhibits a reciprocity relation that links the twisted second moment of Dirichlet L-
+                                           function to a dual moment with the roles of parameter p and q interchanged. This result naturally
+                                           motivates the study of reciprocity structure in moments of the zeta function. In particular, Khan
+                                           [Kha25] proved a reciprocity formula for the twisted second moment of the zeta function. Roughly
+                                           speaking, his result takes the form
+                                           (1.3)
+                                           Z T  it                            1        1             Z 1  it
+                                                 p        1
+                                                                2                T 2 p 2 X∗                   T                 2
+                                                       ζ 2 + it dt = main +                         χ(q)             L 21 + it, χ dt + error,
+                                            −T    q                              2π     p−1               −1 2q
+                                                                                                      χ mod p
+                                                                                                      χ(−1)=1
+                                                                                                     1
+2
+
+                                                                          1   1 
+                                                                             p 2
+                                                                                 + pq
+                                                                                      2
+where the main term has size √Tpq log    T
+                                         pq   and the error term O (pqT )ϵ
+                                                                             q            . By
+informally setting q = 1, we observe that Khan’s result yields a reciprocity formula structurally
+analogous to Conrey’s result, where the twist parameter p becomes the modulus in the dual moment.
+   The purpose of this paper is to establish a generalization of Khan’s reciprocity formula in the
+short interval setting. More precisely, we study the short twisted second moment on an interval of
+length H around a height T where H < T . Before stating the main result, define
+                                        Z ∞
+                                                   (2πx − T )2
+                                                              
+(1.4)                      GT,H (w) =       exp −                xw−1 dx.
+                                         0             H2
+We prove the following theorem
+                                                                              1
+Theorem 1. Let p, q be distinct odd primes, T > 1 and H = T δ for δ ∈
+                                                                                 
+                                                                              2 , 1 . We have
+      Z ∞  it
+                                       (t − T )2
+                                                
+           p        1
+                          2
+                ζ 2 + it exp −                     dt =
+       −∞ q                               H2
+                2π
+                      G′T,H (1) − GT,H (1) log(pq) + 2γGT,H (1)
+                                                                  
+                √
+                  pq
+(1.5)                         √
+                                                               π it Γ   1+2α−2it
+                                          Z ∞                                  
+                    X∗          p                      1                    4             1
+                                                                                                  2
+                +                    χ(q)       G T,H 2  + it            1+2α+2it
+                                                                                      L   2 + it, χ    dt
+                          iα (p − 1)
+                                                                                  
+                                           −∞                   q    Γ      4
+                  χ mod p
+                                  "  1   1 #!
+                       T              p 2        q 2
+                +O        (pqT )ϵ          +             ,
+                       H              q          p
+
+for α = 0 if χ(−1) = 1 and α = 1 if χ(−1) = −1.
+
+    By Lemma 6, the main term of (1.5) has size
+                                                                              
+                    1      ′
+                                                                    H         T
+(1.6)              √    GT,H (1) − GT,H (1) log(pq) + 2γGT,H (1) ≍ √ log            .
+                    pq                                                pq       pq
+
+Moreover, as shown by Lemma 7, GT,H 12 + it decays rapidly for |t| ≫ H        T
+                                                  
+                                                                                . Thus, the integral
+                                                                       T
+in the dual moment is essentially supported on an interval of length H . Two types of reciprocity
+appear in our result. The first is a type of arithmetic reciprocity which was already presented in
+Khan’s result. The second is a type of analytic reciprocity in which the original length of support
+                         T
+H is transformed into H      in the dual moment.
+   Another objective of this paper is to observe the relation between the size of twisting parameter
+and the length of interval of integral. In general, the twisting parameter cannot be arbitrarily
+large, while the integral cannot be supported on an interval that is arbitrarily small. However, the
+relation between these two quantities has not been made explicit in previous results. In our result,
+this relation is given by
+
+                                           H2
+(1.7)                                              > T 1+ϵ ,
+                                         max{p, q}
+which follows naturally from requiring the main term to dominate the error term. We comment in
+Remark 3.1 how our lower bound on H arises, and on the possibility of improvement.
+   Finally, as a generalization of Corollary 2 in [Kha25] and reminiscent of Conrey’s reciprocity
+relation, we can also obtain the following Corollary from Theorem 1.
+                                                                                                                3
+
+
+Corollary 1. Let p, q be distinct odd primes, T > 1 and H = T δ for δ ∈ 12 , 1 . We have
+                                                                                  
+
+           X ∗ √p
+                                                             it
+                                              Γ 1+2α−2it
+                           Z ∞
+                                       1             4         π                  2
+                      χ(q)       GT,H 2 + it      1+2α+2it
+                                                                     L 21 + it, χ dt =
+                 p−1        −∞                 Γ     4
+                                                               q
+         χ mod p
+                 X∗ √q
+                                                                      it
+                                                      Γ 1+2α−2it
+                                   Z ∞
+                                                1             4        π                  2
+(1.8)                        χ(−p)       GT,H 2 + it       1+2α+2it
+                                                                             L 12 + it, χ dt
+                       q−1           −∞                Γ      4
+                                                                       p
+               χ mod q
+                                  "  1   1 #!
+                        T       ϵ    p 2      q 2
+                 +O       (pqT )          +           ,
+                       H             q        p
+
+for α = 0 if χ(−1) = 1 and α = 1 if χ(−1) = −1.
+1.1. Notations. Overall in the paper, we set e(x) = exp(2πix), T > 1, p, q distinct odd primes,
+            δ         1
+                          X∗
+and H = T for δ ∈ 2 , 1 .        denotes the sum over primitive Dirichlet characters, and τ (χ)
+                             χ(n)e( nq ) for a Dirichlet character χ modulo q. Moreover, ε denotes
+                        P
+denotes the Gauss sum
+                              n mod q
+an arbitrarily small positive constant.
+
+
+                                               2. Preliminaries
+Lemma 1. For ϵ > 0 be an arbitrary small, we have
+                                    2
+                         ζ 12 − it
+                   Z ∞
+                                             (t − T )2
+                                                                   
+                                                                  H ϵ
+(2.1)                       1          exp −             dt = O      T .
+                    −∞ − 2 + it                 H2                T2
+
+Proof. First, we split the integral at |t − T | = H 1+ϵ . Then, for |t − T | ≤ H 1+ϵ , we have |t| ≍ T and
+(2.2)
+                           2
+                ζ 21 − it            (t − T )2                                               (t − T )2
+ Z                                                      Z                                           
+                                                       1                   1
+                                                                                  2
+                              exp  −             dt ≪                   ζ  2 − it    exp   −             dt
+   |t−T |≤H 1+ϵ  − 12 + it              H2            T 2 |t−T |≤H 1+ϵ                          H2
+
+And, by the results in [Atk49] and [Jut83], we have
+                                          (t − T )2
+         Z                                               Z
+                               2                                                            2
+(2.3)                     1
+                       ζ 2 − it exp −                 dt ≪               ζ          1
+                                                                                    2 − it        dt ≪ HT ϵ .
+          |t−T |≤H 1+ϵ                       H2             |t−T |≤H 1+ϵ
+
+Then
+                                                     2
+                                          ζ 21 − it            (t − T )2
+                          Z                                             
+                                                                               H
+(2.4)                                        1          exp  −      2
+                                                                           dt ≪ 2 T ϵ .
+                           |t−T |≤H 1+ϵ    − 2 + it               H            T
+
+For the case |t − T | > H 1+ϵ , we have using Lemma 9
+                                     2                                          1
+                          ζ 12 − it           (t − T )2                      |t| 2 +ϵ
+         Z                                                   Z
+                                        exp −             dt ≪                        exp (−H ϵ ) dt
+           |t−T |>H 1+ϵ    − 21 + it             H2             |t−T |>H 1+ϵ 1 + t
+                                                                                    2
+
+(2.5)                                                                      Z
+                                                                                                     3
+                                                             ≪ exp (−H ) ϵ
+                                                                                          (1 + |t|)− 2 +ϵ dt
+                                                                                |t−T |>H 1+ϵ
+                                                                            ϵ
+                                                               ≪ exp (−H ) .
+                                                                                                                □
+4
+
+
+Lemma 2. Let fT,H (y) = 1 or fT,H (y) = Hy − iT , ψs,T,H (y) = −y 2 + 2s−1    2T
+                                                                       H y + i H y, and ϕn (y) =
+2πnq 2y
+  p e . Then, the following expression
+     H
+
+                                              Z ∞
+                                 X        1
+(2.6)               Hn,m (s) =                      fT,H (y) exp (ψs,T,H (y)) sin (ϕnm (y)) dy
+                                         nm   −∞
+                                 n,m≥1
+
+                                                     1 3
+                                                         
+is defined and analytic on D = {s ∈ C|Re(s) ∈ − 10    , 2 , Im(s)∈ (−1, 1)}. Moreover, the sum can
+be restricted to n, m ≤ T 50 with an error at most O pq −1 T −47 . Furthermore, the expression
+                                X1Z ∞
+(2.7)                 Hn (s) =            fT,H (y) exp (ψs,T,H (y)) sin (ϕn (y)) dy
+                                   n −∞
+                                  n≥1
+
+is also analytic onthe same domain D and the sum can be restricted to n ≤ T 50 with the error at
+most O pq −1 T −47 .
+
+Proof. For fT,H (y) = Hy − iT , set
+                                 Z ∞
+(2.8)                 Inm (s) =      fT,H (y) exp (ψs,T,H (y)) sin (ϕnm (y)) dy.
+                                        −∞
+
+We apply integration by parts on Inm (s) and get
+                       Z ∞
+                                                       1      d
+           Inm (s) = −     fT,H (y) exp (ψs,T,H (y)) ′           (cos (ϕnm (y))) dy
+                        −∞                           ϕnm (y) dy
+                            Z ∞                                      
+                       pH         d                                2y
+(2.9)              =                  fT,H (y) exp ψs,T,H (y) −           cos (ϕnm (y)) dy
+                     4πnmq −∞ dy                                    H
+                            Z ∞                                   
+                       pH                                       2y
+                   =             Ps,T,H (y) exp ψs,T,H (y) −         cos (ϕnm (y)) dy,
+                     4πnmq −∞                                   H
+                                                           2
+where Ps,T,H (y) = −2Hy 2 + (2s − 3 + 4iT )y + 2T          T
+                                                H + H − i H (2s − 3). Then,
+                                              Z ∞                                   
+             X     1             X      pH                            2  2Re(s) − 3
+(2.10)               Inm (s) ≪                    |Ps,T,H (y)| exp −y +             y dy.
+                  nm                  q(nm)2 −∞                             H
+            n,m≥1                    n,m≥1
+
+For s ∈ D, the coefficients of Ps,T,H (y) is at most T 2 . Thus, we have
+                        Z ∞                                        
+                                                  2    2Re(s) − 3
+(2.11)                        |Ps,T,H (y)| exp −y +               y dy ≪ T 2
+                          −∞                                H
+and
+                                  X        1           X pHT 2
+(2.12)                                       Inm (s) ≪          < ∞.
+                                          nm             q(nm)2
+                                 n,m≥1                     n,m≥1
+                                   P       1
+This implies that Hn,m (s) =              nm Inm (s) converges uniformly on D.        Since Inm (s) is analytic
+                                  n,m≥1
+on D for each n, m, Hn,m (s) is analytic on D. We now restrict the sum to n, m ≤ T 50 . Decompose
+the sum into
+         X      1               X       1              X      1              X      1
+(2.13)            Inm (s) =                Inm (s) + 2           Inm (s) +              Inm (s) .
+               nm                   50
+                                       nm                50
+                                                             nm                 50
+                                                                                   nm
+         n,m≥1                    n,m≤T                        n≤T                    n,m>T
+                                                               m>T 50
+                                                                                                                                             5
+
+
+Then, it remains to bound the last two terms. By (2.9), we have
+                                                                                                                                      
+              X         1                  X        1               p X     1                                         X            1 
+(2.14) 2                  Inm (s) +                   Inm (s) ≪ HT 2           2
+                                                                                  +                                                     .
+                       nm                          nm               q     (nm)                                                   (nm)2 
+             n≤T 50                     n,m>T   50                      50                  n≤T                      n,m>T     50
+             m>T 50                                                                         m>T 50
+                      −2 = O(1) and
+         P
+Since     n≤T 50 n
+                                                X 1       Z ∞
+                                                                dt    1
+(2.15)                                                2
+                                                        ≪         2
+                                                                    = 50 ,
+                                                 50
+                                                    n      T 50 t    T
+                                             n>T
+we have
+                                                                                                           
+                       X        1                  X               1                p                 1               p
+(2.16)            2               Inm (s) +                          Inm (s) ≪ HT 2                             ≪          .
+                               nm                                 nm                q                T 50            qT 47
+                      n≤T 50                    n,m>T          50
+                      m>T 50
+
+A similar argument applies to Hn (s), restricting the sum to n ≤ T 50 with error O(pq −1 T −47 ).
+  Finally, when fT,H (y) = 1, we obtain
+                                                   2s − 3     2T
+(2.17)                                     Ps,T,H (y) = −2y +
+                                                          +i
+                                                     H        H
+from the integration by parts step, and the same conclusion follows from the argument above.                                                 □
+                                                                  T
+Lemma 3. Let Pj (y) be a polynomial of degree at most j ≥ 1, ∆± = 2π ± nmq
+                                                                         p , and
+                               Z ∞                                       
+                     X      1                
+                                                  2   y     Ty   nmq 2y
+(2.18)     H± =                    Pj (y) exp −y −       e      ±      e H dy,
+                        50
+                           nm −∞                     H       Hπ     p
+                  n,m≤T
+
+then the sum in H± can be restricted to |∆± | ≤ H(pqH)ϵ with an error of O((pqT )ϵ H −1 ). Moreover,
+(2.19)                                             |H+ | ≪ (pqT )ϵ H −1 .
+Proof. Define
+                                     Z ∞                                                                   
+                                                     y        
+                                                                    2              Ty   nmq 2y
+(2.20)                      Inm =    Pj (y) exp −y −    e                             ±    eH                   dy
+                                  −∞                 H                             Hπ    p
+                                                                             ϵ
+Restricting the integral to |y| < (pqH)ϵ with a negligible error of O e−(pqH) , we have
+                                                         (pqH)ϵ
+                                        y                     
+(2.21)                             exp −      =1+O
+                                         H                  H
+                                         
+                                         2y          2y
+(2.22)                              exp       =1+       + RH (y)
+                                         H           H
+for
+                                                                     ∞ 
+                                                                         2y l 1
+                                                                     X     
+(2.23)                                           RH (y) =                               .
+                                                                           H       l!
+                                                                     l=2
+Then
+                                                                                                             (pqH)ϵ
+                  Z                                                                                            
+                                                   2
+                                                                  Ty   nmq           2y
+(2.24) Inm =                       Pj (y) exp −y           e          ±            1+    + RH (y)   dy + O            .
+                      |y|≤(pqH)ϵ                                   Hπ    p            H                        H
+Let
+                                                                                           
+                                                           2T y 2πnmq                 2y
+(2.25)                                  ϕ(y) = i               ±                   1+
+                                                            H     p                   H
+6
+
+
+and differentiate to get
+                                                                       
+                                     ′     4πi             T    nmq             4πi
+(2.26)                             ϕ (y) =                    ±             =       ∆± .
+                                            H              2π    p               H
+
+Then we get
+
+                                                                               (pqH)ϵ
+                   Z                                                               
+                                          2  2πinmq
+(2.27)      Inm =            Pj (y) exp −y ±        RH (y) exp (ϕ(y)) dy + O            .
+                  |y|≤(pqH)ϵ                    p                                H
+
+Suppose |∆± | > H(pqH)ϵ , apply the integration by part, and get
+(2.28)
+                                                                                            (pqH)ϵ
+          Z                                                                                     
+                                        2     2πinmq           1 d
+    Inm =              Pj (y) exp −y ±               RH (y)            exp (ϕ(y)) dy + O
+            |y|≤(pqH)ϵ                            p          ϕ′ (y) dy                        H
+                                                                                              (pqH)ϵ
+                   Z                                                                               
+              H                                   2  2πinmq            d
+        =                       Pj (y) exp −y ±             RH (y)        exp (ϕ(y)) dy + O
+          4πi∆± |y|≤(pqH)ϵ                              p             dy                        H
+                                                                             ϵ
+                   "                                                  (pqH)
+              H                            2πinmq
+        =            Pj (y) exp −y 2 ±              RH (y) exp (ϕ(y))
+          4πi∆±                                 p                       −(pqH)ϵ
+                                                                             #
+                                                                                           (pqH)ϵ
+          Z                                                                                    
+                                     d                  2   2πinmq
+        −              exp (ϕ(y))         Pj (y) exp −y ±            RH (y)     dy + O              .
+           |y|≤(pqH)ϵ               dy                         p                              H
+
+Observe that
+                                                                    (pqH)ϵ
+                       "                                                  #
+                H                          2πinmq                                       ϵ
+                                                                                           
+(2.29)                                  2
+                           Pj (y) exp −y ±        RH (y) exp (ϕ(y))           = O e−(pqH)
+              4πi∆±                           p                     −(pqH)ϵ
+
+
+can be absorbed into the error term, and the integral is
+(2.30)
+Z                                                           
+                          d                  2  2πinmq
+              exp (ϕ(y))      Pj (y) exp −y ±           RH (y)     dy
+  |y|≤(pqH)ϵ             dy                        p
+    Z                                                                                      
+                                     2   2πinmq                                    2πinmq ′
+ =               exp (ϕ(y)) exp −y ±            RH (y)    Pj−1 (y) + Pj (y) −2y ±        RH (y)   dy
+      |y|≤(pqH)ϵ                            p                                         p
+    Z                                                                         
+                         2
+                              Ty      nmq 2y               2πinmq          ′
+ =               exp −y e           ±      eH    Pj+1 (y) ±          Pj (y)RH (y) dy.
+      |y|≤(pqH)ϵ               Hπ       p                      p
+
+Then we have
+(2.31)          "Z                                                              #
+           H                    2
+                                     Ty   nmq 2y              2πinmq        ′
+ Inm = −                  exp −y e       ±    eH    Pj+1 (y) ±        Pj (y)RH (y) dy
+         4πi∆± |y|≤(pqH)ϵ             Hπ    p                     p
+             (pqH)ϵ
+                   
+       +O             .
+               H
+
+Observe that this contains the expression
+                            Z                                                    
+                                                   2
+                                                                  Ty   nmq 2y
+(2.32)                                    exp −y           e          ±    eH         Pj+1 (y)dy,
+                             |y|≤(pqH)ϵ                            Hπ    p
+                                                                                                                                      7
+
+
+which maintains the form of (2.24). So we can repeat the arguments from (2.25) to (2.31) for
+k = ⌈ 100
+       ϵ ⌉ times and obtain
+                             k Z                                   
+                          H                         2
+                                                         Ty   nmq 2y
+              Inm = −                        exp −y e        ±    e H   Pj+k (y)dy
+                       4πi∆±      |y|≤(pqH)ϵ              Hπ    p
+(2.33)               k          l
+                                                 (pqH)ϵ
+                                                       
+                    X        H
+                  +      ∓           Inm,l + O
+                           4πi∆±                   H
+                       l=1
+
+for
+                           Z                                                    
+                                                                   Ty   nmq 2y        2πinmq            ′
+                                          exp −y 2 e
+                                                  
+(2.34)          Inm,l =                                               ±    eH                Pj+l−1 (y)RH (y)dy.
+                             |y|≤(pqH)ϵ                            Hπ    p               p
+First, we bound the first term in (2.33). Applying |∆± | > H(pqH)ϵ , we must have
+                      k Z                                         
+                 H                           2
+                                                   Ty    nmq 2y
+             −                         exp −y e        ±         e H Pj+k (y)dy
+               4πi∆±        |y|≤(pqH)ϵ              Hπ      p
+                                                             Z
+(2.35)                                                 1
+                                                                           |Pj+k (y)| exp −y 2 dy
+                                                                                              
+                                                 ≪k       kϵ
+                                                    (pqH)       |y|≤(pqH)ϵ
+                                                        1
+                                                 ≪k           .
+                                                    (pqH)100
+Then the sum of the integral contributes
+(2.36)
+                     Z ∞
+                                                                                                                           Tϵ
+                                                                           
+      X          1                            2
+                                                             Ty   nmq 2y                   1           X          1
+                           Pj (y) exp −y              e          ±    eH        dy ≪k                                ≪k          .
+                nm    −∞                                      Hπ    p                    (pqH)100                 nm    (pqH)100
+  n,m≤T 50                                                                                             n,m≤T   50
+|∆± |>H(pqH)ϵ
+                                                            
+                                                          )ϵ
+Now, we need to show the remaining terms are O (pqT     H      . Observe that RH′ (y) = O                                   y 
+                                                                                                                            H2
+                                                                                                                                . Then,
+for each l > 0, we have
+                                                                      |y|
+                             Z
+                                                   nmq                        nmq
+(2.37)            |Inm,l | ≪             exp −y 2       |Pj+l−1 (y)| 2 dy ≪         .
+                              |y|≤(pqH)ϵ             p               H         pH 2
+Thus, substituting into the sum, we obtain
+
+                                   k         l                                                  k               l
+                     X           1 X      H                                      X           1 X            H           nmq
+                                      ∓          Inm,l ≪
+                                nm      4πi∆±                                               nm             |∆± |        pH 2
+                  n,m≤T 50           l=1                                      n,m≤T 50           l=1
+(2.38)          |∆± |>H(pqH)ϵ                                               |∆± |>H(pqH)ϵ
+                                                                                  k
+                                                                             q X l             X                1
+                                                                        =        H                                      .
+                                                                            pH 2                            |∆± |l
+                                                                                 l=1         n,m≤T 50
+                                                                                          |∆± |>H(pqH)ϵ
+
+Let r = nm. Then the number of terms nm = r is at most d(r) ≪ rϵ ≪ T ϵ , and we obtain
+                                                          l
+             X         1           X           Tϵ         p        X               Tϵ
+(2.39)                      l
+                              ≪                      l
+                                                       =                                l
+                                                                                          .
+                     |∆ ± |                  T    rq      q                     Tp
+           n,m≤T 50               r≤T 100
+                                            2π  ± p               r≤T   100
+                                                                                2πq ± r
+          |∆± |>H(pqH)ϵ                     T
+                                          | 2π ± rq |>H(pqH)ϵ                              Tp
+                                                                                         | 2πq ±r|> pH (pqH)ϵ
+                                                 p                                                   q
+8
+
+           pT                                            1
+For Nr ≤ | 2πq ± r| ≤ Nr + 1, we have                  pT
+                                                                         ≤ N1r and
+                                                       2πq
+                                                           −r
+
+                      l                                                         l
+                      p                X                         Tϵ               p                    X                Tϵ
+(2.40)                                                                       l
+                                                                               ≪                                            .
+                      q                                  Tp                       q pH                                  Nrl
+                                Tp
+                                      r≤T 100            2πq ± r                               q
+                                                                                                   (pqH)ϵ <Nr <T 101
+                              | 2πq ±r|> pH
+                                          q
+                                            (pqH)ϵ
+
+Now, for l = 1, we have
+                                                   Tϵ            pT ϵ                                       pT ϵ                pT ϵ
+                                                                                                              
+              p         X                                                           X          1
+(2.41)                                                ≪                                           ≪                    Tϵ ≪          .
+              q pH                                 Nr             q                        101
+                                                                                               Nr            q                   q
+                          (pqH)ϵ <Nr <T 101                                      1≤Nr <T
+                      q
+
+
+For l ≥ 2, we have
+(2.42)
+   l                                       l                                                l Z ∞
+    p          X                 Tϵ          p                       X                 1        p              1       p (pqT )ϵ
+                                     ≪           Tϵ                                        ≪       Tϵ             dx ≪           .
+    q pH                         Nrl         q                                         Nrl      q     pH(pqH)ϵ xl      q H l−1
+         q
+             (pqH)ϵ <Nr <T 101                           Nr > pH
+                                                               q
+                                                                 (pqH)ϵ                                            q
+
+
+
+Thus, we have
+(2.43)                                                                                                                                       
+             k                                                                                            k
+     q X l                X             1       q                                X              1     X                  X               1    
+         H                                   =       H                                               +   Hl
+                                                                                                                                              
+    pH 2                              |∆± |l   pH 2 
+                                                                                              |∆± |                                          l
+                                                                                                                                         |∆± | 
+         l=1        n,m≤T 50                                               n,m≤T 50                      l=2         n,m≤T 50
+                  |∆± |>H(pqH)ϵ                                          |∆± |>H(pqH)ϵ                             |∆± |>H(pqH)ϵ
+                                                                                       k
+                                                                                                            !
+                                                   q            pT ϵ X l p (pqT )ϵ
+                                                ≪             H     +     H
+                                                  pH 2            q         q H l−1
+                                                                      l=2
+                                                                    k
+                                                                               !
+                                                    1               X
+                                                =            HT ϵ +   H(pqT )ϵ
+                                                    H2
+                                                                                 l=2
+                                                      (pqT )ϵ
+                                                ≪k                   .
+                                                         H
+                                              
+                                      (pqH)ϵ
+Now, for the error term O               H          , we have
+                                                   X       1 (pqH)ϵ   (pqT )ϵ
+(2.44)                                                              ≪         .
+                                                       50
+                                                          nm H          H
+                                               n,m≤T
+
+Finally, for H+ , the restriction |∆+ | ≤ H(pqH)ϵ implies nmq  p   ≍ −T , which is impossible for
+n, m, p, q, T > 0. Thus, the bound applies to the entire sum for the H+ case.                  □
+                                                                    T
+Lemma 4. Let Pj (y) be a polynomial of degree at most j ≥ 1, ∆nm = 2π − nmq
+                                                                          p , and
+                                 Z ∞                                        
+                    X          1                
+                                                   2    y      Ty   nmq 2y
+(2.45)   H=                          Pj (y) exp −y −        e      −     e H   dy.
+                            ϵ
+                              nm −∞                     H       Hπ    p
+                     |∆nm |≤H(pqH)
+
+Then, we have
+(2.46)                        Z ∞
+                                                                                                                       (pqH)ϵ
+                                                                                                                         
+          X              1                                   2
+                                                                            Ty   2nmqy                 nmq
+ H=                                   Pj (y) exp −y                  e          −                   e −       dy + O            .
+                      ϵ
+                        nm       −∞                                          Hπ    pH                    p               H
+     |∆nm |≤H(pqH)
+                                                                                                                                        9
+
+                                                                                                                       ϵ
+Proof. Observe that nm ≍ Tqp and the sum of nm lies in an interval of length pH(pqH)
+                                                                                q    . Then we
+have
+                                                           !
+                                         pH(pqH)ϵ               H(pqH)ϵ
+                                                  
+                        X         1                     1
+(2.47)                               ≪                  Tp
+                                                             =            .
+                               ϵ
+                                 nm          q                      T
+                         |∆nm |≤H(pqH)                                            q
+                                                                                                          ϵ
+            the integral to |y| < (pqH)ϵ with a negligible error of O e−(pqH)
+                                                                                                              
+Restricting                                                                                                       and expanding
+exp − Hy , we get
+         
+
+                                                             (pqH)ϵ
+                               y          y                    
+(2.48)                    exp −      =1+O        =1+O                 .
+                                 H           H                 H
+Then we obtain
+           Z ∞                                            
+                                      y2     Ty   nmq 2y
+                  Pj (y) exp −y −          e      −     e H dy
+               −∞                    H         Hπ     p
+(2.49)
+                                                                               (pqH)ϵ
+                           Z                                                       
+                                                    2
+                                                         Ty   nmq 2y
+                         =             Pj (y) exp −y e       −    e H dy + O            .
+                            |y|≤(pqH)ϵ                    Hπ    p                H
+Substituting the error in (2.49) into (2.45), we obtain an error term of size
+                          X           1 (pqH)ϵ     H(pqH)ϵ (pqH)ϵ      (pqH)ϵ
+(2.50)                                          ≪                    =        .
+                                   ϵ
+                                     nm H              T       H          T
+                         |∆nm |≤H(pqH)
+
+Thus, we get
+                                                                                                                       (pqH)ϵ
+                                     Z                                                                                       
+                   X            1                                     2
+                                                                                     Ty   nmq 2y
+(2.51) H =                                            Pj (y) exp −y           e          −    eH        dy + O                      .
+                             ϵ
+                               nm        |y|≤(pqH)ϵ                                   Hπ    p                             T
+              |∆nm |≤H(pqH)
+
+Since nmq        T
+       p ≍ T and H 2 < 1, we obtain
+
+                                                          T (pqH)ϵ
+                                                            
+                     nmq 2y         nmq      2nmqy
+(2.52)         e −       eH = e −        e −         +O              .
+                      p              p        pH             H2
+Then we get
+(2.53)
+ Z                                                
+                             2
+                                  Ty     nmq 2y
+             Pj (y) exp −y e           −      e H    dy
+  |y|≤(pqH)ϵ                      Hπ        p
+                                                                                       T (pqH)ϵ
+                      Z                                                                    
+                                                2
+                                                       Ty   2nmqy      nmq
+                    =             Pj (y) exp −y e          −        e −       dy + O
+                       |y|≤(pqH)ϵ                      Hπ     pH         p                H2
+Substituting (2.53) into (2.51) and expanding the integral back to infinity with a negligible error,
+we obtain
+(2.54)                   Z ∞
+                                                                                       (pqH)ϵ
+                                                                                          
+            X         1                    2
+                                                Ty    2nmqy           nmq
+  H=                          Pj (y) exp −y e        −           e −          dy + O             .
+                   ϵ
+                     nm −∞                       Hπ      pH             p                 H
+         |∆nm |≤H(pqH)
+
+                                                                                                                                    □
+Lemma 5 (Mellin Inversion). [Won01, Chapter III, Theorem 2] Suppose that f : (0, ∞) →
+                                                                                    − R is
+continuous and the integral
+                                       Z ∞
+(2.55)                          ϕ(w) =     xw−1 f (x)dx
+                                                          0
+10
+
+
+is absolutely convergent for Re(s) ∈ (a, b). Then
+                                                Z
+                                              1
+(2.56)                              f (x) =          x−w ϕ(w)dw
+                                             2πi (c)
+for c ∈ (a, b)
+Lemma 6. For Re(w) = σ > 0, GT,H (w),defined in (1.4), is absolutely convergent. Moreover
+(2.57)                                               GT,H (σ) ≍ HT σ−1
+for fixed σ > 0. In particular,
+(2.58)                                                  GT,H (1) ≍ H,
+and
+(2.59)                                               G′T,H (1) ≍ H log T.
+Proof. To show GT,H (w) is absolutely convergent for σ > 0, it is enough to show
+                                         Z ∞
+                                               (2πx−T )2
+(2.60)                      |GT,H (w)| ≤     e− H 2 xσ−1 dx < ∞.
+                                                         0
+
+For x ∈ (1, ∞), we have
+                     Z ∞                         Z ∞
+                            (2πx−T )2                  (2πx−T )2
+                          −
+(2.61)                   e     H 2    x σ−1
+                                            dx ≪     e− H 2 x|σ−1| dx < ∞.
+                          1                                   1
+
+For x ∈ (0, 1], we have
+                              Z 1                                 Z 1
+                                         (2πx−T )2                                        1
+(2.62)                              e−      H2       xσ−1 dx ≪          xσ−1 dx =           <∞
+                               0                                   0                      σ
+for σ > 0. Now, to prove (2.57), let y = (2πx − T )/H. Then
+                                       H ∞               T + Hy w−1
+                                          Z                   
+                                                  −y 2
+(2.63)                    GT,H (w) =            e                   dy.
+                                       2π −T /H            2π
+Let w = σ, then we have
+                                                       σ−1 Z ∞                              σ−1
+                                          H        T                         2            Hy
+(2.64)                GT,H (σ) =                                       e−y           1+               dy.
+                                          2π       2π        −T /H                        T
+We need to show
+                                                 Hy σ−1
+                                     Z ∞            
+                                                     −y 2
+(2.65)                                 e     1+           dy ≍ 1.
+                                 −T /H             T
+                                                      
+For the lower bound, we first observe that 1 ≤ 1 + HyT   ≤ 2 for y ∈ [0, 1]. Thus, we have
+                                               (
+                                   Hy σ−1
+                                      
+                                                 1     if σ − 1 ≥ 0
+(2.66)                         1+            ≥    σ−1
+                                    T            2     if σ − 1 < 0,
+where both cases are constants for fixed σ. Then,
+                              Hy σ−1                         Hy σ−1
+            Z ∞                            Z 1                       Z 1
+                    −y 2                           −y 2                         2
+(2.67)             e      1+            dy ≫     e        1+        dy ≫     e−y dy ≫ 1.
+             −T /H             T              0              T            0
+                                                                                                         11
+                                                                             T          T       T
+                                                                                                     
+For the upper bound, we split the interval of integral into (0, ∞), − 2H        , 0 , and − H , − 2H   . In
+                                      σ−1           |σ−1|
+the first interval, we have 1 + Hy  T       ≤ 1 + HyT           . So we obtain
+
+                                    Hy σ−1                             Hy |σ−1|
+                    Z ∞                          Z ∞                    
+                          −y 2                             −y 2
+(2.68)                  e        1+          dy ≪        e         1+           dy ≪ 1.
+                     0                T             0                   T
+           , 0 , we have 1 + Hy
+     T                            1 
+For − 2H                        T ∈ 2 , 1 . This implies the following
+                                                  (
+                                       Hy σ−1                    if σ − 1 ≥ 0
+                                         
+                                                   1
+(2.69)                            1+           ≤     1
+                                                       σ−1
+                                        T            2           if σ − 1 < 0,
+where both cases are constants for fixed σ. Thus
+                                           Hy σ−1
+                       Z 0                              Z 0
+                                 −y 2                                   2
+(2.70)                          e      1+            dy ≪          e−y dy ≪ 1.
+                        −T /2H              T               −T /2H
+         T       T
+                                  H               T                      T
+Now, for − H , − 2H ,let u = 1 + T y. Then y = H (u − 1) and dy = H          du. So we obtain
+                 Z −T /2H                 σ−1          Z 1/2
+                               2        Hy             T          T2        2
+(2.71)                     e−y 1 +              dy =           e− H 2 (u−1) uσ−1 du.
+                   −T /H                T              H 0
+Observe that −(u − 1)2 ≤ − 14 . Then we obtain
+                                                                     T − T 22 1 σ
+               Z 1/2                                Z 1/2                     
+             T          T2       2         T    T2
+(2.72)               e− H 2 (u−1) uσ−1 du ≪ e− 4H 2       uσ−1 du =    e 4H       ≪ 1.
+             H 0                           H         0              σH        2
+For (2.58), it follows from substituting σ = 1 into (2.57). Finally, for (2.59), we have
+                           H ∞
+                              Z                           
+                  ′                     −y 2        T + Hy
+                GT,H (1) =            e      log             dy
+                           2π −T /H                    2π
+(2.73)                          Z ∞                          Z ∞                      !
+                           H               −y 2       T                 −y 2         Hy
+                         =               e      log       dy +        e      log 1 +     dy .
+                           2π     −T /H               2π        −T /H                T
+Observe that
+                                   Z ∞                         
+                                                2          T
+(2.74)                                       e−y log                dy ≍ log T.
+                                     −T /H                 2π
+Thus, we just need to show the second integral is O(1). For y ∈ (0, ∞), we have
+                      Z ∞                           Z ∞
+                            −y 2         Hy                    2 Hy          H
+(2.75)                    e      log 1 +       dy ≪        e−y       dy ≪      ≪ 1.
+                       0                  T            0         T           T
+                                        
+              , 0 , we have log 1 + Hy
+        T 
+For y ∈ − 2H                           T    ≤ log 2. Thus
+                        Z 0                               Z 0
+                                    2         Hy                         2
+(2.76)                           e−y log 1 +         dy ≪             e−y dy ≪ 1
+                         −T /2H                T             −T /2H
+        T        T
+                    
+For y ∈ − H , − 2H , we apply the same change of variable in (2.71). Then we obtain
+                 Z −T /2H                              Z 1/2
+                                         Hy           T           T2       2
+                            −y 2
+(2.77)                    e      log 1 +       dy =            e− H 2 (u−1) |log u| du.
+                   −T /H                  T          H 0
+With −(u − 1)2 ≤ − 14 , we get
+          Z 1/2
+                                           T − T 22 1/2
+                      2
+                                                   Z                                 
+        T         − T 2 (u−1)2                                      T − T 22 log 2 1
+(2.78)          e   H          |log u| du ≪ e 4H        |log u| du = e 4H         +     ≪ 1.
+        H 0                                H        0               H          2    2
+                                                                                                         □
+12
+
+
+Lemma 7. Let Re(w) = σ > 0 fixed. Then for every integer n > 0, we have
+                                                      T n
+                                                        !
+(2.79)                         |GT,H (w)| ≪n HT σ−1           H
+                                                                        .
+                                                           (1 + |t|)n
+
+                        T                                                         ( HT )
+In particular, if |t| ≫ H , then GT,H (w) decays faster than any fixed power of    |t|     .
+
+Proof. let y = 2πx−T                   d  2π d
+                  H , then we obtain dx = H dy and
+                                        n n                     n
+               dn         (2πx − T )2
+                       
+                                          2π     d          2      2π
+(2.80)             exp  −               =            exp(−y   ) =      Pn (y) exp(−y 2 ),
+              dxn            H2           H     dy n               H
+for Pn (y) is a polynomial of degree n. Back to G (σ + it), we apply integration by part n times and
+get
+                             Z ∞
+                                     xσ+it−1+1 d             (2πx − T )2
+                                                                        
+          GT,H (σ + it) = −                          exp −                 dx
+                              0    σ − 1 + it + 1 dx             H2
+                                  Z ∞
+                                              xσ+it−1+n        dn          (2πx − T )2
+                                                                                      
+                                n
+                        = (−1)           n                       n
+                                                                   exp −                 dx
+                                                                               H2
+                                       Q
+                                   0     k=1 (σ + it − 1 + k) dx
+                                                 σ+it−1+n
+                                  Z ∞       T +Hy               n
+                                n             2π                 2π                    H
+                        = (−1)         Qn                              Pn (y) exp −y 2      dy.
+                                   −T
+                                   H      k=1 (σ + it − 1 + k)   H                       2π
+Since σ − 1 + n > 0, we have
+(2.81)                       (T + Hy)σ−1+n < T σ−1+n (1 + |y|)σ−1+n .
+Moreover,
+                        p                    1
+(2.82)                   (σ − 1 + k)2 + t2 ≥ √ (σ − 1 + k + |t|) ≫ 1 + |t|
+                                              2
+for each k. Therefore
+                                    Z ∞
+                                H              (T + Hy)σ−1+n
+                                                                   Pn (y) exp −y 2 dy
+                                                                                  
+             |GT,H (σ + it)| ≪n  n
+                                           Qn
+                               H −T
+                                        H     k=1 (σ + it − 1 + k)
+                                  Z ∞ σ−1+n
+                               H         T        (1 + |y|)σ−1+n
+                                                                 |Pn (y)| exp −y 2 dy
+                                                                                  
+                             ≪ n                          n
+                              H −     T         (1 + |t|)
+                                     H
+                                   σ−1+n     Z ∞
+                               HT
+                                                  (1 + |y|)σ−1+n |Pn (y)| exp −y 2 dy
+                                                                                  
+                             = n           n
+                              H (1 + |t|) − T
+                                                H
+                                             T
+                                               n !
+                             ≪ HT σ−1        H
+                                                       .
+                                          (1 + |t|)n
+                                                                                                  □
+Lemma 8 (Functional equation). [Dav80, Chapter 9] Let χ be a primitive character modulo p,
+then we have
+                               τ (χ)  p  21 −w Γ 1−w+α
+                                                         
+                                                     2 
+(2.83)              L(w, χ) = α √                          L(1 − w, χ),
+                               i p π              Γ w+α
+                                                     2
+for α = 0 if χ(−1) = 1 and α = 1 if χ(−1) = −1.
+Lemma 9 (The convexity bound for the Riemann zeta function). [Tit86, Chapter V] Let σ ∈ R
+and ϵ > 0. For t ∈ R with |t| ≥ 1, we have
+(2.84)                                  |ζ(σ + it)| ≪ |t|α+ϵ ,
+                                                                                                       13
+
+
+where α = 0 for σ > 1, α = 12 (1 − σ) for σ ∈ [0, 1], and α = 12 − σ for σ < 0. The implied constant
+depends on σ and ϵ.
+                    T
+Lemma 10. Let ∆nm = 2π − nmq
+                          p and
+
+                        1
+                                                      (2πnmq − T p)2
+                                                                               
+                        q 2         X                                         nmq
+(2.85)          F = 2π                          exp −                     e −       .
+                        p                                 (Hp)2                p
+                                   n,m≥1
+                               |∆nm |>H(pqH)ϵ
+
+Then we have
+                                                       ϵ
+                                                          
+(2.86)                                     F = O e−(pqH)
+
+Proof. It is enough to show
+                                               (2πnmq − T p)2
+                                                             
+                                                                         ϵ
+                              X
+(2.87)                                   exp −          2
+                                                                ≪ e−(pqH) .
+                                                   (Hp)
+                            n,m≥1
+                        |∆nm |>H(pqH)ϵ
+
+We first split the sum at nm = T 100 . For the case nm > T 100 , we have
+                              (2πnmq − T p)2                          (2πrq − T p)2
+                 X                                 X                             
+                        exp −                    =         d(r) exp −
+                                  (Hp)2                                  (Hp)2
+               nm>T 100                            r>T 100
+                                                                                      !
+                                                                     2πq 2       Tp 2
+                                                    Z ∞                 
+(2.88)
+                                                 ≪         t exp −           t−          dt
+                                                     T 100           Hp          2πq
+                                                           100
+                                                   ≪ e−T         .
+
+For the case nm ≤ T 100 , we apply −∆2nm < −H 2 (pqH)2ϵ and get
+
+                                   (2πnmq − T p)2
+                 X                                      X
+                                                                             exp −(pqH)2ϵ
+                                                                                                   
+                           exp −                    ≪
+                     100
+                                       (Hp)2                 100
+                nm≤T                                           nm≤T
+             |∆nm |>H(pqH)ϵ                                 |∆nm |>H(pqH)ϵ
+(2.89)                                                                         X
+                                                          ≪ exp −(pqH)2ϵ                    d(r)
+                                                                                  r≤T 100
+                                                                             2ϵ
+                                                          ≪ T 100+ϵ e−(pqH) .
+
+Finally, we have
+                                                     2ϵ              ϵ
+(2.90)                              T 100+ϵ e−(pqH) ≪ e−(pqH) .
+
+                                                                                                       □
+
+Lemma 11. Let
+                                                            w 
+                                                                     1 2
+                                                                       
+                                2     1      1              p
+(2.91)                   B(w) = w −     w
+                                          −                       1− w   .
+                               q    (pq)    p−1             q       p
+Then
+                                                2πi
+             Resw=1 B(w)GT,H (w)ζ 2 (w) =           G′T,H (1) − GT,H (1) log(pq) + 2γGT,H (1) .
+                                                                                             
+(2.92)
+                                                 q
+14
+
+
+Proof. Note that B(w) and GT,H (w) are analytic at w = 1, and ζ 2 (w) has a double pole at w = 1.
+Thus, we have
+(2.93)
+   Resw=1 B(w)GT,H (w)ζ 2 (w)
+                      d
+          = 2πi lim     (w − 1)2 B(w)GT,H (w)ζ 2 (w)
+                w→
+                 − 1 dw
+                                                                                           
+                                     d        2 2                   2 2     d
+          = 2πi B(1)GT,H (1) lim       (w − 1) ζ (w) + lim (w − 1) ζ (w) B(w)GT,H (w) .
+                              w→− 1 dw                w→−1                 dw
+Observe that
+                                                      1
+(2.94)                                          B(1) = ,
+                                                      q
+
+                                                                        p − p2w
+                                                                                   
+                                                           log p
+(2.95)                      B ′ (w) = −B(w) log q +                                     ,
+                                                            qw         pw (p − 1)
+and
+                                                          log(pq)
+(2.96)                                      B ′ (1) = −           .
+                                                             q
+Moreover, the Laurent series of ζ 2 (w) at w = 1 is
+                                             1         2γ
+(2.97)                         ζ 2 (w) =          2
+                                                    +     + O (1) .
+                                          (w − 1)     w−1
+Thus, we have
+(2.98)                                   lim (w − 1)2 ζ 2 (w) = 1
+                                        w→
+                                         −1
+and
+                                            d
+(2.99)                                lim       (w − 1)2 ζ 2 (w) = 2γ.
+                                      w→
+                                       − 1 dw
+Finally, substituting (2.94), (2.96), (2.98), and (2.99) into (2.93), we have
+                                               2πi
+               Resw=1 B(w)GT,H (w)ζ 2 (w) =         G′T,H (1) − GT,H (1) log(pq) + 2γGT,H (1) .
+                                                                                             
+(2.100)
+                                                q
+                                                                                                          □
+Lemma 12. Let ϵ ∈ (0, 1) and
+                                                                 ϵ+it         2
+                                  2      1       1               p            1
+(2.101)            B(ϵ + it) = ϵ+it −         −                          1 − ϵ+it .
+                              q       (pq)ϵ+it p − 1             q          p
+Then we have
+                   1 Z ∞                                                                      1 !
+                   q 2                                                              T           q 2
+(2.102)                    B(ϵ + it)GT,H (ϵ + it)ζ 2 (ϵ + it)dt = O                   (pqH)ϵ          .
+                   p    −∞                                                          H           p
+Proof. We need to show
+               1 Z ∞                                                 1
+                q 2                             2             T      ϵ q
+                                                                         2
+(2.103)                  B(ϵ + it)GT,H (ϵ + it)ζ (ϵ + it) dt ≪ (pqH)       .
+                p     −∞                                      H        p
+Observe that we have
+                                                    ϵ+it           2
+                        2          1        1       p             1
+(2.104)                  ϵ+it
+                              −     ϵ+it
+                                         −                   1 − ϵ+it    ≪ (pq)ϵ
+                       q        (pq)       p−1      q           p
+                                                                                                                                                                         15
+
+
+and, by Lemma 9,
+(2.105)                                                          ζ 2 (ϵ + it) ≪ |t|1+ϵ .
+Then we have
+         1 Z ∞                                        1       Z ∞
+         q 2                                            q 2
+(2.106)                                 2
+                 B(ϵ + it)GT,H (ϵ + it)ζ (ϵ + it) dt ≪      (pq)ϵ     |GT,H (ϵ + it)| |t|1+ϵ dt.
+         p    −∞                                        p          −∞
+Now it remains to show
+                                                 Z ∞
+                                                                                                             T ϵ
+(2.107)                                                     |GT,H (ϵ + it)| |t|1+ϵ dt ≪                        T .
+                                                      −∞                                                     H
+                            T             T
+Split the integral at |t| = H . For |t| ≤ H , we apply Lemma 6 and get
+                  Z                                                       Z                                                                Z
+                                                        1+ϵ                                                  1+ϵ
+(2.108)                     |GT,H (ϵ + it)| |t|                 dt ≪                   GT,H (ϵ) |t|                dt ≪ HT         ϵ−1
+                                                                                                                                                        |t|1+ϵ dt.
+                        T                                                       T                                                                   T
+                   |t|≤ H                                                  |t|≤ H                                                              |t|≤ H
+                                        T
+                    1+ϵ
+                        dt = 2 0H t1+ϵ dt, we have
+          R                   R
+Since          T |t|
+          |t|≤ H
+                                   Z                                             Z T                                              2+ϵ
+                             ϵ−1                      1+ϵ                  ϵ−1
+                                                                                       H
+                                                                                               1+ϵ                   ϵ−1       T                    T ϵ
+(2.109)               HT                        |t|         dt ≪ HT                        t         dt ≪ HT                                    ≪     T .
+                                            T
+                                       |t|≤ H                                      0                                           H                    H
+          T
+For |t| > H , we apply Lemma 7 and get
+(2.110)
+                                                                                  T n                                                          n Z
+Z                                    Z                                                                                                
+                           1+ϵ                                                                         1+ϵ                                 T
+       |GT,H (ϵ + it)| |t|     dt ≪n                            HT       ϵ−1      H
+                                                                                                   |t|       dt ≪ HT       ϵ−1
+                                                                                                                                                             |t|1+ϵ−n dt.
+      T
+ |t|> H                                                     T
+                                                       |t|> H                  (1 + |t|)n                                                  H             T
+                                                                                                                                                    |t|> H
+              R             1+ϵ−n
+For n ≥ 3,             T |t|
+                  |t|> H          dt converges. Thus, we get
+                                   Z                                     Z ∞                                        2+ϵ−n
+                                                  1+ϵ−n                             1+ϵ−n                        T
+(2.111)                                         |t|             dt ≪             |t|               dt ≪                            .
+                                        T
+                                   |t|> H                                  T                                     H
+                                                                           H
+
+Substituting the result into (2.110), we obtain
+                          n Z                                n  2+ϵ−n
+                     ϵ−1   T                1+ϵ−n         ϵ−1  T    T        T
+(2.112)          HT                      |t|      dt ≪ HT                   ≪ T ϵ.
+                           H      |t|> T                       H    H        H
+                                                            H
+
+                                                                                                                                                                         □
+
+                                                            3. Proof of Theorem 1
+   Define
+(3.1)
+                 Z ∞  it
+                                                                                                                                         (t − T )2
+                                                                                                                                                              
+                      p                         1
+                                                                        1                                          −1
+                                                                                                                               
+                                                                                                         s − 12 + it
+                                                                                                                      
+   F (s, p, q) =           ζ                    2 − s − it           ζ    2 + s + it               −                               exp −
+                                                                                                                                            H2
+                                                                                                                                                                   dt.
+                  −∞ q
+
+This function is analytic for Re(s) > − 21 , and, for s = 0, we have
+(3.2)
+              Z ∞  it                                        Z ∞  it
+                                                                         ζ 12 − it
+                                                                                   
+                                               (t − T )2                                   (t − T )2
+                                                                                                  
+                   p        1
+                                  2                                p
+F (0, p, q) =            ζ 2 + it exp −                    dt−                       exp −             dt.
+               −∞ q                               H2            −∞ q      − 12 + it           H2
+Observe that the first integral in (3.2) is precisely the left hand side of (1.5). For the second
+integral, we apply Cauchy-Schwarz inequality and obtain
+        Z ∞  it                                2                        2
+                    ζ 12 − it                                   ζ 12 − it
+                                                         Z ∞
+                                      (t − T )2                                     (t − T )2
+                                                                                            
+               p
+(3.3)                           exp −            dt ≪ H                       exp −             dt.
+          −∞ q       − 12 + it           H2                        1
+                                                            −∞ − 2 + it                H2
+16
+
+
+By Lemma 1, we have
+                                            2
+                                 ζ 12 − it
+                                     Z ∞
+                                                         (t − T )2        H2 ϵ
+                                                                  
+(3.4)                    H           1          exp   −              dt ≪    T .
+                             −∞ − 2 + it                    H2            T2
+
+Thus, the second integral in (3.2) is of size O H     ϵ
+                                                        
+                                                   T T , which is negligible. To obtain the right hand
+side of (1.5), our plan is to express F (s, p, q) in a different form and analytically continue it to a
+neighborhood of s = 0.
+   Following the same procedure as in [Kha25, Section 3.2-3.3], we obtain
+(3.5)                             F (s, p, q) = F1 (s, p, q) + F2 (s, p, q) + F3 (s, p, q),
+where
+(3.6)
+                                                                                                      it
+                                         s − 21
+                                                      Z ∞                          Z ∞
+                                                                                                                  (t − T )2
+                                                                                                                             
+                           X
+                                                                 − 32 +s                        xp
+     F1 (s, p, q) = −2                         1             x             sin x                            exp −                 dtdx,
+                                                 +s                                           2πnmq                  H2
+                         n,m≥1 (2πnm)                   0                          −∞
+                                               2
+
+
+(3.7)
+                                                      Z ∞                          Z ∞                    it
+                                                                                                                      (t − T )2
+                                                                                                                              
+                           X               1                       3                                xp
+     F2 (s, p, q) = −2                         1             x− 2 +s sin x               it                     exp −             dtdx,
+                                                 +s                                               2πnmq                  H2
+                         n,m≥1 (2πnm)                   0                          −∞
+                                               2
+
+
+(3.8)
+                                            Z ∞                          Z ∞             it
+                                                                                                        (t − T )2
+                                                                                                                 
+                        X        1                     − 23 +s                      xp
+     F3 (s, p, q) = 2                1             x             sin x                            exp −             dtdx,
+                                    +s                                             2πnq                    H2
+                        n≥1 (2πn)              0                           −∞
+                                  2
+
+
+and these expressions are defined on Re(s) ∈ 21 , 32 . We now analyze F1 (s, p, q), F2 (s, p, q), F3 (s, p, q)
+                                                      
+separately and show that each term admits an analytic continuation to a neighborhood of s = 0.
+Then we begin with F1 (s, p, q) by evaluating the t integral
+                                                                           !
+                                                                       HL 2
+               Z ∞
+                                      (t − T )2          √
+                                                                  
+(3.9)                exp(itL) exp −               dt = H π exp −               exp (iLT ) ,
+                −∞                       H2                             2
+                       
+                     xp
+where L = log 2πnmq       . Substituting (3.9) into F1 (s) and setting y = HL
+                                                                            2 , we obtain
+(3.10)
+                                         1
+                  2 X s − 12 ∞ q − 2 +s
+                                                                                                    
+                                                               2s − 1
+                                 Z
+                                                           2                 T             2πnmq 2y
+F1 (s, p, q) = − √                                 exp −y +           y e       y sin               e H    dy.
+                   π         nm −∞ p                             H         Hπ                  p
+                         n,m≥1
+
+By Lemma 2, this expression admits an analytic continuation to a neighborhood of s = 0. More-
+over,
+   after   restricting the sum to n, m ≤ T 50 , the contribution of the omitted terms is of size
+        3      
+      p 2 −47
+O     q    T      . Therefore, we have
+
+                                                   Z ∞  − 21                                  
+                       1         X           1          q         
+                                                                     2  y     T          2πnmq 2y
+     |F1 (0, p, q)| ≪ √                                        exp −y −    e      y sin        e H   dy
+                        π                50
+                                            nm      −∞ p                H      Hπ           p
+                             n,m≤T
+                     1
+                     p 2             X         1
+                  ≪
+                     q                     50
+                                              nm
+                                 n,m≤T
+                     1
+                     p 2 ϵ
+                  ≪      T .
+                     q
+                                                                                                                 17
+
+
+Similarly, after applying the same argument to F3 (s), we obtain
+                                                                    1
+                                                                    p 2 ϵ
+                                                  |F3 (0, p, q)| ≪      T
+                                                                    q
+                                                                  1         
+                                                                  p   2
+Since both F1 (0, p, q) and F3 (0, p, q) are of size of O         q       Tϵ    , the main contribution should come
+from F2 (0, p, q). We next evaluate the t integral
+          Z ∞                                                    √                         2       !
+                                (t − T )2
+                                                                                    
+                                                                H π                     HL
+                                                                    H 2 L − 2iT exp −
+                                                                               
+(3.11)        it exp(itL) exp −                          dt = −                               + iT L ,
+           −∞                      H2                            2                       2
+                             
+                        xp
+where L = log         2πnmq       . Substituting (3.11) into F2 (s, p, q) and set y = HL
+                                                                                       2 , we have
+(3.12)
+ F2 (s, p, q) =
+           Z ∞  − 2 +s               1                     
+     2 X 1      q              2  2s − 1      T          2πnmq 2y
+    √                    exp −y +        y e     y sin        e H (Hy − iT ) dy.
+      π  nm −∞ p                    H         Hπ           p
+         n,m≥1
+
+
+Applying Lemma 2, we can analytically continue F2 (s, p, q) to 
+                                                                a neighborhood of s = 0 and restrict
+                                                   3
+                                                    p 2 −47
+the sum to n, m ≤ T 50 with an error of size O      q     T       . Expressing the sine function in
+exponential form, we have
+                                                                                       3     !
+                                  1                                                    p 2 −47
+(3.13)            F2 (0, p, q) = √ (H1,+ + H1,− + H2,+ + H2,− ) + O                        T     ,
+                                 i π                                                   q
+
+where
+                                              1   Z ∞                               
+                                    X         p 2 1           
+                                                                 2  y     Ty   nmq 2y
+(3.14)           H1,± := ±                              Hy exp −y −    e      ±    e H dy,
+                                          50
+                                              q   nm −∞             H      Hπ    p
+                                  n,m≤T
+                                              1   Z ∞                                
+                                    X         p 2 i                 y     Ty   nmq 2y
+(3.15)           H2,± := ∓                              T exp −y 2 −    e      ±    e H dy.
+                                          50
+                                              q   nm −∞              H      Hπ    p
+                                  n,m≤T
+
+                                                                                        T
+Furthermore, by Lemma 3, the sums in (3.14) and (3.15) can be restricted to the range | 2π ± nmq
+                                                                                              p |≤
+                                            1                      1  
+H(pqH)ϵ up to the errors of size O (pqT )ϵ pq                  (pqT )ϵ pq
+                                                2            T             2
+                                                    and O H                    respectively. Since
+H1,+ and H2,+ can be absorbed into the error by Lemma 3, it remains to analyze only H1,− and
+H2,− . Applying Lemma 4 on H1,− and H2,− , we have
+                                                  Z ∞   21                                 
+                              X              −1        p              2
+                                                                           Ty   2nmqy      nmq
+         H1,− =                                              Hy exp −y e       −        e −       dy
+                                             nm    −∞ q                     Hπ    Hp         p
+                      nmq   T
+                          − 2π    ≤H(pqH)ϵ
+(3.16)                 p
+                                1 !
+                                p 2
+                   + O (pqT )ϵ        ,
+                                q
+18
+
+                                              Z ∞   12                                 
+                         X                i        p                    Ty   2nmqy      nmq
+                                                         T exp −y 2 e
+                                                                   
+         H2,− =                                                            −        e −       dy
+                                         nm    −∞ q                     Hπ    Hp         p
+                  nmq   T
+                      − 2π    ≤H(pqH)ϵ
+(3.17)             p
+                                       1 !
+                         T             p 2
+                  +O       (pqT )ϵ           .
+                         H             q
+
+We now evaluate the integrals
+                       Z ∞                                   √
+                                                          L2 iL π
+                                                       
+                                    2
+(3.18)                      y exp(−y ) exp(iLy)dy = exp −         ,
+                        −∞                                4    2
+                               Z ∞
+                                                                L2        √
+                                                                     
+                                              2
+(3.19)                              exp(−y ) exp(iLy)dy = exp −               π,
+                                 −∞                             4
+
+where L = 2T p−4πnmq
+              Hp     .
+
+Remark 3.1. In analogy with the results of [Atk49] and [Jut83], one may expect the restriction
+δ > 21 in Theorem 1 to be improvable to δ > 31 . Indeed, by retaining the quadratic term after the
+Taylor expansion in equation (2.52) of Lemma 4, this improvement may be expected. However, this
+introduces an additional quadratic term into the oscillatory phase in (3.18) and (3.19), making the
+resulting integrals and the following steps more complicated to evaluate. We therefore do not pursue
+this refinement in the current work, but hope to revisit it in the future.
+   Substituting (3.18) and (3.19) into H1,− and H2,− respectively, we have
+(3.20)
+                              √  1 
+                                                                 (2πnmq − T p)2
+                                                                                     
+                   X         i π p 2 2πnmq − T p                                     nmq
+    H1,− =                                               exp −                   e −
+                              nm q              p                     (Hp)2           p
+            nmq   T
+             p
+                − 2π   ≤H(pqH)ϵ
+                        1 !
+                        p 2
+                          ϵ
+            + O (pqT )        ,
+                        q
+
+                                                 √  1
+                                                              (2πnmq − T p)2
+                                                                                   
+                                  X            Ti π p 2                           nmq
+               H2,− =                                   exp −                 e −
+                                                nm  q             (Hp)2            p
+                         nmq   T
+                             − 2π   ≤H(pqH)ϵ
+(3.21)                    p
+                                               1 !
+                                  T            p 2
+                         +O         (pqT )ϵ          .
+                                  H            q
+
+Substituting (3.20) and (3.21) into the expression (3.13) and extending the restricted sum back to
+an infinite sum with the cost of a negligible error by Lemma 10, we have
+                          1 X                                                           1 !
+                                            (2πnmq − T p)2
+                                                                   
+                          q 2                                     nmq          T        ϵ p
+                                                                                             2
+(3.22) F2 (0, p, q) = 2π            exp −                    e  −       +O        (pqT )        .
+                          p                      (Hp)2             p           H          q
+                                  n,m≥1
+
+Substituting (3.22) into F (0, p, q) and splitting the sum according to the residue class of nm mod p,
+we obtain
+                                        1                              1 !
+                                         q 2                  T           p 2
+(3.23)                F (0, p, q) = 2π        [S1 + S2 ] + O    (pqT )ϵ          ,
+                                         p                    H           q
+                                                                                                            19
+
+
+where
+                                                                                  2 !
+                                         X                         2πnmq − T p
+(3.24)                         S1 =                 exp −
+                                                                      Hp
+                                        n,m≥1
+                                      nm≡0 mod p
+
+
+                                                                                          2 !
+                             X         X              rq                       2πnmq − T p
+(3.25)               S2 =                         e −          exp −
+                                                      p                           Hp
+                            r mod p  n,m≥1
+                              r̸=0 nm≡r mod p
+
+We first consider S1 . Applying the inclusion-exclusion principle, we can rewrite S1 as the following
+expression
+                                                   !                                   !
+                                      2πnmq − T 2                         2πnmpq − T 2
+                        X                                X             
+(3.26)         S1 = 2       exp −                      −       exp −                        .
+                                           H                                   H
+                       n,m≥1                                         n,m≥1
+
+Applying Lemma 5 to the exponential term and interchanging the sums and integrals, we have
+                               Z                
+                             1         2     1
+(3.27)                 S1 =              −         GT,H (w)ζ 2 (w)dw,
+                            2πi (c) q w    (pq)w
+
+where c ∈ (1, ∞). We next consider S2 . By the orthogonality of Dirichlet character modulo p, the
+congruence condition nm ≡ r mod p can be rewritten as
+                                             1     X
+(3.28)                      1nm≡r mod p =              χ(nm)χ(r).
+                                           p−1
+                                                           χ mod p
+
+Then we have
+                                                                                                    !
+                                                                   2πnmq − T p 2
+                                                                           
+                    X       X       1  X              rq
+(3.29)      S2 =                         χ(nm)χ(r)e −      exp −
+                                   p−1                p               Hp
+                   r mod p n,m≥1        χ mod p
+                     r̸=0
+                                                                                                    !
+                     X  rq  X                      2πnmq − T p 2
+                                                               
+                  1                  X
+(3.30)         =       e −      χ(r)   χ(nm) exp −                                                      .
+                 p−1       p                            Hp
+                         r mod p                χ mod p     n,m≥1
+                           r̸=0
+
+Replacing r by rq and applying Lemma 5 to the exponential term, we obtain
+
+                  1   X          X  r           X χ(nm) Z  nmq −w
+(3.31)    S2 =             χ(q)     e −      χ(r)                         GT,H (w)dw
+                p−1                       p              2πi    (c)   p
+                       χ mod p        r mod p                      n,m≥1
+                                        r̸=0
+
+for c ∈ (1, ∞). Isolating the principal character and interchanging the sum and the integral, we
+have
+                                     X  r             Z  w
+                   1      X∗                                 p
+         S2 =                  χ(q)       e −      χ(r)           GT,H (w)L2 (w, χ)dw
+              2πi(p − 1)                       p         (c) q
+                          χ mod p       r mod p
+                                          r̸=0
+(3.32)                                              Z  w
+                                     X  r                             1 2 2
+                                                                         
+                       1                                 p
+               +              χ0 (q)   e −   χ0 (r)        GT,H (w) 1 − w   ζ (w)dw.
+                   2πi(p − 1)              p         (c) q             p
+                                      r mod p
+                                        r̸=0
+20
+                                                                     
+                                        e − pr = −1, and             e − pr χ(r) = χ(−1)τ (χ), we obtain
+                                  P                          P
+Since we have χ0 (q) = 1,
+                              r mod p                      r mod p
+                                r̸=0                         r̸=0
+                                                        Z  w
+                               1       X∗                    p
+                    S2 =                     χ(−q)τ (χ)         GT,H (w)L2 (w, χ)dw
+                           2πi(p − 1)                    (c) q
+                                     χ mod p
+(3.33)                                   Z  w
+                                                                  1 2 2
+                                                                  
+                                  1            p
+                           −                        GT,H (w) 1 − w    ζ (w)dw.
+                             2πi(p − 1) (c) q                    p
+Substituting the new expressions of S1 and S2 into (3.23), we obtain
+                         1 Z "                            w        #
+                          q 2 1       2       1        1     p        1 2
+          F (0, p, q) =                  −         −              1− w     GT,H (w)ζ 2 (w)dw
+                          p   i (c) q w    (pq)w     p−1 q           p
+                           1                             Z  w
+                            q 2     1     X∗                    p
+(3.34)                  +                       χ(−q)τ (χ)         GT,H (w)L2 (w, χ)dw
+                            p   i(p − 1)                    (c) q
+                                        χ mod p
+                                         1 !
+                              T          p 2
+                        +O      (pqT )ϵ          .
+                              H          q
+Shifting the first integral of ζ(w) to w = ϵ + it, ϵ ∈ (0, 1), we pick up the pole at w = 1 of ζ(w) by
+Lemma 11 and obtain
+(3.35) "
+                                 w            #
+           2       1        1     p           1 2
+Resw=1 w −             −                 1− w        GT,H (w)ζ 2 (w)
+          q     (pq)w     p−1 q              p
+                                                        2πi
+                                                              G′T,H (1) − log(pq)GT,H (1) + 2γGT,H (1) ,
+                                                                                                      
+                                                     =
+                                                         q
+which contributes to the main term of Theorem 1. For the shifted integral, we obtain
+(3.36)
+  1 Z "                              w            #                                        1 !
+   q 2 1         2       1        1     p           1 2                              T           q 2
+                  w
+                     −     w
+                              −                1− w         GT,H (w)ζ 2 (w)dw = O       (pqT )ϵ
+   p    i (ϵ) q        (pq)     p−1 q              p                                 H           p
+by applying Lemma 12. Eventually, we have
+                           2π
+                                 G′T,H (1) − GT,H (1) log(pq) + 2γGT,H (1)
+                                                                          
+             F (0, p, q) = √
+                            pq
+                              1                                Z  w
+                               q 2       1      X∗                    p
+(3.37)                     +                          χ(−q)τ (χ)          GT,H (w)L2 (w, χ)dw
+                               p     i(p − 1)                     (c) q
+                                              χ mod p
+                                             "  1   1 #!
+                                  T              p 2      q 2
+                           +O        (pqT )ϵ          +            .
+                                  H              q        p
+Finally, we shift the remaining integral to c = 12 , substitute w = 12 + it, apply the functional
+equation on one of the factors L(w, χ) using Lemma 8, and obtain the expression in Theorem 1.
+
+                                          4. Proof of Corollary 1
+   Observe that
+(4.1)
+    Z ∞  it                                            Z ∞  it
+                                        (t − T )2                                               (t + T )2
+                                                                                                       
+          p         1
+                             2                               p             1
+                                                                                     2
+                ζ   2 + it        exp −      2
+                                                    dt =           ζ        2 + it        exp −             dt,
+     −∞ q                                  H              −∞ q                                     H2
+                                                                                                                                21
+
+
+and following the same proof as last section, we obtain a conjugate version of Theorem 1.
+Corollary 2. Let p, q be distinct odd primes, T > 1 and H = T δ for δ ∈ 12 , 1 . We have
+                                                                                 
+
+(4.2)
+   Z ∞  it
+                                     (t + T )2
+                                              
+          p       1
+                        2
+               ζ 2 + it exp −                    dt =
+     −∞ q                               H2
+               2π
+                    G′T,H (1) − GT,H (1) log(pq) + 2γGT,H (1)
+                                                               
+              √
+                pq
+                            √
+                                                              π it Γ 1+2α−2it
+                                          Z ∞                                
+                  X∗          p                       1                  4          1
+                                                                                             2
+               +                   χ(−q)        G T,H 2 + it          1+2α+2it
+                                                                                  L 2 + it, χ   dt
+                        iα (p − 1)
+                                                                               
+                                           −∞                  q    Γ    4
+                χ mod p
+                                "  1   1 #!
+                     T              p 2        q 2
+               +O       (pqT )ϵ          +            ,
+                     H              q          p
+
+for α = 0 if χ(−1) = 1 and α = 1 if χ(−1) = −1.
+   Then, we define the following
+                     Z ∞  it
+                                                                  (t − T )2           (t + T )2
+                                                                                            
+                            p                1
+                                                      2
+(4.3)    J1 (p, q) =             ζ           2 + it         exp −             + exp −              dt,
+                      −∞ q                                           H2                  H2
+                      Z ∞  it
+                                                                  (t − T )2           (t + T )2
+                                                                                            
+                           p                 1
+                                                      2
+(4.4)     J2 (p, q) =           ζ            2 + it         exp −             − exp −              dt.
+                       −∞ q                                          H2                  H2
+Observe that
+      Z ∞  it                                                      Z ∞  it
+                                             (t ± T )2                                                     (t ± T )2
+                                                                                                                       
+            p            1
+                                  2                                      q            1
+                                                                                                2
+(4.5)           ζ        2 + it        exp −                    dt =           ζ       2 + it        exp −                     dt
+       −∞ q                                     H2                    −∞ p                                    H2
+Then we get
+(4.6)                                        J1 (q, p) = J1 (p, q) = J1 (p, q),
+
+(4.7)                                       J2 (q, p) = J2 (p, q) = −J2 (p, q).
+Moreover, by Corollary 2, we have
+                        4π
+                             G′T,H (1) − GT,H (1) log(pq) + 2γGT,H (1)
+                                                                       
+           J1 (p, q) = √
+                         pq
+                         X ∗ √p           Z ∞
+                                                             π it Γ 1−2it
+                                                                          
+                                                      1                  4                           1
+                                                                                                               2
+                     +2              χ(q)      GT,H 2 + it                    L                       2 + it, χ      dt
+(4.8)                  χ mod p
+                               p−1         −∞                  q    Γ 1+2it
+                                                                         4
+                         χ(−1)=1
+                                            "  1   1 #!
+                             T                p 2   q 2
+                    +O         (pqT )ϵ            +         ,
+                             H                q     p
+
+                                        √             Z ∞                         it     3−2it
+                                                                                                
+                          X∗           p                            1
+                                                                                 π    Γ     4          1
+                                                                                                                  2
+         J2 (p, q) = 2                      χ(q)             GT,H   2 + it                 3+2it
+                                                                                                     L   2 + it, χ        dt
+                                   i(p − 1)            −∞                         q    Γ     4
+                      χ mod p
+(4.9)                χ(−1)=−1
+                                         "  1   1 #!
+                           T               p 2   q 2
+                 +O          (pqT )ϵ           +         .
+                           H               q     p
+22
+
+
+Finally, by (4.6) and (4.7), we obtain
+                X ∗ √p          Z ∞                               it          1−2it
+                                                                                       
+                                                    1
+                                                                 π    Γ          4           1
+                                                                                                             2
+                           χ(q)     GT,H            2 + it                      1+2it
+                                                                                           L   2 + it, χ          dt
+                     p−1         −∞                               q    Γ          4
+              χ mod p
+              χ(−1)=1
+                                   √          Z ∞                              it        1−2it
+                                                                                                
+                          X∗       q                             1
+                                                                              π    Γ        4             1
+                                                                                                                       2
+(4.10)                =              χ(p)           GT,H         2 + it                    1+2it
+                                                                                                    L       2 + it, χ       dt
+                                 q−1           −∞                              p    Γ        4
+                       χ mod q
+                       χ(−1)=1
+                                             "  1   1 #!
+                                 T             p 2   q 2
+                          +O       (pqT )ϵ         +
+                                 H             q     p
+and
+                        √              Z ∞                        it          3−2it
+                                                                                       
+             X∗           p                         1
+                                                                 π    Γ          4           1
+                                                                                                             2
+                               χ(q)          GT,H   2 + it                      3+2it
+                                                                                           L   2 + it, χ          dt
+                      i(p − 1)         −∞                         q    Γ          4
+            χ mod p
+           χ(−1)=−1
+                                       √            Z ∞                              it      3−2it
+                                                                                                        
+                            X∗          q                            1
+                                                                                    π    Γ      4               1
+                                                                                                                            2
+(4.11)           =−                         χ(p)          GT,H       2 + it                    3+2it
+                                                                                                            L     2 + it, χ      dt
+                                   i(q − 1)         −∞                               p    Γ      4
+                         χ mod q
+                        χ(−1)=−1
+                                           "  1   1 #!
+                             T               p 2   q 2
+                      +O       (pqT )ϵ           +         .
+                             H               q     p
+Adding (4.10) and (4.11) and using χ(p) = χ(−p) in (4.10) and −χ(p) = χ(−p) in (4.11), we obtain
+Corollary 1.
+
+                                                    References
+[Atk49]    F. V. Atkinson. The mean-value of the Riemann zeta function. Acta Math. 81 (1949), pp. 353–376.
+[BCY11]    H. M. Bui, Brian Conrey, and Matthew P. Young. More than 41% of the zeros of the zeta function are
+           on the critical line. Acta Arith. 150.1 (2011), pp. 35–64.
+[Cla26]    Claude. More Than Two Thirds of the Zeros of the Riemann Zeta Function Lie on the Critical Line.
+           Preprint, dated August 10, 2026. Aug. 2026.
+[Con07]    J Brian Conrey. The mean-square of Dirichlet L-functions. arXiv preprint arXiv:0708.2699 (2007).
+[Con89]    J. B. Conrey. More than two fifths of the zeros of the Riemann zeta function are on the critical line. J.
+           Reine Angew. Math. 399 (1989), pp. 1–26.
+[Dav80]    Harold Davenport. Multiplicative number theory. Second. Vol. 74. Graduate Texts in Mathematics. Re-
+           vised by Hugh L. Montgomery. Springer-Verlag, New York-Berlin, 1980, pp. xiii+177.
+[Fen12]    Shaoji Feng. Zeros of the Riemann zeta function on the critical line. J. Number Theory 132.4 (2012),
+           pp. 511–542.
+[Hea78]    D. R. Heath-Brown. The twelfth power moment of the Riemann-function. Quart. J. Math. Oxford Ser.
+           (2) 29.116 (1978), pp. 443–462.
+[Iwa80]    Henryk Iwaniec. Fourier coefficients of cusp forms and the Riemann zeta-function. In: Seminar on Number
+           Theory, 1979–1980 (French). Univ. Bordeaux I, Talence, 1980, Exp. No. 18, 36.
+[Jut90]    M. Jutila. The fourth power moment of the Riemann zeta-function over a short interval. In: Number
+           theory, Vol. I (Budapest, 1987). Vol. 51. Colloq. Math. Soc. János Bolyai. North-Holland, Amsterdam,
+           1990, pp. 221–244.
+[Jut83]    Matti Jutila. Riemann’s zeta function and the divisor problem. Ark. Mat. 21.1 (1983), pp. 75–96.
+[Kha25]    Rizwanur Khan. A reciprocity relation for the twisted second moment of the Riemann Zeta function.
+           Proceedings of the American Mathematical Society 153.787 (2025).
+[Lev74]    Norman Levinson. More than one third of zeros of Riemann’s zeta-function are on σ = 1/2. Advances in
+           Math. 13 (1974), pp. 383–436.
+[PRZZ20]   Kyle Pratt, Nicolas Robles, Alexandru Zaharescu, and Dirk Zeindler. More than five-twelfths of the zeros
+           of ζ are on the critical line. Res. Math. Sci. 7.2 (2020), Paper No. 2, 74.
+                                                                                                              23
+
+
+[Sel42]    Atle Selberg. On the zeros of Riemann’s zeta-function on the critical line. Arch. Math. Naturvid. 45.9
+           (1942), pp. 101–114.
+[Tit86]    E. C. Titchmarsh. The theory of the Riemann zeta-function. Second. Edited and with a preface by D. R.
+           Heath-Brown. The Clarendon Press, Oxford University Press, New York, 1986, pp. x+412.
+[Won01]    R. Wong. Asymptotic approximations of integrals. Vol. 34. Classics in Applied Mathematics. Corrected
+           reprint of the 1989 original. Society for Industrial and Applied Mathematics (SIAM), Philadelphia, PA,
+           2001, pp. xviii+543.
+   Email address: zesen.tang@utdallas.edu
+
+   Mathematical Sciences Dept., The University of Texas at Dallas, Richardson, TX 75080-3021
+

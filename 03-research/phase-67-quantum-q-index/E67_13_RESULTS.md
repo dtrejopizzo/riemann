@@ -1,8 +1,7 @@
 # E67.13 -- AUDIT of the root-of-unity realization: contamination + fabrication
 
-**Date:** 2026-07-06.
 **Script:** [E67_13_audit_qartifacts.py](E67_13_audit_qartifacts.py).
-**Role:** audit WHY E67.12 failed, before building on top of it (solid-step discipline).
+**Purpose:** audit WHY E67.12 failed, before building on top of it (solid-step discipline).
 
 ## Finding
 

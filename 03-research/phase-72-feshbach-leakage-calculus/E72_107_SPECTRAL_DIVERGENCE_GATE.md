@@ -1,7 +1,6 @@
 # E72.107 -- Spectral divergence gate for the post-main cofactor
 
-**Date:** 2026-07-09.
-**Role:** replace norm-smallness of the post-main cofactor by a finite summation-by-parts identity.
+**Purpose:** replace norm-smallness of the post-main cofactor by a finite summation-by-parts identity.
 
 ## 0. Why another gate is needed
 

@@ -5,7 +5,7 @@
 Let (T=mathbb G_m) act on
 
 [
- overline Y=mathbb P^1_{mathbb C},qquad
+ overline Y=mathbb P^1_{mathbb C},\qquad
  t[X:Y]=[tX:Y].
  	ag{1.1}
 ]
@@ -33,7 +33,7 @@ the diagonal and (Gamma_chi) the graph of scaling.  In affine
 coordinates ((x,y)) at ((0,0)), use the ordered equations
 
 [
- x-y=0,qquad y-chi x=0.
+ x-y=0,\qquad y-chi x=0.
  	ag{2.1}
 ]
 
@@ -56,7 +56,7 @@ apply.
 `107_209` constructs on (Z) the derived self-intersection
 
 [
- eta_0=i_0^*i_{0,*}1=lambda_{-1}(L_0)=1-chi,qquad
+ eta_0=i_0^*i_{0,*}1=lambda_{-1}(L_0)=1-chi,\qquad
  L_0=mathfrak m_0/mathfrak m_0^2.
  	ag{2.3}
 ]
@@ -64,7 +64,7 @@ apply.
 Push it into the proper compactification and then to a point:
 
 [
- alpha_0=i_{0,*}eta_0in K_T(mathbb P^1),qquad
+ alpha_0=i_{0,*}eta_0in K_T(mathbb P^1),\qquad
  pi_*alpha_0=(picirc i_0)_*eta_0=1-chi.
  	ag{2.4}
 ]
@@ -78,7 +78,7 @@ The restriction of a closed-embedding pushforward satisfies the
 self-intersection formula.  Therefore
 
 [
- alpha_0|_0=(1-chi)^2,qquad
+ alpha_0|_0=(1-chi)^2,\qquad
  alpha_0|_infty=0.
  	ag{3.1}
 ]

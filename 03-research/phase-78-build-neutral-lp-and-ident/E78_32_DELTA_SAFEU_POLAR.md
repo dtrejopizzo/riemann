@@ -1,6 +1,6 @@
 # E78.32 - `Delta safe_u` is an exact modulus-plus-angle update
 
-**Run:** 2026-07-18.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

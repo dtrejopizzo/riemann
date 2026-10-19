@@ -1,7 +1,6 @@
 # E72.128 -- Mass gain target
 
-**Date:** 2026-07-09.
-**Role:** isolate the final scalar estimate left by the minimal mass gate.
+**Purpose:** isolate the final scalar estimate left by the minimal mass gate.
 
 ## 0. Minimal endpoint
 

@@ -1,6 +1,6 @@
 # P123.114 — Exact quadratic identity relating determinant, product trace and anomaly
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY for the coupled
+Status: PROVED-IN-REPOSITORY for the coupled
 induced external Bruhat test representation. This is an analytic
 second-variation identity, not the geometric mixed RR theorem.
 

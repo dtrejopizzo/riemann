@@ -1,6 +1,6 @@
 # Phase 68 -- the GLT/pseudodifferential symbol of Omega_7
 
-**Opened:** 2026-07-06. Successor to Phase 67.
+Successor to Phase 67.
 **Target:** close (or precisely fail) the forcer, in the rigorous framework Phase 67 arrived at.
 
 ## Where Phase 67 left us

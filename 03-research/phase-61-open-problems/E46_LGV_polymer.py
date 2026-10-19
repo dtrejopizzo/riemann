@@ -1,17 +1,17 @@
 """
-FASE F: gas de polimeros / LGV. Expansion (idealmente positiva) de e_k(A_lambda).
+PHASE F: polymer gas / LGV. (Ideally positive) expansion of e_k(A_lambda).
 
-Criterio EXACTO (A simetrica real -> autovalores reales):
-   A >= 0  <=>  e_k(A) >= 0  para todo k.
-e_k(A) = suma de los menores principales k x k = (-1)^k * coef de t^{n-k} en det(tI-A).
+EXACT criterion (A real symmetric -> real eigenvalues):
+   A >= 0  <=>  e_k(A) >= 0  for all k.
+e_k(A) = sum of the k x k principal minors = (-1)^k * coefficient of t^{n-k} in det(tI-A).
 
-Estrategia gas de polimeros: A = D - Q, D=P-R (parte 'libre', sin primos),
-Q=sum_p Q_p (interaccion de primos). Encender el acoplamiento con un parametro t:
+Polymer gas strategy: A = D - Q, D=P-R ('free' part, no primes),
+Q=sum_p Q_p (prime interaction). Turn on the coupling with a parameter t:
    A(t) = D - t*Q,   t:0->1.
-e_k(A(t)) es polinomio en t de grado <=k. Sus coeficientes son los 'pesos' del gas:
-  e_k(D - tQ) = sum_{j} (-t)^j * c_{k,j},  donde c_{k,j} mezcla menores de D y Q.
-Pregunta F: para zeta, todos los e_k(1)>=0 (RH); para DH, algun e_k(1)<0.
-Y: rastrear t* donde e_k cruza cero (la 'actividad critica' del gas).
+e_k(A(t)) is a polynomial in t of degree <=k. Its coefficients are the 'weights' of the gas:
+  e_k(D - tQ) = sum_{j} (-t)^j * c_{k,j},  where c_{k,j} mixes minors of D and Q.
+Question F: for zeta, all e_k(1)>=0 (RH); for DH, some e_k(1)<0.
+Also: track t* where e_k crosses zero (the 'critical activity' of the gas).
 """
 import mpmath as mp
 mp.mp.dps = 30
@@ -68,7 +68,7 @@ def DandQ(lam_str,N,kind):
     return D,Q,L
 
 def ek_from_eigs(M):
-    # e_k(M) = elementales de autovalores; via coef del polinomio caracteristico (Newton)
+    # e_k(M) = elementary symmetric functions of the eigenvalues; via coefficients of the characteristic polynomial (Newton)
     E,_=mp.eigsy(M); ev=[E[i] for i in range(M.rows)]
     n=len(ev); e=[mp.mpf(1)]+[mp.mpf(0)]*n
     for lam in ev:
@@ -80,17 +80,17 @@ def report(name,lam,N,kind):
     e=ek_from_eigs(A)
     negs=[k for k in range(1,n+1) if e[k]<-mp.mpf('1e-12')]
     print(f"\n=== {name} (lambda={lam}, N={N}, dim={n}) ===")
-    print(f"  #e_k<0 : {len(negs)}  primeros k negativos: {negs[:6]}")
-    print(f"  e_1(traza)={mp.nstr(e[1],4)}  e_n(det)={mp.nstr(e[n],4)}  sign(det)={mp.sign(e[n])}")
-    # actividad critica: para cada k, menor t en [0,1] donde e_k(D-tQ) cruza 0
-    print(f"  t* (actividad critica) por k: encender acoplamiento D - t Q")
+    print(f"  #e_k<0 : {len(negs)}  first negative k's: {negs[:6]}")
+    print(f"  e_1(trace)={mp.nstr(e[1],4)}  e_n(det)={mp.nstr(e[n],4)}  sign(det)={mp.sign(e[n])}")
+    # critical activity: for each k, smallest t in [0,1] where e_k(D-tQ) crosses 0
+    print(f"  t* (critical activity) per k: turning on the coupling D - t Q")
     ts=[mp.mpf(i)/20 for i in range(21)]
     firstcross=None
     for k in range(1,n+1):
         vals=[]
         for t in ts:
             ek=ek_from_eigs(D-t*Q)[k]; vals.append(ek)
-        # buscar cruce de signo (desde + en t=0)
+        # look for a sign crossing (starting from + at t=0)
         tc=None
         for i in range(len(ts)-1):
             if vals[i]>0 and vals[i+1]<=0:
@@ -98,9 +98,9 @@ def report(name,lam,N,kind):
         if tc is not None and firstcross is None:
             firstcross=(k,tc)
     if firstcross:
-        print(f"  PRIMER cruce e_k=0: k={firstcross[0]} en t*={mp.nstr(firstcross[1],3)} (acoplamiento<1 => rompe)")
+        print(f"  FIRST crossing e_k=0: k={firstcross[0]} at t*={mp.nstr(firstcross[1],3)} (coupling<1 => breaks)")
     else:
-        print(f"  NINGUN e_k cruza 0 para t in [0,1]: gas POSITIVO (todos e_k>=0) => A>=0")
+        print(f"  NO e_k crosses 0 for t in [0,1]: POSITIVE gas (all e_k>=0) => A>=0")
     return e
 
 report("ZETA",'7.0',10,'zeta')

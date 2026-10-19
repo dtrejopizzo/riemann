@@ -35,13 +35,13 @@ In the affine carrier, the first iterated decomposition labels residues
 modulo `pq` by
 
 \[
- f(r,s)=r+ps,qquad 0\leq r<p,quad0\leq s<q,       \tag{2.1}
+ f(r,s)=r+ps,\qquad 0\leq r<p,quad0\leq s<q,       \tag{2.1}
 \]
 
 with lexicographic order `(r,s)`.  The second labels them by
 
 \[
- g(s,r)=s+qr,qquad 0\leq s<q,quad0\leq r<p,       \tag{2.2}
+ g(s,r)=s+qr,\qquad 0\leq s<q,quad0\leq r<p,       \tag{2.2}
 \]
 
 with lexicographic order `(s,r)`.

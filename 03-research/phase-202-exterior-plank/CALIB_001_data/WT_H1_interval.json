@@ -1,0 +1,14 @@
+{
+ "0.12": {
+  "value": "[-0.047 +/- 3.48e-4]",
+  "certified_negative": true
+ },
+ "0.5": {
+  "value": "[-1.950 +/- 2.77e-4]",
+  "certified_negative": true
+ },
+ "1/2log3": {
+  "value": "[-2.125 +/- 2.19e-4]",
+  "certified_negative": true
+ }
+}

@@ -1,6 +1,6 @@
 # E77.7c - Min-Max Closure Gate and Real-Interval Autopsy
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Finite Min-Max Theorem
 

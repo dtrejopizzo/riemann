@@ -1,53 +1,51 @@
-# 104_33 — Símbolo de bandera y gate exacto frontera--residuos
+# 104_33 — Flag symbol and the exact boundary–residue gate
 
-**Rol.** Atacar el primer momento de `104_30` mediante el símbolo Toeplitz
-de la forma prima--polo y determinar si una estimación de frontera puede
-producir la coercividad proporcional que falta.
+**Role.** Attack the first moment of `104_30` via the Toeplitz symbol of
+the prime–pole form, and determine whether a boundary estimate can produce
+the missing proportional coercivity.
 
-El símbolo admite una forma cerrada. Sin embargo, es meromorfo en el disco
-exactamente cuando existen ceros a la derecha de la línea crítica. Al
-deformar el momento de prefijo hasta la frontera aparece un término de
-residuos interiores que no es un error técnico: un cuarteto fuera de la
-línea deja invariante el símbolo real de frontera y coloca toda su carga
-exponencial en esos residuos.
+The symbol admits a closed form. However, it is meromorphic on the disc
+exactly when zeros exist to the right of the critical line. Deforming the
+prefix moment to the boundary produces an interior residue term that is not
+a technical artifact: an off-line quartet leaves the real boundary symbol
+unchanged and puts all its exponential load in those residues.
 
-Por tanto, una prueba que use solamente el símbolo real de frontera es
-circular si omite los residuos o supone holomorfía en el disco. Este
-documento no descarta una estimación aritmética firmada que controle
-conjuntamente frontera y residuos, pero muestra exactamente qué término
-RH-strength tendría que controlar.
+Hence, a proof using only the real boundary symbol is circular if it
+omits the residues or assumes holomorphy on the disc. This document does
+not rule out a signed arithmetic estimate that jointly controls boundary
+and residues, but shows exactly which RH-strength term it would have to
+control.
 
-Este documento no prueba A1 ni RH.
+This document proves neither A1 nor RH.
 
-**Pre-registro.** El enunciado ensayado es el techo de primer momento
-\(B_n/A_n\le1501/2002\) sobre los prefijos de bandera. Los únicos inputs
-son: Euler producto en \(\Re s>1\), continuación meromorfa, ecuación
-funcional, conjugación, producto de Hadamard emparejado y las identidades
-Laguerre de `104_30`; todos son incondicionales. El falsificador obligatorio
-es un cuarteto recíproco fuera de la línea. Una deducción que use solo los
-inputs simétricos debe fallar para ese cuarteto; si no falla, ha omitido el
-dato transversal de los ceros.
+**Pre-registration.** The tested statement is the first-moment ceiling
+\(B_n/A_n\le1501/2002\) on the flag prefixes. The only inputs are: the
+Euler product on \(\Re s>1\), meromorphic continuation, the functional
+equation, conjugation, the paired Hadamard product, and the Laguerre
+identities of `104_30`; all are unconditional. The mandatory falsifier is a
+reciprocal off-line quartet. A deduction using only the symmetric inputs
+must fail for that quartet; if it does not fail, it has omitted the
+transversal zero datum.
 
-## 1. Auditoría de no duplicación
+## 1. Non-duplication audit
 
-`103_26_INTEGRATED_STRONG_MARGIN_AUDIT.md` contiene la identidad de Fejér
-para otro margen completado y descarta positividad puntual del símbolo.
-`phase-102/175_LOG_DERIVATIVE_RH_EQUIVALENCE.md` identifica la positividad
-de \(\xi'/\xi\) en el semiplano con RH. `104_30` construye la referencia
-positiva de bandera y calcula las entradas \(q_d\).
+`103_26_INTEGRATED_STRONG_MARGIN_AUDIT.md` contains the Fejér identity
+for another completed margin and rules out pointwise positivity of the
+symbol. `phase-102/175_LOG_DERIVATIVE_RH_EQUIVALENCE.md` identifies
+positivity of \(\xi'/\xi\) in the half-plane with RH. `104_30` builds the
+positive flag reference and computes the entries \(q_d\).
 
-Lo que se añade aquí es:
+What is added here is:
 
-1. la suma cerrada exacta del símbolo **prima--polo** de `104_30`;
-2. una fórmula de deformación frontera--residuos para su momento de
-   prefijo;
-3. el residuo cerrado de cada cero a la derecha;
-4. un falsificador de cuarteto que conserva exactamente la frontera y
-   cambia exponencialmente el cociente de bandera.
+1. the exact closed sum of the **prime–pole** symbol of `104_30`;
+2. a boundary–residue deformation formula for its prefix moment;
+3. the closed residue of each right-hand zero;
+4. a quartet falsifier that keeps the boundary exactly fixed and
+   exponentially changes the flag ratio.
 
-## 2. El símbolo prima--polo exacto
+## 2. The exact prime–pole symbol
 
-Sea
+Let
 
 \[
  h_\varepsilon(z)
@@ -56,14 +54,14 @@ Sea
  \tag{1}
 \]
 
-La identidad triangular (18) de `104_30` da
+The triangular identity (18) of `104_30` gives
 
 \[
  \sum_{n\ge1}P_{n,\varepsilon}z^{n-1}
  ={h_\varepsilon(z)\over(1-z)^2}.                    \tag{2}
 \]
 
-Por otro lado,
+On the other hand,
 
 \[
  \sum_{n\ge1}L_{n-1}^{(1)}(x)z^{n-1}
@@ -71,8 +69,8 @@ Por otro lado,
    \exp\!\left(-{xz\over1-z}\right).                \tag{3}
 \]
 
-Aplicando (3) primero en el semiplano de convergencia absoluta del Euler
-producto,
+Applying (3) first in the half-plane of absolute convergence of the Euler
+product,
 
 \[
 \begin{aligned}
@@ -83,7 +81,7 @@ producto,
 \end{aligned}                                                 \tag{4}
 \]
 
-Como \(1+z/(1-z)=s\), (2)--(4) prueban
+Since \(1+z/(1-z)=s\), (2)–(4) prove
 
 \[
  \boxed{
@@ -93,8 +91,8 @@ Como \(1+z/(1-z)=s\), (2)--(4) prueban
  \tag{5}
 \]
 
-Al retirar el regulador, la singularidad en \(s=1\) se cancela y queda el
-germen regular
+Removing the regulator, the singularity at \(s=1\) cancels, leaving the
+regular germ
 
 \[
  \boxed{
@@ -104,10 +102,10 @@ germen regular
  \tag{6}
 \]
 
-La ecuación (6) es primero una identidad de gérmenes en \(z=0\) y luego
-una continuación meromorfa. No se ha supuesto RH.
+Equation (6) is first a germ identity at \(z=0\) and then a meromorphic
+continuation. RH is not assumed.
 
-Si \(B_n=A_n-\lambda_n\), entonces
+If \(B_n=A_n-\lambda_n\), then
 
 \[
  \boxed{
@@ -115,16 +113,16 @@ Si \(B_n=A_n-\lambda_n\), entonces
  \tag{7}
 \]
 
-Por (24) y (30) de `104_30`, (7) es exactamente el primer momento de la
-bandera en cualquier sección finita \(K_{M,N}\) con \(N\ge n\):
+By (24) and (30) of `104_30`, (7) is exactly the first moment of the flag
+on any finite section \(K_{M,N}\) with \(N\ge n\):
 
 \[
  {B_n\over A_n}=\langle u_n,K_{M,N}u_n\rangle.       \tag{8}
 \]
 
-## 3. Lema meromorfo de Fejér
+## 3. Meromorphic Fejér lemma
 
-Definamos el polinomio de Fejér como polinomio de Laurent
+Define the Fejér polynomial as a Laurent polynomial
 
 \[
  \mathcal F_n(z)
@@ -132,23 +130,23 @@ Definamos el polinomio de Fejér como polinomio de Laurent
  ={(1-z^n)(1-z^{-n})\over(1-z)(1-z^{-1})}.          \tag{9}
 \]
 
-En \(|z|=1\),
+On \(|z|=1\),
 
 \[
  \mathcal F_n(e^{i\theta})
  =\left|\sum_{j=0}^{n-1}e^{ij\theta}\right|^2\ge0.  \tag{10}
 \]
 
-**Lema 3.1 (frontera más residuos).** Sea \(H\) un germen con
-coeficientes reales en cero que continúa meromórficamente a un entorno del
-disco cerrado, sin polos en el círculo, y con polos simples \(p\) en el
-disco, de residuos \(r_p\). Si
+**Lemma 3.1 (boundary plus residues).** Let \(H\) be a germ with real
+coefficients at zero that continues meromorphically to a neighborhood of
+the closed disc, with no poles on the circle, and with simple poles \(p\)
+inside the disc, of residues \(r_p\). If
 
 \[
  H(z)=a_0+\sum_{d\ge1}a_dz^d
 \]
 
-en su disco local de Taylor, entonces
+in its local Taylor disc, then
 
 \[
 \begin{aligned}
@@ -159,13 +157,12 @@ en su disco local de Taylor, entonces
 \end{aligned}                                                 \tag{11}
 \]
 
-donde los polos no reales se agrupan con sus conjugados. En particular,
-el lado derecho es real.
+where non-real poles are grouped with their conjugates. In particular,
+the right-hand side is real.
 
-*Demostración.* Reste las partes principales y aplique ortogonalidad de
-Fourier a la parte holomorfa. Solo hay que calcular un polo
-\(r/(z-p)\). Su expansión local y su expansión sobre el círculo son,
-respectivamente,
+*Proof.* Subtract the principal parts and apply Fourier orthogonality to
+the holomorphic part. Only one pole \(r/(z-p)\) needs to be computed. Its
+local expansion and its expansion on the circle are, respectively,
 
 \[
  {r\over z-p}=-\sum_{d\ge0}{r\over p^{d+1}}z^d,
@@ -173,8 +170,8 @@ respectivamente,
  {r\over z-p}=\sum_{d\ge1}rp^{d-1}z^{-d}.           \tag{12}
 \]
 
-La diferencia entre el momento local de la primera serie y el momento de
-frontera de la segunda es
+The difference between the local moment of the first series and the
+boundary moment of the second is
 
 \[
  -r\left[
@@ -183,34 +180,34 @@ frontera de la segunda es
  =-r{\mathcal F_n(p)\over p}.                       \tag{13}
 \]
 
-Sumando los polos se obtiene (11). \(\square\)
+Summing over the poles gives (11). \(\square\)
 
-La hipótesis de finitud puede retirarse por límites meromorfos siempre que
-la suma de (13) converja absolutamente. Eso es precisamente lo que ocurre
-para el logaritmo derivado de \(\xi\) con \(n\) fijo, como se verifica en
-la sección siguiente. Los polos sobre el círculo se incorporan mediante el
-límite radial/parte finita simétrica; en particular, los ceros críticos
-forman parte de la distribución de frontera y no se descartan tomando el
-valor puntual fuera de sus ordenadas.
+The finiteness hypothesis can be removed by meromorphic limits whenever
+the sum in (13) converges absolutely. That is precisely what happens for
+the logarithmic derivative of \(\xi\) with \(n\) fixed, as checked in the
+next section. Poles on the circle are incorporated via the symmetric
+radial limit/finite part; in particular, the critical zeros are part of
+the boundary distribution and are not discarded by taking the pointwise
+value away from their ordinates.
 
-## 4. Especialización a los ceros de \(\zeta\)
+## 4. Specialization to the zeros of \(\zeta\)
 
-Para un cero no trivial \(\rho\), escribamos
+For a nontrivial zero \(\rho\), write
 
 \[
  w_\rho=1-{1\over\rho}.
 \]
 
-Entonces
+Then
 
 \[
  |w_\rho|^2
  =1+{1-2\Re\rho\over|\rho|^2}.                     \tag{14}
 \]
 
-Así \(w_\rho\) está dentro del disco exactamente cuando
-\(\Re\rho>1/2\). Si \(m_\rho\) es la multiplicidad, (6) y
-\(ds/dz=s^2\) dan
+So \(w_\rho\) lies inside the disc exactly when
+\(\Re\rho>1/2\). If \(m_\rho\) is the multiplicity, (6) and
+\(ds/dz=s^2\) give
 
 \[
  \boxed{
@@ -218,19 +215,19 @@ Así \(w_\rho\) está dentro del disco exactamente cuando
  \tag{15}
 \]
 
-Para fijar sin ambigüedad el primer término de la fórmula siguiente, se
-toman sumas parciales del logaritmo derivado de \(\xi\) por órbitas
-funcionales completas y altura creciente. En cada suma finita se usa la
-traza interior de distribución en el círculo: valor ordinario fuera de los
-polos críticos y límite Abel normal en esos polos. Se aplica el Lema 3.1,
-con pequeñas indentaciones simétricas, y luego se hace tender la altura a
-infinito. Denotamos el límite resultante por
-\(\mathcal I_n^\partial(h)\). La convergencia local del producto de
-Hadamard fija sus coeficientes en cero, y la convergencia absoluta indicada
-en (17) fija separadamente los residuos interiores. No se supone soporte
-crítico en esta definición.
+To fix the first term of the following formula without ambiguity, partial
+sums of the logarithmic derivative of \(\xi\) are taken over complete
+functional orbits and increasing height. In each finite sum, the interior
+boundary distributional trace is used: the ordinary value away from the
+critical poles and the normal Abel limit at those poles. Lemma 3.1 is
+applied, with small symmetric indentations, and then the height is sent to
+infinity. We denote the resulting limit by
+\(\mathcal I_n^\partial(h)\). Local convergence of the Hadamard product
+fixes its coefficients at zero, and the absolute convergence indicated in
+(17) separately fixes the interior residues. No critical support is
+assumed in this definition.
 
-Por tanto (11), en ese límite simétrico, se vuelve
+Hence (11), in that symmetric limit, becomes
 
 \[
  \boxed{
@@ -240,16 +237,16 @@ Por tanto (11), en ese límite simétrico, se vuelve
  \tag{16}
 \]
 
-Aquí \(\mathcal I_n^\partial(h)\) denota el momento de la distribución
-radial de frontera, incluyendo los polos correspondientes a ceros sobre la
-línea. Para \(n\) fijo la suma de residuos de (16) converge absolutamente:
-\(w_\rho\to1\), \(\mathcal F_n(w_\rho)=n^2+O_n(|\rho|^{-1})\), y
+Here \(\mathcal I_n^\partial(h)\) denotes the moment of the radial
+boundary distribution, including the poles corresponding to zeros on the
+line. For fixed \(n\), the sum of residues in (16) converges absolutely:
+\(w_\rho\to1\), \(\mathcal F_n(w_\rho)=n^2+O_n(|\rho|^{-1})\), and
 
 \[
  \sum_\rho {m_\rho\over1+|\Im\rho|^2}<\infty.        \tag{17}
 \]
 
-La fórmula de bandera queda, sin abreviaturas,
+The flag formula becomes, with no abbreviation,
 
 \[
  \boxed{
@@ -260,40 +257,40 @@ La fórmula de bandera queda, sin abreviaturas,
  \tag{18}
 \]
 
-El techo suficiente de Phase 104 es
+The Phase 104 sufficient ceiling is
 
 \[
  \langle u_n,K_{M,N}u_n\rangle
  \le {1501\over2002}\qquad(n\ge150).                \tag{19}
 \]
 
-La suma de (18), no una norma de operador, es el término que cualquier
-prueba de (19) debe conservar.
+The sum in (18), not an operator norm, is the term any proof of (19) must
+preserve.
 
-## 5. Qué contiene realmente la frontera
+## 5. What the boundary actually contains
 
-De la definición completada
+From the completed definition
 
 \[
  \xi(s)={1\over2}s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)
 \]
 
-se deduce
+one derives
 
 \[
  h(z)={1\over s}-{1\over2}\log\pi
        +{1\over2}\psi(s/2)-{\xi'\over\xi}(s).       \tag{20}
 \]
 
-Sobre \(z=e^{i\theta}\ne1\),
+On \(z=e^{i\theta}\ne1\),
 
 \[
  s={1\over2}+{i\over2}\cot{\theta\over2}.          \tag{21}
 \]
 
-La función \(\xi(1/2+it)\) es real. Fuera de sus ceros,
-\(\xi'/\xi(1/2+it)\) es puramente imaginaria. Por ello el valor puntual
-real de frontera es solamente
+The function \(\xi(1/2+it)\) is real. Away from its zeros,
+\(\xi'/\xi(1/2+it)\) is purely imaginary. Hence the real boundary
+pointwise value is only
 
 \[
  \Re h(e^{i\theta})
@@ -301,25 +298,25 @@ real de frontera es solamente
                   +{1\over2}\psi(s/2)\right].       \tag{22}
 \]
 
-Esto no autoriza a borrar la parte de \(\xi'/\xi\): los ceros críticos
-aparecen como masa en el límite radial de (22), y los ceros a la derecha
-aparecen en la suma de residuos de (16).
+This does not license erasing the \(\xi'/\xi\) part: critical zeros
+appear as mass in the radial limit of (22), and the right-hand zeros
+appear in the residue sum of (16).
 
-En particular,
+In particular,
 
 \[
- h\text{ holomorfa en }\mathbb D
+ h\text{ holomorphic on }\mathbb D
  \quad\Longleftrightarrow\quad
- \zeta\text{ no tiene ceros con }\Re\rho>1/2
+ \zeta\text{ has no zeros with }\Re\rho>1/2
  \quad\Longleftrightarrow\quad \mathrm{RH},          \tag{23}
 \]
 
-donde la última equivalencia usa la simetría funcional. Tratar (6) como un
-símbolo de Hardy holomorfo en todo el disco ya importa RH.
+where the last equivalence uses the functional symmetry. Treating (6) as
+a Hardy symbol holomorphic throughout the disc already imports RH.
 
-## 6. Falsificador exacto: misma frontera, distinta coercividad
+## 6. Exact falsifier: same boundary, different coercivity
 
-Sea \(\rho\) un punto con \(1/2<\Re\rho<1\), y sea
+Let \(\rho\) be a point with \(1/2<\Re\rho<1\), and let
 
 \[
  \mathcal O(\rho)=\{\rho,\bar\rho,1-\rho,1-\bar\rho\},
@@ -327,14 +324,14 @@ Sea \(\rho\) un punto con \(1/2<\Re\rho<1\), y sea
  Q_\rho(s)=\prod_{\eta\in\mathcal O(\rho)}(s-\eta). \tag{24}
 \]
 
-Multiplicar el divisor completado por \(Q_\rho^M\) conserva conjugación y
-la ecuación funcional. En el símbolo produce
+Multiplying the completed divisor by \(Q_\rho^M\) preserves conjugation
+and the functional equation. In the symbol it produces
 
 \[
  \widetilde h(z)=h(z)-M{Q_\rho'\over Q_\rho}(s(z)).  \tag{25}
 \]
 
-Si \(s=1/2+it\), entonces \(Q_\rho(s)\) es real y no nulo. Por tanto
+If \(s=1/2+it\), then \(Q_\rho(s)\) is real and nonzero. Hence
 
 \[
  \boxed{
@@ -342,10 +339,10 @@ Si \(s=1/2+it\), entonces \(Q_\rho(s)\) es real y no nulo. Por tanto
  \tag{26}
 \]
 
-en toda la frontera, también en sentido distribucional: el cuarteto no
-añade ceros sobre la línea.
+throughout the boundary, also in the distributional sense: the quartet
+adds no zeros on the line.
 
-Póngase \(w=w_\rho\), de modo que \(|w|<1\). La identidad elemental
+Set \(w=w_\rho\), so that \(|w|<1\). The elementary identity
 
 \[
  {\mathcal F_n(w)\over\rho(\rho-1)}
@@ -353,7 +350,7 @@ Póngase \(w=w_\rho\), de modo que \(|w|<1\). La identidad elemental
  =w^n+w^{-n}-2                                      \tag{27}
 \]
 
-prueba que los residuos de los dos ceros derechos aportan
+proves that the residues of the two right-hand zeros contribute
 
 \[
 \begin{aligned}
@@ -363,7 +360,7 @@ prueba que los residuos de los dos ceros derechos aportan
 \end{aligned}                                                 \tag{28}
 \]
 
-donde
+where
 
 \[
  Q_n=4-2\Re(w^n+w^{-n})
@@ -371,68 +368,69 @@ donde
  \quad w=e^{-\alpha+i\vartheta}.                    \tag{29}
 \]
 
-Aquí \(Q_n\) es la contribución del cuarteto al **coeficiente de Li**. La
-forma de Weil \(2\Re\lambda_n\) la duplica y lleva el factor \(8\) usado en
-otros documentos; ambas normalizaciones no se mezclan en (28)--(29).
+Here \(Q_n\) is the quartet's contribution to the **Li coefficient**. The
+Weil form \(2\Re\lambda_n\) doubles it and carries the factor \(8\) used
+in other documents; the two normalizations are not mixed in (28)–(29).
 
-Esto coincide exactamente con el cambio
-\(\widetilde B_n-B_n=-M Q_n\), ya que el cuarteto suma \(M Q_n\) al
-coeficiente de Li y no cambia \(A_n\).
+This matches exactly the change
+\(\widetilde B_n-B_n=-M Q_n\), since the quartet adds \(M Q_n\) to the Li
+coefficient and does not change \(A_n\).
 
-Use ahora el falsificador ya fijado en `104_26`,
+Now use the falsifier already fixed in `104_26`,
 
 \[
  w={1\over2}e^{74\pi i/75},\qquad \rho={1\over1-w}. \tag{30}
 \]
 
-En \(n=150\), \(\cos(150\cdot74\pi/75)=1\), y
+At \(n=150\), \(\cos(150\cdot74\pi/75)=1\), and
 
 \[
  -Q_{150}=4\bigl(\cosh(150\log2)-1\bigr)>0.         \tag{31}
 \]
 
-La cantidad (31), multiplicada por \(M\), supera cualquier múltiplo fijo
-de \(A_{150}\), mientras (26) deja invariante toda estimación que vea solo
-el símbolo real de frontera. Por consiguiente:
+Quantity (31), multiplied by \(M\), exceeds any fixed multiple of
+\(A_{150}\), while (26) leaves invariant every estimate that sees only the
+real boundary symbol. Consequently:
 
-> ninguna cota uniforme de (19) puede deducirse exclusivamente de
-> \(\Re h|_{\partial\mathbb D}\), de la ecuación funcional y de la
-> simetría. Debe controlar la suma firmada de residuos en (18), o usar
-> aritmética que rechace el cuarteto.
+> no uniform bound of (19) can be deduced exclusively from
+> \(\Re h|_{\partial\mathbb D}\), the functional equation, and the
+> symmetry. It must control the signed residue sum in (18), or use
+> arithmetic that rejects the quartet.
 
-El resultado no afirma que tal control aritmético sea imposible. Afirma que
-reemplazarlo por una cota de símbolo de frontera borra exactamente el dato
-que decide RH.
+The result does not claim that such arithmetic control is impossible. It
+claims that replacing it with a boundary-symbol bound erases exactly the
+datum that decides RH.
 
-## 7. Verificación racional
+## 7. Rational verification
 
-El archivo `tools/flag_symbol_residue_check.py` usa el cuarteto racional
+The file `tools/flag_symbol_residue_check.py` uses the rational quartet
 
 \[
  w={i\over2},\qquad \rho={1\over1-w}={4+2i\over5},
 \]
 
-y comprueba con `Fraction`, sin punto flotante:
+and checks with `Fraction`, with no floating point:
 
-1. la identidad (27) para \(1\le n\le20\);
-2. que el residuo del par derecho es \(-Q_n\);
-3. que \(Q_\rho'/Q_\rho(1/2+it)\) tiene parte real cero para una malla
-   racional de \(t\).
+1. identity (27) for \(1\le n\le20\);
+2. that the residue of the right-hand pair is \(-Q_n\);
+3. that \(Q_\rho'/Q_\rho(1/2+it)\) has zero real part on a rational grid
+   of \(t\).
 
-Se reproduce con
+Reproduced with
 
     cd 03-research/phase-104-unconditional-a1-closure/tools
     python3 flag_symbol_residue_check.py
 
-## Estado
+## Status
 
-* **Probado:** símbolo cerrado (5)--(6), lema frontera--residuos (11),
-  residuo de cada cero (15), fórmula de primer momento (16)--(18) e
-  invariancia de frontera del cuarteto (26)--(31).
-* **Descartado:** obtener (19) de una cota sobre el símbolo real de
-  frontera, o invocar teoría de Hardy/Toeplitz suponiendo sin prueba que
-  \(h\) es holomorfa en el disco.
-* **Sobrevive:** una estimación aritmética firmada, específica de
-  \(\zeta\), para el miembro completo de (18). Debe rechazar el cuarteto y
-  no puede separar la frontera de sus residuos por valores absolutos.
-* **No probado:** (19), A1 y RH.
+* **Proved:** the closed symbol (5)–(6), the boundary–residue lemma
+  (11), each zero's residue (15), the first-moment formula (16)–(18),
+  and the quartet's boundary invariance (26)–(31).
+* **Ruled out:** obtaining (19) from a bound on the real boundary
+  symbol, or invoking Hardy/Toeplitz theory while unprovenly assuming
+  that \(h\) is holomorphic on the disc.
+* **Remains:** a signed arithmetic estimate, specific to
+  \(\zeta\), for the full term of (18). It must reject the quartet and
+  cannot separate the boundary from its residues via absolute values.
+* **Not proved:** (19), A1, and RH.
+</content>

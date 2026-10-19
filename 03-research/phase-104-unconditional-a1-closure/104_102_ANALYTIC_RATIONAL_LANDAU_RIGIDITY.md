@@ -1,8 +1,8 @@
-# 104_102 — Rigidez analítica/racional del transformado de Landau
+# 104_102 — Analytic/rational rigidity of the Landau transform
 
-## Resultado
+## Result
 
-Ponga
+Set
 
 \[
  \ell_j(s)=\left(-{d\over ds}\right)^j
@@ -12,87 +12,87 @@ Ponga
  \tag{1}
 \]
 
-Este documento extiende `104_95` desde polinomios a transformaciones
-analíticas y racionales. El resultado exacto es el siguiente.
+This document extends `104_95` from polynomials to analytic and rational
+transformations. The exact result is as follows.
 
-> **Teorema A (rigidez analítica).** Sea
-> \(\Phi\) un germen holomorfo en
-> \(0\in\mathbb C^{r+1}\), y para \(\Re s\) grande defina
+> **Theorem A (analytic rigidity).** Let
+> \(\Phi\) be a holomorphic germ at
+> \(0\in\mathbb C^{r+1}\), and for \(\Re s\) large define
 > \[
 >  F(s)=\Phi(\ell_0(s),\ldots,\ell_r(s))
 >      =\sum_{n\ge1}{a_n\over n^s}.
 >  \tag{2}
 > \]
-> La serie de la derecha es la expansión ordinaria inducida por el Taylor
-> de \(\Phi\). Suponga \(a_n\ge0\) para todo \(n\ge2\). Si esa serie
-> representa a \(F\) para todo \(\Re s>1\) y la misma rama se prolonga
-> holomórficamente a \(s=1\), entonces \(\Phi\) es constante.
+> The series on the right is the ordinary expansion induced by the Taylor
+> series of \(\Phi\). Suppose \(a_n\ge0\) for every \(n\ge2\). If that series
+> represents \(F\) for every \(\Re s>1\) and the same branch extends
+> holomorphically to \(s=1\), then \(\Phi\) is constant.
 
-No se exige que el Taylor de \(\Phi\) tenga coeficientes positivos. La
-positividad requerida es únicamente la de los coeficientes de Dirichlet
-ya ensamblados.
+It is not required that the Taylor series of \(\Phi\) have positive
+coefficients. The positivity required is only that of the already-assembled
+Dirichlet coefficients.
 
-> **Teorema B (los cocientes singulares no abren una excepción).** Sea
-> \(R=P/Q\in\mathbb C(X_0,\ldots,X_r)\), escrito en forma reducida. Si
-> \(R(\ell_0(s),\ldots,\ell_r(s))\) posee una serie de Dirichlet
-> **ordinaria** en algún semiplano derecho, entonces
+> **Theorem B (singular quotients open no exception).** Let
+> \(R=P/Q\in\mathbb C(X_0,\ldots,X_r)\), written in reduced form. If
+> \(R(\ell_0(s),\ldots,\ell_r(s))\) has an **ordinary** Dirichlet series
+> in some right half-plane, then
 > \[
 >  Q(0)\ne0.
 >  \tag{3}
 > \]
-> Por tanto \(R\) es ya un germen holomorfo en el origen y queda bajo el
-> Teorema A cuando su serie llega a \(\Re s>1\), tiene coeficientes no
-> negativos y cancela el polo en \(s=1\).
+> Hence \(R\) is already a holomorphic germ at the origin and falls under
+> Theorem A once its series reaches \(\Re s>1\), has non-negative
+> coefficients, and cancels the pole at \(s=1\).
 
-Hay una salvedad necesaria. «Holomorfa localmente en \(s=1\)» sin pedir
-que la serie positiva llegue desde la derecha hasta \(1\) es demasiado
-débil. Si \(\sigma_c\) es la abscisa de convergencia de (2), entonces:
+A necessary caveat is needed. "Holomorphic locally at \(s=1\)" without
+requiring the positive series to reach \(1\) from the right is too weak. If
+\(\sigma_c\) is the abscissa of convergence of (2), then:
 
-> **Corolario C (dicotomía del ancla real).** Si la rama de \(F\) admite
-> continuación holomorfa a \(s=1\), \(a_n\ge0\) y \(\Phi\) no es
-> constante, necesariamente
+> **Corollary C (real-anchor dichotomy).** If the branch of \(F\) admits
+> holomorphic continuation to \(s=1\), \(a_n\ge0\), and \(\Phi\) is not
+> constant, then necessarily
 > \[
 >  \boxed{\sigma_c>1.}
 >  \tag{4}
 > \]
-> Por el teorema de Landau, \(s=\sigma_c\) es una singularidad real de
-> \(F\). Está a la derecha de todos los ceros no triviales de \(\zeta\),
-> y por ello enmascara cualquier singularidad que el transformado conserve
-> en esos ceros.
+> By Landau's theorem, \(s=\sigma_c\) is a real singularity of
+> \(F\). It lies to the right of every nontrivial zero of \(\zeta\), and
+> therefore it masks any singularity that the transform retains at those
+> zeros.
 
-Así queda cerrada la ampliación analítica/racional natural de `104_95`:
-o el transformado positivo alcanza \(s=1\) y es constante, o es no
-constante y fabrica antes un ancla real \(\sigma_c>1\). No aparece una
-transformación de Landau que cancele el polo, conserve coeficientes no
-negativos y fuerce la ausencia de ceros en
+This closes the natural analytic/rational extension of `104_95`: either
+the positive transform reaches \(s=1\) and is constant, or it is
+non-constant and manufactures a real anchor \(\sigma_c>1\) beforehand. No
+Landau transformation appears that cancels the pole, preserves
+non-negative coefficients, and forces the absence of zeros in
 \(1/2<\Re s<1\).
 
-El resultado no cubre operadores no locales, shifts del argumento ni
-transformaciones que no sean funciones de un jet finito
-\((\ell_0,\ldots,\ell_r)\). No prueba Deep-\(\Lambda\), A1 ni RH.
+The result does not cover nonlocal operators, argument shifts, or
+transformations that are not functions of a finite jet
+\((\ell_0,\ldots,\ell_r)\). It does not prove Deep-\(\Lambda\), A1, or RH.
 
 ---
 
-## 1. El Taylor infinito sigue teniendo fibras *squarefree*
+## 1. The infinite Taylor series still has squarefree fibers
 
-Escriba el Taylor convergente
+Write the convergent Taylor series
 
 \[
  \Phi(X)=\sum_{k\ge0}\Phi_k(X),
  \tag{5}
 \]
 
-donde \(\Phi_k\) es homogéneo de grado \(k\). Como cada \(\ell_j\)
-tiene término constante nulo, el coeficiente de un entero fijo recibe
-contribuciones de solo finitos grados; (5) define formalmente una serie
-de Dirichlet. Para \(\Re s\) suficientemente grande la definición es
-además absolutamente convergente, porque los \(\ell_j(s)\) están dentro
-del polidisco de convergencia de \(\Phi\).
+where \(\Phi_k\) is homogeneous of degree \(k\). Since each \(\ell_j\)
+has vanishing constant term, the coefficient of a fixed integer receives
+contributions from only finitely many degrees; (5) formally defines a
+Dirichlet series. For \(\Re s\) sufficiently large, the definition is
+moreover absolutely convergent, because the \(\ell_j(s)\) lie within the
+polydisc of convergence of \(\Phi\).
 
-Sea \(n=p_1\cdots p_k\) producto de \(k\) primos distintos. Exactamente
-como en `104_95`, ningún grado distinto de \(k\) puede contribuir:
-menos de \(k\) factores no cubren todos los primos y más de \(k\)
-factores repiten alguno. Por tanto
+Let \(n=p_1\cdots p_k\) be a product of \(k\) distinct primes. Exactly
+as in `104_95`, no degree other than \(k\) can contribute: fewer than
+\(k\) factors do not cover all the primes, and more than \(k\) factors
+repeat one of them. Therefore
 
 \[
  \boxed{
@@ -101,7 +101,7 @@ factores repiten alguno. Por tanto
  \tag{6}
 \]
 
-donde, sobre monomios,
+where, on monomials,
 
 \[
  \mathscr S_k(X_{j_1}\cdots X_{j_k})(x_1,\ldots,x_k)
@@ -109,50 +109,51 @@ donde, sobre monomios,
  \tag{7}
 \]
 
-La aplicación \(\mathscr S_k\) es inyectiva: sus imágenes son múltiplos
-no nulos de los polinomios simétricos monomiales asociados a las
-particiones \((j_1+1,\ldots,j_k+1)\).
+The map \(\mathscr S_k\) is injective: its images are nonzero multiples
+of the monomial symmetric polynomials associated with the partitions
+\((j_1+1,\ldots,j_k+1)\).
 
-## 2. Prueba del Teorema A
+## 2. Proof of Theorem A
 
-La holomorfía de la misma rama en \(s=1\), junto con la representación
-por (2) para \(\sigma>1\), da
+Holomorphy of the same branch at \(s=1\), together with the
+representation by (2) for \(\sigma>1\), gives
 
 \[
  \lim_{\sigma\downarrow1}\{F(\sigma)-a_1\}<\infty.
  \tag{8}
 \]
 
-Como \(a_n\ge0\), la convergencia monótona implica
+Since \(a_n\ge0\), monotone convergence implies
 
 \[
  \sum_{n\ge2}{a_n\over n}<\infty.
  \tag{9}
 \]
 
-Suponga \(\Phi_k\ne0\) para algún \(k\ge1\), y ponga
-\(Q_k=\mathscr S_k\Phi_k\). Por inyectividad, \(Q_k\ne0\). La familia
-\(\{\log p:p\text{ primo}\}\) es infinita y por ello su producto
-cartesiano es Zariski-denso. Se pueden fijar primos distintos
-\(q_1,\ldots,q_{k-1}\) de modo que
+Suppose \(\Phi_k\ne0\) for some \(k\ge1\), and set
+\(Q_k=\mathscr S_k\Phi_k\). By injectivity, \(Q_k\ne0\). The family
+\(\{\log p:p\text{ prime}\}\) is infinite and therefore its Cartesian
+product is Zariski-dense. One can fix distinct primes
+\(q_1,\ldots,q_{k-1}\) so that
 
 \[
  q(x)=Q_k(\log q_1,\ldots,\log q_{k-1},x)
  \tag{10}
 \]
 
-sea un polinomio no nulo. Para cada primo \(p\) distinto de los fijados,
+is a nonzero polynomial. For every prime \(p\) distinct from the fixed
+ones,
 
 \[
  q(\log p)=a_{q_1\cdots q_{k-1}p}\ge0.
  \tag{11}
 \]
 
-Aunque a priori \(q\) tenga coeficientes complejos, (11) fuerza que su
-parte imaginaria sea el polinomio nulo. Su coeficiente principal real es
-positivo, o bien \(q\) es una constante positiva. Existen entonces
-\(p_0\) y \(c_0>0\) tales que \(q(\log p)\ge c_0\) para todo primo
-\(p\ge p_0\). Con \(C=q_1\cdots q_{k-1}\),
+Although a priori \(q\) may have complex coefficients, (11) forces its
+imaginary part to be the zero polynomial. Its real leading coefficient is
+positive, or else \(q\) is a positive constant. There then exist
+\(p_0\) and \(c_0>0\) such that \(q(\log p)\ge c_0\) for every prime
+\(p\ge p_0\). With \(C=q_1\cdots q_{k-1}\),
 
 \[
  \sum_{n\ge2}{a_n\over n}
@@ -162,24 +163,24 @@ positivo, o bien \(q\) es una constante positiva. Existen entonces
  \tag{12}
 \]
 
-contradiciendo (9). Luego \(\Phi_k=0\) para todo \(k\ge1\), y \(\Phi\)
-es constante. \(\square\)
+contradicting (9). Hence \(\Phi_k=0\) for every \(k\ge1\), and \(\Phi\)
+is constant. \(\square\)
 
-Esta prueba muestra por qué pasar de un polinomio a una serie de potencias
-infinita no crea grados capaces de cancelarse entre sí: el soporte
-*squarefree* de \(k\) primos proyecta exactamente el grado \(k\).
+This proof shows why moving from a polynomial to an infinite power
+series creates no degrees capable of canceling one another: the
+squarefree support of \(k\) primes projects exactly onto degree \(k\).
 
-## 3. Prueba del Teorema B
+## 3. Proof of Theorem B
 
-Use el álgebra formal de Dirichlet
+Use the formal Dirichlet algebra
 
 \[
- \mathscr D=\mathbb C[[x_p:p\text{ primo}]],
+ \mathscr D=\mathbb C[[x_p:p\text{ prime}]],
  \qquad x_p\longleftrightarrow p^{-s}.
  \tag{13}
 \]
 
-En ella
+In it
 
 \[
  \mathcal L_j(\mathbf x)
@@ -187,19 +188,19 @@ En ella
  \tag{14}
 \]
 
-representa a \(\ell_j\). La unicidad de series de Dirichlet, aplicada a
-la identidad \(Q(\ell)F=P(\ell)\), da la identidad formal
+represents \(\ell_j\). Uniqueness of Dirichlet series, applied to the
+identity \(Q(\ell)F=P(\ell)\), gives the formal identity
 
 \[
  Q(\mathcal L)\,\mathcal F=P(\mathcal L)
- \quad\hbox{en }\mathscr D.
+ \quad\hbox{in }\mathscr D.
  \tag{15}
 \]
 
-Elija \(r+1\) primos distintos \(p_0,\ldots,p_r\) y anule todas las
-variables restantes. Se obtiene una identidad en
-\(\mathbb C[[x_{p_0},\ldots,x_{p_r}]]\). El jacobiano en el origen de
-\(X_j=\mathcal L_j\) es
+Choose \(r+1\) distinct primes \(p_0,\ldots,p_r\) and set all remaining
+variables to zero. One obtains an identity in
+\(\mathbb C[[x_{p_0},\ldots,x_{p_r}]]\). The Jacobian at the origin of
+\(X_j=\mathcal L_j\) is
 
 \[
  J_{j,i}=(\log p_i)^{j+1},
@@ -209,7 +210,7 @@ variables restantes. Se obtiene una identidad en
  \tag{16}
 \]
 
-El teorema formal de la función inversa convierte entonces (15) en
+The formal inverse function theorem then turns (15) into
 
 \[
  Q(X)G(X)=P(X),
@@ -217,10 +218,10 @@ El teorema formal de la función inversa convierte entonces (15) en
  \tag{17}
 \]
 
-Es decir, \(P/Q\) es regular como germen formal en el origen. La
-fiel planitud de
-\(\mathbb C[[X]]\) sobre el anillo local
-\(\mathbb C[X]_{(X)}\) da
+That is, \(P/Q\) is regular as a formal germ at the origin. Faithful
+flatness of
+\(\mathbb C[[X]]\) over the local ring
+\(\mathbb C[X]_{(X)}\) gives
 
 \[
  Q\mathbb C[[X]]\cap\mathbb C[X]_{(X)}
@@ -228,12 +229,12 @@ fiel planitud de
  \tag{18}
 \]
 
-Por (17), \(Q\) divide a \(P\) en el anillo local. Como \(P,Q\) se
-tomaron coprimos, \(Q\) debe ser una unidad local, que equivale a
-\(Q(0)\ne0\). Esto prueba el teorema. \(\square\)
+By (17), \(Q\) divides \(P\) in the local ring. Since \(P,Q\) were
+taken coprime, \(Q\) must be a local unit, which is equivalent to
+\(Q(0)\ne0\). This proves the theorem. \(\square\)
 
-Por ejemplo, el cociente aparentemente inocente \(\ell_1/\ell_0\) no
-es una serie de Dirichlet ordinaria. En el eje real, si
+For example, the seemingly innocent quotient \(\ell_1/\ell_0\) is not
+an ordinary Dirichlet series. On the real axis, if
 \(a=\log2\), \(b=\log3\),
 
 \[
@@ -243,48 +244,48 @@ es una serie de Dirichlet ordinaria. En el eje real, si
  \tag{19}
 \]
 
-La frecuencia \(\log(3/2)\) no es \(\log n\) para ningún entero
-\(n\). Es la manifestación unidimensional de la obstrucción formal de
-(16)--(18).
+The frequency \(\log(3/2)\) is not \(\log n\) for any integer
+\(n\). It is the one-dimensional manifestation of the formal obstruction
+of (16)–(18).
 
-## 4. La salvedad de la abscisa y un contraejemplo exacto
+## 4. The abscissa caveat and an exact counterexample
 
-Sea \(\sigma_c\) la abscisa de convergencia de la serie positiva (2).
-Si \(\sigma_c\le1\) y la rama se prolonga holomórficamente a \(1\),
-entonces
+Let \(\sigma_c\) be the abscissa of convergence of the positive series (2).
+If \(\sigma_c\le1\) and the branch extends holomorphically to \(1\),
+then
 
 \[
  \sum_{n\ge2}{a_n\over n}<\infty.
  \tag{20}
 \]
 
-En efecto, si la suma diverge, \(F(\sigma)\uparrow\infty\) al bajar
-\(\sigma\) a \(1\), incompatible con la holomorfía; si converge, (20)
-es literal. El Teorema A vuelve a dar que \(\Phi\) es constante. Esto
-prueba (4). Para una serie de Dirichlet no negativa no constante, Landau
-afirma además que su abscisa finita \(\sigma_c\) es una singularidad
-real.
+Indeed, if the sum diverges, \(F(\sigma)\uparrow\infty\) as \(\sigma\)
+decreases to \(1\), incompatible with holomorphy; if it converges, (20)
+is literal. Theorem A again gives that \(\Phi\) is constant. This
+proves (4). For a non-constant, non-negative Dirichlet series, Landau
+further states that its finite abscissa \(\sigma_c\) is a real
+singularity.
 
-La necesidad de controlar la abscisa se ve sin ningún cero. Para
-\(c>0\), defina
+The need to control the abscissa can be seen without any zero at all. For
+\(c>0\), define
 
 \[
  F_c(s)={1\over c-\ell_0(s)}.
  \tag{21}
 \]
 
-En el semiplano donde \(\ell_0(\sigma)<c\),
+In the half-plane where \(\ell_0(\sigma)<c\),
 
 \[
  F_c(s)=\sum_{k\ge0}{\ell_0(s)^k\over c^{k+1}},
  \tag{22}
 \]
 
-y todos sus coeficientes de Dirichlet son no negativos. Sin embargo,
-\(\ell_0(\sigma)\) decrece estrictamente desde \(+\infty\) hasta \(0\)
-cuando \(\sigma\) va de \(1^+\) a \(+\infty\). Existe un único
-\(\sigma_c>1\) con \(\ell_0(\sigma_c)=c\), y (21) tiene allí un polo
-real. A la vez,
+and all its Dirichlet coefficients are non-negative. However,
+\(\ell_0(\sigma)\) strictly decreases from \(+\infty\) to \(0\) as
+\(\sigma\) goes from \(1^+\) to \(+\infty\). There is a unique
+\(\sigma_c>1\) with \(\ell_0(\sigma_c)=c\), and (21) has a real
+pole there. At the same time,
 
 \[
  \ell_0(s)={1\over s-1}-\gamma+O(s-1)
@@ -293,39 +294,40 @@ real. A la vez,
  \tag{23}
 \]
 
-de modo que \(F_c\) es holomorfa —y se anula— en \(s=1\).
+so that \(F_c\) is holomorphic — and vanishes — at \(s=1\).
 
-El ejemplo demuestra que la mera frase «coeficientes positivos y
-holomorfía local en \(1\)» no basta. El precio exacto es el polo real
-\(\sigma_c>1\). Además, cerca de un cero \(\rho\) de multiplicidad
-\(m\), \(\ell_0(s)=-m/(s-\rho)+O(1)\), y por ello
-\(F_c(s)=(s-\rho)/m+O((s-\rho)^2)\): este ejemplo borra, en vez de
-retener, la singularidad del cero.
+The example shows that the mere phrase "positive coefficients and local
+holomorphy at \(1\)" is not enough. The exact price is the real pole
+\(\sigma_c>1\). Moreover, near a zero \(\rho\) of multiplicity
+\(m\), \(\ell_0(s)=-m/(s-\rho)+O(1)\), and hence
+\(F_c(s)=(s-\rho)/m+O((s-\rho)^2)\): this example erases, rather than
+retains, the singularity of the zero.
 
-## 5. Decisión
+## 5. Decision
 
 ```text
-probado:
-  rigidez para todo germen analítico de un jet finito de ell;
-  aislamiento exacto de cada grado de Taylor por fibras squarefree;
-  toda transformación racional con serie de Dirichlet ordinaria es
-  automáticamente regular en el origen;
-  dicotomía: constante si la serie positiva llega a 1, o ancla real
-  artificial sigma_c>1 si el transformado es no constante;
-  contraejemplo exacto que muestra por qué holomorfía solo local no basta.
+proved:
+  rigidity for every analytic germ of a finite jet of ell;
+  exact isolation of each Taylor degree by squarefree fibers;
+  every rational transformation with an ordinary Dirichlet series is
+  automatically regular at the origin;
+  dichotomy: constant if the positive series reaches 1, or an artificial
+  real anchor sigma_c>1 if the transform is non-constant;
+  exact counterexample showing why merely local holomorphy is not enough.
 
-no probado:
-  una desigualdad global no local para los pesos Lambda reales;
-  la energía subpolinomial de 104_93--104_94;
-  Deep-Lambda, A1 o RH.
+not proved:
+  a global, nonlocal inequality for the real Lambda weights;
+  the subpolynomial energy of 104_93--104_94;
+  Deep-Lambda, A1, or RH.
 ```
 
-## Verificación mecánica
+## Mechanical verification
 
-`tools/analytic_rational_landau_rigidity_check.py` verifica con aritmética
-racional los determinantes de Vandermonde del cambio de coordenadas, la
-recurrencia positiva de la expansión geométrica (22) y la identidad
-formal \((c-L)F=1\) en truncaciones finitas. La existencia y unicidad del
-polo real se prueban analíticamente por la monotonía estricta de
-\(\ell_0(\sigma)\); no se delegan al programa. El programa no usa ceros
-de \(\zeta\) ni coma flotante.
+`tools/analytic_rational_landau_rigidity_check.py` verifies with rational
+arithmetic the Vandermonde determinants of the coordinate change, the
+positive recurrence of the geometric expansion (22), and the formal
+identity \((c-L)F=1\) on finite truncations. Existence and uniqueness of
+the real pole are proved analytically via the strict monotonicity of
+\(\ell_0(\sigma)\); they are not delegated to the program. The program uses
+neither zeros of \(\zeta\) nor floating point.
+</content>

@@ -1,7 +1,6 @@
 # E72.3 -- Reduced Feshbach leakage: the correct norm
 
-**Date:** 2026-07-08.
-**Role:** strengthen E72.1 by replacing the too-strong raw leakage estimate with the reduced-resolvent
+**Purpose:** strengthen E72.1 by replacing the too-strong raw leakage estimate with the reduced-resolvent
 leakage estimate that actually controls the ground vector.
 
 ## 0. Correction to E72.1

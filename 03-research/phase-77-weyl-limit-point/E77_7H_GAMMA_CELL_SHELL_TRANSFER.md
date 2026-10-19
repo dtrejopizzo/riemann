@@ -1,6 +1,6 @@
 # E77.7h - Gamma/cell shell-transfer reduction
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

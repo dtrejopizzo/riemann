@@ -1,0 +1,18 @@
+# Phase 49 — Cross the Wall
+
+This phase studies "the wall" itself — the recurring phenomenon, seen across every phase from 3 onward, that an individual/exact statement about the zeros cannot be derived from averaged or coarse arithmetic data — as an object of study in its own right. It builds a general theory of averaging defects, probes whether the inertia index $\kappa=2m$ of the Pontryagin-space operator $H_C$ is genuinely an index-type (Maslov/spectral-flow) invariant, and tests whether Tauberian theory can cross from averaged to individual statements the way RH would require.
+
+## Results
+- Taxonomy of average→individual crossings: a catalogue of the wall phenomenon across the program, explicitly distinguished from RH or any RH-equivalence — framed as a general phenomenon, not a zeta-specific one. (framework/catalogue, no proof/disproof status)
+- Individuation defect theory: for an averaging projection $A$ on a Hilbert space, the defect $\delta_A(F)=\|(1-A)F\|$ is proved to be the unique intrinsic invariant among three candidates (the other two being shown equivalent to it under correct axiomatization); its basic properties (seminorm, continuity, exact characterization of when it collapses to zero) are proved in full generality, with a no-go theorem showing collapse requires an external structural input (a cone, subalgebra, or group action) that is logically necessary. (PROVED, general abstract theory)
+- Maslov/index probe ("is $\kappa=2m$ an index?"): decisive verdict — $\kappa$ is genuinely index-type (a spectral-flow/Maslov index of a family of Lagrangians), but only once the operator $H_C$ is known to be Fredholm with finite inertia, which requires $m<\infty$; and $m<\infty$ is not verifiable from the primes alone without knowing the zero locations. So RH enters through Fredholmness itself, not through the choice of index machinery — confirming, now localized inside the index apparatus, the program's recurring "autonomy of value vs. autonomy of inertia" distinction. (PROVED — a precise, structural NO-GO for using the index as an RH-free tool)
+- Tauberian crossing probe: RH is identified exactly as a statement about the individual abscissa of convergence of a particular Dirichlet-type integral; the needed crossing is shown to be a *sub-Tauberian* one (second-moment control to pointwise exponent), and five families of classical Tauberian conditions are each classified: positivity (T1, exhausted), slow oscillation (T2, refuted by Littlewood's oscillation result), one-sided conditions (T3, RH-free but insufficient), moment/Carleman conditions (T4, proved RH-equivalent), and Beurling–Malliavin/Wiener spectral conditions (T5, the only family left genuinely open). (NO-GO for T1–T4 as routes to RH; T5 reported OPEN)
+
+## Documents
+- `154-taxonomy-of-the-average-individual-crossings-catalogue.md`: general taxonomy of the average→individual wall phenomenon.
+- `155-individuation-defect-a-theory.md`: abstract theory of the individuation defect $\delta_A$ and its uniqueness as an intrinsic invariant.
+- `156-index-maslov-probe-is-2m-an-index.md`: decisive analysis of whether $\kappa=2m$ is a genuine, RH-free index invariant.
+- `157-tauberian-probe-does-tauberian-theory-cross.md`: classification of Tauberian/sub-Tauberian conditions against the RH crossing they would need to supply.
+
+## Relation to other phases
+Synthesizes the recurring obstruction pattern documented throughout Phases 3, 36–48 (value/inertia, master quantifier, averaging-to-individual gaps) into a general abstract framework, and closes the specific index (Phase 44's bridge conjecture $\kappa=2m$) and Tauberian questions left implicit in earlier phases.

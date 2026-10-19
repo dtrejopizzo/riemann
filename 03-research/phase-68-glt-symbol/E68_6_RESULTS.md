@@ -1,8 +1,7 @@
 # E68.6 -- auditing the audit: the detector is gauge-FRAGILE, not broken
 
-**Date:** 2026-07-07.
 **Script:** [E68_6_audit_the_audit.py](E68_6_audit_the_audit.py).
-**Role:** re-audit E68.5's "false negatives" claim -- was it a detector failure or an artifact of the
+**Purpose:** re-audit E68.5's "false negatives" claim -- was it a detector failure or an artifact of the
 naive full-band average (edge contamination)?
 
 ## Finding (min of sigma_A - sigma_P for zeta; ground truth ind_- = 0)

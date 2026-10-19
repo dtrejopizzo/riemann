@@ -1,6 +1,5 @@
 # E71.4 -- Riesz-window stability results
 
-**Date:** 2026-07-07.
 **Script:** `E71_4_riesz_window_stability.py`.
 
 ## Wide-window result

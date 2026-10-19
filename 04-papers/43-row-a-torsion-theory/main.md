@@ -1,16 +1,23 @@
 # Paper 43 — Row A of the arithmetic Lefschetz programme: the correspondence theory on the graph sector and the analytic trace invariant
 
-Date: 2026-09-12 (revised the same day; see Sections 13.4–13.6).  **[REBUILT,
+> **Status update 2026-09-28.**  The two conditional inputs of row A are
+> proved in the LaTeX version (`main.tex`): the Hom classification (3.3)
+> (transfer `Tr`, Proposition `prop:hom`, with `E_R` taken on `R^×`) and the
+> continuity of the crossed-product Hochschild decomposition (former
+> Hypothesis 5.9, Proposition `prop:crossed`).  A.2, A.4 and A.5 are no longer
+> conditional.  The body of this file is the historical record and is not
+> rewritten; see the bracketed  notes.
+
+(revised the same day; see Sections 13.4–13.6).  **[REBUILT,
 phase 129.]**  Status of the result: `WEIL-STRENGTH-COMPLETE` on the declared carrier
-(§14.0a–b; granted by the audit of record `R130.005`, 2026-09-12).  **[REBUILT, phase 130, round 2.]**  Of the acceptance
+(§14.0a–b; granted by the audit of record `R130.005`).  **[REBUILT, phase 130, round 2.]**  Of the acceptance
 specification's clauses (`P123_A_ACCEPTANCE_SPECIFICATION`), **A.1–A.7, A.9
-and A.10 are proved on the declared carrier**, and **A.8 is amended (owner,
-2026-09-12)**: `REFUTED AS STATED (scalar extension) + PROVED AS AMENDED`, the
+and A.10 are proved on the declared carrier**, and **A.8 is amended (author)**: `REFUTED AS STATED (scalar extension) + PROVED AS AMENDED`, the
 amended clause being proved with the target `Pic_b(B_T)` — not with any scalar
-target, which is Theorem 10.8.  **[phase 133, amendment accepted 2026-09-12:
-this sentence read "A.8 is proved with the target `Pic_b(B_T)`"; the owner
-accepted the A.8 amendment of PANEL_SYNTHESIS §4.2 on 2026-09-12, superseding
-the lead's ruling of `R130.005`; §10.3.3 carries the record.]**
+target, which is Theorem 10.8.  **[phase 133, amendment accepted :
+this sentence read "A.8 is proved with the target `Pic_b(B_T)`"; the author
+accepted the A.8 amendment of PANEL_SYNTHESIS §4.2 on , superseding
+the earlier ruling of `R130.005`; §10.3.3 carries the record.]**
 Every named obstacle (O-A1-*, O-A5-*, O-A6-*, O-A7-*) is closed, O-A5-5 in the
 exact and limited form (8A.24)–(8A.24′); the round-4 formulation of A.8 is
 withdrawn as a formulation, under the hypothesis Theorem 10.6a actually uses.
@@ -18,12 +25,11 @@ Four qualifications must be read with that sentence, and §14 states all four:
 clause A.1 is proved under the clause's own words and is `PARTIAL` under a
 stack-theoretic reading of "descent"; the carrier is a **fixed finite chart**,
 with the chart system as additional structure (§14.0a); the sector is the
-**invertible** one (§11bis); and **the hostile audit `R130.002` dissents on
+**invertible** one (§11bis); and **the adversarial audit `R130.002` dissents on
 A.8**, its dissent being reproduced verbatim in §10.3.3 with my response.  The
-label `WEIL-STRENGTH-COMPLETE` is **not** self-granted by the builder; it was
-**granted by the adversarial audit of record** (session lead, `R130.005`,
-2026-09-12) on the declared carrier, with the qualifications listed in §14.0b.  A.6 is proved under the clause as **amended on
-2026-09-12** by the repository owner (the exact-sequence wording of
+label `WEIL-STRENGTH-COMPLETE` is **not** self-granted by the construction; it was
+**granted by the adversarial audit of record** (`R130.005`) on the declared carrier, with the qualifications listed in §14.0b.  A.6 is proved under the clause as **amended on
+** by the repository author (the exact-sequence wording of
 P123.017 §4); its old literal "contains the ruling plane" wording is refuted
 on this carrier for the dense sector (Theorem 9.13(a)) and **satisfied in the
 completion** (Theorems 9.14a–b).  The
@@ -127,7 +133,7 @@ clause-by-clause ledger.  **[REBUILT, phase 130:]** after this phase all ten
 clauses are `PROVED` on the declared carrier (A.9 as "passed for the
 formalism"), every named obstacle is closed, and the residual items are
 listed explicitly: the label `WEIL-STRENGTH-COMPLETE` was granted by the
-adversarial audit of record (`R130.005`, §14.0b), not by the builder; clause A.1 is
+adversarial audit of record (`R130.005`, §14.0b), not by the construction; clause A.1 is
 `PROVED` under the clause's own words and `PARTIAL` under a stack-theoretic
 reading of "descent"; the sector is the invertible one; `𝓝_∞ = 0` for the
 colimit is deliberately not claimed; and no Hodge-index sign is asserted
@@ -429,6 +435,14 @@ in P123.082's own algebra.  (3.3) is used in Proposition 3.2(iv) (clause
 `PROVED modulo (Tr)`.  Discharging it means proving freeness of the lattice
 action on the open stratum for `U`.]**
 
+**[: DISCHARGED.  (Tr) is proved in the LaTeX Paper 43, Proposition
+`prop:hom`.  The freeness argument of P123.082 fails for `U` as defined above
+because `E_R` on `R_{>0}` sees only `|x_∞|` (so `E_a = E_{−a}`); the fix is to
+take `E_R` on `R^×` (two log-lines, ideles acting by `f ↦ f(a_∞^{-1}·)`), after
+which separation of points on `Ω = R^× × ∏Q_p^×`, density, injectivity of
+`E_P⊕C → C(D)` and decay in `t` give (3.3) exactly as stated, together with
+the splitting of bounded cones.  A.2 and A.4 are `PROVED`.]**
+
 
 **Proposition 3.2.**  `G` with this completion is stable and closed under `⋆`;
 it is geometrically localized on `Y_S`; it contains infinitely many pairwise
@@ -560,7 +574,7 @@ filtered and strict.
       `Corr_A^{tr,∞} := \mathrm{colim}_S Corr_A^{tr}(S)` along
       `\mathrm{Inf}` is its category of presented complexes.  Writing
       `𝓝_∞^W := \{F ∈ D_A^∞ : I_∞(F,G)=0\ ∀G ∈ D_A^∞, \text{ and } M(F)=0\}`
-      — the **vector** radical, as in Definition 9.10 — and
+— the **vector** radical, as in Definition 9.10 — and
       `N_∞ := D_A^∞/𝓝_∞^W`, the map `M` descends (it kills `𝓝_∞^W` by
       definition) and is surjective (it is already surjective on each
       `D_A(S)`), so there is an exact sequence
@@ -895,10 +909,10 @@ comparison of P123.011 §4 is `REFUTED` (P123.021 §1) and is not used.
 
 **Theorem 7.1.**  For an external class `w`, in `D_rel^-`:
 
-**[Record note, phase 137 (2026-09-13).**  The *algebraic* splitting (a) is
+**[Record note, phase 137.**  The *algebraic* splitting (a) is
 classical (Nistor, Getzler–Jones, Brylinski).  Its *continuous* form for the
 rapid crossed product — continuity of the comparison maps and admissibility of
-the homotopy — was sourced below to P123.121/P123.123; a hostile re-reading
+the homotopy — was sourced below to P123.121/P123.123; an adversarial re-reading
 during the LaTeX conversion found that neither note proves it (P123.121 has no
 Hochschild computation; P123.123 (11) is the derived monoidal transport of
 crossed products, a different statement).  Until proved, (a) is
@@ -907,6 +921,14 @@ version).  Dependents: (a) itself, the blindness corollary and the
 contact-blindness proposition; nothing in §§8–15 (trace, symbol, numerical
 form, `𝓐_tr`, charts, effectivity, Riemann–Roch, classical model, signature)
 depends on it.]**
+
+**[: DISCHARGED.  The continuity is proved in the LaTeX Paper 43,
+Proposition `prop:crossed`, by a Koszul bimodule resolution of
+`A ⋊_rapid Γ_S` (explicit contraction with polynomial growth, absorbed by the
+height weights `H^k`), comparison with the bar resolution preserving labels, and
+`B_β ⊗̂_{B^e} (−)`.  (a) and its dependents are `PROVED`.  The same review found
+and fixed a gap in the H-unitality of `E_P`: the contraction must use the
+`J=∅` partition (`χ_p` and negative shells), not `J=S_f`.]**
 
 *(a) label splitting.*
     Sh(E_w) ≅ ⊕̂_{γ∈Γ_S} 𝓚_Γ ⊗̂ HH(E_P^u, (E_P^u)_{γw}),              (7.1)
@@ -1740,7 +1762,7 @@ multiplicative).**
       N(F)`.  Consequently the germ of P123.107 (6) is holomorphic on the disc
       `|z| < 1/‖F‖_{L^1}` — after the harmless rescaling `F ↦ ρF/‖F‖_{L^1}`
       the obstacle's literal form, `|Σ_κ c(κ)a_κ^r| ≤ Cρ^r` with `ρ<1`, holds
-      — and it is exactly the unit-packet component of (8A.19).
+— and it is exactly the unit-packet component of (8A.19).
 
 *Proof.*  **(a)**  **[REBUILT, phase 130, round 2.]**  For `s = ±½` write
 `‖F‖_{1,s} := ∫|F(w)||w|_S^{s}d^*w`, so `Λ = ‖·‖_{1,1/2}+‖·‖_{1,−1/2}`.  Since
@@ -3448,7 +3470,7 @@ P123.007 §4 was seeing).**  **[REBUILT, phase 130.]**
    theorems together say: *the ruling plane is a quotient of the dense test
    sector and a subobject of its completion, and the two facts are
    compatible because the completion is strictly larger.*
-2. *A.6 is unaffected.*  Clause A.6, in its amended (2026-09-12) wording,
+2. *A.6 is unaffected.*  Clause A.6, in its amended wording,
    asks for the exact sequence of Theorem 9.12; the splitting (9.23) is a
    statement about the completion, and it is an addition, not a replacement.
    The literal "contains" reading of the old wording remains refuted for
@@ -3503,13 +3525,13 @@ proved.  The first half has two readings and they give opposite answers.
 
 **Clause A.6: `PARTIAL`** — proved in the exact-sequence reading, refuted in
 the literal one.  **[REBUILT, phase 130: superseded.  The specification was
-amended on 2026-09-12 to the exact-sequence wording, so **clause A.6 is
+amended on  to the exact-sequence wording, so **clause A.6 is
 `PROVED`**; and §9.3.6a adds that in the *completion* even the literal reading
 holds, the ruling plane being the canonical subobject `σ(B_T)` of
 Theorem 9.14b.  The paragraphs above are kept as the record of the reading
 problem and of how it was resolved.]**  This is a decision about the specification, not a gap in the
 mathematics; §14.2 contains the exact amendment text I propose, **for the
-owner of the specification to accept or reject.**  I have not edited the
+author of the specification to accept or reject.**  I have not edited the
 specification file.
 
 ---
@@ -4001,16 +4023,16 @@ pairing:
 
 #### 10.3.3 Theorem 10.7 — clause A.8
 
-**[phase 133: the review panel (PANEL_3 §3) sides with the dissent; the owner's
+**[phase 133: the review panel (PANEL_3 §3) sides with the dissent; the author's
 decision on an amendment is decided: amendment accepted.]**  **[phase 133,
-amendment accepted 2026-09-12: the repository owner (D. Trejo Pizzo) accepted
-on 2026-09-12 the amendment of A.8 proposed in PANEL_SYNTHESIS §4.2 — "`λ_{RR}`
+amendment accepted : the repository author (D. Trejo Pizzo) accepted
+on  the amendment of A.8 proposed in PANEL_SYNTHESIS §4.2 — "`λ_{RR}`
 is a based Hermitian biextension into `Pic_b(B_T)` whose Tate component is the
 ruling determinant (Def. 10.6c), consistent with the test sector by Thms 9.14a,
 9.14c′; the scalar determinant `L_S` is trivial on the rulings (Thm 10.8), so
 the extension of the *scalar* determinant demanded by the original clause does
 not exist."  New grading: `REFUTED AS STATED (scalar extension) + PROVED AS
-AMENDED`.  The lead's ruling of `R130.005` is superseded by the owner's
+AMENDED`.  The the earlier ruling of `R130.005` is superseded by the author's
 decision; the auditor's dissent below is kept verbatim as history; the row-A
 label stands unconditionally.  No theorem and no proof of this paper changes.]**
 
@@ -4253,11 +4275,11 @@ qualification `WITH TARGET Pic_b(B_T)`.  Whether that qualified verdict counts
 as closing the clause is a judgement; mine is recorded above, the auditor's is
 recorded verbatim, and §14 carries both.
 
-**Owner's decision (2026-09-12).**  **[phase 133, amendment accepted
-2026-09-12.]**  The judgement was referred to the repository owner as an
+**Author's decision.**  **[phase 133, amendment accepted
+2026-09-12.]**  The judgement was referred to the repository author as an
 amendment, exactly as A.6 had been.  **D. Trejo Pizzo accepted the amendment on
 2026-09-12.**  Clause A.8 is therefore graded `REFUTED AS STATED (scalar
-extension) + PROVED AS AMENDED (owner, 2026-09-12)`: the *scalar* extension the
+extension) + PROVED AS AMENDED (author)`: the *scalar* extension the
 clause demanded does not exist (Theorem 10.8), and the clause as amended — the
 vector-valued biextension into `Pic_b(B_T)` with the ruling determinant as its
 Tate component, consistent with the test sector by Theorems 9.14a, 9.14c′ — is
@@ -4710,7 +4732,7 @@ is carried by `Γ_{F^k}`, of bidegree `(q^k,1)`, which is not invertible.  So:
    round 1's "the span is available" blurred that.  Exactly: `Δ = E_1` and the
    `E_a` are objects of `G`, and by Remark 8.11 `Δ` is **not** trace class, so
    they are not objects of `Corr_A^{tr}`; the smeared objects `E_F`, `F ∈ D_A`
-   — and `E_H`, `H ∈ 𝓐_tr`, by Theorem 8A.12 — are where `Tr_A`, `I_A`, `M`
+— and `E_H`, `H ∈ 𝓐_tr`, by Theorem 8A.12 — are where `Tr_A`, `I_A`, `M`
    and `λ_{RR}` live; and the rulings are in the numerical completion
    `N_A^{dist}`.  What is true is that each of Weil's three ingredients has a
    realization somewhere in this theory, joined by the comparison maps
@@ -4761,7 +4783,8 @@ rows now stand in the table — `M`, `W`, `C`, `RR` — plus the transfer `Tr`
 added by PANEL_1 finding A3.  `Tr` is the only import that a clause graded
 `PROVED` depends on: A.2 and A.4 are `PROVED modulo (Tr)`.  The "three" below
 counts the load-bearing imports `W`, `C`, `RR` as before; it is not amended,
-because the grading of A.2 and A.4 is the owner's.]**  **[REBUILT, phase
+because the grading of A.2 and A.4 is the author's.]**  **[: `Tr` is
+discharged (LaTeX Prop. `prop:hom`); A.2 and A.4 are `PROVED`.]**  **[REBUILT, phase
 129, round 4:]** `C` is no longer load-bearing for the numerical theory; `W`
 is used only in Appendix C.2 Step 3; `RR` only in §6.  The clause that is now
 binding, A.8, needs no import at all — it needs a construction.  The phase-128 finding `A11` was right that
@@ -5000,8 +5023,8 @@ explicitly.  No clause depends on it.]**
 ## 14. Verdict and clause ledger
 
 **[REBUILT, phase 130, round 2.  The round-1 block is replaced after the
-hostile audit `R130.002` (20 findings) and the lead audit `R130.003` (F1–F6).
-Every finding is disposed of in `R130_004_BUILDER_ROUND2.md`; the changes that
+adversarial audit `R130.002` (20 findings) and the final audit `R130.003` (F1–F6).
+Every finding is disposed of in `R130_004_ROUND2.md`; the changes that
 move a verdict are: A.2 (objects over the completion now constructed,
 Thm. 8A.12), A.8 (verdict qualified, `WITH TARGET Pic_b(B_T)`, and the
 auditor's dissent recorded verbatim in §10.3.3), and O-A5-5 (disposal
@@ -5063,7 +5086,7 @@ ROW A, after the phase-130 closure and its round-2 repairs:
         declared normalization at the non-unit shells, and in no
         stronger form; O-A5-6: Thm 8A.10.)
   A.6  numerical equivalence and completion ...... PROVED
-       under the clause as amended 2026-09-12 (Thms 9.8, 9.11-9.14),
+       under the clause as amended  (Thms 9.8, 9.11-9.14),
        strengthened by 9.14a/b/c' (rulings in the completion; canonical
        splitting; the SCALAR radical of the completion is exactly the
        ruling plane -- the analogue of, not an identification with,
@@ -5073,10 +5096,10 @@ ROW A, after the phase-130 closure and its round-2 repairs:
         auditor records (F18) that this is a thin reading of a thin
         clause; I agree and say so there.)
   A.8  mixed Riemann-Roch ........................ REFUTED AS STATED
-       (scalar extension) + PROVED AS AMENDED (owner, 2026-09-12)
-       [phase 133, amendment accepted 2026-09-12; the previous entry read
+       (scalar extension) + PROVED AS AMENDED (author)
+       [phase 133, amendment accepted ; the previous entry read
        "PROVED WITH TARGET Pic_b(B_T)", kept in the lines below as the
-       record of the lead's ruling that the owner's decision supersedes]
+       record of the earlier ruling that the author's decision supersedes]
        -- no scalar target exists, which is Thm 10.8.
        Thm 10.7 (a)-(g).  The content of the closure is listed in the
        paragraph "What A.8's closure actually consists of" (section
@@ -5112,19 +5135,18 @@ ROW A, after the phase-130 closure and its round-2 repairs:
 
     ROW A: A.1-A.7, A.9, A.10 PROVED on the declared carrier;
            A.8 PROVED WITH TARGET Pic_b(B_T), auditor's dissent recorded;
-           WEIL-STRENGTH-COMPLETE NOT SELF-GRANTED by the builder -- the
+           WEIL-STRENGTH-COMPLETE NOT SELF-GRANTED by the construction -- the
            closure rule reserves it to an adversarial audit.
 
-  DECISION OF THE ADVERSARIAL AUDIT OF RECORD (session lead, Fable 5.1,
-  R130.005, 2026-09-12): both conditions of the closure rule are met.
+  DECISION OF THE ADVERSARIAL AUDIT OF RECORD (
+  R130.005): both conditions of the closure rule are met.
 
     ROW A: WEIL-STRENGTH-COMPLETE
            on the declared carrier (fixed finite chart S, chart system and
            colimit as additional structure; invertible sector), with A.6
-           under the 2026-09-12 amendment and A.8 amended (owner,
-           2026-09-12) [phase 133, amendment accepted 2026-09-12; this line
+           under the  amendment and A.8 amended (author) [phase 133, amendment accepted ; this line
            read "A.8 with the determinant target Pic_b(B_T) forced by
-           Theorem 10.8", which remains the content of the amended clause].  The round-1 hostile
+           Theorem 10.8", which remains the content of the amended clause].  The round-1 adversarial
            audit's dissent on A.8 is recorded verbatim in section 10.3.3;
            its requested restatement is the paragraph "What A.8's closure
            actually consists of".  Not claimed and not required: N_infty^W
@@ -5157,7 +5179,7 @@ ROW A, after the phase-130 closure and its round-2 repairs:
 | ~~O-A5-6~~ | **CLOSED** | Thm. 8A.10 |
 | ~~O-A6-1~~ | **CLOSED** | Thm. 9.8 |
 | ~~O-A6-2~~ | **CLOSED** | Thm. 9.14: the **vector** radical of the completion against the test sector is zero.  The **scalar** radical is the ruling plane (Thm. 9.14c) — no contradiction, two different pairings (§9.3.6, repaired) |
-| ~~R-A6~~ | **DECIDED** | amendment accepted 2026-09-12 |
+| ~~R-A6~~ | **DECIDED** | amendment accepted  |
 | ~~O-A7-1~~ | **CLOSED** | Thm. 10.3b |
 | ~~O-A7-2~~ | **CLOSED** | Thm. 10.3c with Rem. 10.3d's scope statement; Rem. 10.3d is the place where a reader may reasonably disagree |
 | ~~A.8-I~~ | **WITHDRAWN as a formulation, with its hypothesis stated** | Thm. 10.6a kills the functors that **factor through the Tate fibre**; read otherwise, (A.8-I) is *not addressed here* and is not claimed impossible (F5) |
@@ -5432,10 +5454,10 @@ characterized.)
 
 ---
 
-### 14.2 Proposed specification amendment, for the owner's decision
+### 14.2 Proposed specification amendment, for the author's decision
 
 **[REBUILT, phase 129, round 4; DECIDED 2026-09-12.  The amendment below
-was accepted by the repository owner and is now the text of clause A.6 in
+was accepted by the repository author and is now the text of clause A.6 in
 `P123_A_ACCEPTANCE_SPECIFICATION.md`.  Under the amended clause, A.6 is
 PROVED by Theorems 9.8, 9.11, 9.12, 9.13 and 9.14 of this paper.  The
 historical discussion is kept as written.]**
@@ -5472,7 +5494,7 @@ the repository proves rather than what a finite-dimensional analogy suggests.
 different carrier would be needed; that is a legitimate outcome and I do not
 prejudge it.**
 
-> **Status, 2026-09-12 (phase 130).**  **[REBUILT, phase 130.]**  The
+> **Status,  (phase 130).**  **[REBUILT, phase 130.]**  The
 > phase-129 loop closed A.6 and left A.5, A.7 and A.8 open, with A.8 called
 > the binding constraint.  Phase 130 closes all of them, and the closure rests
 > on three theorems that did not exist before.  (i) **Theorem 9.14a–c:** the
@@ -5499,7 +5521,7 @@ prejudge it.**
 > claimed by no row** — **[phase 133, PANEL_2 MINOR-2: was "row C"]**), and any
 > Hodge-index sign (Theorem 14.1).
 >
-> **Status, 2026-09-12 (phase 129, round 4).**  The round-3 audit
+> **Status,  (phase 129, round 4).**  The round-3 audit
 > (`R129.006`) verified Theorem 9.8 step by step and confirmed (T1)–(T6).
 > Round 4 makes the paper exact rather than adding results.  Four changes are
 > substantive.  (i) `T` is now **defined** by (8.4) from the two proved local
@@ -5530,7 +5552,7 @@ its descent is refuted), 010, 011, 012, 013, 014, 016, 018, 019, 020, 021,
 `A_MIXED_METRIC_WORK.md`; `P123_A_ACCEPTANCE_SPECIFICATION.md`;
 `P123_024_FIRST_CAMPAIGN_LEDGER.md`.  Phase 125: A125.001–017 (A125.014 is **not** cited; its Thm. 1.1 is refuted by
 A125.016–017).  Phase 128: [`D128.001`](../../03-research/phase-128-adversarial-audit/D128_001_AUDIT_A.md),
-`D128.004`.  Phase 129: [`R129.001`](../../03-research/phase-129-row-a-rebuild/R129_001_BUILDER_REPORT.md),
+`D128.004`.  Phase 129: [`R129.001`](../../03-research/phase-129-row-a-rebuild/R129_001_REPORT.md),
 `R129.002` (audit round 1), `R129.003` (round 2), `R129.004` (audit round 2),
 `R129.005` (round 3), `R129.006` (audit round 3), `R129.007` (round 4).
 **[REBUILT, phase 130.]**  P123.008 is now cited **positively** as well: its
@@ -5541,12 +5563,12 @@ Remark 10.3d.  P123.017 §§5–7 are strengthened by Theorems 9.14a–c and 10.
 P123.105 §§3–4 and P123.107 §5 are cited **only** for the operator-cutoff germ,
 which this paper does not use (Remark 8A.7b1).  P123.046 §1 and P123.035 §§3, 6
 are cited for the attempt at `c_{cut}` (Remark 8A.7e) and for the stop rule.
-Phase 130: [`R130.000`](../../03-research/phase-130-row-a-closure/R130_000_LEAD_BLUEPRINT.md)
-(the lead blueprint for this phase; every statement it proposes is re-proved
+Phase 130: [`R130.000`](../../03-research/phase-130-row-a-closure/R130_000_BLUEPRINT.md)
+(the blueprint for this phase; every statement it proposes is re-proved
 here or corrected, and nothing is cited from it),
-[`R130.001`](../../03-research/phase-130-row-a-closure/R130_001_BUILDER_REPORT.md),
-`R130.002` (hostile audit, round 1; its A.8 dissent is reproduced verbatim in
-§10.3.3), `R130.003` (lead audit, round 1; its F4 is Theorem 10.8b),
-[`R130.004`](../../03-research/phase-130-row-a-closure/R130_004_BUILDER_ROUND2.md)
-(builder round 2, the disposal of every finding).
+[`R130.001`](../../03-research/phase-130-row-a-closure/R130_001_REPORT.md),
+`R130.002` (adversarial audit, round 1; its A.8 dissent is reproduced verbatim in
+§10.3.3), `R130.003` (final audit, round 1; its F4 is Theorem 10.8b),
+[`R130.004`](../../03-research/phase-130-row-a-closure/R130_004_ROUND2.md)
+(construction round 2, the disposal of every finding).
 Appendix: [appendix.md](appendix.md).

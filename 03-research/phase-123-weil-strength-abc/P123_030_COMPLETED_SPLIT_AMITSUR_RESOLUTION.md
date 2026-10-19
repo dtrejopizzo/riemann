@@ -1,6 +1,6 @@
 # P123.030 — completed split Amitsur resolution over rapid scalar labels
 
-Date: 2026-09-05. Status: PROVED for the completed module complex and
+Status: PROVED for the completed module complex and
 chart compatibility specified here. This is not integral descent or a
 trace-class correspondence equivalence.
 

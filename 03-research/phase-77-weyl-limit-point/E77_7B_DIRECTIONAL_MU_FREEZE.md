@@ -1,6 +1,6 @@
 # E77.7b - Directional Mu-Freezing Gate
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Why This Gate Is Necessary
 

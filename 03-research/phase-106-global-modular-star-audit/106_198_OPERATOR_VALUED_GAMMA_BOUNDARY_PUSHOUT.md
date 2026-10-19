@@ -1,6 +1,6 @@
 # 106.198 — The operator-valued Gamma boundary pushout
 
-> **Normalization correction (phase 120, 2026-08-25).** The original
+> **Normalization correction (phase 120).** The original
 > formulas below used the full even energy on the two sign components of
 > `R^x` and were a factor two too large for the positive multiplicative
 > carrier of paper 42. Descending by the normalized `{-1,+1}` quotient

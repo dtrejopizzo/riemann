@@ -1,6 +1,5 @@
 # E73.130 Results - Vector-Swap Source of CSV
 
-Date: 2026-07-12.
 
 Script:
 

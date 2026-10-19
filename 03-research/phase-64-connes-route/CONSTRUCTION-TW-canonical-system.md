@@ -1,6 +1,6 @@
 # The Critical Tate–Weil Canonical Hodge Module $\mathsf{TW}^{\mathrm{can}}_\Z$ (corrected construction)
 
-*Pure mathematics. This corrects `CONSTRUCTION-local-Tate-colligation-p-adic.md` after the audit: the
+* This corrects `CONSTRUCTION-local-Tate-colligation-p-adic.md` after the audit: the
 Euler factors are **not** local Schur/passive cells (the scalar factor has a $\C_+$ pole; the matrix
 is $J$-indefinite in $\C_+$). The correct atomic object is the **positive von Mangoldt Hamiltonian
 measure**, and the global object is a **renormalized canonical system**, whose kernel is positive by
@@ -199,7 +199,7 @@ canonical Gram identity. Euler factors are not local Schur functions; their posi
 (von Mangoldt) data is the right atomic input. Everything downstream (positivity free; the wall is
 rank-one escape) stands on this corrected foundation.
 
-\textbf{Audit points for the reviewer (as requested):}
+\textbf{Audit points:}
 (1) the scalar cell is invalid — confirmed in §1;
 (2) the positive Hamiltonian/canonical replacement — §2–§3;
 (3) the canonical Gram identity replaces the defective Redheffer argument — §3 (Lagrange identity);

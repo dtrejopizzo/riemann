@@ -1,158 +1,159 @@
-# Fase 124 — primer ataque a la exclusión aritmética del primer contacto
+# Phase 124 — first attack on the arithmetic exclusion of first contact
 
-Fecha: 2026-09-09. Objetivo: investigar la vía directa con menos
-dependencias. No requiere terminar A, crear otra teoría geométrica ni
-editar los papers.
+Objective: investigate the direct route with fewer
+dependencies. It does not require finishing A, creating another geometric
+theory, or editing the papers.
 
-## 1. Blanco operativo
+## 1. Operational target
 
-Partir de un hipotético primer contacto T_* > log 2 y un estado primitivo
-no nulo F de paridad definida. Se dispone de q_(T_*) >= 0 y de la ecuación
-variacional de radical sobre el dominio primitivo. Hay que demostrar que
-esa situación es incompatible con los datos aritméticos.
+Start from a hypothetical first contact T_* > log 2 and a nonzero primitive
+state F of definite parity. We have q_(T_*) >= 0 and the radical
+variational equation on the primitive domain. We must show that
+this situation is incompatible with the arithmetic data.
 
-En la ruta R/S, las obligaciones pendientes son:
+On the R/S route, the pending obligations are:
 
-1. **Anular la fuente Tate.** El corriente entrante existente cumple
-   L_(T,-)^gr(F) = -Z_(T,+) r_eta, donde
+1. **Cancel the Tate source.** The existing incoming current satisfies
+   L_(T,-)^gr(F) = -Z_(T,+) r_eta, where
    r_eta(t) = c(exp(t/2) + eta exp(-t/2)), eta = +/-1.
-   La transmisión crítica fuerza c=0 por P122.019/P122.029. Debemos
-   demostrar la transmisión, o directamente c=0, desde la ecuación
-   aritmética del estado.
-2. **Excluir el estado homogéneo.** Después de c=0, demostrar la relación
-   entre canales necesaria para aplicar la rigidez de primera celda.
-   La candidata es (E_(p,T)-E_(q,T)) h_F = 0 para dos primos activos
-   distintos, con los dominios y condiciones de P122.020.
+   Critical transmission forces c=0 by P122.019/P122.029. We must
+   prove transmission, or directly c=0, from the state's arithmetic
+   equation.
+2. **Exclude the homogeneous state.** After c=0, prove the relation
+   between channels needed to apply first-cell rigidity.
+   The candidate is (E_(p,T)-E_(q,T)) h_F = 0 for two distinct active
+   primes, with the domains and conditions of P122.020.
 
-La energía conocida
+The known energy
 
 ```
 E_eff(F) = ||(E_(q,T)-E_(p,T)) h_F||^2 / log(q/p)
 ```
 
-no necesita recalcularse. Una extensión armónica tiene flujo constante,
-que puede ser distinto de cero. La nueva prueba debe controlar el flujo.
+does not need to be recomputed. A harmonic extension has constant flux,
+which can be nonzero. The new proof must control the flux.
 
-## 2. Primera candidata: variación conjunta de la fuente Gamma–Euler
+## 2. First candidate: joint variation of the Gamma–Euler source
 
-Usar el sistema literal de fase 120, conservando en conjunto los estados
-de retardo primo, los estados del oscilador Gamma y el perfil coherente de
-grado. No variar independientemente estados que ya están determinados
-por F.
+Use the literal system of phase 120, keeping together the prime-delay
+states, the Gamma oscillator states, and the coherent degree
+profile. Do not independently vary states that are already determined
+by F.
 
-El primer cálculo buscará una identidad de borde obtenida al variar la
-fuente F y propagar esa variación a todos los estados mediante sus
-ecuaciones. Las variaciones se corregirán para mantener las dos
-condiciones primitivas. El signo de q en el primer contacto permite usar
-su ecuación de radical; no permite suponer el signo de términos de borde
-separados.
+The first computation will look for a boundary identity obtained by varying
+the source F and propagating that variation to all states through their
+equations. The variations will be corrected to maintain the two
+primitive conditions. The sign of q at first contact allows using
+its radical equation; it does not allow assuming the sign of separate
+boundary terms.
 
-Orden concreto:
+Concrete order:
 
-1. Escribir los operadores que transportan la variación de F a cada
-   estado y el término de grado. Trabajar inicialmente en un núcleo
-   regular con soporte interior y declarar su relación con el dominio
-   cerrado del minimizador.
-2. Hacer la variación de la acción FIRMADA completa. Mantener los términos
-   de borde de las traslaciones truncadas, de Gamma y de las correcciones
-   Tate; no eliminar ninguno por analogía con un operador local.
-3. Probar el paso al estado de primer contacto. Si se regulariza F,
-   estimar el residuo de la ecuación y la convergencia en la topología
-   necesaria para el término de borde. No suponer H^(1/2) en este paso.
-4. Determinar si la identidad contiene una relación adicional que fuerce
-   c=0 o el flujo cero. Señalar la propiedad aritmética exacta que la
-   produce. Si solo recupera la ecuación de radical o una factorización
-   equivalente, no cuenta como cierre de una obligación.
+1. Write the operators that transport the variation of F to each
+   state and the degree term. Work initially on a regular kernel with
+   interior support and declare its relation to the minimizer's closed
+   domain.
+2. Carry out the variation of the full SIGNED action. Keep the boundary
+   terms from the truncated translations, from Gamma, and from the Tate
+   corrections; eliminate none of them by analogy with a local operator.
+3. Prove the passage to the first-contact state. If F is regularized,
+   estimate the equation's residual and the convergence in the topology
+   needed for the boundary term. Do not assume H^(1/2) in this step.
+4. Determine whether the identity contains an additional relation that
+   forces c=0 or zero flux. Point out the exact arithmetic property that
+   produces it. If it only recovers the radical equation or an equivalent
+   factorization, it does not count as closing an obligation.
 
-Este es un candidato de investigación, no una identidad ya demostrada.
-No basta que la acción sea estacionaria: un punto estacionario de una
-acción firmada no tiene por ello todos sus términos positivos o nulos.
+This is a research candidate, not an already proved identity.
+It is not enough that the action be stationary: a stationary point of a
+signed action does not thereby have all its terms positive or null.
 
-## 3. Resultados de la primera tentativa y decisión
+## 3. Results of the first attempt and decision
 
-| Resultado | Acción siguiente |
+| Result | Next action |
 |---|---|
-| Se obtiene c=0 con prueba válida en el dominio del minimizador | Conservar esa prueba y concentrar la siguiente tarea en el estado homogéneo; no seguir buscando regularidad más fuerte innecesaria. |
-| Se obtiene una ley que fuerza el pegado bajo c=0 | Conservarla y atacar exclusivamente la anulación Tate. |
-| Se excluye F directamente sin R/S | Usar esa demostración; R/S no se agregan como obligaciones extra. |
-| Solo se reproduce la ecuación de radical o el detector conocido | Registrar brevemente dónde desaparece la información; no multiplicar nuevas versiones de la misma candidata. |
-| Hay una obstrucción concreta de dominio o un contraejemplo | Delimitar la clase refutada y diseñar una modificación que cambie esa hipótesis. No declarar imposible la vía entera. |
+| c=0 is obtained with a valid proof on the minimizer's domain | Keep that proof and focus the next task on the homogeneous state; do not keep seeking unnecessary stronger regularity. |
+| A law is obtained forcing the gluing under c=0 | Keep it and attack exclusively the Tate cancellation. |
+| F is excluded directly without R/S | Use that proof; R/S are not added as extra obligations. |
+| Only the radical equation or the known detector is reproduced | Briefly record where the information disappears; do not multiply new versions of the same candidate. |
+| There is a concrete domain obstruction or a counterexample | Delimit the refuted class and design a modification that changes that hypothesis. Do not declare the whole route impossible. |
 
-Un resultado solo para dos primos es un test de la candidata, no una
-exclusión para todas las ventanas. La posterior prueba debe incluir todos
-los canales activos, ambos sectores de paridad y los umbrales de
-nacimiento pertinentes.
+A result valid only for two primes is a test of the candidate, not an
+exclusion for all windows. The subsequent proof must include all
+active channels, both parity sectors, and the relevant birth
+thresholds.
 
-## 4. Alternativa dentro de la misma fase
+## 4. Alternative within the same phase
 
-Si la variación no produce una ley nueva, atacar directamente la
-desigualdad firmada sobre el sistema completo. La identidad
+If the variation does not produce a new law, attack the signed inequality
+directly on the complete system. The identity
 
 ```
 q_T(F) = ||X_T F||^2 - ||Y_T F||^2
 ```
 
-permite formular una cota de dominación. El avance tendría que ser una
-estimación aritmética que la demuestre, con constante suficiente y dominio
-completo. Construir un operador cuya contractividad sea equivalente a
-la cota no la prueba.
+allows formulating a domination bound. The advance would have to be an
+arithmetic estimate that proves it, with sufficient constant and full
+domain. Constructing an operator whose contractivity is equivalent to
+the bound does not prove it.
 
-Que un objetivo tenga fuerza-RH no es un veto. La distinción es entre
-demostrar la desigualdad desde los datos y asumirla en otra notación.
-Consultar los no-go existentes solo para comprobar sus hipótesis exactas.
+That a goal has RH-strength is not a veto. The distinction is between
+proving the inequality from the data and assuming it in another notation.
+Consult the existing no-gos only to check their exact hypotheses.
 
-## 5. Cierre de la ruta
+## 5. Route closure
 
-La cadena de cierre será:
+The closure chain will be:
 
 ```
-base certificada + primer contacto alcanzado
-  + nueva ley aritmética demostrada
-  -> exclusión de una primera pérdida de signo
-  -> q_T >= 0 para todas las ventanas finitas
-  -> dominio suficiente del criterio de Weil
+certified base + first contact reached
+  + new arithmetic law proved
+  -> exclusion of a first sign loss
+  -> q_T >= 0 for all finite windows
+  -> sufficient domain of the Weil criterion
   -> RH.
 ```
 
-El último paso exige usar las normalizaciones, densidad y continuidad del
-criterio correspondiente; no exige construir una intersección geométrica
-de A. No hace falta un margen positivo uniforme en T si se demuestra el
-signo en cada ventana y la clase de tests obtenida ya es suficiente.
+The last step requires using the normalizations, density, and continuity of
+the corresponding criterion; it does not require constructing a geometric
+intersection of A. A uniform positive margin in T is not needed if the
+sign is proved in each window and the resulting test class is already
+sufficient.
 
-## 6. Disciplina de trabajo
+## 6. Work discipline
 
-- No repetir el certificado log 2, los detectores de fase 121, la energía
-  de dos primos ni la identificación del espacio crítico de borde.
-- No deducir transmisión de una regularidad subcrítica ni de un cálculo
-  que impone la propia condición de transmisión.
-- No descartar una prueba analítica porque trabaje sobre minimizadores;
-  sí exigir una demostración independiente de cada consecuencia usada.
-- No confundir una identidad global firmada con un teorema de signo.
-- Mantener como máximo una candidata principal y una alternativa.
-- Guardar únicamente las pruebas, obstrucciones y cálculos que cambien
-  una obligación. No modificar papers ni convertir cada paso en una
-  memoria extensa.
+- Do not repeat the log 2 certificate, the phase 121 detectors, the
+  two-prime energy, or the identification of the critical boundary space.
+- Do not deduce transmission from subcritical regularity or from a
+  computation that imposes the transmission condition itself.
+- Do not discard an analytic proof because it works on minimizers;
+  do require an independent proof of every consequence used.
+- Do not confuse a global signed identity with a sign theorem.
+- Keep at most one main candidate and one alternative.
+- Keep only the proofs, obstructions, and computations that change
+  an obligation. Do not modify papers or turn every step into an
+  extensive memo.
 
-Primer entregable pendiente: la variación conjunta y su identidad de
-borde, con dominio justificado y un veredicto sobre su capacidad para
-anular la fuente Tate o el flujo. Ninguna de esas anulaciones queda
-probada por abrir esta fase.
+Pending first deliverable: the joint variation and its boundary
+identity, with justified domain and a verdict on its capacity to
+cancel the Tate source or the flux. Neither of those cancellations is
+proved by opening this phase.
 
-## 7. Continuación seleccionada (2026-09-12)
+## 7. Selected continuation
 
-Tras P124.013--014 la obligación de Gate R se enuncia sin minimizador:
+After P124.013--014 the Gate R obligation is stated without a minimizer:
 
 ```
-Sigma(T) = B_T - X_T^* L_T^{-1} X_T >= 0   para toda ventana T < T_q,
+Sigma(T) = B_T - X_T^* L_T^{-1} X_T >= 0   for every window T < T_q,
 ```
 
-con `X_T` la columna del colar `rho_{\pm,T}` (P124.005) y `B_T` el bloque
-Tate del formulario de Weil completo (P124.013 (2.3)).  Es una desigualdad
-`2x2` sobre objetos explícitos, en el rango donde `L_T > 0`.
+with `X_T` the column of the necklace `rho_{\pm,T}` (P124.005) and `B_T` the
+Tate block of the full Weil form (P124.013 (2.3)).  It is a `2x2`
+inequality on explicit objects, in the range where `L_T > 0`.
 
-El falsador `Xi_a` la viola antes de su primer contacto, y `zeta` no la violó
-en el rango explorado.  La separación entre ambos es la unimodularidad de las
-raíces locales (`p^{-1/2}` frente a `p^{-1/2\pm a}`).  Por lo tanto la única
-candidata principal admisible sigue siendo una ley de unitariedad local, ahora
-con la obligación de producir **simultáneamente** Gate R (vía `Sigma`) y
-Gate S; el reparto "R blando, S aritmético" queda cerrado.
+The falsifier `Xi_a` violates it before its first contact, and `zeta` did not violate
+it in the explored range.  The separation between the two is the unimodularity of the
+local roots (`p^{-1/2}` versus `p^{-1/2\pm a}`).  Hence the only admissible
+main candidate remains a local unitarity law, now with the obligation to
+produce Gate R (via `Sigma`) and Gate S **simultaneously**; the split
+"R soft, S arithmetic" is closed.

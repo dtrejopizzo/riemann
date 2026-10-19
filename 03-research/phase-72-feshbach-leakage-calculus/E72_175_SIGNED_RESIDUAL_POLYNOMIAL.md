@@ -1,7 +1,6 @@
 # E72.175 -- Signed residual polynomial gate
 
-**Date:** 2026-07-09.
-**Role:** remove the `cross_+` correction by approximating the signed residual itself.
+**Purpose:** remove the `cross_+` correction by approximating the signed residual itself.
 
 ## 0. Signed residual function
 

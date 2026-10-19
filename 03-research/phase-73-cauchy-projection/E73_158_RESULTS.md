@@ -1,6 +1,5 @@
 # E73.158 Results - Current source-image scalar residual
 
-Date: 2026-07-12.
 
 Script:
 

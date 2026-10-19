@@ -18,7 +18,7 @@ equivalent to `A_T >= 0` for all `T`, i.e. row (d).
 
 ## 2. What `A_T` actually is  **[VERIFIED against real zeta zeros]**
 
-> **Status upgraded 2026-08-17.** `scripts/W5_highprec.log` checks
+> **Status upgraded .** `scripts/W5_highprec.log` checks
 > `<A_T F,F> = sum_rho h(gamma_rho)` at `T = 0.6, 1.2, 2.0, 3.0` for several
 > primitive test vectors, summing 200+ cached zeta zeros. Relative agreement
 > **5.4e-11 to 1.6e-9**. The identity below is confirmed.

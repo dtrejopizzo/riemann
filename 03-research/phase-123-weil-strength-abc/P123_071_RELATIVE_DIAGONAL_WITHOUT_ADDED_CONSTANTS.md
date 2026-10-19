@@ -1,6 +1,6 @@
 # P123.071 — Relative diagonal retaining the original coefficient ideal
 
-Date: 2026-09-06. Status: PROVED as a split continuous relative chain
+Status: PROVED as a split continuous relative chain
 construction. No nuclearity or determinant finiteness is inferred.
 
 Use the continuous split algebra maps e:A -> D, j:D -> A from P123.070

@@ -1,40 +1,40 @@
-# Phase 60 — Discriminante: RESULTADOS (cierre franco) **Autor:** David Alejandro Pizzo · **Ejecutado:** 2026-06-16
-**Veredicto:** NO-GO. La tesis central (multiplicatividad controla el signo de Weil, medible
-vía el discriminante de la forma localizada) queda **refutada** por experimentos reales y
-reproducibles. Todo el código corre en el venv y reproduce las gates validadas. --- ## Tesis testeada > El signo del residual de Weil no lo controla la ubicación de los ceros sino la
-> **multiplicatividad** (producto de Euler). Aislarlo comparando ζ (Euler) vs controles
-> no-multiplicativos en la forma de Weil localizada. ## Experimentos (todos reproducibles, engine P7 validado) ### E1 — `E1_zero_side_blindness.py` (corre, gates PASS)
-El lado-cero validado `M_zeros` es función del **multiset de ceros únicamente**.
-- Toda configuración ON-line (cualquier densidad/espaciado, = cualquier L-función RH-true) queda en el floor: λ_min/tr ∈ [+2.3e-5, +1.1e-1] ≥ 0.
-- El único movedor del signo es desplazar ceros OFF-line (status-RH).
-- **Conclusión:** el lado-cero mide status-RH, es **ciego a multiplicatividad**. Separar ζ de L_DH aquí = separar por ceros off-line = ubicación = **circular** (NO-GO pre-registrado §5).
-- ⇒ la tesis vive enteramente en el lado-aritmético `M_arith` (P). ### E2 — `E2_multiplicativity_discriminant.py` (corre)
-Aporte metodológico: fijar el bloque arquimediano A (ζ, a=1/4) y variar SOLO la
-multiplicatividad de los coeficientes (normalización desconocida se cancela en la comparación
-relativa). C(L) = λ_max(A^{-1/2} P A^{-1/2}).
-- ζ (multiplicativo): C = 1.98.
-- shuffle / random (mismo soporte, misma distribución de valores, sin correlación posicional): C ≈ 0.31 ± 0.05.
-- ζ a **+31σ (shuffle), +41σ (random)**. *Aparente* GO. ### E2b — `E2b_kill_confound.py` (corre) — EL CONTROL DECISIVO
-Sospecha: shuffle/random rompen la correlación posición(log n)↔valor, así que +30σ podría ser
-"suma coherente (suave en log n) vs incoherente", NO multiplicatividad. Λ(n)=log p es
-trivialmente suave en log n.
-Control suave **no-multiplicativo**, magnitud-matched: | coeficiente | C | ¿multiplicativo? |
+# Phase 60 — Discriminant: RESULTS (frank closure)
+**Verdict:** NO-GO. The central thesis (multiplicativity controls the sign of the Weil
+residual, measurable via the discriminant of the localized form) is **refuted** by real and
+reproducible experiments. All code runs in the venv and reproduces the validated gates. --- ## Thesis tested > The sign of the Weil residual is not controlled by the location of the zeros but by
+> **multiplicativity** (Euler product). Isolate it by comparing ζ (Euler) vs. non-multiplicative
+> controls in the localized Weil form. ## Experiments (all reproducible, validated P7 engine) ### E1 — `E1_zero_side_blindness.py` (runs, gates PASS)
+The validated zero side `M_zeros` is a function of the **multiset of zeros only**.
+- Every ON-line configuration (any density/spacing, i.e. any RH-true L-function) stays on the floor: λ_min/tr ∈ [+2.3e-5, +1.1e-1] ≥ 0.
+- The only sign-mover is shifting zeros OFF-line (RH-status).
+- **Conclusion:** the zero side measures RH-status, it is **blind to multiplicativity**. Separating ζ from L_DH here = separating by off-line zeros = location = **circular** (pre-registered NO-GO §5).
+- ⇒ the thesis lives entirely in the **arithmetic side** `M_arith` (P). ### E2 — `E2_multiplicativity_discriminant.py` (runs)
+Methodological contribution: fix the archimedean block A (ζ, a=1/4) and vary ONLY the
+multiplicativity of the coefficients (unknown normalization cancels in the relative
+comparison). C(L) = λ_max(A^{-1/2} P A^{-1/2}).
+- ζ (multiplicative): C = 1.98.
+- shuffle / random (same support, same value distribution, no positional correlation): C ≈ 0.31 ± 0.05.
+- ζ at **+31σ (shuffle), +41σ (random)**. *Apparent* GO. ### E2b — `E2b_kill_confound.py` (runs) — THE DECISIVE CONTROL
+Suspicion: shuffle/random break the position(log n)↔value correlation, so the +30σ could
+be "coherent (smooth in log n) sum vs incoherent", NOT multiplicativity. Λ(n)=log p is
+trivially smooth in log n.
+Smooth, **non-multiplicative**, magnitude-matched control: | coefficient | C | multiplicative? |
 |---|---|---|
-| ζ (Λ real) | 1.98 | sí |
-| flat (Λ̄ constante) | **2.44** | no |
-| loglin (ajuste lineal de Λ) | **2.11** | no |
+| ζ (real Λ) | 1.98 | yes |
+| flat (constant Λ̄) | **2.44** | no |
+| loglin (linear fit of Λ) | **2.11** | no |
 | logn | **2.21** | no |
-| shuffle / random | 0.31 | no | **Los controles suaves no-multiplicativos igualan o SUPERAN a ζ.** ζ ni siquiera es el más
-coherente (C(ζ) < C(flat)). --- ## Veredicto La separación de E2 era **suavidad/coherencia en log n**, no multiplicatividad. La firma
-"Euler" es **espuria**. Sumado a E1: > **Ambos lados de la forma de Weil localizada son ciegos a la multiplicatividad.**
-> El lado-cero ve solo ubicación de ceros (status-RH). El lado-aritmético, vía la forma
-> localizada con envolvente suave (Hermite/Slepian), ve solo la **envolvente suave de los
-> coeficientes** (primer momento/densidad) y lava las correlaciones de Euler. Razón estructural (nueva, precisa): la multiplicatividad es una correlación aritmética fina
-(entre Λ en p, p², q…) que vive a la escala de log p individuales. La envolvente suave de la
-forma localizada la integra y la borra. Esto es coherente con T3.4 (la "banda" aritmética era
-artefacto de base) — el mismo dedo apuntando: **no sobrevive estructura aritmética fina en la
-forma localizada.** Es MW-2 (propagación aritmética) con disfraz nuevo. ## Consecuencia para RH La ruta del discriminante de multiplicatividad **no lleva a una condición para el signo de
-Weil** con los observables disponibles. RH permanece detrás del muro cross-place (MW-3/MW-5),
-intacto. Esta phase se **cierra**. Se registra como [NG-F1] en NO-GO-LIST. ## Lo que SÍ deja (franco)
-1. Un instrumento de discriminante relativo (A fija, varía multiplicatividad) que **cancela la normalización** — desbloquea el confound de baseline de Phase3-results, y es reutilizable.
-2. La constatación dura: la forma de Weil localizada es ciega a multiplicatividad por ambos lados, con razón estructural. Cierra limpiamente la dirección δ del PLAN-RH-FRONTIER.
+| shuffle / random | 0.31 | no | **The smooth, non-multiplicative controls match or EXCEED ζ.** ζ is not even the most
+coherent (C(ζ) < C(flat)). --- ## Verdict The separation seen in E2 was **smoothness/coherence in log n**, not multiplicativity. The
+"Euler" signature is **spurious**. Combined with E1: > **Both sides of the localized Weil form are blind to multiplicativity.**
+> The zero side sees only zero location (RH-status). The arithmetic side, via the localized
+> form with a smooth envelope (Hermite/Slepian), sees only the **smooth envelope of the
+> coefficients** (first moment/density) and washes out the Euler correlations. Structural reason (new, precise): multiplicativity is a fine arithmetic correlation
+(between Λ at p, p², q…) that lives at the scale of individual log p. The smooth envelope of
+the localized form integrates it and erases it. This is consistent with T3.4 (the arithmetic
+"band" was a basis artifact) — the same finger pointing: **no fine arithmetic structure
+survives in the localized form.** This is MW-2 (arithmetic propagation) in new disguise. ## Consequence for RH The multiplicativity-discriminant route **does not lead to a condition for the sign of
+Weil** with the available observables. RH remains behind the cross-place wall (MW-3/MW-5),
+intact. This phase is **closed**. Recorded as [NG-F1] in NO-GO-LIST. ## What it DOES leave (frank)
+1. A relative discriminant instrument (A fixed, vary multiplicativity) that **cancels the normalization** — unblocks the baseline confound of Phase3-results, and is reusable.
+2. The hard finding: the localized Weil form is blind to multiplicativity on both sides, with a structural reason. Cleanly closes direction δ of PLAN-RH-FRONTIER.

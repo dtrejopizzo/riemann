@@ -1,6 +1,6 @@
 # E78.46 - The subunit denominator gap is an exact modulus-plus-angle defect
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

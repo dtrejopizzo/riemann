@@ -1,6 +1,5 @@
-# R131.002 — Hostile audit, round 1: Paper 44 after the phase-131 rebuild
+# R131.002 — Audit, round 1: Paper 44 after the phase-131 rebuild
 
-Auditor: Claude (Opus 5, 1M), acting as adversary. Date: 2026-09-12.
 Target: `04-papers/44-row-b-arithmetic-family/main.md` (`[REBUILT, phase 131]`
 passages), against `R131_000`, `R131_001`, `D128_002_AUDIT_B.md`, Paper 43
 (post-phase-130), P123.018/022/037/038/039/042/060/082, PLAN §6.
@@ -72,9 +71,9 @@ that is, **the value on it of Paper 43's declared trace `T`** …". But
 `Γ_n^{rad} ∉ D_A` (Rem 3bis.4b(i)), `T` is defined on `D_A` only (Paper 43
 Def. 8.6), and the paper nowhere extends `T` to multipliers. So `T(Γ_n^{rad})`
 is undefined, and the amended clause as stated has no content. This is
-verbatim the type error the builder charges against the lead's blueprint
+verbatim the type error the construction charges against the review's blueprint
 (R131.001 §3 item 4); it survives in the two places where it matters most
-(the contract table §2 and the boxed amendment the owner is asked to adopt).
+(the contract table §2 and the boxed amendment the repository record is asked to adopt).
 
 Worse, the naive reading is not merely undefined but *false-adjacent*: for
 `|S_f| ≥ 2`, `Im j_p ∩ {|x|_S = 1/n}` is a single point in each `Z_r^×`,
@@ -291,7 +290,7 @@ insists "nothing in row B depends on Paper 43's Definition 8.1". Reconcile.
 * Thm 3bis.7, archimedean part: with (8.5a)/(8.5b),
   `½[1/(2|\sinh(t/2)|)·2 + …]` collapses to `K(t) = e^{−t/2}/(1−e^{−2t})`;
   I re-derived `½[e^{−t/2}/(1−e^{−t}) + e^{−t/2}/(1+e^{−t})] = K(t)` and
-  `K(|t|)` symmetry. **Correct**, and the builder's rejection of the
+  `K(|t|)` symmetry. **Correct**, and the construction's rejection of the
   blueprint's `K = ∏Z_p^×` (R131.001 §3 item 2) is right: with the sign
   omitted the half-sum is unavailable.
 * (3bis.11): `τ_∞(1/n) = n^{1/2}/(n−1)`, `τ_∞(−1/n) = n^{1/2}/(n+1)`,
@@ -336,7 +335,7 @@ insists "nothing in row B depends on Paper 43's Definition 8.1". Reconcile.
 
 ## 3. Verdict per clause
 
-| clause | builder | auditor |
+| clause | construction | audit |
 |---|---|---|
 | B.1 source category | `PROVED` | **`PROVED`, trivially** — stating a category is free; the upgrade from `PARTIAL` is defensible only on the reading "no functor demanded". Add F7: the source has no dagger. |
 | B.2 monoidal realization | `PROVED` | **`PROVED, but empty`** (F1): the functor factors through `R_{>0}` and forgets arithmetic. Independence of lift/gauge/chart: `PROVED` in substance, with F10's proof repair. |
@@ -390,7 +389,7 @@ break them, right — but because:
 * **F4** shows an invalid inference, explicitly accepted as an error in
   D128.002 B1, still sitting in a `PROVED` proof and contradicting §7 of the
   same paper.
-* **F2** shows the one clause the owner is being asked to *amend* is ill-typed
+* **F2** shows the one clause the repository record is being asked to *amend* is ill-typed
   as offered.
 * **F1** shows the paper's central object is misnamed in a way that inflates
   what B.1/B.2/B.6 mean.
@@ -405,7 +404,7 @@ new mathematics. After them, the honest label is:
 
 ```text
 ROW B: CLOSED ON PAPER 43'S DECLARED CARRIER, AS A THEOREM ABOUT ROW A'S
-       TRACE RESTRICTED TO THE RADIAL (MODULUS) SECTOR, MODULO THE OWNER'S
+       TRACE RESTRICTED TO THE RADIAL (MODULUS) SECTOR, MODULO THE
        ACCEPTANCE OF THE RE-WORDED B.4 AMENDMENT.
   B.1,B.2,B.5,B.6,B.8,B.9 PROVED (B.2/B.6 with the emptiness note);
   B.3 PROVED after the dagger extension to Q_{>0};

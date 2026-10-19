@@ -1,6 +1,6 @@
 # E77.3c - Two-generator IDENT interface
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Statement
 

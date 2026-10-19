@@ -8,7 +8,7 @@ For \(a=\log p\), they are two entire periodic modules
 
 \[
  \mathcal B_p^+=L^2(C_p),\qquad
- \mathcal B_p^-=L^2(C_p),qquad C_p=\mathbb R/a\mathbb Z.  \tag{0.1}
+ \mathcal B_p^-=L^2(C_p),\qquad C_p=\mathbb R/a\mathbb Z.  \tag{0.1}
 \]
 
 The scalar moments \(M_+,M_-\) are one functional on each module.  A
@@ -20,7 +20,7 @@ nearest-neighbour precision and an exact two-boundary Schur complement with
 positive feedthrough
 
 \[
- d_rI_2,qquad d_r={r^2\over(1-r)^2}>0.                    \tag{0.2}
+ d_rI_2,\qquad d_r={r^2\over(1-r)^2}>0.                    \tag{0.2}
 \]
 
 At the arithmetic-character level, however,
@@ -52,7 +52,7 @@ paper file is modified.
 Fix \(p\), set
 
 \[
- a=\log p,qquad r=p^{-1/2},qquad c={1+r\over1-r}.         \tag{1.1}
+ a=\log p,\qquad r=p^{-1/2},\qquad c={1+r\over1-r}.         \tag{1.1}
 \]
 
 The Zak decomposition is the unitary
@@ -74,7 +74,7 @@ Poisson Markov operator of D.195 acts fiberwise by
 For a finitely supported fiber sequence define its two boundary transforms
 
 \[
- b_+(f)=\sum_{\ell\in\mathbb Z}r^{-\ell}f_\ell,qquad
+ b_+(f)=\sum_{\ell\in\mathbb Z}r^{-\ell}f_\ell,\qquad
  b_-(f)=\sum_{\ell\in\mathbb Z}r^{\ell}f_\ell.             \tag{1.4}
 \]
 
@@ -116,7 +116,7 @@ Choose a nonzero \(h\in L^2([0,a))\) orthogonal to both
 \(j\ne0\).  Then
 
 \[
- M_+(F)=M_-(F)=0,qquad b_+(f_u)=b_-(f_u)=h(u)\ne0.        \tag{2.3}
+ M_+(F)=M_-(F)=0,\qquad b_+(f_u)=b_-(f_u)=h(u)\ne0.        \tag{2.3}
 \]
 
 This is an explicit infinite-dimensional strengthening of the rank
@@ -277,7 +277,7 @@ Adding it to the positive prime precisions gives exactly
 The full arithmetic form remains
 
 \[
- B_P=A_PI-\mathcal E_P,qquad
+ B_P=A_PI-\mathcal E_P,\qquad
  A_P=m_0+\sum_{p\in P}\log p(c_p-1).                       \tag{6.3}
 \]
 

@@ -1,6 +1,6 @@
 # E78.157 - Three-way decomposition of the shared consecutive-section difference
 
-**Run:** 2026-07-21.
+**Run:**
 **Scope:** SHARED-N2-LEMMA (convergence half of points 2, 5, 6). Decomposes the
 consecutive-section log-transfer difference into three exact additive pieces and
 isolates, with numbers, the single build-dependent piece that carries the whole

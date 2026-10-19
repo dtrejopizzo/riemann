@@ -1,6 +1,6 @@
 # R155.016 — The comb-vanishing LP: `E_at(w) = 0` on a computable interval
 
-*Builder, phase 155, round 2, 2026-09-21. Executes `R155_013 §8(1)` ("Add the comb conditions to the
+*Phase 155, round 2. Executes `R155_013 §8(1)` ("Add the comb conditions to the
 LP … the successor of (P3)") under Corollary D.2. Inherits `R155_013` (Theorem D, Cor. D.2),
 `R155_011`/`R155_012` (class, scripts, corrected Bernstein pad), Paper 47 §5 (`lem:bern`),
 §7 (Thm Z (7.2), `lem:smooth`).*
@@ -14,26 +14,26 @@ LP … the successor of (P3)") under Corollary D.2. Inherits `R155_013` (Theorem
 ## §0 Verdict in five lines
 
 1. **Certificate on `ℝ` obtained: NO, at no `T`.** The comb-vanishing LP is **negative at all four
-   windows**: `−1.166·10⁻²` (`½log3`), `−1.704·10⁻²` (`0.58`), `−5.193·10⁻²` (`0.62`),
-   `−8.907·10⁻²` (`log 2`), best class (`M = 48`, `U = 6`, `β` free); certified grid values
-   `−1.35·10⁻²…−9.16·10⁻²`, prime side confirming each argmin to `1.3·10⁻⁵…6.3·10⁻⁵`.
+ windows**: `−1.166·10⁻²` (`½log3`), `−1.704·10⁻²` (`0.58`), `−5.193·10⁻²` (`0.62`),
+ `−8.907·10⁻²` (`log 2`), best class (`M = 48`, `U = 6`, `β` free); certified grid values
+ `−1.35·10⁻²…−9.16·10⁻²`, prime side confirming each argmin to `1.3·10⁻⁵…6.3·10⁻⁵`.
 2. **But the interval is now honest and finite**: `τ_stop = 135.6, 182.9, 168.8, 183.1` from
-   Theorem D applied to the *resulting* `w`, the LP was solved on `[0,200] ⊃ [0,τ_stop]`, and the
-   Theorem-D tail bound at `τ = 200` is `L_w(200) = +1.498, +0.270, +0.467, +0.258 > 0`. This is the
-   **first flat-top run in the corpus whose failure is a statement about all of `ℝ`**, not about a
-   window chosen for convenience — **[amended 2026-09-21 per R155_019]** conditional on the
-   `D(w)` quadrature (see §3 notes): at `0.58` and `log 2` the margin `L_w(200)` survives only a
-   `≈ 29 %` underestimate of `D`.
+ Theorem D applied to the *resulting* `w`, the LP was solved on `[0,200] ⊃ [0,τ_stop]`, and the
+ Theorem-D tail bound at `τ = 200` is `L_w(200) = +1.498, +0.270, +0.467, +0.258 > 0`. This is the
+ **first flat-top run in the corpus whose failure is a statement about all of `ℝ`**, not about a
+ window chosen for convenience — **[amended per R155_019]** conditional on the
+ `D(w)` quadrature (see §3 notes): at `0.58` and `log 2` the margin `L_w(200)` survives only a
+ `≈ 29 %` underestimate of `D`.
 3. **The comb equalities are always feasible** (least-squares residual `0.0` at every `(T,U,M)` up
-   to `U = 8`, `450` equalities against `147` dof): they are not `450` independent conditions but a
-   rank-deficient system whose null space is what the LP optimises over.
+ to `U = 8`, `450` equalities against `147` dof): they are not `450` independent conditions but a
+ rank-deficient system whose null space is what the LP optimises over.
 4. **New structural fact — the null space saturates.** `dim null` is `41` at `M=24` for every
-   `U ≥ 5`, and `126` at `M=48` for every `U ≥ 6`: **comb-vanishing ⟹ effectively bounded support,
-   `U_eff ≈ log(1/h) + const`.** Enlarging the support past `U_eff` adds equalities and no freedom.
+ `U ≥ 5`, and `126` at `M=48` for every `U ≥ 6`: **comb-vanishing ⟹ effectively bounded support,
+ `U_eff ≈ log(1/h) + const`.** Enlarging the support past `U_eff` adds equalities and no freedom.
 5. **Diagnosis: both constraints bind, the comb more.** Same class, same interval `[0,115]`,
-   `M = 24`: comb `−2.304·10⁻²` against no-comb `−8.590·10⁻³` (factor `2.7`); and the no-comb value
-   on `[0,115]` is itself `3.0×` worse than the `R155_011` no-comb value on `[0,60]` (`−2.86·10⁻³`).
-   Refining the lattice `M: 24 → 48` recovers half the comb penalty (`−2.30·10⁻² → −1.17·10⁻²`).
+ `M = 24`: comb `−2.304·10⁻²` against no-comb `−8.590·10⁻³` (factor `2.7`); and the no-comb value
+ on `[0,115]` is itself `3.0×` worse than the `R155_011` no-comb value on `[0,60]` (`−2.86·10⁻³`).
+ Refining the lattice `M: 24 → 48` recovers half the comb penalty (`−2.30·10⁻² → −1.17·10⁻²`).
 
 ---
 
@@ -61,8 +61,8 @@ edge columns `ψ_s(v) = (1+sv+½s²v²)e^{−sv}` have infinite support, so **th
 rebuilt**. `comblib.WinC`:
 
 ```
-w(u) = 1                                             |u| ≤ 2T
-w(u) = B(u) + Σ_{j=2}^{J} x_j β((u−u_j)/h)           u > 2T,   u_j = 2T + jh,  h = 2T/M
+w(u) = 1 |u| ≤ 2T
+w(u) = B(u) + Σ_{j=2}^{J} x_j β((u−u_j)/h) u > 2T, u_j = 2T + jh, h = 2T/M
 B(u) = β((u−u_{−1})/h) + β((u−u_0)/h) + β((u−u_1)/h)
 ```
 
@@ -71,14 +71,14 @@ unique solution**, of the `C²` matching at the window edge: from `β(0)=⅔`, `
 `β'(±1)=∓½`, `β''(0)=−2`, `β''(±1)=1`,
 
 ```
-g(2T)=1, g'(2T)=0, g''(2T)=0  ⟺  x_{−1}=x_1,  x_1=x_0,  x_0=1.
+g(2T)=1, g'(2T)=0, g''(2T)=0 ⟺ x_{−1}=x_1, x_1=x_0, x_0=1.
 ```
 
 Hence `w` is even, globally `C²` (in particular across `±2T`, which `R155_013 §1.1` shows is exactly
 what makes `ν̂_w + 2ĝ₀` decay like `τ^{−2}`), and `supp w ⊂ [−U,U]` with `U = 2T + (J+2)h`. This is
 a *strictly cleaner* class than `R155_011`'s: no exponential tail to truncate, `E_at` a finite sum.
 
-**[amended 2026-09-21 per R155_019]** The free splines of the ansatz start at `j = 2`, and
+**[amended per R155_019]** The free splines of the ansatz start at `j = 2`, and
 `β(±2) = β'(±2) = β''(±2) = 0` for the cardinal cubic B-spline, so they do not disturb the `C²`
 matching computed above: the three forced unit coefficients are the unique solution regardless of
 how many free `j ≥ 2` splines are added. The three-term ansatz for `B(u)` is not a restriction.
@@ -112,7 +112,7 @@ optimises over the affine set `x = x_p + N z`, `N = null(A)`, which `lp.py` comp
 
 Beyond `U ≈ 5` (`M=24`) resp. `U ≈ 6` (`M=48`), **every added lattice cell is consumed exactly by
 the prime powers it contains**: `+22` dof and `+22` rank per unit of `U`. The mechanism is the one
-the prompt anticipated: consecutive prime powers are spaced `≈ 1/n = e^{−u}`, so once `e^{−u} < h`
+the order anticipated: consecutive prime powers are spaced `≈ 1/n = e^{−u}`, so once `e^{−u} < h`
 the comb has `≥ 1` node per cell and a cubic spline with `≥ 3` consecutive interior zeros is `≈ 0`
 there. The first `u` with two prime powers closer than `h` is `u = 3.434` (`M=24`) resp.
 `4.615` (`M=48`) — the observed saturation sets in one to two units later, when the *density* rather
@@ -121,12 +121,12 @@ than a single pair becomes binding. The same numbers hold at `0.58, 0.62, log 2`
 > **Finding (F1).** For comb-vanishing weights on a lattice of step `h`, the support is effectively
 > bounded: `U_eff ≈ log(1/h) + c` with `c ∈ [1.5, 2.5]`, two-lattice fit (`M=24`:
 > `log(1/0.0458)=3.08`, `U_eff≈5`; `M=48`: `log(1/0.0229)=3.78`, `U_eff≈6`)
-> **[amended 2026-09-21 per R155_019]**. The only way to buy freedom is to refine `h`, and
+> **[amended per R155_019]**. The only way to buy freedom is to refine `h`, and
 > `U_eff` grows only like `log(1/h)` while `D(w) = O(e^{U/2})` and the LP size grows like `1/h`.
 > `DIAGNOSTIC` (measured); the mechanism (three consecutive interior zeros of a cubic spline in one
 > cell force the local coefficients) is elementary but is not written out as a theorem here.
 >
-> **[amended 2026-09-21 per R155_019] Nesting argument for saturation.** A comb-vanishing `w`
+> **[amended per R155_019] Nesting argument for saturation.** A comb-vanishing `w`
 > supported in `[−U,U]` is also comb-vanishing for any `U' > U` (it vanishes trivially beyond `U`),
 > so `null(U) ⊆ null(U')` as spaces of weights. Once the measured `dim null` stabilises across
 > increasing `U`, the equal dimensions force **equality of the spaces**: every comb-vanishing weight
@@ -152,7 +152,7 @@ Gauss–Legendre, **exact analytic `K`-tail beyond `Umax`**. `TAUMAX` was chosen
 `T = ½log3` first (validation of the machinery against `R155_011`), `M = 24`, `U` sweep,
 `TAUMAX = 115`:
 
-| run | `U` | `M` | `β` | comb | `m` | dof | rank | nullity | **LP value** | grid value + (non-rigorous) pad `B₂δ²/8`, `δ=0.005` **[amended 2026-09-21 per R155_019]** | `D(w)` | `τ_stop` | `L_w(TAUMAX)` | prime side at argmin |
+| run | `U` | `M` | `β` | comb | `m` | dof | rank | nullity | **LP value** | grid value + (non-rigorous) pad `B₂δ²/8`, `δ=0.005` **[amended per R155_019]** | `D(w)` | `τ_stop` | `L_w(TAUMAX)` | prime side at argmin |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `c_log3h_U4_b` | 3.98 | 24 | free | yes | 22 | 60 | 22 | 38 | `−2.61616e−2` | `−2.77935e−2` | `1.589e4` | `97.8` | `+0.636` | `−2.61629e−2` |
 | `c_log3h_U5_b` | 4.99 | 24 | free | yes | 45 | 82 | 41 | 41 | `−2.30426e−2` | `−2.47221e−2` | `1.822e4` | `103.1` | `+0.458` | `−2.30132e−2` |
@@ -165,7 +165,7 @@ Gauss–Legendre, **exact analytic `K`-tail beyond `Umax`**. `TAUMAX` was chosen
 
 The four windows, best class (`M = 48`, `U = 6`, `β` free), `TAUMAX = 200`:
 
-| window `T` | `m` | dof | rank | nullity | **LP value** | **grid value + non-rigorous pad** [amended 2026-09-21 per R155_019] | `B₂` | pad | argmin | `D(w)` (`D_K + D_cosh`) | **`τ_stop`** | **`L_w(200)`** (tail beyond) | **prime side at argmin** | gap |
+| window `T` | `m` | dof | rank | nullity | **LP value** | **grid value + non-rigorous pad** [amended per R155_019] | `B₂` | pad | argmin | `D(w)` (`D_K + D_cosh`) | **`τ_stop`** | **`L_w(200)`** (tail beyond) | **prime side at argmin** | gap |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `½log3` | 96 | 211 | 85 | 126 | `−1.16566e−2` | `−1.34687e−2` | `579.8` | `1.812e−3` | `5.755` | `3.668e4` (`2837+33846`) | `135.6` | `+1.498` | `−1.16106e−2` | `4.6e−5` |
 | `0.58` | 95 | 197 | 84 | 113 | `−1.70380e−2` | `−1.88610e−2` | `583.3` | `1.823e−3` | `7.410` | `3.653e4` (`3193+33334`) | `182.9` | `+0.270` | `−1.70248e−2` | `1.3e−5` |
@@ -175,37 +175,37 @@ The four windows, best class (`M = 48`, `U = 6`, `β` free), `TAUMAX = 200`:
 Notes on honesty of the table.
 
 - **`τ_stop < TAUMAX` at every row, and `L_w(TAUMAX) > 0` at every row**, so Theorem D genuinely
-  closes `[TAUMAX, ∞)` for the weight that came out of the LP. (One earlier run,
-  `c_log3h_U6_M48_b` with `TAUMAX = 115`, had `τ_stop = 135.6 > 115`, `L_w(115) = −0.961`: it is
-  **not** a valid row and is superseded by `c_log3h_M48`, which reproduces the identical value
-  `−1.16566e−2` on `[0,200]` because the binding minimum sits at `τ ≈ 5.8`.)
-- **[amended 2026-09-21 per R155_019]** The renamed column is the dense `δ = 0.005` zero-side grid
-  minimum minus the Bernstein pad `B₂δ²/8`, with `B₂` (`lem:bern`, `R155_012`'s correction) built
-  from `Zenvelope`, i.e. from the 1000-zero model, **not** from `f_prime` — the same defect
-  `R155_017` found in `amend.py`. This does not affect the verdict: a grid minimum is already an
-  *upper* bound on `min_ℝ f`, and the pad only ever helps a *positivity* claim, so it is irrelevant
-  to a negativity conclusion. The column is not a certificate; it is a grid value plus a
-  gratuitously pessimistic, non-rigorous pad. The `δ = 2.5·10⁻⁴` prime-side
-  dense enclosure of `dense.py` was **not run**: it costs `≈ 8·10⁵` prime-side points per window and
-  is pointless on a value that is negative by `10⁻²`, i.e. by `7×` the pad. Declared, not hidden.
-- **[amended 2026-09-21 per R155_019]** `D(w) = D_K + D_cosh` is a `du = 2·10⁻⁵` trapezoid
-  quadrature of `∫|W''|`, not a rigorous enclosure, and `L_w(200)` carries the term
-  `D/200² ≈ 0.91`. At `0.58` and `log 2` the margin is `L_w = +0.26…+0.27`, i.e. the all-`ℝ`
-  closure at these two windows survives only a `≈ 29 %` underestimate of `D`. Plausible (the
-  integrand is piecewise smooth, the grid fine) but unproved: the headline "first flat-top run
-  whose failure is a statement about all of `ℝ`" is upheld **conditional on this quadrature being
-  accurate to better than 29 %**.
+ closes `[TAUMAX, ∞)` for the weight that came out of the LP. (One earlier run,
+ `c_log3h_U6_M48_b` with `TAUMAX = 115`, had `τ_stop = 135.6 > 115`, `L_w(115) = −0.961`: it is
+ **not** a valid row and is superseded by `c_log3h_M48`, which reproduces the identical value
+ `−1.16566e−2` on `[0,200]` because the binding minimum sits at `τ ≈ 5.8`.)
+- **[amended per R155_019]** The renamed column is the dense `δ = 0.005` zero-side grid
+ minimum minus the Bernstein pad `B₂δ²/8`, with `B₂` (`lem:bern`, `R155_012`'s correction) built
+ from `Zenvelope`, i.e. from the 1000-zero model, **not** from `f_prime` — the same defect
+ `R155_017` found in `amend.py`. This does not affect the verdict: a grid minimum is already an
+ *upper* bound on `min_ℝ f`, and the pad only ever helps a *positivity* claim, so it is irrelevant
+ to a negativity conclusion. The column is not a certificate; it is a grid value plus a
+ gratuitously pessimistic, non-rigorous pad. The `δ = 2.5·10⁻⁴` prime-side
+ dense enclosure of `dense.py` was **not run**: it costs `≈ 8·10⁵` prime-side points per window and
+ is pointless on a value that is negative by `10⁻²`, i.e. by `7×` the pad. Declared, not hidden.
+- **[amended per R155_019]** `D(w) = D_K + D_cosh` is a `du = 2·10⁻⁵` trapezoid
+ quadrature of `∫|W''|`, not a rigorous enclosure, and `L_w(200)` carries the term
+ `D/200² ≈ 0.91`. At `0.58` and `log 2` the margin is `L_w = +0.26…+0.27`, i.e. the all-`ℝ`
+ closure at these two windows survives only a `≈ 29 %` underestimate of `D`. Plausible (the
+ integrand is piecewise smooth, the grid fine) but unproved: the headline "first flat-top run
+ whose failure is a statement about all of `ℝ`" is upheld **conditional on this quadrature being
+ accurate to better than 29 %**.
 - The prime side is evaluated at the argmin and on the `200` worst dense-grid points; it agrees with
-  the zero side to `1.3·10⁻⁵…6.3·10⁻⁵` everywhere, which is the `1000`-zero truncation error.
-  **The negativity is confirmed on the prime side**, so it is not an artefact of the oracle.
-- **[amended 2026-09-21 per R155_019]** `E_at(w) ≤ 2.0·10⁻¹⁴`, not `= 0` exactly: the equalities
-  are eliminated through an SVD null space with tolerance `10⁻⁹·σ_max`, so the returned `w`
-  satisfies the comb only to rounding (measured `max_n |w(log n)| = 5.4·10⁻¹⁶…1.0·10⁻¹⁵` on the
-  returned `x`). `E_at` enters `L_w` additively, so `τ_stop` scales by `e^{E_at}`: the correction
-  is `≤ 2·10⁻¹⁴·τ_stop < 4·10⁻¹²` in `τ`, and `L_w(200)` drops by `≤ 2·10⁻¹⁴` — fifteen orders
-  below where it bites. The counterfactual `Σ_{2T<log n≤U} v_n = 71.0…72.9` is what `E_at` would
-  have cost had the equalities not been imposed at all, i.e. `τ_stop ≈ 10^{31}` — this is the whole
-  point of the experiment.
+ the zero side to `1.3·10⁻⁵…6.3·10⁻⁵` everywhere, which is the `1000`-zero truncation error.
+ **The negativity is confirmed on the prime side**, so it is not an artefact of the oracle.
+- **[amended per R155_019]** `E_at(w) ≤ 2.0·10⁻¹⁴`, not `= 0` exactly: the equalities
+ are eliminated through an SVD null space with tolerance `10⁻⁹·σ_max`, so the returned `w`
+ satisfies the comb only to rounding (measured `max_n |w(log n)| = 5.4·10⁻¹⁶…1.0·10⁻¹⁵` on the
+ returned `x`). `E_at` enters `L_w` additively, so `τ_stop` scales by `e^{E_at}`: the correction
+ is `≤ 2·10⁻¹⁴·τ_stop < 4·10⁻¹²` in `τ`, and `L_w(200)` drops by `≤ 2·10⁻¹⁴` — fifteen orders
+ below where it bites. The counterfactual `Σ_{2T<log n≤U} v_n = 71.0…72.9` is what `E_at` would
+ have cost had the equalities not been imposed at all, i.e. `τ_stop ≈ 10^{31}` — this is the whole
+ point of the experiment.
 
 ---
 
@@ -221,33 +221,33 @@ Three comparisons on the *same* class and the *same* interval, `T = ½log3`:
 | no comb on `[0,60]` (`R155_011 §3`, different edge basis) | `−2.863e−3` | `0.33×` |
 
 1. **The comb equalities bind, and the penalty is a lattice-resolution artefact as much as an
-   arithmetic one.** Halving `h` cuts the comb penalty from `2.68×` to `1.36×`. The extrapolation
-   `M → ∞` is *not* to `0`: the comb has positive density beyond `U_eff` and the constraint
-   `w ≈ 0` past `U_eff` is `h`-independent. But the measured trend says the `M = 48` numbers are
-   closer to the class limit than to the `M = 24` ones, and a `M = 96` run (`≈ 400` splines,
-   `≈ 4` min) would settle it. `R155_013 §8(1)`'s "honest expectation is that the comb-free class is
-   *worse*" is **confirmed**, with the factor now measured.
+ arithmetic one.** Halving `h` cuts the comb penalty from `2.68×` to `1.36×`. The extrapolation
+ `M → ∞` is *not* to `0`: the comb has positive density beyond `U_eff` and the constraint
+ `w ≈ 0` past `U_eff` is `h`-independent. But the measured trend says the `M = 48` numbers are
+ closer to the class limit than to the `M = 24` ones, and a `M = 96` run (`≈ 400` splines,
+ `≈ 4` min) would settle it. `R155_013 §8(1)`'s "honest expectation is that the comb-free class is
+ *worse*" is **confirmed**, with the factor now measured.
 2. **The interval also binds, and more than the comb at `M = 48`.** Lengthening `[0,60] → [0,115]`
-   costs `3.0×` in the *unconstrained* class (`−2.86e−3 → −8.59e−3`); the comb then costs a further
-   `1.36×`. So the dominant loss in going from "the `R155_011` headline number" to "an honest
-   statement about `ℝ`" is the **interval**, not the comb. Theorem D bought the interval down from
-   `10^{20}` to `10²`; `10²` is still `2×` the `[0,60]` on which the class was previously reported.
-3. **[amended 2026-09-21 per R155_019]** Both controls are negative, but they are not equivalent:
-   the no-comb control's binding minimum sits at `τ = 42.9`, not at small `τ`. It is the **comb**
-   that moves the binding minimum down to `τ ≈ 4–8`, i.e. **inside** `[0,60]`, at every window —
-   the same range `R155_013 §6` found for the bounded-profile class. So the small-`τ` failure is
-   comb-induced, not a feature both constraints share independently. (No "below the first zero"
-   reading is intended or supported: with argmins at `3.7–7.4`, `f_w` there is not built only from
-   tails — the flat top itself contributes `∫(1−w)K` and the `2∫w cosh` term at all `τ`, and no
-   decomposition here isolates a negative term below `γ₁ = 14.13`.)
+ costs `3.0×` in the *unconstrained* class (`−2.86e−3 → −8.59e−3`); the comb then costs a further
+ `1.36×`. So the dominant loss in going from "the `R155_011` headline number" to "an honest
+ statement about `ℝ`" is the **interval**, not the comb. Theorem D bought the interval down from
+ `10^{20}` to `10²`; `10²` is still `2×` the `[0,60]` on which the class was previously reported.
+3. **[amended per R155_019]** Both controls are negative, but they are not equivalent:
+ the no-comb control's binding minimum sits at `τ = 42.9`, not at small `τ`. It is the **comb**
+ that moves the binding minimum down to `τ ≈ 4–8`, i.e. **inside** `[0,60]`, at every window —
+ the same range `R155_013 §6` found for the bounded-profile class. So the small-`τ` failure is
+ comb-induced, not a feature both constraints share independently. (No "below the first zero"
+ reading is intended or supported: with argmins at `3.7–7.4`, `f_w` there is not built only from
+ tails — the flat top itself contributes `∫(1−w)K` and the `2∫w cosh` term at all `τ`, and no
+ decomposition here isolates a negative term below `γ₁ = 14.13`.)
 4. **`β` matters, as always.** Freeing `(β₀−2, β₁)` improves `½log3` from `−3.975e−2` to
-   `−2.304e−2` (`1.73×`), consistent with `R155_011 §5` ("the multipliers are decisive"). The optimal
-   `β` is large (`|β₀−2| ≈ 1.1–4.2`), which pushes `τ_stop` up through `k₀, k₁` but never past `200`.
+ `−2.304e−2` (`1.73×`), consistent with `R155_011 §5` ("the multipliers are decisive"). The optimal
+ `β` is large (`|β₀−2| ≈ 1.1–4.2`), which pushes `τ_stop` up through `k₀, k₁` but never past `200`.
 5. **`D_cosh` is `12–15×` `D_K`**, exactly as `R155_013 §4(3)`: the tail cost is the `cosh(u/2)`
-   weighting of the shoulder. Comb-vanishing *reduced* `D` relative to `R155_011`
-   (`3.7e4` against `5.1e4` at `½log3` for a shorter support), so the `O(e^{U/2})` of Cor. D.3 and
-   the saturation (F1) work in the same direction: short support, small `D`, small `τ_stop`, small
-   value.
+ weighting of the shoulder. Comb-vanishing *reduced* `D` relative to `R155_011`
+ (`3.7e4` against `5.1e4` at `½log3` for a shorter support), so the `O(e^{U/2})` of Cor. D.3 and
+ the saturation (F1) work in the same direction: short support, small `D`, small `τ_stop`, small
+ value.
 
 ---
 
@@ -256,7 +256,7 @@ Three comparisons on the *same* class and the *same* interval, `T = ½log3`:
 | statement | label |
 |---|---|
 | `comblib.WinC` is even, globally `C²`, `w ≡ 1` on `[−2T,2T]`, `supp w ⊂ [−U,U]`; the three edge coefficients `x_{−1}=x_0=x_1=1` are the **unique** `C²` matching (§2.1) | **`PROVED`** (elementary, from the cardinal cubic B-spline values) |
-| The class satisfies the hypotheses of Theorem D case (a) and, with the equalities imposed, of Cor. D.2 (`E_at(w) ≤ 2·10⁻¹⁴`, not exactly `0` **[amended 2026-09-21 per R155_019]**) | **`PROVED`** (by construction, up to double-precision SVD tolerance: `w` vanishes at every prime power with `2T < log n ≤ U` to within `10⁻¹⁵`, and `w ≡ 0` beyond `U`) |
+| The class satisfies the hypotheses of Theorem D case (a) and, with the equalities imposed, of Cor. D.2 (`E_at(w) ≤ 2·10⁻¹⁴`, not exactly `0` **[amended per R155_019]**) | **`PROVED`** (by construction, up to double-precision SVD tolerance: `w` vanishes at every prime power with `2T < log n ≤ U` to within `10⁻¹⁵`, and `w ≡ 0` beyond `U`) |
 | **(F1)** null-space saturation / `U_eff ≈ log(1/h) + c` | `DIAGNOSTIC` (measured for `M ∈ {24,48}`, `U ≤ 8`, four windows; mechanism identified, not proved) |
 | The comb system is feasible for every `(T,U,M)` tried (residual `0`) | `DIAGNOSTIC` (least squares in double precision) |
 | All LP values, certified values, `D(w)`, `τ_stop`, `L_w(200)`, prime-side values of §3 | `DIAGNOSTIC` (double precision; `D` from a `2·10⁻⁵` quadrature; the Bernstein pad is the honest `B₂δ²/8` but `B₂` itself is a double-precision envelope) |
@@ -275,20 +275,20 @@ finite lattice.
 ## §6 Next
 
 1. **`M = 96` at `½log3`** (`≈ 400` splines, `U = 6`, `β` free, `TAUMAX = 250`, `≈ 4` min). The only
-   open quantitative question of this note is whether the comb penalty tends to `1.0` as `h → 0`.
-   If it does, the comb is *free* in the limit and the wall is entirely the interval + the small-`τ`
-   structural failure; if it plateaus near `1.3`, (F1) has a positive density cost that deserves a
-   theorem.
+ open quantitative question of this note is whether the comb penalty tends to `1.0` as `h → 0`.
+ If it does, the comb is *free* in the limit and the wall is entirely the interval + the small-`τ`
+ structural failure; if it plateaus near `1.3`, (F1) has a positive density cost that deserves a
+ theorem.
 2. **Attack `τ ∈ [0,10]`, not the tail.** Every run of rounds 1–2 — unconstrained, bounded-profile
-   (`R155_013 §6`), comb-vanishing — fails at `τ ≈ 2–10`. The tail programme (`prop:env` →
-   Theorem D → Cor. D.2) is finished: it took `10^{40}` to `10²` and the answer did not change.
-   The next object is a lower bound for `min_{τ≤10} f_w` over the whole flat-top class, i.e. a
-   **Toeplitz-type ceiling at small `τ`** in the style of Theorem TK (`R155_014`), which would close
-   the class by a proof instead of by an LP.
+ (`R155_013 §6`), comb-vanishing — fails at `τ ≈ 2–10`. The tail programme (`prop:env` →
+ Theorem D → Cor. D.2) is finished: it took `10^{40}` to `10²` and the answer did not change.
+ The next object is a lower bound for `min_{τ≤10} f_w` over the whole flat-top class, i.e. a
+ **Toeplitz-type ceiling at small `τ`** in the style of Theorem TK (`R155_014`), which would close
+ the class by a proof instead of by an LP.
 3. **The graded/decay hybrid** (`R155_013 §8(2)`, Remark D.2) is untouched and remains the only
-   route by which a flat-top weight could inherit `lem:F1`'s exact treatment of the comb.
+ route by which a flat-top weight could inherit `lem:F1`'s exact treatment of the comb.
 4. Do **not** open a `U > 6` or `E_at > 0` variant: (F1) says the first buys nothing and
-   `R155_013 §4(2)` says the second costs `10^{9}…10^{20}` in `τ_stop`.
+ `R155_013 §4(2)` says the second costs `10^{9}…10^{20}` in `τ_stop`.
 
 ---
 

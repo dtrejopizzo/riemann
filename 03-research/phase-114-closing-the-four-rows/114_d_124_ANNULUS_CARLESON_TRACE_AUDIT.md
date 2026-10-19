@@ -36,7 +36,7 @@ Set
 For \(n\le X\), put
 
 \[
- a_n=\log n,qquad \delta_n=2T-a_n=\log(X/n).          \tag{1.2}
+ a_n=\log n,\qquad \delta_n=2T-a_n=\log(X/n).          \tag{1.2}
 \]
 
 A change of variables gives the exact contact formula

@@ -1,9 +1,9 @@
-# 104_47 — Flujo size-biased de la homotopía y gate exacto de residuos
+# 104_47 — Size-biased homotopy flux and the exact residue gate
 
-**Estado.** Se combinan, sin separar primos, potencias primas ni polo, la
-homotopía \(a\downarrow1\) de `104_41` y el selector divisor exacto de
-`104_43`. El resultado es una ley diferencial cerrada y una fórmula de
-flujo firmada:
+**Status.** The homotopy \(a\downarrow1\) of `104_41` and the exact
+divisor selector of `104_43` are combined with no separation of primes,
+prime powers, or the pole. The result is a closed differential law and a
+signed flux formula:
 
 \[
  \boxed{
@@ -12,72 +12,74 @@ flujo firmada:
  \tag{1}
 \]
 
-En coordenadas size-biased, la densidad de este flujo es exactamente la
-diferencia entre el selector divisor de von Mangoldt y el selector uniforme
-del polo, probados conjuntamente contra \(L_n\). El selector no depende de
-\(a\); toda la dependencia de la homotopía queda en las dos leyes
-exponencialmente inclinadas y en la escala del test.
+In size-biased coordinates, the density of this flux is exactly the
+difference between the von Mangoldt divisor selector and the uniform
+polar selector, jointly tested against \(L_n\). The selector does not
+depend on \(a\); all the dependence of the homotopy lies in the two
+exponentially tilted laws and in the test's scale.
 
-La identidad no cierra el margen. Al integrarla desde un punto Euler
-\(a_0\ge4\) hasta \(1\), la desigualdad unilateral necesaria para el flujo es
-**equivalente**, sin resto, a
+The identity does not close the margin. Integrating it from a Euler point
+\(a_0\ge4\) down to \(1\), the one-sided inequality the flux needs is
+**equivalent**, with no remainder, to
 
 \[
  H_n=\lambda_n-{501\over2002}A_n\ge0.                       \tag{2}
 \]
 
-Cero por cero, el valor en el extremo crítico es el valor Euler menos el
-flujo integrado; esa reconstrucción es exactamente el residuo que cruza el
-círculo de Hardy. El cuarteto racional de `104_41` deja inalterada la fase
-crítica y produce en el flujo una cantidad de tamaño \(2^{152}\). Por tanto
-el selector size-biased localiza correctamente dónde debería entrar el nuevo
-input aritmético, pero no lo fabrica.
+Zero for zero, the value at the critical endpoint is the Euler value
+minus the integrated flux; that reconstruction is exactly the residue
+crossing the Hardy circle. The rational quartet of `104_41` leaves the
+critical phase unchanged and produces in the flux a quantity of size
+\(2^{152}\). Hence the size-biased selector correctly localizes where the
+new arithmetic input should enter, but does not manufacture it.
 
-Queda descartado el mecanismo «diferenciar en \(a\), aplicar solamente
-Markov/Jensen al selector y cerrar el flujo por una desigualdad genérica».
-No queda descartada una desigualdad firmada que use de manera esencial la
-rigidez especial
+Ruled out is the mechanism "differentiate in \(a\), apply only
+Markov/Jensen to the selector, and close the flux with a generic
+inequality." Not ruled out is a signed inequality that essentially uses
+the special rigidity
 
 \[
  \Lambda(p^k)=\log p                                                   \tag{3}
 \]
 
-en todas las torres a la vez. Este documento no prueba (2), A1 ni RH.
+across every tower at once. This document proves neither (2), A1, nor
+RH.
 
-## 1. Auditoría de no duplicación
+## 1. Non-duplication audit
 
-`104_18` correlaciona un desplazamiento de Jordan \(u=c\varepsilon\) con
-\(\varepsilon\downarrow0\); su límite es el costo adyacente
-\(C_n=\lambda_n^{\rm prime}-\lambda_{n+1}^{\rm prime}\). Aquí no hay
-desplazamiento de Jordan: se deriva el parámetro geométrico
-\(s=a/(1-z)\) de la homotopía completa.
+`104_18` correlates a Jordan shift \(u=c\varepsilon\) with
+\(\varepsilon\downarrow0\); its limit is the adjacent cost
+\(C_n=\lambda_n^{\rm prime}-\lambda_{n+1}^{\rm prime}\). Here there is no
+Jordan shift: the geometric parameter
+\(s=a/(1-z)\) of the complete homotopy is differentiated.
 
-`104_31` transporta hacia atrás un test fijo mediante el generador
-\(-M_x\) y prueba la colisión de dominios en \(\varepsilon=1/2\). En (1) el
-test se escala simultáneamente como \(P_n(ax)\), de modo que no se postula
-un semigrupo inverso en un espacio de Hilbert. La obstrucción que aparece es
-distinta: el flujo acopla exactamente los grados \(n\) y \(n+1\).
+`104_31` transports a fixed test backward via the generator
+\(-M_x\) and proves the domain collision at \(\varepsilon=1/2\). In (1)
+the test is simultaneously scaled as \(P_n(ax)\), so no inverse semigroup
+on a Hilbert space is postulated. The obstruction that appears is
+different: the flux exactly couples degrees \(n\) and \(n+1\).
 
-`104_43` construye el selector size-biased para un \(a>1\) fijo, y `104_44`
-estudia su contracción Markov y el costo de reescalar Laguerre. No se repiten
-ni la brecha cero ni el costo exponencial de escala. Lo nuevo aquí es
-mantener el selector durante todo \(a\downarrow1\), calcular su ley de flujo
-y compararla cero por cero con el término de residuos de `104_41`.
+`104_43` builds the size-biased selector for a fixed \(a>1\), and `104_44`
+studies its Markov contraction and the cost of rescaling Laguerre. Neither
+the zero gap nor the exponential scaling cost is repeated. What is new
+here is keeping the selector throughout \(a\downarrow1\), computing its
+flux law, and comparing it zero for zero with the residue term of
+`104_41`.
 
-La cola Abel de coeficientes de `104_41` (4a) tampoco se reinvierte: (1) es
-una identidad diferencial antes de intentar cualquier inferencia
-Tauberiana.
+The Abel coefficient tail of `104_41` (4a) is likewise not reinverted:
+(1) is a differential identity before any Tauberian inference is
+attempted.
 
-## 2. Los dos selectores durante la homotopía
+## 2. The two selectors throughout the homotopy
 
-Sea \(a>1\), \(\varepsilon=a-1\), y escribamos
+Let \(a>1\), \(\varepsilon=a-1\), and write
 
 \[
  \mathfrak m(a)=-{\zeta'(a)\over\zeta(a)}
  =\sum_{d\ge2}{\Lambda(d)\over d^a}.                         \tag{4}
 \]
 
-Sean \(D_a,N_a'\) independientes con
+Let \(D_a,N_a'\) be independent with
 
 \[
  \mathbb P(D_a=d)={\Lambda(d)d^{-a}\over\mathfrak m(a)},
@@ -85,31 +87,31 @@ Sean \(D_a,N_a'\) independientes con
  \mathbb P(N_a'=k)={k^{-a}\over\zeta(a)},                    \tag{5}
 \]
 
-y \(N_a^*=D_aN_a'\). Por `104_43`,
+and \(N_a^*=D_aN_a'\). By `104_43`,
 
 \[
  \mathbb P(D_a=d\mid N_a^*=N)
  ={\Lambda(d)\over\log N}{\bf1}_{d\mid N}.                  \tag{6}
 \]
 
-Denotemos este kernel por \(K\). Es importante que \(K\) no depende de
-\(a\): variar \(a\) solo inclina exponencialmente la ley del producto.
+Denote this kernel by \(K\). Importantly, \(K\) does not depend on
+\(a\): varying \(a\) only exponentially tilts the law of the product.
 
-En el canal polar, sean \(Y_a,Y_a'\) exponenciales independientes de tasa
-\(\varepsilon\), y \(S_a^*=Y_a+Y_a'\). Condicionado a \(S_a^*=x\), \(Y_a\)
-es uniforme en \([0,x]\); escribamos
+In the polar channel, let \(Y_a,Y_a'\) be independent exponentials of
+rate \(\varepsilon\), and \(S_a^*=Y_a+Y_a'\). Conditioned on
+\(S_a^*=x\), \(Y_a\) is uniform on \([0,x]\); write
 
 \[
  (Uf)(x)={1\over x}\int_0^x f(y)\,dy.                        \tag{7}
 \]
 
-También \(U\) es independiente de \(a\). Sean
+\(U\) is likewise independent of \(a\). Let
 
 \[
  P_n(x)=L_{n-1}^{(1)}(x),\qquad f_{n,a}(x)=P_n(ax).           \tag{8}
 \]
 
-La forma completa de `104_41` admite entonces la desintegración
+The complete form of `104_41` then admits the disintegration
 
 \[
  \boxed{
@@ -122,24 +124,24 @@ La forma completa de `104_41` admite entonces la desintegración
  \end{aligned}}                                             \tag{9}
 \]
 
-En efecto, las esperanzas condicionadas de (9) recuperan respectivamente
-la ley de \(D_a\) y la de \(Y_a\). Por tanto (9) es exactamente
+Indeed, the conditional expectations of (9) recover, respectively, the
+law of \(D_a\) and that of \(Y_a\). Hence (9) is exactly
 
 \[
  a\sum_{d\ge2}{\Lambda(d)\over d^a}P_n(a\log d)
  -a\int_0^\infty e^{-(a-1)x}P_n(ax)\,dx.                    \tag{10}
 \]
 
-No se tomó módulo, y ambos selectores permanecen dentro de la misma resta.
-Además,
+No modulus was taken, and both selectors remain within the same
+difference. Moreover,
 
 \[
  \lim_{a\downarrow1}\mathcal B_{n,a}=B_n=A_n-\lambda_n.     \tag{11}
 \]
 
-## 3. Ley diferencial exacta
+## 3. Exact differential law
 
-La identidad elemental que gobierna el flujo es
+The elementary identity governing the flux is
 
 \[
  \boxed{
@@ -147,25 +149,26 @@ La identidad elemental que gobierna el flujo es
  =n\{P_{n+1}(x)-P_n(x)\}.}                                  \tag{12}
 \]
 
-Por consiguiente, para \(y\ge0\),
+Consequently, for \(y\ge0\),
 
 \[
  a{d\over da}\{a e^{-ay}P_n(ay)\}
  =n\{a e^{-ay}P_{n+1}(ay)-a e^{-ay}P_n(ay)\}.              \tag{13}
 \]
 
-Multiplicar (13) por \(e^y\) da la misma identidad con
-\(e^{-(a-1)y}\), el peso polar. Para \(a\ge1+\delta>1\), las series y las
-integrales de (10), junto con todas sus derivadas, convergen absolutamente.
-Se puede por tanto derivar término a término y se obtiene (1).
+Multiplying (13) by \(e^y\) gives the same identity with
+\(e^{-(a-1)y}\), the polar weight. For \(a\ge1+\delta>1\), the series and
+integrals of (10), together with all their derivatives, converge
+absolutely. Differentiation term by term is therefore legitimate, giving
+(1).
 
-La diferencia de grados conserva explícitamente los dos selectores. Si
+The degree difference explicitly preserves the two selectors. If
 
 \[
  \ell_{n,a}(x)=L_n(ax),                                      \tag{14}
 \]
 
-entonces
+then
 
 \[
  \boxed{
@@ -178,13 +181,13 @@ entonces
  \end{aligned}}                                             \tag{15}
 \]
 
-Así, la derivada de la homotopía no introduce una cantidad desconocida
-auxiliar: introduce exactamente la comparación firmada divisor--uniforme
-contra el siguiente Laguerre.
+So the homotopy's derivative introduces no unknown auxiliary quantity: it
+introduces exactly the signed divisor-versus-uniform comparison against
+the next Laguerre function.
 
-## 4. El teorema de flujo que faltaría es exactamente \(H_n\ge0\)
+## 4. The missing flux theorem is exactly \(H_n\ge0\)
 
-Fijemos \(a_0\ge4\) y definamos, manteniendo conjunta la resta,
+Fix \(a_0\ge4\) and define, keeping the difference joined,
 
 \[
  \begin{aligned}
@@ -198,20 +201,20 @@ Fijemos \(a_0\ge4\) y definamos, manteniendo conjunta la resta,
  \end{aligned}
 \]
 
-El límite de los dos términos por separado no se usa. Integrando (1) y
-usando (11),
+The limit of the two terms separately is not used. Integrating (1) and
+using (11),
 
 \[
  \boxed{\mathscr J_n(a_0)=\mathcal B_{n,a_0}-B_n.}           \tag{17}
 \]
 
-Póngase
+Set
 
 \[
  \kappa={1501\over2002}.
 \]
 
-Como \(H_n=\kappa A_n-B_n\), (17) da la equivalencia exacta
+Since \(H_n=\kappa A_n-B_n\), (17) gives the exact equivalence
 
 \[
  \boxed{
@@ -220,14 +223,14 @@ Como \(H_n=\kappa A_n-B_n\), (17) da la equivalencia exacta
  \mathscr J_n(a_0)\ge\mathcal B_{n,a_0}-\kappa A_n.}        \tag{18}
 \]
 
-La cota de fase de `104_41`,
-\(|\mathcal B_{n,a_0}|\le3n\), controla el extremo Euler. Todo el contenido
-RH-strength queda en el signo integrado de (16). En particular, una
-desigualdad de flujo que pruebe (18) sería un cierre válido; pero (18)
-demuestra que no es una consecuencia gratuita de haber encontrado la ley
-diferencial.
+The phase bound of `104_41`,
+\(|\mathcal B_{n,a_0}|\le3n\), controls the Euler extreme. All the
+RH-strength content remains in the integrated sign of (16). In
+particular, a flux inequality proving (18) would be a valid closure; but
+(18) proves it is not a free consequence of having found the differential
+law.
 
-La separación de canales tampoco es admisible. La parte polar de (10) es
+Separating channels is likewise inadmissible. The polar part of (10) is
 
 \[
  \mathcal Q_{n,a}
@@ -235,21 +238,21 @@ La separación de canales tampoco es admisible. La parte polar de (10) es
  =1-\left({-1\over a-1}\right)^n.                           \tag{19}
 \]
 
-Por (11), la parte prima posee la misma divergencia principal que (19) al
-bajar \(a\) a uno. Cada canal tiene tamaño \((a-1)^{-n}\), mientras su
-diferencia tiene límite finito. Markov o Jensen aplicados antes de la resta
-destruyen precisamente la cancelación que define (16).
+By (11), the prime part has the same leading divergence as (19) as
+\(a\) decreases to one. Each channel has size \((a-1)^{-n}\), while their
+difference has a finite limit. Applying Markov or Jensen before the
+subtraction destroys exactly the cancellation that defines (16).
 
-## 5. Integrar el flujo no vuelve positivos los pesos
+## 5. Integrating the flux does not make the weights positive
 
-Para \(a_1>1\), el canal primo de (16) puede integrarse término a término.
-La identidad
+For \(a_1>1\), the prime channel of (16) can be integrated term by
+term. Identity
 
 \[
  {d\over dx}\{e^{-x}L_n^{(-1)}(x)\}=-e^{-x}L_n(x)           \tag{20}
 \]
 
-da
+gives
 
 \[
  \begin{aligned}
@@ -260,42 +263,42 @@ da
  \end{aligned}
 \]
 
-Aquí
+Here
 
 \[
  {\Lambda(p^k)\over\log(p^k)}={1\over k},                  \tag{22}
 \]
 
-de modo que la homotopía sí revela exactamente las torres primas, sin
-mayorarlas. Pero
+so the homotopy does exactly reveal the prime towers, with no
+majorizing. But
 
 \[
  L_n^{(-1)}(x)=-{x\over n}L_{n-1}^{(1)}(x)                  \tag{23}
 \]
 
-cambia de signo \(n-1\) veces en \((0,\infty)\). Por tanto los coeficientes
-positivos \(1/k\) de (22) no producen un signo término a término. Al hacer
-\(a_1\downarrow1\), los canales de (21) y (19) divergen y solo su resta
-renormalizada converge. La integración exacta reorganiza el gate; no lo
-convierte en positividad.
+changes sign \(n-1\) times on \((0,\infty)\). Hence the positive
+coefficients \(1/k\) of (22) produce no term-by-term sign. As
+\(a_1\downarrow1\), the channels of (21) and (19) diverge, and only their
+renormalized difference converges. The exact integration reorganizes the
+gate; it does not turn it into positivity.
 
-## 6. El cuarteto se reconstruye mediante un pulso de flujo
+## 6. The quartet is reconstructed via a flux pulse
 
-Sea
+Let
 
 \[
  \rho={4+2i\over5},\qquad
  \mathcal O(\rho)=\{\rho,\bar\rho,1-\rho,1-\bar\rho\},       \tag{24}
 \]
 
-y \(Q_\rho(s)=\prod_{\eta\in\mathcal O(\rho)}(s-\eta)\). Para
-cada cero ponga
+and \(Q_\rho(s)=\prod_{\eta\in\mathcal O(\rho)}(s-\eta)\). For
+each zero set
 
 \[
  z_{\eta,a}=1-{a\over\eta}.                                 \tag{25}
 \]
 
-La contribución de \(Q_\rho\) al coeficiente de la homotopía es
+The contribution of \(Q_\rho\) to the homotopy coefficient is
 
 \[
  \boxed{
@@ -303,56 +306,56 @@ La contribución de \(Q_\rho\) al coeficiente de la homotopía es
  =\sum_{\eta\in\mathcal O(\rho)}(z_{\eta,a}^{-n}-1).}       \tag{26}
 \]
 
-Cada sumando satisface la misma ley que (1):
+Each summand satisfies the same law as (1):
 
 \[
  a\,\partial_a q_{n,a}=n(q_{n+1,a}-q_{n,a}).                \tag{27}
 \]
 
-Para \(a_0=4\), todos los \(z_{\eta,4}\) están fuera del disco unidad. Al
-llegar a \(a=1\), los cuatro valores son
+For \(a_0=4\), every \(z_{\eta,4}\) lies outside the unit disc. Reaching
+\(a=1\), the four values are
 
 \[
  {i\over2},\quad-{i\over2},\quad-2i,\quad2i.                \tag{28}
 \]
 
-Por tanto, para \(n=152\),
+Hence, for \(n=152\),
 
 \[
  \boxed{q_{152,1}=2(2^{152}+2^{-152})-4>2^{153}-4.}         \tag{29}
 \]
 
-Su flujo integrado es, exactamente,
+Its integrated flux is, exactly,
 
 \[
  152\int_1^4{q_{153,a}-q_{152,a}\over a}\,da
  =q_{152,4}-q_{152,1}.                                      \tag{30}
 \]
 
-El miembro derecho contiene el pulso exponencial negativo que impide
-transportar una cota superior desde \(a=4\). A la vez,
-\(Q_\rho(1/2+it)>0\), de modo que multiplicar la función completada por
-\(Q_\rho^M\) no cambia su fase en la línea crítica. Las ecuaciones
-(26)--(30) identifican el residuo de `104_41` como la combinación exacta
-«extremo Euler menos flujo», no como el flujo aislado ni como un error de
-borde: \(q_{n,1}=q_{n,4}-(q_{n,4}-q_{n,1})\).
+The right-hand side contains the negative exponential pulse preventing
+transport of an upper bound from \(a=4\). At the same time,
+\(Q_\rho(1/2+it)>0\), so multiplying the completed function by
+\(Q_\rho^M\) does not change its phase on the critical line. Equations
+(26)–(30) identify the residue of `104_41` as the exact combination
+"Euler extreme minus flux," not as the isolated flux nor as a boundary
+error: \(q_{n,1}=q_{n,4}-(q_{n,4}-q_{n,1})\).
 
-El cuarteto no conserva el selector (6), de modo que una desigualdad que
-use verdaderamente los pesos exactos puede y debe rechazarlo. Lo que (30)
-refuta es cerrar la homotopía usando solo su ley diferencial y la fase del
-extremo.
+The quartet does not preserve selector (6), so an inequality that
+genuinely uses the exact weights can and must reject it. What (30)
+refutes is closing the homotopy using only its differential law and the
+phase at the extreme.
 
-## 7. Por qué la positividad size-biased genérica tampoco basta
+## 7. Why generic size-biased positivity is not enough either
 
-Hay un falsificador que sí conserva toda la maquinaria probabilística
-genérica. Sea \(0<c<1/2\) y
+There is a falsifier preserving the entire generic probabilistic
+machinery. Let \(0<c<1/2\) and
 
 \[
  Z_c(s)=\zeta(s+c)\zeta(s-c)
        =\sum_{n\ge1}{a_c(n)\over n^s},\qquad a_c(n)>0.       \tag{31}
 \]
 
-Su derivada logarítmica tiene pesos positivos
+Its logarithmic derivative has positive weights
 
 \[
  -{Z_c'(s)\over Z_c(s)}
@@ -360,79 +363,80 @@ Su derivada logarítmica tiene pesos positivos
  \omega_c(d)=2\Lambda(d)\cosh(c\log d)>0.                  \tag{32}
 \]
 
-Comparar coeficientes en \(-Z_c'=(-Z_c'/Z_c)Z_c\) da
+Comparing coefficients in \(-Z_c'=(-Z_c'/Z_c)Z_c\) gives
 
 \[
  (\log n)a_c(n)=\sum_{d\mid n}\omega_c(d)a_c(n/d).          \tag{33}
 \]
 
-Por tanto la ley de \(Z_c\) posee la misma factorización size-biased, con
-selector fijo
+So the law of \(Z_c\) has the same size-biased factorization, with fixed
+selector
 
 \[
  K_c(n,d)={\omega_c(d)a_c(n/d)\over(\log n)a_c(n)}
              {\bf1}_{d\mid n}.                              \tag{34}
 \]
 
-También satisface la ley diferencial (1), que es una identidad de la
-composición \(a/(1-z)\), en su dominio Euler \(a>1+c\). Esto refuta
-inferencias que usan solo positividad/Markov local en ese dominio; no afirma
-que el modelo conserve una ley probabilística positiva durante todo el
-trayecto \(a\downarrow1\). Sin embargo,
-\(\xi(s+c)\xi(s-c)\) tiene ceros a ambos lados de su línea de simetría.
-Así, positividad de pesos, factorización size-biased, propiedad de Markov,
-invariancia del selector bajo la inclinación y la ley de flujo no pueden,
-por sí solas, implicar el margen.
+It also satisfies differential law (1), which is an identity of the
+composition \(a/(1-z)\), on its Euler domain \(a>1+c\). This refutes
+inferences using only local positivity/Markov on that domain; it does not
+claim that the model preserves a positive probabilistic law throughout
+the whole path \(a\downarrow1\). However,
+\(\xi(s+c)\xi(s-c)\) has zeros on both sides of its line of symmetry. So
+weight positivity, size-biased factorization, the Markov property,
+selector invariance under tilting, and the flux law cannot, by
+themselves, imply the margin.
 
-La propiedad que (32) pierde y (3) conserva es la constancia exacta del
-peso a lo largo de cada torre prima. Una desigualdad futura debe usar esa
-rigidez cuantitativamente; usar solo \(\omega(d)\ge0\) repetiría el
-falsificador.
+The property that (32) loses and (3) preserves is the exact constancy of
+the weight along each prime tower. A future inequality must use that
+rigidity quantitatively; using only \(\omega(d)\ge0\) would repeat the
+falsifier.
 
-## 8. Veredicto
+## 8. Verdict
 
-Queda probado incondicionalmente:
+Proved unconditionally:
 
-1. la desintegración completa (9), con \(K\) y \(U\) independientes de la
-   homotopía;
-2. la ley diferencial exacta (1) y su densidad firmada (15);
-3. la equivalencia exacta flujo--margen (18);
-4. la fórmula de torre integrada (21)--(23);
-5. la reconstrucción cero por cero del residuo mediante extremo Euler y
-   pulso de flujo (26)--(30);
-6. que la maquinaria size-biased genérica también existe para el
-   falsificador off-line (31)--(34).
+1. the complete disintegration (9), with \(K\) and \(U\) independent of
+   the homotopy;
+2. the exact differential law (1) and its signed density (15);
+3. the exact flux–margin equivalence (18);
+4. the integrated tower formula (21)–(23);
+5. the zero-for-zero reconstruction of the residue via Euler extreme and
+   flux pulse (26)–(30);
+6. that the generic size-biased machinery also exists for the off-line
+   falsifier (31)–(34).
 
-Queda descartado:
+Ruled out:
 
 ```text
-fase segura en a>=4
-+ ley diferencial en a
-+ Markov/Jensen para el selector
-=> cota proporcional en a=1.
+safe phase at a>=4
++ differential law in a
++ Markov/Jensen for the selector
+=> proportional bound at a=1.
 ```
 
-El sucesor mínimo es una cota inferior para el funcional **ya acoplado** de
-(16), válida para los pesos exactos \(\Lambda(p^k)=\log p\), uniforme en
-\(n\ge150\), y falsa al sustituirlos por (32). Por (18), ése no es un lema
-técnico auxiliar: es precisamente el teorema aritmético nuevo que cerraría
-A1.
+The minimal successor is a lower bound for the **already coupled**
+functional of (16), valid for the exact weights
+\(\Lambda(p^k)=\log p\), uniform in \(n\ge150\), and false when they are
+replaced by (32). By (18), that is not an auxiliary technical lemma: it
+is precisely the new arithmetic theorem that would close A1.
 
-## 9. Verificación reproducible
+## 9. Reproducible verification
 
-El archivo
-`tools/size_bias_homotopy_flux_gate_check.py` usa únicamente enteros y
-`Fraction`. Verifica:
+The file
+`tools/size_bias_homotopy_flux_gate_check.py` uses only integers and
+`Fraction`. It checks:
 
-* las identidades polinómicas (12), (20) y (23);
-* el flujo polar exacto (19);
-* la ley cero por cero (27) en racionales gaussianos;
-* los cuatro puntos (28), la identidad exacta (29) y el tamaño del pulso;
-* que todos los puntos del cuarteto están fuera del círculo en \(a=4\).
+* the polynomial identities (12), (20), and (23);
+* the exact polar flux (19);
+* the zero-for-zero law (27) in Gaussian rationals;
+* the four points (28), exact identity (29), and the pulse's size;
+* that every point of the quartet lies outside the circle at \(a=4\).
 
-Se reproduce con
+Reproduced with
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 size_bias_homotopy_flux_gate_check.py
 ```
+</content>

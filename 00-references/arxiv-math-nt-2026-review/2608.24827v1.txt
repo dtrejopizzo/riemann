@@ -1,0 +1,455 @@
+                                                              Weil positivity in compact windows:
+                                                 certified two-sided bounds and a Landau–Widom decay law
+                                                                                        Marcus Chuk
+                                                                     International Institute of Intelligent Engineering,
+                                                                                Ann Arbor, MI 48103, USA
+arXiv:2608.24827v1 [math.NT] 25 Aug 2026
+
+
+
+
+                                                                                 usmarcuschuk@gmail.com
+
+                                                                                        August 26, 2026
+
+
+                                                                                             Abstract
+                                                    Weil’s criterion equates the Riemann Hypothesis with the positivity of an explicit quadratic
+                                                form Q(f ). For test functions supported in a window [−L, L] we study the profile λ∗ (L) =
+                                                inf Q(f )/∥f ∥22 from both sides. A one-stroke reduction converts window positivity into positive
+                                                semidefiniteness of a finite matrix; executing it at L = 0.8 yields the unconditional certificate
+                                                Q(f ) ≥ 8.9 × 10−18 ∥f ∥22 for all (complex) f of support 1.6, extending the classical range
+                                                log 2 of Yoshida and Connes–Consani by a factor 2.3. The same computation shows that
+                                                the window ground state is simple and even. On the other side, interval-arithmetic Rayleigh
+                                                quotients, evaluated on the geometric side of the explicit formula with no appeal to zeros
+                                                or to RH, give unconditional upper bounds down to 3.2 × 10−283 at L = 2. They follow
+                                                − ln λ∗ (L) ≃ 2π 2 N (T ∗ )/ ln N (T ∗ ) with T ∗ = 2πe2L , the Landau–Widom plunge rate for time–
+                                                band limiting. At L = 0.8 the two halves enclose the profile, 8.9 × 10−18 ≤ λ∗ (0.8) ≤ 2.27 × 10−17 .
+                                                Any pointwise-envelope certificate must resolve frequencies up to T1 = 2πeAL with AL ∼ 4eL , a
+                                                doubly exponential barrier. Under RH we prove λ∗ (L) ≤ exp(−LeL ) for all large L.
+
+
+                                           1    Introduction
+                                           Let Λ(n) be the von Mangoldt function and let γ1 ≤ γ2 ≤ · · · be the ordinates of the non-trivial
+                                           zeros of ζ in the
+                                                         R upper half-plane. For an even real continuous test function f of compact support
+                                           write fˆ(r) = R f (u)eiru du. The Riemann–Weil explicit formula expresses the sum of fˆ over zeros
+                                           in terms of arithmetic and archimedean data, and Weil’s criterion [1, 4] asserts that RH is equivalent
+                                           to Q(f ) ≥ 0 for all admissible f . Every spectral approach to RH, from Hilbert–Pólya to the
+                                           trace-formula program of Connes [5] and the prolate-operator program of Connes–Consani and
+                                           Connes–Moscovici [6, 7], has to establish some variant of this positivity on larger and larger spaces
+                                           of test functions.
+                                               Positivity is a yes/no statement. We ask instead how small Q(f ) can get, relative to ∥f ∥22 , on a
+                                           fixed compact window, and introduce
+                                                                                                              Q(f )
+                                                                                  λ∗ (L) =        inf                .                                  (1)
+                                                                                              f even, real    ∥f ∥22
+                                                                                             supp f ⊂[−L,L]
+
+
+                                           Under RH the zeros side gives Q(f ) = γ>0 2|fˆ(γ)|2 , and a sampling argument (Proposition 4)
+                                                                                   P
+                                           yields λ∗ (L) > 0 for every L. Conversely, a negative value at some L would disprove RH, and an
+
+                                                                                                 1
+unconditional proof of λ∗ (L) > 0 is a finite fragment of RH. The map L 7→ λ∗ (L) is thus a difficulty
+profile of RH as seen through compactly supported test functions.
+   This note determines the profile from both sides: the reduction, the statements, and the numbers.
+
+Lower bounds.      Write the geometric side, for supp f ⊆ [−L, L] and F = fˆ, as
+                                                    Z
+                                            2     1
+                           Q(f ) = 2F (i/2) +          |F (t)|2 ΨL (t) dt,                        (2)
+                                                 2π R
+with the Weil symbol
+                                   
+                                       1   it
+                                                                 X        2Λ(n)
+                   ΨL (t) = Re ψ       4 + 2        − log π −               √    cos(t log n),    (3)
+                                                                              n
+                                                                log n<2L
+                                                                                         √
+ψ = Γ′ /Γ. Only prime powers with log n < 2L contribute. Let AL = log n<2L 2Λ(n)/ n be the
+                                                                         P
+mass of the prime comb. The classical record is positivity for 2L ≤ log 2 [3, 6]. Theorem 7 removes
+the infinite-dimensionality of the window problem in one step: a pointwise envelope for ΨL , with a
+comb constant that Weyl equidistribution shows to be optimal, converts positivity on [−L, L] into
+positive semidefiniteness of a single finite matrix. Executing it at L = 0.8 gives:
+Theorem 1 (Certified positivity, support 1.6). For every real even f ∈ L2 (R) with supp f ⊆
+[−0.8, 0.8],
+                                     Q(f ) ≥ 8.9 × 10−18 ∥f ∥22 .
+In particular the Weil form is positive on all autocorrelations g = f ⋆ f˜ with supp g ⊆ [−1.6, 1.6].
+    The same reduction on the odd sector, where the pole term changes sign, yields Q ≥ 8.2 × 10−15
+for odd f , hence positivity for arbitrary complex test functions of support 1.6 (Corollary 9), and
+shows that the window ground state is simple and even (Theorem 8). This is the first of the
+two missing spectral hypotheses in the operator program of Connes–Consani–Moscovici [9] and
+Connes–van Suijlekom [8], verified here at a fixed scale with explicit constants.
+
+Upper bounds. The same geometric side, evaluated at explicit trial functions in interval-closed
+multiprecision arithmetic, supplies unconditional variational upper bounds for λ∗ (L), from 10−6 at
+L = 0.5 down to 3.2 × 10−283 at L = 2 (Table 1). No zeros and no RH enter the certificates. The
+decay is governed by the resolution height T ∗ (L) = 2πe2L , the height at which the density of zeta
+zeros saturates the Paley–Wiener budget L/π of the window. Writing N (T ) for the zero-counting
+function, the certified bounds follow
+                                     N (T ∗ )
+                  − ln λ∗ (L) = C               (1 + o(1)),            C = 20.13 . . . ≈ 2π 2 ,   (4)
+                                    ln N (T ∗ )
+the Landau–Widom plunge rate for time–band limiting operators [13, 12]. A one-parameter fit
+to L = 1.4, 1.6, 1.8, 2.0 has residuals below 0.7%. Out of sample, with both models calibrated on
+L ≤ 1.2, the Landau–Widom residuals are flat (≈ −5%, no trend), while those of a competing
+three-parameter “one nat per zero” model grow from +0.8% to +5.8%. The constant is fitted, not
+derived; a rival normalization 4π e2L is numerically entangled on this range and is not separated by
+these data. Under RH a theorem captures the qualitative content of (4) with exponent eL in place
+of e2L :
+Theorem 2. Assume RH. There is an L0 such that for all L ≥ L0 ,
+                                λ∗ (L) ≤ exp −L eL .
+                                                     
+
+
+                                                         2
+Enclosure and barrier. Where the two programmes overlap they enclose the profile from both
+sides, with certificates on both sides:
+
+                              8.9 × 10−18 ≤ λ∗ (0.8) ≤ 2.27 × 10−17 ,
+
+a factor 2.6. The same computations quantify why the positivity route, unassisted, cannot reach
+RH.
+
+Theorem 3 (Barrier). Any application of Theorem 7 requires T ♯ > T1 (L) = 2πeAL , and AL =
+(4 + o(1))eL as L → ∞ by the prime number theorem. The matrix size N ≍ LT1 therefore grows
+doubly exponentially in L. Moreover supt of the prime comb equals AL exactly, so within the class
+of certificates that bound the comb pointwise the threshold T1 cannot be lowered.
+
+    To improve on pointwise envelopes one must prove that the phases (t log p)p cannot align—an
+arithmetic statement about {log p}, of the same nature as the information carried by the zeros
+themselves.
+
+Related work. The tradition of attacking RH-adjacent quantities numerically is represented by
+the de Bruijn–Newman constant [14]. Weil positivity for restricted classes of test functions was
+established by Connes–Consani using prolate spheroidal wave functions [6]; Theorem 1 extends
+the range of unconditional positivity itself. Finite-rank truncations of the Weil form have recently
+become objects of study [8, 9, 10, 11]. Those works study a fixed truncation family; the window-
+variational infimum (1), its unconditional certification, and its asymptotic law in L appear not to
+have been considered before.
+
+
+2    The Weil form
+For f as above, with g = f ⋆ f˜, the geometric side of the explicit formula (normalization of [4]; see
+also [15, Ch. 5] and Barner [2]) is the identity (2). It is identified with the zeros side
+                                       X  ρ − 1  RH X        2
+                             Q(f ) =     gb    2
+                                                   =    2 fˆ(γ) ,                                  (5)
+                                       ρ
+                                             i
+                                                          γ>0
+
+and Q(f ) ≥ 0 for all admissible f if and only if RH holds [1]. Both halves of this note work with
+the geometric side. The zeros side is used only to propose trial vectors for the upper bounds, and as
+an independent cross-check; it never enters an unconditional certificate.
+    The zeros side is a sum of non-negative terms; the geometric side computes the same tiny
+number as a difference of large terms. When Q(f ) ≈ 10−20 ∥f ∥2 , double-precision evaluation of (2)
+is meaningless and readily produces spurious negative eigenvalues. Multiprecision interval arithmetic
+removes the obstruction for upper bounds. Lower bounds continue to require one-sided, sign-definite
+estimates on the geometric side.
+    For any finite-dimensional subspace V of admissible test functions, the least eigenvalue of Q on
+V is an upper bound for λ∗ (L). All numbers in Table 1 are of this form.
+    Positivity of the infimum under RH needs a short argument: pointwise positivity of Q does not
+by itself exclude inf ∥f ∥=1 Q(f ) = 0.
+
+Proposition 4. Assume RH. For every L > 0 there is cL > 0 such that Q(f ) ≥ cL ∥f ∥22 for all
+admissible f supported in [−L, L]; in particular λ∗ (L) > 0.
+
+
+                                                  3
+Sketch. The transform fˆ lies in the Paley–Wiener space P WL2 . By Littlewood’s theorem (a conse-
+quence of RH) the gaps γn+1 − γn tend to zero, so a maximal δ-separated subset Λ of {±γ} with
+δP= π/(4L) has lower Beurling density D− (Λ) > L/π. Beurling’s sampling theorem [17] then yields
+       ˆ     2     ˆ2
+  λ∈Λ |f (λ)| ≥ c ∥f ∥2 , and the zeros-side identity gives the claim.
+
+    No effective cL comes out of the argument. An effective unconditional value is exactly Theorem 1.
+
+
+3    One-stroke reduction
+Lemma 5 (Crude envelope). For all t ≥ 15
+                                      4 ,
+                 
+                     1   it
+                                                    t  1                                             t  1
+          Re ψ       4 + 2        − log π ≥ log        − ,           hence          ΨL (t) ≥ log        − − AL .
+                                                    2π  t                                            2π  t
+Proof. By ψ(z) = ψ(z + 1) − 1/z it suffices to bound ψ 54 + it2 . Binet’s second formula gives, for
+                                                                     
+                            1
+                                 R∞
+Re z > 0, ψ(z) = log z − 2z   − 2 0 (u2 +z 2u)(e
+                                              du                  5   it          2   2
+                                                 2πu −1) . At z = 4 + 2 one has |u + z | ≥ 5t/4, and the
+
+integral is ≤ 1/(15t). The remaining elementary estimates contribute at most 7/(2t2 ), so the total
+deficit is ≤ 1/t for t ≥ 15/4. The comb is bounded by AL trivially.
+                                                                         P               √
+Lemma 6 (Optimality of the crude constant). Write PL (t) = log n<2L (2Λ(n)/ n) cos(t log n).
+Then supt∈R PL (t) = AL . Consequently no pointwise bound PL (t) ≤ C valid for every t can improve
+on C = AL .
+Proof. PL (t) ≤ AL is trivial, with equality at t = 0. That the supremum is approached at arbitrarily
+large t follows from Weyl equidistribution: {log p} are linearly independent over Q by unique
+factorization, so the phases (t log p)p equidistribute on the torus and can be sent simultaneously
+arbitrarily close to 0.
+
+Theorem 7 (One-stroke reduction). Let L > 0 and set T1 := 2πeAL . Fix any T ♯ for which
+
+                                                             T♯   1
+                                             β ∗ := log         − ♯ − AL > 0
+                                                             2π T
+(hence T ♯ > T1 ). Then for every real even f with supp f ⊆ [−L, L],
+                                                              Z T♯
+                                           1             2
+                                                                         ΨL (t) − β ∗ |F (t)|2 dt + β ∗ ∥f ∥22 .
+                                                                                     
+               Q(f ) ≥ R(f ) := 2F (i/2) +                                                                         (6)
+                                           π                   0
+
+In the even Legendre basis of L2 [−L, L] the form R is represented by β ∗ I + 2ppT + C, where C has
+entries supported, up to super-exponentially small tails, on orders n ≲ eLT ♯ /2. Cutting after N
+even modes with first discarded order 2N ≳ eLT ♯ /2, if the leading block has λmin ≥ λ0 > 0, then
+
+                              Q(f ) ≥ min(λ0 , β ∗ − εD ) − εB ∥f ∥22
+                                                                
+
+for all such f , where εD (tail deviation) and εB (leading–tail coupling) are explicit and, in the
+certified run below, both below 10−100 .
+              R ∞ R T♯ R ∞                                         R∞
+Proof. Split 0 = 0 + T ♯ in (2); for even real f , Parseval gives 0 |F |2 = π∥f ∥2 . On [T ♯ , ∞),
+Lemma 5 yields ΨL (t) ≥ β ∗ , hence
+                                         Z                                          Z T♯
+                                     1               2           ∗
+                                                                     
+                                                                            2   1               
+                                                   |F | ΨL ≥ β           ∥f ∥ −            |F |2 ,
+                                    2π   |t|≥T ♯                                π    0
+
+
+                                                               4
+which is (6). The operator C with symbol (ΨL − β ∗ )χ[0,T ♯ ] has Legendre entries decaying super-
+exponentially once n > eLT ♯ /2, by the spherical-Bessel bound |jn (x)| ≤ xn /(2n + 1)!!. Writ-
+ing the matrix of R in blocks BAT D B
+                                       after N even modes, the elementary estimate λmin (R) ≥
+min(λmin (A), λmin (D)) − ∥B∥ together with Gershgorin on D and a Schur bound on ∥B∥ gives the
+last assertion.
+
+    The frequency split is an exact direct sum: every discarded quantity is discarded with a definite
+sign, and the coupling to the tail is a single super-exponentially small norm. Order-space truncations
+of this problem leave O(1) prime-shift coupling across the cut and fail.
+
+The certificate at L = 0.8. The run uses T ♯ = 200, β ∗ = 0.5134 . . ., N = 200 even Legendre
+modes, and 50-digit arithmetic. The leading block is assembled by Gauss–Legendre quadrature
+whose Bernstein-ellipse error is bounded by 10−42 ; a verified Cholesky residual [16] at shift 8.9×10−18
+succeeds with remainder below 10−50 . An independent run at T ♯ = 150 gives a second, internally
+monotone certification. This is Theorem 1.
+
+
+4    Parity
+The restriction to even f can be removed. If f = fe + fo is the even/odd splitting of a real test
+function supported in [−L, L], then Q(f ) = Q(fe ) + Q(fo ), the pole term of Q(fo ) changing sign
+       R               2
+to −2 fo sinh(x/2) dx . For complex f one has Q(f ) = Q(Re f ) + Q(Im f ). Theorem 7 applies
+verbatim to each sector.
+
+Theorem 8 (Simple even ground state, support 1.6). Let λeven    1  , λeven
+                                                                      2    be the first two min–max
+                2                                                   odd
+values of Q/∥f ∥2 over real even f with supp f ⊆ [−0.8, 0.8], and λ1 the infimum over real odd f .
+Then
+               8.9 × 10−18 ≤ λeven
+                                 1   ≤ 2.523 × 10−16 ,       λeven
+                                                              2    ≥ 2.085 × 10−12 ,
+                              8.206 × 10−15 ≤ λodd
+                                               1   ≤ 2.347 × 10−14 .
+The ground state is therefore simple and even, with clearance at least a factor 32 against the odd
+sector and 8 × 103 against the second even value.
+
+Corollary 9. For every complex f ∈ L2 (R) with supp f ⊆ [−0.8, 0.8], Q(f ) ≥ 8.9 × 10−18 ∥f ∥22 .
+
+    The even-sector lower bound is Theorem 1; the odd-sector lower bound is the same reduction at
+T ♯ = 150 with 200 odd Legendre modes; the even gap is a Courant–Fischer restriction test. The
+second missing step of [9]—convergence of approximate ground-state zeros to the zeta zeros as the
+scale grows—is untouched.
+
+
+5    The Landau–Widom law
+A function supported in [−L, L] has Fourier transform of exponential type L; by Jensen, its real
+                                                                       1
+zeros have density at most L/π. The zeros of ζ have density ν(t) = 2π    ln(t/2π), which reaches the
+                         ∗         2L           ∗
+budget L/π exactly at T (L) = 2πe . Below T a test function can in principle interpolate every γj ;
+above T ∗ the zeros outnumber the available oscillations. Killing N = N (T ∗ ) zeros with an exhausted
+budget is the Landau–Widom regime [13]: eigenvalues of a time–band limiting operator plunge at
+exp(−π 2 j/ ln K) past the Shannon number K. Modelling the suppression as an excursion of order
+N beyond Shannon suggests (4) rather than the naive “one nat per zero” guess − ln λ∗ ≍ N (T ∗ ).
+
+
+                                                   5
+                                                                              − ln λ∗ · ln N
+                     L     n   dps        λ∗ (L) ≤       − ln λ∗   N (T ∗ )
+                                                                                    N
+                   0.5    24    90     1.05 × 10−6        13.76         1                  —
+                   0.6    24    90     1.82 × 10−9        20.13         1                  —
+                   0.7    24    90    4.99 × 10−13        28.33         3              10.37
+                   0.8    24    90    2.27 × 10−17        38.32         4              13.28
+                   0.9    31    95    5.91 × 10−23        51.18         6              15.28
+                   1.0    40   110    8.08 × 10−30        66.99         8              17.42
+                   1.1    53   110    2.78 × 10−38        86.48        12              17.90
+                   1.2    70   125    9.98 × 10−49       110.53        16              19.16
+                   1.4   119   155    1.91 × 10−77       176.65        30              20.02
+                   1.6   200   260   8.61 × 10−121       276.46        55              20.15
+                   1.8   333   420   7.86 × 10−186       426.22        96              20.27
+                   2.0   549   560   3.19 × 10−283       650.47       165              20.13
+
+Table 1: Unconditional certified upper bounds for λ∗ (L), from geometric-side interval evaluation of
+Q(fL )/∥fL ∥22 . Here n is the number of odd sine modes, dps the geometric working precision, N (T ∗ )
+the exact zero count below T ∗ = 2πe2L . The last column plateaus at 20.1 ≈ 2π 2 = 19.74.
+
+
+    Each entry of Table 1 is the interval-arithmetic upper endpoint of a geometric-side Rayleigh
+quotient for an explicit trial function fL in a sine basis of L2 (−L, L). The assembly involves only
+a finite prime sum, a compact archimedean integral, and an explicit pole. A zeros-side pipeline
+proposes the coefficients of fL ; the origin of a trial vector needs no certification for a variational
+upper bound to be valid.
+
+
+
+
+Figure 1: Certified upper bounds for L ≤ 1.2. Left: the bounds fall through the float64 wall. Centre:
+− ln λ∗ against e2L . Right: the local exponent d ln(− ln λ∗ )/dL decreasing towards its asymptote.
+
+    The per-zero cost − ln λ∗ /N (T ∗ ) decreases steadily, excluding a law proportional to N (T ∗ ).
+Multiplied by ln N (T ∗ ) it plateaus: 20.02, 20.15, 20.27, 20.13 at the last four points, about 2%
+above 2π 2 . A single-constant fit to those four points gives C = 20.13 ± 0.10, with in-sample residuals
+below 0.7%; the parameter-free value C = 2π 2 reproduces them to within 1.4%–2.6%. Out of sample,
+models calibrated on L ≤ 1.2 are required to predict L = 1.4, 1.6, 1.8, 2.0. The Landau–Widom
+form underpredicts by a nearly constant factor (−4.4%, −4.9%, −5.5%, −4.8%), with no trend:
+the offset is finite-size drift of a constant that has not yet saturated at L ≤ 1.2. The competing
+three-parameter model − ln λ∗ = e2L (α · 2L + β) + δ0 errs instead by +0.8%, +2.0%, +3.7%, +5.8%,
+monotonically growing, which is the signature of a wrong functional form.
+
+
+                                                     6
+Figure 2: Model discrimination. Left: out-of-sample prediction of L = 1.4, 1.6, 1.8 by the two laws
+calibrated on L ≤ 1.2. Centre: the per-zero cost − ln λ∗ /N (T ∗ ) is not constant. Right: multiplied
+by ln N (T ∗ ) it plateaus at 20.1 ≈ 2π 2 .
+
+
+    What is certified is that each displayed value is an upper bound for λ∗ (L). Identifying (4) with
+λ∗ itself rests on completeness of the sine basis (Galerkin values decrease to the infimum; we observe
+stabilization at the 0.03% level) and on the two-sided enclosure at L = 0.8. We formalize the
+identification as:
+
+Conjecture 10. As L → ∞,
+
+                                            N (T ∗ )
+                      − ln λ∗ (L) = 2π 2                              T ∗ = 2πe2L .
+                                                             
+                                                   ∗
+                                                     1 + o(1) ,
+                                           ln N (T )
+
+   The shape N/ ln N is what the data discriminate; the constant 2π 2 is read off the plateau. On
+the certified range the two normalizations 2π 2 N/ ln N and 4π e2L are entangled and cross near
+L ≈ 2.9. We state Conjecture 10 as the reading of the present data.
+
+
+6    A conditional upper bound
+Theorem 2 captures the qualitative content of (4)—decay faster than exponential, at least double-
+exponential with exponent eL —but neither the scale T ∗ = 2πe2L nor the constant 2π 2 . The
+construction operates at half saturation, and that is what limits the exponent.
+   Assume RH, and set T = 2πeL . Let
+                                               Y           r2                sin(Lr/m) m
+           fˆ0 (r) = B(r) h(r),      B(r) =            1−        ,   h(r) =                    ,
+                                                            γj2                  Lr/m
+                                             0<γj ≤T
+
+with m = ⌈LT /e⌉. Then B annihilates every zero up to T , h has exponential type exactly L, and
+m > 2N (T ) +P2 for large L, so fˆ0 ∈ L1 ∩ L2 and f0 = F −1 fˆ0 is admissible of support [−L, L]. Under
+RH, Q(f0 ) = γ>T 2 fˆ0 (γ)2 . A potential-theoretic bound on log |B| along the real axis, balanced
+against the power-of-sinc decay of h, shows that the Rayleigh quotient is ≤ exp(−LeL ) for large L.
+The obstruction to reaching the full exponent e2L is an extremal problem for band-limited windows,
+the same problem whose solution is governed by Landau–Widom asymptotics.
+
+
+
+
+                                                   7
+7    The barrier, and a closing remark
+Theorem 3 is immediate from Theorem 7 and Lemma 6: β ∗ > 0 forces T ♯ > T1 = 2πeAL , the PNT
+gives AL ∼ 4eL , and no pointwise bound on the comb can do better. At L = 1.6 one already has
+T1 ≈ 107 ; past support ≈ 3.2 a pointwise-envelope certificate is computationally void.
+    Two heights coexist. Defeating positivity—finding small Rayleigh quotients—is governed
+by the resolution height T ∗ = 2πe2L , singly exponential, because the minimizer only needs to
+interpolate the zeros it can resolve. Certifying positivity through the geometric side is governed
+by T1 = 2π exp (4 + o(1))eL , doubly exponential, because the certificate must exclude worst-case
+                                                                       L
+phase alignment of the prime comb. The gap between e2L and e4e is the gap between knowing
+where the zeros are and proving that the primes cannot conspire.
+    Certificate, law and barrier are what we take this program to deliver: the frontier of unconditional
+positivity moves from log 2 to 1.6, the profile beyond it is measured out to L = 2, and the wall
+behind both is mapped rather than left implicit.
+
+
+References
+ [1] A. Weil, Sur les “formules explicites” de la théorie des nombres premiers, Comm. Sém. Math.
+     Univ. Lund, Tome Supplémentaire (1952), 252–265.
+
+ [2] K. Barner, On A. Weil’s explicit formula, J. reine angew. Math. 323 (1981), 139–152.
+
+ [3] H. Yoshida, On Hermitian forms attached to zeta functions, in: Zeta Functions in Geometry,
+     Adv. Stud. Pure Math. 21, 1992, 281–325.
+
+ [4] E. Bombieri, Remarks on Weil’s quadratic functional in the theory of prime numbers, I, Atti
+     Accad. Naz. Lincei Cl. Sci. Fis. Mat. Natur. Rend. Lincei (9) Mat. Appl. 11 (2000), 183–233.
+
+ [5] A. Connes, Trace formula in noncommutative geometry and the zeros of the Riemann zeta
+     function, Selecta Math. (N.S.) 5 (1999), 29–106.
+
+ [6] A. Connes and C. Consani, Weil positivity and trace formula, the archimedean place, Selecta
+     Math. (N.S.) 27 (2021), no. 4, Paper No. 77.
+
+ [7] A. Connes and H. Moscovici, The UV prolate spectrum matches the zeros of zeta, Proc. Natl.
+     Acad. Sci. USA 119 (2022), no. 22, e2123174119.
+
+ [8] A. Connes and W. D. van Suijlekom, Quadratic forms, real zeros and echoes of the spectral
+     action, preprint, arXiv:2511.23257 (2025).
+
+ [9] A. Connes, C. Consani and H. Moscovici, Zeta spectral triples, preprint, arXiv:2511.22755
+     (2025).
+
+[10] M. Suzuki, Weil’s quadratic form via the screw function, preprint, arXiv:2606.09096 (2026).
+
+[11] A. Groskin, A finite Guinand–Weil dictionary and archimedean tail order for the truncated
+     Weil quadratic form, preprint, arXiv:2607.02828 (2026).
+
+[12] D. Slepian and H. O. Pollak, Prolate spheroidal wave functions, Fourier analysis and uncertainty,
+     I, Bell System Tech. J. 40 (1961), 43–63.
+
+
+
+                                                   8
+[13] H. J. Landau and H. Widom, Eigenvalue distribution of time and frequency limiting, J. Math.
+     Anal. Appl. 77 (1980), 469–481.
+
+[14] B. Rodgers and T. Tao, The de Bruijn–Newman constant is non-negative, Forum Math. Pi 8
+     (2020), e6.
+
+[15] H. Iwaniec and E. Kowalski, Analytic Number Theory, AMS Colloq. Publ. 53, 2004.
+
+[16] S. M. Rump, Verification methods: rigorous results using floating-point arithmetic, Acta
+     Numerica 19 (2010), 287–449.
+
+[17] K. Seip, Interpolation and Sampling in Spaces of Analytic Functions, University Lecture Series
+     33, American Mathematical Society, 2004.
+
+
+
+
+                                                9
+

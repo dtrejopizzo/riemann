@@ -1,6 +1,6 @@
 # P123.027 — the direct integral-to-analytic map lands in modules
 
-Date: 2026-09-05. Status: PROVED for the algebraic functor and its
+Status: PROVED for the algebraic functor and its
 bimodule typing obstruction below. No completed realization is claimed.
 
 ## 1. An actual coefficient map

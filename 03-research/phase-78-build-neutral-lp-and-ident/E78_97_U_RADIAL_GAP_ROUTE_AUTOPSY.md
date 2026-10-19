@@ -1,6 +1,6 @@
 # E78.97 - Autopsy of the `U-RADIAL-GAP` route
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.  
 **Class:** AUTOPSIA theorem-grade.  
 **What we know after this doc that we did not know before:** the exact obstruction

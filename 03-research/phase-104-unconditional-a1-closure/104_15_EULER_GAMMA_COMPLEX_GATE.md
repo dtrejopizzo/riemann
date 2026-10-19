@@ -1,9 +1,9 @@
-# 104_15 — Complejo Euler–Gamma: gate de Koszul en los posets mínimos
+# 104_15 — Euler–Gamma complex: Koszul gate on the minimal posets
 
-## Veredicto
+## Verdict
 
-La construcción graduada mínima sí existe como complejo de Hilbert positivo. En el
-cubo divisor se trata del complejo de Koszul
+The minimal graded construction does exist as a positive Hilbert complex. On the
+divisor cube it is the Koszul complex
 
 \[
  d_E=\sum_r N_r\otimes\varepsilon_r,
@@ -11,13 +11,13 @@ cubo divisor se trata del complejo de Koszul
 \tag{1}
 \]
 
-donde \(N_r\) elimina el factor primo \(r\) y \(\varepsilon_r\) es
-multiplicación exterior. En \(\{1,p,q,pq\}\), su laplaciano de Hodge cancela
-exactamente los canales mixtos \(p/q\) y \(q/p\). La cancelación usa una
-métrica positiva ordinaria, no una supertraza ni una forma de Krein.
+where \(N_r\) removes the prime factor \(r\) and \(\varepsilon_r\) is
+exterior multiplication. On \(\{1,p,q,pq\}\), its Hodge Laplacian exactly cancels
+the mixed channels \(p/q\) and \(q/p\). The cancellation uses an ordinary positive
+metric, not a supertrace or a Krein form.
 
-Pero el mismo diferencial hace nulo en cohomología el cruce
-Möbius--divisor:
+But the same differential makes the Möbius–divisor cross term vanish in
+cohomology:
 
 \[
  M\delta Z=(\log p)N_p+(\log q)N_q,
@@ -26,38 +26,37 @@ Möbius--divisor:
 \tag{2}
 \]
 
-Por tanto \(M\delta Z\) es homotópicamente nulo. Ya en el poset
-\(\{1,p\}\), el canal hermitizado que se quiere declarar frontera es
-exactamente el mismo canal que debe sobrevivir como corriente prima. Así, el
-complejo de Koszul natural satisface la cancelación de cocientes, pero falla la
-propiedad 1 de 104_12 §8 antes de que pueda aparecer el presupuesto Gamma de la
-propiedad 3.
+Hence \(M\delta Z\) is homotopically null. Already on the poset
+\(\{1,p\}\), the hermitized channel one wants to declare a boundary is exactly the
+same channel that must survive as a prime current. So the natural Koszul complex
+satisfies the ratio cancellation but fails property 1 of 104_12 §8 before property
+3's Gamma budget can even appear.
 
-El alcance es preciso: éste es un **no-go para el complejo de Koszul divisor
-y, más generalmente, para todo complejo en el que cada generador de cociente
-\(N_p\) sea nulo-homotópico**. No prueba que toda cohomología aritmética
-imaginable sea imposible. En particular, no descarta un diferencial no local
-que mate solo combinaciones cuadráticas de cocientes sin hacer exactos los
-\(N_p\); tal objeto seguiría debiendo construir, y no postular, el término
-Gamma exacto.
+The scope is precise: this is a **no-go for the divisor Koszul complex
+and, more generally, for every complex in which each ratio generator
+\(N_p\) is null-homotopic**. It does not prove that every imaginable arithmetic
+cohomology is impossible. In particular, it does not rule out a nonlocal
+differential that kills only quadratic combinations of ratios without making the
+\(N_p\) exact; such an object would still have to construct, not postulate, the
+exact Gamma term.
 
-El modelo es el cubo **squarefree/booleano**. No representa por sí solo las
-torres \(p^k\). Por ello el teorema descarta exactamente este Koszul natural y
-sus variantes \(N_p\)-exactas, no una resolución graduada distinta que incorpore
-las potencias primas como datos adicionales.
+The model is the **squarefree/Boolean** cube. It does not by itself represent the
+towers \(p^k\). Hence the theorem rules out exactly this natural Koszul complex and
+its \(N_p\)-exact variants, not some different graded resolution that incorporates
+the prime powers as additional data.
 
-No se prueba A1 ni RH.
+Neither A1 nor RH is proved.
 
-## 1. Álgebra booleana de divisores
+## 1. Boolean divisor algebra
 
-Sea \(P=\{p_1,\dots,p_r\}\) un conjunto finito de primos y sea
+Let \(P=\{p_1,\dots,p_r\}\) be a finite set of primes and let
 
 \[
  {\cal D}_P=\left\{\prod_{p\in S}p:S\subseteq P\right\}.
 \tag{3}
 \]
 
-En \(V_P=\ell^2({\cal D}_P)\), con su base ortonormal canónica, definimos
+On \(V_P=\ell^2({\cal D}_P)\), with its canonical orthonormal basis, we define
 
 \[
  N_p e_n=
@@ -68,7 +67,7 @@ En \(V_P=\ell^2({\cal D}_P)\), con su base ortonormal canónica, definimos
 \tag{4}
 \]
 
-Entonces
+Then
 
 \[
  N_p^2=0,
@@ -77,7 +76,7 @@ Entonces
 \tag{5}
 \]
 
-La matriz zeta del poset y su inversa de Möbius factorizan como
+The poset's zeta matrix and its Möbius inverse factor as
 
 \[
  Z_P=\prod_{p\in P}(I+N_p),
@@ -86,9 +85,9 @@ La matriz zeta del poset y su inversa de Möbius factorizan como
 \tag{6}
 \]
 
-Sea \(\delta\) la derivación determinada por
-\(\delta N_p=(\log p)N_p\). Aplicando Leibniz a (6), y usando
-\((I-N_p)(I+N_p)=I\), se obtiene la identidad exacta
+Let \(\delta\) be the derivation determined by
+\(\delta N_p=(\log p)N_p\). Applying Leibniz to (6), and using
+\((I-N_p)(I+N_p)=I\), one obtains the exact identity
 
 \[
  \boxed{
@@ -96,12 +95,12 @@ Sea \(\delta\) la derivación determinada por
 \tag{7}
 \]
 
-Ésta es la versión divisor-finita de \(Z^{-1}\delta Z=V_\Lambda\). No se
-ha usado localización de ceros ni una desigualdad.
+This is the finite-divisor version of \(Z^{-1}\delta Z=V_\Lambda\). No zero
+localization or inequality has been used.
 
-## 2. El poset mínimo \(\{1,p\}\)
+## 2. The minimal poset \(\{1,p\}\)
 
-En la base \((e_1,e_p)\), poniendo \(\ell_p=\log p\),
+In the basis \((e_1,e_p)\), writing \(\ell_p=\log p\),
 
 \[
  N_p=\begin{pmatrix}0&1\\0&0\end{pmatrix},\qquad
@@ -110,7 +109,7 @@ En la base \((e_1,e_p)\), poniendo \(\ell_p=\log p\),
 \tag{8}
 \]
 
-Por tanto
+Hence
 
 \[
  Z^*Z=
@@ -121,36 +120,37 @@ Por tanto
 \tag{9}
 \]
 
-El canal no diagonal de cociente en \(Z^*Z\) es \(N_p+N_p^*\). El cruce
-físico hermitizado es
+The off-diagonal ratio channel in \(Z^*Z\) is \(N_p+N_p^*\). The hermitized
+physical cross term is
 
 \[
  M\delta Z+(M\delta Z)^*=\ell_p(N_p+N_p^*).
 \tag{10}
 \]
 
-Esto da el falsificador mínimo.
+This gives the minimal falsifier.
 
-**Proposición 1 (colisión canal--corriente).** Sea \((C^\bullet,d)\) un
-complejo y supóngase que el canal hermitizado \(N_p+N_p^*\) induce el
-operador cero en su cociente físico. Entonces el cruce hermitizado (10)
-también induce el operador cero. En particular, ese cociente no puede
-satisfacer simultáneamente las propiedades 1 y 2 de 104_12 §8.
+**Proposition 1 (channel–current collision).** Let \((C^\bullet,d)\) be a
+complex and suppose that the hermitized channel \(N_p+N_p^*\) induces the
+zero operator on its physical quotient. Then the hermitized cross term (10)
+also induces the zero operator. In particular, that quotient cannot
+simultaneously satisfy properties 1 and 2 of 104_12 §8.
 
-**Prueba.** El segundo operador es el primero multiplicado por el escalar
-positivo \(\ell_p\). \(\square\)
+**Proof.** The second operator is the first multiplied by the positive
+scalar \(\ell_p\). \(\square\)
 
-Una versión holomorfa, que será la que use el complejo de Koszul, es todavía
-más fuerte: si \(N_p=dh+hd\), entonces \(N_p\) induce cero en cohomología,
-y también lo hace \(\ell_pN_p\).
+A holomorphic version, which is what the Koszul complex will use, is even
+stronger: if \(N_p=dh+hd\), then \(N_p\) induces zero in cohomology,
+and so does \(\ell_pN_p\).
 
-La proposición no dice que deba matarse el canal \(p/1\). Dice que **si** la
-regla de 104_12 §8 se implementa declarando exactos todos los canales de
-\(Z^*Z\), ya el primer canal destruye la corriente que se quería conservar.
+The proposition does not say that the channel \(p/1\) must be killed. It says that
+**if** the rule of 104_12 §8 is implemented by declaring every channel of
+\(Z^*Z\) exact, the very first channel already destroys the current one wanted to
+preserve.
 
-## 3. El cuadrado \(\{1,p,q,pq\}\)
+## 3. The square \(\{1,p,q,pq\}\)
 
-En la base \((e_1,e_p,e_q,e_{pq})\),
+In the basis \((e_1,e_p,e_q,e_{pq})\),
 
 \[
  N_p=
@@ -171,7 +171,7 @@ En la base \((e_1,e_p,e_q,e_{pq})\),
 \tag{11}
 \]
 
-Así,
+Thus,
 
 \[
  Z=(I+N_p)(I+N_q)=
@@ -184,15 +184,15 @@ Así,
 \tag{12}
 \]
 
-y (7) se reduce a
+and (7) reduces to
 
 \[
  \boxed{M\delta Z=\ell_pN_p+\ell_qN_q.}
 \tag{13}
 \]
 
-Sea \(E=\mathbb C e_p\oplus\mathbb C e_q\), con la métrica positiva
-estándar, y sea
+Let \(E=\mathbb C e_p\oplus\mathbb C e_q\), with the standard positive
+metric, and let
 
 \[
  K^k=V_P\otimes\Lambda^kE,
@@ -201,7 +201,7 @@ estándar, y sea
 \tag{14}
 \]
 
-Como los \(N\) conmutan y las multiplicaciones exteriores anticonmutan,
+Since the \(N\)'s commute and the exterior multiplications anticommute,
 
 \[
  d_E^2=N_pN_q\otimes
@@ -209,48 +209,48 @@ Como los \(N\) conmutan y las multiplicaciones exteriores anticonmutan,
 \tag{15}
 \]
 
-No se introdujo ningún signo en la métrica: cada \(K^k\) es un espacio de
-Hilbert ordinario.
+No sign was introduced in the metric: each \(K^k\) is an ordinary Hilbert
+space.
 
-### 3.1. Los cocientes mixtos sí se cancelan
+### 3.1. The mixed ratios do cancel
 
-Denote por \(\iota_p,\iota_q\) las contracciones, adjuntas de
-\(\varepsilon_p,\varepsilon_q\). En el laplaciano
+Denote by \(\iota_p,\iota_q\) the contractions, adjoint to
+\(\varepsilon_p,\varepsilon_q\). In the Laplacian
 
 \[
  \Delta_E=d_E^*d_E+d_Ed_E^*,
 \tag{16}
 \]
 
-el coeficiente de \(\iota_p\varepsilon_q\) es
+the coefficient of \(\iota_p\varepsilon_q\) is
 
 \[
  N_p^*N_q-N_qN_p^*=0,
 \tag{17}
 \]
 
-y el coeficiente conjugado es
+and the conjugate coefficient is
 
 \[
  N_q^*N_p-N_pN_q^*=0.
 \tag{18}
 \]
 
-Las igualdades son exactamente la doble conmutación de (5). Por ello los
-canales \(p/q\) y \(q/p\), que aparecerían en un cuadrado no graduado, se
-cancelan entre los dos grados adyacentes. Ésta es una realización positiva y
-explícita de la parte de cancelación pedida en la propiedad 2.
+These equalities are exactly the double commutation of (5). Hence the
+channels \(p/q\) and \(q/p\), which would appear in a non-graded square, cancel
+between the two adjacent degrees. This is an explicit, positive realization of
+the cancellation part required by property 2.
 
-### 3.2. La corriente se vuelve frontera
+### 3.2. The current becomes a boundary
 
-Las relaciones canónicas exteriores dan
+The canonical exterior relations give
 
 \[
  \varepsilon_j\iota_i+\iota_i\varepsilon_j=\delta_{ij}I.
 \tag{19}
 \]
 
-Consecuentemente,
+Consequently,
 
 \[
  \boxed{d_E\iota_p+\iota_p d_E=N_p,\qquad
@@ -258,7 +258,7 @@ Consecuentemente,
 \tag{20}
 \]
 
-Multiplicando por \(\ell_p,\ell_q\) y sumando,
+Multiplying by \(\ell_p,\ell_q\) and summing,
 
 \[
  M\delta Z=d_EH+Hd_E,
@@ -267,15 +267,15 @@ Multiplicando por \(\ell_p,\ell_q\) y sumando,
 \tag{21}
 \]
 
-Por tanto \(M\delta Z\) induce el operador cero en
-\(H^\bullet(K,d_E)\). El complejo que cancela correctamente el peine de
-cocientes no deja el cruce Möbius--divisor en cohomología: lo convierte en
-una frontera junto con el peine.
+Hence \(M\delta Z\) induces the zero operator on
+\(H^\bullet(K,d_E)\). The complex that correctly cancels the ratio comb does
+not leave the Möbius–divisor cross term in cohomology: it turns it into a
+boundary together with the comb.
 
-## 4. Teorema general y alcance
+## 4. General theorem and scope
 
-**Teorema 2 (stop-gate de Koszul divisor).** Para todo conjunto finito de
-primos \(P\), el complejo positivo
+**Theorem 2 (divisor Koszul stop-gate).** For every finite set of
+primes \(P\), the positive complex
 
 \[
  K_P^\bullet=V_P\otimes\Lambda^\bullet\mathbb C^P,
@@ -284,12 +284,12 @@ primos \(P\), el complejo positivo
 \tag{22}
 \]
 
-satisface:
+satisfies:
 
 1. \(d_E^2=0\);
-2. las correlaciones mixtas \(N_p^*N_q\), \(p\ne q\), se cancelan en el
-   laplaciano de Hodge;
-3. la conexión Möbius--divisor es nulo-homotópica:
+2. the mixed correlations \(N_p^*N_q\), \(p\ne q\), cancel in the Hodge
+   Laplacian;
+3. the Möbius–divisor connection is null-homotopic:
 
 \[
  M_P\delta Z_P
@@ -298,58 +298,59 @@ satisface:
 \tag{23}
 \]
 
-En particular, este complejo no puede satisfacer simultáneamente las
-propiedades 1--3 de 104_12 §8: al realizar la propiedad 2 destruye la
-propiedad 1, independientemente de qué operador Gamma se agregue después
-sobre la cohomología.
+In particular, this complex cannot simultaneously satisfy properties 1–3 of
+104_12 §8: realizing property 2 destroys property 1, regardless of what
+Gamma operator is later added on the cohomology.
 
-**Prueba.** La primera afirmación usa la conmutación de los \(N_p\) y la
-anticomutación exterior. La segunda es (17)--(18) para cada par. La tercera
-sigue de \(d_E\iota_p+\iota_pd_E=N_p\) y de (7). \(\square\)
+**Proof.** The first claim uses commutation of the \(N_p\) and exterior
+anticommutation. The second is (17)–(18) for each pair. The third follows from
+\(d_E\iota_p+\iota_pd_E=N_p\) and from (7). \(\square\)
 
-La misma conclusión vale para cualquier complejo \((C,d)\) en el que
-existan homotopías \(h_p\) con
+The same conclusion holds for any complex \((C,d)\) in which there exist
+homotopies \(h_p\) with
 
 \[
  N_p=dh_p+h_pd.
 \tag{24}
 \]
 
-En efecto, \(M\delta Z=dh+hd\), con
-\(h=\sum_p(\log p)h_p\). Esta extensión es formal y no depende de la
-elección de métrica.
+Indeed, \(M\delta Z=dh+hd\), with
+\(h=\sum_p(\log p)h_p\). This extension is formal and does not depend on
+the choice of metric.
 
-Lo que **no** prueba el teorema debe quedar igualmente explícito. Podría
-intentarse un diferencial no local construido a partir de combinaciones como
-\(N_p^*N_q\), de modo que los cocientes mixtos fueran exactos sin que cada
-\(N_p\) lo fuera. El argumento anterior no lo excluye. Pero tal construcción
-ya no es el complejo de Koszul de la inversión Möbius y todavía tendría que:
+What the theorem does **not** prove must be equally explicit. One could try a
+nonlocal differential built from combinations such as
+\(N_p^*N_q\), so that the mixed ratios were exact without each
+\(N_p\) being so. The argument above does not rule this out. But such a
+construction is no longer the Koszul complex of the Möbius inversion and would
+still have to:
 
-* producir (7), no solo conservarlo formalmente;
-* cancelar todos los canales repetidos en truncaciones mayores;
-* identificar su diagonal positiva con el presupuesto arquimediano exacto
-  \(\Delta A_n/2\), sin usar AHM, A1 ni positividad de Li.
+* produce (7), not merely formally preserve it;
+* cancel all repeated channels in larger truncations;
+* identify its positive diagonal with the exact archimedean budget
+  \(\Delta A_n/2\), without using AHM, A1, or Li positivity.
 
-Ninguna de esas tres tareas se obtiene de (22).
+None of those three tasks is obtained from (22).
 
-## 5. Decisión
+## 5. Decision
 
-Probado:
+Proved:
 
-* el complejo graduado positivo mínimo del cubo divisor;
-* \(d_E^2=0\) en \(\{1,p\}\), \(\{1,p,q,pq\}\) y todo cubo booleano;
-* cancelación exacta de los canales mixtos \(p/q\) en el laplaciano;
-* nulhomotopía exacta de \(M\delta Z\).
+* the minimal positive graded complex of the divisor cube;
+* \(d_E^2=0\) on \(\{1,p\}\), \(\{1,p,q,pq\}\), and every Boolean cube;
+* exact cancellation of the mixed channels \(p/q\) in the Laplacian;
+* exact null-homotopy of \(M\delta Z\).
 
-Descartado:
+Ruled out:
 
-* el complejo de Koszul divisor como complejo Euler--Gamma de 104_12 §8;
-* cualquier variante que declare nulo-homotópicos los generadores \(N_p\).
+* the divisor Koszul complex as the Euler–Gamma complex of 104_12 §8;
+* any variant that declares the generators \(N_p\) null-homotopic.
 
-No descartado:
+Not ruled out:
 
-* un complejo no local que mate solo correlaciones cuadráticas y no los
+* a nonlocal complex that kills only quadratic correlations and not the
   \(N_p\);
-* una construcción independiente de su diagonal Gamma exacta.
+* a construction independent of its exact Gamma diagonal.
 
-No probado: una cota nueva para los pesos \(\Lambda\), A1 o RH.
+Not proved: a new bound for the \(\Lambda\) weights, A1, or RH.
+</content>

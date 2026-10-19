@@ -9,7 +9,7 @@ Let
 \]
 and
 \[
- M_p=2\int_0^\infty u^p\Phi(u)\,du,qquad
+ M_p=2\int_0^\infty u^p\Phi(u)\,du,\qquad
  c_N={M_{2N}\over(2N)!}.                                        \tag{2}
 \]
 The factor 2 is immaterial and matches the even measure in `103_31`.
@@ -39,8 +39,8 @@ into factorial-normalized moment log-concavity.
 
 Put
 \[
- x=\pi e^{2u}>\pi,qquad
- f_m(u)=\pi m^2e^{5u/2}(2m^2x-3)e^{-m^2x},qquad
+ x=\pi e^{2u}>\pi,\qquad
+ f_m(u)=\pi m^2e^{5u/2}(2m^2x-3)e^{-m^2x},\qquad
  \ell_m=\log f_m.                                                \tag{5}
 \]
 Termwise differentiation is justified uniformly on every interval

@@ -1,6 +1,6 @@
 # A — a contravariant kernel duality and its classical control
 
-2026-09-07. Research work; do not insert into paper42 automatically.
+Research work; do not insert into paper42 automatically.
 The construction below is on a smooth projective curve. Its transfer to
 the arithmetic source still requires the dualizing comparison stated last.
 

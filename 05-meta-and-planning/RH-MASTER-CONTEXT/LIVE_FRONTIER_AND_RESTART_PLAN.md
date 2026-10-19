@@ -1,60 +1,60 @@
-# Frente vivo y plan de reinicio
+# Live frontier and restart plan
 
-## Regla rectora corregida
+## Corrected guiding rule
 
-Ningún enunciado será descartado, rebajado o evitado por tener fuerza-RH. Si un enunciado verdadero es
-equivalente a RH y aparece como obligación necesaria, entonces ése es precisamente el teorema que el
-programa debe demostrar. La etiqueta **FUERZA-RH** es una marca de prioridad y carga matemática, no un
+No statement will be discarded, downgraded, or avoided for having RH-strength. If a true statement is
+equivalent to RH and appears as a necessary obligation, then that is precisely the theorem the
+program must prove. The **RH-STRENGTH** label is a mark of priority and mathematical burden, not a
 veto.
 
-La única distinción que se conserva es lógica:
+The only distinction kept is logical:
 
-- un enunciado falso debe corregirse o reemplazarse;
-- un enunciado de fuerza-RH debe atacarse hasta obtener una prueba;
-- una equivalencia con RH puede usarse como conclusión o como cambio de coordenadas, pero no como
-  hipótesis sin prueba independiente;
-- una prueba independiente puede demostrar un criterio equivalente a RH desde datos Euler--Gamma,
-  geométricos u operatoriales: hacerlo cuenta como demostrar RH y es el objetivo del proyecto.
+- a false statement must be corrected or replaced;
+- an RH-strength statement must be attacked until a proof is obtained;
+- an equivalence with RH can be used as a conclusion or as a change of coordinates, but not as a
+  hypothesis without an independent proof;
+- an independent proof can establish a criterion equivalent to RH from Euler–Gamma, geometric, or
+  operator-theoretic data: doing so counts as proving RH and is the project's objective.
 
-Por tanto, expresiones como “esto contiene toda la fuerza de RH” no cierran una ruta. Identifican el
-punto en el que debe crearse la matemática nueva.
+Hence, expressions like "this contains all the strength of RH" do not close a route. They identify the
+point at which new mathematics must be created.
 
-## Lista canónica de obligaciones para cerrar \(\Omega_7\)
+## Canonical list of obligations for closing \(\Omega_7\)
 
-### Criterio de cierre
+### Closure criterion
 
-\(\Omega_7\) quedará cerrado únicamente cuando exista una demostración completa de
+\(\Omega_7\) will be closed only once there is a complete proof of
 
 \[
    \lambda_n=\lambda_n^{\rm arch}+\lambda_n^{\rm prime}\ge0
-   \qquad\text{para todo }n\ge1,
+   \qquad\text{for all }n\ge1,
 \]
 
-con la parte prima definida mediante su continuación pareada, y cuando el teorema de Li permita concluir
-RH sin ninguna hipótesis abierta intermedia. No alcanza una verificación finita, una identidad
-condicional, una estimación numérica o una cadena que todavía contenga una obligación sin demostrar.
+with the prime part defined via its paired continuation, and once Li's theorem allows concluding
+RH without any intermediate open hypothesis. A finite verification, a conditional identity, a
+numerical estimate, or a chain still containing an unproved obligation is not enough.
 
-La lista se divide en un **tronco obligatorio**, que toda prueba debe cerrar, y dos **carriles de
-construcción**. Basta completar íntegramente uno de los carriles; no es necesario cerrar LP+IDENT si el
-ataque directo de Li produce la desigualdad global.
+The list is split into a **mandatory trunk**, which every proof must close, and two **construction
+tracks**. It suffices to complete one of the tracks in full; closing LP+IDENT is not necessary if the
+direct attack on Li produces the global inequality.
 
-### Tronco obligatorio
+### Mandatory trunk
 
-1. **Fijar el blanco exacto. — CERRADO.**
+1. **Fix the exact target. — CLOSED.**
    
-   Demostrar y usar exclusivamente
+   Prove and use exclusively
    \[
       \Omega_7
       \Longleftrightarrow
       \lambda_n^{\rm prime}\ge-\lambda_n^{\rm arch}
       \quad(n\ge1).
    \]
-   La cota absoluta de la parte prima es sólo una estrategia suficiente para ciertos índices, no el
-   blanco lógico.
+   The absolute bound on the prime part is only a sufficient strategy for certain indices, not the
+   logical target.
 
-2. **Fijar la continuación aritmética. — CERRADO.**
+2. **Fix the arithmetic continuation. — CLOSED.**
    
-   Mantener unidos el polo y la suma prima:
+   Keep the pole and the prime sum joined:
    \[
    \lambda_n^{\rm prime}
    =\lim_{\varepsilon\downarrow0}
@@ -64,12 +64,12 @@ ataque directo de Li produce la desigualdad global.
     L_{n-1}^{(1)}(\log m)
    \right].
    \]
-   Ninguna prueba puede separar en el borde dos series divergentes y estimarlas por separado.
+   No proof may separate two divergent series at the boundary and estimate them independently.
 
-3. **Cerrar la identidad de integración por partes con su borde. — CERRADO.**
+3. **Close the integration-by-parts identity with its boundary term. — CLOSED.**
    
-   Con
-   \(f_{n,\varepsilon}(y)=y^{-1-\varepsilon}L_{n-1}^{(1)}(\log y)\), usar
+   With
+   \(f_{n,\varepsilon}(y)=y^{-1-\varepsilon}L_{n-1}^{(1)}(\log y)\), use
    \[
    \lambda_n^{\rm prime}
    =\lim_{\varepsilon\downarrow0}
@@ -78,191 +78,191 @@ ataque directo de Li produce la desigualdad global.
    \int_1^\infty(\psi(y)-y+1)f'_{n,\varepsilon}(y)\,dy.
    \]
 
-4. **Separar rigurosamente el rango finito excepcional. — CERRADO.**
+4. **Rigorously separate the exceptional finite range. — CLOSED.**
    
-   Ya está demostrado que
+   It is already proved that
    \[
       \lambda_n^{\rm arch}<0\iff1\le n\le7.
    \]
-   Además, el certificado finito
-   `fragments/OMEGA7_POINT4_FINITE_CERTIFICATE.md` demuestra con intervalos racionales que
+   In addition, the finite certificate
+   `fragments/OMEGA7_POINT4_FINITE_CERTIFICATE.md` proves with rational intervals that
    \[
       \lambda_n>0,\qquad 1\le n\le7,
    \]
-   usando sólo el desarrollo de Laurent de \(\zeta\) en \(1\), la parte Euler--Gamma y aritmética
-   racional de intervalos. Este bloque es finito y no contiene el problema asintótico.
+   using only the Laurent expansion of \(\zeta\) at \(1\), the Euler–Gamma part, and rational
+   interval arithmetic. This block is finite and does not contain the asymptotic problem.
 
-5. **Probar la desigualdad firmada global. — ABIERTO / FUERZA-RH.**
+5. **Prove the global signed inequality. — OPEN / RH-STRENGTH.**
    
-   Para todo \(n\ge8\), demostrar
+   For every \(n\ge8\), prove
    \[
       \boxed{
       \lim_{\varepsilon\downarrow0}
       \int_1^\infty(\psi(y)-y+1)f'_{n,\varepsilon}(y)\,dy
       \ge-\lambda_n^{\rm arch}}
    \]
-   desde datos aritméticos. Éste es el núcleo central. Su fuerza-RH no autoriza suspenderlo: obliga a
-   encontrar una identidad, desigualdad unilateral, principio variacional o estructura geométrica que
-   lo demuestre.
+   from arithmetic data. This is the central core. Its RH-strength does not authorize suspending it: it
+   requires finding an identity, a one-sided inequality, a variational principle, or a geometric
+   structure that proves it.
 
-6. **Justificar uniformemente el límite de borde. — ABIERTO.**
+6. **Uniformly justify the boundary limit. — OPEN.**
    
-   La estimación que pruebe el punto 5 debe ser uniforme en \(\varepsilon\downarrow0\). Hay que exhibir
-   una cantidad integrable o una cancelación exacta que permita pasar al límite sin reemplazar el
-   integrando por su valor absoluto y sin perder el término \(-n\).
+   The estimate proving point 5 must be uniform in \(\varepsilon\downarrow0\). An integrable
+   quantity or an exact cancellation must be exhibited that allows passing to the limit without
+   replacing the integrand by its absolute value and without losing the term \(-n\).
 
-7. **Controlar todas las escalas de \(n\). — ABIERTO.**
+7. **Control every scale of \(n\). — OPEN.**
    
-   La prueba debe cubrir simultáneamente:
+   The proof must simultaneously cover:
    
-   - el rango finito posterior a \(I_-\);
-   - la zona de transición del kernel Laguerre;
-   - el régimen oscilatorio \(\log m\lesssim4n\);
-   - la cola \(\log m\gtrsim4n\);
-   - el límite \(n\to\infty\).
+   - the finite range past \(I_-\);
+   - the transition zone of the Laguerre kernel;
+   - the oscillatory regime \(\log m\lesssim4n\);
+   - the tail \(\log m\gtrsim4n\);
+   - the limit \(n\to\infty\).
    
-   Puede hacerlo mediante un teorema global que evite esta partición, pero no puede dejar constantes
-   dependientes de \(n\) que destruyan la desigualdad final.
+   It may do so via a global theorem avoiding this partition, but it cannot leave constants
+   dependent on \(n\) that destroy the final inequality.
 
-8. **Conservar el signo antes de estimar. — ABIERTO.**
+8. **Preserve the sign before estimating. — OPEN.**
    
-   Debe construirse un pareamiento o una descomposición para la cual la excursión negativa sea visible
-   sin aplicar
+   A pairing or decomposition must be constructed for which the negative excursion is visible
+   without applying
    \[
       \left|\int gh\right|\le\int|g||h|.
    \]
-   El objeto buscado debe retener conjuntamente polo, Gamma, primos, conjugación y borde. La pérdida de
-   signo por shells o por primos individuales no puede recuperarse después.
+   The sought object must jointly retain the pole, Gamma, primes, conjugation, and boundary. A loss of
+   sign through shells or individual primes cannot be recovered afterward.
 
-9. **Probar el mecanismo discriminante desde datos aritméticos. — ABIERTO / FUERZA-RH.**
+9. **Prove the discriminating mechanism from arithmetic data. — OPEN / RH-STRENGTH.**
    
-   Sea cual sea la forma elegida en los puntos 5--8, sus hipótesis deben demostrarse para \(\zeta\)
-   desde una construcción independiente. No basta definir una métrica, medida, corriente o
-   factorización que exista exactamente cuando \(\lambda_n\ge0\). Si el mecanismo mismo equivale a RH,
-   debe ser demostrado: no será descartado por esa equivalencia.
+   Whatever form is chosen at points 5–8, its hypotheses must be proved for \(\zeta\) from an
+   independent construction. It is not enough to define a metric, measure, current, or
+   factorization that exists exactly when \(\lambda_n\ge0\). If the mechanism itself is equivalent to RH,
+   it must be proved: it will not be discarded for that equivalence.
 
-10. **Demostrar sensibilidad fuera de línea dentro de una clase tipada. — CONTROL DE VALIDEZ ABIERTO.**
+10. **Prove off-line sensitivity within a typed class. — OPEN VALIDITY CONTROL.**
     
-    Construir una clase \(\mathcal C_{\rm Euler}\) con datos de Dirichlet, factor Gamma, ecuación
-    funcional y continuación comunes. El nuevo mecanismo debe:
+    Build a class \(\mathcal C_{\rm Euler}\) with common Dirichlet data, Gamma factor, functional
+    equation, and continuation. The new mechanism must:
     
-    - funcionar para los datos de \(\zeta\);
-    - ser compatible con un control sobre la línea;
-    - fallar estructuralmente para un miembro aritmético fuera de línea.
+    - work for \(\zeta\)'s data;
+    - be compatible with an on-line control;
+    - fail structurally for an off-line arithmetic member.
     
-    Este punto no es una premisa lógica del criterio de Li y no debe insertarse artificialmente en la
-    demostración. Es un control de validez del mecanismo: impide invertir el programa en una identidad
-    incapaz de distinguir el fenómeno buscado.
+    This point is not a logical premise of Li's criterion and must not be artificially inserted into the
+    proof. It is a validity control for the mechanism: it prevents turning the program into an identity
+    incapable of distinguishing the sought phenomenon.
 
-11. **Cerrar el ensamblaje Li. — ABIERTO, dependiente de 4--9.**
+11. **Close the Li assembly. — OPEN, depending on 4–9.**
     
-    Combinar los certificados de \(1\le n\le7\) con el teorema uniforme para \(n\ge8\), concluir
-    \(\lambda_n\ge0\) para todo \(n\), verificar las hipótesis de la versión utilizada del criterio de
-    Li y deducir RH. Este último paso es corto, pero sólo queda cerrado cuando no arrastra ninguna
-    hipótesis pendiente.
+    Combine the certificates for \(1\le n\le7\) with the uniform theorem for \(n\ge8\), conclude
+    \(\lambda_n\ge0\) for all \(n\), verify the hypotheses of the version of Li's criterion used, and
+    deduce RH. This last step is short, but it is closed only when it carries no pending
+    hypothesis.
 
-### Carril A — construcción directa Euler--Gamma/Laguerre
+### Track A — direct Euler–Gamma/Laguerre construction
 
-Éste es el carril prioritario. Para completar el punto 5 debe cerrar, en este orden:
+This is the priority track. To complete point 5 it must close, in this order:
 
-12. **Encontrar una unidad firmada elemental. — ABIERTO.**
+12. **Find an elementary signed unit. — OPEN.**
     
-    Identificar bloques de primos o intervalos de \(\log m\) cuyo aporte combinado con el polo y Gamma
-    tenga una cota inferior, aunque cada término por separado cambie de signo.
+    Identify blocks of primes or intervals of \(\log m\) whose combined contribution with the pole and Gamma
+    has a lower bound, even though each term separately changes sign.
 
-    El triage actualizado está en `fragments/OMEGA7_CARRIL_A_FIRST_TARGET.md`: no se encontró una
-    unidad local sana; la unidad canónica mínima es global, polo continuo contra todos los prime powers.
-    Por eso el primer blanco técnico queda separado como A0, una cola uniforme incondicional, y A1, el
-    núcleo firmado de fuerza-RH.
+    The updated triage is in `fragments/OMEGA7_CARRIL_A_FIRST_TARGET.md`: no sound local
+    unit was found; the minimal canonical unit is global, a continuous pole against all prime powers.
+    For that reason the first technical target is split into A0, an unconditional uniform tail, and A1, the
+    signed core of RH-strength.
 
-13. **Probar una ley de compensación global. — ABIERTO / FUERZA-RH.**
+13. **Prove a global compensation law. — OPEN / RH-STRENGTH.**
     
-    Construir una involución, coborde, identidad funcional, desigualdad de energía o principio
-    variacional que sume esas unidades antes de tomar magnitudes y produzca exactamente la cota del
-    punto 5.
+    Build an involution, coboundary, functional identity, energy inequality, or variational
+    principle that sums those units before taking magnitudes and produces exactly the bound in
+    point 5.
 
-14. **Cerrar el error de truncación firmado. — ABIERTO.**
+14. **Close the signed truncation error. — OPEN.**
     
-    Para toda truncación utilizada, demostrar que la contribución omitida conserva la desigualdad
-    unilateral o converge con un resto firmado controlable. Una cota de norma de la cola no basta si es
-    mayor que el margen arquimediano.
+    For every truncation used, prove that the omitted contribution preserves the one-sided
+    inequality or converges with a controllable signed remainder. A norm bound on the tail is not enough if
+    it exceeds the archimedean margin.
 
-15. **Cerrar la uniformidad \((n,\varepsilon,X)\). — ABIERTO.**
+15. **Close uniformity in \((n,\varepsilon,X)\). — OPEN.**
     
-    Declarar el orden de límites y demostrar las estimaciones uniformes necesarias para
-    \(X\to\infty\), \(\varepsilon\downarrow0\) y \(n\to\infty\). No se acepta intercambiar estos límites
-    por convergencia puntual.
+    State the order of limits and prove the uniform estimates needed for
+    \(X\to\infty\), \(\varepsilon\downarrow0\), and \(n\to\infty\). Exchanging these limits for
+    pointwise convergence is not accepted.
 
-16. **Convertir el mecanismo en el teorema global del punto 5. — ABIERTO.**
+16. **Turn the mechanism into the global theorem of point 5. — OPEN.**
     
-    El resultado final del carril no debe ser una nueva coordenada: debe entregar literalmente
-    \(\lambda_n^{\rm prime}\ge-\lambda_n^{\rm arch}\) para todo \(n\ge8\).
+    The track's final result must not be a new coordinate: it must literally deliver
+    \(\lambda_n^{\rm prime}\ge-\lambda_n^{\rm arch}\) for every \(n\ge8\).
 
-### Carril B — LP+IDENT/RDI, sólo si produce el signo de Li
+### Track B — LP+IDENT/RDI, only if it produces Li's sign
 
-Este carril es alternativo. Para completarlo deben cerrarse todos los puntos siguientes y, al final,
-probarse su enlace explícito con el punto 5:
+This track is alternative. To complete it, all of the following points must be closed, and at the end
+its explicit link to point 5 must be proved:
 
-17. **BTG-DIV en la medida verdadera \(\mu_L\). — ABIERTO.**
-18. **Interfaz LP libre de una elección circular de \(\mu_L\). — ABIERTO.**
-19. **GAP-Z, incluida la contribución ZERO con cancelación firmada. — ABIERTO.**
-20. **RDI-ANCHOR o una única formulación equivalente completamente escrita. — ABIERTO / FUERZA-RH.**
-21. **RDP-SHELL con colas direccionales después del pareamiento firmado. — ABIERTO.**
-22. **SAFE-PROLATE-BRIDGE sin asumir positividad de Weil. — ABIERTO / posible FUERZA-RH.**
-23. **SAFE-LIMIT-POINT. — ABIERTO.**
-24. **SR-SAFE. — ABIERTO.**
-25. **Teorema de enlace RDI \(\Rightarrow\lambda_n\ge0\). — ABIERTO / FUERZA-RH.**
+17. **BTG-DIV at the true measure \(\mu_L\). — OPEN.**
+18. **LP interface free of a circular choice of \(\mu_L\). — OPEN.**
+19. **GAP-Z, including the ZERO contribution with signed cancellation. — OPEN.**
+20. **RDI-ANCHOR or a single fully written equivalent formulation. — OPEN / RH-STRENGTH.**
+21. **RDP-SHELL with directional tails after the signed pairing. — OPEN.**
+22. **SAFE-PROLATE-BRIDGE without assuming Weil positivity. — OPEN / possible RH-STRENGTH.**
+23. **SAFE-LIMIT-POINT. — OPEN.**
+24. **SR-SAFE. — OPEN.**
+25. **RDI link theorem \(\Rightarrow\lambda_n\ge0\). — OPEN / RH-STRENGTH.**
     
-    No basta llegar a un objeto “seguro”: hay que demostrar, con normalizaciones y límites completos,
-    que su seguridad implica la desigualdad unilateral de Li para cada índice.
+    It is not enough to reach a "safe" object: it must be proved, with complete normalizations and
+    limits, that its safety implies Li's one-sided inequality for every index.
 
-    El triage corto está registrado en `fragments/OMEGA7_CARRIL_B_TRIAGE.md`. La conclusión actual es
-    suspender este carril como prioridad: no hay todavía un puente literal RDI \(\Rightarrow\lambda_n\ge0\)
-    ni RDI \(\Rightarrow\) realidad de ceros; BTG y GAP-Z permanecen como infraestructura abierta, no como
-    mecanismo de signo.
+    The short triage is recorded in `fragments/OMEGA7_CARRIL_B_TRIAGE.md`. The current conclusion is
+    to suspend this track as a priority: there is not yet a literal bridge RDI \(\Rightarrow\lambda_n\ge0\)
+    nor RDI \(\Rightarrow\) reality of zeros; BTG and GAP-Z remain as open infrastructure, not as a
+    sign mechanism.
 
-### Controles transversales que deben acompañar cualquier carril
+### Cross-cutting controls that must accompany any track
 
-26. **Auditoría de no-go por clase, no como veto universal.** Cada no-go sólo elimina la clase que
-    realmente cubre. Ningún no-go puede usarse para abandonar un enunciado por ser equivalente a RH.
-27. **Comparación bibliográfica por mecanismo.** Determinar qué parte es conocida y aislar exactamente
-    la identidad o desigualdad nueva que se debe probar.
-28. **Prueba simbólica antes de inferencia numérica.** Los cálculos sirven para descubrir y falsar; el
-    cierre requiere una demostración uniforme.
-29. **Orden de límites explícito.** Todo teorema debe declarar dependencias en \(n,N,L,X,\varepsilon\)
-    y el orden en que se eliminan los reguladores.
-30. **Ledger de dependencias.** Cada obligación cerrada debe señalar el lema exacto que la demuestra y
-    no puede depender directa o indirectamente de la misma conclusión salvo dentro de una equivalencia
-    declarada cuyo sentido útil tenga prueba independiente.
+26. **No-go audit by class, not as a universal veto.** Each no-go only eliminates the class it
+    actually covers. No no-go may be used to abandon a statement for being equivalent to RH.
+27. **Bibliographic comparison by mechanism.** Determine which part is known and isolate exactly
+    the new identity or inequality that must be proved.
+28. **Symbolic proof before numerical inference.** Computations serve to discover and falsify; the
+    closure requires a uniform proof.
+29. **Explicit order of limits.** Every theorem must state dependencies on \(n,N,L,X,\varepsilon\)
+    and the order in which the regulators are removed.
+30. **Dependency ledger.** Each closed obligation must point to the exact lemma proving it and
+    cannot depend, directly or indirectly, on that same conclusion, except within a stated
+    equivalence whose useful direction has an independent proof.
 
-## Decisión principal
+## Main decision
 
-No conviene continuar acumulando fórmulas alrededor de LP+IDENT. La revisión descubre además que el blanco primo usado para organizar parte de paper 36 era innecesariamente fuerte. Del split exacto
+It is not advisable to keep accumulating formulas around LP+IDENT. The review also discovers that the prime target used to organize part of paper 36 was needlessly strong. From the exact split
 
 \[
 \lambda_n=\lambda_n^{\rm arch}+\lambda_n^{\rm prime}
 \]
 
-se obtiene
+one obtains
 
 \[
 \Omega_7
 \quad\Longleftrightarrow\quad
 \lambda_n^{\rm prime}\ge-\lambda_n^{\rm arch}
-\quad\text{para todo }n,
+\quad\text{for all }n,
 \]
 
-no una dominación en valor absoluto. El reinicio debe dar prioridad al lower bound **unilateral y firmado** de la parte prima. Cuando \(\lambda_n^{\rm arch}\ge0\), esto significa controlar su excursión negativa; cuando \(\lambda_n^{\rm arch}<0\), exige conservar una contribución prima positiva suficiente. Las paredes basadas en sumar magnitudes o dominar \(|\lambda_n^{\rm prime}|\) no cierran esta clase.
+not an absolute-value domination. The restart must prioritize the **one-sided, signed** lower bound of the prime part. When \(\lambda_n^{\rm arch}\ge0\), this means controlling its negative excursion; when \(\lambda_n^{\rm arch}<0\), it requires preserving a sufficient positive prime contribution. Walls based on summing magnitudes or dominating \(|\lambda_n^{\rm prime}|\) do not close this class.
 
-RDI-ANCHOR sigue siendo el candidato más claro dentro de la ruta LP+IDENT a portar la identificación aritmética que debe fallar fuera de línea. No está demostrado que sea el único paso de fuerza-RH, porque LP/BTG y GAP-Z tampoco están cerrados en el control correcto. Esa ruta queda como segundo carril, no como prerequisito de todo ataque a \(\Omega_7\).
+RDI-ANCHOR remains the clearest candidate within the LP+IDENT route for carrying the arithmetic identification that must fail off the line. It is not proved to be the only RH-strength step, because LP/BTG and GAP-Z are also not closed in the correct control. That route remains as a second track, not as a prerequisite for every attack on \(\Omega_7\).
 
-La proposición “GAP-Z es infraestructura neutral” sería concluyente si se probara para una clase que incluye una construcción con divisor fuera de línea. Hoy sólo hay evidencia finita, y parte usa \(\mu_{\rm ref}\) en lugar del verdadero \(\mu_L\). Por eso no se debe invertir una campaña larga en GAP-Z, pero tampoco declararlo irrelevante.
+The claim "GAP-Z is neutral infrastructure" would be conclusive if proved for a class that includes a construction with an off-line divisor. Today there is only finite evidence, part of which uses \(\mu_{\rm ref}\) instead of the true \(\mu_L\). For that reason a long campaign should not be invested in GAP-Z, but it should not be declared irrelevant either.
 
-El reinicio debe atacar primero el blanco mínimo de Li y, en paralelo limitado, decidir si LP/GAP-Z son infraestructura demostrable o cargas adicionales. Sólo si aparece un mecanismo genuino en la ruta RDI debe retomarse su cadena downstream.
+The restart must first attack Li's minimal target and, in limited parallel, decide whether LP/GAP-Z are provable infrastructure or additional burdens. Only if a genuine mechanism appears in the RDI route should its downstream chain be taken up again.
 
-## Estado mínimo de la ruta actual
+## Minimal status of the current route
 
-La cadena suficiente es
+The sufficient chain is
 
 \[
 \begin{aligned}
@@ -277,19 +277,19 @@ La cadena suficiente es
 \end{aligned}
 \]
 
-Su ledger corregido es:
+Its corrected ledger is:
 
-| Obligación | Estado | Riesgo |
+| Obligation | Status | Risk |
 |---|---|---|
-| BTG-DIV en el verdadero \(\mu_L\) | **ABIERTO** | La evidencia Outcome A usa una aproximación finita; LP neutral no está certificado. |
-| Interfaz LP mu-libre | **ABIERTO** | Las cláusulas fijadas en \(\mu_L\) fueron declaradas inadmisibles, pero no se construyó el reemplazo. |
-| GAP-Z | **ABIERTO** | MESH y BND están acotados; ZERO no. La suma absoluta de capas está bloqueada. |
-| RDI-ANCHOR | **ABIERTO / candidato FUERZA-RH** | Convergencia y coherencia no identifican el límite Euler–Gamma. |
-| RDP-SHELL y colas direccionales | **ABIERTO** | No se pueden estimar antes del pareamiento firmado. |
-| SAFE-PROLATE-BRIDGE | **ABIERTO** | Alto riesgo de reintroducir positividad de Weil. |
-| \(\Omega_7\) | **ABIERTO / FUERZA-RH** | Es RH por Li. |
+| BTG-DIV at the true \(\mu_L\) | **OPEN** | The Outcome A evidence uses a finite approximation; LP-neutral is not certified. |
+| mu-free LP interface | **OPEN** | The clauses fixed at \(\mu_L\) were declared inadmissible, but the replacement was not built. |
+| GAP-Z | **OPEN** | MESH and BND are bounded; ZERO is not. The absolute sum over shells is blocked. |
+| RDI-ANCHOR | **OPEN / RH-STRENGTH candidate** | Convergence and coherence do not identify the Euler–Gamma limit. |
+| RDP-SHELL and directional tails | **OPEN** | Cannot be estimated before the signed pairing. |
+| SAFE-PROLATE-BRIDGE | **OPEN** | High risk of reintroducing Weil positivity. |
+| \(\Omega_7\) | **OPEN / RH-STRENGTH** | It is RH via Li's criterion. |
 
-El candidato original E79.6 —single-signedness de una nube finita— no es el blanco canónico. Fue debilitado por retracciones y fases posteriores. La versión actual debe formularse en una sola de estas coordenadas equivalentes:
+The original candidate E79.6 — single-signedness of a finite cloud — is not the canonical target. It was weakened by retractions and later phases. The current version must be formulated in a single one of these equivalent coordinates:
 
 \[
 \mathrm{RDI\!-\!ANCHOR}
@@ -301,15 +301,15 @@ El candidato original E79.6 —single-signedness de una nube finita— no es el 
 \mathrm{STIELTJES\!-\!IDENT}.
 \]
 
-TRUE-DIVISOR-IDENT es más fuerte y no debe elegirse si basta una identificación segura de menor alcance.
+TRUE-DIVISOR-IDENT is stronger and should not be chosen if a safe identification of smaller scope suffices.
 
-## Etapa I — reparar el mapa para atacar RH
+## Stage I — repair the map in order to attack RH
 
-Esta etapa no necesita una fase nueva.
+This stage does not need a new phase.
 
-### I.1 Registro canónico de objetos
+### I.1 Canonical record of objects
 
-Fijar una sola definición para:
+Fix a single definition for:
 
 \[
 \delta_N^{\rm ref},\quad
@@ -322,34 +322,34 @@ C_{\rm core},\quad
 \mathcal C_{\rm Euler}.
 \]
 
-Cada definición debe contener dominio, normalización, orden de límites y dependencia de \(L,N,z\). Ningún teorema puede usar \(\delta_N\) o \(\mu\) sin superíndice o dominio.
+Each definition must contain its domain, normalization, order of limits, and dependence on \(L,N,z\). No theorem may use \(\delta_N\) or \(\mu\) without a superscript or domain.
 
-### I.2 Errata matemática de paper 36 — COMPLETADA
+### I.2 Mathematical errata of paper 36 — COMPLETED
 
-Separar del frente de prueba las reparaciones:
+Separate the following repairs from the proof front:
 
-- retirar la extensión compacta de H2;
-- corregir H6, conservar \(|\kappa|\) y rotular la dominación de cola como abierta;
-- reescribir \(\Omega_4\) con los dos blanqueamientos;
-- rebajar \(\Omega_5\) a continuidad por \(N\) fijo;
-- retirar la envolvente que aísla \(\sum_\rho(1-1/\rho)^n\);
-- corregir el signo y el término de borde de la integración por partes Laguerre;
-- restaurar \(\frac{\gamma-1}{2}n\) en la asintótica de envolvente y restringir la cota con \(\log n\) a \(n\ge2\);
-- rebajar muestreo, saturación y cascada a resultados condicionales;
-- corregir la aplicación de X3 a una clase de norma negativa.
+- remove the compact extension to H2;
+- correct H6, keep \(|\kappa|\), and label the tail domination as open;
+- rewrite \(\Omega_4\) with the two whitenings;
+- downgrade \(\Omega_5\) to continuity at fixed \(N\);
+- remove the envelope that isolates \(\sum_\rho(1-1/\rho)^n\);
+- correct the sign and boundary term of the Laguerre integration by parts;
+- restore \(\frac{\gamma-1}{2}n\) in the envelope asymptotics and restrict the \(\log n\) bound to \(n\ge2\);
+- downgrade sampling, saturation, and cascade to conditional results;
+- correct the application of X3 to a class of negative norm.
 
-Estas reparaciones ya están incorporadas en paper 36. No cierran \(\Omega_7\), pero dejan su frente
-correctamente tipado y evitan apoyar la prueba nueva en lemas falsos.
+These repairs are already incorporated into paper 36. They do not close \(\Omega_7\), but they leave its front
+correctly typed and avoid resting the new proof on false lemmas.
 
-### I.3 Registro de precedencia
+### I.3 Precedence record
 
-Crear una tabla claim \(\to\) estado \(\to\) prueba \(\to\) corrección \(\to\) dependencias. El rótulo de cierre nunca será fuente de verdad. Esto evita que una fase posterior herede el QED retirado de fase 65, E78.154, el proxy de precisión insuficiente o la definición incorrecta de mean(d).
+Create a claim \(\to\) status \(\to\) proof \(\to\) correction \(\to\) dependencies table. The closure label will never be the source of truth. This prevents a later phase from inheriting the withdrawn QED from phase 65, E78.154, the insufficient-precision proxy, or the incorrect definition of mean(d).
 
-## Etapa II — ataque directo al blanco unilateral de Li
+## Stage II — direct attack on Li's one-sided target
 
-### II.1 Definición sin ambigüedad
+### II.1 Unambiguous definition
 
-Fijar la continuación aritmética mediante el límite pareado
+Fix the arithmetic continuation via the paired limit
 
 \[
 \lambda_n^{\rm prime}
@@ -364,9 +364,9 @@ L_{n-1}^{(1)}(\log m)
 \right]
 \]
 
-o con un símbolo de parte finita que declare exactamente el mismo procedimiento. La suma desnuda en el borde no puede manipularse como absolutamente convergente. Toda integración por partes debe mantener junta la cancelación que define el valor continuado.
+or with a finite-part symbol stating exactly the same procedure. The bare sum at the boundary cannot be treated as if it were absolutely convergent. Every integration by parts must keep together the cancellation that defines the continued value.
 
-Con \(f_{n,\varepsilon}(y)=y^{-1-\varepsilon}L_{n-1}^{(1)}(\log y)\), el término polar no es una abreviatura formal: satisface
+With \(f_{n,\varepsilon}(y)=y^{-1-\varepsilon}L_{n-1}^{(1)}(\log y)\), the polar term is not a formal abbreviation: it satisfies
 
 \[
 \sum_{k=1}^n\binom nk\frac{(-1)^{k-1}}{\varepsilon^k}
@@ -376,9 +376,9 @@ Con \(f_{n,\varepsilon}(y)=y^{-1-\varepsilon}L_{n-1}^{(1)}(\log y)\), el términ
 \int_1^\infty f_{n,\varepsilon}(y)\,dy.
 \]
 
-Esta identidad es la que debe conservarse al pasar a Stieltjes e integrar por partes.
+This identity must be preserved when passing to Stieltjes integration and integrating by parts.
 
-El objetivo exacto será
+The exact objective will be
 
 \[
 \boxed{
@@ -387,47 +387,47 @@ El objetivo exacto será
 }
 \]
 
-Éste es el único blanco global. Para los índices con \(\lambda_n^{\rm arch}\ge0\), puede reescribirse como
+This is the only global target. For indices with \(\lambda_n^{\rm arch}\ge0\), it can be rewritten as
 
 \[
 (\lambda_n^{\rm prime})_-
 \le\lambda_n^{\rm arch}.
 \]
 
-Para este split se puede cerrar el signo de la parte arquimediana:
+For this split the sign of the archimedean part can be settled:
 
 \[
 I_-:=\{n\ge1:\lambda_n^{\rm arch}<0\}=\{1,2,\ldots,7\}.
 \]
 
-En efecto,
+Indeed,
 
 \[
 \lambda_n^{\rm arch}
 =1-\frac n2(\gamma+\log(4\pi))
-+\sum_{\substack{r\ge1\\r\ {\rm impar}}}
++\sum_{\substack{r\ge1\\r\ {\rm odd}}}
 \left[\left(1-\frac1r\right)^n-1+\frac nr\right].
 \]
 
-Si \(d_n=\lambda_{n+1}^{\rm arch}-\lambda_n^{\rm arch}\), entonces
+If \(d_n=\lambda_{n+1}^{\rm arch}-\lambda_n^{\rm arch}\), then
 
 \[
 d_{n+1}-d_n
-=\sum_{r\ {\rm impar}}\frac{(1-1/r)^n}{r^2}>0.
+=\sum_{r\ {\rm odd}}\frac{(1-1/r)^n}{r^2}>0.
 \]
 
-Una evaluación con intervalos de la fórmula exacta da \(d_3\in(0.0062,0.0063)\), \(\lambda_1^{\rm arch}\in(-0.555,-0.554)\), \(\lambda_2^{\rm arch}\in(-0.875,-0.874)\), \(\lambda_7^{\rm arch}\in(-0.356,-0.355)\) y \(\lambda_8^{\rm arch}\in(0.020,0.022)\). Por convexidad discreta, la sucesión crece desde \(n=3\) y no vuelve a ser negativa después de \(n=8\). Para \(n=1,\ldots,7\) se debe certificar el lower bound original; allí una contribución prima positiva es necesaria.
+An interval evaluation of the exact formula gives \(d_3\in(0.0062,0.0063)\), \(\lambda_1^{\rm arch}\in(-0.555,-0.554)\), \(\lambda_2^{\rm arch}\in(-0.875,-0.874)\), \(\lambda_7^{\rm arch}\in(-0.356,-0.355)\), and \(\lambda_8^{\rm arch}\in(0.020,0.022)\). By discrete convexity, the sequence grows from \(n=3\) onward and never becomes negative again past \(n=8\). For \(n=1,\ldots,7\) the original lower bound must be certified; there a positive prime contribution is necessary.
 
-### II.2 Descomposición por excursión negativa
+### II.2 Decomposition by negative excursion
 
-Usar la representación que conserva el signo del kernel Laguerre antes de estimar. Con
+Use the representation that preserves the sign of the Laguerre kernel before estimating. With
 
 \[
 f_{n,\varepsilon}(y)
 =y^{-1-\varepsilon}L_{n-1}^{(1)}(\log y),
 \]
 
-la identidad corregida, con el borde inferior incluido, es
+the corrected identity, with the lower boundary term included, is
 
 \[
 \lambda_n^{\rm prime}
@@ -441,7 +441,7 @@ la identidad corregida, con el borde inferior incluido, es
 \int_1^\infty(\psi(y)-y)f'_{n,\varepsilon}(y)\,dy\right].
 \]
 
-El blanco es
+The target is
 
 \[
 \lim_{\varepsilon\downarrow0}
@@ -450,60 +450,60 @@ El blanco es
 \ge-\lambda_n^{\rm arch}.
 \]
 
-En el complemento de \(I_-\), la misma desigualdad controla sólo la parte negativa. La integral de
-\(|\psi-y+1|\,|f'_{n,\varepsilon}|\), la suma de normas por shell y los majorantes simétricos no son el
-blanco mínimo y las estimaciones conocidas no alcanzan. Sin embargo, no quedan prohibidos: si se logra
-demostrar una cota absoluta de fuerza-RH suficientemente fuerte, eso también cerrará \(\Omega_7\). La
-prioridad unilateral sólo evita imponer dificultad adicional sin necesidad.
+On the complement of \(I_-\), the same inequality controls only the negative part. The integral of
+\(|\psi-y+1|\,|f'_{n,\varepsilon}|\), the sum of shell norms, and the symmetric majorants are not the
+minimal target, and the known estimates do not reach it. However, they are not forbidden: if a
+sufficiently strong RH-strength absolute bound can be proved, that would also close \(\Omega_7\). The
+one-sided priority only avoids imposing unnecessary extra difficulty.
 
-### II.3 Falsadores obligatorios
+### II.3 Mandatory falsifiers
 
-Antes de exigir un falsador aritmético debe definirse una clase \(\mathcal C_{\rm Euler}\) de objetos completados \(F\), cada uno con coeficientes de Dirichlet, factor Gamma, ecuación funcional, continuación y una regla común que produzca
+Before requiring an arithmetic falsifier, a class \(\mathcal C_{\rm Euler}\) of completed objects \(F\) must be defined, each with Dirichlet coefficients, a Gamma factor, a functional equation, a continuation, and a common rule producing
 
 \[
 F\longmapsto
 (\lambda_{n,F}^{\rm arch},\lambda_{n,F}^{\rm prime}).
 \]
 
-Sólo dentro de esa clase tiene sentido afirmar que un mismo lema vale para \(\zeta\) y falla fuera de línea. Un cuarteto insertado sin datos aritméticos compatibles prueba sensibilidad del lado de ceros, pero no falsifica deductivamente una desigualdad Euler–Gamma.
+Only within that class does it make sense to claim that the same lemma holds for \(\zeta\) and fails off the line. A quartet inserted without compatible arithmetic data proves sensitivity on the zero side, but does not deductively falsify a Euler–Gamma inequality.
 
-Una vez construida la clase, un lema candidato debe distinguir tres situaciones sin leer posiciones de ceros:
+Once the class is built, a candidate lemma must distinguish three situations without reading zero positions:
 
-1. los datos aritméticos de \(\zeta\), donde entrega el lower bound;
-2. un miembro de \(\mathcal C_{\rm Euler}\) con cuarteto fuera de línea, donde la excursión negativa crece geométricamente y el lema falla;
-3. un control sobre la línea, donde no prohíbe las oscilaciones positivas ni la suma de cuadrados.
+1. \(\zeta\)'s arithmetic data, where it delivers the lower bound;
+2. a member of \(\mathcal C_{\rm Euler}\) with an off-line quartet, where the negative excursion grows geometrically and the lemma fails;
+3. an on-line control, where it forbids neither positive oscillations nor the sum of squares.
 
-Si el lema vale también para el control fuera de línea, no puede cerrar \(\Omega_7\). Si su hipótesis
-equivale a real-rootedness, esa hipótesis pasa a ser una nueva obligación de fuerza-RH: debe demostrarse
-independientemente desde la estructura aritmética y no puede darse por supuesta.
+If the lemma also holds for the off-line control, it cannot close \(\Omega_7\). If its hypothesis
+is equivalent to real-rootedness, that hypothesis becomes a new RH-strength obligation: it must be proved
+independently from the arithmetic structure and cannot be assumed.
 
-### II.4 Puerta de salida
+### II.4 Exit gate
 
-Este carril continúa sólo si produce uno de estos objetos:
+This track continues only if it produces one of these objects:
 
-- una identidad firmada nueva que entregue el lower bound exacto sin valores absolutos;
-- una desigualdad unilateral estable bajo el límite del borde;
-- un principio variacional aritmético cuya hipótesis sea verificable desde Euler–Gamma y falle estructuralmente fuera de línea.
+- a new signed identity delivering the exact lower bound without absolute values;
+- a one-sided inequality stable under the boundary limit;
+- an arithmetic variational principle whose hypothesis is verifiable from Euler–Gamma data and fails structurally off the line.
 
-Una cota numérica de envolvente, un exponente ajustado o positividad para índices finitos no justifican una fase nueva.
+A numerical envelope bound, a fitted exponent, or positivity for finite indices does not justify a new phase.
 
-## Etapa III — prueba de atribución H0 para LP+IDENT
+## Stage III — H0 attribution proof for LP+IDENT
 
-Antes de atacar el discriminante hay que decidir qué partes son realmente neutrales.
+Before attacking the discriminant, it must be decided which parts are actually neutral.
 
-### III.1 Neutralidad de LP
+### III.1 Neutrality of LP
 
-Formular una clase abstracta \(\mathcal C_{\rm LP}\) que contenga tanto la construcción zeta como un control fuera de línea y que use sólo:
+Formulate an abstract class \(\mathcal C_{\rm LP}\) containing both the zeta construction and an off-line control, using only:
 
 \[
 H_L=D_L+B_L,\qquad
 D_L(n)=\log(1+|n|)+O_L(1),\qquad
-B_L\ \text{acotado},
+B_L\ \text{bounded},
 \]
 
-más hipótesis explícitas de compacidad y fuente.
+plus explicit compactness and source hypotheses.
 
-El objetivo no es medir discos, sino demostrar o refutar:
+The goal is not to measure disks, but to prove or refute:
 
 \[
 \mathcal C_{\rm LP}
@@ -511,17 +511,17 @@ El objetivo no es medir discos, sino demostrar o refutar:
 \|A_N(\mu_L)^{-1}b_N\|\longrightarrow\infty.
 \]
 
-Hay tres resultados posibles:
+There are three possible outcomes:
 
-1. se prueba para toda \(\mathcal C_{\rm LP}\): LP queda neutral;
-2. aparece un contraejemplo dentro de \(\mathcal C_{\rm LP}\): la formulación es falsa;
-3. la prueba necesita una propiedad aritmética que separa el control: LP también porta dificultad y la atribución exclusiva a IDENT queda refutada.
+1. it is proved for every \(\mathcal C_{\rm LP}\): LP remains neutral;
+2. a counterexample appears within \(\mathcal C_{\rm LP}\): the formulation is false;
+3. the proof needs an arithmetic property separating the control: LP also carries difficulty and exclusive attribution to IDENT is refuted.
 
-No se acepta sustituir \(\mu_L\) por \(\mu_{\rm ref}\) en la conclusión.
+Substituting \(\mu_L\) by \(\mu_{\rm ref}\) in the conclusion is not accepted.
 
-### III.2 Neutralidad de GAP-Z
+### III.2 Neutrality of GAP-Z
 
-Partir únicamente de la identidad demostrada
+Start only from the proved identity
 
 \[
 g_{N+2}-g_N
@@ -529,51 +529,51 @@ g_{N+2}-g_N
 \mathrm{ZERO}+\mathrm{MESH}+\mathrm{BND},
 \]
 
-con las cotas conocidas para MESH y BND. El problema exacto es una cota firmada y localmente uniforme para ZERO.
+with the known bounds for MESH and BND. The exact problem is a signed, locally uniform bound for ZERO.
 
-Primero debe probarse una dicotomía:
+First a dichotomy must be proved:
 
 \[
 \begin{cases}
-\mathrm{ZERO}\text{ se controla desde axiomas compartidos por ambos builds},&
+\mathrm{ZERO}\text{ is controlled from axioms shared by both builds},&
 \text{GAP-Z neutral};\\
-\mathrm{ZERO}\text{ requiere una identidad Euler específica},&
-\text{GAP-Z porta parte de la discriminación}.
+\mathrm{ZERO}\text{ requires a specific Euler identity},&
+\text{GAP-Z carries part of the discrimination}.
 \end{cases}
 \]
 
-Quedan prohibidos:
+The following are forbidden:
 
-- sumar magnitudes de shells antes de cancelar;
-- usar una firma que separa los builds como supuesto de convergencia;
-- inferir una ley desde un exponente ajustado;
-- transportar al límite una malla de \(N\) finitos.
+- summing shell magnitudes before canceling;
+- using a signature that separates the builds as a convergence assumption;
+- inferring a law from a fitted exponent;
+- carrying a mesh of finite \(N\) over to the limit.
 
-Esta etapa debe ser de triage: si no aparece un teorema abstracto corto o un contraejemplo, GAP-Z se mantiene abierto y se suspende. No se abre otra cascada de proxies.
+This stage must be a triage: if no short abstract theorem or counterexample appears, GAP-Z stays open and is suspended. No further proxy cascade is opened.
 
-### III.3 Resultado de atribución
+### III.3 Attribution outcome
 
-Sólo después de III.1–III.2, mediante un teorema build-neutral o un contraejemplo en las clases declaradas, se puede afirmar una de estas sentencias:
+Only after III.1–III.2, via a build-neutral theorem or a counterexample in the stated classes, can one of these statements be asserted:
 
 \[
-\boxed{\text{toda la fuerza está en IDENT}}
-\qquad\text{o}\qquad
-\boxed{\text{la fuerza está repartida o la ruta contiene un error}}.
+\boxed{\text{all the strength is in IDENT}}
+\qquad\text{or}\qquad
+\boxed{\text{the strength is distributed, or the route contains an error}}.
 \]
 
-H0 garantiza al menos un paso de fuerza-RH o falso. No garantiza exactamente uno mientras los demás pasos no estén demostrados.
+H0 guarantees at least one RH-strength or false step. It does not guarantee exactly one while the other steps remain unproved.
 
-## Etapa IV — fijar el único blanco RDI, si sobrevive la atribución
+## Stage IV — fix the single RDI target, if the attribution survives
 
-Si la atribución deja IDENT como separador, congelar todas sus coordenadas salvo una. La recomendación es usar el defecto covariante core porque:
+If the attribution leaves IDENT as the separator, freeze all its coordinates but one. The recommendation is to use the core covariant defect because it:
 
-- conserva el factor exterior correcto;
-- evita dividir en la curva singular;
-- mantiene la fuente Gamma–Euler completa;
-- se formula en \(\Re s>1\), donde el lado primo converge absolutamente;
-- admite un falsador fuera de línea dentro de una clase aritmética tipada.
+- preserves the correct outer factor;
+- avoids dividing on the singular curve;
+- keeps the full Gamma–Euler source;
+- is formulated at \(\Re s>1\), where the prime side converges absolutely;
+- admits an off-line falsifier within a typed arithmetic class.
 
-Esta etapa no autoriza una nueva reformulación del ancla. Sólo continúa si ya existe una identidad o desigualdad que aporte una estimación ausente en las coordenadas anteriores. En ese caso, el enunciado mínimo debe tener esta forma lógica:
+This stage does not authorize a new reformulation of the anchor. It continues only if there already exists an identity or inequality supplying an estimate absent from the earlier coordinates. In that case, the minimal statement must have this logical form:
 
 \[
 \textbf{ARITHMETIC-CORE-IDENT:}\qquad
@@ -582,98 +582,98 @@ C_{{\rm core},L,N}(s)
 0
 \]
 
-localmente en un conjunto seguro, con un orden de límites escrito y una derivada si la propagación la necesita. El nombre es provisional; el documento final debe escribir la fórmula completa, no esconderla bajo una sigla.
+locally on a safe set, with a written order of limits and a derivative if propagation needs one. The name is provisional; the final document must write out the full formula, not hide it under an acronym.
 
-El teorema debe satisfacer cinco condiciones:
+The theorem must satisfy five conditions:
 
-1. el lado izquierdo se calcula desde datos finitos CCM sin posiciones de ceros;
-2. su anulación se deriva de una identidad Euler–Gamma en convergencia absoluta, no se postula;
-3. la identidad conserva conjugación, soporte transversal y multiplicidad lineal;
-4. el control aritmético fuera de línea de la clase declarada falla por un cálculo estructural, no por un umbral ajustado;
-5. la prueba no usa positividad de Weil, real-rootedness, una métrica adaptada a raíces ni una suma absoluta de contribuciones primas.
+1. the left-hand side is computed from finite CCM data without zero positions;
+2. its vanishing is derived from a Euler–Gamma identity in absolute convergence, not postulated;
+3. the identity preserves conjugation, transverse support, and linear multiplicity;
+4. the off-line arithmetic control of the declared class fails by a structural computation, not by a fitted threshold;
+5. the proof uses neither Weil positivity, real-rootedness, a metric adapted to roots, nor an absolute sum of prime contributions.
 
-Probar este enunciado tendrá fuerza-RH. La meta no es volverlo “técnico”, sino encontrar una razón aritmética nueva por la cual sea verdadero.
+Proving this statement will have RH-strength. The goal is not to make it "technical," but to find a new arithmetic reason why it is true.
 
-## Etapa V — búsqueda de mecanismo, no de coordenada
+## Stage V — search for a mechanism, not a coordinate
 
-Tres clases candidatas actualmente identificadas, sin pretensión de exhaustividad, justifican trabajo nuevo.
+Three candidate classes currently identified, without claiming exhaustiveness, justify new work.
 
-### V.A Identidad global de cancelación
+### V.A Global cancellation identity
 
-Buscar una involución, coborde o relación funcional sobre el conjunto completo de celdas primas que haga desaparecer el defecto después del pareamiento correcto:
+Look for an involution, coboundary, or functional relation over the full set of prime cells that makes the defect disappear after the correct pairing:
 
 \[
 \sum_{p^k}\mathcal J_{p^k}(s)
-\quad\text{se reorganiza globalmente antes de tomar}\quad |\cdot|.
+\quad\text{is globally reorganized before taking}\quad |\cdot|.
 \]
 
-No sirve positividad por prima ni matching célula a célula. El mecanismo debe ser no local y retener los términos arquimedianos y de borde.
+Positivity prime by prime or cell-by-cell matching does not work. The mechanism must be non-local and retain the archimedean and boundary terms.
 
-### V.B Transporte firmado fase→corriente
+### V.B Signed phase→current transport
 
-Construir un teorema que transforme información aritmética de fases en la corriente covariante sin pasar por promedio:
+Build a theorem that transforms arithmetic phase information into the covariant current without going through an average:
 
 \[
-\text{datos Euler}
+\text{Euler data}
 \Longrightarrow
-\text{cancelación firmada del core}
+\text{signed cancellation of the core}
 \Longrightarrow
-\text{identificación segura}.
+\text{safe identification}.
 \]
 
-Debe exceder las clases tauberianas/locales ya cerradas y distinguir \(\zeta\) del control fuera de línea dentro de una clase tipada.
+It must exceed the already-closed Tauberian/local classes and distinguish \(\zeta\) from the off-line control within a typed class.
 
-### V.C Geometría externa
+### V.C External geometry
 
-Sólo reabrir la ruta geométrica si se construye primero un objeto independiente con diagonal, polarización y lector espectral. No se permite definir la estrella, métrica o correspondencia desde el divisor de \(\Xi\). Sin objeto nuevo, volver a Hodge/Lefschetz sería repetir RH9 y las fases 39–45.
+Reopen the geometric route only if an independent object with a diagonal, polarization, and spectral reader is built first. Defining the star, metric, or correspondence from the divisor of \(\Xi\) is not allowed. Without a new object, returning to Hodge/Lefschetz would repeat RH9 and phases 39–45.
 
-La prioridad recomendada es V.A, empezando por su versión directa unilateral de la Etapa II. Es la vía directa actualmente especificada que usa la estructura Euler–Gamma ya aislada sin pedir una geometría inexistente ni un promedio.
+The recommended priority is V.A, starting from its direct one-sided version from Stage II. It is the currently specified direct route using the already-isolated Euler–Gamma structure without requiring a nonexistent geometry or an average.
 
-## Etapa VI — puerta de novedad bibliográfica
+## Stage VI — bibliographic novelty gate
 
-Antes de desarrollar un lema candidato:
+Before developing a candidate lemma:
 
-1. escribir el enunciado sin terminología interna;
-2. identificar sus ingredientes clásicos;
-3. buscar en fuentes primarias por fórmula y mecanismo;
-4. comparar hipótesis y conclusión, no sólo palabras clave;
-5. registrar si es conocido, combinación conocida, variante real o nuevo.
+1. write the statement without internal terminology;
+2. identify its classical ingredients;
+3. search primary sources by formula and mechanism;
+4. compare hypothesis and conclusion, not just keywords;
+5. record whether it is known, a known combination, a real variant, or new.
 
-Hasta pasar esta puerta, toda etiqueta “nueva matemática” queda como **NOVEDAD NO CERTIFICADA**.
+Until this gate is passed, every "new mathematics" label remains **UNCERTIFIED NOVELTY**.
 
-## Etapa VII — falsación previa a una fase
+## Stage VII — falsification prior to a phase
 
-No se abre otra fase hasta tener un candidato que pase:
+No further phase is opened until there is a candidate that passes:
 
-| Prueba | Requisito |
+| Test | Requirement |
 |---|---|
-| Off-line | Debe fallar en un control aritmético fuera de línea dentro de una clase tipada; un cuarteto plantado aislado sólo da falsación heurística. |
-| On-line | Debe ser compatible con el control sobre la recta sin usar sus ceros. |
-| Información | Debe preservar conjugación y multiplicidad lineal. |
-| Límites | Debe declarar y justificar el orden \(N\), \(L\), borde. |
-| No-go | No puede ser Gram tautológica, positividad finita, gap único, smoothing, pseudoinversa, un nivel de momentos o producto de trazas. |
-| Independencia | Puede demostrar y usar una condición equivalente a RH, pero no asumirla: debe derivarla independientemente desde los datos permitidos. |
-| Novedad | Debe superar la comparación bibliográfica por mecanismo. |
+| Off-line | Must fail on an off-line arithmetic control within a typed class; an isolated planted quartet only gives a heuristic falsification. |
+| On-line | Must be compatible with the on-line control without using its zeros. |
+| Information | Must preserve conjugation and linear multiplicity. |
+| Limits | Must state and justify the order of \(N\), \(L\), boundary. |
+| No-go | Cannot be a tautological Gram matrix, finite positivity, a single gap, smoothing, a pseudoinverse, one level of moments, or a product of traces. |
+| Independence | May prove and use a condition equivalent to RH, but not assume it: it must derive it independently from the allowed data. |
+| Novelty | Must pass the bibliographic comparison by mechanism. |
 
-Si falla una puerta, se registra en este dossier; no se abre un nuevo directorio de fase. Una fase nueva sólo se justifica cuando aparece un nuevo grado de libertad matemático, no otro nombre para el ancla.
+If a gate fails, it is recorded in this dossier; no new phase directory is opened. A new phase is justified only when a new mathematical degree of freedom appears, not another name for the anchor.
 
-## Orden de esfuerzo recomendado
+## Recommended order of effort
 
-1. **Completado:** corregir el ledger, el blanco primo, paper 36 y la separación de objetos.
-2. **Completado:** fijar la fórmula aritmética unilateral con todos sus términos de continuación y borde.
-3. **Completado:** cerrar con intervalos racionales los siete índices del rango arquimediano excepcional.
-4. Pasar la puerta bibliográfica para la fórmula y para cada mecanismo firmado propuesto.
-5. Atacar A0, la cola uniforme Mellin--Laguerre, y después A1, el núcleo firmado global de los puntos
-   12--13.
-6. Probar simultáneamente el límite de borde, la cola firmada y la uniformidad en \(n\).
-7. Si aparece una cota absoluta demostrable de fuerza-RH, perseguirla: aunque sea más fuerte que el
-   blanco mínimo, cerraría igualmente \(\Omega_7\).
-8. **Completado:** ejecutar un triage corto de LP/GAP-Z. Resultado: el carril B no aporta todavía un
-   mecanismo de signo literal; queda suspendido salvo aparición de un puente RDI-to-Li o RDI-to-realidad.
-9. Fijar una sola fórmula de RDI-ANCHOR/core si el carril B produce un enlace explícito con Li.
-10. Volver a colas y puentes downstream únicamente como parte de una cadena completa hasta el punto 25.
-11. Ensamblar los rangos finito e infinito y aplicar el criterio de Li.
+1. **Completed:** correct the ledger, the prime target, paper 36, and the separation of objects.
+2. **Completed:** fix the one-sided arithmetic formula with all its continuation and boundary terms.
+3. **Completed:** close, with rational intervals, the seven indices of the exceptional archimedean range.
+4. Pass the bibliographic gate for the formula and for every proposed signed mechanism.
+5. Attack A0, the uniform Mellin–Laguerre tail, and then A1, the global signed core of points
+   12–13.
+6. Simultaneously prove the boundary limit, the signed tail, and uniformity in \(n\).
+7. If a provable absolute bound of RH-strength appears, pursue it: even if stronger than the
+   minimal target, it would equally close \(\Omega_7\).
+8. **Completed:** carry out a short triage of LP/GAP-Z. Result: track B does not yet supply a
+   literal sign mechanism; it remains suspended unless an RDI-to-Li or RDI-to-reality bridge appears.
+9. Fix a single RDI-ANCHOR/core formula if track B produces an explicit link to Li.
+10. Return to downstream tails and bridges only as part of a complete chain up to point 25.
+11. Assemble the finite and infinite ranges and apply Li's criterion.
 
-Esta secuencia concentra el esfuerzo en el primer enunciado todavía abierto que puede entregar el signo
-global. No excluye una ruta por ser más fuerte o equivalente a RH; exige que cada ruta llegue, mediante
-una prueba, a la desigualdad final.
+This sequence concentrates the effort on the first still-open statement that can deliver the global
+sign. It does not exclude a route for being stronger than, or equivalent to, RH; it requires that every route arrive, via
+a proof, at the final inequality.

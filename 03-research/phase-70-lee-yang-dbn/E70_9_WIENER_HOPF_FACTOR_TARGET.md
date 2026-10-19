@@ -1,7 +1,6 @@
 # E70.9 — Wiener-Hopf factorization target for AHM
 
-**Date:** 2026-07-07.
-**Role:** formulate the strongest possible operator proof shape after local and Abel routes reduce to
+**Purpose:** formulate the strongest possible operator proof shape after local and Abel routes reduce to
 the boundary problem.
 
 ## Operator target

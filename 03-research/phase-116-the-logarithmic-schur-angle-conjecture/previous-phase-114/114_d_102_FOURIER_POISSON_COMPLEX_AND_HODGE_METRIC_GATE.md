@@ -102,7 +102,7 @@ contributes zero to every additive Euler/supertrace character.
 On even functions `F^2=I`, and `F` preserves `H_cap`.  Poisson summation is
 
 \[
- Zf=\mathscr JZ\mathcal Ff,qquad f\in\mathcal H_\cap.     \tag{2.3}
+ Zf=\mathscr JZ\mathcal Ff,\qquad f\in\mathcal H_\cap.     \tag{2.3}
 \]
 
 Consequently the range involution

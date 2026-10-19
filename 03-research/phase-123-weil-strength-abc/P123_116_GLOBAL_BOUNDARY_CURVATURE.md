@@ -1,6 +1,6 @@
 # P123.116 — Boundary Gram curvature at every amplitude and its fixed kernel
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY, conditional only on
+Status: PROVED-IN-REPOSITORY, conditional only on
 explicit operator and stabilization constructions P123.110–115 on their
 declared test domains. This is not a metric comparison with arithmetic RR.
 

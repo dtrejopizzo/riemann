@@ -1,0 +1,284 @@
+import json,collections,re
+P='/home/trabajo/Documentos/research/riemann/03-research/phase-162-row-d-first-contact-closure/grid/'
+d=json.load(open(P+'R162_2300_MASTER_grid.json'))
+S={'P':'PINTADA','R':'MUERTA_CON_RESIDUO','A':'ABIERTA','V':'VACIA'}
+SYM={'P':'■','R':'◩','A':'◧','V':'□'}
+# cell: (code, [live residuals], comment)
+C={
+'1A':('R',['λ_W>0 más allá de ½log5 (P47 Open 5): certificado, no mecanismo; choca con M','Conjetura C_B (34/91) → vive en 8F'],'B3-KREIN y 34/91 absorbidos por E1'),
+'1B':('R',['R161_011 (4.2) rango de Sonin global (R161_011; R162_1201): sumidero E1 de las columnas B/C'],'P121 corriente/colar = herramientas'),
+'1C':('P',[],''),
+'1D':('P',[],'64 C,D herramienta (vale para DH)'),
+'1E':('A',['Conj. A.15 (phase-28/01): Λ=max b_j²/2, monotonía del índice de Kreĭn bajo dBN, 0 citas posteriores','D-109 anclaje crítico (37/109): partición falsable, sin mecanismo'],'polarcap 156 → 703 (cerrado)'),
+'1F':('P',[],'2200 lo daba □; tiene 6 rutas DEAD [E1/F3]'),
+'1G':('R',['conversos/Hamburger como mecanismo de signo en familia (sólo diccionario en 1203); debe ser uniforme en el cuerpo (T1)'],'2200 lo daba □'),
+'1H':('A',['P122_D_SPECIFICATION: correspondencia relativa E_(∞,T) Bohr↔cuarto-Γ Calderón (L6), nunca construida','P25 V.2: completación de Pontryagin con caracteres x^{b+iγ} (puente κ(Q)=ind₋ H_C)','P152.1 Dolgopyat para Mayer vía Lewis–Zagier (sólo EXCL de escritorio en 157)'],''),
+'2A':('R',['semilocal global de CC (phase-5/B2) — sin correr; coincide con PATH-TO-D (ii) en 8D','115_13-16 derivada de fase de traza de Sonin semilocal: signo favorable, identidad exacta inexistente'],'P35 L1 = ε₀≥0 (E1)'),
+'2B':('P',[],'60 CCM: último eslabón ε₀≥0 ⟺ RH'),
+'2C':('P',[],''),'2D':('P',[],''),
+'2E':('P',[],'Pick/Schur: pasividad en ω→0 = RH'),
+'2F':('R',['monotonía completa / Bernstein de λ_A(T) o de su transformada como objeto global (2200)'],'2200 lo daba □; 4 rutas DEAD'),
+'2G':('A',['P46 §28.4: objeto de seis cláusulas sobre el cuadrado adélico — ningún candidato construido','T3 Beurling (150): condicional a H-DMV, ya CITADA (157)'],''),
+'2H':('A',['phase-15/M10: variedad testigo de Arakelov 𝒳 (no construida)','PHASE_136 S5: índice de Hodge tropical de Cartwright a nivel de carta (nunca corrido)'],''),
+'3A':('A',['P47 Problema A: cota inferior dependiente de la clase (sólo techos probados)','R154_030: ventana de dos primos en 0.58, paquete off-machine (numérico; regla del dueño)','S1 (141.G1/199): aritmética por ventana más allá de Montgomery–Vaughan — techo 172.9, antecesor de M'],'114 ½log5 → HECHO en R162_303/703'),
+'3B':('P',[],'continuidad λ_A y tasa 407 = herramientas'),
+'3C':('R',['Opción 3 de R160_020: cota con signo uniforme en T del bloque de baja frecuencia fuera del vector de contacto (M7 Prop 5.2(c) sugiere E1)'],'C_D (34/93) sin soporte'),
+'3D':('A',['GAP-196.A: casi-dobles de Λ_f de DH bajo el espaciamiento medio (nunca atacado)','22/03 rigidez GMC (condicional)'],'LP-134 muere a escala 1/log T'),
+'3E':('A',['GAP-157.A: discrepancia del flujo de Kronecker (2 de 3 rutas muertas; implicación central sin decidir)'],'Torre 1: A ⟹ Lindelöf; Dic indetectable (198.2)'),
+'3F':('R',['A1 (103_13, Laguerre de ψ−x, n≥8): abierto pero de fuerza RH (105: cota subexponencial = RH)','transformada global no lineal (Mellin en T) (2200)'],'2200 lo daba □; 10 rutas DEAD'),
+'3G':('P',[],''),'3H':('P',[],''),
+'4A':('A',['GAP-135.A / doc 148: marcos inconmensurables (Seip, Olevskii–Ulanovskii), nunca retomado','159 G2_B8 Thms L,L′,L″,D: umbral local de Euler ½log3≤T_loc≤0.5925, sin auditar'],'Thm A 153 separa sólo de Ξ_a'),
+'4B':('R',['portador distribucional (83–84, ker X=span δ₀) no excluido por la obstrucción de dominio','corte mínimo A1–D3 (phase 80) — el ancla es ⟺ RDI (93, E1)'],''),
+'4C':('R',['doc 107 (Weil en dos variables, "CANDIDATO VIVO"): parece absorbido por 108 (E1) y MW-7 — NO CONFIRMADO','R160_020 Opción 6 (clase mixta S+D de Meyer): nunca corrida; D2 la declara estéril'],''),
+'4D':('A',['Conjetura de exclusión (21/01-02): todos en la recta o infinitos fuera; ni probada ni refutada, nunca retomada'],''),
+'4E':('A',['P30: lemas L8 (m<∞) + LP-112 (rigidez secuencial); ambos abiertos, no ⟺ RH','90: corriente de Kato proyectiva PROJECTIVE-KATO-EULER','flujo de inserción primo a primo acoplado por Euler (2200)'],'2200 lo daba □'),
+'4F':('R',['objeto generador global con Euler entrando antes de regularizar (2200) — nunca intentado'],'única ruta: 103_16-21 (cinco no-gos de truncación)'),
+'4G':('P',[],'T2 herramienta'),
+'4H':('A',['phase-27: rigidez adélica local-global, paredes A y B abiertas (objetos, no signos)','36/106+38/117 functor amplificador ⊠ con correcciones'],''),
+'5A':('R',['Problema A (P47) — mismo residuo que 3A'],''),
+'5B':('P',[],''),
+'5C':('A',['funcional discontinuo que separe ℤ de Beurling y 1 de χ₂, no invariante unipotente (residuo de R162_903)'],''),
+'5D':('R',['integralidad en el espectro: multiplicidades / forma de Smith del Gram de contacto (2200)'],'2200 lo daba □; 3 rutas DEAD'),
+'5E':('A',['O1802.3: ancho ≥0 de la ventana de residuo vía integralidad NO lineal en c, seguido en T (1902 cerró sólo la lineal)'],''),
+'5F':('V',['periodización/Poisson en la variable T de un objeto global (2200)'],'única celda realmente vacía'),
+'5G':('P',[],'2200 lo daba □; 107 atlas c_p, mod-32, anillo de Galois 147'),
+'5H':('A',['o-minimalidad / Pila–Wilkie / rigidez de medidas ×p frente a W_T (157: EXCL sólo de escritorio)','cociclo de torsión Φ_Λ (R162_1001) con tests no band-limited','THE_BACKWARD_MAP a4/R16 (χ cuadrático sobre Spec ℤ)','Quillen K_n(ℤ)/reguladores, RO(G), A¹-motívico (AUDIT_A §3), intactos','P42 programa de Lefschetz aritmético: argumento global de signo abierto'],''),
+'6A':('A',['157 O3 lem:degen: caso degenerado (Λ maximiza V_T cóncavo), intacto','O-D4.2: núcleo de 𝒲 / cono 𝒞′ en tests decrecientes de soporte no acotado'],''),
+'6B':('A',['P47 prob:annihilate = Gate 1 de phase 162 (aniquilación de momentos Γ en el primer contacto)'],'todas las rutas de 162 en la celda muertas'),
+'6C':('A',['R162_901: canal diferencia |Σw_n n^{it}|² de Selberg en el borde, sin resumar a Σ_ρ'],''),
+'6D':('A',['155 P2: identidad estructural para S_even en log 2 ("ninguna identidad intentada")'],''),
+'6E':('P',[],''),
+'6F':('A',['P47 Problema B: certificado aritmético w_T desde primos exteriores (sin construcción)','114 D.260-262: canal Chebyshev centrado dΨ−dx, residuo exacto, signo abierto'],'A1 = E1'),
+'6G':('R',['separador de coeficientes 119 (P0/P1/P2) separa ζ de DH pero no basta'],'2200 lo daba □'),
+'6H':('R',['Opción 6 / O-B5.1′ Borger W(R): nunca construida (C4 sólo la reformuló)','P40 excedente estricto g>δ — es el signo (E1)'],'2200 lo daba □'),
+'7A':('A',['D.16-γ (138): cono cortado por el dato de ceros en la clase 𝒫 (forma reparada R138_004 C2), nunca intentado'],'122 dos compuertas fallan para Ξ_a'),
+'7B':('R',['159 G2_B6_R4 unicidad BRS mod Lemma S (sin auditar), Thm X punto extremo sin auditar'],'121 F2 = cuadrado global'),
+'7C':('R',['funcional no lineal con correlación de pares como input exacto (2200)'],'2200 lo daba □; P121 D_T^crit = cuadrado global'),
+'7D':('R',['R-C.b para ζ necesita input del lado de ceros; por ventana choca con M (2101, 2190)','P23: inclusión inversa J_∞ ⊂ ceros de C_∞'],''),
+'7E':('A',['77–80: (c) compatibilidad de pencil, (d) clase ℓ², (e) simplicidad, (f) ensamblaje, FIXED-L-WEYL, SAFE-GAMMA-IDENT','P19 Hyp D: m<∞ ⟹ m=0 (C_B; ver 8F)'],''),
+'7F':('A',['KEP: parametrización de Nevanlinna de 𝔖(T) a través de T (nunca escrita)','P33: finitud A y pureza D del Cesàro −π/8'],'803 = Herglotz (E1)'),
+'7G':('P',[],''),
+'7H':('A',['113_12 Ansatz A: χ(D)=D²/2 (implica RH, pasa los tests, nunca atacado)'],''),
+'8A':('A',['auditoría pendiente: 159 G2_B8_R5 Thm L″, G2_B2_R4 Thm U, R5 (Lemma S, Cor M1, Prop J)','GAP-198.1: combinaciones inter-moneda no factorizables fuera de 𝔄'],''),
+'8B':('A',['R160_X_C1: testigo negativo rígido de Blaschke (CF/CvS) en el primer contacto, sin margen'],'R162_408 (NE) exacta = herramienta'),
+'8C':('A',['O-151.4: eje sumando-vs-numerador como mecanismo (nunca desarrollado)'],''),
+'8D':('A',['PATH-TO-D (ii): A_T como compresión de un operador autoadjunto explícito (CC semilocal)','115_15: conteo de Sonin de Connes–Consani #{λ_j(K_I)>1}'],'R-C.b muerta por la curva de Tipo I (2001/2190)'),
+'8E':('R',['92 CA-1 convergencia L fija; Ω₇ (66) falla en el extremo crítico'],'P39 gap sin corte ⟺ objetivo'),
+'8F':('A',['dicotomía m<∞ ⟹ m=0 (37/112-113, 38/115-116, LP-112, Stepanov): un solo lema, no ⟺ RH'],'P29 cuantificador maestro = herramienta/muro'),
+'8G':('R',['pruebas uniformes en el cuerpo permitidas por T1 (157)'],'2200 lo daba □'),
+'8H':('A',['160 D1: laminación Torelli-failing con puntos fijos (única clase de portador no excluida por Thm Z/Thm H)','28/02 η-invariante APS; 28/03 clase [H_C] en KK','108 Stage 7 compatibilidad de escala','triples de frontera para W_λ / unicidad de B_CCM (AUDIT_CONSOLIDATED §2)','121 ley de conservación del flujo de Kreĭn (L4/M11)','42/128 Deninger con foliación Kähler–Riemann','159 sin auditar: DK_α no ergódico, Prop BL ℤ[ℚ/ℤ]'],''),
+}
+
+# ---- part6 (phases 160-161 sub-audit) merge + corrections----
+import os
+ids={r['id'] for c in d['cells'] for r in c['routes']}
+cmap={f"{c['row']}{c['col']}":c for c in d['cells']}
+p6=P+'R162_2300_part6.jsonl'
+if os.path.exists(p6) and not d.get('part6_merged'):
+    for l in open(p6):
+        if not l.strip(): continue
+        x=json.loads(l)
+        if x['id'] in ids: continue
+        x['source_part']=6; cmap[f"{x['row']}{x['col']}"]['routes'].append(x); ids.add(x['id'])
+    d['part6_merged']=True
+for c in d['cells']:
+    for r in c['routes']:
+        if r['id']=='R161_016': r['killer']='F2'; r['note']=(r.get('note','')+' [corregido por part6: killer F2 (orientación), no F1]').strip()
+        if r['id'] in('R161_018',) or r['id'].startswith('R161_008-011,017-018'):
+            r['note']=(r.get('note','')+' [R161_075: la exclusión general por límite lineal está "sin probar tal como está escrita"]').strip()
+        if r['id']=='R161_068-070': r['note']=(r.get('note','')+' [069 no es no-go: corregido por 070]').strip()
+upd={
+'1C':('R',['R161_020-021: objetivo terminal escalar X_T=½‖(I+εC_log)g‖², no realizado desde (PC-ren) finito'],'antes ■'),
+'1D':('A',['NG-D4 / I15: identidad Q(f,g)+Q(f̂,ĝ)=0 (anticonmutación de Fourier), planteada y nunca atacada','phase-60 §4.B: triples de frontera para W_λ (deficiencia (4,4)), RH-neutral, nunca intentados'],'antes ■'),
+'2C':('R',['P41 thm:doob: corredor no local con signo, nunca ejecutado (E1: RH ⟺ un Poincaré agudo)'],'antes ■; R161_026-028 F3 (Λ≥0 no basta)'),
+'2E':('A',['prop:polarcap: capacidad polar 𝔊_T como función de T (S^Sch≈−J), nunca analizada en T; seguimiento D3 de M4 nunca corrido','P47: desplazamiento de ventana efectivo RD_{T′} ⟹ λ^W_T≥0 (a nivel comb exige T′≥T*_{∞,P})'],'antes ■'),
+'3F':('A',['GAP-157.A tauberiano no local con input LI (F40; Beurling–Malliavin sobre p^{iτ})','rem:Dgrade: unión de técnicas graduadas y de cola'],'A1 = fuerza RH; antes ◩'),
+'4C':('A',['doc 107 / I7: forma de Weil en dos variables W_2 (bloque primo×primo con signo +; Lemma 5.2 abierto) — S1 lo lista vivo; absorción por 108 NO CONFIRMADA','L5 (114): Z_{N,ε} con R=Z*Z sin pseudoinversa, nunca construido','G2_B3_R5 Cor S2: álgebra tipo Hecke en L²(ℝ) con multiplicadores arquimedianos (cuadrado acoplado), sin candidato','R160_020 Opción 6 (Meyer S+D): nunca corrida; D2 la declara estéril','R161_030-032: fuente de la puerta de varianza orientada abierta'],'antes ◩'),
+'4D':('A',['Conjetura de exclusión (21/01-02)','R161_068-070: detector Γ–Euler −ζ′/ζ(2m+1), fiel; comparación primitiva de Weil abierta (069 corregido por 070, no es no-go)'],''),
+'4E':('A',['P30: L8 + LP-112','O8 (61) / S2 §3.2: sistema canónico de transferencia de Tate 2×2, colapso de índice κ₀+|S|→0 (parcialmente construido)','R153_005 Thm A término cruzado como mecanismo de signo uniforme en T (P153.2), nunca intentado','90 PROJECTIVE-KATO-EULER'],''),
+'4F':('A',['GAP-157.A: condición C1 del Doc 159 (tauberiano no local), ni conocida ni excluida','objeto generador global con Euler antes de regularizar (2200)'],'antes ◩'),
+'5F':('A',['R161_075-079: límite de Weil local / dominio de Poisson / renormalización débil en L² primitivo — límite construido (resto PNT), valor no probado nulo, radicalidad no preservada'],'antes □ (única vacía); part6 la llena'),
+'6E':('A',['G2_B6_R5 Prop C: cono puntiagudo RH-libre de perturbaciones rígidas C≠{0}','P153.14 admisibilidad escalonada de banda de Kreĭn del átomo w_N (sólo N=3,4,5 medidos; uniforme = RH)'],'antes ■'),
+'6G':('A',['O-D4.3: transposición de la identidad (C′) a ζ_K, rutinaria, nunca hecha','separador 119 (P0/P1/P2) insuficiente'],'antes ◩'),
+'6H':('A',['Paper 43 Thm 10.8b: pairing de reglado hiperbólico global de Mertens (excluido de la fila A por A.10, no de la fila D)','106.203-205: frontera de Tate cargada con masa corregida log p/p^{k/2} (completación resonante no isométrica)','O-B5.1′ Borger W(R) sin construir'],'antes ◩'),
+'7D':('A',['Diana L8/C_B/EX: m≤C cuádruples; m<∞ ⟹ m=0 (ver 8F)','phase-69: índice con signo de Cayley invariante gauge (nombrado, no construido)','R-C.b para ζ necesita input del lado de ceros (2101)'],'antes ◩'),
+'8B':('A',['R160_X_C1 testigo negativo rígido de Blaschke (clase-nivel: pasa Λχ₂ y comb; exclusión OS-1 = RH)','slot M11 (nunca escrito): traza de monodromía de métrica opuesta como ley de conservación'],'R161_016: killer corregido a F2'),
+'8G':('R',['pruebas uniformes en el cuerpo (T1)','36/106 amplificación tensorial: falta sub-lema R-FIN de finitud'],''),
+'5H':('A',C['5H'][1]+['Paper 44 §6bis: retículo desde la sombra integral Sh_Z con I_A finito','Paper 43 §11bis: correspondencias no invertibles (grafos de grado q)'],''),
+'8H':('A',C['8H'][1]+['Pedido 122.A: autodualidad natural de H¹(D) en 2D=K','I14 (40/123): complejo de Čech de D_0, nunca ejecutado','R158_001 portador laminado con puntos fijos + polarización ALK'],''),
+'2H':('A',C['2H'][1]+['S1 I1: modelo OS entrelazado (no producto) de todo W_T, nunca intentado','Chinburg–Rumely: energías fuera de 𝔄⁺ (núcleos de Berkovich), no leídas'],''),
+'4A':('A',C['4A'][1]+['Paper 44 (H_L): primitiva negativa en perfiles de Dirichlet'],''),
+'4H':('A',C['4H'][1]+['Paper 44 Thm 8bis.4a: versión colimite L1 de la forma de Frobenius pura','I11 (34/96): torsión de canal absorbente / curvatura simpléctica'],''),
+'8C':('A',C['8C'][1]+['Lemma 108: cota κ_W(Q_2)≤C n_W (no ⟺ RH), nunca atacada'],''),
+'6A':('A',C['6A'][1],''),
+'3A':('A',C['3A'][1]+['S5 §5#14: hit web "Certified Weil positivity beyond the unit window" sin leer','I6 (36/108): cota de dimensión del bloque negativo bajo resolución'],'114/D.172 (½log5 antiguo) DEGRADADO; los certificados de 162 en ½log5 (303/391 primitivo, 703/791 completo; Arb, reruns de auditoría completos) son independientes de D.172'),
+}
+C.update(upd)
+
+# ---- part7 (phase 162 rounds 22-24: R162_2201, 2202, 2301, 2302, 2401, 2402) merge----
+p7=P+'R162_2300_part7.jsonl'
+if os.path.exists(p7) and not d.get('part7_merged'):
+    for l in open(p7):
+        if not l.strip(): continue
+        x=json.loads(l)
+        if x['id'] in ids: continue
+        x['source_part']=7; cmap[f"{x['row']}{x['col']}"]['routes'].append(x); ids.add(x['id'])
+    d['part7_merged']=True
+H90=' [R162_2290 de auditoría: 2201 Thm N3 degradado a proposición sobre las tres rutas listadas (F6); N1(a) factor 2, N1(b) sólo ⟹; 2202 Thm NI correcto (sólo n<e^{T_c}); Thm ND requiere ι-invariancia (F12); ejemplo de Prop T falso (F11)]'
+for c in d['cells']:
+    for r in c['routes']:
+        if r['id'] in('R162_2201a','R162_2201b','R162_2201c','R162_2202a','R162_2202b') and 'R162_2290' not in r.get('note',''):
+            r['note']=(r.get('note','')+H90).strip()
+        if 'R160_X_C1' in str(r['id']) and r['status'] in('OPEN','PARTIAL'):
+            r['status']='DEAD'; r['note']=(r.get('note','')+' [superada por R162_2201/2202/2401 (part7)]').strip()
+d['part7_tools']=['Thm NI (2202): w_x=L(x)/F̂′(x), sólo n<e^{T_c}','Thm ND (2202, con ι-invariancia): no hay descenso','Thm N1 (2201): objeto atómico 𝒜(s;G)=Σq_x(−ζ′/ζ)(s+ix)','Lemma S (2301): identidad de Selberg ⟺ a=Λ (recursivo)','Thm Q (2301): cuadratura nodal exacta en tipo ≤2T_c (Akhiezer)','Thm HV (2401): H = canal suma de la media testigo','Lemma U (2401): testigo+μ^< determinan el peine oculto','Thm N (2302): límite débil ≡0 vía ζ(1−ρ)=0','Thm V (2302): radicalidad ⟺ Gate 1']
+upd7={
+'8B':('R',['O2201.1: peso nodal asimétrico = Z′/Z con signo en los nodos (lado de ceros)','slot M11 (nunca escrito): traza de monodromía de métrica opuesta'],'part7: Blaschke–torsión MUERTA (R162_2201a/c, 2401a); antes ◧'),
+'5C':('R',['O2201.1: peso nodal asimétrico = Z′/Z con signo (lado de ceros)'],'part7: R162_2201b MUERTA (FE + simetría nodal borran los átomos); antes ◧'),
+'6C':('R',['OS-2: paridad del testigo (Prop P2 de 2401: H(F^ev)=−H(F^odd); sólo la paridad fija el signo)'],'part7: R162_2301 (Lemma S, Thm Q) + 2401 cierra O2202.2; antes ◧'),
+'5F':('R',['O2302.2: c_f≠0 desde la integralidad (momento de Tate exterior izquierdo en el radical)','O2302.1: resto a N finito (tipo Li, E1 esperado)'],'part7: R162_2302 Thm N (límite ≡0 vía ζ(1−ρ)=0), Thm V; antes ◧'),
+'5H':('A',[x for x in C['5H'][1] if not x.startswith('o-minimalidad')],'part7: o-minimalidad/Pila–Wilkie MUERTA (R162_2402: W10+W8)'),
+'6B':('A',C['6B'][1]+['O2202.1: versión [prim] de Thm NI'],'part7: Thm NI herramienta; auto-semejanza Euler/Möbius MUERTA (2202b)'),
+'7D':('A',C['7D'][1]+['O2401.1: tamaños individuales de V(F_M), H(F_M)'],'part7: margen de Thm M no viene de contactos ocultos (2401b)'),
+}
+C.update(upd7)
+
+# ---- part8 (phase 162 rounds 25-26: R162_2501, 2502, 2601, 2602 + audit 2590) merge----
+p8=P+'R162_2300_part8.jsonl'
+if os.path.exists(p8) and not d.get('part8_merged'):
+    for l in open(p8):
+        if not l.strip(): continue
+        x=json.loads(l)
+        if x['id'] in ids: continue
+        x['source_part']=8; cmap[f"{x['row']}{x['col']}"]['routes'].append(x); ids.add(x['id'])
+    d['part8_merged']=True
+SUP8={'R161_068-070':'R162_2502','phase-115/115_15':'R162_2602b','PATH-TO-D (ii)':'R162_2602a','phase-37/112-113 +38/115-116':'R162_2501'}
+H2590=' [R162_2590 de auditoría: nada WRONG; 2501 Prop 1 cota superior reparada (θ en elipse), ley 2β* vale; M_m correcto (2m pares); Prop 3 E restringida a tipo cuarteto; 2502 Thm K sólo "(4.1) al menos tan fuerte como Gate 1"]'
+for c in d['cells']:
+    for r in c['routes']:
+        if r['id'] in SUP8 and r['status'] in('OPEN','PARTIAL'):
+            r['status']='DEAD'; r['note']=(r.get('note','')+f' [superada por {SUP8[r["id"]]} (part8)]').strip()
+        if r['id'] in('R162_2501','R162_2501a','R162_2501b','R162_2502','R162_2502a') and 'R162_2590' not in r.get('note',''):
+            r['note']=(r.get('note','')+H2590).strip()
+d['part8_tools']=['Ley de exponente (2501a): bajo H(m) lim (1/T)log(−λ_A)=2β*, piso −4e^T','Modelo M_m (2501b): ξ × factores de cuartetos, κ=κ(ζ)+4m, comparte toda la estructura de clase','Thm K (2502a): comparación fiel sin división ⟺ Gate 1, ‖K_T‖≥c/λ(T)','Thm T (2601b): m=0 ⟺ D temperada; tipo exponencial de D mód S′ = β*','Rigidez de Hamburger (2601c): log-derivada atómica + EF conductor 1 + orden finito ⟹ F=cζ (citada de memoria)','Conteo de Sonin N(T) (2602b): n₋(A_T|P_T) no decreciente, primer salto = primer contacto, lím N=2κ_off']
+O26='O2601.1: propiedad individual del producto de Euler de ζ que use los valores exactos de Λ de forma no lineal y acote el conteo fuera de la recta (falla para deletion, M_m, Λ̃)'
+upd8={
+'4D':('A',['Conjetura de exclusión (21/01-02): todos en la recta o infinitos fuera — es C_B, converge a O2601.1'],'part8: detector Γ–Euler R161_068-070 NO-GO (R162_2502 Thm D/K, Prop A); residuo plegado en R162_1603 (d)'),
+'8F':('R',[O26],'part8: ruta (a) de C_B MUERTA (R162_2501: ley 2β*, modelo M_m, Thm 3); O2501.1 falsa tal como estaba (2601a, Λ̃); antes ◧'),
+'8D':('R',[O26+' (= O2602.1: sup N<∞ ⟹ N≡0)','O2602.2: ¿δ=2?'],'part8: R162_2602 PATH-TO-D (ii) y conteo de Sonin CC MUERTOS (E1/F3); antes ◧'),
+'7E':('A',[x if not x.startswith('P19 Hyp D') else 'P19 Hyp D: m<∞ ⟹ m=0 (C_B) → O2601.1 (8F)' for x in C['7E'][1]]+['O2501.2: e<1 ⟹ Θ<1 sin finitud'],'part8: ley de exponente 2β* (2501a) herramienta'),
+'5F':('R',C['5F'][1],C['5F'][2]+'; part8: atomicidad no excluye E (2601a, falsificador Λ̃)'),
+}
+C.update(upd8)
+# ---- part9 (phase 162 rounds 27-28: R162_2701, 2702a-c, 2801, 2802 + audit 2890) merge----
+p9=P+'R162_2300_part9.jsonl'
+if os.path.exists(p9) and not d.get('part9_merged'):
+    for l in open(p9):
+        if not l.strip(): continue
+        x=json.loads(l)
+        if x['id'] in ids: continue
+        x['source_part']=9; cmap[f"{x['row']}{x['col']}"]['routes'].append(x); ids.add(x['id'])
+    d['part9_merged']=True
+SUP9={'R160_S2 §3.2 phase-61 O8':'R162_2701','phase-36/107':'R162_2702a','R160_S1 §5 I7 phase-36/107':'R162_2702a','R160_S1 §2.5#35 phase-28/02 NG-D4':'R162_2702c','R160_S2 §3.2 phase-60 §4.B':'R162_2702b'}
+for c in d['cells']:
+    for r in c['routes']:
+        if r['id'] in SUP9 and r['status'] in('OPEN','PARTIAL'):
+            r['status']='DEAD'; r['note']=(r.get('note','')+f' [superada por {SUP9[r["id"]]} (part9)]').strip()
+        if r['id']=='R162_2701' and 'R162_2890' not in r['note']:
+            r['note']=r['note'].replace('phase-61 kappa0+|S| = free back-propagation artefact, uncertified grid count','phase-61 kappa0+|S|: uncertified; index 0 after normalization')+' [R162_2890 de auditoría: la afirmación "artefacto" es WRONG; se reemplaza por "no certificado; índice 0 tras normalizar"; NO-GO se mantiene]'
+        if r['id']=='R162_2702b' and 'R162_2890' not in r['note']:
+            r['status']='DEAD'
+            r['note']+=' [R162_2890 de auditoría: WRONG — ±∞ son de círculo límite, deficiencia (4,4) no (2,2) (el conteo de phase-60 debería ser (6,6)); U(2), B_CCM=B_∞ y la función de Weyl hay que REHACERLOS; herramienta degradada a "por rehacer". Sobrevive Prop 2.5 (invariantes Λ-libres) ⟹ NO-GO para O2601.1 (W3) se mantiene]'
+        if r['id'] in('R162_2702a','R162_2702c','R162_2801','R162_2802') and 'R162_2890' not in r.get('note','') and r['id'] in ('R162_2702a','R162_2702c'):
+            r['note']+=' [R162_2890: se mantiene]'
+d['part9_tools']=['Thm TC (2701): sistema canónico de Tate 2×2, H_S=½exp(2Θσ₁), Θ=Σ artanh p^{-1/2} (Euler sólo en s=½, independiente de z)','Thm P (2701): H≻0 para toda cadena de boosts (J-interna, κ=0 tras normalizar; RH-neutral)','Lemma 1 (2801): −ζ₀′/ζ₀ = Dirichlet + racional canónica (casi periodicidad), ζ₀=ζ/R','Lemma 2 (2801): ζ₀ no es serie de Dirichlet, fuera de S (tipo Beurling)','Lemma 3 (2801): Hamburger con defecto racional simétrico devuelve c·ζ·R para todo m','Thm PB (2802): Perron de Piltz con k entero no ve ceros; H(m) ⟹ LH ⟹ α_k≤½ ∀k','Thm L (2802): identidad terminante exacta Σ Λ/log = Σ_j (−1)^{j+1}/j Σ_i (−1)^{j−i}C(j,i)D_i (formal, ciega a m)','(por rehacer) triple de frontera de W_λ (2702b): deficiencia (4,4) según 2890; sólo Prop 2.5 (Λ-libre) certificada']
+O28a='O2801.1 (sub-forma de O2601.1): ¿puede la medida de enteros generalizados dN₀ de ζ₀=ζ/R ser ≥0 con todos los ceros reales? (no lineal en Λ)'
+O28b='O2802.1 (sub-forma de O2601.1, fila 5): propiedad no formal, uniforme en k≍log x, del libro entero b≡1 (Piltz hasta k≍log x = cota de ψ, E1 esperado)'
+upd9={
+'4E':('A',[x for x in C['4E'][1] if not x.startswith('O8')],'part9: O8 Tate 2×2 CERRADO (R162_2701 NO-GO: Thm TC, Thm P, Thm I; W12); índice de phase-61 no certificado, 0 tras normalizar (2890)'),
+'1D':('R',['rehacer el triple de frontera de W_λ con deficiencia (4,4) (2890; herramienta RH-neutral, no mecanismo)','O2702.1: comparación con Burnol (RH-neutral)'],'part9: NG-D4 MUERTA (2702c, conteo de índice); triples de frontera/B_CCM NO-GO para O2601.1 (2702b, invariantes Λ-libres, W3) pero el cálculo de deficiencia (2,2) es WRONG (2890: (4,4), círculo límite en ±∞); antes ◧'),
+'4C':('A',[x for x in C['4C'][1] if not x.startswith('doc 107')],'part9: doc 107 / W_2 CERRADO por doc 108 (R162_2702a, W2+E1; no es MW-7)'),
+'4F':('A',C['4F'][1]+[O28a,O28b],'part9: R162_2801 (Hamburger cuantitativo, Thm NG) y R162_2802 (libro multiplicativo, Thm PB/L) NO-GO; sub-formas de O2601.1'),
+'5E':('A',C['5E'][1]+[O28b.replace(', fila 5','; ruta en 4F')],'part9: O2802.1 se pliega en la fila 5 (integralidad b≡1)'),
+'8D':('A',['phase-37/110 (PARTIAL; la entrada R160_S1 §2.2#12 la da DEAD — duplicado no conciliado)','phase-35/99 (R160_S1 §2.7#45, PARTIAL)','phase-63 (R160_S2 F9, PARTIAL)','R160_010 D1/D3/D5 (OPEN)'],'part9: regla §8 — 4 rutas PARTIAL/OPEN no superadas ⟹ ◧ (part8 la había bajado a ◩ por error); O2601.1 (= O2602.1) y O2602.2 siguen adjuntos vía 8F'),
+}
+C.update(upd9)
+# ---- part10 (round 29: R162_2901, 2902a-c) + part11 (phase 163: R163_001-003, 101, 102, audit 190) merge----
+for n in (10,11):
+    pn=P+f'R162_2300_part{n}.jsonl'
+    if os.path.exists(pn) and not d.get(f'part{n}_merged'):
+        for l in open(pn):
+            if not l.strip(): continue
+            x=json.loads(l)
+            if x['id'] in ids: continue
+            x['source_part']=n; cmap[f"{x['row']}{x['col']}"]['routes'].append(x); ids.add(x['id'])
+        d[f'part{n}_merged']=True
+SUP10={'155 P2 even Schur':'R162_2902a','157 O3 lem:degen':'R162_2902b'}
+for c in d['cells']:
+    for r in c['routes']:
+        if r['id'] in SUP10 and r['status'] in('OPEN','PARTIAL'):
+            r['status']='DEAD'; r['note']=(r.get('note','')+f' [superada por {SUP10[r["id"]]} (part10)]').strip()
+d['part10_tools']=['Identidad estructural S_even en log 2 (2902a): Π^even=−½(v₂R₂+v₃R₃), ‖Π_log2‖=0.9009276','lem:degen D1–D3 (2902b): caso degenerado ⟺ v(Λ)∈argmax V_T, λ^A_T=M_T (Λ-ciego)','2902c: spec S={0,±½}, V cóncava ½-Lipschitz, derivada de Danskin','R162_2901 Props 1–2: dΠ₀ de ζ₀=ζP₀/P; Thm B: ζS₁^K P₀/P Beurling positivo con RH (sin contradicción)']
+d['part11_tools']=['Intercambio canónico E y D_test (R163_001, 7F)','Lema de soporte de factorización positiva (R163_002, 5F)','Lemma R (R163_101): modificaciones racionales de ζ no responden BF_θ','Thm R (R163_102): N=⌊x⌋+c eventualmente ⟹ ℕ','Lemma S (R163_102): ζ·A, Σ|a|<∞ ⟹ N=A(1)x+O(1)','Thm T + Cor F (R163_102, ρ>0): transferencia de ceros; perturbaciones finitas ⟹ RH_B ⟺ RH','Révész 2207.00665 Rem. 7 vía Hilberdink 2010 (R163_191a, citado): discreto con θ<½ ⟹ ceros con β>θ']
+BFD='BF_θ^disc (O2601.1 afilado, frontera de Beurling discreta): ¿todo sistema discreto (multiplicidades enteras) con N=ρx+O(x^θ), θ<θ₀≈1/3, cumple RH de Beurling? (ℤ: θ=0; ζ_θ lo refuta en la clase extendida)'
+upd10={
+'4F':('A',[x for x in C['4F'][1] if not x.startswith('O2801.1')],'part10: O2801.1 CERRADO negativo (R162_2901 Thm A/B NO-GO; residuo = integralidad/atomicidad de dN, O2601.1)'),
+'6D':('P',[],'part10: P2 HECHO (R162_2902a, identidad estructural exacta, Λ-ciega; herramienta)'),
+'6A':('A',['lem:degen caso log 2 (R162_2902b): encierro bilateral del minimizador de la forma completa','O-D4.2: núcleo de 𝒲 / cono 𝒞′ en tests decrecientes de soporte no acotado'],'part10: 2902b lem:degen PARTIAL (D1–D3), 2902c P153.17 NO-GO'),
+'5G':('A',[BFD,'O163.101a: Conjetura C_{1/3} (control del caos exp_* del redondeo aleatorio)','O163.101b: construcción discreta con Θ<1/3 y ceros fuera, u obstrucción de integralidad en θ<1/3','O163.101c: Révész Rem. 7 / Hilberdink 2010 (θ<½ discreto ⟹ ceros con β>θ, R163_191a) y el emparejamiento de exponentes de Hilberdink 2005: ¿afinan hacia la recta?','O102.1–3: sistema no reticular con ρ=1; (BF_0) con σ_τ>½; Thm T módulo cancelación multiplicativa'],'part11 (phase 163): frontera de Beurling; ζ_θ refuta la rama de clase (extendida); Lemma R, Thm R, Lemma S, Thm T/Cor F herramientas; NO-GO analítico y perturbativo; antes ■'),
+'5F':('R',C['5F'][1],C['5F'][2]+'; part11: lema de soporte (R163_002a) herramienta, falsificador K (002b)'),
+'7F':('A',C['7F'][1],C['7F'][2]+'; part11: intercambio canónico + D_test herramienta (R163_001); propiedad 2 ⟺ RH (R163_003a, E1)'),
+'8F':('R',[C['8F'][1][0]+' → afilado en part11 a BF_θ^disc (5G)'],C['8F'][2]),
+}
+C.update(upd10)
+for c in d['cells']:
+    k=f"{c['row']}{c['col']}"; code,res,com=C[k]
+    c['status_2200_merge']=c.get('status_2200_merge',c.get('status'))
+    c['status']=S[code]; c['live_residuals']=res; c['editor_note']=com
+    c['counts']=dict(collections.Counter(r['status'] for r in c['routes']))
+d['legend']={'PINTADA':'■ todas las rutas muertas, sin residuo vivo','MUERTA_CON_RESIDUO':'◩ muerta pero sobrevive un residuo preciso','ABIERTA':'◧ ruta OPEN/PARTIAL viva no superada','VACIA':'□ sin rutas'}
+d['version']='R162_2300 refinado (part11)'
+json.dump(d,open(P+'R162_2300_MASTER_grid.json','w'),ensure_ascii=False,indent=1)
+# grid md
+cols='ABCDEFGH'
+rows={1:'identidad/EF',2:'positividad/soporte',3:'estimación',4:'Euler',5:'integralidad ℤ',6:'valores de Λ',7:'lado de ceros',8:'sin aritmética'}
+cm={f"{c['row']}{c['col']}":c for c in d['cells']}
+out=['| fila \\ col | A | B | C | D | E | F | G | H |','|---|---|---|---|---|---|---|---|---|']
+tot=collections.Counter()
+for r in range(1,9):
+    line=f'| {r} {rows[r]} |'
+    for col in cols:
+        k=f'{r}{col}';code=C[k][0];tot[code]+=1
+        line+=f" {SYM[code]} {len(cm[k]['routes'])} |"
+    out.append(line)
+print('\n'.join(out)); print(tot)
+open('grid.md','w').write('\n'.join(out))
+# per cell sections
+sec=[]
+colsn={'A':'forma de una ventana','B':'vector núcleo (lineal en F)','C':'funcionales cuadráticos/superiores','D':'espectro','E':'flujo/familia en T','F':'transformadas globales en T','G':'familias L/cuerpos','H':'objetos geom./dinámicos'}
+for r in range(1,9):
+  for col in cols:
+    k=f'{r}{col}';c=cm[k];code,res,com=C[k]
+    rs=c['routes'];ids={x['id'] for x in rs}
+    kl=collections.Counter()
+    for x in rs:
+        if x['status']=='DEAD':
+            for t in re.split(r'[;,]',x['killer']):
+                t=t.strip()
+                t=re.sub(r'^OTHER:.*','OTHER',t)
+                if t: kl[t[:22]]+=1
+    dead=[x['id'] for x in rs if x['status']=='DEAD' and not (x.get('supersedes_or_dup') in ids)]
+    dups=[x['id'] for x in rs if x.get('supersedes_or_dup') in ids]
+    tools=[x['id'] for x in rs if x['status']=='PROVED-TOOL']
+    cnt=' · '.join(f'{a} {b}' for a,b in sorted(c['counts'].items()))
+    s=f"**{k}** {SYM[code]} ({rows[r]} × {colsn[col]}) — {len(rs)} rutas: {cnt}"
+    if kl: s+="  \n  killers: "+', '.join(f'{a}×{b}' for a,b in kl.most_common(4))
+    if dead:
+        dd=dead if len(dead)<=10 else dead[:10]+[f'(+{len(dead)-10})']
+        s+="  \n  muertas: "+'; '.join(dd)
+    if dups: s+="  \n  duplicados: "+'; '.join(dups)
+    if tools: s+="  \n  herramientas: "+'; '.join(tools[:6])
+    for x in res: s+="  \n  → residuo vivo: "+x
+    if com: s+="  \n  nota: "+com
+    sec.append(s)
+open('cells.md','w').write('\n\n'.join(sec))

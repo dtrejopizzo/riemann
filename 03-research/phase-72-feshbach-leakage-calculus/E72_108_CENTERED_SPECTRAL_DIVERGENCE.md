@@ -1,7 +1,6 @@
 # E72.108 -- Centered spectral divergence criterion
 
-**Date:** 2026-07-09.
-**Role:** split the post-main cofactor obstruction into an explicit mass channel and a flux channel.
+**Purpose:** split the post-main cofactor obstruction into an explicit mass channel and a flux channel.
 
 ## 0. Reason for the correction
 

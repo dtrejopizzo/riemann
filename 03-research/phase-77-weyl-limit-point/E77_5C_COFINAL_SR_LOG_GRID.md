@@ -1,6 +1,6 @@
 # E77.5c - Cofinal SR-LOG grid
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Statement
 

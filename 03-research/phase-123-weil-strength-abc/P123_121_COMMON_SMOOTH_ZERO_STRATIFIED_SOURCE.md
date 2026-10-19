@@ -1,6 +1,6 @@
 # P123.121 — One smooth semilocal source containing the zero-stratum boundaries
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY for the explicitly
+Status: PROVED-IN-REPOSITORY for the explicitly
 defined coefficient and crossed-product algebras below. This provides
 one source with all finite-zero layers and coherent semilocal embeddings.
 It does not by itself construct the full mixed RR metric or prove A.

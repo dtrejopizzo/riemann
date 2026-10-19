@@ -1,6 +1,5 @@
 # E73.126 Results - Displacement Source Probe and Its Tautology
 
-Date: 2026-07-12.
 
 Script:
 

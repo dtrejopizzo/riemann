@@ -1,8 +1,8 @@
-# 104_98 — Factorización Mellin de la energía prima y gate de monodromía
+# 104_98 — Mellin factorization of the prime energy and monodromy gate
 
-## Resultado
+## Result
 
-Ponga
+Set
 
 \[
  L_2(x)=\int_2^x{du\over\log u},\qquad
@@ -10,14 +10,14 @@ Ponga
  \tag{1}
 \]
 
-y \(a_m=P_m-P_{m-1}\). Para \(N\ge2\), defina
+and \(a_m=P_m-P_{m-1}\). For \(N\ge2\), define
 
 \[
  \Phi_N(s)=\sum_{m=2}^N P_m\{m^{-s}-(m+1)^{-s}\}.
  \tag{2}
 \]
 
-Hay una factorización espectral finita, exacta e incondicional:
+There is an exact, unconditional, finite spectral factorization:
 
 \[
  \boxed{
@@ -27,7 +27,7 @@ Hay una factorización espectral finita, exacta e incondicional:
  \tag{3}
 \]
 
-El borde móvil está contenido exactamente en
+The moving boundary is exactly contained in
 
 \[
  \boxed{
@@ -35,8 +35,8 @@ El borde móvil está contenido exactamente en
  \tag{4}
 \]
 
-Al hacer \(N\to\infty\) inicialmente en \(\Re s>1\), el símbolo literal
-de los primos ordinarios es
+Taking \(N\to\infty\) initially in \(\Re s>1\), the literal symbol
+of the ordinary primes is
 
 \[
  \Phi(s)=\mathcal P(s)-D(s),\qquad
@@ -44,7 +44,7 @@ de los primos ordinarios es
  \tag{5}
 \]
 
-donde
+where
 
 \[
  D(s)=\sum_{m=3}^{\infty}m^{-s}
@@ -52,8 +52,8 @@ donde
  \tag{6}
 \]
 
-Si \(E_1(z)=\int_z^\infty e^{-u}du/u\), sobre ramas compatibles se
-obtiene la continuación regularizada
+If \(E_1(z)=\int_z^\infty e^{-u}du/u\), on compatible branches one
+obtains the regularized continuation
 
 \[
  \boxed{
@@ -63,7 +63,7 @@ obtiene la continuación regularizada
  \tag{7}
 \]
 
-con
+with
 
 \[
  R(s)=\sum_{m=3}^{\infty}\int_{m-1}^{m}
@@ -72,20 +72,20 @@ con
  \tag{8}
 \]
 
-En el semiplano abierto \(\Re s>1/2\), todos los sumandos \(k\ge2\)
-de (7) son regulares. El polo en \(s=1\) se cancela exactamente con
-\(E_1\). Por tanto un cero \(\rho\), \(\Re\rho>1/2\), de multiplicidad
-\(m_\rho\) produce y solo puede producir allí
+In the open half-plane \(\Re s>1/2\), all terms \(k\ge2\)
+of (7) are regular. The pole at \(s=1\) cancels exactly with
+\(E_1\). Hence a zero \(\rho\), \(\Re\rho>1/2\), of multiplicity
+\(m_\rho\) produces, and can only produce, there
 
 \[
  \boxed{
  \Phi(s)=m_\rho\log(s-\rho)+h_\rho(s),\qquad
- h_\rho\ \text{ holomorfa localmente}.}
+ h_\rho\ \text{locally holomorphic}.}
  \tag{9}
 \]
 
-La monodromía es \(2\pi i m_\rho\). Posee una diagonal positiva exacta:
-en una circunferencia pequeña alrededor de \(\rho\), para todo \(c\in
+The monodromy is \(2\pi i m_\rho\). It has an exact positive diagonal:
+on a small circle around \(\rho\), for all \(c\in
 \mathbb C\),
 
 \[
@@ -95,10 +95,10 @@ en una circunferencia pequeña alrededor de \(\rho\), para todo \(c\in
  \tag{10}
 \]
 
-Pero (10) vive en **todas las hojas** de la continuación. La energía
-prima (3) vive en una sola aproximación física por polinomios de
-Dirichlet. Si \(\Phi_\pm\) son las dos orillas de un corte y
-\(\Phi_0=(\Phi_++\Phi_-)/2\), entonces exactamente
+But (10) lives on **all the sheets** of the continuation. The prime
+energy (3) lives in a single physical approximation by Dirichlet
+polynomials. If \(\Phi_\pm\) are the two sides of a cut and
+\(\Phi_0=(\Phi_++\Phi_-)/2\), then exactly
 
 \[
  \begin{aligned}
@@ -110,40 +110,40 @@ Dirichlet. Si \(\Phi_\pm\) son las dos orillas de un corte y
  \tag{11}
 \]
 
-La primera línea tiene la diagonal buscada; la segunda línea es la
-parte firmada que impide transferirla a una sola hoja. No hay una razón
-de signo para \(\Im\Phi_0\). La fórmula explícita da la misma obstrucción:
-el cuadrado cero--cero es una matriz de Gram positiva como conjunto, pero
-sus entradas fuera de la diagonal y aun el término de frecuencia doble
-de un solo par conjugado cambian de signo.
+The first line has the diagonal sought; the second line is the
+signed part that prevents transferring it to a single sheet. There is no sign
+reason for \(\Im\Phi_0\). The explicit formula gives the same obstruction:
+the zero--zero square is a positive Gram matrix as a whole, but
+its off-diagonal entries, and even the double-frequency term
+of a single conjugate pair, change sign.
 
-**Veredicto.** Se obtuvo la representación Mellin exacta solicitada y se
-aisló una diagonal topológica positiva. No cierra la energía porque la
-diagonal pertenece al promedio de dos hojas, mientras los pesos
-ordinarios seleccionan una sola hoja y dejan el término firmado de
-(11). Probar que ese término no destruye la diagonal, uniformemente para
-los polinomios \(\Phi_N\), equivale otra vez a demostrar la cota
-subpolinomial de `104_93`--`104_94`. Este documento no demuestra esa
-cota, Deep-\(\Lambda\), A1 ni RH.
+**Verdict.** The requested exact Mellin representation was obtained and a
+positive topological diagonal was isolated. It does not close the energy because the
+diagonal belongs to the average of two sheets, while the ordinary
+weights select a single sheet and leave the signed term of
+(11). Proving that this term does not destroy the diagonal, uniformly for
+the polynomials \(\Phi_N\), amounts again to proving the
+subpolynomial bound of `104_93`--`104_94`. This document does not prove that
+bound, Deep-\(\Lambda\), A1 nor RH.
 
 ---
 
-## 1. Plancherel finito sin continuación analítica
+## 1. Finite Plancherel without analytic continuation
 
-Para \(\sigma>0\), defina sobre la recta logarítmica
+For \(\sigma>0\), define on the logarithmic line
 
 \[
  f_{N,\sigma}(y)=
  \begin{cases}
  e^{-\sigma y}P_m,&\log m\le y<\log(m+1),\quad2\le m\le N,\\
- 0,&\text{fuera de esos intervalos}.
+ 0,&\text{outside those intervals}.
  \end{cases}
  \tag{12}
 \]
 
-Con la convención
-\(\widehat f(t)=\int_{\mathbb R}f(y)e^{-ity}dy\), una integración
-elemental en cada intervalo da
+With the convention
+\(\widehat f(t)=\int_{\mathbb R}f(y)e^{-ity}dy\), an elementary
+integration on each interval gives
 
 \[
  \widehat f_{N,\sigma}(t)
@@ -153,7 +153,7 @@ elemental en cada intervalo da
  \tag{13}
 \]
 
-Plancherel prueba la identidad más general
+Plancherel proves the more general identity
 
 \[
  \boxed{
@@ -164,10 +164,10 @@ Plancherel prueba la identidad más general
  \tag{14}
 \]
 
-Tomar \(\sigma=1/2\) da (3). No se intercambian aquí una suma infinita
-y una integral, no se usa fórmula explícita y no se presupone RH.
+Taking \(\sigma=1/2\) gives (3). No infinite sum and integral are
+interchanged here, no explicit formula is used, and RH is not presupposed.
 
-Para obtener (4), escriba \(P_m=\sum_{r=2}^ma_r\) y telescope:
+To obtain (4), write \(P_m=\sum_{r=2}^ma_r\) and telescope:
 
 \[
  \begin{aligned}
@@ -179,7 +179,7 @@ Para obtener (4), escriba \(P_m=\sum_{r=2}^ma_r\) y telescope:
  \tag{15}
 \]
 
-Al expandir el cuadrado se recupera, también exactamente,
+Expanding the square also exactly recovers
 
 \[
  \sum_{m=2}^N{P_m^2\over m(m+1)}
@@ -188,12 +188,12 @@ Al expandir el cuadrado se recupera, también exactamente,
  \tag{16}
 \]
 
-Así, (3) no es una nueva estimación disfrazada: es la factorización
-Mellin exacta del kernel `max` de `104_93`.
+Thus (3) is not a disguised new estimate: it is the exact Mellin
+factorization of the `max` kernel from `104_93`.
 
-## 2. El símbolo infinito de los primos ordinarios
+## 2. The infinite symbol of the ordinary primes
 
-Para \(m\ge3\), ponga
+For \(m\ge3\), set
 
 \[
  d_m=L_2(m)-L_2(m-1)=\int_{m-1}^m{dx\over\log x},
@@ -201,16 +201,16 @@ Para \(m\ge3\), ponga
  \tag{17}
 \]
 
-Entonces \(a_m={\bf1}_{\mathbb P}(m)-d_m\), también en \(m=2\), y
-para \(\Re s>1\)
+Then \(a_m={\bf1}_{\mathbb P}(m)-d_m\), also at \(m=2\), and
+for \(\Re s>1\)
 
 \[
  \Phi(s):=\sum_{m\ge2}a_mm^{-s}=\mathcal P(s)-D(s).
  \tag{18}
 \]
 
-En ese semiplano \(P_m=O(m)\), de modo que el borde de (4) tiende a
-cero. Por (14), ahora sin cutoff,
+On that half-plane \(P_m=O(m)\), so the boundary term of (4) tends to
+zero. By (14), now without a cutoff,
 
 \[
  {1\over2\sigma}\sum_{m\ge2}P_m^2
@@ -221,7 +221,7 @@ cero. Por (14), ahora sin cutoff,
  \tag{19}
 \]
 
-El comparador continuo satisface
+The continuous comparator satisfies
 
 \[
  I(s):=\int_2^\infty{x^{-s}\over\log x}dx
@@ -229,7 +229,7 @@ El comparador continuo satisface
  \tag{20}
 \]
 
-Además,
+Moreover,
 
 \[
  I(s)-D(s)=\sum_{m=3}^{\infty}\int_{m-1}^{m}
@@ -237,7 +237,7 @@ Además,
  \tag{21}
 \]
 
-Si \(K\Subset\{\Re s>0\}\), entonces, uniformemente para \(s\in K\),
+If \(K\Subset\{\Re s>0\}\), then, uniformly for \(s\in K\),
 
 \[
  |x^{-s}-m^{-s}|
@@ -246,9 +246,8 @@ Si \(K\Subset\{\Re s>0\}\), entonces, uniformemente para \(s\in K\),
  \tag{22}
 \]
 
-La serie (21) converge normalmente. Esto prueba la afirmación de
-holomorfía de (8). Finalmente, la inversión de Möbius del producto de
-Euler da
+Series (21) converges normally. This proves the holomorphy
+claim of (8). Finally, the Möbius inversion of the Euler product gives
 
 \[
  \mathcal P(s)=\sum_{k\ge1}{\mu(k)\over k}\log\zeta(ks),
@@ -256,13 +255,13 @@ Euler da
  \tag{23}
 \]
 
-y (7) sigue de (18)--(23).
+and (7) follows from (18)--(23).
 
-## 3. Los únicos puntos de ramificación derechos
+## 3. The only right branch points
 
-En \(\Re s>1/2\), para \(k\ge2\) se tiene \(\Re(ks)>1\). Por tanto
-\(\log\zeta(ks)\) admite una rama holomorfa allí y la suma de esos
-términos converge normalmente en compactos. Cerca de \(s=1\),
+In \(\Re s>1/2\), for \(k\ge2\) one has \(\Re(ks)>1\). Hence
+\(\log\zeta(ks)\) admits a holomorphic branch there and the sum of those
+terms converges normally on compacta. Near \(s=1\),
 
 \[
  \log\zeta(s)=-\log(s-1)+O(1),
@@ -271,9 +270,9 @@ términos converge normalmente en compactos. Cerca de \(s=1\),
  \tag{24}
 \]
 
-así que su diferencia tiene singularidad removible.
+so their difference has a removable singularity.
 
-Equivalentemente, derivando (7),
+Equivalently, differentiating (7),
 
 \[
  \boxed{
@@ -283,18 +282,18 @@ Equivalentemente, derivando (7),
  \tag{25}
 \]
 
-Los residuos \(-1\) y \(+1\) en \(s=1\) se cancelan. En un cero
-\(\rho\) derecho de multiplicidad \(m_\rho\), (25) tiene residuo
-\(m_\rho\). Esto prueba (9) y muestra que las potencias propias no
-contaminan el diagnóstico: sus singularidades \(\rho/k\), \(k\ge2\),
-quedan en \(\Re s<1/2\). Es la versión de continuación analítica de la
-separación energética elemental de `104_94`.
+The residues \(-1\) and \(+1\) at \(s=1\) cancel. At a right
+zero \(\rho\) of multiplicity \(m_\rho\), (25) has residue
+\(m_\rho\). This proves (9) and shows that the proper powers do not
+contaminate the diagnostic: their singularities \(\rho/k\), \(k\ge2\),
+remain in \(\Re s<1/2\). This is the analytic-continuation version of the
+elementary energy split from `104_94`.
 
-## 4. Una diagonal positiva de monodromía
+## 4. A positive monodromy diagonal
 
-Elija \(r>0\) de modo que el disco cerrado alrededor de \(\rho\) esté
-en \(\Re s>1/2\) y no contenga otra singularidad. Sobre el recubrimiento
-universal del disco perforado,
+Choose \(r>0\) so that the closed disk around \(\rho\) lies
+in \(\Re s>1/2\) and contains no other singularity. On the universal
+cover of the punctured disk,
 
 \[
  \Phi(\rho+re^{i\theta})
@@ -303,7 +302,7 @@ universal del disco perforado,
  \tag{26}
 \]
 
-Con
+With
 \(\widehat g(n)=(2\pi)^{-1}\int_0^{2\pi}g(\theta)e^{-in\theta}d\theta\),
 
 \[
@@ -311,10 +310,10 @@ Con
  \tag{27}
 \]
 
-La traza de una función holomorfa en el disco solo tiene modos
-\(n\ge0\). Por consiguiente, para todo \(k\ge1\), el modo \(-k\) del
-lado derecho de (26) vale exactamente \(m_\rho/k\). Ninguna elección de
-la parte holomorfa ni de la constante \(c\) puede cancelarlo. Parseval da
+The trace of a holomorphic function on the disk has only modes
+\(n\ge0\). Consequently, for every \(k\ge1\), mode \(-k\) of the
+right-hand side of (26) is exactly \(m_\rho/k\). No choice of
+the holomorphic part nor of the constant \(c\) can cancel it. Parseval gives
 
 \[
  {1\over2\pi}\int_0^{2\pi}|\Phi-c|^2d\theta
@@ -323,32 +322,32 @@ la parte holomorfa ni de la constante \(c\) puede cancelarlo. Parseval da
  \tag{28}
 \]
 
-que prueba (10).
+which proves (10).
 
-Este sí es un mecanismo diagonal positivo, pero no es todavía una cota
-de los pesos primos en la recta física. Para rodear \(\rho\) se deben
-recorrer todas las determinaciones de \(\log(s-\rho)\). Los polinomios
-\(\Phi_N\) de (2) son enteros y monovaluados; la monodromía solo emerge
-en un límite no uniforme fuera del semiplano de convergencia. Demostrar
-que ese límite es de Hardy en todo \(\Re s>1/2\) ya es la continuación
-que `104_93` obtiene **suponiendo** energía subpolinomial.
+This is indeed a positive diagonal mechanism, but it is not yet a bound
+on the prime weights on the physical line. To go around \(\rho\) one must
+traverse all determinations of \(\log(s-\rho)\). The polynomials
+\(\Phi_N\) of (2) are entire and single-valued; the monodromy only emerges
+in a non-uniform limit outside the half-plane of convergence. Proving
+that this limit is of Hardy class on all of \(\Re s>1/2\) is already the continuation
+that `104_93` obtains **assuming** subpolynomial energy.
 
-La contabilidad de las dos orillas hace visible la pérdida. Escriba
+Accounting for the two sides makes the loss visible. Write
 
 \[
  \Phi_\pm=\Phi_0\pm\pi i m_\rho.
  \tag{29}
 \]
 
-Expandir los cuadrados prueba (11). La diagonal
-\(\pi^2m_\rho^2\) aparece solo después de promediar ambas hojas; en una
-hoja queda el término \(\pm2\pi m_\rho\Im\Phi_0\), sin signo.
+Expanding the squares proves (11). The diagonal
+\(\pi^2m_\rho^2\) appears only after averaging both sheets; on one
+sheet the term \(\pm2\pi m_\rho\Im\Phi_0\) remains, without a sign.
 
-## 5. La misma parte firmada en la fórmula explícita
+## 5. The same signed part in the explicit formula
 
-Sea \(\Pi_0(x)\) la función de Riemann que cuenta \(p^k\) con peso
-\(1/k\), usando medio peso en un salto. Para \(x>1\), con la suma sobre
-ceros tomada simétricamente,
+Let \(\Pi_0(x)\) be Riemann's function that counts \(p^k\) with weight
+\(1/k\), using half weight at a jump. For \(x>1\), with the sum over
+zeros taken symmetrically,
 
 \[
  \Pi_0(x)=\mathrm{li}(x)
@@ -357,14 +356,14 @@ ceros tomada simétricamente,
  \tag{30}
 \]
 
-Fuera de los saltos, si
+Outside the jumps, if
 
 \[
  Q(x)=\sum_{k\ge2}{1\over k}\pi(x^{1/k}),
  \tag{31}
 \]
 
-entonces \(\Pi_0(x)=\pi(x)+Q(x)\), y por ello
+then \(\Pi_0(x)=\pi(x)+Q(x)\), and hence
 
 \[
  \boxed{
@@ -373,7 +372,7 @@ entonces \(\Pi_0(x)=\pi(x)+Q(x)\), y por ello
  \tag{32}
 \]
 
-donde
+where
 
 \[
  C_0(x)=\mathrm{li}(x)-L_2(x)-\log2
@@ -381,12 +380,12 @@ donde
  \tag{33}
 \]
 
-es completamente explícita. El bloque \(Q\) tiene energía finita por
-`104_94`; los saltos y la convención de medio peso no alteran una
-integral en \(x\).
+is fully explicit. The block \(Q\) has finite energy by
+`104_94`; the jumps and the half-weight convention do not alter an
+integral in \(x\).
 
-Para un conjunto finito de ceros \(\rho_j=\beta+i\gamma_j\), cerrado
-por conjugación, la parte de exponente \(\beta\) satisface, con
+For a finite set of zeros \(\rho_j=\beta+i\gamma_j\), closed
+under conjugation, the part of exponent \(\beta\) satisfies, with
 \(x=e^y\),
 
 \[
@@ -397,15 +396,15 @@ por conjugación, la parte de exponente \(\beta\) satisface, con
  \tag{34}
 \]
 
-Ponga \(\alpha=2\beta-1\) y, para un peso positivo \(w(y)\),
+Set \(\alpha=2\beta-1\) and, for a positive weight \(w(y)\),
 
 \[
  K_w(\omega)=\int {w(y)\over y^2}e^{\alpha y}e^{i\omega y}dy.
  \tag{35}
 \]
 
-El cuadrado ponderado del término principal de (34), incluido el factor
-de energía \(e^{-y}\), es exactamente
+The weighted square of the leading term of (34), including the
+energy factor \(e^{-y}\), is exactly
 
 \[
  2\Re\sum_{j,k}
@@ -414,64 +413,65 @@ de energía \(e^{-y}\), es exactamente
  \tag{36}
 \]
 
-La matriz completa es Gram y el total es no negativo. Sin embargo:
+The full matrix is Gram and the total is nonnegative. However:
 
-* \(K_w(0)\sum_j|c_j|^2\) es solo una parte de (36);
-* las entradas de diferencia con \(j\ne k\) tienen ambos signos;
-* ya para un solo par conjugado queda
+* \(K_w(0)\sum_j|c_j|^2\) is only a part of (36);
+* the difference entries with \(j\ne k\) have both signs;
+* already for a single conjugate pair one is left with
 
 \[
  2|c|^2K_w(0)+2\Re\{c^2K_w(2\gamma)\},
  \tag{37}
 \]
 
-y el segundo sumando cambia de signo al trasladar la ventana.
+and the second term changes sign when the window is shifted.
 
-Así, la fórmula explícita y la monodromía localizan el mismo residuo:
-**diagonal positiva más una interferencia firmada de igual origen**. La
-positividad del cuadrado completo no permite descartar la interferencia,
-pues estimar el cuadrado completo desde arriba para los pesos ordinarios
-es justamente la energía que falta.
+Thus, the explicit formula and the monodromy localize the same residue:
+**a positive diagonal plus a signed interference of the same origin**. The
+positivity of the full square does not allow one to discard the interference,
+since bounding the full square from above for the ordinary weights is
+precisely the missing energy.
 
-## 6. No duplicación interna
+## 6. No internal duplication
 
-* `104_93` prueba la equivalencia energética y la forma `max`, pero no
-  factoriza la energía literal de \(\pi-L_2\) sobre la recta Mellin ni
-  calcula sus ramas.
-* `104_94` elimina las potencias propias por una perturbación de energía
-  finita; (25) da la contraparte analítica: \(\rho/k\), \(k\ge2\), queda
-  estrictamente a la izquierda de la frontera.
-* `104_89` usa Mellin--Plancherel para la cola de
-  \(J-L_2\) **bajo RH**. Aquí (3) es finita e incondicional y (7)--(11)
-  describen exactamente qué ocurre si hay un cero derecho.
-* `phase-49/157` registra la identidad de Cramér para \(\psi-x\) a nivel
-  de exponente. No contiene el símbolo de prime-zeta discretizado, el
-  borde (4), el piso Hardy (10) ni la separación de hojas (11).
-* Los usos de prime-zeta de `phase-14` son autorreferenciales y no están
-  acoplados a esta energía.
+* `104_93` proves the energy equivalence and the `max` form, but does not
+  factor the literal energy of \(\pi-L_2\) on the Mellin line nor
+  compute its branches.
+* `104_94` removes the proper powers by a finite-energy
+  perturbation; (25) gives the analytic counterpart: \(\rho/k\), \(k\ge2\),
+  stays strictly to the left of the boundary.
+* `104_89` uses Mellin--Plancherel for the tail of
+  \(J-L_2\) **under RH**. Here (3) is finite and unconditional and (7)--(11)
+  describe exactly what happens if there is a right zero.
+* `phase-49/157` records the Cramér identity for \(\psi-x\) at
+  the exponent level. It does not contain the discretized prime-zeta
+  symbol, boundary (4), the Hardy floor (10) nor the sheet
+  split (11).
+* The prime-zeta uses in `phase-14-off-diagonal-anchor-asymmetry` are self-referential and are not
+  coupled to this energy.
 
-Por tanto el documento no reclama como nueva la fórmula de Riemann ni
-Mellin--Plancherel. Lo nuevo dentro del programa es la cadena exacta
-(2)--(11) para el observable literal de `104_94`, y el diagnóstico de
-que la diagonal positiva disponible es un promedio de hojas, no una
-desigualdad unilateral sobre la hoja aritmética.
+Hence this document does not claim as new the Riemann formula nor
+Mellin--Plancherel. What is new within the program is the exact chain
+(2)--(11) for the literal observable of `104_94`, and the diagnosis
+that the available positive diagonal is a sheet average, not a
+one-sided inequality on the arithmetic sheet.
 
-## 7. Reproducción
+## 7. Reproduction
 
-Desde `tools/`:
+From `tools/`:
 
 ```bash
 python3 prime_energy_mellin_monodromy_check.py
 ```
 
-El checker:
+The checker:
 
-1. verifica (4) y (16) exactamente con `Fraction`;
-2. reconstruye \(\pi(m)-L_2(m)\) y el borde móvil para un prefijo real;
-3. exhibe una ventana donde el término de frecuencia \(2\gamma\) de
-   (37) es estrictamente negativo;
-4. certifica por cotas de la cola de \(\sum k^{-2}\) el piso
-   \(m^2\pi^2/6\) de (10).
+1. verifies (4) and (16) exactly with `Fraction`;
+2. reconstructs \(\pi(m)-L_2(m)\) and the moving boundary for a real prefix;
+3. exhibits a window where the \(2\gamma\) frequency term of
+   (37) is strictly negative;
+4. certifies, by tail bounds of \(\sum k^{-2}\), the floor
+   \(m^2\pi^2/6\) of (10).
 
-Las evaluaciones numéricas ilustran identidades ya demostradas; no son
-evidencia asintótica ni un certificado de RH.
+The numerical evaluations illustrate already proved identities; they are not
+asymptotic evidence nor an RH certificate.

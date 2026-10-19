@@ -1,7 +1,6 @@
 # E72.103 -- Relative root-current audit
 
-**Date:** 2026-07-09.
-**Role:** test whether the persistent model defect in `D2` is removed by passing from pointwise
+**Purpose:** test whether the persistent model defect in `D2` is removed by passing from pointwise
 root-vanishing to a relative root-current subtraction.
 
 ## 0. Motivation

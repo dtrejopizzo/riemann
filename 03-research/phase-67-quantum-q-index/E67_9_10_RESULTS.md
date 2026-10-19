@@ -1,6 +1,5 @@
 # E67.9 / E67.10 Results — the signed-certificate register
 
-**Date:** 2026-07-06.
 **Scripts:** [E67_9_signed_index_detector.py](E67_9_signed_index_detector.py),
 [E67_10_root_of_unity_shapovalov.py](E67_10_root_of_unity_shapovalov.py).
 

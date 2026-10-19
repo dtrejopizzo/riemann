@@ -1,7 +1,6 @@
 # E72.125 -- Bad-test square bound
 
-**Date:** 2026-07-09.
-**Role:** turn `BUP` into an explicit finite family of scalar endpoint-discrepancy bounds.
+**Purpose:** turn `BUP` into an explicit finite family of scalar endpoint-discrepancy bounds.
 
 ## 0. Setup
 

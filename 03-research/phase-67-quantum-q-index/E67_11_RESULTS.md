@@ -1,6 +1,5 @@
 # E67.11 Results — the Krein-Langer / Jantzen atom
 
-**Date:** 2026-07-06.
 **Script:** [E67_11_krein_langer_atom.py](E67_11_krein_langer_atom.py).
 
 ## Identity used

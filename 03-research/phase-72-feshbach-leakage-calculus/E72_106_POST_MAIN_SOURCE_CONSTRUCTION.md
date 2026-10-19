@@ -1,7 +1,6 @@
 # E72.106 -- Exact construction of the post-main HPAC source
 
-**Date:** 2026-07-09.
-**Role:** make the corrected source `Z_x^{pm}` from E72.105 finite and computable.
+**Purpose:** make the corrected source `Z_x^{pm}` from E72.105 finite and computable.
 
 ## 0. Endpoint data
 

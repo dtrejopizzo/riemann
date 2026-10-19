@@ -215,7 +215,7 @@ The revised central chain:
    positivity": can the self-adjoint, bounded-below realization (II-a) and the form-completeness
    of $\{U(\varphi_j)\}$ (II-b) be established **without assuming RH**? A *yes* gives a faithful
    spectral reformulation (RH = sign of a computable limit); a *no* locates RH's difficulty here.
-   This — not positivity — is the precise, RH-independent target for the operator theorist.
+ This — not positivity — is the precise, RH-independent target for the operator theorist.
 3. **Numerics (v9)** — treat the uniformity-in-$T_0$ curve as a *falsifier* of faithfulness:
    clean uniform decay keeps both scenarios open (Part II still to be settled theoretically);
    center-dependent blow-up is strong evidence for Scenario 2.

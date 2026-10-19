@@ -1,6 +1,6 @@
 # E78.17 - Relative coupling defect for the current IDENT endpoint
 
-**Run:** 2026-07-18.
+**Run:**
 **Scope:** IDENT, fixed-L finite front.
 
 ## 1. Purpose

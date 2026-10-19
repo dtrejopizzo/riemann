@@ -1,8 +1,7 @@
-# R134.002 — hostile audit of record, round 1 (Paper 46, row D opening)
+# R134.002 — Audit of record, round 1 (Paper 46, row D opening)
 
-Auditor: adversarial auditor of record (Opus 5), for the session lead.
-Date: 2026-09-12.  Target: `04-papers/46-row-d-the-sign/main.md` (1310 lines),
-against `R134_000_LEAD_BLUEPRINT.md`, `R134_001_BUILDER_ROUND1.md`, Papers
+Target: `04-papers/46-intersection-frame-defect/archive/main.md` (1310 lines),
+against `R134_000_BLUEPRINT.md`, `R134_001_ROUND1.md`, Papers
 43–45 by number, `P124.013`, `P124.014`, and both scripts re-run.
 
 **Headline.  The paper does not violate the no-sign rule anywhere — verified
@@ -23,7 +22,7 @@ numerics), finding 3 **confirmed by independent re-run**, finding 1
 **overstated and partially refuted**.**
 
 All numerics below were re-run by me from the repository scripts; every number
-I quote is my own output, not the builder's.
+I quote is my own output, not the construction's.
 
 ---
 
@@ -249,7 +248,7 @@ accurate: (ii) is absent, (ii) is row D, and the paper says so.
 
 ---
 
-## 2. Verification of the derivations the lead asked me to check
+## 2. Verification of the derivations the review asked me to check
 
 **Lemma 3.1 (the bijection).  CORRECT, and it is genuinely new.**
 `(−∂_t²+¼)e^{−|t|/2} = δ_0`: away from `0` the symbol annihilates `e^{±t/2}`;
@@ -280,7 +279,7 @@ and used once and in one direction, as l. 386 says.
 (`∫(1+|γ|)^{−7}dμ < ∞` by `N(T) ∼ T\log T`) ✓.
 **(c) ⟺ (d) ⟺ (e)** is (M1).
 
-**Is there content beyond Weil + Bochner?  No — the builder's press point P1
+**Is there content beyond Weil + Bochner?  No — the construction's press point P1
 is upheld.**  I searched the paper for a statement whose *proof* uses the
 identification of the group with the carrier's modulus group or of the flow
 with `Frob_∞`: there is none.  `(1.2)`/`(1.5)` are used to *name* the group in
@@ -327,7 +326,7 @@ I re-derived it: with `ψ̂_ε(τ) = \mathrm{sinc}^4(ετ/2)` and
 `σ = ετ` gives diagonal `= (1/ε)[−\log(1/ε)‖φ_1‖² + O(1)]` with
 `(2π)^{−1}∫|\hatφ_1|² = ψ_1(0) = c_φ = 2/3` for the triangle ✓ — this is Paper
 44 Theorem 8bis.2 (8bis.4b), which does carry the `‖φ‖²/ε` factor (I read the
-statement: `−(‖φ‖²_{L²}/ε)(\log(1/ε)+O(1))`).  So the builder's *first* draft
+statement: `−(‖φ‖²_{L²}/ε)(\log(1/ε)+O(1))`).  So the construction's *first* draft
 (`εG_N(ε) → c_φA'_N`) was indeed false and the correction is right.  Numerical
 check of my own: `(2/3ε)(−\log(1/ε)+2.00)` gives `−2.02` at `ε = 0.1` and
 `−173.7` at `ε = 0.01` against the computed `−1.98` and `−175.56` ✓.
@@ -340,7 +339,7 @@ the finite inertia is unconditionally negative definite for *every* model, so
 it is evidence of nothing; the `Ξ_a` separation lives at `ε` of order one; and
 that is precisely where 8bis.7's concentrated reading is invalid — and, by
 (M2), where 8bis.1e itself is inapplicable.  Remark 5.9 states all three
-consequences against the programme, including the record of the builder's own
+consequences against the programme, including the record of the construction's own
 refuted first draft.  This is the paper at its best.
 
 **Theorem 5.6.**  Correct and correctly labelled as conditional on its own
@@ -445,9 +444,9 @@ must not be quoted.
 
 | item | verdict | reason |
 |---|---|---|
-| **D.1** (§3) | **`RESTATEMENT`** — with Lemma 3.1 and Theorem 3.6 carved out at `PROVED` | Theorem 3.7 is Weil's criterion (both directions from the repository) plus the Bochner–Schwartz/SNAG/GNS dictionary; no proof in the paper uses the identification of the group with the carrier's modulus group.  The builder's press point P1 is upheld; the current label `CLASSICAL + PROVED-IN-REPOSITORY` over-credits the section.  Subject to (M1). |
+| **D.1** (§3) | **`RESTATEMENT`** — with Lemma 3.1 and Theorem 3.6 carved out at `PROVED` | Theorem 3.7 is Weil's criterion (both directions from the repository) plus the Bochner–Schwartz/SNAG/GNS dictionary; no proof in the paper uses the identification of the group with the carrier's modulus group.  The construction's press point P1 is upheld; the current label `CLASSICAL + PROVED-IN-REPOSITORY` over-credits the section.  Subject to (M1). |
 | **D.2** (§4) | **`PROVED`** (Thm 4.3, Cor 4.4, Thm 4.2(i)(ii), Thm 4.6) **+ `COMPUTATIONAL`** (Thm 4.2(iii), Obs 4.7).  Thm 4.1 `PROVED-IN-REPOSITORY`, **conditional** on `T_q < ∞` | The swap law is a real theorem and the refutations of the blueprint are correct.  Subject to (M5), (M6), (M7). |
-| **D.3** (§5) | **`COMPUTATIONAL`**, with **one genuine theorem** (5.8) and two structural ones (5.2, 5.5) at `PROVED`; 5.4 **`OPEN` as stated**; 5.6 `PROVED` from its hypothesis; the tables `COMPUTATIONAL-ILLUSTRATION` | D.3 is deflated by its own Theorem 5.8 over most of its parameter range, and the surviving window is where its kernel citation fails (M2).  Answer to the builder's press point P2: **what is left of D.3 is Theorem 5.8 and the observation that the two models separate in a window; nothing about `ζ`.** |
+| **D.3** (§5) | **`COMPUTATIONAL`**, with **one genuine theorem** (5.8) and two structural ones (5.2, 5.5) at `PROVED`; 5.4 **`OPEN` as stated**; 5.6 `PROVED` from its hypothesis; the tables `COMPUTATIONAL-ILLUSTRATION` | D.3 is deflated by its own Theorem 5.8 over most of its parameter range, and the surviving window is where its kernel citation fails (M2).  Answer to the construction's press point P2: **what is left of D.3 is Theorem 5.8 and the observation that the two models separate in a window; nothing about `ζ`.** |
 | **D.4** (§6) | **`PROVED`** negatives (6.1, 6.3–6.7); the synthesis (Def 6.8) **defective** (M3) and, once repaired, `OPEN` | Each negative is a theorem with a counterexample, as required; 6.3 is a strawman and should be labelled so. |
 | **D.5** (§7) | **`PROVED`** (7.1, 7.4, 7.5(a)); 7.5(b),(c) correctly declared unanswered | The best section in the paper: the falsifier's failure is identified with a named theorem of row B and is pre-comparison. |
 
@@ -491,7 +490,7 @@ must not be quoted.
    conclusions (a genuine first contact exists; Gate R fails there; case 2 of
    the dichotomy is realized) are untouched.
 
-On the builder's press point **P3** (the falsifier's threshold in `N`): I did
+On the construction's press point **P3** (the falsifier's threshold in `N`): I did
 not run `N = 15,20,25` or the `a → 0` degeneration either, and I concur that
 until that is done §5.4 item 2 is a statement about the grid.  Given (M2) and
 Theorem 5.8, my recommendation is *not* to spend the cycles: the window where
@@ -536,11 +535,11 @@ it.
 
 ---
 
-## 8. Recommendation to the lead
+## 8. Recommendation to the review
 
 Accept Paper 46 as a skeleton **after** the repairs (M1), (M2), (M3), (M4),
 (M5), (M6), (M7) and the minors; none of them costs a result, and (M1) and
 (M2) each *improve* the statement they repair.  Regrade D.1 to `RESTATEMENT`
-per the builder's own press point.  Record finding 2 as a standing
+per the construction's own press point.  Record finding 2 as a standing
 methodological rule of the corpus.  Do not spend a round on press point P3.
 **No label for row D; none is warranted by this campaign.**

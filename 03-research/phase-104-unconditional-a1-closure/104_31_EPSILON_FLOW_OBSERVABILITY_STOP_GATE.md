@@ -1,29 +1,30 @@
-# 104_31 — Flujo en \(\varepsilon\) y stop-gate de observabilidad en \(1/2\)
+# 104_31 — \(\varepsilon\)-flow and the observability stop-gate at \(1/2\)
 
-**Rol.** Auditar el intento de partir de un regulador donde el operador de
-Euler converge en norma y transportar hacia atrás el test hard-edge mediante
-la recurrencia tridiagonal de Laguerre. El flujo es exacto y tiene una
-realización unitaria muy simple: su generador es menos la multiplicación por
-\(x\). Precisamente esa realización fija un umbral agudo. El test transportado
-hacia atrás pertenece al espacio de Laguerre si y solo si
-\(\varepsilon<1/2\), mientras la suma de Euler como operador acotado converge
-en norma solo para \(\varepsilon>1/2\). El punto \(1/2\) no pertenece a
-ninguno de los dos dominios.
+**Role.** Audit the attempt to start from a regulator where the Euler
+operator converges in norm and transport the hard-edge test backward via the
+tridiagonal Laguerre recurrence. The flow is exact and has a very simple
+unitary realization: its generator is minus multiplication by \(x\).
+Precisely that realization fixes a sharp threshold. The backward-transported
+test belongs to the Laguerre space if and only if
+\(\varepsilon<1/2\), while the Euler sum as a bounded operator converges in
+norm only for \(\varepsilon>1/2\). The point \(1/2\) belongs to neither
+domain.
 
-La métrica positiva \(A_{\rm flag}\), que sí interpola exactamente
-\(A_{\rm flag}[g_n]=A_n\) para \(n\ge150\), no elimina la colisión. Su espacio
-no es invariante por el generador, éste no es simétrico para esa métrica y,
-aun después de comprimir, los pesos \(\Delta A_k\asymp\log k\) no cambian el
-radio exponencial que produce el umbral.
+The positive metric \(A_{\rm flag}\), which does exactly interpolate
+\(A_{\rm flag}[g_n]=A_n\) for \(n\ge150\), does not remove the collision.
+Its space is not invariant under the generator, the generator is not
+symmetric for that metric, and even after compressing, the weights
+\(\Delta A_k\asymp\log k\) do not change the exponential radius that
+produces the threshold.
 
-Este documento es un stop-gate para **esta combinación concreta**:
-``operador Euler absolutamente convergente + transporte Hilbert hacia atrás''.
-No descarta una identidad renormalizada firmada en dualidad de distribuciones,
-no prueba A1 y no prueba RH.
+This document is a stop-gate for **this specific combination**:
+"bounded Euler operator + backward Hilbert transport." It does not rule out
+a signed renormalized identity in distribution duality, does not prove A1,
+and does not prove RH.
 
-## 1. El flujo exacto de los coeficientes regulados
+## 1. Exact flow of the regulated coefficients
 
-Para \(\varepsilon>0\), sea
+For \(\varepsilon>0\), let
 
 \[
  p_n(\varepsilon)=
@@ -34,28 +35,28 @@ Para \(\varepsilon>0\), sea
  c_n=p_n-j_n .                                             \tag{1}
 \]
 
-Las series obtenidas al derivar (1) convergen absolutamente en todo
-semiplano \(\varepsilon\ge\varepsilon_0>0\). La recurrencia ordinaria
+The series obtained by differentiating (1) converge absolutely on every
+half-plane \(\varepsilon\ge\varepsilon_0>0\). The ordinary recurrence
 
 \[
  -xL_n(x)=(n+1)L_{n+1}(x)-(2n+1)L_n(x)+nL_{n-1}(x),          \tag{2}
 \]
 
-con \(L_{-1}=0\), da
+with \(L_{-1}=0\), gives
 
 \[
  p_n'=(n+1)p_{n+1}-(2n+1)p_n+np_{n-1}.                      \tag{3}
 \]
 
-El término polar no es una corrección externa al flujo. Tiene la
-representación
+The polar term is not an external correction to the flow. It has the
+representation
 
 \[
  j_n(\varepsilon)=\int_0^\infty e^{-\varepsilon x}L_n(x)\,dx,             \tag{4}
 \]
 
-y por (2) satisface la misma ecuación. Equivalentemente, una cuenta directa
-da
+and by (2) satisfies the same equation. Equivalently, a direct computation
+gives
 
 \[
  j_n'={ (\varepsilon-1)^{n-1}\over\varepsilon^{n+2}}
@@ -63,38 +64,38 @@ da
  =(n+1)j_{n+1}-(2n+1)j_n+nj_{n-1}.                           \tag{5}
 \]
 
-Por tanto, para todo \(n\ge0\), con \(c_{-1}=0\),
+Hence, for every \(n\ge0\), with \(c_{-1}=0\),
 
 \[
  \boxed{c_n'=(n+1)c_{n+1}-(2n+1)c_n+nc_{n-1}.}               \tag{6}
 \]
 
-No se separó el límite \(\varepsilon\downarrow0\): (6) vale antes de la
-colisión polo--primos.
+The limit \(\varepsilon\downarrow0\) was not separated out: (6) holds
+before the pole–prime collision.
 
-## 2. Realización unitaria: \(Q=-M_x\)
+## 2. Unitary realization: \(Q=-M_x\)
 
-Sea
+Let
 
 \[
  \mathcal H=L^2((0,\infty),e^{-x}dx).
 \]
 
-Los polinomios \(L_0,L_1,\ldots\) son una base ortonormal de
-\(\mathcal H\). La aplicación
+The polynomials \(L_0,L_1,\ldots\) are an orthonormal basis of
+\(\mathcal H\). The map
 
 \[
  U:\ell^2(\mathbb N_0)\longrightarrow\mathcal H,
  \qquad Ua=\sum_{n\ge0}a_nL_n                                  \tag{7}
 \]
 
-es unitaria. Si \(X=M_x\), con dominio
+is unitary. If \(X=M_x\), with domain
 
 \[
  \mathcal D(X)=\{f\in\mathcal H:xf\in\mathcal H\},
 \]
 
-entonces (2) prueba
+then (2) proves
 
 \[
  U^{-1}(-X)U=Q,
@@ -102,18 +103,18 @@ entonces (2) prueba
  (Qa)_n=(n+1)a_{n+1}-(2n+1)a_n+na_{n-1}.                    \tag{8}
 \]
 
-Así, \(Q\) es autoadjunto, no positivo, tiene espectro
-\(( -\infty,0]\), y
+So \(Q\) is self-adjoint, non-positive, has spectrum
+\(( -\infty,0]\), and
 
 \[
  Ue^{tQ}U^{-1}=M_{e^{-tx}}\qquad(t\ge0).                    \tag{9}
 \]
 
-La sucesión completa \(c(\varepsilon)\) no se afirma aquí como un vector de
-\(\ell^2\): los átomos primos definen naturalmente un funcional más
-singular. Las ecuaciones (7)--(9) dicen qué exigiría una implementación
-Hilbert del transporte débil. Para un test finito \(a\), transportar desde
-\(\varepsilon\) hasta cero obliga a mover el test por el adjunto:
+The complete sequence \(c(\varepsilon)\) is not claimed here to be a
+vector in \(\ell^2\): the prime atoms naturally define a more singular
+functional. Equations (7)–(9) say what a Hilbert implementation of the
+weak transport would require. For a finite test \(a\), transporting from
+\(\varepsilon\) down to zero requires moving the test via the adjoint:
 
 \[
  \langle a,c(0)\rangle
@@ -122,11 +123,11 @@ Hilbert del transporte débil. Para un test finito \(a\), transportar desde
  Ue^{-\varepsilon Q}a=e^{\varepsilon x}Ua,                   \tag{10}
 \]
 
-si el miembro derecho pertenece al dominio de la dualidad usada.
+if the right-hand side belongs to the domain of the duality used.
 
-## 3. Umbral agudo del prefijo hard-edge
+## 3. Sharp threshold of the hard-edge prefix
 
-El vector prefijo de `104_28` es
+The prefix vector of `104_28` is
 
 \[
  u_n=(\underbrace{1,\ldots,1}_{n},0,\ldots),
@@ -134,25 +135,25 @@ El vector prefijo de `104_28` es
  Uu_n=P_n(x):=L_{n-1}^{(1)}(x)=\sum_{k=0}^{n-1}L_k(x).        \tag{11}
 \]
 
-Como \(P_n\) es un polinomio no nulo de grado \(n-1\), con coeficiente
-principal \((-1)^{n-1}/(n-1)!\),
+Since \(P_n\) is a nonzero polynomial of degree \(n-1\), with leading
+coefficient \((-1)^{n-1}/(n-1)!\),
 
 \[
  \|e^{\varepsilon x}P_n\|_{\mathcal H}^2
  =\int_0^\infty |P_n(x)|^2e^{-(1-2\varepsilon)x}\,dx.        \tag{12}
 \]
 
-Por tanto
+Hence
 
 \[
  \boxed{e^{\varepsilon x}P_n\in\mathcal H
         \quad\Longleftrightarrow\quad\varepsilon<\tfrac12.} \tag{13}
 \]
 
-En el borde \(\varepsilon=1/2\) queda la integral de un polinomio al
-cuadrado; por encima del borde aparece crecimiento exponencial. El blow-up
-desde abajo también es exacto en primer orden. Si
-\(\delta=1-2\varepsilon\downarrow0\), entonces
+At the boundary \(\varepsilon=1/2\), what remains is the integral of a
+squared polynomial; above the boundary, exponential growth appears. The
+blow-up from below is likewise exact to leading order. If
+\(\delta=1-2\varepsilon\downarrow0\), then
 
 \[
  \boxed{
@@ -161,13 +162,13 @@ desde abajo también es exacto en primer orden. Si
  = {2n-2\choose n-1}\delta^{-(2n-1)}.}                       \tag{14}
 \]
 
-Luego (13) no es una pérdida de constante: es el dominio maximal del
-semigrupo inverso sobre este test.
+So (13) is not a constant-factor loss: it is the maximal domain of the
+inverse semigroup for this test function.
 
-## 4. El dominio seguro de Euler toca el borde por el otro lado
+## 4. The safe Euler domain touches the boundary from the other side
 
-En la realización de traslaciones de `104_28`, la suma que se querría
-construir antes de evaluar sobre \(g_n\) es
+In the translation realization of `104_28`, the sum one would want to
+build before evaluating on \(g_n\) is
 
 \[
  \mathcal E_\varepsilon
@@ -175,60 +176,60 @@ construir antes de evaluar sobre \(g_n\) es
        (S_{\log m}+S_{\log m}^*).                             \tag{15}
 \]
 
-Para la traslación unilateral, \(\|S_a\|=1\) y
-\(\|S_a+S_a^*\|=2\). En particular, la construcción término a término en
-norma está gobernada por
+For the one-sided translation, \(\|S_a\|=1\) and
+\(\|S_a+S_a^*\|=2\). In particular, the term-by-term norm construction is
+governed by
 
 \[
  \sum_{m\ge2}{\Lambda(m)\over m^{1/2+\varepsilon}},          \tag{16}
 \]
 
-que converge exactamente cuando \(1/2+\varepsilon>1\). Incluso sin pedir
-convergencia absoluta, los sumandos positivos no dan convergencia en norma
-en el borde: probando las sumas parciales sobre funciones casi constantes en
-intervalos mucho más largos que todos los \(\log m\) presentes, su norma es
-arbitrariamente próxima a dos veces la suma escalar correspondiente. Así,
+which converges exactly when \(1/2+\varepsilon>1\). Even without
+requiring absolute convergence, the positive summands do not give norm
+convergence at the boundary: testing the partial sums on functions nearly
+constant over intervals much longer than every \(\log m\) present, their
+norm is arbitrarily close to twice the corresponding scalar sum. Hence,
 
 \[
- \boxed{\mathcal E_\varepsilon\text{ converge en norma por esta suma}
+ \boxed{\mathcal E_\varepsilon\text{ converges in norm via this sum}
         \quad\Longleftrightarrow\quad\varepsilon>\tfrac12.}  \tag{17}
 \]
 
-La desigualdad es **estricta**. En \(\varepsilon=1/2\) aparece
-\(\sum\Lambda(m)/m\), que diverge. Combinando (13) y (17),
+The inequality is **strict**. At \(\varepsilon=1/2\),
+\(\sum\Lambda(m)/m\) appears, which diverges. Combining (13) and (17),
 
 \[
- \{\varepsilon:\text{test backward admisible}\}=(0,1/2),
+ \{\varepsilon:\text{admissible backward test}\}=(0,1/2),
  \qquad
- \{\varepsilon:\text{operador Euler seguro}\}=(1/2,\infty),             \tag{18}
+ \{\varepsilon:\text{safe Euler operator}\}=(1/2,\infty),             \tag{18}
 \]
 
-y el punto común aparente pertenece a ninguno.
+and the apparent common point belongs to neither.
 
-Esto no contradice (6b) de `104_28`: después de evaluar sobre el rayo
-\(g_n\), el solapamiento aporta otro factor \(m^{-1/2}\) y la **forma
-escalar** converge para todo \(\varepsilon>0\). Lo que (18) descarta es
-separarla primero como un operador acotado y luego recuperar el borde por
-transporte Hilbert.
+This does not contradict (6b) of `104_28`: after evaluating on ray
+\(g_n\), the overlap supplies another factor \(m^{-1/2}\), and the
+**scalar form** converges for every \(\varepsilon>0\). What (18) rules out
+is separating it first as a bounded operator and then recovering the
+boundary via Hilbert transport.
 
-## 5. Auditoría de la métrica \(A_{\rm flag}\)
+## 5. Audit of the metric \(A_{\rm flag}\)
 
-Póngase \(M=150\), \(P_M=\sum_{j<M}L_j\), y
+Set \(M=150\), \(P_M=\sum_{j<M}L_j\), and
 
 \[
  \mathcal H_{\rm flag}
  =\mathrm{span}\,\{P_M,L_M,L_{M+1},\ldots\}\subset\mathcal H.        \tag{19}
 \]
 
-La familia mostrada en (19) es ortogonal en \(\mathcal H\). Con
-\(d_k=\Delta A_k=A_{k+1}-A_k\), defínase
+The family shown in (19) is orthogonal in \(\mathcal H\). With
+\(d_k=\Delta A_k=A_{k+1}-A_k\), define
 
 \[
  \left\|a_0P_M+\sum_{k\ge M}a_kL_k\right\|_{A_{\rm flag}}^2
  =A_M|a_0|^2+\sum_{k\ge M}d_k|a_k|^2.                         \tag{20}
 \]
 
-Como \(d_k>0\) desde mucho antes de \(M\), (20) es positiva. Además,
+Since \(d_k>0\) well before \(M\), (20) is positive. Moreover,
 
 \[
  P_n=P_M+\sum_{k=M}^{n-1}L_k,
@@ -237,19 +238,19 @@ Como \(d_k>0\) desde mucho antes de \(M\), (20) es positiva. Además,
  =A_M+\sum_{k=M}^{n-1}\Delta A_k=A_n.}                       \tag{21}
 \]
 
-La identidad (21) corrige genuinamente la ausencia de una referencia
-positiva señalada en `104_28`. No basta, sin embargo, para transportar (6).
+Identity (21) genuinely fixes the absence of a positive reference noted in
+`104_28`. It is not, however, enough to transport (6).
 
-### 5.1 La bandera no es invariante por \(Q\)
+### 5.1 The flag is not invariant under \(Q\)
 
-La telescopía de (2) da
+Telescoping (2) gives
 
 \[
  QP_M=M(L_M-L_{M-1}).                                         \tag{22}
 \]
 
-Si \(\Pi_{\rm flag}\) es la proyección ortogonal de \(\mathcal H\) sobre
-(19), entonces \(\Pi_{\rm flag}L_{M-1}=P_M/M\), y
+If \(\Pi_{\rm flag}\) is the orthogonal projection of \(\mathcal H\) onto
+(19), then \(\Pi_{\rm flag}L_{M-1}=P_M/M\), and
 
 \[
  \Pi_{\rm flag}QP_M=-P_M+ML_M,                               \tag{23}
@@ -261,13 +262,14 @@ Si \(\Pi_{\rm flag}\) es la proyección ortogonal de \(\mathcal H\) sobre
  \boxed{\|(I-\Pi_{\rm flag})QP_M\|_{\mathcal H}^2=M(M-1).} \tag{24}
 \]
 
-Para \(M=150\), la fuga cuadrática es \(22350\). Por tanto no existe la
-restricción \(Q|_{\mathcal H_{\rm flag}}\) como generador del flujo exacto.
-Comprimirlo elimina (24) y cambia la dinámica en el borde.
+For \(M=150\), the quadratic leak is \(22350\). Hence the restriction
+\(Q|_{\mathcal H_{\rm flag}}\) does not exist as a generator of the exact
+flow. Compressing it eliminates (24) and changes the dynamics at the
+boundary.
 
-### 5.2 La compresión tampoco es unitaria para \(A_{\rm flag}\)
+### 5.2 The compression is not unitary for \(A_{\rm flag}\) either
 
-Sea \(Q_{\rm flag}=\Pi_{\rm flag}Q\Pi_{\rm flag}\). Sus primeras filas son
+Let \(Q_{\rm flag}=\Pi_{\rm flag}Q\Pi_{\rm flag}\). Its first rows are
 
 \[
  \begin{aligned}
@@ -276,7 +278,7 @@ Sea \(Q_{\rm flag}=\Pi_{\rm flag}Q\Pi_{\rm flag}\). Sus primeras filas son
  \end{aligned}                                                \tag{25}
 \]
 
-En la cola conserva la matriz tridiagonal ordinaria. Pero (20) da
+In the tail it keeps the ordinary tridiagonal matrix. But (20) gives
 
 \[
  \langle Q_{\rm flag}P_M,L_M\rangle_A
@@ -284,8 +286,8 @@ En la cola conserva la matriz tridiagonal ordinaria. Pero (20) da
  =M\Delta A_M-A_M>0,                                         \tag{26}
 \]
 
-porque \(A_0=0\) y \(\Delta^2A_j>0\) hacen a
-\(\Delta A_j\) estrictamente creciente. Para \(k\ge M\),
+because \(A_0=0\) and \(\Delta^2A_j>0\) make
+\(\Delta A_j\) strictly increasing. For \(k\ge M\),
 
 \[
  \langle QL_k,L_{k+1}\rangle_A-
@@ -294,23 +296,24 @@ porque \(A_0=0\) y \(\Delta^2A_j>0\) hacen a
  =(k+1)\Delta^2A_k>0.                                        \tag{27}
 \]
 
-Así, cambiar la métrica destruye la autoadjunción que justificaba mover el
-semigrupo de un lado al otro en (10). Re-simetrizar (25) modificaría sus
-tasas y ya no realizaría la recurrencia (6).
+So changing the metric destroys the self-adjointness that justified
+moving the semigroup back and forth in (10). Re-symmetrizing (25) would
+change its rates and would no longer realize recurrence (6).
 
-### 5.3 Aun la versión proyectada conserva el umbral \(1/2\)
+### 5.3 Even the projected version keeps the \(1/2\) threshold
 
-Hay un test más favorable: ignorar la fuga de dimensión finita y preguntar
-solo si la cola Laguerre de \(e^{\varepsilon x}P_n\) tiene norma (20). Para
-\(0\le\varepsilon<1\), sean
+There is a more favorable test: ignore the finite-dimensional leak and ask
+only whether the Laguerre tail of \(e^{\varepsilon x}P_n\) has norm (20).
+For \(0\le\varepsilon<1\), let
 
 \[
  a_k^{(n)}(\varepsilon)
  =\int_0^\infty e^{-(1-\varepsilon)x}P_n(x)L_k(x)\,dx.         \tag{28}
 \]
 
-La generatriz ordinaria de Laguerre y
-\(\int_0^\infty e^{-sx}P_n(x)dx=1-((s-1)/s)^n\) dan la identidad racional
+The ordinary Laguerre generating function and
+\(\int_0^\infty e^{-sx}P_n(x)dx=1-((s-1)/s)^n\) give the rational
+identity
 
 \[
  \boxed{
@@ -321,10 +324,10 @@ La generatriz ordinaria de Laguerre y
  \right].}                                                   \tag{29}
 \]
 
-La singularidad de (29) está en
-\(z_0=-(1-\varepsilon)/\varepsilon\). Poniendo
-\(r=\varepsilon/(1-\varepsilon)\), extracción en ese polo da, para \(n\)
-fijo,
+The singularity of (29) is at
+\(z_0=-(1-\varepsilon)/\varepsilon\). Setting
+\(r=\varepsilon/(1-\varepsilon)\), extraction at that pole gives, for fixed
+\(n\),
 
 \[
  a_k^{(n)}(\varepsilon)
@@ -333,18 +336,18 @@ fijo,
    +O_{n,\varepsilon}(k^{n-2}r^k).                            \tag{30}
 \]
 
-Para \(n=1\) el término de error se omite; para \(\varepsilon=0\) la
-sucesión es simplemente el prefijo finito original.
+For \(n=1\) the error term is omitted; for \(\varepsilon=0\) the
+sequence is simply the original finite prefix.
 
-Por la fórmula exacta de `103_52`,
+By the exact formula of `103_52`,
 
 \[
  \Delta A_k=-{\gamma+\log(4\pi)\over2}
- +\sum_{\ell\ \mathrm{impar}}{1-(1-1/\ell)^k\over\ell},    \tag{31}
+ +\sum_{\ell\ \mathrm{odd}}{1-(1-1/\ell)^k\over\ell},    \tag{31}
 \]
 
-se tiene \(\Delta A_k\asymp\log k\) y, para \(k\ge M\),
-\(\Delta A_k\ge\Delta A_M>0\). Las ecuaciones (30)--(31) prueban
+one has \(\Delta A_k\asymp\log k\) and, for \(k\ge M\),
+\(\Delta A_k\ge\Delta A_M>0\). Equations (30)–(31) prove
 
 \[
  \boxed{
@@ -352,61 +355,62 @@ se tiene \(\Delta A_k\asymp\log k\) y, para \(k\ge M\),
  \quad\Longleftrightarrow\quad\varepsilon<\tfrac12.}       \tag{32}
 \]
 
-La métrica positiva no mueve el borde; lo hace más singular por un factor
-logarítmico. En efecto, en \(\varepsilon=1/2\),
+The positive metric does not move the boundary; it makes it more singular
+by a logarithmic factor. Indeed, at \(\varepsilon=1/2\),
 
 \[
  \sum_{M\le k\le K}\Delta A_k|a_k^{(n)}(1/2)|^2
  \asymp_n K^{2n-1}\log K,                                   \tag{33}
 \]
 
-y para \(1/2<\varepsilon<1\) crece como
+and for \(1/2<\varepsilon<1\) it grows like
 
 \[
  \asymp_{n,\varepsilon}r^{2K}K^{2n-2}\log K.                 \tag{34}
 \]
 
-Desde abajo, la norma cuadrática de la cola tiene orden
+From below, the squared norm of the tail has order
 
 \[
  (1-2\varepsilon)^{-(2n-1)}
  \log{1\over1-2\varepsilon}.                                \tag{35}
 \]
 
-Por consiguiente \(A_{\rm flag}\) sí construye el denominador escalar
-correcto sobre cada prefijo, pero no crea un solapamiento entre el dominio
-Euler seguro y el dominio del transporte inverso.
+Consequently \(A_{\rm flag}\) does build the correct scalar denominator
+over each prefix, but it creates no overlap between the safe Euler domain
+and the domain of the inverse transport.
 
-## 6. Alcance del stop-gate
+## 6. Scope of the stop-gate
 
-Queda probado:
+What is proved:
 
-1. el flujo exacto (6), antes de retirar el regulador;
-2. la realización autoadjunta \(Q=-M_x\);
-3. el umbral agudo (13), con blow-up (14);
-4. el umbral estricto de convergencia en norma (17);
-5. que \(\mathcal H_{\rm flag}\) no es invariante, que \(Q_{\rm flag}\) no
-   es \(A_{\rm flag}\)-simétrico y que incluso su cola proyectada conserva
-   el mismo umbral.
+1. the exact flow (6), before removing the regulator;
+2. the self-adjoint realization \(Q=-M_x\);
+3. the sharp threshold (13), with blow-up (14);
+4. the strict norm-convergence threshold (17);
+5. that \(\mathcal H_{\rm flag}\) is not invariant, that \(Q_{\rm flag}\)
+   is not \(A_{\rm flag}\)-symmetric, and that even its projected tail
+   keeps the same threshold.
 
-Se descarta únicamente el siguiente movimiento:
+Only the following move is ruled out:
 
-> construir primero el canal primo como operador acotado en un regulador
-> Euler seguro y recuperar el observable de A1 aplicando el semigrupo
-> birth--death hacia atrás en un espacio Hilbert de Laguerre.
+> first building the prime channel as a bounded operator in a safe Euler
+> regulator and recovering the A1 observable by applying the birth–death
+> semigroup backward in a Laguerre Hilbert space.
 
-Sigue abierto un teorema que conserve polo, Gamma y primos como un único
-funcional renormalizado firmado. Tal teorema no puede justificarse por el
-solapamiento de dominios de este flujo: ese solapamiento es vacío.
+A theorem that keeps the pole, Gamma, and primes as a single signed
+renormalized functional remains open. Such a theorem cannot be justified
+by the domain overlap of this flow: that overlap is empty.
 
-## 7. Verificación
+## 7. Verification
 
-Desde `phase-104-unconditional-a1-closure/tools`:
+From `phase-104-unconditional-a1-closure/tools`:
 
 ```bash
 python3 epsilon_flow_observability_gate_check.py
 ```
 
-El script usa solo `Fraction`. Verifica (2), el flujo polar (5), la generatriz
-(29) contra integración exacta para varios grados y reguladores, y la fuga
-(24) con valor \(22350\) para \(M=150\).
+The script uses only `Fraction`. It verifies (2), the polar flow (5), the
+generating function (29) against exact integration for several degrees and
+regulators, and the leak (24) with value \(22350\) for \(M=150\).
+</content>

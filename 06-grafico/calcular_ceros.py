@@ -1,4 +1,4 @@
-"""Calcula los primeros 10000 ceros no triviales de zeta y los cachea a disco."""
+"""Computes the first 10000 nontrivial zeta zeros and caches them to disk."""
 import mpmath as mp
 import time
 
@@ -12,5 +12,5 @@ with open(OUT, "w") as f:
         g = float(mp.zetazero(n).imag)
         f.write(f"{g:.10f}\n")
         if n % 500 == 0:
-            print(f"  {n} ceros  ({time.time()-t0:.0f}s)", flush=True)
-print(f"Listo: {N} ceros en {time.time()-t0:.0f}s -> {OUT}")
+            print(f"  {n} zeros  ({time.time()-t0:.0f}s)", flush=True)
+print(f"Done: {N} zeros in {time.time()-t0:.0f}s -> {OUT}")

@@ -1,7 +1,6 @@
 # E67.2 — QSC-exist blueprint for the prime current
 
-**Date:** 2026-07-06.
-**Role:** first non-circular mathematical specification of the prime-current problem after the
+**Purpose:** first non-circular mathematical specification of the prime-current problem after the
 archimedean carrier was identified as Gamma_q / Plancherel.
 **Status update:** the original group-like Euler ansatz is now marked **NO-GO**. It preserves Euler
 multiplicativity, but collapses the CQG structure to the Bost-Connes/Pontryagin-dual case and cannot

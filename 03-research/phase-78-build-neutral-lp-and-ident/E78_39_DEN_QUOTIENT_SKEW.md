@@ -1,6 +1,6 @@
 # E78.39 - Denominator phase rigidity is a quotient-skew law
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

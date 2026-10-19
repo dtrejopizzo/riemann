@@ -1,29 +1,29 @@
 """
-P3 - mecanismo real de 2.3.F-Loc, SIN adivinar tapers. Test directo de LOCALIDAD del kernel
-Doob-conjugado: ¿el operador G_lambda = u0 (A-eps0) u0 es LOCAL (decae rapido fuera de la
-diagonal)?  Y crucialmente: ¿la localidad viene de la CANCELACION ARCH-PRIME?
+P3 - real mechanism of 2.3.F-Loc, WITHOUT guessing tapers. Direct LOCALITY test of the
+Doob-conjugated kernel: is the operator G_lambda = u0 (A-eps0) u0 LOCAL (decays fast away
+from the diagonal)?  And crucially: does the locality come from ARCH-PRIME CANCELLATION?
 
-Tesis: ARCH-solo y PRIME-solo tienen colas off-diagonal LENTAS (no-locales, saltos grandes);
-en ARCH-PRIME se CANCELAN -> decaimiento rapido = LOCAL. DH: NO cancelan -> sigue no-local.
+Thesis: ARCH-only and PRIME-only have SLOW off-diagonal tails (non-local, large jumps);
+in ARCH-PRIME they CANCEL -> fast decay = LOCAL. DH: they do NOT cancel -> remains non-local.
 
-Metodo: kernel en posicion K_M(x,y)=Sum_{mn} M_{mn} e^{2pi i m x/L} e^{-2pi i n y/L}/L.
-Doob: G(x,y)=u0(x)u0(y) K_{A-eps0}(x,y) (parte off-diagonal, x!=y, sin la delta).
-Medida de no-localidad: NL(d) = RMS_{|x-y|>d} |G| / RMS_{all} |G|.  Comparar ARCH, PRIME,
-ARCH-PRIME (zeta) y ARCH-PRIME (DH).
+Method: position-space kernel K_M(x,y)=Sum_{mn} M_{mn} e^{2pi i m x/L} e^{-2pi i n y/L}/L.
+Doob: G(x,y)=u0(x)u0(y) K_{A-eps0}(x,y) (off-diagonal part, x!=y, without the delta).
+Non-locality measure: NL(d) = RMS_{|x-y|>d} |G| / RMS_{all} |G|.  Compare ARCH, PRIME,
+ARCH-PRIME (zeta) and ARCH-PRIME (DH).
 """
 import numpy as np, mpmath as mp
 mp.mp.dps = 40
-exec(open('E70_doob_parter.py').read().split('# ---- ejecutar')[0])
+exec(open('E70_doob_parter.py').read().split('# ---- run')[0])
 
 def kernel_grid(Mmat, idx, L, Ny=240):
     dim=len(idx); ys=np.linspace(0,L,Ny)
-    # phi_m(x)=exp(2pi i m x/L); K = E * M * E^H /L  con E[x,m]=phi_m(x)
+    # phi_m(x)=exp(2pi i m x/L); K = E * M * E^H /L  with E[x,m]=phi_m(x)
     Ecos=np.zeros((Ny,dim)); Esin=np.zeros((Ny,dim))
     for j,n in enumerate(idx):
         ph=2*np.pi*n*ys/L; Ecos[:,j]=np.cos(ph); Esin[:,j]=np.sin(ph)
     Mr=np.array([[float(Mmat[a,b]) for b in range(dim)] for a in range(dim)])
-    # K(x,y)=Sum_mn M_mn phi_m(x) conj(phi_n(y)); M real simetrica -> tomar parte real
-    # phi_m(x)conj(phi_n(y)) real part = cos(m x)cos(n y)+sin(m x)sin(n y) (con signo en n)
+    # K(x,y)=Sum_mn M_mn phi_m(x) conj(phi_n(y)); M real symmetric -> take the real part
+    # phi_m(x)conj(phi_n(y)) real part = cos(m x)cos(n y)+sin(m x)sin(n y) (with sign in n)
     Kr = Ecos@Mr@Ecos.T + Esin@Mr@Esin.T
     return ys, Kr/L
 
@@ -45,25 +45,25 @@ def run73(lam,N,kind='zeta'):
     ys,u0=recon_grid(c0,idx,L,Ny=240)
     if u0[len(u0)//2]<0: u0=-u0
     W=np.outer(u0,u0)
-    # A - eps0 I  (la I en Fourier es identidad)
+    # A - eps0 I  (I in Fourier space is the identity)
     Ae=A.copy()
     for i in range(dim): Ae[i,i]=Ae[i,i]-eps0
     parts={'ARCH':Larch,'PRIME':Lpr,'ARCH-PRIME(=A-eps0)':Ae}
     print(f"\n{'='*60}\n{kind} lambda={lam} N={N} L={L:.3f}  eps0={float(eps0):+.3e}")
-    print(f"  no-localidad NL(d)=RMS_{{|x-y|>d}}|G|/RMS_all  (cae rapido=LOCAL):")
+    print(f"  non-locality NL(d)=RMS_{{|x-y|>d}}|G|/RMS_all  (fast drop=LOCAL):")
     res={}
     for name,M in parts.items():
         _,K=kernel_grid(M,idx,L)
-        G=W*K  # Doob (off-diagonal; la diagonal/delta no afecta el decaimiento)
+        G=W*K  # Doob (off-diagonal part; the diagonal/delta does not affect the decay)
         ds,nl=nonlocality(ys,G); res[name]=nl
     hdr="    d=" + " ".join(f"{d:5.2f}" for d in ds)
     print(hdr)
     for name in parts:
         print(f"  {name:>20}: " + " ".join(f"{x:5.2f}" for x in res[name]))
-    # cuantificar: a media-caja d=L/3, cuanta cola queda
+    # quantify: at half-box d=L/3, how much tail remains
     i3=np.argmin(np.abs(ds-L/3))
-    print(f"  --> cola a d=L/3={L/3:.2f}:  ARCH={res['ARCH'][i3]:.2f}  PRIME={res['PRIME'][i3]:.2f}  ARCH-PRIME={res['ARCH-PRIME(=A-eps0)'][i3]:.2f}")
-    print(f"      {'CANCELACION -> LOCAL' if res['ARCH-PRIME(=A-eps0)'][i3] < 0.6*min(res['ARCH'][i3],res['PRIME'][i3]) else 'sin ganancia de localidad por cancelacion'}")
+    print(f"  --> tail at d=L/3={L/3:.2f}:  ARCH={res['ARCH'][i3]:.2f}  PRIME={res['PRIME'][i3]:.2f}  ARCH-PRIME={res['ARCH-PRIME(=A-eps0)'][i3]:.2f}")
+    print(f"      {'CANCELLATION -> LOCAL' if res['ARCH-PRIME(=A-eps0)'][i3] < 0.6*min(res['ARCH'][i3],res['PRIME'][i3]) else 'no locality gain from cancellation'}")
     return ds,res
 
 for lam,N in [(7.0,14),(11.0,18)]:

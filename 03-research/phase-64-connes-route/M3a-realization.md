@@ -1,6 +1,6 @@
 # M3a: the realization `f ↦ Z_f` — the correspondence construction and the irreducible gap
 
-*Continuation. Pure mathematics. We give the explicit proposed realization of a test function as an
+*Continuation. We give the explicit proposed realization of a test function as an
 arithmetic correspondence, prove the part that is formal/unconditional (the self-intersection identity
 `W(f)=(Z_f·Z_f)` modulo the intersection numbers), and isolate the **single irreducible gap**: the
 existence of the arithmetic intersection numbers with the Hodge-index sign over `Spec ℤ`. This is the

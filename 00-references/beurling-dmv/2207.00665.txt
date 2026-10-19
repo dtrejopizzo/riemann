@@ -1,0 +1,3581 @@
+arXiv:2207.00665v2 [math.NT] 21 Feb 2023
+
+THE METHOD OF PINTZ FOR THE INGHAM QUESTION ABOUT THE
+CONNECTION OF DISTRIBUTION OF ζ-ZEROES AND ORDER OF THE
+ERROR IN THE PNT IN THE BEURLING CONTEXT
+SZILÁRD GY. RÉVÉSZ
+
+Abstract. We prove two results, generalizing long existing knowledge regarding the classical
+case of the Riemann zeta function and some of its generalizations. These are concerned with
+the question of Ingham who asked for optimal and explicit order estimates for the error term
+∆(x) := ψ(x) − x, given any zero-free region D(η) := {s = σ + it ∈ C : σ := ℜs ≥ 1 − η(t)}. In
+the classical case essentially sharp results are due to some 40 years old work of Pintz.
+Here we consider a given system of Beurling primes P, the generated arithmetical semigroup
+G, the corresponding integer counting function N (x), and the respective error term ∆P (x) :=
+ψP (x) − x in the PNT of Beurling, where ψP (x) is the Beurling analog of ψ(x). First we prove
+that if the Beurling zeta function ζP does not vanish in D(η), then the extension of Pintz’ result
+holds: |∆P (x)| ≤ x exp((1 + ε)ωη (log x)) (x > x0 (ε)), where ωη (y) := L(η)(y) is the naturally
+occurring conjugate function–essentially the Legendre transform–of η(t), introduced into the field
+by Ingham. In the second part we prove a converse: if ζP has an infinitude of zeroes in the given
+domain, then analogously to the classical case, |∆P (x)| ≥ x exp((1 − ε)ωη (log x)) holds "infinitely
+often". This also shows that both main results are sharp apart from the arbitrarily small ε > 0.
+The classical results of Pintz used many facts about the Riemann zeta function. Recently we
+worked out a number of analogous results–including some construction of quasi-optimal integration
+paths, a Riemann-von Mangoldt type formula, a Carlson-type density theorem and a Turán type
+local density theorem–for the Beurling context, too. These, together with Turán’s power sum
+theory, all play some indispensable role in deriving the main results of the paper.
+
+MSC 2020 Subject Classification. Primary 11N80, 11M41; Secondary 11F66, 11M45, 30B40,
+30B50, 30C15.
+Keywords and phrases. Beurling zeta function, analytic continuation, arithmetical semigroups,
+Knopfmacher’s Axiom A, Beurling prime number theorem, zero of the Beurling zeta function,
+oscillation of remainder term, Mellin transform.
+Author information. Alfréd Rényi Institute of Mathematics
+Reáltanoda utca 13-15, 1053 Budapest, Hungary
+revesz.szilard@renyi.hu
+
+1. Introduction
+In Beurling’s theory of generalized integers and primes, G is a unitary, commutative semigroup,
+with a countable set P of indecomposable generators, called the primes of G, which freely generate1
+the whole of G.
+Moreover, there is a norm | · | : G → R+ such that the following hold. First, the image of G,
+|G| ⊂ R+ is locally finite in the sense that any finite interval of R+ can contain the norm of only a
+finite number of elements of G; thus the function
+(1)
+
+N (x) := #{g ∈ G : |g| ≤ x}
+
+exists as a finite, nondecreasing, right continuous, nonnegative integer valued function on R+ .
+Second, the norm is multiplicative, i.e. |g · h| = |g| · |h|; it follows that for the unit element e
+of G |e| = 1, and that all other elements g ∈ G have norms strictly larger than 1.
+1In exact terms this means that any element g ∈ G can be uniquely written (up to order of terms) in the form
+g = pk1 1 · · · · · pkmm : two (essentially) different such expressions are necessarily different as elements of G, while each
+element has its (essentially) own unique prime decomposition.
+1
+
+2
+
+SZILÁRD GY. RÉVÉSZ
+
+In this paper we will assume throughout2 the so-called "Axiom A" of Knopfmacher3, see pages
+73-79 of [32].
+Definition 1. N satisfies Axiom A – more precisely, Axiom A(κ, θ) with the constants κ > 0 and
+0 < θ < 1 – if we have4 for the remainder term R(x) := N (x) − κ(x − 1) the estimate
+
+(2)
+
+|R(x)| ≤ Axθ
+
+(κ, A > 0, 0 < θ < 1 constants, x ≥ 1 arbitrary).
+
+The Beurling zeta function is defined as the Mellin transform of N (x), i.e.
+Z ∞
+X 1
+(3)
+ζ(s) := ζG (s) := M(N )(s) :=
+x−s dN (x) =
+.
+|g|s
+1
+g∈G
+
+C
+
+If only N (x) = O(x ), the series converges absolutely and locally uniformly in the halfplane ℜs > C,
+moreover, its terms can be rearranged to provide the Euler product formula
+
+Y
+1
+(4)
+ζG (s) =
+.
+1 − |p|−s
+p∈P
+
+1+ε
+
+In particular, if N (x) = O(x ) for all ε > 0, then ζG is absolutely convergent in ℜs > 1, it
+cannot vanish there–as is clear from (4)–moreover, |ζ(s)| ≥ 1/ζ(σ) (σ := ℜs). RFurthermore, under
+∞
+1
+Axiom A it admits a meromorphic, essentially analytic continuation κ s−1
++ 1 x−s dR(x) up to
+ℜs > θ with
+P only one simple pole at 1. For an analysis of the finer behavior of the number of primes
+πP (x) := p∈P; |p|≤x 1–as in the classical case of G = N–the location of the zeroes of ζ(s) in the
+"critical strip" θ < ℜs ≤ 1 is decisive, as we will see.
+For a Beurling system the generalized von Mangoldt function is
+(
+log |p| if g = pk , k ∈ N with some prime p ∈ G
+(5)
+Λ(g) := ΛG (g) :=
+.
+0 if g ∈ G is not a prime power in G
+
+These appear also as the coefficients of the logarithmic derivative of the Beurling zeta function:
+X Λ(g)
+ζ′
+.
+(6)
+− (s) =
+ζ
+|g|s
+g∈G
+
+The Beurling theory of generalized primes investigates the summatory function
+X
+Λ(g).
+(7)
+ψ(x) := ψG (x) :=
+g∈G, |g|≤x
+
+P
+The asymptotic relation ψ(x) ∼ x is equivalent to say that π(x) := p∈P, |p|≤x 1 satisfies π(x) ∼
+Rx
+li(x) := 2 du/ log u or π(x) ∼ x/ log x, and is thus termed as the Prime Number Theorem (PNT).
+Equivalently, we can also formulate this by use of the "error term in the prime number formula",
+for which the standard notation is
+(8)
+
+∆(x) := ∆G (x) := ψ(x) − x.
+
+Then PNT is thus the statement that ∆(x) = o(x). The so-called "Chebyshev bounds" x ≪ ψ(x) ≪
+x mean that there are constants 0 < c < C < ∞ with cx ≤ ψ(x) ≤ Cx. Much study was devoted
+2We indeed assume Axiom A even wherever it is not stated explicitly. Without a meromorphic continuation of ζ(s)
+all our analysis–in particular referring to zeroes of ζ(s)–would be void, thus without Axiom A we should have assumed
+other conditions to ensure meromorphic continuity. Moreover, it is well-known that in case Axiom A fails to hold, a
+meromorphic continuation, even if it may exist, but can behave rather wildly. E.g. if the primes are well-behaved, then
+ζ(s) must have infinite order of growth [23]. A construction of very well-behaved primes with widely oscillating integer
+distribution (and thus with ζ(s) having infinite order left to ℜs = 1) is worked out in [8]. Moreover, according to an
+effective Ikehara theorem [2], the following is true: if ζ(s)(s − 1) has an analytic continuation to ℜs > θ and admits
+a polynomial order bound |ζ(s)| ≪ (1 + |s|)M (|ℑs| ≥ 1), then N (x) = κx + O(xq ), with some q < 1 (irrespective
+of any condition on the behavior of the prime counting function). In other words, not having Axiom A with some
+q < 1 necessarily entails infinite order of growth. This of course makes all the technical lemmas and estimates–which
+are very crucially used here–impossible to get. This should well explain why we restrict ourselves to this condition
+holding everywhere in this work.
+3
+In the terminology of Hilberdink [24], such conditions are termed as being "well-behaved", e.g. the integers here.
+4The usual formulation uses the more natural version R(x) := N (x) − κx. However, our version is more convenient
+R
+with respect to the initial values at 1, as we here have R(1 − 0) = 0. All respective integrals of the form 1 will
+be understood as integrals from 1 − 0, and thus we can avoid considering endpoint values in the respective partial
+integration formulae. Alternatively, we could have taken also N (x) left continuous: also with this convention we
+would have R(1) = 0.
+
+THE INGHAM QUESTION ON THE ORDER OF THE PNT IN THE BEURLING CONTEXT
+
+3
+
+to describe, what conditions are necessary resp. sufficient for the PNT or the Chebyshev bounds to
+hold in the generality of Beurling systems [4, 9, 13, 18, 28, 16, 17, 73, 74, 76, 77, 79]. Another much
+studied question, which simply does not arise in the classical case, is density and asymptotics of
+N (x) [15, 30, 11]. Still another direction, going back to Beurling himself, is the study of analogous
+questions in case the assumption of Axiom A is weakened to e.g. an asymptotic condition on N (x)
+with a product of x and a sum of powers of log x, or a sum of powers of log x perturbed by almost
+periodic polynomials in log x, or N (x) − cx being periodic, see [4, 21, 52, 79].
+There are other studies related to the Beurling PNT in the literature. In particular, some rough
+(as compared to our knowledge in the prime number case) estimates and equivalences were worked
+out in the analysis of the connection between ζ-zero distribution and the behavior of the error term
+∆(x). One of the deep
+results in this direction is the extension of the classical oscillation result
+√
+π(x) − li(x) = Ω± ( x log log log x/ log x) of Littlewood [34] to the Beurling context [29]. Further,
+so-called (α, β) systems and (α, β, γ) systems were defined [37], with these parameters denoting the
+"best possible" exponents in estimating the error terms R(x), ∆(x) and the summatory function
+MG (x) of the Beurling version of the Möbius function µG (g); in particular, it is known that the two
+largest of these three parameters have to be at least 1/2 and must match [24], [37]. Oscillation order
+of the generalized Möbius summatory function and even more general arithmetical functions are also
+treated up to recent times [22, 18, 12, 7, 45].
+The interest in the Beurling theory was greatly boosted by a construction of Diamond, Montgomery
+and Vorhauer [14]. They basically showed that under Axiom A the Riemann hypothesis may still
+fail; moreover, nothing better than the most classical [72] zero-free region and error term of
+(9)
+
+ζ(s) 6= 0
+
+whenever s = σ + it, σ > 1 −
+
+c
+,
+log t
+
+and
+(10)
+
+ψ(x) = x + O(x exp(−c
+
+p
+log x))
+
+follows from (2) at least if θ > 1/2.
+Therefore, e.g. Vinogradov estimates and many other technology cannot prevail in this generality,
+and for Beurling zeta functions only a restricted variety of arguments can be implemented.
+After the Diamond-Montgomery-Vorhauer paper [14], better and better examples were constructed
+for arithmetical semigroups with very "regular" and very "irregular" behavior on the zero- or prime
+distribution, see e.g. [1], [8], [14], [24], [78]. For an analysis of these directions as well as for much
+more information the reader may consult the monograph [19].
+In sum, in contrast with the classical natural number system, when it is generally believed that
+the Riemann Hypothesis holds true, in the generality of arithmetical semigroups many different
+scenarios occur. It is all the more natural to extend the questions, originally posed in the classical
+case by Littlewood [33] and of Ingham [26], what explicit, effective conclusions can be drawn for the
+oscillation of the error term ∆(x) from the existence of a given ζ-zero, or from the existence of an
+infinitude of ζ-zeroes within a given domain, and, conversely, what can be the best order estimates
+assuming a given zero-free region. However, to date, only a few attempts were made to generally
+describe the intimate correspondence between the location of the zeroes of the Beurling zeta function
+ζ on the one hand and order estimates or oscillation results for the remainder term ∆(x) on the
+other hand.
+In the classical case of the Riemann zeta function the problem of Littlewood was first answered
+by Turán [70], based on his celebrated power sum method [69], [67]. The Turán result then was
+sharpened in several steps [63], [31], [38], [51], and were extended to various more general contexts, in
+particular to the case of prime ideals of algebraic number fields, see [65, 62, 48, 51]. These effective
+results also furnished some localizations, where the large oscillations should occur, while related
+works [43, 44, 59, 41] produced various versions where the sharpness of the estimate was a little bit
+sacrificed in exchange for sharper localizations, a trade-off rather characteristic in these results.
+Let us describe in more detail the development around Ingham’s problem, as it will be our main
+topic here for the Beurling case. We start with upper bounds following from localization of the set
+of zeroes of the Riemann ζ function. Denote by η(t) : [0, ∞) → [0, 1/2] a nonincreasing function and
+consider the domain
+(11)
+
+D(η) := {s = σ + it ∈ C : σ > 1 − η(|t|), t ∈ R}.
+
+4
+
+SZILÁRD GY. RÉVÉSZ
+
+Ingham–see the last line of page 62 in [25]–defined the function ωη formally5 as
+(12)
+
+ωη (x) := min η(t) log x + log t =
+t≥1
+
+min
+
+v:=log t≥0
+
+η(ev )u + v,
+
+where here we also wrote in the last form the logarithmic variables v := log t and u := log x. It will
+be called Ingham’s function corresponding to η. With this, Ingham showed the following [26].
+Theorem 1 (Ingham). Assume that for the Riemann zeta function ζ(s) 6= 0 in the domain D(η)
+in (11), i.e., for ℜs ≥ 1 − η(|t|), where s = σ + it and η : [0, ∞) → [0, 1/2] is a strictly decreasing
+continuously differentiable function with 1/η(t) = O(log t) and η ′ (t) tending to 0 with t → ∞.
+Then for arbitrary fixed ε > 0 we have |∆(x)| = O(x exp(−(1/2 − ε)ωη (x))).
+While in the opposite direction there were several results [64], [71] it was Pintz who observed
+that Ingham’s Theorem 1 involves a loss6 of a factor 1/2 in the exponent, so that to have both ways
+sharp results one needs to improve upon that, too. Subsequently he indeed could prove the improved
+result in [39], while allowing more general functions than Ingham could.
+Theorem 2 (Pintz). Let η : [0, ∞) → [0, 1/2] be a continuous nonincreasing function.
+If ζ(s) 6= 0 in D(η), then for arbitrary ε > 0 we have ∆(x) = O(x exp(−(1 − ε)ωη (x))).
+Next we come to results in the opposite direction, i.e., to lower estimation of the oscillation order
+of ∆(x) corresponding to assumption on penetration of zeroes into (11). The first effective results in
+this direction were also obtained by Turán [71] in the log power case and then Stas [64] for general
+curves. Later, these results were sharpened and extended to various cases, in particular to prime
+ideal distribution [66], [31]. For the natural number system, the optimal result was then achieved
+by Pintz in [39].
+Theorem 3 (Pintz). Conversely, assume that there is an infinite sequence of zeroes of the Riemann
+ζ function in the domain (11), where η(t) is a continuously differentiable strictly convex function.
+Then we have for any ε > 0 the oscillation ∆(x) = Ω(x exp(−(1 + ε)ωη (x))).
+This result then was extended to prime ideal distribution, too [49].
+The present work is part of a series. In [54] we proved a number of technical auxiliary results
+including the Riemann-von Mangoldt formula (24). In [55] we worked out three theorems on the
+distribution of zeroes of the Beurling zeta function in the critical strip, two of them proving to be
+crucial in our present work. First, we extended to the Beurling case a classic local density type
+estimate of Turán, see Lemma 9. Second, substantially strengthening a result of Kahane [29], we
+proved a Carlson-type density estimate for zeroes in the critical strip, for which we needed two
+additional assumptions that time. However, very recently [57] we succeeded in obtaining a more
+general version of the Carlson-type density result, which required only Axiom A to hold. Below we
+will present the exact formulation in Theorem 7. Let us note here that–at about the same time
+and by entirely different methods–Broucke and Debruyne obtained a similarly general version [6].
+Although their exponent is way better than ours, this has no significance for us here, while our
+formulation has the slight advantage of being quite explicit about the arising constants.
+Finally, in [56] we dealt with the problem of Littlewood in the Beurling case. Though its exact
+form is not used here, we formulate the result for comparison7 with the forthcoming Theorem 10,
+which on the other hand does indeed play a crucial role in our argument. Here and everywhere in
+the sequel we denote by A0 , A1 , . . . constants depending explicitly on the main parameters 8 of the
+Beurling system G only.
+5This can as well be expressed by means of the classical Legendre transform of a function:
+
+min
+
+v:=log t≥0
+
+η(ev )u + v =
+
+min
+
+w:=φ(v):=−η(ev )
+
+−wu + φ−1 (w) = − sup wu − φ−1 (w) =: −L(φ−1 )(u).
+w
+
+6In view of the necessary technicalities, we shall explain only later in the sequel why one should optimally expect
+R
+≈ x exp(−ωη (x)) in Theorem 1. In fact, for the integrated function Ψ1 (x) := 1x ψ(y)dy also Ingham obtained the
+1 2
+2
+"right order error", proving Ψ1 (x) = 2 x + O(x exp(−(1 − ε)ωη (x))) in Theorem 21 on the bottom of page 62 of
+[25]. However, to deduce error estimates for ψ(x) itself from formulae for Ψ1 incurred some losses.
+7About the need for an analogous but different form of the result consider the explanations after Remark 1, too.
+8That is, depending–in an explicit form–only on θ, κ and A from Axiom A.
+
+THE INGHAM QUESTION ON THE ORDER OF THE PNT IN THE BEURLING CONTEXT
+
+5
+
+Theorem 4. Let ζ(ρ0 ) = 0 with
+ ρ0 = β0 + iγ0 and β0 > θ, γ0 >0. Then for arbitrary 0 < ε < 0.1
+and log Y > Y0 (ε, ρ0 ) := max
+
+(13)
+such that
+(14)
+
+5 log β 1−θ log(8/ε)
+40
+0
+β0 −θ , β0 −θ , ε2 γ04 , log |ρ0 |, A1
+
+
+
+I := Y, Y
+
+|∆(x)| >
+
+0
+
+
+
+,
+
+−ε
+
+ xβ0
+
+.
+
+log(γ +5)
+
+0
+A2 (β −θ)
+2
+
+π
+2
+
+|ρ0 |
+
+, there exists an x in the interval
+
+Interestingly, the best constant in (14) is indeed π/2. To construct counterexamples, however,
+required the full strength of the recent sharpening [7] by Broucke and Vindas of the Diamond,
+Montgomery and Vorhauer method.
+Here we generalize the above results of Pintz in the direct and converse Ingham problem to the
+Beurling case, assuming Axiom A only.
+Theorem 5. Let the arithmetical semigroup G satisfy Axiom A. Assume that η(t) : [0, ∞) → [0, 1−θ]
+is an arbitrary real function such that D(η) is free of zeroes of the Beurling zeta function ζP .
+Then for arbitrary ε > 0 we have ∆P (x) = O(x exp(−(1 − ε)ωη (x))).
+Theorem 6. Conversely, let us assume that the arithmetical semigroup G satisfies Axiom A, and
+that there are infinitely many zeroes of ζP within the domain (11), where η(t) is convex in logarithmic
+variables (i.e. η(ev ) is convex).
+Then we have for any ε > 0 the oscillation estimate ∆P (x) = Ω(x exp(−(1 + ε)ωη (x))).
+Remark 1. This is slightly stronger than Theorem 3 of Pintz, for he requires η ′ (t) increasing, while
+d
+here we need only dv
+(η(ev )) = η ′ (ev )ev = η ′ (t) · t increasing. In the most interesting special cases of
+p
+η(t) = c log (log t) logq t, with q < 0 and p ∈ R, these conditions are both satisfied, however.
+On our way towards answering the Ingham question, we will need a result similar to Theorem 4
+but with a much better localization for the occurring value of x. Basically, instead of (13) we need
+an interval of the type [X 1−ε , X]. That we can get at the expense of some restrictions on the zero
+considered and a slight loss in the magnitude of the obtained oscillation, see Theorem 10 below.
+This corresponds to Theorem 2 of [38] in the classical case.
+In fact, we will prove some even stronger statements than the above Theorems 5 and 6, whose
+formulation needs further explanations and technicalities. Therefore, these further results will be
+discussed in due course in the sequel only, see in particular the end of Sections 4 and 8. These
+correspond to recent9 advances of Pintz [41] in the classical case. However, to see that these modern
+versions are indeed stronger is not equally easy for the two directions. For the direct estimate of
+∆(x) from knowledge about the zeroes, the comparison is almost trivial, but in the direction of
+the inverse, oscillation results, it becomes somewhat involved. This is explained by the different
+formulations: location of the zeroes is directly estimated if a function η(t) defines a zero-free region
+(11), but in case we assume that there are infinitely many zeroes in the domain D(η), it is not clear
+how the distribution of zeroes can be compared to the curve bounding D(η). And indeed, there is
+no automatic, general comparison of Theorem 6 and the Pintz type newer result, and a favorable
+comparison is possible only along an indirectly and geometrically constructed subsequence. This
+comparison we clarify at the end of Section 8. This comparison was not clarified earlier, not even in
+the classical case of natural numbers and the Riemann zeta function.
+2. Some auxiliary lemmas
+Lemma 1. For a > 0, b ∈ C and c ∈ R, we have
+ 2
+Z c+i∞
+b
+1
+1
+as2 +bs
+.
+e
+ds = √ exp −
+(15)
+2πi c−i∞
+2 πa
+4a
+Proof. This directly computable formula is taken–as in [51]–from [38], formula (10.2).
+Lemma 2. The following estimates hold true.
+9Note that these surfaced decades later than his above cited original achievements.
+
+
+
+6
+
+SZILÁRD GY. RÉVÉSZ
+
+• (i) For any B ≥ 1/2,
+
+Z ∞
+
+2
+
+2
+
+e−x dx < e−B .
+
+B
+
+• (ii) For any 0 ≤ λ ≤ 2 and B ≥ 1 we have
+Z ∞
+2
+2
+xλ e−x dx < B λ−1 e−B .
+B
+
+• (iii) For any λ ≥ 1, 0 < α < 1 and x ≥ 1 we have
+2
+
+logλ x ≤ eλ/α+λ xα .
+
+The proofs are easy direct calculations. For (i) and (iii) see also [51].
+Lemma 3 (Continuous form of the Second Main Theorem of Turán’s Power Sum
+Theory). If 0 < H < K, n ∈ N, and wj ∈ C (j = 1, . . . , n) are arbitrary complex numbers
+with ℜw1 = 0, then we have
+! 
+n
+n
+X
+K −H
+iwℓ M
+.
+≥
+max ℜ
+e
+H≤M≤K
+8eK
+ℓ=1
+
+For the proof see [69] or [67].
+3. Auxiliary results on the Beurling ζ function
+Here we collect some basic estimates and technical lemmas on the behavior of the Beurling ζ
+function. Most of them are well-known, see, e.g., [32] or [3] or [19]. In [54] we elaborated on their
+proofs only for the explicit handling of the arising constants in these estimates.
+However, the Riemann-von Mangoldt formula in Proposition 1 was first given in [54], and a
+Carlson-type density theorem for the Beurling zeta function was first proved–under two extra
+assumptions–in [55]. In this regard, recent development was rather fast, with general forms (assuming
+solemnly Axiom A) of the Carlson type density estimate appearing in [57] and also in [6]. We will
+give in Theorem 7 the version from the former paper.
+3.1. Estimates for the number of zeroes of ζ. In general in this paper we will use with arbitrary
+a, α ∈ [0, 1) and 0 < R < T the notations
+Z(a; T )
+
+(16)
+
+Z(a, α; T )
+
+:= {ρ = β + iγ : ℜρ = β ≥ a, |γ| ≤ T },
+
+:= {ρ = β + iγ : ℜρ = β ∈ [a, α), |γ| ≤ T },
+
+Z(a; R, T ) := {ρ = β + iγ : ℜρ = β ≥ a, R < |γ| ≤ T },
+
+Z(a, α; R, T ) := {ρ = β + iγ : ℜρ = β ∈ [a, α), R < |γ| ≤ T }.
+That is, e.g., Z(a; T ) and Z(a; R, T ) are the set of Beurling zeta zeroes in the rectangle [a, 1] ×
+[−iT, iT ] and [a, 1] × [−iT, −iR) ∪ (iR, iT ], respectively. Their number plays an essential role in the
+study of the Beurling zeta function: the standard notations for them are N (a, T ) := #Z(a; T ) and
+N (a; R, T ) := #Z(a; R, T ).
+Lemma 4. Let θ < b < 1 and consider any height T ≥ 5. Then the number of zeta-zeroes N (b, T )
+in the rectangle Z(b; T ) satisfies
+
+ 
+
+1
+1
+1
+(17)
+N (b, T ) ≤
+T log T + 2 log(A + κ) + log
++3 T .
+b−θ 2
+b−θ
+Proof. See Lemma 3.5 in [54].
+
+
+
+Lemma 5. Let θ < b < 1 and consider any heights T > R ≥ 5.
+Then the number of zeta-zeroes N (b, R, T ) in the rectangle Z(b, R, T ) satisfies10
+
+ 
+
+
+
+4
+16
+11.4(A + κ)2
+60(A + κ)2
+1
+(T − R) log
+T
++
+log
+T
+.
+(18)
+N (b, R, T ) ≤
+b − θ 3π
+b−θ
+3
+b−θ
+10This statement and the results of the forthcoming Lemmas 7 and 8 are slightly corrected as compared to the
+versions stated in [54] in view of a calculation error detected in their original proofs. The corrections result only in
+the change of some coefficients and were explained in somewhat more detail in [55].
+
+THE INGHAM QUESTION ON THE ORDER OF THE PNT IN THE BEURLING CONTEXT
+
+7
+
+In particular, for the zeroes between T − 1 and T + 1 we have for T ≥ 6
+
+
+
+
+1
+(A + κ)2
+(19)
+N (b, T − 1, T + 1) ≤
+6.2 log T + 6.2 log
++ 24 .
+(b − θ)
+b−θ
+Proof. This is a corrected version of Lemma 3.6 from [54], corrected in Lemma 6 of [55], with the
+slight correction explained in the footnote on page 1052.
+
+3.2. The logarithmic derivative of the Beurling ζ.
+√
+Lemma 6. Let z = a + it0 with |t0 | ≥ e5/4 + 3 = 5.222 . . . and θ < a ≤ 1. With δ := (a − θ)/3
+denote by S the (multi)set of the ζ-zeroes (listed according to multiplicity) not farther from z than
+δ. Then we have
+
+
+X 1
+ζ′
+1
+9(1 − θ)
+22.5 + 14 log(A + κ) + 14 log
+(20)
+(z) −
++ 5 log |t0 | .
+<
+ζ
+z−ρ
+(a − θ)2
+a−θ
+ρ∈S
+
+Furthermore, for 0 ≤ |t0 | ≤ 5.23 an analogous estimate (without any term containing log |t0 |)
+holds true:
+
+
+X 1
+ζ′
+1
+1
+9(1 − θ)
+(21)
+.
+34 + 14 log(A + κ) + 18 log
+(z) +
+−
+≤
+ζ
+z−1
+z−ρ
+(a − θ)2
+a−θ
+ρ∈S
+
+Proof. See Lemma 4.1 of [54].
+
+
+
+Lemma 7. For any given parameter θ < b < 1, and for any finite and symmetric to zero set
+A ⊂ [−iB, iB] of cardinality #A = n, there exists a broken line Γ = ΓA
+b , symmetric to the real axis
+and consisting of horizontal and vertical line segments only, so that its upper half is
+Γ+ =
+
+∞
+[
+
+k=1
+
+{[σk−1 + itk−1 , σk−1 + itk ] ∪ [σk−1 + itk , σk + itk ]},
+
+with σj ∈ [ b+θ
+2 , b], (j ∈ N), t0 = 0, t1 ∈ [4, 5] and tj ∈ [tj−1 + 1, tj−1 + 2] (j ≥ 2) and satisfying that
+the distance of any A-translate ρ + iα (iα ∈ A) of a ζ-zero ρ from any point s = t + iσ ∈ Γ is at
+least d := d(t) := d(b, θ, n, B; t) with
+(22)
+
+d(t) :=
+
+(b − θ)2
+.
+
+1
++ 113
+4n 12 log(|t| + B + 5) + 51 log(A + κ) + 31 log b−θ
+
+Moreover, the same separation from translates of ζ-zeroes holds also for the whole horizontal line
+b+θ
+segments Hk := [ b+θ
+2 + itk , 2 + itk ], k = 1, . . . , ∞, and their reflections Hk := [ 2 − itk , 2 − itk ],
+k = 1, . . . , ∞, and furthermore the same separation holds from the translated singularity points 1+iα
+of ζ, too.
+Proof. This is proved as Lemma 4.2 in [54], and is corrected slightly in Lemma 8 of [55] as a
+consequence of the mentioned necessary correction concerning Lemma 5 above.
+
+Lemma 8. For any 0 < θ < b < 1 and symmetric to R translation set A ⊂ [−iB, iB], on the
+broken line Γ = ΓA
+b , constructed in the above Lemma 7, as well as on the horizontal line segments
+Hk := [a + itk , 2 + itk ] and Hk , k = 1, . . . , ∞ with a := b+θ
+2 , we have uniformly for all α ∈ A
+
+2
+1
+1−θ
+ζ′
+10 log(|t| + B + 5) + 60 log(A + κ) + 42 log
+(s + iα) ≤ n
++ 140 .
+(23)
+ζ
+(b − θ)3
+b−θ
+Proof. Compare Lemma 4.3 of [54] and Lemma 9 of [55], where the above mentioned necessary
+corrections of the numerical constants are implemented.
+
+3.3. A Riemann-von Mangoldt type formula of prime distribution with zeroes of the
+Beurling ζ. We denote the set of ζ-zeroes, lying to the right of Γ, by Z(Γ), and denote Z(Γ, T )
+the set of those zeroes ρ = β + iγ ∈ Z(Γ) which satisfy |γ| ≤ T .
+
+8
+
+SZILÁRD GY. RÉVÉSZ
+{0}
+
+Proposition 1 (Riemann–von Mangoldt formula). Let θ < b < 1 and Γ = Γb be the curve defined
+in Lemma 7 for the one-element set A := {0} with tk denoting the corresponding set of abscissae in
+the construction. Then for any k = 1, 2, . . ., and 4 ≤ tk we have
+3 
+!
+
+X xρ
+x + tk
+x
+1−θ
+,
+A + κ + log
++ xb
++O
+(24)
+ψ(x) = x −
+ρ
+(b − θ)3
+b−θ
+tk
+ρ∈Z(Γ,tk )
+
+with the implied O-constant an effective, absolute constant which does not depend on G.
+
+Proof. See Theorem 5.1 of [54] as is corrected in Lemma 10 of [55], see also the remarks following
+the formulation in the latter paper.
+
+3.4. A density theorem for ζ-zeroes close to the 1-line. As told above, regarding the density
+estimates for the Beurling zeta function the first notable result is due to Kahane [29], who proved an
+O(T ) estimate for the number of zeroes precisely lying on some vertical line ℜs = a. Unexpectedly,
+a Carlson type zero density estimate surfaced in [55] under two additional assumptions on the
+Beurling system. Even more surprisingly, these additional assumptions could later be removed [57],
+[6]. Our version in [57] is fully explicit in handling all constants, and is suitable to get effective,
+explicit results of prime distribution, while the other work [6] obtained a much better exponent than
+either [55] or [57]. Let us point out that the value of this exponent is important for much of the
+related number theory, in particular for generalizing the analysis of primes in short intervals, as is
+impressively worked out in [6]. In the applications in our present work the exponent has no real
+significance, however. What matters is the fact that a Carlson type density estimate does hold with
+some exponent11. Below we recall the main result of [57], see Theorem 2 in that paper.
+Theorem 7. Let G be a Beurling system subject to Axiom A. Then for any σ > (1+θ)/2 the number
+of zeroes of the corresponding Beurling zeta function ζ(s) admits a Carlson-type density estimate
+12
+(A + κ)4
+T 1−θ (1−σ) log5 T
+(1 − θ)3 (1 − σ)4
+for all T ≥ T0 , where also T0 depends explicitly on the parameters A, κ, θ of Axiom A and on the
+value of σ. In particular, for σ > 11+θ
+12 we have N (σ, T ) = o(T ).
+
+(25)
+
+N (σ, T ) ≤ 1000
+
+Note that we separated terms of powers of log T and powers of 1/(1 − σ) only for the explicit
+handling of constants. A classical zero-free region of the form (9) always holds, but the term 1/(1−σ)4
+changes the constant factor by c−4 from (9). When applying Theorem 7 in the present work it will
+12
+12
+always suffice to use the estimate N (σ, T ) ≪A,θ,κ,c T 1−θ (1−σ) log9 T ≪A,θ,κ,c,ε T 1−θ (1−σ)+ε only.
+3.5. A Turán type local density theorem for ζ-zeroes close to the boundary of the zerofree region. Recall that for arbitrary τ > 0 and θ < σ < 1, we denoted the set of zeroes in
+the rectangle Qσ,h (τ ) := [σ, 1] × [i(τ − h), i(τ + h)] as Z(σ; τ − h, τ + h), and their number as
+N (σ, τ − h, τ + h).
+Lemma 9. Let (1 + θ)/2 < b ≤ 1, 2 ≤ h and τ > max(2h, τ0 ) where τ0 = τ0 (θ, A, κ) is a large
+constant depending on the given parameters of ζ(s).
+If ζ(s) does not vanish in the rectangle σ ≥ b, |t − τ | ≤ h, that is if Z(b; τ − h, τ + h) = ∅, then
+for any r with 15 logloglogloglogτ τ < r < b−θ
+10 we have
+(26)
+
+ν := N (b − r; τ − r, τ + r) ≪ r log τ,
+
+with an implied absolute constant not depending on G.
+
+4. Upper estimate on ∆(x)–Proof of Theorem 5
+This section is devoted to the proof of Theorem 5 along with some more general statements. To
+start with, let us define
+θ0 := max(θ, sup{θ < β < 1 : ∃γ ∈ R, such that ζ(β + iγ) = 0}).
+
+Below in (27) a new auxiliary function ω will be introduced, and it will be easily seen that under the
+assumptions of Theorem 5–that is that D(η) is free of zeroes of ζ(s)–we have ωη (x) ≤ ω(x). Also,
+11It is worth noting that already Diamond, Montgomery and Vorhauer argued [14] that anything essentially better
+does not hold in general (i.e. assuming only Axiom A), while Broucke and Debruyne [6] sharpened their example to
+get a uniform lower estimate log N (α, T ) ≫ 1−α
+log T .
+1−θ
+
+THE INGHAM QUESTION ON THE ORDER OF THE PNT IN THE BEURLING CONTEXT
+
+9
+
+in Lemma 15 we will find ω(x) ∼ (1 − θ0 ) log x if θ < θ0 ≤ 1. These show us that in case θ0 < 1
+it suffices to prove∆(x) = O(xθ0 +ε ) for all ε > 0. So we will start here with explaining how this
+follows easily from the Riemann-von Mangoldt formula in Proposition 1 for θ0 < 1.
+First, if θ0 = θ, then we choose b := θ0 + ε/2. According to the construction in Lemma 7 there is a
+{0}
+curve Γ := Γb whose points stay in the strip a := b+θ
+2 ≤ ℜs ≤ b: in view of the assumption θ0 = θ
+on this curve and to the right of it there are simply no zeroes of ζ. Therefore, the Riemann-von
+Mangoldt type formula of Proposition 1 reduces to the error term, so that with tk of the order x we
+get ∆(x) = Oε (log3 x xb ) = Oε (xθ0 +ε ), as needed.
+For other intermediate values θ < θ0 < 1, we either work out the analogous constructions of
+0
+Lemma 7 and Proposition 1 with a′ := b+θ
+2 , and then the proof is the same, with no zeroes to the
+′
+right of Γ , or use the below argument. Regarding the first possibility, we can remark that as long
+as G satisfies Axiom A with θ as the main parameter, it also satisfies Axiom A with any θ′ ≥ θ in
+place of it; so that we can refer to the said Lemmas, but used with θ′ := θ0 instead. That is, we can
+reduce the case to the already settled one of θ0 = θ via setting θ′ = θ0 .
+Nevertheless, in the following we will describe here the direct argument, for two reasons. First, in
+some later calculus–in particular for the case of θ0 = 1–the proof will as well be analogous. Moreover,
+here we want to prove some sharper statements, too. For their formulation, analogously to Ingham’s
+function (12) and following Pintz12 we define for any a > θ and x ≥ 1 the functions13
+x
+ωa (x) :=
+inf
+log β
+=
+inf (1 − β) log x + log |ρ|,
+ζ(ρ)=0,ρ=β+iγ
+x /|ρ| ρ∈Z(a;∞)
+a<ℜρ=β
+x
+(27)
+= inf (1 − β) log x + log |ρ|,
+ω(x) :=
+inf
+log β
+ζ(ρ)=0,ρ=β+iγ
+x /|ρ| ρ∈Z(θ;∞)
+θ<ℜρ=β
+x
+=
+inf
+(1 − β) log x + log γ.
+ω
+e (x) :=
+inf
+log β
+ζ(ρ)=0,ρ=β+iγ
+x /γ ρ∈Z(θ;∞)\Z(θ,1)
+θ<ℜρ=β,γ>1
+
+A standard analysis of a few properties of ωη and these analogous ω functions is in order here.
+We could have described much of the properties via use of the Legendre transform14, see footnote 5,
+but for being self-contained we instead work out all details (even if it was there in the back of our
+mind when figuring out the presentation of our elementary description).
+Let us start with ωη , which was defined by Ingham for the case of a continuous nonincreasing
+function η. With a slight inconsistency it was already used in the formulation of Theorem 5 for an
+arbitrary real function η : [0, ∞) → [0, 1 − θ], where, to be fully precise, formally we should have
+written inf in place of the min in the definition, similarly to the above variants.
+However, one can always replace η by its lower semicontinuous envelope η∗ (t) := lim inf τ →t η(τ ),
+without change of the infimum; and the infimum becomes a minimum once we consider a lower
+semicontinuous function (like the lower semicontinuous envelope itself), because then η(t) log x+log t
+is lower semicontinuous, too. Therefore, this slight inconsistency can always be overcome with the
+agreement that we always consider η lower semicontinuous if need be.
+
+Lemma 10. For an arbitrary real function η : [0, ∞) → [0, 1 − θ] the respective ωη function remains
+the same if we replace η by its lower semicontinuous envelope η∗ , and even if η∗ is again replaced
+by its "monotone nonincreasing cover" ηe(t) := min1≤τ ≤t η(τ ).
+Moreover, ωη remains the same if we further replace the "log-convex envelope" ηb(ev ) := sup{f (v) :
+f (v) ≤ η(ev ), f convex} for ηe(ev ).
+
+Remark 2. Before proceeding, let us point out another slight inconsistency in talking about the
+various transforms "of the function η", while in reality we use and transform only the restriction
+η|[1,∞) in all our calculus, in particular in defining and using ωη . This did not bother Ingham or
+Pintz, as the first zero of the Riemann zeta function occurs above imaginary part 14 anyway; but
+causes us some technical inconveniences here and there. Still, we need to stick to considering only
+12The function ω(x) was introduced in [39] for the case of the Riemann ζ function.
+
+13Note that we do not consider the Beurling zeta function on and behind the line ℜs = θ, where a meromorphic
+
+(or at least some meaningful, e.g. continuous) extension of ζ(s) is not guaranteed by Axiom A. Whenever we speak
+of ζ-zeroes, we always mean zeroes with β = ℜρ > θ.
+14Ingham or Pintz did not mention the Legendre transform in their work. To the best of our knowledge, this
+notion of convex analysis surfaced in connection with the ζ function in [53] and later also in [20], while the exact
+mention of these ω-functions as being Legendre tranforms first appeared in [55].
+
+10
+
+SZILÁRD GY. RÉVÉSZ
+
+t ≥ 1, i.e. v := log t ≥ 0–or at least v bounded from below–for considering η(ev ) all over R would
+necessarily invoke v = log t values arbitrarily close to −∞, ruining the minimization procedure in
+the definition of ωη . As a result, also the convex envelopes and Legendre transform interpretations
+would be destroyed by extending t arbitrarily close to 0, a curious technical problem which we had
+to avoid. A similar technicality is reflected in the need for defining, besides the original ωη of Ingham
+and ω of Pintz, also ωa and ω
+e above.
+
+Proof. We have already told about η∗ , therefore let us assume that η is lower semicontinuous.
+So with a given x let t be such that ωη (x) = η(t) log x + log t. By definition of ωη (x) we have for
+all 1 ≤ τ < t the inequality η(τ ) log x + log τ ≥ ωη (x), hence (η(τ ) − η(t)) log x ≥ log t − log τ > 0.
+This does not necessarily mean that η itself is monotone decreasing (as certain t may not occur as
+minimum points for some x), but it follows that replacing η by η∗ changes the values of ω(x) for no
+x.
+Write now g(v) := η(ev ). Then we claim that ωη (eu ) := inf v g(v)u + v equals to ω
+b (eu ) :=
+u
+v
+ωηb(e ) := inf v b
+g(v)u + v, where gb(v) := ηb(e ) := sup{f (v) : f ≤ g, f convex}. The inequality
+gb(v) ≤ g(v) is obvious, hence ω
+b (eu ) ≤ ωη (eu ). Let now f (v) := ωη (eu )/u − (1/u)v; then rearranging
+u
+the defining formula for ωη (e ) we get that this linear, hence convex function satisfies f (v) ≤ g(v)
+for all v. It follows that ω
+b (eu ) := minv gb(v)u + v ≥ minv uf (v) + v = ωη (eu ), too.
+
+Remark 3. If η was not bounded, then it could be possible that the monotone nonincreasing
+envelope essentially changes it; more precisely, that the final outcome of taking b
+ηe would stay below
+the function ηb and also the corresponding ω functions would deviate. However, in our setup η is
+bounded, hence no eventually increasing convex function f can stay below η(ev ), and as a result, it is
+easy to see that ηb will itself be nonincreasing. Similarly, it must be continuous. Therefore, taking η∗
+and then ηe, and applying the convex envelope only after, or taking the convex envelope immediately
+to η results the same function ηb. All these and more are well explained in convex analysis related
+to the Legendre transform, see, e.g., [58].
+Lemma 11. If η : [0, ∞] → [0, 1 − θ] is an arbitrary real function, then ωη is a strictly increasing to
++∞ continuous function and such that log x − ωη (x) is nondecreasing, too. Moreover, ωη is concave
+ωη (x)
+∗
+in logarithmic variables. Furthermore, if θ∗ := 1 − inf [1,∞] η, then limx→∞ log
+x = 1−θ .
+
+Proof. In view of the above Lemma 10 ωη (x) = ωηe(x), hence we can restrict to the case when η itself
+is continuous and nonincreasing. For this case Ingham has already derived an elementary way all
+the stated properties in the first sentence–see the turn of pages 63 and 64 of [25] for this elementary
+argument.
+Concavity follows from the fact that ωη (eu ) can be written in terms of the Legendre transform as
+−L(φ)(u), see footnote 4, but we do not need to refer to the Legendre transform here, as concavity
+is an easy direct fact. Indeed, ωη (eu ) is defined as the infimum of a family of concave (actually:
+linear) functions, and as such, must be concave itself.
+Lastly, let us prove the assertion about the limit. If ωη (x) = η(t) log x + log t, then ωη (x) ≥
+η(t) log x ≥ (1 − θ∗ ) log x. For the other direction, consider an arbitrary (small) ε > 0 and a value t′
+with η(t′ ) < 1 − θ∗ + ε; then ωη (x) ≤ η(t′ ) log x + log t′ ≤ (1 − θ∗ + ε) log x + log t′ . Dividing these
+ωη (x)
+∗
+
+two inequalities by log x and then taking limits we obtain limx→∞ log
+x = 1 − θ , as stated.
+Lemma 12. If η : [0, ∞] → [0, 1 − θ] is a real function, then ωη admits the following properties.
+√
+(1) For any ε > 0 and large enough x > x0 (ε) for all x < y < x we have
+ωη (x) − (1 − θ∗ + ε) log(x/y) ≤ ωη (y) ≤ ωη (x).
+
+(2) If θ∗ = 1, then ωη (x) is a slowly varying function in the sense that
+√
+(28)
+|ωη (y) − ωη (x)| ≤ ε| log(y/x)|
+( x ≤ y ≤ x2 , x > x0 (ε)).
+log z
+(3) If 1 < y < z then ωη (y) < ωη (z) < ωη (y) · log
+y.
+
+Proof. Assume, as we may in view of Lemma 10, that η is a nonincreasing, continuous, convex in
+logarithmic variables function.
+By definition of ωη , for any fixed value of t ≥ 1 we have ωη (x) ≤ η(t) log x + log t =: ϕt (x), for all
+x. Now obviously for any τ ∈ [1, ∞) the inequality ϕτ (x) ≤ ϕt (x) requires that also log τ ≤ ϕτ (x)
+is below ϕt (x), hence τ stays bounded and the infimum defining ωη (x) has to be a minimum over
+
+THE INGHAM QUESTION ON THE ORDER OF THE PNT IN THE BEURLING CONTEXT
+
+11
+
+values on a compact interval. In particular, ωη (x) is always attained by some respective ϕt (x), so
+that we may introduce the notation t(x) := min{t ≥ 1 : ϕt (x) = ωη (x)}.
+We claim that t(x) is a nondecreasing (even if not necessarily continuous) function of x. Indeed,
+minimality of t0 for a certain given value of x0 in the definition of ωη (x0 ) means ωη (x0 ) = ϕt0 (x0 ) =
+η(t0 ) log x0 + log t0 ≤ ϕt (x0 ) = η(t) log x0 + log t for all t ≥ 1. Let us rewrite this by putting
+ξ := log x0 , v0 := log t0 , u0 := g(v0 ) := η(ev0 ), v := log t, u := g(v) := η(ev ): we get L(u, v) :=
+ξ(u − u0 ) + (v − v0 ) ≥ 0, for all points (v, u) lying on the graph Γ of the function g(v). Now L = 0
+is the equation of a straight line ℓ on the (v, u) plane, which is satisfied by the point (v0 , u0 ). That
+is, the point (v0 , g(v0 )) ∈ Γ lies on ℓ. Further, the above inequality expresses that the line ℓ passes
+below (not above) the graph Γ, so that it is a supporting line to it. Now, the slope of this supporting
+line is −1/ξ, as ℓ can be described by an equation of the form u = (−1/ξ)v + C.
+That means that for a given value of x finding a minimizing ϕt in the definition of ωη is equivalent
+to find a corresponding value v = log t with (v, g(v)) admitting a supporting line of slope −1/ log x.
+Therefore, concavity of g(v) entails that as −1/ log x increases together with x, also the v = log t
+coordinates of the corresponding tangent points (for supports of the given slopes) must increase.
+Let us define t∗ := min{t ≥ 1 : η(t) = 1 − θ∗ } (if it is finite–and if not, then +∞). Next we
+show that t(x) → t∗ when x → ∞. We have already proved monotonicity of t(x), and it is also
+obvious that t(x) ≤ t∗ , for all x, because a value t > t∗ (if such a value exists at all, i.e., if 1 − θ∗
+is attained at some finite point and hence there are t > t∗ , where then by monotonicity we must
+have η(t) = 1 − θ∗ , too) does never qualify. Indeed, then t∗ < t and η(t) = η(t∗ ) = 1 − θ∗ implies
+ϕt∗ (x) < ϕt (x), thus for no x can ϕt (x) be minimal. Let now take τ < t∗ fixed. By definition of t∗ ,
+then there is δ > 0 such that η(τ ) > 1 − θ∗ + δ. So, if some t ≤ τ is optimal for some x–i.e., we
+have ωη (x) = ϕt (x)–then ϕt (x) ≥ (1 − θ∗ + δ) log x, while ω(x)/ log x → 1 − θ∗ (x → ∞) according
+to Lemma 10, furnishing a contradiction for large x.
+Let now ε > 0 be arbitrary and x0 (ε) be such that for x > x0 we have η(t(x))√
+< (1 − θ∗ + ε). Such
+∗
+∗
+an x0 exists because t(x) → t and η(t(x)) → 1−θ as x → ∞. Let now x > y > x > x0 (ε) be large,
+and take the point t0 := t(y) so that ωη (y) = ϕt0 (y). Then by the above 1 − θ∗ ≤ η(t0 ) < 1 − θ∗ + ε
+and it follows that
+ωη (y) = η(t0 ) log y + log t0 = η(t0 ) log y/x + η(t0 ) log x + log t0 ≥ (1 − θ∗ + ε) log y/x + ω(x),
+proving the left hand side part of (1), while the right hand side inequality follows by monotonicity.
+From part (1) the estimate of part (2) follows immediately.
+Finally, consider the last assertion, the left hand side inequality coming directly from monotonicity
+of ωη . As it was seen in Lemma 11, f (u) := ωη (eu ) is a concave function. Moreover, f (0) = 0.
+Therefore, f (u)/u is the slope of the chord between the graph points (0, f (0)) and (u, f (u)), and
+as such, it is a nonincreasing function of the variable u ∈ [0, ∞). It follows that f (log y)/ log y ≥
+f (log z)/ log z, which furnishes the right hand side estimate of the statement.
+
+Now let us discuss ω
+e . In fact, it is rather similar to ωη , even if the minimization is discretely
+defined. If there is no ζ-zero at all with γ = ℑρ > 1, then the minimization is on an empty set
+and ω
+e ≡ +∞. If on the other hand there are zeroes, then let us denote q := inf{γ > 1 : ∃ρ ∈
+Z(θ, ∞) \ Z(θ, 1), ℑρ = γ}. Similarly to η(ev ) and ηb(ev ), here we can consider λ(v) := min{(1 −
+β) : ζ(β + iγ) = 0, ev = γ = ℑρ > 1}, while defining λ(v) = ∞ or 1 − θ if γ := ev is not an
+e
+imaginary part of a zero. As before, we can build the left continuous nonincreasing envelope λ
+b Note that assuring monotonicity is
+of λ, and then its convex in logarithmic variables envelope λ.
+equivalent to restricting in the convex envelope to non-positive slopes in terms of the allowed straight
+e or λ.
+b
+line functions–this does not change the value of the respective ω-function belonging to λ or λ
+e
+So now we have a function λ : [0, ∞), which is defined to be +∞ (or 1 − θ)) in [0, log q] or [0, log q)
+and is a convex in logarithmic variables nonincreasing continuous function in [log q, ∞) or (log q, ∞).
+The corresponding ωλb will thus exhibit all the properties described for ωη . However, we also have
+ω
+e := ωλ = ωλb , hence we arrive at the following.
+
+Lemma 13. Define θe := sup{β := ℜ(ρ) : ζ(ρ) = 0, γ := ℑρ > 1}. If θe = −∞, i.e., there are no
+e then ω
+occurring zeroes in the definition of θ,
+e (x) ≡ +∞. If on the other hand the zero-set in the sup
+e
+is nonempty, and hence θ < θ ≤ θ0 , then the function ω
+e is a finite valued, continuous, monotonically
+increasing, convex in logarithmic variables function such that also log x − ω
+e (x) is nondecreasing.
+e and ω
+Moreover, we have limx→∞ ω
+e (x)/ log x = 1 − θ,
+e admits the following properties.
+
+12
+
+SZILÁRD GY. RÉVÉSZ
+
+(1) For any ε > 0 and large enough x > x0 (ε) for all
+
+√
+x < y < x we have
+
+ω
+e (x) − (1 − θe + ε) log(x/y) ≤ ω
+e (y) ≤ ω
+e (x).
+
+(2) If θe = 1, then ω
+e (x) is a slowly varying function in the sense that
+√
+|e
+ω (y) − ω
+e (x)| ≤ ε| log(y/x)|
+( x ≤ y ≤ x2 , x > x0 (ε)).
+log z
+(3) If 1 < y < z then ω
+e (y) < ω
+e (z) < ω
+e (y) · log
+y.
+
+Proof. All assertions follow from the fact that ω
+e = ωλb , except the final one, i.e. property (3), whose
+left hand side is still trivial due to monotonicity.
+As for the right hand side, the only alteration to the previous argument is that here we do not
+necessarily have ω
+e (0) = 0, which came from the finiteness of η(1) in the previous argument. Here,
+b
+b is convex in logarithmic variables only for
+however, we can have λ(1)
+= +∞, if q > 1. (Note that λ
+t > q or t ≥ q.)
+Nevertheless, ω
+e remains concave in logarithmic variables, moreover, the defining quantities (1 −
+β) log x + log γ are still nonnegative (positive, if γ > 1), hence it still holds that ω
+e (1) ≥ 0. So let
+p := ω
+e (1) ≥ 0. Then with f (u) := ω
+e (eu ) we can write –similarly to the above in view of the decrease
+of the slope of chords of the graph–that f (u)−p
+is nonincreasing. Note that also p/u is decreasing.
+u
+Adding the respective inequalities for u := log y < u′ := log z we are led to f (u)/u > f (u′ )/u′ , as
+before. This proves the statement.
+
+Lemma 14. Let 0 ≤ θ < a < 1 be arbitrary. If Z(a, ∞) = ∅, then ωa (x) ≡ +∞. Otherwise, the
+function ωa is a finite valued, continuous, monotonically increasing, convex in logarithmic variables
+function such that also log x − ωa (x) is nondecreasing.
+Moreover, we have limx→∞ ω0 (x)/ log x = 1 − θ0 , and ωa admits the following properties.
+√
+(1) For any ε > 0 and large enough x > x0 (ε) for all x < y < x we have
+ωa (x) − (1 − θ0 + ε) log(x/y) ≤ ωa (y) ≤ ωa (x).
+
+(2) If a < θ0 = 1, then ωa (x) is a slowly varying function in the sense that
+√
+|ωa (y) − ωa (x)| ≤ ε| log(y/x)|
+( x ≤ y ≤ x2 , x > x0 (ε)).
+
+
+log z
+1 log z
++
+log
+−
+1
+.
+(3) If 1 < y < z then ωa (y) < ωa (z) < ωa (y) · log
+y
+a log y
+
+Proof. Here we can consider the function µ(u) := min{1−β : |ρ| = eu , ℜρ = β > a, ζ(ρ) = 0}. Then
+µ is defined on some finite or at most countable subset of [log a, +∞), while for values u 6= log |ρ|
+for any ζ-zero with ℜρ ≥ a we can either take µ(u) := +∞ or even µ(u) := 1 − a.
+Then the same procedure as above furnishes the lower convex envelope µ
+b(u) of µ, and mutatis
+mutandis it is easy to see that ωa := ωµ = ωµb . The properties then follow from the above except for
+the last one, (3), the left hand side of which still remaining trivial by monotonicity.
+For the right hand side, however, we need to take into account that now ωa (1) < 0 is well possible
+due to log a < 0. In any case, we still have µ
+b(u) log x + log |ρ| ≥ log |ρ| ≥ log a, hence also for the
+infimum of such expressions we have ωa (x) ≥ log a. It follows that f (u) := ωa (eu ) + log(1/a) is
+concave with f (u) ≥ 0 all over [0, ∞), hence the above proof works for this modified function f . 
+Lemma 15. Let q0 := inf{|ρ| : ζ(ρ) = 0}. If q0 = 0 (and hence in particular also θ = 0), then
+ω(x) ≡ −∞, and if Z(θ, ∞) = ∅, then ω(x) ≡ +∞.
+In all other cases ω : [1, ∞) → [log q0 , ∞) is a finite valued, continuous, monotonically increasing,
+convex in logarithmic variables function such that also log x − ω(x) is nondecreasing.
+Also, the infima in the definition of ω(x) is always attained, and the zeroes with attainment tend
+to θ0 + i∞ with x → ∞, unless ℜs = θ0 contains a zero, in which case for x > x0 the particular
+zero with ρ0 = θ0 + iγ0 and minimal possible γ0 provides the said infimum, always.
+Moreover, we have limx→∞ ω(x)/ log x = 1 − θ0 , and ω admits the following properties.
+√
+(1) For any ε > 0 and large enough x > x0 (ε) for all x < y < x we have
+ω(x) − (1 − θ0 + ε) log(x/y) ≤ ω(y) ≤ ω(x).
+
+(2) If θ0 = 1, then ω(x) is a slowly varying function in the sense that
+√
+|ω(y) − ω(x)| ≤ ε| log(y/x)|
+( x ≤ y ≤ x2 , x > x0 (ε)).
+
+
+log z
+log z
+1
+(3) If 1 < y < z then ω(y) < ω(z) < ω(y) · log
+y + log q0
+log y − 1 .
+
+THE INGHAM QUESTION ON THE ORDER OF THE PNT IN THE BEURLING CONTEXT
+
+13
+
+Furthermore, if θ0 is not attained15–in particular if θ0 = 1–then there exists an x0 such that for
+z > y > x0 we also have
+ω(y) < ω(z) < ω(y) ·
+
+(29)
+
+log z
+.
+log y
+
+Proof. After ωη , ω
+e and ωa , the reader should have no difficulty in adapting the above arguments to
+this case. Let us therefore prove only the last assertion, also making use of the previously listed
+properties.
+Since θ0 is not attained, the extremal zeroes ρ = ρ(x) with ω(x) = ω(ρ; x) := (1 − β) log x + log |ρ|
+tend to θ0 + i∞, so that in particular log |ρ| > 0 for any extremal zero for x > x0 .
+Let now z > y > x0 and take ρ be extremal for y: ω(y) = ω(ρ; y) := (1 − β) log y + log |ρ|. As
+(1−β) log z+log |ρ|
+ω(z) ≤ ω(ρ; z), we get ω(z)/ω(y) ≤ ω(ρ; z)/ω(ρ; y) = (1−β)
+log y+log |ρ| < log z/ log y, taking into
+account log |ρ| > 0, too. This furnishes the required inequality.
+
+In this work we will denote
+1
+D(X) :=
+X
+
+(30)
+
+Z X
+1
+
+|∆(x)|dx,
+
+S(X) := sup |∆P (x)|,
+1≤x≤X
+
+and also
+(31)
+
+Wa (x) :=
+
+xβ
+,
+ζ(ρ)=0,ρ=β+iγ |ρ|
+sup
+
+W (x) :=
+
+xβ
+.
+ζ(ρ)=0,ρ=β+iγ |ρ|
+sup
+
+θ<ℜρ=β,|γ|<x
+
+a<ℜρ=β,|γ|<x
+
+Clearly, ω(x) = log(x/W (x)) and ωa (x) = log(x/Wa (x)). Further, we will write
+(32)
+
+Za (x) :=
+
+X
+
+xβ
+,
+|ρ|
+ζ(ρ)=0,ρ=β+iγ
+a<ℜρ=β,|γ|<x
+
+Z(x) :=
+
+X
+
+xβ
+.
+|ρ|
+ζ(ρ)=0,ρ=β+iγ
+θ<ℜρ=β,|γ|<x
+
+Note that the first sum extends over Z(a; x), and the second one over Z(θ, x).
+As an easy warm-up, let us prove a straightforward assertion with these notations.
+Proposition 2. Assume that G satisfies Axiom A and that θ0 = θ, i.e. the Beurling zeta function
+has no zeroes in the halfplane of meromorphic extension ℜs > θ. Then for all a > θ and x ≥ 1 we
+obviously have Za (x), Wa (x) = 0–in fact, also Z(x) = W (x) = 0– while for the error term in the
+PNT it holds
+D(x) ≤ S(x) ≪ xθ log6 (x + 1),
+
+(33)
+
+with an effective implied constant in the Vinogradov symbol depending only on A and κ.
+1
+Proof. We refer to the Riemann-von Mangoldt formula Proposition 1 with b := θ + log(x+1)
+and
+make use that there are no zeroes at all. This yields
+
+(34)
+
+∆(x) ≤
+
+X
+
+ρ∈Z(Γ,tk )
+
+xρ
++ OA,κ
+ρ
+
+
+
+2x
+1
+log3
+xb
+(b − θ)3
+b−θ
+
+
+
+≪A,κ 0 + xθ log6 (x + 1).
+
+Taking maximum on the interval [1, x] then gives the second part of the assertion, while D(x) ≤ S(x)
+is obvious.
+
+Remark 4. Arriving at the natural boundary of analytic investigations when we reach ℜs = θ,
+more refined results are not available in this case. It can in principle happen that the Beurling
+integers do not satisfy better error terms than Axiom A with some given θ ∈ (0, 1), but the PNT
+still holds with much better error terms, see e.g. [12], [7], [78]; therefore in this generality one cannot
+state that e.g. ∆(x) would be Ω(xθ−ε ). All our investigation is focused onto the relation between
+distribution of zeroes and oscillation of ∆(x); but when there are no zeroes, we only know upper
+estimates and cannot state anything about Ω-results. More on this see Remark 7 below.
+15In fact, the same proof also works if θ is attained, but the eventually extremal ζ-zero ρ∗ = θ +iγ ∗ with minimal
+0
+0
+γ ∗ has |ρ∗ | ≥ 1. However, we don’t need this in the paper.
+
+14
+
+SZILÁRD GY. RÉVÉSZ
+
+Remark 5. When θ0 > θ, and there are zeroes of ζ(s) in the critical strip, it still may be impossible
+to handle the limiting expressions W (x), Z(x). Indeed, if θ = 0 and s = 0 is a limit point of
+zeroes of ζ(s), then W (x) = ∞, and if 0 ≤ θ ≤ 1 arbitrary, but there are too many zeroes close
+to the boundary line ℜs = θ, then Z(x) can still diverge to +∞. Note that N (a, T ) can be of
+1
+1
+the order a−θ
+log( a−θ
+)–at least that is the best estimate we could infer, c.f. Lemma 4. So instead
+of elaborating on various cases, in the following we will prefer considering Za (x). Nevertheless, it
+should be clear that Wa (x) ≤ W (x) and Za (x) ≤ Z(x), whence in case the right hand sides reach
++∞, all upper estimates remain valid with them.
+Lemma 16. Let θ < a < α ≤ θ0 ≤ 1, x ≥ 1 arbitrary, and consider any subset Z of the zeroes of
+the Beurling zeta function in the rectangle [a, α] × [−ix, ix]. Then we have
+
+
+X xβ
+1
+xα
+1
+1
+xα
+x+1
+2
+≪
+log
++ log
+log x + log x ≤
+log2
+.
+(35)
+|ρ|
+a−θ
+a
+(a − θ)
+(a − θ)
+(a − θ)a
+(a − θ)
+ρ∈Z
+
+The implied constant depends only on A and κ.
+
+Proof. Referring to Lemma 4 and a small partial integration furnish
+
+
+x Z x
+Z x
+X xβ
+1
+xα
+xα N (a, 5)
+1
+N (a, t)
+dt
+≤
+N (a, 5) + xα
+dN (a, t) =
++ xα
+N (a, t) +
+|ρ|
+a
+a
+t
+t2
+5 t
+5
+5
+ρ∈Z
+
+
+Z x
+N (a, 5) N (a, x)
+N (a, t)
+α
+≤x
+dt
++
++
+a
+x
+t2
+5
+!)
+(
+
+ Z x
+1
+1
+log (a−θ)
+log t + log a−θ
+1
+1
+α
+log x + log
++
++
+dt
+.
+≪x
+a(a − θ)
+a−θ
+a−θ
+t
+5
+
+Corollary 1. Assume θ < θ0 < 1, and let x ≥ 1 be arbitrary. Then we have
+1
+1−θ
+x + 1 θ+2θ0
+x + 1 θ0
++
+(36)
+|∆(x)| ≪
+log3
+log2
+x 3
+x
+3
+(θ0 − θ)
+θ0 − θ
+(θ0 − θ)θ0
+θ0 − θ
+The implied constant depends only on A and κ.
+Proof. We apply Proposition 1 with b := 2θ03+θ and picking some tk ∈ [x, x + 5]. (By construction
+of Γ in Lemma 7, such a tk exists.) This furnishes
+
+
+X xρ
+1−θ
+3 x+1
+b
+(37)
+|∆(x)| ≪
+log
+x .
++O
+ρ
+(θ0 − θ)3
+θ0 − θ
+ρ∈Z(Γ,tk )
+
+Here the O term is the first expression on the right hand side of the asserted final estimate, so the
+proof hinges upon the estimation of the sum over the zeroes in Z(Γ, tk ). Recall that by construction
+2θ+θ0
+these zeroes form a subset of those in the rectangle [a, 1] × [−itk , itk ].
+of Γ with a := b+θ
+2 =
+3
+0
+Given that there are no zeroes with ℜρ > θ0 , actually Z(Γ, tk ) ⊂ [ 2θ+θ
+3 , θ0 ] × [−i(x + 5), i(x + 5)].
+Therefore, for the sum over the zeroes belonging to Z(Γ, tk ) we can apply the above Lemma 16
+leading to the proof of the assertion.
+
+Corollary 2. Let θ < θ0 ≤ 1 and let θ < α < θ0 and x ≥ 1 be arbitrary. Then we have
+
+
+1−θ
+3 x+1
+α
+(38)
+D(x) ≤ S(x) ≤ Zα (x + 5) + O
+.
+log
+x
+(α − θ)3
+α−θ
+Moreover, we also have
+x + 1 θ0
+1
+log2
+x .
+(39)
+Zα (x) ≪
+(α − θ)α
+α−θ
+The implied constants depend only on A and κ.
+Proof. The
+of (38) is trivial. For the second it suffices to prove |∆(x)| ≤ Zα (x +
+ first inequality 
+5) + O
+
+3 x+1
+1−θ
+α
+(α−θ)3 log α−θ x
+
+, because the functions appearing here on the right hand side are
+
+monotonically increasing. This is completely analogous to (37), with the only difference that we
+choose b = α and will therefore encounter a sum over zeroes lying in Z(Γ, tk ) ⊂ [ α+θ
+2 , θ0 ] × [−i(x +
+5), i(x + 5)], while the error term is the expression on the far right of (38). Now, Z(Γ, tk ) contains all
+
+THE INGHAM QUESTION ON THE ORDER OF THE PNT IN THE BEURLING CONTEXT
+
+15
+
+α+θ
+zeroes in Z(α, tk ), plus a subset of zeroes from Z( α+θ
+2 , α; tk ) := Z( 2 ; tk )\Z(α; tk ), which is the set
+α+θ
+∗
+of all zeroes in [ 2 , α] × [−itk , itk ]. So, for our set Z := Z(Γ, tk ) \ Z(α; tk ) ⊂ [ α+θ
+2 , α] × [−itk , itk ]
+,
+and
+we
+get
+for
+its
+contribution
+Lemma 16 applies with a = α+θ
+2
+
+X tβ
+k
+
+ρ∈Z ∗
+
+|ρ|
+
+≪
+
+1
+tk + 1 α
+1
+x+1 α
+log2
+tk ≪
+log2
+x .
+(α − θ)α
+α−θ
+(α − θ)α
+α−θ
+
+The estimation of Zα (x) is even easier using the same Lemma 16.
+
+
+
+Collecting the above results, we can summarize the state of the matter as follows.
+Theorem 8. Assume θ ≤ θ0 ≤ 1. Then we trivially have |∆(x)|, D(x) ≤ S(x), while for S(x) it
+holds
+( θ
+x log6 (x +1)
+if θ = θ0 ;
+
+(40)
+S(x) ≤
+3 x+1
+3 x+1
+1−θ
+1−θ
+α
+θ0
+if θ < α < θ0 .
+Zα (x) + O (α−θ)3 log α−θ x ≪ (α−θ)3 log α−θ x
+Corollary 3. Assume θ < θ0 < 1. Then we have
+
+
+θ0 +θ
+1
+3 x+1
+2
+≪ x exp(−(1 − ε)ω(x)).
+|∆(x)|, D(x) ≤ S(x) ≤ Z θ+θ0 (x) + O
+log
+x
+2
+(θ0 − θ)3
+θ0 − θ
+
+The above estimates are satisfactory if θ0 < 1. However, if θ0 = 1, (39) and (40) provide only
+a weak estimate, even weaker than the straightforward direct estimation |∆(x)| ≪ x log x. More
+ε
+importantly, to obtain an ≪ x exp(−(1 − ε)ω(x)) = W (x) (x/W (x)) upper estimate, in case
+θ0 < 1 the above bounds are more than sufficient given that ω(x) ∼ (1 − θ0 ) log x (and in fact
+ω(x) > (1 − θ0 ) log x), so that the allowed extra error term (x/W (x))ε provides a room as large
+as a small power16 of x. But if θ0 = 1, ω(x) can be of much smaller order of magnitude, and the
+estimates need to be much finer. E.g. in the Diamond-Montgomery-Vorhauer
+paper [14] there was
+√
+constructed a zero distribution where ω(x) is as low as log x, a much smaller exponent which
+cannot be controlled so easily.
+To improve on this, we need to invoke the Carlson-type density theorem, too. So let us turn
+to the somewhat more delicate case when θ0 = 1. Recall that ℜs = 1 is free of zeroes, thus if
+θ0 = 1, then we must have an infinitude of zeroes with ρk = βk + iγk and βk → 1, resulting in
+ω(x) ≤ mink (1 − βk ) log x + log γk = o(log x) (x → ∞). Nevertheless, the well-known zero-free
+region σ p
+> 1 − c/ log(|t| + 2) implies that for any zero 1 − β > c/ log(|γ| + 2), whence we find
+√
+ω(x) ≥ 2 (1 − β) log x log(|γ| + 2) ≫ log x → ∞.
+Proposition 3. Assume θ0 = 1. If a > θ and ε > 0 then for sufficiently large x > x0 (G, ε) we have
+Za (x) ≪a,ε,A,κ,θ x exp(−(1 − ε)e
+ω (x)).
+
+(41)
+
+Proof. Put ε′ := ε/K, where K is a large constant to be chosen later, and put also α := 1 − 4ε′ and
+α0 := max{β := ℜρ : ζ(ρ) = 0, |γ| = |ℑρ| ≤ 5}, pointing out that α0 < 1, too. We can assume that
+ε is so small that α0 < α. We write similarly as above,
+Za (x) =
+
+X
+
+ρ∈Z(a,x)\Z(α,x)
+
+∞
+xβ
+xα
+x + 1 N (α, 5) α0 X
++ Zα (x) ≪A,κ,θ
+log2
++
+x +
+|ρ|
+(a − θ)a
+a−θ
+α
+n=1
+
+′
+
+≪A,κ,θ,a,ε′ xα+ε +
+′
+
+≪A,κ,θ,a,ε′ xα+ε +
+
+∞
+X
+
+n=1
+∞
+X
+
+N (α; en , en+1 )
+
+X
+
+xβ
+|ρ|
+n n+1
+
+ρ∈Z(α;e ,e
+
+)
+
+x
+
+max
+
+ρ=β+iγ∈Z(α;en ,en+1 ) exp((1 − β) log x + log |ρ|)
+
+N (α; en+1 )x exp(−(
+
+inf
+
+(1 − β) log x + log |ρ|)).
+
+ρ∈Z(α;en ,en+1 )
+
+n=1
+′
+
+Here the first term gives only an O(x1−ε ) error term. For the sum over zeroes close to ℜs = 1,
+we appeal to the Carlson-type density estimate Theorem 7 with our fixed ε′ > 0. This leads to
+12
+(1 − α) + ε′ )(n + 1)). Also, for the inf inside the sum first we can
+N (α; en+1 ) ≪A,κ,θ,ε′ exp(( 1−θ
+16In other words, consider that log(x exp(−(1 − ε)ω(x))) ∼ (1 − (1 − ε)(1 − θ )) log x = (θ + ε(1 − θ )) log x.
+0
+0
+0
+
+16
+
+SZILÁRD GY. RÉVÉSZ
+
+separate a part and then the inf can be extended to all zeroes:
+(1 − β) log x + log γ
+
+inf
+
+ρ∈Z(α,en ,en+1 )
+
+≥ Kε′
+
+inf
+
+ρ∈Z(α,en ,en+1 )
+
+log γ + (1 − Kε′ )
+
+inf
+
+ρ∈Z(α,en ,en+1 )
+
+(1 − β) log x + log γ
+
+≥ Kε′ n + (1 − Kε′ )e
+ω (x).
+
+(42)
+
+48
+In all we find with choosing K := 1−θ
++ 2 the estimate
+
+Za (x) ≪
+
+A,κ,θ,a,ε′
+
+1−ε′
+
+x
+
+1−ε′
+
+≪A,κ,θ,a,ε′ x
+′
+
+≤ x1−ε +
+
+∞
+X
+
+n=1
+
++
+
+∞
+X
+
+n=1
+∞
+X
+
+N (α, en+1 )x exp(−Kε′ n − (1 − Kε′ )e
+ω (x))
+
+
+
+12
+′
+′
+′
+4ε + ε )(n + 1) − Kε n x exp(−(1 − ε)e
+ω (x))
++
+exp (
+1−θ
+n=1
+′
+
+eKε exp (−ε′ n) x exp(−(1 − ε)e
+ω(x))
+′
+
+ω (x)) ≪ x exp(−(1 − ε)e
+ω(x))
+≪A,κ,θ,a,ε′ x1−ε + x exp(−(1 − ε)e
+
+(x > x0 (G, ε)).
+
+
+Theorem 9. If θ0 = 1, then we still have for any ε > 0 and sufficiently large x > x0 (ε, G) the
+inequalities
+(43)
+
+D(x) ≤ S(x) ≤ (1 + oG (1))Zα (x) ≪ε,G x exp(−(1 − ε)ω(x)).
+
+Corollary 4. If η : [0, ∞) → [0, 1/2] is a function such that the domain (11) is free of zeroes of the
+Beurling ζ function, then we have D(x) ≤ S(x) ≪ x exp(−(1 − ε)ωη (x)).
+Proof. Observe that for any fixed particular root ρ of ζ we have ω(ρ, x) = (1 − β) log x + log γ ≥
+η(γ) log x + log γ ≥ ωη (x) as the latter is a minimum of such expressions with γ allowed to run over
+all values of t > 1, irrespective of being a concrete ordinate of a zero ρ or not. Therefore, the same
+holds also for the minimum taken over all zeroes, i.e. ω(x) ≥ ωη (x). Consequently, the assertion
+follows from Theorem 9 if θ0 = 1 and from Proposition 2 and Corollary 3 for θ0 = θ or θ < θ0 < 1,
+respectively.
+
+Here it becomes clear why the Ingham type "direct" theorem of Pintz formulated with the function
+ω is stronger than any result with a zero-free domain defined by some boundary function η.
+Also note that Corollary 4 implies the above stated Theorem 5 with arbitrary boundary functions
+η, assuming neither continuity nor monotonicity.
+This is in particular useful if we consider that there were studies related to such boundary
+functions. Namely, in the classical case it was studied in detail, see e.g. [68, 46], what consequences
+can be drawn from knowing RH to hold up to a certain given height (which is already a known fact
+for quite high ordinates in some cases, most notably for the Riemann zeta function [47]). Now, such
+a condition could be described by setting η(t) := 1/2 for 0 ≤ t ≤ T and then just putting η(t) = 1,
+or perhaps η(t) = c/ log t or anything known for a zero-free domain: in Corollary 4 we do not need
+continuity or monotonicity.
+Also we can discuss here what the result of Theorem 9 means. It basically says that from the
+series in the Riemann-von Mangoldt formula (24), however divergent, we can estimate the order
+of magnitude of ∆(x). It is clear in this direction that the total sum of absolute values of terms
+i.e. Z(x) should bound ∆(x)–and whence also D(x) and S(x)–from above, but it is less immediate
+that this upper bound is still below (almost) x exp(−ω(x)). The meaning of this last expression
+is, however, clear: that stands for the largest term of the Riemann-von Mangoldt sum. Therefore,
+the results show that in fact this Riemann-von Mangoldt sum–in spite of divergence!–behave quite
+regularly in the sense that the order of the total sum is about the magnitude of the largest term of
+the series. That is a well-known behavior in e.g. entire functions–but it holds also for this divergent
+series, which might be somewhat surprising. The analysis of the "converse Ingham type theorems"
+to follow below will show, however, that the strong connection between largest term and total sum
+will prevail also in lower estimations, that is ∆(x) will be shown to oscillate frequently about as large
+as the total sum (which is already known to be bounded by about the largest term of the series).
+
+THE INGHAM QUESTION ON THE ORDER OF THE PNT IN THE BEURLING CONTEXT
+
+17
+
+Obviously ∆(x) cannot always be as large, given that we expect it changing signs often, therefore
+being small around such sign changes; yet the finding that frequently it reaches about x exp(−ω(x)),
+while the total absolute value sum Za (x) of the Riemann-von Mangoldt series is always at most that
+magnitude, is remarkable.
+Recall that all these were explored by Pintz [41] in the classical case and here we only succeeded
+to extend some of his results to the Beurling case.
+5. Oscillation of ∆P (x) in case θ0 < 1
+Having the study of O-results, i.e., upper estimations concluded, in the rest of the paper we study
+oscillation estimates, i.e., Ω-type results. As is well understood in the classical case and is extending
+with ease to the Beurling setup, the case when θ0 < 1 is much simpler, being essentially a century-old
+result of Phragmen. For clarification of the full picture, we recall here a version of the well-known
+argument.
+Let us start with observing that the average
+Z
+1 x
+A(x) :=
+∆(u)du
+x 1
+
+is at most D(x), which is estimated from above by S(x). Further, if ∆(x) = O(xa ) with a certain
+exponent θ ≤ a ≤ 1, then obviously also A(x) = O(xa ).
+The following assertion essentially settles the case of θ < θ0 < 1.
+Proposition 4. If θ < θ0 ≤ 1, then for any ε > 0 we necessarily have A(x) = Ω(xθ0 −ε ).
+
+Proof. Assume the contrary,
+is, assume A(x) = O(xθ0 −ε ). Let us consider the Dirichlet-Mellin
+R ∞ that
+−s
+transform M(A)(s) := 1 x dA(x) of A(x), which–under our indirect assumption–converges
+uniformly and hence is necessarily analytic for ℜs > θ0 − ε. According to the upper part of the
+Chebyshev bounds (following from the PNT and hence in turn from Beurling’s original result in case
+of Axiom A holding), we always have17 ∆(x) = O(x). Therefore, the following reformulations are
+valid at least for ℜs > 1, treating only locally uniformly convergent integrals:
+
+Z ∞
+Z ∞
+Z ∞ Z x
+1
+−s
+−s
+M(A)(s) :=
+x dA(x) = −
+A(x)dx = −
+∆(u)du dx−s
+x 1
+1
+1
+1
+Z ∞Z ∞
+Z ∞Z ∞
+Z ∞
+s
+1 −s
+dx du =
+u−s−1 du
+=−
+∆(u)
+∆(u)
+x
+s
++
+1
+1
+1
+u
+
+
+
+
+Z ∞1
+Z 1∞
+1
+−1
+−1
+−s
+1−
+u−s d∆(u) =
+− 1 + M(∆)(s) .
+∆(u)du =
+=
+s+1 1
+s+1
+s+1
+1
+Here the Dirichlet-Mellin transform of ∆(x) can be calculated directly using (6), (7) and (8):
+Z ∞
+Z ∞
+Z ∞
+ζ′
+1
+−s
+−s
+(44)
+H(s) := M(∆)(s) :=
+x d∆(x) =
+x dψ(x) −
+x−s dx = − (s) −
+.
+ζ
+s
+−
+1
+1
+1
+1
+ ′
+
+ζ
+−1
+s
+Thus M(A)(s) = s+1
+(s)
++
+ζ
+s−1 , which is indeed meromorphic, but not analytic in the whole
+halfplane ℜs > θ0 − ε, due to the poles arising from zeroes lying arbitrarily close to the ℜs = θ0 line.
+The obtained contradiction proves the assertion.
+
+Corollary 5. If θ < θ0 < 1, then we have ∆(x), D(x), S(x) = Ω(x exp(−(1 + ε)ω(x)).
+Proof. Note that ω(x) ∼ (1 − θ0 ) log x, which is a positive constant multiple of log x in our case. By
+the previous Proposition 4 the assertion follows.
+
+Remark 6. The above result is ineffective. To get an effective version is certainly possible by
+applying e.g. a simplified form of the below machinery, worked out in the next three sections for the
+θ0 = 1 case. We leave the details to the reader.
+17Actually, we have proved much better in Corollary 1, which allows to treat these integral reformulations
+everywhere in ℜs > θ0 . However, referring to the Chebyshev bound only is self-contained, not relying on previous
+calculations and the Carlson-type density theorem in particular. Using the analytic continuation is needed anyway,
+either to ℜs ∈ (θ0 − ε, 1] or only to (θ0 − ε, θ0 ], which is all the same.
+
+18
+
+SZILÁRD GY. RÉVÉSZ
+
+Remark 7. The case when θ0 = θ, remains somewhat unclarified. This case means that there are no
+zeroes in ℜs > θ, that is, there are no zeroes at all in the halfplane of analyticity (meromorphicity)
+guaranteed by Axiom A–and hence by definition θ0 = max(θ, sup∅ β) = max(θ, −∞) = θ.
+In this case various scenarios are indeed possible, hence it is no wonder that we cannot prove an
+Ω(x exp(−(1 + ε)ω(x)) result. E.g. there is a construction [8] of a Beurling system with very wellbehaved primes satisfying ∆(x) = O(x1/2+ε ), but the integers satisfying Axiom A with no θ < 1.
+Analogously, a similar construction with any "best value" of θ in (1/2, 1) seems likely to exist. We
+also consider that with some refinement of the argument in [56] (see in particular Remark 1 there),
+even ∆(x) = O(xα ) is possible with any "best value18" of θ ∈ [1/2, 1] in Axiom A. That, on the
+other hand, a situation with θ0 = θ < 1/2 cannot occur, follows from a nice result of Hilberdink
+[22], taking into account the above Theorem 8, say.
+Describing the above mentioned constructions would lead us aside in the direction of studying
+so-called "α-β-systems" of Hilberdink, and is therefore left to a forthcoming study.
+
+6. The weighted average of ∆P (x) and its upper estimate
+As told, proving an oscillatory result of the magnitude x exp(−(1 + ε)ω(x)) is much harder when
+θ0 = 1, and ω(x) = o(log x). The other cases being already discussed, from now on we consider only
+the case θ0 = 1. To prove our oscillatory results in this case will comprise three sections, the present
+one being devoted to a more or less direct upper estimation of a weighted and averaged version of
+∆(x). The next section will apply a different (complex) calculus to demonstrate also a lower bound,
+and by a comparison of the two sided estimates and with suitable choices of our parameters we will
+conclude the argument in Section 8. So, these sections are parts of the same argument and our
+notations, choices, conditions and constructions remain valid throughout.
+In this argument we will assume that x is large enough, and that ρ0 = β0 + iγ0 is a ζ-zero, which
+is close to optimal for ω(x): more precisely19 ω(ρ0 ; x) := (1 − β0 ) log x + log γ0 < ω(x) + 1, an
+unimportant constant deficiency. This flexibility in possibly preferring some close-by zero instead of
+the actual extremal one we need here for ensuring another, somewhat more convenient property: we
+assume that (β0 , 1] × i[γ0 − 3, γ0 + 3] is zero-free, so that ρ0 is a kind of locally borderline zero. To
+see that our assumptions can be met, consider a truly extremal zero ρ1 . If [β1 , 1] × i[γ1 − 3, γ1 + 3]
+is zero-free, then we are done: ρ0 := ρ1 . If not, then we find another zero with β2 > β1 and
+γ1 < γ2 ≤ γ1 + 3. (Note that γ2 < γ1 is impossible, for then ω(ρ2 , x) < ω(ρ1 , x), contradicting
+to the definition of ρ1 . However, in the forthcoming later steps it can happen that the values of
+γj are not strictly increasing, even if γj > γ0 , always.) We keep continuing the process: either
+the process ends before k steps, or we have ρk = βk + iγk , βk > βk−1 > · · · > β1 , γk < γ1 + 3k.
+However, the Carlson Density Theorem says that the number of zeroes N (1 − ε, T ) = o(T ), whence
+for a small, fixed ε > 0, and large enough x so that γ1 > T0 (ε), we obtain that the above process
+cannot produce more than N (1 − ε, γ1 + 3k) = o(γ1 + 3k) zeroes. Therefore k = o(γ1 + 3k)
+and thus k = o(γ1 ) and log γ1 < log γk < log(2γ1 ) < log γ1 + log 2, as needed. Then indeed
+ω(ρk , x) = (1 − βk ) log x + log γk < (1 − β1 ) log x + log γ1 + 1 = ω(x) + 1, so that the terminal element
+ρk of the above construction is good for ρ0 with the claimed properties.
+In the following we will often write ω := ω(ρ0 ; x), and use without repeated explanations the fact
+that 0 ≤ ω(x) − ω < 1, so that we can handle ω as the extremal value.
+We use the Dirichlet-Mellin transform (44) of ∆(x), which is meromorphic in ℜs > θ and admits
+the further reformulations20
+Z ∞
+Z ∞
+Z ∞
+(45)
+H(s) :=
+x−s d∆(x) = 1 −
+∆(x)dx−s = 1 − s
+∆(x)x−s−1 dx.
+1
+
+1
+
+18Formally, this "best value" is lim sup
+
+x→∞
+
+1
+
+log(N (x)−x)
+.
+log x
+
+19Recall that here we assume that θ = 1, whence we have that it is not attained. Therefore, when x → ∞, also
+0
+
+for the corresponding extremal zero we have ρ → 1 + i∞. Therefore, from here on we do not distinguish between
+writing ω(x) with log |ρ| or ω
+e (x) with log γ. The difference is only log(|ρ|/γ) = 21 log(1 + β 2 /γ 2 ) < 21 γ −2 , a negligible
+term in all estimates.
+20As is mentioned above in Section 5, all these integral representations are in fact locally uniformly convergent
+even in ℜs > θ0 in view of Theorem 8.
+
+THE INGHAM QUESTION ON THE ORDER OF THE PNT IN THE BEURLING CONTEXT
+
+19
+
+Further, we define with certain constant parameters L, M to be specified later
+Z 2+i∞
+2
+1
+U := U (ρ0 ) :=
+H(s + ρ0 )eLs +Ms ds
+2πi 2−i∞
+
+Z 2+i∞ 
+Z ∞
+2
+d −s−ρ0
+1
+)dx eLs +Ms ds
+1−
+∆(x) (x
+=
+2πi 2−i∞
+dx
+1
+(
+)
+Z
+Z ∞
+1
+d
+−ρ0 1
+Ls2 +(M−log x)s
+2
+= √
+x
+(46)
+e
+ds dx
+exp(−M /4L) −
+∆(x)
+dx
+2πi (2)
+2 πL
+1
+
+
+
+Z ∞
+2
+1
+e−M /4L
+d
+(log x − M )2
+−ρ0
+√
+x
+dx
+= √
+∆(x)
+−
+exp −
+dx
+4L
+2 πL
+2 πL
+1
+
+
+
+
+Z ∞
+2
+(log x − M )2
+1
+∆(x) −ρ0 log x − M
+e−M /4L
+dx,
+x
++ ρ0 exp −
++ √
+= √
+x
+2L
+4L
+2 πL
+2 πL 1
+where the integral formula of Lemma 1 was applied twice, and the order of the integration and the
+derivation was changed.
+For the following we set a few parameters, whose values will be specified more precisely only later,
+but here we already tell about their approximate order of magnitude. Namely,
+we set ℓ ∈ (0, 1) a
+p
+fixed constant and 0 < ε′ < ε a sufficiently small number, satisfying ε′ < (1 − θ)/300). Further,
+we introduce with these set quantities also the parameters m, M and L satisfying
+ε′ ω ≤ m ≤ ε′ log x,
+
+(47)
+
+log x − 2m ≤ M ≤ log x − m,
+
+Now let us split the integral for U to four parts as
+Z q
+Z √x
+Z x
+Z ∞
+, U1 := √ , U2 :=
+(48)
+U0 :=
+, U3 :=
+x
+
+1
+
+q
+
+x
+
+with
+
+L := ℓM.
+
+q := exp(M − m).
+
+Note that here the interval [q, x] of integration for U2 is a subset of [x exp(−3m), x].
+For the general estimation of ψ(x) and ∆(x), we have the obvious estimates
+X
+log x = N (x) log x ≤ (A + κ)x log x
+(x ≥ 1),
+(0 ≤) ψ(x) ≤
+g∈G,|g|≤x
+
+|∆(x)| ≤ A0 x log x + 1
+
+(49)
+
+where A0 := max(1, A + κ)
+
+(x ≥ 1).
+
+This we will use for U0 only, while for the most part we want to estimate
+more finely, so that we
+√
+will apply the above Theorem 9 with ε′ in place of ε and assuming x > x0 (G, ε′ ).
+For the interval [x, ∞) we have ω(u) > ω(x) by monotonicity, whence by Theorem 5
+
+|∆(u)|
+1
+u exp(−(1 − ε′ )ω(u))
+≪
+≤ exp(−(1 − ε′ )ω(x))u1−β0
+(u > x).
+1+β
+u 0
+u1+β0
+u
+Thus with the notation Q := exp(M + m) < x the quantity U3 can be estimated as follows.
+
+2 ! 
+
+Z
+exp(−(1 − ε′ )ω(x)) ∞ 1−β0
+du
+log u − M
+(log u − M )
+√
+√
+|U3 | ≪
++ |ρ0 |
+exp −
+u
+2L
+u
+πL
+2 L
+x
+!
+
+2 
+
+Z
+′
+du
+log u − M
+(log u − M )
+e−(1−ε )ω x1−β0 |ρ0 | ∞
+√
+√
++1
+exp (log u − log x)(1 − β0 ) −
+≪
+2L|ρ0 |
+u
+πL
+2 L
+x
+!
+
+
+
+Z
+′
+2
+eε ω ∞
+du
+log u − M
+(log u − M )
+√
+≪ √
++1
+exp (log u − M )(1 − β0 ) −
+2L|ρ
+|
+u
+L Q
+2 L
+0
+
+(50)
+
+
+
+ y
+√
+√
+exp (1 − β0 )2 Ly − y 2
++ 1 dy
+m
+L|ρ0 |
+√
+2 L
+
+
+
+Z ∞
+′
+2
+′
+ω √
+ω √
+2 Ly − y 2
+2y −
+2 L dy ≤ eε ω+ωm/ log x−m /4L .
+exp
+≪ eε ω
+m
+log x
+log x
+√
+′
+
+= 2eε ω
+
+Z ∞
+2
+
+L
+
+y
+Here in the last but one step we wrote in the obvious (1 − β0 ) ≤ ω/ log x and estimated √L|ρ
++1 ≤
+0|
+√
+√
+ω
+2y − log x 2 L, which certainly holds if m > 4 L and m > 8ωL/ log x hold simultaneously, given
+√
+m
+that y ≥ 2√
+and |ρ0 | > 1/ L.
+L
+
+20
+
+SZILÁRD GY. RÉVÉSZ
+
+Let us see the analogous case of the estimation of U1 . Here we use the monotonicity of ω(u),
+the inequalities ω(u) ≤ ω(ρ0 ; u) ≤ ω(ρ0 ; x) = ω ≤ ω(x) + 1 and also the end estimate (29) from
+√
+ω(u)
+Lemma 15 in the form ω(x) − ω(u) ≤ log
+x ≤ u ≤ q, we can write
+u (log x − log u). As now
+log x − M ≤ 2m = 2(M − log q) ≤ 2(M − log u), whence also log x − log u ≤ 3(M − log u). It follows
+ω(u)
+ω
+ω
+that log
+u (log x − log u) ≤ 12 log x (log x − log u) ≤ 6 log x (M − log u). Thus an application of Theorem
+′
+9 (with ε and correspondingly sufficiently large x) yields
+′
+|∆(u)|
+|ρ0 | ≤ exp(−(1 − ε′ )ω(u))u1−β0 |ρ0 | = eε ω(u) exp(ω(ρ0 , u) − ω(u))
+uβ0
+′
+′
+≤ eε ω exp(ω(ρ0 , x) − ω(u)) ≤ eε ω exp(ω(x) + 1 − ω(u))
+
+
+
+
+ω
+ω(u)
+1+ε′ ω
+ε′ ω
+≤e
+exp
+(log x − log u) ≤ 3e exp 6
+(M − log u) .
+log u
+log x
+
+Using this and recalling q = eM−m we infer the estimate
+
+
+
+Z q
+′
+3eε ω
+M − log u
+(log u − M )2
+du
+ω
+|U1 | ≤ √
+(M
+−
+log
+u)
+−
++
+1
+exp
+6
+√
+log x
+4L
+2L|ρ0 |
+u
+2 πL
+x
+
+
+
+Z ∞
+√
+′
+y
+ω
+√
+(51)
++ 1 dy
+≪ eε ω
+2 Ly − y 2
+√ exp 6
+log
+x
+L|ρ
+m/2 L
+0|
+
+
+
+Z ∞
+√ ω
+√ ω
+ε′ ω
+2
+≤e
+dy
+2y − 12 L
+y−y
+√ exp 12 L
+log x
+log x
+m/2 L
+
+= exp(ε′ ω + 6ωm/ log x − m2 /4L).
+√
+Here we
+y := (M − log u)/2 L and applied the similar
+√ have substituted
+√ to the above conditions
+√
+y
++
+1
+≤
+2y
+−
+12
+|ρ0 | ≥ 2/ L, m > 4 L and m > 24Lω/ log x to get √L|ρ
+Lω/ log x.
+0|
+For
+√ 9, so for the interval
+√ small values of u we do not have the asymptotic estimate of Theorem
+[1, x] we simply use (49) together with the assumptions log x ≥ 5L ≥ 20 L (the last part coming
+from assuming ℓ < 0.2 and L ≥ 16) and M ≥ 0.95 log x (entailed by ε′ < 0.025, as M ≥ log x − 2m ≥
+(1 − 2ε′ ) log x). These provide
+
+
+
+
+Z √x
+1
+(M − log u)2 du
+M − log u
+|U0 | ≪ √
++ 1 exp −
+u1−β0 (log u + 1)|ρ0 |
+2L|ρ0 |
+4L
+u
+L 1
+
+
+Z √x
+2
+du
+(M − log u)
+1
+M − log u
+(52)
+exp −
+≤ x1−β0 |ρ0 | √
+3(M − log u)
+L
+4L
+u
+L 1
+Z ∞
+
+2
+log x
+2 −y 2
+≪ eω
+dy ≤ eω √ exp −0.2252 log2 x/L ≪ eω−0.04 log x/L ,
+√ y e
+√
+L
+(M−log x)/2 L
+
+applying in the last line the
+√ condition M ≥ 0.95
+√ log x and the estimate of Lemma 2 (ii) with λ = 2
+√
+and B = (M − log x)/2
+L ≥ 0.225 log x/ L ≥ 4, this last estimate following from the above
+√
+assumption log x ≥ 20 L, and entailing also
+
+
+√
+
+log 20
+20 ≤ log x/ L ≤ 0.05 log2 x/L ≤ exp
+(0.05 log2 x/L) ≤ exp 0.0075 log2 x/L .
+20
+2
+
+2
+
+Noting that M > (1 − 2ε′ ) log x implies e−M /4L < eω−0.04 log x/L , collecting (46), (48), (50), (51)
+and (52) we are led to
+
+
+2
+′
+2
+(53)
+|U | ≤ |U2 | + O eω−0.04 log x/L + eε ω+6ωm/ log x−m /4L .
+
+Regarding U2 , we can write
+
+
+
+
+Z x
+| log u − M |
+(M − log u)2
+1
+|∆(u)|
+|ρ
+|
++
+exp
+−
+du
+|U2 (ρ0 )| ≤ √
+0
+2L
+4L
+2 πL q u1+β0
+
+
+
+
+Z log x
+1
+(M − v)2
+2m
+|∆(ev )||ρ0 |
+√
+(54)
+dv
+exp −
+≤ 1+
+2L|ρ0 | 2 πL M−m
+eβ0 v
+4L
+
+
+Z log x
+|∆(ξ)|
+|∆(ξ)|
+1
+(M − v)2
+√
+≪ max
+dv ≤ max
+,
+exp
+−
+ξ=ev ∈[q,x] ξ β0 /|ρ0 | 2 πL M−m
+ξ=ev ∈[q,x] ξ β0 /|ρ0 |
+4L
+under the additional assumption that m ≪ |ρ0 |L.
+
+THE INGHAM QUESTION ON THE ORDER OF THE PNT IN THE BEURLING CONTEXT
+
+21
+
+These upper estimates will be compared to the lower estimation of the next section.
+7. Lower estimate of U by contour integration and power sum theory
+In this second part we calculate U by using the first form in (46). More precisely, we are to
+transfer the line of integration of U = U (ρ0 ) with ρ0 = β0 + iγ0 from (σ = 2) to a new contour
+Γ − β0 , with Γ lying in the strip 1 − 3δ ≤ ℜs ≤ 1 − δ, where δ > 0 is a small parameter, to be chosen
+later in such a way that δ < 0.01(1 − θ), whence in particular 1+θ
+2 < 1 − 3δ, too. Recall that ρ0 is
+a close-to-extremal zero for a large value of x, and θ0 = 1 implies that β0 has to be arbitrarily close
+to 1, whence for x large enough we certainly have β0 > 1 − δ.
+The integrand, H(s + ρ0 ) exp(Ls2 + M s), is meromorphic between ℜs = 2 and Γ − β0 , and
+if the new contour avoids all singularities of H, then the Residue Theorem can be applied. To
+′
+ascertain that the contour avoids zeroes of ζ(s) (poles of ζζ (s)) we recall that once a Beurling
+system satisfies Axiom A with a certain value of θ < 1, then it satisfies the same also with any other
+value θ′ ∈ (θ, 1). Therefore, to construct Γ we will apply the construction of Lemma 7 but with the
+translation set A := {−iγ0 , 0, iγ0 }, with the Axiom A related parameter value θ′ := 1 − 3δ, and with
+the additional parameter b := 1 − δ. This will furnish a contour which indeed lies in the prescribed
+strip a := 1 − 2δ ≤ ℜs ≤ b := 1 − δ, avoids all singularities of H, and satisfies the estimates21 of
+Lemmas 7 and 8.
+The transition of the contour of integration can be done easily due to the estimates of Lemma 8
+2
+2
+and the uniform bound |eLs +Ms | = OL,M (e−Lt ) holding uniformly in the strip −1 ≤ σ ≤ 2 and
+s = σ +it. By an application of the Residue Theorem we thus find after the change of the integration
+path
+Z
+⋆
+X
+
+2
+1
+(55)
+H(s + ρ0 )eLs +Ms ds +
+exp L(ρ − ρ0 )2 + M (ρ − ρ0 ) ,
+U (ρ0 ) =
+2πi Γ−β0
+ρ
+where the ⋆ indicates that exactly those zeroes of the Beurling zeta function are taken into account
+(and then according to multiplicity) for which ρ − ρ0 lie to the right of the new contour Γ − β0 ,
+that is, for which ρ − iγ0 is to the right of Γ − iγ0 . Recall that the singularities of H(s + ρ0 ) are
+exactly at translates ρ − ρ0 of zeroes ρ of ζ with residues according to multiplicity; and that by
+construction all translated ζ-zeroes ρ − ρ0 avoid points s − β0 = σ − β0 + it of the curve Γ − β0
+–that is, all vertically translated zeroes ρ − iγ0 avoid the points s = σ + it of the curve Γ–by at least
+d := d(t) := d(b, θ, n, γ0 ; t) = d(1 − δ, θ, 3, γ0 ; t) given in (22).
+Here the integral–which we will denote by S0 = S0 (ρ) henceforth–can be estimated by Lemma 8
+as follows.
+Z
+2
+1
+H(s + ρ0 )eLs +Ms ds
+(56) |S0 (ρ0 )| =
+2πi Γ−β0
+2
+
+Z
+
+A3
+1
+≤
+log(|t|
++
+γ
++
+5)
++
+log
+exp L((β0 − a)2 − t2 ) + M (b − β0 ) |ds|
+0
+3
+δ
+Γ−β0 δ
+Z
+A4 L(β0 −a)2 +M(b−β0 )
+log2 (|t| + γ0 + 5) exp(−Lt2 )|ds|
+≤ 5 e
+δ
+Γ−β0
+Z
+2
+log2 (|t| + γ0 + 5) exp(−Lt2 )|ds|.
+≤ A4 e4Lδ +M(1−δ−β0 )
+Γ−β0
+
+By construction, the broken line Γ consists of horizontal line segments Hk of length ≤ 21 (b−θ′ ) = δ
+at height tk , and vertical segments the horizontal projection of which covers the imaginary axis
+exactly (apart from endpoints). Therefore,
+Z
+log2 (|t| + γ0 + 5) exp(−Lt2 )|ds|
+Γ−β0
+
+≤2
+
+Z ∞
+0
+
+2
+
+log2 (t + γ0 + 5)e−Lt dt
+
++δ
+
+∞
+X
+
+2
+
+log2 (tk + γ0 + 5)e−Ltk .
+
+k=1
+
+21In fact, the constants in the estimations of these Lemmas will not much depend on δ because a moment’s thought
+reveals that in the proof of the related estimates in [54] we can still appeal to the known estimates for the number
+of ζ-zeroes, available in the previous lemmas up to the whole strip θ < ℜs ≤ 1; so we still have these Lemmas with
+constants depending on θ and κ only. NOT QUITE TRUE...
+
+22
+
+SZILÁRD GY. RÉVÉSZ
+
+Using the standard Vinogradov notation ≪ for explicit numerical constants only, for the integral
+here we easily see
+Z ∞ Z γ0 +5 Z ∞
+Z ∞
+Z ∞
+2
+2
+−t2
+=
++
+≤ log (2γ0 + 10)
+e dt +
+log2 (2t)e−t dt ≪ log2 (γ0 + 5).
+0
+
+0
+
+γ0 +5
+
+0
+
+5
+
+Recalling that by construction t1 ≥ 4 and tk ≥ tk−1 + 1, (k ≥ 2), we get a similar estimate for the
+sum. Therefore,
+Z
+log2 (|t| + γ0 + 5) exp(−Lt2 )|ds| ≪ log2 (γ0 + 5).
+Γ−β0
+
+Collecting the above estimates and taking into account M < log x, the definition of ω and that γ0
+is large–needed here in the form that log2 (γ0 + 5) < δ 5 γ0 –we are led to
+Z
+2
+2
+A5
+1
+(57)
+H(s + ρ0 )eLs +Ms ds ≤ 5 log2 (γ0 + 5)e4Lδ −δM+(1−β0 ) log x
+2πi Γ−β0
+δ
+2
+
+2
+
+≤ A5 e4Lδ −δM+(1−β0 ) log x+log γ0 = A5 e4Lδ −δM+ω .
+
+Next we see to the estimations of the various parts of the right hand side sum of (55). Keeping
+′
+the notation a = b+θ
+2 = 1 − 2δ used in the construction of Γ let us write
+⋆
+X
+
+S1 (ρ0 ) :=
+
+ρ; |ℑρ−γ0 |≥3
+
+≤
+
+∞
+X
+
+n=3
+
+
+exp L(ρ − ρ0 )2 + M (ρ − ρ0 )
+2
+
+2
+
+eL(β0 −a) −Ln +M(1−β0 ) {N (a, γ0 − n − 1, γ0 − n) + N (a, γ0 + n, γ0 + n + 1)}
+2
+
+≤ eL(β0 −a) +M(1−β0 )
+
+(58)
+
+≤ A8 log(γ0 + 5)e
+
+∞
+X
+
+2
+
+e−n L (A6 + A7 log(γ0 + n))
+
+n=3
+
+4Lδ 2 +M(1−β0 )−9L
+
+≤ A8 elog γ0 +(1−β0 ) log x−8L ≤ A8 eω−8L ,
+
+referring to Lemma 5 in the third line and then calculating similarly as we did above for the sum
+P∞
+2
+−mt2n
+and in (57).
+n=1 log (tn + γ0 + 5)e
+For the contribution of the remaining zeroes with |ℑρ − γ0 | ≤ 3 in the full sum of residues, let
+us recall that by construction (β0 , 1] × i[γ0 − 3, γ0 + 3] is zero-free. In other words, for any such
+remaining zero it holds ℜ(ρ − ρ0 ) ≤ 0, always. Using this we can apply a refined estimation for
+zeroes in a middle range distance from ρ0 as follows.
+(59)
+⋆
+X
+
+S2 (ρ0 ) :=
+
+ρ; 4δ≤|ℑρ−γ0 |≤3
+3/δ
+
+≤
+
+X
+
+n=4
+
+≤e
+
+2
+
+
+exp L(ρ − ρ0 )2 + M (ρ − ρ0 )
+2 2
+
+eL((β0 −a) −n δ ) {N (a, γ0 − (n + 1)δ, γ0 − nδ) + N (a, γ0 + nδ, γ0 + (n + 1)δ}
+
+L(β0 −a)2
+
+3/δ
+X
+
+n=4
+
+2
+
+2
+
+2
+
+2
+
+2
+
+e−n Lδ (A6 + A7 log(γ0 + 5)) ≤ A8 log γ0 e(1−a) L−16δ L = A8 elog log γ0 −12δ L .
+
+Combining (55), (57), (58) and (59) and taking into account also (53), we are led to
+(60)
+n
+
+o
+′
+2
+2
+2
+2
+|U2 | ≥ |S3 | − A9 eε ω+6ωm/ log x−m /4L + eω−0.04 log x/L + elog log γ0 −12δ L + e4Lδ +ω−δM + eω−8L ,
+where S3 := S3 (ρ0 ) is defined as
+S3 :=
+
+⋆
+X
+
+ρ; |ℑρ−γ0 |<4δ
+
+
+exp L(ρ − ρ0 )2 + M (ρ − ρ0 ) .
+
+Let us denote the number of ζ-zeroes in the circle D(r) := {s : |s − ρ0 | ≤ r} as ν(r). Given that
+all zeroes in S3 are to the right of Γ, therefore have ℜρ ≥ a = 1 − 2δ, it is clear that D(5δ) covers
+
+THE INGHAM QUESTION ON THE ORDER OF THE PNT IN THE BEURLING CONTEXT
+
+23
+
+log log γ0
+If a parameter r0 ≥ 15 log
+log log γ0
+
+is given, then according to the
+all the zeroes in the sum for S3 .
+22
+Turán-type Lemma 9 we have the estimate ν(r) ≤ A10 r log(γ0 + 5) for any r0 < r < 5δ.
+Here we cut the sum S3 into two parts, and estimate the part with zeroes not closer to ρ0 than
+r0 as follows.
+R :=
+
+⋆
+X
+
+ρ; r0 ≤|ρ−γ0 |<5δ
+
+≤
+
+Z 5δ
+r0
+
+max
+
+β+it∈∂D(r)
+
+
+exp L(ρ − ρ0 )2 + M (ρ − ρ0 )
+
+
+exp L((β − β0 )2 − (t − γ0 )2 ) − M (β0 − β) dν(r).
+
+
+Here the inner function is Φ(r) := exp max0≤u≤r; u2 +v2 =r2 {L(u2 − v 2 ) − M
+u} so that ϕ(r) :=
+
+log Φ(r) = max0≤u≤r L(2u2 − r2 ) − M u = −r2 L + max0≤u≤r 2Lu2 − M u . This last maximum
+is a maximum of a convex function, whence is attained at some of the endpoints:
+at 0 it attains
+
+zero, at r it is 2Lr2 − M r, and we get Φ(r) = exp −Lr2 + max(0, 2Lr2 − M r) . Obviously, if we
+only assume that L ≤ M , then for r ≤ 5δ < 1/2 we will always have 2Lr2 − M r < 0, whence the
+maximum is 0 here. This yields
+Z 5δ
+Z 5δ
+
+5δ
+2
+2
+exp(−Lr )dν(r) = exp(−Lr )(ν(r) − ν(r0 )) r0 +
+2Lr exp(−Lr2 )(ν(r) − ν(r0 ))dr
+R≤
+r0
+
+≪ exp(−25Lδ 2 )δ log(γ0 + 5) +
+
+(61)
+
+
+
+≪ log γ0 δe
+≤ log γ0
+
+(
+
+e
+
+−25Lδ 2
+
+−Lr02
+
++
+
+Z ∞
+
+Z 5δ
+
+r0
+
+2Lr exp(−Lr2 ) log(γ0 + 5)rdr
+
+r0
+
+2
+
+2
+
+Lr exp(−Lr )dr
+
+r0
+
+1
++
+2Lr0
+
+Z ∞
+
+Lr02
+
+ve
+
+−v
+
+dv
+
+)
+
+=e
+
+
+
+= log γ0
+
+log log γ0
+
+(
+
+δe
+
+−25Lδ 2
+
++
+
+Z ∞
+
+ve
+
+Lr02
+
+−v
+
+dv
+√
+2 vL
+
+)
+
+
+
+2
+2
+1 + Lr02
+e−Lr0 ≪ elog log γ0 −Lr0 .
+1+
+2Lr0
+
+There remains the part P of S3 with the remaining zeroes |ρ − ρ0 | ≤ r0 (and to the right of Γ).
+Their number is n ≪ r0 log(γ0 + 5). Now, P can be written as a sum of pure powers (i.e. without
+coefficients), where the general term takes the form
+
+
+exp L(ρ − ρ0 )2 + M (ρ − ρ0 ) = exp M ℓ(ρ − ρ0 )2 + (ρ − ρ0 ) = eMλ(ρ) ,
+
+with λ(ρ) := ℓ(ρ − ρ0 )2 + (ρ − ρ0 ) and ℓ := L/M . In the following we will fix ℓ as a constant, i.e.
+take L and M to be constant multiples of each other, with M varying in [log x − 2m, log x − m],
+but ℓ fixed. Out of terms of P there is one, belonging to ρ0 , which must be exactly 1. Therefore,
+Turán’s Second Main Theorem of the Power Sum Theory, Lemma 3 above, gives that in the interval
+given for M there is a choice of the value of this parameter which furnishes
+
+
+
+
+8e log x
+· A11 r0 log(γ0 + 5)
+(62)
+|P | ≥ exp − log
+m
+and consequently in view of (61)
+
+
+
+
+8e log x
+(63)
+|S3 | ≥ exp − log
+· A11 r0 log(γ0 + 5) − A12 exp(log log γ0 − r02 L).
+m
+8. Choice of parameters and proof of Theorem 6
+As a key step towards the oscillation result on ∆(x), we first deduce the following intermediate
+result.
+Theorem 10. Let ε > 0 be arbitrary. Assume Axiom A and θ0 = 1. If x > x0 (G, ε) and ρ1 is
+the extremal ζ-zero for x (i.e. ω(ρ1 ; x) = ω(x)), then there exists some ξ ∈ [x1−ε , x] such that
+|∆(ξ)| ≥ ξ β1 /|ρ1 |1+ε .
+22For the applicability of the Lemma recall δ < 0.01(1 − θ) i.e. 5δ < 0.05(1 − θ) ≤ 0.1(β − θ) given that
+0
+β0 > (1 + θ)/2.
+
+24
+
+SZILÁRD GY. RÉVÉSZ
+
+Remark 8. One would think that the result should hold for any zero, once it holds for the extremal
+one. However, ρ1 is extremal only for x, while it is not clear what would be the right comparison
+with the extremal zero right for ξ. Below in our main result we establish such a comparison–at the
+expense of a loss of eεω(ξ) , slightly exceeding the mere |ρ|ε loss here. That is quite satisfactory, yet
+we should admit that the plausible variant here for arbitrary zeroes we could not prove.
+Proof. As θ0 = 1, ℜρ = θ0 is not attained by any zero. Therefore, as x → ∞, the extremal zeroes in
+ω
+e ≈ ω satisfy "ρ → 1 + i∞", as is discussed in Lemma 15. Thus we can assume γ1 to be sufficiently
+large whenever γ1 = ℑρ1 for an x-extremal ρ1 with large enough x.
+Recall from the above argument that we replaced the extremal zero ρ1 by some possibly different
+ρ0 with γ1 ≤ γ0 ≤ (1 + o(1))γ1 and β0 ≥ β1 , and such that ω(ρ0 ; x) ≤ ω(x) + 1. Obviously, it suffices
+then to prove the assertion for this possibly changed zero ρ0 , for β0 ≥ β1 and |ρ0 | = |ρ1 |(1 + o(1))
+β0
+ξ β1
+ξ β1
+entails |ρξ0 |1+ε ≥ [(1+o(1))|ρ
+1+ε ≥ |ρ |1+2ε , say.
+1 |]
+1
+We apply the results of the calculations of the above Sections 6 and 7 with δ chosen in the
+beginning of Section 4 and with the further specifications of our parameters
+1
+1
+(i.e. L := M ), m := ε′ log x, r0 := 3ε′2 .
+8
+8
+Given that γ0 ≥ γ1 , we certainly know that γ0 → ∞, thus for large enough x the above choice of
+r0 = 3ε′2 exceeds 15 log log log γ0 / log log γ0 , whence is admissible. Similarly, as ω ∈ [ω(x), ω(x) + 1]
+and ω(x)/ log x → (1 − θ0 ) = 0, we certainly have γ0 ≤ ω = o(log x). So, for large enough x we
+also have log γ0 ≤ ω ≤ 13 ε′3 log x. Further, from γ0 → ∞ it also follows that for large enough
+γ0 –that is, for large enough x–we necessarily have log log γ0 < ε′ log γ0 , and in particular even
+r02 L ≥ ε′4 log x ≥ ε′ log γ0 > log log γ0 > 1 and also log γ0 > ε1′ log log γ0 > 1/δ 2 > 10 log(1/δ)
+√
+With the above choice of parameters the conditions
+that m ≤ |ρ0 |L, that m > 4 L, m >
+√
+24Lω/ log x, M ≥ 0.95 log x and that log x ≥ 20 L are obviously met, thus from (60) we are led to
+o
+n ′
+′
+′
+2
+′2
+2
+2
+1
+|U2 | ≥ |S3 | − A9 e7ε ω−ε log x/4L + eω−0.04 log x/( 8 log x) + eε log γ0 −12ε L + eω+4δ L−δM + e−7L
+o
+n ′
+′2
+′
+≥ |S3 | − A9 e7ε ω−2ε log x + eω−0.3 log x + e−11ε L + eω−δM/2 + e−7L
+ε′ < δ 2 ,
+
+(64)
+
+(65)
+
+ℓ :=
+
+
+
+′
+′
+′
+′
+′
+≥ |S3 | − O e−2ε ω + e−ω + e−11ε ω + eω−ε log x + e−7ω = |S3 | − O(e−2ε ω ) = |S3 | − O(γ0−2ε ).
+
+Further, substituting our parameter choices into (63) yields for ε′ sufficiently small in function of
+A11
+
+ 
+
+8e
+′2
+(66) |S3 | ≥ exp − log
+− A12 exp(log log γ0 − 9ε′4 L)
+·
+A
+3ε
+2
+log
+γ
+11
+0
+ε′
+′
+
+′
+
+′4
+
+≥ e−ε log γ0 − A12 eε log γ0 −ε
+
+log x
+
+′
+
+′
+
+′
+
+′
+
+′
+
+≥ e−ε log γ0 − A12 eε log γ0 −3ε log γ0 ≥ γ0−ε − O(γ0−2ε ).
+
+Collecting (54), (65) and (66) finally leads to
+
+
+|∆(ξ)|
+−ε′
+−ε′
+1
+−
+O(γ
+)
+,
+≫
+γ
+0
+0
+β
+ξ∈[q,x] ξ 0 /|ρ0 |
+max
+
+proving the assertion if ε′ is chosen sufficiently smaller than ε.
+
+
+
+Now we are in the position to infer the second main result of the present study.
+Theorem 11. Assume Axiom A and θ0 = 1.
+If 0 < ε < 0.01(1 − θ) is arbitrary and if x > x0 (G, ε), then there exists some x
+e ∈ [x1−ε , x] such
+that |∆(e
+x)| ≥ x
+e exp(−(1 + ε)ω(e
+x)).
+Proof. We apply the above Theorem 10: there is an x
+e ∈ [x1−ε , x] such that
+
+(67)
+
+|∆(e
+x)| ≥
+
+x
+e
+x
+e
+x
+e
+x
+e
+x
+eβ1
+≥ 1−β1
+≥ 1−β1
+=
+= 1−β1
+.
+1+ε
+1+ε
+1+ε
+1+ε
+|ρ1 |
+|ρ1 |)
+|ρ1 |)
+|ρ1 |
+x
+e
+(e
+x
+(x
+exp((1 + ε)ω(x))
+
+Next we want to compare ω(x) and ω(e
+x) in the exponent. That is, we write
+(68)
+
+|∆(e
+x)| ≥
+
+x
+e exp(−(1 + ε)ω(e
+x))
+.
+exp((1 + ε)(ω(x) − ω(e
+x)))
+
+THE INGHAM QUESTION ON THE ORDER OF THE PNT IN THE BEURLING CONTEXT
+
+25
+
+x−log x
+e
+≤
+We can write in the denominator according to (29) of Lemma 15 that ω(x)−ω(e
+x) ≤ ω(e
+x) log log
+x
+e
+ε
+1+ε
+x), and that gives |∆(e
+x)| ≥ x
+e exp(− 1−ε ω(e
+x)), which is obviously sufficient as ε was arbitrary.
+1−ε ω(e
+
+
+
+Contrary to the upper estimations in the direct direction of Ingham type theorems, here in the
+converse direction the analogous results with the Ingham function η(t) are not so immediate. The
+reason is that we have seen that if η is to bound a domain D(η) free of zeroes, then ω(x) ≥ ωη (x).
+However, when η is a curve with D(η) containing an infinitude of zeroes, then in general no global
+comparison of the two functions ω and ωη is available. Indeed, it is possible to give examples of
+functions with ω(x) > ωη (x) and also ω(x) < ωη (x) occurring at many places. Therefore, what we
+will do in the below proof is a pointwise comparison, to our favor, i.e. in the direction of ωη (x) ≥ ω(x),
+only along a sequence, defined geometrically and indirectly by the outstanding sequence of zeroes
+ρk . The construction is non-trivial, but is necessary, if we indeed want to show that the relatively
+recent versions of Pintz’ Theorem using the function ω(x) directly defined in terms of the zeroes
+rather than Ingham’s ωη (x), are indeed sharper. As said, this is clear for the direct direction but is
+surprisingly less obvious, requiring also some convex geometry for the converse direction.
+
+Proof of Theorem 6. So let us assume now that ρk is a sequence of zeroes in the domain (11). We
+assume that η(t) is convex in logarithmic variables, and also that θ0 = 1, all other cases being similar.
+So we assume η(ev ) being convex and consider the domain D(η)∗ := {(u, v) ∈ R2 : u ≥ 1 − η(ev )},
+which is the image of D(η) under the canonical mapping23 Φ : C → R2 defined by Φ(σ + it) →
+(σ, log t). In fact, all our considerations will take place in the upper halfplane H := R × [0, ∞), as Φ
+maps the halfplane S := {s = σ +it : t ≥ 1} to H. We define the boundary curve C := C0 ∪C1 , where
+C0 := (−∞, 1 − η(1)] × {0}, a halfline on the u-axis of R2 , and C1 := {(u, v) ∈ H : u = 1 − η(ev )}.
+The latter is the boundary curve for D(η)∗ at least under the convention that we decide to consider
+D(η) as only in its part belonging to S. Similarly, we assume that η satisfies η(1) < 1 − θ, (a
+condition automatically satisfied in the classical case when assuming η ≤ 1/2).
+It will be more convenient to describe C1 by means of the inverse function24 ϕ := f −1 , where
+f (v) := 1−η(ev ). Then f : [0, ∞) → [a, 1) ⊂ (θ, 1) with a := 1−η(1) > θ, whence ϕ : [a, 1) → [0, ∞).
+Note also that by assumption η(ev ) is convex, whence f is concave, and ϕ is again convex. Now
+with ϕ we can write C1 := {(u, v) : v = ϕ(u)}.
+Consider the sequence ρ∗k := Φ(ρk ) := (uk , vk ) := (βk , log γk ) ∈ H. We define the convex hull
+∗
+∞
+∗
+K := con ((H \ D(η)∗ ) ∪ (∪∞
+k=1 {ρk })) = con (C ∪ (∪k=1 {ρk })) .
+
+Here in making the convex hull, points which are not extreme points can be dropped without
+changing the set K. It is important that deleting these non-extreme points, there still remains an
+infinite sequence of zeroes ρ∗k . We will now prove that if there were only a finite number of extreme
+points among the ρ∗k , then there had been only a finite number of points of the sequence, too.
+Indeed, if there are only finitely many extreme points among the ρ∗k , then they belong to a certain
+rectangle R := [a, U ]× [0, V ], say, with U < 1, because ℜs = 1 is zero-free. Then it is easy to see that
+all the supporting lines to C1 emanating from points of R are at most as steep as the one emanating
+from (U, 0). Let this last supporting line touch C1 at w := (w, ϕ(w)) and have slope µ, say. In other
+words the line v = µ(u − U ) is a supporting line to C1 , supporting C1 at w.
+Now it is easy to see that the whole rectangle R is to the left of this line (because it emanates from
+the point (U, 0) with the rightmost coordinate U of R, and its slope is positive, given that it must
+pass from the right all points of C1 , those with abscissa arbitrarily close to 1 included), therefore
+this line is supporting on its left both R and C1 , whence also the whole of K. Normally (at points
+of differentiability) µ is just the derivative ϕ′ (w), but this is not needed. What is needed is that
+at any point z := (z, ϕ(z)) with z > w all supporting lines of C1 through z have at least as large
+a slope µ(z) than µ. Any such supporting line v = µ(z)(u − z) + ϕ(z) has w on its left (because
+it supports C1 ), and is steeper (not less steep) than µ, whence it also has all the rectangle R on its
+left. Therefore, it is a supporting line to K, too.
+Let now (p, q) ∈ H be any point with q > ϕ(p) and p > w. According to the above, the supporting
+line to C1 at (p, ϕ(p)) is a supporting line to K, too. However, (p, q) is to the right of this line (as
+q > ϕ(p)), therefore it is separated from K by this line and therefore it cannot belong to K. In
+23In the definition of η we restricted to t ≥ 1. That corresponds to set the domain of Φ as ℑs ≥ 1, fitting to taking
+log t and considering the upper halfplane here; also this fits to the restriction applied in the definition of ω
+e (x).
+24It exists, as η tending to 0 while η(ev ) being convex entail that η has to be strictly decreasing.
+
+26
+
+SZILÁRD GY. RÉVÉSZ
+
+particular, it cannot be any element of the sequence ρ∗k (as all of these belong to K). That is, we
+do not have any point ρ∗k in the domain D(η)∗ with p > w. It follows that only points (p, q) with
+a ≤ p ≤ w can be equal to some ρ∗k , and therefore the sequence ρ∗k itself had to be finite25.
+So we now see that there has to be an infinite (sub)sequence of the ρ∗k which are also extreme
+points26 for K: we delete others and keep only these extreme points.
+Now if ρ∗k is an extreme point of K then there exists a supporting line through it for the convex set
+K, i.e. a line Lk with defining equation v = ak u + bk , which passes through the point ρ∗k := uk + ivk ,
+while it goes fully outside the interior of the convex hull K.
+Take the straight line ℓ passing through the point (1, 0) and of slope ξ, (a positive parameter to
+be chosen later on) in the (u, v)-plane R2 . Its equation is v = ξ(u − 1), or ξu − v − ξ = 0. In the
+(u, v)-plane, the line ℓ is to the right27 of the above defined convex domain K. Substituting the
+coordinates of any point in the normal form √ 1 2 (ξu − v − ξ) = 0 of ℓ furnishes the signed distance
+1+ξ
+
+of that point from ℓ, with points to the left from ℓ bearing negative, and points to the right having
+positive signs. This signing being some inconvenience for us, we change the orientation: we write
+instead ℓ(u, v) := √ 1 2 (−ξu + v + ξ) for the formula of the line, meaning that now ℓ(u, v) = 0
+1+ξ
+
+describes points of ℓ, and ℓ(u, v) for a general point gives the negatively signed distance of the point
+from ℓ i.e. positive signs to the left, and negative signs to the right of ℓ.
+Now minimizing over all points of K corresponds to finding the distance of K from ℓ. Further,
+if (u0 , v0 ) ∈ ∂K is one such minimal distance point, then the line L passing through (u0 , v0 ) and
+parallel to ℓ is just a supporting line to K.
+That means in particular that in case we set ξ := ak , then the prescribed slope matches the slope
+of the supporting line drawn to ρ∗k , whence the above constructed line L will match Lk . As said, it
+is a supporting line to K through ρ∗k , which also means that all points of K, in particular all points
+on the curve C1 , will have to lie to the left from it. The distance to the left from ℓ is now signed
+positively, and ρ∗k provides the least such distance as compared to all points of K; in particular
+it provides a smaller (not larger) value than minimizing over all points of C1 , and also it provides
+the minimal value among all points ρ∗n . So in particular the distance ℓ(uk , vk ) is minimal among
+all (un , vn ): equivalently, (1 − uk )ak + vk = minn∈N (1 − un )ak + vn . We therefore find that the
+slope ak of the supporting line through the extreme point ρ∗k defines a value xk := eak such that
+ω(ρk ; xk ) = (1 − βk ) log xk + log γk = (1 − uk )ak + vk = minn∈N ω(ρn ; xk ) = ω(xk ).
+Further, we can read the meaning of the other distance minimization: for any pointp(u, v) ∈ C1 ,
+we have √ 1 2 ω(ρk ; xk ) = ℓ(ρ∗k ) ≤ ℓ(u, v) = √ 1 2 ((1 − u)ak + v). Multiplying by 1 + ξ 2 and
+1+ξ
+
+1+ξ
+
+taking minimum on the right hand side furnishes ω(xk ) = ω(ρk , xk ) ≤ min(u,v)∈C1 (1 − u)ak + v =
+mint≥1 (1 − η(t)) log xk + log t = ωη (xk ).
+So we get that setting xk := eξ = eak , it holds ωη (xk ) ≥ ω(ρk ; x) = ω(xk ). This is not a general
+equation, it is conditional to the property that ρ∗k is an extreme point with the supporting line
+through it having slope ξ := log xk = ak , but it holds for arbitrary values of x = xk to which there
+is a supporting line through a point ρ∗k . As said, we already know that there is an infinitude of
+ρ∗k being extreme points of the convex hull K, therefore there is an infinite sequence of ξk = log xk
+values for which the lines with slopes ξk and passing through ρ∗k provide supporting lines to K. With
+that sequence of xk we therefore have that ω(xk ) = ω(ρk , xk ) ≤ ωη (xk ). It is clear that these slopes
+are tending to infinity, therefore also xk = eξk → ∞.
+Here we can apply Theorem 11 (with x := xk ), more precisely its proof, where in the first step
+we have got (67). We obtain values x
+fk ∈ [x1−ε
+xk )| ≥ x
+fk exp(−(1 + ε)ω(xk )) ≥
+k , xk ], for which |∆(f
+x
+fk exp(−(1 + ε)ωη (xk )), the last step being clarified above.
+Note that ωη satisfies similar properties as ω–see Lemma 10. That means that we can argue as
+1+ε
+above in the end of the proof of Theorem 11, finally deriving |∆(f
+xk )| ≥ exp(− 1−ε
+ωη (f
+xk )).
+
+9. Concluding remarks
+In the paper and in the previous parts of the series we obtained several results on the order
+of magnitude of the error function ∆(x) in the Beurling PNT under Axiom A In particular, we
+25The set is part of Z(a; 1, ew ), whose cardinality is N (a; 1, ew ).
+
+26Note on passing that here we essentially used convexity of η(ev ), equivalent to convexity of ϕ, for otherwise it
+is easy to construct examples with an infinite sequence ρ∗k ∈ D(η)∗ but none of them being extreme points of K.
+27Indeed, its part in H lies in the quadrant u ≥ 1, v ≥ 0, while K lies in the open quadrant u < 1, v ≥ 0.
+
+THE INGHAM QUESTION ON THE ORDER OF THE PNT IN THE BEURLING CONTEXT
+
+27
+
+emphasized the role of the Riemann-von Mangoldt formula, which seems to suggest reliable information
+on the order of magnitude of the error function even if it is a divergent, hardly manageable series,
+whose "interference difficulty" was truthfully pointed out by Littlewood. Even if this series is
+divergent–so that in concrete analysis only truncated versions, i.e. partial sums can be used–and
+even if it is not a regular say Taylor series, its characteristics seem to have many resemblance to
+well-behaved entire functions of say finite order, such as its order of growth being comparable to the
+size of its largest term, or to the total sum of the absolute values of terms. Therefore, in our opinion,
+reasonable conjectures can be made by analogy to power series, and the challenge lies in extracting
+the conjectured information from the otherwise complicated series and indeed prove what seems to
+be suggested by it.
+We need to mention another direction here, which seems to originate from a paper by Knapowsky
+[31] in the classical case. Namely, from assuming a known ζ-zero, he obtained a lower estimate for
+the mean value D(x), too. Also this was improved to very sharp, essentially optimal forms by Pintz
+[43] [44] [41], made suitable also for handling dependence on zero-free regions (and not only on one
+pre-set zero) similar to our topic here. That enabled Pintz to give an essentially full picture of the
+essentially equivalent order of magnitude of the functions ∆(x), its average D(x), its maximum S(x),
+and the zero-distribution dependent functions W (x) and Z(x), see [41].
+However, we cannot fully extend Pintz’ result on the lower estimation of the average D(x) to the
+Beurling case. The main reason is that Pintz used Vinogradov estimates heavily, while we found
+surpassing that part of the argument very hard, essentially not working. Nevertheless, already here
+we employed certain finer calculus and estimates at some steps, than were merely necessary for the
+proofs of our statements right here, in the good hope that these finer estimates will be of good use
+in further investigations–in particular concerning D(x).
+10. Acknowledgement
+We would like to thank János Pintz, Frederik Broucke, Gregory Debruyne and the anonymous
+referee for many useful comments and advices, which were benefitted throughout our work and
+its subsequent revision. Also we would like to thank Ghent University for the hospitality and the
+motivating professional environment, which was greatly stimulating during our visit in May 2022.
+Also the financial support of the BOF grant, project no. 01J04017 is thankfully acknowledged.
+During the fifteen years of writing this paper the author was supported by the Hungarian Research,
+Development and Innovation Office, Grant # T-72731, T-049301, K-61908, K-119528 and K-132097.
+Literature
+[1] Al-Maamori, F.; Hilberdink, T. W. An example in Beurling’s theory of generalised primes.
+Acta Arith. 168 (2015), no. 4, 383–396.
+[2] Aramaki, Junichi, On an extension of the Ikehara Tauberian theorem, Pacific J. Math. 133 (1988), 13–30.
+[3] T. Bekehermes, Allgemeine Dirichletreihen und Primzahlverteilung in arithmetische Halbgruppen,
+Dissertation zur Erlagung des Grades eines Doktors, Technischen Universität Clausthal, 2003.
+[4] A. Beurling, Analyse de la loi asymptotique de la distribution des nombres premiers généralisés I. Acta
+Math. 68 (1937), 255–291.
+[5] F. Broucke, Note on a conjecture of Bateman and Diamond concerning the abstract PNT with Malliavintype remainder, Monatsh. Math. 196 (2021), no. 3, 457–470.
+[6] F. Broucke and G. Debruyne, On zero-density estimates and the PNT in short intervals for Beurling
+generalized numbers. To appear in Acta Arith.. See also at https://arxiv.org/abs/2211.08716.
+[7] F. Broucke,
+J. Vindas,
+A new generalized prime random approximation procedure
+and
+some
+of
+its
+applications,
+ArXiv
+preprint
+no.
+arxiv:arXiv:2102.08478,
+see
+at
+https://arxiv.org/abs/arXiv:2102.08478v1.
+[8] F. Broucke, G. Debruyne and J. Vindas, Beurling integers with RH and large oscillation. Adv. Math.
+370 (2020), Article no. 107240, 38 pp.
+[9] G. Debruyne and J. Vindas, On PNT equivalences for Beurling numbers. Monatsh. Math. 184 (2017),
+no. 3, 401–424.
+[10] G. Debruyne and J. Vindas, On general prime number theorems with remainder. (English summary)
+Generalized functions and Fourier analysis, 79–94, in: Oper. Theory Adv. Appl., 260, Adv. Partial Differ.
+Equ. (Basel), Birkhäuser/Springer, Cham, 2017.
+[11] G. Debruyne and J. Vindas, On Diamond’s L1 criterion for asymptotic density of Beurling generalized
+integers. Michigan Math. J. 68 (2019), no. 1, 211–223.
+[12] G. Debruyne, H. Diamond and J. Vindas, M (x) = o(x) estimates for Beurling numbers. J. Théor.
+Nombres Bordeaux 30 (2018), no. 2, 469–483.
+[13] Debruyne, G.; Schlage-Puchta, J.-C.; Vindas, J., Some examples in the theory of Beurling’s
+generalized prime numbers. Acta Arith. 176 (2016), no. 2, 101–129.
+
+28
+
+SZILÁRD GY. RÉVÉSZ
+
+[14] H. G. Diamond, H. L. Montgomery and U. Vorhauer, Beurling primes with large oscillation, Math.
+Ann., 334 (2006) no. 1, 1–36.
+[15] H. G. Diamond, When do Beurling generalized integers have a density?, J. Reine Angew. Math. 295 (1977),
+p. 22–39.
+[16] Diamond, H. G.; Zhang, Wen-Bin, Optimality of Chebyshev bounds for Beurling generalized numbers.
+Acta Arith. 160 (2013), no. 3, 259–275.
+[17] Diamond, H. G.; Zhang, Wen-Bin, Chebyshev bounds for Beurling numbers. Acta Arith. 160 (2013), no.
+2, 143–157.
+[18] Diamond, H. G.; Zhang, Wen-Bin, Prime number theorem equivalences and non-equivalences.
+Mathematika 63 (2017), no. 3, 852–862.
+[19] Diamond, H. G.; Zhang, Wen-Bin, Beurling generalized numbers, Mathematical Surveys and
+Monographs, 213. American Mathematical Society, Providence, RI, 2016. xi+244 pp.
+[20] Hilberdink, T. W. Power moments and value distribution of functions. (English summary) Trans. Amer.
+Math. Soc. 371 (2019), no. 1, 1–31.
+[21] Hilberdink, T. W. Generalised prime systems with periodic integer counting function. Acta Arith. 152
+(2012), no. 3, 217–241.
+[22] Hilberdink, T. W. Ω-results for Beurling’s zeta function and lower bounds for the generalised Dirichlet
+divisor problem. J. Number Theory 130 (2010), no. 3, 707–715.
+[23] Hilberdink, T. W.; Lapidus, M. L. Beurling zeta functions, generalised primes, and fractal membranes.
+Acta Appl. Math. 94 (2006), no. 1, 21–48.
+[24] Hilberdink, T. W. Well-behaved Beurling primes and integers. J. Number Theory 112 (2005), no. 2,
+332–344.
+[25] A. E. Ingham, The distribution of prime numbers, Cambridge University Press, 1932.
+[26] A. E. Ingham, A note on the distribution of primes. Acta Arith. 1 (1936), 201–211.
+[27] D. Jonhnston, Improving bounds on prime counting functions by partial verification of the Riemann
+hypothesis, Ramanujan J. 59 (2022), no. 4, 1307–1321.
+[28] Kahane, J.-P., Le rôle des algebres A de Wiener, A∞ de Beurling et H 1 de Sobolev dans la théorie des
+nombres premiers généralisés, Ann. Inst. Fourier (Grenoble) 48(3) (1998) 611–648.
+[29] Kahane, J. P., Un théoreme de Littlewood pour les nombres premiers de Beurling. (French) [A Littlewood
+theorem for Beurling primes] Bull. London Math. Soc. 31 (1999), no. 4, 424–430.
+[30] Kahane, J.-P., Conditions pour que les entiers de Beurling aient une densité. J. Théor. Nombres Bordeaux
+29 (2017), no. 2, 681–692.
+[31] S. Knapowski On the mean values of certain functions in prime number theory, Acta Math. Acad. Sci.
+Hungar. 10 (1959), 375–390.
+[32] J. Knopfmacher, Abstract analytic number theory, North Holland & Elsevier, Amsterdam–Oxford & New
+York, 1975. (Second edition: Dover Books on Advanced Mathematics. Dover Publications, Inc., New York,
+1990. xii+336 pp.)
+[33] J. E. Littlewood, Mathematical notes (12). An inequality for a sum of cosines, J. London Math. Soc. 12
+(1937), 217–222.
+[34] J. E. Littlewood, Sur la distribution des nombres premiers, C. R. Acad. Sci. Paris 158 (1914) 1869–1872.
+[35] H. L. Montgomery, Topics in multiplicative number theory, Lecture Notes in Mathemtics, 227, Springer,
+1971.
+[36] M. J. Mossinghof, T. S. Trudgian, Improving bounds on prime counting functions by partial verification
+of the Riemann hypothesis, J. Number Theory 157 (2015), 329–349.
+[37] Neamah, A. A.; Hilberdink, T. W. The average order of the Möbius function for Beurling primes. Int.
+J. Number Theory 16 (2020), no. 5, 1005–1011.
+[38] J. Pintz, On the remainder term of the prime number formula. I. On a problem of Littlewood, Acta Arith.
+36 (1980), 341–365.
+[39] J. Pintz, On the remainder term of the prime number formula. II. On a theorem of Ingham, Acta Arith.
+37 (1980), 209–220.
+[40] J. Pintz, Elementary methods in the theory of L-functions IX. Density theorems Acta Arith. XLIX (1980),
+387-394.
+[41] J. Pintz Distribution of the zeroes of the Riemann zeta function and oscillations of the error term in
+the asymptotic law of the distribution of prime numbers. (Russian) Tr. Mat. Inst. Steklova 296 (2017),
+Analiticheskaya i Kombinatornaya Teoriya Chisel, 207–219. English version published in Proc. Steklov Inst.
+Math. 296 (2017), no. 1, 198–210.
+[42] J. Pintz, Some new density theorems for Dirichlet L-functions. Number theory week 2017,
+Banach Center Publ., 118, 231–244. Polish Acad. Sci. Inst. Math., Warsaw, 2019. See also at
+https://arxiv.org/abs/1804.05552.
+[43] Pintz, J., Oscillatory properties of the remainder term of the prime number formula. in: Studies in pure
+mathematics, 551–560, Birkhäuser, Basel, 1983.
+[44] Pintz, J., On the remainder term of the prime number formula and the zeroes of Riemann’s zeta-function.
+in: Number theory, Noordwijkerhout 1983 (Noordwijkerhout, 1983), 186–197, Lecture Notes in Mathematics,
+1068, Springer, Berlin, 1984.
+[45] Pintz, J., On the mean value of arithmetic error terms, Math. Pann., 28 (NS 2) (2022) no. 1, 58–64.
+[46] D. J. Platt and T. S. Trudgian. The error term in the prime number theorem. Math. Comp. 90 (2021),
+no. 328, 871–881.
+
+THE INGHAM QUESTION ON THE ORDER OF THE PNT IN THE BEURLING CONTEXT
+
+29
+
+[47] Platt, D., Trudgian, T.: The Riemann hypothesis is true up to 3 · 1012 . Bull. Lond. Math. Soc. 53 (3) (2021),
+792–797.
+[48] Sz. Gy. Révész, Irregularities in the distribution of prime ideals. I, Studia Sci. Math. Hungar. 18 (1983),
+57–67.
+[49] Sz. Gy. Révész, Irregularities in the distribution of prime ideals. II, Studia Sci. Math. Hungar. 18 (1983),
+343–369.
+[50] Sz. Gy. Révész, On a theorem of Phragmèn, Complex analysis and applications ’85, (Proceedings of the
+conference held in Varna, Bulgaria, 1985), Publ. House Bulgar. Acad. Sci. Sofia, 1986, p. 556–568.
+[51] Sz. Gy. Révész, Effective oscillation theorems for a general class of real-valued remainder terms, Acta
+Arith. XLIX (1988), 482-505.
+[52] Sz. Gy. Révész, On Beurling’s prime number theorem, Periodica Math. Hungar. 28 (1994), no. 3, 195–210.
+[53] Sz. Gy. Révész, On some extremal problems of Landau. Serdica Math. J. 33 (2007), no. 1, 125–162.
+[54] Sz. Gy. Révész, A Riemann-von Mangoldt-type formula for the distribution of Beurling primes. Math.
+Pann. 27 (N.S. 1) (2021) no. 2, 204–232.
+[55] Sz. Gy. Révész, Density theorems for the Beurling zeta function. Mathematika, 68 (2022), 1045–1072.
+[56] Sz. Gy. Révész, Oscillation of the remainder term in the prime number theorem of Beurling, "caused
+by a given ζ-zero". Int. Math. Res. Notices, https://doi.org/10.1093/imrn/rnac274. See also at
+https://arxiv.org/abs/arXiv:2012.09045.
+[57] Sz. Gy. Révész, The Carlson-type zero-density theorem for the Beurling zeta function. ArXiv preprint no.
+arXiv:2209.01689 see at https://arxiv.org/abs/arXiv:2209.01689.
+[58] R. T. Rockafellar, Convex Analysis, Princeton University Press, Princeton, 1970.
+[59] J.-C. Schlage-Puchta, Oscillations of the error term in the prime number theorem. Acta Math. Acad. Sci.
+Hungar. 156 (2018), no. 2, 303–308.
+[60] J.-C. Schlage-Puchta and J. Vindas, The prime number theorem for Beurling’s generalized numbers.
+New cases, Acta Arith. 133(3) (2012) 293–324.
+[61] E. Schmidt, Über die Anzahl der Primzahlen unter gegebener Grenze, Math. Ann. 57 (1903), 195–204.
+[62] W. Staś, Über eine Anwendung der Methode von Turán auf die Theorie des Restgliedes im Primidealsatz,
+Acta Arith. 5 (1959), 179–195.
+[63] W. Staś, Über die Abschätzung des Restgliedes im Primzahlsatz, Acta Arith. 5 (1959), 427–434.
+[64] W. Staś, Über die Umkehrung eines Satzes von Ingham, Acta Arith. 6 (1961), 435–446.
+[65] W. Staś, K. Wiertelak, Some estimates in the theory of functions represented by Dirichlet’s series, Funct.
+Approx. Comment. Math. 1 (1974), 107–111.
+[66] W. Staś, K. Wiertelak, A comparison of certain remainders connected with prime ideals in ideal classes
+mod f , Funct. Approx. Comment. Math. 4 (1976), 99–107.
+[67] Sós, V. T. and Turán, P., On some new theorems in the theory of diophantine approximations, Acta
+Math. Acad. Sci. Hungar. 6 (1955), 241–255.
+[68] T. S. Trudgian. Updating the error term in the prime number theorem. Ramanujan J., 39(2), 225–234
+(2016).
+[69] P. Turán, On a new method of analysis and its applications, Wiley-Interscience, New York, 1984.
+[70] P. Turán, On the remainder term of the prime-number formula, I, Acta Math. Acad. Sci. Hungar. 1 (1950),
+48–63.
+[71] P. Turán, On the remainder-term of the prime number formula. II, Acta Math. Acad. Sci. Hungar. 1
+(1950), 155–160.
+[72] la Vallée Poussin, Ch.-J. de , Sur la function ζ(s) de Riemann ... , Memoaire couronnés ... de Belgique,
+59 No 1 (1899), 1–74.
+[73] J. Vindas, Chebyshev estimates for Beurling’s generalized prime numbers. I, J. Number Theory 132 (2012)
+2371–2376.
+[74] Vindas, J., Chebyshev upper estimates for Beurling’s generalized prime numbers. Bull. Belg. Math. Soc.
+Simon Stevin 20 (2013), no. 1, 175–180.
+[75] Zhang, Wen-Bin, Exact Wiener-Ikehara theorems. Acta Arith. 187 (2019), no. 4, 357–380.
+[76] Zhang, Wen-Bin, Extensions of Beurling’s prime number theorem. Int. J. Number Theory 11 (2015), no.
+5, 1589–1616.
+[77] Zhang, Wen-Bin, A proof of a conjecture of Bateman and Diamond on Beurling generalized primes.
+Monatsh. Math. 176 (2015), no. 4, 637–656.
+[78] Zhang, Wen-Bin, Beurling primes with RH and Beurling primes with large oscillation. Math. Ann. 337
+(2007), no. 3, 671–704.
+[79] Wen-Bin Zhang, Chebyshev type estimates for Beurling generalized prime numbers. II. Trans. Amer. Math.
+Soc. 337 (1993), no. 2, 651–675.
+
+

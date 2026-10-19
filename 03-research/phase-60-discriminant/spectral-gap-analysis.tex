@@ -12,11 +12,11 @@
 \newcommand{\RETRACT}{\textcolor{orange!85!black}{\textbf{[corrige]}}}
 
 \theoremstyle{plain}
-\newtheorem{theorem}{Teorema}
-\newtheorem{lemma}{Lema}
-\newtheorem{proposition}{Proposici\'on}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
 \theoremstyle{definition}
-\newtheorem{remark}{Observaci\'on}
+\newtheorem{remark}{Remark}
 
 \newcommand{\xih}{\widehat{\xi}}
 \newcommand{\R}{\mathbb{R}}
@@ -26,182 +26,184 @@
 \newcommand{\El}{E_\lambda}
 \newcommand{\PW}{\mathrm{PW}}
 
-\title{\textbf{Atacando el hueco espectral $[\lambda,\lambda^2]$:\\
-por qu\'e la restricci\'on exacta desinfla la desigualdad,\\
-y d\'onde queda el frente real del Eslab\'on 2}}
-\author{Programa \texttt{riemann-program} --- documento de trabajo (autocorrecci\'on)}
+\title{\textbf{Attacking the spectral gap $[\lambda,\lambda^2]$:\\
+why the exact restriction deflates the inequality,\\
+and where the real front of Link 2 lies}}
+\author{\texttt{riemann-program} --- working document (self-correction)}
 \date{\today}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Al intentar acotar la cola combinada $\mathcal W_\lambda$ explotando el hueco
-espectral $[\lambda,\lambda^2]$ (Prop.\ 4.2 de \texttt{weil-remainder-attack}),
-choqu\'e con un hecho \emph{ya probado} del programa: la \textbf{restricci\'on
-exacta} $A_\lambda=A_\infty|_{\El}$. Su consecuencia es que la cola de primos
-$>\lambda^2$ contribuye \emph{exactamente cero} a la forma sobre funciones
-band--limited; luego la desigualdad objetivo es \textbf{vac\'ua} sobre $\El$
-(\S\ref{sec:vacuo}). Esto \RETRACT{} la Prop.\ 4.2 y reubica el frente: el piso del
-Eslab\'on 2 no es una cola de s\'imbolo (invisible a la forma) sino el error de
-\textbf{exhausti\'on de subespacio} del operador de Dirac $D_{\log}$, gobernado por
-aproximaci\'on en el espacio de de Branges $H(\El)$ (\S\ref{sec:real}). El obst\'aculo
-de circularidad sobrevive, pero en su forma cl\'asica conocida: la persistencia de la
-positividad de Weil $A_\infty\ge0$, equivalente a que $\varepsilon_0(\lambda)$ no se
-hunda. El \'unico residuo no circular es una cota inferior PNT de
-$\varepsilon_0(\lambda)$.
+When attempting to bound the combined tail $\mathcal W_\lambda$ by exploiting the
+spectral gap $[\lambda,\lambda^2]$ (Prop.\ 4.2 of \texttt{weil-remainder-attack}),
+I ran into a fact \emph{already proved} by the program: the \textbf{exact
+restriction} $A_\lambda=A_\infty|_{\El}$. Its consequence is that the tail of
+primes $>\lambda^2$ contributes \emph{exactly zero} to the form on band-limited
+functions; hence the target inequality is \textbf{vacuous} on $\El$
+(\S\ref{sec:vacuo}). This \RETRACT{}s Prop.\ 4.2 and relocates the front: the floor
+of Link 2 is not a symbol tail (invisible to the form) but the \textbf{subspace
+exhaustion} error of the Dirac operator $D_{\log}$, governed by approximation in
+the de Branges space $H(\El)$ (\S\ref{sec:real}). The circularity obstacle
+survives, but in its known classical form: the persistence of Weil positivity
+$A_\infty\ge0$, equivalent to $\varepsilon_0(\lambda)$ not sinking. The only
+non-circular residue is a PNT lower bound on $\varepsilon_0(\lambda)$.
 \end{abstract}
 
 \tableofcontents
 
 % =====================================================================
-\section{El hecho que lo cambia: restricci\'on exacta}\label{sec:vacuo}
+\section{The fact that changes everything: exact restriction}\label{sec:vacuo}
 % =====================================================================
 
-Sea $\El=\PW_{L/2}$, $L=2\log\lambda$, el espacio de funciones band--limited de tipo
-$L/2$. La forma de Weil truncada admite la reducci\'on de Fourier \PR
+Let $\El=\PW_{L/2}$, $L=2\log\lambda$, be the space of band-limited functions of
+type $L/2$. The truncated Weil form admits the Fourier reduction \PR
 \[
   A_\lambda(g,g)=\frac1{2\pi}\int_\R|\widehat g(t)|^2\,W_\lambda(t)\,dt,
   \qquad
   W_\lambda(t)=2\theta'(t)-2\Real\!\Bigl[\sum_{n\le\lambda^2}\tfrac{\Lam(n)}{n^{1/2+it}}\Bigr].
 \]
 
-\begin{lemma}[Restricci\'on exacta, hecho \PR\ del programa]\label{lem:exact}
-Para todo $g\in\El$ y todo primo (potencia) $n>\lambda^2$, la contribuci\'on del
-t\'ermino $n$ a $A_\lambda(g,g)$ es \emph{exactamente nula}. En consecuencia
+\begin{lemma}[Exact restriction, \PR\ fact of the program]\label{lem:exact}
+For every $g\in\El$ and every prime (power) $n>\lambda^2$, the contribution of
+term $n$ to $A_\lambda(g,g)$ is \emph{exactly zero}. Consequently
 \[
-  A_\lambda(g,g)=A_\infty(g,g)\qquad\text{para todo }g\in\El,
+  A_\lambda(g,g)=A_\infty(g,g)\qquad\text{for all }g\in\El,
 \]
-i.e.\ $A_\lambda=A_\infty|_{\El}$: la truncaci\'on a primos $\le\lambda^2$ \emph{no es
-una aproximaci\'on}, es la restricci\'on exacta de la forma completa al subespacio.
+i.e.\ $A_\lambda=A_\infty|_{\El}$: truncation to primes $\le\lambda^2$ \emph{is not
+an approximation}, it is the exact restriction of the full form to the subspace.
 \end{lemma}
-\begin{proof}[Raz\'on]
-$\int|\widehat g(t)|^2\cos(t\log n)\,dt$ es la autocorrelaci\'on $R_g(\log n)$, y
-para $g$ de tipo $L/2$ el soporte de $R_g$ es $[-L,L]=[-2\log\lambda,2\log\lambda]$.
-Como $\log n>\log\lambda^2=L$ para $n>\lambda^2$, se tiene $R_g(\log n)=0$. \qed
+\begin{proof}[Reason]
+$\int|\widehat g(t)|^2\cos(t\log n)\,dt$ is the autocorrelation $R_g(\log n)$, and
+for $g$ of type $L/2$ the support of $R_g$ is $[-L,L]=[-2\log\lambda,2\log\lambda]$.
+Since $\log n>\log\lambda^2=L$ for $n>\lambda^2$, we have $R_g(\log n)=0$. \qed
 \end{proof}
 
-\begin{proposition}[La desigualdad objetivo es vac\'ua \RETRACT]\label{prop:vacuo}
-La cantidad de Prop.\ 4.2 de \texttt{weil-remainder-attack},
+\begin{proposition}[The target inequality is vacuous \RETRACT]\label{prop:vacuo}
+The quantity from Prop.\ 4.2 of \texttt{weil-remainder-attack},
 \[
   \frac1{2\pi}\int|\widehat g_n(t)|^2\,\mathcal W_\lambda(t)\,dt
   \;=\;\frac1{2\pi}\int|\widehat g_n(t)|^2\,\bigl(W_\infty-W_\lambda\bigr)\,dt,
 \]
-es \textbf{id\'enticamente cero} para $g_n\in\El$, por el Lema \ref{lem:exact}. Luego
-no captura el piso, y el ``hueco espectral $[\lambda,\lambda^2]$ como sala para pelear
-contra la cola'' \textbf{no procede}: no hay cola que pelear --- la cola es invisible
-a la forma.
+is \textbf{identically zero} for $g_n\in\El$, by Lemma \ref{lem:exact}. Hence it
+does not capture the floor, and the ``spectral gap $[\lambda,\lambda^2]$ as the
+room to fight the tail'' \textbf{does not go through}: there is no tail to fight ---
+the tail is invisible to the form.
 \end{proposition}
 
-\begin{remark}[De d\'onde ven\'ia el error]
-\texttt{weil-remainder-attack} mezcl\'o dos operadores distintos: el
-\emph{desplazamiento de ceros} (espectro del Dirac $D_{\log}$) lo acot\'o por una
-\emph{cola de la forma} $\mathcal W_\lambda$. Pero por restricci\'on exacta esa cola
-es $0$ sobre $\El$. El Teorema de circularidad (resto $R_\lambda$ RH--equivalente)
-sigue siendo \emph{cierto} como enunciado sobre la \emph{truncaci\'on de s\'imbolo}
-$-\zeta'/\zeta\mapsto\sum_{n\le\lambda^2}$, pero \textbf{esa ruta no es la que ejecuta
-el modelo}: el modelo restringe el subespacio, no trunca el s\'imbolo. El muro $R_\lambda$
-describe un camino que CCM no toma.
+\begin{remark}[Where the error came from]
+\texttt{weil-remainder-attack} conflated two different operators: it bounded the
+\emph{shift of zeros} (spectrum of the Dirac $D_{\log}$) by a \emph{tail of the
+form} $\mathcal W_\lambda$. But by exact restriction that tail is $0$ on $\El$. The
+circularity theorem (remainder $R_\lambda$ RH-equivalent) remains \emph{true} as a
+statement about the \emph{symbol truncation}
+$-\zeta'/\zeta\mapsto\sum_{n\le\lambda^2}$, but \textbf{that route is not the one
+the model executes}: the model restricts the subspace, it does not truncate the
+symbol. The wall $R_\lambda$ describes a path CCM does not take.
 \end{remark}
 
 % =====================================================================
-\section{El frente real: exhausti\'on de subespacio}\label{sec:real}
+\section{The real front: subspace exhaustion}\label{sec:real}
 % =====================================================================
 
-Hay \emph{dos} objetos, y conviene no confundirlos:
+There are \emph{two} objects, and they should not be confused:
 \begin{itemize}[leftmargin=1.5em]
-\item la \textbf{forma} $A_\lambda=A_\infty|_{\El}$ (positividad $\Rightarrow$
-Eslab\'on 1);
-\item el \textbf{Dirac} $D_{\log}^{(\lambda)}$, cuyo espectro son los ceros de
-$\xih_\lambda$ (Eslab\'on 2).
+\item the \textbf{form} $A_\lambda=A_\infty|_{\El}$ (positivity $\Rightarrow$
+Link 1);
+\item the \textbf{Dirac} $D_{\log}^{(\lambda)}$, whose spectrum is the zeros of
+$\xih_\lambda$ (Link 2).
 \end{itemize}
 
-\begin{proposition}[Reformulaci\'on correcta del Eslab\'on 2]\label{prop:real}
-Como $A_\lambda=A_\infty|_{\El}$ y $\El\uparrow$ (uni\'on densa), la convergencia
-$\xih_\lambda\to\Xi$ es la \textbf{exhausti\'on de subespacio} de la forma fija
-$A_\infty$: el espectro del Dirac restringido converge al de $A_\infty$. El piso
-$\mathrm{piso}_\lambda(n)$ es el error de aproximar el cero $\gamma_n$ por el mejor
-elemento band--limited de $H(\El)$ (espacio de de Branges), gobernado por la tasa
-$e^{-c\lambda^2}$ medida num\'ericamente (capa de banda).
+\begin{proposition}[Correct reformulation of Link 2]\label{prop:real}
+Since $A_\lambda=A_\infty|_{\El}$ and $\El\uparrow$ (dense union), the convergence
+$\xih_\lambda\to\Xi$ is the \textbf{subspace exhaustion} of the fixed form
+$A_\infty$: the spectrum of the restricted Dirac converges to that of $A_\infty$.
+The floor $\mathrm{floor}_\lambda(n)$ is the error of approximating the zero
+$\gamma_n$ by the best band-limited element of $H(\El)$ (de Branges space),
+governed by the rate $e^{-c\lambda^2}$ measured numerically (band layer).
 \end{proposition}
 
-\noindent Esto \emph{explica} el hallazgo num\'erico que tanto cost\'o interpretar:
-la entrada de primos no aportaba salto porque \textbf{no hay truncaci\'on de
-s\'imbolo} --- s\'olo crece el subespacio. Todo era banda, como mostraban los datos.
+\noindent This \emph{explains} the numerical finding that was so hard to
+interpret: the entry of primes produced no jump because \textbf{there is no
+symbol truncation} --- only the subspace grows. It was all band, as the data
+showed.
 
-\subsection{D\'onde reaparece la circularidad (forma cl\'asica)}
+\subsection{Where circularity reappears (classical form)}
 
-La exhausti\'on $A_\infty|_{\El}\to A_\infty$ converger\'ia gratuitamente
-(convergencia mon\'otona de formas) \emph{si} $A_\infty$ fuese una forma semiacotada
-$\ge0$. Pero
+The exhaustion $A_\infty|_{\El}\to A_\infty$ would converge for free (monotone
+convergence of forms) \emph{if} $A_\infty$ were a semi-bounded form $\ge0$. But
 \[
   A_\infty(g,g)\ge0\ \ \forall g\quad\Longleftrightarrow\quad\text{RH}
-  \qquad(\text{criterio de positividad de Weil}).
+  \qquad(\text{Weil positivity criterion}).
 \]
-\'Esta es la circularidad, ahora en su forma genuina: el l\'imite es positivo
-\emph{sii} RH. Lo que el programa tiene \PR\ es la positividad \emph{finita}
+This is the circularity, now in its genuine form: the limit is positive \emph{iff}
+RH. What the program has \PR\ is the \emph{finite} positivity
 \[
-  A_\lambda(g,g)\;\ge\;\varepsilon_0(\lambda)\,\|g\|^2\;>\;0\qquad\text{sobre }\El,
+  A_\lambda(g,g)\;\ge\;\varepsilon_0(\lambda)\,\|g\|^2\;>\;0\qquad\text{on }\El,
 \]
-con $\varepsilon_0(\lambda)\sim C_0/\lambda^2\to0$. La pregunta RH es si el margen
-\textbf{se hunde a cero por arriba} (RH: $A_\infty\ge0$) o \textbf{cruza a negativo}
-(un cero fuera de l\'inea, al ensancharse la banda lo suficiente para resolverlo).
+with $\varepsilon_0(\lambda)\sim C_0/\lambda^2\to0$. The RH question is whether the
+margin \textbf{sinks to zero from above} (RH: $A_\infty\ge0$) or \textbf{crosses
+into negative} (an off-line zero, once the band widens enough to resolve it).
 
-\begin{theorem}[Reformulaci\'on limpia, RH--equivalente]\label{thm:clean}
-RH $\Longleftrightarrow$ los m\'argenes finitos demostrados $\varepsilon_0(\lambda)>0$
-permanecen $\ge0$ cuando $\lambda\to\infty$ (ning\'un autovalor de $A_\infty|_{\El}$
-cruza a negativo). Equivalentemente, RH $\Longleftrightarrow$ no aparece un autovalor
-negativo de $A_\infty$ en ninguna banda finita.
+\begin{theorem}[Clean, RH-equivalent reformulation]\label{thm:clean}
+RH $\Longleftrightarrow$ the proved finite margins $\varepsilon_0(\lambda)>0$
+remain $\ge0$ as $\lambda\to\infty$ (no eigenvalue of $A_\infty|_{\El}$ crosses
+into negative). Equivalently, RH $\Longleftrightarrow$ no negative eigenvalue of
+$A_\infty$ appears in any finite band.
 \end{theorem}
 
 % =====================================================================
-\section{El \'unico residuo no circular}\label{sec:residue}
+\section{The only non-circular residue}\label{sec:residue}
 % =====================================================================
 
-El Teorema \ref{thm:clean} es RH--equivalente y por tanto no es, en s\'i, un puente.
-El \'unico resquicio no circular identificado es:
+Theorem \ref{thm:clean} is RH-equivalent and therefore is not, in itself, a
+bridge. The only non-circular opening identified is:
 
 \begin{quote}\itshape
-\GAP\ Probar una cota inferior $\varepsilon_0(\lambda)\ge c/\lambda^2$ (o cualquier
-$\varepsilon_0(\lambda)>0$ que no se anule prematuramente) usando \emph{s\'olo} el
-lado primo --- momentos $M_0,M_2$, coeficiente cin\'etico $c=-\psi''(\tfrac14)/8$,
-distribuci\'on de primos (PNT/regiones libres de ceros cl\'asicas) --- sin la
-posici\'on de los ceros.
+\GAP\ Prove a lower bound $\varepsilon_0(\lambda)\ge c/\lambda^2$ (or any
+$\varepsilon_0(\lambda)>0$ that does not vanish prematurely) using \emph{only} the
+prime side --- moments $M_0,M_2$, kinetic coefficient $c=-\psi''(\tfrac14)/8$,
+prime distribution (PNT/classical zero-free regions) --- without the position of
+the zeros.
 \end{quote}
 
-\noindent Es el Objetivo B con su \GAP\ ya conocido (la asint\'otica extremal de de
-Branges del producto can\'onico truncado a densidad cr\'itica). La pregunta central:
+\noindent This is Objective B with its already-known \GAP\ (the de Branges
+extremal asymptotics of the canonical product truncated at critical density). The
+central question:
 \[
-  \textbf{¿la cota inferior de }\varepsilon_0\textbf{ se sigue de la DENSIDAD (PNT)
-  o necesita la POSICI\'ON (RH)?}
+  \textbf{does the lower bound of }\varepsilon_0\textbf{ follow from DENSITY (PNT)
+  or does it need POSITION (RH)?}
 \]
-Si basta densidad $\Rightarrow$ puente no circular. Si necesita posici\'on $\Rightarrow$
-circular. Los t\'erminos singulares cerca del horizonte $T^*\sim2\pi\lambda^2$
-(espaciado $\sim2\pi/L$) son el lugar exacto donde se decide --- y donde de
-Branges/Connes deben mirar.
+If density suffices $\Rightarrow$ non-circular bridge. If it needs position
+$\Rightarrow$ circular. The singular terms near the horizon $T^*\sim2\pi\lambda^2$
+(spacing $\sim2\pi/L$) are exactly where this is decided --- and where de
+Branges/Connes should look.
 
 % =====================================================================
-\section{Veredicto de este bloque}\label{sec:verdict}
+\section{Verdict of this block}\label{sec:verdict}
 % =====================================================================
 
 \begin{enumerate}[leftmargin=1.6em]
-\item \RETRACT\ El ataque ``hueco espectral $[\lambda,\lambda^2]$ contra la cola'' \textbf{no
-procede}: por restricci\'on exacta (Lema \ref{lem:exact}) la cola es invisible a la
-forma y la desigualdad objetivo es vac\'ua (Prop.\ \ref{prop:vacuo}). Autocorrecci\'on
-de \texttt{weil-remainder-attack} Prop.\ 4.2.
-\item \PR\ El Teorema de circularidad del resto $R_\lambda$ sigue v\'alido, pero
-describe la \emph{truncaci\'on de s\'imbolo}, que \emph{no} es el mecanismo del modelo.
-\item \PR\ (reubicaci\'on) El Eslab\'on 2 es exhausti\'on de subespacio de
-$A_\infty$ (Prop.\ \ref{prop:real}); su contenido RH es la persistencia de la
-positividad de Weil $A_\infty\ge0$ (Teorema \ref{thm:clean}), unificando Objetivos
-A (positividad) y B (escala de $\varepsilon_0$).
-\item \OP\ Residuo no circular \'unico: cota inferior PNT de $\varepsilon_0(\lambda)$
-(\S\ref{sec:residue}). Frente leg\'itimo: ¿densidad o posici\'on?
+\item \RETRACT\ The attack ``spectral gap $[\lambda,\lambda^2]$ against the tail''
+\textbf{does not go through}: by exact restriction (Lemma \ref{lem:exact}) the
+tail is invisible to the form and the target inequality is vacuous (Prop.\
+\ref{prop:vacuo}). Self-correction of \texttt{weil-remainder-attack} Prop.\ 4.2.
+\item \PR\ The circularity theorem for the remainder $R_\lambda$ remains valid,
+but it describes the \emph{symbol truncation}, which is \emph{not} the model's
+mechanism.
+\item \PR\ (relocation) Link 2 is subspace exhaustion of $A_\infty$ (Prop.\
+\ref{prop:real}); its RH content is the persistence of Weil positivity
+$A_\infty\ge0$ (Theorem \ref{thm:clean}), unifying Objectives A (positivity) and B
+(scale of $\varepsilon_0$).
+\item \OP\ Only non-circular residue: PNT lower bound of $\varepsilon_0(\lambda)$
+(\S\ref{sec:residue}). Legitimate front: density or position?
 \end{enumerate}
 
-\noindent\emph{Honestidad:} este bloque es mayormente \emph{correctivo}. No produjo una
-cota; produjo (a)~la refutaci\'on de un ataque que parec\'ia prometedor pero era vac\'uo
-por un hecho ya probado, y (b)~la reubicaci\'on del frente al \'unico objeto no
-circular real: la cota inferior de $\varepsilon_0$ desde la densidad de primos. Es
-menos de lo que esper\'abamos, pero impide gastar esfuerzo contra una cola fantasma.
+\noindent\emph{Honesty:} this block is mostly \emph{corrective}. It did not
+produce a bound; it produced (a)~the refutation of an attack that looked
+promising but was vacuous due to an already-proved fact, and (b)~the relocation
+of the front to the only real non-circular object: the lower bound of
+$\varepsilon_0$ from prime density. It is less than we hoped for, but it prevents
+wasting effort against a phantom tail.
 \end{document}

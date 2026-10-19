@@ -1,6 +1,5 @@
 # E73.129 - Characteristic CSV Target
 
-Date: 2026-07-12.
 
 E73.124--E73.128 narrow the CSV problem:
 

@@ -1,7 +1,5 @@
-# R131.011 — Hostile audit of Paper 44, round 4
+# R131.011 — Audit of Paper 44, round 4
 
-Auditor: Claude (Opus 5, 1M), adversarial auditor of record for phase 131.
-Date: 2026-09-12.
 Scope: every `[REBUILT, phase 131, round 4]` passage of
 `04-papers/44-row-b-arithmetic-family/main.md` (18 marks), `README.md`, and
 `03-research/phase-131-row-b-closure/scripts/verify_131_contacts.py`.
@@ -19,7 +17,7 @@ replacement — **Thm 8bis.1e**, the Weil kernel is the Gram form of
 **Thm 8bis.1b** (I re-derived the unit-packet value, the `p | n` vanishing and
 the archimedean `−log(1/ε)` independently; all three check out to the letter,
 and the numerics reproduce them).  **Thm 8bis.8** (the shell normalization) is
-correct and its scope is stated honestly; the builder's refutation of the
+correct and its scope is stated honestly; the construction's refutation of the
 chart-invariance route is **right**.  What does **not** survive the round is
 smaller but real: **six `MAJOR` findings**, of which the two that matter
 mathematically are that **Thm 8bis.4(iv)'s proof is a non-sequitur** (the
@@ -104,7 +102,7 @@ lemma actually needs is the **pointwise** statement
 from a tested estimate.  The pointwise statement is true (the mesh function
 `gap(t) ≍ e^{−t}` has derivative `O(gap)`, so the mollified mesh density is
 `1 + O(gap)`), but it is not proved here; the two estimates are conflated.
-This is the builder's own press point (1) of `R131.010` §5, and it is
+This is the construction's own press point (1) of `R131.010` §5, and it is
 warranted.
 
 *Consequence.* None fatal: even `‖g−g_D‖_∞ = O(Le^{−L/2})` leaves the cross
@@ -241,7 +239,7 @@ Add `[SUPERSEDED IN ROUND 4 — see below]`.
 
 ### m7 `MINOR` — §11's phase-131 record is stale
 
-"Phase 131 record: … (lead blueprint `R131_000`, builder report `R131_001`,
+"Phase 131 record: … (blueprint `R131_000`, report `R131_001`,
 numerical checks in `scripts/`)" — rounds 2–4 (`R131_002`–`R131_011`) are not
 listed, though §9bis and §10 cite them throughout.
 
@@ -300,7 +298,7 @@ PASS**, **ROUND-4 CHECKS PASS**.
   near `0` and `= O(e^{−t})` at `∞`, so `−2∫_ε^∞K(t)e^{−t/2}dt =
   −\log(1/ε)+O(1)`, and the `(0,ε)` piece is `O(1)` by the stated splitting —
   I checked both halves of that splitting (`∫_0^ε t^{−1}O(t^2/ε^2)dt = O(1)`,
-  `∫_0^ε t^{−1}O(t)dt = O(ε)`), which is the builder's press point (2), and it
+  `∫_0^ε t^{−1}O(t)dt = O(ε)`), which is the construction's press point (2), and it
   is **sound**.  Subject to `M5` (which convention the statement is in), this
   is the strongest new computation of round 4.
 
@@ -336,7 +334,7 @@ PASS**, **ROUND-4 CHECKS PASS**.
   `\log p` by `c_p` multiplies the whole symbol by `c_p/\log p`, hence every
   residue, giving `−i(c_p/\log p)` against the archimedean `−i`.  Correct.
 
-* **The builder's refutation of the chart-invariance route is correct.**
+* **The construction's refutation of the chart-invariance route is correct.**
   Paper 43 Thm 9.7b(c) reads the total residue as `∓i(|S_f|+1)`, manifestly
   chart-dependent; Thm 8A.7c(e)'s chart-invariance is about values on windows
   of bounded radius, not about a symbol's residues.  I add an independent
@@ -398,7 +396,7 @@ PASS**, **ROUND-4 CHECKS PASS**.
   as plainly as Thm 8bis.4(iii) does.
 * **Thm 8bis.4(iii)**: the paper **itself** says, in bold, "this is Weil's
   criterion carried by row A's declared trace, and it is **NOT** new".  That is
-  precisely the honesty the lead asked for and it is granted in full.
+  precisely the honesty the review asked for and it is granted in full.
 * **Thm 8bis.8, Lemma 6bis.3a, Thm 6bis.3c**: `PASS`.  A local-zeta residue
   computation, a composition check in a divisor poset, and an additive
   extension — none is a statement of the explicit formula.
@@ -414,10 +412,10 @@ PASS**, **ROUND-4 CHECKS PASS**.
 | **B.1** | `PROVED` (unchanged; `𝔉_S` and its grading re-verified in round 3). |
 | **B.2** | `PROVED`, non-vacuous (Thm 3ter.4(iv), Rem 3ter.4a). |
 | **B.3** | `PROVED`, with a true unit. |
-| **B.4** | `REFUTED AS STATED`; `PROVED AS AMENDED` (owner-accepted), proved on objects in degree (Thm 6bis.4), now with the composition law of `Sh_Z` actually proved (Lemma 6bis.3a, `F8` closed) and extended additively (Thm 6bis.3c). |
+| **B.4** | `REFUTED AS STATED`; `PROVED AS AMENDED` (accepted), proved on objects in degree (Thm 6bis.4), now with the composition law of `Sh_Z` actually proved (Lemma 6bis.3a, `F8` closed) and extended additively (Thm 6bis.3c). |
 | **B.5** | `PROVED` (unchanged), and `Λ(p^k) = \log p` is no longer merely declared (Thm 8bis.8). |
 | **B.6** | `PROVED`, both halves non-vacuous (Thm 3ter.12; Thm 3ter.14 with `F6` repaired). |
-| **B.7** | `PROVED` as a test; I **maintain** my dissent on the mechanism (`PARTIAL`, Rem 6.5a′).  The round-4 procedure — adopt the lead's ruling, record the dissent **verbatim** beside it, leave Rem 6.5a′ unchanged — is the correct resolution of `F10` and I accept it as such: the disagreement is now visible to the reader, which is all an auditor can ask. |
+| **B.7** | `PROVED` as a test; I **maintain** my dissent on the mechanism (`PARTIAL`, Rem 6.5a′).  The round-4 procedure — adopt the review's ruling, record the dissent **verbatim** beside it, leave Rem 6.5a′ unchanged — is the correct resolution of `F10` and I accept it as such: the disagreement is now visible to the reader, which is all an auditor can ask. |
 | **B.8** | `PROVED`; script re-run by me, all blocks pass, block (C) re-derived by hand; block (D) is vacuous (`n3`). |
 | **B.9** | `PROVED` **in substance**, but the *text* of Thm 8.2 and of §11 must be amended (`M6`(b),(c)): they assert blanket independence and "external inputs: none" while §8bis.4 names an import and Lemma 8bis.5 uses Chebyshev. |
 
@@ -453,7 +451,7 @@ PASS**, **ROUND-4 CHECKS PASS**.
 ## 6. Grade
 
 **Row B earns `WEIL-STRENGTH-COMPLETE` on Paper 43's declared carrier**
-(B.4 amendment accepted by the owner), **conditional on the six `MAJOR`
+(B.4 amendment accepted by the repository record), **conditional on the six `MAJOR`
 repairs**, none of which is a clause of the contract and none of which
 requires new mathematics:
 

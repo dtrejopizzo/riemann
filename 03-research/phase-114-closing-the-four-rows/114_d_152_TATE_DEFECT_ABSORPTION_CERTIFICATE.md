@@ -122,7 +122,7 @@ If \(u=c_-u_-+c_+u_+\), then
 Combining (1.8)--(2.2) gives the deliberately coarse but directed estimate
 
 \[
- \boxed{\|A_Tu\|\le C_{170}\|u\|,qquad C_{170}<10^5.}               \tag{2.3}
+ \boxed{\|A_Tu\|\le C_{170}\|u\|,\qquad C_{170}<10^5.}               \tag{2.3}
 \]
 
 ## 3. Absorption in the complement
@@ -130,8 +130,8 @@ Combining (1.8)--(2.2) gives the deliberately coarse but directed estimate
 Write \(y=u+q\) as in D.151.  The directed estimates are
 
 \[
- \|u\|\le10^{-424}\|q\|,qquad
- \langle A_Tq,q\rangle>0.219\|q\|^2,qquad
+ \|u\|\le10^{-424}\|q\|,\qquad
+ \langle A_Tq,q\rangle>0.219\|q\|^2,\qquad
  A_T\ge-8.315I.                                        \tag{3.1}
 \]
 

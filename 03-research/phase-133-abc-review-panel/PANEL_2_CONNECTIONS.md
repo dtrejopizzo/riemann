@@ -1,9 +1,9 @@
 # PANEL 2 — Consistency and connections between Papers 43, 44, 45
 
-Reviewer 2 of the three-member independent review panel (phase 133).
+Panel 2 of the three-part independent review (phase 133).
 Mandate: cross-paper citations in both directions, shared conventions,
 contradictions and quantifier mismatches, respect for the withdrawal ledgers,
-and the row-D handoff. Date: 2026-09-12. Sources read first: `R130.005`,
+and the row-D handoff. Sources read first: `R130.005`,
 `R131.019`, `R132.007`; then the three `main.md` files in full at the cited
 sections. **No paper was edited.**
 

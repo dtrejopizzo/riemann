@@ -1,6 +1,6 @@
 # E91 — Cesàro Convergence Curve of `b_bulk(λ)` (Phase 62, C1 numerical frame)
 
-**Date:** 2026-06-26 · dps=40 · dense grid λ = 7,8,…,22 (integers) · ζ and DH falsador.
+dps=40 · dense grid λ = 7,8,…,22 (integers) · ζ and DH falsador.
 
 ## Question
 

@@ -1,6 +1,6 @@
 # E78.155 - Escaped-eigenvalue trajectories: corrects E78.154
 
-**Run:** 2026-07-21.
+**Run:**
 **Scope:** IDENT / point 6. Corrects the E78.154 "single stable avatar" reading.
 **Class:** AUTOPSIA (retraction + corrected structure).
 

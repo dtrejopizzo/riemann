@@ -1,6 +1,5 @@
 # E73.280 - Coupled pairing graph
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

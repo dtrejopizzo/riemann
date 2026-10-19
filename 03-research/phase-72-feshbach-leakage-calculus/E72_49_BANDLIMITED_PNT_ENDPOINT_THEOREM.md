@@ -1,7 +1,6 @@
 # E72.49 -- Bandlimited PNT endpoint theorem for scalar discrepancy
 
-**Date:** 2026-07-08.
-**Role:** test whether finite bandwidth lets classical PNT prove scalar endpoint discrepancy
+**Purpose:** test whether finite bandwidth lets classical PNT prove scalar endpoint discrepancy
 cancellation. The answer is negative without an additional half-power channel gain.
 
 ## 0. Key observation

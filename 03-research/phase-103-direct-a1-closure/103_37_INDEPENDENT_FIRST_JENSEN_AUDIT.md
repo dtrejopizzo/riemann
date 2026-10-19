@@ -62,7 +62,7 @@ With \(a=m^2-1\ge3\), the bounds in `103_34` give
 \]
 Every numerical constant checks:
 \[
- m^4=(a+1)^2\le{16\over9}a^2,qquad18\cdot{16\over9}=32,       \tag{10}
+ m^4=(a+1)^2\le{16\over9}a^2,\qquad18\cdot{16\over9}=32,       \tag{10}
 \]
 and (x^2e^{-ax}) decreases for \(x\ge\pi,a\ge3\).  Therefore
 \[

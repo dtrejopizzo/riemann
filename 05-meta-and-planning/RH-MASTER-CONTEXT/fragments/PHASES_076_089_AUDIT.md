@@ -1,329 +1,240 @@
-# Auditoría de las fases 76–89: LP, IDENT y el supuesto discriminante
+# Audit of phases 76–89: LP, IDENT and the alleged discriminant
 
-## Dictamen ejecutivo
+## Executive verdict
 
-La cadena examinada no demuestra `Omega7` ni RH. Su parte formal útil separa
-identidades finitas, equivalencias de formulación y reducciones de los
-teoremas que faltarían. La parte que pretende distinguir el modelo zeta de
-controles con divisor fuera de línea sigue siendo empírica y no se ha
-conectado por una implicación demostrada con `RDI-ANCHOR`/`IDENT`.
+The examined chain does not prove `Omega7` nor RH. Its useful formal part separates finite identities, formulation equivalences and reductions from the theorems still missing. The part that aims to distinguish the zeta model from controls with an off-line divisor remains empirical and has not been connected by a proved implication to `RDI-ANCHOR`/`IDENT`.
 
-El diagnóstico más importante es doble.
+The most important diagnosis is twofold.
 
-1. `LP` no está cerrado. Es correcto retirar la formulación antigua
-   `ker_l2(H_L-mu_L)=0`: la realización con resolvente compacto da un núcleo
-   no nulo en el autovalor inferior. El reemplazo válido es divergencia de la
-   energía de traza móvil `BTG-DIV` y contracción de discos de Weyl. Pero esa
-   divergencia en el verdadero `mu_L` permanece sin prueba.
-2. No está demostrado que el hito llamado `DISCRIMINANT` sea el único paso que
-   puede excluir un cero fuera de línea. Es el único separador aritmético
-   *propuesto* dentro del corte de fase 80, pero el mismo corte conserva
-   `RDI-CONV`, `BTG-DIV`, completitud mu-libre, `RDP-SHELL` y dos continuidades
-   direccionales como obligaciones independientes. Además, el documento de
-   contrato de fase 80 sólo justifica «al menos un» paso de fuerza-RH, no
-   «exactamente uno».
+1. `LP` is not closed. It is correct to withdraw the old formulation `ker_l2(H_L-mu_L)=0`: the compact-resolvent realization gives a nonzero kernel at the lower eigenvalue. The valid replacement is divergence of the moving-trace energy `BTG-DIV` and Weyl-disk contraction. But that divergence at the true `mu_L` remains unproved.
+2. It is not proved that the milestone called `DISCRIMINANT` is the only step that can exclude an off-line zero. It is the only *proposed* arithmetic separator within the phase-80 cut, but the same cut retains `RDI-CONV`, `BTG-DIV`, mu-free completeness, `RDP-SHELL`, and two directional continuities as independent obligations. Moreover, the phase-80 contract document only justifies "at least one" RH-strength step, not "exactly one".
 
-La etiqueta correcta para el resultado terminal es:
+The correct label for the terminal result is:
 
 ```text
-Omega7 = EQUIVALENTE-A-RH.
-LP + IDENT + RDP-SHELL + PROLATE + WEIL-TAIL => Omega7 = CONDICIONAL.
-IDENT / RDI-ANCHOR = INCOMPLETO; su discriminante finito = NUMÉRICO/CONJETURAL.
+Omega7 = EQUIVALENT-TO-RH.
+LP + IDENT + RDP-SHELL + PROLATE + WEIL-TAIL => Omega7 = CONDITIONAL.
+IDENT / RDI-ANCHOR = INCOMPLETE; its finite discriminant = NUMERICAL/CONJECTURAL.
 ```
 
-La auditoría no detecta una deducción explícita que use una lista de ceros en
-la construcción zeta. Sí detecta dos riesgos de circularidad lógica: convertir
-datos del control plantado en una afirmación universal sobre `LP`, y elevar
-una firma espectral finita a la identificación Euler--Gamma sin el puente
-`RDI-ANCHOR`.
+The audit detects no explicit deduction that uses a list of zeros in the zeta construction. It does detect two risks of logical circularity: turning data from the planted control into a universal claim about `LP`, and elevating a finite spectral signature to the Euler–Gamma identification without the `RDI-ANCHOR` bridge.
 
-## Leyenda de estado
+## Status legend
 
-| Etiqueta | Uso en este informe |
+| Label | Use in this report |
 |---|---|
-| PROBADO | Identidad o teorema con hipótesis declaradas y demostración interna suficiente para su alcance. |
-| CONDICIONAL | Implicación correcta sólo bajo hipótesis que siguen abiertas. |
-| NUMÉRICO | Dato de sonda, aun con precisión múltiple y controles; no es ley asintótica. |
-| CONJETURAL | Lectura o mecanismo sugerido sin implicación demostrada. |
-| REFUTADO | El propio corpus exhibe una contradicción, una autopsia o una retracción. |
-| EQUIVALENTE-A-RH | Enunciado cuyo contenido terminal equivale a RH. |
-| INCOMPLETO | Objetivo bien formulado, pero sin prueba ni contraejemplo decisivo. |
+| PROVED | Identity or theorem with stated hypotheses and internal proof sufficient for its scope. |
+| CONDITIONAL | Correct implication only under hypotheses that remain open. |
+| NUMERICAL | Probe data, even with multiple precision and controls; not an asymptotic law. |
+| CONJECTURAL | Suggested reading or mechanism without a proved implication. |
+| REFUTED | The corpus itself exhibits a contradiction, an autopsy or a retraction. |
+| EQUIVALENT-TO-RH | Statement whose terminal content is equivalent to RH. |
+| INCOMPLETE | Well-formulated goal, but without a decisive proof or counterexample. |
 
-## Cadena reconstruida y matriz 76→89
+## Reconstructed chain and 76→89 matrix
 
-| Fase | Salida que entrega | Recibe de | Estado y dependencia real |
+| Phase | Output delivered | Receives from | Status and real dependency |
 |---|---|---|---|
-| 76 | Característica bilateral de raíces reales; `SR-SAFE => Omega7`; escisión `LP`/`IDENT`; `RDP-1`; reducción radical | paper 36 y fases 71–75 | Algebra finita y cola Euler segura: PROBADO. `SR-SAFE`, LP, IDENT, `RDP-SHELL`, PROLATE y WEIL-TAIL: INCOMPLETO. La conclusión a `Omega7`: CONDICIONAL. |
-| 77 | Corrige el significado de LP; diagonal cofinal; puerta de detectores | 76 | Compacto-resolvente y corrección del núcleo: PROBADO. `BTG-DIV` en `mu_L`: INCOMPLETO. La atribución Outcome A sólo es NUMÉRICA y depende de un sustituto de `mu_L`; por ello la puerta que declara LP neutro es CONDICIONAL. |
-| 78 | Auditoría mu-libre; reducción de convergencia; descomposición `ZERO+MESH+BND` | 77 | `MESH=O(N^-2)` y `BND=O(N^-3)`: PROBADO. `ZERO`/`GAP-Z`: INCOMPLETO. Los objetos fijados en `mu_L` son detectores NUMÉRICOS e inadmisibles como fuerza LP. |
-| 79 | Exploración de nubes para `GAP-Z` y candidato `DISCRIMINANT`; auditoría K1--K5/MW | 78 | La mayor parte son firmas NUMÉRICAS. La auditoría de ruta es PROBADA como inventario, no como matemática nueva. El libro final conserva las brechas. |
-| 80 | Corte mínimo: `RDI-CONV`, `RDI-ANCHOR`, LP, colas | 76–79 | Producto Euler--Gamma y equivalencias relativas: PROBADOS. `RDI-ANCHOR`: INCOMPLETO; es el sitio aritmético, no una clausura. |
-| 81 | Forma secular sin dividir por `c` | 80 | Reducción secular y unicidad Stieltjes: PROBADAS. Definir la medida objetivo por transformada inversa: REFUTADO por circular. Ancla: INCOMPLETA. |
-| 82 | Límite proyectivo de generadores acoplados | 81 | Teorema abstracto bajo hipótesis: CONDICIONAL. Identificar el perfil reinyecta LP y colas: la pretendida ruta autónoma queda REFUTADA como atajo. |
-| 83 | Representación Euler--Möbius y obstrucción L2 | 82 | Cálculo finito: PROBADO. Vector de tierra L2 no nulo: REFUTADO (`ker X={0}`). |
-| 84 | Reparación distribucional y fuente acoplada exacta | 83 | Identidad de fuente y corrector sin inversa: PROBADOS. Cluster cofinal de paridad: INCOMPLETO. |
-| 85 | Dos defectos Weyl de paridad | 84 | Reducción exacta: PROBADA. Control uniforme polo-móvil: REFUTADO como sustituto demasiado fuerte. Sumas firmadas: INCOMPLETAS. |
-| 86 | Abel firmado y localización al primer modo | 85 | Identidad Abel y reducción: PROBADAS. Productos de primer modo y colas: INCOMPLETOS. |
-| 87 | Deformación Euler y anomalía tangente | 80, 86 | Fórmulas diferenciales: PROBADAS. Cancelación base+capa y ancla: INCOMPLETAS. |
-| 88 | Fórmula Feshbach de capa | 87 | Identidad Feshbach: PROBADA; límite de lápiz bajo hipótesis: CONDICIONAL. Un único escalamiento común de paridades: REFUTADO. |
-| 89 | Cancelación proyectiva y corriente de rotación del perfil | 88 | Fórmula exacta de rotación: PROBADA. Dominio, ventana de empalme y perfil Euler: INCOMPLETOS; por construcción vuelven a `RDI-ANCHOR`/IDENT. |
+| 76 | Two-sided characterization of real roots; `SR-SAFE => Omega7`; `LP`/`IDENT` split; `RDP-1`; radical reduction | paper 36 and phases 71–75 | Finite algebra and the safe Euler tail: PROVED. `SR-SAFE`, LP, IDENT, `RDP-SHELL`, PROLATE and WEIL-TAIL: INCOMPLETE. The conclusion to `Omega7`: CONDITIONAL. |
+| 77 | Corrects the meaning of LP; cofinal diagonal; detector gate | 76 | Compact-resolvent and kernel correction: PROVED. `BTG-DIV` at `mu_L`: INCOMPLETE. The Outcome A attribution is only NUMERICAL and depends on a substitute for `mu_L`; hence the gate declaring LP neutral is CONDITIONAL. |
+| 78 | Mu-free audit; convergence reduction; `ZERO+MESH+BND` decomposition | 77 | `MESH=O(N^-2)` and `BND=O(N^-3)`: PROVED. `ZERO`/`GAP-Z`: INCOMPLETE. Objects fixed at `mu_L` are NUMERICAL detectors and inadmissible as LP force. |
+| 79 | Cloud exploration for `GAP-Z` and candidate `DISCRIMINANT`; K1–K5/MW audit | 78 | Most are NUMERICAL signatures. The route audit is PROVED as inventory, not as new mathematics. The final ledger retains the gaps. |
+| 80 | Minimal cut: `RDI-CONV`, `RDI-ANCHOR`, LP, tails | 76–79 | Euler–Gamma product and relative equivalences: PROVED. `RDI-ANCHOR`: INCOMPLETE; it is the arithmetic site, not a closure. |
+| 81 | Secular form without dividing by `c` | 80 | Secular reduction and Stieltjes uniqueness: PROVED. Defining the target measure by inverse transform: REFUTED as circular. Anchor: INCOMPLETE. |
+| 82 | Projective limit of coupled generators | 81 | Abstract theorem under hypotheses: CONDITIONAL. Identifying the profile reintroduces LP and tails: the claimed autonomous route is REFUTED as a shortcut. |
+| 83 | Euler–Möbius representation and L2 obstruction | 82 | Finite computation: PROVED. Nonzero ground L2 vector: REFUTED (`ker X={0}`). |
+| 84 | Distributional repair and exact coupled source | 83 | Source identity and corrector without inverse: PROVED. Cofinal parity cluster: INCOMPLETE. |
+| 85 | Two Weyl parity defects | 84 | Exact reduction: PROVED. Uniform moving-pole control: REFUTED as too strong a substitute. Signed sums: INCOMPLETE. |
+| 86 | Signed Abel and localization to the first mode | 85 | Abel identity and reduction: PROVED. First-mode products and tails: INCOMPLETE. |
+| 87 | Euler deformation and tangent anomaly | 80, 86 | Differential formulas: PROVED. Base+layer cancellation and anchor: INCOMPLETE. |
+| 88 | Feshbach layer formula | 87 | Feshbach identity: PROVED; pencil limit under hypotheses: CONDITIONAL. A single common parity scaling: REFUTED. |
+| 89 | Projective cancellation and profile rotation current | 88 | Exact rotation formula: PROVED. Domain, splicing window and Euler profile: INCOMPLETE; by construction they return to `RDI-ANCHOR`/IDENT. |
 
-La topología efectiva no es una escalera que cierre una obligación en cada
-fase. Hay tres bucles explícitos:
-
-```text
-81 -> 82 -> (LP + colas de 80)                         [bucle de límite homogéneo]
-83 -> 84 -> 85 -> 86 -> (RDI-ANCHOR de 80)            [bucle de coborde]
-87 -> 88 -> 89 -> PROFILE-ROTATION-RDI -> RDI-ANCHOR  [bucle de deformación]
-```
-
-Por tanto ninguna de las fases 81–89 suministra por sí misma un cierre nuevo
-de IDENT. Reexpresan la misma identificación en coordenadas secular,
-generadora, distribucional o de capa.
-
-## Hallazgos críticos
-
-### 1. Corrección necesaria de `LP` y conflicto no resuelto en la puerta E77.7az
-
-`E77_7F_FIXED_MU_BLOCK_GROWTH.md` prueba que `H_L=D_L+B_L` tiene resolvente
-compacto y, por ende, que `mu_L` es autovalor aislado de multiplicidad finita.
-Así queda REFUTADA la frase de P76.067 de que el núcleo homogéneo en `mu_L`
-es trivial. También queda PROBADA la identidad espectral finita
+The effective topology is not a ladder closing one obligation per phase. There are three explicit loops:
 
 ```text
-BTG-DIV <=> ||A_N(mu_L)^(-1)b_N||^2 -> infinito
-          => contracción de disco => LP corregido.
+81 -> 82 -> (LP + tails of 80)                         [homogeneous limit loop]
+83 -> 84 -> 85 -> 86 -> (RDI-ANCHOR of 80)              [coboundary loop]
+87 -> 88 -> 89 -> PROFILE-ROTATION-RDI -> RDI-ANCHOR    [deformation loop]
 ```
 
-No queda probado el antecedente límite. El mismo archivo llama a su `mu_ref`
-congelado «sólo sustituto finito» y deja `BTG-DIV` en el `mu_L` verdadero como
-ABIERTO. La inspección de la sonda confirma que `mu_reference` es literalmente
-el menor autovalor de la sección de referencia y que el código registra de
-forma expresa que no es el `mu_L` abstracto. No es una aproximación controlada
-al objeto que la puerta necesita.
+So none of phases 81–89 by itself supplies a new closure of IDENT. They re-express the same identification in secular, generating, distributional or layer coordinates.
 
-Sin embargo E77.7az toma Outcome A de E77.1b más esa identidad para afirmar
-que `BTG-DIV-L` es neutro frente al control. Esto no es una demostración:
-E77.1b mide secciones finitas y E77.7f mide en un `mu_ref`, no la divergencia
-en el límite y en el `mu_L` de cada construcción. E78.1 agrava el punto: sus
-datos muestran una brecha de suelo de orden uno para el control, advierte que
-el crecimiento en `mu_ref=-1.744...` puede ser un artefacto por estar bajo el
-espectro, y lo llama evidencia de sabor Outcome B. La puerta se niega a
-reabrir el asunto, pero esa decisión administrativa no elimina la tensión.
+## Critical findings
 
-Clasificación:
+### 1. Necessary correction of `LP` and the unresolved conflict at gate E77.7az
 
-| Claim | Estado |
+`E77_7F_FIXED_MU_BLOCK_GROWTH.md` proves that `H_L=D_L+B_L` has a compact resolvent and, hence, that `mu_L` is an isolated eigenvalue of finite multiplicity. This REFUTES the statement in P76.067 that the homogeneous kernel at `mu_L` is trivial. It also PROVES the finite spectral identity
+
+```text
+BTG-DIV <=> ||A_N(mu_L)^(-1)b_N||^2 -> infinity
+          => disk contraction => corrected LP.
+```
+
+The limiting antecedent remains unproved. The same file calls its frozen `mu_ref` "only a finite substitute" and leaves `BTG-DIV` at the true `mu_L` as OPEN. Probe inspection confirms that `mu_reference` is literally the smallest eigenvalue of the reference section and that the code explicitly records that it is not the abstract `mu_L`. It is not a controlled approximation to the object the gate needs.
+
+However E77.7az takes Outcome A from E77.1b plus that identity to assert that `BTG-DIV-L` is neutral with respect to the control. This is not a proof: E77.1b measures finite sections and E77.7f measures at an `mu_ref`, not the divergence at the limit and at the `mu_L` of each construction. E78.1 aggravates the point: its data show a unit-order floor gap for the control, warns that the growth at `mu_ref=-1.744...` could be an artifact of being below the spectrum, and calls it Outcome-B-flavored evidence. The gate refuses to reopen the issue, but that administrative decision does not remove the tension.
+
+Classification:
+
+| Claim | Status |
 |---|---|
-| `ker_l2(H_L-mu_L)=0` en la lectura literal de P76 | REFUTADO |
-| Resolvente compacto y existencia de autovalor inferior | PROBADO |
-| Equivalencia finita BTG/energía y su implicación a disco | PROBADO |
-| `BTG-DIV-L` para zeta | INCOMPLETO |
-| `BTG-DIV-L` para el control plantado | INCOMPLETO |
-| Outcome A y neutralidad de LP | NUMÉRICO/CONDICIONAL |
-| Cascadas `RELATIVE-MISMATCH` como fuerza LP | REFUTADO como mecanismo admitido, condicionado a Outcome A |
+| `ker_l2(H_L-mu_L)=0` on P76's literal reading | REFUTED |
+| Compact resolvent and existence of the lower eigenvalue | PROVED |
+| Finite BTG/energy equivalence and its implication to the disk | PROVED |
+| `BTG-DIV-L` for zeta | INCOMPLETE |
+| `BTG-DIV-L` for the planted control | INCOMPLETE |
+| Outcome A and LP neutrality | NUMERICAL/CONDITIONAL |
+| `RELATIVE-MISMATCH` cascades as LP force | REFUTED as an admitted mechanism, conditioned on Outcome A |
 
-La regla build-neutral sigue siendo prudente: impide convertir una firma que
-separa construcciones en un supuesto teorema de convergencia. Pero no puede
-usarse como prueba de que el control realmente satisface LP.
+The build-neutral rule remains prudent: it prevents turning a signature that separates constructions into a supposed convergence theorem. But it cannot be used as proof that the control actually satisfies LP.
 
-### 2. GAP-Z: parte exacta, parte no cerrada y prohibición de la cota absoluta
+### 2. GAP-Z: exact part, unclosed part and prohibition of the absolute bound
 
-E78.157 establece exactamente
+E78.157 establishes exactly
 
 ```text
 g_(N+2)-g_N = ZERO + MESH + BND.
 ```
 
-Sus dos componentes geométricos satisfacen, sin datos aritméticos,
-`MESH=O(sigma/N^2)` y `BND=O(sigma/N^3)`. Es una reducción sólida y
-build-neutral. El único componente que depende de la construcción es
+Its two geometric components satisfy, without arithmetic data, `MESH=O(sigma/N^2)` and `BND=O(sigma/N^3)`. This is a solid, build-neutral reduction. The only component depending on the construction is
 
 ```text
 ZERO = Delta sum_{kappa in spec(K_N)} 2 sigma/(kappa^2+sigma^2).
 ```
 
-Los datos no autorizan sustituirlo por `O(N^-2)`: `N^2 ZERO` crece o vaga en
-las escaleras auditadas; el exponente ajustado cercano a `1.2` es NUMÉRICO y
-no uniforme. E79.116 añade la prohibición correcta: sumar magnitudes de capas
-para acotar `|ZERO|` viola K3; la coherencia de signo observada no rescata esa
-forma de argumento. `GAP-Z` sigue INCOMPLETO y ha de ser neutral en ambas
-construcciones para no adquirir fuerza-RH por MW-6.
+The data do not authorize replacing it by `O(N^-2)`: `N^2 ZERO` grows or wanders across the audited ladders; the fitted exponent near `1.2` is NUMERICAL and not uniform. E79.116 adds the correct prohibition: summing layer magnitudes to bound `|ZERO|` violates K3; the observed sign coherence does not rescue that form of argument. `GAP-Z` remains INCOMPLETE and must be neutral in both constructions in order not to acquire RH strength via MW-6.
 
-Hay además una cautela de implementación: la sonda E78.157 convierte cada
-autovalor de `K_N` en `Re(kappa)` antes de la suma de Poisson y no comprueba
-allí mismo que su parte imaginaria sea pequeña. E79.115 sí hace ese control y
-reporta realidad a precisión alta para sus filas. La identidad algebraica de
-la descomposición no depende de esa omisión, pero la lectura «nube real» de
-las filas E78.157 debe heredar la verificación E78.152/E79.115, no el mero
-uso de `Re` en esa sonda.
+There is also an implementation caveat: probe E78.157 converts each eigenvalue of `K_N` into `Re(kappa)` before the Poisson sum, without checking there that its imaginary part is small. E79.115 does perform that check and reports reality at high precision for its rows. The algebraic identity of the decomposition does not depend on this omission, but the "real cloud" reading of the E78.157 rows must inherit the E78.152/E79.115 verification, not the mere use of `Re` in that probe.
 
-### 3. El supuesto discriminante E79 es una firma, no una identificación
+### 3. The alleged E79 discriminant is a signature, not an identification
 
-E79.83–E79.115 revisan defectos de cierre, balance de residuos, nube simétrica,
-escape de rango uno y proxies de dos escalas. Sus igualdades algebraicas
-locales son PROBADAS cuando se declaran exactas; las separaciones zeta/control
-son NUMÉRICAS. Varias lecturas tempranas han sido rectificadas dentro del
-corpus:
+E79.83–E79.115 review closure defects, residue balance, symmetric cloud, rank-one escape and two-scale proxies. Their local algebraic equalities are PROVED when stated as exact; the zeta/control separations are NUMERICAL. Several early readings have been corrected within the corpus:
 
 ```text
-E78.154: «un avatar estable / problema de un outlier»     REFUTADO por E78.155.
-E79.111--112: número de cruces como señal                REFUTADO por E79.113.
-E79.113: deriva monótona del residuo                     REFUTADO por E79.115.
-E79.114: cola N=28..36 con dps=70                        ANULADO por E79.115.
-E79.105--112: mean(d)                                   CAMBIO SILENCIOSO DE
-                                                         DEFINICIÓN detectado
-                                                         por E79.113: se usó
-                                                         `pi(N-1)/lambda`, no
-                                                         el promedio simétrico
-                                                         de `d`, que es cero.
+E78.154: "a stable avatar / single-outlier problem"        REFUTED by E78.155.
+E79.111--112: crossing count as a signal                   REFUTED by E79.113.
+E79.113: monotone drift of the residue                     REFUTED by E79.115.
+E79.114: N=28..36 tail with dps=70                          NULLIFIED by E79.115.
+E79.105--112: mean(d)                                       SILENT DEFINITION
+                                                             CHANGE detected
+                                                             by E79.113: it used
+                                                             `pi(N-1)/lambda`, not
+                                                             the symmetric average
+                                                             of `d`, which is zero.
 ```
 
-El último punto es material: aunque los números reproducidos usan la escala
-de malla correcta, el símbolo escrito no nombra ese objeto. Ningún proxy de
-esta familia puede ingresar en una demostración sin fijar la definición y una
-ley asintótica con precisión controlada.
+The last point is material: although the reproduced numbers use the correct grid scale, the written symbol does not name that object. No proxy from this family can enter a proof without fixing the definition and an asymptotic law with controlled precision.
 
-El estado correcto de
+The correct status of
 
 ```text
-DISCRIMINANT: una identidad/ley aritmética que obliga a la nube zeta
-              y falla en una construcción sin producto Euler
+DISCRIMINANT: an arithmetic identity/law that is forced by the zeta
+              cloud and fails for a construction without an Euler product
 ```
 
-es CONJETURAL/INCOMPLETO. La observación de que los controles fallan una
-firma finita no prueba ni su necesidad para `SAFE-GAMMA-IDENT` ni su
-suficiencia para `RDI-ANCHOR`.
+is CONJECTURAL/INCOMPLETE. The observation that controls fail a finite signature proves neither its necessity for `SAFE-GAMMA-IDENT` nor its sufficiency for `RDI-ANCHOR`.
 
-### 4. IDENT, RDI y la fuerza-RH
+### 4. IDENT, RDI and RH strength
 
-E80.002 es una pieza genuinamente independiente de la característica CCM:
-en `Re s>1`, `E_L` es cero-libre, `E_L'/E_L=H_L` y
-`E_L -> (2 xi)^2`; todo ello es PROBADO por convergencia absoluta. E80.003
-prueba equivalencias entre planitud proyectiva, defecto logarítmico y razón
-normalizada. E80.004 prueba, mediante una familia explícita de nubes reales,
-que coherencia más convergencia sumable no identifica el límite. Por tanto:
+E80.002 is a genuinely independent piece from the CCM characterization: in `Re s>1`, `E_L` is zero-free, `E_L'/E_L=H_L` and `E_L -> (2 xi)^2`; all of this is PROVED by absolute convergence. E80.003 proves equivalences between projective flatness, logarithmic defect and normalized ratio. E80.004 proves, via an explicit family of real clouds, that coherence plus summable convergence does not identify the limit. Hence:
 
 ```text
-RDI-CONV no implica RDI-ANCHOR.
-GAP-Z no implica SAFE-GAMMA-IDENT.
-RDI-ANCHOR es el puente que falta, no una consecuencia de la firma.
+RDI-CONV does not imply RDI-ANCHOR.
+GAP-Z does not imply SAFE-GAMMA-IDENT.
+RDI-ANCHOR is the missing bridge, not a consequence of the signature.
 ```
 
-E80 localiza `RDI-ANCHOR` como el único elemento del corte mínimo que debe
-distinguir una construcción con producto Euler de otra sin él. Esa localización
-es razonable como arquitectura, pero no convierte el resto de obligaciones en
-teoremas. La frase «el único hito capaz de excluir un cero fuera de línea» es
-demasiado fuerte por tres razones:
+E80 localizes `RDI-ANCHOR` as the only element of the minimal cut that must distinguish a construction with an Euler product from one without it. That localization is reasonable as architecture, but it does not turn the remaining obligations into theorems. The phrase "the only milestone able to exclude an off-line zero" is too strong for three reasons:
 
-- `RDI-ANCHOR` sólo es el único *separador propuesto* del corte de fase 80;
-  `A1` y `C1`--`D3` continúan siendo hipótesis independientes necesarias para
-  esta ruta suficiente.
-- La neutralidad de `GAP-Z`/LP frente a un divisor fuera de línea no está
-  demostrada en el `mu_L` verdadero, como muestra el hallazgo 1.
-- `Omega7` es EQUIVALENTE-A-RH. El documento E79.118 sitúa el punto abierto
-  terminal en paper 36, pero también declara que LP+IDENT es una ruta nueva y
-  distinta; no transfiere unicidad de hito desde paper 36 a esta ruta.
+- `RDI-ANCHOR` is only the only *proposed separator* of the phase-80 cut; `A1` and `C1`–`D3` remain independent hypotheses necessary for this sufficient route.
+- The neutrality of `GAP-Z`/LP against an off-line divisor is not proved at the true `mu_L`, as finding 1 shows.
+- `Omega7` is EQUIVALENT-TO-RH. Document E79.118 places the terminal open point in paper 36, but also declares that LP+IDENT is a new and distinct route; it does not transfer milestone uniqueness from paper 36 to this route.
 
-### 5. Circularidades eliminadas y riesgos que permanecen
+### 5. Eliminated circularities and remaining risks
 
-| Sitio | Resultado de auditoría |
+| Site | Audit result |
 |---|---|
-| P76.039 | La cola Euler en `Re s>1` es PROBADA y no usa RH. `CELL-TRACE` no puede añadirse: P76.040 lo autopsia. |
-| P76.061 | La norma ambiente de la inversa está REFUTADA como vehículo: sobreestima por órdenes enormes; sólo sirve el pareamiento direccional. |
-| E80.004 / E81.003 | Inferir la medida/objetivo aritmético desde coherencia o definirla por la transformada del determinante es REFUTADO/circular. |
-| E82.003--005 | El límite proyectivo homogéneo pierde la fuente y reintroduce LP+colas: no es prueba autónoma. |
-| E83.008 | El vector L2 requerido no existe; pasar a `delta_0` es una reparación distribucional explícita, no una inversa escondida. |
-| E79.116 | A2(c), A2(e) evaluados en `mu_L` son INADMISIBLES como pasos LP por K1 y por discriminación; A2(f) mu-libre sigue INCOMPLETO. |
-| E87--E89 | Feshbach, rotación y cancelación escalar son cambios exactos de coordenadas. La identificación del perfil Euler continúa abierta; no eliminan el ancla. |
+| P76.039 | The Euler tail in `Re s>1` is PROVED and does not use RH. `CELL-TRACE` cannot be added: P76.040 autopsies it. |
+| P76.061 | The ambient norm of the inverse is REFUTED as a vehicle: it overestimates by enormous orders; only directional pairing works. |
+| E80.004 / E81.003 | Inferring the arithmetic measure/target from coherence, or defining it via the determinant's transform, is REFUTED/circular. |
+| E82.003–005 | The homogeneous projective limit loses the source and reintroduces LP+tails: not an autonomous proof. |
+| E83.008 | The required L2 vector does not exist; moving to `delta_0` is an explicit distributional repair, not a hidden inverse. |
+| E79.116 | A2(c), A2(e) evaluated at `mu_L` are INADMISSIBLE as LP steps per K1 and discrimination; A2(f) mu-free remains INCOMPLETE. |
+| E87–E89 | Feshbach, rotation and scalar cancellation are exact coordinate changes. Identification of the Euler profile remains open; they do not remove the anchor. |
 
-La auditoría E79.116 es útil como regla negativa, no como cierre: explícitamente
-ordena volver a auditar cada prueba futura. Sus cuatro restricciones son
-necesarias: no usar A2(c)/A2(e), no usar suma absoluta de capas para GAP-Z,
-no hacer GAP-Z discriminante y no cerrar ningún enlace por positividad.
+Audit E79.116 is useful as a negative rule, not as a closure: it explicitly orders re-auditing every future proof. Its four restrictions are necessary: do not use A2(c)/A2(e), do not use an absolute sum of layers for GAP-Z, do not turn GAP-Z into a discriminant, and do not close any link via positivity.
 
-## Cobertura documental
+## Document coverage
 
-Se inspeccionaron los README, planes, cierres, libros y notas matemáticas de
-las fases 76–89. Las sondas y resultados se trataron como evidencia numérica,
-no como demostración. Las abreviaturas de intervalos significan todos los
-archivos existentes de esa serie; los títulos con `RESULTS`, `AUTOPSY`,
-`AUDIT`, `CLOSURE` y `LEDGER` también se incluyen expresamente.
+The READMEs, plans, closures, ledgers and mathematical notes of phases 76–89 were inspected. Probes and results were treated as numerical evidence, not as proof. Range abbreviations mean all existing files of that series; titles with `RESULTS`, `AUTOPSY`, `AUDIT`, `CLOSURE` and `LEDGER` are also explicitly included.
 
-| Fase | Documentos sustantivos cubiertos | Lectura de cobertura |
+| Phase | Substantive documents covered | Coverage reading |
 |---|---|---|
-| 76 | `PHASE_76_PLAN`, `PHASE_76_CLOSURE`; P76.001–003 y resultados; P76.004–005, 007–015, 016–017, 023–031, 032–045, 046–060, 061–067 y todos los `*_RESULTS` del manifiesto | 61 Markdown, 53 sondas. Núcleo: raíz real finita, razón segura, cola Euler, Schur, desplazamiento, radicales y escisión LP/IDENT. |
-| 77 | `README`, misión, planes autónomo/Omega7, `PHASE_77_CLOSURE`; E77.1/1B, 2, 3/3B/3C, 5A–5Z, 5AA–5AH, 6, 7AA–7AZ, 7B–7Z y todas las variantes 7H | 113 Markdown, 81 sondas y 116 ficheros de datos. Se cubrieron las cascadas de detectores, el LP corregido, el límite iterado y la puerta de atribución. |
-| 78 | `README`; E78.1–4D, 5–16, 17–71, 73–99, 100–129, 130–137, 139, 141–143 y 145–157 | 157 Markdown, 122 sondas y 115 datos. Se cubrieron autopsias mu, cociclos, reducciones de fuente, espectro `K_N`, correcciones E154/E155 y `ZERO+MESH+BND`. |
-| 79 | `README`; E79.1–3Z, 40–82, 83–113, 115–118; `E79_116_E77_9_NONCIRCULARITY_AUDIT` y `E79_117_POST_AUDIT_LEDGER` | 107 Markdown, 79 sondas y 80 datos. Se cubrieron paquetes de borde, selectores, nubes, escape, proxy, control de precisión, auditoría y libro final. |
-| 80 | `README`, cierre; E80.001–009 | 11 Markdown. Corte RDI, producto Euler--Gamma, equivalencias, contraejemplo de coherencia, `GAP-Z`, mu-libre, colas y BTG. |
-| 81 | `README`, cierre; E81.001–004 | 6 Markdown. Forma secular, unicidad de transformada, residuos de dos generadores y bucle circular. |
-| 82 | `README`, cierre; E82.001–005 | 7 Markdown. Endpoint generador, cluster proyectivo, pérdida homogénea, no duplicación y coborde. |
-| 83 | `README`, cierre; E83.001–008 | 10 Markdown. Coborde Euler, representación truncada, cálculo arquimediano, Möbius, resonancia y obstrucción de vector L2. |
-| 84 | `README`, cierre; E84.001–005 | 7 Markdown. Órbita en extremo, distribución Weil, fuente de rango dos, momentos y paridad. |
-| 85 | `README`, cierre; E85.001–005 | 7 Markdown. Fórmula espectral, defectos Weyl, eje seguro, polo móvil y decisión. |
-| 86 | `README`, cierre; E86.001–004 | 6 Markdown. Abel finito, autopsia de techo, variación y primer modo. |
-| 87 | `README`, cierre; E87.001–005 | 7 Markdown. Corrección del discriminante, deformación, anomalía, capa y base. |
-| 88 | `README`, cierre; E88.001–004 | 6 Markdown. Feshbach, límite de lápiz, cociente de dispersión y división de escalas. |
-| 89 | `README`, cierre; E89.001–005 | 7 Markdown. Dominancia, cancelación escalar, rotación, auditoría y cruce a LP/IDENT. |
+| 76 | `PHASE_76_PLAN`, `PHASE_76_CLOSURE`; P76.001–003 and results; P76.004–005, 007–015, 016–017, 023–031, 032–045, 046–060, 061–067 and all `*_RESULTS` from the manifest | 61 Markdown, 53 probes. Core: finite real root, safe ratio, Euler tail, Schur, shift, radicals and LP/IDENT split. |
+| 77 | `README`, mission, autonomous/Omega7 plans, `PHASE_77_CLOSURE`; E77.1/1B, 2, 3/3B/3C, 5A–5Z, 5AA–5AH, 6, 7AA–7AZ, 7B–7Z and all 7H variants | 113 Markdown, 81 probes and 116 data files. Covered: detector cascades, corrected LP, iterated limit, and the attribution gate. |
+| 78 | `README`; E78.1–4D, 5–16, 17–71, 73–99, 100–129, 130–137, 139, 141–143 and 145–157 | 157 Markdown, 122 probes and 115 data files. Covered: mu autopsies, cocycles, source reductions, `K_N` spectrum, E154/E155 corrections and `ZERO+MESH+BND`. |
+| 79 | `README`; E79.1–3Z, 40–82, 83–113, 115–118; `E79_116_E77_9_NONCIRCULARITY_AUDIT` and `E79_117_POST_AUDIT_LEDGER` | 107 Markdown, 79 probes and 80 data files. Covered: edge packages, selectors, clouds, escape, proxy, precision control, audit and final ledger. |
+| 80 | `README`, closure; E80.001–009 | 11 Markdown. RDI cut, Euler–Gamma product, equivalences, coherence counterexample, `GAP-Z`, mu-free, tails and BTG. |
+| 81 | `README`, closure; E81.001–004 | 6 Markdown. Secular form, transform uniqueness, two-generator residues and circular loop. |
+| 82 | `README`, closure; E82.001–005 | 7 Markdown. Generator endpoint, projective cluster, homogeneous loss, non-duplication and coboundary. |
+| 83 | `README`, closure; E83.001–008 | 10 Markdown. Euler coboundary, truncated representation, archimedean computation, Möbius, resonance and L2-vector obstruction. |
+| 84 | `README`, closure; E84.001–005 | 7 Markdown. Endpoint orbit, Weil distribution, rank-two source, moments and parity. |
+| 85 | `README`, closure; E85.001–005 | 7 Markdown. Spectral formula, Weyl defects, safe axis, moving pole and decision. |
+| 86 | `README`, closure; E86.001–004 | 6 Markdown. Finite Abel, ceiling autopsy, variation and first mode. |
+| 87 | `README`, closure; E87.001–005 | 7 Markdown. Discriminant correction, deformation, anomaly, layer and base. |
+| 88 | `README`, closure; E88.001–004 | 6 Markdown. Feshbach, pencil limit, dispersion quotient and scale split. |
+| 89 | `README`, closure; E89.001–005 | 7 Markdown. Dominance, scalar cancellation, rotation, audit and crossover to LP/IDENT. |
 
-Los rangos de 76–79 contienen notas repetitivas de sonda y sus resultados; no
-se les concede fuerza adicional por multiplicidad documental. Las unidades
-de carga se consolidan en la tabla siguiente.
+The 76–79 ranges contain repetitive probe notes and their results; they are not granted extra force for documentary multiplicity. The units of burden are consolidated in the table below.
 
-## Clasificación de todos los claims sustantivos por bloque documental
+## Classification of all substantive claims by document block
 
-| Bloque documental | Claim consolidado | Estado |
+| Document block | Consolidated claim | Status |
 |---|---|---|
-| P76.001–015 | Corrección de observable, identidades Loewner/Schur y reducción de transferencia | PROBADO para las identidades; INCOMPLETO para estimaciones uniformes. |
-| P76.016–023 | Interlacing, desplazamiento y raíces reales de la característica | PROBADO bajo las hipótesis explícitas de semidefinición, núcleo y no degeneración; la aplicación global conserva esas condiciones como CONDICIONAL. |
-| P76.024,029–031,034 | Normalidad/razón segura implica `Omega7` | CONDICIONAL; los teoremas son correctos bajo `BCF-*`, `SA-SAFE` o `SR-SAFE`. |
-| P76.035–060 | Derivada, renormalización de malla, fórmulas de cociclo/menores/Schur | PROBADO como álgebra finita; `SHELL-CAUCHY`/`RDP-SHELL`: INCOMPLETO. |
-| P76.038–040 | Cola Euler y transferencia traza-celda | Cola: PROBADO. `CELL-TRACE`/proxy duro: REFUTADO. |
-| P76.061–067 | Norma ambiente, reducción radical, LP y IDENT | Norma ambiente: REFUTADO como ruta. Descomposición radical: PROBADA. LP, IDENT y las dos colas direccionales: INCOMPLETOS. Lecturas de disco: NUMÉRICAS. |
-| E77.1–3C | Atribución, conmutador, recurrencia y interfaz de dos generadores | Atribución: NUMÉRICA. Rango dos y recurrencias: PROBADOS. Conmutador coercivo y error IDENT: INCOMPLETOS. |
-| E77.5A–5AH | Cascada `SR-LOG`, celda Schur y detectores | Identidades puntuales: PROBADAS. Pequeñez/cancelación como fuerza: REFUTADA o archivada; datos: NUMÉRICOS. |
-| E77.6 | Lema diagonal iterado | PROBADO, con sus hipótesis de convergencia fija y exterior. |
-| E77.7B–7Z y 7H | Realización, BTG, interfaz y cascadas de borde | Compacto-resolvente y fórmulas: PROBADOS. `BTG-DIV`, completitud y residuos: INCOMPLETOS. Mecanismos que discriminan LP: REFUTADOS como fuerza sólo bajo Outcome A. |
-| E77.7AZ | Cuarentena de la discriminación en IDENT | CONDICIONAL/INCOMPLETO: depende de Outcome A, que no está probado en el verdadero `mu_L`. |
-| E78.1–4D | Simplicidad, transferencia en `mu`, remanente mu-libre | Paridad y muerte PF: PROBADAS. Brecha y detectores: NUMÉRICOS. A2(c)/A2(e) como pasos: REFUTADOS/INADMISIBLES. Remanente: INCOMPLETO. |
-| E78.5–97 | Cociclo de IDENT y cadenas de denominador | Identidades: PROBADAS. Todas las leyes de signo, cono y contracción usadas como pequeño residual: REFUTADAS, NUMÉRICAS o INCOMPLETAS según la autopsia respectiva. |
-| E78.98–143 | Generadores, fuentes, modos y rutas de resolvente | Reducciones exactas: PROBADAS. Cotas de modo/fuente y rutas de norma: INCOMPLETAS o REFUTADAS cuando el título dice autopsia. |
-| E78.145–151 | Cota `c0`, testigos, aplanamiento, planitud y auditoría conjunta | Cota de modo inferior: INCOMPLETA; testigo democrático: REFUTADO; objetos de aplanamiento: NUMÉRICOS/INCOMPLETOS. |
-| E78.152–157 | Corrimiento espectral, suma de conteo, escape, fuente proyectiva y tres vías | Identidad de corrimiento y `ZERO+MESH+BND`: PROBADAS. E154: REFUTADO por E155. MESH/BND: PROBADOS. ZERO/GAP-Z y convergencia fuente: INCOMPLETOS, con evidencia NUMÉRICA. |
-| E79.1–3Z | Exponente ZERO, paquetes y capas terminales | NUMÉRICO; paquetes fijos, reglas de masa, selectores simples y atajos señalados: REFUTADOS por las sondas. |
-| E79.40–82 | Selectores, perfiles y conos de coeficientes | Igualdades de optimización finita: PROBADAS. Selección canónica de coeficientes: REFUTADA/INCOMPLETA; resultados de escalera: NUMÉRICOS. |
-| E79.83–99 | Cierre, balance, geometría, escape y ley raíz | Identidades locales: PROBADAS. Implicaciones estructurales y ley de escape: NUMÉRICAS/CONJETURALES; balance solo: REFUTADO como explicación suficiente. |
-| E79.100–115 | Lectura espectral y proxy de dos escalas | NUMÉRICO. E113 corrige la fuerza de cruces y E115 anula la cola a precisión insuficiente; no hay ley límite. |
-| E79.116–118 | Auditoría de no circularidad, libro y anatomía | PROBADO como clasificación/contabilidad; no demuestra un enlace nuevo. `Omega7`: EQUIVALENTE-A-RH y ABIERTO. |
-| E80.001–009 | Corte RDI y mínimos | Producto y equivalencias: PROBADOS. Insuficiencia de coherencia y bypass mu-libre: REFUTADOS. `RDI-CONV`, `RDI-ANCHOR`, GAP-Z, BTG y colas: INCOMPLETOS. |
-| E81.001–004 | Secular y medida | PROBADO en álgebra y unicidad; medida objetivo por inversión: REFUTADO/circular; ancla: INCOMPLETA. |
-| E82.001–005 | Límite de generadores | PROBADO/CONDICIONAL en teoremas abstractos; independencia respecto de LP/colas: REFUTADA. |
-| E83.001–008 | Coborde Euler y obstrucción | Representación y conmutadores: PROBADOS. Corrector L2 no trivial: REFUTADO. Paso al extremo distribucional: PROBADO formalmente; estimación: INCOMPLETA. |
-| E84.001–005 | Módulo extremo | Fuente exacta y corrector: PROBADOS. Selección cofinal de cluster: INCOMPLETA. |
-| E85.001–005 | Defectos de paridad | Reducción exacta: PROBADA. Convergencia débil/polo uniforme como cierre: REFUTADA. Sumas firmadas: INCOMPLETAS. |
-| E86.001–004 | Abel | Identidad y extracción primer modo: PROBADAS. Control firmado final: INCOMPLETO. |
-| E87.001–005 | Deformación | Fórmulas exactas: PROBADAS. Anomalía combinada y ancla: INCOMPLETAS. |
-| E88.001–004 | Capa Feshbach | Identidad: PROBADA. Teorema de límite: CONDICIONAL. Escala única: REFUTADA. Escalas anidadas: INCOMPLETAS. |
-| E89.001–005 | Dominancia y rotación | Fórmulas bajo dominancia: CONDICIONALES; cancelación escalar y corriente levantada: PROBADAS. Dominancia, ventana y perfil Euler: INCOMPLETOS. |
+| P76.001–015 | Observable correction, Loewner/Schur identities and transfer reduction | PROVED for the identities; INCOMPLETE for uniform estimates. |
+| P76.016–023 | Interlacing, shift, and real roots of the characteristic | PROVED under the explicit hypotheses of semidefiniteness, kernel and non-degeneracy; the global application keeps those conditions as CONDITIONAL. |
+| P76.024,029–031,034 | Normality/safe ratio implies `Omega7` | CONDITIONAL; the theorems are correct under `BCF-*`, `SA-SAFE` or `SR-SAFE`. |
+| P76.035–060 | Derivative, mesh renormalization, cocycle/minor/Schur formulas | PROVED as finite algebra; `SHELL-CAUCHY`/`RDP-SHELL`: INCOMPLETE. |
+| P76.038–040 | Euler tail and trace-cell transfer | Tail: PROVED. `CELL-TRACE`/hard proxy: REFUTED. |
+| P76.061–067 | Ambient norm, radical reduction, LP and IDENT | Ambient norm: REFUTED as a route. Radical decomposition: PROVED. LP, IDENT and the two directional tails: INCOMPLETE. Disk readings: NUMERICAL. |
+| E77.1–3C | Attribution, commutator, recurrence and two-generator interface | Attribution: NUMERICAL. Rank two and recurrences: PROVED. Coercive commutator and IDENT error: INCOMPLETE. |
+| E77.5A–5AH | `SR-LOG` cascade, Schur cell and detectors | Pointwise identities: PROVED. Smallness/cancellation as force: REFUTED or shelved; data: NUMERICAL. |
+| E77.6 | Iterated diagonal lemma | PROVED, with its fixed and exterior convergence hypotheses. |
+| E77.7B–7Z and 7H | Realization, BTG, interface and boundary cascades | Compact-resolvent and formulas: PROVED. `BTG-DIV`, completeness and residues: INCOMPLETE. Mechanisms that discriminate LP: REFUTED as force only under Outcome A. |
+| E77.7AZ | Quarantine of discrimination in IDENT | CONDITIONAL/INCOMPLETE: depends on Outcome A, not proved at the true `mu_L`. |
+| E78.1–4D | Simplicity, transfer at `mu`, mu-free remainder | Parity and PF death: PROVED. Gap and detectors: NUMERICAL. A2(c)/A2(e) as steps: REFUTED/INADMISSIBLE. Remainder: INCOMPLETE. |
+| E78.5–97 | IDENT cocycle and denominator chains | Identities: PROVED. All sign, cone and contraction laws used as a small residual: REFUTED, NUMERICAL or INCOMPLETE according to the respective autopsy. |
+| E78.98–143 | Generators, sources, modes and resolvent routes | Exact reductions: PROVED. Mode/source bounds and norm routes: INCOMPLETE or REFUTED when the title says autopsy. |
+| E78.145–151 | Bound `c0`, witnesses, flattening, flatness and joint audit | Lower-mode bound: INCOMPLETE; democratic witness: REFUTED; flattening objects: NUMERICAL/INCOMPLETE. |
+| E78.152–157 | Spectral shift, counting sum, escape, projective source and three routes | Shift identity and `ZERO+MESH+BND`: PROVED. E154: REFUTED by E155. MESH/BND: PROVED. ZERO/GAP-Z and source convergence: INCOMPLETE, with NUMERICAL evidence. |
+| E79.1–3Z | ZERO exponent, packages and terminal layers | NUMERICAL; fixed packages, mass rules, simple selectors and flagged shortcuts: REFUTED by the probes. |
+| E79.40–82 | Selectors, profiles and coefficient cones | Finite optimization equalities: PROVED. Canonical coefficient selection: REFUTED/INCOMPLETE; ladder results: NUMERICAL. |
+| E79.83–99 | Closure, balance, geometry, escape and root law | Local identities: PROVED. Structural implications and the escape law: NUMERICAL/CONJECTURAL; balance alone: REFUTED as a sufficient explanation. |
+| E79.100–115 | Spectral reading and two-scale proxy | NUMERICAL. E113 corrects the force of crossings and E115 nullifies the tail at insufficient precision; no limiting law. |
+| E79.116–118 | Non-circularity audit, ledger and anatomy | PROVED as classification/accounting; does not prove a new link. `Omega7`: EQUIVALENT-TO-RH and OPEN. |
+| E80.001–009 | RDI cut and minima | Product and equivalences: PROVED. Coherence insufficiency and mu-free bypass: REFUTED. `RDI-CONV`, `RDI-ANCHOR`, GAP-Z, BTG and tails: INCOMPLETE. |
+| E81.001–004 | Secular and measure | PROVED in algebra and uniqueness; target measure by inversion: REFUTED/circular; anchor: INCOMPLETE. |
+| E82.001–005 | Generator limit | PROVED/CONDITIONAL in abstract theorems; independence from LP/tails: REFUTED. |
+| E83.001–008 | Euler coboundary and obstruction | Representation and commutators: PROVED. Nontrivial L2 corrector: REFUTED. Distributional endpoint step: formally PROVED; estimate: INCOMPLETE. |
+| E84.001–005 | Endpoint module | Exact source and corrector: PROVED. Cofinal cluster selection: INCOMPLETE. |
+| E85.001–005 | Parity defects | Exact reduction: PROVED. Weak convergence/uniform pole as closure: REFUTED. Signed sums: INCOMPLETE. |
+| E86.001–004 | Abel | Identity and first-mode extraction: PROVED. Final signed control: INCOMPLETE. |
+| E87.001–005 | Deformation | Exact formulas: PROVED. Combined anomaly and anchor: INCOMPLETE. |
+| E88.001–004 | Feshbach layer | Identity: PROVED. Limit theorem: CONDITIONAL. Single scale: REFUTED. Nested scales: INCOMPLETE. |
+| E89.001–005 | Dominance and rotation | Formulas under dominance: CONDITIONAL; scalar cancellation and lifted current: PROVED. Dominance, window and Euler profile: INCOMPLETE. |
 
-## Veredicto de cierre
+## Closing verdict
 
-El programa posterior al paper 36 ha mejorado de manera real la higiene
-lógica: retiró el núcleo trivial falso, aisló la cola Euler que sí es
-incondicional, separó identidades finitas de lectura numérica, detectó
-definiciones cambiadas y archivó varios detectores. No ha cerrado el paso
-de fuerza-RH.
+The program following paper 36 has genuinely improved logical hygiene: it withdrew the false trivial kernel, isolated the Euler tail that is indeed unconditional, separated finite identities from numerical readings, detected changed definitions, and shelved several detectors. It has not closed the RH-strength step.
 
-El objeto más franco para trabajo posterior es la pareja:
+The most candid object for further work is the pair:
 
 ```text
-GAP-Z: convergencia firmada y build-neutral de ZERO.
-RDI-ANCHOR / PROFILE-ROTATION-RDI: identificación Euler--Gamma del perfil
-                                 proyectivo, con un criterio que falle
-                                 demostrablemente fuera del producto Euler.
+GAP-Z: signed, build-neutral convergence of ZERO.
+RDI-ANCHOR / PROFILE-ROTATION-RDI: Euler--Gamma identification of the projective
+                                 profile, with a criterion that demonstrably
+                                 fails outside the Euler product.
 ```
 
-Antes de tratar el segundo como «el único discriminante», hay que probar o
-separar formalmente los demás miembros del corte y resolver la discrepancia
-entre la neutralidad proclamada de LP y el uso de `mu_ref` en vez de `mu_L`.
+Before treating the second as "the only discriminant", the other members of the cut must be formally proved or separated, and the discrepancy between the proclaimed neutrality of LP and the use of `mu_ref` instead of `mu_L` must be resolved.

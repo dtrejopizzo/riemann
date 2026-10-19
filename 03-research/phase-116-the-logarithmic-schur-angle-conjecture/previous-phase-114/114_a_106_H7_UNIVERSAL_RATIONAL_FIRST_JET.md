@@ -33,7 +33,7 @@ Let `V(n)` be the vector of prime valuations of `|n|` in the free abelian
 group
 
 \[
- L=\bigoplus_{\ell\ {m prime}}\mathbb Z e_\ell,qquad V(0)=0,
+ L=\bigoplus_{\ell\ {m prime}}\mathbb Z e_\ell,\qquad V(0)=0,
                                                                     \tag{1.3}
 \]
 

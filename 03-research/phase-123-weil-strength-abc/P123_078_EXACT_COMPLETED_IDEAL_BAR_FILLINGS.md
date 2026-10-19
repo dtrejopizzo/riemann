@@ -1,6 +1,6 @@
 # P123.078 — Exact fillings in the completed reduced bar of the rapid ideal
 
-Date: 2026-09-06. Status: PROVED for the rapid C_0 ideal of P123.019,
+Status: PROVED for the rapid C_0 ideal of P123.019,
 also after completed projective tensor with a Fréchet space. Continuous
 linear splitting and full-source excision are not assumed.
 

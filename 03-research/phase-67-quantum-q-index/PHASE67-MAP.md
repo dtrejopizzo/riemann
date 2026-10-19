@@ -1,6 +1,6 @@
 # Phase 67 -- consolidated map (quantum-algebra route to Omega_7)
 
-**Opened:** 2026-07-06. **Status:** Omega_7 open; the terrain is now mapped and one beautiful detector
+Status:** Omega_7 open; the terrain is now mapped and one beautiful detector
 was distilled to the foundations.
 
 ## The question

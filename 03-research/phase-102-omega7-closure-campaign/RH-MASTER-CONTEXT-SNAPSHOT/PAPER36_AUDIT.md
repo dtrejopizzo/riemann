@@ -1,59 +1,70 @@
-# Auditoría matemática de paper 36
+# Mathematical audit of paper 36
 
-## Veredicto
+## Verdict
 
-El resultado central defendible del manuscrito es la equivalencia estructural
+The defensible central result of the manuscript is the structural equivalence
 
 \[
 \mathrm{ARP\!\!-P}\Longleftrightarrow\mathrm{RH}.
 \]
 
-El sentido directo usa Pick–Nevanlinna: ARP-P produce interpolantes normales, la identidad analítica extiende la función y los canales detectan todo residuo no real. El sentido inverso usa que, bajo RH, cada canal es una transformada de Cauchy de una medida positiva. Esta equivalencia localiza correctamente la dificultad en ARP-P, pero no prueba ARP-P.
+The forward direction uses Pick–Nevanlinna: ARP-P produces normal interpolants, the analytic identity
+extends the function, and the channels detect every non-real residue. The reverse direction uses the
+fact that, under RH, each channel is a Cauchy transform of a positive measure. This equivalence
+correctly localizes the difficulty in ARP-P, but does not prove ARP-P.
 
-La afirmación más fuerte “todo salvo \(\Omega_7\) está probado” necesita corrección. Hay un solo residuo central equivalente a RH, pero varias piezas auxiliares anunciadas como cerradas son parciales, condicionales o contienen un paso inválido. No deben utilizarse como lemas en una continuación.
+The stronger claim "everything except \(\Omega_7\) is proved" needs correction. There is a single
+central residue equivalent to RH, but several auxiliary pieces announced as closed are partial,
+conditional, or contain an invalid step. They must not be used as lemmas in a continuation.
 
-## Columna Step 1–15
+## Step 1–15 column
 
-| Bloque | Estado auditado | Contenido exacto |
+| Block | Audited status | Exact content |
 |---|---|---|
-| Step 1 | **DEMOSTRADO** | El cambio \(s=\tfrac12+iz\) traduce RH en realidad de los ceros de \(\Xi\). |
-| Steps 2–3 | **DEMOSTRADO** | Los canales definidos por el lado de ceros convergen normalmente y tienen los residuos declarados. Esto define el objetivo; no lo realiza aritméticamente. |
-| Step 4 | **DEMOSTRADO** con interfaz clásica | La fórmula explícita actúa sobre la clase de tests indicada. |
-| Step 5 | **ABIERTO / FUERZA-RH** | ARP-P exige positividad para todo plano fuente finito y todo conjunto finito de nodos. |
-| Steps 6–7 | **DEMOSTRADO bajo hipótesis de torre** | Una medida positiva da kernel Pick positivo y el cono PSD es cerrado. No se construye tower-ARP. |
-| Steps 8–13 | **DEMOSTRADO como consecuencia de ARP-P** | NP matricial, normalidad fijada por pinning, identidad analítica, detección de residuos y simetrías eliminan polos fuera del eje. |
-| Step 14 | **DEMOSTRADO bajo RH** | Los pesos de canal forman medidas positivas y dan ARP-P. |
-| Step 15 | **DEMOSTRADO** | Ensambla las dos implicaciones. |
+| Step 1 | **PROVED** | The change \(s=\tfrac12+iz\) translates RH into the reality of \(\Xi\)'s zeros. |
+| Steps 2–3 | **PROVED** | The channels defined by the zero side converge normally and have the declared residues. This defines the target; it does not achieve it arithmetically. |
+| Step 4 | **PROVED** with classical interface | The explicit formula acts on the indicated test class. |
+| Step 5 | **OPEN / RH-STRENGTH** | ARP-P requires positivity for every finite source plane and every finite node set. |
+| Steps 6–7 | **PROVED under a tower hypothesis** | A positive measure gives a positive Pick kernel and the PSD cone is closed. Tower-ARP is not built. |
+| Steps 8–13 | **PROVED as a consequence of ARP-P** | Matrix NP, normality fixed by pinning, the analytic identity, residue detection and symmetries remove poles off the axis. |
+| Step 14 | **PROVED under RH** | Channel weights form positive measures and give ARP-P. |
+| Step 15 | **PROVED** | Assembles the two implications. |
 
-Por tanto, “catorce pasos cerrados” sólo es correcto si se conserva que varios son implicaciones condicionales a Step 5 o a una torre no construida. No son catorce fuentes independientes de evidencia.
+Therefore, "fourteen closed steps" is only correct if it is kept in mind that several are implications
+conditional on Step 5 or on a tower that is not built. They are not fourteen independent sources of
+evidence.
 
-## Estado corregido de H0–H8
+## Corrected status of H0–H8
 
-| Nivel | Estado | Auditoría |
+| Level | Status | Audit |
 |---|---|---|
-| H0 | **DEMOSTRADO** | Es conservación lógica de dificultad. Sirve como control de circularidad, no localiza por sí solo un teorema nuevo. |
-| H1 | **DEMOSTRADO, escalar** | Un nodo para \(M_\Xi\) en \(\Re s>1\). No cubre canales matriciales con pesos complejos. |
-| H2 | **PARCIAL** | El criterio Gershgorin para nodos suficientemente separados y altos es válido. La extensión a alturas acotadas no está probada. |
-| H3 | **PARCIAL** | Cierra una región logarítmica y un enunciado casi en todo punto; no la desigualdad global de dos nodos. |
-| H4 | **DEMOSTRADO como serialización** | Los determinantes de una secuencia acumulante caracterizan RH. No se demuestra su signo. |
-| H5 | **DEMOSTRADO como equivalencia** | Positividad de ventanas y ARP-P son dos coordenadas de la misma condición. |
-| H6 | **CUALITATIVO DEMOSTRADO; CUANTITATIVO NO CONFIRMADO** | Si RH falla existe algún testigo finito por contraposición. La construcción racional concreta no demuestra que su cola sea menor que el bloque negativo. |
-| H7 | **PARCIAL** | SOS bajo RH y cierre de dos nodos en banda interior, caja fija y altura grande. No hay SOS aritmético global. |
-| H8 | **PARCIAL** | Para \(N\) fijo, banda interior y traslación alta hay positividad. Falta uniformidad en \(N\) a una altura fija, que es justamente la carga terminal. |
+| H0 | **PROVED** | It is logical conservation of difficulty. It serves as a circularity control; it does not by itself localize a new theorem. |
+| H1 | **PROVED, scalar** | One node for \(M_\Xi\) in \(\Re s>1\). It does not cover matrix channels with complex weights. |
+| H2 | **PARTIAL** | The Gershgorin criterion for sufficiently separated and high nodes is valid. The extension to bounded heights is not proved. |
+| H3 | **PARTIAL** | It closes a logarithmic region and an almost-everywhere statement; not the global two-node inequality. |
+| H4 | **PROVED as serialization** | The determinants of an accumulating sequence characterize RH. Their sign is not proved. |
+| H5 | **PROVED as equivalence** | Window positivity and ARP-P are two coordinates of the same condition. |
+| H6 | **QUALITATIVE PROVED; QUANTITATIVE UNCONFIRMED** | If RH fails there is some finite witness by contraposition. The concrete rational construction does not prove its tail is smaller than the negative block. |
+| H7 | **PARTIAL** | SOS under RH and closure of two nodes in an interior band, fixed box and large height. There is no global arithmetic SOS. |
+| H8 | **PARTIAL** | For fixed \(N\), interior band and high translation there is positivity. Uniformity in \(N\) at fixed height, which is precisely the terminal load, is missing. |
 
-### Fallo concreto de H2
+### Concrete failure of H2
 
-Para una matriz hermítica \(K\),
+For a Hermitian matrix \(K\),
 
 \[
 K_{ii}>0\quad\forall i
 \]
 
-no implica \(K\succeq0\). Compactitud sólo garantiza que \(\lambda_{\min}(K)\) alcanza un mínimo sobre un compacto; no determina el signo de ese mínimo. La prueba de paper 36 sí establece PSD cuando la suma de entradas fuera de diagonal queda dominada por la diagonal mediante Gershgorin. No establece el añadido para alturas acotadas. Ese añadido debe eliminarse o convertirse en una hipótesis verificable mediante menores principales o una dominación uniforme.
+does not imply \(K\succeq0\). Compactness only guarantees that \(\lambda_{\min}(K)\) attains a minimum
+over a compact set; it does not determine the sign of that minimum. Paper 36's proof does establish
+PSD when the sum of off-diagonal entries is dominated by the diagonal via Gershgorin. It does not
+establish the addendum for bounded heights. That addendum must be removed or converted into a
+verifiable hypothesis via principal minors or a uniform domination.
 
-### Fallo concreto de H6
+### Concrete failure of H6
 
-La proposición obtiene una cota de Rayleigh de la forma
+The proposition obtains a Rayleigh bound of the form
 
 \[
 \lambda_{\min}P
@@ -64,7 +75,8 @@ La proposición obtiene una cota de Rayleigh de la forma
 }{\|c\|^2}.
 \]
 
-El teorema posterior borra \(|\kappa|\) aunque el canal no fue normalizado. Además, ajustar la fase sólo hace negativo el primer término; no prueba
+The later theorem erases \(|\kappa|\) even though the channel was not normalized. Moreover, adjusting
+the phase only makes the first term negative; it does not prove
 
 \[
 2|\kappa|\,|r(w_0)|\,|r(\overline w_0)|
@@ -72,25 +84,28 @@ El teorema posterior borra \(|\kappa|\) aunque el canal no fue normalizado. Adem
 B_{\mathrm{far}}\|r\|_{\mathrm{far}}^2.
 \]
 
-Lo demostrado es una reducción computable a dominación de cola. No es todavía un testigo negativo cuantitativo para toda configuración.
+What is proved is a computable reduction to tail domination. It is not yet a quantitative negative
+witness for every configuration.
 
-## Cadena \(\Omega\) auditada
+## Audited \(\Omega\) chain
 
-| Enlace | Estado corregido | Observación |
+| Link | Corrected status | Remark |
 |---|---|---|
-| \(\Omega_1\) | **DEMOSTRADO** | RH equivale a que todos los ceros de \(\Xi\) sean reales. |
-| \(\Omega_2\) | **DEMOSTRADO como equivalencia** | Realidad de ceros equivale a ARP-P mediante Steps 1–15. |
-| \(\Omega_3\) | **DEMOSTRADO como equivalencia vía RH** | La positividad de todos los jets escalares en un punto regular y ARP-P caracterizan ambas RH. No hay una transferencia nivel a nivel desde todos los canales a un jet. |
-| \(\Omega_4\) | **PARCIAL / REQUIERE REESCRITURA** | El defecto reference-whitened existe para todo \(N\); el whitening por \(J_N^\infty\) sólo mientras \(J_N^\infty\succ0\), hasta \(N_*(t_0)\). |
-| \(\Omega_5\) | **CONTINUIDAD DEMOSTRADA; POSITIVIDAD CONDICIONAL** | Para cada \(N\), los jets son continuos cuando \(y\downarrow\tfrac12\). No se demuestra positividad interior incondicional ni uniformidad al tomar \(N\to\infty\). |
-| \(\Omega_6\) | **DEMOSTRADO para familias completas vía RH** | Positividad de todos los jets de borde y \(\lambda_n\ge0\) para todo \(n\) son equivalentes porque ambas caracterizan RH. No existe una transformación positiva truncada nivel a nivel. |
-| \(\Omega_7\) | **ABIERTO / FUERZA-RH** | Positividad de Li para todo índice. |
+| \(\Omega_1\) | **PROVED** | RH is equivalent to all zeros of \(\Xi\) being real. |
+| \(\Omega_2\) | **PROVED as equivalence** | Reality of zeros is equivalent to ARP-P via Steps 1–15. |
+| \(\Omega_3\) | **PROVED as equivalence via RH** | Positivity of all scalar jets at a regular point and ARP-P both characterize RH. There is no level-by-level transfer from all channels to a jet. |
+| \(\Omega_4\) | **PARTIAL / NEEDS REWRITING** | The reference-whitened defect exists for every \(N\); the whitening by \(J_N^\infty\) only holds while \(J_N^\infty\succ0\), up to \(N_*(t_0)\). |
+| \(\Omega_5\) | **CONTINUITY PROVED; POSITIVITY CONDITIONAL** | For each \(N\), the jets are continuous as \(y\downarrow\tfrac12\). Unconditional interior positivity is not proved, nor is uniformity when taking \(N\to\infty\). |
+| \(\Omega_6\) | **PROVED for complete families via RH** | Positivity of all boundary jets and \(\lambda_n\ge0\) for all \(n\) are equivalent because both characterize RH. There is no truncated level-by-level positive transformation. |
+| \(\Omega_7\) | **OPEN / RH-STRENGTH** | Li positivity for every index. |
 
-La cadena central sigue terminando en \(\Omega_7\), pero \(\Omega_4\to\Omega_5\to\Omega_6\) no puede citarse como un transporte incondicional ya cerrado. Debe distinguirse la caracterización global vía RH del pasaje constructivo interior–borde.
+The central chain still ends at \(\Omega_7\), but \(\Omega_4\to\Omega_5\to\Omega_6\) cannot be cited as
+an already-closed unconditional transport. The global characterization via RH must be distinguished
+from the constructive interior–boundary passage.
 
-## Dos defectos que no deben mezclarse
+## Two defects that must not be mixed
 
-El defecto global de signo usa una referencia positiva:
+The global sign defect uses a positive reference:
 
 \[
 \delta_N^{\mathrm{ref}}(z_0)
@@ -99,7 +114,7 @@ El defecto global de signo usa una referencia positiva:
 \qquad G_N(z_0)\succ0.
 \]
 
-Está definido para todo \(N\) en el dominio declarado y
+It is defined for all \(N\) in the declared domain and
 
 \[
 \delta_N^{\mathrm{ref}}\ge0
@@ -107,7 +122,7 @@ Está definido para todo \(N\) en el dominio declarado y
 J_N\succeq0.
 \]
 
-El defecto de dominación arquimediana usa
+The archimedean domination defect uses
 
 \[
 T_N=(J_N^\infty)^{-1/2}J_N^{\mathrm{prime}}(J_N^\infty)^{-1/2},
@@ -115,30 +130,38 @@ T_N=(J_N^\infty)^{-1/2}J_N^{\mathrm{prime}}(J_N^\infty)^{-1/2},
 \delta_N^{\mathrm{arch}}=1-\lambda_{\max}(T_N).
 \]
 
-Sólo está tipado si \(J_N^\infty\succ0\). El propio lema del par de polos muestra que esa positividad falla después de una escala \(N_*(t_0)\). Toda afirmación asintótica \(N\to\infty\) escrita con \(T_N\) a \(t_0\) fijo queda sin objeto. El reinicio debe reservar símbolos distintos y declarar el dominio en cada teorema.
+It is only typed if \(J_N^\infty\succ0\). The pole-pair lemma itself shows that this positivity fails
+after a scale \(N_*(t_0)\). Every asymptotic statement \(N\to\infty\) written with \(T_N\) at fixed
+\(t_0\) becomes objectless. The restart must reserve distinct symbols and declare the domain in each
+theorem.
 
-## Realización, muestreo y cascada
+## Realization, sampling and cascade
 
-La capa operatorial es válida bajo auto-adjuntez, cota uniforme de fuentes y convergencia de resolventes, pero la construcción canónica de los operadores se remite fuera del manuscrito. La convergencia
+The operator layer is valid under self-adjointness, uniform source bounds and resolvent convergence,
+but the canonical construction of the operators is deferred outside the manuscript. The convergence
 
 \[
 (\Phi_P^F)^*(A_P^\circ-z)^{-1}\Phi_P^F
 \longrightarrow G_\Xi^F
 \]
 
-es precisamente una identificación fuerte; no se deduce de \(\Lambda(n)\ge0\).
+is precisely a strong identification; it is not deduced from \(\Lambda(n)\ge0\).
 
-Las leyes de muestreo, saturación factorial, recuperación de raíces y la cascada de de Bruijn–Newman contienen bosquejos o estimaciones uniformes pendientes. Pueden conservarse como programas condicionales, pero no deben sostener un cierre. En particular, la cascada \(t_N^*\to\Lambda_{\mathrm{dBN}}\) depende de cotas de detección y cola que no están demostradas con uniformidad suficiente.
+The sampling laws, factorial saturation, root recovery, and the de Bruijn–Newman cascade contain
+sketches or pending uniform estimates. They can be kept as conditional programs, but must not support a
+closure. In particular, the cascade \(t_N^*\to\Lambda_{\mathrm{dBN}}\) depends on detection and tail
+bounds that are not proved with sufficient uniformity.
 
-## Ruta de envolvente: error de convergencia
+## Envelope route: convergence error
 
-La separación
+The separation
 
 \[
 O(n)=\sum_\rho\left(1-\frac1\rho\right)^n
 \]
 
-no define una suma convergente. Bajo RH cada término tiene módulo uno y los pares no tienden a cero. La combinación de Li
+does not define a convergent sum. Under RH each term has modulus one and the pairs do not tend to
+zero. Li's combination
 
 \[
 \lambda_n
@@ -147,19 +170,23 @@ no define una suma convergente. Bajo RH cada término tiene módulo uno y los pa
 \left[1-\left(1-\frac1\rho\right)^n\right]
 \]
 
-sí se interpreta con la convención simétrica apropiada. Por eso las reducciones estacionarias que aíslan \(O(n)\) deben retirarse tal como están escritas; el primer fallo ocurre antes de cualquier estimación de fase.
+is indeed interpreted with the appropriate symmetric convention. For this reason the stationary
+reductions that isolate \(O(n)\) must be withdrawn as written; the first failure occurs before any
+phase estimate.
 
-La identidad Laguerre en \(\Re s_0>1\) sí es reutilizable porque allí la suma prima converge absolutamente. El límite \(s_0\downarrow1\) debe mantener junta la cancelación entre polo y primos.
+The Laguerre identity at \(\Re s_0>1\) is indeed reusable because there the prime sum converges
+absolutely. The limit \(s_0\downarrow1\) must keep together the cancellation between the pole and the
+primes.
 
-## Corrección del blanco primo: la cota absoluta no es \(\Omega_7\)
+## Correction of the prime target: the absolute bound is not \(\Omega_7\)
 
-Del split declarado
+From the declared split
 
 \[
 \lambda_n=\lambda_n^{\rm arch}+\lambda_n^{\rm prime}
 \]
 
-se sigue exactamente
+it follows exactly that
 
 \[
 \lambda_n\ge0
@@ -167,13 +194,15 @@ se sigue exactamente
 \lambda_n^{\rm prime}\ge-\lambda_n^{\rm arch}.
 \]
 
-No se sigue la equivalencia con
+The equivalence with
 
 \[
-|\lambda_n^{\rm prime}|<\lambda_n^{\rm arch}.
+|\lambda_n^{\rm prime}|<\lambda_n^{\rm arch}
 \]
 
-Cuando \(\lambda_n^{\rm arch}>0\), esta última cota es suficiente y más fuerte, porque también controla oscilaciones primas positivas que no amenazan Li. Con el propio split del manuscrito, el fallo ya aparece en \(n=1\):
+does not follow. When \(\lambda_n^{\rm arch}>0\), this latter bound is sufficient and stronger, because
+it also controls positive prime oscillations that do not threaten Li. With the manuscript's own split,
+the failure already appears at \(n=1\):
 
 \[
 \lambda_1^{\rm arch}
@@ -183,30 +212,31 @@ Cuando \(\lambda_n^{\rm arch}>0\), esta última cota es suficiente y más fuerte
 \lambda_1^{\rm prime}=\gamma\approx0.57722,
 \]
 
-mientras
+while
 
 \[
 \lambda_1\approx0.02310>0.
 \]
 
-El rango excepcional puede determinarse exactamente. La representación
+The exceptional range can be determined exactly. The representation
 
 \[
 \lambda_n^{\rm arch}
 =1-\frac n2(\gamma+\log(4\pi))
-+\sum_{r\ {\rm impar}}
++\sum_{r\ {\rm odd}}
 \left[\left(1-\frac1r\right)^n-1+\frac nr\right]
 \]
 
-tiene diferencias segundas positivas:
+has positive second differences:
 
 \[
 (\lambda_{n+2}^{\rm arch}-\lambda_{n+1}^{\rm arch})
 -(\lambda_{n+1}^{\rm arch}-\lambda_n^{\rm arch})
-=\sum_{r\ {\rm impar}}\frac{(1-1/r)^n}{r^2}>0.
+=\sum_{r\ {\rm odd}}\frac{(1-1/r)^n}{r^2}>0.
 \]
 
-Con \(d_3\in(0.0062,0.0063)\), \(\lambda_7^{\rm arch}\in(-0.356,-0.355)\) y \(\lambda_8^{\rm arch}\in(0.020,0.022)\), más los valores directos de \(n=1,2\), resulta
+With \(d_3\in(0.0062,0.0063)\), \(\lambda_7^{\rm arch}\in(-0.356,-0.355)\) and
+\(\lambda_8^{\rm arch}\in(0.020,0.022)\), plus the direct values for \(n=1,2\), it follows that
 
 \[
 \lambda_n^{\rm arch}<0
@@ -214,13 +244,19 @@ Con \(d_3\in(0.0062,0.0063)\), \(\lambda_7^{\rm arch}\in(-0.356,-0.355)\) y \(\l
 1\le n\le7.
 \]
 
-Por tanto la cota absoluta escrita en las secciones de anatomía y kernel primo no puede ser “la desigualdad exacta” para todo \(n\). Debe reescribirse como una estrategia suficiente para un rango donde la parte arquimediana sea positiva, con los índices restantes tratados aparte. El blanco mínimo de \(\Omega_7\) es el **lower bound unilateral** de la parte prima.
+Therefore the absolute bound written in the anatomy and prime-kernel sections cannot be "the exact
+inequality" for all \(n\). It must be rewritten as a sufficient strategy for a range where the
+archimedean part is positive, with the remaining indices treated separately. The minimal target of
+\(\Omega_7\) is the **one-sided lower bound** of the prime part.
 
-Esta corrección cambia el alcance de los no-go: los cálculos que toman \(|\psi(x)-x|\), suman normas o intentan controlar \(|\lambda_n^{\rm prime}|\) descartan rutas absolutas, pero no descartan el lower bound firmado. Cuando \(\lambda_n^{\rm arch}\ge0\), ese lower bound controla únicamente la excursión negativa; los índices con parte arquimediana negativa requieren tratamiento directo.
+This correction changes the scope of the no-go results: computations that take \(|\psi(x)-x|\), sum
+norms, or try to control \(|\lambda_n^{\rm prime}|\) rule out absolute routes, but do not rule out the
+signed lower bound. When \(\lambda_n^{\rm arch}\ge0\), that lower bound only controls the negative
+excursion; indices with negative archimedean part require direct treatment.
 
-## Corrección de la integración por partes Laguerre
+## Correction of the Laguerre integration by parts
 
-La representación regularizada de la parte prima mantiene la cancelación polo–primos. Defina
+The regularized representation of the prime part keeps the pole–prime cancellation. Define
 
 \[
 f_{n,\varepsilon}(y)
@@ -229,7 +265,7 @@ f_{n,\varepsilon}(y)
 f_{n,\varepsilon}(1)=L_{n-1}^{(1)}(0)=n.
 \]
 
-El polinomio polar del límite pareado es exactamente
+The polar polynomial of the paired limit is exactly
 
 \[
 \sum_{k=1}^n\binom nk\frac{(-1)^{k-1}}{\varepsilon^k}
@@ -239,7 +275,7 @@ El polinomio polar del límite pareado es exactamente
 \int_1^\infty f_{n,\varepsilon}(y)\,dy.
 \]
 
-Entonces
+Then
 
 \[
 \lambda_n^{\rm prime}
@@ -255,7 +291,7 @@ Entonces
 \int_{1^-}^\infty f_{n,\varepsilon}\,d(\psi-y).
 \]
 
-Como \(\psi(1)=0\), el extremo inferior aporta \(-n\). La integración por partes correcta es
+Since \(\psi(1)=0\), the lower endpoint contributes \(-n\). The correct integration by parts is
 
 \[
 \boxed{
@@ -270,7 +306,7 @@ Como \(\psi(1)=0\), el extremo inferior aporta \(-n\). La integración por parte
 }
 \]
 
-o, equivalentemente,
+or, equivalently,
 
 \[
 \lambda_n^{\rm prime}
@@ -280,22 +316,27 @@ o, equivalentemente,
 (\psi(y)-y+1)f'_{n,\varepsilon}(y)\,dy.
 \]
 
-La fórmula impresa en paper 36 usa
+The formula printed in paper 36 uses
 
 \[
 -\lim_{\varepsilon\downarrow0}
 \int_1^\infty(\psi(y)-y)f'_{n,\varepsilon}(y)\,dy,
 \]
 
-que invierte el signo y omite el borde. Ya en \(n=1\) no reproduce \(\lambda_1^{\rm prime}=\gamma\). Si se conserva la definición del manuscrito
+which flips the sign and omits the boundary term. Already at \(n=1\) it does not reproduce
+\(\lambda_1^{\rm prime}=\gamma\). If the manuscript's definition is kept,
 
 \[
 A_n=\int_1^\infty|\psi(y)-y|\,|f'_{n,0}(y)|\,dy,
 \]
 
-la fórmula correcta sólo da \(\lambda_n^{\rm prime}\ge-n-A_n\); la triangulación necesitaría \(A_n+n\le\lambda_n^{\rm arch}\). Como el propio cálculo obtiene \(A_n\asymp0.27n^2\log n\), frente a un presupuesto arquimediano de orden \(n\log n\), el déficit cualitativo \(\Theta(n)\) sobrevive. Sus fórmulas y constantes, sin embargo, deben recalcularse. Toda nueva ruta firmada debe comenzar desde la identidad enmarcada, no desde la versión impresa.
+the correct formula only gives \(\lambda_n^{\rm prime}\ge-n-A_n\); triangulating would require
+\(A_n+n\le\lambda_n^{\rm arch}\). Since the computation itself obtains \(A_n\asymp0.27n^2\log n\),
+against an archimedean budget of order \(n\log n\), the qualitative deficit \(\Theta(n)\) survives. Its
+formulas and constants, however, must be recomputed. Every new signed route must start from the boxed
+identity, not from the printed version.
 
-La normalización asintótica de la envolvente requiere otra corrección. Para este split,
+The asymptotic normalization of the envelope needs another correction. For this split,
 
 \[
 \lambda_n^{\rm arch}
@@ -305,49 +346,57 @@ La normalización asintótica de la envolvente requiere otra corrección. Para e
 +\frac34+O(n^{-1}).
 \]
 
-Por tanto, una afirmación con error \(O(\sqrt n\log n)\) debe conservar el término lineal \(\frac{\gamma-1}{2}n\); no puede absorberlo en ese error. Además, \(|\lambda_n^{\rm prime}|\le c\sqrt n\log n\) sólo puede enunciarse desde \(n\ge2\), porque en \(n=1\) el lado derecho es cero y \(\lambda_1^{\rm prime}=\gamma\). Estas correcciones no rehabilitan la ruta absoluta; fijan el enunciado que habría que comparar con la literatura.
+Therefore, a claim with error \(O(\sqrt n\log n)\) must keep the linear term
+\(\frac{\gamma-1}{2}n\); it cannot absorb it into that error. Moreover,
+\(|\lambda_n^{\rm prime}|\le c\sqrt n\log n\) can only be stated from \(n\ge2\), because at \(n=1\) the
+right-hand side is zero and \(\lambda_1^{\rm prime}=\gamma\). These corrections do not rehabilitate the
+absolute route; they fix the statement that would need to be compared with the literature.
 
-## Alcance de los no-go de paper 36
+## Scope of paper 36's no-go results
 
-Las paredes son filtros de clases concretas, no teoremas universales de imposibilidad. Sobreviven con este alcance:
+The walls are filters for specific classes, not universal impossibility theorems. They survive with
+this scope:
 
-- una positividad construida sólo después de asumir símbolo no negativo es circular;
-- una extensión positiva abstracta no identifica el kernel aritmético requerido;
-- las cotas de magnitud que toleran un cero fuera de línea no pueden probar Li positivo para todo índice;
-- una suma por primos tomada término a término pierde la interferencia que sostiene el signo;
-- la recurrencia de todas las fases examinada tiene un costo demasiado grande para la tasa de detección disponible;
-- una geometría o polarización no construida es una condición suficiente, no un objeto existente.
+- a positivity built only after assuming a nonnegative symbol is circular;
+- an abstract positive extension does not identify the required arithmetic kernel;
+- magnitude bounds that tolerate an off-line zero cannot prove Li positive for every index;
+- a prime sum taken term by term loses the interference that sustains the sign;
+- the examined recurrence across all phases has a cost too large for the available detection rate;
+- an unbuilt geometry or polarization is a sufficient condition, not an existing object.
 
-No sobreviven como afirmaciones universales: “ninguna recurrencia puede funcionar”, “ninguna geometría puede existir” o “todo método clásico está excluido”. Esos cuantificadores no fueron formalizados.
+They do not survive as universal claims: "no recurrence can work", "no geometry can exist" or "every
+classical method is excluded". Those quantifiers were not formalized.
 
-La clausura Castelnuovo/Minkowski contiene además un fallo de signo: X3 se enuncia para clases de norma positiva y luego se aplica a una clase obtenida con norma negativa. M2 y sus consecuencias no quedan demostrados por ese argumento.
+The Castelnuovo/Minkowski closure also contains a sign error: X3 is stated for positive-norm classes
+and then applied to a class obtained with negative norm. M2 and its consequences are not proved by that
+argument.
 
-## Núcleo reutilizable
+## Reusable core
 
-Puede conservarse:
+The following can be kept:
 
-1. la equivalencia formal ARP-P–RH;
-2. la serialización escalar por jets en un punto regular;
-3. el diccionario de Cayley \(w=1-1/\rho\);
-4. la equivalencia completa con el criterio de Li;
-5. las identidades finitas de Cauchy, Pick y Laguerre en sus dominios convergentes;
-6. los cierres de banda con todos sus parámetros fijos;
-7. el blanco primo unilateral
+1. the formal ARP-P–RH equivalence;
+2. the scalar serialization by jets at a regular point;
+3. the Cayley dictionary \(w=1-1/\rho\);
+4. the full equivalence with Li's criterion;
+5. the finite Cauchy, Pick and Laguerre identities in their convergent domains;
+6. the band closures with all their parameters fixed;
+7. the one-sided prime target
    \(\lambda_n^{\rm prime}\ge-\lambda_n^{\rm arch}\);
-8. los no-go restringidos a la clase efectivamente demostrada.
+8. the no-go results restricted to the class actually proved.
 
-Debe repararse o rebajarse antes de citarse:
+The following must be repaired or downgraded before being cited:
 
-1. el añadido compacto de H2;
-2. el cierre cuantitativo H6;
-3. la identificación global de los dos defectos;
-4. la positividad atribuida a \(\Omega_5\);
-5. muestreo, saturación y cascada;
-6. la realización operatorial remitida fuera;
-7. la envolvente que separa una suma divergente;
-8. la identificación incorrecta de \(\Omega_7\) con una cota absoluta;
-9. el signo y el término de borde de la integración por partes Laguerre;
-10. la normalización asintótica de la envolvente y su dominio \(n\ge2\);
-11. la clausura Castelnuovo/Minkowski.
+1. H2's compact addendum;
+2. H6's quantitative closure;
+3. the global identification of the two defects;
+4. the positivity attributed to \(\Omega_5\);
+5. sampling, saturation and cascade;
+6. the operator realization deferred elsewhere;
+7. the envelope that separates a divergent sum;
+8. the incorrect identification of \(\Omega_7\) with an absolute bound;
+9. the sign and boundary term of the Laguerre integration by parts;
+10. the asymptotic normalization of the envelope and its domain \(n\ge2\);
+11. the Castelnuovo/Minkowski closure.
 
-La auditoría lógica completa que respalda este documento está en [`fragments/PAPER36_LOGIC_AUDIT.md`](fragments/PAPER36_LOGIC_AUDIT.md).
+The full logical audit supporting this document is in [`fragments/PAPER36_LOGIC_AUDIT.md`](fragments/PAPER36_LOGIC_AUDIT.md).

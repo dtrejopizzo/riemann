@@ -1,7 +1,6 @@
 # E72.11 -- Doob-Poisson transport form of the commutator target
 
-**Date:** 2026-07-08.
-**Role:** reduce the model commutator equation of E72.10 to a one-source Poisson equation in the
+**Purpose:** reduce the model commutator equation of E72.10 to a one-source Poisson equation in the
 ground-state/Doob coordinates of the prolate model.
 
 ## 0. Starting point

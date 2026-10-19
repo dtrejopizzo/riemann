@@ -1,6 +1,5 @@
 # E73.282 - Source basis saturation audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

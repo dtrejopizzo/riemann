@@ -1,6 +1,6 @@
 # P123.117 — The composition correction as a normalized graph Gram kernel
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY on sufficiently small
+Status: PROVED-IN-REPOSITORY on sufficiently small
 fixed external Bruhat test domains, using P123.109–111. This constructs
 an analytic metric tied to the existing composition cocycle. It does not
 identify the arithmetic determinant line or prove the Weil sign.

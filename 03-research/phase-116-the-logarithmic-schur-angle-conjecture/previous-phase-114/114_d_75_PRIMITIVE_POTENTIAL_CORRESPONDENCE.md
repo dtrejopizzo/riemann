@@ -299,7 +299,7 @@ Suppose it were multiplicative only on `I_prim^meas`:
 
 \[
  T_\kappa(\mu*\nu)
- =(T_\kappa\mu)*(T_\kappa\nu)qquad(\mu,\nu\in\mathfrak I_{\rm prim}).
+ =(T_\kappa\mu)*(T_\kappa\nu)\qquad(\mu,\nu\in\mathfrak I_{\rm prim}).
                                                                   \tag{5.2}
 \]
 

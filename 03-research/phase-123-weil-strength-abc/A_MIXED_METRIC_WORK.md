@@ -1,6 +1,6 @@
 # A — working construction of the trace-product metric
 
-2026-09-07. Research work only; do not insert into paper42 automatically.
+Research work only; do not insert into paper42 automatically.
 The theorem below is local on the fixed external test domains of P123.109.
 The final section records the precise missing arithmetic comparison.
 

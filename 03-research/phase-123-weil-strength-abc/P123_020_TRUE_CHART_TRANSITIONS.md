@@ -1,6 +1,5 @@
 # P123.020 — normalized idele transitions and gauge-generated functors
 
-Date: 2026-09-05.
 
 ## Status
 

@@ -1,6 +1,5 @@
 # E73.244 - DD-local left-coborder audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

@@ -1,7 +1,6 @@
 # E72.33 -- Mellin spectral divisibility and scalar WRL annihilation
 
-**Date:** 2026-07-08.
-**Role:** formulate the only algebraic identity strong enough to prove scalar WRL resonance
+**Purpose:** formulate the only algebraic identity strong enough to prove scalar WRL resonance
 annihilation, and show exactly what it requires.
 
 ## 0. Mellin transform of the scalar kernel

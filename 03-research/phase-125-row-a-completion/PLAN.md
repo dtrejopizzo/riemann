@@ -1,6 +1,6 @@
 # Phase 125 — completion campaign for row A, then B and C
 
-Opened 2026-09-12.  Goal: satisfy the acceptance clauses A.1–A.10 of
+Goal: satisfy the acceptance clauses A.1–A.10 of
 [P123_A_ACCEPTANCE_SPECIFICATION](../phase-123-weil-strength-abc/P123_A_ACCEPTANCE_SPECIFICATION.md)
 in ONE theory on ONE carrier, then B and C.  Row D is not touched here; its
 current state is phase 124.

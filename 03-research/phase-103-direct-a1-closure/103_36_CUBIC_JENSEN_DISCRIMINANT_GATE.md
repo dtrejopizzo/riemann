@@ -99,7 +99,7 @@ sequence
 \]
 Its ratios are
 \[
- x=1,qquad y={9\over10},\qquad z={1\over10},
+ x=1,\qquad y={9\over10},\qquad z={1\over10},
 \]
 so both adjacent PF\(_2\) inequalities are strict.  But
 \[

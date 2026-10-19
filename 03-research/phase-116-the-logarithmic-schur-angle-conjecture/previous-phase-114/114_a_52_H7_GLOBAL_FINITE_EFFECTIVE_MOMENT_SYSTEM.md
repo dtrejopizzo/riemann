@@ -20,7 +20,7 @@ For an effective finite divisor `D=sum_p n_p[p]` on the arithmetic curve,
 put
 
 \[
- N(D)=\prod_p p^{n_p},qquad \deg_{fin}D=\log N(D).                       \tag{1.1}
+ N(D)=\prod_p p^{n_p},\qquad \deg_{fin}D=\log N(D).                       \tag{1.1}
 \]
 
 For a pair `(D_1,D_2)`, write `P=N(D_1)`, `Q=N(D_2)` and define
@@ -38,7 +38,7 @@ intrinsic, and tensor product adds the logarithmic heights.
 Let `T>=1`,
 
 \[
- H_T=\lceil e^T\rceil,qquad
+ H_T=\lceil e^T\rceil,\qquad
  R_T=\left\lceil\log_3(2H_T+1)\right\rceil.                              \tag{2.1}
 \]
 

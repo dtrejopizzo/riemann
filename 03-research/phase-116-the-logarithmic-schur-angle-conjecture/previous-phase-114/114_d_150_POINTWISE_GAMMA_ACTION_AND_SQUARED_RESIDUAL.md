@@ -13,7 +13,7 @@ and no Gamma truncation are needed.
 Let
 
 \[
- b_j=2j+\frac12,qquad
+ b_j=2j+\frac12,\qquad
  (G_\Gamma F)(t)=\sum_{j\ge0}left({2\over b_j}F(t)
  -\int_{-T}^T e^{-b_j|t-s|}F(s)\,ds\right).             \tag{0.1}
 \]
@@ -22,7 +22,7 @@ For a polynomial \(F\) of degree \(d\), define
 
 \[
  H_s(x)=\sum_{j\ge0}{e^{-b_jx}\over b_j^s}
- =2^{-s}e^{-x/2}\Phi(e^{-2x},s,1/4),qquad x>0.         \tag{0.2}
+ =2^{-s}e^{-x/2}\Phi(e^{-2x},s,1/4),\qquad x>0.         \tag{0.2}
 \]
 
 Then, for \(-T<t<T\),
@@ -63,14 +63,14 @@ Put
 where the two terms integrate over \([-T,t]\) and \([t,T]\).  Set
 
 \[
- Q_+(t)=\sum_{r=0}^d{(-1)^rF^{(r)}(t)\over b^{r+1}},qquad
+ Q_+(t)=\sum_{r=0}^d{(-1)^rF^{(r)}(t)\over b^{r+1}},\qquad
  Q_-(t)=\sum_{r=0}^d{F^{(r)}(t)\over b^{r+1}}.          \tag{1.2}
 \]
 
 Direct differentiation gives
 
 \[
- (\partial_t+b)Q_+=F,qquad(-\partial_t+b)Q_-=F.        \tag{1.3}
+ (\partial_t+b)Q_+=F,\qquad(-\partial_t+b)Q_-=F.        \tag{1.3}
 \]
 
 Imposing the two endpoint conditions yields
@@ -125,7 +125,7 @@ square-integrable.
 At \(T=\frac12\log5\), put
 
 \[
- m_0=\log\pi-\psi(1/4),qquad
+ m_0=\log\pi-\psi(1/4),\qquad
  (C_aF)(t)=\widetilde F(t+a)+\widetilde F(t-a).         \tag{3.1}
 \]
 

@@ -1,8 +1,6 @@
 # A faithful Kreĭn-space realization of the Weil quadratic form
 ### with a no-go theorem for the zero-side attack on positivity
 
-**David Alejandro Trejo Pizzo**
-
 *Phase-4 deliverable of the Riemann program. Self-contained. Candid about what is and is not proved.*
 
 ---

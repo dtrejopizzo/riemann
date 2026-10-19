@@ -1,6 +1,6 @@
 # E78.98 - The tail side of `SAFE-GAMMA-IDENT / OUTER-LIMIT` is already closed
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, `Re(s)>1` arithmetic front.  
 **Class:** REDUCCION GENUINA.  
 **What we know after this doc that we did not know before:** in front B the

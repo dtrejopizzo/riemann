@@ -30,7 +30,7 @@ Let
 
 \[
  H_+=H^2(S^1)=\ell^2(\mathbb N_0),\qquad
- S e_j=e_{j+1},qquad 0<r<1,
+ S e_j=e_{j+1},\qquad 0<r<1,
 \]
 
 and attach to the degree-one local factor `(1-rz)^(-1)` its logarithmic

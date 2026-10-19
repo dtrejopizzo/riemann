@@ -1,6 +1,5 @@
 # E73.173 results - eigenline Cauchy-transform audit
 
-Date: 2026-07-14.
 
 Script:
 

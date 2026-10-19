@@ -1,40 +1,40 @@
-# 104_112 — Caja de altura profunda y gate de Markov sin holgura
+# 104_112 — Deep height box and the no-slack Markov gate
 
-**Pregunta.** ¿La forma profunda de `104_75`--`104_76` deja una holgura
-real que pueda explotarse mediante Markov, promedios en \(n\), o una cota
-de densidad positiva pequeña?
+**Question.** Does the deep form of `104_75`–`104_76` leave real slack
+that could be exploited by Markov's inequality, averages in \(n\), or a
+small positive-density bound?
 
-**Resultado.** No. La relajación profunda sí es más débil que A1, pero su
-media logarítmica no contiene un margen intermedio. Para un cero exterior
-\(\rho=\beta+i\gamma\), \(\beta>1/2\), ponga
+**Result.** No. The deep relaxation is indeed weaker than A1, but its
+logarithmic average contains no intermediate margin. For an exterior
+zero \(\rho=\beta+i\gamma\), \(\beta>1/2\), set
 
 \[
  w_\rho={\rho-1\over\rho}=e^{-a_\rho+i\theta_\rho},\qquad
  a_\rho={1\over2}\log {|\rho|^2\over|\rho-1|^2}>0 .
 \]
 
-El cuarteto funcional aporta a \(\lambda_n\)
+The functional quartet contributes to \(\lambda_n\)
 
 \[
  q_n(\rho)=4-4\cosh(na_\rho)\cos(n\theta_\rho).          \tag{1}
 \]
 
-Con el umbral profundo \(S_X=e^{\sqrt X}\), un retorno
-\(\cos(n\theta_\rho)\ge1/2\) y \(n\in[X/2,X]\) fuerza
+With the deep threshold \(S_X=e^{\sqrt X}\), a return
+\(\cos(n\theta_\rho)\ge1/2\) with \(n\in[X/2,X]\) forces
 \[
  q_n(\rho)\le 4-e^{na_\rho}.
 \]
-Por tanto el detector profundo se dispara tan pronto como
+Hence the deep detector trips as soon as
 \[
  a_\rho>2X^{-1/2}+O(X^{-1}\log X).                       \tag{2}
 \]
 
-Como
+Since
 \[
  a_\rho={2\beta-1\over 2\gamma^2+O(1)}
- \qquad(\gamma\to\infty,\ \beta\hbox{ fijo}),             \tag{3}
+ \qquad(\gamma\to\infty,\ \beta\hbox{ fixed}),             \tag{3}
 \]
-la caja equivalente del obstáculo es, salvo constantes absolutas,
+the equivalent obstacle box is, up to absolute constants,
 
 \[
  \boxed{
@@ -42,47 +42,47 @@ la caja equivalente del obstáculo es, salvo constantes absolutas,
  \beta-{1\over2}\gtrsim \gamma^2X^{-1/2}\right\}.}        \tag{4}
 \]
 
-Así, `104_75`--`104_76` no transforman RH en una estimación promedio
-suave: transforman RH en una familia de regiones libres de ceros cuya
-frontera toca \(\Re s=1/2\) cuando \(X\to\infty\). Un solo cero en (4)
-produce una excursión profunda sobre un conjunto sindético de densidad
-logarítmica positiva.
+Thus `104_75`–`104_76` do not turn RH into a smooth average estimate:
+they turn RH into a family of zero-free regions whose boundary touches
+\(\Re s=1/2\) as \(X\to\infty\). A single zero in (4) produces a deep
+excursion on a syndetic set of positive logarithmic density.
 
-Este documento cierra tres rutas:
+This document closes three routes:
 
-1. un Markov sobre la parte positiva de la suma de bajos ceros;
-2. cualquier intento de mejorar solamente una constante
-   \(\limsup\Omega_X\le c\), con \(c>0\);
-3. el uso de verificación finita de ceros como sustituto asintótico.
+1. a Markov bound on the positive part of the sum of low zeros;
+2. any attempt to improve only a constant
+   \(\limsup\Omega_X\le c\), with \(c>0\);
+3. using finite zero verification as an asymptotic substitute.
 
-No prueba el límite profundo, A1 ni RH. Prueba que esta coordenada ya no
-tiene slack cuantitativo oculto: o se excluyen ceros en la caja \(R_X\), o
-el detector falla.
+It does not prove the deep limit, A1, or RH. It proves that this
+coordinate no longer has hidden quantitative slack: either zeros in box
+\(R_X\) are excluded, or the detector fails.
 
 ---
 
-## 1. La caja \(R_X\)
+## 1. The box \(R_X\)
 
-La ecuación (1) es la misma de `104_76`. Si
-\(\cos(n\theta_\rho)\ge1/2\), entonces
+Equation (1) is the same as in `104_76`. If
+\(\cos(n\theta_\rho)\ge1/2\), then
 
 \[
  q_n(\rho)\le4-2\cosh(na_\rho)\le4-e^{na_\rho}.          \tag{5}
 \]
 
-En el observable profundo se permite el error subexponencial de los
-factores no interiores (`104_111`) y la cola alta (`104_76`). Ambos son
-\(\exp(o(\sqrt X))\) o menores frente a \(S_X=e^{\sqrt X}\). Por tanto,
-en el rango \(n\in[X/2,X]\), la condición suficiente y necesaria a escala
-exponencial para que un cuarteto fijo pueda activar el detector es
+In the deep observable, the subexponential error from the non-interior
+factors (`104_111`) and from the high tail (`104_76`) is allowed. Both
+are \(\exp(o(\sqrt X))\) or smaller compared with \(S_X=e^{\sqrt X}\).
+Hence, in the range \(n\in[X/2,X]\), the condition that is both
+sufficient and necessary at exponential scale for a fixed quartet to
+trip the detector is
 
 \[
  {X\over2}a_\rho\ge\sqrt X+o(\sqrt X),                  \tag{6}
 \]
 
-que es (2).
+which is (2).
 
-Por otro lado,
+On the other hand,
 
 \[
  e^{2a_\rho}
@@ -90,106 +90,107 @@ Por otro lado,
 =1+{2\beta-1\over(1-\beta)^2+\gamma^2}.                 \tag{7}
 \]
 
-Cuando \(0<\beta-1/2\le1/2\),
+When \(0<\beta-1/2\le1/2\),
 \[
  {2\beta-1\over 2(\gamma^2+1)}
  \le a_\rho
  \le {2\beta-1\over 2\gamma^2}.                         \tag{8}
 \]
 
-Las constantes de (8) no importan para el gate: combinadas con (2)
-dicen exactamente que la frontera pedida tiene forma
+The constants in (8) do not matter for the gate: combined with (2) they
+say exactly that the required boundary has the form
 \[
  \beta-{1\over2}\asymp\gamma^2X^{-1/2}.                  \tag{9}
 \]
 
-Además, la cota universal de `104_76`,
+Moreover, the universal bound of `104_76`,
 \[
  a_\rho\le {1\over2\gamma^2},                            \tag{10}
 \]
-implica que ningún cero con
-\(\gamma\gg X^{1/4}\) puede producir por sí solo una excursión de tamaño
-\(e^{\sqrt X}\) en grados \(n\le X\). Esto recupera la escala
-\(\gamma\le X^{1/4}\) de `104_76` desde el lado contrario: la escala no es
-artefacto de la prueba de cola, sino la escala exacta del detector.
+implies that no zero with
+\(\gamma\gg X^{1/4}\) can by itself produce an excursion of size
+\(e^{\sqrt X}\) at degrees \(n\le X\). This recovers the scale
+\(\gamma\le X^{1/4}\) of `104_76` from the opposite side: the scale is
+not an artifact of the tail proof, but the exact scale of the detector.
 
-## 2. Markov exacto, sin ganancia
+## 2. Exact Markov, no gain
 
-Sea \(Y=X^{1/4}\), y escriba \(D_n(Y)\) para la parte de bajos ceros con
-el signo orientado de modo que un cuarteto exterior con
-\(\cos(n\theta_\rho)\ge1/2\) contribuya positivamente a \(D_n(Y)\).
-En la línea crítica, cada órbita contribuye a \(\lambda_n\) una cantidad
-no negativa; por tanto \(D_n(Y)\le0\) para todo \(n\) si todos los ceros
-bajos están en la línea.
+Let \(Y=X^{1/4}\), and write \(D_n(Y)\) for the low-zero part, with the
+sign oriented so that an exterior quartet with
+\(\cos(n\theta_\rho)\ge1/2\) contributes positively to \(D_n(Y)\).
+On the critical line, each orbit contributes a non-negative amount to
+\(\lambda_n\); hence \(D_n(Y)\le0\) for every \(n\) if all the low zeros
+are on the line.
 
-Si existe un cuarteto exterior en la caja (4), los retornos
-\(\cos(n\theta_\rho)\ge1/2\) forman un conjunto sindético. En cualquier
-intervalo \([X/2,X]\), su masa armónica tiene una cota inferior positiva,
-y en esos retornos
+If there is an exterior quartet in box (4), the returns
+\(\cos(n\theta_\rho)\ge1/2\) form a syndetic set. In any interval
+\([X/2,X]\), its harmonic mass has a positive lower bound, and at those
+returns
 
 \[
  D_n(Y)_+\ge e^{na_\rho}-O(N(Y)).                       \tag{11}
 \]
 
-Como
+Since
 \[
  N(X^{1/4})\asymp X^{1/4}\log X,                         \tag{12}
 \]
-se obtiene
+one obtains
 
 \[
  \sum_{n\le X}{D_n(Y)_+\over n}
  \gg e^{Xa_\rho/2}-O(X^{1/4}\log X).                    \tag{13}
 \]
 
-La cota de Markov que querría probar el límite profundo tendría escala
+The Markov bound that would want to prove the deep limit would have scale
 \[
  e^{\sqrt X}H_X.                                        \tag{14}
 \]
 
-Las ecuaciones (13)--(14) muestran que no hay régimen intermedio: bajo RH
-la suma positiva es cero; con un cero exterior suficientemente dentro de
-la caja crece más que el umbral. Markov no pierde nada, y por eso no gana
-nada. Cualquier promedio en \(n\) que conserve las excursiones profundas
-vuelve a pedir la exclusión punto a punto de (4).
+Equations (13)–(14) show that there is no intermediate regime: under RH
+the positive sum is zero; with an exterior zero sufficiently deep inside
+the box it grows faster than the threshold. Markov loses nothing, and
+therefore gains nothing. Any average in \(n\) that preserves the deep
+excursions again requires the pointwise exclusion of (4).
 
-## 3. Constantes positivas de densidad no sirven
+## 3. Positive density constants do not work
 
-`104_56` ya registra que, en el modelo abstracto de fases de Fejér, la
-densidad mala forzada por un cero exterior puede hacerse arbitrariamente
-pequeña. Por tanto ningún enunciado de la forma
+`104_56` already records that, in the abstract Fejér phase model, the bad
+density forced by an exterior zero can be made arbitrarily small. Hence
+no statement of the form
 
 \[
  \limsup_{X\to\infty}\Omega_X\le c
  \qquad(c>0)                                            \tag{15}
 \]
 
-puede ser un paso parcial hacia RH. Para excluir todos los ceros
-exteriores hace falta el límite \(c=0\). Mejorar \(1/2\) a \(1/8\), o a
-cualquier constante positiva, no descarta los contraejemplos de fase
-dominante ya construidos.
+can be a partial step toward RH. Excluding all exterior zeros requires
+the limit \(c=0\). Improving \(1/2\) to \(1/8\), or to any positive
+constant, does not rule out the already-built dominant-phase
+counterexamples.
 
-La forma correcta del target profundo es entonces:
+The correct form of the deep target is therefore:
 
 \[
  \boxed{\Omega_X\to0}
  \quad\Longleftrightarrow\quad
- \boxed{\hbox{no hay ceros en }R_X\hbox{ para }X\to\infty}
+ \boxed{\hbox{no zeros in }R_X\hbox{ as }X\to\infty}
  \quad\Longleftrightarrow\quad
  \mathrm{RH}.                                           \tag{16}
 \]
 
-La primera equivalencia es operacional: (4) da la única ventana en la que
-el detector puede fallar después de `104_76` y `104_111`. La segunda es el
-hecho de que, para cualquier cero fijo con \(\beta>1/2\), existe \(X\)
-suficientemente grande tal que cae dentro de \(R_X\).
+The first equivalence is operational: (4) gives the only window in which
+the detector can fail after `104_76` and `104_111`. The second is the
+fact that, for any fixed zero with \(\beta>1/2\), there is a sufficiently
+large \(X\) such that it falls inside \(R_X\).
 
-## 4. Consecuencia estratégica
+## 4. Strategic consequence
 
-La vía profunda sigue siendo válida como criterio, pero no reduce el paso
-final a una estimación de primer momento, segundo momento, Markov,
-Chernoff, ni a una constante de densidad positiva. El siguiente mecanismo,
-si existe, debe ser una desigualdad de exclusión de ceros en la caja
-\(R_X\) usando los primos ordinarios literales y el completamiento de
-Riemann. Debe fallar para los modelos Euler exteriores de `104_78`,
-`104_81`, `104_90` y `104_91`; de lo contrario no distingue la zeta real.
+The deep route remains valid as a criterion, but it does not reduce the
+final step to a first-moment estimate, a second-moment estimate, Markov,
+Chernoff, or a positive density constant. The next mechanism, if it
+exists, must be a zero-exclusion inequality in box \(R_X\) using the
+literal ordinary primes and the Riemann completion. It must fail for the
+exterior Euler models of `104_78`, `104_81`, `104_90`, and `104_91`;
+otherwise it does not distinguish the real zeta.
+</content>

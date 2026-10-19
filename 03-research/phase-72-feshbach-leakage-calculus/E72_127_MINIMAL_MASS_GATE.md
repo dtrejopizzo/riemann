@@ -1,7 +1,6 @@
 # E72.127 -- Minimal mass gate
 
-**Date:** 2026-07-09.
-**Role:** remove the unnecessary bad-subspace burden from the final scalar WRL route.
+**Purpose:** remove the unnecessary bad-subspace burden from the final scalar WRL route.
 
 ## 0. The point
 

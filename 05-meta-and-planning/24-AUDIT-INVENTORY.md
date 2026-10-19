@@ -1,6 +1,6 @@
 # Repository Audit & Reorganization Inventory
 
-**Date:** 2026-06-26
+**Date:** 
 **Scope:** Full audit of `/Users/dt/riemann` for ordering, currency, and English-only language,
 plus the actions taken.
 
@@ -9,7 +9,7 @@ plus the actions taken.
 - **Two empirical/theoretical layers** under-documented by the top-level files: Research Programs
   1–9 (`01-context/RH1…RH9`, 627 trajectories) and Program 10 (`03-research/`, **61 phases**).
 - **Stale high-level docs.** `00-README.md` described a folder layout that no longer existed;
-  `MASTER-PLAN.md` stopped ~P13/phase-4; `PROGRAMA-COMPLETO-*` stopped ~P30/phase-20; the
+  `MASTER-PLAN.md` stopped ~P13/phase-4; `PROGRAMA-COMPLETO-*` stopped ~P30/phase-20-zero-omega-bridge; the
   whitepapers predated the RH1–9 + 61-phase framing.
 - **Duplication.** Root `MASTER-PLAN.md` vs `riemann-program/MASTER-PLAN.md`; root
   `PROGRAMA-COMPLETO-MAPA.md` vs `riemann-program/PROGRAMA-COMPLETO-RESUMEN.md`.

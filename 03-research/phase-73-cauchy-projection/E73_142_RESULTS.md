@@ -1,6 +1,5 @@
 # E73.142 Results - Two-Row Local Divisor Conditioning
 
-Date: 2026-07-12.
 
 Script:
 

@@ -1,6 +1,5 @@
 # E73.114 Results - GATE-73 Box Integration Check
 
-Date: 2026-07-12.
 
 Script:
 

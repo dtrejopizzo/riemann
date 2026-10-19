@@ -1,6 +1,6 @@
 # E78.42 - The denominator shell numerator is an increment area
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

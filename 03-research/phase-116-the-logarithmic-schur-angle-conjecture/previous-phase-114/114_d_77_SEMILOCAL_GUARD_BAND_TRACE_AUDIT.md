@@ -56,7 +56,7 @@ compactly supported multiplicative test `f` put
 
 \[
  A_f=\theta(f),\qquad
- h=f\star f^\vee,qquad A_fA_f^*=\theta(h).                  \tag{1.4}
+ h=f\star f^\vee,\qquad A_fA_f^*=\theta(h).                  \tag{1.4}
 \]
 
 All formulas below are first made with finite-rank/smoothing cutoffs; the

@@ -1,53 +1,53 @@
 ======================================================================
-1. EL NUMERO QUE GOBIERNA TODO EL DIBUJO
+1. THE NUMBER THAT GOVERNS THE WHOLE DRAWING
 ======================================================================
   113 * 2pi = 709.999939711
   710       = 710
   delta     = 710 - 113*2pi = +6.028871e-05 rad
-  Avanzar p en 710 unidades gira el punto exactamente delta radianes.
-  delta NO depende del rayo: por eso los rayos son congruentes.
+  Advancing p by 710 rotates the point by exactly delta radians.
+  delta does NOT depend on the ray: hence the rays are congruent.
 
 ======================================================================
-2. LOS 280 RAYOS SON LA MISMA CURVA (prediccion sin ajustar nada)
+2. THE 280 RAYS ARE THE SAME CURVE (prediction with nothing fitted)
 ======================================================================
-  prediccion:  dtheta(p) = delta*(p - p mod 710)/710
-  desvio maximo sobre los 100000 primos: 3.901e-11 rad
-  (el ancho de un rayo es 2pi/710 = 8.850e-03 rad — 2.3e+08 veces mayor)
-  No es que se parezcan: coinciden a precision de maquina.
+  prediction:  dtheta(p) = delta*(p - p mod 710)/710
+  maximal deviation over the 100000 primes: 3.901e-11 rad
+  (the width of a ray is 2pi/710 = 8.850e-03 rad, 2.3e+08 times larger)
+  They do not merely resemble each other: they agree to machine precision.
 
 ======================================================================
-3. CUANTO SE DOBLAN
+3. HOW MUCH THEY BEND
 ======================================================================
-  al borde del dibujo (p = 1299709):
-     giro acumulado = 0.110363 rad = 6.323 grados
-     ancho de un rayo = 0.008850 rad
-     => 12.47 anchos de rayo, y en el mismo sentido para los 280
-  Eso es exactamente 'todos tienen la misma onda y al final se doblan'.
+  at the edge of the drawing (p = 1299709):
+     accumulated turn = 0.110363 rad = 6.323 degrees
+     width of a ray = 0.008850 rad
+     => 12.47 ray widths, in the same direction for all 280
+  This is exactly 'they all have the same wave and bend at the end'.
 
 ======================================================================
-4. CUANTOS RAYOS, Y CUAL ES LA UNICA PARTE QUE SI ES DE LOS PRIMOS
+4. HOW MANY RAYS, AND THE ONLY PART THAT IS ABOUT THE PRIMES
 ======================================================================
-  clases mod 710 ocupadas por los primos: 283
+  classes mod 710 occupied by primes: 283
   phi(710) = 280   (710 = 2*5*71)
-  ocupadas que NO son coprimas con 710: [2, 5, 71]  (los propios 2, 5, 71)
-  Con TODOS los enteros habria 710 rayos.  Los primos usan 280:
-  los 430 que faltan son las clases con factor comun con 710.
-  Eso -- y solo eso -- es lo que el dibujo dice de los primos.
-  Que los 280 brillen parejo es el teorema de Dirichlet.
+  occupied classes NOT coprime to 710: [2, 5, 71]  (the primes 2, 5, 71 themselves)
+  With ALL integers there would be 710 rays.  The primes use 280:
+  the 430 missing ones are the classes sharing a factor with 710.
+  That -- and only that -- is what the drawing says about the primes.
+  That the 280 shine evenly is Dirichlet's theorem.
 
 ======================================================================
-5. POR QUE EL DIBUJO CAMBIA DE FAMILIA SEGUN EL RADIO
+5. WHY THE DRAWING CHANGES FAMILY WITH THE RADIUS
 ======================================================================
-     6/1    delta=-2.8319e-01  se desarma en r ~           22
-    19/3    delta=+1.5044e-01  se desarma en r ~           42
-    25/4    delta=-1.3274e-01  se desarma en r ~           47
-    44/7    delta=+1.7703e-02  se desarma en r ~          355
-   333/53   delta=-8.8213e-03  se desarma en r ~          712
-   710/113  delta=+6.0289e-05  se desarma en r ~      104,218
-  el dibujo llega a r = 1,299,709
-  Por eso: cerca del centro mandan las familias 6 y 44 (se desarman
-  enseguida), afuera manda la de 710, y recien pasando r ~ 10^5 la de
-  710 empieza a doblarse visiblemente.  Nada de esto es de los primos:
-  son los convergentes de 2pi.
+     6/1    delta=-2.8319e-01  breaks up at r ~           22
+    19/3    delta=+1.5044e-01  breaks up at r ~           42
+    25/4    delta=-1.3274e-01  breaks up at r ~           47
+    44/7    delta=+1.7703e-02  breaks up at r ~          355
+   333/53   delta=-8.8213e-03  breaks up at r ~          712
+   710/113  delta=+6.0289e-05  breaks up at r ~      104,218
+  the drawing reaches r = 1,299,709
+  Hence: near the centre the families 6 and 44 dominate (they break up
+  quickly), further out the family 710 dominates, and only beyond r ~ 10^5
+  does 710 start to bend visibly.  None of this is about the primes:
+  these are the convergents of 2pi.
 
-[fig] /home/trabajo/Documentos/research/riemann/riemann/calculos-adicionales/115_10_fig_rayos.png
+[fig] 07-calculos-adicionales/115_10_fig_rayos.png

@@ -1,6 +1,6 @@
 # E77.7d - Fixed-L Operator Realization
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Verdict
 

@@ -1,6 +1,6 @@
 # P123.046 — One generic Hilbert realization for all finite boundary charts
 
-Date: 2026-09-05. Status: PROVED for the explicit unitary identifications
+Status: PROVED for the explicit unitary identifications
 and finite-place cutoff character on one Hilbert space. This is not yet
 an excisive categorical shadow or its nuclear comparison.
 

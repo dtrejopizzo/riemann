@@ -80,7 +80,7 @@ the **vacuous** global bound. With the corrected local bound:
 ---
 
 ## 5. MANDATORY next step: audit *this* (Day 20) before believing it
-Per the 20-day discipline — every pillar gets the hostile audit, *especially* an optimistic one. The points
+Per the 20-day discipline — every pillar gets an audit, *especially* an optimistic one. The points
 **I** would attack in Day-20:
 1. **IBP boundary/tail terms.** $F\in PW_d$ has **non-compact** support (decays $\sim1/t$). Verify
    $[|F|^2 S]_{\pm\infty}\to0$ and the tail $\int_{|t-T_0|>R}|(|F|^2)'||S|$ is genuinely lower order — *not*
@@ -99,5 +99,5 @@ Per the 20-day discipline — every pillar gets the hostile audit, *especially* 
 to the local IBP+Bernstein+Selberg bound shows B-2 needs only a **finite-constant** quadrature comparison,
 which is **unconditional** (no Montgomery). So the program likely lands on **unconditional B-2** (a faithful
 semibounded Weil realization, RH-independent — the §6 prize), *not* an RH-reformulation. **But this is now
-the load-bearing optimistic claim and must survive its own hostile audit (§5) before being written as a
+the load-bearing optimistic claim and must survive its own audit (§5) before being written as a
 theorem.** Next: execute that audit, points 1–4.

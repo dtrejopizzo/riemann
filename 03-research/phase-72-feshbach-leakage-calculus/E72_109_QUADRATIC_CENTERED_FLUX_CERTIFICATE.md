@@ -1,7 +1,6 @@
 # E72.109 -- Quadratic centered flux certificate
 
-**Date:** 2026-07-09.
-**Role:** convert the centered spectral divergence gate into explicit finite quadratic forms.
+**Purpose:** convert the centered spectral divergence gate into explicit finite quadratic forms.
 
 ## 0. Key observation
 

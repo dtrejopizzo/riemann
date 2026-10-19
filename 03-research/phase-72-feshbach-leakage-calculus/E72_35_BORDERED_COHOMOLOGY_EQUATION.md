@@ -1,7 +1,6 @@
 # E72.35 -- Bordered cohomology equation for Mellin divisibility
 
-**Date:** 2026-07-08.
-**Role:** turn the corrected cofactor criterion E72.34 into the actual finite equation that must be
+**Purpose:** turn the corrected cofactor criterion E72.34 into the actual finite equation that must be
 solved.
 
 ## 0. Corrected target

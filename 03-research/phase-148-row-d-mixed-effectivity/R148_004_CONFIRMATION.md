@@ -1,11 +1,10 @@
 # R148.004 — Confirmation pass, phase 148
 
-*Auditor: Opus 5 (1M), same adversarial role as `R148_002_HOSTILE_AUDIT.md`. Date 2026-09-14.
-Inputs re-read in full: `R148_003_BUILDER_ROUND2.md` (490 lines), the **Corrections of record** block
-appended to `R148_001_BUILDER_ROUND1.md` (lines 613–641), `README.md`. Script
+Inputs re-read in full: `R148_003_ROUND2.md` (490 lines), the **Corrections of record** block
+appended to `R148_001_ROUND1.md` (lines 613–641), `README.md`. Script
 `scripts/certify_mixed_support.py --fast` re-run on the patched version; output reproduced below.
-Cross-checks against `04-papers/46-row-d-the-sign/main.md` (Def. 11.1/(11.1), Lemma 11.2, Lemma 19.17,
-Prop. 19.18, Thm 19.23) and `03-research/phase-41-build-G2/125-forma-interseccion-cuadrado.md`
+Cross-checks against `04-papers/46-intersection-frame-defect/archive/main.md` (Def. 11.1/(11.1), Lemma 11.2, Lemma 19.17,
+Prop. 19.18, Thm 19.23) and `03-research/phase-41-build-G2/125-construction-of-the-intersection-form.md`
 (lines 106–109, 149–160 verified verbatim).*
 
 ---
@@ -60,7 +59,7 @@ the blocks exists; it is not a route, because for nonnegative data the collapse 
 
 **D.56.2′ / D.56.3⁗ / D.56.4″ (finite rank, A-2).** The coverage gap is closed. D.56.2′ is correct —
 `n` genuinely plays no role, only the order of quantifiers. D.56.3⁗ is correct and its (i) is properly
-weakened: the builder notices, correctly and without being told, that **at finite rank the sign
+weakened: we notice, correctly and without being told, that **at finite rank the sign
 hypothesis is no longer available** (a general element of `(R)` has coefficients of both signs, so
 `q_w = Σφ_iψ_i(·+w)` need not be nonnegative even for nonnegative generators), and falls back to
 integrability. That is the right observation and it was not in my audit. (iii)'s converse — `(⊛P)(w) < 0`
@@ -154,7 +153,7 @@ Re-run of the patched script (`--fast`, `mp.dps = 25`) reproduces part (a) exact
 
 * **The enclosure is now asserted in the code** (`TAIL = 1/cosh(mpf("0.8"))`; `assert TAIL < s1`),
   printed, and no longer depends on a quoted digit. **R-7 first half: CONFIRMED.** I also confirm the
-  builder's correction of *my* arithmetic: `1/cosh(0.8) = 0.7476999182374196157699898`, not the
+  the correction of *my* arithmetic: `1/cosh(0.8) = 0.7476999182374196157699898`, not the
   `0.748103…` I wrote in `R148_002` §4. My value was wrong; theirs is right; the enclosure holds either
   way, and the code now computes it rather than trusting either of us. Recorded so the corpus carries
   the right constant.
@@ -192,7 +191,7 @@ overreach I was most concerned would survive by inertia in the README headline, 
 nonzero; (γ) `T_a`-invariance, so the form is a property of the square and not of a chart; (δ) an
 unambiguous degree. The three-way disposition is right and, importantly, **is bounded**:
 
-* phase 148 answers **no for `𝒦' = (T) ⊕ (R)` only**, on (β) and (δ) — *"a statement about one `𝒦'`, and
+*Phase 148 answers **no for `𝒦' = (T) ⊕ (R)` only**, on (β) and (δ) — *"a statement about one `𝒦'`, and
   about no other"*;
 * doc 125 answers **yes on (β),(γ) for the compact toy**, `f_1·f_2 = 1` integral and `T_a`-invariant, and
   **no on (δ) in the regime that matters**;
@@ -229,7 +228,7 @@ which is the right basis, and the same sentence now appears in §R1.4, §R10 and
    convergent `χ` at `w`. Same content for the use made of it; the wording should match the proof.
 
 None of these three touches D.56.3′, D.56.3″, D.56.3‴, D.56.4″, D.56.4′, D.56.6, or any label. They are
-recorded for the lead's round, not as conditions on acceptance.
+recorded for that round, not as conditions on acceptance.
 
 **Also confirmed clean:** no covert positivity assertion anywhere (W-a holds — I re-checked D.55.5′(iv),
 D.56.4′ and §R10, the three places a repair could have introduced one); the `Ξ_a` epistemology is stated

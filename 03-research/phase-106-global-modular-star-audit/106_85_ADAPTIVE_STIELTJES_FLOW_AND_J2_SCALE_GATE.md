@@ -353,7 +353,7 @@ Substitution in (4) gives the exact literal scalar polynomial
  \mathcal F_{\mathcal B}(q^*)
  :={}&R^2-\delta(R+C)\\
  ={}&\sum_{m,n\in\mathcal B}w_mw_n
- \left{
+ \left\{
  e_me_n-\delta\langle z_m,A^{-1}z_n\rangle
  \right}
  -\delta\sum_{m\in\mathcal B}w_me_m.

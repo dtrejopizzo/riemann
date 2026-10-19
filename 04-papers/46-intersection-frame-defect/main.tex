@@ -1,0 +1,935 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage[margin=1.08in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[hypertexnames=false]{hyperref}
+\hypersetup{hidelinks}
+\usepackage[final,expansion=false]{microtype}
+\usepackage{url}
+\setlength{\parskip}{4pt plus 1pt}
+\emergencystretch=2.5em
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{mainthm}{Theorem}
+\renewcommand{\themainthm}{\Alph{mainthm}}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Rel}{\operatorname{Re}}
+\newcommand{\Iml}{\operatorname{Im}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\DW}{\mathcal D^{W}}
+\newcommand{\PW}{\mathcal P^{W}}
+\newcommand{\Nr}{\mathcal N}
+\newcommand{\Ef}{\mathcal E}
+\newcommand{\I}{\mathcal I}
+\newcommand{\dg}{\deg}
+\newcommand{\Kc}{\kappa_C}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+
+\title[An intersection frame for the explicit formula]
+{An Intersection Frame for the Explicit Formula:\\
+Hodge-Index Transfer, a Frame Defect Theorem\\
+and a Function-Field Model}
+
+\author{David Alejandro Trejo Pizzo}
+\thanks{Independent Researcher. \texttt{dtrejopizzo@gmail.com}.}
+
+\date{\today}
+
+\begin{abstract}
+Let $\DW$ be the space of real $C^2$ functions on $\R$ which, with their first two derivatives, decay
+like $e^{-(1+\varepsilon)|t|}$, and let $\I$ be the symmetric bilinear form on $\DW$ defined by
+Weil's explicit formula, so that $\I(F,G)=\Phi_F(0)\Phi_G(1)+\Phi_F(1)\Phi_G(0)-\sum_\rho\Phi_F(\rho)\Phi_G(1-\rho)$
+with $\Phi_F(s)=\int F(t)e^{(s-1/2)t}\,dt$. We equip $(\DW,\I)$ with the structure Weil's proof of the
+Riemann hypothesis for curves uses on $C\times C$: a degree, an effective cone (pointwise nonnegative
+functions), a radical, an ample class and an affine duality. The class $K$ of Riemann's integral
+representation in P\'olya's normalization ($\Phi_K=\xi$) is a degree-computing ample class, the
+radical is cut out by the polar and zero data, and $\DW$ splits orthogonally into a hyperbolic plane
+and the primitive sector. Hartshorne's proof of the Hodge index theorem transfers verbatim:
+a function $h^0$ with a positivity clause, an effectivity clause and a Riemann--Roch inequality would
+give $\I(F,F)\le0$ on every primitive compactly supported test. We prove that no such function exists.
+The obstruction is a cosh inequality on the effective cone, with sharp constant
+$0.99846\ldots<1$ at the first zero of $\xi$, which produces explicit classes of degree $\ge325$ of
+positive self-intersection with no effective representative; the proof is unconditional apart from
+the verified simplicity of the first zero. The same theorem holds, with defect $1-\sqrt{7/11}$ and a
+witness in degree $3$, for an elliptic curve over $\F_2$, where every object of the frame exists and
+the Hodge index theorem is true. In the curve model the frame's effective cone is exactly the cone
+on the graphs of the Frobenius powers, the class $K$ is half the ample ruling class, and the missing
+effective classes are the graphs of sums $m+n\pi$ and the fibres.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+
+%======================================================================
+\section{Introduction}\label{sec:intro}
+
+Weil's proof of the Riemann hypothesis for a curve $C$ over a finite field runs on the surface
+$C\times C$: Riemann--Roch and Serre duality make every class of positive self-intersection and
+positive degree big, and the Hodge index theorem follows \cite[Ch.~V, 1.9]{Hartshorne}. Weil's
+explicit formula over $\Q$ supplies a quadratic form with the same polar shape. This paper builds
+around that form the minimal intersection-theoretic structure the surface proof consumes, proves
+what can be proved about it, and shows exactly where it fails. The failure is a property of the
+frame, not of the zeros: it occurs verbatim on a curve over $\F_q$.
+
+\subsection{The frame}
+Write $\Phi_F(s)=\int_\R F(t)e^{(s-\frac12)t}\,dt$ and let $\rho$ run over the zeros of
+$\xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ with multiplicity. On the Weil class $\DW$
+(Definition~\ref{def:DW}) the explicit formula defines a symmetric bilinear form $\I$ with
+\[
+\I(F,G)=\Phi_F(0)\Phi_G(1)+\Phi_F(1)\Phi_G(0)-\sum_\rho\Phi_F(\rho)\Phi_G(1-\rho),
+\]
+the zero sum absolutely convergent (Theorem~\ref{thm:comparison}); the definition itself is by the
+arithmetic side and names no zero. The degree is $\dg F=\Phi_F(0)+\Phi_F(1)=\int F(t)\,2\cosh(t/2)\,dt$,
+a class is \emph{primitive} if $\Phi_F(0)=\Phi_F(1)=0$, \emph{effective} if $F\ge0$ pointwise, and
+$\Nr$ denotes the radical of $\I$.
+
+\subsection{Main results}
+\begin{mainthm}[structure; Sections~\ref{sec:polya}--\ref{sec:degree}]\label{thmA}
+Let $K(t)=\sum_{n\ge1}(4\pi^2n^4e^{9t/2}-6\pi n^2e^{5t/2})e^{-\pi n^2e^{2t}}$. Then $K\in\DW$, $K>0$,
+$\Phi_K=\xi$, $\dg K=1$, $\I(F,2K)=\dg F$ for all $F$, and $\I(K,K)=\frac12$. The radical is
+$\Nr=\{N:\Phi_N(0)=\Phi_N(1)=0,\ \Phi_N(\rho)=0\ \forall\rho\}$; it is strictly larger than the ideal
+$\Pi K\star\DW$ and meets $C_c^\infty(\R)$ only in $0$. With $K_{\rm odd}=(2\sinh\frac a2)^{-1}(\tau_aK-\tau_{-a}K)$,
+$\DW=\mathrm{span}(K,K_{\rm odd})\oplus\PW$ is an $\I$-orthogonal sum of a hyperbolic plane and the
+primitive sector. For every $F$ there is $C_F<\infty$ with $|\I(E,F)|\le C_F\dg E$ for all effective
+$E$; hence $2K$ and every $F+2mK$, $m>C_F$, are ample.
+\end{mainthm}
+
+\begin{mainthm}[Hodge-index transfer; Theorem~\ref{thm:transfer}]\label{thmB}
+Suppose $h^0:\DW\to\R_{\ge0}$ satisfies \textup{(b$'$)} if $h^0(E)>0$ then $E\equiv E'\bmod\Nr$
+for some effective $E'\not\equiv0$, and \textup{(c)} $h^0(E)+h^0(K-E)\ge\frac12\I(E,E)-\frac12\I(E,K)+\chi$
+for a constant $\chi$. Then $\I(F,F)\le0$ for every real primitive $F\in C_c^\infty(\R)$.
+\end{mainthm}
+
+\begin{mainthm}[frame defect; Theorems~\ref{thm:defect}, \ref{cor:smalldomain}]\label{thmC}
+Given that the first zero $\rho_1=\frac12+i\,14.1347\ldots$ of $\xi$ is simple and the only zero
+with $|\Iml\rho|\le21$ in the upper half-plane, no function $h^0$ as in Theorem~\ref{thmB} exists,
+for any $\chi$. The same holds for $h^0$ defined only on $C_c^\infty(\R)\oplus\R K$, or on
+$\mathcal P^\infty_c\oplus\R K$. The witness is explicit: for
+$F_0(u)=e^{-u^2/18}\sin(\gamma_1u)$, the class $E=53.119\ldots F_0+400K$ has $\dg E=400$,
+$\I(E,E)=220>\frac12\dg E$, and no effective representative modulo $\Nr$.
+\end{mainthm}
+
+The mechanism is the cosh inequality (Lemma~\ref{lem:cosh}): for effective $E'$ and every $\gamma,\theta$,
+$|\int E'(u)\cos(\gamma u+\theta)\,du|\le\frac12s(\gamma,\theta)\dg E'$ with
+$s(\gamma,\theta)=\sup_u|\cos(\gamma u+\theta)|/\cosh(u/2)$, and $s(\gamma_1,\pi/2)=0.998460\ldots<1$,
+whereas the Riemann--Roch inequality (c), through the affine symmetry $E\mapsto K-E$, forces
+$h^0(E)>0$ on all classes of degree $>1$ with $\frac12\I(E,E)-\frac14\dg E+\chi>0$. The effective cone
+is a moment cone and is strictly thinner than the positive cone.
+
+\begin{mainthm}[the curve model; Section~\ref{sec:curve}]\label{thmD}
+Let $C/\F_q$ be a curve of genus $g$ with distinct Weil numbers. The frame transcribes to functions
+on the lattice $\Z$; the form becomes the intersection form on $\sum_n\R\,q^{-|n|/2}\Gamma_{q^n}\subseteq
+NS(C\times C)_\R$, with Gram matrix $q^{-|a-b|/2}N_{|a-b|}$ given by the point counts; the frame's
+effective cone is the cone on the normalized Frobenius graphs and their transposes; the class with
+$\Phi=\xi_C$, normalized to degree $1$, is $\frac12(F_1+F_2)$, half the ample ruling class. The frame
+defect theorem holds on $C$. For $E/\F_2:y^2+xy=x^3+1$ the sharp constant is $\sqrt{7/11}$ and the
+witness has degree $3$; the section cone has constant $1$, and the ruling $F_1$ is effective but not
+in the frame's cone.
+\end{mainthm}
+
+Section~\ref{sec:xia} treats $\Xi_a(s)=\xi(s+a)\xi(s-a)$, $0<a<\frac12$, which has the same frame
+and zeros off the line: there no $h^0$ exists either, for a different reason
+(Theorem~\ref{thm:xia-noh}). Together with Theorem~\ref{thmD} this locates the defect: it is present
+whether the Hodge index inequality is false ($\Xi_a$), true ($C/\F_q$) or open ($\xi$).
+
+\subsection{Relation to other work}
+The frame follows Weil's proof for curves \cite{Weil48} in Hartshorne's formulation \cite{Hartshorne};
+the explicit formula is Weil's \cite{Weil52}, in the form of \cite{Barner1981} on larger classes.
+The comparison identity on compactly supported tests is \cite[Thm.~9.6]{Paper45}, and the
+construction of primitive tests from an off-line zero is \cite[Thm.~F]{Paper45}. This paper is
+independent of \cite{Paper47}. That paper studies the truncated Weil form on a finite window and
+the positivity of its bottom on the primitive subspace, by dual certificates and finite reductions;
+the present paper studies the extended form on the non-compactly supported class $\DW$ and asks
+which intersection-theoretic structure it carries. The two meet only in the comparison identity:
+on primitive compactly supported tests $\I(F,F)=-\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$, which is the
+form whose window positivity \cite{Paper47} studies. No result of either paper is used in the other,
+and nothing here bears on the positivity problem of \cite{Paper47}.
+
+\subsection{Conventions}
+Status labels: \emph{proved} (here), \emph{cited} (classical, with source), \emph{conditional}
+(on a named hypothesis). Computer-certified constants are produced in multiple precision
+(\texttt{mpmath}, 40 digits) and are stated with their margins. Classical inputs:
+\begin{itemize}
+\item[(E1)] $\zeta'/\zeta(s)=-\sum_n\Lambda(n)n^{-s}$, absolutely convergent for $\Rel s>1$.
+\item[(E2)] $\xi$ is entire, $\xi(s)=\xi(1-s)$, $\xi(0)=\xi(1)=\frac12$, its zeros are the nontrivial
+zeros of $\zeta$ with multiplicity, $0<\Rel\rho<1$, and $\zeta(s)\ne0$ for $\Rel s\ge1$.
+\item[(E3)] $\xi$ has order $1$ with its Hadamard product; $N(T+1)-N(T)=O(\log T)$; $\xi'/\xi(\sigma\pm iX_j)=O(\log^2X_j)$
+on suitable heights $X_j\in[j,j+1]$; $N(T)=O(T\log T)$, so $\sum_\rho|\gamma_\rho|^{-2}<\infty$
+\cite[Ch.~15--17]{Davenport2000}.
+\item[(E4)] Stirling's formula for $\psi$ in vertical strips.
+\item[(E5)] Fourier inversion; (E6) the Paley--Wiener theorem.
+\item[(X1)] P\'olya's form of Riemann's integral: $\xi(\frac12+i\tau)=\int K(t)e^{i\tau t}dt$ with $K$
+even \cite[\S10.1]{Titchmarsh1986}, \cite{Polya1926}.
+\item[(X2)] Jensen's formula: an entire function of exponential type has $O(r)$ zeros in $|s|\le r$.
+\item[(X3)] Riemann--von Mangoldt asymptotics and a positive proportion of simple zeros
+\cite{Conrey1989} (Levinson's $\frac13$ \cite{Levinson1974} suffices).
+\item[(X4)] The first zero: $\rho_1=\frac12+i\gamma_1$, $\gamma_1=14.134725141734693790\ldots$, is simple,
+and $\xi$ has no other zero with $0<\Iml\rho\le21$ \cite{PlattTrudgian2021}; and Trudgian's explicit
+bound for $S(T)$ \cite{Trudgian2014}, which gives $\#\{\gamma\in[T,T+1]\}\le10\log T$ for $T\ge21$.
+\item[(X5)] $\sum_\rho\Rel(1/\rho)=1+\frac12\gamma_E-\frac12\log4\pi$ \cite[Ch.~12]{Davenport2000}.
+\item[(X6)] Hardy's theorem: $\xi$ has infinitely many zeros on $\Rel s=\frac12$ \cite{Hardy1914}.
+\item[(X7)] For curves over $\F_q$: rationality, functional equation and the Riemann hypothesis for
+$Z_C$; the Lefschetz relations $\Gamma_{q^m}\cdot\Delta=N_m$,
+$\Gamma_{q^m}\cdot\Gamma_{q^n}=q^nN_{m-n}$, $\Gamma_{q^m}^t\cdot\Gamma_{q^n}=N_{m+n}$ ($m\ge n\ge0$);
+Tate's theorem on $NS(E\times E)$ \cite{Weil48,Tate1966}.
+\item[(X8)] Intersection theory, Riemann--Roch, Serre duality, the Hodge index theorem and the
+bigness criterion on a smooth projective surface \cite[Ch.~V]{Hartshorne}, \cite[\S2.2]{Lazarsfeld}.
+\end{itemize}
+
+%======================================================================
+\section{The Weil class and the extended form}\label{sec:form}
+
+\begin{definition}\label{def:DW}
+$\DW$ is the space of real $g\in C^2(\R)$ for which there is $\varepsilon>0$ with
+$g^{(j)}(t)=O(e^{-(1+\varepsilon)|t|})$ for $j=0,1,2$. Put $g^\vee(t)=g(-t)$, $\tau_ag=g(\cdot-a)$,
+$\star$ for convolution and $\Pi=-\partial_t^2+\frac14$.
+\end{definition}
+
+\begin{lemma}[proved]\label{lem:DW}
+(i) $\DW$ is a commutative real $\star$-algebra, stable under $\vee$ and every $\tau_a$, and contains
+$C_c^\infty(\R)$. (ii) For $g\in\DW$, $\Phi_g$ is holomorphic on
+$S_\varepsilon=\{-\frac12-\varepsilon<\Rel s<\frac32+\varepsilon\}$ and
+\begin{equation}\label{eq:decay}
+|\Phi_g(s)|\le\frac{C_2(g,\sigma)}{|s-\frac12|^2},\qquad C_2(g,\sigma)=\int|g''(t)|e^{(\sigma-\frac12)t}dt,
+\end{equation}
+uniformly on closed substrips. (iii) $\Phi_{g^\vee}(s)=\Phi_g(1-s)$, $\Phi_{\tau_ag}(s)=e^{(s-\frac12)a}\Phi_g(s)$,
+$\Phi_{g\star h}=\Phi_g\Phi_h$, and $\Phi_{\Pi g}(s)=s(1-s)\Phi_g(s)$ when $g^{(3)},g^{(4)}$ also obey the decay.
+(iv) $\ker\Pi\cap\DW=0$.
+\end{lemma}
+\begin{proof}
+(i) If $|g|,|h|\le Ce^{-(1+\varepsilon)|t|}$ then $|g\star h|(t)\le C^2(1+|t|)e^{-(1+\varepsilon)|t|}$, and the
+derivatives fall on one factor. (ii) Absolute convergence and Morera; two integrations by parts, whose
+boundary terms vanish by the decay for $j=0,1$, give $\Phi_g(s)=(s-\frac12)^{-2}\int g''(t)e^{(s-\frac12)t}dt$.
+(iii) Substitutions, Fubini and integration by parts. (iv) $\ker\Pi=\mathrm{span}\{e^{\pm t/2}\}$.
+\end{proof}
+
+\begin{theorem}[explicit formula on $\DW$; proved]\label{thm:EF}
+Let $h\in\DW$ be real and even. Then $\sum_\rho\Phi_h(\rho)$ converges absolutely and
+\begin{equation}\label{eq:EF}
+\sum_\rho\Phi_h(\rho)=\Phi_h(0)+\Phi_h(1)+\frac1{2\pi}\int_\R\hat h(\tau)\Big[\Rel\psi\big(\tfrac14+\tfrac{i\tau}2\big)-\log\pi\Big]d\tau
+-\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\big[h(\log n)+h(-\log n)\big],
+\end{equation}
+with $\hat h(\tau)=\Phi_h(\frac12+i\tau)$ and the prime sum absolutely convergent.
+\end{theorem}
+\begin{proof}
+This is the contour proof of \cite[Thm.~9.4]{Paper45}, written there for $C_c^\infty$ tests, checked
+against Definition~\ref{def:DW}. Integrate $\Phi_h\,\xi'/\xi$ over rectangles with vertical sides
+$\Rel s=\frac32$ and $\Rel s=-\frac12$, both inside $S_\varepsilon$, and heights $\pm X_j$ from (E3).
+By \eqref{eq:decay} and (E3), the horizontal sides carry $O(X_j^{-2}\log^2X_j)$; by $\Phi_h(1-s)=\Phi_h(s)$
+($h$ even) and $\xi(s)=\xi(1-s)$ the left side reflects onto the right. On $\Rel s=\frac32$ write
+$\xi'/\xi=\frac1s+\frac1{s-1}+\frac12\psi(\frac s2)-\frac12\log\pi+\zeta'/\zeta$. The two poles give
+$\Phi_h(0)+\Phi_h(1)$. The archimedean part is holomorphic and $O(\log|s|)$ in $\Rel s>0$ (E4), and is
+shifted to $\Rel s=\frac12$. For the prime part, $\sum\Lambda(n)n^{-3/2}<\infty$ (E1) licenses Fubini;
+$\Phi_h(s)n^{-s}$ is holomorphic on $\frac12\le\Rel s\le\frac32$ with horizontals $O(X_j^{-2})$
+uniformly in $n$, and (E5) yields $n^{-1/2}h(-\log n)$, doubled by evenness. The prime sum converges
+since $|h(\pm\log n)|\le Cn^{-1-\varepsilon}$, and the zero sum since $|\Phi_h(\rho)|=O(|\gamma_\rho|^{-2})$
+by \eqref{eq:decay} and (E3).
+\end{proof}
+
+Write $\langle h,\mathsf W\rangle$ for the prime sum minus the archimedean integral in
+\eqref{eq:EF}, so that $\langle h,\mathsf W\rangle=\Phi_h(0)+\Phi_h(1)-\sum_\rho\Phi_h(\rho)$.
+
+\begin{definition}\label{def:form}
+For real $X\in\DW$ the function $X\star X^\vee$ is real and even; put $Q(X):=\langle X\star X^\vee,\mathsf W\rangle$ and
+$\I(F,G):=\frac14[Q(F+G)-Q(F-G)]$.
+\end{definition}
+
+\begin{theorem}[comparison identity; proved]\label{thm:comparison}
+For all real $F,G\in\DW$, $\I$ is symmetric and bilinear and
+\begin{equation}\label{eq:comparison}
+\I(F,G)=\Phi_F(0)\Phi_G(1)+\Phi_F(1)\Phi_G(0)-\sum_\rho\Phi_F(\rho)\Phi_G(1-\rho),
+\end{equation}
+the zero sum absolutely convergent. Moreover $\I(F,G)=\langle h_{\rm ev},\mathsf W\rangle$ with
+$h_{\rm ev}=\frac12(F\star G^\vee+F^\vee\star G)$.
+\end{theorem}
+\begin{proof}
+$\Phi_{X\star X^\vee}(s)=\Phi_X(s)\Phi_X(1-s)$ by Lemma~\ref{lem:DW}(iii); substituting in \eqref{eq:EF}
+gives $Q(X)=2\Phi_X(0)\Phi_X(1)-\sum_\rho\Phi_X(\rho)\Phi_X(1-\rho)$. Polarize term by term, using that the
+zero multiset is invariant under $\rho\mapsto1-\rho$ (E2) and that the sum converges absolutely, so may
+be re-indexed. The same substitution in $h_{\rm ev}$ gives the last statement.
+\end{proof}
+
+\begin{definition}\label{def:deg}
+$\dg F:=\Phi_F(0)+\Phi_F(1)=\int F(t)\,2\cosh(t/2)\,dt$; $M(F):=(\Phi_F(1),\Phi_F(0))$;
+$\PW:=\ker M$ (primitive classes); $F$ is effective, $F\ge0$, if $F(t)\ge0$ for all $t$; $\Ef$ is the
+set of effective classes; $W(F):=\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$, so $\I(F,F)=2\Phi_F(0)\Phi_F(1)-W(F)$.
+\end{definition}
+
+\begin{lemma}[$\Pi$ is a bijection onto the primitive class; proved]\label{lem:Pi}
+Let $I_T=(-T,T)$ and $\mathcal P_T=\{F\in C_c^\infty(I_T):\Phi_F(0)=\Phi_F(1)=0\}$. Then
+$\Pi:C_c^\infty(I_T)\to\mathcal P_T$ is a linear bijection with inverse $F\mapsto e^{-|t|/2}\ast F$, and
+$\Pi^{-1}$ preserves the convex hull of the support.
+\end{lemma}
+\begin{proof}
+$\Pi$ maps into $\mathcal P_T$ since $\Phi_{\Pi G}=s(1-s)\Phi_G$, and is injective because $\Phi_G$ is entire.
+$e^{-|t|/2}$ is the Green kernel of $\Pi$. For $F\in\mathcal P_T$ and $u=e^{-|t|/2}\ast F$, to the right of
+$\supp F$ we have $u(t)=e^{-t/2}\Phi_F(1)=0$, and to the left $u(t)=e^{t/2}\Phi_F(0)=0$. So $u\in C_c^\infty$
+with support in the hull of $\supp F$, and $\Pi u=F$.
+\end{proof}
+
+%======================================================================
+\section{The P\'olya class and the hyperbolic polar plane}\label{sec:polya}
+
+\begin{theorem}[the P\'olya class; cited and proved]\label{thm:K}
+Let $K(t)=\sum_{n\ge1}(4\pi^2n^4e^{9t/2}-6\pi n^2e^{5t/2})e^{-\pi n^2e^{2t}}$.
+\begin{enumerate}
+\item[(i)] (cited, (X1)) $K$ is even and $\xi(\frac12+i\tau)=\int K(t)e^{i\tau t}dt$.
+\item[(ii)] (proved) $K(t)>0$ for all $t$; $K(t)=4\pi^2e^{9|t|/2}e^{-\pi e^{2|t|}}(1+O(e^{-3\pi e^{2|t|}}))$, and
+likewise for all derivatives with a polynomial factor in $e^{2|t|}$; hence $K$, all $K^{(j)}$ and all
+$\tau_aK$ lie in $\DW$.
+\item[(iii)] (proved) $\Phi_K=\xi$ on $\C$; $\Phi_K(0)=\Phi_K(1)=\frac12$, $M(K)=(\frac12,\frac12)$, $\dg K=1$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(ii) For $u\ge0$ each term equals $2\pi n^2e^{5u/2}e^{-\pi n^2e^{2u}}(2\pi n^2e^{2u}-3)>0$; positivity on
+$\R$ follows by evenness. With $\omega(x)=\sum_{n\ge1}e^{-\pi n^2x}$ and $x=e^{2t}$,
+$K(t)=4x^{9/4}\omega''(x)+6x^{5/4}\omega'(x)$. As $x\to\infty$ the $n=1$ term dominates. As $x\to0^+$,
+the theta relation $\omega(x)=\frac12x^{-1/2}-\frac12+x^{-1/2}\omega(1/x)$ gives
+$\omega'=-\frac14x^{-3/2}+O(x^{-5/2}e^{-\pi/x})$ and $\omega''=\frac38x^{-5/2}+O(x^{-9/2}e^{-\pi/x})$,
+so the leading terms $\frac32x^{-1/4}-\frac32x^{-1/4}$ cancel and $K(t)=O(x^{-9/4}e^{-\pi/x})$. Each
+$\partial_t$ costs a factor $O(e^{2|t|})$. (iii) $\Phi_K$ is entire by (ii) and agrees with $\xi$ on the
+critical line by (i); $\xi(0)=\xi(1)=\frac12$ by (E2).
+\end{proof}
+
+\begin{theorem}[how $K$ pairs; proved]\label{thm:Kpair}
+For $F\in\DW$, $a\in\R$:
+(i) $\I(F,K)=\frac12\dg F$; (ii) $\I(K,K)=\frac12$; (iii) $\I(F,\tau_aK)=\frac12(e^{a/2}\Phi_F(0)+e^{-a/2}\Phi_F(1))$;
+(iv) $K\perp\PW$ and $K\ne0$; (v) $\I(F,2K)=\dg F$.
+\end{theorem}
+\begin{proof}
+In \eqref{eq:comparison} with $G=K$ every zero term contains $\xi(1-\rho)=0$. (iii) uses
+$\Phi_{\tau_aK}(s)=e^{(s-\frac12)a}\xi(s)$.
+\end{proof}
+
+\begin{remark}[on the name]\label{rem:name}
+By analogy with Weil's proof one is tempted to call $K$ a canonical class. Section~\ref{sec:curve}
+shows that under the curve dictionary the corresponding class is $\frac12(F_1+F_2)$, half the ample
+ruling class, and not $K_{C\times C}=(2g-2)(F_1+F_2)$ (Theorem~\ref{thm:curveK}). We call $K$ the
+\emph{P\'olya class}. Nothing below uses more than $\dg K>0$, the pairing of
+Theorem~\ref{thm:Kpair}, and the affine symmetry $E\mapsto K-E$.
+\end{remark}
+
+\begin{lemma}[proved]\label{lem:Msurj}
+For $a\ne0$, $M(K)=(\frac12,\frac12)$ and $M(\tau_aK)=\frac12(e^{a/2},e^{-a/2})$ are independent; $M$ is onto $\R^2$.
+\end{lemma}
+
+\begin{theorem}[the polar plane; proved]\label{thm:split}
+Fix $a>0$ and put $K_{\rm odd}=(2\sinh\frac a2)^{-1}(\tau_aK-\tau_{-a}K)$, so that
+$\Phi_{K_{\rm odd}}(s)=\frac{\sinh((s-\frac12)a)}{\sinh(a/2)}\xi(s)$ and $M(K_{\rm odd})=(\frac12,-\frac12)$.
+Let $\Lambda=\mathrm{span}(K,K_{\rm odd})$. Then
+(i) $\PW=K^\perp\cap K_{\rm odd}^\perp$;
+(ii) $\DW=\Lambda\oplus\PW$, $\I$-orthogonally;
+(iii) $\I|_\Lambda$ has Gram matrix $\mathrm{diag}(\frac12,-\frac12)$ in the basis $(K,K_{\rm odd})$;
+(iv) $\I(F,F)=-W(F)$ on $\PW$;
+(v) $K^\perp=\{\dg F=0\}=\PW\oplus\R K_{\rm odd}$, and $\I\le0$ on $K^\perp$ iff $\I\le0$ on $\PW$.
+\end{theorem}
+\begin{proof}
+$\Phi_{K_{\rm odd}}$ vanishes at every zero, so $\I(F,K_{\rm odd})=\frac12\Phi_F(0)-\frac12\Phi_F(1)$; with
+$\I(F,K)=\frac12\dg F$ this gives (i). $M|_\Lambda$ is an isomorphism, which gives (ii). On $\Lambda$ only the
+polar terms survive, giving (iii). (iv) is \eqref{eq:comparison} with $M(F)=0$, and (v) combines (ii)--(iv).
+\end{proof}
+
+\begin{proposition}[the polar block satisfies the Hodge-index inequality; proved]\label{prop:slack}
+Write $\mu(F)=\Phi_F(1)-\Phi_F(0)$. For every $F\in\DW$,
+$\frac12(\dg F)^2-2\Phi_F(0)\Phi_F(1)=\frac12\mu(F)^2\ge0$. Hence $\I(F,F)\le\frac12(\dg F)^2$ holds at $F$
+if and only if $W(F)\ge-\frac12\mu(F)^2$: no inequality between functions of $M(F)$ alone carries any
+information about the zeros.
+\end{proposition}
+
+%======================================================================
+\section{The radical}\label{sec:radical}
+
+\begin{lemma}[separation lemma; proved]\label{lem:sep}
+Let $(c_\rho)$ be complex numbers indexed by the zeros with multiplicity, equal on copies of a
+multiple zero, with $\sum|c_\rho|<\infty$, and let $\alpha,\beta\in\C$. If
+$\sum_\rho c_\rho e^{(\rho-\frac12)t}=\alpha e^{t/2}+\beta e^{-t/2}$ for all real $t$, then $\alpha=\beta=0$ and all $c_\rho=0$.
+\end{lemma}
+\begin{proof}
+Since $0<\Rel\rho<1$, $|e^{(\rho-\frac12)t}|\le e^{|t|/2}$ and both sides are continuous. Apply the
+Laplace transform on $[0,\infty)$ at $z=s-\frac12$, $\Rel s>1$; termwise interchange is justified by
+$\sum|c_\rho|<\infty$, and gives $H(s):=\sum_\rho\frac{c_\rho}{s-\rho}=\frac\alpha{s-1}+\frac\beta s$ for $\Rel s>1$.
+$H$ is holomorphic off the discrete zero set, with at most a simple pole of residue $m_{\rho_0}c_{\rho_0}$
+at a zero of multiplicity $m_{\rho_0}$. Both sides continue to $\C\setminus(Z(\xi)\cup\{0,1\})$, connected,
+and $0,1\notin Z(\xi)$. Hence all residues at zeros vanish, $H\equiv0$, and $\alpha=\beta=0$.
+\end{proof}
+
+\begin{theorem}[the orthogonal of the primitive sector; proved]\label{thm:perp}
+For $G\in\DW$ the following are equivalent: (a) $\I(F,G)=0$ for all primitive $F\in C_c^\infty(\R)$;
+(b) $\I(F,G)=0$ for all $F\in\PW$; (c) $\Phi_G(\rho)=0$ at every zero $\rho$.
+\end{theorem}
+\begin{proof}
+(c)$\Rightarrow$(b) by \eqref{eq:comparison} and $\rho\mapsto1-\rho$; (b)$\Rightarrow$(a) is inclusion.
+(a)$\Rightarrow$(c): with $c_\rho=\Phi_G(1-\rho)$, $\sum|c_\rho|<\infty$, and $\mathcal S(t)=\sum_\rho c_\rho e^{(\rho-\frac12)t}$ is
+continuous with $\int F\mathcal S=0$ for primitive $F\in C_c^\infty$. By Lemma~\ref{lem:Pi},
+$\langle\mathcal S,\Pi H\rangle=0$ for all $H\in C_c^\infty$, so $\Pi\mathcal S=0$ in $\mathcal D'(\R)$ and
+$\mathcal S=\alpha e^{t/2}+\beta e^{-t/2}$. Lemma~\ref{lem:sep} gives $c_\rho=0$.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:perp}(c) asks for vanishing to order one at each zero. The inclusion
+$\{G:\Phi_G|_{Z(\xi)}=0\}\supseteq\{G:\Phi_G=\xi e,\ e \text{ holomorphic on } S_\varepsilon\}$ is an
+equality exactly when all zeros of $\xi$ are simple; we use only the left-hand side.
+\end{remark}
+
+\begin{theorem}[the radical; proved]\label{thm:radical}
+$\Nr:=\{N:\I(N,G)=0\ \forall G\in\DW\}=\{N:\Phi_N(0)=\Phi_N(1)=0,\ \Phi_N(\rho)=0\ \forall\rho\}=\PW\cap(\PW)^\perp$.
+$\Nr$ is an ideal of $(\DW,\star)$ containing $\tau_a(\Pi K)$ for every $a$; on $\Nr$, $\dg=0$. Pairing to zero
+against $C_c^\infty(\R)$ already forces membership in $\Nr$.
+\end{theorem}
+\begin{proof}
+If $\I(N,G)=0$ for all $G\in C_c^\infty$, then as an identity of continuous functions
+$\sum_\rho\Phi_N(\rho)e^{(\frac12-\rho)t}=\Phi_N(0)e^{t/2}+\Phi_N(1)e^{-t/2}$; re-index by $\rho\mapsto1-\rho$ and apply
+Lemma~\ref{lem:sep}. The converse inclusion and the ideal property are immediate from \eqref{eq:comparison}
+and $\Phi_{N\star g}=\Phi_N\Phi_g$.
+\end{proof}
+
+\begin{proposition}[$\Nr$ is not principal at $\Pi K$; proved]\label{prop:notprincipal}
+For $a\ne0$, $\tau_a(\Pi K)\in\Nr\setminus(\Pi K\star\DW)$.
+\end{proposition}
+\begin{proof}
+If $\tau_a(\Pi K)=\Pi K\star g$, then on $\Rel s=\frac32$, where $s(1-s)\xi(s)\ne0$ by (E2),
+$\Phi_g(\frac32+i\tau)=e^{(1+i\tau)a}$ has constant modulus $e^a$; but $g(t)e^t\in L^1$, so
+$\Phi_g(\frac32+i\tau)\to0$ by Riemann--Lebesgue.
+\end{proof}
+
+\begin{theorem}[no compactly supported class is orthogonal to the primitive sector; proved]\label{thm:compactrad}
+$(\PW)^\perp\cap C_c^\infty(\R)=0$; in particular $\Nr\cap C_c^\infty(\R)=0$.
+\end{theorem}
+\begin{proof}
+Let $N\in C_c^\infty$, $N\ne0$, with $\Phi_N(\rho)=0$ at every zero (Theorem~\ref{thm:perp}). By (E6),
+$\Phi_N$ is entire of exponential type, so by (X2) it has $O(r)$ zeros in $|s-\frac12|\le r$. Every
+\emph{distinct} zero of $\xi$ is a zero of $\Phi_N$, and by (X3) there are
+$\ge\frac2{5\pi}r\log r(1+o(1))$ distinct zeros of $\xi$ in that disc. Contradiction.
+\end{proof}
+
+%======================================================================
+\section{Degree, effective classes and bounded density}\label{sec:degree}
+
+\begin{theorem}[proved]\label{thm:degree}
+(i) If $E\ge0$, $E\ne0$, then $\dg E>0$. (ii) $\dg$ vanishes on $\Nr$ and on $\PW$; no nonzero primitive or
+radical class is effective. (iii) $\dg=\I(\cdot,2K)$ and every $\I(\cdot,X)$ descend to $\DW/\Nr$.
+\end{theorem}
+
+\begin{theorem}[bounded density and ample classes; proved]\label{thm:density}
+For real $F\in\DW$ put $w_F(u)=\Phi_F(1)e^{-u/2}+\Phi_F(0)e^{u/2}-\sum_\rho e^{(\rho-\frac12)u}\Phi_F(1-\rho)$. Then:
+(i) $\I(E,F)=\int E(u)w_F(u)\,du$ for every $E\in\DW$, absolutely convergent;
+(ii) $C_F:=\sup_u|w_F(u)|/2\cosh(u/2)\le|\Phi_F(0)|+|\Phi_F(1)|+\sum_\rho|\Phi_F(1-\rho)|<\infty$, and
+$|\I(E,F)|\le C_F\dg E$ for every effective $E$;
+(iii) calling $H$ \emph{ample} if $\I(E,H)>0$ for all effective $E\ne0$, the class $2K$ is ample and so is
+$F+2mK$ for every $m>C_F$.
+\end{theorem}
+\begin{proof}
+(i) Expand \eqref{eq:comparison} with $\Phi_E(\rho)=\int Ee^{(\rho-\frac12)u}du$ and interchange, using
+$|e^{(\rho-\frac12)u}|\le e^{|u|/2}$ and $\sum_\rho|\Phi_F(1-\rho)|<\infty$ (\eqref{eq:decay}, (E3)).
+(ii) $e^{\pm u/2}\le2\cosh(u/2)$ and $|e^{(\rho-\frac12)u}|\le2\cosh(u/2)$, using only $0<\Rel\rho<1$.
+(iii) $\I(E,2K)=\dg E>0$, and $\I(E,F+2mK)\ge(m-C_F)\dg E$.
+\end{proof}
+
+%======================================================================
+\section{Affine duality and the Hodge-index transfer theorem}\label{sec:transfer}
+
+The involution $\sigma_K(E):=K-E$ is affine, satisfies $\dg\sigma_K(E)=1-\dg E$, descends to $\DW/\Nr$, and
+carries every primitive class to a class with $M=(\frac12,\frac12)\ne0$. Weil's duality $D\mapsto K_S-D$ is of
+this type, a translation composed with negation, not an algebra involution.
+
+\begin{theorem}[Hodge-index transfer; proved, conditional on the hypothesis]\label{thm:transfer}
+Suppose $h^0:\DW\to\R_{\ge0}$ satisfies
+\begin{enumerate}
+\item[(a)] $h^0\ge0$;
+\item[(b$'$)] if $h^0(E)>0$ there is $E'\in\DW$, $E'\ge0$, $E'\not\equiv0$, with $E-E'\in\Nr$;
+\item[(c)] there is $\chi\in\R$ with $h^0(E)+h^0(K-E)\ge R(E):=\frac12\I(E,E)-\frac12\I(E,K)+\chi$ for every $E$.
+\end{enumerate}
+Then $\I(F,F)\le0$ for every real primitive $F\in C_c^\infty(\R)$.
+\end{theorem}
+\begin{proof}
+Let $F$ be primitive with $q:=\I(F,F)>0$; then $\dg F=0$ and $\I(F,K)=0$.
+\emph{Step 1.} Fix an integer $m>C_F$ and $H'=F+2mK$, ample by Theorem~\ref{thm:density}; $\I(F,H')=q$, $\I(K,H')=m$.
+\emph{Step 2.} If $h^0(K-nF)>0$, (b$'$) gives $E'\ge0$, $E'\ne0$, $K-nF-E'\in\Nr$, so
+$m-nq=\I(K-nF,H')=\I(E',H')>0$. Hence $h^0(K-nF)=0$ for $n>m/q$.
+\emph{Step 3.} (c) at $E=nF$: $h^0(nF)\ge\frac12n^2q+\chi>0$ for $n$ large, since $h^0(K-nF)=0$.
+\emph{Step 4.} (b$'$) gives $E'\ge0$, $E'\ne0$, with $nF-E'\in\Nr$, so $\dg E'=n\dg F=0$, contradicting Theorem~\ref{thm:degree}(i).
+\end{proof}
+
+\begin{remark}\label{rem:hartshorne}
+This is \cite[V.1.9]{Hartshorne} with $H=2K$: ampleness of $2K$ and $F+2mK$ is Theorem~\ref{thm:density};
+the vanishing of $h^0(K-nF)$ uses that $\Nr$ is the radical (Theorem~\ref{thm:radical}); Riemann--Roch is (c);
+``effective of degree $0$ is $0$'' is Theorem~\ref{thm:degree}. The clause $E'\not\equiv0$ is used in Steps 2
+and 4 and cannot be dropped. No sign $\chi\ge0$ is needed. The proof evaluates $h^0$ only at $nF$ and
+$K-nF$. It remains valid if (b$'$) is weakened to: some positive multiple $NE$ is $\Nr$-equivalent to a
+nonzero effective class (the factor $N>0$ passes through Steps 2 and 4).
+\end{remark}
+
+%======================================================================
+\section{The Riemann--Roch functional}\label{sec:RR}
+
+Let $R(E)=\frac12\I(E,E)-\frac14\dg E+\chi$ be the right side of (c) (by Theorem~\ref{thm:Kpair}(i)); by
+\eqref{eq:comparison}, $R(E)=ab-\frac12W(E)-\frac14\dg E+\chi$ with $(a,b)=M(E)$.
+
+\begin{theorem}[Serre symmetry; proved]\label{thm:serre}
+$R(K-E)=R(E)$ for every $E$ and every $\chi$; the proof uses only bilinearity and symmetry of $\I$.
+\end{theorem}
+\begin{proof}
+$R(K-E)=\frac12[\I(K,K)-2\I(K,E)+\I(E,E)]-\frac12[\I(K,K)-\I(E,K)]+\chi=R(E)$.
+\end{proof}
+
+\begin{proposition}[proved]\label{prop:gated}
+(i) $h^0=\max(R,0)$ satisfies (a) and (c) and fails (b$'$): $R(mK)=\frac{m^2}4-\frac m4+\chi\to\infty$ as
+$m\to-\infty$ while $\dg(mK)<0$.
+(ii) The gated candidate $h^0_+(E):=\max(R(E),0)\mathbf 1_{\{\dg E>0\}}$ satisfies (a) and (c) for every $\chi$,
+vanishes in degree $\le0$, and has $h^0_+(mK)=\frac14m^2-\frac14m+\chi$ for large $m$.
+(iii) If $\chi>0$, $h^0_+$ fails (b$'$).
+\end{proposition}
+\begin{proof}
+(ii) $\dg E+\dg(K-E)=1$, so the two gates are not both off; use Theorem~\ref{thm:serre}.
+(iii) For $c>0$, $\varepsilon>0$, $\beta=-6\varepsilon/(e^{c/2}-e^{-c/2})$, $\alpha=-2\varepsilon-\beta e^{c/2}$, the class
+$E=\alpha K+\beta\tau_cK$ has $M(E)=(-\varepsilon,2\varepsilon)$, $W(E)=0$, $\dg E=\varepsilon$ and
+$R(E)=-2\varepsilon^2-\frac\varepsilon4+\chi>0$ for small $\varepsilon$; but every nonzero effective class has
+$\Phi(1)>0$, and $M$ is constant on $\Nr$-cosets.
+\end{proof}
+
+\begin{theorem}[the clause $(\mathrm b')^+$ suffices; proved]\label{thm:bplus}
+Let $\chi\le0$ and suppose
+\textup{(b$'$)$^+$}: every $E$ with $\dg E>0$ and $R(E)>0$ is $\Nr$-equivalent to a nonzero effective class.
+Then the conclusion of Theorem~\ref{thm:transfer} holds. The same is true of the stable form, in which
+some positive multiple of $E$ is required to be so.
+\end{theorem}
+\begin{proof}
+First proof: $h^0_+$ satisfies (a), (c), and (b$'$)$^+$ is (b$'$) for it. Direct proof: let $F$ be primitive in
+$C_c^\infty$ with $q=\I(F,F)>0$ and $E=rF+K$. Then $\dg E=1$ and $R(E)=\frac12r^2q+\chi>0$ for $r$ large;
+an effective $E'\equiv E$ has $\dg E'=1$ and $\I(E',F)=rq$, while $|\I(E',F)|\le C_F$
+(Theorem~\ref{thm:density}). Contradiction for $r>C_F/q$. In the stable form both sides scale by $N$.
+\end{proof}
+
+%======================================================================
+\section{The frame defect theorem}\label{sec:defect}
+
+\begin{definition}
+$s(\gamma,\theta):=\sup_{u\in\R}|\cos(\gamma u+\theta)|/\cosh(u/2)\in(0,1]$.
+\end{definition}
+
+\begin{lemma}[the cosh inequality; proved]\label{lem:cosh}
+For $E'\in\DW$, $E'\ge0$, and all real $\gamma,\theta$:
+$|\int E'(u)\cos(\gamma u+\theta)du|\le\frac12s(\gamma,\theta)\dg E'$. In particular, at a zero
+$\rho=\frac12+i\gamma$, $|\Rel(e^{i\theta}\Phi_{E'}(\rho))|\le\frac12s(\gamma,\theta)\dg E'$.
+\end{lemma}
+\begin{proof}
+$|\cos(\gamma u+\theta)|\le s\cosh(u/2)$ pointwise; integrate against $E'\ge0$.
+\end{proof}
+
+\begin{proposition}[the sharp constant at the first zero; proved, computer-certified]\label{prop:s1}
+$s(\gamma,\theta)<1$ for $\gamma\ne0$, $\theta\notin\pi\Z$, and
+$s_1:=s(\gamma_1,\pi/2)=0.99846016271880910923\ldots$, attained at $u^*=0.110991563370513694\ldots$;
+$1-s_1^2=3.0773034635\times10^{-3}$.
+\end{proposition}
+\begin{proof}
+The numerator equals $1$ only on $(\pi\Z-\theta)/\gamma\not\ni0$, where the denominator exceeds $1$, and the
+ratio tends to $0$ at infinity. For the value: outside $|u|\le0.4$ the ratio is $\le1/\cosh(0.2)<0.9804$;
+inside, the critical equation $\gamma_1\cos(\gamma_1u)\cosh(u/2)=\frac12\sin(\gamma_1u)\sinh(u/2)$ is solved
+by a 40-digit scan and a Newton step.
+\end{proof}
+
+\begin{lemma}[the test class; proved, using (E2), (E3), (X4)]\label{lem:F0}
+Let $\sigma=3$, $G=\sigma\sqrt{2\pi}/2=3.759942411949\ldots$ and $F_0(u)=e^{-u^2/18}\sin(\gamma_1u)$. Then:
+(i) $F_0\in\DW$ is real and odd, so $\dg F_0=0$ exactly; $\Phi_{F_0}(0)=-\Phi_{F_0}(1)=\eta$, $|\eta|<10^{-390}$;
+(ii) $\Phi_{F_0}(\rho_1)=iG(1+O(10^{-390}))$;
+(iii) $L:=\sum_{\rho\ne\rho_1,\bar\rho_1}|\Phi_{F_0}(1-\rho)|\le5.5\times10^{-90}$;
+(iv) $W_{F_0}:=-\I(F_0,F_0)=W(F_0)+2\eta^2$ satisfies $|W_{F_0}-2G^2|\le7\times10^{-89}$, where $2G^2=9\pi$;
+(v) $C_{F_0}\le Gs_1+L+2|\eta|<Gs_1+10^{-89}$.
+\end{lemma}
+\begin{proof}
+(i) $|\Phi_{F_0}(1)|\le\sigma\sqrt{2\pi}e^{\sigma^2(\frac14-\gamma_1^2)/2}<10^{-390}$. (ii)
+$\Phi_{F_0}(\frac12+i\gamma)=\frac{\sigma\sqrt{2\pi}}{2i}(e^{-\sigma^2(\gamma+\gamma_1)^2/2}-e^{-\sigma^2(\gamma-\gamma_1)^2/2})$.
+(iii) For $\rho=\beta+i\gamma$, $|\frac12-\beta|<\frac12$ by (E2), and
+$|\Phi_{F_0}(1-\rho)|\le Ge^{9/8}(e^{-\sigma^2(\gamma-\gamma_1)^2/2}+e^{-\sigma^2(\gamma+\gamma_1)^2/2})$. By (X4) the other
+zeros have $|\gamma|\ge21$, and there are at most $10\log T$ ordinates in $[T,T+1]$ for $T\ge21$; summing,
+$L\le Ge^{9/8}\sum_{T\ge21}20\log T\,e^{-\frac92(T-\gamma_1)^2}\le5.5\times10^{-90}$.
+(iv) By (X4) $\rho_1$ is simple; its pair contributes $2G^2(1+O(10^{-390}))$, the others at most
+$\max_\rho|\Phi_{F_0}(\rho)|\cdot L\le11.6L$; and $\I(F_0,F_0)=-2\eta^2-W(F_0)$ by \eqref{eq:comparison}.
+(v) $w_{F_0}(u)=-2G\sin(\gamma_1u)+r(u)$ with $|r(u)|\le(L+2|\eta|)\,2\cosh(u/2)$, and Proposition~\ref{prop:s1}.
+\end{proof}
+
+\begin{theorem}[a necessary condition and its failure; proved]\label{thm:C41}
+Let $F\in\DW$ be real with $\dg F=0$ and $W_F:=-\I(F,F)>0$, and $E_{t,d}=tF+dK$. Then $\dg E_{t,d}=d$,
+$\I(E_{t,d},E_{t,d})=\frac{d^2}2-t^2W_F$, $\I(E_{t,d},F)=-tW_F$, and $R(E_{t,d})>0$ iff
+$t^2W_F<\frac{d^2}2-\frac d2+2\chi$. If $E_{t,d}$ is $\Nr$-equivalent to an effective class, then
+$tW_F\le C_Fd$. Consequently (b$'$)$^+$ forces $C_F\ge\sqrt{W_F/2}$. At $F=F_0$ this fails:
+$C_{F_0}<Gs_1+10^{-89}<G(1-1.5\times10^{-3})<\sqrt{W_{F_0}/2}$.
+\end{theorem}
+\begin{proof}
+Bilinearity with $\I(F,K)=0$ and $\I(K,K)=\frac12$; an effective $E'\equiv E_{t,d}$ has $\dg E'=d$ and
+$\I(E',F)=-tW_F$, and Theorem~\ref{thm:density}(ii) applies. Let $d\to\infty$.
+\end{proof}
+
+\begin{theorem}[$(\mathrm b')^+$ is false; proved, given (X4)]\label{thm:bfalse}
+Put $s_{F}:=C_F\sqrt{2/W_F}$; by Lemma~\ref{lem:F0}, $s_{F_0}\le s_1^+:=s_1+10^{-89}$. Fix $\chi$ and $d$ with
+$d^2(1-(s_1^+)^2)>d-4\chi$ (at $\chi=0$: $d>324.9598266\ldots$). Choose $t>0$ with
+$s_{F_0}^2d^2/2<t^2W_{F_0}<\frac{d^2}2-\frac d2+2\chi$. Then $E=tF_0+dK$ has $\dg E=d$, $R(E)>0$, and neither
+$E$ nor any positive multiple of $E$ is $\Nr$-equivalent to a nonzero effective class.
+\end{theorem}
+\begin{proof}
+By Theorem~\ref{thm:C41}, equivalence would give $t^2W_{F_0}\le s_{F_0}^2d^2/2$; for multiples the factor cancels.
+\end{proof}
+
+\begin{remark}[certified instance]
+At $\chi=0$, $d=400$, $t^2W_{F_0}=79780$ (so $t=53.11911\ldots$): $\dg E=400$, $\I(E,E)=220>\frac12\dg E$,
+$R(E)=10$, and $|\Iml\Phi_E(\rho_1)|=tG=199.7248\ldots>\frac12s_1\dg E=199.6920\ldots$, whereas the
+non-sharp bound $\sqrt{ab}=200$ is satisfied. The window is $((s_1^+)^2\cdot80000,79800)\supseteq(79753.82,79800)$.
+\end{remark}
+
+\begin{theorem}[frame defect; proved, given (X4)]\label{thm:defect}
+There is no $h^0:\DW\to\R_{\ge0}$ satisfying (a), (b$'$), (c) of Theorem~\ref{thm:transfer}, for any $\chi\in\R$.
+\end{theorem}
+\begin{proof}
+\emph{Step 1.} If $h^0(E)>0$ then $\dg E=\dg E'>0$; so $h^0=0$ in degree $\le0$. \emph{Step 2.} If $\dg E>1$,
+then $\dg(K-E)<0$, so $h^0(K-E)=0$, and (c) with Theorem~\ref{thm:serre} gives $h^0(E)\ge R(E)$.
+\emph{Step 3.} The class $E$ of Theorem~\ref{thm:bfalse} with $d>1$ has $h^0(E)>0$, and (b$'$) supplies an
+effective representative which does not exist.
+\end{proof}
+
+Theorem~\ref{thm:transfer} keeps its proof: it is an implication whose hypothesis is unsatisfiable. The
+defect is localized: (c) with the Serre symmetry demands $h^0\ge R$ on the half-space $\dg>1$, while the
+classes with effective representatives are strictly fewer than $\{R>0\}$ there; $\chi$ shifts $R$ by a
+constant while the gap grows like $d^2(1-s_1^2)$.
+
+\begin{lemma}[truncation; proved, given (E2), (E3), (X4), (X5)]\label{lem:trunc}
+Let $\mathcal N(g)=\int|g|\,2\cosh(u/2)$, $S_2=\sum_\rho|\rho-\frac12|^{-2}$, $\vartheta\in C_c^\infty$ even with
+$0\le\vartheta\le1$, $\vartheta=1$ on $[-1,1]$, $\supp\vartheta\subseteq[-2,2]$, $A=1+\|\vartheta'\|_\infty+\|\vartheta''\|_\infty$, and
+$F_R=F_0\vartheta(\cdot/R)$.
+(i) $C_{F+F'}\le C_F+C_{F'}$, $C_F\le\mathcal N(F)+S_2\mathcal N(F'')$, and $|\I(E,F)|\le C_F\mathcal N(E)$ for all $E$.
+(ii) $S_2\le0.0465$.
+(iii) $F_R\in C_c^\infty$ is odd with $\dg F_R=0$ exactly.
+(iv) For $R\ge6\sqrt{40+2\log A}$: $C_{F_R}\le Gs_1+10^{-6}+10^{-89}$, $|W_{F_R}-W_{F_0}|\le9.3\times10^{-5}$,
+and $s_{F_R}\le s_1+3.6\times10^{-6}<0.998464$, so $(1-s_{F_R}^2)^{-1}<325.78$.
+(v) With a fixed odd $B\in C_c^\infty$, $\Phi_B(0)=1$, and $R$ large, $F_R^\flat=F_R-\Phi_{F_R}(0)B$ is primitive,
+odd, with $s_{F_R^\flat}\le0.998469$.
+\end{lemma}
+\begin{proof}
+(i) Linearity of $w_F$; $|\Phi_F(1-\rho)|\le|\rho-\frac12|^{-2}\mathcal N(F'')$ from two integrations by parts at
+$\Rel(1-\rho)$; Theorem~\ref{thm:density}(i). (ii) By (X5) $\sum\Rel(1/\rho)=0.0230957\ldots$; pairing $\rho$
+with $1-\bar\rho$ gives $\sum(1+\gamma^2)^{-1}\le0.04620$, and $|\gamma|>14$ gives $S_2\le1.0052\cdot0.04620$.
+(iii) Parity. (iv) With $D_R=F_0-F_R$, $|D_R''|\le Au^2e^{-u^2/18}\mathbf 1_{|u|\ge R}$, so
+$\mathcal N(D_R)\le4e^{-R^2/36}$ and $C_{D_R}\le80ARe^{-R^2/36}\le10^{-6}$; then
+$W_{F_R}-W_{F_0}=2\I(F_0,D_R)-\I(D_R,D_R)$ is bounded by (i). (v) Same estimates with $D'=D_R+\Phi_{F_R}(0)B$.
+\end{proof}
+
+\begin{theorem}[the defect on the small domain; proved, given the inputs of Lemma~\ref{lem:trunc}]\label{cor:smalldomain}
+Let $\mathcal D_c=C_c^\infty(\R)\oplus\R K$ and $\mathcal D_p=\mathcal P^\infty_c\oplus\R K$, where $\mathcal P^\infty_c$ is the
+real primitive part of $C_c^\infty$. For $\mathcal D\in\{\mathcal D_c,\mathcal D_p\}$ there is no $h^0:\mathcal D\to\R_{\ge0}$
+satisfying (b$'$) on $\mathcal D$ (with $E'\in\DW$) and (c) whenever $E,K-E\in\mathcal D$, for any $\chi$, also with
+(b$'$) in stable form. More precisely, with $F=F_R$ or $F_R^\flat$ and $E_w=tF+dK$ as in
+Theorem~\ref{thm:bfalse}, no $h^0\ge0$ satisfies (b$'$) at $E_w$ and $K-E_w$ and (c) at $E_w$.
+\end{theorem}
+\begin{proof}
+$\dg(K-E_w)=1-d<0$ forces $h^0(K-E_w)=0$; (c) gives $h^0(E_w)\ge R(E_w)>0$; (b$'$) at $E_w$ is impossible
+by Theorem~\ref{thm:bfalse} with $F$ in place of $F_0$, whose proof uses only $\dg F=0$, $W_F>0$ and $s_F<1$.
+\end{proof}
+
+\begin{remark}
+(i) $\Nr\cap\mathcal D_c=0$ and the radical of $\I|_{\mathcal D_p}$ is $0$ (Theorem~\ref{thm:compactrad} and
+Lemma~\ref{lem:sep}), so the passage $F_0\mapsto F_R$ is an analytic replacement, admissible because the
+inequality is strict. (ii) The constant $s_*=\inf s_F$ over $\dg F=0$, $W_F>0$ may be computed over $C_c^\infty$,
+by truncation, mollification and correction of the degree. (iii) Simplicity of $\rho_1$ is load-bearing: at
+multiplicity $m$ one would have $C_{F_0}=mGs_1$ and $\sqrt{W_{F_0}/2}=G\sqrt m$, and $2s_1>\sqrt2$.
+(iv) The same argument applies to any completed $L$-function with a known simple isolated zero on the line,
+with $s_1$ replaced by the value of $s$ at that zero.
+\end{remark}
+
+\begin{theorem}[enlargement test; proved, given (X4)]\label{thm:enlarge}
+Let $\Ef'$ be any cone used in place of $\Ef$ in (b$'$) such that $\dg>0$ on $\Ef'\setminus\{0\}$ and
+$C'_X:=\sup_{E'\in\Ef'}|\I(E',X)|/\dg E'<\infty$ for all $X$. Then the transfer hypothesis for $\Ef'$ is satisfiable
+only if $C'_{F_0}\ge G$, i.e. $C'_{F_0}/C_{F_0}\ge1/s_1=1.001542\ldots$.
+\end{theorem}
+\begin{proof}
+Theorems~\ref{thm:C41}--\ref{thm:defect} use only these two properties and bilinearity.
+\end{proof}
+Positive-type classes $G\star G^\vee$ fail the degree condition ($\dg=2\Phi_G(0)\Phi_G(1)=0$ for primitive $G$);
+classes with $\Phi\ge0$ on the critical line fail both conditions; the cone on the translates $\tau_cK$ lies in
+$\Ef$; closures cannot raise a support function. A cone defined by nonnegativity of Frobenius traces
+$\I(E,\tau_{\log n}g)$ passes the test; it is not studied here.
+
+%======================================================================
+\section{A completed function with zeros off the line}\label{sec:xia}
+
+Fix $0<a<\frac12$ and $\Xi_a(s)=\xi(s+a)\xi(s-a)$, with polar set $P=\{-a,a,1-a,1+a\}$ and
+$K_a=(e^{at}K)\star(e^{-at}K)$, so that $\Phi_{K_a}=\Xi_a$, $K_a>0$, $K_a$ even.
+
+\begin{proposition}[the frame for $\Xi_a$; proved]\label{prop:xiaframe}
+Let $\DW_a$ be Definition~\ref{def:DW} with decay exponent $1+a+\varepsilon$. Define $\I^{(a)}$ by the explicit
+formula of $\Xi_a$, $\dg_a:=\I^{(a)}(\cdot,2K_a)=2\sum_{p\in P}\Xi_a(p)\Phi_F(p)$, primitivity by $\Phi_F(p)=0$ for $p\in P$.
+Then Theorems~\ref{thm:comparison}, \ref{thm:Kpair}, \ref{thm:radical}, \ref{thm:degree}, \ref{thm:density},
+\ref{thm:transfer} and \ref{thm:serre} hold for $\Xi_a$, with polar packet $\sum_{p\in P}\Phi_F(p)\Phi_G(1-p)$ and degree weight
+$2\sum_p\Xi_a(p)e^{(p-\frac12)t}\asymp e^{(\frac12+a)|t|}$.
+\end{proposition}
+\begin{proof}
+Three steps are not verbatim. (a) The contour abscissa: any $c\in(1+a,\frac32+a+\varepsilon)$ makes $\Phi_h$
+holomorphic and $\sum\Lambda(n)(n^a+n^{-a})n^{-c}$ convergent; the four simple poles give the polar packet.
+(b) The separation lemma holds on $\Rel s>1+a$, using $|\Rel\rho-\frac12|\le\frac12+a$, and needs $P\cap Z(\Xi_a)=\emptyset$,
+which holds because $\Xi_a(\sigma)=\int K_ae^{(\sigma-\frac12)t}dt>0$ for real $\sigma$. (c) In
+Theorem~\ref{thm:density}, $|e^{(\rho-\frac12)u}|\le e^{(\frac12+a)|u|}$ is dominated by the new degree weight. Theorem~\ref{thm:compactrad} is not claimed.
+\end{proof}
+
+\begin{lemma}[proved]\label{lem:PiP}
+Let $c_1=\frac12+a$, $c_2=\frac12-a$ and $\Pi_P=(\partial_t^2-c_1^2)(\partial_t^2-c_2^2)$, of symbol $\pi_P(s)=\prod_{p\in P}(s-p)$.
+Then $\Pi_P$ maps $C_c^\infty(I_T)$ bijectively onto the $\Xi_a$-primitive part of $C_c^\infty(I_T)$, with inverse
+$F\mapsto G_{c_1}\ast G_{c_2}\ast F$, $G_c=\frac1{2c}e^{-c|t|}$, preserving support hulls and parity;
+$\pi_P(1-s)=\pi_P(s)$; and no zero of $\Xi_a$ is real.
+\end{lemma}
+\begin{proof}
+As in Lemma~\ref{lem:Pi}: $F_2=G_{c_2}\ast F$ vanishes outside the hull because $\Phi_F(a)=\Phi_F(1-a)=0$, and
+$\Phi_{F_2}=\Phi_F/(c_2^2-(s-\frac12)^2)$ vanishes at $-a,1+a$ since $c_2^2-c_1^2=-2a\ne0$; repeat with $c_1$.
+\end{proof}
+
+\begin{proposition}[proved]\label{prop:xiaF}
+If $\Xi_a$ has a zero $\rho_0$ with $\Rel\rho_0\ne\frac12$, there are nonzero real $\Xi_a$-primitive
+$F_\pm\in C_c^\infty$, even and odd, with $\sum_{\rho\in Z(\Xi_a)}\Phi_{F_\pm}(\rho)\Phi_{F_\pm}(1-\rho)<0$, i.e.
+$\I^{(a)}(F_\pm,F_\pm)>0$.
+\end{proposition}
+\begin{proof}
+Run the proof of \cite[Thm.~F]{Paper45} with $\Pi$ replaced by $\Pi_P$. The quartet
+$\rho_0,1-\rho_0,\bar\rho_0,1-\bar\rho_0$ consists of four distinct points because $\Iml\rho_0\ne0$ (Lemma~\ref{lem:PiP}),
+which replaces the use of $\zeta(\sigma)\ne0$ on $(0,1)$. Prescribing values of $\Phi_F=\pi_P\Phi_G$ at zeros is
+equivalent to prescribing $\Phi_G$, since $\pi_P(\rho)\ne0$. The strip estimates are taken on
+$|\Rel s-\frac12|\le\frac12+a$, valid for Paley--Wiener profiles on every strip. The tail acquires
+$|\pi_P(\rho)|^2=O((1+|\rho|)^8)$, absorbed by raising the polynomial degree of the construction by $4$;
+the zero count of $\Xi_a$ is $2N(T)+O(1)$.
+\end{proof}
+
+\begin{theorem}[no $h^0$ for $\Xi_a$; proved, using (X6)]\label{thm:xia-noh}
+For $\Xi_a$ no $h^0$ satisfies (a), (b$'$), (c). Moreover (b$'$)$^+$ fails for $\Xi_a$ at every $\chi$, with witness
+$E=rF_++K_a$, $r$ large.
+\end{theorem}
+\begin{proof}
+By (X6), $\Xi_a$ has infinitely many zeros with real part $\frac12\pm a$; by Proposition~\ref{prop:xiaF} there is a
+primitive $F_+$ with $q=\I^{(a)}(F_+,F_+)>0$, contradicting the conclusion of Theorem~\ref{thm:transfer} for
+$\Xi_a$. For the witness, $\dg_aE=\dg_aK_a>0$, $R_a(E)=\frac12r^2q+\frac12\I^{(a)}(K_a,K_a)-\frac14\dg_aK_a+\chi>0$, and
+an effective representative $E'$ would give $rq=|\I^{(a)}(E',F_+)|\le C^{(a)}_{F_+}\dg_aK_a$.
+\end{proof}
+
+%======================================================================
+\section{The function-field model}\label{sec:curve}
+
+Let $C/\F_q$ be smooth, projective, geometrically irreducible of genus $g$, with
+$Z_C(T)=P(T)/((1-T)(1-qT))$, $P(T)=\prod_{i=1}^{2g}(1-\alpha_iT)$, $N_m=q^m+1-\sum_i\alpha_i^m$, $|\alpha_i|=\sqrt q$ (X7).
+On $S=C\times C$ with fibres $F_1=\{P\}\times C$, $F_2=C\times\{P\}$, diagonal $\Delta$ and graphs $\Gamma_f$:
+$F_i^2=0$, $F_1\cdot F_2=1$, $\Delta^2=2-2g$, $\Gamma_f\cdot F_1=1$, $\Gamma_f\cdot F_2=\deg f$,
+$K_S=(2g-2)(F_1+F_2)$, $\chi(\mathcal O_S)=(1-g)^2$ (X8).
+
+\subsection{The discrete frame}
+\begin{definition}\label{def:curveframe}
+With $z=q^{s-1/2}$ and $u_i=\alpha_i/\sqrt q$, put $\Lambda_C(z)=z^{-g}\prod_i(z-u_i)$ and $\xi_C(s)=\Lambda_C(q^{s-1/2})$.
+Let $\DW_C=\{E:\Z\to\R:\ E(n)=O(q^{-(1+\varepsilon)|n|})\}$, $\Phi_E(s)=\sum_nE(n)q^{(s-\frac12)n}$, and
+$\dg E=\Phi_E(0)+\Phi_E(1)=\sum_nE(n)\,2\cosh(\frac n2\log q)$.
+\end{definition}
+The idele class group of $\F_q(C)$ has modulus group $q^\Z$, so the modulus line becomes the lattice $(\log q)\Z$.
+
+\begin{lemma}[proved]\label{lem:xiC}
+$\xi_C(s)=\xi_C(1-s)$; its zeros are the $\rho_i$ with $q^{\rho_i}=\alpha_i$, on $\Rel s=\frac12$; and
+$\xi_C(0)=\xi_C(1)=hq^{-g/2}$ with $h=P(1)$.
+\end{lemma}
+\begin{proof}
+$\prod u_i=1$ and the multiset $\{u_i\}$ is stable under conjugation, so $\Lambda_C(1/z)=\Lambda_C(z)$. Using $\alpha\mapsto q/\alpha$,
+$\prod(q-\alpha_i)=q^gP(1)$, whence $\Lambda_C(q^{1/2})=q^{-g/2}h$.
+\end{proof}
+
+\begin{theorem}[explicit formula and dictionary; proved from (X7), (X8)]\label{thm:dict}
+Let $\kappa(n)=q^{-|n|/2}N_{|n|}$ with $N_0=2-2g$. For $E\in\DW_C$,
+$\Phi_E(0)+\Phi_E(1)-\sum_i\Phi_E(\rho_i)=\sum_nE(n)\kappa(n)$. Put
+$\I^C(E,F)=\Phi_E(0)\Phi_F(1)+\Phi_E(1)\Phi_F(0)-\sum_i\Phi_E(\rho_i)\Phi_F(1-\rho_i)$ and
+$D_E=\sum_nE(n)\gamma_n$, $\gamma_n=q^{-|n|/2}\Gamma_{q^n}$ $(n\ge0)$, $\gamma_{-n}=q^{-n/2}\Gamma_{q^n}^t$. Then
+(i) $\gamma_a\cdot\gamma_b=\kappa(a-b)$; (ii) $\I^C(E,F)=D_E\cdot D_F$; (iii) $D_E\cdot F_1=\Phi_E(0)$,
+$D_E\cdot F_2=\Phi_E(1)$, $\dg E=D_E\cdot(F_1+F_2)$; (iv) $E$ is primitive iff $D_E\perp F_1,F_2$.
+\end{theorem}
+\begin{proof}
+$\sum_i\Phi_E(\rho_i)=\sum_nE(n)q^{-|n|/2}\sum_i\alpha_i^{|n|}$ and $\Phi_E(0)+\Phi_E(1)=\sum_nE(n)(q^{|n|/2}+q^{-|n|/2})$;
+subtract and use $N_m=q^m+1-\sum\alpha_i^m$, also at $m=0$. (i) is the Lefschetz relations; (ii) expands
+$D_E\cdot D_F=\sum_m(E\star F^\vee)(m)\kappa(m)$ and applies the explicit formula to $E\star F^\vee$; (iii) is
+$\Gamma_{q^n}\cdot F_1=1$, $\Gamma_{q^n}\cdot F_2=q^n$.
+\end{proof}
+So the half-density weight $q^{-|n|/2}$ on the graphs makes the Gram Toeplitz and the sign $+$; the target
+inequality $\I^C(F,F)\le0$ on primitives is the Hodge index theorem on $\{F_1,F_2\}^\perp$ with $H=F_1+F_2$.
+
+\begin{theorem}[radical and isometry; proved]\label{thm:curverad}
+If the $\alpha_i$ are distinct, the radical of $\I^C$ is the common kernel of $\Phi(0),\Phi(1),\Phi(\rho_i)$,
+$\dim\DW_C/\Nr^C=2+2g$, and $E\mapsto D_E$ is an isometric embedding into $V_C=\sum_n\R\gamma_n\subseteq NS(S)_\R$,
+of signature $(1,1+2g)$.
+\end{theorem}
+\begin{proof}
+Pairing $N$ with each $\delta_m$ gives $\Phi_N(0)q^{-m/2}+\Phi_N(1)q^{m/2}=\sum_i\Phi_N(\rho_i)\bar u_i^m$, an identity
+between distinct characters of $\Z$; the same independence gives surjectivity of the evaluation map.
+\end{proof}
+
+For $g=1$ write $(a_E,b_E,x_E,y_E)=(\Phi_E(1),\Phi_E(0),\Rel\Phi_E(\rho_1),\Iml\Phi_E(\rho_1))$; then
+$\I^C(E,F)=a_Eb_F+b_Ea_F-2(x_Ex_F+y_Ey_F)$. For ordinary $E/\F_q$, $\mathrm{rk}\,NS(E\times E)=4$ (X7), so
+$V_C=NS(E\times E)_\R$ and the rulings $F_1,F_2$ are classes of the model.
+
+\subsection{The defect on the curve}
+Let $\Ef_C=\{E\in\DW_C:E\ge0,\ E\ne0\}$ and $\Kc$ the class of Theorem~\ref{thm:curveK}(iii).
+
+\begin{theorem}[proved]\label{thm:curveE}
+(i) $\dg>0$ on $\Ef_C$, $\dg=0$ on $\Nr^C$, and $\I^C(E,2\Kc)=\dg E$. (ii) With
+$w_F(n)=\Phi_F(1)q^{-n/2}+\Phi_F(0)q^{n/2}-\sum_iq^{(\rho_i-\frac12)n}\Phi_F(1-\rho_i)$, $|\I^C(E,F)|\le C_F\dg E$ on $\Ef_C$
+with $C_F\le|\Phi_F(0)|+|\Phi_F(1)|+\sum_i|\Phi_F(1-\rho_i)|$. (iii) $\Ef_C$ is generated by the extreme rays $\delta_n$, and
+$D_{\delta_n}=\gamma_n$: the frame's effective cone is the cone on $q^{-n/2}\Gamma_{q^n}$ and $q^{-n/2}\Gamma_{q^n}^t$, $n\ge0$.
+\end{theorem}
+
+\begin{lemma}[cosh inequality on the lattice; proved]\label{lem:curvecosh}
+With $s_C(\gamma,\theta)=\sup_{n\in\Z}|\cos(\gamma n\log q+\theta)|/\cosh(\frac n2\log q)$, every $E'\in\Ef_C$ satisfies
+$|\Rel(e^{i\theta}\Phi_{E'}(\frac12+i\gamma))|\le\frac12s_C(\gamma,\theta)\dg E'$. Moreover $s_C<1$ iff $\theta\notin\pi\Z$.
+\end{lemma}
+
+\begin{proposition}[the sharp constant; proved, exact]\label{prop:sC}
+Let $g=1$, $a=q+1-N_1$, $\theta_u=\gamma_1\log q$. At $\theta=\pi/2$, $s_C^2=(4q-a^2)/(q+1)^2$ when the $n=\pm1$ entry
+dominates. Minimizing over $\theta$ by balancing the entries $n=0,1$ gives
+$\tan\theta^*=(q+1+a)/\sqrt{4q-a^2}$ and $(s_C^*)^2=(4q-a^2)/((4q-a^2)+(q+1+a)^2)$, provided no entry with
+$|n|\ge2$ exceeds it. For $E/\F_2:y^2+xy=x^3+1$ ($N_1=4$, $a=-1$, $h=4$, ordinary): $s_C(\gamma_1,\pi/2)=\sqrt7/3$ and
+$s_C^*=\sqrt{7/11}=0.797724\ldots$, with $(1-(s_C^*)^2)^{-1}=\frac{11}4$ exactly; the supremum at $\theta^*$ is a triple tie at
+$n=-2,0,1$, and all other entries are $\le0.620453$.
+\end{proposition}
+\begin{proof}
+$\cos\theta_u=a/2\sqrt q$, $\cosh(\frac12\log q)=(q+1)/2\sqrt q$; solve $|\cos\theta|\cosh(\frac12\log q)=|\cos(\theta_u+\theta)|$.
+For the curve, $\cos\theta^*=\sqrt{7/11}$, $\cos2\theta_u=-\frac34$, $\sin2\theta_u=-\frac{\sqrt7}4$, and the $n=-2$ entry is
+$\frac{5\sqrt7}{4\sqrt{11}}\cdot\frac45=\sqrt{7/11}$; entries with $|n|\ge5$ are $\le1/\cosh(\frac52\log2)<0.18$.
+\end{proof}
+
+\begin{theorem}[the witness and the defect on the curve; proved]\label{thm:curvedefect}
+Fix $\chi$, a direction $\theta$ with $s_C=s_C(\gamma_1,\theta)$, and $d$ with $d^2(1-s_C^2)>d-4\chi$. Let $F_\theta$ be the
+class with coordinates $(0,0,\cos\theta,-\sin\theta)$, so $\Rel(e^{i\theta}\Phi_{F_\theta}(\rho_1))=1$ and $-\I^C(F_\theta,F_\theta)=2$, and
+$E=tF_\theta+d\Kc$ with $\frac12s_Cd<t<\frac12\sqrt{d(d-1)+4\chi}$. Then $\dg E=d$, $R(E)=\frac{d^2}4-t^2-\frac d4+\chi>0$, and
+$E$ has no representative in $\Ef_C$ modulo $\Nr^C$. Consequently no $h^0:\DW_C\to\R_{\ge0}$ satisfies (a), (b$'$), (c)
+with $K=\Kc$, cone $\Ef_C$ and radical $\Nr^C$, for any $\chi$. For the curve of record, $d=3$ suffices at $\theta^*$
+(window $t\in(1.19659,1.22474)$), and $d=5$ at $\theta=\pi/2$.
+\end{theorem}
+\begin{proof}
+$E$ has coordinates $(\frac d2,\frac d2,t\cos\theta,-t\sin\theta)$, so $\I^C(E,E)=\frac{d^2}2-2t^2$. A representative
+$E'\in\Ef_C$ would have $\dg E'=d$ and $|\Rel(e^{i\theta}\Phi_{E'}(\rho_1))|=t>\frac12s_Cd$, against
+Lemma~\ref{lem:curvecosh}. The non-existence of $h^0$ follows as in Theorem~\ref{thm:defect}.
+\end{proof}
+
+\begin{theorem}[the geometric $h^0$; cited, (X8)]\label{thm:geomh0}
+$h^0_C(D)=\dim H^0(S,\mathcal O(D))$ satisfies (a), (b$'$) with $\mathrm{Eff}(S)$, and (c) with $K_S$ and
+$\chi=(1-g)^2$; Weil's proof is Theorem~\ref{thm:transfer} run on $(h^0_C,\mathrm{Eff}(S),K_S)$.
+\end{theorem}
+
+Of the three differences between Theorems~\ref{thm:curvedefect} and \ref{thm:geomh0} only one matters. The
+class $K$ enters only through $\dg K>0$ and the symmetry of $R$; $\chi$ is quantified over all reals. The
+cone is the whole gap: the defect is a property of $\Ef_C$, present where $h^0$ exists and the Hodge index
+theorem holds.
+
+\subsection{The cones}
+\begin{theorem}[proved for $g=1$]\label{thm:cones}
+Let $\sigma(\mathcal C)=\sup\{|y_D|/\dg D:D\in\mathcal C,\dg D>0\}$. Then:
+(i) $\sigma(\Ef_C)=\frac12s_C(\gamma_1,\pi/2)$, attained at $\gamma_{\pm1}$ ($=\sqrt7/6$ for the curve of record);
+(ii) the positive cone $\{D^2\ge0,\ D\cdot H>0\}$ has $\sigma=\frac12$;
+(iii) $\overline{\mathrm{Eff}}(E\times E)=\overline{\mathrm{Pos}}$, so $\sigma(\overline{\mathrm{Eff}})=\frac12$;
+(iv) in each direction $\theta$ the ratio of support functions of $\Ef_C$ and $\overline{\mathrm{Eff}}$ is $s_C(\gamma_1,\theta)$;
+(v) $F_1\in\mathrm{Eff}\setminus\Ef_C$, since every nonzero class of $\Ef_C$ has $\Phi(0)>0$ while $F_1$ has $\Phi(0)=F_1\cdot F_1=0$.
+Adjoining $F_1,F_2$ to $\Ef_C$ does not change $\sigma$.
+\end{theorem}
+\begin{proof}
+(i) A linear functional attains its supremum on extreme rays, here $|\sin(n\theta_u)|/2\cosh(\frac n2\log q)$.
+(ii) Maximize $|y|/(a+b)$ under $ab\ge x^2+y^2$: AM--GM. (iii) Big classes are effective up to multiples (X8);
+on the abelian surface $E\times E$ effective divisors are nef, so $\overline{\mathrm{Eff}}\subseteq\overline{\mathrm{Pos}}$.
+\end{proof}
+For $g\ge2$ the upper bound in (iii) is open: the surface has negative curves ($\Delta^2=2-2g$).
+
+\begin{theorem}[the Frobenius-nef cone; proved]\label{thm:B4C}
+Let $B4_C=\{E:\I^C(E,\delta_n)\ge0\ \forall n\}$. Then $B4_C$ is the dual of $\Ef_C$, contains
+$\mathrm{Nef}(S)\cap V_C$, and $\Ef_C\subseteq B4_C$ iff $\kappa\ge0$ iff $g\le1$. The Gram of the generators of $\Ef_C$ is
+$q^{-|a-b|/2}N_{|a-b|}$, the data of the Euler product $Z_C(T)=\exp\sum N_mT^m/m$.
+\end{theorem}
+
+\subsection{The P\'olya class of the curve is half the ample class}
+\begin{theorem}[proved]\label{thm:curveK}
+Let $K_C(n)=k_n$ with $\Lambda_C(z)=\sum_{|n|\le g}k_nz^n$. Then (i) $\Phi_{K_C}=\xi_C$; (ii)
+$\Phi_{K_C}(0)=\Phi_{K_C}(1)=hq^{-g/2}$; (iii) $\Kc=\frac{q^{g/2}}{2h}K_C$ has $\dg\Kc=1$, $\I^C(F,\Kc)=\frac12\dg F$,
+$\I^C(\Kc,\Kc)=\frac12$; (iv) $D_{\Kc}\equiv\frac12(F_1+F_2)$; (v) $K_S^2=2(2g-2)^2\ne\frac12$, so $\Kc$ is not the
+canonical class of $S$.
+\end{theorem}
+\begin{proof}
+(iii) The zero terms vanish by (i). (iv) Both classes pair as $(\frac12,\frac12,0)$ with $F_1$, $F_2$ and the zero
+block, which determine a class modulo the radical.
+\end{proof}
+
+\begin{remark}
+$K>0$ has no analogue: for $g=1$, $K_C=\delta_1+k_0\delta_0+\delta_{-1}$ with $k_0=-a/\sqrt q$, so $K_C\ge0$ iff
+$N_1\ge q+1$, which fails for $E/\F_2$ with $N_1=1$. The frame uses only $\dg\Kc=1$.
+\end{remark}
+
+\subsection{The missing sums}
+For an elliptic curve with Frobenius $\pi$, $NS(E\times E)_\R$ is spanned by $F_1,F_2$ and the graphs
+$\Gamma_\alpha$, $\alpha\in\Z[\pi]$, with $\Gamma_\alpha\cdot\Gamma_\beta=\deg(\alpha-\beta)$ (X7). Since $N_m=\deg(1-\pi^m)$,
+the Gram of Theorem~\ref{thm:dict}(i) is the case $\alpha=\pi^a$, $\beta=\pi^b$: the frame's cone is the cone on the
+multiplicative semigroup $\{\pi^n\}$ and its transposes. The missing effective classes are the graphs of sums
+$m+n\pi$ and the fibres. In these terms Theorem~\ref{thm:cones}(iii) is the positive semidefiniteness of
+$\deg(m+n\pi)=m^2+amn+qn^2$, i.e. $a^2\le4q$; the form is already determined by the Gram ($a$ is read from
+$\kappa(1)$), and its positivity comes from $\deg$ being a count, $\#\ker(m+n\pi)$. The diagonal entry
+$\kappa(0)=2-2g$ tends to $-\infty$ with the genus; a transport of the sums to the arithmetic frame would have
+to be a difference-only form or carry an explicit counterterm. Further mismatches between the model and the
+arithmetic frame: the model has no archimedean place (its archimedean term is the integer $2-2g$); it has no
+smoothness condition, so point masses are classes and are the extreme rays of the cone; periodicity makes
+the quotient by the radical finite-dimensional; and on the lattice the optimal direction is not $\pi/2$,
+because $n=0$ is a sample point.
+
+%======================================================================
+\section{What the frame lacks}\label{sec:open}
+
+In geometry the effective cone fills the positive cone. In $\DW$ effectivity is pointwise nonnegativity of a
+single function on the modulus line, so the image of $\Ef$ under $(\dg,(\Phi(\rho))_\rho)$ is a moment cone, and
+the cosh inequality measures how much thinner it is: the degree weight grows while the zero weight
+oscillates. The frame retains the intersection theory of $C\times C$ and discards its linear systems.
+The model shows this is a property of the cone and not of the zeros. Two questions are left open:
+\begin{enumerate}
+\item Is there a cone $\Ef'\supseteq\Ef$ (modulo $\Nr$) with $\dg>0$ off $\Nr$, finite support functions, and
+$C'_{F}\ge\sqrt{W_F/2}$ for all $F$ of degree $0$ with $W_F>0$, defined without reference to the zeros?
+Theorem~\ref{thm:enlarge} is the test any candidate must pass. In the model, the graphs of sums supply it.
+\item What is $\sigma(\overline{\mathrm{Eff}})$ for curves of genus $g\ge2$, and does a curve model with an
+archimedean place exist in which the same comparison can be made?
+\end{enumerate}
+
+\appendix
+\section{Sources in the research record}
+The statements of this paper were first obtained, with audits, in the research record of the program:
+phase 135 (the Weil class, the P\'olya class, the radical, the transfer theorem, the $\Xi_a$ model),
+phase 138 (the polar plane), phases 141--142 (the Riemann--Roch functional and the frame defect theorem;
+certification scripts \texttt{certify\_sF.py}, \texttt{certify\_leakage.py}), phase 145 (the function-field model;
+script \texttt{sC\_and\_points.py}) and phase 156 (the truncation lemma). The earlier manuscript containing them is
+kept in \texttt{archive/main.md} of this paper's folder.
+
+\begin{thebibliography}{99}
+\bibitem{Barner1981} K.~Barner, \emph{On A.~Weil's explicit formula}, J.~reine angew.\ Math.\ \textbf{323} (1981), 139--152.
+\bibitem{Conrey1989} J.~B.~Conrey, \emph{More than two fifths of the zeros of the Riemann zeta function are on the critical line},
+J.~reine angew.\ Math.\ \textbf{399} (1989), 1--26.
+\bibitem{Davenport2000} H.~Davenport, \emph{Multiplicative Number Theory}, 3rd ed., Grad.\ Texts in Math.\ \textbf{74}, Springer, New York, 2000.
+\bibitem{Hardy1914} G.~H.~Hardy, \emph{Sur les z\'eros de la fonction $\zeta(s)$ de Riemann}, C.~R.~Acad.\ Sci.\ Paris \textbf{158} (1914), 1012--1014.
+\bibitem{Hartshorne} R.~Hartshorne, \emph{Algebraic Geometry}, Grad.\ Texts in Math.\ \textbf{52}, Springer, New York, 1977.
+\bibitem{Lazarsfeld} R.~Lazarsfeld, \emph{Positivity in Algebraic Geometry I}, Ergeb.\ Math.\ Grenzgeb.\ \textbf{48}, Springer, Berlin, 2004.
+\bibitem{Levinson1974} N.~Levinson, \emph{More than one third of zeros of Riemann's zeta-function are on $\sigma=1/2$}, Adv.\ Math.\ \textbf{13} (1974), 383--436.
+\bibitem{Paper45} D.~A.~Trejo Pizzo, \emph{An explicit formula and a comparison theorem for the canonical trace on a correspondence
+algebra of the idele class group}, preprint, 2026.
+\bibitem{Paper47} D.~A.~Trejo Pizzo, \emph{Weil positivity on a finite window: duality, certificates and a finite reduction}, preprint, 2026.
+\bibitem{PlattTrudgian2021} D.~J.~Platt and T.~S.~Trudgian, \emph{The Riemann hypothesis is true up to $3\cdot10^{12}$}, Bull.\ London Math.\ Soc.\ \textbf{53} (2021), 792--797.
+\bibitem{Polya1926} G.~P\'olya, \emph{Bemerkung \"uber die Integraldarstellung der Riemannschen $\xi$-Funktion}, Acta Math.\ \textbf{48} (1926), 305--317.
+\bibitem{Tate1966} J.~Tate, \emph{Endomorphisms of abelian varieties over finite fields}, Invent.\ Math.\ \textbf{2} (1966), 134--144.
+\bibitem{Titchmarsh1986} E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, 2nd ed., revised by D.~R.~Heath-Brown, Oxford Univ.\ Press, 1986.
+\bibitem{Trudgian2014} T.~S.~Trudgian, \emph{An improved upper bound for the argument of the Riemann zeta-function on the critical line II}, J.~Number Theory \textbf{134} (2014), 280--292.
+\bibitem{Weil48} A.~Weil, \emph{Sur les courbes alg\'ebriques et les vari\'et\'es qui s'en d\'eduisent}, Hermann, Paris, 1948.
+\bibitem{Weil52} A.~Weil, \emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers}, Comm.~S\'em.~Math.~Univ.~Lund (1952), 252--265.
+\end{thebibliography}
+\end{document}

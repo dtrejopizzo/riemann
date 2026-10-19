@@ -1,7 +1,6 @@
 # E72.1 -- The pole-relative Feshbach leakage theorem
 
-**Date:** 2026-07-07.
-**Role:** replace the too-strong global residual estimate of E71.17 by a strictly weaker ground-state
+**Purpose:** replace the too-strong global residual estimate of E71.17 by a strictly weaker ground-state
 leakage estimate.
 
 ## 0. Why this phase exists

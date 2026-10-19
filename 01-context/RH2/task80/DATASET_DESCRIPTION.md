@@ -52,7 +52,7 @@ This dataset consists of results from previous research investigating resonance 
 - L_DH(s) = ((1-iκ)/2)·L(s,χ) + ((1+iκ)/2)·L(s,χ̄)
 - Coefficients are complex and NOT multiplicative ### 4. resultado_Resonance_Detection_and_Class_Separation_in_Arithm.pdf (7,108,871 bytes)
 **Title:** Discovery report for Resonance Detection and Class Separation in Arithmetic L-Functions **Structure:**
-- Research Objective (detailed prompt)
+- Research Objective (detailed task statement)
 - Dataset Description
 - Summary of Discoveries (4 major discoveries)
 - Detailed discovery reports with figures

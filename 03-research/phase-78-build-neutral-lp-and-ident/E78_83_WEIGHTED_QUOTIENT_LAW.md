@@ -1,6 +1,6 @@
 # E78.83 - The weighted safe-delta target is exactly a quotient law
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

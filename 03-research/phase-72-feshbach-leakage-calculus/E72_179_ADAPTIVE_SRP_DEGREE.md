@@ -1,7 +1,6 @@
 # E72.179 -- Adaptive SRP degree audit
 
-**Date:** 2026-07-09.
-**Role:** correct the fixed-degree SRP statement and identify the right uniform scale.
+**Purpose:** correct the fixed-degree SRP statement and identify the right uniform scale.
 
 ## 0. Issue
 

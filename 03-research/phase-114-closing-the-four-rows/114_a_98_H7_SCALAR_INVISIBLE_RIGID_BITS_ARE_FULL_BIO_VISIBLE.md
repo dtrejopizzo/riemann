@@ -53,7 +53,7 @@ this pair passes the scalar ratio obstruction of `a97`.
 Evaluate on the Boolean vector of support `{1,2}`.  Then
 
 \[
- D_0(1,1,0,0)=2^u,qquad D_1(1,1,0,0)=2.                             \tag{2.1}
+ D_0(1,1,0,0)=2^u,\qquad D_1(1,1,0,0)=2.                             \tag{2.1}
 \]
 
 For `u>1` these values differ.  Thus the full higher-arity bio separates

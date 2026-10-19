@@ -1,7 +1,6 @@
 # E72.111 -- Finite frequency pushforward of the post-main energy
 
-**Date:** 2026-07-09.
-**Role:** rewrite the post-main mass and energy as finite matrix forms in Chebyshev Fourier data.
+**Purpose:** rewrite the post-main mass and energy as finite matrix forms in Chebyshev Fourier data.
 
 ## 0. Fourier transform of the reflected discrepancy
 

@@ -1,6 +1,6 @@
 # E78.93 - `U-RADIAL-GAP` is the rigid half of the weighted-gap split
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

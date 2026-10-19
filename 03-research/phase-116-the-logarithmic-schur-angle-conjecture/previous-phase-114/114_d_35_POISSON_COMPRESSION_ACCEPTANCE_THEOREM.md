@@ -29,7 +29,7 @@ More generally, if `M:K -> H` is Hilbert--Schmidt and `PM=M`, then
 Since `Px=x` and `U` is unitary,
 
 \[
- \langle x,U^*PUx\rangle=\|PUx\|^2,qquad
+ \langle x,U^*PUx\rangle=\|PUx\|^2,\qquad
  \|Ux\|^2=\|x\|^2.
 \]
 

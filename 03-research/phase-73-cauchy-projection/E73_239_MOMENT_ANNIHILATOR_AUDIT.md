@@ -1,6 +1,5 @@
 # E73.239 - Moment annihilator audit for curvature weights
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

@@ -1,8 +1,7 @@
 # E71.8 -- canonical-product determinant probe
 
-**Date:** 2026-07-07.
 **Script:** `E71_8_canonical_product_probe.py`.
-**Role:** test the next determinant candidate after the raw sine-comb normalization failed in E71.6.
+**Purpose:** test the next determinant candidate after the raw sine-comb normalization failed in E71.6.
 
 ## Candidate
 

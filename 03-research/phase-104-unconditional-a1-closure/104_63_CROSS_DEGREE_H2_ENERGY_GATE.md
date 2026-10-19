@@ -1,53 +1,55 @@
-# 104_63 — Energía entre grados, Parseval (H^2) y gate de Christoffel--Darboux
+# 104_63 — Cross-degree energy, Parseval (H^2), and Christoffel–Darboux gate
 
-**Pregunta.** ¿Se puede evitar el control grado a grado de A1 sumando una
-energía positiva del coeficiente *completo*, por ejemplo
+**Question.** Can degree-by-degree control of A1 be avoided by summing a
+positive energy of the *complete* coefficient, for example
 
 \[
  \mathcal E_N:=\sum_{N<n\le 2N}{\lambda_n^2\over n},             \tag{1}
 \]
 
-y usando Parseval o Christoffel--Darboux antes de separar polo, bloque
-arquimediano, primos y potencias primas?
+and using Parseval or Christoffel–Darboux before separating the pole, the
+archimedean block, the primes, and the prime powers?
 
-**Veredicto.** La energía (1) da un criterio exacto y cuantitativo, pero no una
-cota nueva. Su serie de Hardy tiene un polo interior exactamente cuando RH
-falla. La identidad de Christoffel--Darboux existe y conserva toda la suma
-prima, pero sus tres piezas reguladas divergen como
-\(\varepsilon^{-4N}\) y solo su cancelación completa tiene límite. Por tanto
-la positividad del kernel no produce una cota superior: para usarla haría falta
-estimar el mismo defecto prima--polo que determina \(\lambda_n\).
+**Verdict.** Energy (1) gives an exact, quantitative criterion, but not a
+new bound. Its Hardy series has an interior pole exactly when RH
+fails. The Christoffel–Darboux identity exists and keeps the whole prime
+sum together, but its three regulated pieces diverge like
+\(\varepsilon^{-4N}\), and only their complete cancellation has a limit.
+Hence the positivity of the kernel produces no upper bound: using it
+would require estimating the same prime–pole defect that determines
+\(\lambda_n\).
 
-Este documento cierra el ataque **Parseval/CD desnudo**. No prueba A1 ni RH y
-no presenta otra equivalencia como progreso hacia su demostración.
-
----
-
-## 1. Auditoría de no duplicación
-
-La búsqueda interna encontró antecedentes adyacentes, no este argumento:
-
-* `phase-33-dbn/78-transformada-li-ccm.md`, §5.3, eleva un coeficiente
-  individual a \(\lambda_n^2\), con una constante que depende de los ceros
-  off-line; no suma grados ni obtiene Parseval aritmético;
-* `phase-55-two-arrows/173-representacion-de-I.md`, §5.2, estudia normas
-  cuadráticas de funcionales holomorfos para la energía transversal de los
-  ceros, no la energía de los coeficientes de Li;
-* `104_28`--`104_30` construyen la forma prima--polo regulada y ya prueban que
-  sus dos canales no se pueden estimar por separado. Aquí ese colapso se hace
-  exacto en la dirección de los grados.
-
-En la literatura primaria citada por la fase, Lagarias da el crecimiento de
-los coeficientes bajo RH y Suzuki representa coeficientes individuales como
-normas condicionales. Una búsqueda dirigida no encontró la energía diádica
-(1). No se reclama novedad: el criterio de la sección siguiente es una
-consecuencia elemental de Cauchy--Hadamard y Parseval.
+This document closes the **bare Parseval/CD** attack. It proves neither
+A1 nor RH, and presents no other equivalence as progress toward its proof.
 
 ---
 
-## 2. Teorema exacto de radio y energía diádica
+## 1. No-duplication audit
 
-Ponga
+The internal search found adjacent background, not this argument:
+
+* `phase-33-dbn/78-transform-between-li-s-criterion.md`, §5.3, raises an individual
+  coefficient to \(\lambda_n^2\), with a constant depending on the
+  off-line zeros; it neither sums degrees nor obtains an arithmetic
+  Parseval;
+* `phase-55-two-arrows/173-structural-representation-of-sum-rules.md`, §5.2, studies
+  quadratic norms of holomorphic functionals for the zeros' transverse
+  energy, not the energy of the Li coefficients;
+* `104_28`--`104_30` build the regulated prime–pole form and already prove
+  that its two channels cannot be estimated separately. Here that
+  collapse is made exact in the direction of the degrees.
+
+In the primary literature cited by the phase, Lagarias gives the growth of
+the coefficients under RH and Suzuki represents individual coefficients as
+conditional norms. A directed search did not find the dyadic energy
+(1). No novelty is claimed: the criterion of the next section is an
+elementary consequence of Cauchy–Hadamard and Parseval.
+
+---
+
+## 2. Exact radius and dyadic-energy theorem
+
+Set
 
 \[
  G(z):=z{d\over dz}\log\xi\!\left({1\over1-z}\right)
@@ -55,35 +57,35 @@ Ponga
       =\sum_{n\ge1}\lambda_nz^n.                            \tag{2}
 \]
 
-Para un cero no trivial \(\rho\), escriba
+For a nontrivial zero \(\rho\), write
 
 \[
  w_\rho=1-{1\over\rho}.
 \]
 
-Se tiene
+We have
 
 \[
  |w_\rho|<1\quad\Longleftrightarrow\quad\Re\rho>{1\over2}. \tag{3}
 \]
 
-Si existe un cero a la derecha de la recta, defina
+If a zero exists to the right of the line, define
 
 \[
  r_0:=\min_{\Re\rho>1/2}|w_\rho|<1;                          \tag{4}
 \]
 
-el mínimo existe porque \(|w_\rho|\to1\) cuando
-\(|\Im\rho|\to\infty\). Bajo RH adopte \(r_0=1\).
+the minimum exists because \(|w_\rho|\to1\) as
+\(|\Im\rho|\to\infty\). Under RH set \(r_0=1\).
 
-**Teorema 2.1 (ley exacta de crecimiento entre grados).** Con (1) y (4),
+**Theorem 2.1 (exact cross-degree growth law).** With (1) and (4),
 
 \[
  \boxed{\displaystyle
   \limsup_{N\to\infty}\mathcal E_N^{1/(4N)}={1\over r_0}.}  \tag{5}
 \]
 
-En particular, son equivalentes:
+In particular, the following are equivalent:
 
 \[
  \mathrm{RH},\qquad
@@ -91,44 +93,44 @@ En particular, son equivalentes:
  \limsup_N\mathcal E_N^{1/(4N)}=1.                          \tag{6}
 \]
 
-Bajo RH, el teorema efectivo de Lagarias usado en `104_02` da más:
+Under RH, Lagarias's effective theorem used in `104_02` gives more:
 
 \[
  \mathcal E_N\ll N^2\log^2N.                               \tag{7}
 \]
 
-**Demostración.** La transformación \(s=1/(1-z)\) lleva el disco unidad al
-semiplano \(\Re s>1/2\). Si \(\rho\) tiene multiplicidad \(m_\rho\), (2)
-tiene en \(w_\rho\) un polo simple de residuo
+**Proof.** The transformation \(s=1/(1-z)\) sends the unit disk to the
+half-plane \(\Re s>1/2\). If \(\rho\) has multiplicity \(m_\rho\), (2)
+has at \(w_\rho\) a simple pole of residue
 
 \[
  \mathop{\rm Res}_{z=w_\rho}G(z)=m_\rho w_\rho\ne0.         \tag{8}
 \]
 
-Por tanto el radio de convergencia de (2) es exactamente \(r_0\). Cauchy--
-Hadamard da
+Hence the radius of convergence of (2) is exactly \(r_0\). Cauchy–
+Hadamard gives
 
 \[
  \limsup_n|\lambda_n|^{1/n}=r_0^{-1}.                       \tag{9}
 \]
 
-Para la cota superior en (5), fije \(r<r_0\). Cauchy da
-\(|\lambda_n|\le M_r r^{-n}\), de donde
-\(\limsup_N\mathcal E_N^{1/(4N)}\le r^{-1}\); haga
-\(r\uparrow r_0\). Para la inferior, tome una subsucesión que alcance (9) y
-\(N=\lceil n/2\rceil\). Entonces \(N<n\le2N\) y
-\(\mathcal E_N\ge\lambda_n^2/n\), lo que da el sentido contrario. Bajo RH,
-\(r_0=1\); la estimación (7) sigue de
+For the upper bound in (5), fix \(r<r_0\). Cauchy gives
+\(|\lambda_n|\le M_r r^{-n}\), whence
+\(\limsup_N\mathcal E_N^{1/(4N)}\le r^{-1}\); let
+\(r\uparrow r_0\). For the lower bound, take a subsequence attaining (9)
+and \(N=\lceil n/2\rceil\). Then \(N<n\le2N\) and
+\(\mathcal E_N\ge\lambda_n^2/n\), giving the opposite direction. Under RH,
+\(r_0=1\); estimate (7) follows from
 \(\lambda_n=\frac12n\log n+O(n)\). \(\square\)
 
-La versión Abel/Hardy es igualmente exacta. Para \(0<r<r_0\),
+The Abel/Hardy version is equally exact. For \(0<r<r_0\),
 
 \[
  {1\over2\pi}\int_0^{2\pi}|G(re^{it})|^2dt
    =\sum_{n\ge1}\lambda_n^2r^{2n}.                          \tag{10}
 \]
 
-Si \(W_0=\{w_\rho:|w_\rho|=r_0\}\), la expansión principal (8) da
+If \(W_0=\{w_\rho:|w_\rho|=r_0\}\), the principal expansion (8) gives
 
 \[
  {1\over2\pi}\int_0^{2\pi}|G(re^{it})|^2dt
@@ -136,14 +138,14 @@ Si \(W_0=\{w_\rho:|w_\rho|=r_0\}\), la expansión principal (8) da
  \qquad(r\uparrow r_0<1).                                  \tag{11}
 \]
 
-Así, el supuesto "bound de Hardy" choca literalmente con el primer polo
-interior, no con una pérdida de constantes.
+So the hoped-for "Hardy bound" collides literally with the first interior
+pole, not with a loss of constants.
 
 ---
 
-## 3. Representación aritmética exacta antes del cuadrado
+## 3. Exact arithmetic representation before squaring
 
-Use la convención de `104_61`. Para \(\varepsilon>0\), defina
+Use the convention of `104_61`. For \(\varepsilon>0\), define
 
 \[
 \begin{aligned}
@@ -157,8 +159,8 @@ Use la convención de `104_61`. Para \(\varepsilon>0\), defina
 \end{aligned}                                                \tag{12}
 \]
 
-Entonces \(\lambda_{n,\varepsilon}\to\lambda_n\). Como el bloque exterior
-es finito, Parseval da la identidad rigurosa
+Then \(\lambda_{n,\varepsilon}\to\lambda_n\). Since the outer block
+is finite, Parseval gives the rigorous identity
 
 \[
 \boxed{
@@ -169,10 +171,11 @@ es finito, Parseval da la identidad rigurosa
  \right|^2dt.}                                               \tag{13}
 \]
 
-La fórmula (13) mantiene juntos el bloque arquimediano, el polo, todos los
-primos y todas las potencias primas hasta después de formar el cuadrado.
+Formula (13) keeps the archimedean block, the pole, all the
+primes, and all the prime powers together until after forming the
+square.
 
-Hay también una forma de medida firmada. Sea
+There is also a signed-measure form. Let
 
 \[
  d\nu_\varepsilon(x)=e^{-\varepsilon x}\,dx-
@@ -180,28 +183,28 @@ Hay también una forma de medida firmada. Sea
        \delta_{\log m}(dx).                                  \tag{14}
 \]
 
-Entonces
+Then
 
 \[
  p_n(\varepsilon)-Q_{n,\varepsilon}
  =\int_0^\infty L_{n-1}^{(1)}(x)\,d\nu_\varepsilon(x).       \tag{15}
 \]
 
-Esta es la forma exacta del acoplamiento polo--primos; \(\nu_\varepsilon\)
-es firmada, no positiva.
+This is the exact form of the pole–prime coupling; \(\nu_\varepsilon\)
+is signed, not positive.
 
 ---
 
-## 4. Christoffel--Darboux existe, pero no acota el límite
+## 4. Christoffel–Darboux exists, but does not bound the limit
 
-La ortogonalidad de Laguerre de parámetro uno es
+Laguerre orthogonality of parameter one is
 
 \[
  \int_0^\infty xe^{-x}L_j^{(1)}(x)L_k^{(1)}(x)dx
  =(k+1)\delta_{jk}.                                          \tag{16}
 \]
 
-Por ello el peso \(1/n\) de (1) produce exactamente el kernel
+Hence the weight \(1/n\) of (1) produces exactly the kernel
 
 \[
 \begin{aligned}
@@ -211,7 +214,7 @@ Por ello el peso \(1/n\) de (1) produce exactamente el kernel
 \end{aligned}
 \]
 
-donde
+where
 
 \[
  K_M^{(1)}(x,y)
@@ -220,9 +223,9 @@ donde
        -L_{M+1}^{(1)}(x)L_M^{(1)}(y)\over x-y}.              \tag{18}
 \]
 
-La última fracción se entiende por continuidad cuando \(x=y\).
+The last fraction is understood by continuity when \(x=y\).
 
-En particular,
+In particular,
 
 \[
  \sum_{n=N+1}^{2N}{Q_{n,\varepsilon}^2\over n}
@@ -231,7 +234,7 @@ En particular,
  \mathcal K_N(\log m,\log\ell).                            \tag{19}
 \]
 
-Más precisamente, si
+More precisely, if
 \[
  a_{m,\varepsilon}={\Lambda(m)\over m^{1+\varepsilon}},
  \qquad
@@ -241,7 +244,7 @@ Más precisamente, si
  =\sum_{n=N+1}^{2N}{c_{n,\varepsilon}\over n}
  L_{n-1}^{(1)}(x),
 \]
-entonces la energía regulada completa de (13) es
+then the complete regulated energy of (13) is
 \[
 \boxed{
 \begin{aligned}
@@ -256,14 +259,14 @@ entonces la energía regulada completa de (13) es
        \mathcal E_{N,\varepsilon}.
 \end{aligned}}                                               \tag{19a}
 \]
-Así (19a), no solo (19), conserva explícitamente \(A_n\), el polo y todos
-los pesos \(\Lambda(m)\) antes de cualquier estimación.
+So (19a), not only (19), explicitly keeps \(A_n\), the pole, and all the
+weights \(\Lambda(m)\) before any estimation.
 
-Las series son absolutamente convergentes para \(\varepsilon>0\). La
-positividad de Gram de \(\mathcal K_N\) hace no negativo (19), pero no da
-una cota superior para la combinación firmada (13).
+The series are absolutely convergent for \(\varepsilon>0\). The Gram
+positivity of \(\mathcal K_N\) makes (19) nonnegative, but it gives
+no upper bound for the signed combination (13).
 
-El fracaso es cuantitativo. De (12), para cada \(n\) fijo,
+The failure is quantitative. From (12), for each fixed \(n\),
 
 \[
  p_n(\varepsilon)=(-1)^{n-1}\varepsilon^{-n}
@@ -272,7 +275,7 @@ El fracaso es cuantitativo. De (12), para cada \(n\) fijo,
  Q_{n,\varepsilon}=p_n(\varepsilon)+A_n-\lambda_n+o(1).      \tag{20}
 \]
 
-Por tanto, con el \(c_{n,\varepsilon}\) de (19a),
+Hence, with the \(c_{n,\varepsilon}\) of (19a),
 
 \[
 \begin{aligned}
@@ -285,47 +288,47 @@ Por tanto, con el \(c_{n,\varepsilon}\) de (19a),
 \end{aligned}
 \]
 
-Sin embargo,
+However,
 
 \[
  \sum_{N<n\le2N}{(c_{n,\varepsilon}-Q_{n,\varepsilon})^2\over n}
  \longrightarrow\mathcal E_N<\infty.                       \tag{22}
 \]
 
-Los dos términos positivos y el término cruzado de (22) cancelan todas las
-potencias negativas hasta orden \(\varepsilon^{-4N}\). Una estimación
-separada necesitaría precisión relativa \(O_N(\varepsilon^{4N})\) para
-recuperar siquiera una cota \(O_N(1)\). La desigualdad triangular, Bessel o
-el descarte del término cruzado da en cambio una cantidad que diverge como
+The two positive terms and the cross term of (22) cancel all the
+negative powers up to order \(\varepsilon^{-4N}\). A separate estimate
+would need relative precision \(O_N(\varepsilon^{4N})\) to recover even
+a bound \(O_N(1)\). The triangle inequality, Bessel, or discarding the
+cross term instead gives a quantity that diverges like
 \(\varepsilon^{-4N}\).
 
-Equivalentemente, (15)--(18) escriben el cuadrado prima--polo como
+Equivalently, (15)--(18) write the prime–pole square as
 
 \[
  \iint\mathcal K_N(x,y)\,d\nu_\varepsilon(x)d\nu_\varepsilon(y), \tag{23}
 \]
 
-pero ninguna cota por variación total sobrevive al límite. Controlar (23)
-con signo y uniformemente en \(N\) sería un teorema aritmético nuevo; por el
-Teorema 2.1, una cota subexponencial para la energía **completa** ya implica
-RH.
+but no total-variation bound survives the limit. Controlling (23)
+with sign and uniformly in \(N\) would be a new arithmetic theorem; by
+Theorem 2.1, a subexponential bound for the **complete** energy already
+implies RH.
 
 ---
 
-## 5. Cierre del ataque
+## 5. Closure of the attack
 
-Se obtienen dos identidades útiles: Parseval completo (13) y el kernel
-cross-degree (17)--(19). No se obtiene la cota buscada.
+Two useful identities are obtained: complete Parseval (13) and the
+cross-degree kernel (17)--(19). The sought-after bound is not obtained.
 
-* El lado analítico vuelve al polo interior \(w_\rho\), con tasa exacta
-  \(r_0^{-1}\) en (5) y explosión (11).
-* El lado aritmético vuelve a la cancelación prima--polo: CD solo controla
-  una de tres piezas de tamaño \(\varepsilon^{-4N}\).
-* La positividad de la energía elimina el signo de A1 y por ello exige una
-  cota superior RH-strength, no una desigualdad automática.
+* The analytic side returns to the interior pole \(w_\rho\), with exact
+  rate \(r_0^{-1}\) in (5) and blow-up (11).
+* The arithmetic side returns to the prime–pole cancellation: CD only
+  controls one of three pieces of size \(\varepsilon^{-4N}\).
+* The positivity of the energy eliminates the sign of A1 and hence
+  requires an RH-strength upper bound, not an automatic inequality.
 
-**Estado:** no-go cuantitativo para el ataque cross-degree basado únicamente
-en Parseval, ortogonalidad de Laguerre o positividad de
-Christoffel--Darboux. Un sucesor tendría que aportar una estimación firmada
-de (23) que conserve la compensación de \(\nu_\varepsilon\); esas identidades
-por sí solas no la contienen.
+**Status:** quantitative no-go for the cross-degree attack based solely
+on Parseval, Laguerre orthogonality, or Christoffel–Darboux positivity.
+A successor would have to supply a signed estimate of (23) that
+preserves the compensation of \(\nu_\varepsilon\); those identities by
+themselves do not contain it.

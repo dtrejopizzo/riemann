@@ -1,42 +1,43 @@
-# 104_43 — Size-bias zeta, selector divisor y gate martingala
+# 104_43 — Size-bias zeta, divisor selector, and the martingale gate
 
-**Rol.** Explotar la identidad especial
+**Role.** Exploit the special identity
 
 \[
  \log n=\sum_{d\mid n}\Lambda(d)
 \]
 
-antes de separar primos, potencias primas y polo. La ley zeta posee una
-factorización size-biased exacta: al sesgar por \(\log N\), se obtiene
-\(N^\star=DN'\), donde \(N'\) vuelve a tener la ley zeta y \(D\) tiene
-exactamente los pesos \(\Lambda(d)d^{-s}\). Condicionado a
-\(N^\star=n\), el divisor \(D\) se elige con probabilidad
-\(\Lambda(d)/\log n\). El comparador polar es la factorización continua
-\(\Gamma(2,\varepsilon)=\mathrm{Exp}(\varepsilon)+
-\mathrm{Exp}(\varepsilon)\), cuyo selector condicionado es uniforme
-en el intervalo logarítmico.
+before separating primes, prime powers, and the pole. The zeta law has an
+exact size-biased factorization: biasing by \(\log N\) gives
+\(N^\star=DN'\), where \(N'\) again has the zeta law and \(D\) has exactly
+the weights \(\Lambda(d)d^{-s}\). Conditioned on
+\(N^\star=n\), the divisor \(D\) is chosen with probability
+\(\Lambda(d)/\log n\). The polar comparator is the continuous
+factorization \(\Gamma(2,\varepsilon)=\mathrm{Exp}(\varepsilon)+
+\mathrm{Exp}(\varepsilon)\), whose conditioned selector is uniform on the
+logarithmic interval.
 
-La factorización es exacta y conserva simultáneamente todas las potencias
-primas y todos los demás primos. Sin embargo:
+The factorization is exact and simultaneously preserves every prime power
+and every other prime. However:
 
-1. el selector divisor no domina ni es dominado por el selector uniforme,
-   ya para el test lineal y los enteros reales \(2\) y \(30\);
-2. comparar las dos leyes seleccionadas por transformada de Laplace da
-   **exactamente**
-   \(R(t)=-\zeta'/\zeta(1+t)-1/t\), es decir, el gate escalar ya abierto;
-3. Efron--Stein aplicado por separado a la ley zeta pierde la cancelación
-   Abel: para el test Laguerre de grado \(n-1\), su energía diverge al menos
-   como
+1. the divisor selector neither dominates nor is dominated by the uniform
+   selector, already for the linear test function and the real integers
+   \(2\) and \(30\);
+2. comparing the two selected laws via the Laplace transform gives
+   **exactly**
+   \(R(t)=-\zeta'/\zeta(1+t)-1/t\), that is, the already-open scalar gate;
+3. Efron–Stein applied separately to the zeta law loses the Abel
+   cancellation: for the Laguerre test of degree \(n-1\), its energy
+   diverges at least like
    \(\{\binom{2n-2}{n-1}-1\}\varepsilon^{-2n+2}\).
 
-Por tanto queda descartado cerrar el margen mediante orden condicional,
-data processing o una energía tensorizada positiva aplicada separadamente.
-No queda descartada una desigualdad **firmada y acoplada** específica para
-la diferencia selector-divisor/selector-uniforme; por la identidad de
-transformadas, producirla sería precisamente nuevo contenido aritmético.
-Este documento no prueba \(H_n\ge0\), A1 ni RH.
+Hence closing the margin via conditional order, data processing, or a
+separately applied positive tensorized energy is ruled out. Not ruled out
+is a **signed, coupled** inequality specific to the divisor-selector
+versus uniform-selector difference; by the transform identity, producing
+it would be precisely new arithmetic content. This document proves
+neither \(H_n\ge0\), nor A1, nor RH.
 
-La normalización del frente es
+The normalization of the front is
 
 \[
  H_n=\lambda_n-{501\over2002}A_n,
@@ -45,47 +46,47 @@ La normalización del frente es
  \qquad r_*={2002\over501}.                                   \tag{0}
 \]
 
-Por tanto una cota unilateral para el generador completado con exponente
-\(r_*\) cerraría el target; ninguna de las contracciones probadas abajo
-aporta esa cota.
+Hence a one-sided bound for the completed generator with exponent
+\(r_*\) would close the target; none of the contractions proved below
+supplies that bound.
 
-## 1. Auditoría interna de no duplicación
+## 1. Internal non-duplication audit
 
-`104_16` ya prueba que el cociclo Jordan positivo pierde el signo al
-emparejarse con el polo. `104_20` conserva torres completas, pero su cuadrado
-local no es una norma. `104_21` construye la ley compound-Poisson global y
-su identidad de Mecke. `104_24` aplica Stein--Mecke al cociclo completado y
-obtiene un generador firmado. `104_29` demuestra que partir en \(\log2\)
-recompone exactamente el margen buscado.
+`104_16` already proves that the positive Jordan cocycle loses its sign
+when paired with the pole. `104_20` preserves complete towers, but its
+local square is not a norm. `104_21` builds the global compound-Poisson
+law and its Mecke identity. `104_24` applies Stein–Mecke to the completed
+cocycle and obtains a signed generator. `104_29` shows that splitting at
+\(\log2\) exactly recomposes the sought margin.
 
-Lo que no estaba escrito en esos documentos es la desintegración
-size-biased sobre el **entero producto** \(N^\star\), con el kernel
+What was not written in those documents is the size-biased disintegration
+over the **product integer** \(N^\star\), with the kernel
 
 \[
  K(n,d)={\Lambda(d)\over\log n}{\bf1}_{d\mid n},                 \tag{1}
 \]
 
-ni su comparación exacta con el split uniforme del polo. La identidad es
-la versión de divisor de Mecke, no una fuente adicional de positividad. No
-se reclama novedad bibliográfica para la teoría general de size-bias o para
-Efron--Stein.
+nor its exact comparison with the uniform split of the pole. The identity
+is the divisor version of Mecke's formula, not an additional source of
+positivity. No bibliographic novelty is claimed for general size-bias
+theory or for Efron–Stein.
 
-## 2. Ley zeta y factorización size-biased exacta
+## 2. Zeta law and exact size-biased factorization
 
-Fijemos \(s=1+\varepsilon>1\) y sea
+Fix \(s=1+\varepsilon>1\) and let
 
 \[
  \mathbb P_s(N=m)={m^{-s}\over\zeta(s)},\qquad m\ge1.           \tag{2}
 \]
 
-En el producto de Euler,
+In the Euler product,
 
 \[
  N=\prod_p p^{K_p},\qquad
  \mathbb P(K_p=k)=(1-p^{-s})p^{-ks},\quad k\ge0,               \tag{3}
 \]
 
-y los \(K_p\) son independientes. Pongamos
+and the \(K_p\) are independent. Set
 
 \[
  \mathfrak m(s):=\mathbb E_s\log N
@@ -93,14 +94,14 @@ y los \(K_p\) son independientes. Pongamos
  =\sum_{d\ge2}{\Lambda(d)\over d^s}>0.                         \tag{4}
 \]
 
-La ley sesgada por \(\log N\) es
+The law biased by \(\log N\) is
 
 \[
  \mathbb P_s^\star(N^\star=m)
  ={(\log m)m^{-s}\over-\zeta'(s)},\qquad m\ge2.               \tag{5}
 \]
 
-**Teorema 2.1 (factorización divisor--cofactor).** Sean independientes
+**Theorem 2.1 (divisor–cofactor factorization).** Let independently
 
 \[
  \mathbb P_s(D=d)={\Lambda(d)d^{-s}\over\mathfrak m(s)},
@@ -108,13 +109,13 @@ La ley sesgada por \(\log N\) es
  \mathbb P_s(N'=k)={k^{-s}\over\zeta(s)}.                     \tag{6}
 \]
 
-Entonces
+Then
 
 \[
  \boxed{N^\star\ \buildrel d\over=\ DN'.}                    \tag{7}
 \]
 
-Además, para cada \(n\ge2\),
+Moreover, for each \(n\ge2\),
 
 \[
  \boxed{
@@ -122,7 +123,7 @@ Además, para cada \(n\ge2\),
  ={\Lambda(d)\over\log n}{\bf1}_{d\mid n}.}                  \tag{8}
 \]
 
-*Demostración.* La masa conjunta en \((d,k)\) es
+*Proof.* The joint mass at \((d,k)\) is
 
 \[
  {\Lambda(d)d^{-s}\over\mathfrak m(s)}
@@ -130,44 +131,44 @@ Además, para cada \(n\ge2\),
  ={\Lambda(d)(dk)^{-s}\over-\zeta'(s)}.                       \tag{9}
 \]
 
-Sumar (9) sobre \(dk=n\) y usar
-\(\sum_{d\mid n}\Lambda(d)=\log n\) produce (5) y (7).
-Dividir (9) por la masa resultante de \(n\) produce (8). \(\square\)
+Summing (9) over \(dk=n\) and using
+\(\sum_{d\mid n}\Lambda(d)=\log n\) produces (5) and (7).
+Dividing (9) by the resulting mass at \(n\) produces (8). \(\square\)
 
-En coordenadas aditivas,
+In additive coordinates,
 
 \[
  X=\log N',\qquad Y=\log D,\qquad S=\log N^\star=X+Y,          \tag{10}
 \]
 
-con \(X\) e \(Y\) independientes. Toda la interacción entre distintos
-primos permanece dentro de la ley de \(S\); no se ha agrupado torre a
-torre ni tomado valores absolutos.
+with \(X\) and \(Y\) independent. All the interaction between distinct
+primes remains inside the law of \(S\); nothing has been grouped tower by
+tower or had absolute values taken.
 
-## 3. Comparador polar y selector uniforme
+## 3. Polar comparator and uniform selector
 
-Sea \(Y_0\sim\mathrm{Exp}(\varepsilon)\). Su sesgo por el valor es
-\(S_0^\star\sim\Gamma(2,\varepsilon)\), y admite la factorización
+Let \(Y_0\sim\mathrm{Exp}(\varepsilon)\). Its value-bias is
+\(S_0^\star\sim\Gamma(2,\varepsilon)\), and it admits the factorization
 
 \[
  S_0^\star=Y_0+Y_0',                             \tag{11}
 \]
 
-con dos exponenciales independientes de tasa \(\varepsilon\). Condicionado
-a \(S_0^\star=x\), la variable seleccionada \(Y_0\) es uniforme en
-\([0,x]\). Por tanto el análogo continuo de (1) es
+with two independent exponentials of rate \(\varepsilon\). Conditioned on
+\(S_0^\star=x\), the selected variable \(Y_0\) is uniform on
+\([0,x]\). Hence the continuous analogue of (1) is
 
 \[
  (Uf)(x)={1\over x}\int_0^x f(y)\,dy.                         \tag{12}
 \]
 
-En el lado aritmético, si \(L=\log n\), (8) da
+On the arithmetic side, if \(L=\log n\), (8) gives
 
 \[
  (Kf)(n)={1\over L}\sum_{d\mid n}\Lambda(d)f(\log d).        \tag{13}
 \]
 
-Las dos identidades de conservación de la media son
+The two mean-preservation identities are
 
 \[
  \mathbb E_s^\star Kf(N^\star)=\mathbb E_s f(Y),
@@ -175,22 +176,22 @@ Las dos identidades de conservación de la media son
  \mathbb E\,Uf(S_0^\star)=\mathbb E f(Y_0).                   \tag{14}
 \]
 
-Jensen condicional da data processing, por ejemplo
+Conditional Jensen gives data processing, e.g.
 
 \[
  \mathrm{Var}_{\mathbb P_s^\star}(Kf)
  \le \mathrm{Var}_{\mathbb P_s(D)}(f),                 \tag{15}
 \]
 
-y la desigualdad análoga para \(U\). Es una contracción de la parte
-centrada. La constante --la media de \(f\)-- pasa sin cambio por (14), y
-es precisamente la componente que aparece en la suma prima--polo. Por ello
-(15), por sí sola, no puede fijar su signo.
+and the analogous inequality for \(U\). It is a contraction of the
+centered part. The constant — the mean of \(f\) — passes unchanged
+through (14), and that is precisely the component appearing in the
+prime–pole sum. Hence (15), by itself, cannot fix its sign.
 
-## 4. El selector discreto no posee orden unilateral
+## 4. The discrete selector has no one-sided order
 
-La falla ocurre antes de usar un Laguerre. Para \(f(y)=y\), si
-\(n=\prod_p p^{a_p}\) y \(L=\log n\), entonces
+The failure occurs before using any Laguerre function. For \(f(y)=y\), if
+\(n=\prod_p p^{a_p}\) and \(L=\log n\), then
 
 \[
  (Kf)(n)
@@ -199,7 +200,7 @@ La falla ocurre antes de usar un Laguerre. Para \(f(y)=y\), si
  (Uf)(L)={L\over2}.                                             \tag{16}
 \]
 
-En consecuencia,
+Consequently,
 
 \[
  \boxed{
@@ -207,36 +208,36 @@ En consecuencia,
  =\sum_p a_p(a_p+1)(\log p)^2-L^2.}                            \tag{17}
 \]
 
-Para \(n=2\), (17) vale \((\log2)^2>0\). Para \(n=30\), escribamos
-\(a=\log2\), \(b=\log3\), \(c=\log5\). El lado derecho es
+For \(n=2\), (17) equals \((\log2)^2>0\). For \(n=30\), write
+\(a=\log2\), \(b=\log3\), \(c=\log5\). The right-hand side is
 
 \[
  a^2+b^2+c^2-2ab-2ac-2bc=(a+b-c)^2-4ab<0.                     \tag{18}
 \]
 
-La última desigualdad no es numérica: como
+The last inequality is not numerical: since
 
 \[
  0<a+b-c=\log(6/5)<\log2=a,
 \]
 
-se tiene
+one has
 
 \[
  (a+b-c)^2-4ab<a^2-4ab=a(a-4b)<0.                             \tag{19}
 \]
 
-Por tanto no existe un acoplamiento condicionado a \(S=L\) que coloque
-siempre al divisor seleccionado por encima del uniforme, ni uno que lo
-coloque siempre por debajo. En particular fallan ambos órdenes estocásticos
-condicionales y cualquier orden convexo que ya ordene las funciones
-lineales. Una comparación global, después de promediar en \(n\), no queda
-refutada por (18); necesitaría cancelación entre factorizaciones distintas.
+Hence there is no coupling conditioned on \(S=L\) that always places the
+selected divisor above the uniform one, nor one that always places it
+below. In particular, both conditional stochastic orders fail, as does
+any convex order already ordering linear functions. A global comparison,
+after averaging over \(n\), is not refuted by (18); it would need
+cancellation between different factorizations.
 
-## 5. La comparación marginal es exactamente \(R\)
+## 5. The marginal comparison is exactly \(R\)
 
-Para un test polinómico \(f\), definamos el funcional prima--polo
-emparejado
+For a polynomial test function \(f\), define the paired prime–pole
+functional
 
 \[
  \mathfrak M_\varepsilon(f)
@@ -244,7 +245,7 @@ emparejado
    -{1\over\varepsilon}\mathbb E f(Y_0).                       \tag{20}
 \]
 
-Por (6) y la densidad exponencial,
+By (6) and the exponential density,
 
 \[
  \boxed{
@@ -253,7 +254,7 @@ Por (6) y la densidad exponencial,
   -\int_0^\infty e^{-\varepsilon x}f(x)\,dx.}                 \tag{21}
 \]
 
-Al tomar \(f_t(x)=e^{-tx}\), se obtiene
+Taking \(f_t(x)=e^{-tx}\), one obtains
 
 \[
 \begin{aligned}
@@ -261,20 +262,22 @@ Al tomar \(f_t(x)=e^{-tx}\), se obtiene
  &=\mathfrak m(1+\varepsilon+t)-{1\over\varepsilon+t}\\
  &=\boxed{R(\varepsilon+t)},                                  \tag{22}
 \end{aligned}
+\]
 
-donde
+where
 
 \[
  R(q)=-{\zeta'\over\zeta}(1+q)-{1\over q}.                   \tag{23}
 \]
 
-Esto identifica sin resto el error del acoplamiento size-biased. Si
+This identifies, with no remainder, the error of the size-biased
+coupling. If
 
 \[
  L_n(x)=\sum_{j=0}^n{n\choose j}{(-x)^j\over j!},              \tag{24}
 \]
 
-derivar (22) en \(t=0\) da
+differentiating (22) at \(t=0\) gives
 
 \[
  \boxed{
@@ -282,22 +285,22 @@ derivar (22) en \(t=0\) da
  =\sum_{j=0}^n{n\choose j}{R^{(j)}(\varepsilon)\over j!}.}     \tag{25}
 \]
 
-En el límite \(\varepsilon\downarrow0\), (25) es exactamente el
-coeficiente binomial \(C_n\) de `104_03`, y
+In the limit \(\varepsilon\downarrow0\), (25) is exactly the binomial
+coefficient \(C_n\) of `104_03`, and
 
 \[
  C_n=\Delta A_n-\Delta\lambda_n.                              \tag{26}
 \]
 
-Usar \(L_{n-1}^{(1)}-n\) en (21), y añadir la densidad Gamma explícita,
-da el generador compensado de `104_29`. Así, la desintegración por divisores
-no reemplaza el gate: su error de comparación es su función generatriz
-escalar exacta.
+Using \(L_{n-1}^{(1)}-n\) in (21), and adding the explicit Gamma density,
+gives the compensated generator of `104_29`. So the divisor
+disintegration does not replace the gate: its comparison error is its own
+exact scalar generating function.
 
-## 6. Stop-gate cuantitativo de Efron--Stein
+## 6. Quantitative Efron–Stein stop-gate
 
-La independencia (3) permite una energía tensorizada genuina. Sea
-\(K_p'\) una copia independiente de \(K_p\), sea
+Independence (3) allows a genuine tensorized energy. Let
+\(K_p'\) be an independent copy of \(K_p\), let
 
 \[
  X_\varepsilon=\log N,\qquad
@@ -305,7 +308,7 @@ La independencia (3) permite una energía tensorizada genuina. Sea
  =X_\varepsilon-(\log p)K_p+(\log p)K_p',                     \tag{27}
 \]
 
-y defínase
+and define
 
 \[
  \mathcal E_\varepsilon(f)
@@ -313,16 +316,16 @@ y defínase
   \{f(X_\varepsilon)-f(X_\varepsilon^{(p)})\}^2.             \tag{28}
 \]
 
-Para todo polinomio fijo, la serie converge cuando \(\varepsilon>0\), y
-Efron--Stein, primero sobre un número finito de primos y luego por límite,
-da
+For every fixed polynomial, the series converges when \(\varepsilon>0\),
+and Efron–Stein, first over a finite number of primes and then by limit,
+gives
 
 \[
  \mathrm{Var}\,f(X_\varepsilon)
  \le\mathcal E_\varepsilon(f).                               \tag{29}
 \]
 
-La Laurent de zeta en uno implica, para cada \(k\ge1\),
+The Laurent expansion of zeta at one implies, for each \(k\ge1\),
 
 \[
  \mathbb E X_\varepsilon^k
@@ -331,14 +334,14 @@ La Laurent de zeta en uno implica, para cada \(k\ge1\),
  =k!\,\varepsilon^{-k}\{1+O_k(\varepsilon)\}.                \tag{30}
 \]
 
-Pongamos
+Set
 
 \[
  \varphi_n(x)=L_{n-1}^{(1)}(x)-n,\qquad d=n-1.                 \tag{31}
 \]
 
-Su coeficiente líder es \((-1)^d/d!\). Usando (30) en los dos momentos
-líderes,
+Its leading coefficient is \((-1)^d/d!\). Using (30) in the two leading
+moments,
 
 \[
  \boxed{
@@ -347,27 +350,27 @@ líderes,
    \varepsilon^{-2d}.}                                        \tag{32}
 \]
 
-Por (29), la energía positiva (28) es al menos del orden de (32). Para
-todo \(n\ge2\), y en particular para \(n\ge150\), diverge cuando se retira
-el regulador. El comparador exponencial tiene la misma escala principal.
-La diferencia prima--polo de (21), en cambio, tiene límite Abel finito por
-(22).
+By (29), the positive energy (28) is at least of the order of (32). For
+every \(n\ge2\), and in particular for \(n\ge150\), it diverges as the
+regulator is removed. The exponential comparator has the same leading
+scale. The prime–pole difference of (21), by contrast, has a finite Abel
+limit by (22).
 
-Así, aplicar Cauchy--Schwarz/Poincaré a cada canal antes de restarlos cambia
-un objeto finito por dos energías de tamaño
-\(\varepsilon^{-2n+2}\). No es una pérdida de constante: elimina la
-cancelación que define el funcional. Este argumento no descarta una energía
-**cruzada** construida sobre un acoplamiento de las dos leyes; (18) prueba
-que el acoplamiento cruzado no puede basarse en un orden monótono del
-selector canónico.
+So applying Cauchy–Schwarz/Poincaré to each channel before subtracting
+them exchanges a finite object for two energies of size
+\(\varepsilon^{-2n+2}\). This is not a constant-factor loss: it eliminates
+the cancellation that defines the functional. This argument does not rule
+out a **cross** energy built from a coupling of the two laws; (18) proves
+that the cross coupling cannot be based on a monotone order of the
+canonical selector.
 
-### 6.1. El escalado \(L_n(\varepsilon x)\) no recupera el coeficiente
+### 6.1. The scaling \(L_n(\varepsilon x)\) does not recover the coefficient
 
-Hay un escape aparente de (32): bajo la ley zeta,
-\(\varepsilon X_\varepsilon\) converge con todos sus momentos a una
-exponencial de tasa uno. Por ello un test escalado como
-\(L_n(\varepsilon x)\) tiene norma acotada. Pero (22) muestra exactamente
-qué información retiene:
+There is an apparent escape from (32): under the zeta law,
+\(\varepsilon X_\varepsilon\) converges with all its moments to a
+rate-one exponential. Hence a scaled test such as
+\(L_n(\varepsilon x)\) has bounded norm. But (22) shows exactly what
+information is retained:
 
 \[
  \boxed{
@@ -376,96 +379,99 @@ qué información retiene:
                                                                     \tag{33}
 \]
 
-Como \(R\) es analítica en cero, (33) tiende a \(R(0)\); si se resta el
-término constante del test, tiende a cero. El coeficiente sin amortiguar es,
-en cambio,
+Since \(R\) is analytic at zero, (33) tends to \(R(0)\); if the constant
+term of the test is subtracted, it tends to zero. The undamped
+coefficient, by contrast, is
 
 \[
  C_n=\sum_{j=0}^n{n\choose j}{R^{(j)}(0)\over j!}.                \tag{34}
 \]
 
-En (33), la diagonal que transporta \(R^{(j)}\) lleva el factor
-\(\varepsilon^j\). Invertir esa transformación triangular para recuperar
-el jet de orden \(n\) exige un factor \(\varepsilon^{-n}\); al cuadrarlo
-reaparece \(\varepsilon^{-2n}\), la escala de la energía del test no
-escalado del mismo grado. Por tanto el test
-escalado controla una media Abel/triangular, no el coeficiente individual.
+In (33), the diagonal carrying \(R^{(j)}\) carries the factor
+\(\varepsilon^j\). Inverting that triangular transform to recover the
+order-\(n\) jet requires a factor \(\varepsilon^{-n}\); squaring it brings
+back \(\varepsilon^{-2n}\), the energy scale of the unscaled test of the
+same degree. So the scaled test controls an Abel/triangular average, not
+the individual coefficient.
 
-Esto es consistente con tres stop-gates previos: `104_17` prueba que la
-positividad Abel no controla los coeficientes; `104_18` prueba que conservar
-un shift correlacionado finito vuelve al mismo \(C_n\) al retirar el
-regulador; `104_31` localiza la pérdida de observabilidad al invertir el
-flujo en \(\varepsilon\). Aquí no se afirma un no-go para toda familia de
-tests dependiente de \(\varepsilon\), sino para el rescate directo mediante
-el escalado que mantiene acotada la energía.
+This is consistent with three earlier stop-gates: `104_17` proves that
+Abel positivity does not control the coefficients; `104_18` proves that
+keeping a finite correlated shift returns to the same \(C_n\) when the
+regulator is removed; `104_31` localizes the loss of observability upon
+inverting the flow in \(\varepsilon\). No no-go is claimed here for every
+\(\varepsilon\)-dependent family of tests, only for the direct rescue via
+the scaling that keeps the energy bounded.
 
-## 7. Falsificador off-line
+## 7. Off-line falsifier
 
-La maquinaria probabilística genérica tampoco distingue por sí sola la
-línea crítica. Para \(a>0\), la parte Euler de
+The generic probabilistic machinery likewise does not by itself single
+out the critical line. For \(a>0\), the Euler part of
 
 \[
  X_a(s)=\xi(s+a)\xi(s-a)                                      \tag{35}
 \]
 
-es el producto de dos leyes zeta independientes, con exponentes geométricos
-de parámetros \(p^{-(s+a)}\) y \(p^{-(s-a)}\). Su derivada logarítmica tiene
-pesos positivos
+is the product of two independent zeta laws, with geometric exponents of
+parameters \(p^{-(s+a)}\) and \(p^{-(s-a)}\). Its logarithmic derivative
+has positive weights
 
 \[
  2\Lambda(m)\cosh(a\log m),                                  \tag{36}
 \]
 
-y admite las mismas identidades de size-bias, un selector análogo con esos
-pesos, data processing y Efron--Stein. Sin embargo, como prueba `104_16`,
-\(X_a\) tiene ceros fuera de su línea de simetría.
+and admits the same size-bias identities, an analogous selector with
+those weights, data processing, and Efron–Stein. However, as `104_16`
+proves, \(X_a\) has zeros off its line of symmetry.
 
-Por ello una inferencia que use únicamente independencia geométrica,
-positividad de los saltos y una desigualdad tensorizada también se aplicaría
-al falsificador (35). Una prueba válida debe usar cuantitativamente los
-pesos exactos \(\Lambda(p^k)=\log p\) en la **diferencia firmada** (21), y
-debe dejar de ser válida al reemplazarlos por (36).
+Hence an inference using only geometric independence, jump positivity,
+and a tensorized inequality would also apply to falsifier (35). A valid
+proof must quantitatively use the exact weights
+\(\Lambda(p^k)=\log p\) in the **signed difference** (21), and must stop
+being valid when they are replaced by (36).
 
-## 8. Decisión y sucesor
+## 8. Decision and successor
 
-Queda probado incondicionalmente:
+Proved unconditionally:
 
-1. la factorización size-biased exacta (7)--(8);
-2. su comparador polar como split uniforme (11)--(12);
-3. data processing sin pérdida de primos (15);
-4. el cambio de signo real del selector frente al uniforme (17)--(19);
-5. la identidad exacta del error con \(R\) (22)--(26);
-6. la pérdida de escala de la energía Efron--Stein separada (32).
+1. the exact size-biased factorization (7)–(8);
+2. its polar comparator as a uniform split (11)–(12);
+3. data processing with no loss of primes (15);
+4. the real sign change of the selector versus the uniform one
+   (17)–(19);
+5. the exact identity of the error with \(R\) (22)–(26);
+6. the scale loss of the separated Efron–Stein energy (32).
 
-Quedan descartados:
+Ruled out:
 
 ```text
-orden unilateral divisor <-> uniforme;
-data processing de la media -> signo prima-polo;
-Poincare/Efron--Stein por canales separados -> limite Abel finito;
-tensorizacion positiva generica -> margen H_n.
+one-sided order divisor <-> uniform;
+data processing of the mean -> prime-pole sign;
+Poincare/Efron--Stein over separated channels -> finite Abel limit;
+generic positive tensorization -> margin H_n.
 ```
 
-El único sucesor que esta coordenada deja vivo es una desigualdad cruzada
-firmada para
+The only successor this coordinate leaves alive is a signed cross
+inequality for
 
 \[
  \mathfrak m(1+\varepsilon)\,\mathbb E f(Y)
  -\varepsilon^{-1}\mathbb E f(Y_0),                            \tag{37}
 \]
 
-con \(f=L_{n-1}^{(1)}-n\), conservando después el término Gamma y el límite
-Abel. Por (22), esa desigualdad debe aportar información que no sea una
-mera contracción probabilística: la transformada de (37) sobre los tests
-exponenciales ya es \(R\) en coordenadas size-biased.
+with \(f=L_{n-1}^{(1)}-n\), keeping afterward the Gamma term and the Abel
+limit. By (22), that inequality must supply information that is not a
+mere probabilistic contraction: the transform of (37) on exponential
+tests is already \(R\) in size-biased coordinates.
 
-## 9. Reproducción
+## 9. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 zeta_size_bias_martingale_gate_check.py
 ```
 
-El checker usa aritmética entera y `Fraction`. Verifica la identidad formal
-del selector divisor, los signos opuestos de (17) en \(2\) y \(30\), y las
-constantes enteras de (32) para \(2\le n\le50\). No evalúa zeta, A1 ni RH.
+The checker uses integer arithmetic and `Fraction`. It verifies the formal
+identity of the divisor selector, the opposite signs of (17) at \(2\) and
+\(30\), and the integer constants of (32) for \(2\le n\le50\). It evaluates
+neither zeta, A1, nor RH.
+</content>

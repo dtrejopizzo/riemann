@@ -1,6 +1,6 @@
 # E78.25 - `Q_theta` sign as weighted monotonicity of `Delta safe_u`
 
-**Run:** 2026-07-18.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

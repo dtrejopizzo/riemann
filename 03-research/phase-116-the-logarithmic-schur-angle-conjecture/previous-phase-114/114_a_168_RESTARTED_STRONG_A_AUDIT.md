@@ -1,4 +1,4 @@
-# Restarted strong-A audit after the nuclear and spherical constructions
+# Restarted strong-An audit after the nuclear and spherical constructions
 
 ## Status matrix
 

@@ -1,6 +1,5 @@
 # E73.158 - Scalar image source criterion
 
-Date: 2026-07-12.
 
 ## 1. Purpose
 

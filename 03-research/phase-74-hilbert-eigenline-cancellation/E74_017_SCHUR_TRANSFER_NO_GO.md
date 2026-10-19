@@ -1,6 +1,5 @@
 # E74.17 - Exact Schur-transfer identity and quotient no-go
 
-Date: 2026-07-16.
 
 ## Exact identity
 

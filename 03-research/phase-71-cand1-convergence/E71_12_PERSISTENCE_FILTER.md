@@ -1,8 +1,7 @@
 # E71.12 -- finite-section persistence filter
 
-**Date:** 2026-07-07.
 **Script:** `E71_12_persistence_filter.py`.
-**Role:** test a zero-independent dynamic background principle after static backgrounds failed.
+**Purpose:** test a zero-independent dynamic background principle after static backgrounds failed.
 
 ## Motivation
 

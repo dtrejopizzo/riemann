@@ -1,44 +1,43 @@
-# 104_82 — Independencia de las longitudes primas y gate del punto *untwisted*
+# 104_82 — Independence of prime lengths and the untwisted-point gate
 
-**Resultado.** La independencia lineal sobre \(\mathbf Q\) de
-\(\{\log p\}\), la inyectividad de la norma y la factorización única
-diagonalizan exactamente las correlaciones después de introducir fases
-primas independientes. No controlan, sin embargo, el valor sin twist que
-aparece en el observable profundo de `104_75`.
+**Result.** Linear independence over \(\mathbf Q\) of \(\{\log p\}\),
+injectivity of the norm, and unique factorization diagonalize exactly
+the correlations after introducing independent prime phases. They do
+not, however, control the untwisted value that appears in the deep
+observable of `104_75`.
 
-Hay dos obstrucciones exactas.
+There are two exact obstructions.
 
-1. El flujo de Kronecker identifica una media de Haar, mientras el punto
-   aritmético es \(\theta_p=0\) para todo \(p\). La evaluación en ese punto
-   no es un funcional uniformemente acotado por las normas torales. En
-   dimensión \(J\), un polinomio soportado en productos *squarefree* tiene
-   media cero, norma \(L^2\) de orden \(2^{J/2}\), y valor untwisted de
-   orden \(2^J\).
-2. Más decisivamente, el falsificador Euler off-line de `104_78` puede
-   deformarse de modo que **todas** sus longitudes primas sean
-   \(\mathbf Q\)-linealmente independientes. El producto de Euler sigue
-   siendo positivo, el monoide sigue teniendo factorización única y la
-   norma pasa a ser inyectiva. La deformación es un factor holomorfo y no
-   nulo en \(\Re s>0\), por lo que no cancela los ceros exteriores y la
-   densidad profunda continúa siendo \(1/4\).
+1. The Kronecker flow identifies a Haar average, while the arithmetic
+   point is \(\theta_p=0\) for every \(p\). Evaluation at that point is
+   not a functional uniformly bounded by the toral norms. In dimension
+   \(J\), a polynomial supported on squarefree products has mean zero,
+   \(L^2\) norm of order \(2^{J/2}\), and untwisted value of order
+   \(2^J\).
+2. More decisively, the off-line Euler falsifier of `104_78` can be
+   deformed so that **all** its prime lengths are \(\mathbf Q\)-linearly
+   independent. The Euler product remains positive, the monoid still has
+   unique factorization, and the norm becomes injective. The deformation
+   is a holomorphic, non-vanishing factor on \(\Re s>0\), so it does not
+   cancel the outer zeros, and the deep density remains \(1/4\).
 
-Por tanto queda cerrado el ataque estrecho
+Hence the following narrow attack is closed:
 
 ```text
-independencia Q-lineal de log p / inyectividad de la norma
-+ ortogonalidad en el toro o involución prima--semiprima
-=> límite profundo para el punto untwisted.
+Q-linear independence of log p / injectivity of the norm
++ orthogonality on the torus or a prime--semiprime involution
+=> deep limit for the untwisted point.
 ```
 
-Esto no descarta una desigualdad que use, además, la colocación cuantitativa
-específica de los primos ordinarios, el PNT continuo y el factor Gamma. No
-prueba el límite profundo, A1 ni RH.
+This does not rule out an inequality that additionally uses the specific
+quantitative placement of the ordinary primes, the continuous PNT and
+the Gamma factor. It does not prove the deep limit, A1 or RH.
 
 ---
 
-## 1. Lo que la independencia sí prueba
+## 1. What independence does prove
 
-Fije un conjunto finito de primos \({\cal P}\), un corte \(K\), y escriba
+Fix a finite set of primes \({\cal P}\), a cutoff \(K\), and write
 
 \[
  c_{p,k}^{(n,\varepsilon)}
@@ -46,7 +45,7 @@ Fije un conjunto finito de primos \({\cal P}\), un corte \(K\), y escriba
  L_{n-1}^{(1)}(k\log p).
 \]
 
-El lift toral truncado del bloque de Mangoldt es
+The truncated toral lift of the Mangoldt block is
 
 \[
  Q_{n,\varepsilon}^{{\cal P},K}(\theta)
@@ -54,8 +53,8 @@ El lift toral truncado del bloque de Mangoldt es
  c_{p,k}^{(n,\varepsilon)}e^{ik\theta_p}.               \tag{1}
 \]
 
-En \(\theta=0\), (1) es exactamente la truncación de
-\(Q_{n,\varepsilon}\). Por factorización única,
+At \(\theta=0\), (1) is exactly the truncation of \(Q_{n,\varepsilon}\).
+By unique factorization,
 
 \[
  \sum_{p\in{\cal P}}m_p\log p=0,
@@ -63,13 +62,13 @@ En \(\theta=0\), (1) es exactamente la truncación de
  \quad\Longrightarrow\quad m_p=0\ \ (p\in{\cal P}).   \tag{2}
 \]
 
-El flujo continuo
+The continuous flow
 
 \[
  t\longmapsto (t\log p)_{p\in{\cal P}}\pmod {2\pi}
 \]
 
-es por ello equidistribuido en el toro. En particular,
+is therefore equidistributed on the torus. In particular,
 
 \[
  \lim_{T\to\infty}{1\over2T}\int_{-T}^{T}
@@ -77,7 +76,7 @@ es por ello equidistribuido en el toro. En particular,
        ((t\log p)_p)\,dt=0,                              \tag{3}
 \]
 
-y Parseval da la identidad diagonal
+and Parseval gives the diagonal identity
 
 \[
  \lim_{T\to\infty}{1\over2T}\int_{-T}^{T}
@@ -86,30 +85,30 @@ y Parseval da la identidad diagonal
  =\sum_{p\in{\cal P}}\sum_{k\le K}|c_{p,k}|^2.         \tag{4}
 \]
 
-La misma prueba vale para cualquier polinomio divisor: caracteres
-distintos corresponden a vectores de exponentes distintos. Ésta es toda la
-ganancia automática de la factorización única: ortogonalidad después de
-promediar los twists.
+The same proof holds for any divisor polynomial: distinct characters
+correspond to distinct exponent vectors. This is the whole automatic
+gain of unique factorization: orthogonality after averaging the twists.
 
-## 2. La evaluación untwisted no está controlada
+## 2. The untwisted evaluation is not controlled
 
-La obstrucción ya aparece dentro de una sola torre prima. Para
+The obstruction already appears within a single prime tower. For
 
 \[
  S_K(\theta)=\sum_{k=1}^{K}e^{ik\theta},
 \]
 
-se tiene exactamente
+one has exactly
 
 \[
  \int_{\mathbb T}S_K=0,\qquad
  \|S_K\|_2^2=K,\qquad S_K(0)=K.                         \tag{4a}
 \]
 
-Así ni siquiera la ortogonalidad de las distintas potencias de un primo
-acota su suma en la fase alineada.
+So not even orthogonality of the different powers of a prime bounds
+their sum at the aligned phase.
 
-Sean \(\theta_1,\ldots,\theta_J\) las fases de \(J\) primos y considere
+Let \(\theta_1,\ldots,\theta_J\) be the phases of \(J\) primes and
+consider
 
 \[
  D_J(\theta)=\prod_{j=1}^{J}(1+e^{i\theta_j})-1
@@ -117,8 +116,8 @@ Sean \(\theta_1,\ldots,\theta_J\) las fases de \(J\) primos y considere
    e^{i\sum_{j\in S}\theta_j}.                         \tag{5}
 \]
 
-Cada carácter de (5) es la marca de un producto *squarefree* distinto;
-no hay colisiones precisamente por factorización única. Sin embargo,
+Each character in (5) is the mark of a distinct squarefree product; there
+are no collisions, precisely because of unique factorization. However,
 
 \[
  \int_{\mathbb T^J}D_J\,d\theta=0,\qquad
@@ -126,7 +125,7 @@ no hay colisiones precisamente por factorización única. Sin embargo,
  D_J(0)=2^J-1.                                          \tag{6}
 \]
 
-Para el polinomio real \(F_J=\Re D_J\),
+For the real polynomial \(F_J=\Re D_J\),
 
 \[
  \int F_J=0,\qquad
@@ -134,58 +133,58 @@ Para el polinomio real \(F_J=\Re D_J\),
  F_J(0)=2^J-1.                                          \tag{7}
 \]
 
-Así la norma de la evaluación en el punto untwisted crece al menos como
-\(2^{J/2}\). Tomando \(J\asymp\sqrt X\), el valor puntual ya alcanza la
-escala \(e^{\sqrt X}\) del gate profundo aunque la media de Haar sea cero.
-No hay una constante uniforme que transfiera (3), (4), o cualquier
-estimación \(L^2\) obtenida por independencia, al punto \(0\).
+So the norm of the evaluation at the untwisted point grows at least like
+\(2^{J/2}\). Taking \(J\asymp\sqrt X\), the pointwise value already
+reaches the scale \(e^{\sqrt X}\) of the deep gate even though the Haar
+average is zero. There is no uniform constant transferring (3), (4), or
+any \(L^2\) estimate obtained from independence, to the point \(0\).
 
-La obstrucción también decide la propuesta de una involución
-prima--semiprima. El carácter de un primo es \(e_p\), mientras el de
-\(qr\) es \(e_q+e_r\). Una involución que preserve la fase requeriría
+The obstruction also settles the proposal of a prime--semiprime
+involution. The character of a prime is \(e_p\), while that of \(qr\) is
+\(e_q+e_r\). An involution preserving the phase would require
 
 \[
  e_p=e_q+e_r,                                            \tag{8}
 \]
 
-o, en la coordenada de longitudes,
+or, in the length coordinate,
 
 \[
  \log p=\log q+\log r.                                  \tag{9}
 \]
 
-Las ecuaciones (8)--(9) son imposibles entre primos. Por tanto la
-independencia no crea la cancelación: impide justamente un emparejamiento
-exacto entre los dos tipos de fibra. En \(\theta=0\), en cambio, todos los
-caracteres valen \(1\), y el signo depende de la suma numérica completa de
-los coeficientes, sobre la cual (2) no contiene información.
+Equations (8)--(9) are impossible among primes. Hence independence does
+not create the cancellation: it precisely prevents an exact pairing
+between the two fiber types. At \(\theta=0\), by contrast, all
+characters equal \(1\), and the sign depends on the full numerical sum
+of the coefficients, about which (2) contains no information.
 
-## 3. Falsificador no reticular con longitudes independientes
+## 3. Non-lattice falsifier with independent lengths
 
-Parta del monoide de `104_78`. Tiene \(\pi_d\ge0\) primos formales de
-grado \(d\), longitud base
+Start from the monoid of `104_78`. It has \(\pi_d\ge0\) formal primes of
+degree \(d\), base length
 
 \[
  a_i=d_i h,\qquad h=\log6,
 \]
 
-y función zeta
+and zeta function
 
 \[
  Z_0(s)={(1-3\,6^{-s})(1-2\,6^{-s})
           \over(1-6^{-s})(1-6^{1-s})}.                  \tag{10}
 \]
 
-Enumere los primos formales por \(i\ge1\), sea \(q_i\) el \(i\)-ésimo
-primo racional, y defina
+Enumerate the formal primes by \(i\ge1\), let \(q_i\) be the \(i\)-th
+rational prime, and define
 
 \[
  \delta_i=2^{-2^{i+10}}\sqrt{q_i},\qquad
  \ell_i=a_i+\delta_i.                                  \tag{11}
 \]
 
-La sucesión \((\ell_i)\) es \(\mathbf Q\)-linealmente independiente.
-En efecto, una relación finita daría
+The sequence \((\ell_i)\) is \(\mathbf Q\)-linearly independent. Indeed,
+a finite relation would give
 
 \[
  \left(\sum_i r_id_i\right)\log6
@@ -193,38 +192,37 @@ En efecto, una relación finita daría
  \qquad r_i\in\mathbf Q.                               \tag{12}
 \]
 
-El segundo término es algebraico. Si el primer coeficiente no fuera cero,
-(12) haría algebraico a \(\log6\), contradiciendo
-Lindemann--Weierstrass. Si fuera cero, la independencia sobre \(\mathbf Q\)
-de las raíces cuadradas de primos distintos fuerza \(r_i=0\) para todo
-\(i\).
+The second term is algebraic. If the first coefficient were not zero,
+(12) would make \(\log6\) algebraic, contradicting
+Lindemann--Weierstrass. If it were zero, independence over \(\mathbf Q\)
+of the square roots of distinct primes forces \(r_i=0\) for every \(i\).
 
-Construya ahora el monoide abeliano libre sobre esos mismos generadores,
-pero con norma \(|P_i|=e^{\ell_i}\). Tiene factorización única y, por
-(12), la aplicación norma es inyectiva. Sus pesos de Mangoldt son
+Now build the free abelian monoid on these same generators, but with
+norm \(|P_i|=e^{\ell_i}\). It has unique factorization and, by (12), the
+norm map is injective. Its Mangoldt weights are
 
 \[
  \widetilde\Lambda(P_i^k)=\ell_i>0.                    \tag{13}
 \]
 
-Para \(\Re s>1\), su producto de Euler es
+For \(\Re s>1\), its Euler product is
 
 \[
  \widetilde Z(s)=\prod_{i\ge1}(1-e^{-s\ell_i})^{-1}.
                                                                \tag{14}
 \]
 
-La convergencia es absoluta: como \(\ell_i\ge a_i\) y
-\(\pi_d\ll6^d/d\), para \(\sigma>1\)
+Convergence is absolute: since \(\ell_i\ge a_i\) and
+\(\pi_d\ll6^d/d\), for \(\sigma>1\)
 
 \[
  \sum_i e^{-\sigma\ell_i}
  \le\sum_{d\ge1}\pi_d6^{-\sigma d}<\infty.             \tag{14a}
 \]
 
-## 4. La deformación no mueve ni cancela el cero exterior
+## 4. The deformation neither moves nor cancels the outer zero
 
-En \(\Re s>1\), (14) se factoriza exactamente como
+For \(\Re s>1\), (14) factors exactly as
 
 \[
  \widetilde Z(s)=Z_0(s)G(s),
@@ -232,8 +230,9 @@ En \(\Re s>1\), (14) se factoriza exactamente como
  G(s)=\prod_{i\ge1}{1-e^{-sa_i}\over1-e^{-s\ell_i}}.   \tag{15}
 \]
 
-El factor \(G\) se prolonga holomórficamente y sin ceros a todo
-\(\Re s>0\). Para verlo, en cualquier compacto de ese semiplano,
+The factor \(G\) extends holomorphically and without zeros to the whole
+half-plane \(\Re s>0\). To see this, on any compact set of that
+half-plane,
 
 \[
  \left|{\partial\over\partial x}
@@ -242,25 +241,26 @@ El factor \(G\) se prolonga holomórficamente y sin ceros a todo
  \le C_K e^{-\sigma_Kx}.                               \tag{16}
 \]
 
-Por Bertrand, \(q_i<2^i\), y de (11) se sigue
-\(\sum_i\delta_i<\infty\). Integrar (16) entre \(a_i\) y \(\ell_i\)
-muestra que
+By Bertrand's postulate, \(q_i<2^i\), and from (11) it follows that
+\(\sum_i\delta_i<\infty\). Integrating (16) between \(a_i\) and
+\(\ell_i\) shows that
 
 \[
  \sum_i\{\log(1-e^{-sa_i})-\log(1-e^{-s\ell_i})\}    \tag{17}
 \]
 
-converge uniformemente en compactos de \(\Re s>0\). Su exponencial es
-precisamente \(G\), de modo que es holomorfo y nunca se anula allí.
+converges uniformly on compact subsets of \(\Re s>0\). Its exponential is
+precisely \(G\), so it is holomorphic and never vanishes there.
 
-La continuación meromorfa definida por (15) conserva por tanto todos los
-ceros y polos de \(Z_0\) en \(\Re s>0\). En particular conserva el cero
+The meromorphic continuation defined by (15) therefore preserves all
+zeros and poles of \(Z_0\) in \(\Re s>0\). In particular it preserves the
+zero
 
 \[
  \beta_+={\log3\over\log6}>{1\over2}.                  \tag{18}
 \]
 
-Con el mapa de `104_80`, ese cero produce
+With the map of `104_80`, that zero produces
 
 \[
  z_{+,\varepsilon}
@@ -270,30 +270,30 @@ Con el mapa de `104_80`, ese cero produce
  R={\log3\over\log2}>1.                               \tag{19}
 \]
 
-El sumando \(-\partial_z\log G(s_\varepsilon(z))\) es holomorfo en el
-disco unidad. Fije \(r\) entre \(|z_{+,0}|\) y el módulo de la siguiente
-singularidad de \(Z_0\), con \(r<1\). Para \(\varepsilon\) pequeño es
-uniformemente holomorfo en \(|z|\le r\), y Cauchy acota sus coeficientes
-por \(O(r^{-n})\), donde \(r^{-1}<R\). No puede cancelar el término
-dominante de (19).
+The summand \(-\partial_z\log G(s_\varepsilon(z))\) is holomorphic in the
+unit disk. Fix \(r\) between \(|z_{+,0}|\) and the modulus of the next
+singularity of \(Z_0\), with \(r<1\). For small \(\varepsilon\) it is
+uniformly holomorphic on \(|z|\le r\), and Cauchy's formula bounds its
+coefficients by \(O(r^{-n})\), where \(r^{-1}<R\). It cannot cancel the
+leading term of (19).
 
-Más formalmente, si \(\Xi^0_\varepsilon\) es el completamiento regulado
-de `104_78`, defina
+More formally, if \(\Xi^0_\varepsilon\) is the regulated completion of
+`104_78`, define
 
 \[
  \widetilde\Xi_\varepsilon(s)
  =\Xi^0_\varepsilon(s)G(s+\varepsilon).                 \tag{19a}
 \]
 
-Éste es exactamente el cambio que resulta de sustituir
-\(Z_0(s+\varepsilon)\) por
-\(\widetilde Z(s+\varepsilon)=Z_0(s+\varepsilon)G(s+\varepsilon)\)
-en el canal Euler, conservando los demás bordes. Definimos
-\(\widetilde\lambda_{n,\varepsilon}\) por la misma derivada de Li de
-`104_78`, ecuación (17), aplicada a (19a).
+This is exactly the change that results from replacing
+\(Z_0(s+\varepsilon)\) by
+\(\widetilde Z(s+\varepsilon)=Z_0(s+\varepsilon)G(s+\varepsilon)\) in
+the Euler channel, keeping the other edges fixed. We define
+\(\widetilde\lambda_{n,\varepsilon}\) by the same Li derivative of
+`104_78`, equation (17), applied to (19a).
 
-En consecuencia, en la diagonal \(\varepsilon_X=e^{-X/100}\), los
-coeficientes de Li del modelo deformado satisfacen
+Consequently, on the diagonal \(\varepsilon_X=e^{-X/100}\), the Li
+coefficients of the deformed model satisfy
 
 \[
  \widetilde\lambda_{n,\varepsilon_X}
@@ -301,8 +301,8 @@ coeficientes de Li del modelo deformado satisfacen
  \qquad 1<R_1<R,\quad 1\le n\le X.                    \tag{20}
 \]
 
-Para los grados pares, (20) es \(-(1+o(1))R^n\). El mismo cálculo armónico
-de `104_78`, \S4, da
+For even degrees, (20) is \(-(1+o(1))R^n\). The same harmonic
+computation of `104_78`, §4, gives
 
 \[
  \boxed{
@@ -312,35 +312,36 @@ de `104_78`, \S4, da
  \longrightarrow {1\over4}.}                           \tag{21}
 \]
 
-Así el resultado off-line de `104_81` sobrevive después de eliminar las
-colisiones reticulares de normas y de imponer independencia
-\(\mathbf Q\)-lineal completa.
+So the off-line result of `104_81` survives after removing the lattice
+norm collisions and imposing full \(\mathbf Q\)-linear independence.
 
-La deformación sumable no elimina los polos verticales heredados de
-\(Z_0\) sobre \(\Re s=1\). Por eso este modelo no satisface el PNT
-continuo y tampoco conserva el completamiento Gamma estándar de Riemann.
-Es un falsificador exacto de la **independencia como input suficiente**, no
-de un futuro teorema que use simultáneamente esas estructuras adicionales.
+The summable deformation does not remove the vertical poles inherited
+from \(Z_0\) on \(\Re s=1\). Hence this model does not satisfy the
+continuous PNT and does not preserve the standard Riemann Gamma
+completion either. It is an exact falsifier of **independence as a
+sufficient input**, not of a future theorem that simultaneously uses
+those additional structures.
 
-## 5. Alcance exacto
+## 5. Exact scope
 
 ```text
-probado:
-  independencia Q-lineal => equidistribución y Parseval torales;
-  la evaluación untwisted no es uniformemente controlable por esas medias;
-  no existe una involución exacta prima--semiprima que preserve fase;
-  existe un Euler positivo, de factorización única y norma inyectiva,
-  con longitudes primas Q-independientes y densidad profunda 1/4.
+proved:
+  Q-linear independence => toral equidistribution and Parseval;
+  the untwisted evaluation is not uniformly controllable by those
+  averages;
+  there is no exact phase-preserving prime--semiprime involution;
+  there exists a positive Euler product, with unique factorization and
+  injective norm, with Q-independent prime lengths and deep density 1/4.
 
-descartado:
-  independencia / inyectividad / factorización única
-  + promedio toral o apareamiento exacto de fibras
-  => límite profundo.
+ruled out:
+  independence / injectivity / unique factorization
+  + toral averaging or exact fiber pairing
+  => deep limit.
 
-no descartado:
-  una desigualdad que use conjuntamente PNT continuo, Gamma y la
-  colocación cuantitativa exacta de los primos ordinarios.
+not ruled out:
+  an inequality that jointly uses the continuous PNT, Gamma, and the
+  exact quantitative placement of the ordinary primes.
 
-no probado:
-  el límite profundo para Lambda ordinaria, A1 o RH.
+not proved:
+  the deep limit for ordinary Lambda, A1 or RH.
 ```

@@ -1,6 +1,6 @@
-# D128.001 — row A audit: findings and dispositions
+# D128.001 — row An audit: findings and dispositions
 
-Date: 2026-09-12.  Target: Paper 43.
+Target: Paper 43.
 
 ## Accepted (verified)
 

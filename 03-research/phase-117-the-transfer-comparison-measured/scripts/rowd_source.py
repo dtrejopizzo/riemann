@@ -1,7 +1,7 @@
 """The Gamma-Tate source defect  D_N = E_{Gamma T,N} - ||L_N||^2  on E_N=L^2(0,delta_N).
 
 Leakage coefficients follow the construction already used in
-phase-116 current-chat/work/urg_negative_test.py.  All forms are assembled in
+phase-116 working-notes/work/urg_negative_test.py.  All forms are assembled in
 closed form with the same Psi kernel as the physical side, so the two sides are
 directly comparable.
 """

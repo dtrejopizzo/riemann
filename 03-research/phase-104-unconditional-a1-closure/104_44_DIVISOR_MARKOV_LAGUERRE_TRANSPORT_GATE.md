@@ -1,65 +1,69 @@
-# 104_44 — Transporte divisor–Markov y gate de escala Laguerre
+# 104_44 — Divisor–Markov transport and the Laguerre scale gate
 
-**Estado.** La identidad exacta
+**Status.** The exact identity
 
 \[
  \Lambda*1=\log
 \tag{1}
 \]
 
-sí define un transporte multiplicativo positivo que conserva conjuntamente
-todos los primos, todas sus potencias y la fase del test. Si \(N\) se elige con
-peso \((\log N)N^{-s}\), el divisor \(D\mid N\) elegido con probabilidad
-\(\Lambda(D)/\log N\) tiene exactamente la ley von Mangoldt, y el cociente
-\(N/D\) es independiente con ley zeta. La fórmula de adición de Laguerre da
-entonces una convolución exacta en el grado, sin desigualdad triangular.
+does define a positive multiplicative transport that jointly preserves
+every prime, all its powers, and the test's phase. If \(N\) is chosen with
+weight \((\log N)N^{-s}\), the divisor \(D\mid N\) chosen with probability
+\(\Lambda(D)/\log N\) has exactly the von Mangoldt law, and the quotient
+\(N/D\) is independent with the zeta law. The Laguerre addition formula
+then gives an exact convolution in the degree, with no triangle
+inequality.
 
-El transporte, sin embargo, no aporta la coercividad proporcional que falta:
+The transport, however, does not supply the missing proportional
+coercivity:
 
-1. su contracción de Markov tiene brecha espectral exactamente cero, aun en el
-   subespacio de media cero;
-2. invertir la convolución exacta en el grado es precisamente inversión de
-   Möbius, ya auditada en `104_12`;
-3. el análogo continuo polo–Gamma contrae el grado \(r\) por
-   \(1/\sqrt{r+1}\), pero solamente en la base escalada
-   \(L_r((s-1)x)\); expresar el kernel no escalado de A1 en esa base tiene
-   carga absoluta \((2/(s-1)-1)^r\), que para \(s-1=1/n\) es
+1. its Markov contraction has exactly zero spectral gap, even on the
+   zero-mean subspace;
+2. inverting the exact degree convolution is precisely Möbius inversion,
+   already audited in `104_12`;
+3. the continuous pole–Gamma analogue contracts degree \(r\) by
+   \(1/\sqrt{r+1}\), but only in the scaled basis
+   \(L_r((s-1)x)\); expressing the unscaled A1 kernel in that basis has
+   absolute load \((2/(s-1)-1)^r\), which for \(s-1=1/n\) is
    \(\exp((1+o(1))n\log n)\).
 
-Por tanto queda descartado como mecanismo autónomo el siguiente argumento:
-«usar (1), contracción de esperanza condicional y la adición de Laguerre para
-obtener una cota proporcional». Una estimación especial sobre el **vector fijo
-no escalado**, sin invertir positivamente ni separar los grados, seguiría siendo
-matemática nueva; el transporte no la refuta, pero tampoco la suministra. No se
-prueba \(B_n\le(1501/2002)A_n\), A1 ni RH.
+Hence the following argument is ruled out as an autonomous mechanism:
+"use (1), conditional-expectation contraction, and Laguerre addition to
+obtain a proportional bound." A special estimate on the **fixed, unscaled
+vector**, with no positive inversion and no separation of degrees, would
+still be new mathematics; the transport does not refute it, but neither
+does it supply it. Neither \(B_n\le(1501/2002)A_n\), A1, nor RH is
+proved.
 
-## 1. Auditoría de no duplicación
+## 1. Non-duplication audit
 
-`103_70` aplica Vaughan/Heath--Brown y prueba que las variables de
-factorización entran en la fase solo por la suma de sus logaritmos. También
-registra la adición de Laguerre, pero no la interpreta como una desintegración
-de probabilidad.
+`103_70` applies Vaughan/Heath–Brown and proves that the factorization
+variables enter the phase only through the sum of their logarithms. It
+also records Laguerre addition, but does not interpret it as a
+probability disintegration.
 
-`104_12` usa la identidad dual \(\Lambda=\mu*\log\), obtiene la convolución
-firmada en el grado y descarta un adjunto positivo para Möbius. `104_13` prueba
-que Selberg--Riccati pierde la colisión polo--primos si se estima por piezas.
-`104_35` y `104_38` conservan el canal primo--polo y demuestran que el cuadrado
-Selberg canónico se cancela exactamente o deja diagonal negativa.
+`104_12` uses the dual identity \(\Lambda=\mu*\log\), obtains the signed
+convolution in the degree, and rules out a positive adjoint for Möbius.
+`104_13` proves that Selberg–Riccati loses the pole–prime collision if
+estimated piecewise. `104_35` and `104_38` keep the prime–pole channel
+and show that the canonical Selberg square either cancels exactly or
+leaves a negative diagonal.
 
-Lo nuevo aquí es más estrecho:
+What is new here is narrower:
 
-* la desintegración Markov canónica asociada a \(\Lambda*1=\log\);
-* su análogo continuo exacto como partición uniforme de una Gamma(2);
-* la demostración de brecha cero mediante átomos en primos reales;
-* la cuantificación exacta del costo de cambiar de la escala natural
-  \((s-1)x\) a la escala Laguerre de A1.
+* the canonical Markov disintegration associated with \(\Lambda*1=\log\);
+* its exact continuous analogue as a uniform partition of a Gamma(2);
+* the proof of zero gap via atoms at real primes;
+* the exact quantification of the cost of switching from the natural
+  scale \((s-1)x\) to the Laguerre scale of A1.
 
-No se reabre Vaughan, no se postula positividad de Möbius y no se usa un
-cuadrado Selberg.
+Vaughan is not reopened, Möbius positivity is not postulated, and no
+Selberg square is used.
 
-## 2. Desintegración multiplicativa exacta
+## 2. Exact multiplicative disintegration
 
-Fijemos \(s>1\) y escribamos
+Fix \(s>1\) and write
 
 \[
  Z_s=\zeta(s),\qquad
@@ -68,7 +72,7 @@ Fijemos \(s>1\) y escribamos
 \tag{2}
 \]
 
-Definamos dos probabilidades
+Define two probabilities
 
 \[
  \nu_s(d)={\Lambda(d)d^{-s}\over\mathcal L_s},\qquad
@@ -76,9 +80,9 @@ Definamos dos probabilidades
 \tag{3}
 \]
 
-Sean \(D\sim\nu_s\), \(K\sim\eta_s\) independientes y \(N=DK\).
+Let \(D\sim\nu_s\), \(K\sim\eta_s\) be independent and \(N=DK\).
 
-**Teorema 2.1 (transporte divisor–Markov).** La ley de \(N\) es
+**Theorem 2.1 (divisor–Markov transport).** The law of \(N\) is
 
 \[
  \boxed{
@@ -87,7 +91,7 @@ Sean \(D\sim\nu_s\), \(K\sim\eta_s\) independientes y \(N=DK\).
 \tag{4}
 \]
 
-y su desintegración inversa es
+and its inverse disintegration is
 
 \[
  \boxed{
@@ -96,7 +100,7 @@ y su desintegración inversa es
 \tag{5}
 \]
 
-**Prueba.** Para cada \(N\ge2\), (1) da
+**Proof.** For each \(N\ge2\), (1) gives
 
 \[
 \begin{aligned}
@@ -108,9 +112,9 @@ y su desintegración inversa es
 \end{aligned}
 \]
 
-Dividir la masa conjunta por (4) prueba (5). \(\square\)
+Dividing the joint mass by (4) proves (5). \(\square\)
 
-El operador divisor y su adjunto multiplicativo son
+The divisor operator and its multiplicative adjoint are
 
 \[
  (\mathsf T_sf)(N)
@@ -124,7 +128,7 @@ El operador divisor y su adjunto multiplicativo son
 \tag{7}
 \]
 
-Por construcción,
+By construction,
 
 \[
  \langle \mathsf T_sf,F\rangle_{L^2(\Pi_s)}
@@ -133,7 +137,7 @@ Por construcción,
 \tag{8}
 \]
 
-y Jensen da
+and Jensen's inequality gives
 
 \[
  \boxed{
@@ -142,12 +146,12 @@ y Jensen da
 \tag{9}
 \]
 
-Esta es una contracción genuina que usa los pesos canónicos completos; la
-cuestión decisiva es si contiene una brecha estricta.
+This is a genuine contraction using the complete canonical weights; the
+decisive question is whether it contains a strict gap.
 
-## 3. La brecha de Markov es exactamente cero
+## 3. The Markov gap is exactly zero
 
-Sea \(p\) primo y
+Let \(p\) be prime and
 
 \[
  e_p(d)=\mathbf1_{d=p},\qquad
@@ -155,7 +159,7 @@ Sea \(p\) primo y
 \tag{10}
 \]
 
-De (6),
+From (6),
 
 \[
  (\mathsf T_se_p)(N)
@@ -163,7 +167,7 @@ De (6),
 \tag{11}
 \]
 
-Una suma directa usando (4) da
+A direct sum using (4) gives
 
 \[
  {\|\mathsf T_se_p\|_{L^2(\Pi_s)}^2
@@ -173,22 +177,22 @@ Una suma directa usando (4) da
 \tag{12}
 \]
 
-Cada sumando de (12) está entre cero y \(k^{-s}/Z_s\), y para \(k\) fijo
-su factor logarítmico tiende a uno cuando \(p\to\infty\). Por convergencia
-dominada,
+Each summand of (12) lies between zero and \(k^{-s}/Z_s\), and for fixed
+\(k\) its logarithmic factor tends to one as \(p\to\infty\). By dominated
+convergence,
 
 \[
  \boxed{\lim_{p\to\infty}R_p(s)=1.}
 \tag{13}
 \]
 
-Esto también ocurre después de retirar las constantes. En efecto, para
+This also holds after removing constants. Indeed, for
 
 \[
  f_p=e_p-q_p
 \]
 
-se tiene \(\langle f_p,1\rangle_{\nu_s}=0\) y
+one has \(\langle f_p,1\rangle_{\nu_s}=0\) and
 
 \[
  {\|\mathsf T_sf_p\|_2^2\over\|f_p\|_2^2}
@@ -196,7 +200,7 @@ se tiene \(\langle f_p,1\rangle_{\nu_s}=0\) y
 \tag{14}
 \]
 
-porque \(q_p\to0\). Junto con (9), esto prueba
+because \(q_p\to0\). Together with (9), this proves
 
 \[
  \boxed{
@@ -204,7 +208,7 @@ porque \(q_p\to0\). Junto con (9), esto prueba
 \tag{15}
 \]
 
-Por tanto no existe \(\delta_s>0\) tal que
+Hence there is no \(\delta_s>0\) such that
 
 \[
  \|\mathsf T_sf\|_2^2
@@ -213,17 +217,17 @@ Por tanto no existe \(\delta_s>0\) tal que
 \tag{16}
 \]
 
-El testigo usa primos verdaderos y el peso exacto \(\log p\); no es una
-perturbación de la medida aritmética. La razón geométrica es que la fila
-condicional de un padre primo es determinista.
+The witness uses real primes and the exact weight \(\log p\); it is not a
+perturbation of the arithmetic measure. The geometric reason is that the
+conditional row of a prime parent is deterministic.
 
-La ecuación (15) descarta una brecha en la **coordenada operatorial**. No
-descarta que una sucesión especial de vectores tenga un cociente menor que
-uno; tal afirmación tendría que demostrarse directamente para esa sucesión.
+Equation (15) rules out a gap in the **operator coordinate**. It does not
+rule out that some special sequence of vectors has a ratio less than one;
+such a claim would have to be proved directly for that sequence.
 
-## 4. Adición de Laguerre sin triángulos
+## 4. Laguerre addition with no triangles
 
-Para \(j\ge0\), póngase
+For \(j\ge0\), set
 
 \[
  p_j(s)=\sum_{d\ge2}{\Lambda(d)\over d^s}L_j(\log d),
@@ -232,7 +236,7 @@ Para \(j\ge0\), póngase
 \tag{17}
 \]
 
-y
+and
 
 \[
  b_N(s)=\sum_{m\ge2}{\log m\over m^s}
@@ -240,68 +244,68 @@ y
 \tag{18}
 \]
 
-Todas las series convergen absolutamente. La fórmula
+All the series converge absolutely. The formula
 
 \[
  L_N^{(1)}(x+y)=\sum_{j=0}^NL_j(x)L_{N-j}(y)
 \tag{19}
 \]
 
-y la ley conjunta de la Sección 2 dan, sin módulos,
+and the joint law of Section 2 give, with no moduli,
 
 \[
  \boxed{b_N(s)=\sum_{j=0}^Np_j(s)z_{N-j}(s).}
 \tag{20}
 \]
 
-Con \(t=z/(1-z)\), (20) equivale a
+With \(t=z/(1-z)\), (20) is equivalent to
 
 \[
  { -\zeta'(s+t)\over(1-z)^2}
- =\left{{\mathcal L(s+t)\over1-z}\right}
-  \left{{\zeta(s+t)\over1-z}\right}.
+ =\left\{{\mathcal L(s+t)\over1-z}\right\}
+  \left\{{\zeta(s+t)\over1-z}\right\}.
 \tag{21}
 \]
 
-Esta es exactamente \(-\zeta'=\mathcal L\zeta\). Despejar los momentos
-von Mangoldt en (20) exige dividir por la segunda llave de (21), es decir,
-introducir \(1/\zeta\). Coeficiente a coeficiente esto es la inversión
-Möbius de `104_12`, no un inverso Markov positivo. Mantener (20) completa
-preserva todos los signos, pero entonces una cota para su factor
-\(p_j\) sigue siendo el nuevo input buscado.
+This is exactly \(-\zeta'=\mathcal L\zeta\). Solving for the von Mangoldt
+moments in (20) requires dividing by the second brace of (21), that is,
+introducing \(1/\zeta\). Coefficient by coefficient this is the Möbius
+inversion of `104_12`, not a positive Markov inverse. Keeping (20)
+complete preserves every sign, but then a bound for its factor
+\(p_j\) remains exactly the new sought input.
 
-## 5. Análogo continuo: dónde sí aparece la coercividad
+## 5. Continuous analogue: where coercivity does appear
 
-Sea \(\varepsilon=s-1>0\). El análogo del polo toma \(X,Y\) independientes
-con ley exponencial
+Let \(\varepsilon=s-1>0\). The analogue of the pole takes independent
+\(X,Y\) with exponential law
 
 \[
  \varepsilon e^{-\varepsilon x}\,dx,
 \]
 
-y pone \(U=X+Y\). Entonces \(U\) tiene densidad
+and sets \(U=X+Y\). Then \(U\) has density
 
 \[
  \varepsilon^2u e^{-\varepsilon u}\,du,
 \tag{22}
 \]
 
-y \(X\mid U=u\) es uniforme en \([0,u]\). Por tanto
+and \(X\mid U=u\) is uniform on \([0,u]\). Hence
 
 \[
  (\mathsf C_\varepsilon f)(u)={1\over u}\int_0^u f(x)\,dx
 \tag{23}
 \]
 
-es el análogo exacto de (6).
+is the exact analogue of (6).
 
-Para el grado escalado
+For the scaled degree
 
 \[
  f_r(x)=L_r(\varepsilon x),
 \]
 
-la identidad integral de Laguerre da
+the Laguerre integral identity gives
 
 \[
  \boxed{
@@ -310,7 +314,7 @@ la identidad integral de Laguerre da
 \tag{24}
 \]
 
-Las ortogonalidades de Laguerre implican
+Laguerre orthogonality implies
 
 \[
  \|f_r\|_{L^2(\mathrm{Exp}(\varepsilon))}^2=1,
@@ -320,19 +324,19 @@ Las ortogonalidades de Laguerre implican
 \tag{25}
 \]
 
-Así el continuo posee exactamente la coercividad por grado que uno querría
-transportar. El problema es que A1 no usa \(L_r(\varepsilon x)\), sino el
-grado no escalado \(L_r(x)\). El test asociado satisface
-\(L_{n-1}^{(1)}=\sum_{r=0}^{n-1}L_r\); por eso el problema de escala ya está
-presente en cada componente ordinaria. No se afirma que puedan estimarse
-esas componentes por separado: hacerlo sería precisamente perder su
-cancelación relativa.
+So the continuum has exactly the per-degree coercivity one would want to
+transport. The problem is that A1 does not use \(L_r(\varepsilon x)\), but
+the unscaled degree \(L_r(x)\). The associated test satisfies
+\(L_{n-1}^{(1)}=\sum_{r=0}^{n-1}L_r\); hence the scale problem is already
+present in each ordinary component. It is not claimed that those
+components could be estimated separately: doing so would be precisely
+losing their relative cancellation.
 
-### 5.1 Forma firmada conjunta con el polo
+### 5.1 Joint signed form with the pole
 
-El transporte discreto y el continuo pueden combinarse antes de estimar.
-Para \(n\ge1\), defina el mismo canal completo de `104_41`, ahora con
-\(s=1+\varepsilon\):
+The discrete and continuous transports can be combined before
+estimating. For \(n\ge1\), define the same complete channel of `104_41`,
+now with \(s=1+\varepsilon\):
 
 \[
 \begin{aligned}
@@ -343,8 +347,8 @@ Para \(n\ge1\), defina el mismo canal completo de `104_41`, ahora con
 \tag{25a}
 \]
 
-Poniendo \(f_{n,s}(x)=L_{n-1}^{(1)}(sx)\), las dos desintegraciones dan la
-identidad exacta
+Setting \(f_{n,s}(x)=L_{n-1}^{(1)}(sx)\), the two disintegrations give the
+exact identity
 
 \[
  \boxed{
@@ -358,28 +362,28 @@ identidad exacta
 \tag{25b}
 \]
 
-En efecto, las esperanzas condicionales de (25b) recuperan respectivamente
-\(\mathbb E_{\nu_s}f_{n,s}\) y
-\(\mathbb E_{\mathrm{Exp}(\varepsilon)}f_{n,s}\); la segunda integral de
-(25a), tras \(y=e^x\), es
+Indeed, the conditional expectations of (25b) recover, respectively,
+\(\mathbb E_{\nu_s}f_{n,s}\) and
+\(\mathbb E_{\mathrm{Exp}(\varepsilon)}f_{n,s}\); the second integral of
+(25a), after \(y=e^x\), is
 \(\varepsilon^{-1}\mathbb E_{\mathrm{Exp}(\varepsilon)}f_{n,s}\).
-Por `104_41`,
+By `104_41`,
 
 \[
  \lim_{s\downarrow1}\mathcal B_{n,s}=B_n=A_n-\lambda_n.
 \tag{25c}
 \]
 
-Las ecuaciones (25a)--(25c) conservan en una sola resta primos, potencias
-primas, polo y fase. No autorizan a estimar las dos esperanzas por separado:
-ambas tienen términos divergentes cuando \(\varepsilon\downarrow0\), y la
-finitud está en su colisión firmada. La contracción (9) actúa dentro de la
-primera probabilidad y (25) dentro de la segunda; no compara sus medias con
-el signo requerido.
+Equations (25a)–(25c) keep, in a single difference, the primes, prime
+powers, pole, and phase. They do not license estimating the two
+expectations separately: both have divergent terms as
+\(\varepsilon\downarrow0\), and finiteness lies in their signed collision.
+Contraction (9) acts within the first probability and (25) within the
+second; neither compares their means with the required sign.
 
-## 6. El cambio de escala cuesta \(\exp(n\log n)\)
+## 6. The change of scale costs \(\exp(n\log n)\)
 
-La fórmula de dilatación exacta es
+The exact dilation formula is
 
 \[
  \boxed{
@@ -388,7 +392,7 @@ La fórmula de dilatación exacta es
 \tag{26}
 \]
 
-Tomando \(x=\varepsilon u\) y \(\beta=1/\varepsilon\), se obtiene
+Taking \(x=\varepsilon u\) and \(\beta=1/\varepsilon\), one obtains
 
 \[
  L_r(u)=\sum_{j=0}^r{r\choose j}
@@ -397,7 +401,7 @@ Tomando \(x=\varepsilon u\) y \(\beta=1/\varepsilon\), se obtiene
 \tag{27}
 \]
 
-Para \(0<\varepsilon<1\), la carga absoluta de (27) es exactamente
+For \(0<\varepsilon<1\), the absolute load of (27) is exactly
 
 \[
  \boxed{
@@ -407,56 +411,58 @@ Para \(0<\varepsilon<1\), la carga absoluta de (27) es exactamente
 \tag{28}
 \]
 
-En la elección diagonal natural \(\varepsilon=1/n\), \(r=n-1\),
+At the natural diagonal choice \(\varepsilon=1/n\), \(r=n-1\),
 
 \[
  (2n-1)^{n-1}=\exp\{(1+o(1))n\log n\}.
 \tag{29}
 \]
 
-Aplicar (25) grado por grado y sumar magnitudes pierde por (29) exactamente
-la escala que A1 necesita cancelar. Si no se toman magnitudes, los
-coeficientes alternados de (27) deben conservarse completos; al recombinarlos
-se vuelve a \(L_r(u)\) y no se ha obtenido una desigualdad. Ésta es la versión
-Markov del stop-gate de colisión de `104_13`.
+Applying (25) degree by degree and summing magnitudes loses exactly, by
+(29), the scale A1 needs to cancel. If magnitudes are not taken, the
+alternating coefficients of (27) must be kept whole; recombining them
+returns to \(L_r(u)\) and no inequality has been obtained. This is the
+Markov version of the collision stop-gate of `104_13`.
 
-## 7. Falsificador off-line y alcance lógico
+## 7. Off-line falsifier and logical scope
 
-El cuarteto off-line no satisface por sí solo (1) con los pesos aritméticos
-canónicos; por eso una desigualdad futura que use de verdad la desintegración
-(5) no tiene por qué transferirse al cuarteto. Pero las únicas desigualdades
-automáticas obtenidas aquí son (9) y Jensen, y (15) prueba que carecen de
-margen incluso antes de llegar al nivel espectral. No «demuestran» una cota
-para el cuarteto ni para la aritmética real.
+The off-line quartet does not by itself satisfy (1) with the canonical
+arithmetic weights; hence a future inequality that genuinely uses
+disintegration (5) need not transfer to the quartet. But the only
+automatic inequalities obtained here are (9) and Jensen, and (15) proves
+they have no margin even before reaching the spectral level. They
+"prove" no bound for the quartet nor for the real arithmetic.
 
-Si se intenta trasladar la contracción desde (s>1) al borde mediante una
-continuación que olvida (5), reaparecen exactamente los residuos off-line de
-`104_41`; allí el cuarteto es el falsificador vinculante. Por tanto este
-transporte no evade el gate de residuos.
+If an attempt is made to carry the contraction from \(s>1\) to the
+boundary via a continuation that forgets (5), the off-line residues of
+`104_41` reappear exactly; there the quartet is the binding falsifier.
+Hence this transport does not evade the residue gate.
 
-## 8. Decisión
+## 8. Decision
 
 ```text
-probado incondicionalmente:
-  desintegración multiplicativa exacta (4)--(5);
-  adjunción y contracción Markov (8)--(9);
-  brecha espectral cero, incluso en media cero (12)--(15);
-  convolución Laguerre exacta sin triángulos (20);
-  análogo continuo Gamma y contracción 1/sqrt(r+1) (24)--(25);
-  costo exacto (2/epsilon-1)^r del cambio a la escala A1 (28).
+proved unconditionally:
+  exact multiplicative disintegration (4)--(5);
+  adjunction and Markov contraction (8)--(9);
+  zero spectral gap, even on the zero mean, (12)--(15);
+  exact Laguerre convolution with no triangles (20);
+  continuous Gamma analogue and contraction 1/sqrt(r+1) (24)--(25);
+  exact cost (2/epsilon-1)^r of switching to the A1 scale (28).
 
-descartado:
-  una brecha operatorial uniforme del transporte divisor;
-  inversión positiva de la convolución en el grado;
-  transferir la coercividad Gamma grado a grado mediante triángulos;
-  usar el transporte como cierre autónomo de la cota proporcional.
+ruled out:
+  a uniform operator gap for the divisor transport;
+  positive inversion of the degree convolution;
+  transferring Gamma coercivity degree by degree via triangles;
+  using the transport as an autonomous closure of the proportional bound.
 
-permanece abierto:
-  una estimación unilateral específica para el vector Laguerre no escalado,
-  conservando completa la suma alternada (27), el bloque Gamma y los bordes;
-  B_n <= (1501/2002) A_n, A1 y RH.
+remains open:
+  a specific one-sided estimate for the unscaled Laguerre vector,
+  keeping the alternating sum (27), the Gamma block, and the boundary
+  terms fully intact;
+  B_n <= (1501/2002) A_n, A1, and RH.
 ```
 
-`tools/divisor_markov_laguerre_check.py` verifica con `Fraction` la identidad
-divisor, la fórmula de adición, el operador continuo (24) y la dilatación
-(26)--(28). No usa ceros de zeta ni punto flotante.
+`tools/divisor_markov_laguerre_check.py` checks with `Fraction` the
+divisor identity, the addition formula, the continuous operator (24), and
+the dilation (26)–(28). It uses neither zeros of zeta nor floating point.
+</content>

@@ -1,6 +1,6 @@
 # P123.103 — Tangential small-frequency bounds and the determinant trace domain
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for S(Y) of P123.101.
+Status: PROVED-IN-REPOSITORY for S(Y) of P123.101.
 This supplies a continuous inverse to the real derivative off its kernel
 and a precise restriction on a heat-trace determinant construction.
 

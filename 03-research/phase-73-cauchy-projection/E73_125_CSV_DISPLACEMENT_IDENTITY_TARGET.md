@@ -1,6 +1,5 @@
 # E73.125 - CSV Displacement Identity Attempt
 
-Date: 2026-07-12.
 
 Status after E73.126:
 

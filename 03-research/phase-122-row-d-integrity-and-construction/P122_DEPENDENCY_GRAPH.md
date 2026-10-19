@@ -208,6 +208,6 @@ Meyer explicit formula [IMPORTED]
   -> RH [classical Weil criterion].
 ```
 
-The only route faithful to the user's intended analogy with Weil is
+The only route faithful to the intended analogy with Weil is
 `D-geometry`.  `D-source` may prove the same sign analytically, but it would
 not retroactively turn A/B/C into an ordinary intersection-theoretic column.

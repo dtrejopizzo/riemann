@@ -1,24 +1,24 @@
-# 104_02 — Erratum de signo y traducción corregida de Lagarias hacia A1
+# 104_02 — Sign erratum and corrected translation of Lagarias toward A1
 
-**Rol:** auditar el signo del término de Li incompleto antes de usar el Teorema 6.1 de
-Lagarias. Este documento sustituye íntegramente la traducción anterior.
+**Objective:** audit the sign of the incomplete Li term before using Lagarias's Theorem 6.1.
+This document entirely replaces the earlier translation.
 
-**Estado vinculante.** Las ecuaciones impresas (1.15), (1.17), (6.2) y el paso (6.7) de
-Lagarias tienen el signo opuesto al residuo del integrando que aparece en su propia prueba.
-Por tanto se retiran el antiguo Teorema A, su forma A′ y los antiguos corolarios B1–B2. La
-coordenada exacta correcta de A1 contiene
-\(-\lambda_n(\sqrt n)\), no \(+\lambda_n(\sqrt n)\).
+**Binding status.** The printed equations (1.15), (1.17), (6.2), and step (6.7) of
+Lagarias carry the opposite sign to the residue of the integrand appearing in his own proof.
+Hence the former Theorem A, its form A′, and the former corollaries B1–B2 are withdrawn. The
+correct exact coordinate of A1 contains
+\(-\lambda_n(\sqrt n)\), not \(+\lambda_n(\sqrt n)\).
 
-La búsqueda realizada el 25-jul-2026 en la ficha de arXiv math/0404394, la página del artículo
-en Numdam y los resultados enlazados desde ambas **no localizó un corrigendum**. Esto no
-convierte el erratum en una corrección oficial del autor: es una auditoría interna basada en
-el cálculo de residuos reproducido abajo.
+The search carried out on 25-Jul-2026 on the arXiv record math/0404394, the article's page on
+Numdam, and the results linked from both **found no corrigendum**. This does not turn the
+erratum into an official correction by the author: it is an internal audit based on the
+residue computation reproduced below.
 
 ---
 
-## 1. Enunciado impreso y cálculo local del residuo
+## 1. Printed statement and local residue computation
 
-Lagarias define (ec. (1.14), también (6.1))
+Lagarias defines (eq. (1.14), also (6.1))
 
 \[
 \lambda_n(T,\pi)=
@@ -26,26 +26,26 @@ Lagarias define (ec. (1.14), también (6.1))
 \left[1-\left(1-\frac1\rho\right)^n\right]
 \]
 
-y en (6.4)
+and in (6.4)
 
 \[
 k_n(s)=\left(1+\frac1s\right)^n-1.
 \]
 
-El integrando de la prueba del Teorema 6.1 es
+The integrand of the proof of Theorem 6.1 is
 
 \[
 F_n(s)=k_n(s)\left(-\frac{L'}L(s+1,\pi)\right).
 \]
 
-Sea \(\rho\) un cero no trivial de multiplicidad \(m_\rho\), y sea
-\(s_0=\rho-1\). Localmente,
+Let \(\rho\) be a nontrivial zero of multiplicity \(m_\rho\), and let
+\(s_0=\rho-1\). Locally,
 
 \[
 \frac{L'}L(s+1,\pi)=\frac{m_\rho}{s-s_0}+O(1).
 \]
 
-Luego, sin convención global ni estimación alguna,
+Then, with no global convention or estimate whatsoever,
 
 \[
 \boxed{
@@ -55,11 +55,11 @@ Luego, sin convención global ni estimación alguna,
 \tag{1.1}
 \]
 
-El signo menos procede exclusivamente de \(-L'/L\). La prueba impresa usa en la deformación
-el residuo \(+m_\rho k_n(\rho-1)\).
+The minus sign comes exclusively from \(-L'/L\). The printed proof uses, in the deformation,
+the residue \(+m_\rho k_n(\rho-1)\).
 
-Sean \(C_1\) el círculo pequeño y \(C_2\) el rectángulo grande, ambos orientados en sentido
-antihorario como en el artículo. Para contornos anidados,
+Let \(C_1\) be the small circle and \(C_2\) the large rectangle, both oriented
+counterclockwise as in the article. For nested contours,
 
 \[
 \frac1{2\pi i}\int_{C_2}F_n
@@ -68,16 +68,16 @@ antihorario como en el artículo. Para contornos anidados,
 \tag{1.2}
 \]
 
-Hay aquí una segunda inconsistencia tipográfica en la fuente: §6 define
-\(I_2=\int_{C_2}F_n(s)\,ds\), sin \((2\pi i)^{-1}\), pero la ecuación (6.7)
-lo usa como integral normalizada. Para no heredar esa ambigüedad, definimos
+There is a second typographical inconsistency here in the source: §6 defines
+\(I_2=\int_{C_2}F_n(s)\,ds\), without \((2\pi i)^{-1}\), but equation (6.7)
+uses it as a normalized integral. To avoid inheriting that ambiguity, we define
 
 \[
  \widehat I_2(n):={1\over2\pi i}\int_{C_2}F_n(s)\,ds.           \tag{1.3}
 \]
 
-La integral normalizada sobre \(C_1\) es \(S_f(n,\pi)\). Además, usando la simetría de ceros
-empleada en el propio artículo,
+The normalized integral over \(C_1\) is \(S_f(n,\pi)\). Moreover, using the zero symmetry
+employed in the article itself,
 
 \[
 \sum_{\substack{\rho\in Z(\pi)\\|\Im\rho|<T}}
@@ -86,7 +86,7 @@ m_\rho k_n(\rho-1)
 \tag{1.4}
 \]
 
-Al combinar (1.1)–(1.4), la ecuación (6.7) corregida y normalizada es
+Combining (1.1)–(1.4), the corrected and normalized equation (6.7) is
 
 \[
 \boxed{
@@ -94,32 +94,31 @@ Al combinar (1.1)–(1.4), la ecuación (6.7) corregida y normalizada es
 \tag{1.5}
 \]
 
-no \(S_f-\lambda_n(T,\pi^\vee)+O(1)\). El resto de la estimación de contorno de §6 prueba
-\(\widehat I_2(n)=O_\pi(\sqrt n\log n)\), pero no literalmente con su elección
-impresa \(T=\sqrt n+\varepsilon_n\). Hay que reparar también ese punto antes de
-extraer la conclusión.
+not \(S_f-\lambda_n(T,\pi^\vee)+O(1)\). The rest of the §6 contour estimate proves
+\(\widehat I_2(n)=O_\pi(\sqrt n\log n)\), but not literally with its printed
+choice \(T=\sqrt n+\varepsilon_n\). This point must also be repaired before
+extracting the conclusion.
 
-### 1.1. Reparación del tramo horizontal
+### 1.1. Repair of the horizontal segment
 
-La ecuación impresa (6.12) solo da, al avanzar una unidad hacia la derecha,
+The printed equation (6.12) only gives, when moving one unit to the right,
 
 \[
  {\lvert k_n(s+1)+1\rvert\over\lvert k_n(s)+1\rvert}
  \le e^{n/T^2}.
 \]
 
-Con \(T^2=n\), combinarla con el factor \(1/2\) del mayorante de la serie de
-Dirichlet produce \(e/2>1\), no decrecimiento geométrico. Fijamos en cambio
+With \(T^2=n\), combining it with the factor \(1/2\) of the Dirichlet series
+majorant yields \(e/2>1\), not geometric decay. We instead fix
 
 \[
  T=2\sqrt n+\varepsilon_n,\qquad 0<\varepsilon_n<1,                 \tag{1.6a}
 \]
 
-escogido a distancia \(\gg_\pi1/\log n\) de toda ordenada de cero en esa
-banda. Tal elección existe por el conteo local de ceros usado en el propio
-artículo.
+chosen at distance \(\gg_\pi1/\log n\) from every zero ordinate in that
+band. Such a choice exists by the local zero count used in the article itself.
 
-En los lados horizontales \(s=\sigma\pm iT\), para \(\lvert\sigma\rvert\le3\),
+On the horizontal sides \(s=\sigma\pm iT\), for \(\lvert\sigma\rvert\le3\),
 
 \[
  \left\lvert1+{1\over s}\right\rvert^2
@@ -127,57 +126,57 @@ En los lados horizontales \(s=\sigma\pm iT\), para \(\lvert\sigma\rvert\le3\),
  \le1+{7\over4n},
 \]
 
-de modo que \(\lvert k_n(s)\rvert\le e^{7/8}+1\); la fórmula (6.8) y la
-separación elegida dan \(\lvert L'/L(s+1,\pi)\rvert\ll_\pi(\log n)^2\).
-Para \(\sigma\ge3\), póngase
+so that \(\lvert k_n(s)\rvert\le e^{7/8}+1\); formula (6.8) and the chosen
+separation give \(\lvert L'/L(s+1,\pi)\rvert\ll_\pi(\log n)^2\).
+For \(\sigma\ge3\), set
 
 \[
  G_n(s)=k_n(s)+1=\left(1+{1\over s}\right)^n.
 \]
 
-La identidad exacta
+The exact identity
 
 \[
  {G_n(s+1)\over G_n(s)}
  =\left(1-{1\over(s+1)^2}\right)^n
 \]
 
-implica
+implies
 
 \[
  \left\lvert{G_n(s+1)\over G_n(s)}\right\rvert
  \le(1+T^{-2})^n\le e^{1/4}.                       \tag{1.6b}
 \]
 
-Por convergencia absoluta del logaritmo de Euler, el **mayorante absoluto**
-de la serie de Dirichlet de \(L'/L(s+1,\pi)\) gana un factor a lo sumo
-\(1/2\) al aumentar \(\sigma\) en una unidad. Dentro de cada celda,
-\(0\le t\le1\), se tiene además
+By absolute convergence of the Euler logarithm, the **absolute majorant**
+of the Dirichlet series of \(L'/L(s+1,\pi)\) gains a factor of at most
+\(1/2\) when \(\sigma\) is increased by one unit. Within each cell,
+\(0\le t\le1\), one also has
 
 \[
  \left({1+1/(s+t)\over1+1/s}\right)^n
  =\left(1-{t\over(s+t)(s+1)}\right)^n,
 \]
 
-cuyo módulo es a lo sumo \((1+T^{-2})^n\le e^{1/4}\). Por tanto el mayorante del
-término \(G_n(s)L'/L(s+1,\pi)\) decrece por bloques con razón
+whose modulus is at most \((1+T^{-2})^n\le e^{1/4}\). Hence the majorant of the
+term \(G_n(s)L'/L(s+1,\pi)\) decreases block by block with ratio
 
 \[
  q={e^{1/4}\over2}<1,                               \tag{1.6c}
 \]
 
-y el término procedente de \(k_n=G_n-1\) decrece al menos con razón
-\(1/2\). Esto prueba la integrabilidad geométrica de los dos lados
-horizontales. Los lados verticales conservan la cota
-\(O_\pi(\sqrt n\log n)\), pues cambiar \(T\) por un factor fijo no altera
-su argumento. En consecuencia,
+and the term coming from \(k_n=G_n-1\) decreases at least with ratio
+\(1/2\). This proves the geometric integrability of the two horizontal
+sides. The vertical sides retain the bound
+\(O_\pi(\sqrt n\log n)\), since changing \(T\) by a fixed factor does not alter
+their argument. Consequently,
 
 \[
  \widehat I_2(n)=O_\pi(\sqrt n\log n).              \tag{1.6d}
 \]
 
-Finalmente, si \(\sqrt n\le\lvert\gamma\rvert\le2\sqrt n+1\) y
-\(0<\beta<1\), entonces
+Finally, if \(\sqrt n\le\lvert\gamma\rvert\le2\sqrt n+1\) and
+\(0<\beta<1\), then
 
 \[
  \left\lvert1-{1\over\rho}\right\rvert^{2n}
@@ -185,8 +184,8 @@ Finalmente, si \(\sqrt n\le\lvert\gamma\rvert\le2\sqrt n+1\) y
  \le(1+1/n)^n\le e.                                \tag{1.6e}
 \]
 
-Cada sumando de Li en esa banda tiene módulo a lo sumo \(1+e^{1/2}\), y
-el conteo de ceros da \(O_\pi(\sqrt n\log n)\) ceros. Por ello
+Each Li summand in that band has modulus at most \(1+e^{1/2}\), and
+the zero count gives \(O_\pi(\sqrt n\log n)\) zeros. Hence
 
 \[
  \lambda_n(2\sqrt n+\varepsilon_n,\pi^\vee)
@@ -194,8 +193,8 @@ el conteo de ceros da \(O_\pi(\sqrt n\log n)\) ceros. Por ello
  =O_\pi(\sqrt n\log n).                            \tag{1.6f}
 \]
 
-Las ecuaciones (1.5) y (1.9)--(1.11) prueban, ya con el hueco horizontal
-reparado, que
+Equations (1.5) and (1.9)–(1.11) prove, now with the horizontal gap
+repaired, that
 
 \[
 \boxed{
@@ -204,55 +203,55 @@ S_f(n,\pi)=-\lambda_n(\sqrt n,\pi^\vee)
 \tag{L1c}
 \]
 
-Ésta es la versión corregida de las ecuaciones impresas (1.15) y (6.2).
+This is the corrected version of the printed equations (1.15) and (6.2).
 
-### 1.2. Otra errata de signo adyacente que no se importa
+### 1.2. Another adjacent sign typo that is not imported
 
-La especialización a \(\zeta\) impresa en (4.13) escribe
+The specialization to \(\zeta\) printed in (4.13) writes
 
 \[
  S_f(n,\pi_{\rm triv})
  =\sum_{j=1}^n(-1)^{j-1}{n\choose j}\eta_{j-1}.       \tag{1.6}
 \]
 
-Ese factor alternante contradice simultáneamente:
+That alternating factor simultaneously contradicts:
 
-1. la Definición 4.2,
+1. Definition 4.2,
    \(-\zeta'/\zeta(1+s)=s^{-1}+\sum_{j\ge0}\eta_js^j\);
-2. la definición general (4.8),
+2. the general definition (4.8),
    \(S_f(n)=\sum_{j=1}^n{n\choose j}\eta_{j-1}\);
-3. la extracción del residuo en el círculo pequeño (6.5), porque
+3. the residue extraction on the small circle (6.5), because
    \(k_n(s)=\sum_{j=1}^n{n\choose j}s^{-j}\).
 
-Ya en \(n=2\), (4.8)/(6.5) dan \(2\eta_0+\eta_1\), mientras (4.13) da
-\(2\eta_0-\eta_1\). La cadena usada aquí adopta la definición y el residuo
-general, sin alternancia. Esta errata adyacente no cambia (L1c), pero confirma
-que los signos de §4--§6 deben recalcularse y no copiarse por referencia.
+Already at \(n=2\), (4.8)/(6.5) give \(2\eta_0+\eta_1\), while (4.13) gives
+\(2\eta_0-\eta_1\). The chain used here adopts the general definition and
+residue, with no alternation. This adjacent typo does not change (L1c), but it confirms
+that the §4–§6 signs must be recomputed and not copied by reference.
 
-Para una representación no autodual, el PDF publicado también mezcla
-\(\pi\) y \(\pi^\vee\) en (4.6). La forma compatible con la derivación es
+For a non-self-dual representation, the published PDF also mixes
+\(\pi\) and \(\pi^\vee\) in (4.6). The form compatible with the derivation is
 
 \[
  \lambda_n(\pi)=S_\infty(n,\pi^\vee)-S_f(n,\pi^\vee)+\delta(\pi), \tag{1.7}
 \]
 
-o su dual. Como \(S_\infty(n,\pi)=S_\infty(n,\pi^\vee)\) y \(\zeta\) es
-autodual, esta inconsistencia editorial tampoco altera la especialización A1.
+or its dual. Since \(S_\infty(n,\pi)=S_\infty(n,\pi^\vee)\) and \(\zeta\) is
+self-dual, this editorial inconsistency also does not alter the A1 specialization.
 
 ---
 
-## 2. Asintótica incondicional corregida
+## 2. Corrected unconditional asymptotics
 
-La fórmula aritmética exacta del artículo es
+The exact arithmetic formula of the article is
 
 \[
 \lambda_n(\pi)=S_\infty(n,\pi^\vee)-S_f(n,\pi^\vee)+\delta(\pi^\vee).
 \tag{2.1}
 \]
 
-Con
+With
 \(S_\infty(n,\pi)=\frac N2n\log n+C_1(\pi)n+O_\pi(1)\)
-y (L1c), resulta
+and (L1c), we obtain
 
 \[
 \boxed{
@@ -261,24 +260,24 @@ y (L1c), resulta
 \tag{L2c}
 \]
 
-Así, la ecuación impresa (1.17) debe llevar signo **más** delante del coeficiente incompleto.
-La fórmula bajo RH no cambia, porque bajo RH
+Thus the printed equation (1.17) must carry a **plus** sign before the incomplete
+coefficient. The formula under RH does not change, because under RH
 \(\lambda_n(\sqrt n,\pi)=O_\pi(\sqrt n\log n)\).
 
-Para \(\zeta\), \(N=1\), \(Q=1\), \(\pi^\vee=\pi\) y
+For \(\zeta\), \(N=1\), \(Q=1\), \(\pi^\vee=\pi\), and
 
 \[
 C_1=\frac12(\gamma-1-\log2\pi).
 \]
 
-Nuestro bloque exacto satisface
+Our exact block satisfies
 
 \[
 A_n=\frac n2(\log n+\gamma-1-\log2\pi)+O(\log n).
 \tag{2.2}
 \]
 
-Definimos el resto exacto con el signo corregido:
+We define the exact remainder with the corrected sign:
 
 \[
 \boxed{
@@ -286,7 +285,7 @@ Definimos el resto exacto con el signo corregido:
 \tag{2.3}
 \]
 
-Es un número real, no un símbolo \(O\). De (L2c) y (2.2) se obtiene
+It is a real number, not an \(O\)-symbol. From (L2c) and (2.2) one obtains
 
 \[
 \boxed{
@@ -295,15 +294,15 @@ Es un número real, no un símbolo \(O\). De (L2c) y (2.2) se obtiene
 \tag{2.4}
 \]
 
-para alguna constante absoluta \(C_*>0\) no explicitada por el argumento de Lagarias.
+for some absolute constant \(C_*>0\) not made explicit by Lagarias's argument.
 
-La cantidad usada en la versión retirada era
+The quantity used in the withdrawn version was
 
 \[
 \varepsilon_n^-:=A_n-\lambda_n-\lambda_n(\sqrt n).
 \]
 
-Las dos se relacionan exactamente por
+The two are related exactly by
 
 \[
 \boxed{
@@ -311,16 +310,16 @@ Las dos se relacionan exactamente por
 \tag{2.5}
 \]
 
-Por tanto **no** se dispone incondicionalmente de
-\(|\varepsilon_n^-|\ll\sqrt n\log n\). Si RH falla, el segundo término de (2.5) puede ser
-exponencial sobre una subsucesión. La antigua afirmación de que solo faltaba efectivizar una
-constante para \(\varepsilon_n^-\) queda retirada.
+Therefore **no** unconditional
+\(|\varepsilon_n^-|\ll\sqrt n\log n\) is available. If RH fails, the second term of (2.5) can be
+exponential along a subsequence. The former claim that only a constant needed to be made
+effective for \(\varepsilon_n^-\) is withdrawn.
 
 ---
 
-## 3. Forma lado-primo corregida
+## 3. Corrected prime-side form
 
-Sea
+Let
 
 \[
 \mathcal J_n:=\int_0^\infty E(u)K_n(u)\,du,
@@ -329,7 +328,7 @@ Sea
 \tag{3.1}
 \]
 
-Por la definición (2.3), sin usar ninguna estimación,
+By definition (2.3), with no estimate used,
 
 \[
 \boxed{
@@ -337,19 +336,19 @@ Por la definición (2.3), sin usar ninguna estimación,
 \tag{A'_c}
 \]
 
-Ésta reemplaza el antiguo Teorema A′. El término incompleto entra con signo menos.
+This replaces the former Theorem A′. The incomplete term enters with a minus sign.
 
 ---
 
-## 4. A1 en la coordenada corregida
+## 4. A1 in the corrected coordinate
 
-Sea \(a=\log2\), \(\theta\in(0,\tfrac12)\), sea \(T_n(\theta)\) como en 104_01, y
+Let \(a=\log2\), \(\theta\in(0,\tfrac12)\), let \(T_n(\theta)\) be as in 104_01, and
 
 \[
 q_{n,\theta}=(1-\theta)A_n+1-L_n^{(1)}(a).
 \]
 
-La descomposición exacta ya probada da
+The exact decomposition already proved gives
 
 \[
 \mathrm{A1}_\theta
@@ -358,7 +357,7 @@ La descomposición exacta ya probada da
 \tag{4.1}
 \]
 
-Sustituyendo (A′c), obtenemos el enunciado exacto que sustituye al antiguo Teorema B:
+Substituting (A′c), we obtain the exact statement that replaces the former Theorem B:
 
 \[
 \boxed{
@@ -369,10 +368,10 @@ Sustituyendo (A′c), obtenemos el enunciado exacto que sustituye al antiguo Teo
 \tag{B_c}
 \]
 
-No hay un \(O\) en esta equivalencia. Tanto
-\(\widetilde\varepsilon_n\) como \(R_n\) conservan su signo exacto.
+There is no \(O\) in this equivalence. Both
+\(\widetilde\varepsilon_n\) and \(R_n\) keep their exact sign.
 
-Equivalentemente,
+Equivalently,
 
 \[
 \lambda_n(\sqrt n)
@@ -380,12 +379,12 @@ Equivalentemente,
 \tag{4.2}
 \]
 
-Así, la traducción corregida reduce la dificultad a una **cota inferior**, no superior, para
-el bloque incompleto.
+Thus the corrected translation reduces the difficulty to a **lower bound**, not an upper one,
+for the incomplete block.
 
-### Corolarios unilaterales corregidos
+### Corrected one-sided corollaries
 
-Usando (2.4) y \(|R_n(T_n(\theta))|\le\theta A_n\):
+Using (2.4) and \(|R_n(T_n(\theta))|\le\theta A_n\):
 
 \[
 \boxed{
@@ -395,7 +394,7 @@ Usando (2.4) y \(|R_n(T_n(\theta))|\le\theta A_n\):
 \tag{B1_c}
 \]
 
-Recíprocamente,
+Conversely,
 
 \[
 \boxed{
@@ -405,11 +404,11 @@ Recíprocamente,
 \tag{B2_c}
 \]
 
-La brecha entre ambas condiciones sigue siendo
-\(2\theta A_n+2C_*\sqrt n\log n\), pero ahora ambas son cotas **inferiores**. Ninguna puede
-reemplazarse por una cota superior del coeficiente incompleto.
+The gap between the two conditions remains
+\(2\theta A_n+2C_*\sqrt n\log n\), but now both are **lower** bounds. Neither can be
+replaced by an upper bound on the incomplete coefficient.
 
-Para \(\theta=\tfrac14\), el objetivo exacto queda
+For \(\theta=\tfrac14\), the exact target is
 
 \[
 \boxed{
@@ -420,66 +419,66 @@ Para \(\theta=\tfrac14\), el objetivo exacto queda
 
 ---
 
-## 5. Qué sí controla una altura verificada
+## 5. What a verified height actually controls
 
-Si todos los ceros con \(|\gamma|<\sqrt n\) están en la línea crítica, cada par aporta
+If all zeros with \(|\gamma|<\sqrt n\) are on the critical line, each pair contributes
 
 \[
 2-2\cos(n\theta_\rho)\in[0,4],
 \]
 
-y por tanto
+and hence
 
 \[
 0\le\lambda_n(\sqrt n)\le4N(\sqrt n).
 \tag{5.1}
 \]
 
-Para la coordenada corregida importa ya la primera desigualdad. De (B1c), una condición
-suficiente es
+For the corrected coordinate, the first inequality is now what matters. From (B1c), a
+sufficient condition is
 
 \[
 C_*\sqrt n\log n\le(1-2\theta)A_n,
 \tag{5.2}
 \]
 
-junto con la localización de los ceros hasta \(\sqrt n\). Como \(C_*\) no está explicitada,
-esto no produce por sí solo un rango numérico certificado. Y, aunque se explicitara, seguiría
-siendo un corolario finito: no prueba A1 uniformemente.
+together with localization of the zeros up to \(\sqrt n\). Since \(C_*\) is not made explicit,
+this does not by itself produce a certified numerical range. And even if it were made explicit,
+it would still be a finite corollary: it does not prove A1 uniformly.
 
-La discrepancia editorial entre
-\(T^2/[2(\log T)^2]\) en el artículo publicado y
-\(T^2/[4(\log T)^2]\) en la fuente arXiv se conserva como dato bibliográfico, pero no entra en
-el cierre de A1.
+The editorial discrepancy between
+\(T^2/[2(\log T)^2]\) in the published article and
+\(T^2/[4(\log T)^2]\) in the arXiv source is kept as a bibliographic datum, but it does not
+enter the closure of A1.
 
 ---
 
-## 6. Cuarteto fuera de la línea y dirección crítica
+## 6. Off-line quartet and the critical direction
 
-Sea \(w_\rho=1-1/\rho\). Para un cuarteto simétrico fuera de la línea puede escribirse
-\(w=e^{\alpha+i\vartheta}\), con \(\alpha>0\), y la contribución completa es
+Let \(w_\rho=1-1/\rho\). For a symmetric off-line quartet one can write
+\(w=e^{\alpha+i\vartheta}\), with \(\alpha>0\), and the full contribution is
 
 \[
 4-4\cosh(n\alpha)\cos(n\vartheta).
 \tag{6.1}
 \]
 
-Una vez que la altura del cuarteto es menor que \(\sqrt n\), la misma contribución aparece en
-\(\lambda_n(\sqrt n)\). Toma valores exponencialmente grandes de ambos signos a lo largo de
-subsucesiones, con la formulación precisa de Bombieri–Lagarias para evitar suponer una fase
-aislada. Por eso una cota inferior uniforme como (4.2) sigue siendo RH-strength.
+Once the quartet's height is less than \(\sqrt n\), the same contribution appears in
+\(\lambda_n(\sqrt n)\). It takes exponentially large values of both signs along
+subsequences, with Bombieri–Lagarias's precise formulation needed to avoid assuming an
+isolated phase. That is why a uniform lower bound like (4.2) is still RH-strength.
 
-El factor \(4\) corresponde al coeficiente de Li, que suma una vez los cuatro ceros. La forma
-de Weil/autocorrelación \(2\mathrm{Re}\,\lambda_n\) duplica esta expresión y produce
-\(8-8\cosh(n\alpha)\cos(n\vartheta)\); no deben mezclarse ambas normalizaciones.
+The factor \(4\) corresponds to the Li coefficient, which sums the four zeros once. The
+Weil-form/autocorrelation form \(2\mathrm{Re}\,\lambda_n\) doubles this expression and
+produces \(8-8\cosh(n\alpha)\cos(n\vartheta)\); the two normalizations must not be mixed.
 
-El erratum no prueba A1; identifica correctamente el lado que debe atacarse.
+The erratum does not prove A1; it correctly identifies the side that must be attacked.
 
 ---
 
-## 7. Verificación diagnóstica
+## 7. Diagnostic verification
 
-La herramienta tools/lagarias_translation_check.py calcula ahora
+The tool tools/lagarias_translation_check.py now computes
 
 \[
 \widetilde D_n:=\lambda_n-A_n-\lambda_n(\sqrt n)
@@ -487,32 +486,33 @@ La herramienta tools/lagarias_translation_check.py calcula ahora
 \tag{7.1}
 \]
 
-no el residual antiguo
-\(\lambda_n-A_n+\lambda_n(\sqrt n)\). Usa dos radios para detectar inestabilidad de la
-extracción de Cauchy. El resultado es exclusivamente diagnóstico en float64; no certifica
-\(C_*\), ni A1, ni RH.
+not the former residual
+\(\lambda_n-A_n+\lambda_n(\sqrt n)\). It uses two radii to detect instability of the
+Cauchy extraction. The result is exclusively diagnostic in float64; it certifies neither
+\(C_*\), nor A1, nor RH.
 
-El test decisivo de signo es algebraico y está en (1.1): el programa solo comprueba que los
-datos numéricos de bajo rango son consistentes con la traducción corregida.
+The decisive sign test is algebraic and is given in (1.1): the program only checks that the
+low-rank numerical data are consistent with the corrected translation.
 
-**Corrida del 25-jul-2026.** Las filas estables entre los dos radios llegan hasta \(n=1600\);
-\(n=2000\) y \(n=2400\) son descartadas por la guarda del 1 %. En la muestra estable,
+**Run of 25-Jul-2026.** The rows stable between the two radii go up to \(n=1600\);
+\(n=2000\) and \(n=2400\) are discarded by the 1% guard. In the stable sample,
 \[
 \max\frac{|\widetilde D_n|}{\sqrt n\log n}=0.2457
 \]
-se alcanza en \(n=8\). Estas cifras no son intervalos certificados ni una constante efectiva.
+is attained at \(n=8\). These figures are not certified intervals nor an effective constant.
 
 ---
 
-## 8. Ledger vinculante
+## 8. Binding ledger
 
-1. **Retirado:**
+1. **Withdrawn:**
    \(A_n-\lambda_n=+\lambda_n(\sqrt n)+O(\sqrt n\log n)\).
-2. **Retirado:**
-   \(|A_n-\lambda_n-\lambda_n(\sqrt n)|\ll\sqrt n\log n\) incondicional.
-3. **Retirados:** los antiguos B1 y B2, que pedían cotas superiores del bloque incompleto.
-4. **Adoptado:**
-   \(A_n-\lambda_n=-\lambda_n(\sqrt n)+\widetilde\varepsilon_n\), con
+2. **Withdrawn:**
+   \(|A_n-\lambda_n-\lambda_n(\sqrt n)|\ll\sqrt n\log n\) unconditional.
+3. **Withdrawn:** the former B1 and B2, which required upper bounds on the incomplete block.
+4. **Adopted:**
+   \(A_n-\lambda_n=-\lambda_n(\sqrt n)+\widetilde\varepsilon_n\), with
    \(|\widetilde\varepsilon_n|\le C_*\sqrt n\log n\).
-5. **Objetivo exacto:** (4.3), equivalente a A1, que exige controlar por abajo el bloque
-   incompleto junto con los dos restos con signo.
+5. **Exact target:** (4.3), equivalent to A1, which requires controlling from below the
+   incomplete block together with the two signed remainders.
+</content>

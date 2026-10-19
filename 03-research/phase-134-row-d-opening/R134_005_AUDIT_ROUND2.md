@@ -1,9 +1,8 @@
-# R134.005 — hostile audit of record, round 2 (Paper 46, row D opening)
+# R134.005 — audit of record, round 2 (Paper 46, row D opening)
 
-Auditor: adversarial auditor of record (Opus 5), for the session lead.
-Date: 2026-09-12.  Target: `04-papers/46-row-d-the-sign/main.md` (1641 lines)
+Target: `04-papers/46-intersection-frame-defect/archive/main.md` (1641 lines)
 and `README.md`, against `R134_002_AUDIT_ROUND1.md` (M1–M7, m1–m9, n1–n3),
-`R134_003_LEAD_AUDIT_ROUND1.md` (LF1–LF3), `R134_004_BUILDER_ROUND2.md`, the
+`R134_003_AUDIT_ROUND1.md` (LF1–LF3), `R134_004_ROUND2.md`, the
 four `[phase 134]` notes in phase 124 and the one in phase 118, and both
 scripts re-run.
 
@@ -27,7 +26,7 @@ item.**
 
 ---
 
-## 0. Reproduction performed (my own re-runs, not the builder's numbers)
+## 0. Reproduction performed (my own re-runs, not the construction's numbers)
 
 * `d134_gram.py --model zeta --N 10 30 --eps 2.0 1.0 0.5 0.3 0.1 --check`
   (80 s): the `--check` validation table (`1.476009 / 1.470692 / 1.469943`
@@ -160,7 +159,7 @@ primitive `F` it is `0` ✓ — but `F = 0` is primitive and `0 ∈ Eff_A^{tr}`,
 `h⁰_{eff}(0) = 1 ≠ 0` and (R4) fails at the origin.  And the vanishing is not
 "vacuous": it is a *value*, forced by Theorem 6.1.  Say "`h⁰_{eff}` vanishes on
 every nonzero primitive class, by Theorem 6.1, and fails (R3)".  The
-sharpening the builder is proud of — *the one candidate that satisfies the
+sharpening the construction is proud of — *the one candidate that satisfies the
 vanishing theorem has no Riemann–Roch identity at all* — **survives** and is
 correctly the best line in Remark 6.8a.
 
@@ -195,12 +194,12 @@ error**)".  The weaker, correct phrasing should be in both.
 
 **(n4)** `Π^{−2}` *is* well defined on `S(R)` and preserves it, and the
 convolution `e^{−|t|/2}∗e^{−|t|/2}∗ψ` of a Schwartz function is Schwartz —
-the lead's question is answered in the affirmative, and Proposition 3.6a gets
+the review's question is answered in the affirmative, and Proposition 3.6a gets
 that part right.  The defect (F1) is **not** there; it is in the transposition
 and in the conclusion drawn from it.
 
 **(n5)** Warning 4.5a is adequate and closes (n1) of round 1, as round 1 asked.
-Its carve-out for Theorem 4.2(iii) is stated honestly (the builder's own press
+Its carve-out for Theorem 4.2(iii) is stated honestly (the construction's own press
 point 3 concedes the determinant's stability is empirical over five
 resolutions and is not a bound) and I concur with the concession: (iii) keeps
 its `COMPUTATIONAL-ILLUSTRATION` label and is used only in the falsifying
@@ -281,7 +280,7 @@ independently of whether it is provable.
 
 ---
 
-## 5. The builder's press points
+## 5. The construction's press points
 
 1. **Retire D.3 as a programme item, keeping Theorem 5.8?  YES, and I so
    recommend.**  After (M2) the entries are Lemma 5.1a's values; the Frobenius
@@ -302,14 +301,14 @@ independently of whether it is provable.
    `FORCED_GREEN_AUDIT_OF_PHASE106.md` §5) but in the **safe direction**: its
    numbers are operator/Frobenius **residuals** establishing a *failure*, and
    an entrywise agreement check at `6.44·10^{−14}`, neither of which is a
-   positive-eigenvalue certificate.  So the standing rule should be recorded
+   positive-eigenvalue certificate.  So this caveat should be recorded
    once in the corpus methodology (as the phase-124 README note now does) and
    a full sweep of 119–123 is **not** worth a round.  I found no statement in
    Papers 43–46 resting on a positive double-precision Galerkin eigenvalue.
-3. **Warning 4.5a vs Theorem 4.2(iii):** the builder's own concession is
+3. **Warning 4.5a vs Theorem 4.2(iii):** the construction's own concession is
    correct and adequate; see (n5).  No further action.
 4. **Does Prop 3.6a leave a hole in (d)⇒(e)?**  No — the uniqueness line the
-   builder added is correct and necessary, and I verified it.  Ironically it
+   construction added is correct and necessary, and I verified it.  Ironically it
    is the one part of the 3.6a story that improved the paper.
 
 ---
@@ -339,7 +338,7 @@ Checked line by line.  **Consistent, with three exceptions, all from (F1) and
 
 ---
 
-## 7. Recommendation to the lead
+## 7. Recommendation to the review
 
 **The paper is fit to stand as Paper 46's opening state, after one bounded
 erratum — and not before.**  The erratum is five edits:
@@ -348,7 +347,7 @@ erratum — and not before.**  The erratum is five edits:
    correct remark of (F1) — that `Π²ϖ = 0` makes the growth argument
    unavailable, that RH *implies* temperedness of `Π²W_{fin}`, and that this
    is why (X3) is imported in its `D'` form.  Record the withdrawal in §9.2a
-   as a **fourth refuted statement of the builder's own**, which is what it is.
+   as a **fourth refuted statement of the construction's own**, which is what it is.
 2. **(X11)**, **§9.1(13)**, **§10's grade row**, **README** — the four
    cross-references.
 3. **Add (R5) to Definition 6.8** (the duality must carry the primitive sector
@@ -375,7 +374,7 @@ them.
   interval-arithmetic `T = \log 2` certificate is carved out) is now recorded
   in phases 118 and 124 and should be carried in the corpus methodology, not
   re-derived per phase.
-* **Three of the builder's own round-1 statements were refuted in round 2**,
+* **Three of the construction's own round-1 statements were refuted in round 2**,
   and with (F1) a **fourth** is refuted in round 2's own repair.  That is the
   honest count, and it is the strongest evidence the process is working: every
   one of them was found by reading, not by luck, and none of them cost a

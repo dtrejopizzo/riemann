@@ -1,6 +1,6 @@
 # E78.107 - `V-DMU-SOURCE` localizes to the resolvent branch `A^(-1)v`, not to the scalar coefficient `b_b`
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** front B only, live object `V-DMU-SOURCE`.  
 **Class:** REDUCCION GENUINA.  
 **What we know after this doc that we did not know before:** the growth of

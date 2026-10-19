@@ -1,9 +1,9 @@
 # E78.7 - The W/LOGT bridge
 
-**Run:** 2026-07-18.
+**Run:**
 **Scope:** IDENT, finite/fixed-L side.
 
-## 0. ERRATUM (2026-07-21)
+## 0. ERRATUM
 
 The claim in Sec. 3 that the boundary-pole term `-1/(z-d_b)` cancels across
 sections "because `d_b` depends only on `L`, not on the section depth `N`" is

@@ -1,7 +1,6 @@
 # E72.14 -- Abel reduction of centered cumulative Gram cancellation
 
-**Date:** 2026-07-08.
-**Role:** reduce the CCG target to a weighted Chebyshev-discrepancy estimate after subtracting the model
+**Purpose:** reduce the CCG target to a weighted Chebyshev-discrepancy estimate after subtracting the model
 main term.
 
 ## 0. Starting point

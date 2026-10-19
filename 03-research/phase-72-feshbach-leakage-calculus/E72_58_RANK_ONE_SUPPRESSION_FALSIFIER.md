@@ -1,7 +1,6 @@
 # E72.58 -- Falsifier for literal rank-one endpoint suppression
 
-**Date:** 2026-07-08.
-**Role:** correct E72.56. The endpoint rank-one term exists, but it is not suppressed by
+**Purpose:** correct E72.56. The endpoint rank-one term exists, but it is not suppressed by
 `<v,1><1,k>` being small.
 
 ## 0. Diagnostic

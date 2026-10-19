@@ -1,6 +1,6 @@
 # E90 — Cesàro Closure Gate for 2.3.F (Phase 62, step C0)
 
-**Date:** 2026-06-26 · dps=40 · λ ∈ {7,9,11,13,15,17,19,21}, both parities · falsador DH mandatory.
+dps=40 · λ ∈ {7,9,11,13,15,17,19,21}, both parities · falsador DH mandatory.
 
 ## Question
 

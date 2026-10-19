@@ -113,7 +113,7 @@ every noncritical quartet.  Define increments \(v_j\), \(j\ge0\), by
 Then
 
 \[
- V_n:=\sum_{j=0}^{n-1}v_j,qquad
+ V_n:=\sum_{j=0}^{n-1}v_j,\qquad
  (V_n)_C=\sqrt2(1-e^{in\theta_C}),\qquad
  (V_n)_Q=2(1-e^{in\theta_Q}).                                   \tag{9}
 \]
@@ -146,7 +146,7 @@ The radial term in (2) is not a remainder with a favorable sign.  Fix
 \(0<r<1\), put
 
 \[
- w=ir,qquad \rho={1\over1-ir},
+ w=ir,\qquad \rho={1\over1-ir},
  \tag{12}
 \]
 
@@ -155,7 +155,7 @@ the critical strip, obey both symmetries, and have
 \(a=-\log r>0\), \(\theta=\pi/2\).  If \(4\mid n\), then
 
 \[
- 4|1-e^{in\theta}|^2=0,qquad
+ 4|1-e^{in\theta}|^2=0,\qquad
  R_{Q,n}=8\{\cosh(na)-1\}>0.                                   \tag{13}
 \]
 
@@ -227,7 +227,7 @@ strong-margin symbol.  It is enough to assume (19) only on the span of the
 prefixes: since
 
 \[
- 1=P_1,qquad z^{n}=P_{n+1}-P_n,                                \tag{20}
+ 1=P_1,\qquad z^{n}=P_{n+1}-P_n,                                \tag{20}
 \]
 
 those prefixes span all polynomials.

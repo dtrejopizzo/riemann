@@ -1,0 +1,22 @@
+# R137.000 — Blueprint, phase 137: the coupling of the canonical class with the Frobenius lattice
+
+Basis: `03-research/phase-136-row-d-map/PHASE_136_MAP_SYNTHESIS_AND_PLAN.md` (§2 meta-theorem, §4 squares S1–S4, §6 design). Conventions: Paper 46 §1 and Part II (§§11–16). Rules: phases 131–135 (no sign assumed; ξ admissible as data; labels; every theorem tested on `Ξ_a`, DH; numerics only as identity checks with `--fast`).
+
+## D.0 — Audit of `03-research/phase-65-signature-continuity/RH-PROOF.md` (MANDATORY, first)
+A document in the repository styles itself "a complete, RH-free chain modulo three standard estimates". Audit it against `D8.5b-i-SELF-ADJOINT-COMPLETION.md` (same phase), which refutes a strip-crossing Vitali/Montel extension for the parallel object `D_P^∘`. Decide: does the resolvent-family argument escape the refuted move, or is it the same fallacy? Deliver a verdict with quoted lines, and record it in NO-GO-LIST.md if refuted. Label the document's status in a header note.
+
+## D.11 (S1) — Growth of `h⁰_Z(mK)` on the full Frobenius lattice (Paper 46 item (23))
+Setting: `Λ_W = ⊕_{q prime power} Z·(Λ(q)q^{−1/2} τ_{log q}(ΠK))`, `H⁰_Z(E) = {λ ∈ Λ_W : E + λ ≥ 0}`, `h⁰_Z = log #`. Known: finite truncations give `O_Q(log m)` (Lemma 13.5a); Lemma 13.5b gives `Φ_E(σ) ≥ 0` on the real axis; Remark 13.6b: adjacent generators nearly parallel.
+Targets (theorem or refutation): (i) an upper bound `h⁰_Z(mK) ≤ f(m)` on the full lattice — try `f = O(log² m)`, `O(m)`, `o(m²)`; (ii) a lower bound exhibiting many feasible `λ` via near-cancelling combinations of neighbouring translates (integer Dirichlet polynomials small on the relevant range); (iii) the exact scale: is `h⁰_Z(mK)` polynomial in `log m`, in `m`, or quadratic? Tools: Mellin positivity on `R` (13.5b), the structure `Φ_{mK+λ}(s) = ξ(s)[m + s(1−s)D_λ(s)]` with `D_λ` an integer-weighted Dirichlet polynomial, Beurling–Malliavin/Nyman–Beurling-type approximation, lattice-point counting in the convex set `C_m = mC_1`. Falsifier: repeat for `Ξ_a` weights `Λ(n)(n^a+n^{−a})n^{−1/2}`; the same growth there says the growth carries no sign.
+
+## D.12 (S2) — Semilocal Weil positivity with the polar block (GAP-135.B)
+Define for finite `S ⊇ {∞}` and real `F ∈ D^W`: `W_S(F) := Σ_{v∈S} ⟨F⋆F^∨, W_v⟩ − 2Φ_F(0)Φ_F(1)` (Paper 46 conventions; `W_∞ = ω_∞`). Determine: (i) for `S = {∞}`: the exact support range where `W_S ≥ 0` (Connes–Consani 2006.13771 Thm for `[2^{−1/2}, 2^{1/2}]`; phase 118 `T ≤ log 2`) — restate in the paper's normalization with the polar term explicit; (ii) for `S = {∞, 2}`, `{∞,2,3}`: whether `W_S ≥ 0` on primitive `F` supported in `[−T,T]` for some `T > log 2`, by pure argument (Doc 135's purity mechanism for the prime part + CC's `∆ → Σ` for the archimedean part); (iii) the first `S` and `T` where positivity is not provable by these means, and what exactly is unpaid (the cross term prime×archimedean). Falsifier: `Ξ_a` version must fail already at `S = {∞, 2}` for some `T`, by the impure roots — prove or refute. Sources to read from source: Connes–Consani 2006.13771 §§1–4; phase-45 Doc 135; Paper 44 Thm 8bis.4a.
+
+## D.13 (S3) — Dictionary with Connes–Consani's square of the scaling site
+Read 2006.13771 (text extracted at the scratchpad path given, or via pdftotext), and the references it names for the geometric approach ([12],[16]; also 2401.08401, 2602.15941 in `00-references/papers-nuevos/A`). Write, with exact citations: kernel of scaling ↔ divisor of the Frobenius correspondence (Paper 44 `Frob_n`); trace = intersection with the diagonal ↔ `T_∞`, `I_∞`; small square `∆` ↔ polar packet / `K`; big square `Σ` ↔ Frobenius lattice in the radical; trace-remainder `δ(ρ)` (their (8)) ↔ Tate block `Σ(T)` of P124.013 / Paper 46 §4; their prolate `∆ → Σ` move ↔ what it would be in `D^W`. State precisely what CC's mechanism pays and what the "delicate principal values" of the primes are in Paper 46's terms. Label everything RESTATEMENT/IMPORTED; no sign.
+
+## D.14 (S4) — only if D.11 gives super-logarithmic growth or D.12 gives positivity beyond `log 2`
+Definability test T1 of `H⁰_X` (LEAD_NOTE §1): fibre-wise Connes–Consani `H⁰` on `Spec Z̄ ×_S Spec Z̄` with isometric Frobenius transport. Not before rounds 1–4 close.
+
+## Deliverables
+`R137_001_ROUND1.md` (D.0 verdict, D.11–D.13 with labels, refutations of this blueprint), Paper 46 Part III (§§17–19) or a separate note if Part III would be premature, README, scripts only for identity checks (`--fast`). Then audit `R137_002`, repairs, confirmation, decision.

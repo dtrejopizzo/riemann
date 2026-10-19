@@ -1,6 +1,6 @@
 # E78.142 - `SOURCE-L2-BOUND` numerical gate: refuted on the audited ladder
 
-**Run:** 2026-07-21.
+**Run:**
 **Scope:** front B only, live object `SOURCE-L2-BOUND(L,eta)` from E78.136.
 **Class:** AUTOPSIA theorem-grade.
 **What we know after this doc that we did not know before:** the required

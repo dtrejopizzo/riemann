@@ -1,6 +1,5 @@
 # E74.8 - Eigenline-specific Gamma-prime cancellation
 
-Date: 2026-07-16.
 
 ## Purpose
 

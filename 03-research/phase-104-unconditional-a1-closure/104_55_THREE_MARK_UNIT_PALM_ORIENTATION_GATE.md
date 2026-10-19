@@ -1,17 +1,17 @@
-# 104_55 — Palm unitario de tres marcas y gate de orientación cúbica
+# 104_55 — Three-mark unitary Palm and cubic orientation gate
 
-**Objetivo.** Atacar, antes de tomar el logaritmo, el margen
+**Goal.** Attack, before taking the logarithm, the margin
 
 \[
  B_n\le\kappa A_n,\qquad
  \kappa={1501\over2002},\qquad n\ge150,                  \tag{1}
 \]
 
-mediante tres marcas del selector exacto
-\(\Lambda(p^k)=\log p\). Se conservan todos los primos y potencias, el
-comparador polar y el bloque Gamma arquimediano exacto \(A_n\).
+using three marks of the exact selector
+\(\Lambda(p^k)=\log p\). All primes and powers, the polar comparator and
+the exact archimedean Gamma block \(A_n\) are preserved.
 
-El Palm de tercer orden existe y retiene tuplas de torres distintas:
+The third-order Palm exists and retains tuples of distinct towers:
 
 \[
  m_3(s)\,\mathbb E_s^{[3]}
@@ -19,92 +19,92 @@ El Palm de tercer orden existe y retiene tuplas de torres distintas:
  =\mathbb E_s\{J_f(N)J_g(N)J_h(N)\}.                     \tag{2}
 \]
 
-Sin embargo, ninguna de las tres orientaciones canónicas aporta (1):
+However, none of the three canonical orientations yield (1):
 
-1. el tercer momento completado contiene una asimetría central sin signo;
-2. el determinante alternante de tres marcas tiene esperanza cero, mientras
-   su cuadrado es PSD para cualquier selector;
-3. una polarización cúbica canónica que elimina exactamente la asimetría,
+1. the completed third moment contains a central asymmetry with no sign;
+2. the alternating determinant of three marks has zero expectation, while
+   its square is PSD for any selector;
+3. a canonical cubic polarization that exactly removes the asymmetry,
 
    \[
    \mathbb E[(Z^{(1)}-Z^{(2)})^2(Z^{(3)}-c)]
    =2\mathrm{Var}(D_f)\{M_s(f)-c\},                 \tag{3}
    \]
 
-   recupera la orientación correcta, pero su signo es **equivalente** al
-   signo del margen buscado.
+   recovers the correct orientation, but its sign is **equivalent** to the
+   sign of the margin being sought.
 
-La uniformidad dentro de una torre sí produce una identidad que el sistema
-desplazado pierde: todas las potencias impares de
-\(K-(a+1)/2\) promedian cero para \(K\) uniforme en
-\(\{1,\ldots,a\}\). Pero después de mezclar torres, incluso el tercer
-momento central del selector unitario real tiene ambos signos: es negativo
-para \(N=6\) y positivo para \(N=18\). La tercera diferencia de Laguerre
-también tiene ambos signos en cada grado \(n\ge5\).
+The uniformity within a tower does produce an identity that the shifted
+system loses: all odd powers of
+\(K-(a+1)/2\) average to zero for \(K\) uniform on
+\(\{1,\ldots,a\}\). But after mixing towers, even the third central moment
+of the real unitary selector has both signs: it is negative
+for \(N=6\) and positive for \(N=18\). The third Laguerre difference also
+has both signs at every degree \(n\ge5\).
 
-El falsificador \(Z_c(s)=\zeta(s+c)\zeta(s-c)\) conserva (2), la identidad
-algebraica (3) y toda positividad determinantal. Su selector local ya viola
-la reflexión unitaria racionalmente en \(p=5,5^c=2,a=2\), pero esa
-distinción no produce una cota orientada en ninguna de las formas globales
-aquí auditadas.
+The falsifier \(Z_c(s)=\zeta(s+c)\zeta(s-c)\) preserves (2), the algebraic
+identity (3) and all determinantal positivity. Its local selector already
+violates the unitary reflection rationally at \(p=5,5^c=2,a=2\), but that
+distinction does not produce an oriented bound in any of the global forms
+audited here.
 
-Por tanto queda descartado el mecanismo estrecho
+Therefore the narrow mechanism
 
 ```text
-Palm unitario de tres marcas
-+ tercer momento / determinante 3x3 / tercera diferencia
-+ positividad canónica
+three-mark unitary Palm
++ third moment / 3x3 determinant / third difference
++ canonical positivity
     => B_n <= (1501/2002) A_n.
 ```
 
-No se descarta una desigualdad no lineal no canónica que correlacione la
-reflexión local unitaria con el entero total y el test Laguerre. Este
-documento no prueba (1), A1 ni RH.
+is ruled out. A non-canonical nonlinear inequality that correlates the
+local unitary reflection with the total integer and the Laguerre test is
+not ruled out. This document does not prove (1), A1 or RH.
 
-## 0. Relación con los gates anteriores
+## 0. Relation to the earlier gates
 
-`104_49` construye una marca uniforme dentro de cada exponente primo.
-`104_50` eleva a dos marcas y demuestra que el cuadrado completado pierde
-orientación. `104_52`--`104_53` prueban que los cumulantes aditivos eliminan
-las interacciones entre torres en todo orden. Aquí no se vuelve a contar ese
-teorema: se mantiene el **momento desconectado de orden tres antes del
-logaritmo**, se calculan sus polarizaciones orientadas y se somete la
-uniformidad local a un falsificador desplazado.
+`104_49` constructs a uniform mark within each prime exponent.
+`104_50` lifts to two marks and shows that the completed square loses
+orientation. `104_52`--`104_53` prove that additive cumulants eliminate
+interactions between towers at every order. That theorem is not counted
+again here: the **disconnected third-order moment before the logarithm**
+is kept, its oriented polarizations are computed, and the local uniformity
+is subjected to a shifted falsifier.
 
-## 1. Palm exacto de tres marcas
+## 1. Exact three-mark Palm
 
-Fijemos \(s=1+\varepsilon>1\),
+Fix \(s=1+\varepsilon>1\),
 
 \[
  \mathbb P_s(N=m)={m^{-s}\over\zeta(s)},\qquad
  X=\log N,\qquad m_r(s)=\mathbb E_sX^r.                 \tag{4}
 \]
 
-Para un test admisible, sea
+For an admissible test, let
 
 \[
  J_f(N)=\sum_{d\mid N}\Lambda(d)f(\log d).               \tag{5}
 \]
 
-Sesgue la ley (4) por \(X^3\):
+Size-bias the law (4) by \(X^3\):
 
 \[
  \mathbb P_s^{[3]}(N^{[3]}=m)
  ={(\log m)^3m^{-s}\over\zeta(s)m_3(s)}.                 \tag{6}
 \]
 
-Condicionado a \(N^{[3]}=m>1\), elija \(Z_1,Z_2,Z_3\)
-independientes con
+Conditioned on \(N^{[3]}=m>1\), choose \(Z_1,Z_2,Z_3\)
+independent with
 
 \[
  \mathbb P(Z_i=\log d\mid m)
  ={\Lambda(d)\over\log m}\mathbf1_{d\mid m}.            \tag{7}
 \]
 
-En \(m=1\) se usa un cementerio; el factor \((\log m)^3\) lo anula.
-Como \(\sum_{d\mid m}\Lambda(d)=\log m\), (7) es una probabilidad. Al
-cancelar los tres denominadores en la esperanza condicionada se obtiene
-(2). Equivalentemente,
+At \(m=1\) a cemetery state is used; the factor \((\log m)^3\) kills it.
+Since \(\sum_{d\mid m}\Lambda(d)=\log m\), (7) is a probability. Canceling
+the three denominators in the conditional expectation yields
+(2). Equivalently,
 
 \[
  \boxed{
@@ -114,26 +114,26 @@ cancelar los tres denominadores en la esperanza condicionada se obtiene
  f(\log d)g(\log e)h(\log r).}                            \tag{8}
 \]
 
-La fórmula (8) contiene tres torres distintas cuando \(d,e,r\) son
-coprimos. Solo desaparecen al formar el cumulante conectado, como explica
-`104_53`; aquí todavía no se ha tomado el logaritmo.
+Formula (8) contains three distinct towers when \(d,e,r\) are
+coprime. They only vanish once the connected cumulant is formed, as
+`104_53` explains; here the logarithm has not yet been taken.
 
-## 2. Comparador polar de tercer orden
+## 2. Third-order polar comparator
 
-Sea \(Y\sim\mathrm{Exp}(\varepsilon)\) y
+Let \(Y\sim\mathrm{Exp}(\varepsilon)\) and
 
 \[
  C_f(Y)=\int_0^Y f(x)\,dx.                                \tag{9}
 \]
 
-Como \(\mathbb EY^3=6/\varepsilon^3\), sesgar por \(Y^3\) produce
+Since \(\mathbb EY^3=6/\varepsilon^3\), size-biasing by \(Y^3\) produces
 
 \[
  Y^{[3]}\sim\Gamma(4,\varepsilon).                        \tag{10}
 \]
 
-Condicionado a \(Y^{[3]}=y\), elija \(U_1,U_2,U_3\)
-independientes y uniformes en \([0,y]\). Entonces
+Conditioned on \(Y^{[3]}=y\), choose \(U_1,U_2,U_3\)
+independent and uniform on \([0,y]\). Then
 
 \[
  \boxed{
@@ -142,21 +142,21 @@ independientes y uniformes en \([0,y]\). Entonces
  =\mathbb E\{C_f(Y)C_g(Y)C_h(Y)\}.}                      \tag{11}
 \]
 
-El factor \(6\) es obligatorio. Por ejemplo, para
-\(f(x)=x^{a-1},g(x)=x^{b-1},h(x)=x^{c-1}\), ambos miembros de (11) son
+The factor \(6\) is mandatory. For example, for
+\(f(x)=x^{a-1},g(x)=x^{b-1},h(x)=x^{c-1}\), both sides of (11) are
 
 \[
  {(a+b+c)!\over abc\,\varepsilon^{a+b+c}}.               \tag{12}
 \]
 
-Éste es el Gamma probabilístico del size-bias polar. El factor Gamma
-arquimediano de \(\xi\) no se sustituye por (10): permanece exactamente en
-\(A_n=n[z^n]\log G((1-z)^{-1})\), con
-\(G(s)=\tfrac12s\pi^{-s/2}\Gamma(s/2)\), dentro del presupuesto de (1).
+This is the probabilistic Gamma of the polar size-bias. The archimedean
+Gamma factor of \(\xi\) is not replaced by (10): it remains exactly in
+\(A_n=n[z^n]\log G((1-z)^{-1})\), with
+\(G(s)=\tfrac12s\pi^{-s/2}\Gamma(s/2)\), inside the budget of (1).
 
-## 3. Momento cúbico del defecto completado
+## 3. Cubic moment of the completed defect
 
-Como en `104_50`, defina
+As in `104_50`, define
 
 \[
  U_f(X)=\int_0^X f(x)\,dx,\qquad
@@ -168,7 +168,7 @@ Como en `104_50`, defina
  Z_f=D_f+T_s(f),                                          \tag{14}
 \]
 
-y
+and
 
 \[
  M_s(f)=\mathbb E_sZ_f
@@ -176,7 +176,7 @@ y
   -\int_0^\infty e^{-\varepsilon x}f(x)\,dx.             \tag{15}
 \]
 
-Ponga \(\widetilde D_f=D_f-\mathbb E_sD_f\). Para tres tests,
+Set \(\widetilde D_f=D_f-\mathbb E_sD_f\). For three tests,
 
 \[
 \boxed{
@@ -190,15 +190,15 @@ Ponga \(\widetilde D_f=D_f-\mathbb E_sD_f\). Para tres tests,
 \end{aligned}}                                             \tag{16}
 \]
 
-Para \(f=g=h\),
+For \(f=g=h\),
 
 \[
  \mathbb E_sZ_f^3
  =\mu_{3,s}(D_f)+3M_s(f)\mathrm{Var}_s(D_f)+M_s(f)^3. \tag{17}
 \]
 
-El primer término de (17) no tiene signo. Desplazar por una constante
-\(c\) solo reemplaza \(M_s(f)\) por \(M_s(f)-c\):
+The first term of (17) has no sign. Shifting by a constant
+\(c\) only replaces \(M_s(f)\) by \(M_s(f)-c\):
 
 \[
  \boxed{
@@ -207,13 +207,13 @@ El primer término de (17) no tiene signo. Desplazar por una constante
    +\{M_s(f)-c\}^3.}                                     \tag{18}
 \]
 
-Así el tercer momento bruto no orienta el margen mientras la asimetría
-central permanezca sin control.
+Thus the raw third moment does not orient the margin while the central
+asymmetry remains uncontrolled.
 
-## 4. La polarización orientada es exactamente el margen
+## 4. The oriented polarization is exactly the margin
 
-Sean \(Z_f^{(1)},Z_f^{(2)},Z_f^{(3)}\) copias independientes de \(Z_f\).
-La identidad de U-estadística
+Let \(Z_f^{(1)},Z_f^{(2)},Z_f^{(3)}\) be independent copies of \(Z_f\).
+The U-statistic identity
 
 \[
  \boxed{
@@ -222,14 +222,14 @@ La identidad de U-estadística
  =2\mathrm{Var}_s(D_f)\{M_s(f)-c\}}                \tag{19}
 \]
 
-elimina exactamente \(\mu_3(D_f)\) y conserva la orientación. Pero no la
-determina: la orientación del miembro izquierdo es la de la media que se
-quiere acotar.
+exactly removes \(\mu_3(D_f)\) and preserves the orientation. But it does
+not determine it: the orientation of the left-hand side is that of the
+mean being bounded.
 
-Esto no es un accidente de la elección cuadrática. Sean
-\(Z^{(1)},\ldots,Z^{(k+1)}\) copias independientes y sea
-\(H=H(Z^{(1)},\ldots,Z^{(k)})\ge0\) integrable, sin dependencia de la última
-copia. Entonces
+This is not an accident of the quadratic choice. Let
+\(Z^{(1)},\ldots,Z^{(k+1)}\) be independent copies and let
+\(H=H(Z^{(1)},\ldots,Z^{(k)})\ge0\) be integrable, with no dependence on
+the last copy. Then
 
 \[
  \boxed{
@@ -237,25 +237,25 @@ copia. Entonces
  =\mathbb EH\,\{\mathbb EZ-c\}.}                         \tag{19a}
 \]
 
-Si \(\mathbb EH>0\), toda orientación obtenida de esta manera es exactamente
-equivalente al signo de la media. El corolario no cubre pesos que dependan
-también de la copia orientada \(Z^{(k+1)}\); una correlación de ese tipo
-permanece fuera de este no-go.
+If \(\mathbb EH>0\), every orientation obtained this way is exactly
+equivalent to the sign of the mean. The corollary does not cover weights
+that also depend on the oriented copy \(Z^{(k+1)}\); a correlation of that
+kind remains outside this no-go.
 
-Para el test de A1,
+For the A1 test,
 
 \[
  f_{n,s}(x)=L_{n-1}^{(1)}(sx),\qquad
  sM_s(f_{n,s})=\mathcal B_{n,s}\longrightarrow B_n.      \tag{20}
 \]
 
-Tome el bloque Gamma exacto
+Take the exact Gamma block
 
 \[
  c_{n,s}={\kappa A_n\over s}.                             \tag{21}
 \]
 
-Entonces
+Then
 
 \[
  \boxed{
@@ -264,20 +264,21 @@ Entonces
    \{\mathcal B_{n,s}-\kappa A_n\}.}                     \tag{22}
 \]
 
-Para \(n\ge2\), la varianza de (22) es estrictamente positiva. En efecto,
-\(D_{f_{n,s}}(1)=0\). Si también fuera cero en todo primo \(p\), el
-polinomio
+For \(n\ge2\), the variance in (22) is strictly positive. Indeed,
+\(D_{f_{n,s}}(1)=0\). If it also vanished at every prime \(p\), the
+polynomial
 
 \[
  H(x)=x f_{n,s}(x)-\int_0^x f_{n,s}(u)\,du                \tag{23}
 \]
 
-se anularía en los infinitos puntos \(\log p\), luego sería idénticamente
-cero. Pero \(H'(x)=xf'_{n,s}(x)\), lo que forzaría a
-\(f_{n,s}\) a ser constante, contradicción para \(n\ge2\). La ley zeta da
-masa positiva a \(1\) y a cada primo, así que la varianza es positiva.
+would vanish at the infinitely many points \(\log p\), hence would be
+identically zero. But \(H'(x)=xf'_{n,s}(x)\), which would force
+\(f_{n,s}\) to be constant, a contradiction for \(n\ge2\). The zeta law
+gives positive mass to \(1\) and to each prime, so the variance is
+positive.
 
-Por tanto
+Therefore
 
 \[
  \boxed{
@@ -286,13 +287,14 @@ Por tanto
  \mathcal B_{n,s}\le\kappa A_n.}                        \tag{24}
 \]
 
-La forma cúbica orientada existe, pero (24) demuestra que no es un lema
-intermedio: es el objetivo mismo multiplicado por una cantidad positiva.
+The oriented cubic form exists, but (24) shows that it is not an
+intermediate lemma: it is the goal itself multiplied by a positive
+quantity.
 
-## 5. Determinante de tres marcas
+## 5. Three-mark determinant
 
-Condicionado a cualquier entero total, sean \(Z_1,Z_2,Z_3\) marcas iid y
-sean \(g_1,g_2,g_3\) tests. Por independencia de las columnas,
+Conditioned on any total integer, let \(Z_1,Z_2,Z_3\) be iid marks and
+let \(g_1,g_2,g_3\) be tests. By independence of the columns,
 
 \[
  \boxed{
@@ -300,26 +302,26 @@ sean \(g_1,g_2,g_3\) tests. Por independencia de las columnas,
  =\det[\mathbb E g_i(Z_j)]_{i,j=1}^3=0,}                  \tag{25}
 \]
 
-porque las tres columnas de la matriz de medias son iguales. Si se cuadra,
+because the three columns of the mean matrix are equal. If squared,
 
 \[
  \mathbb E\det[g_i(Z_j)]^2\ge0,                           \tag{26}
 \]
 
-pero (26) vale para cualquier distribución de marcas, incluida la
-desplazada. El determinante sin cuadrar pierde toda orientación por
-intercambiabilidad; el cuadrado pierde el signo por PSD.
+but (26) holds for any distribution of marks, including the shifted one.
+The determinant without squaring loses all orientation by
+exchangeability; the square loses the sign through PSD.
 
-## 6. La uniformidad local distingue al desplazado, pero no orienta
+## 6. Local uniformity distinguishes the shifted system, but does not orient
 
-Condicionado a haber elegido la torre \(p\) con exponente total \(a\), el
-selector de zeta satisface
+Conditioned on having chosen the tower \(p\) with total exponent \(a\),
+the zeta selector satisfies
 
 \[
  K\mid(p,a)\sim\mathrm{Unif}\,\{1,\ldots,a\}.         \tag{27}
 \]
 
-Por reflexión,
+By reflection,
 
 \[
  \boxed{
@@ -327,7 +329,7 @@ Por reflexión,
        \middle|p,a\right]=0\qquad(j\ge0).}                \tag{28}
 \]
 
-Esta identidad es específica: para el selector desplazado de `104_49`, con
+This identity is specific: for the shifted selector of `104_49`, with
 \(p=5,5^c=2,a=2\),
 
 \[
@@ -335,21 +337,22 @@ Esta identidad es específica: para el selector desplazado de `104_49`, con
  \mathbb P(K=2)={17\over42},                              \tag{29}
 \]
 
-y por tanto
+and therefore
 
 \[
  \mathbb E(K-3/2)^3=-{1\over42},\qquad
  \mathbb E(K-\mathbb EK)^3={425\over9261}>0.             \tag{30}
 \]
 
-La primera cantidad de (30) está centrada en el punto medio geométrico
-\(3/2\), como exige la reflexión (28); la segunda está centrada en la media
-real del selector y es su tercer momento central. No se identifican ambas.
+The first quantity in (30) is centered at the geometric midpoint
+\(3/2\), as required by the reflection (28); the second is centered at
+the real mean of the selector and is its third central moment. The two
+are not identified.
 
-Sin embargo, al mezclar torres reales, el selector unitario tampoco posee
-un tercer signo global. Para \(N=6\), escriba
-\(x=\log2<y=\log3\). Sus dos átomos tienen probabilidades
-\(x/(x+y),y/(x+y)\), y
+However, when mixing real towers, the unitary selector likewise has no
+global third sign. For \(N=6\), write
+\(x=\log2<y=\log3\). Its two atoms have probabilities
+\(x/(x+y),y/(x+y)\), and
 
 \[
  \boxed{
@@ -357,8 +360,8 @@ un tercer signo global. Para \(N=6\), escriba
  =-{xy(y-x)^4\over(x+y)^3}<0.}                            \tag{31}
 \]
 
-Para \(N=18=2\cdot3^2\), los átomos son \(x,y,2y\), con pesos
-\(x/L,y/L,y/L\), \(L=x+2y\). Poniendo \(r=y/x\),
+For \(N=18=2\cdot3^2\), the atoms are \(x,y,2y\), with weights
+\(x/L,y/L,y/L\), \(L=x+2y\). Setting \(r=y/x\),
 
 \[
  \mathbb E[(Z-\mathbb EZ)^3\mid N=18]
@@ -366,27 +369,27 @@ Para \(N=18=2\cdot3^2\), los átomos son \(x,y,2y\), con pesos
  \{-2+13r-33r^2+33r^3-9r^4\}.                            \tag{32}
 \]
 
-Las desigualdades enteras
+The integer inequalities
 
 \[
  2^3<3^2,\qquad 3^5<2^8
 \]
 
-dan \(3/2<r<8/5\). Si \(r=3/2+t\), \(0<t<1/10\), el polinomio entre
-llaves en (32) es
+give \(3/2<r<8/5\). If \(r=3/2+t\), \(0<t<1/10\), the polynomial in
+braces in (32) is
 
 \[
  {145\over16}+{61\over4}t-6t^2-21t^3-9t^4>0.             \tag{33}
 \]
 
-En efecto, aun omitiendo el término lineal positivo, su lado derecho es
-mayor que
-\(145/16-6/100-21/1000-9/10000>0\). Por (31)--(33), la tercera
-asimetría condicionada tiene ambos signos dentro de la aritmética real.
+Indeed, even omitting the positive linear term, its right-hand side is
+greater than
+\(145/16-6/100-21/1000-9/10000>0\). By (31)--(33), the third
+conditional asymmetry has both signs within the real arithmetic.
 
-## 7. Tercera diferencia de la fase Laguerre
+## 7. Third difference of the Laguerre phase
 
-Para incrementos positivos \(u,v,w\), defina
+For positive increments \(u,v,w\), define
 
 \[
  \Delta_{u,v,w}^{(3)}P_n(t)
@@ -394,13 +397,13 @@ Para incrementos positivos \(u,v,w\), defina
  P_n=L_{n-1}^{(1)}.                                      \tag{34}
 \]
 
-Como
+Since
 
 \[
  P_n'''(x)=-L_{n-4}^{(4)}(x),
 \]
 
-se tiene
+we have
 
 \[
  \boxed{
@@ -409,69 +412,72 @@ se tiene
  L_{n-4}^{(4)}(t+a+b+c)\,dc\,db\,da.}                   \tag{35}
 \]
 
-Para \(n\ge5\), \(L_{n-4}^{(4)}\) tiene \(n-4\) ceros positivos simples y
-alterna signo. Tomando un cubo suficientemente pequeño dentro de intervalos
-sucesivos, (35) adopta ambos signos. Esto incluye todo \(n\ge150\). Por
-consiguiente, la tercera diferencia no convierte la reflexión (28) en una
-cota término a término para el vector Laguerre.
+For \(n\ge5\), \(L_{n-4}^{(4)}\) has \(n-4\) simple positive zeros and
+alternates sign. Taking a sufficiently small cube within successive
+intervals, (35) takes both signs. This includes every \(n\ge150\).
+Consequently, the third difference does not turn the reflection (28) into
+a term-by-term bound for the Laguerre vector.
 
-## 8. Falsificador desplazado y alcance
+## 8. Shifted falsifier and scope
 
-Para
+For
 
 \[
  Z_c(s)=\zeta(s+c)\zeta(s-c),\qquad0<c<1/2,               \tag{36}
 \]
 
-los coeficientes son positivos y la renovación
+the coefficients are positive and the renewal
 
 \[
  (\log n)a_c(n)=\sum_{d\mid n}\omega_c(d)a_c(n/d),\qquad
  \omega_c(d)=2\Lambda(d)\cosh(c\log d)>0                \tag{37}
 \]
 
-produce un Palm de tres marcas idéntico a (2), con su selector condicionado
-correspondiente. Las identidades (16), (19), (25) y la positividad (26) son
-puramente probabilísticas y siguen siendo válidas. Pero la completada
-\(\xi(s+c)\xi(s-c)\) posee ceros fuera de \(\Re s=1/2\) y coeficientes de Li
-exponencialmente negativos en una subsucesión (`104_48`).
+produces a three-mark Palm identical to (2), with its corresponding
+conditioned selector. The identities (16), (19), (25) and the positivity
+(26) are purely probabilistic and remain valid. But the completed
+\(\xi(s+c)\xi(s-c)\) has zeros off \(\Re s=1/2\) and Li coefficients that
+are exponentially negative along a subsequence (`104_48`).
 
-La reflexión local (28) sí rechaza el sistema desplazado por (29)--(30).
-Lo que falla es promover esa reflexión a una desigualdad global: (31)--(33)
-muestran que ni siquiera la tercera asimetría del selector unitario real
-tiene signo, y (35) muestra que el test Laguerre tampoco lo aporta.
+The local reflection (28) does reject the shifted system via (29)--(30).
+What fails is promoting that reflection to a global inequality:
+(31)--(33) show that not even the third asymmetry of the real unitary
+selector has a sign, and (35) shows that the Laguerre test does not
+supply one either.
 
-## 9. Veredicto
+## 9. Verdict
 
-Queda probado incondicionalmente:
+The following is proved unconditionally:
 
-1. el Palm unitario de tres marcas y el kernel `lcm` triple (2), (6)--(8);
-2. el comparador polar \(\Gamma(4,\varepsilon)\) con el factor exacto seis
-   (10)--(12);
-3. la descomposición cúbica completada (16)--(18);
-4. la forma orientada (19) y su equivalencia exacta con el margen
+1. the three-mark unitary Palm and the triple `lcm` kernel (2), (6)--(8);
+2. the polar comparator \(\Gamma(4,\varepsilon)\) with the exact factor
+   six (10)--(12);
+3. the completed cubic decomposition (16)--(18);
+4. the oriented form (19) and its exact equivalence with the margin
    (22)--(24);
-5. el colapso del determinante alternante y la genericidad de su cuadrado
-   (25)--(26);
-6. la reflexión unitaria y su falla desplazada racional (28)--(30);
-7. los dos signos aritméticos reales (31)--(33);
-8. los dos signos de la tercera diferencia Laguerre (35).
+5. the collapse of the alternating determinant and the genericity of its
+   square (25)--(26);
+6. the unitary reflection and its rational shifted failure (28)--(30);
+7. the two real arithmetic signs (31)--(33);
+8. the two signs of the third Laguerre difference (35).
 
-Queda descartado usar estas formas cúbicas canónicas como fuente autónoma de
-la cota (1). El sucesor tendría que correlacionar la reflexión local (28) con
-la factorización global de \(N\) de una manera que no se reduzca ni al tercer
-momento central ni a (19), y que conserve un signo después de promediar el
-Laguerre oscilatorio. No se ha construido tal desigualdad.
+Using these canonical cubic forms as an autonomous source of the bound
+(1) is ruled out. A successor would have to correlate the local
+reflection (28) with the global factorization of \(N\) in a way that
+reduces neither to the third central moment nor to (19), and that retains
+a sign after averaging the oscillatory Laguerre test. No such inequality
+has been constructed.
 
-## 10. Reproducción
+## 10. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 three_mark_unit_palm_orientation_check.py
 ```
 
-El checker usa solo enteros y `Fraction`. Verifica el Palm condicionado, el
-factor seis del Gamma polar, las identidades cúbicas, el U-estadístico
-orientado, el determinante alternante, el falsificador racional local, los
-dos signos de (31)--(33) y las terceras diferencias Laguerre en
-\(n=150,151,152\). No evalúa zeta, A1 ni RH.
+The checker uses only integers and `Fraction`. It verifies the
+conditioned Palm, the factor six of the polar Gamma, the cubic
+identities, the oriented U-statistic, the alternating determinant, the
+local rational falsifier, the two signs of (31)--(33), and the third
+Laguerre differences at
+\(n=150,151,152\). It does not evaluate zeta, A1 or RH.

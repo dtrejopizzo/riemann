@@ -1,6 +1,5 @@
 # E73.151 Results - Forced Row Spectral Profile
 
-Date: 2026-07-12.
 
 Script:
 

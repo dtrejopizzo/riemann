@@ -1,4 +1,4 @@
-"""amend.py -- R155_013 / amendments to R155_011 per the hostile audit R155_012.
+"""amend.py -- R155_013 / amendments to R155_011 per the audit R155_012.
 For each optimal weight:
   (a) TRUE negative-lobe count of what on [0,60] (insight.py:31 capped the list at 24);
   (b) honest TV budget ||nu_w||_TV with the CORRECT even-measure accounting, and log10 tau_env = (A_T+TV)/ln10 + log10(2pi);

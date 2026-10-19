@@ -1,6 +1,6 @@
 # E97 — polarized-isometry test (R1, first attempt): INCONCLUSIVE — wrong form + numerical instability
 
-**Date:** 2026-06-27 · float64 · ζ vs DH falsador. Uses the phase-60 `E3_ccm_real` Connes operator
+float64 · ζ vs DH falsador. Uses the phase-60 `E3_ccm_real` Connes operator
 `H_x` (validated there: eigenvalue 14.105 vs γ₁=14.135 at λ=11).
 
 ## What was tested

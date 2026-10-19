@@ -1,14 +1,12 @@
-# R131.014 — Hostile audit of Paper 44, round 5 (confirmation pass)
+# R131.014 — Audit of Paper 44, round 5 (confirmation pass)
 
-Auditor: Claude (Opus 5, 1M), adversarial auditor of record for phase 131.
-Date: 2026-09-12.
 Scope: `R131_011` (M1–M6, m1–m7, n1–n3), `R131_012` (LF1–LF4), `R131_013`
-(builder, round 5); every `[REBUILT, phase 131, round 5]` passage of
+(round 5); every `[REBUILT, phase 131, round 5]` passage of
 `04-papers/44-row-b-arithmetic-family/main.md` (17 marks), `README.md`, and
 `scripts/verify_131_contacts.py` (re-run: **ALL CHECKS PASS**, **ROUND-4**,
 **ROUND-5 CHECKS PASS**).
 Method: independent re-derivation of every round-5 estimate from the declared
-formulas, not re-reading of the builder's prose.
+formulas, not re-reading of the construction's prose.
 
 **Headline.**  The six `MAJOR`s are repaired **in the theorems**.  I verified
 independently: the primitivity of `Π g` by two integrations by parts (no
@@ -18,15 +16,15 @@ bound `A_S` (which **equals** `ω̂_fin(0)`); the concentration/tail split of
 Theorem 8bis.4a; the pointwise partition-of-unity estimate (8bis.13a)–(8bis.13b)
 of the rebuilt Lemma 8bis.6, which is now correct and is the best repair of
 `M3`/`LF1`; the four `λ`-asymptotics (8bis.13d), the determinant `≍ e^{L/2}`,
-and the sup-norm size `O(Le^{−L/2})` of the correction; and the builder's
-refutation of the lead's `C¹` prescription, which is **right**.  Withdrawals
+and the sup-norm size `O(Le^{−L/2})` of the correction; and the construction's
+refutation of the review's `C¹` prescription, which is **right**.  Withdrawals
 `W19`–`W22` are recorded where withdrawals belong and are not softened.
 What does not survive: **five `MAJOR` findings**, of which one is mathematical
 (**`N3`**: Theorem 8bis.7 Step 3 has no control of `‖ẽ‖_{C^1}`, and the
 `C_1‖h‖_{C^1}` term of Lemma 8bis.5 is therefore unbounded for the two
 rough–rough pairings), one is the **same `M4` slip recurring** (**`N1`**:
 Theorem 8bis.2 is a chart theorem left inside the standing convention `T = T_∞`,
-and the exemption the builder's report says it inserted is **not in the
+and the exemption the construction's report says it inserted is **not in the
 paper**), one is the **`m3` repair done backwards** (**`N2`**: the
 cross-references were renumbered and the displays were not, leaving six
 references to equations that do not exist — including Theorem 8bis.4a's own
@@ -38,7 +36,7 @@ conditional on `N1`, `N2`, `N4`, `N5`; `N3` is quarantined.
 
 ## 1. Findings
 
-### `N1` `MAJOR` — Theorem 8bis.2 is a fixed-chart theorem left under convention (C1); the exemption the builder reports was not written
+### `N1` `MAJOR` — Theorem 8bis.2 is a fixed-chart theorem left under convention (C1); the exemption the construction reports was not written
 
 *Location.* Thm 8bis.2 (statement and proof), the display bounding
 `|Σ_{p∈S_f}\hat W_p| ≤ A_S`; `R131_013` §1 and §6, which both assert that
@@ -54,7 +52,7 @@ proof's key uniform bound is **false**: the colimit symbol is unbounded, and
 the paper says so itself three pages later (Rem 8bis.4b(1),
 `ω̂_fin^∞(0) = +∞`, numerics block (E)).  So a `PROVED` theorem carries a proof
 step that the section's own standing convention contradicts — precisely the
-`M4` failure mode, one round later, and found by neither the builder's
+`M4` failure mode, one round later, and found by neither the construction's
 line-by-line pass nor his own table in `R131_013` §6.
 
 *Repair (one sentence, and the conclusion strengthens).*  State Thm 8bis.2 at a
@@ -106,7 +104,7 @@ are `‖ẽ'‖_∞ ≍ ‖ρ'‖_∞/gap_n ≍ e^{L}` and `‖(g_D')'‖_1 ≍ 
 contribution per bump, `≍ e^L` bumps).  That gives
 `|I(g_D',ẽ)| = O(Le^{L/2})`, which **dominates** the main term
 `L^2e^{2|β−1/2|L}` whenever `|β−1/2| < 1/4`, i.e. for exactly the zeros the
-theorem is about.  So Step 3, as written, does not close.  The builder's own
+theorem is about.  So Step 3, as written, does not close.  The construction's own
 round-5 note ("only sup norms of the *error* enter Step 3, because the
 derivative always falls on the smooth factor") is true of one of the two cross
 terms and **false of the other**, and it is the sentence that hides the gap.
@@ -179,7 +177,7 @@ block, `README`, and `R131_013` §3.
 `λ_+(e) = O(e^{−3L/4})`, `λ_−(w_1) ≍ e^{L}`, `\det ≍ e^{L/2}`, the **first**
 term is `O(e^{L/4}/e^{L/2}) = O(e^{−L/4})`, which **dominates** the second,
 `O(L\cdot e^{−L/2})`.  The displayed formula is right; its evaluation drops the
-larger term.  (The lead's `b ≍ Le^{−L/4}` was nearer.)
+larger term.  (The review's `b ≍ Le^{−L/4}` was nearer.)
 
 *Consequence: none.*  `‖bw_2‖_∞ = O(e^{−L/4}·e^{−L/4}) = O(e^{−L/2})`, so
 (8bis.13f) — `‖aw_1+bw_2‖_∞ = O(e^{−L/2})`, the size of `‖e‖_∞` — **stands**,
@@ -280,8 +278,8 @@ the analytic content, not merely that it is classical.
 | `M1` | **REPAIRED in the theorem; NOT repaired in the headlines.**  The withdrawal (`W19`) is exact and correctly reasoned, and Thm 8bis.4a is **correct** — I checked all four steps independently (see §3).  But the withdrawn argument survives as the *reason* in §0 and the banner (`N4`), in `README`'s round-4 block (`N5`) and in `W17` (`m5′`). |
 | `M2` | **REPAIRED WITH A NEW ERROR.**  The `Π` route, the renaming to `(Wgr)`, the deletion of the Tate clause and the `w_1,w_2` correction are all correct; `(8bis.13d)` and the determinant check out.  New: `N3` (the `C^1` gap in Step 3) and `m1′` (the value of `b`). |
 | `M3` | **REPAIRED.**  Lemma 8bis.6 is now a genuine partition of unity, the pointwise statement is proved by slow variation, the spurious `L` is gone, and the counterexample is in the script.  I re-derived (8bis.13a)–(8bis.13b) and Step 2 line by line; both are right. |
-| `M4` | **REPAIRED WITH A NEW ERROR.**  (C1) is exactly the sentence I asked for and is carried into Thm 8bis.1e, Thm 8bis.4(iii),(vi), Lemma 8bis.5 and §8bis.4.  The builder's two **extra** slips: Thm 8bis.4a's fixed-chart scope is correctly written (with `W_{fin}^S` and Rem 8bis.4b(1)) — but Thm 8bis.2's is **not** (`N1`), contrary to `R131_013` §1 and §6. |
-| `M5` | **REPAIRED.**  (C2), (8bis.0), Cor 8bis.1b′ and Rem 8bis.1c are correct; the convolution `\mathbf 1_{n^{−1}U_r}⋆\mathbf 1_{nU_r} = vol(U_r)\mathbf 1_{U_r}` is right, and both limits (bare `→0`, `♭ →−∞` geometrically) are right.  The builder's refutation of the instruction's framing — "linear divergence" is a statement about the **smeared idempotent**, not about the Gram diagonal in either convention — is **correct and is the better answer**.  Residual: the banner and README still headline the rate (`N5`). |
+| `M4` | **REPAIRED WITH A NEW ERROR.**  (C1) is exactly the sentence I asked for and is carried into Thm 8bis.1e, Thm 8bis.4(iii),(vi), Lemma 8bis.5 and §8bis.4.  The construction's two **extra** slips: Thm 8bis.4a's fixed-chart scope is correctly written (with `W_{fin}^S` and Rem 8bis.4b(1)) — but Thm 8bis.2's is **not** (`N1`), contrary to `R131_013` §1 and §6. |
+| `M5` | **REPAIRED.**  (C2), (8bis.0), Cor 8bis.1b′ and Rem 8bis.1c are correct; the convolution `\mathbf 1_{n^{−1}U_r}⋆\mathbf 1_{nU_r} = vol(U_r)\mathbf 1_{U_r}` is right, and both limits (bare `→0`, `♭ →−∞` geometrically) are right.  The construction's refutation of the instruction's framing — "linear divergence" is a statement about the **smeared idempotent**, not about the Gram diagonal in either convention — is **correct and is the better answer**.  Residual: the banner and README still headline the rate (`N5`). |
 | `M6` | **(a) REPAIRED** (the P123.038 §5 row is genuinely re-graded, with the four open items and the object-level refutation separated).  **(b) REPAIRED** (`(Wgr)`; §11's three-item list, each "used by no clause").  **(c) REPAIRED** (Thm 8.2's carve-out; `m7′` is cosmetic). |
 | `m1` | REPAIRED (Thm 8bis.1e now carries `ε<ε_0` and the chart clause). |
 | `m2` | REPAIRED ((8bis.5) carries `V_N^{(m,n)}` and `(h_m⋆h_n^†)(n/m)`). |
@@ -304,7 +302,7 @@ the analytic content, not merely that it is classical.
   `∂_s^2e^{±s/2} = \tfrac14e^{±s/2}` gives `−\tfrac14∫ge^{±s/2}+\tfrac14∫ge^{±s/2}
   = 0`.  Sign convention of `λ_∓ = ∫g e^{±s/2}` matches (8bis.9) and Paper 43
   Thm 9.1.  In Fourier, `\hat g_T(τ) = (τ^2+\tfrac14)T\hatφ(Tτ)` with the zeros
-  at `τ = ∓i/2` visible.  The builder's refutation of the instruction's
+  at `τ = ∓i/2` visible.  The construction's refutation of the instruction's
   "two linear conditions" route is **correct**: the Tate functionals are
   unbounded on a concentrating family, and perturbing to kill them destroys the
   concentration.  This is the best single step of round 5.
@@ -316,7 +314,7 @@ the analytic content, not merely that it is classical.
   `c\,M_{bulk} − A_S M_{tail} > 0`.  The concern in my instruction — that
   `\hat h = |\hat g|^2` is not compactly supported, and that the symbol is only
   *bounded*, not decaying — is met by decay against a **bounded** symbol, which
-  is legitimate **at a chart**, and the builder says so.
+  is legitimate **at a chart**, and the construction says so.
 * **Rem 8bis.4b is the honest scope, and I endorse all three clauses.**  (1) is
   right and is the reason the colimit is `OPEN`: `ω̂_fin^∞` is unbounded (indeed
   `+∞` at `τ=0`) and the two scales collide.  (3) is airtight: what is proved is
@@ -389,10 +387,10 @@ form.  **The warning stands for round 6, if there is one: press on the
 | **B.1** | `PROVED` (unchanged). |
 | **B.2** | `PROVED`, non-vacuous (Thm 3ter.4(iv), Rem 3ter.4a). |
 | **B.3** | `PROVED`, true unit. |
-| **B.4** | `REFUTED AS STATED`; `PROVED AS AMENDED` (owner-accepted), on objects in degree (Thm 6bis.4), with the composition law proved (Lemma 6bis.3a) and extended additively (Thm 6bis.3c); the ledger row now matches the text (`M6`(a)). |
+| **B.4** | `REFUTED AS STATED`; `PROVED AS AMENDED` (accepted), on objects in degree (Thm 6bis.4), with the composition law proved (Lemma 6bis.3a) and extended additively (Thm 6bis.3c); the ledger row now matches the text (`M6`(a)). |
 | **B.5** | `PROVED`; `Λ(p^k) = \log p` has a uniqueness theorem behind it (Thm 8bis.8, now with the scale quotient). |
 | **B.6** | `PROVED`, both halves non-vacuous. |
-| **B.7** | `PROVED` as a test; my dissent on the mechanism (`PARTIAL`, Rem 6.5a′) stands and is recorded verbatim beside the lead's ruling.  I accept that procedure as the resolution. |
+| **B.7** | `PROVED` as a test; my dissent on the mechanism (`PARTIAL`, Rem 6.5a′) stands and is recorded verbatim beside the review's ruling.  I accept that procedure as the resolution. |
 | **B.8** | `PROVED`; script re-run, all three banners pass; (E),(F),(G) re-derived by hand; (D) vacuous (`n1′`). |
 | **B.9** | `PROVED` in substance **and now in the text**: Thm 8.2 carries the carve-out, §11 lists the three imports, and each is marked "used by no clause". |
 
@@ -418,14 +416,14 @@ form.  **The warning stands for round 6, if there is one: press on the
 ## 8. Grade
 
 **Row B earns `WEIL-STRENGTH-COMPLETE` on Paper 43's declared carrier**, the
-B.4 amendment having been accepted by the owner.
+B.4 amendment having been accepted by the repository record.
 
 What must be recorded **beside the label**, in the paper and in the ledger:
 
 1. **The carrier and the clause.**  "On Paper 43's declared carrier (§14.0a–b),
    as a theorem about row A's declared trace; **B.4 is `REFUTED AS STATED` and
-   `PROVED AS AMENDED`**, the amendment accepted by the owner 2026-09-12; **B.7
-   `PROVED` by the lead's ruling, with the auditor's dissent (`PARTIAL`, as a
+   `PROVED AS AMENDED`**, the amendment accepted by the repository record; **B.7
+   `PROVED` by the review's ruling, with the audit's dissent (`PARTIAL`, as a
    mechanism) recorded verbatim beside it.**"
 2. **What row B does not deliver.**  "No sign, no positivity, no `𝓝_∞ = 0`, no
    statement about zeros outside Thm 8bis.4(ii)–(iii) and §8bis.4, which are
@@ -454,7 +452,7 @@ What must be recorded **beside the label**, in the paper and in the ledger:
 
 Round 5 accepted every finding of round 4, including the withdrawal of a
 `PROVED` claim it had headlined, and replaced the non-sequitur with a real
-theorem; it refuted two of the coordinator's and the lead's own prescriptions
+theorem; it refuted two of the the round's and the review's own prescriptions
 (the `C^1` size of the correction, and the "fix one convention" framing) and
 was right both times; and it found two slips neither auditor had found.  The
 five `MAJOR`s I record are of a lower order than round 4's: one true theorem

@@ -1,6 +1,6 @@
 # P123.048 — All finite zero strata and their strict source filtration
 
-Date: 2026-09-05. Status: PROVED for the stratum presentations and
+Status: PROVED for the stratum presentations and
 completed filtration below. No regularized-shadow spectral sequence or
 vanishing of its higher-stratum terms is asserted.
 

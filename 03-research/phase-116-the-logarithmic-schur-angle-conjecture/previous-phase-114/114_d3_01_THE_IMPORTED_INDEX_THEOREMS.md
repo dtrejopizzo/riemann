@@ -33,7 +33,7 @@ coordinate model (2.2)), 113_09 (`rad = (chi)`, `s(H,H) = 2`), 113_10 (degree,
 `(E^o)`, R7, R8), 113_12 (Thm 1.3 `s = tau(x * y^*)`, Thm 4.1 Hodge index
 `<=>` RH), 113_14 (the two analytic gaps), 113_15 (the four-row ledger, R16).
 External: Yuan–Zhang, *The arithmetic Hodge index theorem for adelic line
-bundles I*, arXiv:1304.3538v1 — read in this session at
+bundles I*, arXiv:1304.3538v1 — read in this phase at
 `00-references/papers-nuevos/D/arXiv-1304.3538v1`.
 
 Verifier: `114_d3_01_imported_index_theorems.py` — 43 checks, all pass, run
@@ -48,7 +48,7 @@ Row (d) of the ledger asks for an index theorem. Lens 3 is instructed to try to
 three things:
 
 1. states the two importable theorems **verbatim from a source read in this
-   session**, with the exact quantifiers (section 1);
+   phase**, with the exact quantifiers (section 1);
 2. settles the cheap decisive test the brief posed — *does the positive index
    of `s` grow with the size of the truncation?* — and corrects the misreading
    on which the worry rested (sections 2, 3);
@@ -592,7 +592,7 @@ Numbered continuing the ledger of 113_15, whose last entry is R23.
 ## 8. Verifier output
 
 Real output of `python3 114_d3_01_imported_index_theorems.py`, run in this
-session (43 checks; abbreviated — full listing reproduced by re-running):
+phase (43 checks; abbreviated — full listing reproduced by re-running):
 
 ```
 A. ruling arithmetic (113_09 Thm 4.1, 113_10 Thm 1.2)

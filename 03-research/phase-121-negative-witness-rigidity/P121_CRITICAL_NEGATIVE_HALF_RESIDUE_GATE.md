@@ -315,9 +315,8 @@ J. B. Conrey, *More than two fifths of the zeros of the Riemann zeta
 function are on the critical line*, J. reine angew. Math. **399** (1989),
 1--26, proves that more than `2/5` of all zeros are simple and on the
 critical line.  Hence, with the usual ordinate count, the required family
-has cardinality `gg R log R`.  The stronger 2026 result is not needed.  For
-context only, arXiv:2608.13637 is by Levent Alpöge and Ralph Furman, not by
-"Claude/Anthropic".  The older two-sided Hardy argument, which annihilates
+has cardinality `gg R log R`.  The stronger recent result is not needed.  For
+context only, arXiv:2608.13637 is by Levent Alpöge and Ralph Furman.  The older two-sided Hardy argument, which annihilates
 every distinct zero, may continue to use Wu.
 
 Consequently row (d) follows if every hypothetical first-contact state

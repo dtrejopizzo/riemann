@@ -6,7 +6,7 @@ The rooted cellular complex of 107_169 has the correct three-term
 cohomological shape
 
 \[
- H^0\cong\mathbb Z,qquad H^1\cong\mathbb Z^2,qquad
+ H^0\cong\mathbb Z,\qquad H^1\cong\mathbb Z^2,\qquad
  H^2\cong\mathbb Z.
 \]
 

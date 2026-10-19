@@ -1,6 +1,6 @@
 # E78.54 - The Euclidean increment lock is exactly a cone condition
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

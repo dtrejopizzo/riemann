@@ -1,13 +1,13 @@
 # PANEL_REPAIRS — phase 133 apparatus repairs
 
-Builder record for phase 133.  Every finding of PANEL_1, PANEL_2 and PANEL_3
-that does **not** require an owner decision is repaired in
+Repair record for phase 133.  Every finding of PANEL_1, PANEL_2 and PANEL_3
+that does **not** require a pending decision is repaired in
 `04-papers/43-row-a-torsion-theory/main.md`, `04-papers/44-row-b-arithmetic-family/main.md`,
 `04-papers/45-row-c-explicit-formula/main.md` (plus two phase-130/131 record files).
-Every edit is marked `[phase 133]`.  **No clause grading, no label, and no lead
+Every edit is marked `[phase 133]`.  **No clause grading, no label, and no
 decision block was changed**; A.8 and B.7 are untouched except for the one
 sentence the panel asked for, which records the panel's opinion and says the
-owner's decision is pending.  Date: 2026-09-12.
+decision is pending.
 
 Each item below is a command and its output.
 
@@ -44,7 +44,7 @@ $ grep -n 'D_A\^0' 04-papers/4[345]*/main.md | grep -v 'phase 133' | grep -v 'of
 04-papers/44-row-b-arithmetic-family/main.md:2296:> `ω_{fin}` representing `T` on the radial sector `D_A^{rad} ∩ D_A^0`**
 ```
 
-The only surviving `D_A^0` outside Paper 43 §§9–14 is the **owner-accepted**
+The only surviving `D_A^0` outside Paper 43 §§9–14 is the **accepted**
 B.4 amendment text of Paper 44 (lines 415 and 2296), reproduced verbatim and
 therefore not edited; a `[phase 133]` note immediately after it says which set
 is meant.
@@ -77,7 +77,7 @@ only.]**  The one place where `c` matters
 $ sed -n '2306,2313p' 04-papers/44-row-b-arithmetic-family/main.md
 > category (P123.022).
 
-**[phase 133: the owner-accepted text above is reproduced verbatim and is not
+**[phase 133: the accepted text above is reproduced verbatim and is not
 edited.  Its `D_A^0` is the **off-identity** set of Paper 43 §8, renamed
 `D_A^{off}` in phase 133; it is not Paper 43 Definition 9.10's primitive
 sector.  The same applies to the copy of this text in the §10 clause table
@@ -156,8 +156,7 @@ because `φ̂_0` is Schwartz and the weight grows only logarithmically.  So the
 Labelled `IMPORTED (transfer)`, id `Tr`, added to Paper 43 §12 with the clauses
 it serves (A.2 via Prop. 3.2(iv), A.4 via Thm 5.3), the hypotheses that **are**
 checked for `U` and the one that is **not** (freeness of the lattice action on
-the open stratum).  Clause gradings in §14.0b are **not** touched — that is the
-owner's; the §12 row and Remark 3.6 record `PROVED modulo (Tr)`.
+the open stratum).  Clause gradings in §14.0b are **not** touched — that decision stands as recorded; the §12 row and Remark 3.6 record `PROVED modulo (Tr)`.
 
 ```console
 $ grep -n 'Tr | ' 04-papers/43-row-a-torsion-theory/main.md | cut -c1-400
@@ -187,7 +186,7 @@ $ grep -n 'phase 133: four' -A5 04-papers/43-row-a-torsion-theory/main.md
 4655-added by PANEL_1 finding A3.  `Tr` is the only import that a clause graded
 4656-`PROVED` depends on: A.2 and A.4 are `PROVED modulo (Tr)`.  The "three" below
 4657-counts the load-bearing imports `W`, `C`, `RR` as before; it is not amended,
-4658-because the grading of A.2 and A.4 is the owner's.]**  **[REBUILT, phase
+4658-because the grading of A.2 and A.4 was decided separately.]**  **[REBUILT, phase
 ```
 
 ## PANEL_1 B1 / B2 — Paper 44 §11's "In clauses B.1–B.9: none" is false for the amended B.4
@@ -383,7 +382,7 @@ $ sed -n '2979,2992p' 04-papers/44-row-b-arithmetic-family/main.md
 
 ```console
 $ sed -n '5475p' 04-papers/44-row-b-arithmetic-family/main.md | cut -c1-420
-2026-09-12).**  B.7: `PROVED` — the mechanism producing the factor that enters
+).** B.7: `PROVED` — the mechanism producing the factor that enters
 ```
 
 ## PANEL_2 MAJOR-2 — the phase-132 explicit-formula relabel propagated to the three places it missed
@@ -503,13 +502,13 @@ $ grep -n 'Paper 43 (14.2)\|Paper 43 \*\*(9.12b)\*\*\|Paper 43 (9.12b)' 04-paper
 
 Occurrences found and corrected: Paper 44 §10.4 item 4a; Paper 45 §14.5 table
 row (e); `03-research/phase-131-row-b-closure/README.md`;
-`03-research/phase-131-row-b-closure/R131_019_LEAD_FINAL_AUDIT_AND_LABEL.md` §5
-(a lead decision of record — the decision is **not** altered, a bracketed
+`03-research/phase-131-row-b-closure/R131_019_FINAL_AUDIT_AND_LABEL.md` §5
+(a decision of record — the decision is **not** altered, a bracketed
 reading note is added).  `R131_001` line 140 and `R131_014` line 306 refer to
 **Paper 43** Thm 9.1, which does exist, and are left alone.
 
 ```console
-$ grep -rn 'Paper 44 Thm\. \?9\.1\b\|Paper 44 Theorem 9\.1\b' 04-papers 03-research/phase-13[012]* | grep -v PANEL_
+$ grep -rn 'Paper 44 Thm\. \?9\.1\b\|Paper 44 Theorem 9\.1\b' 04-papers 03-research/phase-13-omega-class-multiplicative-chaos[012]* | grep -v PANEL_
 (no output — zero remaining occurrences)
 ```
 
@@ -517,7 +516,7 @@ $ grep -rn 'Paper 44 Thm\. \?9\.1\b\|Paper 44 Theorem 9\.1\b' 04-papers 03-resea
 $ grep -rn 'PANEL_2 MINOR-4' 04-papers 03-research/phase-131-row-b-closure | cut -c1-180
 04-papers/45-row-c-explicit-formula/main.md:2345:| (e) | Paper 44 §9 (new §9.1a) and §10.4 (new item 4a) | "row C received **§9.1** (Paper 44 has no Thm 9.1 — **[phase 133, P
 04-papers/44-row-b-arithmetic-family/main.md:5617:   (C1) as its standing convention **[phase 133, PANEL_2 MINOR-4: this read
-03-research/phase-131-row-b-closure/R131_019_LEAD_FINAL_AUDIT_AND_LABEL.md:100:**[phase 133, PANEL_2 MINOR-4: read as **§9.1**, whose content is Thm 3bis.7;
+03-research/phase-131-row-b-closure/R131_019_FINAL_AUDIT_AND_LABEL.md:100:**[phase 133, PANEL_2 MINOR-4: read as **§9.1**, whose content is Thm 3bis.7;
 03-research/phase-131-row-b-closure/README.md:40:Thm 3bis.7; **[phase 133, PANEL_2 MINOR-4: this line read "Paper 44 Thm 9.1",
 ```
 
@@ -645,11 +644,11 @@ $ sed -n '/ROW D.S TARGET (boxed identically/,+5p' 04-papers/45-row-c-explicit-f
 
 ## PANEL_3 §3 — the two dissents: one sentence each, no grading touched
 
-A.8 and B.7 gradings, and every lead decision block, are **unchanged**.
+A.8 and B.7 gradings, and every decision block, are **unchanged**.
 
 ```console
 $ grep -rn 'review panel (PANEL_3 §3) sides with the dissent' 04-papers/4[345]*/main.md | cut -c1-260
-04-papers/43-row-a-torsion-theory/main.md:3920:**[phase 133: the review panel (PANEL_3 §3) sides with the dissent; the owner's
+04-papers/43-row-a-torsion-theory/main.md:3920:**[phase 133: the review panel (PANEL_3 §3) sides with the dissent; the final
 04-papers/44-row-b-arithmetic-family/main.md:5507:| B.7 discriminating test `p`, `p²`; mechanism located | **`PROVED` (the test and, per the lead's ruling, the mechanism on the carrier); the map to the `Z`-model `REFUTED`, not open.**  **[REBUILT, phase 131, 
 ```
 
@@ -657,7 +656,7 @@ $ grep -rn 'review panel (PANEL_3 §3) sides with the dissent' 04-papers/4[345]*
 $ grep -n '#### 10.3.3' -A4 04-papers/43-row-a-torsion-theory/main.md
 3918:#### 10.3.3 Theorem 10.7 — clause A.8
 3919-
-3920-**[phase 133: the review panel (PANEL_3 §3) sides with the dissent; the owner's
+3920-**[phase 133: the review panel (PANEL_3 §3) sides with the dissent; the final
 3921-decision on an amendment is pending.]**
 3922-
 ```
@@ -749,15 +748,15 @@ as does `contour_check2.py` for the contour identity itself
 
 ## What was deliberately **not** changed
 
-* **No clause grading, no label, no lead decision block.**  A.8 and B.7 keep
+* **No clause grading, no label, no decision block.**  A.8 and B.7 keep
   their recorded verdicts; the one sentence added to each records the panel's
-  opinion and says the owner's decision is pending.  The three
+  opinion and says the decision is pending.  The three
   `WEIL-STRENGTH-COMPLETE` labels are untouched.
 * Paper 43 §14.0b's A.2/A.4 rows are **not** re-graded `PROVED modulo (Tr)`;
   the transfer is labelled where it lives (Remark 3.6) and in the §12 import
-  table, which is apparatus, and the grading is left to the owner.
-* Paper 44's **owner-accepted** B.4 amendment text (§10 clause table and the
+  table, which is apparatus, and the grading is left pending.
+* Paper 44's **accepted** B.4 amendment text (§10 clause table and the
   §6.2a blockquote) is reproduced verbatim and not edited; a `[phase 133]` note
   beside it says which of the two `D_A^0`'s it means.
 * PANEL_3's recommendation to record A.8 as `PROVED IN THE RESTATED FORM` and
-  B.7 as `PARTIAL` is an owner decision and is **not** applied.
+  B.7 as `PARTIAL` is a pending decision and is **not** applied.

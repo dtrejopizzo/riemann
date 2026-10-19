@@ -1,6 +1,6 @@
 # ======================================================================================
 #  Phase 3 — Localized Weil positivity engine  (Google Colab, self-validating)
-#  Author: David Alejandro Trejo Pizzo
+#
 #
 #  STATUS: the ZERO-SIDE engine below is VALIDATED against engine-spec reference behaviour
 #  (zeta at the floor; forced negativity with the delta^2 law, exponent ~2.03). It measures

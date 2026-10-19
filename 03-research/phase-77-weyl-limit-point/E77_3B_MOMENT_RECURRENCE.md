@@ -1,6 +1,6 @@
 # E77.3b - Moment recurrence and ratio reduction
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Statement
 

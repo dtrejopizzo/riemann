@@ -1,7 +1,6 @@
 # E71.10 -- Weyl m-function / de Branges target for the CCM determinant
 
-**Date:** 2026-07-07.
-**Role:** correct the determinant target after E71.8-E71.9 and avoid a false matrix-determinant turn.
+**Purpose:** correct the determinant target after E71.8-E71.9 and avoid a false matrix-determinant turn.
 
 ## The important correction
 

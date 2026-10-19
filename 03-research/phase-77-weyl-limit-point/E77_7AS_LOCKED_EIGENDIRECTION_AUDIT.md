@@ -1,6 +1,6 @@
 # E77.7as - Locked eigendirection audit
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

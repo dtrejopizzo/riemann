@@ -1,0 +1,7 @@
+# CA_E_000 (front E seed list) — Review
+
+## Verdict
+**Screens E1–E3, E6–E12 CONFIRMED (retries and clause failures correctly identified). E4/E5 depend on CA_E_001 Thms 1–2 — verdict deferred to that memo, with the pre-flag below. No seed wrongly kept or discarded at this stage.**
+
+Pre-flag for CA_E_001 Thm 1 ("positive ⟺ positive on product/Euler vectors"): the target is positivity on finitely supported vectors on G = ℚ_{>0}^× (indeed on ℕ ∩ [1,M] for (S)). Product vectors ⊗_p s_p with finitely many non-trivial factors localize only on cylinder sets of the solenoid Ĝ, and a cylinder set meets the dense Kronecker line in infinitely many disjoint segments. The proof must therefore show that the negative part of the (line-carried, possibly distributional) Bochner object can be detected by cylinder localizers despite this recurrence, and must respect the window restriction m,k ≤ M (product vectors on S-units ≤ M are not closed under the M-cutoff). Also check "positive = CP for Schur multipliers": true for Schur multipliers on B(ℓ²) (Grothendieck/Haagerup), but the window form is a compression, not a Schur multiplier on all of B(ℓ²(G)).
+E2: correct that both summands are multipliers in τ so the RN cocycle criterion collapses to a pointwise symbol inequality (false at τ = 0) ✓. E8: Golden–Thompson equality for commuting operators ✓. E10: wrong direction of monotonicity (lem:monoT) ✓.

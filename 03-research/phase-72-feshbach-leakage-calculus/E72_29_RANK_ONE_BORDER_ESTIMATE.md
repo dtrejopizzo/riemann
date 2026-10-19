@@ -1,7 +1,6 @@
 # E72.29 -- Rank-one formula for the bordered trace estimate
 
-**Date:** 2026-07-08.
-**Role:** compute the bordered trace estimate `(BTE)` from E72.28 and determine whether it is genuinely
+**Purpose:** compute the bordered trace estimate `(BTE)` from E72.28 and determine whether it is genuinely
 weaker than vector convergence.
 
 ## 0. Same pole mesh model

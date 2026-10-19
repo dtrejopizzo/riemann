@@ -12,13 +12,13 @@
 \newcommand{\GAP}{\textcolor{red!75!black}{\textsc{[gap]}}}
 
 \theoremstyle{plain}
-\newtheorem{theorem}{Teorema}
-\newtheorem{lemma}{Lema}
-\newtheorem{proposition}{Proposici\'on}
-\newtheorem{conjecture}{Conjetura}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{conjecture}{Conjecture}
 \theoremstyle{definition}
-\newtheorem{remark}{Observaci\'on}
-\newtheorem{definition}{Definici\'on}
+\newtheorem{remark}{Remark}
+\newtheorem{definition}{Definition}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Lam}{\Lambda}
@@ -27,174 +27,175 @@
 \newcommand{\kin}{K}
 \newcommand{\vv}{V}
 \newcommand{\pole}{P}
-\newcommand{\fp}{\varphi_{\mathrm{polo}}}
+\newcommand{\fp}{\varphi_{\mathrm{pole}}}
 \DeclareMathOperator{\Real}{Re}
 \DeclareMathOperator{\ran}{ran}
 
-\title{\textbf{Ataque al \GAP\ (i): el d\'eficit de Hardy vive en el modo--polo.\\
-Reducci\'on de Schur $+$ desigualdad de Hardy mejorada}}
-\author{Programa \texttt{riemann-program} --- documento de trabajo}
+\title{\textbf{Attack on \GAP\ (i): the Hardy deficit lives in the pole mode.\\
+Schur reduction $+$ improved Hardy inequality}}
+\author{\texttt{riemann-program} --- working document}
 \date{\today}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-El \GAP\ (i) era: probar que el d\'eficit cin\'etico--pozo est\'a \emph{confinado} a la
-direcci\'on--polo $\fp$, i.e.\ $\kin-\vv\succeq0$ sobre $\fp^\perp$. Mostramos
-(\S\ref{sec:schur}) que, v\'ia complemento de Schur para la perturbaci\'on de rango $1$
-$\pole=\kappa|\fp\rangle\langle\fp|$, la positividad $A_\lambda\succeq0$ \emph{equivale}
-exactamente a dos condiciones: \textbf{(i)} $\kin-\vv\succeq0$ sobre $\fp^\perp$ y
-\textbf{(ii)} una desigualdad escalar de Schur. La condici\'on (i) es una
-\textbf{desigualdad de Hardy mejorada}: el extremal de Hardy (donde la cota cin\'etica
-es ajustada $c=2$) es \emph{precisamente} el modo uniforme/constante $=\fp$; al
-proyectarlo fuera, aparece un \emph{resto positivo} (Brezis--V\'azquez), y la
-desigualdad cin\'etico--pozo se vuelve estricta. As\'i el \GAP\ (i) \textbf{no} es
-RH--equivalente: es la versi\'on no--local de una mejora de Hardy, incondicional. El
-residuo \GAP\ es la no--localidad del s\'imbolo arquimediano (Lévy/CND).
+\GAP\ (i) was: proving that the kinetic--well deficit is \emph{confined} to the
+pole direction $\fp$, i.e.\ $\kin-\vv\succeq0$ on $\fp^\perp$. We show
+(\S\ref{sec:schur}) that, via the Schur complement for the rank-$1$ perturbation
+$\pole=\kappa|\fp\rangle\langle\fp|$, positivity $A_\lambda\succeq0$ is \emph{exactly
+equivalent} to two conditions: \textbf{(i)} $\kin-\vv\succeq0$ on $\fp^\perp$ and
+\textbf{(ii)} a scalar Schur inequality. Condition (i) is an \textbf{improved Hardy
+inequality}: the Hardy extremal (where the kinetic bound is tight, $c=2$) is
+\emph{precisely} the uniform/constant mode $=\fp$; projecting it out, a \emph{positive
+remainder} appears (Brezis--Vázquez), and the kinetic--well inequality becomes strict.
+Thus \GAP\ (i) is \textbf{not} RH-equivalent: it is the non--local version of an
+unconditional Hardy improvement. The residual \GAP\ is the non--locality of the
+archimedean symbol (Lévy/CND).
 \end{abstract}
 
 \tableofcontents
 
 % =====================================================================
-\section{La reducci\'on de Schur (exacta)}\label{sec:schur}
+\section{The Schur reduction (exact)}\label{sec:schur}
 % =====================================================================
 
-Sea $B:=\kin-\vv$ (cin\'etica menos pozo, sim\'etrica, del lado aritm\'etico) y
-$\pole=\kappa_\lambda|\fp\rangle\langle\fp|$ el t\'ermino--polo (rango $1$, positivo,
-incondicional). La forma de Weil es $A_\lambda=B+\pole$. En la descomposici\'on
-$\El=\R\fp\oplus\fp^\perp$ escribimos en bloques
+Let $B:=\kin-\vv$ (kinetic minus well, symmetric, on the arithmetic side) and
+$\pole=\kappa_\lambda|\fp\rangle\langle\fp|$ the pole term (rank $1$, positive,
+unconditional). The Weil form is $A_\lambda=B+\pole$. In the decomposition
+$\El=\R\fp\oplus\fp^\perp$ we write in blocks
 \[
   B=\begin{pmatrix} b & r^* \\ r & M\end{pmatrix},
   \qquad
   b=\langle\fp,B\fp\rangle\in\R,\quad r=\Pi_\perp B\fp,\quad M=\Pi_\perp B\,\Pi_\perp,
 \]
-donde $\Pi_\perp$ es la proyecci\'on a $\fp^\perp$. Entonces
+where $\Pi_\perp$ is the projection onto $\fp^\perp$. Then
 $A_\lambda=\begin{pmatrix} b+\kappa_\lambda & r^*\\ r & M\end{pmatrix}$.
 
-\begin{lemma}[Reducci\'on de Schur]\label{lem:schur}
-$A_\lambda\succeq0$ \emph{si y s\'olo si}
+\begin{lemma}[Schur reduction]\label{lem:schur}
+$A_\lambda\succeq0$ \emph{if and only if}
 \begin{enumerate}[label=\textbf{(\roman*)},leftmargin=2.2em]
-\item $M\succeq0$\quad($\kin-\vv$ es semidefinida positiva sobre $\fp^\perp$);
-\item $r\in\ran(M)$\ \ y\ \ $b+\kappa_\lambda\;\ge\;r^*M^{+}r$\quad(condici\'on escalar de
-Schur, $M^+$ pseudoinversa).
+\item $M\succeq0$\quad($\kin-\vv$ is positive semidefinite on $\fp^\perp$);
+\item $r\in\ran(M)$\ \ and\ \ $b+\kappa_\lambda\;\ge\;r^*M^{+}r$\quad(scalar Schur
+condition, $M^+$ pseudoinverse).
 \end{enumerate}
 \end{lemma}
 \begin{proof}
-Criterio de Schur para matrices sim\'etricas en bloques con bloque $(2,2)=M$
-semidefinido. \qed
+Schur criterion for symmetric block matrices with positive semidefinite block
+$(2,2)=M$. \qed
 \end{proof}
 
-\noindent Esto \emph{formaliza} la separaci\'on que la v\'ia \#9 sugiri\'o: toda la
-positividad de Weil se parte en \textbf{(i)} positividad sobre el complemento del polo,
-y \textbf{(ii)} una \'unica desigualdad escalar a lo largo del polo. El \GAP\ (i) es
-exactamente la condici\'on (i).
+\noindent This \emph{formalizes} the separation that route \#9 suggested: all of Weil
+positivity splits into \textbf{(i)} positivity on the complement of the pole,
+and \textbf{(ii)} a single scalar inequality along the pole. \GAP\ (i) is
+exactly condition (i).
 
 % =====================================================================
-\section{El \GAP\ (i) es una desigualdad de Hardy mejorada}\label{sec:hardy}
+\section{\GAP\ (i) is an improved Hardy inequality}\label{sec:hardy}
 % =====================================================================
 
-La condici\'on (i), $M\succeq0$, es
+Condition (i), $M\succeq0$, is
 \begin{equation}\label{eq:gapi}
-  \kin(g)\;\ge\;\vv_\lambda(g)\qquad\text{para todo }g\in\El\cap\fp^\perp .
+  \kin(g)\;\ge\;\vv_\lambda(g)\qquad\text{for all }g\in\El\cap\fp^\perp .
 \end{equation}
 
-\paragraph{Por qu\'e la versi\'on sin restricci\'on falla.}
-La desigualdad \emph{sin} proyectar, $\kin(g)\ge\vv_\lambda(g)\ \forall g\in\El$, es la
-balanza de Weil con constante ajustada $c=2$, que las t\'ecnicas elementales \emph{no}
-alcanzan (dan $c<2$; el ajuste $c=2$ es RH; cf.\ \texttt{A\_intento\_demostracion}). El
-d\'eficit $c<2$ es real.
+\paragraph{Why the unrestricted version fails.}
+The inequality \emph{without} projecting, $\kin(g)\ge\vv_\lambda(g)\ \forall g\in\El$, is
+the Weil balance with tight constant $c=2$, which elementary techniques \emph{do not}
+reach (they give $c<2$; the tight value $c=2$ is RH; cf.\
+\texttt{A\_intento\_demostracion}). The deficit $c<2$ is real.
 
-\begin{proposition}[El d\'eficit es el extremal de Hardy $=\fp$]\label{prop:extremal}
-La desigualdad de tipo Hardy subyacente,
+\begin{proposition}[The deficit is the Hardy extremal $=\fp$]\label{prop:extremal}
+The underlying Hardy-type inequality,
 $\kin(g)=\frac1{2\pi}\int|\widehat g|^2(\Omega(t)-\Omega(0))\,dt\ \gtrsim\
-c\int|g'|^2$, tiene como funci\'on \emph{extremal} (donde la cota es ajustada) el modo
-de \emph{frecuencia cero} / uniforme. En la base modal de $A_\lambda$, ese extremal es
-el estado fundamental, que por la v\'ia \#9 es justamente $\fp$ (la direcci\'on blanda,
-$=$ densidad global $=$ polo). \NM\ (v\'ia \#9: la curvatura del d\'eficit es rango $1$
-sobre $\fp$).
+c\int|g'|^2$, has as its \emph{extremal} function (where the bound is tight) the
+\emph{zero-frequency} / uniform mode. In the modal basis of $A_\lambda$, that extremal
+is the ground state, which by route \#9 is precisely $\fp$ (the soft direction,
+$=$ global density $=$ pole). \NM\ (via \#9: the curvature of the deficit is rank $1$
+along $\fp$).
 \end{proposition}
 
-\begin{remark}[Mejora de Hardy: el resto de Brezis--V\'azquez]
-Es un fen\'omeno cl\'asico que las desigualdades de Hardy se vuelven \emph{estrictas con
-resto positivo} al restringir al complemento ortogonal del extremal:
+\begin{remark}[Hardy improvement: the Brezis--Vázquez remainder]
+It is a classical phenomenon that Hardy inequalities become \emph{strict with
+positive remainder} when restricted to the orthogonal complement of the extremal:
 \[
-  \int|g'|^2-c\!\int\!\frac{|g|^2}{\text{(peso)}}
-  \;\ge\;\beta\int|g|^2_{\text{(resto)}}>0
-  \qquad\text{para }g\perp(\text{extremal}).
+  \int|g'|^2-c\!\int\!\frac{|g|^2}{\text{(weight)}}
+  \;\ge\;\beta\int|g|^2_{\text{(remainder)}}>0
+  \qquad\text{for }g\perp(\text{extremal}).
 \]
-Si el extremal es $\fp$ (Prop.\ \ref{prop:extremal}), entonces sobre $\fp^\perp$ el
-d\'eficit $c<2$ \emph{se cierra}: la cota se vuelve $c=2$ con margen, dando
-\eqref{eq:gapi}. \textbf{El \GAP\ (i) es, por tanto, una mejora de Hardy, no RH.}
+If the extremal is $\fp$ (Prop.\ \ref{prop:extremal}), then on $\fp^\perp$ the
+deficit $c<2$ \emph{closes}: the bound becomes $c=2$ with margin, giving
+\eqref{eq:gapi}. \textbf{\GAP\ (i) is, therefore, a Hardy improvement, not RH.}
 \end{remark}
 
-\begin{conjecture}[Hardy mejorada no--local]\label{conj:hardy}
-Para el operador cin\'etico no--local $\kin$ (s\'imbolo CND $\Omega$, medida de L\'evy
-$d\nu(\xi)=2e^{-\xi/2}(1-e^{-2\xi})^{-1}d\xi$) y el pozo $\vv_\lambda$ (momentos PNT
-$M_0,M_2$), existe $\beta_\lambda\ge0$ tal que
+\begin{conjecture}[Improved non--local Hardy inequality]\label{conj:hardy}
+For the non--local kinetic operator $\kin$ (CND symbol $\Omega$, Lévy measure
+$d\nu(\xi)=2e^{-\xi/2}(1-e^{-2\xi})^{-1}d\xi$) and the well $\vv_\lambda$ (PNT moments
+$M_0,M_2$), there exists $\beta_\lambda\ge0$ such that
 \[
   \kin(g)-\vv_\lambda(g)\;\ge\;\beta_\lambda\,\|g\|^2
-  \qquad\text{para todo }g\in\El\cap\fp^\perp .
+  \qquad\text{for all }g\in\El\cap\fp^\perp .
 \]
 \end{conjecture}
 
 % =====================================================================
-\section{Conteo de estados ligados: por qu\'e ``a lo sumo uno''}\label{sec:bargmann}
+\section{Counting bound states: why ``at most one''}\label{sec:bargmann}
 % =====================================================================
 
-La Conjetura \ref{conj:hardy} equivale a que el ``Schr\"odinger'' no--local
-$\kin-\vv_\lambda$ tenga \textbf{a lo sumo un estado ligado} (un autovalor negativo), y
-que su autovector sea $\fp$.
+Conjecture \ref{conj:hardy} is equivalent to the non--local ``Schrödinger'' operator
+$\kin-\vv_\lambda$ having \textbf{at most one bound state} (one negative eigenvalue), and
+its eigenvector being $\fp$.
 
-\begin{remark}[CLR/Bargmann como herramienta incondicional]
-El n\'umero de autovalores negativos de $\kin-\vv$ se acota por funcionales del pozo
-(Cwikel--Lieb--Rozenblum, Bargmann, Lieb--Thirring) que dependen \emph{s\'olo} de
-$\vv_\lambda$ (lado primo, PNT), \emph{no} de los ceros. Una cota
-$N_-(\kin-\vv_\lambda)\le1$ ser\'ia incondicional. \textbf{Consistencia interna:}
-$A_\lambda=(\kin-\vv)+\pole\succeq0$ con espectro $(k+1)^2\varepsilon_0>0$ (torre de
-Weyl, \NM) implica que $\kin-\vv=A_\lambda-\pole$ tiene a lo sumo \emph{un} autovalor
-negativo (resta de rango $1$), alineado con $\fp$ --- exactamente el cuadro que la
-Conjetura predice.
+\begin{remark}[CLR/Bargmann as an unconditional tool]
+The number of negative eigenvalues of $\kin-\vv$ is bounded by functionals of the well
+(Cwikel--Lieb--Rozenblum, Bargmann, Lieb--Thirring) that depend \emph{only} on
+$\vv_\lambda$ (prime side, PNT), \emph{not} on the zeros. A bound
+$N_-(\kin-\vv_\lambda)\le1$ would be unconditional. \textbf{Internal consistency:}
+$A_\lambda=(\kin-\vv)+\pole\succeq0$ with spectrum $(k+1)^2\varepsilon_0>0$ (Weyl
+tower, \NM) implies that $\kin-\vv=A_\lambda-\pole$ has at most \emph{one} negative
+eigenvalue (rank-$1$ subtraction), aligned with $\fp$ --- exactly the picture the
+Conjecture predicts.
 \end{remark}
 
-\paragraph{El \GAP\ residual, localizado.}
-Lo que falta para \PR\ la Conjetura \ref{conj:hardy} / el \GAP\ (i):
+\paragraph{The residual \GAP, localized.}
+What is missing to \PR\ Conjecture \ref{conj:hardy} / \GAP\ (i):
 \begin{enumerate}[label=(\alph*),leftmargin=2em]
-\item \GAP\ \textbf{No--localidad.} $\kin$ no es $-d^2/dx^2$ local sino un generador de
-salto (Lévy). Las mejoras de Hardy y las cotas CLR cl\'asicas son para operadores
-locales o fraccionarios est\'andar; aqu\'i hace falta su an\'alogo para el s\'imbolo
-$\Omega$ espec\'ifico. (La no--localidad --- $85\%$ del peso en saltos grandes --- fue
-el obst\'aculo hist\'orico; aqu\'i reaparece, pero \emph{aislado} a esta desigualdad.)
-\item \GAP\ \textbf{Alineaci\'on del extremal.} Probar \PR\ que el extremal de Hardy
-es $\fp$ (hoy \NM\ por v\'ia \#9). Candidato: el extremal es el autovector de menor
-autovalor de $\kin-\vv$, y la v\'ia \#9 lo identific\'o con la direcci\'on uniforme.
+\item \GAP\ \textbf{Non--locality.} $\kin$ is not the local $-d^2/dx^2$ but a jump
+generator (Lévy). Classical Hardy improvements and CLR bounds are for standard local
+or fractional operators; here their analogue is needed for the specific symbol
+$\Omega$. (Non--locality --- $85\%$ of the weight in large jumps --- was the
+historical obstacle; here it reappears, but \emph{isolated} to this inequality.)
+\item \GAP\ \textbf{Alignment of the extremal.} \PR\ that the Hardy extremal
+is $\fp$ (currently \NM\ via route \#9). Candidate: the extremal is the eigenvector of
+smallest eigenvalue of $\kin-\vv$, and route \#9 identified it with the uniform
+direction.
 \end{enumerate}
 
 % =====================================================================
-\section{Estado y siguiente paso}\label{sec:status}
+\section{Status and next step}\label{sec:status}
 % =====================================================================
 
 \begin{enumerate}[leftmargin=1.6em]
-\item \PR\ (Lema \ref{lem:schur}) Reducci\'on de Schur: $A_\lambda\succeq0\Leftrightarrow$
-(i)~$\kin-\vv\succeq0$ sobre $\fp^\perp$ $+$ (ii)~desigualdad escalar. Exacta, sin
-hip\'otesis.
-\item \PR/\NM\ (Prop.\ \ref{prop:extremal}) El d\'eficit de Hardy es el extremal
-$=\fp$; la v\'ia \#9 lo confirma (rango $1$, direcci\'on--polo).
-\item \OP\ (Conjetura \ref{conj:hardy}) Hardy mejorada no--local: $\kin-\vv\succeq0$
-sobre $\fp^\perp$, con resto. \emph{Incondicional} (s\'olo $K,V$, no ceros). Reducida a
-\GAP\ (a)~no--localidad y (b)~alineaci\'on del extremal.
-\item \textbf{Consecuencia si (i) sale:} el problema entero colapsa a la \'unica
-desigualdad escalar (ii) de Schur, $b+\kappa_\lambda\ge r^*M^+r$ --- una sola
-comparaci\'on num\'erica entre cantidades $\sim\lambda^{-2}$, ambas computables del lado
-primo.
+\item \PR\ (Lemma \ref{lem:schur}) Schur reduction: $A_\lambda\succeq0\Leftrightarrow$
+(i)~$\kin-\vv\succeq0$ on $\fp^\perp$ $+$ (ii)~scalar inequality. Exact, without
+hypotheses.
+\item \PR/\NM\ (Prop.\ \ref{prop:extremal}) The Hardy deficit is the extremal
+$=\fp$; route \#9 confirms it (rank $1$, pole direction).
+\item \OP\ (Conjecture \ref{conj:hardy}) Improved non--local Hardy inequality:
+$\kin-\vv\succeq0$ on $\fp^\perp$, with remainder. \emph{Unconditional} (only $K,V$, no
+zeros). Reduced to \GAP\ (a)~non--locality and (b)~alignment of the extremal.
+\item \textbf{Consequence if (i) goes through:} the whole problem collapses to the
+single scalar Schur inequality (ii), $b+\kappa_\lambda\ge r^*M^+r$ --- a single
+numerical comparison between quantities $\sim\lambda^{-2}$, both computable on the
+prime side.
 \end{enumerate}
 
-\noindent\textbf{Honestidad.} El \GAP\ (i) qued\'o reducido, con \'algebra exacta
-(Schur) $+$ un mecanismo cl\'asico (mejora de Hardy al proyectar el extremal), a una
-desigualdad funcional \emph{incondicional} cuyo \'unico obst\'aculo es la
-no--localidad del s\'imbolo arquimediano. Esto \textbf{no} es RH disfrazada: es una
-desigualdad de teor\'ia espectral (conteo de estados ligados de un Schr\"odinger
-no--local) sobre objetos del lado primo. La batalla por (i) es ahora la batalla por una
-mejora de Hardy no--local --- terreno cl\'asico, con herramientas (CLR, Lieb--Thirring,
-Brezis--V\'azquez) y un obst\'aculo concreto.
+\noindent\textbf{Honesty.} \GAP\ (i) has been reduced, with exact algebra
+(Schur) $+$ a classical mechanism (Hardy improvement upon projecting out the
+extremal), to an \emph{unconditional} functional inequality whose only obstacle is the
+non--locality of the archimedean symbol. This is \textbf{not} RH in disguise: it is a
+spectral-theory inequality (bound-state counting for a non--local Schrödinger
+operator) on prime-side objects. The battle for (i) is now the battle for a
+non--local Hardy improvement --- classical ground, with tools (CLR, Lieb--Thirring,
+Brezis--Vázquez) and a concrete obstacle.
 \end{document}

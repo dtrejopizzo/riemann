@@ -1,6 +1,6 @@
 # E78.23 - Theta sign stability separates from theta dominance
 
-**Run:** 2026-07-18.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

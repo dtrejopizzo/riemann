@@ -1,7 +1,6 @@
 # E72.9 -- Model-complement primitive and the PSC lemma
 
-**Date:** 2026-07-08.
-**Role:** integrate the parallel audit/proof attempt and isolate the first non-circular lemma that
+**Purpose:** integrate the parallel audit/proof attempt and isolate the first non-circular lemma that
 would close Phase 72.
 
 ## 0. Outcome of the parallel work

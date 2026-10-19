@@ -1,28 +1,38 @@
-# Contexto maestro del programa hacia RH
+# Master context of the program toward RH
 
-## Dictamen ejecutivo
+## Executive verdict
 
-La revisión completa no encuentra una demostración de RH ni una cadena incondicional que cierre \(\Omega_7\). Sí encuentra una columna matemática sólida, un banco importante de identidades finitas y no-go específicos, y una frontera mucho más estrecha que al comienzo del programa.
+The full review finds neither a proof of RH nor an unconditional chain closing \(\Omega_7\). It does
+find a solid mathematical column, a significant bank of finite identities and specific no-go results,
+and a frontier much narrower than at the program's start.
 
-La columna defendible es
+The defensible column is
 
 \[
 \mathrm{RH}
 \Longleftrightarrow
-\{\text{todos los ceros de }\Xi\text{ son reales}\}
+\{\text{all zeros of }\Xi\text{ are real}\}
 \Longleftrightarrow
 \mathrm{ARP\!\!-P}
 \Longleftrightarrow
-\{J_N(z_0)\succeq0\text{ para todo }N\}
+\{J_N(z_0)\succeq0\text{ for all }N\}
 \Longleftrightarrow
-\{\lambda_n\ge0\text{ para todo }n\}.
+\{\lambda_n\ge0\text{ for all }n\}.
 \]
 
-Esta cadena localiza la dificultad; no la disminuye. Varias flechas son equivalencias de familias completas obtenidas pasando por RH, no transformaciones positivas nivel a nivel. Por eso un certificado para un corte finito, una malla o un intervalo no se propaga automáticamente a todos los índices.
+This chain locates the difficulty; it does not diminish it. Several arrows are equivalences of
+complete families obtained by passing through RH, not level-by-level positive transformations.
+Therefore a certificate for a finite cut, a mesh, or an interval does not automatically propagate to
+all indices.
 
-La afirmación de que \(\Omega_1\)–\(\Omega_6\) están cerrados requiere una precisión decisiva. \(\Omega_1\), \(\Omega_2\), \(\Omega_3\) y \(\Omega_6\) sobreviven como equivalencias globales en los términos auditados. \(\Omega_4\) mezcla dos blanqueamientos con dominios distintos. \(\Omega_5\) demuestra continuidad al borde para cada \(N\) fijo, pero no produce la positividad interior uniforme necesaria. El único objetivo terminal sigue siendo \(\Omega_7\), aunque no todas las piezas auxiliares del trayecto constructivo están demostradas.
+The claim that \(\Omega_1\)–\(\Omega_6\) are closed requires a decisive clarification. \(\Omega_1\),
+\(\Omega_2\), \(\Omega_3\) and \(\Omega_6\) survive as global equivalences in the audited terms.
+\(\Omega_4\) mixes two whitenings with distinct domains. \(\Omega_5\) proves boundary continuity for
+each fixed \(N\), but does not produce the uniform interior positivity needed. The only terminal
+objective remains \(\Omega_7\), even though not all auxiliary pieces of the constructive path are
+proved.
 
-La corrección más útil para el reinicio es
+The most useful correction for the restart is
 
 \[
 \lambda_n
@@ -33,13 +43,14 @@ La corrección más útil para el reinicio es
 \lambda_n^{\rm prime}\ge-\lambda_n^{\rm arch}.
 \]
 
-Paper 36 presenta en distintos lugares la dominación
+Paper 36 presents in several places the domination
 
 \[
 |\lambda_n^{\rm prime}|<\lambda_n^{\rm arch}
 \]
 
-como si fuera la desigualdad exacta de \(\Omega_7\). No lo es. Es una condición suficiente más fuerte cuando la parte arquimediana es positiva y falla ya como supuesta equivalencia para \(n=1\):
+as if it were the exact inequality of \(\Omega_7\). It is not. It is a stronger sufficient condition
+when the archimedean part is positive, and it already fails as a supposed equivalence for \(n=1\):
 
 \[
 \lambda_1^{\rm arch}
@@ -49,15 +60,20 @@ como si fuera la desigualdad exacta de \(\Omega_7\). No lo es. Es una condición
 \lambda_1^{\rm prime}=\gamma\approx0.57722,
 \]
 
-mientras \(\lambda_1\approx0.02310>0\). Esto no hace fácil \(\Omega_7\): por H0, demostrar la cota unilateral para todos los índices sigue teniendo fuerza-RH. Sí demuestra que los no-go obtenidos mediante valores absolutos no clausuran toda ruta aritmética. Para los índices donde \(\lambda_n^{\rm arch}\ge0\), el blanco se reduce a controlar la excursión negativa de la parte prima; para los índices donde \(\lambda_n^{\rm arch}<0\), debe conservarse el lower bound completo, que exige una contribución prima positiva suficiente.
+while \(\lambda_1\approx0.02310>0\). This does not make \(\Omega_7\) easy: by H0, proving the one-sided
+bound for all indices still has RH-strength. It does prove that the no-go results obtained via
+absolute values do not close off every arithmetic route. For indices where \(\lambda_n^{\rm arch}\ge0\),
+the target reduces to controlling the negative excursion of the prime part; for indices where
+\(\lambda_n^{\rm arch}<0\), the full lower bound must be preserved, which requires a sufficient
+positive prime contribution.
 
-La auditoría encuentra una segunda corrección en la misma ruta. Para
+The audit finds a second correction in the same route. For
 
 \[
 f_{n,\varepsilon}(y)=y^{-1-\varepsilon}L_{n-1}^{(1)}(\log y),
 \]
 
-la integración por partes correcta es
+the correct integration by parts is
 
 \[
 \lambda_n^{\rm prime}
@@ -70,48 +86,61 @@ la integración por partes correcta es
 \int_1^\infty(\psi(y)-y)f'_{n,\varepsilon}(y)\,dy\right].
 \]
 
-Paper 36 imprime el negativo de la integral con \(\psi-y\) y omite \(-n\). La representación regularizada polo–primos anterior sigue siendo utilizable; la fórmula de integración por partes y toda conclusión firmada derivada de ella deben corregirse.
+Paper 36 prints the negative of the integral with \(\psi-y\) and omits \(-n\). The earlier
+regularized pole–prime representation remains usable; the integration-by-parts formula and every
+signed conclusion derived from it must be corrected.
 
-## Qué representa realmente paper 36
+## What paper 36 actually represents
 
-El aporte estructural principal es la equivalencia
+The main structural contribution is the equivalence
 
 \[
 \mathrm{ARP\!\!-P}\Longleftrightarrow\mathrm{RH}.
 \]
 
-El sentido ARP-P \(\Rightarrow\) RH usa interpolación Pick–Nevanlinna, normalidad, continuación analítica y detección de residuos no reales. El sentido RH \(\Rightarrow\) ARP-P convierte cada canal en una transformada de Cauchy de una medida positiva. La arquitectura es matemáticamente significativa porque serializa el problema en positividad de matrices finitas, pero Step 5 exige esa positividad para toda fuente y todo conjunto de nodos; ése es el input abierto.
+The direction ARP-P \(\Rightarrow\) RH uses Pick–Nevanlinna interpolation, normality, analytic
+continuation, and detection of non-real residues. The direction RH \(\Rightarrow\) ARP-P turns each
+channel into a Cauchy transform of a positive measure. The architecture is mathematically significant
+because it serializes the problem into finite-matrix positivity, but Step 5 requires that positivity
+for every source and every node set; that is the open input.
 
-La auditoría de la jerarquía H0–H8 deja:
+The audit of the H0–H8 hierarchy leaves:
 
-| Nivel | Estado vinculante | Carga exacta |
+| Level | Binding status | Exact load |
 |---|---|---|
-| H0 | **DEMOSTRADO** | Conservación lógica de dificultad; no identifica por sí solo dónde está toda la fuerza. |
-| H1 | **DEMOSTRADO en el caso escalar declarado** | No cubre automáticamente los canales matriciales complejos. |
-| H2 | **PARCIAL** | Gershgorin cierra nodos altos y separados; compactitud más diagonal positiva no implica PSD a altura acotada. |
-| H3 | **PARCIAL** | Región logarítmica y resultado casi en todo punto; no la desigualdad global de dos nodos. |
-| H4 | **DEMOSTRADO como serialización** | La secuencia de determinantes caracteriza RH; no se demuestra su signo. |
-| H5 | **DEMOSTRADO como equivalencia** | Ventanas positivas y ARP-P son coordenadas de la misma condición. |
-| H6 | **CUALITATIVO; cuantitativo abierto** | La contraposición da algún testigo finito. La construcción explícita no domina la cola y pierde un factor \(|\kappa|\). |
-| H7 | **PARCIAL** | SOS bajo RH y cierres en cajas o bandas fijas; no SOS aritmético global. |
-| H8 | **PARCIAL** | Positividad a \(N\) fijo y traslación alta; falta uniformidad en \(N\) a altura fija. |
+| H0 | **PROVED** | Logical conservation of difficulty; does not by itself identify where all the force lies. |
+| H1 | **PROVED in the declared scalar case** | Does not automatically cover the complex matrix channels. |
+| H2 | **PARTIAL** | Gershgorin closes high, separated nodes; compactness plus positive diagonal does not imply PSD at bounded height. |
+| H3 | **PARTIAL** | Logarithmic region and almost-everywhere result; not the global two-node inequality. |
+| H4 | **PROVED as serialization** | The determinant sequence characterizes RH; its sign is not proved. |
+| H5 | **PROVED as equivalence** | Positive windows and ARP-P are coordinates of the same condition. |
+| H6 | **QUALITATIVE; quantitative open** | The contrapositive gives some finite witness. The explicit construction does not dominate the tail and loses a factor \(|\kappa|\). |
+| H7 | **PARTIAL** | SOS under RH and closures in fixed boxes or bands; not global arithmetic SOS. |
+| H8 | **PARTIAL** | Positivity at fixed \(N\) and high translation; uniformity in \(N\) at fixed height is missing. |
 
-También deben retirarse o rebajarse cuatro piezas:
+Four pieces must also be withdrawn or downgraded:
 
-1. La suma aislada \(\sum_\rho(1-1/\rho)^n\) no converge, aun bajo RH; sólo la combinación simétrica que define \(\lambda_n\) es legítima.
-2. Muestreo, saturación factorial y cascada de de Bruijn–Newman dependen de estimaciones uniformes todavía abiertas.
-3. La realización operatorial requiere auto-adjuntez, control uniforme de fuentes e identificación de resolventes no construida dentro del manuscrito.
-4. La integración por partes del kernel Laguerre tiene signo y término de borde incorrectos.
-5. La asintótica de envolvente omite el término lineal \(\frac{\gamma-1}{2}n\), y la cota \(c\sqrt n\log n\) no puede incluir \(n=1\).
-6. El cierre Castelnuovo/Minkowski aplica una hipótesis formulada para norma positiva a una clase obtenida con norma negativa.
+1. The isolated sum \(\sum_\rho(1-1/\rho)^n\) does not converge, even under RH; only the symmetric
+   combination defining \(\lambda_n\) is legitimate.
+2. Sampling, factorial saturation and the de Bruijn–Newman cascade depend on uniform estimates still
+   open.
+3. The operator realization requires self-adjointness, uniform control of sources, and identification
+   of resolvents not built within the manuscript.
+4. The integration by parts of the Laguerre kernel has the wrong sign and boundary term.
+5. The envelope asymptotics omits the linear term \(\frac{\gamma-1}{2}n\), and the bound
+   \(c\sqrt n\log n\) cannot include \(n=1\).
+6. The Castelnuovo/Minkowski closure applies a hypothesis formulated for positive norm to a class
+   obtained with negative norm.
 
-Estas correcciones no destruyen la equivalencia ARP-P–RH. Impiden usar resultados auxiliares más fuertes que lo realmente probado.
+These corrections do not destroy the ARP-P–RH equivalence. They prevent using auxiliary results
+stronger than what is actually proved.
 
-## Recorrido comprimido de los nueve programas
+## Compressed tour of the nine programs
 
-### RH1–RH3: coeficientes, clases \(\omega\) y estadística
+### RH1–RH3: coefficients, \(\omega\) classes and statistics
 
-Se construyeron sumas de Dirichlet, descomposiciones por número de factores primos, coherencias, extremos, clasificadores y protocolos de precisión. Sobrevive la identidad de energía
+Dirichlet sums, decompositions by number of prime factors, coherences, extremes, classifiers and
+precision protocols were built. The energy identity survives
 
 \[
 \left|\sum_kS_k\right|^2
@@ -120,93 +149,123 @@ Se construyeron sumas de Dirichlet, descomposiciones por número de factores pri
 \sum_{j\ne k}\Re(S_j\overline{S_k}),
 \]
 
-pero no su lectura como criterio de ceros. Liouville y controles multiplicativos aleatorios muestran que multiplicatividad, decoherencia pequeña o una ley de extremos no determinan la geometría del divisor. El puente desde un cero fuera de línea a una pendiente concreta del observable truncado tampoco fue demostrado y no apareció en el control operativo.
+but not its reading as a zero criterion. Liouville and random multiplicative controls show that
+multiplicativity, small decoherence or an extreme-value law do not determine the divisor's geometry.
+The bridge from an off-line zero to a concrete slope of the truncated observable was also not proved
+and did not appear in the operative control.
 
-### RH4–RH6: matrices de picos y Weil localizado
+### RH4–RH6: peak matrices and localized Weil
 
-Las covarianzas de clases responden principalmente a masa de coeficientes, conductor, soporte y selección de picos. Se retiraron la predominancia de covarianza negativa y la excepcionalidad causal de \(\omega=2\). Una Gram construida sólo con ceros es PSD por construcción y puede haber eliminado la coordenada horizontal que debía detectar.
+Class covariances respond mainly to coefficient mass, conductor, support and peak selection. The
+predominance of negative covariance and the causal exceptionality of \(\omega=2\) were withdrawn. A
+Gram matrix built only from zeros is PSD by construction and may have eliminated the horizontal
+coordinate it was supposed to detect.
 
-El detector Hermite–Gauss de Weil sí deja álgebra finita y calibraciones útiles. Falta una cota conjunta uniforme en dimensión, centro, ancho, corte primo, cola de ceros y normalización. Las respuestas lineal y cuadrática observadas pertenecen a montajes distintos o exponen una especificación inconsistente; no constituyen una ley universal.
+The Hermite–Gauss Weil detector does leave useful finite algebra and calibrations. A joint bound
+uniform in dimension, center, width, prime cutoff, zero tail and normalization is missing. The
+observed linear and quadratic responses belong to different setups or expose an inconsistent
+specification; they do not constitute a universal law.
 
-### RH7–RH8: detector calibrado, transferencia ausente
+### RH7–RH8: calibrated detector, missing transfer
 
-La expansión de un cuarteto perturbado y varios controles de traza son correctos para secciones fijadas. Las mallas H1/H2 y los autovalores mínimos son evidencia numérica. El paso
+The expansion of a perturbed quartet and several trace controls are correct for fixed sections. The
+H1/H2 meshes and minimal eigenvalues are numerical evidence. The step
 
 \[
 Q_{J,\sigma,X,H}\longrightarrow Q_\infty
 \]
 
-con uniformidad simultánea es precisamente el paso capaz de excluir todo cero fuera de línea. No puede tratarse como una extrapolación rutinaria.
+with simultaneous uniformity is precisely the step capable of excluding every off-line zero. It
+cannot be treated as a routine extrapolation.
 
-### RH9: geometría postulada, no construida
+### RH9: postulated geometry, not built
 
-El programa especifica qué debería entregar una geometría útil: objeto global, diagonal, cohomología, lector espectral, triple de Lefschetz y polarización independiente. Arakelov, dinámica de escala, geometría no conmutativa, prolate/Sonin y teorías cohomológicas aportan analogías o piezas. El corpus no construye el objeto conjunto ni identifica su forma de intersección con Weil sin insertar previamente el divisor.
+The program specifies what a useful geometry should supply: a global object, diagonal, cohomology,
+spectral reader, Lefschetz triple and independent polarization. Arakelov theory, scale dynamics,
+noncommutative geometry, prolate/Sonin theory and cohomological theories contribute analogies or
+pieces. The corpus does not build the joint object nor identify its intersection form with Weil
+without first inserting the divisor.
 
-## Recorrido comprimido de las fases
+## Compressed tour of the phases
 
-Las fases no son más de cien cierres acumulativos. Son una genealogía con bifurcaciones, correcciones y reparametrizaciones. El arco útil es
+The phases are not more than a hundred cumulative closures. They are a genealogy with branches,
+corrections and reparametrizations. The useful arc is
 
 \[
 \begin{aligned}
-&\text{Weil localizado y detector}
-\to\text{paredes de signo}
-\to\text{Hodge e índice}\\
+&\text{localized Weil and detector}
+\to\text{sign walls}
+\to\text{Hodge and index}\\
 &\to\text{Connes/CCM}
-\to\text{Feshbach--Cauchy--adjugado}
+\to\text{Feshbach--Cauchy--adjugate}
 \to\text{LP+IDENT}\\
 &\to\text{RDI-ANCHOR}
-\to\text{corriente y divisor}
-\to\boxed{\text{identificación aritmética firmada abierta}}.
+\to\text{current and divisor}
+\to\boxed{\text{open signed arithmetic identification}}.
 \end{aligned}
 \]
 
-### Fases 0–25
+### Phases 0–25
 
-Se fija la forma completa de Weil, se prueban varias paredes de signo y se ensayan realizaciones de Kreĭn, calor, Carleson, de Branges y Hodge. Los resultados durables son detectores, identidades y no-go acotados. La geometría global y su polarización no se construyen. Los argumentos con número finito de defectos dependen de una hipótesis de finitud que el complemento de RH no tiene por qué satisfacer.
+The full Weil form is fixed, several sign walls are proved, and realizations via Kreĭn, heat,
+Carleson, de Branges and Hodge are tried. The durable results are detectors, identities and bounded
+no-go results. The global geometry and its polarization are not built. Arguments with a finite number
+of defects depend on a finiteness hypothesis that the complement of RH need not satisfy.
 
-### Fases 26–50
+### Phases 26–50
 
-CCM, momentos, de Bruijn–Newman, Selberg, Pontryagin y Hodge convierten promedios y defectos en condiciones parciales. La lección común es
+CCM, moments, de Bruijn–Newman, Selberg, Pontryagin and Hodge turn averages and defects into partial
+conditions. The common lesson is
 
 \[
-\text{promedio pequeño o subsucesión convergente}
+\text{small average or convergent subsequence}
 \not\Rightarrow
-\text{ausencia de un átomo o alineación de cada cero}.
+\text{absence of an atom or alignment of every zero}.
 \]
 
-Los intentos fase→inercia prueban no-go para clases locales o tauberianas. No prueban que toda entrada diofántica no local sea imposible.
+The phase→inertia attempts prove no-go results for local or Tauberian classes. They do not prove that
+every non-local Diophantine input is impossible.
 
-### Fases 51–75
+### Phases 51–75
 
-Homotopía, Stone, métricas, GLT e índices formales no producen la flecha aritmética. Las fases 64–71 reconocen que aproximantes con ceros reales convergentes a \(\Xi\) resolverían RH por Hurwitz; esa convergencia tiene fuerza-RH. El rótulo QED de fase 65 queda superado por correcciones posteriores.
+Homotopy, Stone, metrics, GLT and formal indices do not produce the arithmetic arrow. Phases 64–71
+recognize that approximants with real zeros converging to \(\Xi\) would solve RH by Hurwitz; that
+convergence has RH-strength. Phase 65's QED label is superseded by later corrections.
 
-Las fases 72–75 entregan una infraestructura algebraica valiosa:
+Phases 72–75 deliver valuable algebraic infrastructure:
 
 \[
 \text{Feshbach}
-\to\text{corriente}
+\to\text{current}
 \to\text{Cauchy}
-\to\text{divisibilidad}
-\to\text{adjugado}.
+\to\text{divisibility}
+\to\text{adjugate}.
 \]
 
-Los terminales `PW-Cauchy`, `HPR-DIV`, `EG_LOCK` y `ADJ-ARITH-LOCK` son representaciones de la misma cancelación firmada, no cuatro cierres distintos.
+The terminals `PW-Cauchy`, `HPR-DIV`, `EG_LOCK` and `ADJ-ARITH-LOCK` are representations of the same
+signed cancellation, not four distinct closures.
 
-### Fases 76–79
+### Phases 76–79
 
-Aquí se separan `SAFE-LIMIT-POINT = LP + IDENT`, el problema LP se corrige a `BTG-DIV` en el verdadero \(\mu_L\), y `GAP-Z` se descompone exactamente como
+Here `SAFE-LIMIT-POINT = LP + IDENT` is separated, the LP problem is corrected to `BTG-DIV` in the
+true \(\mu_L\), and `GAP-Z` is decomposed exactly as
 
 \[
 g_{N+2}-g_N=\mathrm{ZERO}+\mathrm{MESH}+\mathrm{BND}.
 \]
 
-Las cotas de MESH y BND están demostradas; ZERO sigue abierto y no puede acotarse sumando magnitudes de shells. Outcome A usa secciones finitas y \(\mu_{\rm ref}\), no el objeto límite en \(\mu_L\), de modo que la neutralidad de LP no está certificada.
+The bounds for MESH and BND are proved; ZERO remains open and cannot be bounded by summing shell
+magnitudes. Outcome A uses finite sections and \(\mu_{\rm ref}\), not the limit object in \(\mu_L\), so
+LP's neutrality is not certified.
 
-E79.6 y los discriminantes de nube son numéricos o conjeturales. Varias firmas fueron retractadas por controles de precisión, cambio de definición o pérdida de poder discriminante. No está demostrado que `DISCRIMINANT` sea necesario, suficiente ni el único portador de fuerza-RH.
+E79.6 and the cloud discriminants are numerical or conjectural. Several signatures were retracted due
+to precision controls, a change of definition, or loss of discriminating power. It is not proved that
+`DISCRIMINANT` is necessary, sufficient, or the sole carrier of RH-strength.
 
-### Fases 80–101
+### Phases 80–101
 
-Se prueban identidades seculares, Euler–Möbius, Abel, Feshbach de capa, determinantes bordeados, cofactores, Jacobianos, conmutadores y corrientes. Todas son coordenadas exactas útiles. Las rutas vuelven a
+Secular identities, Euler–Möbius, Abel, layer Feshbach, bordered determinants, cofactors, Jacobians,
+commutators and currents are proved. All are useful exact coordinates. The routes return to
 
 \[
 \mathrm{RDI\!-\!ANCHOR}
@@ -218,60 +277,71 @@ Se prueban identidades seculares, Euler–Möbius, Abel, Feshbach de capa, deter
 \mathrm{STIELTJES\!-\!IDENT}.
 \]
 
-Identificar `C_core` en un intervalo seguro ya fuerza RH por propagación Pick–Nevanlinna. `TRUE-DIVISOR-IDENT` es todavía más fuerte porque preserva soporte y multiplicidad. Las fases 94–100 cambian la representación de la carga; no la demuestran.
+Identifying `C_core` on a safe interval already forces RH by Pick–Nevanlinna propagation.
+`TRUE-DIVISOR-IDENT` is even stronger because it preserves support and multiplicity. Phases 94–100
+change the representation of the load; they do not prove it.
 
-## Banco de resultados que sí puede reutilizarse
+## Bank of results that can indeed be reused
 
-1. La equivalencia ARP-P–RH y la serialización escalar por jets en un punto regular.
-2. El diccionario de Cayley \(w=1-1/\rho\) y el criterio completo de Li.
-3. Identidades finitas de Weil localizado, Cauchy, Pick, Feshbach, shorting, adjugados, cofactores, Jacobianos, conmutadores y Abel, conservando sus dominios.
-4. La descomposición exacta de GAP-Z con MESH y BND controlados.
-5. En \(\Re s>1\), el producto Euler–Gamma, su derivada logarítmica y las identidades Laguerre donde la convergencia absoluta está justificada.
-6. Detectores y falsadores numéricos con precisión, normalización, catálogos, trazas y semillas fijados.
-7. No-go específicos: Gram cero-sólo, multiplicatividad como criterio, extrapolación finita, pseudoinversa en curva singular, matching por celdas, un nivel de momentos, productos de trazas y geometría meramente postulada.
-8. La distinción indispensable entre convergencia, identificación y positividad.
+1. The ARP-P–RH equivalence and the scalar serialization by jets at a regular point.
+2. The Cayley dictionary \(w=1-1/\rho\) and Li's full criterion.
+3. Finite identities of localized Weil, Cauchy, Pick, Feshbach, shorting, adjugates, cofactors,
+   Jacobians, commutators and Abel, preserving their domains.
+4. The exact decomposition of GAP-Z with controlled MESH and BND.
+5. In \(\Re s>1\), the Euler–Gamma product, its logarithmic derivative, and the Laguerre identities
+   where absolute convergence is justified.
+6. Numerical detectors and falsifiers with fixed precision, normalization, catalogs, traces and seeds.
+7. Specific no-go results: zeros-only Gram, multiplicativity as a criterion, finite extrapolation,
+   pseudoinverse on the singular curve, cell-by-cell matching, a single moment level, trace products,
+   and merely postulated geometry.
+8. The indispensable distinction between convergence, identification and positivity.
 
-## Registro mínimo de rutas que no deben repetirse
+## Minimal register of routes that must not be repeated
 
-| Ruta | Razón de cierre o cuarentena |
+| Route | Reason for closure or quarantine |
 |---|---|
-| Multiplicatividad, \(\omega\), GEV, clasificadores | Controles multiplicativos y dependencia de ventana rompen la inferencia a ceros. |
-| Gram o Mercer construido desde ceros | PSD tautológica; no detecta horizontalidad. |
-| Li o Weil en cortes finitos | No cuantifica sobre índices o tests futuros. |
-| Truncación prima positiva | El signo surge de cancelación global; las secciones finitas pueden ser negativas. |
-| Cota punto a punto con valores absolutos | Pierde la fase Laguerre; no descarta el nuevo blanco unilateral. |
-| Región libre o densidad de ceros | Admite al menos un cero fuera de línea, suficiente para destruir Li en índices grandes. |
-| Fejér–Riesz | La no negatividad del símbolo requerida es la conclusión. |
-| Kreĭn abstracto | La existencia de alguna extensión positiva no identifica el kernel aritmético. |
-| Recurrencia de todas las fases | El costo de Kronecker de la formulación ensayada supera la ganancia geométrica. |
-| Calor, de Branges, Herglotz, LP | En las versiones útiles reaparece real-rootedness o una condición equivalente. |
-| Hodge/Lefschetz sin objeto externo | Postula la polarización que debe demostrarse. |
-| Prolate o gap único | No identifica el estado base ni excluye índice negativo sin una cota equivalente a Weil. |
-| Promedio, smoothing, momentos de un nivel | Pierde soporte transversal o un cero individual. |
-| Nueva coordenada de RDI | No cuenta como cierre sin una identidad o desigualdad nueva. |
+| Multiplicativity, \(\omega\), GEV, classifiers | Multiplicative controls and window dependence break the inference to zeros. |
+| Gram or Mercer matrix built from zeros | Tautologically PSD; does not detect horizontality. |
+| Li or Weil on finite cuts | Does not quantify over all indices or future tests. |
+| Positive prime truncation | The sign arises from global cancellation; finite sections can be negative. |
+| Pointwise bound with absolute values | Loses the Laguerre phase; does not rule out the new one-sided target. |
+| Zero-free region or zero density | Admits at least one off-line zero, enough to destroy Li at large indices. |
+| Fejér–Riesz | The required nonnegativity of the symbol is the conclusion. |
+| Abstract Kreĭn | The existence of some positive extension does not identify the arithmetic kernel. |
+| Recurrence across all phases | The Kronecker cost of the formulation tried exceeds the geometric gain. |
+| Heat, de Branges, Herglotz, LP | In the useful versions, real-rootedness or an equivalent condition reappears. |
+| Hodge/Lefschetz without an external object | Postulates the polarization that must be proved. |
+| Prolate or single gap | Does not identify the ground state nor exclude a negative index without a Weil-equivalent bound. |
+| Average, smoothing, single-level moments | Loses transversal support or an individual zero. |
+| New RDI coordinate | Does not count as closure without a new identity or inequality. |
 
-## Frontera matemática real
+## Real mathematical frontier
 
-Hay un objetivo terminal y varias obligaciones internas de una ruta concreta. No deben confundirse.
+There is a terminal objective and several internal obligations of a specific route. They must not be
+confused.
 
-| Obligación | Estado | Papel |
+| Obligation | Status | Role |
 |---|---|---|
-| \(\lambda_n\ge0\) para todo \(n\) | **ABIERTO / FUERZA-RH** | Objetivo terminal exacto. |
-| \(\lambda_n^{\rm prime}\ge-\lambda_n^{\rm arch}\) | **ABIERTO / FUERZA-RH** | Forma aritmética unilateral mínima del mismo objetivo. |
-| `BTG-DIV` en el verdadero \(\mu_L\) | **ABIERTO** | Obligación LP; no está probada neutralidad respecto del control fuera de línea. |
-| Interfaz LP libre de \(\mu_L\) fijado | **ABIERTO** | Reparación necesaria para la formulación build-neutral. |
-| `GAP-Z`, término ZERO | **ABIERTO** | Convergencia firmada; MESH y BND no la resuelven. |
-| `RDI-ANCHOR` o `C_core` identificado | **ABIERTO / FUERZA-RH** | Identificación Euler–Gamma de la ruta reciente. |
-| `RDP-SHELL`, PROLATE y WEIL-TAIL | **ABIERTO** | Puentes downstream; no deben atacarse antes del núcleo. |
-| Geometría externa con polarización | **NO CONSTRUIDA** | Alternativa conceptual, no infraestructura disponible. |
+| \(\lambda_n\ge0\) for all \(n\) | **OPEN / RH-STRENGTH** | Exact terminal objective. |
+| \(\lambda_n^{\rm prime}\ge-\lambda_n^{\rm arch}\) | **OPEN / RH-STRENGTH** | Minimal one-sided arithmetic form of the same objective. |
+| `BTG-DIV` in the true \(\mu_L\) | **OPEN** | LP obligation; neutrality with respect to the off-line control is not proved. |
+| LP interface free of a fixed \(\mu_L\) | **OPEN** | Repair needed for the build-neutral formulation. |
+| `GAP-Z`, the ZERO term | **OPEN** | Signed convergence; MESH and BND do not resolve it. |
+| `RDI-ANCHOR` or `C_core` identified | **OPEN / RH-STRENGTH** | Euler–Gamma identification of the recent route. |
+| `RDP-SHELL`, PROLATE and WEIL-TAIL | **OPEN** | Downstream bridges; must not be attacked before the core. |
+| External geometry with polarization | **NOT BUILT** | Conceptual alternative, not available infrastructure. |
 
-H0 permite concluir que toda cadena suficiente contiene al menos un paso falso o de fuerza-RH. No permite concluir que contiene exactamente uno mientras las demás obligaciones sigan abiertas. Por eso la hipótesis “DISCRIMINANT es el único hito y GAP-Z es neutral” no está demostrada. `RDI-ANCHOR` es claramente de fuerza-RH; LP y GAP-Z todavía no han sido clasificados en el objeto límite correcto.
+H0 allows one to conclude that every sufficient chain contains at least one false or RH-strength step.
+It does not allow concluding it contains exactly one while the other obligations remain open. That is
+why the hypothesis "DISCRIMINANT is the only milestone and GAP-Z is neutral" is not proved.
+`RDI-ANCHOR` is clearly RH-strength; LP and GAP-Z have not yet been classified at the correct limit
+object.
 
-## Reinicio recomendado
+## Recommended restart
 
-### Primer carril: Li unilateral y cancelación firmada
+### First lane: one-sided Li and signed cancellation
 
-Fijar primero, sin abreviaturas internas, la definición regularizada mediante el límite pareado
+First fix, without internal abbreviations, the regularized definition via the paired limit
 
 \[
 \lambda_n^{\rm prime}
@@ -286,9 +356,11 @@ L_{n-1}^{(1)}(\log m)
 \right]
 \]
 
-y todos los términos de polo, Gamma y borde. En el borde la serie desnuda no es absolutamente convergente; ninguna manipulación puede separar los términos que producen la continuación finita.
+and all the pole, Gamma and boundary terms. At the boundary the bare series is not absolutely
+convergent; no manipulation can separate the terms that produce the finite continuation.
 
-El mecanismo buscado debe conservar el signo antes de estimar. Escribiendo \(f_{n,\varepsilon}(y)=y^{-1-\varepsilon}L_{n-1}^{(1)}(\log y)\), la identidad de partida corregida es
+The sought mechanism must preserve the sign before estimating. Writing
+\(f_{n,\varepsilon}(y)=y^{-1-\varepsilon}L_{n-1}^{(1)}(\log y)\), the corrected starting identity is
 
 \[
 \lambda_n^{\rm prime}
@@ -297,7 +369,7 @@ El mecanismo buscado debe conservar el signo antes de estimar. Escribiendo \(f_{
 \int_1^\infty(\psi(y)-y+1)f'_{n,\varepsilon}(y)\,dy
 \]
 
-seguido del lower bound exacto
+followed by the exact lower bound
 
 \[
 \lim_{\varepsilon\downarrow0}
@@ -305,82 +377,105 @@ seguido del lower bound exacto
 \ge-\lambda_n^{\rm arch}.
 \]
 
-Cuando \(\lambda_n^{\rm arch}\ge0\), esto equivale a acotar la parte negativa por \(\lambda_n^{\rm arch}\). Para este split, la fórmula exacta de la parte arquimediana y su convexidad discreta dan
+When \(\lambda_n^{\rm arch}\ge0\), this is equivalent to bounding the negative part by
+\(\lambda_n^{\rm arch}\). For this split, the exact formula of the archimedean part and its discrete
+convexity give
 
 \[
 I_-:=\{n\ge1:\lambda_n^{\rm arch}<0\}=\{1,2,\ldots,7\}.
 \]
 
-La certificación usa
+Certification uses
 
 \[
 \lambda_n^{\rm arch}
 =1-\frac n2(\gamma+\log(4\pi))
-+\sum_{r\ {\rm impar}}
++\sum_{r\ {\rm odd}}
 \left[\left(1-\frac1r\right)^n-1+\frac nr\right]
 \]
 
-y, para \(d_n=\lambda_{n+1}^{\rm arch}-\lambda_n^{\rm arch}\),
+and, for \(d_n=\lambda_{n+1}^{\rm arch}-\lambda_n^{\rm arch}\),
 
 \[
 d_{n+1}-d_n
-=\sum_{r\ {\rm impar}}\frac{(1-1/r)^n}{r^2}>0.
+=\sum_{r\ {\rm odd}}\frac{(1-1/r)^n}{r^2}>0.
 \]
 
-Las evaluaciones por intervalos \(d_3\in(0.0062,0.0063)\), \(\lambda_7^{\rm arch}\in(-0.356,-0.355)\) y \(\lambda_8^{\rm arch}\in(0.020,0.022)\), junto con los valores negativos directos de \(n=1,2\), fijan el conjunto. En esos siete índices hay que verificar el lower bound completo y no se puede descartar la excursión prima positiva. No sirve sustituir la desigualdad por
+The interval evaluations \(d_3\in(0.0062,0.0063)\), \(\lambda_7^{\rm arch}\in(-0.356,-0.355)\) and
+\(\lambda_8^{\rm arch}\in(0.020,0.022)\), together with the direct negative values for \(n=1,2\), fix
+the set. At those seven indices the full lower bound must be verified and the positive prime
+excursion cannot be discarded. Replacing the inequality by
 
 \[
 \lim_{\varepsilon\downarrow0}
 \int_1^\infty|\psi(y)-y+1|\,|f'_{n,\varepsilon}(y)|\,dy,
 \]
 
-porque eso vuelve a una cota simétrica de fuerza-RH ya explorada. Tres clases candidatas actualmente identificadas, sin pretensión de exhaustividad, son una involución global entre celdas primas, una identidad de compensación polo–Gamma–primos o un principio variacional aritmético de una sola cara.
+does not work, because that returns to an already-explored RH-strength symmetric bound. Three
+candidate classes currently identified, with no claim of exhaustiveness, are a global involution
+between prime cells, a pole–Gamma–prime compensation identity, or a one-sided arithmetic variational
+principle.
 
-### Segundo carril: triage de LP y GAP-Z
+### Second lane: triage of LP and GAP-Z
 
-Este carril debe ser corto. Para LP se necesita un teorema abstracto o un contraejemplo en una clase que contenga tanto la construcción zeta como un control fuera de línea y que concluya en el verdadero \(\mu_L\). Para GAP-Z se debe decidir si ZERO se controla con axiomas compartidos por ambos builds o si requiere ya una identidad Euler específica. No se autoriza otra campaña de proxies.
+This lane must be short. For LP, an abstract theorem or a counterexample is needed in a class
+containing both the zeta construction and an off-line control, and concluding in the true \(\mu_L\).
+For GAP-Z, one must decide whether ZERO is controlled by axioms shared by both builds or already
+requires a specific Euler identity. No further campaign of proxies is authorized.
 
-Los resultados posibles son suficientes para decidir inversión:
+The possible outcomes are sufficient to decide investment:
 
-1. teorema build-neutral: la pieza queda como infraestructura;
-2. contraejemplo: la formulación se retira;
-3. necesidad de una propiedad aritmética separadora: la fuerza está repartida y cae la atribución exclusiva a IDENT.
+1. build-neutral theorem: the piece remains as infrastructure;
+2. counterexample: the formulation is withdrawn;
+3. need for a separating arithmetic property: the force is distributed and exclusive attribution to
+   IDENT falls.
 
-### Tercer carril: RDI sólo si aparece un mecanismo
+### Third lane: RDI only if a mechanism appears
 
-Si la ruta reciente sigue siendo necesaria, se congela una sola coordenada, preferentemente `C_core`, con orden de límites y fuente Gamma–Euler explícitos. No se desarrollan más equivalentes de `RDI-ANCHOR`. Una nueva formulación cuenta sólo si produce una estimación que la anterior no tenía. El control fuera de línea sólo es deductivo cuando pertenece a una clase de objetos completados con coeficientes, factor Gamma, ecuación funcional y regularización comparables; un cuarteto insertado a mano es sólo una prueba del detector del lado de ceros.
+If the recent route remains necessary, a single coordinate is frozen, preferably `C_core`, with an
+explicit order of limits and explicit Gamma–Euler source. No further equivalents of `RDI-ANCHOR` are
+developed. A new formulation counts only if it produces an estimate the previous one lacked. The
+off-line control is only deductive when it belongs to a class of completed objects with comparable
+coefficients, Gamma factor, functional equation and regularization; a hand-inserted quartet is only a
+test of the detector on the zero side.
 
-### Puerta bibliográfica y falsación
+### Bibliographic and falsification gate
 
-Antes de llamar nueva a una idea se debe escribir el enunciado sin vocabulario del repositorio, buscar por fórmula y mecanismo en fuentes primarias, y comparar hipótesis y conclusión. Esta auditoría es interna; no certifica prioridad bibliográfica.
+Before calling an idea new, the statement must be written without the repository's vocabulary,
+searched by formula and mechanism in primary sources, and hypothesis and conclusion compared. This
+audit is internal; it does not certify bibliographic priority.
 
-Antes de abrir otra fase, un candidato debe:
+Before opening another phase, a candidate must:
 
-1. fallar estructuralmente en un control aritmético fuera de línea perteneciente a una clase definida; si sólo existe un cuarteto plantado, superar esa prueba se registra como falsación heurística;
-2. ser compatible con un control sobre la línea sin usar sus ceros;
-3. preservar conjugación, soporte transversal y multiplicidad lineal;
-4. declarar el orden de todos los límites;
-5. no usar positividad de Weil, real-rootedness, un divisor ya real o una métrica adaptada;
-6. aportar una identidad o desigualdad nueva, no otro proxy o cambio de coordenada.
+1. fail structurally on an off-line arithmetic control belonging to a defined class; if only a planted
+   quartet exists, passing that test is recorded as heuristic falsification;
+2. be compatible with an on-line control without using its zeros;
+3. preserve conjugation, transversal support and linear multiplicity;
+4. declare the order of all limits;
+5. not use Weil positivity, real-rootedness, an already-real divisor, or an adapted metric;
+6. supply a new identity or inequality, not another proxy or change of coordinate.
 
-## Criterio de avance para el próximo ciclo
+## Progress criterion for the next cycle
 
-No se abre una fase por cantidad de cálculos. Se abre cuando existe un nuevo grado de libertad matemático y al menos una de estas salidas:
+A phase is not opened by quantity of computation. It is opened when a new mathematical degree of
+freedom exists and at least one of these outputs:
 
-- un lema firmado candidato con hipótesis aritméticas verificables;
-- un contraejemplo que retire una obligación abierta;
-- una reducción estricta que elimine una obligación sin sustituirla por un equivalente;
-- una prueba build-neutral de LP o GAP-Z en el objeto límite correcto;
-- una construcción geométrica externa con diagonal y polarización independientes.
+- a candidate signed lemma with verifiable arithmetic hypotheses;
+- a counterexample that removes an open obligation;
+- a strict reduction that eliminates an obligation without substituting an equivalent;
+- a build-neutral proof of LP or GAP-Z at the correct limit object;
+- an external geometric construction with independent diagonal and polarization.
 
-Hasta entonces, el trabajo pertenece al dossier de planificación. La prioridad inmediata es reparar el blanco de paper 36 y someter la ruta unilateral a la puerta bibliográfica. Después se decide si merece desarrollo matemático o si también cae bajo un no-go ya conocido.
+Until then, the work belongs to the planning dossier. The immediate priority is to repair paper 36's
+target and submit the one-sided route to the bibliographic gate. Afterward it is decided whether it
+deserves mathematical development or whether it too falls under an already-known no-go.
 
-## Navegación
+## Navigation
 
-- [`PAPER36_AUDIT.md`](PAPER36_AUDIT.md): auditoría detallada de la columna del manuscrito.
-- [`RH1_RH9_AUDIT.md`](RH1_RH9_AUDIT.md): balance de los nueve programas.
-- [`PHASES_AUDIT.md`](PHASES_AUDIT.md): genealogía completa de fases.
-- [`NO_GO_AND_RETRACTIONS.md`](NO_GO_AND_RETRACTIONS.md): paredes, circularidades y precedencia.
-- [`LIVE_FRONTIER_AND_RESTART_PLAN.md`](LIVE_FRONTIER_AND_RESTART_PLAN.md): protocolo operativo del reinicio.
-- [`COVERAGE_INDEX.md`](COVERAGE_INDEX.md): inventario, cobertura y tamaño.
-- [`fragments/`](fragments/): auditorías de bloque que sostienen esta síntesis.
+- [`PAPER36_AUDIT.md`](PAPER36_AUDIT.md): detailed audit of the manuscript's column.
+- [`RH1_RH9_AUDIT.md`](RH1_RH9_AUDIT.md): balance of the nine programs.
+- [`PHASES_AUDIT.md`](PHASES_AUDIT.md): complete genealogy of phases.
+- [`NO_GO_AND_RETRACTIONS.md`](NO_GO_AND_RETRACTIONS.md): walls, circularities and precedence.
+- [`LIVE_FRONTIER_AND_RESTART_PLAN.md`](LIVE_FRONTIER_AND_RESTART_PLAN.md): operative restart protocol.
+- [`COVERAGE_INDEX.md`](COVERAGE_INDEX.md): inventory, coverage and size.
+- [`fragments/`](fragments/): block audits supporting this synthesis.

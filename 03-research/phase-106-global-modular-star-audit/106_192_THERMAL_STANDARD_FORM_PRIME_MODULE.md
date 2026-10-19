@@ -144,7 +144,7 @@ Two matrix units in the expansions have nonzero Hilbert--Schmidt inner
 product precisely when
 
 \[
- j+a=k+c,qquad j+b=k+d,                                   \tag{11}
+ j+a=k+c,\qquad j+b=k+d,                                   \tag{11}
 \]
 
 which requires \(a-b=c-d\).  If, for example,
@@ -195,7 +195,7 @@ on (15).  Finite excitations form a dense invariant core, and their
 charges are
 
 \[
- \sum_p(a_p-b_p)\log p=\log q,qquad
+ \sum_p(a_p-b_p)\log p=\log q,\qquad
  q\in\mathbb Q_+^\times.                                  \tag{17}
 \]
 

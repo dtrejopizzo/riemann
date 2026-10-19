@@ -401,7 +401,7 @@ it." Two candid statements:
 
 1. **Attribution.** The identification of $\mathrm{Spec}\,\mathbb Z\times_{\mathbb F_1}\mathrm{Spec}\,\mathbb Z$
    with a Witt-vector object is attributed to Borger's programme. **I have not
-   read a Borger paper in this session and cite no theorem of his.** No paper of
+   read a Borger paper in this phase and cite no theorem of his.** No paper of
    his is in `00-references/papers-nuevos`.
 2. **The test, run on the object rather than on the attribution.** The object
    $W(\mathbb Z)=1+T\mathbb Z[[T]]$, with its truncations $W_n(\mathbb Z)\cong\mathbb Z^n$
@@ -484,7 +484,7 @@ is not *false*, it is *unformulated*.
 ### 6.3 Durov, Toën–Vaquié, hyperrings
 
 **NOT TESTED HERE.** No paper by Durov or Toën–Vaquié is in
-`00-references/papers-nuevos`, and I read none in this session. I record no
+`00-references/papers-nuevos`, and I read none in this phase. I record no
 verdict rather than a guessed one. What the criterion buys is that the test is
 now one line: *exhibit the pair $(\text{rank}_m,\log\text{radius}_m)$ and check
 both are $\Theta(m)$.* Any future file testing them owes exactly that pair.

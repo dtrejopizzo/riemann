@@ -1,6 +1,5 @@
 # E67.16 / E67.17 -- the Toeplitz-symbol form of Omega_7 (a better surface)
 
-**Date:** 2026-07-06.
 **Scripts:** [E67_16_structure_probe.py](E67_16_structure_probe.py),
 [E67_17_symbol_positivity.py](E67_17_symbol_positivity.py).
 

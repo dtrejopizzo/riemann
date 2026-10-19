@@ -1,6 +1,6 @@
 # R154.031 — Literature reading for Paper 47 (primary sources, read in full)
 
-*Date 2026-09-21. Task: (P154.9) read the five items flagged as "must obtain / must read before any
+* Task: (P154.9) read the five items flagged as "must obtain / must read before any
 priority claim" in R154.013, and replace the secondary-source entries there by quoted primary text.*
 
 **Method and honesty statement.** Zhu (arXiv:2608.24827v2, 34 pp.), Groskin (arXiv:2607.02828v3,
@@ -543,7 +543,7 @@ positivity constant produced by an explicit certificate rather than by a spectra
   author = {Suzuki, Masatoshi},
   title  = {On the {H}ilbert space derived from the {W}eil distribution},
   year   = {2025},
-  note   = {version 3, 7 November 2025},
+  note = {version 3, 7},
   eprint = {2301.00421},
   archivePrefix = {arXiv},
   primaryClass  = {math.NT}
@@ -553,7 +553,7 @@ positivity constant produced by an explicit certificate rather than by a spectra
   author = {Groskin, Akiva},
   title  = {A finite {G}uinand--{W}eil dictionary and archimedean tail order for the truncated {W}eil quadratic form},
   year   = {2026},
-  note   = {version 3, 14 August 2026},
+  note = {version 3, 14},
   eprint = {2607.02828},
   archivePrefix = {arXiv},
   primaryClass  = {math.NT}
@@ -563,7 +563,7 @@ positivity constant produced by an explicit certificate rather than by a spectra
   author = {Zhu, Xuefeng},
   title  = {{W}eil positivity in compact windows: a finite reduction, certified two-sided bounds, and a {L}andau--{W}idom decay law},
   year   = {2026},
-  note   = {version 2, 2 September 2026},
+  note = {version 2, 2},
   eprint = {2608.24827},
   archivePrefix = {arXiv},
   primaryClass  = {math.NT}

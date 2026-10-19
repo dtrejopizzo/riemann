@@ -1,6 +1,5 @@
 # E73.154 - Cauchy-plane residual equation
 
-Date: 2026-07-12.
 
 ## 1. Purpose
 

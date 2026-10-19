@@ -1,7 +1,6 @@
 # E72.36 -- Falsifier for naive discrete Mellin divisibility
 
-**Date:** 2026-07-08.
-**Role:** test whether the divisibility from E72.33 is already present in the raw finite CCM matrices
+**Purpose:** test whether the divisibility from E72.33 is already present in the raw finite CCM matrices
 with the most direct discrete cell convention.
 
 ## 0. Test convention

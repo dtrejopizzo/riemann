@@ -1,6 +1,6 @@
 """crosscheck_regime.py -- Theorem-Z cross-check, one window per prime regime.
 Zero side (Gcut=800) vs prime/Gamma side of (7.2) with Gauss-Legendre order 800
-(hostile-audit repair R155_006 SS3).  DIAGNOSTIC."""
+(audit repair R155_006 SS3).  DIAGNOSTIC."""
 import numpy as np, json, time
 import reglib as RG
 

@@ -186,7 +186,7 @@ control arbitrary profiles or all \(N\).
 
 A reproducible six-bin scan using fixed anchor thresholds and eight seeded
 random thresholds in \(3\le N\le260\) is stored in
-`current-chat/work/mean_zero_schur_scan.csv`. Across its eighteen sampled
+`working-notes/work/mean_zero_schur_scan.csv`. Across its eighteen sampled
 thresholds, the smallest full quotient stays above \(4.08\), the smallest
 zero-mean quotient increases from about \(7.11\) to \(11.51\), and the
 finite-dimensional Schur fraction stays below \(0.0144\). This strengthens
@@ -201,7 +201,7 @@ the numerical pattern but does not change the OPEN status.
 - Proposed Cauchy--Schwarz/Gamma-gap closure: **REJECTED BY AUDIT**.
 - Uniform Schur-angle bound and row (d): **OPEN**.
 
-## Addendum (2026-08-17): the second open target
+## Addendum: the second open target
 
 Two external audits of `main.tex` concluded that row (d) had a *second*,
 unnamed gap — the passage from the source estimate to the physical threshold

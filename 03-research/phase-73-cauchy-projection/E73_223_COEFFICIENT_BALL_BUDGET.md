@@ -1,6 +1,5 @@
 # E73.223 - Packet coefficient ball budget
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

@@ -1,6 +1,5 @@
 # E73.281 - Generated pairing annihilation correction
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

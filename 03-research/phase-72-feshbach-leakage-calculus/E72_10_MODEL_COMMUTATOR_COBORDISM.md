@@ -1,7 +1,6 @@
 # E72.10 -- Model commutator cobordism for PSC
 
-**Date:** 2026-07-08.
-**Role:** replace the abstract PSC primitive by an explicit commutator mechanism against the model
+**Purpose:** replace the abstract PSC primitive by an explicit commutator mechanism against the model
 prolate complement.
 
 ## 0. Purpose

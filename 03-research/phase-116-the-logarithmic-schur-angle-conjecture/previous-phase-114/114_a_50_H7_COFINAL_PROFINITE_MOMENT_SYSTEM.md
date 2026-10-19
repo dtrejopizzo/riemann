@@ -29,7 +29,7 @@ The repair is to retain old residue factors instead of replacing them.
 Put
 
 \[
- T_j=2^j,qquad
+ T_j=2^j,\qquad
  r_j=\left\lfloor\log_3(2^{T_j+1}+1)\right\rfloor,                       \tag{2.1}
 \]
 
@@ -52,7 +52,7 @@ and the bounded tree arities is a unit modulo every `M_j`.
 For `0<=s<2r_j`, let
 
 \[
- \chi_{s,j}([x])=x^s\pmod {M_j},qquad
+ \chi_{s,j}([x])=x^s\pmod {M_j},\qquad
  \mathcal E_j=(\chi_{0,j},\ldots,\chi_{2r_j-1,j}).                       \tag{2.4}
 \]
 
@@ -89,7 +89,7 @@ complete balanced code of rank `r_t` and denominator `q^t`.
 Project (2.4) to its factor modulo `ell_j`. By (2.2),
 
 \[
- \ell_j>q^{T_j}\ge q^t,qquad
+ \ell_j>q^{T_j}\ge q^t,\qquad
  \ell_j>3^{r_j}\ge3^{r_t}.                                                \tag{3.1}
 \]
 
@@ -111,7 +111,7 @@ grouped coefficient is zero modulo `ell_j`, hence zero as an integer by
 Bertrand's postulate gives `ell_i<2H_i`. Along the fixed ray,
 
 \[
- \log H_i=O(T_i),qquad
+ \log H_i=O(T_i),\qquad
  \log M_j=\sum_{i=0}^j\log\ell_i
           =O\left(\sum_{i=0}^j2^i\right)=O(T_j).                         \tag{4.1}
 \]

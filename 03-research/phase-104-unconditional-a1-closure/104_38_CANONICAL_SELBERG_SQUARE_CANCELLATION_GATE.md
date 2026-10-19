@@ -1,35 +1,36 @@
-# 104_38 — Cancelación del cuadrado Selberg canónico y gate del cuadrado de Schur
+# 104_38 — Canonical Selberg square cancellation and the Schur-square gate
 
-**Estado.** Se intentó cerrar el determinante adyacente
+**Status.** An attempt was made to close the adjacent determinant
 
 \[
  \mathcal T_n=4H_nd_n-(H_n+d_n-H_{n+1})^2
  \tag{1}
 \]
 
-con la identidad exacta de Selberg para los pesos canónicos
-\(\log p\), manteniendo juntos el término lineal, el término cuadrático,
-el bloque arquimediano y las potencias primas superiores. El resultado es
-un stop-gate algebraico más estrecho que el menor Hankel de `104_37`:
+using the exact Selberg identity for the canonical weights
+\(\log p\), keeping the linear term, the quadratic term, the archimedean
+block, and the higher prime powers together. The result is an algebraic
+stop-gate narrower than the Hankel minor of `104_37`:
 
-1. el único cuadrado \(\mu*\mu\) producido por Selberg se cancela
-   **idénticamente** contra el cuadrado introducido por la inversión;
-2. si, en vez de cancelarlo, se intenta usar ese cuadrado para pagar el
-   término de Schur de (1), el núcleo residual tiene diagonal negativa en
-   la cola para todo \(n\ge2\);
-3. el testigo diagonal puede situarse en \(R=\log p\), con el peso
-   canónico \(\log p\), para un primo real arbitrariamente grande.
+1. the single square \(\mu*\mu\) produced by Selberg cancels
+   **identically** against the square introduced by the inversion;
+2. if, instead of canceling it, one tries to use that square to pay for
+   the Schur term of (1), the residual kernel has a negative diagonal in
+   the tail for every \(n\ge2\);
+3. the diagonal witness can be placed at \(R=\log p\), with the
+   canonical weight \(\log p\), for an arbitrarily large real prime.
 
-Esto descarta una completación de cuadrados basada en la primera identidad
-de Selberg, incluso después de incorporar exactamente el taper óptimo. No
-refuta \(\mathcal T_n\ge0\) para la medida aritmética completa: una prueba
-todavía podría usar una cancelación firmada especial entre los términos
-lineal y cuadrático **en el valor canónico total**, pero ya no puede
-obtenerla declarando positivo el resto cuadrático. No se prueba A1 ni RH.
+This rules out a completing-the-square approach based on the first
+Selberg identity, even after exactly incorporating the optimal taper. It
+does not refute \(\mathcal T_n\ge0\) for the complete arithmetic measure: a
+proof could still use a special signed cancellation between the linear and
+quadratic terms **at the total canonical value**, but it can no longer
+obtain it by declaring the quadratic remainder positive. Neither A1 nor RH
+is proved.
 
-## 1. Forma regulada con todos los bloques conservados
+## 1. Regulated form with all blocks kept
 
-Fijemos \(a>1\). Usamos la notación de `104_35`:
+Fix \(a>1\). We use the notation of `104_35`:
 
 \[
  d\alpha=\sum_p\log p\,\delta_{\log p},\qquad
@@ -44,15 +45,15 @@ Fijemos \(a>1\). Usamos la notación de `104_35`:
  \tag{3}
 \]
 
-Sea la contribución convergente de las potencias superiores, con la misma
-regularización,
+Let the convergent contribution of the higher powers, with the same
+regularization, be
 
 \[
  C_{n,a}:=a\sum_p\sum_{k\ge2}{\log p\over p^{ka}}
               L_{n-1}^{(1)}(ka\log p).
 \]
 
-Entonces
+Then
 
 \[
  B_{n,a}=C_{n,a}-P_{n,a},\qquad
@@ -61,7 +62,7 @@ Entonces
  \tag{4}
 \]
 
-Pongamos
+Set
 
 \[
  d_{n,a}=\kappa\Delta A_n-B_{1,a},\qquad
@@ -69,7 +70,7 @@ Pongamos
  \tag{5}
 \]
 
-Para \(a\downarrow1\), se tiene
+As \(a\downarrow1\),
 
 \[
  d_{n,a}\longrightarrow d_n=\kappa\Delta A_n+\gamma>0,
@@ -78,7 +79,7 @@ Para \(a\downarrow1\), se tiene
  \tag{6}
 \]
 
-La polarización exacta de `104_34` vale antes del límite:
+The exact polarization of `104_34` holds before the limit:
 
 \[
  \mathsf M_a[g_n+t\phi_n]
@@ -86,8 +87,8 @@ La polarización exacta de `104_34` vale antes del límite:
  \tag{7}
 \]
 
-En particular, para \(a>1\) suficientemente cercano a uno,
-\(d_{n,a}>0\) y
+In particular, for \(a>1\) sufficiently close to one,
+\(d_{n,a}>0\) and
 
 \[
  \min_t\mathsf M_a[g_n+t\phi_n]
@@ -95,20 +96,20 @@ En particular, para \(a>1\) suficientemente cercano a uno,
  \tag{8}
 \]
 
-No se ha omitido ninguna potencia superior: está toda en \(C_{n,a}\).
-Tampoco se separó el polo: está acoplado a \(P_{n,a}\) mediante
+No higher power has been omitted: everything is in \(C_{n,a}\). Nor was
+the pole separated: it is coupled to \(P_{n,a}\) via
 \(\beta-\alpha\).
 
-## 2. El funcional de la entrada cruzada
+## 2. The cross-entry functional
 
-La identidad de Laguerre
+The Laguerre identity
 
 \[
  L_n^{(1)}-L_{n-1}^{(1)}=L_n
  \tag{9}
 \]
 
-da
+gives
 
 \[
  \ell_{n,a}(u)
@@ -117,34 +118,34 @@ da
  \tag{10}
 \]
 
-Si
+If
 
 \[
  c_{n,a}:=\Delta C_{n,a}-C_{1,a},
  \tag{11}
 \]
 
-entonces (3)--(5) producen, sin estimación,
+then (3)–(5) produce, with no estimate,
 
 \[
  \boxed{x_{n,a}=c_{n,a}+\langle\ell_{n,a},\mu\rangle.}
  \tag{12}
 \]
 
-Así el cuadrado que hay que pagar en (8) es un cuadrado de un funcional
-lineal de la medida centrada real, junto con el borde ordinariamente
-convergente de las potencias superiores.
+So the square that (8) must pay for is a square of a linear functional of
+the real centered measure, together with the ordinarily convergent
+boundary term of the higher powers.
 
-## 3. La cancelación exacta del cuadrado Selberg
+## 3. Exact cancellation of the Selberg square
 
-Definamos
+Define
 
 \[
  d\mathcal B_p=u\,d\mu+2\beta*\mu+\mu*\mu,
  \tag{13}
 \]
 
-y sea \(G_{n,a}\) la solución decreciente de
+and let \(G_{n,a}\) be the decreasing solution of
 
 \[
  (\mathcal TG)(v)
@@ -153,7 +154,7 @@ y sea \(G_{n,a}\) la solución decreciente de
  \tag{14}
 \]
 
-La identidad (23) de `104_35` es
+Identity (23) of `104_35` is
 
 \[
  P_{n,a}=-\langle G_{n,a},\mathcal B_p\rangle
@@ -163,8 +164,8 @@ La identidad (23) de `104_35` es
  \tag{15}
 \]
 
-Aquí no queda un cuadrado positivo escondido. En efecto, al insertar
-(13), Fubini da la identidad de formas
+No hidden positive square remains here. Indeed, inserting
+(13), Fubini gives the form identity
 
 \[
 \begin{aligned}
@@ -176,22 +177,22 @@ Aquí no queda un cuadrado positivo escondido. En efecto, al insertar
  \tag{16}
 \]
 
-El sumando \(-\langle G,\mu*\mu\rangle\) de la primera línea se
-cancela coeficiente por coeficiente con
-\(+\mathcal Q_G(\mu)\). Para \(\mathcal TG=w_{n,a}\), (16) vuelve
-exactamente a (3). La cancelación usa los pesos reales de (2), no una
-envolvente ni una medida competidora.
+The summand \(-\langle G,\mu*\mu\rangle\) of the first line cancels
+coefficient by coefficient against
+\(+\mathcal Q_G(\mu)\). For \(\mathcal TG=w_{n,a}\), (16) returns exactly
+to (3). The cancellation uses the real weights of (2), not an envelope or
+a competing measure.
 
-Por tanto hay solo dos opciones contables:
+Hence there are only two accountable options:
 
-* expandir (13), en cuyo caso el cuadrado Selberg desaparece y (8) vuelve
-  al funcional lineal original menos el cuadrado de Schur;
-* conservar \(\mathcal Q_G\), en cuyo caso hay que estudiar el núcleo
-  cuadrático residual de la sección siguiente.
+* expand (13), in which case the Selberg square disappears and (8)
+  returns to the original linear functional minus the Schur square;
+* keep \(\mathcal Q_G\), in which case one must study the residual
+  quadratic kernel of the next section.
 
-## 4. El núcleo residual tiene diagonal negativa
+## 4. The residual kernel has a negative diagonal
 
-Insertando (12) y (15) en (8), y sin separar ningún bloque, obtenemos
+Inserting (12) and (15) into (8), with no block separated, we obtain
 
 \[
 \begin{aligned}
@@ -205,9 +206,9 @@ Insertando (12) y (15) en (8), y sin separar ningún bloque, obtenemos
  \tag{17}
 \]
 
-Los dos términos cuadráticos que una completación intentaría comparar,
-\(\mathcal Q_{G_{n,a}}(\mu)\) y el cuadrado de la entrada cruzada,
-tienen como diferencia el kernel
+The two quadratic terms a completion-of-squares argument would try to
+compare, \(\mathcal Q_{G_{n,a}}(\mu)\) and the square of the cross entry,
+have as their difference the kernel
 
 \[
  \boxed{
@@ -216,13 +217,13 @@ tienen como diferencia el kernel
  \tag{18}
 \]
 
-No es la parte cuadrática total de (17): al expandir
-\(-\langle G,\mathcal B_p\rangle\), su término
-\(-\langle G,\mu*\mu\rangle\) cancela \(\mathcal Q_G\), como prueba
-(16). Precisamente por eso, conservar \(\mathcal Q_G\) como una supuesta
-reserva exige que la diferencia (18) tenga signo, mientras el término
-restante se controla sin volver a usar el mismo cuadrado. Esa diferencia
-no es semidefinida positiva. Para \(n\ge2\), (10) da
+This is not the total quadratic part of (17): expanding
+\(-\langle G,\mathcal B_p\rangle\), its term
+\(-\langle G,\mu*\mu\rangle\) cancels \(\mathcal Q_G\), as (16) proves.
+Precisely because of that, keeping \(\mathcal Q_G\) as a supposed reserve
+requires difference (18) to have a sign, while the remaining term is
+controlled without using the same square again. That difference is not
+positive semidefinite. For \(n\ge2\), (10) gives
 
 \[
  \ell_{n,a}(R)
@@ -230,7 +231,7 @@ no es semidefinida positiva. Para \(n\ge2\), (10) da
    \{1+O_{n,a}(R^{-1})\}.                                  \tag{19}
 \]
 
-Por el Lema 5.1 de `104_37`, aplicado al test no tapered,
+By Lemma 5.1 of `104_37`, applied to the untapered test,
 
 \[
  G_{n,a}(2R)
@@ -238,7 +239,7 @@ Por el Lema 5.1 de `104_37`, aplicado al test no tapered,
  e^{-2aR}(2R)^{n-2}\{1+O_{n,a}(R^{-1})\}.                  \tag{20}
 \]
 
-Como \(2n>n-2\), (18)--(20) implican
+Since \(2n>n-2\), (18)–(20) imply
 
 \[
  \boxed{
@@ -247,11 +248,11 @@ Como \(2n>n-2\), (18)--(20) implican
    e^{-2aR}R^{2n}\{1+O_{n,a}(R^{-1})\}<0}                 \tag{21}
 \]
 
-para todo \(R\) suficientemente grande. Esto es un testigo de **un solo
-punto**, no el menor Hankel de dos puntos de `104_37`.
+for every sufficiently large \(R\). This is a **single-point** witness,
+not the two-point Hankel minor of `104_37`.
 
-Hay primos arbitrariamente grandes. Por consiguiente puede elegirse un
-primo real \(p\) con \(R=\log p\) dentro del rango de (21), y entonces
+There are arbitrarily large primes. Consequently, a real prime \(p\)
+with \(R=\log p\) can be chosen within the range of (21), and then
 
 \[
  \mathcal Q_{K_{n,a}}
@@ -259,22 +260,21 @@ primo real \(p\) con \(R=\log p\) dentro del rango de (21), y entonces
  = (\log p)^2K_{n,a}(\log p,\log p)<0.                      \tag{22}
 \]
 
-El átomo de (22) está en el soporte primo verdadero y lleva exactamente
-el peso canónico \(\log p\). Así ni siquiera el cuadrado residual exigido
-por el Schur adyacente es una energía sobre las direcciones atómicas
-canónicas.
+The atom of (22) lies on the real prime support and carries exactly the
+canonical weight \(\log p\). So not even the residual square required by
+the adjacent Schur step is an energy over the canonical atomic directions.
 
-## 5. Defecto de colisión: por qué el cuadrado de Schur no es Hankel
+## 5. Collision defect: why the Schur square is not Hankel
 
-Existe una obstrucción local independiente de la cola. Todo kernel
-producido por una convolución Selberg depende de \(u+v\). En cambio, el
-kernel de rango uno que aparece en (18) no es Hankel. De (10),
+There is a local obstruction independent of the tail. Every kernel
+produced by a Selberg convolution depends on \(u+v\). By contrast, the
+rank-one kernel appearing in (18) is not Hankel. From (10),
 
 \[
  \ell_{n,a}(0)=0,\qquad \ell_{n,a}'(0)=-na^2.               \tag{23}
 \]
 
-Tomando dos descomposiciones del mismo número \(5x\), resulta
+Taking two decompositions of the same number \(5x\), one obtains
 
 \[
  \boxed{
@@ -284,38 +284,40 @@ Tomando dos descomposiciones del mismo número \(5x\), resulta
  =-2n^2a^4<0.}                                             \tag{24}
 \]
 
-Si existiera una función \(J\) con
-\(J(u+v)=\ell_{n,a}(u)\ell_{n,a}(v)\) en un entorno, los dos productos
-de (24) serían idénticos. Por tanto el cuadrado escalar de la entrada
-cruzada no puede identificarse con la convolución cuadrática de Selberg.
-La diferencia no es una constante pequeña: ya aparece a orden \(x^2\)
-con coeficiente explícito \(-2n^2a^4\).
+If there existed a function \(J\) with
+\(J(u+v)=\ell_{n,a}(u)\ell_{n,a}(v)\) in a neighborhood, the two products
+of (24) would be identical. Hence the scalar square of the cross entry
+cannot be identified with the Selberg quadratic convolution. The
+difference is not a small constant: it already appears at order \(x^2\)
+with explicit coefficient \(-2n^2a^4\).
 
-## 6. Decisión
+## 6. Decision
 
 ```text
-probado incondicionalmente:
-  forma regulada completa (7)--(8), con polo y potencias superiores;
-  respuesta exacta de la entrada cruzada (10)--(12);
-  cancelación identidad del término mu*mu de Selberg (16);
-  kernel residual exacto (18);
-  diagonal negativa (21) para todo n>=2;
-  testigo de un átomo con soporte y peso primo canónicos (22);
-  defecto de colisión cuantitativo (24).
+proved unconditionally:
+  the complete regulated form (7)--(8), with pole and higher powers;
+  the exact cross-entry response (10)--(12);
+  the identity cancellation of the mu*mu Selberg term (16);
+  the exact residual kernel (18);
+  negative diagonal (21) for every n>=2;
+  a single-atom witness with canonical prime support and weight (22);
+  the quantitative collision defect (24).
 
-descartado:
-  usar el cuadrado Selberg como reserva positiva para pagar el Schur;
-  representar exactamente el cuadrado de la entrada cruzada por un
-  kernel de convolución/Hankel;
-  cerrar T_n>=0 declarando PSD el resto cuadrático de (17).
+ruled out:
+  using the Selberg square as a positive reserve to pay for the Schur
+  term;
+  representing exactly the square of the cross entry by a
+  convolution/Hankel kernel;
+  closing T_n>=0 by declaring the quadratic remainder of (17) PSD.
 
-permanece abierto:
-  una desigualdad de valor para la medida canónica completa que conserve
-  la cancelación entre la parte lineal de (17), su parte cuadrática
-  indefinida, el bloque arquimediano y C_{n,a};
-  T_n>=0 para todo n>=149, A1 y RH.
+remains open:
+  a value inequality for the complete canonical measure that preserves
+  the cancellation between the linear part of (17), its indefinite
+  quadratic part, the archimedean block, and C_{n,a};
+  T_n>=0 for every n>=149, A1, and RH.
 ```
 
-`tools/canonical_selberg_square_gate_check.py` verifica con `Fraction` la
-cancelación (16) en medidas atómicas formales, la identidad (10), los
-coeficientes principales de (19)--(21) y el coeficiente de colisión (24).
+`tools/canonical_selberg_square_gate_check.py` checks with `Fraction` the
+cancellation (16) on formal atomic measures, identity (10), the leading
+coefficients of (19)–(21), and the collision coefficient (24).
+</content>

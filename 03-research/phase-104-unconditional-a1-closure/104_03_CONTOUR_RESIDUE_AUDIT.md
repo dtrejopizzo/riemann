@@ -1,12 +1,12 @@
-# 104_03 — Auditoría del contorno binomial y de los residuos
+# 104_03 — Audit of the binomial contour and of the residues
 
-**Rol:** auditoría de signos y normalización. Este documento no es el frente de Phase 104 y
-no contiene una estimación nueva de A1.
+This document is not the front of Phase 104 and
+contains no new estimate of A1.
 
-**Veredicto.** El contorno pequeño de 103_66 es exacto e incondicional. Los polos triviales
-de \(R\) tienen el signo que se esperaba localmente, pero **su suma de residuos desnudos
-diverge**. La suma convergente aparece únicamente después de conservar la normalización
-canónica de género uno; entonces el bloque trivial es exactamente
+**Verdict.** The small contour of 103_66 is exact and unconditional. The trivial poles
+of \(R\) have the sign expected locally, but **the sum of the bare residues
+diverges**. The convergent sum appears only after keeping the canonical genus-one
+normalization; then the trivial block is exactly
 
 \[
  \mathcal T_n^{\rm triv}
@@ -15,15 +15,15 @@ canónica de género uno; entonces el bloque trivial es exactamente
 \tag{0}
 \]
 
-Por tanto los residuos triviales no reconstruyen \(A_n\) directamente: reconstruyen, tras la
-subtracción canónica, su **primera diferencia** salvo el término afín explícito de (0). Una
-deformación que sume solo los residuos \((1-1/a)^n/a\) es ilegítima.
+Therefore the trivial residues do not reconstruct \(A_n\) directly: after the canonical
+subtraction, they reconstruct its **first difference**, up to the explicit affine term of (0).
+A deformation that sums only the residues \((1-1/a)^n/a\) is illegitimate.
 
 ---
 
-## 1. El contorno local exacto
+## 1. The exact local contour
 
-Póngase
+Set
 
 \[
  Z(t)=t\zeta(1+t),\qquad h(t)=\log Z(t),\qquad
@@ -31,8 +31,8 @@ Póngase
 \tag{1}
 \]
 
-El polo de \(\zeta(1+t)\) en \(t=0\) se cancela: \(Z\) es entera, \(Z(0)=1\), y \(R\) es
-analítica en un disco alrededor del origen. Escribamos
+The pole of \(\zeta(1+t)\) at \(t=0\) cancels: \(Z\) is entire, \(Z(0)=1\), and \(R\) is
+analytic in a disc around the origin. Write
 
 \[
  R(t)=\sum_{j\ge0}r_jt^j,\qquad
@@ -40,9 +40,9 @@ analítica en un disco alrededor del origen. Escribamos
 \tag{2}
 \]
 
-### Teorema 1 (contorno binomial)
+### Theorem 1 (binomial contour)
 
-Si \(0<r<\mathrm{dist}(0,\{t:Z(t)=0\})\), entonces
+If \(0<r<\mathrm{dist}(0,\{t:Z(t)=0\})\), then
 
 \[
  \boxed{
@@ -51,7 +51,7 @@ Si \(0<r<\mathrm{dist}(0,\{t:Z(t)=0\})\), entonces
 \tag{3}
 \]
 
-Equivalentemente, con \(t=z/(1-z)\),
+Equivalently, with \(t=z/(1-z)\),
 
 \[
  \boxed{
@@ -59,18 +59,18 @@ Equivalentemente, con \(t=z/(1-z)\),
 \tag{4}
 \]
 
-*Demostración.* En (3), el residuo en cero de
-\(r_jt^j(1+t)^nt^{-n-1}\) es \({n\choose j}\) para \(0\le j\le n\), y cero
-para \(j>n\). La suma es finita. Para (4), se sustituye la serie de Taylor de \(R\) y se usa
-\([z^n]z^j(1-z)^{-j-1}={n\choose j}\). No se ha movido el contorno a través de ningún cero.
+*Proof.* In (3), the residue at zero of
+\(r_jt^j(1+t)^nt^{-n-1}\) is \({n\choose j}\) for \(0\le j\le n\), and zero
+for \(j>n\). The sum is finite. For (4), substitute the Taylor series of \(R\) and use
+\([z^n]z^j(1-z)^{-j-1}={n\choose j}\). The contour has not been moved across any zero.
 \(\square\)
 
-No hacen falta ramas de logaritmo para (3): \(R=-Z'/Z\) es meromorfa y monovaluada. Una rama
-de \(h=-\int R\) solo debe fijarse si se integra por partes usando la primitiva.
+No logarithm branches are needed for (3): \(R=-Z'/Z\) is meromorphic and single-valued. A
+branch of \(h=-\int R\) needs to be fixed only if one integrates by parts using the primitive.
 
-### Corolario 1.1 (relación con los coeficientes de Li)
+### Corollary 1.1 (relation to the Li coefficients)
 
-Si \(P_n=\lambda_n-A_n\) es el bloque primo en la normalización de Phase 103, entonces
+If \(P_n=\lambda_n-A_n\) is the prime block in the Phase 103 normalization, then
 
 \[
  C_n=-\Delta P_n=\Delta A_n-\Delta\lambda_n,
@@ -79,28 +79,28 @@ Si \(P_n=\lambda_n-A_n\) es el bloque primo en la normalización de Phase 103, e
 \tag{5}
 \]
 
-*Demostración.* Si \(h(t)=\sum_{k\ge1}p_kt^k\), entonces
-\(r_j=-(j+1)p_{j+1}\). La fórmula exacta
-\(P_n=\sum_{k=1}^nk{n\choose k}p_k\) de 103_52 da
-\(\Delta P_n=\sum_{k=1}^{n+1}k{n\choose k-1}p_k=-C_n\). Telescopar desde
-\(\lambda_0=A_0=0\) da la segunda identidad. \(\square\)
+*Proof.* If \(h(t)=\sum_{k\ge1}p_kt^k\), then
+\(r_j=-(j+1)p_{j+1}\). The exact formula
+\(P_n=\sum_{k=1}^nk{n\choose k}p_k\) from 103_52 gives
+\(\Delta P_n=\sum_{k=1}^{n+1}k{n\choose k-1}p_k=-C_n\). Telescoping from
+\(\lambda_0=A_0=0\) gives the second identity. \(\square\)
 
-Ésta es la razón por la que el contorno de 103_66 controla una primera diferencia y no
-\(A_n\) directamente.
+This is why the 103_66 contour controls a first difference and not
+\(A_n\) directly.
 
 ---
 
-## 2. Singularidades y signo local
+## 2. Singularities and local sign
 
-Los polos de \(R\) son los ceros de \(Z\), con multiplicidad y residuo negativo:
+The poles of \(R\) are the zeros of \(Z\), with multiplicity and negative residue:
 
-* un cero no trivial \(\rho\) de \(\zeta\) produce \(t_\rho=\rho-1\) y
+* a nontrivial zero \(\rho\) of \(\zeta\) produces \(t_\rho=\rho-1\) and
   \(\mathrm{Res}_{t=t_\rho}R=-m_\rho\);
-* el cero trivial \(-2k\) produce
-  \(t_k=-(2k+1)=-a_k\), \(a_k=3,5,\ldots\), y
+* the trivial zero \(-2k\) produces
+  \(t_k=-(2k+1)=-a_k\), \(a_k=3,5,\ldots\), and
   \(\mathrm{Res}_{t=-a_k}R=-1\).
 
-En \(t=-a\),
+At \(t=-a\),
 
 \[
  {(1+t)^n\over t^{n+1}}
@@ -108,45 +108,46 @@ En \(t=-a\),
 \tag{6}
 \]
 
-así que el residuo **del integrando** de (3) es
+so the residue **of the integrand** in (3) is
 
 \[
  +{1\over a}\left(1-{1\over a}\right)^n.
 \tag{7}
 \]
 
-Si un contorno grande contiene ese polo, el teorema de residuos dice
+If a large contour contains that pole, the residue theorem says
 
 \[
- C_n=I_{\rm exterior}-\sum_{\text{polos cruzados}}\mathrm{Res}(RK_n).
+ C_n=I_{\rm exterior}-\sum_{\text{crossed poles}}\mathrm{Res}(RK_n).
 \tag{8}
 \]
 
-Por eso el aporte desnudo de (7) entra en \(C_n\) con signo negativo. Ambos signos —el del
-residuo local y el de su traslado a (8)— deben registrarse; confundirlos cambia el resultado.
+That is why the bare contribution of (7) enters \(C_n\) with a negative sign. Both signs —
+that of the local residue and that of its transfer into (8) — must be tracked; confusing them
+changes the result.
 
 ---
 
-## 3. Por qué la suma desnuda de residuos es falsa
+## 3. Why the bare sum of residues is false
 
-Para \(a=3,5,\ldots\), el término que (8) intentaría sumar es
+For \(a=3,5,\ldots\), the term that (8) would try to sum is
 
 \[
  -{1\over a}(1-1/a)^n=-{1\over a}+O_n(a^{-2}),
 \tag{9}
 \]
 
-y por tanto diverge. No existe una «suma de todos los residuos triviales» formada con (9).
-El arco exterior y la normalización de Hadamard no pueden descartarse por separado.
+and therefore diverges. There is no "sum of all trivial residues" formed with (9).
+The exterior arc and the Hadamard normalization cannot be discarded separately.
 
-La factorización canónica de género uno de \(Z\) asigna al cero \(-a\) el factor
+The canonical genus-one factorization of \(Z\) assigns to the zero \(-a\) the factor
 
 \[
  E_1(-t/a)=(1+t/a)e^{-t/a}.
 \tag{10}
 \]
 
-Su contribución al logaritmo derivado normalizado es
+Its contribution to the normalized logarithmic derivative is
 
 \[
  -{d\over dt}\log E_1(-t/a)
@@ -154,8 +155,8 @@ Su contribución al logaritmo derivado normalizado es
 \tag{11}
 \]
 
-La constante \(1/a\), que es precisamente la exponencial canónica omitida por el residuo
-desnudo, aporta \(1/a\) a la transformada binomial. De (11) se obtiene
+The constant \(1/a\), which is precisely the canonical exponential omitted by the bare
+residue, contributes \(1/a\) to the binomial transform. From (11) one obtains
 
 \[
  \boxed{
@@ -163,12 +164,12 @@ desnudo, aporta \(1/a\) a la transformada binomial. De (11) se obtiene
 \tag{12}
 \]
 
-Ahora \(C_n[-a]=O_n(a^{-2})\), de modo que la suma sobre \(a=3,5,\ldots\) converge
-absolutamente.
+Now \(C_n[-a]=O_n(a^{-2})\), so the sum over \(a=3,5,\ldots\) converges
+absolutely.
 
-### Teorema 2 (relación exacta con el bloque arquimediano)
+### Theorem 2 (exact relation to the archimedean block)
 
-Sea \(c=(\gamma+\log(4\pi))/2\). Entonces
+Let \(c=(\gamma+\log(4\pi))/2\). Then
 
 \[
  \boxed{
@@ -176,27 +177,27 @@ Sea \(c=(\gamma+\log(4\pi))/2\). Entonces
 \tag{13}
 \]
 
-*Demostración.* La fórmula impar exacta de Phase 103 da
+*Proof.* The exact odd formula from Phase 103 gives
 
 \[
- \Delta A_n=-c+\sum_{a\ \mathrm{impar}}{1-(1-1/a)^n\over a}.
+ \Delta A_n=-c+\sum_{a\ \mathrm{odd}}{1-(1-1/a)^n\over a}.
 \tag{14}
 \]
 
-El sumando \(a=1\) vale \(1\); separarlo prueba (13). \(\square\)
+The summand \(a=1\) equals \(1\); separating it proves (13). \(\square\)
 
-Esto concuerda con 103_60: allí el factor trivial contribuye a \(P_n\)
-\(\tau_n(a)=1-(1-1/a)^n-n/a\); como \(C_n=-\Delta P_n\), se recupera (12).
+This agrees with 103_60: there the trivial factor contributes to \(P_n\)
+\(\tau_n(a)=1-(1-1/a)^n-n/a\); since \(C_n=-\Delta P_n\), (12) is recovered.
 
-**Conclusión de la auditoría trivial.** La afirmación «los residuos triviales reconstruyen la
-suma armónica impar de \(A_n\)» era incorrecta si se entendía literalmente. La afirmación
-correcta es (13), y requiere la exponencial canónica.
+**Conclusion of the trivial audit.** The claim "the trivial residues reconstruct the odd
+harmonic sum of \(A_n\)" was incorrect if taken literally. The correct statement is (13), and
+it requires the canonical exponential.
 
 ---
 
-## 4. La recta de Cayley
+## 4. The Cayley line
 
-Sobre \(\Re t=-\tfrac12\),
+On \(\Re t=-\tfrac12\),
 
 \[
  |1+t|=|t|,
@@ -205,75 +206,76 @@ Sobre \(\Re t=-\tfrac12\),
 \tag{15}
 \]
 
-Es una identidad geométrica **incondicional para toda altura**. Bajo la inversa de
-\(t=z/(1-z)\), es la circunferencia \(|z|=1\). Un cero no trivial produce
-\(t_\rho=\rho-1\), y está sobre esta recta si y solo si \(\Re\rho=1/2\).
+This is an **unconditional geometric identity for every height**. Under the inverse of
+\(t=z/(1-z)\), it is the circle \(|z|=1\). A nontrivial zero produces
+\(t_\rho=\rho-1\), and it lies on this line if and only if \(\Re\rho=1/2\).
 
-Dos precauciones:
+Two precautions:
 
-1. Platt–Trudgian permite afirmar que los ceros hasta \(H\) yacen sobre la recta; no hace
-   «legítima» la identidad (15), que ya lo era. Esos ceros son polos **sobre** el camino y
-   requieren indentaciones o valores principales especificados.
-2. Sin RH pueden existir polos a ambos lados. Mover el círculo de (3) hasta la recta no produce
-   una estimación libre de ellos. La identidad colectiva complementaria que se importa de
-   Lagarias debe usarse con el erratum de signo **y la reparación horizontal
-   \(T=2\sqrt n+\varepsilon_n\)** de 104_02:
-   \(\lambda_n=A_n+\lambda_n(\sqrt n)+O(\sqrt n\log n)\). No es una consecuencia
-   automática de (15), ni una cota inferior para el bloque incompleto.
-
----
-
-## 5. Arcos, ramas y alcance exacto
-
-El único contorno demostrado aquí es el círculo local de (3). Para una deformación global se
-necesitan simultáneamente:
-
-* productos canónicos para que las sumas de polos converjan;
-* una prescripción de indentación para los polos sobre el camino;
-* cotas de arcos para \(R(t)(1+t)^nt^{-n-1}\);
-* si se usa \(h=-\int R\), una rama en cada componente del plano cortado.
-
-La cota \(R(t)=O(\log|t|)\) por sí sola no repara (9): el problema es la separación de una
-serie canónica convergente en dos series divergentes. Por ello 104_03 **no rederiva** la
-identidad global corregida auditada en 104_02 y no reclama una fórmula de suma sobre ceros
-nueva.
+1. Platt–Trudgian allows stating that the zeros up to \(H\) lie on the line; it does not make
+   identity (15) "legitimate" — it already was. Those zeros are poles **on** the path and
+   require specified indentations or principal values.
+2. Without RH there can be poles on both sides. Moving the circle of (3) to the line does not
+   produce an estimate free of them. The complementary collective identity imported from
+   Lagarias must be used with the sign erratum **and the horizontal repair
+   \(T=2\sqrt n+\varepsilon_n\)** from 104_02:
+   \(\lambda_n=A_n+\lambda_n(\sqrt n)+O(\sqrt n\log n)\). It is neither an automatic
+   consequence of (15), nor a lower bound for the incomplete block.
 
 ---
 
-## 6. Verificador
+## 5. Arcs, branches, and exact scope
 
-tools/contour_binomial_check.py hace dos comprobaciones distintas.
+The only contour proved here is the local circle of (3). A global deformation
+simultaneously requires:
 
-1. Extrae \(C_n\) de (4) en complex128, reconstruye \(\lambda_N\) por (5), y lo compara con
-   una extracción independiente desde \(\xi'/\xi\). Es un diagnóstico, no un certificado.
-2. Con la opción --certified, reconstruye intervalos outward para
-   \(\lambda_{20},\lambda_{60},\lambda_{149}\) mediante el mismo motor racional de 103_51 y
-   reporta por separado inclusión estricta del valor float64 y compatibilidad a su piso de
-   redondeo. Solo el intervalo es certificado; que el FFT caiga fuera por redondeo no refuta
-   la identidad y que caiga dentro no certifica el FFT.
+* canonical products so that the pole sums converge;
+* an indentation prescription for poles on the path;
+* arc bounds for \(R(t)(1+t)^nt^{-n-1}\);
+* if \(h=-\int R\) is used, a branch on each component of the cut plane.
 
-Corrida rápida:
+The bound \(R(t)=O(\log|t|)\) alone does not repair (9): the problem is the splitting of a
+convergent canonical series into two divergent series. For this reason 104_03 **does not
+rederive** the corrected global identity audited in 104_02 and does not claim a new
+summation-over-zeros formula.
+
+---
+
+## 6. Verifier
+
+tools/contour_binomial_check.py performs two distinct checks.
+
+1. It extracts \(C_n\) from (4) in complex128, reconstructs \(\lambda_N\) via (5), and compares
+   it with an independent extraction from \(\xi'/\xi\). It is a diagnostic, not a certificate.
+2. With the --certified option, it reconstructs outward intervals for
+   \(\lambda_{20},\lambda_{60},\lambda_{149}\) using the same rational engine from 103_51 and
+   separately reports strict inclusion of the float64 value and compatibility at its rounding
+   floor. Only the interval is certified; the FFT falling outside it due to rounding does not
+   refute the identity, and falling inside does not certify the FFT.
+
+Quick run:
 
     n       lambda(contour)       lambda(xi)       disagreement   radius-stability
     20   8.769276872093   8.769276872093    8.53e-14       0.00e+00
     60  57.133099574875  57.133099574874    2.27e-13       7.11e-15
     149 205.922618629825 205.922618629830   -4.46e-12      -1.47e-11
 
-La estabilidad radial se reporta por separado y no se convierte en certificado. La tabla
-trivial del mismo programa
-confirma la convergencia a (13), mientras la suma desnuda de (9) sigue derivando
-logarítmicamente.
+Radial stability is reported separately and is not turned into a certificate. The trivial
+table of the same program
+confirms convergence to (13), while the bare sum of (9) keeps drifting
+logarithmically.
 
 ---
 
-## Estado
+## Status
 
-| afirmación | estado |
+| claim | state |
 |---|---|
-| contorno local (3)–(4) | **teorema incondicional** |
-| signos de los polos y residuos triviales | **auditados** |
-| relación canónica trivial–arquimediana (13) | **teorema incondicional** |
-| identidad de módulo de Cayley | **teorema geométrico incondicional** |
-| deformación global sin normalización canónica | **no-go: serie (9) divergente** |
-| identidad colectiva full/incomplete | se importa con el signo corregido de 104_02; no acota por abajo el bloque incompleto |
-| prueba de A1/RH | **no contenida aquí** |
+| local contour (3)–(4) | **unconditional theorem** |
+| signs of the poles and trivial residues | **audited** |
+| canonical trivial–archimedean relation (13) | **unconditional theorem** |
+| Cayley modulus identity | **unconditional geometric theorem** |
+| global deformation without canonical normalization | **no-go: divergent series (9)** |
+| full/incomplete collective identity | imported with the corrected sign from 104_02; does not bound the incomplete block from below |
+| proof of A1/RH | **not contained here** |
+</content>

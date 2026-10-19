@@ -1,6 +1,6 @@
 # Attack + audit: the simple crossings of the one-point wall, and exactly where each turns into RH
 
-*Pure mathematics. The wall is now a single scalar (`FACE-C-positivity-vs-size.md`):
+* The wall is now a single scalar (`FACE-C-positivity-vs-size.md`):
 $\sup_{P,u}e^{-u/2}\mathfrak d_P(u)<\infty$, the primitive diagonal of the positive kernel $K_P$.
 A one-point statement invites a simple proof. We take the three most natural "hidden in plain sight"
 crossings — **(I) averaging/flatness**, **(II) positive sandwich**, **(III) Schur/Bernstein from the

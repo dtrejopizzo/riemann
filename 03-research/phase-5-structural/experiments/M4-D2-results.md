@@ -1,6 +1,6 @@
 # M4 / D2 — Numerical results (candid report, including what failed and what it redirects)
 
-**Route B / M5 experiment.** Author: David Alejandro Trejo Pizzo · 2026-06-03.
+**Route B / M5 experiment.**
 Code: `d2_destroy_test.py` (first pass, artifacts), `d2_gradient_check.py` (clean gradient check).
 Env: `/usr/bin/python3`, numpy 2.0.2 + mpmath 1.4.1. **Self-contained Gram, NOT P7's validated engine.**
 

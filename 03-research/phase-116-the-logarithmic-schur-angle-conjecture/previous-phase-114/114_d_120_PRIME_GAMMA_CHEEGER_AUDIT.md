@@ -107,7 +107,7 @@ Fix a nonzero compactly supported \(F\), a separation \(R>0\), and put
 \(z=e^{R/2}\).  The coefficients
 
 \[
- \alpha=z^{-1}-z,qquad
+ \alpha=z^{-1}-z,\qquad
  \beta=z^2-z^{-2}                                     \tag{3.3}
 \]
 

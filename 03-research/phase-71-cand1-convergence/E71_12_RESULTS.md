@@ -1,6 +1,5 @@
 # E71.12 -- finite-section persistence filter results
 
-**Date:** 2026-07-07.
 **Script:** `E71_12_persistence_filter.py`.
 
 ## Zeta true

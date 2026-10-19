@@ -1,7 +1,6 @@
 # E72.181 -- Chebyshev absolute-value schedule for adaptive SRP
 
-**Date:** 2026-07-09.
-**Role:** replace the conservative Bernstein schedule of E72.180 by a sharper explicit Chebyshev
+**Purpose:** replace the conservative Bernstein schedule of E72.180 by a sharper explicit Chebyshev
 schedule.
 
 ## 0. Exact Chebyshev expansion

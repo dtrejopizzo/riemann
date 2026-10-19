@@ -1,6 +1,5 @@
 # E73.192 - Ramp-normalized transverse packet
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

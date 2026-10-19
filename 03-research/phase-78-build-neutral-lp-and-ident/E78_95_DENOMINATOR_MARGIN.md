@@ -1,6 +1,6 @@
 # E78.95 - `U-RADIAL-GAP` is exactly a denominator margin after paying numerator loss
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

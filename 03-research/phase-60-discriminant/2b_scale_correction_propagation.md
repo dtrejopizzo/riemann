@@ -1,31 +1,31 @@
-# Propagación de la corrección de escala −log ε₀ ~ c·n(T*) por el Eslabón 2 **Corrección:** −log ε₀(λ) ~ c·n(T*) ~ c·λ²logλ (super-exp en L), NO ~ L. (De 4A Jensen +
-minimizador = producto canónico vía Thm 1.1.iii + Hadamard.) Hay que propagarla y ver qué
-sobrevive y qué cae. ## SOBREVIVE (todo lo que es RATIO o autovector — escala-independiente)
-- (i) restricción exacta A_λ=A_∞|_{E_λ}.
-- Lema 2: horizonte T*~2πλ² (independiente de la escala de ε₀).
-- **Espectro relativo {ε_k/ε₀}=(k+1)²** — son RATIOS, no dependen de la escala absoluta. ✔
-- Paridad alternante, colapso de perfiles φ_k(x) — son autovectores, escala-independientes. ✔
-- Existencia de 𝓛 (de la convergencia del espectro relativo + autovectores). ✔
-- Argumento #3 (reescalar por ε₀ → fondo aislado → Galerkin): el ARGUMENTO sobrevive; sólo ε₀ es mucho más chico. ✔
-- Beurling–Deny: A_λ=∫q|f|²+𝓔_θ+𝓔_prime; c=−ψ''(¼)/8; M_0,M_2~λ^{1/2−|x|}. ✔ (Consistencia: los términos B–D son O(λ^{1/2}) y cancelan a ε₀~e^{−cλ²logλ} — cancelación super-precisa = el minimizador anula TODOS los ceros = positividad de Weil casi-saturada. OK.) ## CAE (toda interpretación de la ESCALA ABSOLUTA de ε₀)
-- **"Acción S≈1":** −log ε₀/L = cλ²logλ/(2logλ) = cλ²/2 → ∞, NO 1. **MUERTA.** Era artefacto.
-- **"ℏ=1/L semiclásico" para la escala:** la escala NO es e^{−S/ℏ}=e^{−SL}; es e^{−cλ²logλ}. La interpretación WKB de la ESCALA cae. (La corrección O(1/L) del espectro RELATIVO sobrevive, es ratio.)
-- **"e^{−L} tunneling":** muerto (artefacto N-limited).
-- **"ε₀ converge en N":** AFIRMACIÓN PREVIA FALSA. ε₀ NO converge — sigue bajando con N (el horizonte efectivo ~N·2π/L crece hacia T*). Lo que vi (N=8→24, ratios→1.1) era aproximación lenta, NO convergencia. [Test: eps0_highN.py — debe seguir bajando.] ## EXPLICA los datos previos (consistencia)
-El operador a N=24 para λ=3.7 y 5 dio −log ε₀~46 casi constante. NO porque sea la escala real,
-sino porque ambos estaban **N-limited al mismo horizonte efectivo (~50)**: ε₀~e^{−c·n(horizonte
-efectivo)}, y horizonte efectivo ~50 en ambos ⟹ ε₀ similar. La escala real (N→∞, horizonte T*)
-es e^{−c·n(T*)}~e^{−cλ²logλ}, nunca alcanzada por el operador N-limited. ## Veredicto de consistencia [CORREGIDO por el test eps0_highN]
-TEST (λ=3.7, N=16..36): ε₀ CONVERGE (−log ε₀ plateau ~46.0, Δ→0.01) y a N=36 el horizonte
-alcanza T*=86 completo. ⟹ **mi predicción "ε₀ no converge en N" era FALSA — RETRACTADA.**
-ε₀ SÍ converge (la afirmación original era correcta). **ACTUALIZADO con λ=5 convergido (experimento discriminante):**
-- **ε₀ converge en N** (verificado λ=3.7 N=36=T*, λ=5 N=75≈T*). Retracto "ε₀ no converge".
-- **Dos puntos convergidos:** (λ=3.7,L=2.62)→−log ε₀=46.03; (λ=5,L=3.22)→46.66. Pendiente≈1.05.
-- **λ²logλ (Jensen del producto desnudo) REFUTADA:** predecía −log~103 a λ=5; real 46.7.
-- **e^{−L} RESTABLECIDO como hipótesis de trabajo:** ε₀≈C₀e^{−SL}, S≈1.05≈1, C₀≈e^{−43.3}. (Lo que confundió antes: la constante C₀~e^{−43} domina el valor absoluto ~46, pero la PENDIENTE en L es ~1 = e^{−L}.) El fenómeno NUEVO a explicar es C₀ grande (−log C₀≈43). SOBREVIVE: lo relativo (𝓛, (k+1)², #3, Beurling–Deny, c, M₀/M₂) + ε₀~C₀e^{−SL} con S≈1.
-CAE/REFUTADO: λ²logλ (Jensen desnudo); "ε₀ no converge". Jensen sigue relevante (estructura del
-producto) pero NO controla ε₀ (normalización + extremal del frame; cautela 4A′ de correcta). ## Implicación para Objetivo B
-B ya no es "probar e^{−L}". Es **"probar −log ε₀ ~ c·n(T*)"**, con:
-- minimizador identificado (= producto canónico, Thm 1.1.iii + Hadamard);
-- orden líder derivado de DENSIDAD (PNT) = no-circular;
-- falta: normalización rigurosa + cota inferior (de Branges) + la constante c (4B, posible dependencia de posición fina cerca del horizonte).
+# Propagation of the scale correction −log ε₀ ~ c·n(T*) through Link 2 **Correction:** −log ε₀(λ) ~ c·n(T*) ~ c·λ²logλ (super-exp in L), NOT ~ L. (From 4A Jensen +
+minimizer = canonical product via Thm 1.1.iii + Hadamard.) It must be propagated to see what
+survives and what falls. ## SURVIVES (everything that is a RATIO or eigenvector — scale-independent)
+- (i) exact restriction A_λ=A_∞|_{E_λ}.
+- Lemma 2: horizon T*~2πλ² (independent of the scale of ε₀).
+- **Relative spectrum {ε_k/ε₀}=(k+1)²** — these are RATIOS, they do not depend on the absolute scale. ✔
+- Alternating parity, collapse of profiles φ_k(x) — these are eigenvectors, scale-independent. ✔
+- Existence of 𝓛 (from the convergence of the relative spectrum + eigenvectors). ✔
+- Argument #3 (rescaling by ε₀ → isolated bottom → Galerkin): the ARGUMENT survives; only ε₀ is much smaller. ✔
+- Beurling–Deny: A_λ=∫q|f|²+𝓔_θ+𝓔_prime; c=−ψ''(¼)/8; M_0,M_2~λ^{1/2−|x|}. ✔ (Consistency: the B–D terms are O(λ^{1/2}) and cancel to ε₀~e^{−cλ²logλ} — super-precise cancellation = the minimizer annihilates ALL zeros = near-saturated Weil positivity. OK.) ## FALLS (every interpretation of the ABSOLUTE SCALE of ε₀)
+- **"Action S≈1":** −log ε₀/L = cλ²logλ/(2logλ) = cλ²/2 → ∞, NOT 1. **DEAD.** It was an artifact.
+- **"ℏ=1/L semiclassical" for the scale:** the scale is NOT e^{−S/ℏ}=e^{−SL}; it is e^{−cλ²logλ}. The WKB interpretation of the SCALE falls. (The O(1/L) correction of the RELATIVE spectrum survives, it is a ratio.)
+- **"e^{−L} tunneling":** dead (N-limited artifact).
+- **"ε₀ converges in N":** PREVIOUS CLAIM FALSE. ε₀ does NOT converge — it keeps decreasing with N (the effective horizon ~N·2π/L grows toward T*). What I saw (N=8→24, ratios→1.1) was slow approximation, NOT convergence. [Test: eps0_highN.py — should keep decreasing.] ## EXPLAINS the previous data (consistency)
+The operator at N=24 for λ=3.7 and 5 gave −log ε₀~46 nearly constant. NOT because it is the real
+scale, but because both were **N-limited to the same effective horizon (~50)**: ε₀~e^{−c·n(effective
+horizon)}, and the effective horizon ~50 in both ⟹ similar ε₀. The real scale (N→∞, horizon T*)
+is e^{−c·n(T*)}~e^{−cλ²logλ}, never reached by the N-limited operator. ## Consistency verdict [CORRECTED by the eps0_highN test]
+TEST (λ=3.7, N=16..36): ε₀ CONVERGES (−log ε₀ plateau ~46.0, Δ→0.01) and at N=36 the horizon
+reaches the full T*=86. ⟹ **my prediction "ε₀ does not converge in N" was FALSE — RETRACTED.**
+ε₀ DOES converge (the original claim was correct). **UPDATED with converged λ=5 (discriminant experiment):**
+- **ε₀ converges in N** (verified λ=3.7 N=36=T*, λ=5 N=75≈T*). I retract "ε₀ does not converge".
+- **Two converged points:** (λ=3.7,L=2.62)→−log ε₀=46.03; (λ=5,L=3.22)→46.66. Slope≈1.05.
+- **λ²logλ (Jensen of the bare product) REFUTED:** it predicted −log~103 at λ=5; actual 46.7.
+- **e^{−L} RESTORED as working hypothesis:** ε₀≈C₀e^{−SL}, S≈1.05≈1, C₀≈e^{−43.3}. (What confused things before: the constant C₀~e^{−43} dominates the absolute value ~46, but the SLOPE in L is ~1 = e^{−L}.) The NEW phenomenon to explain is the large C₀ (−log C₀≈43). SURVIVES: the relative facts (𝓛, (k+1)², #3, Beurling–Deny, c, M₀/M₂) + ε₀~C₀e^{−SL} with S≈1.
+FALLS/REFUTED: λ²logλ (bare Jensen); "ε₀ does not converge". Jensen remains relevant (structure of
+the product) but does NOT control ε₀ (normalization + frame extremal; caution 4A′ of correct). ## Implication for Goal B
+B is no longer "prove e^{−L}". It is **"prove −log ε₀ ~ c·n(T*)"**, with:
+- minimizer identified (= canonical product, Thm 1.1.iii + Hadamard);
+- leading order derived from DENSITY (PNT) = non-circular;
+- missing: rigorous normalization + lower bound (de Branges) + the constant c (4B, possible dependence on fine position near the horizon).

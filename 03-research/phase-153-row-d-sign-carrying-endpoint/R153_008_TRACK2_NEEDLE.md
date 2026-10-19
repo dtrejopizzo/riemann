@@ -1,6 +1,6 @@
 # R153.008 — Track 2 (P153.4): the `b`-needle at `T = log 2`
 
-*Builder, round 3, Track 2. Date 2026-09-19. Model: Claude Opus 5. Scripts: `scripts/round3/`
+* Track 2.
 (`track2_needle.py`, `q1b_precision.py`, `q1c_tip.py`, `q1d_branch.py`, `q2_tscan.py`, `q2b_cross.py`),
 reusing the mesh-free spectral assembly of `scripts/audit/aud_spectral.py` verbatim (`basis_hat`, `moments`).*
 

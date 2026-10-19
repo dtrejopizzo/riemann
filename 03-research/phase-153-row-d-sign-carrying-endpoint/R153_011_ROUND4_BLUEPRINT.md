@@ -1,6 +1,6 @@
-# R153.011 — Lead blueprint, round 4: the decay law of the sign in the certified window
+# R153.011 — Blueprint, round 4: the decay law of the sign in the certified window
 
-*Lead: Fable 5.1, 2026-09-19. One question. Everything inside `T ≤ log 2`; FATAL-safe by construction.*
+* Everything inside `T ≤ log 2`; FATAL-safe by construction.*
 
 ## 0. Corpus facts that bind this round (read them first)
 
@@ -10,7 +10,7 @@
   Verdict there: rigorous on smooth vectors, **not** a bounded derivative on the Gamma form domain; the crossing form has no
   uniform sign; "no uniform signed Hadamard induction follows"; short-cell positivity needs a non-perturbative capacity estimate.
   **Do not rebuild the formula; do not attempt a signed induction.**
-- **Doc 143** `03-research/phase-46-audit-and-attacks/143-ataque-136A-cuantitativa.md`: `λ_min` of the localized Weil form is the
+- **Doc 143** `03-research/phase-46-audit-and-attacks/143-attack-on-problem-136-a-quantitative-localized.md`: `λ_min` of the localized Weil form is the
   Riesz (Ingham) lower bound of `{e^{iγx}}` on the window; uniform module ⟺ vertical repulsion LP-143; module computable from
   zeros, not from primes (§4.4). Our object is the *global* window `P_T`, where the relevant gap is the origin gap `(−γ_1, γ_1)`,
   `γ_1 = 14.1347…`, not Lehmer pairs — say so and keep the distinction.

@@ -1,46 +1,46 @@
-# Tres problemas sobre una familia de formas cuadráticas ## Marco común (válido para los tres) Para `λ>1` sea `L=2logλ`, `Ω=logλ`. Sobre el espacio `E_λ` de funciones enteras de tipo
-exponencial `Ω` con soporte espectral en `[−L/2,L/2]`, definimos la forma cuadrática real
-simétrica
+# Three problems about a family of quadratic forms ## Common framework (valid for all three) For `λ>1` let `L=2logλ`, `Ω=logλ`. On the space `E_λ` of entire functions of
+exponential type `Ω` with spectral support in `[−L/2,L/2]`, we define the real symmetric
+quadratic form
 $$A_\lambda(f,f)=\int a(t)\,|\hat f(t)|^2\,dt,\qquad a(t)=\tilde\Omega(t)-D_\lambda(t),$$
-con símbolo arquimediano `Ω̃(t)=−logπ+Re ψ_Γ(1/4+it/2)` (`ψ_Γ` digamma) y símbolo de
-"acoplamiento" `D_λ(t)=Σ_{n≤λ²}Λ(n)n^{−1/2}cos(t log n)` (`Λ` von Mangoldt). Equivalentemente
-`A_λ` es la compresión a `[0,L]` de la convolución por `D_ζ(|x−y|)`. Hechos establecidos (a `λ` finito): `A_λ` es real simétrica, lower-bounded, con espectro
-discreto `ε_0(λ)≤ε_1(λ)≤⋯`; el fondo `ε_0` es **simple, aislado y par** (Perron–Frobenius vía
-la positividad del semigrupo arquimediano y `Λ(n)≥0`). Notación: `γ(λ):=(ε_1(λ)−ε_0(λ))/|ε_0(λ)|` (gap relativo); `Â_λ:=A_λ/|ε_0(λ)|` (familia
-renormalizada por el valor absoluto del fondo). --- ## PROBLEMA III — Estabilidad relativa y gap uniforme **Enunciado.**
-- **(III-a)** Probar que `Â_λ` converge, en sentido de resolvente fuerte, a un operador límite `𝓛_∞` cuando `λ→∞`.
-- **(III-b)** Probar `liminf_{λ→∞} γ(λ) > 0` (el gap relativo no colapsa). **Qué hay que resolver para abrirlo.** Una **cota de tightness uniforme** sobre la familia
-`{Â_λ}`: que la masa espectral del fondo no se escape ni a `0` ni a `∞` al renormalizar. En
-términos de formas, una equivalencia uniforme `c_1 𝓔_D ≤ Â_λ ≤ c_2 𝓔_D` con la forma de
-Dirichlet `𝓔_D(f)=∫|f'|²` y `0<c_1≤c_2<∞` independientes de `λ`. La cota superior es directa
-(el símbolo arquimediano domina la derivada); el núcleo es la **cota inferior uniforme**. **Qué abre.** III es la **puerta de entrada a IV.1**: sin existencia y estabilidad del límite
-(III-a) y sin gap uniforme (III-b), la identificación de IV.1 carece de sentido. Resuelta la
-estimación de tightness, IV.1 queda planteable. **Naturaleza.** Análisis de operadores estándar (Prokhorov + convergencia fuerte de resolvente,
-Reed–Simon VIII.21/24, una vez establecida la tightness). No interviene el signo de `ε_0`. --- ## PROBLEMA IV.1 — Identificación del operador límite **Enunciado.** Probar que el operador límite `𝓛_∞` de (III-a) es
-$$\mathcal L_\infty=-c\,\frac{d^2}{dx^2}\quad\text{en un intervalo finito con condiciones de
-Dirichlet},\qquad c=-\tfrac18\,\psi_\Gamma''(1/4),$$
-con autovalores proporcionales a `(k+1)²` (`k=0,1,2,…`) y autofunciones de paridad alternante. **Qué hay que resolver para abrirlo.** La **asintótica cuantitativa de borde** (Landau–Widom)
-de la compresión truncada: mostrar que el espectro bajo de `Â_λ` converge al de la caja de
-Dirichlet `(k+1)²`. Ingredientes ya disponibles: (a) el coeficiente cinético
-`c=−ψ_Γ''(1/4)/8`, derivado de la expansión de bajo orden del símbolo arquimediano (Lévy);
-(b) el mecanismo de Dirichlet por fuga de los términos de acoplamiento (longitud `∼2logλ`,
-mayores que el ancho de capa de borde `∼1/logλ`), que actúan como pared dura; (c) verificación
-numérica `ε_k/ε_0→(k+1)²` sin offset, paridad alternante. Falta convertir (a)–(c) en la cota
-de convergencia uniforme. **Qué abre.** IV.1 **implica III**: si el límite es `𝓛_∞`, entonces existe (III-a) y su gap
-relativo es `(2²−1²)/1²=3>0`, luego `γ(λ)→3` y `liminf γ>0` (III-b). Es decir, **una misma
-estimación de tightness resuelve III y IV.1 a la vez**, siendo IV.1 la versión más fina. **Dependencia.** Requiere III (la existencia que IV.1 refina). No requiere ni aporta nada sobre
-el signo de `ε_0`. --- ## PROBLEMA (P) — Positividad **Enunciado.** Probar que `ε_0(λ) ≥ 0` para todo `λ>1`. **Qué hay que resolver para abrirlo.** Una **cota inferior sobre el mínimo de la forma**
-`A_λ(f,f)` que controle su **signo**: equivalentemente, que la parte de acoplamiento `D_λ` no
-domine a la parte arquimediana `Ω̃` sobre la banda. La obstrucción precisa está dada por el
-**teorema de marginalidad**: el pozo negativo de `a(t)` tiene semi-ancho
-`δ_λ=(2|a(0)|/a''(0))^{1/2}=1/(√2 logλ)` y la banda resolución `r_λ=π/logλ`, con cociente
-`2δ_λ/r_λ=√2/π≈0.45`; ambos dependen **sólo de las magnitudes** `{|Λ(n)|}`. Por tanto ningún
-funcional de esas magnitudes decide el signo (existen sistemas de igual magnitud con `ε_0<0`).
-El signo reside en la **fase** de los términos de acoplamiento. Resolver (P) requiere una
-estimación **sensible a la fase**, no de magnitud. **Qué abre.** Es el problema terminal de la cadena; nada más depende de él dentro de esta
-estructura. **Dependencia.** **Independiente de III y IV.1.** Estos conciernen a `Â_λ=A_λ/|ε_0|`, que es
-ciego al signo de `ε_0` por construcción. Resolver III y IV.1 **no avanza** (P), y (P) no
-necesita ninguno de los dos. La única vía por la que IV.1 tocaría (P) sería dar la asintótica
-de `ε_0` **con signo** (no `|ε_0|`), pero ese fortalecimiento ya es (P). --- ## Resumen de la estructura ``` ┌─ cota de tightness / Landau–Widom ─┐ │ │ ▼ ▼ PROBLEMA III ───────────────────────▶ PROBLEMA IV.1 (existencia + gap uniforme) (identificación de 𝓛_∞) gateway refinamiento; IV.1 ⟹ III PROBLEMA (P) ── cerradura independiente ── (signo de ε_0) no se abre con III ni IV.1; requiere una estimación de fase
-``` - **III y IV.1:** acoplados. Una sola estimación (tightness/Landau–Widom) los abre a ambos; IV.1 ⟹ III. Naturaleza: análisis técnico estándar.
-- **(P):** aislado. Es el problema profundo e independiente; ningún progreso en III/IV.1 lo acerca. Requiere control de **fase**, no de magnitud (teorema de marginalidad).
+with archimedean symbol `Ω̃(t)=−logπ+Re ψ_Γ(1/4+it/2)` (`ψ_Γ` digamma) and "coupling"
+symbol `D_λ(t)=Σ_{n≤λ²}Λ(n)n^{−1/2}cos(t log n)` (`Λ` von Mangoldt). Equivalently
+`A_λ` is the compression to `[0,L]` of convolution by `D_ζ(|x−y|)`. Established facts (at finite `λ`): `A_λ` is real symmetric, lower-bounded, with discrete
+spectrum `ε_0(λ)≤ε_1(λ)≤⋯`; the ground state `ε_0` is **simple, isolated and even** (Perron–Frobenius via
+the positivity of the archimedean semigroup and `Λ(n)≥0`). Notation: `γ(λ):=(ε_1(λ)−ε_0(λ))/|ε_0(λ)|` (relative gap); `Â_λ:=A_λ/|ε_0(λ)|` (family
+renormalized by the absolute value of the ground state). --- ## PROBLEM III — Relative stability and uniform gap **Statement.**
+- **(III-a)** Prove that `Â_λ` converges, in the sense of strong resolvent convergence, to a limit operator `𝓛_∞` as `λ→∞`.
+- **(III-b)** Prove `liminf_{λ→∞} γ(λ) > 0` (the relative gap does not collapse). **What must be resolved to open it.** A **uniform tightness bound** on the family
+`{Â_λ}`: that the spectral mass of the ground state escapes neither to `0` nor to `∞` under renormalization. In
+terms of forms, a uniform equivalence `c_1 𝓔_D ≤ Â_λ ≤ c_2 𝓔_D` with the Dirichlet
+form `𝓔_D(f)=∫|f'|²` and `0<c_1≤c_2<∞` independent of `λ`. The upper bound is direct
+(the archimedean symbol dominates the derivative); the crux is the **uniform lower bound**. **What it opens.** III is the **gateway to IV.1**: without existence and stability of the limit
+(III-a) and without a uniform gap (III-b), the identification in IV.1 is meaningless. Once the
+tightness estimate is resolved, IV.1 becomes posable. **Nature.** Standard operator analysis (Prokhorov + strong resolvent convergence,
+Reed–Simon VIII.21/24, once tightness is established). The sign of `ε_0` does not come into play. --- ## PROBLEM IV.1 — Identification of the limit operator **Statement.** Prove that the limit operator `𝓛_∞` from (III-a) is
+$$\mathcal L_\infty=-c\,\frac{d^2}{dx^2}\quad\text{on a finite interval with Dirichlet
+conditions},\qquad c=-\tfrac18\,\psi_\Gamma''(1/4),$$
+with eigenvalues proportional to `(k+1)²` (`k=0,1,2,…`) and eigenfunctions of alternating parity. **What must be resolved to open it.** The **quantitative edge asymptotics** (Landau–Widom)
+of the truncated compression: showing that the low spectrum of `Â_λ` converges to that of the
+Dirichlet box `(k+1)²`. Ingredients already available: (a) the kinetic coefficient
+`c=−ψ_Γ''(1/4)/8`, derived from the low-order expansion of the archimedean symbol (Lévy);
+(b) the Dirichlet mechanism from the decay of the coupling terms (length `∼2logλ`,
+greater than the edge-layer width `∼1/logλ`), which act as a hard wall; (c) numerical
+verification `ε_k/ε_0→(k+1)²` with no offset, alternating parity. What remains is to convert (a)–(c) into the
+uniform convergence bound. **What it opens.** IV.1 **implies III**: if the limit is `𝓛_∞`, then (III-a) exists and its relative
+gap is `(2²−1²)/1²=3>0`, so `γ(λ)→3` and `liminf γ>0` (III-b). That is, **a single
+tightness estimate resolves III and IV.1 at once**, with IV.1 being the finer version. **Dependency.** Requires III (the existence that IV.1 refines). It neither requires nor contributes anything about
+the sign of `ε_0`. --- ## PROBLEM (P) — Positivity **Statement.** Prove that `ε_0(λ) ≥ 0` for all `λ>1`. **What must be resolved to open it.** A **lower bound on the minimum of the form**
+`A_λ(f,f)` that controls its **sign**: equivalently, that the coupling part `D_λ` does not
+dominate the archimedean part `Ω̃` over the band. The precise obstruction is given by the
+**marginality theorem**: the negative well of `a(t)` has half-width
+`δ_λ=(2|a(0)|/a''(0))^{1/2}=1/(√2 logλ)` and the resolution band is `r_λ=π/logλ`, with ratio
+`2δ_λ/r_λ=√2/π≈0.45`; both depend **only on the magnitudes** `{|Λ(n)|}`. Therefore no
+functional of those magnitudes decides the sign (there exist systems of equal magnitude with `ε_0<0`).
+The sign resides in the **phase** of the coupling terms. Resolving (P) requires a
+**phase-sensitive** estimate, not a magnitude one. **What it opens.** It is the terminal problem of the chain; nothing else depends on it within this
+structure. **Dependency.** **Independent of III and IV.1.** These concern `Â_λ=A_λ/|ε_0|`, which is
+blind to the sign of `ε_0` by construction. Resolving III and IV.1 **does not advance** (P), and (P)
+needs neither of the two. The only way IV.1 would touch (P) would be by giving the asymptotics
+of `ε_0` **with sign** (not `|ε_0|`), but that strengthening is already (P). --- ## Summary of the structure ``` ┌─ tightness bound / Landau–Widom ─┐ │ │ ▼ ▼ PROBLEM III ───────────────────────▶ PROBLEM IV.1 (existence + uniform gap) (identification of 𝓛_∞) gateway refinement; IV.1 ⟹ III PROBLEM (P) ── independent closure ── (sign of ε_0) is not opened by III nor IV.1; requires a phase estimate
+``` - **III and IV.1:** coupled. A single estimate (tightness/Landau–Widom) opens both; IV.1 ⟹ III. Nature: standard technical analysis.
+- **(P):** isolated. It is the deep, independent problem; no progress on III/IV.1 brings it closer. Requires control of **phase**, not magnitude (marginality theorem).

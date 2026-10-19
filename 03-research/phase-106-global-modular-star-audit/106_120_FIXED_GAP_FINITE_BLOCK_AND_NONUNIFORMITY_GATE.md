@@ -69,7 +69,7 @@ a finite-dimensional subspace \(V_\delta\) of the heat form core such that
 every normalized eigenvector
 
 \[
- Aq=\alpha q,qquad \alpha\leq\frac12-\delta,
+ Aq=\alpha q,\qquad \alpha\leq\frac12-\delta,
  \tag{4}
 \]
 

@@ -1,7 +1,6 @@
 # E72.13 -- Centered cumulative kernels for the residual force
 
-**Date:** 2026-07-08.
-**Role:** express the cumulative cancellation target CC as an exact coherent sum of centered cumulative
+**Purpose:** express the cumulative cancellation target CC as an exact coherent sum of centered cumulative
 cell kernels.
 
 ## 0. Starting point

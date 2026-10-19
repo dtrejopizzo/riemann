@@ -1,6 +1,6 @@
 # E78.149 - TRUE LOGT-CELL with the moving boundary pole (correction of E78.147)
 
-**Run:** 2026-07-21.
+**Run:**
 **Scope:** IDENT, fixed-L. Corrects E78.147/E78.7 after the `d_{b,N}` audit.
 **Class:** REDUCCION GENUINA (corrected numerics).
 

@@ -1,6 +1,5 @@
 # E73.294 - Cell reconstruction from the two-symbol form
 
-Date: 2026-07-16.
 
 ## 1. Purpose
 

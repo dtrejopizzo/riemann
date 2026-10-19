@@ -1,8 +1,8 @@
 # E78.1 - Ground-state simplicity at mu_L: parity structure, the dead
 # Perron-Frobenius route, and the build-discriminating gap (autopsy of item 4)
 
-**Run:** 2026-07-18.
-**Target:** interface subclause (e) / Fable-5 item 4 --
+**Run:**
+**Target:** interface subclause (e) / item 4 --
 `dim ker(H_L - mu_L) = 1` and `r(z0) e_L != 0`, required build-neutrally.
 **Verdict:** item 4 as posed does **not** close build-neutrally. Simplicity with
 isolation at `mu_L` is a build-DISCRIMINATING property; the Perron-Frobenius
@@ -171,7 +171,7 @@ This does not refute item 4 for the plant (where it holds); it refutes the
 requirement -- that item 4 be a **build-neutral** subclause of the LP interface.
 The neutral content survives only in the weaker, gauge-free form named below.
 
-## 6. Flag for Fable-5 (not adjudicated here)
+## 6. Flag for (not adjudicated here)
 
 The plant's order-one-stable ground gap (section 4) means `S_N(mu_L^plant)` need
 not diverge at the plant's **own** `mu_L ~ -1.73` -- the finite resolvent
@@ -181,7 +181,7 @@ true spectral bottom), in tension with Outcome A (E77.1b). The E77.6/E77.7f
 "plant S_N diverges slowly" measurement used a frozen surrogate `mu_ref = -1.744`
 sitting *below* the converging even bottom (`-1.71 -> -1.74`), so its growth is a
 below-spectrum artifact, not divergence at `mu_L`. This is recorded as **data for
-review**; per the session's binding constraint the settled E77.7az gate is not
+review**; per the phase's binding constraint the settled E77.7az gate is not
 reopened here.
 
 ## 7. Corrected next object (build-neutral remnant)
@@ -229,7 +229,7 @@ refuted:   item 4 (simplicity + isolation at mu_L) as a BUILD-NEUTRAL subclause
            -- it is build-discriminating and hence a detector under E77.7az;
            the PF mechanism proposed for it does not exist;
 flagged:   plant order-one gap => possible plant BTG non-divergence at its own
-           mu_L (Outcome-B-flavored); recorded as data for Fable-5, gate not
+           mu_L (Outcome-B-flavored); recorded as data for, gate not
            reopened;
 open:      NEUTRAL-GROUND-CAUCHY (gauge-free nonvanishing, uniform in N without a
            build-discriminating gap) as the only admissibly build-neutral

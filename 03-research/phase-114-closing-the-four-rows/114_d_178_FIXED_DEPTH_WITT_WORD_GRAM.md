@@ -36,7 +36,7 @@ asymptotic
 In particular
 
 \[
- V_{N,1}\sim\frac12(\log N)^2,qquad
+ V_{N,1}\sim\frac12(\log N)^2,\qquad
  V_{N,2}\sim\frac1{12}(\log N)^4.                   \tag{0.5}
 
 Relative to the (k)-th power of the depth-one main scale, the leading
@@ -105,7 +105,7 @@ Define
 Then
 
 \[
- (U_m^L)^*U_n^L=\delta_{mn}I,qquad
+ (U_m^L)^*U_n^L=\delta_{mn}I,\qquad
  (U_m^L)^*U_n^R=\mathbf1_{mn=N}I.                    \tag{2.2}
 \]
 

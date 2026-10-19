@@ -1,6 +1,5 @@
 # E73.221 - Closed-center stability audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

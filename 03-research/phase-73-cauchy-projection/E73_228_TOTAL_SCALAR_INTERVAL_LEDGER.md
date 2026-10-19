@@ -1,6 +1,5 @@
 # E73.228 - Total scalar interval ledger
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

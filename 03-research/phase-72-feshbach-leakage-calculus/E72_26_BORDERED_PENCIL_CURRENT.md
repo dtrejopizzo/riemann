@@ -1,7 +1,6 @@
 # E72.26 -- Bordered pencil formula for the finite CCM divisor current
 
-**Date:** 2026-07-08.
-**Role:** replace root tracking and false vector transport by an exact finite determinant/current
+**Purpose:** replace root tracking and false vector transport by an exact finite determinant/current
 identity for the Weyl numerator.
 
 ## 0. Finite data

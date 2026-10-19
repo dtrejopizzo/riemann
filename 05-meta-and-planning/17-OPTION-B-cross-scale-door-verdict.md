@@ -1,6 +1,6 @@
 # The cross-scale cancellation door, probed: the √N barrier is overcome on each direction; the wall is the exact-boundary calibration
 
-**Auditor build · 2026-06-05.** `phase-14/experiments/cross_scale_cancellation.py`. The one formally-open door of
+**Auditor build · 2026-06-05.** `phase-14-off-diagonal-anchor-asymmetry/experiments/cross_scale_cancellation.py`. The one formally-open door of
 option (b): in the genuine ($d\to\infty$) form, do the prime octaves cancel destructively across scales (so the
 saturation $\lambda_{\max}=1$ is maintained robustly), or accumulate (marginal conspiracy)? We measured, on the
 saturating direction $g^\ast$ (the $\lambda_{\max}$ eigenvector), the running ratio $R(Y)=\fp_{\le Y}[g^\ast]/

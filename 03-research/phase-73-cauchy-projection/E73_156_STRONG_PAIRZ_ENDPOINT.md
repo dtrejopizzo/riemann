@@ -1,6 +1,5 @@
 # E73.156 - Strong PAIR-Z endpoint for RCE
 
-Date: 2026-07-12.
 
 ## 1. Purpose
 

@@ -1,7 +1,6 @@
-# R132.005 — hostile audit of record, row C, phase 132 **round 2** (confirmation pass)
+# R132.005 — audit of record, row C, phase 132 **round 2** (confirmation pass)
 
-Auditor: Claude Opus 5 (1M), adversarial auditor of record for phase 132.
-Date: 2026-09-12.  Target:
+Target:
 [Paper 45](../../04-papers/45-row-c-explicit-formula/main.md) as rebuilt in
 round 2 — all **25** `[REBUILT, phase 132, round 2]` passages read and
 re-derived — plus [README.md](../../04-papers/45-row-c-explicit-formula/README.md),
@@ -10,8 +9,8 @@ five `[phase 132]` cross-paper edits in
 [Paper 43](../../04-papers/43-row-a-torsion-theory/main.md) and
 [Paper 44](../../04-papers/44-row-b-arithmetic-family/main.md).
 Inputs: my [R132.002](R132_002_AUDIT_ROUND1.md) (`M1`–`M4`, `m1`–`m7`,
-`n1`–`n6`), the lead's [R132.003](R132_003_LEAD_AUDIT_ROUND1.md) (`LF1`–`LF5`),
-the builder's [R132.004](R132_004_BUILDER_ROUND2.md).
+`n1`–`n6`), [R132.003](R132_003_AUDIT_ROUND1.md) (`LF1`–`LF5`),
+[R132.004](R132_004_ROUND2.md).
 
 Method, as in round 1: every load-bearing round-2 statement **re-derived**, not
 re-read; every cited theorem of Papers 43 and 44 opened and checked against its
@@ -24,11 +23,11 @@ own text and hypotheses (in particular Paper 43 Thm 9.7(c),(d) and its proof,
 ## Headline
 
 **All four `MAJOR` findings of round 1 are genuinely repaired, and two of the
-repairs are, as the builder claims, strengthenings.**  Corollary 9.6a is
+repairs are, as R132.004 claims, strengthenings.**  Corollary 9.6a is
 correct and closes D128 `C9`; Lemma 5.1a is correct and closes the citation
 defect that was the gravest item in round 1; (E3a)–(E3d) is an honest ledger;
 Theorem 9bis.2′ is a real theorem and discharges clause C.4's polar half by a
-residue computation.  The builder's extension of 9bis.2′ to the **second** Tate
+residue computation.  R132.004's extension of 9bis.2′ to the **second** Tate
 point (`Res_{s=1}A_S = 0`, `Res_{s=1}A = 1`) is correct, is new, and improves
 the section; I verified both residues by hand and the script prints both.
 
@@ -181,7 +180,7 @@ bracket really is `O(t)` (`b(t)+b(−t)−2b(0) = O(t²)` and
 `106_11` variable is `z = (ρ−½)/i`, so `ρ = ½ − y_0 + ix_0`; `y_0 ≠ 0` is
 off-line and `x_0 ≠ 0` is "no real nontrivial zero"; (20) gives
 `Im s_0² = 2x_0y_0 ≠ 0` and (21) the isomorphism — (10.1) is faithful, (E2)'s
-new clause is used **only** there, and the lead's and my readings coincide.
+new clause is used **only** there, and R132.003's reading and this one coincide.
 `n3`: Theorem 12.2's proof now rests on Thm 9.7(c) ("vanishes identically on
 **no** component", discrete zero set, **for every `c`**) and quotes (14.2) only
 as a witness; the `c`-independence of `𝓝_∩ = 0` is stated and is correct (and
@@ -245,7 +244,7 @@ correct and needs no change.
 * **`r1` (main.md §14.3, line ~2093).**  *"conventions **(C1)** and **(C2)**
   (§1.2, carried into Theorems 9.6, 9.6′, **9bis.2**, 9bis.4 and §14.4)"*.
   Two defects in one line, and both bite on the `M3` repair.  (a) `9bis.2` is
-  the **withdrawn** theorem number (W45.15); the builder's grep
+  the **withdrawn** theorem number (W45.15); R132.004's grep
   `"Theorem 9bis.2[^′]"` missed it because the word "Theorem" is not repeated.
   (b) It asserts that (C1) is carried into a §9bis statement about `A` —
   the exact opposite of Definition 9bis.1a's box, which says in terms that
@@ -380,7 +379,7 @@ correct and needs no change.
 |---|---|---|
 | `M1` | Cor. 9.6a + Rem. 9.6b + §14.4 rewritten + W45.14 + Paper 43 Def. 8A.7d reason (iv) + obstacle row `c_{cut}` | **CLOSED**, and it is a strengthening — **except** the over-claim `R1`, which is new and must be deleted |
 | `M2` | (E3) → (E3a)–(E3d), sources named, Lem 9.2 and §9.6 row 7 and §11 rewritten | **CLOSED** in main.md; README lags (`r2`) |
-| `M3` | name withdrawn (W45.15), Def. 9bis.1a with the (C1) box, **Thm 9bis.2′ at both Tate points**, Rem. 9bis.2a, `Ξ ≡ 0` demoted to Rem. 9bis.2b, §0.1/§14.2/§15 rewritten | **CLOSED, and exceeded** — the `s = 1` mirror is the builder's own and it is correct.  Residue: `r1`, `r4` |
+| `M3` | name withdrawn (W45.15), Def. 9bis.1a with the (C1) box, **Thm 9bis.2′ at both Tate points**, Rem. 9bis.2a, `Ξ ≡ 0` demoted to Rem. 9bis.2b, §0.1/§14.2/§15 rewritten | **CLOSED, and exceeded** — the `s = 1` mirror is R132.004's own and it is correct.  Residue: `r1`, `r4` |
 | `M4` | **Lemma 5.1a**, proved from the two hypothesis-free citations; Lem 1.3(S1), Thm 9.6, Thm 9.6′, Thm 12.2 all routed through it; W45.16 | **CLOSED.**  Both citations verified in their sources; the lemma re-derived independently by a second route |
 | `m1` | Cor. 9.4a; `𝓔` a vector space; continuity disclaimed | **CLOSED** |
 | `m2` | `D ↦ D+2`, not "enlarge `N`" | **CLOSED**, matches `106_11` (27)–(30) |
@@ -407,7 +406,7 @@ of them change a theorem, a label of row A or B, or a proof?**
 *reasons*: **records only**, no statement, no proof, no clause of A.
 (e) adds Paper 44 §9.1a and §10.4 item 4a: **records only**.
 (a) changes the **status label of Thm 8bis.4(ii)'s import** from `CLASSICAL` to
-`PROVED-IN-REPOSITORY`.  That is a label change — authorized by the lead
+`PROVED-IN-REPOSITORY`.  That is a label change — authorized here
 (`LF5`(a)), *removing* an import rather than adding one, leaving the statement
 and the proof untouched, leaving Weil's **criterion** (iii) `CLASSICAL`
 (verified), and leaving Paper 44's own grade untouched.  I accept it, with
@@ -465,8 +464,8 @@ README lags on `M2` (`r2`), on `m3` (`r3`), and repeats `R1` (`r1`'s echo).
 
 ### 8.1 `Ξ ≡ 0`: **keep it as Remark 9bis.2b.  Do not delete it.**
 
-The builder asked for a ruling and offered to delete.  My ruling is **keep**,
-for three reasons, and the builder's stated reason is the right one.
+R132.004 asked for a ruling and offered to delete.  The ruling is **keep**,
+for three reasons, and R132.004's stated reason is the right one.
 (1) The statement is **true**, is proved in four lines, and is now correctly
 typed: a remark, named after what it actually is (the functional equation), with
 the explicit sentence *"no clause of this paper rests on `Ξ ≡ 0`"*.  What

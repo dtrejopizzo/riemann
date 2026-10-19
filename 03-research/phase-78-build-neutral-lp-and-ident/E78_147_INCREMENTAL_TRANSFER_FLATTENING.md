@@ -1,6 +1,6 @@
 # E78.147 - INCREMENTAL-TRANSFER-FLATTENING: a new object for the fixed-L front
 
-**Run:** 2026-07-21.
+**Run:**
 **Scope:** IDENT, fixed-L finite side (feeds FIXED-L-WEYL convergence and the
 COUPLED-GENERATOR-LIMIT summability input; shared infrastructure of points 5
 and 6).
@@ -17,7 +17,7 @@ logarithmic derivative obeys the clean summable law
 `|(log tau_N)'(i sigma)| = C(sigma)/N^2` with `C(sigma) ~ sigma` for the zeta
 build -- so the fixed-L log-transfer converges with a summable cofinal envelope.
 
-## 0.5 CORRECTION (bookkeeping audit, 2026-07-21)
+## 0.5 CORRECTION (bookkeeping audit)
 
 An external audit found a real error, corrected here and in E78.7. The boundary
 index is `idx[-1] = n_modes = N`, so **`d_{b,N} = 2 pi N/L` depends on N** and the

@@ -1,7 +1,6 @@
 # E67.15 — The forcing theorem: what is proved, what is Omega_7 in disguise, and the real gap
 
-**Date:** 2026-07-06.
-**Role:** formulate the remaining Phase-67 statement candidly, separating the trivial part from the
+**Purpose:** formulate the remaining Phase-67 statement candidly, separating the trivial part from the
 content, and grounding it in the E67.15 numerical probe.
 
 ## Setup (from E67.9–E67.14)

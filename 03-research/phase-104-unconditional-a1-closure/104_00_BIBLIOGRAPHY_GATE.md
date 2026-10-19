@@ -1,45 +1,45 @@
-# 104_00 — Gate bibliográfico
+# 104_00 — Bibliography gate
 
-**Rol:** bloqueante. Ningún mecanismo de Phase 104 se desarrolla sin veredicto aquí.
+**Objective:** blocking. No Phase 104 mechanism proceeds without a verdict here.
 
-**Sustituye** a `03-research/phase-102-omega7-closure-campaign/102_BIBLIOGRAPHIC_GATE.md`, que tiene 54 líneas y él
-mismo declara: *"A full external literature audit should compare this exact theorem by formula
-and mechanism before any paper-level novelty claim is made."* Ese audit no se había hecho.
+**Replaces** `03-research/phase-102-omega7-closure-campaign/102_BIBLIOGRAPHIC_GATE.md`, which has 54 lines and
+itself states: *"A full external literature audit should compare this exact theorem by formula
+and mechanism before any paper-level novelty claim is made."* That audit had not been done.
 
-**Convención obligatoria.** Todo enunciado importado lleva etiqueta `[INC]` (incondicional) o
-`[COND: RH]` / `[COND: GRH]`. Confundirlas es el error que este gate existe para impedir.
+**Mandatory convention.** Every imported statement carries the label `[UNCOND]` (unconditional) or
+`[COND: RH]` / `[COND: GRH]`. Confusing them is the error this gate exists to prevent.
 
 ---
 
-## 1. Hallazgo principal del gate
+## 1. Main finding of the gate
 
 ### Lagarias, *Li coefficients for automorphic L-functions*, `math/0404394` (Ann. Inst. Fourier 57 (2007) 1689)
 
-Definición (ec. 1.14), **coeficiente de Li incompleto**:
+Definition (eq. 1.14), **incomplete Li coefficient**:
 \[
 \lambda_n(T,\pi)=\sum_{\substack{\rho\in Z(\pi)\\ |\Im\rho|<T}}\Bigl[1-\Bigl(1-\frac1\rho\Bigr)^{n}\Bigr].
 \]
 
-Teorema 1.1, ec. (1.17), **tal como está impresa**:
+Theorem 1.1, eq. (1.17), **as printed**:
 \[
 \lambda_n(\pi)=\frac N2\,n\log n+C_1(\pi)\,n-\lambda_n(\sqrt n,\pi)+O(\sqrt n\log n).
 \]
 
-Ec. (1.18) — **`[COND: RH para L(s,π)]`**:
+Eq. (1.18) — **`[COND: RH for L(s,π)]`**:
 \[
 \lambda_n(\pi)=\frac N2\,n\log n+C_1(\pi)\,n+O(\sqrt n\log n).
 \]
 
-Ec. (1.13): \(C_1(\pi)=\frac N2(\gamma-1-\log 2\pi)+\frac12\log Q(\pi)\).
-Para \(\zeta\) (\(\pi\) trivial, \(N=1\), \(Q=1\)): \(C_1=\frac12(\gamma-1-\log 2\pi)\).
+Eq. (1.13): \(C_1(\pi)=\frac N2(\gamma-1-\log 2\pi)+\frac12\log Q(\pi)\).
+For \(\zeta\) (\(\pi\) trivial, \(N=1\), \(Q=1\)): \(C_1=\frac12(\gamma-1-\log 2\pi)\).
 
-Ec. (1.15), impresa:
+Eq. (1.15), as printed:
 \(S_f(n,\pi)=+\lambda_n(\sqrt n,\pi^\vee)+O(\sqrt n\log n)\).
 
-### Erratum de signo vinculante
+### Binding sign erratum
 
-Las dos fórmulas anteriores no pueden importarse como teoremas en esa forma. En el punto
-\(s_0=\rho-1\), el integrando de la prueba del Teorema 6.1 satisface
+The two formulas above cannot be imported as theorems in that form. At the point
+\(s_0=\rho-1\), the integrand in the proof of Theorem 6.1 satisfies
 
 \[
 \mathop{\mathrm{Res}}_{s=s_0}
@@ -49,38 +49,38 @@ k_n(s)\left(-\frac{L'}L(s+1,\pi)\right)
 k_n(s)=\left(1+\frac1s\right)^n-1.
 \]
 
-El signo menos viene de \(-L'/L\). Al expandir el contorno pequeño antihorario al rectángulo
-grande, la prueba impresa usa el signo contrario. Con la simetría de ceros que el artículo usa
-para obtener (6.7), póngase
+The minus sign comes from \(-L'/L\). When expanding the small counterclockwise contour to the
+large rectangle, the printed proof uses the opposite sign. With the zero symmetry that the
+article uses to obtain (6.7), set
 
 \[
 \widehat I_2(n):={1\over2\pi i}\int_{C_2}F_n(s)\,ds.
 \]
 
-La fuente define \(I_2\) sin el factor \((2\pi i)^{-1}\), pero después lo usa como si estuviera
-normalizado. Con la notación no ambigua anterior, el cálculo corregido da
+The source defines \(I_2\) without the \((2\pi i)^{-1}\) factor, but later uses it as if it were
+normalized. With the unambiguous notation above, the corrected computation gives
 
 \[
 \widehat I_2(n)=S_f(n,\pi)+\lambda_n(T,\pi^\vee)+O(1),
 \]
 
-y la conclusión de contorno se repara como sigue. La elección impresa
-\(T=\sqrt n+\varepsilon_n\) no justifica el decrecimiento geométrico de (6.12):
-su razón disponible es \(e/2>1\). Tomando primero
-\(T=2\sqrt n+\varepsilon_n\), la identidad exacta
+and the contour conclusion is repaired as follows. The printed choice
+\(T=\sqrt n+\varepsilon_n\) does not justify the geometric decay of (6.12):
+its available ratio is \(e/2>1\). Taking instead
+\(T=2\sqrt n+\varepsilon_n\), the exact identity
 
 \[
  {k_n(s+1)+1\over k_n(s)+1}
  =\left(1-{1\over(s+1)^2}\right)^n
 \]
 
-da la razón \(e^{1/4}/2<1\) contra el mayorante absoluto de la serie de
-Dirichlet de \(L'/L\). Así
-\(\widehat I_2(n)=O_\pi(\sqrt n\log n)\). La banda
-\(\sqrt n\le|\gamma|\le2\sqrt n+1\) contiene
-\(O_\pi(\sqrt n\log n)\) ceros y cada sumando de Li tiene módulo
-\(\le1+e^{1/2}\), de modo que se vuelve al cutoff \(\sqrt n\) con el mismo
-orden de error. Resulta
+gives the ratio \(e^{1/4}/2<1\) against the absolute majorant of the Dirichlet
+series of \(L'/L\). Thus
+\(\widehat I_2(n)=O_\pi(\sqrt n\log n)\). The band
+\(\sqrt n\le|\gamma|\le2\sqrt n+1\) contains
+\(O_\pi(\sqrt n\log n)\) zeros and each Li summand has modulus
+\(\le1+e^{1/2}\), so one returns to the \(\sqrt n\) cutoff with the same
+order of error. This yields
 
 \[
 \boxed{
@@ -88,8 +88,8 @@ S_f(n,\pi)=-\lambda_n(\sqrt n,\pi^\vee)+O_\pi(\sqrt n\log n).}
 \tag{1.15c}
 \]
 
-Por la fórmula aritmética exacta
-\(\lambda_n=S_\infty-S_f+\delta\), la versión corregida de (1.17) es
+By the exact arithmetic formula
+\(\lambda_n=S_\infty-S_f+\delta\), the corrected version of (1.17) is
 
 \[
 \boxed{
@@ -98,73 +98,73 @@ Por la fórmula aritmética exacta
 \tag{1.17c}
 \]
 
-La fórmula condicional (1.18) no cambia. La auditoría completa de orientación, residuo y
-simetría está en `104_02` §1. La búsqueda realizada el 25-jul-2026 en la ficha arXiv, la ficha
-Numdam y los resultados enlazados desde ellas **no localizó un corrigendum**; (1.15c)–(1.17c)
-son por tanto un erratum interno, no una corrección oficial atribuida al autor.
+The conditional formula (1.18) is unchanged. The full audit of orientation, residue, and
+symmetry is in `104_02` §1. The search carried out on 25-Jul-2026 on the arXiv record, the
+Numdam record, and the results linked from them **found no corrigendum**; (1.15c)–(1.17c)
+are therefore an internal erratum, not an official correction attributed to the author.
 
-**Constante implícita — dato crítico.** En (1.15), (1.17) y (1.18) Lagarias repite:
-*"where the implied constant in the O-notation depends on \(\pi\)"*. **No hay constante
-efectiva.** Para \(\zeta\) es una constante absoluta fija pero desconocida. Bloquea cualquier
-rango numérico certificado. Efectivizarla no es RH-strength, pero queda **diferida**: no
-contribuye al cierre para todo \(n\), que es el objetivo de la fase.
+**Implied constant — critical datum.** In (1.15), (1.17), and (1.18), Lagarias repeats:
+*"where the implied constant in the O-notation depends on \(\pi\)"*. **There is no effective
+constant.** For \(\zeta\) it is a fixed absolute but unknown constant. It blocks any
+certified numerical range. Making it effective is not RH-strength, but it is **deferred**: it
+does not contribute to closure for all \(n\), which is the goal of the phase.
 
-**Rango con RH verificada — enunciado propio de Lagarias**, inmediatamente tras (1.16).
-**Atención: las dos versiones difieren en un factor 2 y no deben fundirse.**
+**Range with verified RH — Lagarias's own statement**, immediately after (1.16).
+**Note: the two versions differ by a factor of 2 and must not be merged.**
 
-- **Publicada** (Ann. Inst. Fourier **57** (2007) 1689, p. 1694), verificada sobre el PDF:
+- **Published version** (Ann. Inst. Fourier **57** (2007) 1689, p. 1694), checked against the PDF:
   > *"Furthermore if the Riemann hypothesis holds up to height \(T\), then a bound of shape
   > (1.16) holds for all \(n\leqslant T^2/2(\log T)^2\), with the implied \(O\)-constant
   > depending on \(\pi\)."*
-- **Fuente TeX de arXiv** `math/0404394`: mismo párrafo con \(T^2/4(\log T)^2\).
+- **arXiv TeX source** `math/0404394`: same paragraph with \(T^2/4(\log T)^2\).
 
-Se registra la versión publicada como texto principal y la fuente arXiv como variante. La
-discusión corregida de lo que una altura verificada permite está en `104_02` §5.
+The published version is recorded as the main text and the arXiv source as a variant. The
+corrected discussion of what a verified height allows is in `104_02` §5.
 
-El enunciado final usa la truncación **exactamente \(\sqrt n\)**. El factor
-\(2\) anterior es solo el contorno auxiliar que repara el tramo horizontal;
-se elimina mediante la estimación de la banda.
+The final statement uses the truncation at **exactly \(\sqrt n\)**. The earlier factor
+of \(2\) is only the auxiliary contour that repairs the horizontal segment;
+it is eliminated by the band estimate.
 
-**Explosión sin RH — la referencia que hace falta.** Tras (1.18), p. 1694:
+**Blow-up without RH — the needed reference.** After (1.18), p. 1694:
 > *"If the Riemann hypothesis does not hold for \(L(s,\pi)\) then the incomplete Li coefficient
 > term \(\lambda_n(\sqrt n,\pi)\) will sometimes be very large, of size exponential in \(n\).
 > This fact was already observed for the Riemann zeta function in [4, Theorem 1 (c)]."*
 
-[4] = **Bombieri–Lagarias**. Es el enunciado que se cita en §7; no se rehace a mano.
+[4] = **Bombieri–Lagarias**. This is the statement cited in §7; it is not redone by hand.
 
-**Consecuencia corregida para nuestra normalización.** Nuestro bloque arquimediano cumple
+**Corrected consequence for our normalization.** Our archimedean block satisfies
 (`main.tex:6856`)
 \[
 A_n=\frac n2(\log n+\gamma-1-\log 2\pi)+O(\log n),
 \]
-que coincide con \(\frac12 n\log n+C_1 n\) para \(\zeta\), salvo \(O(\log n)\). Definiendo
+which matches \(\frac12 n\log n+C_1 n\) for \(\zeta\), up to \(O(\log n)\). Defining
 
 \[
 \widetilde\varepsilon_n:=A_n-\lambda_n+\lambda_n(\sqrt n),
 \]
 
-(1.17c) implica
+(1.17c) implies
 
 \[
 \boxed{\ A_n-\lambda_n=-\lambda_n(\sqrt n)+\widetilde\varepsilon_n,\quad
-|\widetilde\varepsilon_n|\le C_*\sqrt n\log n\qquad[\mathrm{INC}]\ }
+|\widetilde\varepsilon_n|\le C_*\sqrt n\log n\qquad[\mathrm{UNCOND}]\ }
 \tag{G1c}
 \]
 
-y como nuestra identidad exacta da \(\lambda_n=A_n-n-\mathcal J_n\) con
-\(\mathcal J_n=\int_0^\infty E\,K_n\), se obtiene
+and since our exact identity gives \(\lambda_n=A_n-n-\mathcal J_n\) with
+\(\mathcal J_n=\int_0^\infty E\,K_n\), one obtains
 
 \[
 \boxed{\ \mathcal J_n+n=-\lambda_n(\sqrt n)+\widetilde\varepsilon_n
-\qquad[\mathrm{INC}]\ }
+\qquad[\mathrm{UNCOND}]\ }
 \tag{G2c}
 \]
 
-La cantidad anterior
-\(\varepsilon_n^-=A_n-\lambda_n-\lambda_n(\sqrt n)\) satisface
-\(\varepsilon_n^-=\widetilde\varepsilon_n-2\lambda_n(\sqrt n)\). Por ello se **retira** la cota
-incondicional \(|\varepsilon_n^-|\ll\sqrt n\log n\): no es una cuestión de efectivizar una
-constante. La forma exacta corregida de A1 es
+The earlier quantity
+\(\varepsilon_n^-=A_n-\lambda_n-\lambda_n(\sqrt n)\) satisfies
+\(\varepsilon_n^-=\widetilde\varepsilon_n-2\lambda_n(\sqrt n)\). Hence the unconditional
+bound \(|\varepsilon_n^-|\ll\sqrt n\log n\) is **withdrawn**: it is not a matter of making a
+constant effective. The corrected exact form of A1 is
 
 \[
 \boxed{
@@ -174,262 +174,265 @@ constante. La forma exacta corregida de A1 es
 \tag{G3c}
 \]
 
-En consecuencia, el bloque incompleto requiere una cota **inferior**, no superior.
+Consequently, the incomplete block requires a **lower** bound, not an upper one.
 
-Aquí solo se registra que **el control colectivo de los ceros de altura \(\gg\sqrt n\) ya está
-resuelto en la literatura**, y que el obstáculo restante vive íntegramente en el bloque
-incompleto.
+Here it is recorded only that **collective control of zeros of height \(\gg\sqrt n\) is already
+resolved in the literature**, and that the remaining obstacle lives entirely in the incomplete
+block.
 
-**Chequeo de consistencia.** Bajo RH,
-\(0\le\lambda_n(\sqrt n)\le4N(\sqrt n)\). El lado que ahora importa en (G3c) es la no
-negatividad. Si RH falla, Bombieri–Lagarias muestra que el bloque incompleto tiene excursiones
-exponenciales; una cota inferior uniforme del tamaño requerido sigue siendo RH-strength.
+**Consistency check.** Under RH,
+\(0\le\lambda_n(\sqrt n)\le4N(\sqrt n)\). The side that now matters in (G3c) is non-negativity.
+If RH fails, Bombieri–Lagarias shows that the incomplete block has exponential excursions; a
+uniform lower bound of the required size is still RH-strength.
 
-**Veredicto:** `no-duplica` para A1, **`duplica`** para la localización de la cola **y también
-para el rango finito con altura verificada**.
+**Verdict:** `does-not-duplicate` for A1, **`duplicates`** for the localization of the tail **and
+also for the finite range with verified height**.
 
-Antes de incorporar este gate, las fases 1--103 tenían **cero ocurrencias** de "incomplete Li"
-(búsqueda sobre `*.md`, `*.tex`, `*.py`), y `rmk:height-range` (`main.tex:6516`) planteaba el
-control colectivo de \(\gamma>H\) como abierto
-pidiendo "a zero-density input" — input que la versión corregida (1.17c) no necesita. Y el rango \(\approx10^{25}\) de
-`main.tex:6531` se obtiene por **análisis de cero único**, no colectivo: ese es el defecto real.
-Lagarias enuncia, desde 2007, un rango menor para una cota de forma (1.16)
-—\(T^2/2(\log T)^2\approx5.5\times10^{21}\) en la versión publicada—, pero **el valor correcto
-queda abierto**: la cuenta directa desde \(\sqrt n\le H\) sí alcanza \(n\le H^2\) para la cota
-trivial, y hay además discrepancia editorial (registrada en `104_02` §5).
+Before this gate was incorporated, phases 1–103 had **zero occurrences** of "incomplete Li"
+(search over `*.md`, `*.tex`, `*.py`), and `rmk:height-range` (`main.tex:6516`) posed the
+collective control of \(\gamma>H\) as open, requesting "a zero-density input" — an input that
+the corrected version (1.17c) does not need. And the range \(\approx10^{25}\) of
+`main.tex:6531` is obtained by **single-zero analysis**, not collective analysis: that is the
+real defect. Lagarias states, since 2007, a smaller range for a bound of form (1.16)
+—\(T^2/2(\log T)^2\approx5.5\times10^{21}\) in the published version—, but **the correct value
+remains open**: the direct count from \(\sqrt n\le H\) does reach \(n\le H^2\) for the trivial
+bound, and there is also an editorial discrepancy (recorded in `104_02` §5).
 
-**Consecuencia para el plan:** el rango finito con altura verificada es terreno mayormente
-bibliográfico y **no es el frente**. El frente es (G3c), con el signo corregido.
+**Consequence for the plan:** the finite range with verified height is mostly bibliographic
+ground and **is not the front**. The front is (G3c), with the corrected sign.
 
 ---
 
-## 2. Ruta del punto de silla / Nörlund–Rice
+## 2. Saddle-point / Nörlund–Rice route
 
 ### Mazhouda, *The saddle-point method and the Li coefficients*, `1506.01755` (Canad. Math. Bull.)
 
-Abstract, textual: *"for any function F in the Selberg class S and **under the Generalized
-Riemann Hypothesis**, we have λ_F(n)=…"*. Método: punto de silla + integrales de Nörlund–Rice
-sobre los \(\lambda_F(n)\) generalizados de Omar–Mazhouda.
+Abstract, verbatim: *"for any function F in the Selberg class S and **under the Generalized
+Riemann Hypothesis**, we have λ_F(n)=…"*. Method: saddle point + Nörlund–Rice integrals
+over the generalized \(\lambda_F(n)\) of Omar–Mazhouda.
 
-- Etiqueta: **`[COND: GRH]`**. No hay versión incondicional en el enunciado.
-- **Solapamiento con `104_03`:** la representación de contorno
-  \(S_n=\frac1{2\pi i}\oint R(t)(1+t)^n t^{-(n+1)}dt\) es de la misma familia (transformada
-  binomial ↔ Nörlund–Rice). `104_03` debe deslindar explícitamente qué parte del contorno es
-  incondicional en nuestro caso y qué parte, allí, se apoya en GRH.
-- **Veredicto:** `adyacente`. La técnica está publicada; lo que no está es una conclusión
-  incondicional. `104_03` se declara auditoría, no aporte.
+- Label: **`[COND: GRH]`**. There is no unconditional version in the statement.
+- **Overlap with `104_03`:** the contour representation
+  \(S_n=\frac1{2\pi i}\oint R(t)(1+t)^n t^{-(n+1)}dt\) is of the same family (binomial transform
+  ↔ Nörlund–Rice). `104_03` must explicitly delineate which part of the contour is
+  unconditional in our case and which part, there, relies on GRH.
+- **Verdict:** `adjacent`. The technique is published; what is missing is an unconditional
+  conclusion. `104_03` is declared an audit, not a contribution.
 
 ---
 
-## 3. Serie Voros
+## 3. Voros series
 
-| ref | contenido | etiqueta |
+| ref | content | label |
 |---|---|---|
-| `1602.03292` — *Simplifications of the Keiper/Li approach to the RH* | simplificaciones del esquema | — |
-| `1703.02844` — *Discretized Keiper/Li approach to the RH* | deforma \(\{\lambda_n\}\) a sucesiones explícitas, computadas hasta \(n=5\cdot10^5\) (Misguich); tests que "selectively react to zeros off the critical line", validados contra Davenport–Heilbronn | **no da resultado incondicional**; es marco de test computacional |
-| `2204.01036` — *From asymptotic to closed forms…* | nueva sucesión en forma cerrada elemental que retiene la sensibilidad asintótica a RH; señala ceros violadores vía DH | **sin afirmaciones incondicionales en el abstract**; no prueba un criterio nuevo equivalente a RH, reformula el de Li |
+| `1602.03292` — *Simplifications of the Keiper/Li approach to the RH* | simplifications of the scheme | — |
+| `1703.02844` — *Discretized Keiper/Li approach to the RH* | deforms \(\{\lambda_n\}\) into explicit sequences, computed up to \(n=5\cdot10^5\) (Misguich); tests that "selectively react to zeros off the critical line", validated against Davenport–Heilbronn | **gives no unconditional result**; it is a computational test framework |
+| `2204.01036` — *From asymptotic to closed forms…* | new sequence in elementary closed form that retains the asymptotic sensitivity to RH; flags violating zeros via DH | **no unconditional claims in the abstract**; it does not prove a new criterion equivalent to RH, it reformulates Li's |
 
-**Punto que corrige al gate 102.** `102_BIBLIOGRAPHIC_GATE.md` advierte: *"Claims proving only
-the asymptotic size of `lambda_n` do not close Omega7."* Es impreciso. Una cota **superior**
-subexponencial sobre \(\lambda_n\) sí implica RH: un cuarteto fuera de la línea aporta
-\(4-4\cosh(n\alpha)\cos(n\theta)\) con \(\alpha>0\), de amplitud exponencial en \(n\)
-(`103_28`, `103_69`). Lo que no cierra nada es una cota **asintótica en el sentido de "orden de
-magnitud"** sin uniformidad ni lado. La advertencia correcta es sobre **uniformidad y lado**, no
-sobre "asintótico".
+**Point that corrects gate 102.** `102_BIBLIOGRAPHIC_GATE.md` warns: *"Claims proving only
+the asymptotic size of `lambda_n` do not close Omega7."* This is imprecise. A subexponential
+**upper** bound on \(\lambda_n\) does imply RH: an off-line quartet contributes
+\(4-4\cosh(n\alpha)\cos(n\theta)\) with \(\alpha>0\), of exponential amplitude in \(n\)
+(`103_28`, `103_69`). What closes nothing is a bound that is **asymptotic in the "order of
+magnitude" sense** without uniformity or side. The correct warning is about **uniformity and
+side**, not about "asymptotic."
 
-Aquí la normalización es la del coeficiente de Li. En una forma de Weil/autocorrelación
-\(2\mathrm{Re}\,\lambda_n\), el mismo cuarteto aporta
+Here the normalization is that of the Li coefficient. In a Weil-form/autocorrelation
+normalization \(2\mathrm{Re}\,\lambda_n\), the same quartet contributes
 \(8-8\cosh(n\alpha)\cos(n\theta)\).
 
-**Veredicto:** `adyacente`. Las conclusiones de Voros **no se transfieren automáticamente a
-A1**: sus sucesiones son deformaciones, no la nuestra, y su valor demostrado es diagnóstico.
+**Verdict:** `adjacent`. Voros's conclusions **do not transfer automatically to
+A1**: his sequences are deformations, not ours, and his proved value is diagnostic.
 
 ---
 
 ## 4. Coffey
 
-| ref | contenido | riesgo |
+| ref | content | risk |
 |---|---|---|
-| `math/0402168` — *Effective method of computing Li's coefficients and their properties* | cómputo efectivo de \(\lambda_n\) | bajo |
-| `math/0406312` — *An Explicit Formula Relating Stieltjes Constants and Li's Numbers* | relación explícita constantes de Stieltjes ↔ números de Li | **alto** para la forma escalar de `103_66` |
+| `math/0402168` — *Effective method of computing Li's coefficients and their properties* | effective computation of \(\lambda_n\) | low |
+| `math/0406312` — *An Explicit Formula Relating Stieltjes Constants and Li's Numbers* | explicit relation Stieltjes constants ↔ Li numbers | **high** for the scalar form of `103_66` |
 
-La forma escalar de `103_66` ec. (8) es
-\(\sum_{j=0}^n\binom nj\frac{R^{(j)}(0)}{j!}\le\frac12\Delta A_n\), donde
-\(R^{(j)}(0)/j!\) son polinomios explícitos en las constantes de Stieltjes. **Es exactamente el
-tipo de objeto de `math/0406312`.**
+The scalar form of `103_66` eq. (8) is
+\(\sum_{j=0}^n\binom nj\frac{R^{(j)}(0)}{j!}\le\frac12\Delta A_n\), where
+\(R^{(j)}(0)/j!\) are explicit polynomials in the Stieltjes constants. **This is exactly the
+type of object in `math/0406312`.**
 
-**Veredicto:** `duplicación probable` de la *coordenada*, no necesariamente de la desigualdad.
-Consecuencia operativa: la forma lcm/Stieltjes queda **degradada a auditoría**, no es frente
-(consistente con la decisión del plan).
-
----
-
-## 5. Espacio modelo / de Branges / medidas de Clark
-
-### Suzuki, *On the Hilbert space derived from the Weil distribution*, `2301.00421`, Canad. J. Math., online 3-nov-2025, DOI 10.4153/S0008414X25101739
-
-Completa \(C_c^\infty(\mathbb R)\) respecto de la forma hermitiana de la distribución de Weil
-**bajo RH**, y prueba que ese espacio de Hilbert es isomorfo a un **espacio de de Branges** vía
-Fourier compuesto con una aplicación simple; deduce nuevas condiciones equivalentes a RH.
-
-- Etiqueta: **`[COND: RH]`** para la construcción del espacio.
-- **Elimina la novedad** que se había atribuido a la ruta espacio-modelo / de Branges: el
-  puente Weil ↔ espacio modelo ↔ de Branges está publicado.
-
-**Sobre medidas de Aleksandrov–Clark.** La búsqueda no devuelve conexión Clark ↔ RH, y el repo
-tiene cero ocurrencias de "Clark measure". Pero eso **no basta para declararla prometedora**:
-la medida de Clark de \(\theta_n(s)=((s-1)/s)^n\) depende **solo de \(\theta_n\)**, no de
-\(\zeta\), luego es universal y por sí sola no contiene aritmética alguna; además uno de los
-nodos puede aparecer como masa en infinito.
-
-**Veredicto:** `descartado como frente`. Se retoma solo si aparece un punto de entrada
-aritmético concreto, y en ese caso el deslinde con Suzuki es obligatorio.
+**Verdict:** `likely duplication` of the *coordinate*, not necessarily of the inequality.
+Operational consequence: the lcm/Stieltjes form is **downgraded to audit**, it is not a front
+(consistent with the plan's decision).
 
 ---
 
-## 6. Altura verificada
+## 5. Model space / de Branges / Clark measures
+
+### Suzuki, *On the Hilbert space derived from the Weil distribution*, `2301.00421`, Canad. J. Math., online 3-Nov-2025, DOI 10.4153/S0008414X25101739
+
+Completes \(C_c^\infty(\mathbb R)\) with respect to the Hermitian form of the Weil
+distribution **under RH**, and proves that this Hilbert space is isomorphic to a **de Branges
+space** via Fourier composed with a simple map; deduces new conditions equivalent to RH.
+
+- Label: **`[COND: RH]`** for the construction of the space.
+- **Eliminates the novelty** that had been attributed to the model-space/de Branges route: the
+  bridge Weil ↔ model space ↔ de Branges is published.
+
+**On Aleksandrov–Clark measures.** The search returns no Clark ↔ RH connection, and the repo
+has zero occurrences of "Clark measure". But that is **not enough to declare it promising**:
+the Clark measure of \(\theta_n(s)=((s-1)/s)^n\) depends **only on \(\theta_n\)**, not on
+\(\zeta\), so it is universal and by itself contains no arithmetic whatsoever; moreover one of
+the nodes may appear as a point mass at infinity.
+
+**Verdict:** `discarded as a front`. It is taken up again only if a concrete arithmetic entry
+point appears, and in that case the delineation from Suzuki is mandatory.
+
+---
+
+## 6. Verified height
 
 ### Platt–Trudgian, *The Riemann hypothesis is true up to 3·10¹²*, `2004.09765`
 
-RH verificada para \(|\gamma|\le H=3\times10^{12}\).
+RH verified for \(|\gamma|\le H=3\times10^{12}\).
 
-- Etiqueta: **`[INC]`** (es un teorema asistido por computadora, no condicional).
-- **Uso admisible en Phase 104: únicamente verificación, corolario finito o prueba de
-  consistencia** (`104_02` §5). La demostración uniforme de A1 para todo \(n\ge150\) no puede
-  depender de él.
-- **Escala: abierta, no corregida.** Coexisten \(H^2\) (cuenta directa desde \(\sqrt n\le H\),
-  para la cota trivial \(\lambda_n(\sqrt n)\le4N(\sqrt n)\)), \(H^2/2(\log H)^2\) (Lagarias
-  publicada) y \(H^2/4(\log H)^2\) (arXiv). Lo que sí está mal en `rmk:height-range`
-  (`main.tex:6531`) es el **argumento**, que es de cero aislado. Ver `104_02` §5.
+- Label: **`[UNCOND]`** (it is a computer-assisted theorem, not conditional).
+- **Admissible use in Phase 104: verification, finite corollary, or consistency check only**
+  (`104_02` §5). The uniform proof of A1 for all \(n\ge150\) cannot depend on it.
+- **Scale: open, not corrected.** \(H^2\) (direct count from \(\sqrt n\le H\),
+  for the trivial bound \(\lambda_n(\sqrt n)\le4N(\sqrt n)\)), \(H^2/2(\log H)^2\) (Lagarias
+  published), and \(H^2/4(\log H)^2\) (arXiv) coexist. What is actually wrong in
+  `rmk:height-range` (`main.tex:6531`) is the **argument**, which is of isolated-zero type. See
+  `104_02` §5.
 
 ---
 
-## 7. Fuentes admisibles, y el "competidor" por la misma ruta
+## 7. Admissible sources, and the "competitor" on the same route
 
-### Política de fuentes (vinculante para toda la fase)
+### Source policy (binding for the whole phase)
 
-**Admisibles como fuente de un resultado:** arXiv, Zenodo, repositorios institucionales, y
-revistas con revisión por pares.
-**No admisibles como fuente de un resultado:** ResearchGate, Academia.edu, viXra y agregadores
-similares — alojan preprints sin revisión ni control de versiones, y su tasa de error en este
-tema concreto (pruebas reclamadas de RH) es alta. De ahí **no se importa ningún lema**.
+**Admissible as a source for a result:** arXiv, Zenodo, institutional repositories, and
+peer-reviewed journals.
+**Not admissible as a source for a result:** ResearchGate, Academia.edu, viXra, and similar
+aggregators — they host preprints with no review or version control, and their error rate on
+this specific topic (claimed proofs of RH) is high. Consequently **no lemma is imported from
+them**.
 
-**Distinción necesaria: admisibilidad ≠ prioridad.** Una fuente inadmisible como soporte de un
-teorema **sigue contando como posible antecedente de prioridad**: si alguien publicó primero una
-idea, el hecho no depende de dónde la alojó. Por tanto los textos inadmisibles **se registran,
-se fechan y se comparan mecanismo a mecanismo**; lo único que no se hace es citarlos como
-justificación de un paso.
+**A necessary distinction: admissibility ≠ priority.** A source inadmissible as support for a
+theorem **still counts as a possible priority antecedent**: if someone published an idea first,
+that fact does not depend on where it was hosted. Therefore inadmissible texts **are recorded,
+dated, and compared mechanism by mechanism**; the only thing not done is citing them to justify
+a step.
 
-### El texto en cuestión
+### The text in question
 
-**"On the Asymptotics of Li coefficients and Proof of the Riemann Hypothesis"**, feb-2026,
-alojado **solo en ResearchGate** (publication 400430678). Sin versión en arXiv, Zenodo ni
-preprints.org; sin revisión por pares. **Fuente no admisible** por la política de arriba.
+**"On the Asymptotics of Li coefficients and Proof of the Riemann Hypothesis"**, Feb-2026,
+hosted **only on ResearchGate** (publication 400430678). No arXiv, Zenodo, or
+preprints.org version; no peer review. **Inadmissible source** under the policy above.
 
-Se conserva esta entrada por una única razón: ataca por **nuestra ruta exacta** (fórmula
-explícita de \(\psi\) + polinomios de Laguerre) y reclama:
+This entry is kept for a single reason: it attacks via **our exact route** (explicit
+formula for \(\psi\) + Laguerre polynomials) and claims:
 \[
 \lambda_n=\frac n2(\log n-1+\gamma-\log 2\pi)+o(n)\quad(n\to\infty)
-\ \Longrightarrow\ \text{RH por un teorema de Voros}.
+\ \Longrightarrow\ \text{RH by a theorem of Voros}.
 \]
 
-En la normalización de (G1c)–(G2c) eso equivale a afirmar \(\lambda_n(\sqrt n)=o(n)\)
-**incondicionalmente** — precisamente el bloque incompleto que aquí está abierto.
+In the normalization of (G1c)–(G2c) this amounts to claiming \(\lambda_n(\sqrt n)=o(n)\)
+**unconditionally** — precisely the incomplete block that is open here.
 
-**Estado del acceso:** `BLOQUEADO` (HTTP 403 a fetch anónimo) **y fuente no admisible**. Solo se
-dispone del enunciado, vía indexación.
+**Access status:** `BLOCKED` (HTTP 403 on anonymous fetch) **and inadmissible source**. Only
+the statement, via indexing, is available.
 
-**Lo que sí se puede establecer sin el texto.** Su afirmación, traducida por (G1c), es
+**What can be established without the text.** Its claim, translated via (G1c), is
 \[
-\lambda_n(\sqrt n)=o(n)\qquad\text{incondicionalmente.}
+\lambda_n(\sqrt n)=o(n)\qquad\text{unconditionally.}
 \]
 
-**Proposición (dicotomía).** *La afirmación del preprint es equivalente a RH; no es un paso
-intermedio hacia ella.*
+**Proposition (dichotomy).** *The preprint's claim is equivalent to RH; it is not an
+intermediate step toward it.*
 
-*Demostración.* (\(\Leftarrow\)) Bajo RH, cada par \(\{\rho,\bar\rho\}\) con \(|\gamma|<\sqrt n\)
-aporta \(2-2\cos(n\theta_\rho)\in[0,4]\), luego
+*Proof.* (\(\Leftarrow\)) Under RH, each pair \(\{\rho,\bar\rho\}\) with \(|\gamma|<\sqrt n\)
+contributes \(2-2\cos(n\theta_\rho)\in[0,4]\), so
 \(\lambda_n(\sqrt n)\le4N(\sqrt n)=O(\sqrt n\log n)=o(n)\).
 
-(\(\Rightarrow\)) **Se cita Bombieri–Lagarias**, Thm 1(c), que es exactamente el enunciado
-necesario: si RH falla, \(\lambda_n(\sqrt n)\) es *a veces* de tamaño **exponencial en \(n\)*.
-El propio Lagarias lo señala tras (1.18):
+(\(\Rightarrow\)) **Bombieri–Lagarias is cited**, Thm 1(c), which is exactly the statement
+needed: if RH fails, \(\lambda_n(\sqrt n)\) is *sometimes* of exponential size in \(n\).
+Lagarias himself notes this after (1.18):
 
 > *"If the Riemann hypothesis does not hold for \(L(s,\pi)\) then the incomplete Li coefficient
 > term \(\lambda_n(\sqrt n,\pi)\) will sometimes be very large, of size exponential in \(n\).
 > This fact was already observed for the Riemann zeta function in [4, Theorem 1 (c)]."*
 > — `math/0404394`, p. 1694; [4] = Bombieri–Lagarias.
 
-Luego \(\lambda_n(\sqrt n)\ne o(n)\), contra la afirmación. \(\square\)
+Hence \(\lambda_n(\sqrt n)\ne o(n)\), contradicting the claim. \(\square\)
 
-> **Corrección vinculante.** Una versión anterior de esta demostración argumentaba la dirección
-> (\(\Rightarrow\)) diciendo que «los demás ceros son finitos en número y de frecuencias
-> \(\theta\) fijas», de modo que no pueden cancelar el cuarteto ofensor. **Ese argumento es
-> insuficiente:** la truncación \(\sqrt n\) **crece con \(n\)**, así que el conjunto de ceros que
-> participan no es fijo — entran ceros nuevos indefinidamente. Controlar la cancelación entre un
-> conjunto creciente de términos exponenciales es precisamente el contenido de Bombieri–Lagarias,
-> y hay que citarlo, no rehacerlo a mano.
+> **Binding correction.** An earlier version of this proof argued direction
+> (\(\Rightarrow\)) by saying that "the other zeros are finite in number and of fixed
+> frequencies \(\theta\)," so they cannot cancel the offending quartet. **That argument is
+> insufficient:** the truncation \(\sqrt n\) **grows with \(n\)**, so the set of participating
+> zeros is not fixed — new zeros enter indefinitely. Controlling the cancellation among a
+> growing set of exponential terms is precisely the content of Bombieri–Lagarias, and it must be
+> cited, not redone by hand.
 
-**Consecuencia operativa.** El preprint contiene RH o contiene un error; no hay tercera opción,
-y ninguna parte de él puede importarse como lema. **Su valor para nosotros es exclusivamente
-diagnóstico:** saber en qué línea concreta se rompe el argumento natural por la ruta
-ψ-explícita + Laguerre —que es *nuestra* ruta— ahorra tiempo en `104_10`.
+**Operational consequence.** The preprint either contains RH or contains an error; there is no
+third option, and no part of it can be imported as a lemma. **Its value to us is exclusively
+diagnostic:** knowing at exactly which line the natural argument via the
+\(\psi\)-explicit-formula + Laguerre route — which is *our* route — breaks down saves time in
+`104_10`.
 
-**Hipótesis sobre el punto de ruptura**, en orden de probabilidad, a contrastar cuando se
-consiga el PDF:
-1. Intercambio ilegítimo del límite \(n\to\infty\) con la suma sobre ceros (o con el regulador
-   \(\varepsilon\downarrow0\)): es exactamente donde puede desaparecer una excursión
-   exponencial de \(\lambda_n(\sqrt n)\).
-2. Cota **puntual** sobre \(\psi(y)-y\) donde hace falta fase — déficit \(\Theta(n)\) de
+**Hypotheses about the breaking point**, in order of likelihood, to be checked once the PDF is
+obtained:
+1. Illegitimate interchange of the limit \(n\to\infty\) with the sum over zeros (or with the
+   regulator \(\varepsilon\downarrow0\)): this is exactly where an exponential excursion of
+   \(\lambda_n(\sqrt n)\) can disappear.
+2. **Pointwise** bound on \(\psi(y)-y\) where phase is needed — the \(\Theta(n)\) deficit of
    `rmk:pointwise-insufficient`.
-3. Usar el signo impreso de (1.15)/(1.17) sin recalcular el residuo de \(-L'/L\), o importar
-   (1.18) (`[COND: RH]`) como si fuera una estimación incondicional.
+3. Using the printed sign of (1.15)/(1.17) without recomputing the residue of \(-L'/L\), or
+   importing (1.18) (`[COND: RH]`) as if it were an unconditional estimate.
 
-**Reclasificación — CERRADO.** Este ítem estaba marcado como **bloqueante para `104_10`**. Se
-cierra por dos razones independientes: (a) la fuente no es admisible por la política de esta
-sección, luego no puede ser antecedente ni deslinde de novedad; (b) la Proposición de arriba ya
-fija sin ambigüedad, y sin necesidad del texto, qué debe probar cualquier argumento por esta
-ruta — que es exactamente el muro de `104_02` §4. **`104_10` queda desbloqueado.**
-Si apareciera una versión en arXiv o Zenodo, se reabre solo como diagnóstico.
+**Reclassification — CLOSED.** This item was marked **blocking for `104_10`**. It is closed for
+two independent reasons: (a) the source is inadmissible under this section's policy, so it
+cannot serve as an antecedent or a novelty delineation; (b) the Proposition above already fixes,
+unambiguously and without needing the text, what any argument along this route must prove —
+which is exactly the wall of `104_02` §4. **`104_10` is unblocked.**
+If a version appears on arXiv or Zenodo, it is reopened only as diagnostic.
 
-Queda registrado como cambio de alcance respecto del plan aprobado, que lo listaba como
-bloqueante.
+This is recorded as a scope change relative to the approved plan, which listed it as
+blocking.
 
 ---
 
-## 8. Tabla de veredictos
+## 8. Verdict table
 
-| mecanismo Phase 104 | fuente comparada | veredicto |
+| Phase 104 mechanism | compared source | verdict |
 |---|---|---|
-| Reducción de A1 al bloque incompleto (`104_02`) | Lagarias `math/0404394`, §6, con erratum de signo interno | **duplica la localización de la cola**, pero las ecuaciones impresas (1.15)/(1.17) no son utilizables sin la corrección |
-| Contorno binomial \(R(t)\) (`104_03`) | Mazhouda `1506.01755` `[COND: GRH]` | `adyacente` — auditoría, no aporte |
-| Forma lcm / Stieltjes (`103_66`) | Coffey `math/0406312` | `duplicación probable` de la coordenada → **degradado a auditoría** |
-| Espacio modelo / Clark | Suzuki `2301.00421` `[COND: RH]` | `descartado como frente` |
-| Familia \(C_n^\theta\) (`104_01`) | — | **no-duplica** — el reparto A0/A1 con \(\theta\) libre no aparece en la literatura consultada |
-| M1, núcleo colectivo \(w_{\max(i,j)}\) (`104_10`) | — | **no-duplica** — la identidad es de `103_67` (interna); la descomposición monótona/PSD no aparece ni en el repo ni en la literatura consultada |
+| Reduction of A1 to the incomplete block (`104_02`) | Lagarias `math/0404394`, §6, with internal sign erratum | **duplicates the tail localization**, but the printed equations (1.15)/(1.17) are unusable without the correction |
+| Binomial contour \(R(t)\) (`104_03`) | Mazhouda `1506.01755` `[COND: GRH]` | `adjacent` — audit, not contribution |
+| lcm / Stieltjes form (`103_66`) | Coffey `math/0406312` | `likely duplication` of the coordinate → **downgraded to audit** |
+| Model space / Clark | Suzuki `2301.00421` `[COND: RH]` | `discarded as a front` |
+| \(C_n^\theta\) family (`104_01`) | — | **does-not-duplicate** — the A0/A1 split with free \(\theta\) does not appear in the consulted literature |
+| M1, collective kernel \(w_{\max(i,j)}\) (`104_10`) | — | **does-not-duplicate** — the identity is from `103_67` (internal); the monotone/PSD decomposition appears neither in the repo nor in the consulted literature |
 
 ---
 
-## 9. Lo que este gate cambia en el plan
+## 9. What this gate changes in the plan
 
-1. **`104_02` fija el erratum y el objetivo exacto corregido**:
+1. **`104_02` fixes the erratum and the exact corrected target**:
    \[
    -\lambda_n(\sqrt n)+\widetilde\varepsilon_n+R_n(T_n(\theta))
    \le(1-\theta)A_n.
    \]
-   El frente es una cota inferior del bloque incompleto. Los antiguos Teorema A/A′ y B1/B2
-   quedan retirados.
-2. **`rmk:height-range` de `main.tex` necesita corrección**: el control
-   colectivo de \(\gamma>H\) no requiere input de densidad, lo da la prueba de §6 con el signo
-   corregido (1.17c); y su rango
-   \(\approx10^{25}\) sale de un **análisis de cero único**, que es el defecto real. El rango
-   publicado tiene discrepancia editorial, registrada en `104_02` §5.
-3. **`102_BIBLIOGRAPHIC_GATE.md` §Warning necesita corrección**: el problema de una cota
-   asintótica no es que sea asintótica, sino su lado y su uniformidad.
-4. Dos rutas quedan cerradas antes de gastar esfuerzo: forma lcm/Stieltjes (Coffey) y espacio
-   modelo/de Branges (Suzuki).
+   The front is a lower bound of the incomplete block. The former Theorem A/A′ and B1/B2
+   are withdrawn.
+2. **`rmk:height-range` in `main.tex` needs correction**: the collective
+   control of \(\gamma>H\) does not require a density input, it is given by the §6 proof with
+   the corrected sign (1.17c); and its range
+   \(\approx10^{25}\) comes from a **single-zero analysis**, which is the real defect. The
+   published range has an editorial discrepancy, recorded in `104_02` §5.
+3. **`102_BIBLIOGRAPHIC_GATE.md` §Warning needs correction**: the problem with an asymptotic
+   bound is not that it is asymptotic, but its side and its uniformity.
+4. Two routes are closed before spending further effort: the lcm/Stieltjes form (Coffey) and the
+   model space/de Branges route (Suzuki).
 
-**Estado de bloqueo de `104_10`: DESBLOQUEADO.** El ítem del preprint (§7) está cerrado allí por
-inadmisibilidad de fuente más la dicotomía vía Bombieri–Lagarias, y se mantiene registrado como
-posible antecedente de prioridad. *(Una versión anterior de esta sección lo declaraba
-bloqueante; contradecía a §7 y queda retirada.)*
+**Blocking status of `104_10`: UNBLOCKED.** The preprint item (§7) is closed there by source
+inadmissibility plus the dichotomy via Bombieri–Lagarias, and is kept on record as a possible
+priority antecedent. *(An earlier version of this section declared it blocking; this
+contradicted §7 and is withdrawn.)*
+</content>

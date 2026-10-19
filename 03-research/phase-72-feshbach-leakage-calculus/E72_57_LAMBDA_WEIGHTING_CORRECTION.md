@@ -1,7 +1,6 @@
 # E72.57 -- Lambda weighting correction for endpoint probes
 
-**Date:** 2026-07-08.
-**Role:** correct a normalization ambiguity in the endpoint-channel probes.
+**Purpose:** correct a normalization ambiguity in the endpoint-channel probes.
 
 ## 0. The issue
 

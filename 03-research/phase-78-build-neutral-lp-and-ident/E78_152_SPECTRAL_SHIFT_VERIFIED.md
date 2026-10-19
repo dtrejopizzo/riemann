@@ -1,9 +1,9 @@
 # E78.152 - Bordered-determinant / rank-one spectral-shift identities VERIFIED
 
-**Run:** 2026-07-21.
-**Scope:** IDENT / point 6. Verifies the author's spectral-shift reformulation.
+**Run:**
+**Scope:** IDENT / point 6. Verifies a spectral-shift reformulation.
 **Class:** PRUEBA COFINAL (exact identities, verified to roundoff).
-**Attribution:** reformulation by the program author (2026-07-21); verified here.
+**Source:** external reformulation, verified here.
 
 ## 1. The identities (proved by hand + checked numerically)
 

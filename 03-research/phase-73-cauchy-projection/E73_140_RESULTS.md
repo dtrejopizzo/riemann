@@ -1,6 +1,5 @@
 # E73.140 Results - CCC Row Margin
 
-Date: 2026-07-12.
 
 Script:
 

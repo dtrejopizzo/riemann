@@ -1,7 +1,6 @@
 # E72.135 -- Sharp finite route to scalar WRL
 
-**Date:** 2026-07-09.
-**Role:** package the current minimal endpoint after the mass-gate compression.
+**Purpose:** package the current minimal endpoint after the mass-gate compression.
 
 ## 0. Finite estimates
 

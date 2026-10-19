@@ -1,7 +1,6 @@
 # E71.15 -- Proof attempt for the stable Riesz/Fredholm projection theorem
 
-**Date:** 2026-07-07.
-**Role:** attempt the proof requested for E71.14 and isolate exactly which step is still open.
+**Purpose:** attempt the proof requested for E71.14 and isolate exactly which step is still open.
 
 ## The theorem we want
 

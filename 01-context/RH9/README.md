@@ -4,7 +4,7 @@
 
 ## Research Objective
 
-This program's task is constructing the geometric class K_geom / SURF behind the Riemann Hypothesis. The agent is instructed to work rigorously and report only what it can justify — a false proof is worse than an candid negative result: never present an unproven step as proven, never cite an open conjecture as if established.
+This program's task is constructing the geometric class K_geom / SURF behind the Riemann Hypothesis. The run is instructed to work rigorously and report only what it can justify — a false proof is worse than an candid negative result: never present an unproven step as proven, never cite an open conjecture as if established.
 
 ### 1. Setting (definitions)
 

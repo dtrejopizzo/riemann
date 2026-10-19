@@ -1,6 +1,6 @@
 # P123.098 — A parameter-family obstruction and the smooth tangential excess
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for the obstruction
+Status: PROVED-IN-REPOSITORY for the obstruction
 and the explicit smooth-circle model below. The latter is not yet
 identified with the full arithmetic source or its semilocal completion.
 

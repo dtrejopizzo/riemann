@@ -1,4 +1,4 @@
-# [amended 2026-09-21 per R155_002, MINOR-7] the archived file is tk_ceiling.py, and the path
+# [amended per R155_002, MINOR-7] the archived file is tk_ceiling.py, and the path
 # is now resolved relative to this script so the sweep runs as archived.
 import os
 _d = os.path.dirname(os.path.abspath(__file__))

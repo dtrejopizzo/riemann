@@ -1,7 +1,6 @@
 # E72.192 -- Low-moment envelope certificate
 
-**Date:** 2026-07-09.
-**Role:** certify that the degree-8 envelopes from E72.191 majorize the split energy on the full
+**Purpose:** certify that the degree-8 envelopes from E72.191 majorize the split energy on the full
 interval, not just the LP grid.
 
 ## 0. Certified inequalities

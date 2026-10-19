@@ -1,6 +1,6 @@
 # E78.55 - On the inward branch, the cone lock is exactly a size-vs-sine law
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

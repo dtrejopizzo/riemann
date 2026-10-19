@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 # ======================================================================================
-# Phase 60 — Discriminante.  E1: ¿puede el lado-cero validado detectar multiplicatividad?
+# Phase 60 — Discriminant.  E1: can the validated zero-side detect multiplicativity?
 #
-# Tesis a testear: "el signo de Weil lo controla la multiplicatividad (Euler), no la
-# ubicacion de los ceros".  PRE-REGISTRO (00-PLAN §5): si la diferencia util solo se
-# explica por ubicacion de ceros, es CIRCULAR -> NO-GO para esta ruta.
+# Thesis to test: "the sign of Weil is controlled by multiplicativity (Euler), not by the
+# location of the zeros".  PRE-REGISTRATION (00-PLAN §5): if the useful difference is only
+# explained by zero location, it is CIRCULAR -> NO-GO for this route.
 #
-# Este script NO construye un engine nuevo: reusa la forma Gram lado-cero VALIDADA del
-# engine canonico (phase-5-structural/experiments/colab_phase3_engine.py, gates PASS).
+# This script does NOT build a new engine: it reuses the VALIDATED zero-side Gram form from
+# the canonical engine (phase-5-structural/experiments/colab_phase3_engine.py, gates PASS).
 #
-# Pregunta operativa: M_zeros depende SOLO del multiset de ceros. Entonces dos L-funciones
-# con los mismos ceros dan el MISMO Gram, sean Euler o no. Lo demostramos numericamente:
-#   (1) cualquier conjunto ON-line -> lambda_min en el "floor" (>=0), independiente del
-#       espaciado/densidad (= independiente de cual L-funcion sea).
-#   (2) el unico movedor del signo es desplazar ceros OFF-line (= status-RH, no Euler).
-# Conclusion esperada: el lado-cero mide STATUS-RH, es CIEGO a multiplicatividad.
+# Operative question: M_zeros depends ONLY on the multiset of zeros. So two L-functions
+# with the same zeros give the SAME Gram, whether Euler or not. We show this numerically:
+#   (1) any ON-line set -> lambda_min in the "floor" (>=0), independent of
+#       spacing/density (= independent of which L-function it is).
+#   (2) the only mover of the sign is shifting zeros OFF-line (= RH-status, not Euler).
+# Expected conclusion: the zero-side measures RH-STATUS, it is BLIND to multiplicativity.
 # ======================================================================================
 import numpy as np, mpmath as mp, math
 mp.mp.dps = 30
@@ -32,7 +32,7 @@ def g_at(J, sigma, T0, z):
     return np.array([h[0] for h in hermite(J, (np.asarray([z],dtype=complex)-T0)/sigma)])
 
 def M_zeros(zlist, J, sigma, T0):
-    """zlist: lista de (t_rho, delta_rho).  Gram de Weil lado-cero (Hermitiana)."""
+    """zlist: list of (t_rho, delta_rho).  Weil zero-side Gram (Hermitian)."""
     M = np.zeros((J, J), dtype=complex)
     for (t, d) in zlist:
         for (tt, dd) in ((t, d), (-t, d)):
@@ -51,27 +51,27 @@ GAM = [float(mp.im(mp.zetazero(n))) for n in range(1, NZEROS+1)]
 # --- self-check: reproducir gate del engine canonico (floor on-line + negatividad forzada) ---
 M0 = M_zeros([(g,0.0) for g in GAM], J, SIGMA, T0)
 l0,r0 = lam_min_over_tr(M0)
-print(f"[self-check] zeta on-line floor lambda_min/tr = {r0:+.3e} (debe ser ~>=0)")
-assert r0 > -1e-6, "engine roto: floor on-line negativo"
+print(f"[self-check] zeta on-line floor lambda_min/tr = {r0:+.3e} (should be ~>=0)")
+assert r0 > -1e-6, "engine broken: negative on-line floor"
 
 print("\n"+"="*78)
-print(" E1.(1)  Distintas densidades de ceros ON-line  (= distintas L-funciones, todas RH-true)")
+print(" E1.(1)  Different densities of ON-line zeros  (= different L-functions, all RH-true)")
 print("="*78)
-print(" Si el lado-cero detectara 'que L-funcion es', el floor cambiaria. Si es CIEGO, no.\n")
-print("  configuracion                         #ceros-ventana   lambda_min/tr")
+print(" If the zero-side detected 'which L-function it is', the floor would change. If it is BLIND, it won't.\n")
+print("  configuration                          #zeros-window   lambda_min/tr")
 
-# zeta real
-print(f"  zeta (zeros reales)                        {sum(1 for g in GAM if abs(g-T0)<2*SIGMA):>2}            {r0:+.4e}")
+# real zeta
+print(f"  zeta (real zeros)                          {sum(1 for g in GAM if abs(g-T0)<2*SIGMA):>2}            {r0:+.4e}")
 
-# conjuntos ON-line sinteticos con densidades distintas (simulan otras L-funciones RH-true)
+# synthetic ON-line sets with different densities (simulate other RH-true L-functions)
 rng = np.random.default_rng(0)
-for label, dens in [("densidad x0.5 (espaciado amplio)", 0.5),
-                    ("densidad x1.0 (uniforme local)", 1.0),
-                    ("densidad x2.0 (espaciado denso)", 2.0),
-                    ("perturbacion aleatoria de fase", -1)]:
+for label, dens in [("density x0.5 (wide spacing)", 0.5),
+                    ("density x1.0 (local uniform)", 1.0),
+                    ("density x2.0 (dense spacing)", 2.0),
+                    ("random phase perturbation", -1)]:
     if dens > 0:
-        # malla uniforme local de la densidad pedida dentro de la ventana
-        spacing = (2*np.pi/np.log(T0)) / dens   # ~ densidad media de zeta escalada
+        # local uniform grid at the requested density inside the window
+        spacing = (2*np.pi/np.log(T0)) / dens   # ~ scaled mean zeta density
         ts = [T0 + k*spacing for k in range(-6,7)]
         zl = [(t,0.0) for t in ts] + [(g,0.0) for g in GAM if abs(g-T0)>=2*SIGMA]
     else:
@@ -82,23 +82,23 @@ for label, dens in [("densidad x0.5 (espaciado amplio)", 0.5),
     nin = sum(1 for (t,_) in zl if abs(t-T0)<2*SIGMA)
     print(f"  {label:36s}   {nin:>2}            {r:+.4e}")
 
-print("\n  -> TODAS las configuraciones ON-line quedan en el floor (>=0, salvo ruido numerico).")
-print("     El lado-cero NO distingue 'que L-funcion'. Mide status-RH (on/off line), no Euler.")
+print("\n  -> ALL the ON-line configurations stay at the floor (>=0, up to numerical noise).")
+print("     The zero-side does NOT distinguish 'which L-function'. It measures RH-status (on/off line), not Euler.")
 
 print("\n"+"="*78)
-print(" E1.(2)  El UNICO movedor del signo: desplazar ceros OFF-line")
+print(" E1.(2)  The ONLY mover of the sign: shifting zeros OFF-line")
 print("="*78)
-print("  delta(off-line)   lambda_min/tr   <- esto es ubicacion de ceros = status-RH\n")
+print("  delta(off-line)   lambda_min/tr   <- this is zero location = RH-status\n")
 for delta in (0.0, 0.05, 0.1, 0.2):
     M = M_zeros([(g,(delta if abs(g-T0)<2*SIGMA else 0.0)) for g in GAM], J, SIGMA, T0)
     l,r = lam_min_over_tr(M)
     print(f"      {delta:4.2f}          {r:+.4e}")
 
 print("\n"+"="*78)
-print(" VEREDICTO E1 (pre-registrado en 00-PLAN §5)")
+print(" VERDICT E1 (pre-registered in 00-PLAN §5)")
 print("="*78)
-print(" El lado-cero validado es funcion del MULTISET de ceros unicamente.")
-print(" => Separar ζ (Euler) de L_DH aqui = separar por ceros off-line = UBICACION = CIRCULAR.")
-print(" => La tesis 'multiplicatividad controla el signo' NO es testeable en el lado-cero.")
-print(" => Vive enteramente en el lado-ARITMETICO M_arith (el que no esta validado).")
-print(" CONSECUENCIA: el bottleneck real de Phase 60 es construir un M_arith VALIDADO.")
+print(" The validated zero-side is a function of the zero MULTISET only.")
+print(" => Separating ζ (Euler) from L_DH here = separating by off-line zeros = LOCATION = CIRCULAR.")
+print(" => The thesis 'multiplicativity controls the sign' is NOT testable on the zero-side.")
+print(" => It lives entirely in the ARITHMETIC side M_arith (the one that is not validated).")
+print(" CONSEQUENCE: the real bottleneck of Phase 60 is building a VALIDATED M_arith.")

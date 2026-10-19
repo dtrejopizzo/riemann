@@ -1,7 +1,6 @@
 # E72.75 -- Even coborder certificate for EV-CERT
 
-**Date:** 2026-07-08.
-**Role:** rewrite the even-sector HPAC residual as a Weyl pairing with one shorted source vector.
+**Purpose:** rewrite the even-sector HPAC residual as a Weyl pairing with one shorted source vector.
 
 ## 0. Source vector
 

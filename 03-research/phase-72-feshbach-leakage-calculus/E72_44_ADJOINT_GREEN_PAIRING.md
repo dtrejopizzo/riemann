@@ -1,7 +1,6 @@
 # E72.44 -- Adjoint Green pairing for Endpoint Doob-Weyl smallness
 
-**Date:** 2026-07-08.
-**Role:** replace the vague requirement
+**Purpose:** replace the vague requirement
 
 ```text
 <Q_xr_{x,s},w_x(z)> -> 0

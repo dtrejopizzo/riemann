@@ -1,6 +1,5 @@
 # E74.1-E74.3 - Bridge identity and Lever A first audit
 
-Date: 2026-07-16.
 
 ## Purpose
 
@@ -48,7 +47,7 @@ This is exactly the off-diagonal closed spectral distribution from E73.304 and
 the Hilbert product rule from E73.305.  The probe re-verifies the bridge to
 roundoff.
 
-## Lever A audit
+## Lever An audit
 
 The finite mesh is not the continuous Hilbert transform.  Therefore the first
 quantity to measure is not the formal constant `+-i/2`, but the actual

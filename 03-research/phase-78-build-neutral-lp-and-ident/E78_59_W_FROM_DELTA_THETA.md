@@ -1,6 +1,6 @@
 # E78.59 - The denominator core is exactly the normalized theta update
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

@@ -1,6 +1,6 @@
 # Phase 77 - Weyl limit-point closure
 
-**Opened:** 2026-07-18.  **Closed:** 2026-07-18 at 111 documents -- see
+at 111 documents -- see
 `PHASE_77_CLOSURE.md`.  Continued in
 `../phase-78-build-neutral-lp-and-ident/`.
 
@@ -222,7 +222,7 @@ status block).
   `0.13 -> 0.08`), while planted leaves almost all external tail
   uncancelled (`R/external -> 0.98`).  The reduced target is
   `LEAD-1/N-CANCEL`: isolate and cancel the leading coefficient of `N R_N`.
-  **E77.5n status:** `E77_5N_LEAD_1_OVER_N_CANCEL.md` measures
+  **E77.5n status:** `E77_5N_1_OVER_N_CANCEL.md` measures
   `C_N(sigma)=N R_N(sigma)` by sigma.  Zeta has a positive smooth profile
   but it is still drifting (`C_8(3)=0.13375`, `C_20(3)=0.07950`), so a
   fixed leading coefficient closure is not licensed.  Planted has

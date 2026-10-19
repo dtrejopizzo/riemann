@@ -1,6 +1,6 @@
 # P123.093 — Explicit completed corner tensors for the orbit-decay domain
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for J=J_orb of
+Status: PROVED-IN-REPOSITORY for J=J_orb of
 P123.092 on a single-zero two-prime boundary. This proves the tensor
 comparison on that declared stronger domain, not on all of A_Z.
 

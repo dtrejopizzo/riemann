@@ -1,30 +1,30 @@
-# Eslabón 2 (convergencia ξ̂_{λ,N} → Ξ): estructura, ataque y estado **Foco:** este es EL hueco del mapa a RH. Todo lo demás (Eslabones 1,3,4) está probado o es
-clásico. Cerrar Eslabón 2 ⟹ RH. --- ## 0. Por qué pivotamos de numérico a teórico (franco) E6 intentó medir el "horizonte" H(λ) = altura hasta la que los ceros se resuelven, como
-medida empírica de 2b. **Bloqueado numéricamente:** cond(QW_λ^N) ≈ 10¹⁶–10¹⁷ (diagnóstico
-directo). El primer cero sobrevive (1e-14 a N=70) pero los ceros altos —que dependen de las
-componentes pequeñas del autovector del menor autovalor— se ahogan en ruido float64. La
-medición de H(λ) salió no-monótona en λ (λ=3.0→H≈56 pero λ=3.7→H≈30): ruido, no señal.
-Resolverlo exige mpmath a N~50-80 (caro). **El crux 2b no cede a fuerza bruta numérica acá.** Lo que el numérico SÍ dejó firme: 2a converge rápido (E4hp, geométrico), y el engine está
-validado en ζ (a=1/4) y L(χ_-4) (a=3/4). --- ## 1. 2a (N→∞ a λ fijo): REDUCIDO a simplicidad. Casi cerrado. **Afirmación:** ξ̂_{λ,N} → ξ̂_{λ,∞} localmente uniforme, MODULO que el menor autovalor de A_λ
-sea simple (= hipótesis H1 de Thm 1.1). **Argumento (sólido):** 1. **A_λ tiene resolvente compacta ⟹ espectro discreto.** El operador de scaling D_log = −i d/d(log u) sobre el intervalo COMPACTO [λ⁻¹,λ] con condiciones periódicas tiene espectro discreto {2πk/L}. La forma QW_λ (3.19) = archimedeana (θ-peso, define el dominio de forma) − parte de primos. La parte de primos es Σ_{n≤λ²} Λ(n) T(n), **suma FINITA de operadores acotados** (T(n) acotado: convolución de L² en grupo compacto es continua, evaluación acotada). Perturbación acotada y semiacotada inferiormente (Prop 3.3). El dominio de forma embebe **compactamente** en L²([λ⁻¹,λ]) por **Rellich–Kondrachov** (intervalo acotado). ⟹ A_λ tiene resolvente compacta ⟹ espectro **discreto**, cada autovalor aislado, incluido el ínfimo ε_∞. 2. **Galerkin/secciones finitas convergen al fondo aislado.** E_N = span{V_k: |k|≤N} ⊂ E_{N+1}, y E = ∪E_N es **core** de la forma (Prop 3.4). Por min-max, ε_N ↓ ε_∞ monótono. Como ε_∞ es autovalor **aislado** (paso 1), el proyector espectral de la sección converge en norma y el autovector ξ_N → ξ_∞ en norma de forma (teoría estándar de aproximación de Galerkin para formas semiacotadas con fondo aislado). 3. **Transformada continua ⟹ ξ̂_N → ξ̂_∞ localmente uniforme.** La transformada ξ ↦ ξ̂ (3.5) es continua en la norma relevante; convergencia de ξ_N ⟹ convergencia local-uniforme de ξ̂_N a ξ̂_∞ (funciones enteras, compactos). **Hueco residual de 2a:** simplicidad del fondo ε_∞ (H1). Reducible al **sector par** (H2,
-ξ par por invariancia ι: u↦u⁻¹) + argumento nodal/Perron–Frobenius en el sector par. Es un
-problema acotado y clásico, NO el muro. > **Estado 2a: esencialmente cerrado, módulo H1 (simplicidad).** Esto es matemática nueva y
-> concreta del programa — la primera pieza del gap de convergencia con prueba real. --- ## 2. 2b (λ→∞): el crux. Mecanismo identificado, prueba abierta. **Fenómeno clave a explicar (de los datos):** el 1er cero sale a ~1e-18 con primos ≤13
-(E4hp; paper: 1e-55). Esto es **muchísimo más rápido que la truncación del explicit formula**
-(ψ(X)−X ~ O(1) en X=13). ⟹ **2b NO es truncación de primos.** La rigidez de
-Carathéodory–Fejér extrae el cero con precisión que la truncación no explica. **La estructura real de 2b = crecimiento del HORIZONTE.** A λ fijo, ξ̂_λ es esencialmente
-band-limited (banda ∝ L=2logλ); resuelve ceros hasta una altura H(λ) y los de más arriba no.
-2b ⟺ **H(λ) → ∞**. **Mecanismo conjeturado (zero-independiente, la dirección prometedora):**
-el nº de ceros hasta altura T es N(T) ~ (T/2π)log(T/2π); el nº de primos ≤λ² es
-π(λ²) ~ λ²/(2logλ). El operador "fija" ceros mientras tenga constraints de primos suficientes.
-Igualar N(H(λ)) ~ π(λ²) da el horizonte. Si esto es correcto, **H(λ)→∞ está gobernado por el
-CONTEO de primos (PNT) — dato del lado-primo, independiente de la ubicación de ceros.** > **Si se prueba H(λ)→∞ desde π(λ²)→∞ (PNT), entonces 2b → RH es NO-circular.** Esa es la
-> apuesta. El riesgo: que la "fijación" de cada cero requiera control fino del resto del
-> espectro que secretamente equivalga a regiones libres de ceros (RH). Decidir esto es la
-> pregunta de prueba pura central del programa. **Próximo paso 2b (cuando haya mpmath a N grande):** medir H(λ) limpio (alta precisión) y
-contrastar su tasa con π(λ²) (predicción PNT) vs N(T) — si H(λ) ~ (la altura tal que
-N(H)=π(λ²)), el mecanismo de conteo se confirma y la diana teórica queda fijada. --- ## 3. Estado del gap (resumen) | Sub-eslabón | Estado | Qué falta |
+# Link 2 (convergence ξ̂_{λ,N} → Ξ): structure, attack and status **Focus:** this is THE gap in the map to RH. Everything else (Links 1,3,4) is proved or
+classical. Closing Link 2 ⟹ RH. --- ## 0. Why we pivoted from numerical to theoretical (candid) E6 tried to measure the "horizon" H(λ) = height up to which zeros are resolved, as an
+empirical measure of 2b. **Numerically blocked:** cond(QW_λ^N) ≈ 10¹⁶–10¹⁷ (direct
+diagnosis). The first zero survives (1e-14 at N=70) but the higher zeros — which depend on
+the small components of the eigenvector of the smallest eigenvalue — drown in float64 noise. The
+H(λ) measurement came out non-monotone in λ (λ=3.0→H≈56 but λ=3.7→H≈30): noise, not signal.
+Resolving it requires mpmath at N~50-80 (expensive). **The 2b crux does not yield to brute numerical force here.** What the numerics DID leave solid: 2a converges fast (E4hp, geometric), and the engine is
+validated on ζ (a=1/4) and L(χ_-4) (a=3/4). --- ## 1. 2a (N→∞ at fixed λ): REDUCED to simplicity. Almost closed. **Claim:** ξ̂_{λ,N} → ξ̂_{λ,∞} locally uniform, MODULO the smallest eigenvalue of A_λ
+being simple (= hypothesis H1 of Thm 1.1). **Argument (solid):** 1. **A_λ has compact resolvent ⟹ discrete spectrum.** The scaling operator D_log = −i d/d(log u) on the COMPACT interval [λ⁻¹,λ] with periodic conditions has discrete spectrum {2πk/L}. The form QW_λ (3.19) = archimedean (θ-weight, defines the form domain) − prime part. The prime part is Σ_{n≤λ²} Λ(n) T(n), a **FINITE sum of bounded operators** (T(n) bounded: convolution on L² over a compact group is continuous, bounded evaluation). Bounded, semi-bounded-below perturbation (Prop 3.3). The form domain embeds **compactly** into L²([λ⁻¹,λ]) by **Rellich–Kondrachov** (bounded interval). ⟹ A_λ has compact resolvent ⟹ **discrete** spectrum, every eigenvalue isolated, including the infimum ε_∞. 2. **Galerkin/finite sections converge to the isolated ground level.** E_N = span{V_k: |k|≤N} ⊂ E_{N+1}, and E = ∪E_N is a **core** of the form (Prop 3.4). By min-max, ε_N ↓ ε_∞ monotonically. Since ε_∞ is an **isolated** eigenvalue (step 1), the spectral projector of the section converges in norm and the eigenvector ξ_N → ξ_∞ in form norm (standard Galerkin approximation theory for semi-bounded forms with an isolated ground level). 3. **Continuous transform ⟹ ξ̂_N → ξ̂_∞ locally uniform.** The transform ξ ↦ ξ̂ (3.5) is continuous in the relevant norm; convergence of ξ_N ⟹ local-uniform convergence of ξ̂_N to ξ̂_∞ (entire functions, compacta). **Residual gap of 2a:** simplicity of the ground level ε_∞ (H1). Reducible to the **even
+sector** (H2, ξ even by invariance ι: u↦u⁻¹) + a nodal/Perron–Frobenius argument in the
+even sector. It is a bounded, classical problem, NOT the wall. > **Status of 2a: essentially closed, modulo H1 (simplicity).** This is new and
+> concrete mathematics for the program — the first piece of the convergence gap with a real proof. --- ## 2. 2b (λ→∞): the crux. Mechanism identified, proof open. **Key phenomenon to explain (from the data):** the 1st zero comes out at ~1e-18 with primes ≤13
+(E4hp; paper: 1e-55). This is **far faster than truncation of the explicit formula**
+(ψ(X)−X ~ O(1) at X=13). ⟹ **2b is NOT prime truncation.** The rigidity of
+Carathéodory–Fejér extracts the zero with precision that truncation does not explain. **The real structure of 2b = growth of the HORIZON.** At fixed λ, ξ̂_λ is essentially
+band-limited (band ∝ L=2logλ); it resolves zeros up to a height H(λ) and not above that.
+2b ⟺ **H(λ) → ∞**. **Conjectured mechanism (zero-independent, the promising direction):**
+the number of zeros up to height T is N(T) ~ (T/2π)log(T/2π); the number of primes ≤λ² is
+π(λ²) ~ λ²/(2logλ). The operator "fixes" zeros as long as it has enough prime constraints.
+Equating N(H(λ)) ~ π(λ²) gives the horizon. If this is correct, **H(λ)→∞ is governed by the
+prime COUNT (PNT) — a prime-side datum, independent of the location of zeros.** > **If H(λ)→∞ is proved from π(λ²)→∞ (PNT), then 2b → RH is NON-circular.** That is the
+> bet. The risk: that "fixing" each zero requires fine control of the rest of the
+> spectrum that secretly amounts to zero-free regions (RH). Deciding this is the
+> central pure-proof question of the program. **Next step for 2b (once mpmath at large N is available):** measure H(λ) cleanly (high precision) and
+contrast its rate against π(λ²) (PNT prediction) vs N(T) — if H(λ) ~ (the height such that
+N(H)=π(λ²)), the counting mechanism is confirmed and the theoretical target is fixed. --- ## 3. Gap status (summary) | Sub-link | Status | What's missing |
 |---|---|---|
-| 2a (N→∞) | **esencialmente cerrado** (compact resolvent + Galerkin) | simplicidad H1 (sector par + nodal) |
-| 2b (λ→∞) | mecanismo identificado (horizonte ~ conteo de primos, PNT) | prueba de H(λ)→∞ zero-indep; medición mpmath del rate | Cerrar 2a (vía H1) es alcanzable y publicable. 2b es el crux real, ahora con una diana
-concreta (H(λ)→∞ por PNT) en vez de "convergencia" abstracta.
+| 2a (N→∞) | **essentially closed** (compact resolvent + Galerkin) | simplicity H1 (even sector + nodal) |
+| 2b (λ→∞) | mechanism identified (horizon ~ prime count, PNT) | proof of zero-indep H(λ)→∞; mpmath measurement of the rate | Closing 2a (via H1) is reachable and publishable. 2b is the real crux, now with a
+concrete target (H(λ)→∞ by PNT) instead of abstract "convergence".

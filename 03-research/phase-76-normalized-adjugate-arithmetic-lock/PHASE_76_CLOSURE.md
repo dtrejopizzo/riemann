@@ -1,6 +1,6 @@
 # Phase 76 - Closure
 
-**Closed:** 2026-07-18.  Continued in `phase-77-weyl-limit-point/`.
+Continued in `phase-77-weyl-limit-point/`.
 
 ## What this phase set out to do
 

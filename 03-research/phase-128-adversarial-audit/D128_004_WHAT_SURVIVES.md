@@ -1,6 +1,5 @@
 # D128.004 — what survives, and what would earn the strong labels
 
-Date: 2026-09-12.
 
 ## Honest labels, replacing the three withdrawn ones
 
@@ -93,6 +92,6 @@ coefficient and show the total is cutoff-independent.  (c) Then, and only then,
 
 All three audits were adversarial and all three found real errors.  One finding
 was verified **wrong** and rejected (D128.001 R1: the local factor does exist
-pointwise at a fixed unit twist).  The pattern the row-A audit named — "each
+pointwise at a fixed unit twist).  The pattern the row-An audit named — "each
 correction preserved the conclusion by construction" — is the failure mode to
 avoid; that is why the labels are withdrawn here rather than qualified.

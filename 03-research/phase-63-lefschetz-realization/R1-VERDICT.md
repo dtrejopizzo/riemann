@@ -1,6 +1,6 @@
 # R1 verdict — the scaling generator is complex-ANTILINEAR w.r.t. the polarization (operator-level MW-5)
 
-**Date:** 2026-06-27 · Phase 63 · follows E97 (inconclusive crude test) + the clean engine-framework check.
+Phase 63 · follows E97 (inconclusive crude test) + the clean engine-framework check.
 
 ## The clean finding
 

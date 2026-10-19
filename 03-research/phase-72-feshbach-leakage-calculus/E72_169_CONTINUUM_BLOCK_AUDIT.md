@@ -1,7 +1,6 @@
 # E72.169 -- Continuum block audit
 
-**Date:** 2026-07-09.
-**Role:** test whether `BSE` can be proved by replacing the prime block with its PNT continuum
+**Purpose:** test whether `BSE` can be proved by replacing the prime block with its PNT continuum
 counterpart.
 
 ## 0. Continuum candidate

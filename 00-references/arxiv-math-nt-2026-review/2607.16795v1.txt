@@ -1,0 +1,957 @@
+                                                 AN EXPLICIT UNIFORM CUBIC WEDGE FOR CONSECUTIVE
+                                                   TOEPLITZ MINORS OF THE RIEMANN ξ-COEFFICIENTS
+
+                                                                                   WOJCIECH MICHALOWSKI
+
+                                                                                                        k    2k
+                                                  Abstract. Let Ξ(x) = 18 ξ 12 + ix
+                                                                                             P
+                                                                                       2
+                                                                                           =    k≥0 (−1) ak x    be the normalized Riemann ξ-
+                                                                             1
+                                                                                 R ∞ 2k
+                                                  function, so that ak = (2k)! 0 u Φ(u) du > 0 with the classical kernel Φ, and let Dr,k =
+                                                  det [ak+j−i ]r−1
+                                                               i,j=0 denote the consecutive Toeplitz minors of the coefficient sequence. The Rie-
+                                                  mann Hypothesis is equivalent to (ak ) being a Pólya frequency sequence of infinite order, and
+                                                  hence to nonnegativity of all Toeplitz minors. We prove the explicit, uniform-in-r theorem
+                                                                        Dr,k > 0      for every r ≥ 2 and every k ≥ 1018 r3 .
+                                                  The result gives an explicit cubic tail scale and is uniform in the order r, in contrast with the
+                                                  asymptotic fixed-order positivity of Katkova. The proof does not use any verified numerical
+arXiv:2607.16795v1 [math.NT] 18 Jul 2026
+
+
+
+
+                                                  zeros
+                                                  R ∞ 2z  of ζ. It combines (A) a certified complex saddle-point analysis of the moment transform
+                                                   0
+                                                       u   Φ(u) du, giving a zero-free relative disk and the uniform all-degree coefficient bound
+                                                   f (d) (k)/d! ≤ 3·40d k1−d (d ≥ 3) for f = log u2z Φ/Γ(2z +1) ; (B) an exact q-Pascal dilation
+                                                                                                  R                
+
+                                                  semigroup which bounds the signature-whitened response of every degree simultaneously; and
+                                                  (C) a weighted Banach-algebra majorant for the nonlinear remainder, closed by an inertia-
+                                                  preservation argument for an explicit indefinite comparison model. All analytic constants
+                                                  are certified in Arb ball arithmetic with directed rounding, and all algebraic identities are
+                                                  verified in exact rational arithmetic; ancillary files reproduce every certificate. The result is a
+                                                  statement about the tail regime k ≫ r3 only; it makes no progress on the Riemann Hypothesis,
+                                                  which concerns the complementary region.
+
+
+
+
+                                                                                       1. Introduction
+                                           1.1. The coefficient reformulation. Write ξ(s) = 12 s(s − 1)π −s/2 Γ(s/2)ζ(s) and let
+                                                                                                   2 4u
+                                                                     X
+                                                                        2π 2 n4 e9u − 3πn2 e5u e−πn e ,
+                                                                                              
+                                           (1)                Φ(u) =                                        u ≥ 0,
+                                                                           n≥1
+                                                                                                       R∞
+                                           be the classical Jacobi-theta kernel, so that 81 ξ 21 + ix
+                                                                                                    2 = 0 Φ(u) cos(xu) du. Each summand
+                                                                                     2 4u
+                                           of (1) equals πn2 e5u (2πn2 e4u − 3)e−πn e > 0, so Φ > 0. The Maclaurin coefficients
+                                                                                                     Z ∞
+                                                                              1
+                                           (2)                       ak =          m2k ,      m2k =      u2k Φ(u) du,
+                                                                            (2k)!                     0
+                                                                                               √ 
+                                                                                                 z
+                                           are positive, and G(z) := k≥0 ak z = 8 ξ 2 + 2 is entire of order 12 , hence of genus zero.
+                                                                                  k   1     1
+                                                                      P
+
+                                              By the Aissen–Schoenberg–Whitney–Edrei characterization of Pólya frequency sequences
+                                           [1, 2] combined with the genus-zero factorization, the Riemann Hypothesis is equivalent to the
+                                           statement that (ak )k≥0 is a Pólya frequency sequence of infinite order, i.e. that every minor of
+                                           the one-sided Toeplitz matrix [aj−i ] is nonnegative. We study the consecutive minors
+                                           (3)                          Dr,k := det [ak+j−i ]r−1
+                                                                                             i,j=0 ,         r ≥ 1, k ≥ 0.
+                                           Here and throughout, aℓ = 0 for ℓ < 0, the standard one-sided Toeplitz convention. Strict
+                                           positivity of all Dr,k implies PF∞ by the one-sided strict consecutive-minor criterion (Katkova
+                                             Date: 18 July 2026.
+                                                                                                  1
+2                                    WOJCIECH MICHALOWSKI
+
+[4, Theorem D]); a single certified negative Dr,k would disprove RH. The consecutive minors
+are therefore the natural finite-dimensional observables of the problem. (In the heat-flow
+deformation of this picture the de Bruijn–Newman constant is non-negative [10], so the t = 0
+sequence studied here is the boundary case of the deformed family.)
+1.2. Known positivity regions. Three families of results are known. Csordas, Norfolk and
+Varga [3] proved the Turán inequalities, which in the normalization (2) read a2k > k+1
+                                                                                     k ak−1 ak+1 ;
+in particular D2,k > 0 for all k ≥ 1. Katkova [4] proved that for every fixed order m there is
+an N (m) with Dm,k > 0 for all k ≥ N (m); her argument is asymptotic and yields no explicit
+or uniform N (m). Finally, Schoenberg’s sector theorem [5] (an entire function of genus 0
+with positive coefficients whose zeros avoid the sector | arg w| < πm/(m + 1) generates a PFm
+sequence) combined with the verified height H = 3,000,175,332,800 of Platt and Trudgian [6]
+yields Dr,k ≥ 0 for all k whenever r ≤ ⌊πH⌋ − 1 ≈ 9.4 · 1012 . Indeed, a zero ρ = β + iγ of ξ
+corresponds to w = 4(ρ − 12 )2 , a zero of G. For |γ| ≤ H the verification gives β = 12 , so w < 0.
+For |γ| > H, using |β − 21 | < 12 ,
+                                                          |β − 21 |  1
+                              π − | arg w| = 2 arctan               < .
+                                                            |γ|      H
+Thus every zero avoids | arg w| < πm/(m + 1) whenever m + 1 ≤ πH. This route consumes
+the numerical verification of zeros and cannot reach orders beyond the verified height.
+   In the related Jensen-polynomial hierarchy, hyperbolicity of almost all shifted Jensen poly-
+nomials is known [9]; we do not use Jensen-polynomial methods, and Theorem 1.1 neither
+follows from nor implies such hyperbolicity results.
+   The present paper proves an explicit wedge which is uniform in the order and independent
+of all zero verification.
+Theorem 1.1. For every integer r ≥ 2 and every integer k ≥ 1018 r3 ,
+                                              Dr,k > 0.
+    The constant 1018 is deliberately generous; no attempt was made to optimize it. The content
+of the theorem is the explicit cubic tail scale together with uniformity in r. In the proof below
+the third-order centered logarithmic remainder and the signature-whitened response combine
+through the dimensionless quantity r3 /k; we make no claim that the constant or the exponent
+is optimal.
+Remark 1.2 (Scope). Theorem 1.1 is a statement about the tail regime k ≥ 1018 r3 and makes no
+progress on the Riemann Hypothesis. The RH-critical regime is k ∼ r (indeed PF∞ requires
+all minors, and the difficulty concentrates at bounded k/r); the region k < 1018 r3 remains
+completely open. We state this prominently because experience shows that partial positivity
+results in this area are easily over-read.
+1.3. Method and certification. The proof has three independent gates and one assembly
+step.                         R∞
+   Gate A (§3). Let I(z) = 0 u2z Φ(u) du, a(z) = I(z)/Γ(2z + 1) (so a(k) = ak ) and f =
+log a. We construct a certified steepest-descent analysis of I(z), uniform on the relative disks
+|z − k| ≤ 0.05k for every integer k ≥ 109 : the integrand’s saddle continues analytically, the
+deformed contour is dominated by an explicit complex-Gaussian core, and I(z) is zero-free on
+the disk. A second-derivative Cauchy argument (which avoids the spurious log k of a naive
+Cauchy estimate on f ) then yields the uniform all-degree bound
+                           f (d) (k)
+(4)                                  ≤ 3 · 40d k 1−d ,     d ≥ 3, k ≥ 109 .
+                              d!
+           AN EXPLICIT CUBIC WEDGE FOR TOEPLITZ MINORS OF THE ξ-COEFFICIENTS                       3
+
+   Gate B (§4). The local comparison model for the normalized coefficients is the log-quadratic
+                 s(s−1)/2
+sequence cs = qk          with qk = ak−1 ak+1 /a2k = e−τk . Its reversed Hankel block is an explicit
+diagonal congruence of the q-Vandermonde matrix Vij = qkij , whose exact LDLT factorization
+has q-binomial L and pivots of alternating sign. The one-step dilation R1 = L−1 diag(q i )L
+is exactly lower bidiagonal, and extends to a one-parameter group whose whitened generator
+                      √
+has norm at most 4 rτk . This bounds the signature-whitened response of every polynomial
+degree simultaneously.
+   Gate C (§5). The true coefficients differ from the model by ehs with an explicit centered
+remainder h. A weighted ℓ1 Banach algebra turns (4) and the Gate B response weights into
+the certified bound ∥eh − 1∥ ≤ e0.1310721 − 1 < 0.14005 < 1 for k ≥ 1018 r3 .
+   Assembly (§6). An inertia-preservation lemma shows that a whitened perturbation of norm
+< 1 cannot change the signature of the indefinite comparison model; an exact sign computation
+(reversal sign (−1)r(r−1)/2 against model inertia (⌈r/2⌉, ⌊r/2⌋)) then gives Dr,k > 0.
+   The paper is computer-assisted in the following precise sense. Every inequality between
+explicit real constants is certified in Arb ball arithmetic [7] (via python-flint) with directed
+rounding, and every algebraic identity (the q-Pascal factorizations, the bidiagonal dilation, the
+semigroup law) is verified in exact rational arithmetic. The ancillary files contain the complete
+certificate code and a regression suite; Table 1 maps each lemma to its certificate. No numerical
+zeros of ζ, no floating-point heuristics, and no unverified global optimization enter the proof.
+   The author’s companion note [11] contains a certified negative result of the same flavour
+(failure of order-five total positivity for the continuous de Bruijn–Newman kernel); the two
+results are logically independent, since coefficient positivity (3) and kernel total positivity are
+distinct properties.
+
+
+                                  2. The curvature window
+  Throughout, qk = ak−1 ak+1 /a2k and τk = − log qk . Positivity of Φ makes ak > 0, so qk > 0.
+
+Lemma 2.1 (Curvature window). For every k ≥ 2,
+                                            1       4
+                                              < τk < .
+                                           2k       k
+                     m2k−2 m2k+2         (2k)!2          1    (2k)(2k − 1)
+Proof. Write qk =          2     ·                     =   ·                 , where µk =
+                        m2k        (2k − 2)! (2k + 2)!   µk (2k + 2)(2k + 1)
+m22k /(m2k−2 m2k+2 ).
+   Upper bound. By the Cauchy–Schwarz inequality applied to u2k = uk−1 · uk+1 against the
+positive measure Φ(u) du, m22k ≤ m2k−2 m2k+2 , i.e. µk ≤ 1. Hence
+                    (2k)(2k − 1)
+             qk ≥                  ,
+                  (2k + 2)(2k + 1)
+                      (2k + 2)(2k + 1)          8k + 2     8k + 2     4
+             τk ≤ log                  = log 1 + 2        ≤           ≤ ,
+                        (2k)(2k − 1)            4k − 2k     4k 2 − 2k   k
+the last step being (4k + 1)/(2k − 1) ≤ 4 for k ≥ 2. Equality in Cauchy–Schwarz would force
+Φ to be a point mass, which it is not, so the inequality is strict.
+   Lower bound. The Turán theorem of Csordas–Norfolk–Varga [3] states, for the exponential-
+normalization coefficients γk = k! ak of G, that γk2 > γk−1 γk+1 for all k ≥ 1. (The normalization
+is matched in Remark 2.2 below.) In ordinary coefficients this reads a2k > k+1    k ak−1 ak+1 , i.e.
+4                                     WOJCIECH MICHALOWSKI
+
+      k
+qk < k+1 . Hence
+                              k+1            1    1
+                         τk > log   = log 1 +    >                 (k ≥ 1),
+                                 k            k    2k
+                       x2  x
+using log(1 + x) > x − 2 ≥ 2 for 0 < x ≤ 1.                                                          □
+Remark 2.2 (CNV normalization). The Turán inequalities γk2 ≥ γk−1 γk+1 are invariant under
+the rescaling γk 7→ c λk γk (c, λ > 0): both sides scale by c2 λ2k . Any two normalizations of
+the ξ-function that differ by a constant√
+                                           factor and a linear change of the argument (such as
+   1                             1 1      z
+ξ( 2 + ix) versus our G(z) = 8 ξ( 2 + 2 ), related by z = −4x2 and the factor 8) therefore
+satisfy the Turán inequalities simultaneously. The theorem of [3], stated there for the Jensen
+normalization γk = k! · (Maclaurin coefficients of G), thus transfers verbatim: γk2 > γk−1 γk+1
+with γk = k! ak , i.e. qk < k/(k + 1). We use nothing else from [3]. As a numerical illustration
+(outside the certified chain), the values kτk ∈ [1.47, 1.67] for 64 ≤ k ≤ 1024 sit comfortably
+inside the window of Lemma 2.1, which is loose by design.
+
+          3. Gate A: the zero-free saddle disk and the coefficient bound
+    Let Φn denote the n-th summand of (1) and
+                        Z ∞
+                                                          I(z)
+                 I(z) =      u2z Φ(u) du,  a(z) =                 ,             f = log a.
+                          0                             Γ(2z + 1)
+I is holomorphic on the half-plane Re z > − 12 by the superexponential decay of Φ, and a(k) =
+ak at integers. The n = 1 phase is
+                         Ψz (u) = 2z log u + 5u + log(2πe4u − 3) − πe4u ,
+and the stationarity equation ∂u Ψz = 0 is exactly z = K(u) with
+                                    9      6 
+(5)                  K(u) = u B − −               ,    B = B(u) = 2πe4u .
+                                     2 B−3
+For k ≥ 16 let uk > 0 be the unique positive solution of K(uk ) = k (uniqueness by Lemmap 3.2
+                      9                               9           log k
+below); one has uk > 20 for k ≥ 16, uk > 1 for k ≥ 10 , and uk < 4 . We write σk = uk /k.
+   All directed-rounding evaluations in this section are performed by the certificate functions
+of complex saddle.py listed in Table 1.
+Lemma 3.1 (Kernel tube). Let x0 ≥ 0 and ν ≥ 0 satisfy cos(4ν) > 0 and 2πe4x0 > 3, and put
+X = e4x0 , q = 16e−3πX cos(4ν) . Then for all u = x + iy with x ≥ x0 , |y| ≤ ν,
+                               P
+                                  n≥2 |Φn (u)|    2πX + 3      q
+                                               ≤           ·     .
+                                   |Φ1 (u)|       2πX − 3 1 − q
+In particular, with (x0 , ν) = (0.4, 0.1) the right side is < 10−15 , and with (x0 , ν) = (0.35, 0.1)
+one has Φ = Φ1 (1 + R) with sup |R| < 1.1 · 10−14 on the tube. Consequently Φ is zero-free on
+{Re u ≥ 0.35, | Im u| ≤ 0.1}.
+                                              4u                                       4u    4x cos(4y)
+Proof. Write Φ1 (u) = πe5u (2πe4u − 3)e−πe . Then |e5u | = e5x and |e−πe | = e−πe                         .
+With a = 2πe4x and c = cos(4y) ∈ (0, 1],
+        |2πe4u − 3|2 = (ac − 3)2 + a2 (1 − c2 ) = a2 − 6ac + 9 ≥ a2 − 6a + 9 = (a − 3)2 ,
+so |2πe4u − 3| ≥ 2πe4x − 3 > 0 and
+                                                               4x cos(4y)
+                              |Φ1 (u)| ≥ πe5x (2πe4x − 3) e−πe              .
+             AN EXPLICIT CUBIC WEDGE FOR TOEPLITZ MINORS OF THE ξ-COEFFICIENTS                    5
+
+For n ≥ 2,
+                           |Φn (u)|   2πn4 X + 3n2 −π(n2 −1)X cos(4ν)
+                                    ≤             e                   ,
+                           |Φ1 (u)|     2πX − 3
+                                                           2    4x
+because the ratio of the exponential factors is e−π(n −1)e cos(4y) , decreasing in x, and the
+rational prefactor is likewise decreasing in x. Using n4 ≤ 16n−1 and n2 − 1 ≥ 3(n − 1) the
+sum over n ≥ 2 is dominated by the geometric series with ratio q, giving the display. The
+two numerical instances are certified by certify phi n1 tube; the certified enclosure of the
+(0.4, 0.1) tail ratio is 4.122 · 10−18 , well below the stated 10−15 .                     □
+Lemma 3.2 (Analytic continuation of the saddle). For every integer k ≥ 16 and every z with
+                                                                                               1
+|z − k| ≤ k/20, the equation K(u) = z has exactly one solution u(z) in the disk |u − uk | ≤ 20   ,
+it is simple, depends analytically on z, and satisfies Re u(z) > 0.4, | Im u(z)| < 0.05. Moreover
+the sharper localization
+                                                         3
+                                       |u(z) − uk | ≤ 200
+holds throughout |z − k| ≤ k/20.
+Proof. On the real axis H := B − 29 − B−36
+                                            satisfies H ′ > 4H > 0 for u ≥ 20 9
+                                                                                , so K = uH is
+                         ′                                    1
+strictly increasing and K (uk ) > 4k. On the disk |u − uk | ≤ 20 one has |e4(u−u k ) | ≤ e1/5 < 5 ,
+                                                                                                4
+whence with B0 = B(uk ) > 2πe9/5 > 30:
+                      |B| ≤ 54 B0 ,              7
+                                       |B − 3| ≥ 10 B0 ,       H(uk ) ≥ 21
+                                                                        25 B0 .
+                                                                      2
+Differentiating, H ′ = 4B + (B−3)
+                               24B
+                                   2 and H
+                                           ′′ = 16B + 96B − 192B , so on the disk |H ′ | ≤ 51 B
+                                                     (B−3)2 (B−3)3                         10 0
+and |H ′′ | ≤ 22B0 , and therefore
+                               |K ′′ |   2 · 51          1
+                                             10 + (uk + 20 ) · 22
+                                       ≤                          < 60,
+                                k                uk · 21
+                                                      25
+               9                   k                             1
+using uk > 20    . For |z − k| ≤ 20  , on the circle |u − uk | = 20 the linear term of K(u) − z
+                 ′                     1
+dominates: |K (uk )(u − uk )| > 4k · 20 = 0.2k, while the Taylor remainder plus displacement is
+below 60k     1     k
+         2 · 400 + 20 = 0.125k. Rouché’s theorem gives exactly one simple zero; analyticity in
+z follows from the implicit function theorem, and the location bounds from uk > 0.45 and the
+disk radius.
+                                                                                        3
+   For the drift bound, run the same comparison on the smaller circle |u − uk | = 200     : the
+                            3
+linear term exceeds 4k · 200 = 0.06k, while the Taylor remainder plus displacement is at most
+60k 3 2        k
+         
+  2 200     + 20   = 0.00675k + 0.05k = 0.05675k < 0.06k. Hence the unique saddle already
+                     3
+lies in |u − uk | ≤ 200 . Constants certified by certify principal saddle continuation and
+certify saddle domains.                                                                      □
+Lemma 3.3 (Full-kernel saddle). Write Φ = Φ1 (1 + R) as in Lemma 3.1. The full phase
+                                                                                           1
+2z log u + log Φ(u) has, for k ≥ 16 and |z − k| ≤ k/20, exactly one saddle in |u − uk | < 20 ,
+                                              R′
+analytic in z; its saddle map is KΦ = K − u2 1+R  and satisfies |KΦ − K| < 7 · 10−15 k on the
+disk.
+                                                               1
+Proof. Every point of the full control disk |u − uk | ≤ 20         admits a Cauchy circle of radius
+ 1                                                        1      1                       9
+25   inside the (0.35, 0.1) tube: the   total   radius is 20 +  25 = 0.09, while uk > 20 . Hence
+                              ′     25 sup |R|
+|R′ | ≤ 25 sup |R| and 1+R  R
+                                 ≤ 1−sup                              1     k
+                                           |R| . Since |u| ≤ uk + 20 < 20 on the disk (indeed
+uk < log4 k ), the map perturbation is below 7 · 10−15 k, which added to the Rouché error 0.125k
+of Lemma 3.2 stays below the main term 0.2k; added to the 0.05675k of the drift comparison
+6                                          WOJCIECH MICHALOWSKI
+
+                                                                             3
+it stays below 0.06k, so the full-kernel saddle also satisfies |us − uk | ≤ 200 . Certified by
+certify full kernel saddle continuation (perturbation enclosure 6.53 · 10−15 k).             □
+
+   We write us = u(z) = xs + iys for the full-kernel saddle and Ψz (u) = 2z log u + log Φ(u)
+from now on.
+Lemma 3.4 (Horizontal concavity). For k ≥ 16, |z − k| ≤ k/20, on the horizontal line
+u = x + iys with x ≥ 0.35:
+                               8 k                                                          4 k
+     − Re Ψ′′z (x + iys ) ≥          ,     hence         Re Ψz (x + iys ) ≤ Re Ψz (us ) −         (x − xs )2 .
+                               5 u2k                                                        5 u2k
+
+Proof. From (log Φ1 )′′ = −8B − (B−3)
+                                 48B
+                                      2,
+
+
+                                     z                      B
+                − Re Ψ′′z = 2 Re        + 8 Re B + 48 Re          − Re(log(1 + R))′′ .
+                                     u2                  (B − 3)2
+                                             1
+The sector bounds | arg(z/u2 )| ≤ arctan 19     + 2 arctan 17 < 0.34 (from |z/k − 1| ≤ 20  1
+                                                                                             and
+                     1                              3                      3/200       3  1
+| arg u| ≤ arctan 7 on the line, since |ys | ≤ 200 , x ≥ 0.35, and 0.35 = 70 < 7 ) and
+        B                                1                          1
+| arg (B−3) 2 | < 0.66 (from | Im 4u| ≤ 5 and Re B ≥ B(x) cos 5 ) make the first three terms
+
+nonnegative, and a Cauchy estimate on the (0.3, 0.1) tube gives |(log(1 + R))′′ | < 10−8 .
+                                                      19
+   Split at x = uk . For 0.35 ≤ x ≤ uk , using |z| ≥ 20  k and |u|2 ≤ x2 1 + ( 17 )2 ,
+
+                               z    2 · 19
+                                        20 cos(0.34)   k        k   17 k
+                       2 Re       ≥           1      · 2 ≥ 1.75 2 ≥        .
+                               u2        1 + 49       x        x    10 u2k
+
+For x ≥ uk , monotonicity of B and Re B ≥ B(x) cos 51 give, together with B0 ≥ H0 = k/uk
+         9
+and uk ≥ 20 ,
+                                                k                     k                      k   17 k
+    8 Re B ≥ 8 cos( 51 ) B0 ≥ 8 cos( 15 )          = 8 cos( 15 ) uk · 2 ≥ 8 cos( 51 ) · 20
+                                                                                        9
+                                                                                           · 2 >        .
+                                                uk                   uk                     uk   10 u2k
+In both regimes the certified factor exceeds 17                                   −8 is below one tenth
+                                                 10 , and the kernel-tail loss 10
+of the floor: since t 7→ e4t /t increases for t ≥ 41 ,
+                           k     H0   21 2πe4uk   21 2πe9/5
+                               =    ≥    ·      ≥   ·       > 56.
+                           u2k   uk   25   uk     25 9/20
+This proves the first display with the round constant 58 ; the Gaussian envelope follows by
+integrating the concavity bound twice from the maximum at x = xs . Constants certified by
+certify horizontal phase concavity (sector enclosures 0.3364 and 0.6529; scaled curvature
+floor 8/5).                                                                               □
+Lemma 3.5 (Phase derivative bounds). Let k ≥ 109 and |z − k| ≤ k/20, and set A =
+−Ψ′′z (us ) σk2 . Then, pointwise on the certified disk |u − us | ≤ 40
+                                                                     1
+                                                                       ,
+
+                 − Re Ψ′′z (u) σk2 ≥ 6, |Ψ′′z (u)| σk2 ≤ 20,   |Ψ′′′      3
+                                                                                 p
+                                                                  z (u)| σk ≤ 100 uk /k;
+                                                         3    1
+in particular Re A ≥ 6 and |A| ≤ 20, since |us − uk | ≤ 200 < 20 by Lemma 3.3; and the saddle
+action S0 (z) = Ψz (u(z)) satisfies
+                                                2u′ (z)         −4                             0.645  5
+       S0′ (z) = 2 log u(z),       S0′′ (z) =           =                  ,    |S0′′ (z)| <         < .
+                                                 u(z)     u(z) Ψ′′z (u(z))
+                                                              2                                  k    k
+           AN EXPLICIT CUBIC WEDGE FOR TOEPLITZ MINORS OF THE ξ-COEFFICIENTS                         7
+
+Proof. For k ≥ 109 one has uk > 1 (certified via K(1) < 109 and monotonicity of K), hence
+B0 = 2πe4uk > 2πe4 > 343 and H0 = k/uk satisfies 21   25 B0 ≤ H0 ≤ B0 (the upper bound
+                    9     6                                   1
+because H(u) = B − 2 − B−3 < B). Lemma 3.3 and |u − us | ≤ 40   give
+                                                     3    1    1
+                                        |u − uk | ≤ 200 + 40 = 25 .
+                    4
+Thus |4(u − uk )| ≤ 25 = 0.16, so
+                |B| ≤ e0.16 B0 < 45 B0 ,         Re B ≥ e−0.16 cos(0.16)B0 > 0.8412B0 ,
+                              |B − 3| > 0.8324B0 ,     |u| ≥ 0.96uk .
+Here the first inequality follows from |B − 3| ≥ Re B − 3 > 0.8412B0 − 3 and B0 > 343. For
+the derivatives of log(1 + R), the Cauchy circle of radius 1/25 about any point of this local
+disk lies within distance 3/200 + 1/40 + 1/25 = 2/25 of uk . Since uk > 1, it is contained in
+{Re u > 0.92, | Im u| < 0.08} and hence in the certified (0.3, 0.1) kernel tube. These inclusions
+are checked directly, rather than inferred from the scalar bounds, by the certificate function
+certify nested saddle geometry.
+   Lower bound. Since σk2 = uk /k = 1/H0 ≥ 1/B0 ,
+            Re A ≥ 8 Re B · σk2 − (tail) ≥ 8e−4/25 cos(4/25) − ε > 6.730 > 6,
+where the discarded terms 2 Re(z/u2 )σk2 and 48 Re B/(B−3)2 σk2 are nonnegative by the sector
+                                                              
+
+bounds of Lemma 3.4, and the kernel tail ε is the certified Cauchy loss < 3 · 10−11 ; in fact the
+displayed lower bound is > 6.73007678. Upper bound: collecting the three second-derivative
+components,
+                                21
+                            2 · 20
+                 |A| ≤             + 8 · 54 · 25
+                                              21
+                           (0.96)2 | {z        }
+                           | {z } (−B/2)′′
+                            2z/u2
+
+                                 48 · 54      25
+                           +                ·      +tail
+                             (0.8324)2 B0 21 B0
+                             |           {z      }
+                                     resolvent
+                           < 2.2787 + 11.9048 + 0.00088 < 14.1844 < 14.185 < 20,
+each term normalized by σk2 = 1/H0 via H0 ≥ 21  25 B0 and |z| ≤ 21        21
+                                                                   20 k = 20 H0 uk . Third derivative:
+componentwise in the normalization |Ψ′′′ |σk3 / uk /k, the 2z log u part contributes at most
+                                                p
+    21
+4 · 20 (0.96)−3 < 4.75, the −B/2 part at most 32 · 54 · 25
+                                                        21 < 47.7, and the resolvent and kernel-tail
+parts less than 0.03 combined; certified total 52.381 < 100.
+    Saddle action. Differentiating the stationarity identity Ψ′z (u(z)) = 0 in z gives u′ =
+−2/(uΨ′′z ), and ∂z S0 = (∂z Ψz )(u(z)) = 2 log u(z), whence S0′′ = 2u′ /u = −4/(u2 Ψ′′z ). Nu-
+merically,
+                         4 σk2            4         uk         4          1   0.645
+           |S0′′ | =            ≤                 ·    ≤                ·   <       ,
+                       |u|2 |A|   (0.96)2 u2k Re A k     (0.96)2 · 6.730 k      k
+using |A| ≥ Re A > 6.730 and uk ≥ 1. All constants are certified by the corresponding routine
+in Table 1.                                                                                □
+Lemma 3.6 (Zero-free disk and uniform factorization). For k ≥ 109 and |z − k| ≤ 0.05k,
+                                 s
+                        Ψz (us )     2π                 
+               I(z) = e                        1 + ε(z)   , |ε(z)| < 0.018.
+                                   −Ψ′′z (us )
+8                                       WOJCIECH MICHALOWSKI
+
+In particular I(z) ̸= 0 on the disk, and f = log a is analytic there. (The framework is the
+classical one-saddle uniform expansion, cf. [8]; the content is the explicit uniform constants.)
+Proof. We use the principal branch of log u in the right half-plane. The theta series for Φ
+converges normally on compact subsets of | Im u| < π/8 (there Re(e4u ) > 0), so u2z Φ(u) is
+holomorphic in the swept region; zeros of Φ are not singularities. For fixed z, deform [0, ∞)
+to Cz : the radial segment from 0 to 0.35 + iys , then the ray x + iys , x ≥ 0.35. Truncate at
+radii η and R. Uniformly on |z − k| ≤ k/20, the origin arc is O(η 2 Re z+1 ) = O(η 1.9k+1 ), while
+on the closing segment R + it one has |t| ≤ 3/200 and |(R + it)2z Φ(R + it)| ≤ exp(Ok (R) −
+πe4R cos(3/50)). Both vanish in the respective limits, so Cauchy’s theorem gives the integral
+over Cz exactly throughout the full z-disk.
+   By Lemma 3.1, Φ is zero-free along the horizontal part. In the window |x−xs | ≤ 2σk , Taylor
+expansion with the bounds of Lemma 3.5 gives |Ψz (us +σk y)− Ψz (us )+ A2 y 2 | < 0.01 for |y| ≤ 2
+                                            3
+(using uk < log4 k , so 100 uk /k · 26 < 0.01 at k ≥ 109 ; the window |u − us | ≤ 2σk < 40        1
+                                p
+                                                                                                     lies
+inside the certified disk by the inclusion of Lemma 3.5).    √    The complete complex  Gaussian obeys,
+                                                   2
+with the certified |A| ≤ 14.185, R e−Ay /2 dy = 2π/ |A| ≥ 2π/14.185 > 0.665; its tails
+                                          R                       p        p
+
+beyond |y| = 2 are below e−12 /6 (as Re Ap           ≥ 6), and replacing the Gaussian by the true phase
+on the window costs less than (e          0.01 − 1) π/3 < 0.0103. Outside the window, the pointwise
+curvature bound of Lemma 3.5 gives − Re Ψ′′z ≥ 6/σk2 > 5/σk2 on |x − xs | ≤ 40       1
+                                                                                       (contained in the
+                                   1
+certified disk), and beyond 40 the global envelope of Lemma 3.4 applies. In the normalization
+|eΨz (us ) |σk , the first region is bounded by
+                                        Z ∞
+                                                   2        2e−10
+                                      2        e−5y /2 dy ≤       < 10−5 .
+                                          2                   10
+                                                                                 √
+For the second region put δ = 1/40 and b = (4/5)k/u2k . Since σk−1 ≤ k and uk < log(k)/4,
+Mills’ bound gives
+                               Z ∞                √
+                             2         −bt2          k −bδ2
+                                     e      dt ≤      e     < 10−100     (k ≥ 109 ).
+                            σk δ                   bδ
+The last scalar inequality, with a much larger margin, is enclosed by certify contour
+completion. Thus the full horizontal tail is below 10−4 .
+   It remains to control the radial connector. There |u| ≤ 0.36, while Re z ≥ 19
+                                                                              20 k and | Im z| ≤
+ k
+20 , so
+                                            19             k       1
+     |u2z | = |u|2 Re z e−2 Im z arg u ≤ e− 10 k | log 0.36| e 10 arctan 7 ≤ e−1.94k e0.015k ≤ e−1.9k ,
+and the elementary series bound in Table 1 gives supCz ∩{|u|≤0.36} |Φ(u)| < 24.
+  For comparison with the saddle, |us | ≥ 19/20 and | arg us | ≤ arctan(1/19). Moreover
+|B(us )| ≤ 54 B0 , while H0 = k/uk ≥ 21
+                                     25 B0 and uk ≥ 1; hence Re B(us )/2 ≤ 125k/168. From
+
+                       |Φ(us )| ≥ πe5 Re us |B(us ) − 3|e− Re B(us )/2 (1 − ∥R∥∞ )
+(whose positive prefactor exceeds 1 on the saddle tube), we obtain
+            1                     21   19   1        1    125 1
+              log |eΨz (us ) | ≥ 2 log    −   arctan   −      + log(1 − ∥R∥∞ )
+            k                     20   20 10         19 168 k
+                               > −0.9.
+Consequently the connector, relative to the Gaussian main term, is at most
+                         0.36 · 24 √ −k
+                                     k e < 10−100      (k ≥ 109 ).
+                           0.665
+           AN EXPLICIT CUBIC WEDGE FOR TOEPLITZ MINORS OF THE ξ-COEFFICIENTS                        9
+
+   Combining the local error, Gaussian tail, horizontal tail and connector gives relative error <
+0.0158 < 0.018. The saddle map us (z) is analytic by Lemma 3.3, and −Ψ′′z (us ) stays in the right
+half-plane by Lemma 3.5; choosing its principal square root makes the Gaussian factor analytic.
+Defining ε(z) by the displayed factorization therefore gives an analytic function with |ε(z)| <
+0.018. In particular 1+ε never vanishes, so neither does I. The numerical margins are certified
+by certify local gaussian lower bound and certify contour completion (central lower
+bound 0.6606, relative error 0.00734, horizontal tail < 10−4 , connector < 10−100 ).            □
+Proposition 3.7 (All-degree coefficient bound). For every k ≥ 109 and every d ≥ 3,
+                 f (d) (k)                                   f (d) (k)/d!
+                             ≤ 3 · 40d k 1−d ,   hence                      ≤ 2 · 80d
+                    d!                                          τkd−1
+by Lemma 2.1.
+Proof. Write, on |z − k| ≤ 0.05k,
+         f (z) = S0 (z) − 21 log −Ψ′′z (u(z)) + log(1 + ε(z)) + 12 log 2π − log Γ(2z + 1),
+                                             
+
+by Lemma 3.6. We bound the d-th Taylor coefficient of each term at z = k separately, without
+applying Cauchy’s estimate to f itself (which would lose a factor log k).
+  (i) Saddle action. S0′′ is analytic on the disk with |S0′′ | < k5 (Lemma 3.5); Cauchy’s estimate
+                            k
+on the subdisk of radius 40   gives, for d ≥ 3,
+                 (d)
+               S0 (k)   (S0′′ )(d−2) (k)   (d − 2)! 5  40 d−2 5 · 40d−2 1−d
+                      =                  ≤         ·           =          k .
+                 d!             d!            d!     k k         d(d − 1)
+   (ii) Curvature logarithm. The factor −Ψ′′z (u(z)) lies in the right half-plane with modulus
+in [6/σk2 , 20/σk2 ] (Lemma 3.5), so its principal logarithm is analytic with modulus at most
+log(20k) + π2 < k on the disk; Cauchy on radius 40  k
+                                                      gives coefficients at most 40d k 1−d · 21 after
+                1
+the prefactor 2 .
+   (iii) Analytic relative error. | log(1 + ε)| < 0.019 (Lemma 3.6); Cauchy gives coefficients
+below 0.019 · 40d k −d .
+   (iv) Gamma factor. At the real center the polygamma series gives directly, for d ≥ 3,
+                         1 dd                         1        2
+                               d
+                                 log Γ(2z + 1)     ≤    d
+                                                          +          k 1−d ,
+                         d! dz                 z=k   dk     d(d − 1)
+from ψ (d−1) (x) bounds on x ≥ 2k + 1.
+   Dividing the four contributions by 40d k 1−d yields, at the worst degree d = 3, the certified
+componentwise values
+             6.72 · 10−5 (i),       0.5 (ii),    7.6 · 10−12 (iii),     5.3 · 10−6 (iv),
+with total < 0.500073; each normalized contribution is maximized at d = 3. (Using only
+the rounded constant 5 in the displayed estimate for (i) gives 5.21 · 10−4 and still leaves the
+total below 0.5006.) Hence |f (d) (k)/d!| ≤ 3 · 40d k 1−d with room to spare. The second display
+follows from τk > 2k 1
+                       : 3 · 40d k 1−d τk1−d ≤ 3 · 40d · 2d−1 = 32 · 80d ≤ 2 · 80d . Certified by
+certify analytic degree tail.                                                                   □
+Remark 3.8. The decisive point in (i) is that Cauchy’s estimate is applied to the second deriv-
+ative of the saddle action, which is O(1/k) by the exact envelope identity S0′′ = −4/(u2 Ψ′′z ),
+rather than to S0 itself, which is of size k log k. A direct Cauchy estimate on f would leave a
+spurious factor log k and the resulting degree bound would not be uniform in k. Similarly the
+10                                  WOJCIECH MICHALOWSKI
+
+Gamma term is handled by the exact polygamma series at the real center, not by a complex
+Stirling remainder.
+
+                  4. Gate B: the exact q-Pascal dilation semigroup
+   Fix 0 < q < 1 and an order r ≥ 2; all matrices are r × r, indexed from 0. Let Vij = q ij
+(symmetric q-Vandermonde).
+Lemma 4.1 (Exact LDLT ). V = LDLT where Lij = ji is the unit lower-triangular q-
+                                                        
+                                                                q
+binomial (Gaussian) matrix and D = diag(D0 , . . . , Dr−1 ) with
+                                 m−1
+                                 Y
+                                       qm − qh ,      sgn Dm = (−1)m .
+                                              
+                          Dm =
+                                 h=0
+
+Proof. For a Vandermonde matrix [xij ], Gaussian elimination in the Newton basis gives the
+unit lower factor                  Qm−1
+                                    h=0 (xi − xh )
+                           Lim = Qm−1                    (i ≥ m)
+                                    h=0 (xm − xh )
+and pivot Dm = h<m (xm − xh ). At xi = q i ,
+                  Q
+                          Qm−1 i       h
+                                             Qi                t
+                                               t=i−m+1 (1 − q )
+                                                                    
+                            h=0 (q − q )                            i
+                    Lim = Qm−1            = Qm              t
+                                                                 =      .
+                                                  t=1 (1 − q )      m q
+                                  m     h
+                           h=0 (q − q )
+
+Since V is symmetric and all its leading pivots are nonzero, uniqueness of unit-lower LDLT
+elimination gives V = LDLT with these factors. Finally every factor q m − q h in Dm is negative
+for h < m and 0 < q < 1, hence sgn Dm = (−1)m . The ancillary routine q pascal ldl verifies
+the same identities in exact rational arithmetic as a regression check.                      □
+Lemma 4.2 (Exact bidiagonal dilation group). For α ∈ R let Rα := L−1 diag(q αi ) L. Then
+{Rα } is a one-parameter group, Rα Rβ = Rα+β , Rp = R1p for integer p, and R1 is exactly lower
+bidiagonal:
+     (R1 )mm = q m ,     (R1 )m,m−1 = −q m−1 (1 − q m ),      (R1 )mi = 0 (i ∈
+                                                                             / {m, m − 1}).
+After the signature whitening S = L |D|1/2 (so V = SJS T with J = diag((−1)m )), the whitened
+         bα = |D|−1/2 L−1 diag(q αi )L |D|1/2 is again a group, and
+dilation R
+                                                          p
+                       b1 )mm = q m ,
+                      (R                  (Rb1 )m,m−1 = − q m−1 (1 − q m ).
+
+Proof. The group law is immediate from diag(q αi ) diag(q βi ) = diag(q (α+β)i ) by conjugation.
+For the bidiagonal formula it suffices to check L R1 = diag(q m ) L column by column: with the
+claimed entries,                                   
+                                        m i        m
+                                                        q i 1 − q i+1 ,
+                                                                     
+                         (LR1 )mi =          q −
+                                         i q      i+1 q
+                           m  m      1 − q m−i                              m i 
+and the standard ratio i+1     q   i q
+                                       =
+                                           1 − q i+1
+                                                     turns the  right  side into  i q q 1 − (1 −
+  m−i
+               m                                                            −1
+      ) = q i q , as required. Since L is invertible, this proves R1 = L diag(q i )L for the
+             m
+       
+q
+displayed bidiagonal matrix. The identity is additionally verified as an exact identity of rational
+numbers in q pascal dilation step against q pascal dilation, together with Rp = R1p
+(q pascal dilation semigroup). The whitened subdiagonal follows from |Dm |/|Dm−1 | =
+q m−1 (1 − q m ), immediate from the pivot product formula.                                      □
+           AN EXPLICIT CUBIC WEDGE FOR TOEPLITZ MINORS OF THE ξ-COEFFICIENTS                   11
+
+                                                                       1
+Lemma 4.3 (Generator norm). Let τ = − log q, x = rτ , and suppose x ≤ 64 . Then
+                                                √
+                      √                      x+ x         3√
+     ∥Rb1 − I∥2 ≤ x + x < 1,      ∥G∥2 ≤           √ ≤       x,     G := log R
+                                                                             b1 ,
+                                          1−x− x          2
+and for the affine generator including the scalar shift eτ α(r−1) ,
+                                                          √
+                                  τ (r − 1) + 2∥G∥ ≤ 4 rτ .
+Proof. The diagonal part of R b1 − I has entries q m − 1 with |q m − 1| ≤ mτ ≤ x for m ≤ r − 1
+                                                                               √       √
+(as 1 − e−y ≤ y); the subdiagonal entries are bounded by q m−1 (1 − q m ) ≤ mτ ≤ x. A
+                                                             p
+
+lower bidiagonal matrix with diagonal sup a and subdiagonal sup b has spectral √ norm1at most
+a + b (triangle inequality on the two diagonals), giving the first display; x + x ≤ 64  + 18 <
+1. The Mercator series log(I + ∆) = n≥1 (−1)n−1 ∆n /n converges for ∥∆∥ < 1 and gives
+                                        P
+                                                    √        1              √
+∥ log(I + ∆)∥ ≤ ∥∆∥/(1 − ∥∆∥); with ∥∆∥ ≤ x + x, x ≤ 64        , and hence x ≤ 18 ,
+                           √         √        √
+                      x+ x             x (1 + x)        √ 1 + 81        3
+                                                                          √
+                             √ ≤           1         =   x ·        <   2 x
+                     1−x− x           1 − 64 − 81              55
+                                                               64
+(certified as a scalar inequality√by certify q√response regime). Finally τ (r − 1) ≤ rτ = x ≤
+1√                             1       √
+8 x, so τ (r − 1) + 2∥G∥ ≤ 8 x + 3 x < 4 x.                                                 □
+                                                                                      1
+Proposition 4.4 (All-degree response bound). Fix r, q as above with x = rτ ≤ 64         , and let
+d := r − 1, s = s(i, j) := d − i − j. For a polynomial source, define the whitened response of ϕ
+as
+                         R(ϕ) := |D|−1/2 L−1 V ◦ ϕ(s) L−T |D|−1/2 2 ,
+                                                         
+                                                                        √
+where V ◦ ϕ(s) multiplies V entrywise by ϕ(s(i, j)). Then with t := 4 rτ ,
+                           R (τ s)n ≤ t n
+                                    
+                                                for every integer n ≥ 0
+(the exponent n is arbitrary; d = r − 1 stays fixed in s(i, j)).
+Proof. Consider the exponential source Eα (i, j) = q ij eτ αs . Since
+                                eτ αs = eτ α(d−i−j) = eτ αd q αi q αj ,
+                                 Eα = eτ αd diag(q αi ) V diag(q αj ).
+The second identity is an exact factorization. Moreover
+                            bα := S −1 diag(q αi )S = eαG
+                            R                                       (α ∈ R).
+Indeed, the Mercator series defining G = log R
+                                             b1 commutes with conjugation by S. The diagonal
+         i
+entries q − 1 lie in (−1, 0], so
+             G = S −1 diag(log q i )S = S −1 diag(−τ i)S,           eαG = S −1 diag(q αi )S.
+Hence, using V = SJS T ,
+                               M(α) := |D|−1/2 L−1 Eα L−T |D|−1/2
+                                                           T
+                                       = eτ αd eαG JeαG .
+Differentiating n times at α = 0 and expanding the trinomial (with ∥J∥2 = 1),
+                              X  n                                     n
+                  (n)
+              ∥M (0)∥ ≤                     (τ d)i ∥G∥j ∥G∥l = τ d + 2∥G∥ ≤ t n
+                                    i, j, l
+                             i+j+l=n
+12                                    WOJCIECH MICHALOWSKI
+
+by Lemma 4.3 (note τ d ≤ τ (r − 1)). On the other hand ∂αn Eα |α=0 = (τ s)n q ij entrywise, and
+the whitening transform is linear in the source, so M(n) (0) is exactly the whitened matrix of
+V ◦ (τ s)n .                                                                                  □
+
+     5. Gate C: the weighted Banach algebra and the nonlinear majorant
+   Fix k ≥ 109 and r ≥ 2, put q = qk , τ = τk , d = r−1, ρ = ak+1 /ak , and define the comparison
+model cs = q s(s−1)/2 and the remainder hs by
+                                                                                      
+         ak+s        hs
+                                                                                      s
+(6)          s
+               = cs e ,     i.e.   hs = f (k + s) − f (k) − s f (k + 1) − f (k) + τ       ,
+        ak ρ                                                                           2
+so that h−1 = h0 = h1 = 0 identically.
+Lemma 5.1 (Centered expansion). For |s| ≤ r − 1 the Taylor series of f at k converges to
+f (k + s), and
+                                          ′
+                                                              ( ′
+                 X                    f (d ) (k)               sd − s, d′ odd,
+            hs =   ad′ Pd′ (s), ad′ =            , P d′ (s) =    ′
+                 ′
+                                         d′ !                  sd − s2 , d′ even.
+                d ≥3
+                                         ′       ′                                               k
+Proof. By Proposition 3.7, |ad′ | ≤ 3·40d k 1−d , so the Taylor series at k converges on |z−k| ≤ 80 ,
+with remainder bounds forcing it to converge to f (standard Cauchy remainder on the zero-
+                                                         k
+free disk of Lemma 3.6); since r − 1 ≤ k 1/3 ≪ 80           in our regime, the expansion applies.
+                                     P         d ′
+Substituting f (k + s) = f (k) + d′ ≥1 ad′ s into (6) and using τ = − f (k + 1) + f (k − 1) −
+             P
+2f (k) = −2 d′ ≥2 even ad′ one checks that the degree-1 terms cancel, the degree-2 term cancels
+                                                                                    ′
+identically (a2 s2 − a2 s − a2 s(s − 1) = 0), odd degrees d′ ≥ 3 contribute ad′ (sd − s), and even
+                                   ′                          ′
+degrees d′ ≥ 4 contribute ad′ (sd − s − s(s − 1)) = ad′ (sd − s2 ).                               □
+Definition 5.2 (Weighted algebra). Let A be the space of power series ϕ(s) = n≥0 ϕn sn
+                                                                                          P
+with finite norm
+                                 X                              t          √
+                      ∥ϕ∥A :=        |ϕn | wn < ∞,        w := , t = 4 rτ .
+                                                                τ
+                               n≥0
+
+Since the weight is multiplicative (wn+m = wn wm ), A is a commutative Banach algebra (ℓ1
+with submultiplicative weight): ∥ϕψ∥A ≤ ∥ϕ∥A ∥ψ∥A , and consequently eϕ − 1 ∈ A with
+∥eϕ − 1∥A ≤ e∥ϕ∥A − 1 whenever ϕ ∈ A.
+                                                                         
+Lemma 5.3 (Response functional calculus). For every ϕ ∈ A, R ϕ(s) ≤ ∥ϕ∥A , where R is
+the whitened response of Proposition 4.4.
+Proof. For the monomials, R(sn ) = R (τ s)n /τ n ≤ tn /τ n = wn by Proposition 4.4 (for n = 0,
+                                             
+
+R(1) = ∥J∥2 = 1 = w0 ). The                   n
+                                      P
+                            p series n ϕn s converges
+                                                    1
+                                                          absolutely at every entry argument,
+                                                                   1
+since |s| ≤ r − 1 < 32r ≤ 4 r/τ = w (using τ ≤ 64r from x ≤ 64       ); the entrywise source is
+therefore the norm-convergent sum   of its monomial parts, and  subadditivity  of R over norm-
+convergent series gives R(ϕ) ≤ n |ϕn | wn = ∥ϕ∥A .
+                                P
+                                                                                             □
+Proposition 5.4 (Nonlinear majorant). Let r ≥ 2 and k ≥ Cr3 with C = 1018 . Then
+x = rτ ≤ Cr4 2 ≤ C1 ≤ 64
+                      1
+                         , and
+                             2 (80t)3     2t · 803 τ   2t2 · 804 τ
+                 ∥h∥A ≤                +             +             ≤ 0.1310721,
+                                 − 80t} 1 − (80τ )2 1 − (80τ )2
+                            |τ 1 {z      | {z } | {z }
+                               main          odd (−s)   even (−s2 )
+
+and hence ∥eh − 1∥A ≤ e∥h∥A − 1 ≤ 0.14005 < 1.
+          AN EXPLICIT CUBIC WEDGE FOR TOEPLITZ MINORS OF THE ξ-COEFFICIENTS                                  13
+
+                                                                   ′   ′
+Proof. By Lemma 5.1, h(s) = d′ ≥3 ad′ Pd′ (s) with |ad′ | ≤ 2 · 80d τ d −1 (Proposition 3.7). The
+                            P
+                                               ′          ′
+A-norms of the constituent monomials are ∥sd ∥A = wd , ∥s∥A = w, ∥s2 ∥A = w2 , w = t/τ .
+The leading terms give
+                            X              ′       2X        ′  2 (80t)3
+                                    |ad′ | wd ≤        (80t)d =           ;
+                                                   τ ′          τ 1 − 80t
+                            d′ ≥3                   d ≥3
+
+the odd centering corrections (d′ = 2j + 1, j ≥ 1) give
+                         X                         X                        2t · 803 τ
+                                   |ad′ | w ≤ 2t         802j+1 τ 2j−1 =               ;
+                                                                           1 − (80τ )2
+                       d′ ≥3 odd                   j≥1
+
+and the even corrections (d′ = 2j + 2, j ≥ 1) give
+                        X                           X                       2t2 · 804 τ
+                                  |ad′ | w2 ≤ 2t2         802j+2 τ 2j−1 =               .
+                                                                            1 − (80τ )2
+                     d′ ≥4 even                     j≥1
+
+This
+ √ proves the displayed majorant. For its evaluation in the wedge regime, substitute t =
+4 rτ in the main term:
+          2                        (rτ )3/2            √                    2  4 · 3203
+             (80t)3 = 2 · 803 · 64          = 128 · 803 r3 τ ≤ 128 · 803 · √ = √        ,
+          τ                           τ                                      C      C
+                                                                  √
+using r3 τ ≤ 4/C (from τ ≤ 4/k√≤ 4/(Cr3 )), while 80t ≤ 320/ C < 1 controls the geometric
+factor (1 − 80t)−1 ≤ (1 − 320/ C)−1 . The two correction   √     terms are increasing in t and τ
+                                                                                          1
+separately and are evaluated at the endpoints t ≤ 4/ C (from rτ ≤ 1/C) and τ ≤ 2C           (from
+            3
+τ ≤ 4/(Cr ) at r ≥ 2). The certified enclosures are
+    main ≤ 0.131072041943053 ± 5 · 10−16 ,               odd ≤ 2.048 · 10−21 ,      even ≤ 6.554 · 10−28 ,
+with certified total ∥h∥A ≤ 0.1310721 and e∥h∥ − 1 ≤ 0.140049909764285 ± 5 · 10−16 < 1
+(certify q nonlinear wedge).                                                        □
+
+            6. Assembly: inertia preservation and the sign of the minor
+Lemma 6.1 (Inertia preservation). Let M = SJS T with S invertible and J a signature matrix,
+and let T = M + E be symmetric with ∥S −1 ES −T ∥2 < 1. Then T has the same inertia as J.
+Proof. T = S(J + F )S T with F = S −1 ES −T , ∥F ∥ < 1. For θ ∈ [0, 1] the matrix J + θF is
+nonsingular, since J is symmetric orthogonal, so all its singular values equal 1, while ∥θF ∥ < 1.
+The eigenvalues of the continuous symmetric family J + θF therefore never cross zero, so the
+inertia of J + F equals that of J; Sylvester’s law transfers this to T .                        □
+Lemma 6.2 (Sign arithmetic). Let Q be a symmetric r × r matrix with the inertia of J =
+           r−1
+diag (−1)m m=0 , i.e. (⌈r/2⌉ positive, ⌊r/2⌋ negative) eigenvalues, and let T be obtained from
+Q by reversing the order of the columns. Then
+                                                    r
+                                       det T = (−1)(2) det Q > 0.
+Proof. sgn det Q = (−1)⌊r/2⌋ , and the column reversal multiplies the determinant by the de-
+                 r
+terminant (−1)(2) of the flip permutation. It remains to check ⌊r/2⌋ ≡ 2r (mod 2): writing
+                                                                                 
+
+r = 4l + j, j ∈ {0, 1, 2, 3}, both sides are congruent to 0, 0, 1, 1 respectively.        □
+14                                   WOJCIECH MICHALOWSKI
+
+Proof of Theorem 1.1. Fix r ≥ 2 and k ≥ 1018 r3 ; note k ≥ 8 · 1018 > 109 , so all results of
+§§2–5 apply. Let Tijξ = ak+j−i (i, j = 0, . . . , r − 1) be the minor block, so Dr,k = det T ξ , and
+let Qξij = ak+s , s = (r − 1) − i − j, be its column reversal (a symmetric reversed-Hankel block;
+all indices k + s ≥ k − (r − 1) > 0).
+   Normalization. By (6), ak+s = ak ρ s cs ehs . The scalar ak ρ r−1 > 0 and the positive diagonal
+congruence diag(ρ−i ) Qξ diag(ρ−j ) neither change the sign of det Qξ nor the inertia; we may
+therefore replace the entries by cs ehs .
+          factorization. The binomial identity 2s − r−1
+                                                               i+1
+                                                                       − (r − 1)i + j+1
+                                                                                       
+   Model
+                                                          2   =    2                   2   − (r −
+1)j + ij (with s = (r − 1) − i − j) gives the exact diagonal congruence
+                                                     i+1
+                                         A = diag q ( 2 )−(r−1)i positive, Vij = q ij ,
+                                                                
+              [cs ]ij = cr−1 A V A,
+
+and V = SJS T with S = L|D|1/2 by Lemma 4.1. Thus the model block M = [cs ] satisfies
+                       √
+M = Se J SeT with Se = cr−1 A L |D|1/2 .
+  Perturbation. The true (normalized) block is M + E with E = cr−1 A V ◦ (ehs − 1) A, so
+                                                                                  
+
+                     Se−1 E Se−T = |D|−1/2 L−1 V ◦ (ehs − 1) L−T |D|−1/2 ,
+                                                            
+
+the scalars cr−1 and diagonals A cancelling exactly. By Lemma 5.3 and Proposition 5.4,
+                     Se−1 E Se−T 2 = R eh − 1 ≤ ∥eh − 1∥A ≤ 0.14005 < 1.
+                                             
+
+                           1
+(The hypothesis x = rτ ≤ 64   of Proposition 4.4 holds since x ≤ 1/C.)
+  Conclusion. Lemma 6.1 gives Qξ (after the positive normalizations) the inertia of J, and
+Lemma 6.2 yields det T ξ > 0, i.e. Dr,k > 0.                                             □
+
+                           7. Certification and reproducibility
+   Every constant inequality used above is certified with Arb ball arithmetic [7] at 256–4096
+bits with directed rounding: a certificate function either returns rigorous enclosures satisfying
+the claimed inequality or raises an error. The exact algebra of §4 is verified over Q (Fraction),
+not in floating point. The ancillary directory contains the four modules and a 36-test regression
+suite (run tests.sh).
+
+                                   8. Concluding remarks
+Remark 8.1 (Relation to the fixed-order asymptotics). For fixed r, Katkova’s method [4] gives
+Dr,k > 0 for k ≥ N (r) with a non-explicit N (r). The exact fixed-order saddle expansion
+identifies the first correction of relative size ≍ r3 /k to the normalized local minor, showing
+that r3 /k is the natural small parameter; the wedge constant 1018 is what our deliberately
+coarse uniform bounds pay for explicitness. We expect the true uniform threshold to be far
+smaller.
+Remark 8.2 (What the wedge does not do). The theorem leaves the region k < 1018 r3 un-
+touched, and no method in this paper extends to it: the comparison model degrades as k/r3
+decreases; positivity of all minors is equivalent to RH, and the minors with k = O(r) are
+precisely those untouched by any tail method, including ours. The wedge should be read as a
+quantitative boundary of what kernel-analytic, arithmetic-free methods deliver: positivity in
+the far tail with explicit constants, uniformly in the order — and nothing inside the critical
+cone.
+            AN EXPLICIT CUBIC WEDGE FOR TOEPLITZ MINORS OF THE ξ-COEFFICIENTS                                15
+
+
+    Certificate (ancillary src/)                        Statement            Key enclosure
+    certify phi n1 tube                     Lemma 3.1                        tail ratio 4.122 · 10−18
+    certify principal saddle continuation   Lemma 3.2                        0.06 vs 0.05675
+    certify nested saddle geometry          Lemma 3.5                        radii 0.015, 0.025, 0.04
+    certify saddle domains                  drift + inclusions               0.06 vs 0.0568;
+                                                                              3        1      1
+                                            (Lem. 3.2, 3.5)                  200 + 40 ≤ 25
+    certify full kernel saddle continuation Lemma 3.3                        pert. 6.53 · 10−15
+    certify horizontal phase concavity      Lemma 3.4                        angles 0.337, 0.653
+    certify phase derivative bounds         Lemma 3.5                        Re A > 6.730, |A| < 14.185
+                                                                             |Ψ′′′ |σ 3 -ratio < 52.381
+    certify local gaussian lower bound                  Lemma 3.6            central > 0.6606
+    certify contour completion                          Lemma 3.6            tails < 10−4 , < 10−100
+    certify analytic degree tail                        Prop. 3.7            total ratio < 0.500073
+    q pascal dilation step/ semigroup                   Lemma 4.2            exact over Q √
+    certify q response regime                           Lemma 4.3            generator ≤ 4 x
+    certify q nonlinear wedge                           Prop. 5.4            ∥h∥ ≤ 0.1310721,
+                                                                             e∥h∥ − 1 ≤ 0.14005
+        Table 1. Lemma-to-certificate map. All values are conservative upper (resp.
+        lower) roundings of rigorous Arb enclosures; the exact balls are printed by the
+        ancillary certificates.
+
+
+Remark 8.3 (Independence from zero verification). No step of the proof uses numerically ver-
+ified zeros of ζ; the only external analytic input is the Turán theorem of [3] (used solely for
+                        1
+the lower bound τk > 2k   ). The wedge is in this sense complementary to the sector-strip route,
+which certifies nonnegativity for all k when r ≤ 9.4 · 1012 but consumes the verified height of
+[6].
+Acknowledgements. The computations use python-flint (Arb [7]) and mpmath.
+
+                                                References
+ [1] M. Aissen, I. J. Schoenberg, A. M. Whitney, On the generating functions of totally positive sequences I,
+     J. Analyse Math. 2 (1952), 93–103.
+ [2] A. Edrei, On the generating functions of totally positive sequences II, J. Analyse Math. 2 (1952), 104–109.
+ [3] G. Csordas, T. S. Norfolk, R. S. Varga, The Riemann hypothesis and the Turán inequalities, Trans. Amer.
+     Math. Soc. 296 (1986), 521–541.
+ [4] O. M. Katkova, Multiple positivity and the Riemann zeta-function, arXiv:math/0505174.
+ [5] I. J. Schoenberg, A note on multiply positive sequences and the Descartes rule of signs, Rend. Circ. Mat.
+     Palermo (2) 4 (1955), 123–131.
+ [6] D. J. Platt, T. S. Trudgian, The Riemann hypothesis is true up to 3 · 1012 , Bull. London Math. Soc. 53
+     (2021), 792–797; arXiv:2004.09765.
+ [7] F. Johansson, Arb: efficient arbitrary-precision midpoint-radius interval arithmetic, IEEE Trans. Comput-
+     ers 66 (2017), 1281–1292.
+ [8] NIST Digital Library of Mathematical Functions, §2.4(iv), https://dlmf.nist.gov/2.4.
+ [9] M. Griffin, K. Ono, L. Rolen, D. Zagier, Jensen polynomials for the Riemann zeta function and other
+     sequences, Proc. Natl. Acad. Sci. USA 116 (2019), 11103–11110.
+[10] B. Rodgers, T. Tao, The de Bruijn–Newman constant is non-negative, Forum Math. Pi 8 (2020), e6;
+     arXiv:1801.05914.
+[11] W. Michalowski, On the Pólya frequency order of the de Bruijn–Newman kernel: certified failure at order
+     five and the Toeplitz threshold phenomenon, arXiv:2602.20313.
+   Email address: michalowski.wojciech1@gmail.com
+

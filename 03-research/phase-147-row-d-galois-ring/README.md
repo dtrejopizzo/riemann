@@ -38,13 +38,13 @@ automorphism graph `Γ_i = ½Γ_π − ½Δ − F₁ + F₂` is an irreducible c
 
 | file | contents |
 |---|---|
-| `R147_000_LEAD_BLUEPRINT.md` | lead's charge: D.50–D.54; warnings W-a (no trace-form positivity), W-c (falsifiers by structure) |
+| `R147_000_BLUEPRINT.md` | blueprint: D.50–D.54; warnings W-a (no trace-form positivity), W-c (falsifiers by structure) |
 | `CORPUS_CHECK_R147b.md` | pre-phase corpus check |
-| `R147_001_BUILDER_ROUND1.md` | round 1 (D.50–D.54). **Ends with `Corrections of record` C1–C19 — read that first**; body not rewritten |
-| `R147_002_HOSTILE_AUDIT.md` | audit 1: ACCEPT WITH REPAIRS (0 FATAL, 6 MAJOR, 11 MINOR) |
-| `R147_003_BUILDER_ROUND2.md` | round 2. Part A: all of audit 1 discharged. Part B (§D.55): the χ-graded carrier. **Ends with `Corrections of record` D1–D20 — read that first**; body not rewritten |
-| `R147_004_HOSTILE_AUDIT_R2.md` | audit 2: **ACCEPT PART A; PART B REQUIRES MAJOR REPAIRS** (0 FATAL, 7 MAJOR, 9 MINOR, 4 NOTE) |
-| `R147_003b_BUILDER_ROUND3.md` | **document of record for Part B.** Repairs only: packet grading + real symmetric (not sesquilinear) form (MAJOR 1–2), `C_c^∞` cone with a two-halves support proof (MAJOR 3), the `S = 1` framing withdrawn (MAJOR 4), the `θ`-freedom clearing argument withdrawn → O-47.7 (MAJOR 5), the false `t`-clause deleted (MAJOR 6), `dim H⁰ ≤ 1` downgraded to a remark (MAJOR 7), all 9 MINORs and 4 NOTEs, `s_Frob = 2/3` now proved. **Ends with `Final corrections` C1–C9** from the confirmation round: Theorem D.55.9′ now a numbered theorem with a proof in the `f_1` form (C1), the base-dependent degree normalisation (C2), `θ*(6) = π/6` (C3), `ι(𝓔^∞)` not `ι(𝓔)` (C4), `K_H ∉ closure(𝓒)` proved (C5), script docstring (C6), `+9%` (C7), absolute convergence (C8) |
+| `R147_001_ROUND1.md` | round 1 (D.50–D.54). **Ends with `Corrections of record` C1–C19 — read that first**; body not rewritten |
+| `R147_002_AUDIT.md` | audit 1: ACCEPT WITH REPAIRS (0 FATAL, 6 MAJOR, 11 MINOR) |
+| `R147_003_ROUND2.md` | round 2. Part A: all of audit 1 discharged. Part B (§D.55): the χ-graded carrier. **Ends with `Corrections of record` D1–D20 — read that first**; body not rewritten |
+| `R147_004_AUDIT_R2.md` | audit 2: **ACCEPT PART A; PART B REQUIRES MAJOR REPAIRS** (0 FATAL, 7 MAJOR, 9 MINOR, 4 NOTE) |
+| `R147_003b_ROUND3.md` | **document of record for Part B.** Repairs only: packet grading + real symmetric (not sesquilinear) form (MAJOR 1–2), `C_c^∞` cone with a two-halves support proof (MAJOR 3), the `S = 1` framing withdrawn (MAJOR 4), the `θ`-freedom clearing argument withdrawn → O-47.7 (MAJOR 5), the false `t`-clause deleted (MAJOR 6), `dim H⁰ ≤ 1` downgraded to a remark (MAJOR 7), all 9 MINORs and 4 NOTEs, `s_Frob = 2/3` now proved. **Ends with `Final corrections` C1–C9** from the confirmation round: Theorem D.55.9′ now a numbered theorem with a proof in the `f_1` form (C1), the base-dependent degree normalisation (C2), `θ*(6) = π/6` (C3), `ι(𝓔^∞)` not `ι(𝓔)` (C4), `K_H ∉ closure(𝓒)` proved (C5), script docstring (C6), `+9%` (C7), absolute convergence (C8) |
 | `R147_004b_CONFIRMATION.md` | confirmation: **ACCEPT** with C1–C7 (0 FATAL); all of audit 2 confirmed discharged; numbers re-run and reproduced |
 | `scripts/graded_support.py` | `L(m)` for `m = 1..12` (margins `≤ 1.1e−16`); `S(γ,θ,m)` at `θ = π/2` and minimised over `θ`; `σ` and `d₀` **as lower bounds**, exact argmin `d/2`. Docstring rewritten to the packet pairing; the per-χ form and the "may choose theta" clause are gone (C6). **Theorem D.55.9′ is exact and is not computed here** |
 | `scripts/model_intersections.py` | `E/F₅`: point counts, `Γ_α·Γ_β = N(α−β)`, fixed points + Riemann–Hurwitz, the NS identity for `Γ_i` (integer-exact), the three cone constants, cross-check against R145's `√(7/11)` |
@@ -113,5 +113,5 @@ model:  s_Frob = 2/3,  s_AutFrob = cos(pi/4) = 1/sqrt2,  s_End = 2/sqrt5   (all 
 
 ## Next
 
-The lead's `R147_005`. The confirmation round's condition for closing — *"with C1 written as a numbered
+`R147_005`. The confirmation round's condition for closing — *"with C1 written as a numbered
 theorem in the `f_1 = Σ_gf` form, phase 147 may close"* — is met.

@@ -1,7 +1,6 @@
 # E72.178 -- Stable SRP reduction theorem
 
-**Date:** 2026-07-09.
-**Role:** package the current Phase 72 endpoint as a precise reduction theorem.
+**Purpose:** package the current Phase 72 endpoint as a precise reduction theorem.
 
 ## 0. Objects
 

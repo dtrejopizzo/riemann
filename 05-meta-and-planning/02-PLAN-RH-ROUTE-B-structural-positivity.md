@@ -1,6 +1,6 @@
 # PLAN — RH Route B: Structural Positivity (is the Weil operator a square?)
 
-**Author:** David Alejandro Trejo Pizzo · **Opened:** 2026-06-03 · **Status:** the only open route to RH
+**Author:** David Alejandro Trejo Pizzo · **Opened:**  · **Status:** the only open route to RH
 after P8.
 
 This is the companion plan to **P8** (`06-papers/P8-weil-krein-realization/`). P8 closed the
@@ -129,7 +129,7 @@ candor that made P8's Theorem C the most valuable output of the zero-side line.
 
 - **B0 (zero-independence):** every admissible structure must be writable without assuming RH. Re-check
   every candidate $A$ against this. *(This is the formalized lesson of P8 Thm C.)*
-- **Audit before pillarizing:** no step becomes a foundation until hostile-audited. The optimistic pillar
+- **Audit before pillarizing:** no step becomes a foundation until independently audited. The optimistic pillar
   is where the crack hides.
 - **$O$ vs $o$, magnitude vs sign:** keep the P8 distinction front of mind — bounds give magnitude (B-2),
   the sign needs structure. Do not re-derive magnitude bounds and mistake them for progress.

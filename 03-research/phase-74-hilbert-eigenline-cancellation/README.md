@@ -1,6 +1,5 @@
 # Phase 74 - Hilbert eigenline cancellation
 
-**Opened:** 2026-07-16.
 
 ## Entry point
 

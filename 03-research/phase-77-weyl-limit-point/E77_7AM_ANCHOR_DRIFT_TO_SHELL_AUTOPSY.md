@@ -1,6 +1,6 @@
 # E77.7am - Anchor/drift to shell autopsy
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/trabajo/Documentos/research/riemann/03-research/phase-197-barrier-theorem/scripts/z001_parity_split.py", line 64, in <module>
+    alt=float(sys.argv[4]) if len(sys.argv)>4 else None
+        ^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '0.3466,0.5,0.6931,0.8047,1.0,1.2'

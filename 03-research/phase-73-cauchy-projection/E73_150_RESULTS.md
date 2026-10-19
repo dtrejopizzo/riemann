@@ -1,6 +1,5 @@
 # E73.150 Results - Constructive Rowspace Certificate
 
-Date: 2026-07-12.
 
 Script:
 

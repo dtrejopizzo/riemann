@@ -1,6 +1,6 @@
 # E77.7at - Small-mode alignment law
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

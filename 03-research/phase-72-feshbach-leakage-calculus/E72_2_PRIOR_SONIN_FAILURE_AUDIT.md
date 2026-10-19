@@ -1,25 +1,24 @@
 # E72.2 -- Prior Sonin/prolate failures audit
 
-**Date:** 2026-07-08.
-**Role:** read the earlier Sonin/CCM material and extract the constraints that Phase 72 must obey.
+**Purpose:** read the earlier Sonin/CCM material and extract the constraints that Phase 72 must obey.
 
 ## Files audited
 
-Core files named by the user:
+Core files:
 
 - `00-MAP.md`
 - `phase-4-handoff/proofs/00-PROOF-LOG.md`
 - `phase-60-discriminant/00-PLAN.md`
 - Phase 32 Docs 59--64:
-  - `59-puente-ccm-cinfty.md`
-  - `60-decaimiento-discrepancia-jacobi.md`
-  - `61-localidad-funcional-ln-desbranges.md`
-  - `62-pcn-transformada-stieltjes.md`
-  - `63-escala-christoffel-suma-global.md`
-  - `64-ctp-equivalencia-rh.md`
+  - `59-bridge-between-the-ccm-program.md`
+  - `60-decay-and-sum-of-the-semilocal-jacobi.md`
+  - `61-locality-of-the-functional-and-the-de.md`
+  - `62-kcp-via-the-stieltjes-transform.md`
+  - `63-christoffel-scale-oscillations-of-and-global-positivity.md`
+  - `64-ptc-is-equivalent-to-rh-closure.md`
 - `phase-35-five-fronts/100-maslov-semilocal.md`
-- `phase-39-G1G2-interface/120-inventario-CC-fuente.md`
-- `phase-40-close-G1/124-positividad-weil-vs-indice-hodge.md`
+- `phase-39-G1G2-interface/120-source-inventory-of-the-connes-consani-moscovici.md`
+- `phase-40-close-G1/124-connes-consani-s-weil-positivity.md`
 
 Also searched the repo for `Sonin/Sonine`.
 

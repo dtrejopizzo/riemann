@@ -34,7 +34,7 @@ with three fixed points, or inversion, with one fixed point.  Hence the
 two targets require opposite Frobenius actions:
 
 \[
- \rho_{20\mathrm{a}1}(F_2)=+1,qquad
+ \rho_{20\mathrm{a}1}(F_2)=+1,\qquad
  \rho_{36\mathrm{a}4}(F_2)=-1.
  \tag{2.1}
 \]

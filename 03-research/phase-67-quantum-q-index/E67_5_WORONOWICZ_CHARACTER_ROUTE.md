@@ -1,7 +1,6 @@
 # E67.5 — Modular/Woronowicz-character route for the prime current
 
-**Date:** 2026-07-06.
-**Role:** next modular vocabulary after the strict free-product Haar model was demoted by E67.4.
+**Purpose:** next modular vocabulary after the strict free-product Haar model was demoted by E67.4.
 **Status update after E67.7:** Woronowicz characters alone do **not** escape the E67.4 no-go. They
 identify the right modular data, but a Haar-weighted Cauchy-Schwarz estimate still gives an incoherent
 `S_abs`-type ceiling unless an additional off-diagonal coherent state is supplied.

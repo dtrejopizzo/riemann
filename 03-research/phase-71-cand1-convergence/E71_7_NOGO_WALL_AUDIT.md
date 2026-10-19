@@ -1,7 +1,6 @@
 # E71.7 -- NO-GO / Phase 53 wall audit for CAND-1
 
-**Date:** 2026-07-07.
-**Role:** check the Phase 71 route against `NO-GO-LIST.md`, Phase 53 Stone import, and the Phase 60
+**Purpose:** check the Phase 71 route against `NO-GO-LIST.md`, Phase 53 Stone import, and the Phase 60
 CCM tribunal before pushing further.
 
 ## Sources audited
@@ -9,7 +8,7 @@ CCM tribunal before pushing further.
 - `riemann-program/NO-GO-LIST.md`
 - Phase 53:
   - `164-import-stone-onda.md`
-  - `165-destructor-import-cuantico.md`
+  - `165-destructor-of-the-quantum-import-stone-wave.md`
 - Phase 60:
   - `tribunal-Connes.md`
 

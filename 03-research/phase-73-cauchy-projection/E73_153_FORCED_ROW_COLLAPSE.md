@@ -1,6 +1,5 @@
 # E73.153 - Forced row collapse
 
-Date: 2026-07-12.
 
 ## 1. Purpose
 

@@ -1,0 +1,2657 @@
+                                           A VARIATION NORM CARLESON THEOREM ALONG THE
+                                                              PRIMES
+
+                                            ANASTASIOS FRAGKOS, BEN KRAUSE, NAZAR MIHEISI, AND YU-CHEN SUN
+
+                                              Abstract. Let Λ denote the von Mangoldt function; we prove that for each r > 2,
+                                              there exist constants
+                                                           r′ < c(r) < 2 < C(r),          lim c(r) = 1, lim C(r) = ∞
+                                                                                         r→∞          r→∞
+                                              so that the discrete variational Carleson operator along the primes
+arXiv:2607.05560v1 [math.CA] 6 Jul 2026
+
+
+
+
+                                                                        X                   e2πiλn       
+                                                                     Vr      f (x − n)Λ(|n|)        :λ∈T
+                                                                                               n
+                                                                         n̸=0
+                                                                 p
+                                              is bounded on ℓ for all c(r) < p < C(r), while the variation is unbounded when
+                                              p ≤ r′ . At the non-variational endpoint, the same argument gives the sharp maximal
+                                              result: the prime Carleson operator
+                                                                               X                  e2πiλn
+                                                                          sup     f (x − n)Λ(|n|)
+                                                                          λ∈T                       n
+                                                                                n̸=0
+                                                                 p
+                                              is bounded on ℓ (Z) for the full expected range 1 < p < ∞.
+                                                 The proof gives a new mechanism for treating modulation-invariant singular in-
+                                              tegrals after arithmetic sparsification. It combines higher-order Fourier uniformity,
+                                              a variable-coefficient multi-frequency principle in the spirit of Bourgain, and an
+                                              additive-combinatorial inverse argument. A key step is a reduction to finite peri-
+                                              odic models, where the Ramanujan structure of the major arcs is converted into a
+                                              sharp estimate for structured atoms by elementary number theory.
+
+
+
+
+                                                                                       Contents
+                                          1. Introduction                                                                              2
+                                          2. Preliminaries                                                                             7
+                                          3. Reductions                                                                               17
+                                          4. Multi-Frequency Analysis                                                                 24
+                                          5. Reduction to the Periodic Setting                                                        31
+                                          6. Analysis of Structured Atoms                                                             42
+                                          Appendix A. Complements                                                                     48
+                                          Appendix B. The Discrete Carleson Operator                                                  51
+                                          References                                                                                  53
+
+                                           Date: July 8, 2026.
+
+
+                                                                                          1
+2       A Variation Norm Carleson Theorem Along the Primes
+
+                                  1. Introduction
+  The study of maximally modulated singular integrals has a rich history, encom-
+passing arguably the most celebrated theorem of twentieth century Fourier analysis:
+Carleson’s Theorem [5]. We recall the principal estimate in the real-variable setting.
+Theorem 1.1 (Carleson’s Theorem, Real-Variable Formulation). The following op-
+erator is weakly bounded on L2 (R):
+                                     ˆ
+                                                          dt
+                       Cf (x) := sup   f (x − t) · e2πiλt    .
+                                 λ∈R                      t
+  This theorem was later extended to Lp (R) functions by Hunt in [13], see also [9] and
+[23] for more modern proofs of Theorem 1.1. And, Carleson’s Theorem has admitted
+profound extensions to the case of maximally polynomially modulated singular inte-
+grals, see [25] and [33]. The major difficulty in addressing Cf is that it is invariant
+under three symmetries: translation and dilation, like the standard Hilbert transform,
+but also modulation, in that for any θ ∈ R
+                 Cf (x) ≡ C(Modθ f )(x),       Modθ g(x) := e2πiθx g(x).
+Indeed, the presence of this additional symmetry rules out any approach which treats
+the e.g. zero-frequency as distinguished.
+  Before the issues of polynomial modulations were addressed, in [30], the authors
+established a profound quantitative strengthening of Theorem 1.1. To state their
+result, we recall the definition of the r variation of a sequence of scalars,
+                                    X                   1/r
+                V r (aλ : λ) := sup     |aλi − aλi+1 |r      , 0<r<∞
+                                     i
+where the supremum runs over all finite increasing subsequences; these operators are
+pointwise decreasing in r, with the endpoint given by
+                              V ∞ (aλ ) := sup |aλ − aλ′ |,
+                                            λ̸=λ′
+
+namely the diameter of the sequence, typically comparable to ∥aλ ∥L∞ (λ) . For se-
+quences of functions, {fλ }, one defines the variation pointwise,
+                            V r (fλ : λ)(x) := V r (fλ (x) : λ);
+note that whenever V r (aλ ) < ∞, the sequence {aλ } necessarily converges (rapidly),
+so norm estimates on V r (fλ ) are a strong way to show almost everywhere convergence
+of {fλ }.
+   Variational methods entered harmonic analysis through martingale convergence
+questions [24], and have since become a central tool for quantifying pointwise con-
+vergence of operator families {fλ = Tλ f }; see [18] for a brief survey. A landmark
+result in this direction is the variation-norm Carleson theorem of Oberlin, Seeger,
+Tao, Thiele, and Wright, which has led to substantial subsequent work [1, 2, 31].
+                    A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                                 3
+
+Theorem 1.2 (Variational Carleson, Real-Variable Formulation). Suppose that r > 2
+and p > r′ . Then the following operator
+                                   ˆ
+                      r          r                       dt
+                                      f (x − t) · e2πiλt
+                                                                 
+                    V f (x) := V                            :λ∈R
+                                                         t
+                p
+is bounded on L (R).
+   This paper studies arithmetic analogues of modulation-invariant singular integrals
+on sequence spaces. The ordinary discrete analogue of Theorem 1.2 follows from
+standard transference, reviewed in Appendix B; the new difficulty is to impose an
+arithmetic sparsification while retaining modulation invariance. Our main example
+is the variation-norm prime Carleson operator:
+                                    X                  e2πiλn
+                   VPr f (x) := V r
+                                                                  
+                                         f (x − n)w(n)        :λ∈T ,
+                                    n̸=0
+                                                         n
+where here and throughout, we let
+                             (
+                              log p            if |n| = pk is a power of a prime
+           w(n) := Λ(|n|) :=
+                              0                otherwise
+denote the even extension of the von Mangoldt function.1
+  An interesting feature of our work is that no Euclidean analogue currently exists:
+ r
+VP can be viewed as a discrete analogue of Euclidean operators of the form
+                                   ˆ
+                     r           r                        dµ(t)
+                                      f (x − t) · e2πiλt
+                                                                       
+                   Vµ f (x) := V                                :λ∈R ,
+                                                            t
+where µ is a singular, even, Ahlfors-David regular measure of full Hausdorff dimension.
+  Our choice to begin our study of arithmetic Carleson operators with VPr is motivated
+by the long history of discrete analogues in harmonic analysis along the primes, dating
+back to the work of Bourgain-Wierdl [3, 32], who studied the maximal function,
+                                          1     X
+                     MP f (x) := sup                  |f (x − n)w(n)|,
+                                   N 2N + 1
+                                                     |n|≤N
+
+motivated by questions of pointwise convergence of ergodic averages along prime
+times in the dynamical systems context; the singular integral, and variation-in-scale,
+formulations have been similarly addressed in [28] and in [29], and in [6], a highly
+restricted variant of the smaller operator (1.1) was studied using different methods
+to those introduced below. More recently, arithmetic extensions of classical theorems
+in pointwise ergodic theory related to prime number theory have been developed
+[10, 11, 20], and the main result of this paper complements this recent work, as the
+   1For the purposes of ℓp -norm estimates for 1 < p < ∞, it suffices by density to work with finitely-
+supported functions; we will implicitly assume that every sequence-space function introduced below
+is finitely supported.
+4        A Variation Norm Carleson Theorem Along the Primes
+
+singular integral analogue of [10], and as a third example of a discrete, modulation
+invariant operator, at the interface of prime number theory [11, 20]; this modulation
+invariance distinguishes this work from previous work on oscillatory singular integrals
+[16, 21, 22]. Specifically, we establish the following result, which is asymptotically
+sharp as r → ∞:
+Theorem 1.3. For each r > 2 there exist constants c(r), C(r) so that
+               r′ < c(r) < 2 < C(r),       lim c(r) = 1, lim C(r) = ∞
+                                           r→∞               r→∞
+
+and for each c(r) < p < C(r), there exists an absolute constant, 0 < Cp,r < ∞, so
+that the following estimate holds:
+                                ∥VPr f ∥ℓp ≤ Cp,r ∥f ∥ℓp .
+  The condition p > r′ is unavoidable: testing on f = δ0 , the value at x = n contains
+the variation of a single exponential:
+                             V r (e(λn) : λ ∈ T) ≳r |n|1/r .
+Thus the output has size comparable to
+                                    Λ(|n|)|n|−1+1/r ,
+which is in ℓp (Z) only when p > r′ .
+  The same method also gives the full expected range for the corresponding maximal
+operator,
+                                       X                    e2πiλn
+(1.1)                  CP f (x) := sup      f (x − n)Λ(|n|)        .
+                                   λ∈T
+                                       n̸=0
+                                                              n
+
+Theorem 1.4. For every 1 < p < ∞ there exists an absolute constant 0 < Cp < ∞
+so that
+                             ∥CP f ∥ℓp ≤ Cp ∥f ∥ℓp .
+   The proof of this theorem is obtained along the way: the only place where the
+variational argument loses range is the change of variables in Lemma 3.2, and this
+loss disappears in the non-variational supremum formulation.
+
+    We now describe our approach.
+
+1.1. Proof Overview. The proof combines three main ingredients. The first is
+a higher-order Fourier decomposition of the von Mangoldt function, following the
+circle-method framework used in recent work on Wiener-Wintner along the primes
+[10]. In that setting, the characteristic nature of the Kronecker factor dictated
+that the argument should be organized according to spectral statistics of the in-
+put function. While our arguments begin similarly to those of [10], with higher-order
+                  A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                    5
+
+Fourier-analytic reductions, the Kronecker factor is much less relevant in the singular-
+integral/variational setting. The replacement for spectral organization is a variable-
+coefficient multi-frequency estimate, in the spirit of Bourgain’s maximal inequality
+[4] and its entropy refinements, related to those previously developed and refined in
+[12, 19]; this is where the variation-norm Carleson theorem enters. The third is a
+finite periodic model in which the arithmetic structure of Ramanujan sums becomes
+explicit.
+   In particular, after these reductions, the main object is a family of single-scale,
+maximally modulated operators whose arithmetic weights have the form
+                             X µ(q)                    X
+                     wQ,B :=          cq ,   cq (n) :=      e2πian/q
+                             q∈B
+                                 ϕ(q)
+                                                      (a,q)=1
+
+where B ranges over blocks of square-free integers in (Q/2, Q], with |B| ≈ Qκ with
+κ > 0 sufficiently small; each wQ,B is periodic with period
+                                QB := lcm(q : q ∈ B).
+The analytic lifting step reduces the physical problem to bounding the periodic op-
+erator
+                                      1 X
+                  MB f (x) := sup             f (x − r)wQ,B (r)e2πiλr
+                             λ∈Z/QB  Q B
+                                         r≤Q B
+
+    2
+on ℓ with a power-savings in Q; this is proved by an inverse theorem and an energy
+decrement argument. Roughly speaking, if MB f is large, then f correlates with an
+atom which is constant-frequency along arithmetic progressions:
+                                                     1X
+             [QB ] ∋ a + sd 7−→ g(a)e2πidϑ(a)s/QB ,        |g(a)|2 = 1,
+                                                     d a≤d
+
+where d | q for some q ∈ B. Iterating this inverse statement reduces the periodic
+problem to testing MB on such structured atoms.
+  For structured atoms, the remaining estimate is arithmetic, and one is led to study
+the kernels
+                      1 X
+            Kθ (u) :=       wQ,B (dℓ + u)e2πi(dℓ+u)θ/QB ,  D := QB /d;
+                      D ℓ≤D
+a Chinese-remainder computation shows that these kernels vanish except when
+                                                    
+                                D          q
+                        tθ :=        ∈          :q∈B .
+                              (θ, D)     (q, d)
+Using this sparsity constraint, we prove that
+                             1X
+                                  sup |Kθ (u)| ≲ Q−1+o(1) ,
+                             d u≤d θ
+6         A Variation Norm Carleson Theorem Along the Primes
+
+which allows us to conclude that every structured atom Φ satisfies
+                             ∥MB Φ∥L2 (Z/QB ) ≲ Q−1+o(1) ,
+yielding the power saving needed to sum over denominator blocks.
+    We now describe the organization of the paper.
+
+1.2. Structure. The following diagram records the main dependencies in the proof.
+                             Higher-order
+                                   P       Fourier reduction
+                              w = Q wQ + uniform error
+                                            ↓
+                              Major-arc denominator   slices
+                                       r          Q,r
+                                           P
+                                      VP ⇝ Q V
+                                            ↓
+                                  Block decomposition
+                                           P
+                                     wQ = B wQ,B
+                                            ↓
+                                     Analytic lifting
+                          Physical block ⇝ Periodic model MB
+                                            ↓
+                                Periodic inverse theorem
+                    MB F large ⇒ F correlates with a structured atom
+                                            ↓
+                                    Energy decrement
+                        Reduce to testing MB on structured atoms
+                                            ↓
+                             Ramanujan fiber computation
+                                            ↓
+                                Structured-atom estimate
+                               ∥MB Φ∥L2 (Z/QB ) ≲ Q−1+o(1)
+                                            ↓
+                                        Conclusion
+              Block saving ⇒ Dyadic Q summation ⇒ Theorems 1.3 and 1.4
+
+    With this scheme in mind, we describe the organization of the paper:
+   Section 2 collects notation, Gowers-norm estimates, and variational preliminaries;
+   Section 3 carries out the reduction from the prime operator to major-arc denomi-
+nator slices;
+   Section 4 develops the variable-coefficient multi-frequency estimate used in the
+physical-to-periodic reduction;
+   Section 5 introduces the periodic model and proves the inverse theorem leading to
+structured atoms; and
+                  A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                    7
+
+  Section 6 proves the arithmetic estimate for those atoms;
+  The appendix contains complementary material: Appendix A discusses related
+arithmetic weights and the Piatetski-Shapiro extension, while Appendix B recalls the
+discrete Carleson input used in the paper.
+
+  We conclude our introduction by presenting some open questions that follow nat-
+urally from our work.
+1.3. Open Problems.
+Problem 1 (Discrete Harmonic Analysis: Arithmetic Testing Conditions). The proof
+of Theorem 1.3 uses special structural features of the von Mangoldt major arcs:
+square-free denominators, Ramanujan-sum identities, and near-optimal decay of ra-
+tional Fourier coefficients. It is natural to ask for an intrinsic testing condition on
+arithmetic weights w guaranteeing boundedness of the associated Carleson opera-
+tors, in analogy with the admissibility criteria in [11, 20]. Appendix A explains why
+admissibility is insufficient: this problem is quite subtle!
+Problem 2 (Euclidean Models). Find natural singular measures µ for which the
+modulation-invariant operators
+                         ˆ                                  
+                       r                  2πiλt
+                     V      K(x − t)f (t)e      dµ(t) : λ ∈ R
+
+are bounded on Lp (R), even in the case p = 2. The arithmetic weights appearing
+in this paper suggest Euclidean analogues in which µ is singular, even, and full-
+dimensional, while K is a dimensionally consistent Calderón-Zygmund kernel.
+Problem 3 (Ergodic Theory: Prime Return Times for Singular Series). The Wiener-
+Wintner theorem along the primes was proved in [10], while [11, 20] developed prime
+return-times and double-recurrence theorems. A natural singular-integral analogue
+would be a prime-weighted version of the return-times theorem for Hilbert-series type
+averages, in the spirit of [7, Theorem 3.4], [7, Theorem 3.10], and [7, Corollary 3.11].
+One possible target is almost-sure convergence of
+                                X Λ(|n|)
+                                            f (T n x)g(S n ω)
+                                       n
+                             1≤|n|≤N
+
+for a full-measure set of return-times parameters ω, uniformly over secondary measure-
+preserving system.
+
+                                  2. Preliminaries
+2.1. General Notation. Throughout, we let
+                            e(t) := e2πit ,   eN (t) := e(t/N )
+8        A Variation Norm Carleson Theorem Along the Primes
+
+denote the complex exponential,
+                               ∥x∥ := ∥x∥T := min |x − k|,
+                                                     k∈Z
+
+and for θ ∈ R, define
+                                 Modθ g(x) := e(θx)g(x);
+we identify
+                         Z/N := {0, 1, . . . , N − 1}          mod N.
+  We use the standard notation for L1 -normalized dilations:
+                                           1    n
+                               φN (n) := φ( ),
+                                           N N
+and let
+                                             1 X
+                         MHL f (x) := sup           |f (n)|
+                                        I∋x |I|
+                                                n∈I
+
+denote the discrete Hardy-Littlewood maximal function; here and throughout, we use
+I to denote discrete intervals.
+  We collect
+                        ΓQ := {a/q reduced : Q/2 < q ≤ Q},
+and define
+                               X µ(q)                         X       µ(q)
+                  wQ (n) :=           e(na/q) =                            cq (n)
+                                 ϕ(q)                                 ϕ(q)
+                              a/q∈ΓQ                       Q/2<q≤Q
+
+where
+                                              X
+                                cq (n) =                  e(a/qn)
+                                           a/q: (a,q)=1
+
+denotes a Ramanujan sum, and µ, ϕ denote the Möbius and totient functions, respec-
+tively. We will often make use of the lower bound
+                                              q
+(2.1)                          ϕ(q) ≳                  .
+                                       log log(10 + q)
+    For subsets B ⊂ (Q/2, Q] we define
+                                   QB := lcm(q ∈ B)
+and
+                                               X µ(q)
+                               wQ,B (n) :=                  cq (n).
+                                               q∈B
+                                                     ϕ(q)
+                    A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                                     9
+
+  We let ψ(t) ∈ Cc∞ ({t : 1/4 < |t| < 1}) be a smooth, odd approximation to 1t · 1|t|≈1
+so that
+                 X             1
+                      ψk (t) = , |t| ≥ 1,       ψk (t) := 2−k ψ(t2−k ).
+                  k≥1
+                               t
+
+2.2. Asymptotic Notation. We will make use of the modified Vinogradov notation.
+We use X ≲ Y or Y ≳ X to denote the estimate X ≤ CY for an absolute constant
+C and X, Y ≥ 0. If we need C to depend on a parameter, we shall indicate this by
+subscripts, thus for instance X ≲p Y denotes the estimate X ≤ Cp Y for some Cp
+depending on p. We use X ≈ Y as shorthand for Y ≲ X ≲ Y . We use the notation
+X ≪ Y or Y ≫ X to denote that the implicit constant in the ≲ notation is extremely
+large, and analogously X ≪p Y and Y ≫p X.
+   We also make use of big-Oh and little-oh notation: we let O(Y ) denote a quantity
+that is ≲ Y , and similarly Op (Y ) will denote a quantity that is ≲p Y ; we let ot→a (Y )
+denote a quantity whose quotient with Y tends to zero as t → a (possibly ∞), and
+ot→a;p (Y ) denote a quantity whose quotient with Y tends to zero as t → a at a rate
+depending on p. When clear from context, we will suppress the t → a subscript.
+
+2.3. Gowers Norms and Technology. Let f : Z → C be a finitely supported
+function on the integers. Set the conjugation-difference operator to be
+                           ∆h f (x) := f (x)f (x + h),                       x, h ∈ Z.
+The basic fact here is
+                                     X               2       X
+                                             f (x)       =             ∆h f (x).
+                                         x                       x,h
+
+The higher order conjugation-difference operator is inductively defined to be
+               ∆h1 ,...,hs f (x) := ∆hs (∆h1 ,...,hs−1 f )(x),                 x, h1 , . . . , hs ∈ Z.
+Then, the sth order Gowers norm is
+                                     s
+                                                     X
+                               ∥f ∥2U s (Z) :=                     ∆h1 ,...,hs f (x).
+                                                 x,h1 ,...,hs
+
+For s = 1, this is a semi-norm, while higher orders are norms. In particular, for s = 2,
+we have
+                                            ˆ
+                               ∥f ∥U 2 (Z) = |fb(β)|4 dβ;
+                                   4
+                                                             T
+
+we recall the inductive relationship between norms given by
+                             s+1
+                                        X
+                       ∥f ∥2U s+1 (Z) =     ∥∆h1 ,...,hs−1 f ∥4U 2 (Z) .
+                                              h1 ,...,hs−1
+10         A Variation Norm Carleson Theorem Along the Primes
+
+     For integers N , let [N ] = {1, 2, . . . , N }. Denote the usual expectation by
+                                                      1 X
+                                  En∈[N ] f (n) :=           f (n)
+                                                     N
+                                                              n∈[N ]
+
+and more generally, for finite X ⊂ Z, define
+                                                            1 X
+                                     En∈X f (n) :=                 f (n)
+                                                           |X| n∈X
+
+and the norms
+                                                       1 X
+                                   ∥f ∥pLp (X) :=             |f (n)|p ,
+                                                      |X| n∈X
+
+and inner products
+                                                     1 X
+(2.2)                              ⟨f, g⟩X :=               f (n)g(n).
+                                                    |X| n∈X
+
+     We then define normalized U s norms as follows. For f : [N ] → C, set
+                                                   ∥f ∥U s (Z)      ∥f ∥U s (Z)
+                              ∥f ∥U s ([N ]) :=                   ≈     s+1     .
+                                                  ∥1[N ] ∥U s (Z)    N 2s
+   We make repeated use of the s = 3 case of the following estimate, due to Eisner-Tao
+[8], relating U s and ℓp norms for appropriate p (determined by scaling).
+                                      2                s
+Lemma 2.1. For each s ≥ 1, set ps := s+1 . Then
+                                      ∥f ∥U s ([N ]) ≲s ∥f ∥Lps ([N ]) .
+
+  We will also make use of the following U 3 estimate, essentially established in [10,
+Proposition 1.14]. For completeness we include a proof.
+Lemma 2.2. The following estimate holds:
+          ∥ sup |En∈[N ] f (x − n)w(n)e(λn)|∥L4 ([−N,2N ]) ≲ ∥w∥U 3 ([N ]) ∥f ∥U 3 ([−N,2N ]) ,
+               λ
+
+and in particular
+          ∥ sup |En∈[N ] f (x − n)w(n)e(λn)|∥L2 ([−N,2N ]) ≲ ∥w∥U 3 ([N ]) ∥f ∥L2 ([−N,2N ]) .
+               λ
+
+More generally, whenever ϕ ∈ Cc2 ([0, 1]) with ∥ϕ∥C 2 (R) ≤ 1,
+            X
+    ∥ sup |    ϕN (n)f (x − n)w(n)e(λn)|∥L2 ([−N,2N ]) ≲ ∥w∥U 3 ([N ]) ∥f ∥L2 ([−N,2N ]) .
+           λ       n
+                  A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                                      11
+
+Proof. By linearization, it suffices to prove the estimate uniformly for an arbitrary
+selector
+                                       θ : [−N, 2N ] → T.
+Thus, if we set
+                         Aθ f (x) := En∈[N ] w(n)f (x − n)e(θ(x)n),
+it suffices to prove
+(2.3)                  ∥Aθ f ∥L4 ([−N,2N ]) ≲ ∥w∥U 3 ([N ]) ∥f ∥U 3 ([−N,2N ]) ,
+with a constant independent of θ.
+   We extend w1[N ] and f 1[−N,2N ] by zero to all of Z, and begin by recording a
+standard van der Corput identity in normalized form. If a is supported on an interval
+of length O(N ), then
+                                         4                                  2
+(2.4)                     En∈[N ] a(n)       ≲ E|h|≤N En∈[N ] ∆h a(n) .
+Indeed,
+                                             2
+                            En∈[N ] a(n)         = E|h|≤N En∈[N ] ∆h a(n)
+up to harmless Fejér weights, and (2.4) follows by Cauchy–Schwarz in h.
+  Apply (2.4) for each fixed x to
+                              ax (n) := w(n)f (x − n)e(θ(x)n);
+since
+                  ∆h e(θ(x)n) = e(θ(x)n)e(θ(x)(n + h)) = e(−θ(x)h),
+this phase is independent of n, and therefore disappears after taking absolute values.
+Thus
+                                                                                   2
+(2.5)              |Aθ f (x)|4 ≲ E|h|≤N En∈[N ] ∆h w(n) ∆−h f (x − n) .
+
+Here ∆−h f (y) = f (y)f (y − h); replacing h by −h later is harmless.
+  Averaging (2.5) over x ∈ [−N, 2N ], we get
+                                                                                   2
+(2.6)     ∥Aθ f ∥4L4 ([−N,2N ]) ≲ E|h|≤N En∈[N ] ∆h w(n) ∆−h f (x − n)                              .
+                                                                                   L2x ([−N,2N ])
+
+  We next use the following U 2 -convolution estimate: for any finitely supported F, G
+at scale N ,
+
+(2.7)                    En∈[N ] F (n)G(x − n)               ≲ ∥F ∥U 2 ∥G∥U 2 ,
+                                                       L2x
+12       A Variation Norm Carleson Theorem Along the Primes
+
+where the U 2 -norms are normalized at scale N . To see this, write the left-hand side
+as a convolution. By Plancherel and Hölder,
+                             ˆ
+                 ∥F ∗ G∥ℓ2 = |Fb(ξ)|2 |G(ξ)|
+                         2              b    2
+                                               dξ
+                                      T
+                                     ˆ                     1/2  ˆ                     1/2
+                                 ≤            |Fb(ξ)|4 dξ                  |G(ξ)|
+                                                                            b     4
+                                                                                    dξ
+                                          T                            T
+                                 = ∥F ∥2U 2 (Z) ∥G∥2U 2 (Z) .
+
+After inserting the normalizing factors coming from En and L2x , this is precisely (2.7).
+  Applying (2.7) to
+                                   F = ∆h w,                G = ∆−h f,
+we obtain
+                                              2
+       En∈[N ] ∆h w(n) ∆−h f (x − n)                           ≲ ∥∆h w∥2U 2 ([N ]) ∥∆−h f ∥2U 2 ([−N,2N ]) .
+                                              L2x ([−N,2N ])
+
+Substituting this into (2.6) gives
+                ∥Aθ f ∥4L4 ([−N,2N ]) ≲ E|h|≤N ∥∆h w∥2U 2 ([N ]) ∥∆−h f ∥2U 2 ([−N,2N ]) .
+By Cauchy–Schwarz in h,
+                                                  1/2                               1/2
+           4                            4                               4
+    ∥Aθ f ∥L4 ([−N,2N ]) ≲ E|h|≤N ∥∆h w∥U 2 ([N ])       E|h|≤N ∥∆−h f ∥U 2 ([−N,2N ])      .
+
+The result follows by the recursive identity for Gowers norms, so we conclude that
+                        ∥Aθ f ∥4L4 ([−N,2N ]) ≲ ∥w∥4U 3 ([N ]) ∥f ∥4U 3 ([−N,2N ]) .
+
+Taking fourth roots proves (2.3), and since the bound is uniform in the linearizing
+selector θ, the supremum over λ ∈ T follows.
+   To conclude the final point, we use Fourier inversion and convexity to bound the
+left-hand side
+            ˆ
+               |ϕ(ξ)|
+                b     · ∥ sup |E[N ] f (x − n)(Modξ/N w(n))e(λn)|∥L2 ([−N,2N ]) dξ
+                            λ
+
+            ≲ ∥ϕ∥
+               b L1 (R) ∥w∥U 3 ([N ]) ∥f ∥L2 ([−N,2N ]) ,
+
+using the invariance of U 3 norms under multiplication by characters; the result follows
+by estimating
+                                 ∥ϕ∥
+                                   b L1 (R) ≲ ∥ϕ∥C 2 (R) .
+                                                                                                               □
+                   A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                            13
+
+2.4. Variational Preliminaries. We begin with the following cheap inequality from
+[14]: if
+                           N
+                           [
+                       J=     Jn ,   Jn := J ∩ [An , Bn ]
+                                      n=1
+is a disjoint partition, then we may bound
+                                   X
+(2.8)         V r (aλ : λ ∈ J) ≲ (   V r (aλ : λ ∈ Jn )r )1/r + V r (aBn : n)
+                                            n
+                                   X                              X
+                                 ≲(  V r (aλ : λ ∈ Jn )r )1/r + (   |aBn |r )1/r .
+                                            n                                   n≤N
+
+  We next recall the following Lemma, which is by now standard in the field, see e.g.
+[26] or [17, §4].
+Lemma 2.3. Let (aj )0≤j≤2J be a finite scalar sequence. For 0 ≤ m ≤ J, set
+                                                     2J−m
+                                                       X−1
+                                       2
+                             Sm (a) :=                       |a(s+1)2m − as2m |2 .
+                                                      s=0
+
+Then
+                                                                    J
+                                                                    X
+                               V 2 (aj : 0 ≤ j ≤ 2J ) ≲                   Sm (a).
+                                                                    m=0
+
+  We next introduce a U 3 estimate to address variation of modulated averages:
+Lemma 2.4. For every N ≥ 1, every w : [N ] → C, and every finitely supported
+f : Z → C,
+                   V 2 (Aλ f : λ ∈ T) ℓ2 (Z) ≲ log(2N ) ∥w∥L2 ([N ]) ∥f ∥ℓ2 (Z) ,
+where
+                            Aλ f (x) := En∈[N ] f (x − n)w(n)e(λn).
+Proof. We first prove a square-function estimate for dyadic modulation increments.
+Let K ≥ 1 and α ∈ T; for 0 ≤ s < K, define
+                             DK,α,s f := Aα+(s+1)/K f − Aα+s/K f.
+We claim that
+                K−1
+                X                    1/2
+                      |DK,α,s f |2                   ≲ min 1, (N/K)1/2 ∥w∥L2 ([N ]) ∥f ∥ℓ2 ,
+                                                          
+(2.9)
+                                                ℓ2
+                s=0
+
+with an absolute implicit constant, uniformly in K and α.
+14         A Variation Norm Carleson Theorem Along the Primes
+
+     If we define
+                                                    N
+                                                 1 X
+                                     m(ξ) :=           w(n)e(−ξn),
+                                                 N n=1
+then Aλ has Fourier multiplier m(ξ − λ), while the multiplier of DK,α,s is
+                      m(ξ − α − (s + 1)/K) − m(ξ − α − s/K)
+                                    N
+                                1 X
+                            =         w(n)e((α − ξ)n)e(sn/K)(e(n/K) − 1),
+                                N n=1
+so Plancherel and orthogonality mod K allow us to express
+                K−1
+                X
+                      |m(ξ − α − (s + 1)/K) − m(ξ − α − s/K)|2
+                s=0
+                                X       1     X                                        2
+                      =K                                w(n)e((α − ξ)n)(e(n/K) − 1) .
+                                        N     1≤n≤N
+                            l∈Z/KZ
+                                            n≡l mod K
+
+If K ≤ N , then each residue class modulo K contains at most 2N/K integers in [N ],
+and
+                                  |e(n/K) − 1| ≤ 2;
+Cauchy-Schwarz inside each residue class gives
+            K−1                                                             N
+            X                                                            1 X
+                  |m(ξ − α − (s + 1)/K) − m(ξ − α − s/K)|2 ≲                   |w(n)|2 .
+            s=0
+                                                                         N n=1
+If K > N , each residue class contains at most one integer in [N ]. Since
+                                            |e(n/K) − 1| ≲ N/K,
+we get
+          K−1                                                  N
+          X                                             N 1 X      2
+              |m(ξ − α − (s + 1)/K) − m(ξ − α − s/K)| ≲   ·       |w(n)|2 .
+          s=0
+                                                        K   N n=1
+The two cases prove the pointwise multiplier square-function bound
+                          K−1
+                          X                                                     1/2
+                    sup         |m(ξ − α − (s + 1)/K) − m(ξ − α − s/K)|2
+                    ξ∈T   s=0
+
+                          ≲ min 1, (N/K)1/2 ∥w∥L2 ([N ]) ,
+                               
+
+from which (2.9) follows by Plancherel.
+   We now prove the variation estimate. First restrict λ to the dyadic grid
+                                   j
+                                 { J : 0 ≤ j ≤ 2J }
+                                  2
+                   A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                                            15
+
+and apply Lemma 2.3 pointwise in x to the sequence
+                                       aj (x) := Aj2−J f (x);
+taking ℓ2x -norms yields
+                                         J      2J−m
+                                                  X−1
+                                         X                                                    1/2
+    Vj2 (Aj2−J f : 0 ≤ j ≤ 2J ) ℓ2 ≲                        |A(s+1)/2J−m f − As/2J−m f |2                  .
+                                   x                                                                 ℓ2x
+                                        m=0        s=0
+
+Putting K = 2J−m and using (2.9) with α = 0 yields the estimate
+                                                             X
+        Vj2 (Aj2−J f : 0 ≤ j ≤ 2J ) ℓ2 ≲ ∥w∥L2 ([N ]) ∥f ∥ℓ2   min 1, (N/K)1/2
+                                                                  
+
+                                                                     K=2ℓ
+                                                                     0≤ℓ≤J
+
+                                          ≲ log(2N ) ∥w∥L2 ([N ]) ∥f ∥ℓ2 .
+Since this estimate is uniform in J and f is finitely supported, λ 7→ Aλ f (x) is con-
+tinuous for every x, so the result follows by a limiting argument.                  □
+  The following corollary follows immediately by interpolation.
+Corollary 2.5 (U 3 -control of modulation variation). The following bound holds for
+each r ≥ 2:
+                                                                  1−2/r              2/r
+(2.10)   ∥V r (Aλ f : λ ∈ T)∥ℓ2 (Z) ≲r (log(2N ))2/r ∥w∥U 3 ([N ]) ∥w∥L2 ([N ]) ∥f ∥ℓ2 (Z) .
+  Our next lemma serves as the ℓp counterpart to Lemma 2.4.
+Lemma 2.6. Let r > 2, and let r′ := r/(r − 1). Let N0 ≥ 2, and suppose that w is
+supported in {|n| ≤ N0 }. If we set
+                                             X
+                    Tλ f (x) := Tλw f (x) :=   f (x − n)w(n)e(λn),
+                                                  n
+                         ′
+then, for every p ≥ r ,
+                                                            1/r
+                    ∥V r (Tλ f : λ ∈ T)∥ℓp (Z) ≲p,r N0 ∥w∥ℓr′ (Z) ∥f ∥ℓp (Z) ,
+while for 1 ≤ p < r′ ,
+                                                            1/r
+                    ∥V r (Tλ f : λ ∈ T)∥ℓp (Z) ≲p,r N0 ∥w∥ℓp (Z) ∥f ∥ℓp (Z) .
+Proof. We first record a scalar estimate: if
+                                         X
+                                P (λ) :=     cn e(λn),
+                                               |n|≤N0
+
+then we may bound
+                                                      1/r
+                                                              X               ′   1/r′
+(2.11)                   V r (P (λ) : λ ∈ T) ≲r N0                   |cn |r               .
+                                                            |n|≤N0
+16           A Variation Norm Carleson Theorem Along the Primes
+
+To see this, partition [0, 1] into intervals
+                                    j j+1
+                            Ij := [ ,        ),    0 ≤ j < N0 ,
+                                   N0 N0
+and apply (2.8): since r > 1, we may apply Hölder and bound
+                                   ˆ                         ˆ
+                                         ′              1/r′
+                                                                            1/r
+             r
+            V (P (λ) : λ ∈ Ij ) ≤     |P (λ)| dλ ≤ |Ij |       |P ′ (λ)|r dλ     ,
+                                           Ij                                      Ij
+so                                               1/r              −1/r′
+                 X                                                                        1/r
+                        V r (P (λ) : λ ∈ Ij )r           ≤ N0              ∥P ′ ∥Lr (T) ≲ N0 ∥c∥ℓr′
+                    j
+by Hausdorff-Young; we similarly apply the discrete Hausdorff-Young inequality on
+Z/N0 – after separating the finitely many residue classes of the frequencies |n| ≤ N0
+– to address the endpoint term,
+                                 N0 −1
+                                 X                        1/r              1/r
+                                         |P (j/N0 )|r              ≲r N0 ∥c∥ℓr′ ,
+                                  j=0
+
+completing the reduction.
+  We now apply (2.11) pointwise in x with
+                                           cn = w(n)f (x − n),
+obtaining
+                                                                                                !1/r′
+                                                                               ′            ′
+                                                   1/r
+                                                              X
+                V r (Tλ f (x) : λ ∈ T) ≲r N0                        |w(n)|r |f (x − n)|r                ;
+                                                               n
+         ′              ′
+if p ≥ r , then p/r ≥ 1, so Minkowski gives
+                        ′             ′ 1/r ′              ′            ′ 1/r ′
+              X                                    X
+                 |w(n)|r |f (x − n)|r          p
+                                                 =   |w(n)|r |f (x − n)|r p/r′
+                                                         ℓx                                              ℓx
+                n                                                      n
+                                                                     X              ′               ′   1/r′
+                                                              ≤             |w(n)|r ∥f (· − n)∥rℓp
+                                                                      n
+                                                              = ∥w∥ℓr′ ∥f ∥ℓp ,
+proving the first estimate. In the opposite case, if 1 ≤ p < r′ , then by the subaddi-
+                   ′
+tivity of t 7→ tp/r , we bound
+                            ′             ′ 1/r ′ p
+                X                                       XX
+                     |w(n)|r |f (x − n)|r           p
+                                                      ≤    |w(n)|p |f (x − n)|p
+                                                              ℓx
+                    n                                                  x  n
+                                                                   = ∥w∥ℓp ∥f ∥pℓp ,
+                                                                        p
+
+
+proving the second estimate.                                                                                    □
+     With the above in mind, we begin our arguments proper.
+                  A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                     17
+
+                                         3. Reductions
+  Fix r > 2; we here reduce Theorem 1.3 to establishing more arithmetically tractable
+estimate. To do so, for each 1 < p < ∞, we choose a constant D0 := D0 (p, r)
+sufficiently large, and then choose 0 < ϵ ≪p,r 1 sufficiently small; in particular, in the
+periodic section we will choose
+                                     κ = 1/D0 − ϵ,
+see (5.1) below. We set
+                                                        X
+(3.1)                 KQ (n) := KQ,D0 (n) := φN (Q) ∗         ψk (n),
+                                                              Q1/D0 ≤k
+
+where φ is a Schwartz function whose Fourier transform is supported in a sufficiently
+small fixed neighborhood of the origin, and
+                                 N (Q) := exp(Q1/D0 −ϵ/10 ).
+With this definition in mind, define the Q-denominator variational block
+                                 X
+              V Q,r f (x) := V r
+                                                                     
+                                   f (x − n)wQ (n)KQ (n)e(λn) : λ ∈ T ;
+                                     n
+in the limiting r → ∞ case, we define
+                                    X
+                   C Q f (x) := sup   f (x − n)wQ (n)KQ (n)e(λn) .
+                                 λ∈T      n
+
+  Our first order of business is to reduce to estimates for the operators V Q,r .
+Proposition 3.1. Fix r > 2, and set r′ := r/(r − 1). Let p > r′ . To prove the
+r-variational analogue
+                                   ∥VPr f ∥ℓp ≲p,r ∥f ∥ℓp ,
+it suffices to prove that for each dyadic Q ≥ 1 there exists cp,r > 0 such that
+(3.2)                            ∥V Q,r f ∥ℓp ≲p,r Q−cp,r ∥f ∥ℓp .
+Proof. Since
+                                 X                 1
+                                       ψk (n) =      ,      |n| ≥ 1,
+                                 k≥1
+                                                   n
+we have                          X                 X
+               VPr f (x) = V r
+                                                                                
+                                       f (x − n)         w(n)ψk (n)e(λn) : λ ∈ T ,
+                                 n                 k≥1
+so by the triangle inequality for r-variation,
+                        X           X
+        VPr f (x) ≤ V r
+                                                                      
+                          f (x − n)     w≤M (k) (n)ψk (n)e(λn) : λ ∈ T
+                         n               k≥1
+                      X          X
+                            Vr
+                                                                                  
+                  +                  f (x − n)(w − w≤M (k) )(n)ψk (n)e(λn) : λ ∈ T ,
+                      k≥1        n
+18         A Variation Norm Carleson Theorem Along the Primes
+
+where                                                                   X
+                     M (k) := exp(k 1/10 ),            w≤M (k) :=                wL ,
+                                                                       L≤M (k)
+
+with L dyadic.
+  To estimate the residual term, use [10, Proposition 3.1] to bound
+(3.3)                            ∥w − w≤M (k) ∥U 3 ([2k ]) ≲A k −A
+for every A < ∞, and then apply the smooth-cutoff form of Corollary 2.5 at scale 2k
+to bound
+                       X
+                   Vr
+                                                           
+                           f (x − n)u(n)ψk (n)e(λn) : λ ∈ T
+                                                                                  ℓ2
+                             n
+                                           1−2/r         2/r
+(3.4)                       ≲r k 2/r ∥u∥U 3 ([2k ]) ∥u∥L2 ([2k ]) ∥f ∥ℓ2 ,
+by (2.10) and convexity.
+  Taking u = w − w≤M (k) , using (3.3), and using the crude local moment bound
+                             ∥w − w≤M (k) ∥L2 ([−2k ,2k ]) ≲ k O(1) ,
+see [11, Lemma 3.1], we obtain
+                  X
+              Vr
+                                                                   
+                      f (x − n)(w − w≤M (k) )(n)ψk (n)e(λn) : λ ∈ T
+                                                                                        ℓ2
+                      n
+
+(3.5)                ≲A,r k −A(1−2/r)+Or (1) ∥f ∥ℓ2 .
+     We next record the crude bound at the auxiliary exponent p > s ≥ r′ . Abbreviate
+                                  uk (n) := (w − w≤M (k) )(n);
+by Lemma 2.6, with N0 ≈ 2k ,
+                      X
+                   Vr
+                                                           
+                         f (x − n)uk (n)ψk (n)e(λn) : λ ∈ T
+                                                                                   ℓs
+                             n
+
+                           ≲s,r 2k/r ∥uk ψk ∥ℓr′ ∥f ∥ℓs
+                                                 ′ 1/r ′
+                           ≲ E|n|≈2k |uk (n)|r            ∥f ∥ℓs .
+Since |w(n)| ≲ k on |n| ≈ 2k , and by Minkowski’s inequality and [11, Lemma 3.1],
+                                      ′ 1/r ′                       ′ 1/r ′
+                                                 X
+               E|n|≈2k |w≤M (k) (n)|r          ≤   E|n|≈2k |wL (n)|r
+                                                    L≤M (k)
+                                                        X
+                                                 ≲r              (log L)Or (1)
+                                                      L≤M (k)
+
+                                                 ≲r k Or (1) ,
+                        A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                                19
+
+we conclude
+                          X
+                Vr
+                                                                                
+                                   f (x − n)(w − w≤M (k) )(n)ψk (n)e(λn) : λ ∈ T
+                                                                                              ℓs
+                              n
+
+(3.6)                     ≲s,r k Or (1) ∥f ∥ℓs .
+  Interpolating (3.5) and (3.6) and choosing A = A(p, r) sufficiently large allows us
+to sum
+            X        X
+                 Vr
+                                                                      
+                         f (x − n)(w − w≤M (k) )(n)ψk (n)e(λn) : λ ∈ T
+                                                                                                   ℓp
+              k≥1                 n
+                                  X
+                        ≲p,r            k −2 ∥f ∥ℓp ≲p,r ∥f ∥ℓp .
+                                  k≥1
+
+  It remains to treat the main term. Again by the triangle inequality for r-variation,
+              X              X
+          Vr
+                                                             
+                   f (x − n)   w≤M (k) (n)ψk (n)e(λn) : λ ∈ T
+                    n                       k≥1
+                        X                      X X
+           ≤ Vr
+                                                                                         
+                                  f (x − n)                     wQ (n)ψk (n)e(λn) : λ ∈ T
+                          n                       k≥1 Q≤kD0
+                    X              X                   X
+                                                  Vr
+                                                                                                 
+               +                                               f (x − n)wQ (n)ψk (n)e(λn) : λ ∈ T ,
+                    k≥1 kD0 ≤Q≤M (k)                       n
+
+where Q ranges over dyadic integers. To estimate the high-denominator term, we use
+(3.4) to interpolate between [10, Proposition 2.1],
+                                              ∥wQ ∥U 3 ([2k ]) ≲ Q−3/8+o(1) ,
+and [11, Lemma 3.1],
+                                                   ∥wQ ∥L2 ([2k ]) ≲ Qo(1) ,
+yielding
+                                      X
+                              Vr
+                                                                              
+                                            f (x − n)wQ (n)ψk (n)e(λn) : λ ∈ T
+                                                                                        ℓ2
+                                        n
+                                                       3
+(3.7)                                 ≲r k 2/r Q− 8 (1−2/r)+o(1) ∥f ∥ℓ2 .
+A crude estimate at exponent s ≥ r′ follows again from Lemma 2.6:
+                       X
+                   Vr
+                                                            
+                          f (x − n)wQ (n)ψk (n)e(λn) : λ ∈ T
+                                                                                         ℓs
+                                        n
+
+                                      ≲s,r 2k/r ∥wQ ψk ∥ℓr′ ∥f ∥ℓs
+                                                              ′ 1/r ′
+                                      ≲s,r E|n|≈2k |wQ (n)|r           ∥f ∥ℓs
+                                      ≲s,r Qo(1) ∥f ∥ℓs ,
+20      A Variation Norm Carleson Theorem Along the Primes
+
+where the final line is another application of [11, Lemma 3.1]. Interpolating with
+(3.7) allows us to sum over Q satisfing
+                                     k D0 ≤ Q ≤ M (k).
+   We are left with the low-denominator contribution, to which we again apply the
+triangle inequality,
+                  X            X X
+              Vr
+                                                               
+                     f (x − n)        wQ (n)ψk (n)e(λn) : λ ∈ T
+                   n              k≥1 Q≤kD0
+                   X        X                       X
+                       Vr
+                                                                                
+              ≤                 f (x − n)wQ (n)              ψk (n)e(λn) : λ ∈ T .
+                   Q        n                     Q1/D0 ≤k
+
+For each fixed Q, we replace                X
+                                                    ψk
+                                         Q1/D0 ≤k
+
+by KQ . The difference has Fourier multiplier of total variation OA (Q−A ) for every
+A < ∞, by the definition of N (Q) = exp(Q1/D0 −ϵ/10 ) and the rapid decay of the
+Fourier transforms of the kernels ψk at frequencies larger than N (Q)−1 . Expanding wQ
+into its rational Fourier modes, applying Lemma 4.1 to each shifted error multiplier,
+and using
+                                  X 1
+                                             ≲ Q1+o(1)
+                                        ϕ(q)
+                                   a/q∈ΓQ
+
+yields the bound
+              X                          X
+          Vr
+                                                                              
+                 f (x − n)wQ (n) ·                ψk (n) − KQ (n) e(λn) : λ ∈ T
+                                                                                     ℓ2
+               n                       Q1/D0 ≤k
+
+             ≲r,A Q−A ∥f ∥ℓ2 ;
+the same crude estimate used above gives a polynomial-in-Q bound on ℓs , and inter-
+polating yields
+                                  Op,r (Q−100 ∥f ∥ℓp ).
+Combining estimates we obtain
+                                                X
+                       ∥VPr f ∥ℓp ≲p,r ∥f ∥ℓp +      ∥V Q,r f ∥ℓp ;
+                                                      Q
+
+the hypothesis (3.2) makes the final dyadic Q-sum convergent, and the proposition
+follows.                                                                        □
+  The preceding reduction also has a maximal endpoint: with CP as in (1.1), to prove
+Theorem 1.4 it suffices to prove that for each dyadic Q ≥ 1 there exists cp > 0 such
+that
+                               ∥C Q f ∥ℓp ≲p Q−cp ∥f ∥ℓp .
+                    A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                21
+
+Indeed, the proof of Proposition 3.1 carries over with every V r -norm replaced by
+a supremum over λ. The residual and high-denominator terms are controlled by
+the maximal U 3P -estimate of Lemma 2.2 and the same U 3 -decay inputs, while the
+replacement of Q1/D0 ≤k ψk by KQ is identical; the only remaining contribution is
+the dyadic sum of the operators C Q .
+   We next record the extent to which the variational estimates reduce to an ℓ2 -based
+estimate; while this reduction allows one to recover the complete range of ℓp estimates
+for 1 < p < ∞ for the maximal formulation of the Carleson operator, the range of
+exponents in the variational formulation is somewhat restricted, and dependent on
+interpolation. We describe the process now:
+   For each p > r′ , p ̸= 2, we choose s := s(p) > r′ so that
+                                 (
+                                   s < p if r′ < p < 2
+                                   s > p otherwise
+and define 0 < θ = θ(p) < 1 by
+                                     1    θ 1−θ
+                                       = +           .
+                                     p    2      s
+     With this in mind, the reduction is as follows.
+Lemma 3.2. Fix r > 2, and suppose that, for some σ > 0,
+(3.8)                            ∥V Q,r f ∥ℓ2 ≲r Q−σ ∥f ∥ℓ2 .
+If
+                                                1−θ
+(3.9)                                    θσ >       ,
+                                                 r
+then there exists
+                                                       1−θ
+                                   0 < cp,r < θσ −
+                                                        r
+such that
+(3.10)                          ∥V Q,r f ∥ℓp ≲p,r Q−cp,r ∥f ∥ℓp .
+     In the corresponding maximal formulation, if
+                                   ∥C Q f ∥ℓ2 ≲ Q−σ ∥f ∥ℓ2
+for some σ > 0, then for every 1 < p < ∞ there exists cp > 0 such that
+                                  ∥C Q f ∥ℓp ≲p Q−cp ∥f ∥ℓp .
+  To prove Lemma 3.2 we will use the elementary estimate
+                                                     X            1/r
+            V r adλ : λ ∈ T ≲r d1/r V r aλ : λ ∈ T +     |ai/d |r
+                                                 
+(3.11)
+                                                                    0≤i<d
+22       A Variation Norm Carleson Theorem Along the Primes
+
+for every 1-periodic scalar family (aλ )λ∈T ; the limiting case r = ∞ is agnostic to
+dilations.
+Proof. If p = 2, the conclusion is exactly (3.8). Hence assume p ̸= 2. By interpolation
+between (3.8) and a crude ℓs -estimate, it suffices to prove
+(3.12)                          ∥V Q,r f ∥ℓs ≲s,r Q1/r+o(1) ∥f ∥ℓs
+for every s > r′ .
+   We prove (3.12) by Möbius inversion, recalling that
+                        X µ(q)                           X
+              wQ (n) =              cq (n),     cq (n) =   d µ(q/d)1d|n .
+                               ϕ(q)
+                        Q/2<q≤Q                                  d|q
+
+Thus, by the triangle inequality for r-variation,
+                   X       1 X r X
+     V Q,r f (x) ≤
+                                                                            
+                                   V d       f (x − dm)KQ (dm)e(λdm) : λ ∈ T .
+                          ϕ(q)           m
+                  Q/2<q≤Q           d|q
+
+If we define
+                                    KQ,d (m) := dKQ (dm),
+then the inner variation is
+                         X
+                     Vr
+                                                            
+                            f (x − dm)KQ,d (m)e(dλm) : λ ∈ T .
+                            m
+
+Applying (3.11) to the 1-periodic family
+                                 X
+                       aλ (x) :=    f (x − dm)KQ,d (m)e(λm),
+                                      m
+
+we obtain
+                    X
+               Vr
+                                                        
+                        f (x − dm)KQ,d (m)e(dλm) : λ ∈ T
+                    m
+                                    X
+                     ≲r d1/r V r
+                                                                             
+                                              f (x − dm)KQ,d (m)e(λm) : λ ∈ T
+                                     m
+                                                                           r 1/r
+                                X X
+                        +                      f (x − dm)KQ,d (m)e(im/d)            .
+                            0≤i<d         m
+
+The sum is harmless, since pointwise
+                                                       r 1/r
+                    X X
+                             f (x − dm)KQ,d (m)e(im/d)
+                    0≤i<d       m
+                                              X
+                         ≤ d1/r sup                f (x − dm)KQ,d (m)e(λm) .
+                                    λ∈T        m
+                     A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                23
+
+Therefore
+                       X        1 X 1/r r X
+    V Q,r f (x) ≲r
+                                                                           
+                                    d V     f (x − dm)KQ,d (m)e(λm) : λ ∈ T
+                               ϕ(q)       m
+                     Q/2<q≤Q        d|q
+                        X         1 X 1/r     X
+(3.13)             +                  d sup     f (x − dm)KQ,d (m)e(λm) .
+                                 ϕ(q)     λ∈T m
+                       Q/2<q≤Q       d|q
+
+  The kernels KQ,d have ∥K
+                         b Q,d ∥BV ≲ 1 uniformly in Q and d ≤ Q, so Corollary B.2
+yields
+            X
+        Vr                                                         s > r′ ;
+                                                
+               f (x − dm)KQ,d (m)e(λm) : λ ∈ T       ≲s,r ∥f ∥ℓs ,
+                                                             ℓsx
+               m
+
+the supremum term in (3.13) is bounded in the same way. Taking ℓs -norms in (3.13),
+we obtain
+                             X      1 X 1/r
+           ∥V Q,r f ∥ℓs ≲s,r               d ∥f ∥ℓs ≲ Q1/r+o(1) ∥f ∥ℓs ;
+                                  ϕ(q)
+                                 Q/2<q≤Q        d|q
+
+this proves (3.12).
+  Interpolating (3.8) with (3.12) yields the bound
+                           ∥V Q,r f ∥ℓp ≲p,r Q−θσ+(1−θ)/r+o(1) ∥f ∥ℓp ,
+where the exponent is negative by (3.9); we obtain (3.10) for any
+                                                  1−θ
+                                    0 < cp,r < θσ −    .
+                                                    r
+In the non-variational supremum formulation, the change of variables λ 7→ dλ costs
+nothing, and the analogue of (3.12) is Qo(1) , so an arbitrary power saving at ℓ2 inter-
+polates to all 1 < p < ∞.                                                             □
+   Lemma 3.2 encodes the final interpolation step in the proof. We will obtain the
+relevant ℓ2 power savings for V Q,r from two estimates. First, Proposition 4.5 gives,
+for every ρ > 2,
+                                  2
+                               ρ
+                 Q,ρ
+              ∥V f ∥ℓ2 ≲               log2 (2 + Q) log log(10 + Q)∥f ∥ℓ2 ;
+                             ρ−2
+second, §5-6 prove the maximal saving
+                                    ∥C Q f ∥ℓ2 ≲ Q−ϵ/2 ∥f ∥ℓ2 .
+Fix 0 < α < 1 − 2/r, and set ρ = r(1 − α) > 2; applying scalar interpolation we
+obtain the pointwise bound
+                                             1−α Q α
+                           V Q,r f ≲ V Q,ρ f     C f .
+24       A Variation Norm Carleson Theorem Along the Primes
+
+which yields the estimate
+                                 ∥V Q,r f ∥ℓ2 ≲r,α Qo(1)−ϵα/2 ∥f ∥ℓ2
+by Hölder’s inequality; Lemma 3.2 then establishes the desired ℓp estimates in the
+range allowed by (3.9).
+  With this plan in mind, we continue to the analytic core of the paper.
+                                4. Multi-Frequency Analysis
+4.1. Variational Estimates. We begin this section by developing some variational
+estimates for maximally modulated singular integral operators.
+Lemma 4.1. The following estimate holds whenever b     k is supported inside an interval
+of length ≤ 1/10 and has total variation ≤ c0 .
+                     X                                        r
+              ∥V r (   f (x − n)e(λn)k(n) : λ)∥ℓ2 (Z) ≲ c0 ·     ∥f ∥ℓ2 (Z) .
+                     n
+                                                             r−2
+   To prove this lemma, our departure point is the following deep result of Oberlin
+et. al. [30]:
+                                                               r
+(4.1)             ∥V r ((fb(ξ)1(−∞,0] (ξ − λ))∨ : λ)∥L2 (R) ≲     ∥f ∥L2 (R) ,
+                                                              r−2
+where the dependence on r follows from inspecting the proof, noting the application
+of Lépingle’s inequality [24].
+   The estimate (4.1) is “universal,” in that it leads to a range of similar estimates
+via convexity. Specifically, we have the following lemma.
+Lemma 4.2. Suppose that dm is a measure with distribution function m(t). Then
+     V r (fb(ξ)m(ξ − λ))∨ : λ ≲ ∥dm∥TV(R) · V r ((fb(ξ)1(−∞,0] (ξ − λ))∨ : λ)
+                             
+
+Proof. By the fundamental theorem of calculus, we may express
+                                               ˆ
+                                        ∨                             ∨
+       f (ξ) · m(ξ − λi ) − m(ξ − λi+1 )
+       b                                     =   1(t+λi ,t+λi+1 ] · fb(ξ) (x) dm(t);
+                                                       R
+if we let {ai } be an arbitrary, finite sequence of scalars, normalized so that
+                                                 ′
+                                       X
+                                           |ai |r ≤ 1,
+                                             i
+then we may bound
+                 X                                    ∨
+                  ai fb(ξ) · m(ξ − λi ) − m(ξ − λi+1 )     (x)
+                        i
+                            ˆ    X                               ∨
+                    =                 ai 1(t+λi ,t+λi+1 ] · fb(ξ) (x) dm(t)
+                            R     i
+
+                    ≤ ∥dm∥TV · V r ((fb(ξ)1(−∞,0] (ξ − λ))∨ )(x),
+                     A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                          25
+
+from which the result follows from taking a supremum over appropriate {ai }.                   □
+  We now quickly prove Lemma 4.1:
+Proof of Lemma 4.1. We cover T with intervals {I} where |I| = 1/10, it suffices to
+prove:
+                    X                                              r
+          sup ∥V r (   f (x − n)e(λn)k(n) : λ ∈ I)∥ℓ2 (Z) ≲ c0 ·       ∥f ∥ℓ2 (Z) .
+           I         n
+                                                                 r − 2
+By a density argument, we may assume that f is finitely supported, so that the
+argument inside the variation becomes continuous in λ; we may therefore restrict λ
+to a countable subset of I, and by monotone convergence, to a finite subset TI ⊂ I.
+If we let
+                                mλ (β) := b
+                                          k(β + λ),
+then we may apply Magyar-Stein-Wainger transference [27] and the above lemma. □
+ We will use Lemma 4.1 below, in our variable-coefficient variant of Bourgain’s
+multi-frequency lemma [4].
+4.2. Variable Coefficient Multi-Frequency Maximal Inequality. We begin this
+section with an entropy estimate.
+Lemma 4.3. Suppose that T ⊂ R is finite, and let H ∼  = ℓ2 (Ξ) be a finite-dimensional
+Hilbert space, and that
+                                  {⃗ct : t ∈ T } ⊂ H.
+Suppose that (Y, ν) is a measure-space, and that g is a Hilbert-space valued function,
+                                      ⃗g = (gξ )ξ∈Ξ : Y → H
+with
+             ˆ                              ˆ       X
+                               2
+                 |⟨⃗c, ⃗g (y)⟩H | dν(y) =       |           c(ξ)gξ (y)|2 dν(y) ≤ A20 ∥⃗c ∥2H
+                                                        ξ
+
+for all ⃗c ∈ H and
+                      ˆ                         Xˆ
+                           ∥⃗g (y)∥2H dν(y) =                |gξ (y)|2 dν(y) ≤ B02 .
+                                                    ξ
+
+Set
+                                                             B0
+                                           R := 2 +             ;
+                                                             A0
+for s > 2,
+                                                              s
+                 ∥ sup |⟨⃗ct , ⃗g (·)⟩H |∥L2 (Y ) ≲ A0 ·         · R1−2/s ∥⃗ct ∥Vts (H) .
+                     t∈T                                     s−2
+26        A Variation Norm Carleson Theorem Along the Primes
+
+And, if
+                                                                r−2
+                                   s := s(r) := 2 +
+                                                               10 log R
+                                                                     r
+                V r ⟨⃗ct , ⃗g (·)⟩H : t ∈ T
+                                              
+                                                            ≲r A0       log R ∥⃗ct ∥Vts (H) .
+                                                  L2 (Y )           r−2
+Proof. There is nothing to show when A0 = 0, so assume otherwise and normalize
+                                          ∥⃗ct ∥Vts (H) = 1.
+In both cases, the proof is a standard metric chaining argument: for each v ≥ 0, we
+let
+                                                  Λv ⊂ T
+to be the set of times so that
+                                              {⃗ct : t ∈ Λv }
+is a maximal 2−v -separated subset with respect to the H metric – and thus
+                                             [
+                            {⃗ct : t ∈ T } ⊂   B(⃗ct , 2−v )
+                                                        t∈Λv
+
+where
+                  B(⃗c, 2−v ) := {(bξ )ξ∈Ξ ∈ H : ∥bξ − c(ξ)∥ℓ2 (Ξ) ≤ 2−v }
+– and we can bound the cardinality of Λv by jump-counting numbers,
+                                     |Λv | ≤ 2vs ,             v≥1
+with the final inequality since we have normalized the variation to be 1; Λ0 has just
+one point, call it u0 . For t ∈ Λv , v ≥ 1, we define the parent of t, ϱ(t), to be the
+element of Λv−1 satisfying
+                                      ∥⃗ct − ⃗cϱ(t) ∥H ≤ 21−v
+subject to the constraint that t is minimal; such a parent exists because {⃗ct : Λv−1 }
+is a maximal 21−v -separated set, hence also a 21−v -net for {⃗ct : t ∈ T }. For t ∈ Λv ,
+set
+                                          d⃗t := ⃗ct − ⃗cϱ(t) ,
+
+so that ∥d⃗t ∥H ≲ 2−v . With this in mind, we begin by addressing the supremum:
+  For each y ∈ Y , we bound
+                                                                X
+(4.2)            sup |⟨⃗ct , ⃗g (y)⟩H | ≤ |⟨⃗cu0 , ⃗g (y)⟩H | +   max |⟨d⃗t , g(y)⟩H |
+                t∈T                                                     t∈Λv
+                                                                 v≥1
+                     A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                                 27
+
+and take L2 (Y ) norms. The first term contributes A0 , by assumption, while for v ≥ 1,
+we similarly bound
+                                              X
+         ∥ max |⟨d⃗t , ⃗g (y)⟩H |∥L2 (Y ) ≤ (   ∥⟨d⃗t , ⃗g (y)⟩H ∥2L2 (Y ) )1/2 ≲ A0 2v(s/2−1) ;
+             t∈Λv
+                                              t∈Λv
+
+we may also bound
+                                 sup |⟨d⃗t , ⃗g (y)⟩H | ≲ 2−v ∥⃗g (y)∥H
+                                 t∈Λv
+
+by Cauchy-Schwarz, so
+                               ∥ max |⟨d⃗t , ⃗g (y)⟩H |∥L2 (Y ) ≲ 2−v B0 .
+                                 t∈Λv
+
+Summing and optimizing completes the first point:
+                   X                                    s        2/s 1−2/s
+                        min{A0 2v(s/2−1) , B0 2−v } ≲          A0 B0
+                   v≥1
+                                                      s −    2
+                                                        s
+                                                    ≲          A0 R1−2/s .
+                                                      s−2
+  For the second point, we replace (4.2) with the bound
+                                            X r
+                V r ⟨⃗ct , ⃗g (y)⟩H : t ∈ T ≤     V ⟨d⃗t , ⃗g (y)⟩H : t ∈ Λ
+                                                                            
+                                                     v≥1
+                                                     X X                                1/r
+                                                 ≤                |⟨d⃗t , ⃗g (y)⟩H |r          ,
+                                                     v≥1   t∈Λv
+                                        2
+and once again estimate the L (Y ) norm of the vth contribution in two ways: first,
+using the embedding ℓr ,→ ℓ2 , we bound
+        X                      1/r
+     ∥     |⟨d⃗t , ⃗g (y)⟩H |r      ∥L2 (Y ) ≤ |Λv |1/2 max ∥⟨d⃗t , ⃗g (y)⟩H ∥L2 (Y ) ≲ A0 2v(s/2−1)
+                                                       t∈Λv
+         t∈Λv
+
+while by Cauchy Schwartz
+          X                      1/r
+       ∥     |⟨d⃗t , ⃗g (y)⟩H |r      ∥L2 (Y ) ≲ 2v(s/r−1) ∥∥⃗g (y)∥H ∥L2 (Y ) ≲ B0 2v(s/r−1) ;
+            t∈Λv
+
+summing and optimizing completes the proof.                                                           □
+   We now apply Lemma 4.3 in the following context. Let I ⊂ T be a compact
+subinterval, and choose 0 < c ≤ |I|/100 so small that I + [−3c, 3c] remains contained
+in a single coordinate chart of T. We choose Schwartz functions χI , φI such that
+            χ         cI ≥ 0,
+            cI , φI , φ                 1I+[−2c,2c] ≤ χ
+                                                      cI ≤ 1I+[−3c,3c] ,                φI (0) = 1,
+and φ
+    cI vanishes off [−c, c]. Define the frequency multiplier
+                                                   cI ∗ φ
+                                             ηI := χ    cI .
+28      A Variation Norm Carleson Theorem Along the Primes
+
+Then ηI ≡ 1 on I + [−c, c], and its inverse Fourier transform is χI φI . Consequently,
+whenever b
+         h is supported in I,
+                                            (χI φI ) ∗ h = h;
+we choose the dilates so that
+                                            ∥χI ∥ℓ2 ≲ |I|1/2 .
+
+Proposition 4.4. In the above context, suppose that Ξ ⊂ T is finite, ⃗g = (gξ )ξ∈Ξ :
+Z → C and
+                          X
+              sup ∥φI (y)   gξ (x + y)cξ ∥ℓ2y ≤ A1 ∥cξ ∥ℓ2 (Ξ) and
+                    x
+                                    ξ
+                        X
+                  sup ∥(  |φI (y)gξ (x + y)|2 )1/2 ∥ℓ2y ≤ B1 .
+                    x
+                              ξ
+
+If T ⊂ R is finite, and (Kt = m∨t )t∈T satisfy the variational inequality
+                                                            s c0
+                  ∥Vts (Kt ∗ f : t ∈ T )∥ℓ2 ≲ (                ) ∥f ∥ℓ2 ,       c0 > 0,
+                                                           s−2
+then
+                  X
+           ∥V r
+                                                   
+                        gξ (x)(Kt ∗ fξ )(x) : t ∈ T ∥ℓ2x
+                  ξ∈Ξ
+                                   r c0 +1                      B1     X
+                  ≲ |I|1/2 · (        )    · A1 · logc0 +1 (2 +    )·(   ∥fξ ∥2ℓ2 )1/2
+                                  r−2                           A1     ξ
+
+
+whenever fbξ vanish off I.
+Proof. By reproducing, we can express
+           X                        X            X
+              gξ (x)(Kt ∗ fξ )(x) =  (χI φI )(y)   gξ (x)(Kt ∗ fξ )(x − y),
+           ξ∈Ξ                                  y                 ξ∈Ξ
+
+so Cauchy-Schwarz in y yields the bound
+               X                               2
+            Vr     gξ (x)(Kt ∗ fξ )(x) : t ∈ T
+                   ξ∈Ξ
+                             X                      X                                       2
+              ≲ ∥χI ∥2ℓ2          φI (y)2 V r             gξ (x)(Kt ∗ fξ )(x − y) : t ∈ T
+                              y                     ξ∈Ξ
+                        X                  X                                       2
+              ≲ |I|          φI (y)2 V r            gξ (x)(Kt ∗ fξ )(x − y) : t ∈ T .
+                         y                 ξ∈Ξ
+                     A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                     29
+
+Consequently, after summing in x and changing variables, we obtain
+           X        X                              2
+               Vr      gξ (x)(Kt ∗ fξ )(x) : t ∈ T
+             x            ξ∈Ξ
+                     XX               X                                              2
+                                Vr
+                                                            
+            ≲ |I|                           φI (y)gξ (x + y) · (Kt ∗ fξ )(x) : t ∈ T
+                      x     y         ξ∈Ξ
+                      X
+                                  2
+            =: |I|          I(x) .
+                       x
+
+For each fixed x, apply Lemma 4.3 with H = ℓ2 (Ξ),
+                 ⃗ct = (Kt ∗ fξ (x))ξ∈Ξ ,          ⃗gx (y) = (φI (y)gξ (x + y))ξ∈Ξ ,
+and with
+                                                  B1               r−2
+                  A0 = A1 , B0 = B1 , R = 2 +        , s := 2 +               .
+                                                  A1             10 log R
+The hypotheses of Lemma 4.3 hold by the two assumptions in the proposition, and
+hence
+                             r
+                  I(x) ≲         A1 · log R · ∥(Kt ∗ fξ (x))ξ∈Ξ ∥Vts (ℓ2 (Ξ))
+                          r−2
+uniformly in x. Taking ℓ2x norms, applying Minkowski’s inequality, and using the
+variational hypothesis yields the bound
+               X       X                               2
+              (   Vr       gξ (x)(Kt ∗ fξ )(x) : t ∈ T )1/2
+                 x          ξ∈Ξ
+                                       r c0 +1                      X
+                      ≲ |I|1/2 · (        )    · A1 · logc0 +1 R · (   ∥fξ ∥2ℓ2 )1/2 .
+                                      r−2                            ξ
+
+                                                                                          □
+4.3. A Cheap Estimate. We now quickly apply the machinery developed above to
+deduce a cheap ℓ2 bound for V Q,r , which we will upgrade by interpolation to conclude
+(3.8) for all r > 2. In particular, we will prove below that
+                                   r 2 2
+(4.3)            ∥V Q,r f ∥ℓ2 ≲ (     ) log (2 + Q) log log(10 + Q)∥f ∥ℓ2 ;
+                                  r−2
+this will be complemented in subsequent sections with the more complicated estimate,
+                                        ∥C Q f ∥ℓ2 ≲ Q−ϵ/2 ∥f ∥ℓ2 .
+  To prove (4.3), we begin by abbreviating
+                                  X
+                     TλQ f (x) :=   f (x − n)wQ (n)KQ (n)e(λn),
+                                            n
+so that we may express
+                                      V Q,r f := V r TλQ f : λ ∈ T .
+                                                                  
+30         A Variation Norm Carleson Theorem Along the Primes
+
+     We isolate (4.3) in the following proposition.
+Proposition 4.5. For every r > 2, (4.3) holds.
+   By (2.1) and (2.8), it suffices to prove
+                V r TλQ f : λ ∈ J
+                                  
+(4.4)
+                                     ℓ2
+                           r 2
+                     ≲(        ) · log2 (2 + Q) · log log(10 + Q) · Q−1 · ∥f ∥ℓ2
+                         r−2
+whenever J ⊂ T is an interval of size cQ−2 with 0 < c ≪ 1 chosen sufficiently small;
+this is since the terms involving a single λ are controlled by the large size of the totient
+function, see (2.1).
+   So, for such a J, let 3J denote the interval concentric with J but three times the
+length, define                                [               
+                               ΓQ + 3J :=            a/q + 3J ,
+                                             a/q∈ΓQ
+
+and let fJ denote a smooth Fourier restriction of f to ΓQ + 3J, chosen to equal f on
+                             [                          
+                                   a/q + J + supp K  cQ
+                                  a/q∈ΓQ
+
+and to vanish outside ΓQ + 3J; for each a/q ∈ ΓQ , define
+                                    fd
+                                     a/q (β) := fJ (β + a/q),
+                                                b
+
+so that fd
+         a/q is supported in 3J. We now turn to the proof.
+
+Proof of Proposition 4.5. Our task is to establish (4.4); by monotone convergence, we
+may restrict λ to a finite subset T ⊂ J, and it suffices to replace the right-hand side
+                                         X
+                             ∥f ∥ℓ2 −→ (      ∥fa/q ∥2ℓ2 )1/2 .
+                                            a/q∈ΓQ
+
+By a brief argument with the Fourier transform, whenever λ ∈ J we may express
+                               ˆ
+     Q
+                 X                                                    µ(q)
+    Tλ f (x) =         e(ax/q) Fd  a/q (β)KQ (β − λ)e(βx) dβ, Fa/q :=      fa/q
+                                           c
+                                T                                     ϕ(q)
+                a/q∈ΓQ
+                  X
+             =:         e(ax/q) Kλ ∗ Fa/q (x),
+                  a/q∈ΓQ
+
+where Kλ is the convolution operator with Fourier multiplier
+                                  K λ h(β) = KQ (β − λ)h(β).
+                                  d          c         b
+We apply Proposition 4.4 with
+                       Ξ = ΓQ ,       ga/q (x) := e(ax/q),      I = 3J;
+                       A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                                     31
+
+the scalar variational input (with c0 = 1) follows from Lemma 4.1, since K
+                                                                         cQ has
+uniformly bounded variation, so it remains only to compute A1 and B1 .
+  For any scalar sequence ca/q , we apply Plancherel to bound
+                                           2
+       X            X
+           φI (y)2       e(a(x + y)/q)ca/q
+         y               a/q∈ΓQ
+                       X                                              X
+                                     e (a/q − a′ /q ′ )x ca/q ca′ /q′   φI (y)2 e (a/q − a′ /q ′ )y
+                                                                                                   
+              =
+                   a/q,a′ /q ′ ∈ΓQ                                    y
+                            X
+              ≈ |I|−1                 |ca/q |2 ,
+                          a/q∈ΓQ
+
+since the Fourier transform of φ2I is supported in an interval of length O(|I|), while
+elements of ΓQ are Q−2 -separated; in particular, we may bound
+                                                     A1 ≈ |I|−1/2 .
+Similarly,
+              X                  X                                    X
+                     φI (y)2               |e(a(x + y)/q)|2 ≲ Q2          φI (y)2 ≲ Q2 |I|−1 ,
+               y               a/q∈ΓQ                                 y
+
+so
+                                                    B1 ≲ Q|I|−1/2 ,
+and thus
+                                                      B1 
+                                           log 2 +         ≲ log(2 + Q).
+                                                      A1
+Proposition 4.4 gives
+                                                     r 2                   X                   1/2
+             V r TλQ f : λ ∈ Ij                            log2 (2 + Q)              ∥Fa/q ∥22
+                                       
+                                                ≲                                                       ,
+                                           ℓ2        r−2
+                                                                            a/q∈ΓQ
+
+which yields the result by size of the totient function, see (2.1).                                         □
+  In the next section, we will apply Proposition 4.4 to reduce our analysis to a single-
+scale, periodic estimate; our focus shifts to the operators
+                                                      {C Q f : Q}.
+
+                          5. Reduction to the Periodic Setting
+  Our next order of business will be to reduce to the periodic setting, in closer analogy
+to previous work on the Wiener-Wintner Theorem [10].
+  We begin by partitioning the square-free integers inside (Q/2, Q] into disjoint sub-
+sets {B} with
+(5.1)                                      |B| ≈ Qκ ,      κ = 1/D0 − ϵ;
+32         A Variation Norm Carleson Theorem Along the Primes
+
+possibly after decreasing ϵ, we will assume that
+                                              κ
+(5.2)                                0<ϵ≤        .
+                                             100
+  We set
+                            QB := lcm(q ∈ B) ≤ exp(100 log Q · Qκ ),
+noting that QB is square free, and that whenever d|q for some q ∈ B
+                                                      QB
+                                                (d,      ) = 1.
+                                                       d
+     If we define
+                                            X
+                       CBQ f (x) := sup |        f (x − n)wQ,B (n)KQ (n)e(λn)|,
+                                   λ∈T      n
+
+then we may bound
+                                                        X
+                                       C Q f (x) ≤           CBQ f (x).
+                                                         B
+
+     For the remainder of the paper we will fix a single B, and for notational ease, set
+                                                 N := QB .
+Regarding this parameter as fixed, we will introduce the periodic Fourier transform
+                      Ff (ξ) := FN f (ξ) := Er∈[N ] f (r)eN (−ξr) : Z/N → C,
+where we recall eN (t) := e(t/N ).
+  The goal of this section is to reduce our study of CBQ to an analysis of the following
+periodic maximal functions:
+                       MB f (x) := sup Er∈Z/N f (x − r)wQ,B (r)eN (rθ) ;
+                                     θ∈Z/N
+
+we define
+                    mB := ∥MB ∥L2 (Z/N )→L2 (Z/N ) =              sup           ∥MB f ∥L2 (Z/N ) ;
+                                                             ∥f ∥L2 (Z/N ) =1
+
+note that by specializing the above supremum to characters, we deduce the lower
+bound
+                                                mB ≥ Q−1 .
+  Specifically, the main result of this section is the following transference estimate;
+the numerology log2 Q is directly analogous to that of [4].
+Proposition 5.1. The following bound holds:
+                               ∥CBQ f ∥ℓ2 ≲ log2 (2 + Q) · mB · ∥f ∥ℓ2 .
+                   A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun               33
+
+  To prove this proposition, we will apply the variable coefficient multi-frequency
+technology previously developed.
+  Specifically, if we let λ : Z → T be a linearizing function so that
+                                X
+                    CBQ f (x) ≲    f (x − n)wQ,B (n)KQ (n)e(λ(x)n) ,
+                                  n
+
+see (3.1), and define
+                                                             1   1
+                         θ : Z → Z/N,         ω : Z → [−       ,   ]
+                                                            2N 2N
+so that
+                                       θ(x)
+                              λ(x) ≡        + ω(x)        mod 1.
+                                        N
+In keeping with the set up of the previous section, we will set Ξ := Z/N , and our
+vector-valued function
+                                       ⃗g := (gR )R∈Z/N
+will be defined
+                              gR (x) := b(R − θ(x))eN (Rx)
+where our coefficients are given by
+                           (
+                              µ(q)
+                              ϕ(q)
+                                       if D/N ≡ a/q, (a, q) = 1, q ∈ B
+                    b(D) :=
+                              0        otherwise.
+
+We set
+                                  I := IN := {|β| ≤ 1/N },
+and choose χI , φI as above, so that
+            |χI (y)| ≲A 1/N · (1 + |y|/N )−A ,        ∥χI ∥ℓ2 ≲ N −1/2 ,
+                                                             X
+            0 ≤ φI (y) ≲A (1 + |y|/N )−A ,          sup            φI (y)2 ≲ 1.
+                                                   s∈Z/N y≡s   mod N
+
+Proposition 5.1 will follow from the below lemma, in which we compute the relevant
+statistics, A1 , B1 .
+Lemma 5.2. In the language of Proposition 4.4, the following bounds hold, indepen-
+dent of θ(x):
+
+                  A1 ≲ N 1/2 mB       and        B1 ≲ N 1/2 (Qo(1)−1 |B|)1/2 .
+34        A Variation Norm Carleson Theorem Along the Primes
+
+In particular, for each x ∈ Z, the following bounds hold:
+               X             X                                     X
+              (    φI (y)2 |   gR (x + y)cR |2 )1/2 ≲ N 1/2 mB · (   |cR |2 )1/2
+                 y                 R                                               R
+                     X             X
+                 (       φI (y)2            |gR (x + y)|2 )1/2 ≲ N 1/2 (Qo(1)−1 |B|)1/2 .
+                     y                 R
+
+Proof. For the first point, let
+                                                        X
+                                           C(s) :=              cR · eN (Rs)
+                                                      R∈Z/N
+
+and for θ ∈ Z/N , define
+                             Lθ C(s) := Er∈Z/N C(s − r)wQ,B (r)eN (θr)
+so that
+                                                    X
+                                  Lθ C(s) =                   b(R − θ)cR eN (Rs)
+                                                   R∈Z/N
+
+by orthogonality of characters. In particular,
+                        X
+                            gR (z)cR = |Lθ(z) C(z)| ≤ MB C(z);
+                             R∈Z/N
+
+noting that MB C(z) is N -periodic, we bound
+                                                     2
+                       X            X
+                           φI (y)2      gR (x + y)cR
+                               y                  R∈Z/N
+                                   X               X
+                              ≤                               φI (y)2 MB C(x + y)2
+                                   s∈Z/N y≡s        mod N
+                                   X
+                              ≤              MB C(x + s           mod N )2
+                                   s∈Z/N
+                                            X
+                              ≤ m2B                |C(s)|2
+                                           s∈Z/N
+                                             X
+                              = N m2B              |cR |2 .
+                                              R
+     For the second, just observe that
+                         X               X
+                     sup     |gR (z)|2 =   |b(A)|2
+                         z
+                              R                      A∈Z/N
+
+                                                  ≲ Qo(1)−2 |{a/q : a ≤ q, q ∈ B}|
+                                                  ≲ Qo(1)−1 |B|.
+                                                                                            □
+                  A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun              35
+
+  With this lemma in mind, we prove Proposition 5.1
+
+Proof of Proposition 5.1. Let ρ be a Schwartz function satisfying
+                                   1[−4/5,4/5] ≤ ρ ≤ 1[−1,1] .
+
+Since N = QB ≤ exp(100Qκ log Q) and κ = 1/D0 − ϵ, while N (Q) = exp(Q1/D0 −ϵ/10 ),
+we have N (Q) ≫A N A for all sufficiently large Q (while for small Q we just ensure
+that φ
+     b is supported in a sufficiently small neighborhood of 0); it follows that
+                                 cQ ⊆ {∥β∥ ≤ (100N )−1 }.
+                            supp K
+We next define
+                             F
+                             cR (β) := ρ(N β)fb(β + R/N )
+
+so that for each R ∈ Z/N , F
+                           cR is supported in
+
+                                  I := IN := {|β| ≤ 1/N },
+and
+                                       X
+                                            ∥FR ∥2ℓ2 ≲ ∥f ∥2ℓ2 .
+                                        R
+
+If we let
+                                                 cQ (β − t),
+                                       mt (β) := K
+
+see (3.1), then
+                                                              r
+                        ∥V r (m∨t ∗ F : t ∈ R)∥ℓ2 ≲              ∥F ∥ℓ2
+                                                             r−2
+by Lemma 4.1. If we define
+                             gR (x) := b(R − θ(x))eN (Rx)
+where
+                            (
+                                µ(q)
+                                ϕ(q)
+                                         if D/N ≡ a/q, (a, q) = 1, q ∈ B
+                  b(D) :=
+                             0           otherwise
+
+as above, the key claim is that
+          X                                     X
+(5.3)         f (x − n)wQ,B (n)KQ (n)e(λ(x)n) =   gR (x)m∨ω(x) ∗ FR (x).
+            n                                              R∈Z/N
+36       A Variation Norm Carleson Theorem Along the Primes
+
+Indeed, assuming this identity, we bound
+                               X
+                ∥CBQ f ∥ℓ2 ≲ ∥      gR (x)m∨ω(x) ∗ FR (x)∥ℓ2
+                                      R∈Z/N
+                                                                X
+                                 ≲ N −1/2 A1 log2 (2 + B1 /A1 )(  ∥FR ∥22 )1/2
+                                                                  R
+                                              2
+                                 ≲ mB · log (2 + Q)∥f ∥ℓ2
+
+by Proposition 4.4, taking into account Lemma 5.2.
+  But, (5.3) is nothing more than algebraic manipulation: we apply Fourier inversion
+to the left-hand side
+                X         ˆ             X                                    
+      (5.3) =        b(A)    fb(β)e(βx)    KQ (n)e(−(β − λ(x) − A/N )n) dβ
+                A∈Z/N                             n
+                 X               ˆ
+                                                                          
+            =           b(A)                   cQ (β − λ(x) − A/N ) dβ
+                                     fb(β)e(βx)K
+                A∈Z/N
+                                 ˆ
+                                               cQ (β − θ(x) + A − ω(x)) dβ
+                 X                                                               
+            =           b(A)         fb(β)e(βx)K
+                                                          N
+                A∈Z/N
+                ˆ                     X
+                                                 cQ (β −   θ(x) + A        
+            =       fb(β)e(βx)               b(A)K                  − ω(x)) dβ
+                                                              N
+                                     A∈Z/N
+                ˆ                     X                                    
+            =       fb(β)e(βx)               b(R − θ(x))K
+                                                        cQ (β − R/N − ω(x)) dβ
+                                     R∈Z/N
+                 X                                ˆ
+            =           b(R − θ(x))eN (Rx)                        cQ (β − ω(x))e(βx) dβ
+                                                      fb(β + R/N )K
+                R∈Z/N
+                 X               ˆ
+            =           gR (x)                   cQ (β − ω(x))e(βx) dβ
+                                     fb(β + R/N )K
+                R∈Z/N
+                 X               ˆ
+            =           gR (x)       F
+                                     cR (β)mω(x) (β)e(βx) dβ.
+                R∈Z/N
+
+
+The last equality is exact: since |ω(x)| ≤ (2N )−1 and supp K cQ ⊆ {∥β∥ ≤ (100N )−1 },
+                                      2
+the integrand vanishes unless |β| ≤ 3N   , in which case ρ(N β) = 1.
+                                                                                    □
+
+  For the rest of the paper, we will only be interested in estimating L2 ([N ])-normalized
+f on (−N, 2N ], so we can extend f periodically mod N , and adopt a cyclic subgroup
+perspective.
+                    A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun       37
+
+5.1. Removing the Weights. Next, we pass from our weighted periodic maximal
+operator, MB , to simpler, unweighted ones; we appeal to convexity to do so.
+  Specifically, with d|q for some q ∈ B, set D := Nd , and define
+                         Md f (x) := sup |Er∈[D] f (x − rd)eD (rξ)|;
+                                      ξ∈Z/D
+
+note that Md is a norm contraction on ℓp for each 1 ≤ p ≤ ∞.
+  The operators
+                             {Md : d|q for some q ∈ B}
+control MB in the following sense:
+Lemma 5.3. Suppose g is N -periodic, and
+                         ∥MB g∥L2 ((−N,2N ]) ≥ |B|Q−1−ϵ ∥g∥L2 ([N ]) .
+Then there exists some q ∈ B, and some divisor d|q, so that
+(5.4)                       ∥Md g∥L2 ((−N,2N ]) ≥ Q−10ϵ ∥g∥L2 ([N ]) .
+     The proof is essentially an application of Möbius inversion:
+     Since
+                                            X
+                                   cq (n) =     dµ(q/d),
+                                               d|(q,n)
+we can express
+                                       X µ(q) X
+                            wB (r) =                       dµ(q/d)1d|r .
+                                       q∈B
+                                           ϕ(q)
+                                                     d|q
+
+Since each q ∈ B is square-free, and d|q, (d, q/d) = 1,
+                         µ(q) = µ(d)µ(q/d) ⇒ µ(q)µ(q/d) = µ(d)
+so
+                                   µ(q)           dµ(d)
+                                        dµ(q/d) =       ,
+                                   ϕ(q)            ϕ(q)
+and thus
+                                             X X dµ(d)
+                                 wB (r) =                         1d|r
+                                              q∈B d|q
+                                                           ϕ(q)
+                                             X
+                                         =         dµ(d)βd 1d|r ,
+                                               d
+
+where
+                                                   X        1
+(5.5)                                 βd :=
+                                                           ϕ(q)
+                                               q∈B, d|q
+38         A Variation Norm Carleson Theorem Along the Primes
+
+so that
+                          X                 X 1 X
+                                    βd ≤             1 ≲ Qo(1)−1 |B|.
+                            d               q∈B
+                                                ϕ(q)
+                                                        d|q
+
+     With this in mind, we present the proof.
+Proof of Lemma 5.3. We express
+                        Er∈[N ] g(x − r)wB (r)eN (rθ)
+                           X                                          
+                        =        µ(d)βd Er∈[N ] g(x − r)d1d|r eN (rθ)
+                                d
+                            X                                     
+                        =           µ(d)βd El∈[D] g(x − ld)eD (lθ) ,
+                                d
+
+see (5.5), so
+                                        X
+                     MB g(x) ≤               βd sup El∈[D] g(x − ld)eD (lθ)
+                                        d       θ∈Z/N
+                                        X
+                                    ≤        βd Md g(x).
+                                        d
+
+But now, if (5.4) fails, then the hypothesis gives
+                   |B|Q−1−ϵ ∥g∥L2 ([N ]) ≤ ∥MB g∥L2 ((−N,2N ])
+                                           X
+                                         ≤   βd · sup ∥Md g∥L2 ((−N,2N ])
+                                                                d
+                                                   d
+
+                                               ≤Q   o(1)−1
+                                                              |B|Q−10ϵ ∥g∥L2 ([N ]) ,
+for the desired contradiction.                                                          □
+  Accordingly, we turn our attention to {Md }. If we fix one such d, then recalling
+that (d, D) = 1, we uniquely decompose
+                            x = a + ds,            a ∈ Z/d, s ∈ Z/D.
+We define
+(5.6)                                       Fa (s) := f (a + ds)
+and compute:
+                        F
+                        ca (ξ) := Es∈[D] Fa (s)eD (−ξs),               ξ ∈ Z/D;
+with this notation in mind, we establish the following convenient representation of
+Md in the below lemma.
+                    A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                 39
+
+Lemma 5.4. For every a ∈ Z/d and every s ∈ Z/D, and every ξ ∈ Z/D,
+                        Er∈[D] f (a + d(s − r))eD (rξ) = eD (ξs)F
+                                                                ca (ξ);
+consequently,
+                                Md f (a + ds) = sup |Fba (ξ)|.
+                                                    ξ∈Z/D
+
+Proof. This follows since we have extended f to be periodic mod N , and thus Fa (s)
+is periodic mod D:
+                Er∈[D] f (a + d(s − r))eD (rξ) = Er∈[D] Fa (s − r)eD (rξ)
+                                                 = eD (sξ)Et∈s−[D] Fa (t)eD (−tξ)
+                                                 = eD (sξ)Et∈[D] Fa (t)eD (−tξ)
+since
+                                       t 7→ Fa (t)eD (−ξt)
+is D-periodic.                                                                       □
+  With this representation in mind, we next prove an “inverse theorem” for Md ,
+which we will extend to MB by suitably applying Lemma 5.3.
+  To do so, we consider families of “structured atoms,”
+         Ad := {g(a)eD (ϑ(a)s),       a ∈ Z/d, ϑ(a), s ∈ Z/D, Ea∈[d] |g(a)|2 = 1},
+and collect
+                                                [[
+                                        A :=             Ad ;
+                                               q∈B d|q
+
+we have the following.
+Lemma 5.5 (Inverse Theorem for Md ). Suppose that f : Z/N → C is N -periodic.
+Then one can choose Φ ∈ Ad so that
+                            ∥Md f ∥L2 ((−N,2N ]) = |⟨Φ, f ⟩(−N,2N ] |,
+see (2.2). In particular, if
+                               ∥Md f ∥L2 ((−N,2N ]) ≥ λ∥f ∥L2 ([N ]) ,
+there exists Φ ∈ Ad so that
+                                |⟨Φ, f ⟩(−N,2N ] | ≥ λ∥f ∥L2 ([N ]) .
+Proof. Define
+                                    M (a) := sup |F
+                                                  ca (ξ)|,
+                                                ξ∈Z/D
+
+see (5.6); note that the only way that M (a) ≡ 0 is if f ≡ 0.
+40          A Variation Norm Carleson Theorem Along the Primes
+
+     Then, since M (a + ds) = M (a)
+              Ea∈(−N,2N ] |M (a)|2 = Ea∈[d] Es∈(−D,2D] |M (a)|2 = Ea∈[d] |M (a)|2 .
+Next, for each a ∈ [d], choose ϑ(a) ∈ Z/D so that
+
+                                    |F
+                                     ca (ϑ(a))| = |M (a)|.
+
+If we set
+                                               F
+                                               ca (ϑ(a))
+                                  g(a) :=
+                                            ∥Md f ∥L2 ((−N,2N ])
+and
+                                Φ(a + ds) := g(a)eD (ϑ(a)s)
+then Φ ∈ Ad as
+
+                                        2   Ea∈[d] |M (a)|2
+                           Ea∈[d] |g(a)| =                       = 1.
+                                           ∥Md f ∥2L2 ((−N,2N ])
+We compute
+                          ⟨f (a + ds), Φ(a + ds)⟩(−N,2N ]
+                          = Ea∈[d] g(a)Es∈(−D,2D] Fa (s)eD (−ϑ(a)s)
+                          = Ea∈[d] g(a)F
+                                       ca (ϑ(a))
+                                     1
+                          =                        · Ea∈[d] |M (a)|2
+                            ∥Md f ∥L2 ((−N,2N ])
+                          = ∥Md f ∥L2 ((−N,2N ]) .
+                                                                                      □
+
+     Combining Lemmas 5.3 and 5.5, we arrive at the following corollary.
+Corollary 5.6. Set X := Q−1−ϵ |B| and η := Q−10ϵ . If g is N -periodic and satisfies
+                              ∥MB g∥L2 ((−N,2N ]) ≥ X∥g∥L2 ([N ]) ,
+then there exists Φ ∈ A so that
+                                |⟨g, Φ⟩(−N,2N ] | ≥ η∥g∥L2 ([N ]) .
+  We now convert Corollary 5.6 to a structure theorem via an energy decrement
+argument; we maintain the notation
+                                X := Q−1−ϵ |B|,      η := Q−10ϵ .
+                   A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                    41
+
+Proposition 5.7 (Greedy Decomposition). Suppose ∥f ∥L2 ([N ]) = 1 is N -periodic.
+Then there exists a J ≤ Q25ϵ so that
+                                     X
+                                 f=    cj Φj + g,
+                                              j≤J
+
+where
+                                                              X
+                         ∥MB g∥L2 ((−N,2N ]) ≤ X,                   |cj |2 ≤ 1
+                                                              j≤J
+
+and {Φj } ⊂ A are structured atoms.
+Proof. Define f0 := f , and abbreviate
+                                  ⟨h1 , h2 ⟩(−N,2N ] := ⟨h1 , h2 ⟩;
+we will recursively construct a sequence of functions,
+                    ∥fk+1 ∥L2 ([N ]) ≤ ∥fk ∥L2 ([N ]) ≤ · · · ≤ ∥f ∥L2 ([N ]) ≤ 1
+that will terminate at time J ≤ Q25ϵ , and a sequence of coefficients j≤J |cj |2 ≤ 1,
+                                                                        P
+so that for
+                                  g := fJ ,  J ≤ Q25ϵ
+we may estimate
+                                             X       
+              ∥MB g∥L2 ((−N,2N ]) := ∥MB f −    cj Φj ∥L2 ((−N,2N ]) ≤ X.
+                                                       j≤J
+
+To do so, we use the absolute stopping rule
+(5.7)                              ∥MB fk ∥L2 ((−N,2N ]) ≤ X.
+If this holds, set g := fk ; if (5.7) fails, then, since ∥fk ∥L2 ([N ]) ≤ 1, we have
+                         ∥MB fk ∥L2 ((−N,2N ]) > X ≥ X∥fk ∥L2 ([N ]) ,
+so the hypothesis of Corollary 5.6 holds. Hence there exists a structured atom Φk+1 ∈
+A so that
+                                  |⟨fk , Φk+1 ⟩| ≥ η∥fk ∥L2 ([N ]) .
+Choose the phase of Φk+1 so that
+                             ck+1 := ⟨fk , Φk+1 ⟩ ≥ η∥fk ∥L2 ([N ]) ,
+and define
+                                    fk+1 := fk − ck+1 Φk+1 .
+Then, because Φk+1 is normalized and ck+1 = ⟨fk , Φk+1 ⟩,
+                            ∥fk+1 ∥2L2 ([N ]) = ∥fk ∥2L2 ([N ]) − |ck+1 |2 ,
+42      A Variation Norm Carleson Theorem Along the Primes
+
+so
+                          ∥fk+1 ∥2L2 ([N ]) ≤ (1 − η 2 )∥fk ∥2L2 ([N ]) ,
+and more generally
+(5.8)                              ∥fk ∥2L2 ([N ]) ≤ (1 − η 2 )k .
+We now STOP this recursion the first time that (5.7) holds; note that
+                        J
+                        X
+                               |cj |2 = ∥f ∥2L2 ([N ]) − ∥g∥2L2 ([N ]) ≤ 1.
+                        j=1
+                      o(1)−1
+If we let A := |B|Q          denote the trivial operator norm bound for MB , then
+                         −10
+whenever ∥g∥L2 ([N ]) ≤ Q ,
+                        ∥MB g∥L2 ((−N,2N ]) ≤ A∥g∥L2 ([N ]) ≤ X;
+given the geometric decay (5.8), this constraint is certainly satisfied for some J ≤
+Q25ϵ .                                                                             □
+   So, matters reduce to analyzing structured atoms, in particular to producing sig-
+nificant gain on
+                                       MB Φ
+when Φ ∈ A; we will essentially produce a square-root savings in |B| ≈ Qκ which will
+close the argument.
+
+                       6. Analysis of Structured Atoms
+   Taking into account Proposition 3.1, Lemma 3.2, Proposition 5.1, and mixed-norm
+interpolation, see [15, §7], the following estimate will close our argument.
+Proposition 6.1. The following bound holds, uniformly in B:
+                                         mB ≤ Qκ−1−ϵ .
+   We prove Proposition 6.1 by analyzing the behavior of MB when applied to elements
+of A. In fact, the corrected structured-atom estimate gives the full bound Q−1+o(1)
+for each atom. We then take a trivial ℓ1 sum over the coefficients in our atomic
+representation and conclude, since ϵ = ϵ(p) > 0 is chosen sufficiently small relative to
+κ.
+   For notational ease, set
+                                             X µ(q)
+                             wB := wQ,B :=            cq .
+                                             q∈B
+                                                 ϕ(q)
+
+For each d|N, d ≤ Q and θ ∈ [N ], define
+                               Tθ f (x) := Eu∈[d] f (x − u)Kθ (u)
+                 A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                43
+
+where
+                      Kθ (u) := El∈[D] wB (ld + u)eN ((dl + u)θ);
+our argument will be concluded with a suitably delicate analysis of
+                                   {Kθ : θ ∈ [N ]}.
+  Below, we regard d as fixed; note that since N is square-free, (d, D) = 1.
+  We collect
+                           q                   D
+         Bt := {q ∈ B :         = t}, tθ :=         , T := {t|D : Bt ̸= ∅};
+                         (q, d)              (θ, D)
+our first lemma is elementary:
+Lemma 6.2. The following estimates hold:
+                            sup |Bt | ≲ Qo(1) ,   |T | ≤ |B|.
+                             t
+
+Proof. For the first point, express r = (q, d) so q = rt where (r, t) = 1. For fixed
+t, once r is chosen, there’s only one possible choice of q, and there are at most
+τ (d) ≤ Qo(1) many choices of r.
+   For the second, just observe that each q ∈ B contributes exactly one value
+                                        q
+                                             = t.
+                                      (q, d)
+                                                                                  □
+  We have the following characterization.
+Lemma 6.3. Kθ ≡ 0 unless tθ ∈ T . And, in the other case,
+                             Kθ (u) = ed ((D)d θu)Ltθ (u)
+where D(D)d ≡ 1 mod d, and
+                                         X µ(q)
+                             Lt (u) :=              c(q,d) (u).
+                                         q∈B
+                                             ϕ(q)
+                                             t
+
+
+  The significance of this lemma is that the kernels {Lt } have very small operator
+norms, in that, by Lemma 6.3 and Lemma 6.2,
+(6.1)               Eu∈[d] sup |Lt (u)| ≲ Qo(1)−1 Eu∈[d] max |cr (u)|
+                            t                             r|d
+
+                                        ≲ Qo(1)−1 Eu∈[d] ϕ (d, u)
+                                                                 
+
+                                         ≲ Qo(1)−1 ,
+where we used the square-free nature of d to simplify
+                             |cr (u)| = ϕ((r, u))        r|d,
+44         A Variation Norm Carleson Theorem Along the Primes
+
+and therefore
+                                                             
+                                      max |cr (u)| = ϕ (d, u) .
+                                        r|d
+
+Proof of Lemma 6.3. Express
+                                                                       X µ(q)
+               Kθ (u) = El∈[D] wB (ld + u)eN ((dl + u)θ) =                          Aq (θ, u),
+                                                                       q∈B
+                                                                             ϕ(q)
+
+where
+               Aq (θ, u) := El∈[D] cq (ld + u)eN ((ld + u)θ)
+                            X
+                         =        El∈[D] eN ((N a/q + θ)(ld + u))
+                            (a,q)=1
+                             X
+                        =             eN ((N a/q + θ)u) · El∈[D] eN ((N a/q + θ)dl)
+                            (a,q)=1
+                             X
+                        =             eN ((N a/q + θ)u) · El∈[D] eD ((N a/q + θ)l)
+                            (a,q)=1
+                                  X
+                        =                        eN ((N a/q + θ)u).
+                                  (a,q)=1
+                            N aq +θ≡0 mod D
+
+     Since (d, D) = 1, every divisor q|N factors uniquely as
+                            q = q 1 q2 ,       q1 = (q, d),    q2 = (q, D),
+where (q1 , q2 ) = 1, since q is square-free. So,
+                                               N   d D
+                                                 =   · ,
+                                               q   q1 q2
+and thus the congruence relation becomes
+                                              dD
+                                      θ+             a≡0      mod D,
+                                              q1 q 2
+which implies, after reducing mod qD2 , that
+                                              D          D
+                                                 |θ ⇒ θ = t
+                                              q2         q2
+for some t ∈ Z.
+   Dividing by qD2 and re-arranging, we see that
+                                               d
+                                       t+         a ≡ 0 mod q2 .
+                                               q1
+                  A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                   45
+
+The claim now is that qd1 is invertible mod q2 : this is since q2 |D, and (d, D) = 1; we
+conclude that there is a unique residue α ∈ [q2 ] so that
+                                              d
+                             a ≡ α ≡ −(         ) ·t    mod q2 ,
+                                              q1 q2
+where
+                                d   d
+                                  ·( ) ≡1             mod q2 .
+                                q1 q1 q2
+  Finally, since (a, q) = 1 ⇒ (a, q2 ) = 1, we must have
+                                       d
+                       (α, q2 ) = ((     ) · t, q2 ) = 1 ⇒ (t, q2 ) = 1.
+                                       q1 q2
+  To summarize, if Kθ ̸= 0, we must have
+                 D        D                 θ
+                    |θ =: t     and      (      , q2 ) = (t, q2 ) = 1;
+                 q2       q2               D/q2
+this means
+                       D         D                        q          D
+            (θ, D) = (t, q2 ) =     ⇒ q2 = (q, D) =             =         .
+                       q2        q2                     (q, d)     (θ, D)
+  In particular, we have shown that there must exist an a, (a, q) = 1 with
+                                                       D
+                        D|(N a/q + θ) ⇐⇒ (q, D) =
+                                                     (θ, D)
+and thus Aq (θ, u) vanishes unless
+                                                       D
+                                  q2 = (q, D) =             .
+                                                     (θ, D)
+  With this in mind, below we reduce our sum over a, (a, q) = 1 to only those so
+that
+                                 a ≡ α mod q2 ,
+where α is the unique residue class determined above, and in particular satisfies
+(α, q2 ) = 1.
+  So, assume that
+                                          q        D
+                          q2 = (q, D) =        =        ,
+                                        (q, d)   (θ, D)
+and compute Aq (θ, u).
+                                                X
+                 Aq (θ, u) = 1q2 = D ·                       eN ((N a/q + θ)u);
+                                 (θ,D)
+                                                 (a,q)=1
+                                           N aq +θ≡0 mod D
+46       A Variation Norm Carleson Theorem Along the Primes
+
+we have seen that the set of a so that (a, q) = 1 so that the sum does not vanish must
+satisfy a ≡ α mod q2 for some unique α with
+                               d        θ
+                                 α+          ≡ 0 mod q2
+                              q1     D/q2
+and
+                                 a≡x           mod q1 ,   (x, q1 ) = 1
+for some unique x.
+   If we express
+                                             N
+                                               a + θ = Dma ,
+                                             q
+then
+                                             N
+                                     eN ((     a + θ)u) = ed (ma u),
+                                             q
+and our job is to compute ma mod d. Since D is coprime to d, (D, d) = 1, its
+multiplicative inverse mod d, (D)d , is well-defined. Then, working mod d:
+                         N                   dD            d
+         ma ≡ (D)d · (     a + θ) ≡ (D)d · (       a + θ) ≡ (q2 )d · a + (D)d · θ,
+                         q                   q1 q2         q1
+where q2 (q2 )d ≡ 1 mod d, and (q2 )d is well defined, since (q2 , d) = 1.
+   Since
+                                   d
+                                      (q2 )d · a mod d
+                                   q1
+depends only on a mod q1 , i.e. on x, working mod d, we may express
+                    d                           d
+              ma ≡ (q2 )d · a + (D)d · θ ≡ (q2 )d · x + (D)d · θ mod d,
+                    q1                          q1
+so
+                                                         d
+                       ed (ma u) = ed ((D)d · θu) · ed ( (q2 )d · xu)
+                                                        q1
+                                 = ed ((D)d · θu) · eq1 ((q2 )d · xu);
+since multiplication by (q2 )d permutes (x, q1 ) = 1, we have
+                        X
+                               eq1 ((q2 )d · xu) = cq1 (u) = c(q,d) (u).
+                         (x,q1 )=1
+
+And, since we have derived a unique constraint on a mod q2 , this shows that
+                    Aq (θ, u) = ed ((D)d · θu) · c(q,d) (u) · 1(q,D)=D/(θ,D)
+                              = ed ((D)d · θu) · c(q,d) (u) · 1q/(q,d)=D/(θ,D) ;
+                     A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                      47
+
+the upshot is that we can express
+                                                    X            µ(q)
+                     Kθ (u) = ed ((D)d · θu)                          c(q,d) (u),
+                                                     q∈B
+                                                                 ϕ(q)
+                                               q/(q,d)=D/(θ,D)
+
+which completes the proof.                                                                 □
+  With this representation in mind, we quickly conclude the argument in the following
+subsection.
+
+6.1. The Maximal Function on Structured Atoms.
+Proposition 6.4. Suppose that
+                             f (a + ds) = g(a)eD (ϑ(a)s) ∈ A,
+namely Ea∈[d] |g(a)|2 = 1. Then
+                               ∥MB f ∥L2 ((−N,2N ]) ≲ Qo(1)−1 .
+Proof. For ρ ∈ Z/D define
+                            K
+                            e ρ (u) := Eℓ∈[D] wB (u + dℓ)eD (ℓρ).
+
+If ρ ∈ Z/D and Θ ∈ Z/N is any lift of ρ, then
+                                 KΘ (u) = eN (uΘ)K
+                                                 e ρ (u).
+Lemma 6.3 therefore implies the pointwise envelope
+(6.2)                         |K
+                               e ρ (u)| ≤ Hd (u) := sup |Lt (u)|
+                                                       t∈T
+
+for every ρ ∈ Z/D.
+   Fix Θ ∈ Z/N and write
+                         AΘ f (x) := Er∈Z/N f (x − r)wB (r)eN (rΘ).
+If we let x = a + ds, write r = u + dℓ, and let au = [a − u]d be the residue class of
+a − u modulo d, we may choose ϵ(a, u) ∈ Z so that
+                                  a − u = au − dϵ(a, u),
+and thus
+                         a + ds − u − dℓ = au + d(s − ϵ(a, u) − ℓ),
+so
+     AΘ f (a + ds)
+     = Eu∈[d] g(au )eD (ϑ(au )(s − ϵ(a, u)))eN (uΘ)Eℓ∈[D] wB (u + dℓ)eD (ℓ(Θ − ϑ(au ))).
+48          A Variation Norm Carleson Theorem Along the Primes
+
+Using (6.2), we obtain the pointwise bound
+                         |AΘ f (a + ds)| ≤ Eu∈[d] |g(a − u)|Hd (u),
+where g is extended periodically modulo d. Since the right hand side is independent
+of s, Young’s inequality on Z/d gives
+                     ∥MB f ∥L2 (Z/N ) ≤ Eu∈[d] |g(· − u)|Hd (u) L2 (Z/d)
+                                     ≤ ∥g∥L2 (Z/d) Eu∈[d] Hd (u)
+                                     = Eu∈[d] Hd (u)
+                                     ≤ Qo(1)−1
+by (6.1).                                                                             □
+  In the language of Proposition 5.7, we conclude as follows, taking into account (5.2)
+above.
+Corollary 6.5. Suppose that ∥f ∥L2 ([N ]) = 1, and that
+                                       X
+                                f=         cj Φj + g
+                                             j≤J
+
+is the decomposition of Proposition 5.7. Then
+                                      X
+          ∥MB f ∥L2 ((−N,2N ]) ≤ ∥MB (  cj Φj )∥L2 ((−N,2N ]) + ∥MB g∥L2 ((−N,2N ])
+                                       j≤J
+                                  −1+15ϵ
+                             ≲Q            + Qκ−1−ϵ
+                             ≲ Qκ−1−ϵ .
+     This establishes Proposition 6.1, and with it, Theorems 1.3 and 1.4.
+
+                             Appendix A. Complements
+A.1. On Admissibility. In [11, 20], a category of admissible weights were intro-
+duced, for which weighted double recurrence and return times theorems were estab-
+lished:
+   A weight, w ≥ 0 is admissible if it satisfies the following properties:
+      • Upper normalization: There exists an absolute constant 0 < C < ∞ so
+        that for any 0 ≤ C0 < ∞,
+                                  1        X
+                         lim sup                     w(n) ≤ C;
+                           N →∞ N
+                                       n∈(C0 N,C0 N +N ]
+
+       • Heath-Brown-type approximation: There exists an absolute constant
+         C < ∞, a function
+                     S := Sw : Q → C so that |S(a/q)| ≤ C · q o(1)−1 ,
+                 A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                    49
+
+       and a constant ν > 4, so that for some s ≥ 3 and all sufficiently large N , there
+       exists a truncation parameter M = M (N ) ≤ N o(1) so that
+                                                                        s
+                       X X
+               w(n) −            S(a/q)e2πina/q U s ([N ]) ≤ C · log−ν/2 N.
+                        q≤M 1≤a≤q
+                            (a,q)=1
+
+  Below we explain why this condition is insufficient to establish a weighted Carleson-
+type theorem:
+Lemma A.1. For 0 < α < 1, and an integer q0 ≥ 3, let
+                         v(n) := vα,q0 (n) := 1 + α sin(2πn/q0 ).
+Then v is admissible, but
+                                             X                     e(λn)
+                        Cv f (x) := sup          f (x − n)v(|n|)
+                                         λ   n
+                                                                     n
+
+is unbounded on ℓp for each 1 ≤ p ≤ ∞.
+Proof. Observe that, since 0 < α < 1, v ≥ 0; by periodicity its averages on every
+interval whose length tends to ∞ are uniformly bounded, and we can express
+                                 α           α
+                     v(n) := 1 + e(n/q0 ) − e(n(q0 − 1)/q0 )
+                                2i           2i
+so the Heath-Brown approximation is satisfied exactly. To prove that Cv is unbounded,
+we apply dimensional analysis, testing it on
+                                   f (x) := fL (x) := 1[−L,L] ;
+note that whenever |x| ≤ L/4, for each |m| ≤ 3L/4, both x ± m ∈ [−L, L].
+  With this in mind, choosing λ = q10 , we compute
+                       X                           e(n/q0 )
+        Cv f (x) ≥              fL (x − n)v(|n|)            − O(1)
+                                                      n
+                     |n|≤3L/4
+                       X               e(m/q0 ) − e(−m/q0 )
+                =               v(m)                        − O(1)
+                                                m
+                     |m|≤3L/4
+                     X sin(2πm/q0 )       X sin2 (2πm/q0 )
+                = 2i                + 2iα                  − O(1)
+                            m                      m
+                       m≤3L/4                          m≤3L/4
+                                     2
+                         X sin (2πm/q0 )
+                = 2α                     − Oq0 (1),
+                                 m
+                        m≤3L/4
+50         A Variation Norm Carleson Theorem Along the Primes
+
+where we applied summation by parts to address the first sum. Since q0 ≥ 3, the
+frequency q20 ∈
+              / Z, so we express
+                X sin2 (2πm/q0 )   1 X 1   1 X cos(4πm/q0 )
+                                 =       −
+                         m         2   m 2          m
+               m≤3L/4                     m≤3L/4            m≤3L/4
+
+                                     = log L + O(1)
+by summation by parts.
+  In particular
+                                 Cv f (x) ≳ α log L · 1|x|≤L/4
+which yields the result.                                                             □
+     More generally, suppose a real periodic model has Fourier coefficients with
+                                    S(−a/q) = S(a/q);
+its sine component at a/q is non-zero exactly when S(a/q) ∈   / R, in which case adapt-
+ing the preceding proof produces a logarithmic divergence. In particular, a natural
+symmetry hypothesis is
+                                S(−a/q) = S(a/q) ∈ R;
+note that this condition is satisfied in the case of the primes, in which case
+                                                   µ(q)
+                                      S(a/q) =          .
+                                                   φ(q)
+A.2. Extension to Piatetski-Shapiro Times. Our methods are sufficiently flex-
+ible to extend to sparse subsets of the primes, namely to Piatetski-Shapiro primes,
+i.e. those primes which are also elements of the following set:
+                            Nc := {k = ⌊nc ⌋ for some n ∈ N}.
+In particular, if we let
+                            wc (n) := w(n) · c|n|1−1/c · 1Nc (|n|)
+denote the natural density on the Piatetski-Shapiro primes, then we may replace
+                                  w −→ wc ,    1 ≤ c < 7/6
+in the statement of Theorem 1.3. For notational ease, we sketch the argument for the
+maximal formulation below:
+   Let
+                      Wc (n) := w(n) · (1 − c|n|1−1/c 1Nc (|n|));
+by [11] we know that there exists an ϵ > 0 so that
+                    ∥ sup |En∈[N ] f (x − n)Wc (n)e(λn)|∥ℓ2 ≲ N −ϵ ∥f ∥ℓ2 .
+                        λ
+                     A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                        51
+
+Lemma A.2. The following operator is ℓp bounded for each 1 < p < ∞:
+                    X                                       e(λn)
+              sup |      f (x − n)w(n)c|n|1−1/c 1Nc (|n|) ·       |
+              λ∈T
+                    n̸=0
+                                                              n
+
+Proof. By the boundedness of the Carleson operator along the primes, it suffices to
+bound
+                              X                    e(λn)
+                        sup |      f (x − n)Wc (n)       |.
+                         λ∈T
+                              n̸=0
+                                                     n
+
+  We bound
+           X
+   ∥ sup |   f (x − n)Wc (n)ψk (n)e(λn)|∥ℓ2 ≲ ∥Wc ∥U 3 ([−2k ,2k ]) ∥f ∥ℓ2 ≲ 2−ϵk ∥f ∥ℓ2 ;
+         λ∈T   n
+
+since the single scale estimate is bounded on ℓp by convexity, we interpolate to con-
+clude.                                                                             □
+  To adapt this argument to the variational setting, it suffices to note that
+                                ∥Wc ∥L2 ([−2k ,2k ]) ≲ 2k/2(1−1/c)
+and then to argue by interpolation as in §3.
+
+                   Appendix B. The Discrete Carleson Operator
+  We here provide a brief proof of the following discrete analogue.
+Proposition B.1 (Discrete Carleson’s Theorem). For each r > 2, and r′ < p < ∞,
+the following bound holds:
+                      X              e(λn)                  r
+                 ∥V r
+                                                  
+                           f (x − n)       : λ ∈ T ∥ℓp ≲p       ∥f ∥ℓp
+                      n̸=0
+                                       n                  r − 2
+
+Proof. Let {ψj } be as above; by an argument with the Hardy-Littlewood maximal
+function and Fatou’s lemma, there is no loss of generality in reducing to
+                X              X                                 r
+           ∥V r
+                                                       
+                    f (x − n)       ψk (n)e(λn) : λ ∈ T ∥ℓp ≲p       ∥f ∥ℓp ,
+                 n            1≤k≤J
+                                                               r − 2
+
+provided our estimates are independent of J.
+  Now, with η a Schwartz function with
+                                 1[−1/4,1/4] ≤ η ≤ 1[−1/2,1/2]
+define
+                          fbl (β) := (1 − |β|)+ · η(210 β − l) · fb(β),
+52        A Variation Norm Carleson Theorem Along the Primes
+
+so that
+                                          X
+                                                    fl ≡ f
+                                         |l|≤2100
+
+as sequence-space functions, by an argument with the Féjer kernel. And,
+                                    sup ∥fl ∥ℓp ≲ ∥f ∥ℓp
+                                     l
+
+by convexity. It therefore suffices to establish Proposition B.1 for each fl individually;
+since the problem is modulation invariant, we may reduce to the l = 0 case. By (2.8)
+                                                     r
+and the triangle inequality, we may assume that 100    ≤ λ < r+1
+                                                               100
+                                                                   for some 0 ≤ r < 100.
+   If we pass to Fourier space, and apply Poisson summation, we can express
+               X
+                   f0 (x − n)ψk (n)e(λn)
+             1≤k≤J
+                  ˆ X
+              =          M (v + (β − λ))(1 − |β|)+ η(2100 β)fb(−β)e(βx) dβ,
+                     v
+
+where
+                                                    X
+                                  M (t) :=              ψ
+                                                        ck (t).
+                                               1≤k≤J
+
+And, since we have restricted β, λ, we see that the sum over v collapses to a single
+term, with v ∈ {0, ±1} according to the particular value of r. So, our task becomes
+estimating
+                    ˆ
+                  r                               r          r + 1
+                V      Mv (β, λ)fb(−β)e(βx) dβ :      ≤λ<
+                                                 100          100
+where
+             Mv (β, λ) := M (v + β − λ)(1 − |β|)+ η(2100 β),      v ∈ {0, ±1}.
+Since f is finitely supported, by continuity we may restrict the above supremum in λ
+to a countable set, so by monotone convergence, it suffices to prove
+                    ˆ
+                 r
+                                                               r
+              ∥V      Mv (β, λ)fb(−β)e(βx) dβ : λ ∈ T ∥ℓp ≲p       ∥f ∥ℓp ,
+                                                              r−2
+                                     r
+uniformly over finite subsets T ⊂ [ 100 , r+1
+                                          100
+                                              ). But this just follows from Magyar-Stein-
+Wainger transference [27].                                                             □
+
+  We remark that the same argument applies whenever the Hilbert kernel, 1t , is
+replaced by any Calderón-Zygmund kernel whose Fourier transform has bounded
+variation, and a periodic formulation exists as well.
+                     A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun                               53
+
+Corollary B.2. Let Q ≥ 1 be an integer, and let K be a Calderón-Zygmund kernel
+      b BV = c0 < ∞. Then for each r > 2, r′ < p < ∞, the following bound holds:
+with ∥K∥
+               X                                              r
+          ∥V r
+                                               
+                    f (x − Qn)K(n)e(λn) : λ ∈ T ∥ℓp ≲p c0 ·       ∥f ∥ℓp ,
+               n̸=0
+                                                            r − 2
+
+with the implicit constant independent of Q.
+
+                                           References
+[1] A. Amenta; G. Uraltsev. Variational Carleson operators in UMD spaces. J. Lond. Math. Soc.
+    (2) 105 (2022), no. 3, 1363–1417. (Page 2)
+[2] C. Benea; C. Muscalu. Sparse domination via the helicoidal method. Rev. Mat. Iberoam. 37
+    (2021), no. 6, 2037–2118. (Page 2)
+[3] J. Bourgain. An approach to pointwise ergodic theorems. Geometric aspects of functional analysis
+    (1986/87), 204–223. Lecture Notes in Math., 1317 Springer-Verlag, Berlin, 1988. (Page 3)
+[4] J. Bourgain. Pointwise ergodic theorems for arithmetic sets. Inst. Hautes Études Sci. Publ.
+    Math. (69):5-45, 1989. With an appendix by the author, Harry Furstenberg, Yitzhak Katznelson
+    and Donald S. Ornstein. (Pages 5, 25, and 32)
+[5] Carleson, L. On convergence and growth of partial sums of Fourier series, Acta Math. 116 (1966)
+    135–157 (Page 2)
+[6] L. Cladek; K. Henriot; B. Krause; I. Laba; M. Pramanik. A discrete Carleson theorem along the
+    primes with a restricted supremum. Math. Z. 289 (2018), no. 3-4, 1033–1057. (Page 3)
+[7] C. Demeter; M. Lacey; T. Tao; C. Thiele. Breaking the duality in the return times theorem.
+    Duke Math. J. 143 (2008), no. 2, 281–355. (Page 7)
+[8] T. Eisner; T. Tao. Large values of the Gowers-Host-Kra seminorms. J. Anal. Math. 117 (2012),
+    133–186. (Page 10)
+[9] C. Fefferman. Pointwise convergence of Fourier series. Ann. of Math. (2) 98 (1973), 551–571.
+    (Page 2)
+[10] J. Fornal; A. Fragkos; B. Krause; M. Lacey; H. Mousavi; Y.-C. Sun. The Wiener Wint-
+    ner and Return Times Theorem Along the Primes/ Preprint, https://arxiv.org/pdf/2601.10459.
+    (Pages 3, 4, 7, 10, 18, 19, and 31)
+[11] J. Fornal; B. Krause; J. Teraväinen. Double Recurrence and Almost Sure Convergence: Primes
+    and Weighted Theory. Preprint, https://arxiv.org/abs/2603.22203 (Pages 3, 4, 7, 18, 19, 20, 48,
+    and 50)
+[12] S. Guo; P. Zorin-Kranich. A Variable Coefficient Multi-Frequency Lemma. Preprint,
+    https://arxiv.org/pdf/2010.00812 (Page 5)
+[13] R. Hunt. On the convergence of Fourier series.Orthogonal Expansions and their Continuous
+    Analogues. (Proc. Conf., Edwardsville, Ill., 1967), pp. 235–255 Southern Illinois University Press,
+    Carbondale, IL, 1968. (Page 2)
+[14] R. Jones; A. Seeger; J. Wright. Strong variational and jump inequalities in harmonic analysis.
+    Trans. Amer. Math. Soc. 360 (2008), no. 12, 6711-6742. (Page 13)
+[15] B. Krause. Polynomial Ergodic Averages Converge Rapidly: Variations on a Theorem of Bour-
+    gain. Preprint, https://arxiv.org/pdf/1402.1803 (Page 42)
+[16] B. Krause. Discrete analogues in harmonic analysis: a theorem of Stein-Wainger. J. Funct.
+    Anal. 287 (2024), no. 5, Paper No. 110498, 49 pp. (Page 4)
+[17] B. Krause. Discrete Analogues in Harmonic Analysis: Bourgain, Stein, and Beyond. Graduate
+    Studies in Mathematics, 224. American Mathematical Society, Providence, RI, 2023. (Page 13)
+54        A Variation Norm Carleson Theorem Along the Primes
+
+[18] B. Krause. Pointwise Ergodic: Examples and Entropy. Séminaire Bourbaki: Volume 2022/2023
+    Exposés 1197–1210. (Page 2)
+[19] B. Krause. A Hard-Analytic Proof of ”Most” Polynomial Wiener-Wintner Theorems for Infinite
+    Measure Spaces. Preprint, https://arxiv.org/abs/2511.02786 (Page 5)
+[20] B. Krause. Bourgain’s Return Times Theorem: Primes and Weighted Theory. Preprint available
+    on request. (Pages 3, 4, 7, and 48)
+[21] B. Krause; J. Roos. Discrete analogues of maximally modulated singular integrals of Stein-
+    Wainger type. J. Eur. Math. Soc. (JEMS) 24 (2022), no. 9, 3183–3213. (Page 4)
+[22] B. Krause; J. Roos. Discrete analogues of maximally modulated singular integrals of Stein-
+    Wainger type: ℓp bounds for p > 1. J. Funct. Anal. 285 (2023), no. 10, Paper No. 110123, 19 pp.
+    (Page 4)
+[23] M. Lacey; C. Thiele. A proof of boundedness of the Carleson operator. Math. Res. Lett. 7 (2000),
+    no. 4, 361–370. (Page 2)
+[24] D. Lépingle. La variation d’ordre p des semi-martingales. Z.F.W. 36, 1976, 295-316. (Pages 2
+    and 24)
+[25] V. Lie. The polynomial Carleson operator. Ann. Math. (2) (ISSN 0003-486X) 192 (1) (2020)
+    47–163. (Page 2)
+[26] A. Lewko; M. Lewko. Estimates for the square variation of partial sums of Fourier series and
+    their rearrangements. J. Funct. Anal. 262 (2012), no. 6, 2561–2607. (Page 13)
+[27] A. Magyar; E. Stein; S. Wainger. Discrete analogues in harmonic analysis: spherical averages.
+    Ann. of Math. (2) 155 (2002), no. 1, 189–208. (Pages 25 and 52)
+[28] M. Mirek; B. Trojan. Cotlar’s ergodic theorem along the prime numbers. J. Fourier Anal. Appl.
+    21 (2015), no. 4, 822–848. (Page 3)
+[29] M. Mirek; B. Trojan; P. Zorin-Kranich. Variational estimates for averages and truncated sin-
+    gular integrals along the prime numbers. Trans. Amer. Math. Soc. 369 (2017), no. 8, 5403–5423.
+    (Page 3)
+[30] R. Oberlin; A. Seeger; T. Tao; C. Thiele; J. Wright. A variation norm Carleson theorem. J.
+    Eur. Math. Soc. (JEMS) 14 (2012), no. 2, 421–464. (Pages 2 and 24)
+[31] G. Uraltsev. Variational Carleson embeddings into the upper 3-space. Trans. Amer. Math. Soc.
+    378 (2025), no. 7, 4765–4805. (Page 2)
+[32] M. Wierdl. Pointwise ergodic theorem along the prime numbers. Israel J. Math. 64 (1988), no.
+    3, 315–336. (Page 3)
+[33] P. Zorin-Kranich. Maximal polynomial modulations of singular integrals. Adv. Math. 386 (2021),
+    Paper No. 107832, 40 pp. (Page 2)
+               A. Fragkos, B. Krause, N. Miheisi, and Y.-C. Sun          55
+
+  Department of Mathematics, Georgia Tech, 686 Cherry Street, Atlanta, GA
+30332-0160 USA
+  Email address: anastasiosfragkos@gatech.edu
+
+  Department of Mathematics, University of Bristol, Beacon House, Queens Rd,
+Bristol BS8 1QU
+  Email address: ben.krause@bristol.ac.uk
+
+  Department of Mathematics, King’s College London, Strand Building, Strand
+Campus, Strand, London, WC2R 2LS
+  Email address: naz.miheisi@gmail.com
+
+  Department of Mathematics, University of Bristol, Beacon House, Queens Rd,
+Bristol BS8 1QU
+  Email address: yuchensun93@163.com
+

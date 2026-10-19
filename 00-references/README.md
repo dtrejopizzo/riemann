@@ -38,7 +38,7 @@ strategy for $\overline{\mathrm{Spec}\,\mathbb Z}$, Hochschild homology and $\ze
 *Knots, Primes and the Adele Class Space*, the Jacobian of $\overline{\mathrm{Spec}\,\mathbb
 Z}$, and the absolute geometry of $\mathrm{Spec}\,\mathbb Z$ via the Fargues–Fontaine curve.
 This is the source material behind every place the corpus reads Connes–Consani directly (see
-`03-research/AUDIT_CONSOLIDATED.md` §3 and `NO-GO-LIST.md` MW-5 for what the corpus concluded from
+`03-research/AUDIT_CONSOLIDATED.md` §3 and `05-meta-and-planning/archive-top-level/NO-GO-LIST.md` MW-5 for what the corpus concluded from
 it).
 
 | Folder | Title |
@@ -68,7 +68,7 @@ against — plus one much newer paper that the corpus currently treats as its be
 | `arXiv-math0204110v1` | Number Theory and Dynamical Systems on Foliated Spaces |
 | `arXiv-math0505354v1` | Arithmetic Geometry and Analysis on Foliated Spaces |
 | `arXiv-2504.15767v3` | Is There a Birch and Swinnerton-Dyer Conjecture for Dedekind Zeta Functions? |
-| **`arXiv-2508.05329v1`** | **Rational Witt Vectors and Associated Sheaves** — Deninger's Theorem 5.1 (`W_rat(O(X)) ≅ Corr(X,A)`), the source of `OPTIONS.md` §1a (G-4) and the "BUILT-MODULO-GAP" row-(a) candidate in `phase-114_a_03`. |
+| **`arXiv-2508.05329v1`** | **Rational Witt Vectors and Associated Sheaves** — Deninger's Theorem 5.1 (`W_rat(O(X)) ≅ Corr(X,A)`), the source of `05-meta-and-planning/archive-top-level/OPTIONS.md` §1a (G-4) and the "BUILT-MODULO-GAP" row-(a) candidate in `phase-114_a_03`. |
 
 ## `papers-nuevos/C` — foliated dynamical systems and leafwise cohomology
 
@@ -76,7 +76,7 @@ The technical machinery Deninger's conjecture actually runs on: leafwise cohomol
 zeta functions on foliated systems, Riemannian foliations of bounded geometry, and Connes' own
 spectral interpretation of the zeros. This is what `03-research/phase-42-hodge-dynamics` and
 `phase-43-hodge-foliated-specZ` read from source to test whether $\mathrm{Spec}\,\mathbb Z$
-can carry a Kähler–Riemann foliation (it cannot, in the realized witness — see `NO-GO-LIST.md`).
+can carry a Kähler–Riemann foliation (it cannot, in the realized witness — see `05-meta-and-planning/archive-top-level/NO-GO-LIST.md`).
 
 | Folder | Title |
 |---|---|
@@ -92,7 +92,7 @@ can carry a Kähler–Riemann foliation (it cannot, in the realized witness — 
 Row (d)'s own bibliography: the arithmetic Hodge index theorem for adelic line bundles (both
 parts), quadratic Riemann–Roch formulas, the Riemann–Hurwitz formula for arithmetic surfaces, and
 numerical cohomology for arithmetic surfaces. This is the literature `THE_BACKWARD_MAP.md` and
-`OPTIONS.md` §1d (R16 — does a quadratic Riemann–Roch exist over $\mathrm{Spec}\,\mathbb Z$ at
+`05-meta-and-planning/archive-top-level/OPTIONS.md` §1d (R16 — does a quadratic Riemann–Roch exist over $\mathrm{Spec}\,\mathbb Z$ at
 all?) draw on.
 
 | Folder | Title |
@@ -130,7 +130,7 @@ A self-contained bibliography on tropical Riemann–Roch and Hodge theory: tropi
 combinatorial tropical surfaces, a specialization inequality, Hodge theory for tropical varieties,
 Jacobians of tropical curves, and non-additive geometry / Frobenius correspondences (Connes–Consani
 again, in the tropical/$\mathbb F_1$ register). This is the natural place to look first for
-`OPTIONS.md` §1d's question — tropical geometry is exactly a setting where Riemann–Roch is already
+`05-meta-and-planning/archive-top-level/OPTIONS.md` §1d's question — tropical geometry is exactly a setting where Riemann–Roch is already
 known in a combinatorial, non-classical form, and checking whether it is genuinely quadratic there
 is cheap.
 
@@ -169,11 +169,16 @@ unresolved as to its exact provenance.
 | `arXiv-2501.06560v1` | Knots, Primes and Class Field Theory |
 | `arXiv-2511.22755v1` | Zeta Spectral Triples |
 | `arXiv-2511.23257v1` | Quadratic Forms, Real Zeros and Echoes of the Spectral Action |
-| `arXiv-2602.04022v1.tex` | (single-file source; Connes's "Letter to Riemann," per `NO-GO-LIST.md` §VII CAND-1) |
+| `arXiv-2602.04022v1.tex` | (single-file source; Connes's "Letter to Riemann," per `05-meta-and-planning/archive-top-level/NO-GO-LIST.md` §VII CAND-1) |
 | `arXiv-2606.06604v1` | On the Absolute Geometry of $\mathrm{Spec}\,\mathbb Z$ and the Fargues–Fontaine Curve *(duplicate of `papers-nuevos/A`'s copy)* |
 | `compareplots3.pdf`, `weilcomp.png` | Supporting figures used by `phase-60`'s numerical audit, not papers. |
 
 ## Status
 
+The math.NT search for June–October 2026, with catalogue and reading order
+**Dubon → Freedman**, is in
+[arxiv-math-nt-2026-review/README.md](arxiv-math-nt-2026-review/README.md).
+It includes both PDFs, 2278 catalogued entries and 27 screened abstracts.
+
 Reference material only. See `03-research/` for what the program actually did with any of it, and
-`NO-GO-LIST.md` / `OPTIONS.md` for the conclusions drawn.
+`05-meta-and-planning/ROUTES-TRIED-INDEX/` for the conclusions drawn.

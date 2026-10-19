@@ -1,6 +1,6 @@
 # E78.67 - On the old-old chain, `PAIRNUM_N` is exactly the real log-q update
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

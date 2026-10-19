@@ -1,9 +1,7 @@
 # Paper 44 — Row B: the arithmetic family inside row A, and the separation of the two contacts
 
-David Alejandro Trejo Pizzo, with Claude (Opus 5).
-Repository: `research/riemann`.  Date: 2026-09-12.
-
-Companion to [Paper 43](../43-row-a-torsion-theory/main.md), which closes row A
+David Alejandro Trejo Pizzo.
+Repository: `research/riemann`.  Companion to [Paper 43](../43-row-a-torsion-theory/main.md), which closes row A
 at Weil strength on the graph sector `G`.  This paper closes row B on the same
 carrier: it produces the arithmetic correspondences inside `G`, computes their
 derived contacts, and proves that the contact degree is `Λ(n)` with analytic
@@ -11,15 +9,15 @@ weight `n^{−1/2}`.
 
 **Status label established here.**
 
-> **Lead decision of record (R131.019, 2026-09-12).** `ROW B: WEIL-STRENGTH-COMPLETE`
+> **Lead decision of record (R131.019).** `ROW B: WEIL-STRENGTH-COMPLETE`
 > on Paper 43's declared carrier (§14.0a–b), as a theorem about row A's declared
-> trace; B.4 amended (owner-accepted 2026-09-12), B.7 amended (owner,
-> 2026-09-12) — **[phase 133, amendment accepted 2026-09-12: this read "B.7 by
-> lead ruling with the hostile auditor's dissent recorded"; the owner accepted
-> the B.7 amendment of PANEL_SYNTHESIS §4.2 on 2026-09-12, superseding the
-> lead's ruling `R131.005` §2, and the dissent is kept verbatim in the §10
-> table as history]**. Granted after seven builder rounds and five
-> hostile audits (R131.002, .008, .011, .014, .017), the last grading the label
+> trace; B.4 amended (accepted ), B.7 amended (author,
+> ) — **[phase 133, amendment accepted : this read "B.7 by
+> ruling with the adversarial auditor's dissent recorded"; the author accepted
+> the B.7 amendment of PANEL_SYNTHESIS §4.2 on , superseding the
+> the earlier ruling `R131.005` §2, and the dissent is kept verbatim in the §10
+> table as history]**. Granted after seven construction rounds and five
+> adversarial audits (R131.002, .008, .011, .014, .017), the last grading the label
 > **EARNED**. Recorded beside the label: no sign, no positivity, no `𝓝_∞ = 0`;
 > two quarantined `CLASSICAL` imports used by no clause (**[phase 132]** the
 > explicit-formula half of the first is now `PROVED-IN-REPOSITORY`, Paper 45
@@ -27,7 +25,7 @@ weight `n^{−1/2}`.
 > Weil's criterion is a **colimit** statement and false at a finite chart; no
 > divergence rate is convention-free; `(Wgr)` withdrawn as false (W23) and
 > "positivity on Dirichlet profiles ⟹ RH" is `OPEN`. Full text: §10.4 and
-> [R131.019](../../03-research/phase-131-row-b-closure/R131_019_LEAD_FINAL_AUDIT_AND_LABEL.md).
+> [R131.019](../../03-research/phase-131-row-b-closure/R131_019_FINAL_AUDIT_AND_LABEL.md).
 
 ```text
 ROW B, after the phase-131 rebuild:
@@ -58,7 +56,7 @@ ROW B, after the phase-131 rebuild:
       PROVED Thm 8bis.4a: at every finite chart there is a primitive
       class with Q_fin > 0, so positivity FAILS on the pure Frobenius
       form, unconditionally.]
-    * [CORRECTED IN ROUND 4, hostile finding F1, lead-confirmed:]
+    * [CORRECTED IN ROUND 4, adversarial finding F1, confirmed in the final audit:]
       TWO GRAM FORMS.  The FROBENIUS family carries only the FINITE half
       W_fin of the Weil kernel -- its archimedean block vanishes for
       large N, because supp Frob_n misses Im j_infinity (Cor 3ter.10b) --
@@ -128,7 +126,7 @@ ROW B, after the phase-131 rebuild:
 
   Clause B.4 stays REFUTED AS STATED (LDelta^* Gamma_n is the fixed
   complex, differential n-1) and is PROVED AS AMENDED in section 6.2a.
-  The amendment is a PROPOSAL for the owner, mirroring the A.6 decision.
+  The amendment is a PROPOSAL for decision, mirroring the A.6 decision.
 
   NOT claimed: that Z/Phi_n(1) is an object of G; any object-level
   realization of the integral contact (P123.022 refutes it); any
@@ -142,8 +140,8 @@ ROW B, after the phase-131 rebuild:
 > [phase 128](../../03-research/phase-128-adversarial-audit/D128_002_AUDIT_B.md).
 > The corrections are applied in place below and marked.
 >
-> **[REBUILT, phase 131, round 3.]**  The **owner accepted the B.4 amendment**
-> on 2026-09-12 and asked for the recorded reservations to be dissolved with
+> **[REBUILT, phase 131, round 3.]**  The **author accepted the B.4 amendment**
+> on  and asked for the recorded reservations to be dissolved with
 > new mathematics.  Round 3 adds three sections: **§3ter, the Frobenius
 > family** — the Haar measures of the fixed-point strata `j_p(p^kZ_p^×)`,
 > a strong monoidal realization of `(N_{≥1},×)` with a **true unit** `Δ`,
@@ -163,14 +161,14 @@ ROW B, after the phase-131 rebuild:
 > refuted that name and the framing that went with it, and the repair —
 > Lemma 3bis.3b and Theorem 3bis.7′ — is round 2's main addition.  Every
 > round-2 change is marked `[REBUILT, phase 131, round 2]`, and
-> `R131_004_BUILDER_ROUND2.md` disposes of every finding of `R131.002`
+> `R131_004_ROUND2.md` disposes of every finding of `R131.002`
 > (`F1`–`F13`) and `R131.003` (`F1`–`F5`).  Every new or changed passage is marked `[REBUILT, phase 131]`.
 > What was withdrawn in this phase — including the `n−1` obligation formerly
 > handed to row C — is recorded in §9bis.  Paper 43 is cited in its
 > post-phase-130 state, where it carries the label `WEIL-STRENGTH-COMPLETE`
 > **on its declared carrier and with its recorded qualifications** (Paper 43
 > §14.0a–b).  No label is granted to row B here: the closure rule reserves it
-> to an adversarial audit, and §10 states what the builder believes the
+> to an adversarial audit, and §10 states what the construction believes the
 > mathematics earns.
 
 ---
@@ -315,7 +313,7 @@ finite places (Theorem 3ter.10) — the vanishing at composite `n` being the
 integral shadow (§6bis), with Möbius cofiber `[Z→Φ_n(1)→Z]`, and
 Theorem 6bis.4 proves the accepted amended clause B.4 there.  Finally §8bis
 computes the **two Gram forms**.  **[REBUILT, phase 131, round 4, after the
-hostile finding `F1`, confirmed by the lead: the round-3 text said "the Gram
+adversarial finding `F1`, confirmed by the final audit: the round-3 text said "the Gram
 form of the Frobenius family is the Weil kernel", which this paper's own
 Corollary 3ter.10b refutes; see §9bis W16.]**  The **Frobenius** family carries
 only the **finite half** `W_{fin}`: its archimedean block is multiplied by the
@@ -416,7 +414,7 @@ We fix the clauses before constructing, mirroring the row A specification
 | **B.1** | A source category of arithmetic labels with its operation and its divisor structure, stated with objects and morphisms.  **[REBUILT, phase 131, round 3.]**  Read as: the monoid `(N_{≥1},×)` with its divisor poset, **together with its inverse-semigroup completion** `𝔉 = \{(r,F) : r ∈ Q_{>0}^×,\ P(r) ⊆ F ⊂ S_f\ \text{finite}\}` (Thm. 3ter.7), which is what the dagger forces and which is **not** a group: its idempotents `Δ^{(F)}` form the semilattice `(𝒫_{fin}(S_f),∪)`. |
 | **B.2** | A realization into row A's category, monoidal on labels, independent of uniformizers, charts, lifts and gauge. |
 | **B.3** | Unit, transposition and half-densities preserved by the realization. |
-| **B.4** | The derived contact of `Γ_n` computed in the declared category; for `n>1` its arithmetic part identified with `[Z →Φ_n(1)→ Z]`, with every truncation made explicit.  **`REFUTED AS STATED`; `PROVED AS AMENDED`** (§6.2a, Thm. 6.3a).  **[REBUILT, phase 131.]**  **ACCEPTED BY THE OWNER, 2026-09-12.**  **[REBUILT, phase 131, round 3: the accepted amendment is now proved **on the objects** of the Frobenius family (Thm. 6bis.4), not only on the radial labels; the round-2 wording is kept verbatim below because it is the text that was accepted.]**  **[REBUILT, phase 131, round 2, finding `F2`: the round-1 wording said "the value on it of `T`", which is ill-typed — `T(Γ_n^{rad})` is undefined, and the naive place-wise evaluation returns `0`.  The amendment is re-worded around the representing measure.]**  *Proposed amendment text, for the owner:* "the derived contact of the **norm class** `Γ_n^{rad}` with the diagonal, computed in the declared category — that is, the **mass at `t = \log n` of the unique finite-place Radon measure `ω_{fin}` representing `T` on the radial sector `D_A^{rad} ∩ D_A^0`** (Thm. 3bis.7; existence and uniqueness are Def–Thm 3bis.8, uniqueness because a Radon measure is determined by its integrals against `C_c^∞` tests), whose integrand is place by place the Haar-regularized rank of the relative Hochschild shadow times the half-density–Lefschetz weight (Paper 43 Thm. 7.1, Thm. 8A.9 (8A.24)–(8A.24′)) — equals `Λ(n)n^{−1/2} = n^{−1/2}·deg_det[Z→Φ_n(1)→Z]`, the integral cotangent model of P123.037 transported to the lattice `L_S ⊂ X_S` (P123.038); the identification is of **degrees**, and an object-level identification is impossible in a `C`-linear category (P123.022)."  This mirrors the A.6 decision of Paper 43 §14.2 and was **accepted by the owner on 2026-09-12**.  **[REBUILT, phase 131, round 3 — strengthened form, now proved on objects (Thm. 6bis.4):]**  the same identity holds with `Γ_n^{rad}` replaced by the **Frobenius object** `Frob_n` (Def. 3ter.2), whose finite contact is `Λ(n)n^{−1/2}` **exactly** (Thm. 3ter.10 — no limit at the finite places, no regularization), and with the right-hand side the Möbius cofiber of the **integral shadow** `Sh_Z(Frob_n) = [L_S →n→ L_S]`, a construction on the objects themselves (Lemma 6bis.2): this is the "integral or lattice category with a complex realization" that P123.022 §2's *Scope* paragraph states must be constructed, and its complex realization is acyclic exactly as that paragraph predicts.  The identification remains one of **degrees**. |
+| **B.4** | The derived contact of `Γ_n` computed in the declared category; for `n>1` its arithmetic part identified with `[Z →Φ_n(1)→ Z]`, with every truncation made explicit.  **`REFUTED AS STATED`; `PROVED AS AMENDED`** (§6.2a, Thm. 6.3a).  **[REBUILT, phase 131.]**  **ACCEPTED BY THE OWNER, 2026-09-12.**  **[REBUILT, phase 131, round 3: the accepted amendment is now proved **on the objects** of the Frobenius family (Thm. 6bis.4), not only on the radial labels; the round-2 wording is kept verbatim below because it is the text that was accepted.]**  **[REBUILT, phase 131, round 2, finding `F2`: the round-1 wording said "the value on it of `T`", which is ill-typed — `T(Γ_n^{rad})` is undefined, and the naive place-wise evaluation returns `0`.  The amendment is re-worded around the representing measure.]**  *Proposed amendment text, for decision:* "the derived contact of the **norm class** `Γ_n^{rad}` with the diagonal, computed in the declared category — that is, the **mass at `t = \log n` of the unique finite-place Radon measure `ω_{fin}` representing `T` on the radial sector `D_A^{rad} ∩ D_A^0`** (Thm. 3bis.7; existence and uniqueness are Def–Thm 3bis.8, uniqueness because a Radon measure is determined by its integrals against `C_c^∞` tests), whose integrand is place by place the Haar-regularized rank of the relative Hochschild shadow times the half-density–Lefschetz weight (Paper 43 Thm. 7.1, Thm. 8A.9 (8A.24)–(8A.24′)) — equals `Λ(n)n^{−1/2} = n^{−1/2}·deg_det[Z→Φ_n(1)→Z]`, the integral cotangent model of P123.037 transported to the lattice `L_S ⊂ X_S` (P123.038); the identification is of **degrees**, and an object-level identification is impossible in a `C`-linear category (P123.022)."  This mirrors the A.6 decision of Paper 43 §14.2 and was **accepted by the author on **.  **[REBUILT, phase 131, round 3 — strengthened form, now proved on objects (Thm. 6bis.4):]**  the same identity holds with `Γ_n^{rad}` replaced by the **Frobenius object** `Frob_n` (Def. 3ter.2), whose finite contact is `Λ(n)n^{−1/2}` **exactly** (Thm. 3ter.10 — no limit at the finite places, no regularization), and with the right-hand side the Möbius cofiber of the **integral shadow** `Sh_Z(Frob_n) = [L_S →n→ L_S]`, a construction on the objects themselves (Lemma 6bis.2): this is the "integral or lattice category with a complex realization" that P123.022 §2's *Scope* paragraph states must be constructed, and its complex realization is acyclic exactly as that paragraph predicts.  The identification remains one of **degrees**. |
 | **B.5** | `deg_det(contact) = log|Φ_n(1)| = Λ(n)`, with `n=1` treated as identity/excess and not by that formula. |
 | **B.6** | The general family proved by structure, not by extrapolation from cases; its classes and primitive components entering row A's numerical object. |
 | **B.7** | The discriminating test: the linear-dilation contact `1−u^{−1}` versus the cyclotomic contact, computed with rings and valuations for `p` and `p²`; if they differ, the geometric mechanism producing the cyclotomic factor must be located. |
@@ -498,7 +496,7 @@ Let `n ≥ 2`.  Then
 
         w(Γ_n) := ∏_{p finite} τ_p(a_S(n))
 
-  — defined as the product of the **proved local factors** of P123.042 (2.1),
+— defined as the product of the **proved local factors** of P123.042 (2.1),
   **not** as a value of Paper 43's invariant `T`; see the correction below —
   factors place-wise and canonically as
 
@@ -671,7 +669,7 @@ Throughout, `S` is a fixed finite chart with `∞ ∈ S` and `S_f ≠ ∅`, and 
 Paper 43 in its post-phase-130 state, where it carries the label
 `WEIL-STRENGTH-COMPLETE` **on its declared carrier** (Paper 43 §14.0a–b: fixed
 finite chart, chart system and colimit as additional structure, invertible
-sector; A.6 under the 2026-09-12 amendment, A.8 with target `Pic_b(B_T)`; no
+sector; A.6 under the  amendment, A.8 with target `Pic_b(B_T)`; no
 sign, `𝓝_∞^W = 0` not claimed).  Every citation below is to a theorem inside
 that carrier.
 
@@ -809,7 +807,7 @@ see §9 and §9bis.
 
 **[REBUILT, phase 131, round 2 — renamed, after finding `F1` of `R131.002`.]**
 The previous version called the object of Definition 3bis.4 "the ideal class".
-That name is wrong and it inflated what §§B.1–B.2 mean.  The hostile audit's
+That name is wrong and it inflated what §§B.1–B.2 mean.  The adversarial audit's
 argument is correct and is adopted here as mathematics:
 
 **Lemma 3bis.3b (why "ideal" is the wrong word).**  Let `S ⊇ {∞}∪P(n)`.  Then
@@ -892,7 +890,7 @@ right-hand side remembers `n` as an object: by Lemma 3bis.3b it remembers only
 `|a_S(n)|_S`.
 
 **Remark 3bis.4b (the type of `Γ_n^{rad}`: a multiplier, not an element).**
-**[REBUILT, phase 131.  This corrects the lead's blueprint, which asserted
+**[REBUILT, phase 131.  This corrects the earlier blueprint, which asserted
 that `Γ_n^{rad}` "lies in the Fell completion of `G` … a continuous compactly
 supported section".  It does not: (3bis.3) is a point mass in the archimedean
 coordinate, hence not a continuous function of `x_∞`, and `D_A = C_c^∞(C_S)`
@@ -1064,7 +1062,7 @@ where the arithmetic sits.
       says so on the B.2 and B.6 rows.
 
 **Remark 3bis.5c (smeared classes versus point classes; clause B.2's target).**
-**[REBUILT, phase 131, round 2, lead finding `F4`.]**  Clause B.2 asks for "a
+**[REBUILT, phase 131, round 2, finding `F4`.]**  Clause B.2 asks for "a
 realization into row A's category".  There are two levels and they land in
 different objects of Paper 43, exactly as Paper 43 Remark 3.5 requires:
 
@@ -2103,7 +2101,7 @@ So the cube of P123.037 §3 — vertices `C_{n/∏_J p}`, edges `i_{d,pd}`, tota
 cofiber `Prim_n` — is a categorification of Möbius inversion over the divisor
 poset, and its Euler-type invariants compute `μ ∗ f`.
 
-**Definition 5.1a (the radical cube and `Prim`).**  **[ADDED 2026-09-13; see
+**Definition 5.1a (the radical cube and `Prim`).**  **[ADDED ; see
 §12.]**  Let `N > 1` and let `∅ ≠ P ⊆ P(N)`.  The **radical cube** of `(N,P)`
 is the `|P|`-dimensional commutative cube
 
@@ -2174,7 +2172,7 @@ invariant is `0`.
                    = Λ(n) = log|Φ_n(1)|,                              (5.2)
 
 (the structure of `Prim_n` itself is **Lemma 5.1b**, proved there by induction
-on `|P(n)|`; **[CORRECTED 2026-09-13: this theorem previously asserted
+on `|P(n)|`; **[CORRECTED : this theorem previously asserted
 `Prim_n ≅ Z/p` resp. `0` and proved only the degree identity, while Theorem
 6.3(a) deduced the structure from this theorem — a citation loop.  The
 structural claim is now Lemma 5.1b and is proved; see §12]**).  For `n = 1` the
@@ -2355,7 +2353,7 @@ positive statement inside the declared category.  The amended clause supplies
 one.  It is stated for the **norm** class, which is the object the clause
 should have been about.
 
-> **Clause B.4, amended — ACCEPTED by the repository owner on 2026-09-12 (mirrors the A.6 amendment of
+> **Clause B.4, amended — ACCEPTED by the repository author on  (mirrors the A.6 amendment of
 > Paper 43 §14.2).**  **[REBUILT, phase 131, round 2, finding `F2` of
 > `R131.002` and `F5` of `R131.003`.]**  The derived contact of the norm class
 > `Γ_n^{rad}` with the diagonal, computed in the declared category — that is,
@@ -2372,7 +2370,7 @@ should have been about.
 > **degrees**.  An object-level identification is impossible in a `C`-linear
 > category (P123.022).
 
-**[phase 133: the owner-accepted text above is reproduced verbatim and is not
+**[phase 133: the accepted text above is reproduced verbatim and is not
 edited.  Its `D_A^0` is the **off-identity** set of Paper 43 §8, renamed
 `D_A^{off}` in phase 133; it is not Paper 43 Definition 9.10's primitive
 sector.  The same applies to the copy of this text in the §10 clause table
@@ -2389,7 +2387,7 @@ Four remarks on the wording before the proof.
    `Im\,j_p ∩ \{|x|_S = 1/n\}` is `Γ_n^{rad}`-null (Proposition 3bis.2's
    computation).  The round-1 wording of this box said "the value on
    `Γ_n^{rad}` of `T`" and was therefore ill-typed — the same type error the
-   builder charged against the lead's blueprint.  It is replaced by the
+   construction charged against the earlier blueprint.  It is replaced by the
    representing-measure formulation, which is a **theorem** (existence and
    uniqueness, Definition–Theorem 3bis.8), not a free definition.
 1. *Why the atom of `ω_{fin}` is the right reading of "derived contact with
@@ -2465,7 +2463,7 @@ functors (P123.022).  It does not produce an integral carrier.  It replaces an
 unprovable clause by a provable one of the same shape — a **degree**
 identity between the declared category's Lefschetz integrand and the integral
 cyclotomic model — and it names the object the clause is about.  Whether that
-is an acceptable amendment is the owner's decision, exactly as with A.6.
+is an acceptable amendment is the author's decision, exactly as with A.6.
 
 **Theorem 6.3 (B.4 as replaced; four `Z`-linear models).**  For `n > 1` the primitive contact of `Γ_n` is the
 perfect complex
@@ -2489,7 +2487,7 @@ with no truncation, and the following four constructions agree in `D(Z)`:
 
 *Proof.*  (a) is **Lemma 5.1b** (`H^{−1}Prim_n = 0`, `H⁰Prim_n = Z/Φ_n(1)`),
 in agreement with P123.037 §3 and its §4 identification with the unit
-cyclotomic contact `K_n^W` of P123.022–025; **[CORRECTED 2026-09-13: (a)
+cyclotomic contact `K_n^W` of P123.022–025; **[CORRECTED : (a)
 previously cited Theorem 5.3 for the structure, which cited this theorem in
 return]** (b) follows from (a) by
 the natural quasi-isomorphism of the whole cube (P123.038 (4.1), Theorem
@@ -3024,7 +3022,7 @@ with `I_A(F,G) = T(F⋆G^†)` nondegenerate on all of it, and with the completi
 `N_A^{dist} = \overline{J(N_A)} ⊆ D_A' ⊕ B_T` of Theorem 9.14 splitting
 canonically as `N_A^{dist,prim} ⊕ σ(B_T)` (Theorem 9.14b).  Paper 43 now
 carries the label `WEIL-STRENGTH-COMPLETE` on its declared carrier (Paper 43
-§14.0a–b), with its qualifications: A.6 under the 2026-09-12 amendment, A.8
+§14.0a–b), with its qualifications: A.6 under the  amendment, A.8
 with target `Pic_b(B_T)`, no sign, `𝓝_∞^W = 0` not claimed, and the auditor's
 dissent on A.8 recorded there.  Row B cites it in that form and no stronger.
 
@@ -3253,8 +3251,8 @@ arithmetic classes are not even primitive).  ∎  `PROVED`
 that the Gram form of the Frobenius family *is* the Weil kernel.  That is
 **false**, and it is refuted by this paper's own Corollary 3ter.10b: the
 archimedean block of the Frobenius Gram matrix carries the arithmetic
-indicator of (3ter.9) and **vanishes for large `N`**.  The hostile audit
-`R131.008` finding `F1` and the lead audit `R131.009` both state this, and it
+indicator of (3ter.9) and **vanishes for large `N`**.  The adversarial audit
+`R131.008` finding `F1` and the final audit `R131.009` both state this, and it
 is repaired here — not softened.  The repair is an improvement: the Weil
 kernel is the Gram form of the **unit-averaged** family `Frob ⋆ Δ^{rad}`, and
 the split into finite and archimedean halves is exactly the
@@ -3351,7 +3349,7 @@ constant
     c_N(m,n) := ∏_{s ∈ S_f ∖ (P(m) ∩ P(n))} vol(1+s^NZ_s) ,          (8bis.2b)
 
 whose index set is the complement of the **intersection** `P(m)∩P(n)`, not of
-the union `F = P(m)∪P(n)`.  **[CORRECTED 2026-09-13; see §12.  The earlier
+the union `F = P(m)∪P(n)`.  **[CORRECTED ; see §12.  The earlier
 text read `∏_{s∈S_f∖F}vol(1+s^NZ_s)`, "which is `1` in the normalized (`♭`)
 convention".  Both clauses were false whenever `P(m) ≠ P(n)`: the places of
 `P(m) △ P(n)` each contribute a further `vol(1+s^NZ_s)`, because there one
@@ -3384,7 +3382,7 @@ Haar measure gives four cases:
 Multiplying over `s ∈ S_f` gives (8bis.2b); and in every case the surviving
 factor has the shape (3ter.7) prescribes for the index `r` and the prime set
 `F`, namely a coset indicator at `s ∉ F` and no condition at `s ∈ F`.
-**[CORRECTED 2026-09-13: the earlier proof asserted the scalar
+**[CORRECTED : the earlier proof asserted the scalar
 `∏_{s∉F}vol(1+s^NZ_s)`, justified only by "convolution of the indicator of a
 coset of an open subgroup with itself is that volume times the indicator of the
 product coset", which does not cover the places of `P(m) △ P(n)`.]**  For (8bis.2) repeat the proof of Theorem 3ter.10 with
@@ -3586,7 +3584,7 @@ convolved profile at the label and times the convolution constants — both of
 which (8bis.2)/(8bis.2a) supply and the round-4 display silently dropped.
 With unit-height profiles `(h_m⋆h_n^†)(n/m) = 1`; in the `♭` convention the
 constant becomes `∏_{s∈S_f∖F}vol(1+s^NZ_s)^{−1}`, which is `1` only when
-`F = S_f`.  **[CORRECTED 2026-09-13: this passage previously said
+`F = S_f`.  **[CORRECTED : this passage previously said
 `V_N^{(m,n)} = 1` in the `♭` convention, which is false whenever `F ≠ S_f`;
 see (8bis.2b) and §12.]**]**
 
@@ -4286,7 +4284,7 @@ Suppose `ρ_0 = β + iγ_0` is a zero with `δ := β − \tfrac12 > 0`.  Then:
       `e^{δL/2}` as the resonant pair, and no larger.  **[REBUILT, phase 131,
       round 7, minor `p1` of `R131.017`: round 6 wrote "quadruple" while
       estimating only the resonant **pair**, and asserted without proof (as did
-      the lead) that the mismatched pair is negligible.  It is **not** proved
+      the audit) that the mismatched pair is negligible.  It is **not** proved
       negligible — non-stationary phase with a *fixed* `γ_0` gains only a
       constant per integration by parts — but it **is** bounded by the same
       order, which is all the refutation needs.]**;
@@ -4595,7 +4593,7 @@ it.  ∎  `PROVED` for (a); `CLASSICAL` for (b); `OPEN` for (c)
 ### 8bis.5 The shell normalization is forced by the Tate residue
 
 **[REBUILT, phase 131, round 4 — instruction `L1` of `R131.009`, answering
-reservation `R4` and hostile finding `F7`.  Round 2 conceded that
+reservation `R4` and adversarial finding `F7`.  Round 2 conceded that
 `vol_{d^*x}(Z_p^×) = \log p` is a *declared* normalization of row A.  It is
 not arbitrary: it is the **unique** local normalization for which the Tate
 residue is the same at every place.]**
@@ -4972,7 +4970,7 @@ withdrawn outright, together with the two statements that rested on it.
 
 **W16.  "The Gram form of the Frobenius family is the Weil kernel"
 (round-3 Corollary 8bis.1a; §0; banner; §10 block).**  *Withdrawn as false.*
-**[Hostile finding `F1` of `R131.008`, independently confirmed by the lead in
+**[Adversarial finding `F1` of `R131.008`, independently confirmed by the final audit in
 `R131.009`.]**  It is refuted by this paper's own Corollary 3ter.10b.  Applying
 (3ter.9) with `r = m/n`, the archimedean part of the off-diagonal entry
 carries the arithmetic indicator
@@ -5088,7 +5086,7 @@ spurious factor `L`.
 **false**; nothing else in the paper changes status.
 
 **W23.  The import `(Wgr)` of Theorem 8bis.7 (rounds 4–5).**  *Withdrawn as
-false.*  **[Finding `LF5` of `R131.015`; the hostile pass did not catch it.]**
+false.*  **[Finding `LF5` of `R131.015`; the adversarial pass did not catch it.]**
 `(Wgr)` asserted that for the single-frequency tests
 `g_L = ψ(t/L)e^{−iγ_0t}` the sum over zeros of `h_L = g_L⋆g_L^†` has a **fixed
 sign** and modulus `≍ L^2e^{2|β−1/2|L}` at a hypothetical off-line zero.  **Both
@@ -5098,7 +5096,7 @@ claims are false**, and Lemma 8bis.6b now proves it:
   * the **resonant** off-line pair `\{ρ_0, 1−\bar ρ_0\}` contributes
     `2\,\hat g_L(ρ_0)\,\hat g_L(1−\bar ρ_0)` with **both factors positive
     reals** when `ψ ≥ 0` — of sizes `e^{δL}` and `e^{−δL/2}`, `δ = β−\tfrac12`
-    — hence `≍ +e^{δL/2}`: **positive**, and with **half** the exponent, not
+— hence `≍ +e^{δL/2}`: **positive**, and with **half** the exponent, not
     `−L^2e^{2δL}`;
   * and the failure is structural: for any amplitude `w ≥ 0`,
     `\hat g(ρ_0) = ∫we^{δt} ≥ ∫we^{−δt} = \hat g(1−\bar ρ_0) > 0`, so no
@@ -5157,7 +5155,7 @@ and the dropped convolution constants `∏vol(1+r^NZ_r)`; the misquotation of
 (`F5`, now split off as (8bis.8a)); the display rate in Theorem 3ter.14(ii)
 (`F6`); the unproved composition claim for `Sh_Z` (`F8`, now Lemma 6bis.3a).
 
-**Also corrected, but not withdrawn.**  The lead's blueprint for this phase
+**Also corrected, but not withdrawn.**  The the earlier blueprint for this phase
 asserted that `Γ_n^{rad}` "lies in the Fell completion of `G`" as "a
 continuous compactly supported section".  It does not — it is a point mass in
 the archimedean coordinate — and Remark 3bis.4b states the correct type: a
@@ -5234,12 +5232,12 @@ ROW B, after phase 131 round 6.  SUPERSEDED WHERE THE ROUND-7 BLOCK
 APPLIES (the apparatus items A1-A5 and p1-p9); the mathematics of
 round 6 is unchanged.
 
-  ROUND 6 (hostile R131.014: N1-N5 + 7 minors + 2 notes; lead R131.015:
+  ROUND 6 (adversarial R131.014: N1-N5 + 7 minors + 2 notes; final audit R131.015:
   LF5, LF6).  No clause verdict moves.  ONE CLASSICAL IMPORT IS
   WITHDRAWN AS FALSE (W23); the theorem that used it is restated as a
   CONDITIONAL transfer theorem with its arithmetic input isolated.
 
-  LF5 (lead; the hostile pass missed it) -- THE MOST SERIOUS ITEM.
+  LF5 (final audit; the adversarial pass missed it) -- THE MOST SERIOUS ITEM.
       The import (Wgr) of Thm 8bis.7 is FALSE.  For the single-frequency
       test g_L = psi(t/L) e^{-i gamma_0 t} with psi >= 0:
         * on-line zeros contribute |g_L-hat(rho)|^2 >= 0;
@@ -5311,7 +5309,7 @@ ROW B, after phase 131 round 5.  SUPERSEDED WHERE THE ROUND-6 BLOCK
 APPLIES (the import (Wgr), Thm 8bis.7's status, Thm 8bis.2's chart, and
 the attribution of "NOT the Frobenius Gram form"); kept otherwise.
 
-  ROUND 5 REPAIRS (hostile R131.011 M1-M6 + 7 minors + 3 notes; lead
+  ROUND 5 REPAIRS (adversarial R131.011 M1-M6 + 7 minors + 3 notes; final audit
   R131.012 LF1-LF4).  No clause verdict moves; section 8bis is not a
   clause.  One round-4 PROVED claim is WITHDRAWN (W19).
 
@@ -5372,8 +5370,8 @@ ROW B, after phase 131 round 4.  SUPERSEDED WHERE THE ROUND-5 BLOCK
 APPLIES (the divergence rate, the chart quantifier, and Thm 8bis.4(iv));
 kept otherwise as the record.
 
-  WHAT ROUND 4 CHANGED.  The hostile audit R131.008 found ONE FATAL error
-  (F1), independently confirmed by the lead (R131.009): round 3 claimed
+  WHAT ROUND 4 CHANGED.  The adversarial audit R131.008 found ONE FATAL error
+  (F1), independently confirmed by the final audit (R131.009): round 3 claimed
   that the Gram form of the Frobenius family IS the Weil kernel.  It is
   NOT -- the paper's own Cor 3ter.10b refutes it.  The claim, and the one
   interface direction that rested on it, are WITHDRAWN (section 9bis
@@ -5418,8 +5416,8 @@ kept otherwise as the record.
     * Section 8bis.4 (L3): the Dirichlet-polynomial converse, CLASSICAL
       and QUARANTINED, with import (W) named.  It closes for per-n
       widths; Rem 8bis.7a(2) states exactly why a SINGLE eps fails.
-    * B.7 (L4): the lead's ruling R131.005 section 2 is adopted and the
-      hostile auditor's dissent is recorded VERBATIM beside it.
+    * B.7 (L4): the earlier ruling R131.005 section 2 is adopted and the
+      adversarial auditor's dissent is recorded VERBATIM beside it.
 
   LABEL: NOT SELF-GRANTED AND NOT CLAIMED.  No sign, no positivity, no
   N_infinity = 0, and no statement about zeros outside the clauses
@@ -5430,8 +5428,8 @@ kept otherwise as the record.
 ROW B, after phase 131 round 3.  SUPERSEDED WHERE FINDING F1 APPLIES
 (the two lines about the Gram form and the Weil kernel), kept otherwise
 as the record.  [The round-2 block is reproduced after this one, because
-the audit trail matters.]  Owner's
-decision of 2026-09-12: the B.4 amendment is ACCEPTED.  Round 3 answers
+the audit trail matters.]  Author's
+decision of : the B.4 amendment is ACCEPTED.  Round 3 answers
 the five reservations of R131.005 with NEW MATHEMATICS, not relabeling:
 
   THE OBJECT.  Section 3ter constructs the FROBENIUS FAMILY
@@ -5499,7 +5497,7 @@ the five reservations of R131.005 with NEW MATHEMATICS, not relabeling:
   B.3 PROVED* with a TRUE UNIT (Thm 3ter.4(ii)) and the degree relation
       Frob_n * Frob_n^dagger = Delta^(n) (Thm 3ter.6(ii)).
   B.4 REFUTED AS STATED; PROVED AS AMENDED, amendment ACCEPTED by the
-      owner, and now PROVED ON OBJECTS* (Thm 6bis.4).
+      author, and now PROVED ON OBJECTS* (Thm 6bis.4).
   B.5 PROVED twice and the two proved equal; n=1 as excess.
   B.6 BOTH HALVES PROVED, both non-vacuous* (Thms 3ter.12, 3ter.14).
   B.7 PROVED as a TEST; PARTIAL as a MECHANISM (unchanged; Rem 6.5a').
@@ -5536,7 +5534,7 @@ every finding in R131_004):
   B.4  REFUTED AS STATED; PROVED AS AMENDED, with the amendment RE-WORDED
        in round 2 around the representing measure omega_fin (T is
        UNDEFINED on point masses and naive evaluation gives 0).
-       The amendment remains a PROPOSAL for the owner.
+       The amendment remains a PROPOSAL for decision.
   B.5  PROVED twice and the two proved equal; n=1 handled as excess.
   B.6  first half PROVED but VACUOUS FOR COMPOSITE n (Rem 3bis.5b(d));
        second half PROVED (Thm 8.3, strong-dual convergence).
@@ -5565,8 +5563,8 @@ every finding in R131_004):
       mechanism; the P123.038 section 5 functorial arrow OPEN.
   The label WEIL-STRENGTH-COMPLETE is NOT self-granted and is NOT
   claimed: the closure rule reserves it to an adversarial audit, and the
-  round-1 hostile audit graded it NOT EARNED.  Whether the round-2
-  repairs convert that grade is the auditor's call, not the builder's.
+  round-1 adversarial audit graded it NOT EARNED.  Whether the round-2
+  repairs convert that grade is the auditor's call, not the the construction's.
 
   NOT claimed anywhere: any statement about zeros; any sign or
   positivity; that Z/Phi_n(1) is an object of G; that the integral
@@ -5575,9 +5573,8 @@ every finding in R131_004):
   point masses.
 ```
 
-**Ruling of the adversarial audit of record (session lead, Fable 5.1,
-[R131.005](../../03-research/phase-131-row-b-closure/R131_005_LEAD_FINAL_AUDIT_AND_LABEL.md),
-2026-09-12).**  B.7: `PROVED` — the mechanism producing the factor that enters
+**Ruling of the adversarial audit of record (
+[R131.005](../../03-research/phase-131-row-b-closure/R131_005_FINAL_AUDIT_AND_LABEL.md)).**  B.7: `PROVED` — the mechanism producing the factor that enters
 row A's trace (`log p` = shell volume, Thm 6.5) is located on the carrier, the
 cyclotomic mechanism is located on `G_m/Z` (Thm 6.4), the degrees agree, and a
 map between the two locations is *refuted* (P123.022), not open.  The
@@ -5595,10 +5592,10 @@ ROW B: WEIL-STRENGTH-COMPLETE on Paper 43's declared carrier,
 Every finding of the phase-128 audit, my verification of it and its
 disposition are in
 [D128.002](../../03-research/phase-128-adversarial-audit/D128_002_AUDIT_B.md);
-the phase-131 withdrawals are in §9bis.  The round-1 hostile audit
-`R131.002` (`F1`–`F13`), the lead audit `R131.003` (`F1`–`F5`) and the
+the phase-131 withdrawals are in §9bis.  The round-1 adversarial audit
+`R131.002` (`F1`–`F13`), the final audit `R131.003` (`F1`–`F5`) and the
 disposition of every one of their findings are in
-[R131.004](../../03-research/phase-131-row-b-closure/R131_004_BUILDER_ROUND2.md).
+[R131.004](../../03-research/phase-131-row-b-closure/R131_004_ROUND2.md).
 The clause table below is corrected again in round 2.
 
 | clause | status | where |
@@ -5606,10 +5603,10 @@ The clause table below is corrected again in round 2.
 | B.1 source category | **`PROVED`**.  **[REBUILT, phase 131, round 3:]** the source is `W = (N_{≥1},×)` with its divisor poset **together with its inverse-semigroup completion** `𝔉` of Thm. 3ter.7 — pairs `(r,F)`, `r ∈ Q_{>0}^×`, `P(r) ⊆ F` finite — which is where the dagger lives (Thm. 3ter.6) and whose idempotents `Δ^{(F)}` form the semilattice `(𝒫_{fin}(S_f),∪)`.  Round 2's note "the declared source has no dagger" is thereby **answered**, not merely recorded.  With the honest sentence: `W = (N_{≥1},×)` with its divisor poset is stated with objects and morphisms; the **symmetry is realized** (`C_S` is abelian, `G` is commutative on the radial sector, Thm. 3bis.5(i)); the **divisor arrows are realized** on the `Z`-linear model `Q_{S,·}` (P123.038 §3) and on the norm classes as divisibility of moduli, and have **no** morphisms in `G` (P123.082) — which B.1 as written does not ask for.  **[REBUILT, phase 131: upgraded from `PARTIAL`.  Round 2, findings `F1`,`F7`: the upgrade is defensible **only** on the reading "no functor into `G` is demanded", stating a category being otherwise free; and the declared source `W` has **no dagger**, so B.3's transposition is realized only after extending to the group completion `Q_{>0}^×`.]** | Def. 4.1, Thm. 4.3, Thm. 3bis.5, Rem. 3bis.5a, 3bis.5b |
 | B.2 monoidal realization | **`PROVED on the label monoid`, and NON-VACUOUSLY since round 3.**  **[REBUILT, phase 131, round 3:]** the **Frobenius** realization `n ↦ Frob_n` is strong monoidal with a **true unit** `Frob_1 = Δ` (Thm. 3ter.4), is **injective**, and its objects determine `(n,P(n))` (Thm. 3ter.4(iv)); it does **not** factor through the modulus, and no weak-⋆ continuous one-parameter family interpolates it (Rem. 3ter.4a).  The emptiness note below applies to the **radial** realization only, and `Γ_n^{rad} = Frob_n⋆Δ^{rad}` (Prop. 3ter.5) exhibits exactly the projector that loses the information.  Round 2's reading, kept:  **[REBUILT, phase 131, round 2, finding `F1`.]**  The realization factors as `(N_{≥1},×) ↪ (R_{>0},×) ≅ {level measures}` and therefore **forgets factorization as an object** (Lemma 3bis.3b, Rem. 3bis.5b); it is true with `n` replaced by any positive real.  What is realized is the monoid inside the modulus group; the divisor structure is realized on the integral model `Q_{S,·}` and **detected** on the carrier by the contact locus (Thm. 3bis.7′, Thm. 3bis.10(ii)).  Independence of lift, gauge, uniformizers and chart `PROVED`, re-proved in round 2 (`F10`) from the modulus alone and the inflation functor, **without** the idele projection `A_T^×→A_S^×` that P123.018 §2 refutes.  Two levels, both stated: smeared classes in `D_A^{rad} ⊂ Corr_A^{tr}`, point classes in `N_A^{dist}` (Rem. 3bis.5c) | Thm. 4.3, Lemma 3bis.3b, Thm. 3bis.5(i),(iv), Rem. 3bis.5b, 3bis.5c |
 | B.3 unit, transpose, half-density | **`PROVED`, with a TRUE unit since round 3.**  **[REBUILT, phase 131, round 3:]** `Frob_1 = Δ = E_1` is the diagonal itself, a point mass, **not** a projector (Thm. 3ter.4(ii)); `Frob_n^†` is the Frobenius at `n^{−1}` and `Frob_n⋆Frob_n^† = Δ^{(n)}`, the averaged half-density-normalized form of Weil's `Γ_F⋆Γ_F^t = qΔ`, with `Δ^{(n)} ≠ Δ` recorded explicitly (Thm. 3ter.6(ii),(iv), Rem. 3ter.6a); bidegree `M(Frob_n) = (n^{1/2},n^{−1/2})`.  The round-2 statement for the radial family, kept:  **[REBUILT, phase 131, round 2, finding `F7`.]**  Unit `Δ^{rad} = Γ_1^{rad}` (the unit-averaging projector, identity on the radial sector, `†`-fixed) and bidegree `M = (n^{1/2},n^{−1/2})`: `PROVED` outright.  Transposition: `(Γ_n^{rad})^† = Γ^{rad}_{(−\log n)}`, which is **not** a `Γ_m^{rad}`, so the realized family is `†`-stable only after passing to the group completion `Q_{>0}^×`; B.3 is proved for that `†`-monoid, and the declared source `W = (N_{≥1},×)` has no dagger.  The round-1 sentence "`†`-real because positive" is **deleted**: `μ^† = μ` is false for every `n ≥ 2` | Thm. 4.4, Lemma 4.5, Cor. 4.6, Thm. 3bis.5(ii),(iii) |
-| B.4 derived contact in the declared category | **`REFUTED AS STATED`; `PROVED AS AMENDED`; amendment ACCEPTED by the owner 2026-09-12; and since round 3 PROVED ON OBJECTS.**  **[REBUILT, phase 131, round 3:]** Thm. 6bis.4 proves `contact_{fin}(Frob_n) = n^{−1/2}deg_det Prim(Sh_Z)_n` and `deg_det Sh_Z(Frob_n) = \log n = Σ_{d|n}d^{1/2}contact_{fin}(Frob_d)`, both sides attached to the **object** `Frob_n` — the left by Cor. 3ter.11, the right through the integral shadow `Sh_Z` of Def. 6bis.1, well defined on the measure by Lemma 6bis.2.  `Sh_Z` is the integral/lattice structure P123.022 §2's *Scope* says must be constructed; its complex realization is **acyclic**, so P123.022's refutation is untouched and the identification is of **degrees**.  Round-2 reading, kept: **`REFUTED AS STATED`** (`LΔ^*Γ_n` is the fixed complex, differential `n−1`; the models of Thm. 6.3 are not operations on `Γ_n ∈ G`); **`PROVED AS AMENDED`** — the amended clause, its wording and its proof are §6.2a′ and Thm. 6.3a.  The amendment is a **proposal for the owner**, mirroring Paper 43's A.6 decision; the object-level realization stays **`REFUTED`** for additive `C`-linear contact functors (P123.022) and **`OPEN`** for an integral carrier | §6.2a, §6.2a′, Thm. 6.3a, Thm. 6.3 |
+| B.4 derived contact in the declared category | **`REFUTED AS STATED`; `PROVED AS AMENDED`; amendment ACCEPTED by the author ; and since round 3 PROVED ON OBJECTS.**  **[REBUILT, phase 131, round 3:]** Thm. 6bis.4 proves `contact_{fin}(Frob_n) = n^{−1/2}deg_det Prim(Sh_Z)_n` and `deg_det Sh_Z(Frob_n) = \log n = Σ_{d|n}d^{1/2}contact_{fin}(Frob_d)`, both sides attached to the **object** `Frob_n` — the left by Cor. 3ter.11, the right through the integral shadow `Sh_Z` of Def. 6bis.1, well defined on the measure by Lemma 6bis.2.  `Sh_Z` is the integral/lattice structure P123.022 §2's *Scope* says must be constructed; its complex realization is **acyclic**, so P123.022's refutation is untouched and the identification is of **degrees**.  Round-2 reading, kept: **`REFUTED AS STATED`** (`LΔ^*Γ_n` is the fixed complex, differential `n−1`; the models of Thm. 6.3 are not operations on `Γ_n ∈ G`); **`PROVED AS AMENDED`** — the amended clause, its wording and its proof are §6.2a′ and Thm. 6.3a.  The amendment is a **proposal for decision**, mirroring Paper 43's A.6 decision; the object-level realization stays **`REFUTED`** for additive `C`-linear contact functors (P123.022) and **`OPEN`** for an integral carrier | §6.2a, §6.2a′, Thm. 6.3a, Thm. 6.3 |
 | B.5 `deg_det = log|Φ_n(1)| = Λ(n)`; `n=1` as identity/excess | **`PROVED` twice, and the two are proved equal**: as a shell volume in the declared category (Thm. 3bis.7, `Λ(p^k) = log p = vol(p^kZ_p^×)`) and on the `Z`-linear models (Thm. 5.3); the equality is Thm. 3bis.10(iii).  `n = 1`: `Γ_1^{rad} = Δ^{rad}`, treated as identity/excess by the `c·F(1)` term of Paper 43 (8.4) with `c := 0`, and excluded from `ω_{fin}` by construction — not by the degree formula | Thm. 3bis.7, Def–Thm 3bis.8, Thm. 3bis.10, Thm. 5.3 |
 | B.6 general family by structure; classes in `N_A` | **both halves `PROVED`, and since round 3 both NON-VACUOUS.**  **[REBUILT, phase 131, round 3:]** for the Frobenius family the composite case is a **theorem about the object**: `supp\,Frob_n` meets **no** fixed-point stratum when `n` is composite, and **is** the whole shell when `n = p^k` (Thm. 3ter.12, Rem. 3ter.12a); `Frob_4` and `Frob_6` are distinguished before any trace is computed (Thm. 3ter.4(iv)).  Classes in the numerical object: `Frob_n ∈ N_A^{dist}` with strong-dual convergence, canonical primitive component and **nonzero** ruling component (Thm. 3ter.14) — so the Frobenii are **not** primitive, and no positivity is claimed.  Round-2 reading for the radial family, kept:  **[REBUILT, phase 131, round 2, finding `F1`.]**  First half: no case analysis (Prop. 7.1, Thm. 3bis.5 and 3bis.7 hold for all `n`), but by Lemma 3bis.3b the composite members of the family carry no structure distinguishing them from a generic `Γ^{rad}_{(t)}`; the content for composite `n` is the **absence** of an atom in `ω_{fin}` (Thm. 3bis.7′(iii)), which is a statement about the contact locus, not about the object.  Second half: `𝓝 = 0` and `N_A = D_A` are theorems of Paper 43 (Thm. 9.8); `Γ_h ∈ D_A^{rad} = N_A^{rad}` for smooth `h`; `Γ_n^{rad} ∈ N_A^{dist}` with convergence proved **in the strong dual**, canonical primitive component `(I_A(Γ_n^{rad},·),0)` and moments `λ_± = n^{∓1/2}` | Prop. 7.1, Thm. 8.1, **Thm. 8.3** |
-| B.7 discriminating test `p`, `p²`; mechanism located | **`REFUTED AS STATED` + `PROVED AS AMENDED` (owner, 2026-09-12).**  **[phase 133, amendment accepted 2026-09-12; this verdict read "`PROVED` (the test and, per the lead's ruling, the mechanism on the carrier); the map to the `Z`-model `REFUTED`, not open", which is kept verbatim below together with the auditor's dissent as the record of how the decision was reached.]**  Previous verdict, kept as history: **`PROVED` (the test and, per the lead's ruling, the mechanism on the carrier); the map to the `Z`-model `REFUTED`, not open.**  **[REBUILT, phase 131, round 4 — instruction `L4` of `R131.009`; the lead's ruling `R131.005` §2 is adopted and the hostile auditor's dissent is recorded verbatim beside it, as Paper 43 §10.3.3 does for A.8.]**  *Lead's ruling (`R131.005` §2, adopted here):* `PROVED` for test and mechanism on the carrier — Theorem 6.5(i)–(ii) locates the mechanism as the triviality of the fixed-point weight on the shell together with the `k`-independent Haar volume; the passage to `Φ_{p^k}(1)` on `G_m/Z` is **`REFUTED`** at object level by P123.022, and a refutation is not an open item.  *Auditor's dissent, verbatim (`R131.008` §4, B.7):* "`PROVED` as a test; `PARTIAL` as a mechanism, as the paper says. I do **not** endorse `R131.005`'s upgrade to `PROVED`: Rem. 6.5a′ is still the truth (F10)."  *Builder's note:* Remark 6.5a′ is **kept unchanged**, so a reader who follows the auditor reads `PARTIAL` there and loses nothing; no theorem of this paper depends on which grading is adopted.  Round-3 reading, kept below:  **[REBUILT, phase 131, round 2, finding `F5`.]**  *The test*: the two contacts differ decisively at `p` and `p²` — `0` versus `Z/p` in the `p`-primary part (Thm. 6.4) — and no determinant is substituted for another.  *On the carrier*, what is proved is precisely two things: the fixed-point weight `1/|1−x|_p` is identically `1` on the shell `p^kZ_p^×`, and the surviving weight `\log p = vol_{d^*x}(p^kZ_p^×)` is `k`-independent by translation invariance of Haar measure (Thm. 6.5(i)–(ii)).  *The mechanism* is `PARTIAL`: it is located on `G_m/Z` as deck `μ_n` versus fixed `μ_{n−1}` (Thm. 6.4(iv), Lemma 3.1), and on the carrier only as the shell volume, and **no map, functor or comparison between the two locations is supplied** — `Φ_{p^k}(1) = p` holds because `Φ_{p^k}(x) = Φ_p(x^{p^{k−1}})`, an unrelated reason (Rem. 6.5a′).  By P123.039 §5 a coincidence of constants does not locate a mechanism; PLAN §6's stopping rule is met for the test, not for the mechanism.  **[phase 133: the review panel (PANEL_3 §3) sides with the dissent; the owner's decision on an amendment is decided: amendment accepted.]**  **[phase 133, amendment accepted 2026-09-12: the repository owner (D. Trejo Pizzo) accepted on 2026-09-12 the amendment of B.7 proposed in PANEL_SYNTHESIS §4.2 — "the discriminating test at `p, p²` is `PROVED`; the mechanism is located on the carrier (shell volume, trivial fixed-point weight, Thm 6.5) and on the `Z`-model (deck `μ_n`, Thm 6.4(iv)); a map between the two locations is `REFUTED` on a `C`-linear carrier (P123.022), so the clause's demand for a single mechanism producing the cyclotomic factor is unsatisfiable as stated."  The lead's ruling `R131.005` §2 is superseded by the owner's decision; the auditor's dissent above is kept verbatim as history; Rem. 6.5a′ is unchanged; the row-B label stands unconditionally.  No theorem and no proof of this paper changes.]** | Thm. 6.4, **Thm. 6.5**, **Rem. 6.5a′**, Thm. 3.3, Lemma 3.1, Rem. 6.5a |
+| B.7 discriminating test `p`, `p²`; mechanism located | **`REFUTED AS STATED` + `PROVED AS AMENDED` (author).**  **[phase 133, amendment accepted ; this verdict read "`PROVED` (the test and, per the earlier ruling, the mechanism on the carrier); the map to the `Z`-model `REFUTED`, not open", which is kept verbatim below together with the auditor's dissent as the record of how the decision was reached.]**  Previous verdict, kept as history: **`PROVED` (the test and, per the earlier ruling, the mechanism on the carrier); the map to the `Z`-model `REFUTED`, not open.**  **[REBUILT, phase 131, round 4 — instruction `L4` of `R131.009`; the earlier ruling `R131.005` §2 is adopted and the adversarial auditor's dissent is recorded verbatim beside it, as Paper 43 §10.3.3 does for A.8.]**  *Lead's ruling (`R131.005` §2, adopted here):* `PROVED` for test and mechanism on the carrier — Theorem 6.5(i)–(ii) locates the mechanism as the triviality of the fixed-point weight on the shell together with the `k`-independent Haar volume; the passage to `Φ_{p^k}(1)` on `G_m/Z` is **`REFUTED`** at object level by P123.022, and a refutation is not an open item.  *Auditor's dissent, verbatim (`R131.008` §4, B.7):* "`PROVED` as a test; `PARTIAL` as a mechanism, as the paper says. I do **not** endorse `R131.005`'s upgrade to `PROVED`: Rem. 6.5a′ is still the truth (F10)."  *Construction's note:* Remark 6.5a′ is **kept unchanged**, so a reader who follows the auditor reads `PARTIAL` there and loses nothing; no theorem of this paper depends on which grading is adopted.  Round-3 reading, kept below:  **[REBUILT, phase 131, round 2, finding `F5`.]**  *The test*: the two contacts differ decisively at `p` and `p²` — `0` versus `Z/p` in the `p`-primary part (Thm. 6.4) — and no determinant is substituted for another.  *On the carrier*, what is proved is precisely two things: the fixed-point weight `1/|1−x|_p` is identically `1` on the shell `p^kZ_p^×`, and the surviving weight `\log p = vol_{d^*x}(p^kZ_p^×)` is `k`-independent by translation invariance of Haar measure (Thm. 6.5(i)–(ii)).  *The mechanism* is `PARTIAL`: it is located on `G_m/Z` as deck `μ_n` versus fixed `μ_{n−1}` (Thm. 6.4(iv), Lemma 3.1), and on the carrier only as the shell volume, and **no map, functor or comparison between the two locations is supplied** — `Φ_{p^k}(1) = p` holds because `Φ_{p^k}(x) = Φ_p(x^{p^{k−1}})`, an unrelated reason (Rem. 6.5a′).  By P123.039 §5 a coincidence of constants does not locate a mechanism; PLAN §6's stopping rule is met for the test, not for the mechanism.  **[phase 133: the review panel (PANEL_3 §3) sides with the dissent; the author's decision on an amendment is decided: amendment accepted.]**  **[phase 133, amendment accepted : the repository author (D. Trejo Pizzo) accepted on  the amendment of B.7 proposed in PANEL_SYNTHESIS §4.2 — "the discriminating test at `p, p²` is `PROVED`; the mechanism is located on the carrier (shell volume, trivial fixed-point weight, Thm 6.5) and on the `Z`-model (deck `μ_n`, Thm 6.4(iv)); a map between the two locations is `REFUTED` on a `C`-linear carrier (P123.022), so the clause's demand for a single mechanism producing the cyclotomic factor is unsatisfiable as stated."  The the earlier ruling `R131.005` §2 is superseded by the author's decision; the auditor's dissent above is kept verbatim as history; Rem. 6.5a′ is unchanged; the row-B label stands unconditionally.  No theorem and no proof of this paper changes.]** | Thm. 6.4, **Thm. 6.5**, **Rem. 6.5a′**, Thm. 3.3, Lemma 3.1, Rem. 6.5a |
 | B.8 adversarial `p,p²,p³,pq,p²q,pqr`; places preserved | `PROVED`, with the table extended by the columns the contract is about (the atom of `ω_{fin}`, the archimedean density, the bidegree) and the `w` columns re-labelled "of the lift" | Section 7, and `scripts/verify_131_contacts.py` for the numerics |
 | B.9 compatibility with A; independence | `PROVED`, **with the independence inherited, not earned**.  **[REBUILT, phase 131, round 2, finding `F9`.]**  Compatibility rests on Paper 43 (8.5), Thm. 8.8, Lemma 8.2, Thm. 8A.7c, Thm. 8A.9, Thm. 9.1, Thm. 9.7, Thm. 9.8, Thms. 9.14–9.14b — cited exactly.  Independence: no zero, no RH, no sign, no positivity, and no von Mangoldt input.  The reading `Λ(p^k) = \log p = vol(p^kZ_p^×)` is **Paper 43 Rem. 9.7a's**, with the same P123.042 §1 justification and the same declared normalization; row B **inherits** it and adds only its attachment to the family and its contact locus (Thm. 3bis.7′) | Thm. 8.2, Rem. 3bis.8b, Rem. 3.7 |
 
@@ -5618,7 +5615,7 @@ The clause table below is corrected again in round 2.
 | item | source | disposition |
 |---|---|---|
 | fixed vs ramification contact not quasi-isomorphic | P123.060 §3–4 | correct, and **not an obstruction**: coprime support, Thm. 3.3 |
-| **the lattice-index operation as an admissible diagonal shadow, extended cyclically to mixed correspondences and compared with the analytic *nuclear* trace** | P123.038 §5, P123.039 §5 | **`PARTIAL`.**  **[REBUILT, phase 131, round 2, finding `F3`.  Round 1 split this single item into two rows and marked both `PROVED`; `D128.002` `B2` had restored both halves as open, so that was a ledger regression.  One row, restored.]**  *Proved:* the comparison of **degrees** with the analytic trace, `\log[L_S:nL_S] = \log n = Σ_{d|n}d^{1/2}contact_{fin}(Γ_d^{rad})` (Thm. 3bis.10(ii)); and (6.1), which is a **definitional** identity (`D128.002` `B2`, unchanged).  **[REBUILT, phase 131, round 5, finding `M6`(a) of `R131.011`: rounds 3–4 twice announced that this row had been re-graded and twice did not do it.  It is re-graded now, per Thm. 6bis.3c and the lead's ruling `R131.005` §2.]**  *Also proved since round 4:* the **cyclic extension to mixed (finite-combination) correspondences** — Thm. 6bis.3c(ii), where `Z[𝔉^+]` is the monoid ring of a **commutative** monoid, so cyclicity is automatic **and the paper says it is automatic**; and the **linear** comparison (6bis.5) of `n^{1/2}contact_{fin}` with `deg_det Prim(Sh_Z)` on that group, where the analytic side is Paper 43's trace on genuine elements of `D_A` (the smeared Frobenii).  *Still open:* the trace **functor** itself; the comparison with the analytic **nuclear** trace as such; preservation of composition and analytic test action; the joining of unit, archimedean and Tate sectors.  *Refuted at object level, NOT open:* an additive `C`-linear contact functor producing these complexes (P123.022 §2; Thm. 6bis.3c(iv)).  P123.038 §5 and P123.039 §5 are quoted **in full** in Rem. 3bis.10b, including "an invariant of the arithmetic family does not itself provide that trace functor" and "a collection of equal trace values is insufficient for those functorial claims" — which is exactly why this paper claims degrees only |
+| **the lattice-index operation as an admissible diagonal shadow, extended cyclically to mixed correspondences and compared with the analytic *nuclear* trace** | P123.038 §5, P123.039 §5 | **`PARTIAL`.**  **[REBUILT, phase 131, round 2, finding `F3`.  Round 1 split this single item into two rows and marked both `PROVED`; `D128.002` `B2` had restored both halves as open, so that was a ledger regression.  One row, restored.]**  *Proved:* the comparison of **degrees** with the analytic trace, `\log[L_S:nL_S] = \log n = Σ_{d|n}d^{1/2}contact_{fin}(Γ_d^{rad})` (Thm. 3bis.10(ii)); and (6.1), which is a **definitional** identity (`D128.002` `B2`, unchanged).  **[REBUILT, phase 131, round 5, finding `M6`(a) of `R131.011`: rounds 3–4 twice announced that this row had been re-graded and twice did not do it.  It is re-graded now, per Thm. 6bis.3c and the earlier ruling `R131.005` §2.]**  *Also proved since round 4:* the **cyclic extension to mixed (finite-combination) correspondences** — Thm. 6bis.3c(ii), where `Z[𝔉^+]` is the monoid ring of a **commutative** monoid, so cyclicity is automatic **and the paper says it is automatic**; and the **linear** comparison (6bis.5) of `n^{1/2}contact_{fin}` with `deg_det Prim(Sh_Z)` on that group, where the analytic side is Paper 43's trace on genuine elements of `D_A` (the smeared Frobenii).  *Still open:* the trace **functor** itself; the comparison with the analytic **nuclear** trace as such; preservation of composition and analytic test action; the joining of unit, archimedean and Tate sectors.  *Refuted at object level, NOT open:* an additive `C`-linear contact functor producing these complexes (P123.022 §2; Thm. 6bis.3c(iv)).  P123.038 §5 and P123.039 §5 are quoted **in full** in Rem. 3bis.10b, including "an invariant of the arithmetic family does not itself provide that trace functor" and "a collection of equal trace values is insufficient for those functorial claims" — which is exactly why this paper claims degrees only |
 | "`T_n` is the finite translation, not the external dilation `E_n`" | P123.039 §5 | not identified, and not resolved: both produce `L_S/nL_S`, which is a coincidence of finite quotients, not a map (Thm. 6.1, Thm. 6.3(c)).  **[REBUILT, phase 131, round 2, `F3`/`F5`:]** folded into the row above; `PARTIAL` |
 | "primitive extraction has not been shown to commute monoidally" | P123.037 §5, P123.038 §5, plan §6.6 | `REFUTED as a requirement`: Thm. 5.4; corrected structure in Cor. 5.5 |
 | divisor arrows have no morphisms in `G` (P123.082) | P123.082 (1) | not needed: the cube lives on the shadow target, Remark 5.6 |
@@ -5647,7 +5644,7 @@ new statements of this phase are **Lemma 3bis.1**, **Proposition 3bis.2** and
    to pointwise convergence and B.6's second half would become `PARTIAL`.
 4. *Theorem 6.3a as an amendment.*  Is a **degree** identity an acceptable
    reading of "the derived contact identified with `[Z→Φ_n(1)→Z]`"?  This is
-   the owner's decision and the paper does not pre-empt it.
+   the author's decision and the paper does not pre-empt it.
 5. *The renaming test.*  `T(Γ_h)` of (9.1) **is** the prime-power-plus-Gamma
    side of the explicit formula.  Paper 43 Remark 9.7a's three answers apply
    verbatim here, and the crucial one is that `Λ` is **derived** as a shell
@@ -5671,7 +5668,7 @@ labelled `OPEN`, not absorbed.
 
 ---
 
-### 10.4 Lead decision of record (R131.019, 2026-09-12)
+### 10.4 Lead decision of record (R131.019)
 
 > **ROW D'S TARGET (boxed identically in Paper 43 §14.1, Paper 44 §8bis.4(vi)
 > and §10.4, and Paper 45 §14.4).**  **[phase 133, PANEL_2 §5 / PANEL_3
@@ -5680,17 +5677,16 @@ labelled `OPEN`, not absorbed.
 > **ROW D'S TARGET: I_∂ ≤ 0 on every primitive radial class Γ_g, g ∈ C_c^∞(R), on the colimit D_A^∞ with T_∞ and c = 0 (Paper 45 Cor 9.6a); this implies RH by Paper 45 Thm 9.6 (9.10) and Thm 10.4. Standing negatives: Paper 43 Thm 14.1, Paper 44 Thm 8bis.4a; Paper 44 Thm 8bis.7 is conditional under (H_L), OPEN.**
 
 
-**[Inserted by the session lead as audit of record; supersedes the conditional
+**[Inserted by the final audit as audit of record; supersedes the conditional
 decision R131.005 and the round-2 ruling block.]**
 
     ROW B: WEIL-STRENGTH-COMPLETE on Paper 43's declared carrier
            (§14.0a–b), as a theorem about row A's declared trace.
-           B.4 amended (owner, 2026-09-12); B.7 amended (owner,
-           2026-09-12) [phase 133, amendment accepted 2026-09-12; this
-           line read "B.7 by lead ruling with the hostile auditor's
+           B.4 amended (author); B.7 amended (author) [phase 133, amendment accepted ; this
+           line read "B.7 by ruling with the adversarial auditor's
            dissent recorded verbatim (§10 table)", and that dissent is
            kept verbatim in the §10 table as history].
-           Granted 2026-09-12 after builder rounds 1–7 and hostile audits
+           Granted  after construction rounds 1–7 and adversarial audits
            R131.002/.008/.011/.014/.017, the last grading the label EARNED
            conditional on apparatus items verified by grep in R131.019 §1.
 
@@ -5754,11 +5750,11 @@ Rem. 10.3.  **[phase 133, PANEL_2 MINOR-7: §11 listed Paper 43 only, while
 Phase 126 record: `03-research/phase-126-row-b-completion/`.
 Phase 128 audit: `03-research/phase-128-adversarial-audit/`.
 Phase 131 record: `03-research/phase-131-row-b-closure/` — **[REBUILT, phase
-131, round 5, finding `m7`: the list was stale at round 1.]**  lead blueprints
-`R131_000` (round 1) and `R131_006` (round 3); builder reports `R131_001`
+131, round 5, finding `m7`: the list was stale at round 1.]**  blueprints
+`R131_000` (round 1) and `R131_006` (round 3); construction memo `R131_001`
 (round 1), `R131_004` (round 2), `R131_007` (round 3), `R131_010` (round 4),
-`R131_013` (round 5); hostile audits `R131_002` (round 1), `R131_008`
-(round 3), `R131_011` (round 4); lead audits `R131_003`, `R131_005`
+`R131_013` (round 5); adversarial audits `R131_002` (round 1), `R131_008`
+(round 3), `R131_011` (round 4); final audits `R131_003`, `R131_005`
 (final audit and label ruling), `R131_009`, `R131_012`; numerical checks in
 `scripts/verify_131_contacts.py`.
 Paper 43 sections used in §3bis and §8: Def. 3.1, Lemma 3.3, Cor. 3.4,
@@ -5786,7 +5782,7 @@ made false.]**
     external citation.  **[phase 133, PANEL_1 finding B2: the clause "adds
     none to the **one** import (`W`, Wodzicki excision) recorded in Paper 43
     §12" misstated Paper 43, whose §12 records four rows — `M`, `W`, `C`, `RR`
-    — plus the transfer `Tr` added in phase 133, and says in terms "Count.
+— plus the transfer `Tr` added in phase 133, and says in terms "Count.
     Three, not one".  Corrected:]**  row B adds nothing to the imports
     recorded in Paper 43 §12.
   * **In the quarantined §8bis.3–§8bis.4: TWO, both `CLASSICAL`, each used by
@@ -5819,7 +5815,7 @@ made false.]**
 
 ---
 
-## 12. Corrections of record (2026-09-13)
+## 12. Corrections of record
 
 Two mathematical defects of this document were found in an adversarial review
 of its LaTeX rendering and are corrected above, in place and with a marker at

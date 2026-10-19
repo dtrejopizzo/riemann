@@ -1,7 +1,6 @@
 # E72.182 -- Adaptive margin certificate
 
-**Date:** 2026-07-09.
-**Role:** instantiate the Chebyshev adaptive SRP gate with a concrete margin.
+**Purpose:** instantiate the Chebyshev adaptive SRP gate with a concrete margin.
 
 ## 0. Fixed margin
 

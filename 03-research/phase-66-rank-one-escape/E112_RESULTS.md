@@ -1,6 +1,6 @@
 # E112 — the true growth rate of ‖T_N‖ is sub-exponential: a border-extension target
 
-**Date:** 2026-07-05 · `E112_TN_growth.py` (numpy/scipy, 64-node Gauss–Laguerre, exact overlap integrals).
+`E112_TN_growth.py` (numpy/scipy, 64-node Gauss–Laguerre, exact overlap integrals).
 
 ## What was measured
 The whitened prime operator T_N of `prop:laguerre-entries` (P52), built exactly:

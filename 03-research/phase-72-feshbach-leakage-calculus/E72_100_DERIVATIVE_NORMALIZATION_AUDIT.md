@@ -1,7 +1,6 @@
 # E72.100 -- Derivative normalization audit
 
-**Date:** 2026-07-09.
-**Role:** test whether the finite-band Stieltjes defect is controlled by the derivative of the finite
+**Purpose:** test whether the finite-band Stieltjes defect is controlled by the derivative of the finite
 Weyl root equation.
 
 ## 0. Motivation

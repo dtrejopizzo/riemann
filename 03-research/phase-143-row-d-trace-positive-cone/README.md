@@ -8,13 +8,13 @@ B4, **(2)** Horn A as a secondary line.
 
 | file | content | status |
 |---|---|---|
-| `R143_000_LEAD_BLUEPRINT.md` | Lead's blueprint: D.33 (`s_*`), D.34 (B4: definition, (T1), (T2), the transfer theorem, falsifiers, A8), D.35 (Horn A), D.36 (synthesis); standing rules; FATAL rule | input of record |
-| `R143_002_HOSTILE_AUDIT.md` | Hostile audit of round 1: **no FATAL**; MAJOR H1–H4; MINOR H5–H11; item-5 verdict *"RESTATEMENT, not reduction — but a well-chosen one"* | input of record |
-| `R143_003_BUILDER_ROUND2.md` | **Builder, round 2** — per-finding repair ledger (H1–H11), the new **Proposition D.34.16**, and the new **Lemma D.34.9′** (`(G⁺)` unconditionally, O-25 closed) | **this round** |
-| `R143_001_BUILDER_ROUND1.md` | **Builder, rounds 1–2 (repaired in place, bracketed round-2 notes)** — D.33 (`s_* = m(γ₁) ∈ [0.99845824, 0.99846016]` PROVED, attained at `ρ₁`; `= s_1` to 18 decimals CERTIFIED); D.34.1–4 (the cone; **(T1) decided NO, unconditionally**; **(T2) false**; **Theorem D.34.8, the transfer theorem 12.3-B4**; **Theorem D.34.10, `(b′)_{B4}` under RH**; **Corollary D.34.12, `(b′)_{B4} ⟺ RH`**); D.34.5–6 (falsifiers, A8); D.35; D.36; corpus check; paper-facing (P46-34…P46-42); open list (O-24…O-27); §Label | **this round** |
+| `R143_000_BLUEPRINT.md` | Blueprint: D.33 (`s_*`), D.34 (B4: definition, (T1), (T2), the transfer theorem, falsifiers, A8), D.35 (Horn A), D.36 (synthesis); FATAL-flag convention | input of record |
+| `R143_002_AUDIT.md` | Audit of round 1: **no FATAL**; MAJOR H1–H4; MINOR H5–H11; item-5 verdict *"RESTATEMENT, not reduction — but a well-chosen one"* | input of record |
+| `R143_003_ROUND2.md` | **Round 2** — per-finding repair ledger (H1–H11), the new **Proposition D.34.16**, and the new **Lemma D.34.9′** (`(G⁺)` unconditionally, O-25 closed) | **this round** |
+| `R143_001_ROUND1.md` | **Rounds 1–2 (repaired in place, bracketed round-2 notes)** — D.33 (`s_* = m(γ₁) ∈ [0.99845824, 0.99846016]` PROVED, attained at `ρ₁`; `= s_1` to 18 decimals CERTIFIED); D.34.1–4 (the cone; **(T1) decided NO, unconditionally**; **(T2) false**; **Theorem D.34.8, the transfer theorem 12.3-B4**; **Theorem D.34.10, `(b′)_{B4}` under RH**; **Corollary D.34.12, `(b′)_{B4} ⟺ RH`**); D.34.5–6 (falsifiers, A8); D.35; D.36; corpus check; paper-facing (P46-34…P46-42); open list (O-24…O-27); §Label | **this round** |
 | `scripts/certify_s_star.py` | certifies `s(γ,θ)`, `m(γ) = inf_θ s(γ,θ)`, the elementary bound `L(γ) = 1/cosh(π/4γ)`, and the decision `s_* = s_1` with its margins. `--fast` = `mp.dps 20` (default `40`). Per-period Newton solves with an explicit truncation bound — **not** a blind scan | `CERTIFIED` |
 
-Pending for the phase: hostile confirmation of round 2, and `R143_005` (lead decision).
+Pending for the phase: confirmation of round 2, and `R143_005` (closing decision).
 
 ## Headline results of round 1
 

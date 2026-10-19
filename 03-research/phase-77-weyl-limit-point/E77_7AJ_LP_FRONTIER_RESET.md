@@ -1,6 +1,6 @@
 # E77.7aj - LP frontier reset after singular-section reductions
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

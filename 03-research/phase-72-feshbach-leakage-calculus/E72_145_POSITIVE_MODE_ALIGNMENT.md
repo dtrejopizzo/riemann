@@ -1,7 +1,6 @@
 # E72.145 -- Positive relative mode alignment
 
-**Date:** 2026-07-09.
-**Role:** search for explicit structure in the low-rank PSD certificate.
+**Purpose:** search for explicit structure in the low-rank PSD certificate.
 
 ## 0. Motivation
 

@@ -1,6 +1,6 @@
 # E78.30 - `SAFE-U-CONTRACTION` reduces to a raw delta ratio
 
-**Run:** 2026-07-18.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

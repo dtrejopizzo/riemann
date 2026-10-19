@@ -1,7 +1,6 @@
 # E72.151 -- CPM alignment
 
-**Date:** 2026-07-09.
-**Role:** identify the cancellation behind `CPM-scale`.
+**Purpose:** identify the cancellation behind `CPM-scale`.
 
 ## 0. Operator
 

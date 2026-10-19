@@ -1,7 +1,6 @@
 # E72.59 -- PNT measure correction for endpoint operators
 
-**Date:** 2026-07-08.
-**Role:** correct the continuous endpoint operator normalization in E72.46/E72.47.
+**Purpose:** correct the continuous endpoint operator normalization in E72.46/E72.47.
 
 ## 0. The mistake
 

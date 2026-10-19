@@ -5,7 +5,7 @@
 > the end. Single load-bearing input: **H1** (real zeros of `D_P^∘`). See
 > [`CORRECTIONS-CONNES-R3.md`](CORRECTIONS-CONNES-R3.md).
 
-**Phase 65 / Signature-Continuity Package, deliverable D11.** Pure mathematics. The final deduction. It is
+**Phase 65 / Signature-Continuity Package, deliverable D11.** The final deduction. It is
 short: once D0–D10 are in place, RH is a one-line corollary, **conditional on the single load-bearing
 input D8.5**. We state the assembly, then state with full candor exactly what is proved unconditionally
 and what rests on D8.5.

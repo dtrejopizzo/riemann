@@ -1,6 +1,6 @@
 # P123.072 — Relative diagonal on the full bounded twisted category
 
-Date: 2026-09-06. Status: CONSTRUCTED with continuous cyclic comparison
+Status: CONSTRUCTED with continuous cyclic comparison
 in the chain-homotopy category. Determinant/nuclear realization and
 geometric descent remain open.
 

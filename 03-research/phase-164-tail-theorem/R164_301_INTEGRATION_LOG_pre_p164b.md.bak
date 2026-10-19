@@ -1,0 +1,49 @@
+# R164_301 — Editor log, phase 164 line L3
+
+*No statement label changed (PROVED / PROVED-CITED / ARGUED / OPEN
+copied from the source files). Backups: `*_pre_p164*` (grid JSON, grid MD, script, Paper 48 `main_pre_p164.tex`, phase-163 README);
+`R163_401_v6.md`.*
+
+## 1. Grid (R162_2300)
+- New `grid/R162_2300_part13.jsonl`: 17 routes (R163_401, 402, 501, 502, 601, 602, 603, 701, 702, 801, 802, 803, 901, 1001a/b/c, 1001O).
+  Audit audits (490, 590/591, 790, 891/892, 991) are recorded in the notes of the route they audit, not as separate routes.
+- `scripts/r162_2300_refine_grid.py`: part12/part13 block added after `C.update(upd10)`, same pattern as parts 10–11 (merge flag,
+  `partN_tools`, cell updates `upd13`). Rerun: 975 routes, **■ 10 · ◩ 20 · ◧ 34 · □ 0** (before: ■ 10 · ◩ 21 · ◧ 33, 953 routes).
+- Only symbol change: **7B ◩ → ◧** (R163_401 is a PARTIAL route not superseded; its gap (★_cell) is RH at the witness, Rem 4.8a).
+- **Deviation from the spec, flagged.** The spec asked for "5E/5F DEAD (killer E1+W3′)". R163_1001 §7 says its routes are DEAD there but that it
+  does **not** touch the live residues of 5E (O1802.3, O2802.1; two PARTIAL routes R162_1802/1902) or of 5F (O2302.1/2). I marked the R163_1001
+  routes DEAD (5E: E1 + decoupled invariants; 5F: W3′ + E1) and left the cell symbols (5E ◧, 5F ◩) as §8.3 of the grid requires. If one
+  decides those residues are also dead, both cells become ■ and the counts become ■ 12 · ◩ 19 · ◧ 33.
+- MASTER_GRID.md: header, §1 table and count paragraph, §2 regenerated from the script, §3 W3′, §4 rows f_χ and f_t, §6 residues
+  (O163.803a, BF_θ^disc θ≤1/3, (TC)), §7 ranking (separators on-line abundance and Riemann–Siegel REMOVED; two left: Euler product above the
+  window (L1) and BF_θ^disc θ≤1/3 (L2)), §8 item 7 dated 1G residue sharpened to "GRH in degree one, uniform in χ". 5G: O163.101a
+  replaced by O163.803a (Theorem C covers θ∈(1/3,½)).
+
+## 2. Paper 48
+- f_χ: definition paragraph in §falsifiers and a row in `tab:falsifiers`; the f_t row's "candidate separators" updated (abundance and
+  Riemann–Siegel excluded). Meta-theorem W3′ and Theorem O (`thm:O`, labelled PROVED given the cited off-line zeros) after W3. Status paragraph
+  after Problem 6 (Thm O; two surviving separators). Grid totals updated (10/20/34/0, 975 routes). Index row R163_1001, R164_000.
+- New bibitems: BombieriHejhal1995, KaczorowskiKulas2007, SaiasWeingartner2009 (the last two carry a `% citation to be checked` comment).
+- pdflatex run twice (no bibtex; thebibliography inline): **0 errors, no undefined references, 25 pages.**
+
+## 3. R163_401 → v7
+Boxed gap, §4.11(c) Separators, §4.11 Summary: on-line abundance and Riemann–Siegel structure removed, with reasons (Bombieri–Hejhal, R163_602 F2;
+FE-only, shared by f_χ, R163_603 L2.1). §4.11(e) added (R163_1001: f_χ, Thm O, W3′), pointing to R164_000 for (TC). Rows §4.11(e) added to the
+status table and ledger. The (A-loc) balance gap (line "no on-line abundance result is on record") is untouched: abundance remains an *input*
+of balance, it is only removed as a *separator*.
+
+## 4. Citation checks (from memory; no library access in this pass)
+| item | finding | confidence |
+|---|---|---|
+| Zhang 2007 | The record's entry — W.-B. Zhang, *Beurling primes with RH and Beurling primes with large oscillation*, Math. Ann. **337** (2007), 671–704 — agrees with my recollection. The title "Beurling primes with error term" in the task does not match any paper I can place; I recommend keeping the record's title. | title and journal: high; page range: medium |
+| Diamond–Zhang, *Beurling Generalized Numbers*, AMS Math. Surveys Monogr. 213 (2016) | Bibliographic data correct. **Content of Ch. 17: I cannot reliably name it.** I remember that the late chapters treat Beurling systems with RH and with large oscillation (DMV-type and Zhang-type examples), but I cannot say which chapter number holds which. The priority check of Theorem C (R163_892) still needs a full-text reading. | low; flag stays |
+| Gonek–Hughes–Keating 2007 | S. M. Gonek, C. P. Hughes and J. P. Keating, *A hybrid Euler–Hadamard product for the Riemann zeta function*, Duke Math. J. **136** (2007), no. 3, 507–549. Matches R164_000. As I recall it, the formula holds unconditionally for s=½+it and 2≤X≤t^{1/2} (roughly), with a smooth weight in the cut. I do not recall the exact error term or how uniform it is, so both must be checked before L1 relies on them. | title and journal: high; pages: medium; error term: low |
+| Bombieri–Hejhal 1995 | E. Bombieri and D. A. Hejhal, *On the distribution of zeros of linear combinations of Euler products*, Duke Math. J. **80** (1995), no. 3, 821–862. Content: assuming GRH for the components and a weak pair-correlation/independence hypothesis, 100 % of the zeros lie on the line. That infinitely many zeros lie off the line is a separate result (Davenport–Heilbronn type, made general for such combinations by Kaczorowski–Kulas and Saias–Weingartner). The record's sentence combines the two correctly, but "Bombieri–Hejhal" alone does not prove that zeros exist off the line. | high |
+| Kaczorowski–Kulas 2007 | Monatsh. Math. **150** (2007); title as entered in Paper 48 ("On the non-trivial zeros off the critical line for L-functions from the extended Selberg class") from memory; pages 217–232 uncertain. | medium |
+| Saias–Weingartner 2009 | Acta Arith. **140** (2009), *Zeros of Dirichlet series with periodic coefficients*; pages 335–344 uncertain. | medium |
+
+Not checked in this pass (R164_000 §3 lists them too): ATAP Thm 19.3, the value of κ for DH, the Epstein normalisation, DMV. The Paper 48
+bibitem for DMV (Math. Ann. 334 (2006) 1–36) matches my memory.
+
+## 5. Status
+(★_cell), (TC), (A-loc), row D: **OPEN**.

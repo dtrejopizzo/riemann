@@ -1,6 +1,5 @@
 # E73.273 - EIG-COEFF admissibility lemma
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

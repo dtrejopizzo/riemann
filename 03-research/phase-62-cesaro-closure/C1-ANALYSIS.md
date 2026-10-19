@@ -1,6 +1,6 @@
 # C1 — Analytic decomposition of `b_bulk(λ)`, and an candid NO-GO for the Cesàro route
 
-**Date:** 2026-06-26 · Phase 62, step C1.
+Phase 62, step C1.
 
 ## The decomposition
 

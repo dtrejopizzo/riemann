@@ -1,7 +1,6 @@
 # E72.5 -- Prior Feshbach/Schur failures audit
 
-**Date:** 2026-07-08.
-**Role:** audit the earlier uses of Feshbach/Schur shorting before using it again in Phase 72.
+**Purpose:** audit the earlier uses of Feshbach/Schur shorting before using it again in Phase 72.
 
 ## Files audited
 

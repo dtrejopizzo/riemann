@@ -1,6 +1,5 @@
 # E73.175 - Boundary trace reduction
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

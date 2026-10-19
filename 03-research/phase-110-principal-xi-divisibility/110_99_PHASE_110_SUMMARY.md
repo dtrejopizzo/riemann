@@ -100,7 +100,7 @@ substantial undertaking), and it says nothing whatsoever about RH.
 
 **Read from source, not re-derived:** the graded family $\mathcal G$, its
 divisor, and $\mathrm{Prin}'(\mathcal G)$ (108\_03, 108\_31); the
-Weil-formula identity for $I_\partial$ and the source rule (phase prompt);
+Weil-formula identity for $I_\partial$ and the source rule (phase statement);
 Stirling's asymptotic for $\log\Gamma$; the elementary fact
 $\zeta(\sigma)\to1$ as $\sigma\to\infty$.
 

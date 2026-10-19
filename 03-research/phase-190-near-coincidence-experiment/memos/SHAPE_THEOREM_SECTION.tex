@@ -1,0 +1,422 @@
+% SHAPE_THEOREM_SECTION.tex — reviewed version, integrated verbatim into 04-papers/47-row-d-dual-certificates/main.tex
+% as \section{The shape of a proof} (sec:shape) before \section{Open problems}; Problem (R) prob:region added to sec:open.
+% Corrections of the review SHAPE_THEOREM_REVIEW.md applied: three-tier theorem; O6 (Euler-preserving deletion) and the
+% twist proposition proved in the paper; Beurling clause ARGUED; margin/universal criteria structural; constants T0(0)=0.74921, kappa_* >= 1.343.
+% Compiles inside the preamble of main.tex; bibitems Paper46 and Titchmarsh1986 added there.
+
+\section{The shape of a proof}\label{sec:shape}
+
+This section collects the barriers of \S\ref{sec:negative}, \S\ref{sec:barriers} and \S\ref{sec:wh} into one statement about
+the form that any valid proof of \eqref{eq:target} must have. Nothing here is a new route and nothing moves $\lamA$. Every
+clause is either an instance of Lemma~\ref{lem:transfer} with an explicit falsifier, or a constraint on the precision or the
+exactness of a proof; every clause excludes a kind of deduction, never the conclusion. Each statement carries one of the labels
+\emph{proved}, \emph{cited}, \emph{conditional}, \emph{argued}, \emph{open} or \emph{numerical}; a clause that is only argued or
+only numerical is stated as such and is not used in the theorem.
+
+\subsection{Form objects, modifications and classes}
+
+\begin{definition}[form objects]\label{def:shape-obj}
+A \emph{comb} is a function $a:\N_{\ge2}\to\R_{\ge0}$, finite on every window, with weights $v_n(a)=2a(n)/\sqrt n$; its window
+form $\mathfrak a^{(a)}_T$, its bottom $\lambda_{\mathrm A}(T;a)$ on $\PT$ and the statement $\mathrm{WP}_T(a)$ are those of
+\S\ref{subsec:finite}, and $a=\Lambda$ gives $\lamA$ and \eqref{eq:target}. A \emph{form object} is a family $q=(q_T)_{T>0}$ of
+closed semibounded forms, $q_T$ defined on $\PT\cap\mathcal D_T$ or on a closed subspace of $L^2(\IT)$, with bottoms
+$\lambda(T;q)$. Every comb is a form object through $q_T=\mathfrak a^{(a)}_T|_{\PT}$, and $q_0:=(\mathfrak a_T|_{\PT})_T$ is the
+object of $\zeta$. The zero-side objects of \S\ref{subsec:bar-fam} and \S\ref{subsec:bar-pat} are form objects that are not combs:
+the quartet models $\mathfrak a_T+kQ_z$ of Definition~\ref{def:quartetmodel}, and the deformations $f_t$ of
+Proposition~\ref{prop:ft}, whose weights have both signs.
+\end{definition}
+
+\begin{definition}[modifications]\label{def:shape-ops}
+The following maps on form objects are used below.
+\begin{enumerate}
+\item[$\mathrm O_1$] finite deletion, $a\mapsto a\mathbf 1_{n\ge N}$;
+\item[$\mathrm O_2$] one-term amplification, $a\mapsto a+c\mathbf 1_{n=n_0}$;
+\item[$\mathrm O_3$] tail deletion, $a\mapsto a\mathbf 1_{n<n_0}$;
+\item[$\mathrm O_4$] uniform rescaling, $a\mapsto ca$ with $c>0$, and its small form $\mathrm O_4^\varepsilon$ with $c\in(1-\varepsilon,1+\varepsilon)$;
+\item[$\mathrm O_5$] a change of one weight by $\varepsilon$;
+\item[$\mathrm O_6$] Euler-preserving prime deletion, $a\mapsto a_P:=\Lambda\mathbf 1\{n\text{ is a power of a prime }p\ge P\}$;
+\item[$\mathrm O_7$] multiplication by quartets, $\xi\mapsto\xi_{z,k}$ (Definition~\ref{def:quartetmodel});
+\item[$\mathrm O_8$] self-dual deformation, $\zeta\mapsto f_t=\zeta+tg$ (Lemma~\ref{lem:selfdual});
+\item[$\mathrm O_9$] a functional-equation-preserving twist $\xi\mapsto\xi R$ by a rational function (Proposition~\ref{prop:shape-twist});
+\item[$\mathrm O_{10}$] Euler removal: passage to an Epstein zeta function of class number greater than one (Remark~\ref{rem:twohalves});
+\item[$\mathrm O_{11}$] Beurling repositioning: $\N$ replaced by a generalized-integer system with a positive prime measure;
+\item[$\mathrm O_{12}$] field change, $\xi\mapsto\xi_K$ for a number field $K$;
+\item[$\mathrm O_{13}$] restriction of the family $T\mapsto\lambda(T;q)$ to a bounded set of windows $J\subset(0,T_1]$;
+\item[$\mathrm O_{14}$] symbol truncation, $\sT\mapsto\sigma^{(\eta)}=\min(\sT,\eta)$ (Theorem~\ref{thm:nolocal});
+\item[$\mathrm O_{15}$] Poisson randomization of the positions $\{\log n\}$ at the intensity of the primes (Theorem~\ref{thm:poisson}).
+\end{enumerate}
+Two further modifications produce no falsifier and enter only the structural part: the reflection $\sigma\mapsto1-\sigma$ of the
+family $D_\sigma$ of Remark~\ref{rem:fe}, and a bounded perturbation $q_T\mapsto q_T+\mathfrak b$ with $\|\mathfrak b\|\le\lamA$
+(Lemmas~\ref{lem:wh-T}, \ref{lem:wh-Tprime}).
+\end{definition}
+
+\begin{definition}[deduction classes]\label{def:shape-class}
+A \emph{deduction class} $\mathcal A$ is specified by a set $\mathsf P$ of properties of form objects; a deduction in $\mathcal A$ is a
+valid chain ``$q$ has $\mathsf P$, hence $\lambda(T;q)\ge0$'', for every $T$ or at a fixed $T$. The class is \emph{closed under} a
+modification $\mathrm O$, for the parameters named in the corresponding lemma, if $q$ having $\mathsf P$ implies that $\mathrm O(q)$
+has $\mathsf P$. The classes already named in this paper are: identities linear in the autocorrelation with Bochner or Cauchy--Schwarz
+positivity (Proposition~\ref{prop:opcalc}); norm, moment, determinant, local, family, pattern and coherence functionals
+(\S\ref{sec:wh}, \S\ref{sec:barriers}, Proposition~\ref{prop:wit-sens}); the zero-information class $\mathcal C_{\mathrm{zeros}}$ and
+the classes $\mathcal C_{\mathrm{PNT}}(\varepsilon)$, $\mathcal C_{\mathrm{BT}}$ of Corollary~\ref{cor:void}; the progression classes of
+Proposition~\ref{prop:prog}; the dual, lattice, flat-top and square certificates (Definition~\ref{def:PD}, Theorems~\ref{thm:Z},
+\ref{thm:sos}); the symmetrizations of $D_\sigma$ (Remark~\ref{rem:fe}); and the axioms A1--A6 and the field-uniform properties of
+\cite{Paper46}.
+\end{definition}
+
+\subsection{Transfer lemmas}
+
+Each lemma names the modification, the class it closes, the falsifier, the windows at which the falsifier is negative, and the label.
+The first group is proved in this paper.
+
+\begin{lemma}[$\mathrm O_1$, finite deletion; proved]\label{lem:shape-del}
+If $\mathsf P$ is preserved by $a\mapsto a\mathbf 1_{n\ge N}$, as it is for $\mathcal C_{\mathrm{PNT}}(\varepsilon)$,
+$\mathcal C_{\mathrm{zeros}}$ and $\mathcal C_{\mathrm{BT}}$, then $\Lambda\mathbf 1_{n\ge N}$ with $N\ge\max(5,e^{2T})$ has $\mathsf P$
+and fails $\mathrm{WP}_T$ for every $T\in[0.60,\frac12\log N]$, and for every $T>T_0(0)=0.74921$ (Theorem~\ref{thm:finmod}(i),
+Corollary~\ref{cor:void}, Proposition~\ref{prop:arch}(ii)).
+\end{lemma}
+
+\begin{lemma}[$\mathrm O_2$, amplification; proved]\label{lem:shape-amp}
+If $\mathsf P$ is preserved by $a\mapsto a+c\mathbf 1_{n=2}$, then $\Lambda+c\mathbf 1_{n=2}$ with $c>c_*(T,2)$ has $\mathsf P$ and fails
+$\mathrm{WP}_T$ at every $T>\frac12\log2$, including the windows $(\frac12\log2,\frac12\log5]$ at which $\mathrm{WP}_T(\Lambda)$ holds
+(Theorem~\ref{thm:finmod}(ii)).
+\end{lemma}
+
+\begin{lemma}[$\mathrm O_3$, tail deletion; proved]\label{lem:shape-tail}
+If $\mathsf P$ holds for every $a$ with $a=\Lambda$ on $n<n_0$ and $0\le a\le\Lambda$ (the exact small values together with every upper-bound
+sieve inequality), then $\Lambda\mathbf 1_{n<n_0}$ has $\mathsf P$ and fails $\mathrm{WP}_T$ for all large $T$; the dilated tests of
+Proposition~\ref{prop:finsupp} have limit value $C_0-\sum_{n<n_0}v_n<0$ (Corollary~\ref{cor:wtail}(i)). The first failing window is not located.
+\end{lemma}
+
+\begin{lemma}[$\mathrm O_4$, rescaling; proved for $c$ large and small, conditional for $\mathrm O_4^\varepsilon$]\label{lem:shape-scale}
+If $\mathsf P$ is preserved by $a\mapsto ca$ for every $c>0$ (an Euler product $\zeta^c$, the support, the relative sizes of the weights),
+then $c\Lambda$ fails $\mathrm{WP}_T$ at every $T>\frac12\log2$ for $c$ large, and at every $T\ge0.60$ for $c$ small. If $\mathsf P$ is
+preserved only by $c\in(1-\varepsilon,1+\varepsilon)$, then $(1+\operatorname{sgn}(\kappa_T)\varepsilon)\Lambda$ fails $\mathrm{WP}_T$ as soon as
+$\varepsilon>\lamA/|\kappa_T|$, \emph{provided} $\kappa_T\ne0$, where $\kappa_T=\sum_nv_nc_h(\log n)$ for a real unit minimizer $h$
+(Proposition~\ref{prop:wit-sens}); whether $\kappa_T\ne0$ at some window is not known, and $\kappa_{\log2}\approx0.09$ is a numerical value
+(Remark~\ref{rem:wit-sens}).
+\end{lemma}
+\begin{proof}
+For $c$ large take $F_+=\phi+\phi(\cdot-\log2)$ of Lemma~\ref{lem:cpos} with $u_0=\log2$ and $\ell<\log\frac32$. The autocorrelation
+$c_{F_+}$ is supported in $\{|u|<\ell\}\cup\{|u\mp\log2|<\ell\}$, which contains no $\log n$ with $n\ge3$, and $c_{F_+}(\log2)=\|\phi\|^2>0$.
+Hence $\mathfrak a^{(c\Lambda)}_T(F_+)=\mT(F_+)-cv_2\|\phi\|^2\to-\infty$ as $c\to\infty$. For $c$ small, the function $\mu_T$ of
+Lemma~\ref{lem:degen} is finite and concave on $\R^{\NT}$, hence continuous, and $\mu_T(0)=\laminfP(T)<0$ for $T\ge0.60$
+(Corollary~\ref{cor:Tarch}); so $\lambda_{\mathrm A}(T;c\Lambda)=\mu_T(cv)<0$ for $c$ small. The small form is Proposition~\ref{prop:wit-sens}.
+\end{proof}
+
+\begin{lemma}[$\mathrm O_5$, one weight; conditional]\label{lem:shape-weight}
+Let $F_\star$ be a real unit minimizer at $T$ and $n_0\in\NT$ with $c_{F_\star}(\log n_0)\ne0$. If $\mathsf P$ is preserved by changing the
+weight at $n_0$ by $\varepsilon$, then $\Lambda+s\varepsilon\mathbf 1_{n=n_0}$ with $s=\operatorname{sgn}c_{F_\star}(\log n_0)$ fails $\mathrm{WP}_T$
+for every admissible $\varepsilon>\varepsilon_*(T,n_0)=\sqrt{n_0}\,\lamA/(2|c_{F_\star}(\log n_0)|)$, where for $s=-1$ admissibility means
+$\varepsilon\le\Lambda(n_0)$ (Remark~\ref{rem:resweights}). If every real minimizer has $c_{F_\star}=0$ on $\log\NT$, the clause is empty
+and Lemma~\ref{lem:degen} describes that case; whether this happens at any window is not known. The numerical scale $10^{-5}$ at $T=\log2$
+(Remark~\ref{rem:wit-sens}) is not certified.
+\end{lemma}
+
+\begin{proposition}[$\mathrm O_6$, Euler-preserving prime deletion; proved]\label{prop:shape-eulerdel}
+Let $P\ge3$ and $a_P:=\Lambda\mathbf 1\{n\text{ is a power of a prime }p\ge P\}$. Then $a_P\ge0$ has the generating function
+$\zeta_{a_P}(s)=\prod_{p\ge P}(1-p^{-s})^{-1}=\zeta(s)\prod_{p<P}(1-p^{-s})$, an Euler product over $\N$ with nonnegative integral
+Dirichlet coefficients; $\zeta_{a_P}$ has exactly the zeros of $\zeta$ in $0<\Rel s<1$ and the pole at $s=1$; $a_P(p^k)=\log p$ on its
+support; $a_P\le\Lambda$; and $a_P$ fails $\mathrm{WP}_T$ for every $T\in[0.60,\frac12\log P]$. Of the properties listed in
+Definition~\ref{def:shape-class}, $a_P$ breaks only the functional equation.
+\end{proposition}
+\begin{proof}
+$\sum_na_P(n)n^{-s}/\log n=\sum_{p\ge P}\sum_k p^{-ks}/k=-\sum_{p\ge P}\log(1-p^{-s})$, which gives the Euler product; the coefficients of
+$\prod_{p\ge P}(1-p^{-s})^{-1}$ count factorizations, so they are nonnegative integers. The finite product $\prod_{p<P}(1-p^{-s})$ is
+entire and vanishes only on $\Rel s=0$. The comb of $a_P$ is empty on $\NT$ when $e^{2T}\le P$, so $\mathrm{WP}_T(a_P)$ is
+$\laminfP(T)\ge0$, false for $T\ge0.60$ (Corollary~\ref{cor:Tarch}). Finally $\zeta_{a_P}(1-s)\ne\zeta_{a_P}(s)\,\Gamma$-factor, since
+$\prod_{p<P}(1-p^{-s})$ is not invariant under $s\mapsto1-s$.
+\end{proof}
+
+\begin{lemma}[$\mathrm O_7$, quartets; proved]\label{lem:shape-quartet}
+The models $\xi_{z,k}$ keep the comb $(\Lambda(n))_n$ exactly, the functional equation, reality and the pole, and share with $\zeta$ the
+properties of Proposition~\ref{prop:quartetmodel}; for $k\ge k_0(T,\delta,\gamma)$ they have a witness at $T$, hence at every $T'\ge T$
+(Theorem~\ref{thm:wit-model}(iii)). Their arithmetic side differs from that of $\zeta$ only by the absolutely continuous part $-k\beta_z$.
+\end{lemma}
+
+\begin{lemma}[$\mathrm O_8$, self-dual deformation; proved]\label{lem:shape-ft}
+$f_t=\zeta+tg$ keeps every $\Lambda(n)$ with $n<\lambda_1$ and Riemann's functional equation with the archimedean factor and pole of
+$\zeta$, and for $|t|$ large has a primitive witness at the window $\frac12\log\lambda_1+\varepsilon$ (Propositions~\ref{prop:ft},
+\ref{prop:ftprim}). Its frequencies $m/\sqrt M$ are not integers: it breaks the Euler product over $\N$.
+\end{lemma}
+
+\begin{proposition}[$\mathrm O_9$, a twist that keeps the line data; proved]\label{prop:shape-twist}
+Fix $\gamma_0>0$ with $\zeta(\frac12+i\gamma_0)\ne0$ and $0<\delta<\frac18$, and put
+\[
+R(s)=\prod_{\pm}\frac{(s-\frac12-\delta\mp i\gamma_0)(s-\frac12+\delta\mp i\gamma_0)}{(s-\frac12-2\delta\mp i\gamma_0)(s-\frac12+2\delta\mp i\gamma_0)},
+\qquad\tilde\xi:=\xi R,\quad\tilde\zeta:=\zeta R,
+\]
+and $\ell(\tau):=\log|\xi(\frac12+i\tau)|$, $\tilde\ell(\tau):=\log|\tilde\xi(\frac12+i\tau)|$. Then:
+\emph{(i)} $\tilde\xi(1-s)=\tilde\xi(s)$ and $\tilde\xi$ is real on $\R$; $\tilde\xi$ is meromorphic with four poles, at
+$\frac12\pm2\delta\pm i\gamma_0$, inside the strip.
+\emph{(ii)} On the line, $R(\frac12+i\tau)=\prod_\pm\frac{(\tau\mp\gamma_0)^2+\delta^2}{(\tau\mp\gamma_0)^2+4\delta^2}\in[\frac1{16},1]$; hence
+$|\tilde\zeta|\le|\zeta|$ on the line, and, off zeros and poles, $\Rel\frac{\tilde\zeta'}{\tilde\zeta}(\frac12+i\tau)=-\frac12m(\tau)$,
+the same identity as for $\zeta$.
+\emph{(iii)} $\tilde\ell=\ell+\log R(\frac12+i\,\cdot)$ with $\int_\R|\log R(\tfrac12+i\tau)|\,d\tau=4\pi\delta$.
+\emph{(iv)} $\tilde\ell''(\gamma_0)=\ell''(\gamma_0)+\frac3{2\delta^2}+O(\delta^2\gamma_0^{-4})$.
+Consequently, let $\mathcal M$ be the class of arguments whose inputs about $\zeta$ on the line are: the functional equation with
+$\Gamma_\R$ and conductor $1$, reality, the identity in (ii), and finitely many inequalities of the forms
+$\int_I\varphi\,\ell\,d\tau<B$ or $\int_I|\zeta(\frac12+i\tau)|^{2k}d\tau<B_k$ with fixed bounded $I$, bounded $\varphi$ and strict
+inequality. No argument in $\mathcal M$ bounds $\ell''$ from above on an interval containing $\gamma_0$. The class does not contain
+arguments that use the holomorphy of $\xi$ in the strip together with its order-one growth.
+\end{proposition}
+\begin{proof}
+(i) The zero and pole sets of $R$ are invariant under $s\mapsto1-s$ and $s\mapsto\bar s$, and a direct check of the eight linear factors
+gives $R(1-s)=R(s)$ and $\overline{R(\bar s)}=R(s)$; $\xi$ has both symmetries. (ii) On $s=\frac12+i\tau$ each factor has modulus
+$((\tau\mp\gamma_0)^2+\delta^2)/((\tau\mp\gamma_0)^2+4\delta^2)\in[\frac14,1]$ and the product is real positive. A function real on the
+line has purely imaginary logarithmic derivative there, so $\Rel\frac{\tilde\xi'}{\tilde\xi}(\frac12+i\tau)=0$; since
+$\Rel[\frac1s+\frac1{s-1}]=0$ on the line and $\Rel[\frac12\psi(\frac s2)-\frac12\log\pi]=\frac12m(\tau)$ by \eqref{eq:m}, this is the
+identity stated, for $\tilde\zeta$ exactly as for $\zeta$. (iii) $\int_\R[\log(x^2+a^2)-\log(x^2+b^2)]dx=2\pi(a-b)$ for $a,b>0$, applied
+with $(a,b)=(\delta,2\delta)$ to each of the two factors; $\log R\le0$ on the line. (iv) $\frac{d^2}{dx^2}\log(x^2+a^2)|_{x=0}=2/a^2$, so
+the factor centred at $\gamma_0$ contributes $2/\delta^2-2/(4\delta^2)=3/(2\delta^2)$ to the second derivative at $\tau=\gamma_0$, and the
+factor centred at $-\gamma_0$, evaluated at distance $2\gamma_0$, contributes $O(\delta^2\gamma_0^{-4})$. For the consequence: suppose an
+argument in $\mathcal M$ derived $\ell''\le K$ on an interval $J\ni\gamma_0$. By (i), (ii) the first three inputs hold for $\tilde\zeta$ for
+every $\delta$; by (ii) and (iii) each inequality of the last kind holds for $\tilde\zeta$ once $\delta$ is small (the moments of
+$|\tilde\zeta|^{2k}$ do not exceed those of $|\zeta|^{2k}$, and $\int_I\varphi\tilde\ell$ differs from $\int_I\varphi\ell$ by at most
+$4\pi\delta\|\varphi\|_\infty$). So the argument gives $\tilde\ell''\le K$ on $J$, contradicting (iv) for $\delta$ small. The last
+sentence is (i): $\tilde\xi$ is not entire.
+\end{proof}
+
+No negative value of a window form of $\tilde\zeta$ on $\PT$ has been computed; Proposition~\ref{prop:shape-twist} excludes a class of
+pointwise arguments about the curvature of $\ell$ on the line, and is not a falsifier in the sense of Lemma~\ref{lem:transfer}. An
+$m$-fold twist with a witness at every window, in the manner of Theorem~\ref{thm:wit-model}(iii), would make it one; the form
+$Q_{\delta+i\gamma_0}-Q_{2\delta+i\gamma_0}$ of Lemma~\ref{lem:quartet} is the natural candidate and has not been examined.
+
+The second group of transfer lemmas rests on inputs that are cited, argued or open.
+
+\begin{lemma}[$\mathrm O_{10}$, Euler removal; cited for the complete form, argued for the primitive bottom]\label{lem:shape-epstein}
+Let $Q$ be a positive definite binary quadratic form whose discriminant has class number greater than one, $Z_Q$ its Epstein zeta
+function and $\Xi_Q$ its completion. $\Xi_Q$ shares with $\xi$ the functional equation with $\Gamma(s/2)$, reality, the polar set and
+nonnegative Dirichlet coefficients, that is, the axioms A1--A6 of \cite{Paper46}, and has zeros in $\Rel s>1$
+\cite{DavenportHeilbronn1936}. By Weil's criterion applied to $Z_Q$ \cite{Weil52}, the Weil form of $Z_Q$ takes a negative value on a
+test of compact support; hence the complete window form built from the coefficients of $-Z_Q'/Z_Q$ (which have both signs: there is no
+Euler product) and the archimedean factor of $\Xi_Q$ is negative at some window and at all larger ones. A witness on the primitive
+subspace $\PT$, as in Proposition~\ref{prop:ftprim} for $f_t$, has not been written. (Remark~\ref{rem:twohalves}; the falsifier and the
+axiom list are those of \cite[Thms.~18.10, 18.16]{Paper46}, which concern a different inequality and are used here only as a source.)
+\end{lemma}
+
+\begin{lemma}[$\mathrm O_{11}$, Beurling systems; argued]\label{lem:shape-beurling}
+There are generalized-integer systems with nonnegative prime measure, an Euler product and a counting function $N(x)=\rho x+O(x^\theta)$
+whose zeta function has zeros off the line $\Rel s=\frac12$ \cite{DiamondZhang2016}. Such a system keeps every property of $\Lambda$ that is
+stated inside the semigroup (nonnegativity, the Euler product, the identity $\Lambda*1=\log$, the sieve axioms) and breaks only the
+integrality of the frequencies. It has no functional equation with $\Gamma_\R$, and no window form of it has been shown negative: the
+step from an off-line zero to a negative window bottom would require an explicit formula for the system with a test of compact support,
+which is not written. The lemma is therefore an argued clause and is not used in Theorem~\ref{thm:shape}(A).
+\end{lemma}
+
+\begin{lemma}[$\mathrm O_{12}$, field change; transfer principle proved, falsifier open]\label{lem:shape-field}
+A derivation of $\lamA\ge0$ that invokes only properties shared by the completed zeta functions $\xi_K$ of all number fields $K$ is a
+derivation of the corresponding conclusion for every $\xi_K$. No window $T$ and field $K$ with a negative primitive bottom for $\xi_K$
+is exhibited in this paper; the clause therefore says only that a proof must name the property that separates $\zeta$ from every
+$\xi_K$, or else be held to the standard of proving the sign for all of them (the principle of \cite[Thm.~18.1]{Paper46}, whose own
+proof passes through a statement about $\zeta_K$ that is not used here).
+\end{lemma}
+
+\begin{lemma}[$\mathrm O_{13}$, bounded families; proved]\label{lem:shape-fam}
+If $\mathsf P$ depends on $T\mapsto\lambda(T;q)$ only through $J\subset(0,T_1]$, monotonicity and continuity, and on the weights only
+through membership in a class closed under $\mathrm O_2$, then $\Lambda+c\mathbf 1_{n=n_0}$ with $n_0>e^{2T_1}$ has $\mathsf P$ and fails
+$\mathrm{WP}_T$ for $T>\frac12\log n_0$ and $c>c_*(T,n_0)$; if instead the weights are only known to come from a self-dual Dirichlet
+series with the functional equation of $\zeta$, $f_t$ does the same (Theorems~\ref{thm:famblind}, \ref{thm:famFE}). Not excluded: the use
+of $\lambda$ on an unbounded set of windows, which enters only through $\lim_T\lamA\ge0$, and two-sided laws $\lamA=L(T)(1+o(1))$
+with $L>0$ (Remark~\ref{rem:bar-fam}).
+\end{lemma}
+
+\begin{lemma}[$\mathrm O_{14}$, local criteria; proved]\label{lem:shape-local}
+No criterion that depends on $\sT$ only through its restriction to $\{\sT<\eta\}$ decides the sign at any window: $\sigma^{(\eta)}$ has the
+same negative set and a negative form for $\eta<\eta_0(T)$ (Theorem~\ref{thm:nolocal}).
+\end{lemma}
+
+\begin{lemma}[$\mathrm O_{15}$, random positions; proved]\label{lem:shape-poisson}
+For $T\ge T(c,\kappa)$ the Poisson comb of intensity $\kappa$ fails $\mathrm{WP}_T$ with probability at least $1-e^{-cT\log T}$; in
+particular some realization fails it, so no deduction that uses the positions $\{\log n\}$ only through their intensity and moments proves
+$\mathrm{WP}_T$ at such $T$ (Theorem~\ref{thm:poisson}).
+\end{lemma}
+
+\begin{lemma}[derived classes; proved]\label{lem:shape-classes}
+\emph{(i)} Classes defined by statements on $\psi_a(x;q,c)$ that are stable under $O(1)$ changes are closed under $\mathrm O_1$ and
+$\mathrm O_2$ (Proposition~\ref{prop:prog}); classes $0\le a\le\Lambda$ under $\mathrm O_1$. \emph{(ii)} $\mathcal C_{\mathrm{zeros}}$ is
+closed under $\mathrm O_1$ and $\mathrm O_2$, since $\zeta_a=\zeta E$ with $E$ entire and zero-free (Corollary~\ref{cor:void}); and no finite
+symmetric multiset of ordinates carries a flat-top certificate (Theorem~\ref{thm:finZ}). \emph{(iii)} Deductions from window observables
+(the bottom up to a relative error, the parity of the minimizer, the peak of $|\widehat{h^*}|^2$, eigenvalue counts, laws fitted to these)
+are excluded numerically by $\xi_{z,1}$ and, for the shared properties of Proposition~\ref{prop:quartetmodel}, by $\xi_{z,k}$ with $k$ large
+(Corollary~\ref{cor:pattern}).
+\end{lemma}
+
+\subsection{Structural lemmas}
+
+These constrain every proof, in whatever class, and produce no falsifier.
+
+\begin{lemma}[margin and universal criteria; proved, inputs cited]\label{lem:shape-margin}
+\emph{(i)} $\lamW\le\lamP\le\lamA\le4\cdot10^9Te^{-15.449T}$ for $T\ge1$ (Corollary~\ref{cor:margin1}; the zero data are those of
+\cite{PlattTrudgian2021}). Any lower bound that proves \eqref{eq:target} at $T$ has this absolute precision; relative to the comb mass
+$\Aconst\asymp e^T$ it is $e^{-16.4T}$. \emph{(ii)} A criterion valid for every nonnegative trace-class operator, or for every bounded
+perturbation of the form, has margin at most $k\lamA/c_P$ (moments), $L\lamA$ (Lipschitz functionals), and a leading term of the window
+determinant with relative error $\varepsilon_0\ge1$ never decides (Lemmas~\ref{lem:wh-T}, \ref{lem:wh-Tprime},
+Theorem~\ref{thm:wh-detinherit}(iii)). The modified objects in (ii) have bottom $0$, not a negative bottom: these are precision
+constraints, not instances of Lemma~\ref{lem:transfer}.
+\end{lemma}
+
+\begin{proposition}[criticality]\label{prop:shape-crit}
+\emph{(a) The centre (proved).} $m(0)=C_0=-2\zeta'(\frac12)/\zeta(\frac12)$ (Proposition~\ref{prop:boundary}), and the zero sum behind it
+vanishes termwise: for a pair $\rho$, $1-\bar\rho$ one has $\Rel[\frac1{\frac12-\rho}+\frac1{\frac12-(1-\bar\rho)}]=0$. The identity holds
+for every zero configuration symmetric under $\rho\mapsto1-\bar\rho$ and carries no slack.
+\emph{(b) The packets (conditional).} For every $\gamma>0$ the threshold of $(E_\gamma)$ is exactly $m^\sharp(\gamma)$
+(Proposition~\ref{prop:Egamma-exact}). If, in addition, the Riesz means of the twisted sums $\mathcal F_T(F_T)/\|F_T\|^2$ converge
+whenever they are bounded, then $(E_\gamma)$ with any additive constant $C\ge0$ is equivalent to $(E_\gamma)$ itself: there is no slack at
+any packet frequency. The additional hypothesis is a statement about the divergent alternative that is not proved here.
+\emph{(c) The integer resolution (proved; a Mertens-type estimate cited).} Let $P_T(\tau)=\sum_{n\in\NT}v_n\cos(\tau\log n)$. Then
+\[
+\lim_{Y\to\infty}\frac1{2Y}\int_{-Y}^{Y}P_T(\tau)^2d\tau=\frac12\sum_{n\in\NT}v_n^2=4T^2\,(1+o(1))\qquad(T\to\infty),
+\]
+so the root mean square of the comb is $2T(1+o(1))$, while the archimedean symbol at the frequency $e^{2T}$ of the integer resolution is
+$m(e^{2T})=2T+O(1)$ (Lemma~\ref{lem:mbounds}(ii)): comb and symbol are of the same size at that resolution.
+\emph{(d) The density ceiling (proved).} A comb $a\ge0$ with $\lambda_{\mathrm A}(T;a)\ge0$ for every $T$ has
+$\liminf S(x)/\log x\le1$, and $\Lambda$ sits at the ceiling (Theorem~\ref{thm:ceiling}); the main-term comb $\rho_\kappa$ is positive at
+every window if and only if $\kappa\ge\kappa_\star$, where $\kappa_\star\ge\frac14|C_0|=1.343>1$ (Theorem~\ref{thm:kappa}). So the main
+term of $\Lambda$ is below the positivity threshold of main terms.
+\emph{(e) No asymptotic slack (proved).} \eqref{eq:target} holds as soon as $\lamA\ge-\varepsilon(T)$ for all $T$ with
+$\varepsilon(T)\to0$, or $\lamA\ge0$ along one sequence $T_k\to\infty$ (Theorem~\ref{thm:wit-Tc}(iv)); there is no weaker asymptotic
+sub-statement in $T$.
+\end{proposition}
+\begin{proof}
+(a) Proposition~\ref{prop:boundary} and the displayed computation, in which $(\frac12-\beta)+(\beta-\frac12)=0$ for $\rho=\beta+i\gamma$.
+(b) Proposition~\ref{prop:Egamma-exact}: under the hypothesis, a bounded $\limsup$ is a limit, and a limit that is at most
+$m^\sharp(\gamma)+C$ for the packets $F_T$ at every scale is at most $m^\sharp(\gamma)$, since the limit does not depend on $C$.
+(c) The frequencies $\log n$, $n\in\NT$, are distinct, so the Ces\`aro mean of $P_T^2$ is $\frac12\sum v_n^2=2\sum_{n<e^{2T}}\Lambda(n)^2/n$.
+Since $\Lambda(n)^2=\Lambda(n)\log n$ on primes and $\sum_{p^k,k\ge2}\Lambda(p^k)\log p^k/p^k<\infty$, one has
+$\sum_{n\le x}\Lambda(n)^2/n=\sum_{n\le x}\Lambda(n)\log n/n+O(1)=\frac12\log^2x+O(\log x)$ \cite[Thm.~2.7 and partial summation]{MontgomeryVaughan2007},
+and $x=e^{2T}$ gives $2\cdot\frac12(2T)^2=4T^2$. (d) and (e) are the cited theorems.
+\end{proof}
+
+\begin{lemma}[antisymmetry; proved]\label{lem:shape-antisym}
+$D_{1-\sigma}=-D_\sigma$ exactly, every combination of the family $D_\sigma$ symmetric under $\sigma\mapsto1-\sigma$ vanishes, and
+$D_{1/2}\equiv0$ off the ordinates (Remark~\ref{rem:fe}). No positivity is obtained by symmetrizing the family.
+\end{lemma}
+
+\begin{lemma}[operator calculus and squares; proved]\label{lem:shape-lin}
+\emph{(i)} Every expression $\sum_i\Rel\langle A_i*F,B_i*F\rangle$ with finite measures $A_i,B_i$ equals $\int_{(-2T,2T)}\Rel\cF\,d\nu$
+(Proposition~\ref{prop:opcalc}): an identity in shift-multiplier calculus is an identity of measures on the window and carries the whole
+margin, and the only further tool of that calculus is the positivity $\|A*F\|^2\ge0$. The statement covers convolution operators only.
+\emph{(ii)} No arithmetic square decomposition exists at any $T\ge\frac12\log3$; with a free positive definite part the decompositions are
+exactly the certificates of Definition~\ref{def:PD}, whose value is $\lamP$ (Theorems~\ref{thm:sos}, \ref{thm:D1}). The interval
+$(\frac12\log2,\frac12\log3)$ is not decided.
+\end{lemma}
+
+\begin{lemma}[orders, relative bounds, exterior measures, termwise bounds; proved]\label{lem:shape-misc}
+The M\"obius resolvent is not monotone for the order of $\mathcal K^*_T$ (Proposition~\ref{prop:cone}); no relative bound with constants
+$(\theta,\kappa,C)$ decides for large $T$, not even $\theta=0$ (Proposition~\ref{prop:relative}); no certificate of the complete form with
+a positive exterior measure exists at the windows where $\kappa_T(\Phi)<0$ (Theorem~\ref{thm:posext}; the two values in
+Remark~\ref{rem:posext} are floating evaluations); and a bound that treats the comb term by term costs its full mass
+(Proposition~\ref{prop:primeblind}).
+\end{lemma}
+
+\begin{lemma}[flows and new contacts; identity proved, readings argued]\label{lem:shape-flow}
+The coefficient of any $C^1$ flow of $\log\det$ on Galerkin sections near a window with small bottom is dominated by
+$\langle A'h^*,h^*\rangle/\lamA$, a functional of the minimizer (Lemma~\ref{lem:flowdet}, Remark~\ref{rem:bar-loc}); positivity at $T>T_0$
+imposes on the new contacts an averaged inequality on $U_{T_0}$, never a pointwise one (Theorem~\ref{thm:X}), and the converse of that
+inequality fails for the quartet model, numerically (Remark~\ref{rem:X}).
+\end{lemma}
+
+\begin{proposition}[the three inputs enter jointly]\label{prop:shape-inputs}
+Consider the three properties: (E) the Euler product over $\N$, equivalently $\sum_{d\mid n}a(d)=\log n$ for $n\in\NT$; (F) the functional
+equation with $\Gamma(s/2)$, conductor $1$, reality and the pole; (I) the integrality of the frequencies, that is, support on $\log\N$.
+\emph{(i) (proved)} A deduction that uses (E) and (I) with nonnegativity, the local values $a(p^k)=\log p$ and the location of the zeros
+and the pole, but not (F), proves nothing: $a_P$ has all of these (Proposition~\ref{prop:shape-eulerdel}).
+\emph{(ii) (cited)} A deduction that uses (F) and (I) with nonnegative coefficients, but not (E), proves nothing for the complete form:
+$\Xi_Q$ has all of these (Lemma~\ref{lem:shape-epstein}).
+\emph{(iii) (argued)} A deduction that uses (E) and (F)-free semigroup properties, but not (I), is matched by the Beurling systems
+of Lemma~\ref{lem:shape-beurling}.
+\emph{(iv) (proved)} The modifications $\mathrm O_7$ and $\mathrm O_8$ keep (F): the quartet models keep (E) as a comb identity but add an
+absolutely continuous arithmetic part, and $f_t$ breaks (I). Hence a property set that survives (i), (ii) and (iv) contains (E) and (F)
+jointly, with (I); and (E) with (F) at conductor $1$ determines $\zeta$ up to a constant, by Hamburger's theorem \cite[\S2.13]{Titchmarsh1986}.
+\end{proposition}
+\begin{proof}
+(i), (ii), (iv) are the lemmas cited; the quartet models have logarithmic derivative $\xi'/\xi$ plus a rational function, which is not a
+Dirichlet series over $\N$, and the frequencies $m/\sqrt M$ of $f_t$ are irrational. The last sentence is Hamburger's theorem: a Dirichlet
+series over $\N$ of finite order with the functional equation of $\zeta$ is a constant multiple of $\zeta$.
+\end{proof}
+
+\begin{lemma}[no weaker substatement; proved]\label{lem:shape-restate}
+Each of the following is an exact restatement of \eqref{eq:target}, not a weaker statement: a flat-top certificate $f_w\ge0$ at every
+window (Theorem~\ref{thm:Z}: $f_w=\sum_\rho\wh(\tau-\gamma_\rho)$, so its content is the explicit formula on the tests $w\cos(\tau\,\cdot)$);
+the indeterminacy of the extension problem at every window off $\{\lamW=0\}$ (Theorem~\ref{thm:KEPdich}); the positive definiteness of
+the one-profile function $\mathsf B$ (Theorem~\ref{thm:oneprofile}); the positivity of $\mathrm{Arch}_M-\mathrm{Div}_M-\mathrm{Near}_M$ for
+every $M$ (Proposition~\ref{prop:AM}); the finite matrices $S_{T,k(T)}\succeq0$ (Theorem~\ref{thm:coer-schur}); and the one-sided
+asymptotic $\lamA\ge-\varepsilon(T)$ (Proposition~\ref{prop:shape-crit}(e)). A proof of any of them is a proof of \eqref{eq:target} and has
+the shape described below.
+\end{lemma}
+
+\subsection{The theorem}
+
+\begin{theorem}[the shape of a proof]\label{thm:shape}
+Let $\mathcal A$ be a deduction class with property set $\mathsf P$.
+\begin{enumerate}
+\item[(A)] \textup{(transfer, proved)} If $\mathcal A$ is closed under one of $\mathrm O_1$, $\mathrm O_2$, $\mathrm O_3$, $\mathrm O_4$ (for
+all $c>0$), $\mathrm O_6$, $\mathrm O_7$, $\mathrm O_8$, $\mathrm O_{13}$, $\mathrm O_{14}$, $\mathrm O_{15}$, in the ranges of
+Lemmas~\ref{lem:shape-del}--\ref{lem:shape-scale}, \ref{prop:shape-eulerdel}--\ref{lem:shape-ft}, \ref{lem:shape-fam}--\ref{lem:shape-poisson},
+or if $\mathcal A$ is one of the classes of Lemma~\ref{lem:shape-classes}(i),(ii), then $\mathcal A$ contains no valid deduction of
+$\mathrm{WP}_T(\Lambda)$ at the windows named in the corresponding lemma; in particular none proving \eqref{eq:target}.
+\item[(A$'$)] \textup{(transfer with a label)} The same conclusion holds for $\mathrm O_4^\varepsilon$ and $\mathrm O_5$ under the
+hypotheses $\kappa_T\ne0$, respectively $c_{F_\star}(\log n_0)\ne0$ (conditional); for $\mathrm O_{10}$ for the complete form (cited) and,
+for the primitive bottom, argued; for $\mathrm O_{11}$, argued; for $\mathrm O_{12}$ the falsifier is open; and for $\mathrm O_9$ the exclusion
+concerns pointwise bounds on the curvature of $\ell$, not the window form.
+\item[(B)] \textup{(structure)} Every valid deduction of \eqref{eq:target}, in whatever class, satisfies
+Lemmas~\ref{lem:shape-margin}--\ref{lem:shape-restate}: its margin at $T\ge1$ is at most $4\cdot10^9Te^{-15.449T}$; it is exact at the
+centre, at the integer resolution and at the density ceiling, and, under the hypothesis of Proposition~\ref{prop:shape-crit}(b), at every
+packet frequency; it is not a symmetrization of $D_\sigma$; written in shift-multiplier calculus it is a measure identity on $(-2T,2T)$
+plus Bochner positivity, and it is no arithmetic square decomposition for $T\ge\frac12\log3$; it uses the Euler product over $\N$ and the
+functional equation at conductor $1$ jointly; and each statement of Lemma~\ref{lem:shape-restate} is \eqref{eq:target} itself.
+\item[(C)] \textup{(positive form)} Hence every valid proof of \eqref{eq:target} uses, at a load-bearing line, a property of $\zeta$ that
+is destroyed by each modification named in (A), and, with the labels stated there, by those named in (A$'$). Corollary~\ref{cor:shape}
+lists these properties.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(A) is Lemma~\ref{lem:transfer}: each cited lemma exhibits $\mathrm O(q_0)$ with property $\mathsf P$ and a negative bottom at the named
+windows, so a deduction in $\mathcal A$ would apply to $\mathrm O(q_0)$ and yield a false conclusion there. (A$'$) is the same argument,
+with the falsifier's negativity carrying the label of its lemma. (B) is the conjunction of the structural lemmas. (C) is the
+contrapositive of (A): a proof whose property set were invariant under one of the named modifications would lie in a class closed under
+it.
+\end{proof}
+
+\subsection{Corollaries}
+
+\begin{corollary}[what a proof must be]\label{cor:shape}
+A valid proof of \eqref{eq:target}:
+\begin{enumerate}
+\item[(a)] uses the vector $(\Lambda(n))_{n<e^{2T}}$ exactly at every $T$, not through membership in a class closed under any modification
+of (A) (Lemmas~\ref{lem:shape-del}--\ref{lem:shape-scale}, \ref{prop:shape-eulerdel}), and non-linearly: a linear use is a measure identity
+on the window (Lemma~\ref{lem:shape-lin}(i)) and so a certificate of class (D), whose content is $\lamP$ itself
+(Lemma~\ref{lem:shape-lin}(ii), Lemma~\ref{lem:shape-restate}); and it uses a property not shared by the zero-side modifications
+(Lemmas~\ref{lem:shape-quartet}, \ref{lem:shape-ft}): the quartet models keep the comb exactly, so the property is not a property of the
+comb alone;
+\item[(b)] uses the Euler product over $\N$, the functional equation at conductor $1$ and the integrality of the frequencies jointly
+(Proposition~\ref{prop:shape-inputs}; the third input argued), hence is a computation with the data of $\zeta$ at every window, uniform in
+$T$, and not a class argument over a family of objects;
+\item[(c)] decides a correlation. If $F_\star$ is a real unit minimizer at $T$, then by Lemma~\ref{lem:degen}
+$\lambda_{\mathrm A}(T;v')\le\lamA-\sum_n(v'_n-v_n)c_{F_\star}(\log n)$ for every weight vector $v'$: the vector
+$(-c_{F_\star}(\log n))_n$ is a supergradient of the concave bottom, and the one-sided derivative in a direction is the minimum of this
+expression over the minimizers. No bounded functional of the weights or of the symbol (Lemma~\ref{lem:shape-weight},
+Lemma~\ref{lem:shape-margin}(ii), Remark~\ref{rem:wit-sens}), no local criterion (Lemma~\ref{lem:shape-local}) and no termwise bound
+(Lemma~\ref{lem:shape-misc}) decides it; numerically, a relative change of $10^{-5}$ in the weights changes the sign at $T=\log2$ while
+every coherence functional moves by less (Remark~\ref{rem:wit-sens});
+\item[(d)] has no slack: Lemma~\ref{lem:shape-margin}(i) and Proposition~\ref{prop:shape-crit}.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+Each item restates the lemmas it cites; in (c), Lemma~\ref{lem:degen} gives the inequality for every $v'$, which is the definition of a
+supergradient of $\mu_T$ at $v_T(\Lambda)$, and a concave function has one-sided directional derivatives equal to the infimum of its
+supergradients in that direction.
+\end{proof}
+
+\begin{remark}[what the theorem does not say]\label{rem:shape-scope}
+(i) It does not say that \eqref{eq:target} is unprovable: every clause excludes a deduction, and the proofs of $\mathrm{WP}_T$ for
+$T\le\frac12\log5$ (Theorems~\ref{thm:C}, \ref{thm:log5A}, \ref{thm:log5W}), with the cited ranges of \cite{Zhu2026} and \cite{Liu2026},
+are computations with the exact vector, inside the region of Problem~\ref{prob:region} below. (ii) No equivalence between
+\eqref{eq:target} and a statement about another object is used; the equivalences of Lemma~\ref{lem:shape-restate} are internal
+restatements, used only to say that none of them is weaker than \eqref{eq:target}. (iii) The clauses that are not proved are listed in
+Theorem~\ref{thm:shape}(A$'$) and in Proposition~\ref{prop:shape-crit}(b); what would upgrade each is stated with it: a proof that
+$\kappa_T\ne0$ or that the degenerate case of Lemma~\ref{lem:degen} does not occur; a primitive witness for $\Xi_Q$; an explicit formula
+with compactly supported tests for one Beurling system; a window and a field with a negative primitive bottom; an $m$-fold twist with
+a window witness. (iv) The theorem does not rank what remains; it describes the region in which every proof must lie, and that region
+is stated as Problem~\ref{prob:region}.
+\end{remark}

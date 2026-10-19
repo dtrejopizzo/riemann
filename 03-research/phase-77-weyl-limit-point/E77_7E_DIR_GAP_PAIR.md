@@ -1,6 +1,6 @@
 # E77.7e - Paired Interlacing-Gap Audit
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Exact Implication
 

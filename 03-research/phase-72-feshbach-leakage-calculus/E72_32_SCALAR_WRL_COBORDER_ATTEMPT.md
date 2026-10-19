@@ -1,7 +1,6 @@
 # E72.32 -- Coborder attempt for scalar WRL resonance annihilation
 
-**Date:** 2026-07-08.
-**Role:** attack the minimal remaining target directly:
+**Purpose:** attack the minimal remaining target directly:
 
 ```text
 R_x^{WRL}(s;rho)

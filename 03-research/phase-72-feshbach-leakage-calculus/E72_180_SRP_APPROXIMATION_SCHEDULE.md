@@ -1,7 +1,6 @@
 # E72.180 -- Approximation schedule for adaptive SRP
 
-**Date:** 2026-07-09.
-**Role:** give a concrete degree schedule for the adaptive signed-residual polynomial gate.
+**Purpose:** give a concrete degree schedule for the adaptive signed-residual polynomial gate.
 
 **Note:** E72.181 supersedes the Bernstein schedule below with a sharper explicit Chebyshev schedule
 `D_x=O(sqrt(d_x))`. This document remains as a conservative fallback and derivation of the

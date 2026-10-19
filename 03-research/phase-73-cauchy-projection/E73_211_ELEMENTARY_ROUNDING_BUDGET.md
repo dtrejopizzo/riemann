@@ -1,6 +1,5 @@
 # E73.211 - Elementary rounding budget
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

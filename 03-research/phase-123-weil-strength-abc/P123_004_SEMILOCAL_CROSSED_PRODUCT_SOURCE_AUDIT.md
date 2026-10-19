@@ -12,10 +12,10 @@ comparison with the periodic Deligne determinant.
 
 ## 1. Primary sources and version check
 
-The current arXiv record checked on 2026-09-04 is:
+The current arXiv record checked is:
 
 * A. Connes and C. Consani, *On the Jacobian of the completed spectrum of
-  Z*, arXiv:2602.15941v1, submitted 2026-02-17.  The arXiv record presently
+  Z*, arXiv:2602.15941v1, submitted . The arXiv record presently
   lists only v1: <https://arxiv.org/abs/2602.15941>.
 
 Its local TeX source is
@@ -93,7 +93,7 @@ completion and does not close A5--A8.
 
 ## 4. Exact imported trace scope
 
-**Normalization audit, 2026-09-05:**
+**Normalization audit:**
 [P123.035](P123_035_REAL_FOURIER_GAMMA_NORMALIZATION.md) detects a
 factor-two discrepancy in the literal real Fourier-log calculation of
 the separately cited Meyer source. Its real coefficient cannot be

@@ -1,6 +1,6 @@
 # E78.91 - The shell growth of `u` is exactly a numerator-vs-denominator radial gap
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

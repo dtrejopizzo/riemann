@@ -6,14 +6,14 @@ Let `theta` be an inner function on the upper half-plane (or disk), let
 `0<r<1`, and put
 
 \[
- \beta=b_r\circ\theta,qquad
+ \beta=b_r\circ\theta,\qquad
  c_r(\theta)=\frac{\sqrt{1-r^2}}{1-r\theta}.           \tag{1.1}
 \]
 
 The Crofoot transform
 
 \[
- C_r:K_\theta\longrightarrow K_\beta,qquad
+ C_r:K_\theta\longrightarrow K_\beta,\qquad
  C_rf=c_r(\theta)f                                   \tag{1.2}
 \]
 
@@ -72,7 +72,7 @@ Order a finite set `P={p_1,...,p_N}` and write
 
 \[
  \theta_j=\theta_{p_j},\qquad
- \beta_j=b_{r_{p_j}}\circ\theta_j,qquad
+ \beta_j=b_{r_{p_j}}\circ\theta_j,\qquad
  Z_P=\prod_j\theta_j,\qquad B_P=\prod_j\beta_j.       \tag{2.1}
 \]
 
@@ -80,7 +80,7 @@ The standard product decomposition of model spaces is
 
 \[
  K_{Z_P}=\bigoplus_{j=1}^N
-   \left(\prod_{i<j}\theta_i\right)K_{\theta_j},qquad
+   \left(\prod_{i<j}\theta_i\right)K_{\theta_j},\qquad
  K_{B_P}=\bigoplus_{j=1}^N
    \left(\prod_{i<j}\beta_i\right)K_{\beta_j}.        \tag{2.2}
 \]

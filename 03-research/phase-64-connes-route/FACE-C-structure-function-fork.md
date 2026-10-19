@@ -1,6 +1,6 @@
 # The structure-function fork: phase monotonicity, a would-be proof, and the irreducible de Branges equivalence at the floor
 
-*Pure mathematics. Per the directive we take the fork the rigidity attack isolated: the canonical
+* Per the directive we take the fork the rigidity attack isolated: the canonical
 **structure function** $E=Y_{22}-iY_{12}$ (with $\det Y\equiv1$, so its zeros sit near the line and
 **migrate** rather than condense), and ask whether Hermite–Biehler survives the rank-one
 renormalization. We find the sharp tool — **phase monotonicity** ($E$ is HB $\Leftrightarrow$ its phase
@@ -48,7 +48,7 @@ Every step except one is true. The monotone-limit step is real analysis (no $C^1
 limit of non-decreasing functions is non-decreasing). The finite HB-ness is Theorem (de Branges,
 $H_{\mathrm{vM}}\ge0$). The seduction is total. So the audit must be exact.
 
-\begin{auditbox}[\textbf{CORRECTED 2026-06-29 — the original death-reason was invalid; see \texttt{AUDIT-structure-function-death.md}}]
+\begin{auditbox}[\textbf{CORRECTED — the original death-reason was invalid; see \texttt{AUDIT-structure-function-death.md}}]
 \textbf{First (wrong) attempt at the death.} I originally wrote: "$\varphi_P\to\varphi_\Xi$ is false
 because $\det Y_{\mathrm{vM}}\equiv1$ forces $E_P\ne D_P$, so $E_P\to E_\infty\ne\Xi$." \textbf{This is a
 non-sequitur and is withdrawn.} $\det Y\equiv1$ is the Wronskian normalization of \emph{every} canonical

@@ -1,46 +1,46 @@
-# H1 (simplicidad + paridad del ground state) — prueba **Resultado:** el menor autovalor ε de la forma de Weil localizada A_λ es **simple**, y su
-autovector ξ es **par** (invariante bajo ι: u↦u⁻¹). Esto es la hipótesis H1 que CCM (Thm 1.1)
-**asumen**. Aquí se prueba (a nivel operador, que es lo que necesita el Eslabón 2a), modulo
-un cabo suelto de rango finito para ζ (el término de polo). --- ## 0. Estructura real del objeto (corrige el análisis previo) Numéricamente (dps=50): la matriz QW_λ^N es **positiva semidefinida**, con autovalores que
-**decaen geométricamente a 0** (1e-15, 1e-14, …, 1e-2, 0.1, 0.5, 1, 2, 3). El fondo ε_N→0 es
-**simple pero con gap exponencialmente pequeño** (por eso los ceros salen a ~1e-55: el
-autovalor exponencialmente chico codifica el cero). El ground state, calculado limpio en
-alta precisión, es **PAR (a 23 dígitos)** y **NODELESS (0 cambios de signo en espacio real)**
-en todos los (λ,N) probados. Un ground state nodeless es la firma de Perron–Frobenius. (Esto corrige la afirmación previa de "fondo aislado": NO está aislado, el gap→0. La prueba
-de simplicidad va por positividad/PF, no por gap espectral.) --- ## 1. El operador y su descomposición A_λ en L²([λ⁻¹,λ], d*u), dado por la forma (CCM 3.19): A_λ = M_θ − V (+ W₀₂ para ζ), V = Σ_{n≤λ²} Λ(n) T(n) - **M_θ** = multiplicador con símbolo Ω(t) = 2θ'(t) = −logπ + Re ψ(¼+it/2).
-- **T(n)** = operador de traslación por log n en el grupo multiplicativo: ⟨f|T(n)g⟩ = n^{-1/2}((f**g)(n)+(f**g)(n⁻¹)).
-- **W₀₂** = término de polo (solo ζ; ausente para L-funciones enteras), rango ≤2. --- ## 2. Lema A — M_θ genera semigrupo positivity-preserving [CERRADO] **Lema A (teorema).** Ω(t) = −logπ + Re ψ(¼+it/2) es condicionalmente negativo-definida (CND).
-Por tanto (Schoenberg) e^{−s M_θ} es positivity-preserving para s>0. *Prueba.* De la representación de Gauss ψ(z) = −γ + ∫₀^∞ [e^{−u} − e^{−zu}]/(1−e^{−u}) du: Ω(t) − Ω(0) = Re ψ(¼+it/2) − Re ψ(¼) = ∫₀^∞ [1 − cos(tξ)] dν(ξ), con (cambio u=2ξ) **dν(ξ) = 2 e^{−ξ/2}/(1 − e^{−2ξ}) dξ ≥ 0**. Esto es la forma de
-Lévy–Khintchine de una función CND simétrica (sin parte gaussiana, salto puro). ν es medida de
-Lévy válida: ν ≥ 0; ν(ξ) ~ 1/ξ cerca de 0 y ∫₀^∞ min(1,ξ²) dν(ξ) = 3.142 < ∞. ⟹ Ω CND. ∎
-**Verificado numéricamente** (levy.py): la identidad integral coincide a 1e-9..1e-15; ν≥0;
-integral de Lévy finita. (Independientemente, cnd.py: FT[e^{−sΩ}]≥0 ∀s.) ## 3. Lema B — V es un operador positivo **Lema.** V = Σ_{n≤λ²} Λ(n) T(n) es positivity-preserving.
-*Prueba.* Λ(n) ≥ 0 (von Mangoldt). Cada T(n) es suma de dos traslaciones (shift por ±log n
-en el grupo), y las traslaciones preservan positividad. Combinación con coeficientes ≥0 de
-operadores positivity-preserving ⟹ V positivity-preserving. ∎
-**(Este es el corazón: H1 vale porque Λ(n) ≥ 0.)** ## 4. Lema C — e^{−tA_λ} positivity-preserving (Trotter) Para A = M_θ − V (caso sin polo): e^{−t(M_θ−V)} = lim_{k} (e^{−(t/k)M_θ} · e^{+(t/k)V})^k.
-- e^{−(t/k)M_θ} positivity-preserving (Lema A).
-- e^{+(t/k)V} = Σ_j (tV/k)^j/j! positivity-preserving (Lema B; V≥0 entra con signo +).
-Producto y límite de positivity-preserving ⟹ **e^{−tA_λ} positivity-preserving**. ∎ ## 5. Irreducibilidad [CERRADO] La medida de Lévy ν(ξ) = 2e^{−ξ/2}/(1−e^{−2ξ}) > 0 para **todo** ξ>0: los saltos de M_θ son de
-todo tamaño y conectan el intervalo compacto [λ⁻¹,λ] (periódico). ⟹ e^{−tM_θ} (y por tanto
-e^{−tA_λ}, con V que solo añade conectividad por traslaciones) es **positivity-improving**
-(estrictamente, no solo preserving). ∎ ## 6. Teorema H1 (Perron–Frobenius) — caso entero [CERRADO] e^{−tA_λ} positivity-improving ⟹ (Reed–Simon XIII.43–44 / Faris) inf σ(A_λ), si es autovalor,
-es **simple** con autovector **estrictamente positivo (nodeless)**.
-- **Simplicidad:** ✔. **Paridad:** ι simetría, ground state positivo único ⟹ ι-invariante ⟹ **par**. ✔.
-∎ (H1 completo para L-funciones **enteras**: W₀₂=0.) ## 7. Término de polo de ζ — simplicidad vía interlacing rango-1 [CERRADO en sector par] Para ζ, A = A₀ + P con A₀=M_θ−V (caso entero, ground state simple nodeless ψ₀, §6) y P el
-término de polo. En el **sector par** (donde vive el ground state, A conmuta con ι), P es
-**rango 1 positivo**: P = |φ⟩⟨φ|, φ(u)=u^{1/2} > 0 (la dirección del polo s=1). Ecuación secular de perturbación rango-1: 1 + Σ_k |⟨φ,ψ_k⟩|²/(λ_k − μ) = 0. Su raíz más baja
-μ₀ cae **estrictamente** en (λ₀, λ₁) para fuerza finita, siempre que ⟨φ,ψ₀⟩≠0. Y
-**⟨φ,ψ₀⟩ > 0** porque φ>0 y ψ₀ nodeless (§6). Por interlacing μ₁ ≥ λ₁ > μ₀ ⟹ **μ₀ simple**.
-*Crucial:* esto vale aunque el gap λ₁−λ₀ sea exponencialmente pequeño — μ₀ queda dentro del
-intervalo, estrictamente bajo λ₁. ∎ (simplicidad del fondo par para ζ). **Único resto cuantitativo (ζ):** que el fondo par perturbado μ₀ siga por debajo del fondo
-impar (φ par ⟹ P no toca el sector impar, que queda en λ₀⁻). Por §6, λ₀⁺<λ₀⁻; falta acotar el
-shift μ₀−λ₀⁺ < λ₀⁻−λ₀⁺. **Verificado a dps=50** (ground state de ζ CON polo es par y nodeless
-en todos los (λ,N)). Estimación acotada, no un muro. ## 8. Estado — H1 CERRADO - Lema A (CND): **teorema** (Lévy–Khintchine explícito). ✔
-- Lema B (V positivo, Λ≥0): **teorema**. ✔
-- Trotter + irreducibilidad + Perron–Frobenius: **teorema**. ✔
-- **H1 completo para L-funciones enteras.** ✔
-- **ζ**: simplicidad del fondo par cerrada por interlacing; resta una estimación cuantitativa acotada (orden par/impar bajo el polo), verificada a 50 dígitos. **Mecanismo central:** H1 vale porque **Λ(n) ≥ 0** — el potencial de primos entra con el signo
-de Perron–Frobenius. Esto era hipótesis ASUMIDA en CCM Thm 1.1; ahora probada. Nota para 2a: como el fondo NO está aislado (gap→0), la convergencia N→∞ se apoya en
-convergencia de proyectores de Perron–Frobenius (la positividad da control uniforme), no en
-gap espectral. Próximo: **2b**.
+# H1 (simplicity + parity of the ground state) — proof **Result:** the smallest eigenvalue ε of the localized Weil form A_λ is **simple**, and its
+eigenvector ξ is **even** (invariant under ι: u↦u⁻¹). This is the H1 hypothesis that CCM (Thm 1.1)
+**assume**. Here it is proved (at the operator level, which is what Link 2a needs), modulo
+a finite-rank loose end for ζ (the pole term). --- ## 0. Real structure of the object (corrects the previous analysis) Numerically (dps=50): the matrix QW_λ^N is **positive semidefinite**, with eigenvalues that
+**decay geometrically to 0** (1e-15, 1e-14, …, 1e-2, 0.1, 0.5, 1, 2, 3). The bottom ε_N→0 is
+**simple but with an exponentially small gap** (that is why the zeros come out at ~1e-55: the
+exponentially small eigenvalue encodes the zero). The ground state, computed cleanly at
+high precision, is **EVEN (to 23 digits)** and **NODELESS (0 sign changes in real space)**
+at every (λ,N) tested. A nodeless ground state is the signature of Perron–Frobenius. (This corrects the earlier claim of an "isolated bottom": it is NOT isolated, the gap→0. The
+simplicity proof goes through positivity/PF, not through a spectral gap.) --- ## 1. The operator and its decomposition A_λ in L²([λ⁻¹,λ], d*u), given by the form (CCM 3.19): A_λ = M_θ − V (+ W₀₂ for ζ), V = Σ_{n≤λ²} Λ(n) T(n) - **M_θ** = multiplier with symbol Ω(t) = 2θ'(t) = −logπ + Re ψ(¼+it/2).
+- **T(n)** = translation operator by log n on the multiplicative group: ⟨f|T(n)g⟩ = n^{-1/2}((f**g)(n)+(f**g)(n⁻¹)).
+- **W₀₂** = pole term (ζ only; absent for entire L-functions), rank ≤2. --- ## 2. Lemma A — M_θ generates a positivity-preserving semigroup [CLOSED] **Lemma A (theorem).** Ω(t) = −logπ + Re ψ(¼+it/2) is conditionally negative-definite (CND).
+Hence (Schoenberg) e^{−s M_θ} is positivity-preserving for s>0. *Proof.* From the Gauss representation ψ(z) = −γ + ∫₀^∞ [e^{−u} − e^{−zu}]/(1−e^{−u}) du: Ω(t) − Ω(0) = Re ψ(¼+it/2) − Re ψ(¼) = ∫₀^∞ [1 − cos(tξ)] dν(ξ), with (change u=2ξ) **dν(ξ) = 2 e^{−ξ/2}/(1 − e^{−2ξ}) dξ ≥ 0**. This is the Lévy–Khintchine
+form of a symmetric CND function (no Gaussian part, pure jump). ν is a valid Lévy measure:
+ν ≥ 0; ν(ξ) ~ 1/ξ near 0 and ∫₀^∞ min(1,ξ²) dν(ξ) = 3.142 < ∞. ⟹ Ω is CND. ∎
+**Verified numerically** (levy.py): the integral identity matches to 1e-9..1e-15; ν≥0;
+the Lévy integral is finite. (Independently, cnd.py: FT[e^{−sΩ}]≥0 ∀s.) ## 3. Lemma B — V is a positive operator **Lemma.** V = Σ_{n≤λ²} Λ(n) T(n) is positivity-preserving.
+*Proof.* Λ(n) ≥ 0 (von Mangoldt). Each T(n) is a sum of two translations (shift by ±log n
+on the group), and translations preserve positivity. A combination with coefficients ≥0 of
+positivity-preserving operators ⟹ V is positivity-preserving. ∎
+**(This is the heart of it: H1 holds because Λ(n) ≥ 0.)** ## 4. Lemma C — e^{−tA_λ} is positivity-preserving (Trotter) For A = M_θ − V (case without pole): e^{−t(M_θ−V)} = lim_{k} (e^{−(t/k)M_θ} · e^{+(t/k)V})^k.
+- e^{−(t/k)M_θ} positivity-preserving (Lemma A).
+- e^{+(t/k)V} = Σ_j (tV/k)^j/j! positivity-preserving (Lemma B; V≥0 enters with sign +).
+Product and limit of positivity-preserving operators ⟹ **e^{−tA_λ} is positivity-preserving**. ∎ ## 5. Irreducibility [CLOSED] The Lévy measure ν(ξ) = 2e^{−ξ/2}/(1−e^{−2ξ}) > 0 for **every** ξ>0: the jumps of M_θ are of
+every size and connect the compact interval [λ⁻¹,λ] (periodic). ⟹ e^{−tM_θ} (and hence
+e^{−tA_λ}, with V only adding connectivity via translations) is **positivity-improving**
+(strictly, not merely preserving). ∎ ## 6. Theorem H1 (Perron–Frobenius) — entire case [CLOSED] e^{−tA_λ} positivity-improving ⟹ (Reed–Simon XIII.43–44 / Faris) inf σ(A_λ), if it is an eigenvalue,
+is **simple** with a **strictly positive (nodeless) eigenvector**.
+- **Simplicity:** ✔. **Parity:** ι symmetry, unique positive ground state ⟹ ι-invariant ⟹ **even**. ✔.
+∎ (H1 complete for **entire** L-functions: W₀₂=0.) ## 7. ζ pole term — simplicity via rank-1 interlacing [CLOSED in the even sector] For ζ, A = A₀ + P with A₀=M_θ−V (entire case, simple nodeless ground state ψ₀, §6) and P the
+pole term. In the **even sector** (where the ground state lives, A commutes with ι), P is
+**positive rank 1**: P = |φ⟩⟨φ|, φ(u)=u^{1/2} > 0 (the direction of the pole s=1). Rank-1 perturbation secular equation: 1 + Σ_k |⟨φ,ψ_k⟩|²/(λ_k − μ) = 0. Its lowest root
+μ₀ falls **strictly** in (λ₀, λ₁) for finite strength, as long as ⟨φ,ψ₀⟩≠0. And
+**⟨φ,ψ₀⟩ > 0** because φ>0 and ψ₀ is nodeless (§6). By interlacing μ₁ ≥ λ₁ > μ₀ ⟹ **μ₀ simple**.
+*Crucial point:* this holds even if the gap λ₁−λ₀ is exponentially small — μ₀ stays inside the
+interval, strictly below λ₁. ∎ (simplicity of the even bottom for ζ). **Only remaining quantitative point (ζ):** that the perturbed even bottom μ₀ stays below the
+odd bottom (φ even ⟹ P does not touch the odd sector, which remains at λ₀⁻). By §6, λ₀⁺<λ₀⁻; what remains is to bound the
+shift μ₀−λ₀⁺ < λ₀⁻−λ₀⁺. **Verified at dps=50** (the ground state of ζ WITH the pole is even and nodeless
+at every (λ,N) tested). A bounded estimate, not a wall. ## 8. Status — H1 CLOSED - Lemma A (CND): **theorem** (explicit Lévy–Khintchine). ✔
+- Lemma B (V positive, Λ≥0): **theorem**. ✔
+- Trotter + irreducibility + Perron–Frobenius: **theorem**. ✔
+- **H1 complete for entire L-functions.** ✔
+- **ζ**: simplicity of the even bottom closed by interlacing; a bounded quantitative estimate remains (even/odd order under the pole), verified to 50 digits. **Central mechanism:** H1 holds because **Λ(n) ≥ 0** — the prime potential enters with the
+Perron–Frobenius sign. This was a hypothesis ASSUMED in CCM Thm 1.1; now it is proved. Note for 2a: since the bottom is NOT isolated (gap→0), N→∞ convergence rests on
+convergence of Perron–Frobenius projectors (positivity gives uniform control), not on a
+spectral gap. Next: **2b**.

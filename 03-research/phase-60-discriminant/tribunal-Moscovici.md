@@ -1,195 +1,195 @@
-# Tribunal — Auditoría (referee SEVERO)
-## Programa CCM zeta spectral triples — cadena E0→E4 **Auditor:** Henri (en el rol de referee), lente: análisis complejo / funciones
-enteras (Laguerre–Pólya, Hermite–Biehler, de Branges, Boas, Phragmén–Lindelöf).
-**Documentos leídos:** `RH-PROOF-FULL.md`, `AUDIT-repairs-E1-III.md`, `E2-nucleo-proof.md`,
+# Tribunal — Audit (SEVERE referee)
+## CCM zeta spectral triples program — chain E0→E4 **Lens:** complex analysis / entire
+functions (Laguerre–Pólya, Hermite–Biehler, de Branges, Boas, Phragmén–Lindelöf).
+**Documents read:** `RH-PROOF-FULL.md`, `AUDIT-repairs-E1-III.md`, `E2-nucleo-proof.md`,
 `N5-subpieces-proved.md`.
-**Regla:** frío. Una prueba forzada es peor que un gap admitido. NO se reclama RH. --- ## 0. Resumen ejecutivo (per-pieza) | Pieza | Veredicto | Una línea |
+**Rule:** cold. A forced proof is worse than an admitted gap. RH is NOT claimed. --- ## 0. Executive summary (per piece) | Piece | Verdict | One line |
 |---|---|---|
-| E0 | **SOLID** | Definición + identidad `QW=`Weil; correcta como definición. |
-| E1 (real-rootedness) | **GAP** | Prueba propia abierta. **Cierro una mitad** (HB para envolvente positiva pura); la mitad con carrier de borde sigue abierta. Ver §2. |
-| H1 | **SOLID** (estructura) | PF da fondo simple + envolvente positiva. NO da PSD. Correcto tras corrección. |
-| H1′ (QW PSD) | **GAP = RH** | `ε_0≥0 ⟺` Weil-pos `⟺` RH-hasta-T*. No incondicional. Correctamente etiquetado. |
-| N0 | **SOLID** | Φ doble-exp + Γ incompleta: la prueba es correcta y robusta. Ver §3.1. |
-| N1 | **SOLID*** | Subarmonicidad + dos constantes + medida armónica correcto; Boas bien invocado. Una imprecisión de constante, inocua. Ver §3.2. |
-| N2 (Γ=O(1)/O(logλ)) | **SOLID** | Plancherel–Pólya + Nikolskii correcto. El `O(1)` con normalización es más fuerte de lo probado (probado: `O(logλ)`); inocuo. Ver §3.3. |
-| N3 | **SOLID** | Boas/Phragmén–Lindelöf correcto. Ver §3.4. |
-| Reducción (Thm 2) | **SOLID*** (módulo E1) | El paso Hurwitz es válido; la cota `λ^{1/2}ε_loc` correcta. Ver §4. |
-| III | **GAP (condicional)** | (H-gap)+(H-lim)+(H-pos) sólo numéricas; (H-pos)=RH. Implicación correcta. |
-| N5b | **SOLID** | Borde benigno; reducción válida. |
-| N5c | **SOLID*** (módulo E1) | Monotonía real-rooted correcta; lado DH demostrado. Ver §5. |
-| IV.1 | **GAP (análisis)** | Operador límite no identificado; no RH-hard. |
-| IV.2 ≡ §V | **GAP = RH-equivalente** | El núcleo. Correctamente etiquetado RH-hard. |
-| E3 (Hurwitz) | **SOLID** (módulo E1) | Clásico, bien aplicado. Ver §4. |
-| E4 | **SOLID** | `Ξ∈LP ⟺ RH`, clásico. | **Frase del referee:** El andamiaje analítico (N0–N3, Reducción, Hurwitz) **resiste la
-auditoría severa** — es matemática correcta y reutilizable. El documento es **franco** en
-sus etiquetas: no hay auto-engaño en la localización. Los tres puntos vivos son (i) E1 sin
-prueba propia, (ii) III condicional con (H-pos)=RH, (iii) el núcleo IV.2 RH-equivalente.
-**No se prueba RH.** Abajo cierro parcialmente E1 y delimito *exactamente* qué falta. --- ## 1. Auditoría del andamiaje — veredictos detallados ### 1.0 E0 — SOLID (como definición)
-La forma `QW=A_λ^N` está bien definida; la identidad `⟨ξ,QWξ⟩ = Σ_ρ g(γ_ρ)·conj(g(conj γ_ρ))`
-con `g=ξ̂` es la fórmula explícita de Weil restringida a `PW_Ω`, y la afirmación "`QW` ES la
-forma de Weil del lado-ceros" es **estructuralmente correcta** y central. No es una pieza que
-"pruebe" nada; es el escenario. SOLID, sin objeción. --- ## 2. EL GAP CERRABLE EN MI LENTE — E1 real-rootedness ### 2.1 Planteamiento exacto y refutación de la prueba vieja
-Se afirma: para todo `λ,N`, `ξ̂_{λ,N}(s) = sin(Ls/2)·Σ_{|k|≤N} ξ_k/(s−d_k)` tiene **sólo
-ceros reales**. La prueba registrada (interlacing con `ξ_k>0`) está **correctamente refutada**
-por `ξ=(−1,2,−1)`, `d=(−1,0,1)`: `f(s)=−2/(s³−s)`, numerador constante, **cero raíces**.
-El contraejemplo es válido y demoledor para la prueba vieja. Acepto la refutación. Además el documento observa que la real-rootedness vale empíricamente también para
-Davenport–Heilbronn (donde `Λ≥0` falla), luego **no puede provenir de Perron–Frobenius**.
-Esto es un argumento correcto y franco: descarta la vía de positividad de coeficientes. ### 2.2 La estructura real del problema (Hermite–Biehler)
-Reescribo. Sea `f(s)=Σ_k ξ_k/(s−d_k)` la secular. Los ceros de `ξ̂` (aparte de cancelar los
-polos `d_k`) son los ceros de `f`. La afirmación "`ξ̂∈LP`" equivale a "**`f` tiene sólo ceros
-reales**", porque `sin(Ls/2)` ya es LP y entera de tipo `L/2`, el producto de dos funciones
-con sólo ceros reales y orden ≤1 (con apareamiento correcto de polos) sigue siendo entera.
-Precisamente: `ξ̂` es entera (los polos de `f` en `d_k` son cancelados por los ceros de
-`sin(Ls/2)`), de tipo exponencial `L/2`, **real sobre ℝ** (coef. `ξ_k`, `d_k` reales). **Criterio HB clave (Hermite–Biehler real).** Una función entera real `g` de tipo
-exponencial, real en ℝ y en la clase de Pólya–Laguerre cerrada, tiene **sólo ceros reales**
-si y sólo si existe `E` (función de de Branges, `E=A−iB` con `A,B` reales en ℝ) tal que
-`g=B` (o `g=A`), `E` de tipo HB (`|E(z̄)|<|E(z)|` para `Im z>0`), **y `A,B` tienen ceros
-reales que se entrelazan (interlacing)**. Equivalentemente, vía el teorema de Hermite–Biehler
-clásico: una función `A+iB` con `A,B` polinomios/enteras reales es Hurwitz-estable (ceros en
-un semiplano) ⟺ los ceros de `A` y `B` son reales, simples y **se entrelazan**, con el
-Wronskiano `A'B−AB' ` de signo constante. **El punto técnico decisivo:** la real-rootedness de `f` **NO** se sigue de ninguna propiedad
-de signo de `ξ_k` sola; se sigue **si y sólo si** la función racional `f(s)=Σ ξ_k/(s−d_k)`
-es una **función de Nevanlinna/Herglotz con signo constante de residuos**, o más
-generalmente si `f` es la **función-m de un operador de Jacobi/Sturm–Liouville autoadjunto**. ### 2.3 Lo que SÍ puedo cerrar rigurosamente (mitad del gap) **Lema M1 (residuos positivos ⟹ real-rootedness, Herglotz).**
-Sea `f(s)=Σ_{k} r_k/(s−d_k)` con `d_k∈ℝ` distintos y **todos los residuos `r_k>0`**.
-Entonces `f` es una función de Herglotz–Nevanlinna (mapea el semiplano superior `H` en el
-semiplano inferior): para `Im s>0`,
+| E0 | **SOLID** | Definition + identity `QW=`Weil; correct as a definition. |
+| E1 (real-rootedness) | **GAP** | Own proof open. **I close half** (HB for pure positive envelope); the half with boundary carrier remains open. See §2. |
+| H1 | **SOLID** (structure) | PF gives simple bottom + positive envelope. Does NOT give PSD. Correct after correction. |
+| H1′ (QW PSD) | **GAP = RH** | `ε_0≥0 ⟺` Weil-pos `⟺` RH-up-to-T*. Not unconditional. Correctly labeled. |
+| N0 | **SOLID** | Double-exp Φ + incomplete Γ: the proof is correct and robust. See §3.1. |
+| N1 | **SOLID*** | Subharmonicity + two constants + harmonic measure correct; Boas well invoked. One constant imprecision, harmless. See §3.2. |
+| N2 (Γ=O(1)/O(logλ)) | **SOLID** | Plancherel–Pólya + Nikolskii correct. The `O(1)` with normalization is stronger than what is proved (proved: `O(logλ)`); harmless. See §3.3. |
+| N3 | **SOLID** | Boas/Phragmén–Lindelöf correct. See §3.4. |
+| Reduction (Thm 2) | **SOLID*** (modulo E1) | The Hurwitz step is valid; the bound `λ^{1/2}ε_loc` correct. See §4. |
+| III | **GAP (conditional)** | (H-gap)+(H-lim)+(H-pos) only numerical; (H-pos)=RH. Implication correct. |
+| N5b | **SOLID** | Boundary benign; reduction valid. |
+| N5c | **SOLID*** (modulo E1) | Real-rooted monotonicity correct; DH side proved. See §5. |
+| IV.1 | **GAP (analysis)** | Limit operator not identified; not RH-hard. |
+| IV.2 ≡ §V | **GAP = RH-equivalent** | The core. Correctly labeled RH-hard. |
+| E3 (Hurwitz) | **SOLID** (modulo E1) | Classical, well applied. See §4. |
+| E4 | **SOLID** | `Ξ∈LP ⟺ RH`, classical. | **Referee's statement:** The analytic scaffolding (N0–N3, Reduction, Hurwitz) **withstands
+severe audit** — it is correct, reusable mathematics. The document is **candid** in
+its labels: there is no self-deception in the localization. The three live points are (i) E1 with no
+proof of its own, (ii) III conditional with (H-pos)=RH, (iii) the IV.2 RH-equivalent core.
+**RH is not proved.** Below I partially close E1 and delimit *exactly* what is missing. --- ## 1. Audit of the scaffolding — detailed verdicts ### 1.0 E0 — SOLID (as a definition)
+The form `QW=A_λ^N` is well defined; the identity `⟨ξ,QWξ⟩ = Σ_ρ g(γ_ρ)·conj(g(conj γ_ρ))`
+with `g=ξ̂` is Weil's explicit formula restricted to `PW_Ω`, and the claim "`QW` IS the
+Weil form of the zero-side" is **structurally correct** and central. It is not a piece that
+"proves" anything; it is the setting. SOLID, no objection. --- ## 2. THE CLOSABLE GAP IN MY LENS — E1 real-rootedness ### 2.1 Exact statement and refutation of the old proof
+The claim is: for all `λ,N`, `ξ̂_{λ,N}(s) = sin(Ls/2)·Σ_{|k|≤N} ξ_k/(s−d_k)` has **only
+real zeros**. The recorded proof (interlacing with `ξ_k>0`) is **correctly refuted**
+by `ξ=(−1,2,−1)`, `d=(−1,0,1)`: `f(s)=−2/(s³−s)`, constant numerator, **zero roots**.
+The counterexample is valid and devastating for the old proof. I accept the refutation. Furthermore the document observes that real-rootedness also holds empirically for
+Davenport–Heilbronn (where `Λ≥0` fails), so **it cannot come from Perron–Frobenius**.
+This is a correct and candid argument: it rules out the coefficient-positivity route. ### 2.2 The real structure of the problem (Hermite–Biehler)
+Let me rewrite it. Let `f(s)=Σ_k ξ_k/(s−d_k)` be the secular function. The zeros of `ξ̂` (aside from cancelling the
+poles `d_k`) are the zeros of `f`. The claim "`ξ̂∈LP`" is equivalent to "**`f` has only
+real zeros**", because `sin(Ls/2)` is already LP and entire of type `L/2`, and the product of two functions
+with only real zeros and order ≤1 (with correct pole pairing) remains entire.
+Precisely: `ξ̂` is entire (the poles of `f` at `d_k` are cancelled by the zeros of
+`sin(Ls/2)`), of exponential type `L/2`, **real on ℝ** (coefficients `ξ_k`, `d_k` real). **Key HB criterion (real Hermite–Biehler).** A real entire function `g` of exponential
+type, real on ℝ and in the closed Pólya–Laguerre class, has **only real zeros**
+if and only if there exists `E` (a de Branges function, `E=A−iB` with `A,B` real on ℝ) such that
+`g=B` (or `g=A`), `E` of HB type (`|E(z̄)|<|E(z)|` for `Im z>0`), **and `A,B` have
+interlacing real zeros**. Equivalently, via the classical Hermite–Biehler
+theorem: a function `A+iB` with `A,B` real polynomials/entire functions is Hurwitz-stable (zeros in
+a half-plane) ⟺ the zeros of `A` and `B` are real, simple and **interlace**, with the
+Wronskian `A'B−AB'` of constant sign. **The decisive technical point:** the real-rootedness of `f` **does NOT** follow from any sign
+property of `ξ_k` alone; it follows **if and only if** the rational function `f(s)=Σ ξ_k/(s−d_k)`
+is a **Nevanlinna/Herglotz function with constant-sign residues**, or more
+generally if `f` is the **m-function of a self-adjoint Jacobi/Sturm–Liouville operator**. ### 2.3 What I CAN close rigorously (half the gap) **Lemma M1 (positive residues ⟹ real-rootedness, Herglotz).**
+Let `f(s)=Σ_{k} r_k/(s−d_k)` with distinct `d_k∈ℝ` and **all residues `r_k>0`**.
+Then `f` is a Herglotz–Nevanlinna function (it maps the upper half-plane `H` into the
+lower half-plane): for `Im s>0`,
 ``` Im f(s) = Σ_k r_k · Im(1/(s−d_k)) = Σ_k r_k · (−Im s)/|s−d_k|² < 0.
 ```
-Luego `f(s)≠0` para `Im s≠0` (su parte imaginaria no nula), i.e. **todos los ceros de `f`
-son reales**. Además, entre dos polos consecutivos `f` decrece de `+∞` a `−∞`, dando
-exactamente un cero por hueco: **interlacing estricto**. ∎ Este es el resultado clásico correcto (es exactamente el caso de la función-m de un Jacobi
-con pesos positivos). Y ahora la conexión con `ξ̂`: **Lema M2 (traducción residuo↔valor band-edge).** Por la fórmula del residuo,
-`ξ̂(d_k)=lim_{s→d_k}sin(Ls/2)·ξ_k/(s−d_k)`. Como `sin(Ls/2)` tiene un cero simple en `d_k`
-con derivada `(L/2)cos(Ld_k/2)=(L/2)cos(πk)=(L/2)(−1)^k`, resulta
-``` ξ̂(d_k) = ξ_k·(L/2)·(−1)^k. (correcta, coincide con la del documento)
+Hence `f(s)≠0` for `Im s≠0` (its imaginary part is nonzero), i.e. **all the zeros of `f`
+are real**. Moreover, between two consecutive poles `f` decreases from `+∞` to `−∞`, giving
+exactly one zero per gap: **strict interlacing**. ∎ This is the correct classical result (it is exactly the case of the m-function of a Jacobi
+operator with positive weights). Now the connection to `ξ̂`: **Lemma M2 (residue↔band-edge value translation).** By the residue formula,
+`ξ̂(d_k)=lim_{s→d_k}sin(Ls/2)·ξ_k/(s−d_k)`. Since `sin(Ls/2)` has a simple zero at `d_k`
+with derivative `(L/2)cos(Ld_k/2)=(L/2)cos(πk)=(L/2)(−1)^k`, we get
+``` ξ̂(d_k) = ξ_k·(L/2)·(−1)^k. (correct, matches the document's)
 ```
-El **residuo** de `f` en `d_k` es justamente `ξ_k`. Por tanto el Lema M1 da real-rootedness
-**si y sólo si todos los `ξ_k` tienen el mismo signo** (WLOG `ξ_k>0`). **Conclusión parcial [CERRADO]:** Si el autovector fundamental tuviera **envolvente de signo
-constante en la base sinc cruda** (`ξ_k>0` ∀k), la real-rootedness sería un **teorema
-elemental** (Herglotz, Lema M1), self-contained, sin citar CCM. Esto es matemática limpia y
-la doy por cerrada para ese caso. ### 2.4 Por qué el caso real NO está cubierto — y qué hipótesis falta exactamente
-El obstáculo, identificado correctamente por el documento, es que el ground state **real**
-tiene `ξ_k ≈ u_k cos(ω*k+φ)` con carrier de borde `ω*≈0.966π` (near-Nyquist), luego `ξ_k`
-**cambia de signo ~N veces**. El Lema M1 **no aplica** y de hecho el contraejemplo
-`(−1,2,−1)` muestra que con signos alternantes la real-rootedness **puede fallar**. Entonces, ¿por qué es cierta empíricamente? La respuesta correcta es de-modulación. Defino
-el cambio `ξ_k = (−1)^k η_k` (modulación por el carrier Nyquist `ω=π`). El valor band-edge
-se vuelve `ξ̂(d_k)=η_k(L/2)`, **sin el `(−1)^k`**. Pero esto NO cambia los residuos de `f`:
-`f(s)=Σ(−1)^kη_k/(s−d_k)` — el signo alternante reaparece en los residuos. La de-modulación
-que hace `η_k>0` (envolvente positiva, **lo que H1/PF sí da**) **no** es la que controla los
-residuos de `f`. Hay un **desajuste de fase** estructural: la positividad que PF entrega vive
-en la envolvente de-modulada (`η_k>0`), mientras que la real-rootedness vía Herglotz pide
-positividad de los residuos crudos `ξ_k`. Con carrier `ω*` cerca de π (pero **no** exactamente
-π), ni `ξ_k>0` ni `(−1)^kξ_k>0`. **Veredicto preciso de E1:** La real-rootedness **NO es self-contained al nivel Herglotz**.
-Requiere uno de: - **(A)** una propiedad de **interlacing de de Branges**: que `ξ̂` sea la componente `B` de una `E=A−iB` de tipo HB, lo cual es *equivalente* a que los ceros seculares sean el **espectro de un operador autoadjunto** (la realización espectral de CCM). Esto es **exactamente CCM Thm 1.1(iii)**: las raíces seculares = espectro real de la realización autoadjunta. No es derivable de M1; es la afirmación espectral misma.
-- **(B)** una hipótesis sobre el autovector fundamental: que el operador `QW` (real simétrico) sea tal que su ground state genere un **sistema de Chebyshev / núcleo totalmente positivo** en la base sinc. El documento reporta que esto fue **refutado** numéricamente (Gantmacher–Krein, totalmente-no-negativa, no encaja). Acepto ese hallazgo: la vía TP/TN está cerrada. **Por tanto, mi veredicto sobre E1 es (c) del enunciado de la tarea, afinado:**
-> La real-rootedness es cierta como **CCM Thm 1.1(iii)** (espectro real de la realización
-> autoadjunta = raíces seculares). **No admite prueba self-contained al nivel de funciones
-> enteras elementales** (Herglotz/HB) con la información que el programa tiene aislada
-> (envolvente positiva de-modulada), por el desajuste de fase carrier ω*≠π. La única vía
-> propia sería **reconstruir la realización autoadjunta** (que `ξ̂` ∈ un espacio de de Branges
-> `H(E)` con `E` HB explícita), lo cual es **re-probar CCM 1.1(iii)**, no un atajo. Esto **cierra la pregunta 2**: produzco (a) prueba correcta para el sub-caso `ξ_k>0`
-(Herglotz, Lema M1), e identifico (c) que el caso real *debe* citarse de CCM 1.1(iii). La
-hipótesis extra precisa que el ground state debe satisfacer es **membresía en un espacio de
-de Branges `H(E)` con `E` de tipo HB** (equivalente: interlacing `A`/`B` de su función de
-estructura), que es la realización autoadjunta — no una propiedad combinatoria de los signos. ### 2.5 Franqueza sobre la severidad
-E1 alimenta Hurwitz (E3) y N5c. Ambos heredan "módulo E1". La etiqueta **🔧/GAP del documento
-es correcta y no sobre-afirma**. Mi único refinamiento: el documento sugiere que la prueba
-propia HB "queda abierta como reparación"; yo soy más duro: **al nivel de la información
-aislada, la prueba propia es esencialmente CCM 1.1(iii)** y no un lema pendiente de azúcar.
-Citarla como caja negra es **legítimo**; presentarla como "cerrable con más trabajo de
-funciones enteras" sería **optimismo injustificado**. Bajar a: *cita obligada de CCM*. --- ## 3. Verificación rigurosa de los lemas analíticos ### 3.1 N0 (Φ doble-exp + Γ incompleta) — SOLID
-La cota `Φ(u)≤Ce^{9u/2}e^{−πe^{2u}}` para `u≥0` es correcta: el término dominante de `Φ` es
-`2π²n⁴e^{9u/2}e^{−πn²e^{2u}}`, y `Σ_n n⁴ e^{−π(n²−1)e^{2u}} = O(1)` uniformemente en `u≥0`
-(la cola converge, dominada por `n=1`). Correcto. El cambio `v=e^{2u}`, `du=dv/(2v)`, da
+The **residue** of `f` at `d_k` is exactly `ξ_k`. Hence Lemma M1 gives real-rootedness
+**if and only if all the `ξ_k` share the same sign** (WLOG `ξ_k>0`). **Partial conclusion [CLOSED]:** If the fundamental eigenvector had a **constant-sign
+envelope in the raw sinc basis** (`ξ_k>0` ∀k), real-rootedness would be an **elementary
+theorem** (Herglotz, Lemma M1), self-contained, with no citation to CCM. This is clean mathematics and
+I consider it closed for that case. ### 2.4 Why the real case is NOT covered — and exactly what hypothesis is missing
+The obstruction, correctly identified by the document, is that the **real** ground state
+has `ξ_k ≈ u_k cos(ω*k+φ)` with boundary carrier `ω*≈0.966π` (near-Nyquist), so `ξ_k`
+**changes sign ~N times**. Lemma M1 **does not apply**, and in fact the counterexample
+`(−1,2,−1)` shows that with alternating signs real-rootedness **can fail**. So why is it empirically true? The correct answer is de-modulation. Define
+the change `ξ_k = (−1)^k η_k` (modulation by the Nyquist carrier `ω=π`). The band-edge
+value becomes `ξ̂(d_k)=η_k(L/2)`, **without the `(−1)^k`**. But this does NOT change the residues of `f`:
+`f(s)=Σ(−1)^kη_k/(s−d_k)` — the alternating sign reappears in the residues. The de-modulation
+that makes `η_k>0` (positive envelope, **what H1/PF does give**) is **not** what controls the
+residues of `f`. There is a structural **phase mismatch**: the positivity PF delivers lives
+in the de-modulated envelope (`η_k>0`), while real-rootedness via Herglotz requires
+positivity of the raw residues `ξ_k`. With carrier `ω*` near π (but **not** exactly
+π), neither `ξ_k>0` nor `(−1)^kξ_k>0` holds. **Precise verdict on E1:** Real-rootedness is **NOT self-contained at the Herglotz level**.
+It requires one of: - **(A)** a **de Branges interlacing** property: that `ξ̂` be the `B` component of an `E=A−iB` of HB type, which is *equivalent* to the secular zeros being the **spectrum of a self-adjoint operator** (CCM's spectral realization). This is **exactly CCM Thm 1.1(iii)**: the secular roots = real spectrum of the self-adjoint realization. It is not derivable from M1; it is the spectral claim itself.
+- **(B)** a hypothesis on the fundamental eigenvector: that the operator `QW` (real symmetric) be such that its ground state generates a **Chebyshev system / totally positive kernel** in the sinc basis. The document reports that this was **refuted** numerically (Gantmacher–Krein, totally non-negative, does not fit). I accept that finding: the TP/TN route is closed. **Hence my verdict on E1 is (c) of the task's statement, refined:**
+> Real-rootedness is true as **CCM Thm 1.1(iii)** (real spectrum of the self-adjoint
+> realization = secular roots). **It does not admit a self-contained proof at the level of elementary
+> entire functions** (Herglotz/HB) with the information the program has in isolation
+> (de-modulated positive envelope), because of the carrier phase mismatch ω*≠π. The only
+> own route would be to **reconstruct the self-adjoint realization** (that `ξ̂` ∈ a de Branges space
+> `H(E)` with explicit HB `E`), which is **re-proving CCM 1.1(iii)**, not a shortcut. This **closes question 2**: I produce (a) a rigorous elementary proof for the sub-case `ξ_k>0`
+(Herglotz, Lemma M1), and I identify (c) that the real case *must* be cited from
+CCM 1.1(iii). The precise extra hypothesis the ground state must satisfy is **membership in a
+de Branges space `H(E)` with `E` of HB type** (equivalently: interlacing `A`/`B` of its structure
+function), which is the self-adjoint realization — not a combinatorial sign property. ### 2.5 Candor about severity
+E1 feeds Hurwitz (E3) and N5c. Both inherit "modulo E1". The document's **🔧/GAP label
+is correct and does not overstate**. My only refinement: the document suggests that the
+own HB proof "remains open as a repair"; I am harsher: **at the level of the isolated
+information, the own proof is essentially CCM 1.1(iii)** and not a pending sugar lemma.
+Citing it as a black box is **legitimate**; presenting it as "closable with more work in
+entire functions" would be **unjustified optimism**. Downgrade to: *mandatory citation of CCM*. --- ## 3. Rigorous verification of the analytic lemmas ### 3.1 N0 (double-exp Φ + incomplete Γ) — SOLID
+The bound `Φ(u)≤Ce^{9u/2}e^{−πe^{2u}}` for `u≥0` is correct: the dominant term of `Φ` is
+`2π²n⁴e^{9u/2}e^{−πn²e^{2u}}`, and `Σ_n n⁴ e^{−π(n²−1)e^{2u}} = O(1)` uniformly for `u≥0`
+(the tail converges, dominated by `n=1`). Correct. The change `v=e^{2u}`, `du=dv/(2v)`, gives
 `∫_T^∞ e^{(9/2+δ)u}e^{−πe^{2u}}du = ½∫_{e^{2T}}^∞ v^{(9/2+δ)/2−1}e^{−πv}dv
-= ½∫ v^{5/4+δ/2}e^{−πv}dv = ½Γ(7/4+δ/2, πe^{2T})`. **Verificado el exponente:** `(9/2+δ)/2−1
-= 9/4+δ/2−1 = 5/4+δ/2`. Correcto.
-La cota de Gamma incompleta `∫_X^∞ v^a e^{−πv}dv ≤ C X^a e^{−πX}` para `X` grande es estándar
-(integración por partes, el término de borde domina cuando `a/(πX)→0`). Con `X=e^{2T}=λ²`:
-`(λ²)^{5/4+δ/2}e^{−πλ²}=λ^{5/2+δ}e^{−πλ²}`. **La prueba de N0 es correcta y robusta.** SOLID. Observación menor (no afecta): el corolario "franja crece hasta `λ²/logλ`" es correcto y de
-hecho subraya que la truncación de Fourier **no** es el obstáculo. Bien. ### 3.2 N1 (transfer off-axis) — SOLID*, con un matiz de constante
-La construcción `w(z)=log|F(z)|−τ·Im z` subarmónica en `H` es correcta (`log|F|` subarmónica,
-`τ Im z` armónica). La invocación de **Boas Thm 6.2.4** (`|F(z)|≤Γ e^{τ|Im z|}` para `F` de
-tipo `τ` acotada en ℝ) es **correcta y es exactamente la condición de crecimiento que hace a
-`w` acotada superiormente**, habilitando Phragmén–Lindelöf / mayorante armónica. Bien invocado.
-La cota de medida armónica del segmento desde `iy₀`:
-`ω_{[−R,R]}(iy₀)=(2/π)arctan(R/y₀)`, y `(2/π)arctan(R/y₀)≥1−(2/π)(y₀/R)` para `y₀≪R`
-(porque `arctan(R/y₀)=π/2−arctan(y₀/R)≥π/2−y₀/R`). **Verificado.** SOLID*. **Matiz (inocuo):** la cota `1−ω≤(2/π)(y₀/R)` es para el punto `x₀=0`. Para `|x₀|≤R/2` la
-medida armónica del segmento sólo **aumenta** (el punto sigue "viendo" el segmento bajo ángulo
-≥ comparable), luego `1−ω` sigue siendo `O(y₀/R)=O(λ^{−2})`. El documento usa esto
-implícitamente; es correcto pero merecería una línea. No cambia nada: `Γ^{1−ω}→1`. ### 3.3 N2 (amplitud) — SOLID, con sobre-afirmación inocua
-La identidad de Parseval `‖ξ̂‖²_{L²}=(πL/2)‖ξ‖²_{ℓ²}=πlogλ` (con `‖ξ‖_{ℓ²}=1`) es correcta
-vía ortogonalidad de los `sinc_k`. Nikolskii/Plancherel–Pólya `‖g‖_∞≤C√τ‖g‖_{L²}` para
-`g∈PW_τ`, `τ=logλ`, da `‖ξ̂‖_∞≤C√(logλ)·√(πlogλ)=O(logλ)`. **Esto está probado y es SOLID.** **Discrepancia que señalo:** el cuadro de `RH-PROOF-FULL.md` y la Reducción afirman a veces
-`Γ=O(1)` "con la normalización `ξ̂(0)=Ξ(0)`". Lo **probado** es `Γ=O(logλ)`. El salto a
-`O(1)` requiere que la normalización en un punto controle el sup global, lo cual **no está
-demostrado** (es plausible pero no trivial: `Ξ(0)` es una constante fija, pero `‖ξ̂‖_∞`
-podría exceder `|ξ̂(0)|`). **No importa para la cadena**, porque la Reducción sólo necesita
-`Γ=poly(λ)` (para que `Γ^{1−ω}→1`), que `O(logλ)` da de sobra. Recomiendo al autor **retirar
-la afirmación `Γ=O(1)`** y quedarse con el `O(logλ)` probado. Etiqueta correcta: SOLID para
-lo que la cadena necesita. ### 3.4 N3 (amplificación, Boas/PL) — SOLID
-`g(z)=F(z)e^{iτz}` en `H`: `|g(x)|=|F(x)|≤M` en ℝ; `|g(z)|=|F(z)|e^{−τ Im z}` acotado en
-sectores por el crecimiento de tipo `τ`; Phragmén–Lindelöf en `H` (orden finito, acotado en
-frontera) ⟹ `|g|≤M` en `H` ⟹ `|F(x+iy)|≤Me^{τy}` para `y≥0`; reflexión para `y<0`.
-**Correcto, es Boas 6.2.4.** Da el factor `e^{τy}=λ^y≤λ^{1/2}`. SOLID. --- ## 4. Reducción + Hurwitz (E3) — SOLID (módulo E1). Validez del paso Hurwitz. **La cota de la Reducción** `sup_{|Im z|≤½}|ξ̂_λ−Ξ|≤Cλ^{1/2}ε_loc+Cλ³e^{−πλ²}` es la suma
-de N0 (`δ=½`: `λ^{5/2+½}=λ³`) y de N1/N3 (`e^{τ·½}ε_loc^ω Γ^{1−ω}=λ^{1/2}ε_loc·(1+o(1))`).
-**Aritméticamente y analíticamente correcta.** Verificado `5/2+δ=3` con `δ=½`. SOLID. **El paso Hurwitz (E3), auditado con severidad:**
-> Si `ξ̂_λ→Ξ` **uniformemente en compactos** de la franja abierta `|Im z|<½` (de hecho
-> `≤½+`), y cada `ξ̂_λ` tiene **sólo ceros reales**, entonces `Ξ` no tiene ceros en
-> `0<|Im z|<½`. Esto es el teorema de Hurwitz correctamente aplicado: si `Ξ(z_0)=0` con `0<Im z_0<½`,
-entonces por convergencia localmente uniforme (y `Ξ≢0`), para `λ` grande `ξ̂_λ` tiene un cero
-en cualquier entorno de `z_0` — pero los ceros de `ξ̂_λ` son **reales**, contradicción.
-**Válido.** Tres condiciones que verifico se cumplen:
-1. **Convergencia localmente uniforme** en la franja: dada por la Reducción **si** `ε_loc=o(λ^{−½})` (esa es la hipótesis-núcleo, no probada). Correcto que es condicional.
-2. **`Ξ≢0`** (límite no idénticamente nulo): sí, `Ξ` es la xi de Riemann. Correcto.
-3. **Real-rootedness de los `ξ̂_λ`**: **es E1**, el gap. Hurwitz **hereda módulo E1**. **Subtileza de normalización/modo de convergencia (pregunta 3):** El documento afirma que la
-normalización es "libre" por invariancia de Hurwitz: si `c_λ ξ̂_λ→Ξ` con `c_λ≠0` y `ξ̂_λ`
-real-rooted, entonces `Ξ` real-rooted. **Esto es correcto** — multiplicar por `c_λ≠0` no crea
-ni destruye ceros, y Hurwitz sólo mira ceros. **PERO** hay una sutileza real que el documento
-roza pero no enfatiza: para aplicar Hurwitz se necesita convergencia **localmente uniforme con
-límite ≢0**, y la cota `λ^{1/2}ε_loc` controla la diferencia `ξ̂_λ−Ξ` **ya normalizada**
-(misma escala que `Ξ`). Si uno cambiara la normalización a `‖ξ̂_λ‖_{L²}=1` (como en III), el
-límite sería `Ξ/‖Ξ_T‖_{L²}` y `‖Ξ_T‖_{L²}~√(logλ)→∞`, luego `c_λ→0` y el "límite" se
-degenera a 0 — **Hurwitz no aplicaría** en esa normalización sin renormalizar de vuelta. El
-documento es **consistente** (usa `ξ̂_λ(0)=Ξ(0)`, escala fija) pero la afirmación "la
-normalización es libre" es **demasiado relajada**: es libre *módulo mantener el límite ≢0 y
-finito*. Recomiendo precisar: la normalización debe ser tal que `c_λ ξ̂_λ` converja a un
-límite **finito y no nulo** (i.e. `c_λ` acotado lejos de 0 e ∞ sobre la familia). Con
-`ξ̂_λ(0)=Ξ(0)` esto se garantiza. **Veredicto: el paso Hurwitz es válido; la "libertad de
-normalización" debe enunciarse como libertad módulo límite no degenerado.** SOLID módulo E1. **E4** (`Ξ∈LP ⟺ RH`): clásico (de Branges / Pólya). SOLID, sin objeción. --- ## 5. N5c (discriminante converso) — SOLID* módulo E1
-**Lema N5c.1 (monotonía real-rooted `|g(x+iy)|≥|g(x)|`):** la prueba por el producto de
-Hadamard es **correcta**: `g(z)=ce^{az+b}z^m∏(1−z/r_n)e^{z/r_n}` con `r_n,a∈ℝ`, y
-`|1−(x+iy)/r_n|²=(1−x/r_n)²+(y/r_n)²≥(1−x/r_n)²`. El factor `e^{a(x+iy)}` tiene módulo `e^{ax}`
-independiente de `y`. **Verificado.** (Requiere `g∈LP`, i.e. real-rooted, género ≤1 — esto es
-E1, de nuevo.) La Prop N5c.2 (DH no converge off-axis) se sigue: en el cero off-line `z_0` de
-`Ξ_f`, `|ξ̂_λ(z_0)−Ξ_f(z_0)|=|ξ̂_λ(z_0)|≥|ξ̂_λ(x_0)|→|Ξ_f(x_0)|>0`. La única hipótesis fina
-es `Ξ_f(x_0)≠0`, que el documento justifica (proyección real de un cero off-line no es un cero
-on-line). **Correcto, aunque conviene notar:** podría en principio existir un cero on-line de
-`Ξ_f` que coincida con `x_0`; para DH esto es genéricamente falso y el argumento se sostiene,
-pero es una hipótesis genérica, no incondicional al 100%. Inocuo. **SOLID* módulo E1.** Buen
-resultado: certifica que `ε_loc` separa RH-verdadera de RH-falsa, con el lado falso probado. --- ## 6. Piezas RH-hard / condicionales — confirmación de etiquetas - **H1′ (QW PSD ⟺ RH-hasta-T*):** correctamente identificado como RH-equivalente. PF da estructura (fondo simple, envolvente positiva), **no** positividad espectral `ε_0≥0`. La corrección "PF≠PSD" es **correcta y franca**. GAP=RH.
-- **III:** teorema condicional correcto dado (H-gap)+(H-lim). La observación de que **(H-pos) `ε_0>0` ≈ Weil-pos ≈ RH-hasta-T*** ("la renormalización lleva RH horneada") es **aguda y correcta** — Davis–Kahan sobre `Â=A/ε_0` presupone `ε_0>0` con gap relativo, lo cual es justamente lo que se quiere demostrar. No es teorema incondicional. GAP condicional.
-- **IV.1:** identificación del operador límite — refutadas las id. de coef. constante; la lectura "SL de 2º orden con coef. variables / núcleo de Loewner compacto" es razonable pero **no demostrada**. Es **análisis (Landau–Widom/de Branges), no RH-hard**. Coincido. GAP.
-- **IV.2 ≡ §V:** la caracterización variacional ("ground state de Weil = `Ξ_T` ⟺ todos los `γ_ρ` reales ⟺ RH") es **correcta como equivalencia** y es **el núcleo RH**. Bajo RH, la forma `Σ_ρ|g(γ_ρ)|²≥0` es suma de cuadrados y su minimizador band-limited se anula en los `γ_ρ≤T*` (módulo rigor del déficit de frame Landau–Beurling). Sin RH es indefinida. **La etiqueta 🟥 RH-equivalente es correcta y franca.** Lo que falta —la tasa `o(λ^{−½})`— **es** RH. Sin objeción a la etiqueta; el "rigor del déficit de frame" (`g_0=Ξ_T+O(ε_0)`) es un sub-gap real de teoría de Beurling–Landau, pero vive *bajo* la hipótesis RH, así que no rescata nada incondicionalmente. --- ## 7. Cerrable vs RH-hard (pregunta 4) **Cerrable (análisis genuino, no RH):**
-- **IV.1** — identificar el operador de borde (Landau–Widom / de Branges). Análisis duro pero no RH. Cerrable en principio.
-- **El "déficit de frame"** `g_0→Ξ_T` bajo RH (Beurling–Landau a densidad crítica). Cerrable, pero sólo refina el lado-RH del núcleo; no avanza incondicionalmente.
-- **N1 matiz `x₀≠0`** y **retirar `Γ=O(1)`** → usar `O(logλ)`: correcciones expositivas triviales, cerrables ya. **Esencialmente cita obligada (no cerrable como prueba propia a este nivel):**
-- **E1 real-rootedness** — al nivel de la info aislada (envolvente de-modulada positiva), el desajuste de fase carrier `ω*≠π` impide la vía Herglotz/HB elemental. Es **CCM Thm 1.1(iii)** (espectro real de la realización autoadjunta). Mi sub-caso `ξ_k>0` (Lema M1) está cerrado pero **no cubre el ground state real**. Cita obligada, no reparable con azúcar de funciones enteras. **RH-hard (el muro, no cerrable sin probar RH):**
-- **IV.2 ≡ §V** — `ξ̂_∞=Ξ` / `ε_loc=o(λ^{−½})` / "ground state de Weil = `Ξ_T`". **Es RH.**
-- **H1′ (`ε_0≥0`)** y **(H-pos) en III** — positividad de Weil = RH-hasta-T*. **Es RH.** --- ## 8. Conclusión del tribunal (fría) El programa CCM, auditado bajo lente de análisis complejo, es una **reducción correcta y
-elegante de RH a un único núcleo RH-equivalente** (IV.2≡§V: el ground state de Weil es `Ξ_T`),
-**rodeada de un andamiaje de aproximación genuinamente probado** (N0, N1, N2, N3, Reducción,
-Hurwitz). Ese andamiaje **resiste la auditoría severa**: las pruebas de N0 (Γ incompleta),
-N1 (medida armónica + Boas), N2 (Nikolskii) y N3 (Phragmén–Lindelöf) son **correctas**, y el
-paso Hurwitz es **válido** módulo E1, con una precisión necesaria sobre la "libertad de
-normalización" (debe preservar límite no degenerado). **Lo que cierro en mi lente (E1):** prueba elemental rigurosa (Herglotz, Lema M1) del sub-caso
-`ξ_k>0`, e **identificación precisa** de por qué el ground state real (carrier `ω*≈0.966π`)
-**no** cae en ese caso ni en su de-modulación, de modo que la real-rootedness **debe** citarse
-de CCM Thm 1.1(iii) (realización autoadjunta / espacio de de Branges `H(E)`), no de un lema
-de funciones enteras pendiente. Soy más severo que el documento aquí: **no es "cerrable con
-más trabajo"; es cita obligada.** **Lo que permanece abierto:** (i) E1 sin prueba propia (cita obligada CCM 1.1(iii)); (ii) III
-condicional con (H-pos)=RH; (iii) el núcleo IV.2≡§V que **es** RH. **No se prueba RH.** El
-documento es **franco**: no detecto auto-engaño en la localización. Las correcciones que pido
-(retirar `Γ=O(1)`, precisar la libertad de normalización, severizar el estatus de E1 a "cita
-obligada", marcar la hipótesis genérica en N5c) son **expositivas, no estructurales**. *— H., referee.*
+= ½∫ v^{5/4+δ/2}e^{−πv}dv = ½Γ(7/4+δ/2, πe^{2T})`. **Exponent verified:** `(9/2+δ)/2−1
+= 9/4+δ/2−1 = 5/4+δ/2`. Correct.
+The incomplete Gamma bound `∫_X^∞ v^a e^{−πv}dv ≤ C X^a e^{−πX}` for large `X` is standard
+(integration by parts, the boundary term dominates when `a/(πX)→0`). With `X=e^{2T}=λ²`:
+`(λ²)^{5/4+δ/2}e^{−πλ²}=λ^{5/2+δ}e^{−πλ²}`. **The proof of N0 is correct and robust.** SOLID. Minor remark (does not affect anything): the corollary "the strip grows up to `λ²/logλ`" is correct and in
+fact underscores that Fourier truncation is **not** the obstruction. Fine. ### 3.2 N1 (off-axis transfer) — SOLID*, with a constant-level nuance
+The construction `w(z)=log|F(z)|−τ·Im z` subharmonic on `H` is correct (`log|F|` subharmonic,
+`τ Im z` harmonic). The invocation of **Boas Thm 6.2.4** (`|F(z)|≤Γ e^{τ|Im z|}` for `F` of
+type `τ` bounded on ℝ) is **correct and is exactly the growth condition that makes
+`w` bounded above**, enabling Phragmén–Lindelöf / harmonic majorant. Well invoked.
+The harmonic measure bound of the segment from `iy₀`:
+`ω_{[−R,R]}(iy₀)=(2/π)arctan(R/y₀)`, and `(2/π)arctan(R/y₀)≥1−(2/π)(y₀/R)` for `y₀≪R`
+(because `arctan(R/y₀)=π/2−arctan(y₀/R)≥π/2−y₀/R`). **Verified.** SOLID*. **Nuance (harmless):** the bound `1−ω≤(2/π)(y₀/R)` is for the point `x₀=0`. For `|x₀|≤R/2` the
+harmonic measure of the segment only **increases** (the point still "sees" the segment at
+comparable angle), so `1−ω` remains `O(y₀/R)=O(λ^{−2})`. The document uses this
+implicitly; it is correct but deserves a line. It changes nothing: `Γ^{1−ω}→1`. ### 3.3 N2 (amplitude) — SOLID, with a harmless overstatement
+The Parseval identity `‖ξ̂‖²_{L²}=(πL/2)‖ξ‖²_{ℓ²}=πlogλ` (with `‖ξ‖_{ℓ²}=1`) is correct
+via orthogonality of the `sinc_k`. Nikolskii/Plancherel–Pólya `‖g‖_∞≤C√τ‖g‖_{L²}` for
+`g∈PW_τ`, `τ=logλ`, gives `‖ξ̂‖_∞≤C√(logλ)·√(πlogλ)=O(logλ)`. **This is proved and is SOLID.** **Discrepancy I flag:** the box in `RH-PROOF-FULL.md` and the Reduction sometimes claim
+`Γ=O(1)` "with the normalization `ξ̂(0)=Ξ(0)`". What is **proved** is `Γ=O(logλ)`. The jump to
+`O(1)` requires that the normalization at one point control the global sup, which **is not
+proved** (plausible but not trivial: `Ξ(0)` is a fixed constant, but `‖ξ̂‖_∞`
+could exceed `|ξ̂(0)|`). **It does not matter for the chain**, because the Reduction only needs
+`Γ=poly(λ)` (so that `Γ^{1−ω}→1`), which `O(logλ)` gives with room to spare. I recommend **withdrawing
+the claim `Γ=O(1)`** and keeping the proved `O(logλ)`. Correct label: SOLID for
+what the chain needs. ### 3.4 N3 (amplification, Boas/PL) — SOLID
+`g(z)=F(z)e^{iτz}` on `H`: `|g(x)|=|F(x)|≤M` on ℝ; `|g(z)|=|F(z)|e^{−τ Im z}` bounded on
+sectors by the growth of type `τ`; Phragmén–Lindelöf on `H` (finite order, bounded on
+the boundary) ⟹ `|g|≤M` on `H` ⟹ `|F(x+iy)|≤Me^{τy}` for `y≥0`; reflection for `y<0`.
+**Correct, it is Boas 6.2.4.** Gives the factor `e^{τy}=λ^y≤λ^{1/2}`. SOLID. --- ## 4. Reduction + Hurwitz (E3) — SOLID (modulo E1). Validity of the Hurwitz step. **The Reduction's bound** `sup_{|Im z|≤½}|ξ̂_λ−Ξ|≤Cλ^{1/2}ε_loc+Cλ³e^{−πλ²}` is the sum
+of N0 (`δ=½`: `λ^{5/2+½}=λ³`) and of N1/N3 (`e^{τ·½}ε_loc^ω Γ^{1−ω}=λ^{1/2}ε_loc·(1+o(1))`).
+**Arithmetically and analytically correct.** Verified `5/2+δ=3` with `δ=½`. SOLID. **The Hurwitz step (E3), audited with severity:**
+> If `ξ̂_λ→Ξ` **uniformly on compacta** of the open strip `|Im z|<½` (indeed
+> `≤½+`), and each `ξ̂_λ` has **only real zeros**, then `Ξ` has no zeros in
+> `0<|Im z|<½`. This is Hurwitz's theorem correctly applied: if `Ξ(z_0)=0` with `0<Im z_0<½`,
+then by locally uniform convergence (and `Ξ≢0`), for large `λ` `ξ̂_λ` has a zero
+in any neighborhood of `z_0` — but the zeros of `ξ̂_λ` are **real**, a contradiction.
+**Valid.** Three conditions I verify are met:
+1. **Locally uniform convergence** on the strip: given by the Reduction **if** `ε_loc=o(λ^{−½})` (that is the core hypothesis, unproved). Correct that it is conditional.
+2. **`Ξ≢0`** (limit not identically zero): yes, `Ξ` is Riemann's xi. Correct.
+3. **Real-rootedness of the `ξ̂_λ`**: **is E1**, the gap. Hurwitz **inherits modulo E1**. **Normalization/convergence-mode subtlety (question 3):** The document claims that the
+normalization is "free" by Hurwitz invariance: if `c_λ ξ̂_λ→Ξ` with `c_λ≠0` and `ξ̂_λ`
+real-rooted, then `Ξ` is real-rooted. **This is correct** — multiplying by `c_λ≠0` neither creates
+nor destroys zeros, and Hurwitz only looks at zeros. **BUT** there is a real subtlety that the document
+touches on but does not emphasize: applying Hurwitz requires **locally uniform convergence with
+limit ≢0**, and the bound `λ^{1/2}ε_loc` controls the difference `ξ̂_λ−Ξ` **already normalized**
+(same scale as `Ξ`). If one changed the normalization to `‖ξ̂_λ‖_{L²}=1` (as in III), the
+limit would be `Ξ/‖Ξ_T‖_{L²}` and `‖Ξ_T‖_{L²}~√(logλ)→∞`, so `c_λ→0` and the "limit"
+degenerates to 0 — **Hurwitz would not apply** under that normalization without renormalizing back. The
+document is **consistent** (it uses `ξ̂_λ(0)=Ξ(0)`, fixed scale) but the claim "the
+normalization is free" is **too loose**: it is free *modulo keeping the limit ≢0 and
+finite*. I recommend specifying: the normalization must be such that `c_λ ξ̂_λ` converges to a
+**finite, nonzero** limit (i.e. `c_λ` bounded away from 0 and ∞ over the family). With
+`ξ̂_λ(0)=Ξ(0)` this is guaranteed. **Verdict: the Hurwitz step is valid; the "freedom of
+normalization" should be stated as freedom modulo a non-degenerate limit.** SOLID modulo E1. **E4** (`Ξ∈LP ⟺ RH`): classical (de Branges / Pólya). SOLID, no objection. --- ## 5. N5c (converse discriminant) — SOLID* modulo E1
+**Lemma N5c.1 (real-rooted monotonicity `|g(x+iy)|≥|g(x)|`):** the proof via the
+Hadamard product is **correct**: `g(z)=ce^{az+b}z^m∏(1−z/r_n)e^{z/r_n}` with `r_n,a∈ℝ`, and
+`|1−(x+iy)/r_n|²=(1−x/r_n)²+(y/r_n)²≥(1−x/r_n)²`. The factor `e^{a(x+iy)}` has modulus `e^{ax}`
+independent of `y`. **Verified.** (Requires `g∈LP`, i.e. real-rooted, genus ≤1 — this is
+E1 again.) Prop N5c.2 (DH does not converge off-axis) follows: at the off-line zero `z_0` of
+`Ξ_f`, `|ξ̂_λ(z_0)−Ξ_f(z_0)|=|ξ̂_λ(z_0)|≥|ξ̂_λ(x_0)|→|Ξ_f(x_0)|>0`. The only fine hypothesis
+is `Ξ_f(x_0)≠0`, which the document justifies (the real projection of an off-line zero is not an on-line
+zero). **Correct, though it is worth noting:** there could in principle exist an on-line zero of
+`Ξ_f` coinciding with `x_0`; for DH this is generically false and the argument holds,
+but it is a generic hypothesis, not 100% unconditional. Harmless. **SOLID* modulo E1.** A good
+result: it certifies that `ε_loc` separates true-RH from false-RH, with the false side proved. --- ## 6. RH-hard / conditional pieces — confirmation of labels - **H1′ (QW PSD ⟺ RH-up-to-T*):** correctly identified as RH-equivalent. PF gives structure (simple bottom, positive envelope), **not** spectral positivity `ε_0≥0`. The "PF≠PSD" correction is **correct and candid**. GAP=RH.
+- **III:** correct conditional theorem given (H-gap)+(H-lim). The observation that **(H-pos) `ε_0>0` ≈ Weil-pos ≈ RH-up-to-T*** ("the renormalization bakes in RH") is **sharp and correct** — Davis–Kahan on `Â=A/ε_0` presupposes `ε_0>0` with relative gap, which is precisely what is to be shown. It is not an unconditional theorem. Conditional GAP.
+- **IV.1:** identification of the limit operator — the constant-coefficient identifications are refuted; the reading "2nd-order SL with variable coefficients / compact Loewner kernel" is reasonable but **not proved**. It is **analysis (Landau–Widom/de Branges), not RH-hard**. I agree. GAP.
+- **IV.2 ≡ §V:** the variational characterization ("Weil ground state = `Ξ_T` ⟺ all the `γ_ρ` real ⟺ RH") is **correct as an equivalence** and is **the RH core**. Under RH, the form `Σ_ρ|g(γ_ρ)|²≥0` is a sum of squares and its band-limited minimizer vanishes at the `γ_ρ≤T*` (modulo the rigor of the Landau–Beurling frame deficit). Without RH it is indefinite. **The 🟥 RH-equivalent label is correct and candid.** What is missing —the rate `o(λ^{−½})`— **is** RH. No objection to the label; the "rigor of the frame deficit" (`g_0=Ξ_T+O(ε_0)`) is a real sub-gap in Beurling–Landau theory, but it lives *under* the RH hypothesis, so it rescues nothing unconditionally. --- ## 7. Closable vs RH-hard (question 4) **Closable (genuine analysis, not RH):**
+- **IV.1** — identifying the boundary operator (Landau–Widom / de Branges). Hard analysis but not RH. Closable in principle.
+- **The "frame deficit"** `g_0→Ξ_T` under RH (Beurling–Landau at critical density). Closable, but it only refines the RH-side of the core; it does not advance unconditionally.
+- **N1 nuance `x₀≠0`** and **withdrawing `Γ=O(1)`** → use `O(logλ)`: trivial expository corrections, already closable. **Essentially a mandatory citation (not closable as an own proof at this level):**
+- **E1 real-rootedness** — at the level of the isolated information (de-modulated positive envelope), the carrier phase mismatch `ω*≠π` blocks the elementary Herglotz/HB route. It is **CCM Thm 1.1(iii)** (real spectrum of the self-adjoint realization). My sub-case `ξ_k>0` (Lemma M1) is closed but **does not cover the real ground state**. Mandatory citation, not repairable with entire-function sugar. **RH-hard (the wall, not closable without proving RH):**
+- **IV.2 ≡ §V** — `ξ̂_∞=Ξ` / `ε_loc=o(λ^{−½})` / "Weil ground state = `Ξ_T`". **It is RH.**
+- **H1′ (`ε_0≥0`)** and **(H-pos) in III** — Weil positivity = RH-up-to-T*. **It is RH.** --- ## 8. Conclusion of the tribunal (cold) The CCM program, audited through the lens of complex analysis, is a **correct and
+elegant reduction of RH to a single RH-equivalent core** (IV.2≡§V: the Weil ground state is `Ξ_T`),
+**surrounded by a genuinely proved approximation scaffolding** (N0, N1, N2, N3, Reduction,
+Hurwitz). That scaffolding **withstands severe audit**: the proofs of N0 (incomplete Γ),
+N1 (harmonic measure + Boas), N2 (Nikolskii) and N3 (Phragmén–Lindelöf) are **correct**, and the
+Hurwitz step is **valid** modulo E1, with a necessary precision about the "freedom of
+normalization" (it must preserve a non-degenerate limit). **What I close in my lens (E1):** a rigorous elementary proof (Herglotz, Lemma M1) of the sub-case
+`ξ_k>0`, and a **precise identification** of why the real ground state (carrier `ω*≈0.966π`)
+**does not** fall into that case nor into its de-modulation, so that real-rootedness **must** be cited
+from CCM Thm 1.1(iii) (self-adjoint realization / de Branges space `H(E)`), not from a
+pending entire-function lemma. I am harsher than the document here: **it is not "closable with
+more work"; it is a mandatory citation.** **What remains open:** (i) E1 with no proof of its own (mandatory citation CCM 1.1(iii)); (ii) III
+conditional with (H-pos)=RH; (iii) the IV.2≡§V core which **is** RH. **RH is not proved.** The
+document is **candid**: I detect no self-deception in the localization. The corrections I request
+(withdraw `Γ=O(1)`, specify the freedom of normalization, harden the status of E1 to "mandatory
+citation", flag the generic hypothesis in N5c) are **expository, not structural.** *— H., referee.*

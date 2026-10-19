@@ -24,7 +24,7 @@ On the enriched unreduced monomial support, the source operation (1.1)
 has the canonical abelian lift
 
 \[
- \Lambda_{n,m}:A_p\longrightarrow B_p,qquad
+ \Lambda_{n,m}:A_p\longrightarrow B_p,\qquad
  X^aY^b\longmapsto T^{na+mb}.
  \tag{1.2}
 \]

@@ -1,6 +1,6 @@
 # E77.7au - Alignment defect coordinate identity
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

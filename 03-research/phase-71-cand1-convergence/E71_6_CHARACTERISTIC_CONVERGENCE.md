@@ -1,8 +1,7 @@
 # E71.6 -- characteristic-function convergence probe
 
-**Date:** 2026-07-07.
 **Script:** `E71_6_characteristic_convergence_probe.py`.
-**Role:** begin testing the Hurwitz closure target from E71.5 at the function level.
+**Purpose:** begin testing the Hurwitz closure target from E71.5 at the function level.
 
 ## Natural CCM entire function
 

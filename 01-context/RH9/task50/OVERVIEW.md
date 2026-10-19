@@ -71,7 +71,7 @@ The strongest positive evidence for an explicit-formula-like trace identity star
 
 For the archimedean contribution, Connes–Consani isolate and compute an archimedean distribution built from the kernel −log|t|; they show its Fourier transform yields the Weil distribution used in the archimedean Ψ/Gamma-factor term, giving a direct identification of the archimedean local piece at the distributional level (connes2021weilpositivityand pages 10-12, connes2021weilpositivityand pages 1-3). The displayed equations are visible in the retrieved figure (connes2021weilpositivityand media e3405e22). Independently, Burnol gives an explicit decomposition of Weil’s explicit formula into local terms W_ν(g) expressed as finite-part/principal-value integrals over ℚ_ν× and shows the archimedean term contains explicit constants like (log π + γ)g(1) together with principal value integrals, matching the standard Ψ-type archimedean contribution structure (burnol1998theexplicitformula pages 13-16).
 
-Identification with the user’s specific Weil explicit formula terms.
+Identification with the task’s specific Weil explicit formula terms.
 
 • Archimedean term Ψ(r): Connes–Consani’s formulas show the archimedean distribution arises from −log|t| and yields the Weil distribution after Fourier transform, which is exactly the kind of Γ-factor/Ψ-term contribution in the explicit formula (connes2021weilpositivityand pages 10-12, connes2021weilpositivityand media e3405e22). Burnol’s explicit constants (log π + γ)g(1) and principal-value integrals are also standard representatives of the archimedean Ψ-term in Weil’s formulation (burnol1998theexplicitformula pages 13-16).
 

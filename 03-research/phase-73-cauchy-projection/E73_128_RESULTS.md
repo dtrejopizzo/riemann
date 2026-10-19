@@ -1,6 +1,5 @@
 # E73.128 Results - Phi Root-Proximity Probe
 
-Date: 2026-07-12.
 
 Script:
 

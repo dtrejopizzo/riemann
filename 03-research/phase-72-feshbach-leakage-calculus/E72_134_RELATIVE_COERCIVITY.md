@@ -1,7 +1,6 @@
 # E72.134 -- Relative complement coercivity
 
-**Date:** 2026-07-09.
-**Role:** replace crude Weyl dominance by a form-relative coercivity theorem.
+**Purpose:** replace crude Weyl dominance by a form-relative coercivity theorem.
 
 ## 0. Relative criterion
 

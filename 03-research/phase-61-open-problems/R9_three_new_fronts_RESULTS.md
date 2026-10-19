@@ -1,32 +1,32 @@
-# R9 — Fase 2.3.F-CLOSE-II: tres frentes nuevos (N1 Lanczos · N2 trazas · N3 Liouville-Green)
+# R9 — Phase 2.3.F-CLOSE-II: three new fronts (N1 Lanczos · N2 traces · N3 Liouville-Green)
 
-**Fecha:** 2026-06-25.  **Engine:** `engine_cache.py` (cache a 50 díg. de `build` de E70), dps=40,
-falsador DH en los tres.  **Objetivo:** atacar 2.3.F-Loc con herramientas **intrínsecas y robustas**
-que NO repiten los 8 atajos muertos (R3–R8). λ ∈ {7,9,11,13,15(,17,19,21)}.
+Engine:** `engine_cache.py` (50-digit cache of `build` from E70), dps=40,
+DH falsifier on all three. **Goal:** attack 2.3.F-Loc with **intrinsic and robust** tools
+that do NOT repeat the 8 dead shortcuts (R3–R8). λ ∈ {7,9,11,13,15(,17,19,21)}.
 
-## N1 — Jacobi intrínseca vía Lanczos exacto sobre `A` de Weil (`E79_lanczos_intrinsic.py`)
+## N1 — Intrinsic Jacobi via exact Lanczos on the Weil `A` (`E79_lanczos_intrinsic.py`)
 
-**RESULTADO POSITIVO (ganancia metodológica real).** Lanczos exacto (mpmath, reortogonalización
-completa) sobre la matriz de Weil `A`, arrancando de un vector cíclico de **ambas paridades**:
+**POSITIVE RESULT (real methodological gain).** Exact Lanczos (mpmath, full
+reorthogonalization) on the Weil matrix `A`, starting from a cyclic vector of **both parities**:
 
-- **Reproduce la escalera EXACTAMENTE en el residuo `e^{−cL}`**: a λ=9, espectro de la tridiagonal
-  de Lanczos = `[1, 3.998, 9.026, 16.056, 25.22, 36.386]` ≈ `(k+1)²`, con `rep_err = 0` (exacto).
-  **Esto DERROTA el obstáculo de E76**: E76 inyectó base seno externa (error O(1), 19 órdenes por
-  encima del residuo) y se rompió; Lanczos es una reducción ortogonal *interna* → estable, alcanza
-  el residuo sin base externa.
-- **Sub-sector de paridad:** un vector de arranque par sólo excita el sector par → escalera
-  `1, 9.05, 25.4, 50.7 ≈ (2k+1)²` (consistente, confirma la estructura).
-- **Insight estructural (mecanismo, medido):** la Jacobi intrínseca tiene coeficientes
-  `αₙ, βₙ = O(1)`, **acotados** y **alternados por paridad** (`α≈[0.79, 3.69, 0.85, 3.68, 0.88,…]`).
-  NO crecen como la Jacobi prolata **desnuda** de Connes (Prop 3.5, `bₙ ≈ 2πλ²·8n`, crecimiento
-  lineal `~n¹`). **La balanza de Weil + Doob ELIMINA la escala `2πλ²`**, dejando una Jacobi de
-  coeficientes acotados cuyo espectro bajo es la escalera `(k+1)²`. Reframe de la ruta A: probar que
-  la Jacobi intrínseca **acotada** → Dirichlet `(k+1)²` asintóticamente.
-- **Falsador DH:** ratios `[1, 0.67, 0.62, 0.54, …]` (basura), `αₙ` con signo cambiado. Falla limpio.
+- **Reproduces the ladder EXACTLY in the `e^{−cL}` residual**: at λ=9, the spectrum of the Lanczos
+  tridiagonal matrix = `[1, 3.998, 9.026, 16.056, 25.22, 36.386]` ≈ `(k+1)²`, with `rep_err = 0` (exact).
+  **This DEFEATS the E76 obstacle**: E76 injected an external sine basis (error O(1), 19 orders
+  above the residual) and broke; Lanczos is an *internal* orthogonal reduction → stable, reaches
+  the residual without an external basis.
+- **Parity subsector:** an even starting vector excites only the even sector → ladder
+  `1, 9.05, 25.4, 50.7 ≈ (2k+1)²` (consistent, confirms the structure).
+- **New structural insight (mechanism, measured):** the intrinsic Jacobi has coefficients
+  `αₙ, βₙ = O(1)`, **bounded** and **parity-alternating** (`α≈[0.79, 3.69, 0.85, 3.68, 0.88,…]`).
+  They do NOT grow like Connes's **bare** prolate Jacobi (Prop 3.5, `bₙ ≈ 2πλ²·8n`, linear
+  growth `~n¹`). **The Weil + Doob balance ELIMINATES the `2πλ²` scale**, leaving a Jacobi
+  operator with bounded coefficients whose low spectrum is the `(k+1)²` ladder. Reframe of route A: prove
+  that the **bounded** intrinsic Jacobi operator → Dirichlet `(k+1)²` asymptotically.
+- **DH falsifier:** ratios `[1, 0.67, 0.62, 0.54, …]` (garbage), `αₙ` with flipped sign. Fails cleanly.
 
-## N2 — Zeta espectral / traza de calor (`E80_spectral_zeta.py`)
+## N2 — Spectral zeta / heat trace (`E80_spectral_zeta.py`)
 
-**RESULTADO POSITIVO (robustez) + NEGATIVO (sin ley de tasa limpia).** `μ_k = eps_k/eps_0`:
+**POSITIVE RESULT (robustness) + NEGATIVE (no clean rate law).** `μ_k = eps_k/eps_0`:
 
 | λ | μ (target 1,4,9,16,25) | ladder_err | Z(1) err | Θ(0.7) err |
 |---|---|---|---|---|
@@ -36,17 +36,17 @@ completa) sobre la matriz de Weil `A`, arrancando de un vector cíclico de **amb
 | 13 | 1, 4.04, 9.01, 16.20, 25.12 | 0.013 | 0.0025 | 0.0031 |
 | 15 | 1, 3.93, 9.01, 15.76, 25.08 | 0.017 | 0.0033 | 0.0051 |
 
-- **Las trazas reproducen los invariantes Dirichlet a <0.5%** (agregado), mucho más robusto que
-  cualquier eigenvalor individual `e^{−cL}`. Confirma 2.3.F-Loc a nivel de invariante espectral.
-- **Falsador DH CATASTRÓFICO** (instrumento limpio): `ladder_err=0.98`, `Z(s) err = 4.3, 10.8, 19.9`.
-- **PERO la dependencia en λ es OSCILATORIA, no monótona**: `μ_1` rebota alrededor de 4
-  (4.07→4.00→3.90→4.04→3.93), `μ_3` alrededor de 16. Las tasas de Richardson salen **inconsistentes**
-  entre observables (ladder_err `p=+0.80` converge, pero `Z(s=2) p=−2.85`). ⟹ **NO hay ley de
-  potencia limpia**: el residuo respecto de `(k+1)²` **fluctúa aritméticamente en λ** (eco de la
-  oscilación de primos en la banda `L=2logλ`). La escalera es exacta **en media**; la convergencia es
-  Cesàro/promediada, no puntual-suave.
+- **The traces reproduce the Dirichlet invariants to <0.5%** (aggregated), much more robust than
+  any individual `e^{−cL}` eigenvalue. Confirms 2.3.F-Loc at the level of a spectral invariant.
+- **CATASTROPHIC DH falsifier** (clean instrument): `ladder_err=0.98`, `Z(s) err = 4.3, 10.8, 19.9`.
+- **BUT the λ-dependence is OSCILLATORY, not monotone**: `μ_1` bounces around 4
+  (4.07→4.00→3.90→4.04→3.93), `μ_3` around 16. The Richardson rates come out **inconsistent**
+  across observables (ladder_err `p=+0.80` converges, but `Z(s=2) p=−2.85`). ⟹ **there is NO clean
+  power law**: the residual relative to `(k+1)²` **fluctuates arithmetically in λ** (an echo of the
+  prime oscillation in the band `L=2logλ`). The ladder is exact **on average**; the convergence is
+  Cesàro/averaged, not pointwise-smooth.
 
-### Envelope a λ alto (`E82_envelope.py`, λ hasta 21)
+### Envelope at high λ (`E82_envelope.py`, λ up to 21)
 
 | λ | L | μ_1 | μ_3 | \|dev μ1\| | \|dev μ3\| | ladder_err |
 |---|---|---|---|---|---|---|
@@ -59,40 +59,40 @@ completa) sobre la matriz de Weil `A`, arrancando de un vector cíclico de **amb
 | 19 | 5.89 | 3.978 | 15.93 | 0.022 | 0.071 | 0.006 |
 | 21 | 6.09 | 3.928 | 15.73 | 0.072 | 0.271 | 0.018 |
 
-**El envelope NO decae limpio:** la desviación de `(k+1)²` **oscila en una banda ~estable** (ladder_err
-rebota 0.025, 0.009, 0.024, 0.013, 0.017, 0.010, 0.006, **0.018**). Los ajustes "decae" (`p≈1.45,
-0.85`) están dominados por los λ bajos y un λ=19 afortunado; λ=21 vuelve a 0.018. Conclusión:
-**escalera exacta EN MEDIA + fluctuación aritmética irreducible ~1–2% que no se desvanece a λ
-alcanzable.** Eso es el obstáculo, preciso.
+**The envelope does NOT decay cleanly:** the deviation from `(k+1)²` **oscillates in a roughly stable
+band** (ladder_err bounces 0.025, 0.009, 0.024, 0.013, 0.017, 0.010, 0.006, **0.018**). The "decay"
+fits (`p≈1.45, 0.85`) are dominated by the low λ values and a lucky λ=19; λ=21 goes back to 0.018.
+Conclusion: **exact ladder ON AVERAGE + irreducible ~1–2% arithmetic fluctuation that does not
+vanish at reachable λ.** That is the obstacle, precisely.
 
-## N3 — Portadora `θ(y)` vía Liouville–Green + tasa 1/L (`E81_liouville_green.py`)
+## N3 — Carrier `θ(y)` via Liouville–Green + 1/L rate (`E81_liouville_green.py`)
 
-**RESULTADO NEGATIVO (sin ley derivable).** Dos vías: (a) `cosθ=(f_1/u_0)/2` de modos medidos;
-(b) Liouville–Green `θ=∫√(w/C)dy` con `C` medido.
+**NEGATIVE RESULT (no derivable law).** Two approaches: (a) `cosθ=(f_1/u_0)/2` from measured
+modes; (b) Liouville–Green `θ=∫√(w/C)dy` with measured `C`.
 
-- Residuo de afinidad **pequeño** (modos 0.5–1%, LG ~2.3–2.6%) pero **plano**: la tasa LG en `1/L`
-  sale `≈ 0` (no converge limpio); la de modos es ruidosa (`p≈0.55` dominada por un punto).
-- **Falsador DH:** modos 17.4%, LG 6.0% (mucho peor). Falla.
-- Veredicto: consistente con la oscilación de N2 — la afinidad es buena (~2%) pero su tendencia con λ
-  está dominada por la fluctuación aritmética, no por una ley `1/L^p` extraíble.
+- Affinity residual **small** (modes 0.5–1%, LG ~2.3–2.6%) but **flat**: the LG rate in `1/L`
+  comes out `≈ 0` (does not converge cleanly); the mode rate is noisy (`p≈0.55` dominated by one point).
+- **DH falsifier:** modes 17.4%, LG 6.0% (much worse). Fails.
+- Verdict: consistent with the N2 oscillation — the affinity is good (~2%) but its trend with λ
+  is dominated by the arithmetic fluctuation, not by an extractable `1/L^p` law.
 
-## Veredicto consolidado R9
+## R9 consolidated verdict
 
-**Las tres herramientas nuevas SON un avance real, pero NO cierran 2.3.F:**
+**The three new tools ARE real progress, but do NOT close 2.3.F:**
 
-1. **Ganancia firme (N1):** Lanczos da una **tridiagonalización intrínseca ESTABLE** que alcanza la
-   escalera `(k+1)²` en el residuo `e^{−cL}` (donde E76 fallaba) — herramienta nueva utilizable.
-2. **Insight estructural nuevo (N1):** en el marco intrínseco el operador es una **Jacobi de
-   coeficientes acotados O(1)** (la balanza de Weil borra la escala `2πλ²` de la prolata desnuda).
-   Reframe limpio de la ruta A: "Jacobi acotada intrínseca → Dirichlet `(k+1)²`".
-3. **Triple confirmación robusta de 2.3.F-Loc** (Lanczos, trazas, portadora) + **falsación DH limpia
-   en los tres** (instrumento fiel).
-4. **Obstrucción precisada (N2/N3):** el residuo de `(k+1)²` **oscila aritméticamente en λ** (no hay
-   ley de potencia `1/L^p`); la convergencia a la escalera es **en media**, no puntual. Por eso ningún
-   ajuste de tasa cierra: el contenido restante es una **asintótica promediada** (Cesàro) de la
-   deformación prolato/Sonin = exactamente la maquinaria de Connes/Consani.
+1. **Solid gain (N1):** Lanczos gives a **STABLE intrinsic tridiagonalization** that reaches the
+   `(k+1)²` ladder in the `e^{−cL}` residual (where E76 failed) — a new usable tool.
+2. **New structural insight (N1):** in the intrinsic frame the operator is a **Jacobi operator with
+   bounded O(1) coefficients** (the Weil balance erases the `2πλ²` scale of the bare prolate).
+   Clean reframe of route A: "bounded intrinsic Jacobi → Dirichlet `(k+1)²`".
+3. **Robust triple confirmation of 2.3.F-Loc** (Lanczos, traces, carrier) + **clean DH falsification
+   on all three** (faithful instrument).
+4. **Sharpened obstruction (N2/N3):** the `(k+1)²` residual **oscillates arithmetically in λ** (there
+   is no power law `1/L^p`); the convergence to the ladder is **on average**, not pointwise. That is
+   why no rate fit closes it: the remaining content is an **averaged asymptotic** (Cesàro) of the
+   prolate/Sonin deformation = exactly the Connes/Consani machinery.
 
-**Estado de 2.3.F sin cambios en el TEOREMA, pero con mejor mapa:** sigue REDUCIDO a 2.3.F-Loc; ahora
-con (i) una ruta computacional estable (Lanczos), (ii) un enunciado más nítido del crux (Jacobi
-acotada → Dirichlet, en media sobre λ), y (iii) la confirmación de que la obstrucción es la
-**fluctuación aritmética** del residuo, no un atajo faltante.
+**Status of 2.3.F unchanged at the THEOREM level, but with a better map:** it remains REDUCED to
+2.3.F-Loc; now with (i) a stable computational route (Lanczos), (ii) a sharper statement of the crux
+(bounded Jacobi → Dirichlet, on average over λ), and (iii) confirmation that the obstruction is the
+**arithmetic fluctuation** of the residual, not a missing shortcut.

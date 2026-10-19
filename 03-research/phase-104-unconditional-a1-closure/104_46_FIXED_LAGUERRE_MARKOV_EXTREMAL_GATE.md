@@ -1,17 +1,16 @@
-# 104_46 — El vector Laguerre fijo es casi extremal para el transporte divisor
+# 104_46 — The fixed Laguerre vector is nearly extremal for the divisor transport
 
-**Estado.** Se atacó exactamente la posibilidad que `104_44` había dejado
-abierta: una brecha del operador divisor no sobre todos los vectores, sino
-sólo sobre
+**Status.** The exact possibility `104_44` had left open was attacked: a
+gap of the divisor operator not over every vector, but only over
 
 \[
  f_{n,s}(d)=L_{n-1}^{(1)}(s\log d),\qquad s>1,
 \tag{1}
 \]
 
-después de retirar su media von Mangoldt. El resultado es negativo y más
-fuerte que el gate operatorial de `104_44`. Para todo \(s>1\) suficientemente
-próximo a \(1\), la propia sucesión (1) es casi extremal:
+after removing its von Mangoldt mean. The result is negative and stronger
+than the operator gate of `104_44`. For every \(s>1\) sufficiently close
+to \(1\), sequence (1) is itself nearly extremal:
 
 \[
  \boxed{
@@ -22,48 +21,49 @@ próximo a \(1\), la propia sucesión (1) es casi extremal:
 \tag{2}
 \]
 
-La razón no es un primo excepcional fijo. Bajo la medida cuadrática del
-polinomio de grado \(n-1\), el divisor von Mangoldt es, con probabilidad
-asintótica uno, un primo enorme; al multiplicarlo por un cofactor zeta fijo,
-ese primo sigue siendo recuperable como el factor primo mayor del producto.
-La esperanza condicional pierde entonces una proporción \(o(1)\) de la
-energía del vector exacto.
+The reason is not a fixed exceptional prime. Under the quadratic measure
+of the degree-\((n-1)\) polynomial, the von Mangoldt divisor is, with
+asymptotic probability one, a huge prime; multiplied by a fixed zeta
+cofactor, that prime remains recoverable as the largest prime factor of
+the product. The conditional expectation then loses only an \(o(1)\)
+proportion of the exact vector's energy.
 
-El comparador continuo polo--Gamma hace lo contrario. Para el mismo
-polinomio no escalado, su cociente centrado tiende a cero. Por tanto no existe
-una transferencia de coercividad Gamma al canal aritmético, ni siquiera sobre
-el único rayo que interesa. Además, ambos cocientes centrados son ciegos a la
-diferencia de medias firmada que vale \(B_n=A_n-\lambda_n\). Esto descarta el
-mecanismo
+The continuous pole–Gamma comparator does the opposite. For the same
+unscaled polynomial, its centered ratio tends to zero. Hence there is no
+transfer of Gamma coercivity to the arithmetic channel, not even on the
+single ray of interest. Moreover, both centered ratios are blind to the
+signed mean difference equal to \(B_n=A_n-\lambda_n\). This rules out the
+mechanism
 
-> «probar no-alineación del vector Laguerre mediante el transporte Markov y
-> compararla con la contracción Gamma».
+> "prove non-alignment of the Laguerre vector via the Markov transport
+> and compare it with the Gamma contraction."
 
-No se descarta una identidad lineal firmada que estime directamente las
-medias. Esa identidad sería precisamente el nuevo teorema aritmético
-unilateral aún faltante. No se prueba \(B_n\le(1501/2002)A_n\), A1 ni RH.
+Not ruled out is a signed linear identity that directly estimates the
+means. Such an identity would be precisely the new, still-missing,
+one-sided arithmetic theorem. Neither \(B_n\le(1501/2002)A_n\), A1, nor
+RH is proved.
 
-## 1. Auditoría vinculante
+## 1. Binding audit
 
-`104_28` identifica el test de Li con el prefijo de Laguerre
-\(g_n=\sum_{j<n}\phi_j\), pero demuestra que la no-alineación en un operador
-interior no se transporta automáticamente al borde. `104_30` construye una
-referencia positiva de bandera que evalúa \(A_n\), aunque su estimación de
-filas vuelve a pedir las segundas diferencias firmadas de \(A_n-\lambda_n\).
-`104_42` permite todo precondicionador positivo dependiente del grado y prueba
-que su óptimo es el módulo del momento que se quería acotar. Finalmente,
-`104_44` construye el transporte canónico asociado a
-\(\Lambda*1=\log\), prueba que su norma en media cero es uno mediante
-\(e_p\), y deja expresamente abierta una brecha para el vector (1).
+`104_28` identifies the Li test with the Laguerre prefix
+\(g_n=\sum_{j<n}\phi_j\), but proves that non-alignment in an interior
+operator does not automatically transfer to the boundary. `104_30` builds
+a positive flag reference evaluating \(A_n\), although its row estimate
+again requires the signed second differences of \(A_n-\lambda_n\).
+`104_42` allows every degree-dependent positive preconditioner and proves
+that its optimum is the modulus of the moment one wanted to bound.
+Finally, `104_44` builds the canonical transport associated with
+\(\Lambda*1=\log\), proves that its zero-mean norm is one via
+\(e_p\), and explicitly leaves open a gap for vector (1).
 
-Este documento cierra sólo esa última apertura. No usa una suma triangular de
-grados, no cambia de escala el polinomio y no separa primos de potencias primas
-en la identidad final. La separación por exponentes se usa únicamente para
-probar el teorema asintótico de casi extremalidad.
+This document closes only that last opening. It uses no triangular degree
+sum, does not rescale the polynomial, and does not separate primes from
+prime powers in the final identity. The split by exponents is used only
+to prove the asymptotic near-extremality theorem.
 
-## 2. Transporte y cociente específico
+## 2. Transport and specific ratio
 
-Con la notación de `104_44`,
+With the notation of `104_44`,
 
 \[
  \mathcal L_s=-{\zeta'(s)\over\zeta(s)},\qquad
@@ -72,7 +72,7 @@ Con la notación de `104_44`,
 \tag{3}
 \]
 
-y
+and
 
 \[
  (\mathsf T_sh)(N)={1\over\log N}
@@ -80,7 +80,7 @@ y
 \tag{4}
 \]
 
-Sea \(r=n-1\),
+Let \(r=n-1\),
 
 \[
  F_r(x)=L_r^{(1)}(sx),\qquad
@@ -89,7 +89,7 @@ Sea \(r=n-1\),
 \tag{5}
 \]
 
-Definimos
+Define
 
 \[
  Q_r(s)={\|\mathsf T_s\widetilde F_r\|_{L^2(\Pi_s)}^2
@@ -98,38 +98,38 @@ Definimos
 \tag{6}
 \]
 
-Jensen da \(0\le Q_r(s)\le1\). El punto es que el extremo superior sí se
-alcanza asintóticamente sobre (5).
+Jensen gives \(0\le Q_r(s)\le1\). The point is that the upper extreme is
+indeed asymptotically attained on (5).
 
-## 3. Lema de saddle primo
+## 3. Prime saddle lemma
 
-La siguiente forma del lema es suficiente. El intervalo de \(s\) no necesita
-ser optimizado: el argumento de Phase 104 lleva después \(s\downarrow1\).
+The following form of the lemma suffices. The interval of \(s\) need not
+be optimized: the Phase 104 argument later takes \(s\downarrow1\).
 
-**Lema 3.1 (dominación del exponente primo).** Existe \(s_0>1\) tal que, para
-cada \(s\in(1,s_0)\), al tender \(r\to\infty\),
+**Lemma 3.1 (prime-exponent domination).** There exists \(s_0>1\) such
+that, for each \(s\in(1,s_0)\), as \(r\to\infty\),
 
 \[
  \begin{aligned}
  \mathcal L_s\,\mathrm{Var}_{\nu_s}(F_r)
  &=(1+o_s(1))M_r,\\
- M_r&:=\sum_{p\ \mathrm{primo}}{\log p\over p^s}
+ M_r&:=\sum_{p\ \mathrm{prime}}{\log p\over p^s}
              \bigl(F_r(\log p)-\mu_{r,s}\bigr)^2,
  \end{aligned}
 \tag{7}
 \]
 
-y la medida de probabilidad proporcional a los sumandos de \(M_r\) escapa a
-infinito. Más precisamente, para cada \(R>0\),
+and the probability measure proportional to the summands of \(M_r\)
+escapes to infinity. More precisely, for each \(R>0\),
 
 \[
- {1\over M_r}\sum_{\substack{p\ \mathrm{primo}\\\log p\le R}}
+ {1\over M_r}\sum_{\substack{p\ \mathrm{prime}\\\log p\le R}}
  {\log p\over p^s}
  \bigl(F_r(\log p)-\mu_{r,s}\bigr)^2\longrightarrow0.
 \tag{8}
 \]
 
-Para todo conjunto finito de enteros \(k\), uniformemente en ese conjunto,
+For every finite set of integers \(k\), uniformly over that set,
 
 \[
 \begin{aligned}
@@ -144,8 +144,8 @@ Para todo conjunto finito de enteros \(k\), uniformemente en ese conjunto,
 \tag{9}
 \]
 
-**Prueba.** Se dan los detalles de escala porque son los que impiden usar el
-comparador continuo. Para \(c>0\), ponga
+**Proof.** The scaling details are given because they are precisely what
+prevents using the continuous comparator. For \(c>0\), set
 
 \[
  I_r(c)=\int_0^\infty e^{-cx}F_r(x)^2\,dx,
@@ -153,15 +153,15 @@ comparador continuo. Para \(c>0\), ponga
 \tag{10}
 \]
 
-La dilatación de Laguerre y
-\(L_r^{(1)}=\sum_{k=0}^rL_k\) producen la expansión exacta
+Laguerre dilation and
+\(L_r^{(1)}=\sum_{k=0}^rL_k\) produce the exact expansion
 
 \[
  F_r(x)=\sum_{j=0}^r a_{rj}(\beta)L_j(cx),
 \tag{11}
 \]
 
-con
+with
 
 \[
  \sum_{r\ge j}a_{rj}(\beta)z^r
@@ -170,15 +170,15 @@ con
 \tag{12}
 \]
 
-Por ortogonalidad ordinaria,
+By ordinary orthogonality,
 
 \[
  \boxed{cI_r(c)=\sum_{j=0}^ra_{rj}(\beta)^2.}
 \tag{13}
 \]
 
-Las sumas binomiales de (12), o equivalentemente Parseval aplicado a
-(11), dan
+The binomial sums of (12), or equivalently Parseval applied to (11),
+give
 
 \[
  \lim_{r\to\infty}I_r(c)^{1/(2r)}
@@ -186,9 +186,9 @@ Las sumas binomiales de (12), o equivalentemente Parseval aplicado a
 \tag{14}
 \]
 
-Para claridad, el límite superior sale de
-\(\sum_j|a_{rj}|\le C_\beta(2\beta-1)^r\). Cuando \(\beta>2\), los
-coeficientes alternan con el signo \((-1)^{r-j}\) y
+For clarity, the upper bound comes from
+\(\sum_j|a_{rj}|\le C_\beta(2\beta-1)^r\). When \(\beta>2\), the
+coefficients alternate in sign \((-1)^{r-j}\) and
 
 \[
  \sum_j|a_{rj}|=
@@ -196,19 +196,19 @@ coeficientes alternan con el signo \((-1)^{r-j}\) y
 \tag{15}
 \]
 
-entonces \(\|a_r\|_1/\sqrt{r+1}\le\|a_r\|_2\le\|a_r\|_1\)
-da también el límite inferior. Esto basta para el exponente \(a=1\);
-para \(a\ge2\) sólo se necesita el límite superior.
+then \(\|a_r\|_1/\sqrt{r+1}\le\|a_r\|_2\le\|a_r\|_1\) also gives the lower
+bound. This suffices for exponent \(a=1\); for \(a\ge2\) only the upper
+bound is needed.
 
-La transferencia a primos requiere uniformidad porque el saddle se mueve con
-\(r\). La detallamos. Para \(a\ge1\), ponga
+Transfer to primes requires uniformity because the saddle moves with
+\(r\). We detail it. For \(a\ge1\), set
 
 \[
  S_{r,a}:=\sum_p{\log p\over p^{as}}F_r(a\log p)^2.
 \tag{16}
 \]
 
-Con \(x=a\log p\), su forma de Stieltjes es
+With \(x=a\log p\), its Stieltjes form is
 
 \[
  S_{r,a}=\int_0^\infty e^{-sx}F_r(x)^2
@@ -219,10 +219,11 @@ Con \(x=a\log p\), su forma de Stieltjes es
 \tag{16a}
 \]
 
-Sea \(c_a=s-1/a>0\). La medida de probabilidad con densidad proporcional a
-\(e^{-c_ax}F_r(x)^2\) se concentra en un intervalo móvil
-\([\delta_ar,C_ar]\). Esto se deduce sin una asintótica puntual de Laguerre:
-para \(0<t<c_a\), Markov aplicado a \(e^{\pm t x}\), (10) y (14) dan
+Let \(c_a=s-1/a>0\). The probability measure with density proportional to
+\(e^{-c_ax}F_r(x)^2\) concentrates on a moving interval
+\([\delta_ar,C_ar]\). This follows with no pointwise Laguerre asymptotic:
+for \(0<t<c_a\), Markov's inequality applied to \(e^{\pm t x}\), (10) and
+(14) give
 
 \[
  \begin{aligned}
@@ -232,9 +233,9 @@ para \(0<t<c_a\), Markov aplicado a \(e^{\pm t x}\), (10) y (14) dan
 \tag{16b}
 \]
 
-Primero se fija \(t\), y después \(\delta_a>0\) pequeño y \(C_a<\infty\)
-grande; (14) hace ambos lados \(O(e^{-\eta_ar})\). En ese intervalo
-\(x/a\asymp r\) para cada \(a\) fijo. La forma efectiva de la PNT
+First \(t\) is fixed, and then small \(\delta_a>0\) and large
+\(C_a<\infty\); (14) makes both sides \(O(e^{-\eta_ar})\). On that
+interval \(x/a\asymp r\) for each fixed \(a\). The effective PNT form
 
 \[
  \vartheta(e^u)=e^u+O\!\left(e^u
@@ -242,11 +243,11 @@ grande; (14) hace ambos lados \(O(e^{-\eta_ar})\). En ese intervalo
 \tag{16c}
 \]
 
-es por tanto uniforme en todo el saddle: su error relativo es
-\(O(e^{-c_ar^{3/5}(\log r)^{-1/5}})\). Para convertir esto en una
-afirmación uniforme sobre el peso, subdivida
-\([\delta_ar,C_ar]\) en intervalos de longitud \(h_r=r^{-A}\). Para \(A\)
-fijo, (16c) da, uniformemente en todas esas celdas,
+is therefore uniform over the whole saddle: its relative error is
+\(O(e^{-c_ar^{3/5}(\log r)^{-1/5}})\). To convert this into a uniform
+statement about the weight, subdivide
+\([\delta_ar,C_ar]\) into intervals of length \(h_r=r^{-A}\). For fixed
+\(A\), (16c) gives, uniformly over every such cell,
 
 \[
  \vartheta(e^{(x+h_r)/a})-\vartheta(e^{x/a})
@@ -254,10 +255,10 @@ fijo, (16c) da, uniformemente en todas esas celdas,
 \tag{16d}
 \]
 
-porque el error de (16c), dividido por \(h_r\), todavía tiende a cero. No
-hace falta una cota puntual del polinomio. Derivando (11) y usando
-\((L_j)'=-\sum_{k<j}L_k\), la matriz de derivación en la base ortogonal
-tiene sumas de prefijos; Cauchy da
+because the error of (16c), divided by \(h_r\), still tends to zero. No
+pointwise bound on the polynomial is needed. Differentiating (11) and
+using \((L_j)'=-\sum_{k<j}L_k\), the differentiation matrix in the
+orthogonal basis has prefix sums; Cauchy gives
 
 \[
  \int_0^\infty e^{-c_ax}|F_r'(x)|^2dx
@@ -265,7 +266,7 @@ tiene sumas de prefijos; Cauchy da
 \tag{16e}
 \]
 
-Otra aplicación de Cauchy--Schwarz da entonces
+Another application of Cauchy–Schwarz then gives
 
 \[
  \int_{\delta_ar}^{C_ar}
@@ -274,13 +275,13 @@ Otra aplicación de Cauchy--Schwarz da entonces
 \tag{16f}
 \]
 
-Se elige, por ejemplo, \(A=4\). Las sumas superior
-y inferior de Darboux difieren entonces en \(o(I_r(c_a))\), y (16d) convierte
-cualquiera de ellas en la integral principal. Las dos colas ya son
-\(O(e^{-\eta_ar})I_r(c_a)\): para la medida prima esto se sigue de
-\(\vartheta(y)\le Cy\), integración por partes y (16e), aplicando (16b)
-tanto a \(F_r\) como a su derivada (que tiene grado \(r-1\) y la misma
-localización lineal). Por tanto, para todo \(a\) fijo,
+Take, e.g., \(A=4\). The upper and lower Darboux sums then differ by
+\(o(I_r(c_a))\), and (16d) turns either of them into the leading
+integral. Both tails are already
+\(O(e^{-\eta_ar})I_r(c_a)\): for the prime measure this follows from
+\(\vartheta(y)\le Cy\), integration by parts, and (16e), applying (16b)
+to both \(F_r\) and its derivative (which has degree \(r-1\) and the same
+linear localization). Hence, for every fixed \(a\),
 
 \[
  S_{r,a}={1+o_{s,a}(1)\over a}
@@ -288,7 +289,7 @@ localización lineal). Por tanto, para todo \(a\) fijo,
 \tag{16g}
 \]
 
-Por (14), esto da
+By (14), this gives
 
 \[
  \lim_{r\to\infty}S_{r,a}^{1/(2r)}
@@ -296,12 +297,12 @@ Por (14), esto da
 \tag{17}
 \]
 
-para cada \(a\) fijo; sólo usaremos esta igualdad para \(a=1\).
-El mismo argumento, o (16b) con \(R\) fijo, prueba (8). No se requiere
-uniformidad en \(s\).
+for each fixed \(a\); only this equality for \(a=1\) will be used.
+The same argument, or (16b) with fixed \(R\), proves (8). No uniformity
+in \(s\) is required.
 
-No se intercambia ahora un límite con la suma infinita en \(a\). Para tratar
-simultáneamente todas las potencias superiores, defina
+No limit is now interchanged with the infinite sum over \(a\). To handle
+all the higher powers simultaneously, define
 
 \[
  \Theta_{\ge2}(e^X)
@@ -309,7 +310,7 @@ simultáneamente todas las potencias superiores, defina
 \tag{17a}
 \]
 
-La cota de Chebyshev \(\vartheta(y)\le C y\) da
+Chebyshev's bound \(\vartheta(y)\le C y\) gives
 
 \[
  \Theta_{\ge2}(e^X)
@@ -318,7 +319,7 @@ La cota de Chebyshev \(\vartheta(y)\le C y\) da
 \tag{17b}
 \]
 
-Integración por partes, (16e) y (17b) implican de manera uniforme
+Integration by parts, (16e), and (17b) imply, uniformly,
 
 \[
  \sum_{a\ge2}S_{r,a}
@@ -326,17 +327,17 @@ Integración por partes, (16e) y (17b) implican de manera uniforme
 \tag{17c}
 \]
 
-La base de (14) decrece estrictamente con \(c\). Comparando (17c) con
-(16g) para \(a=1\), se obtiene, sin falta de uniformidad,
+The base of (14) strictly decreases with \(c\). Comparing (17c) with
+(16g) for \(a=1\), one obtains, with no need for extra uniformity,
 
 \[
  \sum_{a\ge2}S_{r,a}=o_s(S_{r,1}).
 \tag{18}
 \]
 
-Así (18) incluye de una vez todas las potencias primas, no una truncación.
+So (18) covers every prime power at once, not a truncation.
 
-Queda retirar la media. Su función generatriz exacta es
+It remains to remove the mean. Its exact generating function is
 
 \[
  \sum_{r\ge0}z^r
@@ -346,16 +347,16 @@ Queda retirar la media. Su función generatriz exacta es
 \tag{19}
 \]
 
-Para \(s\) suficientemente próximo a uno, el polo de \(\mathcal L\) en
-\(1\), que corresponde a \(z=1-s\), es la singularidad más cercana al
-origen. En consecuencia
+For \(s\) sufficiently close to one, the pole of \(\mathcal L\) at
+\(1\), corresponding to \(z=1-s\), is the singularity closest to the
+origin. Consequently,
 
 \[
  |\mu_{r,s}|^2=o_s(S_{r,1}).
 \tag{20}
 \]
 
-También puede verse la separación de bases en el modelo principal:
+The separation of bases can also be seen in the leading model:
 
 \[
  \int_0^\infty e^{-(s-1)x}F_r(x)\,dx
@@ -363,12 +364,12 @@ También puede verse la separación de bases en el modelo principal:
 \tag{21}
 \]
 
-mientras (14) tiene base \((s+1)/(s-1)\). Las restantes singularidades
-de (19) están a distancia fija del polo y no alteran (20) al reducir
-\(s_0\), si es necesario.
+while (14) has base \((s+1)/(s-1)\). The remaining singularities of (19)
+are at fixed distance from the pole and do not alter (20) after
+shrinking \(s_0\), if necessary.
 
-Las ecuaciones (18)--(20) prueban (7). Para (9), escriba
-\(x=\log p,c=\log k\). Cuando \(p>K\),
+Equations (18)–(20) prove (7). For (9), write
+\(x=\log p,c=\log k\). When \(p>K\),
 
 \[
  (\mathsf T_sF_r)(pk)
@@ -376,22 +377,22 @@ Las ecuaciones (18)--(20) prueban (7). Para (9), escriba
 \tag{22}
 \]
 
-Después de restar \(\mu_{r,s}\), el numerador es
+After subtracting \(\mu_{r,s}\), the numerator is
 
 \[
  x(F_r(x)-\mu_{r,s})+C_{r,k}-c\mu_{r,s}.
 \tag{23}
 \]
 
-Por (8), \(x/(x+c)\to1\) en la medida cuadrática de los primos. Para
-\(k\) fijo, la cota clásica
-\(|L_r^{(1)}(y)|\le(r+1)e^{y/2}\) muestra que
-\(C_{r,k}=O_{s,k}(r)\); (20) y Cauchy eliminan los dos últimos términos
-de (23). Esto prueba (9). \(\square\)
+By (8), \(x/(x+c)\to1\) in the quadratic prime measure. For fixed
+\(k\), the classical bound
+\(|L_r^{(1)}(y)|\le(r+1)e^{y/2}\) shows that
+\(C_{r,k}=O_{s,k}(r)\); (20) and Cauchy eliminate the last two terms of
+(23). This proves (9). \(\square\)
 
-## 4. El vector fijo alcanza la norma uno
+## 4. The fixed vector attains norm one
 
-**Teorema 4.1 (casi extremalidad Laguerre).** Para cada
+**Theorem 4.1 (Laguerre near-extremality).** For each
 \(s\in(1,s_0)\),
 
 \[
@@ -399,16 +400,16 @@ de (23). Esto prueba (9). \(\square\)
 \tag{24}
 \]
 
-**Prueba.** Fijemos \(K\). Los enteros
+**Proof.** Fix \(K\). The integers
 
 \[
- N=pk,\qquad 1\le k\le K,\quad p>K\text{ primo},
+ N=pk,\qquad 1\le k\le K,\quad p>K\text{ prime},
 \tag{25}
 \]
 
-tienen representación única de esta forma: \(p\) es el único factor primo
-de \(N\) mayor que \(K\). Al restringir la norma de salida a los estados
-(25), usar (9) y \(-\zeta'(s)=\mathcal L_s\zeta(s)\), se obtiene
+have a unique representation of this form: \(p\) is the only prime factor
+of \(N\) greater than \(K\). Restricting the output norm to states
+(25), using (9), and \(-\zeta'(s)=\mathcal L_s\zeta(s)\), one obtains
 
 \[
  \begin{aligned}
@@ -419,7 +420,7 @@ de \(N\) mayor que \(K\). Al restringir la norma de salida a los estados
 \tag{26}
 \]
 
-Por (7),
+By (7),
 
 \[
  \liminf_{r\to\infty}Q_r(s)
@@ -427,33 +428,33 @@ Por (7),
 \tag{27}
 \]
 
-Haciendo \(K\to\infty\), el lado derecho tiende a uno. Jensen da el
-límite superior uno. \(\square\)
+Letting \(K\to\infty\), the right-hand side tends to one. Jensen gives
+the upper bound one. \(\square\)
 
-Ésta es una obstrucción sobre el vector real, no sobre funciones test
-artificiales. También cuantifica el mecanismo: para todo \(K\), el defecto
-asintótico es a lo sumo la masa zeta de los cofactores \(k>K\); no existe una
-constante positiva uniforme en el grado.
+This is an obstruction on the real vector, not on artificial test
+functions. It also quantifies the mechanism: for every \(K\), the
+asymptotic defect is at most the zeta mass of the cofactors \(k>K\);
+there is no positive constant uniform in the degree.
 
-## 5. El comparador Gamma tiene el comportamiento opuesto
+## 5. The Gamma comparator behaves oppositely
 
-Sea \(\varepsilon=s-1\), \(X\sim\mathrm{Exp}(\varepsilon)\),
-\(U\sim\Gamma(2,\varepsilon)\), y
+Let \(\varepsilon=s-1\), \(X\sim\mathrm{Exp}(\varepsilon)\),
+\(U\sim\Gamma(2,\varepsilon)\), and
 
 \[
  (\mathsf C_\varepsilon h)(u)={1\over u}\int_0^u h(x)\,dx.
 \tag{28}
 \]
 
-Ponga \(\beta=s/\varepsilon\) y use los coeficientes (12) con
-\(c=\varepsilon\). Como
+Set \(\beta=s/\varepsilon\) and use the coefficients (12) with
+\(c=\varepsilon\). Since
 
 \[
  F_r(x)=\sum_{j=0}^ra_{rj}(\beta)L_j(\varepsilon x),
 \tag{29}
 \]
 
-la constante \(a_{r0}\) es exactamente la media. Las identidades
+the constant \(a_{r0}\) is exactly the mean. The identities
 
 \[
  \mathsf C_\varepsilon L_j(\varepsilon x)
@@ -461,7 +462,7 @@ la constante \(a_{r0}\) es exactamente la media. Las identidades
 \tag{30}
 \]
 
-y las dos ortogonalidades dan el cociente exacto
+and the two orthogonalities give the exact ratio
 
 \[
  \boxed{
@@ -472,7 +473,7 @@ y las dos ortogonalidades dan el cociente exacto
 \tag{31}
 \]
 
-Para todo \(J\) fijo, (12) implica
+For every fixed \(J\), (12) implies
 
 \[
  {\sum_{j=1}^Ja_{rj}(\beta)^2
@@ -480,21 +481,21 @@ Para todo \(J\) fijo, (12) implica
 \tag{32}
 \]
 
-el denominador contiene \(a_{rr}^2=\beta^{2r}\), mientras cada índice fijo
-tiene base estrictamente menor que \(\beta\). Separando (31) en
-\(j\le J\) y \(j>J\), y después haciendo \(J\to\infty\), se obtiene
+the denominator contains \(a_{rr}^2=\beta^{2r}\), while each fixed index
+has strictly smaller base than \(\beta\). Splitting (31) into
+\(j\le J\) and \(j>J\), and then letting \(J\to\infty\), one obtains
 
 \[
  \boxed{Q_r^\Gamma(s)\longrightarrow0.}
 \tag{33}
 \]
 
-Así la coercividad del continuo no sólo deja de transferirse: el cociente
-continuo tiende a cero mientras el aritmético tiende a uno.
+So the continuum's coercivity not only fails to transfer: the continuous
+ratio tends to zero while the arithmetic one tends to one.
 
-## 6. La diferencia firmada vive en las medias, no en los cocientes
+## 6. The signed difference lives in the means, not in the ratios
 
-La combinación completa de `104_44` es
+The complete combination of `104_44` is
 
 \[
  \mathcal B_{n,s}
@@ -506,9 +507,9 @@ La combinación completa de `104_44` es
 \tag{34}
 \]
 
-Los cocientes (6) y (31) sólo ven los vectores después de retirar por
-separado esas dos medias. Hay una prueba algebraica de que no contienen el
-signo de (34). Para cualquier constante real \(c\),
+Ratios (6) and (31) only see the vectors after separately removing those
+two means. There is an algebraic proof that they do not contain the sign
+of (34). For any real constant \(c\),
 
 \[
  Q_r(s;F_r+c)=Q_r(s;F_r),\qquad
@@ -516,7 +517,7 @@ signo de (34). Para cualquier constante real \(c\),
 \tag{35}
 \]
 
-pero
+but
 
 \[
  \boxed{
@@ -525,19 +526,20 @@ pero
 \tag{36}
 \]
 
-El factor entre paréntesis no es cero y tiende a \(-\gamma\). Por tanto los
-dos cocientes pueden permanecer idénticos mientras la forma firmada cruza
-cualquier umbral al variar \(c\). Para el polinomio real \(c\) está fijado,
-pero recuperarlo no basta: la media aritmética restante en (34) es justamente
-el momento unilateral que se quería demostrar. La recentralización lo ha
-eliminado, no estimado.
+The factor in parentheses is nonzero and tends to \(-\gamma\). Hence the
+two ratios can remain identical while the signed form crosses any
+threshold as \(c\) varies. For the real polynomial \(c\) is fixed, but
+recovering it is not enough: the remaining arithmetic mean in (34) is
+exactly the one-sided moment that was to be proved. Recentering has
+eliminated it, not estimated it.
 
-## 7. Falsificador off-line
+## 7. Off-line falsifier
 
-El argumento de las Secciones 3--6 usa la factorización Euler real; no se
-aplica automáticamente a un divisor de ceros prescrito. El gate relevante
-aparece al intentar continuar (34) al borde y olvidar residuos. Para el
-cuarteto con \(e^\alpha=2\) y \(\theta=0\), el aporte es exactamente
+The argument of Sections 3–6 uses the real Euler factorization; it does
+not automatically apply to a prescribed divisor of zeros. The relevant
+gate appears when attempting to continue (34) to the boundary while
+forgetting residues. For the quartet with \(e^\alpha=2\) and
+\(\theta=0\), the contribution is exactly
 
 \[
  \lambda_n^{\rm off}
@@ -546,33 +548,35 @@ cuarteto con \(e^\alpha=2\) y \(\theta=0\), el aporte es exactamente
 \tag{37}
 \]
 
-Una transferencia de los cocientes centrados que concluyera una cota
-unilateral sin conservar (37) estaría falsada. El archivo de comprobación
-verifica (37) con racionales; no usa aproximaciones de ceros.
+A transfer of the centered ratios concluding a one-sided bound that did
+not preserve (37) would be falsified. The checker file verifies (37) with
+rationals; it uses no zero approximations.
 
-## 8. Decisión
+## 8. Decision
 
 ```text
-probado incondicionalmente:
-  el saddle cuadrático del vector no escalado está dominado por primos;
-  todas las potencias p^a, a>=2, son exponencialmente menores allí;
-  Q_r(s) -> 1 para el vector Laguerre aritmético centrado;
-  Q_r^Gamma(s) -> 0, con cociente diagonal exacto;
-  ambos cocientes son ciegos a la diferencia firmada de medias.
+proved unconditionally:
+  the quadratic saddle of the unscaled vector is dominated by primes;
+  every power p^a, a>=2, is exponentially smaller there;
+  Q_r(s) -> 1 for the centered arithmetic Laguerre vector;
+  Q_r^Gamma(s) -> 0, with exact diagonal ratio;
+  both ratios are blind to the signed mean difference.
 
-descartado:
-  no-alineación uniforme del vector fijo mediante T_s;
-  transferir la coercividad del comparador Gamma al canal von Mangoldt;
-  deducir B_n de cocientes centrados o defectos de Jensen.
+ruled out:
+  uniform non-alignment of the fixed vector via T_s;
+  transferring the Gamma comparator's coercivity to the von Mangoldt
+    channel;
+  deducing B_n from centered ratios or Jensen defects.
 
-permanece abierto:
-  una cota lineal unilateral directa para la diferencia de medias (34),
-  conservando sus residuos al llevar s al borde;
-  B_n <= (1501/2002) A_n, A1 y RH.
+remains open:
+  a direct one-sided linear bound for the mean difference (34),
+  preserving its residues when s is carried to the boundary;
+  B_n <= (1501/2002) A_n, A1, and RH.
 ```
 
-`tools/fixed_laguerre_markov_extremal_check.py` comprueba con `Fraction` la
-expansión (11)--(13), el cociente Gamma (31), la ceguera por traslación
-(35)--(36), la fila exacta (22) y el falsificador (37). Los cocientes impresos
-son diagnósticos derivados de enteros exactos; ningún enunciado usa coma
-flotante.
+`tools/fixed_laguerre_markov_extremal_check.py` checks with `Fraction` the
+expansion (11)–(13), the Gamma ratio (31), translation blindness
+(35)–(36), the exact row (22), and falsifier (37). The printed ratios are
+diagnostics derived from exact integers; no statement uses floating
+point.
+</content>

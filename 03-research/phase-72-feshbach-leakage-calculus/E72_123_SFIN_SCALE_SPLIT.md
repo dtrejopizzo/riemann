@@ -1,7 +1,6 @@
 # E72.123 -- Scale split for S-FIN
 
-**Date:** 2026-07-09.
-**Role:** reduce Gram determinant saturation to a packet-lower-bound plus bad-projection upper-bound.
+**Purpose:** reduce Gram determinant saturation to a packet-lower-bound plus bad-projection upper-bound.
 
 ## 0. S-FIN from E72.117
 

@@ -2,7 +2,7 @@
 
 **Auditor build · 2026-06-05.** Scope: map only. No proof attempt, no new conjectures, no gap-filling, no
 speculation. Sources: `06-papers/` (P1–P14 + 00-INDEX), `phase-4-handoff/proofs/00-PROOF-LOG.md` (Days 0–36),
-`MASTER-CLOSING-the-wall-charted.md`, `00-MAP.md`, `phase-14/*` (N7, M14.1–3, N8, BREAK-N8, anchor framework,
+`MASTER-CLOSING-the-wall-charted.md`, `00-MAP.md`, `phase-14-off-diagonal-anchor-asymmetry/*` (N7, M14.1–3, N8, BREAK-N8, anchor framework,
 Stages 1–2), Arc-A `eslabones` / `03-arc-A` (P2–P6).
 
 ---
@@ -26,14 +26,14 @@ Stages 1–2), Arc-A `eslabones` / `03-arc-A` (P2–P6).
 | ID | Name | First | Statement | Status |
 |---|---|---|---|---|
 | **CAP** | Wrong-sign capstone | P13/MASTER | every unconditional handle on zeros is a positivity (lower-bound / existence oriented); RH is the one-sided **upper/sign** constraint. Confirmed across **8 paradigms** | standing methodological obstruction |
-| **N1** | Positivity doesn't localize per prime | phase-6/P10 | $G_p(r)$ indefinite ⇒ no per-prime positivity | proven |
-| **N2** | No naive OS Hilbert–Pólya | phase-6 | reflection-positivity recasting correct but would-be Hamiltonian not the zeros' | proven |
+| **N1** | Positivity doesn't localize per prime | phase-6-osterwalder-schrader-reflection/P10 | $G_p(r)$ indefinite ⇒ no per-prime positivity | proven |
+| **N2** | No naive OS Hilbert–Pólya | phase-6-osterwalder-schrader-reflection | reflection-positivity recasting correct but would-be Hamiltonian not the zeros' | proven |
 | **N3** | Carleson saturation | P11 | $C(d,T_0)\equiv1$ for ζ; prime incoherence buys **zero** margin | proven |
 | **N4** | Connes prolate same wall | P11 | adelic prolate contraction $\lambda(c)<1$ but finite-places + $\Lambda\to\infty$ uniformity unproven | proven (same wall) |
 | **N5** | Dynamical no-go | P12 | dBN flow arithmetic-blind; $\dot{\mathcal L}=-2\sum\frac{(y_j-y_k)^2}{|z_j-z_k|^2}\le0$; flow-only cannot prove RH | proven |
-| **N6** | No arithmetic-aware monotone escape | phase-9 | every flow-monotone functional is arithmetic-blind | proven |
-| **N7** | Probabilistic–deterministic barrier | phase-12 | log-correlated/chaos machinery controls **statistics** of real zeros, not the deterministic off-line count — describes, doesn't force | proven (2nd wall) |
-| **N8** | Density→absence gap | phase-14 | claimed: absence requires square-root cancellation (RH-equivalent) | **REFUTED** (BREAK-N8) |
+| **N6** | No arithmetic-aware monotone escape | phase-9-unconditional-universality | every flow-monotone functional is arithmetic-blind | proven |
+| **N7** | Probabilistic–deterministic barrier | phase-12-meta-obstruction-moment-problem | log-correlated/chaos machinery controls **statistics** of real zeros, not the deterministic off-line count — describes, doesn't force | proven (2nd wall) |
+| **N8** | Density→absence gap | phase-14-off-diagonal-anchor-asymmetry | claimed: absence requires square-root cancellation (RH-equivalent) | **REFUTED** (BREAK-N8) |
 
 ### Group III — Identities & exchange rates (RH-neutral structural facts)
 

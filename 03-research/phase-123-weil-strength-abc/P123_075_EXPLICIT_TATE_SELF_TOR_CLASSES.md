@@ -1,6 +1,6 @@
 # P123.075 — Explicit self-Tor classes at the repaired Tate fibers
 
-Date: 2026-09-06. Status: PROVED for continuous relative bar homology.
+Status: PROVED for continuous relative bar homology.
 This computes a nonzero part of the Tate base-change defect required
 by mixed RR, not the full determinant comparison.
 

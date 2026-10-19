@@ -1,27 +1,27 @@
-# 104_11 — M1 global: energía `max`, cancelación de la Hessiana y stop-gate
+# 104_11 — Global M1: `max` energy, Hessian cancellation, and stop-gate
 
-**Estado:** la factorización global del núcleo `max` queda cerrada exactamente. El
-compensador continuo de `104_10` es la energía del mismo núcleo aplicada a
+**Status:** the global factorization of the `max` kernel is now exactly closed. The
+continuous compensator of `104_10` is the energy of the same kernel applied to
 
 \[
  d\sigma=d\psi-dx.
 \]
 
-Al sumarla al primer término de M1, la componente cuadrática
-\(d\psi\times d\psi\) se cancela idénticamente. No queda una forma de Gram que pueda
-proporcionar coercividad: queda el funcional lineal original
-\(-\int E\tau'\). Por tanto **M1 como mecanismo operatorial global se descarta**. Esto
-no refuta la desigualdad buscada para los pesos reales de von Mangoldt; prueba que
-demostrarla requiere un input aritmético nuevo que no proviene del núcleo `max` ni de
-su compensador.
+Adding it to the first term of M1, the quadratic component
+\(d\psi\times d\psi\) cancels identically. No Gram form capable of supplying coercivity
+survives: what remains is the original linear functional
+\(-\int E\tau'\). Hence **M1 as a global operator mechanism is ruled out**. This
+does not refute the sought inequality for the real von Mangoldt weights; it proves that
+proving it requires a new arithmetic input that comes neither from the `max` kernel nor from
+its compensator.
 
-La Sección 7 registra el sucesor exacto M5: una convolución firmada
-Möbius–divisor en el grado Laguerre. No se prueba A1 ni RH.
+Section 7 records the exact successor M5: a signed Möbius–divisor
+convolution in the Laguerre degree. Neither A1 nor RH is proved.
 
-## 1. Formulación finita
+## 1. Finite formulation
 
-Fíjese \(X>1\), que no sea potencia prima, y una función real
-\(w\in C^1([1,X])\). Póngase
+Fix \(X>1\), not a prime power, and a real function
+\(w\in C^1([1,X])\). Set
 
 \[
  d\mu=\sum_{q_j<X}\ell_j\delta_{q_j},
@@ -30,8 +30,8 @@ Fíjese \(X>1\), que no sea potencia prima, y una función real
 \tag{1}
 \]
 
-donde \(q_j\) son las potencias primas y \(\ell_j=\Lambda(q_j)\). Su función
-acumulada es
+where \(q_j\) are the prime powers and \(\ell_j=\Lambda(q_j)\). Its cumulative function
+is
 
 \[
  E(x)=\sigma([1,x])=\psi(x)-x+1
@@ -39,7 +39,7 @@ acumulada es
 \tag{2}
 \]
 
-Defínanse la energía global y el primer término de M1 por
+Define the global energy and the first M1 term by
 
 \[
  Q_X(w;\sigma)
@@ -56,7 +56,7 @@ Defínanse la energía global y el primer término de M1 por
 \tag{4}
 \]
 
-Para la medida de von Mangoldt, (4) es exactamente
+For the von Mangoldt measure, (4) is exactly
 
 \[
  S_X=\sum_{q_j<X}\ell_jd_jw(q_j),
@@ -65,13 +65,12 @@ Para la medida de von Mangoldt, (4) es exactamente
 \tag{5}
 \]
 
-porque agrupar la suma doble por su índice máximo da la identidad (8) de
+because grouping the double sum by its maximum index gives identity (8) of
 `104_10`.
 
-## 2. Teorema de energía global
+## 2. Global energy theorem
 
-**Teorema 1 (el compensador es la energía `max`).** Con las convenciones
-anteriores,
+**Theorem 1 (the compensator is the `max` energy).** With the above conventions,
 
 \[
  \boxed{
@@ -81,27 +80,27 @@ anteriores,
 \tag{6}
 \]
 
-En particular, si \(w=\tau'\), el segundo término de (6) es exactamente el
-compensador de (6) en `104_10`, incluido su borde finito.
+In particular, if \(w=\tau'\), the second term of (6) is exactly the
+compensator of (6) in `104_10`, boundary term included.
 
-**Prueba.** La imagen de la medida producto \(\sigma\otimes\sigma\) por
-\((x,y)\mapsto\max\{x,y\}\) tiene función acumulada
+**Proof.** The image of the product measure \(\sigma\otimes\sigma\) under
+\((x,y)\mapsto\max\{x,y\}\) has cumulative function
 
 \[
  (\sigma\otimes\sigma)
  \{(x,y):\max(x,y)\le t\}=E(t)^2.
 \]
 
-Esta igualdad incorpora automáticamente las diagonales atómicas. Por tanto
+This equality automatically incorporates the atomic diagonals. Hence
 
 \[
  2Q_X=\int_{[1,X]}w(t)\,d(E(t)^2).
 \]
 
-La integración de Stieltjes por partes, usando \(E(1)=0\), prueba (6).
+Stieltjes integration by parts, using \(E(1)=0\), proves (6).
 \(\square\)
 
-Hay también una factorización firmada continua:
+There is also a continuous signed factorization:
 
 \[
  \boxed{
@@ -110,14 +109,14 @@ Hay también una factorización firmada continua:
 \tag{7}
 \]
 
-Así, cuando \(w(X)\ge0\) y \(-w'\ge0\), (7) sí es una mezcla positiva de
-cuadrados de prefijos. Para el peso Laguerre real esas hipótesis no se cumplen
-uniformemente.
+Thus, when \(w(X)\ge0\) and \(-w'\ge0\), (7) is indeed a positive mixture of
+squares of prefixes. For the real Laguerre weight, these hypotheses do not hold
+uniformly.
 
-## 3. Cancelación exacta de la parte cuadrática
+## 3. Exact cancellation of the quadratic part
 
-**Teorema 2 (colapso global de M1).** Para toda medida finita \(\mu\) en
-\([1,X]\), no solamente para la de von Mangoldt,
+**Theorem 2 (global collapse of M1).** For every finite measure \(\mu\) on
+\([1,X]\), not only for the von Mangoldt one,
 
 \[
  \boxed{
@@ -126,14 +125,14 @@ uniformemente.
 \tag{8}
 \]
 
-Por consiguiente, al tomar \(w=\tau'\), (8) es exactamente
+Consequently, taking \(w=\tau'\), (8) is exactly
 
 \[
  C_{n,\varepsilon}(X)=-\int_1^XE(x)\tau'(x)\,dx.
 \tag{9}
 \]
 
-**Prueba.** Expándase (3) en sus tres componentes:
+**Proof.** Expand (3) into its three components:
 
 \[
  \begin{aligned}
@@ -144,7 +143,7 @@ Por consiguiente, al tomar \(w=\tau'\), (8) es exactamente
 \tag{10}
 \]
 
-Los dos integrales elementales que aparecen aquí son
+The two elementary integrals appearing here are
 
 \[
  \int_1^Xw(\max\{q,y\})\,dy
@@ -158,46 +157,46 @@ Los dos integrales elementales que aparecen aquí son
 \tag{12}
 \]
 
-Al sumar (4), el término \(\frac12\iint w(\max)d\mu d\mu\) de (10)
-cancela exactamente el término con signo menos de (4). También se cancelan
-los términos \((q-1)w(q)\). Por Fubini,
+Adding (4), the term \(\frac12\iint w(\max)d\mu d\mu\) of (10)
+exactly cancels the negative-sign term of (4). The terms \((q-1)w(q)\) also cancel.
+By Fubini,
 
 \[
  \int_{[1,X]}\int_q^Xw(y)\,dy\,d\mu(q)
  =\int_1^X\mu([1,y])w(y)\,dy.
 \]
 
-La suma restante es
+The remaining sum is
 
 \[
  -\int_1^X\{\mu([1,y])-(y-1)\}w(y)\,dy
  =-\int_1^XE(y)w(y)\,dy,
 \]
 
-que prueba (8). \(\square\)
+which proves (8). \(\square\)
 
-La conclusión operatorial es más fuerte que observar que una integración por
-partes vuelve al punto de partida: **la única componente cuadrática aritmética se
-cancela antes de estimar**.
+The operational conclusion is stronger than merely observing that integrating by
+parts returns to the starting point: **the only arithmetic quadratic component cancels
+before any estimate is made**.
 
-## 4. Hessiana nula: no sobrevive coercividad cuadrática
+## 4. Zero Hessian: no quadratic coercivity survives
 
-Sea \(\eta\) cualquier medida firmada finita y considérese
-\(\mu_t=\mu+t\eta\). En (4), el coeficiente de \(t^2\) es
+Let \(\eta\) be any finite signed measure and consider
+\(\mu_t=\mu+t\eta\). In (4), the coefficient of \(t^2\) is
 
 \[
  -{1\over2}\iint w(\max)\,d\eta d\eta;
 \tag{13}
 \]
 
-en (3), el coeficiente de \(t^2\) es el opuesto
+in (3), the coefficient of \(t^2\) is its opposite
 
 \[
  +{1\over2}\iint w(\max)\,d\eta d\eta.
 \tag{14}
 \]
 
-Por tanto
+Hence
 
 \[
  {d^2\over dt^2}
@@ -205,13 +204,13 @@ Por tanto
 \tag{15}
 \]
 
-El borde de esta cancelación puede verse sin apelar a (8). Si
+The boundary term of this cancellation can be seen without appealing to (8). If
 
 \[
  F(x)=\eta([1,x]),
 \]
 
-el Teorema 1, aplicado a \(\eta\), da exactamente
+Theorem 1, applied to \(\eta\), gives exactly
 
 \[
  \boxed{
@@ -220,16 +219,16 @@ el Teorema 1, aplicado a \(\eta\), da exactamente
 \tag{15a}
 \]
 
-La segunda variación de \(S_X\) es el negativo del miembro izquierdo de
-(15a). La segunda variación del compensador escrito como en (6) es
+The second variation of \(S_X\) is the negative of the left-hand side of
+(15a). The second variation of the compensator written as in (6) is
 
 \[
  -\int_1^XF(x)^2w'(x)\,dx+w(X)F(X)^2,
 \]
 
-su opuesto exacto. En particular, omitir el borde
-\(w(X)F(X)^2\) produciría una Hessiana residual espuria. Más aún, (8) da
-la identidad afín completa
+its exact opposite. In particular, omitting the boundary term
+\(w(X)F(X)^2\) would produce a spurious residual Hessian. Moreover, (8) gives
+the complete affine identity
 
 \[
  \boxed{
@@ -239,26 +238,26 @@ la identidad afín completa
 \tag{15b}
 \]
 
-No hay términos de orden dos o superior escondidos por la truncación.
+There are no hidden second-order or higher terms due to the truncation.
 
-Éste es el stop-gate mínimo para una factorización de Gram global:
+This is the minimal stop-gate for a global Gram factorization:
 
-* factorizar el compensador solo factoriza (14);
-* el primer término contiene exactamente (13);
-* al mantener ambos acoplados, como exige el plan, no queda una forma cuadrática
-  positiva ni negativa;
-* cualquier coercividad posterior debe provenir de una propiedad aritmética
-  adicional de la medida fija \(d\psi\), no del kernel `max`.
+* factorizing the compensator only factorizes (14);
+* the first term contains exactly (13);
+* keeping both coupled, as the plan requires, leaves neither a positive nor a negative
+  quadratic form;
+* any subsequent coercivity must come from an additional arithmetic property of the
+  fixed measure \(d\psi\), not from the `max` kernel.
 
-No se afirma que todo posible argumento no lineal sea imposible. Se descarta la
-fuente concreta de positividad propuesta por M1.
+It is not claimed that every possible nonlinear argument is impossible. What is ruled out
+is the specific source of positivity proposed by M1.
 
-### 4.1 La alternativa por módulos pierde la escala de manera cuantificada
+### 4.1 The modulus alternative loses scale in a quantified way
 
-Tras (15b), tomar módulos ya no estima una energía colectiva: estima el funcional
-lineal original. Con \(w=\tau'\) y al retirar el regulador, la cota VK puntual
-produce exactamente la carga \(\mathcal B_n\) de `103_56`, ecuación (20). Allí
-se probó
+After (15b), taking moduli no longer estimates a collective energy: it estimates the
+original linear functional. With \(w=\tau'\) and after removing the regulator, the
+pointwise VK bound produces exactly the load \(\mathcal B_n\) of `103_56`, equation (20).
+There it was proved that
 
 \[
  \mathcal B_n\ge
@@ -266,17 +265,16 @@ se probó
 \tag{15c}
 \]
 
-mientras el presupuesto de primera diferencia es
-\(\frac12\Delta A_n=O(\log n)\). Por tanto, una vez cancelada la Hessiana,
-la salida `valor absoluto + VK` no es solamente inconclusa: pierde una cantidad
-superpolinomial frente al presupuesto. La única posibilidad que M1 dejaba viva
-era una estimación firmada especial de la medida real; (8) muestra que esa
-estimación es de nuevo el funcional de primera diferencia y no una consecuencia
-del kernel `max`.
+while the first-difference budget is
+\(\frac12\Delta A_n=O(\log n)\). Hence, once the Hessian is canceled,
+the "absolute value + VK" exit is not merely inconclusive: it loses a
+superpolynomial amount against the budget. The only possibility M1 left alive was a
+special signed estimate of the real measure; (8) shows that this estimate is again the
+first-difference functional and not a consequence of the `max` kernel.
 
-## 5. Inercia exacta del kernel discreto
+## 5. Exact inertia of the discrete kernel
 
-En puntos ordenados \(x_1<\cdots<x_M\), ponga \(w_j=w(x_j)\) y
+At ordered points \(x_1<\cdots<x_M\), set \(w_j=w(x_j)\) and
 
 \[
  K_{ij}=w_{\max(i,j)},\qquad
@@ -284,33 +282,33 @@ En puntos ordenados \(x_1<\cdots<x_M\), ponga \(w_j=w(x_j)\) y
 \tag{16}
 \]
 
-Si \(v_j=(1,\ldots,1,0,\ldots,0)^T\) tiene sus primeras \(j\) entradas iguales
-a uno, entonces
+If \(v_j=(1,\ldots,1,0,\ldots,0)^T\) has its first \(j\) entries equal
+to one, then
 
 \[
  \boxed{K=\sum_{j=1}^M\delta_jv_jv_j^T.}
 \tag{17}
 \]
 
-La matriz con columnas \(v_j\) es triangular e invertible. Por la ley de inercia
-de Sylvester, la inercia de \(K\) es exactamente la cantidad de signos positivos,
-negativos y nulos entre
+The matrix with columns \(v_j\) is triangular and invertible. By Sylvester's law of
+inertia, the inertia of \(K\) is exactly the count of positive, negative, and zero signs
+among
 
 \[
  w_1-w_2,\ldots,w_{M-1}-w_M,w_M.
 \tag{18}
 \]
 
-Así, la descomposición de `104_10` no estaba perdiendo una PSD global oculta: (17)
-es la factorización maximal del kernel.
+So the decomposition of `104_10` was not missing a hidden global PSD: (17)
+is the maximal factorization of the kernel.
 
-Para el peso regulado
+For the regulated weight
 
 \[
- \tau(x)=x^{-a}L_n(\log x),\qquad a=1+\varepsilon,qquad w=\tau',
+ \tau(x)=x^{-a}L_n(\log x),\qquad a=1+\varepsilon,\qquad w=\tau',
 \]
 
-se tiene
+one has
 
 \[
  \tau''(x)=x^{-a-2}
@@ -319,68 +317,67 @@ se tiene
 \tag{19}
 \]
 
-En \(x=1\), el factor entre llaves vale
+At \(x=1\), the factor in braces equals
 
 \[
  {n(n-1)\over2}+(2a+1)n+a(a+1)>0.
 \tag{20}
 \]
 
-Cuando \(u\to\infty\), su término principal es
+As \(u\to\infty\), its leading term is
 
 \[
  a(a+1){(-1)^n\over n!}u^n.
 \tag{21}
 \]
 
-Para todo \(n\) impar, \(\tau''\) cambia de signo. Luego la mezcla de cuadrados
-(7) es indefinida, y el kernel continuo admite discretizaciones finas con ambas
-inercias, para infinitos índices del rango objetivo. Esto no afirma, sin una
-comprobación adicional, que una discretización prefijada solamente en potencias
-primas muestree ambos intervalos de signo. No hace falta esa afirmación: la
-cancelación (15a) es exacta también en esos nodos. Incluso antes de cancelar las
-Hessianas, no existe una PSD uniforme del kernel continuo.
+For every odd \(n\), \(\tau''\) changes sign. Hence the mixture of squares
+(7) is indefinite, and the continuous kernel admits fine discretizations with both
+inertias, for infinitely many indices in the target range. This does not assert, without
+further checking, that a discretization fixed only on prime powers samples both sign
+intervals. That assertion is not needed: the cancellation (15a) is also exact at those
+nodes. Even before canceling the Hessians, there is no uniform PSD for the continuous
+kernel.
 
-## 6. Falsificadores en los axiomas exactos
+## 6. Falsifiers under the exact axioms
 
-### 6.1 Relajación de medidas positivas
+### 6.1 Positive-measure relaxation
 
-Si se relaja la aritmética fija y se mueve una masa \(W>0\) desde \(b\) hacia
-\(a<b\), conservando la masa total, (8) da
+If the fixed arithmetic is relaxed and a mass \(W>0\) is moved from \(b\) to
+\(a<b\), conserving total mass, (8) gives
 
 \[
  \delta C=W\{\tau(a)-\tau(b)\}.
 \tag{22}
 \]
 
-Los polinomios Laguerre hacen que (22) tenga ambos signos. Por tanto ningún
-argumento que use solamente soporte ordenado, masas positivas y el kernel `max`
-puede producir la cota M1. Este falsificador satisface exactamente el nivel
-algebraico finito de `104_10`.
+The Laguerre polynomials make (22) take both signs. Hence no argument that uses only
+ordered support, positive masses, and the `max` kernel can produce the M1 bound. This
+falsifier satisfies exactly the finite algebraic level of `104_10`.
 
-### 6.2 Relajación espectral
+### 6.2 Spectral relaxation
 
-Si un paso abandona los pesos reales \(\Lambda(p^k)=\log p\) y conserva solo
-conjugación y ecuación funcional, se aplica el cuarteto
+If a step abandons the real weights \(\Lambda(p^k)=\log p\) and keeps only
+conjugation and the functional equation, the quartet
 
 \[
  8-8\cosh(n\alpha)\cos(n\theta),
 \tag{23}
 \]
 
-que tiene ambos signos. No se ha usado (23) para refutar un teorema aritmético:
-se usa únicamente contra relajaciones que ya dejaron de emplear el nivel 4 de
+applies, and it has both signs. (23) is not used to refute an arithmetic theorem:
+it is used only against relaxations that have already stopped using level 4 of
 `104_10`.
 
-## 7. Sucesor M5: convolución Möbius–divisor firmada
+## 7. Successor M5: signed Möbius–divisor convolution
 
-El stop-gate anterior deja una estructura exacta todavía no explotada por M1:
+The stop-gate above leaves an exact structure not yet exploited by M1:
 
 \[
  \Lambda=\mu*\log.
 \]
 
-Sea \(a=1+\varepsilon>1\), y defínanse
+Let \(a=1+\varepsilon>1\), and define
 
 \[
  \mathfrak M_j(a)
@@ -391,14 +388,14 @@ Sea \(a=1+\varepsilon>1\), y defínanse
 \tag{24}
 \]
 
-Todas las series son absolutamente convergentes. La fórmula de adición
+All the series are absolutely convergent. The addition formula
 
 \[
  L_n(x+y)=\sum_{j=0}^nL_j(x)L_{n-j}^{(-1)}(y)
 \tag{25}
 \]
 
-y \(\Lambda=\mu*\log\) dan el teorema exacto
+and \(\Lambda=\mu*\log\) give the exact theorem
 
 \[
  \boxed{
@@ -407,15 +404,15 @@ y \(\Lambda=\mu*\log\) dan el teorema exacto
 \tag{26}
 \]
 
-No se ha aplicado valor absoluto ni Cauchy en el grado.
+No absolute value or Cauchy–Schwarz has been applied in the degree.
 
-Con
+With
 
 \[
  t={z\over1-z},
 \]
 
-las funciones generatrices verifican
+the generating functions satisfy
 
 \[
  \sum_{j\ge0}\mathfrak M_j(a)z^j
@@ -425,9 +422,9 @@ las funciones generatrices verifican
 \tag{27}
 \]
 
-Su producto es exactamente la generatriz del lado izquierdo de (26).
+Their product is exactly the generating function of the left-hand side of (26).
 
-El término continuo que debe permanecer emparejado es
+The continuous term that must remain paired is
 
 \[
  J_{n,\varepsilon}
@@ -436,7 +433,7 @@ El término continuo que debe permanecer emparejado es
 \tag{28}
 \]
 
-Por tanto
+Hence
 
 \[
  \boxed{
@@ -447,11 +444,11 @@ Por tanto
 \tag{29}
 \]
 
-Los dos términos de (29) divergen por separado cuando
-\(\varepsilon\downarrow0\); (29) es una identidad emparejada, no una autorización
-para estimarlos separadamente.
+The two terms of (29) diverge separately as
+\(\varepsilon\downarrow0\); (29) is a paired identity, not a license
+to estimate them separately.
 
-Hay una normalización que conserva automáticamente esa colisión. Defínase
+There is a normalization that automatically preserves this collision. Define
 
 \[
  F_\varepsilon(z)
@@ -459,7 +456,7 @@ Hay una normalización que conserva automáticamente esa colisión. Defínase
 \tag{30}
 \]
 
-Entonces, usando el germ \(R\) de `103_66`,
+Then, using the germ \(R\) from `103_66`,
 
 \[
  \boxed{
@@ -468,57 +465,58 @@ Entonces, usando el germ \(R\) de `103_66`,
 \tag{31}
 \]
 
-Si \(F_\varepsilon=\sum f_kz^k\) y
-\(F_\varepsilon^{-1}=\sum g_jz^j\), (31) es una convolución firmada explícita
-entre los grados de la unidad Euler normalizada y los de su inversa Möbius. La
-identidad de Riccati de E70.12 es la derivada de (31); por sí sola no aporta un
-signo arquimediano.
+If \(F_\varepsilon=\sum f_kz^k\) and
+\(F_\varepsilon^{-1}=\sum g_jz^j\), (31) is an explicit signed convolution
+between the degrees of the normalized Euler unit and those of its Möbius inverse. The
+Riccati identity of E70.12 is the derivative of (31); by itself it supplies no
+archimedean sign.
 
-El teorema nuevo que M5 tendría que aportar es una estimación **directa de la
-convolución completa (29) o (31)** por
+The new theorem M5 would have to supply is a **direct estimate of the full
+convolution (29) or (31)** by
 
 \[
  {1\over2}\Delta A_n,
 \tag{32}
 \]
 
-uniforme antes de tomar \(\varepsilon\downarrow0\). Separar las normas de
-\(\mathfrak M\) y \(\mathfrak B\) recrea exactamente la pérdida exponencial de
-`103_70`–`103_71` y queda prohibido.
+uniform before taking \(\varepsilon\downarrow0\). Separating the norms of
+\(\mathfrak M\) and \(\mathfrak B\) recreates exactly the exponential loss of
+`103_70`–`103_71` and is forbidden.
 
-## 8. Decisión
+## 8. Decision
 
 ```text
-probado:
-  el compensador continuo es la energía global del kernel max;
-  la identidad M1 es S_X + Q_X con todos los bordes;
-  la parte mu x mu se cancela exactamente;
-  la Hessiana total respecto de la medida es cero;
-  la inercia del kernel max está dada exactamente por sus primeras diferencias;
-  el kernel Laguerre es indefinido para todo índice impar;
-  la factorización Möbius–divisor firmada (26)--(31).
+proved:
+  the continuous compensator is the global energy of the max kernel;
+  the M1 identity is S_X + Q_X with all boundary terms;
+  the mu x mu part cancels exactly;
+  the total Hessian with respect to the measure is zero;
+  the inertia of the max kernel is given exactly by its first differences;
+  the Laguerre kernel is indefinite for every odd index;
+  the signed Möbius–divisor factorization (26)--(31).
 
-descartado:
-  M1 como fuente global de coercividad o Gram;
-  cualquier PSD obtenida factorizando solo uno de los dos términos;
-  estimar por separado los dos factores de la convolución de grado.
+ruled out:
+  M1 as a global source of coercivity or a Gram matrix;
+  any PSD obtained by factorizing only one of the two terms;
+  estimating the two factors of the degree convolution separately.
 
-no probado:
-  una desigualdad especial para los pesos reales de von Mangoldt;
-  (32), A1 o RH.
+not proved:
+  a special inequality for the real von Mangoldt weights;
+  (32), A1, or RH.
 
-sucesor recomendado:
-  M5, exclusivamente en la forma acoplada (29) o (31).
+recommended successor:
+  M5, exclusively in the coupled form (29) or (31).
 ```
 
-M3 puede seguir existiendo como reorganización no local de lóbulos, pero el mapa
-estacionario no introduce un input aritmético. Después de la cancelación exacta de
-M1, M5 es el sucesor con una estructura adicional concreta que todavía no fue
-consumida: la inversión Möbius dentro de la convolución de grados.
+M3 may still exist as a non-local reorganization of lobes, but the stationary map does not
+introduce an arithmetic input. After the exact cancellation of
+M1, M5 is the successor with a concrete additional structure not yet consumed: the Möbius
+inversion within the degree convolution.
 
-## Verificación mecánica
+## Mechanical verification
 
-`tools/m1_global_hessian_check.py` verifica con `Fraction`, sin punto flotante,
-las identidades finitas (6), (8) y (15a). Incluye dos perturbaciones: una de masa
-total cero y otra con \(F(X)\ne0\), de modo que un signo incorrecto o la omisión
-del borde \(w(X)F(X)^2\) hace fallar el chequeo.
+`tools/m1_global_hessian_check.py` verifies, using `Fraction` with no floating point,
+the finite identities (6), (8), and (15a). It includes two perturbations: one of zero
+total mass and another with \(F(X)\ne0\), so that an incorrect sign or the omission
+of the boundary term \(w(X)F(X)^2\) makes the check fail.
+</content>

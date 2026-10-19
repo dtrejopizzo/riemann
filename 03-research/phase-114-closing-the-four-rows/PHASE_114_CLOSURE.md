@@ -1,6 +1,6 @@
 # Phase 114 — Closure
 
-**Closed:** 2026-08-08.  No successor phase opened.
+No successor phase opened.
 
 ## What this phase set out to do
 

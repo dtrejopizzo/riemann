@@ -1,7 +1,6 @@
 # E72.132 -- Mass gain from complement coercivity
 
-**Date:** 2026-07-09.
-**Role:** close the remaining scalar mass gate modulo one explicit coercivity estimate.
+**Purpose:** close the remaining scalar mass gate modulo one explicit coercivity estimate.
 
 ## 0. Objects
 

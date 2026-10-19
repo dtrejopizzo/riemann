@@ -1,6 +1,6 @@
 # Phase 119 — coefficient separator, corrected audit
 
-Date: 2026-08-25. Scripts are in `scripts/`. The corresponding discussion is
+Scripts are in `scripts/`. The corresponding discussion is
 in paper 42, §“What the contact block does and does not separate”.
 
 ## 1. Three independent coefficient properties

@@ -1,7 +1,6 @@
 # E67.7 — Off-diagonal audit of the Woronowicz route
 
-**Date:** 2026-07-06.
-**Role:** resolve the tension between E67.4 and E67.5 before running finite-prime numerics.
+**Purpose:** resolve the tension between E67.4 and E67.5 before running finite-prime numerics.
 
 ## Verdict
 

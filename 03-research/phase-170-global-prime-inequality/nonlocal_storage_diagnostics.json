@@ -1,0 +1,80 @@
+{
+  "status": "PASS: nonlocal matrix construction; no global sign theorem",
+  "cases": [
+    {
+      "T": 1.0,
+      "dimension": 24,
+      "artificial_weights": false,
+      "gain": 0.9996669307529773,
+      "observed_margin": 0.00033306924702269924,
+      "eta_chosen_from_margin": 0.00014730977581312702,
+      "new_gain": 0.9997187095824183,
+      "divisor_commutator_square_norm": 7.990560756182109e-05,
+      "normalized_output_cost_norm": 1.130506258611178,
+      "stein_residual": 3.4685955850643064e-15,
+      "storage_identity_residual": 1.7207225522137984e-14,
+      "smallest_cost_eigenvalue": 0.00011817342967714755
+    },
+    {
+      "T": 1.0,
+      "dimension": 48,
+      "artificial_weights": false,
+      "gain": 0.9998970697589377,
+      "observed_margin": 0.00010293024106233783,
+      "eta_chosen_from_margin": 4.5847104622757916e-05,
+      "new_gain": 0.999912941440945,
+      "divisor_commutator_square_norm": 8.64500847179679e-05,
+      "normalized_output_cost_norm": 1.1225380742063762,
+      "stein_residual": 2.864452547506625e-14,
+      "storage_identity_residual": 1.953685962866056e-13,
+      "smallest_cost_eigenvalue": 5.9474619948429696e-05
+    },
+    {
+      "T": 1.5,
+      "dimension": 24,
+      "artificial_weights": false,
+      "gain": 0.9998437088269122,
+      "observed_margin": 0.00015629117308779694,
+      "eta_chosen_from_margin": 6.985445089883598e-05,
+      "new_gain": 0.9998581363136396,
+      "divisor_commutator_square_norm": 2.622625227397951e-05,
+      "normalized_output_cost_norm": 1.118691587126922,
+      "stein_residual": 2.2894685152482547e-14,
+      "storage_identity_residual": 1.2293457491132373e-13,
+      "smallest_cost_eigenvalue": 3.1637238477768686e-06
+    },
+    {
+      "T": 1.5,
+      "dimension": 48,
+      "artificial_weights": false,
+      "gain": 0.9999356263627412,
+      "observed_margin": 6.437363725875223e-05,
+      "eta_chosen_from_margin": 2.8854925564702052e-05,
+      "new_gain": 0.9999418552233037,
+      "divisor_commutator_square_norm": 2.8227332790433268e-05,
+      "normalized_output_cost_norm": 1.115470513247483,
+      "stein_residual": 1.0470147326065161e-13,
+      "storage_identity_residual": 2.5256084585925636e-13,
+      "smallest_cost_eigenvalue": 6.958935003727822e-07
+    }
+  ],
+  "falsifier": {
+    "T": 1.0,
+    "dimension": 48,
+    "artificial_weights": true,
+    "gain": 3.1155068846250344,
+    "observed_margin": -2.1155068846250344,
+    "eta_chosen_from_margin": 0.1,
+    "new_gain": 3.1432163477190502,
+    "divisor_commutator_square_norm": 6.863327969645367e-10,
+    "normalized_output_cost_norm": 1.8275858279821189,
+    "stein_residual": 1.3221620612145954e-14,
+    "storage_identity_residual": 7.681249575347492e-14,
+    "smallest_cost_eigenvalue": 0.0007437067315828177
+  },
+  "limitations": [
+    "eta uses the observed finite-dimensional margin.",
+    "No certified Galerkin remainder or interval arithmetic.",
+    "Observability of all continuum contact vectors is unproved."
+  ]
+}

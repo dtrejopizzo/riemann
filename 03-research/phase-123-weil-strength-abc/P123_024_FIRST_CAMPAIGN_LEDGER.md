@@ -1,7 +1,7 @@
 # P123.024 — first approved campaign: dependency and execution ledger
 
-Date: 2026-09-05. The user approved execution and economical delegated
-checks. The session goal is active; it has not been marked complete.
+Execution and economical delegated checks were approved. The
+campaign goal is active; it has not been marked complete.
 
 ## 1. What has actually changed
 
@@ -244,7 +244,7 @@ with Arb. This completes the base-certificate reproduction step of the
 approved D campaign; the independent first-contact/zero-flux law and
 the A/C transport remain open.
 
-Following the user's direction to prioritize construction, P123.037
+To prioritize construction, P123.037
 builds the primitive contact from the cotangent transitivity of actual
 composable power maps. Its divisor cube gives the complexes themselves,
 not only the von Mangoldt degrees. It agrees objectwise with the earlier
@@ -438,7 +438,7 @@ for twisted modules and finite sums. The inverse perturbation sum is
 finite in every degree. General bounded-complex internal differentials
 and the determinant/nuclear/geometric trace requirements remain explicit.
 
-P123.068 extended on 2026-09-06: the weight s+(i-i_min)+(j-j_min)
+P123.068 extended : the weight s+(i-i_min)+(j-j_min)
 makes the perturbation finite after adding both bounded internal
 differentials. Continuous cyclic comparison now covers the full bounded
 twisted-complex category, including its cones. Higher coherence and

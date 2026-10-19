@@ -1,6 +1,5 @@
 # E73.243 - Rational left-coborder audit with fixed geometric betas
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

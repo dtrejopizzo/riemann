@@ -1,6 +1,6 @@
 # CORPUS_CHECK_R147b — Z[Gal(K/Q)] acting on Spec O_K as the missing "+"
 
-Author: David Alejandro Trejo Pizzo · dtrejo@biomakers.net
+dtrejo@biomakers.net
 Purpose: pre-phase-147(b) corpus check. Question: is the missing ring of correspondences on
 `Spec O_K × Spec O_K` the group ring `Z[Gal(K/Q)]`, realized by graphs `Γ_σ` of Galois
 automorphisms `σ ∈ Gal(K/Q)` acting as genuine endomorphisms of `Spec O_K`, with degrees =
@@ -28,24 +28,24 @@ Zero hits for `Spec O_K`, `Hom(Spec Z`, `endomorphism of Spec`, `automorphisms o
 What **does** exist, and is the closest predecessor, is Phase 139's Theorem D.20 (base change),
 carried into Phase 140/141/146:
 
-* `03-research/phase-139-row-d-two-falsifiers/R139_000_LEAD_BLUEPRINT.md:76-80` — base change
+* `03-research/phase-139-row-d-two-falsifiers/R139_000_BLUEPRINT.md:76-80` — base change
   `L/K`: `ξ_L = ξ_K·∏_{χ≠1}Λ(s,χ)^{χ(1)}` (Artin formalism), restated as
   `I_∞^{(L)}(N^*F,N^*F) = I_∞^{(K)}(F,F) + Σ_χ I_∞^{(χ)}(F,F)` — "the multiplicativity of the
   Frobenius family" as T2's precise content.
-* `03-research/phase-139-row-d-two-falsifiers/R139_005_LEAD_CLOSING_DECISION.md:20` — **Theorem
+* `03-research/phase-139-row-d-two-falsifiers/R139_005_CLOSING_DECISION.md:20` — **Theorem
   D.20.2**: additivity of the primitive zero form under base change, over **conjugate packets**
   `Λ_{[χ]} := Λ(·,χ)Λ(·,χ̄)`. Status: **`PROVED` for `L/K` abelian** (Hecke L-functions of
   primitive non-trivial characters are entire, unconditional); **`PROVED-CONDITIONAL` on Artin's
   holomorphy conjecture** for general (non-abelian) `L/K`.
-* `R139_003_BUILDER_ROUND2.md:32` — the repaired statement, with the reason a naive per-`χ`
+* `R139_003_ROUND2.md:32` — the repaired statement, with the reason a naive per-`χ`
   argument fails for complex `χ`: it must be taken over self-dual conjugate packets, using
   `Λ_{[χ]}(s) = Λ_{[χ]}(1−s)` and `W(χ)W(χ̄)=1` (new Lemma D.20.2a₀).
-* `R139_001_BUILDER_ROUND1.md:844` — "Let `L/K` be a finite **Galois** extension with group `G`.
+* `R139_001_ROUND1.md:844` — "Let `L/K` be a finite **Galois** extension with group `G`.
   Artin's factorization gives, as meromorphic functions, `ξ_L = ξ_K·∏_{χ}Λ(s,χ)^{χ(1)}`" — this is
   the **only** place `Gal(L/K)` (a general Galois group, via its character table) enters the
   arithmetic side of row D. It enters through **Artin L-functions indexed by characters/
   representations of `G`**, never through `G` acting geometrically as automorphisms of a scheme.
-* `R139_001_BUILDER_ROUND1.md:1018` — **W4 = "the graph of Frobenius `Γ_q ⊂ S`"** (bidegree
+* `R139_001_ROUND1.md:1018` — **W4 = "the graph of Frobenius `Γ_q ⊂ S`"** (bidegree
   `(1,q)`, `Γ_q·Δ = N_1`). This is the *function-field* graph-of-Frobenius correspondence (the
   `q`-power map on a curve over `F_q`), **not** a graph of a Galois automorphism of `Spec O_K`.
   It is the nearest geometric ancestor in shape (a correspondence on a square whose degree is a
@@ -96,12 +96,12 @@ Epstein zeta as signed combination of Hecke L-functions
   **Classification: TRIED–PARTIAL** as raw material (the coset-indicator technology exists and is
   proved exactly), **NEW** as applied to Galois twists specifically.
 * **Epstein zeta as a signed combination of Hecke L-functions**: Phase 139's `C1`
-  (`R139_000_LEAD_BLUEPRINT.md:27`, `R139_001_BUILDER_ROUND1.md:91-135`) studies the Epstein zeta
+  (`R139_000_BLUEPRINT.md:27`, `R139_001_ROUND1.md:91-135`) studies the Epstein zeta
   `Z_Q(s)` of a binary quadratic form of class number `h(−D)>1`, and (`D.19.1`–`D.19.4`) its
   decomposition via genus theory into a combination of Hecke L-functions with characters of the
-  class group `Cl(−D)`, sourced from `phase-8/PLAN-RH-PHASE8-heat-flow.md:21-24` ("what separates ζ
+  class group `Cl(−D)`, sourced from `phase-8-heat-flow-monotonicity/PLAN-RH-PHASE8-heat-flow.md:21-24` ("what separates ζ
   from Epstein zetas is the Euler product"). Real zeros of Epstein zeta functions (Potter–Titchmarsh
-  1935) are cited (`R139_001_BUILDER_ROUND1.md:1304`) as a **known counterexample regime**: Epstein
+  1935) are cited (`R139_001_ROUND1.md:1304`) as a **known counterexample regime**: Epstein
   zetas *can* have zeros off any critical line, used in Phase 139 as falsifier T2 material, not as
   a positivity mechanism. **Classification: TRIED–PARTIAL** (D.19 decomposition exists and is used
   as a falsifier probe for row D's meta-theorem; it is not repurposed as evidence for group-ring
@@ -175,7 +175,7 @@ non-invertible degree-`q` map), never a finite automorphism group `G = Aut(C/F_q
 involution; Frobenius-Schur; Chebotarev positivity; connection to zeros
 
 * **Rosati positivity, as the `g→∞` generalization of the norm form on `Z[Frob]`:**
-  `03-research/phase-145-row-d-function-field-model/R145_004_HOSTILE_CONFIRMATION.md:139-142`:
+  `03-research/phase-145-row-d-function-field-model/R145_004_CONFIRMATION.md:139-142`:
   "the rank of the endomorphism module grows, and the elementary norm form is replaced by **Rosati
   positivity** `Tr(f f†) > 0` on `End(Jac)⊗Q`." And explicitly, `R145_004...md:125-134` **Warning 1**
   — *"the arithmetic statement 'the degree form on `Z[Frob]` is positive semidefinite' is Weil
@@ -249,7 +249,7 @@ These are the genuine reusable assets for phase 147(b):
 | 2 | Effective classes / twisted Frobenius / class-group-character twists / coset indicators / Epstein-as-Hecke-combination | mostly **NEW**; coset-indicator and Epstein-decomposition machinery **TRIED–PARTIAL** as reusable raw material | Paper 44 §8bis (`main.md:3250-3900`); phase-139 D.19 (Epstein/genus theory) |
 | 3 | "Spec Z has no endomorphisms" as an explicit wall; `K/Q` extensions proposed to supply correspondences | statement itself **not previously written down explicitly** (implicit throughout MW-2/MW-5); the specific `K/Q`-extension escape route is **NEW** | `NO-GO-LIST.md:109,200-230` (NG-C1, MW-5) |
 | 4 | Curves with automorphism groups / Galois covers / Hurwitz curves / `End(J)⊇Z[G]` as function-field models | **NEW** — corpus's F_q model always uses the (non-invertible) absolute Frobenius, never a finite automorphism group | phase-145 `CORPUS_CHECK_R145.md` (esp. `:20-42`), phase-63, phase-119, phase-125 |
-| 5 | Positivity of a group-ring / Rosati / regular-representation trace form connected to zeros | the **danger flag** (positing it ⟺ assuming RH) **TRIED–PROVED**; the specific mechanism (Rosati/Frobenius-Schur/Chebotarev positivity as an *escape* from that circularity) is **NEW** | `phase-145 R145_004_HOSTILE_CONFIRMATION.md:125-142` (Warning 1, Rosati); `NO-GO-LIST.md` MW-4 |
+| 5 | Positivity of a group-ring / Rosati / regular-representation trace form connected to zeros | the **danger flag** (positing it ⟺ assuming RH) **TRIED–PROVED**; the specific mechanism (Rosati/Frobenius-Schur/Chebotarev positivity as an *escape* from that circularity) is **NEW** | `phase-145 R145_004_CONFIRMATION.md:125-142` (Warning 1, Rosati); `NO-GO-LIST.md` MW-4 |
 | 6 | Uniform-in-`K` results to build on | **TRIED–PROVED**, reusable directly | phase-139 D.20/D.21.3 (base change, conjugate packets); phase-140 D.22 (`Frob_𝔫` template, and D.23.12(A) unsigned-Gram warning); phase-141 D.30 (`h⁰_{RR}^+`, O-18) |
 
 **Bottom line — what is genuinely new in "Z[Gal(K/Q)] as the missing +":**

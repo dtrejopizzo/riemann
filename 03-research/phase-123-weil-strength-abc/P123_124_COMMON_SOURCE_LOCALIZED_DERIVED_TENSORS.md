@@ -1,6 +1,6 @@
 # P123.124 — Localized derived tensors in the common smooth source
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY for coordinate-nonzero
+Status: PROVED-IN-REPOSITORY for coordinate-nonzero
 opens and the linearly split exact structure of P123.122. This realizes
 a geometrically localized sector with its actual derived composition.
 It does not assert localization for every open or the full mixed RR.

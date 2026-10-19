@@ -25,7 +25,7 @@ The crossed polar block of D.49 is exactly
 Thus the full CCM operator splits as
 
 \[
- A_e=H_e+|u_e\rangle\langle u_e|,qquad
+ A_e=H_e+|u_e\rangle\langle u_e|,\qquad
  A_o=H_o-|u_o\rangle\langle u_o|.                            \tag{1.4}
 \]
 
@@ -37,7 +37,7 @@ up and the odd channel down.
 For `z` outside the corresponding unperturbed spectrum define
 
 \[
- m_e(z)=\langle u_e,(H_e-z)^{-1}u_e\rangle,qquad
+ m_e(z)=\langle u_e,(H_e-z)^{-1}u_e\rangle,\qquad
  m_o(z)=\langle u_o,(H_o-z)^{-1}u_o\rangle.                  \tag{2.1}
 \]
 
@@ -45,7 +45,7 @@ Away from the unperturbed spectrum, the matrix determinant lemma gives the
 secular equations
 
 \[
- 1+m_e(z)=0\quad\hbox{(even)},qquad
+ 1+m_e(z)=0\quad\hbox{(even)},\qquad
  1-m_o(z)=0\quad\hbox{(odd)}.                                \tag{2.2}
 \]
 
@@ -223,7 +223,7 @@ Define the exact Tate vectors on this grid by
 \[
  (\phi_\pm)_j=e^{\pm t_j/2},\qquad
  R_2=|\phi_-\rangle\langle\phi_+|
-     +|\phi_+\rangle\langle\phi_-|,qquad H_0=A-R_2.         \tag{6.4}
+     +|\phi_+\rangle\langle\phi_-|,\qquad H_0=A-R_2.         \tag{6.4}
 \]
 
 For `i!=j`,
@@ -258,7 +258,7 @@ It is the scalar inequality
 \[
  \boxed{
  \exists E_T<\alpha_{o,0}(T):\quad
- \mu_e(T)\leq E_T,qquad
+ \mu_e(T)\leq E_T,\qquad
  \sum_k { |\langle u_o,v_{o,k}\rangle|^2
           \over\alpha_{o,k}(T)-E_T}<1.}                      \tag{7.1}
 \]

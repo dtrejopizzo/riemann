@@ -76,7 +76,7 @@ ledger below. Candid status tags: ✅ proved · 🟡 reduced-to / conditional ·
 - [`../PAPER-A.md`](../PAPER-A.md) — **Day 23 — THE DELIVERABLE (paper A).** Full self-contained write-up:
   Theorem A (semibounded realization, modulo (H)), Theorem B (Kreĭn $\mathfrak t=E^*JE$ + angular operator,
   $\|K\|\le1\iff$RH), Theorem C (no-go: zero-side can't reach the sign). All equations, prior-work placement
-  (Connes–Consani, de Branges completion), candid scope. Author: David Alejandro Trejo Pizzo.
+  (Connes–Consani, de Branges completion), candid scope.
 - [`../B2-THEOREM.md`](../B2-THEOREM.md) — **Day 23.** Complete B-2 theorem assembled: Lemmas A–D + depth
   split unconditional; hypothesis (H) isolated (≪ RH, frontier). RH ⟺ sign of finite bottom.
 - [`../B3-KREIN-STRUCTURE.md`](../B3-KREIN-STRUCTURE.md) — **Day 23.** Kreĭn/angular structure verified +
@@ -180,7 +180,7 @@ ledger below. Candid status tags: ✅ proved · 🟡 reduced-to / conditional ·
 
 ## Chronology
 
-**2026-06-01 — Day 0.** Opened the workspace. Pinned $(\mathcal H,\mathcal T)$ (A.0). Two threads
+**Day 0.** Opened the workspace. Pinned $(\mathcal H,\mathcal T)$ (A.0). Two threads
 started in parallel per the work program §7:
 - **Problem A.** Reduced the compression identity to two analytic facts: (i) the localizers lie in
   the form domain (A.1/A.2), (ii) the finite-cutoff computed matrix converges to the exact form entries
@@ -200,7 +200,7 @@ started in parallel per the work program §7:
 > the archimedean form, whose constant is controlled by zero density. The frontier is now one boxed
 > inequality, not a vague "entanglement."
 
-**2026-06-02 — Day 1.** Two referee alerts on the Day-0 §5, both conceded, both load-bearing:
+**Day 1.** Two referee alerts on the Day-0 §5, both conceded, both load-bearing:
 - **Alert 1.** The "multiplier symbol" $\Phi(r)=2\sum\Lambda(n)n^{-1/2}\cos(r\log n)$ and
   $\inf_r(\Omega-\Phi)$ were illegitimate: the prime measure $\nu$ has mass $\asymp e^{t/2}$ per unit
   interval, so it is **non-tempered** and $\Phi=\widehat\nu$ is **not** a tempered distribution. (SB) had
@@ -225,7 +225,7 @@ started in parallel per the work program §7:
 > + B2.4b (the zero-density inequality). Merge the B and D sub-teams. Next: build $E_{T_0,\sigma}$ and
 > read Bombieri's norm.
 
-**2026-06-02 — Day 2.** Followed the directive "pursue B/de Branges while hot" (do **not** stop to write
+**Day 2.** Followed the directive "pursue B/de Branges while hot" (do**not** stop to write
 up A first). Attacked B2.4a directly. Results in [`B2.4a-de-branges-norm.md`](B2.4a-de-branges-norm.md):
 - **DB.1 ✅** The free part is the Gamma geometry: $\Omega(r)=2\,\mathrm{Re}(\gamma'/\gamma)(\tfrac12+ir)$,
   $\gamma(s)=\pi^{-s/2}\Gamma(s/2)$. The ambient space of B is forced — it is $\gamma$'s de Branges space.
@@ -251,7 +251,7 @@ up A first). Attacked B2.4a directly. Results in [`B2.4a-de-branges-norm.md`](B2
 > (3) prove it (conditionally on zero density) and confirm Conrey–Li immunity in the localized regime.
 > A stays in write-up; B/D is the live frontier.
 
-**2026-06-02 — Day 3.** Referee gave two corrections on Day 2, both conceded, both load-bearing; the
+**Day 3.** Referee gave two corrections on Day 2, both conceded, both load-bearing; the
 second produced the day's real content. Record in [`B2.4a-closability.md`](B2.4a-closability.md).
 - **Correction A — `≡` was overstated.** Day-2's "B-2 $\equiv$ de Branges chain condition" is only
   $\rightsquigarrow$ (suggestive). Upgrading needs three unproven things: (1) $H(E)$ canonical, (2) the
@@ -284,7 +284,7 @@ second produced the day's real content. Record in [`B2.4a-closability.md`](B2.4a
 > construct the chain. The sign/value principle guarantees no choice of norm can fake or hide RH; the open
 > risk is whether a *faithful* (closable, non-trivial) norm exists at all. Immediate next computation: §0.
 
-**2026-06-02 — Day 4.** Per referee directive ("actively try to break DB.4 before building it").
+**Day 4.** Per referee directive ("actively try to break DB.4 before building it").
 Record in [`B2.4a-break-attempt.md`](B2.4a-break-attempt.md).
 - **CL.0 resolved (double self-correction).** The de Branges **norm weight is exponential**
   $|E|^{-2}\asymp e^{\pi|x|/2}$ (Day-2 instinct was right); the **density of states $\sim\log$** is a
@@ -317,7 +317,7 @@ Record in [`B2.4a-break-attempt.md`](B2.4a-break-attempt.md).
 > v10 $\sigma\to0$ falsifier. $E_{T_0,\sigma}$ deferred (was for the superseded picture).
 > **[Day-4 headline is itself retracted — see Day 5.]**
 
-**2026-06-02 — Day 5. ❌ RETRACTION of BR.1 (and B2.3).** Attempting (per referee) to make BR.1 rigorous
+**Day 5. ❌ RETRACTION of BR.1 (and B2.3).** Attempting (per referee) to make BR.1 rigorous
 *before* building the Fock formalism revealed BR.1 is **false**. Record in `B2.4a-break-attempt.md` §5.
 - **The disproof (explicit-formula identity, EF-id).** $\mathfrak t(g,g)=\mathfrak a+\mathfrak q-\mathfrak p=\sum_\rho|\widehat g(\gamma_\rho)|^2$
   is an **identity**. For a smooth bump $\widehat g_\varepsilon$ of width $\varepsilon\to0$ at a generic
@@ -346,7 +346,7 @@ Record in [`B2.4a-break-attempt.md`](B2.4a-break-attempt.md).
 > (3) re-examine whether any genuine norm-dependence survives. The instrument's recurring temptation —
 > manufacturing blow-ups by hard-truncating — is now a named, guarded-against failure mode.
 
-**2026-06-02 — Day 6. Audit of EF-id (the new pillar) — survives, with two corrections.** Per referee:
+**Day 6. Audit of EF-id (the new pillar) — survives, with two corrections.** Per referee:
 before building on EF-id, audit it (three questions). Record in [`EF-identity-audit.md`](EF-identity-audit.md).
 - **Q3 (role of RH): Case A, unconditional.** (EF) is the Weil explicit formula — a theorem, no RH input.
   RH enters only in the *sign* of the (unconditional) RHS. ⟹ using EF-id to refute BR.1 is legitimate; it
@@ -370,7 +370,7 @@ before building on EF-id, audit it (three questions). Record in [`EF-identity-au
 > Next: (1) the closure question (does the form close in $H(E_\gamma)$?); (2) Bombieri's norm; (3) the
 > off-line-zero-sum zero-density bound.
 
-**2026-06-02 — Day 7. Closure attacked (referee priority) — FIRST POSITIVE RESULT.** Record in
+**Day 7. Closure attacked (referee priority) — FIRST POSITIVE RESULT.** Record in
 [`closure-in-HEgamma.md`](closure-in-HEgamma.md). Using the audited split $\mathfrak t=\mathfrak t_++\mathfrak t_-$:
 - **CLOS.1 ✅** The on-line part $\mathfrak t_+(g)=\sum_\gamma|\langle g,K_\gamma\rangle|^2$ (DB.3: bounded
   evaluations) is a **non-decreasing supremum of bounded closed forms**, hence **closed** by **Kato's
@@ -392,7 +392,7 @@ before building on EF-id, audit it (three questions). Record in [`EF-identity-au
 > mathematical state** (exactly as the referee predicted closability would). Next: attack (RFB) as a
 > density bound; cross-check Bombieri; audit CLOS.1's Kato hypotheses (new load-bearing step).
 
-**2026-06-02 — Day 8. Parallel: audit CLOS.1 + attack (RFB).** Record in
+**Day 8. Parallel: audit CLOS.1 + attack (RFB).** Record in
 [`CLOS1-audit-and-RFB.md`](CLOS1-audit-and-RFB.md).
 - **CLOS.1 audit (referee's 3 weak points).** ⚠️ Overclaim found and **retracted**: I said "closure
   $=\mathfrak t_+$ because $\mathcal D$ dense" — but **density $\ne$ form-core**. Rigorous now: only
@@ -420,7 +420,7 @@ before building on EF-id, audit it (three questions). Record in [`EF-identity-au
 > load-bearing open items: **form-core** (A.2) and **the Carleson/density integral** (B.3). Next: attack
 > the form-core (Hermite graph-norm density) and make $S_{\mathrm{off}}$ quantitative.
 
-**2026-06-02 — Day 9. DEEP DIVE: computing $K$ quantitatively forces a SPACE CORRECTION.** Per referee
+**Day 9. DEEP DIVE: computing $K$ quantitatively forces a SPACE CORRECTION.** Per referee
 Front 2 ("compute $K$ quantitatively") + the $S_{\mathrm{off}}$ suspicion. Record in
 [`space-correction-strip-hardy.md`](space-correction-strip-hardy.md).
 - **❌ $H(E_\gamma)$ TRIVIALIZES.** $K_{H(E_\gamma)}(\gamma,\gamma)\sim\log\gamma\,e^{-\pi\gamma/2}\to0$
@@ -452,7 +452,7 @@ Front 2 ("compute $K$ quantitatively") + the $S_{\mathrm{off}}$ suspicion. Recor
 > for $H^2(S_d)$; cite $|E_\gamma|$ asymptotic. The pattern holds: a green box (CLOS in $H(E_\gamma)$)
 > turned out vacuous on deep audit — caught before building further.
 
-**2026-06-02 — Day 10. AUDIT of the load-bearing kernel (referee priority) + parallel advances.** Record
+**Day 10. AUDIT of the load-bearing kernel (referee priority) + parallel advances.** Record
 in [`Day10-kernel-audit.md`](Day10-kernel-audit.md).
 - **Danger B (formula) CLEARED ✅:** $K(t,t)=\tfrac{\varphi'}\pi|E|^2$ re-derived from $E=A-iB$, phase
   $\varphi$ — no sign/normalization slip.
@@ -483,7 +483,7 @@ in [`Day10-kernel-audit.md`](Day10-kernel-audit.md).
 > unavoidable, not a space artifact) survives the convention uncertainty. Next: literature pin (§2);
 > over-sampling first step of A.2; then relative-Carleson characterization.
 
-**2026-06-02 — Day 11. AUDIT of the Day-10 theorem (new pillar) — TWO gaps found, reconstructed.** The
+**Day 11. AUDIT of the Day-10 theorem (new pillar) — TWO gaps found, reconstructed.** The
 referee chose to re-audit the Day-10 theorem before advancing. Record in
 [`Day11-theorem-audit.md`](Day11-theorem-audit.md).
 - **F2 gap CONCEDED ❌ (referee's catch).** "faithful $\Rightarrow\inf_t K(t,t)>0$" is **FALSE**:
@@ -511,7 +511,7 @@ referee chose to re-audit the Day-10 theorem before advancing. Record in
 > producing *impossibility* results, more robust than positive constructions. Next: verify F1/$D(t)\ge0$
 > for the log-weighted strip; over-sampling lower-frame-bound (A.2); literature pin.
 
-**2026-06-02 — Day 12. THE DENSITY SCALING LAW (referee: reformulate via $\rho(t)$, classify F1).** Both
+**Day 12. THE DENSITY SCALING LAW (referee: reformulate via $\rho(t)$, classify F1).** Both
 asks fused into the deepest result so far. Record in [`Day12-density-scaling-law.md`](Day12-density-scaling-law.md).
 - **DENS.1 — faithfulness criterion, $\inf K$-free ✅/◆:** replacing $\sum_\gamma$ by $\int(\cdot)\rho\,dt$
   ($S(T)$ fluctuation lower-order for slowly-varying $K$): **FAITHFUL $\iff K(t,t)\rho(t)\notin L^1$**.
@@ -542,7 +542,7 @@ asks fused into the deepest result so far. Record in [`Day12-density-scaling-law
 > Beurling-borderline, RH-true). The durable stack now: B-1, EF-id, K1–K4, and the scaling law. Next: the
 > lower frame bound (or weakest zero-regularity input); relative Carleson in density form; literature pin.
 
-**2026-06-02 — Day 13. AUDIT of DENS.1 (the new pillar; referee priority over the lower-frame-bound).** The
+**Day 13. AUDIT of DENS.1 (the new pillar; referee priority over the lower-frame-bound).** The
 sum$\to$integral step rests on $\int K\,dS$ being lower-order. Record in
 [`Day13-DENS1-audit.md`](Day13-DENS1-audit.md).
 - **The fluctuation computation (referee's concern, done):** $E(T)=\int_0^T K\,dS=K(T)S(T)-\int_0^T SK'\,dt$,
@@ -565,7 +565,7 @@ sum$\to$integral step rests on $\int K\,dS$ being lower-order. Record in
 > B-1, EF-id, K1–K4, critical scaling law (uncond.), DENS.1 (reg.-varying $K$). Next: lower frame bound
 > (A.2) and relative Carleson in density form, now on an audited foundation.
 
-**2026-06-02 — Day 14. AUDIT of the "A.2 $\Leftarrow$ lower frame bound" reduction (referee Priority 1) —
+— Day 14. AUDIT of the "A.2 $\Leftarrow$ lower frame bound" reduction (referee Priority 1) —
 finds a SECOND TRIVIALITY.** Record in [`Day14-reduction-audit.md`](Day14-reduction-audit.md).
 - **THE HOLE ❌:** Day-12 §6 did the reduction in the **critical space** ($R=K\rho\asymp1$). There
   $\mu_{\mathrm{on}}$ Carleson ⟹ $\mathfrak t_+$ **bounded** ⟹ form-core AUTOMATIC (no frame bound needed).
@@ -596,7 +596,7 @@ finds a SECOND TRIVIALITY.** Record in [`Day14-reduction-audit.md`](Day14-reduct
 > Durable stack updated: +K5, sharpened faithfulness ($R\to\infty$). Next (Priority 2): the minimal fine
 > zero-regularity input for RFB / form-core; defer F1 (Priority 3). **[T2/K5 mechanism corrected Day 15.]**
 
-**2026-06-02 — Day 15. AUDIT of K5 (referee: audit before pillarizing) — the Carleson step CONFLATED TWO
+— Day 15. AUDIT of K5 (referee: audit before pillarizing) — the Carleson step CONFLATED TWO
 INVARIANTS.** Record in [`Day15-K5-audit.md`](Day15-K5-audit.md). Followed the referee's 3-step recipe.
 - **Intrinsic resolution $\ell(t)=\sqrt{K(t,t)/K_{11}(t)}$** (kernel coherence length). For Hardy-band
   $\ell\asymp d$ **constant** (verified on explicit kernel: $\ell=2d/\pi$); slowly-varying weight doesn't
@@ -626,7 +626,7 @@ INVARIANTS.** Record in [`Day15-K5-audit.md`](Day15-K5-audit.md). Followed the r
 > to forced. Net: two invariants cleanly separated (the durable gain). Next: RFB ($\mathfrak t_-\lesssim\mathfrak t_+$),
 > where the fine zero geometry finally enters.
 
-**2026-06-02 — Day 16. Carleson sufficiency (Schur) + a rigorous reduction of RFB (referee provided a
+— Day 16. Carleson sufficiency (Schur) + a rigorous reduction of RFB (referee provided a
 proof sketch).** Record in [`Day16-carleson-and-RFB.md`](Day16-carleson-and-RFB.md).
 - **Carleson, audited ✅/◆:** $P\lesssim1$ + separation $\Rightarrow$ Carleson (Schur test, rigorous, the
   referee's argument); **full equivalence FALSE** (clustering breaks it) — sufficient direction only, $P$ =
@@ -655,7 +655,7 @@ proof sketch).** Record in [`Day16-carleson-and-RFB.md`](Day16-carleson-and-RFB.
 > the program's hard core is definitively the fine geometry of the zeros. Durable conditional theorem in
 > hand. Next: weakest sufficient arithmetic form of the regularity hypothesis.
 
-**2026-06-02 — Days 17–18. VERIFICATION of a deep multi-thread exploration (referee asked to double-check
+— Days 17–18. VERIFICATION of a deep multi-thread exploration (referee asked to double-check
 & find errors).** Records: [`Day17-verification.md`](Day17-verification.md), [`Day18-quadrature.md`](Day18-quadrature.md).
 - **Day-17: TWO real ERRORS found.** (1) The "Montgomery-scale reversal" (claim: local under-sampling ⟹
   coercivity not free) is WRONG — confuses kernel **coherence length** with **bandwidth** (bandwidth = its
@@ -692,7 +692,7 @@ proof sketch).** Record in [`Day16-carleson-and-RFB.md`](Day16-carleson-and-RFB.
 > **statistical equidistribution property of the zeros**, not an operator-spectral one. Single decisive
 > open: is the uniform discrepancy bound unconditional (Selberg) or RH-only (Montgomery)?
 
-**2026-06-02 — Day 19. VERIFICATION of the Parseval/pair-correlation input (referee: "muy serio, verifica
+— Day 19. VERIFICATION of the Parseval/pair-correlation input (referee: "muy serio, verifica
 todo"). NO outright error — and it SIMPLIFIES.** Record in [`Day19-pair-correlation-input.md`](Day19-pair-correlation-input.md).
 - **Parseval ✅:** $E_g=\int_{-2d}^{2d}\widehat g\,D_T$, $|E_g|\le\|\widehat g\|_2\|D_T\|_{L^2[-2d,2d]}$. And
   it is **cleaner in $PW_d$ = the classical Weil (compact-support) test class** — band-limited ⟹ entire ⟹
@@ -722,7 +722,7 @@ todo"). NO outright error — and it SIMPLIFIES.** Record in [`Day19-pair-correl
 > RH." MAX-EFFORT next: nail the threshold bookkeeping + the BGSTB/Goldston–Montgomery literature check.
 > **[Day-20: the "$V(d,T)$ global" framing is VACUOUS; corrected below.]**
 
-**2026-06-02 — Day 20. The referee's threshold push has a VACUOUS step; the correction points to
+— Day 20. The referee's threshold push has a VACUOUS step; the correction points to
 UNCONDITIONAL B-2.** Record in [`Day20-threshold-correction.md`](Day20-threshold-correction.md). The
 referee asked: reformulation or what? Verify, find errors, max effort.
 - **❌ ERROR FOUND:** the chain $|E_g|\le\|\widehat g\|_2\sqrt{V(d,T)}$ uses the **global** $V$ ($V_{\mathrm{diag}}\sim T\log T$),
@@ -741,7 +741,7 @@ referee asked: reformulation or what? Verify, find errors, max effort.
   rested on the vacuous bound. Corrected estimate: ~60% **unconditional B-2** (= §6 prize: faithful semibounded
   Weil realization, RH-independent), ~20% RH-reformulation, ~20% surprise. RH itself = the sign of the now-finite
   bottom (untouched).
-- **⚠️ MANDATORY: this Day-20 optimistic claim is now the load-bearing pillar and must survive its OWN hostile
+- **⚠️ MANDATORY: this Day-20 optimistic claim is now the load-bearing pillar and must survive its OWN
   audit** (§5): (1) IBP boundary/tail for non-compact $PW_d$; (2) the exact off-line 2D quadrature (varying
   $b_\rho$, $\rho_{\rm off}\le\rho$ + zero-density giving finite $C$); (3) is $C$ useful (or just finite); (4)
   re-confirm coercivity. NOT written as a theorem yet.
@@ -750,10 +750,10 @@ referee asked: reformulation or what? Verify, find errors, max effort.
 > it to the **local IBP+Bernstein+Selberg** bound shows B-2 needs only a **finite-constant** quadrature
 > comparison — **unconditional, no Montgomery**. So the program likely lands on **unconditional B-2** (a
 > faithful semibounded Weil realization, RH-independent — the §6 prize), *not* an RH-reformulation. RH stays
-> the sign. **But this is now the optimistic load-bearing claim and must pass its own hostile audit (§5)
+> the sign. **But this is now the optimistic load-bearing claim and must pass its own audit (§5)
 > before becoming a theorem** — the discipline that caught every prior over-claim applies here most of all.
 
-**2026-06-02 — Day 21. Proofs A/B/C verified; off-line sum CLOSED; B-2 ⟸ a single gap bound.** Record in
+**Day 21. Proofs A/B/C verified; off-line sum CLOSED; B-2 ⟸ a single gap bound.** Record in
 [`Day21-offline-and-coercivity.md`](Day21-offline-and-coercivity.md). The referee wrote Proofs A (IBP), B
 (Bernstein+Selberg), C (vertical), flagged the off-line discrete sum as the remaining gap; asked to verify
 + complete.
@@ -781,7 +781,7 @@ referee asked: reformulation or what? Verify, find errors, max effort.
 > theorem.** Mandatory next: audit §5 (esp. 2½: does $D^-=\infty$ give coercivity with no gap hypothesis?).
 > **[Day-22: §2½ answered NO; gap framing refined to a depth split.]**
 
-**2026-06-02 — Day 22. Coercivity (§2½) as PURE SAMPLING (referee: forget zeta, attack it as a frame
+— Day 22. Coercivity (§2½) as PURE SAMPLING (referee: forget zeta, attack it as a frame
 problem).** Record in [`Day22-coercivity.md`](Day22-coercivity.md).
 - **§2½ ANSWERED: $D^-=\infty$ does NOT give the lower frame bound ✅ (referee's instinct right).** Beurling:
   set of sampling for $PW_d$ $\Leftarrow$ no gap $>\pi/d$ (gap theorem); $D^-\ge d/\pi$ is NECESSARY not
@@ -810,8 +810,8 @@ problem).** Record in [`Day22-coercivity.md`](Day22-coercivity.md).
 
 ---
 
-**2026-06-03 — Day 23. RECONNECTION TO RH + PATH (A) CLOSED + KREĬN STRUCTURE + NO-GO + PAPER A.** A long,
-multi-part day driven by the external team (hostile-referee mode). Records: `RH-ENDGAME.md`, `B2-THEOREM.md`,
+**Day 23. RECONNECTION TO RH + PATH (A) CLOSED + KREĬN STRUCTURE + NO-GO + PAPER A.** A long,
+multi-part day driven by the external team (adversarial review mode). Records: `RH-ENDGAME.md`, `B2-THEOREM.md`,
 `B3-KREIN-STRUCTURE.md`, **`PAPER-A.md`** (the deliverable).
 
 - **RH end-game reconnection (`RH-ENDGAME.md`).** Candid reconnection to the actual goal: the 22 days give
@@ -821,7 +821,7 @@ multi-part day driven by the external team (hostile-referee mode). Records: `RH-
   reformulation (achievable, NOT a proof); **(B)** structural positivity $\mathcal T=A^*A$ (the only route to
   the sign; very low prob; never engaged).
 
-- **PATH (A) CLOSED (`B2-THEOREM.md`, then `PAPER-A.md`).** Per user instruction ("cerrá A del todo, no
+- **PATH (A) CLOSED (`B2-THEOREM.md`, then `PAPER-A.md`).** Decision recorded ("cerrá A del todo, no
   termines hasta cerrarlo, así lo valido"). Complete B-2 theorem: **Lemmas A (IBP $E_g=-\int g'S$), B
   ($E_g=O(\mathfrak t_+)$ via Bernstein+Selberg — note $O$ not $o$), C (vertical $\|F(\cdot+ib)\|^2\le e^d\|F\|^2$,
   exact), D (off-line $\le C_d\rho\|F\|^2$, Plancherel–Pólya with clustering) — ALL UNCONDITIONAL.** Residual
@@ -855,7 +855,7 @@ multi-part day driven by the external team (hostile-referee mode). Records: `RH-
   archimedean $K$ is the useful one *because* it's zero-independent.
 
 - **PAPER-A.md written** (the deliverable): Theorems A/B/C, all lemmas/equations, prior-work §9, candid scope
-  §10. Author David Alejandro Trejo Pizzo.
+  §10.
 
 > **Day-23 headline.** Reconnected to RH and **closed path (A)**: a faithful, RH-independent, semibounded
 > realization $\mathcal T$ of the Weil form (Theorem A, modulo (H)≪RH), with the exact Kreĭn structure
@@ -868,7 +868,7 @@ multi-part day driven by the external team (hostile-referee mode). Records: `RH-
 > paper / pull the CC + 2301.00421 PDFs for surgical citation, or (ii) the genuine RH attack (B) — structural
 > positivity — with eyes open about the odds.
 
-**2026-06-03 — Day 23 (cont.). PAPER P8 written + compiled; ROUTE-B plan opened.** Per user: write the
+**Day 23 (cont.). PAPER P8 written + compiled; ROUTE-B plan opened.** Next: write the
 closing paper, compile it, open the route-B plan.
 - **Read both reference PDFs** (`papers-referencia/2006.13771v1.pdf` CC, `2301.00421v3.pdf` Suzuki).
   Confirmed: CC's positive object = **compression of the scaling action onto Sonin's space**
@@ -893,7 +893,7 @@ closing paper, compile it, open the route-B plan.
 > zero-independent — all P8 Thm C leaves open) is now a written plan, with the candid expectation that its
 > deliverable is most likely a further no-go or an identification with Connes/de Branges, not RH itself.
 
-**2026-06-03 — Day 23 (cont.). ROUTE B, MILESTONE M1 (B3.1) — Connes–Consani comparison + structural
+— Day 23 (cont.). ROUTE B, MILESTONE M1 (B3.1) — Connes–Consani comparison + structural
 theorem.** Advisor (endorsing the plan, max effort, panel-shared) sharpened M1: *is the Connes residual the
 P8 indefinite part in another basis?* Read CC §§0–6 (eqs 7–14, Thms 1/3/6.11). Record:
 `phase-5-structural/B3.1-connes-comparison.md`.
@@ -923,7 +923,7 @@ P8 indefinite part in another basis?* Read CC §§0–6 (eqs 7–14, Thms 1/3/6.
 > manifest square on both sides; the whole remaining problem is **non-negativity of the semi-local Connes
 > residual**. Next: M2 (de Branges structure functions, B3.2) and M3 (semi-local residual / $PW_d$-Slepian, B2).
 
-**2026-06-03 — Day 23 (cont.). M1 CORRECTED (panel review) + M2 (B3.2) + M3 (B2) done in parallel.**
+**Day 23 (cont.). M1 CORRECTED (panel review) + M2 (B3.2) + M3 (B2) done in parallel.**
 - **M1 corrections (advisor, fair).** Downgraded two over-claims in `B3.1-connes-comparison.md`: "no
   constructive equivalence" → **Prop B3.1.3 "no natural zero-independent unitary identification"** (defensible
   scope); "the same wall" → **"the same Kreĭn positivity template"**. Foregrounded the strategic corollary
@@ -955,7 +955,7 @@ P8 indefinite part in another basis?* Read CC §§0–6 (eqs 7–14, Thms 1/3/6.
 > sign lesson). The sign, if anywhere, is in **cross-place semi-local cancellation** (Connes' geometric
 > program). **Rosetta stone assembled; no step past the sign; the frontier is precisely named.**
 
-**2026-06-03 — Day 23 (cont.). M1/M2 editorial fixes + CREATIVE FRONTIER PROGRAM opened.** Advisor (panel
+**Day 23 (cont.). M1/M2 editorial fixes + CREATIVE FRONTIER PROGRAM opened.** Advisor (panel
 review) flagged two editorial points, both applied: (1) M1 — qualified "$K_{P8}=0\iff$RH" with *"within the
 P8 realization of §§6–7"* (not an absolute statement about any RH-operator); (2) M2 — downgraded Obs B3.2.1
 to a *"heuristic structural correspondence / organizational insight"* (not a theorem; rests on $H_+\cong\mathcal H(E_\xi)$
@@ -978,7 +978,7 @@ finding (**Connes ↔ P7 localized, NOT P8 global**) as the genuinely new observ
 > below 1 for $\zeta$?* First experiment (M4) reads spectral flow + RH-true/false discriminant + GUE
 > sine-kernel simultaneously. North star: the global adèle-class square (GNS). Eyes open: structure, not RH.
 
-**2026-06-03 — Day 23 (cont.). M5 — PURE-THEORY CLASSIFICATION PROGRAM (panel reframe + tautology resolved).**
+**Day 23 (cont.). M5 — PURE-THEORY CLASSIFICATION PROGRAM (panel reframe + tautology resolved).**
 Panel endorsed δ but reframed the declared goal to **classification/anatomy of L-functions, not RH**, and made
 the **tautology test mandatory and first**: maybe $I(L)=f(\text{nearest-zero distance})$, tautological. Record:
 `phase-5-structural/M5-classification-pure-theory.md`. Cover question: *"Is there an operator-theoretic
@@ -1011,9 +1011,9 @@ genuinely arithmetic?"*
 > family (D2 = the anti-tautology witness) as falsifying evidence. **The program now has a provable spine and
 > a declared, RH-independent goal.** Next: T1 (analyticity + separation witness) and T2 (transversality).
 
-**2026-06-03 — Day 23 (cont.). FOUNDATION CORRECTION + PROOFS of T1, T2, analytic D2.** Record:
+**Day 23 (cont.). FOUNDATION CORRECTION + PROOFS of T1, T2, analytic D2.** Record:
 `phase-5-structural/M5-T1-T2-proofs.md` (+ correction note in M5).
-- **Hostile-audit FOUNDATION CORRECTION (my error, fixed).** M5's "$K_{CC}(L)$ via CC eq.(14) with
+- **Audit FOUNDATION CORRECTION (my error, fixed).** M5's "$K_{CC}(L)$ via CC eq.(14) with
   $\lambda(n)\to a_n(L)$" **conflated** the prolate eigenvalues $\lambda(n)$ (Sonin geometry, L-independent)
   with L-coefficients. WRONG. The rigorous, in-hand object is **P7's localized arithmetic Weil-Gram
   $Q_{\mathrm{arith}}(L)$** (Euler+$\Gamma$+conductor), with $\lambda_{\min}(Q)<0\iff\|K\|>1$ (0.2). All T's
@@ -1044,7 +1044,7 @@ genuinely arithmetic?"*
 > $\nabla I\not\parallel\nabla d$).** Three modest but rigorous structural theorems, RH-independent. Next: run
 > numerical D2 (destroy test) with the P7 engine; if it survives, T3 ($R_p$-profile discriminant) then T4.
 
-**2026-06-03 — Day 23 (cont.). NUMERICAL D2 — ran it; one confirmation, two candid negatives, a redirection.**
+**Day 23 (cont.). NUMERICAL D2 — ran it; one confirmation, two candid negatives, a redirection.**
 Self-contained Gram (numpy+mpmath, NOT P7's validated engine). Code+results:
 `phase-5-structural/experiments/{d2_destroy_test.py, d2_gradient_check.py, M4-D2-results.md}`.
 - **Prop D2 (gradient) ✅ NUMERICALLY CONFIRMED** to rel-err $\sim10^{-7}$ (after fixing a bug — I had
@@ -1072,7 +1072,7 @@ Self-contained Gram (numpy+mpmath, NOT P7's validated engine). Code+results:
 > is the per-prime anatomy / gradient profile (T3), not the scalar.** Next: T3 ($R_p$-profile, ζ vs $L_{DH}$)
 > on P7's validated engine. One prediction confirmed, one invariant retired, the target sharpened.
 
-**2026-06-03 — Day 23 (cont.). T3 ANATOMY (analytic) — advisor's ordering: formalize T3 BEFORE building the
+— Day 23 (cont.). T3 ANATOMY (analytic) — advisor's ordering: formalize T3 BEFORE building the
 engine (so the engine measures the surviving object, not the retired scalar).** Record:
 `phase-5-structural/T3-anatomy.md`.
 - **T3.1 (anatomy identity) ✅** exact Rayleigh decomposition: $\lambda_{\min}=R_\infty(u_0)-\sum_p R_p(u_0)$,
@@ -1103,7 +1103,7 @@ engine (so the engine measures the surviving object, not the retired scalar).** 
 > forward target. Next (Ph2): Slepian re-derivation + the $R_p\leftrightarrow$ Euler-factor relation —
 > analytic, before any engine work.
 
-**2026-06-03 — Day 23 (cont.). PHASE 2 (analytic) — the anatomy vs the local Euler factor.** Advisor's steps
+**Day 23 (cont.). PHASE 2 (analytic) — the anatomy vs the local Euler factor.** Advisor's steps
 A/B/C; decisive question: *is $\{R_p\}$ new info or just $\{a_p\}$ re-packaged?* Record:
 `phase-5-structural/Phase2-Rp-Euler.md`.
 - **A (Slepian) ✅** anatomy is **subspace-intrinsic** (basis-free for fixed $\mathcal V$); Hermite vs Slepian
@@ -1128,9 +1128,9 @@ A/B/C; decisive question: *is $\{R_p\}$ new info or just $\{a_p\}$ re-packaged?*
 > window**, and decisively **factorizability $\equiv$ Euler product** (ζ factors, $L_{DH}$ doesn't = the
 > discriminant). Plus a **stability theorem** ($e^{-\alpha(\log P)^2}$) and the **Slepian flat-envelope band
 > test** (decides the band, no engine). Invariant sharpened to the multiplicative structure. Next: T4 seed
-> (sign transparent in $\{R_p\}$?), analytic → Phase 3 (engine) → panel (only after Phase 3, per user).
+> (sign transparent in $\{R_p\}$?), analytic → Phase 3 (engine) → panel (only after Phase 3).
 
-**2026-06-03 — Day 23 (cont.). Phase-2 CORRECTIONS + T4-SEED (the survival test).** Advisor's audit, taken:
+**Day 23 (cont.). Phase-2 CORRECTIONS + T4-SEED (the survival test).** Advisor's audit, taken:
 (1) **"factorizability ≡ Euler product" downgraded** — only **Euler ⇒ factorization** is proved; the converse
 (factorization ⇒ Euler), needed for a discriminant, is now **Conjecture B2** (not a Phase-2 conclusion).
 (2) **Theorem C (stability) flagged as the autonomous candidate theorem** (survives even if RH classification
@@ -1162,7 +1162,7 @@ inequality/monotonicity is *natural* in $\{R_p\}$ and *opaque* in $\{a_p\}$. Rec
 > vs $\nu_{L_{DH}}$** + test Conjecture B2 (factorization ⇒ Euler). Theorem C (stability) = the autonomous
 > theorem to foreground. Panel after Phase 3.
 
-**2026-06-03 — Day 23 (cont.). PAPERS P9 + P10 written & compiled (advisor's two-paper split).** Isolate the
+**Day 23 (cont.). PAPERS P9 + P10 written & compiled (advisor's two-paper split).** Isolate the
 autonomous stability result (P9) from the speculative RH-classification (P10). Applied the T4-II correction
 (extremal reduction is the theorem; corner-positivity left open, not via RH⇒Q⪰0).
 - **P9 — `06-papers/P9-stable-arithmetic-fingerprints/` ({P9.md, main.tex, main.pdf 4pp, 0 errors}).** *Stable
@@ -1180,7 +1180,7 @@ autonomous stability result (P9) from the speculative RH-classification (P10). A
 > compiled clean (4pp each). T4-II corrected. **Next: Phase 3** — validated engine (engine-spec §3) to measure
 > the Carleson constant $\nu_\zeta$ vs $\nu_{L_{DH}}$, the Slepian band test, and Conjecture B2.
 
-**2026-06-03 — Day 23 (cont.). PHASE 3 (first pass) — one confirmation, one genuine blocker.** Record:
+**Day 23 (cont.). PHASE 3 (first pass) — one confirmation, one genuine blocker.** Record:
 `phase-5-structural/experiments/{phase3_carleson.py, Phase3-results.md}`. Self-contained Gram (NOT P7's
 validated engine).
 - **Carleson constant $C(L)=\lambda_{\max}(A_\infty^{-1/2}P A_\infty^{-1/2})$ ($C\le1\iff$ positivity) — BLOCKED.**
@@ -1205,10 +1205,10 @@ validated engine).
 > **Carleson-constant measurement is blocked** — my self-contained engine fails the ζ gate ($C\approx1.98$,
 > a likely factor-2 normalization; not fudged), and $L_{DH}$'s missing Euler product needs special handling.
 > Phase 3 done faithfully requires **P7's validated engine** (Colab/v8) or a validated engine-spec §3 build.
-> The analytic results stand; the numerical Carleson discriminant is the open engineering task. **Decision for
-> the user: get P7's engine code, or invest the validated reimplementation, before trusting Phase-3 numbers.**
+> The analytic results stand; the numerical Carleson discriminant is the open engineering task. **Decision:
+> get P7's engine code, or invest the validated reimplementation, before trusting Phase-3 numbers.**
 
-**2026-06-03 — Day 23 (cont.). PHASE 3 — VALIDATED COLAB ENGINE (zero side).** User asked for a runnable
+**Day 23 (cont.). PHASE 3 — VALIDATED COLAB ENGINE (zero side).** Needed: a runnable
 Colab script. Built one with **self-validating gates** (engine-spec §1 reference zeros, ζ floor, δ² law).
 File: `phase-5-structural/experiments/colab_phase3_engine.py`.
 - **Found the correct convention (2 bugs fixed):** (1) the Weil symmetrization must be
@@ -1233,12 +1233,12 @@ File: `phase-5-structural/experiments/colab_phase3_engine.py`.
 > **Phase-3 headline (RESOLVED for the zero side).** Built a **validated, self-checking Colab engine**: found
 > the correct Weil symmetrization (pair $z$ with $\bar z$) + window-locality; it reproduces engine-spec's ζ
 > floor and the **$\delta^2$ forced-negativity law (2.04 vs 2.03)**. Positivity is measured directly from the
-> zero side (no arithmetic side); the $L_{DH}$ κ-construction is fixed and self-validated. The user can run it
+> zero side (no arithmetic side); the $L_{DH}$ κ-construction is fixed and self-validated. It can be run
 > in Colab and get the ζ_δ curve (and, with DO_LDH=True, the $L_{DH}$ violation). The arithmetic-side Carleson
 > NUMBER remains uncalibrated (structural mismatch) and is candidly omitted — the positivity SIGN (=Carleson
 > $\le1$) is what the validated engine measures.
 
-**2026-06-03 — Day 23 (cont.). MOONSHOT PLAN — RH via Osterwalder–Schrader reflection positivity.** User:
+**Day 23 (cont.). MOONSHOT PLAN — RH via Osterwalder–Schrader reflection positivity.**
 "llegamos al muro, hay que pasarlo; armá un plan que nadie hizo." Record:
 `riemann-program/PLAN-RH-MOONSHOT-OS-reflection.md`.
 - **New insight:** the Kreĭn $J$ ($\rho\mapsto1-\bar\rho$) IS the functional-equation reflection
@@ -1264,7 +1264,7 @@ File: `phase-5-structural/experiments/colab_phase3_engine.py`.
 > program, instrument-guided by the validated engine. Hard core = S3 (adelic gluing). <1% for RH; the route is
 > new.
 
-**2026-06-03 — Day 24. PHASE 6 STARTED — `riemann-program/phase-6/`. Step S1 done (M-OS-1-S1-setup.md).**
+**Day 24. PHASE 6 STARTED — `riemann-program/phase-6-osterwalder-schrader-reflection/`. Step S1 done (M-OS-1-S1-setup.md).**
 - **S1.1 ✅ (load-bearing recasting):** Weil's criterion IS reflection positivity for $\Theta$ — **Weil's own
   involution $\tilde\psi(u)=\overline{\psi(-u)}$ IS the functional-equation reflection** ($u\mapsto-u$ =
   inversion = $s\leftrightarrow1-s$). $\langle\psi,\psi\rangle_W=W(\psi*\tilde\psi)\ge0\iff$RH. Verified vs the
@@ -1281,7 +1281,7 @@ File: `phase-5-structural/experiments/colab_phase3_engine.py`.
   (the δ² forced-negativity curve = failure of OS-RP off the time-zero slice) ⟹ every step falsifiable.
 - **Candid:** S1 = faithful recasting + scaffolding; CONTENT (proving OS-RP) is S2–S3. Next: S2.
 
-**2026-06-03 — Day 24. PHASE 6 STEP S2 — COMPUTED and REFUTED (candid no-go).** `phase-6/M-OS-2-S2-local-REFUTATION.md`.
+**Day 24. PHASE 6 STEP S2 — COMPUTED and REFUTED (candid no-go).** `phase-6-osterwalder-schrader-reflection/M-OS-2-S2-local-REFUTATION.md`.
 Attacked S2 (per-place reflection positivity = the heart of the Euler-lattice mechanism); the computation
 **kills the mechanism**.
 - **S2.1 (proved):** the local prime form is $\langle\psi,\psi\rangle_{W_p}=\int|\widehat\psi(r)|^2 G_p(r)\,dr$
@@ -1308,8 +1308,8 @@ Attacked S2 (per-place reflection positivity = the heart of the Euler-lattice me
 > needs an idea neither we nor the field has; the program's harvest is P9 (stability), the validated detector,
 > and the precise, now-even-sharper map of the wall (incl. why reflection positivity does not localize for ζ).
 
-**2026-06-03 — Day 24. PHASE 6 — the S2 refutation POINTS somewhere: prime incoherence vs the archimedean
-envelope (the large-values frontier, our ω-class turf).** `phase-6/S2-followup-incoherence.md`. The exact
+— Day 24. PHASE 6 — the S2 refutation POINTS somewhere: prime incoherence vs the archimedean
+envelope (the large-values frontier, our ω-class turf).** `phase-6-osterwalder-schrader-reflection/S2-followup-incoherence.md`. The exact
 $G_p$ from S2 gives the precise spectral form of RH.
 - **§1 rigorous reduction:** $\mathfrak t(\psi)=\int|\widehat\psi(r)|^2 d\mu$, $d\mu=\Omega_\infty(r)dr-(\sum_p G_p)_{\rm reg}dr$;
   **RH $\iff\Omega_\infty(r)\ge(\sum_p G_p)_{\rm reg}(r)\ \forall r$** = the **archimedean envelope dominates the
@@ -1335,8 +1335,8 @@ $G_p$ from S2 gives the precise spectral form of RH.
 > the interference spike). Next: **S2f-1** — deploy the ω-class machinery to bound the prime-comb spike vs the
 > archimedean envelope. Candid: the large-values frontier, not an obvious crossing, but the right one and ours.
 
-**2026-06-03 — Day 24. PHASE 6 — S2f-1 attempted; the follow-up reduction is FLAWED; candid meta-conclusion.**
-`phase-6/{S2-followup-incoherence.md (retraction header), S2f-PROGRESS-CANDID.md}`.
+**Day 24. PHASE 6 — S2f-1 attempted; the follow-up reduction is FLAWED; candid meta-conclusion.**
+`phase-6-osterwalder-schrader-reflection/{S2-followup-incoherence.md (retraction header), S2f-PROGRESS-CANDID.md}`.
 - **Caught: the S2-followup §1 reduction is WRONG.** Explicit formula:
   $\sum_\rho|\hat\varphi(\gamma_\rho)|^2=2|\hat\varphi(i/2)|^2+\frac1{2\pi}\int|\hat\varphi|^2[\Omega_\infty-\sum_pG_p]$.
   LHS discrete (zeros) ⟹ the comb $\sum_pG_p$ is **distributional**: $\Omega_\infty-\sum_pG_p=2\pi\sum_\rho\delta_{\gamma_\rho}-$pole.
@@ -1355,13 +1355,13 @@ $G_p$ from S2 gives the precise spectral form of RH.
 
 > **Day-24 candid headline.** Attacked the moonshot rigorously: **OS recasting correct, mechanism REFUTED
 > ($G_p$ indefinite), Hilbert–Pólya prize RETRACTED (oscillatory two-point fn), follow-up reduction FLAWED
-> (comb distributional). NO crossing.** Two flawed reductions caught in one session = the discipline working.
+> (comb distributional). NO crossing.** Two flawed reductions caught in one pass = the discipline working.
 > Truthful state: the sign needs an idea neither we nor the field has in 2026; we mapped *why* with unusual
 > precision. Durable: P9, the validated detector, the audited no-gos. Recommendation: consolidate; engage the
 > open core (Connes KMS / large values) only with eyes fully open ($<1\%$).
 
-**2026-06-03 — Day 24 (cont.). PHASE 7 — open core engaged (option 2); the incoherence lever REFUTED with numbers.**
-`phase-7/{P7-OPEN-CORE-carleson-saturation.md, experiments/carleson_band_engine.py}`.
+**Day 24 (cont.). PHASE 7 — open core engaged (option 2); the incoherence lever REFUTED with numbers.**
+`phase-7-weil-carleson-sine-kernel/{P7-OPEN-CORE-carleson-saturation.md, experiments/carleson_band_engine.py}`.
 - **Built the rigorous finite reformulation** (the *correct* replacement for the retracted distributional comb):
   for $f=\hat\varphi$ band-limited type $d$ in the log-prime variable, the prime sum truncates **exactly** to
   $n\le e^{2d}$, and $\mathrm{RH}\iff C(d,T_0):=\lambda_{\max}(P_F,A_\Phi)\le1$, threshold **intrinsic**
@@ -1386,8 +1386,8 @@ $G_p$ from S2 gives the precise spectral form of RH.
 > at the natural scale, the margin is archimedean (zero density), arithmetic incoherence buys **zero slack**.
 > A clean, durable **negative with numbers** (N3) + a new instrument. No crossing. Lever closed; pivoting.
 
-**2026-06-03 — Day 24 (cont.). PHASE 7b — second order: Weil–Carleson = sine-kernel/pair-correlation; bridge real, same wall.**
-`phase-7/{P7b-second-order-sinekernel-bridge.md, experiments/second_order_{sinekernel,offline}.py}`.
+**Day 24 (cont.). PHASE 7b — second order: Weil–Carleson = sine-kernel/pair-correlation; bridge real, same wall.**
+`phase-7-weil-carleson-sine-kernel/{P7b-second-order-sinekernel-bridge.md, experiments/second_order_{sinekernel,offline}.py}`.
 - **Bridge B1 (verified with real zeta zeros):** $A_\Phi-P_F=\sum_{\rho\in\text{win}}v_\rho v_\rho^\top$,
   $v_\rho[j]=S_j(\gamma_\rho)$ ⟹ **rank $=K$** (#zeros in window: measured 22 $O(1)$ eigs for $K{=}21$), and the
   $K$ active modes = spectrum of the band-limited reproducing-kernel Gram = the **sine kernel**
@@ -1403,15 +1403,15 @@ $G_p$ from S2 gives the precise spectral form of RH.
   **Reduces to the wall — fourth language.** The $\omega$-class machinery characterizes the fluctuation tail of
   real zeros; it does not supply the contraction.
 
-> **Day-24 cont. (2nd).** Pivoted to second order per the user. Found a genuinely beautiful **measured bridge**
+> **Day-24 cont. (2nd).** Pivoted to second order. Found a genuinely beautiful **measured bridge**
 > (Weil positivity's 2nd order = sine-kernel/pair-correlation; RH-stability margin = Lehmer-pair curvature) and a
 > working $\delta^2$ detector — but it **restates RH** (sine-Gram contraction = real zeros) and pair correlation
 > describes rather than forces. **Option 2's "ours" half (ω-class / large values / Carleson) is now exhausted in
 > BOTH orders (N3 + B1), both measured, both reducing to the self-referential wall.** Durable: N3, B1, the new
 > instrument. The only structurally-distinct untried core left is Connes KMS (not ours; <1%).
 
-**2026-06-03 — Day 24 (cont.). PHASE 7c — Connes core engaged (foreign terrain); SAME wall, multiplicatively dressed.**
-`phase-7/connes/{P7c-connes-core-same-wall.md, prolate_bridge.py}`.
+**Day 24 (cont.). PHASE 7c — Connes core engaged (foreign terrain); SAME wall, multiplicatively dressed.**
+`phase-7-weil-carleson-sine-kernel/connes/{P7c-connes-core-same-wall.md, prolate_bridge.py}`.
 - **Bridge established (ours → theirs):** our band-limited Weil–Carleson form **is** the Connes–Consani
   **prolate** compression — window half-width $W$, band $d$ ⟹ time-bandwidth $c=Wd$, dim $2c/\pi$. Computed
   $\lambda_n(c)$: $\approx2c/\pi$ modes $\approx1$, sharp drop at $n=2c/\pi$, transition width $\sim\log c$;
@@ -1436,8 +1436,8 @@ $G_p$ from S2 gives the precise spectral form of RH.
 > Thm C + B1). The candid verdict stands: the sign needs an idea neither we nor the field has in 2026 — and we
 > have now mapped *why* from every available direction.
 
-**2026-06-04 — Day 25. P11 consolidation + PHASE 8: a genuinely NEW path (de Bruijn–Newman heat flow).**
-`06-papers/P11-band-limited-weil-carleson/{main.tex(6pp,compiled),P11.md}`, `phase-8/{PLAN-RH-PHASE8-heat-flow.md,
+**Day 25. P11 consolidation + PHASE 8: a genuinely NEW path (de Bruijn–Newman heat flow).**
+`06-papers/P11-band-limited-weil-carleson/{main.tex(6pp,compiled),P11.md}`, `phase-8-heat-flow-monotonicity/{PLAN-RH-PHASE8-heat-flow.md,
 SEED-results-and-candid-caveat.md, experiments/heatflow_seed.py}`.
 - **P11 written & compiled:** the band-limited Weil–Carleson instrument $C(d,T_0)$, the two RH-independent
   theorems (N3 saturation, B1 sine-kernel 2nd order), the prolate/Connes bridge (N4), and the **five-language
@@ -1451,7 +1451,7 @@ SEED-results-and-candid-caveat.md, experiments/heatflow_seed.py}`.
   THEOREM (not RH); propagating it back to $t=0$ is governed by the **Coulomb-gas ODE**, NOT the explicit
   formula — so a dynamical/Lyapunov argument is not self-referential. The marginality $\Lambda=0$ = our measured
   $C\equiv1$ saturation. Synthesis: our detector measures $C(d,T_0;t)$ along the flow; B1's pair-correlation =
-  the criticality. OpenAI-style methodology (precise lemmas, verify-first, self-refute, decision gates A/B/C).
+  the criticality. a rigorous methodology (precise lemmas, verify-first, self-refute, decision gates A/B/C).
 - **Seed (Gate A) — mechanism real & measured; one guard-rail catch.** $C(t{=}0)=0.998\le1$ (marginal =
   $\Lambda{=}0$ shadow). Injected off-line pair $\delta_0{=}0.30\Rightarrow C{=}1.0023{>}1$ (detected); FORWARD
   flow **heals** it ($|\mathrm{Im}\,z|\,0.30\!\to\!0.269$, $C\to1.0014$). **Critical line = attractor of the
@@ -1468,8 +1468,8 @@ SEED-results-and-candid-caveat.md, experiments/heatflow_seed.py}`.
 > direction. **Gate B (the crux):** prove $\dot{\mathcal L}\le0$ to $t=0$ from the Coulomb ODE alone, uniformly
 > in height — or find it RH-equivalent (the sixth language). Odds <5%, eyes open, but it is NEW and ours.
 
-**2026-06-04 — Day 25 (cont.). GATE B resolved: clean Lyapunov theorem, but arithmetic-blind ⇒ N5 dynamical no-go.**
-`phase-8/{GATE-B-verdict-sixth-language.md, experiments/gateB_lyapunov.py}`.
+**Day 25 (cont.). GATE B resolved: clean Lyapunov theorem, but arithmetic-blind ⇒ N5 dynamical no-go.**
+`phase-8-heat-flow-monotonicity/{GATE-B-verdict-sixth-language.md, experiments/gateB_lyapunov.py}`.
 - **Derived + verified the theorem:** under the Coulomb flow, $\mathcal L=\sum(\mathrm{Im}\,z_j)^2$ obeys
   $\dot{\mathcal L}=-2\sum_{j\ne k}(y_j-y_k)^2/|z_j-z_k|^2\le0$ (symmetrize $\dot{\mathcal L}=2\sum y_j\mathrm{Im}\dot z_j$).
   Matches finite-diff to machine precision. Clean, unconditional, NEW — a strict Lyapunov function for the forward
@@ -1495,8 +1495,8 @@ SEED-results-and-candid-caveat.md, experiments/heatflow_seed.py}`.
 > and using it returns to the B1 pair-correlation wall. Not giving up = pushing the new idea all the way to where
 > it provably stops, and naming why. Durable adds: the Lyapunov theorem, the height bound, N5.
 
-**2026-06-04 — Day 25 (cont.). RT statistics-coupled: heat-flow path lands on the uniform UPPER pair-correlation.**
-`phase-8/{RT-coupled-verdict.md, experiments/rt_statistics_coupled.py}`.
+**Day 25 (cont.). RT statistics-coupled: heat-flow path lands on the uniform UPPER pair-correlation.**
+`phase-8-heat-flow-monotonicity/{RT-coupled-verdict.md, experiments/rt_statistics_coupled.py}`.
 - Engaged Rodgers–Tao's statistics-coupling with **real zeta zeros**. By Gate B a tight real pair of normalized
   gap $g$ backward-collides on $t$-scale $\sim g^2$, so $\Lambda$ is governed by the **closest pairs**. Measured
   min normalized gap shrinking with height: $0.291\,(T{\sim}310)\to0.221\,(1591)\to0.194\,(10005)$ — the Lehmer
@@ -1516,8 +1516,8 @@ SEED-results-and-candid-caveat.md, experiments/heatflow_seed.py}`.
 > class of methods, subsuming PT-symmetry/dissipative), and the sharply-named target. We did not give up; we pushed a
 > genuinely new path to its provable floor and named exactly what new mathematics a crossing requires.
 
-**2026-06-04 — Day 25 (final). Attacked the upper tail: $\Lambda=$ first backward collision; lands on GUE gap universality.**
-`phase-8/{UPPER-TAIL-verdict.md, experiments/upper_tail_backward.py}`.
+**Day 25 (final). Attacked the upper tail: $\Lambda=$ first backward collision; lands on GUE gap universality.**
+`phase-8-heat-flow-monotonicity/{UPPER-TAIL-verdict.md, experiments/upper_tail_backward.py}`.
 - **Self-correction (guard-rail on my own RT note):** the target is **extremal**, not an average — even ONE
   complex pair forces $\Lambda>0$; $\Lambda=\sup$ of backward-collision times. RH = worst pair has $t_c<0$,
   uniformly.
@@ -1531,7 +1531,7 @@ SEED-results-and-candid-caveat.md, experiments/heatflow_seed.py}`.
   GUE gap universality** of $\zeta$ zeros — open, RH-conditional (Montgomery range only). **The B1 wall, in its
   strongest quantitative extremal form.** No key, $<2\%$.
 
-> **Day-25 FINAL. Phase 8 fully mapped and closed.** Attacked the user's chosen target (upper tail) with real
+> **Day-25 FINAL. Phase 8 fully mapped and closed.** Attacked the chosen target (upper tail) with real
 > computation: got a verified mechanism, a pretty new observation (universal normalized collision margin), and the
 > sharpest possible statement — RH ⟸ unconditional GUE gap universality. **Every route now provably terminates at
 > the SAME irreducible arithmetic statement** (the unconditional pair-correlation/gap universality of the zeros):
@@ -1540,8 +1540,8 @@ SEED-results-and-candid-caveat.md, experiments/heatflow_seed.py}`.
 > Lyapunov theorem, height bound, N5, and the maximally-sharp target. A crossing needs new mathematics on
 > unconditional universality — which neither we nor the field has.
 
-**2026-06-04 — Day 26. P12 (Phase-8 consolidation) written & compiled; PHASE 9 program designed.**
-`06-papers/P12-heat-flow-lyapunov/{main.tex(4pp,compiled),P12.md}`, `phase-9/PLAN-RH-PHASE9-unconditional-universality.md`.
+**Day 26. P12 (Phase-8 consolidation) written & compiled; PHASE 9 program designed.**
+`06-papers/P12-heat-flow-lyapunov/{main.tex(4pp,compiled),P12.md}`, `phase-9-unconditional-universality/PLAN-RH-PHASE9-unconditional-universality.md`.
 - **P12 written & compiled:** the de Bruijn–Newman Lyapunov theorem (Thm 2.1 attractor; Cor 2.2 height bound), the
   dynamical no-go N5 (Thm 3.1, arithmetic-blind, subsumes PT-symmetry), the extremal reduction (Prop 4.1,
   $\Lambda=$first backward collision) and the universal normalized margin → target = unconditional GUE gap
@@ -1560,8 +1560,8 @@ SEED-results-and-candid-caveat.md, experiments/heatflow_seed.py}`.
 > problem demands. The one genuinely new move: escape N5 via a functional of $H_t$ (arithmetic-aware) not of its
 > zeros (blind). Banked: P1–P12, N1–N5, the Lyapunov theorem, the validated detector, the precisely-named target.
 
-**2026-06-04 — Day 26 (cont.). M9.1 resolved the spearhead: N6 — no arithmetic-aware monotone escape.**
-`phase-9/{M9.1-N6-spearhead-verdict.md, experiments/M9_1_spearhead.py}`.
+**Day 26 (cont.). M9.1 resolved the spearhead: N6 — no arithmetic-aware monotone escape.**
+`phase-9-unconditional-universality/{M9.1-N6-spearhead-verdict.md, experiments/M9_1_spearhead.py}`.
 - Tested the 3 exhaustive sources of arithmetic-awareness for a monotone $\mathcal F[H_t]$ (any functional of $H_t$
   reduces via Hadamard to zeros + trivial factor): (1) **generic** heat-flow energy — universal monotonicity,
   **blind** (verified: $E$ changes smoothly across on/off-line, not sign-keyed); (2) **archimedean** density —
@@ -1582,8 +1582,8 @@ SEED-results-and-candid-caveat.md, experiments/heatflow_seed.py}`.
 > crossing needs progress on extending the unconditional range of the zero statistics (a central open problem). Banked:
 > P1–P12, N1–N6, the Lyapunov theorem, the validated detector, the precisely-cornered target.
 
-**2026-06-04 — Day 26 (cont.). T9-A attacked head-on: the support barrier = short-interval prime variance; the WRONG-SIGN capstone.**
-`phase-9/{T9A-verdict-wrong-sign.md, experiments/T9A_montgomery_F.py}`.
+**Day 26 (cont.). T9-A attacked head-on: the support barrier = short-interval prime variance; the WRONG-SIGN capstone.**
+`phase-9-unconditional-universality/{T9A-verdict-wrong-sign.md, experiments/T9A_montgomery_F.py}`.
 - Computed Montgomery $F(\alpha,T)$ from 700 real zeros: rises through $\alpha<1$ (known, $\sim|\alpha|$), levels for
   $\alpha>1$ (conjectured $\sim1$, open). The $\alpha>1$ region = **prime pair correlation / variance of primes in
   short intervals** (Goldston–Montgomery) — famous open.
@@ -1604,8 +1604,8 @@ SEED-results-and-candid-caveat.md, experiments/heatflow_seed.py}`.
 > why each resists. Banked: P1–P12, N1–N6, Lyapunov theorem, validated detector, the cornered target, and the wrong-sign
 > capstone. A crossing needs an unconditional UPPER bound nobody has.
 
-**2026-06-04 — Day 26 (final). T9-cal: the calibration deliverable — an exchange rate support ↔ certified zeros.**
-`phase-9/{T9cal-DELIVERABLE-exchange-rate.md, experiments/T9cal_support_requirement.py}`.
+**Day 26 (final). T9-cal: the calibration deliverable — an exchange rate support ↔ certified zeros.**
+`phase-9-unconditional-universality/{T9cal-DELIVERABLE-exchange-rate.md, experiments/T9cal_support_requirement.py}`.
 - The program's candid FINITE output. Bridge (rigorous up to O(1)): detector at band $d$, height $T$ uses
   $F(\alpha)$ up to $\alpha=2d/\log T$ (N3); resolving a normalized gap $\beta$ needs $\alpha\asymp1/\beta$
   (Nyquist, B1); $\Lambda$ set by the tightest pair (P12). So $\alpha_{\rm req}(T)\asymp1/\beta_{\min}(T)$.
@@ -1626,8 +1626,8 @@ SEED-results-and-candid-caveat.md, experiments/heatflow_seed.py}`.
 > the exchange rate. No crossing — candidly, none is reachable without an unconditional upper bound the field lacks
 > — but the resistance of RH is now charted, priced, and explained with unusual completeness.
 
-**2026-06-04 — Day 27. MASTER CLOSING DOCUMENT + PHASE 10 (the cohomological turn) proposed.**
-`MASTER-CLOSING-the-wall-charted.md`, `phase-10/PHASE-10-NEW-MATHEMATICS-the-cohomological-turn.md`.
+**Day 27. MASTER CLOSING DOCUMENT + PHASE 10 (the cohomological turn) proposed.**
+`MASTER-CLOSING-the-wall-charted.md`, `phase-10-hodge-envelope-degeneration/PHASE-10-NEW-MATHEMATICS-the-cohomological-turn.md`.
 - **Master closing document** written: full synthesis — 3 arcs, 12 papers, the 6-language wall, the 6 no-gos
   (N1–N6), durable RH-independent results (P9, detector, Lyapunov), the cornered target (U), the exchange rate, the
   wrong-sign capstone. The definitive panel-facing record of the analytic arc.
@@ -1646,8 +1646,8 @@ SEED-results-and-candid-caveat.md, experiments/heatflow_seed.py}`.
 > capstone, as the Weil conjectures did. Our detector gives the primitive block of the intersection form explicitly —
 > a concrete finite first brick (M10.1) the abstract programs lack.
 
-**2026-06-04 — Day 27 (cont.). M10.1 — the Lorentzian envelope degenerates: the cohomological face of the marginality.**
-`phase-10/{M10.1-verdict-degenerate-hodge.md, experiments/M10_1_hodge_envelope.py}`.
+**Day 27 (cont.). M10.1 — the Lorentzian envelope degenerates: the cohomological face of the marginality.**
+`phase-10-hodge-envelope-degeneration/{M10.1-verdict-degenerate-hodge.md, experiments/M10_1_hodge_envelope.py}`.
 - Reconstructed the candidate intersection form: Weil–Carleson $\mathfrak t=A_\Phi-P_F$ (primitive part) + one ample
   (archimedean) direction. Grew band $d$ (= grew cohomology "genus" toward ζ) and tracked the **Hodge gap**
   $\lambda_{\min}(\mathfrak t)$ + signature of $I$.
@@ -1672,8 +1672,8 @@ SEED-results-and-candid-caveat.md, experiments/heatflow_seed.py}`.
 > Hodge index) with a measurable diagnostic. Candid: not a crossing, but the sharpest characterization yet of what must
 > be invented, and the first finding that is *about* the only capstone-escaping route.
 
-**2026-06-04 — Day 27 (cont.). M10.2 — the regularized Hodge gap SURVIVES (first non-trivially-realized positivity).**
-`phase-10/{M10.2-verdict-regularized-gap-survives.md, experiments/M10_2_regularized_gap.py}`.
+**Day 27 (cont.). M10.2 — the regularized Hodge gap SURVIVES (first non-trivially-realized positivity).**
+`phase-10-hodge-envelope-degeneration/{M10.2-verdict-regularized-gap-survives.md, experiments/M10_2_regularized_gap.py}`.
 - The bare-gap vanishing (M10.1) was carried by TRIVIAL null directions (test functions vanishing at all window
   zeros = interpolation = the trivial classes). The curve Hodge index is definite on the PRIMITIVE part = modulo
   trivial. So the **regularized Hodge gap** = smallest POSITIVE eigenvalue of $\mathfrak t$ = $\lambda_{\min}$ of
@@ -1696,8 +1696,8 @@ SEED-results-and-candid-caveat.md, experiments/heatflow_seed.py}`.
 > object for regularized-determinant machinery and the one form plausibly outside the wrong-sign capstone. Not a
 > crossing, but the most promising reformulation the program has produced for new machinery to engage.
 
-**2026-06-04 — Day 27 (cont.). M10.3 — the uniform frame bound is T-stable; the route lands on S(T) regularity.**
-`phase-10/{M10.3-verdict-uniform-frame-S(T).md, experiments/M10_3_uniform_frame.py}`.
+**Day 27 (cont.). M10.3 — the uniform frame bound is T-stable; the route lands on S(T) regularity.**
+`phase-10-hodge-envelope-degeneration/{M10.3-verdict-uniform-frame-S(T).md, experiments/M10_3_uniform_frame.py}`.
 - At FIXED sampling ratio ($K/M\approx0.8$, band $d\sim\tfrac12\log(T/2\pi)$), across $T{=}50\to3000$ (two orders of
   magnitude), the regularized gap $\lambda_{\min}(G)$ is **remarkably T-STABLE**: $0.284,0.289,0.246,0.292,0.204$.
   **First numerical evidence of a UNIFORM lower frame bound** — the regularized Hodge index could genuinely hold.
@@ -1718,8 +1718,8 @@ SEED-results-and-candid-caveat.md, experiments/heatflow_seed.py}`.
 > bound is T-stable in data. Not a crossing, but the first time the cornered target sits in a form with existing
 > two-sided unconditional tools.
 
-**2026-06-04 — Day 28. DEEP RUN (M=25, T≤10⁴, 10154 zeros) + M10.4 — Phase 10 closes; capstone holds even here.**
-`phase-10/{DEEPRUN-analysis-M10.1-M10.3.md, M10.4-verdict-route-priced-capstone-holds.md, deeprun_M10.1-M10.3.png,
+**Day 28. DEEP RUN (M=25, T≤10⁴, 10154 zeros) + M10.4 — Phase 10 closes; capstone holds even here.**
+`phase-10-hodge-envelope-degeneration/{DEEPRUN-analysis-M10.1-M10.3.md, M10.4-verdict-route-priced-capstone-holds.md, deeprun_M10.1-M10.3.png,
 experiments/{colab_phase10_M1_to_M3.py, make_deeprun_figure.py}}`.
 - **Deep run corrected M10.3's optimism (guard-rail via more numbers):** at $T{=}10^4$ the regularized gap DROPPED
   to $0.111$ (half the $\sim0.28$ plateau). Analysis: $\boxed{\lambda_{\min}(G)\approx\frac{\pi^2}{6}\beta_{\min}^2}$
@@ -1740,15 +1740,15 @@ experiments/{colab_phase10_M1_to_M3.py, make_deeprun_figure.py}}`.
   regularized-determinant-friendly), not a passage. Durable: the identity $\lambda_{\min}{=}\frac{\pi^2}{6}\beta_{\min}^2$,
   the four-way unification, the Riesz/$A_2$/$S(T)$ reformulation, and the capstone's robustness.
 
-> **Day-28. Phase 10 closed candidly.** The deep run (the user's 3.4 h Colab) corrected the optimism: the regularized
+> **Day-28. Phase 10 closed candidly.** The deep run (the 3.4 h Colab run) corrected the optimism: the regularized
 > Hodge gap is exactly $\frac{\pi^2}{6}\beta_{\min}^2$, so the cohomological route prices identically to T9-cal and
 > reduces to (U). The wrong-sign capstone holds even in the most favorable (frame/de Branges/determinantal) language —
 > the lower frame bound is an upper-clustering constraint. Every route, including the one built to escape the capstone,
 > terminates at (U). Banked: P1–P12, N1–N6, the capstone, the exchange rate, and now the Phase-10 identity +
 > reformulation + the capstone-robustness theorem.
 
-**2026-06-04 — Day 28 (cont.). PHASE 11 opened — the hyperbolicity / Jensen-polynomial route (a different MECHANISM).**
-`phase-11/{PLAN-RH-PHASE11-hyperbolicity-route.md, experiments/M11_1_jensen_hyperbolicity.py}`.
+**Day 28 (cont.). PHASE 11 opened — the hyperbolicity / Jensen-polynomial route (a different MECHANISM).**
+`phase-11-hyperbolicity-total-positivity/{PLAN-RH-PHASE11-hyperbolicity-route.md, experiments/M11_1_jensen_hyperbolicity.py}`.
 - **New path, distinct in KIND:** RH $\iff\Xi\in$ Laguerre–Pólya $\iff$ all Jensen polynomials $J^{d,n}$ of $\Xi$ are
   HYPERBOLIC (real-rooted). This is **real-rootedness, NOT a quadratic-form positivity** — proved in modern
   combinatorics by **interlacing families (Marcus–Spielman–Srivastava)** and **stability preservers
@@ -1770,8 +1770,8 @@ experiments/{colab_phase10_M1_to_M3.py, make_deeprun_figure.py}}`.
 > the kind of upper-root-location control the capstone said we need, with recent partial results (GORZ) and powerful
 > modern machinery (MSS, Borcea–Brändén). Grounded (M11.1). Next: M11.2, the interlacing-family structure.
 
-**2026-06-04 — Day 28 (cont.). M11.2 — interlacing holds (MSS precondition); the positivity is TOTAL positivity.**
-`phase-11/{M11.2-verdict-interlacing-total-positivity.md, experiments/M11_2_interlacing.py}`.
+**Day 28 (cont.). M11.2 — interlacing holds (MSS precondition); the positivity is TOTAL positivity.**
+`phase-11-hyperbolicity-total-positivity/{M11.2-verdict-interlacing-total-positivity.md, experiments/M11_2_interlacing.py}`.
 - **(A) Interlacing structure exists:** $J^{d,n}$ vs $J^{d,n+1}$ (shift) AND $J^{d,n}$ vs $J^{d+1,n}$ (degree)
   interlace for all tested $(d{=}3,4,5;\,n{=}0,2,4)$ — the **MSS largest-root precondition is met.**
 - **(B) Guard-rail correction:** first tested Hankel (moment) minors → mixed signs = WRONG object. Corrected: RH
@@ -1790,8 +1790,8 @@ experiments/{colab_phase10_M1_to_M3.py, make_deeprun_figure.py}}`.
 > capstone obstructs. The route's escape is the method (interlacing largest-root), not the object. Precondition met;
 > the decisive tests are M11.3 (arithmetic via the shift) and M11.5 (positivity-free?).
 
-**2026-06-04 — Day 28 (cont.). M11.3 — shift preserver is arithmetic-blind; the escape is the MSS averaging realization.**
-`phase-11/{M11.3-verdict-preserver-blind-MSS-pivot.md, experiments/M11_3_shift_preserver.py}`.
+**Day 28 (cont.). M11.3 — shift preserver is arithmetic-blind; the escape is the MSS averaging realization.**
+`phase-11-hyperbolicity-total-positivity/{M11.3-verdict-preserver-blind-MSS-pivot.md, experiments/M11_3_shift_preserver.py}`.
 - **Shift identified:** $\Xi=\int_0^\infty\Phi(u)\cos(tu)du$ (dBN kernel) ⟹ $b(k)=(-1)^k a(k)=m_{2k}/(2k)!$ (even
   moments of $\Phi$ = the ARITHMETIC). Shift $n\to n+1$ = $\Phi\to u^2\Phi$ = $\Xi\to-\Xi''$ = DIFFERENTIATION = a
   Borcea–Brändén stability preserver (preserves Laguerre–Pólya).
@@ -1812,8 +1812,8 @@ experiments/{colab_phase10_M1_to_M3.py, make_deeprun_figure.py}}`.
 > the MSS interlacing method (positivity-free real spectrum), arithmetic in the ensemble distribution. First route
 > whose escape mechanism is both new and not-yet-refuted. Next: M11.4, probe the random-matrix realization of $\Xi$.
 
-**2026-06-04 — Day 28 (cont.). M11.4–M11.5 — the decisive test: hyperbolicity IS a positivity; capstone holds. Phase 11 closes.**
-`phase-11/{M11.4-5-verdict-capstone-holds-richest-positivity.md, experiments/M11_4_5_hermite_form_capstone.py}`.
+**Day 28 (cont.). M11.4–M11.5 — the decisive test: hyperbolicity IS a positivity; capstone holds. Phase 11 closes.**
+`phase-11-hyperbolicity-total-positivity/{M11.4-5-verdict-capstone-holds-richest-positivity.md, experiments/M11_4_5_hermite_form_capstone.py}`.
 - **Decisive fact:** a degree-$d$ real polynomial has all real roots $\iff$ its **Hermite form** $H[i,j]=p_{i+j}$
   (Hankel of Newton power sums of roots) is **PSD**. So real-rootedness of each $J^{d,n}$ **IS a quadratic
   positivity.** Verified on $\Xi$ ($d\le4$ clean): $\min\mathrm{eig}(H)>0$ throughout ($+0.70,..,+0.047$). ($d=5$
@@ -1836,7 +1836,7 @@ experiments/{colab_phase10_M1_to_M3.py, make_deeprun_figure.py}}`.
 > capstone is, now, exceptionally robust. Banked: P1–P12, N1–N6, the capstone (8× confirmed), the exchange rate,
 > the Phase-10 + Phase-11 identities and reformulations.
 
-**2026-06-04 — Day 28 (final). CONSOLIDATION: Phases 10–11 into the master doc + map; P13 written & compiled.**
+**Day 28 (final). CONSOLIDATION: Phases 10–11 into the master doc + map; P13 written & compiled.**
 - **Master closing document** updated: Part III now the **EIGHT-language wall** (added 7 cohomological Hodge, 8
   hyperbolicity); capstone table (Part VII) + the two modern paradigms; new **Part VIII** (Phases 10–11 in full);
   Part IX verdict updated to thirteen papers / eight paradigms.
@@ -1846,8 +1846,8 @@ experiments/{colab_phase10_M1_to_M3.py, make_deeprun_figure.py}}`.
   Hermite-form capstone theorem, and the robustness-across-eight-paradigms theorem. Index updated P1→P13 (new
   "Arc D: modern paradigms"). Durable, RH-independent.
 
-**2026-06-04 — Day 28 (final). PHASE 12 proposed — the first NON-POSITIVITY path: log-correlated fields / multiplicative chaos.**
-`phase-12/PLAN-RH-PHASE12-log-correlated-upper-bounds.md`.
+**Day 28 (final). PHASE 12 proposed — the first NON-POSITIVITY path: log-correlated fields / multiplicative chaos.**
+`phase-12-meta-obstruction-moment-problem/PLAN-RH-PHASE12-log-correlated-upper-bounds.md`.
 - The capstone itself dictates the new path: a mechanism whose native output is an unconditional **UPPER** bound, not
   founded on a positivity. **The one such modern machinery connected to ζ:** log-correlated fields / multiplicative
   chaos, which produce upper bounds on extremes (max|ζ|~log log T: Arguin–Belius–Bourgade–Radziwiłł–Soundararajan,
@@ -1867,8 +1867,8 @@ experiments/{colab_phase10_M1_to_M3.py, make_deeprun_figure.py}}`.
 > positivity, and our own Phase-10 reformulation (RH = extremal $S(T)$ regularity) meets it, since $S(T)$ is
 > log-correlated. The first route the wrong-sign capstone does not, on its face, obstruct. Next: M12.1.
 
-**2026-06-05 — Day 29. PHASE 12 executed in full (M12.1–M12.5, autonomous): the capstone is ESCAPED; N7 found and BRIDGED; lands on large values (Arc A).**
-`phase-12/{M12-VERDICT-capstone-escaped-new-barrier.md, experiments/{M12_1_log_correlated_S.py, M12_2_4_dictionary_capstone.py, M12_5_derandomize.py}}`.
+**Day 29. PHASE 12 executed in full (M12.1–M12.5, autonomous): the capstone is ESCAPED; N7 found and BRIDGED; lands on large values (Arc A).**
+`phase-12-meta-obstruction-moment-problem/{M12-VERDICT-capstone-escaped-new-barrier.md, experiments/{M12_1_log_correlated_S.py, M12_2_4_dictionary_capstone.py, M12_5_derandomize.py}}`.
 - **M12.1 — $S(T)$ is log-correlated (data):** $S(T)=N(T)-1-\theta(T)/\pi$; covariance fits $-c\log\delta$ with
   $c=0.0465$ vs $1/(2\pi^2)=0.0507$ (8%, confirmed). Tightest gaps ($\beta\approx0.18$–$0.25$) sit at the steepest
   $S$ rises ($dS/dT\approx1.3$).
@@ -1899,8 +1899,8 @@ experiments/{colab_phase10_M1_to_M3.py, make_deeprun_figure.py}}`.
 > capstone nor the prob-det gap. For the first time the obstruction is the right one. Our ω-class assets (P2–P5) are
 > built for exactly this. Banked: P1–P13, N1–N7, the capstone (escaped), the derandomization bridge, the arc closure.
 
-**2026-06-05 — Day 29 (cont.). M12.6 — omega-class moment method + the Diophantine landing + the BAKER bridge.**
-`phase-12/experiments/M12_6_omega_moments_extreme.py`.
+**Day 29 (cont.). M12.6 — omega-class moment method + the Diophantine landing + the BAKER bridge.**
+`phase-12-meta-obstruction-moment-problem/experiments/M12_6_omega_moments_extreme.py`.
 - **Moment method (deterministic, upper, non-positivity) is SHARP in the accessible regime:** $\max|F|\le1.432$ vs
   actual $1.379$ (4%). The prime-sum moments are **sub-Gaussian** (ratios $0.95,0.87,0.76$, stable $X=3000\to2e5$)
   **because unique factorization forbids exact resonances $\sum\pm\log p_i=0$** (Q-independence) — so the
@@ -1923,8 +1923,8 @@ experiments/{colab_phase10_M1_to_M3.py, make_deeprun_figure.py}}`.
 > hard, but RIGHT problem (extreme large values / linear forms in logs), with active progress and our own ω-class
 > assets pointed at it. Banked: P1–P13, N1–N7, the capstone (escaped), the derandomization + Baker bridges.
 
-**2026-06-05 — Day 29 (final). M12.7 — Baker quantified (too weak) → additive energy = P5; Phase 12 consolidated.**
-`phase-12/experiments/M12_7_baker_additive_energy.py`; master doc Part IX + map Part 7.
+**Day 29 (final). M12.7 — Baker quantified (too weak) → additive energy = P5; Phase 12 consolidated.**
+`phase-12-meta-obstruction-moment-problem/experiments/M12_7_baker_additive_energy.py`; master doc Part IX + map Part 7.
 - **M12.7:** smallest 4-term near-resonance (primes ≤300): 223·269=59987 vs 239·251=59989, |log(pq/rs)|=3.3e-5.
   **Baker's lower bound is astronomically below it (underflows)** — Baker is the right mechanism (deterministic,
   upper, non-positivity, transcendence) but EXPONENTIALLY too weak; the threshold needs Lang–Waldschmidt/abc-strength
@@ -1946,8 +1946,8 @@ experiments/{colab_phase10_M1_to_M3.py, make_deeprun_figure.py}}`.
 > energy of primes), neither obstruction, and exactly Arc A where the program began. The next genuine research step
 > (M12.8) is the sharp high-order additive-energy bound with the ω-class machinery — the real open frontier.
 
-**2026-06-05 — Day 30. M12.8 — the chain reaches the FREEZING transition (multiplicative chaos of ζ): the live frontier.**
-`phase-12/{M12.8-verdict-freezing-live-frontier.md, experiments/M12_8_multiplicative_chaos_freezing.py}`.
+**Day 30. M12.8 — the chain reaches the FREEZING transition (multiplicative chaos of ζ): the live frontier.**
+`phase-12-meta-obstruction-moment-problem/{M12.8-verdict-freezing-live-frontier.md, experiments/M12_8_multiplicative_chaos_freezing.py}`.
 - The high-order additive energy = the moments of the **multiplicative chaos of ζ**: $G(t)=\sum_p\cos(t\log p)/\sqrt p\sim\log|\zeta|$,
   $M_\beta=\langle e^{2\beta G}\rangle$. Computed the normalized $m(\beta)=M_\beta/e^{2\beta^2\sigma^2}$ ($X{=}2e4$, $\sigma^2{=}1.28$):
   $m\approx1$ for $\beta<0.6$ (subcritical GMC, RIGOROUS Saksman–Webb), deviates below 1 past $\beta_c{\approx}1$
@@ -1969,8 +1969,8 @@ experiments/{colab_phase10_M1_to_M3.py, make_deeprun_figure.py}}`.
 > began. The next genuine step is the supercritical/freezing bound with the ω-classes. Banked: P1–P13, N1–N7, the two
 > obstructions, the mechanism-correct chain, the freezing landing.
 
-**2026-06-05 — Day 30 (cont.). M12.9 — supercritical = the moment problem; and the CANDID status of the chain.**
-`phase-12/{M12.9-verdict-moment-problem-candid-status.md, experiments/M12_9_divisor_moments_omega.py}`.
+**Day 30 (cont.). M12.9 — supercritical = the moment problem; and the CANDID status of the chain.**
+`phase-12-meta-obstruction-moment-problem/{M12.9-verdict-moment-problem-candid-status.md, experiments/M12_9_divisor_moments_omega.py}`.
 - **(1)** Leading chaos moment $(\log T)^{k^2}$ = the DIAGONAL of the divisor sum $\sum_{n\le N}d_k(n)^2/n\sim A_k(\log N)^{k^2}$
   — KNOWN; exponent $k^2$ = P5's ω-class moment-growth exponent (verified in trend; severe finite-N drift for high k).
   The freezing $\beta_c{=}1$ = the diagonal→off-diagonal transition; the off-diagonal (CFKRS constant; supercritical
@@ -1995,8 +1995,8 @@ experiments/{colab_phase10_M1_to_M3.py, make_deeprun_figure.py}}`.
 > different open problem) AND a rigorous closing of the N7 gap (extreme control ⟹ reality). Both genuinely open.
 > Banked: P1–P13, N1–N7, the two obstructions, the mechanism-correct (heuristic) chain, the freezing landing.
 
-**2026-06-05 — Day 30 (final). M12.10 — closing N7: the META-OBSTRUCTION (capstone and N7 are one gap).**
-`phase-12/M12.10-the-meta-obstruction.md`.
+**Day 30 (final). M12.10 — closing N7: the META-OBSTRUCTION (capstone and N7 are one gap).**
+`phase-12-meta-obstruction-moment-problem/M12.10-the-meta-obstruction.md`.
 - Attacked the N7 closure (force reality of zeros, deterministically, without a positivity) from every angle.
   **Enumerated every known "absence of zeros" mechanism:** (a) positivity (Weil/Hodge/3-4-1 zero-free/Selberg)
   — the capstone; (b) counting/density — reaches "few" not "none"; (c) finite computation — height T not all T;
@@ -2022,8 +2022,8 @@ experiments/{colab_phase10_M1_to_M3.py, make_deeprun_figure.py}}`.
 > heuristic chain to the live frontier, and the precise naming of the single missing idea. Banked: P1–P13, N1–N7,
 > the meta-obstruction, the complete map.
 
-**2026-06-05 — Day 31. Advisor corrections accepted + PHASE 13 (the third option): the ω-class structure of ζ's chaos (RH-independent).**
-`phase-13/{RESULT-omega-class-structure-of-chaos.md, experiments/{M13_1_omega_k2_structure.py, M13_2_fhk_from_freezing.py}}`;
+**Day 31. Advisor corrections accepted + PHASE 13 (the third option): the ω-class structure of ζ's chaos (RH-independent).**
+`phase-13-omega-class-multiplicative-chaos/{RESULT-omega-class-structure-of-chaos.md, experiments/{M13_1_omega_k2_structure.py, M13_2_fhk_from_freezing.py}}`;
 M12.10 corrected.
 - **M12.10 DOWNGRADED (advisor, accepted):** "capstone and N7 are ONE meta-obstruction" → a real recurring TENSION,
   not a proven identity; "every future proof must invent a new theorem" → a methodological HYPOTHESIS, not a result
@@ -2049,8 +2049,8 @@ M12.10 corrected.
 > F_1$) remain the hard frontiers, untouched. Next: M13.3 (the $-\tfrac34\log\log\log T$ subleading term from the ω
 > large-deviation saddle) + P14 write-up.
 
-**2026-06-05 — Day 31 (cont.). N7-closure attempt (Littlewood) + M13.3 (FHK both terms from the ω-BRW).**
-`phase-12/M12.11-N7-closure-attempt-littlewood.md`, `phase-13/experiments/M13_3_brw_subleading.py`.
+**Day 31 (cont.). N7-closure attempt (Littlewood) + M13.3 (FHK both terms from the ω-BRW).**
+`phase-12-meta-obstruction-moment-problem/M12.11-N7-closure-attempt-littlewood.md`, `phase-13-omega-class-multiplicative-chaos/experiments/M13_3_brw_subleading.py`.
 - **N7 closure attempted in full (the goal is RH):** Littlewood's lemma — the EXACT deterministic identity
   $\sum_{\beta>\sigma_0}(\beta-\sigma_0)=\frac1{2\pi}\int_0^T\log|\zeta(\sigma_0+it)|dt+O(\log T)$ — is the right
   classical bridge (large-value quantity ↔ off-line zeros). **Outcome: gives DENSITY (few), not ABSENCE (none)**:
@@ -2071,7 +2071,7 @@ M12.10 corrected.
 > Bramson $-\tfrac34\log\log\log T$) emerge from it — a clean, RH-independent structural explanation through the
 > program's own Arc-A machinery. P14 candidate. The goal stays RH; the new math (Phase 13) is the credible by-product.
 
-**2026-06-05 — Day 31 (cont.). P14 written & compiled — the RH-independent new-math paper (the third option, full).**
+**Day 31 (cont.). P14 written & compiled — the RH-independent new-math paper (the third option, full).**
 `06-papers/P14-omega-hierarchy-branching-chaos/{main.tex (9pp, compiled), P14.md}`.
 - Wrote the full technical paper on the Phase-13 result: "The ω-Class Hierarchy of the Riemann Zeta Function:
   Per-Prime Weights, Multiplicative Chaos, and the Branching Structure of the Maximum." 9 dense pages, proper
@@ -2091,8 +2091,8 @@ M12.10 corrected.
 > established chaos/BRW picture for the maximum; nothing conditional on RH. This is the credible new-mathematics
 > by-product of the long RH push — intrinsic value, no overselling. The goal stays RH (N7/Littlewood target open).
 
-**2026-06-05 — Day 32. STRATEGIC (advisor directive): where the ω-structure touches the zeros — the explicit formula is ω-BLIND; the exact bridge is Motohashi / the spectral theory of moments.**
-`phase-14/STRATEGIC-where-omega-touches-the-zeros.md`.
+**Day 32. STRATEGIC (advisor directive): where the ω-structure touches the zeros — the explicit formula is ω-BLIND; the exact bridge is Motohashi / the spectral theory of moments.**
+`phase-14-off-diagonal-anchor-asymmetry/STRATEGIC-where-omega-touches-the-zeros.md`.
 - The advisor's directive supersedes the others: don't refine FHK; find where the ω-structure touches the zeros
   EXACTLY (a sum over zeros / explicit formula), not a statistic of values.
 - **NEGATIVE half (structural obstruction):** $\omega(p^a)=1$ on ALL prime powers = the support of $\Lambda$. So
@@ -2121,8 +2121,8 @@ M12.10 corrected.
 > the new apparatus and the $k\ge3$ moment wall in its spectral form. The ω-blindness is the sharp filter for future
 > steps. Banked: the structural location of where ω can and cannot meet the zeros.
 
-**2026-06-05 — Day 32 (cont.). M14.1 — the off-diagonal made concrete: additive divisor + Motohashi (the first exact ω↔zeros bridge).**
-`phase-14/{M14.1-verdict-additive-divisor-motohashi.md, experiments/M14_1_additive_divisor_motohashi.py}`.
+**Day 32 (cont.). M14.1 — the off-diagonal made concrete: additive divisor + Motohashi (the first exact ω↔zeros bridge).**
+`phase-14-off-diagonal-anchor-asymmetry/{M14.1-verdict-additive-divisor-motohashi.md, experiments/M14_1_additive_divisor_motohashi.py}`.
 - Per the advisor's binary decision (abandon FHK; the exact ω↔zeros bridge is the off-diagonal / Motohashi), took
   the first concrete step. **Object:** $D(x,h)=\sum_{n\le x}d(n)d(n+h)$ (the 4th-moment off-diagonal),
   $d=2^\omega$. **Confirmed** $D(x,h)\sim\tfrac6{\pi^2}\sigma_{-1}(h)x(\log x)^2$ (ratio tracks $\tfrac6{\pi^2}\sigma_{-1}(h)$:
@@ -2147,8 +2147,8 @@ M12.10 corrected.
 > weight produce a controllable spectral feature? That is the first ω-sensitive, exact, zeros-facing question — the
 > next step on the only RH-directed line.
 
-**2026-06-05 — Day 32 (cont.). M14.2 — the binary question answered: z^omega is a NON-TRIVIAL spectral modification.**
-`phase-14/{M14.2-verdict-nontrivial-spectral-modification.md, experiments/M14_2_spectral_modification.py}`.
+**Day 32 (cont.). M14.2 — the binary question answered: z^omega is a NON-TRIVIAL spectral modification.**
+`phase-14-off-diagonal-anchor-asymmetry/{M14.2-verdict-nontrivial-spectral-modification.md, experiments/M14_2_spectral_modification.py}`.
 - Formulated from the SPECTRAL side (advisor's strict condition). The input a(n)=z^{omega(n)}d(n) to the
   Motohashi/Kuznetsov machine has local factor [1+2(z-1)x+(1-z)x^2]/(1-x)^2, so
   **sum a(n)/n^s = zeta(s)^2 G_z(s)**, G_z(s)=prod_p[1+2(z-1)p^-s+(1-z)p^-2s] ~ zeta^{2(z-1)} H_z, pole order 2z.
@@ -2170,8 +2170,8 @@ M12.10 corrected.
 > decisive M14.3: does G_z merely shift the Eisenstein zeta-part, or suppress/band-localize the cuspidal Maass
 > spectrum into a NEW upper bound on the zeros? That is the first genuinely new, zeros-facing, spectral question.
 
-**2026-06-05 — Day 32 (final). M14.3 — BINARY VERDICT: the ω-weight is spectrally SELF-REFERENTIAL. The ω→zeros line is CLOSED.**
-`phase-14/{M14.3-VERDICT-self-referential-close-the-line.md, experiments/M14_3_self_referential_test.py}`.
+**Day 32 (final). M14.3 — BINARY VERDICT: the ω-weight is spectrally SELF-REFERENTIAL. The ω→zeros line is CLOSED.**
+`phase-14-off-diagonal-anchor-asymmetry/{M14.3-VERDICT-self-referential-close-the-line.md, experiments/M14_3_self_referential_test.py}`.
 - The audit demanded one of two sentences. **PROVEN:** $G_z(s)=\prod_p(1-\alpha p^{-s})(1-\beta p^{-s})$ has CONSTANT
   Satake parameters ($\alpha+\beta=2(1-z)$, $\alpha\beta=1-z$, independent of $p$) ⟹ ζ-ISOBARIC:
   $G_z(s)=\prod_{N\ge1}\zeta(Ns)^{c_N}$, $c_N=-\tfrac1N\sum_{k|N}(\alpha^k+\beta^k)\mu(N/k)$ ($c_1=2(z-1)$, $c_2=-2z(z-1)$,…).
@@ -2195,8 +2195,8 @@ M12.10 corrected.
 > ω-direction cannot reach the zeros. The RH frontier returns to Littlewood/Motohashi (density, the $O(1)$ wall),
 > with the candid knowledge that the ω-structure does not help. P14 (RH-independent) stands on its own.
 
-**2026-06-05 — Day 33. N8 — the density→absence gap characterized: the square-root cancellation barrier (= the capstone).**
-`phase-14/N8-the-density-to-absence-gap.md`.
+**Day 33. N8 — the density→absence gap characterized: the square-root cancellation barrier (= the capstone).**
+`phase-14-off-diagonal-anchor-asymmetry/N8-the-density-to-absence-gap.md`.
 - Per the audit (two distinct exact-zeros theories hit the same wall ⟹ study the wall): characterized the precise
   logical ingredient missing to pass from density to absence — NOT a technique, a characterization.
 - **The exact zeros-facing tools all reduce to a CANCELLATION estimate** (explicit formula = prime sum; Littlewood =
@@ -2222,8 +2222,8 @@ M12.10 corrected.
 > none crosses. The candid frontier, precisely named: an unconditional square-root/upper bound for the prime sums,
 > uniform = RH, with no current mechanism providing an unconditional handle.
 
-**2026-06-05 — Day 33 (cont.). AUDIT of the P7→T2→D2→T3→T4 structural line: it collapses to the wall (positivity side).**
-`phase-14/AUDIT-P7-structural-line-collapse.md`. Per the audit: the only branch possibly not yet forced to collapse
+**Day 33 (cont.). AUDIT of the P7→T2→D2→T3→T4 structural line: it collapses to the wall (positivity side).**
+`phase-14-off-diagonal-anchor-asymmetry/AUDIT-P7-structural-line-collapse.md`. Per the audit: the only branch possibly not yet forced to collapse
 is the original structural/arithmetic-Weil-form line. Audited object by object — is anything NOT reducible to {prime
 sum, ζ-power, value-statistic, known spectral identity}?
 - **The line IS the positivity** ($\lambda_{\min}(Q)\ge0$) — the one NONLINEAR, individual-resolving, absence-CAPABLE
@@ -2250,8 +2250,8 @@ sum, ζ-power, value-statistic, known spectral identity}?
 > now audited to the same wall. The single un-reduced object (B2) is RH-independent. There is no remaining un-collapsed
 > RH-directed line; the frontier is the square-root/upper-cancellation barrier itself.
 
-**2026-06-04 — Day 34. BREAK N8: absence WITHOUT square-root cancellation exists. N8 was a SYMPTOM. The anchor asymmetry.**
-`phase-14/BREAK-N8-the-anchor-asymmetry.md`. The audit attacked the strongest step: "raíz-cuadrada es RH-equivalente ⟹
+**Day 34. BREAK N8: absence WITHOUT square-root cancellation exists. N8 was a SYMPTOM. The anchor asymmetry.**
+`phase-14-off-diagonal-anchor-asymmetry/BREAK-N8-the-anchor-asymmetry.md`. The audit attacked the strongest step: "raíz-cuadrada es RH-equivalente ⟹
 no hay ingrediente más elemental." Goal: not prove RH — BREAK N8. Binary question: ¿existe formulación exacta que fuerce
 ausencia SIN cancelación raíz-cuadrada?
 - **YES — COUNTEREXAMPLE: de la Vallée Poussin** ζ(1+it)≠0 (exact absence). Proof = positivity 3+4cosθ+cos2θ=2(1+cosθ)²≥0
@@ -2280,8 +2280,8 @@ ausencia SIN cancelación raíz-cuadrada?
 > chain did not collapse. The frontier is no longer "square-root is inevitable"; it is "an anchored route would bypass it,
 > and whether the anchor exists is open."
 
-**2026-06-04 — Day 35. The ANCHOR FRAMEWORK: anchor = Landau singularity (ζ-free). A classification of zero-absence mechanisms.**
-`phase-14/ANCHOR-framework-a-classification-of-zero-absence.md`. The audit's decisive test: define "anchor" WITHOUT
+**Day 35. The ANCHOR FRAMEWORK: anchor = Landau singularity (ζ-free). A classification of zero-absence mechanisms.**
+`phase-14-off-diagonal-anchor-asymmetry/ANCHOR-framework-a-classification-of-zero-absence.md`. The audit's decisive test: define "anchor" WITHOUT
 ζ/poles/Hilbert–Pólya/Weil/RH — if yes, a new object; if no, only a pattern.
 - **ANSWER: YES. Anchor = a LANDAU SINGULARITY** — the forced real boundary singularity of the transform of a POSITIVE
   (non-negative-coefficient) measure (Landau 1905). No ζ, no "pole," no HP/Weil/RH in the definition. The pole of ζ at
@@ -2319,8 +2319,8 @@ ausencia SIN cancelación raíz-cuadrada?
 > positive structure forced-singular at σ=1/2. Candidly flagged: may be RH-equivalent, ACC is conjectural — but it is the
 > one RH-directed direction the audits did not collapse, and it is a construction problem, not a cancellation one.
 
-**2026-06-04 — Day 36. STAGES 1 & 2: the Landau anchor tested against the one PROVEN RH. Verdict: it COLLAPSES, informatively.**
-`phase-14/STAGE1-2-anchor-vs-definiteness-the-verdict.md`. The audit ran both stages to settle the bifurcation: is the
+**Day 36. STAGES 1 & 2: the Landau anchor tested against the one PROVEN RH. Verdict: it COLLAPSES, informatively.**
+`phase-14-off-diagonal-anchor-asymmetry/STAGE1-2-anchor-vs-definiteness-the-verdict.md`. The audit ran both stages to settle the bifurcation: is the
 anchor a NEW object or a renaming? The named danger — the function-field anchor is "just the trivial cohomology class" —
 MATERIALIZED.
 - **STAGE 1 (object exists ζ-free, but ceiling = edge):** Theorem A — ν≥0, abscissa σ_a, log F=∫e^{-su}dν, pole order ρ at
@@ -2354,7 +2354,7 @@ MATERIALIZED.
 > HODGE INDEX THEOREM ON AN ARITHMETIC SURFACE for Spec(ℤ) — the anchor is present, the surface is absent. The candid
 > bifurcation the audit demanded is settled: anchor = renaming (edge); the real object = the missing arithmetic geometry.
 
-**2026-06-05 — Day 37. P15 (paper packaging the meta-result) + OPTION (b) attacked to a computation.**
+**Day 37. P15 (paper packaging the meta-result) + OPTION (b) attacked to a computation.**
 - **P15** (`06-papers/P15-why-rh-resists/`, compiled 4pp): packages the strategy map as a conditional "why RH resists":
   the classifier D0 (I1∧I2a∧I2b∧I3∧I4, three-valued), the FINITE-TO-FULL gap theorem (TP/Pólya–Schoenberg:
   RH⟺Φ is a Pólya frequency function⟺[Φ(x_i−x_j)] totally positive; every finite TP order unconditional, TP_∞=RH;
@@ -2366,7 +2366,7 @@ MATERIALIZED.
   eigenvalues. Reduced κ<∞ to RFB_X: prime tail 𝔭_{>X} relatively form-bounded by 𝔞 with const <1 ⟹ finite-rank head
   ⟹ κ<∞. RFB_X hard for one reason: prime energy Σ_{n≤N}Λ(n)/√n ~ 2√N vs archimedean ~ log N (√N vs log N = the same
   wall as Day-0 KLMN / N3 / square-root barrier, now unified).
-- **EXPERIMENT** (`phase-14/experiments/a_tail_relative_form_bound.py`, ran): computed λ_max(𝔭_{>X},𝔞) vs head-cut X,
+- **EXPERIMENT** (`phase-14-off-diagonal-anchor-asymmetry/experiments/a_tail_relative_form_bound.py`, ran): computed λ_max(𝔭_{>X},𝔞) vs head-cut X,
   bands d=4,5, T0=1000. RESULTS: (1) full form λ_max=1.00000 exactly (reproduces N3 saturation, validates engine);
   (2) subordination cutoff X*(d)≈e^{2d}/10 — in log-scale a FIXED-WIDTH (~2.3) top slice that SLIDES to ∞ with d;
   for fixed X, λ_max INCREASES with d and recrosses above 1. VERDICT: RFB_X fails for every fixed X as d→∞;
@@ -2382,8 +2382,8 @@ MATERIALIZED.
 > was not accepted but crossed *to its quantitative core*: a=1 is scale-invariant, and the only surviving door is
 > attained-vs-approached saturation (κ<∞ vs κ=∞) in the genuine form.
 
-**2026-06-05 — Day 37 (cont.). OPTION (b) sub-fork DECIDED: APPROACHED (infinite-dimensional criticality).**
-`phase-14/experiments/near_critical_multiplicity.py`. Measured near-critical multiplicity of the full pencil
+**Day 37 (cont.). OPTION (b) sub-fork DECIDED: APPROACHED (infinite-dimensional criticality).**
+`phase-14-off-diagonal-anchor-asymmetry/experiments/near_critical_multiplicity.py`. Measured near-critical multiplicity of the full pencil
 (P_F,A_Phi) vs band d (T0=1000): #{λ>0.99} = 3,11,19,27 for d=3,4,5,6 — LINEAR growth (~8d−21); gap λmax−λ2 ≈ 0;
 critical fraction 10%→55%. VERDICT: the saturation λmax=1 is APPROACHED by a growing-dimensional near-null space
 (𝔱=𝔞−𝔭≈0 on a positive, growing fraction of directions) — the infinite-dim analogue of "Λ=0 approached not
@@ -2394,11 +2394,11 @@ coercivity of the localized Weil form on an INFINITE-dimensional near-null space
 over-sampling), now with the structural fact that there is NO finite-defect shortcut. Off-line-zero count is not
 finite-rank-detectable. Files: OPTION-B-VERDICT-approached-infinite-defect.md.
 
-**2026-06-05 — Day 37 (cont. 2). P16 written/compiled + CROSS-SCALE door probed (option b fully closed).**
+**Day 37 (cont. 2). P16 written/compiled + CROSS-SCALE door probed (option b fully closed).**
 - **P16** (`06-papers/P16-pontryagin-index-finite-defect/`, compiled 3pp): packages option (b) — off-line zeros as
   Pontryagin index κ; reduction κ<∞ ⟸ RFB_X (Prop); Computation I (X*(d)~e^{2d}/10, finite-rank head fails);
   Computation II (near-critical multiplicity 3,11,19,27 linear, finite defect fails). No RH claim.
-- **CROSS-SCALE door** (`phase-14/experiments/cross_scale_cancellation.py`): on the saturating direction g*, measured
+- **CROSS-SCALE door** (`phase-14-off-diagonal-anchor-asymmetry/experiments/cross_scale_cancellation.py`): on the saturating direction g*, measured
   R(Y)=𝔭_{≤Y}[g*]/𝔞[g*]→1 and |𝔭_{≤Y}|/√Y. RESULTS: (1) |𝔭|/√Y DECAYS to ~0 (√N barrier OVERCOME pointwise — the
   prime form on the optimal direction is square-root-cancelled, bounded while √Y→e^d); (2) octave increments ΔR are
   O(0.1), do NOT decay, and ALTERNATE SIGN at the top (d=5: overshoot 1.064 then −0.042,−0.022→1.000; d=6: several
@@ -2417,7 +2417,7 @@ finite-rank-detectable. Files: OPTION-B-VERDICT-approached-infinite-defect.md.
 > boundary-exact, sign-alternating, infinite-dimensional, self-similar marginality of the Weil form (octave-resolved
 > N3). The residue is a sharply-posed PRIME-SIDE cancellation law (the I2b object), not a statement about zeros.
 
-**2026-06-05 — Day 38. The prime-side residue formulated precisely; non-circularity decided.**
+**Day 38. The prime-side residue formulated precisely; non-circularity decided.**
 `RESIDUE-precise-and-noncircular-attack.md`. Formulated the cross-scale residue as a clean prime-side proposition
 and checked RH-circularity.
 - **Residue (precise):** (LB) semiboundedness 𝔱≥−C‖g‖² ⟺ V(d,T)≪dN uniformly, where V(d,T)=4dN (diagonal) +
@@ -2444,7 +2444,7 @@ and checked RH-circularity.
 > localized by the octave view to the largest primes. Strictly weaker than RH; a recognized hard frontier, not a
 > restatement of RH.
 
-**2026-06-05 — Day 39. Attack on the uniform form factor (the non-circular sub-RH residue).**
+**Day 39. Attack on the uniform form factor (the non-circular sub-RH residue).**
 `ATTACK-uniform-form-factor.md`. Pushed the target V(d,T)≪dN rigorously.
 - **EXACT IDENTITY:** V(d,T)=∫_{-2d}^{2d}|S(ξ)|²dξ ≥ 0, S(ξ)=Σ_γ e^{iγξ} — V is a manifest band-limited square (the
   L² energy of the zero exponential sum). Diagonal = exactly 4dN; positivity is the unconditional engine (gives
@@ -2470,8 +2470,8 @@ and checked RH-circularity.
 > below RH, localized to the largest band primes. The program's central (LB), for the first time, has an
 > unconditional version with an explicit, non-circular, recognized-frontier residue.
 
-**2026-06-05 — Day 39 (cont.). Backbone identity VERIFIED with real zeta zeros.**
-`phase-14/experiments/verify_V_identity.py` (zeros #1000–1079, T~1465, ρ~0.868): the identity
+**Day 39 (cont.). Backbone identity VERIFIED with real zeta zeros.**
+`phase-14-off-diagonal-anchor-asymmetry/experiments/verify_V_identity.py` (zeros #1000–1079, T~1465, ρ~0.868): the identity
 V(d,T)=Σ_{γ,γ'}2sin(2d(γ−γ'))/(γ−γ') = ∫_{-2d}^{2d}|S(ξ)|²dξ confirmed to rel.err ≤3e-6 across d∈[0.25,3]
 (α=2dρ from 0.43 to 5.2). Form factor: V/(dN) decreases through α=1 and levels at ≈3.8 (=diagonal 4 − GUE
 off-diagonal ≈0.2) for α≳3 ⟹ F(α) BOUNDED at high frequency, V~dN for ζ's actual zeros (clean bound, c=0 in
@@ -2480,7 +2480,7 @@ the whole residue is the *unconditional* uniform form-factor bound. The Day-39 r
 identity. (No new ANT bound claimed; improving the unconditional uniform short-interval prime variance is
 Montgomery–Soundararajan-frontier and not fabricated here.)
 
-**2026-06-05 — Day 39 (cont. 2). P17 compiled + BALANCE + MAP Part 8. Phase consolidation.**
+**Day 39 (cont. 2). P17 compiled + BALANCE + MAP Part 8. Phase consolidation.**
 - **P17** (`06-papers/P17-unconditional-finite-bottom/`, compiled 3pp): the unconditional finite bottom mod log.
   Thm (identity V=∫|S|², verified); Prop (𝔱≥−C(log T)^c‖g‖² via large sieve); Thm (Goldston–Montgomery, clean (LB)
   ⟺ uniform short-interval prime variance, non-circular); the three-level hierarchy (S)<(κ)<(R). First unconditional
@@ -2499,7 +2499,7 @@ Montgomery–Soundararajan-frontier and not fabricated here.)
 > first UNCONDITIONAL semiboundedness of the Weil form (mod log) with a non-circular sub-RH residue. No non-circular
 > passage to RH found; genuinely new math is RH-independent. Candid endpoint, fully recorded.
 
-**2026-06-05 — Day 40. Three non-circular tracks advanced in parallel (Options 1, 2, 4).**
+**Day 40. Three non-circular tracks advanced in parallel (Options 1, 2, 4).**
 - **OPT 1 (`OPT1-c-reduction-selberg-tail.md`):** exact split V=N∫_{|α|<1}+N∫_{1≤|α|≤A} ϕ̂ F. Low part (I) ≪ N
   UNCONDITIONAL (diagonal L·T^{-2|α|} + F≥0; no loss). The ENTIRE loss is the high part (II) = uniform ∫_1^A F(α)dα.
   Selberg ∫S²≪T loglog T gives TYPICAL loglog T but not UNIFORM; conversion typical→uniform is the residual c =
@@ -2523,7 +2523,7 @@ Montgomery–Soundararajan-frontier and not fabricated here.)
 > bounded threshold), gap ⟺ no finitization — a transferable positivity-theory principle. Material for three future
 > papers; none circular (sub-RH or RH-independent).
 
-**2026-06-05 — Day 41. Papers P18,P19,P20 written/compiled + publication index + three fronts advanced.**
+**Day 41. Papers P18,P19,P20 written/compiled + publication index + three fronts advanced.**
 - **P18** (loss-localization-form-factor, 3pp): Thm — (LB) log-loss confined to the high-band ∫_1^A F; low band |α|<1
   unconditionally O(N). **P19** (euler-product-anatomy-locality, 2pp): Thm — Euler ⟹ local anatomy (proven); B2
   converse reduced to ground-state cross-term vanishing. **P20** (finite-to-full-uniformity, 2pp): finite-to-full =
@@ -2548,7 +2548,7 @@ Montgomery–Soundararajan-frontier and not fabricated here.)
 > zero alignment). F4: bounded-threshold class non-empty; uniform Hermite convergence obstructed under LI (new
 > analytic↔LI link). All sub-RH or RH-independent; none circular. Papers P1–P20 compile.
 
-**2026-06-05 — Day 42. Three fronts deepened (one near-theorem, one rate improvement, one self-correction).**
+**Day 42. Three fronts deepened (one near-theorem, one rate improvement, one self-correction).**
 - **FRONT 2 (near-theorem):** ground state g_0=P(t)e^{-t²/2σ²} ⟹ autocorrelation c_0(u)=Q_σ(u)e^{-u²/4σ²}, deg Q_σ≤2deg P
   ⟹ c_0 has ≤2deg P real zeros. **THEOREM (B2 converse, all-windows):** if anatomy factorizes across a continuum of
   windows with non-stationary autocorrelation zeros, then L has an Euler product. Proof: a fixed log n can't be a
@@ -2569,7 +2569,7 @@ Montgomery–Soundararajan-frontier and not fabricated here.)
 > route is NOT LI-obstructed; circular-vs-not is the open question). The program's ethos held: retracted my own
 > overclaim, and the correction opened more than it closed.
 
-**2026-06-05 — Day 43. F2 CLOSED (theorem), F4 dichotomy RESOLVED, F1 consolidated.**
+**Day 43. F2 CLOSED (theorem), F4 dichotomy RESOLVED, F1 consolidated.**
 - **FRONT 2 — B2 CONVERSE PROVEN** (`B2_autocorrelation_zeros.py`): (a) pure-Gaussian ground state ⟹ c_0(u)>0 ∀u
   (verified, 0 real zeros all σ); (b) pure H_k ⟹ c_0=L_k(u²/2σ²)e^{-u²/4σ²}, exactly k zeros (2,4,6 verified);
   (c) zeros scale u*=σr_j, MOVE with σ (verified linear). **Theorem (localized-detector regime):** ground state
@@ -2591,7 +2591,7 @@ Montgomery–Soundararajan-frontier and not fabricated here.)
 > reach their natural termini: F2 a clean RH-independent theorem (the only one that fully closed), F1 an
 > unconditional sub-RH result with named residue, F4 a resolved negative + standalone positivity-theory framework.
 
-**2026-06-05 — Day 44. P19 rewritten (full theorem + GL(n)); P18,P20 updated; GL(n) front advanced.**
+**Day 44. P19 rewritten (full theorem + GL(n)); P18,P20 updated; GL(n) front advanced.**
 - **P19 (3pp, recompiled):** now the COMPLETE characterization — Thm: L has Euler product ⟺ localized-Weil anatomy
   factorizes (converse proven: localized-detector regime in 1 window via Gaussian-dominated c_0>0; general via
   two-window non-stationarity); Lemma (autocorr zero structure) + Observation (computation); **GL(n) Satake recovery
@@ -2609,7 +2609,7 @@ Montgomery–Soundararajan-frontier and not fabricated here.)
 > papers updated, all compile. The richest open vein is the twist-free automorphy direction (GL(n)), genuinely hard
 > and RH-independent. F1 at the GM frontier (handoff), F4 resolved (RH route closed, framework standalone).
 
-**2026-06-05 — Day 45. Three fronts advanced to frontier mathematics.**
+**Day 45. Three fronts advanced to frontier mathematics.**
 - **FRONT 2 (OPT2 §9):** anatomy generating function G_p(x)=Σ s_k(p)x^k = x L_p'/L_p ⟹ L_p=exp∫G_p/t dt — EXACT
   spectral reconstruction of the local Euler factor. **Theorem (GL(1) automorphy CLOSED):** degree-1 + factorizing
   anatomy ⟹ shifted Dirichlet L (Hecke char), via Kaczorowski–Perelli degree-1 classification. GL(2) REDUCED to the
@@ -2629,8 +2629,8 @@ Montgomery–Soundararajan-frontier and not fabricated here.)
 > RH-independent or sub-RH, none circular. Frontier problems for the team: Selberg degree-2 automorphy (F2),
 > extreme-value-height form factor (F1), uniform-HR tower classification (F4).
 
-**2026-06-05 — Day 46. THREE FRONTIER PAPERS CLOSED (P18, P19, P20), full length + Python appendices.**
-Final-session deliverable: the three non-circular fronts written up as complete papers with formal theorems, proofs,
+**Day 46. THREE FRONTIER PAPERS CLOSED (P18, P19, P20), full length + Python appendices.**
+Final deliverable: the three non-circular fronts written up as complete papers with formal theorems, proofs,
 and reproducible code appendices.
 - **P18 (9pp):** unconditional finite bottom — Thm (V=∫|S|² identity, verified 1e-6), Prop (Parseval bound),
   Prop (low band O(N)), Prop (finite bottom mod log^c), Lemma (diagonal ~2d²), Prop (RFB reduction), Thm (clean
@@ -2654,14 +2654,14 @@ and reproducible code appendices.
 > functoriality. P20 contributes a new HR stability theorem (AHK objects→families). P18 an unconditional sub-RH
 > finite-bottom with a.e. clean constant. All RH-independent or strictly sub-RH; none circular. Papers P1–P20 compile.
 
-**2026-06-05 — Day 46 (cont.). LaTeX edition of the bitácora created.**
+**Day 46 (cont.). LaTeX edition of the bitácora created.**
 The full proof log (Days 0–46, 2655 lines) was rendered to typeset LaTeX in a new folder
 `phase-4-handoff/proofs/latex/`: PROOF-LOG.tex + PROOF-LOG.pdf (88 pp, compiles clean, 0 errors) +
 build_proof_log_tex.py (a self-contained markdown→LaTeX converter, no pandoc; handles unicode/Greek,
 escaping, nested inline spans, fenced code blocks) + README. The .md remains the canonical append-only diary;
 the LaTeX edition is a regenerable mirror (rerun the build script after new entries).
 
-**2026-06-06 — Day 47. NEXT PHASE proposed: the Anatomy–Kreĭn–Hodge program.**
+**Day 47. NEXT PHASE proposed: the Anatomy–Kreĭn–Hodge program.**
 `NEXT-PHASE-the-anatomy-krein-hodge-program.md`. The one direction that passes the discriminator D0: SURF (an
 arithmetic Hodge index for Spec ℤ), now with this program's three tools as a NEW spectral entry point.
 - **Central idea:** the ANATOMY (P19, Satake recovery) IS the missing arithmetic Frobenius — the ingredient
@@ -2682,9 +2682,9 @@ arithmetic Hodge index for Spec ℤ), now with this program's three tools as a N
 > definiteness criterion); RH = an infinite-dimensional Hodge index (M3), attacked via the HR-stability limit and the
 > Rankin–Selberg effectivity square. Early milestones real and non-circular; the capstone sharply posed, not promised.
 
-**2026-06-06 — Day 47 (cont.). PHASE 15 folder created; MILESTONE M1 COMPLETE (proved + verified).**
-Phase-15 folder (`phase-15/`) holds the overview (00-PHASE-15-overview.md) + M1 + experiments.
-**M1 — the arithmetic intersection pairing** (`phase-15/M1-arithmetic-intersection-pairing.md`), fully proved,
+**Day 47 (cont.). PHASE 15 folder created; MILESTONE M1 COMPLETE (proved + verified).**
+Phase-15 folder (`phase-15-arithmetic-hodge-index/`) holds the overview (00-PHASE-15-overview.md) + M1 + experiments.
+**M1 — the arithmetic intersection pairing** (`phase-15-arithmetic-hodge-index/M1-arithmetic-intersection-pairing.md`), fully proved,
 RH-independent:
 - **Definition:** ⟨f1,f2⟩=Σ_ρ f̂1(γ_ρ)overline{f̂2(γ_ρ)} = the Kreĭn–Weil intersection pairing; negative index
   κ=#off-line zeros; RH ⟺ ⪰0 (Weil).
@@ -2697,15 +2697,15 @@ RH-independent:
   zeros); RH ⟺ pairing ⪰0 on the primitive part = THE ARITHMETIC HODGE INDEX (=M3).
 - M1 assembles the arithmetic surface's intersection theory around the anatomy and reduces RH to ONE statement (M3),
   via an equivalence (Prop C). Two attack channels on M3 set up: M3a (HR-stability limit), M3b (RS effectivity +
-  ample positivity). Numerical grounding: phase-15/experiments/intersection_check.py.
+  ample positivity). Numerical grounding: phase-15-arithmetic-hodge-index/experiments/intersection_check.py.
 
 > **Day-47 (cont.). M1 done.** Built and proved the arithmetic intersection pairing for Spec ℤ around the anatomy:
 > Theorem A (explicit formula = Lefschetz trace identity, verified 1e-12), Theorem B (Γ·Γ≥0 Rankin–Selberg
 > effectivity = verified second moment), Proposition C (RH ⟺ arithmetic Hodge index on the primitive part). RH is
 > now exactly M3, sharply posed. M1 is RH-independent and fully verified; nothing assumed about RH.
 
-**2026-06-06 — Day 48. MILESTONE M2 COMPLETE (proved + verified): the ample cone is positive, unconditionally.**
-`phase-15/M2-ample-cone-edge-positivity.md`, RH-independent, fully proved.
+**Day 48. MILESTONE M2 COMPLETE (proved + verified): the ample cone is positive, unconditionally.**
+`phase-15-arithmetic-hodge-index/M2-ample-cone-edge-positivity.md`, RH-independent, fully proved.
 - **Lemma (real pole evaluations):** for real even f, λ_0(f)=f̂(i/2)=λ_1(f)=f̂(−i/2)=∫f(u)e^{−u/2}du ∈ ℝ
   (r=i/2↔s=0, r=−i/2↔s=1, the two poles; functional equation s↔1−s swaps them).
 - **Theorem (edge positivity, UNCONDITIONAL):** the trivial/pole part of the self-pairing is
@@ -2726,8 +2726,8 @@ RH-independent:
 > and verified. RH is now exactly M3 (the arithmetic Hodge index = primitive-part positivity), with the ample
 > positivity (M2) in hand as one input to M3b. Nothing assumes RH.
 
-**2026-06-06 — Day 48 (cont.). MILESTONE M3 — the arithmetic Hodge index = the capstone = RH. Attack complete; RH NOT crossed (candid).**
-`phase-15/M3-arithmetic-hodge-index.md`. M3 IS RH; every provable step proved + documented; the irreducible RH-core
+**Day 48 (cont.). MILESTONE M3 — the arithmetic Hodge index = the capstone = RH. Attack complete; RH NOT crossed (candid).**
+`phase-15-arithmetic-hodge-index/M3-arithmetic-hodge-index.md`. M3 IS RH; every provable step proved + documented; the irreducible RH-core
 isolated. NO proof of RH claimed or fabricated.
 - **Prop (M3=RH):** M3 (primitive positivity ⟨f,f⟩=Σ|f̂(γ)|²≥0 on Π^⊥=ker λ) ⟺ κ=0 ⟺ RH.
 - **CHANNEL M3b (Weil assembly):** Lemma (Kreĭn index inequality: M3 ⟺ reverse-Cauchy-Schwarz on the ample line).
@@ -2755,8 +2755,8 @@ isolated. NO proof of RH claimed or fabricated.
 > partial arithmetic Hodge index (mod log; off a sparse set), unconditional. Not proved: RH itself (the irreducible
 > core). The capstone stands, sharply posed from three coincident sides, partial progress attached. No false victory.
 
-**2026-06-06 — Day 48 (cont. 2). M3 core — FOUR genuine new attempts, all developed to endpoint; none crosses.**
-`phase-15/M3-genuine-attempts-on-the-core.md`. Maximum-effort exploration of the irreducible core ⟨D,D⟩≥0 on Π^⊥
+**Day 48 (cont. 2). M3 core — FOUR genuine new attempts, all developed to endpoint; none crosses.**
+`phase-15-arithmetic-hodge-index/M3-genuine-attempts-on-the-core.md`. Maximum-effort exploration of the irreducible core ⟨D,D⟩≥0 on Π^⊥
 (=RH), four new attacks, candid outcomes:
 - **Attempt 1 (2×2 Hodge-index Gram det):** Gram of {H ample, Γ Frobenius} = [[2λ²,a],[a,V]]; Hodge index ⟺ det<0 ⟺
   a²>2λ²V uniform (reverse Cauchy-Schwarz). a=⟨H,Γ⟩=cross-place pairing. The uniform domination IS the index = RH.
@@ -2781,8 +2781,8 @@ isolated. NO proof of RH claimed or fabricated.
 > requirement (a structure giving upper/sign control that is not effectivity/Bochner/relaxation/local) is exactly
 > D0's missing I2b. No false victory.
 
-**2026-06-06 — Day 49. M3 · Attempt 5 — the arithmetic Hodge index theorem EXISTS; the obstruction is the SURFACE, not the theorem. (Corrected premise.)**
-`phase-15/M3-attempt5-arithmetic-hodge-index-exists.md`. A genuine crossing attempt that corrects a false premise
+**Day 49. M3 · Attempt 5 — the arithmetic Hodge index theorem EXISTS; the obstruction is the SURFACE, not the theorem. (Corrected premise.)**
+`phase-15-arithmetic-hodge-index/M3-attempt5-arithmetic-hodge-index-exists.md`. A genuine crossing attempt that corrects a false premise
 in Attempts 1-4 / M3b.
 - **CORRECTION (load-bearing):** the claim "for Spec ℤ no general Hodge index theorem is known" is FALSE. The
   arithmetic Hodge index theorem IS PROVEN: Faltings–Hriljac (1984, Arakelov pairing on degree-0 = Néron–Tate,
@@ -2809,8 +2809,8 @@ in Attempts 1-4 / M3b.
 > the Hodge index theorem we already have." Sharpest true statement of the M3 obstruction; no crossing, real
 > refinement, fully verifiable (cited theorems are published; the gap is explicit).
 
-**2026-06-06 — Day 49 (cont.). M3 · Attempt 6 — the elliptic control: the proven Hodge index is on the WRONG cohomology (heights, not zeros).**
-`phase-15/M3-attempt6-elliptic-control-heights-vs-zeros.md`. Ran the Attempt-5 construction on E/ℚ, where the
+**Day 49 (cont.). M3 · Attempt 6 — the elliptic control: the proven Hodge index is on the WRONG cohomology (heights, not zeros).**
+`phase-15-arithmetic-hodge-index/M3-attempt6-elliptic-control-heights-vs-zeros.md`. Ran the Attempt-5 construction on E/ℚ, where the
 arithmetic surface 𝓔→Spec ℤ EXISTS and Faltings–Hriljac applies.
 - **Prop (heights/special value):** Faltings–Hriljac gives neg-definiteness of Néron–Tate ĥ on E(ℚ)⊗ℝ ⟹ controls the
   Mordell–Weil regulator R_E ⟹ (BSD) the LEADING COEFFICIENT of L(E,s) at the CENTRAL POINT s=1. A BSD/special-value
@@ -2835,8 +2835,8 @@ arithmetic surface 𝓔→Spec ℤ EXISTS and Faltings–Hriljac applies.
 > index — not the height theory (proven, wrong object), not merely "a surface" (necessary, insufficient). Sharpest,
 > most correct statement of the RH obstruction the program reached; verifiable; no crossing.
 
-**2026-06-06 — Day 50. M3 · Attempt 7 — the zero-carrying cohomology BUILT explicitly; capstone pinned to one Kähler compatibility.**
-`phase-15/M3-attempt7-constructing-the-zero-cohomology.md`. Constructed the Deninger/Connes object for ζ (not named).
+**Day 50. M3 · Attempt 7 — the zero-carrying cohomology BUILT explicitly; capstone pinned to one Kähler compatibility.**
+`phase-15-arithmetic-hodge-index/M3-attempt7-constructing-the-zero-cohomology.md`. Constructed the Deninger/Connes object for ζ (not named).
 - **BUILT (unconditional):** (H1) the Kreĭn space H_W = Weil-form completion, candidate H¹, neg index κ=#off-line;
   (H2) the flow 𝒯 (P8) with spec(𝒯)={γ_ρ} — Frobenius-analogue, eigenvalues=zeros; (H3) the Lefschetz trace formula
   Tr h(𝒯)=Σ_ρ h(γ_ρ)=poles−2Γ(g)+arch (M1-A, verified 1e-12); (H4) anatomy/Satake as LOCAL FROBENIUS, G_p=xL_p'/L_p
@@ -2860,8 +2860,8 @@ arithmetic surface 𝓔→Spec ℤ EXISTS and Faltings–Hriljac applies.
 > form ω on the arithmetic H¹ exists. We have J and Q; only ω is missing. Most structural form of the capstone the
 > program reached; the Deninger/Connes object made concrete; no crossing.
 
-**2026-06-06 — Day 50 (cont.). M3 · Attempt 8 — the Kähler form: RH = one independent hard-Lefschetz sl₂, NOT generable from the flow. (Candid terminus.)**
-`phase-15/M3-attempt8-the-kahler-form.md`. Attacked ω directly.
+**Day 50 (cont.). M3 · Attempt 8 — the Kähler form: RH = one independent hard-Lefschetz sl₂, NOT generable from the flow. (Candid terminus.)**
+`phase-15-arithmetic-hodge-index/M3-attempt8-the-kahler-form.md`. Attacked ω directly.
 - **Prop (ω not independent):** the only (1,1)-form compatible with (J,Q) is ω=Q(J·,·); its positivity = Riemann
   relation = RH. So ω from the spectral triple alone IS RH (circular); an ω that FORCES positivity must come from
   outside (𝒯,J,Q).
@@ -2888,7 +2888,7 @@ arithmetic surface 𝓔→Spec ℤ EXISTS and Faltings–Hriljac applies.
 
 ---
 
-## PHASE 15→16 (2026-06-06) — the Lefschetz dichotomy, P21, and the SURF spec sheet
+## PHASE 15→16 — the Lefschetz dichotomy, P21, and the SURF spec sheet
 
 **M1–M5 (Anatomy–Kreĭn–Hodge):** built the Weil scaffold for Spec ℤ (pairing, trace identity, effectivity, ample cone),
 reduced RH to a single independent hard-Lefschetz sl₂/Kähler ω, and proved the INDEPENDENCE FILTER (any spectral
@@ -2905,7 +2905,7 @@ independently confirmed no proof lives in spectral data; a submitted "Connes pro
 "Arakelov–RH equivalence" was audited to its candid one-directional form: **∃𝒳 (Arakelov witness variety, Axiom 3) ⟹
 RH** (theorem, via Yuan–Zhang transport); the converse is the open Hilbert–Pólya dream, possibly false (M10).
 
-**PHASE 16 — sole task: build 𝒳, verify Axiom 3.** Acceptance criteria in `phase-16/00-SURF-SPEC-SHEET.md`. Two arbiter
+**PHASE 16 — sole task: build 𝒳, verify Axiom 3.** Acceptance criteria in `phase-16-surf-witness-variety/00-SURF-SPEC-SHEET.md`. Two arbiter
 corrections to the submitted spec: (1) the Pillar-1 trace test is the test-function trace Tr h(Frob)=Σh(γ_ρ)=explicit
 formula (Σγ^k diverges); (2) **Pillar 4 cannot cite Yuan–Zhang** — it controls Pic⁰/heights (the object Pillar 2.2
 rejects); the Hodge index for the zero-carrying H¹ is a new, OPEN theorem (Attempt 6, sharpest). Rejection filters:

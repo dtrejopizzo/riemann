@@ -1,6 +1,6 @@
 # 106.203 — The complete-return charged Tate boundary
 
-> **Phase-120 physical-weight warning (2026-08-25).** This source pushout is
+> **Phase-120 physical-weight warning.** This source pushout is
 > not the row-(c) attachment required for row (d). It uses `p^{-k/2}` as a
 > boundary *amplitude*, so its quadratic Gram mass is `log(p)/p^k`. In the
 > central Weil form `log(p)/p^{k/2}` is already the quadratic coefficient;

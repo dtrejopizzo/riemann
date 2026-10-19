@@ -181,7 +181,7 @@ the cutoff, not visible from the design condition alone.
 ## 5. Scope
 
 **Read.** 108_38, 108_37, 108_90 (all in full, as in 108_50); 108_50 (this
-note's own prerequisite, written earlier in this session).
+note's own prerequisite, written earlier in this phase).
 
 **Proved here.** Proposition 3.1 (elementary calculus, complete proof).
 

@@ -1,84 +1,86 @@
-# 104_41 — Fase Euler completa y gate de homotopía con residuos
+# 104_41 — Full Euler phase and the residue homotopy gate
 
-**Estado.** Se atacó directamente la combinación completa
+**Status.** The complete combination was attacked directly,
 
 \[
  M_\Lambda(s):={1\over s-1}+{\zeta'(s)\over\zeta(s)}
  ={d\over ds}\log\{(s-1)\zeta(s)\},                         \tag{1}
 \]
 
-sin separar primos simples, potencias primas ni polo. En el semiplano
-Euler se obtiene una identidad que conserva toda la fase y una cota
-unilateral genuina, uniforme en el grado:
+without separating simple primes, prime powers, or the pole. In the Euler
+half-plane an identity is obtained that preserves the whole phase, along
+with a genuine one-sided bound, uniform in the degree:
 
 \[
  \boxed{|\mathcal B_{n,a}|\le3n\qquad(a\ge4).}               \tag{2}
 \]
 
-La cota no usa módulos dentro de \(M_\Lambda\): integra la fase exacta de
-\((s-1)\zeta(s)\). El intento falla al transportar (2) hasta \(a=1\).
-La homotopía del círculo Euler a la línea crítica cruza exactamente los
-ceros con parte real \(>1/2\), y el defecto es exactamente la suma firmada
-de residuos de `104_33`, no un término de error estimable por la fase de
-frontera. Un cuarteto recíproco racional deja **idéntica la fase completa**
-en la línea crítica y cambia el momento en una cantidad exponencial.
+The bound uses no moduli inside \(M_\Lambda\): it integrates the exact
+phase of \((s-1)\zeta(s)\). The attempt fails when transporting (2) down
+to \(a=1\). The homotopy from the Euler circle to the critical line
+crosses exactly the zeros with real part \(>1/2\), and the defect is
+exactly the signed residue sum of `104_33`, not an error term estimable
+from the boundary phase. A rational reciprocal quartet leaves the
+**complete phase identical** on the critical line and changes the moment
+by an exponential amount.
 
-Por tanto queda descartado el siguiente mecanismo: «acotar la fase completa
-en un semiplano de convergencia de Euler y transferir la cota a \(a=1\) por
-una homotopía sin un teorema separado sobre los residuos». No se descarta
-una desigualdad aritmética nueva que use específicamente los pesos reales
-\(\Lambda(m)\) para controlar conjuntamente esos residuos. Este documento
-no prueba A1 ni RH.
+Hence the following mechanism is ruled out: "bound the complete phase in
+an Euler half-plane of convergence and transfer the bound to \(a=1\) via a
+homotopy, with no separate theorem about the residues." Not ruled out is a
+new arithmetic inequality that specifically uses the real weights
+\(\Lambda(m)\) to jointly control those residues. This document proves
+neither A1 nor RH.
 
-## 1. Auditoría de no duplicación y signo
+## 1. Non-duplication and sign audit
 
-Póngase
+Set
 
 \[
  F(s)=(s-1)\zeta(s),\qquad B_n=A_n-\lambda_n.                \tag{3}
 \]
 
-Las identidades de `phase-102/140--141`, `103_66` y `104_03` ya implican
+The identities of `phase-102/140–141`, `103_66`, and `104_03` already
+imply
 
 \[
  B_n=-{1\over2\pi i}\oint M_\Lambda(s)
               \left({s\over s-1}\right)^n ds,              \tag{4}
 \]
 
-en un círculo pequeño canónico alrededor de \(s=1\). La mera identidad de
-contorno no es nueva. Tampoco lo es reemplazarla por el símbolo de Cayley:
-`104_33` prueba que la frontera sola omite los residuos interiores.
+on a canonical small circle around \(s=1\). The mere contour identity is
+not new. Nor is replacing it with the Cayley symbol: `104_33` proves that
+the boundary alone omits the interior residues.
 
-Lo nuevo de este ataque es cuantitativo: (2) demuestra que el estimador de
-fase sí es fuerte antes de mover el contorno y localiza todo su fracaso en
-el cruce de residuos. El signo de (4) es vinculante. Como
+What is new in this attack is quantitative: (2) proves that the phase
+estimator is indeed strong before moving the contour, and it localizes its
+entire failure in the residue crossing. The sign of (4) is binding. Since
 
 \[
  \lambda_n=A_n+\lambda_n^{\rm prime},
 \]
 
-se tiene \(B_n=-\lambda_n^{\rm prime}\); por tanto \(M_\Lambda\) aparece
-con signo negativo en la forma de \(B_n\).
+one has \(B_n=-\lambda_n^{\rm prime}\); hence \(M_\Lambda\) appears with a
+negative sign in the form of \(B_n\).
 
-Hay una segunda identidad que no se contará como avance independiente.
-Sea \(G(z)=\log F((1-z)^{-1})\) y \(q=1-a^{-1}\). Siempre que \(q\)
-pertenezca al disco de Taylor de \(G\), la composición
-\(G_a(z)=G(q+z/a)\) da
+There is a second identity that will not be counted as independent
+progress. Let \(G(z)=\log F((1-z)^{-1})\) and \(q=1-a^{-1}\). Whenever
+\(q\) belongs to the Taylor disc of \(G\), the composition
+\(G_a(z)=G(q+z/a)\) gives
 
 \[
  \mathcal B_{n,a}=a^{-n}\sum_{k\ge n}
  {k-1\choose n-1}q^{k-n}B_k.                              \tag{4a}
 \]
 
-Es una cola Abel positiva, no una inversión unilateral. Usarla para
-recuperar \(B_n\) repetiría exactamente el stop-gate Tauberiano de
-`104_17`; además un cero transformado dentro de \(|z|\le q\) invalida
-la expansión antes de que pueda ocultarse como error. No se usa (4a) en
-la prueba de (2).
+This is a positive Abel tail, not a one-sided inversion. Using it to
+recover \(B_n\) would exactly repeat the Tauberian stop-gate of
+`104_17`; moreover a transformed zero within \(|z|\le q\) invalidates the
+expansion before it could be hidden as an error term. (4a) is not used in
+the proof of (2).
 
-## 2. Regularización completa en un semiplano Euler
+## 2. Complete regularization in an Euler half-plane
 
-Sea
+Let
 
 \[
  g_n(x)=e^{-x/2}L_{n-1}^{(1)}(x){\bf1}_{x\ge0},
@@ -87,15 +89,15 @@ Sea
  \left({-1/2+it\over1/2+it}\right)^n,                      \tag{5}
 \]
 
-y escribamos
+and write
 
 \[
  W_n(t)=|\widehat g_n(t)|^2.                                \tag{6}
 \]
 
-Para \(a>1\), la serie prima y la integral siguientes convergen
-absolutamente. Definimos la forma completa prima--polo, con el signo de
-\(B_n\), por
+For \(a>1\), the following prime series and integral converge
+absolutely. We define the complete prime–pole form, with the sign of
+\(B_n\), by
 
 \[
 \begin{aligned}
@@ -105,7 +107,7 @@ absolutamente. Definimos la forma completa prima--polo, con el signo de
 \end{aligned}
 \]
 
-La fórmula de Euler y la generatriz de Laguerre dan simultáneamente
+Euler's formula and the Laguerre generating function simultaneously give
 
 \[
  \boxed{
@@ -113,20 +115,20 @@ La fórmula de Euler y la generatriz de Laguerre dan simultáneamente
  =-n[z^n]\log F\!\left({a\over1-z}\right).}                \tag{8}
 \]
 
-La fórmula de coeficientes (8) continúa \(\mathcal B_{n,a}\) desde el
-dominio Euler a un entorno de \(a=1\). Al retirar el regulador en esa
-continuación conjunta,
+Coefficient formula (8) continues \(\mathcal B_{n,a}\) from the Euler
+domain to a neighborhood of \(a=1\). Removing the regulator in that joint
+continuation,
 
 \[
  \boxed{B_n=\lim_{a\downarrow1}\mathcal B_{n,a}.}           \tag{9}
 \]
 
-La serie de (7) converge directamente para todo \(a>1\). La realización de
-semigrupo que sigue requiere \(a>2\); (9) no afirma que sus canales
-separados tengan límite al bajar hasta \(a=1\).
+The series in (7) converges directly for every \(a>1\). The semigroup
+realization that follows requires \(a>2\); (9) does not claim that its
+separate channels have a limit as \(a\) decreases to \(1\).
 
-La realización por el semigrupo contractivo de `104_36`, ahora con
-\(d\psi\) en vez de \(d\theta\), da la identidad de Plancherel
+The realization via the contractive semigroup of `104_36`, now with
+\(d\psi\) instead of \(d\theta\), gives the Plancherel identity
 
 \[
  \boxed{
@@ -135,26 +137,26 @@ La realización por el semigrupo contractivo de `104_36`, ahora con
  \Re M_\Lambda\!\left(a(1/2+it)\right)dt .}                \tag{10}
 \]
 
-En (10) el polo y todos los \(p^k\) están combinados **antes** de tomar la
-parte real. No aparece \(|M_\Lambda|\).
+In (10), the pole and every \(p^k\) are combined **before** taking the
+real part. \(|M_\Lambda|\) does not appear.
 
-## 3. Identidad exacta de fase
+## 3. Exact phase identity
 
-Para \(a>2\), \(F\) no se anula en la recta
-\(s=a(1/2+it)\). Sea
+For \(a>2\), \(F\) does not vanish on the line
+\(s=a(1/2+it)\). Let
 
 \[
  \vartheta_a(t)=\arg F\!\left(a(1/2+it)\right)              \tag{11}
 \]
 
-la rama continua fijada por \(\vartheta_a(0)=0\). Como
+be the continuous branch fixed by \(\vartheta_a(0)=0\). Since
 
 \[
  {d\over dt}\vartheta_a(t)
  =a\Re M_\Lambda\!\left(a(1/2+it)\right),                 \tag{12}
 \]
 
-(10) se vuelve
+(10) becomes
 
 \[
  \mathcal B_{n,a}
@@ -162,8 +164,8 @@ la rama continua fijada por \(\vartheta_a(0)=0\). Como
                                                                     \tag{13}
 \]
 
-Para \(a\ge4\), la fase es acotada. En efecto,
-\(\Re(s-1)\ge1\), luego \(|\arg(s-1)|<\pi/2\). Además
+For \(a\ge4\), the phase is bounded. Indeed,
+\(\Re(s-1)\ge1\), so \(|\arg(s-1)|<\pi/2\). Moreover
 
 \[
  |\zeta(s)-1|
@@ -171,7 +173,7 @@ Para \(a\ge4\), la fase es acotada. En efecto,
  <{2\over3}<\sin{\pi\over4}.                              \tag{14}
 \]
 
-La segunda desigualdad puede probarse sin evaluar \(\pi\):
+The second inequality can be proved without evaluating \(\pi\):
 
 \[
  \sum_{m=2}^\infty {1\over m^2}
@@ -180,27 +182,28 @@ La segunda desigualdad puede probarse sin evaluar \(\pi\):
  ={2389\over3600}<{2\over3}.                              \tag{15}
 \]
 
-El disco \(|z-1|<2/3\) visto desde el origen tiene abertura menor que
-\(\pi/4\). Por tanto
+The disc \(|z-1|<2/3\) viewed from the origin has aperture less than
+\(\pi/4\). Hence
 
 \[
  \boxed{|\vartheta_a(t)|<{3\pi\over4}\qquad(a\ge4).}      \tag{16}
 \]
 
-Resta calcular exactamente la variación del test. En \(t>0\), escriba
+It remains to compute exactly the variation of the test function. For
+\(t>0\), write
 
 \[
- {-1/2+it\over1/2+it}=e^{i\theta(t)},qquad
+ {-1/2+it\over1/2+it}=e^{i\theta(t)},\qquad
  \theta(0)=\pi,\qquad\theta(\infty)=0.
 \]
 
-Entonces
+Then
 
 \[
  W_n(t)=2-2\cos(n\theta(t)).                                \tag{17}
 \]
 
-Como \(W_n\) es par,
+Since \(W_n\) is even,
 
 \[
 \begin{aligned}
@@ -210,8 +213,8 @@ Como \(W_n\) es par,
 \end{aligned}
 \]
 
-Los términos de borde en la integración por partes de (13) se anulan,
-porque \(W_n(t)=O_n(t^{-2})\). De (13), (16) y (18),
+The boundary terms in the integration by parts of (13) vanish, because
+\(W_n(t)=O_n(t^{-2})\). From (13), (16), and (18),
 
 \[
  |\mathcal B_{n,a}|
@@ -219,18 +222,18 @@ porque \(W_n(t)=O_n(t^{-2})\). De (13), (16) y (18),
  =3n,                                                        \tag{19}
 \]
 
-que prueba (2). Ésta es una cota de fase, no una cota de módulo.
+which proves (2). This is a phase bound, not a modulus bound.
 
-## 4. Dónde se rompe la homotopía
+## 4. Where the homotopy breaks
 
-En la coordenada de (8), un cero no trivial \(\rho=\beta+i\gamma\)
-aparece en
+In the coordinate of (8), a nontrivial zero \(\rho=\beta+i\gamma\)
+appears at
 
 \[
  z_{\rho,a}=1-{a\over\rho}.                                \tag{20}
 \]
 
-La distancia al círculo de Hardy satisface la identidad exacta
+The distance to the Hardy circle satisfies the exact identity
 
 \[
  \boxed{
@@ -238,15 +241,15 @@ La distancia al círculo de Hardy satisface la identidad exacta
  ={a(a-2\beta)\over|\rho|^2}.}                             \tag{21}
 \]
 
-Al bajar \(a\) desde \(4\) hasta \(1\):
+As \(a\) decreases from \(4\) to \(1\):
 
-* un cero con \(\beta>1/2\) cruza \(|z|=1\) en \(a=2\beta>1\);
-* un cero crítico solo alcanza la frontera en \(a=1\);
-* un cero con \(\beta<1/2\) no entra antes del extremo.
+* a zero with \(\beta>1/2\) crosses \(|z|=1\) at \(a=2\beta>1\);
+* a critical zero only reaches the boundary at \(a=1\);
+* a zero with \(\beta<1/2\) never enters before the endpoint.
 
-El germen (8) continúa siendo una cantidad bien definida; lo que deja de
-ser válido es la representación por una frontera holomorfa sin defectos.
-Aplicando la deformación meromorfa correcta de `104_33` se obtiene
+Germ (8) remains a well-defined quantity throughout; what stops being
+valid is its representation by a defect-free holomorphic boundary.
+Applying the correct meromorphic deformation of `104_33` gives
 
 \[
  \boxed{
@@ -256,37 +259,38 @@ Aplicando la deformación meromorfa correcta de `104_33` se obtiene
  \qquad w_\rho=1-{1\over\rho}.}                            \tag{22}
 \]
 
-Aquí
-\(\mathcal P_n:=\mathcal I_n^\partial(-M_\Lambda\circ s)\) es el
-momento radial de frontera de `104_33`; mediante (12)--(13) es el momento
-de la derivada distribucional de la fase, incluidos los ceros críticos, y
+Here
+\(\mathcal P_n:=\mathcal I_n^\partial(-M_\Lambda\circ s)\) is the radial
+boundary moment of `104_33`; via (12)–(13) it is the moment of the
+distributional derivative of the phase, including critical zeros, and
 
 \[
  \mathcal F_n(w)
  =n+\sum_{d=1}^{n-1}(n-d)(w^d+w^{-d}).                      \tag{23}
 \]
 
-La serie de residuos de (22) converge absolutamente para \(n\) fijo. La
-ecuación (22) muestra que transportar (19) no cuesta una constante de
-contorno: cuesta exactamente la suma que detecta ceros a la derecha. Una
-estimación de esa suma suficientemente fuerte para
+The residue series of (22) converges absolutely for fixed \(n\). Equation
+(22) shows that transporting (19) does not cost a contour constant: it
+costs exactly the sum that detects right-hand zeros. An estimate of that
+sum strong enough for
 
 \[
  B_n\le {1501\over2002}A_n                                  \tag{24}
 \]
 
-es el teorema RH-strength que se buscaba, no una consecuencia de (19).
+is the RH-strength theorem that was being sought, not a consequence of
+(19).
 
-## 5. Falsificador: misma fase crítica, residuo exponencial
+## 5. Falsifier: same critical phase, exponential residue
 
-Sea
+Let
 
 \[
  w={i\over2},\qquad
  \rho={1\over1-w}={4+2i\over5},                             \tag{25}
 \]
 
-y complete la órbita
+and complete the orbit
 
 \[
  \mathcal O(\rho)=\{\rho,\bar\rho,1-\rho,1-\bar\rho\},
@@ -294,8 +298,8 @@ y complete la órbita
                                                                     \tag{26}
 \]
 
-Si \(s=1/2+it\), \(\delta=\Re\rho-1/2\) y
-\(\gamma=\Im\rho\), entonces
+If \(s=1/2+it\), \(\delta=\Re\rho-1/2\), and
+\(\gamma=\Im\rho\), then
 
 \[
  \boxed{
@@ -304,75 +308,77 @@ Si \(s=1/2+it\), \(\delta=\Re\rho-1/2\) y
   \{(t+\gamma)^2+\delta^2\}>0.}                            \tag{27}
 \]
 
-Por consiguiente multiplicar \(F\) por \(Q_\rho^M\) no cambia la fase en
-la línea crítica (sí multiplica el módulo por un factor positivo):
+Consequently, multiplying \(F\) by \(Q_\rho^M\) does not change the phase
+on the critical line (it does multiply the modulus by a positive factor):
 
 \[
  \arg\{F(1/2+it)Q_\rho(1/2+it)^M\}
  =\arg F(1/2+it).                                           \tag{28}
 \]
 
-Sin embargo, los dos residuos derechos cambian \(B_n\) en
+However, the two right-hand residues change \(B_n\) by
 
 \[
  -M Q_n,\qquad
  Q_n=4-2\Re(w^n+w^{-n}).                                    \tag{29}
 \]
 
-Para \(n=152\),
+For \(n=152\),
 
 \[
  \boxed{
  -Q_{152}=2(2^{152}+2^{-152})-4>0,}                         \tag{30}
 \]
 
-y la multiplicidad \(M\) derrota cualquier techo proporcional fijo sin
-alterar (28). El cuarteto no conserva el producto de Euler positivo de
-\(\zeta\), de modo que (30) no refuta una desigualdad específica para los
-pesos reales \(\Lambda(m)\). Sí prueba que la fase crítica y la homotopía
-analítica, por sí solas, no suministran esa desigualdad.
+and multiplicity \(M\) defeats any fixed proportional ceiling without
+altering (28). The quartet does not preserve the positive Euler product
+of \(\zeta\), so (30) does not refute a specific inequality for the real
+weights \(\Lambda(m)\). It does prove that the critical phase and the
+analytic homotopy, by themselves, do not supply that inequality.
 
-El mismo testigo pasa el gate de cruce: \(2\Re\rho=8/5\), de modo que sus
-polos entran estrictamente durante el trayecto \(4\downarrow1\).
+The same witness passes the crossing gate: \(2\Re\rho=8/5\), so its poles
+enter strictly during the path \(4\downarrow1\).
 
-## 6. Decisión
+## 6. Decision
 
 ```text
-probado:
-  identidad completa Mangoldt+polo con el signo de B_n;
-  representación exacta mediante la fase de (s-1)zeta(s);
+proved:
+  the complete Mangoldt+pole identity with the sign of B_n;
+  the exact representation via the phase of (s-1)zeta(s);
   TV(W_n)=8n;
-  cota phase-preserving |B_{n,a}|<=3n para a>=4;
-  ley exacta de cruce |1-a/rho|^2-1=a(a-2Re rho)/|rho|^2;
-  defecto final igual a la suma firmada de residuos de 104_33;
-  cuarteto racional con fase crítica idéntica y residuo exponencial.
+  the phase-preserving bound |B_{n,a}|<=3n for a>=4;
+  the exact crossing law |1-a/rho|^2-1=a(a-2Re rho)/|rho|^2;
+  the final defect equal to the signed residue sum of 104_33;
+  a rational quartet with identical critical phase and exponential
+  residue.
 
-descartado:
-  transferir la cota fuerte del semiplano Euler a a=1 sin controlar
-  explícitamente los residuos interiores;
-  cualquier argumento que use solo la fase o el símbolo de frontera,
-  aun conservándolos complejos en vez de tomar módulos.
+ruled out:
+  transferring the strong Euler half-plane bound down to a=1 without
+  explicitly controlling the interior residues;
+  any argument using only the phase or the boundary symbol, even keeping
+  them complex rather than taking moduli.
 
-sobrevive:
-  una desigualdad aritmética específica de los pesos exactos Lambda(m)
-  que acople el momento de frontera con la suma de residuos y pruebe (24).
+remains:
+  a specific arithmetic inequality for the exact weights Lambda(m) that
+  couples the boundary moment with the residue sum and proves (24).
 
-no probado:
-  (24), A1 o RH.
+not proved:
+  (24), A1, or RH.
 ```
 
-## 7. Verificación reproducible
+## 7. Reproducible verification
 
-El archivo `tools/full_mangoldt_phase_homotopy_gate_check.py` usa solamente
-`Fraction` y racionales gaussianos para comprobar:
+The file `tools/full_mangoldt_phase_homotopy_gate_check.py` uses only
+`Fraction` and Gaussian rationals to check:
 
-1. la cota racional de (15);
-2. el conteo exacto que da \(\mathrm{TV}(W_n)=8n\);
-3. la identidad de cruce (21) para el cuarteto (25);
-4. la positividad exacta de (27) sobre una malla racional;
-5. el residuo exponencial (30).
+1. the rational bound of (15);
+2. the exact count giving \(\mathrm{TV}(W_n)=8n\);
+3. the crossing identity (21) for quartet (25);
+4. the exact positivity of (27) on a rational grid;
+5. the exponential residue (30).
 
-Se reproduce con
+Reproduced with
 
     cd 03-research/phase-104-unconditional-a1-closure/tools
     python3 full_mangoldt_phase_homotopy_gate_check.py
+</content>

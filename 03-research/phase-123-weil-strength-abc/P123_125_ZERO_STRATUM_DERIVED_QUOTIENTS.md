@@ -1,6 +1,6 @@
 # P123.125 — Finite projective Cech models for the closed zero-stratum quotients
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY for the common source,
+Status: PROVED-IN-REPOSITORY for the common source,
 coordinate-open arrangements, and the relative exact structure of P123.122.
 The assertion is a derived quotient/localization theorem for that source;
 it does not erase the nonzero closed strata or establish mixed RR.

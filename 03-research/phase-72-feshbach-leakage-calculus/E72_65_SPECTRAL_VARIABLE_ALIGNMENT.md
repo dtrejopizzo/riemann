@@ -1,7 +1,6 @@
 # E72.65 -- Spectral variable alignment for Mellin divisibility
 
-**Date:** 2026-07-08.
-**Role:** remove the notational collision between Mellin exponents and finite CCM spectral variables.
+**Purpose:** remove the notational collision between Mellin exponents and finite CCM spectral variables.
 
 ## 0. The collision
 

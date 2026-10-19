@@ -1,558 +1,563 @@
-# Doc 164 — Importación del teorema de Stone: ¿una evolución unitaria estructural cuyo generador tenga espectro {γ}, con unitariedad RH-libre? ¿O la unitariedad es la métrica de Weil disfrazada?
+# Doc 164 — Importing Stone's theorem: a structural unitary evolution whose generator has spectrum {γ}, with RH-free unitarity? Or is unitarity the Weil metric in disguise?
 
-**Programa:** Hipótesis de Riemann — Phase 53: importación cuántica.
-**Fecha:** junio 2026.
-**Autor:** David Alejandro Trejo Pizzo.
-**Rol del documento:** CONSTRUCTIVO con la GUARDIA DE UNITARIEDAD al frente. Mandato: importar la
-maquinaria de mecánica cuántica matemática (teorema de Stone, autoadjunción esencial, dualidad de
-Fourier posición-momento) para CONSTRUIR el objeto X del cual primos y ceros son dos
-representaciones —por analogía con cómo ψ resolvió la dualidad onda-partícula— o LOCALIZAR con
-precisión la obstrucción. La herramienta central a importar es el **teorema de Stone**: en QM la
-realidad del espectro (autovalores reales) NO sale de una métrica elegida sino de que la evolución
-es UNITARIA (ley de conservación), {U(t)=e^{itH}} grupo ⟺ H autoadjunto ⟺ espec(H)⊂ℝ. Apuesta:
-si {γ} fuera el espectro del generador de una evolución unitaria cuya unitariedad proviene de una
-SIMETRÍA estructural (la ecuación funcional s↔1−s), no de una métrica, entonces RH = "espectro
-real" = automático por Stone, y la métrica donde ζ reentra quedaría reemplazada por una
-conservación estructural.
+**Program:** Riemann Hypothesis — Phase 53: quantum import.
+**Role of the document:** CONSTRUCTIVE with the UNITARITY GUARD at the front. Mandate: import the
+machinery of mathematical quantum mechanics (Stone's theorem, essential self-adjointness, position-
+momentum Fourier duality) to CONSTRUCT the object X of which primes and zeros are two
+representations —by analogy with how ψ resolved wave-particle duality— or to PRECISELY LOCATE the
+obstruction. The central tool to import is **Stone's theorem**: in QM the reality of the spectrum
+(real eigenvalues) does NOT come from a chosen metric but from the evolution being UNITARY
+(a conservation law), {U(t)=e^{itH}} group ⟺ H self-adjoint ⟺ spec(H)⊂ℝ. The bet: if {γ} were the
+spectrum of the generator of a unitary evolution whose unitarity comes from a structural SYMMETRY
+(the functional equation s↔1−s), not from a metric, then RH = "real spectrum" = automatic by Stone,
+and the metric through which ζ re-enters would be replaced by a structural conservation law.
 
-**Contrato de etiquetado (regla absoluta).** **[DEFINICIÓN-NUEVA]** = libertad total.
-**[TEOREMA]/[PROPOSICIÓN]/[LEMA]** = probado de verdad aquí, prueba completa; externos con
-referencia verificable. **[CONSTRUCCIÓN]** = objeto definido con precisión. **[PUENTE]** = conexión
-con estatus franco. **[GAP]/[GAP de literatura]** = declarado; el de literatura NO se usa como
-premisa de ningún teorema. **[DESEO]** = declarado. Jamás se fabrica una prueba de RH ni una falsa
-victoria (DESENLACE A). PERMITIDO (y esperable) terminar en B/C/D. **NADA de numéricos/Python.**
-**Español.** Franqueza absoluta. Una falsa victoria es peor que un fracaso.
+**Labeling contract (absolute rule).** **[NEW-DEFINITION]** = total freedom.
+**[THEOREM]/[PROPOSITION]/[LEMMA]** = genuinely proved here, complete proof; external ones with a
+verifiable reference. **[CONSTRUCTION]** = precisely defined object. **[BRIDGE]** = connection with
+an honest status. **[GAP]/[literature GAP]** = declared; a literature gap is NEVER used as a premise
+of any theorem. **[WISH]** = declared. A proof of RH or a false victory is never fabricated
+(OUTCOME A). PERMITTED (and expected) to end in B/C/D. **NO numerics/Python.**
+**Spanish [translated to English].** Absolute candor. A false victory is worse than a failure.
 
-**Prerrequisitos leídos en fuente esta sesión:** Doc 162 (Phase 52: e-invariante aritmético
-RH-libre, pero ζ reentra en la *clase fundamental del portador* [C_Φ]=Σ_ρ δ_{γ_ρ}; trifurcación de
-D156: (i) Fredholmicidad, (ii) orientación, (iii) escape; Phase 51 tocó (ii), Phase 52 tocó (i)).
-Doc 163 (destructor: un secundario = integral de un relleno del primario; "¿qué es el relleno y con
-qué se integra?"). B3.1 (template universal de Kreĭn ‖K‖≤1; Connes–Consani: espectro de
-ABSORCIÓN sobre el espacio de Sonin, fórmula semilocal). Memoria Phase 26 (κ=2m=neg.ind(H_C) en
-Pontryagin (𝒦,Q); RH ⟺ H_C autoadjunto). Memoria Phase 33 (DBN: Λ=inf{t:T_λ(t)=0}; flujo de
-calor). Memoria Phase 38/45 (P_n = Meixner–Pollaczek, medida dm_∞=|Γ(1/4+is/2)|²ds; criterio de
-momentos). Memoria Phase 49–51 (la métrica canónica porta ζ por partición Bost–Connes; el muro es
-la signatura de inercia, RH-libre la homotopía pura pero no la flecha).
+**Prerequisites read from source this session:** Doc 162 (Phase 52: RH-free arithmetic e-invariant,
+but ζ re-enters in the *fundamental class of the carrier* [C_Φ]=Σ_ρ δ_{γ_ρ}; trifurcation of
+D156: (i) Fredholmness, (ii) orientation, (iii) escape; Phase 51 touched (ii), Phase 52 touched (i)).
+Doc 163 (destructor: a secondary = an integral of a filling of the primary; "what is the filling and
+what is it integrated with?"). B3.1 (universal template of Kreĭn ‖K‖≤1; Connes–Consani: ABSORPTION
+spectrum over the Sonin space, semilocal formula). Phase 26 memory (κ=2m=neg.ind(H_C) in Pontryagin
+(𝒦,Q); RH ⟺ H_C self-adjoint). Phase 33 memory (DBN: Λ=inf{t:T_λ(t)=0}; heat flow). Phase 38/45
+memory (P_n = Meixner–Pollaczek, measure dm_∞=|Γ(1/4+is/2)|²ds; moment criterion). Phase 49–51
+memory (the canonical metric carries ζ via the Bost–Connes partition; the wall is the inertia
+signature, RH-free is the pure homotopy but not the arrow).
 
 ---
 
-## 0. Resumen ejecutivo y veredicto adelantado
+## 0. Executive summary and verdict stated in advance
 
-> **VEREDICTO: DESENLACE B con un fragmento nuevo de D.** La importación de Stone NO da (A): no
-> existe una evolución unitaria estructural cuyo generador tenga espectro {γ} y cuya unitariedad sea
-> RH-libre. La razón es precisa y constituye el aporte del documento: **la unitariedad ES la métrica
-> de Weil disfrazada, pero por un mecanismo que el programa aún no había nombrado con esta nitidez —
-> el "teorema de Stone invertido".** En QM uno tiene el espacio de Hilbert (la métrica) *dado a
-> priori* por la física (probabilidad = ‖ψ‖²), y de la unitariedad deduce espectro real. En RH la
-> dirección está INVERTIDA: no hay métrica dada a priori; lo único dado es la dinámica (el flujo de
-> escala / la ecuación funcional) y el dato espectral {γ}. Para que Stone se aplique hay que EXHIBIR
-> el espacio de Hilbert respecto del cual U(t) es unitario — y exhibirlo *es* construir el producto
-> interno que hace reales los γ, que es exactamente la forma de Weil Q (la métrica que porta ζ,
-> Phase 51). **La simetría funcional s↔1−s sí da una involución unitaria RH-libre (Prop. 164.6) —
-> pero es una unitariedad en el parámetro EQUIVOCADO: conjuga el espectro (γ↦−γ̄ del lado off-line),
-> no lo hace real. La unitariedad estructural disponible (la funcional) no es la que Stone necesita
-> (la del flujo de escala), y la que Stone necesita no es estructural.** Ése es el nodo, y es
-> *distinto* del de Phase 52: Phase 52 ubicó ζ en la clase fundamental del portador; este documento
-> la ubica en **la elección del producto interno que realiza la unitariedad del flujo de escala**, y
-> prueba que la única simetría RH-libre a mano (la funcional) actúa en la dirección de conjugación
-> (γ↦γ̄), no en la de evolución (γ real). El fragmento de D (nuevo): la **discrepancia de los dos
-> grupos de un parámetro** —dilatación (escala, Connes) versus traslación (Fourier/onda)— es ella
-> misma una obstrucción nombrable y no es la dualidad de Phase 52.
+> **VERDICT: OUTCOME B with a new fragment of D.** The Stone import does NOT give (A): there is no
+> structural unitary evolution whose generator has spectrum {γ} and whose unitarity is RH-free. The
+> reason is precise and constitutes the contribution of the document: **unitarity IS the Weil metric
+> in disguise, but via a mechanism the program had not yet named with this clarity — the "inverted
+> Stone theorem".** In QM one has the Hilbert space (the metric) *given a priori* by physics
+> (probability = ‖ψ‖²), and from unitarity one deduces a real spectrum. In RH the direction is
+> INVERTED: there is no metric given a priori; what is given is the dynamics (the scaling flow / the
+> functional equation) and the spectral datum {γ}. For Stone to apply one must EXHIBIT the Hilbert
+> space with respect to which U(t) is unitary — and exhibiting it *is* constructing the inner product
+> that makes the γ real, which is exactly the Weil form Q (the metric that carries ζ, Phase 51).
+> **The functional symmetry s↔1−s does give an RH-free unitary involution (Prop. 164.6) — but it is a
+> unitarity in the WRONG parameter: it conjugates the spectrum (γ↦−γ̄ on the off-line divisor), it
+> does not make it real. The available structural unitarity (the functional one) is not the one Stone
+> needs (that of the scaling flow), and the one Stone needs is not structural.** That is the node, and
+> it is *distinct* from Phase 52's: Phase 52 located ζ in the fundamental class of the carrier; this
+> document locates it in **the choice of inner product that realizes the unitarity of the scaling
+> flow**, and proves that the only RH-free symmetry at hand (the functional one) acts in the direction
+> of conjugation (γ↦γ̄), not in that of evolution (γ real). The new fragment of D: the **discrepancy
+> between the two one-parameter groups** —dilation (scale, Connes) versus translation
+> (Fourier/wave)— is itself a nameable obstruction and is not Phase 52's duality.
 
-**Los tres resultados con etiqueta (adelantados):**
+**The three labeled results (previewed):**
 
-1. **[PROPOSICIÓN 164.4 — el teorema de Stone invertido].** En QM la métrica (‖ψ‖²) es input físico
-   y Stone deduce espectro⊂ℝ. En el problema aritmético la métrica NO es input; el dato es la
-   dinámica de escala θ_λ y el espectro candidato {γ}. Exhibir el espacio de Hilbert que vuelve U(t)
-   unitario es lógicamente equivalente a exhibir el producto interno que vuelve {γ} reales — y ese
-   producto interno, sobre el espacio de clases de adeles, es la forma de Weil Q, que porta ζ. La
-   unitariedad RH-libre del flujo de escala implicaría RH directamente sin contenido nuevo: es la
-   métrica disfrazada. (Probado como implicación lógica; usa el diccionario κ=neg.ind(Q) de Phase 26.)
+1. **[PROPOSITION 164.4 — the inverted Stone theorem].** In QM the metric (‖ψ‖²) is physical input
+   and Stone deduces spectrum⊂ℝ. In the arithmetic problem the metric is NOT input; the datum is the
+   scaling dynamics θ_λ and the candidate spectrum {γ}. Exhibiting the Hilbert space that makes U(t)
+   unitary is logically equivalent to exhibiting the inner product that makes {γ} real — and that
+   inner product, over the adele class space, is the Weil form Q, which carries ζ. RH-free unitarity
+   of the scaling flow would imply RH directly with no new content: it is the metric in disguise.
+   (Proved as a logical implication; uses the κ=neg.ind(Q) dictionary of Phase 26.)
 
-2. **[PROPOSICIÓN 164.6 — la involución funcional es unitaria RH-libre, pero conjuga, no evoluciona].**
-   La ecuación funcional ξ(s)=ξ(1−s) induce una involución J (s↦1−s) que es unitaria respecto del
-   producto interno *natural sin ζ* (el de L² de la recta crítica) y RH-libre. PERO J es una
-   conjugación de carga (γ↦γ̄ sobre el divisor off-line, intercambia ρ↔1−ρ̄), no el generador de la
-   evolución que haría reales los γ. Stone necesita un grupo U(t)=e^{itH} con H el *generador de
-   escala*; la simetría que tenemos gratis es la *reflexión*, que vive en el grupo equivocado
-   (ℤ/2 ⊄ ℝ-flujo). La unitariedad estructural disponible no es la que Stone consume. (Probado: J²=1,
-   J unitaria sin métrica-ζ; la prueba de que no es e^{itH} para el H de escala es por incompatibilidad
-   de espectros, §3.)
+2. **[PROPOSITION 164.6 — the functional involution is RH-free unitary, but conjugates rather than
+   evolves].** The functional equation ξ(s)=ξ(1−s) induces an involution J (s↦1−s) which is unitary
+   with respect to the *ζ-free natural* inner product (that of L² of the critical line) and RH-free.
+   BUT J is a charge conjugation (γ↦γ̄ on the off-line divisor, swaps ρ↔1−ρ̄), not the generator of the
+   evolution that would make the γ real. Stone needs a group U(t)=e^{itH} with H the *scale
+   generator*; the symmetry we have for free is the *reflection*, which lives in the wrong group
+   (ℤ/2 ⊄ ℝ-flow). The available structural unitarity is not the one Stone consumes. (Proved: J²=1,
+   J unitary without the ζ-metric; the proof that it is not e^{itH} for the scale H is by spectral
+   incompatibility, §3.)
 
-3. **[PROPOSICIÓN 164.8 — autoadjunción por la forma falla porque el "potencial" es el contaje de
-   ceros].** Para el candidato natural a operador autoadjunto-por-su-forma con espectro {γ} (un
-   −d²/dx² + V tipo Berry–Keating regularizado, o el H_C de Connes), la condición "V real / forma
-   simétrica manifiesta" no se cumple *por la forma*: las condiciones de borde / el término que fija
-   {γ} exacto codifican ζ (autoadjunción esencial de xp falla — Berry–Keating; el defecto de
-   índice de von Neumann (n₊,n₋) que hay que igualar es el dato que enumera los ceros). No hay forma
-   manifiestamente autoadjunta RH-libre. Reproduce y *localiza* el muro de Berry–Keating: el punto de
-   parada es la igualdad de los índices de deficiencia, y ése es ζ. (Probado el caso xp / esencial
-   autoadjunción; el caso H_C reduce a Phase 26.)
+3. **[PROPOSITION 164.8 — form self-adjointness fails because the "potential" is the zero count].**
+   For the natural candidate for a form-self-adjoint operator with spectrum {γ} (a regularized
+   Berry–Keating-type −d²/dx² + V, or Connes's H_C), the condition "real V / manifestly symmetric
+   form" is not satisfied *by the form*: the boundary conditions / the term that fixes exact {γ}
+   encode ζ (essential self-adjointness of xp fails — Berry–Keating; the von Neumann deficiency index
+   (n₊,n₋) that must be equalized is the datum that enumerates the zeros). There is no manifestly
+   RH-free self-adjoint form. It reproduces and *localizes* the Berry–Keating wall: the stopping point
+   is the equality of the deficiency indices, and that is ζ. (The xp / essential self-adjointness case
+   is proved; the H_C case reduces to Phase 26.)
 
-**Dónde reentra ζ (una frase):** en **la elección del espacio de Hilbert que hace unitario al flujo
-de escala** —que es la forma de Weil Q (Phase 51, métrica con partición ζ)— porque la única simetría
-unitaria RH-libre disponible (la ecuación funcional) actúa como conjugación γ↦γ̄, no como la
-evolución γ∈ℝ que Stone necesita. **Teorema de Stone invertido:** en QM la métrica es dada y el
-espectro real se deduce; aquí el espectro real ES la métrica por deducir.
+**Where ζ re-enters (one sentence):** in **the choice of Hilbert space that makes the scale flow
+unitary** —which is the Weil form Q (Phase 51, a metric carrying a ζ-partition)— because the only
+available RH-free unitary symmetry (the functional equation) acts as conjugation γ↦γ̄, not as the
+evolution γ∈ℝ that Stone needs. **Inverted Stone theorem:** in QM the metric is given and the real
+spectrum is deduced; here the real spectrum IS the metric yet to be deduced.
 
 ---
 
-## 1. El diccionario QM↔RH, preciso
+## 1. The precise QM↔RH dictionary
 
-Fijo el diccionario con el rigor que exige el mandato, y marco en cada fila si el objeto del lado
-derecho es RH-libre o porta ζ. Esto es lo que después auditará la guardia.
+I fix the dictionary with the rigor the mandate demands, marking in each row whether the right-hand
+object is RH-free or carries ζ. This is what the guard will audit afterward.
 
-| QM (conocido, simple) | RH (el objeto X buscado) | Estatus |
+| QM (known, simple) | RH (the object X sought) | Status |
 |---|---|---|
-| Espacio de Hilbert ℋ, ‖ψ‖² = probabilidad | ¿𝒦 = L²(C_ℚ) (clases de adeles, Connes) ó L²(ℝ,dm_∞), dm_∞=\|Γ(1/4+is/2)\|²ds (CCM)? | **el producto interno es el nodo** |
-| Posición x | Lado primos: distribución sobre {log p} (escala logarítmica) | dato "conocido" |
-| Momento p | Lado ceros: distribución sobre {γ_ρ} | dato a determinar |
-| Transformada de Fourier ⟨x\|p⟩=e^{ixp} | **Fórmula explícita de Weil** Σ_ρ ĥ(γ_ρ) = ĥ(±½i) − Σ_p Σ_k (log p)p^{−k/2}h(k log p)+arq. | el "cambio de base" |
-| Función de onda ψ (objeto previo a las dos bases) | **El objeto X** = un vector/estado en 𝒦 cuyas dos representaciones de Fourier son primos y ceros | el grial buscado |
-| Hamiltoniano H, generador de e^{itH} | Generador de la dilatación/escala (Connes H_C; Berry–Keating xp) | autoadjunto ⟺ RH |
-| Evolución unitaria U(t)=e^{itH} | Flujo de escala θ_λ: ξ(v)↦ξ(λ^{−1}v), λ=e^t | **unitariedad = el test** |
-| "Energía" conservada por U(t) | la cantidad cuya conservación da unitariedad: aquí, la *norma de Weil* | **= ζ (Phase 51)** |
-| Espectro(H) ⊂ ℝ (Stone) | {γ_ρ} ⊂ ℝ, i.e. Re ρ = ½ | **= RH** |
-| Realidad del espectro = unitariedad (no métrica) | RH = unitariedad estructural (la apuesta del mandato) | **a decidir aquí** |
+| Hilbert space ℋ, ‖ψ‖² = probability | 𝒦 = L²(C_ℚ) (adele classes, Connes) or L²(ℝ,dm_∞), dm_∞=\|Γ(1/4+is/2)\|²ds (CCM)? | **the inner product is the node** |
+| Position x | Prime side: distribution over {log p} (logarithmic scale) | "known" datum |
+| Momentum p | Zero side: distribution over {γ_ρ} | datum to be determined |
+| Fourier transform ⟨x\|p⟩=e^{ixp} | **Weil's explicit formula** Σ_ρ ĥ(γ_ρ) = ĥ(±½i) − Σ_p Σ_k (log p)p^{−k/2}h(k log p)+arch. | the "change of basis" |
+| Wave function ψ (object prior to the two bases) | **The object X** = a vector/state in 𝒦 whose two Fourier representations are primes and zeros | the sought Grail |
+| Hamiltonian H, generator of e^{itH} | Generator of dilation/scale (Connes's H_C; Berry–Keating's xp) | self-adjoint ⟺ RH |
+| Unitary evolution U(t)=e^{itH} | Scale flow θ_λ: ξ(v)↦ξ(λ^{−1}v), λ=e^t | **unitarity = the test** |
+| "Energy" conserved by U(t) | the quantity whose conservation gives unitarity: here, the *Weil norm* | **= ζ (Phase 51)** |
+| Spectrum(H) ⊂ ℝ (Stone) | {γ_ρ} ⊂ ℝ, i.e. Re ρ = ½ | **= RH** |
+| Reality of the spectrum = unitarity (not metric) | RH = structural unitarity (the mandate's bet) | **to be decided here** |
 
-**Comentario sobre "ψ = el objeto X".** La analogía guía es correcta y profunda: la dualidad
-onda-partícula no se resolvió eligiendo bando, sino exhibiendo ψ con sus dos representaciones de
-Fourier (posición/momento) como bases de un mismo espacio. El análogo aritmético existe y el programa
-lo tiene parcialmente: el **flujo de escala de Connes sobre L²(C_ℚ)** es exactamente una dualidad de
-Fourier (Mellin) entre escala (∼ primos, vía la acción adélica) y frecuencia (∼ ceros, vía el espectro
-del generador de escala). La fórmula explícita ES el cambio de base de Fourier–Mellin. Hasta aquí la
-analogía es *literal*, no metafórica. El problema —que aíslo en §2–§3— no es la falta del objeto X
-(existe: es el espacio de clases de adeles con su flujo de escala), sino **cuál es la "energía"
-conservada que da la unitariedad**, porque ahí es donde el diccionario se rompe.
+**Comment on "ψ = object X".** The guiding analogy is correct and deep: wave-particle duality was
+not resolved by choosing a side, but by exhibiting ψ with its two Fourier representations
+(position/momentum) as bases of the same space. The arithmetic analogue exists and the program has
+it partially: **Connes's scale flow on L²(C_ℚ)** is exactly a Fourier (Mellin) duality between scale
+(∼ primes, via the adelic action) and frequency (∼ zeros, via the spectrum of the scale generator).
+The explicit formula IS the Fourier–Mellin change of basis. Up to this point the analogy is
+*literal*, not metaphorical. The problem —which I isolate in §2–§3— is not the absence of object X
+(it exists: it is the adele class space with its scale flow), but **what is the conserved "energy"
+that gives unitarity**, because that is where the dictionary breaks down.
 
-**[PUENTE 164-A].** El diccionario es franco y casi todo RH-libre EXCEPTO dos casillas, ambas la
-misma: "energía conservada" y "producto interno de ℋ". En QM esas dos casillas vienen gratis de la
-física (probabilidad). En RH son justo lo que falta, y la guardia (§2) muestra que son ζ.
+**[BRIDGE 164-A].** The dictionary is honest and almost entirely RH-free EXCEPT for two cells, both
+the same one: "conserved energy" and "inner product of ℋ". In QM those two cells come free from
+physics (probability). In RH they are exactly what is missing, and the guard (§2) shows they are ζ.
 
 ---
 
-## 2. La importación de Stone y la evolución unitaria candidata
+## 2. Importing Stone and the candidate unitary evolution
 
-### 2.1 El teorema de Stone, exacto (Stone 1932; Reed–Simon I, Thm VIII.7–VIII.8)
+### 2.1 Stone's theorem, exactly (Stone 1932; Reed–Simon I, Thm VIII.7–VIII.8)
 
-**[Recordatorio — teorema de Stone].** Sea ℋ un espacio de Hilbert. Hay una biyección entre:
-(a) grupos de un parámetro fuertemente continuos de operadores unitarios {U(t)}_{t∈ℝ}, U(t+s)=U(t)U(s),
-U(0)=1; y (b) operadores autoadjuntos H (en general no acotados, densamente definidos), vía
-U(t)=e^{itH}, donde H = −i d/dt U(t)|_{t=0} sobre su dominio natural. Corolario inmediato:
-**H autoadjunto ⟹ espec(H) ⊂ ℝ.** Ref.: M.H. Stone, "On one-parameter unitary groups in Hilbert
+**[Reminder — Stone's theorem].** Let ℋ be a Hilbert space. There is a bijection between:
+(a) strongly continuous one-parameter groups of unitary operators {U(t)}_{t∈ℝ}, U(t+s)=U(t)U(s),
+U(0)=1; and (b) self-adjoint operators H (generally unbounded, densely defined), via
+U(t)=e^{itH}, where H = −i d/dt U(t)|_{t=0} on its natural domain. Immediate corollary:
+**H self-adjoint ⟹ spec(H) ⊂ ℝ.** Ref.: M.H. Stone, "On one-parameter unitary groups in Hilbert
 space", *Ann. of Math.* 33 (1932) 643–648; M. Reed, B. Simon, *Methods of Modern Mathematical
-Physics I: Functional Analysis*, Academic Press 1980, Thm VIII.7 (Stone) y VIII.8.
+Physics I: Functional Analysis*, Academic Press 1980, Thm VIII.7 (Stone) and VIII.8.
 
-**El punto físico que el mandato quiere importar (correcto).** En QM la realidad del espectro NO se
-verifica eligiendo una métrica: sale de que U(t) preserva ‖ψ‖² (conservación de probabilidad =
-unitariedad), y ‖ψ‖² es input físico. La realidad del espectro es consecuencia de una **ley de
-conservación**, no de un producto interno impuesto a posteriori. Bellísimo. La pregunta es si esto
-se puede trasplantar.
+**The physical point the mandate wants to import (correct).** In QM the reality of the spectrum is
+NOT verified by choosing a metric: it follows from U(t) preserving ‖ψ‖² (conservation of probability
+= unitarity), and ‖ψ‖² is physical input. The reality of the spectrum is a consequence of a
+**conservation law**, not of an inner product imposed a posteriori. Beautiful. The question is
+whether this can be transplanted.
 
-### 2.2 [CONSTRUCCIÓN] El grupo de un parámetro candidato: el flujo de escala
+### 2.2 [CONSTRUCTION] The candidate one-parameter group: the scale flow
 
-Hay UNA elección natural, no varias, y conviene comprometerse con ella para que la guardia mumuerda
-algo concreto.
+There is ONE natural choice, not several, and it is best to commit to it so the guard has something
+concrete to bite into.
 
-**[CONSTRUCCIÓN — U(t) = flujo de escala].** Sobre ℋ = L²(ℝ₊*, d*λ) (la versión arquimediana, par,
-de Connes–Consani; B3.1 §2) ó sobre L²(C_ℚ) (clases de adeles), defino
+**[CONSTRUCTION — U(t) = scale flow].** On ℋ = L²(ℝ₊*, d*λ) (the archimedean, even,
+Connes–Consani version; B3.1 §2) or on L²(C_ℚ) (adele classes), define
 U(t) ξ(v) = ξ(e^{−t} v), t ∈ ℝ.
-Es un grupo de un parámetro (composición de dilataciones). Su generador formal es
+It is a one-parameter group (composition of dilations). Its formal generator is
 H = −i (v d/dv + ½) = −i d/d(log v) − i/2,
-es decir, en la coordenada logarítmica u = log v, H = −i d/du − i/2 (un operador de
-traslación/momento desplazado). En la representación de Mellin (la transformada de Fourier de este
-flujo), el espectro de H es la recta de frecuencias; el dato espectral aritmético {γ_ρ} aparece como
-las frecuencias donde ζ(½+iγ)=0, vía la fórmula explícita leída como fórmula de traza del flujo (la
-"distribución de Connes"). Esto es exactamente el setup de Connes 1999 y de Berry–Keating (H ∼ xp en
-coordenadas adecuadas: u d/du es xp tras x=u).
+i.e., in the logarithmic coordinate u = log v, H = −i d/du − i/2 (a shifted translation/momentum
+operator). In the Mellin representation (the Fourier transform of this flow), the spectrum of H is
+the frequency line; the arithmetic spectral datum {γ_ρ} appears as the frequencies where
+ζ(½+iγ)=0, via the explicit formula read as a trace formula of the flow (the "Connes distribution").
+This is exactly the Connes 1999 and Berry–Keating setup (H ∼ xp in suitable coordinates: u d/du is
+xp after x=u).
 
-**La "energía" conservada.** Para que U(t) sea unitario sobre ℋ con su d*λ, necesito que d*λ sea
-invariante bajo dilatación — y lo es: d*λ = dλ/λ es la medida de Haar de ℝ₊*. Entonces U(t) es
-unitario y H autoadjunto sobre L²(ℝ₊*,d*λ) **trivialmente**, y su espectro es ℝ entero (es el
-operador de momento en u=log λ). **Pero su espectro es TODA la recta, no {γ_ρ}.** Aquí está el primer
-problema, que anticipa todo: la unitariedad fácil (medida de Haar) da el operador equivocado
-(espectro continuo = ℝ, no los ceros). Para obtener {γ_ρ} como espectro hay que *recortar* el espacio
-(condiciones de borde, proyección de Sonin, espectro de absorción) — y ahí muere la unitariedad fácil.
+**The conserved "energy".** For U(t) to be unitary on ℋ with its d*λ, I need d*λ to be invariant
+under dilation — and it is: d*λ = dλ/λ is the Haar measure of ℝ₊*. Then U(t) is unitary and H
+self-adjoint on L²(ℝ₊*,d*λ) **trivially**, and its spectrum is the whole real line (it is the
+momentum operator in u=log λ). **But its spectrum is the WHOLE line, not {γ_ρ}.** Here is the first
+problem, which anticipates everything: the easy unitarity (Haar measure) gives the wrong operator
+(continuous spectrum = ℝ, not the zeros). To get {γ_ρ} as spectrum one must *trim* the space
+(boundary conditions, Sonin projection, absorption spectrum) — and that is where the easy unitarity
+dies.
 
-### 2.3 [PUENTE 164-B] Tres encarnaciones del mismo flujo, y dónde cada una pone {γ}
+### 2.3 [BRIDGE 164-B] Three incarnations of the same flow, and where each one places {γ}
 
-El programa ya tiene tres versiones de este flujo; las alineo para no reinventar:
+The program already has three versions of this flow; I align them so as not to reinvent:
 
-1. **Berry–Keating xp** (Berry–Keating, "H=xp and the Riemann zeros", en *Supersymmetry and Trace
-   Formulae*, ed. Lerner et al., Kluwer 1999, pp. 355–367; y Berry–Keating, "The Riemann zeros and
-   eigenvalue asymptotics", *SIAM Review* 41 (1999) 236–266). H=xp = ½(xp+px) es simétrico pero **no
-   esencialmente autoadjunto** sobre ℝ₊; da la densidad PROMEDIO de ceros (la cuenta de Riemann–von
-   Mangoldt N(T)∼(T/2π)log(T/2πe)) vía la regla semiclásica de Weyl, pero NO el espectro exacto. Las
-   condiciones de borde / la regularización (Sierra, Connes) que fijarían {γ_ρ} exacto codifican ζ.
+1. **Berry–Keating's xp** (Berry–Keating, "H=xp and the Riemann zeros", in *Supersymmetry and Trace
+   Formulae*, ed. Lerner et al., Kluwer 1999, pp. 355–367; and Berry–Keating, "The Riemann zeros and
+   eigenvalue asymptotics", *SIAM Review* 41 (1999) 236–266). H=xp = ½(xp+px) is symmetric but **not
+   essentially self-adjoint** on ℝ₊; it gives the AVERAGE density of zeros (the Riemann–von Mangoldt
+   count N(T)∼(T/2π)log(T/2πe)) via the semiclassical Weyl rule, but NOT the exact spectrum. The
+   boundary conditions / regularization (Sierra, Connes) that would fix the exact {γ_ρ} encode ζ.
 
 2. **Connes 1999** (A. Connes, "Trace formula in noncommutative geometry and the zeros of the Riemann
-   zeta function", *Selecta Math. (N.S.)* 5 (1999) 29–106). El flujo de escala sobre L²(C_ℚ)/(idele
-   class group). Los ceros aparecen como espectro de **ABSORCIÓN** (huecos en el espectro continuo del
-   flujo, no autovalores de emisión). La fórmula de traza es semilocal y la **positividad de la traza
-   de Weil ⟺ RH** es lo que queda abierto.
+   zeta function", *Selecta Math. (N.S.)* 5 (1999) 29–106). The scale flow on L²(C_ℚ)/(idele class
+   group). The zeros appear as **ABSORPTION** spectrum (gaps in the continuous spectrum of the flow,
+   not emission eigenvalues). The trace formula is semilocal and the **positivity of the Weil
+   trace ⟺ RH** is what remains open.
 
-3. **CCM del programa** (Phase 29–45). Medida dm_∞=|Γ(1/4+is/2)|²ds; polinomios de Meixner–Pollaczek
-   P_n^(λ)(s;φ) como autofunciones de un operador tipo QM (un operador de Jacobi / de creación-
-   aniquilación en esa medida). Aquí el flujo de escala se representa concretamente y la pregunta de
-   autoadjunción se vuelve un problema de momentos (Phase 38: RH ⟺ Δ_n constante).
+3. **CCM of the program** (Phase 29–45). Measure dm_∞=|Γ(1/4+is/2)|²ds; Meixner–Pollaczek polynomials
+   P_n^(λ)(s;φ) as eigenfunctions of a QM-type operator (a Jacobi / creation-annihilation operator in
+   that measure). Here the scale flow is concretely represented and the question of self-adjointness
+   becomes a moment problem (Phase 38: RH ⟺ Δ_n constant).
 
-**Las tres son el MISMO flujo de escala en distintas realizaciones.** Y las tres ponen {γ} no como
-espectro de emisión de un operador autoadjunto manifiesto, sino vía un recorte (borde / absorción /
-medida) que es donde entra ζ. Esto NO es coincidencia; §3 lo prueba.
-
----
-
-## 3. EL TEST DE LA UNITARIEDAD (la guardia, AL FRENTE)
-
-Aplico la guardia sin piedad, como exige el mandato. **Unitario = preserva un producto interno.**
-Pregunta decisiva: *¿la unitariedad de U(t) se establece SIN elegir el producto interno que carga ζ?*
-
-### 3.1 [PROPOSICIÓN 164.4 — el teorema de Stone invertido]
-
-**Enunciado.** Considérese el flujo de escala U(t) (§2.2) como candidato a tener generador H con
-espectro {γ_ρ}. Entonces:
-
-(i) Sobre la medida de Haar d*λ, U(t) es unitario *gratis y RH-libre*, pero espec(H)=ℝ (continuo) —
-el operador equivocado: no ve los ceros.
-
-(ii) Para que espec(H)={γ_ρ} (los ceros como autovalores reales/espectro de emisión), hace falta
-restringir ℋ a un subespacio ℋ_{γ} (condiciones de borde / proyección). U(t) es unitario sobre ℋ_{γ}
-⟺ ℋ_{γ} es U(t)-invariante con el producto interno restringido. **Exhibir ese ℋ_{γ} y certificar la
-unitariedad sobre él es lógicamente equivalente a exhibir el producto interno respecto del cual los
-{γ_ρ} son reales, que es la forma de Weil Q (Phase 26: RH ⟺ Q≥0 ⟺ H_C autoadjunto), la métrica que
-porta ζ (Phase 51).**
-
-(iii) Por tanto: una prueba RH-libre de que U(t) es unitario sobre ℋ_{γ} sería una prueba RH-libre de
-RH sin contenido nuevo. **La unitariedad en el espacio correcto ES la métrica de Weil disfrazada.**
-
-**Prueba.**
-(i) U(t)ξ(v)=ξ(e^{−t}v); ∫|ξ(e^{−t}v)|² dλ/λ = ∫|ξ(w)|² dw/w (cambio w=e^{−t}v, dw/w=dλ/λ invariante
-de Haar) = ‖ξ‖². Luego U(t) unitario, sin usar ζ. H=−i d/du−i/2 (u=log v) es el momento desplazado,
-autoadjunto sobre L²(ℝ,du) por Fourier estándar (Reed–Simon I, VIII); su espectro es ℝ. No hay ceros
-en ningún lado: este H "ve" sólo la estructura de grupo de ℝ₊*, que es RH-libre y por eso *ciega a
-ζ* — exactamente el no-go dinámico N5 de Phase 8 (el flujo solo es aritmético-ciego). ∎(i)
-
-(ii) El espectro de un operador autoadjunto es real *automáticamente*; conversely, dado el conjunto
-{γ_ρ}⊂ℂ que queremos como espectro, "los γ_ρ son reales" NO es un teorema sobre H sino el enunciado
-RH mismo. La única manera de que Stone *fuerce* γ_ρ∈ℝ es que H sea autoadjunto sobre algún ℋ_{γ}. Pero
-H autoadjunto presupone un producto interno ⟨·,·⟩_{ℋ_γ} respecto del cual H=H*. Construir ese
-producto interno sobre el espacio de funciones test del flujo de escala, tal que H_C (el generador de
-Connes) sea simétrico y los autovectores asociados a {γ_ρ} sean ortonormales con norma positiva, es
-*exactamente* construir la forma de Weil Q con Q≥0. Esto es el contenido de Phase 26 (κ=2m=neg.ind(Q);
-RH ⟺ Q≥0 sobre el espacio de Pontryagin (𝒦,Q) ⟺ H_C autoadjunto, no meramente Q-simétrico). Y por
-Phase 51 (D161) toda métrica canónica sobre el espacio de clases de adeles tiene función de partición
-ζ (Bost–Connes): el producto interno que vuelve positiva a Q *es* ζ-portador. ∎(ii)
-
-(iii) Inmediato de (ii): "U(t) unitario sobre ℋ_γ" = "Q≥0" = "H_C autoadjunto" = "espec(H_C)⊂ℝ" =
-RH. Sin contenido extra. ∎
-
-**Interpretación (el aporte conceptual).** En QM el orden lógico es:
-**[métrica física dada] ⟹ [unitariedad] ⟹ [espectro real (Stone)].**
-La métrica (‖ψ‖²) es un AXIOMA de la teoría (regla de Born), no un teorema. Stone convierte
-unitariedad en realidad espectral *gratis* porque la métrica ya estaba puesta. En RH el orden está
-**INVERTIDO**: no hay métrica axiomática; el dato es el flujo (RH-libre, pero ciego a ζ por (i)) y el
-conjunto {γ_ρ}. Lo que en QM es dato (la métrica) es aquí justamente la incógnita, y "espectro real"
-no es la conclusión de Stone sino la hipótesis de partida disfrazada. **Stone no ayuda porque
-importa la conclusión, no la hipótesis: necesitaríamos importar la regla de Born, y la regla de Born
-aritmética es la positividad de Weil = ζ.** Llamo a esto el *teorema de Stone invertido*. Es un modo
-de fallo nuevo respecto de Phase 52 (que ubicó ζ en la clase fundamental del portador): aquí ζ está
-en *el axioma de métrica que QM tiene gratis y la aritmética debe demostrar*.
-
-### 3.2 ¿Y si la unitariedad viene de una SIMETRÍA en vez de una métrica? — la ecuación funcional
-
-Ésta es la jugada precisa que pide el mandato (punto 2–3): que U(t) sea unitario por una **simetría
-estructural RH-libre** (la ecuación funcional s↔1−s) en lugar de una métrica elegida. La examino y la
-mato con cuidado, porque es la mejor esperanza de (A).
-
-### 3.3 [PROPOSICIÓN 164.6 — la involución funcional es unitaria y RH-libre, pero está en el grupo equivocado]
-
-**Enunciado.** La ecuación funcional ξ(s)=ξ(1−s) (ξ = la xi completada, entera, simetría exacta sin
-hipótesis) induce una involución J: s↦1−s sobre el plano s, equivalentemente sobre el eje crítico
-una reflexión. Entonces:
-
-(a) J es **unitaria respecto del producto interno NATURAL sin ζ** (el de L² del eje s con la medida de
-Lebesgue, o el de la realización de de Branges donde la funcional es la regla de simetría), y J²=1.
-Es RH-libre: la ecuación funcional es un teorema incondicional (Riemann 1859; vía la representación
-theta / la simetría de la integral de Mellin de θ). **PASA la guardia: unitariedad sin métrica-ζ.**
-
-(b) PERO J es una **conjugación / reflexión** (un elemento de orden 2, J∈ℤ/2), NO el generador de un
-flujo ℝ. Sobre el divisor off-line, J intercambia ρ↔1−ρ; compuesta con la conjugación compleja c
-(ρ↦ρ̄), genera el grupo de Klein V=⟨J,c⟩ cuyas órbitas libres son los cuádruplos {ρ,1−ρ,ρ̄,1−ρ̄}
-(exactamente el m de Phase 52). La acción de J sobre el espectro candidato {γ} del generador de escala
-es **γ↦−γ** (reflexión del eje imaginario), no "γ real". J conmuta con H_C pero NO ES e^{itH_C} para
-ningún t (es involución, no flujo; su espectro es {±1}, el de H_C es {γ}).
-
-(c) Conclusión: la simetría unitaria RH-libre que tenemos (J, la funcional) vive en el grupo de
-REFLEXIÓN ℤ/2, no en el grupo de EVOLUCIÓN ℝ que Stone consume. Stone necesita unitariedad de
-{e^{itH_C}}_{t∈ℝ} (flujo de escala); la funcional da unitariedad de {1,J} (reflexión). **La
-unitariedad estructural disponible no es la que Stone necesita.** Y la realidad de {γ} (RH) NO es la
-J-invariancia (que es incondicional: J actúa sobre off-line y on-line por igual, no distingue m); es
-la autoadjunción de H_C, que J no da.
-
-**Prueba.**
-(a) La ecuación funcional es ξ(s)=ξ(1−s), ξ entera, demostrada incondicionalmente (la prueba clásica
-vía la transformación modular θ(1/t)=√t θ(t) y la integral de Mellin; Titchmarsh, *The Theory of the
-Riemann Zeta-Function*, 2ª ed. Oxford 1986, §2.6). Sobre el eje crítico s=½+iτ, J: τ↦−τ es la
-reflexión, manifiestamente unitaria en L²(ℝ,dτ) (es f(τ)↦f(−τ), una isometría) y J²=1. Ningún ζ ni
-métrica especial: PASA. ∎(a)
-
-(b) J intercambia el semiplano Re s>½ con Re s<½; sobre un cero off-line ρ=β+iγ con β≠½, Jρ=1−ρ es el
-cero conjugado-por-funcional; junto con c: ρ↦ρ̄ se obtiene la órbita de Klein. El espectro de J como
-operador es {+1,−1} (involución): autoespacios par/impar bajo la reflexión. El espectro de H_C
-(generador de escala) es {γ_ρ} (continuo + absorción, Connes). Un operador con espectro {±1} no puede
-ser e^{itH} con espec(H)={γ_ρ} salvo en casos triviales (requeriría e^{itγ_ρ}∈{±1} ∀ρ, imposible para
-{γ_ρ} denso). Luego J≠e^{itH_C}. Y J conmuta con H_C (ambos respetan la funcional) pero esto sólo dice
-que H_C es J-equivariante, no autoadjunto. ∎(b)
-
-(c) Stone es una biyección {flujos unitarios ℝ}↔{autoadjuntos}. J no es un flujo ℝ (es ℤ/2), así que
-Stone no lo consume: no produce "espec(H_C)⊂ℝ" a partir de J. La realidad de {γ_ρ} (RH) es propiedad
-de H_C (autoadjunción), y J —incondicional, ciego a m por la simetría par/impar— no la implica: J
-está satisfecha tanto si los ceros están en la línea como si están en cuádruplos off-line (los
-cuádruplos son J,c-simétricos por construcción). **J no ve m.** (Esto reencuentra Phase 52 Prop.
-162.9: la funcional fuerza la hiperbolicidad/ceguera; aquí: la funcional es unitaria pero ciega a m.) ∎
-
-**Interpretación (el corazón del veredicto B).** Hay DOS grupos de un parámetro/simetrías en juego y
-NO coinciden:
-- El **flujo de escala** (dilatación, e^{itH_C}, grupo ℝ): su unitariedad daría RH por Stone, pero su
-  unitariedad en el espacio correcto = forma de Weil = ζ (Prop. 164.4). Estructural pero ζ-portador.
-- La **reflexión funcional** (J, grupo ℤ/2): unitaria RH-libre, estructural, pero está en el grupo
-  equivocado y es ciega a m (Prop. 164.6). RH-libre pero impotente.
-
-La esperanza de (A) era que la segunda diera la unitariedad de la primera. NO lo hace: actúa en la
-dirección de conjugación (γ↦−γ, reflexión del eje), no en la dirección de evolución (γ∈ℝ). **La
-unitariedad esquiva la métrica sólo en el parámetro inútil.**
+**All three are the SAME scale flow in different realizations.** And all three place {γ} not as the
+emission spectrum of a manifestly self-adjoint operator, but via a trim (boundary / absorption /
+measure) which is where ζ enters. This is NOT a coincidence; §3 proves it.
 
 ---
 
-## 4. Dónde paran Berry–Keating y Connes, y si Stone toca un punto nuevo
+## 3. THE UNITARITY TEST (the guard, UP FRONT)
 
-### 4.1 Berry–Keating: para en la autoadjunción esencial / las condiciones de borde
+I apply the guard mercilessly, as the mandate requires. **Unitary = preserves an inner product.**
+Decisive question: *is the unitarity of U(t) established WITHOUT choosing the inner product that
+carries ζ?*
 
-**Lo que logran** (Berry–Keating 1999, *SIAM Rev.* 41): H=xp con la regularización semiclásica
-reproduce la densidad promedio de ceros N(T)∼(T/2π)log(T/2πe)−T/2π+… vía la fórmula de Weyl
-(área del espacio de fases bajo las hipérbolas xp=E con cortes ℓ_x,ℓ_p). El número de niveles hasta E
-sale del área (2π)^{−1}∮ = correcto a primer orden.
+### 3.1 [PROPOSITION 164.4 — the inverted Stone theorem]
 
-**Dónde paran (preciso).** xp = ½(xp+px) sobre L²(ℝ₊) es simétrico pero tiene **índices de
-deficiencia (1,1)** (no es esencialmente autoadjunto): la ecuación x f' + ½f = ±i f tiene una solución
-L² en cada signo, f_±(x)=x^{−1/2±i}, ambas en L²(0,1] pero el comportamiento en 0/∞ deja un defecto.
-Hay por tanto una familia U(1) de extensiones autoadjuntas (parametrizada por una fase de borde
-θ∈[0,2π)). **Cada extensión da un espectro discreto distinto; NINGUNA da {γ_ρ} salvo una elección de
-condición de borde que codifica ζ.** El "potencial de borde" que seleccionaría la extensión correcta
-es la fase de ζ en la línea crítica (arg ζ(½+it)) — exactamente el dato que enumera los ceros. Sierra
-y colaboradores (G. Sierra, "The Riemann zeros as spectrum and the Riemann hypothesis", *Symmetry* 11
-(2019) 494; Sierra–Townsend; Berry–Keating "A compact hamiltonian with the same asymptotic mean
-spectral density as the Riemann zeros", *J. Phys. A* 44 (2011) 285203) han construido Hamiltonianos
-xp-modificados (x p en una región, con reflexión) que dan la densidad promedio *exacta* incluso con
-correcciones, pero las fluctuaciones (los γ exactos) requieren un término semiclásico = Σ_p (la suma
-sobre primos) — i.e., el dato de ζ entra como las "órbitas periódicas" del sistema. **El muro de
-Berry–Keating = la elección de extensión autoadjunta / las órbitas periódicas = ζ.**
+**Statement.** Consider the scale flow U(t) (§2.2) as a candidate to have a generator H with
+spectrum {γ_ρ}. Then:
 
-### 4.2 Connes: para en el espectro de absorción y la positividad de la traza
+(i) Under the Haar measure d*λ, U(t) is unitary *for free and RH-free*, but spec(H)=ℝ (continuous) —
+the wrong operator: it does not see the zeros.
 
-**Lo que logran** (Connes 1999, *Selecta* 5). Sobre el espacio de clases de adeles C_ℚ con el flujo de
-escala, los ceros aparecen como espectro de **absorción** (huecos en el espectro continuo), no de
-emisión. La fórmula de traza es semilocal (suma sobre lugares), y vale la identidad de Weil. **El muro:
-la positividad de la distribución de Weil (Tr de Weil ≥0) ⟺ RH** — Connes reduce RH a esa positividad,
-que queda abierta. Connes–Consani (B3.1; 2006, *2006.13771*) refinan: realizan la parte arquimediana
-como traza sobre el espacio de Sonin (cuadrado manifiesto TT*≥0) más un residual ε(ρ), y RH ⟺ el
-residual mantiene el signo. El espacio de Sonin es **zero-independent** (definido por el cutoff de
-fase, funciones prolatas), pero el residual ε *no* lo es.
+(ii) For spec(H)={γ_ρ} (the zeros as real eigenvalues/emission spectrum), ℋ must be restricted to a
+subspace ℋ_{γ} (boundary conditions / projection). U(t) is unitary on ℋ_{γ} ⟺ ℋ_{γ} is U(t)-invariant
+with the restricted inner product. **Exhibiting that ℋ_{γ} and certifying unitarity on it is
+logically equivalent to exhibiting the inner product with respect to which the {γ_ρ} are real, which
+is the Weil form Q (Phase 26: RH ⟺ Q≥0 ⟺ H_C self-adjoint), the metric that carries ζ (Phase 51).**
 
-**Dónde paran (preciso).** El espectro de absorción NO es el espectro de un operador autoadjunto de
-emisión: es la ausencia de algo en un continuo. Stone se aplica al generador del flujo (autoadjunto,
-espectro continuo ℝ), no a la estructura de absorción. La positividad de la traza de Weil = la métrica
-de Weil ≥0 = forma Q≥0 (Phase 26). **El muro de Connes = positividad de la traza = forma de Weil Q≥0 =
-exactamente Prop. 164.4(ii).**
+(iii) Therefore: an RH-free proof that U(t) is unitary on ℋ_{γ} would be an RH-free proof of RH with
+no new content. **Unitarity in the correct space IS the Weil metric in disguise.**
 
-### 4.3 ¿Toca Stone un punto NUEVO, o reproduce su muro?
+**Proof.**
+(i) U(t)ξ(v)=ξ(e^{−t}v); ∫|ξ(e^{−t}v)|² dλ/λ = ∫|ξ(w)|² dw/w (change w=e^{−t}v, dw/w=dλ/λ Haar
+invariant) = ‖ξ‖². Hence U(t) is unitary, without using ζ. H=−i d/du−i/2 (u=log v) is the shifted
+momentum, self-adjoint on L²(ℝ,du) by standard Fourier theory (Reed–Simon I, VIII); its spectrum is
+ℝ. There are no zeros anywhere: this H "sees" only the group structure of ℝ₊*, which is RH-free and
+for that reason *blind to ζ* — exactly the dynamical no-go N5 of Phase 8 (the flow is only
+arithmetic-blind). ∎(i)
 
-**Respuesta: reproduce el muro de Connes (la positividad = métrica = Q), pero lo NOMBRA con una
-estructura nueva (Stone invertido) y descarta limpiamente la ruta de la simetría funcional.** Detalle:
+(ii) The spectrum of a self-adjoint operator is automatically real; conversely, given the set
+{γ_ρ}⊂ℂ we want as spectrum, "the γ_ρ are real" is NOT a theorem about H but RH itself. The only way
+for Stone to *force* γ_ρ∈ℝ is for H to be self-adjoint on some ℋ_{γ}. But H self-adjoint presupposes
+an inner product ⟨·,·⟩_{ℋ_γ} with respect to which H=H*. Constructing that inner product on the space
+of test functions of the scale flow, such that H_C (the Connes generator) is symmetric and the
+eigenvectors associated with {γ_ρ} are orthonormal with positive norm, is *exactly* constructing the
+Weil form Q with Q≥0. This is the content of Phase 26 (κ=2m=neg.ind(Q); RH ⟺ Q≥0 on the Pontryagin
+space (𝒦,Q) ⟺ H_C self-adjoint, not merely Q-symmetric). And by Phase 51 (D161) every canonical
+metric on the adele class space has a ζ partition function (Bost–Connes): the inner product that
+makes Q positive *is* ζ-carrying. ∎(ii)
 
-- Stone *no* toca un punto que Berry–Keating/Connes no tocaran. La positividad de la traza de Weil
-  (Connes) ES "U(t) unitario sobre el espacio correcto" (Prop. 164.4(iii)). El defecto de índices de
-  deficiencia (Berry–Keating) ES "qué extensión autoadjunta = qué producto interno" (Prop. 164.4(ii)).
-  Son la misma cosa. Stone los unifica: ambos son "la métrica que falta".
-- Lo NUEVO de este documento (no de Stone, sino de su importación franca):
-  1. **El diagnóstico Stone-invertido** (Prop. 164.4): explicita POR QUÉ Stone no transfiere —en QM la
-     métrica es axioma (Born), en RH es teorema (positividad de Weil). Esto reordena el muro de Connes
-     como "falta el axioma de Born aritmético", lo cual es más preciso que "falta la positividad".
-  2. **El descarte de la simetría funcional** (Prop. 164.6): la mejor candidata a "unitariedad
-     estructural RH-libre" (la funcional) se prueba que está en el grupo equivocado (ℤ/2 reflexión, no
-     ℝ flujo) y es ciega a m. Esto cierra una ruta que el mandato planteaba como abierta, sin dejarla
-     en [GAP].
-- Stone **NO** reproduce el muro de Phase 52 (la clase fundamental del portador): es un nodo
-  distinto. Phase 52: ζ en el dato de homotopía [C_Φ]=Σδ_{γ_ρ}. Phase 53: ζ en el producto interno
-  que hace unitario el flujo. Ambos son facetas de la trifurcación D156 (i)/(ii), pero la formulación
-  Stone-invertida es genuinamente otra lente.
+(iii) Immediate from (ii): "U(t) unitary on ℋ_γ" = "Q≥0" = "H_C self-adjoint" = "spec(H_C)⊂ℝ" = RH.
+No extra content. ∎
 
----
+**Interpretation (the conceptual contribution).** In QM the logical order is:
+**[physical metric given] ⟹ [unitarity] ⟹ [real spectrum (Stone)].**
+The metric (‖ψ‖²) is an AXIOM of the theory (Born's rule), not a theorem. Stone converts unitarity
+into spectral reality *for free* because the metric was already in place. In RH the order is
+**INVERTED**: there is no axiomatic metric; the given datum is the flow (RH-free, but blind to ζ by
+(i)) and the set {γ_ρ}. What in QM is a datum (the metric) is here exactly the unknown, and "real
+spectrum" is not Stone's conclusion but the disguised starting hypothesis. **Stone does not help
+because it imports the conclusion, not the hypothesis: we would need to import Born's rule, and the
+arithmetic Born rule is Weil positivity = ζ.** I call this the *inverted Stone theorem*. It is a new
+mode of failure relative to Phase 52 (which located ζ in the fundamental class of the carrier): here
+ζ is in *the metric axiom that QM gets for free and arithmetic must prove*.
 
-## 5. ¿Autoadjunción POR LA FORMA? El punto decisivo
+### 3.2 What if unitarity came from a SYMMETRY instead of a metric? — the functional equation
 
-El mandato pregunta lo correcto: en QM −Δ+V es autoadjunto *por su forma* (V real, −Δ semiacotado;
-Reed–Simon II, Thm X.28, Kato–Rellich), y el espectro real es automático sin verificar nada. ¿Hay un
-operador aritmético autoadjunto-por-su-forma con espectro {γ}?
+This is exactly the move the mandate asks for (points 2–3): that U(t) be unitary via an **RH-free
+structural symmetry** (the functional equation s↔1−s) instead of a chosen metric. I examine it and
+carefully kill it, because it is the best hope for (A).
 
-### 5.1 [PROPOSICIÓN 164.8 — no hay forma manifiestamente autoadjunta RH-libre; el "potencial" es ζ]
+### 3.3 [PROPOSITION 164.6 — the functional involution is unitary and RH-free, but is in the wrong group]
 
-**Enunciado.** Para los candidatos naturales a "operador con espectro {γ_ρ} autoadjunto por su forma":
+**Statement.** The functional equation ξ(s)=ξ(1−s) (ξ = the completed, entire xi function, an exact
+symmetry with no hypothesis) induces an involution J: s↦1−s on the s-plane, equivalently a
+reflection on the critical axis. Then:
 
-(a) **Berry–Keating −d²/dx²+V o xp regularizado:** no es autoadjunto por su forma. xp tiene índices de
-deficiencia (1,1) (§4.1); el operador no es semiacotado (su espectro clásico es toda la recta, las
-hipérbolas xp=E cubren E∈ℝ), de modo que la maquinaria Kato–Rellich/forma-cerrada-semiacotada **no
-aplica**. El "potencial" que produciría {γ_ρ} exacto es la condición de borde/órbitas periódicas = ζ.
+(a) J is **unitary with respect to the natural ζ-free inner product** (that of L² of the s-axis with
+Lebesgue measure, or that of the de Branges realization where the functional equation is the
+symmetry rule), and J²=1. It is RH-free: the functional equation is an unconditional theorem
+(Riemann 1859; via the theta representation / the symmetry of θ's Mellin integral). **IT PASSES the
+guard: unitarity without the ζ-metric.**
 
-(b) **Connes H_C (generador de escala):** es autoadjunto sobre L²(Haar) pero con espectro ℝ (ciego a
-ζ, Prop. 164.4(i)); restringido al espacio que da {γ_ρ} (Pontryagin (𝒦,Q)), es Q-simétrico pero
-autoadjunto ⟺ Q≥0 ⟺ RH (Phase 26). El "potencial real" aquí es la positividad de Q = ζ.
+(b) BUT J is a **conjugation/reflection** (an order-2 element, J∈ℤ/2), NOT the generator of an ℝ
+flow. On the off-line divisor, J swaps ρ↔1−ρ; composed with complex conjugation c (ρ↦ρ̄), it
+generates the Klein group V=⟨J,c⟩ whose free orbits are the quadruples {ρ,1−ρ,ρ̄,1−ρ̄} (exactly the m
+of Phase 52). J's action on the candidate spectrum {γ} of the scale generator is **γ↦−γ**
+(reflection of the imaginary axis), not "γ real". J commutes with H_C but is NOT e^{itH_C} for any t
+(it is an involution, not a flow; its spectrum is {±1}, that of H_C is {γ}).
 
-(c) **CCM / Meixner–Pollaczek:** el operador de Jacobi cuyas autofunciones son los P_n^(λ) ES
-autoadjunto sobre L²(dm_∞), dm_∞=|Γ(1/4+is/2)|²ds, *por su forma* (operador de Jacobi con coeficientes
-reales, esencialmente autoadjunto si el problema de momentos es determinado; Phase 38: RH ⟺ Δ_n
-constante). Pero su espectro es el de los P_n (la medida de Meixner–Pollaczek = espectro de un
-operador de creación-aniquilación tipo oscilador), **NO {γ_ρ}** — los γ_ρ entran sólo al *acoplar*
-esta base a ζ vía la condición Δ_n constante, que es ζ. La forma es autoadjunta RH-libre, pero su
-espectro no es el de los ceros; volverlo el de los ceros requiere ζ.
+(c) Conclusion: the RH-free unitary symmetry we have (J, the functional equation) lives in the
+REFLECTION group ℤ/2, not the EVOLUTION group ℝ that Stone consumes. Stone needs unitarity of
+{e^{itH_C}}_{t∈ℝ} (scale flow); the functional equation gives unitarity of {1,J} (reflection). **The
+available structural unitarity is not the one Stone needs.** And the reality of {γ} (RH) is NOT
+J-invariance (which is unconditional: J acts on off-line and on-line alike, it does not distinguish
+m); it is the self-adjointness of H_C, which J does not give.
 
-**Conjunción.** En los tres casos: o bien la forma es autoadjunta RH-libre pero su espectro NO es {γ}
-(b: H_C sobre Haar; c: Meixner–Pollaczek), o bien el espectro sería {γ} pero la forma no es
-autoadjunta-por-construcción y el término que la cerraría es ζ (a: Berry–Keating; b: H_C sobre 𝒦).
-**No existe la combinación deseada (forma manifiestamente autoadjunta RH-libre CON espectro {γ}).** El
-"potencial V" que produce {γ} es real ⟺ RH: ζ está en el potencial. Es el mismo muro.
+**Proof.**
+(a) The functional equation is ξ(s)=ξ(1−s), ξ entire, proved unconditionally (the classical proof via
+the modular transformation θ(1/t)=√t θ(t) and the Mellin integral; Titchmarsh, *The Theory of the
+Riemann Zeta-Function*, 2nd ed. Oxford 1986, §2.6). On the critical line s=½+iτ, J: τ↦−τ is the
+reflection, manifestly unitary in L²(ℝ,dτ) (it is f(τ)↦f(−τ), an isometry) and J²=1. No ζ, no special
+metric: IT PASSES. ∎(a)
 
-**Prueba.**
-(a) Índices (1,1) de xp: §4.1, la ecuación de deficiencia (x∂_x+½∓i)f=0 da f=x^{−1/2±i}∈L²(0,1] pero
-la simetría requiere igualar dos extensiones; el operador no es semiacotado (espectro clásico ℝ), luego
-los criterios de forma semiacotada (Reed–Simon II X.23, KLMN) no se aplican: no hay forma cerrada
-inferiormente acotada cuyo operador asociado sea xp. La autoadjunción, si se logra, es por elección de
-extensión, no por la forma. ∎(a)
+(b) J swaps the half-plane Re s>½ with Re s<½; on an off-line zero ρ=β+iγ with β≠½, Jρ=1−ρ is the
+functional-conjugate zero; together with c: ρ↦ρ̄ one obtains the Klein orbit. The spectrum of J as an
+operator is {+1,−1} (involution): even/odd eigenspaces under the reflection. The spectrum of H_C
+(scale generator) is {γ_ρ} (continuous + absorption, Connes). An operator with spectrum {±1} cannot
+be e^{itH} with spec(H)={γ_ρ} except in trivial cases (it would require e^{itγ_ρ}∈{±1} ∀ρ, impossible
+for a dense {γ_ρ}). Hence J≠e^{itH_C}. And J commutes with H_C (both respect the functional equation)
+but this only says that H_C is J-equivariant, not self-adjoint. ∎(b)
 
-(b) H_C sobre L²(Haar): autoadjunto, espectro ℝ (Prop. 164.4(i)). Sobre (𝒦,Q): Phase 26, H_C es
-Q-simétrico; autoadjunto en el sentido de Pontryagin ⟺ neg.ind(Q)=0 ⟺ κ=0 ⟺ m=0 ⟺ RH. La "realidad
-del potencial" = positividad de Q. ∎(b)
+(c) Stone is a bijection {unitary ℝ-flows}↔{self-adjoint operators}. J is not an ℝ-flow (it is ℤ/2),
+so Stone does not consume it: it does not produce "spec(H_C)⊂ℝ" from J. The reality of {γ_ρ} (RH) is
+a property of H_C (self-adjointness), and J —unconditional, blind to m by the even/odd symmetry— does
+not imply it: J is satisfied whether the zeros are on the line or in off-line quadruples (the
+quadruples are J,c-symmetric by construction). **J does not see m.** (This recovers Phase 52 Prop.
+162.9: the functional equation forces hyperbolicity/blindness; here: the functional equation is
+unitary but blind to m.) ∎
 
-(c) El operador de Jacobi J_MP con coeficientes a_n,b_n reales (los de la relación de recurrencia de
-Meixner–Pollaczek) es esencialmente autoadjunto sobre los polinomios densos en L²(dm_∞) sii el
-problema de momentos de dm_∞ es determinado (Akhiezer, *The Classical Moment Problem*, Oliver & Boyd
-1965, cap. 1–2; dm_∞ es determinado, decaimiento |Γ|² exponencial). Su espectro = soporte de dm_∞ =
-ℝ (los P_n son ortogonales en toda la recta). Ése NO es {γ_ρ}: es el espectro del oscilador de
-Meixner–Pollaczek (continuo absolutamente continuo), no los ceros discretos. La conexión con ζ es la
-fórmula de momentos / la condición Δ_n=const (Phase 38), que es donde entra ζ. La forma autoadjunta es
-RH-libre pero "su V" no es el de los ceros. ∎(c) ∎
+**Interpretation (the heart of verdict B).** There are TWO one-parameter groups/symmetries in play
+and they do NOT coincide:
+- The **scale flow** (dilation, e^{itH_C}, group ℝ): its unitarity would give RH by Stone, but its
+  unitarity in the correct space = Weil form = ζ (Prop. 164.4). Structural but ζ-carrying.
+- The **functional reflection** (J, group ℤ/2): RH-free unitary, structural, but in the wrong group
+  and blind to m (Prop. 164.6). RH-free but powerless.
 
-**Interpretación.** Éste es el test decisivo del mandato y su resultado es nítido: **autoadjunción
-por la forma SÍ existe (Meixner–Pollaczek, H_C sobre Haar) pero con el espectro equivocado; el
-espectro {γ} SÍ se puede pedir pero entonces la forma no es autoadjunta-por-sí-misma.** Las dos
-propiedades deseadas son mutuamente excluyentes sin ζ. El potencial real ⟺ RH. No hay grial.
-
----
-
-## 6. Veredicto franco (A/B/C/D) y el GAP central
-
-**VEREDICTO: B (la unitariedad/autoadjunción es la métrica de Weil disfrazada, nodo localizado) con
-un fragmento nuevo de D (la discrepancia de los dos grupos de un parámetro).** NO es A: no construí una
-evolución unitaria estructural con espectro {γ} y unitariedad RH-libre, y desconfiaba de A con razón.
-NO es A disfrazado.
-
-**Lo que SÍ se estableció (genuino):**
-- El diccionario QM↔RH preciso (§1), con las únicas dos casillas no-RH-libres aisladas: "energía
-  conservada" y "producto interno", que son la misma y son ζ.
-- **El teorema de Stone invertido** (Prop. 164.4): en QM la métrica es axioma (Born) y Stone da
-  espectro real gratis; en RH la métrica es teorema (positividad de Weil), Stone importa la conclusión
-  no la hipótesis, y "U(t) unitario en el espacio correcto" = Q≥0 = RH. Modo de fallo nuevo respecto
-  de Phase 52.
-- **El descarte de la simetría funcional** (Prop. 164.6): la mejor candidata a unitariedad estructural
-  RH-libre (la ecuación funcional J) ES unitaria y RH-libre, PERO vive en el grupo de reflexión ℤ/2,
-  no en el flujo ℝ que Stone consume, y es ciega a m (γ↦−γ, conjugación, no γ∈ℝ, evolución). Ruta
-  cerrada, no dejada en GAP.
-- **No hay autoadjunción por la forma RH-libre con espectro {γ}** (Prop. 164.8): existe forma
-  autoadjunta (Meixner–Pollaczek, H_C/Haar) con espectro equivocado, o espectro {γ} con forma no
-  autoadjunta-por-sí (Berry–Keating, H_C/𝒦); las dos no coexisten sin ζ. El potencial real ⟺ RH.
-
-**Dónde reentra ζ (preciso, y por qué es NUEVO).** NO en la clase fundamental del portador (Phase 52),
-NO en la orientación modular (Phase 51). Reentra en **el producto interno que vuelve unitario el flujo
-de escala** = la forma de Weil Q = la "regla de Born aritmética". El mecanismo nuevo: la dirección
-lógica de Stone está INVERTIDA respecto de QM. En QM la métrica es el axioma de partida; en RH es la
-incógnita de llegada. La única simetría unitaria RH-libre disponible (la funcional) está en el grupo
-equivocado.
-
-**El GAP central / fragmento de D (nombrado y nuevo).**
-
-> **[GAP/DESEO 164.D — la discrepancia de los dos grupos de un parámetro].** El programa tiene dos
-> simetrías unitarias: la **dilatación** (flujo de escala, grupo ℝ, e^{itH_C}, generador con espectro
-> {γ} pero unitariedad=ζ) y la **reflexión funcional** (J, grupo ℤ/2, unitaria RH-libre pero ciega a
-> m). La obstrucción a (A) es que estos dos grupos NO se combinan en un único grupo de un parámetro
-> cuya unitariedad sea simultáneamente estructural (de J) y evolutiva (de H_C). En QM esto sí pasa: la
-> reflexión de paridad y la evolución temporal son ambas unitarias respecto de la MISMA métrica de
-> Born, y conmutan dando un grupo más grande (ℝ⋊ℤ/2). El [GAP] es: **¿existe una métrica RH-libre
-> respecto de la cual TANTO J COMO el flujo de escala sean unitarios, de modo que la J-invariancia
-> (RH-libre) propague a la realidad del espectro de H_C (RH)?** En QM la propagación es trivial (una
-> sola métrica). Aquí, J es unitaria respecto de la métrica de Lebesgue/de Branges (RH-libre) y H_C es
-> unitario respecto de la métrica de Weil Q (ζ); que sean la MISMA métrica es exactamente RH (Phase 26:
-> Q≥0 = realidad de {γ}). Este GAP es distinto de la "hebra diofántica" (GAP-157.A) y de la "dualidad"
-> (Phase 52): es la **no-compatibilidad de las dos métricas naturales (reflexión vs. evolución)**, y
-> es, creo, una formulación nueva del muro: *RH ⟺ la métrica de la reflexión funcional = la métrica de
-> la evolución de escala.* No tengo prueba de que esta reformulación sea más tratable; la dejo como
-> [GAP central], francamente, porque podría ser circular (la igualdad de métricas ES Q≥0). Pero la
-> *forma* —"unificar dos grupos de un parámetro en una métrica común"— es un problema de física
-> matemática estándar (representaciones del grupo de Galilei/Poincaré: una métrica, varios generadores)
-> y nombra el muro en lenguaje de teoría de representaciones, que el programa no había usado.
-
-**Síntesis estratégica (lo nuevo de verdad).** El programa creía haber aislado el muro en la
-*métrica de lectura de inercia* (Phase 51) y luego en la *clase fundamental del portador* (Phase 52).
-Este documento muestra que la importación de Stone —la herramienta de QM que da realidad espectral
-gratis— **no transfiere, porque transfiere la conclusión y no la hipótesis**: QM tiene la métrica
-gratis (Born) y RH debe demostrarla (positividad de Weil). La simetría funcional, que parecía la vía
-de escape (unitariedad por simetría, no por métrica), es unitaria y RH-libre pero en el grupo
-equivocado (reflexión ℤ/2, no evolución ℝ) y ciega a m. El muro se reubica con precisión: **RH ⟺ la
-métrica que vuelve unitaria la reflexión funcional coincide con la que vuelve unitaria la evolución de
-escala** (GAP 164.D). No es A; es B con un GAP de tipo D formulado en teoría de representaciones,
-distinto de los GAPs previos del programa. La unitariedad NO esquiva la métrica: en el parámetro útil
-(el flujo de escala) la unitariedad ES la métrica de Weil; en el parámetro RH-libre (la funcional) la
-unitariedad existe pero no toca m.
+The hope for (A) was that the second would give the unitarity of the first. It does NOT: it acts in
+the direction of conjugation (γ↦−γ, axis reflection), not in the direction of evolution (γ∈ℝ). **The
+unitarity escapes the metric only in the useless parameter.**
 
 ---
 
-## 7. Apéndice: tabla de etiquetas (auditoría interna) y test de unitariedad por paso
+## 4. Where Berry–Keating and Connes stop, and whether Stone touches a new point
 
-### 7.1 Etiquetas
+### 4.1 Berry–Keating: it stops at essential self-adjointness / boundary conditions
 
-| Etiqueta | Enunciado | Estatus |
+**What they achieve** (Berry–Keating 1999, *SIAM Rev.* 41): H=xp with the semiclassical
+regularization reproduces the average density of zeros N(T)∼(T/2π)log(T/2πe)−T/2π+… via Weyl's
+formula (phase-space area under the hyperbolas xp=E with cutoffs ℓ_x,ℓ_p). The number of levels up to
+E comes out of the area (2π)^{−1}∮ = correct to first order.
+
+**Where they stop (precisely).** xp = ½(xp+px) on L²(ℝ₊) is symmetric but has **deficiency indices
+(1,1)** (it is not essentially self-adjoint): the equation x f' + ½f = ±i f has an L² solution for
+each sign, f_±(x)=x^{−1/2±i}, both in L²(0,1] but the behavior at 0/∞ leaves a defect. There is
+therefore a U(1) family of self-adjoint extensions (parametrized by a boundary phase θ∈[0,2π)).
+**Each extension gives a distinct discrete spectrum; NONE gives {γ_ρ} except for a choice of boundary
+condition that encodes ζ.** The "boundary potential" that would select the correct extension is the
+phase of ζ on the critical line (arg ζ(½+it)) — exactly the datum that enumerates the zeros. Sierra
+and collaborators (G. Sierra, "The Riemann zeros as spectrum and the Riemann hypothesis", *Symmetry*
+11 (2019) 494; Sierra–Townsend; Berry–Keating "A compact hamiltonian with the same asymptotic mean
+spectral density as the Riemann zeros", *J. Phys. A* 44 (2011) 285203) have built modified
+xp-Hamiltonians (xp in one region, with reflection) that give the *exact* average density even with
+corrections, but the fluctuations (the exact γ) require a semiclassical term = Σ_p (the sum over
+primes) — i.e., the ζ datum enters as the "periodic orbits" of the system. **The Berry–Keating wall =
+the choice of self-adjoint extension / the periodic orbits = ζ.**
+
+### 4.2 Connes: it stops at the absorption spectrum and the positivity of the trace
+
+**What they achieve** (Connes 1999, *Selecta* 5). Over the adele class space C_ℚ with the scale flow,
+the zeros appear as **absorption** spectrum (gaps in the continuous spectrum), not as emission. The
+trace formula is semilocal (a sum over places), and the Weil identity holds. **The wall: the
+positivity of the Weil distribution (Weil trace ≥0) ⟺ RH** — Connes reduces RH to that positivity,
+which remains open. Connes–Consani (B3.1; 2006, *2006.13771*) refine this: they realize the
+archimedean part as a trace over the Sonin space (manifest square TT*≥0) plus a residual ε(ρ), and
+RH ⟺ the residual keeps its sign. The Sonin space is **zero-independent** (defined by the phase
+cutoff, prolate functions), but the residual ε is *not*.
+
+**Where they stop (precisely).** The absorption spectrum is NOT the spectrum of a self-adjoint
+emission operator: it is the absence of something in a continuum. Stone applies to the flow's
+generator (self-adjoint, continuous spectrum ℝ), not to the absorption structure. The positivity of
+the Weil trace = the Weil metric ≥0 = form Q≥0 (Phase 26). **The Connes wall = positivity of the
+trace = Weil form Q≥0 = exactly Prop. 164.4(ii).**
+
+### 4.3 Does Stone touch a NEW point, or does it reproduce its wall?
+
+**Answer: it reproduces the Connes wall (positivity = metric = Q), but it NAMES it with a new
+structure (inverted Stone) and cleanly discards the functional-symmetry route.** Detail:
+
+- Stone does *not* touch a point that Berry–Keating/Connes did not touch. The positivity of the Weil
+  trace (Connes) IS "U(t) unitary on the correct space" (Prop. 164.4(iii)). The deficiency-index
+  defect (Berry–Keating) IS "which self-adjoint extension = which inner product" (Prop. 164.4(ii)).
+  They are the same thing. Stone unifies them: both are "the missing metric".
+- What is NEW in this document (not from Stone, but from its honest import):
+  1. **The inverted-Stone diagnosis** (Prop. 164.4): it makes explicit WHY Stone does not transfer
+     —in QM the metric is an axiom (Born), in RH it is a theorem (Weil positivity). This reorders the
+     Connes wall as "the arithmetic Born axiom is missing", which is more precise than "positivity is
+     missing".
+  2. **The discarding of the functional symmetry** (Prop. 164.6): the best candidate for "RH-free
+     structural unitarity" (the functional equation) is proved to be in the wrong group (ℤ/2
+     reflection, not ℝ flow) and blind to m. This closes a route the mandate posed as open, without
+     leaving it in [GAP].
+- Stone does **NOT** reproduce the Phase 52 wall (the fundamental class of the carrier): it is a
+  distinct node. Phase 52: ζ in the homotopy datum [C_Φ]=Σδ_{γ_ρ}. Phase 53: ζ in the inner product
+  that makes the flow unitary. Both are facets of the D156 trifurcation (i)/(ii), but the
+  inverted-Stone formulation is genuinely another lens.
+
+---
+
+## 5. Form self-adjointness? The decisive point
+
+The mandate asks the right question: in QM −Δ+V is self-adjoint *by its form* (V real, −Δ semi-
+bounded; Reed–Simon II, Thm X.28, Kato–Rellich), and the real spectrum follows automatically without
+checking anything. Is there an arithmetic form-self-adjoint operator with spectrum {γ}?
+
+### 5.1 [PROPOSITION 164.8 — there is no manifestly RH-free self-adjoint form; the "potential" is ζ]
+
+**Statement.** For the natural candidates for "an operator with spectrum {γ_ρ} self-adjoint by its
+form":
+
+(a) **Berry–Keating's regularized −d²/dx²+V or xp:** it is not self-adjoint by its form. xp has
+deficiency indices (1,1) (§4.1); the operator is not semi-bounded (its classical spectrum is the
+whole line, the hyperbolas xp=E cover E∈ℝ), so the Kato–Rellich/closed-semi-bounded-form machinery
+**does not apply**. The "potential" that would produce exact {γ_ρ} is the boundary condition/periodic
+orbits = ζ.
+
+(b) **Connes's H_C (scale generator):** it is self-adjoint on L²(Haar) but with spectrum ℝ (blind to
+ζ, Prop. 164.4(i)); restricted to the space that gives {γ_ρ} (Pontryagin (𝒦,Q)), it is Q-symmetric
+but self-adjoint ⟺ Q≥0 ⟺ RH (Phase 26). The "real potential" here is the positivity of Q = ζ.
+
+(c) **CCM / Meixner–Pollaczek:** the Jacobi operator whose eigenfunctions are the P_n^(λ) IS
+self-adjoint on L²(dm_∞), dm_∞=|Γ(1/4+is/2)|²ds, *by its form* (Jacobi operator with real
+coefficients, essentially self-adjoint if the moment problem is determined; Phase 38: RH ⟺ Δ_n
+constant). But its spectrum is that of the P_n (the Meixner–Pollaczek measure = spectrum of an
+oscillator-type creation-annihilation operator), **NOT {γ_ρ}** — the γ_ρ enter only when *coupling*
+this basis to ζ via the Δ_n-constant condition, which is ζ. The form is RH-free self-adjoint, but its
+spectrum is not that of the zeros; turning it into that of the zeros requires ζ.
+
+**Conjunction.** In all three cases: either the form is RH-free self-adjoint but its spectrum is NOT
+{γ} (b: H_C on Haar; c: Meixner–Pollaczek), or the spectrum would be {γ} but the form is not
+self-adjoint by construction and the term that would close it is ζ (a: Berry–Keating; b: H_C on 𝒦).
+**The desired combination (manifestly RH-free self-adjoint form WITH spectrum {γ}) does not exist.**
+The "potential V" that produces {γ} is real ⟺ RH: ζ is in the potential. It is the same wall.
+
+**Proof.**
+(a) Deficiency indices (1,1) of xp: §4.1, the deficiency equation (x∂_x+½∓i)f=0 gives
+f=x^{−1/2±i}∈L²(0,1] but symmetry requires equating two extensions; the operator is not semi-bounded
+(classical spectrum ℝ), so the semi-bounded-form criteria (Reed–Simon II X.23, KLMN) do not apply:
+there is no closed, lower-semi-bounded form whose associated operator is xp. Self-adjointness, if
+achieved, is by choice of extension, not by the form. ∎(a)
+
+(b) H_C on L²(Haar): self-adjoint, spectrum ℝ (Prop. 164.4(i)). On (𝒦,Q): Phase 26, H_C is
+Q-symmetric; self-adjoint in the Pontryagin sense ⟺ neg.ind(Q)=0 ⟺ κ=0 ⟺ m=0 ⟺ RH. "Reality of the
+potential" = positivity of Q. ∎(b)
+
+(c) The Jacobi operator J_MP with real coefficients a_n,b_n (those of the Meixner–Pollaczek
+recurrence relation) is essentially self-adjoint on the polynomials dense in L²(dm_∞) iff the moment
+problem of dm_∞ is determined (Akhiezer, *The Classical Moment Problem*, Oliver & Boyd 1965, chap.
+1–2; dm_∞ is determined, exponential |Γ|² decay). Its spectrum = support of dm_∞ = ℝ (the P_n are
+orthogonal over the whole line). That is NOT {γ_ρ}: it is the spectrum of the Meixner–Pollaczek
+oscillator (continuous absolutely continuous spectrum), not the discrete zeros. The connection with ζ
+is the moment formula / the condition Δ_n=const (Phase 38), which is where ζ enters. The
+self-adjoint form is RH-free but "its V" is not that of the zeros. ∎(c) ∎
+
+**Interpretation.** This is the mandate's decisive test and its result is clean: **form
+self-adjointness DOES exist (Meixner–Pollaczek, H_C on Haar) but with the wrong spectrum; the
+spectrum {γ} CAN be requested but then the form is not self-adjoint by itself.** The two desired
+properties are mutually exclusive without ζ. The real potential ⟺ RH. There is no Grail.
+
+---
+
+## 6. Honest verdict (A/B/C/D) and the central GAP
+
+**VERDICT: B (unitarity/self-adjointness is the Weil metric in disguise, localized node) with a new
+fragment of D (the discrepancy between the two one-parameter groups).** It is NOT A: I did not
+construct a structural unitary evolution with spectrum {γ} and RH-free unitarity, and I was rightly
+suspicious of A. It is NOT disguised A.
+
+**What WAS genuinely established:**
+- The precise QM↔RH dictionary (§1), with the only two non-RH-free cells isolated: "conserved
+  energy" and "inner product", which are the same thing and are ζ.
+- **The inverted Stone theorem** (Prop. 164.4): in QM the metric is an axiom (Born) and Stone gives
+  the real spectrum for free; in RH the metric is a theorem (Weil positivity), Stone imports the
+  conclusion not the hypothesis, and "U(t) unitary in the correct space" = Q≥0 = RH. A new failure
+  mode relative to Phase 52.
+- **The discarding of the functional symmetry** (Prop. 164.6): the best candidate for RH-free
+  structural unitarity (the functional equation J) IS unitary and RH-free, BUT it lives in the
+  reflection group ℤ/2, not the ℝ flow that Stone consumes, and it is blind to m (γ↦−γ, conjugation,
+  not γ∈ℝ, evolution). Route closed, not left as a GAP.
+- **No RH-free form self-adjointness with spectrum {γ}** (Prop. 164.8): there exists a self-adjoint
+  form (Meixner–Pollaczek, H_C/Haar) with the wrong spectrum, or spectrum {γ} with a form that is not
+  self-adjoint by itself (Berry–Keating, H_C/𝒦); the two do not coexist without ζ. The real potential
+  ⟺ RH.
+
+**Where ζ re-enters (precise, and why it is NEW).** NOT in the fundamental class of the carrier
+(Phase 52), NOT in the modular orientation (Phase 51). It re-enters in **the inner product that makes
+the scale flow unitary** = the Weil form Q = the "arithmetic Born rule". The new mechanism: Stone's
+logical direction is INVERTED relative to QM. In QM the metric is the starting axiom; in RH it is the
+arrival unknown. The only available RH-free unitary symmetry (the functional equation) is in the
+wrong group.
+
+**The central GAP / fragment of D (named and new).**
+
+> **[GAP/WISH 164.D — the discrepancy between the two one-parameter groups].** The program has two
+> unitary symmetries: **dilation** (scale flow, group ℝ, e^{itH_C}, generator with spectrum {γ} but
+> unitarity=ζ) and the **functional reflection** (J, group ℤ/2, RH-free unitary but blind to m). The
+> obstruction to (A) is that these two groups do NOT combine into a single one-parameter group whose
+> unitarity is simultaneously structural (from J) and evolutionary (from H_C). In QM this does happen:
+> parity reflection and time evolution are both unitary with respect to the SAME Born metric, and they
+> commute, giving a larger group (ℝ⋊ℤ/2). The [GAP] is: **does there exist an RH-free metric with
+> respect to which BOTH J AND the scale flow are unitary, so that J-invariance (RH-free) propagates
+> to the reality of H_C's spectrum (RH)?** In QM the propagation is trivial (a single metric). Here, J
+> is unitary with respect to the Lebesgue/de Branges metric (RH-free) and H_C is unitary with respect
+> to the Weil metric Q (ζ); their being the SAME metric is exactly RH (Phase 26: Q≥0 = reality of
+> {γ}). This GAP is distinct from the "Diophantine thread" (GAP-157.A) and from "duality" (Phase 52):
+> it is the **incompatibility of the two natural metrics (reflection vs. evolution)**, and it is, I
+> believe, a new formulation of the wall: *RH ⟺ the metric of the functional reflection = the metric
+> of the scale evolution.* I have no proof that this reformulation is more tractable; I leave it as a
+> [central GAP], honestly, because it could be circular (the equality of metrics IS Q≥0). But the
+> *form* —"unifying two one-parameter groups in a common metric"— is a standard problem in
+> mathematical physics (representations of the Galilei/Poincaré group: one metric, several
+> generators) and it names the wall in representation-theory language, which the program had not used.
+
+**Strategic synthesis (what is genuinely new).** The program believed it had isolated the wall in the
+*inertia-reading metric* (Phase 51) and then in the *fundamental class of the carrier* (Phase 52).
+This document shows that importing Stone —the QM tool that gives spectral reality for free— **does
+not transfer, because it transfers the conclusion and not the hypothesis**: QM has the metric for
+free (Born) and RH must prove it (Weil positivity). The functional symmetry, which seemed to be the
+way out (unitarity by symmetry, not by metric), is unitary and RH-free but in the wrong group
+(ℤ/2 reflection, not ℝ evolution) and blind to m. The wall is relocated with precision: **RH ⟺ the
+metric that makes the functional reflection unitary coincides with the one that makes the scale
+evolution unitary** (GAP 164.D). It is not A; it is B with a D-type GAP formulated in representation
+theory, distinct from the program's previous GAPs. Unitarity does NOT escape the metric: in the
+useful parameter (the scale flow) unitarity IS the Weil metric; in the RH-free parameter (the
+functional equation) unitarity exists but does not touch m.
+
+---
+
+## 7. Appendix: label table (internal audit) and step-by-step unitarity test
+
+### 7.1 Labels
+
+| Label | Statement | Status |
 |---|---|---|
-| §1 Diccionario QM↔RH | mapa preciso, dos casillas no-RH-libres | **establecido** (PUENTE 164-A) |
-| [CONSTRUCCIÓN] U(t) flujo de escala (§2.2) | grupo de dilataciones, H_C generador | definido; espectro Haar = ℝ (ciego), espectro {γ} requiere recorte |
-| [PROP 164.4] Stone invertido | unitariedad en el espacio correcto = Q≥0 = RH | **probado** (implicación lógica vía Phase 26/51) |
-| [PROP 164.6] funcional unitaria RH-libre pero grupo equivocado | J∈ℤ/2 reflexión, ciega a m, ≠e^{itH_C} | **probado** (J²=1, espectros incompatibles, ceguera a m) |
-| §4 Berry–Keating/Connes | paran en deficiencia (1,1)/borde y en positividad de traza=Q | **localizado** (con refs) |
-| [PROP 164.8] no hay forma autoadjunta RH-libre con espectro {γ} | forma OK ⟹ espectro≠{γ}; espectro={γ} ⟹ forma no autoadj. sin ζ | **probado** (xp deficiencia; H_C; Meixner–Pollaczek momentos) |
-| [GAP/DESEO 164.D] dos grupos de un parámetro | RH ⟺ métrica(reflexión)=métrica(evolución) | **GAP central, nuevo, no probado; posible circularidad declarada** |
+| §1 QM↔RH dictionary | precise map, two non-RH-free cells | **established** (BRIDGE 164-A) |
+| [CONSTRUCTION] U(t) scale flow (§2.2) | dilation group, generator H_C | defined; Haar spectrum = ℝ (blind), spectrum {γ} requires trimming |
+| [PROP 164.4] inverted Stone | unitarity in the correct space = Q≥0 = RH | **proved** (logical implication via Phase 26/51) |
+| [PROP 164.6] functional-equation unitary RH-free but wrong group | J∈ℤ/2 reflection, blind to m, ≠e^{itH_C} | **proved** (J²=1, incompatible spectra, blindness to m) |
+| §4 Berry–Keating/Connes | stop at deficiency (1,1)/boundary and at trace positivity=Q | **localized** (with refs) |
+| [PROP 164.8] no RH-free self-adjoint form with spectrum {γ} | form OK ⟹ spectrum≠{γ}; spectrum={γ} ⟹ form not self-adjoint without ζ | **proved** (xp deficiency; H_C; Meixner–Pollaczek moments) |
+| [GAP/WISH 164.D] two one-parameter groups | RH ⟺ metric(reflection)=metric(evolution) | **central GAP, new, unproved; possible circularity declared** |
 
-### 7.2 El test de unitariedad, paso a paso (la guardia)
+### 7.2 The unitarity test, step by step (the guard)
 
-| Paso | ¿Unitariedad usa métrica-ζ? | Veredicto |
+| Step | Does unitarity use the ζ-metric? | Verdict |
 |---|---|---|
-| U(t) sobre L²(Haar) (§2.2) | No (Haar es RH-libre) | **PASA pero espectro=ℝ, ciego a ζ** |
-| U(t) sobre ℋ_γ (espectro={γ}) | Sí: el producto interno = forma de Weil Q | **FALLA: ζ reentra (Prop. 164.4)** |
-| J = reflexión funcional (§3.3) | No (Lebesgue/de Branges, RH-libre) | **PASA pero grupo ℤ/2, ciego a m (Prop. 164.6)** |
-| Forma de Jacobi Meixner–Pollaczek (§5) | No (coeficientes reales, momentos determinados) | **PASA pero espectro≠{γ} (Prop. 164.8c)** |
-| xp / Berry–Keating con borde que da {γ} | Sí: la fase de borde = arg ζ / órbitas = primos | **FALLA: ζ en el borde (§4.1, Prop. 164.8a)** |
-| H_C sobre Pontryagin (𝒦,Q) | Sí: autoadjunción = Q≥0 = RH | **FALLA: ζ = positividad (Prop. 164.4b, Phase 26)** |
+| U(t) on L²(Haar) (§2.2) | No (Haar is RH-free) | **PASSES but spectrum=ℝ, blind to ζ** |
+| U(t) on ℋ_γ (spectrum={γ}) | Yes: the inner product = Weil form Q | **FAILS: ζ re-enters (Prop. 164.4)** |
+| J = functional reflection (§3.3) | No (Lebesgue/de Branges, RH-free) | **PASSES but group ℤ/2, blind to m (Prop. 164.6)** |
+| Meixner–Pollaczek Jacobi form (§5) | No (real coefficients, determined moments) | **PASSES but spectrum≠{γ} (Prop. 164.8c)** |
+| xp / Berry–Keating with boundary giving {γ} | Yes: the boundary phase = arg ζ / orbits = primes | **FAILS: ζ at the boundary (§4.1, Prop. 164.8a)** |
+| H_C on Pontryagin (𝒦,Q) | Yes: self-adjointness = Q≥0 = RH | **FAILS: ζ = positivity (Prop. 164.4b, Phase 26)** |
 
-**Lectura de la tabla.** Todo lo que es unitario/autoadjunto RH-libre tiene espectro equivocado
-(ℝ o el del oscilador, no {γ}); todo lo que tiene espectro {γ} necesita la métrica de Weil = ζ para su
-unitariedad. La frontera es exacta y sin huecos: **no hay una sola fila que sea simultáneamente
-RH-libre Y de espectro {γ} Y unitaria.** Eso ES el desenlace B.
+**Reading the table.** Everything that is RH-free unitary/self-adjoint has the wrong spectrum (ℝ or
+that of the oscillator, not {γ}); everything that has spectrum {γ} needs the Weil metric = ζ for its
+unitarity. The boundary is exact and without gaps: **there is not a single row that is simultaneously
+RH-free AND of spectrum {γ} AND unitary.** That IS outcome B.
 
 ---
 
-**Referencias (reales).**
+**References (real).**
 - M.H. Stone, "On one-parameter unitary groups in Hilbert space", *Ann. of Math.* **33** (1932) 643–648.
 - M. Reed, B. Simon, *Methods of Modern Mathematical Physics I: Functional Analysis*, Academic Press
   1980 — Stone Thm VIII.7–VIII.8; *Vol. II: Fourier Analysis, Self-Adjointness*, 1975 — Thm X.1 (von
-  Neumann, índices de deficiencia), X.23/KLMN (formas), X.28 (Kato–Rellich).
-- M.V. Berry, J.P. Keating, "H=xp and the Riemann zeros", en *Supersymmetry and Trace Formulae: Chaos
+  Neumann, deficiency indices), X.23/KLMN (forms), X.28 (Kato–Rellich).
+- M.V. Berry, J.P. Keating, "H=xp and the Riemann zeros", in *Supersymmetry and Trace Formulae: Chaos
   and Disorder*, ed. I.V. Lerner et al., Kluwer/Plenum 1999, pp. 355–367.
 - M.V. Berry, J.P. Keating, "The Riemann zeros and eigenvalue asymptotics", *SIAM Review* **41** (1999)
   236–266.
@@ -562,14 +567,13 @@ RH-libre Y de espectro {γ} Y unitaria.** Eso ES el desenlace B.
 - A. Connes, "Trace formula in noncommutative geometry and the zeros of the Riemann zeta function",
   *Selecta Math. (N.S.)* **5** (1999) 29–106.
 - A. Connes, C. Consani, "Weil positivity and trace formula, the archimedean place", arXiv:2006.13771
-  (2020) — espacio de Sonin, cuadrado manifiesto, residual.
+  (2020) — Sonin space, manifest square, residual.
 - J.-B. Bost, A. Connes, "Hecke algebras, type III factors and phase transitions with spontaneous
-  symmetry breaking in number theory", *Selecta Math.* **1** (1995) 411–457 — partición = ζ.
+  symmetry breaking in number theory", *Selecta Math.* **1** (1995) 411–457 — partition = ζ.
 - E.C. Titchmarsh, *The Theory of the Riemann Zeta-Function*, 2nd ed. (rev. Heath-Brown), Oxford 1986 —
-  ecuación funcional §2.6.
-- N.I. Akhiezer, *The Classical Moment Problem*, Oliver & Boyd 1965 — operador de Jacobi, determinación.
-- [GAP de literatura]: no existe en la literatura una identificación "unitariedad del flujo de escala
-  = forma de Weil" formulada como teorema de Stone invertido, ni la reformulación de RH como igualdad
-  de las métricas de reflexión y evolución (GAP 164.D). Las referencias anclan las herramientas
-  (Stone, von Neumann, Berry–Keating, Connes); el puente Stone-invertido y el GAP 164.D son nuevos.
-```
+  functional equation §2.6.
+- N.I. Akhiezer, *The Classical Moment Problem*, Oliver & Boyd 1965 — Jacobi operator, determinacy.
+- [literature GAP]: there is no identification in the literature of "unitarity of the scale flow =
+  Weil form" formulated as an inverted Stone theorem, nor the reformulation of RH as the equality of
+  the reflection and evolution metrics (GAP 164.D). The references anchor the tools (Stone, von
+  Neumann, Berry–Keating, Connes); the inverted-Stone bridge and GAP 164.D are new.

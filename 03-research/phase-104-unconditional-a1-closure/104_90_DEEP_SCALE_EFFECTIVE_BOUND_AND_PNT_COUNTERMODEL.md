@@ -1,38 +1,38 @@
-# 104_90 — Cota efectiva de la escala Deep y contra-modelo PNT
+# 104_90 — Effective bound on the Deep scale and PNT countermodel
 
-**Resultado.** La información incondicional formada por una altura
-verificada \(H\), una región libre de ceros de Vinogradov--Korobov y el
-conteo efectivo de ceros controla el observable profundo solo hasta
+**Result.** The unconditional information formed by a verified height
+\(H\), a Vinogradov--Korobov zero-free region, and the effective zero
+count controls the deep observable only up to
 
 \[
  \boxed{\limsup_{X\to\infty}\mathcal D_X(\lambda)\le{1\over2}.} \tag{1}
 \]
 
-No produce el límite cero de 104_75. Con \(H=3\cdot10^{12}\), la misma
-estimación hace vacío el evento, salvo la contabilidad de constantes
-menores, hasta la escala \(X\asymp4H^4=3.24\cdot10^{50}\). Después queda
-asintóticamente sin controlar la mitad de la masa armónica.
+It does not produce the zero limit of 104_75. With \(H=3\cdot10^{12}\),
+the same estimate makes the event empty, up to the bookkeeping of minor
+constants, up to scale \(X\asymp4H^4=3.24\cdot10^{50}\). After that it
+asymptotically leaves half the harmonic mass uncontrolled.
 
-Se construye además un contra-modelo explícito que conserva coeficientes
-Euler no negativos sobre potencias de primos ordinarios, un PNT continuo
-con error de tipo VK, y un completamiento entero con ecuación funcional,
-pero tiene ceros fuera de la línea y densidad Deep positiva. El modelo
-introduce polos Euler adicionales y cambia los pesos de la torre \(7^k\).
-Por tanto no es un contraejemplo a RH ni a los axiomas exactos de la zeta.
-Sí prueba que PNT, positividad, soporte primo y una ecuación funcional
-amplia no sustituyen los valores literales
+A countermodel is further constructed that preserves nonnegative Euler
+coefficients on ordinary prime powers, a continuous PNT with VK-type
+error, and an entire completion with a functional equation, but has
+zeros off the line and positive Deep density. The model introduces
+additional Euler poles and changes the weights of the \(7^k\) tower.
+Hence it is not a counterexample to RH nor to the exact axioms of
+zeta. It does prove that PNT, positivity, prime support, and a broad
+functional equation do not substitute for the literal values
 \(\Lambda(p^k)=\log p\).
 
-Este documento no prueba Deep-\(\Lambda\), A1 ni RH. Cierra el ataque
-basado solo en la escala radial de los ceros y en consecuencias PNT de los
-pesos.
+This document does not prove Deep-\(\Lambda\), A1, or RH. It closes the
+attack based only on the radial scale of the zeros and on PNT
+consequences of the weights.
 
 ---
 
-## 1. Desplazamiento radial sobre una altura verificada
+## 1. Radial shift over a verified height
 
-Sea \(\rho=\beta+i\gamma\), \(\gamma>0\), con
-\(1/2\le\beta<1\), representante de una órbita funcional. Ponga
+Let \(\rho=\beta+i\gamma\), \(\gamma>0\), with
+\(1/2\le\beta<1\), representing a functional orbit. Set
 
 \[
  a(\beta,\gamma)
@@ -41,8 +41,8 @@ Sea \(\rho=\beta+i\gamma\), \(\gamma>0\), con
                  \over(1-\beta)^2+\gamma^2}.            \tag{2}
 \]
 
-Si una región libre de ceros da
-\(\beta\le1-\delta(\gamma)\), entonces
+If a zero-free region gives
+\(\beta\le1-\delta(\gamma)\), then
 
 \[
  a(\beta,\gamma)
@@ -52,63 +52,63 @@ Si una región libre de ceros da
        \gamma^2+\delta(\gamma)^2}\right).               \tag{3}
 \]
 
-Suponga que todos los ceros con \(|\gamma|\le H\) están certificados en
-la línea, y defina
+Suppose all zeros with \(|\gamma|\le H\) are certified on the line, and
+define
 
 \[
  a_H=\sup_{\gamma>H}a_{\rm VK}(\gamma).
 \]
 
-La cota universal de 104_76 da
+The universal bound of 104_76 gives
 
 \[
  \boxed{a_H<{1\over2H^2}.}                              \tag{4}
 \]
 
-Aunque \(a_H\) sea diminuto, es fijo, y el factor \(e^{a_Hn}\) acaba
-superando toda barrera \(e^{o(n)}\).
+Even though \(a_H\) is tiny, it is fixed, and the factor \(e^{a_Hn}\)
+eventually exceeds every barrier \(e^{o(n)}\).
 
-## 2. Cota efectiva para los coeficientes de Li
+## 2. Effective bound for the Li coefficients
 
-El conteo numérico de 103_58, §2, es
+The numerical count of 103_58, §2, is
 
 \[
  \mathcal N(T)\le25T\log T\qquad(T\ge10),               \tag{5}
 \]
 
-donde se cuentan ambos signos de las ordenadas y las multiplicidades.
-Para \(n\ge\max(5,H/2)\), parta las órbitas en
-\(H<\gamma\le2n\) y \(\gamma>2n\).
+where both signs of the ordinates and multiplicities are counted. For
+\(n\ge\max(5,H/2)\), split the orbits into
+\(H<\gamma\le2n\) and \(\gamma>2n\).
 
-En la primera franja hay a lo sumo \(50n\log(2n)\) etiquetas. La identidad
-de cuarteto de 104_76 y (3) dan
+In the first band there are at most \(50n\log(2n)\) labels. The
+quartet identity of 104_76 and (3) give
 
 \[
  |q_n(\rho)|\le4(1+e^{a_Hn}),                            \tag{6}
 \]
 
-y un costo total no mayor que
+and a total cost no larger than
 
 \[
  200n\log(2n)(1+e^{a_Hn}).                               \tag{7}
 \]
 
-Para \(\gamma>2n\), la expansión corta de la fase da
+For \(\gamma>2n\), the short phase expansion gives
 
 \[
  |q_n(\rho)|\le {9n^2\over\gamma^2}.                    \tag{8}
 \]
 
-La sumación parcial de (5) implica
+Partial summation of (5) implies
 
 \[
  \sum_{|\gamma|>2n}{m_\rho\over\gamma^2}
  \le {25\{\log(2n)+1\}\over n},                         \tag{9}
 \]
 
-de modo que la segunda franja cuesta a lo sumo
-\(225n\{\log(2n)+1\}\). Los ceros hasta \(H\) contribuyen no
-negativamente. Reuniendo y redondeando hacia arriba,
+so that the second band costs at most
+\(225n\{\log(2n)+1\}\). Zeros up to \(H\) contribute nonnegatively.
+Combining and rounding up,
 
 \[
  \boxed{
@@ -116,22 +116,23 @@ negativamente. Reuniendo y redondeando hacia arriba,
  -500n\{\log(2n)+1\}(1+e^{a_Hn}).}                     \tag{10}
 \]
 
-No se ha usado el signo de ningún cero no verificado.
+The sign of no unverified zero has been used.
 
-Para \(n<H/2\), todos los ceros no verificados ya están en la franja
-\(|\gamma|>2n\). La misma sumación parcial, ahora desde \(H\), da
+For \(n<H/2\), all unverified zeros are already in the band
+\(|\gamma|>2n\). The same partial summation, now starting from \(H\),
+gives
 
 \[
  \lambda_n\ge
  -{450n^2\{\log H+1\}\over H}.                          \tag{10a}
 \]
 
-Este prefijo es finito y su costo crece solo polinomialmente; por ello no
-puede cruzar \(-e^{\sqrt X}\) una vez \(X\) es suficientemente grande.
+This prefix is finite and its cost grows only polynomially; hence it
+cannot cross \(-e^{\sqrt X}\) once \(X\) is large enough.
 
-## 3. Consecuencia para el evento profundo
+## 3. Consequence for the deep event
 
-Recuerde
+Recall
 
 \[
  \mathcal D_X(\lambda)
@@ -139,56 +140,56 @@ Recuerde
  \mathbf1_{\{\lambda_n+\log(n+1)\le-e^{\sqrt X}\}}.    \tag{11}
 \]
 
-Para \(X\) suficientemente grande, (10)--(10a) muestran que todo índice
-contado en (11) debe satisfacer
+For \(X\) large enough, (10)--(10a) show that every index counted in
+(11) must satisfy
 
 \[
  n\ge L_H(X):=
  {\sqrt X-\log[2000X\{\log(2X)+1\}]\over a_H}.          \tag{12}
 \]
 
-Si \(L_H(X)>X\), el evento es vacío. En caso contrario,
+If \(L_H(X)>X\), the event is empty. Otherwise,
 
 \[
  \mathcal D_X(\lambda)
  \le {H_X-H_{\lceil L_H(X)\rceil-1}\over H_X}.          \tag{13}
 \]
 
-Como \(a_H\) es fijo,
+Since \(a_H\) is fixed,
 
 \[
  \log L_H(X)={1\over2}\log X-\log a_H+o(\log X),       \tag{14}
 \]
 
-y (1) sigue de (13). La constante \(1/2\) es óptima para la sola
-información radial puntual (10): la sucesión adversarial
-\(-e^{a_Hn}\) la alcanza. No se afirma que sea óptima dentro de la clase
-mucho más rígida de funciones zeta genuinas. Un solo cuarteto exterior
-fijo permitido por esos inputs ya produce densidad positiva; eso basta
-para probar que no pueden dar el límite cero.
+and (1) follows from (13). The constant \(1/2\) is optimal for the
+pointwise radial information alone (10): the adversarial sequence
+\(-e^{a_Hn}\) attains it. It is not claimed to be optimal within the
+much more rigid class of genuine zeta functions. A single fixed
+exterior quartet allowed by these inputs already produces positive
+density; that is enough to prove they cannot give the zero limit.
 
-Con \(H=3\cdot10^{12}\), (4) da
+With \(H=3\cdot10^{12}\), (4) gives
 
 \[
  a_H<5.556\cdot10^{-26},
  \qquad L_H(X)\sim1.8\cdot10^{25}\sqrt X.              \tag{15}
 \]
 
-El cambio \(L_H(X)\approx X\) ocurre alrededor de
-\(X\approx3.24\cdot10^{50}\). Esta es una escala diagnóstica, no un
-rango certificado: un umbral literal debe conservar los términos
-logarítmicos de (12) y todas las constantes de la región libre elegida.
+The crossover \(L_H(X)\approx X\) occurs around
+\(X\approx3.24\cdot10^{50}\). This is a diagnostic scale, not a
+certified range: a literal threshold must preserve the logarithmic
+terms of (12) and all constants of the chosen zero-free region.
 
-## 4. Contra-modelo continuo con PNT
+## 4. Continuous countermodel with PNT
 
-Use el modelo reticular exterior de 104_78,
+Use the exterior lattice model of 104_78,
 
 \[
  Z_-(T)={(1-3T)(1-2T)\over(1-T)(1-6T)},
  \qquad Z_-(T)=Z_-\!\left({1\over6T}\right),            \tag{16}
 \]
 
-y subordínelo a la torre del primo \(7\):
+and subordinate it to the tower of the prime \(7\):
 
 \[
  T(s)=\sqrt{7\over6}\,7^{-s},
@@ -196,7 +197,7 @@ y subordínelo a la torre del primo \(7\):
  \qquad F(s)=\zeta(s)W(s).                              \tag{17}
 \]
 
-La derivada logarítmica adicional vive solo en \(7^\ell\):
+The additional logarithmic derivative lives only on \(7^\ell\):
 
 \[
  -{W'(s)\over W(s)}
@@ -209,13 +210,13 @@ La derivada logarítmica adicional vive solo en \(7^\ell\):
  (6^\ell+1-3^\ell-2^\ell)>0.}                          \tag{19}
 \]
 
-La positividad es exacta porque
+Positivity is exact because
 
 \[
  6^\ell+1-3^\ell-2^\ell=(3^\ell-1)(2^\ell-1).         \tag{20}
 \]
 
-Además,
+Moreover,
 
 \[
  \sum_{7^\ell\le x}b(7^\ell)=O(x^\sigma),
@@ -223,31 +224,31 @@ Además,
  \sigma={\log42\over2\log7}=0.960391\ldots<1.          \tag{21}
 \]
 
-Por ello
+Hence
 
 \[
  \psi_F(x)=x+O\!\left(xe^{-\eta(x)}+x^\sigma\right),   \tag{22}
 \]
 
-que conserva asintóticamente un error de tipo VK, tras ajustar el umbral
-y la constante.
+which asymptotically preserves a VK-type error, after adjusting the
+threshold and the constant.
 
-Escriba
+Write
 
 \[
  r(s)={1\over2}+{\log7\over\log6}
                    \left(s-{1\over2}\right).           \tag{23}
 \]
 
-Como \(T(s)=6^{-r(s)}\), el completamiento
+Since \(T(s)=6^{-r(s)}\), the completion
 
 \[
  \xi(s)\,\Xi_-(r(s)),
  \qquad \Xi_-(r)=6^r-5+6^{1-r},                        \tag{24}
 \]
 
-es entero y es invariante bajo \(s\mapsto1-s\). Sus ceros exteriores
-tienen partes reales
+is entire and invariant under \(s\mapsto1-s\). Its exterior zeros have
+real parts
 
 \[
  \boxed{
@@ -255,43 +256,44 @@ tienen partes reales
  =0.395816\ldots,\ 0.604184\ldots.}                    \tag{25}
 \]
 
-La secuencia de Li correspondiente tiene, por tanto, excursiones
-exponenciales y densidad Deep positiva.
+The corresponding Li sequence therefore has exponential excursions and
+positive Deep density.
 
-### Alcance preciso
+### Precise scope
 
-El factor Euler \(W\) tiene polos adicionales en las familias verticales
-con partes reales \(\sigma\) y \(1-\sigma\); el factor
-\(\Xi_-(r(s))\) los cancela en el completamiento. El modelo tampoco
-conserva el factor Gamma exacto ni los valores \(\Lambda(7^\ell)\).
-En consecuencia,
+The Euler factor \(W\) has additional poles in the vertical families
+with real parts \(\sigma\) and \(1-\sigma\); the factor
+\(\Xi_-(r(s))\) cancels them in the completion. The model also does
+not preserve the exact Gamma factor nor the values \(\Lambda(7^\ell)\).
+Consequently,
 
 \[
  \begin{gathered}
- \text{PNT/VK + pesos no negativos + soporte primo + FE amplia}
+ \text{PNT/VK + nonnegative weights + prime support + broad FE}
  \not\Longrightarrow \mathrm{RH},\\
- \text{pero el modelo no satisface los datos exactos completos de }\zeta.
+ \text{but the model does not satisfy the full exact data of }\zeta.
  \end{gathered}                                         \tag{26}
 \]
 
-## 5. Veredicto
+## 5. Verdict
 
-La escala \(e^{\sqrt X}\) no vuelve elemental el límite Deep. Solo mueve
-la obstrucción a alturas \(\gamma\lesssim X^{1/4}\), como probó 104_76.
-Una altura verificada fija deja finalmente la mitad de la masa armónica
-sin decidir. Incluso un PNT continuo muy fuerte no elimina un factor
-exterior si se permiten cambios positivos en una sola torre prima.
+The scale \(e^{\sqrt X}\) does not make the Deep limit elementary. It
+only moves the obstruction to heights \(\gamma\lesssim X^{1/4}\), as
+104_76 already proved. A fixed verified height ultimately leaves half
+the harmonic mass undecided. Even a very strong continuous PNT does
+not eliminate an exterior factor if positive changes in a single prime
+tower are allowed.
 
-El sucesor, si existe, debe utilizar conjuntamente los valores exactos de
-todas las torres ordinarias; ni la escala radial, ni PNT, ni la positividad
-de los pesos pueden suministrarlo por separado.
+The successor, if it exists, must jointly use the exact values of all
+ordinary towers; neither the radial scale, nor PNT, nor the positivity
+of the weights can supply it separately.
 
-## 6. Reproducción
+## 6. Reproduction
 
-Desde el directorio tools:
+From the tools directory:
 
     python3 deep_scale_pnt_countermodel_check.py
 
-El checker verifica la ecuación funcional racional, la factorización
-positiva de cada altura añadida, el exponente \(\sigma<1\), las partes
-reales exteriores y las escalas numéricas para \(H=3\cdot10^{12}\).
+The checker verifies the rational functional equation, the positive
+factorization of each added height, the exponent \(\sigma<1\), the
+exterior real parts, and the numerical scales for \(H=3\cdot10^{12}\).

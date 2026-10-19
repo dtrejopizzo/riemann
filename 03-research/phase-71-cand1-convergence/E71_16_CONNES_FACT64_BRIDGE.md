@@ -1,7 +1,6 @@
 # E71.16 -- Connes Fact 6.4 bridge for Stable Divisor Identification
 
-**Date:** 2026-07-07.
-**Role:** audit the sources suggested by the user and import the strongest available Connes result
+**Purpose:** audit the suggested sources and import the strongest available Connes result
 into the E71.15 proof attempt.
 
 ## Sources checked

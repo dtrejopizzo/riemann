@@ -1,7 +1,6 @@
 # E72.8 -- The Feshbach-Sonin corrector equation: full attempt
 
-**Date:** 2026-07-08.
-**Role:** try to construct the non-circular coboundary primitive `u_x` required by E72.7.
+**Purpose:** try to construct the non-circular coboundary primitive `u_x` required by E72.7.
 
 ## 0. Target
 

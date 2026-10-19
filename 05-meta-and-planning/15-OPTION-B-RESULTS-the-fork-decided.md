@@ -1,6 +1,6 @@
 # Option (b), the fork decided numerically: the negative index is not finite-rank-capturable
 
-**Auditor build · 2026-06-05.** `phase-14/experiments/a_tail_relative_form_bound.py`. The Pontryagin route reduced
+**Auditor build · 2026-06-05.** `phase-14-off-diagonal-anchor-asymmetry/experiments/a_tail_relative_form_bound.py`. The Pontryagin route reduced
 RH-adjacency to one inequality: **(RFB$_X$)** — is the prime tail $\mathfrak p_{>X}$ relatively form-bounded by the
 archimedean form with constant $<1$ for some *fixed* cutoff $X$? If yes, $\kappa<\infty$ (finitely many off-line
 zeros). The relevant one-sided quantity (the one that controls *negative squares* of $\mathfrak t=\mathfrak a-
@@ -54,7 +54,7 @@ GUE scale-invariance of the zeros.
 ## What this closes and what it leaves
 
 - **Closed:** the specific hope that $\kappa<\infty$ follows from form-subordination of a finite tail. It does not
-  — decisively, numerically, with the obstruction quantified ($X^*(d)\sim e^{2d}/10$, a sliding fixed-width
+— decisively, numerically, with the obstruction quantified ($X^*(d)\sim e^{2d}/10$, a sliding fixed-width
   critical window).
 - **Sharpened:** the option-(b) wall is now the statement *"the relative-form criticality $a=1$ is
   scale-invariant"* — the same knife-edge as N3, now shown to live at all scales rather than at small primes. Any

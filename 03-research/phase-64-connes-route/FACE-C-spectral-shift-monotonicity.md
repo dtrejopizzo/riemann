@@ -1,6 +1,6 @@
 # The spectral-shift thread, computed: does arithmetic rigidity force $\xi_K'\ge0$? — the phase derivative is the explicit-formula prime sum, and the answer is the orthogonality theorem at first order
 
-*Pure mathematics. We attack the one lead flagged as "not yet circular": the Kreĭn spectral shift
+* We attack the one lead flagged as "not yet circular": the Kreĭn spectral shift
 $\arg D_P=\pi\xi_K$, with $\xi_K\ge0$ free from $H_{\mathrm{vM}}\ge0$, and RH demanding the phase
 $\varphi_\Xi=\pi\xi_K+\vartheta$ be monotone. We compute $\xi_K'$ explicitly. It is the
 **explicit-formula prime sum** $\sum_n\Lambda(n)n^{-1/2}\cos(\lambda\log n)$ (regularized), whose

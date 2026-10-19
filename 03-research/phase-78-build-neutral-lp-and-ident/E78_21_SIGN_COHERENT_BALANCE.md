@@ -1,6 +1,6 @@
 # E78.21 - Sign-coherent balance reduces the denominator defect to a ratio defect
 
-**Run:** 2026-07-18.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

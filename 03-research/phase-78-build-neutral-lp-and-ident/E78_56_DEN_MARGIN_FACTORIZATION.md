@@ -1,6 +1,6 @@
 # E78.56 - On the inward branch, the denominator margin factors as scale times gap
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

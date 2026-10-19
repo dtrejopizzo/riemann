@@ -36,7 +36,7 @@ D.75 gives the canonical compact potential
 
 \[
  W_TF=-e^{-|\cdot|/2}*F,\qquad
- L W_TF=F,qquad L=D^2-\frac14,                              \tag{1.2}
+ L W_TF=F,\qquad L=D^2-\frac14,                              \tag{1.2}
 \]
 
 with

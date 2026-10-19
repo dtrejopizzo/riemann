@@ -1,7 +1,6 @@
 # E72.126 -- Top-mode flux gain
 
-**Date:** 2026-07-09.
-**Role:** isolate the missing factor in the bad-test upper bound.
+**Purpose:** isolate the missing factor in the bad-test upper bound.
 
 ## 0. From singular values to bad projections
 

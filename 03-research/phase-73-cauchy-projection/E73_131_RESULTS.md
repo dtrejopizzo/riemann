@@ -1,6 +1,5 @@
 # E73.131 Results - First-Order Eigenvector Perturbation Fails
 
-Date: 2026-07-12.
 
 Script:
 

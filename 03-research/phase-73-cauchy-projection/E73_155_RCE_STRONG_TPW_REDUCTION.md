@@ -1,6 +1,5 @@
 # E73.155 - RCE as strong critical TPW
 
-Date: 2026-07-12.
 
 ## 1. Purpose
 

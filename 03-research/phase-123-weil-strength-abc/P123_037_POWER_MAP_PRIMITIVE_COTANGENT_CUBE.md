@@ -1,6 +1,6 @@
 # P123.037 — primitive cotangent cubes from composable power maps
 
-Date: 2026-09-05. Status: CONSTRUCTED, with the calculations below proved
+Status: CONSTRUCTED, with the calculations below proved
 on the integral multiplicative group. This is a source-defined perfect
 ramification complex and a coherent primitive extraction. Its comparison
 with the graph-diagonal shadow required by A/B is still OPEN.

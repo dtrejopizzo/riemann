@@ -1,6 +1,5 @@
 # E73.172 results - QG scalar linear forms
 
-Date: 2026-07-14.
 
 Script:
 

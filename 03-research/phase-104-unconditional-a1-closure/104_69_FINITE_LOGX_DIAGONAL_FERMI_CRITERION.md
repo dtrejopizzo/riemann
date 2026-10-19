@@ -1,6 +1,6 @@
-# 104_69 — Criterio Fermi finito en \(\log X\) y diagonal Euler única
+# 104_69 — Finite Fermi criterion in \(\log X\) and single Euler diagonal
 
-**Resultado.** Defina
+**Result.** Define
 
 \[
  a_n={1\over1+(n+1)e^{\lambda_n}},\qquad
@@ -8,48 +8,48 @@
  \qquad H_X=\sum_{n\le X}{1\over n}.                       \tag{1}
 \]
 
-Entonces
+Then
 
 \[
  \boxed{\mathrm {RH}\quad\Longleftrightarrow\quad
  \mathfrak F(X)\longrightarrow0.}                          \tag{2}
 \]
 
-Además, con
+Moreover, with
 
 \[
  \varepsilon_X=e^{-X/100},                                \tag{3}
 \]
 
-todos los grados \(1\le n\le X\) pueden sustituirse simultáneamente por su
-forma prima--Laguerre regulada. La diferencia entre las dos medias tiende
-exponencialmente a cero y, para cada \(X\), queda una sola fórmula Euler
-absolutamente convergente.
+all degrees \(1\le n\le X\) can be replaced simultaneously by their
+regulated prime–Laguerre form. The difference between the two averages
+tends exponentially to zero, and for each \(X\) a single absolutely
+convergent Euler formula remains.
 
-Esto normaliza en forma finita el frente de 104_61--104_66. No aporta una
-cota superior nueva para (1), A1 ni RH.
+This normalizes the front of 104_61--104_66 in finite form. It
+contributes no new upper bound for (1), A1, or RH.
 
-**No duplicación interna.** 104_68 usa los mismos \(a_n\) dentro de
-ventanas deterministas y conserva el orden
-\(\varepsilon\downarrow0\) con la ventana fija. Aquí el observable es la
-media logarítmica global y la aportación nueva es eliminar ese límite
-interno mediante el regulador único \(\varepsilon_X=e^{-X/100}\), uniforme
-en todos los grados \(n\le X\).
+**No internal duplication.** 104_68 uses the same \(a_n\) inside
+deterministic windows and keeps the order
+\(\varepsilon\downarrow0\) with the window fixed. Here the observable is
+the global logarithmic average, and the new contribution is removing
+that internal limit via the single regulator \(\varepsilon_X=e^{-X/100}\),
+uniform over all degrees \(n\le X\).
 
 ---
 
-## 1. Criterio logarítmico finito
+## 1. Finite logarithmic criterion
 
-La elección \(t=1\), \(b_n=\log(n+1)\) en 104_61 da exactamente
+The choice \(t=1\), \(b_n=\log(n+1)\) in 104_61 gives exactly
 
 \[
  {1\over1+\exp(\lambda_n+b_n)}
  ={1\over1+(n+1)e^{\lambda_n}}=a_n.                        \tag{4}
 \]
 
-**Teorema 1.1.** La equivalencia (2) es incondicional.
+**Theorem 1.1.** Equivalence (2) is unconditional.
 
-**Demostración.** Bajo RH, Li da \(\lambda_n\ge0\), luego
+**Proof.** Under RH, Li gives \(\lambda_n\ge0\), so
 
 \[
  0\le a_n\le{1\over n+2},\qquad
@@ -57,36 +57,36 @@ La elección \(t=1\), \(b_n=\log(n+1)\) en 104_61 da exactamente
  \le\sum_{n\ge1}{1\over n(n+2)}={3\over4}.                \tag{5}
 \]
 
-Como \(H_X\to\infty\), \(\mathfrak F(X)\to0\).
+Since \(H_X\to\infty\), \(\mathfrak F(X)\to0\).
 
-Si RH es falsa, 104_56 produce \(c>0\), \(R>1\) y un conjunto \(D\) de
-densidad natural \(d>0\) tales que
+If RH is false, 104_56 produces \(c>0\), \(R>1\), and a set \(D\) of
+natural density \(d>0\) such that
 
 \[
  \lambda_n\le-cR^n\qquad(n\in D)                           \tag{6}
 \]
 
-desde algún índice. En \(D\),
+from some index on. On \(D\),
 
 \[
  (n+1)e^{\lambda_n}\le(n+1)e^{-cR^n}\longrightarrow0,
  \qquad a_n\longrightarrow1.                              \tag{7}
 \]
 
-La densidad natural implica la densidad logarítmica,
+Natural density implies logarithmic density,
 
 \[
  {1\over H_X}\sum_{\substack{n\le X\\n\in D}}{1\over n}
  \longrightarrow d,                                       \tag{8}
 \]
 
-y por tanto
+and hence
 
 \[
  \liminf_{X\to\infty}\mathfrak F(X)\ge d>0.                \tag{9}
 \]
 
-Esto prueba (2) y también
+This proves (2) and also
 
 \[
  \boxed{\mathrm {RH}\quad\Longleftrightarrow\quad
@@ -96,9 +96,9 @@ Esto prueba (2) y también
 
 ---
 
-## 2. Aproximación simultánea de los primeros \(X\) grados
+## 2. Simultaneous approximation of the first \(X\) degrees
 
-Use la regularización de 104_66:
+Use the regularization of 104_66:
 
 \[
 \begin{aligned}
@@ -110,13 +110,14 @@ Use la regularización de 104_66:
 \end{aligned}                                             \tag{11}
 \]
 
-La generatriz emparejada y el disco desplazado de 104_66 prueban, para
+The paired generating function and the shifted disk of 104_66 prove,
+for
 
 \[
  r={199\over200},\qquad M=M_{199/200}<\infty,
 \]
 
-que
+that
 
 \[
  |\lambda_{n,\varepsilon}-\lambda_n|
@@ -124,14 +125,14 @@ que
  \qquad(0<\varepsilon\le1/2).                              \tag{12}
 \]
 
-Ponga
+Set
 
 \[
  C={1\over100},\qquad
  \eta=C-\log{200\over199}>0.                               \tag{13}
 \]
 
-Para todo entero \(X\ge70\), \(\varepsilon_X\le1/2\). Si \(n\le X\),
+For every integer \(X\ge70\), \(\varepsilon_X\le1/2\). If \(n\le X\),
 
 \[
 \begin{aligned}
@@ -141,7 +142,7 @@ Para todo entero \(X\ge70\), \(\varepsilon_X\le1/2\). Si \(n\le X\),
 \end{aligned}                                             \tag{14}
 \]
 
-Así,
+Thus,
 
 \[
  \boxed{\sup_{1\le n\le X}
@@ -149,14 +150,14 @@ Así,
  \le2MXe^{-\eta X}\longrightarrow0.}                      \tag{15}
 \]
 
-No hay cola en el grado: un mismo regulador aproxima todos los sumandos de
-(1).
+There is no tail in the degree: a single regulator approximates all
+the terms of (1).
 
 ---
 
-## 3. Criterio diagonal finito
+## 3. Finite diagonal criterion
 
-Defina
+Define
 
 \[
  a_{n,\varepsilon}
@@ -166,8 +167,8 @@ Defina
  ={1\over H_X}\sum_{n\le X}{a_{n,\varepsilon}\over n}.     \tag{16}
 \]
 
-La derivada de \(x\mapsto(1+e^x)^{-1}\) tiene módulo a lo sumo \(1/4\).
-Usando (15),
+The derivative of \(x\mapsto(1+e^x)^{-1}\) has modulus at most \(1/4\).
+Using (15),
 
 \[
 \begin{aligned}
@@ -178,7 +179,7 @@ Usando (15),
 \end{aligned}                                             \tag{17}
 \]
 
-**Teorema 3.1 (criterio diagonal finito).**
+**Theorem 3.1 (finite diagonal criterion).**
 
 \[
  \boxed{
@@ -187,14 +188,14 @@ Usando (15),
  \liminf_{X\to\infty}\mathfrak F_{\varepsilon_X}(X)=0.}    \tag{18}
 \]
 
-La constante exponencial es explícita; \(M\) es un factor fijo sobre el
-compacto cero-libre de 104_66 y no afecta el límite.
+The exponential constant is explicit; \(M\) is a fixed factor on the
+zero-free compact set of 104_66 and does not affect the limit.
 
 ---
 
-## 4. Una sola fórmula Euler prima--Laguerre
+## 4. A single prime–Laguerre Euler formula
 
-Sustituyendo (11) en (16), para cada \(X\ge70\),
+Substituting (11) into (16), for each \(X\ge70\),
 
 \[
 \boxed{
@@ -211,30 +212,31 @@ Sustituyendo (11) en (16), para cada \(X\ge70\),
 \end{aligned}}                                            \tag{19}
 \]
 
-Como \(\varepsilon_X>0\),
+Since \(\varepsilon_X>0\),
 
 \[
  \sum_{m\ge2}{\Lambda(m)\over m^{1+\varepsilon_X}}
  |L_{n-1}^{(1)}(\log m)|<\infty\qquad(n\le X).             \tag{20}
 \]
 
-El producto converge absolutamente y la suma exterior es finita. La
-fórmula conserva juntos Gamma, polo, primos y potencias primas hasta después
-de formar la logística. No contiene un límite
-\(\varepsilon\downarrow0\). La cola efectiva de 104_61 permite truncarla,
-pero no da una cota uniforme útil cuando \(X\to\infty\).
+The product converges absolutely and the outer sum is finite. The
+formula keeps Gamma, pole, primes, and prime powers together until
+after forming the logistic. It contains no
+\(\varepsilon\downarrow0\) limit. The effective tail of 104_61 allows
+truncating it, but does not give a useful uniform bound as
+\(X\to\infty\).
 
 ---
 
-## 5. Falsificador off-line
+## 5. Off-line falsifier
 
-Para
+For
 
 \[
  Q_n=4-2\mathrm{Re}\,\{(2i)^n+(2i)^{-n}\},            \tag{21}
 \]
 
-ponga \(a_n^Q=[1+(n+1)e^{Q_n}]^{-1}\). Entonces
+set \(a_n^Q=[1+(n+1)e^{Q_n}]^{-1}\). Then
 
 \[
 \begin{array}{c|c|c}
@@ -245,7 +247,7 @@ ponga \(a_n^Q=[1+(n+1)e^{Q_n}]^{-1}\). Entonces
 \end{array}                                                \tag{22}
 \]
 
-Los errores son sumables después de multiplicar por \(1/n\), mientras
+The errors are summable after multiplying by \(1/n\), while
 
 \[
  \sum_{\substack{n\le X\\4\mid n}}{1\over n}
@@ -253,22 +255,22 @@ Los errores son sumables después de multiplicar por \(1/n\), mientras
  ={1\over4}H_X+O(1).
 \]
 
-Por consiguiente,
+Consequently,
 
 \[
  \boxed{{1\over H_X}\sum_{n\le X}{a_n^Q\over n}
  \longrightarrow{1\over4}.}                              \tag{23}
 \]
 
-El criterio rechaza el divisor off-line. Una prueba basada solo en
-convergencia absoluta, positividad de pesos o módulos unitarios no puede
-declarar automáticamente que (19) tiende a cero.
+The criterion rejects the off-line divisor. A proof based solely on
+absolute convergence, positivity of weights, or unitary moduli cannot
+automatically declare that (19) tends to zero.
 
 ---
 
-## 6. Costo de separar polo y primos
+## 6. Cost of separating pole and primes
 
-El término polar exacto es
+The exact polar term is
 
 \[
  p_n(\varepsilon)
@@ -276,7 +278,7 @@ El término polar exacto es
  \left({1-\varepsilon\over\varepsilon}\right)^n.           \tag{24}
 \]
 
-En \(n=X\),
+At \(n=X\),
 
 \[
 \begin{aligned}
@@ -287,49 +289,50 @@ En \(n=X\),
 \end{aligned}                                             \tag{25}
 \]
 
-Pero
+But
 
 \[
  Q_{n,\varepsilon_X}
  =p_n(\varepsilon_X)+A_n-\lambda_{n,\varepsilon_X}.       \tag{26}
 \]
 
-El residuo emparejado crece como máximo \(\exp(O(X))\), mientras los dos
-canales separados alcanzan \(\exp(X^2/100+o(1))\). Recuperar su diferencia
-exige precisión relativa
+The paired residual grows at most like \(\exp(O(X))\), while the two
+separate channels reach \(\exp(X^2/100+o(1))\). Recovering their
+difference requires relative precision
 
 \[
  \boxed{\exp\{-X^2/100+O(X)\}.}                            \tag{27}
 \]
 
-Tomar módulos, truncar un canal o estimar sus fases por separado destruye
-esta precisión. Combinarlos exactamente devuelve (19). Es un costo de
-condicionamiento, no un no-go para toda identidad firmada futura.
+Taking moduli, truncating one channel, or estimating their phases
+separately destroys this precision. Combining them exactly returns
+(19). It is a conditioning cost, not a no-go for every future signed
+identity.
 
 ---
 
-## 7. Veredicto
+## 7. Verdict
 
-**Probado:** (2)/(10), la aproximación uniforme (15), el criterio diagonal
-(18), la fórmula Euler absoluta (19), el valor \(1/4\) del cuarteto y el
-costo (27).
+**Proved:** (2)/(10), the uniform approximation (15), the diagonal
+criterion (18), the absolute Euler formula (19), the \(1/4\) value of
+the quadruple, and the cost (27).
 
-**Ganancia:** la formulación final no necesita Abel, suma exterior infinita
-ni límite del regulador. Para cada \(X\) es finita en el grado y
-absolutamente convergente en la aritmética.
+**Gain:** the final formulation needs neither Abel, an infinite outer
+sum, nor a regulator limit. For each \(X\) it is finite in the degree
+and absolutely convergent arithmetically.
 
-**No probado:** que (19) tienda a cero para los pesos reales
-\(\Lambda(m)\), A1 o RH.
+**Not proved:** that (19) tends to zero for the real weights
+\(\Lambda(m)\), A1, or RH.
 
 ---
 
-## 8. Reproducción
+## 8. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 finite_logx_diagonal_fermi_check.py
 ```
 
-El checker verifica la constante diagonal, la identidad polar, el límite
-\(1/4\) del cuarteto y las escalas (15), (25). Los teoremas analíticos se
-prueban en el texto.
+The checker verifies the diagonal constant, the polar identity, the
+\(1/4\) limit of the quadruple, and the scales (15), (25). The
+analytic theorems are proved in the text.

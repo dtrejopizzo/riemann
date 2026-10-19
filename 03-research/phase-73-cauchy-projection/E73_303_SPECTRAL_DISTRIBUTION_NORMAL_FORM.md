@@ -1,6 +1,5 @@
 # E73.303 - Spectral distribution normal form
 
-Date: 2026-07-16.
 
 ## 1. Purpose
 

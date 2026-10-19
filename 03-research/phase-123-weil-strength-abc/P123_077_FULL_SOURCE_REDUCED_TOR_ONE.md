@@ -1,6 +1,6 @@
 # P123.077 — Full-source reduced Tate Tor in degree one
 
-Date: 2026-09-06. Status: PROVED for the original repaired rapid C_0
+Status: PROVED for the original repaired rapid C_0
 source of P123.019. This does not assert higher-degree excision or the
 same result for stronger integrable topologies without further estimates.
 

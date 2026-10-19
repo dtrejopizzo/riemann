@@ -1,6 +1,6 @@
 # E78.16 - Current exact endpoint of the IDENT front
 
-**Run:** 2026-07-18.
+**Run:**
 **Scope:** IDENT only.
 
 ## 1. Purpose

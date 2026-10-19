@@ -1,7 +1,6 @@
 # E72.90 -- Finite-band transport scaling
 
-**Date:** 2026-07-09.
-**Role:** test whether the finite-band root transport residual visibly decays after CCGD-style
+**Purpose:** test whether the finite-band root transport residual visibly decays after CCGD-style
 truncation.
 
 ## 0. Question

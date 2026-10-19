@@ -78,5 +78,5 @@ target and would close A1.
 ## Status
 
 Stieltjes/Riesz inversion gives positivity but not support. The support
-collapse remains open and is another exact formulation of the A1 force-RH
+collapse remains open and is another exact formulation of the A1 RH-strength
 core.

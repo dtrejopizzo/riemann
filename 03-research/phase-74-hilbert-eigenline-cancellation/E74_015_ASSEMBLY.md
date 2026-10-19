@@ -1,6 +1,5 @@
 # E74.15 - Conditional assembly and candid endpoint
 
-Date: 2026-07-16.
 
 ## Purpose
 

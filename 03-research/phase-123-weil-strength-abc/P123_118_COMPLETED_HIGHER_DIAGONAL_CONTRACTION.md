@@ -1,6 +1,6 @@
 # P123.118 — A continuous contraction of the completed higher smooth diagonal
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY by the explicit chain
+Status: PROVED-IN-REPOSITORY by the explicit chain
 construction below, for the normalized completed Hochschild complex of
 S(Y) in P123.101–102. This is a result about that boundary algebra, not
 a full mixed arithmetic diagonal or a bimodule-perfectness assertion.

@@ -1,6 +1,5 @@
 # E73.268 - Equivalence of cell, coefficient, and second-Abel forms
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

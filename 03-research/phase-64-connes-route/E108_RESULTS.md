@@ -1,6 +1,6 @@
 # E108 — Krein-Langer negative-square index: the sharp, robust RH index (Connes round 3)
 
-**Date:** 2026-06-28 · mpmath dps=40.
+mpmath dps=40.
 
 ## The sharpening (Connes)
 

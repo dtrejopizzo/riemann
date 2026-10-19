@@ -1,6 +1,6 @@
 # P123.049 — Explicit multiplication defect attaching the double-zero layer
 
-Date: 2026-09-05. Status: PROVED for the continuous attaching defect,
+Status: PROVED for the continuous attaching defect,
 its associativity identity and its two-prime shell formula. This supplies
 chain-level input for descent, not an established excision theorem for
 the desired shadow.

@@ -1,6 +1,5 @@
 # E68.3 -- audit + step 2: the 1D symbol is the spectral object; Omega_7 = envelope dominates prime comb
 
-**Date:** 2026-07-06.
 **Script:** [E68_3_symbol_analytic.py](E68_3_symbol_analytic.py).
 
 ## Audit (reconciles E67.18 vs E68.1-2)

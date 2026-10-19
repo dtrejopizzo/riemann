@@ -1,6 +1,5 @@
 # E73.296 - Principal compression is not a forcer
 
-Date: 2026-07-16.
 
 ## 1. Purpose
 

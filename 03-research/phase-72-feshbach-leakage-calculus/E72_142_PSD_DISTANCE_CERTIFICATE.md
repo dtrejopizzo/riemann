@@ -1,7 +1,6 @@
 # E72.142 -- PSD distance certificate for NHS
 
-**Date:** 2026-07-09.
-**Role:** turn the negative-Hilbert-Schmidt gate into an SDP-style finite certificate.
+**Purpose:** turn the negative-Hilbert-Schmidt gate into an SDP-style finite certificate.
 
 ## 0. Identity
 

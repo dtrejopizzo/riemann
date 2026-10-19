@@ -1,6 +1,6 @@
 # Phase 148 — Row D: mixed effectivity on the full square
 
-**Status after round 2 (hostile audit `R148_002`: ACCEPT WITH REPAIRS; repairs R-1…R-8 and DOWNGRADE 1–2
+**Status after round 2 (audit `R148_002`: ACCEPT WITH REPAIRS; repairs R-1…R-8 and DOWNGRADE 1–2
 applied in `R148_003`): the kill test returns outcome (i). No FATAL flag. No label changes in Paper 46.
 Row D: no label, no sign.**
 
@@ -76,7 +76,7 @@ in row D — and being zero-free is exactly why it is useless.
 
 **It does not show that the square admits no intersection theory.** It shows that *the one form written
 down here, on the one domain chosen here, is trivial and zero-blind.* Phase-41 doc 125
-(`03-research/phase-41-build-G2/125-forma-interseccion-cuadrado.md`) is the **same object one level up**:
+(`03-research/phase-41-build-G2/125-construction-of-the-intersection-form.md`) is the **same object one level up**:
 its flow correspondences `Δ_μ = {v = u + log μ}` are `(T)` un-smeared, and its fibre classes
 `f₁ = C×{pt}`, `f₂ = {pt}×C` lie **outside** `(T) ⊕ (R)` and are paired there with `f₁·f₂ = 1` — a finite
 nonzero **integer**, on exactly the classes `B` cannot pair. That is O-148.2 made concrete.
@@ -92,10 +92,10 @@ none does. For a *negative* conclusion, blindness is the proof that nothing was 
 
 | file | what it is |
 |---|---|
-| `R148_000_LEAD_BLUEPRINT.md` | the lead's orders |
-| `R148_001_BUILDER_ROUND1.md` | round 1, document of record for what is not corrected; carries a dated **Corrections of record** block at the end |
-| `R148_002_HOSTILE_AUDIT.md` | hostile audit: ACCEPT WITH REPAIRS |
-| `R148_003_BUILDER_ROUND2.md` | **round 2: repairs R-1…R-8, DOWNGRADE 1–2, with full statements and proofs** |
+| `R148_000_BLUEPRINT.md` | the blueprint |
+| `R148_001_ROUND1.md` | round 1, document of record for what is not corrected; carries a dated **Corrections of record** block at the end |
+| `R148_002_AUDIT.md` | audit: ACCEPT WITH REPAIRS |
+| `R148_003_ROUND2.md` | **round 2: repairs R-1…R-8, DOWNGRADE 1–2, with full statements and proofs** |
 | `scripts/certify_mixed_support.py` | the support-function evaluation at `ρ₁` |
 
 ## Reproduction
@@ -131,11 +131,11 @@ multiplication. **The kill is Theorem D.56.4′, a two-line proof; it is not num
   not integer, on the continuous flow), **G-125.B** (Babaee–Huh non-persistence of the Hodge signature at
   infinite rank), **NC3** (eventual positivity reduces to the Lefschetz formula — circular).
 
-## Recommendation to the lead
+## Recommendation
 
 Close the square — on **Theorem D.56.4′ plus doc 125's obstructions**, and *not* on the withdrawn premise
 that Hilbert–Schmidt finiteness forces the collapse. The residue is O-148.2, and doc 125 bounds it
 independently from the other side. Phases 145–148 have now named the missing ingredient four times and it
 has been stable under every enlargement tried. Per `R147_005` §5: record phases 134–148 in Paper 46
-Part IV and close row D at the map, unless the owner judges O-47.7 (a defect theorem for `L(s,χ)`) worth
+Part IV and close row D at the map, unless O-47.7 is judged (a defect theorem for `L(s,χ)`) worth
 having.

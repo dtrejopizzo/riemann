@@ -1,6 +1,6 @@
 # E78.22 - Theta dominance as the structural source of sign coherence
 
-**Run:** 2026-07-18.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

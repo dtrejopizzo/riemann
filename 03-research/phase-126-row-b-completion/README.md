@@ -1,6 +1,6 @@
 # Phase 126 — Row B completion
 
-Opened 2026-09-12.  Status: **ROW B WEIL-STRENGTH-COMPLETE** on the graph
+Status: **ROW B WEIL-STRENGTH-COMPLETE** on the graph
 sector `G` of Paper 43.  Deliverable: [Paper 44](../../04-papers/44-row-b-arithmetic-family/main.md).
 
 This phase carries no computation.  Row B was blocked by a single structural

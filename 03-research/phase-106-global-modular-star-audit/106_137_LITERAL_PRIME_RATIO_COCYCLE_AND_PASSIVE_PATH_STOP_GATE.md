@@ -188,7 +188,7 @@ terms give \(2\|B\|^2\).  This proves (4).  Completing the square in
 For the literal arithmetic bank one takes
 
 \[
- a_j=\log n_j,qquad
+ a_j=\log n_j,\qquad
  \lambda_j=\frac{\Lambda(n_j)}{\sqrt{n_j}}.
  \tag{6}
 \]

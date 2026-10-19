@@ -19,7 +19,7 @@ The resumable checkpointing refinement workflow was successfully designed and pa
 - The final merge/dedup/validate/save step (yielding `ldelta_zeros_N5000_dps80.npy`) was not reached.
 - Search extension from T=2200 to T≈4100 (research step 3) was not attempted; even with full 3405 zeros refined, we would still be ~1595 zeros short of N=5000.
 </results> <challenges>
-1. PARI `lfunhardy` is the dominant cost; eval time scales as ≈T^2.1 at dps=80. For T≈2200 each evaluation is ≈7 s, so each zero takes ≈35–50 s. Refining all 3405 high-precision zeros requires ≈10 CPU·h serial / ≈75 min on 8 cores — exceeding the 1-h agent budget.
+1. PARI `lfunhardy` is the dominant cost; eval time scales as ≈T^2.1 at dps=80. For T≈2200 each evaluation is ≈7 s, so each zero takes ≈35–50 s. Refining all 3405 high-precision zeros requires ≈10 CPU·h serial / ≈75 min on 8 cores — exceeding the 1-h run budget.
 2. The first subprocess launch died at ~928 s when a notebook cell's TimeoutError sent SIGINT to descendants. Fix: relaunch with `start_new_session=True` so children form a new process group and survive cell timeouts. The refiner's per-zero checkpoint made the loss recoverable (no work was wasted).
 3. PARI returns numbers like `"1.234 E-44"` (note the space, capital E); `mpmath.mpf` rejects these. The refiner normalises ` E`/`E` → `e` before parsing.
 4. `cypari2` + `multiprocessing.Pool` is unsafe (documented segfault); the workflow therefore uses independent `subprocess.Popen` workers communicating via pickle checkpoints.

@@ -24,7 +24,7 @@ The "dataset" is a single 5,530-byte specification file (engine-spec.md) that de
 - No cached zero lists, Q matrices, or scripts exist in the workspace; future runs must build the engine from scratch and budget ~20–60 CPU-min just for the 5,000 ζ zeros.
 - `mpmath`'s Hurwitz-form L(s,χ) call returns NaN at s=1 because `mp.zeta(s, a/q)` hits the Hurwitz pole; sanity checks must use s away from 1 (e.g., s=2).
 - `mp.nsum(f, [1, inf])` passes `n` as `mpf`, so character lookups like `chi[int(n)%q]` need explicit casts; prefer explicit partial sums or `mp.dirichlet`.
-- No GPU and a 3,600 s session cap mean aggressive caching of zero lists and Q matrices is mandatory (R8).
+- No GPU and a 3,600 s run cap mean aggressive caching of zero lists and Q matrices is mandatory (R8).
 - Several seductive-but-dead analytic approaches are explicitly blacklisted (§7) — most importantly the zero-side-only Gram matrix, which is PSD by construction and gives a false positive signal.
 - L_DH is restricted to qualitative use only; quantitative claims must be confined to the three GRH controls (ζ, L(χ₄ mod 5), L(Δ,s)) per R3.
 </challenges> <discussion>

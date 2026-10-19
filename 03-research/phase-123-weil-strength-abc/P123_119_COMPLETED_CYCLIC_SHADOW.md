@@ -1,6 +1,6 @@
 # P123.119 — Completed cyclic comparison and finite tangential periodic homology
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY for the normalized
+Status: PROVED-IN-REPOSITORY for the normalized
 completed boundary complex of P123.101, P123.118 and the explicitly
 formal cyclic totalizations below. No entire/analytic cyclic topology,
 full arithmetic trace comparison, or Hilbert heat determinant is inferred.

@@ -1,6 +1,6 @@
 # Phase 125 — row A completion campaign
 
-Opened 2026-09-12.  Status after A125.015:
+Status after A125.015:
 
 ```text
 ROW A:  WEIL-STRENGTH-COMPLETE  on the graph sector G with its Fell

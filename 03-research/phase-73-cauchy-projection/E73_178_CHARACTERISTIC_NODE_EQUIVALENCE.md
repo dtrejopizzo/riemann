@@ -1,6 +1,5 @@
 # E73.178 - Characteristic node equivalence
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

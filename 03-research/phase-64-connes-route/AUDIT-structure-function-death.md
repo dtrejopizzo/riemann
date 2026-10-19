@@ -1,6 +1,6 @@
 # Audit: did the phase-monotonicity "would-be proof" actually die? — No. It was mis-buried; it is an RH-strength reduction, not a corpse
 
-*Self-audit (2026-06-29), requested before moving to the spectral-shift thread: re-examine the claim
+*Self-audit, requested before moving to the spectral-shift thread: re-examine the claim
 in `FACE-C-structure-function-fork.md` §2 that the phase-monotonicity proof died. Verdict: the **stated
 cause of death was an invalid argument**, now withdrawn. The candid status is that the proof is a
 **valid reduction of RH to a Hurwitz-safe convergence** $E_P\to\Xi$ — neither dead (no flaw found) nor

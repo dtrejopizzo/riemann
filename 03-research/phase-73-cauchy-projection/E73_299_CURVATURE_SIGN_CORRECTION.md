@@ -1,6 +1,5 @@
 # E73.299 - Curvature sign correction for the simple ramp
 
-Date: 2026-07-16.
 
 ## 1. Correction
 

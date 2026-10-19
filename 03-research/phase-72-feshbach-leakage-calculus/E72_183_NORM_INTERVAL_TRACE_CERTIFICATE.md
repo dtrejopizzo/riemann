@@ -1,7 +1,6 @@
 # E72.183 -- Norm interval trace certificate
 
-**Date:** 2026-07-09.
-**Role:** replace the operator-norm interval hypotheses in Adaptive-SRP by finite trace inequalities.
+**Purpose:** replace the operator-norm interval hypotheses in Adaptive-SRP by finite trace inequalities.
 
 ## 0. Trace certificate
 

@@ -1,6 +1,5 @@
 # E73.237 - Balanced coefficient form of SECOND-ABEL
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

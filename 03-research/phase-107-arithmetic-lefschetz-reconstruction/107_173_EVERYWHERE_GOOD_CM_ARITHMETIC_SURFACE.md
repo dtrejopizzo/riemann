@@ -27,7 +27,7 @@ All coefficients in (1.1) are algebraic integers.  Direct evaluation of
 the Weierstrass invariants gives
 
 \[
- \Delta(E_L)=1,qquad j(E_L)=-32768.
+ \Delta(E_L)=1,\qquad j(E_L)=-32768.
  \tag{1.2}
 \]
 

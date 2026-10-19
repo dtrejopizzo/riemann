@@ -1,6 +1,6 @@
 # P123.069 — Multibar coherence of the continuous derived source shadow
 
-Date: 2026-09-06. Status: PROVED in the continuous chain-homotopy category
+Status: PROVED in the continuous chain-homotopy category
 for bounded twisted complexes. This does not supply the determinant or
 nuclear target demanded by the full row-A contract.
 

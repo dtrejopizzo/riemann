@@ -1,6 +1,5 @@
 # E73.220 - Closed-center TRANS-CELL check
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

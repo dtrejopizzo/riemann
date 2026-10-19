@@ -128,7 +128,7 @@ constructs these defect channels.  But the new boundary load (y_N) is
 external to the Julia colligation.  The missing statement remains
 
 \[
-y_N=D_{\rm out}^{1/2}v_N,qquad \|v_N\|\le1.
+y_N=D_{\rm out}^{1/2}v_N,\qquad \|v_N\|\le1.
 \]
 
 Defining (v_N=D_{\rm out}^{\dagger/2}y_N) would assume the range and norm

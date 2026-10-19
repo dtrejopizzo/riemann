@@ -19,7 +19,7 @@
 Let
 
 \[
- Y=X\times_SX,qquad i:Y^{\rm reg}\longrightarrow Y                 \tag{1.1}
+ Y=X\times_SX,\qquad i:Y^{\rm reg}\longrightarrow Y                 \tag{1.1}
 \]
 
 be the literal Haran square and the regular reflection of `a109`--`a110`.

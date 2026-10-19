@@ -1,15 +1,15 @@
 """
-OPCION A — pseudo-Hermiticity / Herglotz. D_{λ,N}=D_log−|D_log ξ><δ_N| es perturbacion RANGO 1
-de D_log (real, diagonal, k_n=2πn/L). Autovalores = raices de la ecuacion secular
-   1 = Σ_n r_n/(z − k_n),   r_n = (D_log ξ)_n (δ_N)_n   (residuos).
-TEOREMA (Herglotz/Pick): si todos los r_n tienen el MISMO signo, Σ r_n/(z−k_n) es monotona
-entre polos consecutivos => exactamente una raiz real por hueco => TODO EL ESPECTRO REAL.
-=> reality (ceros on-line) <= residuos mismo signo. Mecanismo Hilbert-Polya CONCRETO.
+OPTION A — pseudo-Hermiticity / Herglotz. D_{λ,N}=D_log−|D_log ξ><δ_N| is a RANK-1 perturbation
+of D_log (real, diagonal, k_n=2πn/L). Eigenvalues = roots of the secular equation
+   1 = Σ_n r_n/(z − k_n),   r_n = (D_log ξ)_n (δ_N)_n   (residues).
+THEOREM (Herglotz/Pick): if all the r_n have the SAME sign, Σ r_n/(z−k_n) is monotone
+between consecutive poles => exactly one real root per gap => THE WHOLE SPECTRUM IS REAL.
+=> reality (on-line zeros) <= residues of the same sign. CONCRETE Hilbert-Polya mechanism.
 Tests:
- (1) patron de signo de ξ_n (¿estado base de signo definido / Perron?).
- (2) patron de signo de los residuos r_n. ¿Mismo signo (=> real)? Si no, ¿que estructura?
- (3) ¿la condicion 'r_n mismo signo' se sigue de ξ par + algo, SIN usar A⪰0? (no-circularidad)
- (4) falsador DH: residuos de signo mezclado => espectro complejo (off-line).
+ (1) sign pattern of ξ_n (is the ground state of definite sign / Perron?).
+ (2) sign pattern of the residues r_n. Same sign (=> real)? If not, what structure?
+ (3) does the condition 'r_n same sign' follow from ξ even + something, WITHOUT using A⪰0? (non-circularity)
+ (4) DH falsifier: mixed-sign residues => complex spectrum (off-line).
 """
 import mpmath as mp
 mp.mp.dps = 30
@@ -35,29 +35,29 @@ def run(lam,N,kind):
     xi=[V[r,g0] for r in range(dim)]
     kn=[2*mp.pi*idx[a]/L for a in range(dim)]
     dN=[1/mp.sqrt(L) for _ in range(dim)]
-    # residuos r_n = (D_log xi)_n (delta_N)_n = k_n xi_n / sqrt(L)
+    # residues r_n = (D_log xi)_n (delta_N)_n = k_n xi_n / sqrt(L)
     r=[kn[a]*xi[a]*dN[a] for a in range(dim)]
-    # signos
+    # signs
     sx=[ (1 if xi[a]>1e-15 else (-1 if xi[a]<-1e-15 else 0)) for a in range(dim)]
     sr=[ (1 if r[a]>1e-18 else (-1 if r[a]<-1e-18 else 0)) for a in range(dim)]
     npos=sum(1 for s in sr if s>0); nneg=sum(1 for s in sr if s<0); nz=sum(1 for s in sr if s==0)
-    print(f"\n=== OPCION A pseudo-Herm  {kind} lambda={lam} N={N} ===")
-    print(f"  (1) ξ_n signo (n=-N..N): {''.join('+' if s>0 else ('-' if s<0 else '0') for s in sx)}")
-    # ξ par => xi_n=xi_{-n}; con k_n=2πn/L (impar en n), r_n=k_n xi_n es IMPAR => r_n=-r_{-n}.
-    print(f"  (2) r_n signo:           {''.join('+' if s>0 else ('-' if s<0 else '0') for s in sr)}")
-    print(f"      residuos: {npos}+ {nneg}- {nz}0   => {'MISMO signo (Herglotz=>REAL)' if npos==0 or nneg==0 else 'signo MEZCLADO'}")
-    # como r es impar (r_n=-r_{-n}) por ξ par, nunca puede ser 'mismo signo' globalmente.
-    # PERO el problema se desdobla: para n>0 todos + y n<0 todos - ? eso es la estructura correcta.
+    print(f"\n=== OPTION A pseudo-Herm  {kind} lambda={lam} N={N} ===")
+    print(f"  (1) ξ_n sign (n=-N..N): {''.join('+' if s>0 else ('-' if s<0 else '0') for s in sx)}")
+    # ξ even => xi_n=xi_{-n}; with k_n=2πn/L (odd in n), r_n=k_n xi_n is ODD => r_n=-r_{-n}.
+    print(f"  (2) r_n sign:           {''.join('+' if s>0 else ('-' if s<0 else '0') for s in sr)}")
+    print(f"      residues: {npos}+ {nneg}- {nz}0   => {'SAME sign (Herglotz=>REAL)' if npos==0 or nneg==0 else 'MIXED sign'}")
+    # since r is odd (r_n=-r_{-n}) because ξ is even, it can never be 'same sign' globally.
+    # BUT the problem splits: for n>0 all + and n<0 all - ? that is the correct structure.
     rpos=[sr[a] for a in range(dim) if idx[a]>0]; rneg=[sr[a] for a in range(dim) if idx[a]<0]
     half_consistent = (all(s>=0 for s in rpos) and all(s<=0 for s in rneg)) or (all(s<=0 for s in rpos) and all(s>=0 for s in rneg))
     print(f"      n>0: {''.join('+' if s>0 else('-' if s<0 else '0') for s in rpos)}   n<0: {''.join('+' if s>0 else('-' if s<0 else '0') for s in rneg)}")
-    print(f"      => residuos de signo DEFINIDO en cada mitad (r_n=k_n ξ_n, ξ par)? {half_consistent}")
-    print(f"         {'=> Herglotz por mitades: ξ_n>0 ∀n (estado base Perron) => espectro REAL' if half_consistent else '=> signo mezclado dentro de una mitad => raices complejas posibles'}")
-    # (3) la condicion se reduce a: ξ_n > 0 para todo n (estado base de signo unico).
+    print(f"      => residues of DEFINITE sign on each half (r_n=k_n ξ_n, ξ even)? {half_consistent}")
+    print(f"         {'=> Herglotz by halves: ξ_n>0 ∀n (Perron ground state) => REAL spectrum' if half_consistent else '=> mixed sign within a half => complex roots possible'}")
+    # (3) the condition reduces to: ξ_n > 0 for all n (single-sign ground state).
     xi_single = (all(x>=-1e-15 for x in xi) or all(x<=1e-15 for x in xi))
-    print(f"  (3) ξ_n de signo UNICO (Perron, => r mismo signo por mitad => REAL)? {xi_single}")
-    print(f"      NO-CIRCULARIDAD: reality <= 'ξ_n signo unico'. ¿Se prueba ξ_n>0 sin asumir A⪰0?")
-    print(f"      (ground state de signo unico = Perron-Frobenius si A-cI tiene off-diag <=0; a verificar)")
+    print(f"  (3) ξ_n of SINGLE sign (Perron, => r same sign per half => REAL)? {xi_single}")
+    print(f"      NON-CIRCULARITY: reality <= 'ξ_n single sign'. Is ξ_n>0 proved without assuming A⪰0?")
+    print(f"      (single-sign ground state = Perron-Frobenius if A-cI has off-diag <=0; to be verified)")
 
 run('7.0',12,'zeta')
 run('7.0',12,'DH')

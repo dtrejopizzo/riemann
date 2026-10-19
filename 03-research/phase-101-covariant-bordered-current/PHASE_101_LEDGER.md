@@ -119,7 +119,7 @@ coupled radical residual.  SAFE-PROLATE-BRIDGE is therefore equivalent to
 one paired-residual estimate, DIRECTIONAL-IDENT.  Qualitative LP uniqueness
 only makes the restricted finite map injective; it supplies no cofinal lower
 bound for the optimal directional inf-sup constant.  Under Outcome A the
-force-RH step is consequently located in IDENT, not in build-neutral LP
+RH-strength step is consequently located in IDENT, not in build-neutral LP
 infrastructure.
 
 E101.046 removes even the restricted inverse from that formulation.  The
@@ -337,7 +337,7 @@ Christoffel theory already transports polynomial moment shifts; Geronimus
 theory already supplies rational backshifts with masses and jets.  These
 mechanisms are imported and frozen.  Connes, CCM and Suzuki provide finite
 real-zero constructions and model or kernel infrastructure, while their
-global convergence or nondegeneracy steps are explicitly force-RH.  The only
+global convergence or nondegeneracy steps are explicitly RH-strength.  The only
 unabsorbed target is a bilateral right-bordered Gamma--Euler flux identity
 whose coefficients and masses are fixed before the terminal row and whose
 controlled-build boundary cannot cancel the actual quartet response.

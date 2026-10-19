@@ -1,6 +1,5 @@
 # E73.300 - Corrected curvature quotient normal form
 
-Date: 2026-07-16.
 
 ## 1. Purpose
 

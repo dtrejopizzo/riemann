@@ -1,6 +1,5 @@
 # E73.138 - Critical Cell Cancellation Target
 
-Date: 2026-07-12.
 
 E73.137 identifies the first viable finite identity behind `ROW-KER_17`.
 

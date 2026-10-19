@@ -1,20 +1,20 @@
 """
-FASE H0 — GATE DE NO-CIRCULARIDAD (obligatorio antes de cualquier 'cruce').
-Tesis a verificar: los insumos de positividad que alimentaremos al teorema de Abboud
-  - el polo 𝒫 (clase amplia L̄),
-  - el arquimediano ℛ (factor-Γ, la condicion ℰ/cosh),
-  - el termino de primos 𝒬 (von Mangoldt),
-son DATOS ARITMETICOS construidos SIN usar la posicion de los ceros. Los ceros aparecen
-solo como OUTPUT (el espectro de A=𝒫−ℛ−𝒬, = Σ_ρ|f̂(γ_ρ)|² por la formula explicita).
-Si algun insumo requiriera saber que los ceros estan on-line => circular => DETENER.
+PHASE H0 — NON-CIRCULARITY GATE (mandatory before any 'crossing').
+Thesis to verify: the positivity inputs we will feed into Abboud's theorem
+  - the pole 𝒫 (ample class L̄),
+  - the archimedean term ℛ (Γ-factor, the ℰ/cosh condition),
+  - the prime term 𝒬 (von Mangoldt),
+are ARITHMETIC DATA built WITHOUT using the position of the zeros. The zeros appear
+only as OUTPUT (the spectrum of A=𝒫−ℛ−𝒬, = Σ_ρ|f̂(γ_ρ)|² via the explicit formula).
+If any input required knowing that the zeros are on-line => circular => STOP.
 
 Tests:
- (1) Procedencia: 𝒫 usa solo cosh(u/2) (polo s=0,1); ℛ usa solo {γ,log4π, e^{±u/2}, sinh}
-     (factor-Γ, CCM eq 2.8); 𝒬 usa solo Λ(n)=log p (primos). Ninguno toma ceros como input.
- (2) Invariancia: 'mover' ceros hipoteticos NO cambia 𝒫,ℛ,𝒬 (no pueden: no hay slot de ceros).
- (3) Firma de cada pieza: identificar 𝒫 como CLASE AMPLIA (auto-pareo positivo, el +1 de Hodge).
- (4) Falsador: misma estructura polo/Γ pero primos de DH (=otra aritmetica) => output indefinido,
-     probando que la positividad la decide la ARITMETICA (primos), no un supuesto sobre ceros.
+ (1) Provenance: 𝒫 uses only cosh(u/2) (pole s=0,1); ℛ uses only {γ,log4π, e^{±u/2}, sinh}
+     (Γ-factor, CCM eq 2.8); 𝒬 uses only Λ(n)=log p (primes). None takes zeros as input.
+ (2) Invariance: 'moving' hypothetical zeros does NOT change 𝒫,ℛ,𝒬 (it cannot: there is no zero slot).
+ (3) Signature of each piece: identify 𝒫 as an AMPLE CLASS (positive self-pairing, the +1 of Hodge).
+ (4) Falsifier: same pole/Γ structure but DH primes (=a different arithmetic) => indefinite output,
+     proving that positivity is decided by the ARITHMETIC (primes), not by an assumption on zeros.
 """
 import mpmath as mp
 mp.mp.dps = 30
@@ -25,7 +25,7 @@ def q_kernel(m,n,L):
     c=1/(mp.pi*(n-m)); return lambda u:(mp.sin(2*mp.pi*m*u/L)-mp.sin(2*mp.pi*n*u/L))*c
 
 def polemat(L,N):
-    # 𝒫: SOLO el peso del polo 2cosh(u/2)=e^{u/2}+e^{-u/2}. CERO input de ceros.
+    # 𝒫: ONLY the pole weight 2cosh(u/2)=e^{u/2}+e^{-u/2}. ZERO input from zeros.
     dim=2*N+1; idx=list(range(-N,N+1)); P=mp.zeros(dim)
     for a in range(dim):
         for b in range(a,dim):
@@ -34,7 +34,7 @@ def polemat(L,N):
     return P
 
 def archmat(L,N,even,C):
-    # ℛ: SOLO factor-Γ (γ, log4π, e^{±u/2}, sinh). CERO input de ceros.
+    # ℛ: ONLY the Γ-factor (γ, log4π, e^{±u/2}, sinh). ZERO input from zeros.
     dim=2*N+1; idx=list(range(-N,N+1))
     w=(lambda u:mp.e**(u/2)) if even else (lambda u:mp.e**(-u/2)); A=mp.zeros(dim)
     for a in range(dim):
@@ -70,7 +70,7 @@ def vm_DH(mx):
         c[n]=s
     return c
 def primemat(L,N,Lam):
-    # 𝒬: SOLO Λ(n) (primos). CERO input de ceros.
+    # 𝒬: ONLY Λ(n) (primes). ZERO input from zeros.
     dim=2*N+1; idx=list(range(-N,N+1)); Q=mp.zeros(dim); mx=int(mp.e**L)
     for a in range(dim):
         for b in range(a,dim):
@@ -89,23 +89,23 @@ def run(lam,N):
     L=2*mp.log(mp.mpf(lam)); mx=int(float(lam)**2); C=LOG4PI+GAMMA
     P=polemat(L,N); R=archmat(L,N,True,C); Qz=primemat(L,N,vm_zeta(mx))
     print(f"\n=== H0 gate  lambda={lam} N={N} (dim {2*N+1}) ===")
-    print(f"  (1)(2) PROCEDENCIA: 𝒫<-cosh(polo), ℛ<-{{γ,log4π,e^±u/2,sinh}}(Γ), 𝒬<-Λ(n)(primos).")
-    print(f"          NINGUNA funcion toma ceros como argumento => insumos zero-independientes.")
-    print(f"  (3) FIRMAS (pos,0,neg):")
-    print(f"        𝒫 (polo)        = {sig(P)}   <- CLASE AMPLIA si tiene direccion(es) +")
-    print(f"        ℛ (arquimediano)= {sig(R)}")
-    print(f"        𝒬 (primos zeta) = {sig(Qz)}")
+    print(f"  (1)(2) PROVENANCE: 𝒫<-cosh(pole), ℛ<-{{γ,log4π,e^±u/2,sinh}}(Γ), 𝒬<-Λ(n)(primes).")
+    print(f"          NO function takes zeros as an argument => zero-independent inputs.")
+    print(f"  (3) SIGNATURES (pos,0,neg):")
+    print(f"        𝒫 (pole)        = {sig(P)}   <- AMPLE CLASS if it has (a) + direction(s)")
+    print(f"        ℛ (archimedean) = {sig(R)}")
+    print(f"        𝒬 (zeta primes) = {sig(Qz)}")
     Az=P-R-Qz
-    print(f"        A=𝒫−ℛ−𝒬 (zeta) = {sig(Az)}   <- OUTPUT (positividad = formula explicita)")
-    # (4) falsador: misma estructura polo+Γ, primos de DH (DH no tiene polo => usamos solo Γ+primos_DH)
+    print(f"        A=𝒫−ℛ−𝒬 (zeta) = {sig(Az)}   <- OUTPUT (positivity = explicit formula)")
+    # (4) falsifier: same pole+Γ structure, DH primes (DH has no pole => we use only Γ+DH_primes)
     Cdh=LOG4PI+GAMMA+LOG5; Rdh=archmat(L,N,False,Cdh); Qdh=primemat(L,N,vm_DH(mx))
-    Adh=-Rdh-Qdh   # DH entera: sin polo
-    print(f"  (4) FALSADOR (misma maquinaria, aritmetica DH): A_DH=−ℛ_DH−𝒬_DH firma={sig(Adh)}")
-    print(f"      => la positividad la decide la ARITMETICA (primos/polo), NO un supuesto sobre ceros.")
-    # veredicto
+    Adh=-Rdh-Qdh   # DH entire: no pole
+    print(f"  (4) FALSIFIER (same machinery, DH arithmetic): A_DH=−ℛ_DH−𝒬_DH signature={sig(Adh)}")
+    print(f"      => positivity is decided by the ARITHMETIC (primes/pole), NOT by an assumption on zeros.")
+    # verdict
     poleAmple = sig(P)[0]>=1
-    print(f"  D-H0: insumos zero-independientes=SI ; 𝒫 amplia (tiene +)={poleAmple}")
-    print(f"        => {'GATE PASA: seguir a H1/H4' if poleAmple else 'REVISAR: 𝒫 no amplia'}")
+    print(f"  D-H0: zero-independent inputs=YES ; 𝒫 ample (has +)={poleAmple}")
+    print(f"        => {'GATE PASSES: proceed to H1/H4' if poleAmple else 'REVIEW: 𝒫 not ample'}")
 
 run('7.0',10)
 run('9.0',10)

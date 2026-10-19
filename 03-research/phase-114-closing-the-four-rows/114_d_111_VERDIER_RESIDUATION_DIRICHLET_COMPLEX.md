@@ -196,7 +196,7 @@ Equation (4.4) is an equality of boundary terms, not a positivity claim.
 Let
 
 \[
- \mathrm{Tr}_{\rm Tate}F=(M_-(F),M_+(F)),qquad
+ \mathrm{Tr}_{\rm Tate}F=(M_-(F),M_+(F)),\qquad
  \mathcal P=\ker\mathrm{Tr}_{\rm Tate}.           \tag{5.1}
 \]
 

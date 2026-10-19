@@ -1,6 +1,6 @@
 # Phase 62 — Cesàro Closure of 2.3.F
 
-**Status:** open · no proof reached · started 2026-06-26
+**Status:** open · no proof reached · started
 
 ## Goal
 
@@ -22,7 +22,7 @@ where the zero-sum fluctuation washes out by *unconditional* zero-density (no RH
 | ~~C3~~ | ~~lift to CvS Thm 5.10~~ | **withdrawn** |
 | **C4** | verdict + writeup; update NO-GO-LIST / OPEN-PROBLEMS | **DONE** |
 
-## Phase verdict (2026-06-26): NO-GO for the Cesàro route, with insight
+## Phase verdict: NO-GO for the Cesàro route, with insight
 
 **Cesàro-in-λ does not make 2.3.F / the boundedness L1 RH-neutral.** The zero-sum's Cesàro
 average converges **iff** zeros lie on the line: off-line zeros contribute `λ^{2β−1}` *secular
@@ -72,7 +72,7 @@ Next: a genuinely different road (new phase). The finite-window object keeps ret
 gapless wall, so the productive frontier is the geometric realization (MW-5) or a different object,
 not more brute force on the window.
 
-## C0 result (candid, 2026-06-26)
+## C0 result (candid)
 
 - The **`k(k+2)` ladder is NOT a discriminator** — the DH falsador reproduces it *better* than ζ.
   It is generic period-2 Dirichlet geometry, not arithmetic. This refutes the optimistic reading

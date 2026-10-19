@@ -1,7 +1,6 @@
 # E70.5 — Hardy/autocorrelation form of AHM
 
-**Date:** 2026-07-07.
-**Role:** rewrite Cauchy-Weil positivity as the concrete arithmetic autocorrelation inequality that a
+**Purpose:** rewrite Cauchy-Weil positivity as the concrete arithmetic autocorrelation inequality that a
 proof must establish.
 
 ## Cauchy tests as Laplace transforms

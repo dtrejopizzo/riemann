@@ -1,6 +1,6 @@
-# R155_022 — Note: the mechanism of positivity, zero side and prime side (2026-09-22)
+# R155_022 — Note: the mechanism of positivity, zero side and prime side
 
-Owner's questions: "what turns real zeros into positivity? test the first 10 zeros of a 3-digit prime and of a
+the questions: "what turns real zeros into positivity? test the first 10 zeros of a 3-digit prime and of a
 12-digit prime; then generalise D to infinity, verify positivity and extract the why in each case."
 Scripts: `scripts/reverse/mechanism/`. Everything from tables of zeros is DIAGNOSTIC; the structural statements
 are PROVED where marked (they are standard).

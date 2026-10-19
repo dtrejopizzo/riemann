@@ -56,7 +56,7 @@ Euler-generated vector and one safe testing family are required.
 
 If (2.1), `GE-1` and `GE-3` are proved with the outer Euler--Gamma current,
 then the established chain reaches `RDI-ANCHOR` and ultimately `Omega7`.
-Therefore at least one of these clauses has force-RH.  Proposition 1.1 shows
+Therefore at least one of these clauses has RH-strength.  Proposition 1.1 shows
 why it cannot be hidden in the formal Mobius or Riccati identities.
 
 ## 4. Status

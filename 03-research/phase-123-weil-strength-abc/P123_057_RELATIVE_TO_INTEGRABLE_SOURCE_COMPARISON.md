@@ -1,6 +1,6 @@
 # P123.057 — Comparison with the integrable source and its transgression
 
-Date: 2026-09-05. Status: PROVED for S_f={p,q}. This identifies two
+Status: PROVED for S_f={p,q}. This identifies two
 constructed source domains and their trace operations; comparison with
 the external Fourier character remains open.
 

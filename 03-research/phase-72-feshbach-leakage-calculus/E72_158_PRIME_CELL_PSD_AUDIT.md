@@ -1,7 +1,6 @@
 # E72.158 -- Prime-cell PSD audit
 
-**Date:** 2026-07-09.
-**Role:** test whether the low-rank PSD certificate comes from dominant prime-power cells.
+**Purpose:** test whether the low-rank PSD certificate comes from dominant prime-power cells.
 
 ## 0. Arithmetic split
 

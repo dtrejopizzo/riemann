@@ -1,7 +1,6 @@
 # E70.11 -- Mobius connection identity for the prime current
 
-**Date:** 2026-07-07.
-**Role:** replace the failed linear Dirichlet square by a canonical algebraic source for the Euler
+**Purpose:** replace the failed linear Dirichlet square by a canonical algebraic source for the Euler
 current.
 
 ## Semigroup shift algebra

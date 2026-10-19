@@ -1,6 +1,6 @@
 # The sign `ε₀≥0` as a Schrödinger bound-state problem: the pole as barrier, the curvature as well-control, and the Bargmann criterion
 
-*Pure mathematics. We attack the one irreducible quantity — the sign `ε₀(λ)≥0` (Weil positivity) —
+* We attack the one irreducible quantity — the sign `ε₀(λ)≥0` (Weil positivity) —
 with a new tool: realize `ε₀(λ)` as the **ground-state energy of a Schrödinger operator** on the
 window, in which the **pole of ζ acts as a repulsive barrier** and Theorem 2's curvature controls the
 shape of the **prime well**. Positivity then becomes a **Bargmann-type bound-state criterion**, where

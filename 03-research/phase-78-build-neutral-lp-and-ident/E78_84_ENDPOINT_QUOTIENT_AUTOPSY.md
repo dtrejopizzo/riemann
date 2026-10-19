@@ -1,6 +1,6 @@
 # E78.84 - The endpoint quotient tracks `u`-sector size more directly than `Q_theta` curvature
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front, left endpoint slice `sigma=1.0`.
 
 ## 1. Purpose

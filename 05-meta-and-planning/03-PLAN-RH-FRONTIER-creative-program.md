@@ -1,6 +1,6 @@
 # PLAN — RH Creative Frontier: mixing the Connes program with new, falsifiable, ambitious ideas
 
-**Author:** David Alejandro Trejo Pizzo · **Opened:** 2026-06-03 · **Status:** the forward program after
+**Author:** David Alejandro Trejo Pizzo · **Opened:**  · **Status:** the forward program after
 M1–M3 closed the identification phase of Route B.
 
 This continues `PLAN-RH-ROUTE-B-structural-positivity.md`. M1–M3 (`phase-5-structural/`) established the

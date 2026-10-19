@@ -1,4 +1,4 @@
-# 107.70 -- Paper A audit coverage matrix
+# 107.70 -- Paper An audit coverage matrix
 
 ## 1. Purpose
 

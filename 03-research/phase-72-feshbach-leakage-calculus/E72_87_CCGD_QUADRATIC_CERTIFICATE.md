@@ -1,7 +1,6 @@
 # E72.87 -- CCGD quadratic certificate
 
-**Date:** 2026-07-09.
-**Role:** express Cauchy-channel Green decay as an exact finite quadratic inequality.
+**Purpose:** express Cauchy-channel Green decay as an exact finite quadratic inequality.
 
 ## 0. Motivation
 

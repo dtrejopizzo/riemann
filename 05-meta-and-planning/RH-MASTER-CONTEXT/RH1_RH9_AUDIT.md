@@ -1,42 +1,42 @@
-# Auditoría de los programas RH1–RH9
+# Audit of the RH1–RH9 programs
 
-## Balance global
+## Overall balance
 
-Los nueve programas no producen una demostración de RH ni una reducción con menor fuerza demostrada. Su valor es otro: construyen falsadores, calibran detectores, identifican errores de normalización y cierran varias explicaciones tentadoras pero falsas. El recorrido va desde estadísticas de coeficientes hasta geometría cohomológica:
+The nine programs produce neither a proof of RH nor a reduction of proven lesser strength. Their value lies elsewhere: they build falsifiers, calibrate detectors, identify normalization errors, and close off several tempting but false explanations. The trajectory runs from coefficient statistics to cohomological geometry:
 
 \[
-\text{fases de coeficientes}
+\text{coefficient phases}
 \to
-\text{clases }\omega
+\omega\text{ classes}
 \to
-\text{reconstrucción por ceros}
+\text{zero-based reconstruction}
 \to
-\text{forma localizada de Weil}
+\text{localized Weil form}
 \to
-\text{estabilidad finita}
+\text{finite stability}
 \to
-\text{geometría de Lefschetz}.
+\text{Lefschetz geometry}.
 \]
 
-En cada transición reaparece el mismo corte: los objetos finitos describen o detectan, pero no fuerzan la positividad global ni construyen el divisor real.
+At every transition the same cut reappears: the finite objects describe or detect, but do not force global positivity or construct the real divisor.
 
-## Tabla canónica
+## Canonical table
 
-| Programa | Objetivo | Resultado durable | Ruta cerrada o carga pendiente |
+| Program | Goal | Durable result | Closed route or pending burden |
 |---|---|---|---|
-| RH1 | Detectar resonancia mediante sumas de Dirichlet, fases, coherencia y extremos | Instrumentación numérica, controles de precisión y contraejemplo Liouville | Multiplicatividad no suprime por sí sola la resonancia; la firma de crecimiento atribuida a un cero fuera de línea no fue derivada ni observada de modo operativo. |
-| RH2 | Convertir decoherencia, GEV y no crecimiento en una cadena de no-anulación | Protocolo más estricto de validación y perturbaciones por clase | Las correlaciones y parámetros GEV no son universales; el paso uniforme a no-anulación falta y tiene fuerza al menos comparable a la meta. |
-| RH3 | Estudiar geometría de clases \(\omega(n)\), momentos y causalidad finita | Identidades de energía, reproducibilidad y banco de confusores | Las anomalías dependen de selección, escala e implementación; no hay transferencia desde picos truncados a ceros de la función completa. |
-| RH4 | Reconstruir información de ceros desde matrices de picos y covarianzas | Cotas elementales, ablation aritmética y diagnóstico de fugas | Covarianza interclase negativa y singularidad de \(\omega=2\) fueron refutadas; las matrices codifican sobre todo coeficientes, conductor y soporte. |
-| RH5 | Usar Jacobi, Mercer, Li, TDA y listas de ceros | Calibración de potencia mediante desplazamientos sintéticos | Gram cero-sólo es PSD tautológica; positividad finita de Li o Mercer no excluye un cero desconocido; forma completa y residuo truncado no son el mismo objeto. |
-| RH6 | Localizar la forma de Weil con base Hermite–Gauss | Detector calibrado, respuesta de cuartetos y separación de errores | Falta una cota uniforme conjunta en dimensión, centro, ancho, corte primo, cola de ceros y normalización. Las leyes lineal y cuadrática no pueden mezclarse. |
-| RH7 | Construir un detector local con cola controlada | Expansión finita de bajo rango y controles de ensamblaje | La calibración es numérica; el paso al funcional infinito es la positividad de Weil global en otra coordenada. |
-| RH8 | Estudiar estabilidad al crecer base, ancho y ventana | Puerta de traza y división de regímenes computacionales | H1/H2 son evidencia de malla; no hay monotonía variacional ni uniformidad al crecer todos los parámetros. |
-| RH9 | Construir superficie aritmética, diagonal, Frobenius y triple de Lefschetz | Lista G1–G4 de condiciones y no-go condicionados | No se construyó la superficie, la cohomología, el lector espectral ni la polarización; imponer su positividad a partir de los ceros sería circular. |
+| RH1 | Detect resonance via Dirichlet sums, phases, coherence, and extremes | Numerical instrumentation, precision controls, and Liouville counterexample | Multiplicativity alone does not suppress resonance; the growth signature attributed to an off-line zero was neither derived nor observed operationally. |
+| RH2 | Convert decoherence, GEV, and non-growth into a non-vanishing chain | Stricter validation protocol and class-wise perturbations | The GEV correlations and parameters are not universal; the uniform step to non-vanishing is missing and has strength at least comparable to the goal. |
+| RH3 | Study the geometry of \(\omega(n)\) classes, moments, and finite causality | Energy identities, reproducibility, and a bank of confounders | The anomalies depend on selection, scale, and implementation; there is no transfer from truncated peaks to zeros of the full function. |
+| RH4 | Reconstruct zero information from peak and covariance matrices | Elementary bounds, arithmetic ablation, and leak diagnosis | Negative inter-class covariance and the singularity of \(\omega=2\) were refuted; the matrices encode mostly coefficients, conductor, and support. |
+| RH5 | Use Jacobi, Mercer, Li, TDA, and zero lists | Power calibration via synthetic shifts | Zero-only Gram is tautologically PSD; finite positivity of Li or Mercer does not exclude an unknown zero; the full form and the truncated residual are not the same object. |
+| RH6 | Localize the Weil form with a Hermite–Gauss basis | Calibrated detector, quartet response, and error separation | A joint uniform bound in dimension, center, width, prime cutoff, zero tail, and normalization is missing. The linear and quadratic laws cannot be mixed. |
+| RH7 | Build a local detector with a controlled tail | Finite low-rank expansion and assembly controls | The calibration is numerical; the step to the infinite functional is global Weil positivity in another coordinate. |
+| RH8 | Study stability as basis, width, and window grow | Trace gate and division of computational regimes | H1/H2 are mesh evidence; there is no variational monotonicity or uniformity as all parameters grow. |
+| RH9 | Build the arithmetic surface, diagonal, Frobenius, and Lefschetz triple | G1–G4 list of conditions and conditional no-gos | The surface, cohomology, spectral reader, and polarization were not built; imposing its positivity from the zeros would be circular. |
 
-## RH1–RH3: por qué falló la explicación por multiplicatividad
+## RH1–RH3: why the multiplicativity explanation failed
 
-Los programas parten de
+The programs start from
 
 \[
 D_F(t;N)=\sum_{n\le N}a_n n^{-1/2-it},
@@ -46,7 +46,7 @@ D_F=\sum_k S_k,
 S_k=\sum_{\substack{n\le N\\\omega(n)=k}}a_n n^{-1/2-it}.
 \]
 
-La identidad
+The identity
 
 \[
 |D_F|^2
@@ -56,9 +56,9 @@ La identidad
 \sum_{j\ne k}\Re(S_j\overline{S_k})
 \]
 
-es demostrada y útil como contabilidad. No relaciona por sí misma los términos cruzados con ausencia de ceros. Liouville ofrece el falsador conceptual decisivo: es completamente multiplicativa y su serie es \(\zeta(2s)/\zeta(s)\), de modo que “multiplicativo” no implica la geometría de ceros pretendida. Las funciones multiplicativas aleatorias rompen también la identificación entre producto de Euler, coherencia pequeña y colas benignas.
+is proved and useful as bookkeeping. By itself it does not relate the cross terms to the absence of zeros. Liouville's function offers the decisive conceptual falsifier: it is completely multiplicative and its series is \(\zeta(2s)/\zeta(s)\), so "multiplicative" does not imply the intended zero geometry. Random multiplicative functions also break the identification between an Euler product, small coherence, and benign tails.
 
-El supuesto puente
+The assumed bridge
 
 \[
 \rho=\beta+i\gamma,\ \beta>\tfrac12
@@ -66,101 +66,101 @@ El supuesto puente
 |D_F(\gamma;N)|\asymp N^{\beta-1/2}
 \]
 
-no fue demostrado para el observable truncado. En el control Davenport–Heilbronn no apareció la pendiente predicha. Esto refuta el detector propuesto, no el hecho clásico de que esa función posee ceros fuera de la recta.
+was not proved for the truncated observable. In the Davenport–Heilbronn control the predicted slope did not appear. This refutes the proposed detector, not the classical fact that that function has zeros off the line.
 
-Los clasificadores SVM/LDA, CAS, entropía, ACF, momentos y GEV separan generadores concretos, pero no caracterizan una propiedad analítica. Sus resultados cambian con el observable, la ventana, el bloque, la selección de picos y la convención de signo. RH2 rompe explícitamente las flechas
+The SVM/LDA, CAS, entropy, ACF, moment, and GEV classifiers separate specific generators but do not characterize an analytic property. Their results change with the observable, the window, the block, the peak selection, and the sign convention. RH2 explicitly breaks the arrows
 
 \[
-R_{\rm comp}\text{ pequeño}
+R_{\rm comp}\text{ small}
 \not\Rightarrow
 \xi_{\rm GEV}<0
 \not\Rightarrow
-\text{no crecimiento}
+\text{no growth}
 \not\Rightarrow
-\text{no ceros fuera de línea}.
+\text{no off-line zeros}.
 \]
 
-La herencia válida de RH1–RH3 es instrumental: suma compensada, precisión alta, semillas y hashes, criterio idéntico de selección, perturbaciones por clase y controles Liouville/aleatorios. La hipótesis causal por clases \(\omega\) queda retirada.
+The valid legacy of RH1–RH3 is instrumental: compensated summation, high precision, seeds and hashes, an identical selection criterion, class-wise perturbations, and Liouville/random controls. The causal hypothesis by \(\omega\) classes is withdrawn.
 
-## RH4–RH6: del observable de picos al detector de Weil
+## RH4–RH6: from the peak observable to the Weil detector
 
-RH4 comprueba que las matrices
+RH4 checks that the matrices
 
 \[
 M_{jk}=\mathbb E\,\Re(S_j\overline{S_k})
 \]
 
-responden con fuerza a masa de coeficientes, conductor, soporte y condicionamiento por picos. La inyección de ceros no reproduce las diferencias entre familias, mientras ciertas ablaciones por primos ramificados sí lo hacen. Por eso queda cerrado el puente inverso propuesto desde \(M_{jk}\) a la parte real de un cero. También quedan refutadas la cifra heredada de covarianza negativa y la excepcionalidad causal de \(\omega=2\).
+respond strongly to coefficient mass, conductor, support, and peak conditioning. Injecting zeros does not reproduce the differences between families, whereas certain ablations by ramified primes do. For that reason the proposed inverse bridge from \(M_{jk}\) to the real part of a zero is closed off. The inherited claim of negative covariance and the causal exceptionality of \(\omega=2\) are also refuted.
 
-RH5 descubre un no-go esencial: si
+RH5 uncovers an essential no-go: if
 
 \[
 G_{ij}=\sum_{\rho}v_i(\rho)\overline{v_j(\rho)},
 \]
 
-entonces \(G\succeq0\) por construcción, incluso cuando el diseño ha descartado la coordenada horizontal que debía detectar. Esa PSD no dice RH. Del mismo modo, comprobar \(\lambda_n>0\) para un conjunto finito de índices o una lista finita de ceros no controla los índices restantes.
+then \(G\succeq0\) by construction, even when the design has discarded the horizontal coordinate it was meant to detect. That PSD property says nothing about RH. Likewise, checking \(\lambda_n>0\) for a finite set of indices or a finite list of zeros does not control the remaining indices.
 
-Debe distinguirse siempre:
+A distinction must always be kept between:
 
 \[
-\text{forma completa de Weil}
-\qquad\text{frente a}\qquad
-\text{diferencia entre dos truncaciones de la fórmula explícita}.
+\text{the full Weil form}
+\qquad\text{versus}\qquad
+\text{the difference between two truncations of the explicit formula}.
 \]
 
-La primera tiene positividad universal equivalente a RH. La segunda mide corte, datos y normalización; no hereda un signo.
+The first has universal positivity equivalent to RH. The second measures cutoff, data, and normalization; it does not inherit a sign.
 
-RH6 mejora el detector localizado, pero conserva una inconsistencia que funciona como alarma: un montaje produce respuesta cuadrática en el desplazamiento y otro informa respuesta lineal. Antes de comparar deben fijarse paridad, cuarteto desplazado, transformada, términos polar/arquimediano y definición exacta de la matriz. La caída gaussiana de Hermite–Gauss controla colas para parámetros fijos; no proporciona por sí sola la desigualdad uniforme necesaria para toda prueba.
+RH6 improves the localized detector but keeps an inconsistency that serves as an alarm: one setup produces a quadratic response in the shift and another reports a linear response. Before comparing, parity, the shifted quartet, the transform, the polar/archimedean terms, and the exact definition of the matrix must be fixed. The Gaussian decay of Hermite–Gauss controls tails for fixed parameters; by itself it does not provide the uniform inequality needed for a full proof.
 
-## RH7–RH8: detector válido, inferencia global inválida
+## RH7–RH8: valid detector, invalid global inference
 
-La expansión finita de un cuarteto perturbado produce un operador simétrico de bajo rango con dependencia cuadrática en \(\delta\) para el montaje especificado. Los controles de traza, listas verificadas y colas Hermite–Gauss son activos reales. Su estado se divide así:
+The finite expansion of a perturbed quartet produces a low-rank symmetric operator with quadratic dependence on \(\delta\) for the specified setup. The trace controls, verified lists, and Hermite–Gauss tails are real assets. Their status splits as follows:
 
-- identidad algebraica de la expansión: **DEMOSTRADO** para la sección fijada;
-- coincidencia con mallas, trazas y umbrales: **NUMÉRICO**;
-- paso uniforme al funcional completo: **FUERZA-RH**.
+- algebraic identity of the expansion: **PROVED** for the fixed section;
+- agreement with meshes, traces, and thresholds: **NUMERICAL**;
+- uniform step to the full functional: **RH-STRENGTH**.
 
-RH8 añade una regla metodológica fuerte: no interpretar \(\lambda_{\min}\) si el residual de traza no cierra. A ancho estrecho o corte primo insuficiente, la truncación domina y la aparente inestabilidad no es información espectral. Las curvas H1/H2 observadas no demuestran
+RH8 adds a strong methodological rule: do not interpret \(\lambda_{\min}\) if the trace residual does not close. With a narrow width or an insufficient prime cutoff, the truncation dominates and the apparent instability is not spectral information. The observed H1/H2 curves do not prove
 
 \[
 Q_{J,\sigma,X,H}\longrightarrow Q_\infty
 \]
 
-uniformemente en centro, dimensión, ancho y ventanas. Precisamente esa convergencia, combinada con detección de una perturbación, excluiría ceros fuera de línea y no puede ser tratada como detalle numérico.
+uniformly in center, dimension, width, and windows. Precisely that convergence, combined with detection of a perturbation, would exclude off-line zeros and cannot be treated as a numerical detail.
 
-## RH9: la geometría todavía no existe
+## RH9: the geometry does not yet exist
 
-El programa exige una construcción que entregue simultáneamente:
+The program requires a construction that simultaneously delivers:
 
-1. un objeto global \(S\) y una diagonal \([\Delta]\);
-2. una cohomología cuyo grado uno porte el espectro pertinente;
-3. un triple \((L,\Lambda,H)\) de Lefschetz con dominios bien definidos;
-4. una polarización positiva que se identifique con la forma de Weil sin haber usado los ceros.
+1. a global object \(S\) and a diagonal \([\Delta]\);
+2. a cohomology whose degree one carries the relevant spectrum;
+3. a Lefschetz triple \((L,\Lambda,H)\) with well-defined domains;
+4. a positive polarization identified with the Weil form without having used the zeros.
 
-Arakelov, \(\lambda\)-anillos, TC/prismática, dinámica de escala, prolate/Sonin y geometría no conmutativa aportan piezas o analogías, pero no esa construcción conjunta. Frobenios locales no son automáticamente un Frobenius global con espectro de ceros; pesos Adams no son el operador de Cartan requerido; una métrica que se fabrica desde las raíces interpola el divisor en vez de explicarlo.
+Arakelov theory, \(\lambda\)-rings, TC/prismatic cohomology, scaling dynamics, prolate/Sonin theory, and noncommutative geometry contribute pieces or analogies, but not that joint construction. Local Frobenii are not automatically a global Frobenius with the zero spectrum; Adams weights are not the required Cartan operator; a metric manufactured from the roots interpolates the divisor instead of explaining it.
 
-La estadística \(\Delta_3\) y las comparaciones con GUE son numéricas. Una fórmula prima propuesta para el plateau incluye una serie divergente y queda retirada en su forma literal. RH9 sobrevive como filtro G1–G4, no como ruta activa ya construida.
+The \(\Delta_3\) statistic and the GUE comparisons are numerical. A proposed prime formula for the plateau includes a divergent series and is withdrawn in its literal form. RH9 survives as the G1–G4 filter, not as an already-built active route.
 
-## Incompatibilidades que bloquean la reutilización automática
+## Incompatibilities blocking automatic reuse
 
-1. **Davenport–Heilbronn.** Se mezclaron combinación periódica, restricción a cuadrados libres, constantes, coordenadas y catálogos distintos. Ningún número pasa de una variante a otra sin reconstruir la definición.
-2. **Ley de perturbación.** “Lineal” y “cuadrática” corresponden a montajes distintos o a una inconsistencia; no hay ley universal auditada.
-3. **Forma y residuo.** La igualdad de la fórmula explícita completa no convierte el error truncado en forma positiva.
-4. **Ceros y aritmética.** Una Gram hecha sólo con ceros no es un control independiente del lado primo.
-5. **Promedio y universalidad.** Una separación estadística de familias construidas no cuantifica sobre la clase de todas las alternativas a RH.
-6. **Catálogos parciales.** Listas incompletas o con precisión distinta no se combinan como una sola muestra.
+1. **Davenport–Heilbronn.** Periodic combination, restriction to squarefree numbers, constants, coordinates, and different catalogs were mixed together. No number carries over from one variant to another without reconstructing the definition.
+2. **Perturbation law.** "Linear" and "quadratic" correspond to different setups or to an inconsistency; there is no audited universal law.
+3. **Form and residual.** The equality of the full explicit formula does not turn the truncated error into a positive form.
+4. **Zeros and arithmetic.** A Gram matrix built only from zeros is not an independent control on the prime side.
+5. **Averaging and universality.** A statistical separation of constructed families does not quantify over the class of all alternatives to RH.
+6. **Partial catalogs.** Incomplete lists, or ones with different precision, do not combine into a single sample.
 
-## Resultado del recorrido
+## Outcome of the review
 
-Los programas quedan divididos en tres bancos:
+The programs fall into three bins:
 
-- **banco de instrumentos:** precisión, colas, trazas, falsadores, perturbaciones y control de datos;
-- **banco de no-go:** multiplicatividad, clases \(\omega\), Gram cero-sólo, clasificación, TDA, extrapolación finita y geometría meramente postulada;
-- **banco de objetivos de fuerza-RH:** positividad completa de Weil, convergencia uniforme del detector, divisor real y polarización identificada.
+- **instrument bin:** precision, tails, traces, falsifiers, perturbations, and data control;
+- **no-go bin:** multiplicativity, \(\omega\) classes, zero-only Gram matrices, classification, TDA, finite extrapolation, and merely postulated geometry;
+- **RH-strength objective bin:** full Weil positivity, uniform convergence of the detector, the real divisor, and the identified polarization.
 
-La continuación no debe abrir un décimo programa exploratorio del mismo tipo. Debe partir de una afirmación aritmética firmada que falle ante un cuarteto plantado y cuya demostración no dependa de la posición de los ceros.
+The continuation must not open a tenth exploratory program of the same kind. It must start from a signed arithmetic statement that fails against a planted quartet and whose proof does not depend on the position of the zeros.
 
-Las auditorías de tarea que sostienen este balance están en:
+The task audits supporting this balance are at:
 
 - [`fragments/RH1_RH3_AUDIT.md`](fragments/RH1_RH3_AUDIT.md)
 - [`fragments/RH4_RH6_AUDIT.md`](fragments/RH4_RH6_AUDIT.md)

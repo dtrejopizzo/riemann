@@ -1,6 +1,6 @@
 # E78.103 - `PAIRED-DMU-LOCAL` reduces to a finite coupled-generator derivative package
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** front B only, live object `PAIRED-DMU-LOCAL`.  
 **Class:** REDUCCION GENUINA.  
 **What we know after this doc that we did not know before:** the local `mu`

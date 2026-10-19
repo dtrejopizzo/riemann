@@ -1,6 +1,5 @@
 # E68.5 -- the symbol detector is gauge-fragile (false negatives); the exact signed index is the robust object
 
-**Date:** 2026-07-07.
 **Script:** [E68_5_touch_local.py](E68_5_touch_local.py) + direct ind_- cross-check.
 
 ## Finding

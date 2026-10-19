@@ -1,6 +1,6 @@
 # E105 — Tate factorization of the shifted scattering colligation (ω>½): confirmed, with a refinement
 
-**Date:** 2026-06-27 · mpmath dps=30 · ω=1.0 (unconditional region, Re s = ½+ω = 1.5 > 1).
+mpmath dps=30 · ω=1.0 (unconditional region, Re s = ½+ω = 1.5 > 1).
 
 ## Object (Connes §3 / Q1)
 
@@ -33,7 +33,7 @@ with `s_± = ½+ω±iz`. This is the claimed "restricted tensor product of local
 - So the correct object to assemble is the **matrix** colligation `∏_v (J-unitary local block)`, not
   the scalar product `∏_v Θ_v`. The scalar `Θ_ω` is its characteristic function.
 
-## Correction (Connes audit 0.2, 2026-06-28): the Euler product is a *boundary/strip* object
+## Correction (Connes audit 0.2): the Euler product is a *boundary/strip* object
 
 The Euler product for `ξ(½+ω+iz)` converges only where `Re(½+ω+iz)=½+ω−Im z>1`, i.e. in the **shallow
 strip `0<Im z<ω−½`** (and on the real boundary) — **not** on all of `ℂ_+`. Recheck (ω=1, strip

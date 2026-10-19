@@ -1,6 +1,6 @@
 # E78.69 - `LOGQ-GAIN-SIGN` is exactly a radial-vs-angular barrier inequality
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

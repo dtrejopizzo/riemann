@@ -1,64 +1,63 @@
-# 104_113 — Gate de inputs clásicos para la caja profunda
+# 104_113 — Classical-inputs gate for the deep box
 
-**Pregunta.** Una vez que `104_112` reduce el límite Deep a excluir la caja
+**Question.** Once `104_112` reduces the Deep limit to excluding the box
 
 \[
  R_X=\left\{\rho=\beta+i\gamma:\ 0<\gamma\lesssim X^{1/4},\quad
  \beta-\frac12\gtrsim \gamma^2X^{-1/2}\right\},
 \]
 
-¿pueden cerrarla una región libre de ceros clásica, un teorema de densidad,
-una verificación finita de ceros, o una combinación de esos inputs?
+can a classical zero-free region, a density theorem, a finite zero
+verification, or a combination of these inputs close it?
 
-**Resultado.** No como inputs autónomos. Con \(T=X^{1/4}\), la caja es
+**Result.** Not as standalone inputs. With \(T=X^{1/4}\), the box is
 
 \[
  R_T=\left\{\rho:\ 0<\gamma\lesssim T,\quad
  \beta-\frac12\gtrsim{\gamma^2\over T^2}\right\}.        \tag{1}
 \]
 
-Su frontera toca \(\Re s=1/2\) en todo régimen
-\(\gamma=o(T)\). Excluir \(R_T\) para todo \(T\) equivale, al dejar
-\(T\to\infty\) con \(\gamma\) fijo, a excluir cada cero con
-\(\beta>1/2\). Por eso los inputs que no prueban ausencia exacta en la
-línea crítica no tienen dónde ganar:
+Its boundary touches \(\Re s=1/2\) in every regime
+\(\gamma=o(T)\). Excluding \(R_T\) for every \(T\) is equivalent, letting
+\(T\to\infty\) with \(\gamma\) fixed, to excluding every zero with
+\(\beta>1/2\). That is why inputs that do not prove exact absence on the
+critical line have nowhere to gain ground:
 
-1. Las regiones libres de ceros conocidas excluyen solo una vecindad de
-   \(\Re s=1\), dirección transversal equivocada.
-2. Los teoremas de densidad acotan cuántos ceros hay con
-   \(\beta\ge\sigma\); no convierten una cota de conteo en cero ceros para
-   \(\sigma=1/2+o(1)\).
-3. Una verificación hasta altura \(H\) solo excluye la caja para
-   \(X\lesssim H^4\), no asintóticamente.
+1. The known zero-free regions exclude only a neighborhood of
+   \(\Re s=1\), the wrong transversal direction.
+2. Density theorems bound how many zeros there are with
+   \(\beta\ge\sigma\); they do not turn a counting bound into zero zeros
+   at \(\sigma=1/2+o(1)\).
+3. Verification up to height \(H\) only excludes the box for
+   \(X\lesssim H^4\), not asymptotically.
 
-Este documento no prueba ni refuta \(R_X=\varnothing\) para la zeta. Cierra
-la ruta de usar inputs clásicos como sustituto del mecanismo aritmético
-literal.
+This document neither proves nor refutes \(R_X=\varnothing\) for zeta. It
+closes the route of using classical inputs as a substitute for the
+literal arithmetic mechanism.
 
 ---
 
-## 1. Forma \(T\)-escalada de la caja
+## 1. \(T\)-scaled form of the box
 
-La escala \(Y=X^{1/4}\) de `104_76` y `104_112` no es decorativa. Si
-\(T=X^{1/4}\), entonces \(X^{-1/2}=T^{-2}\), y la caja se convierte en
-(1). Para un cero fijo \(\rho=\beta+i\gamma\), \(\beta>1/2\), la condición
+The scale \(Y=X^{1/4}\) of `104_76` and `104_112` is not decorative. If
+\(T=X^{1/4}\), then \(X^{-1/2}=T^{-2}\), and the box becomes
+(1). For a fixed zero \(\rho=\beta+i\gamma\), \(\beta>1/2\), the condition
 \[
  \beta-\frac12\gtrsim{\gamma^2\over T^2}
 \]
-vale para todo \(T\) suficientemente grande. Por tanto una prueba
-uniforme de \(R_T=\varnothing\) para \(T\to\infty\) es ya una prueba de
-que no existe ningún cero con \(\beta>1/2\). Por simetría funcional, eso
-es RH.
+holds for every sufficiently large \(T\). Hence a uniform proof of
+\(R_T=\varnothing\) as \(T\to\infty\) is already a proof that no zero
+with \(\beta>1/2\) exists. By functional symmetry, that is RH.
 
-La debilidad del detector profundo está en que, para cada \(T\), solo mira
-alturas \(\gamma\lesssim T\) y exige una precisión radial
-\(\gamma^2/T^2\). Pero esa precisión tiende a cero para cada cero fijo. No
-hay margen permanente entre la caja y la línea crítica.
+The weakness of the deep detector is that, for each \(T\), it only looks
+at heights \(\gamma\lesssim T\) and requires a radial precision of
+\(\gamma^2/T^2\). But that precision tends to zero for each fixed zero.
+There is no permanent margin between the box and the critical line.
 
-## 2. Regiones libres de ceros
+## 2. Zero-free regions
 
-Una región libre de Vinogradov--Korobov/Mossinghoff--Trudgian--Yang tiene
-la forma
+A Vinogradov–Korobov/Mossinghoff–Trudgian–Yang zero-free region has the
+form
 
 \[
  \beta\le1-\Delta(\gamma),
@@ -66,25 +65,25 @@ la forma
  \Delta(\gamma)\asymp(\log\gamma)^{-2/3}(\log\log\gamma)^{-1/3}
 \]
 
-en el rango correspondiente. Esto excluye una franja pegada a
-\(\Re s=1\). La caja (1), en cambio, contiene puntos con
+in the corresponding range. This excludes a strip attached to
+\(\Re s=1\). Box (1), by contrast, contains points with
 \[
  \beta=\frac12+C{\gamma^2\over T^2}.
 \]
 
-Si \(\gamma=o(T)\), esos puntos están arbitrariamente cerca de la línea
-crítica y muy lejos de la frontera \(\Re s=1-\Delta(\gamma)\). La región
-libre clásica no interactúa con esa parte de la caja. En el borde
-\(\gamma\asymp T\), la caja pide excluir desplazamientos de tamaño
-constante desde \(1/2\); la región libre sigue sin llegar a esa escala
-salvo cerca de \(1\).
+If \(\gamma=o(T)\), these points are arbitrarily close to the critical
+line and very far from the boundary \(\Re s=1-\Delta(\gamma)\). The
+classical zero-free region does not interact with that part of the box.
+At the edge \(\gamma\asymp T\), the box requires excluding shifts of
+constant size from \(1/2\); the zero-free region still does not reach
+that scale except near \(1\).
 
-Conclusión: una región libre clásica puede reducir la cota radial
-adversarial de `104_90`, pero no puede hacer \(R_T\) vacío.
+Conclusion: a classical zero-free region can reduce the adversarial
+radial bound of `104_90`, but it cannot make \(R_T\) empty.
 
-## 3. Teoremas de densidad
+## 3. Density theorems
 
-Un teorema típico de densidad da
+A typical density theorem gives
 
 \[
  N(\sigma,T)
@@ -92,55 +91,56 @@ Un teorema típico de densidad da
  \le C\,T^{A(1-\sigma)}(\log T)^B .                    \tag{2}
 \]
 
-Para excluir la caja haría falta una afirmación de tipo
+Excluding the box would require a statement of the type
 \[
  N\!\left({1\over2}+c{\gamma^2\over T^2};\ \gamma\hbox{ local}\right)=0
 \]
-en cada subrango de altura. Incluso si se reemplaza \(\gamma\) por un
-subrango dyádico \(\Gamma<\gamma\le2\Gamma\), (2) en
-\(\sigma=1/2+c\Gamma^2/T^2\) da un lado derecho de tamaño positivo, y en
-los regímenes \(\Gamma=o(T)\) enorme:
+in every height subrange. Even if \(\gamma\) is replaced by a dyadic
+subrange \(\Gamma<\gamma\le2\Gamma\), (2) at
+\(\sigma=1/2+c\Gamma^2/T^2\) gives a right-hand side of positive size,
+and huge in the regimes \(\Gamma=o(T)\):
 
 \[
  T^{A(1/2-c\Gamma^2/T^2)}(\log T)^B .
 \]
 
-Un upper bound mayor que uno no excluye un solo cero. Pero un solo cero en
-la caja dispara el detector profundo en un conjunto sindético de grados.
-Este es el desajuste exacto: densidad controla conteo agregado; Deep exige
-ausencia individual.
+An upper bound larger than one does not exclude a single zero. But a
+single zero in the box trips the deep detector on a syndetic set of
+degrees. This is the exact mismatch: density controls aggregate counting;
+Deep demands individual absence.
 
-## 4. Verificación finita
+## 4. Finite verification
 
-Si RH está verificada hasta altura \(H\), entonces la caja queda vacía
-para todo \(X\) con \(X^{1/4}\le H\). Es decir, se obtiene un rango
+If RH is verified up to height \(H\), then the box is empty for every
+\(X\) with \(X^{1/4}\le H\). That is, one obtains a range
 
 \[
  X\le H^4 .                                             \tag{3}
 \]
 
-Con \(H=3\cdot10^{12}\), esto explica la escala diagnóstica
-\(\asymp8.1\cdot10^{49}\) para el borde puro \(X^{1/4}=H\), y las
-constantes de `104_90` desplazan el cruce práctico hacia
-\(\asymp4H^4\). Pero ningún \(H<\infty\) toca el límite
-\(X\to\infty\). Los ceros que importan después de esa escala son
-precisamente los inmediatamente por encima de la altura verificada, no una
-cola remota que se pueda sumar absolutamente.
+With \(H=3\cdot10^{12}\), this explains the diagnostic scale
+\(\asymp8.1\cdot10^{49}\) for the pure boundary \(X^{1/4}=H\), and the
+constants of `104_90` shift the practical crossover to
+\(\asymp4H^4\). But no finite \(H\) reaches the limit
+\(X\to\infty\). The zeros that matter beyond that scale are precisely
+those immediately above the verified height, not a remote tail that can
+be summed absolutely.
 
-La verificación finita es, por tanto, un test de consistencia y un rango
-certificado finito. No es una sustitución asintótica de la exclusión de
+Finite verification is, therefore, a consistency test and a certified
+finite range. It is not an asymptotic substitute for the exclusion of
 \(R_T\).
 
-## 5. Consecuencia
+## 5. Consequence
 
-La caja profunda deja una sola clase de sucesores: una desigualdad que use
-los pesos ordinarios literales \(\Lambda(p^k)=\log p\), el soporte real de
-los primos y el completamiento exacto de Riemann para excluir polos
-interiores. Debe fallar para los modelos de `104_78`, `104_81`, `104_90` y
-`104_91`, porque todos ellos conservan paquetes amplios de positividad,
-PNT o simetría funcional y aun así tienen ceros exteriores.
+The deep box leaves only one class of successors: an inequality that
+uses the literal ordinary weights \(\Lambda(p^k)=\log p\), the real
+support of the primes, and the exact Riemann completion to exclude
+interior poles. It must fail for the models of `104_78`, `104_81`,
+`104_90`, and `104_91`, because all of them preserve broad packages of
+positivity, PNT, or functional symmetry and still have exterior zeros.
 
-En particular, no hay progreso parcial en mejorar una cota de densidad
-positiva, ni en extender una altura verificada finita, salvo como evidencia
-computacional. El objetivo que queda es exactamente \(R_T=\varnothing\)
-para todo \(T\), con una prueba aritmética no reducible a conteo.
+In particular, there is no partial progress in improving a positive
+density bound, nor in extending a finite verified height, except as
+computational evidence. The remaining goal is exactly \(R_T=\varnothing\)
+for every \(T\), with an arithmetic proof not reducible to counting.
+</content>

@@ -63,43 +63,41 @@ and the von Mangoldt function as a shell volume}
 \date{\today}
 
 \begin{abstract}
-On the correspondence algebra of the idele class group of a finite set of
-places $S$ of $\Q$ we construct an arithmetic family of correspondences
-indexed by the positive integers: the \emph{Frobenius measures}
-$\Frob_n$, the normalized Haar measures of the valuation strata
-$j_p(p^k\Z_p^\times)$ transported to the carrier. The assignment
-$n\mapsto\Frob_n$ is a strong monoidal realization of $(\N_{\ge1},\times)$
-whose unit is the diagonal itself, whose support determines both $n$ and the
-set of primes dividing $n$, and which admits no continuous interpolation. Its
-dagger closure is a commutative inverse semigroup indexed by $\Q^\times_{>0}$
-graded by finite sets of primes, with idempotents the Haar measures of the
-compact subgroups $K_F$; the identity $\Frob_n\star\Frob_n^\dagger
-=\Delta^{(n)}$ is an averaged, half-density normalized analogue of Weil's
-degree relation, and the bidegree of $\Frob_n$ is $(n^{1/2},n^{-1/2})$.
-We compute the contact of this family with the diagonal in the trace of the
-ambient correspondence algebra and find it to be $\Lambda(n)n^{-1/2}$ exactly
-at every level, with $\Lambda(p^k)=\log p$ realized as the multiplicative Haar
-volume of the support of the object itself, and with the vanishing at
-composite $n$ identified as the disjointness of that support from every
-valuation stratum. We construct an integral shadow $\Sh_\Z(\Frob_n)
-=[L_S\xrightarrow{n}L_S]$ on the objects, whose M\"obius cofiber over the
-divisor poset is $[\Z\xrightarrow{\Phi_n(1)}\Z]$, and prove the resulting
-degree identities; the complex realization of this shadow is acyclic, so the
-identification is one of degrees and can be no more.
-We then compute two Gram forms. The Frobenius family carries only the finite
-half of the Weil kernel, its archimedean block being annihilated by an
-arithmetic congruence indicator; the unit-averaged family
-$\Frob\star\Delta^{\mathrm{rad}}$ carries the full Weil kernel, exactly and at
-every level. The unit-averaging projector is therefore precisely what converts
-the finite half into the whole, at the cost of forgetting factorization. We
-prove that the regularized self-intersection of the diagonal diverges to
-$-\infty$ at the rate $\log(1/\varepsilon)$ per unit of $L^2$-normalized test,
-that the finite-place form is strictly positive on an explicit primitive class
-at every finite chart, and that the normalization $\vol(\Z_p^\times)=\log p$
-is the unique one, up to a single global scale, for which the local Tate
-residue is the same at every place. A final section supplies the
-partition-of-unity approximation lemmas on moving windows and an exact
-single-frequency computation.
+We study an arithmetic family of correspondences on the correspondence
+algebra of the semilocal idele class group $C_S$ of $\Q$.  For a prime power
+$p^k$ the \emph{Frobenius measure} $\Frob_{p^k}$ is the normalized Haar
+measure of the valuation shell $p^k\Z_p^\times$, transported to $C_S$ by the
+slice map, and $\Frob_n$ is the convolution of these over the prime powers
+dividing $n$.  The assignment $n\mapsto\Frob_n$ is a strong monoidal
+realization of $(\N_{\ge1},\times)$ whose unit is the diagonal; the support of
+$\Frob_n$ determines $n$ and the primes dividing it, and the family admits no
+continuous interpolation.  Its closure under the involution is a commutative
+inverse semigroup indexed by $\Q_{>0}^\times$ graded by finite sets of primes,
+whose idempotents are the Haar measures of compact subgroups $K_F$.  The
+identity $\Frob_n\star\Frob_n^\dagger=\Delta^{(n)}$ is an averaged,
+half-density normalized form of Weil's degree relation, and the bidegree of
+$\Frob_n$ is $(n^{1/2},n^{-1/2})$.
+
+The contact of $\Frob_n$ with the diagonal, measured by the trace of the
+ambient algebra, is $\Lambda(n)n^{-1/2}$ at every level of smoothing.  Here
+$\Lambda(p^k)=\log p$ appears as the multiplicative Haar volume of the support
+of the object, and the vanishing of $\Lambda$ at composite $n$ is the
+disjointness of that support from every valuation shell.  On the same objects
+we construct an integral shadow $\Sh_\Z(\Frob_n)=[L_S\xrightarrow{n}L_S]$
+whose M\"obius cofiber over the divisor poset is
+$[\Z\xrightarrow{\Phi_n(1)}\Z]$, and we prove the corresponding identities of
+degrees; since the complexification of the shadow is acyclic, no stronger
+identification is possible.
+
+We then compute two Gram forms.  The Frobenius family carries only the finite
+part of the kernel of Weil's quadratic form, its archimedean entries being
+killed by a congruence condition, whereas the unit-averaged family
+$\Frob_n\star\Delta^{\mathrm{rad}}$ carries the whole kernel.  Finally we show
+that the regularized self-intersection of the diagonal tends to $-\infty$ like
+$-\log(1/\varepsilon)$, that the finite-place form is positive on a primitive class (explicit up to the choice of one
+sufficiently large parameter) for every finite $S$, and that the normalization
+$\vol(\Z_p^\times)=\log p$ is, up to one global scale, the only one for which
+the local Tate residue is the same at every place.
 \end{abstract}
 
 \maketitle
@@ -108,160 +106,126 @@ single-frequency computation.
 
 \section{Introduction}
 
-\subsection{What is constructed}
-
 Let $S$ be a finite set of places of $\Q$ containing the archimedean one, let
 $S_f=S\smallsetminus\{\infty\}$, and let $C_S$ be the associated idele class
-group. A companion paper \cite{Companion} constructs, on a carrier built from
-$C_S$, an algebra of correspondences with a composition $\star$, an involution
-$\dagger$, a canonical half-density $|\cdot|_S^{-1/2}$, and an analytic trace
-$T$ whose local terms are explicit: at a finite place $p$ the trace integrates
-a section along the slice $j_p:\Q_p^\times\to C_S$ against
+group.  In \cite{Companion} we constructed on $C_S$ an algebra of
+correspondences with a composition $\star$, an involution $\dagger$, a
+canonical half-density $|\cdot|_S^{-1/2}$, and an analytic trace $T$ with
+explicit local terms: at a finite place $p$ the trace integrates a function
+along the slice $j_p:\Q_p^\times\to C_S$ against
 $\tau_p(x)=|x|_p^{1/2}/|1-x|_p$ and the multiplicative Haar measure, and at
-$\infty$ it integrates against a density $K(t)=e^{-t/2}/(1-e^{-2t})$. The
-present paper constructs \emph{arithmetic} objects inside that algebra and
-computes everything one can compute about them.
+$\infty$ it integrates against the density $K(t)=e^{-t/2}/(1-e^{-2t})$ on
+tests even under the sign (and against its two halves $K_s$, $K_c$ on the two
+real half-lines in general).  In
+this paper we construct arithmetic objects inside that algebra and compute
+their invariants.
 
-The objects are as elementary as they could be. For a prime $p$ and $k\ge1$,
-the set $p^k\Z_p^\times$ of elements of valuation exactly $k$ is a compact
-subset of $\Q_p^\times$; its image under the slice map is a compact subset of
-the carrier, and we let
+The objects are elementary.  For a prime $p$ and $k\ge1$ the set
+$p^k\Z_p^\times$ of elements of valuation $k$ is compact; its image under the
+slice map is a compact subset of $C_S$, and we let
 \[
    \Frob_{p^k}:=\text{the normalized Haar measure of } j_p(p^k\Z_p^\times),
 \]
-a probability measure on $C_S$. For a general $n=\prod p^{k_p}$ we set
+a probability measure on $C_S$.  For $n=\prod p^{k_p}$ we set
 $\Frob_n:=\star_{p\mid n}\Frob_{p^{k_p}}$, and $\Frob_1:=\Delta$, the point
-mass at the identity class. Four facts make this family the right one.
-
+mass at the identity class.  The family has the following properties.
 \begin{itemize}
-\item \emph{It is strong monoidal with a true unit.}
-$\Frob_m\star\Frob_n=\Frob_{mn}$ as an \emph{equality} of measures, and
-$\Frob_1$ is the diagonal itself, a point mass and not a projector
-(Theorem~\ref{thm:frobmonoidal}).
-\item \emph{It remembers the arithmetic.} The support of $\Frob_n$
-determines $n$ and also the set $P(n)$ of primes dividing $n$
-(Theorem~\ref{thm:frobmonoidal}(iv)), and no weak-$*$ continuous
-one-parameter family interpolates the $\Frob_n$
-(Remark~\ref{rem:nointerp}). This is in sharp contrast with the
-\emph{radial} objects of \S\ref{sec:radial}, which factor through
-$(\R_{>0},\times)$ and forget factorization entirely
-(Lemma~\ref{lem:notideal}).
-\item \emph{Its dagger closure is an inverse semigroup, not a group.} The
+\item It is strong monoidal with a genuine unit: $\Frob_m\star\Frob_n
+=\Frob_{mn}$ as an equality of measures, and $\Frob_1$ is the diagonal
+itself, a point mass and not a projector (Theorem~\ref{thm:frobmonoidal}).
+\item It remembers the arithmetic.  The support of $\Frob_n$ determines $n$
+and the set $P(n)$ of primes dividing $n$ (Theorem~\ref{thm:frobmonoidal}(iv)),
+and no weak-$*$ continuous one-parameter family interpolates the $\Frob_n$
+(Remark~\ref{rem:nointerp}).  By contrast, the \emph{radial} objects of
+Section~\ref{sec:radial} factor through $(\R_{>0},\times)$ and forget
+factorization entirely (Lemma~\ref{lem:notideal}).
+\item Its closure under $\dagger$ is an inverse semigroup, not a group.  The
 smallest $\star$- and $\dagger$-closed family containing the $\Frob_n$ is
 indexed by pairs $(r,F)$ with $r\in\Q_{>0}^\times$ and $F$ a finite set of
 primes containing those dividing $r$; its idempotents are the Haar measures
-$\Delta^{(F)}$ of the compact subgroups $K_F$, forming the semilattice of
-finite sets of primes under union (Theorem~\ref{thm:invsemigroup}). The
-assignment $r\mapsto \Frob_a\star\Frob_b^\dagger$ does \emph{not} descend to
-$\Q_{>0}^\times$, and we give the counterexample.
-\item \emph{Its contact with the diagonal is the von Mangoldt function.}
-For a smeared Frobenius at any level $N$ one has, exactly and with no
-regularization and no limit at the finite places,
+$\Delta^{(F)}$ of compact subgroups $K_F$, which form the semilattice of finite
+sets of primes under union (Theorem~\ref{thm:invsemigroup}).  The assignment
+$a/b\mapsto\Frob_a\star\Frob_b^\dagger$ does not descend to $\Q_{>0}^\times$.
+\item Its contact with the diagonal is the von Mangoldt function.  For a
+smoothing of $\Frob_n$ at any level $N$ one has, with no regularization and
+no limit at the finite places,
 \[
    \sum_{q\in S_f}W_q\bigl(\Frob_n^{[h,N]}\bigr)=\Lambda(n)\,n^{-1/2}h(1/n)
 \]
-(Theorem~\ref{thm:frobcontact}), where $\Lambda(p^k)=\log p$ arises as the
+(Theorem~\ref{thm:frobcontact}).  Here $\Lambda(p^k)=\log p$ is the
 multiplicative Haar volume $\vol_{d^*x}(p^k\Z_p^\times)$ of the support of the
-object itself, and where the vanishing at composite $n$ is the disjointness of
-that support from every valuation stratum
-(Theorem~\ref{thm:compositedisjoint}).
+object, and the vanishing at composite $n$ is the disjointness of that support
+from every valuation shell (Theorem~\ref{thm:compositedisjoint}).
 \end{itemize}
 
-\subsection{The integral shadow}
-
-Over $\C$ the arithmetic is invisible: in a $\C$-linear additive category
-$p\cdot\mathrm{id}$ is invertible, so no additive functor can produce a complex
-with $\Z/p$ cohomology. What one \emph{can} construct is an integral shadow
-defined directly on the objects of the arithmetic monoid, using the lattice
-$L_S=\prod_{p\in S_f}\Z_p$. We set
+Over $\C$ the arithmetic torsion is invisible: in a $\C$-linear additive
+category $p\cdot\mathrm{id}$ is invertible, so no additive functor produces a
+complex with cohomology $\Z/p$.  What can be constructed is an integral shadow
+defined directly on the objects of the Frobenius monoid, using the lattice
+$L_S=\prod_{p\in S_f}\Z_p$:
 \[
-  \Sh_\Z(\Frob_n):=\Cone\bigl(L_S\xrightarrow{\ n\ }L_S\bigr),
+  \Sh_\Z(\Frob_n):=\Cone\bigl(L_S\xrightarrow{\ n\ }L_S\bigr).
 \]
-prove that this depends only on the measure $\Frob_n$ and not on any idele
-representative (Lemma~\ref{lem:shwelldef}), that $d\mapsto\Sh_\Z(\Frob_d)$ is a
-\emph{strict} functor on the divisor poset (Lemma~\ref{lem:shfunctor}), that
-its transitivity data is an exact triangle and not a splitting, and that its
+It depends only on the measure $\Frob_n$ (Lemma~\ref{lem:shwelldef}), it is a
+strict functor on the divisor poset (Lemma~\ref{lem:shfunctor}), its
+transitivity data form an exact triangle that does not split, and its
 M\"obius cofiber over the divisor poset is $[\Z\xrightarrow{\Phi_n(1)}\Z]$
-(Theorem~\ref{thm:shstructure}). The resulting degree identities,
+(Theorem~\ref{thm:shstructure}).  The resulting identities of degrees,
 \[
   \cfin(\Frob_n)=n^{-1/2}\degdet\Prim(\Sh_\Z)_n,\qquad
   \degdet\Sh_\Z(\Frob_n)=\log n=\sum_{d\mid n}d^{1/2}\cfin(\Frob_d),
 \]
-are Theorem~\ref{thm:shdegrees}. Both sides of each are attached to the
-objects. The complex realization $[\C\xrightarrow{n}\C]$ of the shadow is
-acyclic, so the identification is one of degrees only.
+are Theorem~\ref{thm:shdegrees}; both sides of each are invariants of the same
+objects.  The complexification $[\C\xrightarrow{n}\C]$ of the shadow is
+acyclic, so these are identities of degrees and not of complexes.
 
-\subsection{Two Gram forms}
+The last part of the paper computes Gram forms.  Let
+$W_{\mathrm{fin}}=\sum_{q,k}(\log q)q^{-k/2}(\delta_{k\log q}+\delta_{-k\log
+q})$ and $\omega_\infty=K(|t|)\,dt$; their sum is the kernel of Weil's
+quadratic form.  The Gram form of the Frobenius family carries
+$W_{\mathrm{fin}}$ off the diagonal and has no archimedean part: the
+archimedean entry is multiplied by the congruence indicator
+$\prod_{s\notin F}\mathbf 1[s^N\mid (n-m)]$, which vanishes for all large $N$
+(Theorem~\ref{thm:gramoff}, Corollary~\ref{cor:onlyfinite}), because
+$\supp\Frob_n$ does not meet the archimedean slice
+(Corollary~\ref{cor:frobnoarch}).  The Gram form of the unit-averaged family
+$\Frob_n\star\Delta^{\mathrm{rad}}=\Gamma_n^{\mathrm{rad}}$ is the whole kernel
+$W_{\mathrm{fin}}+\omega_\infty$, at every level and with no side conditions
+(Theorem~\ref{thm:fullweil}).  So the unit-averaging projector converts the
+finite part of the kernel into the whole of it, at the cost of forgetting
+factorization (Theorem~\ref{thm:twohalves}).
 
-The last third of the paper computes Gram forms. Let $W_{\mathrm{fin}}$ denote
-the atomic measure $\sum_{q,k}(\log q)q^{-k/2}(\delta_{k\log q}
-+\delta_{-k\log q})$ and $\omega_\infty=K(|t|)\,dt$; their sum is the kernel of
-the Weil quadratic form. We prove:
+Three further results complete the picture.  For an $L^2$-normalized radial
+approximate identity of width $\varepsilon$, the self-pairing is
+$-\log(1/\varepsilon)+O(1)$ (Theorem~\ref{thm:infgenus}); in Weil's dictionary
+$\Delta\cdot\Delta=2-2g$ this corresponds to $g=\infty$.  The finite-place
+form alone is strictly positive on a primitive class, explicit up to one
+sufficiently large parameter, for every finite
+$S$ (Theorem~\ref{thm:qfinpositive}).  And the normalization
+$\vol_{d^*x}(\Z_p^\times)=\log p$, which makes $\Lambda$ a volume, is the only
+local normalization, up to one global scale, for which the local Tate residue
+is the same at every place (Theorem~\ref{thm:tateresidue}).
 
-\begin{itemize}
-\item the Gram form of the \emph{Frobenius} family carries
-$W_{\mathrm{fin}}$ off the diagonal and \emph{no archimedean block at all}:
-the archimedean entry is multiplied by an arithmetic indicator
-$\prod_{s\notin F}\mathbf 1[s^N\mid (n-m)]$ which vanishes for all large $N$
-(Theorem~\ref{thm:gramoff}, Corollary~\ref{cor:onlyfinite}), the underlying
-reason being that $\supp\Frob_n$ misses the archimedean slice entirely
-(Corollary~\ref{cor:frobnoarch});
-\item the Gram form of the \emph{unit-averaged} family
-$\Frob_n\star\Delta^{\mathrm{rad}}=\Gamma_n^{\mathrm{rad}}$ is the
-\emph{full} kernel $W_{\mathrm{fin}}+\omega_\infty$, exactly, at every level,
-with no indicators and no arithmetic side conditions
-(Theorem~\ref{thm:fullweil});
-\item hence the unit-averaging projector is exactly what converts the finite
-half of the kernel into the whole of it, at the cost of forgetting
-factorization: two readings of one projector
-(Theorem~\ref{thm:twohalves}).
-\end{itemize}
+No statement about the zeros of the zeta function is used.  The only statement
+about them is Lemma~\ref{lem:singlefreq}, a self-contained computation of the
+contribution of a single resonant quadruple of zeros to a Hermitian zero sum
+against a single-frequency test; it is not used elsewhere.  No sign of the
+Gram forms is asserted.
 
-Three further computations complete the picture. The regularized
-self-intersection of the diagonal diverges: for an $L^2$-normalized radial
-approximate identity of width $\varepsilon$ the self-pairing is
-$-\log(1/\varepsilon)+O(1)$ (Theorem~\ref{thm:infgenus}); under Weil's
-dictionary $\Delta\cdot\Delta=2-2g$ this is $g=\infty$. The finite-place form
-alone is \emph{strictly positive} on an explicit primitive class at every
-finite chart (Theorem~\ref{thm:qfinpositive}), so it is not a negative form
-there. And the normalization $\vol_{d^*x}(\Z_p^\times)=\log p$, which makes
-$\Lambda$ a volume, is not a convention chosen for convenience: it is the
-unique local normalization, up to one global scale, for which the local Tate
-residue is the same at every place (Theorem~\ref{thm:tateresidue}).
+\subsection*{Place in the series}
+This is one of five papers on a single construction. Paper 43 \cite{Companion} constructs the carrier: the algebra $D_A=C_c^\infty(C_S)$, its involution, the canonical trace $T=\sum_{v\in S}W_v$, its Fourier symbol, the Tate functionals $M=(\lambda_-,\lambda_+)$ and the numerical form $I_A$; This paper builds the arithmetic family on that carrier (the Frobenius measures $\Frob_n$, whose contact with the diagonal is $\Lambda(n)n^{-1/2}$) and its two Gram forms; Paper 45 \cite{P45} proves Weil's explicit formula in the normalization of $T$ and identifies the trace on radial classes with the spectral side; Paper 47 \cite{P47} studies the positivity of the resulting window form on the primitive subspace; that problem is open, and Paper 47 records what is proved about it; Paper 48 \cite{P48} is a map of the routes towards that positivity. The results are stated on the declared carrier of the series, the algebra $D_A$ of a fixed finite $S$. No sign of the Gram forms is asserted except the positivity of the finite-place form on one primitive class (Theorem~\ref{thm:qfinpositive}), and no positivity of the full form is claimed.
 
-\subsection{What is not here}
+Section~\ref{sec:prelim} fixes notation and recalls what we need from
+\cite{Companion}.  Sections~\ref{sec:radial} and \ref{sec:radtrace} treat the
+radial family and its trace, Sections~\ref{sec:frob} and \ref{sec:frobcontact}
+the Frobenius family and its contact, Section~\ref{sec:integral} the
+$\Z$-linear models, and Section~\ref{sec:shadow} the integral shadow.
+Sections~\ref{sec:gram}--\ref{sec:normalization} contain the Gram forms, the
+self-intersection of the diagonal and the normalization theorem, and
+Section~\ref{sec:approx} collects the approximation lemmas and the
+single-frequency computation.
 
-No statement about the zeros of $\zeta$ is used in the construction, and none
-is proved, with one exception which is explicitly a theorem about zeros:
-Lemma~\ref{lem:singlefreq}, an exact computation of the contribution of a
-single resonant quadruple of zeros to a Hermitian zero-sum against a
-single-frequency test on a moving window. It is included as a self-contained
-computation, is used by no other statement here, and decides nothing about the
-location of any zero. No positivity and no sign is claimed anywhere. The
-object whose signature would be of interest is the Gram form of the
-unit-averaged family, and this paper delivers that form, not its sign.
-
-\subsection{Organization}
-
-\S\ref{sec:prelim} fixes notation and states, as cited propositions, the
-facts about the ambient correspondence algebra that are taken from
-\cite{Companion}. \S\ref{sec:radial} constructs the radial sector and proves
-that it is arithmetic-free as a family of objects. \S\ref{sec:radtrace}
-computes the trace on that sector and extracts the representing measures;
-the arithmetic reappears there as a contact locus.
-\S\S\ref{sec:frob}--\ref{sec:frobcontact} construct the Frobenius family, its
-inverse semigroup, and its contact. \S\ref{sec:integral} develops the
-$\Z$-linear models: the separation of the two derived contacts, M\"obius
-inversion on the divisor poset, and the failure of monoidality for primitive
-extraction. \S\ref{sec:shadow} constructs the integral shadow on objects.
-\S\ref{sec:gram} computes the two Gram forms, \S\ref{sec:diagonal} the
-diagonal, \S\ref{sec:normalization} the normalization theorem, and
-\S\ref{sec:approx} the approximation lemmas and the single-frequency
-computation.
-
-\section{Notation and imported facts}\label{sec:prelim}
-
-\subsection{Arithmetic notation}
+\section{Notation and background}\label{sec:prelim}
 
 $\Lambda$ denotes the von Mangoldt function: $\Lambda(n)=\log p$ if $n=p^k$
 with $k\ge1$, and $\Lambda(n)=0$ otherwise, so $\Lambda(1)=0$. $\mu$ is the
@@ -271,8 +235,8 @@ $n$-th cyclotomic polynomial. Absolute values are normalized so that the
 product formula $\prod_v|x|_v=1$ holds for $x\in\Q^\times$, with
 $|p|_p=1/p$.
 
-A \emph{chart} is a finite set $S$ of places of $\Q$ with $\infty\in S$; we
-write $S_f=S\smallsetminus\{\infty\}$ and
+We call a finite set $S$ of places of $\Q$ with $\infty\in S$ a
+\emph{chart}; we write $S_f=S\smallsetminus\{\infty\}$ and
 \[
   L_S:=\prod_{p\in S_f}\Z_p .
 \]
@@ -287,13 +251,10 @@ that \eqref{eq:shellvol} is forced, up to one global scale, by the requirement
 that the local Tate residue be the same at every place. By translation
 invariance $\vol_{d^*x}(p^k\Z_p^\times)=\log p$ for every $k\in\Z$.
 
-\subsection{The carrier and its correspondence algebra}
+We now recall the facts from \cite{Companion} that are used below, in the
+form in which they are used.
 
-The following facts are taken from the companion paper \cite{Companion} and
-are used throughout without reproof. We state them in the form in which they
-are used.
-
-\begin{proposition}[The valuation splitting; {\cite[Lemma 3.3]{Companion}}]
+\begin{proposition}[The valuation splitting; {\cite[Lemma 2.2]{Companion}}]
 \label{prop:splitting}
 Let $S$ be a chart and $\A_S^\times$ the group of $S$-ideles. Let
 $\varphi(x)=\prod_{p\in S_f}p^{v_p(x_p)}$ and let
@@ -312,7 +273,7 @@ $d^*w=dt\otimes du$ in the coordinate $t=\log|w|_S$, with $du$ the probability
 Haar measure of $\Knat$.
 \end{proposition}
 
-\begin{proposition}[Slice maps; {\cite[(9.5b)]{Companion}}]\label{prop:slices}
+\begin{proposition}[Slice maps; {\cite[\S6, (32)]{Companion}}]\label{prop:slices}
 For $q\in S_f$ and $k\in\Z$, $w\in\Z_q^\times$, and for $x\in\R^\times$,
 \begin{align*}
   j_q(q^kw)&=\bigl(q^{-k}\ \text{at}\ \infty;\ w\ \text{at}\ q;\
@@ -325,7 +286,7 @@ $v_r(q^{-k})=0$ for $r\ne q$, so $j_q$ lands in $\ker\varphi$.
 \end{proposition}
 
 \begin{proposition}[The test algebra and the trace;
-{\cite[\S8]{Companion}}]\label{prop:trace}
+{\cite[\S6, Def.~6.5, Conv.~6.6, Thm.~6.7, \S11, Thm.~11.6]{Companion}}]\label{prop:trace}
 Let $\DA:=C_c^\infty(C_S)$, meaning compactly supported functions which are
 smooth in the archimedean coordinate and locally constant in the compact
 coordinates. Convolution $\star$ on $C_S$ makes $\DA$ an algebra, the
@@ -338,13 +299,20 @@ $T:\DA\to\C$, the analytic trace, with local terms
      \,du,
 \end{equation}
 \begin{equation}\label{eq:archterm}
-  W_\infty(F)=(\gamma+\log4\pi)\,F(1)
-   +\int_0^\infty K(t)\bigl[b(t)+b(-t)-2F(1)e^{-t/2}\bigr]dt,\quad
-   b(t):=F(j_\infty(\pm e^{t})),
+\begin{aligned}
+  W_\infty(F)={}&(\gamma+\log4\pi)\,F(1)
+   +\int_0^\infty\Bigl[K_s(t)\bigl(b_+(t)+b_+(-t)\bigr)
+     -2K(t)F(1)e^{-t/2}\Bigr]dt\\
+   &+\int_0^\infty K_c(t)\bigl(b_-(t)+b_-(-t)\bigr)dt,
+\end{aligned}
 \end{equation}
-with $\tau_v(x)=|x|_v^{1/2}/|1-x|_v$ and
-$K(t)=e^{-t/2}/(1-e^{-2t})$, and $T(F)=\sum_{v\in S}W_v(F)+c\,F(1)$ with the
-identity-class constant declared to be $c:=0$. We extend the notation $E$ to
+where $b_\pm(t):=F(j_\infty(\pm e^{t}))$ are the profiles of $F$ on the two
+real half-lines, $\tau_v(x)=|x|_v^{1/2}/|1-x|_v$,
+$K_s(t)=1/(4\sinh(t/2))$, $K_c(t)=1/(4\cosh(t/2))$ and
+$K=K_s+K_c=e^{-t/2}/(1-e^{-2t})$ (\cite[Def.~6.5 and Convention~6.6]{Companion}). For $F$ even under the sign, $b_+=b_-=:b$ and
+\eqref{eq:archterm} is $(\gamma+\log4\pi)F(1)+\int_0^\infty
+K(t)[b(t)+b(-t)-2F(1)e^{-t/2}]dt$; and $T(F)=\sum_{v\in S}W_v(F)+c\,F(1)$; throughout
+this paper the constant $c$ is taken to be $0$. We extend the notation $E$ to
 points: for $x\in C_S$ we write $E_x$ for the point mass $\delta_x$, a
 multiplier of $\DA$, and $E_a:=E_{[a]}$ for an idele $a$ with class $[a]$;
 since push-forward of point masses along the multiplication of $C_S$ is
@@ -356,7 +324,10 @@ shell $q^k\Z_q^\times$, $k\ne0$.
 a neighbourhood of the identity class --- we write $F\in\Doff$ --- then
 $T(F)=\sum_{v\in S}\int_{\Q_v^\times}F(j_v(x))\tau_v(x)\,d^*x$, an absolutely
 convergent sum with no counterterm and no dependence on $c$; the archimedean
-term reduces to $\int_0^\infty K(t)[b(t)+b(-t)]\,dt$.
+term reduces to $\int_0^\infty K_s(t)[b_+(t)+b_+(-t)]\,dt
++\int_0^\infty K_c(t)[b_-(t)+b_-(-t)]\,dt$, which is
+$\int_0^\infty K(t)[b(t)+b(-t)]\,dt$ when $F$ is even under the sign
+(see the paragraph after Proposition~\ref{prop:trace}).
 \item[(c)] \emph{(Chart independence and the colimit.)} The charts form a
 directed system under inflation, and there is a chart-independent trace
 $T_\infty$ on the colimit $\DA^\infty$, for which the finite-place sum runs
@@ -368,8 +339,22 @@ of the algebra and not an element of it; $T(\Delta)$ is undefined.
 \end{enumerate}
 \end{proposition}
 
+\medskip\noindent\phantomsection\label{rem:signodd}%
+\emph{Tests that are not even under the sign.}
+The positive and negative real half-lines are weighted differently by
+$\tau_\infty$: $\tau_\infty(e^{\pm t})=2K_s(t)$ and
+$\tau_\infty(-e^{\pm t})=2K_c(t)$ for $t>0$, with $d^*x_\infty=dt/2$ on each
+half-line. Formula \eqref{eq:archterm} is the definition of $W_\infty$ on all
+of $\DA$ in \cite{Companion}, with no parity assumption, and (b) is the
+statement that off the identity it equals $\int F(j_\infty(x))\tau_\infty(x)
+\,d^*x_\infty$. The radial classes of \S\ref{sec:radial} are even under the
+sign, so only $K$ enters there. The smeared Frobenii of
+\S\ref{sec:frobcontact} and their convolutions are supported in
+$x_\infty>0$, so $b_-=0$ and only $K_s$ enters their archimedean terms.
+\medskip
+
 \begin{proposition}[The Tate functionals and the pairing;
-{\cite[\S9, in particular (9.2), (9.11), (9.13), Thms.~9.1, 9.7, 9.7b]{Companion}}]\label{prop:tate}
+{\cite[Thms.~7.1, 7.2, 7.4, 8.4]{Companion}}]\label{prop:tate}
 Define $\lambda_\mp(\mu):=\int_{C_S}|x|_S^{\mp1/2}\,d\mu(x)$ and
 $M:=(\lambda_-,\lambda_+)$. Then $\lambda_\mp(F^\dagger)
 =\overline{\lambda_\pm(F)}$. The bilinear form
@@ -400,13 +385,16 @@ principal component every $\kappa_q$ is trivial, so
   \mathfrak c_0 .
 \end{equation}
 $\psi$ the digamma function; $\widehat T$ is real-analytic and even on
-$\mathfrak c_0$, and $|\widehat T(\mathfrak c,\tau)|\le A_S+B_S\log(2+|\tau|)$
-globally. Furthermore $\max_\tau\widehat W_\infty(0,\tau)
+$\mathfrak c_0$, and on each component $|\widehat T(\mathfrak c,\tau)|\le
+A_{\mathfrak c}+B_S\log(2+|\tau|)$ with $A_{\mathfrak c}=A_S+\sum_{p\in S_f}
+c(\kappa_p)\log p$ depending on the conductors of the component
+(\cite[Lemma~8.12, (76)]{Companion}): the bound is uniform on finite sets of
+components and not over all of $\widehat{C_S}$. Furthermore $\max_\tau\widehat W_\infty(0,\tau)
 =\log\pi-\psi(1/4)\approx5.372$.
 \end{proposition}
 
 \begin{proposition}[The completion and its splitting;
-{\cite[\S9]{Companion}}]\label{prop:completion}
+{\cite[Lemma~8.12, Thms.~8.11, 8.14]{Companion}}]\label{prop:completion}
 Write $J(F):=(I_A(F,\cdot),M(F))\in\DA'\oplus B_T$ and let
 $\mathcal N_A^{\mathrm{dist}}:=\overline{J(\DA)}$. There is a seminorm
 $\mathcal N$ on $\DA$, bounded on bounded sets, with
@@ -416,18 +404,25 @@ $\mathcal N_A^{\mathrm{dist,prim}}\oplus\sigma(B_T)$, the splitting sending
 $x=(\ell,m)$ to $(\ell,0)+\sigma(m)$. For every bounded $B\subset\DA$ there
 are $N_B$, $d_{N_B}$, $C''_B$ such that every $G\in B$ is
 $U_{N_B}$-invariant, $\widehat G$ is supported on $d_{N_B}$ components, and
-$|\widehat G(\mathfrak c,\tau)|\le C''_B\min(1,\tau^{-2})$.
+$|\widehat G(\mathfrak c,\tau)|\le C''_B\min(1,\tau^{-2})$. We put
+$A_B:=\max A_{\mathfrak c}$ over these $d_{N_B}$ components
+(Proposition~\ref{prop:tate}); then $|\widehat T|\le A_B+B_S\log(2+|\tau|)$
+wherever some $\widehat G$, $G\in B$, is nonzero.
 \end{proposition}
 
 \begin{proposition}[The shadow at a non-unit shell;
-{\cite[Thms. 7.1, 8A.9]{Companion}}]\label{prop:shadow}
-The trace $T$ is the Haar-regularized Lefschetz number of a categorical
-shadow: at the shell $p^k\Z_p^\times$ with $k\ge1$ the shadow factor is the
-rank-one class $\C[0]$ of the fixed point $0$, the fixed-point weight is
-$1/|1-x|_p$ and the half-density is $|x|_p^{1/2}$, these appearing separately;
-and the weight of the shell is its multiplicative Haar volume. In particular
-the shadow of an external class at a finite place $p$ is rank one, so no
-integral torsion survives the passage to the $\C$-linear category.
+{\cite[Lemma~5.7, Thm.~5.12(c), Prop.~6.13(a)]{Companion}}]\label{prop:shadow}
+At a dilation $x\in\Q_p^\times$ with $v_p(x)\ne0$ (the shell $p^k\Z_p^\times$,
+$k\ne0$) the local twisted Hochschild complex $C(E_p,(E_p)_x)$ is homotopy
+equivalent to the rank-one class $\C[0]$ of the fixed point $0$, independent
+of $x$; the fixed-point weight is $1/|1-x|_p$ and the half-density is
+$|x|_p^{1/2}$, these appearing separately in
+$\tau_p(x)=|x|_p^{1/2}|1-x|_p^{-1}=p^{-|v_p(x)|/2}$; and the local weight of
+the shell in $W_p$ is its volume $\log p$. In particular the local factor at
+a finite place $p$ of an external class with $v_p(w_p)\ne0$ is rank one, so no
+integral torsion survives the passage to the $\C$-linear category. The trace
+$T$ is defined by the densities $\tau_v$ directly and is \emph{not} derived
+from this complex; \cite[Prop.~6.13]{Companion} is a comparison only.
 \end{proposition}
 
 \begin{proposition}[No $\Z/p$ from a $\C$-linear additive functor]
@@ -445,18 +440,14 @@ invertibility, so $p$ acts bijectively on $H^0\mathcal F(X)$. But $p$ acts as
 $0$ on $\Z/p$, which is nonzero.
 \end{proof}
 
-This elementary proposition is the reason every identification in this paper
-between an analytic contact and an integral complex is an identification of
-\emph{degrees}, and never of objects.
+This is why every comparison in this paper between an analytic contact and an
+integral complex is a comparison of degrees and not of objects.
 
-\section{The radial sector: objects without arithmetic}\label{sec:radial}
+\section{The radial family}\label{sec:radial}
 
-Two families live on the carrier and must be told apart. This section builds
-the first, the \emph{radial} family, and proves the negative result that gives
-the second its point: as a family of objects the radial family is
-arithmetic-free.
-
-\subsection{The class of an arithmetic idele}
+Two families of objects on $C_S$ must be distinguished.  This section
+constructs the first, the \emph{radial} family, and shows that as a family of
+objects it carries no arithmetic information.
 
 \begin{lemma}\label{lem:classunit}
 Let $n\ge1$ and $S\supseteq\{\infty\}\cup P(n)$, and let
@@ -479,9 +470,9 @@ $|x|_S=|x_\infty|$ on $\ker\varphi$.
 \end{proof}
 
 The finite coordinates of the class are $1$, not $n$: the integer survives only
-in the archimedean coordinate and in the modulus. This apparently trivial
-computation controls everything that follows, because it says that the point
-class of an arithmetic idele sits on the archimedean slice.
+in the archimedean coordinate and in the modulus.  In other words, the class
+of an arithmetic idele lies on the archimedean slice, and this controls much
+of what follows.
 
 \begin{proposition}\label{prop:noslice}
 Let $n\ge2$ and $|S_f|\ge2$. With the slice maps of
@@ -537,8 +528,8 @@ to the shell is $\log p$ times the \emph{probability} Haar measure of
 $\Z_p^\times$, and a point mass at the single unit $u=1$ is a null set for it.
 Only the unit-spread object --- the norm class of
 Definition~\ref{def:normclass}, which is Haar on the whole shell --- receives
-the shell volume. The dichotomy ``the element does not have the contact, the
-unit average does'' therefore holds on every chart, for two different reasons.
+the shell volume. So on every chart the point class has no finite contact while its unit
+average does, although for $|S_f|=1$ the reason is different.
 \end{remark}
 
 \begin{corollary}\label{cor:liftnotcontact}
@@ -559,8 +550,6 @@ in Theorem~\ref{thm:separation} below: the numbers $\prod_{q\nmid n}
 |1-n|_q^{-1}=n-1$ and $\prod_{p\mid n}|n|_p^{1/2}=n^{-1/2}$ are canonical
 invariants of a chosen \emph{lift}, and the first of them is not a contribution
 of the class to any local term of $T$.
-
-\subsection{The norm classes}
 
 \begin{lemma}\label{lem:notideal}
 Let $S\supseteq\{\infty\}\cup P(n)$. Then $n\in\Gamma_S$, so $n\Z_S=\Z_S$ is
@@ -587,9 +576,9 @@ isomorphism onto the level measures by the coset computation in the proof of
 Theorem~\ref{thm:radmonoidal}(i).
 \end{proof}
 
-The correct name for the objects is therefore \emph{norm class}, or level
-class; there is no ideal for them to be the class of. The arithmetic is not in
-these objects. \S\ref{sec:radtrace} shows where it is instead.
+We therefore call these objects \emph{norm classes}; there is no ideal of which
+they are the class.  The arithmetic is not in these objects;
+Section~\ref{sec:radtrace} shows where it is.
 
 \begin{definition}\label{def:normclass}
 For $t\in\R$ define the \emph{norm class}
@@ -618,7 +607,7 @@ The ideles $a\in\A_S^\times$ with $\varphi(a)=n$ and $|a|_S=1/n$ are exactly
 $a=(u_\infty;(u_pn)_p)$ with $u_\infty\in\{\pm1\}$, $u_p\in\Z_p^\times$, and
 their classes are exactly $\delta_S(1/n)\cdot u$ with $u\in\Knat$. So
 $\Gamma_n^{\mathrm{rad}}$ is the unit average of the classes of all lifts of
-$a_S(n)$ of the declared modulus, and the coset depends only on that modulus.
+$a_S(n)$ with the given modulus, and the coset depends only on that modulus.
 The averaging kills the unit part of the lift; what remains is the level set.
 By Lemma~\ref{lem:notideal} what remains does not remember $n$ as an object,
 only $|a_S(n)|_S$.
@@ -738,8 +727,6 @@ image at all: morphisms between distinct external classes vanish in the
 ambient category, and averaging creates none.
 \end{remark}
 
-\subsection{Smeared classes}
-
 \begin{definition}\label{def:smeared}
 For $h\in C_c^\infty(\R)$ put
 \begin{equation}\label{eq:smeared}
@@ -774,16 +761,15 @@ near $1$ means $-\log|x|_S$ near $0$, where $h$ vanishes, so $\Gamma_h$
 vanishes on a neighbourhood of the identity class.
 \end{proof}
 
-\section{The trace on the radial sector, and the contact locus}
+\section{The trace on the radial family}
 \label{sec:radtrace}
 
-The objects of the radial family carry no arithmetic. This section proves
-where the arithmetic is: in the \emph{contact locus} of the one-parameter
-family with the diagonal, that is, in the support and the atom masses of the
-finite-place part of the trace, disintegrated along the family. Since the
-point classes are not test functions, the disintegration is taken through the
-smeared family. The finite part turns out to be purely atomic and the
-archimedean part a continuous density; the distinction is not cosmetic.
+The arithmetic of the radial family lies in its \emph{contact locus} with the
+diagonal: the support and the atom masses of the finite-place part of the
+trace, disintegrated along the family.  Since the point classes are not test
+functions, the disintegration is taken through the smeared classes.  The
+finite part turns out to be purely atomic and the archimedean part a
+continuous density, and the two play different roles.
 
 \begin{theorem}\label{thm:radtrace}
 Let $h\in C_c^\infty(\R)$ with $0\notin\supp h$. Then $T(\Gamma_h)$ is an
@@ -839,7 +825,7 @@ a finite sum because $\supp h$ is compact.
 \emph{The archimedean place.} $j_\infty(x)=(x$ at $\infty$; $1$ at every finite
 place$)$, so $|j_\infty(x)|_S=|x|$ and, in the coordinate $x=\pm e^t$,
 $b(t):=\Gamma_h(j_\infty(\pm e^t))=h(-t)$, the same for both signs. By
-Proposition~\ref{prop:trace}(b) with the declared measure $dx/(2|x|)$,
+Proposition~\ref{prop:trace}(b) with the measure $dx/(2|x|)$,
 \[
   \int_{\R^\times}\Gamma_h(j_\infty(x))\,\tau_\infty(x)\,d^*x_\infty
    =\int_0^\infty K(t)[b(t)+b(-t)]\,dt
@@ -886,9 +872,9 @@ the value of $\omega_\infty/dt$ there:
      =K(\log n)=\tfrac12\bigl[\tau_\infty(1/n)+\tau_\infty(-1/n)\bigr]
      =\frac{n^{3/2}}{n^2-1}=n^{-1/2}\sum_{j\ge0}n^{-2j}.\label{eq:archdensity}
 \end{align}
-Both are well-defined invariants, not free definitions: $\omega_{\mathrm{fin}}$
-and $\omega_\infty$ exist and are unique, so the atom mass and the density value
-at $\log n$ are determined by $T$ and by the radial sector and by nothing else.
+Since $\omega_{\mathrm{fin}}$ and $\omega_\infty$ exist and are unique, the atom
+mass and the density value at $\log n$ are invariants determined by $T$ and the
+radial family alone.
 \end{theorem}
 
 \begin{proof}
@@ -909,14 +895,14 @@ $\tau_\infty(x)=|x|^{1/2}/|1-x|$ gives
 whose half-sum is $\tfrac12n^{1/2}\cdot\frac{2n}{n^2-1}=n^{3/2}/(n^2-1)$; and
 $K(\log n)=n^{-1/2}/(1-n^{-2})=n^{3/2}/(n^2-1)$, whose geometric expansion is
 $n^{-1/2}\sum_{j\ge0}n^{-2j}$. The half-sum form, with the factor $\tfrac12$
-in front, is the declared archimedean measure $dx/(2|x|)$.
+in front, comes from the archimedean measure $dx/(2|x|)$.
 \end{proof}
 
 \begin{remark}\label{rem:typewarning}
 The quantity $T(\Gamma_n^{\mathrm{rad}})$ is \emph{undefined}: $T$ is a
 functional on $\DA$ and $\Gamma_n^{\mathrm{rad}}\notin\DA$
-(Remark~\ref{rem:multiplier}(i)), and this paper nowhere extends $T$ to
-multipliers. Worse, the naive place-wise extension
+(Remark~\ref{rem:multiplier}(i)), and we do not extend $T$ to multipliers.
+Moreover, the naive place-wise extension
 $W_p(\mu):=\int(\mu\circ j_p)\tau_p\,d^*x$ returns $0$, not
 $\Lambda(n)n^{-1/2}$: for $|S_f|\ge2$ the set
 $\Iml\,j_p\cap\{|x|_S=1/n\}$ is, in each coordinate $\Z_r^\times$ with
@@ -946,8 +932,8 @@ multiplicative Haar volume of $p^k\Z_p^\times$, independent of $k$;
 and then $\omega_{\mathrm{fin}}(\{t\})=\Lambda(e^t)e^{-t/2}$. In particular
 $\Lambda$, the set of prime powers, and the vanishing of $\Lambda$ at composite
 arguments are read off the contact locus of the one-parameter family
-$\{\Gamma^{\mathrm{rad}}_{(t)}\}$, which by Lemma~\ref{lem:notideal} is an
-arithmetic-free object. Composite indices are exactly the $t$ at which the family
+$\{\Gamma^{\mathrm{rad}}_{(t)}\}$, whose members by Lemma~\ref{lem:notideal}
+carry no arithmetic information themselves. Composite indices are exactly the $t$ at which the family
 has \emph{no} contact.
 \end{enumerate}
 \end{theorem}
@@ -976,25 +962,24 @@ The quantity $\omega_\infty(\log n)$ is the value of a \emph{continuous
 density} at a point of its argument: it is an invariant of $\omega_\infty$ and
 of the real number $\log n$, it is defined for every real $t$, and nothing
 about the object $\Gamma_n^{\mathrm{rad}}$ enters it --- the family has no
-archimedean atom at all. It is therefore not a contact, the two are not summed,
-and $\omega_\infty(\log n)$ is no part of $\Lambda(n)$. The archimedean place
-does contribute, and its contribution is exactly the continuous density
-$K(|t|)\,dt$ in the radial disintegration; that is a complete accounting, and it
-needs no archimedean $\Lambda$.
+archimedean atom at all.  It is therefore not a contact, the two are not
+added, and $\omega_\infty(\log n)$ is no part of $\Lambda(n)$.  The archimedean
+contribution to the radial disintegration is the continuous density
+$K(|t|)\,dt$.
 \end{remark}
 
 \begin{remark}\label{rem:lambdaderived}
 Formula \eqref{eq:lambdavol} exhibits $\Lambda(p^k)=\log p$ as the
-multiplicative Haar volume of a valuation shell of the carrier, and the
+multiplicative Haar volume of a valuation shell, and the
 vanishing of $\Lambda$ at composite $n$ as the statement that no single place
 has a shell of modulus $1/n$. Nothing in the derivation selects an arithmetic
 family from outside or uses the von Mangoldt function as an input: the only
 ingredients are the local terms \eqref{eq:localterms}, the exact orbital values
 of Proposition~\ref{prop:trace}(a), and the shell volume \eqref{eq:shellvol}.
-That $\Lambda$ ``is a volume'' is true relative to the normalization
-\eqref{eq:shellvol}, which is declared; \S\ref{sec:normalization} shows that
-this normalization is the unique one compatible with a universal Tate residue,
-so the relativity is to a single global scale and nothing else.
+That $\Lambda$ is a volume depends on the normalization \eqref{eq:shellvol};
+Section~\ref{sec:normalization} shows that this normalization is, up to a
+global scale, the only one compatible with a common Tate residue at all
+places.
 \end{remark}
 
 \begin{theorem}\label{thm:radincompletion}
@@ -1063,7 +1048,7 @@ as in Proposition~\ref{prop:completion}. Then for $R>0$
 \]
 with $\mathcal N_B:=\sup_{G\in B}\mathcal N(G)<\infty$ and
 \[
-  \eta(R):=2C''_B\int_{|\tau|>R}\tau^{-2}\bigl(A_S+B_S\log(2+|\tau|)\bigr)
+  \eta(R):=2C''_B\int_{|\tau|>R}\tau^{-2}\bigl(A_B+B_S\log(2+|\tau|)\bigr)
     \frac{d\tau}{2\pi},
 \]
 which is finite and tends to $0$ as $R\to\infty$, uniformly on $B$. Given
@@ -1083,16 +1068,14 @@ because $M(\Gamma_n^{\mathrm{rad}})=(n^{1/2},n^{-1/2})\ne(0,0)$.
 
 \section{The Frobenius family}\label{sec:frob}
 
-The radial objects are arithmetic-free, and that negative statement is about
-the radial sector only. This section constructs objects that are not radial and
-that do carry the arithmetic: the Haar measures of the fixed-point strata of
-the local dilations. They compose with a true unit, their supports remember $n$
-and $P(n)$, and \S\ref{sec:frobcontact} computes their contact to be
-$\Lambda(n)n^{-1/2}$, zero at composite $n$ for a reason visible in the object.
+We now construct objects that are not radial and that do carry the
+arithmetic: the Haar measures of the valuation shells of the local dilations.
+They compose with a genuine unit, their supports remember $n$ and $P(n)$, and
+in Section~\ref{sec:frobcontact} we compute their contact to be
+$\Lambda(n)n^{-1/2}$, which vanishes at composite $n$ for a reason visible in
+the support.
 
 Throughout, $S$ is a chart and $n\ge1$ with $P(n)\subseteq S_f$.
-
-\subsection{Definition and monoidality}
 
 \begin{definition}\label{def:localfrob}
 For $p\in S_f$ and $k\ge1$ let
@@ -1108,8 +1091,8 @@ a compact subgroup of $C_S$, and define the \emph{local Frobenius}
      j_p(p^k\Z_p^\times),
 \end{equation}
 $du$ the probability Haar measure of $\Z_p^\times$. Thus $\Frob_{p^k}$ is the
-Haar measure of the valuation shell $p^k\Z_p^\times$, transported to the
-carrier by the slice map. For a finite $F\subseteq S_f$ put
+Haar measure of the valuation shell $p^k\Z_p^\times$, transported to $C_S$ by
+the slice map. For a finite $F\subseteq S_f$ put
 \[
   K_F:=\prod_{p\in F}\Z_p^{(S)}\subseteq C_S,\qquad
   \Delta^{(F)}:=\text{normalized Haar measure of }K_F,
@@ -1167,7 +1150,7 @@ For all $m,n\ge1$:
 projector;
 \item[(iii)] $n\mapsto\Frob_n$ is a strong monoidal functor from
 $(\N_{\ge1},\times)$ to the convolution monoid $M_c(C_S)$ of compactly
-supported Radon measures, with its unit preserved on the nose;
+supported Radon measures, preserving the unit strictly;
 \item[(iv)] it is injective, and $\supp\Frob_n$ determines both $n$ and
 $P(n)$.
 \end{enumerate}
@@ -1232,7 +1215,7 @@ $K_{P(n)}\subseteq\Knat$. And $c_n\Knat=\{|x|_S=1/n\}$ because $|c_n|_S=1/n$
 and $\Knat=\ker(|\cdot|_S)$.
 \end{proof}
 
-\subsection{The dagger, the degree relation and the inverse semigroup}
+\subsection{The involution and the inverse semigroup}
 
 \begin{theorem}\label{thm:frobdagger}
 For $m,n\ge1$:
@@ -1274,9 +1257,8 @@ analogue: the factor $q$ is absent because the canonical half-density
 $|\cdot|_S^{-1/2}$ has already been applied --- the bidegree
 $(n^{1/2},n^{-1/2})$ has product $1$, which is where the degree went --- and
 $\Delta$ is replaced by the idempotent $\Delta^{(n)}$, which by (iv) is
-\emph{not} $\Delta$. This paper therefore does not claim Weil's relation; it
-claims (ii), and (iv) records exactly how the two differ. No use is made of the
-analogy.
+not $\Delta$.  Part (iv) records how the two relations differ; the analogy is
+not used in any proof.
 \end{remark}
 
 \begin{theorem}\label{thm:invsemigroup}
@@ -1347,9 +1329,9 @@ $\Z_3^\times$ at the place $3$, the first onto the single point $1/2$. Both are
 probability measures on those cosets and a measure determines its support, so
 they are distinct. The correct index set is therefore the one of
 \eqref{eq:gradedfrob}: $\Q_{>0}^\times$ \emph{graded by the semilattice of
-finite sets of primes}. This is not a defect but the statement that the
-idempotents $\Delta^{(F)}$ are genuine extra data, which is precisely what
-makes $\mathfrak F_S$ an inverse semigroup rather than a group.
+finite sets of primes}.  The idempotents $\Delta^{(F)}$ are genuine extra
+data, and this is what makes $\mathfrak F_S$ an inverse semigroup rather than
+a group.
 \end{proof}
 
 \section{The contact of the Frobenius family}\label{sec:frobcontact}
@@ -1374,8 +1356,12 @@ unnormalized. Write $\Frob_n^{[h,N],\flat}:=\bigl(\prod_{r\notin P}
 
 \begin{lemma}\label{lem:smearedfrobinDA}
 $\Frob_n^{[h,N]}\in\DA$, and if $\varepsilon<\log n$ then
-$\Frob_n^{[h,N]}\in\Doff$. Moreover $\Frob_n^{[h,N],\flat}\to\Frob_n$
-weak-$*$ as $\varepsilon\to0$ and $N\to\infty$.
+$\Frob_n^{[h,N]}\in\Doff$. Moreover, if $h\ge0$ is normalized by $\int_{\R_{>0}}h\,d^*x_\infty=1$
+(the measure $d^*x_\infty=dx/(2|x|)$ of \S\ref{sec:prelim}), then
+$\Frob_n^{[h,N],\flat}\to\Frob_n$ weak-$*$ as $\varepsilon\to0$ and
+$N\to\infty$; without this normalization the limit is
+$(\int h\,d^*x_\infty)\cdot\Frob_n$ whenever that integral converges as
+$\varepsilon\to0$.
 \end{lemma}
 
 \begin{proof}
@@ -1387,7 +1373,10 @@ it is supported in a compact subset of $C_S$, compact in $x_\infty$ by
 $\Doff$: the identity class has $x_\infty=1$, and $1\notin\supp h$ because
 $n^{-1}e^\varepsilon<1$ when $\varepsilon<\log n$; since $\supp h$ is closed in
 $\R^\times$ the function vanishes on a neighbourhood of the identity class.
-Weak-$*$ convergence: the normalized function is a probability density on a
+Weak-$*$ convergence: with $\int h\,d^*x_\infty=1$ and $h\ge0$, the
+normalized function is a probability density (for the Haar measure of $C_S$,
+which is $d^*x_\infty$ times the probability Haar measures of the
+$\Z_r^\times$) on a
 neighbourhood basis of the coset $c_nK_P$ intersected with the level sets
 $\{x_r\in n^{-1}(1+r^N\Z_r)\}$, and these shrink to $c_nK_P$.
 \end{proof}
@@ -1400,12 +1389,12 @@ $\{q^{-m}:q\in S_f,\ m\in\Z\}$ other than $1/n$ itself. Then
   \sum_{q\in S_f}W_q\bigl(\Frob_n^{[h,N]}\bigr)
    =\Lambda(n)\,n^{-1/2}\,h(1/n)
 \end{equation}
-\emph{exactly, for every $N\ge1$} --- no regularization, no counterterm, no
-limit at the finite places --- and in particular the left-hand side is $0$ for
+for every $N\ge1$, with no regularization, counterterm or limit at the
+finite places; and in particular the left-hand side is $0$ for
 every composite $n$. The archimedean term is
 \begin{equation}\label{eq:frobarch}
   W_\infty\bigl(\Frob_n^{[h,N]}\bigr)
-   =\Bigl(\int_0^\infty K(t)\,h(e^{-t})\,dt\Bigr)\cdot
+   =\Bigl(\int_0^\infty K_s(t)\,h(e^{-t})\,dt\Bigr)\cdot
      \prod_{r\in S_f\smallsetminus P(n)}\mathbf 1\bigl[\,r^N\mid n-1\,\bigr];
 \end{equation}
 in particular it vanishes for every sufficiently large $N$ as soon as
@@ -1449,8 +1438,7 @@ for every $w\in\Z_q^\times$ and $a_q(1)=0$; hence
 \]
 for \emph{every} $q$, whether $q\mid n$ or $q\nmid n$. The unit slice sits at
 archimedean coordinate $1$, and the Frobenius is supported at archimedean
-coordinate $1/n\ne1$; there is no cancellation, no principal value, and no
-smallness hypothesis beyond $n\ge2$.
+coordinate $1/n\ne1$, so no cancellation or principal value is involved.
 
 Summing gives \eqref{eq:frobcontacteq}, and $\Lambda(n)=0$ for composite $n$
 matches the vanishing of all shell terms.
@@ -1459,13 +1447,15 @@ matches the vanishing of all shell terms.
 so $b:=F\circ j_\infty$ is
 $b(x)=h(x)\prod_{r\in S_f\smallsetminus P}\mathbf 1_{n^{-1}(1+r^N\Z_r)}(1)$, and
 the $r$-th indicator equals $1$ iff $n\in1+r^N\Z_r$, i.e. iff $r^N\mid n-1$.
-By Proposition~\ref{prop:trace}(b) with the declared measure $dx/(2|x|)$, and
-writing $b(t):=F(j_\infty(e^t))$ in the logarithmic variable,
+By Proposition~\ref{prop:trace}(b) with the measure $dx/(2|x|)$, and
+writing $b_\pm(t):=F(j_\infty(\pm e^t))$ in the logarithmic variable,
 \[
-  W_\infty(F)=\int_0^\infty K(t)\bigl[b(t)+b(-t)\bigr]dt .
+  W_\infty(F)=\int_0^\infty K_s(t)\bigl[b_+(t)+b_+(-t)\bigr]dt
+   +\int_0^\infty K_c(t)\bigl[b_-(t)+b_-(-t)\bigr]dt .
 \]
-Since $F$ is supported in $x_\infty>0$ and $e^t>1>n^{-1}e^\varepsilon$ for
-$t>0$, the term $b(t)$ vanishes for $t>0$, so only $b(-t)=h(e^{-t})$ survives,
+Since $F$ is supported in $x_\infty>0$, $b_-\equiv0$; and since
+$e^t>1>n^{-1}e^\varepsilon$ for $t>0$, $b_+(t)$ vanishes for $t>0$, so only
+$b_+(-t)=h(e^{-t})$ survives,
 giving \eqref{eq:frobarch}. For each $r\in S_f\smallsetminus P$ the condition
 $r^N\mid n-1$ fails once $r^N>n-1$, so the whole term is $0$ for all large $N$
 whenever $S_f\smallsetminus P(n)\ne\emptyset$.
@@ -1476,8 +1466,8 @@ Let $n\ge2$ and $S_f\supsetneq P(n)$. Then
 $\supp\Frob_n\cap\Iml\,j_\infty=\emptyset$, so the Frobenius object has no
 archimedean contact. Dually, by Corollary~\ref{cor:liftnotcontact} the element
 class $\delta_S(1/n)$ lies on $\Iml\,j_\infty$ and on no $\Iml\,j_q$ for
-$|S_f|\ge2$, so it has an archimedean density and no finite contact. The two
-families are supported on complementary slices of the carrier.
+$|S_f|\ge2$, so it has an archimedean density and no finite contact.  The two
+families are supported on complementary slices of $C_S$.
 \end{corollary}
 
 \begin{proof}
@@ -1525,8 +1515,7 @@ stratum against the half-density. Note the two measures on one set:
 $\Frob_{p^k}$ is the \emph{probability} Haar measure of the stratum, of total
 mass $1$, while $\Lambda(p^k)=\log p$ is the $d^*x$-volume of the same set.
 They are related by the scalar $\log p$, and the probability normalization of
-$\Frob_{p^k}$ is what makes the object a correspondence of mass one. Both are
-used and neither is conflated.
+$\Frob_{p^k}$ is what makes the object a correspondence of mass one.
 \end{remark}
 
 \begin{theorem}\label{thm:compositedisjoint}
@@ -1642,10 +1631,9 @@ Proposition~\ref{prop:completion}; these depend on $B$ alone. Take $N\ge N_B$.
 Since every $G\in B$ is $U_{N_B}$-invariant, $\widehat G$ is supported on the
 same $d_{N_B}$ components of $\widehat{C_S}$ for every $G\in B$, and the
 integrand below is supported there; so the component count enters only through
-the constant $C_B:=d_{N_B}C''_B\max(A_S,B_S)$, which is independent of $N$.
-This is the point at which the joint limit becomes legitimate: the bound
-obtained is valid for every $N\ge N_B$ with the same constant, so
-$\varepsilon\to0$ and $N\to\infty$ may be taken in either order. On a component carrying a
+the constant $C_B:=d_{N_B}C''_B\max(A_B,B_S)$, which is independent of $N$.
+Since the bound below holds for every $N\ge N_B$ with the same constant, the
+limits $\varepsilon\to0$ and $N\to\infty$ may be taken in either order. On a component carrying a
 character $\kappa_r$ trivial on $1+r^{N_B}\Z_r\supseteq1+r^N\Z_r$, the
 $r$-factor of $\widehat F_{\varepsilon,N}$ is
 \[
@@ -1665,7 +1653,7 @@ whose modulus is at most $\min(2,|\tau|\varepsilon)$ by
 $|e^{i\theta}-e^{i\theta'}|\le|\theta-\theta'|$ and
 $|\log x_\infty+\log n|\le\varepsilon$ on $\supp h_\varepsilon$. Combining this
 with $|\widehat G|\le C''_B\min(1,\tau^{-2})$ and
-$|\widehat T|\le A_S+B_S\log(2+|\tau|)$ gives, for $R>0$,
+$|\widehat T|\le A_B+B_S\log(2+|\tau|)$ (Proposition~\ref{prop:completion}) gives, for $R>0$,
 \[
   \sup_{G\in B}\bigl|I_A(F_{\varepsilon,N},G)-\ell_n^F(G)\bigr|
    \le C_B\,\varepsilon\,R^2\log R+\eta(R),
@@ -1673,7 +1661,7 @@ $|\widehat T|\le A_S+B_S\log(2+|\tau|)$ gives, for $R>0$,
 where
 \[
   \eta(R):=2C''_B\int_{|\tau|>R}\tau^{-2}
-    \bigl(A_S+B_S\log(2+|\tau|)\bigr)\frac{d\tau}{2\pi},
+    \bigl(A_B+B_S\log(2+|\tau|)\bigr)\frac{d\tau}{2\pi},
 \]
 uniformly on $B$; choose $R$ first and then $\varepsilon$.
 
@@ -1688,14 +1676,14 @@ splitting is Proposition~\ref{prop:completion}, and $M(\Frob_n)\ne0$.
 
 \section{The integral models}\label{sec:integral}
 
-This section is $\Z$-linear. It constructs two derived contacts attached to the
-index $n$, proves that they have coprime support on $\Spec\Z$ and therefore
-never compete, and identifies primitive extraction as M\"obius inversion over
-the divisor poset --- an operation which, as we prove, cannot be monoidal.
-Nothing in this section takes place in the correspondence algebra, and the
-comparison with it, in \S\ref{sec:shadow}, is an identity of degrees.
+This section is $\Z$-linear.  We construct two derived contacts attached to
+the index $n$, show that they have coprime support on $\Spec\Z$, and identify
+primitive extraction with M\"obius inversion over the divisor poset, an
+operation which we show cannot be monoidal.  Nothing in this section takes
+place in the correspondence algebra; the comparison with it, in
+Section~\ref{sec:shadow}, is an identity of degrees.
 
-\subsection{The two contacts, and their separation}
+\subsection{The two contacts}
 
 Let $n\ge2$. Over $R=\Z$ or $\Z_p$ we have the following two complexes.
 
@@ -1723,13 +1711,12 @@ of that equation,
   C_{\mathrm{fix}}(n):=[R\xrightarrow{\ n-1\ }R],\qquad
   H^{-1}=0,\quad H^0=R/(n-1),
 \end{equation}
-over $R=\Z$ or $\Z_p$. This is a definition, not a computation: no complex on
-an ambient affine line is needed below, and none is used.
+over $R=\Z$ or $\Z_p$.
 
 These are not quasi-isomorphic, decisively so at $n=p^k$ localized at $p$:
 there $n-1\in\Z_p^\times$ makes \eqref{eq:cfix} contractible, while the
-primitive extraction of \eqref{eq:cram} has cohomology $\Z/p$. The following
-lemma explains why both differentials occur, and costs one line.
+primitive extraction of \eqref{eq:cram} has cohomology $\Z/p$.  The following
+lemma explains why both differentials occur.
 
 \begin{lemma}\label{lem:deformation}
 Consider the integral deformation $F_n(t,z)=((1+tz)^n-1)/t$, whose generic
@@ -1750,9 +1737,8 @@ $w^{n-1}=1$. The relative fibre $F_n(t,z)=0$ reads $w^n=1$.
 \end{proof}
 
 So the fixed data are governed by $\mu_{n-1}$ and the ramification data by
-$\mu_n$: the fixed group and the deck group of the same morphism. They are
-different groups, of coprime orders. No identification was ever available and
-none is needed.
+$\mu_n$: the fixed group and the deck group of the same morphism, which have
+coprime orders.
 
 \begin{theorem}[Coprime support]\label{thm:separation}
 Let $n\ge2$. Then
@@ -1812,21 +1798,21 @@ Both products in (iv) must be taken over \emph{all} finite places of $\Q$: on
 the minimal chart $S=\{\infty\}\cup P(n)$ the second product is empty, hence
 $1$. This is legitimate and canonical because $\tau_p=1$ off the finite set
 $V(n)\cup V(n-1)$, and a chart sees the whole quantity as soon as
-$S\supseteq V(n)\cup V(n-1)$. Note also that $a_S(n)$ has $\sigma_\infty=1$,
-where the local factor is undefined; the identity class is handled by the
-declared constant $c=0$.
+$S\supseteq V(n)\cup V(n-1)$.  Note also that $a_S(n)$ has archimedean
+component $1$, where the local factor is undefined; the identity class is
+accounted for by the constant $c=0$.
 
 \begin{remark}\label{rem:aboutthelift}
 Parts (i)--(iii) are statements about the two integral complexes and about
 $\tau_p$ as a function on $\Q_p^\times$. Parts (iv) are statements about the
 \emph{idele} $a_S(n)$, a chosen lift, and about nothing else. They are not
-statements about the class $\delta_S(1/n)$ in the carrier, and they are not
+statements about the class $\delta_S(1/n)$ in $C_S$, and they are not
 values of, or contributions to, any local term $W_q$ of the trace: by
 Proposition~\ref{prop:noslice} the class has unit coordinate $1$ at every
 finite place and is in the image of no finite slice map, and
-Corollary~\ref{cor:liftnotcontact} states the consequence. In particular
-$w_{\mathrm{unit}}(n)=n-1$ is a real and canonical number attached to the lift,
-and it is not a contact of anything on the carrier. That the number $n^{-1/2}$
+Corollary~\ref{cor:liftnotcontact} states the consequence.  In particular
+$w_{\mathrm{unit}}(n)=n-1$ is a canonical number attached to the lift, but it
+is not the contact of any object on $C_S$. That the number $n^{-1/2}$
 is also the canonical half-density of the class, and the second coordinate of
 the bidegree $M(\Gamma_n^{\mathrm{rad}})$, is an \emph{independent} fact, proved
 in Theorem~\ref{thm:radmonoidal}(iii) from $|\delta_S(1/n)|_S=1/n$; the
@@ -1878,8 +1864,8 @@ $(d\to n)\otimes(e\to m)=(de\to nm)$ on morphisms, and unit $1$. It is a
 symmetric monoidal poset category.
 \end{definition}
 
-Two structures are carried by $W$ and must be kept apart, because \S5.3 turns
-on the distinction: the \emph{monoid} $(\N_{\ge1},\times)$ of objects, which
+Two structures carried by $W$ must be kept apart, because the next subsection
+depends on the distinction: the \emph{monoid} $(\N_{\ge1},\times)$ of objects, which
 the realization preserves; and the \emph{divisor poset} $D(n)=\{d:d\mid n\}$
 for each $n$, whose arrows are the maps $i_{d,n}=(\mathrm{id},n/d)$ on
 two-term complexes and whose cube is the site of primitive extraction. These
@@ -1938,7 +1924,7 @@ $|a_S(n)|_S=\prod_{p\in S_f}|n|_p=\prod_{p\ \mathrm{finite}}|n|_p
 =|n|_\infty^{-1}=1/n$.
 \end{proof}
 
-\subsection{M\"obius inversion, and the failure of monoidality}
+\subsection{M\"obius inversion}
 
 \begin{lemma}\label{lem:mobiuscube}
 Let $n\ge1$, let $P(n)$ be its set of distinct prime divisors, and let $f$ be
@@ -2058,8 +2044,8 @@ $f(1):=1$ and $f(d):=\Phi_d(1)$ for $d>1$, we therefore have
 $\prod_{d\mid n}f(d)=n$ for every $n\ge1$, the case $n=1$ being the empty
 product. Multiplicative M\"obius inversion gives
 $f(n)=\prod_{d\mid n}d^{\mu(n/d)}$, whose logarithm is
-$\sum_{d\mid n}\mu(n/d)\log d=(\mu*\log)(n)=\Lambda(n)$ \cite[Ch.~1]{IK}. The
-last clause is the evaluation of $\Lambda$.
+$\sum_{d\mid n}\mu(n/d)\log d=(\mu*\log)(n)=\Lambda(n)$ \cite[Ch.~1]{IK}, and the
+last assertion is the definition of $\Lambda$.
 \end{proof}
 
 \begin{definition}\label{def:degdet}
@@ -2170,7 +2156,7 @@ and not on correspondences: morphisms between distinct external classes vanish,
 so the divisor arrows have no realization as morphisms of correspondences. They
 are realized, strictly, on the index complexes of \S\ref{sec:shadow}.
 
-\subsection{The index complex and the discriminating computation}
+\subsection{The index complex}
 
 \begin{theorem}\label{thm:indexcomplex}
 Let $n\ge2$ and $S\supseteq\{\infty\}\cup P(n)$. Put
@@ -2198,13 +2184,13 @@ $-2\log w_{\mathrm{ram}}(n)=\log n$, and
 $\degdet C_{\mathrm{ram}}(n)=\log n$ by Definition~\ref{def:degdet}.
 \end{proof}
 
-Part (iii) is a definitional identity: what it says is that the half-density of
-the external dilation is the square root of the inverse index of that same
-dilation on its invariant lattice, and that this index is the determinant of
-the ramification contact. The genuine comparison with the analytic trace is
-Theorem~\ref{thm:degreematching} below, whose two sides are computed
-independently --- the left from $L_S/nL_S$ over $\Z$, the right from the local
-terms \eqref{eq:localterms} and the shell volumes.
+Part (iii) is essentially definitional: the half-density of the dilation is
+the square root of the inverse index of that dilation on its invariant
+lattice, and this index is the determinant of the ramification contact.  The
+actual comparison with the analytic trace is Theorem~\ref{thm:degreematching}
+below, whose two sides are computed independently, the left from $L_S/nL_S$
+over $\Z$ and the right from the local terms \eqref{eq:localterms} and the
+shell volumes.
 
 \begin{remark}\label{rem:complexshadow}
 Over $\C$ the torsion disappears: by Proposition~\ref{prop:shadow} the shadow
@@ -2262,9 +2248,9 @@ their agreement is an isomorphism in $D(\Z)$ and not merely an equality of
 orders.
 \end{proof}
 
-Note that (b) is transported from (a) and (c) is built on the same finite
-quotient; there are two genuinely distinct routes --- the cotangent--lattice
-cube and the deformation Koszul complex --- plus two transports. Combining
+Of these, (b) is transported from (a) and (c) is built on the same finite
+quotient, so there are two independent constructions, the cotangent--lattice
+cube and the deformation Koszul complex. Combining
 Theorem~\ref{thm:fourmodels} with Theorem~\ref{thm:degreelaw} gives
 \begin{equation}\label{eq:degcontact}
   \degdet(\text{primitive contact of the index } n)=\log|\Phi_n(1)|=\Lambda(n),
@@ -2305,7 +2291,7 @@ compares (i) and (ii). (iv) is Theorem~\ref{thm:fourmodels}(c) together with
 Lemma~\ref{lem:deformation} and Theorem~\ref{thm:separation}.
 \end{proof}
 
-\begin{theorem}[The same comparison on the carrier]\label{thm:carrierside}
+\begin{theorem}[The same comparison on $C_S$]\label{thm:carrierside}
 Let $p\in S_f$, $k\ge1$, $n=p^k$. Then:
 \begin{enumerate}
 \item[(i)] the fixed-point weight $1/|1-x|_p$ of
@@ -2354,10 +2340,10 @@ Theorem~\ref{thm:separation}(iv) for the lift data.
 Both $\vol_{d^*x}(p^k\Z_p^\times)=\log p$ and $\Phi_{p^k}(1)=p$ are independent
 of $k$, the first by translation invariance of multiplicative Haar measure, the
 second because $\Phi_{p^k}(x)=\Phi_p(x^{p^{k-1}})$. These are two unrelated
-reasons. No map, functor or comparison between the two objects is
-constructed here. What is proved is that the two contacts differ, decisively at $p$
-and $p^2$ (Theorem~\ref{thm:discriminating}), and that the fixed-point weight
-is trivial on the shell while the surviving weight is a Haar volume
+reasons, and we construct no map between the two objects.  What we prove is
+that the two contacts differ already at $p$ and $p^2$
+(Theorem~\ref{thm:discriminating}), and that the fixed-point weight is trivial
+on the shell while the surviving weight is a Haar volume
 (Theorem~\ref{thm:carrierside}).
 \end{remark}
 
@@ -2389,16 +2375,16 @@ Theorem~\ref{thm:degreelaw}.
 \end{proof}
 
 \begin{remark}\label{rem:whatdegmatchdoesnotsay}
-Theorem~\ref{thm:degreematching} does \emph{not} say that $\Z/\Phi_n(1)$ is an
-object of the correspondence algebra, or that any complex over $\Z$ is a shadow
-of $\Gamma_n^{\mathrm{rad}}$. It cannot: by Proposition~\ref{prop:shadow} the
+Theorem~\ref{thm:degreematching} does not say that $\Z/\Phi_n(1)$ is an object
+of the correspondence algebra, or that a complex over $\Z$ is a shadow of
+$\Gamma_n^{\mathrm{rad}}$, and it could not: by Proposition~\ref{prop:shadow} the
 shadow of an external class at a finite place $p\mid n$ is the single rank-one
 origin class, and by Proposition~\ref{prop:noZp} no additive contact functor
 from a $\C$-linear category recovers nonzero integral torsion. The content is
 an equality of \emph{numbers}, each independently computed on its own side, and
 the reason the equality is not a tautology is that the left-hand sides are
 lattice indices and determinants over $\Z$ while the right-hand sides are Haar
-volumes of shells of the carrier.
+volumes of shells in $C_S$.
 \end{remark}
 
 \subsection*{Examples}
@@ -2424,17 +2410,14 @@ $30$ & $\{2,3,5\}$ & $1$ & $0$     & $29$ & $\{2,3,5\}$ & $\{29\}$\\
 \end{tabular}
 \end{center}
 
-\section{The integral shadow of the Frobenius, on objects}\label{sec:shadow}
+\section{The integral shadow of the Frobenius family}\label{sec:shadow}
 
-Proposition~\ref{prop:noZp} forbids a $\C$-linear additive functor producing
-$\Z/p$; it does not forbid an integral or lattice construction with a complex
-realization, and it does not forbid that realization sending a nonzero torsion
-object to zero while a metrized determinant retains an arithmetic degree. Such
-additional structure must, however, be constructed. This section constructs it
-on the Frobenius family. It is not a functor on the $\C$-linear category and
-does not pretend to be: it is defined on the arithmetic monoid of Frobenius
-objects, using the integral lattice $L_S=\prod_{p\in S_f}\Z_p$, which is part
-of the declared coefficient geometry.
+Proposition~\ref{prop:noZp} rules out a $\C$-linear additive functor producing
+$\Z/p$, but not an integral construction whose complexification kills the
+torsion while a determinant retains an arithmetic degree.  We construct such a
+shadow on the Frobenius family.  It is not a functor on the $\C$-linear
+category; it is defined on the monoid of Frobenius objects, using the integral
+lattice $L_S=\prod_{p\in S_f}\Z_p$ of the coefficient algebra.
 
 \begin{definition}\label{def:shadow}
 For $n\ge1$ with $P(n)\subseteq S_f$, let
@@ -2639,24 +2622,19 @@ $\Sh_\Z$ is a construction on the objects $\Frob_n$
 (Lemma~\ref{lem:shfunctor}), whose M\"obius cofiber is
 $[\Z\xrightarrow{\Phi_n(1)}\Z]$. It is not a functor on the $\C$-linear
 correspondence category, and it is not a shadow in the sense of
-Proposition~\ref{prop:shadow}. Its complex realization is acyclic, exactly as
+Proposition~\ref{prop:shadow}.  Its complexification is acyclic, as
 Proposition~\ref{prop:noZp} predicts, so the integral object cannot be
-recovered from the $\C$-linear category, and this paper does not recover it.
-The identification \eqref{eq:shdeg1}--\eqref{eq:shdeg2} is therefore of degrees
+recovered from the $\C$-linear category.  The identification \eqref{eq:shdeg1}--\eqref{eq:shdeg2} is therefore of degrees
 only.
 \end{remark}
 
 \section{The two Gram forms}\label{sec:gram}
 
-So far this paper has been about single objects; this section is about a
-\emph{form}. We compute the Gram matrices of the two families ---
-Frobenius and unit-averaged --- against the pairing $I_A(F,G)=T(F\star
-G^\dagger)$, and find that they differ exactly by the archimedean half of the
-kernel.
+We now compute the Gram matrices of the two families, Frobenius and
+unit-averaged, for the pairing $I_A(F,G)=T(F\star G^\dagger)$; they differ by
+the archimedean part of the kernel.  Two conventions are used throughout.
 
-\subsection{Two conventions, fixed once}
-
-\paragraph{The chart quantifier.} At a fixed finite chart $S$ the finite part
+\emph{The chart.}  At a fixed finite chart $S$ the finite part
 of $T$ runs over $p\in S_f$ only. Whenever a statement below involves a profile
 whose support radius exceeds the chart window, the trace meant is the colimit
 trace $T_\infty$ of Proposition~\ref{prop:trace}(c), for which the prime sum is
@@ -2668,15 +2646,15 @@ and the next two,
 \]
 is the \emph{colimit} kernel, over all primes; $T$ means $T_\infty$ and
 $I_A(\cdot,\cdot)=T_\infty(\cdot\star\cdot^\dagger)$; and at a fixed finite
-chart every displayed identity holds verbatim provided the support of the
+chart every displayed identity holds unchanged provided the support of the
 relevant profile lies inside the chart window, the two traces differing outside
 it by the finite sum of the missing prime terms. The one exception, explicitly
 exempted, is Theorem~\ref{thm:infgenus}, which is a fixed-chart statement and
-says so. Every \emph{value} computed below is unchanged by the quantifier: for
-a Gram entry, $m/n=q^{\pm k}$ forces $q\mid mn$, hence $q\in S_f$ for any chart
-containing $P(mn)$. Only the quantifier moves.
+says so.  The values computed below do not depend on this choice: for a Gram
+entry, $m/n=q^{\pm k}$ forces $q\mid mn$, hence $q\in S_f$ for every chart
+containing $P(mn)$.
 
-\paragraph{The normalization of the level factors.}
+\emph{The normalization of the level factors.}
 Definition~\ref{def:smearedfrob} offers two conventions: the \emph{bare} one,
 with unnormalized indicators, and the flat one, divided by
 $\prod_r\vol(1+r^N\Z_r)$. This section works in the bare convention, and every
@@ -2690,7 +2668,7 @@ in $N$ in one convention tends to $0$ in the other, and no rate is asserted
 below for the diagonal: what is convention-free, and what is stated, is that
 the point-class pairing $I_A(\Frob_n,\Frob_n)$ does not exist.
 
-\subsection{The off-diagonal entries of the Frobenius form}
+\subsection{The Frobenius form}
 
 \begin{theorem}\label{thm:gramoff}
 Let $m,n\ge2$, $m\ne n$, with $P(mn)\subseteq S_f$, and let
@@ -2700,8 +2678,11 @@ $\varepsilon<\varepsilon_0(A,S)$, where $A\subset\N_{\ge2}$ is the finite set
 of indices in play and $\varepsilon_0(A,S)>0$ is chosen so that for every
 $m,n\in A$ the support of the convolved profile $h_m\star h_n^\dagger$ --- an
 interval of width at most $2\varepsilon$ around $n/m$ --- contains no point of
-the discrete set $\{q^{-k}:q\in S_f,\ k\in\Z\}$ other than $n/m$ itself when
-$n/m$ is such a point. Then
+the discrete set $\{q^{-k}:q\ \text{prime},\ k\in\Z\}$ other than $n/m$
+itself when $n/m$ is such a point. (All primes, not only $q\in S_f$: in this
+section $T=T_\infty$, whose prime sum samples the points $q^{-k}$ for every
+prime $q$; since the set $\{q^{-k}\}\cap[\tfrac12 n/m,2n/m]$ is finite for
+each pair, $\varepsilon_0(A,S)>0$ exists.) Then
 \begin{equation}\label{eq:gramoffentry}
   I_A\bigl(\Frob_m^{\mathrm{sm}},\Frob_n^{\mathrm{sm}}\bigr)
    =T\bigl(\Frob^{\mathrm{sm}}_{m/n,\ P(m)\cup P(n)}\bigr),
@@ -2720,11 +2701,14 @@ and symmetric under $r\mapsto r^{-1}$. The archimedean part of the same entry
 carries the arithmetic indicator
 \begin{equation}\label{eq:gramarch}
   W_\infty\bigl(\Frob_{r,F}^{\mathrm{sm}}\bigr)
-   =\Bigl(\int_0^\infty K(t)\,(h_m\star h_n^\dagger)(e^{-t})\,dt\Bigr)
+   =\Bigl(\int_0^\infty K_s(t)\,\bigl[g_{mn}(e^{t})+g_{mn}(e^{-t})\bigr]\,dt\Bigr)
     \cdot\prod_{s\in S_f\smallsetminus F}
     \mathbf 1\bigl[\,s^N\mid(n-m)\,\bigr],
 \end{equation}
-which vanishes for every sufficiently large $N$ whenever $S_f\supsetneq F$.
+where $g_{mn}:=h_m\star h_n^\dagger$ is supported in a $2\varepsilon$-window
+around $n/m$, so that exactly one of the two terms survives: $g_{mn}(e^{-t})$
+when $n<m$ and $g_{mn}(e^{t})$ when $n>m$. It
+vanishes for every sufficiently large $N$ whenever $S_f\supsetneq F$.
 Finally the convolution of the level-$N$ coset indicators contributes the
 constant
 \begin{equation}\label{eq:gramconst}
@@ -2784,14 +2768,18 @@ with $c_rK_F$ in place of $c_nK_{P(n)}$. The support is
 \]
 with $1/r$ meaning the positive real $n/m$. A shell $q^{m'}\Z_q^\times$ of
 $\Iml\,j_q$ meets it in a set of positive Haar measure only if the archimedean
-coordinates agree, $q^{-m'}=1/r$, i.e. $r=q^{m'}$ --- and then automatically
-$q\in F$, because $r=q^{m'}$ forces $q\in P(r)\subseteq P(m)\cup P(n)=F$. It
-must be stressed what kills the remaining shells: for the \emph{smeared} class
+coordinates agree, $q^{-m'}=1/r$, i.e. $r=q^{m'}$; and then $q\in F$, because
+$r=q^{m'}$ forces $q\in P(r)\subseteq P(m)\cup P(n)=F$.  Note what excludes the
+remaining shells: for the \emph{smeared} class
 the level-$N$ coset at $s\notin F$ is \emph{open}, so a shell at $s\notin F$
 could in principle meet the support in positive measure; what forbids it is the
 archimedean coordinate together with the hypothesis
 $\varepsilon<\varepsilon_0$, which forces $s^{-m'}$ to lie within $2\varepsilon$
-of $n/m$, hence to equal $n/m$, hence $s\in P(r)\subseteq F$. On the surviving
+of $n/m$, hence to equal $n/m$, hence $s\in P(r)\subseteq F$. The same
+argument, with $\varepsilon_0$ taken over all primes, disposes of the prime
+terms of $T_\infty$ at primes $\ell\notin S_f$ (which sample the test at
+archimedean coordinate $\ell^{-k}$, \cite[Thm.~11.6(b)]{Companion}): none of them
+lies in the support. On the surviving
 shell $\tau_q=q^{-|m'|/2}$ by Proposition~\ref{prop:trace}(a) and the shell
 volume is $\log q$, giving \eqref{eq:gramfinite}. The unit packets vanish for
 the reason of Theorem~\ref{thm:frobcontact}, since $1\notin
@@ -2801,12 +2789,13 @@ Lemma~\ref{lem:tauinv}, and amounts to the statement that
 \eqref{eq:gramfinite} depends on $|m'|$ only.
 
 For \eqref{eq:gramarch} apply the archimedean computation of
-Theorem~\ref{thm:frobcontact} with $r$ in place of $n$: the numerator of
+Theorem~\ref{thm:frobcontact} with $r$ in place of $n$ and $g_{mn}$ in place
+of $h$; that computation used only that the profile is supported in
+$x_\infty>0$ away from $1$, and when the support lies in $x_\infty>1$ (that is,
+$n>m$) it is $b_+(t)$ rather than $b_+(-t)$ that survives. The numerator of
 $r-1=(m-n)/n$ is $m-n$, so the condition $r\in1+s^N\Z_s$ reads
 $s^N\mid(n-m)$.
 \end{proof}
-
-\subsection{The diagonal of the Frobenius form}
 
 \begin{theorem}\label{thm:gramdiag}
 Let $n\ge2$, $P:=P(n)$, and let $\Delta^{(n),[\varphi_\varepsilon,N]}\in\DA$ be
@@ -2917,28 +2906,103 @@ limit.
 
 \begin{corollary}\label{cor:gramdiagconv}
 Let $F:=\Frob_n^{\mathrm{sm}}$ be the smeared Frobenius with archimedean
-profile $h$ and level $N$, in the bare convention. Then
+profile $h\not\equiv0$ and level $N$, in the bare convention, with
+$\varepsilon<\tfrac14\log2$. Put $g:=h\star h^\dagger$ (convolution on
+$\R^\times$ for $d^*x_\infty$) and $\psi(t):=g(e^t)$. Then $\psi\in
+C_c^\infty([-2\varepsilon,2\varepsilon])$, $\psi(-t)=\overline{\psi(t)}$, and
+\[
+  \psi(0)=\|h\|^2:=\int_{\R^\times}|h|^2\,d^*x_\infty>0 .
+\]
+Let $G^{(n)}_{\psi,N}\in\DA$ be
+\[
+  G^{(n)}_{\psi,N}(x):=\mathbf 1[x_\infty>0]\,\psi(\log x_\infty)\cdot
+     \prod_{r\in S_f\smallsetminus P(n)}\mathbf 1_{U_r}(x_r),\qquad
+  U_r:=1+r^N\Z_r .
+\]
+Then
 \begin{equation}\label{eq:FFdagger}
-  F\star F^\dagger=V_N(n)\cdot\Delta^{(n),[\,h\star h^\dagger,\,N\,]},
+  F\star F^\dagger=V_N(n)\cdot G^{(n)}_{\psi,N},
 \end{equation}
-because at each $r\in S_f\smallsetminus P(n)$ the convolution of
-$\mathbf 1_{n^{-1}U_r}$ with $\mathbf 1_{nU_r}$ is
-$\vol(U_r)\mathbf 1_{U_r}$, $U_r:=1+r^N\Z_r$, and at $p\in P(n)$ there is no
-condition. Hence
+and
 \begin{equation}\label{eq:diagvalue}
-  I_A(F,F)=V_N(n)\Bigl[-\sum_{r\in S_f\smallsetminus P(n)}(\log r)
-    \Bigl(\tfrac{r-2}{r-1}+N-1\Bigr)-\log\tfrac1\varepsilon+O(1)\Bigr].
+  I_A(F,F)=V_N(n)\,\|h\|^2\Bigl[-\sum_{r\in S_f\smallsetminus P(n)}(\log r)
+    \Bigl(\tfrac{r-2}{r-1}+N-1\Bigr)-\log\tfrac1\varepsilon
+    +O\Bigl(1+\varepsilon^2\,\frac{\|\psi''\|_\infty}{\|h\|^2}\Bigr)\Bigr],
 \end{equation}
-Consequently: in the bare convention $V_N(n)$ decays geometrically while the
-bracket grows linearly, so $I_A(F,F)\to0$ as $N\to\infty$ for fixed
-$\varepsilon$; in the flat convention $I_A(F^\flat,F^\flat)\to-\infty$
-geometrically; and in both, the bracket is negative and the archimedean part
-$-\log(1/\varepsilon)$ diverges as $\varepsilon\to0$ for fixed $N$.
+with an absolute implied constant. If $h$ is a rescaled profile,
+$h(x)=c_\varepsilon\,\eta(\log(nx)/\varepsilon)$ for a fixed
+$\eta\in C_c^\infty((-1,1))$ and any constants $c_\varepsilon\neq0$, then
+$\varepsilon^2\|\psi''\|_\infty/\|h\|^2$ is independent of $\varepsilon$, and
+the error term is $O_\eta(1)$. Consequently, for such rescaled profiles:
+the bracket is negative for $N$ large or $\varepsilon$ small; in the bare convention $V_N(n)$ decays
+geometrically while the bracket grows linearly, so $I_A(F,F)/\|h\|^2\to0$ as
+$N\to\infty$ for fixed $\varepsilon$; in the flat convention
+$I_A(F^\flat,F^\flat)/\|h\|^2\to-\infty$ geometrically; and in both the
+archimedean part $-\|h\|^2\log(1/\varepsilon)$ of the normalized bracket
+diverges as $\varepsilon\to0$ for fixed $N$.
 \end{corollary}
 
 \begin{proof}
-Immediate from Theorem~\ref{thm:gramdiag} and the displayed convolution of
-coset indicators.
+\emph{The profile.} $\supp h\subset(n^{-1}e^{-\varepsilon},n^{-1}e^{\varepsilon})$
+gives $\supp g\subset(e^{-2\varepsilon},e^{2\varepsilon})$; $g$ is smooth as
+the convolution of two $C_c^\infty$ functions, and it is supported in
+$x_\infty>0$ because both factors are. From $F^\dagger(x)=\overline{F(x^{-1})}$,
+$g(x^{-1})=\overline{g(x)}$, i.e.\ $\psi(-t)=\overline{\psi(t)}$; and
+$g(1)=\int h(y)\overline{h(y)}\,d^*y=\|h\|^2$.
+
+\emph{The convolution \eqref{eq:FFdagger}.} The Haar measure of $C_S$ is the
+product of $d^*x_\infty$ and the probability Haar measures of the
+$\Z_r^\times$ (Proposition~\ref{prop:splitting}), so $F\star F^\dagger$ is
+the product of the coordinatewise convolutions. Archimedean: $g$. At
+$r\in S_f\smallsetminus P(n)$:
+$\mathbf 1_{n^{-1}U_r}\star\mathbf 1_{nU_r}=\vol(U_r)\mathbf 1_{U_r}$. At
+$p\in P(n)$: $\mathbf 1_{\Z_p^\times}\star\mathbf 1_{\Z_p^\times}
+=\mathbf 1_{\Z_p^\times}$. The product of the volumes is $V_N(n)$.
+
+\emph{The trace of $G:=G^{(n)}_{\psi,N}$.} Repeat the proof of
+Theorem~\ref{thm:gramdiag}, which used about $\varphi_\varepsilon$ only its
+support and its value and smoothness near $0$.
+(i) Shells: the archimedean coordinate of $j_q(q^kw)$ is $q^{-k}$, and
+$|k|\log q\ge\log2>2\varepsilon$, so every shell term vanishes, for every
+prime $q$ (also those outside $S_f$ under $T_\infty$).
+(ii) At $p\in P(n)$, $a_p:=G\circ j_p\equiv\psi(0)$ on $\Z_p^\times$, so the
+packet vanishes.
+(iii) At $r\in S_f\smallsetminus P(n)$, $a_r(u)=\psi(0)\mathbf 1_{U_r}(u)$, and
+the stratification of Theorem~\ref{thm:gramdiag}(iii), multiplied by
+$\psi(0)$, gives the packet
+$-\psi(0)(\log r)\bigl[\tfrac{r-2}{r-1}+N-1\bigr]$.
+(iv) Archimedean. The profiles of $G$ are $b_+(t)=\psi(t)$ and $b_-\equiv0$
+($G$ vanishes on $x_\infty<0$, the paragraph after Proposition~\ref{prop:trace}); the identity class is
+in the support, so \eqref{eq:archterm} is used with its counterterm:
+\[
+  W_\infty(G)=(\gamma+\log4\pi)\psi(0)
+   +\int_0^\infty \bigl[2K_s(t)\Re\psi(t)-2K(t)\psi(0)e^{-t/2}\bigr]dt .
+\]
+Since $\Re\psi$ is even and smooth, $|\Re\psi(t)-\psi(0)|\le\tfrac12
+\|\psi''\|_\infty t^2$; and $2K_s(t)=t^{-1}+O(t)$,
+$2K(t)e^{-t/2}=t^{-1}+O(1)$ near $0$, so $2K_s-2Ke^{-t/2}$ is bounded on
+$(0,1]$. Hence
+\[
+ \int_0^{2\varepsilon}\bigl[2K_s(t)\Re\psi(t)-2K(t)\psi(0)e^{-t/2}\bigr]dt
+ =\int_0^{2\varepsilon}2K_s(\Re\psi-\psi(0))\,dt
+  +\psi(0)\int_0^{2\varepsilon}\bigl(2K_s-2Ke^{-t/2}\bigr)dt
+ =O\bigl(\varepsilon^2\|\psi''\|_\infty+\varepsilon\,\psi(0)\bigr).
+\]
+On $(2\varepsilon,\infty)$, $\psi=0$ and
+$-2\psi(0)\int_{2\varepsilon}^\infty K(t)e^{-t/2}dt
+=-\psi(0)\log\tfrac1\varepsilon+O(\psi(0))$, as in
+Theorem~\ref{thm:gramdiag}(iv). Summing,
+$W_\infty(G)=-\psi(0)\log\tfrac1\varepsilon
++O(\psi(0)+\varepsilon^2\|\psi''\|_\infty)$.
+
+Adding (i)--(iv), multiplying by $V_N(n)$ and using $\psi(0)=\|h\|^2$ gives
+\eqref{eq:diagvalue}. For the rescaled profile, $\psi(t)=c\,\Psi(t/\varepsilon)$
+with $\Psi$ fixed (a convolution of $\eta$ with its reflected conjugate) and
+$c=|c_\varepsilon|^2\varepsilon$ up to an absolute factor; so $\psi(0)$ and
+$\varepsilon^2\|\psi''\|_\infty$ both equal $c$ times quantities depending
+only on $\eta$, and their ratio is independent of $\varepsilon$. The remaining
+statements follow: the bracket in \eqref{eq:diagvalue} is
+$-(\text{linear in }N)-\log(1/\varepsilon)+O(1)$.
 \end{proof}
 
 \begin{remark}\label{rem:nodiagonal}
@@ -2955,7 +3019,7 @@ pairing is not extended to $\mathcal N_A^{\mathrm{dist}}\times
 \mathcal N_A^{\mathrm{dist}}$.
 \end{remark}
 
-\subsection{Which half of the Weil kernel each family carries}
+\subsection{The unit-averaged form}
 
 \begin{corollary}\label{cor:onlyfinite}
 Let $A\subset\N_{\ge2}$ be finite, $G:=\sum_{n\in A}c_n\Frob_n^{\mathrm{sm}}$,
@@ -3031,8 +3095,7 @@ indicator of \eqref{eq:frobarch} is identically $1$. Formula
 as $h_m\star h_n^\dagger$ concentrates at $\log m-\log n\ne0$.
 \end{proof}
 
-\begin{theorem}[The two halves]\label{thm:twohalves}
-On the declared carrier:
+\begin{theorem}\label{thm:twohalves}
 \begin{enumerate}
 \item[(i)] the Frobenius family $\{\Frob_n^{\mathrm{sm}}\}$ has Gram form
 $\Wfin$ off the diagonal, with no archimedean block
@@ -3048,13 +3111,13 @@ Corollary~\ref{cor:frobnoarch} and Remark~\ref{rem:twoflows}: $\supp\Frob_n$ is
 disjoint from $\Iml\,j_\infty$ when $S_f\supsetneq P(n)$, so the Frobenius sees
 no archimedean local term; convolving with the projector
 $\Delta^{\mathrm{rad}}$ spreads the support onto the whole modulus level set,
-which meets $\Iml\,j_\infty$ in the single point $j_\infty(1/n)$, and that is
+which meets $\Iml\,j_\infty$ in the two points $j_\infty(\pm1/n)$ (the
+level set is a coset of $\Knat$, and $\Knat\ni-1$), and that is
 where $\omega_\infty$ comes from.
 \end{enumerate}
-Thus the averaging projector $\Delta^{\mathrm{rad}}$ is exactly what converts
-the finite half of the kernel into the whole of it, at the cost, by
-Lemma~\ref{lem:notideal}, of forgetting the factorization. The two facts are
-two readings of one projector.
+Thus the averaging projector $\Delta^{\mathrm{rad}}$ converts the finite part
+of the kernel into the whole of it, at the cost, by Lemma~\ref{lem:notideal},
+of forgetting the factorization.
 \end{theorem}
 
 \begin{proof}
@@ -3066,7 +3129,7 @@ because $\Delta^{\mathrm{rad}}$-invariance removes the finite-coordinate
 conditions.
 \end{proof}
 
-\subsection{Real and complex profiles; primitivity}
+\subsection{Primitive classes and the finite-place form}
 
 \begin{lemma}\label{lem:complexprofiles}
 For a complex $g\in C_c^\infty(\R;\C)$ the class $\Gamma_g$ and the pairing are
@@ -3139,17 +3202,16 @@ Fix a finite chart $S$ with $S_f\ne\emptyset$ and let
   \widehat\omega_{\mathrm{fin}}(\tau):=\sum_{p\in S_f}
     \widehat W_p(\mathfrak c_0,\tau),
 \end{equation}
-be the finite-place form on real radial profiles at that chart. Then there
+be the finite-place form on real radial profiles at that chart.  Then there
 exists a \emph{primitive} real $g\in C_c^\infty(\R)$ with
-$Q_{\mathrm{fin}}(g)>0$. Hence the assertion ``$Q_{\mathrm{fin}}\le0$ on every
-primitive radial class'' is false, at every finite chart, with no hypothesis
-whatever.
+$Q_{\mathrm{fin}}(g)>0$.  In particular $Q_{\mathrm{fin}}$ is not negative
+semidefinite on primitive radial classes, at any finite chart.
 \end{theorem}
 
 \begin{proof}
 \emph{Step 1: the symbol is strictly positive at $\tau=0$.} By
 \eqref{eq:symbol} and \eqref{eq:nophase}, on the principal component
-$\zeta_p=p^{-1/2-i\tau}$, so at $\tau=0$ we have $\zeta_p=p^{-1/2}\in(0,1)$
+$\zeta_p=p^{-1/2+i\tau}$, so at $\tau=0$ we have $\zeta_p=p^{-1/2}\in(0,1)$
 real and
 \begin{equation}\label{eq:omegafin0}
   \widehat\omega_{\mathrm{fin}}(0)
@@ -3172,7 +3234,7 @@ $2\rho(1-\rho^2)/|1-\zeta|^4>0$; so the expression is maximal at $\theta=0$,
 with value $2\rho/(1-\rho)$, and minimal at $\theta=\pi$, with value
 $-2\rho/(1+\rho)$. With $\rho=p^{-1/2}$ and $\theta=\tau\log p$ by
 \eqref{eq:nophase} this gives \eqref{eq:AS}, and moreover
-$A_S=\widehat\omega_{\mathrm{fin}}(0)$ exactly, not merely a bound. By continuity choose $\delta>0$ with
+$A_S=\widehat\omega_{\mathrm{fin}}(0)$. By continuity choose $\delta>0$ with
 $\widehat\omega_{\mathrm{fin}}(\tau)\ge\tfrac12\widehat\omega_{\mathrm{fin}}(0)
 =:c>0$ for $|\tau|\le\delta$.
 
@@ -3237,9 +3299,8 @@ variation scale $\asymp1/\log p_{\max}$ of the symbol) become comparable.
 \section{The self-intersection of the diagonal}\label{sec:diagonal}
 
 \begin{theorem}\label{thm:infgenus}
-Fix a finite chart $S$ with $S_f\ne\emptyset$ and read $T=T_S$; this theorem
-and its corollary are explicitly exempted from the colimit convention of
-\S\ref{sec:gram}. Fix a real even $\varphi\in C_c^\infty(\R)$,
+Fix a finite chart $S$ with $S_f\ne\emptyset$ and read $T=T_S$ (this is the
+exception to the convention of Section~\ref{sec:gram}). Fix a real even $\varphi\in C_c^\infty(\R)$,
 $\varphi\not\equiv0$, and for $\varepsilon>0$ let $F_\varepsilon\in\DA$ be the
 $\Knat$-invariant test with archimedean profile
 $\varepsilon^{-1}\varphi(t/\varepsilon)$ in the coordinate $t=\log|x|_S$, that
@@ -3257,10 +3318,10 @@ $\int_{\widehat{C_S}}|\widehat G_\varepsilon|^2d\chi=1$, then
 \begin{equation}\label{eq:diagdivnorm}
   I_A(G_\varepsilon,G_\varepsilon)=-\log\frac1\varepsilon+O(1).
 \end{equation}
-No limiting constant is asserted in \eqref{eq:diagdivnorm}: the proof produces
-a bounded remainder and not a convergent one, which would require an asymptotic
-expansion of the archimedean symbol finer than \eqref{eq:symbolasym} together
-with control of $\sum_p\widehat W_p$ as $|\tau|\to\infty$.
+The proof gives a bounded remainder in \eqref{eq:diagdivnorm}, not a limiting
+constant; the latter would need a finer expansion of the archimedean symbol
+than \eqref{eq:symbolasym} and control of $\sum_p\widehat W_p$ as
+$|\tau|\to\infty$.
 \end{theorem}
 
 \begin{proof}
@@ -3330,20 +3391,18 @@ $|t|\le2\varepsilon<\log2$, so it meets \emph{no} atom of $\Wfin$, whose
 support consists of points of modulus at least $\log2$ by
 Theorem~\ref{thm:contactlocus}(i). The finite part is therefore identically
 zero and \eqref{eq:diagdiv} is purely archimedean, no appeal to the bound
-\eqref{eq:AS} being needed. So the theorem is stated at a fixed chart and holds
-a fortiori on the colimit.
+\eqref{eq:AS} being needed.  So the theorem also holds on the colimit.
 \end{proof}
 
 \begin{remark}\label{rem:infinitegenus}
 For a smooth projective curve of genus $g$ over a finite field one has
 $\Delta\cdot\Delta=2-2g$ \cite{Weil1948}. Theorem~\ref{thm:infgenus} says that
-the regularized self-intersection of the diagonal on the present carrier
-diverges to $-\infty$; under that dictionary this reads $g=\infty$. The
+the regularized self-intersection of the diagonal on $C_S$ diverges to
+$-\infty$; under that dictionary this reads $g=\infty$. The
 divergence comes entirely from the archimedean symbol
 \eqref{eq:symbolasym}, the finite-place symbol being bounded at a fixed chart
 by \eqref{eq:AS}, and the rate is $\log(1/\varepsilon)$ per unit of
-$L^2$-normalized test. The interpretation is recorded as an interpretation and
-is used by no theorem here; what is proved is \eqref{eq:diagdiv}. Note also
+$L^2$-normalized test.  The interpretation is not used in any proof.  Note also
 that the coefficient of $\log(1/\varepsilon)$ is $1$ in the
 $L^2$-normalization, and that in the mass-normalized normalization
 ($\int F_\varepsilon=1$) the divergence is
@@ -3352,15 +3411,15 @@ $\varepsilon^{-1}$ faster; the rate is normalization-dependent and the
 qualitative statement is not.
 \end{remark}
 
-\section{The shell normalization is forced by the Tate residue}
+\section{The normalization of the shell volumes}
 \label{sec:normalization}
 
-The identification $\Lambda(p^k)=\log p=\vol_{d^*x}(p^k\Z_p^\times)$ is true
-relative to the normalization \eqref{eq:shellvol}. That normalization is not
-arbitrary.
+The identification $\Lambda(p^k)=\log p=\vol_{d^*x}(p^k\Z_p^\times)$ depends on
+the normalization \eqref{eq:shellvol}.  That normalization is determined by
+the local Tate residues.
 
 \begin{theorem}\label{thm:tateresidue}
-Let the local multiplicative measures be declared by
+Let the local multiplicative measures be normalized by
 \[
   \vol_{d^*x_p}(\Z_p^\times)=c_p>0\ (p\ \text{finite}),\qquad
   d^*x_\infty=dx/(2|x|),
@@ -3410,33 +3469,27 @@ so the normalization is unique in the quotient by the global scale.
 \end{proof}
 
 \begin{remark}\label{rem:notchartinv}
-One might hope that chart-invariance alone forces $c_p=\log p$ with no extra
-requirement. It does not. By Theorem~\ref{thm:tateresidue}(i)--(ii) each place
+Chart invariance alone does not force $c_p=\log p$. By Theorem~\ref{thm:tateresidue}(i)--(ii) each place
 of $S$ carries one local Tate residue --- $c_p/\log p$ at a finite $p$ and $1$
 at $\infty$ --- and there are $|S_f|+1$ of them; that count changes when a
 place is added to the chart, so the collection of local residues is manifestly
 chart-dependent, whatever the $c_p$. The colimit trace is chart-invariant on
 tests of small support radius, but a residue is read off the local zeta
-integral, not off values on a compact window. So an argument
-``chart-invariance implies equal residues'' is not available, and none is given
-here. What is available is Theorem~\ref{thm:tateresidue}: given the
-\emph{requirement} that every place carry the same Tate residue --- which is
-what makes that count a count of places rather than a
-normalization-dependent list of numbers --- the normalization is unique. The
-requirement is named, and it is the classical normalization of the local
+integral, not off values on a compact window.  What Theorem~\ref{thm:tateresidue}
+shows is that, once one requires every place to carry the same Tate residue,
+the normalization is unique; this is the classical normalization of the local
 multiplicative measures \cite{Weil1952}, \cite{Tate}.
 \end{remark}
 
-\section{Approximation on moving windows, and a single-frequency computation}
+\section{Approximation lemmas and a single-frequency computation}
 \label{sec:approx}
 
-This section is analytic. It supplies three tools: a continuity bound for the
+This section is analytic and contains three independent results: a continuity bound for the
 colimit trace on a moving window; a smooth partition-of-unity approximation of
 a function on $[L/2,L]$ by a Dirichlet-polynomial profile with per-$n$ widths,
 together with the $C^1$ control of the approximant; and an exact computation of
 the contribution of a resonant quadruple of zeros to a Hermitian zero-sum
-against a single-frequency test. The three lemmas are independent of one
-another.
+against a single-frequency test.
 
 \begin{lemma}\label{lem:traceontinuity}
 Let $R\ge1$ and let $h\in C_c^\infty(\R)$ be supported in $[-R,R]$. Then
@@ -3461,17 +3514,15 @@ by $2\|h\|_\infty\sum_{k\le e^R}\Lambda(k)k^{-1/2}$. By Chebyshev's bound
 $\psi(X):=\sum_{k\le X}\Lambda(k)\le cX$ with an absolute $c$
 \cite[Ch.~2]{IK}, partial summation gives
 $\sum_{k\le X}\Lambda(k)k^{-1/2}\le C_0'X^{1/2}$ with $C_0'$ absolute, whence
-the first term of \eqref{eq:tracebound}. (The constant must be left
-unspecified: an inequality $\psi(X)\le X$ fails for infinitely many $X$ by
-Littlewood's theorem \cite{Titchmarsh}.) The archimedean part is
+the first term of \eqref{eq:tracebound}.  The archimedean part is
 \eqref{eq:archterm}: away from $t=0$ the density $K$ is integrable against a
 bounded compactly supported function; near $t=0$ one has $K(t)=1/(2t)+O(1)$ and
 the bracket $h(t)+h(-t)-2h(0)e^{-t/2}$ is $O(t\|h\|_{C^1})$, so that term is
 $O(\|h\|_{C^1})$.
 \end{proof}
 
-\begin{lemma}[Riemann-sum approximation on a moving window]
-\label{lem:riemannsum}
+\begin{lemma}[Discrete approximation on a moving window]
+\label{lem:discreteapprox}
 Fix once and for all a real $\rho\in C_c^\infty([-1,1])$ with
 \begin{equation}\label{eq:partition}
   \sum_{k\in\Z}\rho(x-k)\equiv1\qquad\text{for all }x\in\R,
@@ -3541,7 +3592,7 @@ support statement is immediate from $\mathrm{gap}_n\le1$.
 \end{proof}
 
 \begin{lemma}[$C^1$ control of the approximant]\label{lem:C1control}
-In the notation of Lemma~\ref{lem:riemannsum},
+In the notation of Lemma~\ref{lem:discreteapprox},
 \begin{equation}\label{eq:C1bound}
   \|(g_D)'\|_\infty\le C\|g\|_{C^1},\qquad\text{hence}\qquad
   \|(g-g_D)'\|_\infty\le C\|g\|_{C^1},
@@ -3580,8 +3631,8 @@ $1/\mathrm{gap}_n=n(1+O(1/n))=x+O(1)$, so
 Adding the two parts gives \eqref{eq:C1bound}.
 \end{proof}
 
-We close with an exact computation. It is the only statement in this paper
-about the zeros of $\zeta$, and it is literally about them.
+We close with an exact computation.  It is the only statement in this paper
+about the zeros of the zeta function.
 
 \begin{lemma}[The single-frequency test]\label{lem:singlefreq}
 For $g\in C_c^\infty(\R)$ write
@@ -3589,7 +3640,8 @@ For $g\in C_c^\infty(\R)$ write
   \widehat g(s):=\int_\R g(t)\,e^{(s-\frac12)t}\,dt,\qquad
   Q(g):=\sum_\rho\widehat g(\rho)\,\overline{\widehat g(1-\bar\rho)},
 \end{equation}
-the sum over the nontrivial zeros of $\zeta$ with multiplicity, which is
+the sum over the nontrivial zeros $\rho$ of the zeta function, with
+multiplicity, which is
 Hermitian after the involution $\rho\mapsto1-\bar\rho$ of the zero multiset.
 Let $\psi\in C_c^\infty([1/2,1])$ with $\psi\ge0$, $\psi\not\equiv0$, let
 $\gamma_0\in\R$, and put
@@ -3729,32 +3781,15 @@ full sum. Part (iv) says that a non-negative amplitude, or any real
 exponential tilt of one, cannot reverse the peaking; producing a test peaked at
 $1-\bar\rho_0$ requires a sign- or phase-changing amplitude, which destroys the
 sup-norm control that Lemmas \ref{lem:traceontinuity}--\ref{lem:C1control}
-would need. That is a limitation of the method.
+would need.
 \end{remark}
 
 \begin{thebibliography}{99}
 
 \bibitem{Companion}
 D.~A. Trejo Pizzo,
-\emph{A metrized correspondence algebra on the idele class carrier: graph
-bimodules, half-densities, and an analytic trace with explicit local terms},
-manuscript, 2026; available from the author.
-
-\bibitem{Connes1999}
-A.~Connes,
-\emph{Trace formula in noncommutative geometry and the zeros of the Riemann
-zeta function},
-Selecta Math. (N.S.) \textbf{5} (1999), 29--106.
-
-\bibitem{ConnesConsani}
-A.~Connes and C.~Consani,
-\emph{Schemes over $\mathbb F_1$ and zeta functions},
-Compos. Math. \textbf{146} (2010), 1383--1415.
-
-\bibitem{HewittRoss}
-E.~Hewitt and K.~A. Ross,
-\emph{Abstract Harmonic Analysis I},
-2nd ed., Grundlehren der mathematischen Wissenschaften 115, Springer, 1979.
+\emph{A correspondence algebra with a canonical trace on the idele class
+group, its Tate symbol and its numerical form}, preprint.
 
 \bibitem{Illusie}
 L.~Illusie,
@@ -3772,11 +3807,6 @@ M.~V. Lawson,
 \emph{Inverse Semigroups: The Theory of Partial Symmetries},
 World Scientific, Singapore, 1998.
 
-\bibitem{Serre}
-J.-P. Serre,
-\emph{Local Fields},
-Graduate Texts in Mathematics 67, Springer, New York, 1979.
-
 \bibitem{Stacks}
 The Stacks Project Authors,
 \emph{The Stacks Project}, \texttt{https://stacks.math.columbia.edu}, 2026;
@@ -3789,11 +3819,6 @@ thesis, Princeton University, 1950; reprinted in
 J.~W.~S. Cassels and A.~Fr\"ohlich (eds.), \emph{Algebraic Number Theory},
 Academic Press, London, 1967, 305--347.
 
-\bibitem{Titchmarsh}
-E.~C. Titchmarsh,
-\emph{The Theory of the Riemann Zeta-Function},
-2nd ed., revised by D.~R. Heath-Brown, Oxford University Press, Oxford, 1986.
-
 \bibitem{Weil1948}
 A.~Weil,
 \emph{Sur les courbes alg\'ebriques et les vari\'et\'es qui s'en d\'eduisent},
@@ -3804,11 +3829,14 @@ A.~Weil,
 \emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},
 Comm. S\'em. Math. Univ. Lund (1952), 252--265.
 
-\bibitem{WeilBasic}
-A.~Weil,
-\emph{Basic Number Theory},
-3rd ed., Grundlehren der mathematischen Wissenschaften 144, Springer, New York,
-1974.
+\bibitem{P45} D.~A.~Trejo Pizzo,
+\emph{An explicit formula and a comparison theorem for the canonical trace on a correspondence algebra of the idele class group}, preprint.
+
+\bibitem{P47} D.~A.~Trejo Pizzo,
+\emph{Weil positivity on a finite window: duality, certificates and a finite reduction}, preprint.
+
+\bibitem{P48} D.~A.~Trejo Pizzo,
+\emph{A map of the routes to Weil positivity: eight arithmetic inputs, eight carriers, and the specification of a closing argument}, preprint.
 
 \end{thebibliography}
 

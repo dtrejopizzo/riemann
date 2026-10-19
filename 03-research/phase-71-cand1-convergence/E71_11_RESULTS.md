@@ -1,6 +1,5 @@
 # E71.11 -- log-derivative background probe results
 
-**Date:** 2026-07-07.
 **Script:** `E71_11_logder_background_probe.py`.
 
 ## Output

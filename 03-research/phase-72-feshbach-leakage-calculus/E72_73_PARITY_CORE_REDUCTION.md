@@ -1,7 +1,6 @@
 # E72.73 -- Parity reduction of the HPAC actual-divisor core
 
-**Date:** 2026-07-08.
-**Role:** simplify the actual-divisor core of E72.72 using the parity symmetry of the finite CCM
+**Purpose:** simplify the actual-divisor core of E72.72 using the parity symmetry of the finite CCM
 matrices.
 
 ## 0. Parity

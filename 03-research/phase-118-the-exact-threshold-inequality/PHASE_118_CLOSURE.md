@@ -1,6 +1,6 @@
 # Phase 118 — Closure
 
-**Closed:** 2026-08-17. Continued in
+Continued in
 `phase-119-what-a-finite-compression-certifies/`.
 
 ## What this phase set out to do
@@ -102,7 +102,7 @@ open question left ambiguous.
   high-precision recomputation that would decide it did not finish. Moot for
   phase 118's purpose, but the data and the high-precision library
   (`scripts/W1_hp_*`) are on disk.
-- **W1, W2 and W5 were stopped by session limits without writing reports.**
+- **W1, W2 and W5 were stopped by resource limits without writing reports.**
   Their scripts and result files survive in `scripts/`, including
   `W5_zeros_cache.json` (425 zeta zeros) and `W2_tate_closedform.py`.
 
@@ -114,9 +114,9 @@ this phase.
 
 ---
 
-## `[phase 134]` scope note on this phase's numerics (2026-09-12)
+## `[phase 134]` scope note on this phase's numerics
 
-Recorded from Paper 46 §9.3(2) (`04-papers/46-row-d-the-sign/main.md`) and the
+Recorded from Paper 46 §9.3(2) (`04-papers/46-intersection-frame-defect/archive/main.md`) and the
 independent re-runs in `03-research/phase-134-row-d-opening/R134_002_AUDIT_ROUND1.md`
 §4.  It retracts nothing; it fixes how this phase's scan numbers may be read.
 

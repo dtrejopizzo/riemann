@@ -5,7 +5,7 @@
 Compactify the transverse scaling line to
 
 \[
- \mathbb P^1,qquad [X:Y]\longmapsto[tX:Y].
+ \mathbb P^1,\qquad [X:Y]\longmapsto[tX:Y].
 \]
 
 The two fixed points are \(0=[0:1]\) and

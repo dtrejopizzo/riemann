@@ -1,6 +1,6 @@
 # P123.068 — Continuous contraction of the augmented double bar
 
-Date: 2026-09-06. Status: PROVED for twisted modules, finite direct sums and bounded
+Status: PROVED for twisted modules, finite direct sums and bounded
 complexes of these objects. This upgrades the augmentation comparison of P123.067 from an
 algebraic quasi-isomorphism to a continuous chain-homotopy equivalence.
 

@@ -1,10 +1,10 @@
 # E78.151 - Joint audit: point 7 closed (conditional module), point 2 reduced
 
-**Run:** 2026-07-21.
+**Run:**
 **Scope:** IDENT (OUTER-LIMIT / point 7) and LP interface (point 2).
 **Class:** REDUCCION GENUINA (point 2) + CONDITIONAL CLOSURE (point 7).
-**Attribution:** results from the program author's joint Phase-76/77/78 audit
-(external contribution, 2026-07-21). Verified and integrated here.
+**Source:** results from a joint Phase-76/77/78 audit
+(external contribution). Verified and integrated here.
 
 ## 1. Point 7 (OUTER-LIMIT) -- CLOSED as a module conditional on point 6
 

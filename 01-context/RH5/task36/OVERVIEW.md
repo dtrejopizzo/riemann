@@ -22,7 +22,7 @@ LMFDB availability:
 </results> <challenges>
 - LMFDB does not host bulk pre-computed zeros for higher-degree L-functions; the public schema stores only 10 zeros per L-function entry. This directly contradicts the premise of the research objective.
 - No documented API parameter on `/L/download_zeros/...` extends the count. We verified this by trial; without an internal LMFDB DB dump (not publicly served), more zeros are unavailable.
-- The de novo alternative (PARI `lfunzeros`) is computationally bounded: empirically t ∝ T^3.0 here (Δ has degree 2 and conductor 1, so it is among the easiest cases; r6's T⁴ likely reflects different parameters or accuracy targets). Even the cubic scaling makes N=5000 infeasible within the agent's 3600 s runtime budget.
+- The de novo alternative (PARI `lfunzeros`) is computationally bounded: empirically t ∝ T^3.0 here (Δ has degree 2 and conductor 1, so it is among the easiest cases; r6's T⁴ likely reflects different parameters or accuracy targets). Even the cubic scaling makes N=5000 infeasible within the run's 3600 s runtime budget.
 - `cypari2` was not preinstalled; required `pip install cypari2` (cysignals+cypari2 wheels were available).
 - `lfunmf` initially required the two-argument `(mfinit, mfbasis-vector)` form, not a single-argument call.
 </challenges> <discussion>

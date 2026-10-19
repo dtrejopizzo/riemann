@@ -1,7 +1,6 @@
 # E72.22 -- Two-height rigidity for Schur-free current convergence
 
-**Date:** 2026-07-08.
-**Role:** prove a non-boundary criterion that rules out hidden Blaschke defects. Boundary modulus is
+**Purpose:** prove a non-boundary criterion that rules out hidden Blaschke defects. Boundary modulus is
 blind; two interior heights are not.
 
 ## 0. Motivation

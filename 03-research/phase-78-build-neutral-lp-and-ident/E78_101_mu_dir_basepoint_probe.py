@@ -61,7 +61,6 @@ def main():
     mp.mp.dps = 50
     results = {
         "statement": "E78.101 MU-DIR basepoint reduction audit",
-        "date": "2026-07-19",
         "zeta": audit_build(
             name="zeta",
             planted=None,

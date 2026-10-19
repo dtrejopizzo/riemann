@@ -1,6 +1,5 @@
 # E73.236 - Endpoint moment divisibility in coefficient form
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

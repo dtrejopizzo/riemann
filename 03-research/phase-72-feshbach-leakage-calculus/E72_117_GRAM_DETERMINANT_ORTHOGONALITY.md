@@ -1,7 +1,6 @@
 # E72.117 -- Gram determinant form of bad-subspace orthogonality
 
-**Date:** 2026-07-09.
-**Role:** convert `BORTH` into a finite determinant identity.
+**Purpose:** convert `BORTH` into a finite determinant identity.
 
 ## 0. Setup
 

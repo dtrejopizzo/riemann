@@ -1,6 +1,6 @@
 # P123.067 — Double-bar cyclic comparison for twisted correspondences
 
-Date: 2026-09-06. Status: PROVED as a continuous double-complex symmetry
+Status: PROVED as a continuous double-complex symmetry
 and an algebraic quasi-isomorphism zigzag for the indicated completed
 chain spaces. No strict topological quasi-isomorphism claim is inferred.
 

@@ -4,7 +4,7 @@ The legacy Phase-61 cache produced growing zeta errors and enormous
 Davenport-Heilbronn errors for the bilateral safe-axis observable.  These
 numbers are not admissible evidence for `SA-SAFE` because an entry-level
 comparison found discrepancies of approximately `5e-18` between the cached
-matrices and the Phase-76 multiprecision builder.
+matrices and the Phase-76 multiprecision construction.
 
 That discrepancy is tiny on the `O(1e-2)` entry scale but enormous relative
 to the lowest CCM eigenvalues and gaps.  The boundary Schur solve amplifies

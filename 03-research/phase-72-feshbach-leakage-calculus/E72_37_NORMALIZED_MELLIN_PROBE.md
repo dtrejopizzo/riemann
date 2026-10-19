@@ -1,7 +1,6 @@
 # E72.37 -- Normalized Mellin probe for scalar WRL divisibility
 
-**Date:** 2026-07-08.
-**Role:** test the corrected object suggested by E72.36: the Abel-normalized Mellin transform rather
+**Purpose:** test the corrected object suggested by E72.36: the Abel-normalized Mellin transform rather
 than the raw `sum n^z` transform.
 
 ## 0. Normalized test

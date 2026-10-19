@@ -1,6 +1,5 @@
 # E73.297 - Balanced curvature operator
 
-Date: 2026-07-16.
 
 ## 1. Purpose
 

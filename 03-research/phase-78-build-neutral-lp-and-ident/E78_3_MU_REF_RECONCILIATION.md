@@ -1,6 +1,6 @@
 # E78.3 - Reconciliation of the E78.1/E78.2 flag against Outcome A
 
-**Run:** 2026-07-18.
+**Run:**
 **Question:** does the plant's stable order-one intra-section ground gap
 (E78.1 section 4) contradict Outcome A (E77.1b: operational LP, hence
 `BTG-DIV-L`/`S_N(mu_L)->infinity`, holds for both builds)?

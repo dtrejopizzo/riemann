@@ -1,6 +1,5 @@
 # E74.27 - Final research ledger after E74.17
 
-Date: 2026-07-16.
 
 ## Objective audit
 

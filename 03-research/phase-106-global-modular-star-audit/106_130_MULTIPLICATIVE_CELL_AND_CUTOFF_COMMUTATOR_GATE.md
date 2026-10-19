@@ -223,7 +223,7 @@ Taking the expectation in a radical eigenvector kills the commutator and
 the left side.  Hence (15) forces
 
 \[
- C\widetilde r_j=0,qquad J^{1/2}\widetilde r_j=0,
+ C\widetilde r_j=0,\qquad J^{1/2}\widetilde r_j=0,
  \qquad R^{1/2}\widetilde r_j=0.
 \tag{16}
 \]

@@ -1,7 +1,6 @@
 # E72.133 -- Complement coercivity split
 
-**Date:** 2026-07-09.
-**Role:** test whether `COER` follows from archimedean complement dominance.
+**Purpose:** test whether `COER` follows from archimedean complement dominance.
 
 ## 0. Coercivity needed
 

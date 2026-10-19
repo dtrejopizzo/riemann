@@ -1,6 +1,5 @@
 # E73.226 - Finite local TRANS-CELL certificate ledger
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

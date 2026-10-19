@@ -1,7 +1,6 @@
 # E67.4 — Interference no-go for the strict free-product CQG
 
-**Date:** 2026-07-06.
-**Role:** close the first post-group-like candidate. The prime-colored free-product CQG is useful as a
+**Purpose:** close the first post-group-like candidate. The prime-colored free-product CQG is useful as a
 baseline, but it cannot be the final `QSC-exist + QSC-contract` mechanism if Haar orthogonality erases
 the arithmetic interference of `P_lambda`.
 

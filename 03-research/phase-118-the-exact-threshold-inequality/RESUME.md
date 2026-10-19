@@ -18,7 +18,7 @@ steps `(2,3),(3,4),(4,5),(5,7),(7,8)` at
 `refine = 4,8,12,16,24,32,48,64,96,128`, with `lam_min_norm`, `minA0`, `minSE`,
 `rank_SE`, range residuals and timings.
 
-**(c-NEW, 2026-08-17, supersedes (c) below) — the deep run to refine 512 changed
+**(c-NEW, supersedes (c) below) — the deep run to refine 512 changed
 the picture.** `W0_deep_refine.log` / `.json` push three steps to `refine=512`.
 The three behave DIFFERENTLY, and the difference tracks the conditioning of `A_0`:
 
@@ -84,5 +84,5 @@ useful result in every workstream.
 `W4_near_null_parity_scan.py`, `W4_capacity_precision_test.py`,
 `W0_weil_identity.py` (coordinator's, incomplete and unverified).
 
-None of these has been reviewed. Treat them as drafts by a previous author:
+None of these has been reviewed. Treat them as earlier drafts:
 read before reusing, and re-verify anything you depend on.

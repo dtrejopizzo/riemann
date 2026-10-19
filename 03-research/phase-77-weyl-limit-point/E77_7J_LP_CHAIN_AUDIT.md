@@ -1,6 +1,6 @@
 # E77.7j - LP chain audit after Ritz and endpoint autopsies
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Reason for the audit
 

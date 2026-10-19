@@ -106,7 +106,7 @@ On four consecutive depths let
 
 \[
  K_{ij}=2^{-|i-j|},\qquad
- h_-=(1,1/2,1/4,1/8)^t,qquad
+ h_-=(1,1/2,1/4,1/8)^t,\qquad
  h_+=(1/8,1/4,1/2,1)^t.                                \tag{3.1}
 \]
 
@@ -159,7 +159,7 @@ with zero coefficients outside the range.  Its characteristic roots are
 \(\rho\) and \(\rho^{-1}\), so
 
 \[
- \sum_{j=0}^5(Zy)_j\rho^j=0,qquad
+ \sum_{j=0}^5(Zy)_j\rho^j=0,\qquad
  \sum_{j=0}^5(Zy)_j\rho^{-j}=0.                        \tag{4.2}
 \]
 
@@ -201,7 +201,7 @@ Consider any heat-regularized sum of two distinct positive oscillator
 modes.  On an equally spaced chain its stationary kernel has
 
 \[
- f_k=w_1\rho_1^k+w_2\rho_2^k,qquad
+ f_k=w_1\rho_1^k+w_2\rho_2^k,\qquad
  0<\rho_1\ne\rho_2<1,quad w_1,w_2>0.                  \tag{5.1}
 \]
 
@@ -259,7 +259,7 @@ operations have the explicit counterminors (2.3), (3.5) and (5.3).
 At the operator level the completed assertion remains
 
 \[
- \|\partial_XF\|^2\geq(2A_X+m_0)\|F\|^2,qquad
+ \|\partial_XF\|^2\geq(2A_X+m_0)\|F\|^2,\qquad
  M_-(F)=M_+(F)=0.                                      \tag{6.3}
 \]
 

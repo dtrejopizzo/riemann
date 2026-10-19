@@ -77,14 +77,14 @@ def generate() -> Path:
     svg = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
         '<rect width="1800" height="1200" fill="#f7f8fb"/>',
-        tx(70, 58, "Qué significa A1: de los primos a la línea crítica", 34, "#111827", "700"),
-        tx(70, 94, "La misma señal se puede leer como saltos de primos, ondas de ceros o coeficientes de Li.", 20, "#4b5563"),
+        tx(70, 58, "What A1 means: from the primes to the critical line", 34, "#111827", "700"),
+        tx(70, 94, "The same signal can be read as prime jumps, zero waves or Li coefficients.", 20, "#4b5563"),
         '<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#6366f1"/></marker></defs>',
     ]
 
     # Panel 1: prime staircase.
     p1 = (60, 135, 800, 405)
-    panel(svg, *p1, "1 · Los primos construyen una escalera", "ψ(x) salta en cada potencia prima; x es la referencia lisa.")
+    panel(svg, *p1, "1 · The primes build a staircase", "ψ(x) jumps at every prime power; x is the smooth reference.")
     x0, y0, w, h = p1[0] + 70, p1[1] + 95, p1[2] - 105, p1[3] - 150
     mx = lambda value: x0 + (value - 1.0) / 99.0 * w
     my = lambda value: y0 + h - value / 105.0 * h
@@ -112,12 +112,12 @@ def generate() -> Path:
     svg += [
         tx(x0 + w - 6, my(100) + 19, "x", 16, "#b91c1c", "700", "end"),
         tx(x0 + w - 6, my(float(psi[100])) - 9, "ψ(x)", 16, "#1d4ed8", "700", "end"),
-        tx(p1[0] + 25, p1[1] + p1[3] - 20, "La diferencia vertical E(x)=ψ(x)-x es la señal que A1 debe cancelar.", 17, "#374151", "600"),
+        tx(p1[0] + 25, p1[1] + p1[3] - 20, "The vertical difference E(x)=ψ(x)-x is the signal that A1 must cancel.", 17, "#374151", "600"),
     ]
 
     # Panel 2: log-scale filter and signed product.
     p2 = (900, 135, 840, 405)
-    panel(svg, *p2, "2 · A1 pasa esa señal por un filtro oscilante", "Ejemplo n=20 para que los lóbulos sean visibles; la operación es la misma para n≥150.")
+    panel(svg, *p2, "2 · A1 passes that signal through an oscillating filter", "Example n=20 so that the lobes are visible; the operation is the same for n≥150.")
     u = np.linspace(math.log(2.0), math.log(5000.0), 1800)
     x = np.exp(u)
     index = np.floor(x).astype(int)
@@ -139,9 +139,9 @@ def generate() -> Path:
         polyline(error_points, "#2563eb", 2.0),
         polyline(filter_points, "#7c3aed", 2.0),
         polyline(product_points, "#111827", 2.0),
-        tx(x0 + 4, lanes[0] - 38, "señal: ψ(x)/x − 1", 14, "#1d4ed8", "600"),
-        tx(x0 + 4, lanes[1] - 38, "filtro: Laguerre", 14, "#6d28d9", "600"),
-        tx(x0 + 4, lanes[2] - 40, "producto: áreas + y −", 14, "#111827", "600"),
+        tx(x0 + 4, lanes[0] - 38, "signal: ψ(x)/x − 1", 14, "#1d4ed8", "600"),
+        tx(x0 + 4, lanes[1] - 38, "filter: Laguerre", 14, "#6d28d9", "600"),
+        tx(x0 + 4, lanes[2] - 40, "product: areas + and −", 14, "#111827", "600"),
     ]
     # Signed area bars in product lane.
     baseline = lanes[2]
@@ -151,8 +151,8 @@ def generate() -> Path:
         color = "#22c55e" if c >= 0 else "#ef4444"
         svg.append(f'<rect x="{left:.2f}" y="{min(top, baseline):.2f}" width="{max(0.5,right-left):.2f}" height="{abs(top-baseline):.2f}" fill="{color}" opacity="0.32"/>')
     svg += [
-        tx(p2[0] + 25, p2[1] + p2[3] - 38, "J_n(T) = área verde − área roja.  A1 exige: J_n(T_n) ≤ q_n.", 17, "#374151", "700"),
-        tx(p2[0] + 25, p2[1] + p2[3] - 14, "No se acotan tamaños separados: hay que conservar la cancelación de los lóbulos.", 15, "#4b5563"),
+        tx(p2[0] + 25, p2[1] + p2[3] - 38, "J_n(T) = green area − red area.  A1 requires: J_n(T_n) ≤ q_n.", 17, "#374151", "700"),
+        tx(p2[0] + 25, p2[1] + p2[3] - 14, "Separate sizes are not bounded: the cancellation of the lobes must be preserved.", 15, "#4b5563"),
     ]
 
     # Arrow between prime and filter panels.
@@ -160,7 +160,7 @@ def generate() -> Path:
 
     # Panel 3: zeros.
     p3 = (60, 585, 800, 405)
-    panel(svg, *p3, "3 · Los ceros son las frecuencias escondidas", "La fórmula explícita descompone ψ(x)−x en ondas, una por cada cero ρ=β+iγ.")
+    panel(svg, *p3, "3 · The zeros are the hidden frequencies", "The explicit formula decomposes ψ(x)−x into waves, one for each zero ρ=β+iγ.")
     x0, y0, w, h = p3[0] + 105, p3[1] + 95, 340, p3[3] - 205
     ms = lambda beta: x0 + (beta - 0.30) / 0.40 * w
     mg = lambda gamma: y0 + h - (gamma - 12.0) / 24.0 * h
@@ -168,7 +168,7 @@ def generate() -> Path:
         f'<rect x="{ms(0.5):.2f}" y="{y0}" width="2" height="{h}" fill="#16a34a"/>',
         f'<line x1="{x0}" y1="{y0+h}" x2="{x0+w}" y2="{y0+h}" stroke="#64748b"/>',
         f'<line x1="{x0}" y1="{y0}" x2="{x0}" y2="{y0+h}" stroke="#64748b"/>',
-        tx(ms(0.5) + 10, y0 + 22, "línea crítica β=1/2", 15, "#15803d", "700"),
+        tx(ms(0.5) + 10, y0 + 22, "critical line β=1/2", 15, "#15803d", "700"),
     ]
     known = [14.1347, 21.0220, 25.0109, 30.4249, 32.9351]
     for gamma in known:
@@ -177,20 +177,20 @@ def generate() -> Path:
         svg.append(f'<circle cx="{ms(beta):.2f}" cy="{mg(24):.2f}" r="8" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>')
     svg += [
         f'<line x1="{ms(0.38):.2f}" y1="{mg(24):.2f}" x2="{ms(0.62):.2f}" y2="{mg(24):.2f}" stroke="#dc2626" stroke-dasharray="6 5"/>',
-        tx(ms(0.62) + 14, mg(24) + 5, "cero hipotético", 15, "#b91c1c", "700"),
+        tx(ms(0.62) + 14, mg(24) + 5, "hypothetical zero", 15, "#b91c1c", "700"),
         tx(x0 + w / 2, y0 + h + 34, "β = Re ρ", 15, "#475569", anchor="middle"),
-        tx(p3[0] + 485, p3[1] + 130, "Cada cero aporta aproximadamente", 16, "#374151", "600"),
-        tx(p3[0] + 485, p3[1] + 165, "e^(βu) · cos(γu + fase)", 21, "#111827", "700"),
-        tx(p3[0] + 485, p3[1] + 210, "γ = frecuencia", 17, "#1d4ed8", "600"),
-        tx(p3[0] + 485, p3[1] + 242, "β = envolvente", 17, "#b91c1c", "600"),
-        tx(p3[0] + 485, p3[1] + 292, "Si β>1/2, esa onda gana", 17, "#b91c1c", "700"),
-        tx(p3[0] + 485, p3[1] + 318, "un factor e^((β−1/2)u)", 17, "#b91c1c", "700"),
-        tx(p3[0] + 25, p3[1] + p3[3] - 18, "Los puntos azules conocidos están en 1/2; la prueba debe excluir todo punto rojo, a cualquier altura.", 16, "#374151", "600"),
+        tx(p3[0] + 485, p3[1] + 130, "Each zero contributes approximately", 16, "#374151", "600"),
+        tx(p3[0] + 485, p3[1] + 165, "e^(βu) · cos(γu + phase)", 21, "#111827", "700"),
+        tx(p3[0] + 485, p3[1] + 210, "γ = frequency", 17, "#1d4ed8", "600"),
+        tx(p3[0] + 485, p3[1] + 242, "β = envelope", 17, "#b91c1c", "600"),
+        tx(p3[0] + 485, p3[1] + 292, "If β>1/2, that wave gains", 17, "#b91c1c", "700"),
+        tx(p3[0] + 485, p3[1] + 318, "a factor e^((β−1/2)u)", 17, "#b91c1c", "700"),
+        tx(p3[0] + 25, p3[1] + p3[3] - 18, "The known blue points lie on 1/2; the proof must exclude every red point, at any height.", 16, "#374151", "600"),
     ]
 
     # Panel 4: Li modes.
     p4 = (900, 585, 840, 405)
-    panel(svg, *p4, "4 · El filtro convierte un cero exterior en excursiones", "Modo de un cuarteto: on-line queda acotado; off-line crece exponencialmente.")
+    panel(svg, *p4, "4 · The filter turns an exterior zero into excursions", "Mode of a quartet: on-line stays bounded; off-line grows exponentially.")
     ns = np.arange(1, 121, dtype=float)
     theta, radial = 0.70, 0.035
     online = 4.0 - 4.0 * np.cos(ns * theta)
@@ -204,7 +204,7 @@ def generate() -> Path:
         f'<line x1="{x0}" y1="{y0}" x2="{x0}" y2="{y0+h}" stroke="#64748b"/>',
         polyline([(mx4(float(a)), my4(float(b))) for a, b in zip(ns, online)], "#2563eb", 2.5),
         polyline([(mx4(float(a)), my4(float(b))) for a, b in zip(ns, offline)], "#dc2626", 2.2),
-        tx(x0 + 12, my4(8) - 8, "on-line: siempre entre 0 y 8", 15, "#1d4ed8", "700"),
+        tx(x0 + 12, my4(8) - 8, "on-line: always between 0 and 8", 15, "#1d4ed8", "700"),
         tx(x0 + w - 8, y0 + 22, "off-line: ±exp(c n)", 15, "#b91c1c", "700", "end"),
     ]
     for n_tick in (1, 30, 60, 90, 120):
@@ -218,8 +218,8 @@ def generate() -> Path:
             tx(x0 - 10, my4(val) + 5, val, 13, "#64748b", anchor="end"),
         ]
     svg += [
-        tx(x0 + w / 2, y0 + h + 50, "grado n", 15, "#475569", anchor="middle"),
-        tx(p4[0] + 25, p4[1] + p4[3] - 17, "Un solo cero rojo terminaría dominando A_n ~ (n/2) log n y forzaría λ_n<0 repetidamente.", 16, "#374151", "600"),
+        tx(x0 + w / 2, y0 + h + 50, "degree n", 15, "#475569", anchor="middle"),
+        tx(p4[0] + 25, p4[1] + p4[3] - 17, "A single red zero would end up dominating A_n ~ (n/2) log n and would force λ_n<0 repeatedly.", 16, "#374151", "600"),
     ]
     svg.append('<line x1="855" y1="785" x2="892" y2="785" stroke="#6366f1" stroke-width="4" marker-end="url(#arrow)"/>')
 
@@ -227,9 +227,9 @@ def generate() -> Path:
     bx, by, bw, bh = 60, 1030, 1680, 125
     svg += [
         f'<rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="18" fill="#eef2ff" stroke="#c7d2fe"/>',
-        tx(bx + 28, by + 38, "Lo que realmente debemos demostrar", 23, "#312e81", "700"),
-        tx(bx + 28, by + 76, "Para los pesos reales Λ(m), todas las áreas firmadas del panel 2 deben satisfacer J_n(T_n) ≤ q_n.", 19, "#172033", "600"),
-        tx(bx + 28, by + 105, "Equivalente: demostrar que no existe ningún cero rojo (β>1/2), ni siquiera a una altura jamás calculada.", 19, "#b91c1c", "700"),
+        tx(bx + 28, by + 38, "What we really have to prove", 23, "#312e81", "700"),
+        tx(bx + 28, by + 76, "For the actual weights Λ(m), all signed areas of panel 2 must satisfy J_n(T_n) ≤ q_n.", 19, "#172033", "600"),
+        tx(bx + 28, by + 105, "Equivalently: prove that there is no red zero (β>1/2), not even at a height never computed.", 19, "#b91c1c", "700"),
     ]
     svg.append("</svg>")
 

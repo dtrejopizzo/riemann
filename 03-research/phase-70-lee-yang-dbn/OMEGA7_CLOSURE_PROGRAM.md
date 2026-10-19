@@ -1,7 +1,6 @@
 # Omega_7 closure program after Phases 67--70
 
-**Date:** 2026-07-07.
-**Role:** write the cleanest possible proof architecture after the quantum, symbol, Nevanlinna, and
+**Purpose:** write the cleanest possible proof architecture after the quantum, symbol, Nevanlinna, and
 de Bruijn-Newman routes have all been audited.
 
 This is not a completed proof. It is the narrowest complete form of what a proof of `Omega_7` must now

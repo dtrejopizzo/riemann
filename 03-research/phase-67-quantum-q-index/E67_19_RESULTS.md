@@ -1,6 +1,5 @@
 # E67.19 -- candor check: the Toeplitz structure is only approximate
 
-**Date:** 2026-07-06.
 **Script:** [E67_19_toeplitz_exactness.py](E67_19_toeplitz_exactness.py).
 
 ## Finding (A): not asymptotically Toeplitz

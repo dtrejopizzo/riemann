@@ -1,7 +1,6 @@
 # E72.152 -- Refined semialgebraic route
 
-**Date:** 2026-07-09.
-**Role:** replace the black-box `MSB` product by structural finite estimates.
+**Purpose:** replace the black-box `MSB` product by structural finite estimates.
 
 ## 0. From MSB to scale and alignment
 

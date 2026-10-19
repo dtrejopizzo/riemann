@@ -1,0 +1,1008 @@
+                                               LARGE ZETA SUMS AND ZEROS OF THE RIEMANN ZETA
+                                                                 FUNCTION
+
+                                                      ZIKANG DONG, RUIHUA WANG, WEIJIA WANG, AND HAO ZHANG
+
+                                                  Abstract. For real t and x ≥ 1, set
+arXiv:2608.31060v1 [math.NT] 31 Aug 2026
+
+
+
+
+                                                                                                  X
+                                                                                      S(x, t) =         nit .
+                                                                                                  n≤x
+
+                                                  We prove an unconditional inverse theorem relating large values of S(x, t), with |t| large,
+                                                                       √ zeta function near height t. More precisely, if T ≤ |t| ≤ 2T ,
+                                                  to zeros of the Riemann
+                                                       √
+                                                  exp( log T ) ≤ x ≤ T , and |S(x, t)| = x/N with N ≤ (log x)1/100 , then for every
+                                                  cN 6 ≤ L ≤ (log x)/2 a disk centered at 1 + iϕ, where |ϕ − t| ≪ N , contains at
+                                                  least L/360 zeros of ζ(s). As a consequence, a quantitative restriction on zeros in a
+                                                  short family of arbitrarily thin fixed windows to the left of the line Re s = 1 yields
+                                                  S(x, t) ≪ x/(log x)1/100 in polynomial ranges of x. The proof adapts the zero-forcing
+                                                  mechanism of Granville and Soundararajan for large character sums. In the zeta
+                                                  setting the spectral height is shifted by t, and an additional residue from the pole of
+                                                  ζ(s) appears in the Gaussian transform; in the range considered here that residue is
+                                                  exponentially small.
+
+
+
+                                                                                   1. Introduction
+                                              For real t and x ≥ 1, consider the exponential sum
+                                                                                         X
+                                                                              S(x, t) :=   nit .                                                (1.1)
+                                                                                                  n≤x
+
+                                           The Dirichlet series associated with the completely multiplicative function n 7→ nit is
+                                                                        ∞
+                                                                      X    nit
+                                                                            s
+                                                                               = ζ(s − it),  Re s > 1.
+                                                                       n=1
+                                                                           n
+                                           Thus the natural spectral height associated with a large value of S(x, t) is not height
+                                           zero, but height approximately   t. Our aim is to make this relation quantitative.
+                                                                        −it
+                                                                 P
+                                               Sums of the form n≤x n are already closely tied to the classical Lindelöf hypoth-
+                                           esis. Gonek, Graham and Lee [7] recall the equivalent formulation that, for every fixed
+                                           B, δ > 0,
+                                                             X          x1−it
+                                                                 n−it =        + Oδ,B (x1/2 |t|δ ) (1 ≤ x ≤ |t|B ).
+                                                             n≤x
+                                                                        1 − it
+                                           In earlier work of part of the authors [1], we studied asymptotic approximations and
+                                           large-value lower bounds for zeta sums in several ranges of x. More recently, Yang [11,
+                                             2020 Mathematics Subject Classification. Primary 11M06; Secondary 11L07, 11M26.
+                                             Key words and phrases. Riemann zeta function, exponential sums, zeros of zeta, pretentious
+                                           multiplicative functions.
+                                                                                              1
+2             ZIKANG DONG, RUIHUA WANG, WEIJIA WANG, AND HAO ZHANG
+
+Theorem 5] proved, under the Riemann hypothesis, a smooth-number approximation
+and a corresponding upper bound for these partial sums in a broad range of x and t.
+The typical and averaged sizes of zeta sums have also been studied by Harper [8], while
+Gao [3] obtained conditional upper bounds for their moments. These results concern
+direct upper bounds, moments, or large-value constructions. The question considered
+here is different: we ask what the existence of one abnormally large sum forces about
+the zero set of ζ(s). Thus the main contribution is the pointwise inverse implication,
+rather than the conditional upper bound by itself. Related analogues for sums of Fourier
+coefficients of cusp forms were studied by Lamzouri [10], and more recently by by
+Fréchette, Gerbelli-Gauthier, Hamieh and Tanabe [2].
+    The argument is modeled on the work of Granville and Soundararajan on large
+character sums and zeros of Dirichlet L-functions [6]. Their method combines Halász’s
+theorem and Lipschitz estimates for mean values of multiplicative functions with a
+Gaussian transform and a zero-repulsion estimate obtained from the Hadamard product.
+For the present function nit there are two changes that must be kept explicit. First, the
+associated Dirichlet series is ζ(s − it), so all zero neighborhoods are translated to height
+approximately t. Second, ζ has a pole at s = 1, and the corresponding residue appears
+when the contour in the Gaussian transform is shifted.
+    Our main result is the following zero-forcing theorem.
+Theorem 1.1. There are absolute constants c > 0 and T0 ≥ 3 with the following
+property. Let T ≥ T0 and suppose that
+                                          p             √
+                     T ≤ |t| ≤ 2T,    exp( log T ) ≤ x ≤ T .
+Assume that
+                                   x
+                        |S(x, t)| =  ,       1 ≤ N ≤ (log x)1/100 .
+                                  N
+Then there is a real number ϕ satisfying
+                                        |ϕ − t| ≤ cN
+such that, for every parameter L in the range
+                                                   1
+                                      cN 6 ≤ L ≤     log x,
+                                                   2
+the disk                                                    
+                                                     log T
+                            s : |s − (1 + iϕ)| < L                                     (1.2)
+                                                    (log x)2
+contains at least L/360 non-trivial zeros of ζ(s), counted with multiplicity.
+    The center in (1.2) is necessarily close to 1 + it. Here t0 plays the role of the small
+twisting parameter ϕ in [6, Theorem 1.3]. Because the associated Dirichlet series is
+ζ(s − it), the corresponding zero cluster is shifted to height t − t0 , which is necessarily
+close to t.
+    The most informative part of Theorem 1.1 is the regime in which the disk radius
+is genuinely smaller than the horizontal distance from the line Re s = 1 to the critical
+line. Writing y0 = log x and Q = log T , this means
+                                           Q     1
+                                         L 2 < .
+                                           y0    2
+                                    LARGE ZETA SUMS                                     3
+
+This subrange is non-empty whenever y02 ≫ N 6 Q. It is precisely the regime used in
+Theorem 1.2: the choice of L there makes the radius at most δ. We therefore view the
+zero-forcing statement primarily as a local near-1 result, even though the theorem is
+valid for the full stated range of L.
+   As a consequence we obtain a flexible local zero criterion. The parameter δ below
+measures the width of the zero window and may be any fixed positive number at most
+1/4. Thus the hypothesis may be imposed in a strip arbitrarily close to the line Re s = 1.
+Theorem 1.2. There is an absolute constant C > 0 with the following property. Fix
+A > 0 and 0 < δ ≤ 1/4. There exists T0 (A, δ) ≥ 3 such that, whenever T ≥ T0 (A, δ),
+                           T ≤ |t| ≤ 2T,        ε > (log T )−1/3 ,
+the following holds. Suppose that, for every real u with
+                                 |u − t| ≤ C(log T )1/100 ,
+the region
+                          {s : Re s ≥ 1 − δ,     | Im s − u| ≤ δ}                    (1.3)
+contains at most
+                                        δε2 log T
+                                          400
+non-trivial zeros of ζ(s), counted with multiplicity. Then, uniformly for
+                                      T ε ≤ x ≤ T A,
+we have
+                                                    x
+                                |S(x, t)| ≪A                .                        (1.4)
+                                               (log x)1/100
+    Taking δ = 1/4 recovers the concrete window Re s ≥ 3/4, | Im s − u| ≤ 1/4 and the
+zero threshold ε2 log T /1600. Under the Riemann hypothesis the hypothesis of Theorem
+1.2 is automatic for every fixed δ < 1/2. Stronger estimates for these partial sums are
+already available under RH through smooth-number methods; see [11, Theorem 5]. The
+relevance of Theorem 1.2 is therefore the locality of its zero hypothesis.
+Remark 1.3. Combining Theorem 1.2 with a zero-density theorem gives exceptional-set
+statements. For example, the zero-density estimate of Guth and Maynard [4],
+                             N (σ, T ) ≪ T 15(1−σ)/(3+5σ)+o(1) ,
+shows, for any fixed 0 < δ ≤ 1/4, that the local hypothesis fails only on a set of
+t ∈ [T, 2T ] of measure
+                                     T 15δ/(8−5δ)+o(1) .
+We do not emphasize this as a main result: for the comparatively weak threshold in (1.4),
+almost-all bounds can also be approached directly by standard high-moment methods
+for Dirichlet polynomials. The distinctive content of Theorem 1.1 is the pointwise forcing
+of a local zero cluster from one large value of S(x, t).
+4            ZIKANG DONG, RUIHUA WANG, WEIJIA WANG, AND HAO ZHANG
+
+   It is important that some upper control on x relative to t is present in Theorem 1.2.
+Indeed, for fixed t, Euler summation gives
+                                     x1+it − 1
+                         S(x, t) =             + O(1 + |t| log x),                   (1.5)
+                                      1 + it
+so an estimate of the form S(x, t) ≪ x/(log x)1/100 cannot hold for arbitrarily large x
+with t fixed.
+   The paper is organized as follows. In Section 2 we recall the required mean-value
+estimates and specialize them to nit . Section 3 develops the zeta-function estimates,
+including the Gaussian identity with its pole term. In Section 4 we prove Theorem 1.1.
+Finally, Section 5 deduces Theorem 1.2.
+
+                 2. Mean values of multiplicative functions
+  We use the pretentious framework in the form developed in [5, 6]. If f and g are
+multiplicative functions with |f (n)|, |g(n)| ≤ 1, define
+                                            X 1 − Re(f (p)g(p))
+                          D(f, g; x)2 :=                          .
+                                            p≤x
+                                                       p
+
+Let
+                                      ∞
+                                      X f (n)
+                            F (s) =               ,   Re s > 1,
+                                      n=1
+                                             ns
+and, for fixed x, choose ϕ = ϕf (x) with |ϕ| ≤ log x so that
+                                                       
+                                               1
+                              u 7→ F 1 +           + iu
+                                             log x
+is maximal at u = ϕ. Put
+                  M = Mf (x) := D(f, niϕ ; x)2 ,      fϕ (n) := f (n)n−iϕ .
+We shall use the following standard estimates. They are consequences of Halász’s theorem,
+the mean-value comparison formula, and the Lipschitz estimate for multiplicative
+functions; see [6, Section 2] and [5].
+Lemma 2.1. Let f be multiplicative with |f (n)| ≤ 1. With the notation above, as
+x → ∞,
+                1 X            (M + 1)e−M             √
+                     f (n) ≪                 + (log x) 3−2+o(1) .          (2.1)
+               x n≤x              1 + |ϕ|
+Moreover,
+               1X              xiϕ 1 X
+                     f (n) =              fϕ (n)
+               x n≤x         1 + iϕ x n≤x
+                                                                        !!
+                                log(e + |ϕ|)     X |1 − fϕ (p)|
+                             +O              exp                              ,      (2.2)
+                                   log x         p≤x
+                                                        p
+                                        LARGE ZETA SUMS                                  5
+                     √
+and, uniformly for       x ≤ z ≤ x2 ,
+                                                                 1−2/π+o(1)
+             1X             1X               1 + | log x − log z|
+                   fϕ (n) −       fϕ (n) ≪                                    .       (2.3)
+             x n≤x          z n≤z                    log x
+Here the o(1) terms are uniform for the indicated range of z and for 1-bounded multi-
+plicative functions.
+Proof. The Halász estimate (2.1) and the Lipschitz estimate (2.3) are exactly the forms
+recorded in [6, Section 2, (2.3) and (2.5)], which in turn follow from [5, Theorems 2b
+and 4].
+   For completeness, the comparison formula deserves one clarification. Apply [5,
+Lemma 7.1] not to f itself, but to g = fϕ = f (n)n−iϕ with the twisting parameter
+α = ϕ. Since g(n)niϕ = f (n), that lemma gives
+                                                                             !!
+       X             xiϕ X                x log(e + |ϕ|)      X |1 − fϕ (p)|
+           f (n) =             fϕ (n) + O                exp                     ,
+       n≤x
+                   1 +  iϕ n≤x
+                                               log x          p≤x
+                                                                      p
+which is (2.2) after division by x. Notice that |ϕ| ≤ log x, so log(e + |ϕ|) ≪ log2 x
+whenever the latter coarser form is convenient.                                    □
+   We now specialize to
+                              f (n) = nit ,          F (s) = ζ(s − it).
+For fixed x and t, let t0 = t0 (x, t) be a point with |t0 | ≤ log x at which
+                                                              
+                                               1
+                            u 7−→ ζ 1 +            + i(u − t)                         (2.4)
+                                             log x
+is maximal. Put
+                                        X 1 − Re(pi(t−t0 ) )
+                                 M :=                        .                        (2.5)
+                                        p≤x
+                                                   p
+
+Lemma 2.2. There is an absolute constant x0 ≥ 3 such that the following holds for
+x ≥ x0 . Suppose that
+                                    x
+                       |S(x, t)| = ,           1 ≤ N ≤ (log x)1/100 .
+                                    N
+Then
+                                         |t0 | ≪ N                          (2.6)
+and
+                                   1
+                            M≤        log2 x + log3 x + O(1).               (2.7)
+                                  100
+Writing y0 = log x and τ = t − t0 , we have, for all real y,
+                                                                  1/3
+                      S(ey , τ ) S(ey0 , τ )
+                                                  
+                                                    1 + |y − y0 |
+                                −               ≪                      ,    (2.8)
+                         ey          ey0                 y0
+where S(ey , τ ) = 0 when ey < 1. Finally,
+                                                                             
+                                              −it0                   x
+                     S(x, τ ) = (1 + it0 )x          S(x, t) + O                  .   (2.9)
+                                                                 (log x)3/4
+6              ZIKANG DONG, RUIHUA WANG, WEIJIA WANG, AND HAO ZHANG
+
+Proof. Applying (2.1) to f (n) = nit and using the hypothesis gives
+                            1   (M + 1)e−M           √
+                              ≪             + (log x) 3−2+o(1) .
+                            N     1 + |t0 |
+         √
+Since 2 − 3 > 1/100 and the o(1) in (2.1) is uniform, there is an absolute x0 such that
+for x ≥ x0 the second term is o(1/N ) uniformly in the present range of N . Therefore
+                                       (M + 1)e−M   1
+                                                   ≫ .                                (2.10)
+                                         1 + |t0 |  N
+As (M + 1)e−M ≤ 1, this proves (2.6). It also follows from (2.10) that
+                                                          1
+                                       (M + 1)e−M ≫         ,
+                                                          N
+whence
+                              M ≤ log N + log log(3N ) + O(1),
+and (2.7) follows from N ≤ (log x)1/100 .                 √
+    If |y − y0 | ≤ y0 /2, then z = ey lies in the range x ≤ z ≤ x3/2 , so (2.3) applies.
+Since the base
+                                        1 + |y − y0 |
+                                              y0
+is at most 1/2 + 1/y0 < 1 for y0 sufficiently large, and since 1 − 2/π > 1/3, the uniform
+o(1) in (2.3) may be absorbed to give (2.8). If |y − y0 | > y0 /2, the right hand side of
+(2.8) is bounded below by a positive absolute constant, while each normalized partial
+sum has modulus at most 1. Enlarging the implied constant proves (2.8) for all real y.
+    It remains to prove (2.9). By Cauchy–Schwarz, (2.7), and Mertens’ theorem,
+                                              !1/2                  !1/2
+                       X |1 − piτ |     X1            X |1 − piτ |2
+                                    ≤
+                       p≤x
+                              p         p≤x
+                                            p         p≤x
+                                                            p
+                                                   !1/2
+                                            X1
+                                    ≤ 2M
+                                            p≤x
+                                                 p
+                                        √           !
+                                          2                   1
+                                    ≤       + o(1) log2 x ≤ log2 x
+                                         10                   7
+for sufficiently large x. Formula (2.2) now gives
+                              xit0
+                                                                               
+                                                   x log(e + |t0 |)         1/7
+                  S(x, t) =         S(x, τ ) + O                    (log x)       .
+                            1 + it0                     log x
+Solving for S(x, τ ) introduces a factor |1 + it0 | ≪ N . Since |t0 | ≪ N ≤ (log x)1/100 , we
+also have log(e + |t0 |) ≪ log2 x. Therefore the resulting error is
+                                                             x
+                          ≪ x(log x)1/100−6/7 log2 x ≪             ,
+                                                        (log x)3/4
+which proves (2.9).                                                                        □
+                                   LARGE ZETA SUMS                                      7
+
+           3. Zeta-function estimates and a Gaussian transform
+   We next record three lemmas for the Riemann zeta function. Throughout, ρ = β + iγ
+denotes a non-trivial zero of ζ(s), counted with multiplicity.
+Lemma 3.1. Uniformly for 0 < λ ≤ 1/2 and v ∈ R,
+                                                   (2 + |v|)λ
+                             |ζ(1 − λ + iv)| ≪                .                     (3.1)
+                                                       λ
+Proof. Put s = 1−λ+iv, σ = Re s = 1−λ, and X = 2+|v|. We use the Euler–Maclaurin
+continuation in the form
+                          X 1−s
+                                                 
+                 X
+                       −s            −σ    |s| −σ
+         ζ(s) =      n +        +O X + X            ,   σ > 0, s ̸= 1,      (3.2)
+                 n≤X
+                          s − 1             σ
+
+uniformly after the pole term has been displayed explicitly. For completeness, this
+follows by writing the remainder as a Stieltjes integral involving the bounded sawtooth
+function and integrating once by parts. In our range σ ≥ 1/2 and |s| ≪ X. Moreover,
+                                         Z X
+                          X
+                               −σ                           Xλ
+                              n ≤1+           u−1+λ du ≪       ,
+                          n≤X             1                 λ
+
+while
+                                X 1−s     Xλ      Xλ
+                                      ≤         ≤    .
+                                s−1     |s − 1|   λ
+Finally the error in (3.2) is O(X λ ), since |s|X −σ ≪ X λ . As 0 < λ ≤ 1/2, this is also
+O(X λ /λ), and (3.1) follows.                                                          □
+Lemma 3.2. Uniformly for 0 < λ ≤ 1/2 and u ∈ R,
+                                                                        !
+                                                              2
+                                       1       X           2λ
+                   |ζ(1 − λ + iu)| ≪     exp                                .       (3.3)
+                                       λ       ρ
+                                                    |1 + λ + iu − ρ|2
+
+Proof. For |u| ≤ 2, the function (s − 1)ζ(s) is bounded on a fixed neighborhood of the
+compact set {1/2 ≤ Re s ≤ 1, | Im s| ≤ 2}. Since
+                                 |1 − λ + iu − 1| ≥ λ,
+we obtain |ζ(1 − λ + iu)| ≪ 1/λ, and (3.3) follows. We may therefore assume |u| > 2.
+   Set
+                         s0 = 1 + λ + iu,    s1 = 1 − λ + iu,
+and recall the completed zeta function
+                                 1
+                          ξ(s) = s(s − 1)π −s/2 Γ(s/2)ζ(s).
+                                 2
+Its Hadamard factorization may be written
+                                         Y         
+                                                  s s/ρ
+                                    A+Bs
+                           ξ(s) = e          1−       e ,
+                                         ρ
+                                                  ρ
+8            ZIKANG DONG, RUIHUA WANG, WEIJIA WANG, AND HAO ZHANG
+
+where the product and sums over zeros are understood in the usual symmetric sense
+and
+                                         X     1
+                              Re B = −      Re .
+                                          ρ
+                                               ρ
+Consequently the exponential factors cancel upon taking absolute values of the quotient
+at s1 and s0 , and
+                                 ξ(s1 )   Y |s1 − ρ|
+                                        =               .
+                                 ξ(s0 )    ρ
+                                              |s 0 − ρ|
+Using the definition of ξ, the rational factors are O(1) for |u| > 2, while Stirling’s
+formula gives
+                                  Γ(s0 /2)
+                                           ≪ (2 + |u|)λ .
+                                  Γ(s1 /2)
+Thus
+                            ζ(s1 )               Y |s1 − ρ|
+                                    ≪ (2 + |u|)λ              .                  (3.4)
+                            ζ(s0 )               ρ
+                                                    |s 0 − ρ|
+This is the zeta analogue of the first step in [6, Lemma 3.1].
+  Since β ≤ 1,
+                                                  1/2
+                     |s1 − ρ|          4λ(1 − β)
+                              = 1−
+                     |s0 − ρ|           |s0 − ρ|2
+                                                   
+                                         2λ(1 − β)
+                              ≤ exp −
+                                          |s0 − ρ|2
+                                                          2λ2
+                                                               
+                                                  1
+                              = exp −2λ Re             +          .
+                                               s0 − ρ |s0 − ρ|2
+The logarithmic derivative of the same Hadamard product gives
+                              X         1       ξ′
+                                  Re        = Re (s0 ).
+                               ρ
+                                     s0 − ρ     ξ
+On the other hand, differentiating the defining formula for ξ yields
+                    ξ′       1     1    1         1 Γ′        ζ′
+                       (s) = +         − log π +       (s/2) + (s).
+                    ξ        s s−1 2              2Γ           ζ
+Therefore Stirling’s formula implies
+                   X          1      1                  ζ′
+                        Re        = log(2 + |u|) + Re (s0 ) + O(1).               (3.5)
+                    ρ
+                           s0 − ρ    2                  ζ
+By the Euler product,
+                        ζ′                 ζ′        1
+                           (1 + λ + iu) ≤ − (1 + λ) = + O(1).
+                        ζ                  ζ         λ
+Hence
+                      X             1    1              1
+                            Re          ≥ log(2 + |u|) − − O(1).
+                        ρ
+                                 s0 − ρ  2              λ
+                                      LARGE ZETA SUMS                                       9
+
+After insertion in (3.4), the factor (2 + |u|)λ is cancelled, up to an absolute constant, by
+the contribution of the term
+                                          X           1
+                                     −2λ      Re          .
+                                           ρ
+                                                  s 0 − ρ
+
+We obtain
+                                                                 !
+                              ζ(s1 )       X 2λ2
+                                     ≪ exp                           .
+                              ζ(s0 )       ρ
+                                             |s0 − ρ|2
+
+Finally |ζ(s0 )| ≤ ζ(1 + λ) ≪ 1/λ, proving the lemma.                                      □
+
+   The next identity is the zeta analogue of [6, Lemma 3.2]. Unlike the Dirichlet
+L-function case, an additional residue occurs because ζ has a pole at 1.
+Lemma 3.3. Let τ ∈ R, T > 0, and 0 < λ ≤ 1/2. Then
+                 √     Z ∞
+                                                       T y2
+                                                           
+                               y
+                   2πT     S(e , τ ) exp (λ − 1)y −           dy
+                        −∞                              2
+                      Z ∞
+                                                        ξ2
+                                                           
+                          ζ(1 − λ + i(ξ − τ ))
+                    =                            exp −        dξ
+                       −∞      1 − λ + iξ               2T
+                                        (λ + iτ )2
+                                                  
+                            2π
+                        +        exp                 .                                  (3.6)
+                          1 + iτ           2T
+Proof. We give a Fourier-transform proof, which also fixes the normalization of the pole
+term. For a real parameter α < 0, set
+                                  Φα (y) = S(ey , τ )e(α−1)y .
+Since S(ey , τ ) = 0 for y < 0 and |S(ey , τ )| ≤ ey for y ≥ 0, the function Φα is integrable.
+With the Fourier-transform convention
+                                          Z ∞
+                                Φα (ξ) =
+                                b                Φα (y)e−iξy dy,
+                                            −∞
+
+absolute convergence permits us to interchange the sum and the integral. Hence
+                                 X        Z ∞
+                                       iτ
+                        Φα (ξ) =
+                        b            n        e(α−1−iξ)y dy
+                                      n≥1      log n
+
+                                          1      X
+                                  =                  n−1+α+i(τ −ξ)
+                                      1 − α + iξ n≥1
+                                      ζ(1 − α + i(ξ − τ ))
+                                  =                        .
+                                          1 − α + iξ
+On the other hand,
+                          √     −T y 2 /2
+                                            Z ∞
+                                                   2
+                           2πT e          =     e−ξ /(2T ) e−iξy dξ.
+                                               −∞
+10           ZIKANG DONG, RUIHUA WANG, WEIJIA WANG, AND HAO ZHANG
+
+A second application of Fubini therefore yields, for α < 0,
+                         √     Z ∞
+                                                                T y2
+                                                                    
+                                        y
+               F (α) := 2πT          S(e , τ ) exp (α − 1)y −          dy
+                                 −∞                              2
+                        Z ∞
+                            ζ(1 − α + i(ξ − τ )) −ξ2 /(2T )
+                     =                            e         dξ.                     (3.7)
+                         −∞       1 − α + iξ
+The left-hand side is an entire function of α, because the Gaussian dominates uniformly
+on compact subsets of the α-plane. We now continue the right-hand side from α < 0
+to 0 < α ≤ 1/2. Its only singularity that crosses the real ξ-axis is the pole of the zeta
+factor at
+                                       ξ = τ − iα.
+(The pole of (1 − α + iξ)−1 remains in the upper half-plane since α ≤ 1/2.) Keeping the
+ξ-contour below the moving zeta pole and then straightening it back to the real axis
+gives
+                     Z ∞
+                          ζ(1 − α + i(ξ − τ )) −ξ2 /(2T )
+            F (α) =                            e          dξ + 2πi Res Hα (ξ),
+                      −∞        1 − α + iξ                           ξ=τ −iα
+
+where
+                                    ζ(1 − α + i(ξ − τ )) −ξ2 /(2T )
+                         Hα (ξ) =                         e         .
+                                         1 − α + iξ
+The Gaussian gives rapid decay on every contour occurring in this finite deformation.
+Since the residue of ζ(1 − α + i(ξ − τ )) as a function of ξ is 1/i = −i, we have
+                                                            (τ − iα)2
+                                                                      
+                                             2π
+                      2πi Res Hα (ξ) =            exp −
+                          ξ=τ −iα          1 + iτ              2T
+                                                         (α + iτ )2
+                                                                   
+                                             2π
+                                        =         exp                  .
+                                           1 + iτ            2T
+Taking α = λ proves (3.6).                                                             □
+   We shall also use the following standard consequence of the logarithmic derivative
+of ξ(s).
+Lemma 3.4. Uniformly for a > 0 and |v| ≥ 2,
+            X            1          1                 1
+                Re                ≤ log(2 + a + |v|) + + O(1).                      (3.8)
+             ρ
+                   1 + a + iv − ρ   2                 a
+
+Proof. From the logarithmic derivative of the completed zeta function,
+                   X        1         ζ′      1   Γ′
+                       Re       = Re (s) + Re (s/2) + O(1)
+                    ρ
+                          s−ρ         ζ       2   Γ
+
+for Re s > 1 and | Im s| ≥ 2; the rational factors 1/s and 1/(s − 1) are absorbed in O(1).
+Stirling’s formula, uniformly in the right half-plane, gives
+                             Γ′
+                           Re (s/2) ≤ log(2 + |s|) + O(1).
+                             Γ
+                                         LARGE ZETA SUMS                                    11
+
+At s = 1 + a + iv, the Euler product implies
+                        ζ′       ζ′        ζ′        1
+                     Re (s) ≤       (s) ≤ − (1 + a) ≤ + O(1).
+                        ζ        ζ          ζ        a
+Since |s| ≪ 2 + a + |v|, this proves (3.8).                                                 □
+
+                       4. Large zeta sums force many zeros
+   We first establish the analogue of [6, Proposition 3.4].
+Proposition 4.1. There are absolute constants c0 > 0 and T1 ≥ 3 such that the
+following holds. Let T ≥ T1 ,
+                                        p             √
+                      T ≤ |t| ≤ 2T, exp( log T ) ≤ x ≤ T .
+Put y0 = log x and suppose that
+                                              x                         1/100
+                              |S(x, t)| =       ,    1 ≤ N ≤ y0                 .
+                                              N
+Let t0 be defined by (2.4). If
+                                          c0 N 6    1
+                                                 ≤λ≤ ,                                    (4.1)
+                                            y0      2
+then there is a real η with                          s
+                                                         log T
+                                          |η| ≤ 2λ                                        (4.2)
+                                                           y0
+such that
+                             X                  λ                 y0
+                                                                ≥    .                    (4.3)
+                              ρ
+                                   |1 + λ + i(t − t0 + η) − ρ|2   4
+
+Proof. Set
+                                                                 λ
+                                     τ = t − t0 ,        T =        .
+                                                                 y0
+By Lemma 2.2,
+                         y               y0
+                                                                            1/3 !
+                     S(e , τ )   S(e , τ )                   1 + |y − y0 |
+                        y
+                               =           +O                                         .
+                       e           ey0                            y0
+Since
+                                 T y2       λy0 T
+                                  λy −  =        − (y − y0 )2 ,
+                                   2         2       2
+a change of variables in the Gaussian error integral gives
+                     √      Z ∞
+                                 S(ey , τ )             T y2
+                                                            
+                       2πT                  exp λy −           dy
+                             −∞      ey                  2
+                                         S(ey0 , τ )
+                                                                     
+                                λy0 /2                          −1/6
+                           = 2πe                     + O((λy0 )      ) .                  (4.4)
+                                             ey0
+By (2.9),
+                      S(ey0 , τ )                      S(x, t)      −3/4
+                          y
+                                  = (1 + it0 )e−it0 y0         + O(y0 ).
+                        e   0                            x
+12            ZIKANG DONG, RUIHUA WANG, WEIJIA WANG, AND HAO ZHANG
+                               p
+The main term has modulus 1 + t20 /N ≥ 1/N . By choosing the absolute constant c0
+                                                     −1/6
+in the proposition sufficiently large, (λy0 )−1/6 ≤ c0 /N , while
+                                 −3/4+1/100    −37/50
+                         −3/4   y0            y0
+                        y0    ≤             =         = o(1/N ).
+                                      N                 N
+Hence (4.4) yields
+                   √    Z ∞
+                            S(ey , τ )           T y2
+                                                     
+                                                             π λy0 /2
+                    2πT                exp  λy −        dy ≥   e      .            (4.5)
+                         −∞   ey                  2          N
+  Apply Lemma 3.3. Since |t0 | ≪ N by Lemma 2.2 and T ≤ |t| ≤ 2T , we have |τ | ≍ T .
+The residue in (3.6) has modulus
+                                       λy0 τ 2 y0
+                                                 
+                                 1
+                              ≪ exp       −         ,                           (4.6)
+                                 T      2    2λ
+and is therefore negligible compared with (4.5). Consequently
+                              Z ∞
+                                                               ξ2
+                                                                 
+                  1 λy0 /2        |ζ(1 − λ + i(ξ − τ ))|
+                   e       ≪                             exp −      dξ.            (4.7)
+                 N             −∞      |1 − λ + iξ|            2T
+It follows that
+                                                          r
+                                                   ξ2       y0 eλy0 /2
+                                                     
+                      |ζ(1 − λ + i(ξ − τ ))|
+                  max                        exp −      ≫              .           (4.8)
+                  ξ∈R      |1 − λ + iξ|            4T       λ N
+     Put                                         s
+                                                     log T
+                                     B = 2λ                .
+                                                       y0
+Suppose first that B < |ξ| ≤ T /2. Since |τ | ≍ T , we have |ξ − τ | ≍ T . Lemma 3.1 and
+the definition of B give
+                                                         ξ2
+                                                           
+                           |ζ(1 − λ + i(ξ − τ ))|
+                                                  exp −
+                                |1 − λ + iξ|             4T
+                                      λ
+                                    T                     1
+                                 ≪      exp(−λ log T ) ≪ .
+                                     λ                    λ
+For |ξ| > T /2, Lemma 3.1 gives
+                                                        (2 + |ξ| + T )λ
+                         |ζ(1 − λ + i(ξ − τ ))| ≪                       .
+                                                               λ
+Since |1 − λ + iξ| ≥ 1/2, it remains to control
+                                                 2 
+                                             λ     ξ y0
+                              (2 + |ξ| + T ) exp −      .
+                                                    4λ
+For |ξ| ≥ T /2 its logarithm is at most
+                                                      ξ 2 y0
+                                λ log(2 + |ξ| + T ) −        ,
+                                                       4λ
+                                     LARGE ZETA SUMS                                  13
+
+which is negative with magnitude ≫ T 2 y0 /λ at |ξ| = T /2 and decreases thereafter once
+the absolute threshold T1 is enlarged if necessary. Thus this range is O(1/λ), in fact
+exponentially smaller.
+    On the other hand, the right hand side of (4.8) is
+                                       √
+                                     1 λy0 λy0 /2
+                                             e    ,
+                                     λ N
+which is larger than any prescribed fixed multiple of 1/λ once the absolute constant c0
+is chosen sufficiently large. Thus the maximum in (4.8) is attained at a point ξ with
+|ξ| ≤ B. At this point, using λy0 ≥ c0 N 6 once more,
+                                                     1
+                        |ζ(1 − λ + i(ξ − τ ))| ≫       (λy0 )1/3 eλy0 /2 .         (4.9)
+                                                     λ
+Let
+                                   X                λ
+                            Z :=                                  .
+                                     ρ
+                                         |1 + λ + i(ξ − τ ) − ρ|2
+Lemma 3.2 and (4.9) imply
+                              (λy0 )1/3 eλy0 /2 ≪ exp(2λZ).
+Taking logarithms,
+                                    λy0 1
+                            2λZ ≥       + log(λy0 ) − O(1).
+                                     2    3
+Since λy0 ≥ c0 N 6 ≥ c0 , choosing the absolute constant c0 sufficiently large makes the
+last two terms non-negative. Hence
+                                             y0
+                                        Z≥ ,
+                                              4
+which is the required weighted zero lower bound. Finally, the non-trivial zeros of ζ are
+invariant under complex conjugation. Replacing ρ by ρ and setting η = −ξ gives (4.2)
+and (4.3).                                                                            □
+Proof of Theorem 1.1. Let
+                                                                    L
+                       y0 = log x,        ϕ = t − t0 ,       λ=         .
+                                                                   40y0
+Since L ≤ y0 /2, we have λ ≤ 1/80. Fix the absolute constant c in the statement of the
+theorem so that c ≥ 40c0 and also so that it dominates the absolute implied constant
+in (2.6). Then L ≥ cN 6 implies
+                                            L     c0 N 6
+                                     λ=         ≥        ,
+                                           40y0     y0
+so Proposition 4.1 applies (after enlarging the absolute threshold T0 to dominate T1
+and the finitely many absolute thresholds used in Section 2). Thus for some η satisfying
+(4.2),
+                           X              λ               y0
+                                                      2
+                                                        ≥    .                    (4.10)
+                            ρ
+                               |1 + λ + i(ϕ + η) − ρ|     4
+14            ZIKANG DONG, RUIHUA WANG, WEIJIA WANG, AND HAO ZHANG
+
+Also, Lemma 2.2 gives
+                                  |ϕ − t| = |t0 | ≪ N.
+     Write Q = log T and set
+                                                 Q
+                                       a = 20λ      .
+                                                 y0
+Consider a zero ρ satisfying
+                                                    Q
+                               |1 + iϕ − ρ| ≥ 40λ      = 2a.                      (4.11)
+                                                    y0
+Since Re ρ ≤ 1,
+                       |1 + a + iϕ − ρ| ≥ |1 + iϕ − ρ| ≥ 2a.
+Moreover, y0 ≤ Q/2, and hence
+                              |η|
+                                       r
+                                     1 y0         1
+                                  ≤          ≤ √ .
+                               a    10 Q       10 2
+By the triangle inequality and the preceding lower bound for |1 + a + iϕ − ρ|,
+                  |1 + λ + i(ϕ + η) − ρ| ≥ |1 + a + iϕ − ρ| − a − |η|
+                                             9
+                                          ≥ |1 + a + iϕ − ρ|.
+                                            20
+Therefore the total contribution to (4.10) from zeros satisfying (4.11) is at most
+                    X           1            5λ X             1
+                 5λ                       ≤        Re
+                     ρ
+                        |1 + a + iϕ − ρ|2     a ρ      1 + a + iϕ − ρ
+                                             y0 X             1
+                                          =        Re                 .            (4.12)
+                                             4Q ρ      1 + a + iϕ − ρ
+Here we used Re ρ ≤ 1 in the first inequality.
+     √ |ϕ − t| ≪ N and T ≤ |t| ≤ 2T , we have |ϕ| ≍ T . Moreover, λ ≤ 1/80 and
+   Since
+y0 ≥ Q, so
+                                  Q      Q     1p
+                         a = 20λ ≤          ≤     Q = o(T ).
+                                  y0    4y0    4
+Thus
+                            log(2 + a + |ϕ|) = Q + O(1).
+Lemma 3.4 therefore gives
+                     X               1          1    1
+                          Re                  ≤ Q + + O(1).              (4.13)
+                       ρ
+                             1 + a + iϕ − ρ     2    a
+Now
+                                       1    y0
+                                         =      .
+                                       a   20λQ
+Because λ ≥ c0 N 6 /y0 and y0 ≤ Q/2,
+                                       1     Q
+                                         ≤          .
+                                       a   80c0 N 6
+                                     LARGE ZETA SUMS                                 15
+
+Since c0 was chosen sufficiently large, in particular c0 ≥ 1, the term 1/a is at most
+Q/80. After enlarging the absolute threshold T0 to absorb the O(1) term, (4.13) is at
+most 5Q/9. Consequently (4.12) is at most
+                                           5y0
+                                               .
+                                           36
+By (4.10), the zeros satisfying
+                                                       Q
+                                  |1 + iϕ − ρ| < 40λ
+                                                       y0
+therefore contribute at least
+                                   y0 5y0      y0
+                                      −     = .
+                                    4    36     9
+Each individual zero contributes at most 1/λ, since
+                      |1 + λ + i(ϕ + η) − ρ| ≥ 1 + λ − Re ρ ≥ λ.
+Hence the number of zeros in this disk is at least
+                                       λy0     L
+                                           =      .
+                                        9     360
+Finally,
+                                       Q       log T
+                                  40λ = L              ,
+                                       y0     (log x)2
+which is exactly the radius in (1.2). This proves the theorem.                       □
+
+                      5. A local zero-density consequence
+                                          √
+    For the part of Theorem 1.2 with x ≥ T , a classical exponential-sum estimate is
+sufficient. We record a convenient form. The exponent pair (1/6, 2/3), obtained by the
+van der Corput method, gives the required power saving; see, for example, [9, Chapter 8,
+especially Sections 8.3–8.4].
+Lemma 5.1. There is an absolute T2 ≥ 3 such that, uniformly for T ≥ T2 , T ≤ |t| ≤ 2T ,
+and                                      √
+                                    x ≥ T,
+one has
+                                   S(x, t) ≪ xT −1/13 ,                            (5.1)
+with an absolute implied constant.
+Proof. By complex conjugation it is enough to consider t > 0. Write
+                                           t
+                 e(z) = e2πiz ,  f (u) =     log u,       nit = e(f (n)).
+                                          2π
+For a dyadic interval X < n ≤ 2X with 1 ≤ X ≤ t, the exponent pair (1/6, 2/3) gives
+                                X
+                                       nit ≪ t1/6 X 1/2 .                     (5.2)
+                                  X<n≤2X
+16             ZIKANG DONG, RUIHUA WANG, WEIJIA WANG, AND HAO ZHANG
+
+Indeed, on this interval |f (j) (u)| ≍j tX −j , so the standard exponent-pair estimate
+applies with parameter
+              √         t/X ≥ 1. Summing over dyadic intervals is a geometric sum.
+Therefore, for T ≤ x ≤ t,
+                        S(x, t) ≪ t1/6 x1/2 ≪ xT −1/12 ≪ xT −1/13 .
+     It remains to treat x > t. The preceding estimate at x = t gives
+                                       S(t, t) ≪ t2/3 .
+Now let X ≥ t. On [X, 2X] the derivative
+                                                     t
+                                        f ′ (u) =
+                                                    2πu
+is monotone and satisfies
+                                 1    1                               t
+                   0 < f ′ (u) ≤   < ,        ∥f ′ (u)∥ = f ′ (u) ≥     ,
+                                2π    2                             4πX
+where ∥ · ∥ denotes distance to the nearest integer. The Kusmin–Landau first-derivative
+lemma therefore yields
+                                      X              X
+                                            nit ≪ .                               (5.3)
+                                    X<n≤2X
+                                                     t
+Summing (5.3) over the dyadic intervals between t and x gives O(x/t). Hence, using
+t ≍ T and x ≥ t,
+                                   x
+                  S(x, t) ≪ t2/3 + ≪ xT −1/3 + xT −1 ≪ xT −1/13 .
+                                    t
+All implied constants here are absolute, and no upper restriction on x is used. □
+Proof of Theorem 1.2. Suppose first that
+                                   √
+                                     T ≤ x ≤ T A.
+By Lemma 5.1,
+                                    |S(x, t)| ≪ xT −1/13 .
+Since log x ≤ A log T , we have
+                                   T −1/13 ≪A (log x)−1/100
+for T ≥ T0 (A, δ) after increasing T0 (A, δ) if necessary. Hence
+                                                     x
+                                 |S(x, t)| ≪A                .
+                                                (log x)1/100
+    It remains to consider                         √
+                                       Tε ≤ x ≤ T.                                (5.4)
+If this interval is non-empty, then ε ≤ 1/2. Moreover,
+                               log x ≥ ε log T > (log T )2/3 ,
+           √
+so x ≥ exp( log T ) once the threshold T0 (A, δ) is enlarged if necessary.
+   Assume, for a contradiction, that
+                                                x
+                               |S(x, t)| ≥              .
+                                           (log x)1/100
+                                      LARGE ZETA SUMS                              17
+
+Write
+                                                       x
+                                        |S(x, t)| =      .
+                                                       N
+Then
+                                     1 ≤ N ≤ (log x)1/100 ,
+so Theorem 1.1 is applicable once an admissible L is chosen. Take
+                                         L = δε2 log T.                         (5.5)
+Since δ > 0 is fixed and ε > (log T )−1/3 ,
+                                       L > δ(log T )1/3 .
+On the other hand,
+                             N 6 ≤ (log x)6/100 ≤ (log T )6/100 .
+As 1/3 > 6/100, we have L ≥ cN 6 for all T beyond a threshold depending at most on δ
+(which may be absorbed into T0 (A, δ)), where c is the constant in Theorem 1.1. Also,
+from (5.4),
+                                  log x ≥ ε log T,
+and therefore
+                                                1        1
+                      L = δε2 log T ≤ δε log x ≤  log x < log x,
+                                                8        2
+Thus (5.5) lies in the admissible range of Theorem 1.1.
+  That theorem produces a real number ϕ with
+                      |ϕ − t| ≤ cN ≤ c(log x)1/100 ≤ C(log T )1/100 ,
+where the absolute constant C in the statement is chosen once and for all to dominate
+c, such that the disk                                      
+                                                    log T
+                            s : |s − (1 + iϕ)| < L
+                                                   (log x)2
+contains at least L/360 zeros of ζ. Its radius is
+                                    log T     δε2 (log T )2
+                               L            =               ≤ δ.
+                                   (log x)2     (log x)2
+Hence the disk is contained in
+                          {s : Re s ≥ 1 − δ,      | Im s − ϕ| ≤ δ} .
+By the hypothesis of the theorem, the latter region contains at most
+                                           δε2 log T
+                                             400
+zeros. But Theorem 1.1 gives at least
+                              L     δε2 log T   δε2 log T
+                                  =           >           ,
+                             360      360         400
+a contradiction. This proves (1.4).                                                □
+18             ZIKANG DONG, RUIHUA WANG, WEIJIA WANG, AND HAO ZHANG
+
+Remark 5.2. The restriction x ≤ T A in Theorem 1.2 is needed only when the power
+saving of Lemma 5.1 is converted into a negative power of log x; Lemma 5.1 itself
+has no upper restriction on x. Some upper control on x is nevertheless essential for
+the logarithmic conclusion. Formula (1.5) shows that no estimate S(x, t) = o(x) can
+hold uniformly for all arbitrarily large x once t is fixed. If one only wants the range
+directly controlled
+           √        by Theorem 1.1, then Theorem 1.2 may instead be stated simply for
+  ε
+T ≤ x ≤ T , in which case Lemma 5.1 is unnecessary.
+
+                                     Acknowledgements
+   The author acknowledges the use of OpenAI’s ChatGPT during the preparation of
+this manuscript. Z. Dong is supported by the National Natural Science Foundation
+of China (Grant No. 1240011770). W. Wang is supported by the National Natural
+Science Foundation of China (Grant No. 1250012812). H. Zhang is supported by the
+Fundamental Research Funds for the Central Universities (Grant No. 531118010622),
+the National Natural Science Foundation of China (Grant No. 1240011979) and the
+Hunan Provincial Natural Science Foundation of China (Grant No. 2024JJ6120).
+
+                                          References
+ [1] Z. Dong, W. Wang and H. Zhang, Large zeta sums, Period. Math. Hung. 91 (2025) 388–398.
+ [2] C. Frechette, M. Gerbelli-Gauthier, A. Hamieh and N. Tanabe, Large sums of Fourier coefficients
+     of cusp forms, J. Théorie des Nombres de Bordeaux 37 (2025), 171–188.
+ [3] P. Gao, Upper bounds for moments of zeta sums, J. Number Theory 278 (2026), 47–63.
+ [4] L. Guth and J. Maynard, New large value estimates for Dirichlet polynomials, Ann. of Math. (2)
+     203 (2026), 623–675.
+ [5] A. Granville and K. Soundararajan, Decay of mean values of multiplicative functions, Canad. J.
+     Math. 55 (2003), 1191–1230.
+ [6] A. Granville and K. Soundararajan, Large character sums: Burgess’s theorem and zeros of L-
+     functions, J. Eur. Math. Soc. (JEMS) 20 (2018), 1–14.
+ [7] S. M. Gonek, S. W. Graham and Y. Lee, The Lindelöf hypothesis for primes is equivalent to the
+     Riemann hypothesis, Proc. Amer. Math. Soc. 148 (2020), 2863–2875.
+                                                                    √
+ [8] A. J. Harper, The typical size of character and zeta sums is o( x), arXiv:2301.04390, 2023.
+ [9] H. Iwaniec and E. Kowalski, Analytic Number Theory, Amer. Math. Soc. Colloq. Publ. 53,
+     American Mathematical Society, Providence, RI, 2004.
+[10] Y. Lamzouri, Large sums of Hecke eigenvalues of holomorphic cusp forms, Forum Math. 31 (2019),
+     403–417.
+[11] D. Yang, Extreme values of derivatives of zeta and L-functions, Bull. Lond. Math. Soc. 56 (2024),
+     79–95.
+
+
+
+
+   (Zikang Dong) School of Mathematical Sciences, Soochow University, Suzhou 215006,
+P. R. China
+
+  (Ruihua Wang) School of Fundamental Sciences, Hainan Bielefeld University of
+Applied Sciences, Danzhou 578101, P. R. China
+
+     (Weijia Wang) School of Mathematics, Shandong University, Jinan 250010, P. R. China
+                              LARGE ZETA SUMS                                  19
+
+(Hao Zhang) School of Mathematics, Hunan University, Changsha 410082, P. R. China
+Email address: zikangdong@gmail.com
+Email address: ruih.wan9@gmail.com
+Email address: weijiawang@amss.ac.cn
+Email address: zhanghaomath@hnu.edu.cn
+

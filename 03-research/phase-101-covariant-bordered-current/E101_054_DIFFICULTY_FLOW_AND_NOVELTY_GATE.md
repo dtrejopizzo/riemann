@@ -168,7 +168,7 @@ construction, not imported from the known continuation of `Xi`.
 
 Neither GAP-Z, PROLATE-ENDPOINT, nor a uniform projective bound may use a
 property that fails for `P`.  If it does, the statement has silently changed
-from build-neutral infrastructure into the force-RH step.
+from build-neutral infrastructure into the RH-strength step.
 
 ## 6. Audit of the active Phase 101 fronts
 
@@ -292,7 +292,7 @@ proved:
 
 found:
   current effort was rotating at the discriminant level;
-  PROLATE-BV-MOMENT cannot be the force-RH step;
+  PROLATE-BV-MOMENT cannot be the RH-strength step;
 
 adopted:
   five-part novelty gate;

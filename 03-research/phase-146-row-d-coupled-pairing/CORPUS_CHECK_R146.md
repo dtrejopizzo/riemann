@@ -14,12 +14,12 @@ earlier attempt of this shape and its outcome. Classification: `NEW`, `TRIED–P
 exactly the object phase 146 is being asked to build.
 
 * **Phase 137, D.12/S2** is the one attempt in the corpus at a semilocal coupled form:
-  > `03-research/phase-137-row-d-canonical-coupling/R137_000_LEAD_BLUEPRINT.md:14`: *"Define for finite
+  > `03-research/phase-137-row-d-canonical-coupling/R137_000_BLUEPRINT.md:14`: *"Define for finite
   > `S ⊇ {∞}` and real `F ∈ D^W`: `W_S(F) := Σ_{v∈S} ⟨F⋆F^∨, W_v⟩ − 2Φ_F(0)Φ_F(1)`... (iii) the first `S`
   > and `T` where positivity is not provable by these means, and what exactly is unpaid (**the cross term
   > prime×archimedean**)."*
 
-  Outcome, `03-research/phase-137-row-d-canonical-coupling/R137_001_BUILDER_ROUND1.md:479-481` (quoted):
+  Outcome, `03-research/phase-137-row-d-canonical-coupling/R137_001_ROUND1.md:479-481` (quoted):
   the archimedean-only piece is positive up to `T ≤ log 2` (Connes–Consani 2006.13771 / phase-118's own
   bound), and beyond `S={∞,2}` "what is unpaid is the **cross term prime × archimedean**: `2(\log2)2^{−1/2}
   (F⋆F^∨)(\log 2)`... **archimedean Sonin space, with no term available to absorb a prime contribution of
@@ -33,7 +33,7 @@ exactly the object phase 146 is being asked to build.
   > I_∞^arch` with a cross term built from `Frob_n ⋆ Frob_n^† = Δ^(n)` — this is the one untried square
   > adjacent to what is proved."*
   This is a load-bearing correction: an unqualified "dominating positive form" is useless (per
-  `R144_004_HOSTILE_CONFIRMATION.md:93-98`); the object needed is a **dominating non-positive** form,
+  `R144_004_CONFIRMATION.md:93-98`); the object needed is a **dominating non-positive** form,
   i.e. `J` must be *larger* than `I_∞` on primitives while itself provably `≤ 0` there. Phase 146 must
   state the inequality in exactly this direction, not the naively "obvious" one.
 
@@ -63,13 +63,13 @@ assembled into a global pairing).**
   `C_{mn}` (off-diagonal Thm 8bis.1, diagonal Thm 8bis.1b) and Thm 8bis.4a — the theorem that this Gram is
   positive **only in a restricted, finite-chart sense**; the corpus's standing warning (carried into
   phase 141) is *"the pure Frobenius form is unsigned at every finite chart; colimit version OPEN"*
-  (`03-research/phase-141-row-d-frobenius-traces/R141_000_LEAD_BLUEPRINT.md:8-9`).
+  (`03-research/phase-141-row-d-frobenius-traces/R141_000_BLUEPRINT.md:8-9`).
 
 * **Phase 141 (`h⁰` reading Frobenius traces)** built exactly the candidate `Q_{C^{Frob}}` using this Gram
   as `C`:
-  `03-research/phase-141-row-d-frobenius-traces/R141_000_LEAD_BLUEPRINT.md:67`: *"The interaction with
+  `03-research/phase-141-row-d-frobenius-traces/R141_000_BLUEPRINT.md:67`: *"The interaction with
   8bis.4a: `C_{mn} = ` Paper 44's Frobenius Gram entries is the arithmetically natural choice."*
-  Outcome, `R141_001_BUILDER_ROUND1.md` tail table: `D.27.7 (C^Frob)` — **NAMED CHOICE** (diagonal set,
+  Outcome, `R141_001_ROUND1.md` tail table: `D.27.7 (C^Frob)` — **NAMED CHOICE** (diagonal set,
   not regularized); entries **PROVED-IN-REPOSITORY** (cites Paper 44 8bis.1/K1/Cor 8bis.1d); `D.27.8` —
   **PROVED**: *"auditor verified `γ_C > 0`, zero-trace indefiniteness, the trace-level unsignedness"* —
   i.e. `Q_{C^{Frob}}` is **proved indefinite at trace level**, not sign-definite. The FATAL screen was
@@ -80,7 +80,7 @@ assembled into a global pairing).**
 * **"Gram of Frobenius as a form" / positive-definite kernel on the idele class group / Bochner /
   reproducing kernel** — searched broadly; the corpus's positive-definite-kernel constructions on
   ζ-related objects are consistently found to be the **wrong type** for carrying the Weil sign:
-  - `03-research/phase-16/04-MSZ-pairing-hits-CAP.md:37-70`: the natural resonance pairing on zeros is
+  - `03-research/phase-16-surf-witness-variety/04-MSZ-pairing-hits-CAP.md:37-70`: the natural resonance pairing on zeros is
     Bochner-**positive** (definite), *not* the indefinite Weil form `Q`; *"A definite Bochner form
     **cannot** carry `κ`"* (the off-line count) — a proved type-mismatch obstruction, generalizable: any
     literally positive-definite kernel built on this data cannot equal an indefinite form with the sign
@@ -120,10 +120,10 @@ of the Weil functional survives; several sharp local no-gos are on record.**
 * `03-research/phase-102-omega7-closure-campaign/195_LOEWNER_SCHUR_TAIL_COMPARISON_GATE.md:199,237`:
   *"Why global Toeplitz positivity is insufficient"*; *"Li positivity, increment Toeplitz positivity, nor
   Schoenberg positivity"* close the route.
-* `03-research/phase-129-row-a-rebuild/R129_001_BUILDER_REPORT.md:193`: `§1` **refutes** by a two-point
+* `03-research/phase-129-row-a-rebuild/R129_001_REPORT.md:193`: `§1` **refutes** by a two-point
   example that `(e−t)^†(e−t) = 2e−2t` is a sum of squares — a specific SOS identity shown false/misleading
   as evidence.
-* Phase 36 (`03-research/phase-36-ABC-forms/105-acoplamiento-2D-dos-primos.md:249-251`): a Bochner-positive
+* Phase 36 (`03-research/phase-36-ABC-forms/105-coupling-first-test-of-form.md:249-251`): a Bochner-positive
   quantity `B_{λ₀}` is proved to have **sign changes for all sufficiently large N** despite Bochner
   positivity of the underlying measure — an explicit demonstration that Bochner/positive-definiteness of
   one representation does not transfer to pointwise or aggregate sign control needed for the Weil form.
@@ -172,7 +172,7 @@ machinery as raw material.**
 
 * **Deninger's geometric/foliated mechanism** (phase 43) is a **TRIED–NO-GO for transport**, for a
   reason directly relevant to any `J` built by analogy with a geometric intersection pairing:
-  `03-research/phase-43-hodge-foliated-specZ/130-test-circularidad-deninger.md:22,66,82`: the one realized
+  `03-research/phase-43-hodge-foliated-specZ/130-circularity-to-destruction-test-of-deninger-s.md:22,66,82`: the one realized
   case (elliptic curve over F_q) builds its Kähler/positive-definite metric **using Hasse's theorem
   (`|ξ|²=q`, the function-field RH) as input** — *"The RH follows from the index computation on this
   pre-constructed space, not from positivity alone."* Any `J` modeled on Deninger's construction would
@@ -186,8 +186,8 @@ machinery as raw material.**
   Jacobi normal form, not a positivity-via-unimodularity argument."* General-`S` asymptotics are
   **explicitly deferred by CCM themselves** ("a forthcoming paper"), and a second candidate operator
   (metaplectic Weil representation) is likewise left open by the source paper. The corpus's phase 137/138
-  use of "Sonin space" is a direct citation of this same CCM vocabulary (`R137_001_BUILDER_ROUND1.md:481`;
-  `R138_000_LEAD_BLUEPRINT.md:76`), already folded into `W_S`'s stated gap — it is not a separate untried
+  use of "Sonin space" is a direct citation of this same CCM vocabulary (`R137_001_ROUND1.md:481`;
+  `R138_000_BLUEPRINT.md:76`), already folded into `W_S`'s stated gap — it is not a separate untried
   route, it is the source of the archimedean side already in hand.
 
 **Recommendation: do not reopen** Deninger's construction as a template for `J` (circularity named); reuse
@@ -214,10 +214,10 @@ object attempted since (137, 138, 141) either stalled unsigned or was redirected
 
 * **Concrete attempts after the meta-theorem:**
   - Phase 137's `W_S` (§1) — does (iii) partially (Sonin-space purity), fails (i)/(ii) beyond `S={∞,2}`.
-  - Phase 138 (`R138_000_LEAD_BLUEPRINT.md:76,91`) explores whether "translation" (the operation coupling
+  - Phase 138 (`R138_000_BLUEPRINT.md:76,91`) explores whether "translation" (the operation coupling
     the polar block and Sonin space) survives various transports, and whether `h = F⋆F^∨` factoring via
     Bochner is available — concluded **wrong type** again (no zero of `ξ` enters the construction it
-    reaches; see `R138_001_BUILDER_ROUND1.md:654`).
+    reaches; see `R138_001_ROUND1.md:654`).
   - Phase 141's `Q_{C^Frob}` (§2) — does (ii) (quadratic) and uses `C_mn` (reads unimodularity, partially),
     but is proved indefinite/unsigned at trace level ("(iii)" fails at finite chart) and is not
     model-uniform in the needed sense; abandoned in favor of `h⁰_{RR}^+` and clause `(b′)⁺`.
@@ -283,7 +283,7 @@ question again under a new name.
 | 2 | Frobenius Gram `C_mn` (Paper 44 8bis.1/8bis.4a) as pairing material | TRIED–PARTIAL | Paper 44 Thm 8bis.1/8bis.4a; phase-141 `R141_000/001` | Reuse `C_mn` as raw material; import "unsigned at every finite chart" fact; do not re-run phase 141's bare quadratic-trace ansatz (proved indefinite) |
 | 3 | SOS / Positivstellensatz / Hankel / Toeplitz positivity mechanisms | TRIED–NO-GO (multiple concrete refutations) | phase-104 `PHASE_104_CLOSURE`, `104_26`; phase-103 `103_29`,`103_64`; phase-102 `300_CENTERED_FEJER...NO_GO`, `195` | Do not reopen as a stand-alone mechanism for `J` |
 | 4 | Second explicit formula / twisted-weighted comparison for a sign | TRIED–NO-GO at strategy level | phase-136 `PHASE_136_MAP_SYNTHESIS_AND_PLAN.md` (row A, bijection argument) | Do not reopen unless a non-bijective independent input is named |
-| 5 | Deninger / CC 2006.13771 / CCM prolate-Sonin as template for `J` | TRIED–NO-GO (Deninger, circularity) / TRIED–PARTIAL (CC, CCM — already imported) | phase-43 `130-test-circularidad-deninger.md`; MAP_5 `:17`; CCM 2310.18423 catalog | Do not use Deninger's metric; CC/CCM already fully used inside `W_S`; general-`S` is where CCM itself stops |
+| 5 | Deninger / CC 2006.13771 / CCM prolate-Sonin as template for `J` | TRIED–NO-GO (Deninger, circularity) / TRIED–PARTIAL (CC, CCM — already imported) | phase-43 `130-circularity-to-destruction-test-of-deninger-s.md`; MAP_5 `:17`; CCM 2310.18423 catalog | Do not use Deninger's metric; CC/CCM already fully used inside `W_S`; general-`S` is where CCM itself stops |
 | 6 | Phase-136 meta-theorem and post-136 coupled attempts | TRIED–PARTIAL | `PHASE_136_MAP_SYNTHESIS_AND_PLAN.md:53`; phase-137/138/141 | Reuse (i)(ii)(iii) admissibility triple as `J`'s design spec; don't repeat 138's Bochner factoring or 141's bare quadratic ansatz |
 | 7 | "No bilinear form from PRIME+ARCH alone can be sign-definite" | TRIED–NO-GO (proved for named relation classes) | P122_028 (Gate S) `:168-186`; phase-60 "phase not magnitude"; P3_COMMON_FAILURE_ARCHITECTURE §2/§8 | `J` must add an independent, non-magnitude ingredient beyond `log p, p^{-1/2}, N, Γ`, or it re-asks a proved-impossible question |
 

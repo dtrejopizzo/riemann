@@ -1,7 +1,6 @@
 # E72.70 -- Abel generator identity for HPAC
 
-**Date:** 2026-07-08.
-**Role:** remove the boundary term from the half-power Abel concomitant and expose the finite generator
+**Purpose:** remove the boundary term from the half-power Abel concomitant and expose the finite generator
 whose Fourier transform must be divisible by the CCM spectral polynomial.
 
 ## 0. Starting point

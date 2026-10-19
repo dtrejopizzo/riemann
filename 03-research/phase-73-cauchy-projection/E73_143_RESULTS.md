@@ -1,6 +1,5 @@
 # E73.143 Results - PAIR20 Forcing Probe
 
-Date: 2026-07-12.
 
 Script:
 

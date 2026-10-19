@@ -1,6 +1,5 @@
 # E73.179 - Cauchy-plane cell residual theorem target
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

@@ -1,6 +1,5 @@
 # E73.133 - From Critical Evaluation Kernel to CSV
 
-Date: 2026-07-12.
 
 E73.132 suggested a kernel theorem for normalized critical evaluation rows.
 E73.134 sharpens it: because row norms can vary near pole-mesh resonances,

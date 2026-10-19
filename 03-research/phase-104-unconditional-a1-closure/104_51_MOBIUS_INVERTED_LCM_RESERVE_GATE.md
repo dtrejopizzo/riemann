@@ -1,113 +1,116 @@
-# 104_51 — Inversión Möbius del kernel `lcm` y gate de reserva
+# 104_51 — Möbius inversion of the `lcm` kernel and reserve gate
 
-**Resultado.** El kernel de Gram no normalizado asociado a las dos marcas
-de `104_50`,
+**Result.** The unnormalized Gram kernel associated with the two marks
+of `104_50`,
 
 \[
  K_s(d,e)=\zeta(s)\mathrm{lcm}(d,e)^{-s},
  \qquad s>1,                                               \tag{1}
 \]
 
-admite una inversión Möbius exacta en sus dos variables. En todo poset
-divisor finito, si \(Z\) es la matriz zeta, \(M=Z^{-1}\) su matriz de
-Möbius y \(W\) la diagonal de las masas de los enteros padres, entonces
+admits an exact Möbius inversion in both of its variables. On every finite
+divisor poset, if \(Z\) is the zeta matrix, \(M=Z^{-1}\) its Möbius
+matrix, and \(W\) the diagonal of the masses of the parent integers, then
 
 \[
  \boxed{K=Z^{T}WZ,\qquad M^{T}KM=W.}                       \tag{2}
 \]
 
-Por tanto la inversión no deja una reserva entre torres: elimina **todas**
-las correlaciones y deja solamente la energía diagonal. Comparar la energía
-antes y después de invertir tampoco produce una desigualdad. La diferencia
+Hence the inversion leaves no reserve between towers: it removes **all**
+correlations between distinct primes and leaves only the diagonal energy.
+Comparing the energy before and after inverting does not produce an
+inequality either. The difference
 
 \[
  \mathscr R_W(v)=\|Zv\|_W^2-\|v\|_W^2                    \tag{3}
 \]
 
-es indefinida ya en la torre mínima
-\(\{1,p,p^2\}\). Para el vector von Mangoldt--Laguerre
+is indefinite already on the minimal tower
+\(\{1,p,p^2\}\). For the von Mangoldt--Laguerre vector
 
 \[
  v(p^k)=(\log p)L_{n-1}^{(1)}(k\log p)
 \]
 
-la reserva de **cutoff de una torre** conserva exactamente la fase. En grado
-\(n=2\), esa contribución local es positiva para la torre de \(2\) y negativa
-para la torre de \(5\). En el rango objetivo, \(n=151\), es positiva en
-\(p=2\) y negativa en \(p=7\). Más generalmente, como función continua de
-la posición de una torre, posee ambos signos para todo \(n\ge2\).
+the **single-tower cutoff** reserve preserves phase exactly. At degree
+\(n=2\), that local contribution is positive for the tower of \(2\) and
+negative for the tower of \(5\). In the target range, \(n=151\), it is
+positive at \(p=2\) and negative at \(p=7\). More generally, as a
+continuous function of the position of a tower, it has both signs for
+every \(n\ge2\).
 
-Esta afirmación local no se confunde con la forma zeta infinita: los padres
-que quedan fuera de \(\{1,p,p^2\}\) aportan términos adicionales. La forma
-infinita también es indefinida, pero requiere otro testigo. En
-\(s=2,p=2\), el vector abstracto \((a,b)=(1,-1)\), soportado en
-\(\{2,4\}\), da exactamente \((3\zeta(2)-5)/16<0\), mientras
-\((1,0)\) da signo positivo. No se obtuvo aquí ambos signos de la forma
-infinita sobre el **vector Laguerre fijo**.
+This local statement must not be confused with the infinite zeta form: the
+parents outside \(\{1,p,p^2\}\) contribute additional terms. The infinite
+form is also indefinite, but requires another witness. At
+\(s=2,p=2\), the abstract vector \((a,b)=(1,-1)\), supported on
+\(\{2,4\}\), gives exactly \((3\zeta(2)-5)/16<0\), while
+\((1,0)\) gives positive sign. Both signs of the infinite form were not
+obtained here on the **fixed Laguerre vector**.
 
-El inverso simple \(M\) sí distingue a zeta del falsificador
-\(\zeta(s+c)\zeta(s-c)\): para éste el selector condicionado contiene los
-coeficientes del cofactor y no es uniforme. Pero la distinción no aporta un
-signo, porque (3) ya falla para los pesos reales de zeta. Si se polariza la
-diagonal para volver a una forma lineal, se obtiene una diferencia de dos
-cuadrados sin orientación; si después se exige aditividad, el Teorema
-`104_53` fuerza el retorno a los cumulantes de una torre y a
+The simple inverse \(M\) does distinguish zeta from the falsifier
+\(\zeta(s+c)\zeta(s-c)\): for the latter, the conditioned selector contains
+cofactor coefficients and is not uniform. But the distinction does not
+supply a sign, because (3) already fails for the real zeta weights. If the
+diagonal is polarized to return to a linear form, one gets an unoriented
+difference of two squares; if additivity is then required, Theorem
+`104_53` forces a return to single-tower cumulants and to
 \(B_n=A_n-\lambda_n\).
 
-Así queda descartado el mecanismo estrecho
+Thus the narrow mechanism
 
 ```text
-Palm de dos marcas + inversión Möbius doble
-+ positividad de la diagonal resultante
-=> reserva proporcional orientada para el vector Laguerre.
+two-mark Palm + double Möbius inversion
++ positivity of the resulting diagonal
+=> oriented proportional reserve for the Laguerre vector.
 ```
 
-No queda descartada una desigualdad no aditiva específica del grado que
-compare dos de las energías **antes** de la congruencia y que falle para el
-selector desplazado. Este documento no prueba
+is ruled out. A degree-specific non-additive inequality comparing two of
+the energies **before** the congruence, failing for the shifted selector,
+is not ruled out. This document does not prove
 
 \[
  B_n\le {1501\over2002}A_n\quad(n\ge150),                 \tag{4}
 \]
 
-ni A1 ni RH.
+nor A1 nor RH.
 
-## 0. Auditoría respecto de `104_12`, `104_50` y `104_53`
+## 0. Audit against `104_12`, `104_50`, and `104_53`
 
-`104_50` construye el Palm de segundo orden y escribe el kernel `lcm`,
-pero no lo invierte. `104_52` toma su parte conectada y demuestra que los
-pares entre torres distintas se cancelan. Aquí no se vuelve a contar ninguno
-de esos resultados: se aplica la inversión de incidencia al kernel **no
-centrado** y se decide si su diagonal deja una reserva de orden.
+`104_50` builds the second-order Palm and writes the `lcm` kernel,
+but does not invert it. `104_52` takes its connected part and proves that
+pairs between distinct towers cancel. None of those results is recounted
+here: incidence inversion is applied to the **uncentered** kernel and it is
+decided whether its diagonal leaves an order reserve.
 
-La congruencia (2) tampoco contradice el Teorema 1 de `104_12`. Allí se
-descarta una métrica positiva fija con \(M=Z^\dagger\). Aquí no se identifica
-el inverso con el adjunto: \(K=Z^TWZ\) es el Gram creado por \(Z\), y
-\(M^TKM=W\) es solamente el cambio inverso de coordenadas. Precisamente por
-eso no implica \(K\succeq W\) ni \(K\preceq W\), como prueba la Sección 3.
+Congruence (2) also does not contradict Theorem 1 of `104_12`. There, a
+fixed positive metric with \(M=Z^\dagger\) is ruled out. Here the inverse is
+not identified with the adjoint: \(K=Z^TWZ\) is the Gram matrix created by
+\(Z\), and \(M^TKM=W\) is only the inverse change of coordinates. Precisely
+for that reason it does not imply \(K\succeq W\) nor \(K\preceq W\), as
+Section 3 proves.
 
-Finalmente, `104_53` clasifica las recomposiciones aditivas después de tomar
-momentos. El contenido nuevo y estrecho de este documento es que tampoco
-queda una reserva automática si se evita primero la proyección conectada y
-se invierte directamente la forma cuadrática completa.
+Finally, `104_53` classifies the additive recompositions after taking
+moments. The new and narrow content of this document is that no automatic
+reserve is left either if the connected projection is avoided first and the
+full quadratic form is inverted directly.
 
-## 1. El kernel `lcm` es un Gram divisor
+## 1. The `lcm` kernel is a divisor Gram matrix
 
-Sea \({\cal D}\) un conjunto finito cerrado por divisores. Indexamos filas
-y columnas por \({\cal D}\) y ponemos
+Let \({\cal D}\) be a finite set closed under divisors. Index rows
+and columns by \({\cal D}\) and set
 
 \[
  Z_{m,d}={\bf1}_{d\mid m},\qquad
  W=\mathrm{diag}(w_m:m\in{\cal D}),\qquad w_m>0.  \tag{5}
 \]
 
-Para dos funciones \(a,b\) sobre \({\cal D}\), su renovación divisora es
+For two functions \(a,b\) on \({\cal D}\), their divisor renewal is
 
 \[
  (Za)(m)=\sum_{d\mid m}a(d).                              \tag{6}
 \]
 
-La forma cuadrática de dos marcas vale
+The two-mark quadratic form equals
 
 \[
  \begin{aligned}
@@ -120,69 +123,69 @@ La forma cuadrática de dos marcas vale
  \end{aligned}
 \]
 
-Luego, con
+Then, with
 
 \[
  K_{d,e}:=\sum_{\substack{m\in{\cal D}\\[d,e]\mid m}}w_m,
                                                                \tag{8}
 \]
 
-se tiene \(K=Z^TWZ\). Si se quita el cutoff y \(w_m=m^{-s}\),
-convergencia absoluta da
+one has \(K=Z^TWZ\). Removing the cutoff with \(w_m=m^{-s}\),
+absolute convergence gives
 
 \[
  K_{d,e}=\sum_{[d,e]\mid m}m^{-s}
  =\zeta(s)[d,e]^{-s},                                    \tag{9}
 \]
 
-El kernel probabilístico de `104_50`, ecuación (14), es
-\([d,e]^{-s}\); (9) es exactamente \(\zeta(s)\) veces ese kernel porque
-aquí no se dividió la suma de padres por la normalización \(\zeta(s)\).
+The probabilistic kernel of `104_50`, equation (14), is
+\([d,e]^{-s}\); (9) is exactly \(\zeta(s)\) times that kernel because
+here the sum over parents was not divided by the normalization \(\zeta(s)\).
 
-Equivalentemente, si
+Equivalently, if
 
 \[
  \widehat W_s=\zeta(s)^{-1}W_s,\qquad
  \widehat K_s=\zeta(s)^{-1}K_s,
 \]
 
-entonces el kernel probabilístico y su congruencia son
+then the probabilistic kernel and its congruence are
 
 \[
  \boxed{\widehat K_s(d,e)=[d,e]^{-s},\qquad
  M^T\widehat K_sM=\widehat W_s.}                          \tag{9a}
 \]
 
-La normalización multiplica simultáneamente las dos energías por el
-escalar positivo \(\zeta(s)^{-1}\), de modo que no cambia ningún signo.
+The normalization multiplies both energies simultaneously by the
+positive scalar \(\zeta(s)^{-1}\), so it changes no sign.
 
-La matriz de inversión de incidencia es
+The incidence inversion matrix is
 
 \[
  M_{m,d}=\mu(m/d){\bf1}_{d\mid m},\qquad ZM=MZ=I.        \tag{10}
 \]
 
-Por consiguiente
+Consequently
 
 \[
  M^TKM=M^TZ^TWZM=(ZM)^TW(ZM)=W,                          \tag{11}
 \]
 
-lo que prueba (2). La conclusión es exacta: una doble inversión del kernel
-no puede dejar simultáneamente una diagonal positiva y una correlación
-residual entre primos distintos. La primera es todo lo que queda después de
-cancelar la segunda.
+which proves (2). The conclusion is exact: a double inversion of the kernel
+cannot simultaneously leave a positive diagonal and a residual correlation
+between distinct primes. The first is all that remains after canceling the
+second.
 
-## 2. Aplicación a la renovación unitaria
+## 2. Application to the unit renewal
 
-Para un test \(f\), defina
+For a test \(f\), define
 
 \[
  v_f(d)=\Lambda(d)f(\log d),\qquad
  J_f(m)=\sum_{d\mid m}\Lambda(d)f(\log d).               \tag{12}
 \]
 
-Entonces \(J_f=Zv_f\), y (7)--(9) dan
+Then \(J_f=Zv_f\), and (7)--(9) give
 
 \[
  \sum_{m\ge1}{J_f(m)J_g(m)\over m^s}
@@ -190,43 +193,43 @@ Entonces \(J_f=Zv_f\), y (7)--(9) dan
  f(\log d)g(\log e)\over[d,e]^s}.                        \tag{13}
 \]
 
-La inversión \(v_f=MJ_f\) utiliza de manera completa
-\(\Lambda*1=\log\). Pero sustituirla en (13) solo recupera
+The inversion \(v_f=MJ_f\) fully uses
+\(\Lambda*1=\log\). But substituting it into (13) only recovers
 
 \[
  \langle J_f,J_g\rangle_W
  =\langle v_f,Kv_g\rangle;
 \]
 
-no aparece una tercera forma. En particular, la diagonal de (11) contiene
-\(\Lambda(d)^2f(\log d)g(\log d)\), mientras que el funcional que define
-\(B_n\) es lineal en \(\Lambda(d)\). Para regresar a una forma lineal hay
-que polarizar contra un ancla \(u\):
+no third form appears. In particular, the diagonal of (11) contains
+\(\Lambda(d)^2f(\log d)g(\log d)\), whereas the functional defining
+\(B_n\) is linear in \(\Lambda(d)\). To return to a linear form one must
+polarize against an anchor \(u\):
 
 \[
  4\langle v,u\rangle_W
  =\|v+u\|_W^2-\|v-u\|_W^2.                               \tag{14}
 \]
 
-La ecuación (14) recupera la orientación que se busca únicamente como una
-diferencia de dos energías positivas. La positividad de cada energía no
-decide el signo de su diferencia.
+Equation (14) recovers the sought orientation only as a difference of two
+positive energies. The positivity of each energy does not decide the sign
+of their difference.
 
-## 3. La supuesta reserva: cutoff finito y kernel infinito
+## 3. The supposed reserve: finite cutoff and infinite kernel
 
-Considere el poset divisor
+Consider the divisor poset
 
 \[
  {\cal D}=\{1,p,p^2\}
 \]
 
-y un vector \(v=(0,a,b)^T\). Entonces
+and a vector \(v=(0,a,b)^T\). Then
 
 \[
  Zv=(0,a,a+b)^T,
 \]
 
-de modo que, para cualquier diagonal positiva \(W\),
+so that, for any positive diagonal \(W\),
 
 \[
  \boxed{
@@ -235,15 +238,15 @@ de modo que, para cualquier diagonal positiva \(W\),
  =w_{p^2}(a^2+2ab).}                                     \tag{15}
 \]
 
-Con \((a,b)=(1,0)\), (15) es positiva; con
-\((a,b)=(1,-1)\), es negativa. Por tanto ni \(K-W\succeq0\) ni
-\(W-K\succeq0\) uniformemente sobre los cutoffs finitos, aun restringiendo
-a vectores nulos en \(1\). Este es un testigo de tres puntos, independiente
-de toda estimación analítica.
+With \((a,b)=(1,0)\), (15) is positive; with
+\((a,b)=(1,-1)\), it is negative. Hence neither \(K-W\succeq0\) nor
+\(W-K\succeq0\) uniformly over finite cutoffs, even restricting to vectors
+vanishing at \(1\). This is a three-point witness, independent of any
+analytic estimate.
 
-Para evitar extrapolar ese cálculo al kernel infinito, calculemos este
-último por separado. Con \(v\) soportado en \(p,p^2\), (1) y la diagonal
-\(W_s(m,m)=m^{-s}\) dan
+To avoid extrapolating that computation to the infinite kernel, let us
+compute the latter separately. With \(v\) supported on \(p,p^2\), (1) and
+the diagonal \(W_s(m,m)=m^{-s}\) give
 
 \[
 \boxed{
@@ -254,14 +257,14 @@ Para evitar extrapolar ese cálculo al kernel infinito, calculemos este
  \end{aligned}}                                           \tag{15a}
 \]
 
-En \(s=2,p=2\), \((a,b)=(1,0)\) hace (15a) positiva. Para
+At \(s=2,p=2\), \((a,b)=(1,0)\) makes (15a) positive. For
 \((a,b)=(1,-1)\),
 
 \[
  \mathscr R_2^{\infty}(1,-1)={3\zeta(2)-5\over16}<0.      \tag{15b}
 \]
 
-La desigualdad es elemental y no usa una evaluación decimal:
+The inequality is elementary and does not use a decimal evaluation:
 
 \[
  \zeta(2)<1+{1\over4}+{1\over9}+{1\over16}+{1\over25}
@@ -269,11 +272,11 @@ La desigualdad es elemental y no usa una evaluación decimal:
  ={5989\over3600}<{5\over3}.                              \tag{15c}
 \]
 
-Así, la forma zeta infinita también carece de orden operatorial universal.
-Las ecuaciones (15a)--(15c) no afirman todavía nada sobre el vector fijo
-Laguerre.
+Thus the infinite zeta form also lacks a universal operator ordering.
+Equations (15a)--(15c) still assert nothing about the fixed Laguerre
+vector.
 
-Ahora use el vector real de A1,
+Now use the real A1 vector,
 
 \[
  P_n(x)=L_{n-1}^{(1)}(x),\qquad
@@ -281,7 +284,7 @@ Ahora use el vector real de A1,
  b=(\log p)P_n(2\log p).                                 \tag{16}
 \]
 
-La reserva de cutoff de esa torre es exactamente
+The cutoff reserve of that tower is exactly
 
 \[
  \boxed{
@@ -289,93 +292,95 @@ La reserva de cutoff de esa torre es exactamente
  \{P_n(x)+2P_n(2x)\},\qquad x=\log p.}                  \tag{17}
 \]
 
-No se ha reemplazado una potencia superior ni tomado el módulo del
-Laguerre. En \(n=2\), \(P_2(x)=2-x\), y (17) tiene el signo de
+No higher power has been replaced, nor has the modulus of the
+Laguerre polynomial been taken. At \(n=2\), \(P_2(x)=2-x\), and (17) has
+the sign of
 
 \[
  (2-x)(6-5x).                                             \tag{18}
 \]
 
-Las cotas elementales
+The elementary bounds
 
 \[
  {1\over2}<\log2<1,\qquad {3\over2}<\log5<{5\over3}    \tag{19}
 \]
 
-muestran que (18) es positiva para \(p=2\) y negativa para \(p=5\).
-Las desigualdades (19), por ejemplo, siguen de
-\(8/3<e<11/4\), certificado directamente por la serie de \(e\).
+show that (18) is positive for \(p=2\) and negative for \(p=5\).
+Inequalities (19), for instance, follow from
+\(8/3<e<11/4\), certified directly by the series for \(e\).
 
-La obstrucción local alcanza directamente el rango objetivo.
-El checker encierra \(\log2\) y \(\log7=3\log2-\log(8/7)\) mediante la
-serie racional de \(\mathrm{atanh}\,\), y evalúa \(P_{151}\) por
-Horner intervalar con `Fraction`. Certifica
+The local obstruction reaches directly into the target range.
+The checker brackets \(\log2\) and \(\log7=3\log2-\log(8/7)\) via the
+rational series for \(\mathrm{atanh}\,\), and evaluates \(P_{151}\) by
+interval Horner with `Fraction`. It certifies
 
 \[
 \begin{array}{c|c|c}
 p&P_{151}(\log p)\{P_{151}(\log p)+2P_{151}(2\log p)\}
-&\text{signo}\\ \hline
+&\text{sign}\\ \hline
 2&[9.59561939937104,\,9.59561939937106]&+\\
 7&[-6.33518557015695,\,-6.33518557015693]&-
 \end{array}                                                \tag{20}
 \]
 
-Los decimales de (20) son solo una presentación de intervalos racionales:
-las aserciones del checker son \(q_{\rm low}>0\) y \(q_{\rm high}<0\).
-Así, la **reserva local de cutoff** falla en ambas direcciones sobre el
-vector fijo real de \(n=151\), sin alterar
-\(\Lambda(p^k)=\log p\). No se deduce de (20) que la forma infinita
-completa tenga esos signos sobre el mismo vector; esa afirmación se retira.
+The decimals in (20) are only a presentation of rational intervals:
+the checker's assertions are \(q_{\rm low}>0\) and \(q_{\rm high}<0\).
+Thus the **local cutoff reserve** fails in both directions on the
+fixed real vector for \(n=151\), without altering
+\(\Lambda(p^k)=\log p\). It does not follow from (20) that the full
+infinite form has those signs on the same vector; that claim is withdrawn.
 
-El cambio de signo no es especial del grado dos. Sea \(r_n\) el mayor cero
-de \(P_n\), que es simple. Para \(x<r_n\) suficientemente próximo a
-\(r_n\), \(P_n(x)\) tiene signo opuesto al coeficiente líder, mientras
-\(P_n(2x)\) tiene el signo del coeficiente líder. Así (17), como función de
-una posición continua de torre, es negativa. Para \(x>r_n\) suficientemente
-grande, tanto \(P_n(x)\) como \(P_n(2x)\), y por tanto también
-\(P_n(x)+2P_n(2x)\), tienen el signo del coeficiente líder; (17) es
-positiva. Esto prueba ambos signos de la geometría exacta para todo
-\(n\ge2\). El testigo con
-primos reales en (19) basta para descartar un orden operatorial universal;
-no pretende descartar una desigualdad especial aún desconocida solo para
-los grados \(n\ge150\).
+The sign change is not special to degree two. Let \(r_n\) be the largest
+zero of \(P_n\), which is simple. For \(x<r_n\) sufficiently close to
+\(r_n\), \(P_n(x)\) has sign opposite to the leading coefficient, while
+\(P_n(2x)\) has the sign of the leading coefficient. Thus (17), as a
+function of a continuous tower position, is negative. For \(x>r_n\)
+sufficiently large, both \(P_n(x)\) and \(P_n(2x)\), and hence also
+\(P_n(x)+2P_n(2x)\), have the sign of the leading coefficient; (17) is
+positive. This proves both signs of the exact geometry for every
+\(n\ge2\). The witness with
+real primes in (19) suffices to rule out a universal operator ordering;
+it does not claim to rule out a still-unknown special inequality only for
+degrees \(n\ge150\).
 
-## 4. El polo se diagonaliza del mismo modo
+## 4. The pole is diagonalized the same way
 
-El comparador continuo de (9) es el operador de Volterra
+The continuous comparator of (9) is the Volterra operator
 
 \[
  (Vh)(x)=\int_0^xh(y)\,dy
 \]
 
-en \(L^2(e^{-\varepsilon x}dx)\). Su kernel de Gram es
+on \(L^2(e^{-\varepsilon x}dx)\). Its Gram kernel is
 
 \[
  K_0(y,z)=\int_{\max(y,z)}^\infty e^{-\varepsilon x}dx
  ={e^{-\varepsilon\max(y,z)}\over\varepsilon}.           \tag{21}
 \]
 
-La derivada es el inverso de \(V\) sobre su dominio natural, y por tanto
-diagonaliza (21) exactamente igual que Möbius diagonaliza (9). Restar los
-dos canales después de invertir produce una diferencia de energías
-diagonales, no una energía positiva conjunta. El canal Gamma de A1 es otra
-diagonal explícita, pero (2) no da una comparación entre esas tres
-diagonales.
+The derivative is the inverse of \(V\) on its natural domain, and hence
+diagonalizes (21) in exactly the same way that Möbius diagonalizes (9).
+Subtracting the two channels after inverting produces a difference of
+diagonal energies, not a joint positive energy. The Gamma channel of A1 is
+another explicit diagonal, but (2) gives no comparison between those three
+diagonals.
 
-Esto localiza el fallo sin separar el polo en la identidad original: la
-inversión es compatible con ambos canales, pero no orienta su resta. Una
-cota que comparase directamente esas diagonales sobre \(P_n\) sería un
-teorema adicional, no una consecuencia de la incidencia de Möbius.
+This localizes the failure without separating the pole in the original
+identity: the inversion is compatible with both channels, but does not
+orient their difference. A bound directly comparing those diagonals on
+\(P_n\) would be an additional theorem, not a consequence of Möbius
+incidence.
 
-## 5. Falsificador desplazado y tricotomía de cierre
+## 5. Shifted falsifier and closure trichotomy
 
-Para
+For
 
 \[
  Z_c(s)=\zeta(s+c)\zeta(s-c)
 \]
 
-la renovación condicionada en \(p^a\) es, con la notación de `104_49`,
+the renewal conditioned on \(p^a\) is, with the notation of `104_49`,
 
 \[
  \pi_{a,c}(k)
@@ -383,44 +388,44 @@ la renovación condicionada en \(p^a\) es, con la notación de `104_49`,
  \qquad r=p^c.                                            \tag{22}
 \]
 
-En \(a=2\),
+At \(a=2\),
 
 \[
  \pi_{2,c}(1)={1\over2}+{1\over2b_2(r)},\qquad
  \pi_{2,c}(2)={1\over2}-{1\over2b_2(r)}.                \tag{23}
 \]
 
-Así la matriz de renovación condicionada desplazada no es la matriz de
-incidencia unitaria \(Z\), y el inverso simple
-\(M\) de (10) no la deshace. La congruencia (2) usa una propiedad real que
-el falsificador no posee. Sin embargo, no demuestra el margen: la reserva
-propuesta es indefinida como orden operatorial tanto en cutoffs finitos,
-por (15), como para el kernel zeta infinito, por (15a)--(15c). El test fijo
-(20) refuta solamente la versión local de torre.
+Thus the shifted conditioned renewal matrix is not the unit incidence
+matrix \(Z\), and the simple inverse
+\(M\) of (10) does not undo it. Congruence (2) uses a real property that
+the falsifier does not have. However, it does not prove the margin: the
+proposed reserve is indefinite as an operator ordering both on finite
+cutoffs, by (15), and for the infinite zeta kernel, by (15a)--(15c). The
+fixed test (20) refutes only the local tower version.
 
-Después de la inversión solo quedan tres opciones:
+After the inversion only three options remain:
 
-1. conservar la diagonal cuadrática: se pierde la orientación lineal;
-2. polarizarla: se obtiene la diferencia no orientada (14);
-3. recomponer un observable aditivo: por `104_53`, se vuelve a una
-   combinación de cumulantes de una torre y, para el Laguerre, a
+1. keep the quadratic diagonal: linear orientation is lost;
+2. polarize it: one obtains the unoriented difference (14);
+3. recompose an additive observable: by `104_53`, one returns to a
+   combination of single-tower cumulants and, for Laguerre, to
    \(\mathcal B_{n,s}\to B_n\).
 
-Ninguna de las tres opciones aporta la reserva
-\((1501/2002)A_n-B_n\). El único sucesor compatible con este gate es una
-desigualdad no aditiva, dependiente del vector \(P_n\), aplicada **antes**
-de la congruencia y con un término explícito que domine el canal
-Euler--polo--Gamma. No se construyó tal desigualdad aquí.
+None of the three options supplies the reserve
+\((1501/2002)A_n-B_n\). The only successor compatible with this gate is a
+non-additive inequality, depending on the vector \(P_n\), applied
+**before** the congruence and with an explicit term dominating the
+Euler--pole--Gamma channel. No such inequality is constructed here.
 
-## 6. Reproducción
+## 6. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 mobius_inverted_lcm_reserve_gate_check.py
 ```
 
-El checker usa solo enteros y `Fraction`. Verifica la factorización Gram,
-la inversión doble con y sin normalización, los dos signos de la reserva en
-la torre mínima, el testigo infinito (15b)--(15c), los testigos Laguerre
-racionales en \(n=2\) y \(n=151\), y la no uniformidad racional del
-selector desplazado.
+The checker uses only integers and `Fraction`. It verifies the Gram
+factorization, the double inversion with and without normalization, the
+two signs of the reserve on the minimal tower, the infinite witness
+(15b)--(15c), the rational Laguerre witnesses at \(n=2\) and \(n=151\), and
+the rational non-uniformity of the shifted selector.

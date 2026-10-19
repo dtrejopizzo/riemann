@@ -1,6 +1,6 @@
 # E78.137 - `mu_N -> 0` convergence gate: Branch A vs Branch B, corrected
 
-**Run:** 2026-07-18 (buggy run), corrected 2026-07-20.
+**Run:** (buggy run), corrected .
 **Question:** for the inner-block operator sequence `A_N = H_L[1:-1,1:-1]`
 (the E77.7d/E78.1 operator, `nu_0^{(N)} <= nu_1^{(N)} <= ...` its ordered
 eigenvalues), does `nu_1^{(N)}` converge to a strictly positive limit

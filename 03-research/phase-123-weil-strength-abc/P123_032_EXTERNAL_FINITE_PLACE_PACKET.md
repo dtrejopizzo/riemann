@@ -1,6 +1,6 @@
 # P123.032 — external finite-place packets and compact-support stabilization
 
-Date: 2026-09-05. Status: PROVED for the nonunit local integral,
+Status: PROVED for the nonunit local integral,
 its normalized external-class coordinates and compact-support
 stabilization. This does not identify the packet with the common
 carrier shadow, nor supply the unit/archimedean/polar contributions.

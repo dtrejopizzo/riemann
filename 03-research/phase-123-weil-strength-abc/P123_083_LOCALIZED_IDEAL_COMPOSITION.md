@@ -1,6 +1,6 @@
 # P123.083 — Noninvertible localized correspondences and exact composition
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for the original rapid
+Status: PROVED-IN-REPOSITORY for the original rapid
 C_0 coefficient ideals inside the unital algebra A of P123.019.
 This supplies localized objects beyond P123.082. It does not close row A.
 

@@ -1,103 +1,103 @@
-# Auditoría lógica de `36-obstruction-ledger`
+# Logic audit of `36-obstruction-ledger`
 
-## Dictamen
+## Verdict
 
-El manuscrito no demuestra RH: su propia Step 5, ARP-P, queda abierta y es equivalente a RH. La auditoría **sí confirma**, con las salvedades de interfaz clásica indicadas abajo, la arquitectura formal
+The manuscript does not prove RH: its own Step 5, ARP-P, remains open and is equivalent to RH. The audit **does confirm**, with the classical interface caveats noted below, the formal architecture
 
 \[
  \mathrm{ARP\!\!\text{-}P}\Longleftrightarrow\mathrm{RH}.
 \]
 
-Esto es una equivalencia condicional útil: si se estableciera ARP-P, el puente de Pick--Nevanlinna elimina los polos no reales y da RH; bajo RH, los canales son transformadas de Cauchy de medidas positivas. No convierte la positividad aritmética en algo más débil que RH.
+This is a useful conditional equivalence: if ARP-P were established, the Pick–Nevanlinna bridge removes the non-real poles and gives RH; under RH, the channels are Cauchy transforms of positive measures. It does not turn arithmetic positivity into something weaker than RH.
 
-No queda confirmada la afirmación más amplia de que “todo salvo Step 5” esté demostrado en el sentido que sugieren el resumen, el mapa de estado y el epílogo. Hay lemas y teoremas auxiliares presentados como cerrados que son sólo bosquejos, consecuencias condicionales, cálculos finitos, propuestas, o usos de una realización construida fuera del manuscrito. Algunos fallos son de tipado lógico concreto, no sólo ausencia de detalle.
+The broader claim that "everything except Step 5" is proved in the sense suggested by the summary, the status map and the epilogue is not confirmed. There are auxiliary lemmas and theorems presented as closed that are only sketches, conditional consequences, finite computations, proposals, or uses of a realization constructed outside the manuscript. Some failures are of concrete logical typing, not merely missing detail.
 
-Convención de esta auditoría:
+Convention of this audit:
 
-| Marca | Sentido |
+| Mark | Meaning |
 |---|---|
-| Confirmado | La conclusión sigue de las hipótesis expresas, con un insumo clásico identificado. |
-| Condicional | Correcto sólo tras añadir una hipótesis que no se ha probado aquí. |
-| Parcial | Cubre un régimen finito, separado, de altura grande, casi todo punto, o una clase delimitada; no la afirmación global. |
-| No confirmado | Falta una demostración, se usa un resultado declarado bosquejo, la cuantificación no está formalizada o hay una incompatibilidad de tipos. |
+| Confirmed | The conclusion follows from the stated hypotheses, with an identified classical input. |
+| Conditional | Correct only after adding a hypothesis not proved here. |
+| Partial | Covers a finite, separated, large-height, almost-everywhere regime, or a bounded class; not the global claim. |
+| Not confirmed | A proof is missing, a result declared a sketch is used, the quantification is not formalized, or there is a type mismatch. |
 
-En particular, “cerrado en el manuscrito” no equivale a “confirmado por esta auditoría”.
+In particular, "closed in the manuscript" is not equivalent to "confirmed by this audit".
 
-## Alcance y estratificación correcta
+## Scope and correct stratification
 
-Hay cuatro niveles que no deben intercambiarse.
+There are four levels that must not be interchanged.
 
-1. **Cadena Step 1--15.** Construcciones y equivalencias lógicas sobre la función objetivo ya definida mediante los ceros.
-2. **H0--H8.** Descomposición exploratoria de Step 5. Sus subcasos no son Steps y no prueban ARP-P salvo que cubran todos los cuantificadores.
-3. **Cadena \(\Omega\).** Reexpresiones de la dificultad terminal. Varias equivalencias se obtienen pasando por RH; no son una deducción aritmética directa.
-4. **Torre/realización, muestreo, cascada y rutas de cierre.** Certificados candidatos o análisis auxiliares. No deben promocionarse a prueba de Step 5.
+1. **Step 1–15 chain.** Constructions and logical equivalences on the target function already defined via the zeros.
+2. **H0–H8.** Exploratory decomposition of Step 5. Its subcases are not Steps and do not prove ARP-P unless they cover all the quantifiers.
+3. **\(\Omega\) chain.** Re-expressions of the terminal difficulty. Several equivalences are obtained by passing through RH; they are not a direct arithmetic deduction.
+4. **Tower/realization, sampling, cascade and closure routes.** Candidate certificates or auxiliary analyses. They must not be promoted to a proof of Step 5.
 
-La primera premisa no derivada de la cadena central es exactamente ARP-P. La primera premisa no derivada de la narración operatorial es aún anterior: la existencia de los operadores auto-adjuntos \(A_P^\circ\), su compatibilidad con los datos aritméticos y la convergencia de sus compresiones. El texto admite expresamente que esa construcción se hizo “elsewhere” y no se demuestra aquí (`main.tex:7675-7686`).
+The first premise not derived from the central chain is exactly ARP-P. The first premise not derived from the operator narrative is even earlier: the existence of the self-adjoint operators \(A_P^\circ\), their compatibility with the arithmetic data, and the convergence of their compressions. The text expressly admits that this construction was done "elsewhere" and is not proved here (`main.tex:7675-7686`).
 
-## Step 1--15: estado auditado
+## Step 1–15: audited status
 
-| Steps | Estado auditado | Razón y primer punto no derivado |
+| Steps | Audited status | Reason and first non-derived point |
 |---|---|---|
-| 1 | Confirmado | El cambio \(s=\tfrac12+iz\), las simetrías de \(\Xi\) y la traducción de RH a realidad de ceros son correctos (`2067-2131`). |
-| 2--3 | Confirmado | Para el core declarado, el decaimiento horizontal y \(N(T)=O(T\log T)\) dan convergencia normal de la serie de canales y los residuos indicados (`2133-2261`). Es una definición por el lado de ceros, no una realización aritmética. |
-| 4 | Confirmado como interfaz clásica | La admisibilidad del test se verifica y el paso usa la fórmula explícita en una clase de pruebas holomorfa en tira (`2262-2399`). El primer insumo externo es precisamente esa versión de la fórmula explícita; no es una prueba nueva de una identidad de torre. |
-| 5 | Abierto, correctamente rotulado | ARP-P cuantifica sobre **todo** plano fuente finito y **todo** conjunto finito de nodos (`2400-2453`). Éste es el primer input no demostrado de la cadena. |
-| 6--7 | Confirmado, condicional en la torre | La identidad de Cauchy para medidas positivas y el cierre del cono PSD son correctos. Step 7 sólo dice `tower-ARP => ARP-P`; no construye tower-ARP (`8032-8164`). |
-| 8 | Confirmado con el teorema matricial NP | La reducción por Cayley y el tratamiento semidefinido son adecuados si se acepta el NP matricial clásico citado (`8165-8303`). |
-| 9--11 | Confirmado como consecuencia de ARP-P | El pinning evita que una sucesión de interpolantes escape por la transformación de Cayley; identidad analítica y detección de residuos dan la remoción de polos (`8188-8428`). Es una consecuencia condicional, no una prueba independiente de normalidad de la torre. |
-| 12--13 | Confirmado | Las simetrías trasladan la ausencia de polos de \(\Omega_-\) al semiplano opuesto y la traducción final es Step 1 (`8429-8464`). |
-| 14 | Confirmado | Bajo RH, la medida de cada canal es finita y positiva, por lo que su transformada de Cauchy tiene kernel Pick positivo (`8465-8499`). |
-| 15 | Confirmado como ensamblaje | Une las dos implicaciones anteriores (`8500-8538`). |
+| 1 | Confirmed | The change \(s=\tfrac12+iz\), the symmetries of \(\Xi\) and the translation of RH into reality of zeros are correct (`2067-2131`). |
+| 2–3 | Confirmed | For the stated core, horizontal decay and \(N(T)=O(T\log T)\) give normal convergence of the channel series and the indicated residues (`2133-2261`). It is a definition on the zero side, not an arithmetic realization. |
+| 4 | Confirmed as a classical interface | Test admissibility is verified and the step uses the explicit formula on a strip-holomorphic test class (`2262-2399`). The first external input is precisely that version of the explicit formula; it is not a new proof of a tower identity. |
+| 5 | Open, correctly labeled | ARP-P quantifies over **every** finite source plane and **every** finite set of nodes (`2400-2453`). This is the first unproved input of the chain. |
+| 6–7 | Confirmed, conditional on the tower | The Cauchy identity for positive measures and the closure of the PSD cone are correct. Step 7 only states `tower-ARP => ARP-P`; it does not construct tower-ARP (`8032-8164`). |
+| 8 | Confirmed with the matrix NP theorem | The Cayley reduction and the semidefinite treatment are adequate if the cited classical matrix NP is accepted (`8165-8303`). |
+| 9–11 | Confirmed as a consequence of ARP-P | Pinning prevents a sequence of interpolants from escaping under the Cayley transform; analytic identity and residue detection give pole removal (`8188-8428`). It is a conditional consequence, not an independent proof of tower normality. |
+| 12–13 | Confirmed | The symmetries translate the absence of poles of \(\Omega_-\) to the opposite half-plane and the final translation is Step 1 (`8429-8464`). |
+| 14 | Confirmed | Under RH, the measure of each channel is finite and positive, so its Cauchy transform has a positive Pick kernel (`8465-8499`). |
+| 15 | Confirmed as an assembly | Joins the two previous implications (`8500-8538`). |
 
-Por tanto, la frase prudente y exacta sería: **la equivalencia estructural ARP-P--RH está cerrada, mientras que ARP-P no lo está**. Steps 9 y 11 no son “cerrados sin condición”; son teoremas condicionales correctamente formulados así en parte del texto, pero el cómputo “catorce cerrados” debe conservar esa calificación.
+Hence the prudent and exact statement would be: **the structural equivalence ARP-P–RH is closed, while ARP-P itself is not**. Steps 9 and 11 are not "closed unconditionally"; they are conditional theorems correctly stated as such in part of the text, but the count "fourteen closed" must keep that qualification.
 
-## La realización y la normalidad: qué está y qué no está disponible
+## The realization and normality: what is and is not available
 
-La capa `7676-8031` contiene resultados válidos **si** se conceden auto-adjuntez, cota uniforme de fuentes y convergencia de torre. En particular:
+Layer `7676-8031` contains results valid **if** self-adjointness, a uniform source bound and tower convergence are granted. In particular:
 
-- la cota de masa de los vectores fuente se deduce de la suma absolutamente convergente una vez que la forma de celdas y el shorting existen (`7785-7915`);
-- la compacidad de medidas espectrales y el puente de Cauchy son correctos bajo esas hipótesis (`7922-8029`);
-- tower-ARP es una condición de convergencia, no una consecuencia demostrada de \(\Lambda\ge0\) (`8129-8164`).
+- the mass bound of the source vectors is deduced from the absolutely convergent sum once the cell form and the shorting exist (`7785-7915`);
+- compactness of spectral measures and the Cauchy bridge are correct under those hypotheses (`7922-8029`);
+- tower-ARP is a convergence condition, not a proved consequence of \(\Lambda\ge0\) (`8129-8164`).
 
-Pero el párrafo inicial de la sección presupone la construcción de \(A_P^\circ\), la forma canónica de von Mangoldt y la compatibilidad de las fuentes, y remite todo ello fuera del texto (`7675-7686`). La afirmación “\(\Lambda\ge0\) hace los \(A_P\) auto-adjuntos” no sustituye una construcción con la identidad límite
+But the opening paragraph of the section presupposes the construction of \(A_P^\circ\), the canonical von Mangoldt form and source compatibility, and defers all of that outside the text (`7675-7686`). The claim "\(\Lambda\ge0\) makes the \(A_P\) self-adjoint" does not substitute for a construction with the limiting identity
 
 \[
  (\Phi_P^F)^*(A_P^\circ-z)^{-1}\Phi_P^F\longrightarrow G_\Xi^F.
 \]
 
-Ese límite es tower-ARP y, por la propia cadena, implicaría RH. La auditoría confirma los teoremas de la forma “si existe tal torre, entonces…”, pero no confirma que el programa ya disponga de la torre. Tampoco confirma “sólo hay una dirección divergente”: `rank-one pole isolation` demuestra sumabilidad de masas de fuentes, no una cota operatorial global de todo complemento primitivo (`7715-7771`).
+That limit is tower-ARP and, by the chain itself, would imply RH. The audit confirms the theorems of the form "if such a tower exists, then…", but does not confirm that the program already has the tower. It also does not confirm "there is only one divergent direction": `rank-one pole isolation` proves summability of source masses, not a global operator bound on every primitive complement (`7715-7771`).
 
-## H0--H8: reconstrucción y primer corte de cada subcadena
+## H0–H8: reconstruction and first cut of each subchain
 
-| Nivel | Lo que realmente queda | Estado auditado / primer corte |
+| Level | What actually remains | Audited status / first cut |
 |---|---|---|
-| H0 | Conservación de dificultad. | Confirmado, pero es modus ponens; no localiza por sí solo una brecha matemática (`2941-2950`). |
-| H1 | Positividad Pick escalar de un nodo para \(M_\Xi\) en \(\Re s>1\). | Confirmado con la factorización de Hadamard simétrica. No es ARP-P de un nodo matricial: los pesos de canales tienen fase, como el propio texto reconoce (`2951-2985`). |
-| H2 | Criterio suficiente de Gershgorin para nodos separados dentro de una banda fija. | Parcial y confirmado como criterio. No cubre configuraciones separadas arbitrarias ni nodos que se acumulan (`2986-3023`). |
-| H3 | Desigualdad infinitesimal de dos nodos en una región logarítmica y casi en todo punto. | Parcial. PDH es una hipótesis abierta, no una clausura global (`3024-3316`). La etiqueta “closed” sólo es correcta con las regiones y cuantificadores escritos. |
-| H4 | Serialización por determinantes a lo largo de una sucesión acumulante. | Confirmado como equivalencia con RH, mediante `prefix-extension` (`3657-3696`). Es una serialización, no una cota de determinantes ni un método que evite RH. |
-| H5 | Positividad de ventanas \(\Longleftrightarrow\) ARP-P. | Confirmado en la clase de ventanas indicada, si se aceptan los intercambios dominados demostrados con el crecimiento de \(\psi^F\) (`3347-3374`). No descarga ninguna cuantificación de Step 5. |
-| H6 | Testigo negativo finito si RH falla. | Sólo la versión cualitativa está confirmada, pues es el contrarrecíproco de ARP-P \(\Rightarrow\) RH. La versión “cuantitativa cerrada” falla como se explica abajo. |
-| H7 | SOS Andreief/Vandermonde y positividad de dos nodos. | El SOS queda como programa. La clausura de banda sólo trata \(N=2\), banda compacta y altura común suficientemente grande (`4039-4054`, `4605-4667`). No justifica “todos los regímenes”. |
-| H8 | Patrones de \(N\) fijo, jets y cierre de banda; después el defecto terminal. | Confirmado para \(N\) fijo, banda separada del borde y traslación común de altura suficientemente grande (`3809-4054`, `4605-4682`). El primer punto no cubierto es la uniformidad en \(N\) para una sucesión acumulante a altura fija: exactamente la condición terminal. |
+| H0 | Preservation of difficulty. | Confirmed, but it is modus ponens; it does not by itself locate a mathematical gap (`2941-2950`). |
+| H1 | Scalar Pick positivity of one node for \(M_\Xi\) in \(\Re s>1\). | Confirmed with the symmetric Hadamard factorization. It is not ARP-P for a matrix node: the channel weights have phase, as the text itself acknowledges (`2951-2985`). |
+| H2 | Sufficient Gershgorin criterion for separated nodes within a fixed band. | Partial and confirmed as a criterion. It does not cover arbitrary separated configurations nor accumulating nodes (`2986-3023`). |
+| H3 | Infinitesimal two-node inequality in a logarithmic region and almost everywhere. | Partial. PDH is an open hypothesis, not a global closure (`3024-3316`). The "closed" label is correct only with the written regions and quantifiers. |
+| H4 | Serialization via determinants along an accumulating sequence. | Confirmed as an equivalence with RH, via `prefix-extension` (`3657-3696`). It is a serialization, not a determinant bound nor a method that avoids RH. |
+| H5 | Window positivity \(\Longleftrightarrow\) ARP-P. | Confirmed on the stated window class, if the dominated exchanges proved with the growth of \(\psi^F\) are accepted (`3347-3374`). It discharges no quantifier of Step 5. |
+| H6 | Finite negative witness if RH fails. | Only the qualitative version is confirmed, since it is the contrapositive of ARP-P \(\Rightarrow\) RH. The "closed quantitative" version fails as explained below. |
+| H7 | Andreief/Vandermonde SOS and two-node positivity. | The SOS remains a program. The band closure only handles \(N=2\), a compact band and common height large enough (`4039-4054`, `4605-4667`). It does not justify "all regimes". |
+| H8 | Fixed-\(N\) patterns, jets and band closure; then the terminal defect. | Confirmed for fixed \(N\), band separated from the boundary, and common height translation large enough (`3809-4054`, `4605-4682`). The first uncovered point is uniformity in \(N\) for a sequence accumulating at fixed height: exactly the terminal condition. |
 
-### H6: incompatibilidad concreta de normalización y falta de negatividad
+### H6: concrete normalization mismatch and lack of negativity
 
-La Proposición `H6 quantitative reduction` tiene como término local
+Proposition `H6 quantitative reduction` has as local term
 
 \[
 -\eta |\kappa|\,|r(w_0)|\,|r(\overline w_0)|,
 \]
 
-porque el texto declara que **no** normaliza el canal (`3406-3464`). Sin embargo, el Teorema `H6 quantitative single-cluster witness` reemplaza ese término por
+because the text declares that it does **not** normalize the channel (`3406-3464`). However, Theorem `H6 quantitative single-cluster witness` replaces that term with
 
 \[
 -2|r(w_0)|\,|r(\overline w_0)|
 \]
 
-sin el factor \(|\kappa|\) (`3530-3555`). No se ha impuesto \(|\kappa|=1\), y la fuente puede reescalarse. La conclusión tiene, por tanto, una incompatibilidad de tipos/normalización.
+without the \(|\kappa|\) factor (`3530-3555`). \(|\kappa|=1\) has not been imposed, and the source can be rescaled. The conclusion therefore has a type/normalization mismatch.
 
-Además, aun conservando \(|\kappa|\), las pruebas sólo producen
+Moreover, even keeping \(|\kappa|\), the proofs only produce
 
 \[
  \lambda_{\min}P\leq
@@ -105,77 +105,77 @@ Además, aun conservando \(|\kappa|\), las pruebas sólo producen
  B_{\rm far}\|r\|_{\rm far}^2}{\|c\|^2}.
 \]
 
-No se demuestra que el numerador sea negativo para cada configuración. El control de fase hace negativo el bloque local, pero no domina la cola. Por tanto se ha demostrado una **reducción a un testigo efectivo**: para datos locales, polos y una cota de cola dados se puede calcular un límite superior de Rayleigh. No se ha demostrado un **testigo negativo**: que ese límite sea menor que cero para cada cúmulo no real. Éste es el primer punto no justificado de H6 y basta para impedir el estado “cuantitativamente cerrado”.
+It is not proved that the numerator is negative for every configuration. Phase control makes the local block negative, but does not dominate the tail. Hence what has been proved is a **reduction to an effective witness**: for given local data, poles and a tail bound, an upper Rayleigh bound can be computed. A **negative witness** — that this bound is less than zero for every non-real cluster — has not been proved. This is the first unjustified point of H6 and suffices to block the "quantitatively closed" status.
 
-### H2: el añadido de alturas acotadas es inválido
+### H2: the bounded-heights addendum is invalid
 
-El enunciado formal de H2 agrega que “para alturas acotadas el Pick matrix es PSD por compactidad y la positividad estricta de \(\Re(\xi'/\xi)\)” (`2994-2998`). La prueba que sigue sólo trata alturas grandes y el criterio de suma de filas. La inferencia adicional es inválida: diagonales estrictamente positivas no implican que una matriz hermítica sea PSD, y compactidad sólo permitiría extraer mínimos continuos de autovalores; no prueba que esos mínimos sean no negativos. Habría que demostrar todos los menores principales, una dominación diagonal, o la positividad misma en el compacto. Ninguna de esas piezas aparece.
+The formal statement of H2 adds that "for bounded heights the Pick matrix is PSD by compactness and the strict positivity of \(\Re(\xi'/\xi)\)" (`2994-2998`). The following proof only handles large heights and the row-sum criterion. The additional inference is invalid: strictly positive diagonals do not imply that a Hermitian matrix is PSD, and compactness would only allow extracting continuous eigenvalue minima; it does not prove those minima are nonnegative. One would need to prove all principal minors, diagonal dominance, or the positivity itself on the compact set. None of those pieces appear.
 
-Por tanto H2 queda confirmado únicamente como criterio de Gershgorin de altura grande bajo la condición explícita de suma de filas. La frase de alturas acotadas debe suprimirse o pasar a ser una hipótesis por verificar; no puede usarse para ensanchar el régimen de H2.
+Hence H2 is confirmed only as a large-height Gershgorin criterion under the explicit row-sum condition. The bounded-heights clause must be removed or turned into a hypothesis to be verified; it cannot be used to widen the regime of H2.
 
-### Jets, cierre de banda y el salto a \(N\to\infty\)
+### Jets, band closure and the jump to \(N\to\infty\)
 
-La identidad de Hadamard emparejada y la serialización por jets escalares son piezas fuertes y, en lo esencial, confirmadas (`4175-4347`). En especial, la positividad de todos los jets en **un** punto regular equivale a RH: la continuación por NP se aplica a una vecindad y detecta todo polo. Esto hace que el defecto escalar sea una reformulación legítima, pero no más fácil.
+The paired Hadamard identity and the scalar jet serialization are strong, essentially confirmed pieces (`4175-4347`). In particular, positivity of all jets at **one** regular point is equivalent to RH: continuation via NP applies to a neighborhood and detects every pole. This makes the scalar defect a legitimate reformulation, but not an easier one.
 
-El Teorema de cierre de banda (`4605-4667`) usa compactidad tras un cambio de base Newton. Prueba positividad para \(N\) fijo y nodos de la forma
+The Band Closure Theorem (`4605-4667`) uses compactness after a Newton basis change. It proves positivity for fixed \(N\) and nodes of the form
 
 \[
-z_j=t+a_j-iy_j,qquad |a_j|\le A,quad y_j\in[\tfrac12+\epsilon_0,Y],
+z_j=t+a_j-iy_j,\qquad |a_j|\le A,\quad y_j\in[\tfrac12+\epsilon_0,Y],
 \]
 
-cuando \(|t|\) es suficientemente grande **dependiendo de \(N\)**. No prueba positividad en una caja fija para cualquier altura ni proporciona control de \(T^*(N)\) al tender \(N\) a infinito. Las frases “para todas las configuraciones” deben leerse con esos tres parámetros fijos; sin ellos son más fuertes que el teorema.
+when \(|t|\) is large enough **depending on \(N\)**. It does not prove positivity in a fixed box for any height, nor does it supply control of \(T^*(N)\) as \(N\) tends to infinity. The phrases "for all configurations" must be read with those three parameters fixed; without them they are stronger than the theorem.
 
-## Defecto terminal, muestreo y saturación
+## Terminal defect, sampling and saturation
 
-Aquí se concentran varias contradicciones de estado.
+Several status contradictions concentrate here.
 
-1. Hay dos objetos llamados \(\delta_N\). La Definición `terminal-defect-fixed` usa
-   \(\min c^*J_Nc/(c^*G_Nc)\) y está definida para todo \(N\) porque \(G_N\succ0\) (`4880-4927`). La Definición `terminal-defect` usa \(1-\lambda_{\max}(T_N)\), con whitening por \(J_N^\infty\), y sólo existe mientras \(J_N^\infty\succ0\), esto es, hasta \(N_*(t_0)\) (`5109-5120`). No son intercambiables fuera de ese intervalo. En particular, una afirmación límite \(N\to\infty\) escrita para \(T_N\) a \(t_0\) fijo no está tipada.
+1. There are two objects called \(\delta_N\). Definition `terminal-defect-fixed` uses
+   \(\min c^*J_Nc/(c^*G_Nc)\) and is defined for all \(N\) because \(G_N\succ0\) (`4880-4927`). Definition `terminal-defect` uses \(1-\lambda_{\max}(T_N)\), whitened by \(J_N^\infty\), and only exists while \(J_N^\infty\succ0\), i.e. up to \(N_*(t_0)\) (`5109-5120`). They are not interchangeable outside that interval. In particular, a limiting claim \(N\to\infty\) written for \(T_N\) at fixed \(t_0\) is not well typed.
 
-2. `whitened-terminal` es una congruencia correcta bajo la hipótesis explícita \(J_N^\infty\succ0\) (`4826-4861`). `pole-pair` niega precisamente esa positividad para todo \(N\) (`4862-4879`). Por ello \(\Omega_4\) no puede figurar como equivalencia cerrada de “todo \(N\)” con \(\mathcal W_A^{-1/2}\mathcal T_\Lambda\mathcal W_A^{-1/2}\). La forma reference-whitened sí serializa el signo; el operador whitened por la parte arquimediana no lo hace globalmente.
+2. `whitened-terminal` is a correct congruence under the explicit hypothesis \(J_N^\infty\succ0\) (`4826-4861`). `pole-pair` denies precisely that positivity for all \(N\) (`4862-4879`). Hence \(\Omega_4\) cannot appear as a "for all \(N\)" closed equivalence with \(\mathcal W_A^{-1/2}\mathcal T_\Lambda\mathcal W_A^{-1/2}\). The reference-whitened form does serialize the sign; the operator whitened by the archimedean part does not do so globally.
 
-3. `signed archimedean decomposition` está etiquetado **Proof sketch** (`5121-5176`). Sus cotas uniformes son usadas por los teoremas de muestreo. Por tanto, `leading sampling form` y, sobre todo, el `audited weighted sampling form` no son resultados completamente demostrados en el texto. El segundo además invoca concentración de minimizadores y una cota factorial que aún no está establecida (`5227-5267`).
+3. `signed archimedean decomposition` is labeled **Proof sketch** (`5121-5176`). Its uniform bounds are used by the sampling theorems. Hence `leading sampling form` and, especially, the `audited weighted sampling form` are not fully proved results in the text. The second also invokes minimizer concentration and a factorial bound not yet established (`5227-5267`).
 
-4. `conditional saturation` afirma \(\limsup_N\lambda_{\max}(T_N)=1\) pero el objeto de la izquierda no está definido para todos los \(N\). Su prueba dice que la cola puede hacerse arbitrariamente pequeña y cita una reducción condicional y un teorema anunciado “closed modulo” contabilidad pendiente (`5268-5313`, `5495-5536`). La aproximación por interpolación de un número creciente de átomos no basta, por sí sola, para hacer pequeño el cociente de cola. El primer punto faltante es la estimación uniforme de esa cola.
+4. `conditional saturation` claims \(\limsup_N\lambda_{\max}(T_N)=1\) but the object on the left is not defined for all \(N\). Its proof says the tail can be made arbitrarily small and cites a conditional reduction and a theorem announced "closed modulo" pending accounting (`5268-5313`, `5495-5536`). Approximation by interpolation of a growing number of atoms is not, by itself, enough to make the tail ratio small. The first missing point is the uniform estimate of that tail.
 
-5. `two-sided factorial saturation bounds` contiene un **Proof sketch**, declara que la cota superior está “closed modulo” trabajo pendiente y reconoce que el paso Turán--Remez para \(c_1(y)\) es un punto de auditoría (`5519-5546`). No puede ser usado como teorema cerrado para probar saturación, `no fixed margin`, la cascada ni una tasa de detección.
+5. `two-sided factorial saturation bounds` contains a **Proof sketch**, declares the upper bound "closed modulo" pending work, and acknowledges that the Turán–Remez step for \(c_1(y)\) is an audit point (`5519-5546`). It cannot be used as a closed theorem to prove saturation, `no fixed margin`, the cascade or a detection rate.
 
-6. `root recovery` y `terminal wall as Weil positivity` también están dados como bosquejos (`5555-5615`). Este último cambia además a \(\mathsf d_N\), símbolo no definido de forma compatible con los dos \(\delta_N\), y su densidad/completitud no se demuestra. No es una nueva prueba de Weil ni una clausura de Step 5.
+6. `root recovery` and `terminal wall as Weil positivity` are also given as sketches (`5555-5615`). The latter also switches to \(\mathsf d_N\), a symbol not defined compatibly with the two \(\delta_N\)'s, and its density/completeness is not proved. It is not a new proof of Weil nor a closure of Step 5.
 
-La conclusión auditada es: la equivalencia de signo reference-whitened con RH es válida como serialización a través del teorema escalar de jets; las leyes de tamaño, saturación factorial, falta de margen y recuperación de raíces son evidencia o reducciones condicionales, no insumos cerrados.
+The audited conclusion is: the equivalence of the reference-whitened sign with RH is valid as a serialization through the scalar jet theorem; the size laws, factorial saturation, lack of margin and root recovery are evidence or conditional reductions, not closed inputs.
 
-## Cadena \(\Omega_1\)--\(\Omega_7\)
+## \(\Omega_1\)–\(\Omega_7\) chain
 
-| Enlace | Estado que declara el texto | Estado auditado |
+| Link | Status declared by the text | Audited status |
 |---|---|---|
-| \(\Omega_1\) | RH \(\Leftrightarrow\) ceros de \(\Xi\) reales. | Confirmado. |
-| \(\Omega_2\) | Ceros reales \(\Leftrightarrow\) ARP-P. | Confirmado como la equivalencia Step 1--15. No es un mecanismo aritmético para probar ARP-P. |
-| \(\Omega_3\) | ARP-P \(\Leftrightarrow\) \(\delta_N\ge0\) para todo \(N\). | Confirmado sólo como equivalencia lógica que pasa por RH: jets escalares \(\Leftrightarrow\) RH y ARP-P \(\Leftrightarrow\) RH. No hay una derivación directa de todos los canales desde un jet escalar. |
-| \(\Omega_4\) | Defecto \(\Leftrightarrow\) dominación whitening. | No confirmado para todo \(N\): confunde la forma reference-whitened, válida globalmente, con el whitening de \(J_N^\infty\), válido sólo hasta \(N_*\). |
-| \(\Omega_5\) | Límite regular al borde. | Confirmada sólo la **continuidad** para cada \(N\) fijo (`5974-6004`). No se prueba positividad interior incondicional ni positividad de su límite; el paso “si hay positividad interior, entonces el límite es PSD” es condicional. Tampoco intercambia \(y\downarrow\tfrac12\) con \(N\to\infty\). |
-| \(\Omega_6\) | Positividad de borde \(\Leftrightarrow\) Li--Keiper. | Confirmado sólo como equivalencia de familias completas, mediante que ambas equivalen a RH (`6005-6091`). El propio texto acierta al negar una transformación positiva nivel a nivel. |
-| \(\Omega_7\) | \(\lambda_n\ge0\) para todo \(n\). | Abierto y equivalente a RH por Li. Éste sigue siendo el residuo correcto. No equivale a \(|\lambda_n^{\rm prime}|<\lambda_n^{\rm arch}\) para todo \(n\): esa reformulación ya falla en \(n=1\). |
+| \(\Omega_1\) | RH \(\Leftrightarrow\) real zeros of \(\Xi\). | Confirmed. |
+| \(\Omega_2\) | Real zeros \(\Leftrightarrow\) ARP-P. | Confirmed as the Step 1–15 equivalence. It is not an arithmetic mechanism for proving ARP-P. |
+| \(\Omega_3\) | ARP-P \(\Leftrightarrow\) \(\delta_N\ge0\) for all \(N\). | Confirmed only as a logical equivalence passing through RH: scalar jets \(\Leftrightarrow\) RH and ARP-P \(\Leftrightarrow\) RH. There is no direct derivation of all channels from a scalar jet. |
+| \(\Omega_4\) | Defect \(\Leftrightarrow\) whitening domination. | Not confirmed for all \(N\): it conflates the reference-whitened form, valid globally, with the whitening by \(J_N^\infty\), valid only up to \(N_*\). |
+| \(\Omega_5\) | Regular limit at the boundary. | Only **continuity** for each fixed \(N\) is confirmed (`5974-6004`). Unconditional interior positivity is not proved, nor is positivity of its limit; the step "if there is interior positivity, then the limit is PSD" is conditional. It also does not exchange \(y\downarrow\tfrac12\) with \(N\to\infty\). |
+| \(\Omega_6\) | Boundary positivity \(\Leftrightarrow\) Li–Keiper. | Confirmed only as an equivalence of complete families, via both being equivalent to RH (`6005-6091`). The text itself correctly denies a level-by-level positive transformation. |
+| \(\Omega_7\) | \(\lambda_n\ge0\) for all \(n\). | Open and equivalent to RH by Li. This remains the correct residue. It is not equivalent to \(|\lambda_n^{\rm prime}|<\lambda_n^{\rm arch}\) for all \(n\): that reformulation already fails at \(n=1\). |
 
-La tabla de estado de `6130-6165` presenta \(\Omega_4\) como cerrado mientras limita simultáneamente el whitening \(J_N^\infty\) a \(N\le N_*\). Son afirmaciones incompatibles salvo que \(\Omega_4\) se reescriba exclusivamente en coordenadas reference-whitened, sin operador \(\mathcal W_A^{-1/2}\) global. También sobredeclara \(\Omega_5\): su lema prueba continuidad, no una positividad no condicional. Esto no derriba \(\Omega_3\) ni \(\Omega_6\), que son equivalencias completas obtenidas vía RH; sí impide leer \(\Omega_4\to\Omega_5\to\Omega_6\) como una cadena demostrada que transporte positividad interior hasta Li.
+The status table at `6130-6165` presents \(\Omega_4\) as closed while simultaneously limiting the \(J_N^\infty\) whitening to \(N\le N_*\). These are incompatible statements unless \(\Omega_4\) is rewritten exclusively in reference-whitened coordinates, without a global \(\mathcal W_A^{-1/2}\) operator. It also overstates \(\Omega_5\): its lemma proves continuity, not unconditional positivity. This does not undermine \(\Omega_3\) or \(\Omega_6\), which are complete equivalences obtained via RH; it does prevent reading \(\Omega_4\to\Omega_5\to\Omega_6\) as a proved chain that transports interior positivity through to Li.
 
-### Diccionario Li: qué se confirma y qué no
+### Li dictionary: what is confirmed and what is not
 
-La identidad de Cayley
+The Cayley identity
 
 \[
 w_{-i/2}(z_\rho)=1-\rho^{-1}
 \]
 
-es correcta. También es correcto que la positividad de todos los jets en la base de Li y la positividad de todos los coeficientes de Li son equivalentes porque ambas caracterizan RH. No es correcto presentarlo como una transformación finita de un criterio en el otro; el texto lo reconoce en `6060-6091`.
+is correct. It is also correct that positivity of all jets in the Li basis and positivity of all Li coefficients are equivalent because both characterize RH. It is not correct to present this as a finite transformation of one criterion into the other; the text acknowledges this at `6060-6091`.
 
-La reformulación de \(\Omega_7\) mediante valor absoluto en `6255-6258` no es equivalente a Li y tiene un contraejemplo interno inmediato. Con la descomposición declarada
+The reformulation of \(\Omega_7\) by absolute value at `6255-6258` is not equivalent to Li and has an immediate internal counterexample. With the stated decomposition
 
 \[
 \log\xi(s)=\left[\log s-\frac{s}{2}\log\pi+\log\Gamma\!\left(\frac{s}{2}\right)\right]
 +\log\bigl((s-1)\zeta(s)\bigr),
 \]
 
-la definición diferencial de Li da, para \(n=1\),
+Li's differential definition gives, for \(n=1\),
 
 \[
 \lambda_1^{\rm arch}
@@ -185,14 +185,14 @@ la definición diferencial de Li da, para \(n=1\),
 \lambda_1^{\rm prime}=\gamma\approx0.57722,
 \]
 
-pues \(\psi(1/2)=-\gamma-2\log2\) y \((s-1)\zeta(s)=1+\gamma(s-1)+O((s-1)^2)\). Por tanto
+since \(\psi(1/2)=-\gamma-2\log2\) and \((s-1)\zeta(s)=1+\gamma(s-1)+O((s-1)^2)\). Hence
 
 \[
 \lambda_1=\lambda_1^{\rm arch}+\lambda_1^{\rm prime}
 \approx0.02310>0,
 \]
 
-mientras que \(|\lambda_1^{\rm prime}|<\lambda_1^{\rm arch}\) es imposible porque su lado derecho es negativo. En general, la identidad exacta implica
+while \(|\lambda_1^{\rm prime}|<\lambda_1^{\rm arch}\) is impossible because its right side is negative. In general, the exact identity implies
 
 \[
 \lambda_n\ge0
@@ -200,16 +200,16 @@ mientras que \(|\lambda_1^{\rm prime}|<\lambda_1^{\rm arch}\) es imposible porqu
 \lambda_n^{\rm prime}\ge-\lambda_n^{\rm arch},
 \]
 
-una desigualdad unilateral y no una cota absoluta. Si \(\lambda_n^{\rm arch}>0\), la condición más fuerte \(|\lambda_n^{\rm prime}|\le\lambda_n^{\rm arch}\) basta para Li, pero no es necesaria ni equivalente; con signo estricto tampoco coincide con el criterio no estricto. En consecuencia, las formulaciones de `6122-6125`, `6255-6258`, `6298-6303` y `6333-6336` deben sustituir la supuesta equivalencia por la desigualdad unilateral, o presentar la envolvente absoluta sólo como estrategia suficiente después de verificar por separado los índices donde la parte arquimediana no sea positiva.
+a one-sided inequality and not an absolute bound. If \(\lambda_n^{\rm arch}>0\), the stronger condition \(|\lambda_n^{\rm prime}|\le\lambda_n^{\rm arch}\) suffices for Li, but is neither necessary nor equivalent; with strict sign it also does not coincide with the non-strict criterion. Consequently, the formulations at `6122-6125`, `6255-6258`, `6298-6303` and `6333-6336` must replace the supposed equivalence with the one-sided inequality, or present the absolute envelope only as a sufficient strategy after separately checking the indices where the archimedean part is not positive.
 
-La identidad de integración por partes de `6399-6401` contiene además un error independiente. Con
+The integration-by-parts identity at `6399-6401` also contains an independent error. With
 
 \[
 f_{n,\varepsilon}(y)=y^{-1-\varepsilon}L_{n-1}^{(1)}(\log y),
 \qquad f_{n,\varepsilon}(1)=n,
 \]
 
-la representación regularizada anterior da
+the earlier regularized representation gives
 
 \[
 \lambda_n^{\rm prime}
@@ -218,7 +218,7 @@ la representación regularizada anterior da
 \int_{1^-}^{\infty}f_{n,\varepsilon}\,d(\psi-y).
 \]
 
-Integrar por partes y usar \(\psi(1)=0\) produce
+Integrating by parts and using \(\psi(1)=0\) produces
 
 \[
 \lambda_n^{\rm prime}
@@ -231,18 +231,18 @@ Integrar por partes y usar \(\psi(1)=0\) produce
 \int_1^\infty(\psi(y)-y+1)f'_{n,\varepsilon}(y)\,dy.
 \]
 
-El manuscrito escribe el negativo de la integral con \(\psi-y\), sin el término \(-n\). Por tanto invierte el signo y pierde el borde inferior. En \(n=1\) la fórmula impresa no puede devolver \(\lambda_1^{\rm prime}=\gamma\). Si \(A_n=\int|\psi-y|\,|f'_{n,0}|\), el lower bound correcto es \(\lambda_n^{\rm prime}\ge-n-A_n\), no el derivado en el texto. El no-go de magnitud conserva su déficit de orden porque el cálculo reporta \(A_n\asymp n^2\log n\), pero ninguna conclusión firmada puede heredarse de `6399-6401`.
+The manuscript writes the negative of the integral with \(\psi-y\), without the \(-n\) term. It therefore flips the sign and loses the lower boundary term. At \(n=1\) the printed formula cannot return \(\lambda_1^{\rm prime}=\gamma\). If \(A_n=\int|\psi-y|\,|f'_{n,0}|\), the correct lower bound is \(\lambda_n^{\rm prime}\ge-n-A_n\), not the one derived in the text. The magnitude no-go keeps its order deficit because the computation reports \(A_n\asymp n^2\log n\), but no signed conclusion can be inherited from `6399-6401`.
 
-La ruta posterior de “envolvente” tiene un problema más severo: define
+The later "envelope" route has a more severe problem: it defines
 
 \[
 O(n)=\sum_\rho(1-1/\rho)^n.
 \]
 
-Bajo RH los sumandos tienen módulo uno y, tras emparejar, tienden a \(2\), no a cero. Esta suma no converge, ni absoluta ni simétricamente, para \(n\) fijo. La combinación convergente es la de Li, \(\sum_\rho[1-(1-1/\rho)^n]\), con la regularización apropiada; no \(O(n)\) aislado. En consecuencia, la integral oscilatoria posterior, `exact reduction of the envelope bound` y las tres rutas R1--R3 (`7110-7185`) no están bien definidas tal como se escriben. El primer paso no justificado no es la estimación por fase estacionaria: es la separación de una suma divergente.
+Under RH the summands have modulus one and, after pairing, tend to \(2\), not zero. This sum does not converge, either absolutely or symmetrically, for fixed \(n\). The convergent combination is Li's, \(\sum_\rho[1-(1-1/\rho)^n]\), with the appropriate regularization; not \(O(n)\) in isolation. Consequently, the subsequent oscillatory integral, `exact reduction of the envelope bound` and the three routes R1–R3 (`7110-7185`) are not well defined as written. The first unjustified step is not the stationary-phase estimate: it is the separation of a divergent sum.
 
-Además, la equivalencia atribuida a Bombieri--Lagarias entre RH y la cota concreta
-\(|\lambda_n^{\rm prime}|=O(\sqrt n\log n)\) no se demuestra en el manuscrito. La cota basta, junto con una verificación finita, para Li positivo; la vuelta requiere un resultado adicional de asintótica de Li y no se sigue de Li por la lógica mostrada. La fórmula escrita en `7079` omite además un término lineal: con el split del manuscrito,
+Moreover, the equivalence attributed to Bombieri–Lagarias between RH and the concrete bound
+\(|\lambda_n^{\rm prime}|=O(\sqrt n\log n)\) is not proved in the manuscript. The bound suffices, together with a finite check, for positive Li; the converse requires an additional asymptotic result for Li and does not follow from Li by the logic shown. The formula written at `7079` also omits a linear term: with the manuscript's split,
 
 \[
 \lambda_n^{\rm arch}
@@ -251,70 +251,70 @@ Además, la equivalencia atribuida a Bombieri--Lagarias entre RH y la cota concr
 +\frac34+O(n^{-1}).
 \]
 
-El término \(\frac{\gamma-1}{2}n\) no cabe en \(O(\sqrt n\log n)\). La cota \(c\sqrt n\log n\) para la parte prima debe enunciarse sólo para \(n\ge2\), porque su lado derecho se anula en \(n=1\). Hasta que se dé una referencia y una prueba exacta para la vuelta, debe rotularse como conjetura suficiente, no como “iff RH”. La representación Laguerre en \(\Re s_0>1\) es una identidad absolutamente convergente; su límite de borde mantiene una cancelación polo--primos y no es una suma prima absoluta (`6339-6375`).
+The term \(\frac{\gamma-1}{2}n\) does not fit inside \(O(\sqrt n\log n)\). The bound \(c\sqrt n\log n\) for the prime part should only be stated for \(n\ge2\), because its right side vanishes at \(n=1\). Until a reference and an exact proof of the converse are given, it should be labeled a sufficient conjecture, not "iff RH". The Laguerre representation in \(\Re s_0>1\) is an absolutely convergent identity; its boundary limit maintains a pole–prime cancellation and is not an absolute prime sum (`6339-6375`).
 
-## Las siete paredes, el paraguas de Weil y los no-go
+## The seven walls, the Weil umbrella and the no-gos
 
-El texto tiene un paraguas adicional, la positividad de Weil, y siete paredes numeradas por el cuantificador maestro. Conviene no contar el paraguas como una octava pared.
+The text has an additional umbrella, Weil positivity, and seven walls numbered by the master quantifier. The umbrella should not be counted as an eighth wall.
 
-| Obstrucción | Clasificación declarada | Auditoría |
+| Obstruction | Declared classification | Audit |
 |---|---|---|
-| Paraguas de Weil | \(E(C)\): positividad de Weil \(\Leftrightarrow\) RH. | Confirmado como criterio clásico, con la clase de tests correcta. |
-| Propagación aritmética | \(I(\mathcal I;C)\) para cuatro familias de métodos. | El alcance formal es sólo esas familias. El Teorema `four-way` usa “todo mecanismo clásico” y “ninguna combinación” sin definir la clase ni aportar prueba completa (`655-693`); no confirma una imposibilidad general. |
-| Signo equivocado | \(I\) para cotas inferiores/de magnitud. | Es una diagnosis válida de los paradigmas enumerados; no una prohibición de toda construcción operatorial. |
-| Hasse--Minkowski infinito | \(I\) para factorización local-global. | Correcta como advertencia de que no hay principio automático. La inexistencia de toda factorización útil de la parte cero no se formaliza como teorema universal. |
-| Reflexión por lugar | \(I\) para el kernel OS elegido. | La indefinición del kernel exhibido es directa; sólo cierra esa reconstrucción por lugar, no cualquier forma de positividad global. |
-| Cohomología/Frobenius | \(F(X;C)+S(C)\). | Sólo condicional: una polarización con brecha y Frobenius del tipo correcto sería suficiente. Cálculos en una ventana no prueban que ningún objeto global exista. |
-| Signo frente a magnitud | \(I\) para funcionales que ven sólo \(|\Lambda|\). | El principio lógico es razonable dentro de esa clase. El Teorema `marginality` se enuncia sin prueba formal y presupone la realización positiva no construida en el texto (`891-920`). |
-| Norma uniforme/rango uno | \(F(X;C)+E(C)\). | No confirmado como equivalencia interna: la dirección “RH implica norma primitiva uniformemente acotada” y la identidad con el kernel de Kreĭn--Langer no se prueban aquí; además dependen de objetos de la construcción externa (`1375-1443`). |
+| Weil umbrella | \(E(C)\): Weil positivity \(\Leftrightarrow\) RH. | Confirmed as a classical criterion, with the correct test class. |
+| Arithmetic propagation | \(I(\mathcal I;C)\) for four method families. | The formal scope is only those families. Theorem `four-way` uses "every classical mechanism" and "no combination" without defining the class or supplying a complete proof (`655-693`); it does not confirm a general impossibility. |
+| Wrong sign | \(I\) for lower/magnitude bounds. | A valid diagnosis of the enumerated paradigms; not a prohibition of every operator construction. |
+| Infinite Hasse–Minkowski | \(I\) for local-global factorization. | Correct as a warning that there is no automatic principle. The non-existence of every useful factorization of the zero part is not formalized as a universal theorem. |
+| Place-wise reflection | \(I\) for the chosen OS kernel. | The indefiniteness of the exhibited kernel is direct; it only closes that place-wise reconstruction, not any form of global positivity. |
+| Cohomology/Frobenius | \(F(X;C)+S(C)\). | Only conditional: a polarization with a gap and Frobenius of the correct type would suffice. Computations in one window do not prove no global object exists. |
+| Sign versus magnitude | \(I\) for functionals that see only \(|\Lambda|\). | The logical principle is reasonable within that class. Theorem `marginality` is stated without a formal proof and presupposes the positive realization not constructed in the text (`891-920`). |
+| Uniform norm/rank one | \(F(X;C)+E(C)\). | Not confirmed as an internal equivalence: the direction "RH implies uniformly bounded primitive norm" and the identity with the Kreĭn–Langer kernel are not proved here; they also depend on objects from the external construction (`1375-1443`). |
 
-Los no-go computacionales (p-valores, ajustes de exponentes, tablas de DH, regresiones o LP) sólo prueban lo que se calculó a precisión y corte finitos. No son teoremas de imposibilidad. Las etiquetas `No-go`, `Wall` o `Theorem` no añaden cuantificadores ni sustituyen una prueba. Este punto afecta, entre otros, a `phantom transition`, los detectores DH, los márgenes de partición y los resultados llamados W4/W5.
+The computational no-gos (p-values, exponent fits, DH tables, regressions or LP) only prove what was computed at finite precision and cutoff. They are not impossibility theorems. The labels `No-go`, `Wall` or `Theorem` do not add quantifiers nor substitute for a proof. This affects, among others, `phantom transition`, the DH detectors, the partition margins and the results called W4/W5.
 
-W4 no formaliza una clase completa de “argumentos por recurrencia”, por lo que el enunciado “ninguna prueba puede proceder” excede las estimaciones de un esquema particular (`6481-6586`). W5 sí tiene un núcleo directo: una densidad \(L^1\) no puede dominar una función periódica no decadente en todas las resonancias. Pero `per-prime cutoff feasibility` no lleva demostración; viene después de una tabla numérica y afirma una constante uniforme \(c_p\le6/5\) (`6956-7026`). Es evidencia de factibilidad finita, no un lema cerrado hasta construir la densidad y demostrar la cota.
+W4 does not formalize a complete class of "recurrence arguments", so the statement "no proof can proceed" exceeds the estimates of one particular scheme (`6481-6586`). W5 does have a direct core: an \(L^1\) density cannot dominate a non-decaying periodic function at every resonance. But `per-prime cutoff feasibility` carries no proof; it follows a numerical table and asserts a uniform constant \(c_p\le6/5\) (`6956-7026`). It is evidence of finite feasibility, not a closed lemma until the density is constructed and the bound proved.
 
-## Rutas contra \(\Omega_7\): estado y cortes
+## Routes against \(\Omega_7\): status and cuts
 
-| Ruta | Resultado real | Primer punto no justificado |
+| Route | Actual result | First unjustified point |
 |---|---|---|
-| Transporte casi periódico | La comparación de escalas muestra un desbalance plausible entre recurrencia y detección. | `gauge transport` contiene “[modulo Lemma signed-arch]”, que es bosquejo; `geometric detection` importa una tasa sólo esbozada. `ceiling rigidity` no prueba que para un \(c\) fijo el supernivel ocurra exactamente en todo gauge que detecta un cero. Por ello W4 no es un no-go universal. |
-| Trasplante Castelnuovo | `conditional closure` pretende que X1--X4 implican positividad. | El argumento toma \(c^*J_Nc<0\), produce \(\langle\alpha,\alpha\rangle<0\), pero X3 sólo habla de clases con \(\langle\alpha,\alpha\rangle>0\) (`6629-6656`). No puede invocarse X3 sobre \(\alpha\); la desigualdad de Hodge escrita no da la contradicción. M2 y M2-closure heredan este fallo. |
-| Construcción térmica X3-G | Conjetura y plan de falsación. | \(e^D\), dominios, regularización, estado torcido, dualidad y la identidad varianza--Weil son hipotéticos (`6746-6955`). “Positividad del twist” no produce la identidad de momentos requerida. |
-| Partición arquimediana | No-go \(L^1\) global por una prima; problemas finitos explorados. | Falta la prueba de factibilidad con constante uniforme y falta la equivalencia formal entre asignación global, símbolo de borde y \(\Omega_7\). |
-| Envolvente Li/estacionaria | Una condición suficiente de tipo RH y una exploración numérica. | La suma \(O(n)\) aislada diverge; por tanto la reducción “sin pérdida” no está definida. El uso de datos hasta \(n=170\) no establece una envolvente. |
-| Cotas puntuales de \(\psi-x\) y \(\Lambda\ge0\) término a término | Diagnóstico numérico de pérdida de fase. | Las tablas descartan las estimaciones absolutas ensayadas, no toda desigualdad de fase ni toda factorización. |
+| Almost-periodic transport | The scale comparison shows a plausible imbalance between recurrence and detection. | `gauge transport` contains "[modulo Lemma signed-arch]", which is a sketch; `geometric detection` imports a rate that is only sketched. `ceiling rigidity` does not prove that for a fixed \(c\) the super-level occurs exactly in every gauge detecting a zero. Hence W4 is not a universal no-go. |
+| Castelnuovo transplant | `conditional closure` claims X1–X4 imply positivity. | The argument takes \(c^*J_Nc<0\), produces \(\langle\alpha,\alpha\rangle<0\), but X3 only addresses classes with \(\langle\alpha,\alpha\rangle>0\) (`6629-6656`). X3 cannot be invoked on \(\alpha\); the written Hodge inequality does not give the contradiction. M2 and M2-closure inherit this failure. |
+| Thermal construction X3-G | Conjecture and falsification plan. | \(e^D\), domains, regularization, twisted state, duality and the variance–Weil identity are hypothetical (`6746-6955`). "Twist positivity" does not produce the required moment identity. |
+| Archimedean partition | Global \(L^1\) no-go for one prime; finite problems explored. | Missing is the feasibility proof with a uniform constant and the formal equivalence between global assignment, boundary symbol and \(\Omega_7\). |
+| Li/stationary envelope | A sufficient RH-type condition and a numerical exploration. | The isolated sum \(O(n)\) diverges; hence the "lossless" reduction is not well defined. Using data up to \(n=170\) does not establish an envelope. |
+| Pointwise bounds of \(\psi-x\) and term-by-term \(\Lambda\ge0\) | Numerical diagnosis of phase loss. | The tables rule out the absolute estimates tried, not every phase inequality nor every factorization. |
 
-La “closure specification” y sus conjeturas son apropiadas como propuestas, pero no cuentan como una séptima demostración de una pared ni como evidencia deductiva de \(\Omega_7\).
+The "closure specification" and its conjectures are appropriate as proposals, but do not count as a seventh wall proof nor as deductive evidence for \(\Omega_7\).
 
-## Cascada de de Bruijn--Newman
+## De Bruijn–Newman cascade
 
-La cascada no está separada lógicamente del defecto terminal. Su Teorema \(\alpha5\),
+The cascade is not logically separated from the terminal defect. Its Theorem \(\alpha5\),
 
 \[
 \lim_N t_N^*=\Lambda_{\rm dBN},
 \]
 
-usa \(\alpha4\), que a su vez usa L3 y L4. Los cortes son:
+uses \(\alpha4\), which in turn uses L3 and L4. The cuts are:
 
-- \(\alpha3\) tiene explícitamente `Proof sketch` y no controla el vector minimizante, colisiones ni constantes uniformes (`7329-7347`). Aunque \(\alpha5\) no lo cita de forma directa, no puede llamarse teorema cerrado.
-- L3 apela a “la parte superior de `two-sided`” y a un régimen no especificado; esa cota factorial no estaba demostrada (`7457-7496`).
-- L4 vuelve a usar una comparación potencial y una cota de denominador sin demostrar uniformidad suficiente (`7497-7528`).
-- \(\alpha4\) y \(\alpha5\) heredan esos huecos. La prueba de \(\alpha5\) afirma que el umbral factorial termina siendo menor que \(v^2\), precisamente la conclusión que depende de L3/L4.
+- \(\alpha3\) is explicitly a `Proof sketch` and does not control the minimizing vector, collisions, or uniform constants (`7329-7347`). Although \(\alpha5\) does not cite it directly, it cannot be called a closed theorem.
+- L3 appeals to "the upper part of `two-sided`" and to an unspecified regime; that factorial bound was not proved (`7457-7496`).
+- L4 again uses a potential comparison and a denominator bound without proving sufficient uniformity (`7497-7528`).
+- \(\alpha4\) and \(\alpha5\) inherit these gaps. The proof of \(\alpha5\) claims the factorial threshold ends up smaller than \(v^2\), precisely the conclusion that depends on L3/L4.
 
-La parte confirmada es que, si se conceden las estimaciones de detección y cola, la implicación hacia la caracterización de \(\Lambda_{\rm dBN}\) tiene la forma correcta. La validación numérica no reemplaza esas estimaciones. Por ello la cascada debe figurar como caracterización condicional/propuesta, no como resultado probado que pueda apoyar H8.
+The confirmed part is that, if the detection and tail estimates are granted, the implication toward the characterization of \(\Lambda_{\rm dBN}\) has the correct form. Numerical validation does not replace those estimates. For this reason the cascade must appear as a conditional characterization/proposal, not as a proved result that could support H8.
 
-## Contradicciones internas de estatus
+## Internal status contradictions
 
-1. El resumen, el mapa y el epílogo dicen que hay una sola brecha; H6 cuantitativo, muestreo, saturación, cota factorial, cascada, factibilidad de partición y realización de torre muestran brechas adicionales si se los presenta como teoremas autónomos.
-2. H7 aparece “partially closed”, pero el cuadro afirma “scalar level-two band positivity closed for all configurations”. El teorema sólo da \(N=2\), caja fija, banda interior y altura grande.
-3. H8 se denomina “quantitatively closed” mientras el objeto que se usa en tablas, \(1-\lambda_{\max}(T_N)\), deja de estar definido después de \(N_*(t_0)\); el defecto reference-whitened es otro objeto.
-4. \(\Omega_4\) se rotula cerrado globalmente y en la misma fila limita la coordenada principal a \(N\le N_*\).
-5. `conditional saturation` y `no fixed margin` se enuncian como teorema/corolario, pero dependen de cotas declaradas bosquejo o “modulo” trabajo pendiente.
-6. La sección de realización admite que el operador y su compatibilidad se construyeron fuera del texto, mientras el prólogo atribuye al hecho de que \(\Lambda\ge0\) la normalidad que haría funcionar la arquitectura. La implicación está condicionada; la construcción no está disponible en este manuscrito.
-7. Las rutas W4, M2, X3-G y W5 mezclan teoremas, proposiciones numéricas, conjeturas y problemas dentro de párrafos que luego hablan de “unconditional by-products”. Esa etiqueta debe reservarse a lo que tiene demostración completa.
+1. The summary, the map and the epilogue say there is a single gap; H6 quantitative, sampling, saturation, factorial bound, cascade, partition feasibility and tower realization show additional gaps if presented as autonomous theorems.
+2. H7 appears "partially closed", but the table states "scalar level-two band positivity closed for all configurations". The theorem only gives \(N=2\), fixed box, interior band and large height.
+3. H8 is called "quantitatively closed" while the object used in the tables, \(1-\lambda_{\max}(T_N)\), ceases to be defined after \(N_*(t_0)\); the reference-whitened defect is a different object.
+4. \(\Omega_4\) is labeled globally closed and in the same row limits the main coordinate to \(N\le N_*\).
+5. `conditional saturation` and `no fixed margin` are stated as a theorem/corollary, but depend on bounds declared a sketch or "modulo" pending work.
+6. The realization section admits that the operator and its compatibility were constructed outside the text, while the preface attributes to \(\Lambda\ge0\) the normality that would make the architecture work. The implication is conditional; the construction is not available in this manuscript.
+7. The W4, M2, X3-G and W5 routes mix theorems, numerical propositions, conjectures and problems within paragraphs that then speak of "unconditional by-products". That label should be reserved for what has a complete proof.
 
-## Conclusión operativa
+## Operative conclusion
 
-La parte defendible del manuscrito es una reducción formal y una equivalencia:
+The defensible part of the manuscript is a formal reduction and an equivalence:
 
 \[
 \mathrm{ARP\!\!\text{-}P}\Longleftrightarrow\mathrm{RH}
@@ -324,6 +324,6 @@ La parte defendible del manuscrito es una reducción formal y una equivalencia:
 \bigl[\lambda_n\ge0\ \forall n\bigr],
 \]
 
-donde las equivalencias de los extremos deben leerse como caracterizaciones completas, no como transformaciones finitas ni como pruebas aritméticas de la positividad. El punto abierto central permanece \(\Omega_7\).
+where the equivalences at the ends must be read as complete characterizations, not as finite transformations nor as arithmetic proofs of positivity. The central open point remains \(\Omega_7\).
 
-Para que el texto pueda afirmar que las reducciones auxiliares están cerradas, habría que, como mínimo: corregir H6 y dominar su cola; separar definitivamente los dos defectos \(\delta_N\); limitar \(\Omega_4\) al rango donde su whitening existe; reemplazar los bosquejos de muestreo/saturación/cascada por pruebas sin dependencia circular; formalizar o rebajar W4/W5; reparar el signo en la clausura Castelnuovo; y trasladar la realización “elsewhere” a hipótesis explícita o a una prueba incluida. Mientras eso no ocurra, la auditoría confirma la equivalencia principal y el residuo Li, pero no confirma que el resto de la infraestructura cuantitativa esté cerrado.
+For the text to be able to claim that the auxiliary reductions are closed, it would need, at a minimum: to fix H6 and dominate its tail; to definitively separate the two defects \(\delta_N\); to restrict \(\Omega_4\) to the range where its whitening exists; to replace the sampling/saturation/cascade sketches with proofs free of circular dependency; to formalize or downgrade W4/W5; to repair the sign in the Castelnuovo closure; and to move the "elsewhere" realization to an explicit hypothesis or an included proof. Until that happens, the audit confirms the main equivalence and the Li residue, but does not confirm that the rest of the quantitative infrastructure is closed.

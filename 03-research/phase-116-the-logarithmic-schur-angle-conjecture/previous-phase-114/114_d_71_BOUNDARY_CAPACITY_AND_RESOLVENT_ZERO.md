@@ -32,7 +32,7 @@ Fix a support window and one parity `epsilon in {e,o}`.  Let
 `u=u_epsilon` to have norm one.  Decompose
 
 \[
- H=\mathbb C u\oplus u^\perp,qquad
+ H=\mathbb C u\oplus u^\perp,\qquad
  B=\begin{pmatrix}a&b^*\\b&D\end{pmatrix}.                 \tag{1.1}
 \]
 
@@ -45,7 +45,7 @@ The one-jet primitive operator is exactly
 For a real parameter `z`, put
 
 \[
- q_z(f)=\langle f,(B-z)f\rangle,qquad
+ q_z(f)=\langle f,(B-z)f\rangle,\qquad
  \ell(f)=\langle u,f\rangle.                              \tag{1.3}
 \]
 
@@ -75,7 +75,7 @@ The standard completion theorem for a semidefinite quadratic form gives:
 > **Theorem 2.1 (boundary capacity).**  The capacity `C_u(z)` is finite if
 > and only if
 > \[
-> D-z\le0,qquad
+> D-z\le0,\qquad
 > b\in\mathrm{Ran}(z-D)^{1/2}.                      \tag{2.2}
 > \]
 > In that case
@@ -147,7 +147,7 @@ If `u` is cyclic, no compression eigenvalue is persistent.  As `z` decreases
 to the largest eigenvalue `mu_u` from above,
 
 \[
- \mathcal C_u(z)\to+\infty,qquad m_u(z)\to0.              \tag{3.4}
+ \mathcal C_u(z)\to+\infty,\qquad m_u(z)\to0.              \tag{3.4}
 \]
 
 Thus (3.2) is exactly the first resolvent zero of D.70 in variational
@@ -253,7 +253,7 @@ Use the unnormalized boundary functional `ell(f)=u^T f`.  Since
 the constrained stationary vector is
 
 \[
- f_{\rm stat}={B^{-1}u\over u^TB^{-1}u},qquad
+ f_{\rm stat}={B^{-1}u\over u^TB^{-1}u},\qquad
  \ell(f_{\rm stat})=1,                                   \tag{6.3}
 \]
 
@@ -266,7 +266,7 @@ and its stationary action is the finite positive number
 However
 
 \[
- v=(1,-1,0,0)^T\in\ker\ell,qquad
+ v=(1,-1,0,0)^T\in\ker\ell,\qquad
  \langle v,Bv\rangle=7>0.                                \tag{6.5}
 \]
 
@@ -299,7 +299,7 @@ Apply Theorem 2.1 separately to
 The two-jet primitive inequality is equivalent to
 
 \[
- \mathcal C_{u_e}(z)<\infty,qquad
+ \mathcal C_{u_e}(z)<\infty,\qquad
  \mathcal C_{u_o}(z)<\infty
  \quad\text{for every }z>0.                              \tag{7.2}
 \]

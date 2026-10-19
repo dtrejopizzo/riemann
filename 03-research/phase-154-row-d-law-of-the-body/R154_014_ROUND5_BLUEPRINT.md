@@ -1,4 +1,4 @@
-# R154.014 — Lead blueprint, round 5 of phase 154: (P154.1) two incommensurable contacts — the staircase to log 2. Date 2026-09-20.
+# R154.014 — Blueprint, round 5 of phase 154: (P154.1) two incommensurable contacts — the staircase to log 2.
 
 ## 0. State
 Theorem C(½log3) PROVED (one contact, `n = 2`; certificate `CERT_log3_M24.json`; c = 4.43·10⁻⁵ vs λ_min = 9.8·10⁻⁴). Lemma D2.3's tail
@@ -33,5 +33,5 @@ which of (F1)/(F2)/LP-grid saturates.
 ## 4. Rules
 Labels; FATAL rule (all `T ≤ log 2` are Paper-42-certified; a new-method proof is the point; nothing beyond `log 2`); corpus-check lines
 ("two-frequency", "quasi-periodic", "cuasiperi", "high-precision LP", "active set"); scripts in `scripts/round5/`; deliverable
-`R154_015_BUILDER_ROUND5.md` (≤ 5000 words) with the staircase table and the archived certificates. Compute budget is real: plan the
+`R154_015_ROUND5.md` (≤ 5000 words) with the staircase table and the archived certificates. Compute budget is real: plan the
 exhaustive covers (round 4: 2.4e8 evaluations ≈ 30 min); prefer Taylor/second-derivative bounds over pure Lipschitz if they cut evaluations.

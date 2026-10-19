@@ -1,7 +1,6 @@
 # E72.131 -- Shorting mass damping
 
-**Date:** 2026-07-09.
-**Role:** turn the remaining mass gain into a spectral estimate for the shorted complement.
+**Purpose:** turn the remaining mass gain into a spectral estimate for the shorted complement.
 
 ## 0. Mass functional
 

@@ -1,13 +1,13 @@
 # R129.004 — auditor report, round 2
 
-Date: 2026-09-12.  Target: Paper 43 after R129.003.
+Target: Paper 43 after R129.003.
 
 ## Headline
 Round 2 is an honest improvement.  New mathematics verified: Lemma 3.3 (valuation
 splitting `φ=∏_p p^{v_p}`, `A_S^× = Γ_S × ker φ`, `C_S ≅ R^× × ∏Z_p^×`) is a TRUE
 theorem; formula (8A.12) is a CORRECT computation (recomputed from P123.042), so chart
-invariance of `T` under the splitting-defined maps is genuinely false.  But three of the
-builder's negative claims fail:
+invariance of `T` under the splitting-defined maps is genuinely false.  But three of
+round 2's negative claims fail:
 - (8A.12) silently assumes the identity constant `c` is chart-independent (G1); the
   correct formula carries `+(c_T−c_S)F(1)`.
 - **The (O-A6-1) impossibility claim is FALSE (G2).**  P123.017 §§1–4 (PROVED-IN-REPOSITORY)

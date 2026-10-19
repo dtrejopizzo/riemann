@@ -246,7 +246,7 @@ the Gamma energy.
 The correct independent source is the quarter-shift oscillator
 
 \[
- A_\infty e_j=(j+\tfrac14)e_j,qquad
+ A_\infty e_j=(j+\tfrac14)e_j,\qquad
  \mathrm{Tr}(e^{-xA_\infty})={e^{-x/4}\over1-e^{-x}},          \tag{4.4}
 \]
 
@@ -269,7 +269,7 @@ representation
 
 \[
  A_p=\sqrt{1-p^{-1}}
-       (I-p^{-1/2}U_p)^{-1},qquad U_p=S_{\log p},       \tag{5.1}
+       (I-p^{-1/2}U_p)^{-1},\qquad U_p=S_{\log p},       \tag{5.1}
 \]
 
 and hence

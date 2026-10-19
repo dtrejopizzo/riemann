@@ -1,0 +1,1302 @@
+                                                     THE SIXTH MOMENT OF THE RIEMANN ZETA FUNCTION
+
+                                                                       ALEXANDRE DE FAVERI AND MAYANK PANDEY
+
+
+                                                  Abstract. We prove new large value estimates for the Riemann zeta function on the critical line.
+                                                  For instance, we improve the upper bound on the measure of t ∈ [T, 2T ] with |ζ(1/2 + it)| ⩾ T 1/8
+                                                  for the first time since Hardy–Littlewood (1923). Our results imply the first improvement since
+                                                  work of Heath-Brown (1978) on upper bounds for the k-th moment of zeta, for every 4 < k ⩽ 12.
+                                                  We show in particular that
+arXiv:2610.01035v1 [math.NT] 1 Oct 2026
+
+
+
+
+                                                                                   Z      T
+                                                                                                                      5   1
+                                                                                              |ζ( 21 + it)|6 dt ≪ε T 4 − 60 +ε .
+                                                                                      0
+                                                  The main ingredient is a new large value estimate for exponential sums with square-root phases,
+                                                  and certain perturbations. Those arise in the expansion of the short second moment of zeta.
+
+
+
+
+                                                                                               1. Introduction
+                                             The Lindelöf hypothesis predicts that |ζ(1/2 + it)| ≪ε (1 + |t|)ε for all ε > 0. It is a consequence
+                                          of the Riemann hypothesis, and can act as a substitute for it in many applications. A measure of
+                                          progress towards Lindelöf is provided by upper bounds for the moments
+                                                                                         Z T
+                                                                              Mk (T ) :=     |ζ( 21 + it)|k dt.
+                                                                                                        0
+
+                                          For instance, the bound Mk (T ) ≪k,ε            T 1+ε for all k ⩾ 0 is equivalent to the Lindelöf hypothesis.
+                                          Such a bound is only known for 0 ⩽ k ⩽ 4, but partial progress towards it is useful in applications.
+                                            The classical fourth and twelfth moment bounds1
+                                                                        M4 (T ) ≪ε T 1+ε                and         M12 (T ) ≪ε T 2+ε ,                (1)
+                                          due respectively to Hardy–Littlewood [HL23] (refined by Ingham [Ing27]) and Heath-Brown [HB78],
+                                          imply by interpolation that Mk (T ) ≪ε T 1+(k−4)/8+ε for 4 ⩽ k ⩽ 12. Those have been the best
+                                          known bounds since the work of Heath-Brown [HB78], giving in particular M6 (T ) ≪ε T 5/4+ε .
+                                            In this paper, we show the following improved estimate for the sixth moment of zeta.
+                                          Theorem 1.1 (Sixth moment bound). For every T ⩾ 1 and ε > 0, we have
+                                                                      Z T
+                                                                                                 5    1
+                                                                          |ζ( 21 + it)|6 dt ≪ε T 4 − 60 +ε .
+                                                                                  0
+                                            We also improve the best known upper bound for the k-th moment of zeta, for every 4 < k ⩽ 12.
+                                          Theorem 1.2 (General moment bound). For each 4 < k ⩽ 12, there exists δk > 0 such that if
+                                          T ⩾ 1 and ε > 0, then
+                                                                                                                k−4
+                                                                                      Mk (T ) ≪ε T 1+ 8 −δk +ε .
+                                                                                     520
+                                            In Theorem 10.1, we show that δ12 = 445121    is admissible. Improved moment bounds can also
+                                          be obtained for 12 ⩽ k < 12 + ν for a small ν > 0. We do not optimize either the savings δk or
+                                          the range ν in this paper, aiming instead to simplify the presentation.
+                                            1In both bounds, T ε can be replaced with a power of log T . We are concerned only with the exponents of T in
+                                          this work, so we simplify the bounds for convenience.
+                                                                                                            1
+2                            ALEXANDRE DE FAVERI AND MAYANK PANDEY
+
+   Our results on moments derive from distributional estimates for |ζ( 12 + it)|. Let N (T, V ) be the
+size of the largest 1-spaced subset of {t ∈ [T, 2T ] : |ζ( 21 + it)| ⩾ V }. The classical bounds (1) imply
+                                 N (T, V ) ≪ε T ε min(T V −4 , T 2 V −12 ).                           (2)
+The Hardy–Littlewood bound N (T, V ) ≪ε         T 1+ε V −4 is the best known (up to factors of T ε ) for
+V ⩽ T 1/8 , and the bounds in (2) intersect at V = T 1/8 . Better results are available for V > T 1/8
+using exponent pairs [TY25], so V = T 1/8 is the critical range for known bounds on the moments
+Mk (T ) when 4 < k ⩽ 12. Our main result gives an improvement in and around this critical range.
+Theorem 1.3 (Large value estimate). Let T ⩾ 1. For any V ∈ [T 7/60 , T 5/38 ] and ε > 0, we have
+                                                        24      128
+                                       N (T, V ) ≪ε T 17 +ε V − 17 .
+    In §9 we record further bounds for N (T, V ), which are superior to Theorem 1.3 for large V .
+1.1. On the sixth and twelfth moments. The estimate M12 (T ) ≪ε T 2+ε was proved by Heath-
+Brown via short second moments of zeta. The desire to improve on this bound has inspired many
+developments in analytic number theory, and led to several different proofs of the same result. For
+example, Iwaniec [Iwa80] deduced it from bounds for the fourth moment of zeta in short intervals,
+obtained via spectral theory of automorphic forms. Jutila [Jut91] gave a different proof of Iwaniec’s
+result, bypassing the appeal to spectral theory. A textbook proof is given in [Ivi03, Chapter 8].
+   Both Iwaniec’s and Jutila’s methods give the same bounds for a fixed GL2 L-function in place
+of ζ 2 . It is worth mentioning that significantly less is known for GL3 L-functions. The best known
+bound for the second moment in the t-aspect (which should be compared to M6 (T )) is T 4/3+ε , due
+to Dasgupta, Leung, and Young [DLY24]. Interestingly, the bound T 5/4+ε was recently obtained
+by Aggarwal, Leung, and Munshi [ALM26] for a short second moment of length T 2/3 .
+   As noted earlier, the sixth moment bound of Oε (T 5/4+ε ) follows by interpolating the fourth and
+twelfth moment bounds. Expanding out with the approximate functional equation, this bound
+roughly amounts to showing an asymptotic with remainder Oε (X 7/6+ε ) for a smoothed version of
+                                        X X
+                                                   d3 (n)d3 (n + h).
+                                      h∼X 1/3 n∼X
+One may interpret this 7/6 as square-root cancellation in the h-sum, over the n-sums minus their
+expected main terms, and Theorem 1.1 should improve the exponent 7/6.
+  Finally, let us mention that sufficiently large improvements on the sixth moment bound imply
+improved zero density estimates for zeta; Iwaniec [Iwa24] noted that a bound M6 (T ) ≪ T 6/5−δ
+implies better zero density estimates at σ = 3/4 than Huxley’s [Hux72] classical bound. Such an
+improvement was recently obtained via different methods by Guth and Maynard [GM26].
+1.2. Large value bounds for special exponential sums. The key ingredient behind our
+bounds is a new large value estimate for exponential sums with certain special phases. We re-
+fer to the survey [Gut25] for the importance of large value problems in a broad range of subjects
+and discussion of their difficulty. In this paper we show the following.
+Corollary 1.4. Let N, W, V ⩾ 1, η ∈ R, and an ∈ C with |an | ⩽ 1. Denote Υ = 1 + |η|W and
+                         X                                         √
+             Dη (w) :=         an e(wϕη (n/N ))   for     ϕη (x) := x + ηx3/2 .
+                           N <n⩽2N
+                             4
+Suppose that N ⩽ W ⩽ N 3 and that |η| ⩽ cW/N 2 for some sufficiently small c > 0. Then for
+ε > 0 and any 1-spaced set W ⊂ [0, W ] such that |Dη (w)| ⩾ V for all w ∈ W, we have
+                                     2           3   1      5   3 1 
+                                   ε N       N 2W 4 Υ 8   N 2 W 2 Υ4
+                         |W| ≪ε N         +             +              .               (3)
+                                      V2        V3             V5
+                       THE SIXTH MOMENT OF THE RIEMANN ZETA FUNCTION                                  3
+
+  For reference, in the more general situation where ϕη is replaced with a smooth ϕ satisfying
+|ϕ′ |
+    ≍ |ϕ′′ | ≍ 1 in a fixed neighborhood of [1, 2], one can show using the large sieve [MV74,
+Corollary 2] that (3) may be replaced with
+                                             N2 NW
+                                         |W| ≪  +      .                                  (4)
+                                             V2     V2
+Heath-Brown’s arguments in [HB78] (of the type used by Halász [Hal68] and Montgomery [Mon69]
+for Dirichlet polynomials) yield that
+                                                    N 2 N 4W
+                                        |W| ≪            +        .                                 (5)
+                                                    V2       V6
+For N ≫ W , the term N 2 /V 2 is optimal, and for N ≪ W , the bounds (5) and (4) meet at
+V ≍ N 3/4 , a regime often critical for large value estimates in analytic number theory. It was so in
+Guth–Maynard’s [GM26] recent work on large values of Dirichlet polynomials, and is for us too.
+                                                                           3                      5
+   For the sake of clarifying Corollary 1.4 in the special case V ≍ N 4 and N 1+δ ≪ W ≪ N 4 , we
+shall isolate its conclusion when |η| ≪ W/N 2+δ , for a small δ > 0. In this case, it gives the bound
+                                          − 1
+                                    ε W    W                           W
+                                                    4             1          δ
+                         |W| ≪ε N √                   (1 + |η|W ) 8 ≪ √ N − 8 +ε ,
+                                       N N                              N
+                                                         √
+while the mean value bound (4) yields |W| ≪ W/ N . Thus our result is nontrivial in this case.
+Since the relevant regime for the zeta function is |η| ≍ 1/N , Corollary 1.4 suffices for our purposes.
+   For applications to large values of zeta, the main advantage of considering exponential sums
+with our special phases is that it then suffices to beat their mean value estimate. This does not
+seem to be the case if one directly converts the problem to large values of Dirichlet polynomials
+(e.g. via the approximate functional equation), so available bounds fall short of what is needed.
+   That we √ have an ℓ∞ bound on (an ) rather than an ℓ2 bound√is essential, otherwise √ the estimate
+|W| ≪ W/ N is sharp when η = 0: we may take W = {j N : 1 ⩽ j ⩽ W/ N } and an =
+N 1/4 · 1□ (n), for instance. This counterexample was noted by Guth [Gut25, §5.5] and comes from
+a simplification by Alex Cohen of a related counterexample due to Fu–Guth–Maldague [FGM23].
+
+1.3. Notation. Let e(x) := e2πix . Our Fourier transforms are fb(ξ) := R f (x)e(−ξx) dx by con-
+                                                                               R
+vention. For y ∈ R, denote ∥y∥ = min{|y − n| : n ∈ Z}. We write f ≪ g if there is a constant
+C > 0 such that |f | ⩽ C|g|. If C depends on a parameter p, we write f ≪p g. The notation f ≍ g
+means f ≪ g ≪ f , and a ∼ A denotes A < a ⩽ 2A. Finally, for a finite set W ⊂ R, we let
+                                                               Xk       X2k        
+                                                           2k
+                  E2k (W; D) := # (w1 , . . . , w2k ) ∈ W :         wi −     wi ⩽ D .
+                                                            i=1      i=k+1
+
+Acknowledgments. The authors thank Maksym Radziwill for many interesting discussions on
+the topics of this paper, and for his advice and encouragement. We are also grateful to Valentin
+Blomer and Larry Guth for helpful comments on a previous version of the paper.
+
+Use of AI tools. The reduction of the problem to beating the mean-value bound for exponential
+sums with perturbed square-root phases, and the observation that the high-energy case can be
+controlled as in Guth–Maynard [GM26], are due to the authors. Using the trace method (with
+third powers) as in [GM26], and dealing with stationary points via an extra pruning step, we
+initially obtained a result of the same strength as Corollary 1.4 in the case η = 0. This result did
+not rely on AI tools, using them only in a subsidiary capacity (e.g. to quickly compute stationary
+points and optimize exponents), but was only nontrivial for |η| = o(1/N ), just barely insufficient
+for our desired application to large values of |ζ(1/2 + it)|. We then asked ChatGPT 6 Astra to
+4                               ALEXANDRE DE FAVERI AND MAYANK PANDEY
+
+extend the range of η in our proof, and it autonomously produced a simpler argument which is
+nontrivial for |η| = o(W/N 2 ). A refinement of that argument is used in this paper.
+
+                                         2. Sketch of the proof
+   In this section we give a sketch of the argument in the critical case V = T 1/8 . For readability,
+we shall be somewhat imprecise, for instance ignoring factors of T ε and constant factors in phases.
+   By work of Heath-Brown [HB78], it suffices to rule out the following situation: there exist T 1/2
+                                            2
+points t ∈ [T, 2T ] which are T 1/4 -spaced
+                                        √ and such   that |ζ(1/2 + it)| ⩾ T 1/8 .
+                  4
+   For N ≍ T /V ≍ T     1/2                      3/4
+                            and W0 ≍ T N ≍ T , Atkinson’s formula would then       √ roughly imply
+the existence of a set W0 ⊂ [W0 , 2W0 ] of 1-spaced points such that |W0 | ≍ W0 / N ≍ T 1/2 and
+                                          T n 3/2
+                               r               
+                    X                 n
+                        d(n)e w         +              ≫ N 3/4       for all w ∈ W0 .
+                                     N    w N
+                    n∼N
+                        √
+   Recall that ϕη (x) = x + ηx3/2 . We subdivide W0 into intervals of length W = N 1+δ , for some
+sufficiently small δ > 0. It then suffices3 to show, for any coefficients |an | ⩽ 1 and η √∈ R with
+|η| ≍ T /W02 ≍ 1/N , that there exists no 1-spaced subset W ⊂ [W, 2W ] with |W| ≫ W/ N and
+                            X
+                               an e(wϕη (n/N )) ≫ N 3/4      for all w ∈ W.                      (6)
+                              n∼N
+Thus we are precisely in the position of having to beat the mean value bound on R := |W|.
+   Our proof begins similarly to that of the Halász–Montgomery bound for Dirichlet polynomials
+(like in Heath-Brown’s work on the twelfth moment), with an application of duality. Precisely, for
+some phases γw with |γw | = 1, we have by (6) and Cauchy–Schwarz that
+                               X                          2        X X                          2
+                 R2 N 3/2 ≪         γw an e(wϕη (n/N ))       ≪N             γw e(wϕη (n/N )) .
+                              n∼N                                  n∼N w∈W
+                              w∈W
+
+Expanding out the square, separating out the diagonal (assuming for simplicity that the off-
+diagonal consists only of the generic case |w − w′ | ≍ W ), and applying Poisson summation in n
+followed by stationary phase, we have that the right-hand side above is
+                           N2                              (w − w′ )2    (w − w′ )4
+                                  X       X                                        
+                     2
+                ≪N R+ √                        γw γw ′ e              +η             .
+                            W               ′
+                                                             4N m         8N 3 m3
+                                     |m|∼W/N w,w ∈W
+
+At this point we apply Hölder’s inequality, so that the above is
+                    N2                                    (w − w′ )2    (w − w′ )4 4 1/4
+                           X           X X                                       
+         ≪ N 2R + √               R3/4              γw e             +η                  .
+                     W |m|∼W/N            ′
+                                                            4N m         8N 3 m3
+                                        w ∈W w∈W
+
+We may bound (with a T ε loss) the sum over w′ ∈ W by an integral over w′ ∼ W . Denoting
+w′ = W x and ∆j := w1j + w2j − w3j − w4j , this gives
+                 (w − w′ )2     (w − w′ )4 4                         (w − W x)2     (w − W x)4 4
+ X X                                                Z    X                                 
+          γw e               +η                ≪ W             γw e              +η               dx
+                   4N m          8N 3 m3               x∼1 w∈W          4N m          8N 3 m3
+w′ ∈W w∈W
+                                                   ∆1 W 2 3
+                     Z                                                            
+          X                     W ∆1                           3∆2 W 2       ∆3
+≪W                          e −       x + ηW −            x +         x −          x dx .      (7)
+                      x∼1       2N m              2N 3 m3     4N 3 m3      2N 3 m3
+        w1 ,w2 ,w3 ,w4 ∈W
+
+    2We can even upgrade this spacing to T 1/2 via [Iwa80], but ignore this in the sketch for simplicity.
+    3The subdivision into shorter intervals is needed to make η independent of w, and to remove lower order terms.
+                         THE SIXTH MOMENT OF THE RIEMANN ZETA FUNCTION                                   5
+
+  If |∆1 | is greater than a sufficiently large multiple of |η|W , then the first term in the phase
+dominates, hence the contribution of such (w1 , . . . , w4 ) is negligible. This makes critical use of the
+shape of our initial phases ϕη (x). If |∆1 | ≪ |η|W , the integral is ≪ (1 + |∆1 |)−1/2 (modulo some
+minor singular cases) by stationary phase. Thus (7) is ≪ W E4 (W; 1)(1 + |η|W )1/2 , so
+                                      N 2 W 3/4 1/4
+                 R2 N 3/2 ≪ N 2 R + √       R W E4 (W; 1)1/4 (1 + |η|W )1/8 .
+                                       W N
+  With an argument similar to that of Guth and Maynard [GM26, §11], we can show that
+E4 (W; 1) ≪ N R. This is the only place in the argument where we make (crucial) use of the
+ℓ∞ bound |an | ⩽ 1, instead of a weaker ℓ2 bound. We conclude that
+                                              1            1
+                                  1/2    W W −8         W W −8
+                           R≪N        +√            ≪√             ,
+                                          N N            N N
+                                                                     √
+which gives the desired improvement over the mean value bound R ≪ W/ N .
+
+                                      3. Preliminary lemmas
+Lemma 3.1 (Stationary phase). For any bounded interval I ⊂ R and ψ ∈ Cc∞ (R) with support
+contained in I, we have that
+                  Z
+                     ψ(x)e(αx + βx2 ) dx ≪I (∥ψ∥∞ + ∥ψ ′ ∥1 )(1 + |α| + |β|)−1/2
+                     R
+uniformly in α, β ∈ R.
+Proof. This follows immediately from stationary phase, for example as a special case of [Ste93,
+Chapter VIII, Proposition 2].                                                                □
+Lemma 3.2 (Gallagher’s lemma). For any f ∈ C 1 (R), x ∈ R, and integer k ⩾ 1, we have
+                              Z x+1/3
+                         2k
+                                      |f (y)|2k + |f (y)|2k−1 |f ′ (y)| dy.
+                                                                       
+                  |f (x)| ≪k
+                                       x−1/3
+In particular, if X is a 1-spaced subset of an interval [a, b] ⊂ R, then
+                          X                Z b+1/3
+                                     2k
+                                                    |f (y)|2k + |f ′ (y)|2k dy.
+                                                                           
+                              |f (x)| ≪k
+                           x∈X                 a−1/3
+
+Proof. This follows from the Sobolev–Gallagher lemma [MV26, Lemmas 19.1 and 19.2].                      □
+
+                                         4. Energy bounds
+  Let N, V, W ⩾ 1 and η ∈ R be bounded. Let W ⊂ [W, 2W ] be a 1-spaced set such that
+|Dη (w)| ⩾ V for every w ∈ W. Denote ξn := ϕη (n/N ) and
+                                              X
+                                    F (α) :=      e(wα).
+                                                       w∈W
+  In the next three sections, f ≺ g denotes that |f | ≪ε (N V W )ε |g| for any ε > 0. Subscripts will
+indicate parameters on which the implied constants may depend, as usual.
+  The main result of this section is the following bound.
+Proposition 4.1 (General energy bound). Suppose W ⩽ N 4/3 and η ∈ R is sufficiently small.
+For every integer k ⩾ 2 and real 1 ⩽ D ⩽ W , we have
+                                       N 4k−4            ND
+                       E2k (W; D) ≺k            E2 (W; D) + 2 |W|2k−1 .
+                                        V                  V
+  We shall require a few preparatory lemmas before we are ready to prove Proposition 4.1.
+6                          ALEXANDRE DE FAVERI AND MAYANK PANDEY
+
+Lemma 4.2 (Spacing estimate). For η ∈ R sufficiently small, 0 < δ < 1, and λ ∈ R, we have
+
+          # m, n ∼ N : m ̸= n, ϕη (m/N ) − ϕη (n/N ) − λ ⩽ δ ≪ δN 2 + N 2/3 .
+            
+
+Proof. For x ≍ 1, we record that ϕ′η (x) ≍ ϕ′′η (x) ≍ 1 since η is sufficiently small. A direct
+computation also gives (ϕ′′η /(ϕ′η )2 )′ (x) ≍ 1.
+   Denote S = {(m, n) ∼ N : m ̸= n, |ϕη (n/N ) − ϕη (m/N ) − λ| ⩽ δ} and Sm = {(m, n) ∈ S}. We
+have that |Sm | ≪ 1 + δN , so |S| ≪ N + δN 2 , which is sufficient for δ ≫ 1/N .
+   Suppose that δ ⩽ c/N for the remainder of this proof, where c > 0 is sufficiently small. By
+symmetry, we may assume that λ ⩾ 0. We may also suppose that 1/N ≪ λ ≪ 1, for otherwise we
+are forced into the case n = m. It remains to bound the number of m for which Sm is nonempty,
+since the number of n corresponding to each m is ≪ 1 + δN ≪ 1.
+   Let gλ (x) = ϕ−1
+                 η (ϕη (x) + λ). It can be checked by implicit differentiation and the mean value
+theorem that for x ∼ 1 we have
+                                gλ (x) − x ≍ gλ′ (x) − 1 ≍ gλ′′ (x) ≍ λ.
+That |ϕη (n/N ) − ϕη (m/N ) − λ| ⩽ δ implies n = N gλ (m/N ) + O(δN ) by monotonicity, so
+                          X                        X
+                   |S| ≪       1∥N gλ (m/N )∥≪δN =     1∥N (gλ (m/N )−m/N )∥≪δN .
+                          m∼N                        m∼N
+
+  Note that N (gλ (m/N ) − m/N ) ≍ N λ and the corresponding values are spaced by ≫ λ for
+m ∼ N . For λ ⩽ N −1/3 , the desired result follows since
+                                              
+                                           δN
+                   |S| ≪ (1 + N λ) 1 +           ≪ δN 2 + λN ≪ δN 2 + N 2/3 .
+                                            λ
+  Suppose that λ > N −1/3 from now on. By [Pan24, Proposition 3.3] (with δ in the reference
+taken to be δ1 = δN + (λ/N )1/3 by positivity) we get
+                                                              r      r
+               X
+                                                2        1/3    Nλ      N δ1
+                   1∥N (gλ (m/N )−m/N )∥≪δN ≪ δN + (λ/N ) N +      +         .
+                                                                δ1       λ
+              m∼N
+
+It remains to check that the bound is acceptable. Note from λ ≪ 1 that
+                                 r         s
+                                    Nλ          Nλ
+                                        ≪              ≪ N 2/3
+                                     δ1      (λ/N )1/3
+
+and from δ ≪ 1/N and λ > N −1/3 that
+                 r        r          s
+                   N δ1      δN 2      N 2/3   p
+                        ≪         +          ≪  N/λ + (N/λ)1/3 ≪ N 2/3 ,
+                    λ         λ        λ2/3
+from which the desired result follows.                                                         □
+Lemma 4.3 (Smoothing). Let A ⩾ 1 and S ⊂ [−A, A] be a finite set. For α ∈ R, denote
+                                         X
+                                 C(α) :=    cs e(sα),
+                                                  s∈S
+
+where cs ∈ C. Then for any p, ℓ ⩾ 1 we have
+                                       Z
+                                                            −ℓ
+                        |C(α)| ≪p,ℓ A |C(ξ)|p · 1 + A|ξ − α|
+                               p
+                                                                dξ.
+                                            R
+                        THE SIXTH MOMENT OF THE RIEMANN ZETA FUNCTION                                                  7
+
+Proof. Let ψ be a Schwartz function with ψ(x) = 1 for x ∈ [−1, 1]. For f (s) = ψ(s/A)e(sα), note
+that fb(ξ) = Aψ(A(ξ
+                b      − α)). Hence for any ℓ ⩾ 1, the decay of ψb gives
+            X        s           X Z ∞                                 Z ∞
+                                                                                   |C(ξ)|
+|C(α)| =        cs ψ     e(sα) =       cs     Aψ(A(ξ − α))e(ξs) dξ ≪ℓ A
+                                                b                                           ℓ dξ.
+                      A                   −∞                              −∞   1 +  A|ξ − α|
+            s∈S                    s∈S
+  This settles the case p = 1, and the general case follows from Hölder’s inequality.                                □
+Lemma 4.4 (Fourier bound). For any integer k ⩾ 1 and real 1 ⩽ d ⩽ W , we have
+                                           X
+                      V 2 E2k (W; d) ≺k d        |F (ξm − ξn )|2k−1 .
+                                                        m,n∼N
+                                                      |ξm −ξn |≺ d1
+
+Proof. Note that
+                                       X                                k
+                                                                       X               2k
+                                                                                        X            
+                   2                                            2
+                  V E2k (W; d) ⩽                    |Dη (w2k )| · 1             wi −           wi ⩽ d .              (8)
+                                   w1 ,...,w2k ∈W                       i=1            i=k+1
+                                  P
+By Lemma 4.3 applied to Dη (α) = n∼N an e(αξn ),
+                      Z                                 Z
+                                                 −ℓ
+                 2
+         |Dη (α)| ≪ℓ             2
+                         |Dη (ξ)| · (1 + |ξ − α|) dξ ≺ℓ                                |Dη (ξ)|2 dξ + W −ℓ .
+                           R                                              |ξ−α|≺1
+
+Thus for any τ ∈ R, since W is 1-spaced, we have
+        X                  X Z                             Z
+                                                        −ℓ
+                     2
+             |Dη (w)| ≺ℓ                         2
+                                         |Dη (ξ)| dξ + W ≺                                   |Dη (ξ)|2 dξ + W −ℓ .
+         w∈W                  w∈W    |ξ−w|≺1                                      |ξ−τ |≺d
+       |τ −w|⩽d             |w−τ |⩽d
+
+Taking τ = w1 + · · · + wk − wk+1 − · · · − w2k−1 , by (8) we obtain
+                                          X        Z
+                      2
+                  V E2k (W; d) ≺ℓ                        |Dη (τ − s)|2 ds + W 2k−ℓ .
+                                        w1 ,...,w2k−1 ∈W     |s|≺d
+
+We may ignore the error term W 2k−ℓ by taking ℓ sufficiently large in terms of k and comparing
+with the diagonal in the left-hand side. The condition |s| ≺ d can be replaced by a non-negative
+bump function g(s/d) by positivity, with gb(x) ≺j (1 + |x|)−j . Opening the square yields that
+                         X           Z                                     s
+        2
+      V E2k (W; d) ≺k          am an    F (ξm − ξn )|F (ξm − ξn )|2(k−1) g     e(−s(ξm − ξn )) ds
+                                      R                                     d
+                       m,n∼N
+                           X
+                                |F (ξm − ξn )|2k−1 gb d(ξm − ξn ) .
+                                                                 
+                    ≺k d
+                          m,n∼N
+
+Here we made crucial use of the assumption |an | ⩽ 1. Then the decay of gb and a trivial bound for
+F lead to                               X
+                   V 2 E2k (W; d) ≺k d          |F (ξm − ξn )|2k−1 + dW −100k .
+                                              m,n∼N
+                                            |ξm −ξn |≺ d1
+
+The term dW −100k is smaller than the left-hand side, so the result follows.                                          □
+Proof of Proposition 4.1. Separating the diagonal terms m = n in Lemma 4.4 gives
+                                                       X
+                  V 2 E2k (W; D) ≺k N D|W|2k−1 + D           |F (ξm − ξn )|2k−1 .                                    (9)
+                                                                   m,n∼N
+                                                                     m̸=n
+                                                                            1
+                                                                 |ξm −ξn |≺ D
+8                                ALEXANDRE DE FAVERI AND MAYANK PANDEY
+
+    By Lemma 4.2, since W ⩽ N 4/3 we have
+                                                                     N2            N2
+                                                                         + N 2/3 ≺
+                      
+        NW (λ) := # m, n ∼ N : m ̸= n, |ξm − ξn − λ| ≺ 1/W ≺                           .
+                                                                     W             W
+From D ⩽ W , the conditions |ξm − ξn | ≺ 1/D and |ξm − ξn − λ| ≺ 1/W imply |λ| ≺ 1/D. Applying
+Lemma 4.3 to |F |2k−1 and truncating the integrals using |F | ⩽ |W| ≪ W , we get
+                X                               Z
+         D             |F (ξm − ξn )|2k−1
+                                          ≺k DW         |F (λ)|2k−1 NW (λ) dλ + W −100
+                                                                   1
+                   m,n∼N                                      |λ|≺ D
+                     m̸=n
+                            1
+                 |ξm −ξn |≺ D
+                                                              Z
+                                                   ≺k DN 2                 |F (λ)|2k−1 dλ + W −100 .                      (10)
+                                                                       1
+                                                                  |λ|≺ D
+
+The error term W −100 can be absorbed into the diagonal contribution, so we may ignore it.
+  Now observe for any integer j ⩾ 1 that
+                                Z
+                              D        |F (λ)|2j dλ ≺ E2j (W; D).                          (11)
+                                               1
+                                          |λ|≺ D
+                              1
+Indeed, the condition |λ| ≺ D    can be replaced by a non-negative bump function g(Dλ/L) by
+positivity, with 1 ⩽ L ≺ 1 and gb bounded and supported in [−1, 1]. Hence
+      Z                      Z                                           j      2j
+                      2j           Dλ         2j
+                                                           X         LX        X    
+   D           |F (λ)| dλ ⩽ D g         |F (λ)| dλ = L             gb       wi −    wi ,
+        |λ|≺ 1                R     L                                 D
+            D                                                              w1 ,...,w2j ∈W           i=1          i=j+1
+
+which is O(LE2j (W; D/L)). This yields (11) by positivity, as L ⩾ 1.
+  Now observe from Hölder’s inequality followed by (11) that
+           Z                      Z                      1  Z                                                  2k−3
+                                                          2k−2                                                    2k−2
+         D       |F (λ)|2k−1 dλ ⩽ D          |F (λ)|2 dλ       D                                  |F (λ)|2k dλ
+                     1                              1                                         1
+                |λ|≺ D                         |λ|≺ D                                    |λ|≺ D
+                                                        1                         2k−3
+                                      ≺ E2 (W; D) 2k−2 · E2k (W; D) 2k−2 .
+Inserting this into (10) and (9), we obtain
+                                                                                   1                      2k−3
+                  V 2 E2k (W; D) ≺k N D|W|2k−1 + N 2 E2 (W; D) 2k−2 · E2k (W; D) 2k−2 .
+If the term N D|W|2k−1 dominates, then we are done. Otherwise, we obtain
+                                            N 2 2k−2
+                            E2k (W; D) ≺k              E2 (W; D),
+                                             V2
+as desired.                                                                                                                 □
+
+                                     5. General large value bound
+    Corollary 1.4 will follow from the more flexible large value bound below.
+Theorem 5.1 (General large value bound). For every integer k ⩾ 2, there exists ck > 0 such that
+the following holds. Let N, V, W ⩾ 1 satisfy
+                                   N ⩽ W ⩽ N 4/3            and     |η| ⩽ ck W/N 2 .
+Let an ∈ C with |an | ⩽ 1, and denote as before Υ = 1 + |η|W and
+                            X                                         √
+              Dη (w) :=           an e(wϕη (n/N ))    for    ϕη (x) := x + ηx3/2 .
+                                N <n⩽2N
+                       THE SIXTH MOMENT OF THE RIEMANN ZETA FUNCTION                                   9
+
+Then for any 1-spaced subset W of an interval of length W such that |Dη (w)| ⩾ V for all w ∈ W,
+we have
+                            6k−4    k+1                    ! 1           1   k+1 1
+                   N 2 N 2k+1 W 2k+1              E2 (W; D) 2k+1 N k+ 2 W 2 Υ 4
+           |W| ≺k 2 +          8k−4        sup       √           +                 .
+                   V         V 2k+1     1⩽D≪k Υ        D                 V 2k+1
+
+Proof of Corollary 1.4 assuming Theorem 5.1. Applying Theorem 5.1 with k = 2 together with
+the bound E2 (W; D) ⩽ (2D + 1)|W|, which follows from the 1-spacing of W, we obtain
+                                                8    3                     5    3
+                                N2 N 5 W 5     1   1    N 2W 2 1
+                           |W| ≺ 2 +   12  |W| 5 Υ 10 +       Υ4 .
+                                V    V 5                  V5
+Rearranging, this gives the desired bound
+                                                             3   1     5   3    1
+                                     N 2 N 2W 4 Υ 8   N 2 W 2 Υ4
+                                |W| ≺ 2 +     3
+                                                    +            .
+                                     V      V             V5
+                                                                                                      □
+
+                                     6. Proof of Theorem 5.1
+  We may, by translation, reduce to the case of W ⊂ [W, 2W ], which we suppose from now on.
+  The proof starts with an application of duality. Let γw = |Dη (w)|/Dη (w). Then, by Cauchy–
+Schwarz, we have that
+                          X                              2           X X                       2
+               R2 V 2 ⩽         an γw e(wϕη (n/N ))          ≪N                γw e(wϕη (n/N )) .
+                          n∼N                                        n∼N w∈W
+                          w∈W
+
+Fix some smooth 1[1,2] ⩽ φ ⩽ 1[3/4,9/4] . Then, by positivity and an application of Poisson summa-
+tion, the right-hand side of the above is at most
+   X n X                           2          X            XZ
+ N     φ            γw e(wϕη (n/N )) = N 2           γw γw ′       e((w − w′ )ϕη (ξ) − N mξ)φ(ξ) dξ.
+    n
+           N                                     ′           m   R
+               w∈W                                  w,w ∈W
+                                                                                                    (12)
+By repeated integration by parts and 1-spacing of W, the contribution of m = 0 is
+                                    X
+                            ≪ N2         (1 + |w − w′ |)−10 ≪ N 2 R.
+                                      w,w′ ∈W
+
+  We now prepare for our application of stationary phase. A stationary point ξ0 satisfies
+                                            1         √
+                                        ′            3η ξ0 
+                                 (w − w ) √ +                 = N m.
+                                             2 ξ0      2
+                                                                              ′
+Note that ξ0 is in the support of φ (so that ξ0 ∈ 34 , 94 ) only if (say) w−w
+                                                                                3 7
+                                                                           N m ∈ 2 , 2 . Such a ξ0 is
+unique and satisfies
+                                 w − w ′ 2     r         w − w′ 2 −2
+                          ξ0 =                1 + 1 − 3η                   .
+                                   Nm                         Nm
+        ′
+For w−w
+           3 7                       2W
+     N m ∈ 2 , 2 , note that N |m| ⩽ 3 and Taylor expansion at η = 0 yields that
+
+                                         (w − w′ )2    (w − w′ )4                w − w′
+                                                                                       
+                    ′                                                  2
+            (w − w )ϕη (ξ0 ) − N mξ0 =              +η             + η N mΨη
+                                            4N m         8N 3 m3                  Nm
+10                                      ALEXANDRE DE FAVERI AND MAYANK PANDEY
+
+                                                   (j)
+for some Ψη ∈ Cc∞ ([1, 4]) with |Ψη (x)| ≪j 1. Applying stationary phase in the form of [KPY19,
+                                                         ′ 
+§3, Main Theorem], and incorporating e η 2 N mΨη ( w−wN m ) into the weight function, we have that
+(12) equals
+
+                                          w − w′         (w − w′ )2    (w − w′ )4
+                                                                               
+           X             X      1
+      N2         γw γw ′      p      Φη          , Nm e             +η     3 m3
+                                                                                    + O(N 2 R)
+                               N |m|       N m              4N m        8N
+         w,w′ ∈W         m̸=0
+
+
+for some smooth Φη supported in [1, 4] × [−W, W ] satisfying |y k ∂1j ∂2k Φη (x, y)| ≪j,k 1 for η 2 |y| ≪ 1.
+This last bound applies in the whole support of Φη , since η 2 W ⩽ c2k W 3 /N 4 ⩽ c2k .
+   We shall now bound the contribution of |m| ∼ M for any scale M ≪ W/N . Note that this
+forces |w − w′ | ≍ M N . Partitioning W into intervals (Wj )j≪W/(M N ) of length ∼ CM N for C > 0
+sufficiently large, we get
+
+                                                   w − w′          (w − w′ )2       (w − w′ )4
+                                                                                            
+              2
+                  X              X       1
+           N            γw γw ′               Φη          , Nm e               +η
+                                                                                     8N 3 m3
+                                      p
+                                        N |m|       Nm               4N m
+                w,w′ ∈W         |m|∼M
+
+           N 3/2 X X                                 w − w′          (w − w′ )2       (w − w′ )4
+                                     X                                                        
+       ≪                                  γw γw Φη
+                                               ′            , Nm e                +η                 .
+           M 1/2                                      Nm               4N m            8N 3 m3
+                     |m|∼M j≪W      w∈Wj
+                              MN   ′
+                           −1⩽h⩽1 w ∈Wj+h
+
+By Hölder’s inequality, this is
+
+     N 3/2       X                       1
+≪                       (M |Wj |)1− 2k                                                                                (13)
+     M 1/2
+             j≪ MWN
+             −1⩽h⩽1
+                                                                                                                   1
+                                                                           w − w′         (w − w′ )2    (w − w′ )4 2k 2k
+                         X            X          X                                   
+                   ×                                         γw ′ Φη              , Nm e             +η                  .
+                                                                            Nm              4N m         8N 3 m3
+                          |m|∼M w∈Wj w′ ∈Wj+h
+
+
+
+Denoting uj := min(Wj ) − 1/3 ≍ W , by Lemma 3.2 we have
+
+                                       w − w′         (w − w′ )2    (w − w′ )4 2k
+     X           X                                                         
+                         γw ′ Φη              , Nm e             +η
+                                        Nm              4N m         8N 3 m3
+     w∈Wj w′ ∈Wj+h
+
+                                                   N mx − w′         (N mx − w′ )2    (N mx − w′ )4 2k
+          Z                  X                                                                  
+≪k M N           χ(x)                    γw′ +uj Φ           , Nm e                +η                  dx
+             R                                        Nm                 4N m            8N 3 m3
+                        w′ ∈Wj+h −uj
+
+
+
+for some fixed non-negative χ ∈ Cc∞ (R) and some Φ ∈ {Φη , Φ∗η }, where
+
+                                   Φ∗η (x, y) := y −1 ∂1 Φη (x, y) + πi(x + ηx3 )Φη (x, y).
+
+Either way, |y k ∂1j ∂2k Φ(x, y)| ≪j,k 1. Expanding the 2k-th power, we get that (13) is
+                                                                            X                              1
+                              3    1         1    X                  1                  X                    2k
+                                + 2k                             1− 2k
+                      ≪k N    2         M    2               |Wj |                                  |Im (w)|    ,     (14)
+                                                 j≪ MWN                     |m|∼M w∈(Wj+h −uj )2k
+                                                 −1⩽h⩽1
+                            THE SIXTH MOMENT OF THE RIEMANN ZETA FUNCTION                                      11
+
+where denoting w = (w1 , . . . , w2k ) and ∆ℓ := w1ℓ + · · · + wkℓ − wk+1
+                                                                      ℓ               ℓ , we put4
+                                                                           − · · · − w2k
+                         Z          " k                                          #
+                                       Y          wi                    wi+k
+              Im (w) :=        χ(x)        Φ x−       , Nm Φ x −             , Nm
+                            R                    Nm                     Nm
+                                       i=1
+                                                                                   
+                                           1        η∆3           3η∆2 2 η∆1 3
+                                  × e − ∆1 + 2 2 x +                    x −         x dx.
+                                           2      N m             4N m          2
+  Note that |wi | ≪ M N . Using repeated integration by parts [KPY19, Lemma 3.1] when |∆1 | ⩾
+Ck Υ for Ck > 0 sufficiently large, and the oscillatory integral bound of our Lemma 3.1 otherwise
+(absorbing the cubic term e − η∆    1 3
+                                  2 x     into the smoothing via |η∆1 | ≪ W 3 /N 4 ≪ 1), we have
+                                                                             η∆2 −1/2
+                                                                                     
+                                                 −100               η∆3
+         Im (w) ≪k min max(1, |∆1 | − Ck Υ)           , 1 + ∆1 + 2 2 +                   .
+                                                                   N m       NM
+At this point, we use the average over m. If 1 ≪ |∆1 | ≪k Υ, then either αw (m) := ∆1 + Nη∆ 3
+                                                                                          2 m2
+
+satisfies |αw (m)| ⩾ |∆21 | for all |m| ∼ M , or it satisfies |αw
+                                                                ′ (m)| ≍ |∆1 | for all |m| ∼ M . Thus
+                                                                          M
+                                                                  Z M
+  X                    X                              M                    |∆1 | −1/2              M
+         |Im (w)| ≪k         (1+|αw (m)|)−1/2 ≪ p            +1+        1+       u       du ≪ 1+ p        .
+                                                       |∆1 |       0        M                       |∆1 |
+ |m|∼M               |m|∼M
+
+Applying the trivial bound O(M ) when |∆1 | ≪ 1 and the decay when |∆1 | ⩾ 2Ck Υ, we get
+                  X                       M
+                       |Im (w)| ≪k 1 + p            for all w ∈ (Wj+h − uj )2k .
+                |m|∼M
+                                        1 + |∆1 |
+
+  Splitting ∆1 into the ranges |∆1 | ⩽ 1 and |∆1 | ∼ D = 2d for d ⩾ 0, and observing that the shift
+by uj can be ignored in ∆1 , we have that (14) is
+                                                  X                            1
+                   3    1
+                     + 2k   1 X                1
+                                           1− 2k             M                     2k
+             ≪k N  2      M 2        |Wj |               1+ √      E2k (Wj+h ; D)     .       (15)
+                                W                 1⩽D≪ Υ
+                                                              D
+                                 j≪ M N                         k
+                                 −1⩽h⩽1                      D=2d
+
+By Hölder’s inequality, using that
+                    X                                   X
+                         |Wj | = R            and             E2k (Wj+h ; D) ⩽ E2k (W; D),
+                        j                                j
+
+we obtain that (15) is
+                                                      X                         1
+                              3    1
+                                + 2k    1        1
+                                             1− 2k                 M                2k
+                       ≪N     2        M R
+                                        2                       1+ √     E2k (W; D)    .
+                                                     1⩽D≪k Υ
+                                                                     D
+                                                       D=2d
+
+Summing over dyadic scales M ≪ W/N , using Υ ≪k (W/N )2 , and collecting this section’s bounds,
+we conclude that
+                                                  X                     1
+                                  1    1       1                           2k
+                 2 2       2        + 2k   1− 2k         −1/2
+               R V ≪k N R + N W   2      R            D       E2k (W; D)      .            (16)
+                                                                1⩽D≪k Υ
+                                                                  D=2d
+  At this point, we use the energy bound in Proposition 4.1, which states that
+                                       N 4k−4              ND
+                        E2k (W; D) ≺k           E2 (W; D) + 2 R2k−1 .                                        (17)
+                                        V                     V
+   4Note that by putting absolute values around the integral, we forfeit cancellation over the m-sum. It should be
+possible to use the oscillation of this sum to sharpen our results, but we refrain from doing so for simplicity.
+12                                  ALEXANDRE DE FAVERI AND MAYANK PANDEY
+
+Inserting (17) into (16) and rearranging for a bound on R yields Theorem 5.1, as desired.
+
+                                                7. Atkinson’s formula
+  In §9, our passage from large values of |ζ(1/2+it)| to exponential sums is via Atkinson’s formula
+[Atk49] for the second moment in short intervals. We state it below in the greatly simplified upper
+bound version due to Heath-Brown [HB78, Lemma 1], whose proof was simplified by Ivić [Ivi03]
+Lemma 7.1 (Atkinson’s formula [Ivi03, Theorem 7.2]). Let ε > 0 and suppose that T ⩾ 2 and
+T ε ⩽ G ⩽ T 1/2−ε . Denote
+                                         X
+                           ST (∆, N ) :=     (−1)n d(n)e(f (T, n))                    (18)
+                                                       N ⩽n⩽N +∆
+for                                                    r  r           
+                                        T            −1   πn   πn    πn 
+                            f (T, n) :=          sinh        +    1+        .                                         (19)
+                                        π                 2T   2T    2T
+Then
+       Z T +G
+                |ζ( 12 + it)|2 dt
+        T −G
+                                                                                            Z N                  !
+                                              X                                                   |ST (∆, N )|
+           ≪ε G log T + G                                       (T N )−1/4 |ST (N, N )| +                      d∆ .
+                                                                                             0         N
+                                    T 1/3 ⩽N ⩽ T2 (log T )1+ε
+                                               G
+                                             N =2m
+
+  Truncating the power series expansion of the phases above and splitting into small intervals,
+we bound the short second moment of |ζ(1/2 + it)| in terms of exponential sums with the special
+phases that we are considering.
+                                                                        √
+Corollary 7.2 (Phase truncation). Let 1 ⩽ N ⩽ T 3/5 , 1 ⩽ W ⩽ T N , and N 1/2 W 2 ⩽ T 3/2 .
+For each t0 ∈ [T, 2T ], there exist coefficients an ∈ C with |an | ⩽ 1 such that for any t ∈ t0 , t0 +
+W (T /N )1/2 and ε > 0 we have
+            
+
+                                                  X          hr n       πN  n 3/2 i
+                                      ε
+              max |St (∆, N )| ≪ε N max                 an e w        −                 ,
+            0⩽∆⩽N                       0⩽∆⩽N                       N    12t0 N
+                                                           N ⩽n⩽N +∆
+
+where St (∆, N ) is given in (18) and
+                                                   r
+                                                       2N √    √ 
+                                            w :=            t − t0 ∈ [0, W ].
+                                                        π
+Proof. We may assume that T is sufficiently large, otherwise the result is trivial. For |z| ⩽ 21 , a
+Taylor expansion gives
+                                               p             z3 
+                        g(z) := sinh−1 (z) + z 1 + z 2 − 2z +        = O(|z|5 )
+                                                                3
+                                                    √
+and g ′ (z) = O(|z|4 ). Note that t ≍ T since W ⩽ T N , and let N < n ⩽ 2N . Taking z = πn
+                                                                                           p
+                                                                                             2t ≍
+              −1/5
+p
+  N/T ≪ T          in (19), we obtain
+                                            r       √
+                                              2nt     2π n3/2
+                                 f (t, n) =       +       √ + rt (n)
+                                               π     12    t
+with |rt (n)| + n|rt′ (n)| ≪ N 5/2 T −3/2 ⩽ 1. Thus partial summation yields
+                                                                  r        √
+                                                                              2π n3/2
+                                                                                      
+                                                 X
+                                                            n        2nt
+               max |St (∆, N )| ≪ max                   (−1) d(n)e       +        √     .                             (20)
+              0⩽∆⩽N                   0⩽∆⩽N                           π      12     t
+                                              N ⩽n⩽N +∆
+                         THE SIXTH MOMENT OF THE RIEMANN ZETA FUNCTION                                                13
+
+  Next we replace t with t0 in the second term. Using
+                                           √      √   √   √
+                             1      1        t − t0 ( t − t0 )2
+                            √ −√ =−                 +     √     ,
+                              t      t0        t0       t0 t
+the phase in (20) equals
+                     r             √
+                            2nt0     2π n3/2 hr n   πN  n 3/2 i
+                                 +      √ +w      −               + qt (n)
+                             π      12    t0   N    12t0 N
+for                                            √        √    √
+                                               2π n3/2 ( t − t0 )2
+                                     qt (n) =             √        .
+                                              12        t0 t
+                       T 1/2
+                         
+Since |t − t0 | ≪ W    N     and t ≍ T , this gives
+                                                        √
+                                                    3/2 (
+                                                                 √
+                                                N           t−       t0 )2       N 1/2 W 2
+                        |qt (n)| + n|qt′ (n)| ≪                              ≪             ⩽ 1.
+                                              T 3/2                               T 3/2
+Thus a second partial summation removes e(qt (n)). Taking
+                                          r           √
+                                                         2π n3/2
+                                                                 
+                                    n           2nt0
+                          an = (−1) d(n)e            +      √      ,
+                                                  π     12    t0
+which does not depend on t, and rescaling via the divisor bound so that |an | ⩽ 1, we obtain the
+claimed result.                                                                               □
+  The maxima in the result above were a convenient device to quickly execute partial summation,
+but they need to be removed once we sum over distinct points. This is accomplished at little loss
+by the simple lemma below.
+Lemma 7.3 (Removing maxima of partial sums). Let N, J ⩾ 1, Wj ⊂ R be finite sets, aj,n ∈ C,
+and ξj,n ∈ R. Then there exist a′j,n ∈ C with |a′j,n | = |aj,n | such that
+        X     X                 X                                                X    X X
+                      max                 aj,n e(wξj,n ) ≪ log(2N )                               a′j,n e(wξj,n ) .
+                      0⩽∆⩽N
+       1⩽j⩽J w∈Wj             N <n⩽N +∆                                      1⩽j⩽J w∈Wj n∼N
+
+Proof. We may assume that N, ∆ ∈ Z. Summing the geometric series, note that the Fourier
+coefficients of the indicator of {1, . . . , ∆} on Z/(2N )Z are
+                                                 ∆
+                                               1 X  ha       1
+                                1[1,∆] (h) :=
+                                b                  e −    ≪
+                                              2N       2N   1 + |h|
+                                                    a=1
+
+for each −N < h ⩽ N . Applying the Fourier expansion at n − N gives
+                       X                          X        1    X          hn 
+            max                aj,n e(wξj,n ) ≪                     aj,n e       e(wξj,n ) .
+           0⩽∆⩽N                                        1 + |h|            2N
+                    N <n⩽N +∆                   −N <h⩽N         n∼N
+
+Summing over 1 ⩽ j ⩽ J and w ∈ Wj , since −N <h⩽N (1 + |h|)−1 ≪ log(2N ) we obtain the
+                                                   P
+
+conclusion with a′j,n = aj,n e 2N
+                               hn
+                                  
+                                     for some −N < h ⩽ N .                                   □
+  Let us also record the following standard result.
+Lemma 7.4 ([Ivi91, Theorem 1.2]). For every t ∈ R and integer k ⩾ 1,
+                                                    Z t+1/3
+                               k
+                       1
+                   |ζ( 2 + it)| ≪k 1 + log(2 + |t|)         |ζ( 12 + iu)|k du.
+                                                                 t−1/3
+14                            ALEXANDRE DE FAVERI AND MAYANK PANDEY
+
+                          8. Refined spacing for large values of zeta
+   We will use the following result of Iwaniec [Iwa80] on the short fourth moment of the Riemann
+zeta function on average. This is unnecessary if one only wishes to obtain some power saving for
+the sixth moment, but improves the exponents without much extra effort.
+   From now on, denote f ≺ g when |f | ≪ε T ε |g| for any ε > 0.
+                                                               √
+Proposition 8.1 ([Iwa80, Theorem 4]). Let T ⩾ 1 and T ⩽ L ⩽ T . Suppose that I1 , . . . , IJ ⊂
+[T, 2T ] are disjoint intervals, each of length L. Then
+                                 XZ                               p
+                                        |ζ( 21 + it)|4 dt ≺ JL + T J/L.
+                                 j⩽J   Ij
+
+     As a corollary, we obtain the following upper bound on E2 at any scale.
+Corollary 8.2 (E2 refinement). Suppose that 1 ⩽ G ⩽ T /10 and let t1 , . . . , tR ∈ [T, 2T ] be
+2G-spaced points such that     Z
+                                                        |ζ( 12 + it)|4 dt ⩾ V
+                                            |t−tj |⩽G
+for each 1 ⩽ j ⩽ R, where V ⩾ 1. Then for any H ⩾ 1 we have
+                                                                      √
+                                                                 RH  T R
+                                E2 ({t1 , . . . , tR }; H) ≺ R +    + 3/2 .
+                                                                  V  V
+Proof. Since the intervals [tj − G, tj + G] have disjoint interiors, the hypothesis and the fourth-
+moment bound give
+                                        Z 2T +G
+                                 RV ⩽           |ζ( 21 + it)|4 dt ≺ T.                         (21)
+                                                T −G
+   If H < G, then spacing gives E2 ({t1 , . . . , tR }; H) = R. Furthermore, if H ⩾ T , then a trivial
+bound and (21) imply
+                                                                RT       RH
+                              E2 ({t1 , . . . , tR }; H) ⩽ R2 ≺     ⩽       .
+                                                                V         V
+   From now on, assume that G ⩽ H < T . Partition R into intervals (Iℓ )ℓ∈Z of length H, and let
+mℓ denote the number of points tj (for 1 ⩽ j ⩽ R) which lie in Iℓ . Pairs ti , tj with |ti − tj | ⩽ H
+lie in the same or adjacent intervals Iℓ , so
+                                                                X
+                                   E2 ({t1 , . . . , tR }; H) ≪    m2ℓ .
+                                                                        ℓ
+
+By dyadic pigeonholing, there exists a scale 1 ⩽ M ⩽ R such that denoting J := |J | for J := {ℓ ∈
+Z : M ⩽ mℓ < 2M }, we have
+                                   E2 ({t1 , . . . , tR }; H) ≺ JM 2 .                       (22)
+                                                     δ
+                                                               √
+Note that JM ⩽ R, and fix δ > 0. If M V ⩽ T max(H, T ), then (21) gives
+                                                                         √
+                          2            RT δ            √        δ RH
+                                                                       T R
+                       JM ⩽ RM ≪                H+ T ≺T                + 3/2 .               (23)
+                                        V                           V   V
+                               √
+   If instead M V > T δ max(H, T ), put
+                                             L = min(M V T −δ , T ).
+                    √
+Then L > max(H,         T ), since H < T , and clearly L ⩽ T . We have
+                                         XXZ
+                                JM V ≪                    |ζ(1/2 + it)|4 dt.
+                                            ℓ∈J ti ∈Iℓ    |t−ti |⩽G
+                       THE SIXTH MOMENT OF THE RIEMANN ZETA FUNCTION                                15
+
+Since G ⩽ H < L ⩽ T , the intervals of integration above can be covered by O(J) disjoint intervals
+of length L. Applying Proposition 8.1, we get
+                                                     p
+                                     JM V ≺ JL + T J/L.
+The first term on the right-hand side is absorbed into the left-hand side, as L ⩽ M V T −δ . Thus
+                                        T2   T 2+δ       T 2+δ
+                                JM 2 V 2 ≺ ⩽       +T ≺        .
+                                        L     MV          MV
+Above we used that M V ≺ T , due to (21). Hence we conclude that
+                                                      T 2+δ
+                                             JM 3 ≺         .
+                                                       V3
+Since JM ⩽ R, this implies
+                                                                  √
+                                        √        √              T R
+                                    2
+                              JM = JM ·              JM 3 ≺ T δ/2      .                       (24)
+                                                                 V 3/2
+  Taking δ > 0 arbitrarily small and collecting (22), (23), and (24) yields the desired estimate
+                                                                     √
+                                                             RH    T R
+                            E2 ({t1 , . . . , tR }; H) ≺ R +    + 3/2 .
+                                                              V    V
+                                                                                                 □
+
+                          9. Large value estimates for |ζ(1/2 + it)|
+   In this section, we show the following general large value estimate, whose case k = 2 corresponds
+to Theorem 1.3.
+Theorem 9.1. Let E2 (σ) := 24−128σ
+                                                               7 5
+                                   17   and [σ− (2), σ+ (2)] := 60 , 38 . For integers k ⩾ 3, let
+                                  32k 2 − 12k − 10 − (192k 2 − 120k − 28)σ
+                        Ek (σ) :=                                           ,
+                                              16k 2 + 10k − 17
+                              16k 2 − 22k + 7                            4k − 3
+                 σ− (k) :=         2
+                                               ,     and      σ+ (k) :=          .
+                            8(16k − 20k + 5)                            30k − 22
+Then for any σ ∈ [σ− (k), σ+ (k)] we have
+                                        N (T, T σ ) ≺k T Ek (σ) .
+  In Figure 1, we plot the exponent E(σ) for the best bound N (T, T σ ) ≺ T E(σ) obtained from
+Theorem 9.1 in each range, comparing it to the fourth and twelfth moment bounds.
+Proof of Theorem 9.1. We may assume throughout the proof that T is sufficiently large. Let
+V = T σ for σ ∈ [σ− (k), σ+ (k)], and denote
+                                   (
+                                     1
+                                       +σ                  for k = 2,
+                             τ := 2 (8k−7)+(16k2 −46k+40)σ
+                                    4·     16k2 +10k−17
+                                                           for k ⩾ 3.
+   Suppose that T ⊂ [T, 2T ] is a 1-spaced set with |ζ(1/2 + it)| ⩾ V for all t ∈ T . Write R := |T |
+and G := V 2 (log T )−100 .
+   Partition R into intervals (Iℓ )ℓ∈Z of length 2G
+                                                  3 , and let fℓ := |T ∩ Iℓ |. By dyadic pigeonholing,
+there exists a scale 1 ≪ F ≪ R such that denoting L := {ℓ ∈ Z : fℓ ∼ F }, we have |L|F ≻ R. Let
+S ⊂ [T, 2T ] be the set of leftmost points of the intervals Iℓ ∩ [T, 2T ], for ℓ ∈ L whose congruence
+class modulo 4 is the most abundant one among elements of L. Thus S is 2G-separated and
+|S| ≻ R/F . By Lemma 7.4, for every t ∈ S we have
+                                       FV 2                                             FV 4
+           Z                                              Z
+                                2
+                        1
+                    |ζ( 2 + iu)| du ≫            and                |ζ( 12 + iu)|4 du ≫       .  (25)
+            |u−t|⩽G                    log T                |u−t|⩽G                     log T
+16                          ALEXANDRE DE FAVERI AND MAYANK PANDEY
+
+
+               E(σ)
+
+               8                                                            1 − 4σ   2 − 12σ
+              15
+                                                                            k=2      k=3
+                                                                            k=4      k=5
+                                                                            k⩾6
+               1
+               2
+
+
+
+               8
+              17
+
+
+
+             296
+             671
+
+
+
+
+               2
+               5
+                                                                                               σ
+                    7                                       1             173             2
+                    60                                      8             1342            15
+
+
+                           Figure 1. Plot of new large value exponents
+
+By Lemma 7.1 and further dyadic pigeonholing, there exist a scale
+                                                        T
+                                         T 1/3 ≪ N ≪       (log T )2
+                                                        G2
+and S ′ ⊂ S still satisfying |S ′ | ≻ R/F such that for every t ∈ S ′ we have
+                                                   F V 2 (T N )1/4
+                           max |St (∆, N )| ≻                      ≻ F (T N )1/4 .                 (26)
+                           0⩽∆⩽N                          G
+     At this point, take
+                                               τ
+                                    W := N 1−4σ (log T )−1000 + N.
+We record that σ ∈ [σ− (k), σ+ (k)] implies that
+                                3                       4
+                        N ⩽ T 5,       N ⩽ W ⩽ N 3,       N 1/2 W 2 ⩽ T 3/2 .                      (27)
+                         √
+In particular, also W ⩽ T N . Further subdividing [T, 2T ], we may partition S ′ into sets
+                                   r                                       r
+                                     T                                         T
+               Sj ⊂ t0,j , t0,j + W         with    t0,j := T + (j − 1)W         ≍T
+                                     N                                         N
+                   √
+                    TN
+for 1 ⩽ j ⩽ J ≍     W . Now, let
+                                    r
+                                 2N √
+                                                          
+                                           p
+                       Wj :=         ( t − t0,j ) : t ∈ Sj ⊂ [0, W ].
+                                  π
+                                                  p
+The mean value theorem shows that each Wj is ≫ G N/T -spaced.
+                       THE SIXTH MOMENT OF THE RIEMANN ZETA FUNCTION                                  17
+
+  Using (27), we may apply Corollary 7.2 and Lemma 7.3 to (26), concluding that there exist
+coefficients |aj,n | ⩽ 1 such that setting
+                                πN                      X
+                       ηj := −           and Dηj (w) :=   aj,n e(wϕη (n/N )),
+                               12t0,j
+                                                                    n∼N
+
+we have that              X        X
+                                             Dηj j (w) ≻ F (T N )1/4 |S ′ | ≻ R(T N )1/4 .
+                         1⩽j⩽J w∈Wj
+
+Dyadic pigeonholing for the size of |Dηj j (w)| implies that there exists a scale Z and subsets Wj′ ⊂ Wj
+such that for every 1 ⩽ j ⩽ J and w ∈ Wj′ we have |Dηj j (w)| ∼ Z and the bounds
+                                                                               X
+                 Z ≻ F (T N )1/4 , R1 Z ≻ R(T N )1/4 ,          where R1 :=        |Wj′ |.
+                                                                                         j
+
+   Partition each Wj′ ⊂ [0, W ] into ≺ G−1 T /N subsets Wj,ℓ ′ that are 1-spaced. It can be checked
+                                           p
+
+that
+                        |ηj |N 2   N3
+                                 ≪     ≺ T 2−12σ−τ = o(1)      as    T → ∞.
+                          W        TW
+Thus we may apply Theorem 5.1, which implies that for each 1 ⩽ j ⩽ J and ℓ we have
+                      6k−4     k+1                           ! 1          1   k+1         1
+                                                       ′ ; D) 2k+1
+     ′       N 2 N 2k+1 W 2k+1                   E2 (Wj,ℓ            N k+ 2 W 2 1 + NTW 4
+  |Wj,ℓ | ≺k 2 +          8k−4          sup          √             +                         . (28)
+             Z         Z 2k+1       1⩽D≪k 1+ N W       D                      Z 2k+1
+                                                      T
+
+  Let S ′′ ⊂ S ′ consist of the original ordinates corresponding to the elements of the retained sets
+                                                        √        √ 
+Wj′ . More precisely, t ∈ S ′′ corresponds to 2N/π t − t0,j ∈ Wj′ . Thus |S ′′ | = R1 and
+                                                 p
+
+                                  X
+                                           ′
+                                               ; D) ≪ E2 (S ′′ ; D T /N ).
+                                                                  p
+                                      E2 (Wj,ℓ
+                                       j,ℓ
+
+By (25) and Corollary 8.2, this implies that
+                                                                  p         √
+                          X
+                                      ′               R1 D          T /N   T R1
+                                 E2 (Wj,ℓ ; D) ≺ R1 +                    + 3/2 6 .                 (29)
+                                                                 FV 4     F V
+                           j,ℓ
+                                     ′ also implies the bound O(R D) for the above. We may
+Separately, the 1-spacing of each Wj,ℓ                              1
+absorb the middle term of (29) into the first one because N ≫ T 1/3 and τ ⩽ 12 + σ ⩽ 6σ, so
+                     D T /N ≪ T /N + W N/T ≺ T 1/3 + T τ −2σ ≺ V 4 .
+                       p         p             p
+
+Therefore, we have that
+                                                                               
+                                 X
+                                            ′                            T
+                                       E2 (Wj,ℓ ; D) ≺ R1    1+             √    .
+                                 j,ℓ
+                                                                   F 3/2 V 6 R1
+                               ′ is
+The total number of subsets Wj,ℓ
+                                  p           √       p
+                                      T /N      TN     T /N      T
+                            ≺J·             ≺       ·         ≪      ,
+                                      G        W        G       GW
+so combining with (28), we obtain
+                              2     k+1                 1          1  k+1        1/4 
+              T N 2 N 3− k W 2k                                 N k+ 2 W 2 1 + NTW
+                  
+                                                  T        4k
+       R1 ≺k            +         2       1 + 3/2 6 √         +                          .
+             GW Z 2          Z 4− k           F V R1                     Z 2k+1
+18                             ALEXANDRE DE FAVERI AND MAYANK PANDEY
+
+Rearranging to clear the power of R1 , this gives
+                          2  k+1         1   k+1     1                                 1
+         T N 2 N 3− k W 2k         N k+ 2 W 2 1 + NTW 4          T 8k+2 N 24k−16
+            
+                                                                                          8k+1
+ R1 ≺k            +              +                       +                                     .
+       GW Z 2          Z 4−2/k               Z 2k+1         G8k W 4k−4 Z 32k−16 F 3 V 12
+     Multiplying by Z/(T N )1/4 and using that R ≺ ZR1 /(T N )1/4 and Z ≻ F (T N )1/4 , we get
+                 1  3      1       3     3   k   k   1   k−1      1                   1
+               T 2N 2   T 2k N 2− 2k   T 4 − 2 N 2 + 4 W 2 1 + NTW 4    T 6 N 16k−12     8k+1
+        R ≺k          +        k−1   +                               +  8k   4k−4   12
+                                                                                              .
+                GW       GW 2k                          G              G W        V
+                                    τ                        τ
+Using that N ≺ T 1−4σ and N 1−4σ ≺ W ≺ N 1−4σ , this leads to
+                               1            6   k−1                          2k−1          16k−6−(80k−36)σ−4(k−1)τ
+        R ≺k T 2−8σ−τ + T 2− k −(10− k )σ− 2k τ + T 1−(2k+4)σ+                 4
+                                                                                  τ
+                                                                                      +T            8k+1             .   (30)
+Our choice of τ satisfies
+                            16k − 6 − (80k − 36)σ − 4(k − 1)τ
+                                                                 = Ek (σ).
+                                            8k + 1
+For k ⩾ 3, the third exponent in (30) also equals Ek (σ), while the second is at most Ek (σ) precisely
+when σ ⩽ σ+ (k); the first is smaller throughout the stated range. For k = 2, the second and third
+exponents both equal 11      29σ
+                        8 − 4 , which
+                                                               5
+                                          is ⩽ E2 (σ) for σ ⩽ 38 . The first exponent in (30) is also
+                                 7 5
+                                   , 38 . Hence we obtain the desired bound R ≺k T Ek (σ) .
+                                       
+smaller than the third for σ ∈ 60                                                                   □
+
+                                    10. Improved moment bounds
+  An immediate consequence of our large value estimates, combined with work of Trudgian and
+Yang [TY25], is the following improvement of the twelfth moment bound of Heath-Brown [HB78].
+Theorem 10.1 (Twelfth moment bound). For every T ⩾ 1 and ε > 0, we have
+                         Z T
+                                                         520
+                             |ζ( 12 + it)|12 dt ≪ε T 2− 445121 +ε .
+                                        0
+                      520                            1
+     For reference, 445121 is slightly greater than 1000 .
+Proof. Theorem 9.1 with k = 6 states that
+                                                1070−6164σ
+                           N (T, T σ ) ≺ T            451         21
+                                                                 for
+                                                     3688 ⩽ σ ⩽ 158 .
+                                                    619
+
+                                                          64 122
+                                                                  
+Combined with [TY25, Lemma 5.1], using the exponent pair 135 , 243 corresponding to m = 10
+in their given sequence, we also have
+                                                                       593       3587
+                                        N (T, V ) ≺ T V −6 + T 288 V − 288 .
+                                                                                             451
+Applying the subconvexity bound of Bourgain [Bou17], it can be checked that for σ1 = 3688         and
+     58907
+σ2 = 445121 we have
+    Z 2T
+          |ζ( 12 + it)|12 dt ≺ sup T 12σ N (T, T σ )
+      T                       σ∈[0, 13
+                                    84 ]
+                                           1070+1264σ                  593−131σ
+                                                                                       520
+       ≺ max        sup T 1+8σ , sup T          619    , sup T max(1+6σ, 288 ) ≺ T 2− 445121 +ε .
+                  σ∈[0,σ1 ]     σ∈[σ1 ,σ2 ]             σ∈[σ2 , 13
+                                                                84 ]
+
+Splitting into dyadic intervals yields Theorem 10.1.                                                                       □
+     The claimed improvements for all intermediate moments is now simple to deduce.
+Proof of Theorem 1.2. The existence of some δk > 0 for each 4 < k ⩽ 12 follows from interpolation
+between the fourth moment and the new twelfth moment bound in Theorem 10.1.                     □
+                          THE SIXTH MOMENT OF THE RIEMANN ZETA FUNCTION                                        19
+
+Proof of Theorem 1.1. Let V0 = T 7/60 and V1 = T 5/38 . Dyadically decomposing the level sets
+|ζ(1/2 + it)| ⩾ V , using Theorem 1.3 for V ∈ [V0 , V1 ], and (2) for V outside of this range, we get
+                 Z 2T
+                                                          24   − 26                37
+                       |ζ( 21 + it)|6 dt ≪ε T ε T V02 + T 17 V0 17 + T 2 V1−6 ≪ε T 30 +ε .
+                                                                             
+                    T
+Summing over dyadic intervals gives the desired bound, since 37   5   1
+                                                             30 = 4 − 60 .                                     □
+
+                                                 References
+[ALM26] K. Aggarwal, W. H. Leung, and R. Munshi. Short second moment bound and subconvexity for GL(3)
+        L-functions. J. Eur. Math. Soc. (JEMS), 28(11):4797–4871, 2026.
+[Atk49] F. V. Atkinson. The mean-value of the Riemann zeta function. Acta Math., 81:353–376, 1949.
+[Bou17] J. Bourgain. Decoupling, exponential sums and the Riemann zeta function. J. Amer. Math. Soc., 30(1):205–
+        224, 2017.
+[DLY24] A. Dasgupta, W. H. Leung, and M. P. Young. The second moment of the GL3 standard L-function on the
+        critical line. Preprint, 2024. arXiv:2407.06962. To appear in Compositio Mathematica.
+[FGM23] Y. Fu, L. Guth, and D. Maldague. Decoupling inequalities for short generalized Dirichlet sequences. Anal.
+        PDE, 16(10):2401–2464, 2023.
+[GM26] L. Guth and J. Maynard. New large value estimates for Dirichlet polynomials. Ann. of Math. (2),
+        203(2):623–675, 2026.
+[Gut25] L. Guth. Large value estimates in number theory, harmonic analysis, and computer science. Preprint, 2025.
+        arXiv:2503.07410.
+[Hal68] G. Halász. über die Mittelwerte multiplikativer zahlentheoretischer Funktionen. Acta Math. Acad. Sci.
+        Hungar., 19:365–403, 1968.
+[HB78] D. R. Heath-Brown. The twelfth power moment of the Riemann-function. Quart. J. Math. Oxford Ser.
+        (2), 29(116):443–462, 1978.
+[HL23] G. H. Hardy and J. E. Littlewood. The Approximate Functional Equation in the Theory of the Zeta-
+        Function, with Applications to the Divisor-Problems of Dirichlet and Piltz. Proc. London Math. Soc. (2),
+        21:39–74, 1923.
+[Hux72] M. N. Huxley. On the difference between consecutive primes. Invent. Math., 15:164–170, 1972.
+[Ing27] A. E. Ingham. Mean-Value Theorems in the Theory of the Riemann Zeta-Function. Proc. London Math.
+        Soc. (2), 27(4):273–300, 1927.
+[Ivi91] A. Ivić. Lectures on mean values of the Riemann zeta function, volume 82 of Tata Institute of Fundamental
+        Research Lectures on Mathematics and Physics. Tata Institute of Fundamental Research, Bombay; by
+        Springer-Verlag, Berlin, 1991.
+[Ivi03] A. Ivić. The Riemann zeta-function. Theory and applications. Dover Publications, Inc., Mineola, NY, 2003.
+        Reprint of the 1985 original.
+[Iwa80] H. Iwaniec. Fourier coefficients of cusp forms and the Riemann zeta-function. Sémin. Théor. Nombres
+        Bordeaux 1979-1980, Exp. No. 18, 36 pp., 1980.
+[Iwa24] H. Iwaniec. The sixth power moment of partial Riemann zeta function and Kloosterman sums. Funct.
+        Approx. Comment. Math., 71(1):121–125, 2024.
+[Jut91] M. Jutila. Mean value estimates for exponential sums with applications to L-functions. Acta Arith.,
+        57(2):93–114, 1991.
+[KPY19] E. M. Kiral, I. Petrow, and M. P. Young. Oscillatory integrals with uniformity in parameters. J. Théor.
+        Nombres Bordeaux, 31(1):145–159, 2019.
+[Mon69] H. L. Montgomery. Mean and large values of Dirichlet polynomials. Invent. Math., 8:334–345, 1969.
+[MV74] H. L. Montgomery and R. C. Vaughan. Hilbert’s inequality. J. London Math. Soc. (2), 8:73–82, 1974.
+[MV26] H. L. Montgomery and R. C. Vaughan. Multiplicative number theory. II. Primes and sieves, volume 218
+        of Cambridge Studies in Advanced Mathematics. Cambridge University Press, Cambridge, 2026.
+[Pan24] M. Pandey. Squarefree numbers in short intervals. Preprint, 2024. arXiv:2401.13981.
+[Ste93] E. M. Stein. Harmonic Analysis: Real-Variable Methods, Orthogonality, and Oscillatory Integrals, vol-
+        ume 43 of Princeton Mathematical Series. Princeton University Press, Princeton, NJ, 1993.
+[TY25] T. S. Trudgian and A. Yang. Toward optimal exponent pairs. Math. Comp., 94(353):1467–1502, 2025.
+
+  EPFL SB MATH, Station 10, 1015 Lausanne, Switzerland
+  Email address: alexandre.defaveri@epfl.ch
+
+  Courant Institute of Mathematical Sciences, 251 Mercer Street, New York, NY, 10012
+  Email address: mayankpandey9973@gmail.com
+

@@ -1,100 +1,101 @@
-# IV.1 — Identificación de `Â_∞`: operador de Sturm–Liouville de 2º orden (oscilación) Consolidación de E13/E14/E15 (mis corridas mpmath) + el frente analítico (IV1star-relative-gap).
-La identificación ingenua "Laplaciano de Dirichlet" estaba refutada; la correcta es **clase
-Sturm–Liouville / oscilación**, con carrier de borde. Conecta IV.1 con H1 (positividad). Marcadores: **[N]** numérico robusto · **[P]** probado · **[GAP]** residual nombrado. --- ## Hechos sólidos (E13/E14/E15, λ=7,9,11, mpmath dps=30) 1. **[N] El carrier es el borde de banda discreto, exacto:** `ω* = 2πN/(2N+1)` (medido por FFT del fundamental): `0.966π`(N=14), `0.970π`(N=16), `0.973π`(N=18) = `2N/(2N+1)·π` exacto. **No es `π`** (Nyquist) — de ahí el fracaso de de-modular por `(−1)^j` en E12.
-2. **[N] Estado fundamental nodeless tras de-modular por `ω*`:** `0` cambios de signo, ∀λ. **Recupera el Perron–Frobenius de H1** (el `v_0` crudo tiene ~`N` cambios de signo = el carrier; quitándolo correctamente, es positivo). La similaridad que vuelve `QW` positividad-preservante es `D=diag(e^{iω*j})` (carrier de borde).
-3. **[N] La paridad alterna `(−1)^k`:** modos `k=0,1,2,3,…` son `PAR, IMPAR, PAR, IMPAR,…` (E15, limpio ∀λ). **Firma inequívoca de operador de 2º orden** (autofunciones de un Sturm–Liouville simétrico alternan paridad). Coincide con la reducción analítica `ε_1/ε_0 = μ_O/μ_E` (impar más bajo / par más bajo) del frente IV1★.
-4. **[N] Envelopes Sturmianos** (de-mod analítico, E14, λ=7): modos pares `k=0,2,4,6` → `0,2,4,6` nodos. (Ruidoso a λ mayor por mezcla par/impar y fase del Hilbert; el patrón par es limpio.) Consistente con oscilación (`v_n` tiene `n` nodos).
-5. **[N] Espectro `n²` sólido:** `ε_k/ε_0 → (k+1)²` (λ=11: 4.02, 9.0, 16.1, 25.2, 36.5, 49.8). ## Lo que `Â_∞` NO es (refutado por overlaps) - **NO** Laplaciano de coef. constante (Dirichlet): node-count correcto pero **forma no sinusoidal** (overlap con `sin((k+1)π·)` sólo 0.1–0.6). Coeficientes variables.
-- **NO** Hermite/oscilador armónico (overlap ≤ 0.40).
-- **NO** prolato/DPSS (overlap ≈ 0.00). ## Identificación [N→P vía H1] > **`Â_∞` es un operador de Sturm–Liouville de 2º orden (matriz de oscilación,
-> Gantmacher–Krein), en la representación de-modulada por el carrier de borde `ω*`:**
-> - autofunciones de paridad alternante `(−1)^k`, fundamental nodeless, `v_n` con `n` nodos
-> (Sturmianas);
-> - espectro `ε_n ∝ n²` (ley de Weyl para operadores de 2º orden);
-> - **coeficientes variables** (fijados por el dato arquimediano `θ'` + aritmético `Λ(n)`),
-> por eso NO es el Laplaciano de coef. constante. **Por qué es 2º orden / oscilación — la ruta rigurosa (conecta con E1):**
-H1 probó que `e^{−tQW}` es **positividad-preservante** (porque `Λ(n)≥0`, vía
-Lévy–Khintchine + Schoenberg + Trotter). En la representación de-modulada `D⁻¹QW D`
-(`D=diag(e^{iω*j})`), esto es la **propiedad de oscilación total** (Gantmacher–Krein):
-una matriz de oscilación tiene autovalores simples `0<λ_1<λ_2<…` y la autofunción de `λ_k`
-tiene exactamente `k−1` cambios de signo (Sturm), con paridad alternante. **Eso es
-exactamente lo medido** (paridad `(−1)^k`, fundamental nodeless, Sturmianas). **[GAP-IV.1-residual]** Probar que `D⁻¹QW D` es **genuinamente** una matriz de oscilación
-(total no-negatividad de los menores, Gantmacher–Krein) **a partir de H1** — H1 da
-positividad-preservante (Perron–Frobenius, controla el fundamental); la total-no-negatividad
-(que controla TODO el orden de Sturm) es un paso más fuerte, a derivar de la estructura
-Loewner de `sin` (§II) + el signo `Λ(n)≥0`. Es la **misma positividad de H1 elevada de
-"fundamental" a "todos los modos"**. ## Impacto cruzado en IV.1★ (gap relativo) La identificación **da `γ` directamente**: si `Â_∞` es 2º orden con espectro `n²`, entonces
+# IV.1 — Identification of `Â_∞`: second-order Sturm–Liouville operator (oscillation) Consolidation of E13/E14/E15 (my mpmath runs) + the analytic front (IV1star-relative-gap).
+The naive "Dirichlet Laplacian" identification was refuted; the correct one is **the
+Sturm–Liouville / oscillation class**, with boundary carrier. Connects IV.1 with H1 (positivity). Markers: **[N]** robust numerical · **[P]** proved · **[GAP]** named residual. --- ## Solid facts (E13/E14/E15, λ=7,9,11, mpmath dps=30) 1. **[N] The carrier is the discrete band edge, exact:** `ω* = 2πN/(2N+1)` (measured by FFT of the fundamental): `0.966π`(N=14), `0.970π`(N=16), `0.973π`(N=18) = `2N/(2N+1)·π` exact. **Not `π`** (Nyquist) — hence the failure of de-modulating by `(−1)^j` in E12.
+2. **[N] Nodeless ground state after de-modulating by `ω*`:** `0` sign changes, ∀λ. **Recovers the Perron–Frobenius of H1** (the raw `v_0` has ~`N` sign changes = the carrier; once removed correctly, it is positive). The similarity that makes `QW` positivity-preserving is `D=diag(e^{iω*j})` (boundary carrier).
+3. **[N] Alternating parity `(−1)^k`:** modes `k=0,1,2,3,…` are `EVEN, ODD, EVEN, ODD,…` (E15, clean ∀λ). **Unambiguous signature of a second-order operator** (eigenfunctions of a symmetric Sturm–Liouville operator alternate parity). Matches the analytic reduction `ε_1/ε_0 = μ_O/μ_E` (odd over even lowest) from the IV1★ front.
+4. **[N] Sturmian envelopes** (analytic de-mod, E14, λ=7): even modes `k=0,2,4,6` → `0,2,4,6` nodes. (Noisier at larger λ due to even/odd mixing and Hilbert phase; the even pattern is clean.) Consistent with oscillation (`v_n` has `n` nodes).
+5. **[N] Solid `n²` spectrum:** `ε_k/ε_0 → (k+1)²` (λ=11: 4.02, 9.0, 16.1, 25.2, 36.5, 49.8). ## What `Â_∞` is NOT (refuted by overlaps) - **NOT** the constant-coefficient Laplacian (Dirichlet): node count correct but **shape not sinusoidal** (overlap with `sin((k+1)π·)` only 0.1–0.6). Variable coefficients.
+- **NOT** Hermite/harmonic oscillator (overlap ≤ 0.40).
+- **NOT** prolate/DPSS (overlap ≈ 0.00). ## Identification [N→P via H1] > **`Â_∞` is a second-order Sturm–Liouville operator (oscillation matrix,
+> Gantmacher–Krein), in the representation de-modulated by the boundary carrier `ω*`:**
+> - eigenfunctions of alternating parity `(−1)^k`, nodeless fundamental, `v_n` with `n`
+> nodes (Sturmian);
+> - spectrum `ε_n ∝ n²` (Weyl law for second-order operators);
+> - **variable coefficients** (fixed by the archimedean data `θ'` + arithmetic `Λ(n)`),
+> that is why it is NOT the constant-coefficient Laplacian. **Why it is second-order / oscillation — the rigorous route (connects with E1):**
+H1 proved that `e^{−tQW}` is **positivity-preserving** (because `Λ(n)≥0`, via
+Lévy–Khintchine + Schoenberg + Trotter). In the de-modulated representation `D⁻¹QW D`
+(`D=diag(e^{iω*j})`), this is the **total oscillation property** (Gantmacher–Krein):
+an oscillation matrix has simple eigenvalues `0<λ_1<λ_2<…` and the eigenfunction of `λ_k`
+has exactly `k−1` sign changes (Sturm), with alternating parity. **That is
+exactly what is measured** (parity `(−1)^k`, nodeless fundamental, Sturmian functions). **[residual GAP-IV.1]** Prove that `D⁻¹QW D` is **genuinely** an oscillation
+matrix (total non-negativity of the minors, Gantmacher–Krein) **from H1** — H1 gives
+positivity-preservation (Perron–Frobenius, controls the fundamental); total non-negativity
+(which controls the ENTIRE Sturm order) is a stronger step, to be derived from the
+Loewner structure of `sin` (§II) + the sign `Λ(n)≥0`. It is the **same positivity of H1
+raised from "fundamental" to "all modes"**. ## Cross impact on IV.1★ (relative gap) The identification **gives `γ` directly**: if `Â_∞` is second order with spectrum `n²`, then
 ``` ε_1/ε_0 → 2²/1² = 4 ⟹ γ = 3 > 0.
 ```
-Y `ε_1/ε_0 = μ_O/μ_E` (impar/par) confirmado por la alternancia de paridad (E15). Así
-**IV.1 e IV.1★ se cierran juntos** módulo el único residual: que la oscilación
-(Gantmacher–Krein) se sigue de H1. La ley `n²` ya no es misteriosa — es **Weyl para el
-operador de oscilación**, y el `γ=3` es `2²/1²`. ## Estado tras la identificación | Sub-pieza | Estatus |
+And `ε_1/ε_0 = μ_O/μ_E` (odd/even) confirmed by parity alternation (E15). Thus
+**IV.1 and IV.1★ close together** modulo the single residual: that the oscillation
+(Gantmacher–Krein) follows from H1. The `n²` law is no longer mysterious — it is **Weyl for the
+oscillation operator**, and `γ=3` is `2²/1²`. ## Status after the identification | Sub-piece | Status |
 |---|---|
-| carrier = borde `2πN/(2N+1)` | **[N]** sólido |
-| fundamental nodeless (de-mod) = H1 | **[N]+[P]** (H1 probado) |
-| paridad alternante `(−1)^k` | **[N]** sólido |
-| espectro `n²` (Weyl) | **[N]** sólido |
-| autofunciones Sturmianas `n` nodos | **[N]** (par limpio; impar ruidoso) |
-| **`Â_∞` = Sturm–Liouville 2º orden / oscilación** | **[N→P]** módulo Gantmacher–Krein |
-| **IV.1★ `γ=3>0`** | **se sigue** de la identificación |
-| **residual único** | **probar oscilación (Gantmacher–Krein) desde H1 (`Λ≥0`)** | **Veredicto:** IV.1 **identificado** (clase Sturm–Liouville/oscilación, no operador
-nombrado de coef. constante), `n²`=Weyl, `γ=3` de regalo para IV.1★. Queda **un** residual,
-y es de la familia de H1 (positividad total): elevar "positividad-preservante del
-fundamental" a "oscilación total de todo el espectro". Mucho más concreto y conectado que
-"identificar un operador misterioso". --- ## IV.1-res atacado: ruta Gantmacher–Krein REFUTADA (E16) Probé si `B = D·QW·D` (`D=diag((−1)^j)`, de-modulación real) es una **matriz de oscilación**
-(total no-negatividad ⟹ Sturmian por Gantmacher–Krein). **NO lo es** (E16, λ=7,9):
-- entradas `≥0` sólo **50%** (signos mixtos);
-- off-diagonales inmediatas `B[i,i+1]` **negativas** (min `−0.66`, `−0.90`) — falla el requisito de oscilación;
-- **15–22% de los menores 2×2 consecutivos `<0`** — viola TN. **Consecuencia:** la estructura Sturmiana **NO proviene de positividad total de matriz**
-(Gantmacher–Krein). H1 da positividad-preservante (orden 1 = Perron–Frobenius del
-fundamental); la total no-negatividad (orden completo) **es estrictamente más fuerte y
-FALSA aquí**. La ruta "IV.1-res blando vía H1→TN" está **cerrada en falso**. **De dónde viene entonces la Sturmianidad (paridad `(−1)^k`, fundamental nodeless,
-envelopes con `n` nodos):** de la estructura **diferencial de 2º orden (Sturm–Liouville)**
-del *operador de borde* que gobierna el bajo-espectro del frame a densidad crítica — el
-operador del *plunge* prolato / capa límite (cf. Nota IV.1★: "boundary-layer edge
-operator"). Sturm oscilación es teorema para ODEs de 2º orden, **no** requiere TN matricial. ## Estado franco FINAL de IV.1 **Identificado (numérico sólido):** `Â_∞` = operador de **2º orden tipo Sturm–Liouville**
-(boundary-layer del frame crítico), carrier de borde `2πN/(2N+1)`, paridad alternante
-`(−1)^k`, fundamental nodeless (= H1), espectro `n²` (Weyl), coef. variables. NO TN-matriz,
-NO Dirichlet/Hermite/prolato-estándar. **Residual de IV.1 (no cerrado):**
-> **IV.1-res' — Probar que el límite de escala `Â_∞` existe (Conj 2b) y que su bajo-espectro
-> es el de un operador de 2º orden Sturm–Liouville (capa límite del frame crítico), con
-> espectro `n²` y gap `ε_1/ε_0 → 4` (γ=3).** Es **análisis asintótico** (límite de Toeplitz/Loewner + operador de borde de Landau–Widom +
-de Branges/Sturm–Liouville) — **duro pero NO RH-hard** (no es §V; no depende del signo de
-`Λ(n)` globalmente, sólo de la geometría del frame a densidad crítica). **Veredicto:** IV.1 **NO se cierra del todo**. Queda **un** residual `IV.1-res'`
-(identificación rigurosa del operador de borde 2º-orden + existencia del límite de escala),
-de la familia de **teoría de aproximación / Sturm–Liouville**, no de la positividad RH-hard
-§V. Pero IV.1 quedó **muy bien caracterizado**: sabemos QUÉ es `Â_∞` (SL 2º orden, n²=Weyl,
-γ=3), por qué los autovectores no son Dirichlet (coef. variables), y por qué la ruta TN
-falla. El `n²` y el `γ=3` son consecuencias de la estructura SL, condicionadas a `IV.1-res'`. --- ## IV.1b' atacado (idea del colaborador): SL confirmado CUALITATIVO, coef. constantes REFUTADOS Ataqué IV.1b' por reconstrucción de potencial (E17) y por fit carrier×caja (E18). Resultado: **Refutado — ninguna identificación de COEFICIENTE CONSTANTE / base uniforme:**
-- E17 (V(x)=μ_k+φ_k''/φ_k común): residuales `0.45–0.87` (grandes), `V_k≈μ_k` (no común). *Confound:* carrier `32π/33` cerca de Nyquist ⟹ envelope vía Hilbert poco fiable.
-- E18 (v_k = carrier × modo-caja_m): overlap `0.3–0.56`, best `m` errático, `m=k+1` casi nunca. **NO es caja libre de Dirichlet.**
-- Sumado a E12/E14 (no Dirichlet, no Hermite, no prolato) y E16 (no matriz TN). **Confirmado — 2º orden CUALITATIVO (la firma robusta):**
-- **Paridad alternante `(−1)^k`** (E15, limpio ∀λ) = firma decisiva de operador de 2º orden.
-- Espectro `n²` (Weyl de 2º orden), fundamental nodeless, modos pares Sturmianos. **Lectura coherente:** `Â_∞` es un Sturm–Liouville de 2º orden de **COEFICIENTES VARIABLES**
-`−(pφ')'+qφ=μwφ`. Eso explica TODO: el espectro es `n²` (Weyl, robusto a la coordenada),
-la paridad alterna (SL simétrico), el fundamental es nodeless — PERO las autofunciones, en
-la coordenada-`j` cruda, son **modos de caja DISTORSIONADOS** (por eso overlap ~0.5 repartido
-entre varios `m`, y la `V` en coordenada-`j` sale no-constante/mensajosa). Las
-identificaciones de coef. constante fallan **porque los coeficientes son variables**. **Residual afinado IV.1-res'':**
-> Identificar los coeficientes variables `(p,q,w)` del SL límite (= la coordenada de
-> Liouville) vía el límite continuo de la forma Loewner-contra-medida-arquimediana
-> (Conj 2b + asintótica). HARD, **análisis** (no RH-hard). **Lo que el chain necesita YA está cualitativo:** "2º orden ⟹ `n²` Weyl ⟹ `ε_1/ε_0→4`,
-`γ=3>0`". El `γ>0` se apoya en la naturaleza de 2º orden (paridad alternante + Weyl), que
-es robusta; la identificación EXACTA del operador (IV.1-res'') es refinamiento, no bloquea
-el `γ>0` cualitativo. **Veredicto IV.1 (franco, metódico):** IV.1-res' **no cerrado**. Sub-atacado, se afinó a:
-(i) 2º orden SL **confirmado cualitativo** (paridad + n² + nodeless); (ii) coef. **variables**
-(todas las id. de coef. constante refutadas, con explicación); (iii) residual IV.1-res'' =
-pinear `(p,q,w)`, análisis puro. El `γ=3` para IV.1★ se sostiene en (i). El límite de
-resolución numérica (N≤20, carrier near-Nyquist) impide pinear (p,q,w) — haría falta N grande
-o ataque analítico del operador de borde. --- ## Cierre analítico de IV.1 (sin Python) — estado final **Probado [P]:** (A) `QW` conmuta con paridad `J:j↦−j` ⟹ sectores par/impar; alternancia
-`(−1)^k` = entrelazado `ε_0^E<ε_0^O<ε_1^E<…`. (B) En el continuo, `QW_∞` es operador
-integral de **núcleo de Loewner acotado** ⟹ **compacto** (autovalores acumulan en 0). **No cerrado [GAP analítico]:** (C) por (B), el operador COMPLETO es suavizante, NO
-diferencial — el carácter 2º orden vive en el **operador efectivo de capa límite** del borde
-de banda `t=±Ω` tras renormalizar `/ε_0~λ²` (carrier medido `2πN/(2N+1)`=borde confirma).
-(D) derivar ese operador de borde y su espectro `n²` (Landau–Widom/semiclásico) NO se logró:
-los perfiles conocidos no dan `n²` (plunge prolato=logístico; oscilador=`2n+1`). El `n²`
-queda robusto numérico pero analíticamente underivado. **VEREDICTO FINAL IV.1:** probado = PSD + paridad-simetría + forma Loewner compacta.
-Fenomenológico (no probado) = 2º orden / `n²` / `γ=3`. Se ACEPTA IV.1 a este nivel
-(decisión metódica: no forzar un teorema) y se avanza a IV.2. El residual real de IV.1 es
-**análisis de capa límite del frame crítico** (Landau–Widom), NO RH-hard, NO §V.
+| carrier = edge `2πN/(2N+1)` | **[N]** solid |
+| nodeless fundamental (de-mod) = H1 | **[N]+[P]** (H1 proved) |
+| alternating parity `(−1)^k` | **[N]** solid |
+| spectrum `n²` (Weyl) | **[N]** solid |
+| Sturmian eigenfunctions `n` nodes | **[N]** (even clean; odd noisy) |
+| **`Â_∞` = second-order Sturm–Liouville / oscillation** | **[N→P]** modulo Gantmacher–Krein |
+| **IV.1★ `γ=3>0`** | **follows** from the identification |
+| **single residual** | **prove oscillation (Gantmacher–Krein) from H1 (`Λ≥0`)** | **Verdict:** IV.1 **identified** (Sturm–Liouville/oscillation class, not a named
+constant-coefficient operator), `n²`=Weyl, `γ=3` as a bonus for IV.1★. One residual
+remains, and it belongs to the H1 family (total positivity): raising "positivity-preservation
+of the fundamental" to "total oscillation of the whole spectrum". Much more concrete and
+connected than "identify a mysterious operator". --- ## IV.1-res attacked: Gantmacher–Krein route REFUTED (E16) I tested whether `B = D·QW·D` (`D=diag((−1)^j)`, real de-modulation) is an **oscillation
+matrix** (total non-negativity ⟹ Sturmian by Gantmacher–Krein). **It is NOT** (E16, λ=7,9):
+- entries `≥0` only **50%** of the time (mixed signs);
+- immediate off-diagonals `B[i,i+1]` **negative** (min `−0.66`, `−0.90`) — fails the oscillation requirement;
+- **15–22% of consecutive 2×2 minors `<0`** — violates TN. **Consequence:** the Sturmian structure **does NOT come from total matrix positivity**
+(Gantmacher–Krein). H1 gives positivity-preservation (order 1 = Perron–Frobenius of the
+fundamental); total non-negativity (full order) **is strictly stronger and
+FALSE here**. The "soft IV.1-res via H1→TN" route is **closed as false**. **Where the Sturmian character (parity `(−1)^k`, nodeless fundamental, envelopes with
+`n` nodes) actually comes from:** the **second-order differential (Sturm–Liouville)
+structure** of the *boundary operator* governing the low spectrum of the frame at critical
+density — the operator of the prolate *plunge* / boundary layer (cf. Note IV.1★: "boundary-layer
+edge operator"). Sturm oscillation is a theorem for second-order ODEs, it does **not**
+require matrix TN. ## Candid FINAL status of IV.1 **Identified (solid numerical):** `Â_∞` = **second-order Sturm–Liouville-type**
+operator (boundary layer of the critical frame), boundary carrier `2πN/(2N+1)`, alternating
+parity `(−1)^k`, nodeless fundamental (= H1), spectrum `n²` (Weyl), variable coefficients. NOT a
+TN matrix, NOT Dirichlet/Hermite/standard-prolate. **Residual of IV.1 (not closed):**
+> **IV.1-res' — Prove that the scaling limit `Â_∞` exists (Conj 2b) and that its low spectrum
+> is that of a second-order Sturm–Liouville operator (boundary layer of the critical frame), with
+> spectrum `n²` and gap `ε_1/ε_0 → 4` (γ=3).** It is **asymptotic analysis** (Toeplitz/Loewner limit + Landau–Widom boundary operator +
+de Branges/Sturm–Liouville) — **hard but NOT RH-hard** (it is not §V; it does not depend on the
+global sign of `Λ(n)`, only on the geometry of the frame at critical density). **Verdict:** IV.1 is **not fully closed**. One residual remains, `IV.1-res'`
+(rigorous identification of the second-order boundary operator + existence of the scaling
+limit), from the **approximation theory / Sturm–Liouville** family, not from the RH-hard
+positivity §V. But IV.1 ended up **very well characterized**: we know WHAT `Â_∞` is (second-order
+SL, n²=Weyl, γ=3), why the eigenvectors are not Dirichlet (variable coefficients), and why the TN
+route fails. `n²` and `γ=3` are consequences of the SL structure, conditioned on `IV.1-res'`. --- ## IV.1b' attacked (collaborator's idea): SL confirmed QUALITATIVELY, constant coefficients REFUTED I attacked IV.1b' by potential reconstruction (E17) and by carrier×box fit (E18). Result: **Refuted — no CONSTANT-COEFFICIENT / uniform-basis identification:**
+- E17 (V(x)=μ_k+φ_k''/φ_k common): residuals `0.45–0.87` (large), `V_k≈μ_k` (not common). *Confound:* carrier `32π/33` near Nyquist ⟹ envelope via Hilbert unreliable.
+- E18 (v_k = carrier × box-mode_m): overlap `0.3–0.56`, best `m` erratic, `m=k+1` almost never. **NOT** a free Dirichlet box.
+- Added to E12/E14 (not Dirichlet, not Hermite, not prolate) and E16 (not a TN matrix). **Confirmed — QUALITATIVE second order (the robust signature):**
+- **Alternating parity `(−1)^k`** (E15, clean ∀λ) = decisive signature of a second-order operator.
+- Spectrum `n²` (second-order Weyl), nodeless fundamental, Sturmian even modes. **Coherent reading:** `Â_∞` is a second-order Sturm–Liouville operator with **VARIABLE
+COEFFICIENTS** `−(pφ')'+qφ=μwφ`. That explains EVERYTHING: the spectrum is `n²` (Weyl, robust
+to the coordinate), parity alternates (symmetric SL), the fundamental is nodeless — BUT the
+eigenfunctions, in the raw `j` coordinate, are **distorted box modes** (hence overlap ~0.5
+spread across several `m`, and `V` in the `j` coordinate comes out non-constant/messy). The
+constant-coefficient identifications fail **because the coefficients are variable**. **Refined residual IV.1-res'':**
+> Identify the variable coefficients `(p,q,w)` of the limit SL (= the Liouville
+> coordinate) via the continuum limit of the Loewner-against-archimedean-measure
+> form (Conj 2b + asymptotics). HARD, **analysis** (not RH-hard). **What the chain needs is ALREADY qualitative:** "second order ⟹ `n²` Weyl ⟹ `ε_1/ε_0→4`,
+`γ=3>0`". The `γ>0` rests on the second-order nature (alternating parity + Weyl), which
+is robust; the EXACT identification of the operator (IV.1-res'') is refinement, it does not
+block the qualitative `γ>0`. **Verdict IV.1 (candid, methodical):** IV.1-res' **not closed**. Further attacked, refined to:
+(i) second-order SL **confirmed qualitatively** (parity + n² + nodeless); (ii) **variable**
+coefficients (all constant-coefficient IDs refuted, with explanation); (iii) residual IV.1-res'' =
+pin down `(p,q,w)`, pure analysis. `γ=3` for IV.1★ rests on (i). The limit of numerical
+resolution (N≤20, near-Nyquist carrier) prevents pinning down (p,q,w) — would need large N
+or an analytic attack on the boundary operator. --- ## Analytic closure of IV.1 (no Python) — final status **Proved [P]:** (A) `QW` commutes with parity `J:j↦−j` ⟹ even/odd sectors; alternation
+`(−1)^k` = interlacing `ε_0^E<ε_0^O<ε_1^E<…`. (B) In the continuum, `QW_∞` is an integral
+operator with **bounded Loewner kernel** ⟹ **compact** (eigenvalues accumulate at 0). **Not closed [analytic GAP]:** (C) by (B), the FULL operator is smoothing, NOT
+differential — the second-order character lives in the **effective boundary-layer operator**
+at the band edge `t=±Ω` after renormalizing `/ε_0~λ²` (measured carrier `2πN/(2N+1)`=edge confirms).
+(D) deriving that boundary operator and its spectrum `n²` (Landau–Widom/semiclassical) was NOT
+achieved: known profiles do not give `n²` (prolate plunge=logistic; oscillator=`2n+1`). The `n²`
+remains numerically robust but analytically underived. **FINAL VERDICT IV.1:** proved = PSD + parity symmetry + compact Loewner form.
+Phenomenological (not proved) = second order / `n²` / `γ=3`. IV.1 is ACCEPTED at this level
+(methodical decision: do not force a theorem) and we move on to IV.2. The real residual of IV.1 is
+**boundary-layer analysis of the critical frame** (Landau–Widom), NOT RH-hard, NOT §V.

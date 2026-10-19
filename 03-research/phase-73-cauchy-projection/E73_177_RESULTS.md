@@ -1,6 +1,5 @@
 # E73.177 results - stable divisor bridge
 
-Date: 2026-07-14.
 
 Script:
 

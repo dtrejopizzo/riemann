@@ -1,6 +1,5 @@
 # E73.277 - Residual slot theorem and program audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

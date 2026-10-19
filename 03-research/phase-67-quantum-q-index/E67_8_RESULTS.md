@@ -1,6 +1,5 @@
 # E67.8 Results — semigroup-isometry off-diagonal test
 
-**Date:** 2026-07-06.
 **Script:** [E67_8_semigroup_offdiag.py](E67_8_semigroup_offdiag.py).
 **Exact source:** `../../04-papers/P52-riemann-proof-audit/h8lab.py` (per-integer prime jet + `inv_sqrt`).
 

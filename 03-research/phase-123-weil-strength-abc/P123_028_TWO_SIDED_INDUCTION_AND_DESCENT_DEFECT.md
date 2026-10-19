@@ -1,6 +1,6 @@
 # P123.028 — two-sided induction and the diagonal descent defect
 
-Date: 2026-09-05. Status: PROVED for the algebraic bimodule induction,
+Status: PROVED for the algebraic bimodule induction,
 its failure to preserve the diagonal via multiplication, and the ordinary
 relative coring below. Completed derived descent and shadow comparison
 remain OPEN.

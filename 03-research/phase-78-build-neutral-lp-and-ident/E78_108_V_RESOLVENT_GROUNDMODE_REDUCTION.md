@@ -1,6 +1,6 @@
 # E78.108 - On the zeta build, `V-RESOLVENT-SOURCE` reduces to the ground mode of `A_N(0)`
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** front B only, live object `V-RESOLVENT-SOURCE`.  
 **Class:** REDUCCION GENUINA.  
 **What we know after this doc that we did not know before:** on the zeta build,

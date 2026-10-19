@@ -1,0 +1,747 @@
+# R162_2300 — MAPA MAESTRO de la fila D (cuadrícula 8×8, corpus completo)
+
+Documento permanente; actualizado (parte 16 fusionada). Sólo lectura: no se afirma ningún signo; Gate 1 sigue OPEN.
+Fuentes: `R162_2300_MASTER_grid.json` (997 rutas fusionadas: phases 0–161 en las partes 1–4, papers 01–47 en la parte 5, sub-auditoría de 160–161 (R160_S1–S5 completas, memos R160, R161 1–35 y 030–081, R161_099) en la parte 6, phase 162 desde R162_2200, las rondas 22–24 de phase 162 (R162_2201–2402) en la parte 7 las rondas 25–26 (R162_2501–2602, de auditoría 2590) en la parte 8 las rondas 27–28 (R162_2701–2802, de auditoría 2890) en la parte 9, la ronda 29 (R162_2901, 2902a–c) en la parte 10 phase 163 (R163_001–003, 101, 102, de auditoría 190) en la parte 11, la ronda 31 (R163_201–203, de auditoría 290) en la parte 12 las rondas 32–37 de phase 163 (R163_401–1001) en la parte 13 y las rondas 1–2 de phase 164 (R164_101, 102, 201, 401, 402) en la parte 14 y las rondas 3–4 de phase 164 (R164_501, 502, 503, 601, de auditoría 491) en la parte 15 y phase 165 (R165_101, 102, 201, 202; auditoría R165_190) en la parte 16), los resúmenes `R162_2300_part1..5.md`, `../R162_2200_GRID_MAP.md` y `../README.md` (correcciones tardías).
+Versión legible por máquina: `R162_2300_MASTER_grid.json`, con `status` refinado, `live_residuals`, `editor_note` y `counts` en cada celda.
+
+## 0. Cómo usar este mapa (regla obligatoria)
+
+1. **Antes de construir, busca la celda.** Toda idea nueva debe declarar su celda (fila = qué aritmética usa, columna = qué objeto) y citar el id de la ruta más cercana de esa celda.
+2. **Si la celda es ■ o ◩, la idea tiene que nombrar qué muro W1–W12 (§3) evade y por qué.** Si no lo hace, no se construye.
+3. **Si la celda es ◧, empieza por el residuo vivo listado.** No abras una ruta paralela a uno que ya existe.
+4. **Toda ruta tiene que pasar la batería de falsificadores de §4** (como mínimo DH, deletion, κ/finmod, Beurling DMV, Λχ₂ y la curva de Tipo I) *antes* de que el constructor escriba la prueba.
+5. Al cerrar la ronda, actualiza el JSON y este mapa (§8).
+
+Leyenda: **■ PINTADA** (todas las rutas muertas, sin residuo vivo) · **◩ MUERTA CON RESIDUO** (muerta, pero sobrevive un residuo preciso, normalmente de fuerza RH o todavía sin formular como ruta) · **◧ ABIERTA** (hay una ruta OPEN/PARTIAL viva que ninguna fase posterior superó) · **□ VACÍA**.
+Criterio: una ruta OPEN de una fase temprana que una fase posterior mató **no cuenta como viva**. El cotejo se hizo por nombre e id entre partes; los casos dudosos se marcan "NO CONFIRMADO".
+Filas: 1 identidad/EF · 2 positividad/soporte · 3 estimación cuantitativa · 4 producto de Euler · 5 integralidad de ℤ · 6 valores exactos de Λ · 7 lado de ceros/fórmula explícita · 8 sin aritmética.
+Columnas: A forma de una ventana · B vector núcleo del contacto (lineal en F) · C funcionales cuadráticos/superiores · D espectro · E flujo/familia en T · F transformadas globales en T · G familias de L/cuerpos · H objetos geométricos/dinámicos.
+
+## 1. La cuadrícula refinada (símbolo + número de rutas en el JSON)
+
+| fila \ col | A | B | C | D | E | F | G | H |
+|---|---|---|---|---|---|---|---|---|
+| 1 identidad/EF | ◩ 22 | ◩ 17 | ◩ 13 | ◩ 11 | ◧ 11 | ■ 10 | ◩ 8 | ◧ 26 |
+| 2 positividad/soporte | ◩ 31 | ■ 12 | ◩ 9 | ■ 12 | ◧ 9 | ◩ 4 | ◧ 8 | ◧ 23 |
+| 3 estimación | ◧ 39 | ■ 4 | ◩ 8 | ◧ 22 | ◧ 15 | ◧ 14 | ■ 5 | ■ 5 |
+| 4 Euler | ◧ 27 | ◩ 20 | ◧ 21 | ◧ 18 | ◧ 19 | ◧ 11 | ■ 12 | ◧ 28 |
+| 5 integralidad ℤ | ◩ 6 | ■ 4 | ◩ 2 | ◩ 4 | ◧ 3 | ◩ 7 | ◧ 17 | ◧ 25 |
+| 6 valores de Λ | ◧ 20 | ◧ 10 | ◩ 9 | ■ 4 | ◧ 5 | ◧ 10 | ◧ 3 | ◧ 8 |
+| 7 lado de ceros | ◧ 50 | ◧ 11 | ◩ 6 | ◧ 23 | ◧ 15 | ◧ 27 | ■ 1 | ◧ 18 |
+| 8 sin aritmética | ◧ 23 | ◩ 15 | ◧ 6 | ◧ 34 | ◩ 22 | ◩ 6 | ◩ 9 | ◧ 100 |
+**Conteo (tras la parte 16, phase 165):** ■ 10 · ◩ 20 · ◧ 34 · □ 0; 997 rutas. La parte 16 (8 entradas) no cambia ningún símbolo: 7A recibe Det+ (R165_101, PROVED-TOOL), Det− (R165_102, DEAD: falso para δ*Λ* grande, contacto = min_ρ T_det), "entrelazado ⇒ cuarteto fuera del cono" (R165_201, DEAD por Thm 3(a)) y "contacto ⇒ EC" (R165_202A, DEAD); su residuo D.16-γ queda HECHO negativo y se sustituye por ω(E) en el contacto = Rem 4.8a; 7D recibe Det+ y Thm 1/Cor 2(c) como herramientas y los residuos O102.1, O102.2, O701.1–3; 7E recibe R165_202 (flujo de nodos, PARTIAL/E1); 2A recibe Prop 4/Cor 2 de R165_102.
+**Conteo (tras la parte 15, rondas 3–4 de phase 164):** ■ 10 · ◩ 20 · ◧ 34 · □ 0; 989 rutas. La parte 15 (9 entradas) no cambia ningún símbolo: 7A recibe R164_501 (sinc en el lado de ceros, DEAD [E1, sin espacio]; herramientas Thm SA, Cor SA.1); 7F recibe la herramienta Prop 4 (R164_501P) y R164_601 (dlVP sobre G², DEAD [W2/M + Thm 3.1]; O164.501.1 CERRADO; residuo O164.601.1 = (★_cell) ponderada por K); 4A/4E/8D reciben R164_502 (momentos, det/traza de calor, Szegő–Widom, DEAD; herramientas L4, L5, L6); 5G recibe R164_503 (Goal B ≥ RH + GRH cuadrática; redondeo por primos tope x^{1/2} ARGUED; O164.503a–d); 2A recibe Props 1.1/1.3 (R164_601T); 4F el de auditoría R164_491 (arreglos aplicados).
+**Conteo (tras la parte 14, rondas 1–2 de phase 164):** ■ 10 · ◩ 20 · ◧ 34 · □ 0; 980 rutas. La parte 14 (5 rutas) no cambia ningún símbolo: 4F recibe R164_101 ((KZ), DEAD [E1]), R164_102 (cola positiva, DEAD [Thm A]), R164_402 (superada) y la herramienta R164_401 (**Thm R**: O164.101 ⟺ ¬RH, clase del testigo = {ζ}, muro W-identification); 4F sigue ◧ por sus residuos previos (GAP-157.A, O2802.1, objeto generador). 5G recibe R164_201 (Theorem L PROVED tras el de auditoría R164_291): O163.803a / L2a **CERRADA NEGATIVA** en 𝒦_θ, sustituida por **O164.201a** (fuera del retículo, ARGUED); 5G sigue ◧. Muro nuevo **W-identification** (§3).
+**Conteo (tras las partes 12–13, rondas 31–37 de phase 163):** ■ 10 · ◩ 20 · ◧ 34 · □ 0; 975 rutas. La parte 12 (5 rutas: R163_201a–c, 202, 203; de auditoría 290) registra la puerta de Euler (modos K_F(1+2πik/log p)) como NO-GO circular (4B, 5G). La parte 13 (17 rutas: R163_401, 402, 501, 502, 601, 602, 603, 701, 702, 801, 802, 803, 901, 1001a–c, 1001O; auditorías 490, 590/591, 790, 891/892, 991 en las notas) sube **7B** de ◩ a ◧ (R163_401, candidato de cierre con la brecha (★_cell) ⟺ RH en el testigo; forma de cola (TC) en R164_000) y no cambia otro símbolo. **5E y 5F:** las rutas de R163_1001 (deformación; periodicidad theta; Hamburger de ventana) quedan DEAD [E1 + W3′], pero R163_1001 §7 dice que no toca los residuos vivos O1802.3/O2802.1 (5E) ni O2302.1/2 (5F); por la regla §8.3 5E sigue ◧ y 5F sigue ◩. 1G: residuo afilado a "GRH en grado uno, uniforme en χ" (Thm O.2). 5G: Theorem C (R163_803) cierra O163.101a en θ∈(1/3,½); BF_θ^disc queda en θ≤1/3. Muro nuevo **W3′** (§3); falsificadores nuevos **f_χ** y **f_t** (§4).
+**Conteo (tras las partes 10–11, ronda 29 y phase 163):** ■ 10 · ◩ 21 · ◧ 33 · □ 0; 953 rutas. La parte 10 (4 rutas: R162_2901, 2902a–c) cierra O2801.1 en 4F (Thm A/B NO-GO; residuo = integralidad de dN), hace P2 en 6D (◧→■, identidad estructural Λ-ciega) y lem:degen en 6A (PARTIAL, falta log 2). La parte 11 (13 rutas de phase 163: R163_001, 003a, 002a/b, 101a–d, 102a–d y la herramienta citada 191a; auditorías R163_190 y R163_191) abre 5G (■→◧) con la **frontera de Beurling**: ζ_θ (sistema del propio Broucke, §6.1; CITADO, no nuevo) responde SÍ a BF_θ en la clase extendida ∀θ∈(0,1), así que la rama de clase es falsa; sobrevive sólo **BF_θ^disc** (sistemas discretos, θ<θ₀≈1/3), que es la forma afilada de O2601.1. **Hostil R163_191:** nada WRONG; la cota de K(y) del redondeo aleatorio es un ESBOZO (la construcción sigue PARTIAL, C_{1/3} conjetura); Révész 2207.00665 Obs. 7 (vía Hilberdink 2010): en sistemas discretos θ<½ fuerza ceros con β>θ (resultado de integralidad sobre ceros, compatible con RH); Thm T requiere ρ>0; sustitución de raíz sup|R|≈2.00. 7F recibe el intercambio canónico + D_test (herramienta) y propiedad 2 ⟺ RH (E1); 5F el lema de soporte y el falsificador K.
+**Conteo (tras la parte 9, rondas 27–28):** ■ 10 · ◩ 21 · ◧ 33 · □ 0; 936 rutas. La parte 9 (6 rutas: R162_2701, 2702a–c, 2801, 2802; de auditoría 2890) cierra el residuo O8 de 4E (Tate 2×2, W12), el doc 107 de 4C (cerrado por 108) y NG-D4 y B_CCM de 1D (◧→◩; invariantes Λ-libres). **Hostil R162_2890:** la deficiencia (2,2) del triple de frontera de 2702 es WRONG ((4,4), círculo límite en ±∞): la herramienta queda "por rehacer" y es el residuo de 1D; la frase de 2701 "el índice de phase-61 era un artefacto" se reemplaza por "no certificado; índice 0 tras normalizar". 4F recibe O2801.1 y O2802.1 (la segunda también en 5E, fila 5). **8D vuelve a ◧** por la regla §8: tiene 4 rutas PARTIAL/OPEN no superadas (phase-37/110, 35/99, 63 F9, R160_010), que la parte 8 no había tenido en cuenta. Todos los residuos convergen a O2601.1, con las sub-formas O2801.1 y O2802.1.
+**Conteo (tras la parte 8, rondas 25–26):** ■ 10 · ◩ 21 · ◧ 33 · □ 0; 930 rutas. La parte 8 (10 rutas: R162_2501, 2501a/b, 2502, 2502a, 2601a–c, 2602a/b) baja 8F y 8D de ◧ a ◩ (residuo común O2601.1); 4D sigue ◧ sólo por la conjetura de exclusión (= C_B → O2601.1), el residuo R161_068–070 queda plegado en R162_1603 (d). **Convergencia:** 8F, 8D y O2501.1 se reducen a UN lema, O2601.1.
+**Hostil R162_2590 (ronda 25):** nada WRONG; los dos NO-GO se mantienen. 2501 Prop 1 (cota superior) reparada, ley 2β* vale; M_m correcto (2m pares conjugados); Thm 3 cambio O(mT) a T pequeño; Prop 3 E restringida a tipo cuarteto; 2502 Thm K sólo "(4.1) al menos tan fuerte como Gate 1".
+**Tras la parte 7:** ■ 10 · ◩ 19 · ◧ 35; 920 rutas. Antes de la parte 7: ■ 10 · ◩ 15 · ◧ 39. La parte 7 (10 rutas: R162_2201a–c, 2202a–b, 2301, 2302, 2401a–b, 2402) baja 8B, 5C, 6C y 5F de ◧ a ◩; 5H sigue ◧ (muere sólo el residuo o-minimalidad/Pila–Wilkie). Antes de la parte 6 era ■ 15 / ◩ 19 / ◧ 29 / □ 1; R162_2200 daba 41 ■ / 8 ◧ / 15 □. La parte 6 (309 entradas, 308 nuevas) reabre 1D, 2E y 6E (■→◧), baja 1C y 2C a ◩, sube 3F, 4C, 4F, 6G, 6H y 7D (◩→◧), y llena 5F (□→◧).
+**Correcciones auditorías R162_2290 (ronda 22):** los dos NO-GO se mantienen. 2201: Thm N3 es FALSO como teorema sobre "todas las consecuencias" y queda degradado a *proposición* sobre las tres rutas que lista (F6); Thm N1(a) lleva un factor 2 y N1(b) es sólo ⟹. 2202: Thm NI correcto (sólo entran n<e^{T_c}); Thm ND necesita la hipótesis de ι-invariancia de Thm R (F12); el ejemplo de Prop T es falso (sumas parciales de Z con ceros reales, F11).
+**Advertencia de lectura:** "◧" significa que *queda algo sin cerrar*, no que haya una ruta prometedora. La mayoría de los ◧ de las columnas A/E/H son objetos no construidos o auditorías pendientes, y muchos van a caer en E1. El ranking de §7 es el que decide.
+Correcciones tardías incorporadas (README y parte 6): el certificado en ½log5 **ya está hecho** (R162_303/391 primitivo y R162_703/791 completo, λ_A, λ_W>0 en (0,½log5], con Arb y reruns de auditoría completos). **Es independiente del certificado antiguo D.172 (114),** que S3 registra y que fue degradado/retractado. Otras correcciones de la parte 6: el killer de R161_016 es F2, no F1. R161_075 dice que la exclusión general por límite lineal de R161_018 está "sin probar tal como está escrita". El no-go de factorización de R161_069 lo corrigió R161_070, así que no es un no-go. R161_030–081 faltaban en R162_2200: el detector Γ–Euler 068–074 (en parte abierto), la renormalización débil 075–079 y el test de signo 081. la separación R-C (1701) no aísla la aritmética (2101); la curva de Tipo I de dos átomos (2001, verificada por 2190, s₂^c=0.9997678) mata R-C.b ciega al peso.
+
+## 2. Celdas en detalle
+
+Formato: estado, número de rutas por estado, killers de las rutas DEAD (conteo), ids muertos (sin duplicados), duplicados, herramientas y **residuo vivo**. El texto completo de cada ruta está en el JSON.
+**1A** ◩ (identidad/EF × forma de una ventana) — 22 rutas: DEAD 18 · OPEN 2 · PARTIAL 2  
+  killers: E1×11, OTHER×7, F3:Xi_a×1, F4×1  
+  muertas: phase-0/0A3; phase-16/07-09; phase-33/82,85; phase-35/99; phase-46/137; 136 PHASE_136 S6; 138 R138_005 D.15; 155 cor:Li; P08 main.tex; P46 §3-5 D.1-D.3; (+6)  
+  duplicados: phase-5/B3.2; phase-29/50  
+  → residuo vivo: λ_W>0 más allá de ½log5 (P47 Open 5): certificado, no mecanismo; choca con M  
+  → residuo vivo: Conjetura C_B (34/91) → vive en 8F  
+  nota: B3-KREIN y 34/91 absorbidos por E1
+
+**1B** ◩ (identidad/EF × vector núcleo (lineal en F)) — 17 rutas: DEAD 10 · OPEN 1 · PARTIAL 2 · PROVED-TOOL 4  
+  killers: OTHER×4, F2×2, F1×2, E1×2  
+  muertas: 121 P121_TWO_PORT_WRONSKIAN_AND_REAL_AUDIT; R162_305; R162_402; R162_204; R162_1201; R161_008-011,017-018,022-023; R160_S2 F20 phase-66; R160_S3 §2.2#13 phase-110; R160_X_C1; R161_008-010  
+  duplicados: R161_011  
+  herramientas: 121 P121_GRAPH_RENORMALIZED_INCOMING_CURRENT; 121 P121_TATE_PORT_OPPOSITE_PARITY_RIGIDITY; R161_005-007; R161_017  
+  → residuo vivo: R161_011 (4.2) rango de Sonin global (R161_011; R162_1201): sumidero E1 de las columnas B/C  
+  nota: P121 corriente/colar = herramientas
+
+**1C** ◩ (identidad/EF × funcionales cuadráticos/superiores) — 13 rutas: DEAD 12 · PARTIAL 1  
+  killers: OTHER×7, E1×5, preserver arithmetic-b×1, F3×1  
+  muertas: phase-11/M11.2-5; phase-28/04-06; phase-28/07-08; phase-101/E101_061,070; 122 P122_005; 161 R161_002; R162_1003; R160_S1 §2.4#20 phase-28; R160_S5 §2.4#30 G2_B3_R1; R161_022-023; (+2)  
+  → residuo vivo: R161_020-021: objetivo terminal escalar X_T=½‖(I+εC_log)g‖², no realizado desde (PC-ren) finito  
+  nota: antes ■
+
+**1D** ◩ (identidad/EF × espectro) — 11 rutas: DEAD 10 · PROVED-TOOL 1  
+  killers: E1×4, OTHER×3, F3×1, W3×1  
+  muertas: phase-61/O8; P20 main.tex; P31 main.tex; R162_1301; R160_S1 §2.5#35 phase-28/02 NG-D4; R160_S2 F13 phase-53/164; R160_S2 §3.2 phase-60 §4.B; R162_2702b; R162_2702c  
+  duplicados: R160_C2_R1  
+  herramientas: phase-64/C,D  
+  → residuo vivo: rehacer el triple de frontera de W_λ con deficiencia (4,4) (2890; herramienta RH-neutral, no mecanismo)  
+  → residuo vivo: O2702.1: comparación con Burnol (RH-neutral)  
+  nota: part9: NG-D4 MUERTA (2702c, conteo de índice); triples de frontera/B_CCM NO-GO para O2601.1 (2702b, invariantes Λ-libres, W3) pero el cálculo de deficiencia (2,2) es WRONG (2890: (4,4), círculo límite en ±∞); antes ◧
+
+**1E** ◧ (identidad/EF × flujo/familia en T) — 11 rutas: DEAD 7 · OPEN 1 · PARTIAL 3  
+  killers: E1×7, F3×1, DH×1  
+  muertas: phase-25/02-03; phase-30/57; R162_1802; R162_902; R160_S2 F19 phase-65 RH-PROOF; R160_S3 §2.1#9 Papers 31/36/38; R160_S5 §2.4#40 G2_B5  
+  → residuo vivo: Conj. A.15 (phase-28/01): Λ=max b_j²/2, monotonía del índice de Kreĭn bajo dBN, 0 citas posteriores  
+  → residuo vivo: D-109 anclaje crítico (37/109): partición falsable, sin mecanismo  
+  nota: polarcap 156 → 703 (cerrado)
+
+**1F** ■ (identidad/EF × transformadas globales en T) — 10 rutas: DEAD 9 · PROVED-TOOL 1  
+  killers: E1×6, F3:positive kernels wi×1, F3:positive even kerne×1, OTHER×1  
+  muertas: phase-33/75,78; phase-33/81,84; phase-35/102; phase-103/103_15,29,39,42; phase-103/103_30; P47 KEP; R160_S3 §2.1#2 phase-102/174; R161_066-067; R161_080  
+  herramientas: R161_019/024-025  
+  nota: 2200 lo daba □; tiene 6 rutas DEAD [E1/F3]
+
+**1G** ◩ (identidad/EF × familias L/cuerpos) — 8 rutas: DEAD 6 · PROVED-TOOL 2  
+  killers: T1×2, OTHER×1, definite×1, E1×1  
+  muertas: phase-16/01-05; phase-30/55; 138 T1 equimodularity; 158 S₃ falsifier; R160_S4 §2.A#11 phase-138; R160_S5 §2.2#11 R158_004/006  
+  herramientas: P46 §18.1 T1; R163_1001O  
+  → residuo vivo: conversos/Hamburger como mecanismo de signo en familia: afilado por Thm O.2 (R163_1001) — tendría que ser GRH en grado uno, uniforme en χ (W9/T1)  
+  nota: 2200 lo daba □; part13: Thm O + f_χ (R163_1001O) herramienta, muro W3′
+
+**1H** ◧ (identidad/EF × objetos geom./dinámicos) — 26 rutas: DEAD 17 · OPEN 3 · PARTIAL 4 · PROVED-TOOL 2  
+  killers: OTHER×8, E1×7, F2×2, symmetry not positivit×1  
+  muertas: phase-17/SURF-A,B; phase-108/108_17,38,50-55,91; phase-110/110_99; 122 P122_018; 158 R158_005; 159 G1_B3_R1; P46 §11-12 D.6-D.8; 03-research/THE_BACKWARD_MAP §5-7; R162_1002; R162_1203; (+7)  
+  herramientas: phase-111/111_99; P43 main.tex  
+  → residuo vivo: P122_D_SPECIFICATION: correspondencia relativa E_(∞,T) Bohr↔cuarto-Γ Calderón (L6), nunca construida  
+  → residuo vivo: P25 V.2: completación de Pontryagin con caracteres x^{b+iγ} (puente κ(Q)=ind₋ H_C)  
+  → residuo vivo: P152.1 Dolgopyat para Mayer vía Lewis–Zagier (sólo EXCL de escritorio en 157)
+
+**2A** ◩ (positividad/soporte × forma de una ventana) — 31 rutas: DEAD 21 · PARTIAL 3 · PROVED-TOOL 7  
+  killers: OTHER×14, E1×4, F3:comb models×2, Φ combs×2  
+  muertas: phase-33/83,86,89; phase-35/103 +38/114; phase-46/142+47/145; P43 Thm 14.1; 138 D.16-17; 155 thm:SC; 156 R156_005 cor:convfail; arcs I,VIII; phase 155 prop:archneg; R162_1603; (+9)  
+  duplicados: R160_S2 F35 phase-47/145; R160_S3 §2.2#19 115_08/10  
+  herramientas: phase-4/B2-THEOREM; phase-45/134; P18 main.tex; P47 thm:C, thm:log5W; R160_S1 §3a#35 phase-35/100; R164_601T  
+  → residuo vivo: semilocal global de CC (phase-5/B2) — sin correr; coincide con PATH-TO-D (ii) en 8D  
+  → residuo vivo: 115_13-16 derivada de fase de traza de Sonin semilocal: signo favorable, identidad exacta inexistente  
+  nota: P35 L1 = ε₀≥0 (E1); part15: Props 1.1/1.3 de R164_601 herramienta; part16: Prop 4/Cor 2 de R165_102 herramienta
+
+**2B** ■ (positividad/soporte × vector núcleo (lineal en F)) — 12 rutas: DEAD 10 · PARTIAL 1 · PROVED-TOOL 1  
+  killers: OTHER×3, F1×2, F3 (κ)×1, F3 (DH)×1  
+  muertas: phase-109/109_99; 124 P124_009-010; R162_101; R162_103; R162_405; R162_407; R162_703; R160_S2 F53 phase-64 FACE-C; R160_S3 §2.2#18 phase-119; R161_071-072  
+  herramientas: R161_014-015  
+  nota: 60 CCM: último eslabón ε₀≥0 ⟺ RH
+
+**2C** ◩ (positividad/soporte × funcionales cuadráticos/superiores) — 9 rutas: DEAD 6 · PARTIAL 2 · PROVED-TOOL 1  
+  killers: OTHER×4, F2×2, E1×2, Baker no-go×1  
+  muertas: 159 G2_B3; 159 G2_B4; P41 main.tex; R161_027-029; R160_S2 F39 phase-48/153; R160_M10_R1  
+  herramientas: phase-65/D6  
+  → residuo vivo: P41 thm:doob: corredor no local con signo, nunca ejecutado (E1: RH ⟺ un Poincaré agudo)  
+  nota: antes ■; R161_026-028 F3 (Λ≥0 no basta)
+
+**2D** ■ (positividad/soporte × espectro) — 12 rutas: DEAD 12  
+  killers: OTHER×5, E1×1, F3 (DH línea v_n≥0)×1, F3 (κ)×1  
+  muertas: phase-29/51; phase-62/E94-E96; phase-102/118; phase-106/106_58,59,61,62,67,70; P22 main.tex; R162_504; R162_702; R162_1601; R162_1803; R160_S2 F14-F16 Paper 18; (+2)
+
+**2E** ◧ (positividad/soporte × flujo/familia en T) — 9 rutas: DEAD 5 · OPEN 2 · PARTIAL 2  
+  killers: E1×2, F3×2, OTHER×1, F3:DH×1  
+  muertas: phase-64/FACE-C; phase-65/RH-PROOF; R162_802; R162_1402; R161_029  
+  → residuo vivo: prop:polarcap: capacidad polar 𝔊_T como función de T (S^Sch≈−J), nunca analizada en T; seguimiento D3 de M4 nunca corrido  
+  → residuo vivo: P47: desplazamiento de ventana efectivo RD_{T′} ⟹ λ^W_T≥0 (a nivel comb exige T′≥T*_{∞,P})  
+  nota: antes ■
+
+**2F** ◩ (positividad/soporte × transformadas globales en T) — 4 rutas: DEAD 4  
+  killers: OTHER×3, E1×2, integral W_lambda dm=0×1  
+  muertas: phase-102/115,116; phase-102/117; P24 main.tex; 03-research/AUDIT_CONSOLIDATED §4  
+  → residuo vivo: monotonía completa / Bernstein de λ_A(T) o de su transformada como objeto global (2200)  
+  nota: 2200 lo daba □; 4 rutas DEAD
+
+**2G** ◧ (positividad/soporte × familias L/cuerpos) — 8 rutas: DEAD 6 · OPEN 1 · PARTIAL 1  
+  killers: OTHER×3, T5×2, summand vs numerator×1, Beurling×1  
+  muertas: phase-15/M3-attempt6; 151 R151_005 T6; Paper 46 T5 (phases 141-149); phase 150 T3; R160_S4 §2.B#22 P46 T5; R160_S4 §2.B#24 phase-151 T6  
+  → residuo vivo: P46 §28.4: objeto de seis cláusulas sobre el cuadrado adélico — ningún candidato construido  
+  → residuo vivo: T3 Beurling (150): condicional a H-DMV, ya CITADA (157)
+
+**2H** ◧ (positividad/soporte × objetos geom./dinámicos) — 23 rutas: DEAD 18 · OPEN 3 · PARTIAL 1 · PROVED-TOOL 1  
+  killers: OTHER×9, E1×7, F3:function-field×1, one ray refutes every ×1  
+  muertas: phase-14/ANCHOR,STAGE1-2; phase-15/M3 + attempts 1-8; phase-33/80; phase-40/124; phase-42/127; phase-101/E101_083; phase-112/112_99; 122 P122_007; 148 R148_005; 160 C5/C6/C7; (+8)  
+  herramientas: phase-15/M1-M2  
+  → residuo vivo: phase-15/M10: variedad testigo de Arakelov 𝒳 (no construida)  
+  → residuo vivo: PHASE_136 S5: índice de Hodge tropical de Cartwright a nivel de carta (nunca corrido)  
+  → residuo vivo: S1 I1: modelo OS entrelazado (no producto) de todo W_T, nunca intentado  
+  → residuo vivo: Chinburg–Rumely: energías fuera de 𝔄⁺ (núcleos de Berkovich), no leídas
+
+**3A** ◧ (estimación × forma de una ventana) — 39 rutas: DEAD 24 · OPEN 7 · PARTIAL 3 · PROVED-TOOL 5  
+  killers: OTHER×11, E1×6, M×4, F3:finmod×3  
+  muertas: phase-3/phase3-plan; phase-14/N8; phase-25/01; phase-36/104; phase-116/README; phase-117/README; 122 P122_019-021; 153 R153_014-021; 155 thm:finmod/cor:void; arcs I,X; (+14)  
+  duplicados: R160_S3 §5#15 D.198-227  
+  herramientas: phase-0/0B; 150 T4; 159 G2_B6_R2; P16 main.tex; R160_S5 §2.4#37 G2_B6_R2 Thm M  
+  → residuo vivo: P47 Problema A: cota inferior dependiente de la clase (sólo techos probados)  
+  → residuo vivo: R154_030: ventana de dos primos en 0.58, paquete off-machine (numérico; regla del dueño)  
+  → residuo vivo: S1 (141.G1/199): aritmética por ventana más allá de Montgomery–Vaughan — techo 172.9, antecesor de M  
+  → residuo vivo: S5 §5#14: hit web "Certified Weil positivity beyond the unit window" sin leer  
+  → residuo vivo: I6 (36/108): cota de dimensión del bloque negativo bajo resolución  
+  nota: 114/D.172 (½log5 antiguo) DEGRADADO; los certificados de 162 en ½log5 (303/391 primitivo, 703/791 completo; Arb, reruns de auditoría completos) son independientes de D.172
+
+**3B** ■ (estimación × vector núcleo (lineal en F)) — 4 rutas: DEAD 2 · PROVED-TOOL 2  
+  killers: OTHER×2, two refuted routes×1, F1×1  
+  muertas: phase-61/OPEN-PROBLEMS O5,O11; 124 P124_004-008  
+  herramientas: R162_001/190; R162_407 tasa  
+  nota: continuidad λ_A y tasa 407 = herramientas
+
+**3C** ◩ (estimación × funcionales cuadráticos/superiores) — 8 rutas: DEAD 5 · PARTIAL 3  
+  killers: E1×3, OTHER×2, F3:M_m (no line of the×1, W3′/F3:f_χ (Riemann–Si×1  
+  muertas: phase-58/188+59/191,193,197; R160_S1 §2.2#14 phase-36/108; R160_S1 §2.6#36-39; R160_M7_R1; R163_603  
+  → residuo vivo: Opción 3 de R160_020: cota con signo uniforme en T del bloque de baja frecuencia fuera del vector de contacto (M7 Prop 5.2(c) sugiere E1)  
+  nota: C_D (34/93) sin soporte
+
+**3D** ◧ (estimación × espectro) — 22 rutas: DEAD 13 · OPEN 2 · PARTIAL 3 · PROVED-TOOL 4  
+  killers: OTHER×9, E1×1, F4×1, F3:DH×1  
+  muertas: phase-9/T9A; phase-23/24; phase-31/58; phase-37/111; phase-86/PHASE_86_CLOSURE; phase-101/E101_024,027; 159 G1_B8; 159 G2_B10; P11 main.tex; P28/P29 FormB; (+3)  
+  herramientas: phase-9/T9cal; phase-32/65-68; phase-47/146; 155 cor:H1 / (H1)  
+  → residuo vivo: GAP-196.A: casi-dobles de Λ_f de DH bajo el espaciamiento medio (nunca atacado)  
+  → residuo vivo: 22/03 rigidez GMC (condicional)  
+  nota: LP-134 muere a escala 1/log T
+
+**3E** ◧ (estimación × flujo/familia en T) — 15 rutas: DEAD 9 · OPEN 2 · PARTIAL 1 · PROVED-TOOL 3  
+  killers: OTHER×6, M×3, finite heat-order wall×1, same exponent as densi×1  
+  muertas: phase-12/M12.1-9; phase-55/175+56/181; phase-101/E101_033,037; phase-106/106_98-120; 155 thm:margin; P28 main.tex FormC; 159 G2; R160_S2 F43 phase-54/172; R160_S4 §2.D#49 P47 thm:margin  
+  herramientas: phase-54/170; P32 main.tex; R160_S2 §3.1 phase-54/167,170  
+  → residuo vivo: GAP-157.A: discrepancia del flujo de Kronecker (2 de 3 rutas muertas; implicación central sin decidir)  
+  nota: Torre 1: A ⟹ Lindelöf; Dic indetectable (198.2)
+
+**3F** ◧ (estimación × transformadas globales en T) — 14 rutas: DEAD 10 · OPEN 1 · PARTIAL 2 · PROVED-TOOL 1  
+  killers: OTHER×10  
+  muertas: phase-58/189+59/194; phase-102/167,170,171; phase-102/221,223,232,241,250,257; phase-102/270,281,290,300,310,328; phase-102/294,311,314; phase-103/103_05; phase-103/103_24,25,26; phase-104/104_101-116; phase-104/104_27,95; phase-105/105_04,05  
+  herramientas: phase-102/102_A0_UNIFORM_TAIL_THEOREM  
+  → residuo vivo: GAP-157.A tauberiano no local con input LI (F40; Beurling–Malliavin sobre p^{iτ})  
+  → residuo vivo: rem:Dgrade: unión de técnicas graduadas y de cola  
+  nota: A1 = fuerza RH; antes ◩
+
+**3G** ■ (estimación × familias L/cuerpos) — 5 rutas: DEAD 3 · PROVED-TOOL 2  
+  killers: E1×2, T5×1, F1×1, F2×1  
+  muertas: P46 §26; R162_1004; R160_S4 §2.B#23 P46 27.10-11  
+  herramientas: 150 R150_005 T5; P46 §27
+
+**3H** ■ (estimación × objetos geom./dinámicos) — 5 rutas: DEAD 5  
+  killers: OTHER×3, no mechanism×1, all three converge on ×1, signed cone maximally ×1  
+  muertas: 152 R152_005 A; P01 main.tex; P46 §17; phase 152; R160_S4 §2.C#25-26 phase-152
+
+**4A** ◧ (Euler × forma de una ventana) — 27 rutas: DEAD 19 · OPEN 3 · PARTIAL 2 · PROVED-TOOL 3  
+  killers: OTHER×9, F2×3, E1×2, unsigned at every char×1  
+  muertas: phase-6/M-OS-2; phase-6/S2-followup; phase-7/P7-OPEN-CORE; 122 P122_028; P44 Thm 8bis.4a; 159 G2_B1; 03-research/AUDIT_CONSOLIDATED §4; R161_001-004; R162_203; phase 153 Thm A; (+8)  
+  duplicados: phase-47/148; R161_001-002  
+  herramientas: 143 D.34.5; P09 main.tex; R160_S4 §3.1 Theorem C / D.12-alpha / Theorem A  
+  → residuo vivo: GAP-135.A / doc 148: marcos inconmensurables (Seip, Olevskii–Ulanovskii), nunca retomado  
+  → residuo vivo: 159 G2_B8 Thms L,L′,L″,D: umbral local de Euler ½log3≤T_loc≤0.5925, sin auditar  
+  → residuo vivo: Paper 44 (H_L): primitiva negativa en perfiles de Dirichlet  
+  nota: ; part15: R164_502 momentos/Selberg DEAD [W3, L1/L6]
+
+**4B** ◩ (Euler × vector núcleo (lineal en F)) — 20 rutas: DEAD 13 · NO-GO 2 · PARTIAL 3 · PROVED-TOOL 2  
+  killers: OTHER×7, E1×3, F3:Xi_a×2, no sign×1  
+  muertas: phase-36/108; phase-91/E91_004; phase-94..100/closures; phase-102/119; 121 P121_CAUSAL_REES_HALF_LIFT; 146 R146_005; R162_201/202; R162_301; R162_503; R162_404; (+3)  
+  herramientas: phase-93/E93_002; R163_201a  
+  → residuo vivo: portador distribucional (83–84, ker X=span δ₀) no excluido por la obstrucción de dominio  
+  → residuo vivo: corte mínimo A1–D3 (phase 80) — el ancla es ⟺ RDI (93, E1)
+
+**4C** ◧ (Euler × funcionales cuadráticos/superiores) — 21 rutas: DEAD 12 · OPEN 4 · PARTIAL 3 · PROVED-TOOL 2  
+  killers: OTHER×4, F2×3, E1×2, r averages to 0×1  
+  muertas: phase-36/107; 160 M7/M8/M9; P03 main.tex; R160_M8; R162_207; R160_020 Opción 6; R160_S1 §5 I7 phase-36/107; R160_S2 F54 phase-70/E70_10; R160_M8_R1; R161_033-034; (+2)  
+  herramientas: phase-57/183; R162_502 B2  
+  → residuo vivo: L5 (114): Z_{N,ε} con R=Z*Z sin pseudoinversa, nunca construido  
+  → residuo vivo: G2_B3_R5 Cor S2: álgebra tipo Hecke en L²(ℝ) con multiplicadores arquimedianos (cuadrado acoplado), sin candidato  
+  → residuo vivo: R160_020 Opción 6 (Meyer S+D): nunca corrida; D2 la declara estéril  
+  → residuo vivo: R161_030-032: fuente de la puerta de varianza orientada abierta  
+  nota: part9: doc 107 / W_2 CERRADO por doc 108 (R162_2702a, W2+E1; no es MW-7)
+
+**4D** ◧ (Euler × espectro) — 18 rutas: DEAD 13 · OPEN 1 · PARTIAL 1 · PROVED-TOOL 3  
+  killers: OTHER×11, E1×3, LI of log p gives no m×1, no form/K3×1  
+  muertas: phase-35/100; phase-81/PHASE_81_CLOSURE; phase-83/E83_008; phase-85/PHASE_85_CLOSURE; phase-89/PHASE_89_CLOSURE; phase-106/106_00; P12 main.tex; R152_002; 159 G1 K3; R160_S1 §2.1#5 phase-35/100; R160_S2 F17-F18 phase-64/106; (+3)  
+  herramientas: phase-114/D.244; P10 main.tex; R162_2502a  
+  → residuo vivo: Conjetura de exclusión (21/01-02): todos en la recta o infinitos fuera — es C_B, converge a O2601.1  
+  nota: part8: detector Γ–Euler R161_068-070 NO-GO (R162_2502 Thm D/K, Prop A); residuo plegado en R162_1603 (d)
+
+**4E** ◧ (Euler × flujo/familia en T) — 19 rutas: DEAD 11 · NO-GO 1 · OPEN 2 · PARTIAL 3 · PROVED-TOOL 2  
+  killers: OTHER×8, F2×1, log divergence×1, E1×1  
+  muertas: phase-36/105; phase-70; phase-82/PHASE_82_CLOSURE; phase-87/PHASE_87_CLOSURE; phase-88/PHASE_88_CLOSURE; phase-101/E101_089,092,096; R160_S1 §2.4#23 phase-36/105; R160_S2 §3.2 phase-61 O8; R160_S5 §2.3#15 G1_B5_R3-R5; R160_M3_R1; (+1)  
+  herramientas: phase-13/RESULT; phase-19  
+  → residuo vivo: P30: L8 + LP-112  
+  → residuo vivo: R153_005 Thm A término cruzado como mecanismo de signo uniforme en T (P153.2), nunca intentado  
+  → residuo vivo: 90 PROJECTIVE-KATO-EULER  
+  nota: part9: O8 Tate 2×2 CERRADO (R162_2701 NO-GO: Thm TC, Thm P, Thm I; W12); índice de phase-61 no certificado, 0 tras normalizar (2890); part15: R164_502 det/traza de calor DEAD [W12, E1]
+
+**4F** ◧ (Euler × transformadas globales en T) — 11 rutas: DEAD 6 · NO-GO 2 · OPEN 1 · PROVED-TOOL 2  
+  killers: OTHER×1, E1×1, W6×1, F:deletion×1  
+  muertas: phase-103/103_16,17,19,20,21; R160_S2 F41 phase-50/158; R162_2801; R164_101; R164_102  
+  duplicados: R164_402  
+  herramientas: R164_401; R164_491  
+  → residuo vivo: GAP-157.A: condición C1 del Doc 159 (tauberiano no local), ni conocida ni excluida  
+  → residuo vivo: objeto generador global con Euler antes de regularizar (2200)  
+  → residuo vivo: O2802.1 (sub-forma de O2601.1, fila 5): propiedad no formal, uniforme en k≍log x, del libro entero b≡1 (Piltz hasta k≍log x = cota de ψ, E1 esperado)  
+  nota: part10: O2801.1 CERRADO negativo (R162_2901 Thm A/B NO-GO; residuo = integralidad/atomicidad de dN, O2601.1); part14: R164_101 (KZ) DEAD [E1], R164_102 cola positiva DEAD [Thm A], R164_402 superada; R164_401 Thm R cierra O164.101 por identificación (O164.101 ⟺ ¬RH); otros residuos no tocados, la celda queda ◧; part15: de auditoría R164_491 aceptado (Thm R PROVED tras F3/F1)
+
+**4G** ■ (Euler × familias L/cuerpos) — 12 rutas: DEAD 9 · PROVED-TOOL 3  
+  killers: OTHER×5, W8×2, T1/T2×2, F3:function-field×1  
+  muertas: phase-14/M14.1-3; phase-33/74; phase-48/153; 149 D.61; P46 §24; R162_1102; arcs III,VIII; 144-149; R160_S1 §2.5#33 phase-30/56; R160_S4 §2.B#20-21 phase-149  
+  herramientas: phase-5/M5,T1-T2; P05 main.tex; P46 §18.2 T2  
+  nota: T2 herramienta
+
+**4H** ◧ (Euler × objetos geom./dinámicos) — 28 rutas: DEAD 20 · OPEN 2 · PARTIAL 4 · PROVED-TOOL 2  
+  killers: OTHER×16, E1×3, F3:cross-root falsifie×1, T1×1  
+  muertas: phase-67; phase-83/E83_003; phase-106/106_207-210; phase-107/107_00; phase-107/107_147-241; phase-120/P3 no-gos; 122 P122_009-010; 122 P122_013-017; 140 R140_005; 159 G1_B5_R3-R5; (+10)  
+  herramientas: 159 G1_B2_R3-R5; 159 G1_B4_R4  
+  → residuo vivo: phase-27: rigidez adélica local-global, paredes A y B abiertas (objetos, no signos)  
+  → residuo vivo: 36/106+38/117 functor amplificador ⊠ con correcciones  
+  → residuo vivo: Paper 44 Thm 8bis.4a: versión colimite L1 de la forma de Frobenius pura  
+  → residuo vivo: I11 (34/96): torsión de canal absorbente / curvatura simpléctica
+
+**5A** ◩ (integralidad ℤ × forma de una ventana) — 6 rutas: DEAD 4 · PARTIAL 1 · PROVED-TOOL 1  
+  killers: F2×2, OTHER×1, Θ(1/M) edge×1, E1×1  
+  muertas: 155 thm:AL→AL′; R162_1902; R162_801; R163_901  
+  herramientas: 155 TK/N/N′  
+  → residuo vivo: Problema A (P47) — mismo residuo que 3A  
+  nota: ; part13: R163_901 (f_t, Thm F) DEAD [F3:f_t]
+
+**5B** ■ (integralidad ℤ × vector núcleo (lineal en F)) — 4 rutas: DEAD 3 · PROVED-TOOL 1  
+  killers: E1×2, OTHER×1, F1×1, F2×1  
+  muertas: phase-75+76; R162_701; R162_1101  
+  herramientas: R161_003
+
+**5C** ◩ (integralidad ℤ × funcionales cuadráticos/superiores) — 2 rutas: DEAD 1 · PARTIAL 1  
+  killers: F1×1, F2×1, OTHER×1  
+  muertas: R162_2201b  
+  → residuo vivo: O2201.1: peso nodal asimétrico = Z′/Z con signo (lado de ceros)  
+  nota: part7: R162_2201b MUERTA (FE + simetría nodal borran los átomos); antes ◧
+
+**5D** ◩ (integralidad ℤ × espectro) — 4 rutas: DEAD 3 · PROVED-TOOL 1  
+  killers: OTHER×3, GAP-179.B no tool×1, 2m maps to 0×1  
+  muertas: phase-50/158-159; 121 P121_CYCLOTOMIC_RESOLVENT_AND_LATTICE_AUDIT; 03-research/AUDIT_A §1 doc163  
+  herramientas: R163_201b  
+  → residuo vivo: integralidad en el espectro: multiplicidades / forma de Smith del Gram de contacto (2200)  
+  nota: 2200 lo daba □; 3 rutas DEAD
+
+**5E** ◧ (integralidad ℤ × flujo/familia en T) — 3 rutas: DEAD 1 · PARTIAL 2  
+  killers: E1 (a jump at t=0 ⟹ 0∈×1, Thm A.3)×1, decoupled invariants (×1  
+  muertas: R163_1001a  
+  → residuo vivo: O1802.3: ancho ≥0 de la ventana de residuo vía integralidad NO lineal en c, seguido en T (1902 cerró sólo la lineal)  
+  → residuo vivo: O2802.1 (sub-forma de O2601.1; ruta en 4F): propiedad no formal, uniforme en k≍log x, del libro entero b≡1 (Piltz hasta k≍log x = cota de ψ, E1 esperado)  
+  nota: part9: O2802.1 se pliega en la fila 5 (integralidad b≡1); part13: R163_1001a (deformación) DEAD [E1 + invariantes desacoplados]; los residuos O1802.3/O2802.1 no los toca R163_1001 (§7), la celda queda ◧
+
+**5F** ◩ (integralidad ℤ × transformadas globales en T) — 7 rutas: DEAD 5 · PARTIAL 1 · PROVED-TOOL 1  
+  killers: F1×1, E1×1, OTHER×1, S7 Euler only via W7/z×1  
+  muertas: R162_2302; R162_2601a; R163_002b; R163_1001b; R163_1001c  
+  herramientas: R163_002a  
+  → residuo vivo: O2302.2: c_f≠0 desde la integralidad (momento de Tate exterior izquierdo en el radical)  
+  → residuo vivo: O2302.1: resto a N finito (tipo Li, E1 esperado)  
+  nota: part7: R162_2302 Thm N (límite ≡0 vía ζ(1−ρ)=0), Thm V; antes ◧; part8: atomicidad no excluye E (2601a, falsificador Λ̃); part11: lema de soporte (R163_002a) herramienta, falsificador K (002b); part13: R163_1001b/c (periodicidad theta, Hamburger de ventana) DEAD [W3′ + E1]; residuos O2302.1/2 no tocados
+
+**5G** ◧ (integralidad ℤ × familias L/cuerpos) — 17 rutas: DEAD 4 · NO-GO 3 · OPEN 1 · PARTIAL 1 · PROVED-TOOL 8  
+  killers: OTHER×3, χ=1 slot = 𝓔^∞×1, F3:zeta_theta×1  
+  muertas: phase-107/107_108-133; phase-107/107_134-139; 147 R147_005 D.55.9′; R163_101a  
+  herramientas: R162_2601c; R163_101b; R163_102a; R163_102b; R163_102c; R163_191a  
+  → residuo vivo: BF_θ^disc, θ≤1/3 (afilado por Theorem C de R163_803: para θ∈(1/3,½) existen sistemas discretos con ceros fuera): ¿todo sistema discreto con N=ρx+O(x^θ), θ≤1/3, cumple RH de Beurling? (ℤ: θ=0). Línea L2 de R164_000  
+  → residuo vivo: O164.201a: sistema de Beurling discreto fuera del retículo de Witt con error O(x^{θ′}), θ′≤1/3, y un cero con β>½ (ARGUED que debe estar fuera del retículo, vía L*)  
+  → residuo vivo: O163.101b: construcción discreta con Θ<1/3 y ceros fuera, u obstrucción de integralidad en θ<1/3  
+  → residuo vivo: O163.101c: Révész Rem. 7 / Hilberdink 2010 (θ<½ discreto ⟹ ceros con β>θ, R163_191a) y el emparejamiento de exponentes de Hilberdink 2005: ¿afinan hacia la recta?  
+  → residuo vivo: O102.1–3: sistema no reticular con ρ=1; (BF_0) con σ_τ>½; Thm T módulo cancelación multiplicativa  
+  → residuo vivo: O164.503a–d (R164_503): cota de media cuadrática §3.3; exponente de Huxley; sistema θ<1/3 no reescalado; cláusula "returns to" §4.2  
+  nota: part11 (phase 163): frontera de Beurling; ζ_θ refuta la rama de clase (extendida); Lemma R, Thm R, Lemma S, Thm T/Cor F herramientas; NO-GO analítico y perturbativo; antes ■; part12: puerta de Euler (R163_202) NO-GO; part13: Theorem C (R163_803, de auditoría 891 VÁLIDO CON ARREGLOS) cierra O163.101a en (1/3,½); part14: R164_201 Theorem L PROVED (de auditoría R164_291): L2a/O163.803a CERRADA NEGATIVA en 𝒦_θ; Thm R (R164_401) herramienta: integralidad del soporte forzada por positividad+brecha+FE; part15: R164_503 Goal B ≥ RH + GRH cuadrática (rechazada como ruta), redondeo por primos tope x^{1/2} ARGUED, Goal A OPEN
+
+**5H** ◧ (integralidad ℤ × objetos geom./dinámicos) — 25 rutas: DEAD 15 · OPEN 6 · PARTIAL 3 · PROVED-TOOL 1  
+  killers: OTHER×13, W8×2, braiding sign cancels×1, T5×1  
+  muertas: phase-15/M6; phase-114/114_a_*; 122 P122_024-027; 137 R137_007 D.11; 155 R155_054 P7; P46 §6,§13 D.4/D.9; P46 §19; P46 §22; 03-research/AUDIT_A §1 phase15; R160_S3 §2.2#23 phase-107; (+5)  
+  herramientas: 159 G1_B4_R5  
+  → residuo vivo: cociclo de torsión Φ_Λ (R162_1001) con tests no band-limited  
+  → residuo vivo: THE_BACKWARD_MAP a4/R16 (χ cuadrático sobre Spec ℤ)  
+  → residuo vivo: Quillen K_n(ℤ)/reguladores, RO(G), A¹-motívico (AUDIT_A §3), intactos  
+  → residuo vivo: P42 programa de Lefschetz aritmético: argumento global de signo abierto  
+  → residuo vivo: Paper 44 §6bis: retículo desde la sombra integral Sh_Z con I_A finito  
+  → residuo vivo: Paper 43 §11bis: correspondencias no invertibles (grafos de grado q)  
+  nota: part7: o-minimalidad/Pila–Wilkie MUERTA (R162_2402: W10+W8)
+
+**6A** ◧ (valores de Λ × forma de una ventana) — 20 rutas: DEAD 11 · NO-GO 1 · OPEN 2 · PARTIAL 4 · PROVED-TOOL 2  
+  killers: E1×6, OTHER×3, F3:rigidity Thm R'×1, Lemma D / Thm U: Λ iso×1  
+  muertas: phase-20/01-02; 141 D.27.5; 155 R155_053 P6; 155 prob:B; 157 O3 lem:degen; R160_S3 §2.2#12 phase-109; R160_S4 §2.D#36 P47 TK/N/N'; R160_S4 §2.D#42 P47 thm:Al; R160_D4_R2; R160_D4_R2 Cor 5.2; (+1)  
+  herramientas: 154 Thm C(½log3); R160_S4 §3.1 P47 prop:uniform  
+  → residuo vivo: lem:degen caso log 2 (R162_2902b): encierro bilateral del minimizador de la forma completa  
+  → residuo vivo: O-D4.2: núcleo de 𝒲 / cono 𝒞′ en tests decrecientes de soporte no acotado  
+  nota: part10: 2902b lem:degen PARTIAL (D1–D3), 2902c P153.17 NO-GO
+
+**6B** ◧ (valores de Λ × vector núcleo (lineal en F)) — 10 rutas: DEAD 6 · OPEN 2 · PROVED-TOOL 2  
+  killers: F3×3, F2×2, E1×1, M×1  
+  muertas: R162_1401; R162_1502; R162_403; R162_401; R162_502 A  
+  duplicados: R162_2202b  
+  herramientas: 121 P121_RESOLVED_TATE_COLLAR_INTEGRAL; R162_2202a  
+  → residuo vivo: P47 prob:annihilate = Gate 1 de phase 162 (aniquilación de momentos Γ en el primer contacto)  
+  → residuo vivo: O2202.1: versión [prim] de Thm NI  
+  nota: part7: Thm NI herramienta; auto-semejanza Euler/Möbius MUERTA (2202b)
+
+**6C** ◩ (valores de Λ × funcionales cuadráticos/superiores) — 9 rutas: DEAD 4 · OPEN 2 · PARTIAL 2 · PROVED-TOOL 1  
+  killers: OTHER×3, P} fails T>0.60×1, F3:Lambda chi_2×1, phase-104/106 ANOVA×1  
+  muertas: R160_S5 §2.4#35 G2_B3_R5; R161_004 L161.2; R162_2301  
+  duplicados: R160_M2_R1  
+  herramientas: R162_501  
+  → residuo vivo: OS-2: paridad del testigo (Prop P2 de 2401: H(F^ev)=−H(F^odd); sólo la paridad fija el signo)  
+  nota: part7: R162_2301 (Lemma S, Thm Q) + 2401 cierra O2202.2; antes ◧
+
+**6D** ■ (valores de Λ × espectro) — 4 rutas: DEAD 3 · PROVED 1  
+  killers: F3×2, M×1  
+  muertas: 155 P2 even Schur; R162_702 residuo; R162_1603  
+  nota: part10: P2 HECHO (R162_2902a, identidad estructural exacta, Λ-ciega; herramienta)
+
+**6E** ◧ (valores de Λ × flujo/familia en T) — 5 rutas: DEAD 2 · OPEN 1 · PARTIAL 1 · PROVED-TOOL 1  
+  killers: OTHER×1, zero-side input violat×1, window shift×1  
+  muertas: 159 G2_B7; R162_802  
+  herramientas: R160_S5 §2.4#38 G2_B9_R3  
+  → residuo vivo: G2_B6_R5 Prop C: cono puntiagudo RH-libre de perturbaciones rígidas C≠{0}  
+  → residuo vivo: P153.14 admisibilidad escalonada de banda de Kreĭn del átomo w_N (sólo N=3,4,5 medidos; uniforme = RH)  
+  nota: antes ■
+
+**6F** ◧ (valores de Λ × transformadas globales en T) — 10 rutas: DEAD 4 · OPEN 4 · PARTIAL 2  
+  killers: OTHER×2, zeros enter only via M×1, E1×1, F3:DH×1  
+  muertas: phase-102/313; P21 main.tex; R160_M1_R1; R160_M5_R1  
+  → residuo vivo: P47 Problema B: certificado aritmético w_T desde primos exteriores (sin construcción)  
+  → residuo vivo: 114 D.260-262: canal Chebyshev centrado dΨ−dx, residuo exacto, signo abierto  
+  nota: A1 = E1
+
+**6G** ◧ (valores de Λ × familias L/cuerpos) — 3 rutas: DEAD 1 · OPEN 1 · PARTIAL 1  
+  killers: T5×1, OTHER×1, c) proved only where v×1  
+  muertas: 149 R149_005 D.59  
+  → residuo vivo: O-D4.3: transposición de la identidad (C′) a ζ_K, rutinaria, nunca hecha  
+  → residuo vivo: separador 119 (P0/P1/P2) insuficiente  
+  nota: antes ◩
+
+**6H** ◧ (valores de Λ × objetos geom./dinámicos) — 8 rutas: DEAD 3 · OPEN 2 · PARTIAL 2 · PROVED-TOOL 1  
+  killers: E1×2, OTHER×1, NS rank 2×1  
+  muertas: 140 D.23.4-6; 160 C4; R160_C4_R1  
+  herramientas: P44 main.tex  
+  → residuo vivo: Paper 43 Thm 10.8b: pairing de reglado hiperbólico global de Mertens (excluido de la fila A por A.10, no de la fila D)  
+  → residuo vivo: 106.203-205: frontera de Tate cargada con masa corregida log p/p^{k/2} (completación resonante no isométrica)  
+  → residuo vivo: O-B5.1′ Borger W(R) sin construir  
+  nota: antes ◩
+
+**7A** ◧ (lado de ceros × forma de una ventana) — 50 rutas: DEAD 33 · OPEN 2 · PARTIAL 7 · PROVED-TOOL 8  
+  killers: E1×18, OTHER×8, W8×3, Platt–Trudgian×1  
+  muertas: phase-4/PAPER-A Thm C; phase-18/01-02; phase-22; phase-32/59-64; phase-34/90; phase-61/O10; phase-118/PHASE_118_CLOSURE; 133 PANEL_3; 143 R143_005 D.34; 144 R144_005 §D.40; (+22)  
+  duplicados: R160_M6_R1  
+  herramientas: phase-0/0A1; phase-106/106_11; 121 P121_BOMBIERI_SUZUKI_XIA_AUDIT; 153 R153_005 Thm A; 154 R154_012 Thm D1/O; P07 main.tex  
+  → residuo vivo: ω(E) en el contacto = Rem 4.8a (posición del nodo en su celda; R165_201 Cor 2.2)  
+  nota: 122 dos compuertas fallan para Ξ_a; part15: R164_501 sinc en el lado de ceros DEAD [E1, sin espacio]; Thm SA, Cor SA.1 herramientas; part16: D.16-γ HECHO negativo (R165_201 Thm 3(a), R165_202); Det− DEAD (R165_102); Det+ herramienta (R165_101); "entrelazado ⇒ cuarteto fuera del cono" y "contacto ⇒ EC" DEAD
+
+**7B** ◧ (lado de ceros × vector núcleo (lineal en F)) — 11 rutas: DEAD 6 · PARTIAL 3 · PROVED-TOOL 2  
+  killers: OTHER×4, zero-filter gate E72.1×1, Cauchy-jet no-go E74.2×1, —×1  
+  muertas: phase-72; phase-73; R162_1501; R160_S2 F29 phase-72/77; R160_S3 §2.1#1 phase-93/101  
+  duplicados: phase-74  
+  herramientas: 159 G2_B6_R4; R163_402  
+  → residuo vivo: R163_401: (★_cell) en el testigo de primer contacto (⟺ RH en el testigo, Rem 4.8a); forma de cola (TC) en R164_000  
+  → residuo vivo: 159 G2_B6_R4 unicidad BRS mod Lemma S (sin auditar), Thm X punto extremo sin auditar  
+  nota: 121 F2 = cuadrado global; part13: R163_401 PARTIAL (candidato de cierre), R163_402 herramienta; antes ◩
+
+**7C** ◩ (lado de ceros × funcionales cuadráticos/superiores) — 6 rutas: DEAD 5 · PROVED-TOOL 1  
+  killers: OTHER×4, S1/S2/S3 disjunction×1, F3:DH×1, Epstein×1  
+  muertas: phase-103/103_27,28; phase-106/106_26,29; 155 lem:Rrig; R160_S2 F44-F45 phase-55/59; R160_S5 §2.4#34 G2_B10_R5 Thm H  
+  herramientas: 121 P121_CRITICAL_NEGATIVE_HALF_RESIDUE_GATE  
+  → residuo vivo: funcional no lineal con correlación de pares como input exacto (2200)  
+  nota: 2200 lo daba □; P121 D_T^crit = cuadrado global
+
+**7D** ◧ (lado de ceros × espectro) — 23 rutas: DEAD 12 · OPEN 2 · PARTIAL 3 · PROVED-TOOL 6  
+  killers: OTHER×7, E1×4, F1×1, E1 (terminates at Li-K×1  
+  muertas: phase-7/P7b; phase-12/M12.10-11; phase-35/98; phase-35/101; phase-69; 121 P121_ISODIVISOR_DEFORMATION_NO_GO; 122 P122_011; 159 G2_B5; P36 main.tex; R160_S1 §2.7#44 phase-29; (+2)  
+  herramientas: phase-48/152; R162_2101; R160_S3 §3.1 T15 115_17; R163_502; R165_101D; R165_102T  
+  → residuo vivo: Diana L8/C_B/EX: m≤C cuádruples; m<∞ ⟹ m=0 (ver 8F)  
+  → residuo vivo: phase-69: índice con signo de Cayley invariante gauge (nombrado, no construido)  
+  → residuo vivo: R-C.b para ζ necesita input del lado de ceros (2101)  
+  → residuo vivo: O2401.1: tamaños individuales de V(F_M), H(F_M)  
+  → residuo vivo: O102.1 (γ₁(ψ) Gevrey explícito, ¿H=3·10¹² basta?); O102.2 (Det− con δ*Λ*≤y₀; necesita O701.2 y Cor 2(c)); O701.1 (quitar (Dom)), O701.2 (marco inferior sub-Landau), O701.3 (régimen medio) (R165_102)  
+  nota: part7: margen de Thm M no viene de contactos ocultos (2401b); part16: Det+ (R165_101) y Thm 1 (R165_102) herramientas; horquilla 0.8047 < T_c ≤ min_ρ τ(ρ) PROVED (salvedad de agrupamiento)
+
+**7E** ◧ (lado de ceros × flujo/familia en T) — 15 rutas: DEAD 8 · OPEN 2 · PARTIAL 2 · PROVED-TOOL 3  
+  killers: E1×6, OTHER×3  
+  muertas: phase-8/RT-coupled; phase-33/70-72,79; phase-102/178,182,258; 137 R137_007 D.0; R162_1802 Thm R; R162_902; R160_S1 §2.4#19 phase-9 N6; R160_S2 F25-F26 phase-62/64  
+  herramientas: 159 SYN 2.2; R160_S5 §2.4#33 G2 graded converse; R162_2501a  
+  → residuo vivo: 77–80: (c) compatibilidad de pencil, (d) clase ℓ², (e) simplicidad, (f) ensamblaje, FIXED-L-WEYL, SAFE-GAMMA-IDENT  
+  → residuo vivo: P19 Hyp D: m<∞ ⟹ m=0 (C_B) → O2601.1 (8F)  
+  → residuo vivo: O2501.2: e<1 ⟹ Θ<1 sin finitud  
+  → residuo vivo: R165_202: monotonía de nodos y simplicidad por paridad OPEN  
+  nota: part8: ley de exponente 2β* (2501a) herramienta; part16: R165_202 flujo de nodos PARTIAL/E1
+
+**7F** ◧ (lado de ceros × transformadas globales en T) — 27 rutas: DEAD 14 · OPEN 2 · PARTIAL 3 · PROVED-TOOL 8  
+  killers: E1×12, OTHER×2, F1×1, F3×1  
+  muertas: phase-29/00-28; phase-29/42-48; phase-29/53-54; phase-62/C1; phase-102/174,175; P47 thm:Z; 155 thm:KEP3; 159 G2_B9; P38 main.tex; R162_803; (+3)  
+  duplicados: R163_003a  
+  herramientas: phase-29/26; phase-55/173+176; phase-64/TASK-A; phase-105/105_02,03; R162_2601b; R163_001  
+  → residuo vivo: KEP: parametrización de Nevanlinna de 𝔖(T) a través de T (nunca escrita)  
+  → residuo vivo: P33: finitud A y pureza D del Cesàro −π/8  
+  → residuo vivo: O164.601.1: cota inferior de Σ_{q′}Re[G(t_{q′})²K(t_{q′})] para K Poisson/trig localizado en γ_q (= (★_cell) ponderada por K; R164_601)  
+  nota: 803 = Herglotz (E1); part11: intercambio canónico + D_test herramienta (R163_001); propiedad 2 ⟺ RH (R163_003a, E1); part13: R163_801 Thm 3/Cor 3.1 herramienta (la cola 𝒯_X lleva los residuos fuera de la recta); part15: Prop 4 herramienta (R164_501); O164.501.1 CERRADO (R164_601 Prop 2.1, dlVP sobre G²); ruta DEAD [W2/M + Thm 3.1]
+
+**7G** ■ (lado de ceros × familias L/cuerpos) — 1 rutas: DEAD 1  
+  killers: rationality wall×1  
+  muertas: phase 149
+
+**7H** ◧ (lado de ceros × objetos geom./dinámicos) — 18 rutas: DEAD 13 · OPEN 2 · PARTIAL 2 · PROVED-TOOL 1  
+  killers: E1×11, OTHER×4, T1×1, OT-5′×1  
+  muertas: phase-4/RH-ENDGAME; phase-15/M8; phase-113/113_12,15; 141 R141_005; 159 G1_B6_R1; 159 G1_B7; P14 main.tex §cohom; arcs III-V,X; 158; R160_S1 §2.2#10 phase-26/27; R160_S2 F6 phase-42/127; (+3)  
+  herramientas: P45 main.tex  
+  → residuo vivo: 113_12 Ansatz A: χ(D)=D²/2 (implica RH, pasa los tests, nunca atacado)
+
+**8A** ◧ (sin aritmética × forma de una ventana) — 23 rutas: DEAD 16 · OPEN 4 · PROVED-TOOL 3  
+  killers: OTHER×10, E1×7, W8×2, F3:Xi_a×1  
+  muertas: phase-14/AUDIT-P7; phase-68; phase-101/E101_068,078,081,082; phase-114/D.170; phase-114/D.191-262; phase-118/W3; phase-120/P3_COMMON_FAILURE_ARCHITECTURE; 121 P121_AT_CORPUS_ATLAS; 124 P124_014; 160 M1/M2/M5/M6/M10; (+6)  
+  herramientas: phase-58/190+59/198; P47 thm:finmod; R160_S3 §2.2#15 Paper 41  
+  → residuo vivo: auditoría pendiente: 159 G2_B8_R5 Thm L″, G2_B2_R4 Thm U, R5 (Lemma S, Cor M1, Prop J)  
+  → residuo vivo: GAP-198.1: combinaciones inter-moneda no factorizables fuera de 𝔄
+
+**8B** ◩ (sin aritmética × vector núcleo (lineal en F)) — 15 rutas: DEAD 10 · OPEN 1 · PARTIAL 2 · PROVED-TOOL 2  
+  killers: OTHER×5, E1×5, F2×3, K=c×1  
+  muertas: 121 P121_F2_DIRECT_CLOSURE_AUDIT; 160 R160_X_C1; 161 R161_037-039; P124_004-010; R161_016; R160_S3 §3.1 T25 D.170; R161_046-051; R162_2201a; R162_2201c; R162_2401a  
+  herramientas: R162_408; R163_501  
+  → residuo vivo: O2201.1: peso nodal asimétrico = Z′/Z con signo en los nodos (lado de ceros)  
+  → residuo vivo: slot M11 (nunca escrito): traza de monodromía de métrica opuesta  
+  nota: part7: Blaschke–torsión MUERTA (R162_2201a/c, 2401a); antes ◧
+
+**8C** ◧ (sin aritmética × funcionales cuadráticos/superiores) — 6 rutas: DEAD 3 · OPEN 3  
+  killers: E1×2, F3:shift operator arit×1, F2×1, F3×1  
+  muertas: P14 main.tex §hyperb; R162_1202; R160_S1 §2.4#21 phase-35/98  
+  → residuo vivo: O-151.4: eje sumando-vs-numerador como mecanismo (nunca desarrollado)  
+  → residuo vivo: Lemma 108: cota κ_W(Q_2)≤C n_W (no ⟺ RH), nunca atacada
+
+**8D** ◧ (sin aritmética × espectro) — 34 rutas: DEAD 25 · OPEN 1 · PARTIAL 3 · PROVED-TOOL 5  
+  killers: OTHER×10, E1×5, F1×2, F2×1  
+  muertas: phase-34/92; phase-49/154-157; phase-106/106_13,15; phase-115/115_15; 121 P121_VOLTERRA_RELATIVE_DETERMINANT_RIGIDITY; 155 thm:arena/P8; PATH-TO-D (ii); 160 C2; 161 R161_081; R162_1602; (+14)  
+  duplicados: R162_2602a  
+  herramientas: 155 Thm P; P47 thm:index/P/J/arena; R160_S2 §3.1 phase-60; R160_S4 §3.1 P47 thm:parityschur; R162_2602b  
+  → residuo vivo: phase-37/110 (PARTIAL; la entrada R160_S1 §2.2#12 la da DEAD — duplicado no conciliado)  
+  → residuo vivo: phase-35/99 (R160_S1 §2.7#45, PARTIAL)  
+  → residuo vivo: phase-63 (R160_S2 F9, PARTIAL)  
+  → residuo vivo: R160_010 D1/D3/D5 (OPEN)  
+  nota: part9: regla §8 — 4 rutas PARTIAL/OPEN no superadas ⟹ ◧ (part8 la había bajado a ◩ por error); O2601.1 (= O2602.1) y O2602.2 siguen adjuntos vía 8F; part15: R164_502 Szegő–Widom DEAD [W4/W6]; L4, L5, L6 herramientas
+
+**8E** ◩ (sin aritmética × flujo/familia en T) — 22 rutas: DEAD 17 · PARTIAL 2 · PROVED-TOOL 3  
+  killers: OTHER×10, E1×5, divergent constant C3(×1, reads verified zeros×1  
+  muertas: phase-8/GATE-B (N5); phase-9/M9.1 N6; phase-45/136+46/139+47/147+48/149; 159 G1_B10; 159 G2_B2; P13 main.tex; P15 main.tex; P27 main.tex; P28 main.tex FormA; arcs I,IV; 159 G2; (+6)  
+  duplicados: phase-33/88  
+  herramientas: phase-54/167-168; phase-92/PHASE_92_CLOSURE; R160_S1 §3a#21 Paper 15 thm:hr  
+  → residuo vivo: 92 CA-1 convergencia L fija; Ω₇ (66) falla en el extremo crítico  
+  nota: P39 gap sin corte ⟺ objetivo
+
+**8F** ◩ (sin aritmética × transformadas globales en T) — 6 rutas: DEAD 4 · PROVED-TOOL 2  
+  killers: OTHER×2, E1×1, sub-resolution stratum×1, W2 (Theorem M is an up×1  
+  muertas: phase-37/112-113 +38/115-116; 157 O1 lem:monoT; P26 main.tex; R162_2501  
+  herramientas: P29 main.tex; R162_2501b  
+  → residuo vivo: O2601.1: propiedad individual del producto de Euler de ζ que use los valores exactos de Λ de forma no lineal y acote el conteo fuera de la recta (falla para deletion, M_m, Λ̃) → afilado en part11 a BF_θ^disc (5G)  
+  nota: part8: ruta (a) de C_B MUERTA (R162_2501: ley 2β*, modelo M_m, Thm 3); O2501.1 falsa tal como estaba (2601a, Λ̃); antes ◧
+
+**8G** ◩ (sin aritmética × familias L/cuerpos) — 9 rutas: DEAD 7 · PARTIAL 1 · PROVED-TOOL 1  
+  killers: F3:function-field×3, T2×2, F3:Epstein×2, E1×2  
+  muertas: 139 R139_005 T2; 145 R145_005; 159 G1_B9; R160_S2 F47 phase-44/45, Paper 29; R160_S4 §2.A#12 P46 T2; R160_S5 §2.3#28 G1_B9; R160_M9_R1  
+  herramientas: R160_S1 §3a#28 phase-36/106  
+  → residuo vivo: pruebas uniformes en el cuerpo (T1)  
+  → residuo vivo: 36/106 amplificación tensorial: falta sub-lema R-FIN de finitud
+
+**8H** ◧ (sin aritmética × objetos geom./dinámicos) — 100 rutas: DEAD 61 · OPEN 16 · PARTIAL 15 · PROVED-TOOL 8  
+  killers: OTHER×43, E1×23, F3:Xi_a×3, LI×2  
+  muertas: phase-8/PLAN (Epstein); phase-10/M10.1-4; phase-15/M4-M5; phase-16/06; phase-29/49,52; phase-30/56; phase-40/122; phase-40/123; phase-41/126; phase-44/131-hw; (+50)  
+  duplicados: phase-43/129-130  
+  herramientas: 136 PHASE_136 §2; 142 R142_005 Thm 19.25; 159 G1_B3_R4-R5; 159 G1_B6_R2; P06 main.tex; P34 main.tex  
+  → residuo vivo: 160 D1: laminación Torelli-failing con puntos fijos (única clase de portador no excluida por Thm Z/Thm H)  
+  → residuo vivo: 28/02 η-invariante APS; 28/03 clase [H_C] en KK  
+  → residuo vivo: 108 Stage 7 compatibilidad de escala  
+  → residuo vivo: triples de frontera para W_λ / unicidad de B_CCM (AUDIT_CONSOLIDATED §2)  
+  → residuo vivo: 121 ley de conservación del flujo de Kreĭn (L4/M11)  
+  → residuo vivo: 42/128 Deninger con foliación Kähler–Riemann  
+  → residuo vivo: 159 sin auditar: DK_α no ergódico, Prop BL ℤ[ℚ/ℤ]  
+  → residuo vivo: Pedido 122.A: autodualidad natural de H¹(D) en 2D=K  
+  → residuo vivo: I14 (40/123): complejo de Čech de D_0, nunca ejecutado  
+  → residuo vivo: R158_001 portador laminado con puntos fijos + polarización ALK
+
+## 3. Muros universales
+
+| W | enunciado preciso | celdas que pinta | primera → última aparición |
+|---|---|---|---|
+| **W1 E1** | Un reductor honesto termina en una forma equivalente de RH: Kreĭn/de Branges/Herglotz, Li/Keiper, Nyman–Beurling, (4.2) Sonin, Thm Z (certificado = fórmula explícita), "∀T" de una ley por ventana, ε₀≥0, Ω₇/RDI, Hodge ⟺ RH | 1A 1B 1E 1F 2B 2E 2F 3F 7A 7E 7F 7H 8A y ≈40 % de todas las rutas | phase-0/0A3 (de Branges) → R162_1802 Thm R, 803 Thm G (phase 162) |
+| **W2 cuantificador maestro / Teorema M** | Media ⇏ uniforme por ventana (P26–P29). Techo por ventana T/log T (Thm 172.9, phases 54–59). **Teorema M:** λ^A_T ≤ exp(−e^{(2−ε)T}), así que ningún margen, compacidad ni bootstrap sirve. ζ está a distancia doble-exponencial de un contacto de Tipo I (2101) | 3A 3E 5A 7D 2D, y en parte 3C/8F | 172.9 (phase 54) → P26–P29 → 155 thm:margin → 159 G2_B6_R2 → R162_2101 |
+| **W3 ceguera de clase (F3)** | Lo que usa sólo Λ≥0, soporte en potencias de primos, EF o leyes monótonas vale igual para deletion, κ/finmod, DH, Epstein y la curva de Tipo I (702 Thm 2; 703; 1601) | 2A 2B 2D 2E 3B 8D 8E 1D 4A | phase-8 (Epstein), 14 (cuerpo de funciones) → R162_2001/2190 |
+| **W3′ ceguera de frecuencias enteras** (R163_1001 §5, Thm O) | En toda clase definida por Fr⊂ℕ + EF con Γ(s/2) + orden finito + realidad (cualquier conductor) hay miembros con ceros fuera de la recta y theta modular 2-periódica (f_χ); a conductor 1 la clase es {cζ} (Hamburger). La integralidad global es ciega al signo o una identificación | 5E 5F 1G 4G (y 5A vía f_t) | R163_113/114 (forma identificación), R162_2601c/2801 (forma ζ=ζ), R163_901 (forma ventana) → R163_1001 (deformación, periodicidad, Hamburger de ventana) |
+| **W4 signo equivocado / orientación (F2)** | Las positividades incondicionales dan cotas inferiores y RH es superior (T9-A). El cuadrado suma×producto contiene el cuadrado de Weil truncado (R161_002). El sawtooth es el comb de (PC). El Ward cambia de signo con η | 4A 5A 5B 6B 3D 4C 2C 8B | phases 9–12 (T9-A) → R161_001-004, R161_016 (pullback de Markov; killer corregido a F2), R162_1902 |
+| **W5 jets en λ=0 (F1)** | Todo lo que entra como λ·(…) o como primera variación se anula en el contacto | 1B 2B 4B 4C 6B 8B | P124_004-010 → R162_101/403/404/405 (R161_016 ya **no** va aquí: es F2) |
+| **W6 límite lineal (F4)** | Completaciones lineales tautológicas; [X,S_N]=−K_N; (PC+) y (PC−) tienen diferencia algebraica nula | 1A 1B 6B | R161_017-023 (**con salvedad:** R161_075 dice que la exclusión general de R161_018 está "sin probar tal como está escrita"; sólo valen como probados 206 y 401) → R162_206/401 |
+| **W7 Λ*1=log lineal** | Usado linealmente, es una traslación de ventana T→T+½log X o se cancela en umbrales compuestos (D4 Thm 5.1) | 6A 6B 6D 6E | phase-20 (barrera ω) → R160_D4 → R162_406/1603/802 |
+| **W8 racionalidad / finZ** | Ningún conjunto finito de ceros lleva un certificado flat-top (finZ). El transporte desde cuerpos finitos choca con la pared de racionalidad (six exponentials, 159 G1_B4_R5) | 1H 4G 7G 5H 2G | 33/74 → phase 149 → 155 finZ → R162_1203 |
+| **W9 teoremas de método T1/T2/T5** | T1: la prueba tiene que ser uniforme en el cuerpo o nombrar una propiedad separadora (ζ_K, S₃). T2: A1–A6 no bastan (Epstein), hace falta Euler. T5: extraer una sola fibra desde momentos L² es trivial | 1G 2G 3G 4G 8G | P46 §18 (phases 139–150) → 158 (S₃) |
+| **W10 objeto MW-5 ausente / OT-5′** | Todo portador geométrico o cohomológico postula la positividad o es ⟺ RH (Lemma T). Thm Z: un polo ⟹ a lo sumo un par. Thm H: ciego a los bloques fuera de la recta. Muro de cola W#. Thm 19.25: no hay h⁰ con (a),(b′),(c), ni siquiera sobre F_q | 2H 4H 5H 7H 8H | phases 41–44 (Deninger/Forni) → 142 Thm 19.25 → 158–160 |
+| **W11 meta-teorema 136** | La positividad incondicional es sólo de primos o sólo arquimediana; cualquier enunciado que acople ambos lados es RH. La arquimediana es indefinida desde T≈0.58 (prop:archneg) | 2A 4A 6H 8H | phases 5–6 (G_p indefinido) → 136 §2 → 155 prop:archneg |
+| **W12 identidad exacta sin signo / Γ domina** | Cadenas de identidades exactas (secular, Kato, cofactor, Jacobiano) conservan toda la información pero no tienen signo. El trilema localidad–fase–signo (120). Γ domina (110, 114, 118) | 4B 4D 4E 8A 1H | phases 81–101 → 120 → R162_1003 |
+| **W-identification** (R164_190 §Síntesis de la ronda 2; Hamburger, Thm O, Thm R) | Toda propiedad global que separa ζ de todos los falsificadores identifica a ζ: la clase que define se reduce a {ζ} (o {cζ}) y la pregunta de ceros vuelve sin cambio (= RH). Tabla: Fr⊂ℕ + EF, conductor 1 → {cζ} (Hamburger; R163_113, R163_1001 Thm O); Fr⊂ℕ + EF, q>1 → contiene f_χ con ceros fuera (R163_1001); medida ≥0 fuera de ℕ + brecha (1,X) + EF + polos de ζ → {ζ} (R164_401 Thm R); Euler + ℕ + conductor 1 → {ζ}, con q>1 GRH de grado uno (R163_1001 Thm O.2); abundancia en la recta, Riemann–Siegel, familias/Parseval → no separan (R163_602 F2, R163_603, phase 150); cola positiva sin EF → ciega a ceros (Thm A, ζ_θ; R164_102, R164_101); integralidad sin EF (BF_θ^disc) → contenido sólo en θ≤1/3, el retículo de Witt no baja de 1/3 (R163_803, R164_201) | 4F 5G 1G 5E 5F 7B (todas las rutas de clase) | Hamburger 1921 → R163_1001 Thm O → R164_401 Thm R, síntesis R164_190 |
+
+Orden de peso: **E1 ≫ W-identification ≈ W2 (M/cuantificador) > W3 (F3) ≈ W3′ > W10 > W9 > W8 > W4/W5**.
+
+## 4. Falsificadores y contramodelos × propiedades que refutan
+
+| modelo | comparte con ζ | refuta | archivos |
+|---|---|---|---|
+| **DH** (Davenport–Heilbronn) | EF, ε, lado arquimediano; sin Euler | identidades de EF, leyes de flujo, (LB)/virial, Kreĭn CM, transporte de grado 1, mollifiers, repulsión (ceros gruesos) | P04, 47/146, 64 C,D, 102, 407, 503, 1003, 1301, 802, 159 G2_B10 |
+| **Epstein** | EF, geometría | "geometría basta", axiomas A1–A6 (T2) | phase-8, P46 §18.2, 139 T2 |
+| **Ξ_a** (ξ deformada) | forma de Weil salvo el término cruzado | transferencia de Hodge, h⁰ sin modelo, dos compuertas R+S, ε-fase | 121–146, 122 P122_020, 124 P124_013/014, R160_C8 |
+| **Ξ_Q, ζ_K, S₃** | Euler sobre otros cuerpos | equimodularidad, separaciones sólo-de-Ξ_a (Thm A 153), rutas unitarias no abelianas | 138 T1, 153 Thm A, 158 |
+| **cuerpo de funciones (F_q)** | Frobenius, RH verdadera | ancla de Landau, transporte de Weil, marco (el defecto de marco también vale allí), q→1 | 14, 33/74, 63, 145, P46 §21, 159 G1_B9 |
+| **Hadamard** (productos genéricos) | todas las leyes dinámicas | repulsión LP-134, finitud dinámica | 179, 46/141 |
+| **deletion Λ1_{n≥5}** | Λ≥0, soporte PP; λ_W≤0.4608<T* | exclusión de Tipo II, monotonía, S=2 nodal, Douglas/log | 703, 802, 902, 1401, 1601, 1803, 155 finmod |
+| **κ-modelos / finmod a^κ** | soporte, positividad, casi todos los valores | primer cuarto, ángulo de Perron–Tate, jet regularizado, flujo; "una ventana fija decide" | 103, 204, 702, 802, P47 thm:finmod |
+| **amplificación sΛ** | todo salvo la escala | signo de ⟨u₂,φ̂⟩, (C2), homotopía en s | 1801 Thm D, 1803 |
+| **curva de Tipo I de dos átomos** s₂δ_{log2}+s₃δ_{log3}, s₂^c=0.9997678 | cono positivo, leyes monótonas | R-C.b ciega al peso; toda exclusión espectral de Tipo I sin datos de ceros | 1901 §4, 2001, 2190, 2101 |
+| **modelos 3×3** | Perron, leyes monótonas | homotopía/polarización (1801 Thm B); Tipo I compatible con todas las leyes (1901 Thm 2); saturación coherente (2×2, R161_037) | 1801, 1901, R161_037-039 |
+| **Λχ₂** | Euler, Λ*1 = serie L | sumas sobre caracteres, ε-fase, BCH, familia del Problema B. **No** pasa el cociclo Φ_Λ ni "Z con coeficientes 1" | 1102, C8, 903 (corregido en 1190), 1001, 160 M1 |
+| **Beurling DMV** | Λ≥0, Euler, Λ_B*1=log exacto, ceros fuera | todo uso de Λ*1=log sin ℤ (903, 1302, 1401, 1402, T3, núcleos de Berkovich). Sólo lo separan Φ_Λ (𝒩_B⊄ℤ) y la integralidad | 1001, 1302, 150, 152, 157 |
+| **comb models** | clase coherente | converso por ventana (156), (C2) desde T≈0.38 | 156, 1502, 1803 |
+| **M_m** (ξ × factores racionales de m cuartetos fuera de la recta; R162_2501b) | EF, identidad de lado de ceros, forma semiacotada cerrada, lem:contA, primer contacto, testigo, nodos, finZ, Teorema M; κ(M_m)=κ(ζ)+4m | ruta (a) de C_B, todo argumento de clase (Thm 3); sup N<∞ (N→2m). Sólo le falta el lado aritmético puramente atómico | 2501, 2590, 2602 |
+| **M_m con ventana** (M_m windowed; R164_601) | EF, identidad de lado de ceros, cola positiva de Λ por encima de la ventana | **satisface la desigualdad de signo de cola** (Prop 4 / Prop 2.1): el signo de la cola no excluye cuartetos sin una cota inferior independiente (Thm 3.1) | R164_501 §8, R164_601 |
+| **Λ̃** (pesos atómicos positivos Λ̃(n)=1−Σ2Re n^{ρ_j−1} en {±log n}; R162_2601 Thm Λ̃) | atomicidad, positividad, Chebyshev; reproduce la parte no temperada E de D bajo H(m) | O2501.1 tal como estaba ("peine atómico ⟹ E=0"); G(s) no es log-derivada. Sólo lo separa la propiedad de producto de Euler individual (O2601.1) | 2601 |
+| **ζ_θ(s)=ζ((s−θ)/(1−θ))** (sistema de Broucke 2409.10051 §6.1, CITADO; R163_101 Prop 1) | clase Beurling extendida (dΠ≥0, dN=exp_*(dΠ)), Euler extendido, N=(1−θ)x+O(x^θ) ∀θ∈(0,1), analiticidad en Re s>θ, crecimiento/PL, Jensen, densidades de Broucke; ceros en Re s=(1+θ)/2 | la rama de clase de BF_θ ("error entero <√x ⟹ RH, uniforme en la clase"); toda obstrucción analítica (NO-GO §5 de R163_101). Sólo lo separa la integralidad de las multiplicidades primas (BF_θ^disc) | R163_101, 190 |
+| **sustitución de raíz** p↦p^{1/m} (p.ej. P=(primos∖{2})∪{√2}; R163_102 Lemma S) | Beurling discreto, N=ρx+O(1) (√2: sup R≈2.00 hasta 10⁶, R163_191), ceros de ζ en σ>0 | "N=ρx+O(1) ⟹ retículo" (rigidez sólo para ⌊x⌋+c, Thm R); τ y q se cancelan exactamente (O102.3) | R163_102 |
+| **borrado finito de primos** T (ζ·∏_T(1−p^{-s})) | Beurling discreto, N=ρx+O(1), sup R ≤ 2^{#T−1}, mismos ceros que ζ en σ>0 | rigidez del error acotado; por Cor F todo sistema ℕ-comparable es RH-equivalente (no contraejemplo) | R163_102 |
+| **K(s)=1−c/(s+1)**, Z₀=ζ/K (R163_002 §2) | enteros exactos b≡1 y Euler de ζ, cociente Beurling positivo | "entero exacto + Euler + cociente positivo ⟹ factor trivial" (sin EF, no es intercambio) | R163_002, 190 |
+| **f_χ** = αL(s,χ)+ᾱL(s,χ̄), χ carácter cúbico par mod 7, α²=ε̄_χ (combinación DH par; R163_1001 Lem 1.1) | frecuencias enteras (Fr⊂ℕ), coeficientes reales 7-periódicos, la forma Γ(s/2) de ζ, EF exacta Λ_χ(s)=Λ_χ(1−s) (conductor 7), entera de orden 1, theta modular 2-periódica de peso ½; ceros fuera de la recta PROVED-CITED (Kaczorowski–Kulas 2007; Saias–Weingartner 2009; salvedad de página, phase-48 doc 150) | todo argumento por integralidad global / periodicidad / modularidad / Hamburger que no use q=1 (W3′, Thm B.3); abundancia en la recta como separador (tipo DH, Bombieri–Hejhal, R163_602 F2); Riemann–Siegel/AFE (sólo EF, R163_603 L2.1). Sólo lo separan q=1 (identificación) y el producto de Euler | R163_1001, R164_000 P3 |
+| **f_t = ζ+t·g** (g cuasicristal de frecuencias m/√M; R163_901 Thm F) | EF de ζ, polo, coeficientes reales, multiplicidades enteras de ceros, el lado de primos de ζ en log n<2T₀ (∀N₀), el testigo y T_c de ζ si T_c<½log N₀; ceros fuera de la recta | todo argumento de datos de ventana + integralidad de multiplicidades + cualquier propiedad compartida con f_t (L-A de R163_1001); fuerza a usar primos más allá de la ventana (P1 de R164_000). Sólo lo separan Fr⊂ℕ y el producto de Euler (f_t no tiene ninguno) | R163_901, 991, 1001 |
+| **núcleos theta positivos con ceros fuera** | positividad del núcleo | "positividad de theta basta" | 103_15-30 |
+
+## 5. Inventario de herramientas probadas (PROVED-TOOL, reutilizables)
+
+- **Phase 165 (parte 16):** **Det+** (R165_101): ¬RH en ρ* ⟹ λ^W_T<0 para T ≥ τ(ρ*), τ ≤ T_L(γ*)+½log(π/2)+o(1) (dividir ξ por su cuarteto, truncar el núcleo de Riemann–Pólya); horquilla **0.8047 < T_c ≤ min_ρ τ(ρ)** PROVED con salvedad de agrupamiento. **Thm 1 / Cor 2(c)** (R165_102): detección sub-Landau T_det para cero dominante; el contacto lo decide min_ρ T_det. **Thm 2 / Cor 2.2** (R165_201): identidad exacta de fases, 4Re G(t_q)² = 4|G(t_q)|² cos 2(Φ_Z ± πω(E) + Ψ_out); variable de signo ω(E). **R165_202:** sin saltos en T, real-rooted en todo T simple, cuadratura y Cauchy en todo T, separación por ceros cargados (E1).
+- **Phase 164 (parte 15, rondas 3–4):** **Thm SA** (R164_501): todo test ≥0 en ℝ aniquilado por la ecuación de núcleo es ĤĤ^# con H∈E_c (cono de dimensión finita; densidad crítica T_c/π de nodos, sin tipo sobrante); Cor SA.1 (escalera polinómica; ruta directa F5 de R164_491). **Prop 4** (R164_501): Ψ_y=G²·y/(z²+y²)≥0, Σ_ρΨ_y(t_ρ)=𝔄_y−G(iy)²𝒯(iy), 𝒯(iy)=Σ_{log n≥2T}Λ(n)n^{−½−y}>0 (cola de Λ con signo a altura real; identidad, no desigualdad). **L1, L4, L5, L6** (R164_502): A_T depende sólo de σ̌ en (−2T,2T) — todo invariante espectral es dato de ventana; criterio de traza de calor (dado L3 ARGUED); Stieltjes = positividad en Krylov; identidad de Widom. **Props 1.1/1.3** (R164_601): condición exacta de signo de cola para G²K; **Thm 3.1** principio del término descartado. Thm R PROVED tras F3/F1 del de auditoría R164_491 (novedad: no encontrado en esta forma, posiblemente folklore).
+- **Phase 164 (parte 14):** **Thm R** (R164_401, auditado por el lead): aniquilación sinc de medidas autoduales con brecha y signo — m̂=m, m=peine en (−X,X) con X>1, m≥0 fuera de ℤ ⟹ supp m⊂ℤ (Lem 2), y entonces m=peine (Lem 3); por tanto N=N_ζ en [1,X), N≥0 fuera de ℕ, EF de ζ con sus polos, orden finito ⟹ f=ζ (Hamburger con positividad + brecha en lugar de soporte entero; novedad por verificar). **Theorem L** (R164_201, de auditoría R164_291): en 𝒦_θ, θ<1/3, todo redondeo de desviación acotada de los conteos de Witt tiene error cuadrático medio ≫ x^{θ+δ(θ)}, δ=θ(1−3θ)/(5−3θ). También: Thm L Landau–Pringsheim de la cola, Thm H, Thm A (R164_102); Lemma H, Thm KZ, Prop D, Prop θ (R164_101); Props P/S/F/B (R164_402, superadas).
+- **Frontera de Beurling e intercambio (parte 11, phase 163):** intercambio canónico E=∏E_{δ,γ} con log E(½)=2Σlog(1+δ²/γ²), corriente de Frullani q_E y defecto fiel D_test (R163_001, 7F; continuo en la topología distribucional, 190); lema de soporte de factorización positiva (R163_002a, 5F); Lemma R (R163_101b): ζ·R racional positivo con θ-regularidad ⟹ θ≥½+β; Thm R (R163_102a) rigidez del retículo ⌊x⌋+c ⟹ ℕ; Lemma S (102b) ζ·A, Σ|a|<∞ ⟹ N=A(1)x+O(1); Thm T + Cor F (102c, con ρ>0) transferencia de ceros en σ>max(σ_τ,θ,0); Révész 2207.00665 Obs. 7 vía Hilberdink 2010 (191a, citada): discreto con θ<½ ⟹ ceros con β>θ, perturbaciones finitas ⟹ RH_B ⟺ RH.
+- **Ronda 29 (parte 10):** identidad estructural de S_even en log 2 (2902a, ‖Π_log2‖=0.9009276); lem:degen D1–D3 (2902b); spec S={0,±½}, V cóncava ½-Lipschitz, Danskin (2902c); R162_2901 Props 1–2 y Thm B (ζS₁^K P₀/P Beurling positivo con RH).
+
+- **Tate 2×2, Hamburger cuantitativo, libro multiplicativo (parte 9, rondas 27–28):** Thm TC (2701) H_S=½exp(2Θσ₁), Θ=Σ artanh p^{-1/2}; Thm P (2701) H≻0 para toda cadena de boosts (RH-neutral); Lemmas 1–3 (2801): −ζ₀′/ζ₀ = Dirichlet + racional canónica, ζ₀=ζ/R fuera de S, Hamburger con defecto racional devuelve cζR para todo m; Thm PB (2802) Piltz con k entero no ve ceros, H(m) ⟹ LH; Thm L (2802) identidad terminante ψ–D_k (formal, ciega a m). *Degradada a "por rehacer" (2890):* triple de frontera de W_λ (2702b), deficiencia (4,4), no (2,2); sólo Prop 2.5 (invariantes Λ-libres) queda certificada.
+
+- **C_B y conteo (parte 8, rondas 25–26):** ley de exponente (2501a) bajo H(m) lím (1/T)log(−λ_A)=2β*, piso incondicional −4e^T (reparada por 2590); modelo M_m (2501b); Thm K (2502a) comparación fiel sin división ⟺ Gate 1, ‖K_T‖≥c/λ(T) (test reutilizable para todo "detector fiel + comparación"); Thm T (2601b) m=0 ⟺ D temperada, tipo exponencial de D mód S′ = β*; rigidez de Hamburger (2601c): log-derivada atómica + EF conductor 1 + orden finito ⟹ F=cζ (citada de memoria); conteo de Sonin N(T)=n₋(A_T|P_T) (2602b), no decreciente, primer salto = primer contacto, lím N = 2κ_off.
+- **Nodos del testigo (parte 7, rondas 22–24):** Thm NI (2202) w_x=L(x)/F̂′(x), sólo n<e^{T_c} (Christoffel); Thm ND (2202, con ι-invariancia) no hay descenso; Thm N1 (2201) objeto atómico 𝒜(s;G)=Σ q_x(−ζ′/ζ)(s+ix) (factor 2 en (a), (b) sólo ⟹); Lemma S (2301) identidad de Selberg ⟺ a=Λ (recursiva); Thm Q (2301) cuadratura nodal exacta en tipo ≤2T_c (Akhiezer); Thm HV (2401) H = canal suma de la media testigo, c_F=(F₊*F₊) en [T,2T]; Lemma U (2401) testigo+μ^< determinan el peine oculto; Thm N (2302) límite débil ≡0 mód Tate vía ζ(1−ρ)=0; Thm V (2302) radicalidad ⟺ Gate 1. Proposición N3 (2201, degradada por 2290).
+- **Ventana/certificados:** Thm C(½log3) 8.86e-5; λ_A, λ_W>0 en (0,½log5] (R162_303/703, P47 thm:log5W); dualidad fuerte D1/O (154, nunca se alcanza); continuidad de λ_A (R162_001, P47 lem:contA); tasa 407 λ_A(T*+δ)≥−2A*Q*/log(1/δ); Teorema M (159 G2_B6_R2); TK/N/N′ (M≤24); (H1)/cor:H1 índice negativo arquimediano uno; Thm P n₋≤5/7/8; thm:index/arena (n₋ exacto para T≤0.90); thm:finmod.
+- **Estructura de ζ en el contacto:** R162_2101 (casi-núcleo = radical truncado de Pólya); R162_408 (NE) exacta; R162_501 identidad Selberg–virial; R162_502 B2 M_T(Λ)=ZXZ⁻¹−X; P121: corriente de Tate entrante, rigidez de paridad opuesta del puerto, colar de Tate cerrado, cuadrado de residuo D_T^crit.
+- **Teoremas de método y muros probados:** P46 T1/T2/T5, T3 (condicional a H-DMV, ya citada), T4 polar/entero; 136 meta-teorema; Thm 19.25 (defecto de marco) y su modelo en F_q (P46 §21); D.34.5 (no hay clase primitiva con todas las trazas de Frobenius ≥0); muros 159: W# de cola, pared de racionalidad R/R′, Cor H/Cor M1, Thm A 9′, SYN 2.2 converso de Weil graduado; P29 cuantificador maestro; 198.2 (no-colapsabilidad, clase 𝔄).
+- **Analíticas generales:** 0B lema de truncación; A0 cola uniforme de Laguerre (102); 105_02 modo exponencial de Li; 106_11 tests negativos compactos bajo ¬RH; 55/173 energía de Green–Littlewood (Cesàro = πI−π/8); 64 TASK-A (no anulación de Paley–Wiener); 54/170 E(T)≪T/log T; 54/167 ley de balance dBN; P32 Stepanov; P16 varianza de primos en intervalos cortos; 9T-cal tasa Montgomery→extremal; 32/65 recurrencia PPP; 47/146 ceros de DH gruesos.
+- **Diccionarios/estructura:** 0A1 (Q = Gram de Weil–Guinand); P07 detector de Weil localizado; P09/P10 anatomía (factoriza ⟺ Euler); P05/13/19 jerarquía ω; P43/P44/P45 portadores de las filas A/B/C; P06 clasificador D0; P18 anatomía del índice de Kreĭn; 111 admisibilidad de Schwartz; 114 D.244 inercia (1,|S|−1); 57/183 identidad Dirichlet–Selberg; 29/26 falla de Carleman; 159 G2_B6_R4 unicidad BRS (mod Lemma S, sin auditar).
+
+## 6. Nunca intentadas / abandonadas sin cierre
+
+Lista deduplicada de rutas marcadas abiertas que ninguna fase posterior atacó. Formato: origen → celda. **HECHO** = ya cerrada; *sin auditar* = existe un texto sin verificación de auditoría.
+
+1. Conjetura A.15, monotonía del índice de Kreĭn bajo dBN (phase-28/01) → 1E
+2. η-invariante APS (28/02) y clase [H_C] en KK (28/03) → 8H
+3. Conjetura de exclusión "todos en la recta o infinitos fuera" (21/01-02) → 4D
+4. Doc 107, Weil en dos variables (36/107) → 4C (probablemente absorbido por 108/MW-7, NO CONFIRMADO)
+5. Paredes A/B de rigidez adélica (27) → 4H; testigo de Arakelov 𝒳 (15/M10) → 2H
+6. GAP-135.A / doc 148, marcos inconmensurables → 4A
+7. GAP-196.A, casi-dobles de Λ_f de DH → 3D
+8. GAP-197.1: (TW_y) para algún y>½ → 3C/3E
+9. GAP-189.1: pesos ζ-correlacionados sobre el borde → 3F
+10. GAP-198.1: combinaciones inter-moneda fuera de 𝔄 → 8A
+11. GAP-179.B / 192.A: separación efectiva del discriminante de ξ → 5D
+12. O8 (61): H_S explícito 2×2 (Sonin + de Branges) → 1D (el rango de Sonin p-ádico 1 lo debilita)
+13. 77–80: compatibilidad de pencil, clase ℓ², simplicidad, ensamblaje, FIXED-L-WEYL, SAFE-GAMMA-IDENT, corte A1–D3 → 7E/4B
+14. Deninger con foliación Kähler–Riemann (42/128) → 8H
+15. Conteo de Sonin de Connes–Consani #{λ_j(K_I)>1} (115_15) → 8D
+16. Ansatz A χ(D)=D²/2 (113_12) → 7H
+17. Stage 7 de 108, compatibilidad de escala → 8H
+18. Portador distribucional ker X=span δ₀ (83–84) → 4B
+19. Límite Deep Ω_X→0 y cota subexponencial de Li desde los primos (105) → 3F (fuerza RH)
+20. Extensión del certificado a ½log5 (118 W4, 114) → 3A: **HECHO** (R162_303/703)
+21. PATH-TO-D (ii): A_T como compresión de un autoadjunto explícito → 8D
+22. S5 de 136: índice de Hodge tropical de Cartwright → 2H
+23. P122_D_SPECIFICATION: correspondencia E_(∞,T) → 1H
+24. Ley de conservación del flujo de Kreĭn (P121, L4/M11) → 8H (el memo R160_X_C1: testigo de Blaschke **HECHO**, NO-GO en R162_2201/2401; slot M11 sigue sin escribir)
+25. D.16-γ: cono cortado por el dato de ceros (138) → 7A — **HECHO** (negativo, R165_201/202)
+26. P152.1 Dolgopyat–Mayer vía Lewis–Zagier → 1H
+27. KEP: parametrización de Nevanlinna de 𝔖(T) → 7F
+28. P2: identidad estructural para S_even en log 2 → 6D: **HECHO** (R162_2902a)
+29. O3/lem:degen, caso degenerado de V_T → 6A: **HECHO** salvo log 2 (R162_2902b PARTIAL)
+30. O-151.4, eje sumando contra numerador → 8C
+31. Round-2 D1 (160), laminación Torelli-failing → 8H
+32. 159 *sin auditar*: G2_B8_R5 Thm L″, G2_B2_R4 Thm U, G1_B1_R5 DK_α no ergódico, Prop BL ℤ[ℚ/ℤ], R5 (Lemma S, Cor M1, Prop J) → 8A/8H/4A
+33. Chinburg–Rumely; el hit web "Certified Weil positivity beyond the unit window" (no leídos) → 3A/7A
+34. Paquete off-machine de dos primos en 0.58 (numérico; regla del dueño) → 3A
+35. Opción 6 de R160_020, clase mixta S+D de Meyer → 4C; O-B5.1′ Borger W(R) → 6H
+36. Triples de frontera para W_λ / unicidad de B_CCM (AUDIT_CONSOLIDATED §2, "RH-neutral") → 8H
+37. Quillen K_n(ℤ)/reguladores, RO(G) Klein-4, A¹-motívico (AUDIT_A §3) → 5H
+38. P25 V.2: completación de Pontryagin con caracteres x^{b+iγ} → 1H
+39. P30 LP-112 + L8 y P19/P33 Conjetura C_B (m<∞ ⟹ m=0) → 8F/4E/7E
+40. GAP-157.A, discrepancia del flujo de Kronecker → 3E
+41. P47 Problema B, certificado aritmético → 6F (tocado en 159/R160_S4, sin construcción)
+42. P47 Open 5: λ_W>0 más allá de ½log5 → 1A/3A (el tramo hasta ½log5 está **HECHO**; más allá, abierto)
+43. P46 §28.4, objeto de seis cláusulas → 2G
+44. THE_BACKWARD_MAP a4/R16, χ cuadrático sobre Spec ℤ → 5H
+45. Pila–Wilkie / o-minimalidad frente a W_T → 5H: **HECHO** (NO-GO, R162_2402: W10+W8)
+46. R162_2200 "residuos-idea" que nadie formuló como ruta: 5F Poisson en T (**HECHO**, NO-GO R162_2302), 4F objeto generador con Euler antes de regularizar, 2F Bernstein de λ_A(T), 5D forma de Smith del Gram de contacto, 1G conversos/Hamburger, 7C correlación exacta de pares
+47. *(parte 6)* sistema canónico de transferencia de Tate 2×2, O8 (61), colapso de índice κ₀+|S|→0 → 4E (absorbe el ítem 12)
+48. frontera de Tate cargada con masa corregida (106.203–205) → 6H
+49. retículo desde Sh_Z (P44 §6bis); correspondencias no invertibles (P43 §11bis); pairing de reglado de Mertens (P43 Thm 10.8b); Pedido 122.A → 5H/8H/6H/8H
+50. modelo OS entrelazado de W_T (S1 I1) → 2H
+51. NG-D4, anticonmutación de Fourier Q(f,g)+Q(f̂,ĝ)=0 (I15) → 1D
+52. Lemma 108 κ_W(Q_2)≤C n_W → 8C; colímite de P44 Thm 8bis.4a → 4H; (H_L) de P44 → 4A
+53. slots D1 (→ 8H, ya en el ítem 31) y M11 (→ 8B)
+54. Opción 6 Meyer S+D (ítem 35) → 4C; O-D4.2 → 6A; O-D4.3, transposición de (C′) a ζ_K → 6G
+55. GAP-157.A (ítem 40): también en su forma tauberiana no local con input LI → 3F/4F
+56. energías de Chinburg–Rumely fuera de 𝔄⁺ (ítem 33) → 2H
+57. cuadrado acoplado tipo Hecke G2_B3_R5 Cor S2 → 4C
+58. hit web "Certified Weil positivity beyond the unit window" sin leer (ítem 33) → 3A
+59. otros OPEN de la parte 6 sin ataque posterior: I6 (bloque negativo bajo resolución, 3A), I11 (canal absorbente, 4H), I14 (Čech de D_0, 8H), índice de Cayley de 69 (7D), prop:polarcap en T (2E), R153_005 Thm A uniforme en T (4E), G2_B6_R5 Prop C (6E), G2_B7_R5 rigidez multigenerador (6F), LP-152 correlación gaussiana de primos (6F), R157_004 O4 dato de Kreĭn en el primer cruce (7E), R161_073-074 certificado superior residual (3D)
+- *(parte 7)* Residuos nuevos de las rondas 22–24, no atacados: O2201.1 peso nodal asimétrico (lado de ceros) → 8B/5C; OS-2 paridad del testigo → 6C; O2302.2 c_f≠0 por integralidad → 5F; O2302.1 resto a N finito → 5F; O2202.1 versión [prim] de NI → 6B; O2401.1 tamaños de V(F_M), H(F_M) → 7D.
+- *(parte 8)* Rondas 25–26: ítem 3 (conjetura de exclusión, 4D) = C_B → O2601.1; ítems 15 y 21 (8D) **HECHOS** (NO-GO, R162_2602); ítem 39 (C_B, 8F) ruta (a) **HECHA** (NO-GO, R162_2501), residuo O2601.1; detector Γ–Euler R161_068–070 (4D) **HECHO** (NO-GO, R162_2502, plegado en 1603 (d)). Residuos nuevos: **O2601.1** (lema convergente, 8F/8D/4D/7E), O2602.2 (¿δ=2?, 8D), O2501.2 (e<1 ⟹ Θ<1 sin finitud, 7E).
+- *(parte 9)* Rondas 27–28: ítems 12 y 47 (O8 Tate 2×2, 4E) **HECHOS** (NO-GO, R162_2701); ítem 4 (doc 107, 4C) **HECHO** (cerrado por 108, R162_2702a); ítem 51 (NG-D4, 1D) **HECHO** (DEAD, 2702c); ítem 36 (triples de frontera / B_CCM) **HECHO** como NO-GO para O2601.1 (W3), pero el cálculo hay que rehacerlo con deficiencia (4,4) (2890). Residuos nuevos: O2801.1 (4F), O2802.1 (4F/fila 5), O2702.1 (Burnol, RH-neutral, 1D).
+- *(partes 10–11)* Ronda 29 y phase 163: ítems 28 (P2) y 29 (lem:degen, salvo log 2) **HECHOS**; O2801.1 (4F) **HECHO** negativo (R162_2901). **O2601.1 queda afilado a la frontera de Beurling discreta BF_θ^disc** (5G): ¿todo sistema de Beurling discreto (multiplicidades primas enteras) con N=ρx+O(x^θ), θ<θ₀≈1/3, cumple RH? En la clase extendida la respuesta es NO para todo θ (ζ_θ); el NO-GO analítico (R163_101 §5) obliga a usar la integralidad de las multiplicidades; el NO-GO perturbativo (R163_102 §4) dice que un contraejemplo en θ=0 tiene que diferir de Π_ζ en un conjunto de abscisa >½. Residuos nuevos: O163.101a (C_{1/3}; la cota de K(y) es esbozo, R163_191), O163.101b (Θ<1/3), O163.101c (Révész Obs. 7 / Hilberdink 2010: θ<½ discreto ⟹ ceros con β>θ; ¿se afina hacia la recta?), O102.1–3 (5G).
+- *(partes 12–13)* Rondas 31–37 de phase 163: O163.101a (C_{1/3}) **HECHO** en θ∈(1/3,½) (Theorem C, R163_803, de auditoría 891 VÁLIDO CON ARREGLOS; novedad R163_892 pendiente de Diamond–Zhang cap. 17). Residuos nuevos: **O163.803a** (redondeo con correlación negativa, discrepancia baja tipo van der Corput sobre el collar de Witt, para bajar el error por debajo de x^{1/3}; L2a de R164_000) → 5G; **BF_θ^disc con θ≤1/3** (afilado; L2 de R164_000) → 5G; (★_cell) en el testigo en forma de cola (TC) (R163_401, R163_801 Cor 3.1, R164_000) → 7B/4F/7F.
+- *(parte 16)* Phase 165: ítem 25 (D.16-γ) **HECHO** negativo (R165_201 Thm 3(a), R165_202). Residuos nuevos: **ω(E) en el contacto = Rem 4.8a** → 7A; **O102.1** (γ₁(ψ) Gevrey explícito; ¿H=3·10¹² basta?), **O102.2** (Det− con δ*Λ*≤y₀; necesita O701.2 y Cor 2(c)), **O701.1** (quitar (Dom)), **O701.2** (marco inferior sub-Landau), **O701.3** (régimen medio) → 7D; monotonía de nodos y simplicidad por paridad (R165_202) → 7E. (★_cell) sigue OPEN.
+- *(parte 15)* Phase 164 rondas 3–4: O164.501.1 **HECHO** (R164_601 Prop 2.1: el test existe, dlVP sobre G²; no da desigualdad nueva, Thm 3.1–3.3). Residuos nuevos: **O164.601.1** (cota inferior de Σ_{q′}Re[G(t_{q′})²K(t_{q′})] para K Poisson/trig localizado en γ_q = (★_cell) ponderada por K) → 7F; **O164.503a–d** (media cuadrática §3.3; exponente de Huxley; sistema θ<1/3 no reescalado; cláusula "returns to") → 5G. (★_cell)/(TC) siguen OPEN.
+- *(parte 14)* Phase 164 rondas 1–2: O163.803a (L2a) **HECHO** negativo en 𝒦_θ (Theorem L, R164_201/291); O164.101 = O164.102.1 **HECHO** negativo por identificación (Thm R, R164_401: O164.101 ⟺ ¬RH). Residuo nuevo: **O164.201a** — sistema de Beurling discreto fuera del retículo de Witt, error O(x^{θ′}), θ′≤1/3, con un cero de β>½ (que deba estar fuera del retículo es ARGUED, vía L*) → 5G. (TC)/(★_cell) siguen OPEN (7B/7F).
+- Cerradas desde que se listaron: "densidad de H¹_alg" (R160_S5 §3.3) está **HECHO** por R160_C3 Thm B. Los ítems 1, 2, 3, 5, 6 y 7 de R162_590 §2 están **HECHOS** en 162 (502B, 703, 504, 1001, 1203; test de Beurling).
+
+**Total: 59 entradas (+1 bloque de residuos de la parte 7); ítems 45 y la parte 5F del 46 HECHOS en la parte 7, ≈90 ítems atómicos abiertos (2 HECHOS dentro de la lista y 2 más ya cerrados). El certificado antiguo D.172 en ½log5 está degradado; el HECHO del ítem 20 se refiere a los certificados de 162, independientes de D.172.**
+
+## 7. Especificación por ingeniería inversa de un argumento que cierre, y ranking
+
+Un argumento que cierre DEBE cumplir todo lo siguiente (S1–S8 son de R162_2200 §5; S9–S12 vienen de muros anteriores):
+- **S1** usar λ=0 de forma no perturbativa, sin jet λ·⟨…⟩ (W5).
+- **S2** ser no lineal y no polinomial en el test c (o en F): el caso polinomial colapsa a Sonin (1202 Thm C) y la integralidad lineal es Poisson (1902).
+- **S3** no ser invariante por orientación, es decir, no contener el cuadrado de (PC) ni el de Weil truncado (W4).
+- **S4** separar ζ de *toda* la tabla §4 a la vez, en particular de Beurling DMV y de Λχ₂. Eso exige usar a la vez la integralidad de ℤ y los valores exactos.
+- **S5** no ser un enunciado por ventana con brecha (M, 2101) ni "∀T" de una ley por ventana (E1). Tiene que ser un objeto en T que no sea una reformulación.
+- **S6** no ser equivariante por Hecke ni por traslaciones de ventana (W7, I-13).
+- **S7** hacer entrar el producto de Euler antes de regularizar y después de la resumación de la EF (204, 305, 1003).
+- **S8** no ser un criterio espectral ciego al peso (curva de Tipo I).
+- **S9** ser uniforme en el cuerpo de números o nombrar la propiedad que separa ζ de ζ_K/S₃ (T1). Debe usar A7–A9 (Euler) y no sólo A1–A6 (T2).
+- **S10** no necesitar un h⁰ con (a),(b′),(c) (Thm 19.25) ni un objeto MW-5 que postule la positividad (W10).
+- **S11** acoplar primos y lugar arquimediano de una forma que no sea ya el enunciado RH (meta 136). Por eso tiene que ser *más débil que ⟺* en algún paso intermedio, como C_B o LP-112.
+- **S12** no depender de un conjunto finito de ceros (finZ) ni de un margen numérico (M).
+
+**Ranking de celdas y residuos** (actualizado tras las rondas 25–26, parte 8):
+
+*NO-GO en la parte 8:* 8F ruta (a) de C_B (R162_2501: ley 2β*, M_m), 4D detector Γ–Euler (R162_2502: Thm D/K, Prop A), 8D PATH-TO-D (ii) + conteo de Sonin CC (R162_2602). **Convergencia:** los residuos supervivientes (8F, 8D, O2501.1, la exclusión de 4D, C_B de 7E) se reducen a UN lema, **O2601.1: una propiedad individual del producto de Euler de ζ que use los valores exactos de Λ de forma no lineal y acote el conteo fuera de la recta; debe fallar para deletion, M_m y Λ̃** (por Thm 3 de 2501 y la rigidez de Hamburger, ningún argumento de clase sirve).
+
+*Ranking vigente (parte 16) — phase 165 CERRADA:* la rama geométrica (entrelazado crítico ⇒ cuarteto fuera del cono) está **refutada con prueba** (R165_201 Thm 3(a)); "contacto ⇒ EC" DEAD (R165_202); Det− DEAD como ruta (R165_102). **Horquilla de T_c PROVED:** 0.8047 < T_c ≤ min_ρ τ(ρ), τ(ρ) ≤ T_L(γ_ρ)+0.226 (salvedad de agrupamiento). El signo del cuarteto en el contacto lo lleva ω(E) (= Rem 4.8a). (★_cell) y fila D OPEN.
+
+*Ranking de la parte 15 — phase 164 CERRADA (rondas 1–4):* todas las rutas abiertas por R164_000 están cerradas con prueba (L1a E1; L1b Thm A + Thm R; L2 Theorem L, y bajo 1/3 fuera del retículo OPEN con dirección positiva ≥ RH + GRH cuadrática; determinante/momentos = dato de ventana; sinc en el lado de ceros E1 sin espacio; dlVP sobre G² W2/M). **Teorema de identificación** (R164_190 §Ronda 2) + Thm R: ninguna propiedad de clase separa ζ sin identificarla. **Todas las rutas vuelven a (★_cell)**, es decir RH en el testigo, con la geometría de R163_401 como forma de la prueba. Regla §0: no se relanza ninguna de estas celdas sin una idea que nombre el muro que evade.
+
+*Ranking de la parte 14:* **todas las rutas de clase están cerradas por identificación** (W-identification, §3): el separador 1 de abajo (producto de Euler por encima de la ventana, L1) murió — (KZ) es E1 (R164_101), la cola positiva es ciega a ceros sin EF (R164_102 Thm A) y con EF la clase del testigo es {ζ} (R164_401 Thm R). El único contenido que no es identificación es **BF_θ^disc con θ≤1/3 fuera del retículo** (O164.201a, 5G; L2a cerrada negativa en 𝒦_θ por Theorem L). (★_cell) tiene que probarse para ζ individualmente desde el peine / la fórmula explícita a todas las alturas; equivalentemente (TC).
+
+*Ranking de las partes 12–13:* separadores **QUITADOS**: (i) abundancia en la recta (Levinson/Conrey, proporción positiva o 100 %): Bombieri–Hejhal (Duke 1995; R163_602 F2, PROVED-CITED) da, para combinaciones tipo DH, 100 % de ceros en la recta condicionalmente y aun así infinitos fuera; (ii) estructura de Riemann–Siegel / AFE: dato sólo de EF, compartido por f_χ (R163_603 L2.1). La integralidad de frecuencias es identificación o ciega al signo (W3′, Thm O). Quedan **dos**: 1. **producto de Euler por encima de la ventana** (cola 𝒯_X de −ζ′/ζ con X=e^{2T_c}, usada de forma no lineal; teorema de la cola (TC), línea L1 de R164_000: corte híbrido de Gonek–Hughes–Keating; celdas 4F/7F/7B); 2. **BF_θ^disc con θ≤1/3** (5G; línea L2 de R164_000: L2a construcción por O163.803a o L2b dirección positiva).
+
+*Ranking de las partes 10–11:* 0. **O2601.1 en su forma afilada BF_θ^disc** (5G, frontera de Beurling discreta): sistemas discretos con N=ρx+O(x^θ), θ<θ₀≈1/3 ⟹ ¿RH? Cumple S4 sólo si usa la integralidad de las multiplicidades primas (ζ_θ mata todo lo demás); cumple S11 porque es un enunciado de clase no equivalente a RH (ℤ tiene θ=0 con margen), pero su parte ℕ-comparable es RH-equivalente (Cor F), así que la novedad tiene que estar en los sistemas no comparables. Umbral heurístico θ₀=1/3 (C_{1/3}: redondeo aleatorio; dato: Dedekind cuadráticos tienen θ=1/3). Literatura: Broucke 2409.10051 (Thm 1.2, §6.1, Thm 6.3), Broucke–Debruyne–Vindas 2004.11501, Révész 2207.00665 Obs. 7 (vía Hilberdink 2010: único resultado de integralidad sobre ceros, empuja ceros a la derecha de θ, no a la recta), DMV (secundaria) y Zhang 2007 (secundaria; error x^{½}exp(c(log x)^{2/3})). O2801.1 CERRADO (2901); 6D P2 HECHO, 6A lem:degen PARTIAL (2902).
+
+*Ranking de la parte 9:* 0. **O2601.1**, con dos sub-formas: **O2801.1** (dN₀≥0 para ζ₀=ζ/R con ceros reales, 4F) y **O2802.1** (propiedad no formal, uniforme en k≍log x, del libro entero b≡1, 4F/fila 5). Todos los residuos convergen aquí. NO-GO en la parte 9: 4E Tate 2×2 (2701), 1D NG-D4 + triples de frontera (2702b/c), 4C doc 107 (2702a), dos ángulos sobre O2601.1 (2801, 2802). Quedan sin atacar: 5E/5F (integralidad no lineal); 6D/6A (P2, lem:degen) en curso (R162_2902); O2801.1 en curso (R162_2901).
+
+*Ranking de la parte 8:* 0. **O2601.1** (lema convergente; no ⟺ RH, S11). Ítems no atacados: 4. 5E/5F integralidad; 5. 4E Tate 2×2; 6. 6D/6A; 7. 1D NG-D4 + 4C doc 107. Los ítems 1 (8F), 2 (4D) y 3 (8D) de abajo son ahora NO-GO.
+
+*Ranking anterior (parte 7):*
+
+*Ya NO-GO:* antiguo #1 5C×8B Blaschke–torsión (R162_2201/2202; residuo O2201.1 = lado de ceros), antiguo #2 6C canal diferencia de Selberg (R162_2301 + 2401: los contactos ocultos no fuerzan signo; queda sólo la paridad OS-2), antiguo #3 5H o-minimalidad/Pila–Wilkie (R162_2402: W10+W8), antiguo #5 5F límite de renormalización débil (R162_2302: límite ≡0; queda c_f≠0). La lección común: la cuadratura nodal (Thm Q) es exactamente W≥0 en tipo ≤2T_c, así que todo lo leído en los nodos es E1 o lado de ceros.
+
+1. **8F/4E/7E, dicotomía m<∞ ⟹ m=0** (LP-112, L8, C_B). Es de las pocas afirmaciones intermedias *no* equivalentes a RH (S11) y usa Euler tres veces (S7). Riesgo: sin precedente; P33 señala que la finitud A es de fuerza Lindelöf.
+2. **4D, detector Γ–Euler −ζ′/ζ(2m+1) (R161_068-070).** Detector aritmético fiel fuera del eje (S7, S4 parcial); falta la comparación primitiva de Weil. Riesgo: que un detector no fuerce el signo (lección de 66–80).
+3. **8D, PATH-TO-D (ii) + conteo de Sonin de CC (115_15)**. Analítico (S10) y calculable. Riesgo: E1 por compresión (A_T=Σ_ρ en 118).
+4. **5E/5F, integralidad no lineal seguida en T** (O1802.3 + O2302.2: c_f≠0 desde la integralidad). Único residuo de la parte 7 que pide aritmética de ℤ y no lado de ceros. Riesgo: c_f es un momento de Tate exterior (zero-side, W6).
+5. **4E, sistema canónico de transferencia de Tate 2×2 / colapso κ₀+|S|→0** (§6 ítem 47) y **R153_005 Thm A uniforme en T** (§6 ítem 59): nunca intentados, S7.
+6. **6D/6A, P2 (identidad para S_even) y lem:degen**: baratas, nunca intentadas; herramientas, no cierre (fallan S5).
+7. **1D, NG-D4 anticonmutación de Fourier Q(f,g)+Q(f̂,ĝ)=0** (§6 ítem 51) y **4C doc 107 W_2** (§6 ítem 4): nunca atacadas.
+
+Descartadas por la especificación: 7D (M, S5), 3C (E1 por M7), 1E A.15 (flujo dBN ciego a la aritmética, W3/N5), 2G §28.4 (W10), 8H D1 (costosa y poco falsable; sólo si fallan 1–5), 6C OS-2 (paridad = el signo), 8B/5C O2201.1 (lado de ceros, W6), 3A Problema A (certificados, S12).
+
+## 8. Mantenimiento
+
+1. **Añadir una ruta:** agrega un objeto a `cells[i].routes` del JSON con `{id: "R16x_NNN", name, row, col, status: DEAD|PARTIAL|OPEN|PROVED-TOOL, killer: "E1;F3:DH;M;W…", note, supersedes_or_dup: "<id anterior>" o "", source_part: 7 (=fase ≥163; las partes 8–9 son las rondas 25–28; la parte 6 es la sub-auditoría 160–161)}`. Usa en `killer` las claves W1–W12, F1–F4 y F3:<falsificador> de §3–§4.
+2. **Si la ruta mata un residuo vivo:** quita la línea de `live_residuals` de la celda, y además pon `supersedes_or_dup` en la ruta nueva y marca como DEAD la ruta OPEN antigua (no la borres).
+3. **Recalcular el estado:** □ si no hay rutas; ◧ si queda alguna ruta OPEN/PARTIAL no superada; ◩ si todas están muertas pero `live_residuals` no está vacío; ■ en otro caso. Actualiza `counts`, y después la tabla §1, la sección de la celda en §2, el conteo y §6 (marca HECHO).
+4. **Muro nuevo:** si un killer aparece en ≥3 celdas, promuévelo a W13… con su enunciado y su primera y última aparición. Si aparece un falsificador nuevo, añade una fila a §4.
+5. **Cada 3 rondas:** revisión de auditoría del mapa contra los archivos citados (regla del editor, feedback-check-against-paper-definitions). Ningún de auditoría ha revertido un NO-GO hasta hoy; si alguno lo hace, la celda vuelve a ◧.
+6. Regenera la cuadrícula y las secciones con el script de `scripts/` (o a mano) y pon la fecha en la cabecera.
+7. **(editor, phase 164 L3):** fusionadas las partes 12 (R163_201–203) y 13 (17 rutas de las rondas 32–37 de phase 163) con el patrón del script (`scripts/r162_2300_refine_grid.py`, bloque part12/part13; backups `*_pre_p164*`). Conteo ■ 10 · ◩ 20 · ◧ 34 · □ 0, 975 rutas. Añadidos W3′ (§3), las filas f_χ y f_t (§4), los residuos O163.803a y BF_θ^disc θ≤1/3 (§6) y el ranking con dos separadores (§7). 5E/5F: rutas de R163_1001 DEAD, símbolos de celda sin cambio (residuos previos no tocados). Ninguna etiqueta de enunciado cambió.
+8. **(editor, phase 164 ronda 2, R164_301 §6):** fusionada la parte 14 (5 rutas: R164_101, 102, 201, 401, 402) con el patrón del script (bloque part14; backups `*_pre_p164b*`). Conteo ■ 10 · ◩ 20 · ◧ 34 · □ 0, 980 rutas; ningún símbolo cambia (4F y 5G conservan residuos vivos). Añadidos W-identification (§3), Thm R y Theorem L (§5), O164.201a (§6) y el ranking "todas las rutas de clase cerradas por identificación" (§7). Ninguna etiqueta de enunciado cambió.
+9. **(editor, phase 164 rondas 3–4, R164_301 §9):** fusionada la parte 15 (9 entradas: R164_501, 501P, 502, 502b, 502c, 503, 601, 601T, 491) con el patrón del script (bloque part15; backups `*_pre_p164c*`). Conteo ■ 10 · ◩ 20 · ◧ 34 · □ 0, 989 rutas; ningún símbolo cambia. Añadidos Thm SA, Prop 4, L1/L4–L6, Props 1.1/1.3, Thm 3.1 (§5), O164.601.1 y O164.503a–d (§6), falsificador "M_m con ventana" (§4), cierre de phase 164 (§7). Ninguna etiqueta de enunciado cambió.
+10. **(editor, phase 165, R164_301 §11):** fusionada la parte 16 (8 entradas: R165_101, 101D, 102, 102T, 102P, 201, 202, 202A) con el patrón del script (bloque part16; backups `*_pre_p165*`). Conteo ■ 10 · ◩ 20 · ◧ 34 · □ 0, 997 rutas; ningún símbolo cambia. Añadidos Det+, Thm 1/Cor 2(c), Thm 2/Cor 2.2, herramientas de flujo (§5); ítem 25 HECHO, ω(E), O102.1–2, O701.1–3 (§6); cierre de phase 165 (§7). Ninguna etiqueta de enunciado cambió.

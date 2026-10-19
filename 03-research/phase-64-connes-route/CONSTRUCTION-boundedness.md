@@ -1,6 +1,6 @@
 # The boundedness wall in colligation form: the precise mechanism and where new arithmetic must enter
 
-*Pure mathematics. After Stage 4 (positivity is free), the entire route is the single boundedness
+* After Stage 4 (positivity is free), the entire route is the single boundedness
 statement: the primitive compressions of the unconditionally-positive finite Euler colligations stay
 bounded, i.e. $K_P$ diverges only along the rank-one pole direction $H$. We carry this to its exact
 bottom: (i) the precise mechanism by which an off-line zero breaks boundedness (window amplification

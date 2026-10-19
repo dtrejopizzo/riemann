@@ -1,7 +1,6 @@
 # E72.166 -- Residual sign-Gram decomposition
 
-**Date:** 2026-07-09.
-**Role:** expose the internal geometry of the fixed `F2B-PSD` residual.
+**Purpose:** expose the internal geometry of the fixed `F2B-PSD` residual.
 
 ## 0. Exact decomposition
 

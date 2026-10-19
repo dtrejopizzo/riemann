@@ -149,7 +149,7 @@ Although (11) displays the omitted tail, the same number is determined by
 the retained form and the exact radical.  Put
 
 \[
-C_S(r,s)=-A_S(r,s)=T_S(r,s),qquad r,s\in\mathcal R,                  \tag{15}
+C_S(r,s)=-A_S(r,s)=T_S(r,s),\qquad r,s\in\mathcal R,                  \tag{15}
 \]
 
 and define the cross functional
@@ -181,7 +181,7 @@ A_S(q+r)=A_S(q)+2\mathrm{Re}\,\ell_{S,q}(r)-C_S(r,r).          \tag{19}
 For \(\mathcal R_M=\mathrm{span}\,\{r_1,\ldots,r_M\}\), let
 
 \[
-G_{M,ij}=-A_S(r_i,r_j),qquad
+G_{M,ij}=-A_S(r_i,r_j),\qquad
 b_{M,i}=A_S(r_i,q).                                  \tag{20}
 \]
 

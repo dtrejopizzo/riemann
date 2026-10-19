@@ -1,6 +1,6 @@
 # C127.003 — the poles are the rulings
 
-Date: 2026-09-12.  Status: `PROVED`.  Full statement: Paper 45 §8.
+Status: `PROVED`. Full statement: Paper 45 §8.
 
 The polar packet of the corpus's form, on `h = F⋆F^†`, is
 

@@ -18,8 +18,8 @@ not the missing global theorem.
 For a finite active set `S`, retain
 
 \[
- X_S=\mathbb T^S,qquad
- \delta_S(z^n)=i\omega_nz^n,qquad
+ X_S=\mathbb T^S,\qquad
+ \delta_S(z^n)=i\omega_nz^n,\qquad
  \omega_n=\sum_{p\in S}n_p\log p.                 \tag{1.1}
 \]
 

@@ -109,8 +109,8 @@ The following two-dimensional model has every property used by a naive
 induction:
 
 \[
- \Gamma=I,qquad
- K_\epsilon=\begin{pmatrix}1-\epsilon&0\\0&0\end{pmatrix},qquad
+ \Gamma=I,\qquad
+ K_\epsilon=\begin{pmatrix}1-\epsilon&0\\0&0\end{pmatrix},\qquad
  z=\begin{pmatrix}1\\0\end{pmatrix}.                \tag{2.2}
 \]
 

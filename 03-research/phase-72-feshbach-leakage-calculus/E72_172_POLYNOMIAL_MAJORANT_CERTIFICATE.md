@@ -1,7 +1,6 @@
 # E72.172 -- Polynomial majorant certificate
 
-**Date:** 2026-07-09.
-**Role:** certify that the fixed degree-10 polynomials from E72.171 majorize the split quadratic on
+**Purpose:** certify that the fixed degree-10 polynomials from E72.171 majorize the split quadratic on
 the full intervals, not merely on the LP grid.
 
 ## 0. Certification method

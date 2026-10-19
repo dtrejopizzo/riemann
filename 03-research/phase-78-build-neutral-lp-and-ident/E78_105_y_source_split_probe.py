@@ -84,7 +84,6 @@ def run_case(label, planted):
 def main():
     result = {
         "statement": "E78.105 y-source split audit",
-        "date": "2026-07-19",
         "cases": [
             run_case("zeta", None),
             run_case("plant", PLANTED),

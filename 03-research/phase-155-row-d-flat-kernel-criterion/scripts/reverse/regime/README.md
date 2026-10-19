@@ -42,11 +42,11 @@ same in the variable `v = u − 2T` at every window — this is the audit repair
 ## exact commands and runtimes (one core, numpy 1.26 / scipy 1.11)
 
 ```
-python3 -u resid_check.py                # 105 s
-python3 -u run_regime.py                 # 520 s   (103 windows, ~5 s each)
-python3 -u fit_regime.py                 #   2 s
-python3 -u crosscheck_regime.py          #  50 s
-python3 -u toy10.py                      #  70 s
+python3 -u resid_check.py # 105 s
+python3 -u run_regime.py # 520 s (103 windows, ~5 s each)
+python3 -u fit_regime.py # 2 s
+python3 -u crosscheck_regime.py # 50 s
+python3 -u toy10.py # 70 s
 ```
 
 `zeros1.txt` (the parent directory) is Odlyzko's first 100 000 zeros,

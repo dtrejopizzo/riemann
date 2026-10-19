@@ -1,7 +1,6 @@
 # E72.94 -- Moment shortcut audit
 
-**Date:** 2026-07-09.
-**Role:** test whether finite-band root transport is explained by cancellation of a few low moments.
+**Purpose:** test whether finite-band root transport is explained by cancellation of a few low moments.
 
 ## 0. Moment criterion versus usable proof
 

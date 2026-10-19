@@ -1,88 +1,71 @@
 # The Riemann Program
 
-An independent, computer-assisted research program on the **Riemann Hypothesis (RH)**, offered
-as a serious, fully-traceable contribution to one of mathematics' hardest open problems.
+An independent research program on the Riemann zeta function, built around Weil's explicit
+formula and the positivity of the Weil quadratic form. This repository contains the papers, the
+complete research record (computations, memos, audits, retractions) and the code that produced
+the numerical certificates.
 
-This is **not a claimed proof.** It is a long, candid investigation that reduces RH to a single
-named, classical open input, and maps every wall, dead end, and self-correction along the way —
-with reproducible code and a complete record.
+No paper in this repository claims a proof of the Riemann hypothesis.
 
-> **Governing principle:** *a false victory would be worse than a failure.* Where the program
-> reached a rigorous result, it says so. Where it hit a wall, it names the wall. Where it fooled
-> itself and corrected, it records the correction.
+## The current programme in one paragraph
 
-## Start here
+Papers 43–48 imitate the structure of Weil's proof for curves over finite fields, transplanted to
+the idele class group of $\mathbb Q$. The construction is organised in four rows. Row A builds a
+correspondence algebra with a canonical trace on a declared carrier; row B builds the arithmetic
+Frobenius family inside it; row C proves the explicit formula for that trace; row D asks for the
+sign: positivity $\lambda_A(T)\ge 0$ of the window form $A$ on the space $P_T$ of test functions
+supported in $[-T,T]$. Rows A, B and C are closed on the declared carrier. **Row D is open.** It is
+proved, with certified interval arithmetic, for all windows $T\le \tfrac12\log 15$ (the endpoint
+$\tfrac12\log15$ is due to Mori and is cited); beyond that window it is an open problem, treated
+here as a target in its own right.
 
-| Read | What it gives you |
+## Papers 43–48
+
+| Paper | Title | Content | Status |
+|---|---|---|---|
+| [43](04-papers/43-row-a-torsion-theory/) | A Correspondence Algebra with a Canonical Trace on the Idele Class Group, its Tate Symbol and its Numerical Form | Row A: the carrier, the canonical trace, twisted excision, Künneth decomposition and the torsion invariant. | Row A closed |
+| [44](04-papers/44-row-b-arithmetic-family/) | An Arithmetic Frobenius Family and its Integral Shadow on a Correspondence Algebra of the Idele Class Group | Row B: the Frobenius family as Haar measures of fixed-point strata, its integral shadow and two Gram forms. | Row B closed |
+| [45](04-papers/45-row-c-explicit-formula/) | An Explicit Formula and a Comparison Theorem for the Canonical Trace on a Correspondence Algebra of the Idele Class Group | Row C: the Weil explicit formula for the canonical trace and the comparison theorem with the zero side. | Row C closed |
+| [46](04-papers/46-intersection-frame-defect/) | An Intersection Frame for the Explicit Formula: Hodge-Index Transfer, a Frame Defect Theorem and a Function-Field Model | The Pólya class, radical and polar plane of the extended Weil form; a conditional Hodge-index transfer; the frame defect theorem and its function-field model. | Structural theorems; no sign claimed |
+| [47](04-papers/47-row-d-dual-certificates/) | Weil Positivity on a Finite Window: Duality, Certificates and a Finite Reduction | Row D: everything proved about the sign — duality, certificates up to $\tfrac12\log15$, barrier theorems, the finite reduction and the open node. | Row D OPEN |
+| [48](04-papers/48-row-d-route-map/) | A Map of the Routes to Weil Positivity: Eight Arithmetic Inputs, Eight Carriers, and the Specification of a Closing Argument | Classification of the routes attempted for row D on an 8×8 grid, with walls, falsifiers and the specification any closing argument must meet. | Survey of routes |
+
+The full catalogue of papers 01–48 is in [`04-papers/README.md`](04-papers/README.md).
+
+## How the repository is organised
+
+| Folder | Contents |
 |---|---|
-| **[Human explanation](EXPLANATION.md)** | RH and what we learned, in plain language — layer by layer, no proof assumed |
-| **[Program map](00-MAP.md)** | The whole road traveled, from the survey to the wall, in one picture |
-| **[Master plan](MASTER-PLAN.md)** | Audit of the corpus, its structure, and the open route ahead |
-| **[Complete program summary](COMPLETE-PROGRAM-SUMMARY.md)** | Every paper, phase, no-go, and wall, end to end |
-| **[No-go list](NO-GO-LIST.md)** | The permanent registry of everything that failed or hit a wall |
-| **[Papers index](04-papers/README.md)** | The 42 publishable papers, in order, with what each one establishes |
-| **[Options](OPTIONS.md)** | Where the corpus's own audit says work can still usefully continue, including targets not equivalent to RH |
+| [`00-references/`](00-references/) | External literature used by the program (Connes–Consani, Connes–Moscovici, arXiv reviews, literature surveys). |
+| [`01-context/`](01-context/) | Research programs RH1–RH9: the early computational investigations (statistics of Dirichlet polynomials, ω-classes, localized Weil forms). Raw notebooks and outputs. |
+| [`02-foundations/`](02-foundations/) | The validated computational core: engine, zero data, precision checks. |
+| [`03-research/`](03-research/) | The research record, organised in numbered phases (0–209): memos, proofs, audits and certificates. |
+| [`04-papers/`](04-papers/) | Papers 01–48. |
+| [`05-meta-and-planning/`](05-meta-and-planning/) | Plans, audits and the index of all routes attempted for row D. |
+| [`06-grafico/`](06-grafico/) | Illustrative plots and sonifications (not part of the phase sequence). |
+| [`07-calculos-adicionales/`](07-calculos-adicionales/) | Closed numerical side audits. |
+| [`08-sent/`](08-sent/) | Notes as sent to correspondents. |
 
-## How the work is organized
+## Reading guide
 
-The program has two layers:
-
-- **Research Programs 1–9** — [`01-context/`](01-context/): nine large computational research
-  programs (627 tasks). The empirical base.
-- **Program 10** — [`03-research/`](03-research/): the theoretical program built on that base,
-  run as a sequence of numbered phases, currently through **phase 119**.
-
-Supporting material: the validated computational core ([`02-foundations/`](02-foundations/)),
-the publishable papers ([`04-papers/`](04-papers/), 42 of them, catalogued in
-[`04-papers/README.md`](04-papers/README.md)), external reference material
-([`00-references/`](00-references/)), the planning and audit notes
-([`05-meta-and-planning/`](05-meta-and-planning/)), illustrative visualization and sonification
-material not part of the phase sequence ([`06-grafico/`](06-grafico/)), and closed numerical
-side-audits from phase 115 ([`07-calculos-adicionales/`](07-calculos-adicionales/)).
-
-## Where the program stands now
-
-The program currently has **two** independent, structurally different reductions of RH to a
-single classical open input — not an ending, but the state of an active investigation.
-
-**Route 1 — the Pick/Nevanlinna chain (phases 0–76, [paper 36](04-papers/36-obstruction-ledger/)).**
-A fifteen-step arithmetic Pick/Nevanlinna architecture (ARP-P) reduces RH to the classical
-**Li–Keiper criterion**, $\lambda_n \ge 0$ for all $n$. Fourteen of the fifteen steps are fully
-closed.
-
-**Route 2 — the arithmetic-Lefschetz reconstruction (phases 107–119,
-[paper 42](04-papers/42-arithmetic-lefschetz-programme/)).** A direct imitation of Weil's own 1948
-proof of RH for curves over finite fields, built over $\mathrm{Spec}\,\mathbb Z$. Its own open
-input — row (d), the Hodge-index/Castelnuovo–Severi step — is proved equivalent to RH **twice**,
-independently: algebraically (phase 113, via Riemann–Roch and effectivity) and analytically
-(phase 118, via the explicit formula, verified against real zeros of $\zeta$ to $10^{-10}$
-relative precision).
-
-Both routes are candid and neither is a proof: each open input is equivalent to RH and carries
-its full difficulty. But they are the precise places every major route explored in this corpus
-independently arrives at (see [`00-MAP.md`](00-MAP.md) and [`NO-GO-LIST.md`](NO-GO-LIST.md) for
-the structural walls that block every other approach), reached by two unrelated constructions —
-which is itself evidence the difficulty is a property of RH, not an artifact of either method.
-
-Along the way the program produced genuinely new RH-*independent* mathematics (the
-ω-class / multiplicative-chaos dictionary, the information barrier, Pontryagin rigidity, an
-unconditional finite bottom, a Stepanov almost-periodicity theorem, among others) and a
-complete, precise map of the obstructions. [`OPTIONS.md`](OPTIONS.md) records where the corpus's
-own audit says work can still usefully continue — including several targets that were never shown
-equivalent to RH and were simply never closed.
+- [`00-MAP.md`](00-MAP.md) — map of the repository and of the research.
+- [`COMPLETE-PROGRAM-SUMMARY.md`](COMPLETE-PROGRAM-SUMMARY.md) — the whole program in a few pages.
+- [`MASTER-PLAN.md`](MASTER-PLAN.md) — the current plan for row D: the open node and the live gate.
+- [`NO-GO-LIST.md`](NO-GO-LIST.md) — pointer to the index of routes attempted and to Paper 48.
+- [`EXPLANATION.md`](EXPLANATION.md) — a non-technical explanation of the problem and of what was learned.
 
 ## Status
 
-| Area | Status |
+| Item | Status |
 |---|---|
-| Arc A / ω-class (Research Programs 1–9) | Documented; descriptive, did not beat convexity |
-| Localized Weil detector | Rigorous in parts; the finite-defect route closed |
-| Program 10, phases 0–76 (ARP-P) | Dense theory, the full no-go catalogue, and the reduction to Li–Keiper |
-| Program 10, phases 107–119 (arithmetic Lefschetz) | Rows (a)–(c) built (paper 42); row (d) proved equivalent to RH twice, independently |
-| RH itself | **Open.** Two independently named walls, plus a list of genuinely open sub-RH targets in [`OPTIONS.md`](OPTIONS.md). |
+| Row A (Paper 43) | Closed on the declared carrier |
+| Row B (Paper 44) | Closed on the declared carrier |
+| Row C (Paper 45) | Closed on the declared carrier |
+| Row D (Paper 47) | **OPEN**; proved for $T\le\tfrac12\log15$ (certified; endpoint cited from Mori) |
+| Routes attempted for row D | About 1,400, indexed in [`05-meta-and-planning/ROUTES-TRIED-INDEX/`](05-meta-and-planning/ROUTES-TRIED-INDEX/) and classified in Paper 48 |
 
-## Philosophy
+Labels used throughout: PROVED, CITED, CONDITIONAL, ARGUED, OPEN, NO-GO, NUMERICAL.
 
-Read everything here as an autonomous mathematical program: not a promise of victory, but a
-serious collaboration with the community to push a very hard problem forward — with
-traceability, candor, and a memory of the useful failures.
+## Author
+
+David Alejandro Trejo Pizzo, independent researcher.

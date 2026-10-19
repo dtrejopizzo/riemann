@@ -1,6 +1,6 @@
 # E77.7ah - Boundary-zero exclusion versus Weyl normalization
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

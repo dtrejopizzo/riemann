@@ -124,7 +124,7 @@ Section-11 denominator system on `Y^reg`.  Therefore the local multiplier
 `1/p` is defined in the fraction sheaf and gives a completed inverse lattice
 
 \[
- \mathcal L_{p,i}^{\rm reg}=p_i^*\mathcal L_p,qquad i=1,2.     \tag{4.1}
+ \mathcal L_{p,i}^{\rm reg}=p_i^*\mathcal L_p,\qquad i=1,2.     \tag{4.1}
 \]
 
 For

@@ -56,7 +56,7 @@ computation:
   **Tested directly in §2 below and found not to hold.**
 
 So the phase lands on (N2), a distinct and — per 110\_00 §2 — *stronger*
-outcome than either of the two the prompt anticipates as endpoints. It is
+outcome than either of the two the phase statement anticipates as endpoints. It is
 recorded candidly, without being reclassified as either of the other two.
 
 ## 2. The counterfactual test: does the obstruction know about zeros?

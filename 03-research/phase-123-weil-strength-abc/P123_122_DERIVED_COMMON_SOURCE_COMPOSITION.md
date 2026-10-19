@@ -1,6 +1,6 @@
 # P123.122 — Relative derived composition and cyclic shadow on the common source
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY in the continuously
+Status: PROVED-IN-REPOSITORY in the continuously
 linearly split exact structure below. This constructs a derived category
 and composition on the common coefficient source of P123.121. It is not
 a claim of all geometric localization/descent or a determinant RR theorem.

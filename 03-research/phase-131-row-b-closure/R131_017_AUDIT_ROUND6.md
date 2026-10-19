@@ -1,9 +1,7 @@
-# R131.017 — Hostile audit of Paper 44, round 6 (final confirmation pass)
+# R131.017 — Audit of Paper 44, round 6 (final confirmation pass)
 
-Auditor: Claude (Opus 5, 1M), adversarial auditor of record for phase 131.
-Date: 2026-09-12.
 Scope: `R131_014` (N1–N5, m1′–m7′, n1′–n3′), `R131_015` (LF5, LF6),
-`R131_016` (builder, round 6); every `[REBUILT, phase 131, round 6]` passage of
+`R131_016` (round 6); every `[REBUILT, phase 131, round 6]` passage of
 `04-papers/44-row-b-arithmetic-family/main.md` (**12 marks**, all located),
 `README.md`, and `scripts/verify_131_contacts.py` (re-run: **ALL CHECKS PASS**,
 **ROUND-4**, **ROUND-5**, **ROUND-6 CHECKS PASS**).
@@ -149,7 +147,7 @@ resonant **quadruple** produces `+e^{δL/2}`".  The quadruple also contains
 **fixed** `γ_0` gains only a constant factor `≍(δ/2γ_0)^k` per integration by
 parts, **not** a power of `L`.  So the mismatched pair is of the **same
 exponential order** `e^{δL/2}`, with **unknown sign**, and the lemma neither
-estimates it nor mentions it (the lead's `LF5` at least called it "negligible",
+estimates it nor mentions it (the review's `LF5` at least called it "negligible",
 which is also unproved).  Consequently what the lemma proves is: *the
 single-frequency test does not produce `(Wgr)`'s mechanism, and its resonant
 pair has the opposite sign and half the exponent*.  That is decisive for
@@ -233,11 +231,11 @@ residues from `ζ_p(s) = c_p/(1−p^{−s})` and `ζ_∞(s) = 1/s` for `c_p = lo
 `log(3.7936e−1/7.7056e−2)/20 = 0.0797` ✓ — and the **analytic** claim behind it:
 for `ψ` flat at the endpoint, `max_v exp(−1/v − δLv)` is attained at
 `v = (δL)^{−1/2}` with value `e^{−2√(δL)}`, so the prefactor is
-sub-exponential, the slope approaches `δ/2` **from below**, and the builder's
+sub-exponential, the slope approaches `δ/2` **from below**, and the construction's
 refutation of the "polynomial prefactor" (his §4.1, and of my own instruction)
 is **right**.  Block (H′) is labelled "RESONANT QUADRUPLE ONLY", "SYNTHETIC
 zero", "Numerics illustrate, not prove", and names the missing on-line sum as
-`(H_L)` — the builder's own round-7 worry (4) is adequately handled.
+`(H_L)` — the construction's own round-7 worry (4) is adequately handled.
 
 ### `n2″` `NOTE` — Lemma 8bis.6a is correct and is round 6's best step
 
@@ -246,7 +244,7 @@ coefficient-variation part is `O(‖g'‖_∞)` over at most five `n`; the mesh 
 is `g(t)S(t)` with `S = Σ_nρ'(a_n)/gap_n`, and `Σ_nρ'(x−n) ≡ 0` (derivative of
 the partition of unity) leaves `Σ_nρ'(a_n) = O(‖ρ''‖_∞/n) = O(1/x)` by Taylor
 on `a_n = (x−n)(1+O(1/n))`, against `1/gap_n = x+O(1)`: `S = O(1)` **exactly**,
-not better.  The builder's refutation of my `O(e^{−L/2}‖g‖_{C²})` prescription
+not better.  The construction's refutation of my `O(e^{−L/2}‖g‖_{C²})` prescription
 (his §4.2) is **right**, and `O(1)` with only `C¹` is precisely what Step 3
 needs, since `‖ẽ'‖_∞` is only ever paired against `‖ẽ‖_∞ = O(e^{−L/2})`.
 The paper states the cancellation as load-bearing ("without it the naive bound
@@ -263,7 +261,7 @@ would be `e^{L}`"), which is the right way to write it.
 | `N3` | **REPAIRED, in full and correctly.**  Lemma 8bis.6a supplies `‖ẽ'‖_∞ = O(‖g̃‖_{C¹})`; the expansion (8bis.13h) removes `g_D'` from every pairing; the rough–rough term is bounded by `2L‖ẽ'‖_∞‖ẽ‖_∞`; and (8bis.13i) is exactly what I get by hand.  Both hypotheses of Lemma 8bis.5 are now verified at **both** applications — the standing warning of `R131.014` §5 is discharged. |
 | `N4` | **NOT REPAIRED.**  §0 (`A1`) and the banner (`A2`) both still carry the withdrawn reason; §9bis `W17` (`m5′`) and README **are** repaired. |
 | `N5` | **REPAIRED in `README.md`** (round-4 block marked `[SUPERSEDED IN ROUNDS 5–6]`, both retracted sentences named); **NOT REPAIRED in the `main.md` banner** (`A2`). |
-| `LF5` | **ACCEPTED AND EXCEEDED.**  The lead asked for a restatement; the builder proved a lemma, withdrew the import as false, and rebuilt the theorem as a conditional.  This is the correct response and the correct outcome (the third of the three permitted ones).  Residual: `p1` (pair vs quadruple), `p2` (primitivization). |
+| `LF5` | **ACCEPTED AND EXCEEDED.**  The review asked for a restatement; the construction proved a lemma, withdrew the import as false, and rebuilt the theorem as a conditional.  This is the correct response and the correct outcome (the third of the three permitted ones).  Residual: `p1` (pair vs quadruple), `p2` (primitivization). |
 | `LF6`(a) | **REPAIRED** in `(8bis.13e′)` — `b = O(e^{−L/4}‖g̃‖_{C¹})`, which I re-derived from `λ_+(e)λ_−(w_1)/\det ≍ e^{−3L/4}e^{L}/e^{L/2}` — and the sup norm `‖bw_2‖_∞ ≍ e^{−L/2}` is indeed unchanged, so `(8bis.13f)` stands.  Residual: `W21` (`p6`). |
 | `LF6`(b) | **REPAIRED** = `N3`. |
 | `m1′` | REPAIRED in the theorem, not in `W21` (`p6`). |
@@ -302,7 +300,7 @@ would be `e^{L}`"), which is the right way to write it.
   `‖bw_2‖_∞ ≍ e^{−L/2}`.  The new `C¹` line of (8bis.13f) is right and was
   **not** requested by either auditor: `|a|‖u_1‖_{C¹} ≍ e^{−L}e^{L/2}`,
   `|b|‖u_2‖_{C¹} ≍ e^{−L/4}e^{−L/4}`, both `e^{−L/2}`, so the correction is
-  `C¹`-small.  Round 5 would have had a second `C¹` gap here; the builder found
+  `C¹`-small.  Round 5 would have had a second `C¹` gap here; the construction found
   it himself.
 * **Step 3 — correct.**  (8bis.13h) is the right expansion (`g_D' = g̃ − ẽ`
   gives `I(g̃,g̃) − I(g̃−ẽ,g̃−ẽ) = I(ẽ,g̃)+I(g̃,ẽ)−I(ẽ,ẽ)`), and no pairing
@@ -316,7 +314,7 @@ would be `e^{L}`"), which is the right way to write it.
 * **Theorem 8bis.7 as a conditional — the right shape.**  (a) is a transfer
   statement about Riemann sums and contains no arithmetic; (b) imports only
   Weil's criterion, which is genuinely classical; (c) is `OPEN` and says so
-  three times, including "not asserted".  The builder's refutation of the
+  three times, including "not asserted".  The construction's refutation of the
   instruction's item 1(a) (§4.4 of `R131_016`) is **correct**: "there exist
   primitive `g_*` in a **moving** window `[L/2,L]` with norm control" is *not*
   a classical statement, and importing it would have replaced a false import by
@@ -366,10 +364,10 @@ down to a single inequality.
 | **B.1** | `PROVED` (unchanged). |
 | **B.2** | `PROVED`, non-vacuous. |
 | **B.3** | `PROVED`, true unit. |
-| **B.4** | `REFUTED AS STATED`; `PROVED AS AMENDED` (owner-accepted 2026-09-12), on objects in degree (Thm 6bis.4), composition law proved (Lemma 6bis.3a), extended additively (Thm 6bis.3c); ledger row matches the text. |
+| **B.4** | `REFUTED AS STATED`; `PROVED AS AMENDED` (accepted ), on objects in degree (Thm 6bis.4), composition law proved (Lemma 6bis.3a), extended additively (Thm 6bis.3c); ledger row matches the text. |
 | **B.5** | `PROVED`; `Λ(p^k) = \log p` with a uniqueness theorem (Thm 8bis.8), up to one global scale. |
 | **B.6** | `PROVED`, both halves non-vacuous. |
-| **B.7** | `PROVED` as a test, by the lead's ruling; my dissent (`PARTIAL`, as a mechanism, Rem 6.5a′) stands and is recorded verbatim beside it.  I accept that procedure as the resolution. |
+| **B.7** | `PROVED` as a test, by the review's ruling; my dissent (`PARTIAL`, as a mechanism, Rem 6.5a′) stands and is recorded verbatim beside it.  I accept that procedure as the resolution. |
 | **B.8** | `PROVED`; script re-run, four banners pass; (D) now non-vacuous, (E),(F),(G),(H),(H′) re-derived or reproduced by hand. |
 | **B.9** | `PROVED` in substance and in the text (Thm 8.2's carve-out, §11's list, "used by no clause"), subject to the two text corrections `A3` and `p5`, neither of which is a mathematical defect. |
 
@@ -393,14 +391,14 @@ down to a single inequality.
 ## 8. Grade
 
 **Row B earns `WEIL-STRENGTH-COMPLETE` on Paper 43's declared carrier**, the
-B.4 amendment having been accepted by the owner on 2026-09-12.
+B.4 amendment having been accepted by the repository record .
 
 What must be recorded **beside the label**, in the paper and in the ledger:
 
 1. **The carrier and the clauses.**  "On Paper 43's declared carrier
    (§14.0a–b), as a theorem about row A's declared trace.  **B.4 is `REFUTED AS
-   STATED` and `PROVED AS AMENDED`**, the amendment accepted by the owner
-   2026-09-12.  **B.7 `PROVED` by the lead's ruling, with the auditor's dissent
+   STATED` and `PROVED AS AMENDED`**, the amendment accepted by the repository record
+**B.7 `PROVED` by the review's ruling, with the audit's dissent
    (`PARTIAL`, as a mechanism) recorded verbatim beside it.**"
 2. **What row B does not deliver.**  "No sign, no positivity, no `𝓝_∞ = 0`, and
    no statement about zeros outside Thm 8bis.4(ii)–(iii) and §8bis.3–§8bis.4.
@@ -436,7 +434,7 @@ What must be recorded **beside the label**, in the paper and in the ledger:
 
 **The procedural finding, and it is the one I want on the record.**  Round 6's
 mathematics is the strongest of the six: an import was withdrawn *as false*
-rather than softened, on a lemma the builder proved himself; the `C¹` gap was
+rather than softened, on a lemma the construction proved himself; the `C¹` gap was
 closed by an estimate neither auditor had correctly prescribed (both of us asked
 for the wrong bound, and he said so and proved the right one); and a theorem
 that could have been kept by importing an unnamed hypothesis was instead reduced

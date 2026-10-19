@@ -1,7 +1,6 @@
 # E72.61 -- Endpoint reflection identity for LFDC
 
-**Date:** 2026-07-08.
-**Role:** turn the corrected post-main LFDC scalar into an exact reflected Loewner-Stieltjes pairing.
+**Purpose:** turn the corrected post-main LFDC scalar into an exact reflected Loewner-Stieltjes pairing.
 
 ## 0. Setup
 

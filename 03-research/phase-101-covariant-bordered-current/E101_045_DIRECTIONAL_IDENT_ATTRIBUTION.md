@@ -248,7 +248,7 @@ falsifier can be rejected only when the model residual is paired as in
 This proves the attribution statement:
 
 ```text
-the force-RH step of the LP+IDENT chain is IDENT,
+the RH-strength step of the LP+IDENT chain is IDENT,
 represented exactly by DIRECTIONAL-IDENT(K).        (6.2)
 ```
 
@@ -303,7 +303,7 @@ proved:
   equivalence of SAFE-PROLATE-BRIDGE and paired residual convergence;
   optimal directional inf-sup constant;
   exact insertion of the coupled radical decomposition;
-  attribution of the force-RH step to IDENT under Outcome A;
+  attribution of the RH-strength step to IDENT under Outcome A;
 
 closed as insufficient:
   qualitative LP uniqueness without a paired-residual estimate;

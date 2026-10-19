@@ -1,6 +1,6 @@
 # E77.2 - Commutator route autopsy
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Statement
 

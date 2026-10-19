@@ -1,62 +1,62 @@
-# 104_16 — Cociclo de Jordan: jerarquía positiva y pérdida exacta del signo
+# 104_16 — Jordan cocycle: positive hierarchy and the exact loss of sign
 
-**Estado.** El cociclo
+**Status.** The cocycle
 
 \[
  A_u(s):={\zeta(s-u)\over\zeta(s)}
  =\sum_{m\ge1}{J_u(m)\over m^s}
 \]
 
-extiende la identidad de conexión de E70.11 y la identidad de Riccati de
-E70.12 a una jerarquía completa de funciones aritméticas no negativas
-\(\mu*\log^k\). Éste es un hecho exacto y útil. Sin embargo, al mantener
-acoplado el polo, la jerarquía positiva se convierte en una **diferencia** de
-dos jerarquías positivas. Su primer jet es exactamente el funcional regulado
-\(C_{n,\varepsilon}\) de `104_12`, y sus coeficientes de Cayley ya tienen ambos
-signos en \(n=1,6\), con certificado racional.
+extends the connection identity of E70.11 and the Riccati identity of
+E70.12 to a complete hierarchy of non-negative arithmetic functions
+\(\mu*\log^k\). This is an exact and useful fact. However, keeping the pole
+coupled turns the positive hierarchy into a **difference** of
+two positive hierarchies. Its first jet is exactly the regulated functional
+\(C_{n,\varepsilon}\) from `104_12`, and its Cayley coefficients already have both
+signs at \(n=1,6\), with a rational certificate.
 
-Por tanto muere la implicación propuesta
+Hence the proposed implication
 
 \[
- \text{positividad Jordan en el semiplano real}
+ \text{Jordan positivity on the real half-line}
  \quad\Longrightarrow\quad
- \text{signo/convexidad de los coeficientes Cayley--Laguerre}.
+ \text{sign/convexity of the Cayley–Laguerre coefficients}
 \]
 
-Además, la región donde la serie de Dirichlet conserva esa positividad se
-contrae antes del límite crítico \(\varepsilon\downarrow0\). Prolongar el
-cociclo como una función holomorfa o contractiva en todo el disco de Cayley
-reintroduce exactamente la localización de los ceros. No se prueba A1 ni RH.
+fails. Moreover, the region where the Dirichlet series retains that positivity
+shrinks before the critical limit \(\varepsilon\downarrow0\). Extending the
+cocycle as a holomorphic or contractive function over the whole Cayley disc
+reintroduces exactly the zero localization. Neither A1 nor RH is proved.
 
-## 1. Auditoría interna de no duplicación
+## 1. Internal non-duplication audit
 
-Una búsqueda literal en las fases 1--104 de
+A literal search over phases 1–104 for
 
 ```text
 zeta(s-u)/zeta(s),  ζ(s-u)/ζ(s),  J_u,  Jordan totient
 ```
 
-no da ocurrencias. Sí existen los dos primeros jets y su representación:
+returns no occurrences. The first two jets and their representation do exist:
 
-* E70.11 prueba \(\mu*\log=\Lambda\) y
+* E70.11 proves \(\mu*\log=\Lambda\) and
   \(Z^{-1}\delta Z=V_\Lambda\);
-* E70.12 prueba
+* E70.12 proves
   \(\mu*\log^2=\Lambda\log+\Lambda*\Lambda\);
-* E83.004 realiza el primer jet por shifts truncados;
-* `104_12` obtiene su pullback Laguerre y la convolución en el grado.
+* E83.004 realizes the first jet via truncated shifts;
+* `104_12` obtains its Laguerre pullback and the degree convolution.
 
-Así, el cociclo completo no estaba escrito en el repositorio, pero sus jets
-\(k=1,2\) y el obstáculo Euler--Gamma ya estaban identificados. La función
-\(J_k(n)=n^k\prod_{p\mid n}(1-p^{-k})\) es el totiente clásico de Jordan; por
-ejemplo, Moree--Saad Eddin--Sedunova--Suzuki, *Jordan totient quotients*,
-[arXiv:1810.04742](https://arxiv.org/abs/1810.04742), usa esa definición. No
-se reclama novedad bibliográfica para (1)--(4). La afirmación de no
-duplicación es solamente interna y se refiere a la combinación cociclo
-continuo--emparejamiento polar--pullback Laguerre.
+So the complete cocycle was not written in the repository, but its jets
+\(k=1,2\) and the Euler–Gamma obstacle had already been identified. The
+function \(J_k(n)=n^k\prod_{p\mid n}(1-p^{-k})\) is the classical Jordan totient;
+for example, Moree–Saad Eddin–Sedunova–Suzuki, *Jordan totient quotients*,
+[arXiv:1810.04742](https://arxiv.org/abs/1810.04742), uses that definition. No
+bibliographic novelty is claimed for (1)–(4). The non-duplication claim is
+purely internal and refers to the combination continuous cocycle–polar
+pairing–Laguerre pullback.
 
-## 2. Teorema de la jerarquía positiva
+## 2. Positive hierarchy theorem
 
-Para \(u\ge0\) y \(\Re s>1+u\), la inversión de Möbius da
+For \(u\ge0\) and \(\Re s>1+u\), Möbius inversion gives
 
 \[
  \boxed{
@@ -66,7 +66,7 @@ Para \(u\ge0\) y \(\Re s>1+u\), la inversión de Möbius da
  \tag{1}
 \]
 
-Si \(m=\prod_{p^a\parallel m}p^a\), entonces
+If \(m=\prod_{p^a\parallel m}p^a\), then
 
 \[
  J_u(m)=m^u\prod_{p\mid m}(1-p^{-u})
@@ -75,15 +75,15 @@ Si \(m=\prod_{p^a\parallel m}p^a\), entonces
  \tag{2}
 \]
 
-Más aún, cada factor de (2) tiene serie de Taylor con coeficientes no
-negativos, pues su coeficiente de orden \(r\) es
+Moreover, each factor of (2) has a Taylor series with non-negative
+coefficients, since its order-\(r\) coefficient is
 
 \[
  { (a\log p)^r-((a-1)\log p)^r\over r!}\ge0.
  \tag{3}
 \]
 
-Por multiplicación de series se obtiene, para todo \(k\ge0\),
+Multiplying the series gives, for every \(k\ge0\),
 
 \[
  \boxed{
@@ -93,8 +93,8 @@ Por multiplicación de series se obtiene, para todo \(k\ge0\),
  \tag{4}
 \]
 
-Para \(m>1\), el valor es cero si \(k<\omega(m)\) y estrictamente positivo si
-\(k\ge\omega(m)\). En la región de convergencia absoluta,
+For \(m>1\), the value is zero if \(k<\omega(m)\) and strictly positive if
+\(k\ge\omega(m)\). In the region of absolute convergence,
 
 \[
  D_k(s):=\left.\partial_u^kA_u(s)\right|_{u=0}
@@ -103,26 +103,26 @@ Para \(m>1\), el valor es cero si \(k<\omega(m)\) y estrictamente positivo si
  \tag{5}
 \]
 
-El cociclo satisface también la ley exacta
+The cocycle also satisfies the exact law
 
 \[
  A_{u+v}(s)=A_u(s)A_v(s-u).
  \tag{6}
 \]
 
-Las ecuaciones (4)--(5) contienen E70.11 en \(k=1\) y E70.12 en \(k=2\),
-pero ahora para todos los órdenes.
+Equations (4)–(5) contain E70.11 at \(k=1\) and E70.12 at \(k=2\),
+but now for all orders.
 
-## 3. El polo emparejado convierte positividad en una diferencia
+## 3. Pairing with the pole turns positivity into a difference
 
-El modelo polar con la misma traslación es
+The polar model with the same shift is
 
 \[
  A_u^0(s):={s-1\over s-u-1}.
  \tag{7}
 \]
 
-Poniendo \(F(s)=(s-1)\zeta(s)\), el cociente emparejado es
+Setting \(F(s)=(s-1)\zeta(s)\), the paired quotient is
 
 \[
  \boxed{
@@ -131,14 +131,14 @@ Poniendo \(F(s)=(s-1)\zeta(s)\), el cociente emparejado es
  \tag{8}
 \]
 
-Ésta es la normalización que no separa dos cantidades divergentes en
-\(s=1\). Como
+This is the normalization that does not separate two divergent quantities
+at \(s=1\). Since
 
 \[
  H_u(s)=\left(1-{u\over s-1}\right)A_u(s),
 \]
 
-sus jets son
+its jets are
 
 \[
  \boxed{
@@ -148,54 +148,54 @@ sus jets son
  \tag{9}
 \]
 
-Por tanto (4) no da un signo para el objeto emparejado: (9) resta dos series
-positivas del mismo orden crítico.
+Hence (4) gives no sign for the paired object: (9) subtracts two positive
+series of the same critical order.
 
-La pérdida se ve incluso en el punto regular \(s=1\). Con la convención
+The loss is visible even at the regular point \(s=1\). With the convention
 
 \[
  \zeta(1+t)={1\over t}+\sum_{r\ge0}{(-1)^r\gamma_r\over r!}t^r,
 \]
 
-se tiene
+one has
 
 \[
  \boxed{Q_k(1)=-k\gamma_{k-1}.}
  \tag{10}
 \]
 
-Los primeros cuatro signos certificados son
+The first four certified signs are
 
 \[
  Q_1(1)<0,\qquad Q_2(1)>0,\qquad Q_3(1)>0,\qquad Q_4(1)<0.
  \tag{11}
 \]
 
-En particular, el cociente polo--Euler no es completamente monótono ni
-absolutamente monótono en la variable de traslación en el borde crítico. La
-positividad de todos los \(j_k(m)\) fue consumida por la colisión con el polo.
+In particular, the pole–Euler quotient is neither completely monotone nor
+absolutely monotone in the shift variable at the critical boundary. The
+positivity of all the \(j_k(m)\) was consumed by the collision with the pole.
 
-## 4. Pullback Cayley--Laguerre exacto
+## 4. Exact Cayley–Laguerre pullback
 
-Fijemos \(\varepsilon>0\) y
+Fix \(\varepsilon>0\) and
 
 \[
  s_\varepsilon(z)=1+\varepsilon+{z\over1-z}.
  \tag{12}
 \]
 
-Para \(0\le u<\varepsilon\) y \(z\) suficientemente pequeño, la fórmula
-generatriz de Laguerre da
+For \(0\le u<\varepsilon\) and \(z\) sufficiently small, the Laguerre
+generating formula gives
 
 \[
  {A_u(s_\varepsilon(z))\over1-z}
- =\sum_{n\ge0}\left{
+ =\sum_{n\ge0}\left\{
    \sum_{m\ge1}{J_u(m)\over m^{1+\varepsilon}}
-          L_n(\log m)\right}z^n.
+          L_n(\log m)\right\}z^n.
  \tag{13}
 \]
 
-Para el polo,
+For the pole,
 
 \[
  {A_u^0(s_\varepsilon(z))\over1-z}
@@ -203,22 +203,22 @@ Para el polo,
  \tag{14}
 \]
 
-y por
+and by
 
 \[
  \int_0^\infty e^{-q x}L_n(x)\,dx
  ={(q-1)^n\over q^{n+1}},
 \]
 
-su coeficiente de grado \(n\) es
+its degree-\(n\) coefficient is
 
 \[
  1+u{(\varepsilon-u-1)^n\over(\varepsilon-u)^{n+1}}.
  \tag{15}
 \]
 
-Derivando (13)--(15) en \(u=0\), y usando que
-\(A_0=A_0^0=H_0=1\), se obtiene
+Differentiating (13)–(15) at \(u=0\), and using that
+\(A_0=A_0^0=H_0=1\), one obtains
 
 \[
  \boxed{
@@ -227,7 +227,7 @@ Derivando (13)--(15) en \(u=0\), y usando que
  \tag{16}
 \]
 
-donde
+where
 
 \[
  \boxed{
@@ -237,12 +237,12 @@ donde
  \tag{17}
 \]
 
-Éste es exactamente el costo regulado de `104_12`, ecuación (8). El cociclo
-completo no reemplaza el gate: su primer jet **es** el gate.
+This is exactly the regulated cost of `104_12`, equation (8). The complete
+cocycle does not replace the gate: its first jet **is** the gate.
 
-## 5. Stop-gate racional en grados 1 y 6
+## 5. Rational stop-gate at degrees 1 and 6
 
-El límite emparejado de (17) existe y `103_59` prueba
+The paired limit of (17) exists, and `103_59` proves
 
 \[
  C_n:=\lim_{\varepsilon\downarrow0}C_{n,\varepsilon}
@@ -250,8 +250,8 @@ El límite emparejado de (17) existe y `103_59` prueba
  \tag{18}
 \]
 
-El verificador `tools/jordan_cocycle_sign_gate.py`, reutilizando los intervalos
-racionales de Phase 102, certifica
+The verifier `tools/jordan_cocycle_sign_gate.py`, reusing the rational
+intervals from Phase 102, certifies
 
 \[
 \begin{aligned}
@@ -263,58 +263,58 @@ racionales de Phase 102, certifica
 \tag{19}
 \]
 
-Luego el primer jet de Cayley tiene ambos signos. Esto refuta exactamente
-cualquiera de las inferencias
+Hence the first Cayley jet has both signs. This exactly refutes either
+of the inferences
 
 \[
- H_u(s)\le1\text{ en un rayo real}
+ H_u(s)\le1\text{ on a real ray}
  \Longrightarrow [z^n](1-z)^{-1}\partial_uH_u|_0\le0,
 \]
 
-o la misma flecha con el signo opuesto. El orden puntual en \(s\) y el orden
-coeficiente a coeficiente después de Cayley son órdenes distintos. La
-oscilación no aparece recién en una cota asintótica: ya está certificada en
-los grados \(1\) y \(6\).
+or the same arrow with the opposite sign. The pointwise order in \(s\) and
+the coefficient-by-coefficient order after Cayley are different orders. The
+oscillation does not first appear in an asymptotic bound: it is already
+certified at degrees \(1\) and \(6\).
 
-La desigualdad que M6 necesitaría sigue siendo
+The inequality that M6 would need remains
 
 \[
  C_n\le{1\over2}\Delta A_n,
  \tag{20}
 \]
 
-equivalente al gate fuerte \(\Delta D_n\ge0\) de `103_59`. Ni (4), ni una
-desigualdad real para (8), ni una convexidad en \(u\) implican (20) después de
-la extracción firmada (16).
+equivalent to the strong gate \(\Delta D_n\ge0\) of `103_59`. Neither (4),
+nor a real inequality for (8), nor convexity in \(u\) implies (20) after the
+signed extraction (16).
 
-## 6. Falsificador estructural con jerarquía Jordan completa
+## 6. Structural falsifier with the full Jordan hierarchy
 
-La pérdida de signo no es una peculiaridad numérica de los primeros grados.
-Para \(a>0\), considérese
+The loss of sign is not a numerical peculiarity of the first few degrees.
+For \(a>0\), consider
 
 \[
  X_a(s)=\xi(s+a)\xi(s-a).
  \tag{21}
 \]
 
-Es una función entera real y satisface
+It is a real entire function and satisfies
 
 \[
  X_a(1-s)=X_a(s).
  \tag{22}
 \]
 
-Todo cero conocido \(\frac12+i\gamma\) de \(\xi\) produce ceros de \(X_a\) en
-\(\frac12-a+i\gamma\) y \(\frac12+a+i\gamma\). Por tanto \(X_a\) tiene ceros
-fuera de su línea de simetría para todo \(a>0\).
+Every known zero \(\frac12+i\gamma\) of \(\xi\) produces zeros of \(X_a\) at
+\(\frac12-a+i\gamma\) and \(\frac12+a+i\gamma\). Hence \(X_a\) has zeros off
+its line of symmetry for every \(a>0\).
 
-Sin embargo, su parte Euler
+However, its Euler part
 
 \[
  Z_a(s)=\zeta(s+a)\zeta(s-a)
 \]
 
-posee pesos logarítmicos estrictamente positivos:
+has strictly positive logarithmic weights:
 
 \[
  -{Z_a'\over Z_a}(s)
@@ -322,21 +322,21 @@ posee pesos logarítmicos estrictamente positivos:
  \tag{23}
 \]
 
-y su cociclo es el producto de dos cociclos Jordan,
+and its cocycle is the product of two Jordan cocycles,
 
 \[
  {Z_a(s-u)\over Z_a(s)}=A_u(s+a)A_u(s-a).
  \tag{24}
 \]
 
-En \(\Re s>1+a+u\), el coeficiente de \(r^{-s}\) en (24) es
+In \(\Re s>1+a+u\), the coefficient of \(r^{-s}\) in (24) is
 
 \[
  \sum_{mn=r}J_u(m)J_u(n)m^{-a}n^a\ge0.
  \tag{25}
 \]
 
-La normalización polar correcta tampoco rompe el ejemplo. Es
+The correct polar normalization does not break the example either. It is
 
 \[
  A^0_{u,a}(s)=
@@ -344,13 +344,13 @@ La normalización polar correcta tampoco rompe el ejemplo. Es
  \tag{26}
 \]
 
-Con
+With
 
 \[
  F_a(s)=(s+a-1)(s-a-1)Z_a(s),
 \]
 
-el cociente emparejado vuelve a ser
+the paired quotient is again
 
 \[
  {Z_a(s-u)/Z_a(s)\over A^0_{u,a}(s)}
@@ -358,17 +358,17 @@ el cociente emparejado vuelve a ser
  \tag{27}
 \]
 
-Así, **jerarquía Jordan completa, coeficientes Euler positivos, pesos
-von-Mangoldt positivos, conjugación y ecuación funcional** coexisten con ceros
-off-line. Cualquier argumento que solo use esas propiedades también se
-aplicaría a \(X_a\) y es falso. Un mecanismo válido para zeta debe emplear una
-propiedad cuantitativa adicional de los pesos reales \(\Lambda(p^k)=\log p\),
-no solamente su pertenencia al cono Jordan.
+Thus, **a complete Jordan hierarchy, positive Euler coefficients, positive
+von Mangoldt weights, conjugation, and the functional equation** coexist
+with off-line zeros. Any argument that uses only those properties would also
+apply to \(X_a\) and is false. A mechanism valid for zeta must use an
+additional quantitative property of the real weights
+\(\Lambda(p^k)=\log p\), not merely their membership in the Jordan cone.
 
-## 7. Completar con Gamma produce un criterio equivalente a RH
+## 7. Completing with Gamma produces a criterion equivalent to RH
 
-Podría intentarse reparar la falta de una comparación Euler--Gamma pasando al
-cociclo completado
+One could try to repair the missing Euler–Gamma comparison by passing to the
+completed cocycle
 
 \[
  \Theta_u(s):={\xi(s-u)\over\xi(s)}=K_u(s)H_u(s),
@@ -378,52 +378,53 @@ cociclo completado
  \tag{28}
 \]
 
-El factor completado sí aporta una geometría exacta. Sobre
+The completed factor does supply an exact geometry. On
 
 \[
  \Re s={1+u\over2}
  \tag{29}
 \]
 
-se tiene \(s-u=1-\bar s\), y por ecuación funcional y reflexión de Schwarz,
+one has \(s-u=1-\bar s\), and by the functional equation and the Schwarz
+reflection,
 
 \[
  \xi(s-u)=\xi(1-\bar s)=\xi(\bar s)=\overline{\xi(s)}.
  \tag{30}
 \]
 
-Luego \(|\Theta_u(s)|=1\) en los puntos donde el cociente está definido (con
-extensión removible en los ceros comunes). Pero la contractividad interior no
-es una desigualdad nueva:
+So \(|\Theta_u(s)|=1\) at the points where the quotient is defined (with a
+removable extension at common zeros). But interior contractivity is not a
+new inequality:
 
-**Teorema (gate Schur completado).** Para \(u>0\), sea
+**Theorem (completed Schur gate).** For \(u>0\), let
 
 \[
  {\cal H}_u=\{s:\Re s>(1+u)/2\}.
  \tag{31}
 \]
 
-RH implica que \(\Theta_u\) es holomorfa y
-\(|\Theta_u(s)|\le1\) en \({\cal H}_u\), para todo \(u>0\). Recíprocamente,
-basta que exista una sucesión \(u_j\downarrow0\) para la cual cada
-\(\Theta_{u_j}\) sea holomorfa en \({\cal H}_{u_j}\). Entonces RH. Por tanto
-la propiedad Schur para la familia completada es equivalente a RH.
+RH implies that \(\Theta_u\) is holomorphic and
+\(|\Theta_u(s)|\le1\) on \({\cal H}_u\), for every \(u>0\). Conversely, it
+suffices that there exist a sequence \(u_j\downarrow0\) for which each
+\(\Theta_{u_j}\) is holomorphic on \({\cal H}_{u_j}\). Then RH holds. Hence
+the Schur property for the completed family is equivalent to RH.
 
-**Prueba de la dirección RH.** Escribamos
+**Proof of the RH direction.** Write
 
 \[
- \Xi(w)=\xi(1/2+w),\qquad c=u/2,qquad
+ \Xi(w)=\xi(1/2+w),\qquad c=u/2,\qquad
  w=s-(1+u)/2.
 \]
 
-Bajo RH, el producto par convergente es
+Under RH, the convergent even product is
 
 \[
  \Xi(w)=\Xi(0)\prod_{\gamma>0}\left(1+{w^2\over\gamma^2}\right),
  \tag{32}
 \]
 
-con multiplicidades. Además,
+with multiplicities. Moreover,
 
 \[
  \Theta_u(s)={\Xi(w-c)\over\Xi(w+c)}
@@ -433,7 +434,7 @@ con multiplicidades. Además,
  \tag{33}
 \]
 
-Si \(\Re w>0\), cada factor tiene módulo menor o igual que uno porque
+If \(\Re w>0\), each factor has modulus at most one because
 
 \[
  |w+c\mp i\gamma|^2-|w-c\mp i\gamma|^2
@@ -441,33 +442,33 @@ Si \(\Re w>0\), cada factor tiene módulo menor o igual que uno porque
  \tag{34}
 \]
 
-El producto da la contractividad.
+The product gives the contractivity.
 
-**Prueba del converso.** Si \(\rho\) fuera un cero con
-\(\Re\rho>1/2\), para todo \(j\) suficientemente grande se tendría
+**Proof of the converse.** If \(\rho\) were a zero with
+\(\Re\rho>1/2\), for every sufficiently large \(j\) one would have
 
 \[
  0<u_j<2\Re\rho-1.
  \tag{35}
 \]
 
-Si el polo en \(\rho\in{\cal H}_{u_j}\) se cancelara para todos esos índices,
-entonces \(\xi(\rho-u_j)=0\) daría una sucesión de ceros distintos acumulada
-en \(\rho\), imposible para una función entera no nula. Para algún \(j\),
-\(\Theta_{u_j}\) tiene un polo en \({\cal H}_{u_j}\), contradicción. No hay
-ceros a la derecha de la línea crítica, y la simetría
-\(\rho\mapsto1-\bar\rho\) excluye también los de la izquierda. \(\square\)
+If the pole at \(\rho\in{\cal H}_{u_j}\) canceled for all those indices,
+then \(\xi(\rho-u_j)=0\) would give a sequence of distinct zeros accumulating
+at \(\rho\), impossible for a nonzero entire function. For some \(j\),
+\(\Theta_{u_j}\) has a pole in \({\cal H}_{u_j}\), a contradiction. There are
+no zeros to the right of the critical line, and the symmetry
+\(\rho\mapsto1-\bar\rho\) also excludes those to the left. \(\square\)
 
-Así, agregar exactamente el factor Gamma que faltaba en (9) restaura
-unitariedad de borde, pero la propiedad interior necesaria ya contiene RH.
-Usarla para deducir A1 sería circular. El factor Euler aislado tiene
-positividad de coeficientes sin control de borde; el factor completado tiene
-el borde correcto, pero su contractividad es el problema entero.
+So adding exactly the Gamma factor missing in (9) restores boundary
+unitarity, but the needed interior property already contains RH. Using it
+to deduce A1 would be circular. The isolated Euler factor has coefficient
+positivity with no boundary control; the completed factor has the correct
+boundary, but its contractivity is the whole problem.
 
-### 7.1. Hasta dónde llegan las cotas radiales no circulares
+### 7.1. How far the non-circular radial bounds reach
 
-Las dos piezas sí admiten cotas separadas en el semiplano de convergencia.
-Por (1),
+The two pieces do admit separate bounds in the half-plane of convergence.
+By (1),
 
 \[
  |A_u(\sigma+it)|\le A_u(\sigma)
@@ -475,7 +476,7 @@ Por (1),
  \tag{36}
 \]
 
-Además, la forma equivalente de \(K_u\) es
+Moreover, the equivalent form of \(K_u\) is
 
 \[
  K_u(s)=\pi^{u/2}{\Gamma((s-u)/2+1)\over\Gamma(s/2+1)}
@@ -484,17 +485,17 @@ Además, la forma equivalente de \(K_u\) es
  \tag{37}
 \]
 
-de modo que \(|K_u(\sigma+it)|\le K_u(\sigma)\) cuando
-\(\sigma>u-2\). Éstas son desigualdades genuinas y no usan ceros.
+so that \(|K_u(\sigma+it)|\le K_u(\sigma)\) when
+\(\sigma>u-2\). These are genuine inequalities and use no zeros.
 
-No dan automáticamente una cota para \(\Theta_u=K_uH_u\), porque
+They do not automatically give a bound for \(\Theta_u=K_uH_u\), because
 
 \[
  H_u(s)=\left(1-{u\over s-1}\right)A_u(s)
  \tag{38}
 \]
 
-y, para \(\sigma>1+u\),
+and, for \(\sigma>1+u\),
 
 \[
  \left|1-{u\over\sigma-1+it}\right|
@@ -502,23 +503,23 @@ y, para \(\sigma>1+u\),
  \tag{39}
 \]
 
-El factor polar se mueve en la dirección opuesta a la comparación radial.
-Hace falta otra cancelación para combinar (36)--(39); aun si se obtuviera en
-el semiplano seguro \(\Re s>1+u\), extenderla hasta \({\cal H}_u\) volvería
-al gate Schur anterior.
+The polar factor moves in the direction opposite to the radial comparison.
+Another cancellation would be needed to combine (36)–(39); even if obtained
+in the safe half-plane \(\Re s>1+u\), extending it up to \({\cal H}_u\)
+would return to the Schur gate above.
 
-### 7.2. El presupuesto Gamma exacto vuelve a ser \(\Delta D_n\)
+### 7.2. The exact Gamma budget is again \(\Delta D_n\)
 
-La mitad de completación que corresponde al strong margin tampoco deja una
-desigualdad intermedia. Defínase, como germen en \(u=0\),
+The half of the completion corresponding to the strong margin also leaves
+no intermediate inequality. Define, as a germ at \(u=0\),
 
 \[
  B_u(s)=H_u(s)K_u(s)^{1/2}.
  \tag{40}
 \]
 
-En la coordenada crítica \(s=(1-z)^{-1}\), las identidades generatrices de
-las partes prima y arquimediana son
+In the critical coordinate \(s=(1-z)^{-1}\), the generating identities of
+the prime and archimedean parts are
 
 \[
  \log{F((1-z)^{-1})\over F(1)}
@@ -528,9 +529,9 @@ las partes prima y arquimediana son
    =\sum_{n\ge1}{A_n\over n}z^n,
 \]
 
-donde \(Q=\xi/F\). Derivar en \(z\) y multiplicar por \(-(1-z)\)
-convierte cada sucesión en el negativo de su primera diferencia. Como
-\((1-z)^{-1}\partial_u\{G(s-u)/G(s)\}_{u=0}=-sG'(s)/G(s)\), se obtiene, para
+where \(Q=\xi/F\). Differentiating in \(z\) and multiplying by \(-(1-z)\)
+turns each sequence into the negative of its first difference. Since
+\((1-z)^{-1}\partial_u\{G(s-u)/G(s)\}_{u=0}=-sG'(s)/G(s)\), one obtains, for
 \(n\ge1\),
 
 \[
@@ -543,7 +544,7 @@ convierte cada sucesión en el negativo de su primera diferencia. Como
 \tag{41}
 \]
 
-Como \(H_0=K_0=1\), se sigue exactamente
+Since \(H_0=K_0=1\), it follows exactly that
 
 \[
  \boxed{
@@ -553,46 +554,47 @@ Como \(H_0=K_0=1\), se sigue exactamente
  \tag{42}
 \]
 
-Por tanto la cota coeficiente a coeficiente que M6 necesitaría para cerrar el
-presupuesto Gamma es literalmente \(\Delta D_n\ge0\), el mismo gate de
-`103_59`. La raíz cuadrada en (40) no es una factorización positiva global:
-solo es el germen algebraico que asigna media contribución arquimediana.
-Contractividad Schur tampoco impone el signo individual de los coeficientes
-de (42), y en este caso obtenerla globalmente ya equivale a RH.
+So the coefficient-by-coefficient bound that M6 would need to close the
+Gamma budget is literally \(\Delta D_n\ge0\), the same gate from
+`103_59`. The square root in (40) is not a global positive
+factorization: it is only the algebraic germ assigning half the archimedean
+contribution. Schur contractivity also imposes no individual sign on the
+coefficients of (42), and obtaining it globally in this case is already
+equivalent to RH.
 
-## 8. El dominio positivo no alcanza el borde crítico
+## 8. The positive domain does not reach the critical boundary
 
-La expansión aritmética positiva (1) requiere
+The positive arithmetic expansion (1) requires
 
 \[
  \Re s>1+u.
 \tag{43}
 \]
 
-En el centro de (12), \(s=1+\varepsilon\); por tanto un \(u>0\) fijo solo es
-admisible mientras \(u<\varepsilon\). No existe un entorno fijo en la variable
-de cociclo que conserve la representación positiva cuando
-\(\varepsilon\downarrow0\). Los jets en \(u=0\) sí existen para cada
-\(\varepsilon>0\), pero el paso al borde exige exactamente la cancelación
-polo--primos de (17), donde el signo ya se perdió.
+At the center of (12), \(s=1+\varepsilon\); hence a fixed \(u>0\) is only
+admissible while \(u<\varepsilon\). There is no fixed neighborhood in the
+cocycle variable that preserves the positive representation as
+\(\varepsilon\downarrow0\). The jets at \(u=0\) do exist for each
+\(\varepsilon>0\), but passing to the boundary requires exactly the
+pole–prime cancellation of (17), where the sign has already been lost.
 
-La continuación meromorfa tampoco es un atajo libre. En \(\varepsilon=0\), un
-cero \(\rho\) del denominador \(F(s)\) se transforma en
+Meromorphic continuation is likewise no free shortcut. At \(\varepsilon=0\),
+a zero \(\rho\) of the denominator \(F(s)\) transforms to
 
 \[
  z_\rho={\rho-1\over\rho}=1-{1\over\rho}.
 \tag{44}
 \]
 
-Y
+And
 
 \[
  |z_\rho|<1\quad\Longleftrightarrow\quad\Re\rho>{1\over2}.
 \tag{45}
 \]
 
-Para \(u\) genérico, \(F(\rho-u)\ne0\), de modo que el polo no se cancela en
-\(H_u\). En el regulador \(\varepsilon>0\), el punto es
+For generic \(u\), \(F(\rho-u)\ne0\), so the pole does not cancel in
+\(H_u\). In the regulator \(\varepsilon>0\), the point is
 
 \[
  z_{\rho,\varepsilon}
@@ -604,49 +606,52 @@ Para \(u\) genérico, \(F(\rho-u)\ne0\), de modo que el polo no se cancela en
 \tag{46}
 \]
 
-Así, una prolongación holomorfa uniforme del cociclo a todo el disco crítico
-excluye precisamente los ceros a la derecha de la línea crítica. Usar esa
-prolongación para justificar un teorema de coeficientes sería circular.
+Thus, a uniform holomorphic extension of the cocycle over the whole critical
+disc excludes precisely the zeros to the right of the critical line. Using
+that extension to justify a coefficient theorem would be circular.
 
-## 9. Alcance exacto del stop-gate
+## 9. Exact scope of the stop-gate
 
-Queda probado:
+What is proved:
 
-1. la jerarquía aritmética \(\mu*\log^k\ge0\) para todo \(k\);
-2. su ley de cociclo y su pullback Cayley--Laguerre exacto;
-3. que el emparejamiento con el polo convierte esa positividad en la
-   diferencia (9);
-4. que el primer jet coincide con \(C_{n,\varepsilon}\);
-5. con aritmética racional, que ese jet tiene ambos signos;
-6. que el dominio de positividad de Dirichlet no sobrevive al límite crítico;
-7. que la holomorfía uniforme del cociclo en el disco es sensible exactamente
-   a ceros off-line.
-8. que la jerarquía Jordan completa y la ecuación funcional admiten el
-   falsificador explícito \(X_a\).
-9. que completar el cociclo produce una familia Schur equivalente a RH, no
-   una cota independiente.
+1. the arithmetic hierarchy \(\mu*\log^k\ge0\) for every \(k\);
+2. its cocycle law and its exact Cayley–Laguerre pullback;
+3. that pairing with the pole turns that positivity into the
+   difference (9);
+4. that the first jet coincides with \(C_{n,\varepsilon}\);
+5. with rational arithmetic, that this jet has both signs;
+6. that the Dirichlet positivity domain does not survive the critical
+   limit;
+7. that uniform holomorphy of the cocycle on the disc is exactly sensitive
+   to off-line zeros;
+8. that the full Jordan hierarchy and the functional equation admit the
+   explicit falsifier \(X_a\);
+9. that completing the cocycle produces a Schur family equivalent to RH,
+   not an independent bound.
 
-Queda descartado:
+What is ruled out:
 
 ```text
 J_u >= 0 / mu*log^k >= 0
-    -> orden real del cociclo
-    -> signo o convexidad coeficiente a coeficiente en Cayley
+    -> real order of the cocycle
+    -> sign or coefficient-by-coefficient convexity in Cayley
     -> A1.
 ```
 
-No queda descartada toda identidad imaginable que use simultáneamente varios
-valores de \(u\), pero para ser un mecanismo nuevo deberá producir (20) sin
-invocar holomorfía/contractividad en el disco y sin volver a enunciar el mismo
-gate. El cociclo de Jordan, por sí solo, es una coordenada positiva del lado
-Euler; no aporta la comparación Euler--Gamma que ya faltaba en E70.12.
+Not ruled out is every conceivable identity that uses several values of
+\(u\) simultaneously, but to be a new mechanism it must produce (20) without
+invoking holomorphy/contractivity on the disc and without restating the
+same gate. The Jordan cocycle, by itself, is a positive coordinate on the
+Euler side; it does not supply the Euler–Gamma comparison already missing
+in E70.12.
 
-## 10. Reproducción
+## 10. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 jordan_cocycle_sign_gate.py
 ```
 
-Todos los signos de (11) y (19) se deciden con `Fraction` sobre intervalos
-decimales outward; no interviene punto flotante.
+All the signs in (11) and (19) are decided with `Fraction` over outward
+decimal intervals; no floating point is involved.
+</content>

@@ -1,7 +1,6 @@
 # E72.64 -- Low-block residue identity and the spectral divisibility target
 
-**Date:** 2026-07-08.
-**Role:** identify the low-frequency Feshbach cancellation with scalar spectral divisibility.
+**Purpose:** identify the low-frequency Feshbach cancellation with scalar spectral divisibility.
 
 ## 0. Low block from E72.63
 

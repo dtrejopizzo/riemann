@@ -1,6 +1,6 @@
 # P123.106 — Exact normal cutoff matrices including nonunit dilations
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for every compact
+Status: PROVED-IN-REPOSITORY for every compact
 multiplicative Bruhat test on Q_q^*. This computes the finite normal
 determinants; their renormalized limit is a further step.
 

@@ -1,6 +1,6 @@
 # P123.084 — The continuous degree-zero shadow of localized twists
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for the original rapid
+Status: PROVED-IN-REPOSITORY for the original rapid
 C_0 topology of P123.019, with S_f nonempty. This is a restriction on
 that topology and on the underived Hausdorff shadow, not on every
 derived, integrable or renormalized diagonal.

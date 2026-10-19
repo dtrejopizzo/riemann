@@ -1,7 +1,6 @@
 # E72.79 -- Shorted bordered minor certificate
 
-**Date:** 2026-07-09.
-**Role:** remove the last opaque inverse in the even Feshbach certificate by replacing every shorted
+**Purpose:** remove the last opaque inverse in the even Feshbach certificate by replacing every shorted
 pairing with a finite bordered determinant.
 
 ## 0. Context

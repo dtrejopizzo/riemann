@@ -1,7 +1,6 @@
 # E72.24 -- Weyl Riccati transport from the finite CCM eigenvector equation
 
-**Date:** 2026-07-08.
-**Role:** derive the exact mechanism that would prove the two-height Weyl current convergence of
+**Purpose:** derive the exact mechanism that would prove the two-height Weyl current convergence of
 E72.23 from the finite eigenvector equation, without root tracking.
 
 ## 0. Setup

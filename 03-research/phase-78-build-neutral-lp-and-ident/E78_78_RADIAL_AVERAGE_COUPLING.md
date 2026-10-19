@@ -1,6 +1,6 @@
 # E78.78 - `TAIL/A` is governed by a radial average of `(-SAFEDELTA)/A`
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

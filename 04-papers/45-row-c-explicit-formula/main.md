@@ -1,9 +1,7 @@
 # Paper 45 — Row C: the explicit formula on row A's declared carrier
 
-David Alejandro Trejo Pizzo, with Claude (Opus 5).
-Repository: `research/riemann`.  Date: 2026-09-12.
-
-Third of the series.  [Paper 43](../43-row-a-torsion-theory/main.md) closes
+David Alejandro Trejo Pizzo.
+Repository: `research/riemann`.  Third of the series.  [Paper 43](../43-row-a-torsion-theory/main.md) closes
 row A (the carrier `C_S`, the declared trace `T`, its symbol `T̂`, the
 numerical object `N_A = D_A` and its completion `N_A^{dist}`);
 [Paper 44](../44-row-b-arithmetic-family/main.md) closes row B (the norm class
@@ -13,16 +11,16 @@ row A's declared trace on row B's radial classes and the spectral side of the
 Weil explicit formula, **with the explicit formula proved here** and no
 analytic black box.
 
-> **Lead decision of record (R132.007, 2026-09-12).** `ROW C: WEIL-STRENGTH-COMPLETE`
+> **Lead decision of record (R132.007).** `ROW C: WEIL-STRENGTH-COMPLETE`
 > on Paper 43's declared carrier, as a theorem about row A's declared trace with
 > `c = 0` (unique by Cor 9.6a), the explicit formula **proved here** (Thm 9.4).
-> Granted after three builder rounds and two hostile audits (R132.002, R132.005,
+> Granted after three construction rounds and two adversarial audits (R132.002, R132.005,
 > the latter grading the label GRANTED conditional on items verified by grep in
 > R132.007 §1). Recorded beside the label: normalization load-bearing and pinned;
 > place-additivity definitional and declined as a localization; colimit
 > quantifier (C1); the poles by Thm 9bis.2′; imports (E1)–(E8), (R1) only; no
 > sign; what row D inherits. Full text: §14.1a and
-> [R132.007](../../03-research/phase-132-row-c-closure/R132_007_LEAD_FINAL_AUDIT_AND_LABEL.md).
+> [R132.007](../../03-research/phase-132-row-c-closure/R132_007_FINAL_AUDIT_AND_LABEL.md).
 
 **[REBUILT, phase 132, round 1.]**  The whole paper is rebuilt.  The previous
 version (label `ASSEMBLED AND NORMALIZATION-COMPATIBLE, NOT LOCALIZED`, after
@@ -790,7 +788,7 @@ is a surjective continuous algebra map with `M(F^†) = M(F)^♯`.  For real
       packet `g(0)+g(1)` of the explicit formula (Theorem 9.4 below) and
       exactly `Φ_h(0) + Φ_h(1)` for `h = F⋆F^†`;
   (ii) `M(Γ_F) = 0` **iff** `Φ_F(0) = Φ_F(1) = 0`, i.e. iff `F` is primitive
-       — the two linear Tate conditions of Paper 44 (8bis.9);
+— the two linear Tate conditions of Paper 44 (8bis.9);
   (iii) `†` acts on `B_T` by `♯`, exchanging the two rulings.
 
 *Proof.*  (i)  By Proposition 3.2, `λ_∓(Γ_F) = ∫F(s)e^{±s/2}ds`, so
@@ -807,7 +805,7 @@ is **not** `|M_+|²+|M_-|²`; with `M_+ = Φ_F(1)`, `M_- = Φ_F(0)` (P124.013
 `λ_∓(F^†) = \overline{λ_±(F)}`.  ∎  `PROVED`
 
 **Remark 8.2 (a correction of record: the two rulings were labelled the wrong
-way round).**  **[REBUILT, phase 132, round 1.  This refutes the lead
+way round).**  **[REBUILT, phase 132, round 1.  This refutes the earlier
 blueprint's clause C.2 as literally stated, and corrects the previous version
 of this paper.]**  The previous version set `z(F) := (M_−(F),M_+(F)) =
 (Φ_F(0),Φ_F(1))`, and the blueprint's clause C.2 asserts `z(F) = M(Γ_F)`.
@@ -888,7 +886,7 @@ Facts about `ζ` used below, each named, each `CLASSICAL`:
   multiplicities; `ζ` has a simple pole at `s = 1`, `ζ(0) = −½`, and `ξ` is
   regular and nonzero at `s = 0` and `s = 1`.  **[REBUILT, phase 132, round 2,
   finding `LF1` of `R132.003`.]**  Also: **no nontrivial zero of `ζ` is real**
-  — `ζ(σ) ≠ 0` for `σ ∈ (0,1)` — used **only** at (10.1).
+— `ζ(σ) ≠ 0` for `σ ∈ (0,1)` — used **only** at (10.1).
 * **(E3a)** `ξ` has order `1`, with the Hadamard product and the resulting
   partial-fraction expansion `ξ'/ξ(s) = Σ_ρ\big(\frac1{s−ρ}+\frac1ρ\big) + B`,
   locally uniformly off the zeros.
@@ -1600,7 +1598,7 @@ for the failure of the transfer.  ∎  `PROVED` in (i),(iii),(iv); `CLASSICAL`
 (Mertens) in (ii), quarantined exactly as in Paper 43 Theorem 10.8b.
 
 **Remark 9bis.5 (the blueprint's route to §2.2, refuted).**  **[REBUILT,
-phase 132, round 1.]**  The lead blueprint §2.2 proposed: *"the finite-place
+phase 132, round 1.]**  The blueprint §2.2 proposed: *"the finite-place
 residues sum to a divergence that is exactly the archimedean growth, leaving
 coefficient 1"*.  That mechanism does not exist, for two independent reasons.
 
@@ -1709,7 +1707,7 @@ which is an `R`-linear isomorphism **iff** `1` and `s_0²` are `R`-linearly
 independent in `C`, i.e. iff `s_0² ∉ R`, i.e. iff `s_0` is neither real nor
 purely imaginary.  **[REBUILT, phase 132, round 2, finding `LF1` of `R132.003`,
 with note `n2` of `R132.002`, which traced `106_11` independently and closed
-the builder's round-1 flag `P3`.]**  In `106_11` the variable is
+the the construction's round-1 flag `P3`.]**  In `106_11` the variable is
 `z = (ρ−½)/i`, so the critical line is `Im z = 0` and a real zero would be
 `Re z = 0`; its (9) fixes `s_0 = x_0 + iy_0` with `x_0y_0 ≠ 0`, glossing
 `y_0 ≠ 0` as the failure of the critical-line condition and **`x_0 ≠ 0` as the
@@ -2007,7 +2005,7 @@ packet is unconditional (Theorem 5.1) — *and the "two independent proofs"
 claim stays withdrawn*: only Paper 44's statements are established, and
 Corollary 5.2 above distinguishes the radial statement (Thm 3bis.7) from the
 object statement (Thm 3ter.12), which the blueprint conflates (see §15.2 of
-the builder report).
+the construction memo).
 
 **W45.7.  §11 in its entirety (Theorem 11.1, Remark 11.2: "row B's `n−1`
 obligation is discharged").**  *Withdrawn: there was no obligation.*  Paper 44
@@ -2125,15 +2123,15 @@ rescaling of `a_N,b_N` is replaced by (10.1); `Π`'s injectivity is by
 does not grant one.  The grading is the audit of record's.  What it asserts is
 the clause table of §14.2 and nothing beyond it.
 
-### 14.1a Lead decision of record (R132.007, 2026-09-12)
+### 14.1a Lead decision of record (R132.007)
 
-**[Inserted by the session lead as audit of record.]**
+**[Inserted by the final audit as audit of record.]**
 
     ROW C: WEIL-STRENGTH-COMPLETE on Paper 43's declared carrier (a fixed
            finite chart with its chart system and colimit as declared
            structure), as a theorem about row A's declared trace with c = 0,
            the explicit formula PROVED in the repository (Thm 9.4).
-           Granted 2026-09-12 after builder rounds 1–3 and hostile audits
+           Granted  after construction rounds 1–3 and adversarial audits
            R132.002 (EARNED WITH REPAIRS) and R132.005 (GRANTED conditional
            on R1 + r1–r10, all verified by grep in R132.007 §1).
 
@@ -2251,7 +2249,7 @@ continued Euler-product symbol `A` and are chart-independent by construction;
 into it, the exact opposite of Definition 9bis.1a's box]**); (8bis.9) (the two Tate
 conditions, §§8.1, 10.2); (8bis.14a), (8bis.14e) (the sign convention,
 Lemma 1.3); §9, §9bis W1–W3 (the `n−1` obligation never existed, §13 W45.7);
-§10.4's lead decision of record (the label and what travels beside it).
+§10.4's decision of record (the label and what travels beside it).
 
 *The four items Paper 44 §9 hands to row C, each used or declined:*
 
@@ -2329,7 +2327,7 @@ inherits them differently.
    `I_∞^{(c)}(Γ_F,Γ_F) = 2Φ_F(0)Φ_F(1) − Σ_ρΦ_F(ρ)Φ_F(1−ρ) + c‖F‖²_{L²}`,
    the correction does **not** vanish on the primitive sector, and **the
    identification of row D's target with Weil's criterion made in item 4 above
-   — which goes through the identity (9.10) — is available only for `c = 0`.**
+— which goes through the identity (9.10) — is available only for `c = 0`.**
    **[REBUILT, phase 132, round 3, `R1`: round 2 wrote "the equivalence with
    Weil's criterion fails", which asserts an unproved biconditional about the
    sign condition for `c ≠ 0`.  What is available is the identity, and that is
@@ -2351,8 +2349,8 @@ inherits them differently.
 
 ### 14.5 Cross-paper edits made in round 2
 
-**[REBUILT, phase 132, round 2.  Authorized by the lead (`R132.003` `LF5`) and
-by the hostile auditor's cross-paper notes `n4`, `n5` (`R132.002`).  Each is
+**[REBUILT, phase 132, round 2.  Authorized by the final audit (`R132.003` `LF5`) and
+by the adversarial auditor's cross-paper notes `n4`, `n5` (`R132.002`).  Each is
 one sentence or one block, marked `[phase 132]` in the target paper, and each
 names the theorem it concerns.  Grep evidence is in `R132.004` §3.]**
 

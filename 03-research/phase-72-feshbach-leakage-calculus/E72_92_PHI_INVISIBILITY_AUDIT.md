@@ -1,7 +1,6 @@
 # E72.92 -- Phi invisibility audit
 
-**Date:** 2026-07-09.
-**Role:** decide whether the low-band cofactor identity can be closed by proving norm-smallness of
+**Purpose:** decide whether the low-band cofactor identity can be closed by proving norm-smallness of
 the transported vector.
 
 ## 0. Input

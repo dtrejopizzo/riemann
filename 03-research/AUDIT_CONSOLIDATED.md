@@ -1,6 +1,6 @@
 # Consolidated audit — what 118 phases say is closed, open, and untried
 
-Written 2026-08-18. Consolidates the surviving probe reports. Companion to
+Consolidates the surviving probe reports. Companion to
 `THE_BACKWARD_MAP.md` (which covers rows a–d and requirements d0–d5) and
 `AUDIT_A_CATEGORY_CHANGES.md` (category-change attempts, on disk in full).
 
@@ -160,10 +160,10 @@ From `AUDIT_A_CATEGORY_CHANGES.md` §3. Ranked by how directly each attacks O1
 - Citation blocks across `01-context/RH9/task*` show **corrupted years** — arXiv
   IDs misread as publication years ("Jan 2401", "Jun 2501", "Sep 2504").
   Metadata bug, not mathematics, but it misleads.
-- `phase-29/52` labels a box **"Teorema 2.1 (Deninger, 1991)"** for what the
+- `phase-29-zeta-spectral-triples/52` labels a box **"Teorema 2.1 (Deninger, 1991)"** for what the
   surrounding prose correctly calls conjectural and unconstructed. Mislabelled
   against the corpus's own tagging discipline.
-- `phase-60`'s `RH-PROOF-PAPER.md` (2026-07-17) claims the limit operator is
+- `phase-60`'s `RH-PROOF-PAPER.md` claims the limit operator is
   "now identified (Doob transform)". It postdates every tribunal verdict in the
   phase and **was never itself submitted to review** — unaudited.
 - `task63`'s "Type-II dimension obstruction theorem" is the probe's own inference

@@ -1,8 +1,7 @@
 # E71.3 -- convergence rate and the PNT horizon for CAND-1
 
-**Date:** 2026-07-07.
 **Script:** `E71_3_convergence_rate_pnt.py`.
-**Role:** sharpen the CAND-1 proof target after E71.1-E71.2.
+**Purpose:** sharpen the CAND-1 proof target after E71.1-E71.2.
 
 ## Starting point
 

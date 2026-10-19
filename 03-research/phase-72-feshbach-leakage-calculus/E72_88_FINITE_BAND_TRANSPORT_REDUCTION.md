@@ -1,7 +1,6 @@
 # E72.88 -- Finite-band transport reduction
 
-**Date:** 2026-07-09.
-**Role:** check that Cauchy-channel physical tightness transfers to the actual root transport
+**Purpose:** check that Cauchy-channel physical tightness transfers to the actual root transport
 functional.
 
 ## 0. Transport functional

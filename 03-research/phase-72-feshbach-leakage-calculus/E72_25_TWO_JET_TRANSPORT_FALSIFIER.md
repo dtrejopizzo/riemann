@@ -1,7 +1,6 @@
 # E72.25 -- Two-jet transport falsifier
 
-**Date:** 2026-07-08.
-**Role:** test and correct the transport ansatz from E72.24 before it becomes a false proof.
+**Purpose:** test and correct the transport ansatz from E72.24 before it becomes a false proof.
 
 ## 0. The ansatz tested
 

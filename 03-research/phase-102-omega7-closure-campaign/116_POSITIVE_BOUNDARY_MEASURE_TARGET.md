@@ -100,7 +100,7 @@ The theorem is circular only if positivity of \(\mu\), or real support of the
 divisor, is assumed. It is not circular if \(\mu\ge0\) is derived from a new
 Euler--Gamma construction before any zero-location conclusion is invoked.
 
-Thus the target is allowed to carry force-RH: proving it is proving RH.
+Thus the target is allowed to carry RH-strength: proving it is proving RH.
 
 ## Off-line failure
 

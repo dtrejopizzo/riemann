@@ -6,14 +6,14 @@ Fix a prime \(p\), let \(u\in\mathbb Z_p^\times\), and consider the
 scaling map on the transverse affine line
 
 \[
- m_u:\mathbb A^1\longrightarrow\mathbb A^1,qquad x\longmapsto ux.
+ m_u:\mathbb A^1\longrightarrow\mathbb A^1,\qquad x\longmapsto ux.
 \]
 
 In \(\mathbb A^1\times\mathbb A^1\), its graph and the diagonal have
 equations
 
 \[
- y=ux,qquad y=x.
+ y=ux,\qquad y=x.
 \]
 
 Over \(\mathbb Q_p\), if \(u\neq1\), their local intersection algebra at

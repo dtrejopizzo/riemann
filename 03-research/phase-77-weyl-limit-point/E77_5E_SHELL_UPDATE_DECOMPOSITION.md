@@ -1,6 +1,6 @@
 # E77.5e - Shell-update decomposition
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Statement
 

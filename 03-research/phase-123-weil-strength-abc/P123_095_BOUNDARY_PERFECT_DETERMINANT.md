@@ -1,6 +1,6 @@
 # P123.095 — A genuine determinant line on the corner-generated perfect sector
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for the single-zero
+Status: PROVED-IN-REPOSITORY for the single-zero
 orbit-decay boundary. The target is a graded line bundle on B_q.
 No arithmetic metric, degree or mixed Riemann--Roch is asserted.
 

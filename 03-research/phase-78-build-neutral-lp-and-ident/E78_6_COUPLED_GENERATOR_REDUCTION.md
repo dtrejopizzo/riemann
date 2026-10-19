@@ -1,6 +1,6 @@
 # E78.6 - Coupled-generator reduction of the IDENT comparison object
 
-**Run:** 2026-07-18.
+**Run:**
 **Scope:** IDENT (`FIXED-L-WEYL`, `SAFE-GAMMA-IDENT`, `OUTER-LIMIT`).
 
 ## 1. Purpose

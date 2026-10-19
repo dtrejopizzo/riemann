@@ -1,7 +1,6 @@
 # E72.186 -- G-cycle block decomposition
 
-**Date:** 2026-07-09.
-**Role:** decompose the ASRP cycle inequality into pure block terms and a mixed term.
+**Purpose:** decompose the ASRP cycle inequality into pure block terms and a mixed term.
 
 ## 0. Decomposition
 

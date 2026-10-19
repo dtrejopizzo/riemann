@@ -1,6 +1,5 @@
 # E73.238 - Curvature weight quotient for BSA-DIV
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

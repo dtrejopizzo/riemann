@@ -169,7 +169,7 @@ faster than `O(r^{alpha N})` for any `alpha` at least as large as `nu_0`'s
 empirical geometric rate (`nu_0` contracts by a factor of roughly `1e-5` to
 `7e-5` per two-step increase in N, i.e. roughly `r ~ 0.03-0.1` per unit N in
 `|nu_0^{(N+2)}/nu_0^{(N)}|^{1/2}` terms). No such bound has been derived
-analytically in this session; the six-point numerical record is the entire
+analytically in this record; the six-point numerical record is the entire
 basis for the current confidence that `c_0`'s rate is milder.
 
 ## 6. Wall checklist

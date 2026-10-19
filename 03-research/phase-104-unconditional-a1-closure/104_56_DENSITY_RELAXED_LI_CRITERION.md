@@ -1,26 +1,26 @@
-# 104_56 — Criterio de Li relajado en densidad y en bloques
+# 104_56 — Density- and block-relaxed Li criterion
 
-**Rol.** Auditar la propuesta de reemplazar «para todo \(n\ge150\)» por
-una condición fuera de un conjunto excepcional. El resultado no prueba A1
-ni RH. Sí debilita rigurosamente el cuantificador necesario para una prueba:
+**Role.** Audit the proposal to replace "for all \(n\ge150\)" with
+a condition outside an exceptional set. The result does not prove A1
+nor RH. It does rigorously weaken the quantifier needed for a proof:
 
-* si RH es falsa, los índices en los que falla el margen cuártico contienen
-  un conjunto **sindético**;
-* por tanto basta probar el margen en bloques consecutivos de longitud no
-  acotada, o fuera de un conjunto de densidad logarítmica superior cero;
-* no hay una constante de densidad positiva universal deducible de los
-  axiomas de Bombieri--Lagarias. Las fases dominantes pueden hacer esa
-  densidad arbitrariamente pequeña.
+* if RH is false, the indices at which the quartic margin fails contain
+  a **syndetic** set;
+* hence it suffices to prove the margin on consecutive blocks of unbounded
+  length, or outside a set of zero upper logarithmic density;
+* there is no universal positive-density constant derivable from the
+  Bombieri–Lagarias axioms. The dominant phases can make that
+  density arbitrarily small.
 
-La última precisión corrige la propuesta inicial de una constante
-\(\delta _0>0\) fija.
+The last point corrects the initial proposal of a fixed constant
+\(\delta _0>0\).
 
 ---
 
-## 1. Qué dice exactamente Bombieri--Lagarias, Teorema 1(c)
+## 1. What Bombieri–Lagarias, Theorem 1(c), exactly says
 
-Sea \(R\) un multiconjunto que satisface las hipótesis de sumabilidad de
-Bombieri--Lagarias y ponga
+Let \(R\) be a multiset satisfying the Bombieri–Lagarias summability
+hypotheses and set
 
 \[
  u_\rho:=\left(1-{1\over\rho}\right)^{-1}
@@ -28,17 +28,17 @@ Bombieri--Lagarias y ponga
 \tag{1}
 \]
 
-El Teorema 1 de Bombieri--Lagarias, *Complements to Li's criterion for the
-Riemann hypothesis*, J. Number Theory **77** (1999), 274--287, afirma la
-equivalencia entre
+Theorem 1 of Bombieri–Lagarias, *Complements to Li's criterion for the
+Riemann hypothesis*, J. Number Theory **77** (1999), 274--287, states the
+equivalence between
 
 \[
  \Re\rho\le {1\over2}\quad(\rho\in R)
 \tag{2}
 \]
 
-y la siguiente cota unilateral subexponencial: para cada
-\(\varepsilon>0\) existe \(c(\varepsilon)>0\) tal que
+and the following one-sided subexponential bound: for each
+\(\varepsilon>0\) there is \(c(\varepsilon)>0\) such that
 
 \[
  \sum_{\rho\in R}\Re(1-u_\rho^n)
@@ -47,8 +47,8 @@ y la siguiente cota unilateral subexponencial: para cada
 \tag{3}
 \]
 
-Su Corolario 1 aplica esto a un multiconjunto estable bajo conjugación y
-\(\rho\mapsto1-\rho\). En esa situación
+Their Corollary 1 applies this to a multiset stable under conjugation and
+\(\rho\mapsto1-\rho\). In that situation
 
 \[
  \lambda_{-n}=\lambda_n,
@@ -57,51 +57,51 @@ Su Corolario 1 aplica esto a un multiconjunto estable bajo conjugación y
 \tag{4}
 \]
 
-El artículo prueba que, si (2) falla, el miembro de (3) es negativo y de
-tamaño exponencial **infinitas veces**. El enunciado publicado no afirma
-densidad natural, densidad logarítmica ni una constante universal. La cita
-«sometimes exponentially large» de Lagarias 2007 debe leerse con este
-alcance.
+The paper proves that, if (2) fails, the term in (3) is negative and of
+exponential size **infinitely often**. The published statement does not
+claim natural density, logarithmic density, or a universal constant. The
+phrase "sometimes exponentially large" from Lagarias 2007 should be read
+with this scope.
 
-La prueba de Bombieri--Lagarias contiene, sin embargo, más estructura de la
-que explicita su enunciado. La sección siguiente extrae esa consecuencia.
+The Bombieri–Lagarias proof, however, contains more structure than its
+statement makes explicit. The next section extracts that consequence.
 
 ---
 
-## 2. Modos exteriores dominantes
+## 2. Dominant exterior modes
 
-Supóngase que RH es falsa. Entonces hay algún \(u_\rho\) con
-\(|u_\rho|>1\). Como
+Suppose RH is false. Then there is some \(u_\rho\) with
+\(|u_\rho|>1\). Since
 
 \[
  |u_\rho|^2-1={2\Re\rho-1\over|\rho-1|^2}
 \tag{5}
 \]
 
-y el lado derecho tiende a cero cuando \(|\rho|\to\infty\), existe un
-máximo
+and the right-hand side tends to zero as \(|\rho|\to\infty\), there is a
+maximum
 
 \[
  R:=\max_\rho|u_\rho|>1.
 \tag{6}
 \]
 
-Solo un número finito de ceros lo alcanza. Escríbanse, con multiplicidad,
+Only finitely many zeros attain it. Write, with multiplicity,
 
 \[
  u_1=Re^{i\phi _1},\ldots,u_K=Re^{i\phi _K}.
 \tag{7}
 \]
 
-La estabilidad por conjugación hace real
+Stability under conjugation makes
 
 \[
- S(n):=\sum_{j=1}^K\cos(n\phi_j).
+ S(n):=\sum_{j=1}^K\cos(n\phi_j)
 \tag{8}
 \]
 
-El argumento de las páginas 3--4 de Bombieri--Lagarias da un
-\(1<R_1<R\) tal que
+real. The argument on pages 3--4 of Bombieri–Lagarias gives a
+\(1<R_1<R\) such that
 
 \[
  \boxed{
@@ -110,17 +110,17 @@ El argumento de las páginas 3--4 de Bombieri--Lagarias da un
 \tag{9}
 \]
 
-En efecto, los demás modos exteriores tienen módulo a lo sumo \(R_1\), los
-elementos con \(|\rho|\le n\) son \(O(n^2)\) bajo su hipótesis (ii), y la
-cola \(|\rho|>n\) es \(O(n^2)\). La ecuación (4) convierte su cálculo con
-exponente \(-n\) en (9). Esta orientación es importante: los modos
-dominantes son \(u_\rho=\rho/(\rho-1)\) correspondientes a ceros a la
-**derecha** de \(1/2\), no \(1-1/\rho\).
+Indeed, the other exterior modes have modulus at most \(R_1\), the
+elements with \(|\rho|\le n\) are \(O(n^2)\) under their hypothesis (ii), and
+the tail \(|\rho|>n\) is \(O(n^2)\). Equation (4) turns their computation with
+exponent \(-n\) into (9). This orientation matters: the dominant
+modes are \(u_\rho=\rho/(\rho-1)\) corresponding to zeros to the
+**right** of \(1/2\), not \(1-1/\rho\).
 
-Para el coeficiente incompleto de Lagarias se obtiene la misma parte
-dominante. Una vez \(n>\max_j|\Im\rho_j|^2\), todos los modos (7) están
-incluidos en \(\lambda_n(\sqrt n)\). Riemann--von Mangoldt y la brecha
-\(R_1<R\) dan
+For Lagarias's incomplete coefficient the same dominant part is obtained.
+Once \(n>\max_j|\Im\rho_j|^2\), all the modes (7) are included in
+\(\lambda_n(\sqrt n)\). Riemann–von Mangoldt and the gap
+\(R_1<R\) give
 
 \[
  \boxed{
@@ -129,14 +129,14 @@ incluidos en \(\lambda_n(\sqrt n)\). Riemann--von Mangoldt y la brecha
 \tag{10}
 \]
 
-Así (9) y (10) tienen simultáneamente el mismo signo exponencial sobre
-cualquier conjunto donde \(S(n)\) esté separado de cero.
+So (9) and (10) simultaneously carry the same exponential sign on
+any set where \(S(n)\) is bounded away from zero.
 
 ---
 
-## 3. El refuerzo correcto: un conjunto sindético de excursiones
+## 3. The correct strengthening: a syndetic set of excursions
 
-Sea
+Let
 
 \[
  \alpha=(\phi_1,\ldots,\phi_K)\in\mathbb T^K,
@@ -145,52 +145,52 @@ Sea
 \tag{11}
 \]
 
-\(H\) es un grupo compacto monotético y la traslación por \(\alpha\) es
-mínima y únicamente ergódica sobre \(H\). Sea
+\(H\) is a compact monothetic group and translation by \(\alpha\) is
+minimal and uniquely ergodic on \(H\). Let
 
 \[
  F(x_1,\ldots,x_K)=\sum_{j=1}^K\cos x_j.
 \tag{12}
 \]
 
-Como \(F(0)=K\), puede elegirse
+Since \(F(0)=K\), one can choose
 
 \[
  {K\over2}<\eta<K
 \tag{13}
 \]
 
-de modo que la medida de Haar \(\mu_H\) satisfaga
-\(\mu_H(F=\eta)=0\). Esto es posible porque una distribución de
-probabilidad tiene a lo sumo un conjunto numerable de átomos. El abierto
+so that the Haar measure \(\mu_H\) satisfies
+\(\mu_H(F=\eta)=0\). This is possible because a probability
+distribution has at most a countable set of atoms. The open set
 
 \[
  U_\eta:=\{x\in H:F(x)>\eta\}
 \tag{14}
 \]
 
-contiene un entorno no vacío del origen y por tanto
+contains a nonempty neighborhood of the origin and hence
 
 \[
  d:=\mu_H(U_\eta)>0.
 \tag{15}
 \]
 
-Por equidistribución en el grupo compacto, el conjunto de retornos
+By equidistribution on the compact group, the set of returns
 
 \[
  D_\eta:=\{n\ge1:n\alpha\in U_\eta\}
 \tag{16}
 \]
 
-tiene densidad natural \(d\). Además es **sindético**. Para verlo, las
-traslaciones \(U_\eta-j\alpha\), \(j\ge0\), cubren \(H\) por minimalidad;
-la compacidad da una subcubierta finita. Por tanto existe \(L<\infty\)
-tal que todo intervalo de \(L\) enteros contiene un miembro de
+has natural density \(d\). It is moreover **syndetic**. To see this, the
+translations \(U_\eta-j\alpha\), \(j\ge0\), cover \(H\) by minimality;
+compactness gives a finite subcover. Hence there is \(L<\infty\)
+such that every interval of \(L\) integers contains a member of
 \(D_\eta\).
 
-En \(D_\eta\), \(S(n)>\eta\). De (9)--(10), para todo \(n\) suficientemente
-grande en \(D_\eta\),
+On \(D_\eta\), \(S(n)>\eta\). From (9)--(10), for every \(n\) sufficiently
+large in \(D_\eta\),
 
 \[
  \boxed{
@@ -200,10 +200,10 @@ grande en \(D_\eta\),
 \tag{17}
 \]
 
-Hemos probado:
+We have proved:
 
-**Teorema 3.1 (excursiones densas si RH falla).** Si RH es falsa, los
-conjuntos
+**Theorem 3.1 (dense excursions if RH fails).** If RH is false, the
+sets
 
 \[
  \{n:\lambda_n<0\},\qquad
@@ -211,19 +211,19 @@ conjuntos
 \tag{18}
 \]
 
-contienen, salvo un prefijo finito, un mismo conjunto sindético de densidad
-natural positiva. La segunda afirmación usa únicamente
-\(A_n=O(n\log n)\), que es despreciable frente a (17).
+contain, up to a finite prefix, the same syndetic set of positive
+natural density. The second claim uses only
+\(A_n=O(n\log n)\), which is negligible against (17).
 
-El mismo teorema vale para cualquier margen
-\(\lambda_n\ge cA_n\) con \(c>0\) fijo, y también para una perturbación
-aditiva subexponencial menor que \(R^n\).
+The same theorem holds for any margin
+\(\lambda_n\ge cA_n\) with fixed \(c>0\), and also for a
+subexponential additive perturbation smaller than \(R^n\).
 
 ---
 
-## 4. Dos criterios de RH con cuantificador relajado
+## 4. Two RH criteria with a relaxed quantifier
 
-Defina la densidad logarítmica superior
+Define the upper logarithmic density
 
 \[
  \overline\delta_{\log}(E)
@@ -232,89 +232,89 @@ Defina la densidad logarítmica superior
 \tag{19}
 \]
 
-**Corolario 4.1 (excepción de densidad cero).** Las siguientes afirmaciones
-son equivalentes:
+**Corollary 4.1 (zero-density exception).** The following statements
+are equivalent:
 
 1. RH;
-2. existe \(E\subset\mathbb N\) con
-   \(\overline\delta_{\log}(E)=0\) tal que, para todo \(n\) suficientemente
-   grande fuera de \(E\),
+2. there exists \(E\subset\mathbb N\) with
+   \(\overline\delta_{\log}(E)=0\) such that, for every \(n\) sufficiently
+   large outside \(E\),
 
    \[
    4\lambda_n>A_n;
    \tag{20}
    \]
 
-3. (20) vale fuera de un conjunto cuya densidad natural superior es cero.
+3. (20) holds outside a set whose upper natural density is zero.
 
-**Prueba.** Bajo RH, el teorema asintótico de Lagarias da
-\(\lambda_n=A_n+O(\sqrt n\log n)\), mientras
-\(A_n\sim\tfrac12n\log n\). Por tanto (20) vale eventualmente con
-\(E=\varnothing\). Recíprocamente, si RH falla, (18) contiene un conjunto
-de densidad natural \(d>0\). Por sumación parcial ese conjunto también
-tiene densidad logarítmica \(d\), y debe estar contenido en cualquier
-excepción a (20), contradiciendo (19). \(\square\)
+**Proof.** Under RH, Lagarias's asymptotic theorem gives
+\(\lambda_n=A_n+O(\sqrt n\log n)\), while
+\(A_n\sim\tfrac12n\log n\). Hence (20) eventually holds with
+\(E=\varnothing\). Conversely, if RH fails, (18) contains a set
+of natural density \(d>0\). By partial summation that set also
+has logarithmic density \(d\), and it must be contained in any
+exception to (20), contradicting (19). \(\square\)
 
-La versión logarítmica es la relajación más amplia de las dos: una excepción
-puede tener bloques locales grandes y aun así densidad logarítmica cero.
+The logarithmic version is the wider of the two relaxations: an exception
+can have large local blocks and still have zero logarithmic density.
 
-**Corolario 4.2 (criterio de bloques).** RH equivale a que existan bloques
-consecutivos de longitudes no acotadas en los que
+**Corollary 4.2 (block criterion).** RH is equivalent to the existence of
+consecutive blocks of unbounded lengths in which
 
 \[
  4\lambda_n>A_n
 \tag{21}
 \]
 
-para cada índice del bloque.
+for every index of the block.
 
-**Prueba.** RH da (21) en toda una semirrecta. Si RH falla, el conjunto de
-fallos contiene, después de un prefijo, un conjunto sindético; por tanto la
-longitud de un bloque de éxitos está uniformemente acotada. \(\square\)
+**Proof.** RH gives (21) on an entire half-line. If RH fails, the set of
+failures contains, after a prefix, a syndetic set; hence the
+length of a block of successes is uniformly bounded. \(\square\)
 
-Este corolario elimina por completo la obligación de controlar cada grado:
-un método de promedio sería suficiente si produjera bloques buenos de
-longitud creciente, no solo muchos índices buenos dispersos.
+This corollary completely removes the obligation to control every degree:
+an averaging method would suffice if it produced good blocks of increasing
+length, not just many scattered good indices.
 
 ---
 
-## 5. Por qué no existe una \(\delta_0\) universal desde los axiomas BL
+## 5. Why no universal \(\delta_0\) exists from the BL axioms
 
-La densidad \(d\) de (15) depende de las fases dominantes. No puede
-reemplazarse por una constante positiva universal usando solo sumabilidad,
-conjugación y simetría funcional.
+The density \(d\) of (15) depends on the dominant phases. It cannot
+be replaced by a universal positive constant using only summability,
+conjugation, and functional symmetry.
 
-Fije enteros \(K\ge2\), \(q>2K\), ponga
-\(\theta=2\pi/q\), y elija
+Fix integers \(K\ge2\), \(q>2K\), set
+\(\theta=2\pi/q\), and choose
 
 \[
  1<R<\sec\theta.
 \tag{22}
 \]
 
-Considere los modos exteriores
+Consider the exterior modes
 
 \[
  Re^{\pm ik\theta}\qquad(1\le k<K),
 \tag{23}
 \]
 
-cada uno con multiplicidad \(K-k\), y complete cada punto mediante
-conjugación y \(u\mapsto u^{-1}\). Los puntos
-\(\rho=u/(u-1)\) satisfacen
+each with multiplicity \(K-k\), and complete each point via
+conjugation and \(u\mapsto u^{-1}\). The points
+\(\rho=u/(u-1)\) satisfy
 
 \[
  {1\over2}<\Re\rho<1.
 \tag{24}
 \]
 
-La primera desigualdad equivale a \(|u|>1\); la segunda sigue de
-\(R\cos(k\theta)<1\), garantizada por (22) y
+The first inequality is equivalent to \(|u|>1\); the second follows from
+\(R\cos(k\theta)<1\), guaranteed by (22) and
 \(k\theta\in[\theta,\pi)\).
-Es, pues, un multiconjunto finito admisible con las simetrías de una
-ecuación funcional y ceros fuera de la línea.
+This is thus a finite admissible multiset with the symmetries of a
+functional equation and zeros off the line.
 
-Su suma dominante es
+Its dominant sum is
 
 \[
  \begin{aligned}
@@ -326,7 +326,7 @@ Su suma dominante es
 \tag{25}
 \]
 
-donde
+where
 
 \[
  \mathsf F_K(x)={1\over K}
@@ -334,15 +334,15 @@ donde
 \tag{26}
 \]
 
-es el núcleo de Fejér. Si \(S_K(n)\ge0\), entonces
+is the Fejér kernel. If \(S_K(n)\ge0\), then
 
 \[
  \left|\sin{\pi n\over q}\right|\le {1\over\sqrt K}.
 \tag{27}
 \]
 
-Por tanto la proporción de clases módulo \(q\) donde el término dominante
-puede ser negativo es a lo sumo
+Hence the proportion of classes mod \(q\) where the dominant term
+can be negative is at most
 
 \[
  \boxed{
@@ -350,75 +350,78 @@ puede ser negativo es a lo sumo
 \tag{28}
 \]
 
-Esta cantidad tiende a cero tomando primero \(K\to\infty\) y después
-\(q/K\to\infty\). En las demás clases \(S_K(n)<0\), y el coeficiente de Li
-es eventualmente positivo. Así la densidad de excursiones negativas puede
-ser arbitrariamente pequeña dentro de la clase abstracta de
-Bombieri--Lagarias.
+This quantity tends to zero by first letting \(K\to\infty\) and then
+\(q/K\to\infty\). In the remaining classes \(S_K(n)<0\), and the Li
+coefficient is eventually positive. Thus the density of negative
+excursions can be made arbitrarily small within the abstract
+Bombieri–Lagarias class.
 
-Esto no construye un producto de Euler igual a \(\zeta\), ni prueba que las
-fases dominantes de \(\zeta\) tengan esa geometría. Prueba exactamente que
-una \(\delta_0\) universal no sale del teorema BL ni de las simetrías. Para
-la zeta hipotéticamente no-RH existe algún \(d_\zeta>0\), pero depende de
-ceros desconocidos. La formulación robusta y utilizable es, por ello,
-«excepción de densidad cero» o «bloques de longitud no acotada».
-
----
-
-## 6. Relación con los stop-gates previos
-
-* `104_17` mostró que Abel--Fejér radial puede ser positivo aun cuando
-  coeficientes individuales sean exponencialmente negativos. El criterio
-  de bloques no contradice ese no-go: exige información Tauberiana firmada
-  capaz de fabricar intervalos enteros, no solo un promedio positivo.
-* `104_33` y `104_41` localizaron el defecto en la suma de residuos
-  exteriores. Las fases \(\phi_j\) de este documento son precisamente los
-  modos de módulo máximo de esa suma. No aparece un mecanismo nuevo para
-  acotarla.
-* La relajación sí abre métodos que antes eran lógicamente insuficientes:
-  una estimación media puede cerrar RH si implica bloques buenos de tamaño
-  creciente o un conjunto excepcional de densidad logarítmica cero.
+This does not construct an Euler product equal to \(\zeta\), nor does it
+prove that the dominant phases of \(\zeta\) have that geometry. It proves
+exactly that a universal \(\delta_0\) does not follow from the BL theorem
+nor from the symmetries. For hypothetical non-RH zeta some
+\(d_\zeta>0\) exists, but it depends on unknown zeros. The robust and
+usable formulation is therefore "zero-density exception" or "blocks of
+unbounded length."
 
 ---
 
-## 7. Verificación reproducible
+## 6. Relation to earlier stop-gates
 
-`tools/density_relaxed_li_criterion_check.py` verifica:
-
-1. la orientación exacta \(u=\rho/(\rho-1)\) en un cuarteto racional;
-2. la identidad finita de Fejér (25);
-3. la cota de conteo (28) para una familia periódica;
-4. que su densidad puede bajar del uno por ciento y que el conjunto de
-   retornos sigue siendo sindético.
-
-La herramienta verifica álgebra finita y conteos periódicos; los pasos de
-grupo compacto y los términos de error de (9)--(10) están demostrados en
-el texto, no certificados por punto flotante.
+* `104_17` showed that radial Abel–Fejér can be positive even when
+  individual coefficients are exponentially negative. The block
+  criterion does not contradict that no-go: it requires signed Tauberian
+  information capable of manufacturing whole intervals, not just a
+  positive average.
+* `104_33` and `104_41` localized the defect in the sum of exterior
+  residues. The phases \(\phi_j\) of this document are precisely the
+  maximal-modulus modes of that sum. No new mechanism for bounding it
+  appears.
+* The relaxation does open methods that were previously logically
+  insufficient: an average estimate can close RH if it implies good
+  blocks of increasing size or an exceptional set of zero logarithmic
+  density.
 
 ---
 
-## 8. Veredicto
+## 7. Reproducible verification
+
+`tools/density_relaxed_li_criterion_check.py` verifies:
+
+1. the exact orientation \(u=\rho/(\rho-1)\) on a rational quadruple;
+2. the finite Fejér identity (25);
+3. the counting bound (28) for a periodic family;
+4. that its density can drop below one percent while the set of
+   returns remains syndetic.
+
+The tool verifies finite algebra and periodic counts; the compact-group
+steps and the error terms of (9)--(10) are proved in the text, not
+certified by floating point.
+
+---
+
+## 8. Verdict
 
 \[
 \boxed{
 \begin{gathered}
- \mathrm{RH\ falsa}
+ \mathrm{RH\ false}
  \Longrightarrow
  \{n:4\lambda_n\le A_n\}
- \text{ contiene un conjunto sindético de densidad positiva},\\[2mm]
+ \text{ contains a syndetic set of positive density},\\[2mm]
  \mathrm{RH}
  \Longleftrightarrow
- \text{el margen cuártico vale en bloques de longitud no acotada},\\[2mm]
+ \text{the quartic margin holds on blocks of unbounded length},\\[2mm]
  \mathrm{RH}
  \Longleftrightarrow
- \text{el margen cuártico vale fuera de una excepción de densidad
- logarítmica cero}.
+ \text{the quartic margin holds outside an exception of zero
+ logarithmic density}.
 \end{gathered}}
 \tag{29}
 \]
 
-La propuesta de relajar el cuantificador es válida y considerablemente más
-fuerte de lo esperado. La versión con una constante universal
-\(\delta_0>0\) no está justificada y es falsa en la clase abstracta BL.
-Nada de (29) prueba todavía uno solo de los bloques buenos requeridos para
-la zeta real; ése es el nuevo objetivo cuantitativo.
+The proposal to relax the quantifier is valid and considerably stronger
+than expected. The version with a universal constant
+\(\delta_0>0\) is not justified and is false within the abstract BL
+class. Nothing in (29) yet proves a single one of the good blocks
+required for the real zeta; that is the new quantitative target.

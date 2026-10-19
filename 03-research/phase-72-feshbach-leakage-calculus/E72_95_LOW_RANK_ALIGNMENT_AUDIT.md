@@ -1,7 +1,6 @@
 # E72.95 -- Low-rank alignment audit
 
-**Date:** 2026-07-09.
-**Role:** test whether the transported cofactor vector `phi` lies near a small natural span.
+**Purpose:** test whether the transported cofactor vector `phi` lies near a small natural span.
 
 ## 0. Motivation
 

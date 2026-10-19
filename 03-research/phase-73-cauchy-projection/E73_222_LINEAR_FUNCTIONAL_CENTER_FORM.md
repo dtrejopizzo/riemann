@@ -1,6 +1,5 @@
 # E73.222 - Linear functional form of the closed center
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

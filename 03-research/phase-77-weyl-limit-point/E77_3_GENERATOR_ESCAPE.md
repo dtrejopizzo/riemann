@@ -1,6 +1,6 @@
 # E77.3 - Generator escape probe
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Statement
 

@@ -1,6 +1,6 @@
 # P123.101 — A nuclear completion of the smooth finite-unit boundary algebras
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for the two-prime
+Status: PROVED-IN-REPOSITORY for the two-prime
 compact boundary Y=B_q. This constructs a declared topology and its
 tensor algebra; it does not assert convergence of diagonal resolutions
 or determinant corrections merely from density of finite levels.

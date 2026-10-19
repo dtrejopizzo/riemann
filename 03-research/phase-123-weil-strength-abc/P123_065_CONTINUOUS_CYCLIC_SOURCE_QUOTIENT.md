@@ -1,6 +1,6 @@
 # P123.065 — Continuous cyclic quotient of the repaired bimodule source
 
-Date: 2026-09-06. Status: PROVED as a continuous underived shadow at
+Status: PROVED as a continuous underived shadow at
 fixed source algebra. Derived excision and the required determinant or
 nuclear target of A.5 remain separate obligations.
 

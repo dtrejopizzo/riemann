@@ -99,7 +99,7 @@ Two non-circular sub-targets, in increasing strength:
 
 ## 7. Numerical verification (real zeta zeros)
 
-`phase-14/experiments/verify_V_identity.py`, zeros $\#1000$–$1079$ ($T\approx1465$, mean density $\rho\approx0.868$):
+`phase-14-off-diagonal-anchor-asymmetry/experiments/verify_V_identity.py`, zeros $\#1000$–$1079$ ($T\approx1465$, mean density $\rho\approx0.868$):
 - **Backbone identity confirmed:** $\sum_{\gamma,\gamma'}2\sin(2d(\gamma-\gamma'))/(\gamma-\gamma')=\int_{-2d}^{2d}
   |S(\xi)|^2d\xi$ to relative error $\le3\times10^{-6}$ across $d\in[0.25,3]$ ($\alpha=2d\rho$ from $0.43$ to
   $5.2$). The reduction of \S\S1--2 rests on an exact, now-verified identity.

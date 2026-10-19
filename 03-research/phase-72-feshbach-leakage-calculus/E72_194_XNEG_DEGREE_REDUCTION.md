@@ -1,7 +1,6 @@
 # E72.194 -- XNEG degree reduction
 
-**Date:** 2026-07-10.
-**Role:** test whether the mixed sign lemma needs the adaptive degree, or can be fixed at low degree.
+**Purpose:** test whether the mixed sign lemma needs the adaptive degree, or can be fixed at low degree.
 
 ## 0. Question
 

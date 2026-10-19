@@ -1,7 +1,6 @@
 # E72.101 -- Model versus actual D2 audit
 
-**Date:** 2026-07-09.
-**Role:** decide whether the finite-band determinant defect `D2` is arithmetic or already present in
+**Purpose:** decide whether the finite-band determinant defect `D2` is arithmetic or already present in
 the prolate/archimedean model.
 
 ## 0. Question

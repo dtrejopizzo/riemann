@@ -1,21 +1,21 @@
-# 104_100 — Promedio funcional de dos hojas y gate del corrector de completamiento
+# 104_100 — Functional two-sheet average and completion-corrector gate
 
-## Resultado
+## Result
 
-Este documento ejecuta el promedio de las dos hojas de `104_98` usando
-simultaneamente ecuacion funcional, conjugacion y el completamiento exacto de
-Riemann. La diagonal de monodromia se centra efectivamente para
-\(\log\xi\), pero **no** se transfiere a la energia aritmetica de
+This document carries out the average of the two sheets of `104_98` using
+simultaneously the functional equation, conjugation, and the exact Riemann
+completion. The monodromy diagonal is effectively centered for
+\(\log\xi\), but it **does not** transfer to the arithmetic energy of
 \(\Phi_N\).
 
-Ponga
+Set
 
 \[
  C(s)={1\over2}s(s-1)\pi^{-s/2}\Gamma(s/2),
  \qquad \xi(s)=C(s)\zeta(s),                              \tag{1}
 \]
 
-y, con las ramas compatibles de `104_98`,
+and, with the compatible branches of `104_98`,
 
 \[
  \begin{aligned}
@@ -25,37 +25,37 @@ y, con las ramas compatibles de `104_98`,
  \end{aligned}                                             \tag{2}
 \]
 
-Entonces, localmente en \(\Re s>1/2\), fuera de los ceros,
+Then, locally in \(\Re s>1/2\), away from the zeros,
 
 \[
  \boxed{\Phi(s)=\log\xi(s)+G(s).}                          \tag{3}
 \]
 
-Sea \(\rho=1/2+b+i\gamma\), \(b>0\), un cero de multiplicidad
-\(m\), y emparejelo con \(1-\bar\rho=1/2-b+i\gamma\). Conceda al
-metodo su caso mas favorable: \(s_\gamma=1/2+i\gamma\) no es tambien
-un cero critico y las dos orillas del corte simetrico se centran por
-reflexion. Entonces pueden escribirse
+Let \(\rho=1/2+b+i\gamma\), \(b>0\), be a zero of multiplicity
+\(m\), and pair it with \(1-\bar\rho=1/2-b+i\gamma\). Grant the
+method its most favorable case: \(s_\gamma=1/2+i\gamma\) is not also
+a critical zero, and the two banks of the symmetric cut are centered by
+reflection. Then one can write
 
 \[
  (\log\xi)_\pm(s_\gamma)=\ell_\gamma\pm\pi i m,
  \qquad \ell_\gamma\in\mathbb R.                          \tag{4}
 \]
 
-Sin esa concesion, en cualquier cruce no nulo del corte se tiene la
-forma mas general \((\log\xi)_\pm=\ell_0\pm\pi i m\), con
-\(\ell_0\in\mathbb C\), y en (6) sobrevive adicionalmente
-\(4\pi m\Im\ell_0\), tambien sin signo impuesto por las simetrias. El
-resto estudia la normalizacion mas favorable (4), donde ese segundo
-indeterminado se elimina por completo.
+Without that concession, at any nonzero crossing of the cut one has the
+more general form \((\log\xi)_\pm=\ell_0\pm\pi i m\), with
+\(\ell_0\in\mathbb C\), and in (6) the term \(4\pi m\Im\ell_0\) additionally
+survives, also with no sign imposed by the symmetries. The rest of the
+document studies the more favorable normalization (4), where that second
+indeterminate is entirely eliminated.
 
-Por tanto las hojas del simbolo primo son exactamente
+Therefore the sheets of the prime symbol are exactly
 
 \[
  \Phi_\pm(s_\gamma)=\ell_\gamma+G(s_\gamma)\pm\pi i m,    \tag{5}
 \]
 
-y satisfacen
+and satisfy
 
 \[
  \boxed{
@@ -67,31 +67,31 @@ y satisfacen
  \end{aligned}}                                             \tag{6}
 \]
 
-Asi, el completamiento mata la parte firmada **dentro de**
-\(\log\xi\), pero al descompletar reaparece exactamente como
-\(\pm2\pi m\Im G\). La ecuacion funcional no determina su signo.
+Thus completion kills the signed part **within**
+\(\log\xi\), but upon decompleting it reappears exactly as
+\(\pm2\pi m\Im G\). The functional equation does not determine its sign.
 
-Hay dos obstrucciones exactas adicionales.
+There are two further exact obstructions.
 
-1. Las transformaciones \(s\mapsto1-s\), conjugacion y su composicion
-   preservan, en vez de invertir, el caracter local de monodromia
-   \(2\pi i m\). Por ello ninguna de ellas entrega la hoja opuesta de la
-   continuacion fisica.
-2. El corrector real no es una perturbacion de energia finita. Cuando
+1. The transformations \(s\mapsto1-s\), conjugation, and their composition
+   preserve, rather than invert, the local monodromy character
+   \(2\pi i m\). Consequently none of them delivers the opposite sheet of
+   the physical continuation.
+2. The real corrector is not a finite-energy perturbation. When
    \(s=1/2+it\),
 
    \[
    \log|C(s)|=-{\pi\over4}|t|+{7\over4}\log|t|+O(1),        \tag{7}
    \]
 
-   mientras \(A(1/2+it)=O(\sqrt{|t|}+\log(2+|t|))\) en ramas
-   continuas. En consecuencia
+   while \(A(1/2+it)=O(\sqrt{|t|}+\log(2+|t|))\) on continuous
+   branches. Consequently
 
    \[
    \Re G(1/2+it)={\pi\over4}|t|+O(\sqrt{|t|}+\log(2+|t|)), \tag{8}
    \]
 
-   y
+   and
 
    \[
    \boxed{
@@ -99,29 +99,29 @@ Hay dos obstrucciones exactas adicionales.
       \ge \left({\pi^2\over16}+o(1)\right)T.}              \tag{9}
    \]
 
-Por ello no se puede restar el corrector mediante desigualdad triangular
-en el espacio de Plancherel de `104_98`: el termino gamma y el termino
-completado poseen una cancelacion macroscopica que debe conservarse.
+Hence one cannot subtract the corrector via the triangle inequality in the
+Plancherel space of `104_98`: the gamma term and the completed term have
+a macroscopic cancellation that must be preserved.
 
-Finalmente se da un falsificador algebraico exacto. Existe una familia
-con cuarteto exterior, completamiento entero, ecuacion funcional y
-conjugacion en la que una de las dos hojas se cancela **exactamente** y la
-otra duplica toda la diagonal. Esto prueba que las tres simetrias, incluso
-juntas, no seleccionan la hoja aritmetica ni proporcionan la desigualdad
-faltante.
+Finally an exact algebraic falsifier is given. There exists a family
+with an exterior quartet, entire completion, functional equation, and
+conjugation in which one of the two sheets cancels **exactly** while the
+other duplicates the whole diagonal. This proves that the three
+symmetries, even together, do not select the arithmetic sheet nor supply
+the missing inequality.
 
-**Veredicto.** El promedio funcional de dos hojas no prueba la energia
-subpolinomial, Deep-\(\Lambda\), A1 ni RH. El termino que sobrevive es
-\(2\pi m\Im G(s_\gamma)\), y el corrector que lo contiene tiene energia
-lineal, no finita. Cerrar la ruta aun exige una estimacion aritmetica
-global para los pesos ordinarios; la simetria del completamiento no la
-reemplaza.
+**Verdict.** The functional two-sheet average does not prove subpolynomial
+energy, Deep-\(\Lambda\), A1, or RH. The surviving term is
+\(2\pi m\Im G(s_\gamma)\), and the corrector containing it has linear, not
+finite, energy. Closing the route still requires a global arithmetic
+estimate for the ordinary weights; the completion symmetry does not
+replace it.
 
 ---
 
-## 1. Descomposicion exacta del simbolo primo
+## 1. Exact decomposition of the prime symbol
 
-La ecuacion (7) de `104_98` dice
+Equation (7) of `104_98` states
 
 \[
  \Phi(s)=\log\zeta(s)
@@ -129,28 +129,27 @@ La ecuacion (7) de `104_98` dice
  -E_1((s-1)\log2)+R(s).                                  \tag{10}
 \]
 
-Como \(\log\zeta=\log\xi-\log C\), (10) es precisamente (3).
-En un disco que no contiene \(0\), \(1\), polos gamma ni otro cero,
-\(G\) es monovaluada y holomorfa. Toda la monodromia derecha de \(\Phi\)
-esta, pues, en \(\log\xi\).
+Since \(\log\zeta=\log\xi-\log C\), (10) is precisely (3).
+In a disc containing neither \(0\), \(1\), gamma poles, nor another zero,
+\(G\) is single-valued and holomorphic. All the right monodromy of \(\Phi\)
+therefore lies in \(\log\xi\).
 
-La ecuacion funcional y la realidad son
+The functional equation and reality are
 
 \[
  \xi(s)=\xi(1-s),\qquad
  \xi(\bar s)=\overline{\xi(s)}.                          \tag{11}
 \]
 
-Si \(L=\log\xi\) es una determinacion local, entonces, modulo constantes
-en \(2\pi i\mathbb Z\),
+If \(L=\log\xi\) is a local determination, then, modulo constants in
+\(2\pi i\mathbb Z\),
 
 \[
  L(1-s)=L(s),\qquad \overline{L(\bar s)}=L(s).             \tag{12}
 \]
 
-Estas igualdades no invierten la monodromia. En efecto, alrededor de un
-cero, escriba \(z=s-\rho\). Las cuatro coordenadas locales relevantes
-son
+These equalities do not invert the monodromy. Indeed, around a
+zero, write \(z=s-\rho\). The four relevant local coordinates are
 
 \[
  \log z,\quad \log(-z),\quad
@@ -158,51 +157,50 @@ son
  \overline{\log(-\bar z)}.                               \tag{13}
 \]
 
-Cuando \(z\) recorre una vuelta positiva, las cuatro expresiones ganan
-\(2\pi i\). En los dos ultimos casos la inversion de orientacion causada
-por conjugacion es invertida otra vez al conjugar el valor. Por tanto el
-grupo generado por (11) actua trivialmente sobre el caracter de
-monodromia. La hoja \(+\) y la hoja \(-\) siguen siendo dos datos
-distintos; (11) no las promedia.
+When \(z\) traces a positive loop, all four expressions gain
+\(2\pi i\). In the last two cases, the orientation reversal caused by
+conjugation is reversed again by conjugating the value. Hence the
+group generated by (11) acts trivially on the monodromy character. Sheet
+\(+\) and sheet \(-\) remain two distinct data; (11) does not average
+them.
 
-## 2. El corte simetrico del cuarteto
+## 2. The symmetric quartet cut
 
-La ecuacion funcional y conjugacion fuerzan, junto con \(\rho\), los
-ceros
+The functional equation and conjugation force, together with \(\rho\), the
+zeros
 
 \[
  \bar\rho,\quad1-\rho,\quad1-\bar\rho.                    \tag{14}
 \]
 
-Si \(s_\gamma\) no es otro cero, en un entorno de la pareja superior se
-puede factorizar
+If \(s_\gamma\) is not another zero, in a neighborhood of the upper pair
+one can factor
 
 \[
  \xi(s)=\{(s-s_\gamma)^2-b^2\}^{m}H_\gamma(s),            \tag{15}
 \]
 
-donde \(H_\gamma\) es holomorfa y no nula. La simetria
-\(s\mapsto1-\bar s\) fija \(s_\gamma\). En la convencion de corte mas
-favorable, las dos trazas se eligen conjugadas y su punto medio es real;
-esto da (4). Si un cero critico ocupa \(s_\gamma\), se hace cruzar una
-curva simetrica por un punto vecino no nulo de la recta critica. El punto
-medio general puede tener parte imaginaria, pero entonces deja el termino
-firmado adicional ya registrado despues de (4); la simetria tampoco fija
-su signo.
+where \(H_\gamma\) is holomorphic and nonzero. The symmetry
+\(s\mapsto1-\bar s\) fixes \(s_\gamma\). In the most favorable cut
+convention, the two traces are chosen conjugate and their midpoint is
+real; this gives (4). If a critical zero occupies \(s_\gamma\), a
+symmetric curve is routed through a nearby nonzero point on the critical
+line. The general midpoint can have an imaginary part, but then the
+additional signed term already recorded after (4) remains; the symmetry
+does not fix its sign either.
 
-Sumar (2) a ambas orillas da (5), y expandir
-\(|z\pm i d|^2=|z|^2+d^2\pm2d\Im z\) prueba (6). Observe
-que aqui no se hizo una estimacion: el residuo firmado que queda es una
-identidad exacta.
+Adding (2) at both banks gives (5), and expanding
+\(|z\pm i d|^2=|z|^2+d^2\pm2d\Im z\) proves (6). Note
+that no estimate was made here: the surviving signed residue is an
+exact identity.
 
-En la recta critica tambien puede escribirse, con continuaciones de tipo
-real,
+On the critical line one can also write, with real-type continuations,
 
 \[
  \Phi(1-s)=\overline{\Phi(s)},\qquad s=1/2+it.             \tag{16}
 \]
 
-Por ello el promedio funcional solo produce
+Therefore the functional average only produces
 
 \[
  |\Phi(s)|^2
@@ -210,27 +208,26 @@ Por ello el promedio funcional solo produce
  +\left|{\Phi(s)-\Phi(1-s)\over2}\right|^2.              \tag{17}
 \]
 
-Es la identidad pitagorica entre parte real e imaginaria. Ambos sumandos
-son positivos, pero (17) es una **descomposicion inferior** de la energia,
-no una cota superior subpolinomial para ella. Tampoco genera las dos
-orillas de un mismo corte: empareja los puntos \(t\) y \(-t\).
+This is the Pythagorean identity between real and imaginary part. Both
+summands are positive, but (17) is a **lower decomposition** of the
+energy, not a subpolynomial upper bound for it. Nor does it generate the
+two banks of the same cut: it pairs the points \(t\) and \(-t\).
 
-La misma operacion puede realizarse antes de todo limite, literalmente
-sobre los pesos ordinarios. Como los coeficientes de \(\Phi_N\) son
-reales, defina
+The same operation can be carried out before any limit, literally on the
+ordinary weights. Since the coefficients of \(\Phi_N\) are real, define
 
 \[
  S_N(s)={\Phi_N(s)+\Phi_N(1-s)\over2},\qquad
  T_N(s)={\Phi_N(s)-\Phi_N(1-s)\over2}.                    \tag{17a}
 \]
 
-Si \(s=1/2+it\), entonces
+If \(s=1/2+it\), then
 
 \[
  S_N(s)=\Re\Phi_N(s),\qquad T_N(s)=i\Im\Phi_N(s),         \tag{17b}
 \]
 
-y la factorizacion de `104_98` se vuelve exactamente
+and the factorization of `104_98` becomes exactly
 
 \[
  \sum_{m=2}^N{P_m^2\over m(m+1)}
@@ -238,17 +235,17 @@ y la factorizacion de `104_98` se vuelve exactamente
  { |S_N(1/2+it)|^2+|T_N(1/2+it)|^2\over t^2+1/4}\,dt.    \tag{17c}
 \]
 
-Este es el promedio aritmetico de dos reflejos completo. No contiene una
-desigualdad nueva: es \(|z|^2=(\Re z)^2+(\Im z)^2\). Tanto \(S_N\) como
-\(T_N\) son enteros y monovaluados, de modo que ninguno posee la diagonal
-de monodromia. Esa diagonal aparece solamente al continuar el limite
-infinito a traves de su semiplano de convergencia. Demostrar que sobrevive
-uniformemente en los prefijos seria ya demostrar la cota de energia de
-`104_93`--`104_94`.
+This is the full arithmetic average of two reflections. It contains no
+new inequality: it is \(|z|^2=(\Re z)^2+(\Im z)^2\). Both \(S_N\) and
+\(T_N\) are entire and single-valued, so neither possesses the
+monodromy diagonal. That diagonal appears only when continuing the
+infinite limit across its half-plane of convergence. Proving that it
+survives uniformly across the prefixes would already be proving the
+energy bound of `104_93`–`104_94`.
 
-## 3. Falsificador exacto dentro de las simetrias
+## 3. Exact falsifier within the symmetries
 
-Ponga \(z=s-1/2\), elija \(b,\gamma>0\), y defina
+Set \(z=s-1/2\), choose \(b,\gamma>0\), and define
 
 \[
  Q_{b,\gamma}(s)=
@@ -256,37 +253,37 @@ Ponga \(z=s-1/2\), elija \(b,\gamma>0\), y defina
     \over b^2(4\gamma^2+b^2)}.                            \tag{18}
 \]
 
-Es un polinomio entero de tipo real y satisface
+This is an entire polynomial of real type and satisfies
 
 \[
  Q_{b,\gamma}(1-s)=Q_{b,\gamma}(s),\qquad
  Q_{b,\gamma}(\bar s)=\overline{Q_{b,\gamma}(s)}.         \tag{19}
 \]
 
-Sus ceros son exactamente \(1/2\pm b\pm i\gamma\), y
-\(Q_{b,\gamma}(s_\gamma)=-1\). Para \(X=Q_{b,\gamma}^{m}\),
-las dos ramas simetricas de \(L=\log X\) en el punto medio son
+Its zeros are exactly \(1/2\pm b\pm i\gamma\), and
+\(Q_{b,\gamma}(s_\gamma)=-1\). For \(X=Q_{b,\gamma}^{m}\),
+the two symmetric branches of \(L=\log X\) at the midpoint are
 
 \[
  L_\pm(s_\gamma)=\pm\pi i m.                             \tag{20}
 \]
 
-Ahora, para \(c\in\mathbb R\), ponga
+Now, for \(c\in\mathbb R\), set
 
 \[
  \Phi_c(s)=L(s)+c(s-1/2),\qquad G_c(s)=c(s-1/2).           \tag{21}
 \]
 
-Restar \(G_c\) completa exactamente \(\Phi_c\) en la funcion \(L\),
-que satisface (19). El corrector es entero y de tipo real, pero es
-antisimetrico bajo \(s\mapsto1-s\), como puede serlo la parte eliminada
-por un completamiento. En \(s_\gamma\),
+Subtracting \(G_c\) exactly completes \(\Phi_c\) into the function \(L\),
+which satisfies (19). The corrector is entire and of real type, but it
+is antisymmetric under \(s\mapsto1-s\), as the part removed by a
+completion can be. At \(s_\gamma\),
 
 \[
  (\Phi_c)_\pm=i(c\gamma\pm\pi m).                         \tag{22}
 \]
 
-Con \(c=-\pi m/\gamma\),
+With \(c=-\pi m/\gamma\),
 
 \[
  (\Phi_c)_+=0,
@@ -294,26 +291,26 @@ Con \(c=-\pi m/\gamma\),
  (\Phi_c)_-=-2\pi i m.                                   \tag{23}
 \]
 
-La diagonal promedio es positiva, pero una hoja no conserva ninguna
-fraccion positiva de ella. Cambiar el signo de \(c\) intercambia las
-hojas. Este falsificador no pretende conservar los pesos ordinarios de
-Mangoldt; prueba exactamente que **ecuacion funcional + conjugacion +
-completamiento** no bastan para escoger el signo en (6). Los pesos
-literales siguen siendo el input adicional que haria falta.
+The average diagonal is positive, but one sheet retains no positive
+fraction of it at all. Flipping the sign of \(c\) swaps the sheets. This
+falsifier does not aim to preserve the ordinary Mangoldt weights; it
+proves exactly that **functional equation + conjugation +
+completion** do not suffice to pick the sign in (6). The literal weights
+remain the additional input that would be needed.
 
-## 4. El corrector de Riemann tiene energia macroscopica
+## 4. The Riemann corrector has macroscopic energy
 
-La formula de Stirling, uniforme en la recta \(\Re s=1/2\), da
+Stirling's formula, uniform on the line \(\Re s=1/2\), gives
 
 \[
  \log\left|\Gamma\left({1\over4}+{it\over2}\right)\right|
  =-{\pi\over4}|t|-{1\over4}\log|t|+O(1).                 \tag{24}
 \]
 
-Como \(|s(s-1)|=t^2+O(1)\), sustituir (24) en (1) prueba (7).
+Since \(|s(s-1)|=t^2+O(1)\), substituting (24) into (1) proves (7).
 
-Resta comprobar que los otros terminos de (2) no contienen otro termino
-lineal oculto. Para el residuo discretizado de `104_98`, en
+It remains to check that the other terms of (2) hide no other linear
+term. For the discretized residue of `104_98`, at
 \(s=1/2+it\),
 
 \[
@@ -322,20 +319,20 @@ lineal oculto. Para el residuo discretizado de `104_98`, en
                  {|s|m^{-3/2}\over\log m}\right\}.      \tag{25}
 \]
 
-Separar la suma en \(m\le |s|\) y \(m>|s|\) da
+Splitting the sum into \(m\le |s|\) and \(m>|s|\) gives
 
 \[
  R(1/2+it)=O(\sqrt{|t|}).                                 \tag{26}
 \]
 
-El bloque \(k\ge3\) de (2) es uniformemente acotado. En \(k=2\), las
-estimaciones clasicas sobre \(\zeta(1+2it)\), junto con una rama continua,
-dan \(\log\zeta(1+2it)=O(\log(2+|t|))\). Finalmente,
-\(E_1((-1/2+it)\log2)=O(1/|t|)\) en la rama principal; cualquier rama
-compatible fija solo añade una constante. Esto prueba la cota declarada
-para \(A\), y (7) implica (8).
+The \(k\ge3\) block of (2) is uniformly bounded. At \(k=2\), classical
+estimates for \(\zeta(1+2it)\), together with a continuous branch,
+give \(\log\zeta(1+2it)=O(\log(2+|t|))\). Finally,
+\(E_1((-1/2+it)\log2)=O(1/|t|)\) on the principal branch; any compatible
+branch only adds a constant. This proves the stated bound
+for \(A\), and (7) implies (8).
 
-De (8), uniformemente para \(T\le t\le2T\),
+From (8), uniformly for \(T\le t\le2T\),
 
 \[
  { |G(1/2+it)|^2\over t^2+1/4}
@@ -343,88 +340,90 @@ De (8), uniformemente para \(T\le t\le2T\),
  ={\pi^2\over16}+o(1).                                   \tag{27}
 \]
 
-Integrar prueba (9). Esta es la perdida decisiva: la energia finita de
-las potencias propias de `104_94` no significa que el **corrector de
-completamiento logaritmico** sea finito. El factor gamma es lineal en
-\(|t|\), y solo se cancela si se mantienen juntos todos los terminos.
+Integrating proves (9). This is the decisive loss: the finite energy of
+the proper powers of `104_94` does not mean that the **logarithmic
+completion corrector** is finite. The gamma factor is linear in
+\(|t|\), and it only cancels if all the terms are kept together.
 
-## 5. Por que tampoco cierran BSY o Weil
+## 5. Why BSY and Weil do not close either
 
 ### 5.1 BSY
 
-En la coordenada de disco de `104_89`,
+In the disc coordinate of `104_89`,
 
 \[
  w(s)={s-1\over s},\qquad w(1-s)={1\over w(s)}.           \tag{28}
 \]
 
-Un cero derecho da \(|w(\rho)|<1\); su reflejo funcional esta en el
-reciproco exterior. Poisson--Jensen cuenta unilateralmente el cero
-interior y produce
+A right zero gives \(|w(\rho)|<1\); its functional reflection lies in
+the exterior reciprocal. Poisson–Jensen counts the interior zero
+one-sidedly and produces
 
 \[
  D_B=\sum_{\Re\rho>1/2}m_\rho\log{1\over|w(\rho)|}.       \tag{29}
 \]
 
-Promediar el punto interior con su reciproco exterior cancelaria el
-defecto solo introduciendo un polo o un factor exterior que ya no es una
-truncacion Euler cero-libre analitica en el disco. Por ello (28) no
-controla la fuga unilateral de `104_89`; simplemente reescribe el mismo
-factor de Blaschke.
+Averaging the interior point with its exterior reciprocal would cancel
+the deficit only by introducing a pole or an exterior factor that is no
+longer a zero-free Euler truncation analytic in the disc. Hence (28) does
+not control the one-sided leak of `104_89`; it simply rewrites the same
+Blaschke factor.
 
-### 5.2 Weil y Li
+### 5.2 Weil and Li
 
-Agrupar un cuarteto por ecuacion funcional y conjugacion ya fue hecho en
-`103_65`. Si
+Grouping a quartet by functional equation and conjugation was already
+done in `103_65`. If
 
 \[
  1-{1\over\rho}=e^{-a+i\theta},\qquad a>0,
 \]
 
-su contribucion a \(2\lambda_n\) es
+its contribution to \(2\lambda_n\) is
 
 \[
  8-8\cosh(na)\cos(n\theta).                              \tag{30}
 \]
 
-El factor \(\cosh(na)\cos(n\theta)\) tiene ambos signos. Esta es la
-version discreta del termino firmado de (6). Elevar el promedio de hojas
-a una positividad para todos los tests seria precisamente positividad de
-Weil, equivalente a RH; no es una consecuencia adicional de (11).
+The factor \(\cosh(na)\cos(n\theta)\) has both signs. This is the
+discrete version of the signed term in (6). Raising the sheet average to
+positivity for all test functions would be precisely Weil positivity,
+equivalent to RH; it is not an additional consequence of (11).
 
-## 6. Alcance exacto del no-go
+## 6. Exact scope of the no-go
 
-El documento demuestra tres afirmaciones limitadas y rigurosas:
+The document proves three limited and rigorous claims:
 
-1. las simetrias funcionales no intercambian las dos determinaciones
-   locales;
-2. aun despues de centrar \(\log\xi\), queda exactamente
-   \(2\pi m\Im G\) en una hoja del simbolo primo;
-3. \(G\) no puede desecharse como perturbacion finita en la energia de
+1. the functional symmetries do not swap the two local determinations;
+2. even after centering \(\log\xi\), exactly
+   \(2\pi m\Im G\) remains in one sheet of the prime symbol;
+3. \(G\) cannot be discarded as a finite perturbation in the energy of
    `104_98`.
 
-No se afirma que toda desigualdad aritmetica de dos hojas sea imposible.
-Una estimacion nueva que use simultaneamente todos los pesos ordinarios
-podria controlar la cancelacion entre \(\log\xi\) y \(G\); probarla seria
-precisamente el teorema de energia equivalente a RH de `104_93`--`104_94`.
+It is not claimed that every two-sheet arithmetic inequality is
+impossible. A new estimate that simultaneously uses all the ordinary
+weights could control the cancellation between \(\log\xi\) and \(G\);
+proving it would be precisely the energy theorem equivalent to RH of
+`104_93`–`104_94`.
 
-## 7. Reproduccion
+## 7. Reproduction
 
-Desde `tools/`:
+From `tools/`:
 
 ```bash
 python3 functional_two_sheet_completion_check.py
 ```
 
-El checker:
+The checker:
 
-1. verifica que las cuatro acciones locales de (13) tienen la misma
-   monodromia;
-2. comprueba las identidades de dos hojas (6) y el promedio aritmetico
-   finito (17a)--(17c);
-3. verifica las simetrias, el cuarteto y la cancelacion exacta (18)--(23);
-4. evalua por Stirling el coeficiente \(-\pi/4\) y el termino
-   \((7/4)\log t\) de (7).
+1. verifies that the four local actions of (13) have the same
+   monodromy;
+2. checks the two-sheet identities (6) and the finite arithmetic
+   average (17a)–(17c);
+3. verifies the symmetries, the quartet, and the exact cancellation
+   (18)–(23);
+4. evaluates by Stirling the coefficient \(-\pi/4\) and the term
+   \((7/4)\log t\) of (7).
 
-Las evaluaciones numericas solo comprueban el algebra y los asintoticos
-ya demostrados; no constituyen evidencia de RH.
+The numerical evaluations only check the algebra and the asymptotics
+already proved; they do not constitute evidence for RH.
+</content>

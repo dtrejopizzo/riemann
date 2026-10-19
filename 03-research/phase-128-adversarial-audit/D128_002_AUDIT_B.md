@@ -1,6 +1,6 @@
 # D128.002 — row B audit: findings and dispositions
 
-Date: 2026-09-12.  Target: Paper 44.
+Target: Paper 44.
 
 ## Accepted (verified)
 

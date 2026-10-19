@@ -1,6 +1,6 @@
 # B2 / M3 — The semi-local Connes residual, and the $PW_d$ ↔ prolate question (real or superficial?)
 
-**Route B, Milestone M3 (the priority front after M1).** Author: David Alejandro Trejo Pizzo · 2026-06-03.
+**Route B, Milestone M3 (the priority front after M1).**
 References: Connes–Consani arXiv:2006.13771 (§§4–6, Thms 1, 3, 6.11); Slepian–Pollak–Landau (prolate
 spheroidal wave functions); P7 (`06-papers/P7-localized-weil-detector/`); P8.
 

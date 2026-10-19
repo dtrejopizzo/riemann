@@ -1,6 +1,6 @@
 # Candidate end-to-end proof of Ω₇ — full spine for audit  [RETRACTED — see MAXIMAL-CLOSURE-omega7.md]
 
-**RETRACTION (2026-07-05, after audit by DTP).** This document over-declared three items and does NOT
+**RETRACTION (after audit by DTP).** This document over-declared three items and does NOT
 stand as written. Confirmed errors:
 - **D1 false:** `E_∞ = π^{−(¼+iz/2)}Γ(¼+iz/2)` is NOT an entire Hermite–Biehler structure function; the
   Γ-poles are at `z = i(2n+½)` in the UPPER half-plane (verified), and it is meromorphic, not entire.

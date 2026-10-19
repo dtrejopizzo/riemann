@@ -1,74 +1,74 @@
-# ACTA DEL TRIBUNAL — · · ## Veredicto consensuado sobre `RH-PROOF-FULL.md` (cadena E0→E4, programa CCM) Tres referees severos auditaron de forma independiente. Consistencia notable. Este acta
-**consensúa** los veredictos, **asienta como demostración sólida** lo verificado por el
-tribunal, y deja **francamente abierto** lo demás. Regla: frío; un resultado forzado es
-peor que un hueco admitido. **No se prueba RH** (el núcleo es RH-equivalente). --- ## A. VEREDICTO POR PIEZA (consenso de los tres) | Pieza | Veredicto unánime | Salvedades del tribunal |
+# TRIBUNAL RECORD — · · ## Consensus verdict on `RH-PROOF-FULL.md` (chain E0→E4, CCM program) Three severe referees audited independently. Remarkable consistency. This record
+**reaches consensus** on the verdicts, **records as solid proof** what the tribunal
+verified, and leaves **candidly open** the rest. Rule: cold; a forced result is
+worse than an admitted gap. **RH is not proved** (the core is RH-equivalent). --- ## A. VERDICT PER PIECE (consensus of the three) | Piece | Unanimous verdict | Tribunal caveats |
 |---|---|---|
-| **E0** (def + `QW`=forma de Weil) | **SÓLIDO** | "exacto por soporte" → exacto vía **autocorrelación** `2Ω=L=2logλ` ⟹ corte primos `n'≤λ²` (); el término de polo `𝒫` es **load-bearing**, no decorativo (); **NO hay conflación** `QW=Weil` (los 3 lo verifican) |
-| **E1** (real-rootedness) | **GAP** | prueba registrada **REFUTADA** por contraejemplo `(−1,2,−1)→−2/(s³−s)` (los 3). **Cita obligada CCM Thm 1.1(iii)**, NO cerrable con funciones enteras (, severo). RH-**neutral** (vale para DH) ⟹ usar E1 **no es circular** (+) |
-| **H1** (estructura) | **SÓLIDO** (estructura) | PF da fondo simple + envolvente positiva de-modulada — NO da PSD |
-| **H1′** (`QW` PSD) | **= RH** | `ε_0≥0 ⟺` Weil-pos `⟺` RH-hasta-T*. **PF≠PSD** = el hallazgo más importante (unánime) |
-| **N0** | **SÓLIDO** | verificó el exponente `5/4+δ/2`; firmó línea por línea. Incondicional |
-| **N1** | **SÓLIDO\*** (Boas) | medida armónica + dos constantes correcto; caso `x₀≠0` merece una línea (inocuo) |
-| **N2** | **SÓLIDO** (como `O(logλ)`) | **RETIRAR `Γ=O(1)`** (los 3): sólo `O(logλ)` está probado — y **alcanza** |
-| **N3** | **SÓLIDO\*** (Boas/PL) | |
-| **Reducción (Thm 2)** | **SÓLIDO** (módulo E1) | "la joya": reduce RH a un único número `ε_loc=o(λ^{−½})`. **Sin circularidad** () |
-| **III** | **CONDICIONAL** | (H-gap)+(H-lim)+**(H-pos)=RH-hasta-T***. **agrava**: toda la arquitectura `/ε_0` presupone régimen RH-true |
-| **N5b** | **SÓLIDO** (reducción) | el borde se **fusiona** con el núcleo, no desaparece |
-| **N5c** | **SÓLIDO\*** (módulo E1) | monotonía real-rooted correcta; marcar genericidad `Ξ_f(x₀)≠0` (verificable caso a caso para DH) |
-| **IV.1** | **ABIERTO** (análisis) | id. coef. constante **refutadas**; SL 2º orden fenomenológico.: `γ=3` **NO derivado**, la compacidad **obstruye** derivar `n²` |
-| **IV.2 ≡ §V** | **= RH** (núcleo) | RH-equivalente (variacional). Correctamente etiquetado |
-| **E3** (Hurwitz) | **SÓLIDO** (módulo E1) | normalización "libre" → libre **módulo límite no degenerado** `c_λ∈(0,∞)` () |
-| **E4** | **SÓLIDO** (clásico) | | --- ## B. ASENTADO COMO DEMOSTRACIÓN SÓLIDA (verificado por el tribunal) El tribunal verifica y **asienta** estos resultados, propuestos por los referees: **B.1 — Lema M1 (): sub-caso de E1 vía Herglotz. [SÓLIDO]**
-> Si `f(s)=Σ_k r_k/(s−d_k)` con `d_k∈ℝ` distintos y **todos los residuos `r_k>0`**, entonces
-> para `Im s>0`, `Im f(s)=−Im s·Σ_k r_k/|s−d_k|²<0`; luego `f` no se anula fuera de ℝ ⟹
-> **todos los ceros de `f` son reales**, con interlacing estricto (un cero por hueco).
-Como el residuo de la secular en `d_k` es `ξ_k`, esto prueba real-rootedness **en el sub-caso
-`ξ_k>0`**, self-contained, sin citar CCM. **Verificado correcto.** *Limitación:* NO cubre el
-ground state real (carrier de borde `ω*≈0.966π`: ni `ξ_k>0` ni `(−1)^kξ_k>0` — desajuste de
-fase). El caso general **es** CCM Thm 1.1(iii). **B.2 — Lema del horizonte CORREGIDO (). [SÓLIDO; reemplaza el conteo erróneo]**
-El documento afirmaba `#{γ_ρ≤T*}=dim` ("comparables"). **Es incorrecto.** Conteo correcto:
-> `N(T*)=2λ²logλ−λ²+O(logλ)` (Riemann–von Mangoldt, `T*=2πλ²`); DOF de `PW_Ω` sobre
-> `[−T*,T*]` `=(logλ/π)·(2T*)=(logλ/π)·4πλ²=4λ²logλ`. Dos lados: `#{|γ_ρ|≤T*}≈4λ²logλ−2λ²`
-> vs `DOF≈4λ²logλ`. **Coinciden al orden líder `4λ²logλ`, con defecto `m≈2λ²>0`.**
-> ⟹ **densidad ceros / densidad Nyquist `= 1 − 1/(2logλ) < 1`**: los ceros muestrean `PW_Ω`
-> **estrictamente por debajo de la densidad crítica de Beurling** (underspanning sub-crítico).
-**Verificado correcto.** El régimen es **sub-crítico, no crítico** — corrección sustantiva. **B.3 — `γ(λ)>0` a cada λ finito (). [SÓLIDO módulo H1]**
-Por H1 el ground state es **par y simple** ⟹ `ε_1>ε_0` estricto a cada λ finito ⟹ `γ(λ)>0`.
-**Verificado** (es la simplicidad de H1). *Limitación:* la **uniformidad** `liminf_λ γ(λ)>0`
-(que la hipótesis (H-gap) de III necesita) queda **abierta** — requiere la asintótica del
-operador de borde (Landau–Widom), no es regalo de la estructura finita. **B.4 — La identidad variacional `A_λ(g,g)=Σ_ρ g(γ_ρ)conj(g(conj γ_ρ))` (+). [SÓLIDO]**
-Verificada como la **forma cuadrática de Weil** restringida a `PW_Ω` (con el `𝒫` y el
-arquimediano del lado-ceros, ceros simples, `conj γ_ρ` que la hace indefinida sin RH). **NO
-hay conflación `QW≠Weil`.** El soporte-argumento es correcto vía autocorrelación `2Ω=L`. --- ## C. RECLASIFICACIONES DEL TRIBUNAL (el documento era demasiado optimista) **C.1 — El "déficit de frame" `g₀=Ξ_T` es RH-HARD, no cerrable por Landau–Beurling ().**
-El frame de ceros `S_λ=Σ_{|γ_ρ|≤T*}K_{γ_ρ}⊗K_{γ_ρ}` tiene **núcleo de dimensión `≈2λ²`** (por
-B.2, underspanning). `Ξ_T` es **uno de `≈2λ²`** candidatos casi-nulos (`Ξ_T(γ_ρ)=O(e^{−πλ²})`).
-Nada en `S_λ` solo distingue `Ξ_T`. La selección requiere la forma de Weil **completa** (con
-arquimediano+polo) siendo PSD = **RH-local**. ⟹ el Apéndice-2 del documento ("Landau–Beurling
-cerraría `g₀→Ξ_T`") **se refuta**: reclasificado de "análisis cerrable" a **RH-hard**. **C.2 — Conflación de objetos: `λ_min(S_λ)=0` vs `ε_0=λ_min(QW)` ().**
-El documento llama "déficit `ε_0~C₀/λ²`" al menor autovalor. Pero `λ_min(S_λ)=0` (el frame de
-ceros puro es PSD-degenerado, trivial), mientras `ε_0=λ_min(QW)` (forma de Weil **completa**)
-es el que tiene **signo = RH**. Son objetos distintos; el documento los conflaciona. **C.3 — E1 es cita obligada, no "reparación pendiente" ().**
-Al nivel de la información aislada (envolvente de-modulada positiva), el desajuste de fase
-`ω*≠π` impide la vía Herglotz/HB elemental. La real-rootedness **es** CCM Thm 1.1(iii)
-(espectro real de la realización autoadjunta / membresía en `H(E)` de de Branges), no un lema
-de funciones enteras pendiente. **C.4 — "γ=3 se sigue de IV.1" es demasiado optimista ().**
-El espectro `n²` es **numérico, no derivado**; la compacidad del operador de Loewner crudo
-**obstruye** derivarlo (compacto ⟹ suavizante, no diferencial). `γ=3` queda fenomenológico. --- ## D. ESTADO FINAL (consenso del tribunal) **Sólidamente demostrado (resiste los tres referees):**
-- Andamiaje de aproximación: **N0, N1, N2 (como `O(logλ)`), N3, Reducción, E3, E4** — matemática correcta y reutilizable.
-- E0 (def + identidad Weil, sin conflación), H1 (estructura), N5b, N5c (módulo E1).
-- **Nuevos, asentados por el tribunal:** Lema M1 (sub-caso E1), lema del horizonte corregido (sub-crítico), `γ(λ)>0` finito, la identidad variacional de Weil. **Abierto no-RH-hard (análisis, localizado):**
-- E1 propio = **cita obligada CCM 1.1(iii)** (no cerrable a este nivel).
-- IV.1 (operador de borde, Landau–Widom/de Branges).
-- (H-gap-res) `liminf γ(λ)>0` uniforme; (H-lim) existencia del límite de escala. **RH-hard (el muro — distribuido):**
-- **IV.2≡§V** (`ξ̂_∞=Ξ`, tasa `o(λ^{−½})`) = el núcleo.
-- **H1′** (`ε_0≥0`) y **(H-pos)** en III = Weil-positividad-hasta-T*.
-- **El déficit de frame `g₀=Ξ_T`** (reclasificado C.1) = RH-local + unicidad. --- ## E. VEREDICTO UNÁNIME DEL TRIBUNAL El programa CCM, auditado por los tres, **no prueba RH y no lo reclama**. Es una **reducción
-correcta y elegante de RH a un único núcleo RH-equivalente** (IV.2≡§V: "el ground state de la
-forma de Weil es `Ξ_T`"), **rodeada de un andamiaje de aproximación genuinamente probado**
-(N0–N3, Reducción, Hurwitz) que **resiste la auditoría severa**. Las dos afirmaciones que un referee hostil tomaría por incondicionales y NO lo son —**H1′
-(PSD)** y **III/(H-pos)**— estaban **correctamente degradadas** a RH-equivalentes en la
-auto-auditoría. **No detectamos auto-engaño ni circularidad oculta ni conflación `QW≠Weil`.** El tribunal **corrige** cuatro sobre-optimismos residuales (C.1–C.4): el déficit de frame es
-RH-hard (no Landau–Beurling), el lema del horizonte estaba mal contabilizado (régimen
-sub-crítico), E1 es cita obligada, y `γ=3` no está derivado. Con esas correcciones, **el
-documento es franco y su localización de RH es precisa**. **Frase final (consenso):** el "corazón" no se mueve un milímetro con análisis — **es RH**.
-El valor del programa es la localización limpia + el andamiaje probado, no una prueba. — A. · C. · H. (tribunal)
+| **E0** (def + `QW`=Weil form) | **SOLID** | "exact by support" → exact via **autocorrelation** `2Ω=L=2logλ` ⟹ prime cutoff `n'≤λ²` (); the pole term `𝒫` is **load-bearing**, not decorative (); **NO conflation** `QW=Weil` (all 3 verify it) |
+| **E1** (real-rootedness) | **GAP** | recorded proof **REFUTED** by counterexample `(−1,2,−1)→−2/(s³−s)` (all 3). **Mandatory citation CCM Thm 1.1(iii)**, NOT closable with entire functions (, severe). RH-**neutral** (holds for DH) ⟹ using E1 **is not circular** (+) |
+| **H1** (structure) | **SOLID** (structure) | PF gives simple bottom + de-modulated positive envelope — does NOT give PSD |
+| **H1′** (`QW` PSD) | **= RH** | `ε_0≥0 ⟺` Weil-pos `⟺` RH-up-to-T*. **PF≠PSD** = the most important finding (unanimous) |
+| **N0** | **SOLID** | verified the exponent `5/4+δ/2`; signed off line by line. Unconditional |
+| **N1** | **SOLID\*** (Boas) | harmonic measure + two constants correct; case `x₀≠0` deserves a line (harmless) |
+| **N2** | **SOLID** (as `O(logλ)`) | **WITHDRAW `Γ=O(1)`** (all 3): only `O(logλ)` is proved — and **suffices** |
+| **N3** | **SOLID\*** (Boas/PL) | |
+| **Reduction (Thm 2)** | **SOLID** (modulo E1) | "the jewel": reduces RH to a single number `ε_loc=o(λ^{−½})`. **No circularity** () |
+| **III** | **CONDITIONAL** | (H-gap)+(H-lim)+**(H-pos)=RH-up-to-T***. **worsens matters**: the whole `/ε_0` architecture presupposes the RH-true regime |
+| **N5b** | **SOLID** (reduction) | the boundary **merges** with the core, it does not disappear |
+| **N5c** | **SOLID\*** (modulo E1) | real-rooted monotonicity correct; flag genericity `Ξ_f(x₀)≠0` (verifiable case by case for DH) |
+| **IV.1** | **OPEN** (analysis) | constant-coefficient identifications **refuted**; 2nd-order SL phenomenological: `γ=3` **NOT derived**, compactness **obstructs** deriving `n²` |
+| **IV.2 ≡ §V** | **= RH** (core) | RH-equivalent (variational). Correctly labeled |
+| **E3** (Hurwitz) | **SOLID** (modulo E1) | "free" normalization → free **modulo non-degenerate limit** `c_λ∈(0,∞)` () |
+| **E4** | **SOLID** (classical) | | --- ## B. RECORDED AS SOLID PROOF (verified by the tribunal) The tribunal verifies and **records** these results, proposed by the referees: **B.1 — Lemma M1 (): sub-case of E1 via Herglotz. [SOLID]**
+> If `f(s)=Σ_k r_k/(s−d_k)` with distinct `d_k∈ℝ` and **all residues `r_k>0`**, then
+> for `Im s>0`, `Im f(s)=−Im s·Σ_k r_k/|s−d_k|²<0`; hence `f` does not vanish off ℝ ⟹
+> **all the zeros of `f` are real**, with strict interlacing (one zero per gap).
+Since the residue of the secular function at `d_k` is `ξ_k`, this proves real-rootedness **in the
+sub-case `ξ_k>0`**, self-contained, without citing CCM. **Verified correct.** *Limitation:* it does NOT cover the
+real ground state (boundary carrier `ω*≈0.966π`: neither `ξ_k>0` nor `(−1)^kξ_k>0` — phase
+mismatch). The general case **is** CCM Thm 1.1(iii). **B.2 — CORRECTED horizon lemma (). [SOLID; replaces the erroneous count]**
+The document claimed `#{γ_ρ≤T*}=dim` ("comparable"). **It is incorrect.** Correct count:
+> `N(T*)=2λ²logλ−λ²+O(logλ)` (Riemann–von Mangoldt, `T*=2πλ²`); DOF of `PW_Ω` over
+> `[−T*,T*]` `=(logλ/π)·(2T*)=(logλ/π)·4πλ²=4λ²logλ`. Both sides: `#{|γ_ρ|≤T*}≈4λ²logλ−2λ²`
+> vs `DOF≈4λ²logλ`. **They agree at leading order `4λ²logλ`, with deficit `m≈2λ²>0`.**
+> ⟹ **zero density / Nyquist density `= 1 − 1/(2logλ) < 1`**: the zeros sample `PW_Ω`
+> **strictly below Beurling's critical density** (sub-critical underspanning).
+**Verified correct.** The regime is **sub-critical, not critical** — substantive correction. **B.3 — `γ(λ)>0` at each finite λ (). [SOLID modulo H1]**
+By H1 the ground state is **even and simple** ⟹ `ε_1>ε_0` strict at each finite λ ⟹ `γ(λ)>0`.
+**Verified** (it is the simplicity of H1). *Limitation:* the **uniformity** `liminf_λ γ(λ)>0`
+(needed by hypothesis (H-gap) of III) remains **open** — it requires the asymptotics of the
+boundary operator (Landau–Widom), it is not a gift of the finite structure. **B.4 — The variational identity `A_λ(g,g)=Σ_ρ g(γ_ρ)conj(g(conj γ_ρ))` (+). [SOLID]**
+Verified as **Weil's quadratic form** restricted to `PW_Ω` (with `𝒫` and the
+archimedean term on the zero-side, simple zeros, `conj γ_ρ` which makes it indefinite without RH). **There is
+no conflation `QW≠Weil`.** The support argument is correct via autocorrelation `2Ω=L`. --- ## C. TRIBUNAL RECLASSIFICATIONS (the document was too optimistic) **C.1 — The "frame deficit" `g₀=Ξ_T` is RH-HARD, not closable by Landau–Beurling ().**
+The zero frame `S_λ=Σ_{|γ_ρ|≤T*}K_{γ_ρ}⊗K_{γ_ρ}` has **kernel of dimension `≈2λ²`** (by
+B.2, underspanning). `Ξ_T` is **one of `≈2λ²`** near-null candidates (`Ξ_T(γ_ρ)=O(e^{−πλ²})`).
+Nothing in `S_λ` alone singles out `Ξ_T`. Selecting it requires the **full** Weil form (with
+archimedean+pole) being PSD = **local-RH**. ⟹ the document's Appendix-2 ("Landau–Beurling
+would close `g₀→Ξ_T`") **is refuted**: reclassified from "closable analysis" to **RH-hard**. **C.2 — Conflation of objects: `λ_min(S_λ)=0` vs `ε_0=λ_min(QW)` ().**
+The document calls the smallest eigenvalue "deficit `ε_0~C₀/λ²`". But `λ_min(S_λ)=0` (the
+pure zero frame is trivially PSD-degenerate), while `ε_0=λ_min(QW)` (the **full** Weil form)
+is the one whose **sign = RH**. They are distinct objects; the document conflates them. **C.3 — E1 is a mandatory citation, not a "pending repair" ().**
+At the level of the isolated information (de-modulated positive envelope), the phase mismatch
+`ω*≠π` blocks the elementary Herglotz/HB route. Real-rootedness **is** CCM Thm 1.1(iii)
+(real spectrum of the self-adjoint realization / membership in de Branges' `H(E)`), not a
+pending entire-function lemma. **C.4 — "γ=3 follows from IV.1" is too optimistic ().**
+The spectrum `n²` is **numerical, not derived**; the compactness of the raw Loewner operator
+**obstructs** deriving it (compact ⟹ smoothing, not differential). `γ=3` remains phenomenological. --- ## D. FINAL STATE (tribunal consensus) **Solidly proved (withstands all three referees):**
+- Approximation scaffolding: **N0, N1, N2 (as `O(logλ)`), N3, Reduction, E3, E4** — correct, reusable mathematics.
+- E0 (def + Weil identity, no conflation), H1 (structure), N5b, N5c (modulo E1).
+- **New, recorded by the tribunal:** Lemma M1 (E1 sub-case), corrected horizon lemma (sub-critical), finite `γ(λ)>0`, Weil's variational identity. **Open, not RH-hard (analysis, localized):**
+- E1 proper = **mandatory citation CCM 1.1(iii)** (not closable at this level).
+- IV.1 (boundary operator, Landau–Widom/de Branges).
+- (H-gap-res) uniform `liminf γ(λ)>0`; (H-lim) existence of the scaling limit. **RH-hard (the wall — distributed):**
+- **IV.2≡§V** (`ξ̂_∞=Ξ`, rate `o(λ^{−½})`) = the core.
+- **H1′** (`ε_0≥0`) and **(H-pos)** in III = Weil-positivity-up-to-T*.
+- **The frame deficit `g₀=Ξ_T`** (reclassified C.1) = local-RH + uniqueness. --- ## E. UNANIMOUS TRIBUNAL VERDICT The CCM program, audited by all three, **does not prove RH and does not claim to**. It is a **correct
+and elegant reduction of RH to a single RH-equivalent core** (IV.2≡§V: "the ground state of
+the Weil form is `Ξ_T`"), **surrounded by genuinely proved approximation scaffolding**
+(N0–N3, Reduction, Hurwitz) that **withstands severe audit**. The two claims that a strict audit would take for unconditional and are NOT —**H1′
+(PSD)** and **III/(H-pos)**— were **correctly downgraded** to RH-equivalents in the
+self-audit. **We detect no self-deception, no hidden circularity, no conflation `QW≠Weil`.** The tribunal **corrects** four residual overoptimisms (C.1–C.4): the frame deficit is
+RH-hard (not Landau–Beurling), the horizon lemma was miscounted (regime is
+sub-critical), E1 is a mandatory citation, and `γ=3` is not derived. With these corrections, **the
+document is candid and its localization of RH is precise**. **Final statement (consensus):** the "core" does not move a millimeter with analysis — **it is RH**.
+The value of the program is the clean localization + the proved scaffolding, not a proof.

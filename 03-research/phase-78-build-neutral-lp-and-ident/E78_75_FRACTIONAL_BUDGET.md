@@ -1,6 +1,6 @@
 # E78.75 - The shell budget is equivalent to a fractional consumption criterion
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

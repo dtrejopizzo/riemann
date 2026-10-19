@@ -1,6 +1,6 @@
 # Phase 3 — first-pass numerical results (candid report: one confirmation, one genuine blocker)
 
-**Route B / Phase 3.** Author: David Alejandro Trejo Pizzo · 2026-06-03.
+**Route B / Phase 3.**
 Code: `phase3_carleson.py` (numpy + mpmath). **Self-contained Gram, NOT P7's validated engine.**
 
 > **Outcome.** **(1) Band test — CONFIRMS T3.4:** the anatomy concentration rises to the **Hermite
@@ -40,7 +40,7 @@ $a=\tfrac14$ vs $\tfrac34$ give different baselines); it is **not** a clean meas
 > **blocked** on reproducing P7's validated engine (engine-spec §3: $X=10^5$, full archimedean+polar, the
 > validated normalization), and additionally on handling $L_{\mathrm{DH}}$'s **lack of an Euler product** (its
 > arithmetic side is not a clean $\sum\Lambda_L(n)n^{-s}$). This is real engineering, best done with P7's
-> actual code; it is not reliably reproducible self-contained in this session.
+> actual code; it is not reliably reproducible self-contained in this record.
 
 ## 2. The band test: T3.4 confirmed (basis artifact)
 
@@ -88,5 +88,5 @@ trustworthy and should not be reported as measurements. The candid state: **the 
 - Carleson constant measurement — ⛔ blocked (validated engine + $L_{\mathrm{DH}}$ Euler-product handling).
 - Slepian band test (the real one) — ⬜ needs prolate basis.
 - Conjecture B2 numerical test — ⬜ needs the engine.
-- **Decision point for the user:** obtain P7's validated engine code, or invest the engine-spec §3
+- **Decision point:** obtain P7's validated engine code, or invest the engine-spec §3
   reimplementation, before trusting any Phase-3 measurement.

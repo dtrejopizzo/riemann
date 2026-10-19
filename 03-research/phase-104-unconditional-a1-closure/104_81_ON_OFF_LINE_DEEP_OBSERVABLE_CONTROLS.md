@@ -1,34 +1,34 @@
-# 104_81 — Controles on/off-line del observable profundo
+# 104_81 — On/off-line controls of the deep observable
 
-**Resultado.** El observable profundo de 104_75 no se anula por una
-tautología de la normalización. Dos pares de controles exactos lo separan:
+**Result.** The deep observable of 104_75 does not vanish by a
+normalization tautology. Two pairs of exact controls separate it:
 
 \[
 \begin{array}{c|c|c}
-\text{control}&\text{ubicación de ceros}&
-\text{densidad logarítmica profunda}\\ \hline
-\text{cuarteto crítico}&|w|=1&0\\
-\text{cuarteto exterior}&|w|\ne1&1/8\\
-\text{Euler reticular }Z_+&\Re\rho=1/2&0\\
-\text{Euler reticular }Z_-&\Re\rho\ne1/2&1/4.
+\text{control}&\text{zero location}&
+\text{deep logarithmic density}\\ \hline
+\text{critical quartet}&|w|=1&0\\
+\text{outer quartet}&|w|\ne1&1/8\\
+\text{lattice Euler }Z_+&\Re\rho=1/2&0\\
+\text{lattice Euler }Z_-&\Re\rho\ne1/2&1/4.
 \end{array}
 \]
 
-El segundo par conserva pesos de Mangoldt no negativos, torres primas
-unitarias, producto de Euler y ecuación funcional. Por tanto el detector
-distingue correctamente un modelo on-line de uno off-line aun después de
-incorporar la aritmética formal.
+The second pair keeps non-negative Mangoldt weights, unitary prime
+towers, an Euler product and a functional equation. Hence the detector
+correctly tells apart an on-line model from an off-line one even after
+incorporating formal arithmetic.
 
-Esto **no prueba** que el observable sea cero para los pesos ordinarios
-\(\Lambda(m)\). Los modelos Euler son reticulares y no satisfacen el PNT
-continuo ni el factor Gamma de la zeta de Riemann. El resultado es un
-control adversarial del gate, no una prueba de A1 o RH.
+This **does not prove** that the observable is zero for the ordinary
+weights \(\Lambda(m)\). The Euler models are lattice models and do not
+satisfy the continuous PNT or Riemann zeta's Gamma factor. The result is
+an adversarial control of the gate, not a proof of A1 or RH.
 
 ---
 
-## 1. El observable abstracto
+## 1. The abstract observable
 
-Para una sucesión real \(\ell=(\ell_n)\), ponga
+For a real sequence \(\ell=(\ell_n)\), set
 
 \[
  {\cal D}_X(\ell):={1\over H_X}\sum_{n\le X}{1\over n}
@@ -36,13 +36,13 @@ Para una sucesión real \(\ell=(\ell_n)\), ponga
  \qquad H_X=\sum_{n\le X}{1\over n}.                    \tag{1}
 \]
 
-Si
+If
 
 \[
  F(z)=\prod_{j=1}^{N}\left(1-{z\over a_j}\right),
 \]
 
-entonces, en el disco de convergencia,
+then, in the disk of convergence,
 
 \[
  -{F'(z)\over F(z)}
@@ -50,75 +50,75 @@ entonces, en el disco de convergencia,
                                                                \tag{2}
 \]
 
-El análogo finito del coeficiente de Li es por tanto
+The finite analogue of the Li coefficient is therefore
 
 \[
  \ell_n=N-\sum_{j=1}^{N}a_j^{-n}.                       \tag{3}
 \]
 
-Esta convención tiene exactamente el signo de 104_80: un polo interior
-de \(-F'/F\) aporta \(+a^{-n}\) a (2), y por ello \(-a^{-n}\) a
+This convention has exactly the sign of 104_80: an interior pole of
+\(-F'/F\) contributes \(+a^{-n}\) to (2), and hence \(-a^{-n}\) to
 \(\ell_n\).
 
-## 2. Control crítico: el evento nunca ocurre
+## 2. Critical control: the event never occurs
 
-Tome el multiconjunto
+Take the multiset
 
 \[
  \{a_j\}=\{i,-i,i,-i\}.
 \]
 
-Todos sus puntos están en el círculo unidad y
+All its points lie on the unit circle and
 
 \[
  \ell_n^{(0)}
  =4-4\cos\left({\pi n\over2}\right)\in\{0,4,8\}.        \tag{4}
 \]
 
-Luego
+Hence
 
 \[
- \boxed{{\cal D}_X(\ell^{(0)})=0\quad\text{para todo }X.} \tag{5}
+ \boxed{{\cal D}_X(\ell^{(0)})=0\quad\text{for all }X.} \tag{5}
 \]
 
-No se usa una estimación: el indicador de (1) es idénticamente cero.
+No estimate is used: the indicator in (1) is identically zero.
 
-## 3. Control exterior: densidad exacta \(1/8\)
+## 3. Outer control: exact density \(1/8\)
 
-Fije
+Fix
 
 \[
- 1<R<e^{1/100},\qquad\text{por ejemplo }R={201\over200},
+ 1<R<e^{1/100},\qquad\text{for instance }R={201\over200},
 \]
 
-y tome
+and take
 
 \[
  \{a_j\}=\{Ri,-Ri,i/R,-i/R\}.
 \]
 
-El cuarteto es estable por conjugación e inversión y
+The quartet is stable under conjugation and inversion, and
 
 \[
  \ell_n^{(R)}
  =4-2(R^n+R^{-n})\cos\left({\pi n\over2}\right).        \tag{6}
 \]
 
-Para \(n\) impar vale \(4\); para \(n\equiv2\pmod4\) es positivo; y para
-\(4\mid n\),
+For odd \(n\) it equals \(4\); for \(n\equiv2\pmod4\) it is positive; and
+for \(4\mid n\),
 
 \[
  \ell_n^{(R)}=4-2(R^n+R^{-n})
              =-(2+o(1))R^n.                            \tag{7}
 \]
 
-El evento de (1) comienza, salvo \(O(1)\) grados, en
+The event in (1) begins, up to \(O(1)\) degrees, at
 
 \[
  n_X={\sqrt X-\log2\over\log R}+O(1).                   \tag{8}
 \]
 
-Como solamente sobrevive una clase módulo \(4\),
+Since only one class mod \(4\) survives,
 
 \[
 \begin{aligned}
@@ -128,43 +128,42 @@ Como solamente sobrevive una clase módulo \(4\),
 \end{aligned}                                           \tag{9}
 \]
 
-Dividiendo por \(H_X=\log X+O(1)\),
+Dividing by \(H_X=\log X+O(1)\),
 
 \[
  \boxed{\lim_{X\to\infty}{\cal D}_X(\ell^{(R)})={1\over8}.} \tag{10}
 \]
 
-La elección \(R<e^{1/100}\) comprueba además el regulador diagonal de la
-fase. Si \(\varepsilon_X=e^{-X/100}\) desplaza cada punto en
-\(O(\varepsilon_X)\), la perturbación uniforme de los grados \(n\le X\)
-es
+The choice \(R<e^{1/100}\) also checks the diagonal phase regulator. If
+\(\varepsilon_X=e^{-X/100}\) shifts each point by \(O(\varepsilon_X)\),
+the uniform perturbation over degrees \(n\le X\) is
 
 \[
  O(X\varepsilon_XR^X)
  =\exp\{-(1/100-\log R)X+O(\log X)\}=o(1).              \tag{11}
 \]
 
-Así (10) no es un artefacto de haber quitado el regulador. Un valor como
-\(R=2\) sirve para el cuarteto no regulado, pero no para este test
-diagonal literal.
+So (10) is not an artifact of having removed the regulator. A value like
+\(R=2\) works for the unregulated quartet, but not for this literal
+diagonal test.
 
-## 4. Dos controles con producto de Euler positivo
+## 4. Two controls with a positive Euler product
 
-Los cuartetos prueban el signo y la escala. Para verificar que el
-observable tampoco depende de haber omitido toda la estructura Euler,
-considere primero
+The quartets prove the sign and the scale. To check that the observable
+also does not depend on having omitted the whole Euler structure,
+consider first
 
 \[
  Z_+(T)={1+4T^2\over(1-T)(1-4T)},\qquad T=4^{-s}.       \tag{12}
 \]
 
-Usando los polinomios de collares
+Using the necklace polynomials
 
 \[
  M_d(r)={1\over d}\sum_{e\mid d}\mu(e)r^{d/e},
 \]
 
-su número de primos formales de grado \(d\) es
+its number of formal primes of degree \(d\) is
 
 \[
  \pi_d^+=M_d(4)+M_d(1)
@@ -172,54 +171,54 @@ su número de primos formales de grado \(d\) es
  -{\bf1}_{4\mid d}M_{d/4}(16).                         \tag{13}
 \]
 
-Es un entero no negativo. Para \(4\nmid d\) es inmediato. Para
-\(4\mid d\), la interpretación de \(M_q(16)\) como número de collares
-aperiódicos da \(M_q(16)\le16^q/q\); junto con la cota elemental inferior,
+It is a non-negative integer. For \(4\nmid d\) this is immediate. For
+\(4\mid d\), interpreting \(M_q(16)\) as the number of aperiodic
+necklaces gives \(M_q(16)\le16^q/q\); together with the elementary lower
+bound,
 
 \[
  M_d(4)\ge {4^d\over d}-2^d,\qquad
  M_{d/4}(16)\le {4\,2^d\over d}
 \]
 
-dan no negatividad para \(d\ge4\), y los grados iniciales se comprueban
-directamente. La derivada logarítmica es
+give non-negativity for \(d\ge4\), and the initial degrees are checked
+directly. The logarithmic derivative is
 
 \[
  \Psi_k^+=4^k+1-(2i)^k-(-2i)^k,                        \tag{14}
 \]
 
-y
+and
 
 \[
  Z_+(1/(4T))=Z_+(T).                                    \tag{15}
 \]
 
-La función completada correspondiente puede tomarse como
+The corresponding completed function can be taken as
 
 \[
  \Xi_+(s)=4^s+4^{1-s}.                                  \tag{16}
 \]
 
-Todos sus ceros satisfacen
+All of its zeros satisfy
 
 \[
  \Re\rho={1\over2},\qquad
  \Im\rho={ (2j+1)\pi\over2\log4}.
 \]
 
-El producto canónico par de
-\(\cosh((s-\tfrac12)\log4)\) no deja factor exponencial. Al emparejar
-conjugados, cada sumando de Li es
-\(2(1-\cos(n\theta_j))=|1-e^{in\theta_j}|^2\ge0\).
-Además los ceros hasta altura \(n\) son \(O(n)\), y la cola se acota por
-\(O(n^2\sum_{j>n}j^{-2})=O(n)\). Por tanto sus coeficientes son
-no negativos y \(O(n)\); en particular el evento profundo nunca ocurre:
+The even canonical product of \(\cosh((s-\tfrac12)\log4)\) leaves no
+exponential factor. Pairing conjugates, each Li summand is
+\(2(1-\cos(n\theta_j))=|1-e^{in\theta_j}|^2\ge0\). Moreover the zeros up
+to height \(n\) number \(O(n)\), and the tail is bounded by
+\(O(n^2\sum_{j>n}j^{-2})=O(n)\). Hence its coefficients are non-negative
+and \(O(n)\); in particular the deep event never occurs:
 
 \[
- \boxed{{\cal D}_X(\lambda^+)=0\quad\text{para todo }X.} \tag{17}
+ \boxed{{\cal D}_X(\lambda^+)=0\quad\text{for all }X.} \tag{17}
 \]
 
-El control off-line es el falsificador completamente probado en 104_78:
+The off-line control is the fully proved falsifier of 104_78:
 
 \[
  Z_-(T)={(1-3T)(1-2T)\over(1-T)(1-6T)},\qquad T=6^{-s}, \tag{18}
@@ -234,49 +233,49 @@ El control off-line es el falsificador completamente probado en 104_78:
  Z_-(1/(6T))=Z_-(T).                                    \tag{20}
 \]
 
-Su completamiento
+Its completion
 
 \[
  \Xi_-(s)=6^s-5+6^{1-s}
 \]
 
-tiene ceros con partes reales \(\log_6 2\) y \(\log_6 3\). La singularidad
-dominante produce
+has zeros with real parts \(\log_6 2\) and \(\log_6 3\). The dominant
+singularity produces
 
 \[
  \lambda_n^-=-(1+o(1))
  \left({\log3\over\log2}\right)^n
- \quad(n\ \text{par}),
+ \quad(n\ \text{even}),
 \]
 
-y 104_78, incluyendo el regulador diagonal, prueba
+and 104_78, including the diagonal regulator, proves
 
 \[
  \boxed{\lim_{X\to\infty}{\cal D}_X(\lambda^-)={1\over4}.} \tag{21}
 \]
 
-## 5. Veredicto
+## 5. Verdict
 
-Los controles prueban tres hechos distintos:
+The controls prove three distinct facts:
 
-1. el observable es exactamente inocuo en el control crítico;
-2. un cuarteto off-line genera la cola profunda con densidad positiva y
-   el signo previsto por la identidad de 104_80;
-3. la misma separación sobrevive en dos sistemas con producto de Euler,
-   pesos de Mangoldt positivos y ecuación funcional.
+1. the observable is exactly harmless on the critical control;
+2. an off-line quartet generates the deep tail with positive density and
+   the sign predicted by the identity of 104_80;
+3. the same separation survives in two systems with an Euler product,
+   positive Mangoldt weights and a functional equation.
 
-Por tanto queda **falsificada** la posibilidad de que el límite sea cero
-por una normalización, un error de signo o una propiedad Euleriana
-universal. También queda **validado** el observable como detector.
+Hence the possibility that the limit is zero by a normalization, a sign
+error, or a universal Eulerian property is **falsified**. The observable
+is also thereby **validated** as a detector.
 
-Lo que permanece abierto es específico: demostrar (17) para la zeta real,
-es decir, para la ubicación ordinaria de los pesos \(\Lambda(m)\), su
-factor Gamma y su PNT continuo. Hacerlo excluiría los polos interiores de
-104_80 y demostraría RH; ninguno de los controles anteriores suministra
-esa exclusión.
+What remains open is specific: proving (17) for the real zeta, that is,
+for the ordinary placement of the weights \(\Lambda(m)\), its Gamma
+factor and its continuous PNT. Doing so would exclude the interior poles
+of 104_80 and prove RH; none of the controls above supplies that
+exclusion.
 
-## Reproducción
+## Reproduction
 
-Ejecutar desde el directorio tools:
+Run from the tools directory:
 
     python3 on_off_line_deep_observable_check.py

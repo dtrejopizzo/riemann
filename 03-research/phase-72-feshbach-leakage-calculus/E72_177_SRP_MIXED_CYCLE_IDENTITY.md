@@ -1,7 +1,6 @@
 # E72.177 -- Mixed cycle identity for SRP
 
-**Date:** 2026-07-09.
-**Role:** express the signed residual polynomial gate as one finite mixed prime-power cycle identity.
+**Purpose:** express the signed residual polynomial gate as one finite mixed prime-power cycle identity.
 
 ## 0. Polynomial residual
 

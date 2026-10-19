@@ -1,6 +1,6 @@
 # E77.7u - Spectral Feshbach equivalence
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

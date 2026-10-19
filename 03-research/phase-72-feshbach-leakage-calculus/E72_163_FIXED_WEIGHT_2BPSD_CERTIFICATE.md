@@ -1,7 +1,6 @@
 # E72.163 -- Fixed-weight two-block PSD certificate
 
-**Date:** 2026-07-09.
-**Role:** remove window-dependent weights from `2B-PSD`.
+**Purpose:** remove window-dependent weights from `2B-PSD`.
 
 ## 0. Fixed certificate
 

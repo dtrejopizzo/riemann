@@ -1,0 +1,216 @@
+{
+  "status": "PASS; floating Galerkin sensitivities, not a global sign certificate",
+  "divisor_inversion_size": 30,
+  "tangent_check": "exact rational tangent test passed",
+  "tuned_contact": {
+    "label": "artificially tuned finite Galerkin contact; not actual \u039b",
+    "extra_a2": 0.0009714656452110366,
+    "tangent_ratio": 0.4466681766521104,
+    "quadratic_cost": 15.462073885840828,
+    "positive_complement_gap": 0.005545154257649454,
+    "trials": [
+      {
+        "epsilon": 0.004999115759151014,
+        "value": -0.00048301892157770926,
+        "predicted": -0.00048301892157767137
+      },
+      {
+        "epsilon": -0.004999115759151014,
+        "value": -0.00028981135294648487,
+        "predicted": -0.0002898113529466028
+      }
+    ]
+  },
+  "cases": [
+    {
+      "T": 1.0,
+      "dimension": 48,
+      "gain": 0.9998970697589361,
+      "branch_gap": 0.00034162813676241743,
+      "coefficient_responses": [
+        {
+          "n": 2,
+          "derivative_a": 0.10438704176650436,
+          "finite_difference": 0.10438700129289379,
+          "correlation": 0.052189723711555794
+        },
+        {
+          "n": 3,
+          "derivative_a": 0.04387425970007129,
+          "finite_difference": 0.04387424586416166,
+          "correlation": 0.0219302180601281
+        },
+        {
+          "n": 4,
+          "derivative_a": 0.015615312528659544,
+          "finite_difference": 0.015615318776918128,
+          "correlation": 0.007799289974587919
+        },
+        {
+          "n": 5,
+          "derivative_a": 0.0043503766022055445,
+          "finite_difference": 0.004350377530437655,
+          "correlation": 0.0021662422003955978
+        },
+        {
+          "n": 6,
+          "derivative_a": 0.0007116840018991187,
+          "finite_difference": 0.0007116840061716089,
+          "correlation": 0.000346708615211838
+        },
+        {
+          "n": 7,
+          "derivative_a": 4.640272402796965e-05,
+          "finite_difference": 4.6402737208239835e-05,
+          "correlation": 1.403373397054131e-05
+        }
+      ],
+      "divisor_error_responses": [
+        {
+          "d": 2,
+          "derivative": 0.06571458505964303,
+          "finite_difference": 0.06571458230353322
+        },
+        {
+          "d": 3,
+          "derivative": 0.02504027187120592,
+          "finite_difference": 0.025040269041598503
+        }
+      ]
+    },
+    {
+      "T": 1.5,
+      "dimension": 48,
+      "gain": 0.9999356263627345,
+      "branch_gap": 0.00014639450840925328,
+      "coefficient_responses": [
+        {
+          "n": 2,
+          "derivative_a": 0.08535276329379429,
+          "finite_difference": 0.08535275457521861,
+          "correlation": 0.04267562817630709
+        },
+        {
+          "n": 3,
+          "derivative_a": 0.05908276884578507,
+          "finite_difference": 0.05908272006638348,
+          "correlation": 0.029539785350321236
+        },
+        {
+          "n": 4,
+          "derivative_a": 0.040459745940011935,
+          "finite_difference": 0.04045970063981663,
+          "correlation": 0.020227674442984924
+        },
+        {
+          "n": 5,
+          "derivative_a": 0.02778414177775555,
+          "finite_difference": 0.027784124873031498,
+          "correlation": 0.013889464348219187
+        },
+        {
+          "n": 6,
+          "derivative_a": 0.01913889796843505,
+          "finite_difference": 0.019138898654791348,
+          "correlation": 0.009566564162750464
+        },
+        {
+          "n": 7,
+          "derivative_a": 0.013176415961034365,
+          "finite_difference": 0.01317642192022461,
+          "correlation": 0.00658513123336819
+        },
+        {
+          "n": 8,
+          "derivative_a": 0.009043589851388877,
+          "finite_difference": 0.009043595239344171,
+          "correlation": 0.004518585147457319
+        },
+        {
+          "n": 9,
+          "derivative_a": 0.0061542556851101205,
+          "finite_difference": 0.006154259252211246,
+          "correlation": 0.0030738250598561275
+        },
+        {
+          "n": 10,
+          "derivative_a": 0.004151452296055638,
+          "finite_difference": 0.004151454308098934,
+          "correlation": 0.002072358897309405
+        },
+        {
+          "n": 11,
+          "derivative_a": 0.002764458869214847,
+          "finite_difference": 0.002764459910986616,
+          "correlation": 0.0013788175381091235
+        },
+        {
+          "n": 12,
+          "derivative_a": 0.001791058606482308,
+          "finite_difference": 0.001791059112132842,
+          "correlation": 0.0008920860740681422
+        },
+        {
+          "n": 13,
+          "derivative_a": 0.0011165974403844418,
+          "finite_difference": 0.0011165976254723375,
+          "correlation": 0.0005548337808624196
+        },
+        {
+          "n": 14,
+          "derivative_a": 0.0006753204439109145,
+          "finite_difference": 0.0006753205328280386,
+          "correlation": 0.00033418107840862645
+        },
+        {
+          "n": 15,
+          "derivative_a": 0.0003852924241955696,
+          "finite_difference": 0.0003852924757019593,
+          "correlation": 0.00018915773287071324
+        },
+        {
+          "n": 16,
+          "derivative_a": 0.00020496920077554164,
+          "finite_difference": 0.00020496918051726706,
+          "correlation": 9.899031675616112e-05
+        },
+        {
+          "n": 17,
+          "derivative_a": 9.975279645740609e-05,
+          "finite_difference": 9.975277270868331e-05,
+          "correlation": 4.6378727797749823e-05
+        },
+        {
+          "n": 18,
+          "derivative_a": 4.3096264063068594e-05,
+          "finite_difference": 4.309628764964656e-05,
+          "correlation": 1.8048637889649618e-05
+        },
+        {
+          "n": 19,
+          "derivative_a": 1.6550755845590387e-05,
+          "finite_difference": 1.6550760761901984e-05,
+          "correlation": 4.775029310446637e-06
+        },
+        {
+          "n": 20,
+          "derivative_a": 7.734819290977665e-06,
+          "finite_difference": 7.734829443606372e-06,
+          "correlation": 3.667772579216719e-07
+        }
+      ],
+      "divisor_error_responses": [
+        {
+          "d": 2,
+          "derivative": 0.031335694547700986,
+          "finite_difference": 0.03133568231006301
+        },
+        {
+          "d": 3,
+          "derivative": 0.024157287369602144,
+          "finite_difference": 0.024157287398240964
+        }
+      ]
+    }
+  ]
+}

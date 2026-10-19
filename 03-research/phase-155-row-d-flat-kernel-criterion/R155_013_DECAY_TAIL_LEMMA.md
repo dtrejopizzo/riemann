@@ -1,6 +1,6 @@
 # R155.013 — A decay-based tail lemma for flat-top weights (the smooth analogue of `lem:F1`)
 
-*Builder, phase 155, 2026-09-21. Written in answer to `R155_012 §12(2)`: "the missing object is a
+*Phase 155. Written in answer to `R155_012 §12(2)`: "the missing object is a
 decay-based tail lemma for flat-top weights … a bound `|ν̂_w(τ)| ≤ D(w)τ^{−2}` — explicit, one
 integration by parts, no zeros — would close the tail at `τ ≍ D^{1/2}`, i.e. at `O(10²)` rather than
 `10^{25}`, for **every** flat-top class."*
@@ -17,22 +17,22 @@ arithmetic). No sign is claimed for `ζ` at any `T`, and no endpoint is claimed 
 ## §0 What it does, in four lines
 
 1. `prop:env` closes the tail of a flat-top certificate at `τ_env = 2πe^{A_T+‖ν_w‖_TV}`, i.e. at
-   `10^{18.5}…10^{40}` for the `R155_011` weights: the total-variation bound `|ν̂| ≤ ‖ν‖_TV` throws
-   away all decay.
+ `10^{18.5}…10^{40}` for the `R155_011` weights: the total-variation bound `|ν̂| ≤ ‖ν‖_TV` throws
+ away all decay.
 2. The theorem below replaces the TV bound on the **absolutely continuous** part of `ν_w` by
-   `D(w)τ^{−2}`, `D(w)` explicit and computable from `w'' `, and closes that part of the tail at
-   `τ ≍ D^{1/2} ≈ 10²`. `D(w) = 2.6·10⁴ … 5.1·10⁴` for the actual `R155_011` weights.
+ `D(w)τ^{−2}`, `D(w)` explicit and computable from `w'' `, and closes that part of the tail at
+ `τ ≍ D^{1/2} ≈ 10²`. `D(w) = 2.6·10⁴ … 5.1·10⁴` for the actual `R155_011` weights.
 3. **The prime atoms do not decay at all.** They are bounded only by their mass
-   `E_at(w) = Σ_{log n>2T} v_n|w(log n)|`, and that term enters the threshold *exponentially*:
-   `τ_stop ≈ 2πe^{A_T+E_at(w)}`. With the measured `E_at = 18.0…44.0` this is `10^{9}…10^{20}` —
-   twenty decades better than `prop:env`, and still hopeless.
+ `E_at(w) = Σ_{log n>2T} v_n|w(log n)|`, and that term enters the threshold *exponentially*:
+ `τ_stop ≈ 2πe^{A_T+E_at(w)}`. With the measured `E_at = 18.0…44.0` this is `10^{9}…10^{20}` —
+ twenty decades better than `prop:env`, and still hopeless.
 4. **Corollary (the real content).** `E_at(w) = 0` is a *finite* set of linear conditions
-   (`w(log n) = 0` at the `373…491` prime powers with `2T < log n ≤ U`), and for such *comb-free*
-   weights the theorem closes the tail at `τ_stop = 118, 196, 170, 179` at
-   `T = ½log3, 0.58, 0.62, log2`. That is the `O(10²)` the audit asked for, and it is the first
-   flat-top tail lemma in the corpus that is not doubly exponential. It does **not** produce an
-   endpoint: every measured value on `[0,60] ⊂ [0,τ_stop]` is negative (§6, and `R155_011 §8`
-   amended).
+ (`w(log n) = 0` at the `373…491` prime powers with `2T < log n ≤ U`), and for such *comb-free*
+ weights the theorem closes the tail at `τ_stop = 118, 196, 170, 179` at
+ `T = ½log3, 0.58, 0.62, log2`. That is the `O(10²)` the audit asked for, and it is the first
+ flat-top tail lemma in the corpus that is not doubly exponential. It does **not** produce an
+ endpoint: every measured value on `[0,60] ⊂ [0,τ_stop]` is negative (§6, and `R155_011 §8`
+ amended).
 
 ---
 
@@ -55,9 +55,9 @@ f_w(τ) = σ_T(τ) + ν̂_w(τ) + (β₀−2)ĝ₀(τ) + β₁ĝ₁(τ) + 2ĝ₀
 Write the three pieces of `ν̂_w + 2ĝ₀` as
 
 ```
-Ψ_w(τ) = ∫_{2T}^∞ (1−w(u))K(u) cos(τu) du,          (K-tail)
-Φ_w(τ) = 4∫_0^∞ w(u) cosh(u/2) cos(τu) du,          (cosh part, WITH the canonical column 2ĝ₀)
-A_w(τ) = − Σ_{n : log n > 2T} v_n w(log n) cos(τ log n).   (prime atoms outside the window)
+Ψ_w(τ) = ∫_{2T}^∞ (1−w(u))K(u) cos(τu) du, (K-tail)
+Φ_w(τ) = 4∫_0^∞ w(u) cosh(u/2) cos(τu) du, (cosh part, WITH the canonical column 2ĝ₀)
+A_w(τ) = − Σ_{n : log n > 2T} v_n w(log n) cos(τ log n). (prime atoms outside the window)
 ```
 
 so that `f_w = σ_T + Ψ_w + Φ_w + A_w + (β₀−2)ĝ₀ + β₁ĝ₁`. (This is exactly what `check.py`/
@@ -66,7 +66,7 @@ so that `f_w = σ_T + Ψ_w + Φ_w + A_w + (β₀−2)ĝ₀ + β₁ĝ₁`. (This 
 
 ### 1.1 Why `2ĝ₀` must be grouped with the `cosh` tail — the point the naive derivation misses
 
-The prompt's derivation ("edge terms at `u = 2T` vanish by `w(2T)=1`, `w'(2T)=0`") is correct for the
+The order's derivation ("edge terms at `u = 2T` vanish by `w(2T)=1`, `w'(2T)=0`") is correct for the
 `K`-tail and **false for the `cosh` tail taken alone**. The density of `ν_w` at `u = 2T⁺` is
 `½(1−w)K + 2w cosh(u/2) = 0 + 2cosh T ≠ 0`, so `ν_w` restricted to `|u| ≥ 2T` has a jump of size
 `2cosh T` at the window edge and one integration by parts leaves the irreducible term
@@ -89,21 +89,21 @@ statement about `ν̂_w + 2ĝ₀`, i.e. about `f_w − σ_T − (β₀−2)ĝ₀
 > with `s > ½`. Put
 >
 > ```
-> D_K(w) = ∫_{2T}^∞ | ((1−w)K)''(u) | du ,
-> D_c(w) = 4 ∫_0^∞ | (w(u)cosh(u/2))'' | du ,     D(w) = D_K(w) + D_c(w),
-> E_at(w) = Σ_{n : log n > 2T} v_n |w(log n)| .
+> D_K(w) = ∫_{2T}^∞ | ((1−w)K)''(u) | du,
+> D_c(w) = 4 ∫_0^∞ | (w(u)cosh(u/2))'' | du, D(w) = D_K(w) + D_c(w),
+> E_at(w) = Σ_{n : log n > 2T} v_n |w(log n)|.
 > ```
 > All three are finite. Then for every `τ > 0`
 >
 > ```
-> (i)   |Ψ_w(τ)| ≤ D_K(w) τ^{−2},        (ii)  |Φ_w(τ)| ≤ D_c(w) τ^{−2},
+> (i) |Ψ_w(τ)| ≤ D_K(w) τ^{−2}, (ii) |Φ_w(τ)| ≤ D_c(w) τ^{−2},
 > (iii) |A_w(τ)| ≤ E_at(w),
 > ```
 > and consequently, with `β = (β₀,β₁)`,
 >
 > ```
 > f_w(τ) ≥ L_w(τ) := log(τ/2π) − 1/τ − 1/(2τ²) − A_T − E_at(w)
->                    − |β₀−2| k₀(τ) − |β₁| k₁(τ) − D(w) τ^{−2}.
+> − |β₀−2| k₀(τ) − |β₁| k₁(τ) − D(w) τ^{−2}.
 > ```
 > `L_w` is nondecreasing on `(0,∞)`, so if `L_w(τ_stop) ≥ 0` for one `τ_stop` then `f_w ≥ 0` on
 > `[τ_stop,∞)`, and positivity of `f_w` on `ℝ` has to be verified only on the **compact** interval
@@ -201,61 +201,61 @@ All `DIAGNOSTIC`.
 
 | run | `T` | `β₀−2, β₁` | `D_K` | `D_c` | **`D(w)`** | `E_at(w)` | `‖ν_w‖_TV` | `log₁₀τ_env` (`prop:env`) | **`τ_stop`** (Thm D) | **`τ_stop`** (Cor. D.2, `E_at=0`) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `log3h`     | `½log3` | `(0,0)` | `1248` | `49520` | `5.08e4` | `43.98` | `89.90` | `40.3` | `2.1e20` | **`151.9`** |
-| `log3h_b`   | `½log3` | `(+3.6e−3,−2.6e−2)` | `1351` | `25444` | `2.68e4` | `22.05` | `45.32` | `20.9` | `6.3e10` | **`117.5`** |
+| `log3h` | `½log3` | `(0,0)` | `1248` | `49520` | `5.08e4` | `43.98` | `89.90` | `40.3` | `2.1e20` | **`151.9`** |
+| `log3h_b` | `½log3` | `(+3.6e−3,−2.6e−2)` | `1351` | `25444` | `2.68e4` | `22.05` | `45.32` | `20.9` | `6.3e10` | **`117.5`** |
 | `log3h_b60` | `½log3` | — | `1264` | `24736` | `2.60e4` | `18.01` | `39.89` | `18.5` | `1.1e9` | **`117.7`** |
-| `w058`      | `0.58`  | — | `1494` | `42919` | `4.44e4` | `24.78` | `54.34` | `25.4` | `3.4e12` | **`196.0`** |
-| `w062`      | `0.62`  | — | `1086` | `29027` | `3.01e4` | `32.72` | `69.05` | `31.8` | `9.6e15` | **`170.1`** |
-| `wlog2`     | `log 2` | — | `831` | `32532` | `3.34e4` | `36.94` | `78.17` | `35.7` | `6.6e17` | **`179.0`** |
+| `w058` | `0.58` | — | `1494` | `42919` | `4.44e4` | `24.78` | `54.34` | `25.4` | `3.4e12` | **`196.0`** |
+| `w062` | `0.62` | — | `1086` | `29027` | `3.01e4` | `32.72` | `69.05` | `31.8` | `9.6e15` | **`170.1`** |
+| `wlog2` | `log 2` | — | `831` | `32532` | `3.34e4` | `36.94` | `78.17` | `35.7` | `6.6e17` | **`179.0`** |
 
 Reading, in order of importance.
 
 1. **The smooth part of the tail is *cheap*.** `D(w) ≈ 3·10⁴` and `D^{1/2} ≈ 170`: the `K`-tail and
-   the `cosh` part together need only `[0, ~2·10²]`. The `10^{18}…10^{40}` of `prop:env` is entirely
-   an artefact of bounding a decaying function by its total variation. **`R155_012 §12(2)`'s
-   prediction (`O(10²)` rather than `10^{25}`) is confirmed, and proved.**
+ the `cosh` part together need only `[0, ~2·10²]`. The `10^{18}…10^{40}` of `prop:env` is entirely
+ an artefact of bounding a decaying function by its total variation. **`R155_012 §12(2)`'s
+ prediction (`O(10²)` rather than `10^{25}`) is confirmed, and proved.**
 2. **The prime atoms are the whole wall.** With `E_at` present, `τ_stop = 10^{9}…10^{20}` — better
-   than `prop:env` by 8–20 decades, and still astronomically outside any computation. Every decade
-   of the remaining threshold is `E_at/log 10`.
+ than `prop:env` by 8–20 decades, and still astronomically outside any computation. Every decade
+ of the remaining threshold is `E_at/log 10`.
 3. **`D_c ≫ D_K` by a factor `20–40`**: the tail cost of a flat-top weight is the `cosh(u/2)`
-   weighting of the *shoulder*, exactly the quantity `R155_011 §3.2` identified (`E₃` dominant) —
-   the decay lemma reduces its price from `e^{E₃}` to `E₃`-polynomial but does not remove it.
+ weighting of the *shoulder*, exactly the quantity `R155_011 §3.2` identified (`E₃` dominant) —
+ the decay lemma reduces its price from `e^{E₃}` to `E₃`-polynomial but does not remove it.
 4. `D(w)` tracks `‖w''‖₁·e^{U/2}` as Cor. D.3 predicts: the `β`-free optimum at `½log3`
-   (`‖w‖_∞ = 4.33`) has `D = 2.7·10⁴`, the `β`-fixed control (`‖w‖_∞ = 3.64`, `∫|w| = 7.90`)
-   `5.1·10⁴`. The four values lie within a factor `2` of each other although `τ_env` spans `22`
-   decades: **`D` is a far more stable functional of the class than `‖ν‖_TV`.**
+ (`‖w‖_∞ = 4.33`) has `D = 2.7·10⁴`, the `β`-fixed control (`‖w‖_∞ = 3.64`, `∫|w| = 7.90`)
+ `5.1·10⁴`. The four values lie within a factor `2` of each other although `τ_env` spans `22`
+ decades: **`D` is a far more stable functional of the class than `‖ν‖_TV`.**
 
 ### 4.1 Consistency with the far scans, and with `[0,60]`
 
 - `R155_011`'s far scan found `f_w = −7.321` at `τ = 17.436` (`½log3`, `log3h_b`). Theorem D gives
-  `L_w(17.436) = −24.1 < 0`, so there is no contradiction: `17.4 ≪ τ_stop`, and indeed no tail lemma
-  of any kind can be in force at `τ = 17.4`, since `log(17.4/2π) − A_T = 0.039 − …` is barely
-  positive before any weight-dependent cost is subtracted. **A negative value inside `[0,τ_stop]` is
-  exactly what the lemma says one must go and look for.**
+ `L_w(17.436) = −24.1 < 0`, so there is no contradiction: `17.4 ≪ τ_stop`, and indeed no tail lemma
+ of any kind can be in force at `τ = 17.4`, since `log(17.4/2π) − A_T = 0.039 − …` is barely
+ positive before any weight-dependent cost is subtracted. **A negative value inside `[0,τ_stop]` is
+ exactly what the lemma says one must go and look for.**
 - The comb-free `τ_stop = 118…196` is *longer* than the `[0,60]` domain of the `R155_011` runs, and
-  `f_w` is measured negative on `[0,60]` at every window (§6). So even in the best case the lemma
-  leaves an interval on which the class is already known to fail. **Theorem D removes the excuse
-  ("the interval is `10^{40}` long"), and what it uncovers is a genuine negative.**
+ `f_w` is measured negative on `[0,60]` at every window (§6). So even in the best case the lemma
+ leaves an interval on which the class is already known to fail. **Theorem D removes the excuse
+ ("the interval is `10^{40}` long"), and what it uncovers is a genuine negative.**
 
 ---
 
 ## §5 Two corrections to the `prop:env` numbers of `R155_011 §3.2`
 
-`check.py` has been amended (`[amended 2026-09-21 per R155_012]`). Two of the three defects the
+`check.py` has been amended (`[amended per R155_012]`). Two of the three defects the
 audit lists are confirmed, and the third is **not**:
 
 - **CONFIRMED**: `check.py:63` omitted `A_T` from `log₁₀τ_env`. Fixed.
 - **CONFIRMED**: `E₁` used `(1+|w|)K` where the TV integrand is `|1−w|K`, and `E₃` integrated from
-  `0` rather than `2T` (the window part of the `cosh` term belongs to `2ĝ₀`, not to `ν_w`); and the
-  atom list was not restricted to `log n > 2T`. Fixed.
+ `0` rather than `2T` (the window part of the `cosh` term belongs to `2ĝ₀`, not to `ν_w`); and the
+ atom list was not restricted to `log n > 2T`. Fixed.
 - **NOT CONFIRMED (the audit's factor 2 on `E₂`)**: `ν_w`'s atoms are `(v_n/2)δ_{±log n}`, so the
-  two-sided total mass is `Σ v_n|w(log n)|`, which is what `check.py` computed. `E₂` was **not**
-  short by a factor `2`. The honest `‖ν_w‖_TV` is now computed by combining the two a.c. densities
-  *before* taking `|·|` (the definition of TV), which is smaller than `E₁+E₃`: the result is
-  `‖ν_w‖_TV = 39.9…89.9` and `log₁₀τ_env = 18.5…40.3` — larger than the reported `22.6…44.3` at some
-  windows and smaller at others, and in every case still `≥ 10^{18}`. The audit's estimate
-  `E ≈ 80–145`, `log₁₀τ_env ≈ 35–63` is an over-correction; the direction of its conclusion is
-  unaffected and the reading "the LP defends `10⁻²⁰` of the interval" stands.
+ two-sided total mass is `Σ v_n|w(log n)|`, which is what `check.py` computed. `E₂` was **not**
+ short by a factor `2`. The honest `‖ν_w‖_TV` is now computed by combining the two a.c. densities
+ *before* taking `|·|` (the definition of TV), which is smaller than `E₁+E₃`: the result is
+ `‖ν_w‖_TV = 39.9…89.9` and `log₁₀τ_env = 18.5…40.3` — larger than the reported `22.6…44.3` at some
+ windows and smaller at others, and in every case still `≥ 10^{18}`. The audit's estimate
+ `E ≈ 80–145`, `log₁₀τ_env ≈ 35–63` is an over-correction; the direction of its conclusion is
+ unaffected and the reading "the LP defends `10⁻²⁰` of the interval" stands.
 
 ---
 
@@ -282,7 +282,7 @@ pad `B₂δ²/8`, prime side evaluated at the argmin.
 (`‖w‖_∞` exceeds `1` by `2·10⁻³…5·10⁻³` because the profile constraints are imposed on an `h/8`
 grid; the violation is `0.2–0.5 %` and does not affect any sign. Zero and prime sides agree to
 `1·10⁻⁶…5·10⁻⁶` at every argmin. Runtimes `47–78 s` each, one process at a time; the eight LPs took
-`≈ 7.5 min` of wall time, over the owner's `5 min` total budget — declared, not hidden.)
+`≈ 7.5 min` of wall time, over the `5 min` total budget — declared, not hidden.)
 
 **Verdict.** **No value is `≥ 0` on `[0,60]` at any of the four windows, with `β` free or `β = (2,0)`, and the
 prime side confirms every one of them at the argmin to `5·10⁻⁶`.** The bounded-profile class is
@@ -316,21 +316,21 @@ endpoint of record is unchanged: `λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` (Thm 
 ## §8 What this opens
 
 1. **Add the comb conditions to the LP.** `w(log n) = 0` for the `373` prime powers in
-   `(2T, U]` is `373` equality columns in exactly the LP of `R155_011`, and by Cor. D.2 it converts
-   the verification interval from `10^{20}` to `118`. It is the first flat-top experiment in this
-   track whose *failure would be conclusive* and whose success would be a certificate on a
-   computable interval. Cost: one LP of the same size, `≈ 60 s`. **This is the successor of (P3).**
-   It is not free: `R155_011 §5(iv)` shows the optima put their largest mass bins exactly at
-   `log 4`, `log 5`, `log 17`, so the constraint bites where the value lives, and the honest
-   expectation is that the comb-free class is *worse*. That is precisely what should be measured.
+ `(2T, U]` is `373` equality columns in exactly the LP of `R155_011`, and by Cor. D.2 it converts
+ the verification interval from `10^{20}` to `118`. It is the first flat-top experiment in this
+ track whose *failure would be conclusive* and whose success would be a certificate on a
+ computable interval. Cost: one LP of the same size, `≈ 60 s`. **This is the successor of (P3).**
+ It is not free: `R155_011 §5(iv)` shows the optima put their largest mass bins exactly at
+ `log 4`, `log 5`, `log 17`, so the constraint bites where the value lives, and the honest
+ expectation is that the comb-free class is *worse*. That is precisely what should be measured.
 2. **The graded/decay hybrid.** Remark D.2: `lem:F1` handles the comb exactly because `ν̂_lat` is
-   periodic. A flat-top weight whose shoulder is supported on the lattice `{jd}` *and* smooth would
-   admit both arguments; `lem:hybrid` already does this for exponential columns. Whether a `C²`
-   flat-top weight can be written as `ν_lat + (smooth, comb-free)` is open and is the natural
-   Paper-47 §7 question raised by Theorem D.
+ periodic. A flat-top weight whose shoulder is supported on the lattice `{jd}` *and* smooth would
+ admit both arguments; `lem:hybrid` already does this for exponential columns. Whether a `C²`
+ flat-top weight can be written as `ν_lat + (smooth, comb-free)` is open and is the natural
+ Paper-47 §7 question raised by Theorem D.
 3. Theorem D is stated for `W_T ∩ C²`; for `C^k` it gives `τ^{−k}` with
-   `D_k(w) = ‖(w cosh)^{(k)}‖₁`-type constants and `τ_stop = O(D_k^{1/k})`. Nothing below `k = 2` is
-   useful (`k = 1` gives `τ_stop ≍ D₁`, no gain over TV in practice).
+ `D_k(w) = ‖(w cosh)^{(k)}‖₁`-type constants and `τ_stop = O(D_k^{1/k})`. Nothing below `k = 2` is
+ useful (`k = 1` gives `τ_stop ≍ D₁`, no gain over TV in practice).
 
 ---
 

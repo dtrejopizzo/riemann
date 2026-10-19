@@ -79,8 +79,8 @@ vector badly can only weaken a bound, never invalidate one.
 python3 -c "
 import json,hashlib,pathlib
 m=json.load(open('114_d_85_log2_full_space_manifest.json'))
-for n,w in m['sha256'].items():
-    g=hashlib.sha256(pathlib.Path(n).read_bytes()).hexdigest()
+for n,w in m['sha256'].items:
+    g=hashlib.sha256(pathlib.Path(n).read_bytes).hexdigest
     print(('OK  ' if g==w else 'FAIL'),n)
 "
 ```

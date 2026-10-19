@@ -1,6 +1,6 @@
 # P123.110 — Coupled determinant composition and a semilocal boundary cocycle
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY for external Bruhat
+Status: PROVED-IN-REPOSITORY for external Bruhat
 test germs in the induced representation of P123.109. This establishes
 the analytic correction and its coherence, not its geometric RR origin.
 

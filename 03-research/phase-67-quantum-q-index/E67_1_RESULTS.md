@@ -1,6 +1,5 @@
 # E67.1 Results — archimedean coherent-kernel matching
 
-**Date:** 2026-07-06.
 **Script:** [E67_1_arch_match.py](E67_1_arch_match.py).
 **Exact source:** `../../04-papers/P52-riemann-proof-audit/h8lab.py`, using only
 `hA_taylor + pick_jet` to build the exact P52 archimedean Pick jet `A_N`.

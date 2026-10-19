@@ -1,6 +1,5 @@
 # E73.197 - Signed closed form for the WR tail
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

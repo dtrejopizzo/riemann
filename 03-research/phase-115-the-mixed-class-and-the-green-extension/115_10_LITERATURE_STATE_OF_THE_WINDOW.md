@@ -1,6 +1,6 @@
 # 115.10 — State of the literature on the prime-free window, and three independent confirmations of the no-go
 
-A survey of 2020 → August 2026 was run against the question raised by `115_08`
+A survey of 2020 → was run against the question raised by `115_08`
 Corollary 7: has anyone closed the gap between the archimedean positivity and
 the finite contact term?  The answer is no, and the way in which it is no
 corroborates the no-go from three independent directions.
@@ -19,7 +19,7 @@ Connes / Consani / Moscovici output — 2008.10974, 2106.01715, 2112.08820,
 
 **[verified here]** The decisive evidence is Connes' own survey
 *"The Riemann Hypothesis: Past, Present and a Letter Through Time"*,
-arXiv:2602.04022 (February 2026), local copy
+arXiv:2602.04022, local copy
 `00-references/papers-ref-phase-60/arXiv-2602.04022v1.tex`.  Two sentences,
 quoted exactly:
 
@@ -54,7 +54,7 @@ strengthened statement is **outright false** past a small interval.  The
 \(-D\ge K\) route is therefore closed by counterexample, not merely by slack.
 
 **(b) Suzuki's unconditional programme stops at the same place.**
-arXiv:2606.09096 (June 2026), *"Weil's quadratic form via the screw function"*,
+arXiv:2606.09096, *"Weil's quadratic form via the screw function"*,
 proves genuinely unconditional results — Theorem 1.5, that all zeros of
 \(W(a,\theta;z)\) are real, without assuming RH, improving on CCM which needs
 simplicity of \(\lambda_a\) and evenness of its eigenfunction.  But Suzuki
@@ -68,7 +68,7 @@ unconditional machinery works precisely because it does not engage the prime
 terms.
 
 **(c) Connes–van Suijlekom's hypotheses are the unknown part.**
-arXiv:2511.23257 (November 2025) proves that all zeros of \(\widehat\xi(z)\) are
+arXiv:2511.23257 proves that all zeros of \(\widehat\xi(z)\) are
 real **given** that the spectral minimum of \(A\) is a simple isolated
 eigenvalue with even eigenfunction.  The paper's own framing: *"the key
 difficulty in this context becomes the verification that zero is indeed the

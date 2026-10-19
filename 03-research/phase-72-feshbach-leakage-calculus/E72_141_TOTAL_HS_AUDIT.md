@@ -1,7 +1,6 @@
 # E72.141 -- Total relative Hilbert-Schmidt audit
 
-**Date:** 2026-07-09.
-**Role:** test whether the negative-HS gate can be replaced by an unsigned trace-square bound.
+**Purpose:** test whether the negative-HS gate can be replaced by an unsigned trace-square bound.
 
 ## 0. Question
 

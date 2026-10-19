@@ -1,6 +1,5 @@
 # E73.207 - High-precision bordered eigen audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

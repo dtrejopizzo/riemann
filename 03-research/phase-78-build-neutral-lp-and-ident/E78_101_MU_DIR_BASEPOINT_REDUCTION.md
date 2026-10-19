@@ -1,6 +1,6 @@
 # E78.101 - `MU-DIR` reduces to basepoint convergence plus a local paired derivative bound
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** front B only (`SAFE-GAMMA-IDENT`, fixed-`L` core).  
 **Class:** REDUCCION GENUINA.  
 **What we know after this doc that we did not know before:** the live

@@ -1,0 +1,233 @@
+[
+  {
+    "id": "2606.09096",
+    "title": "Weil's quadratic form via the screw function",
+    "authors": [
+      "Suzuki, Masatoshi"
+    ],
+    "abstract": "We establish a unified operator-theoretic framework for understanding the results on the Weil quadratic form obtained by Yoshida (1992), Bombieri (2001, 2003), Connes--Consani (2023), and Connes--Consani--Moscovici (2025+) from the perspective of the screw function introduced in Suzuki (2023). An advantage of the approach via the screw function is that it provides a method to study the Weil quadratic form, which is originally defined in terms of distributions, by means of continuous functions and brings the theory of de Branges spaces into the analysis of the Weil quadratic form via the Fourier transform. Based on this framework, we formulate a conjecture stating that a self-adjoint operator whose eigenvalues are the imaginary parts of the nontrivial zeros of the Riemann zeta function can be obtained as the limit, as $a \\to \\infty$, of self-adjoint operators arising from nonlocal realizations of the first-order differential operator on the finite interval $[-a,a]$. All these results are obtained without assuming the Riemann Hypothesis. This conjecture may be compared with the limit formula for the Riemann zeta function expressed in terms of zeta-regularized products proposed by Connes, Consani, and Moscovici, and it sheds new light on the spectral-theoretic interpretation of the nontrivial zeros of the Riemann zeta function."
+  },
+  {
+    "id": "2607.02828",
+    "title": "A finite Guinand-Weil dictionary and archimedean tail order for the truncated Weil quadratic form",
+    "authors": [
+      "Groskin, Akiva"
+    ],
+    "abstract": "The Connes-van Suijlekom and Connes-Consani-Moscovici truncations of the Weil quadratic form, at a prime cutoff c>1 and frequency band N, produce finite Galerkin matrices whose spectra are the finite-rank window on Weil positivity. We prove two exact finite theorems about this truncation. First, every real even Galerkin coefficient vector v determines, in closed form, a band-limited Guinand-Weil test function g_v whose zero sum over the nontrivial zeros of zeta equals the quadratic value <v, Q v> exactly: every value of the truncated form is an exact sum over the zeros. The construction factors through an exact source quotient of dimension 2N+1 and admits a non-collapsing pole-neutral subfamily. Second, beyond the Galerkin band the omitted archimedean tail is a totally positive Cauchy-Stieltjes increment. This yields a two-sided certification rule with an explicit budget B_T ~ (2N+1) rho log(T) / (pi^2 T), where T is the archimedean cutoff and rho = 2 pi / log c: finite-cutoff positivity certifies cutoff-free positivity, a finite-cutoff eigenvalue below -B_T certifies a cutoff-free negative, and a negative eigenvalue in the band [-B_T, 0) certifies nothing. Resolving a spectral scale of 10^-59 at c=100 by brute cutoff would require T of order 10^63; a cutoff-free interval LDL^T factorization resolves it directly. The dictionary is verified over the first 512 zeros of zeta and by three independent computational routes; all scripts and artifacts ship with the paper. The paper makes no Riemann Hypothesis, prime-counting, next-prime, or factoring claim."
+  },
+  {
+    "id": "2608.24827",
+    "title": "Weil positivity in compact windows: a finite reduction, certified two-sided bounds, and a Landau-Widom decay law",
+    "authors": [
+      "Zhu, Xuefeng"
+    ],
+    "abstract": "Weil's criterion states that the Riemann Hypothesis (RH) is equivalent to the non-negativity of an explicit quadratic form Q(f) on test functions. For f supported in [-L,L] we study the normalized infimum lambda_min(L) = inf Q(f)/||f||^2 from both sides. Lower bounds (unconditional): positivity on bounded support is classical for supp f in [-(log 2)/2,(log 2)/2] (Yoshida; Connes-Consani). We prove by certified computation that Q(f) >= 8.9e-18 ||f||^2 for all supp f in [-0.8,0.8], i.e. autocorrelation support 1.6, 2.3 times the classical range. The proof rests on a one-stroke reduction: a pointwise envelope for the Weil symbol, with a comb constant shown optimal by Weyl equidistribution, converts positivity on the whole window into positive semidefiniteness of a single finite matrix. The odd parity sector shows that the certified positivity holds for arbitrary complex test functions of support 1.6, and that the window ground state is simple and even, the spectral hypothesis required by the operator-theoretic program of Connes, Consani, Moscovici and van Suijlekom. Upper bounds (unconditional): variational bounds are evaluated on the geometric side in interval arithmetic, with no appeal to zeros or RH, down to 3.2e-283 at L=2. They follow the empirical law -ln lambda_min(L) ~ 2 pi^2 N(T*)/ln N(T*), T* = 2 pi e^{2L}, with N the zero-counting function; 2 pi^2 matches the Landau-Widom eigenvalue-plunge rate. Under RH, lambda_min(L) <= exp(-L e^L) for all large L. Synthesis: at L=0.8 the two halves enclose the profile, 8.9e-18 <= lambda_min(0.8) <= 2.27e-17, both certified. We show why the positivity route cannot reach RH unassisted: any one-stroke certificate must resolve frequencies up to 2 pi e^{A_L}, A_L ~ 4e^L, a doubly exponential threshold that no pointwise bound on the prime comb lowers, while the spectral margin collapses at the Landau-Widom rate."
+  },
+  {
+    "id": "2609.20367",
+    "title": "The Three Gates: A Rooted-Operator Approach to Weil Positivity",
+    "authors": [
+      "Desogus, Marco"
+    ],
+    "abstract": "We present a localized rooted-operator argument for Weil positivity in the real odd logarithmic channel, retaining the polar rank-one term throughout. Gate I establishes a strict cellular covariance theorem and its midpoint-shell consequence, with rigorous interval-arithmetic bounds on the finite range used below. Gate II combines the Mellin unit-cell decomposition, divisor partial-isometry squares, affine translations, full-form Cauchy--Carleman transport, coherent multi-source shorting, the augmented scalar root, and Schur geometry in the true metric. Gate III uses compression, closure, and the restricted odd Weil criterion. A central point in Gate II is to place the inherited parent response inside the same post-old-core/common-cut primal form in which the arithmetic mismatch and folded scalar debit are charged. If $P^{\\rm ex}{k,m}$ is the surviving inherited pivot and $a_m$ the inherited coordinate of the Schur minimizer, then $P^{\\rm ex}{k,m}a_m=\\omega^{\\rm ex}_{k,m}$, so the inherited source-coupling contribution is the negative metric energy of that response. The aligned forcing is retained explicitly, and an outward-rounded finite computation together with the analytic tail gives $\\mathfrak g^{\\rm M+}k=\\frac12+\\log k-\\frac{439}{250\\log 2}\\sum_m V{k,m}-\\frac52 W_k>0$ for $k\\ge7$. The simultaneous common-cut theorem keeps the parent-ground and transverse budgets separate before the common infimum, while the fold identity leaves a non-negative remainder. Starting from the rigorously certified endpoint $Y=7$, Schur induction yields positivity at the integer endpoints, zero-extension gives non-negativity at every finite support radius, and closure together with the restricted odd Weil criterion yields the Riemann hypothesis."
+  },
+  {
+    "id": "2608.31060",
+    "title": "Large zeta sums and zeros of the Riemann zeta function",
+    "authors": [
+      "Dong, Zikang",
+      "Wang, Ruihua",
+      "Wang, Weijia",
+      "Zhang, Hao"
+    ],
+    "abstract": "For real $t$ and $x\\ge 1$, set \\[ S(x,t)=\\sum_{n\\le x} n^{\\ii t}. \\] We prove an unconditional inverse theorem relating large values of $S(x,t)$, with $|t|$ large, to zeros of the Riemann zeta function near height $t$. More precisely, if $T\\le |t|\\le 2T$, $\\exp(\\sqrt{\\log T})\\le x\\le \\sqrt T$, and $|S(x,t)|=x/N$ with $N\\le (\\log x)^{1/100}$, then for every $cN^6\\le L\\le (\\log x)/2$ a disk centered at $1+\\ii\\phi$, where $|\\phi-t|\\ll N$, contains at least $L/360$ zeros of $\\zeta(s)$. As a consequence, a quantitative restriction on zeros in a short family of arbitrarily thin fixed windows to the left of the line $\\Ree s=1$ yields $S(x,t)\\ll x/(\\log x)^{1/100}$ in polynomial ranges of $x$. The proof adapts the zero-forcing mechanism of Granville and Soundararajan for large character sums. In the zeta setting the spectral height is shifted by $t$, and an additional residue from the pole of $\\zeta(s)$ appears in the Gaussian transform; in the range considered here that residue is exponentially small."
+  },
+  {
+    "id": "2609.25885",
+    "title": "The weighted large sieve through Parseval",
+    "authors": [
+      "Ramaré, Olivier"
+    ],
+    "abstract": "We modify the approach to the arithmetical form of the large sieve by relying on the Parseval identity rather than on an approximate Bessel inequality and as a consequence, improve on the weighted large sieve inequality. We compute in passing the $L^2$-norm of the Beurling-Selberg majorant of the characteristic function of an interval."
+  },
+  {
+    "id": "2609.25879",
+    "title": "The large sieve through Parseval, Large sifted sets are regular",
+    "authors": [
+      "Ramaré, Olivier"
+    ],
+    "abstract": "We modify the approach to the arithmetical form of the large sieve by relying on the Parseval identity rather than on an approximate Bessel inequality and as a consequence, we prove that sifted sets are either small or the attached Fourier polynomial is very regular at the origin. We also discuss the optimality of this approach and shall show in passing that $N\\int_{-\\delta}^\\delta|S(\\beta)|^2d\\beta\\ge(1-2/\\sqrt{\\delta N})|S(0)|^2$ for any trigonometric polynomial of length~$N$."
+  },
+  {
+    "id": "2607.15311",
+    "title": "A sharp inverse theorem for the quadratic large sieve",
+    "authors": [
+      "Croot, Ernie",
+      "Mao, Junzhe",
+      "Pohoata, Cosmin",
+      "Yip, Chi Hoi"
+    ],
+    "abstract": "We prove that if $A\\subseteq[N]$, $|A|\\gg\\sqrt N$, and $|A_p|\\le p/2+O(1)$ for every prime $p\\ll \\log N$, then $A$ contains at least $\\exp\\left(c\\sqrt{\\log N}/\\log\\log N\\right)$ elements in the image of a single integral quadratic $m\\pm x^2$. This significantly improves Hanson's logarithmic lower bound, while requiring the residue restriction only for primes $p\\ll\\log N$. Our proof uses a new weighted entropy argument inspired by our previous work \\href{ https://arxiv.org/abs/2606.17487 }{ arXiv:2606.17487 } with Sheffer. A matching construction shows that this exponential scale is optimal even when the quadratic may be chosen arbitrarily in $\\mathbb{Z}[x]$. We also show extending the residue restrictions to primes up to $(\\log N)^3$ yields the stronger bound $\\exp(c\\sqrt{\\log N/\\log\\log N})$ via a Selberg-sieve-type argument, and discuss an application to the inverse Goldbach problem."
+  },
+  {
+    "id": "2607.15574",
+    "title": "Improved bounds for multiplicative functions in almost all short intervals",
+    "authors": [
+      "Menon, Siddarth"
+    ],
+    "abstract": "We refine the Matomäki-Radziwiłł method for short averages of multiplicative functions. For the Liouville function and multiplicative functions supported on smooth numbers, we prove decay bounds that are essentially optimal with the Matomäki-Radziwiłł method. The key new ingredient is a sharper treatment of the sieve error, achieved by introducing a more widely separated final prime range when restricting to integers with typical factorizations. We additionally give a weaker but still improved bound for arbitrary 1-bounded multiplicative functions and discuss some limitations of the method. As an application, we give an improved bound for the averaged Chowla conjecture of Matomäki-Radziwiłł-Tao that seems essentially best possible via their method."
+  },
+  {
+    "id": "2608.14777",
+    "title": "Exponential sums over primes",
+    "authors": [
+      "Maynard, James",
+      "Pandey, Mayank",
+      "Radziwiłł, Maksym"
+    ],
+    "abstract": "Let $\\alpha=a/q+\\epsilon$ with $(a,q)=1$, $q\\le N^{1/2}$ and $|\\epsilon|\\le 1/(qN^{1/2})$, and let $B:=\\max(q,qN|\\epsilon|)$. We show that \\[ \\Bigl|\\sum_{n<N}\\Lambda(n)e(n\\alpha)\\Bigr|\\le N^{o(1)}\\Bigl(\\frac{N}{B^{1/2}}+N^{19/24}\\Bigr). \\] This improves on the classical bound of Vinogradov from 1937, which has $N^{4/5}$ in place of $N^{19/24}$."
+  },
+  {
+    "id": "2609.11070",
+    "title": "Effective estimates for exponential sums with multiplicative coefficients",
+    "authors": [
+      "Robles, Nicolas"
+    ],
+    "abstract": "Let $f$ be multiplicative, with $|f(p)|\\le A$ at primes and $\\sum_{n\\le x}|f(n)|^2\\le A^2x$ for every $x\\ge1$. If $|\\alpha-a/q|\\le q^{-2}$, $(a,q)=1$, and $3\\le R\\le q\\le N/R$, we prove \\[ \\sum_{n\\le N}f(n)\\operatorname{e}(n\\alpha) \\ll_A \\frac{N}{\\log N} +\\frac{N}{\\sqrt R}\\sqrt{\\log\\log(3R)} \\] with effective implied constants. Montgomery and Vaughan proved this with second term $NR^{-1/2}(\\log R)^{3/2}$, and, for $1$-bounded functions, Bachman replaced it by $NR^{-1/2}\\sqrt{\\log R\\log\\log R}$. We remove the factor $\\sqrt{\\log R}$ from Bachman's second term while retaining the original coefficient hypotheses of Montgomery and Vaughan. A more precise estimate records the distance from a rational number. The proof combines the Brun-Titchmarsh inequality on short intervals with maximal Fourier estimates derived from the Carleson-Hunt theorem; the local bounds permit arbitrary prime-dependent prefixes. We also prove sharpness of the square-root displacement dependence."
+  },
+  {
+    "id": "2609.00537",
+    "title": "Explicit Exponential Sum Estimates and Approximate Functional Equations for the Zeta Function",
+    "authors": [
+      "Dhiman, Natasha",
+      "Kadiri, Habiba",
+      "Quesada-Herrera, Emily"
+    ],
+    "abstract": "We show an explicit version of the Van der Corput truncated Poisson summation formula (B-process). By using refined explicit exponential sum estimates, this improves the error term of previous explicit results by Patel and Yang (2024) and Arias de Reyna (2024). As an application, we obtain fine explicit estimates for the error terms in approximate functional equations for the Riemann zeta function, improving on previous explicit results of Simonič (2020) in certain ranges."
+  },
+  {
+    "id": "2609.22624",
+    "title": "Zero density theorems for short intervals",
+    "authors": [
+      "Fiori, Andrew"
+    ],
+    "abstract": "We provide explicit bounds on the number of zeros for $\\zeta$ in short intervals near the edge of the critical strip. Ultimately we show that even in short intervals a positive proportion of zeros will not be near the edge of the critical strip. For example with $h>100$ and $t>10^{100}$ the proportion of zeros of $\\zeta$ with imaginary part in $[t-h,t+h]$ which have real part in $[\\frac{1}{16},\\frac{15}{16}]$ is at least $13\\%$ and a positive proportion is already obtained at $t>10^{43}$."
+  },
+  {
+    "id": "2609.33953",
+    "title": "Sums of von Mangoldt convolutions via trace-sum averages over $U(N)$",
+    "authors": [
+      "Irfan, Ayesha"
+    ],
+    "abstract": "We study piecewise polynomial functions $\\delta_k(c)$ that appear in the conjectured asymptotics for the variance of short-interval sums of von Mangoldt convolutions $\\Lambda^{*k}$. By a theorem of Kuperberg and Lalín, a unitary matrix integral involving a sum of trace products governs the large-$q$ limit of the function-field analogue of this variance. We identify $\\delta_k(c)$ as the leading-order coefficient of this integral when the total trace degree and matrix size grow with a fixed ratio $c$. Through an asymptotic analysis of two lattice-point representations for the matrix integral, we obtain explicit forms of $\\delta_k(c)$. A finite spline expansion and a contour-integral representation expressing $\\delta_k(c)$ as the inverse Laplace transform of a two-weight block Hankel determinant are also obtained."
+  },
+  {
+    "id": "2607.05560",
+    "title": "A Variation Norm Carleson Theorem Along the Primes",
+    "authors": [
+      "Fragkos, Anastasios",
+      "Krause, Ben",
+      "Miheisi, Nazar",
+      "Sun, Yu-Chen"
+    ],
+    "abstract": "Let $\\Lambda$ denote the von Mangoldt function; we prove that for each $r > 2$, there exist constants \\[ r' < \\mathbf{c}(r) < 2 < \\mathbf{C}(r), \\qquad \\lim_{r \\to \\infty} \\mathbf{c}(r) = 1, \\ \\lim_{r \\to \\infty} \\mathbf{C}(r) = \\infty \\] so that the discrete variational Carleson operator along the primes \\begin{align} \\mathcal{V}^r \\Big( \\sum_{n \\neq 0} f(x-n) \\Lambda(|n|) \\frac{e^{2\\pi i \\lambda n}}{n} : \\lambda \\in \\mathbb{T} \\Big) \\end{align} is bounded on $\\ell^p$ for all $\\mathbf{c}(r) < p < \\mathbf{C}(r)$, while the variation is unbounded when $p \\leq r'$. At the non-variational endpoint, the same argument gives the sharp maximal result: the prime Carleson operator \\[ \\sup_{\\lambda\\in\\mathbb T} \\Big|\\sum_{n\\neq0} f(x-n)\\Lambda(|n|)\\frac{e^{2\\pi i\\lambda n}}{n}\\Big| \\] is bounded on \\(\\ell^p(\\mathbb Z)\\) for the full expected range \\(1<p<\\infty\\). The proof gives a new mechanism for treating modulation-invariant singular integrals after arithmetic sparsification. It combines higher-order Fourier uniformity, a variable-coefficient multi-frequency principle in the spirit of Bourgain, and an additive-combinatorial inverse argument. A key step is a reduction to finite periodic models, where the Ramanujan structure of the major arcs is converted into a sharp estimate for structured atoms by elementary number theory."
+  },
+  {
+    "id": "2608.14852",
+    "title": "Reciprocity for The Short Twisted Second Moment of The Riemann Zeta Function",
+    "authors": [
+      "Tang, Ze Sen"
+    ],
+    "abstract": "We prove a reciprocity formula for a twisted second moment of the Riemann zeta function over a short interval of length $T^{\\delta}$, where $\\delta \\in (\\frac{1}{2},1)$, centered at height $T$ on the critical line. This result extends Khan's reciprocity formula to the short interval setting and makes explicit the relation between the twisting parameters and the interval length."
+  },
+  {
+    "id": "2608.26814",
+    "title": "Two-point correlations of multiplicative functions with dense orbits",
+    "authors": [
+      "Tardy, Néo"
+    ],
+    "abstract": "Let $f,g:\\mathbb{N}\\to\\mathbb{T}$ be completely multiplicative functions with dense images in the complex unit circle $\\mathbb{T}$. We prove that, for every non-empty open set $U \\subset \\mathbb{T}^2$, the set of integers $n$ such that $(f(n),g(n+1)) \\in U$ has positive lower logarithmic density, unless the pair $(f,g)$ is of a special form. This result strengthens earlier theorems of Klurman and Mangerel, as well as of Charamaras, Mountakis, and Tsinas, and yields substantially simpler proofs."
+  },
+  {
+    "id": "2608.08682",
+    "title": "A new hyperbolicity wedge and a joint semicircle limit for Jensen polynomials of Riemann's $\\xi$-function",
+    "authors": [
+      "Holland, Jonathan"
+    ],
+    "abstract": "Let \\[ \\xi\\!\\left(\\frac12+z\\right) =\\sum_{n\\geq 0}\\frac{\\gamma(n)}{n!}z^{2n}, \\qquad J^{d,n}(X) =\\sum_{j=0}^{d}\\binom dj\\gamma(n+j)X^j . \\] The Riemann hypothesis is equivalent to the hyperbolicity of $J^{d,n}$ for every $d,n\\geq0$. We prove that there is an absolute constant $K>0$ such that \\[ n^3\\log^2(n+2)\\geq Kd^5 \\quad\\Longrightarrow\\quad J^{d,n}\\ \\text{is hyperbolic}. \\] Along every sequence with $n,d\\to\\infty$ in this region, the empirical measure of the naturally centered and scaled zeros also converges to Wigner's semicircle law. This gives a simultaneous degree--derivative version of the global semicircle consequence of the fixed-degree Hermite limit of Griffin, Ono, Rolen, and Zagier."
+  },
+  {
+    "id": "2607.16795",
+    "title": "An explicit uniform cubic wedge for consecutive Toeplitz minors of the Riemann xi coefficients",
+    "authors": [
+      "Michalowski, Wojciech"
+    ],
+    "abstract": "Let (a_k) be the positive coefficient sequence of the normalized Riemann xi-function, and let D_{r,k} denote its consecutive Toeplitz minors. The Riemann Hypothesis is equivalent to (a_k) being a Polya frequency sequence of infinite order, and hence to nonnegativity of all Toeplitz minors. We prove that D_{r,k} > 0 for every r >= 2 and k >= 10^18 r^3. This gives an explicit cubic tail scale uniform in r, in contrast with Katkova's fixed-order asymptotic positivity. The proof does not use numerically verified zeros of the Riemann zeta-function. It combines a certified complex saddle-point analysis of the moment transform, an exact q-Pascal dilation semigroup controlling every degree simultaneously, and a weighted Banach-algebra majorant for the nonlinear remainder, closed by an inertia-preservation argument. All analytic constants are certified with directed rounding in Arb ball arithmetic, and all algebraic identities are verified in exact rational arithmetic. The ancillary files reproduce every certificate. The result concerns only the tail regime k much larger than r^3 and makes no progress on the Riemann Hypothesis, which concerns the complementary region."
+  },
+  {
+    "id": "2609.33278",
+    "title": "Prime-Detecting Identities from Dirichlet Inversion",
+    "authors": [
+      "Liu, Zhichen"
+    ],
+    "abstract": "For each integer k >= 1, let sigma_k(n) = sum_{d|n} d^k, let sigma_k^{-1} denote its Dirichlet inverse, and let J_k denote the kth Jordan totient function. Using established prime-power values of sigma_k^{-1}, we first obtain the elementary criterion sigma_k^{-1}(n) + J_k(n) + 2 = 0 precisely when n is prime. At k = 1, this involves Euler's totient J_1 = phi and provides a prime-only comparison for the next equation. Our main result classifies the zeros of sigma_k^{-1}(n) + mu(n) + J_k(n) + 3: for k = 1, they are precisely the primes and 18; for k >= 2, they are precisely the primes. The proof separates integers according to their prime-exponent patterns. Sign and divisibility arguments exclude composite zeros outside the cube-free nonsquarefree case, where an additional divisibility condition isolates 18 at k = 1 and precludes composite zeros for higher k. Standard convolution and Lambert-series identities provide the arithmetic framework, while an intermediate-divisor relation explains the exceptional zero. These criteria are structural characterizations rather than efficient primality tests, since direct evaluation of the multiplicative formulas generally presupposes a factorization of n."
+  },
+  {
+    "id": "2609.33692",
+    "title": "Biases in the distribution of primes in short intervals",
+    "authors": [
+      "Freiberg, Tristan"
+    ],
+    "abstract": "Assuming a suitably uniform Hardy--Littlewood prime tuples hypothesis, we obtain a second-order asymptotic for the proportion of short intervals containing a prescribed number of primes, when the interval length is comparable to the average prime spacing. The leading term is Poisson, but the arithmetic correction differs from the binomial correction in Cramér's independent model and predicts a stronger bias toward counts near the mean. The proof combines inclusion--exclusion with singular-series estimates of Montgomery and Soundararajan and a finite-sieve argument that controls the required alternating sums as the truncation order grows. We also give a refined random model that reproduces the correction and numerical comparisons that support the prediction."
+  },
+  {
+    "id": "2610.01035",
+    "title": "The sixth moment of the Riemann zeta function",
+    "authors": [
+      "de Faveri, Alexandre",
+      "Pandey, Mayank"
+    ],
+    "abstract": "We prove new large value estimates for the Riemann zeta function on the critical line. For instance, we improve the upper bound on the measure of $t\\in [T, 2T]$ with $|\\zeta(1/2 + it)| \\geq T^{1/8}$ for the first time since Hardy-Littlewood (1923). Our results imply improved upper bounds on the $k$-th moment of zeta for every $4 < k \\leq 12$. We show in particular that \\begin{equation*} \\int_{0}^{T} |\\zeta(\\tfrac{1}{2} + it)|^6 \\,d t \\ll_\\varepsilon T^{\\frac{5}{4} - \\frac{1}{60} + \\varepsilon}. \\end{equation*} The main ingredient is a new large value estimate for exponential sums with square-root phases, and certain perturbations. Those arise in the expansion of the short second moment of zeta."
+  },
+  {
+    "id": "2609.17875",
+    "title": "Zero-Density Concentration for Dirichlet Polynomials",
+    "authors": [
+      "Dubon, Eric"
+    ],
+    "abstract": "We prove that broad families of finite Dirichlet sums exhibit deterministic concentration of normalized vertical zero density on a single line. The main result gives a general criterion under which the normalized Jessen potentials converge locally uniformly to a piecewise-linear convex function with a single corner. The associated normalized measures describing the distribution of real parts of zeros in vertical mean density then converge weakly to a Dirac mass. Thus, for each fixed truncation, zeros may occupy a nontrivial range of real parts, while asymptotically their normalized vertical density concentrates on one line. The proof combines the finite Bohr lift with a translation-uniform anti-concentration estimate for isolated prime coordinates. We apply the criterion to partial sums of the Riemann zeta function, fixed Dirichlet $L$-functions, and primitive holomorphic Hecke eigenforms of fixed level, trivial Dirichlet character, and without complex multiplication. The concentration line is $\\operatorname{Re} s=1/2$ in the normalized setting and becomes $\\operatorname{Re} s=k/2$ for the classical Fourier coefficients of a form of weight $k$."
+  },
+  {
+    "id": "2606.29555",
+    "title": "Finite-core Volterra reductions for a Weyl-positive Riemann phase kernel",
+    "authors": [
+      "Freedman, Marvin B."
+    ],
+    "abstract": "We record a Weyl-positive reduction and certificate framework for the Riemann phase kernel associated with the even Riemann kernel $\\Phi$. The manuscript does not present a complete proof of the Riemann hypothesis. Its immediate analytic target is a concrete positivity theorem for a Weyl kernel whose quantum characteristic function satisfies the Kastler--Loupias--Miracle-Sole condition in all numerical tests performed so far. Several natural factorizations are ruled out. In particular, the positive anti-Wick density route is obstructed by a local heat-deconvolution test, and several natural finite-core reductions are excluded by explicit counterexamples. The surviving structure is a finite-core Volterra program upgraded to a closed-trace quotient certificate for the full kernel. We derive exact same-sign finite-core formulae, the second-order theta-mode identity $\\phi_n(t)=(\\partial_t^2-1/4)(e^{t/2}e^{-\\pi n^2e^{2t}})$ for $n\\ge1$, a Volterra boundary-plus-tail representation, and a quotient Schur factorization for the normalized full-$\\Phi$ source/Volterra model. The latest certificate closes the active trace-range condition, the full-continuum source-inactive domination, and the Douglas/Moore--Penrose Schur hypotheses in the normalized model. What remains outside that certificate is explicitly separated: the quotient-to-original Weyl lift, uniform $\\omega$-coverage for $|\\omega|<1/2$, and the final bridge from Weyl/KLM positivity to the intended de Branges or RH-side formulation."
+  },
+  {
+    "id": "2607.04632",
+    "title": "A decades-long breakthrough in zero-density estimates and primes in short intervals",
+    "authors": [
+      "Turnage-Butterbaugh, Caroline L."
+    ],
+    "abstract": "The Riemann Hypothesis (RH) asserts that every nontrivial zero of the Riemann zeta-function has real part equal to $1/2$. A zero-density theorem provides evidence towards RH by bounding the number of zeros of the zeta-function with real part greater than $1/2$. In 2024, Larry Guth and James Maynard announced a new zero-density theorem which, for a key location in the critical strip, strengthens previous work of Ingham and is the first such improvement in over 80 years. This expository paper places this remarkable achievement in the context of the rich history of zero-density theorems and explores its implications on the distribution of primes in short intervals."
+  },
+  {
+    "id": "2606.24924",
+    "title": "Spectral Riccati--Gamma Concavity, Symmetric Zero Cancellation, and Conditional Criteria for the Riemann Hypothesis",
+    "authors": [
+      "Covei, Dragos-Patru"
+    ],
+    "abstract": "We examine a Riccati--Gamma approach to the logarithmic derivative of the completed Riemann zeta function. The first part proves, in full local detail, that a naive two-sided vertical concavity criterion for $\\Xi'/\\Xi$ cannot be a proof of the Riemann Hypothesis, because every zero produces opposite vertical curvatures on the two horizontal sides of the pole of the logarithmic derivative. The second part replaces this obstruction by a rigorously formulated finite spectral averaging framework. We prove cancellation at the critical line, positivity of the off-critical paired contribution on the left of the critical line under a concrete low-frequency kernel condition, a conditional zero-density consequence, and a precise conditional theorem showing which additional localisation hypotheses would imply the Riemann Hypothesis. The results are therefore not presented as an unconditional proof of RH. They give a partial resolution of the Riccati--Gamma question: one natural route is ruled out unconditionally, a second symmetric mechanism is proved at the finite spectral level, and the remaining step is isolated as explicit analytic hypotheses. Reproducible Python routines and numerical figures accompany the analytic discussion."
+  },
+  {
+    "id": "2608.13637",
+    "title": "More than two thirds of the zeta zeros are simple and on the critical line",
+    "authors": [
+      "Alpöge, Levent",
+      "Furman, Ralph"
+    ],
+    "abstract": "We prove unconditionally that at least two thirds of the nontrivial zeros of the Riemann zeta function, counted with multiplicity, are simple and lie on the critical line, and that at least five sixths are distinct; the previous unconditional records are $\\frac{5}{12}$ and $0.6603$. With the Montgomery--Taylor window the constants become $0.6725$ and $0.8362$. The argument makes Montgomery's 1973 deduction unconditional: the Riemann hypothesis, classically needed to read the zero side as a positive sum over real ordinates, is replaced by a rank-trace inequality applied to a finite compression of Weil's Hermitian form, with Sylvester's law of inertia handling off-line pairs. The analytic inputs are those of Aryan and of Baluyot, Goldston, Suriajaya and Turnage-Butterbaugh. The results extend to primitive Dirichlet $L$-functions and are formally verified in Lean 4."
+  }
+]

@@ -21,7 +21,7 @@ Retrieve a specific computational dataset of Dirichlet polynomial evaluations:
 ----------- The requested dataset CANNOT be retrieved from trusted open-access sources because
 it does not exist as a published, publicly available resource. This dataset appears to be either:
 A) Part of ongoing unpublished research
-B) Generated in a previous analysis session
+B) Generated in a previous analysis run
 C) Part of supplementary materials for a paper not yet identified POSSIBLE PATHS FORWARD:
 ----------------------- Option 1: If this dataset exists in a specific location (URL, DOI, paper supplement), provide that information for direct retrieval. Option 2: If this dataset was meant to be generated computationally, provide: - Mathematical specifications for the Dirichlet polynomials - ω-class decomposition algorithm/definition - Parameter values (T-range, N values, functions to compute) Option 3: If this is from a specific paper, provide citation/DOI to access supplementary materials. Without one of these, I cannot proceed with data retrieval while maintaining
 scientific integrity (no fabrication or simulation of research data). ================================================================================

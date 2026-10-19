@@ -1,7 +1,6 @@
 # E72.165 -- Fixed-cut stress for F2B-PSD
 
-**Date:** 2026-07-09.
-**Role:** stress the current fixed arithmetic certificate without changing any parameter.
+**Purpose:** stress the current fixed arithmetic certificate without changing any parameter.
 
 ## 0. Fixed certificate under stress
 

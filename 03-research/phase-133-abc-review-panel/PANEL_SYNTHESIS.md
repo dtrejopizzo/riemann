@@ -1,6 +1,5 @@
-# Phase 133 — ABC review panel: lead synthesis and decisions
+# Phase 133 — ABC review panel: synthesis and decisions
 
-Author: session lead (Fable 5.1), audit of record. Date: 2026-09-12.
 Inputs: PANEL_1_PROOFS.md (correctness), PANEL_2_CONNECTIONS.md (consistency),
 PANEL_3_LABELS_AND_RH_CHAIN.md (labels, renaming test, chain to RH),
 PANEL_REPAIRS.md (apparatus repairs, grep-evidenced, `[phase 133]` marks).
@@ -11,12 +10,12 @@ PANEL_REPAIRS.md (apparatus repairs, grep-evidenced, `[phase 133]` marks).
 |---|---|---|---|
 | 1 — proofs | none | 4 (A1 `D_A^0` two meanings + Rem 8.6b false; A2 Thm 14.1 proof invoked non-Paley–Wiener functions; A3 unlabelled transfer import in Paper 43 Rem 3.6; B1 Paper 44 §11 "none" false for amended B.4) | all three sustained; 30+ load-bearing theorems re-derived; strongest single result Paper 45 Thm 9.4 |
 | 2 — connections | none | 2 (dangling "Paper 43 Remark 9.5" ×6; explicit-formula relabel not propagated to three places) + 8 MINOR | one consistent theory; no cross-paper contradiction; row-D target not stated identically |
-| 3 — labels & RH chain | none | protocol: A.8 and B.7 dissents resolved by lead ruling while A.6 and B.4 went to the owner as amendments; the panel sides with the dissenting auditor on both | labels honest **as recorded**, with qualifications; the **name** "Weil-strength-complete" overstates against the specification's §1 (equality of structural burden with Weil, which Paper 43 §11bis item 4 says is not established) |
+| 3 — labels & RH chain | none | protocol: A.8 and B.7 dissents resolved by ruling while A.6 and B.4 went forward as amendments; the panel sides with the dissenting view on both | labels honest **as recorded**, with qualifications; the **name** "Weil-strength-complete" overstates against the specification's §1 (equality of structural burden with Weil, which Paper 43 §11bis item 4 says is not established) |
 
-All apparatus findings of panels 1–2 and the non-owner items of panel 3 are
-repaired in PANEL_REPAIRS.md (`[phase 133]`, no grading or lead decision
+All apparatus findings of panels 1–2 and the still-pending items of panel 3 are
+repaired in PANEL_REPAIRS.md (`[phase 133]`, no grading or decision
 touched); the row-D target is now boxed byte-identically in Papers 43, 44, 45.
-The lead's own sentence in R132.007 §3 is qualified per PANEL_3.
+The sentence in R132.007 §3 is qualified per PANEL_3.
 
 ## 2. What is unconditionally proved (panel 3 §6, adopted)
 
@@ -45,15 +44,14 @@ something carrying a nonnegative invariant plus a vanishing theorem, turning
 the biextension equality (Paper 43 (10.10)) into an inequality. Phases 130–132
 did not narrow that distance; they proved which shapes it cannot have.
 
-## 4. Decisions of the lead
+## 4. Decisions
 
 1. **Labels stand as recorded**, with panel 3's recommendation adopted: the
    label is never to be printed without its carrier line ("on the declared
    carrier; invertible sector"), which Paper 43 §14.0b already carries.
-2. **Two items go to the owner**, exactly as A.6 and B.4 did, because the panel
-   is right that they are the same logical situation.  **ACCEPTED by the owner
-   (D. Trejo Pizzo) 2026-09-12** — both amendments below; `[phase 133,
-   amendment accepted 2026-09-12]`:
+2. **Two items are raised as amendments**, exactly as A.6 and B.4 were, because the panel
+   is right that they are the same logical situation.  **ACCEPTED** — both amendments below; `[phase 133,
+   amendment accepted ]`:
    * **A.8** — proposed amendment: "`λ_RR` is a based Hermitian biextension
      into `Pic_b(B_T)` whose Tate component is the ruling determinant
      (Def 10.6c), consistent with the test sector by Thms 9.14a, 9.14c′; the
@@ -71,24 +69,24 @@ did not narrow that distance; they proved which shapes it cannot have.
      mechanism producing the cyclotomic factor is unsatisfiable as stated."
      Grading if accepted: `REFUTED AS STATED + PROVED AS AMENDED`; if
      rejected: B.7 `PARTIAL` and row B's label conditional.
-   **ACCEPTED by the owner 2026-09-12**, both of them: A.8 is now
+   **ACCEPTED**, both of them: A.8 is now
    `REFUTED AS STATED (scalar extension) + PROVED AS AMENDED` and B.7 is now
    `REFUTED AS STATED + PROVED AS AMENDED`; rows A and B keep their labels
    unconditionally.  Papers 43 §10.3.3 and 44 §10 carried, until that decision,
    the `[phase 133]` sentence that the panel sides with the dissent and the
    decision is pending; those sentences now read "decided: amendment accepted".
    Evidence of every edit: `AMENDMENTS_A8_B7_RECORD.md`.
-3. **Row D opens only after the owner's decision on 2** (taken 2026-09-12: both
+3. **Row D opens only after the decision on 2** (taken: both
    amendments accepted), with the boxed target
    and the two standing negatives as its contract, and with panel 3 §5's
    sentence on what is missing as its statement of the problem.
 
 ## 5. Record
 
-Apparatus verification of PANEL_REPAIRS by the lead: see the appended
+Apparatus verification of PANEL_REPAIRS: see the appended
 "Verification" section below (grep counts, script runs).
 
-## Verification (lead, after PANEL_REPAIRS)
+## Verification (after PANEL_REPAIRS)
 
 | check | result |
 |---|---|

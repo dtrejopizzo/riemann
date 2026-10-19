@@ -1,10 +1,10 @@
 # E78.150 - RELATIVE CELL-PROJECTIVE FLATNESS: the point-6 discriminant object
 
-**Run:** 2026-07-21.
+**Run:**
 **Scope:** IDENT / SAFE-GAMMA-IDENT (point 6).
 **Class:** REFORMULATION (NOT a forcing reduction -- see Sec 0.1 correction).
 
-## 0.1 CORRECTION (2026-07-21, joint audit)
+## 0.1 CORRECTION (joint audit)
 
 The framing below overstates the result. The implication `(PF-10)` is true, but
 it is NOT a *smaller* theorem when `A^Gamma_{L,N}` is defined by integrating the
@@ -27,8 +27,7 @@ be used" until the exact cell-smoothed Schur symbol is derived first. This
 document is therefore reclassified as a useful reformulation; the hard point-6
 content is the INDEPENDENT construction of the cell/Gamma object. See E78.151.
 **Attribution:** the reduction and the projective-flatness lemma in this note
-come from the program author's audit of the E78.147 chain (external contribution,
-2026-07-21). Recorded, checked, and integrated here.
+come from an external audit of the E78.147 chain (external contribution). Recorded, checked, and integrated here.
 
 ## 0. What we know now (one line)
 

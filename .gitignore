@@ -40,3 +40,9 @@ zeros6.txt
 # Vendored compiled third-party dependencies (reinstall via pip, not committed)
 vendor/
 __pycache__/
+
+# External download (not part of the research corpus)
+math-main/
+
+# Local tool instruction file (not published)
+CLAUDE.md

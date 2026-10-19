@@ -169,5 +169,5 @@ holds. It must be powered by the **Euler product / an arithmetic index positivit
 Connes–Consani arithmetic-site Hodge-index analogue), the one input the Davenport–Heilbronn falsifier
 provably lacks.
 
-*This document states the theorem and its architecture; it does not prove Theorem 3. Per the
-program's standing rule, a false victory is worse than failure: Theorem 3 is RH and remains open.*
+*This document states the theorem and its architecture; it does not prove Theorem 3. A false
+victory is worse than failure: Theorem 3 is RH and remains open.*

@@ -1,7 +1,7 @@
 # 115.17 — Audit of the external row-(d) programme (v3–v7), and the unitarity obstruction that covers the whole family
 
-Record of a single working session auditing five external notes on row (d),
-produced outside this repository and supplied by DATP for scrutiny:
+Record of a review of five external notes on row (d),
+produced outside this repository and supplied for scrutiny:
 
 | tag | file | route |
 |---|---|---|

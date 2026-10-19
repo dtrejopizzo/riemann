@@ -1,6 +1,5 @@
 # E73.139 Results - Prime-Orbit Cancellation Probe
 
-Date: 2026-07-12.
 
 Script:
 

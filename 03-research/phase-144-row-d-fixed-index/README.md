@@ -39,10 +39,10 @@ trace clause `(b′)_{B4_a}` fails for the falsifier `Ξ_a`, write the correspon
 
 | file | content |
 |---|---|
-| `R144_000_LEAD_BLUEPRINT.md` | Lead's blueprint (Fable 5.1): the object `(P_m)`, D.37, D.38 items 1–3, D.39, the FATAL rule, the `λ`-warning |
-| `R144_002_HOSTILE_AUDIT.md` | Hostile audit of round 1: ACCEPT WITH REPAIRS, no FATAL; M1–M3 MAJOR, m1–m9 MINOR; programme-level assessment (§9) |
-| `R144_003_BUILDER_ROUND2.md` | **Round-2 ledger (final round).** Per-finding status for M1–M3 and m1–m9; what each repair changed; §D.40 |
-| `R144_001_BUILDER_ROUND1.md` | **Builder round 1 (this round).** D.37 (Lemma D.37.1 polar block; Lemma D.37.2 the polar floor and the refutation; Theorem D.37.3 the failing index; Theorem D.37.4 the true separating step; Remark D.37.5 the FATAL-rule report). D.38 (Prop. D.38.1 the unconditional inventory of `R > 0`; Lemma D.38.2 + D.38.2a the one-index witness; **Theorem D.38.3 `(P_m) ⟺ RH`**; Restatement D.38.3a; Cor. D.38.3b the `λ`-dependence; Prop. D.38.4 the `d = 1` head — `≤ 64` inequalities, **the count `64 = 64d²` itself RH-conditional**, none of them unconditional; **Theorem D.38.5 bounded density on `S_0` ⟺ RH**; Cor. D.38.5c **O-30 closed negatively**). **§D.40 closure of the trace-cone route.** D.39 synthesis. Round-2 repairs (M1–M3, m1–m9) applied in place with bracketed notes. Corpus check, paper-facing list (P46-43…P46-49), open list (O-30, O-31 new; O-29 closed), §Label |
+| `R144_000_BLUEPRINT.md` | Blueprint: the object `(P_m)`, D.37, D.38 items 1–3, D.39, the FATAL rule, the `λ`-warning |
+| `R144_002_AUDIT.md` | Audit of round 1: ACCEPT WITH REPAIRS, no FATAL; M1–M3 MAJOR, m1–m9 MINOR; programme-level assessment (§9) |
+| `R144_003_ROUND2.md` | **Round-2 ledger (final round).** Per-finding status for M1–M3 and m1–m9; what each repair changed; §D.40 |
+| `R144_001_ROUND1.md` | **Round 1 (this round).** D.37 (Lemma D.37.1 polar block; Lemma D.37.2 the polar floor and the refutation; Theorem D.37.3 the failing index; Theorem D.37.4 the true separating step; Remark D.37.5 the FATAL-rule report). D.38 (Prop. D.38.1 the unconditional inventory of `R > 0`; Lemma D.38.2 + D.38.2a the one-index witness; **Theorem D.38.3 `(P_m) ⟺ RH`**; Restatement D.38.3a; Cor. D.38.3b the `λ`-dependence; Prop. D.38.4 the `d = 1` head — `≤ 64` inequalities, **the count `64 = 64d²` itself RH-conditional**, none of them unconditional; **Theorem D.38.5 bounded density on `S_0` ⟺ RH**; Cor. D.38.5c **O-30 closed negatively**). **§D.40 closure of the trace-cone route.** D.39 synthesis. Round-2 repairs (M1–M3, m1–m9) applied in place with bracketed notes. Corpus check, paper-facing list (P46-43…P46-49), open list (O-30, O-31 new; O-29 closed), §Label |
 | `scripts/certify_failing_index.py` | Certifies the `Ξ_a` polar block and the floor: `--a` (default `0.25`), `--fast` (dps 25 instead of 40), `--margin` (default `1e-6`). Exits `0` on PASS. Certifies (C1) the four polar values `Ξ_a(p) > 0`, pair-equal, `= ξ(1±2a)/2`; (C2) `\deg_aK_a = Σ_pΞ_a(p)² = I^{(a)}_∞(K_a,K_a) > 0`, hence `R_a(rF_+ + K_a) > 0` for every `r`; (C3) the polar part is `2A\cosh((½+a)L) + 2B\cosh((½−a)L)`, whose infimum is attained at `n = 1` and is **positive** — the numerical half of the refutation of the blueprint's lemma; (D) the failing-index threshold formula. **It certifies no sign statement about `ξ`.** |
 
 Run: `python3 scripts/certify_failing_index.py --fast` → `RESULT: PASS`, exit `0` (≈1 s). Also
@@ -55,6 +55,6 @@ are `a`-invariants; `\deg_aK_a` is too.
 
 ## State of the phase
 
-Round 1 (`R144_001`) and the hostile audit (`R144_002`) are in place; **round 2 is the final builder
+Round 1 (`R144_001`) and the audit (`R144_002`) are in place; **round 2 is the final round
 round** — repairs applied in place in `R144_001` with bracketed round-2 notes, ledger in
-`R144_003_BUILDER_ROUND2.md`. Remaining: `R144_004` confirmation, `R144_005` lead closing decision.
+`R144_003_ROUND2.md`. Remaining: `R144_004` confirmation, `R144_005` closing decision.

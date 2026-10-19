@@ -1,6 +1,5 @@
 # E73.232 - Uniform closed-interval theorem target
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

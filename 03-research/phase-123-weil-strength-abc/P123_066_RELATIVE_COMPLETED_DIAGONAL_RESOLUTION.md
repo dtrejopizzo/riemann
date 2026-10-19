@@ -1,6 +1,6 @@
 # P123.066 — A relative completed resolution of the source diagonal
 
-Date: 2026-09-06. Status: PROVED for the explicitly split exact structure
+Status: PROVED for the explicitly split exact structure
 below. This constructs a derived diagonal complex, not its determinant,
 nuclear realization or general nonsplit excision.
 

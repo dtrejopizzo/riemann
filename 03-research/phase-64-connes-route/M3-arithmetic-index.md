@@ -1,6 +1,6 @@
 # M2 corrected, M3 attacked: the non-circular input is a single-class arithmetic Hodge index
 
-*Continuation of `CONSTRUCTION-critical-gram.md`. Pure mathematics. We correct a flaw in M2, show
+*Continuation of `CONSTRUCTION-critical-gram.md`. We correct a flaw in M2, show
 that the analytic side (M2) is RH-equivalent (hence not an independent source of positivity), and
 conclude that the **only non-circular input is M3** — a single-class arithmetic Hodge-index
 positivity. We then connect M3 to the program's Abboud thread and propose the realization that would

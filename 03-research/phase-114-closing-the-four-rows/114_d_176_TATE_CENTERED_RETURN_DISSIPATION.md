@@ -5,15 +5,15 @@
 Tate centering is stable under every exact return.  Let
 
 \[
- R=X_0^*X_0,qquad L=Y_0^*Y_0,qquad
- T=R^{\dagger/2}LR^{\dagger/2},qquad D=I-T,         \tag{0.1}
+ R=X_0^*X_0,\qquad L=Y_0^*Y_0,\qquad
+ T=R^{\dagger/2}LR^{\dagger/2},\qquad D=I-T,         \tag{0.1}
 \]
 
 on the two-moment primitive source, and let (q) be the centered cross of
 D.175.  Define
 
 \[
- m_k=q^*T^kq,qquad d_k=m_k-m_{k+1}.                 \tag{0.2}
+ m_k=q^*T^kq,\qquad d_k=m_k-m_{k+1}.                 \tag{0.2}
 \]
 
 Then
@@ -65,7 +65,7 @@ Let (P) be the exact rank-two projection killing
 (M_-,M_+).  The actual old features are (X_0P) and (Y_0P).  Hence
 
 \[
- R=PRP,qquad L=PLP                                  \tag{1.1}
+ R=PRP,\qquad L=PLP                                  \tag{1.1}
 \]
 
 as operators on the supported primitive source.  Their functional

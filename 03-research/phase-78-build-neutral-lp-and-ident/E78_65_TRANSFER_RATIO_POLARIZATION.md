@@ -1,6 +1,6 @@
 # E78.65 - Naive transfer-ratio reanchoring of `PAIRNUM_N` fails on the current certified artifacts
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

@@ -1,6 +1,5 @@
 # E73.229 - Bernoulli sector proof for psi/psi_1
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

@@ -1,6 +1,5 @@
 # E71.2 -- convergence is a live RH-detector on the non-positivity front
 
-**Date:** 2026-07-07.
 **Script:** E71_2_convergence_detector.py.
 **Question:** E71.1 showed an off-line zero cannot appear as a complex eigenvalue (spectrum real by
 algebra) -- it can only degrade convergence. Does it actually STALL `sp(H_x) → {γ_k}`?

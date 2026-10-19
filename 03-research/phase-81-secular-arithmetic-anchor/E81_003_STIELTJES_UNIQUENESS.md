@@ -140,7 +140,7 @@ The outer limit of `Y_L` is the completed zeta logarithmic derivative after
 the explicit factors are restored.  Proving that it is the limit of real
 finite spectral shifts gives the safe-ratio convergence whose normal-family
 closure implies `Omega7`.  Therefore (4.3) is not a soft measure-convergence
-lemma.  It is the force-RH arithmetic step in Stieltjes coordinates.
+lemma.  It is the RH-strength arithmetic step in Stieltjes coordinates.
 
 ## 7. Status
 

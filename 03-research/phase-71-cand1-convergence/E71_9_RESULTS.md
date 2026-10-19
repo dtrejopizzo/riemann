@@ -1,6 +1,5 @@
 # E71.9 -- relative arch/free background results
 
-**Date:** 2026-07-07.
 **Script:** `E71_9_relative_arch_background_probe.py`.
 
 ## Output

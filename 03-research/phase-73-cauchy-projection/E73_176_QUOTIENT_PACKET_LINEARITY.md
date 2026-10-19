@@ -1,6 +1,5 @@
 # E73.176 - Quotient packet linearity
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

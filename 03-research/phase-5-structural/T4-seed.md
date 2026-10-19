@@ -1,6 +1,6 @@
 # T4-seed — Does positivity become *structural* in the anatomy coordinates? Two genuine inequalities natural in $\{R_p\}$, opaque in $\{a_p\}$
 
-**Route B / M5, the T4 seed (analytic, no engine).** Author: David Alejandro Trejo Pizzo · 2026-06-03.
+**Route B / M5, the T4 seed (analytic, no engine).**
 Follows Phase 2 (`Phase2-Rp-Euler.md`). The advisor's survival test, taken literally.
 
 > **The test (advisor's precise reformulation).** It is not enough that $\lambda_{\min}=F(\{R_p\})$; if also

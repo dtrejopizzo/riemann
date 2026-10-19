@@ -1,22 +1,22 @@
-# 104_30 — Referencia positiva de bandera y gate espectral hard-edge
+# 104_30 — Positive flag reference and the hard-edge spectral gate
 
-**Rol.** Construir la forma prima--polo regulada que falta en 104_28,
-polarizarla exactamente en la base de Laguerre y buscar una referencia
-positiva que evalúe \(A_n\) sobre todos los rayos \(g_n\), \(n\ge150\).
+**Role.** Build the regulated prime–pole form missing from 104_28,
+polarize it exactly in the Laguerre basis, and look for a positive
+reference evaluating \(A_n\) on every ray \(g_n\), \(n\ge150\).
 
-La construcción existe. La referencia positiva es una forma diagonal de
-bandera, no el canal arquimediano local. Produce un cociente espectral exacto
-en toda sección finita y permite ejecutar el diagnóstico de masa espectral
-en el gauge correcto. El diagnóstico es favorable hasta \(N=500\), pero no
-es un certificado. Las cotas directas de Gershgorin--Schur pierden la
-cancelación antes de ese punto y, en forma analítica, requieren controlar
-precisamente las segundas diferencias de \(A_n-\lambda_n\).
+The construction exists. The positive reference is a diagonal flag form,
+not the local archimedean channel. It produces an exact spectral ratio on
+every finite section and allows running the spectral-mass diagnostic in
+the correct gauge. The diagnostic is favorable up to \(N=500\), but it is
+not a certificate. Direct Gershgorin–Schur bounds lose the cancellation
+before that point and, analytically, require controlling precisely the
+second differences of \(A_n-\lambda_n\).
 
-Este documento no prueba A1 ni RH.
+This document proves neither A1 nor RH.
 
-## 1. Forma prima--polo regulada
+## 1. Regulated prime–pole form
 
-Sean
+Let
 
 \[
  \phi_k(x)={\bf1}_{x\ge0}e^{-x/2}L_k(x),
@@ -24,13 +24,13 @@ Sean
  g_n=\sum_{k=0}^{n-1}\phi_k,
 \]
 
-y sea
+and let
 
 \[
  (S_a h)(x)={\bf1}_{x\ge a}h(x-a).
 \]
 
-Polarizamos el semigrupo mediante
+We polarize the semigroup via
 
 \[
  \mathsf B_a(g,h)
@@ -39,8 +39,8 @@ Polarizamos el semigrupo mediante
  \right).                                                     \tag{1}
 \]
 
-Para \(\varepsilon>0\), pongamos
-\(\alpha=\frac12-\varepsilon\) y definamos
+For \(\varepsilon>0\), set
+\(\alpha=\frac12-\varepsilon\) and define
 
 \[
  \boxed{
@@ -50,15 +50,15 @@ Para \(\varepsilon>0\), pongamos
   -\int_0^\infty e^{\alpha a}\mathsf B_a(g,h)\,da.}            \tag{2}
 \]
 
-La combinación (2), no sus dos términos después de retirar el regulador, es
-el objeto correcto. La identidad de 104_28
+Combination (2), not its two terms after removing the regulator, is the
+correct object. The identity of 104_28
 
 \[
  \langle S_ag_n,g_n\rangle
  =e^{-a/2}L_{n-1}^{(1)}(a)                                    \tag{3}
 \]
 
-da
+gives
 
 \[
  \begin{aligned}
@@ -71,7 +71,7 @@ da
  \end{aligned}                                                 \tag{4}
 \]
 
-La fórmula prima--Laguerre prueba
+The prime–Laguerre formula proves
 
 \[
  \boxed{
@@ -79,7 +79,7 @@ La fórmula prima--Laguerre prueba
  =B_n:=A_n-\lambda_n.}                                        \tag{5}
 \]
 
-El segundo término de (4) es exactamente
+The second term of (4) is exactly
 
 \[
  p_n(\varepsilon)
@@ -87,9 +87,9 @@ El segundo término de (4) es exactamente
    {n-1\choose j-1}{(-1)^{j-1}\over j\varepsilon^j}.           \tag{6}
 \]
 
-### 1.1 Cierre para regulador fijo
+### 1.1 Closedness at fixed regulator
 
-Para
+For
 
 \[
  \mathcal H_\eta=L^2((0,\infty),e^{2\eta x}dx),
@@ -97,44 +97,44 @@ Para
  \alpha<\eta<{1\over2},
 \]
 
-se tiene
+one has
 
 \[
  |\mathsf B_a(g,h)|
  \le e^{-\eta a}\|g\|_\eta\|h\|_\eta.                          \tag{7}
 \]
 
-Escribiendo
+Writing
 
 \[
  \delta=\eta-\alpha\in(0,\varepsilon),
 \]
 
-la ecuación (7) prueba que \(\mathsf Q_\varepsilon\) es una forma
-simétrica acotada, por tanto cerrada, y
+equation (7) proves that \(\mathsf Q_\varepsilon\) is a bounded, hence
+closed, symmetric form, and
 
 \[
  \|\mathsf Q_\varepsilon\|
  \le -{\zeta'\over\zeta}(1+\delta)+{1\over\delta}.              \tag{8}
 \]
 
-No hay transferencia uniforme obtenida de (8): el intervalo admisible para
-\(\eta\) colapsa cuando \(\varepsilon\downarrow0\). Además,
-\(\|g_n\|_\eta^2\) tiene escala
+No uniform transfer is obtained from (8): the admissible interval for
+\(\eta\) collapses as \(\varepsilon\downarrow0\). Moreover,
+\(\|g_n\|_\eta^2\) has scale
 
 \[
  \binom{2n-2}{n-1}
  [\,2(\varepsilon-\delta)\,]^{-(2n-1)},                        \tag{9}
 \]
 
-y optimizar por separado (8)--(9) produce una pérdida de orden
-\(n\varepsilon^{-2n}\). Ésta es otra forma de la cancelación Abel que no
-puede separarse.
+and optimizing (8)–(9) separately produces a loss of order
+\(n\varepsilon^{-2n}\). This is another form of the Abel cancellation that
+cannot be separated.
 
-## 2. La forma regulada es indefinida
+## 2. The regulated form is indefinite
 
-La positividad global buscada en 104_28 no existe ni siquiera antes de tomar
-el límite. Sea
+The global positivity sought in 104_28 does not exist even before taking
+the limit. Let
 
 \[
  u_\delta=\delta^{-1/2}{\bf1}_{[0,\delta]},
@@ -142,7 +142,7 @@ el límite. Sea
  0<\delta<\log2.
 \]
 
-No hay solapamiento primo y
+There is no prime overlap, and
 
 \[
  \mathsf Q_\varepsilon[u_\delta]
@@ -152,9 +152,9 @@ No hay solapamiento primo y
           \over\delta\alpha^2}>0,                              \tag{10}
 \]
 
-con el valor continuo \(I_0=\delta/2\) cuando \(\alpha=0\).
+with the continuous value \(I_0=\delta/2\) when \(\alpha=0\).
 
-Ahora sea \(L=\log2\) y
+Now let \(L=\log2\) and
 
 \[
  v_\delta={u_\delta+S_Lu_\delta\over\sqrt2},
@@ -162,7 +162,7 @@ Ahora sea \(L=\log2\) y
  \delta<\min(\log2,\log(3/2)).
 \]
 
-Sólo el átomo \(m=2\) solapa las dos cajas, y
+Only the atom \(m=2\) overlaps the two boxes, and
 
 \[
  \mathsf Q_\varepsilon[v_\delta]
@@ -172,15 +172,15 @@ Sólo el átomo \(m=2\) solapa las dos cajas, y
           \over\delta\alpha^2}.                               \tag{11}
 \]
 
-Como \(I_0+I_L=O_\varepsilon(\delta)\), la expresión (11) es
-positiva para \(\delta\) suficientemente pequeño. Las ecuaciones
-(10)--(11) prueban que \(\mathsf Q_\varepsilon\) es indefinida para todo
-\(\varepsilon>0\). Se descarta así una referencia obtenida declarando
-positivo el canal prima--polo.
+Since \(I_0+I_L=O_\varepsilon(\delta)\), expression (11) is positive for
+sufficiently small \(\delta\). Equations (10)–(11) prove that
+\(\mathsf Q_\varepsilon\) is indefinite for every
+\(\varepsilon>0\). This rules out a reference obtained by declaring the
+prime–pole channel positive.
 
-## 3. Matriz Toeplitz exacta y límite algebraico
+## 3. Exact Toeplitz matrix and algebraic limit
 
-La identidad de traslación de Laguerre es
+The Laguerre translation identity is
 
 \[
  \langle S_a\phi_j,\phi_k\rangle
@@ -191,14 +191,14 @@ La identidad de traslación de Laguerre es
  \end{cases}                                                   \tag{12}
 \]
 
-Por tanto (2) es Toeplitz en toda sección finita:
+Hence (2) is Toeplitz on every finite section:
 
 \[
  \mathsf Q_\varepsilon(\phi_j,\phi_k)
  =q_{|j-k|}(\varepsilon),                                     \tag{13}
 \]
 
-donde
+where
 
 \[
  \boxed{
@@ -208,7 +208,7 @@ donde
  =-{\zeta'\over\zeta}(1+\varepsilon)-{1\over\varepsilon}}      \tag{14}
 \]
 
-y, para \(d\ge1\),
+and, for \(d\ge1\),
 
 \[
  \boxed{
@@ -226,24 +226,24 @@ y, para \(d\ge1\),
  ={(-1)^d(1-\varepsilon)^{d-1}\over\varepsilon^{d+1}}.}        \tag{16}
 \]
 
-La función generatriz
+The generating function
 
 \[
  \sum_{d\ge0}L_d^{(-1)}(a)t^d
  =\exp\left(-{at\over1-t}\right)
 \]
 
-prueba (16). Si \(F(s)=-\zeta'(s)/\zeta(s)\), la suma prima de
-(15) también puede escribirse, sin truncación, como
+proves (16). If \(F(s)=-\zeta'(s)/\zeta(s)\), the prime sum of
+(15) can also be written, with no truncation, as
 
 \[
  \sum_{j=1}^d
  {1\over j!}{d-1\choose j-1}F^{(j)}(1+\varepsilon).            \tag{17}
 \]
 
-Las divergencias de (16) y (17) se cancelan sólo en su diferencia.
+The divergences of (16) and (17) cancel only in their difference.
 
-De (4) y (13),
+From (4) and (13),
 
 \[
  P_{n,\varepsilon}
@@ -251,8 +251,8 @@ De (4) y (13),
   +2\sum_{d=1}^{n-1}(n-d)q_d(\varepsilon).                    \tag{18}
 \]
 
-Pongamos \(B_0=0\). La inversión triangular de (18) y (5) da el
-límite entrada por entrada
+Let \(B_0=0\). Triangular inversion of (18) and (5) gives the
+entry-by-entry limit
 
 \[
  \boxed{
@@ -261,14 +261,13 @@ límite entrada por entrada
  q_d={B_{d+1}-2B_d+B_{d-1}\over2}\quad(d\ge1).}                \tag{19}
 \]
 
-La forma
-\(\mathsf Q_0=[q_{|j-k|}]\) queda así definida en el espacio algebraico
-de sucesiones de soporte finito. No se afirma que sea cerrable en
-\(L^2(0,\infty)\), ni que (8) sobreviva al límite.
+Form \(\mathsf Q_0=[q_{|j-k|}]\) is thus defined on the algebraic space of
+finitely supported sequences. It is not claimed to be closable in
+\(L^2(0,\infty)\), nor that (8) survives the limit.
 
-## 4. Referencia positiva que evalúa \(A_n\)
+## 4. Positive reference evaluating \(A_n\)
 
-Fijemos \(M=150\) y usemos la base ortogonal, no normalizada,
+Fix \(M=150\) and use the orthogonal, non-normalized basis
 
 \[
  b_0=g_M,
@@ -276,13 +275,13 @@ Fijemos \(M=150\) y usemos la base ortogonal, no normalizada,
  b_r=\phi_{M+r-1}\quad(r\ge1).                                \tag{20}
 \]
 
-Para
+For
 
 \[
  v=a_0g_M+\sum_{k\ge M}a_k\phi_k
 \]
 
-definimos la forma diagonal de bandera
+define the diagonal flag form
 
 \[
  \boxed{
@@ -291,54 +290,53 @@ definimos la forma diagonal de bandera
   +\sum_{k\ge M}(A_{k+1}-A_k)|a_k|^2.}                        \tag{21}
 \]
 
-Esta forma es positiva y cerrada en su dominio diagonal. En efecto,
-\(A_M>0\), y si
+This form is positive and closed on its diagonal domain. Indeed,
+\(A_M>0\), and if
 
 \[
  \Delta A_n=A_{n+1}-A_n,
 \]
 
-entonces
+then
 
 \[
  \Delta^2 A_n
  :=A_{n+2}-2A_{n+1}+A_n
- =\sum_{\substack{r\ge1\\r\ {\rm impar}}}
+ =\sum_{\substack{r\ge1\\r\ {\rm odd}}}
    {(1-1/r)^n\over r^2}>0.                                   \tag{22}
 \]
 
-Así \(\Delta A_n\) es creciente. El valor positivo en el umbral finito
-implica \(\Delta A_k>0\) para \(k\ge M\).
+So \(\Delta A_n\) is increasing. The positive value at the finite
+threshold implies \(\Delta A_k>0\) for \(k\ge M\).
 
-Como
+Since
 
 \[
  g_n=g_M+\sum_{k=M}^{n-1}\phi_k
  \qquad(n\ge M),                                               \tag{23}
 \]
 
-el telescopado da
+telescoping gives
 
 \[
  \boxed{\mathsf A_{\rm flag}[g_n]=A_n.}                        \tag{24}
 \]
 
-La construcción (21) resuelve el problema de tipo encontrado en 104_28,
-pero debe leerse con cuidado: es una referencia no local fabricada a partir
-de la sucesión \(A_n\). No identifica el canal Gamma--polo con una forma
-positiva y no produce por sí sola ninguna desigualdad para
-\(\mathsf Q_0\).
+Construction (21) resolves the type of problem found in 104_28, but must
+be read with care: it is a nonlocal reference built from the sequence
+\(A_n\). It does not identify the Gamma–pole channel with a positive form
+and by itself produces no inequality for \(\mathsf Q_0\).
 
-## 5. Matriz exacta en la base de bandera
+## 5. Exact matrix in the flag basis
 
-En la sección
+On the section
 
 \[
  \mathcal V_{M,N}
  =\mathrm{span}\,\{g_M,\phi_M,\ldots,\phi_{N-1}\},         \tag{25}
 \]
 
-la matriz de \(\mathsf A_{\rm flag}\) es
+the matrix of \(\mathsf A_{\rm flag}\) is
 
 \[
  D_{M,N}
@@ -346,7 +344,7 @@ la matriz de \(\mathsf A_{\rm flag}\) es
    (A_M,\Delta A_M,\ldots,\Delta A_{N-1})>0.                  \tag{26}
 \]
 
-La matriz de \(\mathsf Q_0\) queda completamente explícita. Para
+The matrix of \(\mathsf Q_0\) is completely explicit. For
 \(M\le k,l<N\),
 
 \[
@@ -362,29 +360,30 @@ La matriz de \(\mathsf Q_0\) queda completamente explícita. Para
  \end{aligned}                                                 \tag{27}
 \]
 
-**Chequeo de índices de (27).** Para \(k=M\), la suma es
-\(\sum_{d=1}^{M}q_d\), y el segundo incremento del último renglón es
-\(B_1-B_0\). Para \(k=M+r\), los índices son
-\(d=r+1,\ldots,M+r\). Por tanto no falta ni sobra el término \(q_0\).
+**Index check for (27).** For \(k=M\), the sum is
+\(\sum_{d=1}^{M}q_d\), and the second increment of the last line is
+\(B_1-B_0\). For \(k=M+r\), the indices are
+\(d=r+1,\ldots,M+r\). So the term \(q_0\) is neither missing nor
+duplicated.
 
-Las mismas ecuaciones valen para \(\varepsilon>0\), reemplazando \(B_n\)
-por \(P_{n,\varepsilon}\).
+The same equations hold for \(\varepsilon>0\), replacing \(B_n\)
+by \(P_{n,\varepsilon}\).
 
-Definimos la matriz blanqueada
+We define the whitened matrix
 
 \[
  \boxed{
  K_{M,N}=D_{M,N}^{-1/2}Q_{M,N}D_{M,N}^{-1/2}.}                 \tag{28}
 \]
 
-Si \(x_n=(1,\ldots,1,0,\ldots,0)\) son las coordenadas de (23), el
-vector unitario correcto es
+If \(x_n=(1,\ldots,1,0,\ldots,0)\) are the coordinates of (23), the
+correct unit vector is
 
 \[
  u_n={D_{M,N}^{1/2}x_n\over\sqrt{A_n}},                        \tag{29}
 \]
 
-y
+and
 
 \[
  \boxed{
@@ -395,37 +394,37 @@ y
  =1-{\lambda_n\over A_n}.}                                    \tag{30}
 \]
 
-Así \(\lambda_n\ge cA_n\) equivale a que el promedio espectral específico
-de \(u_n\) sea a lo sumo \(1-c\). Para el enunciado scale-free basta
-algún \(c>1/4\). La elección \(c=501/2002\) de 104_26 pide el techo
-exacto
+So \(\lambda_n\ge cA_n\) is equivalent to the specific spectral average of
+\(u_n\) being at most \(1-c\). For the scale-free statement, any
+\(c>1/4\) suffices. The choice \(c=501/2002\) of 104_26 requires the
+exact ceiling
 
 \[
  1-c={1501\over2002}=0.7497502497\ldots,
 \]
 
-levemente menor que \(3/4\).
+slightly less than \(3/4\).
 
-Controlar sólo la masa en \([3/4,\infty)\) no basta sin un control de la
-cola espectral: la igualdad relevante es el primer momento completo de
-(30). El diagnóstico registra por ello masa, momento excedente y
-expectativa.
+Controlling only the mass on \([3/4,\infty)\) is not enough without
+control of the spectral tail: the relevant equality is the full first
+moment of (30). The diagnostic therefore records mass, excess moment, and
+expectation.
 
-## 6. Diagnóstico reproducible
+## 6. Reproducible diagnostic
 
-El archivo **tools/flag_hard_edge_spectrum.py** usa
-**lambda_arch** y dos extracciones Cauchy/FFT de **li_lambda**. Verifica
-para cada \(M\le n\le N\) las identidades (24), (27) y (30),
-diagonaliza (28) y calcula la masa espectral de cada \(u_n\) en
-\([3/4,\infty)\). Se reproduce con
+The file **tools/flag_hard_edge_spectrum.py** uses
+**lambda_arch** and two Cauchy/FFT extractions of **li_lambda**. It
+verifies, for each \(M\le n\le N\), identities (24), (27), and (30),
+diagonalizes (28), and computes the spectral mass of each \(u_n\) on
+\([3/4,\infty)\). Reproduced with
 
     cd 03-research/phase-104-unconditional-a1-closure/tools
     python3 flag_hard_edge_spectrum.py --nmax 500 \
       --sections 200 250 300 350 400 500
 
-Resultados de doble precisión, no certificados:
+Double-precision, uncertified results:
 
-| \(N\) | \(\lambda_{\min}(K)\) | \(\lambda_{\max}(K)\) | Gershgorin sup. | Schur ponderado |
+| \(N\) | \(\lambda_{\min}(K)\) | \(\lambda_{\max}(K)\) | Gershgorin sup. | weighted Schur |
 |---:|---:|---:|---:|---:|
 | 200 | \(-0.363476\) | \(0.033546\) | \(0.118739\) | \(0.711902\) |
 | 250 | \(-0.363476\) | \(0.066179\) | \(0.279405\) | \(0.763377\) |
@@ -434,20 +433,20 @@ Resultados de doble precisión, no certificados:
 | 400 | \(-0.363477\) | \(0.125661\) | \(0.924004\) | \(1.000074\) |
 | 500 | \(-0.363479\) | \(0.166149\) | \(1.193387\) | \(1.207775\) |
 
-En \(N=500\), la discrepancia máxima entre radios \(0.985\) y
-\(0.975\) en los \(\lambda_n\) fue \(5.1\cdot10^{-9}\); la
-discrepancia máxima entre autovalores fue \(4.2\cdot10^{-12}\).
-No apareció espectro en \([3/4,\infty)\), de modo que la masa de todos
-los \(u_n\) allí fue cero.
+At \(N=500\), the maximum discrepancy between radii \(0.985\) and
+\(0.975\) in the \(\lambda_n\) was \(5.1\cdot10^{-9}\); the maximum
+discrepancy between eigenvalues was \(4.2\cdot10^{-12}\).
+No spectrum appeared in \([3/4,\infty)\), so the mass of every
+\(u_n\) there was zero.
 
-Esto es evidencia de que el vector fijo no está cerca del umbral en ese
-rango. No es evidencia asintótica y no certifica ningún enunciado sobre
-todo \(n\): ambos radios comparten la evaluación de Borwein, la FFT y
-la aritmética **float64**.
+This is evidence that the fixed vector is not near the threshold in that
+range. It is not asymptotic evidence and certifies no statement for every
+\(n\): both radii share the Borwein evaluation, the FFT, and
+**float64** arithmetic.
 
-## 7. Gate de Gershgorin y Schur
+## 7. Gershgorin and Schur gate
 
-Con
+With
 
 \[
  a_0=A_M,
@@ -455,7 +454,7 @@ Con
  a_k=\Delta A_k\quad(M\le k<N),
 \]
 
-los extremos superiores de Gershgorin son
+the Gershgorin upper extremes are
 
 \[
  \begin{aligned}
@@ -471,13 +470,13 @@ los extremos superiores de Gershgorin son
  \end{aligned}                                                 \tag{31}
 \]
 
-**Chequeo de índices de (31).** El índice \(k\) etiqueta la fila
-\(\phi_k\), \(M\le k<N\). Su diagonal es
-\(q_{|k-k|}/\Delta A_k=q_0/\Delta A_k\); el término \(s_k\) es la
-única entrada contra \(g_M\); y la suma sobre \(l\ne k\) contiene
-exactamente las restantes filas \(\phi_l\). No hay doble conteo.
+**Index check for (31).** Index \(k\) labels row
+\(\phi_k\), \(M\le k<N\). Its diagonal entry is
+\(q_{|k-k|}/\Delta A_k=q_0/\Delta A_k\); the term \(s_k\) is the only
+entry against \(g_M\); and the sum over \(l\ne k\) contains exactly the
+remaining rows \(\phi_l\). There is no double counting.
 
-Con pesos de Schur \(w_i=\sqrt{a_i}\), la cota se simplifica a
+With Schur weights \(w_i=\sqrt{a_i}\), the bound simplifies to
 
 \[
  \begin{aligned}
@@ -490,14 +489,13 @@ Con pesos de Schur \(w_i=\sqrt{a_i}\), la cota se simplifica a
  \end{aligned}                                                 \tag{32}
 \]
 
-Para evitar una ambigüedad de índices, definamos la segunda diferencia
-centrada
+To avoid an index ambiguity, define the centered second difference
 
 \[
  \nabla_c^2 B_d:=B_{d+1}-2B_d+B_{d-1}\qquad(d\ge1).
 \]
 
-El coeficiente aritmético exacto requerido por (31)--(32) es
+The exact arithmetic coefficient required by (31)–(32) is
 
 \[
  \boxed{
@@ -506,31 +504,31 @@ El coeficiente aritmético exacto requerido por (31)--(32) es
   -{1\over2}\nabla_c^2\lambda_d.}                              \tag{33}
 \]
 
-Por tanto una prueba mediante (31) o (32) necesita una cota firmada o
-sumable para las segundas diferencias centradas de \(\lambda_n\), o una
-estimación directa de la diferencia prima--polo en (15). Sustituirla por
-valores absolutos elimina la interferencia que A1 necesita.
+Hence a proof via (31) or (32) needs a signed or summable bound for the
+centered second differences of \(\lambda_n\), or a direct estimate of the
+prime–pole difference in (15). Replacing it with absolute values
+eliminates the interference that A1 needs.
 
-El diagnóstico hace visible la pérdida: Gershgorin ya supera \(3/4\)
-entre \(N=350\) y \(N=400\), y Schur lo hace antes, mientras el
-autovalor superior observado sigue por debajo de \(0.13\). La cota de
-filas no captura la cancelación matricial ni siquiera en el rango de
-prueba.
+The diagnostic makes the loss visible: Gershgorin already exceeds
+\(3/4\) between \(N=350\) and \(N=400\), and Schur does so even earlier,
+while the observed top eigenvalue remains below \(0.13\). The row bound
+does not capture the matrix cancellation even within the tested range.
 
-## Estado
+## Status
 
-* **Probado:** forma regulada cerrada para \(\varepsilon>0\),
-  indefinición explícita, matriz Toeplitz (14)--(18), límite algebraico
-  (19), referencia positiva de bandera (21)--(24) y matriz blanqueada
-  exacta (27)--(30).
-* **Verificado diagnósticamente:** todas las identidades hasta \(N=500\),
-  estabilidad entre dos radios y ausencia de espectro por encima de
-  \(3/4\) en esas secciones.
-* **Descartado como estimación directa:** filas absolutas de
-  Gershgorin--Schur; pierden el margen antes de \(N=400\).
-* **No probado:** control uniforme de \(K_{M,N}\), no alineación
-  espectral uniforme de \(u_n\), A1 y RH.
-* **Coeficiente mínimo restante:** una estimación no absoluta para
-  \(q_d=\frac12\nabla_c^2(A-\lambda)_d\), reteniendo la cancelación
-  conjunta de (15), o una estimación directa del primer momento (30)
-  sobre la familia fija \(u_n\).
+* **Proved:** the closed regulated form for \(\varepsilon>0\), explicit
+  indefiniteness, the Toeplitz matrix (14)–(18), the algebraic limit
+  (19), the positive flag reference (21)–(24), and the exact whitened
+  matrix (27)–(30).
+* **Diagnostically verified:** all identities up to \(N=500\), stability
+  between two radii, and absence of spectrum above
+  \(3/4\) in those sections.
+* **Ruled out as a direct estimate:** absolute Gershgorin–Schur row
+  bounds; they lose the margin before \(N=400\).
+* **Not proved:** uniform control of \(K_{M,N}\), uniform spectral
+  non-alignment of \(u_n\), A1, and RH.
+* **Minimal remaining coefficient:** a non-absolute estimate for
+  \(q_d=\frac12\nabla_c^2(A-\lambda)_d\), keeping the joint cancellation
+  of (15), or a direct estimate of the first moment (30) over the fixed
+  family \(u_n\).
+</content>

@@ -1,7 +1,6 @@
 # E72.138 -- Relative arithmetic form bound
 
-**Date:** 2026-07-09.
-**Role:** express `RCOER` as the exact arithmetic form inequality that must be proved.
+**Purpose:** express `RCOER` as the exact arithmetic form inequality that must be proved.
 
 ## 0. Split
 

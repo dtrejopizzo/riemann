@@ -1,6 +1,5 @@
 # E68.4 -- the prime-comb hypothesis FAILS; Omega_7 localizes near theta ~ pi/2
 
-**Date:** 2026-07-06.
 **Script:** [E68_4_prime_comb.py](E68_4_prime_comb.py).
 
 ## Self-correction

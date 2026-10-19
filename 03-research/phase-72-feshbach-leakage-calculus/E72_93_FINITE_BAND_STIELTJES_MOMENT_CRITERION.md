@@ -1,7 +1,6 @@
 # E72.93 -- Finite-band Stieltjes moment criterion
 
-**Date:** 2026-07-09.
-**Role:** convert finite-band Cauchy invisibility into a finite residue/moment identity.
+**Purpose:** convert finite-band Cauchy invisibility into a finite residue/moment identity.
 
 ## 0. Input
 

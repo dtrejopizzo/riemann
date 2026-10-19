@@ -82,7 +82,7 @@ with \(\mu\ge0\), whose construction uses only the Euler product, Gamma factor,
 functional equation and paired boundary prescription.
 
 Such a theorem would force the divisor to be real and hence close Omega7.
-It is therefore a valid force-RH target.
+It is therefore a valid RH-strength target.
 
 ## Obstruction found
 

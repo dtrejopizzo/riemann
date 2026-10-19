@@ -1,6 +1,6 @@
 # P123.029 — one-prime algebraic faithfully flat descent
 
-Date: 2026-09-05. Status: PROVED for the single-prime, underlying
+Status: PROVED for the single-prime, underlying
 algebraic module statements below. Topological descent, bimodule
 composition/shadow comparison and integral descent remain OPEN.
 

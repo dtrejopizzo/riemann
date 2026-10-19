@@ -1,9 +1,9 @@
 """
-FASE 2: Cholesky algebraico del detector zeta. ¿El certificado de positividad
-se organiza por PRIMOS (no-circular) o por CEROS (circular, como FF)?
-(a) Cholesky/LDL de A_lambda(zeta); reconstruccion algebraica de entradas en Q(log p, gamma, log pi).
-(b) Comparar con A = V V^* indexado por los CEROS de zeta (la fórmula explícita).
-La leccion FF (E41): el certificado es V V^* por ceros, PSD porque los ceros son reales (Hodge).
+PHASE 2: algebraic Cholesky of the zeta detector. Is the positivity certificate
+organized by PRIMES (non-circular) or by ZEROS (circular, as in FF)?
+(a) Cholesky/LDL of A_lambda(zeta); algebraic reconstruction of entries in Q(log p, gamma, log pi).
+(b) Compare with A = V V^* indexed by the ZEROS of zeta (the explicit formula).
+The FF lesson (E41): the certificate is V V^* over zeros, PSD because the zeros are real (Hodge).
 """
 import mpmath as mp
 mp.mp.dps = 40
@@ -41,7 +41,7 @@ def zeta_engine(lam_str,N):
     return M,L,idx
 
 def ldl(M):
-    # LDL^T para PSD (posiblemente singular): M = L D L^T
+    # LDL^T for PSD (possibly singular): M = L D L^T
     n=M.rows; Lm=mp.eye(n); D=mp.zeros(n,1)
     for j in range(n):
         d=M[j,j]-sum(Lm[j,k]**2*D[k] for k in range(j))
@@ -55,24 +55,24 @@ def ldl(M):
 lam,N='5.0',8
 M,L,idx=zeta_engine(lam,N); dim=2*N+1
 ev,_=mp.eigsy(M); evs=sorted([ev[i] for i in range(dim)])
-print(f"FASE 2 (zeta, lambda={lam}, N={N}, dim={dim}):  mu_0={mp.nstr(evs[0],4)} (PSD marginal)\n")
+print(f"PHASE 2 (zeta, lambda={lam}, N={N}, dim={dim}):  mu_0={mp.nstr(evs[0],4)} (PSD marginal)\n")
 
-print("(a) LDL^T: A = L D L^T. Pivotes D (=cuadrados de los factores):")
+print("(a) LDL^T: A = L D L^T. Pivots D (=squares of the factors):")
 Lm,D=ldl(M)
 print("   D =", [mp.nstr(D[i],4) for i in range(dim)])
-print(f"   ultimo pivote D[{dim-1}] = {mp.nstr(D[dim-1],4)} (el radical marginal ~mu_0; ruido de cuadratura)")
-print("\n   Intento de reconstruccion algebraica de pivotes/entradas en Q(log2,log3,gamma,log pi):")
+print(f"   last pivot D[{dim-1}] = {mp.nstr(D[dim-1],4)} (the marginal radical ~mu_0; quadrature noise)")
+print("\n   Attempted algebraic reconstruction of pivots/entries in Q(log2,log3,gamma,log pi):")
 consts=[mp.log(2),mp.log(3),GAMMA,mp.log(mp.pi),mp.mpf(1)]
 for i in [0,1,2]:
     r=mp.identify(D[i], ['log(2)','log(3)','euler','log(pi)'])
-    print(f"   D[{i}]={mp.nstr(D[i],8)}  identify-> {r if r else 'no cierre algebraico simple'}")
+    print(f"   D[{i}]={mp.nstr(D[i],8)}  identify-> {r if r else 'no simple algebraic closed form'}")
 
-print("\n(b) Comparacion conceptual con el certificado por CEROS (V V^*):")
-print("   Por la formula explicita (Lema de truncacion), A_lambda(zeta) = sum_rho |f^(gamma_rho)|^2")
-print("   = V V^* con V indexado por los CEROS de zeta (igual estructura que FF, E41).")
-print("   => el certificado NATURAL es por ceros, y es PSD SOLO si los gamma_rho son reales = RH.")
-print("   El certificado por PRIMOS/divisores (no-circular) seria el indice de Hodge aritmetico,")
-print("   que NO existe para Spec Z. Esa es la pared, confirmada por Fase 1.")
-print(f"\n   Sintoma en los datos: el radical (ultimo pivote ~{mp.nstr(D[dim-1],3)}) es donde vive RH;")
-print("   los pivotes del bulk son O(1) (positivos, estructura prolata), pero NO se reconstruyen")
-print("   como funciones simples de {log p}: el certificado no es prime-local algebraico.")
+print("\n(b) Conceptual comparison with the certificate over ZEROS (V V^*):")
+print("   By the explicit formula (truncation lemma), A_lambda(zeta) = sum_rho |f^(gamma_rho)|^2")
+print("   = V V^* with V indexed by the ZEROS of zeta (same structure as FF, E41).")
+print("   => the NATURAL certificate is over zeros, and it is PSD ONLY if the gamma_rho are real = RH.")
+print("   The certificate over PRIMES/divisors (non-circular) would be the arithmetic Hodge index,")
+print("   which does NOT exist for Spec Z. That is the wall, confirmed by Phase 1.")
+print(f"\n   Symptom in the data: the radical (last pivot ~{mp.nstr(D[dim-1],3)}) is where RH lives;")
+print("   the bulk pivots are O(1) (positive, prolate structure), but they are NOT reconstructed")
+print("   as simple functions of {log p}: the certificate is not algebraically prime-local.")

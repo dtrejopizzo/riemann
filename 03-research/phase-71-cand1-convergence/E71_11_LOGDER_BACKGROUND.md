@@ -1,8 +1,7 @@
 # E71.11 -- log-derivative background probe for the CCM m-function
 
-**Date:** 2026-07-07.
 **Script:** `E71_11_logder_background_probe.py`.
-**Role:** test the first canonical background candidates for the Weyl m-function target in E71.10.
+**Purpose:** test the first canonical background candidates for the Weyl m-function target in E71.10.
 
 ## Setup
 

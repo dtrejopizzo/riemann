@@ -1,62 +1,61 @@
-# 104_57 — Presupuesto exacto del bloque bajo de ceros
+# 104_57 — Exact budget for the low zero block
 
-**Rol.** Convertir la traducción corregida de Lagarias en una cota, no en una
-mera coordenada. Este documento no prueba A1 ni RH. Aísla el único bloque de
-ceros que conserva fuerza RH, fija su cardinalidad con todas las convenciones
-de factor dos y da un criterio algebraico para descartar estimaciones con un
-error incompatible con el margen que reclaman.
+**Role.** Turn Lagarias's corrected translation into a bound, not a mere
+coordinate. This document proves neither A1 nor RH. It isolates the single
+block of zeros that retains RH strength, fixes its cardinality with all
+factor-of-two conventions, and gives an algebraic criterion for discarding
+estimates whose error is incompatible with the margin they claim.
 
-**Dependencias vinculantes.** Se usan el erratum de signo de `104_02`, la
-normalización A1 de `104_01` y la cota de conteo completamente numérica de
-`103_58` §2. No se importa el signo impreso de (1.15), (1.17) o (6.7) de
-Lagarias.
+**Binding dependencies.** The sign erratum of `104_02`, the A1 normalization
+of `104_01`, and the fully numerical counting bound of `103_58` §2 are used.
+The printed sign of (1.15), (1.17) or (6.7) of Lagarias is not imported.
 
 ---
 
-## 1. Convenciones y descomposición exacta
+## 1. Conventions and exact decomposition
 
-Sea
+Let
 
 \[
  \lambda_n(T):=
- \sum_{\substack{\rho\text{ cero no trivial}\ |\Im\rho|<T}}
+ \sum_{\substack{\rho\text{ nontrivial zero}\ |\Im\rho|<T}}
  m_\rho\left[1-\left(1-{1\over\rho}\right)^n\right]             \tag{1}
 \]
 
-el coeficiente incompleto de Lagarias. La desigualdad en la altura es
-**estricta**. Así, la definición no necesita decidir qué hacer si una ordenada
-fuera exactamente igual al cutoff.
+be Lagarias's incomplete coefficient. The inequality on the height is
+**strict**. Thus the definition does not need to decide what to do if an
+ordinate were exactly equal to the cutoff.
 
-Definimos
+We define
 
 \[
  L_n^{<}:=\lambda_n(\sqrt n),\qquad
  L_n^{>}:=\lambda_n-L_n^{<}.                                  \tag{2}
 \]
 
-La segunda cantidad significa la diferencia entre el coeficiente completo,
-con su convención canónica de suma simétrica, y la suma finita (1). No se
-afirma que sea una suma absolutamente convergente obtenida restando términos
-uno por uno.
+The second quantity means the difference between the complete coefficient,
+with its canonical symmetric-sum convention, and the finite sum (1). It is
+not claimed to be an absolutely convergent sum obtained by subtracting terms
+one by one.
 
-El erratum `104_02`, ecuaciones (2.3)--(2.4), define
+Erratum `104_02`, equations (2.3)--(2.4), defines
 
 \[
  \widetilde\varepsilon_n:=A_n-\lambda_n+L_n^{<}
 \]
 
-y prueba incondicionalmente que existe una constante absoluta \(C_*>0\) tal
-que
+and proves unconditionally that there is an absolute constant \(C_*>0\) such
+that
 
 \[
  |\widetilde\varepsilon_n|\le C_*\sqrt n\log n.                 \tag{3}
 \]
 
-La constante existe pero no quedó explicitada por ese argumento.
+The constant exists but was not made explicit by that argument.
 
-### Teorema 1 (la cola alta reproduce el bloque arquimediano) `[INC]`
+### Theorem 1 (the high tail reproduces the archimedean block) `[INC]`
 
-Para todo \(n\ge2\),
+For every \(n\ge2\),
 
 \[
  \boxed{
@@ -64,35 +63,35 @@ Para todo \(n\ge2\),
  |L_n^{>}-A_n|\le C_*\sqrt n\log n.}                            \tag{4}
 \]
 
-En particular,
+In particular,
 
 \[
  \boxed{\lambda_n=A_n+L_n^{<}-\widetilde\varepsilon_n.}         \tag{5}
 \]
 
-**Demostración.** De la definición de
+**Proof.** From the definition of
 
 \(
 \widetilde\varepsilon_n=A_n-\lambda_n+L_n^{<}
 \)
 
-se obtiene
+one gets
 
 \(
 \lambda_n-L_n^{<}=A_n-\widetilde\varepsilon_n
 \).
-La cota es (3). No interviene RH. \(\square\)
+The bound is (3). RH plays no role. \(\square\)
 
-Ésta es la forma precisa de la frase «los ceros con
-\(|\gamma|\ge\sqrt n\) reproducen \(A_n\)»: es una identidad para la cola
-**canónicamente regularizada** y un error incondicional
-\(O(\sqrt n\log n)\). No es una positividad término a término de esos ceros.
+This is the precise form of the phrase "the zeros with
+\(|\gamma|\ge\sqrt n\) reproduce \(A_n\)": it is an identity for the
+**canonically regularized** tail and an unconditional error
+\(O(\sqrt n\log n)\). It is not a term-by-term positivity of those zeros.
 
 ---
 
-## 2. Traducción exacta de A1 y del margen cuártico
+## 2. Exact translation of A1 and of the quartic margin
 
-Para \(\theta=1/4\), `104_02` prueba
+For \(\theta=1/4\), `104_02` proves
 
 \[
  \mathrm {A1}_{1/4}
@@ -101,7 +100,7 @@ Para \(\theta=1/4\), `104_02` prueba
  \le {3\over4}A_n.                                             \tag{6}
 \]
 
-Por tanto la forma de cota inferior es
+Hence the lower-bound form is
 
 \[
  \boxed{
@@ -110,8 +109,8 @@ Por tanto la forma de cota inferior es
  L_n^{<}\ge-{3\over4}A_n+\widetilde\varepsilon_n+R_n(T_n).}    \tag{7}
 \]
 
-Separadamente, para cualquier \(c\in\mathbb R\), (5) da la equivalencia
-puramente algebraica
+Separately, for any \(c\in\mathbb R\), (5) gives the purely algebraic
+equivalence
 
 \[
  \boxed{
@@ -120,7 +119,7 @@ puramente algebraica
  L_n^{<}\ge-(1-c)A_n+\widetilde\varepsilon_n.}                 \tag{8}
 \]
 
-En particular,
+In particular,
 
 \[
  \boxed{
@@ -129,7 +128,7 @@ En particular,
  L_n^{<}\ge-{3\over4}A_n+\widetilde\varepsilon_n.}             \tag{9}
 \]
 
-Usando solo (3), se obtiene el sandwich unilateral
+Using only (3), one gets the one-sided sandwich
 
 \[
  L_n^{<}\ge-{3\over4}A_n+C_*\sqrt n\log n
@@ -137,7 +136,7 @@ Usando solo (3), se obtiene el sandwich unilateral
  4\lambda_n\ge A_n,                                           \tag{10}
 \]
 
-y
+and
 
 \[
  4\lambda_n\ge A_n
@@ -145,35 +144,35 @@ y
  L_n^{<}\ge-{3\over4}A_n-C_*\sqrt n\log n.                    \tag{11}
 \]
 
-Las dos fronteras están separadas por \(2C_*\sqrt n\log n\). Como \(C_*\)
-no es efectivo, (10) no produce por sí sola un umbral numérico.
+The two boundaries are separated by \(2C_*\sqrt n\log n\). Since \(C_*\)
+is not effective, (10) does not by itself produce a numerical threshold.
 
-**Estado lógico.** (4)--(11) son incondicionales. Probar la cota inferior de
-(7) o (9) uniformemente sigue siendo el paso RH-strength; ninguna de estas
-identidades lo prueba.
+**Logical status.** (4)--(11) are unconditional. Proving the lower bound of
+(7) or (9) uniformly remains the RH-strength step; none of these
+identities proves it.
 
 ---
 
-## 3. Cuántos términos quedan realmente
+## 3. How many terms actually remain
 
-Sea
+Let
 
 \[
- N_{<}(T):=\sum_{\substack{\rho=\beta+i\gamma\text{ cero}\\0<\gamma<T}}m_\rho
+ N_{<}(T):=\sum_{\substack{\rho=\beta+i\gamma\text{ zero}\\0<\gamma<T}}m_\rho
                                                                     \tag{12}
 \]
 
-el conteo de ordenadas **positivas**, con multiplicidad y cutoff estricto.
-La simetría por conjugación implica que (1) contiene exactamente
-\(2N_{<}(T)\) etiquetas de cero.
+be the count of **positive** ordinates, with multiplicity and a strict
+cutoff. Conjugation symmetry implies that (1) contains exactly
+\(2N_{<}(T)\) zero labels.
 
-La fórmula de Riemann--von Mangoldt da incondicionalmente `[INC]`
+The Riemann–von Mangoldt formula unconditionally gives `[INC]`
 
 \[
  N_{<}(T)={T\over2\pi}\log{T\over2\pi e}+O(\log T).             \tag{13}
 \]
 
-Cambiar \(<T\) por \(\le T\) no cambia esta asintótica. En \(T=\sqrt n\),
+Changing \(<T\) to \(\le T\) does not change this asymptotic. At \(T=\sqrt n\),
 
 \[
  \boxed{
@@ -182,7 +181,7 @@ Cambiar \(<T\) por \(\le T\) no cambia esta asintótica. En \(T=\sqrt n\),
  -{\sqrt n\over2\pi}\log(2\pi e)+O(\log n).}                 \tag{14}
 \]
 
-Así, el bloque bajo contiene
+So the low block contains
 
 \[
  \boxed{
@@ -190,18 +189,18 @@ Así, el bloque bajo contiene
  ={\sqrt n\over2\pi}\log n+O(\sqrt n)}                       \tag{15}
 \]
 
-sumandos etiquetados. El factor \(1/(4\pi)\) corresponde al conteo de
-**ordenadas positivas**; el factor \(1/(2\pi)\), al número de etiquetas en
-la suma simétrica. Mezclarlos duplica o divide erróneamente el presupuesto.
+labeled summands. The factor \(1/(4\pi)\) corresponds to the count of
+**positive ordinates**; the factor \(1/(2\pi)\), to the number of labels in
+the symmetric sum. Mixing them up wrongly doubles or halves the budget.
 
-Hay además una cota completamente numérica ya probada en `103_58` §2. Si
-\({\cal N}(T)\) cuenta ambos signos, entonces
+There is also a fully numerical bound already proved in `103_58` §2. If
+\({\cal N}(T)\) counts both signs, then
 
 \[
  {\cal N}(T)\le25T\log T\qquad(T\ge10).                         \tag{16}
 \]
 
-Por tanto, para \(n\ge100\),
+Hence, for \(n\ge100\),
 
 \[
  \boxed{
@@ -210,18 +209,19 @@ Por tanto, para \(n\ge100\),
  N_{<}(\sqrt n)\le {25\over4}\sqrt n\log n.}                 \tag{17}
 \]
 
-Estas constantes son deliberadamente gruesas; su función es que ningún
-argumento futuro esconda una constante de Riemann--von Mangoldt.
+These constants are deliberately coarse; their purpose is that no future
+argument can hide a Riemann–von Mangoldt constant.
 
-### Calibración local `[COND: RH para \(|\gamma|<\sqrt n\)]`
+### Local calibration `[COND: RH for \(|\gamma|<\sqrt n\)]`
 
-Si los ceros del bloque están en la línea crítica, cada par conjugado aporta
+If the zeros of the block are on the critical line, each conjugate pair
+contributes
 
 \[
  2-2\cos(n\vartheta_\rho)\in[0,4].
 \]
 
-Luego
+Then
 
 \[
  \boxed{
@@ -229,21 +229,21 @@ Luego
  ={\sqrt n\over\pi}\log n+O(\sqrt n).}                         \tag{18}
 \]
 
-La escala natural del bloque bajo bajo RH es, por tanto,
-\(\sqrt n\log n\), la misma que el error de transporte (3). La desigualdad
-(18) no es un input incondicional.
+The natural scale of the low block under RH is therefore
+\(\sqrt n\log n\), the same as the transport error (3). Inequality
+(18) is not an unconditional input.
 
 ---
 
-## 4. Escala exacta de un cero fuera de la línea `[INC]`
+## 4. Exact scale of a zero off the line `[INC]`
 
-Sea \(\rho=\beta+i\gamma\), \(\beta>1/2\), y
+Let \(\rho=\beta+i\gamma\), \(\beta>1/2\), and
 
 \[
  w_\rho:=1-{1\over\rho}={\rho-1\over\rho}.
 \]
 
-Entonces
+Then
 
 \[
  |w_\rho|^2
@@ -251,19 +251,19 @@ Entonces
  =1-{2\beta-1\over\gamma^2+\beta^2}<1.                        \tag{19}
 \]
 
-Escribamos \(w_\rho=e^{-a_\rho+i\vartheta_\rho}\), \(a_\rho>0\). Con
+Write \(w_\rho=e^{-a_\rho+i\vartheta_\rho}\), \(a_\rho>0\). With
 
 \[
  d:=2\beta-1,\qquad x:={d\over\gamma^2+\beta^2}\in(0,1),
 \]
 
-se tiene exactamente
+one has exactly
 
 \[
  a_\rho=-{1\over2}\log(1-x).                                  \tag{20}
 \]
 
-Las desigualdades \(x\le-\log(1-x)\le x/(1-x)\) dan la cota efectiva
+The inequalities \(x\le-\log(1-x)\le x/(1-x)\) give the effective bound
 
 \[
  \boxed{
@@ -272,21 +272,21 @@ Las desigualdades \(x\le-\log(1-x)\le x/(1-x)\) dan la cota efectiva
  {2\beta-1\over2(\gamma^2+(1-\beta)^2)}.}                     \tag{21}
 \]
 
-Uniformemente en \(0<\beta<1\), cuando \(\gamma\to\infty\),
+Uniformly in \(0<\beta<1\), as \(\gamma\to\infty\),
 
 \[
  \boxed{
  a_\rho={2\beta-1\over2\gamma^2}+O(\gamma^{-4}).}             \tag{22}
 \]
 
-El cuarteto funcional completo aporta a \(L_n^{<}\), una vez que
+The full functional quadruple contributes to \(L_n^{<}\), once
 \(|\gamma|<\sqrt n\),
 
 \[
  Q_n(\rho)=4-4\cosh(na_\rho)\cos(n\vartheta_\rho).             \tag{23}
 \]
 
-Su parámetro de activación es, por (21),
+Its activation parameter is, by (21),
 
 \[
  {n(2\beta-1)\over2(\gamma^2+\beta^2)}
@@ -294,44 +294,44 @@ Su parámetro de activación es, por (21),
  {n(2\beta-1)\over2(\gamma^2+(1-\beta)^2)}.                  \tag{24}
 \]
 
-Por ello el módulo hiperbólico solo empieza a ser grande cuando
+Hence the hyperbolic modulus only starts to be large when
 
 \[
  \gamma^2\lesssim {n(2\beta-1)\over2};                         \tag{25}
 \]
 
-en la aproximación de gran altura. En particular, si
-\(|\gamma|\ge\sqrt n\), entonces \(na_\rho\le1/2\) por (21). Esta
-es una afirmación **por cuarteto individual**: su factor hiperbólico no puede
-activarse exponencialmente fuera del bloque bajo. No es una cota colectiva
-para la suma de los ceros altos.
+in the large-height approximation. In particular, if
+\(|\gamma|\ge\sqrt n\), then \(na_\rho\le1/2\) by (21). This
+is a statement **per individual quadruple**: its hyperbolic factor cannot
+activate exponentially outside the low block. It is not a collective
+bound for the sum of the high zeros.
 
-**Advertencia.** (23)--(25) describen un cuarteto. No dan una cota inferior
-para la suma creciente de todos los cuartetos: las fases
-\(n\vartheta_\rho\) pueden interferir. Bombieri--Lagarias es el input correcto
-para afirmar que, si RH falla, el bloque incompleto tiene excursiones
-exponenciales sobre una subsucesión. No se sustituye ese teorema por un
-argumento de «cero dominante» no demostrado.
+**Warning.** (23)--(25) describe one quadruple. They do not give a lower
+bound for the growing sum of all quadruples: the phases
+\(n\vartheta_\rho\) can interfere. Bombieri–Lagarias is the correct input
+for asserting that, if RH fails, the incomplete block has exponential
+excursions over a subsequence. That theorem is not replaced by an
+unproved "dominant zero" argument.
 
 ---
 
-## 5. Criterio exacto de presupuesto para mecanismos futuros `[INC]`
+## 5. Exact budget criterion for future mechanisms `[INC]`
 
-Supóngase que un mecanismo incondicional produce, con
+Suppose an unconditional mechanism produces, with
 \(\alpha_n\ge0\), \(E_n\ge0\),
 
 \[
  L_n^{<}\ge-\alpha_n A_n-E_n.                                  \tag{26}
 \]
 
-De (5) y (3),
+From (5) and (3),
 
 \[
  \lambda_n\ge(1-\alpha_n)A_n-E_n-C_*\sqrt n\log n.             \tag{27}
 \]
 
-Por tanto, para demostrar \(\lambda_n\ge cA_n\) mediante (26), basta y es
-necesario para esta transferencia de peor caso que
+Hence, to prove \(\lambda_n\ge cA_n\) via (26), it is necessary and
+sufficient for this worst-case transfer that
 
 \[
  \boxed{
@@ -339,7 +339,7 @@ necesario para esta transferencia de peor caso que
  \le(1-c-\alpha_n)A_n.}                                       \tag{28}
 \]
 
-Para el margen cuártico \(c=1/4\),
+For the quartic margin \(c=1/4\),
 
 \[
  \boxed{
@@ -347,8 +347,8 @@ Para el margen cuártico \(c=1/4\),
  \le\left({3\over4}-\alpha_n\right)A_n.}                      \tag{29}
 \]
 
-Para A1 exacta, si además solo se conoce una cota unilateral
-\(R_n(T_n)\le r_n^+\), (7) muestra que el test correspondiente es
+For exact A1, if moreover only a one-sided bound
+\(R_n(T_n)\le r_n^+\) is known, (7) shows that the corresponding test is
 
 \[
  \boxed{
@@ -356,52 +356,52 @@ Para A1 exacta, si además solo se conoce una cota unilateral
  \le\left({3\over4}-\alpha_n\right)A_n.}                      \tag{30}
 \]
 
-Esto corrige dos posibles falsos diagnósticos.
+This corrects two possible false diagnoses.
 
-1. **Un error \(\gg\sqrt n\log n\) no mata automáticamente una ruta.** Si
-   \(\alpha_n\le3/4-\delta\) para algún \(\delta>0\), cualquier
-   \(E_n=o(A_n)=o(n\log n)\) satisface eventualmente (29), aunque sea mucho
-   mayor que \(\sqrt n\log n\).
-2. **La escala \(\sqrt n\log n\) sí es bloqueante cuando ésa es toda la
-   ganancia firmada.** Si un mecanismo pretende resolver el bloque a su
-   escala natural --por ejemplo \(L_n^{<}\ge-O(\sqrt n\log n)\)--, un error
-   no controlado de orden mayor borra exactamente la información que dice
-   producir. Y si \(\alpha_n=3/4\), ningún error no negativo cierra (29) sin
-   usar signo adicional de \(\widetilde\varepsilon_n\).
+1. **An error \(\gg\sqrt n\log n\) does not automatically kill a route.** If
+   \(\alpha_n\le3/4-\delta\) for some \(\delta>0\), any
+   \(E_n=o(A_n)=o(n\log n)\) eventually satisfies (29), even if it is much
+   larger than \(\sqrt n\log n\).
+2. **The scale \(\sqrt n\log n\) is indeed blocking when that is the whole
+   signed gain.** If a mechanism aims to resolve the block at its
+   natural scale --e.g. \(L_n^{<}\ge-O(\sqrt n\log n)\)--, an
+   uncontrolled error of larger order erases exactly the information it
+   claims to produce. And if \(\alpha_n=3/4\), no nonnegative error closes
+   (29) without using additional sign from \(\widetilde\varepsilon_n\).
 
-Así, el stop-gate correcto no es «error mayor que \(\sqrt n\log n\)» en
-abstracto. Es la desigualdad de presupuesto (28), con el margen proporcional
-del mecanismo escrito explícitamente.
+Thus the correct stop-gate is not "error larger than \(\sqrt n\log n\)" in
+the abstract. It is the budget inequality (28), with the mechanism's
+proportional margin written out explicitly.
 
 ---
 
-## 6. Qué cambia y qué no
+## 6. What changes and what does not
 
-**Cerrado incondicionalmente.** La cola alta es \(A_n\) con error
-\(O(\sqrt n\log n)\); el bloque restante es una suma finita de
-\(\asymp\sqrt n\log n\) etiquetas; la escala de activación de un cuarteto es
-\(na_\rho\asymp n(2\beta-1)/(2\gamma^2)\); y (28)--(30) deciden si la
-precisión reclamada por un mecanismo alcanza el objetivo.
+**Unconditionally closed.** The high tail is \(A_n\) with error
+\(O(\sqrt n\log n)\); the remaining block is a finite sum of
+\(\asymp\sqrt n\log n\) labels; the activation scale of a quadruple is
+\(na_\rho\asymp n(2\beta-1)/(2\gamma^2)\); and (28)--(30) decide whether the
+precision a mechanism claims reaches the goal.
 
-**No cerrado.** No se obtuvo ninguna cota inferior nueva para
-\(L_n^{<}\), ningún control colectivo de las fases fuera de la línea, A1 ni
+**Not closed.** No new lower bound was obtained for
+\(L_n^{<}\), no collective control of the off-line phases, neither A1 nor
 RH.
 
-**Consecuencia operativa.** Los próximos mecanismos deben enunciar antes de
-empezar su par \((\alpha_n,E_n)\) en (26). Si no pueden satisfacer (29), o
-(30) con la cota de cola que realmente usen, se descartan sin desarrollar la
-maquinaria restante.
+**Operational consequence.** Future mechanisms must state, before
+starting, their pair \((\alpha_n,E_n)\) in (26). If they cannot satisfy (29),
+or (30) with the tail bound they actually use, they are discarded without
+developing the remaining machinery.
 
 ---
 
-## 7. Reproducción diagnóstica
+## 7. Diagnostic reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 low_zero_block_budget_check.py
 ```
 
-El programa comprueba la identidad racional (19), las dos cotas de (21), la
-normalización del cuarteto (23) y las equivalencias algebraicas de
-(8)/(28) sobre datos racionales. Los teoremas de conteo y de Lagarias no se
-«certifican» por muestreo: sus pruebas son los inputs citados arriba.
+The program checks the rational identity (19), the two bounds of (21), the
+normalization of the quadruple (23), and the algebraic equivalences of
+(8)/(28) on rational data. The counting and Lagarias theorems are not
+"certified" by sampling: their proofs are the inputs cited above.

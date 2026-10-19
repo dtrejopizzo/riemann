@@ -25,7 +25,7 @@ The from-scratch generation of the first 5,000 L_DH critical-line zeros at 50-dp
 2. The script's hard-coded `WORK_DIR` pointed at a non-existent project directory; this had to be patched to the current workspace before the script could run.
 3. The notebook's per-cell execution timeout (~900 s) interrupted long `time.sleep()` polling loops, and on the first launch the resulting SIGINT propagated to the child subprocess and terminated it (poll() = -2). This was the proximate cause of needing a resume. Mitigated on the second launch with `start_new_session=True`.
 4. The actual runtime requirement is dominated by the heavy tail (t ≳ 2500), where throughput drops below 2 z/s and continues to decline; even with a clean from-scratch run, the 90-minute budget in the hypothesis appears too tight for this hardware. A more realistic budget for a single-shot from-scratch run to 5000 zeros in this environment is closer to 2–3 hours.
-5. The notebook session's own wall-clock budget was the binding constraint, not the script itself; the underlying generator was healthy and progressing monotonically when time expired.
+5. The notebook run's own wall-clock budget was the binding constraint, not the script itself; the underlying generator was healthy and progressing monotonically when time expired.
 </challenges>
 <discussion>
 The research hypothesis — that a from-scratch run with a 90-minute time budget completes the full 5,000-zero L_DH list — is NOT supported by this attempt. The script is correct and progressing monotonically with valid checkpoints, but the per-zero cost grows steeply with t (e.g., cumulative rate falling from 6.7 z/s at 250 zeros to 2.4 z/s at 1750 zeros, and further to ~1.4 z/s at 2500 in the original log), so completing zeros 2500–5000 in the same wall-clock window as zeros 1–2500 is implausible. To finish the list, the recommended path is to (a) keep the existing checkpointing+resume strategy and (b) allocate a longer continuous compute window (at least 2–3 hours wall-clock here, possibly more for the t > 4000 region) or (c) parallelize the search across non-overlapping t-windows. The validated `ldh_ckpt_02500.npy` produced here extends the previously available 2,500-zero checkpoint with an independently regenerated and monotonicity-validated copy at the same length, which is useful as a cross-check.
@@ -43,12 +43,12 @@ The research hypothesis — that a from-scratch run with a 90-minute time budget
 <artifact>
 <file-name>run_log_local.txt</file-name>
 <artifact-type>agent_produced</artifact-type>
-<artifact-description>Execution log for the from-scratch L_DH zero-generation run performed in this session, including lfuninit timing, per-250-zero checkpoint entries (count, t, elapsed, rate, n_evals), 60-second PROGRESS lines, and the resume notice from `ldh_ckpt_01750.npy`. Documents observed throughput decay with t.</artifact-description>
+<artifact-description>Execution log for the from-scratch L_DH zero-generation run performed in this run, including lfuninit timing, per-250-zero checkpoint entries (count, t, elapsed, rate, n_evals), 60-second PROGRESS lines, and the resume notice from `ldh_ckpt_01750.npy`. Documents observed throughput decay with t.</artifact-description>
 </artifact>
 <artifact>
 <file-name>checkpoints_ldh/ldh_ckpt_02500.npy</file-name>
 <artifact-type>agent_produced</artifact-type>
-<artifact-description>Validated 50-dps checkpoint containing the first 2,500 critical-line zeros of the Davenport-Heilbronn L-function, with an accompanying `ldh_ckpt_02500_meta.json` recording n_zeros, t_last, and n_evals. Regenerated in this session by the patched script; strict monotonicity held throughout. (Intermediate checkpoints at 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250 zeros were also produced.)</artifact-description>
+<artifact-description>Validated 50-dps checkpoint containing the first 2,500 critical-line zeros of the Davenport-Heilbronn L-function, with an accompanying `ldh_ckpt_02500_meta.json` recording n_zeros, t_last, and n_evals. Regenerated in this run by the patched script; strict monotonicity held throughout. (Intermediate checkpoints at 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250 zeros were also produced.)</artifact-description>
 </artifact>
 </artifacts>
 </output>

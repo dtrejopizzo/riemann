@@ -1,6 +1,5 @@
 # E73.266 - Rank-two transport collapse audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

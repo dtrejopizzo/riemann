@@ -12,7 +12,7 @@ After A0, prove the finite-core inequality
   \qquad(n\ge8).
 ]
 
-This is the force-RH core isolated by the direct Li route.
+This is the RH-strength core isolated by the direct Li route.
 
 ## Constraint
 

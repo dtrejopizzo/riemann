@@ -1,6 +1,5 @@
 # E73.132 Results - Critical Evaluation Penalty Kernel Probe
 
-Date: 2026-07-12.
 
 Script:
 

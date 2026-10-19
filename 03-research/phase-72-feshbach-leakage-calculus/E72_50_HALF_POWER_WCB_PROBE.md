@@ -1,7 +1,6 @@
 # E72.50 -- Half-power weighted channel probe
 
-**Date:** 2026-07-08.
-**Role:** measure the actual weighted endpoint scalar channel and identify the sharp quantitative target.
+**Purpose:** measure the actual weighted endpoint scalar channel and identify the sharp quantitative target.
 
 ## 0. Quantity measured
 

@@ -1,6 +1,6 @@
 # P123.104 — Convergent tangential Fredholm determinants on the smooth test domain
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for convolution on
+Status: PROVED-IN-REPOSITORY for convolution on
 the compact boundary Y=B_q with tests in S(Y). This is an analytic
 Fredholm determinant, not an identification with the arithmetic RR line.
 

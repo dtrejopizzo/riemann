@@ -1,6 +1,5 @@
 # E73.200 - Archimedean/prime split diagnostic
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

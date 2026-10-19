@@ -1,6 +1,6 @@
 # P123.073 — Faithful graph kernels for the repaired local source
 
-Date: 2026-09-06. Status: PROVED as a continuous kernel realization at
+Status: PROVED as a continuous kernel realization at
 fixed S, with exact composition and lift identities. Geometric sheaf
 descent, derived diagonal pullback and mixed RR remain unproved.
 

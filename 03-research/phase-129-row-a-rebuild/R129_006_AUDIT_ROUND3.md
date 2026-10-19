@@ -1,6 +1,6 @@
 # R129.006 — auditor report, round 3
 
-Date: 2026-09-12.  Target: Paper 43 after R129.005.
+Target: Paper 43 after R129.005.
 
 ## Headline
 **Theorem 9.8 (`𝓝 = 0`) is CORRECT** — verified step by step: ramified places exact via

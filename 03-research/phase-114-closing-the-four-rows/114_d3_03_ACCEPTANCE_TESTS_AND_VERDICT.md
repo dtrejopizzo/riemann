@@ -477,7 +477,7 @@ Continuing from R32 of `114_d3_02`.
 
 ## 9. Verifier output
 
-Real output of `python3 114_d3_03_acceptance_tests.py`, run in this session
+Real output of `python3 114_d3_03_acceptance_tests.py`
 (exit code 0):
 
 ```

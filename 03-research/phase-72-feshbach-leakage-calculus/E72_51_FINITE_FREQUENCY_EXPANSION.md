@@ -1,7 +1,6 @@
 # E72.51 -- Finite-frequency expansion of the scalar endpoint channel
 
-**Date:** 2026-07-08.
-**Role:** express the remaining WCB estimate as a finite set of weighted prime exponential sums with
+**Purpose:** express the remaining WCB estimate as a finite set of weighted prime exponential sums with
 explicit scalar coefficients.
 
 ## 0. Scalar channel

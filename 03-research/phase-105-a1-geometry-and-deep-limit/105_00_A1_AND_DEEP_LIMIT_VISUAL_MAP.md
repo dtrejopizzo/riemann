@@ -1,73 +1,73 @@
-# 105_00 — Mapa visual de A1 y del límite Deep
+# 105_00 — Visual map of A1 and of the Deep limit
 
-![A1 y límite Deep](assets/a1_and_deep_limit.svg)
+![A1 and Deep limit](assets/a1_and_deep_limit.svg)
 
-## 1. Qué muestra el panel A
+## 1. What panel A shows
 
-Para un índice fijo,
+For a fixed index,
 
 \[
  J_n(U)=\int_{\log2}^{U}
  (\psi(e^u)-e^u)e^{-u}L_{n-1}^{(2)}(u)\,du,               \tag{1}
 \]
 
-y
+and
 
 \[
  q_n={3\over4}A_n+1-L_n^{(1)}(\log2).                    \tag{2}
 \]
 
-A1 dice
+A1 states
 
 \[
- \boxed{J_n(T_n)\le q_n\quad\hbox{para cada }n\ge150.}  \tag{3}
+ \boxed{J_n(T_n)\le q_n\quad\hbox{for each }n\ge150.}  \tag{3}
 \]
 
-La figura usa (n=150). La curva azul es un cálculo directo de (1) en
-el tramo
+The figure uses (n=150). The blue curve is a direct computation of (1) over
+the stretch
 
 \[
  \log2\le U\le\log(10^6),                                \tag{4}
 \]
 
-usando (\psi(x)) exacta mediante todas las potencias primas hasta
-(10^6). La línea roja es la barrera exacta (q_{150}). La zona roja es
-la región prohibida.
+using the exact (\psi(x)) via all prime powers up to
+(10^6). The red line is the exact barrier (q_{150}). The red zone is
+the forbidden region.
 
-El cutoff efectivo declarado es aproximadamente
+The declared effective cutoff is approximately
 
 \[
  T_{150}(1/4)=2.0669596\times10^7.                        \tag{5}
 \]
 
-Por eso la figura corta el eje: (4) es una fracción minúscula del camino
-hasta (5). La continuación gris no son datos ni una predicción. Representa
-la parte que una demostración debe controlar. La observación de que la
-curva inicial está lejos de la barrera no prueba A1.
+That is why the figure cuts off the axis: (4) is a tiny fraction of the way
+to (5). The gray continuation is neither data nor a prediction. It represents
+the part a proof must control. The observation that the initial
+curve is far from the barrier does not prove A1.
 
-## 2. Qué muestra el panel B
+## 2. What panel B shows
 
-Con (H_X=\sum_{n\le X}1/n), defina
+With (H_X=\sum_{n\le X}1/n), define
 
 \[
  \Omega_X={1\over H_X}\sum_{n\le X}{1\over n}
  \mathbf1_{\{\lambda_n+\log(n+1)\le-e^{\sqrt X}\}}.      \tag{6}
 \]
 
-El límite que debe demostrarse para los primos ordinarios es
+The limit that must be proved for the ordinary primes is
 
 \[
  \boxed{\Omega_X\to0.}                                   \tag{7}
 \]
 
-La línea verde muestra el comportamiento teórico on-line: una vez que
-todos los ceros están en la línea, el evento profundo desaparece. La curva
-naranja no corresponde a ζ: es el cuarteto exterior racional de control
-con (R=201/200). Su densidad logarítmica se aproxima a (1/8). Sirve para
-mostrar gráficamente lo que produciría un modo exterior: el observable no
-convergería a cero.
+The green line shows the theoretical on-line behavior: once
+all zeros are on the line, the deep event disappears. The orange
+curve does not correspond to ζ: it is the exterior rational control
+quartet with (R=201/200). Its logarithmic density approaches (1/8). It serves
+to show graphically what an exterior mode would produce: the observable would
+not converge to zero.
 
-## 3. Relación entre ambos paneles
+## 3. Relation between the two panels
 
 \[
  \mathrm{A1}\Longrightarrow
@@ -76,22 +76,22 @@ convergería a cero.
  \Omega_X\to0.                                           \tag{8}
 \]
 
-También está probado directamente que (\Omega_X\to0\iff\mathrm{RH}).
-Por tanto los paneles son dos coordenadas del mismo muro lógico, pero no
-son la misma cantidad:
+It is also proved directly that (\Omega_X\to0\iff\mathrm{RH}).
+Hence the panels are two coordinates of the same logical wall, but they
+are not the same quantity:
 
-* A1 exige que ninguna curva (J_n) cruce su barrera en el cutoff;
-* Deep exige que la proporción logarítmica de excursiones negativas
-  profundas tienda a cero.
+* A1 requires that no curve (J_n) cross its barrier at the cutoff;
+* Deep requires that the logarithmic proportion of deep negative
+  excursions tend to zero.
 
-## 4. Qué es dato y qué es esquema
+## 4. What is data and what is scheme
 
-| Elemento | Estado |
+| Element | Status |
 |---|---|
-| curva azul de A1 hasta (10^6) | cálculo directo en doble precisión; diagnóstico |
-| (q_{150}), (A_{150}), (T_{150}) | fórmulas declaradas evaluadas numéricamente |
-| continuación gris hasta (T_{150}) | región desconocida, no dato |
-| línea verde (\Omega_X=0) | escenario on-line del teorema |
-| curva naranja hacia (1/8) | contra-modelo exterior explícito, no ζ |
-| A1 y (\Omega_X\to0) para primos ordinarios | abiertos |
+| blue curve of A1 up to (10^6) | direct computation in double precision; diagnostic |
+| (q_{150}), (A_{150}), (T_{150}) | declared formulas evaluated numerically |
+| gray continuation up to (T_{150}) | unknown region, not data |
+| green line (\Omega_X=0) | on-line scenario of the theorem |
+| orange curve toward (1/8) | explicit exterior counter-model, not ζ |
+| A1 and (\Omega_X\to0) for ordinary primes | open |
 

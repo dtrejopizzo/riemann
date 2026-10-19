@@ -1,7 +1,6 @@
 # E67.1c — Plancherel anchor for the q-Gamma archimedean sector
 
-**Date:** 2026-07-06.
-**Role:** turn the word "Plancherel" from plausible label into a sourced representation-theoretic
+**Purpose:** turn the word "Plancherel" from plausible label into a sourced representation-theoretic
 anchor. This is not a new numerical test; it is the literature bridge that explains why `Gamma_q` is
 the correct q-canonical carrier of the archimedean polygamma tower.
 

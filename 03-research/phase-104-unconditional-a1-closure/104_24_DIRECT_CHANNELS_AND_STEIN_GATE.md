@@ -1,25 +1,25 @@
-# 104_24 — Canales directos y gate Stein--Mecke firmado
+# 104_24 — Direct channels and the signed Stein–Mecke gate
 
-**Rol.** Expandir sin diferencias innecesarias el cociclo cúbico de
-`104_22` y ejecutar el sucesor Stein--Mecke de `104_21`. La expansión de
-cuatro canales es exacta y converge al margen cúbico directo
-\(3\lambda_n-A_n\). Stein conserva todos los otros primos, pero su
-generador completado es firmado antes del primer átomo aritmético. Así
-muere la prueba por positividad del generador; no muere la posible
-desigualdad especial no local para Laguerre.
+**Role.** Expand, with no unnecessary differences, the cubic cocycle of
+`104_22` and execute the Stein–Mecke successor of `104_21`. The
+four-channel expansion is exact and converges to the direct cubic margin
+\(3\lambda_n-A_n\). Stein's identity keeps all the other primes, but its
+completed generator is signed before the first arithmetic atom. So the
+proof-by-positivity-of-the-generator approach dies; the possible special
+nonlocal inequality for Laguerre functions does not.
 
-Este documento no prueba A1 ni RH.
+This document proves neither A1 nor RH.
 
-## 1. Teorema exacto de cuatro canales
+## 1. Exact four-channel theorem
 
-Sea
+Let
 
 \[
  d_u:=J_u*J_u*J_u\ge0,
  \qquad s_0=1+\varepsilon,\qquad u=c\varepsilon,\quad 0<c<1. \tag{1}
 \]
 
-Para el canal Gamma usemos dos copias de la medida positiva
+For the Gamma channel, use two copies of the positive measure
 
 \[
  d\nu_{\varepsilon,u}(v)
@@ -27,7 +27,7 @@ Para el canal Gamma usemos dos copias de la medida positiva
  v^{(1+\varepsilon-u)/2}(1-v)^{u/2-1}\,dv.        \tag{2}
 \]
 
-Definamos
+Define
 
 \[
 \begin{aligned}
@@ -45,17 +45,17 @@ Definamos
 \end{aligned}
 \]
 
-Aquí y abajo \(d\nu=d\nu_{\varepsilon,u}\). Todas las sumas e integrales
-convergen absolutamente para \(u<\varepsilon\).
+Here and below \(d\nu=d\nu_{\varepsilon,u}\). All the sums and integrals
+converge absolutely for \(u<\varepsilon\).
 
-**Teorema 1.1.** Si
+**Theorem 1.1.** If
 
 \[
  \mathcal S_u^{[3]}(s)=H_u(s)^3K_u(s)^2,
  \qquad s_\varepsilon(z)=s_0+{z\over1-z},          \tag{5}
 \]
 
-entonces
+then
 
 \[
  \boxed{
@@ -63,7 +63,7 @@ entonces
  =T_{k,\delta}-3uT_{k,0}+3u^2T_{k,1}-u^3T_{k,2}.} \tag{6}
 \]
 
-Por tanto
+Hence
 
 \[
  \boxed{
@@ -72,21 +72,21 @@ Por tanto
    \over u}}                                       \tag{7}
 \]
 
-y
+and
 
 \[
  h_{k,\varepsilon,c}^{[3]}\longrightarrow
  -(3\lambda_{k+1}-A_{k+1}).                       \tag{8}
 \]
 
-**Demostración.** Se usan
+**Proof.** We use
 
 \[
  {e^{-xz/(1-z)}\over(1-z)^2}
  =\sum_{k\ge0}L_k^{(1)}(x)z^k                    \tag{9}
 \]
 
-y, para \(j\ge0\),
+and, for \(j\ge0\),
 
 \[
  {1\over(\varepsilon+z/(1-z))^{j+1}}
@@ -94,7 +94,7 @@ y, para \(j\ge0\),
  e^{-yz/(1-z)}\,dy.                               \tag{10}
 \]
 
-La expansión
+The expansion
 
 \[
  \left(1-{u\over s-1}\right)^3
@@ -102,13 +102,13 @@ La expansión
        -{u^3\over(s-1)^3}                         \tag{11}
 \]
 
-produce (6). El término sustraído en (7) es \(k+1\), no uno, porque
-\([z^k](1-z)^{-2}=k+1\). Finalmente (8) es (12) de `104_23` con \(r=3\).
+produces (6). The subtracted term in (7) is \(k+1\), not one, because
+\([z^k](1-z)^{-2}=k+1\). Finally (8) is (12) of `104_23` with \(r=3\).
 \(\square\)
 
-## 2. Ley global y medida de Lévy completada
+## 2. Global law and the completed Lévy measure
 
-Normalicemos la parte aritmética mediante
+Normalize the arithmetic part via
 
 \[
  \mathbb P(N=m)
@@ -116,7 +116,7 @@ Normalicemos la parte aritmética mediante
  \qquad X=\log N.                                  \tag{12}
 \]
 
-Es compound-Poisson con medida
+It is compound-Poisson with measure
 
 \[
  \nu_A^{[3]}
@@ -126,7 +126,7 @@ Es compound-Poisson con medida
  R_p=p^{-1-(\varepsilon-u)}.                      \tag{13}
 \]
 
-Una copia Gamma y una copia polar normalizadas tienen respectivamente
+A normalized Gamma copy and a normalized polar copy have, respectively,
 
 \[
 \begin{aligned}
@@ -139,15 +139,15 @@ Una copia Gamma y una copia polar normalizadas tienen respectivamente
 \end{aligned}
 \]
 
-El exponente de Lévy del cociclo cúbico normalizado tiene el kernel firmado
+The Lévy exponent of the normalized cubic cocycle has the signed kernel
 
 \[
  \boxed{\nu_3=\nu_A^{[3]}+2\nu_K-3\nu_P.}         \tag{15}
 \]
 
-## 3. Identidad Stein--Mecke sin perder los otros primos
+## 3. Stein–Mecke identity without losing the other primes
 
-Definamos \(\mu_3\) por su transformada de Laplace
+Define \(\mu_3\) by its Laplace transform
 
 \[
  \mathcal L\mu_3(t)
@@ -155,18 +155,19 @@ Definamos \(\mu_3\) por su transformada de Laplace
    \mathcal S_u^{[3]}(s_0)}.                       \tag{15a}
 \]
 
-Para justificar la identidad siguiente se trunca (13) y también
-\(\nu_K\) a \(y\ge\delta\), se deriva la transformada truncada y se pasa
-primero en la altura aritmética y luego \(\delta\downarrow0\). El paso está
-dominado porque, para cada grado fijo \(k\),
+To justify the following identity, (13) and also
+\(\nu_K\) are truncated to \(y\ge\delta\), the truncated transform is
+differentiated, and the limit is taken first in the arithmetic height and
+then \(\delta\downarrow0\). The step is dominated because, for each fixed
+degree \(k\),
 
 \[
  \int_0^\infty y(1+y^k)|\nu_3|(dy)<\infty.        \tag{15b}
 \]
 
-La singularidad \(\nu_K(y)\asymp u/(2y)\) en cero tiene actividad infinita,
-pero el factor \(y\) de (15b) la hace integrable. Así, para tests
-polinomiales, vale
+The singularity \(\nu_K(y)\asymp u/(2y)\) at zero has infinite activity,
+but the factor \(y\) in (15b) makes it integrable. Thus, for polynomial
+test functions,
 
 \[
  \boxed{
@@ -174,14 +175,14 @@ polinomiales, vale
  =\int_0^\infty y\int\varphi(x+y)\,d\mu_3(x)\,\nu_3(dy).} \tag{16}
 \]
 
-Esta identidad conserva dentro de \(\mu_3\) todos los primos distintos del
-salto seleccionado. Para
+This identity keeps inside \(\mu_3\) every prime distinct from the
+selected jump. For
 
 \[
  a_k=\int L_k^{(1)}(x)\,d\mu_3(x),                \tag{17}
 \]
 
-la recurrencia de Laguerre produce
+the Laguerre recurrence produces
 
 \[
 \boxed{
@@ -189,21 +190,21 @@ la recurrencia de Laguerre produce
  =\int y\int L_k^{(1)}(x+y)\,d\mu_3(x)\,\nu_3(dy).} \tag{18}
 \]
 
-Se toma \(a_{-1}=0\). La ecuación (18) es una recurrencia global exacta,
-pero no tiene signo porque \(\nu_3\) no es positiva.
+Take \(a_{-1}=0\). Equation (18) is an exact global recurrence, but it has
+no fixed sign because \(\nu_3\) is not positive.
 
-## 4. Testigo exacto antes del primer primo
+## 4. Exact witness before the first prime
 
-La falta de signo ocurre en la aritmética real, no en un falsificador
-abstracto. Tómese
+The loss of sign occurs in the real arithmetic, not in an abstract
+falsifier. Take
 
 \[
  \varepsilon=2,\qquad u=1,\qquad c={1\over2},\qquad
  y_0={1\over2}\log2.                              \tag{19}
 \]
 
-Como \(0<y_0<\log2\), la medida \(\nu_A^{[3]}\) no tiene soporte en un
-entorno de \(y_0\). Evaluando la parte continua de (15),
+Since \(0<y_0<\log2\), measure \(\nu_A^{[3]}\) has no support in a
+neighborhood of \(y_0\). Evaluating the continuous part of (15),
 
 \[
  \boxed{
@@ -211,18 +212,18 @@ entorno de \(y_0\). Evaluando la parte continua de (15),
  ={\frac52-2\sqrt2\over y_0}<0.}                  \tag{20}
 \]
 
-La desigualdad es exacta: \(2\sqrt2>5/2\) porque
-\(8>25/4\). Por continuidad, \(\nu_3\) es estrictamente negativa en un
-intervalo abierto contenido en \((0,\log2)\).
+The inequality is exact: \(2\sqrt2>5/2\) because
+\(8>25/4\). By continuity, \(\nu_3\) is strictly negative on an open
+interval contained in \((0,\log2)\).
 
-Para \(\varepsilon>0\) fijo, al tomar primero \(u\downarrow0\),
+For \(\varepsilon>0\) fixed, taking \(u\downarrow0\) first,
 
 \[
  {\nu_3\over u}\longrightarrow
  \kappa_\varepsilon(dy),                          \tag{21}
 \]
 
-donde
+where
 
 \[
 \boxed{
@@ -232,50 +233,52 @@ donde
  +{2e^{-(3+\varepsilon)y}\over1-e^{-2y}}\,dy.}   \tag{22}
 \]
 
-Sobre el camino diagonal \(u=c\varepsilon\), \(\varepsilon\downarrow0\),
-la misma convergencia es local/vaga hacia \(\kappa_0\). La densidad continua
-de ese kernel local en \(y_0\) vale
+On the diagonal path \(u=c\varepsilon\), \(\varepsilon\downarrow0\), the
+same convergence is local/vague toward \(\kappa_0\). The continuous
+density of that local kernel at \(y_0\) equals
 
 \[
  {2e^{-3y_0}\over1-e^{-2y_0}}-3=\sqrt2-3<0.       \tag{23}
 \]
 
-Por tanto el defecto de positividad persiste exactamente en el régimen que
-extrae \(3\lambda_n-A_n\). La notación \(\kappa_0\) no designa una medida
-de variación total finita en toda la semirrecta: toda recomposición global
-con Laguerres se entiende como el límite Abel emparejado
-\(\varepsilon\downarrow0\), no como una integral ordinaria contra
+Hence the positivity defect persists exactly in the regime that extracts
+\(3\lambda_n-A_n\). The notation \(\kappa_0\) does not designate a measure
+of finite total variation on the whole half-line: every global
+recomposition with Laguerre functions is understood as the paired Abel
+limit \(\varepsilon\downarrow0\), not as an ordinary integral against
 \(\kappa_0\).
 
-## 5. Alcance del stop-gate
+## 5. Scope of the stop-gate
 
-La medida (22) es de forma transparente
+Measure (22) transparently has the form
 
 \[
- \text{primos}-\text{polo}+\text{Gamma}.
+ \text{primes}-\text{pole}+\text{Gamma}.
 \]
 
-Integrar \(\kappa_\varepsilon\) contra la respuesta Laguerre de (18) y luego
-tomar el límite Abel recompone
-\(3\lambda_n-A_n\); integrar por partes el primer término contra
-\(d\psi(e^y)\) vuelve a \(\psi(e^y)-e^y\), es decir, a la correlación
-ponderada de A1. Stein--Mecke no agrega por sí sola un input aritmético
-nuevo.
+Integrating \(\kappa_\varepsilon\) against the Laguerre response of (18)
+and then taking the Abel limit recomposes
+\(3\lambda_n-A_n\); integrating the first term by parts against
+\(d\psi(e^y)\) returns to \(\psi(e^y)-e^y\), that is, to the weighted
+correlation of A1. Stein–Mecke's identity does not by itself add a new
+arithmetic input.
 
-Queda cerrado únicamente este mecanismo:
+Only this mechanism is closed:
 
-> positividad de la medida de Lévy completada + orden de saltos
+> positivity of the completed Lévy measure + jump order
 > \(\Longrightarrow h_k\le0\).
 
-El testigo (20) hace falsa su premisa. No refuta la desigualdad especial
-\(h_{k,\varepsilon,c}^{[3]}\le0\): una cancelación no local propia de los
-Laguerres y de las masas reales \(\Lambda(p^j)\) todavía podría probarla.
+Witness (20) falsifies its premise. It does not refute the special
+inequality \(h_{k,\varepsilon,c}^{[3]}\le0\): a nonlocal cancellation
+specific to the Laguerre functions and to the real masses
+\(\Lambda(p^j)\) could still prove it.
 
-## Estado
+## Status
 
-- **Probado:** cuatro canales directos, Stein--Mecke global, recurrencia
-  Laguerre y testigo exacto de signo.
-- **Descartado:** cerrar el margen cúbico por positividad/orden del
-  generador completado.
-- **Abierto dentro de este mecanismo:** una desigualdad firmada no local para
-  (18), o el margen real más débil de `104_23`.
+- **Proved:** the four direct channels, the global Stein–Mecke identity,
+  the Laguerre recurrence, and the exact sign witness.
+- **Ruled out:** closing the cubic margin via positivity/order of the
+  completed generator.
+- **Open within this mechanism:** a nonlocal signed inequality for
+  (18), or the weaker real margin of `104_23`.
+</content>

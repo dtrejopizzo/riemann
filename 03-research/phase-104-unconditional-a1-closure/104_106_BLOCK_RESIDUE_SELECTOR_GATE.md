@@ -1,19 +1,19 @@
-# 104_106 — Promedios de bloque, residuos y gate exacto de selectores
+# 104_106 — Block averages, residues, and the exact selector gate
 
-**Pregunta.** ¿Se puede combinar la relajación por bloques de `104_67`
-con la fórmula de residuos de `104_33`--`104_41`, promediando el defecto
-de transporte sobre grados consecutivos?
+**Question.** Can the block relaxation of `104_67` be combined with the
+residue formula of `104_33`–`104_41`, by averaging the transport defect
+over consecutive degrees?
 
-**Resultado.** La combinación tiene una forma cerrada, pero una media
-lineal firmada no produce un bloque bueno. Para cualquier filtro finito de
-grados, cada cero derecho se transforma mediante el mismo polinomio del
-filtro evaluado en \(w_\rho\) y \(w_\rho^{-1}\). En particular, caja,
-Cesàro triangular y Fejér conservan el modo exterior; solo cambian su fase
-y su amplitud.
+**Result.** The combination has a closed form, but a signed linear
+average does not produce a good block. For any finite filter of degrees,
+each right zero is transformed by the same filter polynomial evaluated at
+\(w_\rho\) and \(w_\rho^{-1}\). In particular, box, triangular Cesàro, and
+Fejér averaging all preserve the exterior mode; they only change its
+phase and amplitude.
 
-La operación correcta para la barrera superior de `104_67` es no lineal:
-la parte positiva de \((-\mathscr R_n)\), o equivalentemente un supremo sobre
-**todos** los selectores del bloque. Se prueba el criterio exacto
+The correct operation for the upper barrier of `104_67` is nonlinear:
+the positive part of \((-\mathscr R_n)\), or equivalently a supremum over
+**all** block selectors. The exact criterion is proved:
 
 \[
  \mathrm {RH}\quad\Longleftrightarrow\quad
@@ -22,27 +22,27 @@ la parte positiva de \((-\mathscr R_n)\), o equivalentemente un supremo sobre
  \qquad M_L=L^2+L-1.                                    \tag{1}
 \]
 
-Aquí \(\mathscr R_n\) es la suma firmada de residuos interiores de
-`104_41`, no un resto estimado. La equivalencia (1) localiza con precisión
-el target que una estimación aritmética tendría que acotar, pero no lo
-acota para los pesos reales \(\Lambda(m)\). El cuarteto racional
-\(w=i/2\) demuestra exactamente que sustituir la parte positiva por una
-media firmada es inválido incluso en bloques arbitrariamente lejanos.
+Here \(\mathscr R_n\) is the signed sum of interior residues from
+`104_41`, not an estimated remainder. Equivalence (1) precisely localizes
+the target that an arithmetic estimate would have to bound, but it does
+not bound it for the real weights \(\Lambda(m)\). The rational quartet
+\(w=i/2\) demonstrates exactly that replacing the positive part by a
+signed average is invalid even in arbitrarily distant blocks.
 
-Este documento no prueba (1) por aritmética, A1 ni RH.
+This document does not prove (1) arithmetically, nor A1, nor RH.
 
 ---
 
-## 1. El filtro de bloque exacto
+## 1. The exact block filter
 
-Para un cero no trivial \(\rho\) con \(\Re\rho>1/2\), ponga
+For a nontrivial zero \(\rho\) with \(\Re\rho>1/2\), set
 
 \[
  w_\rho=1-{1\over\rho},\qquad |w_\rho|<1.
 \]
 
-El defecto de transporte de `104_33`, sumado sobre ambos signos de la
-ordenada, es
+The transport defect of `104_33`, summed over both signs of the
+ordinate, is
 
 \[
  \mathscr R_n:=
@@ -51,8 +51,8 @@ ordenada, es
                                                                \tag{2}
 \]
 
-La suma incluye conjugados y es real. La identidad elemental ya usada en
-`104_33` es
+The sum includes conjugates and is real. The elementary identity already
+used in `104_33` is
 
 \[
  \boxed{
@@ -60,17 +60,17 @@ La suma incluye conjugados y es real. La identidad elemental ya usada en
  =w_\rho^n+w_\rho^{-n}-2.}                              \tag{3}
 \]
 
-Sea ahora \(I=\{N,N+1,\ldots,N+L-1\}\), sean
-\(a_0,\ldots,a_{L-1}\in\mathbb R\), y defina
+Now let \(I=\{N,N+1,\ldots,N+L-1\}\), let
+\(a_0,\ldots,a_{L-1}\in\mathbb R\), and define
 
 \[
- A(z)=\sum_{j=0}^{L-1}a_jz^j,qquad A(1)=\sum_ja_j.       \tag{4}
+ A(z)=\sum_{j=0}^{L-1}a_jz^j,\qquad A(1)=\sum_ja_j.       \tag{4}
 \]
 
-Como el filtro es finito y la serie de residuos converge absolutamente en
-cada grado fijo, (3) puede sumarse término a término.
+Since the filter is finite and the residue series converges absolutely
+at each fixed degree, (3) can be summed term by term.
 
-**Lema 1.1 (identidad filtro--residuos).** Se tiene
+**Lemma 1.1 (filter–residue identity).** One has
 
 \[
  \boxed{
@@ -82,43 +82,43 @@ cada grado fijo, (3) puede sumarse término a término.
  \right\}.}                                             \tag{5}
 \]
 
-No aparece un signo nuevo al promediar: el modo creciente
-\(w_\rho^{-N}\) sigue presente y queda multiplicado por
+No new sign appears upon averaging: the growing mode
+\(w_\rho^{-N}\) is still present and is multiplied by
 \(A(w_\rho^{-1})\).
 
-### 1.1 Caja, Cesàro y Fejér
+### 1.1 Box, Cesàro, and Fejér
 
-Escriba
+Write
 
 \[
  G_L(z)={1-z^L\over L(1-z)}={1\over L}\sum_{j=0}^{L-1}z^j. \tag{6}
 \]
 
-La media de caja de la contribución (3) de un cero es
+The box average of the contribution (3) of a zero is
 
 \[
  \boxed{
  w^NG_L(w)+w^{-N}G_L(w^{-1})-2.}                         \tag{7}
 \]
 
-Para la media triangular unilateral, con pesos
-\(2(L-j)/[L(L+1)]\), el polinomio es
+For the one-sided triangular average, with weights
+\(2(L-j)/[L(L+1)]\), the polynomial is
 
 \[
  T_L(z)={2\over L(L+1)}
  {L-(L+1)z+z^{L+1}\over(1-z)^2},                         \tag{8}
 \]
 
-y la respuesta es \(w^NT_L(w)+w^{-N}T_L(w^{-1})-2\).
+and the answer is \(w^NT_L(w)+w^{-N}T_L(w^{-1})-2\).
 
-Finalmente, si \(N\ge L\), la media simétrica de Fejér usa
+Finally, if \(N\ge L\), the symmetric Fejér average uses
 
 \[
  K_L(z)={1\over L^2}\sum_{|j|<L}(L-|j|)z^j
  ={\mathcal F_L(z)\over L^2}=K_L(z^{-1}).                \tag{9}
 \]
 
-Por tanto
+Hence
 
 \[
  \boxed{
@@ -127,15 +127,15 @@ Por tanto
  =K_L(w)(w^N+w^{-N})-2.}                                 \tag{10}
 \]
 
-La no negatividad de \(K_L(e^{i\theta})\) solo vale en el círculo. Para
-\(|w|\ne1\), \(K_L(w)\) es en general complejo y no orienta (10).
+Non-negativity of \(K_L(e^{i\theta})\) only holds on the circle. For
+\(|w|\ne1\), \(K_L(w)\) is generally complex and does not orient (10).
 
 ---
 
-## 2. La parte de frontera es subexponencial
+## 2. The boundary part is subexponential
 
-Sea \(\lambda_n^{\rm crit}\) la contribución de los ceros situados en la
-línea crítica, agrupados por conjugación:
+Let \(\lambda_n^{\rm crit}\) be the contribution of the zeros located on
+the critical line, grouped by conjugation:
 
 \[
  \lambda_n^{\rm crit}
@@ -145,21 +145,21 @@ línea crítica, agrupados por conjugación:
  1-{1\over\rho}=e^{i\theta_\rho}.                       \tag{11}
 \]
 
-Separando la fórmula de Li por órbitas críticas y cuartetos exteriores,
-(3) da la identidad exacta
+Splitting Li's formula into critical orbits and exterior quartets,
+(3) gives the exact identity
 
 \[
  \boxed{\lambda_n=\lambda_n^{\rm crit}-\mathscr R_n.}  \tag{12}
 \]
 
-Además,
+Moreover,
 
 \[
  \boxed{0\le\lambda_n^{\rm crit}\ll n\log(n+2).}       \tag{13}
 \]
 
-En efecto, los ceros críticos con \(\gamma\le n\) aportan a lo sumo
-cuatro cada uno y \(N(n)\ll n\log(n+2)\). Para \(\gamma>n\),
+Indeed, the critical zeros with \(\gamma\le n\) contribute at most
+four each and \(N(n)\ll n\log(n+2)\). For \(\gamma>n\),
 
 \[
  |\theta_\rho|=2\arctan{1\over2\gamma}\le{1\over\gamma},
@@ -167,22 +167,22 @@ cuatro cada uno y \(N(n)\ll n\log(n+2)\). Para \(\gamma>n\),
  2\{1-\cos(n\theta_\rho)\}\le {n^2\over\gamma^2}.
 \]
 
-La sumación parcial de Riemann--von Mangoldt da
+Riemann–von Mangoldt partial summation gives
 
 \[
  \sum_{\gamma>n}{m_\rho\over\gamma^2}
  \ll {\log(n+2)\over n},
 \]
 
-lo cual prueba (13). Así todo crecimiento exponencial positivo de
-\(\lambda_n\) está en la parte negativa de \(\mathscr R_n\); la frontera
-crítica no puede producirlo ni cancelarlo.
+which proves (13). Thus every positive exponential growth of
+\(\lambda_n\) sits in the negative part of \(\mathscr R_n\); the critical
+boundary can neither produce nor cancel it.
 
 ---
 
-## 3. Qué promedio sí sería suficiente
+## 3. What average would actually suffice
 
-La parte positiva posee la dualidad finita exacta
+The positive part has the exact finite duality
 
 \[
  \boxed{
@@ -191,9 +191,9 @@ La parte positiva posee la dualidad finita exacta
  \left\{-\sum_{j=0}^{L-1}a_j\mathscr R_{N+j}\right\}.}   \tag{14}
 \]
 
-Insertando (5), el miembro derecho es un supremo sobre todos los
-polinomios selectores (A(z)=\sum a_jz^j), no la evaluación de un único
-polinomio caja o Fejér. De modo análogo,
+Inserting (5), the right-hand side is a supremum over all selector
+polynomials \(A(z)=\sum a_jz^j\), not the evaluation of a single box or
+Fejér polynomial. Similarly,
 
 \[
  \max_{0\le j<L}(-\mathscr R_{N+j})
@@ -201,8 +201,8 @@ polinomio caja o Fejér. De modo análogo,
  \left\{-\sum_ja_j\mathscr R_{N+j}\right\}.             \tag{15}
 \]
 
-Por (12)--(13), un certificado local que produce un bloque completo de la
-barrera superior de `104_67` es
+By (12)–(13), a local certificate that produces a complete block of the
+upper barrier of `104_67` is
 
 \[
  \boxed{
@@ -210,43 +210,43 @@ barrera superior de `104_67` es
  \le {1\over2}e^{\sqrt N}.}                              \tag{16}
 \]
 
-En efecto, sea \(M=N+L-1\) y suponga
-\(M\log(M+2)=o(e^{\sqrt N})\). Para \(N\) suficientemente grande,
-\(\lambda_n^{\rm crit}\le e^{\sqrt N}/2\) en todo el bloque. La cota
-sobre la suma de partes positivas en (16) implica, en particular, que cada
-sumando es a lo sumo \(e^{\sqrt N}/2\). Entonces (12) da
-\(\lambda_n\le e^{\sqrt n}\) grado por grado. La hipótesis sobre \(M\)
-vale, en particular, para \(N=L^2\) y longitud \(L\).
+Indeed, let \(M=N+L-1\) and suppose
+\(M\log(M+2)=o(e^{\sqrt N})\). For \(N\) sufficiently large,
+\(\lambda_n^{\rm crit}\le e^{\sqrt N}/2\) throughout the block. The bound
+on the sum of positive parts in (16) implies, in particular, that each
+summand is at most \(e^{\sqrt N}/2\). Then (12) gives
+\(\lambda_n\le e^{\sqrt n}\) degree by degree. The hypothesis on \(M\)
+holds, in particular, for \(N=L^2\) and length \(L\).
 
-La formulación más débil que aún detecta todo cero exterior es (1).
+The weakest formulation that still detects every exterior zero is (1).
 
-**Teorema 3.1 (criterio de bloque positivo).** Con
+**Theorem 3.1 (positive-block criterion).** With
 
 \[
  I_L=\{L^2,\ldots,L^2+L-1\},\qquad M_L=L^2+L-1,
 \]
 
-se tiene la equivalencia (1). Más precisamente, si RH es falsa, el miembro
-izquierdo de (1) tiende a \(+\infty\).
+equivalence (1) holds. More precisely, if RH is false, the left-hand
+side of (1) tends to \(+\infty\).
 
-*Demostración.* Bajo RH no hay ceros con \(\Re\rho>1/2\), luego
-\(\mathscr R_n=0\) para todo \(n\).
+*Proof.* Under RH there are no zeros with \(\Re\rho>1/2\), so
+\(\mathscr R_n=0\) for every \(n\).
 
-Si RH es falsa, el Teorema 1.1 de `104_67` proporciona \(c>0\), \(R>1\)
-y un conjunto sindético \(D_+\) tales que
+If RH is false, Theorem 1.1 of `104_67` provides \(c>0\), \(R>1\),
+and a syndetic set \(D_+\) such that
 
 \[
  \lambda_n\ge cR^n\qquad(n\in D_+)
 \]
 
-desde un índice fijo. Por (12)--(13), reduciendo \(c\) si hace falta,
+from some fixed index on. By (12)–(13), shrinking \(c\) if needed,
 
 \[
  (-\mathscr R_n)_+\ge {c\over2}R^n\qquad(n\in D_+).      \tag{17}
 \]
 
-Sea \(G\) un gap de sindeticidad. Para \(L\ge G\), los últimos \(G\)
-lugares de \(I_L\) contienen un \(d_L\in D_+\), de modo que
+Let \(G\) be a syndeticity gap. For \(L\ge G\), the last \(G\)
+places of \(I_L\) contain a \(d_L\in D_+\), so that
 
 \[
  {e^{-\sqrt{M_L}}\over L}
@@ -255,46 +255,46 @@ lugares de \(I_L\) contienen un \(d_L\in D_+\), de modo que
                                                                \tag{18}
 \]
 
-Esto prueba la dicotomía. \(\square\)
+This proves the dichotomy. \(\square\)
 
-Para una excepción de densidad logarítmica cero basta, por la misma razón,
-probar
+For a zero-logarithmic-density exception, it suffices, by the same
+reasoning, to prove
 
 \[
  {1\over\log X}\sum_{n\le X}
  {(-\mathscr R_n)_+\over n e^{\sqrt n}}\longrightarrow0. \tag{19}
 \]
 
-Markov aplicado a (19) muestra que
-\(\{n:(-\mathscr R_n)_+>e^{\sqrt n}/2\}\) tiene densidad logarítmica
-superior cero; (12)--(13) y `104_67` cierran entonces RH. Bajo no-RH, (17)
-prueba que el miembro de (19) no solo deja de tender a cero, sino que es no
-acotado.
+Markov's inequality applied to (19) shows that
+\(\{n:(-\mathscr R_n)_+>e^{\sqrt n}/2\}\) has upper logarithmic density
+zero; (12)–(13) and `104_67` then close RH. Under non-RH, (17)
+proves that the term in (19) not only fails to tend to zero, but is
+unbounded.
 
 ---
 
-## 4. Por qué la media firmada no basta
+## 4. Why the signed average is not enough
 
-Considere el cuarteto racional de `104_41`, parametrizado por
+Consider the rational quartet of `104_41`, parametrized by
 
 \[
  w={i\over2},\qquad
  \rho={1\over1-w}={4+2i\over5}.
 \]
 
-Su contribución al coeficiente de Li es
+Its contribution to the Li coefficient is
 
 \[
  q_n=4-2\Re(w^n+w^{-n})=-2\Re\{w^n+w^{-n}-2\}.           \tag{20}
 \]
 
-Para \(N\equiv2\pmod4\),
+For \(N\equiv2\pmod4\),
 
 \[
  q_N=4+2(2^N+2^{-N})>2^{N+1},                            \tag{21}
 \]
 
-pero la caja de cuatro grados satisface
+but the box over four degrees satisfies
 
 \[
  \boxed{
@@ -303,96 +303,100 @@ pero la caja de cuatro grados satisface
  \qquad(N\ge2, N\equiv2\!\!\pmod4).}                 \tag{22}
 \]
 
-Así hay bloques arbitrariamente lejanos cuya **media firmada** cumple una
-cota superior incluso negativa, aunque el primer grado del mismo bloque
-tiene una excursión positiva exponencial. El promedio no ha producido un
-bloque bueno; el grado malo fue pagado por una excursión del signo opuesto.
+So there are arbitrarily distant blocks whose **signed average**
+satisfies an upper bound that is even negative, although the first
+degree of the same block has an exponential positive excursion. The
+average has not produced a good block; the bad degree was paid for by an
+excursion of the opposite sign.
 
-El fenómeno no es especial a la caja. Para cualquier filtro finito no nulo
-con pesos reales no negativos, sea \(j_*\) el mayor índice con
-\(a_{j_*}>0\). Si \(w=re^{i\theta}\) y \(r\downarrow0\), el término
-dominante de (5) es
+This phenomenon is not special to the box filter. For any nonzero finite
+filter with non-negative real weights, let \(j_*\) be the largest index
+with \(a_{j_*}>0\). If \(w=re^{i\theta}\) and \(r\downarrow0\), the
+dominant term of (5) is
 
 \[
  a_{j_*}r^{-N-j_*}e^{-i(N+j_*)\theta}.                   \tag{23}
 \]
 
-Eligiendo dos ángulos no reales con cosenos de signos opuestos, (23) toma
-ambos signos y domina todos los demás términos. Ambos puntos corresponden
-a ceros con \(\Re\rho>1/2\). Por tanto ningún filtro lineal fijo posee una
-orientación unilateral universal sobre los cuartetos exteriores. Caja,
-Cesàro y Fejér no son excepciones.
+Choosing two non-real angles with cosines of opposite sign, (23) takes
+both signs and dominates all the other terms. Both points correspond to
+zeros with \(\Re\rho>1/2\). Hence no fixed linear filter has a universal
+one-sided orientation over exterior quartets. Box, Cesàro, and Fejér are
+no exceptions.
 
-Este falsificador no conserva el producto de Euler exacto de \(\zeta\).
-Su función es lógica: prueba que el paso «media firmada pequeña
-\(\Rightarrow\) bloque bueno» es falso antes de usar aritmética. Una prueba
-específica de los pesos reales debe controlar (14), no solamente (5) para
-un selector prefijado.
+This falsifier does not preserve the exact Euler product of \(\zeta\).
+Its role is logical: it proves that the step "small signed average
+\(\Rightarrow\) good block" is false before using arithmetic. A specific
+proof for the real weights must control (14), not merely (5) for a fixed
+selector.
 
 ---
 
-## 5. Consecuencia para la homotopía de `104_41`
+## 5. Consequence for the `104_41` homotopy
 
-En el semiplano Euler,
+In the Euler half-plane,
 
 \[
  |\mathcal B_{n,a}|\le3n\qquad(a\ge4).
 \]
 
-Por linealidad, para cualquier selector \(0\le a_j\le1\),
+By linearity, for any selector \(0\le a_j\le1\),
 
 \[
  \left|\sum_ja_j\mathcal B_{N+j,a}\right|
  \le3\sum_ja_j(N+j).                                    \tag{24}
 \]
 
-Al transportar \(a\downarrow1\), el defecto es exactamente el miembro
-derecho de (5). Para deducir (14) habría que transportar (24)
-**uniformemente en el cubo completo** \([0,1]^L\). El selector extremo se
-adapta a los signos de los residuos; un único filtro caja/Fejér no lo
-controla.
+Transporting \(a\downarrow1\), the defect is exactly the right-hand side
+of (5). To deduce (14) one would have to transport (24)
+**uniformly over the entire cube** \([0,1]^L\). The extremal selector
+adapts to the signs of the residues; a single box/Fejér filter does not
+control it.
 
-Ésta es la combinación precisa de `104_33`, `104_41` y `104_67`:
+This is the precise combination of `104_33`, `104_41`, and `104_67`:
 
-* la frontera aporta solo \(O(n\log n)\);
-* la suma firmada de residuos tiene la fórmula filtrada (5);
-* la relajación por bloques permite reemplazar el control de todos los
-  grados por (1), (16) o (19);
-* pero cualquiera de esos targets exige la parte positiva, equivalente al
-  supremo de selectores (14).
+* the boundary contributes only \(O(n\log n)\);
+* the signed sum of residues has the filtered formula (5);
+* the block relaxation allows replacing control of every degree with
+  (1), (16), or (19);
+* but any of those targets requires the positive part, equivalent to the
+  selector supremum (14).
 
-No queda una inferencia desde un promedio lineal. El teorema aritmético que
-falta es una cota uniforme sobre (14) para los residuos producidos por los
-pesos ordinarios \(\Lambda(m)\).
+No inference remains from a linear average. The missing arithmetic
+theorem is a uniform bound on (14) for the residues produced by the
+ordinary weights \(\Lambda(m)\).
 
 ---
 
-## 6. Veredicto
+## 6. Verdict
 
-**Probado:** identidad exacta de filtro (5); fórmulas caja, Cesàro y Fejér
-(7)--(10); descomposición
-\(\lambda_n=\lambda_n^{\rm crit}-\mathscr R_n\) con
-\(0\le\lambda_n^{\rm crit}\ll n\log n\); dualidad de selectores
-(14)--(15); criterio determinista (1); y falsificador racional (21)--(22).
+**Proved:** the exact filter identity (5); the box, Cesàro, and Fejér
+formulas (7)–(10); the decomposition
+\(\lambda_n=\lambda_n^{\rm crit}-\mathscr R_n\) with
+\(0\le\lambda_n^{\rm crit}\ll n\log n\); the selector duality
+(14)–(15); the deterministic criterion (1); and the rational falsifier
+(21)–(22).
 
-**Ganancia:** la propuesta de promediar el defecto queda separada en dos
-objetos que no deben confundirse. La media firmada es un solo filtro y no
-basta. La media de la parte positiva sí es equivalente a RH y admite la
-fórmula variacional exacta (14)--(5).
+**Gain:** the proposal of averaging the defect is now split into two
+objects that must not be confused. The signed average is a single filter
+and is not enough. The average of the positive part is equivalent to RH
+and admits the exact variational formula (14)–(5).
 
-**Descartado:** concluir bloques completos o excepción de densidad cero a
-partir de una media signed de caja, Cesàro o Fejér.
+**Ruled out:** concluding complete blocks or a zero-density exception
+from a box, Cesàro, or Fejér signed average.
 
-**No probado:** una cota aritmética para el supremo (14), (1), A1 o RH.
+**Not proved:** an arithmetic bound for the supremum (14), (1), A1, or
+RH.
 
-## 7. Reproducción
+## 7. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 block_residue_selector_gate_check.py
 ```
 
-El checker usa `Fraction` y racionales gaussianos. Verifica (3), (5),
-(7)--(10), la dualidad finita (14)--(15), y el falsificador (21)--(22) en
-una familia de bloques arbitrariamente lejanos. No certifica el límite
-aritmético (1).
+The checker uses `Fraction` and Gaussian rationals. It verifies (3), (5),
+(7)–(10), the finite duality (14)–(15), and the falsifier (21)–(22) over
+a family of arbitrarily distant blocks. It does not certify the
+arithmetic limit (1).
+</content>

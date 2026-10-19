@@ -20,14 +20,14 @@ Let `A` be self-adjoint, let `v` be a unit vector, and decompose
 Assume
 
 \[
- D\geq gI,qquad \|r\|\leq\varepsilon.                 \tag{2}
+ D\geq gI,\qquad \|r\|\leq\varepsilon.                 \tag{2}
 \]
 
 Then
 
 \[
  \boxed{
- A\geq\lambda_-I,qquad
+ A\geq\lambda_-I,\qquad
  \lambda_-={\mu+g-
  \sqrt{(g-\mu)^2+4\varepsilon^2}\over2}.}              \tag{3}
 \]

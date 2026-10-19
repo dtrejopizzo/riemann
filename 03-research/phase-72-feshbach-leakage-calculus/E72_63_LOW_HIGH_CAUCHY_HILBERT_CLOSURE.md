@@ -1,7 +1,6 @@
 # E72.63 -- Low-high Cauchy-Hilbert closure theorem
 
-**Date:** 2026-07-08.
-**Role:** isolate the two finite estimates that would prove ECHC and hence scalar WRL annihilation.
+**Purpose:** isolate the two finite estimates that would prove ECHC and hence scalar WRL annihilation.
 
 ## 0. Starting point
 

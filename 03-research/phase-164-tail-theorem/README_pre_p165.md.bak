@@ -1,0 +1,48 @@
+# Phase 164 — El teorema de la cola
+
+**Propósito.** Atacar el único punto que queda para cerrar la fila D: la desigualdad de compensación (★_cell) de R163_401 §4.8 en el
+testigo de primer contacto, escrita como un enunciado sobre la cola 𝒯_X(x)=Σ_{n≥X}Λ(n)n^{−1/2+ix}, X=e^{2T_c}, de −ζ′/ζ:
+**(TC)** C_{T_c}−iG²𝒯_X no tiene polos con Im x∈(−½,0). (TC) en el testigo es RH (Rem 4.8a); la phase sólo sostiene que su
+hipótesis (producto de Euler sobre p≥X frente a un testigo hecho con p<X) es la única no excluida (R163_901 f_t, R163_1001 f_χ/W3′,
+Bombieri–Hejhal).
+
+## Índice
+- [R164_000_PROPOSAL.md](R164_000_PROPOSAL.md) — diagnóstico P1–P4, (TC), líneas L1 (corte híbrido Euler–Hadamard), L2 (BF_θ^disc, θ≤1/3), L3, plan de rondas.
+- [R164_301_INTEGRATION_LOG.md](R164_301_INTEGRATION_LOG.md) — editor (L3): fusión de la grilla (partes 12–13; parte 14 en §6, parte 15 en §9), Paper 48, R163_401 v7/v8/v9, verificación de citas, nota de literatura de Thm R (§7).
+- [R164_101_HYBRID_KZ.md](R164_101_HYBRID_KZ.md) — L1a, corte híbrido Euler–Hadamard: (KZ) es E1, DEAD (ronda 1).
+- [R164_102_POSITIVE_TAIL.md](R164_102_POSITIVE_TAIL.md) — L1b, medida de cola positiva: Thm A, Thm L, Thm H (ronda 1).
+- [R164_201_BEURLING_BELOW_THIRD.md](R164_201_BEURLING_BELOW_THIRD.md) — L2, frontera de Beurling bajo 1/3: Theorem L (ronda 1, reparado).
+- [R164_190_AUDIT.md](R164_190_AUDIT.md) — auditoría del lead, rondas 1–2; síntesis: teorema de identificación.
+- [R164_291_AUDIT_201.md](R164_291_AUDIT_201.md) — de auditoría de R164_201: Theorem L PROVED tras R1/R2; alcance rebajado (R4).
+- [R164_401_O164_101_CONSTRUCTION.md](R164_401_O164_101_CONSTRUCTION.md) — O164.101, lado construcción: Thm R (rigidez positiva fuera de ℕ), O164.101 ⟺ ¬RH (ronda 2).
+- [R164_402_O164_101_OBSTRUCTION.md](R164_402_O164_101_OBSTRUCTION.md) — O164.101, lado obstrucción: Props P/S/F/B, superado por Thm R (ronda 2).
+- [R164_501_ZERO_SIDE_SINC.md](R164_501_ZERO_SIDE_SINC.md) — sinc en el lado de ceros: Thm SA, Cor SA.1, Prop 4; ruta DEAD (E1, sin espacio) (ronda 3).
+- [R164_502_DETERMINANT_MOMENTS.md](R164_502_DETERMINANT_MOMENTS.md) — determinante / Szegő / momentos espectrales: L0–L8; DEAD (dato de ventana) (ronda 3).
+- [R164_503_OFF_LATTICE_BEURLING.md](R164_503_OFF_LATTICE_BEURLING.md) — Beurling fuera del retículo bajo 1/3: Goal B ≥ RH + GRH cuadrática; Goal A OPEN; O164.503a–d (ronda 3).
+- [R164_491_AUDIT_401_501.md](R164_491_AUDIT_401_501.md) — de auditoría de Thm R y R164_501 (F1–F6): aceptado, arreglos aplicados (ronda 4).
+- [R164_601_UNCERTAINTY_OBSTRUCTION.md](R164_601_UNCERTAINTY_OBSTRUCTION.md) — O164.501.1 cerrado (test dlVP sobre G²), principio del término descartado (Thm 3.1), W2/M; residuo O164.601.1 (ronda 4).
+
+## Estado
+**Phase cerrada en rondas 1–4; (★_cell) OPEN.** (TC), fila D: OPEN. Ninguna etiqueta del registro cambió en esta phase.
+
+## Ronda 1 (constructores , auditoría en R164_190)
+- R164_101 (L1a): (KZ) es E1, DEAD (Thm E1 PROVED). Nuevo: Prop D (deletion tiene exactamente el Z_X de ζ y signo opuesto: el signo vive en el acoplamiento ventana × cola).
+- R164_102 (L1b): cola positiva / Bernstein DEAD (Thm A PROVED: cero fuera de la recta en cualquier cono con ventana de ζ y cola positiva, pagado con polo doble). Nuevo: Thm H (en la clase del testigo, todo miembro con cero fuera de la recta mueve infinitos ceros), Thm L (Landau: positividad ciega a ceros, sensible a polos).
+- R164_201 (L2): L2a cerrada negativa en la clase de Witt 𝒦_θ (Theorem L PROVED: error ≫ x^{θ+δ} para θ<1/3, el umbral es real); L2b se detiene en Lemma D (ciego a ceros). Problema 6 bajo 1/3 OPEN; contraejemplos sólo fuera del retículo (O164.201a).
+- R164_301 (editor): grilla 975 rutas ■10 ◩20 ◧34; Paper 48 25 pp con f_χ, W3′, Thm O; R163_401 v7.
+- **Convergencia: una sola pregunta, O164.101** (sistema Beurling positivo con ventana+Γ+FE+polo de ζ y cero fuera de la recta en un cono). Ronda 2 la ataca por construcción y por obstrucción.
+
+## Ronda 2
+- R164_401: **Thm R (PROVED, auditado por el lead):** medida de enteros ≥ 0 fuera de ℕ + brecha (1,X) + FE de ζ con sus polos ⇒ f = ζ. Hamburger con positividad en lugar de soporte entero. Cor: O164.101 ⟺ ¬RH; L1 muere por identificación.
+- R164_402: forma de Poisson de la FE (Prop P), cambio de signo forzado (Prop S), masa borrada infinita (Prop F); superado por Thm R (Q0 respondida: 𝒞 = {ζ}).
+- R164_291: de auditoría de Theorem L: PROVED tras R1/R2; alcance rebajado (no hay suelo x^{1/3}); reparaciones aplicadas por el autor.
+- **Síntesis: teorema de identificación** (R164_190 §Ronda 2): toda propiedad global que separa ζ de los falsificadores la identifica. (★_cell) sólo se prueba usando ζ individualmente. Row D sigue OPEN.
+
+## Rondas 3–4
+- R164_501: **Thm SA (PROVED)**: todo test ≥ 0 aniquilado por la ecuación de núcleo es un cuadrado de núcleo ĤĤ^#; densidad crítica de nodos, sin espacio para el sinc de Thm R (E1). **Prop 4 (PROVED)**: cola de Λ con signo a altura real (identidad, peso fuera de la recta y/γ_q²).
+- R164_502: L1: todo invariante espectral de A_T es dato de ventana; determinante, traza de calor, momentos, Szegő–Widom DEAD; herramientas L4, L5, L6.
+- R164_503: Goal B ≥ RH + GRH cuadrática (rechazada como ruta); redondeo por primos tope x^{1/2} (ARGUED); Goal A OPEN; O164.503a–d.
+- R164_491 (de auditoría): Thm R PROVED tras F3 (residuos de ζ explícitos) y F1; novedad: "no encontrado en esta forma", posiblemente folklore.
+- R164_601: O164.501.1 CERRADO (el test existe: dlVP sobre G²); la lectura de incertidumbre del lead queda refutada; **principio del término descartado** (Thm 3.1) + W2/M: ruta DEAD; residuo O164.601.1 = (★_cell) ponderada por K.
+- Editor (R164_301 §9): grilla parte 15 (989 rutas, ■10 ◩20 ◧34), Paper 48 (thm:R con F3, párrafo rondas 3–4), R163_401 v9.
+- **Cierre:** todas las rutas de R164_000 cerradas con prueba; teorema de identificación + Thm R; **toda ruta vuelve a (★_cell)** (RH en el testigo).

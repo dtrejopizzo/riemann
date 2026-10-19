@@ -7,7 +7,7 @@ constant-enclosure generator.  It can certify a supplied list of rational
 intervals, but it presently contains only
 
 \[
- \gamma_0,\ldots,\gamma_7,qquad \zeta(2),\ldots,\zeta(8),
+ \gamma_0,\ldots,\gamma_7,\qquad \zeta(2),\ldots,\zeta(8),
 \]
 
 as hard-coded inputs.  It therefore cannot be extended candidly to
@@ -15,7 +15,7 @@ as hard-coded inputs.  It therefore cannot be extended candidly to
 objects are explicit, independently proved rational enclosures for
 
 \[
- \gamma_8,\ldots,\gamma_{148},qquad
+ \gamma_8,\ldots,\gamma_{148},\qquad
  \zeta(9),\ldots,\zeta(149),                                    \tag{1}
 \]
 

@@ -1,6 +1,6 @@
 # E78.99 - The fixed-`L` core reduces to `SHELL-LOG + MU-DIR`
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` front.  
 **Class:** REDUCCION GENUINA.  
 **What we know after this doc that we did not know before:** after removing the

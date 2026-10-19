@@ -19,14 +19,14 @@
 Haran's computation gives
 
 \[
- \mathrm{Pic}(X)\simeq\mathbb R_{>0},qquad
+ \mathrm{Pic}(X)\simeq\mathbb R_{>0},\qquad
  d(\lambda)=\log\lambda.                                                   \tag{1.1}
 \]
 
 For `lambda>=1`, put
 
 \[
- Q(\lambda)=\lfloor\lambda\rfloor,qquad
+ Q(\lambda)=\lfloor\lambda\rfloor,\qquad
  \rho(\lambda)=\lambda/Q(\lambda)\in[1,1+1/Q(\lambda)).                  \tag{1.2}
 \]
 
@@ -93,9 +93,9 @@ global `h_FM^Pic` or a coherent-sheaf cohomology theory.
 Let `lambda_1,lambda_2>1` and `d_i=log(lambda_i)`. At scale `t`, set
 
 \[
- a_t=\left\lfloor\frac{t d_1}{2\log2}\right\rfloor,qquad
- N_t=2^{a_t},qquad
- r_t=\lfloor\log_3(2N_t+1)\rfloor,qquad
+ a_t=\left\lfloor\frac{t d_1}{2\log2}\right\rfloor,\qquad
+ N_t=2^{a_t},\qquad
+ r_t=\lfloor\log_3(2N_t+1)\rfloor,\qquad
  Q_t=\lfloor e^{t d_2}\rfloor.                                          \tag{3.1}
 
 The binary contraction of depth `a_t` costs finite degree
@@ -108,7 +108,7 @@ class `(lambda_1^t,lambda_2^t)`.
 Since
 
 \[
- r_t=\frac{td_1}{2\log3}+O(1),qquad
+ r_t=\frac{td_1}{2\log3}+O(1),\qquad
  \log Q_t=td_2+o(1),                                                       \tag{3.2}
 \]
 

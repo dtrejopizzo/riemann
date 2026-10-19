@@ -1,6 +1,5 @@
 # E73.202 - Full interval certificate for TRANS-CELL
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

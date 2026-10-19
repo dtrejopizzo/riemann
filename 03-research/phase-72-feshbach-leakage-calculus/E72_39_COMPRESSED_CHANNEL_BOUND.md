@@ -1,7 +1,6 @@
 # E72.39 -- Compressed channel bound for endpoint Weyl-Feshbach tightness
 
-**Date:** 2026-07-08.
-**Role:** convert the endpoint taper of E72.38 into a concrete sufficient theorem for normalized scalar
+**Purpose:** convert the endpoint taper of E72.38 into a concrete sufficient theorem for normalized scalar
 WRL annihilation.
 
 ## 0. Cell measure notation

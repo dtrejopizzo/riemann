@@ -1,51 +1,51 @@
-# 2b: reducción al LÍMITE DE ESCALA del fondo de A_λ (los tres frentes) **Tesis:** 2b (ξ̂_λ→Ξ) se reduce a un único enunciado de análisis asintótico — la existencia
-del límite de escala del fondo de la forma de Weil — que es zero-independiente y está fuertemente
-soportado numéricamente. Esto destraba el obstáculo del gap exponencial. --- ## Frente #1 [CONFIRMADO]: el espectro relativo converge a ≈(k+1)² Medición (relspec2.py, mpmath dps=50, N hasta 20, λ hasta 11): (ε_k/ε_0)/(k+1)²: | λ\k | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+# 2b: reduction to the SCALING LIMIT of the bottom of A_λ (the three fronts) **Thesis:** 2b (ξ̂_λ→Ξ) reduces to a single asymptotic-analysis statement — the existence
+of the scaling limit of the bottom of the Weil form — which is zero-independent and is strongly
+supported numerically. This unblocks the exponential-gap obstacle. --- ## Front #1 [CONFIRMED]: the relative spectrum converges to ≈(k+1)² Measurement (relspec2.py, mpmath dps=50, N up to 20, λ up to 11): (ε_k/ε_0)/(k+1)²: | λ\k | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
 |---|---|---|---|---|---|---|---|
 | 5.0 | 1.006 | 1.005 | 1.013 | 1.015 | 1.026 | 1.034 | 1.048 |
 | 9.0 | 0.999 | 1.003 | 1.004 | 1.009 | 1.011 | 1.019 | 1.022 |
 | 11.0| 1.002 | 1.003 | 1.006 | 1.008 | 1.013 | 1.016 | 1.023 |
-N-conv (λ=7): k=5 da 1.063 (N=12) → 1.059 (N=16) → 1.015 (N=20). **Conclusión:** el espectro relativo {ε_k/ε_0} CONVERGE (estable en λ y N); las desviaciones en
-k alto son horizonte/tamaño finito y decrecen. Límite ≈ **(k+1)²** (sólido k bajos; k altos
-necesitan λ,N mayores). El espectro relativo convergiendo es EXACTAMENTE lo que (ii) requiere. ## Frente #3 [REDUCCIÓN SÓLIDA]: reescalar destraba el gap exponencial Obstáculo de 2b: el fondo de A_∞ NO es aislado (ε_k = ε_0·(k+1)² → 0 todos, se acumulan en 0;
-gap exp-pequeño en absoluto). La cota de Galerkin/perturbación ∝1/gap es inútil. **Vuelta:** reescalar por ε_0(λ). El operador A_λ/ε_0(λ) tiene espectro {1, 4, 9, 16, …} —
-**fondo simple AISLADO con gap O(1)** (autovalor 1, gap 3). Reescalar NO cambia autovectores, así
-que el ground state de A_λ/ε_0 ES ξ_λ. Cadena: A_λ/ε_0 → L_∞ (límite de escala, fondo aislado) ⟹ ξ_λ converge (Galerkin estándar, fondo aislado) ⟹ g_λ(z)=Σ_k ξ_k/(z−d_k) converge ⟹ sus ceros (=ceros de ξ̂_λ, = espectro de D_λ) convergen ⟹ **ξ̂_λ → Ξ** (Thm 1.1.ii). ⟹ **#3 se reduce a #2**: existencia del límite de escala. (El exp-gap deja de ser obstáculo:
-en la escala correcta, el gap es O(1).) ## Frente #2 [EL CRUX, soportado]: ¿existe el límite de escala A_λ/ε_0 → L_∞? Esto es ahora el único enunciado abierto, y es CONCRETO: > **Conjetura 2b:** A_λ/ε_0(λ), restringido al fondo, converge (λ→∞) a un operador L_∞ con
-> espectro {(k+1)²}_k (Laplaciano de Dirichlet). **Soporte:** Frente #1 (el espectro relativo → (k+1)²). **Sutileza clave (conecta con 10⁻⁵⁵):** ε_0 ~ 1e-20 es **exponencialmente** pequeño, NO ∝1/L²
-(~0.15). Los modos blandos viven en un sector de energía exponencialmente pequeña =
-**tunneling/WKB**. Esa escala exponencial ES la precisión extraordinaria del método (10⁻⁵⁵).
-El límite L_∞ emerge del sector de tunneling, no de un Laplaciano ingenuo del intervalo. **Estructura para la prueba:** QW es Cauchy–Toeplitz/Loewner τ_{nm}=(b_n−b_m)/(n−m). El fondo
-(near-kernel) y su reescalado son analizables por: (a) la estructura de Loewner (autovalores de
-matrices de Pick/Loewner); (b) WKB/tunneling para la escala exponencial ε_0; (c) Gantmacher–Krein
-(de H1: positivity-improving ⟹ k-ésimo modo con k nodos ⟹ estructura Sturm ⟹ espectro tipo j²).
-El (c) ya EXPLICA cualitativamente el (k+1)²: un operador de oscilación con k nodos en el k-ésimo
-modo tiene espectro Sturm-Liouville ∝ j². **H1 (positivity-improving) ya da la estructura nodal
-que fuerza el espectro tipo j².** ## Veredicto - (i) exacto, (ii) reducido a #2 (límite de escala), #3 = reducción sólida vía reescalado.
-- #2 fuertemente soportado; su prueba combina Loewner + WKB(tunneling) + Gantmacher–Krein.
-- **2b es cerrable**: queda UN enunciado asintótico concreto, zero-independiente, no un muro. ## ACTUALIZACIÓN #2: los modos blandos son de BORDE (no Laplaciano de bulk) Probé las autofunciones blandas en espacio real (softmodes.py, mpmath, λ=5, N=14). Resultado
-que **corrige** la hipótesis del Laplaciano de bulk: | modo k | ε_k/ε_0 | perfil f(w), w∈[−L/2,L/2] |
+N-conv (λ=7): k=5 gives 1.063 (N=12) → 1.059 (N=16) → 1.015 (N=20). **Conclusion:** the relative spectrum {ε_k/ε_0} CONVERGES (stable in λ and N); the deviations at
+high k are horizon/finite-size effects and decrease. Limit ≈ **(k+1)²** (solid at low k; high k
+need larger λ,N). The relative spectrum converging is EXACTLY what (ii) requires. ## Front #3 [SOLID REDUCTION]: rescaling unblocks the exponential gap Obstacle of 2b: the bottom of A_∞ is NOT isolated (ε_k = ε_0·(k+1)² → 0 for all, accumulating at 0;
+exponentially-small gap in absolute terms). The Galerkin/perturbation bound ∝1/gap is useless. **Workaround:** rescale by ε_0(λ). The operator A_λ/ε_0(λ) has spectrum {1, 4, 9, 16, …} —
+a **simple ISOLATED bottom with gap O(1)** (eigenvalue 1, gap 3). Rescaling does NOT change eigenvectors, so
+the ground state of A_λ/ε_0 IS ξ_λ. Chain: A_λ/ε_0 → L_∞ (scaling limit, isolated bottom) ⟹ ξ_λ converges (standard Galerkin, isolated bottom) ⟹ g_λ(z)=Σ_k ξ_k/(z−d_k) converges ⟹ its zeros (=zeros of ξ̂_λ, = spectrum of D_λ) converge ⟹ **ξ̂_λ → Ξ** (Thm 1.1.ii). ⟹ **#3 reduces to #2**: existence of the scaling limit. (The exp-gap stops being an obstacle:
+at the correct scale, the gap is O(1).) ## Front #2 [THE CRUX, supported]: does the scaling limit A_λ/ε_0 → L_∞ exist? This is now the only open statement, and it is CONCRETE: > **Conjecture 2b:** A_λ/ε_0(λ), restricted to the bottom, converges (λ→∞) to an operator L_∞ with
+> spectrum {(k+1)²}_k (Dirichlet Laplacian). **Support:** Front #1 (the relative spectrum → (k+1)²). **Key subtlety (connects to 10⁻⁵⁵):** ε_0 ~ 1e-20 is **exponentially** small, NOT ∝1/L²
+(~0.15). The soft modes live in an exponentially small energy sector =
+**tunneling/WKB**. That exponential scale IS the extraordinary precision of the method (10⁻⁵⁵).
+The limit L_∞ emerges from the tunneling sector, not from a naive bulk Laplacian. **Structure for the proof:** QW is Cauchy–Toeplitz/Loewner τ_{nm}=(b_n−b_m)/(n−m). The bottom
+(near-kernel) and its rescaling are analyzable via: (a) the Loewner structure (eigenvalues of
+Pick/Loewner matrices); (b) WKB/tunneling for the exponential scale ε_0; (c) Gantmacher–Krein
+(from H1: positivity-improving ⟹ the k-th mode has k nodes ⟹ Sturm structure ⟹ j²-type spectrum).
+(c) already EXPLAINS qualitatively the (k+1)²: an oscillation operator with k nodes in the k-th
+mode has a Sturm-Liouville spectrum ∝ j². **H1 (positivity-improving) already gives the nodal structure
+that forces the j²-type spectrum.** ## Verdict - (i) exact, (ii) reduced to #2 (scaling limit), #3 = solid reduction via rescaling.
+- #2 strongly supported; its proof combines Loewner + WKB(tunneling) + Gantmacher–Krein.
+- **2b is closable**: what remains is ONE concrete asymptotic statement, zero-independent, not a wall. ## UPDATE #2: the soft modes are EDGE modes (not a bulk Laplacian) I tested the soft eigenfunctions in real space (softmodes.py, mpmath, λ=5, N=14). Result
+that **corrects** the bulk-Laplacian hypothesis: | mode k | ε_k/ε_0 | profile f(w), w∈[−L/2,L/2] |
 |---|---|---|
-| 0 | 1.00 | −.99 −.85 −.46 **~0** ~0 ~0 −.46 −.85 −.99 (concentrado en BORDES, cero en centro) |
+| 0 | 1.00 | −.99 −.85 −.46 **~0** ~0 ~0 −.46 −.85 −.99 (concentrated at the EDGES, zero at the center) |
 | 1 | 4.08 | −.69 −1.0 −.21 ~0 ~0 ~0 −.21 −1.0 −.69 |
 | 2 | 9.07 | −1.0 +.05 +.95 ~0 ~0 ~0 +.95 +.05 −1.0 |
-| 3 | 16.5 | +1.0 −.91 +.65 ~0 ~0 ~0 +.65 −.91 +1.0 | **Hallazgo:** los modos blandos están **EDGE-LOCALIZED** (concentrados en u=λ^{±1}, la frontera
-del intervalo) y se **anulan en el centro** (u=1). La oscilación crece en las CAPAS DE BORDE.
-ε_0~1e-20 = **escala de tunneling** entre los dos bordes (splitting exponencial de pares
-borde-izq/borde-der). **Conexión con la construcción (cierra todo):** δ_N es la **evaluación en el borde u=λ** (kernel
-de Dirichlet en la frontera), y el minimizador se normaliza por δ_N(ξ)=1. La construcción CCM es
-intrínsecamente sobre comportamiento de BORDE ⟹ los modos blandos deben ser de borde. Coherente. **Refinamiento de #2:** el operador límite L_∞ NO es un Laplaciano de bulk sino un **operador de
-BORDE/capa límite**; el espectro (k+1)² es el espectro de los modos de borde, y ε_0 es la escala
-de tunneling. La prueba de #2 es **asintótica de capa límite + tunneling**, no WKB de bulk. ## Próximo paso sobre #2
-- Identificar el operador de borde efectivo (modelo de capa límite en u=λ): su espectro debe dar (k+1)². Candidato: el operador de borde asociado a δ_N (Dirichlet-to-Neumann / kernel de borde).
-- La escala ε_0 (tunneling): splitting exponencial entre los bordes u=λ y u=λ⁻¹, ∝ e^{−c·L}. **VERIFICADO:** fit da ε_0 ∝ λ^{−2.07} ≈ λ^{−2} = e^{−L} (tasa de decay 1 en w, atravesar L=2logλ). El modelo de tunneling borde-a-borde queda confirmado.
-- H1 (Gantmacher–Krein) sigue dando la estructura nodal/oscilatoria de los modos de borde. ## ESTADO CONSOLIDADO de #2 (franco) Modelo de borde/tunneling **caracterizado y verificado numéricamente en 3 piezas**:
-(1) modos blandos edge-localized (autofunciones, softmodes.py);
-(2) ε_0 ∝ λ^{−2} = e^{−L}, tunneling borde-a-borde (verificado, exp −2.07);
-(3) espectro relativo (k+1)² = espectro de modos de borde (relspec, verificado). **Lo que falta (el crux real, NO cerrado):** la PRUEBA rigurosa de que el operador de borde
-efectivo tiene espectro (k+1)² y que ε_0 tiene la asintótica de tunneling — esto es análisis
-asintótico de capa límite real, no un muro pero tampoco hecho. Es el enunciado bien-puesto al
-que se redujo 2b. Coincide con el programa CCM (δ_N = borde) y, según el usuario, con el draft
-de. **Veredicto:** 2b reducido de "convergencia abstracta" a un modelo de borde/tunneling concreto,
-zero-independiente, confirmado numéricamente. La prueba de #2 (espectro de borde (k+1)² +
-tunneling) es el trabajo analítico restante.
+| 3 | 16.5 | +1.0 −.91 +.65 ~0 ~0 ~0 +.65 −.91 +1.0 | **Finding:** the soft modes are **EDGE-LOCALIZED** (concentrated at u=λ^{±1}, the boundary
+of the interval) and **vanish at the center** (u=1). The oscillation grows in the EDGE LAYERS.
+ε_0~1e-20 = **tunneling scale** between the two edges (exponential splitting of
+left-edge/right-edge pairs). **Connection to the construction (closes everything):** δ_N is the **evaluation at the edge u=λ** (Dirichlet
+kernel at the boundary), and the minimizer is normalized by δ_N(ξ)=1. The CCM construction is
+intrinsically about EDGE behavior ⟹ the soft modes must be edge modes. Consistent. **Refinement of #2:** the limit operator L_∞ is NOT a bulk Laplacian but an **EDGE/boundary-layer
+operator**; the spectrum (k+1)² is the spectrum of the edge modes, and ε_0 is the
+tunneling scale. The proof of #2 is **boundary-layer + tunneling asymptotics**, not bulk WKB. ## Next step on #2
+- Identify the effective edge operator (boundary-layer model at u=λ): its spectrum must give (k+1)². Candidate: the edge operator associated with δ_N (Dirichlet-to-Neumann / edge kernel).
+- The ε_0 scale (tunneling): exponential splitting between the edges u=λ and u=λ⁻¹, ∝ e^{−c·L}. **VERIFIED:** the fit gives ε_0 ∝ λ^{−2.07} ≈ λ^{−2} = e^{−L} (decay rate 1 in w, crossing L=2logλ). The edge-to-edge tunneling model is confirmed.
+- H1 (Gantmacher–Krein) still gives the nodal/oscillatory structure of the edge modes. ## CONSOLIDATED STATUS of #2 (frank) Edge/tunneling model **characterized and numerically verified in 3 pieces**:
+(1) soft modes edge-localized (eigenfunctions, softmodes.py);
+(2) ε_0 ∝ λ^{−2} = e^{−L}, edge-to-edge tunneling (verified, exponent −2.07);
+(3) relative spectrum (k+1)² = spectrum of the edge modes (relspec, verified). **What is missing (the real crux, NOT closed):** the rigorous PROOF that the effective edge
+operator has spectrum (k+1)² and that ε_0 has the tunneling asymptotics — this is real
+boundary-layer asymptotic analysis, not a wall but not done either. It is the well-posed statement to which
+2b was reduced. It agrees with the CCM program (δ_N = edge) and with the draft
+of. **Verdict:** 2b reduced from "abstract convergence" to a concrete edge/tunneling model,
+zero-independent, numerically confirmed. The proof of #2 (edge spectrum (k+1)² +
+tunneling) is the remaining analytic work.

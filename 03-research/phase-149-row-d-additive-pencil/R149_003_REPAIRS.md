@@ -1,9 +1,8 @@
-# R149.003 — Builder, repairs round: the mathematics behind the labels of record
+# R149.003 — Repairs round: the mathematics behind the labels of record
 
-*Builder: Opus 5. Date 2026-09-19. Executes `R149_002_HOSTILE_AUDIT.md` §5 (i)–(vi), plus the two
 wording orders (D.59 framing; `k=1` header on the D.60 dichotomy).
-Inputs: `R149_000_LEAD_BLUEPRINT.md`, `R149_001_BUILDER_ROUND1.md`, `R149_002_HOSTILE_AUDIT.md`,
-`R149_005_LEAD_CLOSING_DECISION.md` (labels of record; where this file and `R149_005` differ,
+Inputs: `R149_000_BLUEPRINT.md`, `R149_001_ROUND1.md`, `R149_002_AUDIT.md`,
+`R149_005_CLOSING_DECISION.md` (labels of record; where this file and `R149_005` differ,
 `R149_005` governs — this file supplies the mathematics, not the labels).*
 
 **FATAL rule.** Nothing below asserts a new zero-free region, a new moment bound, or a new

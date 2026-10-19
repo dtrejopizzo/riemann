@@ -1,11 +1,11 @@
-# 104_74 — Semigrupo Hadamard, fórmula Jensen--logística y gate de residuos interiores
+# 104_74 — Hadamard semigroup, Jensen–logistic formula, and interior-residue gate
 
-**Resultado.** La razón de presiones de `104_72` sí admite una
-representación compleja exacta. No es, sin embargo, un funcional ordinario
-de la generatriz de Li: aparece después de aplicar a sus coeficientes un
-**exponencial de Hadamard**.
+**Result.** The pressure ratio of `104_72` does admit an exact complex
+representation. It is not, however, an ordinary functional of Li's
+generating function: it appears after applying a **Hadamard exponential**
+to its coefficients.
 
-Sea
+Let
 
 \[
  \mathcal G(z)
@@ -13,8 +13,7 @@ Sea
  =\sum_{n\geq1}\lambda_nz^n.                              \tag{1}
 \]
 
-Si \(\odot\) denota el producto coeficiente a coeficiente, entonces,
-formalmente,
+If \(\odot\) denotes the coefficient-wise product, then, formally,
 
 \[
  \mathcal U_t(z)
@@ -23,34 +22,34 @@ formalmente,
  =\sum_{n\geq1}e^{-t\lambda_n}z^n.                       \tag{2}
 \]
 
-Esta serie tiene una dicotomía sin zona intermedia:
+This series has a dichotomy with no intermediate zone:
 
 \[
  \boxed{
- \mathrm {RH}\Longrightarrow \mathcal U_t\text{ es entera de orden }2/t,
+ \mathrm {RH}\Longrightarrow \mathcal U_t\text{ is entire of order }2/t,
  \qquad
  \neg\mathrm {RH}\Longrightarrow
  R(\mathcal U_t)=0.}                                      \tag{3}
 \]
 
-En particular, para cualquier \(t>0\), que (2) tenga radio positivo ya es
-equivalente a RH.
+In particular, for any \(t>0\), (2) having positive radius is already
+equivalent to RH.
 
-Para las actividades reales
+For the real activities
 
 \[
  z_n={e^{-\lambda_n}\over n+1},\qquad
- D_L(\omega)=\prod_{n\in I_L}(1+\omega z_n),qquad
+ D_L(\omega)=\prod_{n\in I_L}(1+\omega z_n),\qquad
  I_L=\{L^2,\ldots,L^2+L-1\},                              \tag{4}
 \]
 
-la presión acotada satisface simultáneamente
+the bounded pressure simultaneously satisfies
 
 \[
  e^{\tau G_L}={D_L(1)\over D_L(e^{-\tau})}                \tag{5}
 \]
 
-y una fórmula Jensen--logística exacta. Si
+and an exact Jensen–logistic formula. If
 
 \[
  J_L(R)={1\over2\pi}\int_0^{2\pi}
@@ -59,7 +58,7 @@ y una fórmula Jensen--logística exacta. Si
  \kappa(v)={e^v\over(1+e^v)^2},                           \tag{6}
 \]
 
-entonces
+then
 
 \[
  \boxed{
@@ -67,99 +66,98 @@ entonces
  \{J_L(e^{-v})-J_L(e^{-v-\tau})\}\,dv.}                 \tag{7}
 \]
 
-La forma \(\log X\) posee una representación subarmónica análoga mediante
-la derivada radial de un potencial de Jensen ponderado.
+The \(\log X\) form has an analogous subharmonic representation via
+the radial derivative of a weighted Jensen potential.
 
-La ganancia es conceptual y exacta: la presión cuenta, con un suavizado
-logístico, ceros de \(D_L\) que cruzan anillos concéntricos. Pero (3)
-localiza el gate. Construir analíticamente esos determinantes desde
-\(\mathcal G\) exige que el semigrupo de Hadamard exista en algún disco; esa
-sola existencia ya excluye todos los polos interiores de la generatriz de
-Li.
+The gain is conceptual and exact: the pressure counts, with a logistic
+smoothing, zeros of \(D_L\) crossing concentric rings. But (3) locates
+the gate. Analytically constructing those determinants from
+\(\mathcal G\) requires the Hadamard semigroup to exist on some disk;
+that mere existence already excludes all interior poles of Li's
+generating function.
 
-Se prueba además un no-go cuantitativo. En el cuarteto racional
-\(w=2i\), cualquier truncación de (2) a \(K_n=o(2^n)\) potencias de
-Hadamard pierde una proporción \(1-o(1)\) de la actividad en la clase mala.
-Si el truncamiento es par crea además una actividad falsa en la clase
-positiva; si es impar pierde la positividad requerida por Jensen. Para
-aproximar las actividades en ambas clases hay que alcanzar
-\(K_n\asymp2^n\).
+A quantitative no-go is also proved. On the rational quadruple
+\(w=2i\), any truncation of (2) to \(K_n=o(2^n)\) Hadamard powers loses
+a proportion \(1-o(1)\) of the activity in the bad class. If the
+truncation is even it also creates a spurious activity in the positive
+class; if odd it loses the positivity Jensen requires. To approximate
+the activities in both classes one must reach \(K_n\asymp2^n\).
 
-Finalmente, un contorno seguro incondicional separa
+Finally, an unconditional safe contour separates
 
 \[
  \lambda_n=C_{n,N}-
- \sum_{|w_\rho|<r_N}m_\rho w_\rho^{-n},qquad
+ \sum_{|w_\rho|<r_N}m_\rho w_\rho^{-n},\qquad
  C_{n,N}\ll N^5\log^2N\quad(N\le n\le2N).                \tag{8}
 \]
 
-Por tanto toda tasa exponencial queda en la suma finita de residuos
-interiores. Jensen, Poisson y las cotas de crecimiento controlan la parte
-de contorno; no eliminan esa suma. El documento obtiene una representación
-exacta y un gate nuevo, no una prueba de \(G_L\to0\), A1 o RH.
+So every exponential rate sits inside the finite sum of interior
+residues. Jensen, Poisson, and growth bounds control the contour part;
+they do not eliminate that sum. The document obtains an exact
+representation and a new gate, not a proof that \(G_L\to0\), A1, or RH.
 
 ---
 
-## 1. Auditoría de no duplicación
+## 1. No-duplication audit
 
-Los antecedentes internos más cercanos son:
+The closest internal background is:
 
-* `104_33`, que prueba una fórmula frontera--residuos para el primer momento
-  prima--polo;
-* `104_62`, que observa que en la escala crítica todos los poderes de
-  Hadamard son de orden uno, pero no construye el semigrupo coeficiente a
-  coeficiente;
-* `104_63`, que estudia la energía lineal \(H^2\) de \(\mathcal G\);
-* `104_68`--`104_73`, que construyen las actividades, la razón de presiones
-  y sus representaciones probabilísticas o de Bernstein.
+* `104_33`, which proves a boundary–residue formula for the first
+  prime–pole moment;
+* `104_62`, which observes that at the critical scale all Hadamard
+  powers are of order one, but does not build the coefficient-wise
+  semigroup;
+* `104_63`, which studies the linear \(H^2\) energy of \(\mathcal G\);
+* `104_68`--`104_73`, which build the activities, the pressure ratio, and
+  their probabilistic or Bernstein representations.
 
-Lo nuevo aquí es la combinación de cuatro hechos:
+What is new here is the combination of four facts:
 
-1. la dicotomía radio cero/función entera para
+1. the zero-radius/entire-function dichotomy for
    \(\mathrm{Exp}_\odot(-t\mathcal G)\);
-2. la representación exacta de la presión como mezcla de incrementos de
-   Jensen;
-3. un contorno seguro común a un bloque diádico, con parte exterior
-   polinómica;
-4. el costo exponencial exacto de truncar el exponencial de Hadamard en el
-   falsificador.
+2. the exact representation of the pressure as a mixture of Jensen
+   increments;
+3. a safe contour common to a dyadic block, with polynomial exterior
+   part;
+4. the exact exponential cost of truncating the Hadamard exponential on
+   the falsifier.
 
-No se reclama novedad para la fórmula de Jensen, para el producto de
-Hadamard ni para el cálculo de residuos por separado. La aportación es su
-aplicación conjunta al detector acotado de Phase 104.
+No novelty is claimed for Jensen's formula, for the Hadamard product,
+or for residue computation separately. The contribution is their joint
+application to Phase 104's bounded detector.
 
 ---
 
-## 2. El semigrupo de Hadamard de la generatriz de Li
+## 2. The Hadamard semigroup of Li's generating function
 
-Para dos series formales sin término constante,
+For two formal series with no constant term,
 
 \[
  f(z)=\sum_{n\ge1}f_nz^n,\qquad
  g(z)=\sum_{n\ge1}g_nz^n,
 \]
 
-escriba
+write
 
 \[
  (f\odot g)(z)=\sum_{n\ge1}f_ng_nz^n.                    \tag{9}
 \]
 
-El elemento unidad de esta álgebra es
+The unit element of this algebra is
 
 \[
  \mathbf1_\odot(z)={z\over1-z}=\sum_{n\ge1}z^n.         \tag{10}
 \]
 
-Adopte \(\mathcal G^{\odot0}=\mathbf1_\odot\). Entonces la igualdad
-(2) es rigurosa como identidad formal: para cada coeficiente fijo, la suma
-en \(k\) es la serie exponencial ordinaria
+Adopt \(\mathcal G^{\odot0}=\mathbf1_\odot\). Then equality
+(2) is rigorous as a formal identity: for each fixed coefficient, the
+sum over \(k\) is the ordinary exponential series
 
 \[
  \sum_{k\ge0}{(-t)^k\lambda_n^k\over k!}=e^{-t\lambda_n}.
 \]
 
-Además
+Moreover
 
 \[
  \mathcal U_t\odot\mathcal U_s=\mathcal U_{t+s},
@@ -169,35 +167,35 @@ Además
  \mathcal U_0=\mathbf1_\odot.                            \tag{11}
 \]
 
-Es un semigrupo diagonal formal. La cuestión analítica es si
-\(\mathcal U_t\) define siquiera un germen holomorfo no trivial.
+It is a formal diagonal semigroup. The analytic question is whether
+\(\mathcal U_t\) even defines a nontrivial holomorphic germ.
 
-### Teorema 2.1 (dicotomía instantánea)
+### Theorem 2.1 (instantaneous dichotomy)
 
-Para cada \(t>0\), son equivalentes:
+For each \(t>0\), the following are equivalent:
 
 1. RH;
-2. \(\mathcal U_t\) tiene radio de convergencia positivo;
-3. \(\mathcal U_t\) es entera.
+2. \(\mathcal U_t\) has positive radius of convergence;
+3. \(\mathcal U_t\) is entire.
 
-Bajo estas condiciones su orden como función entera es exactamente
+Under these conditions its order as an entire function is exactly
 \(2/t\).
 
-**Demostración.** Bajo RH, el teorema de Lagarias usado en `104_02` da
+**Proof.** Under RH, Lagarias's theorem used in `104_02` gives
 
 \[
  \lambda_n={1\over2}n\log n+O(n).                         \tag{12}
 \]
 
-Por tanto
+Hence
 
 \[
  \log {1\over e^{-t\lambda_n}}
  ={t\over2}n\log n+O_t(n).                               \tag{13}
 \]
 
-El criterio de Cauchy--Hadamard muestra que el radio es infinito. La
-fórmula clásica para el orden de una función entera
+The Cauchy–Hadamard criterion shows the radius is infinite. The
+classical formula for the order of an entire function
 \(F(z)=\sum a_nz^n\),
 
 \[
@@ -205,16 +203,16 @@ fórmula clásica para el orden de una función entera
  =\limsup_{n\to\infty}{n\log n\over\log(1/|a_n|)},       \tag{14}
 \]
 
-aplicada a (13), da \(2/t\).
+applied to (13), gives \(2/t\).
 
-Si RH es falsa, `104_56` produce \(c>0\), \(R>1\) y un conjunto
-sindético infinito \(D\) tal que
+If RH is false, `104_56` produces \(c>0\), \(R>1\), and an infinite
+syndetic set \(D\) such that
 
 \[
  \lambda_n\le-cR^n\qquad(n\in D).                        \tag{15}
 \]
 
-En esa subsucesión,
+On that subsequence,
 
 \[
  \left(e^{-t\lambda_n}\right)^{1/n}
@@ -222,17 +220,17 @@ En esa subsucesión,
  \tag{16}
 \]
 
-Luego el radio de (2) es cero. Esto prueba las equivalencias. \(\square\)
+So the radius of (2) is zero. This proves the equivalences. \(\square\)
 
-La actividad usada por la presión es el coeficiente de
+The activity used by the pressure is the coefficient of
 
 \[
  \mathcal Z_t(z)
  :=\sum_{n\ge1}{e^{-t\lambda_n}\over(n+1)^t}z^n.          \tag{17}
 \]
 
-El factor polinómico \((n+1)^{-t}\) no cambia la dicotomía ni el orden.
-En particular,
+The polynomial factor \((n+1)^{-t}\) does not change the dichotomy or
+the order. In particular,
 
 \[
  \boxed{\mathrm {RH}\Longleftrightarrow
@@ -240,20 +238,21 @@ En particular,
  \tag{18}
 \]
 
-La dirección no-RH de (18) es mucho más fuerte que una singularidad dentro
-del disco: no queda ningún disco de convergencia.
+The non-RH direction of (18) is much stronger than a singularity
+inside the disk: no disk of convergence remains at all.
 
 ---
 
-## 3. Determinante finito y representación Jensen--logística
+## 3. Finite determinant and Jensen–logistic representation
 
-Ponga
+Set
 
 \[
  x_n=\lambda_n+\log(n+1),\qquad z_n=e^{-x_n}>0.           \tag{19}
 \]
 
-El polinomio \(D_L\) de (4) es el determinante de la compresión diagonal
+The polynomial \(D_L\) of (4) is the determinant of the diagonal
+compression
 
 \[
  D_L(\omega)
@@ -262,7 +261,7 @@ El polinomio \(D_L\) de (4) es el determinante de la compresión diagonal
  \tag{20}
 \]
 
-La identidad (5) es inmediata de `104_72`:
+Identity (5) is immediate from `104_72`:
 
 \[
  \tau G_L
@@ -270,15 +269,15 @@ La identidad (5) es inmediata de `104_72`:
  \tag{21}
 \]
 
-Todos los ceros de \(D_L\) son reales negativos, en
-\(-z_n^{-1}\). Jensen da, para todo \(R>0\),
+All zeros of \(D_L\) are negative real, at
+\(-z_n^{-1}\). Jensen gives, for every \(R>0\),
 
 \[
  \boxed{
  J_L(R)=\sum_{n\in I_L}\log^+(Rz_n).}                    \tag{22}
 \]
 
-Defina el detector duro
+Define the hard detector
 
 \[
  h_\tau(x)
@@ -290,14 +289,14 @@ Defina el detector duro
  \end{cases}                                              \tag{23}
 \]
 
-Las ecuaciones (19) y (22) dan exactamente
+Equations (19) and (22) give exactly
 
 \[
  {J_L(R)-J_L(e^{-\tau}R)\over\tau}
  =\sum_{n\in I_L}h_\tau(x_n-\log R).                     \tag{24}
 \]
 
-Sea \(V\) una variable logística estándar, con densidad
+Let \(V\) be a standard logistic variable, with density
 
 \[
  \kappa(v)={e^v\over(1+e^v)^2},
@@ -305,7 +304,7 @@ Sea \(V\) una variable logística estándar, con densidad
  \mathbb P(V<-y)={1\over1+e^y}.                          \tag{25}
 \]
 
-Entonces, por Tonelli,
+Then, by Tonelli,
 
 \[
 \begin{aligned}
@@ -317,22 +316,21 @@ Entonces, por Tonelli,
 \end{aligned}
 \]
 
-Sustituir \(R=e^{-v}\) en (24) y promediar con (25) prueba (7).
-No hay aproximación ni límite en esta identidad.
+Substituting \(R=e^{-v}\) in (24) and averaging with (25) proves (7).
+There is no approximation or limit in this identity.
 
-### 3.1 El criterio duro de anillos
+### 3.1 The hard ring criterion
 
-Ponga
+Set
 
 \[
  H_L={J_L(1)-J_L(e^{-\tau})\over\tau}
  =\sum_{n\in I_L}h_\tau(x_n).                            \tag{27}
 \]
 
-Bajo RH, \(x_n\ge\log(n+1)>0\), de modo que \(H_L=0\) para todo
-\(L\). Bajo no-RH, el conjunto sindético de (15) aporta
-\(h_\tau(x_n)=1\) en una proporción positiva de cada bloque grande. Por
-consiguiente,
+Under RH, \(x_n\ge\log(n+1)>0\), so \(H_L=0\) for all
+\(L\). Under non-RH, the syndetic set of (15) contributes
+\(h_\tau(x_n)=1\) in a positive proportion of every large block. Hence,
 
 \[
  \boxed{
@@ -342,27 +340,28 @@ consiguiente,
  \liminf_{L\to\infty}{H_L\over L}>0.                   \tag{28}
 \]
 
-Geométricamente, \(H_L\) mide los ceros de \(D_L\) que están dentro del
-disco unidad o atraviesan el anillo
-\(e^{-\tau}<|\omega|<1\), con peso lineal en el logaritmo del radio.
+Geometrically, \(H_L\) measures the zeros of \(D_L\) that are inside
+the unit disk or cross the ring
+\(e^{-\tau}<|\omega|<1\), weighted linearly in the logarithm of the
+radius.
 
-### 3.2 La forma \(\log X\) como potencial subarmónico
+### 3.2 The \(\log X\) form as a subharmonic potential
 
-Para \(X\ge1\), defina
+For \(X\ge1\), define
 
 \[
  J_X^{\log}(R)
  :=\sum_{n\le X}{1\over n}\log^+(Rz_n).                  \tag{29}
 \]
 
-Es la media circular del potencial subarmónico finito
+It is the circular average of the finite subharmonic potential
 
 \[
  \omega\longmapsto
  \sum_{n\le X}{1\over n}\log|1+\omega z_n|.
 \]
 
-Para casi todo \(R>0\),
+For almost every \(R>0\),
 
 \[
  {d\over d\log R}J_X^{\log}(R)
@@ -370,7 +369,7 @@ Para casi todo \(R>0\),
  =:\mathcal N_X^{\log}(R).                              \tag{30}
 \]
 
-Usando (25) directamente,
+Using (25) directly,
 
 \[
 \boxed{
@@ -379,38 +378,38 @@ Usando (25) directamente,
  \kappa(v)\,\mathcal N_X^{\log}(e^{-v})\,dv.}           \tag{31}
 \]
 
-Así la forma finita de `104_69` es exactamente una masa radial de Riesz
-suavizada. Probar que (31) tiende a cero equivale a probar que la masa
-ponderada de ceros de los determinantes de actividad escapa a todo anillo
-logístico fijo.
+So the finite form of `104_69` is exactly a smoothed radial Riesz
+mass. Proving that (31) tends to zero is equivalent to proving that the
+weighted mass of zeros of the activity determinants escapes every
+fixed logistic ring.
 
 ---
 
-## 4. Contorno seguro y separación exacta de residuos
+## 4. Safe contour and exact residue separation
 
-La función
+The function
 
 \[
  \Phi(z)={\xi(1/(1-z))\over\xi(1)}                        \tag{32}
 \]
 
-es holomorfa en \(\mathbb D\), pero puede tener ceros allí. Su derivada
-logarítmica ponderada es \(\mathcal G\) de (1). Para un cero no trivial
-\(\rho\), ponga
+is holomorphic on \(\mathbb D\), but can have zeros there. Its weighted
+logarithmic derivative is \(\mathcal G\) of (1). For a nontrivial zero
+\(\rho\), set
 
 \[
  w_\rho=1-{1\over\rho}.                                  \tag{33}
 \]
 
-En \(w_\rho\), \(\mathcal G\) tiene residuo \(m_\rho w_\rho\).
-Para un radio \(r<1\) que no pase por un cero, defina
+At \(w_\rho\), \(\mathcal G\) has residue \(m_\rho w_\rho\).
+For a radius \(r<1\) not passing through a zero, define
 
 \[
  C_n(r)={1\over2\pi i}\int_{|z|=r}
  {\mathcal G(z)\over z^{n+1}}\,dz.                       \tag{34}
 \]
 
-El teorema de residuos da el signo exacto
+The residue theorem gives the exact sign
 
 \[
  \boxed{
@@ -418,30 +417,30 @@ El teorema de residuos da el signo exacto
  \sum_{|w_\rho|<r}m_\rho w_\rho^{-n}.}                  \tag{35}
 \]
 
-Solo aparecen ceros con \(\Re\rho>1/2\), porque
+Only zeros with \(\Re\rho>1/2\) appear, because
 
 \[
  |w_\rho|^2
  =1+{1-2\Re\rho\over|\rho|^2}.                          \tag{36}
 \]
 
-### Teorema 4.1 (radio seguro común a un bloque)
+### Theorem 4.1 (safe radius common to a block)
 
-Para todo \(N\) suficientemente grande existe
+For every sufficiently large \(N\) there is
 
 \[
  r_N\in[1-2/N,1-1/N]                                     \tag{37}
 \]
 
-tal que, uniformemente para \(N\le n\le2N\),
+such that, uniformly for \(N\le n\le2N\),
 
 \[
  \boxed{|C_n(r_N)|\ll N^5\log^2N.}                       \tag{38}
 \]
 
-La constante implícita es absoluta.
+The implicit constant is absolute.
 
-**Demostración.** Use los límites incondicionales estándar
+**Proof.** Use the standard unconditional bounds
 
 \[
  N_\zeta(T)\ll T\log(T+2),\qquad
@@ -449,32 +448,32 @@ La constante implícita es absoluta.
  \ll{\log(T+2)\over T}.                                 \tag{39}
 \]
 
-Sea \(K_N\) el número de ceros con \(|\Im\rho|\le2N\), contando
-multiplicidad, y ponga
+Let \(K_N\) be the number of zeros with \(|\Im\rho|\le2N\), counted
+with multiplicity, and set
 
 \[
  \delta_N={1\over4N(K_N+1)}\gg{1\over N^2\log N}.       \tag{40}
 \]
 
-Al quitar de (37) los intervalos de radio \(\delta_N\) centrados en los
-\(|w_\rho|\) correspondientes, se elimina longitud menor que
-\(1/(2N)\). Queda un \(r_N\) cuya circunferencia está a distancia al
-menos \(\delta_N\) de todos esos polos.
+Removing from (37) the radius-\(\delta_N\) intervals centered at the
+corresponding \(|w_\rho|\) eliminates length less than
+\(1/(2N)\). What remains is an \(r_N\) whose circle is at distance at
+least \(\delta_N\) from all those poles.
 
-Si \(|\Im\rho|>2N\) y \(|w_\rho|<1\), (36) da
+If \(|\Im\rho|>2N\) and \(|w_\rho|<1\), (36) gives
 
 \[
  1-|w_\rho|\le {1\over|\Im\rho|^2}<{1\over4N^2};        \tag{41}
 \]
 
-su distancia a (37) es \(\gg1/N\). Los ceros críticos o izquierdos
-tienen \(|w_\rho|\ge1\) y satisfacen la misma conclusión. Por tanto
+its distance to (37) is \(\gg1/N\). The critical or left zeros
+have \(|w_\rho|\ge1\) and satisfy the same conclusion. Hence
 
 \[
  \mathrm{dist}(|z|=r_N,\{w_\rho\})\ge\delta_N.   \tag{42}
 \]
 
-Sobre el círculo, \(s=(1-z)^{-1}\) satisface \(|s|\le N\). Además
+On the circle, \(s=(1-z)^{-1}\) satisfies \(|s|\le N\). Moreover
 
 \[
  |s-\rho|
@@ -482,7 +481,7 @@ Sobre el círculo, \(s=(1-z)^{-1}\) satisface \(|s|\le N\). Además
  \gg\delta_N.                                            \tag{43}
 \]
 
-El producto canónico de \(\xi\) da
+The canonical product of \(\xi\) gives
 
 \[
  {\xi'\over\xi}(s)
@@ -490,41 +489,41 @@ El producto canónico de \(\xi\) da
  \left({1\over s-\rho}+{1\over\rho}\right).           \tag{44}
 \]
 
-Los ceros con \(|\Im\rho|\le2N\) aportan
-\(O(K_N/\delta_N)=O(N^3\log^2N)\). En la cola,
-\(|s-\rho|\ge |\Im\rho|-|\Im s|\ge|\Im\rho|/2\); escribir el sumando como
-\(s/[\rho(s-\rho)]\) y usar (39) da \(O(\log N)\). Luego
+The zeros with \(|\Im\rho|\le2N\) contribute
+\(O(K_N/\delta_N)=O(N^3\log^2N)\). In the tail,
+\(|s-\rho|\ge |\Im\rho|-|\Im s|\ge|\Im\rho|/2\); writing the term as
+\(s/[\rho(s-\rho)]\) and using (39) gives \(O(\log N)\). Hence
 
 \[
  \sup_{|z|=r_N}\left|{\xi'\over\xi}(s(z))\right|
  \ll N^3\log^2N.                                        \tag{45}
 \]
 
-Como
+Since
 
 \[
  \mathcal G(z)={z\over(1-z)^2}{\xi'\over\xi}(s(z)),
 \]
 
-el supremo de \(|\mathcal G|\) es \(O(N^5\log^2N)\).
-Finalmente, \(r_N^{-n}=O(1)\) para \(n\le2N\), y (34) prueba
+the supremum of \(|\mathcal G|\) is \(O(N^5\log^2N)\).
+Finally, \(r_N^{-n}=O(1)\) for \(n\le2N\), and (34) proves
 (38). \(\square\)
 
-Combinar (35) y (38) da (8). El contorno exterior es siempre
-subexponencial en el grado del bloque. Toda excursión de tasa fija proviene
-de la suma finita
+Combining (35) and (38) gives (8). The exterior contour is always
+subexponential in the degree of the block. Every fixed-rate excursion
+comes from the finite sum
 
 \[
  Z_{n,N}:=\sum_{|w_\rho|<r_N}m_\rho w_\rho^{-n}.          \tag{46}
 \]
 
-Una cota de módulo para el contorno no determina el signo de (46).
+A modulus bound for the contour does not determine the sign of (46).
 
 ---
 
-## 5. Qué ve Jensen de \(\xi\), y qué no ve
+## 5. What Jensen sees of \(\xi\), and what it does not
 
-Aplicado directamente a (32), Jensen da
+Applied directly to (32), Jensen gives
 
 \[
  \boxed{
@@ -532,16 +531,17 @@ Aplicado directamente a (32), Jensen da
  =\sum_{|w_\rho|<r}m_\rho\log{r\over|w_\rho|}\ge0.}     \tag{47}
 \]
 
-Por tanto RH equivale a que el miembro izquierdo sea cero para cada
-\(r<1\). La subarmonicidad entrega automáticamente el signo opuesto al que
-haría falta para concluir esa anulación: produce (47), no una cota superior
-por cero. Las cotas de crecimiento de \(\xi\) controlan el tamaño del
-miembro izquierdo, pero una cota positiva no excluye una masa interior
-finita.
+Hence RH is equivalent to the left-hand side being zero for every
+\(r<1\). Subharmonicity automatically delivers the opposite sign to
+what would be needed to conclude that vanishing: it produces (47), not
+an upper bound of zero. Growth bounds for \(\xi\) control the size of
+the left-hand side, but a positive bound does not exclude a finite
+interior mass.
 
-La media radial tampoco contiene las fases necesarias para cuantificar la
-presión. Esto se ve dentro de la clase de divisores que conserva ecuación
-funcional y conjugación. Fije \(0<r<1\), \(a=re^{i\vartheta}\), y ponga
+The radial average also does not contain the phases needed to
+quantify the pressure. This is seen within the class of divisors
+preserving the functional equation and conjugation. Fix \(0<r<1\),
+\(a=re^{i\vartheta}\), and set
 
 \[
  \rho_a={1\over1-a},\qquad
@@ -550,22 +550,22 @@ funcional y conjugación. Fije \(0<r<1\), \(a=re^{i\vartheta}\), y ponga
  \tag{48}
 \]
 
-El polinomio es real y satisface \(X_a(1-s)=X_a(s)\). Dentro del disco,
-\(X_a(1/(1-z))/X_a(1)\) tiene exactamente los ceros \(a,\bar a\). Por
-ello todas sus medias de Jensen son
+The polynomial is real and satisfies \(X_a(1-s)=X_a(s)\). Inside the
+disk, \(X_a(1/(1-z))/X_a(1)\) has exactly the zeros \(a,\bar a\). So
+all its Jensen averages are
 
 \[
  \boxed{J_a(R)=2\log^+(R/r)\qquad(0<R<1),}               \tag{49}
 \]
 
-independientemente de \(\vartheta\). En cambio sus coeficientes de Li son
+independent of \(\vartheta\). Its Li coefficients, instead, are
 
 \[
  Q_n^{(a)}=4-2(r^n+r^{-n})\cos(n\vartheta).               \tag{50}
 \]
 
-Con \(r=3/4\), las elecciones \(\vartheta=\pi/2\) y
-\(\vartheta=\pi/3\) tienen exactamente el mismo dato (49), pero
+With \(r=3/4\), the choices \(\vartheta=\pi/2\) and
+\(\vartheta=\pi/3\) have exactly the same datum (49), but
 
 \[
  {G_L^{(\pi/2)}\over L}\longrightarrow{1\over4},
@@ -573,22 +573,22 @@ Con \(r=3/4\), las elecciones \(\vartheta=\pi/2\) y
  {G_L^{(\pi/3)}\over L}\longrightarrow{1\over2}.        \tag{51}
 \]
 
-En el primer caso \(\cos(n\vartheta)>0\) en una clase de cuatro; en el
-segundo, en tres clases de seis. Sobre esas clases (50) tiende
-exponencialmente a \(-\infty\), y en las restantes no contribuye a la
-presión.
+In the first case \(\cos(n\vartheta)>0\) on one class out of four; in
+the second, on three classes out of six. On those classes (50) tends
+exponentially to \(-\infty\), and on the remaining ones it does not
+contribute to the pressure.
 
-La ecuación (51) no dice que Jensen sea incapaz de detectar un cero
-interior: (47) lo detecta. Dice que una estimación radial no controla la
-densidad ni la fase que aparece en (7). Para probar RH por (47) habría que
-probar directamente que su masa no negativa es cero; eso es ya la ausencia
-de todos los \(w_\rho\) interiores.
+Equation (51) does not say Jensen is unable to detect an interior zero:
+(47) detects it. It says a radial estimate does not control the
+density or phase appearing in (7). To prove RH via (47) one would have
+to prove directly that its nonnegative mass is zero; that is already
+the absence of all interior \(w_\rho\).
 
 ---
 
-## 6. Gate cuantitativo de truncación Hadamard
+## 6. Quantitative Hadamard-truncation gate
 
-Defina el truncamiento formal
+Define the formal truncation
 
 \[
  \mathcal U_{t,K}(z)
@@ -596,26 +596,26 @@ Defina el truncamiento formal
  \tag{52}
 \]
 
-Su coeficiente de grado \(n\) es el polinomio de Taylor
+Its degree-\(n\) coefficient is the Taylor polynomial
 
 \[
  [z^n]\mathcal U_{t,K}
  =\sum_{k=0}^K{(-t\lambda_n)^k\over k!}.                  \tag{53}
 \]
 
-Use el cuarteto racional
+Use the rational quadruple
 
 \[
  Q_n=4-2\mathrm{Re}\,\{(2i)^n+(2i)^{-n}\}.          \tag{54}
 \]
 
-Para \(4\mid n\), escriba
+For \(4\mid n\), write
 
 \[
  Y_n=-Q_n=2(2^n+2^{-n})-4\ge2^n.                         \tag{55}
 \]
 
-Si \(K\le tY_n/2\), entonces
+If \(K\le tY_n/2\), then
 
 \[
 \begin{aligned}
@@ -625,103 +625,102 @@ Si \(K\le tY_n/2\), entonces
 \end{aligned}
 \]
 
-La última desigualdad es la cota de Chernoff con desviación \(1/2\).
-Por tanto una truncación con \(K_n=o(2^n)\) pierde una fracción
-\(1-o(1)\) de la actividad verdadera \(e^{-Q_n}=e^{Y_n}\) en toda la
-clase mala.
+The last inequality is the Chernoff bound with deviation \(1/2\).
+So a truncation with \(K_n=o(2^n)\) loses a fraction
+\(1-o(1)\) of the true activity \(e^{-Q_n}=e^{Y_n}\) across the whole
+bad class.
 
-En la clase \(n\equiv2\pmod4\), ponga
-\(Y_n^+=Q_n=4+2(2^n+2^{-n})\). Si \(K=o(Y_n^+)\), el último término de
-(53) domina:
+On the class \(n\equiv2\pmod4\), set
+\(Y_n^+=Q_n=4+2(2^n+2^{-n})\). If \(K=o(Y_n^+)\), the last term of
+(53) dominates:
 
 \[
  \sum_{k=0}^K{(-tY_n^+)^k\over k!}
- =(-1)^K{(tY_n^+)^K\over K!}{1+o(1)\}.                  \tag{57}
+ =(-1)^K{(tY_n^+)^K\over K!}\{1+o(1)\}.                  \tag{57}
 \]
 
-En efecto, la suma de los cocientes absolutos de todos los términos
-anteriores respecto del último está acotada por
+Indeed, the sum of the absolute ratios of all preceding terms to the
+last one is bounded by
 
 \[
  \sum_{j\ge1}\left({K\over tY_n^+}\right)^j=o(1).       \tag{58}
 \]
 
-Así:
+So:
 
-* si \(K\) es par, el truncamiento crea una actividad positiva enorme en
-  relación con la verdadera también en la clase donde esta tiende a cero
-  (y, si \(K\to\infty\), enorme también en valor absoluto);
-* si \(K\) es impar, esa actividad se vuelve negativa y el polinomio
-  determinante pierde la geometría de ceros reales negativos usada por
-  Jensen.
+* if \(K\) is even, truncation creates a huge spurious positive
+  activity relative to the true one, even on the class where it tends
+  to zero (and, if \(K\to\infty\), huge in absolute value too);
+* if \(K\) is odd, that activity becomes negative and the determinant
+  polynomial loses the negative-real-zero geometry Jensen relies on.
 
-Para aproximar las actividades verdaderas con error relativo menor que una
-constante fija en ambas clases es necesario alcanzar
+To approximate the true activities with relative error less than a
+fixed constant on both classes it is necessary to reach
 
 \[
  \boxed{K_n\gg2^n.}                                      \tag{59}
 \]
 
-Esta escala es también suficiente, salvo una constante que depende de
-\(t\). En la clase mala, truncar \(e^x\) después de \(K\ge2x\)
-términos deja una cola relativa de Poisson exponencialmente pequeña. En
-la clase positiva, el resto de Taylor y
+This scale is also sufficient, up to a constant depending on
+\(t\). On the bad class, truncating \(e^x\) after \(K\ge2x\)
+terms leaves an exponentially small relative Poisson tail. On
+the positive class, the Taylor remainder and
 
 \[
  {e^x x^{K+1}\over(K+1)!}
  \le e^x\left({ex\over K+1}\right)^{K+1}
 \]
 
-muestran, por ejemplo, que \(K+1\ge4x\) da error relativo
-exponencialmente pequeño. Como en ambas clases \(x\asymp_t2^n\), el
-costo de una aproximación Taylor directa es \(\Theta_t(2^n)\).
+show, for example, that \(K+1\ge4x\) gives exponentially small
+relative error. Since in both classes \(x\asymp_t2^n\), the cost of
+a direct Taylor approximation is \(\Theta_t(2^n)\).
 
-En una ventana \(n\asymp L^2\), el número de poderes de Hadamard requerido
-es \(\exp(\Theta(L^2))\). Esto cierra los truncamientos fijos,
-polinómicos y, en general, \(e^{o(n)}\). No descarta una identidad no
-perturbativa para el semigrupo completo.
-
----
-
-## 7. Veredicto
-
-**Probado.** La dicotomía de radio (3), el determinante (5), la fórmula
-Jensen--logística (7), el potencial \(\log X\) (31), el contorno seguro
-(35)--(38), la fórmula radial de Jensen (47), el falsificador de fase
-(49)--(51) y el gate exponencial de truncación (56)--(59).
-
-**Ganancia.** El observable acotado tiene una interpretación compleja
-precisa: es una media logística de masas de Jensen de determinantes finitos.
-Toda la tasa exponencial de los coeficientes queda además separada en los
-residuos interiores, mientras el contorno puede hacerse polinómico sobre
-bloques completos.
-
-**No-go.** La construcción de los determinantes a partir de la generatriz
-de Li requiere el exponencial de Hadamard completo. La existencia analítica
-de ese semigrupo ya equivale a RH, y ninguna truncación de orden
-subexponencial pasa el cuarteto. Jensen aplicado directamente a \(\xi\)
-convierte el problema en anular su masa interior no negativa, sin aportar
-esa anulación.
-
-**Frente que sobrevive.** Una identidad no perturbativa, específica de los
-pesos reales \(\Lambda(m)\), que controle directamente el determinante
-finito (20) o la diferencia completa prima--polo antes de formar sus
-actividades. No puede provenir de un número subexponencial de poderes de
-Hadamard ni de una cota radial de módulo.
-
-**No probado.** \(G_L\to0\), \(\mathfrak F(X)\to0\), A1 o RH.
+In a window \(n\asymp L^2\), the number of Hadamard powers required
+is \(\exp(\Theta(L^2))\). This closes fixed, polynomial, and, in
+general, \(e^{o(n)}\) truncations. It does not rule out a
+non-perturbative identity for the complete semigroup.
 
 ---
 
-## 8. Reproducción
+## 7. Verdict
+
+**Proved.** The radius dichotomy (3), determinant (5), the
+Jensen–logistic formula (7), the \(\log X\) potential (31), the safe
+contour (35)--(38), the radial Jensen formula (47), the phase falsifier
+(49)--(51), and the exponential truncation gate (56)--(59).
+
+**Gain.** The bounded observable has a precise complex interpretation:
+it is a logistic average of Jensen masses of finite determinants. All
+the exponential rate of the coefficients is moreover separated into
+the interior residues, while the contour can be made polynomial over
+complete blocks.
+
+**No-go.** Building the determinants from Li's generating function
+requires the complete Hadamard exponential. The analytic existence of
+that semigroup is already equivalent to RH, and no subexponential-order
+truncation passes the quadruple. Jensen applied directly to \(\xi\)
+turns the problem into canceling its nonnegative interior mass, without
+supplying that cancellation.
+
+**Surviving front.** A non-perturbative identity, specific to the real
+weights \(\Lambda(m)\), directly controlling the finite determinant
+(20) or the complete prime–pole difference before forming its
+activities. It cannot come from a subexponential number of Hadamard
+powers nor from a radial modulus bound.
+
+**Not proved.** \(G_L\to0\), \(\mathfrak F(X)\to0\), A1, or RH.
+
+---
+
+## 8. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 hadamard_jensen_pressure_check.py
 ```
 
-El checker verifica la identidad de semigrupo en grados finitos, Jensen
-para determinantes con actividades positivas, la mezcla logística (7), las
-densidades \(1/4\) y \(1/2\) de (51), y las escalas de truncación del
-cuarteto. El Teorema 4.1 y las equivalencias asintóticas se prueban en el
-texto; no se certifican mediante muestreo.
+The checker verifies the semigroup identity at finite degrees, Jensen
+for determinants with positive activities, the logistic mixture (7),
+the \(1/4\) and \(1/2\) densities of (51), and the truncation scales of
+the quadruple. Theorem 4.1 and the asymptotic equivalences are proved
+in the text; they are not certified by sampling.

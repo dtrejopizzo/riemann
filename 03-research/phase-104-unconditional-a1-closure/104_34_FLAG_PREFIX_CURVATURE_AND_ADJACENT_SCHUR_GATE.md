@@ -1,29 +1,29 @@
-# 104_34 — Curvatura del prefijo de bandera y gate de Schur adyacente
+# 104_34 — Flag prefix curvature and the adjacent Schur gate
 
-**Rol.** Atacar directamente la cota proporcional restante
+**Role.** Directly attack the remaining proportional bound
 
 \[
  B_n:=A_n-\lambda_n\le {1501\over2002}A_n\qquad(n\ge150)
  \tag{1}
 \]
 
-desde la forma de bandera de `104_30`, sin tomar norma de operador ni
-valores absolutos de la forma prima--polo. Primero se prueba y se refuta con
-aritmética outward la dominación más directa de sus coeficientes Toeplitz.
-Después se extrae una desigualdad coerciva estrictamente más flexible: la
-positividad de una sola compresión de Schur adyacente para cada prefijo.
+from the flag form of `104_30`, with no operator norm or absolute values
+of the prime–pole form. First the most direct domination of its Toeplitz
+coefficients is proved and then refuted with outward arithmetic.
+Afterward, a strictly more flexible coercive inequality is extracted: the
+positivity of a single adjacent Schur compression for each prefix.
 
-La desigualdad de Schur pasa el falsificador off-line y tiene margen grande
-en el rango diagnóstico, pero no se prueba uniformemente. Por tanto este
-documento no prueba A1 ni RH.
+The Schur inequality passes the off-line falsifier and has a large margin
+in the diagnostic range, but it is not proved uniformly. Hence this
+document proves neither A1 nor RH.
 
-## 1. Auditoría de no duplicación
+## 1. Non-duplication audit
 
-`103_52` obtuvo las recurrencias de diferencias para el margen anterior
-\(2\lambda_n-A_n\). `103_55` certificó que su ansatz de curvatura positiva
-falla en \(n=147\). `104_30` construyó la referencia positiva
-\(\mathsf A_{\rm flag}\), la forma prima--polo \(\mathsf Q_0\) y sus
-coeficientes
+`103_52` obtained the difference recurrences for the earlier margin
+\(2\lambda_n-A_n\). `103_55` certified that its positive-curvature ansatz
+fails at \(n=147\). `104_30` built the positive reference
+\(\mathsf A_{\rm flag}\), the prime–pole form \(\mathsf Q_0\), and its
+coefficients
 
 \[
  q_0=B_1=-\gamma,
@@ -31,20 +31,21 @@ coeficientes
  q_d={B_{d+1}-2B_d+B_{d-1}\over2}\quad(d\ge1).               \tag{2}
 \]
 
-Lo nuevo aquí es:
+What is new here is:
 
-1. auditar la curvatura con la constante final \(501/2002\), no con
-   \(1/2\), y hacerlo más allá del umbral \(150\);
-2. probar la fórmula exacta de la compresión adyacente en la métrica de
-   bandera;
-3. aislar un único determinante cuadrático cuya positividad uniforme basta
-   para cerrar (1), pero no exige signo de cada segunda diferencia.
+1. auditing curvature with the final constant \(501/2002\), not
+   \(1/2\), and doing so beyond the threshold \(150\);
+2. proving the exact formula for the adjacent compression in the flag
+   metric;
+3. isolating a single quadratic determinant whose uniform positivity
+   suffices to close (1), without requiring the sign of every second
+   difference.
 
-No se usa literatura externa ni una búsqueda web en este ataque.
+No external literature or web search is used in this attack.
 
-## 2. Defecto proporcional en el gauge correcto
+## 2. Proportional defect in the correct gauge
 
-Pongamos
+Set
 
 \[
  c={501\over2002},\qquad
@@ -52,73 +53,73 @@ Pongamos
  H_n:=\kappa A_n-B_n=\lambda_n-cA_n.                           \tag{3}
 \]
 
-Entonces (1) es exactamente \(H_n\ge0\). La construcción de bandera de
-`104_30` funciona sin cambios con base \(M=149\): el certificado finito da
-\(A_{149}>0\), y \(\Delta A_k>0\) para \(k\ge149\). Adoptamos esa extensión
-de una posición para poder iniciar la inducción en el último índice
-certificado. En ese espacio definamos la forma algebraica
+Then (1) is exactly \(H_n\ge0\). The flag construction of `104_30` works
+unchanged with base \(M=149\): the finite certificate gives
+\(A_{149}>0\), and \(\Delta A_k>0\) for \(k\ge149\). We adopt that
+one-position extension so that the induction can start at the last
+certified index. On that space, define the algebraic form
 
 \[
  \mathsf M:=\kappa\mathsf A_{\rm flag}-\mathsf Q_0.           \tag{4}
 \]
 
-Para todo \(n\ge149\),
+For every \(n\ge149\),
 
 \[
  \boxed{\mathsf M[g_n]=H_n.}                                  \tag{5}
 \]
 
-Así (5) conserva el rayo fijo. No se pide un supremo de \(\mathsf M\) ni
-positividad en todo el espacio.
+So (5) keeps the fixed ray. Neither a supremum of \(\mathsf M\) nor
+positivity on the whole space is required.
 
-## 3. Primer ataque: dominación coeficiente a coeficiente
+## 3. First attack: coefficient-by-coefficient domination
 
-Sea \(H_0=0\) y escribamos la segunda diferencia centrada
+Let \(H_0=0\) and write the centered second difference
 
 \[
  \nabla_c^2H_d=H_{d+1}-2H_d+H_{d-1}.                          \tag{6}
 \]
 
-Dos sumaciones discretas dan
+Two discrete summations give
 
 \[
  H_n=nH_1+\sum_{d=1}^{n-1}(n-d)\nabla_c^2H_d.                \tag{7}
 \]
 
-Por tanto
+Hence
 
 \[
  H_1\ge0,\qquad \nabla_c^2H_d\ge0\ (d\ge1)                  \tag{8}
 \]
 
-sería una condición suficiente para (1). En la coordenada de `104_30`, (8)
-es precisamente la dominación de los coeficientes Toeplitz
+would be a sufficient condition for (1). In the coordinate of `104_30`,
+(8) is precisely domination of the Toeplitz coefficients
 
 \[
  q_d(B)\le\kappa q_d(A)\qquad(d\ge1),                         \tag{9}
 \]
 
-porque
+because
 
 \[
  \kappa q_d(A)-q_d(B)={1\over2}\nabla_c^2H_d.                \tag{10}
 \]
 
-Esta prueba candidata no toma valores absolutos y sería más débil que pedir
-positividad de toda la matriz. Sin embargo, es falsa para los datos reales
-de zeta, incluso con la constante final.
+This candidate proof takes no absolute values and would be weaker than
+requiring positivity of the entire matrix. However, it is false for the
+real zeta data, even with the final constant.
 
-### 3.1 Contra-certificado outward después de 150
+### 3.1 Outward counter-certificate past 150
 
-`tools/flag_prefix_curvature_gate.py` reconstruye, con el generador
-Hasse--eta certificado de `103_51`, los intervalos
+`tools/flag_prefix_curvature_gate.py` reconstructs, with the certified
+Hasse–eta generator of `103_51`, the intervals
 
 \[
  H_n=\lambda_n^{\rm prime}+{1501\over2002}A_n.                \tag{11}
 \]
 
-Con \(K=850\), profundidad logarítmica \(820\) y escala \(10^{500}\),
-prueba
+With \(K=850\), logarithmic depth \(820\), and scale \(10^{500}\), it
+proves
 
 \[
  \boxed{
@@ -127,34 +128,34 @@ prueba
  <-{10577\over10^6}<0.}                                      \tag{12}
 \]
 
-Equivalentemente,
+Equivalently,
 
 \[
  \nabla_c^2H_{220}<0,
  \qquad q_{220}(B)>\kappa q_{220}(A).                         \tag{13}
 \]
 
-El índice está dentro del rango infinito que A1 debe controlar. Así, bajar
-la proporción desde \(1/2\) hasta \(501/2002\) no rescata la inducción por
-curvatura ni la dominación coeficiente a coeficiente. Este es un stop-gate
-exacto nuevo; no depende del diagnóstico FFT.
+The index lies within the infinite range A1 must control. So lowering the
+ratio from \(1/2\) to \(501/2002\) does not rescue curvature induction nor
+coefficient-by-coefficient domination. This is a new exact stop-gate; it
+does not depend on the FFT diagnostic.
 
-## 4. Compresión adyacente exacta
+## 4. Exact adjacent compression
 
-La falla de (8) no impide que la energía acumulada \(H_n\) sea positiva.
-Para conservar esa acumulación, consideremos únicamente el plano
+Failure of (8) does not prevent the accumulated energy \(H_n\) from being
+positive. To preserve that accumulation, consider only the plane
 
 \[
  \mathcal P_n=\mathrm{span}\,\{g_n,\phi_n\},\qquad n\ge149. \tag{14}
 \]
 
-Los dos vectores son ortogonales para \(\mathsf A_{\rm flag}\), y
+The two vectors are orthogonal for \(\mathsf A_{\rm flag}\), and
 
 \[
  \mathsf A_{\rm flag}[\phi_n]=\Delta A_n.                    \tag{15}
 \]
 
-La identidad Toeplitz (2) da, sin ninguna estimación,
+The Toeplitz identity (2) gives, with no estimate at all,
 
 \[
  \begin{aligned}
@@ -166,14 +167,14 @@ La identidad Toeplitz (2) da, sin ninguna estimación,
  \end{aligned}                                                \tag{16}
 \]
 
-Definamos
+Define
 
 \[
  d_n:=\kappa\Delta A_n+\gamma>0.                              \tag{17}
 \]
 
-Como \(B_n=\kappa A_n-H_n\), las ecuaciones (4), (16)--(17)
-producen la matriz exacta
+Since \(B_n=\kappa A_n-H_n\), equations (4), (16)–(17) produce the exact
+matrix
 
 \[
  \boxed{
@@ -184,12 +185,12 @@ producen la matriz exacta
  \end{pmatrix}.}                                              \tag{18}
 \]
 
-No aparece ninguna cola de operador: (18) usa solamente dos rayos
-adyacentes y los valores escalares exactos.
+No operator tail appears: (18) uses only two adjacent rays and the exact
+scalar values.
 
-## 5. Teorema suficiente de Schur adyacente
+## 5. Sufficient adjacent-Schur theorem
 
-Pongamos
+Set
 
 \[
  \boxed{
@@ -199,17 +200,17 @@ Pongamos
    -(\Delta B_n+\gamma)^2.}                                  \tag{19}
 \]
 
-**Proposición.** Si
+**Proposition.** If
 
 \[
  \mathcal T_n\ge0\qquad(n\ge149),                            \tag{20}
 \]
 
-entonces \(H_n\ge0\) para todo \(n\ge149\), y por tanto se obtiene (1)
-para todo \(n\ge150\).
+then \(H_n\ge0\) for every \(n\ge149\), and hence (1) is obtained for
+every \(n\ge150\).
 
-**Prueba.** El certificado finito de `103_51` da
-\(\lambda_{149}-A_{149}/2>0\), y \(A_{149}>0\). Como
+**Proof.** The finite certificate of `103_51` gives
+\(\lambda_{149}-A_{149}/2>0\), and \(A_{149}>0\). Since
 
 \[
  H_{149}=\lambda_{149}-{501\over2002}A_{149}
@@ -217,18 +218,18 @@ para todo \(n\ge150\).
    +{250\over1001}A_{149},                                    \tag{21}
 \]
 
-se tiene \(H_{149}>0\). Supongamos inductivamente \(H_n\ge0\). Por
-(17), \(d_n>0\), y (20) dice que el determinante de (18) es no negativo.
-La matriz (18) es entonces semidefinida positiva. Puesto que
+one has \(H_{149}>0\). Assume inductively \(H_n\ge0\). By
+(17), \(d_n>0\), and (20) says the determinant of (18) is non-negative.
+Matrix (18) is then positive semidefinite. Since
 \(g_{n+1}=g_n+\phi_n\),
 
 \[
  H_{n+1}=\mathsf M[g_n+\phi_n]\ge0.                           \tag{22}
 \]
 
-La inducción prueba la afirmación. \(\square\)
+The induction proves the claim. \(\square\)
 
-En forma escalar, (20) es la cota coerciva
+In scalar form, (20) is the coercive bound
 
 \[
  \boxed{
@@ -236,40 +237,40 @@ En forma escalar, (20) es la cota coerciva
  \le2\sqrt{(\kappa A_n-B_n)(\kappa\Delta A_n+\gamma)}.}     \tag{23}
 \]
 
-Es una cota de **pendiente firmada por energía acumulada**, no un signo de
-curvatura, una positividad término a término ni una norma de operador. La
-identidad (12) no la refuta.
+It is a **slope bound from accumulated energy**, not a curvature sign, a
+term-by-term positivity, or an operator norm. Identity (12) does not
+refute it.
 
-Hay una formulación útil para el siguiente ataque. Para \(t\in\mathbb R\),
+There is a useful reformulation for the next attack. For \(t\in\mathbb R\),
 
 \[
  g_n+t\phi_n
  =e^{-x/2}\bigl(L_{n-1}^{(1)}(x)+tL_n(x)\bigr),               \tag{24}
 \]
 
-y (18) da
+and (18) gives
 
 \[
  \mathsf M[g_n+t\phi_n]
  =H_n-t(H_n+d_n-H_{n+1})+t^2d_n.                              \tag{25}
 \]
 
-Luego \(\mathcal T_n\ge0\) equivale a la no negatividad de (25) para todo
-\(t\), y basta verificarla en el taper óptimo
+So \(\mathcal T_n\ge0\) is equivalent to non-negativity of (25) for every
+\(t\), and it suffices to check it at the optimal taper
 
 \[
  t_n^*={H_n+d_n-H_{n+1}\over2d_n},\qquad
  \mathsf M[g_n+t_n^*\phi_n]={\mathcal T_n\over4d_n}.          \tag{26}
 \]
 
-Así el frente puede atacarse como una familia Laguerre **tapered** de dos
-grados consecutivos. Sigue siendo una forma prima--polo renormalizada, pero
-ya no pide controlar ningún vector ajeno al camino de prefijos.
+So the front can be attacked as a **tapered** Laguerre family of two
+consecutive degrees. It remains a renormalized prime–pole form, but it no
+longer requires controlling any vector outside the prefix path.
 
-## 6. Falsificador off-line
+## 6. Off-line falsifier
 
-La condición (20) no es ciega a un cero fuera de la línea. Añadamos un
-cuarteto funcional con
+Condition (20) is not blind to an off-line zero. Add a functional
+quartet with
 
 \[
  w=e^{\alpha+i\theta},\qquad
@@ -277,57 +278,58 @@ cuarteto funcional con
  0<\alpha<\theta^2/4,\qquad \theta={2\pi\over q},              \tag{27}
 \]
 
-donde \(q>149\) es primo. Para \(\alpha\) suficientemente pequeño el
-cuarteto queda en \(0<\Re\rho<1/2\), y su contribución es
+where \(q>149\) is prime. For \(\alpha\) sufficiently small the quartet
+lies in \(0<\Re\rho<1/2\), and its contribution is
 
 \[
  L_n^{\rm off}=4-4\cosh(n\alpha)\cos(n\theta).                \tag{28}
 \]
 
-Para el conjunto finito \(n\le149\), (28) converge cuando
-\(\alpha\downarrow0\) a \(4-4\cos(n\theta)>0\); no destruye el dato base.
-Pero en la subsucesión \(n=kq\),
+For the finite set \(n\le149\), (28) converges as
+\(\alpha\downarrow0\) to \(4-4\cos(n\theta)>0\); it does not destroy the
+base datum. But along the subsequence \(n=kq\),
 
 \[
  L_{kq}^{\rm off}=4-4\cosh(kq\alpha)\longrightarrow-\infty   \tag{29}
 \]
 
-exponencialmente, y domina a \(A_n=O(n\log n)\). Por tanto el margen
-perturbado \(H_n\) cruza de positivo a negativo. En el primer cruce,
-\(H_n\ge0\), \(H_{n+1}<0\) y \(d_n>0\); si \(\mathcal T_n\ge0\), (18)
-sería positiva y (22) impediría el cruce. Necesariamente
+exponentially, and dominates \(A_n=O(n\log n)\). Hence the perturbed
+margin \(H_n\) crosses from positive to negative. At the first crossing,
+\(H_n\ge0\), \(H_{n+1}<0\), and \(d_n>0\); if \(\mathcal T_n\ge0\), (18)
+would be positive and (22) would prevent the crossing. Necessarily
 \(\mathcal T_n<0\).
 
-Así (20) detecta el falsificador off-line exigido: no puede ser deducida
-solo de simetría funcional y del bloque arquimediano con una base finita.
-No se afirma que el cuarteto artificial preserve un producto de Euler con
-coeficientes von Mangoldt positivos; esa estructura aritmética especial
-sigue siendo precisamente el posible input de una prueba de (20).
+So (20) detects the required off-line falsifier: it cannot be deduced
+solely from functional symmetry and the archimedean block using a finite
+basis. It is not claimed that the artificial quartet preserves an Euler
+product with positive von Mangoldt coefficients; that special arithmetic
+structure remains precisely the possible input for a proof of (20).
 
-## 7. Verificación y escala observada
+## 7. Verification and observed scale
 
-El mismo certificado outward que prueba (12) da, en el índice donde muere
-la curvatura,
+The same outward certificate that proves (12) gives, at the index where
+curvature dies,
 
 \[
  2220.98<\mathcal T_{219}<2220.99.                             \tag{30}
 \]
 
-Luego el sucesor de Schur no es otra escritura del signo refutado.
+So the Schur successor is not another way of writing the refuted sign.
 
-El diagnóstico no certificado
-`tools/flag_prefix_adjacent_schur_diagnostic.py`, con dos radios Cauchy,
-da para \(149\le n\le500\):
+The uncertified diagnostic
+`tools/flag_prefix_adjacent_schur_diagnostic.py`, with two Cauchy radii,
+gives for \(149\le n\le500\):
 
-* bloques de curvatura centrada negativa
+* blocks of negative centered curvature
   \([199,241]\), \([293,336]\), \([383,417]\), \([464,499]\);
-* \(\min\mathcal T_n\approx1224.944748587\), en \(n=149\);
-* discrepancia máxima entre radios de \(5.1\cdot10^{-9}\) en los
-  coeficientes de Li.
+* \(\min\mathcal T_n\approx1224.944748587\), at \(n=149\);
+* maximum discrepancy between radii of \(5.1\cdot10^{-9}\) in the Li
+  coefficients.
 
-Estas cifras solo seleccionan el sucesor; no prueban su signo uniforme.
+These figures only select the successor; they do not prove its uniform
+sign.
 
-Se reproduce con
+Reproduced with
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure
@@ -336,17 +338,18 @@ python3 tools/flag_prefix_adjacent_schur_diagnostic.py \
   --nmax 500 --first 149 --fft-power 18
 ```
 
-## Estado
+## Status
 
-* **Probado:** la compresión exacta (18), el criterio suficiente
-  (19)--(22) y su sensibilidad off-line.
-* **Certificado con intervalos:** la dominación de curvatura final falla en
-  \(\nabla_c^2H_{220}<0\), después del umbral; simultáneamente
+* **Proved:** the exact compression (18), the sufficient criterion
+  (19)–(22), and its off-line sensitivity.
+* **Certified with intervals:** final-curvature domination fails at
+  \(\nabla_c^2H_{220}<0\), past the threshold; simultaneously
   \(\mathcal T_{219}>2220\).
-* **Descartado:** probar (1) por
-  \(q_d(B)\le(1501/2002)q_d(A)\) coeficiente a coeficiente.
-* **Frente vivo:** probar (23) para todo \(n\ge149\) conservando la
-  colisión prima--polo. Es estrictamente local en la familia de prefijos y
-  evita el supremo gapless de operador, pero sigue siendo un teorema
-  RH-strength no demostrado.
-* **No probado:** (20), A1 y RH.
+* **Ruled out:** proving (1) via
+  \(q_d(B)\le(1501/2002)q_d(A)\) coefficient by coefficient.
+* **Live front:** proving (23) for every \(n\ge149\) while keeping the
+  prime–pole collision. It is strictly local to the family of prefixes
+  and avoids the gapless operator supremum, but it remains an unproved
+  RH-strength theorem.
+* **Not proved:** (20), A1, and RH.
+</content>

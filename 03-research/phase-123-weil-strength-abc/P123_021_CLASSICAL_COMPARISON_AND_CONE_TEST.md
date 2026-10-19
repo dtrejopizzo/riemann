@@ -1,6 +1,5 @@
 # P123.021 — classical cone and transpose tests
 
-Date: 2026-09-05.
 
 ## Verdict
 

@@ -33,7 +33,7 @@ The calculation in `103_10` is valid if one is given a numerical constant
 It then gives, with \(p_\alpha=\alpha/2+1/4\) and
 \(B=(4/3)3^{3/4}\),
 \[
- I_\alpha(a;N)\le A_\alpha\left{
+ I_\alpha(a;N)\le A_\alpha\left\{
  {a^{1-p_\alpha}\over2^{1/4}(p_\alpha-1)}
  +B2^{-p_\alpha}\right}N^{\alpha/2-1/4}.        \tag{2}
 \]

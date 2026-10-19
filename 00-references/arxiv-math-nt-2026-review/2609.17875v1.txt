@@ -1,0 +1,1639 @@
+                                           Zero-Density Concentration for Dirichlet Polynomials
+                                                                                        Eric Dubon
+                                                                                 ORCID: 0000-0003-3400-7756
+
+                                                                                         September 2026
+arXiv:2609.17875v1 [math.NT] 15 Sep 2026
+
+
+
+
+                                                                                               Abstract
+                                                       We prove that broad families of ﬁnite Dirichlet sums exhibit deterministic concentration
+                                                   of normalized vertical zero density on a single line. The main result gives a general criterion
+                                                   under which the normalized Jessen potentials converge locally uniformly to a piecewise-linear
+                                                   convex function with a single corner. The associated normalized measures describing the
+                                                   distribution of real parts of zeros in vertical mean density then converge weakly to a Dirac
+                                                   mass. Thus, for each ﬁxed truncation, zeros may occupy a nontrivial range of real parts,
+                                                   while asymptotically their normalized vertical density concentrates on one line.
+                                                       The proof combines the ﬁnite Bohr lift with a translation-uniform anti-concentration esti-
+                                                   mate for isolated prime coordinates. We apply the criterion to partial sums of the Riemann
+                                                   zeta function, ﬁxed Dirichlet L-functions, and primitive holomorphic Hecke eigenforms of
+                                                   ﬁxed level, trivial Dirichlet character, and without complex multiplication. The concentra-
+                                                   tion line is Re s = 1/2 in the normalized setting and becomes Re s = k/2 for the classical
+                                                   Fourier coeﬃcients of a form of weight k.
+
+
+                                           Keywords. Dirichlet polynomials; zeros of partial L-functions; zero-density concentration;
+                                           Jessen function; almost periodic functions; Bohr lift; Mahler measure; anti-concentration; Stein-
+                                           haus sums; Sato–Tate; Rankin–Selberg.
+                                           2020 Mathematics Subject Classiﬁcation. Primary: 11M41, 11M06; Secondary: 42A75,
+                                           30B50, 11F30, 60E10.
+
+
+                                           1      Introduction
+                                           Let                                           X
+                                                                              PN (s) =         an n−s ,    s = σ + it,                                (1)
+                                                                                         n≤N
+
+                                           be a ﬁnite Dirichlet sum with a1 6= 0. For each ﬁxed N , PN is an exponential polynomial in the
+                                           vertical variable. Its zeros may occupy a wide range of real parts, and a substantial literature
+                                           has developed around their location, existence, density, and zero-free regions.
+                                              For the special case                          X
+                                                                                   ζN (s) =    n−s ,                                    (2)
+                                                                                                    n≤N
+
+                                                 Department of Mathematics, University of Alicante, 03080 Alicante, Spain. E-mail: eric.dubon@ua.es
+
+
+                                                                                                   1
+Montgomery studied the extreme right-hand zeros [17]; Borwein, Fee, Ferguson and van der
+Waall gave extensive numerical and structural information [4]; Gonek and Ledoan obtained zero-
+counting results and information on the distribution of real parts in ﬁnite-height rectangles [9];
+and Mora proved that, for every suﬃciently large ﬁxed N , the set of real parts of the zeros is
+dense throughout the corresponding critical strip [18]. These results show in particular that the
+support of the zero set of a ﬁxed truncation can be much wider than any single distinguished
+vertical line.
+   The same circle of questions has been pursued for broader arithmetic Dirichlet polynomials.
+Ledoan, Roy and Zaharescu studied zero-free regions and zero counts for partial sums of Dedekind
+zeta functions of cyclotomic ﬁelds [15]. Roy and Vatwani developed zero-free regions and zero-
+density estimates for partial sums attached to multiplicative functions [21], and later proved sharp
+existence results for zeros of the corresponding Dirichlet polynomials [22]. In a complementary
+direction, the author used Bohr equivalence to prove density of attainable real parts for partial
+sums of the Dirichlet lambda, beta and eta functions [7]. Very recently, Kerr, Klurman and
+Thorner [14] proved that unusually large partial sums of Dirichlet coeﬃcients can force low-lying
+zeros of the underlying inﬁnite L-function away from the critical line. Their zeros are zeros of
+L(s, π) itself, whereas the present paper concerns zeros of the ﬁnite Dirichlet truncations.
+   There is also related work for modular forms with a diﬀerent approximating object. Li, Roy
+and Zaharescu considered symmetrized approximations to Hecke L-functions obtained by ad-
+joining to a truncated Dirichlet series the dual term supplied by the functional equation [16].
+Their approximants are structurally diﬀerent from the raw truncations considered here, and
+their asymptotic regime couples the truncation parameter with the height.
+   The question addressed in this paper is instead the following: where does the normalized
+vertical density of zeros concentrate as the truncation length tends to inﬁnity? The distinction
+between support and mass is essential. A family can have zeros with real parts dense throughout
+a large strip while an asymptotically negligible proportion of its vertical zero density lies away
+from one distinguished line.
+   For ﬁxed N , the relevant convex potential is the Jessen function
+                                                Z T
+                                           1
+                            JPN (σ) = lim              log |PN (σ + it)| dt.                      (3)
+                                     T →∞ 2T      −T
+
+The existence of this mean follows from Jessen and Tornehave [12, Theorem 5], while its convexity
+follows from [12, Theorem 7]. Their Jensen formula for ordinary Dirichlet series [12, Theorem 31]
+           1 ′′
+identiﬁes 2π JPN , in the sense of distributions, with the vertical zero-frequency measure. Recent
+work of Andersson [1] develops related mean-counting formulae for vertical limits of inﬁnite
+Dirichlet series. Our setting is ﬁnite-dimensional and introduces the asymptotic parameter N →
+∞.
+   The novelty here is a limit theorem for the whole Jessen potential. Under an explicit isolated-
+prime hypothesis, the normalized potentials converge locally uniformly to a piecewise-linear func-
+tion with one corner; the corresponding normalized zero-density measures converge to a single
+Dirac mass. For zeta and ﬁxed Dirichlet L-functions the limiting line is Re s = 1/2. The same
+line occurs for normalized holomorphic Hecke eigenvalues, while the classical Fourier-coeﬃcient
+normalization moves it to Re s = k/2.
+   The principal analytic input is a translation-uniform logarithmic anti-concentration estimate
+for sums of independent Steinhaus variables with comparable weights. More precisely, if Z1 , . . . , Zm
+are independent Steinhaus variables and b1 , . . . , bm > 0 satisfy maxj bj / minj bj ≤ K, then, uni-
+
+                                                  2
+formly in a ∈ C,                                 
+                                        m                        m
+                                        X                 1     X
+                           E log a +         bj Zj  ≥     log     b2j − CK .
+                                        j=1
+                                                          2     j=1
+The uniformity in the translation is essential: after conditioning on the remaining coordinates
+of the ﬁnite Bohr torus, the isolated prime-coordinate block is translated by a complex value
+depending on those conditioned coordinates.
+   All density statements below use the Jessen mean-motion order of limits: for each ﬁxed N the
+height T tends to inﬁnity ﬁrst, and only afterwards N → ∞. No coupled (N, T ) limit is asserted.
+This is diﬀerent from the ﬁnite-height regime studied, for example, by Gonek and Ledoan [9].
+   The paper is organized as follows. Section 2 states the abstract zero-density concentration
+criterion and its three arithmetic applications. Sections 3–5 develop the Bohr–Jessen framework,
+prove the translation-uniform anti-concentration estimate, and establish the abstract criterion.
+Sections 6–8 verify its hypotheses for zeta partial sums, ﬁxed Dirichlet L-functions, and holomor-
+phic Hecke eigenforms, respectively.
+
+
+2     Main results
+Let
+                                 MN := max{n ≤ N : an 6= 0}.                                               (4)
+When a1 6= 0, Proposition 3.7 below shows that JP′′N    has total mass log MN . Recall also that
+a ﬁnite convex function on an open interval has monotone one-sided derivatives [20, Theo-
+rem 24.1]; consequently its distributional second derivative is a positive Radon measure, namely
+the Lebesgue–Stieltjes measure associated with its increasing derivative.
+Deﬁnition 2.1 (Zero-density concentration). Assume MN → ∞. We say that the family {PN }
+exhibits zero-density concentration on the line Re s = α if
+                                              1         w
+                                    νN :=          J ′′ −
+                                                        → δα                        (5)
+                                           log MN PN
+weakly as probability measures on R.
+  This deﬁnition has a direct zero-counting interpretation. By Jessen and Tornehave [12, Theo-
+rem 31], for every a < b,
+              JP′′N ((a, b))        1
+                             = lim    #{ρ = β + iγ : PN (ρ) = 0, a < β < b, |γ| < T },    (6)
+                    2π        T →∞ 2T
+
+where zeros are counted with multiplicity. Thus (5) means that asymptotically all normalized
+vertical zero density lies in every ﬁxed neighborhood of the line Re s = α.
+   For PN as in (1), normalize a1 = 1 and set
+                                                  X
+                                    EN (σ) :=          |an |2 n−2σ .                                       (7)
+                                                 n≤N
+                                                                                 P              −s with a = 1,
+Theorem 2.2 (Isolated-prime zero-density criterion). Let PN (s) =                    n≤N an n            1
+and let MN be given by (4). Suppose there exist α ∈ R and subsets
+                                QN ⊂ {p prime : N/2 < p ≤ N }
+with #QN → ∞ such that:
+
+                                                   3
+(H1) for every σ ∈ R,
+                                       1
+                                           log EN (σ) −→ (α − σ)+ ;                           (8)
+                                   2 log N
+
+(H2) for every compact interval I ⊂ (−∞, α) there is KI ≥ 1 such that, for all suﬃciently large
+     N , all σ ∈ I, and all p, q ∈ QN ,
+
+                                                   |ap |p−σ
+                                          KI−1 ≤             ≤ KI ,                           (9)
+                                                   |aq |q −σ
+
+     and, with                                         X
+                                       BN (σ) :=             |ap |2 p−2σ ,                   (10)
+                                                    p∈QN
+
+     one has
+                                          1
+                                              log BN (σ) −→ α − σ                            (11)
+                                      2 log N
+     locally uniformly on (−∞, α).
+
+   Then
+                                      JPN (σ)
+                                              −→ (α − σ)+                                    (12)
+                                       log N
+locally uniformly on R, and
+                                           1       w
+                                              J ′′ −
+                                                   → δα .                                    (13)
+                                        log MN PN
+In particular, the normalized vertical zero density concentrates on the line Re s = α.
+
+Remark 2.3. The criterion is not intrinsically restricted to the arithmetic families considered
+below. Its application to further families reduces to two arithmetic inputs: the quadratic-energy
+asymptotic in hypothesis (H1), and a suﬃciently large family of isolated primes on which the
+normalized prime coeﬃcients are bounded above and away from zero, as required in hypothesis
+(H2). A suitable Sato–Tate-type equidistribution theorem provides a natural mechanism for the
+latter condition.
+
+Theorem 2.4 (Riemann zeta partial sums). For
+                                                   X
+                                        ζN (s) =            n−s ,
+                                                   n≤N
+
+let JN denote its Jessen function. Then
+                                                                 
+                                      JN (σ)               1
+                                             −→              −σ                              (14)
+                                      log N                2          +
+
+locally uniformly on R, and
+                                           1    ′′ w
+                                               JN  −
+                                                   → δ1/2 .                                  (15)
+                                         log N
+Theorem 2.5 (Dirichlet L-functions). Let χ be a ﬁxed Dirichlet character modulo q, and put
+                                                   X
+                                     LN (s, χ) =           χ(n)n−s .
+                                                   n≤N
+
+
+                                                   4
+Let JN,χ be its Jessen function and
+
+                                MN,χ = max{n ≤ N : (n, q) = 1}.
+
+Then                                                                
+                                        JN,χ (σ)              1
+                                                 −→             −σ                       (16)
+                                         log N                2          +
+locally uniformly on R, and
+                                            1        w
+                                                J ′′ −
+                                                     → δ1/2 .                            (17)
+                                        log MN,χ N,χ
+
+   For the modular application, let f be a ﬁxed normalized primitive holomorphic Hecke eigen-
+form of even weight k ≥ 2, ﬁxed level Q, and trivial Dirichlet character; see, for example,
+Iwaniec [11, Sections 6.6–6.8] for the theory and normalization of newforms. Thus f has a
+Fourier expansion at the cusp inﬁnity of the form
+                                        X
+                              f (z) =         af (n)e2πinz ,         af (1) = 1,         (18)
+                                        n≥1
+
+where af (n) denotes the nth Fourier coeﬃcient of f .
+   We further assume that f has no complex multiplication. This is the hypothesis under which
+the Sato–Tate equidistribution theorem used below applies; see Barnet-Lamb, Gee and Geraghty
+[2, Corollary 7.1.7].
+   Deﬁne the normalized Hecke eigenvalues by
+
+                                      λf (n) := af (n)n−(k−1)/2 .                        (19)
+
+With this normalization, the associated L-function is centered at Re s = 1/2.
+Theorem 2.6 (Fixed-level holomorphic Hecke eigenforms). With f as above, deﬁne
+                                                      X
+                                    LN (s, f ) =              λf (n)n−s .                (20)
+                                                     n≤N
+
+Then the Jessen functions JN,f satisfy
+                                                                    
+                                        JN,f (σ)              1
+                                                 −→             −σ                       (21)
+                                         log N                2       +
+
+locally uniformly on R, and
+                                            1     ′′  w
+                                                 JN,f −
+                                                      → δ1/2 ,                           (22)
+                                        log MN,f
+where MN,f := max{n ≤ N : λf (n) 6= 0}.
+  Equivalently, for the classical Fourier-coeﬃcient truncations
+                                                      X
+                                    LN (s, f ) =              af (n)n−s ,                (23)
+                                                     n≤N
+
+zero-density concentration occurs on the line
+                                                           k
+                                                 Re s =      .                           (24)
+                                                           2
+
+                                                      5
+3     Bohr–Jessen framework and zero-density measures
+3.1    Finite Bohr lifts
+Fix N ≥ 2, let p1 < · · · < pd ≤ N be the primes up to N , d = π(N ) and write
+                              d
+                              Y      vp (n)
+                         n=         pj j      ,       v(n) := (vp1 (n), . . . , vpd (n)) ∈ Nd0 .         (25)
+                              j=1
+
+For z = (z1 , . . . , zd ) ∈ Td , deﬁne the Bohr lift
+                                             X
+                         FPN (σ, z) :=              an n−σ z v(n) ,           z m := z1m1 · · · zdmd .   (26)
+                                            n≤N
+
+Then                                                                  
+                                    FPN σ, (p−it          −it
+                                             1 , . . . , pd ) = PN (σ + it).                             (27)
+    The elementary arithmetic fact behind the full-torus model is worth isolating.
+Proposition 3.1 (Prime-frequency injectivity). Let
+
+                                              ωN = (log p1 , . . . , log pd ).
+
+Then the resonance lattice
+                                           ΛN := {k ∈ Zd : hk, ωN i = 0}
+is trivial. Consequently the Kronecker orbit
+
+                                                  t 7−→ (p−it          −it
+                                                          1 , . . . , pd )
+
+is dense in Td , and the map n 7→ v(n) is injective.
+
+Proof. If k = (k1 , . . . , kd ) ∈ ΛN , then
+                                                                                     
+                                              d
+                                              X                               d
+                                                                              Y    k
+                                      0=            kj log pj = log              pj j  .
+                                              j=1                         j=1
+
+        Q    k
+Hence j pj j = 1. Unique factorization in Z forces kj = 0 for every j, so ΛN = {0}. The
+continuous Kronecker–Weyl theorem then implies that the orbit is uniformly distributed, and in
+particular dense, in the full torus; see Haviland and Wintner [10]. Jessen and Tornehave use this
+ﬁnite-integral-base torus representation in their spatial-extension construction [12, §116]. Finally,
+v(m) = v(n) implies m = n by unique factorization.
+
+3.2    The exact Bohr–Jessen identity
+At a zero of FPN (σ, ·) one has log |FPN | = −∞. Thus the logarithm is neither continuous nor
+bounded on the torus, so the continuous Kronecker–Weyl theorem invoked above cannot be
+applied to it directly. We ﬁrst record the required logarithmic integrability.
+Lemma 3.2. If Q is a nonzero complex polynomial in d variables, then
+
+                                                    log |Q| ∈ L1 (Td ).
+
+                                                              6
+Proof. This is the standard ﬁniteness statement underlying logarithmic Mahler measure; compare
+Boyd [3, Section 1]. We include the argument because the integrability near the zero set will be
+used below. Multiplication by a monomial does not change the modulus on Td , so it is enough
+to consider an ordinary polynomial.
+   For d = 1, write
+                                                            r
+                                                            Y
+                                            Q(z) = c             (z − αj ).
+                                                           j=1
+
+Since Q is continuous on T, the positive part log+ |Q| is bounded. It remains to check each factor
+in the negative part.
+If |α| =
+       6 1, then
+                                         inf |eiθ − α| > 0,
+                                             θ∈[0,2π]
+
+so log |eiθ − α| is bounded.
+If |α| = 1, write α = eiθ0 . Then
+                                                                        θ − θ0
+                                         |eiθ − eiθ0 | = 2 sin                 .                   (28)
+                                                                          2
+For |θ − θ0 | ≤ 1, the elementary bounds c1 |u| ≤ | sin u| ≤ |u| give
+
+                                   c2 |θ − θ0 | ≤ |eiθ − eiθ0 | ≤ |θ − θ0 |.
+
+Consequently the only possible singularity is logarithmic, and
+                         Z δ
+                               | log u| du = δ(1 − log δ) < ∞                  (0 < δ < 1).        (29)
+                          0
+
+Hence log |Q| ∈ L1 (T).
+    Assume now that the assertion holds in d − 1 variables. Regard Q as a polynomial in
+the last variable zd , with coeﬃcients depending polynomially on the remaining variables z ′ =
+(z1 , . . . , zd−1 ):
+                                                 m
+                                                 X
+                                Q(z ′ , zd ) =         Qj (z ′ )zdj ,      z ′ ∈ Td−1 ,
+                                                 j=0
+
+where m = degzd Q, each Qj ∈ C[z1 , . . . , zd−1 ], and Qm 6≡ 0. By the induction hypothesis,
+log |Qm | ∈ L1 (Td−1 ); in particular the zero set of Qm has Haar measure zero. For every z ′
+outside that null set, factor
+                                                                 m
+                                                                 Y
+                                  Q(z ′ , zd ) = Qm (z ′ )           (zd − αj (z ′ )).
+                                                                 j=1
+
+Jensen’s one-variable formula, in the form recorded for example in Conway [5, Chapter XI,
+Section 1], gives
+                                  Z
+                          ′
+                      L(z ) :=         log |Q(z ′ , zd )| dm(zd )
+                                   T
+                                                       m
+                                                       X
+                               = log |Qm (z ′ )| +           log+ |αj (z ′ )| ≥ log |Qm (z ′ )|.   (30)
+                                                       j=1
+
+
+
+                                                             7
+On the other hand, if M := maxTd |Q|, then
+                                                 Z
+                                        ′
+                                    P (z ) :=            log+ |Q(z ′ , zd )| dm(zd ) ≤ log+ M.
+                                                     T
+
+Since L = P − N , where                                          Z
+                                            N (z ′ ) :=               log− |Q(z ′ , zd )| dm(zd ),
+                                                                  T
+we obtain from (30)
+
+                               0 ≤ N (z ′ ) = P (z ′ ) − L(z ′ ) ≤ log+ M + log− |Qm (z ′ )|.
+
+The right-hand side is integrable on Td−1 by the induction hypothesis. Since log+ |Q| is nonneg-
+ative, Tonelli’s theorem gives
+                 Z                                           Z            Z                                   
+                           +                                                         +        ′
+                      log |Q(z)| dmd (z) =                                        log |Q(z , zd )| dm(zd )         dmd−1 (z ′ )
+                 Td                                              Td−1         T
+                                                             Z
+                                                     =                    P (z ′ ) dmd−1 (z ′ )
+                                                                 Td−1
+                                                     ≤ log+ M < ∞.
+
+Similarly, Tonelli’s theorem applied to log− |Q| yields
+                     Z                                            Z
+                                −
+                           log |Q(z)| dmd (z) =                               N (z ′ ) dmd−1 (z ′ )
+                      Td                                             Td−1           Z
+                                                             ≤ log+ M +                      log− |Qm (z ′ )| dmd−1 (z ′ )
+                                                                                      Td−1
+                                                             < ∞,
+
+where the last inequality follows from the induction hypothesis. Therefore
+             Z                                           Z                                         Z
+                                                                          +
+                     | log |Q(z)|| dmd (z) =                      log |Q(z)| dmd (z) +                     log− |Q(z)| dmd (z)
+              Td                                         Td                                           Td
+                                                 < ∞.
+
+This completes the induction.
+
+Proposition 3.3 (Bohr–Jessen identity). For every ﬁxed N and every σ ∈ R, the limit
+                                                                              Z T
+                                                               1
+                                     JPN (σ) = lim                                  log |PN (σ + it)| dt                          (31)
+                                                         T →∞ 2T               −T
+
+exists and                                                       Z
+                                        JPN (σ) =                         log |FPN (σ, z)| dmd (z),                               (32)
+                                                                     Td
+
+where md is normalized Haar measure on Td . Moreover JPN is ﬁnite and convex on R.
+
+Proof. The frequencies − log n are integral combinations of the ﬁnite basis − log p1 , . . . , − log pd .
+Jessen and Tornehave [12, Theorem 5] show that, for a nonzero analytic almost periodic function,
+the logarithmic mean exists and is obtained by ﬁrst truncating the logarithm from below and
+then letting the truncation level tend to zero.
+
+                                                                               8
+   Fix ε > 0 and set
+                              gσ,ε (z) := log max{|FPN (σ, z)|, ε},              z ∈ Td .
+This is continuous on Td . Deﬁne
+
+                              ΦN : R −→ Td ,              ΦN (t) := (p−it          −it
+                                                                      1 , . . . , pd ).
+
+By (27),
+                                 gσ,ε (ΦN (t)) = log max{|PN (σ + it)|, ε}.
+Proposition 3.1 and the Kronecker–Weyl theorem therefore give
+                                             Z T
+                                       1
+                                  lim              log max{|PN (σ + it)|, ε} dt
+                                 T →∞ 2T      −T
+                                                    Z T
+                                           1
+                                    = lim                  gσ,ε (ΦN (t)) dt
+                                     T →∞ 2T         −T
+                                        Z
+                                    =        gσ,ε (z) dmd (z)
+                                        Td
+                                        Z
+                                    =        log max{|FPN (σ, z)|, ε} dmd (z).                          (33)
+                                        Td
+
+This is the ﬁnite-integral-base spatial extension used by Jessen and Tornehave [12, §116].
+  For 0 < ε ≤ 1,
+                         |log max{|FPN |, ε}| ≤ log+ kFPN k∞ + log− |FPN |.
+The right-hand side is integrable by Lemma 3.2. Hence dominated convergence gives
+                      Z                                               Z
+                lim        log max{|FPN (σ, z)|, ε} dmd (z) =               log |FPN (σ, z)| dmd (z).
+                ε↓0   Td                                               Td
+
+Combining this with (33) and [12, Theorem 5] proves (32). Finiteness follows from Lemma 3.2,
+while convexity follows from Jessen and Tornehave [12, Theorem 7].
+
+3.3   Jessen–Tornehave zero density
+For a convex function J, write J ′ (x−) and J ′ (x+) for its left and right derivatives.
+Proposition 3.4 (Vertical zero density). Let Z(PN ) denote the multiset of zeros ρ = β + iγ of
+PN . If a < b, then the vertical zero frequency in the strip a < Re s < b exists and
+                  1                                        1 ′                    
+             lim    #{ρ ∈ Z(PN ) : a < β < b, |γ| < T } =    JPN (b−) − JP′ N (a+) .                    (34)
+            T →∞ 2T                                       2π
+Equivalently,
+                                                    1 ′′
+                                                   ρPN :=
+                                                     J                                                  (35)
+                                                   2π PN
+is the locally ﬁnite vertical zero-density measure on the real axis.
+
+Proof. This is Jessen and Tornehave [12, Theorem 31], applied to the ordinary Dirichlet series
+PN . Their Jensen function is
+                                                      Z T
+                                                  1
+                                 ϕ(σ) := lim                    log |PN (σ + it)| dt,
+                                            T →∞ 2T       −T
+
+
+                                                            9
+so in our notation ϕ = JPN . Theorem 31 gives, for every a < b,
+                                                1 ′                     
+                                 H(a, b) =        ϕ (b − 0) − ϕ′ (a + 0) ,
+                                               2π
+where H(a, b) denotes the relative frequency of zeros in the strip a < Re s < b. This is exactly
+(34).
+
+Remark 3.5. For f (s) = 1 + e−λs ,
+
+                                 Jf (σ) = max{0, −λσ},              Jf′′ = λδ0 .
+
+The zeros are s = (2m + 1)πi/λ, whose vertical density in | Im s| < T is λ/(2π). Thus (35) has
+the correct constant.
+
+3.4    Elementary bounds and total mass
+Proposition 3.6. Assume a1 = 1. Then for every σ ∈ R,
+                                                     1     X
+                                     0 ≤ JPN (σ) ≤     log     |an |2 n−2σ .                      (36)
+                                                     2     n≤N
+
+Proof. For the upper bound, use Jensen’s inequality for the concave function x 7→ log x: if µ is
+a probability measure and X > 0 is integrable, then
+                                         Z                    Z
+                                             log X dµ ≤ log        X dµ.
+
+Applying this to X = |FPN (σ, z)|2 and normalized Haar measure gives
+                                               Z
+                                         1
+                               JPN (σ) =      log |FPN (σ, z)|2 dmd (z)
+                                         2 Td
+                                              Z
+                                         1
+                                       ≤ log      |FPN (σ, z)|2 dmd (z).
+                                         2     Td
+
+
+Distinct integers deﬁne distinct torus characters by Proposition 3.1. Their orthogonality therefore
+yields                       Z                                    X
+                                     |FPN (σ, z)|2 dmd (z) =            |an |2 n−2σ .
+                                Td                                n≤N
+
+  For the lower bound, use Jensen’s formula in one complex variable; see Conway [5, Chapter XI,
+Section 1]. If
+                                                                          m
+                                                                          Y
+                           Q(z) = c0 + c1 z + · · · + cm z m = cm             (z − αj ),
+                                                                          j=1
+
+then                  Z                                       m
+                                                              X
+                           log |Q(z)| dm(z) = log |cm | +           log+ |αj | ≥ log |c0 |,
+                       T                                      j=1
+                                                                                              Q
+where the last inequality is the equivalent form obtained from |c0 | = |cm | j |αj |. Apply this
+successively to the variables zd , zd−1 , . . . , z1 . Fubini is legitimate by Lemma 3.2. At each step
+the circle mean is bounded below by the logarithm of the modulus of the constant coeﬃcient in
+
+                                                      10
+that variable, and after all variables have been integrated only the constant monomial remains.
+Hence                             Z
+                       JPN (σ) =      log |FPN (σ, z)| dmd (z) ≥ log |a1 | = 0.
+                                    Td
+
+
+
+Proposition 3.7. Assume a1 6= 0 and let MN be deﬁned by (4). Then
+
+                                                                      log MN
+                           JP′′N (R) = log MN ,          ρPN (R) =           .             (37)
+                                                                         2π
+Consequently JP′′N / log MN is a probability measure whenever MN > 1.
+
+Proof. As σ → +∞,
+                                         FPN (σ, z) = a1 + o(1)
+uniformly on Td , and therefore
+                                     JPN (σ) = log |a1 | + o(1).
+As σ → −∞, the highest supported term dominates uniformly:
+                                              −σ v(MN )
+                            FPN (σ, z) = aMN MN z       (1 + o(1)),
+
+whence
+                            JPN (σ) = log |aMN | − σ log MN + o(1).
+
+  Since JPN is convex, these asymptotics determine the limiting one-sided slopes. Indeed, the
+usual secant-slope inequalities for a convex function show that
+
+                                  JP′ N ,+ (σ) −→ 0       (σ → +∞),
+
+and
+                            JP′ N ,+ (σ) −→ − log MN            (σ → −∞).
+
+   For a ﬁnite convex function, the one-sided derivatives are nondecreasing [20, Theorem 24.1].
+Thus its distributional second derivative is the positive Lebesgue–Stieltjes measure associated
+with the increasing right derivative JP′ N ,+ , characterized by
+
+                               JP′′N ((a, b]) = JP′ N ,+ (b) − JP′ N ,+ (a);
+
+see, for example, Folland [8, Section 1.5]. Letting a → −∞ and b → +∞ therefore gives
+
+                          JP′′N (R) = lim JP′ N ,+ (b) − lim JP′ N ,+ (a)
+                                         b→+∞                a→−∞
+
+                                    = 0 − (− log MN )
+                                    = log MN .
+
+This proves the ﬁrst identity in (37). The second identity follows from Proposition 3.4:
+
+                                               1 ′′     log MN
+                                  ρPN (R) =     J (R) =        .
+                                              2π PN        2π
+
+
+
+                                                    11
+4     Translation-uniform anti-concentration
+A Steinhaus random variable is, by deﬁnition, a random variable distributed according to nor-
+malized Haar measure on the unit circle T; see, for example, Kahane [13, Chapter 1].
+  The Bessel function of the ﬁrst kind of order zero is
+                                                      ∞       
+                                                      X (−1)n u 2n
+                                        J0 (u) :=                                 .             (38)
+                                                      n=0
+                                                            (n!)2         2
+
+For real u it has the integral representation
+                                                        Z 2π
+                                                  1
+                                        J0 (u) =                  eiu cos θ dθ,                 (39)
+                                                 2π         0
+
+and the classical large-argument expansion implies J0 (u) = O(u−1/2 ) as u → +∞; see Watson [25,
+§§2.11, 2.2 and 7.21].
+
+Lemma 4.1 (Translated logarithmic anti-concentration). Fix K ≥ 1. There exists CK < ∞
+such that the following holds for every m ≥ 5. Let Z1 , . . . , Zm be independent Steinhaus variables
+and let b1 , . . . , bm > 0 satisfy
+                                          maxj bj
+                                                   ≤ K.                                          (40)
+                                          minj bj
+Set                                                         m
+                                                            X
+                                                  S2 =            b2j .                         (41)
+                                                            j=1
+
+Then, uniformly for every a ∈ C,
+                                                                
+                                                 m
+                                                 X
+                                 E log a +            bj Zj  ≥ log S − CK .                   (42)
+                                                 j=1
+
+Proof. Put
+                                                                     m
+                                                                     X
+                                               bj
+                                        cj =      ,         X=             cj Zj .
+                                               S                     j=1
+       P      2
+Then       j cj = 1. If bmin = minj bj and bmax = max j bj , then
+
+                                           mb2min ≤ S 2 ≤ mb2max ,
+
+and (40) gives
+                                    1       K
+                                    √≤ cj ≤ √                         (1 ≤ j ≤ m).              (43)
+                                 K m          m
+
+    Identify C with R2 and let µX denote the probability law of X. We use the Fourier convention
+                                           Z                                         
+                               bX (ξ) :=
+                               µ                 eihξ,xi dµX (x) = E eihξ,Xi .
+                                            R2
+
+
+
+
+                                                            12
+If Zj = eiΘj with Θj uniform on [0, 2π), rotational invariance allows us to take the direction of
+ξ to be the ﬁrst coordinate axis. Hence, by (39),
+                                                               Z
+                                                        1      2π
+                                  E eihξ,cj Zj i =                eicj |ξ| cos θ dθ
+                                                       2π 0
+                                                     = J0 (cj |ξ|).
+
+Independence therefore gives
+                                                         m
+                                                         Y
+                                          bX (ξ) =
+                                          µ                      J0 (cj |ξ|).                            (44)
+                                                        j=1
+
+  From the series (38),
+                                          u2
+                                  J0 (u) = 1 −+ O(u4 )     (u → 0).
+                                          4
+Thus there exist absolute constants u0 ∈ (0, 1] and c0 > 0 such that
+                                                        2
+                                   |J0 (u)| ≤ e−c0 u                 (0 ≤ u ≤ u0 ).                      (45)
+
+The large-argument expansion quoted above yields an absolute constant C0 such that
+
+                                     |J0 (u)| ≤ C0 u−1/2                       (u ≥ 1).                  (46)
+
+Moreover, (39) and the triangle inequality give
+                                                      Z 2π
+                                                1
+                                    |J0 (u)| ≤               |eiu cos θ | dθ = 1.
+                                               2π      0
+
+If u > 0, equality would force eiu cos θ to have constant argument for almost every θ, which is
+impossible. Hence
+                                     |J0 (u)| < 1    (u > 0).                              (47)
+
+  Write r = |ξ| and split the radial integral into three regions.
+                    √
+Region I: 0 ≤ r ≤ u0 m/K. By (43), cj r ≤ u0 , so
+                                                                              
+                                                                     m
+                                                                     X                        2
+                                  bX (ξ)| ≤ exp −c0 r 2
+                                 |µ                                        c2j  = e−c0 r .              (48)
+                                                                     j=1
+
+Consequently
+                            Z u0 √m/K                                  Z ∞
+                                                                                          2       π
+                       2π                  bX (r)| dr ≤ 2π
+                                         r|µ                                     re−c0 r dr =        .   (49)
+                             0                                             0                      c0
+             √            √
+Region II: u0 m/K ≤ r ≤ RK m. Choose
+
+                                           R > max{1, u0 , C02 }.                                        (50)
+
+Then
+                                             u0
+                                                ≤ cj r ≤ RK 2 .                                          (51)
+                                             K2
+By continuity and (47),
+                                     ρK :=           max              |J0 (u)| < 1.                      (52)
+                                             u∈[u0 /K 2 ,RK 2 ]
+
+
+                                                            13
+           bX (ξ)| ≤ ρm
+Therefore |µ                                                   2 2
+                      K . Since the annulus has area at most πR K m,
+                      Z
+                            √                bX (ξ)| dξ ≤ πR2 K 2 mρm
+                                          √ |µ                      K ≤ CK .                 (53)
+                       u0       m/K≤|ξ|≤RK m
+
+                  √
+Region III: r ≥ RK m. Now cj r ≥ R ≥ 1, so (46) and (43) yield
+                                                                             m
+                                     bX (ξ)| ≤ C0 K 1/2 m1/4 r −1/2
+                                    |µ                                             .         (54)
+
+For m > 4,
+                                  Z ∞                                   m
+                                     √    r C0 K 1/2 m1/4 r −1/2              dr
+                                   RK m
+                                                             Z ∞
+                                     = C0m K m/2 mm/4           √ r
+                                                                         1−m/2
+                                                                                   dr
+                                                              RK m
+                                                                    √
+                                                      (RK         m)2−m/2
+                                     = C0m K m/2 mm/4
+                                                                m/2 − 2
+                                                             !m/2
+                                       K 2 mR2         C02
+                                     =                              .                        (55)
+                                       m/2 − 2         R
+
+For m ≥ 5,
+                                           m        2m
+                                                 =     ≤ 10,
+                                         m/2 − 2   m−4
+and C02 /R < 1. Thus the last expression is bounded uniformly in m, and multiplication by the
+polar factor 2π gives            Z
+                                                 bX (ξ)| dξ ≤ CK .
+                                              √ |µ                                           (56)
+                                        |ξ|≥RK m
+
+  Combining the three regions,
+                                            bX kL1 (R2 ) ≤ CK .
+                                           kµ                                                (57)
+The Fourier inversion theorem for ﬁnite measures with integrable Fourier transform (see Rudin
+[23, Section 1.5.2]) now implies that µX is absolutely continuous with respect to planar Lebesgue
+measure. Its bounded continuous density is
+                                                       Z
+                                               1
+                                   fX (x) :=                 e−ihξ,xi µ
+                                                                      bX (ξ) dξ,             (58)
+                                             (2π)2      R2
+
+so dµX (x) = fX (x) dx and
+                                     kfX k∞ ≤ (2π)−2 kµ
+                                                      bX k1 ≤ CK .                           (59)
+Consequently, uniformly in w ∈ C and 0 < r ≤ 1,
+                                                        Z
+                                 P(|X + w| < r) =                 fX (x) dx
+                                                      {x:|x+w|<r}
+                                                   ≤ πr 2 kfX k∞ ≤ CK r 2 .                  (60)
+
+  Set Y := log− |X + w| ≥ 0. Pointwise,
+                                                   Z ∞
+                                           Y =             1{Y >t} dt.
+                                                   0
+
+
+                                                        14
+Tonelli’s theorem therefore gives the tail-integral formula
+                                                    Z ∞
+                                      E(Y ) =             P(Y > t) dt
+                                                    Z0∞
+                                                =         P(|X + w| < e−t ) dt
+                                                    Z0∞
+                                                ≤         min{1, CK e−2t } dt.                       (61)
+                                                      0
+
+Increasing CK if necessary, we may assume CK ≥ 1. Put
+                                                            1
+                                                    tK :=     log CK .
+                                                            2
+Then CK e−2t ≥ 1 exactly when 0 ≤ t ≤ tK , and therefore
+                         Z ∞                                   Z tK                  Z ∞
+                                                −2t
+                                min{1, CK e           } dt =             1 dt + CK         e−2t dt
+                          0                                     0                     tK
+                                                                 CK −2tK
+                                                           = tK +   e
+                                                                  2
+                                                            1         1   ′
+                                                           = log CK + =: CK .                        (62)
+                                                            2         2
+Hence
+                                                               ′
+                                                      E(Y ) ≤ CK .
+Since log+ |X + w| ≥ 0,                                          
+                                                              ′
+                                            E log |X + w| ≥ −CK .                                    (63)
+Finally,
+                                                m
+                                                X                              
+                                                                         a
+                                           a+         bj Zj = S            +X ,
+                                                j=1
+                                                                         S
+
+so (63) with w = a/S proves (42).
+
+Remark 4.2. The uniformity in the translation a is essential for the application below. After the
+other torus coordinates are ﬁxed, the isolated prime-coordinate block is translated by a complex
+number depending on those ﬁxed coordinates, and the estimate must remain uniform in that
+translation.
+
+
+5    The abstract isolated-prime criterion
+               P              −s and let
+Let PN (s) =       n≤N an n
+
+                                     QN ⊂ {p prime : N/2 < p ≤ N }.
+
+If p ∈ QN and n ≤ N is divisible by p, then n = p. Thus the Bohr coordinate zp occurs only in
+the linear monomial ap p−σ zp , and
+                                                                          X
+                                  FPN (σ, z) = AN (σ, z ′ ) +                   ap p−σ zp ,          (64)
+                                                                         p∈QN
+
+
+                                                            15
+where AN is independent of the coordinates indexed by QN .
+  For a ﬁnite set Q of prime coordinates, write
+                                                         Y
+                                       dmQ (z) :=            dm(zp ),
+                                                     p∈Q
+
+where m is normalized Haar probability measure on T. If P(N ) denotes the set of all primes not
+exceeding N , set
+                                     RN := P(N ) \ QN .
+Then the Bohr torus decomposes as
+
+                          Td = TRN × TQN ,               dmd = dmRN dmQN .
+
+Proposition 5.1 (Isolated-prime lower bound). Let I ⊂ R be compact. Suppose that there exists
+KI ≥ 1 such that
+                                          |ap |p−σ
+                                   KI−1 ≤           ≤ KI                                 (65)
+                                          |aq |q −σ
+for every σ ∈ I and every p, q ∈ QN , and suppose #QN ≥ 5. Then
+                                    1      X
+                        JPN (σ) ≥     log     |ap |2 p−2σ − CKI              (σ ∈ I),           (66)
+                                    2     p∈Q  N
+
+
+where CKI is the constant from Lemma 4.1.
+
+Proof. Fix σ ∈ I and ﬁx all torus coordinates not indexed by QN . Denote this collection by
+
+                                        z ′ = (zp )p∈RN ∈ TRN .
+
+Then, by (64),                                                    X
+                           FPN (σ, z ′ , zQN ) = AN (σ, z ′ ) +          ap p−σ zp ,
+                                                                  p∈QN
+
+where, for the ﬁxed values of σ and z ′ , the quantity AN (σ, z ′ ) ∈ C is independent of the coordi-
+nates zp , p ∈ QN .
+  Write
+                                      ap = |ap |eiϑp ,       p ∈ QN .
+Since normalized Haar measure on T is invariant under rotations, the changes of variables
+
+                                     zp 7−→ eiϑp zp ,        p ∈ QN ,
+
+absorb the phases of the coeﬃcients without changing the inner integral. Hence, for ﬁxed σ and
+z ′ , Lemma 4.1 applies with the complex translation
+
+                                             a = AN (σ, z ′ )
+
+and positive coeﬃcients
+                                    bp (σ) := |ap |p−σ ,        p ∈ QN .
+
+  By (65),
+                                        maxp∈QN bp (σ)
+                                                       ≤ KI .
+                                        minp∈QN bp (σ)
+
+                                                    16
+Since #QN ≥ 5, Lemma 4.1 therefore gives, uniformly in the translation AN (σ, z ′ ),
+                                   Z
+                                               log |FPN (σ, z ′ , zQN )| dmQN (zQN )
+                                       TQN
+                                                   1      X
+                                               ≥     log     |ap |2 p−2σ − CKI .                      (67)
+                                                   2     p∈Q  N
+
+
+
+  The right-hand side of (67) is independent of z ′ . Integrating over TRN and using the product
+decomposition
+                                     dmd = dmRN dmQN ,
+together with Proposition 3.3, we obtain
+                           Z
+               JPN (σ) =           log |FPN (σ, z)| dmd (z)
+                               d
+                           ZT          Z                                               
+                       =                            log |FPN (σ, z , zQN )| dmQN (zQN ) dmRN (z ′ )
+                                                                       ′
+                               TRN         TQN
+                                                                           
+                           Z
+                                           1         X
+                       ≥                log               |ap |2 p−2σ − CKI  dmRN (z ′ )
+                               TRN         2        p∈QN
+                           1           X
+                       =     log     |ap |2 p−2σ − CKI ,
+                           2     p∈Q           N
+
+
+because mRN (TRN ) = 1.
+
+Proof of Theorem 2.2. We ﬁrst record that hypothesis (H2) automatically determines the scale
+of MN . For all suﬃciently large N , the inequalities in (9) force ap 6= 0 for every p ∈ QN . Since
+#QN → ∞, the set QN is nonempty for all suﬃciently large N ; choosing any p ∈ QN gives
+                                                     N
+                                                       < p ≤ MN ≤ N.
+                                                     2
+Consequently
+                                                         log 2   log MN
+                                                   1−          <        ≤ 1,                          (68)
+                                                        log N     log N
+and hence
+                                                         log MN
+                                                                −→ 1.                                 (69)
+                                                          log N
+Thus no separate growth assumption on MN is needed.
+  Set
+                                             JP (σ)
+                                    vN (σ) := N     .
+                                              log N
+By Proposition 3.6 and hypothesis (H1),
+                                                                  1
+                                           0 ≤ vN (σ) ≤               log EN (σ),                     (70)
+                                                              2 log N
+so
+                                               lim sup vN (σ) ≤ (α − σ)+ .                            (71)
+                                                   N →∞
+
+
+                                                                  17
+  Fix σ < α and choose a compact interval I ⊂ (−∞, α) containing σ. Recall from (10) that
+                                                    X
+                                        BN (σ) =              |ap |2 p−2σ .
+                                                    p∈QN
+
+For all suﬃciently large N , hypothesis (H2) and Proposition 5.1 give
+                                                 1                 CKI
+                               vN (σ) ≥              log BN (σ) −       .                  (72)
+                                             2 log N              log N
+Since the ﬁrst term tends to α − σ and the second tends to zero,
+
+                                         lim inf vN (σ) ≥ α − σ.
+                                            N →∞
+
+Together with (71), this proves
+
+                                   vN (σ) −→ α − σ                 (σ < α).                (73)
+
+For σ ≥ α, (70) and hypothesis (H1) give
+
+                                               vN (σ) −→ 0.                                (74)
+
+Thus vN converges pointwise on R to
+
+                                            V (σ) := (α − σ)+ .
+
+Each vN is ﬁnite and convex. By Rockafellar [20, Theorem 10.8], pointwise convergence of ﬁnite
+convex functions to the ﬁnite convex function V implies uniform convergence on compact subsets.
+This proves (12).
+  It remains to pass to the zero-density measures. By Proposition 3.7,
+                                                       1
+                                            µN :=         J ′′
+                                                    log MN PN
+is a probability measure. Let ϕ ∈ Cc∞ (R). Using the deﬁnition of the distributional derivative
+twice,
+                         Z
+                                                    1
+                              ϕ(σ) dµN (σ) =            hJ ′′ , ϕi
+                          R                      log MN PN
+                                                    1
+                                               =        hJPN , ϕ′′ i
+                                                 log MN
+                                                        Z
+                                                    1
+                                               =             JP (σ)ϕ′′ (σ) dσ
+                                                 log MN R N
+                                                        Z
+                                                  log N
+                                               =             vN (σ)ϕ′′ (σ) dσ.             (75)
+                                                 log MN R
+The support of ϕ′′ is compact, so local uniform convergence of vN and (69) imply
+                                        Z              Z
+                                  lim        ϕ dµN =          V (σ)ϕ′′ (σ) dσ.             (76)
+                                N →∞ R                    R
+
+Now V (σ) = α − σ for σ < α and V (σ) = 0 for σ > α. Let
+
+                                             V (σ) = (α − σ)+ .
+
+                                                     18
+For every ϕ ∈ Cc∞ (R),                                          Z α
+                                 hV ′′ , ϕi = hV, ϕ′′ i =               (α − σ)ϕ′′ (σ) dσ.
+                                                                 −∞
+Integrating by parts gives
+                    Z α                                                                 Z α
+                                                                                 α
+                          (α − σ)ϕ′′ (σ) dσ = (α − σ)ϕ′ (σ) −∞ +                               ϕ′ (σ) dσ.
+                     −∞                                                                  −∞
+
+The boundary term vanishes: at σ = α the factor α − σ is zero, while at −∞ one has ϕ′ (σ) = 0
+because ϕ has compact support. Hence
+                                   Z α                                    Z α
+                                                        ′′
+                                            (α − σ)ϕ (σ) dσ =                      ϕ′ (σ) dσ
+                                     −∞                                       −∞
+                                                                      = [ϕ(σ)]α−∞
+                                                                      = ϕ(α),
+again because ϕ(σ) = 0 for all suﬃciently negative σ. Therefore
+                                             hV ′′ , ϕi = ϕ(α) = hδα , ϕi,
+and hence
+                                                            V ′′ = δα
+in the sense of distributions, and (76) proves convergence against every test function in Cc∞ (R).
+To pass to arbitrary h ∈ Cc (R), choose ϕj ∈ Cc∞ (R) with kh − ϕj k∞ → 0. Since both µN and
+δα are probability measures,
+                Z
+                    (h − ϕj ) dµN ≤ kh − ϕj k∞ ,                      |h(α) − ϕj (α)| ≤ kh − ϕj k∞ .
+
+First choose j large and then let N → ∞. It follows that
+                                    Z
+                                         h dµN −→ h(α)                    (h ∈ Cc (R)),
+                                     R
+which is vague convergence µN → δα .
+   For completeness, this vague convergence is in fact weak. Choose ψ ∈ Cc (R) such that
+0 ≤ ψ ≤ 1 and ψ ≡ 1 on a neighborhood of α. Vague convergence gives
+                                              Z
+                                                   ψ dµN −→ ψ(α) = 1.
+                                               R
+Since each µN is a probability measure,
+                                     Z                                    Z
+                               0≤           (1 − ψ) dµN = 1 −                     ψ dµN −→ 0.
+                                        R                                     R
+Now let g be bounded and continuous. The product gψ belongs to Cc (R), so vague convergence
+yields                       Z
+                                             gψ dµN −→ g(α)ψ(α) = g(α).
+                                         R
+Moreover,                  Z                                        Z
+                                 g(1 − ψ) dµN ≤ kgk∞                      (1 − ψ) dµN −→ 0.
+                             R                                        R
+Therefore                                          Z
+                                                       g dµN −→ g(α),
+                                                   R
+which is precisely weak convergence to δα . This proves (13).
+
+                                                               19
+6     The Riemann zeta partial sums
+We now verify the hypotheses of Theorem 2.2 in the simplest case.
+
+Proof of Theorem 2.4. Here an = 1 for n ≤ N , so MN = N and
+                                                 X
+                                      EN (σ) =         n−2σ .                             (77)
+                                                 n≤N
+
+If σ < 1/2, the integral test (or Euler summation) gives
+
+                                         N 1−2σ
+                              EN (σ) =          + Oσ (1 + N −2σ ),                        (78)
+                                         1 − 2σ
+where the notation Oσ means that the implied constant may depend on σ, but not on N . Since
+σ < 1/2,
+                              1                N −2σ     1
+                             1−2σ
+                                    −→  0,       1−2σ
+                                                      =     −→ 0.
+                           N                   N         N
+Hence
+                                           N 1−2σ          
+                                 EN (σ) =          1 + o(1) ,
+                                           1 − 2σ
+and therefore
+                                    1                  1
+                                        log EN (σ) −→ − σ.
+                                2 log N                2
+At σ = 1/2,
+                                   EN (1/2) = log N + O(1),
+and for σ > 1/2 the sums are bounded above and below by positive constants. Hence hypothesis
+(H1) holds with
+                                              1
+                                          α= .
+                                              2
+    Let
+                               PN := {p prime : N/2 < p ≤ N }.                            (79)
+The prime number theorem gives
+                                                                  
+                                                           1          N
+                         #PN = π(N ) − π(N/2) =              + o(1)       .               (80)
+                                                           2        log N
+
+Let I ⊂ R be compact and put MI := maxτ ∈I |τ |. If p, q ∈ (N/2, N ] and σ ∈ I, then
+
+                                               p−σ
+                                      2−MI ≤        ≤ 2MI .                               (81)
+                                               q −σ
+
+Thus the corresponding coeﬃcients are uniformly comparable. Moreover, for every p ∈ (N/2, N ],
+
+                         2−2MI N −2σ ≤ p−2σ ≤ 22MI N −2σ           (σ ∈ I).
+
+Consequently                                        X
+                  2−2MI N −2σ #PN ≤ BN (σ) :=              p−2σ ≤ 22MI N −2σ #PN .        (82)
+                                                 p∈PN
+
+
+                                               20
+If I ⊂ (−∞, 1/2), then (80) and (82) give, uniformly for σ ∈ I,
+                                                                                       
+                       1                         1                                1
+                           log BN (σ) = −σ +         log #PN + OI
+                   2 log N                   2 log N                            log N
+                                         1
+                                      −→ − σ.
+                                         2
+In particular,
+                                         BN (σ) = N 1−2σ+o(1)                                 (83)
+at exponent level for every ﬁxed σ < 1/2. Taking the abstract set QN in Theorem 2.2 to be PN ,
+hypothesis (H2) follows. Theorem 2.2 now proves both (14) and (15).
+
+    Combining Theorem 2.4 with Proposition 3.4 gives the direct density formulation.
+Corollary 6.1 (Critical-line concentration for ζN ). For every ε > 0,
+                 2π        1
+           lim        lim    # {ρ = β + iγ : ζN (ρ) = 0, |β − 1/2| ≥ ε, |γ| < T } = 0,        (84)
+          N →∞ log N T →∞ 2T
+
+with the usual convention of avoiding boundary lines carrying zero frequency.
+Remark 6.2. Corollary 6.1 does not imply that all zeros approach Re s = 1/2. Mora’s theorem
+[18] shows that, for suﬃciently large ﬁxed N , real parts of zeros are dense throughout the
+admissible critical strip. The two statements are compatible: Mora describes support, whereas
+(84) describes normalized vertical mass.
+
+
+7     Dirichlet L-functions
+Let χ be a ﬁxed Dirichlet character modulo q. Recall that
+                                           |χ(n)|2 = 1(n,q)=1 .
+We write ϕ(q) = #(Z/qZ)× for Euler’s totient function and µ for the Möbius function, deﬁned
+by µ(1) = 1, µ(n) = (−1)r if n is a product of r distinct primes, and µ(n) = 0 if n is divisible by
+the square of a prime.
+Lemma 7.1. For ﬁxed q and σ ∈ R,
+                                  X                        X
+                                        |χ(n)|2 n−2σ =             n−2σ .                     (85)
+                                  n≤N                     n≤N
+                                                         (n,q)=1
+
+If σ < 1/2, then
+                             X                 ϕ(q) N 1−2σ
+                                      n−2σ =               + oq,σ (N 1−2σ ),                  (86)
+                             n≤N
+                                                q 1 − 2σ
+                            (n,q)=1
+
+where the notation oq,σ (N 1−2σ ) means that, for ﬁxed q and σ, the ratio of the error term to
+N 1−2σ tends to 0 as N → ∞.
+At σ = 1/2,
+                                   X 1      ϕ(q)
+                                         =       log N + Oq (1),                           (87)
+                                  n≤N
+                                       n      q
+                                 (n,q)=1
+
+and for σ > 1/2 the sums remain bounded as N → ∞.
+
+                                                    21
+Proof. Inclusion–exclusion gives
+                                         X                       X                  
+                                                                                       x
+                       Aq (x) :=                 1(n,q)=1 =            µ(d)
+                                         n≤x                     d|q
+                                                                                       d
+                                                                              
+                                          X µ(d)                     X                     ϕ(q)
+                                =x                       +O               1 =                 x + Oq (1).           (88)
+                                           d|q
+                                                    d                d|q
+                                                                                            q
+
+Set cq := ϕ(q)/q. For σ 6= 0, Abel summation yields
+                        X                                                      Z N
+                                    −2σ                        −2σ
+                                n         = Aq (N )N                 + 2σ                  Aq (x)x−2σ−1 dx.           (89)
+                       n≤N                                                         1
+                      (n,q)=1
+
+Substituting Aq (x) = cq x + Oq (1) gives
+                        X                                                   Z N
+                                    −2σ                 1−2σ
+                                n          = cq N              + 2σcq                  x−2σ dx
+                       n≤N                                                     1
+                      (n,q)=1
+                                                                                       Z N                   !
+                                                           −2σ                                     −2σ−1
+                                               + Oq (N           ) + Oq,σ                      x            dx .      (90)
+                                                                                           1
+
+Suppose ﬁrst that σ < 1/2 and σ 6= 0. Since
+                                              Z N
+                                                                       N 1−2σ − 1
+                                                    x−2σ dx =                     ,
+                                               1                        1 − 2σ
+the two main terms in (90) combine to
+                                         2σcq                   cq
+                    cq N 1−2σ +                (N 1−2σ − 1) =        N 1−2σ + Oq,σ (1).
+                                        1 − 2σ                1 − 2σ
+
+The remaining terms are oq,σ (N 1−2σ ): indeed, N −2σ /N 1−2σ = N −1 , while
+                                                                
+                                Z N                             Oσ (1),
+                                                                
+                                                                                              σ > 0,
+                                              −2σ−1
+                                          x             dx =      O(log N ),                   σ = 0,
+                                    1                           
+                                                                
+                                                                O (N −2σ ),                   σ < 0,
+                                                                       σ
+
+
+and each of these is o(N 1−2σ ). The case σ = 0 follows directly from (88). This proves (86).
+  At σ = 1/2, partial summation gives
+                                                         Z N
+                       X       1   Aq (N )                      Aq (x)
+                                 =         +                           dx
+                      n≤N
+                               n     N                    1      x2
+                     (n,q)=1
+                                                                           Z N                       Z N          !
+                                                          −1                       dx                        dx
+                                    = cq + Oq (N               ) + cq                 + Oq
+                                                                           1       x                    1    x2
+                                    = cq log N + Oq (1),
+
+
+
+                                                                 22
+which is (87). Finally, if σ > 1/2,
+
+                                        X                       ∞
+                                                                X
+                                                     −2σ
+                                  0≤             n         ≤          n−2σ < ∞,
+                                        n≤N                     n=1
+                                       (n,q)=1
+
+so the partial sums are bounded.
+
+Proof of Theorem 2.5. Lemma 7.1 veriﬁes hypothesis (H1) with α = 1/2.
+  Let PN be the dyadic prime set deﬁned in (79). For N > 2q and p ∈ PN , one has p > q and
+hence p ∤ q, so |χ(p)| = 1. Write χ(p) = eiϑp . Since the rotation zp 7→ eiϑp zp preserves normalized
+Haar measure on T, the block               X
+                                                χ(p)p−σ zp
+                                            p∈PN
+
+has the same distribution under Haar measure as
+                                                 X
+                                                           p−σ zp .
+                                                 p∈PN
+
+Consequently, for p, r ∈ PN and σ in a compact interval I,
+
+                                   |χ(p)|p−σ    p−σ
+                                              =      ≤ 2maxτ ∈I |τ | ,
+                                   |χ(r)|r −σ   r −σ
+
+and                         X                          X
+                                  |χ(p)|2 p−2σ =                p−2σ = N 1−2σ+o(1)
+                           p∈PN                        p∈PN
+
+locally uniformly for σ < 1/2, by the zeta calculation. Taking the abstract set QN to be PN
+veriﬁes hypothesis (H2).
+   Among any q consecutive integers there is an integer congruent to 1 modulo q, hence coprime
+to q. Therefore
+                                   N − q + 1 ≤ MN,χ ≤ N,                                   (91)
+and
+                                            log MN,χ
+                                                     −→ 1.
+                                              log N
+Theorem 2.2 now gives (16) and (17).
+
+Remark 7.2. The argument makes no distinction between principal and nonprincipal characters.
+In particular, the pole of the limiting principal L-function at s = 1 has no eﬀect on the vertical
+mean-motion exponent of its ﬁnite truncations.
+
+
+8     Holomorphic modular forms
+Let f be the ﬁxed primitive holomorphic Hecke eigenform introduced in Section 2: it has even
+weight k ≥ 2, ﬁxed level Q, trivial Dirichlet character, and no complex multiplication. Its
+normalized coeﬃcients are λf (n) = af (n)n−(k−1)/2 .
+
+
+
+                                                           23
+8.1   Rankin–Selberg quadratic energy
+The classical Rankin–Selberg theorem of Rankin [19] and Selberg [24] gives
+                                         X
+                        Af (x) :=             |λf (n)|2 = cf x + Of (x3/5 ),                cf > 0.               (92)
+                                        n≤x
+
+Lemma 8.1 (Weighted Rankin–Selberg energy). For ﬁxed σ < 1/2,
+                   X                      cf
+                       |λf (n)|2 n−2σ =        N 1−2σ + of,σ (N 1−2σ ).                                           (93)
+                   n≤N
+                                        1 − 2σ
+
+At σ = 1/2,
+                                         X |λf (n)|2
+                                                          = cf log N + Of (1),                                    (94)
+                                        n≤N
+                                                  n
+and for σ > 1/2 the weighted partial sums remain bounded.
+
+Proof. For σ 6= 0, Abel summation gives
+                     X                                                          Z N
+                         |λf (n)|2 n−2σ = Af (N )N −2σ + 2σ                           Af (x)x−2σ−1 dx.            (95)
+                   n≤N                                                           1
+
+Insert (92). The contribution of the main term cf x is
+                                           Z N
+                        1−2σ                                                          2σcf
+                 cf N          + 2σcf            x−2σ dx = cf N 1−2σ +                      (N 1−2σ − 1)
+                                             1                                       1 − 2σ
+                                                                    cf
+                                                              =          N 1−2σ + Of,σ (1).
+                                                                  1 − 2σ
+The contribution of the error Of (x3/5 ) is
+                                                                    Z N                   !
+                                           3/5−2σ                           −2/5−2σ
+                                   Of (N            ) + Of,σ                x           dx .                      (96)
+                                                                    1
+
+The ﬁrst term divided by N 1−2σ is Of (N −2/5 ). For the integral term there are three cases:
+                                                    
+                                                           3/5−2σ ),
+                                                    Oσ (N                       σ < 3/10,
+                        Z N                         
+                                                    
+                                   −2/5−2σ
+                               x             dx =     O(log N ),                 σ = 3/10,
+                         1                          
+                                                    
+                                                    O (1),                      3/10 < σ < 1/2.
+                                                          σ
+
+After division by N 1−2σ these are respectively O(N −2/5 ), O(N −2/5 log N ), and O(N −(1−2σ) ), all
+tending to zero. This proves (93); the case σ = 0 follows directly from (92).
+   At σ = 1/2, partial summation yields
+               X |λf (n)|2                          Z N
+                                        Af (N )           Af (x)
+                                    =           +                dx
+               n≤N
+                         n                N           1    x2
+                                                                       Z N                  Z N               !
+                                                      −2/5                      dx                −7/5
+                                    = cf + Of (N              ) + cf               + Of           x      dx
+                                                                        1       x             1
+
+                                    = cf log N + Of (1),
+proving (94). Finally, if σ > 1/2, then Af (x) ≪f x, and the same partial-summation formula
+                             P
+shows that the inﬁnite series n≥1 |λf (n)|2 n−2σ converges.
+
+                                                               24
+  It follows from Lemma 8.1 that
+                                                                            
+                              1       X                               1
+                                  log     |λf (n)|2 n−2σ −→             −σ        .            (97)
+                          2 log N     n≤N
+                                                                      2       +
+
+
+
+8.2     Sato–Tate and isolated prime coordinates
+Let p ∤ Q be prime. The Ramanujan–Petersson theorem for holomorphic forms, proved by
+Deligne [6], gives |af (p)| ≤ 2p(k−1)/2 . Because the Dirichlet character is trivial, the normalized
+Hecke eigenvalue λf (p) is real. Hence there is an angle θp ∈ [0, π] such that
+
+                                          λf (p) = 2 cos θp .                                  (98)
+
+   Since f has no complex multiplication, the Sato–Tate theorem [2, Corollary 7.1.7] states that
+the angles θp , over unramiﬁed primes, are equidistributed on [0, π] with respect to
+                                                     2
+                                        dµST (θ) =     sin2 θ dθ.                              (99)
+                                                     π
+Equivalently, the values λf (p) = 2 cos θp are distributed on [−2, 2] according to the semicircle
+measure
+                                                1 p
+                                   dνST (x) =        4 − x2 dx.                            (100)
+                                               2π
+Let
+                     A := {x ∈ [−2, 2] : 1 ≤ |x| ≤ 2},      η := νST (A) > 0.
+The boundary of A has νST -measure zero. Therefore [2, Corollary 7.1.7] gives
+
+                      #{p ≤ x : p ∤ Q, 1 ≤ |λf (p)| ≤ 2} = η π(x) + o(π(x)).                  (101)
+
+Applying this at x = N and x = N/2, and using the prime number theorem, yields
+                                                                                     
+                                                                          η          N
+                 #{N/2 < p ≤ N : p ∤ Q, 1 ≤ |λf (p)| ≤ 2} =                 + o(1)       .    (102)
+                                                                          2        log N
+Deﬁne
+                       PN,f := {p : N/2 < p ≤ N, p ∤ Q, 1 ≤ |λf (p)| ≤ 2}.                    (103)
+Then #PN,f → ∞.
+   Let I ⊂ R be compact and put MI := maxτ ∈I |τ |. If p, r ∈ PN,f and σ ∈ I, then 1 ≤
+|λf (p)|, |λf (r)| ≤ 2 and 1/2 < p/r < 2. Hence
+
+                                    1      |λf (p)|p−σ
+                                         ≤              ≤ 2MI +1 .                            (104)
+                                  2MI +1   |λf (r)|r −σ
+
+Thus the isolated weights are uniformly comparable. Moreover, for σ < 1/2,
+                                                X
+                                 BN,f (σ) :=            |λf (p)|2 p−2σ .                      (105)
+                                               p∈PN,f
+
+Since 1 ≤ |λf (p)|2 ≤ 4 and N/2 < p ≤ N ,
+
+                        2−2|σ| N −2σ #PN,f ≪σ BN,f (σ) ≪σ N −2σ #PN,f .
+
+                                                  25
+Together with (102), this gives
+                                        BN,f (σ) = N 1−2σ+o(1) ,                             (106)
+with the o(1) uniform for σ in compact subsets of (−∞, 1/2). Hence
+                                        1                  1
+                                            log BN,f (σ) −→ − σ                              (107)
+                                    2 log N                2
+
+locally uniformly on (−∞, 1/2).
+
+8.3   Proof of the modular theorem
+Proof of Theorem 2.6. Equation (97) veriﬁes hypothesis (H1) with α = 1/2. Taking the abstract
+set QN to be PN,f , equations (104) and (107) verify hypothesis (H2).
+   By (102), for all suﬃciently large N there is a prime p ∈ (N/2, N ] with λf (p) 6= 0. Conse-
+quently
+                                                    log MN,f
+                            N/2 < MN,f ≤ N,                  −→ 1.
+                                                      log N
+Theorem 2.2 now gives (21) and (22).
+  Finally, from af (n) = λf (n)n(k−1)/2 ,
+                                                 X
+                                  LN (s, f ) =         af (n)n−s
+                                                 n≤N
+                                                 X
+                                            =          λf (n)n−(s−(k−1)/2)
+                                                 n≤N
+                                                                   
+                                                          k−1
+                                            = LN       s−     ,f .                           (108)
+                                                           2
+
+Thus the real parts of all zeros are translated by (k − 1)/2, and the concentration line Re w = 1/2
+in the normalized variable w = s − (k − 1)/2 becomes
+
+                                                  1 k−1  k
+                                        Re s =      +   = .
+                                                  2   2  2
+
+
+Corollary 8.2. In particular, Theorem 2.6 applies to every normalized holomorphic Hecke cusp
+eigenform for SL2 (Z). Zero-density concentration occurs on Re s = 1/2 for the normalized Hecke-
+eigenvalue truncations and on Re s = k/2 for the classical Fourier-coeﬃcient truncations.
+
+
+9     Conclusion
+We have proved a general criterion that converts quadratic coeﬃcient growth, together with a
+suﬃciently large family of isolated prime coordinates, into concentration of normalized vertical
+zero density on a single line. The Bohr–Jessen identity turns the vertical logarithmic mean into
+a torus Mahler measure, while the translation-uniform Steinhaus estimate prevents the isolated
+linear block from spending excessive Haar measure near zero. The resulting lower bound matches
+the elementary L2 upper bound at logarithmic scale.
+
+
+                                                       26
+  The limiting potential is
+                                          Vα (σ) = (α − σ)+ ,
+whose unique corner gives Vα′′ = δα . For the partial sums of the Riemann zeta function and of
+ﬁxed Dirichlet L-functions, α = 1/2. Rankin–Selberg and Sato–Tate give the same value for
+normalized holomorphic Hecke eigenforms of ﬁxed level without complex multiplication; in the
+classical Fourier-coeﬃcient normalization the corresponding line is Re s = k/2.
+The present argument is intrinsically formulated in the Jessen mean-motion regime, with T → ∞
+for each ﬁxed N before N → ∞. A coupled (N, T ) limit would require quantitative control of
+the passage from vertical averages to Haar averages that is uniform in the growing frequency set
+{log p : p ≤ N }, and no such uniform estimate is used here.
+
+   The conclusion is compatible with the much wider support of individual zeros for a ﬁxed
+truncation: concentration of normalized vertical density is a measure-theoretic statement and
+does not assert geometric concentration of the entire zero set.
+
+
+References
+ [1] V. Andersson, The Littlewood–Paley formula and mean counting function for vertical limits of Dirich-
+     let series, preprint (2026), arXiv:2606.20293.
+
+ [2] T. Barnet-Lamb, T. Gee and D. Geraghty, The Sato–Tate conjecture for Hilbert modular forms, J.
+     Amer. Math. Soc. 24 (2011), no. 2, 411–469, doi:10.1090/S0894-0347-2010-00689-3.
+
+ [3] D. W. Boyd, Mahler’s measure and special values of L-functions, Experiment. Math. 7 (1998), no. 1,
+     37–82, doi:10.1080/10586458.1998.10504357.
+
+ [4] P. Borwein, G. Fee, R. Ferguson and A. van der Waall, Zeros of partial sums of the Riemann zeta
+     function, Experiment. Math. 16 (2007), no. 1, 21–39, doi:10.1080/10586458.2007.10128981.
+
+ [5] J. B. Conway, Functions of One Complex Variable I, 2nd ed., Graduate Texts in Mathematics, vol. 11,
+     Springer-Verlag, New York, 1978.
+
+ [6] P. Deligne, La conjecture de Weil. I, Publ. Math. Inst. Hautes Ètudes Sci. 43 (1974), 273–307,
+     doi:10.1007/BF02684373.
+
+ [7] E. Dubon, A note on the density of zeros of partial sums of the Dirichlet lambda, beta and eta
+     functions, Eur. J. Math. 11 (2025), Paper No. 29, doi:10.1007/s40879-025-00821-0.
+
+ [8] G. B. Folland, Real Analysis: Modern Techniques and Their Applications, 2nd ed., Wiley, New York,
+     1999.
+
+ [9] S. M. Gonek and A. H. Ledoan, Zeros of partial sums of the Riemann zeta-function, Int. Math. Res.
+     Not. IMRN (2010), no. 10, 1775–1791, doi:10.1093/imrn/rnp186.
+
+[10] E. K. Haviland and A. Wintner, A note on the Kronecker–Weyl theorem, Amer. J. Math. 56 (1934),
+     no. 1, 17–24, doi:10.2307/2370908.
+
+[11] H. Iwaniec, Topics in Classical Automorphic Forms, Graduate Studies in Mathematics, vol. 17,
+     American Mathematical Society, Providence, RI, 1997.
+
+[12] B. Jessen and H. Tornehave, Mean motions and zeros of almost periodic functions, Acta Math. 77
+     (1945), 137–279.
+
+
+                                                  27
+[13] J.-P. Kahane, Some Random Series of Functions, 2nd ed., Cambridge Studies in Advanced Mathe-
+     matics, vol. 5, Cambridge University Press, Cambridge, 1985.
+
+[14] B. Kerr, O. Klurman and J. Thorner, Zeros of L-functions and large partial sums of Dirichlet
+     coeﬃcients, Math. Ann. 396 (2026), no. 1, Article 23, doi:10.1007/s00208-026-03542-1.
+
+[15] A. Ledoan, A. Roy and A. Zaharescu, Zeros of partial sums of the Dedekind zeta function of a
+     cyclotomic ﬁeld, J. Number Theory 136 (2014), 118–133, doi:10.1016/j.jnt.2013.09.003.
+
+[16] J. Li, A. Roy and A. Zaharescu, Zeros of a family of approximations of Hecke L-functions associated
+     with cusp forms, Ramanujan J. 41 (2016), no. 1–3, 391–419, doi:10.1007/s11139-016-9791-3.
+
+[17] H. L. Montgomery, Zeros of approximations to the zeta function, in Studies in Pure Mathematics:
+     To the Memory of Paul Turán, Birkhäuser, Basel, 1983, 497–506.
+
+[18] G. Mora, On the asymptotically uniform distribution of the zeros of the partial sums of the Riemann
+     zeta function, J. Math. Anal. Appl. 403 (2013), no. 1, 120–128, doi:10.1016/j.jmaa.2013.02.006.
+
+[19] R. A. Rankin, Contributions to the theory of Ramanujan’s function τ (n) and similar arithmetical
+     functions. II. The order of the Fourier coeﬃcients of integral modular forms, Proc. Cambridge Philos.
+     Soc. 35 (1939), 357–372, doi:10.1017/S0305004100021101.
+
+[20] R. T. Rockafellar, Convex Analysis, Princeton Mathematical Series, vol. 28, Princeton University
+     Press, Princeton, NJ, 1970.
+
+[21] A. Roy and A. Vatwani, Zeros of partial sums of L-functions, Adv. Math. 346 (2019), 467–509,
+     doi:10.1016/j.aim.2019.02.009.
+
+[22] A. Roy and A. Vatwani, Zeros of Dirichlet polynomials, Trans. Amer. Math. Soc. 374 (2021), no. 1,
+     643–661, doi:10.1090/tran/8261.
+
+[23] W. Rudin, Fourier Analysis on Groups, Interscience Publishers, New York, 1962.
+
+[24] A. Selberg, Bemerkungen über eine Dirichletsche Reihe, die mit der Theorie der Modulformen nahe
+     verbunden ist, Arch. Math. Naturvid. 43 (1940), 47–50.
+
+[25] G. N. Watson, A Treatise on the Theory of Bessel Functions, 2nd ed., Cambridge University Press,
+     Cambridge, 1944.
+
+
+
+
+                                                   28
+

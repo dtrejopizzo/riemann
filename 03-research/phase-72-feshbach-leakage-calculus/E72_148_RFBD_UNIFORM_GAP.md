@@ -1,7 +1,6 @@
 # E72.148 -- RFBD uniform-gap stress test
 
-**Date:** 2026-07-09.
-**Role:** test whether the relative arithmetic gap is genuinely uniform or marginal.
+**Purpose:** test whether the relative arithmetic gap is genuinely uniform or marginal.
 
 ## 0. Question
 

@@ -1,6 +1,5 @@
 # E73.302 - Neutral curvature weight collapse
 
-Date: 2026-07-16.
 
 ## 1. Purpose
 

@@ -1,6 +1,6 @@
 # 115.03 — The literature, read against the blueprint
 
-Search run 2026-08-08 against the four load paths of `115_02`, not as a general
+Search run against the four load paths of `115_02`, not as a general
 survey.  Local sources in `00-references/` were read where available; the rest
 from arXiv abstracts and introductions.
 
@@ -74,7 +74,7 @@ And the defining property (Krein–Langer): \(g\) is a screw function iff
    Weil operator has a closed form with a *continuous* kernel.  Section 8
    reduces \(Q_W^a(v)=\langle A_av,v\rangle\) to \(\langle G_au,u\rangle\) —
    "treatable within the theory of integral operators with continuous kernels".
-   Compare our own `115_04` result from the previous session, which reached a
+   Compare our own `115_04` result from the previous phase, which reached a
    quadrature-free closed form for the same operator by a different route.
 
 2. **Theorem 1.3 — \(\lambda_a\) is continuous in \(a\), proved
@@ -88,7 +88,7 @@ And the defining property (Krein–Langer): \(g\) is a screw function iff
     \lambda_a=\log\tfrac1a+\mu_1-\log(2\pi)+\psi(2)-1+O(a),
    \]
    with \(\lambda_a\) simple and the eigenfunction even.  Consistent with the
-   diagnostic measurements of the previous session
+   diagnostic measurements of the previous phase
    (\(\lambda_{\min}\) decreasing in \(T\); \(1.09\cdot10^{-7}\) at
    \(T=\log2\)), though those are at \(a\) far from the asymptotic regime.
 

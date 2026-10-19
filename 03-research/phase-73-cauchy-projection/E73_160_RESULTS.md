@@ -1,6 +1,5 @@
 # E73.160 Results - Scalar dual cancellation audit
 
-Date: 2026-07-12.
 
 Script:
 

@@ -1,8 +1,8 @@
-# 104_99 — Eratóstenes exacto, identidad de paridad y gate energético
+# 104_99 — Exact Eratosthenes, parity identity and energy gate
 
-## Resultado
+## Result
 
-Sea
+Let
 
 \[
  P(z)=\prod_{p\le z}p,
@@ -11,16 +11,16 @@ Sea
  \tag{1}
 \]
 
-donde \(x\ge2\) es real y las funciones de conteo usan
-\(n\le\lfloor x\rfloor\). La inclusión--exclusión de Eratóstenes da
+where \(x\ge2\) is real and the counting functions use
+\(n\le\lfloor x\rfloor\). Eratosthenes' inclusion--exclusion gives
 
 \[
  \Phi(x,z)=\sum_{d\mid P(z)}\mu(d)\left\lfloor{x\over d}\right\rfloor.
  \tag{2}
 \]
 
-En el corte natural \(z=\sqrt x\), los únicos enteros contados son \(1\)
-y los primos de \((\sqrt x,x]\). Por tanto
+At the natural cutoff \(z=\sqrt x\), the only integers counted are \(1\)
+and the primes in \((\sqrt x,x]\). Hence
 
 \[
  \boxed{
@@ -30,7 +30,7 @@ y los primos de \((\sqrt x,x]\). Por tanto
  \tag{3}
 \]
 
-Poniendo
+Setting
 
 \[
  V(z)=\prod_{p\le z}\left(1-{1\over p}\right),
@@ -40,7 +40,7 @@ Poniendo
  \tag{4}
 \]
 
-se obtiene la identidad firmada completa
+one obtains the complete signed identity
 
 \[
  \boxed{
@@ -50,10 +50,10 @@ se obtiene la identidad firmada completa
  \tag{5}
 \]
 
-No se tomó valor absoluto y no se separaron las torres: toda la
-correlación de Eratóstenes permanece en \(R_E\). Sin embargo, (5) no da
-una estimación nueva. Al insertarla en la energía de `104_94`, la cota
-que falta es exactamente
+No absolute value was taken and the prime-power towers were not split: all the
+Eratosthenes correlation remains in \(R_E\). However, (5) does not give
+a new estimate. Inserting it into the energy of `104_94`, the missing
+bound is exactly
 
 \[
  \sum_{m\le N}{{R_E(m,\sqrt m)+mV(\sqrt m)+\pi(\sqrt m)-1
@@ -61,12 +61,12 @@ que falta es exactamente
  \tag{6}
 \]
 
-El término \(\pi(\sqrt m)-1\) tiene energía finita, pero la cancelación
-entre \(R_E(m,\sqrt m)\), \(mV(\sqrt m)\) y
-\(\mathrm{Li}_2(m)\) conserva íntegro el contenido de RH.
+The term \(\pi(\sqrt m)-1\) has finite energy, but the cancellation
+between \(R_E(m,\sqrt m)\), \(mV(\sqrt m)\) and
+\(\mathrm{Li}_2(m)\) preserves the full content of RH.
 
-Hay además una identidad exacta que localiza la barrera de paridad dentro
-del residuo completo. Sea
+There is also an exact identity that localizes the parity barrier within
+the complete residue. Let
 
 \[
  \lambda_L(n)=(-1)^{\Omega(n)},
@@ -75,7 +75,7 @@ del residuo completo. Sea
  \tag{7}
 \]
 
-con \(L(y)=L(\lfloor y\rfloor)\). Entonces
+with \(L(y)=L(\lfloor y\rfloor)\). Then
 
 \[
  \boxed{
@@ -84,7 +84,7 @@ con \(L(y)=L(\lfloor y\rfloor)\). Entonces
  \tag{8}
 \]
 
-En particular, quitando de nuevo el bloque de energía finita,
+In particular, again removing the finite-energy block,
 
 \[
  \boxed{
@@ -95,13 +95,13 @@ En particular, quitando de nuevo el bloque de energía finita,
  \tag{9}
 \]
 
-La equivalencia (9) no es una prueba de su lado derecho. Expone qué debe
-cancelarse en una prueba por Eratóstenes: la suma **completa**, hasta el
-nivel \(d\asymp x\), de los primitivos de Liouville.
+Equivalence (9) is not a proof of its right-hand side. It exposes what must
+cancel in a proof by Eratosthenes: the **complete** sum, up to
+level \(d\asymp x\), of the Liouville primitives.
 
-Finalmente, toda truncación estable a nivel
-\(D\le x^{1-\eta}\), con \(\eta>0\) fijo, queda descartada por un
-falsificador cuantitativo. Las dos sucesiones no negativas
+Finally, every stable truncation at level
+\(D\le x^{1-\eta}\), with \(\eta>0\) fixed, is ruled out by a
+quantitative falsifier. The two nonnegative sequences
 
 \[
  a_n^+=1+\lambda_L(n),
@@ -110,41 +110,41 @@ falsificador cuantitativo. Las dos sucesiones no negativas
  \tag{10}
 \]
 
-tienen datos de divisibilidad indistinguibles a cualquier potencia de
-\(1/\log x\) en ese nivel, pero sus masas cribadas en \(z=\sqrt x\)
-difieren en escala \(x/\log x\). Así, Brun, Selberg o una
-inclusión--exclusión lineal cuyos coeficientes crezcan a lo sumo como una
-potencia de \(\log x\) no pueden producir (6) desde datos truncados.
+have divisibility data indistinguishable to any power of
+\(1/\log x\) at that level, but their sifted masses at \(z=\sqrt x\)
+differ at scale \(x/\log x\). Thus, Brun, Selberg or a linear
+inclusion--exclusion whose coefficients grow at most as a
+power of \(\log x\) cannot produce (6) from truncated data.
 
-Este documento prueba un **no-go de nivel de distribución incompleto** y
-la reducción exacta (8)--(9). No prueba que una identidad global y
-específica de los primos ordinarios sea imposible. Tampoco prueba (6),
-Deep-\(\Lambda\), A1 ni RH.
+This document proves an **incomplete-level-of-distribution no-go** and
+the exact reduction (8)--(9). It does not prove that a global identity
+specific to the ordinary primes is impossible. Nor does it prove (6),
+Deep-\(\Lambda\), A1 nor RH.
 
 ---
 
-## 1. Eratóstenes sin pérdida de correlación
+## 1. Eratosthenes without loss of correlation
 
-Para cada \(n\),
+For each \(n\),
 
 \[
  {\mathbf 1}_{(n,P(z))=1}=\sum_{d\mid(n,P(z))}\mu(d).
  \tag{11}
 \]
 
-Sumar (11) para \(1\le n\le x\) prueba (2), con sumas finitas. Si
-\(z=\sqrt x\) y \(1<n\le x\) es compuesto, posee un divisor primo
-\(p\le\sqrt n\le\sqrt x\), y por ello no es contado por \(\Phi\). Si es
-primo y excede \(\sqrt x\), sí es contado. Luego
+Summing (11) for \(1\le n\le x\) proves (2), with finite sums. If
+\(z=\sqrt x\) and \(1<n\le x\) is composite, it has a prime divisor
+\(p\le\sqrt n\le\sqrt x\), and is therefore not counted by \(\Phi\). If it is
+prime and exceeds \(\sqrt x\), it is counted. Hence
 
 \[
  \Phi(x,\sqrt x)=1+\pi(x)-\pi(\sqrt x),
  \tag{12}
 \]
 
-que junto con (2) prueba (3).
+which, together with (2), proves (3).
 
-Al separar en (2) piso y término continuo,
+Splitting (2) into floor and continuous term,
 
 \[
  \sum_{d\mid P(z)}{\mu(d)\over d}=V(z),
@@ -153,29 +153,29 @@ Al separar en (2) piso y término continuo,
  \tag{13}
 \]
 
-Las ecuaciones (12)--(13) prueban (5). Es importante no estimar
-\(R_E\) término a término: la cota
+Equations (12)--(13) prove (5). It is important not to estimate
+\(R_E\) term by term: the bound
 
 \[
  |R_E(x,\sqrt x)|\le 2^{\pi(\sqrt x)}
  \tag{14}
 \]
 
-destruye exactamente la cancelación buscada. Tampoco basta Mertens:
-\(xV(\sqrt x)\sim2e^{-\gamma}x/\log x\), de modo que el residuo debe
-cancelar ya un término de orden \(x/\log x\) antes de ver la fluctuación
-de escala crítica.
+destroys exactly the cancellation being sought. Mertens alone is also
+not enough: \(xV(\sqrt x)\sim2e^{-\gamma}x/\log x\), so the residue must
+already cancel a term of order \(x/\log x\) before one sees the
+critical-scale fluctuation.
 
-## 2. Identidad exacta de paridad
+## 2. Exact parity identity
 
-Considere los datos de divisibilidad de (10),
+Consider the divisibility data from (10),
 
 \[
  A_d^\pm(x)=\sum_{\substack{n\le x\\d\mid n}}a_n^\pm.
  \tag{15}
 \]
 
-La función de Liouville es completamente multiplicativa, y por tanto
+The Liouville function is completely multiplicative, and therefore
 
 \[
  \boxed{
@@ -184,15 +184,14 @@ La función de Liouville es completamente multiplicativa, y por tanto
  \tag{16}
 \]
 
-Cribe ahora ambas sucesiones con todos los primos \(p\le\sqrt x\):
+Now sift both sequences with all primes \(p\le\sqrt x\):
 
 \[
  S^\pm(x)=\sum_{\substack{n\le x\\(n,P(\sqrt x))=1}}a_n^\pm.
  \tag{17}
 \]
 
-Por (12), solo sobreviven \(1\) y los primos mayores que \(\sqrt x\).
-Como
+By (12), only \(1\) and the primes greater than \(\sqrt x\) survive. Since
 
 \[
  a_1^+=2,\quad a_1^-=0,\qquad
@@ -200,7 +199,7 @@ Como
  \tag{18}
 \]
 
-se tiene exactamente
+one has exactly
 
 \[
  S^+(x)=2,\qquad
@@ -208,7 +207,7 @@ se tiene exactamente
  \tag{19}
 \]
 
-Por otro lado, inclusión--exclusión y (16) dan
+On the other hand, inclusion--exclusion and (16) give
 
 \[
 \begin{aligned}
@@ -221,18 +220,18 @@ Por otro lado, inclusión--exclusión y (16) dan
  \tag{20}
 \]
 
-Cada divisor de \(P(\sqrt x)\) es *squarefree*, luego
-\(\lambda_L(d)=\mu(d)\) y \(\mu(d)\lambda_L(d)=1\). Comparar
-(19) y (20) prueba (8).
+Every divisor of \(P(\sqrt x)\) is squarefree, so
+\(\lambda_L(d)=\mu(d)\) and \(\mu(d)\lambda_L(d)=1\). Comparing
+(19) and (20) proves (8).
 
-Éste es el lugar exacto de la paridad: los signos de Möbius de
-Eratóstenes son absorbidos por los signos de Liouville y dejan una suma
-global sin coeficientes. Truncarla antes del nivel completo pierde la
-masa que distingue (19).
+This is the exact location of parity: the Möbius signs of
+Eratosthenes are absorbed by the Liouville signs and leave a
+global sum with no coefficients. Truncating it before the full level loses
+the mass that distinguishes (19).
 
-## 3. Traducción a la energía ordinaria
+## 3. Translation into the ordinary energy
 
-Defina
+Define
 
 \[
  T_m=\sum_{d\mid P(\sqrt m)}L(m/d),
@@ -240,7 +239,7 @@ Defina
  \tag{21}
 \]
 
-La identidad (8) equivale a
+Identity (8) is equivalent to
 
 \[
  \pi(m)-\mathrm{Li}_2(m)
@@ -248,34 +247,34 @@ La identidad (8) equivale a
  \tag{22}
 \]
 
-La cota elemental de Chebyshev da
+The elementary Chebyshev bound gives
 
 \[
  H_m\ll1+{\sqrt m\over\log(2m)}.
  \tag{23}
 \]
 
-Por consiguiente
+Consequently
 
 \[
  \sum_{m=2}^\infty{H_m^2\over m(m+1)}<\infty.
  \tag{24}
 \]
 
-La desigualdad triangular en el espacio de Hilbert con pesos
-\(1/[m(m+1)]\) muestra que añadir o quitar \(H\) preserva tanto energía
-acotada como crecimiento \(N^{o(1)}\). La equivalencia (9) sigue de
-`104_93` y `104_94`.
+The triangle inequality in the Hilbert space with weights
+\(1/[m(m+1)]\) shows that adding or removing \(H\) preserves both bounded
+energy and \(N^{o(1)}\) growth. Equivalence (9) follows from
+`104_93` and `104_94`.
 
-Observe que (8) no ha ganado una desigualdad: insertada en (22), recupera
-exactamente \(\pi(m)\). Su utilidad es adversarial: cualquier prueba que
-declare pequeño \(T_m+\mathrm{Li}_2(m)\) debe exhibir una
-cancelación global entre todos los \(L(m/d)\), no una cota de cada uno.
+Note that (8) has not gained an inequality: inserted into (22), it recovers
+exactly \(\pi(m)\). Its usefulness is adversarial: any proof that
+declares \(T_m+\mathrm{Li}_2(m)\) small must exhibit a
+global cancellation among all the \(L(m/d)\), not a bound on each one.
 
-## 4. Gate cuantitativo para todo nivel subcompleto
+## 4. Quantitative gate for every subcomplete level
 
-Fije \(0<\eta<1\) y \(D=x^{1-\eta}\). La región libre de ceros clásica
-aplicada a
+Fix \(0<\eta<1\) and \(D=x^{1-\eta}\). The classical zero-free
+region applied to
 
 \[
  \sum_{n\ge1}{\lambda_L(n)\over n^s}
@@ -283,15 +282,15 @@ aplicada a
  \tag{25}
 \]
 
-da, incondicionalmente, para todo \(A>0\),
+gives, unconditionally, for every \(A>0\),
 
 \[
  |L(y)|\ll_A {y\over(\log y)^A}.
  \tag{26}
 \]
 
-Solo se necesita esta consecuencia débil de la cota efectiva tipo
-Vinogradov--Korobov. Para \(d\le D\), \(x/d\ge x^\eta\); usando (16),
+Only this weak consequence of the effective Vinogradov--Korobov-type
+bound is needed. For \(d\le D\), \(x/d\ge x^\eta\); using (16),
 
 \[
 \begin{aligned}
@@ -304,8 +303,8 @@ Vinogradov--Korobov. Para \(d\le D\), \(x/d\ge x^\eta\); usando (16),
  \tag{27}
 \]
 
-En particular, el lado izquierdo es
-\(O_{B,\eta}(x/\log^B x)\) para cada \(B>0\). Pero PNT y (19) dan
+In particular, the left-hand side is
+\(O_{B,\eta}(x/\log^B x)\) for every \(B>0\). But PNT and (19) give
 
 \[
  S^-(x)-S^+(x)
@@ -314,9 +313,9 @@ En particular, el lado izquierdo es
  \tag{28}
 \]
 
-De aquí resulta el siguiente enunciado preciso.
+From this follows the following precise statement.
 
-**Teorema de no-distinción.** No existe una familia de formas lineales
+**Non-distinction theorem.** There is no family of linear forms
 
 \[
  \mathcal F_x(A)=\sum_{d\le x^{1-\eta}}c_d(x)A_d,
@@ -324,71 +323,71 @@ De aquí resulta el siguiente enunciado preciso.
  \tag{29}
 \]
 
-que aproxime \(S(A,\sqrt x)\) con error \(o(x/\log x)\), uniformemente
-para toda sucesión no negativa \(A=(a_n)\). En efecto, (27) con
-\(B>K+2\) daría
+that approximates \(S(A,\sqrt x)\) with error \(o(x/\log x)\), uniformly
+for every nonnegative sequence \(A=(a_n)\). Indeed, (27) with
+\(B>K+2\) would give
 
 \[
  |\mathcal F_x(A^+)-\mathcal F_x(A^-)|=o(x/\log x),
  \tag{30}
 \]
 
-en contradicción con (28). El mismo argumento cubre cualquier funcional
-uniformemente Lipschitz, con constante \(O((\log x)^K)\), para la norma
-\(\ell^1\) de los datos \((A_d)_{d\le D}\).
+contradicting (28). The same argument covers any uniformly
+Lipschitz functional, with constant \(O((\log x)^K)\), for the
+\(\ell^1\) norm of the data \((A_d)_{d\le D}\).
 
-Esto incluye las truncaciones lineales de inclusión--exclusión y las
-salidas estables de Brun/Selberg apoyadas en ese nivel. No incluye la suma
-exacta (2), que usa datos hasta \(d\asymp x\). Precisamente allí
-\(x/d\) puede ser \(O(1)\), (27) deja de ser pequeño y la información de
-paridad reaparece.
+This includes the linear truncations of inclusion--exclusion and the
+stable outputs of Brun/Selberg supported at that level. It does not include the
+exact sum (2), which uses data up to \(d\asymp x\). Precisely there,
+\(x/d\) can be \(O(1)\), (27) stops being small and the parity
+information reappears.
 
-## 5. Veredicto
+## 5. Verdict
 
-El ataque por Eratóstenes produce dos resultados exactos:
+The Eratosthenes attack produces two exact results:
 
-1. la energía buscada se convierte en (6), conservando toda la suma
-   firmada;
-2. la identidad (8) muestra que esa suma completa es una cancelación de
-   Liouville, y (27)--(30) descartan todas sus truncaciones estables de
-   nivel \(x^{1-\eta}\).
+1. the sought energy turns into (6), preserving the entire
+   signed sum;
+2. identity (8) shows that this complete sum is a Liouville
+   cancellation, and (27)--(30) rule out all its stable truncations at
+   level \(x^{1-\eta}\).
 
-No queda un error técnico de Bonferroni ni una constante por optimizar.
-Para avanzar desde esta coordenada hace falta una desigualdad global que
-use los divisores \(d\) hasta escala \(x\) y que sea específica de los
-pesos ordinarios. Demostrarla sería demostrar (9), y por tanto RH.
+No technical Bonferroni error remains nor a constant to optimize.
+To advance from this coordinate, a global inequality is needed that
+uses the divisors \(d\) up to scale \(x\) and that is specific to
+the ordinary weights. Proving it would amount to proving (9), and hence RH.
 
-## 6. Auditoría de no duplicación
+## 6. No-duplication audit
 
-El `No-go NG-A4` de las fases iniciales y del *obstruction ledger* trata
-la imposibilidad de separar clases de \(\omega(n)\bmod2\) mediante una
-criba estándar. No contiene (8), no trabaja con la energía de Cramér y no
-cuantifica el nivel \(x^{1-\eta}\). `104_94` usa inversión de Möbius entre
-potencias primas y primos ordinarios, pero tampoco usa el par
-\(1\pm\lambda_L\). El contenido adicional aquí es:
+`No-go NG-A4` from the initial phases and from the *obstruction ledger* deals
+with the impossibility of separating classes of \(\omega(n)\bmod2\) via a
+standard sieve. It does not contain (8), does not work with the Cramér
+energy and does not quantify the level \(x^{1-\eta}\). `104_94` uses Möbius
+inversion between prime powers and ordinary primes, but it also does not use the pair
+\(1\pm\lambda_L\). The additional content here is:
 
-* la identidad de Eratóstenes completa (5) en la norma exacta de
+* the complete Eratosthenes identity (5) in the exact norm of
   `104_93`;
-* la identidad de paridad sin coeficientes (8);
-* la equivalencia energética (9);
-* el falsificador cuantitativo (27)--(30) para todo nivel
-  subcompleto fijo.
+* the coefficient-free parity identity (8);
+* the energy equivalence (9);
+* the quantitative falsifier (27)--(30) for every fixed
+  subcomplete level.
 
-No se reclama como nueva la barrera de paridad general de la teoría de
-cribas. Lo nuevo dentro del proyecto es su localización exacta en el
-observable que se está intentando acotar.
+The general parity barrier of sieve theory is not claimed as new here.
+What is new within the project is its exact localization within the
+observable one is trying to bound.
 
-## 7. Reproducción
+## 7. Reproduction
 
-Desde `tools/`:
+From `tools/`:
 
 ```bash
 python3 eratosthenes_parity_energy_gate_check.py
 ```
 
-El checker verifica, con enteros y fracciones exactas, (2)--(5),
-(8), (16), (19)--(20) para todos los enteros \(2\le x\le300\). También
-muestra en una tabla la separación de la masa cribada y la concentración
-de la diferencia de datos de divisibilidad al acercarse al nivel completo.
-La parte asintótica (26)--(30) es el argumento analítico anterior, no una
-inferencia numérica.
+The checker verifies, with integers and exact fractions, (2)--(5),
+(8), (16), (19)--(20) for all integers \(2\le x\le300\). It also
+shows in a table the separation of the sifted mass and the concentration
+of the divisibility-data difference as it approaches the complete level.
+The asymptotic part (26)--(30) is the analytic argument above, not a
+numerical inference.

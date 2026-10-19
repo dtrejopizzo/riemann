@@ -1,7 +1,6 @@
 # E70.8 — Abel regularization and the boundary-loss obstruction
 
-**Date:** 2026-07-07.
-**Role:** test the natural global-cancellation route: prove the Hardy-Euler inequality in a convergent
+**Purpose:** test the natural global-cancellation route: prove the Hardy-Euler inequality in a convergent
 Euler region and pass to the critical boundary.
 
 ## Abel family

@@ -1,6 +1,6 @@
 # E78.76 - The `safe_u` geometric ratio does not by itself control the radial tail budget
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

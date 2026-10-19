@@ -1,6 +1,5 @@
 # E73.171 results - QG wedge identity
 
-Date: 2026-07-14.
 
 Script:
 

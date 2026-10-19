@@ -1,0 +1,5 @@
+Z_Q(2.5): identity 2.18930965860537 vs lattice sum |x|,|y|<=60 2.18930779072017 (truncation)
+FE |Lam(s)-Lam(1-s)| at s=0.3+7.1i: 1.3e-35
+residue at 1: 1.40496294621 = pi/sqrt5; Z_Q(0) = -1
+argument principle (argcount.py): 0 zeros in [0.52,1.6]x[0.1,15]; 1 in [0.52,1.6]x[15,16.5]; 1 in [0.52,1.6]x[16.5,30]
+OFF-LINE zeros (Newton, zeros_epstein.py / zeros2.py): 0.932969697485414 + 15.6682495312785i ; 0.937666906700399 + 29.9833952351555i (and 1-conj, conj)

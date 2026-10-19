@@ -1,8 +1,7 @@
-# R130.002 — hostile audit, round 1 (phase 130, row A closure)
+# R130.002 — Audit, round 1 (phase 130, row A closure)
 
-Auditor: Opus 5.  Date: 2026-09-12.  Target: Paper 43 `main.md` after the
-phase-130 rebuild, against `R130_000_LEAD_BLUEPRINT.md`,
-`R130_001_BUILDER_REPORT.md` and `P123_A_ACCEPTANCE_SPECIFICATION.md` §§2, 4.
+phase-130 rebuild, against `R130_000_BLUEPRINT.md`,
+`R130_001_REPORT.md` and `P123_A_ACCEPTANCE_SPECIFICATION.md` §§2, 4.
 Standard: `R129_006_AUDIT_ROUND3.md`.  Everything below was re-derived; the
 "What survives" section lists what I checked line by line and found correct.
 
@@ -230,7 +229,7 @@ the bracket and the constant term.  Likewise at `p`, `−log p` is the constant
 relative to the symmetric grouping in (9.7b.8).  So reason (iii) — "`c = 0` is
 the unique choice for which the identity coefficient is the sum of the
 intrinsic local constants and nothing else" — has no invariant content.  The
-builder was right to strike the blueprint's reason (ii); reason (iii) is the
+the construction was right to strike the blueprint's reason (ii); reason (iii) is the
 same kind of claim.  What survives, and is enough: `c` is a declared parameter
 (reason (i)), must be chart-independent (reason (ii)), and `c := 0` is a
 declaration.  Say only that.  (Note the consequence is real: by Thm 14.1(b) the
@@ -312,7 +311,7 @@ the universal Tate residue") is a statement about `𝔠_0` only.
 
 ### F20 (NOTE) — A.1's reading
 
-The builder's self-report is accurate and I endorse the way it is flagged: what
+The construction's self-report is accurate and I endorse the way it is flagged: what
 is constructed is a filtered chart system with a retraction and a
 chart-invariant global trace.  Clause A.1 says "Restriction, descent and the
 coefficient comparison maps must be constructed"; it does not define "descent".
@@ -359,7 +358,7 @@ Re-derived in full and found **correct**:
    the compact part, compact support).  `λ_+(F_n) = 1` exactly,
    `λ_−(F_n) = ∫ψ(s)e^{−ns}ds = O(e^{−na})`,
    `\hat F_n(τ) = ∫ψ(s)e^{−ns(½+iτ)}ds` supported on `𝔠_0` with
-   `\sup_τ|\hat F_n| ≤ ‖ψ‖_1 e^{−na/2}` — the builder's correction of the
+   `\sup_τ|\hat F_n| ≤ ‖ψ‖_1 e^{−na/2}` — the construction's correction of the
    blueprint's `O(1/n)` to an exponential bound is right.  Convergence
    `J(F_n) → (0,e_+)` is in the **strong** dual (uniformly on bounded sets),
    with the bound proved via 9.14a0.  The eigenvector statement (e) is correct
@@ -382,7 +381,7 @@ Re-derived in full and found **correct**:
    (only `𝔠_0` is met), with the `\log` growth of `T̂` correctly absorbed.
    `β_T(MF_n,MG_m) → 1`.  This is the real content behind A.8(e) and it holds.
 10. **Thm 8A.7b(a)–(e)** — correct, modulo F10.  `‖F⋆G‖_tr ≤ ‖G‖_{L^1}‖F‖_tr
-    ≤ ‖F‖_tr‖G‖_tr`: submultiplicative with constant **1**, as the builder
+    ≤ ‖F‖_tr‖G‖_tr`: submultiplicative with constant **1**, as the construction
     claims against the blueprint's `2`.  `‖F^†‖_tr = ‖F‖_tr`.  Power estimate
     (8A.17) correct.  The germ converges on `|z| < 1/‖F‖_{L^1}`, the
     interchange in (8A.19) is dominated correctly, and (8A.20) is exact — the
@@ -398,7 +397,7 @@ Re-derived in full and found **correct**:
     `L^1` of a LCA group, correctly argued).  **Thm 8A.11**: deleting
     requirement (a) is justified by the correct classical observation
     `Tr(nΓ) = n\,Tr(Γ)` with `nΓ` and `Γ` having the same support; and the
-    builder was right to refuse the blueprint's bogus `E_{2F} ≅ E_F`.
+    the construction was right to refuse the blueprint's bogus `E_{2F} ≅ E_F`.
 13. **Thm 10.3b (O-A7-1)** — correct and is, in my judgement, the best new
     argument in the phase.  Nets rather than sequences (right, the strong dual
     need not be metrizable); `M(F) ∈ R_{≥0}²` on the cone with both limits in
@@ -478,7 +477,7 @@ not restatements of the explicit formula.  As displayed, it does not.
 
 | clause | verdict | reason |
 |---|---|---|
-| A.1 | **PROVED on the declared reading** (PARTIAL under a stack reading) | §3.3bis is a genuine construction; the reading note is correctly flagged by the builder (F20).  Subject to F7 (name the carrier). |
+| A.1 | **PROVED on the declared reading** (PARTIAL under a stack reading) | §3.3bis is a genuine construction; the reading note is correctly flagged by the construction (F20).  Subject to F7 (name the carrier). |
 | A.2 | **PARTIAL** | additive/stable/localized: yes.  "Closed under its declared completion": **not proved** — no objects over `𝓐_tr`, and `N_A^{dist}` is not an object index (F8). |
 | A.3 | PROVED on `G` (unchanged) | not re-audited this round. |
 | A.4 | PROVED on `G` (unchanged) | not re-audited this round. |

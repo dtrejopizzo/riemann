@@ -1,0 +1,19 @@
+{
+  "status": "floating algebra diagnostics, not continuum certification",
+  "continuum_collar_error": 5.637851296924623e-18,
+  "exterior_cancellation_error": 3.469446951953614e-18,
+  "HS_tail": 1.0812964114971185e-05,
+  "HS_tail_series_error": 1.6940658945086007e-21,
+  "finite_matrix_complete_balance": [
+    {
+      "parity": 1,
+      "balance_error": 4.597017211338539e-17,
+      "polar_term": -0.2756953755286989
+    },
+    {
+      "parity": -1,
+      "balance_error": 1.214306433183765e-17,
+      "polar_term": 0.023805346265825547
+    }
+  ]
+}

@@ -1,6 +1,5 @@
 # E73.301 - Neutral ramp curvature correction
 
-Date: 2026-07-16.
 
 ## 1. Purpose
 

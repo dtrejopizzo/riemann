@@ -286,8 +286,8 @@ shown wrong-directional or category-mismatched.
 
 ## No-gos judged possibly wrong or over-generalized
 
-Ranked by how directly the corpus's own text flags the doubt (not by the mapping
-agent's own mathematical judgment — these are the doubts *already recorded in the
+Ranked by how directly the corpus's own text flags the doubt (not by independent
+mathematical judgment — these are the doubts *already recorded in the
 documents*):
 
 1. **MW-2 (arithmetic-propagation wall)** — stated as "identified from 5 independent

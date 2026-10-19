@@ -11,7 +11,7 @@ B_{\rm nuc}(f,f)\le0\qquad(f\in\mathcal T^0),
 including the equality case.  Only after this theorem is proved may the
 existing Weil criterion be applied.
 
-## Critical execution plan (2026-08-08)
+## Critical execution plan
 
 The programme is now organized around one carrying theorem, not around a
 collection of endpoint computations.  At the birth of a prime power, use

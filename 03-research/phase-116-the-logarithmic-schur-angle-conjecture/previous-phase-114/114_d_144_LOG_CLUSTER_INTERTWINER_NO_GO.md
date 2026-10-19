@@ -213,7 +213,7 @@ prime--Gamma boundary cocycle and prove a uniform norm bound on the
 resulting directed maps.  The exact acceptance condition is still
 
 \[
- C_TX_T=Y_T,qquad\|C_T\|\leq1,                       \tag{5.2}
+ C_TX_T=Y_T,\qquad\|C_T\|\leq1,                       \tag{5.2}
 \]
 
 but (5.2) can no longer be sought as a global tensor-factor intertwiner.

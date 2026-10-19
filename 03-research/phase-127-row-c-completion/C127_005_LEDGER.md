@@ -1,6 +1,5 @@
 # C127.005 — row C ledger
 
-Date: 2026-09-12.
 
 ```text
 ROW C:  WEIL-STRENGTH-COMPLETE.  I_A([K_F],[K_G]) = B_nuc(F,G) on the declared

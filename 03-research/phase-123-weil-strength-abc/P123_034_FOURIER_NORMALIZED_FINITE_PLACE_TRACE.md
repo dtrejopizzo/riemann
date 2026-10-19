@@ -1,6 +1,6 @@
 # P123.034 — Fourier normalization fixes the finite-place unit counterterm
 
-Date: 2026-09-05. Status: PROVED for the local distribution identity
+Status: PROVED for the local distribution identity
 below. This identifies P123.033's normalization with the specified
 self-dual p-adic Fourier convention, not with the yet-unconstructed
 common-carrier shadow or an unverified cutoff theorem.

@@ -1,0 +1,24 @@
+# Paper 48 — A Map of the Routes to Weil Positivity
+
+**David Alejandro Trejo Pizzo.** LaTeX, 2026-09-29. `main.tex` → `main.pdf` (16 pp., pdflatex ×3, 0 errors, 0 undefined references).
+
+Short survey-classification paper for row D. It places the 910 routes of the record on an 8×8 grid:
+rows are how the ζ-specific datum enters (identity/functional equation, positivity/support, estimate,
+Euler product, integrality of ℤ, exact values of Λ, zero side, no arithmetic), and columns are the
+carrying object (single window, contact vector, quadratic functionals, spectrum, flow in T, transform
+in T, families, geometric objects). Status counts: 10 painted, 15 dead with residue, 39 open, 0 empty.
+
+Contents: definitions of rows, columns, statuses and killer codes (F1–F4, M, E1, W8, T1/T2/T5);
+falsifier models with a model × property table; a TikZ coloured grid; walls W1–W12 as theorems or
+meta-theorems (citing Papers 45–47); Specification S1–S12; Problems 1–5 (Problem 1 = Blaschke–torsion
+pairing: real-rooted Gauss-node witness + torsion distribution Φ_Λ with ℒ_pΦ−Φ=log p(δ₀−Leb) ⟺ a=Λ);
+table of reusable tools; appendix index to the record.
+
+Honesty labels: the two-atom Type I curve is uncertified double-precision float; the ½log5
+certificates are certified (Arb, independent reruns). Theorem M(b) is proved in the record
+(phase 159, G2_B6_R2) and not yet in a paper. W6 general exclusion is not claimed (R161_075).
+No sign is claimed beyond ½log5.
+
+Source: `03-research/phase-162-row-d-first-contact-closure/grid/R162_2300_MASTER_GRID.md` and
+`R162_2300_MASTER_grid.json`, `R162_2200_GRID_MAP.md`, R160_X_C1, R162_1001, R162_2001/2101.
+- : updated to phase 184 (part 19)

@@ -1,7 +1,6 @@
 # E72.162 -- Fixed two-block weights
 
-**Date:** 2026-07-09.
-**Role:** test whether the two-block PSD certificate can use universal scalar weights.
+**Purpose:** test whether the two-block PSD certificate can use universal scalar weights.
 
 ## 0. Question
 

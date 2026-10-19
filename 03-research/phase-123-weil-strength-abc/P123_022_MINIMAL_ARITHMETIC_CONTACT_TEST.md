@@ -1,6 +1,5 @@
 # P123.022 — the minimal contact test and the integral-source obstruction
 
-Date: 2026-09-05.
 
 ## Verdict
 

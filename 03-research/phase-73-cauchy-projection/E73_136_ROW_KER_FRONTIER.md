@@ -1,6 +1,5 @@
 # E73.136 - ROW-KER Frontier
 
-Date: 2026-07-12.
 
 This note consolidates the CSV/ROW-KER work after E73.124--E73.135.
 

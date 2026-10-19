@@ -1,6 +1,5 @@
 # E73.275 - APR coupled-Loewner coborder smoke test
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

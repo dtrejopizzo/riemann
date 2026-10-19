@@ -1,46 +1,47 @@
-# 104_28 — Puente de vector fijo y stop-gate del blanqueo arquimediano
+# 104_28 — Fixed-vector bridge and the archimedean whitening stop-gate
 
-**Rol.** Auditar la propuesta de probar el margen proporcional mediante no
-alineación del test de Laguerre con el subespacio casi extremal del operador
-primo blanqueado. El puente de vector fijo existe y es exacto: el test de Li es
-el prefijo de Dirichlet en la base ortonormal de Laguerre del borde. Lo que no
-existe en el registro es un puente simultáneo que identifique, en ese mismo
-borde, una métrica arquimediana positiva cuya evaluación sea \(A_n\). Por ello
-el solapamiento con el autovector superior de las fases 62--69 no es hoy una
-cantidad fiel a A1.
+**Role.** Audit the proposal to prove the proportional margin via
+non-alignment of the Laguerre test with the near-extremal subspace of the
+whitened prime operator. The fixed-vector bridge exists and is exact: the Li
+test is the Dirichlet prefix in the orthonormal Laguerre basis of the
+boundary. What does not exist in the record is a simultaneous bridge
+identifying, on that same boundary, a positive archimedean metric whose
+evaluation is \(A_n\). Hence the overlap with the top eigenvector of phases
+62–69 is not today a quantity faithful to A1.
 
-Este documento no prueba A1 ni RH. Prueba qué parte de la propuesta es exacta,
-qué parte duplica 103_24--103_26, y cuál es la obligación matemática nueva
-que habría que satisfacer antes de ejecutar un diagnóstico espectral.
+This document does not prove A1 or RH. It proves which part of the
+proposal is exact, which part duplicates 103_24–103_26, and what new
+mathematical obligation would have to be met before running a spectral
+diagnostic.
 
-## 1. El puente exacto al prefijo de Dirichlet
+## 1. The exact bridge to the Dirichlet prefix
 
-Sean
+Let
 
 \[
  f_n(x)={\bf1}_{[0,\infty)}(x)L_{n-1}^{(1)}(x),
  \qquad g_n(x)=e^{-x/2}f_n(x),
 \]
 
-y
+and
 
 \[
  \phi_k(x)={\bf1}_{[0,\infty)}(x)e^{-x/2}L_k(x).
 \]
 
-La ortogonalidad ordinaria de Laguerre da
+Ordinary Laguerre orthogonality gives
 
 \[
  \langle\phi_j,\phi_k\rangle_{L^2(0,\infty)}=\delta_{jk}.
 \]
 
-La identidad de suma
+The summation identity
 
 \[
  \boxed{L_{n-1}^{(1)}(x)=\sum_{k=0}^{n-1}L_k(x)}                 \tag{1}
 \]
 
-produce
+produces
 
 \[
  \boxed{g_n=\sum_{k=0}^{n-1}\phi_k,
@@ -48,29 +49,29 @@ produce
  \qquad \|g_n\|_2^2=n.}                                        \tag{2}
 \]
 
-Así, el test no es un vector desconocido: es exactamente el prefijo
-\((1,\ldots,1)\). La base (2) es la base Laguerre de parámetro
-\(y=1/2,t_0=0\); bajo \(s=1/2+iz\), corresponde al punto de borde \(s=1\).
-Además, como \(L_k(0)=1\),
+So the test function is not an unknown vector: it is exactly the prefix
+\((1,\ldots,1)\). Basis (2) is the Laguerre basis of parameter
+\(y=1/2,t_0=0\); under \(s=1/2+iz\), it corresponds to the boundary point
+\(s=1\). Moreover, since \(L_k(0)=1\),
 
 \[
  L_{n-1}^{(1)}(x)=K_{n-1}^{\rm Lag}(x,0),
 \]
 
-de modo que \(g_n/\sqrt n\) es el estado normalizado del kernel reproductor
-en el borde duro \(x=0\), no un vector genérico.
+so \(g_n/\sqrt n\) is the normalized state of the reproducing kernel at the
+hard boundary \(x=0\), not a generic vector.
 
-En la base monomial del jet puede escribirse el mismo vector como
+In the monomial jet basis, the same vector can be written as
 
 \[
  \phi_j^{\rm mon}(x)={(-ix)^j\over j!}e^{-x/2},
  \qquad c_j^{(n)}=i^j{n\choose j+1}\quad(0\le j<n),              \tag{2a}
 \]
 
-con la convención \(F_c=\sum_j\overline{c_j}\phi_j^{\rm mon}\). Entonces
+with the convention \(F_c=\sum_j\overline{c_j}\phi_j^{\rm mon}\). Then
 \(F_{c^{(n)}}=g_n\).
 
-Por 103_69, si \(h_n=f_n*f_n^\#\), entonces
+By 103_69, if \(h_n=f_n*f_n^\#\), then
 
 \[
  \mathcal Lh_n(s)
@@ -80,32 +81,31 @@ Por 103_69, si \(h_n=f_n*f_n^\#\), entonces
  \boxed{\mathcal W_\zeta(h_n)=2\lambda_n.}                     \tag{3}
 \]
 
-Las ecuaciones (1)--(3) son el puente completo para la **forma total** de
-Weil.
+Equations (1)–(3) are the complete bridge for the **total** Weil form.
 
-Hay una simplificación adicional. Puesto que
+There is a further simplification. Since
 
 \[
  F_n(s)F_n(1-s)=F_n(s)+F_n(1-s),
 \]
 
-la unicidad de la transformada da
+uniqueness of the transform gives
 
 \[
  \boxed{f_n*f_n^\#=f_n+f_n^\#,
  \qquad (g_n*\widetilde g_n)(a)=g_n(|a|).}                     \tag{3a}
 \]
 
-Por tanto, para el semigrupo de traslación \(S_a\),
+Hence, for the translation semigroup \(S_a\),
 
 \[
  \boxed{\langle S_ag_n,g_n\rangle
  =e^{-a/2}L_{n-1}^{(1)}(a).}                                  \tag{3b}
 \]
 
-## 2. Polarización Toeplitz exacta del dato escalar
+## 2. Exact Toeplitz polarization of the scalar datum
 
-Para cualquier sucesión real \(q_0=0,q_1,q_2,\ldots\), defínase
+For any real sequence \(q_0=0,q_1,q_2,\ldots\), define
 
 \[
  t_0(q)=q_1,
@@ -113,21 +113,21 @@ Para cualquier sucesión real \(q_0=0,q_1,q_2,\ldots\), defínase
  t_m(q)={q_{m+1}-2q_m+q_{m-1}\over2}\quad(m\ge1),               \tag{4}
 \]
 
-y \(T_N(q)=[t_{|j-k|}(q)]_{0\le j,k<N}\). Dos sumaciones por
-partes dan, sin hipótesis de signo,
+and \(T_N(q)=[t_{|j-k|}(q)]_{0\le j,k<N}\). Two summations by
+parts give, with no sign hypothesis,
 
 \[
  \boxed{{\bf1}_n^*T_n(q){\bf1}_n=q_n.}                          \tag{5}
 \]
 
-En particular, tomando \(q=2\lambda-A\), (5) es precisamente la forma
-Fejér de 103_24--103_26. Para el margen actual puede tomarse
-\(q=r_*\lambda-A\). Por tanto la observación «A1 sólo necesita un vector
-fijo» es correcta, pero su polarización Toeplitz natural ya estaba
-registrada: el vector fijo es \({\bf1}_n\).
+In particular, taking \(q=2\lambda-A\), (5) is precisely the Fejér form
+of 103_24–103_26. For the current margin, \(q=r_*\lambda-A\) may be
+taken. Hence the observation "A1 only needs a fixed vector" is correct, but
+its natural Toeplitz polarization was already on record: the fixed vector
+is \({\bf1}_n\).
 
-La identidad (3b) también recompone exactamente el lado primo. Para
-\(\varepsilon>0\), la expresión
+Identity (3b) also exactly recomposes the prime side. For
+\(\varepsilon>0\), the expression
 
 \[
  \mathfrak p_{\Lambda,\varepsilon}[g_n]
@@ -135,7 +135,7 @@ La identidad (3b) también recompone exactamente el lado primo. Para
  \langle(S_{\log m}+S_{\log m}^*)g_n,g_n\rangle                \tag{6a}
 \]
 
-es una **forma sobre el rayo \(g_n\)** y satisface
+is a **form on the ray \(g_n\)** and satisfies
 
 \[
  {1\over2}\mathfrak p_{\Lambda,\varepsilon}[g_n]
@@ -143,16 +143,16 @@ es una **forma sobre el rayo \(g_n\)** y satisface
  L_{n-1}^{(1)}(\log m).                                        \tag{6b}
 \]
 
-No debe llamarse operador acotado obtenido por suma en norma: el solapamiento
-de \(g_n\) aporta el segundo factor \(m^{-1/2}\), indispensable para la
-convergencia. Si
+This must not be called a bounded operator obtained by summing in norm:
+the overlap of \(g_n\) supplies the second factor \(m^{-1/2}\), essential
+for convergence. If
 
 \[
  p_n(\varepsilon)
  =n\sum_{k=1}^n{n-1\choose k-1}{(-1)^{k-1}\over k\varepsilon^k},
 \]
 
-la fórmula prima--Laguerre da
+the prime–Laguerre formula gives
 
 \[
  A_n-\lambda_n
@@ -161,8 +161,8 @@ la fórmula prima--Laguerre da
        -p_n(\varepsilon)\right].                               \tag{6c}
 \]
 
-Así, la versión rigurosa del cociente propuesto es la cota de **un solo
-rayo renormalizado**
+Thus, the rigorous version of the proposed ratio is the bound on **a
+single renormalized ray**
 
 \[
  \lambda_n\ge cA_n
@@ -172,22 +172,22 @@ rayo renormalizado**
        -p_n(\varepsilon)\right]\le(1-c)A_n.                    \tag{6d}
 \]
 
-Ésta es exactamente la fórmula prima--Laguerre ya conocida, ahora expresada
-como coeficiente diagonal del kernel reproductor en el borde duro. No hay
-todavía un operador renormalizado cerrado alrededor de esa forma.
+This is exactly the already-known prime–Laguerre formula, now expressed as
+the diagonal coefficient of the reproducing kernel at the hard boundary.
+There is not yet a closed renormalized operator built around that form.
 
-## 3. Por qué no hay un cociente de Rayleigh arquimediano
+## 3. Why there is no archimedean Rayleigh quotient
 
-La condición
+Condition
 
 \[
  \lambda_n\ge cA_n                                              \tag{7}
 \]
 
-es un cociente de dos **números** sobre el vector (2). Para convertirla en
-un cociente de Rayleigh y hablar de proyectores espectrales hace falta una
-forma positiva \(\mathsf A\) y un operador autoadjunto \(\mathsf P\) tales
-que, con la misma normalización y uniformemente en \(n\),
+is a ratio of two **numbers** on vector (2). To turn it into a Rayleigh
+quotient and speak of spectral projectors one needs a positive form
+\(\mathsf A\) and a self-adjoint operator \(\mathsf P\) such that, with the
+same normalization and uniformly in \(n\),
 
 \[
  \langle g_n,\mathsf A g_n\rangle=A_n,
@@ -195,96 +195,98 @@ que, con la misma normalización y uniformemente en \(n\),
  \langle g_n,\mathsf P g_n\rangle=A_n-\lambda_n.                \tag{8}
 \]
 
-Las formas existentes no cumplen simultáneamente (8):
+The existing forms do not simultaneously satisfy (8):
 
-1. El operador de las fases 62--69 está definido en un gauge interior
-   \(y>1/2\), usualmente a gran \(t_0\), y usa una separación
-   arquimediano/primos distinta. El vector (2) vive exactamente en
-   \(y=1/2,t_0=0\), donde el polo de \(\zeta\) exige cancelación Abel antes
-   de separar los canales.
-2. La proposición de elementos Laguerre del ledger para el gauge interior
-   es una diagonalización del término principal de Szegő con un resto
-   efectivo; no es una isometría exacta que transporte (7) al borde.
-3. La polarización Toeplitz natural de \(A_n\) no es positiva. Su diagonal
-   es
+1. The operator of phases 62–69 is defined in an interior gauge
+   \(y>1/2\), typically at large \(t_0\), and uses a different
+   archimedean/prime split. Vector (2) lives exactly at
+   \(y=1/2,t_0=0\), where the pole of \(\zeta\) requires Abel cancellation
+   before separating the channels.
+2. The Laguerre-elements proposition of the ledger for the interior gauge
+   is a diagonalization of the Szegő leading term with an effective
+   remainder; it is not an exact isometry that transports (7) to the
+   boundary.
+3. The natural Toeplitz polarization of \(A_n\) is not positive. Its
+   diagonal is
 
    \[
     t_0(A)=A_1=1-\frac12(\gamma+\log4\pi)<0,                    \tag{9}
    \]
 
-   pues \(\gamma>0\) y \(\log(4\pi)>2\). Así \(T_N(A)\) no admite
-   \(T_N(A)^{-1/2}\), aunque el escalar
-   \({\bf1}_n^*T_n(A){\bf1}_n=A_n\) sea positivo para \(n\ge8\).
-4. Blanquear con el Gram de referencia \(G_N>0\) sí es posible, pero entonces
-   \(\langle g_n,G_Ng_n\rangle=n\), no \(A_n\asymp(n/2)\log n\).
-   Ese cociente mide \(2\lambda_n/n\), cuyo umbral correspondiente a (7)
-   crece como \(c\log n\); no es una capa espectral fija próxima a \(1\).
+   since \(\gamma>0\) and \(\log(4\pi)>2\). So \(T_N(A)\) admits no
+   \(T_N(A)^{-1/2}\), even though the scalar
+   \({\bf1}_n^*T_n(A){\bf1}_n=A_n\) is positive for \(n\ge8\).
+4. Whitening with the reference Gram matrix \(G_N>0\) is indeed possible,
+   but then \(\langle g_n,G_Ng_n\rangle=n\), not \(A_n\asymp(n/2)\log n\).
+   That ratio measures \(2\lambda_n/n\), whose threshold corresponding to
+   (7) grows like \(c\log n\); it is not a fixed spectral layer near
+   \(1\).
 
-La negatividad (9) es la versión mínima del stop-gate de borde de
-103_25: positividad sobre los prefijos no se extiende a positividad de la
-polarización, y los prefijos generan todo el espacio de polinomios.
+The negativity in (9) is the minimal version of the boundary stop-gate of
+103_25: positivity on the prefixes does not extend to positivity of the
+polarization, and the prefixes generate the whole space of polynomials.
 
-## 4. El diagnóstico de solapamiento que no es lícito ejecutar
+## 4. The overlap diagnostic that is not licit to run
 
-No es fiel calcular
+It is not faithful to compute
 
 \[
  {|\langle g_n,v_{\max}(S\mathcal P_\Lambda S)\rangle|
   \over\|g_n\|}
 \]
 
-con el operador interior de las fases 62--69 y leerlo como información
-sobre \(\lambda_n/A_n\): ni \(g_n\), ni \(S\), ni el split de (8) han sido
-transportados exactamente al mismo gauge.
+with the interior operator of phases 62–69 and read it as information
+about \(\lambda_n/A_n\): neither \(g_n\), nor \(S\), nor the split of (8)
+have been exactly transported to the same gauge.
 
-Incluso después de construir tal transporte, proyectar sólo sobre
-\([1-\delta,1]\) sería insuficiente sin un techo espectral previo. Un cero
-off-line puede crear espectro por encima de \(1\); ignorar
-\((1,\infty)\) eliminaría precisamente el falsificador. El proyector mínimo
-que una prueba debería controlar es
+Even after building such a transport, projecting only onto
+\([1-\delta,1]\) would be insufficient without a prior spectral ceiling. An
+off-line zero can create spectrum above \(1\); ignoring
+\((1,\infty)\) would eliminate precisely the falsifier. The minimal
+projector a proof should control is
 
 \[
  P_{[1-\delta,\infty)},                                         \tag{10}
 \]
 
-con su peso espectral, y debe reproducir para un cuarteto off-line el
-término
+with its spectral weight, and it must reproduce, for an off-line quartet,
+the term
 
 \[
  8-8\cosh(n\alpha)\cos(n\theta).                               \tag{11}
 \]
 
-## 5. Sucesor vivo
+## 5. Live successor
 
-La no-alineación puede reabrirse sólo después de probar un **teorema de
-transferencia al borde**:
+Non-alignment can only be reopened after proving a **boundary-transfer
+theorem**:
 
-* construir para \(\varepsilon>0\) una polarización positiva
-  \(\mathsf A_\varepsilon\), el operador aritmético acoplado y el vector
-  \(g_{n,\varepsilon}\);
-* demostrar que sus dos formas convergen, conjuntamente y con constantes
-  uniformes en \(n\), a los dos escalares de (8);
-* controlar la masa espectral de \(g_{n,\varepsilon}\) en
-  \([1-\delta,\infty)\), no sólo un autovector;
-* hacer fallar la estimación para el falsificador (11).
+* build, for \(\varepsilon>0\), a positive polarization
+  \(\mathsf A_\varepsilon\), the coupled arithmetic operator, and the
+  vector \(g_{n,\varepsilon}\);
+* prove that its two forms converge, jointly and with constants uniform in
+  \(n\), to the two scalars of (8);
+* control the spectral mass of \(g_{n,\varepsilon}\) on
+  \([1-\delta,\infty)\), not just one eigenvector;
+* make the estimate fail for falsifier (11).
 
-Sin ese teorema, la «no-alineación» no es todavía un mecanismo: es una
-reinterpretación espectral de la cota proporcional buscada.
+Without that theorem, "non-alignment" is not yet a mechanism: it is a
+spectral reinterpretation of the sought proportional bound.
 
-La afirmación heurística de que el cociente primo/arquimediano del vector
-real es \(O(n^{-1/2})\) sólo está justificada bajo RH (por la asintótica
-condicional de los coeficientes de Li). No puede usarse como input
-incondicional para validar el mecanismo.
+The heuristic claim that the prime/archimedean ratio of the real vector is
+\(O(n^{-1/2})\) is justified only under RH (by the conditional asymptotics
+of the Li coefficients). It cannot be used as an unconditional input to
+validate the mechanism.
 
-## Estado
+## Status
 
-* **Probado:** puente exacto \(g_n\leftrightarrow{\bf1}_n\), identidades
-  (3a)--(3b), forma prima-polo renormalizada (6c), identidad Toeplitz (5),
-  y stop-gate (9) contra el blanqueo arquimediano natural.
-* **Duplicación identificada:** el vector fijo es la forma
-  Dirichlet--Fejér ya auditada en 103_24--103_26.
-* **No ejecutado deliberadamente:** solapamientos con el operador interior;
-  no representan \(\lambda_n/A_n\).
-* **Abierto:** una polarización regulada positiva con transferencia uniforme
-  al borde, o una cota escalar directa sobre el rayo \(g_n\).
-
+* **Proved:** the exact bridge \(g_n\leftrightarrow{\bf1}_n\), identities
+  (3a)–(3b), the renormalized prime–pole form (6c), the Toeplitz identity
+  (5), and the stop-gate (9) against the natural archimedean whitening.
+* **Duplication identified:** the fixed vector is the Dirichlet–Fejér form
+  already audited in 103_24–103_26.
+* **Deliberately not run:** overlaps with the interior operator; they do
+  not represent \(\lambda_n/A_n\).
+* **Open:** a regulated positive polarization with uniform transfer to the
+  boundary, or a direct scalar bound on the ray \(g_n\).
+</content>

@@ -1,6 +1,6 @@
 # P123.091 — Exact boundary corner and a limit on its completed tensor range
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for the rapid boundary
+Status: PROVED-IN-REPOSITORY for the rapid boundary
 algebra with inherited Frechet topologies. This identifies the corner
 precisely, but disproves surjectivity of the proposed full Morita tensor
 map in that topology. It does not invalidate P123.090's operator descent.

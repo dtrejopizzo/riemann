@@ -1,6 +1,6 @@
 # P123.060 — Integral normal graph contact versus ramification contact
 
-Date: 2026-09-05. Status: PROVED for the explicit integral models below.
+Status: PROVED for the explicit integral models below.
 The calculation refutes identifying the two operations directly; it does
 not refute the ramification contacts already constructed in P123.037.
 

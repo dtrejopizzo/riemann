@@ -61,7 +61,7 @@ Thus, for (L=log5),
 
 \[
  \left|q(z)-\sum_{n<140}c_nz^n\right|
- \le {M_R(L/R)^{140}\over1-L/R}qquad(0\le z\le L).
+ \le {M_R(L/R)^{140}\over1-L/R}\qquad(0\le z\le L).
 \]
 
 The same bound divided by 140 controls the tail of (R_1), since its
@@ -74,7 +74,7 @@ into ill-conditioned monomial balls.  They are propagated in the normalized
 Legendre basis using
 
 \[
- |P_n|le1,qquad |P_n'|le {n(n+1)\over2},qquad qle2,qquad R_1le2
+ |P_n|le1,\qquad |P_n'|le {n(n+1)\over2},\qquad qle2,\qquad R_1le2
 \]
 
 on the real interval.  Here (qle e^{L/2}/2<2) follows from

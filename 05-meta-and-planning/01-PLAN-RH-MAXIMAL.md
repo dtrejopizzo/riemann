@@ -1,6 +1,6 @@
 # PLAN-RH-MAXIMAL — The Maximal Attempt on the Riemann Hypothesis
 
-**Author:** D. Torres · **Compiled:** 2026-05-31 · **Status:** living document, post-Lise-Science-run-7
+**Author:** D. Torres · **Compiled:**  · **Status:** living document, post-Lise-Science-run-7
 
 ---
 
@@ -215,7 +215,7 @@ regardless.
   theorem (P7) + the parked ω-moment fingerprint paper. Three real publications. The obstruction
   named to a precision it has never had.
 - **Tier 2 — plausible:** the (LB) inequality + a clean empirical floor law (P8), handed to experts
-  — a genuine new conditional reformulation of RH with computational backing.
+— a genuine new conditional reformulation of RH with computational backing.
 - **Tier 3 — the dream, low probability, candidly pursued:** a structural proof of (LB) via Connes
   or de Branges → the last step before, or a piece of, a proof of RH.
 
@@ -309,7 +309,7 @@ the precise remaining obstacle.
 
 **Key negative finding:** Any restriction on bⱼ requires information about the JOINT distribution of on-line and off-line zeros — precisely the content of RH. No weaker handle is available.
 
-**Documents:** `phase-24/00-setup.md`, `phase-24/01-lower-bounds-bj.md`, `phase-24/02-local-profile.md`, `phase-24/03-rigorous-chaos.md`.
+**Documents:** `phase-24-lower-bounds-bj/00-setup.md`, `phase-24-lower-bounds-bj/01-lower-bounds-bj.md`, `phase-24-lower-bounds-bj/02-local-profile.md`, `phase-24-lower-bounds-bj/03-rigorous-chaos.md`.
 
 ### 9.4 Phase 25 — Analytic uniqueness of the Euler product (Wall W4-RSRP)
 
@@ -336,7 +336,7 @@ All walls reduce to one question: can arithmetic information from Re(s)>1 propag
 
 **New results:** Theorem 25-B.4 (Λ ≥ bⱼ²/2), Theorem 25-C.6 (LP reformulation of W4-RSRP), Prop 25-C.1 (P_{4m}>0 on critical line).
 
-**Documents:** `phase-25/00-setup.md`, `phase-25/01-audit-classical.md`, `phase-25/02-deBruijn-Newman.md`, `phase-25/03-krein-lp.md`, `phase-25/04-verdict.md`.
+**Documents:** `phase-25-lower-bounds-bj-audit/00-setup.md`, `phase-25-lower-bounds-bj-audit/01-audit-classical.md`, `phase-25-lower-bounds-bj-audit/02-deBruijn-Newman.md`, `phase-25-lower-bounds-bj-audit/03-krein-lp.md`, `phase-25-lower-bounds-bj-audit/04-verdict.md`.
 
 ### 9.5 Phase 26 — Kreĭn index and the Connes operator (the bridge)
 
@@ -354,7 +354,7 @@ $$\kappa = 0 \iff H_C \text{ is genuinely self-adjoint in }\mathcal{K} \iff \tex
 - **V.4:** Is the eigenspace dimension consistent with the Klein V-orbit count?
 
 **Status:** Bridge theorem formulated precisely; technical verification work started.
-**Document:** `phase-26/00-bridge-theorem.md`. ✅
+**Document:** `phase-26-krein-connes-bridge/00-bridge-theorem.md`. ✅
 
 ### 9.7 Phase 27 — Adelic rigidity (next direction)
 
@@ -376,10 +376,10 @@ local-to-global principle for the Weil form.
 local-global principle, adelic factorization Q = ∏_p Q_p, representation theory of C_Q.
 
 **Documents ejecutados:**
-- `phase-27/00-setup.md` ✅
-- `phase-27/01-A-B-classification.md` ✅ — 27-A (clasificación) + 27-B (interpretación adélica); Teorema 27-B.4: V.2 = 27-B son el mismo obstáculo
-- `phase-27/02-C-wall-analysis.md` ✅ — Wall A (no-factorización de Q_zero, Prop. 27-C.1) + Wall B (Hasse–Minkowski no aplica en dimensión infinita, Prop. 27-C.6); equivalencia Wall A = sitio aritmético de Connes–Consani (Prop. 27-C.5)
-- `phase-27/03-verdict.md` ✅ — Veredicto final
+- `phase-27-adelic-rigidity/00-setup.md` ✅
+- `phase-27-adelic-rigidity/01-A-B-classification.md` ✅ — 27-A (clasificación) + 27-B (interpretación adélica); Teorema 27-B.4: V.2 = 27-B son el mismo obstáculo
+- `phase-27-adelic-rigidity/02-C-wall-analysis.md` ✅ — Wall A (no-factorización de Q_zero, Prop. 27-C.1) + Wall B (Hasse–Minkowski no aplica en dimensión infinita, Prop. 27-C.6); equivalencia Wall A = sitio aritmético de Connes–Consani (Prop. 27-C.5)
+- `phase-27-adelic-rigidity/03-verdict.md` ✅ — Veredicto final
 
 **Resultados de Phase 27:**
 

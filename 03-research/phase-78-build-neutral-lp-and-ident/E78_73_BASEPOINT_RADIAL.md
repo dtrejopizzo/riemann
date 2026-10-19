@@ -1,6 +1,6 @@
 # E78.73 - The basepoint reserve is exactly an old-old radial contraction law
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

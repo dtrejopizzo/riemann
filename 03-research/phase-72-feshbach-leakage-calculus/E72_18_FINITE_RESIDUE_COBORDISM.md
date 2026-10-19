@@ -1,7 +1,6 @@
 # E72.18 -- Finite residue cobordism
 
-**Date:** 2026-07-08.
-**Role:** introduce a new finite identity that converts the maximal resonance block into a boundary
+**Purpose:** introduce a new finite identity that converts the maximal resonance block into a boundary
 loss between the finite CCM real-zero divisor and the global `Xi` divisor.
 
 ## 0. Why this object is needed

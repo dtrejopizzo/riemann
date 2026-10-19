@@ -32,7 +32,7 @@ From (Q) and the two endpoint derivative vectors one obtains finite
 matrix polynomials
 
 \[
- R(x)=\sum_{r=1}^{2N}R_rx^r,qquad
+ R(x)=\sum_{r=1}^{2N}R_rx^r,\qquad
  S_\partial(x)=\sum_{r=2}^{2N}S_rx^r,                \tag{0.4}
 \]
 
@@ -55,7 +55,7 @@ Here (Phi) is the Lerch transcendent.  The potentially divergent
 sum is taken.  At (T=\tfrac12\log5), the Lerch argument is simply
 
 \[
- e^{-4T}={1\over25},qquad e^{-T}={1\over\sqrt5}.     \tag{0.6}
+ e^{-4T}={1\over25},\qquad e^{-T}={1\over\sqrt5}.     \tag{0.6}
 \]
 
 Formula (0.5) turns the remaining (T=\tfrac12\log5) low-block problem
@@ -89,7 +89,7 @@ coefficient vector of the polynomial (Q_n) in D.145 satisfying
 Let
 
 \[
- \epsilon=(1,-1,1,-1,\ldots)^t,qquad
+ \epsilon=(1,-1,1,-1,\ldots)^t,\qquad
  q^-(x)=Q(x)^t\epsilon.                               \tag{1.3}
 \]
 
@@ -98,7 +98,7 @@ Thus (q_n^-(x)=Q_n(-1)).
 For (0\leq s\leq m), the endpoint derivatives are
 
 \[
- P_m^{(s)}(1)={(m+s)!\over2^ss!(m-s)!},qquad
+ P_m^{(s)}(1)={(m+s)!\over2^ss!(m-s)!},\qquad
  P_m^{(s)}(-1)=(-1)^{m+s}P_m^{(s)}(1).                \tag{1.4}
 \]
 
@@ -224,8 +224,8 @@ Their matrices are the exact polynomial integrals (4.1) of D.145 with
 coefficients
 
 \[
- {\log2\over\sqrt2},qquad
- {\log3\over\sqrt3},qquad
+ {\log2\over\sqrt2},\qquad
+ {\log3\over\sqrt3},\qquad
  {\log2\over2}.                                      \tag{4.3}
 \]
 

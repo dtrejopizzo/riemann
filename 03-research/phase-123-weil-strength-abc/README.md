@@ -149,7 +149,7 @@ into the canonical exact sequence `primitive mixed -> numerical -> ruling
 plane`.  Embedding it by all trace tests and Tate moments gives a complete
 nuclear distributional realization with no new boundary radical.
 
-## First approved campaign — 2026-09-05
+## First approved campaign
 
 The [execution ledger](P123_024_FIRST_CAMPAIGN_LEDGER.md) distinguishes the
 completed local repairs from the still-open common-carrier problem.

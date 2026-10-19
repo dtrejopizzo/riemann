@@ -1,7 +1,6 @@
 # E72.82 -- Mesh cotangent shortcut audit
 
-**Date:** 2026-07-09.
-**Role:** test and reject the tempting shortcut that the HPAC boundary factor alone creates the root
+**Purpose:** test and reject the tempting shortcut that the HPAC boundary factor alone creates the root
 transport cancellation.
 
 ## 0. The tempting identity

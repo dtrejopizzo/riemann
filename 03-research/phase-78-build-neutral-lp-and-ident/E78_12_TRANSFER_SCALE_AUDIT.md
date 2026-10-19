@@ -1,6 +1,6 @@
 # E78.12 - Transfer-scale amplification audit
 
-**Run:** 2026-07-18.
+**Run:**
 **Scope:** IDENT geometry on the fixed-L finite front.
 
 ## 1. Purpose

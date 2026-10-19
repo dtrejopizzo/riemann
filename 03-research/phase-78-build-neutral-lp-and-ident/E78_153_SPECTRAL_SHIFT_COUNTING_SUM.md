@@ -1,10 +1,10 @@
 # E78.153 - SPECTRAL-SHIFT-COUNTING-SUM: tight, summable, build-separating
 
-**Run:** 2026-07-21.
+**Run:**
 **Scope:** IDENT / point 6 (fixed-L convergence half) + a new discriminant lead.
 **Class:** REDUCCION GENUINA (well-conditioned reformulation; summability law
 decisive numerically, proof open).
-**Attribution:** spectral-shift target by the program author (2026-07-21);
+**Source:** external spectral-shift target,
 extended, tightened, and build-separated here.
 
 ## 1. The object

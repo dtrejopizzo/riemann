@@ -1,8 +1,8 @@
 # Panel 1 — Mathematical correctness of the proofs (Papers 43, 44, 45)
 
-Reviewer 1 of the three-member independent review panel, phase 133.
-Date: 2026-09-12.  Mandate: **mathematical correctness**.  Method: read the
-lead's decisions of record (`R130_005`, `R131_019`, `R132_007`), select the
+Panel 1 of the three-part independent review, phase 133.
+Mandate: **mathematical correctness**. Method: read the
+decisions of record (`R130_005`, `R131_019`, `R132_007`), select the
 load-bearing theorems, and **re-derive each from its stated hypotheses**
 without reading the supplied proof as authority; run every script in
 `phase-130/131/132/scripts/`.  No paper was edited.
@@ -129,8 +129,8 @@ it or fix the `numpy`/`mpmath` mix (`mp.exp` inside `mp.quad`).
 **B1 — MAJOR — §11's external-input claim is false for clause B.4.**
 §11 states *"**In clauses B.1–B.9: none.**  Row B's contract is discharged with
 no external citation"*.  But **Theorem 6bis.4**, which is the whole of the
-amended clause **B.4** (`PROVED AS AMENDED`, and the clause the owner had to
-amend), is proved from two elementary but genuinely external facts:
+amended clause **B.4** (`PROVED AS AMENDED`, the clause that had to be
+amended), is proved from two elementary but genuinely external facts:
 `\log|Φ_n(1)| = Λ(n)` (via Thm 6bis.3(v)) and `\log n = Σ_{d|n}Λ(d)` (Cor
 5.3a, itself carrying only "`PROVED` (Möbius …)").  Both are `CLASSICAL`
 number theory, neither is proved in the repository, neither is in any import
@@ -274,7 +274,7 @@ correct and rather pretty computation and is correctly quarantined.  Against
 that: one symbol collision (`D_A^0`) that makes Remark 8.6b false as written
 (A1); one false supporting sentence inside Theorem 14.1's otherwise-true proof
 (A2); one unlabelled algebra transfer under two `PROVED` clauses (A3).  None
-touches a verdict.  My reading of the label: **sustained**, with A3 recorded
+touches a verdict.  Reading of the label: **sustained**, with A3 recorded
 beside it.
 
 **Paper 44 (row B).**  Row B is the most *self-critical* of the three and the
@@ -299,7 +299,7 @@ Paper 43's import count is wrong (B2).  My reading of the label:
 is Theorem 9.4: the Weil explicit formula is *proved*, from (E1)–(E5), by a
 contour argument every step of which I re-derived and every constant of which I
 recomputed — and the derivation is then confirmed to twenty digits by the
-lead's own script.  The step D128 `C4` had broken (term-by-term integration of
+companion script.  The step D128 `C4` had broken (term-by-term integration of
 `ζ'/ζ` followed by a contour shift) is now legitimate for the stated reason:
 after the expansion, `g(s)n^{−s}` is entire, so no zero is crossed.  Lemma 5.1a
 is a model repair — it identifies that every application has `0 ∈ supp h`, that
@@ -313,9 +313,8 @@ with the reasoning that for `c < 0` the sign condition is plausibly still
 RH-equivalent, so the biconditional was unearned.  Theorem 9bis.2′'s residues
 are correct and, pleasingly, cross-check exactly against Paper 43 Theorem
 9.7b(c) under `s = ½+iτ`.  Only two minor observations (C1, C2), neither
-affecting a statement.  My reading of the label: **sustained**.
+affecting a statement.  Reading of the label: **sustained**.
 
 ---
 
-*No paper was edited by this reviewer.  All line references are to the files as
-of 2026-09-12.*
+*No paper was edited in this pass.  All line references are to the files as

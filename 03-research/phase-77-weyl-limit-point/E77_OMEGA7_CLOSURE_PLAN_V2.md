@@ -1,6 +1,6 @@
 # Phase 77 - Omega7 Closure Plan V2
 
-**Updated:** 2026-07-18 after E77.7e.
+after E77.7e.
 
 ## 1. Exact Conditional Chain
 
@@ -224,7 +224,7 @@ the signed pairing.
 [ ] E77.10 assembly => Omega7
 ```
 
-**Phase status (2026-07-18):** Phase 77 CLOSED at 111 documents; see
+**Phase status:** Phase 77 CLOSED at 111 documents; see
 `PHASE_77_CLOSURE.md`. All open items above handed to
 `phase-78-build-neutral-lp-and-ident/`. The E77.7az gate archives the
 E77.5d-5ah and E77.7aa-ay shell-mismatch branches as detectors: any LP step

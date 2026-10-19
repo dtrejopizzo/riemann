@@ -1,6 +1,6 @@
 # P123.105 — Exact normal determinant renormalization for unit-supported tests
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for locally constant
+Status: PROVED-IN-REPOSITORY for locally constant
 tests on U=Z_q^*. The construction is a determinant germ, with explicit
 meromorphic continuation. It is not yet the full normal/external RR line.
 

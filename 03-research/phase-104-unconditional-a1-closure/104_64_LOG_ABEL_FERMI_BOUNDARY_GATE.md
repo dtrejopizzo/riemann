@@ -1,39 +1,40 @@
-# 104_64 — Abel logarítmico y capa Fermi doblemente logarítmica
+# 104_64 — Logarithmic Abel and doubly logarithmic Fermi layer gate
 
-**Estado.** El promedio Fermi de `104_61` se puede Abelizar sin perder ni
-ganar contenido: para el sumando acotado, media logarítmica de Cesàro cero y
-media logarítmica de Abel cero son equivalentes. Esto permite insertar el
-producto prima--Laguerre exacto en una suma exterior infinita, todavía
-acotada, y reduce el objetivo a una sola aproximación radial.
+**Status.** The Fermi average of `104_61` can be Abelized without
+losing or gaining content: for the bounded term, zero Cesàro logarithmic
+average and zero Abel logarithmic average are equivalent. This allows
+inserting the exact prime–Laguerre product into an infinite, still
+bounded, outer sum, and reduces the target to a single radial
+approximation.
 
-La Abelización no prueba el límite. El cuarteto racional fuera de la línea
-produce una obstrucción cuantitativa nueva: su corrección Fermi negativa está
-repartida uniformemente en la escala
+Abelization does not prove the limit. The off-line rational quadruple
+produces a new quantitative obstruction: its negative Fermi correction is
+spread uniformly over the scale
 
 \[
  \alpha={\log\log(1/s)\over\log(1/h)},\qquad q=e^{-h},
  \quad 0\leq\alpha\leq1.
 \]
 
-Controlar frecuencias solo hasta \(s=\exp(-h^{-\alpha})\), con
-\(\alpha<1\) fijo, deja escapar una proporción positiva de la corrección de
-la clase mala. Para capturarla toda hay que alcanzar
-\(s=\exp(-c/h)\). La conclusión es un **stop-gate** para una transferencia
-Abel--Fourier truncada; no es un no-go para una cancelación nueva que conserve
-simultáneamente todas las clases y todos los canales aritméticos.
+Controlling frequencies only up to \(s=\exp(-h^{-\alpha})\), with
+\(\alpha<1\) fixed, lets a positive proportion of the bad class's
+correction escape. To capture all of it one must reach
+\(s=\exp(-c/h)\). The conclusion is a **stop-gate** for a truncated
+Abel–Fourier transfer; it is not a no-go for a new cancellation that
+simultaneously preserves all classes and all arithmetic channels.
 
-**Atribución.** La equivalencia entre los métodos logarítmicos de Cesàro y
-Abel pertenece a la teoría clásica de sumabilidad; véase Bingham--Gashi,
+**Attribution.** The equivalence between the logarithmic Cesàro and
+Abel methods belongs to classical summability theory; see Bingham–Gashi,
 [DOI 10.1016/j.jmaa.2014.08.031](https://doi.org/10.1016/j.jmaa.2014.08.031).
-Aquí se prueba directamente solo la especialización positiva de límite cero
-y se aplica al detector Li--Fermi. No se reclama novedad para el teorema de
-sumabilidad.
+Here only the positive zero-limit specialization is proved directly and
+applied to the Li–Fermi detector. No novelty is claimed for the
+summability theorem.
 
 ---
 
-## 1. El criterio Fermi en coordenada Abel
+## 1. The Fermi criterion in Abel coordinates
 
-Fije \(t>0\), y escriba
+Fix \(t>0\), and write
 
 \[
  b_n=\log(n+1),\qquad
@@ -41,7 +42,7 @@ Fije \(t>0\), y escriba
  \tag{1}
 \]
 
-Para \(X\geq1\) y \(h>0\), defina
+For \(X\geq1\) and \(h>0\), define
 
 \[
  S(X)=\sum_{n\leq X}{a_n\over n},\qquad
@@ -57,7 +58,7 @@ Para \(X\geq1\) y \(h>0\), defina
  \tag{3}
 \]
 
-**Teorema 1.1 (Abel--Cesàro para el detector acotado).** Se tiene
+**Theorem 1.1 (Abel–Cesàro for the bounded detector).** We have
 
 \[
  \boxed{
@@ -67,7 +68,7 @@ Para \(X\geq1\) y \(h>0\), defina
  \tag{4}
 \]
 
-Además, para los coeficientes de Li,
+Moreover, for the Li coefficients,
 
 \[
  \boxed{
@@ -77,8 +78,8 @@ Además, para los coeficientes de Li,
  \tag{5}
 \]
 
-**Demostración.** Suponga primero que \(S(X)=o(\log X)\). Sumación de Abel
-da
+**Proof.** Suppose first that \(S(X)=o(\log X)\). Abel summation
+gives
 
 \[
  \sum_{n\geq1}{e^{-hn}a_n\over n}
@@ -86,8 +87,9 @@ da
  \tag{6}
 \]
 
-Dado \(\epsilon>0\), el prefijo donde no se conoce
-\(S(N)\leq\epsilon\log N\) aporta \(O_\epsilon(h)\). En el resto se usa
+Given \(\epsilon>0\), the prefix where
+\(S(N)\leq\epsilon\log N\) is not yet known contributes \(O_\epsilon(h)\).
+On the rest one uses
 
 \[
  (1-e^{-h})\sum_{N\geq1}e^{-hN}\log(N+1)
@@ -95,24 +97,24 @@ Dado \(\epsilon>0\), el prefijo donde no se conoce
  \tag{7}
 \]
 
-mientras \(L(h)=\log(1/h)+O(h)\). Esto prueba la implicación directa de
+while \(L(h)=\log(1/h)+O(h)\). This proves the forward implication of
 (4).
 
-Recíprocamente, tome \(h=1/X\). Para \(n\leq X\),
-\(e^{-hn}\geq e^{-1}\), y por tanto
+Conversely, take \(h=1/X\). For \(n\leq X\),
+\(e^{-hn}\geq e^{-1}\), and hence
 
 \[
  S(X)\leq e\,L(1/X)\mathfrak A_t(1/X).
  \tag{8}
 \]
 
-Como \(L(1/X)\sim H_X\), sigue la otra implicación.
+Since \(L(1/X)\sim H_X\), the other implication follows.
 
-Bajo RH, \(\lambda_n\geq0\), luego
-\(a_n\leq(n+1)^{-t}\), y el numerador de (3) queda acotado cuando
-\(h\downarrow0\). Así \(\mathfrak A_t(h)\to0\). Si RH es falsa, el
-Teorema 3.1 de `104_56` da un conjunto \(D\) de densidad natural
-\(d>0\) en el que \(a_n\to1\). Sumación parcial da
+Under RH, \(\lambda_n\geq0\), so
+\(a_n\leq(n+1)^{-t}\), and the numerator of (3) stays bounded as
+\(h\downarrow0\). So \(\mathfrak A_t(h)\to0\). If RH is false, Theorem
+3.1 of `104_56` gives a set \(D\) of natural density
+\(d>0\) on which \(a_n\to1\). Partial summation gives
 
 \[
  \liminf_{h\downarrow0}{1\over L(h)}
@@ -120,13 +122,13 @@ Teorema 3.1 de `104_56` da un conjunto \(D\) de densidad natural
  \tag{9}
 \]
 
-y por ello \(\liminf\mathfrak A_t(h)\geq d>0\). Esto prueba (5).
+and hence \(\liminf\mathfrak A_t(h)\geq d>0\). This proves (5).
 \(\square\)
 
-En particular, para probar RH basta encontrar **una** sucesión
-\(h_j\downarrow0\) sobre la cual \(\mathfrak A_t(h_j)\to0\). Ésta es una
-reducción genuina del cuantificador, pero no una estimación del promedio.
-La sucesión puede prefijarse: por ejemplo,
+In particular, to prove RH it suffices to find **one** sequence
+\(h_j\downarrow0\) along which \(\mathfrak A_t(h_j)\to0\). This is a
+genuine reduction of the quantifier, but not an estimate of the average.
+The sequence can be prescribed: for example,
 
 \[
  \boxed{\mathrm {RH}\quad\Longleftrightarrow\quad
@@ -134,15 +136,15 @@ La sucesión puede prefijarse: por ejemplo,
  \tag{9a}
 \]
 
-No hay selección posterior favorable escondida en (9a): bajo
-\(\neg\mathrm {RH}\), la cota inferior de (9) vale uniformemente cuando
-\(h\downarrow0\), y por tanto sobre toda sucesión prescrita.
+There is no hidden favorable later selection in (9a): under
+\(\neg\mathrm {RH}\), the lower bound of (9) holds uniformly as
+\(h\downarrow0\), and hence over any prescribed sequence.
 
 ---
 
-## 2. Forma prima--Laguerre exacta de la media Abel
+## 2. Exact prime–Laguerre form of the Abel average
 
-Use la regularización emparejada de `104_61`:
+Use the paired regularization of `104_61`:
 
 \[
  \lambda_{n,\varepsilon}
@@ -154,8 +156,8 @@ Use la regularización emparejada de `104_61`:
  \tag{10}
 \]
 
-Como la logística está entre cero y uno y
-\(\sum e^{-hn}/n=L(h)<\infty\), convergencia dominada da la identidad
+Since the logistic lies between zero and one and
+\(\sum e^{-hn}/n=L(h)<\infty\), dominated convergence gives the identity
 
 \[
 \boxed{
@@ -171,13 +173,13 @@ Como la logística está entre cero y uno y
  \tag{11}
 \]
 
-Para cada \(\varepsilon>0\), el producto interior converge absolutamente.
-La ecuación (11) conserva juntos polo, bloque arquimediano, primos y
-potencias primas hasta después de aplicar la no linealidad. A diferencia de
-`104_61`, (20c), la suma exterior ya es infinita; su paso al borde es
-legítimo precisamente porque el observable es acotado.
+For each \(\varepsilon>0\), the inner product converges absolutely.
+Equation (11) keeps the pole, the archimedean block, the primes, and
+the prime powers together until after applying the nonlinearity. Unlike
+`104_61`, (20c), the outer sum is already infinite; passing to the
+boundary is legitimate precisely because the observable is bounded.
 
-También hay una versión unitaria. Para \(N<\infty\), ponga
+There is also a unitary version. For \(N<\infty\), set
 
 \[
  \mathcal C_{h,N,\varepsilon}(s)
@@ -186,7 +188,8 @@ También hay una versión unitaria. Para \(N<\infty\), ponga
  \tag{12}
 \]
 
-La fórmula de Fourier de `104_62` implica, con el orden de límites escrito,
+The Fourier formula of `104_62` implies, with the order of limits as
+written,
 
 \[
  \boxed{
@@ -198,23 +201,23 @@ La fórmula de Fourier de `104_62` implica, con el orden de límites escrito,
  \tag{13}
 \]
 
-En (12), cada exponencial tiene el producto unitario prima--Laguerre de
-`104_62`, (8). No se permutan en (13) el borde
-\(\varepsilon\downarrow0\), la suma infinita y \(s\downarrow0\): esa
-permutación es justamente la capa que se audita a continuación.
+In (12), each exponential carries the unitary prime–Laguerre product of
+`104_62`, (8). In (13) the boundary
+\(\varepsilon\downarrow0\), the infinite sum, and \(s\downarrow0\) are
+not interchanged: that interchange is exactly the layer audited next.
 
 ---
 
-## 3. Cuarteto off-line y ley de la capa anidada
+## 3. Off-line quadruple and the nested-layer law
 
-Use el falsificador exacto
+Use the exact falsifier
 
 \[
  Q_n=4-2\mathrm{Re}\,\{(2i)^n+(2i)^{-n}\}.
  \tag{14}
 \]
 
-Si \(4\mid n\), defina
+If \(4\mid n\), define
 
 \[
  Y_n=-\{Q_n+\log(n+1)\}
@@ -222,7 +225,7 @@ Si \(4\mid n\), defina
  \tag{15}
 \]
 
-Para \(n\geq4\), \(Y_n\geq2^n\). Sea
+For \(n\geq4\), \(Y_n\geq2^n\). Let
 
 \[
  J_n(\delta)=\int_\delta^\infty
@@ -230,33 +233,33 @@ Para \(n\geq4\), \(Y_n\geq2^n\). Sea
  \tag{16}
 \]
 
-La integral completa satisface
+The full integral satisfies
 
 \[
  J_n(0)={1\over2}\tanh{tY_n\over2}\longrightarrow{1\over2}.
  \tag{17}
 \]
 
-Además,
+Moreover,
 
 \[
  \left|J_n(\delta)\right|\leq1,
  \tag{18}
 \]
 
-porque, si \(\delta tY_n\leq1\), se resta de (17) una integral de módulo a
-lo sumo \(tY_n\delta/\pi\), y, si \(\delta tY_n>1\), la integración por
-partes de `104_62`, (15), da
+because, if \(\delta tY_n\leq1\), the amount subtracted from (17) is an
+integral of modulus at most \(tY_n\delta/\pi\), and, if
+\(\delta tY_n>1\), integration by parts from `104_62`, (15), gives
 \(2/(tY_n\sinh(\pi\delta))<2/\pi\).
 
-Para \(0<\alpha<1\), ponga
+For \(0<\alpha<1\), set
 
 \[
  \delta_\alpha(h)=\exp(-h^{-\alpha})
  \tag{19}
 \]
 
-y considere solo la corrección de Fourier de la clase negativa:
+and consider only the Fourier correction of the negative class:
 
 \[
  T_\alpha(h)={1\over L(h)}
@@ -265,7 +268,7 @@ y considere solo la corrección de Fourier de la clase negativa:
  \tag{20}
 \]
 
-**Teorema 3.1 (ley doblemente logarítmica).** Para todo
+**Theorem 3.1 (doubly logarithmic layer law).** For every
 \(0<\alpha<1\),
 
 \[
@@ -274,10 +277,10 @@ y considere solo la corrección de Fourier de la clase negativa:
  \tag{21}
 \]
 
-Los valores de borde, entendidos por límite, son \(0\) para
-\(\alpha=0\) y \(1/8\) para \(\alpha=1\).
-En particular, la ventana descartada \(0<s<\delta_\alpha(h)\) contiene
-exactamente la proporción complementaria:
+The boundary values, understood as limits, are \(0\) for
+\(\alpha=0\) and \(1/8\) for \(\alpha=1\).
+In particular, the discarded window \(0<s<\delta_\alpha(h)\) contains
+exactly the complementary proportion:
 
 \[
  {1\over L(h)}
@@ -287,7 +290,7 @@ exactamente la proporción complementaria:
  \tag{21a}
 \]
 
-**Demostración.** Para \(0<\beta\leq1\), la progresión \(4\mid n\) cumple
+**Proof.** For \(0<\beta\leq1\), the progression \(4\mid n\) satisfies
 
 \[
  {1\over L(h)}\sum_{\substack{n\leq h^{-\beta}\\4\mid n}}
@@ -295,13 +298,13 @@ exactamente la proporción complementaria:
  \tag{22}
 \]
 
-Si \(\beta<1\), esto sigue de \(e^{-hn}=1+o(1)\) uniformemente en el
-rango y de la suma armónica en una progresión; para \(\beta=1\), la cola
-con \(n\asymp h^{-1}\) solo altera el término \(O(1)\), no el coeficiente de
-\(\log(1/h)\).
+If \(\beta<1\), this follows from \(e^{-hn}=1+o(1)\) uniformly in the
+range and from the harmonic sum over a progression; for \(\beta=1\), the
+tail with \(n\asymp h^{-1}\) only changes the \(O(1)\) term, not the
+coefficient of \(\log(1/h)\).
 
-Fije \(0<\eta<\min(\alpha,1-\alpha)\). Uniformemente para
-\(n\leq h^{-(\alpha-\eta)}\), se tiene
+Fix \(0<\eta<\min(\alpha,1-\alpha)\). Uniformly for
+\(n\leq h^{-(\alpha-\eta)}\), one has
 
 \[
  \delta_\alpha(h)tY_n
@@ -309,9 +312,9 @@ Fije \(0<\eta<\min(\alpha,1-\alpha)\). Uniformemente para
  \tag{23}
 \]
 
-por lo que \(J_n(\delta_\alpha(h))=1/2+o(1)\), salvo un prefijo de peso
-normalizado nulo. Uniformemente para
-\(n\geq h^{-(\alpha+\eta)}\), la cota de integración por partes da
+so \(J_n(\delta_\alpha(h))=1/2+o(1)\), except for a prefix of normalized
+weight zero. Uniformly for
+\(n\geq h^{-(\alpha+\eta)}\), the integration-by-parts bound gives
 
 \[
  |J_n(\delta_\alpha(h))|
@@ -319,7 +322,7 @@ normalizado nulo. Uniformemente para
  \tag{24}
 \]
 
-Por (18), la franja intermedia cuesta a lo sumo
+By (18), the intermediate strip costs at most
 
 \[
  {1\over4}\{(\alpha+\eta)-(\alpha-\eta)\}+o(1)
@@ -327,10 +330,10 @@ Por (18), la franja intermedia cuesta a lo sumo
  \tag{25}
 \]
 
-La parte hasta (h^{-(\alpha-\eta)}) aporta
-\((\alpha-\eta)/8+o(1)\). Como (J_n(\delta)) no tiene signo fijo, la
-franja intermedia debe restarse también en la cota inferior. Las ecuaciones
-(22)--(25) dan precisamente
+The part up to \(h^{-(\alpha-\eta)}\) contributes
+\((\alpha-\eta)/8+o(1)\). Since \(J_n(\delta)\) has no fixed sign, the
+intermediate strip must also be subtracted in the lower bound. Equations
+(22)--(25) give precisely
 
 \[
  {\alpha-\eta\over8}-{\eta\over2}+o(1)
@@ -338,34 +341,34 @@ franja intermedia debe restarse también en la cota inferior. Las ecuaciones
  {\alpha-\eta\over8}+{\eta\over2}+o(1).
 \]
 
-Haciendo \(\eta\downarrow0\) se obtiene (21). Para \(\alpha=0\),
-\(\delta_0=e^{-1}\) es fija y la integración por partes hace acotado el
-numerador de (20), de modo que el cociente tiende a cero. Para
-\(\alpha=1\), el rango (n\leq h^{-(1-\eta)}) aporta
-\((1-\eta)/8+o(1)\); la franja restante hasta la escala Abel
-(n\asymp h^{-1}) tiene masa armónica normalizada a lo sumo
-\(\eta/4+o(1)\), y la cola (n\gg h^{-1}) aporta (O(1/L(h))).
-Dejar \(\eta\downarrow0\) da (1/8). \(\square\)
+Letting \(\eta\downarrow0\) gives (21). For \(\alpha=0\),
+\(\delta_0=e^{-1}\) is fixed and integration by parts bounds the
+numerator of (20), so the ratio tends to zero. For
+\(\alpha=1\), the range \(n\leq h^{-(1-\eta)}\) contributes
+\((1-\eta)/8+o(1)\); the remaining strip up to the Abel scale
+\(n\asymp h^{-1}\) has normalized harmonic mass at most
+\(\eta/4+o(1)\), and the tail \(n\gg h^{-1}\) contributes \(O(1/L(h))\).
+Letting \(\eta\downarrow0\) gives \(1/8\). \(\square\)
 
-Equivalentemente, la corrección está distribuida de manera uniforme en la
-coordenada
+Equivalently, the correction is distributed uniformly in the
+coordinate
 
 \[
  \alpha={\log\log(1/s)\over\log(1/h)}.
  \tag{26}
 \]
 
-Una cota que solo controle \(s\geq h^B\) corresponde a
-\(\alpha\to0\) y no ve asintóticamente ninguna parte de (20). Para captar
-toda la corrección de la clase mala hay que llegar a
-\(\alpha=1\), es decir, \(s=\exp(-c/h)\) en la escala de Abel.
+A bound controlling only \(s\geq h^B\) corresponds to
+\(\alpha\to0\) and asymptotically sees no part of (20). To capture
+all of the bad class's correction one must reach
+\(\alpha=1\), i.e. \(s=\exp(-c/h)\) on the Abel scale.
 
 ---
 
-## 4. Qué cancela y qué no cancela en el cuarteto completo
+## 4. What cancels and what does not in the complete quadruple
 
-La ley (21) se refiere deliberadamente a la clase \(n\equiv0\pmod4\). En
-el cuarteto completo,
+Law (21) deliberately refers to the class \(n\equiv0\pmod4\). In the
+complete quadruple,
 
 \[
  \begin{array}{c|c|c}
@@ -377,7 +380,7 @@ el cuarteto completo,
  \tag{27}
 \]
 
-Por tanto la media de Abel del falsificador satisface
+Hence the Abel average of the falsifier satisfies
 
 \[
  \boxed{
@@ -386,9 +389,9 @@ Por tanto la media de Abel del falsificador satisface
  \tag{28}
 \]
 
-En efecto, las clases \(1,3\) dan una serie convergente, la clase \(2\)
-da \(O(1)\), y el defecto respecto de uno en la clase \(0\) también es
-sumable. El numerador es, por tanto,
+Indeed, classes \(1,3\) give a convergent series, class \(2\)
+gives \(O(1)\), and the deficit from one in class \(0\) is also
+summable. The numerator is therefore
 
 \[
  \sum_{4\mid n}{e^{-hn}\over n}+O_t(1)
@@ -397,48 +400,49 @@ sumable. El numerador es, por tanto,
  \tag{28a}
 \]
 
-Las correcciones de microfrecuencia de las clases \(0\) y \(2\) tienen la
-misma ley (21) y signos opuestos dentro de la fórmula de Fourier; se
-cancelan en la media completa. Esta cancelación es importante: (21) no
-autoriza a separar clases, ceros ni canales en una prueba para zeta. Lo que
-sí prueba es que cualquier argumento que descarte la región
-\(s<\exp(-h^{-\alpha})\) **antes** de demostrar esa cancelación pierde una
-cantidad de orden uno en un falsificador admisible.
+The microfrequency corrections of classes \(0\) and \(2\) obey the
+same law (21) with opposite signs within the Fourier formula; they
+cancel in the complete average. This cancellation matters: (21) does
+not authorize separating classes, zeros, or channels in a proof for
+zeta. What it does prove is that any argument discarding the region
+\(s<\exp(-h^{-\alpha})\) **before** proving that cancellation loses an
+order-one quantity on an admissible falsifier.
 
-Así, la Abelización no convierte (11) en una estimación lineal ni permite
-usar la continuación radial de `104_17`. El cuarteto tiene germen Abel
-lineal positivo, media Fermi \(1/4\) y una capa no lineal anidada hasta
-\(e^{-c/h}\).
-
----
-
-## 5. Veredicto
-
-**Probado.** La equivalencia Abel--Cesàro (4), el criterio de subsecuencia
-(5), la forma prima--Laguerre Abel exacta (11), la fórmula unitaria con
-orden de límites (13), la ley de capa (21) y el valor off-line (28).
-
-**Ganancia.** El objetivo puede buscarse sobre una única sucesión radial
-\(h_j\downarrow0\), y el observable aritmético exterior puede hacerse
-infinito sin perder convergencia dominada. La variable correcta para una
-auditoría de baja frecuencia es doblemente logarítmica, no \(s\), ni
-\(s/h\), ni la tasa diagonal fija de `104_62`.
-
-**No probado.** Una cota superior para (11), la desaparición de
-\(\mathfrak A_t(h)\), A1 o RH. La capa (21) muestra que una estimación de
-frecuencia truncada necesita una cancelación uniforme antes de truncar; no
-construye esa cancelación para los pesos reales \(\Lambda(m)\).
+Thus Abelization does not turn (11) into a linear estimate, nor does it
+allow using the radial continuation of `104_17`. The quadruple has a
+positive linear Abel germ, a \(1/4\) Fermi average, and a nested
+nonlinear layer extending to \(e^{-c/h}\).
 
 ---
 
-## 6. Reproducción
+## 5. Verdict
+
+**Proved.** The Abel–Cesàro equivalence (4), the subsequence
+criterion (5), the exact prime–Laguerre Abel form (11), the unitary
+formula with the order of limits made explicit (13), the layer
+law (21), and the off-line value (28).
+
+**Gain.** The target can be sought over a single radial sequence
+\(h_j\downarrow0\), and the outer arithmetic observable can be made
+infinite without losing dominated convergence. The correct variable for
+a low-frequency audit is doubly logarithmic, not \(s\), nor
+\(s/h\), nor the fixed diagonal rate of `104_62`.
+
+**Not proved.** An upper bound for (11), the vanishing of
+\(\mathfrak A_t(h)\), A1, or RH. Layer (21) shows that a truncated
+frequency estimate needs a uniform cancellation before truncating; it
+does not construct that cancellation for the real weights \(\Lambda(m)\).
+
+---
+
+## 6. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 log_abel_fermi_boundary_check.py
 ```
 
-El checker ilustra numéricamente la tendencia al límite \(1/4\) de (28),
-la ley armónica (22) y la aproximación de (21) mediante la transición exacta
-\(J_n(0)=\tfrac12\tanh(tY_n/2)\). Las demostraciones de los límites están
-en el texto; el muestreo no se usa como certificado.
+The checker numerically illustrates the trend to the limit \(1/4\) of
+(28), the harmonic law (22), and the approximation of (21) via the exact
+transition \(J_n(0)=\tfrac12\tanh(tY_n/2)\). The limit proofs are
+in the text; sampling is not used as a certificate.

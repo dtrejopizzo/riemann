@@ -1,7 +1,7 @@
 # M5 — Proofs: T1 (anti-tautology), T2 (forced transversal transition), and the analytic D2
 
-**Pure-theory milestone of the classification program (M5).** Author: David Alejandro Trejo Pizzo ·
-2026-06-03. Foundation: the localized arithmetic Weil-Gram $Q_{\mathrm{arith}}(L)$ (P7), not the heavier
+**Pure-theory milestone of the classification program (M5).**
+Foundation: the localized arithmetic Weil-Gram $Q_{\mathrm{arith}}(L)$ (P7), not the heavier
 $K_{\mathrm{CC}}$ (see the foundation correction in `M5-classification-pure-theory.md`). Builds on P7
 (forced negativity), P8 (Kreĭn angular split), M1 (Prop B3.1.3), M3.
 

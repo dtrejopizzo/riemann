@@ -6,7 +6,7 @@ non-negative-domain test functions with $\tilde f,\tilde g\in\mathcal
 S(\mathbb R)$ (or a named subclass), and
 $$I_\partial(D_f,D_g)=\widehat f(0)\overline{\widehat g(0)}
 +\widehat f(1)\overline{\widehat g(1)}-\sum_\rho\widehat f(\rho)\overline{\widehat g(\rho)}$$
-is the evaluated form quoted from 107\_240 Theorem D / the phase prompt. The
+is the evaluated form quoted from 107\_240 Theorem D / the phase statement. The
 task is to determine, piece by piece, on what class of $f,g$ each of the
 three groups of terms is even a finite number.
 
@@ -117,7 +117,7 @@ This piece cannot be analyzed from first principles here: the operator
 definitions of $\theta$, $R_\Lambda$, and the trace are not contained in
 either of the two files this phase is permitted to read (107\_240,
 110\_02), and the phase's rules forbid opening further files. What *is*
-available is the counterterm's shape, quoted in the prompt: it is
+available is the counterterm's shape, quoted in the phase statement: it is
 $2h(1)\log\Lambda$ — proportional to $h$'s value at the group identity, with
 no dependence on any other feature of $h$.
 
@@ -205,7 +205,7 @@ the phase's conclusion, not smoothed over.
 **Read from source, not re-derived:** the evaluated formula
 $I_\partial=\widehat f(0)\overline{\widehat g(0)}+\widehat f(1)\overline{\widehat
 g(1)}-\sum_\rho\widehat f(\rho)\overline{\widehat g(\rho)}$ (107\_240
-Theorem D / phase prompt); the Riemann–von Mangoldt asymptotic
+Theorem D / phase statement); the Riemann–von Mangoldt asymptotic
 $N(T)\sim(T/2\pi)\log T$ (classical, unconditional, cited).
 
 **Verified numerically:** Lemma 111.1.2's divergence and Theorem 111.1.3's

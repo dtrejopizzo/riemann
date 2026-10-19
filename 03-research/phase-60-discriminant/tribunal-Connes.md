@@ -1,227 +1,226 @@
-# Tribunal — Alain, referee severo Auditoría de `RH-PROOF-FULL.md` (cadena E0→E4, programa CCM). Lente: teoría de
-operadores, realización espectral, auto-adjunción, renormalización `Â=A/ε₀`,
-identificación del operador límite (IV.1), distinción H1 / Perron–Frobenius vs PSD. **Regla de oro del programa:** un resultado forzado es peor que un hueco admitido.
-No reclamo prueba de RH. Lo que sigue intenta *romper* cada ✅ y *cerrar* cada hueco
-que no sea RH-equivalente. --- ## 0. Veredicto por pieza (tabla) | Pieza | Veredicto | Núcleo |
+# Tribunal — Alain, severe referee Audit of `RH-PROOF-FULL.md` (chain E0→E4, CCM program). Lens: operator
+theory, spectral realization, self-adjointness, renormalization `Â=A/ε₀`,
+identification of the limit operator (IV.1), distinction H1 / Perron–Frobenius vs PSD. **Golden rule of the program:** a forced result is worse than an admitted gap.
+No claim of a proof of RH. What follows attempts to *break* every ✅ and *close* every gap
+that is not RH-equivalent. --- ## 0. Verdict by piece (table) | Piece | Verdict | Core |
 |---|---|---|
-| E0 (def. `QW`, identidad Weil) | **SOLID con una salvedad** | la *identidad* `⟨ξ,QWξ⟩=Σ_ρ g(γ_ρ)conj(g(conj γ_ρ))` necesita un calificador |
-| E1 (real-rootedness) | **GAP** | prueba propia abierta; depende de CCM Thm 1.1(iii) |
-| H1 (estructura PF) | **SOLID** (como estructura) | correcto tras corrección |
-| H1′ (`QW` PSD) | **GAP = RH** | RH-equivalente, no incondicional |
+| E0 (def. `QW`, Weil identity) | **SOLID with one caveat** | the *identity* `⟨ξ,QWξ⟩=Σ_ρ g(γ_ρ)conj(g(conj γ_ρ))` needs a qualifier |
+| E1 (real-rootedness) | **GAP** | own proof open; depends on CCM Thm 1.1(iii) |
+| H1 (PF structure) | **SOLID** (as structure) | correct after correction |
+| H1′ (`QW` PSD) | **GAP = RH** | RH-equivalent, not unconditional |
 | N0 | **SOLID** | |
-| N1 | **SOLID\*** (módulo Boas) | |
+| N1 | **SOLID\*** (modulo Boas) | |
 | N2 | **SOLID** | |
-| N3 | **SOLID\*** (módulo Boas/PL) | |
-| Reducción (Thm 2) | **SOLID, módulo E1** | válido como implicación condicional |
-| III (renormalización) | **GAP** (condicional) | (H-gap)+(H-lim)+(H-pos); (H-pos)=RH |
+| N3 | **SOLID\*** (modulo Boas/PL) | |
+| Reduction (Thm 2) | **SOLID, modulo E1** | valid as a conditional implication |
+| III (renormalization) | **GAP** (conditional) | (H-gap)+(H-lim)+(H-pos); (H-pos)=RH |
 | N5b | **SOLID** | |
-| N5c | **SOLID\*** (módulo E1 + conv-eje) | |
-| IV.1 (operador límite) | **GAP** (no RH-hard) | cerré parte; ver abajo |
-| IV.2 ≡ §V | **GAP = RH** | núcleo RH-equivalente; NO lo toco |
-| E3 (Hurwitz) | **SOLID, módulo E1** | |
-| E4 | **SOLID** | clásico | Cerré (rigurosamente o con residual exacto nombrado): **(H-pos) reinterpretada**,
-**parte de IV.1** (paridad/entrelazado/compacidad — ya estaban; añado el argumento
-de por qué `n²` NO es derivable del núcleo compacto, lo que *refuta* la lectura
-optimista), y **(H-gap) γ>0 sigue ABIERTO** — explico por qué no es regalo de IV.1. --- ## 1. E0 — construcción y la identidad clave **Veredicto: SOLID, con una salvedad importante sobre la identidad.** La definición de `QW` (Def 0.1) y la band-limited `ξ̂` (Def 0.2, Prop 0.3) son
-correctas: `sin(Ls/2)` cancela los polos `d_k`, Paley–Wiener da tipo `L/2=logλ`,
-realidad en ℝ. Eso es impecable. **Intento de ruptura de la identidad ⟨ξ,QWξ⟩ = Σ_ρ g(γ_ρ)conj(g(conj γ_ρ)).**
-Aquí hay que ser severo. La afirmación "`QW` ES la forma de Weil del lado-ceros" se
-usa dos veces como pivote (H1′ y el núcleo IV.2). Examinemos qué es verdad: 1. La fórmula explícita de Weil es una *identidad entre dos lados*: `(arch) − (arith) = (lado-ceros)`, i.e. `Σ_ρ g(γ_ρ)conj(g(conj γ_ρ))` **igual a** `∫ g·ĝ·w_arch − Σ_n (Λ(n)/√n)(…)`. Que la matriz `𝒲_{mn}` codifique el lado izquierdo (arch − arith) es **definición** (Def 0.1) — eso sí es exacto.
-2. Que ese lado izquierdo sea **igual** a `Σ_ρ g(γ_ρ)conj(g(conj γ_ρ))` es la fórmula explícita, **clásica y verdadera** para `g∈PW_Ω` de soporte adecuado. **Pero hay una salvedad de truncación que el documento minimiza.** La fórmula de
-Weil exacta corre sobre **todos** los `ρ` y **todos** los primos. La matriz finita
-trunca primos a `n'≤λ²`. El documento afirma "`A_λ = A_∞|_{E_λ}` exacto (primos `>λ²`
-no contribuyen por soporte)". Esto es correcto **sólo** porque `g=ξ̂` tiene soporte de
-Fourier en `[−logλ, logλ]` y `log n' ≤ logλ² = 2logλ`... — espera: `log n'` para
-`n'≤λ²` llega hasta `2logλ`, que es `L`, **el borde mismo** del soporte de la ventana
-de Fejér, no su interior. El integrando `q_{mn}(y)` corre `y∈[0,L]` y `log n'∈[0,2logλ]=[0,L]`.
-Así que la truncación a `n'≤λ²` **no es por soporte estricto** sino por la ventana
-`(1−y/L)` que se anula en `y=L`. Los primos con `log n'` cerca de `L` entran con peso
-**casi cero pero no cero**. La afirmación "exacto" es por tanto **ligeramente
-sobre-vendida**: es exacto en el límite, con un error de borde controlado por la
-ventana de Fejér. Esto es benigno (es de hecho el contenido franco de N5b), pero
-"exacto" debería ser "exacto módulo la cola de ventana de Fejér en `y→L`". **Conclusión E0:** SOLID como construcción y como identidad de Weil; corríjase
-"exacto" → "exacto salvo cola de ventana en el borde de banda". Esta salvedad no
-daña nada aguas abajo (se reabsorbe en N5b), pero un referee la marca. --- ## 2. E1 / H1 / H1′ **E1 — Veredicto: GAP (franco, ya marcado 🔧). Confirmo la severidad ALTA.** El contraejemplo `ξ=(−1,2,−1)`, `d=(−1,0,1)` → `f(s)=−2/(s³−s)`, cero raíces reales,
-es **correcto** y mata definitivamente el argumento de interlacing. Lo verifiqué:
-`−1/(s+1)+2/s−1/(s−1)`, común denominador `s(s²−1)`:
-numerador `= −s(s−1)+2(s²−1)−s(s+1) = −s²+s+2s²−2−s²−s = −2`. Exacto. El vector es
-par con un cambio de signo y produce secular sin raíces reales. Interlacing **muerto**. La afirmación de que la real-rootedness es no obstante cierta descansa enteramente en
-**CCM Thm 1.1(iii)** como caja negra. Eso es legítimo *citarlo*, pero entonces E1 no
-es "probado por nosotros". El documento lo reconoce. **No puedo cerrar E1** en mi
-lente sin reproducir CCM o construir la prueba Hermite–Biehler desde la realización
-auto-adjunta — y esto último **no está hecho y es genuinamente difícil** (el carrier
-de borde `ω*=2πN/(2N+1)` near-Nyquist hace que la traducción "positividad de la
-envolvente ⟹ HB de `ξ̂`" no sea mecánica). E1 **GAP confirmado, no cerrable aquí**. Observación crítica adicional (en mi lente): el documento dice que la
-real-rootedness "vale también para DH (RH-falsa)" empíricamente, y de ahí concluye
-"no es Perron–Frobenius, es auto-adjunta/HB". **Cuidado: esto es un arma de doble
-filo.** Si la realización auto-adjunta de CCM da real-rootedness *incondicionalmente*
-(incluso para DH, sin `Λ≥0`), entonces la real-rootedness de `ξ̂_{λ,N}` **no contiene
-información sobre RH** — es una propiedad del *finito*, no del límite. Bien. Eso es
-consistente: el contenido RH está todo en la *convergencia* `ξ̂→Ξ`, no en la
-real-rootedness finita. Pero entonces hay que ser muy claro: E1 es auto-adjunción
-finita, RH-neutral; toda la carga está en IV.2. El documento esencialmente dice esto.
-Coherente. **H1 — Veredicto: SOLID (como estructura).** Tras la corrección, H1 = "Perron–
-Frobenius da fondo simple + autovector de envolvente positiva (de-modulado)". Eso es
-correcto *si* `e^{−tQW}` es positividad-preservante, lo cual se afirma vía
-Lévy–Khintchine + Schoenberg + Trotter con `Λ(n)≥0`. No audité `H1_PROOF.md` línea a
-línea, pero la estructura es estándar y la conclusión (fondo simple, autovector sin
-nodos tras de-modular) está respaldada numéricamente y es lo que PF realmente da.
-SOLID **como estructura**, con la advertencia de que NO da PSD (ver H1′). **H1′ — Veredicto: GAP = RH. Esta es la corrección más importante de la auditoría, y
-es correcta.** `QW` PSD (`ε_0≥0`) ⟺ Weil-positividad en banda `logλ` ⟺ RH-hasta-`T*`.
-Perron–Frobenius da fondo simple y autovector positivo, **pero NO controla el signo
-de `ε_0`** (PF dice "el menor autovalor es simple y su autovector es positivo"; no
-dice que el menor autovalor sea ≥0). El memo anterior que decía "H1 prueba QW PSD
-incondicional" **probaría RH**, lo cual es imposible sin más. La distinción PF ≠ PSD
-es exactamente correcta y es el hallazgo central de la auditoría. **H1′ no es un
-eslabón disponible; es RH disfrazada.** Bien marcado. --- ## 3. Andamiaje N0–N3 + Reducción **N0 — SOLID.** El cómputo `Φ(u)≤Ce^{9u/2}e^{−πe^{2u}}`, par, y la cota
-`|Ξ−Ξ_T|≤2∫_T^∞Φe^{δu}du ≤ Cλ^{5/2+δ}e^{−πλ²}` vía sustitución `v=e^{2u}` y Gamma
-incompleta, es correcto. Lo reverifiqué: `a=5/4+δ/2`, `X=e^{2T}=λ²`,
-`(λ²)^{5/4+δ/2}=λ^{5/2+δ}`. Robusto, incondicional, no menciona ceros. **SOLID.** **N1 — SOLID\* (módulo Boas).** El argumento de subarmonicidad de `log|F|−τ Im z`,
-acotación por Boas Thm 6.2.4, dos-constantes + medida armónica del segmento, es
-estándar y correcto. La cota de medida armónica `ω(iy₀)=(2/π)arctan(R/y₀)≥1−(2/π)(y₀/R)`
-es correcta. **SOLID** módulo el resultado clásico de Boas (legítimo). **N2 — SOLID.** Con la normalización `ξ̂(0)=Ξ(0)`, Hurwitz-invariante, `Γ=O(1)`. La
-normalización está bien justificada (la conclusión es real-rootedness del límite,
-invariante por escala no nula). Cabo cerrado correctamente. **SOLID.** **N3 — SOLID\* (módulo Boas/PL).** `g=Fe^{iτz}` acotada en ℝ, Phragmén–Lindelöf en H.
-Clásico y correcto. **SOLID\*.** **Reducción (Thm 2) — SOLID como implicación condicional, módulo E1.** La
-descomposición `ξ̂−Ξ=(ξ̂−Ξ_T)+(Ξ_T−Ξ)`, control del segundo término por N0, del
-primero por N1 con `R=T*~λ²` (peso `1−ω~λ^{−2}` despreciable), dando
-`sup_{|Im z|≤½}|ξ̂−Ξ| ≤ Cλ^{1/2}ε_loc + Cλ³e^{−πλ²}`, es **correcto**. Reverifiqué la
-aritmética del horizonte: `1−ω~(2/π)(½)/(λ²)~λ^{−2}`, y `Γ^{1−ω}=poly(λ)^{λ^{−2}}→1`.
-El factor `λ^{1/2}` viene de `e^{τy₀}=e^{(logλ)(½)}=λ^{1/2}`. Todo correcto. **La implicación "si `ε_loc=o(λ^{−1/2})` entonces RH" es válida**, módulo E1
-(real-rootedness, necesaria para que Hurwitz transfiera). Esto es francamente una
-*implicación condicional*: no prueba el antecedente. El antecedente `ε_loc=o(λ^{−½})`
-es precisamente IV.2 = RH-equivalente. **SOLID como reducción; el antecedente es el
-núcleo RH.** **Severidad sobre el uso de Hurwitz dado el estado de E1:** El documento pregunta si
-el uso de Hurwitz es válido dado el estatus de E1. Respuesta: **sí, condicionalmente.**
-Hurwitz (E3) sólo requiere que cada `ξ̂_λ` sea real-rooted; si aceptamos E1 (como caja
-negra CCM), Hurwitz transfiere correctamente. La validez de Hurwitz **no** está en
-duda; lo que está en duda es su *insumo* E1. No hay circularidad: E1 (real-rootedness
-finita) es RH-neutral (vale para DH también), así que usar E1 + convergencia para
-concluir RH no es circular — la carga RH está en la *convergencia*, no en E1. **No hay
-circularidad en la Reducción.** Correcto. --- ## 4. III — la renormalización Â=A/ε₀ (mi lente principal) **Veredicto: GAP. Implicación condicional correcta; las tres hipótesis NO probadas, y
-una de ellas ES RH.** El Teorema III dice: bajo (H-gap) `inf ε₁/ε₀=1+γ>0`, (H-lim) Cauchy en L² de los
-renormalizados, (H-pos) `ε₀>0`, entonces existe `ξ̂_∞` y
-`ε_loc ≤ (C/γ)√(logλ)·η(λ) + Cλ³e^{−πλ²}`. La prueba (Davis–Kahan en `Â`, gap `γ`,
-Nikolskii, N0) es **correcta dada las hipótesis**. **Ataque a las tres hipótesis:** **(H-pos) `ε₀>0`.** Aquí confirmo el hallazgo más severo de la auditoría, y lo
-refuerzo. Como `QW=`forma de Weil, `ε₀≥0` ⟺ la forma de Weil es ≥0 en su menor modo
-band-limited ⟺ **Weil-positividad hasta `T*`** ⟺ **RH-hasta-`T*`**. La renormalización
-`/ε₀` **no sólo asume `ε₀>0`; asume que `ε₀>0` con el signo correcto, que es RH.** El
-parche `/|ε₀|` no salva nada: si `ε₀<0` (RH falsa a esa altura), el "fundamental" del
-operador renormalizado tiene autovalor `−1`, y la estructura de "bottom aislado
-positivo" sobre la que descansa Davis–Kahan colapsa o cambia de naturaleza. **(H-pos)
-es RH-horneada. Confirmado y, si acaso, peor de lo que el documento admite:** no es
-sólo "asume `ε₀>0`", es que la *arquitectura entera* de la renormalización presupone
-el régimen RH-verdadero. **(H-gap) `γ>0`.** El documento (IV.1) afirma que `γ=3` "se sigue" de la
-identificación `Â_∞`=Sturm–Liouville 2º orden con espectro `n²`. **Lo desafío y lo
-encuentro NO cerrado** (ver §5): el espectro `n²` es numérico, no derivado; y de hecho
-el propio doc de IV.1 *refuta* la ruta Gantmacher–Krein y la ruta de coeficiente
-constante. Así que (H-gap) es **numérico, abierto**. No es regalo de IV.1. **(H-lim) Cauchy en L².** Es la existencia del límite de escala `Â_∞`. Numérico
-(Conj 2b). No probado. Es análisis de límite de Toeplitz/Loewner — duro, no RH-hard. **Conclusión III:** GAP. La prueba *condicional* es correcta (Davis–Kahan + Nikolskii
-están bien aplicados). Pero (H-pos)=RH hace que III **no pueda usarse para probar RH
-sin circularidad**: para concluir `ε_loc→0` (⟹RH) ya se asumió `ε₀>0` (⟸RH-hasta-T*).
-Esto es una **semi-circularidad**: III convierte "RH-hasta-T* + límites técnicos" en
-"RH". No es vacío (mejora la altura de validez T*→∞), pero no es incondicional. --- ## 5. IV.1 — identificación del operador límite (mi lente) **Veredicto: GAP (no RH-hard). Cerré lo cerrable; el `n²`/`γ=3` queda fenomenológico,
-y argumento que NO es regalo.** **Lo que está PROBADO (y lo confirmo correcto):**
-- (A) `QW` conmuta con la paridad `J:j↦−j` ⟹ se descompone en sectores par/impar; los autovalores entrelazan `ε₀^E<ε₀^O<ε₁^E<…`, dando la alternancia de paridad `(−1)^k`. **Correcto y sólido** — es teoría de operadores elemental (simetría `ℤ/2`). SOLID.
-- (B) En el continuo, `QW_∞` es operador integral de núcleo de Loewner **acotado** ⟹ **compacto** (autovalores → 0). **Correcto.** SOLID. **El punto severo que añado (rompe la lectura optimista):** (A)+(B) son verdad, pero
-**son MUTUAMENTE en tensión con "espectro `n²`"** y el documento no lo explota. Un
-operador **compacto** tiene autovalores `ε_k→0`. La ley `ε_k/ε_0→(k+1)²=n²` dice que
-los autovalores *renormalizados crecen como n²* — i.e. los `ε_k` originales **crecen**
-relativos a `ε₀`. Esto es consistente con compacidad sólo si `ε₀→0` más rápido (lo
-cual ocurre, `ε₀~C/λ²`), pero significa que **`n²` es la firma del operador de capa
-límite tras `/ε₀`, NO del operador compacto `QW_∞` mismo.** El documento dice esto
-("el 2º orden vive en la capa límite tras `/ε₀`"), y es la lectura correcta — pero
-entonces **(B) NO ayuda a derivar `n²`**: el núcleo compacto es suavizante, no
-diferencial; el `n²` debe venir del operador de borde de Landau–Widom, que el propio
-doc admite **no haber derivado** (los perfiles conocidos dan `2n+1` o logístico, no
-`n²`). **Refutaciones registradas que confirmo decisivas:**
-- Gantmacher–Krein / total-no-negatividad: **REFUTADA** (E16: 15–22% de menores 2×2 `<0`, off-diagonales negativas). Esto cierra la ruta "oscilación total desde H1". Correcto y franco. ⟹ la Sturmianidad **no** proviene de positividad total matricial.
-- Coeficiente constante (Dirichlet, Hermite, prolato, caja): **REFUTADAS** por overlaps. Correcto. **Lo que queda (residual exacto):** `Â_∞` es *cualitativamente* 2º orden (paridad
-alternante `(−1)^k` ES firma robusta de operador simétrico de 2º orden — esto sí lo
-da (A) rigurosamente), pero la ley `ε_k/ε₀→n²` y por tanto `γ=ε₁/ε₀−1→3` están
-**SÓLO medidas numéricamente, no derivadas**. El residual es la asintótica del
-operador de capa límite del frame crítico (Landau–Widom / de Branges-SL de coef.
-variables). **Análisis duro, NO RH-hard.** ### ¿Puedo cerrar (H-gap) γ>0 en mi lente? — Progreso parcial franco. Intento: probar `γ>0` (gap relativo uniforme) **sin** pasar por la ley exacta `n²`. *Idea.* (H-gap) sólo pide `inf_λ ε₁/ε₀ ≥ 1+γ` con `γ>0`, i.e. el segundo autovalor
-no se pega al primero relativamente. Por (A), `ε₀=ε₀^E` (par) y `ε₁=ε₀^O` (impar, el
-siguiente por entrelazado). Así
-`γ = ε₀^O/ε₀^E − 1 = (menor autovalor del sector impar)/(menor del par) − 1`.
-La cuestión es: **¿el menor autovalor impar está uniformemente separado por arriba
-del menor par, en escala relativa?** *Lo que SÍ puedo argumentar (parcial):* Por Perron–Frobenius en el sector par
-(H1, el fundamental par es nodeless tras de-modular) y la teoría de oscilación de
-Sturm para el bottom de cada sector de paridad de un operador simétrico de 2º orden,
-el bottom impar es estrictamente mayor que el bottom par a cada `λ` finito:
-`ε₀^O > ε₀^E` (porque el modo impar tiene un nodo forzado en el centro, eleva la
-energía). Esto da `γ(λ)>0` **a cada λ**. ✔ (estricto, finito). *Lo que NO puedo cerrar (el residual real):* la **uniformidad** `inf_λ γ(λ)>0`. Que
-`γ(λ)` no decaiga a 0 cuando `λ→∞`. Esto requiere control asintótico de
-`ε₀^O/ε₀^E`, que es exactamente la ley `n²`-en-el-límite. Sin derivar la asintótica
-del operador de borde, **no puedo excluir** `γ(λ)→0`. El dato numérico `→4` (γ→3) es
-fuerte pero no es prueba. **Residual exacto que dejo nombrado:**
-> **(H-gap-res):** Probar `liminf_λ ε₀^O(λ)/ε₀^E(λ) > 1`, donde `ε₀^{E/O}` son los
-> bottoms de los sectores de paridad par/impar de `A_λ/ε₀`. Equivale a: el gap
-> relativo par–impar del operador de capa límite del frame crítico es asintóticamente
-> `O(1)`. Es análisis semiclásico de Landau–Widom; **no RH-hard** (no depende del
-> signo global de `Λ(n)`, sólo de la geometría del frame a densidad crítica). Cerré la parte finita (`γ(λ)>0` ∀λ, vía nodo central del modo impar); el liminf
-uniforme queda abierto pero **localizado y no RH-hard**. ### ¿Puedo cerrar (H-lim), la existencia de Â_∞? No de forma completa. Es la convergencia del símbolo del operador de Loewner-contra-
-medida-de-Weil bajo el reescalado `/ε₀`. La compacidad (B) da control del *operador
-límite crudo* `QW_∞`, pero (H-lim) es sobre el **renormalizado** en el bloque bajo,
-cuya existencia es justamente Conj 2b. Lo más que puedo decir: por (B) y la teoría de
-símbolos de Toeplitz/Loewner, *si* la coordenada de Liouville del SL de borde
-converge (IV.1-res''), entonces (H-lim) se sigue. Así (H-lim) y la identificación de
-IV.1 son **el mismo residual analítico**. Dejo:
-> **(H-lim-res) ≡ (IV.1-res''):** existencia del límite de escala del operador de
-> capa límite (coeficientes `(p,q,w)` del SL en coordenada de Liouville). Análisis,
-> no RH-hard. --- ## 6. N5b, N5c **N5b — SOLID.** El argumento de que el borde se disuelve es correcto y de hecho
-elegante: en sup-norma **absoluta**, `|ξ̂(t)−Ξ(t)|≈|Ξ'(t)||ρ̂−γ|` con `|Ξ'|~e^{−πt/4}`
-decayendo; en `T*~λ²`, suprimido por `e^{−π²λ²/2}`. La distinción entre error de
-**raíz** (relativo, crece al borde) y error **absoluto** (suprimido por decaimiento de
-Ξ) es correcta y resuelve el espejismo de la "capa de borde" de E8. El lado del
-target `Ξ_T` ya es uniforme por N0. **SOLID.** El borde es benigno; lo no-trivial se
-concentra en el interior = núcleo IV.2. **N5c — SOLID\* (módulo E1 + conv-eje).** La monotonía real-rooted `|g(x+iy)|≥|g(x)|`
-para `g∈LP` es **correcta** (consecuencia de Hadamard: para `g` con ceros reales,
-`|g(x+iy)|²=g(x)²∏(1+y²/(x−a_k)²·…)`, crece en `|y|`). Así si `Ξ_f` tiene cero
-off-line `z₀=x₀+iη₀`, `sup_{|Im z|≤|η₀|}|ξ̂_f−Ξ_f| ≥ |ξ̂_f(z₀)| ≥ |ξ̂_f(x₀)| → |Ξ_f(x₀)|>0`.
-Correcto. Da el lado RH-falso (no converge off-axis). **SOLID módulo** (i)
-real-rootedness de `ξ̂_f` (= E1, cierto para DH vía auto-adjunción) y (ii) conv-eje
-(= andamiaje E2.a instanciado en `f`). No introduce gap nuevo. **SOLID\*.** --- ## 7. IV.2 ≡ §V — el núcleo **Veredicto: GAP = RH-EQUIVALENTE. NO lo toco (instrucción del tribunal y franqueza).** Examino sólo si la *reducción a este núcleo* es correcta y no circular. La
-caracterización variacional:
-- Bajo RH (`γ_ρ` reales), `A_λ(g,g)=Σ_ρ|g(γ_ρ)|²≥0`, el minimizador band-limited se anula en `{γ_ρ≤T*}` y por conteo (Landau–Beurling a densidad crítica) `g₀→Ξ_T`.
-- Sin RH (`γ_ρ` complejos), la forma es **indefinida**, el minimizador se concentra en ceros off-line, `≠Ξ_T`.
-- ⟹ "ground state de Weil = `Ξ_T`" ⟺ RH. **Esto es correcto como caracterización**, y confirma que IV.2 es genuinamente
-RH-equivalente, NO una conflación: `QW` ES la forma de Weil (mismo objeto, auditado en
-E0 con la salvedad de borde). Lo probado: bajo RH el minimizador *es* `Ξ_T` (módulo
-rigor del déficit de frame, Landau–Beurling — un residual de análisis pero del lado
-RH-verdadero, no incondicional); N5c da el lado RH-falso. **Lo que falta — la tasa
-`o(λ^{−½})` incondicional — ES RH.** Correctamente identificado como núcleo. No hay
-nada que cerrar aquí sin probar RH. **Un punto de rigor sobre el déficit de frame:** el paso "minimizador se anula en
-`{γ_ρ≤T*}` ⟹ `g₀=Ξ_T`" usa que el número de condiciones (`#{γ_ρ≤T*}=N(T*)`) iguala la
-dimensión band-limited (`~(L/2π)·2T*`). El "Lema horizonte" afirma esta igualdad. La
-reverifiqué groseramente: `N(T*)~(T*/2π)log(T*)~λ²·2logλ`; DOF `~(logλ/π)·2T*~(2/π)λ²logλ`.
-**No son iguales: difieren por un factor `π`/constante** (`2λ²logλ` vs `(2/π)λ²logλ`).
-El documento mismo los llama "comparables", no iguales. Esto importa: a densidad
-crítica el sistema interpolante es *exacto* sólo si las densidades coinciden; un factor
-constante de exceso/déficit de DOF cambia si el espacio casi-nulo es de dimensión 1
-(forzando `g₀=Ξ_T` único) o de dimensión `>1` (familia, `g₀` no único). **El "exactamente
-`Ξ_T`" descansa en que el déficit sea precisamente tal que la dimensión del kernel sea 1**
-— esto es el residual de Landau–Beurling y **no está probado**. Es parte del núcleo
-RH-hard (lado RH-verdadero). Lo dejo marcado, no lo cierro. --- ## 8. E3, E4 **E3 (Hurwitz) — SOLID, módulo E1.** Si `ξ̂_λ→Ξ` uniforme en compactos de `|Im z|≤½` y
-cada `ξ̂_λ∈LP`, un cero complejo de Ξ sería límite de ceros reales — contradicción por
-Hurwitz. Correcto, clásico. Módulo E1 (insumo). SOLID. **E4 — SOLID.** `Ξ∈LP ⟺ RH`. Clásico (la clase de Laguerre–Pólya real-rooted de Ξ
-equivale a todos los ceros de ζ en la línea crítica). SOLID. --- ## 9. Síntesis: gaps cerrados, gaps abiertos **Cerrados / con progreso riguroso (en mi lente):**
-1. **(H-gap) parte finita:** `γ(λ)>0` a cada `λ` finito, probado vía el nodo central forzado del modo impar (entrelazado de paridad (A) + Sturm). Residual: liminf uniforme `(H-gap-res)`, análisis no RH-hard.
-2. **IV.1 estructura:** confirmo SOLID la paridad/entrelazado (A) y la compacidad (B); **añado** el argumento de que (B) (compacidad) *impide* derivar `n²` del operador crudo — el `n²` es del operador de borde, no derivado. Esto **aclara** (no cierra) por qué `n²`/`γ=3` siguen fenomenológicos pese a (A)+(B).
-3. **(H-pos) reinterpretada:** confirmo y **agravo** — no es sólo "asume ε₀>0", la arquitectura entera de `/ε₀` presupone el régimen RH-verdadero (semi-circularidad de III). **Abiertos no-RH-hard (localizados, análisis):**
-- (H-gap-res): liminf `ε₀^O/ε₀^E>1` (Landau–Widom, capa límite).
-- (H-lim-res) ≡ IV.1-res'': existencia del límite de escala + coef. `(p,q,w)` del SL.
-- E1 propio: Hermite–Biehler desde auto-adjunción (con carrier de borde near-Nyquist). **Abiertos RH-hard (NO tocados, correctamente identificados):**
-- IV.2 ≡ §V: tasa `o(λ^{−½})` ⟺ "ground state de Weil = Ξ_T" ⟺ RH.
-- (H-pos) `ε₀>0` = Weil-positividad-hasta-T* (RH-hasta-T*).
+| N5c | **SOLID\*** (modulo E1 + axis-conv) | |
+| IV.1 (limit operator) | **GAP** (not RH-hard) | closed part; see below |
+| IV.2 ≡ §V | **GAP = RH** | RH-equivalent core; I do NOT touch it |
+| E3 (Hurwitz) | **SOLID, modulo E1** | |
+| E4 | **SOLID** | classical | I closed (rigorously or with an exact named residual): **(H-pos) reinterpreted**,
+**part of IV.1** (parity/interlacing/compactness — already there; I add the argument
+for why `n²` CANNOT be derived from the compact kernel, which *refutes* the optimistic
+reading), and **(H-gap) γ>0 remains OPEN** — I explain why it is not a free gift from IV.1. --- ## 1. E0 — construction and the key identity **Verdict: SOLID, with an important caveat about the identity.** The definition of `QW` (Def 0.1) and the band-limited `ξ̂` (Def 0.2, Prop 0.3) are
+correct: `sin(Ls/2)` cancels the poles `d_k`, Paley–Wiener gives type `L/2=logλ`,
+reality on ℝ. That is impeccable. **Attempt to break the identity ⟨ξ,QWξ⟩ = Σ_ρ g(γ_ρ)conj(g(conj γ_ρ)).**
+Here one must be severe. The claim "`QW` IS the Weil form on the zero-side" is
+used twice as a pivot (H1′ and the IV.2 core). Let us examine what is true: 1. Weil's explicit formula is an *identity between two sides*: `(arch) − (arith) = (zero-side)`, i.e. `Σ_ρ g(γ_ρ)conj(g(conj γ_ρ))` **equals** `∫ g·ĝ·w_arch − Σ_n (Λ(n)/√n)(…)`. That the matrix `𝒲_{mn}` encodes the left side (arch − arith) is **definition** (Def 0.1) — that part is exact.
+2. That this left side **equals** `Σ_ρ g(γ_ρ)conj(g(conj γ_ρ))` is the explicit formula, **classical and true**, for `g∈PW_Ω` of suitable support. **But there is a truncation caveat the document underplays.** The exact
+Weil formula runs over **all** `ρ` and **all** primes. The finite matrix
+truncates primes to `n'≤λ²`. The document claims "`A_λ = A_∞|_{E_λ}` exact (primes `>λ²`
+do not contribute by support)". This is correct **only** because `g=ξ̂` has Fourier
+support in `[−logλ, logλ]` and `log n' ≤ logλ² = 2logλ`... — wait: `log n'` for
+`n'≤λ²` reaches up to `2logλ`, which is `L`, **the very edge** of the support of the
+Fejér window, not its interior. The integrand `q_{mn}(y)` runs over `y∈[0,L]` and `log n'∈[0,2logλ]=[0,L]`.
+So the truncation to `n'≤λ²` **is not due to strict support** but to the window
+`(1−y/L)` that vanishes at `y=L`. Primes with `log n'` near `L` enter with weight
+**nearly zero but not zero**. The claim "exact" is therefore **slightly
+oversold**: it is exact in the limit, with an edge error controlled by the
+Fejér window. This is benign (it is in fact the candid content of N5b), but
+"exact" should read "exact up to the Fejér window tail at `y→L`". **E0 conclusion:** SOLID as a construction and as a Weil identity; correct
+"exact" → "exact up to a window tail at the band edge". This caveat does not
+damage anything downstream (it is reabsorbed in N5b), but a referee flags it. --- ## 2. E1 / H1 / H1′ **E1 — Verdict: GAP (candid, already flagged 🔧). I confirm the HIGH severity.** The counterexample `ξ=(−1,2,−1)`, `d=(−1,0,1)` → `f(s)=−2/(s³−s)`, zero real roots,
+is **correct** and definitively kills the interlacing argument. I verified it:
+`−1/(s+1)+2/s−1/(s−1)`, common denominator `s(s²−1)`:
+numerator `= −s(s−1)+2(s²−1)−s(s+1) = −s²+s+2s²−2−s²−s = −2`. Exact. The vector is
+even with one sign change and produces a secular function with no real roots. Interlacing **dead**. The claim that real-rootedness is nonetheless true rests entirely on
+**CCM Thm 1.1(iii)** as a black box. It is legitimate to *cite it*, but then E1 is
+not "proved by us". The document acknowledges this. **I cannot close E1** through
+my lens without reproducing CCM or building the Hermite–Biehler proof from the
+self-adjoint realization — and the latter **is not done and is genuinely
+difficult** (the edge carrier `ω*=2πN/(2N+1)` near-Nyquist means the translation
+"positivity of the envelope ⟹ HB of `ξ̂`" is not mechanical). E1 **GAP confirmed, not closable here**. Additional critical remark (through my lens): the document states that
+real-rootedness "also holds for DH (RH-false)" empirically, and from this concludes
+"it is not Perron–Frobenius, it is self-adjoint/HB". **Caution: this is a
+double-edged weapon.** If the self-adjoint CCM realization gives real-rootedness
+*unconditionally* (even for DH, without `Λ≥0`), then the real-rootedness of `ξ̂_{λ,N}`
+**contains no information about RH** — it is a property of the *finite* object, not
+of the limit. Fine. That is consistent: the RH content lies entirely in the
+*convergence* `ξ̂→Ξ`, not in the finite real-rootedness. But then one must be very
+clear: E1 is finite self-adjointness, RH-neutral; all the load is in IV.2. The
+document essentially says this. Coherent. **H1 — Verdict: SOLID (as structure).** After the correction, H1 = "Perron–
+Frobenius gives a simple ground state + positive-envelope eigenvector (de-modulated)". This is
+correct *if* `e^{−tQW}` is positivity-preserving, which is claimed via
+Lévy–Khintchine + Schoenberg + Trotter with `Λ(n)≥0`. I did not audit `H1_PROOF.md` line by
+line, but the structure is standard and the conclusion (simple ground state, nodeless
+eigenvector after de-modulation) is numerically supported and is what PF actually gives.
+SOLID **as structure**, with the caveat that it does NOT give PSD (see H1′). **H1′ — Verdict: GAP = RH. This is the most important correction of the audit, and
+it is correct.** `QW` PSD (`ε_0≥0`) ⟺ Weil positivity in band `logλ` ⟺ RH-up-to-`T*`.
+Perron–Frobenius gives a simple ground state and positive eigenvector, **but it does NOT control the sign
+of `ε_0`** (PF says "the smallest eigenvalue is simple and its eigenvector is positive"; it does
+not say that the smallest eigenvalue is ≥0). The earlier memo claiming "H1 proves `QW` PSD
+unconditionally" **would prove RH**, which is impossible without more. The distinction PF ≠ PSD
+is exactly correct and is the central finding of the audit. **H1′ is not an
+available link; it is RH in disguise.** Correctly flagged. --- ## 3. Scaffolding N0–N3 + Reduction **N0 — SOLID.** The computation `Φ(u)≤Ce^{9u/2}e^{−πe^{2u}}`, even, and the bound
+`|Ξ−Ξ_T|≤2∫_T^∞Φe^{δu}du ≤ Cλ^{5/2+δ}e^{−πλ²}` via the substitution `v=e^{2u}` and the
+incomplete Gamma function, is correct. I re-verified it: `a=5/4+δ/2`, `X=e^{2T}=λ²`,
+`(λ²)^{5/4+δ/2}=λ^{5/2+δ}`. Robust, unconditional, mentions no zeros. **SOLID.** **N1 — SOLID\* (modulo Boas).** The subharmonicity argument for `log|F|−τ Im z`,
+bounded by Boas Thm 6.2.4, two-constants + harmonic measure of the segment, is
+standard and correct. The harmonic measure bound `ω(iy₀)=(2/π)arctan(R/y₀)≥1−(2/π)(y₀/R)`
+is correct. **SOLID** modulo the classical Boas result (legitimate). **N2 — SOLID.** With normalization `ξ̂(0)=Ξ(0)`, Hurwitz-invariant, `Γ=O(1)`. The
+normalization is well justified (the conclusion is real-rootedness of the limit,
+invariant under nonzero scaling). Loose end correctly closed. **SOLID.** **N3 — SOLID\* (modulo Boas/PL).** `g=Fe^{iτz}` bounded on ℝ, Phragmén–Lindelöf in H.
+Classical and correct. **SOLID\*.** **Reduction (Thm 2) — SOLID as a conditional implication, modulo E1.** The
+decomposition `ξ̂−Ξ=(ξ̂−Ξ_T)+(Ξ_T−Ξ)`, control of the second term by N0, of the
+first by N1 with `R=T*~λ²` (weight `1−ω~λ^{−2}` negligible), giving
+`sup_{|Im z|≤½}|ξ̂−Ξ| ≤ Cλ^{1/2}ε_loc + Cλ³e^{−πλ²}`, is **correct**. I re-verified the
+arithmetic of the horizon: `1−ω~(2/π)(½)/(λ²)~λ^{−2}`, and `Γ^{1−ω}=poly(λ)^{λ^{−2}}→1`.
+The factor `λ^{1/2}` comes from `e^{τy₀}=e^{(logλ)(½)}=λ^{1/2}`. All correct. **The implication "if `ε_loc=o(λ^{−1/2})` then RH" is valid**, modulo E1
+(real-rootedness, needed for Hurwitz to transfer). This is frankly a
+*conditional implication*: it does not prove the antecedent. The antecedent `ε_loc=o(λ^{−½})`
+is precisely IV.2 = RH-equivalent. **SOLID as a reduction; the antecedent is the
+RH core.** **Severity on the use of Hurwitz given the state of E1:** the document asks whether
+the use of Hurwitz is valid given the status of E1. Answer: **yes, conditionally.**
+Hurwitz (E3) only requires that each `ξ̂_λ` be real-rooted; if we accept E1 (as a CCM
+black box), Hurwitz transfers correctly. The validity of Hurwitz is **not** in
+doubt; what is in doubt is its *input* E1. There is no circularity: E1 (finite
+real-rootedness) is RH-neutral (it also holds for DH), so using E1 + convergence to
+conclude RH is not circular — the RH load is in the *convergence*, not in E1. **There is no
+circularity in the Reduction.** Correct. --- ## 4. III — the renormalization Â=A/ε₀ (my main lens) **Verdict: GAP. Correct conditional implication; the three hypotheses NOT proved, and
+one of them IS RH.** Theorem III says: under (H-gap) `inf ε₁/ε₀=1+γ>0`, (H-lim) L² Cauchy of the
+renormalized sequence, (H-pos) `ε₀>0`, then `ξ̂_∞` exists and
+`ε_loc ≤ (C/γ)√(logλ)·η(λ) + Cλ³e^{−πλ²}`. The proof (Davis–Kahan on `Â`, gap `γ`,
+Nikolskii, N0) is **correct given the hypotheses**. **Attack on the three hypotheses:** **(H-pos) `ε₀>0`.** Here I confirm the most severe finding of the audit, and
+reinforce it. Since `QW=`Weil form, `ε₀≥0` ⟺ the Weil form is ≥0 on its lowest
+band-limited mode ⟺ **Weil positivity up to `T*`** ⟺ **RH-up-to-`T*`**. The renormalization
+`/ε₀` **does not merely assume `ε₀>0`; it assumes `ε₀>0` with the correct sign, which is RH.** The
+patch `/|ε₀|` saves nothing: if `ε₀<0` (RH false at that height), the "fundamental" of
+the renormalized operator has eigenvalue `−1`, and the "isolated positive bottom"
+structure on which Davis–Kahan rests collapses or changes nature. **(H-pos)
+is RH-baked-in. Confirmed and, if anything, worse than the document admits:** it is
+not just "assumes `ε₀>0`", it is that the *entire architecture* of the renormalization presupposes
+the RH-true regime. **(H-gap) `γ>0`.** The document (IV.1) claims that `γ=3` "follows" from the
+identification of `Â_∞`=2nd-order Sturm–Liouville with spectrum `n²`. **I challenge this and
+find it NOT closed** (see §5): the `n²` spectrum is numerical, not derived; and in fact
+the very IV.1 document *refutes* the Gantmacher–Krein route and the constant-coefficient
+route. So (H-gap) is **numerical, open**. It is not a gift from IV.1. **(H-lim) L² Cauchy.** This is the existence of the scaling limit `Â_∞`. Numerical
+(Conj 2b). Not proved. It is a Toeplitz/Loewner limit analysis — hard, not RH-hard. **III conclusion:** GAP. The *conditional* proof is correct (Davis–Kahan + Nikolskii
+are well applied). But (H-pos)=RH means III **cannot be used to prove RH
+without circularity**: to conclude `ε_loc→0` (⟹RH) one already assumed `ε₀>0` (⟸RH-up-to-T*).
+This is a **semi-circularity**: III converts "RH-up-to-T* + technical limits" into
+"RH". It is not empty (it improves the height of validity T*→∞), but it is not unconditional. --- ## 5. IV.1 — identification of the limit operator (my lens) **Verdict: GAP (not RH-hard). I closed what is closable; `n²`/`γ=3` remains phenomenological,
+and I argue it is NOT a free gift.** **What is PROVED (and I confirm it correct):**
+- (A) `QW` commutes with parity `J:j↦−j` ⟹ it decomposes into even/odd sectors; the eigenvalues interlace `ε₀^E<ε₀^O<ε₁^E<…`, giving the parity alternation `(−1)^k`. **Correct and solid** — it is elementary operator theory (`ℤ/2` symmetry). SOLID.
+- (B) In the continuum, `QW_∞` is an integral operator with a **bounded** Loewner kernel ⟹ **compact** (eigenvalues → 0). **Correct.** SOLID. **The severe point I add (breaks the optimistic reading):** (A)+(B) are true, but
+**they are MUTUALLY IN TENSION with "spectrum `n²`"** and the document does not exploit this. A
+**compact** operator has eigenvalues `ε_k→0`. The law `ε_k/ε_0→(k+1)²=n²` says that
+the *renormalized* eigenvalues grow like `n²` — i.e. the original `ε_k` **grow**
+relative to `ε₀`. This is consistent with compactness only if `ε₀→0` faster (which
+does happen, `ε₀~C/λ²`), but it means that **`n²` is the signature of the boundary-layer
+operator after `/ε₀`, NOT of the compact operator `QW_∞` itself.** The document says this
+("the 2nd order lives in the boundary layer after `/ε₀`"), and that is the correct
+reading — but then **(B) does NOT help derive `n²`**: the compact kernel is smoothing, not
+differential; the `n²` must come from the Landau–Widom edge operator, which the
+document itself admits **has not been derived** (the known profiles give `2n+1` or
+logistic, not `n²`). **Recorded refutations I confirm as decisive:**
+- Gantmacher–Krein / total non-negativity: **REFUTED** (E16: 15–22% of 2×2 minors `<0`, negative off-diagonals). This closes the "total oscillation from H1" route. Correct and candid. ⟹ Sturm-ness does **not** come from total matrix positivity.
+- Constant coefficient (Dirichlet, Hermite, prolate, box): **REFUTED** by overlaps. Correct. **What remains (exact residual):** `Â_∞` is *qualitatively* 2nd order (the alternating
+parity `(−1)^k` IS a robust signature of a 2nd-order symmetric operator — this
+(A) does rigorously give), but the law `ε_k/ε₀→n²` and hence `γ=ε₁/ε₀−1→3` are
+**ONLY measured numerically, not derived**. The residual is the asymptotics of the
+boundary-layer operator of the critical frame (Landau–Widom / variable-coefficient de
+Branges-SL). **Hard analysis, NOT RH-hard.** ### Can I close (H-gap) γ>0 through my lens? — Candid partial progress. Attempt: prove `γ>0` (uniform relative gap) **without** going through the exact `n²` law. *Idea.* (H-gap) only asks for `inf_λ ε₁/ε₀ ≥ 1+γ` with `γ>0`, i.e. the second eigenvalue
+does not stick to the first in relative terms. By (A), `ε₀=ε₀^E` (even) and `ε₁=ε₀^O` (odd, the
+next one by interlacing). So
+`γ = ε₀^O/ε₀^E − 1 = (smallest eigenvalue of the odd sector)/(smallest of the even) − 1`.
+The question is: **is the smallest odd eigenvalue uniformly separated from above
+from the smallest even one, on a relative scale?** *What I CAN argue (partially):* By Perron–Frobenius on the even sector
+(H1, the even fundamental mode is nodeless after de-modulation) and Sturm oscillation theory
+for the bottom of each parity sector of a 2nd-order symmetric operator,
+the odd bottom is strictly larger than the even bottom at each finite `λ`:
+`ε₀^O > ε₀^E` (because the odd mode has a forced node at the center, raising the
+energy). This gives `γ(λ)>0` **at each λ**. ✔ (strict, finite). *What I CANNOT close (the real residual):* the **uniformity** `inf_λ γ(λ)>0`. That
+`γ(λ)` does not decay to 0 as `λ→∞`. This requires asymptotic control of
+`ε₀^O/ε₀^E`, which is exactly the `n²`-in-the-limit law. Without deriving the asymptotics
+of the edge operator, **I cannot exclude** `γ(λ)→0`. The numerical datum `→4` (γ→3) is
+strong but is not a proof. **Exact residual I leave named:**
+> **(H-gap-res):** Prove `liminf_λ ε₀^O(λ)/ε₀^E(λ) > 1`, where `ε₀^{E/O}` are the
+> bottoms of the even/odd parity sectors of `A_λ/ε₀`. Equivalent to: the even–odd
+> relative gap of the boundary-layer operator of the critical frame is asymptotically
+> `O(1)`. This is semiclassical Landau–Widom analysis; **not RH-hard** (it does not depend on
+> the global sign of `Λ(n)`, only on the geometry of the frame at critical density). I closed the finite part (`γ(λ)>0` ∀λ, via the central node of the odd mode); the uniform
+liminf remains open but **localized and not RH-hard**. ### Can I close (H-lim), the existence of Â_∞? Not completely. It is the convergence of the symbol of the Loewner-against-
+Weil-measure operator under the rescaling `/ε₀`. Compactness (B) gives control of the *raw
+limit operator* `QW_∞`, but (H-lim) is about the **renormalized** operator in the low block,
+whose existence is precisely Conj 2b. The most I can say: by (B) and Toeplitz/Loewner
+symbol theory, *if* the Liouville coordinate of the edge SL
+converges (IV.1-res''), then (H-lim) follows. So (H-lim) and the IV.1
+identification are **the same analytic residual**. I leave:
+> **(H-lim-res) ≡ (IV.1-res''):** existence of the scaling limit of the boundary-layer
+> operator (SL coefficients `(p,q,w)` in Liouville coordinate). Analysis,
+> not RH-hard. --- ## 6. N5b, N5c **N5b — SOLID.** The argument that the edge dissolves is correct and in fact
+elegant: in **absolute** sup-norm, `|ξ̂(t)−Ξ(t)|≈|Ξ'(t)||ρ̂−γ|` with `|Ξ'|~e^{−πt/4}`
+decaying; at `T*~λ²`, suppressed by `e^{−π²λ²/2}`. The distinction between
+**root** error (relative, grows at the edge) and **absolute** error (suppressed by the
+decay of Ξ) is correct and resolves the "boundary layer" mirage of E8. The
+target side `Ξ_T` is already uniform by N0. **SOLID.** The edge is benign; the non-trivial part
+concentrates in the interior = the IV.2 core. **N5c — SOLID\* (modulo E1 + axis-conv).** The real-rooted monotonicity `|g(x+iy)|≥|g(x)|`
+for `g∈LP` is **correct** (a consequence of Hadamard: for `g` with real zeros,
+`|g(x+iy)|²=g(x)²∏(1+y²/(x−a_k)²·…)`, increasing in `|y|`). So if `Ξ_f` has an
+off-line zero `z₀=x₀+iη₀`, `sup_{|Im z|≤|η₀|}|ξ̂_f−Ξ_f| ≥ |ξ̂_f(z₀)| ≥ |ξ̂_f(x₀)| → |Ξ_f(x₀)|>0`.
+Correct. Gives the RH-false side (no convergence off-axis). **SOLID modulo** (i)
+real-rootedness of `ξ̂_f` (= E1, true for DH via self-adjointness) and (ii) axis-convergence
+(= scaffolding E2.a instantiated at `f`). No new gap introduced. **SOLID\*.** --- ## 7. IV.2 ≡ §V — the core **Verdict: GAP = RH-EQUIVALENT. I do NOT touch it (tribunal's instruction and candor).** I examine only whether the *reduction to this core* is correct and non-circular. The
+variational characterization:
+- Under RH (`γ_ρ` real), `A_λ(g,g)=Σ_ρ|g(γ_ρ)|²≥0`, the band-limited minimizer vanishes on `{γ_ρ≤T*}` and by counting (Landau–Beurling at critical density) `g₀→Ξ_T`.
+- Without RH (`γ_ρ` complex), the form is **indefinite**, the minimizer concentrates on off-line zeros, `≠Ξ_T`.
+- ⟹ "Weil ground state = `Ξ_T`" ⟺ RH. **This is correct as a characterization**, and confirms that IV.2 is genuinely
+RH-equivalent, NOT a conflation: `QW` IS the Weil form (same object, audited in
+E0 with the edge caveat). What is proved: under RH the minimizer *is* `Ξ_T` (modulo
+rigor of the frame deficit, Landau–Beurling — an analysis residual but on the
+RH-true side, not unconditional); N5c gives the RH-false side. **What is missing — the
+unconditional rate `o(λ^{−½})` — IS RH.** Correctly identified as the core. There is
+nothing to close here without proving RH. **A rigor point about the frame deficit:** the step "minimizer vanishes on
+`{γ_ρ≤T*}` ⟹ `g₀=Ξ_T`" uses that the number of conditions (`#{γ_ρ≤T*}=N(T*)`) equals the
+band-limited dimension (`~(L/2π)·2T*`). The "horizon lemma" asserts this equality. I
+re-verified it roughly: `N(T*)~(T*/2π)log(T*)~λ²·2logλ`; DOF `~(logλ/π)·2T*~(2/π)λ²logλ`.
+**They are not equal: they differ by a factor of `π`/constant** (`2λ²logλ` vs `(2/π)λ²logλ`).
+The document itself calls them "comparable", not equal. This matters: at
+critical density the interpolating system is *exact* only if the densities coincide; a
+constant excess/deficit factor in DOF changes whether the near-null space has dimension 1
+(forcing a unique `g₀=Ξ_T`) or dimension `>1` (a family, `g₀` not unique). **The "exactly
+`Ξ_T`" rests on the deficit being precisely such that the kernel dimension is 1**
+— this is the Landau–Beurling residual and **is not proved**. It is part of the
+RH-hard core (RH-true side). I leave it flagged, I do not close it. --- ## 8. E3, E4 **E3 (Hurwitz) — SOLID, modulo E1.** If `ξ̂_λ→Ξ` uniformly on compacts of `|Im z|≤½` and
+each `ξ̂_λ∈LP`, a complex zero of Ξ would be a limit of real zeros — a contradiction by
+Hurwitz. Correct, classical. Modulo E1 (input). SOLID. **E4 — SOLID.** `Ξ∈LP ⟺ RH`. Classical (the real-rooted Laguerre–Pólya class of Ξ
+is equivalent to all zeros of ζ being on the critical line). SOLID. --- ## 9. Synthesis: closed gaps, open gaps **Closed / with rigorous progress (through my lens):**
+1. **(H-gap) finite part:** `γ(λ)>0` at each finite `λ`, proved via the forced central node of the odd mode (parity interlacing (A) + Sturm). Residual: uniform liminf `(H-gap-res)`, not-RH-hard analysis.
+2. **IV.1 structure:** I confirm SOLID the parity/interlacing (A) and compactness (B); **I add** the argument that (B) (compactness) *prevents* deriving `n²` from the raw operator — the `n²` belongs to the edge operator, not derived. This **clarifies** (does not close) why `n²`/`γ=3` remain phenomenological despite (A)+(B).
+3. **(H-pos) reinterpreted:** I confirm and **aggravate** — it is not just "assumes ε₀>0", the entire architecture of `/ε₀` presupposes the RH-true regime (semi-circularity of III). **Open, not-RH-hard (localized, analysis):**
+- (H-gap-res): liminf `ε₀^O/ε₀^E>1` (Landau–Widom, boundary layer).
+- (H-lim-res) ≡ IV.1-res'': existence of the scaling limit + SL coefficients `(p,q,w)`.
+- E1 proper: Hermite–Biehler from self-adjointness (with near-Nyquist edge carrier). **Open, RH-hard (NOT touched, correctly identified):**
+- IV.2 ≡ §V: rate `o(λ^{−½})` ⟺ "Weil ground state = Ξ_T" ⟺ RH.
+- (H-pos) `ε₀>0` = Weil-positivity-up-to-T* (RH-up-to-T*).
 - H1′: `QW` PSD = RH.
-- Déficit de frame dim-1 (lado RH-verdadero del núcleo). **Veredicto global del tribunal.** La cadena es franca y, tras auditoría, es una
-**reducción correcta de RH a un núcleo RH-equivalente** (IV.2), rodeada de andamiaje
-genuinamente probado (N0–N3, N5b, N5c, Reducción, E3, E4). Las dos afirmaciones que un
-referee severo habría podido tomar por "incondicionales" y que NO lo son —H1′ (PSD) y
-III/(H-pos)— están **correctamente degradadas** a RH-equivalentes en la versión
-auditada. **No se prueba RH; se la localiza sin auto-engaño.** El documento resiste el
-escrutinio precisamente porque ya absorbió las objeciones que yo habría levantado. El
-único punto donde lo encuentro *aún optimista* es la afirmación de que `γ=3` "se sigue"
-de IV.1: no se sigue, es numérico; la parte finita `γ(λ)>0` sí la cerré, el liminf no. — A. (referee)
+- dim-1 frame deficit (RH-true side of the core). **Overall tribunal verdict.** The chain is candid and, after audit, is a
+**correct reduction of RH to an RH-equivalent core** (IV.2), surrounded by genuinely
+proved scaffolding (N0–N3, N5b, N5c, Reduction, E3, E4). The two claims that a
+severe referee might have taken for "unconditional" and which are NOT —H1′ (PSD) and
+III/(H-pos)— are **correctly downgraded** to RH-equivalent in the audited version. **RH is not proved; it is localized without self-deception.** The document withstands
+scrutiny precisely because it already absorbed the objections I would have raised. The
+only point where I still find it optimistic is the claim that `γ=3` "follows"
+from IV.1: it does not follow, it is numerical; the finite part `γ(λ)>0` I did close, the liminf I did not. — A. (referee)

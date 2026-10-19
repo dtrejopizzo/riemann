@@ -1,7 +1,6 @@
 # E72.170 -- Cubic trace majorant audit
 
-**Date:** 2026-07-09.
-**Role:** test the first polynomial way to remove the spectral sign decomposition.
+**Purpose:** test the first polynomial way to remove the spectral sign decomposition.
 
 ## 0. Cubic majorant
 

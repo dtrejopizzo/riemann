@@ -1,7 +1,6 @@
 # E72.16 -- Zero-filter gate for the resonance vectors
 
-**Date:** 2026-07-08.
-**Role:** decide what kind of theorem could prove the resonance annihilation left open by E72.15
+**Purpose:** decide what kind of theorem could prove the resonance annihilation left open by E72.15
 without encoding the zeta divisor.
 
 ## 0. Input from E72.15

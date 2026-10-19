@@ -1,6 +1,5 @@
 # E73.148 Results - Signed Forced Rowspace Probe
 
-Date: 2026-07-12.
 
 Script:
 

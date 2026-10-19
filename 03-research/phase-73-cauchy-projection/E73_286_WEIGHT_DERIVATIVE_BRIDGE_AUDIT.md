@@ -1,6 +1,5 @@
 # E73.286 - Weight derivative bridge audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

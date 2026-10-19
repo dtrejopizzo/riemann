@@ -1,6 +1,5 @@
 # E73.137 Results - Cell Balance Probe
 
-Date: 2026-07-12.
 
 Script:
 

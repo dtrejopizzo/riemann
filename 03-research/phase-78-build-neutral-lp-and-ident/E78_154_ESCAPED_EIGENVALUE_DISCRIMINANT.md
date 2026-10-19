@@ -1,11 +1,11 @@
 # E78.154 - The escaped eigenvalue: M_N structure and the point-6 discriminant
 
-**Run:** 2026-07-21.
+**Run:**
 **Scope:** IDENT / point 6. Diagnoses M_N (E78.153) sign/support; isolates a
 sharp build discriminant.
 **Class:** REDUCCION GENUINA + discriminant lead.
 
-## 0. CORRECTION (2026-07-21, same day) -- retract the "single stable avatar"
+## 0. CORRECTION (same day) -- retract the "single stable avatar"
 
 The trajectory probe E78.155 and a direct spectrum listing REFUTE this
 document's central narrative (Sec 3, "a single escaped eigenvalue at a stable

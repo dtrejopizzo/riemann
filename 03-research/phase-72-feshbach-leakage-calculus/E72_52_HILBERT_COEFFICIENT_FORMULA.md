@@ -1,7 +1,6 @@
 # E72.52 -- Hilbert coefficient formula for the compressed scalar channel
 
-**Date:** 2026-07-08.
-**Role:** express the Fourier coefficients `c_{x,s,ell}` from E72.51 directly in terms of the finite
+**Purpose:** express the Fourier coefficients `c_{x,s,ell}` from E72.51 directly in terms of the finite
 vectors `v_{x,s}` and `k_x`.
 
 ## 0. Cell formulas

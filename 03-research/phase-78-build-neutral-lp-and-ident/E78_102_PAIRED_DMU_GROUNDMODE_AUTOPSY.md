@@ -1,6 +1,6 @@
 # E78.102 - Ground-mode localization does not close `PAIRED-DMU-LOCAL`
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** front B only, live object `PAIRED-DMU-LOCAL` from E78.101.  
 **Class:** AUTOPSIA theorem-grade.  
 **What we know after this doc that we did not know before:** the obvious

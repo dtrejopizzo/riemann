@@ -1,7 +1,6 @@
 # E72.28 -- Audit of bordered determinant identification
 
-**Date:** 2026-07-08.
-**Role:** decide whether the relative bordered Fredholm theorem creates new leverage or simply renames
+**Purpose:** decide whether the relative bordered Fredholm theorem creates new leverage or simply renames
 the Phase 71 convergence problem.
 
 ## 0. The issue

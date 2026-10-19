@@ -1,4 +1,4 @@
-# Strong-A audit after the internal periodic Kunneth construction
+# Strong-An audit after the internal periodic Kunneth construction
 
 ## 1. Closed statements
 

@@ -1,6 +1,5 @@
 # E74.23 - Planted off-line nodal falsifier
 
-Date: 2026-07-16.
 
 ## Test
 

@@ -1,7 +1,6 @@
 # E72.27 -- Relative bordered Fredholm theorem
 
-**Date:** 2026-07-08.
-**Role:** state and prove the determinant convergence theorem that would turn the bordered pencil
+**Purpose:** state and prove the determinant convergence theorem that would turn the bordered pencil
 identity into Schur-free current convergence.
 
 ## 0. Bordered pencils

@@ -1,6 +1,6 @@
-# 104_77 — Contorno seguro, Cartan--Turán y gate de cola profunda
+# 104_77 — Safe contour, Cartan--Turán, and deep tail gate
 
-**Resultado.** Se atacó directamente el criterio profundo de `104_75`,
+**Result.** The deep criterion of `104_75` was attacked directly,
 
 \[
  {1\over H_X}\sum_{n\le X}{1\over n}
@@ -8,9 +8,9 @@
  \tag{1}
 \]
 
-El contorno seguro de `104_74` permite separar rigurosamente, grado por
-grado, una parte exterior polinómica y una suma finita de residuos
-interiores. En la escala de (1), la parte exterior es despreciable:
+The safe contour of `104_74` allows rigorously separating, degree by
+degree, a polynomial exterior part and a finite sum of interior
+residues. At the scale of (1), the exterior part is negligible:
 
 \[
  \lambda_n=C_{n,n}-Z_n,\qquad
@@ -19,34 +19,35 @@ interiores. En la escala de (1), la parte exterior es despreciable:
  Z_n=\sum_{|w_\rho|<r_n}m_\rho w_\rho^{-n}.              \tag{2}
 \]
 
-Por tanto (1) es equivalente, en la dicotomía RH/no-RH, a una cota de
-densidad unilateral para \(Z_n\). Esta separación es incondicional y no
-supone que la suma esté vacía.
+Therefore (1) is equivalent, in the RH/non-RH dichotomy, to a
+one-sided density bound for \(Z_n\). This separation is unconditional
+and does not assume the sum is empty.
 
-El ataque complejo no cierra esa cota. Jensen mide exactamente la masa de
-los mismos polos, mientras Turán fuerza grandes sumas de potencias cuando
-alguno existe. Ambos mecanismos tienen el signo opuesto al requerido para
-eliminar \(Z_n\). Cartan puede retirar discos que contienen ceros, pero un
-solo disco retirado puede contener el polo que produce una densidad positiva
-de excursiones profundas; desecharlo pierde precisamente la información que
-hay que controlar.
+The complex-analytic attack does not close that bound. Jensen exactly
+measures the mass of those same poles, while Turán forces large power
+sums whenever one exists. Both mechanisms have the opposite sign to
+the one required to eliminate \(Z_n\). Cartan can remove disks
+containing zeros, but a single removed disk may contain the pole that
+produces a positive density of deep excursions; discarding it loses
+precisely the information that must be controlled.
 
-Se añade un falsificador cuantitativo más fuerte que el radial de `104_74`.
-El cuarteto \(w=2i\) conserva conjugación y simetría funcional, tiene
-coeficientes negativos exponenciales en una clase de densidad \(1/4\), pero
-su generatriz continuada es **estrictamente positiva en todo el rayo real**
-\(0<r<1\). Luego ni Jensen/Cartan, ni Turán, ni la positividad y el crecimiento
-de la continuación sobre el rayo Euler pueden probar (1) sin usar una
-desigualdad adicional específica de los pesos reales \(\Lambda(m)\).
+A quantitative falsifier stronger than the radial one of `104_74` is
+added. The quartet \(w=2i\) preserves conjugation and functional
+symmetry, has exponentially negative coefficients on a class of
+density \(1/4\), but its continued generating function is **strictly
+positive on the entire real ray** \(0<r<1\). Hence neither
+Jensen/Cartan, nor Turán, nor the positivity and growth of the
+continuation on the Euler ray can prove (1) without using an
+additional inequality specific to the real weights \(\Lambda(m)\).
 
-El documento prueba una reducción y un no-go para este paquete de análisis
-complejo. No prueba (1), A1 ni RH.
+The document proves a reduction and a no-go for this complex-analysis
+package. It does not prove (1), A1, or RH.
 
 ---
 
-## 1. El residuo interior es todo el observable profundo
+## 1. The interior residue is the whole deep observable
 
-Ponga
+Set
 
 \[
  \Phi(z)={\xi(1/(1-z))\over\xi(1)},\qquad
@@ -54,19 +55,19 @@ Ponga
               =\sum_{n\ge1}\lambda_nz^n,                \tag{3}
 \]
 
-y, para cada cero no trivial \(\rho\),
+and, for each nontrivial zero \(\rho\),
 
 \[
  w_\rho=1-{1\over\rho}.                                  \tag{4}
 \]
 
-El Teorema 4.1 de `104_74` construye, para todo \(N\) grande, un radio
+Theorem 4.1 of `104_74` constructs, for every large \(N\), a radius
 
 \[
  r_N\in[1-2/N,1-1/N]                                    \tag{5}
 \]
 
-que no atraviesa polos y para el cual
+that does not cross poles and for which
 
 \[
  \lambda_n=C_{n,N}-
@@ -75,24 +76,24 @@ que no atraviesa polos y para el cual
  |C_{n,N}|\le K N^5\log^2N\quad(N\le n\le2N),           \tag{6}
 \]
 
-con una constante absoluta \(K\). No se ha usado RH. La suma de (6) es
-real, porque el conjunto de polos es estable por conjugación.
+with an absolute constant \(K\). RH has not been used. The sum in (6)
+is real, because the set of poles is stable under conjugation.
 
-Tomando \(N=n\) (lo cual es legítimo porque el extremo \(n=N\) pertenece
-al rango \(N\le n\le2N\) del Teorema 4.1), defina, para \(n\) bastante
-grande,
+Taking \(N=n\) (which is legitimate because the endpoint \(n=N\)
+belongs to the range \(N\le n\le2N\) of Theorem 4.1), define, for
+\(n\) large enough,
 
 \[
  Z_n:=\sum_{|w_\rho|<r_n}m_\rho w_\rho^{-n},
  \qquad P_n:=K n^5\log^2n.                              \tag{7}
 \]
 
-La suma es finita: para cada \(r_n<1\), la condición
-\(|w_\rho|<r_n\) fuerza que \(|\Im\rho|\) esté acotado. Fijamos
-\(Z_n:=0\) en el prefijo finito que el teorema no cubre; esta convención no
-altera ninguna de las densidades siguientes. A partir del primer índice
-cubierto, para \(S_X=e^{\sqrt X}\) y \(n\le X\), (6) da las inclusiones
-exactas
+The sum is finite: for each \(r_n<1\), the condition
+\(|w_\rho|<r_n\) forces \(|\Im\rho|\) to be bounded. We set
+\(Z_n:=0\) on the finite prefix the theorem does not cover; this
+convention does not alter any of the densities below. From the first
+covered index on, for \(S_X=e^{\sqrt X}\) and \(n\le X\), (6) gives
+the exact inclusions
 
 \[
  \begin{aligned}
@@ -105,18 +106,18 @@ exactas
  \end{aligned}                                          \tag{8}
 \]
 
-En el intervalo \(K_0\sqrt X\le n\le X\), el error
-\(P_n+\log(n+1)=e^{o(\sqrt X)}\) es despreciable frente a \(S_X\).
-Esto no autoriza a reemplazar indicadores duros por una estimación
-Lipschitz. La equivalencia correcta usa la dicotomía de residuos.
+On the interval \(K_0\sqrt X\le n\le X\), the error
+\(P_n+\log(n+1)=e^{o(\sqrt X)}\) is negligible compared with \(S_X\).
+This does not authorize replacing hard indicators by a Lipschitz
+estimate. The correct equivalence uses the residue dichotomy.
 
-### Proposición 1.1 (dicotomía profunda de la suma de residuos)
+### Proposition 1.1 (deep dichotomy of the residue sum)
 
-Las siguientes afirmaciones son equivalentes:
+The following statements are equivalent:
 
 1. RH;
-2. la media de (1) tiende a cero;
-3. se tiene
+2. the mean of (1) tends to zero;
+3. one has
 
    \[
    {1\over H_X}\sum_{n\le X}{1\over n}
@@ -124,30 +125,30 @@ Las siguientes afirmaciones son equivalentes:
    \longrightarrow0.                                    \tag{9}
    \]
 
-**Demostración.** Si RH vale, no hay \(w_\rho\) con \(|w_\rho|<1\),
-luego \(Z_n=0\) y (9) es idénticamente cero; (1) también lo es por
+**Proof.** If RH holds, there is no \(w_\rho\) with \(|w_\rho|<1\), so
+\(Z_n=0\) and (9) is identically zero; (1) is as well, by
 \(\lambda_n\ge0\).
 
-Si RH es falsa, `104_56` da un módulo dominante \(R>1\), constantes
-\(c>0\), \(R_1<R\), y un conjunto sindético \(D\) de densidad natural
-\(d>0\) tales que
+If RH is false, `104_56` gives a dominant modulus \(R>1\), constants
+\(c>0\), \(R_1<R\), and a syndetic set \(D\) of natural density
+\(d>0\) such that
 
 \[
  \lambda_n=-R^nS(n)+O(n^2R_1^n+n^2),
  \qquad S(n)>c\quad(n\in D).                            \tag{10}
 \]
 
-Para \(n\) grande, el radio \(r_n\) contiene todos los polos dominantes.
-Comparando (6) y (10), o separando directamente esos polos en (7), se
-obtiene
+For large \(n\), the radius \(r_n\) contains all dominant poles.
+Comparing (6) and (10), or directly separating those poles in (7),
+gives
 
 \[
  Z_n\ge {c\over2}R^n\qquad(n\in D)                      \tag{11}
 \]
 
-desde un índice fijo. Elija \(K_0>1/\log R\). Para
-\(n\in D\cap[K_0\sqrt X,X]\), (11) domina
-\(e^{\sqrt X}+P_n+\log(n+1)\). Por sumación parcial,
+from a fixed index on. Choose \(K_0>1/\log R\). For
+\(n\in D\cap[K_0\sqrt X,X]\), (11) dominates
+\(e^{\sqrt X}+P_n+\log(n+1)\). By partial summation,
 
 \[
  {1\over H_X}
@@ -155,18 +156,18 @@ desde un índice fijo. Elija \(K_0>1/\log R\). Para
  \longrightarrow {d\over2}>0.                          \tag{12}
 \]
 
-Así (9) falla. La equivalencia entre 1 y 2 es el Teorema 2.1 de `104_75`.
-\(\square\)
+Thus (9) fails. The equivalence between 1 and 2 is Theorem 2.1 of
+`104_75`. \(\square\)
 
-La Proposición 1.1 no es una prueba nueva de RH: identifica exactamente
-qué tendría que acotarse después de que el contorno ha retirado todo error
-subexponencial.
+Proposition 1.1 is not a new proof of RH: it identifies exactly what
+would have to be bounded after the contour has removed all
+subexponential error.
 
 ---
 
-## 2. Jensen convierte la pregunta en anular masa interior
+## 2. Jensen turns the question into vanishing interior mass
 
-Para \(0<r<1\) que no atraviese un cero, Jensen aplicado a (3) da
+For \(0<r<1\) not crossing a zero, Jensen applied to (3) gives
 
 \[
  J(r):={1\over2\pi}\int_0^{2\pi}
@@ -174,111 +175,113 @@ Para \(0<r<1\) que no atraviese un cero, Jensen aplicado a (3) da
  =\sum_{|w_\rho|<r}m_\rho\log{r\over|w_\rho|}\ge0.       \tag{13}
 \]
 
-Como \(\Phi(0)=1\), no hay término central. De (13),
+Since \(\Phi(0)=1\), there is no central term. From (13),
 
 \[
  \boxed{
  \mathrm {RH}\quad\Longleftrightarrow\quad
- J(r)=0\ \text{para todo }0<r<1
+ J(r)=0\ \text{for every }0<r<1
  \quad\Longleftrightarrow\quad
  \liminf_{r\uparrow1}J(r)=0.}                           \tag{14}
 \]
 
-La última equivalencia es rigurosa: si existe un cero interior
-\(w_0\) de \(\Phi\) (equivalentemente, un polo de \(\mathcal G\)), entonces,
-para todo \(r>|w_0|\),
+The last equivalence is rigorous: if there is an interior zero
+\(w_0\) of \(\Phi\) (equivalently, a pole of \(\mathcal G\)), then,
+for every \(r>|w_0|\),
 
 \[
  J(r)\ge m_0\log{r\over|w_0|}
  \longrightarrow m_0\log{1\over|w_0|}>0.               \tag{15}
 \]
 
-Por tanto una ruta Jensen debe probar una **cota superior que tienda a
-cero** para la cantidad no negativa (13). Subarmonicidad solo entrega el
-signo \(J(r)\ge0\). Las cotas ordinarias de crecimiento de \(\xi\) dan una
-cota positiva para \(J(r)\), no la anulación de (15).
+Therefore a Jensen route must prove an **upper bound tending to
+zero** for the non-negative quantity (13). Subharmonicity only
+delivers the sign \(J(r)\ge0\). The ordinary growth bounds for
+\(\xi\) give a positive bound for \(J(r)\), not the vanishing in
+(15).
 
-Cartan no mejora este punto lógico. Al aplicarlo a un producto truncado,
-sus lemas dan cotas inferiores para \(|\Phi|\) fuera de una unión de discos
-que cubren los ceros; la suma de radios permitida es un parámetro del lema,
-y Jensen aporta el conteo ponderado usado para elegir el truncamiento.
-Pero (15) muestra que un solo disco, por pequeño que sea, puede contener el
-cero que genera todas las excursiones de (11). Retirar los discos de Cartan
-retira exactamente el término \(Z_n\) que aparece en (9).
+Cartan does not improve this logical point. When applied to a
+truncated product, its lemmas give lower bounds for \(|\Phi|\) outside
+a union of disks covering the zeros; the allowed sum of radii is a
+parameter of the lemma, and Jensen supplies the weighted count used to
+choose the truncation. But (15) shows that a single disk, however
+small, may contain the zero that generates all the excursions in (11).
+Removing the Cartan disks removes exactly the term \(Z_n\) that
+appears in (9).
 
-La pérdida es cuantitativa, no solo lógica. Para \(0<|a|<1\), la función
-meromorfa elemental
+The loss is quantitative, not merely logical. For \(0<|a|<1\), the
+elementary meromorphic function
 
 \[
  f_a(z)={1\over1-z/a}=\sum_{n\ge0}a^{-n}z^n
  \qquad(|z|<|a|)                                        \tag{15a}
 \]
 
-tiene coeficientes exponenciales, mientras su característica de Nevanlinna
-permanece acotada cuando \(r\uparrow1\): el término de conteo del único
-polo es \(N(r,f_a)=\log(r/|a|)\) para \(r>|a|\), y el término de proximidad
-es \(O_a(1)\). Así una cota incluso uniforme para la característica de
-Nevanlinna es compatible con coeficientes \(|a|^{-n}\). Para recuperar esos
-coeficientes hay que añadir explícitamente la parte principal en \(a\), que
-es exactamente el sumando de \(Z_n\) en (7).
+has exponential coefficients, while its Nevanlinna characteristic
+remains bounded as \(r\uparrow1\): the counting term for the single
+pole is \(N(r,f_a)=\log(r/|a|)\) for \(r>|a|\), and the proximity term
+is \(O_a(1)\). Thus even a uniform bound on the Nevanlinna
+characteristic is compatible with coefficients \(|a|^{-n}\). To
+recover those coefficients one must explicitly add the principal part
+at \(a\), which is exactly the \(Z_n\) summand in (7).
 
 ---
 
-## 3. Turán fuerza la cola mala; no la excluye
+## 3. Turán forces the bad tail; it does not exclude it
 
-Sea \(R>1\) el máximo de \(|w_\rho|^{-1}\) sobre los polos interiores de
-\(\mathcal G\) (los ceros interiores de \(\Phi\)) y
-escriba los modos dominantes como
+Let \(R>1\) be the maximum of \(|w_\rho|^{-1}\) over the interior poles
+of \(\mathcal G\) (the interior zeros of \(\Phi\)) and
+write the dominant modes as
 
 \[
  w_j^{-1}=Re^{i\phi_j}\qquad(1\le j\le M).              \tag{16}
 \]
 
-El power sum dominante es
+The dominant power sum is
 
 \[
  R^nS(n),\qquad S(n)=\sum_{j=1}^M m_j\cos(n\phi_j).      \tag{17}
 \]
 
-Los teoremas de sumas de potencias de Turán prueban que una familia no
-nula como (17) alcanza tamaño comparable con \(R^n\) en bloques de longitud
-controlada por el número de modos. Para el signo real necesario aquí no
-hace falta una versión cuantitativa: el cierre compacto del giro
-\(n(\phi_1,\ldots,\phi_M)\) contiene el origen, y todo entorno del origen
-tiene un conjunto sindético de retornos. En esos retornos,
+Turán's power-sum theorems prove that a nonzero family like (17)
+reaches a size comparable with \(R^n\) on blocks of length controlled
+by the number of modes. For the real sign needed here, no quantitative
+version is needed: the compact closure of the rotation
+\(n(\phi_1,\ldots,\phi_M)\) contains the origin, and every neighborhood
+of the origin has a syndetic set of returns. On those returns,
 
 \[
  S(n)>{1\over2}\sum_{j=1}^Mm_j>0.                       \tag{18}
 \]
 
-Las ecuaciones (17)--(18) son precisamente el mecanismo de (11). Así,
-Turán confirma que todo polo interior de \(\mathcal G\) produce la cola
-profunda con densidad
-positiva. Para deducir (9), habría que probar antes que no existe ningún
-modo \(|w_j|^{-1}>1\), o que todos sus residuos se anulan. En el logaritmo
-derivado los residuos son las multiplicidades positivas \(m_j\), de modo
-que no pueden anularse modo por modo.
+Equations (17)--(18) are precisely the mechanism of (11). Thus, Turán
+confirms that every interior pole of \(\mathcal G\) produces the deep
+tail with positive density. To deduce (9), one would first have to
+prove that no mode \(|w_j|^{-1}>1\) exists, or that all its residues
+vanish. In the logarithmic derivative, the residues are the positive
+multiplicities \(m_j\), so they cannot vanish mode by mode.
 
-Éste es el sentido exacto del gate: Turán es un detector eficaz de no-RH,
-pero su desigualdad natural es un **minorante de excursiones**, mientras
-(9) necesita un mayorante que las elimine.
+This is the exact meaning of the gate: Turán is an effective non-RH
+detector, but its natural inequality is a **lower bound on
+excursions**, while (9) needs an upper bound that eliminates them.
 
 ---
 
-## 4. Falsificador en el rayo real de Euler
+## 4. Falsifier on the real Euler ray
 
-El paquete Jensen--Cartan--Turán podría intentar reforzarse usando que, para
-\(s>1\), el logaritmo derivado real proviene de los pesos positivos
-\(\Lambda(m)\). La positividad o el crecimiento sobre ese único rayo no
-controlan los polos complejos.
+The Jensen--Cartan--Turán package might try to strengthen itself by
+using that, for \(s>1\), the real logarithmic derivative comes from
+the positive weights \(\Lambda(m)\). Positivity or growth on that
+single ray do not control the complex poles.
 
-Considere el cuarteto racional con \(w=2i\) y coeficientes
+Consider the rational quartet with \(w=2i\) and coefficients
 
 \[
  q_n=4-2\Re\{w^n+w^{-n}\}.                              \tag{19}
 \]
 
-Su generatriz, inicialmente para \(|z|<1/2\), tiene la continuación racional
+Its generating function, initially for \(|z|<1/2\), has the rational
+continuation
 
 \[
  \mathcal Q(z)
@@ -288,9 +291,9 @@ Su generatriz, inicialmente para \(|z|<1/2\), tiene la continuación racional
  -{\bar w^{-1}z\over1-\bar w^{-1}z}.                   \tag{20}
 \]
 
-Para \(z=r\) real, los términos conjugados de (20) pueden agruparse como
-dos partes reales. En todo el rayo \(0<r<1\), (20) es regular y satisface
-la identidad exacta
+For real \(z=r\), the conjugate terms of (20) can be grouped into two
+real parts. On the whole ray \(0<r<1\), (20) is regular and satisfies
+the exact identity
 
 \[
  \boxed{
@@ -300,14 +303,14 @@ la identidad exacta
   +{2r^2\over4+r^2}>0.}                                 \tag{21}
 \]
 
-Sin embargo, para \(4\mid n\),
+However, for \(4\mid n\),
 
 \[
  q_n=4-2(2^n+2^{-n})=-2^{n+1}+4+O(2^{-n}),              \tag{22}
 \]
 
-y las otras tres clases no tienen una excursión negativa de esa tasa. De
-(22),
+and the other three classes have no negative excursion of that rate.
+From (22),
 
 \[
  \boxed{
@@ -316,48 +319,48 @@ y las otras tres clases no tienen una excursión negativa de esa tasa. De
  \longrightarrow{1\over8}.}                            \tag{23}
 \]
 
-En efecto, los múltiplos de cuatro que cuentan empiezan en
-\(n=(1/\log2+o(1))\sqrt X\), y su masa armónica es
+Indeed, the multiples of four that count begin at
+\(n=(1/\log2+o(1))\sqrt X\), and their harmonic mass is
 
 \[
  {1\over4}\left(\log X-{1\over2}\log X+O(1)\right)
  ={1\over8}\log X+O(1).                                \tag{24}
 \]
 
-El cuarteto no posee el producto de Euler de \(\zeta\), y por eso no refuta
-una desigualdad nueva que use la secuencia exacta \(\Lambda(m)\). Sí refuta
-la inferencia
+The quartet does not have the Euler product of \(\zeta\), and
+therefore does not refute a new inequality that uses the exact
+sequence \(\Lambda(m)\). It does refute the inference
 
 \[
  \begin{gathered}
- \text{simetría funcional + conjugación + crecimiento finito}\cr
- \text{+ Jensen/Cartan/Turán + positividad en el rayo real}
+ \text{functional symmetry + conjugation + finite growth}\cr
+ \text{+ Jensen/Cartan/Turán + positivity on the real ray}
  \end{gathered}
- \quad\Longrightarrow\quad\text{cola profunda nula}.   \tag{25}
+ \quad\Longrightarrow\quad\text{vanishing deep tail}.   \tag{25}
 \]
 
-El detalle clave es que la continuación de (20) es positiva para
-\(r>1/2\), pero allí ya no coincide con la suma de su serie de Taylor:
-los polos \(z=\pm i/2\) reducen el radio a \(1/2\). Usar la continuación
-real como una suma Abel de los coeficientes después de cruzar esos polos
-omitiría exactamente los residuos interiores.
+The key detail is that the continuation of (20) is positive for
+\(r>1/2\), but there it no longer coincides with the sum of its Taylor
+series: the poles \(z=\pm i/2\) reduce the radius to \(1/2\). Using the
+real continuation as an Abel sum of the coefficients after crossing
+those poles would omit exactly the interior residues.
 
 ---
 
-## 5. Balance y teorema que falta
+## 5. Balance and missing theorem
 
-**Probado incondicionalmente:**
+**Proved unconditionally:**
 
-* la reducción segura (6)--(9), sin suponer ausencia de polos;
-* la equivalencia escalar Jensen (14);
-* que Turán y recurrencia compacta fuerzan, en vez de suprimir, la cola
-  profunda producida por un polo;
-* el falsificador (21)--(23), que mantiene positivo todo el rayo real.
+* the safe reduction (6)--(9), without assuming the absence of poles;
+* the scalar Jensen equivalence (14);
+* that Turán and compact recurrence force, rather than suppress, the
+  deep tail produced by a pole;
+* the falsifier (21)--(23), which keeps the entire real ray positive.
 
-**No probado:** la cota (9) para los residuos de la \(\zeta\) real, el
-criterio aritmético (22a) de `104_75`, A1 o RH.
+**Not proved:** the bound (9) for the residues of the real \(\zeta\),
+the arithmetic criterion (22a) of `104_75`, A1, or RH.
 
-El input faltante puede escribirse sin contornos:
+The missing input can be written without contours:
 
 \[
  {1\over H_X}\sum_{n\le X}{1\over n}
@@ -367,24 +370,25 @@ El input faltante puede escribirse sin contornos:
  \right\}}\longrightarrow0,                            \tag{26}
 \]
 
-o, después del contorno seguro, como (9). Cualquiera de las dos
-afirmaciones es equivalente a RH; asumir que \(\mathcal G\) es holomorfa
-en el disco, que \(J(r)=0\), que \(Z_n=0\), o que el semigrupo Hadamard
-tiene radio positivo sería usar esa conclusión circularmente.
+or, after the safe contour, as (9). Either statement is equivalent to
+RH; assuming that \(\mathcal G\) is holomorphic in the disk, that
+\(J(r)=0\), that \(Z_n=0\), or that the Hadamard semigroup has
+positive radius would be using that conclusion circularly.
 
-La ruta compleja solo puede avanzar si produce desde los pesos exactos
-\(\Lambda(m)\) una cota unilateral para (26) que incluya los residuos en
-vez de quitarlos mediante discos de Cartan o una hipótesis de holomorfía.
+The complex route can only advance if it produces, from the exact
+weights \(\Lambda(m)\), a one-sided bound for (26) that includes the
+residues instead of removing them via Cartan disks or a holomorphy
+hypothesis.
 
 ---
 
-## 6. Reproducción
+## 6. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 cartan_turan_deep_tail_check.py
 ```
 
-El checker verifica la fórmula positiva (21), la identidad de coeficientes
-(19)--(20), el signo exponencial (22) y la convergencia numérica de la masa
-armónica de (23) hacia \(1/8\).
+The checker verifies the positive formula (21), the coefficient
+identity (19)--(20), the exponential sign (22), and the numerical
+convergence of the harmonic mass of (23) toward \(1/8\).

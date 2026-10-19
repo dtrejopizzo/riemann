@@ -1,6 +1,6 @@
 # E78.37 - Denominator-direction term is controlled by a tiny chord defect
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

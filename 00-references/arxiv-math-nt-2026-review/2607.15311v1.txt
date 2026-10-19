@@ -1,0 +1,1009 @@
+                                                                A WEIGHTED ENTROPY APPROACH FOR
+                                                          THE QUADRATIC INVERSE LARGE SIEVE CONJECTURE
+
+                                                                                 ERNIE CROOT AND CHI HOI YIP
+
+                                                  A BSTRACT. The quadratic inverse large sieve problem predicts that the examples sharp at the
+                                                  square-root threshold are essentially
+                                                                                   √ quadratic. Hanson proved the first unconditional result in this
+                                                  direction: if A ⊆ [N ], |A| ≫ N , and |Ap | ≤ p/2 + O(1) for every prime p, then A contains
+                                                  ≫ log N elements in the image of a single quadratic. We significantly improve this lower bound to
+                                                                                                 √           
+                                                                                                       log N
+                                                                                           exp c                .
+                                                                                                    log log N
+                                                  We also prove density-dependent variants, including a two-set version motivated by Green–Harper’s
+                                                  robust inverse large sieve conjectures and their connection with the inverse Goldbach problem. Com-
+arXiv:2607.15311v1 [math.NT] 15 Jul 2026
+
+
+
+
+                                                  bined with a theorem of Elsholtz–Harper on hypothetical decompositions of the primes, our results
+                                                  show that any such decomposition would force both summands to have large intersections with qua-
+                                                  dratic images. Our proof combines a weighted entropy argument with sieve estimates, inspired by
+                                                  the recent work of Croot–Mao–Pohoata–Sheffer–Yip.
+
+
+
+
+                                                                                       1. I NTRODUCTION
+                                             Let N be a positive integer and let A ⊆ [N ]. For each prime p, write
+                                                                                  Ap = {a      (mod p) : a ∈ A}
+                                           for the set of residue classes occupied by A modulo p. The large sieve [14] and Gallagher’s larger
+                                           sieve [7] turn upper bounds for the sets Ap into global upper bounds for |A|. For background on
+                                           sieve methods, we refer to [6]. A broad inverse principle in sieve theory asserts that if a set is close
+                                           to extremal for such a sieve bound, then the local restrictions should not be arbitrary: either the set
+                                           is substantially smaller than the sieve bound, or it possesses algebraic structure. This is the general
+                                           inverse sieve philosophy studied, for example, in Croot–Lev [1], Helfgott–Venkatesh [11], Walsh
+                                           [18, 19], Green–Harper [8], Shao [16, 17], Hanson [10], and Croot–Mao–Yip [2].
+                                              The present paper concerns the quadratic threshold, one of the central cases of this philosophy.√ If
+                                           |Ap | ≤ p/2+O(1) for every prime p, then both the large sieve and the larger sieve give |A| ≪ N .
+                                           This is sharp up to the implied constant: the squares, and more generally the integer values of
+                                           a rational quadratic, occupy only about half the residue classes modulo every odd prime. The
+                                           quadratic inverse sieve conjecture predicts that these examples account for all near-equality cases.
+                                           A concrete form of the conjecture is the following; see for example Problem 47 on Green’s list of
+                                           100 open problems [9] and [1, Section 7.4] in Croot–Lev’s list of open problems.
+                                                                                                                                      √
+                                           Conjecture 1.1. If A ⊆ [N ] satisfies |Ap | ≤ (p + 1)/2 for every prime and |A| ≫ N , then a
+                                           positive proportion of A should lie in the image of a rational quadratic.
+
+                                             2020 Mathematics Subject Classification. 11N35, 11B30, 11P70.
+                                             Key words and phrases. Inverse sieve conjecture, quadratic residues, inverse Goldbach problem.
+                                                                                                  1
+   This quadratic inverse problem was emphasized by Green and Harper [8] in their work on inverse
+questions for the large sieve. We refer to [1, 8, 10, 17] for more discussion of quadratic inverse
+sieve problems. Hanson [10] proved the first unconditional√result forcing a growing intersection
+with a quadratic image. He showed that if A ⊆ [N ], |A| ≫ N , and |Ap | ≤ p/2 + O(1) for every
+prime p, then A correlates additively with the set of squares. As a consequence, he deduced that A
+contains ≫ log N points in the image of a single quadratic [10, Corollary 1.3]. Our main theorem
+gives a substantial strengthening.
+Theorem 1.2. Fix constants α > 0 and C ≥ 0. There are constants c = c(α, C) > 0 √                  and
+N0 = N0 (α, C) such that the following holds. Let N ≥ N0 , and let A ⊆ [N ] satisfy |A| ≥ α N
+and
+                                                   p
+                                           |Ap | ≤ + C
+                                                   2
+for every prime p. Then there is an integral quadratic q(x) = m + x2 or q(x) = m − x2 such that
+                                                     √           
+                                                          log N
+                                 |A ∩ q(Z)| ≥ exp c                 .
+                                                       log log N
+Remark 1.3. The conclusion of Theorem 1.2 cannot be improved beyond divisor-bound size if one
+                                                                  2                            2
+                                        √ of the form m ± x . For example, let A = {n + n :
+only looks for intersections with quadratics
+n ∈ N} ∩ [N ]. Then |A| = (1 + o(1)) N , and |Ap | ≤ p/2 + 1 for every odd prime p. However,
+for every m ∈ Z,                                                       
+                                     2                           log N
+                        |A ∩ {m ± x : x ∈ Z}| ≤ exp O                        ,
+                                                               log log N
+since the two signs are controlled by the standard divisor bounds applied to (2n + 1)2 − (2x)2 =
+4m + 1 and (2n + 1)2 + (2x)2 = 4m + 1, respectively, and necessarily |m| ≪ N 2 unless the
+intersection has size at most one. Thus, with this class of quadratics alone, this is the largest scale
+one can hope to force in general.
+   Green and Harper proved a three-alternative theorem in this direction [8, Theorem 1.6]: under
+the same local hypothesis, either A is eventually contained in the rational values of a quadratic, or
+A is often much smaller than the large-sieve bound, or A has very small intersection with every
+fixed rational quadratic. They conjectured that the third alternative is unnecessary. More precisely,
+they formulated the following conjecture [8, Conjecture 1.7].
+Conjecture 1.4 (Green–Harper). Let A be a set of positive integers such that |Ap | ≤ (p + 1)/2 for
+all sufficiently large primes p. Then one of the following alternatives holds:
+    (a) there is a rational quadratic ψ such that all but finitely many elements of A lie in ψ(Q);
+    (b) for every integer k, there are arbitrarily large values of X for which
+                                                       X 1/2
+                                      |A ∩ [X]| <              .
+                                                     (log X)k
+   Thus it is natural to ask whether one can still force visible quadratic structure when a finite set
+is slightly below the square-root threshold. We prove the following density-dependent version of
+Theorem 1.2.
+Theorem 1.5. Fix C ≥ 0. There are constants c = c(C) > 0 and N0 = N0 (C) such that the
+following holds. Let N ≥ N0 , and let A ⊆ [N ] be nonempty and satisfy
+                                                 p
+                                         |Ap | ≤ + C
+                                                 2
+                                                   2
+for every prime p. Put
+                                                   √ !
+                                                    N
+                                        L = max 1,     .
+                                                   |A|
+Then there is an integral quadratic q(x) = m + x2 or q(x) = m − x2 such that
+                                                    √          
+                                             1           log N
+                              |A ∩ q(Z)| ≫C exp c                 .
+                                             L        log log N
+   We note that the local condition |Ap | ≤ p/2 + O(1) can be weakened to |Ap | ≤ (1 − o(1))p
+for appropriate function o(1). Theorem 1.5 gives a finite quantitative inverse result in the direction
+of Conjecture 1.4: if A remains close to the large-sieve threshold, then A already has a growing
+intersection with one quadratic image. The following consequence records how far below the
+square-root threshold this conclusion remains nontrivial.
+Corollary 1.6. Fix C ≥ 0. There are constants κ = κ(C) > 0, c = c(C) > 0, and N0 = N0 (C)
+such that the following holds. If N ≥ N0 , and A ⊆ [N ] is a set such that
+                                                    p
+                                           |Ap | ≤ + C,
+                                                    2
+for every prime p, and                                   √
+                                        √
+                                                                 
+                                                           log N
+                                  |A| ≥ N exp −κ                    ,
+                                                        log log N
+then there is an integral quadratic q(x) = m + x2 or q(x) = m − x2 such that
+                                                      √          
+                                                           log N
+                                  |A ∩ q(Z)| ≥ exp c                .
+                                                        log log N
+                                                  √
+   This includes, in particular, the range |A| ≥ N /(log N )k for every fixed k. Theorem 1.2 is
+the case of Theorem 1.5 in which L = O(1), while Corollary 1.6 follows from Theorem 1.5 after
+choosing κ = κ(C) > 0 sufficiently small.
+   We next turn to the paired setting. Green and Harper proved a partial “robustness” result for
+the quadratic inverse large sieve problem [8, Theorem 1.4]. Roughly speaking, their theorem says
+that, under the local hypothesis
+                                        |Ap | + |Bp | ≤ p + 1,
+if A and B are close to the large-sieve scale and have large intersections with two prescribed
+rational quadratics of controlled height, then A and B must in fact be mostly contained in those
+quadratics. This motivated the following conjectural form of a paired inverse large sieve statement,
+which is [8, Conjecture 1.5].
+Conjecture 1.7 (Green–Harper). Let X0 ∈ N and ϱ > 0. Let X be sufficiently large in terms of
+X0 and ϱ. Suppose that A, B ⊆ [X] and that
+                                         |Ap | + |Bp | ≤ p + 1
+                            1/4
+for all primes p ∈ [X0 , X ]. Then there is a constant c = c(ϱ) > 0 such that one of the following
+alternatives holds:
+    (a) either |A ∩ [X 1/2 ]| or |B ∩ [X 1/2 ]| is at most X 1/4−c ;
+    (b) there are rational quadratics ψA , ψB of height at most X ϱ such that
+                         |A \ ψA (Q)| ≤ X 1/2−c ,       |B \ ψB (Q)| ≤ X 1/2−c .
+                                                    3
+  An important motivation for Conjecture 1.7 is its connection with Ostmann’s inverse Goldbach
+problem [15]. Let P denote the set of all primes, and for two sets S, T write S ∼ T if their
+symmetric difference is finite.
+Conjecture 1.8 (Inverse Goldbach problem). There do not exist sets A, B of positive integers, each
+with at least two elements, such that
+                                       P ∼ A + B.
+   This conjecture has a long history; see for instance the work of Hornfeck [12], Elsholtz [4],
+Elsholtz–Harper [5], and Shao [17]. Green and Harper [8, Theorem 1.8] proved that Conjecture 1.7
+implies Conjecture 1.8. The underlying reason is that two large quadratic patterns cannot have a
+sumset consisting only of primes, apart from finitely many exceptions.
+   We prove the following two-set analogue of Theorem 1.5. It is closer in form to Conjecture 1.7,
+although its conclusion is a large quadratic intersection rather than almost complete containment
+in a quadratic image.
+Theorem 1.9. Fix constants D ≥ 0 and C ≥ 0. There are constants c = c(D, C) > 0 and
+N0 = N0 (D, C) such that the following holds. Let N ≥ N0 , and let A, B ⊆ [N ] be nonempty sets
+satisfying                                        √
+                                       |A|, |B| ≤ N .
+Put                                            √     √ !
+                                                 N    N
+                                   L = max         ,       ,
+                                               |A| |B|
+and assume that L ≤ (log N )D . Suppose also that
+                                        |Ap | + |Bp | ≤ p + C
+for every prime p ≤ min(|A|, |B|). Then there are integral quadratics
+            qA (x) = mA + εA x2 ,       qB (x) = mB + εB x2 ,       εA , εB ∈ {+1, −1},
+such that                                                   √            
+                                         |A|                   log N
+                     |A ∩ qA (Z)| ≫D,C √ exp c                  √           ,
+                                           N          log log N 1 + log L
+and                                                         √            
+                                         |B|                   log N
+                     |B ∩ qB (Z)| ≫D,C √ exp c                  √           .
+                                           N          log log N 1 + log L
+   Combining the above theorems with a result of Elsholtz–Harper [5] on hypothetical decomposi-
+tions of the primes, we have the following corollary.
+Corollary 1.10. Suppose that P ∼ A + B, where A and B each contain at least two elements.
+Then there is a constant c > 0 such that, for all sufficiently large N , there are integral quadratics
+                            qA (x) = mA ± x2 ,        qB (x) = mB ± x2
+for which                                                            √           
+                                                                        log N
+                |A ∩ [N ] ∩ qA (Z)|, |B ∩ [N ] ∩ qB (Z)| ≥ exp c                    ,
+                                                                  (log log N )3/2
+and                                                               √           
+                                                                        log N
+                  |A ∩ [N ] ∩ qA (Z)| · |B ∩ [N ] ∩ qB (Z)| ≥ exp c               .
+                                                                     log log N
+                                                  4
+   Our proof uses a weighted entropy argument together with sieve estimates. Recently, Croot,
+Mao, Pohoata, Sheffer and Yip [3] developed a weighted entropy large-sieve method for sets with
+bounded algebraic multiplicities, in which local savings are combined through product weights.
+The present argument is similar in spirit and is inspried by [3], although the exact proof is quite
+different: our local weights come from a weighted random choice of the shift in a quadratic-
+character root-counting function, biased toward shifts with favorable quadratic-character correla-
+tion and smoothed by the uniform distribution.
+  Notation. We follow standard notation in arithmetic combinatorics,
+                                                         P      Q analytic number theory, and
+probability. In this paper, p always denotes a prime, and p and p represent sums and products
+over all primes. We use Fp to denote the finite field with p elements. We use the Vinogradov
+notation ≪; we write X ≪ Y or Y ≫ X if there is an absolute constant C > 0 so that |X| ≤ CY .
+Given a random variable X, we use E(X) to denote its expectation.
+  Organization of the paper. Section 2 explains the weighted-entropy mechanism behind the
+proof. Section 3 records a second-moment estimate from the larger-sieve pair count, Section 4
+proves the local quadratic-character estimate, and Section 5 combines the local weights over a
+product modulus. Theorem 1.5 is proved in Section 6, and Theorem 1.9 and Corollary 1.10 are
+proved in Section 7.
+
+                       2. H EURISTIC AND OUTLINE OF THE ARGUMENT
+  We give a heuristic explanation of the method. Let ∆ be a squarefree product of primes p ≡ 3
+(mod 4). For a sign ε ∈ {+1, −1} and a shift s ∈ Fp , put
+                                   Kp,ε,s (y) = 1 + εχp (y − s),
+where χp is the quadratic character modulo p. Since χp (−1) = −1, this is the number of solutions
+to y = s + εx2 in Fp . Thus, if the shifts sp are combined by the Chinese remainder theorem to a
+residue S mod ∆, then
+                                           Y
+                                               Kp,ε,sp (rp )
+                                          p|∆
+
+counts solutions to r ≡ S + εx2 (mod ∆). A large average of this product kernel over A therefore
+gives many points of A in one shifted quadratic image modulo ∆.
+   For intuition, suppose first that the distribution of A modulo ∆ behaved like the product of its
+one-prime marginals νp . For fixed shifts, the normalized count would then look like
+                       Y                                 X
+                             1 + εθp (sp ) ,     θp (s) =    νp (y)χp (y − s).
+                       p|∆                              y∈Fp
+
+The quantity θp (s) measures the quadratic-character bias of A mod p around the shift s: if εθp (s)
+is large, then the shifted quadratic image s+εx2 is locally well aligned with A. The basic character
+identity gives
+                                    X               X
+                                        θp (s)2 = p    νp (y)2 − 1.
+                                  s∈Fp           y∈Fp
+
+Thus, if νp is supported on at most p/2 + O(1) residue classes, this variance is bounded below, and
+one expects a favorable shift with local gain of order p−1/2 .
+                                                 5
+  These local gains multiply because the root-counting kernel modulo ∆ is a product of the local
+kernels. Hence local factors 1 + δp should produce a global factor roughly
+                                                            
+                                  Y                    X
+                                     (1 + δp ) ≈ exp     δp  .
+                                   p|∆                    p|∆
+
+
+Taking primes in an interval p ≍ z, the product modulus has size about exp(O(z)). The lifting step
+allows z to be a small constant multiple of log N . Since there are ≍ log N/ log log N such primes
+and each contributes ≍ (log N )−1/2 , this gives the scale
+                                              √           
+                                                   log N
+                                        exp c                .
+                                                log log N
+   The actual proof replaces the product-distribution heuristic by a weighted entropy argument.
+Instead of choosing one shift immediately at each prime, for each p we choose a probability weight
+λp (s), giving more mass to shifts for which εθp (s) is positive and large, and define
+                                             X
+                                    Zp (y) =      λp (s)Kp,ε,s (y).
+                                              s∈Fp
+
+Then Zp is nonnegative and has average one over Fp . The key local estimate says that Zp gives a
+positive logarithmic gain:
+                                   X
+                                       νp (y) log Zp (y) > 0,
+                                      y∈Fp
+
+with a quantitative lower bound in terms of the variance s∈Fp θp (s)2 .
+                                                           P
+   This is naturally an entropy statement. If up denotes the uniform measure on Fp , then Zp up is
+a tilted probability measure. Writing D for relative entropy (also called Kullback–Leibler diver-
+gence), one has
+                          X
+                              νp (y) log Zp (y) = D(νp ∥up ) − D(νp ∥Zp up ).
+                         y∈Fp
+
+Thus Zp up is closer to νp than the uniform measure is, in the sense of relative entropy. Equivalently,
+Zp is aligned with the local bias of A mod p.
+   At the global level we multiply the local weights over p | ∆. The logarithms make the local
+entropy gains additive using only the one-prime marginals of A, and Jensen’s inequality then gives
+a large average of the resulting product weight over A. Since this product weight is an average of
+the product kernels, some choice of shifts sp gives a large intersection with one shifted quadratic
+image
+                                         S + εx2     (mod ∆).
+Section 5 then lifts this congruence information to an actual shifted quadratic.
+   For the one-set theorem, the half-density hypothesis supplies the local variance at every small
+prime. For the paired theorem, Section 3 uses a larger-sieve pair count to find many primes for
+which both residue distributions have controlled second moments. Section 4 proves the local
+weighted entropy estimate, and Section 5 carries out the global amplification and lifting.
+                                                     6
+               3. S ECOND - MOMENT ESTIMATES FOR RESIDUE DISTRIBUTIONS
+  Let A ⊆ [N ], and put M = |A|. For a prime p, the images of A modulo p (treated as a multiset)
+naturally induce a probability distribution µp on Fp , where
+                                       #{a ∈ A : a ≡ h (mod p)}
+                             µp (h) =                                ,
+                                                      M
+for h ∈ Fp . We say µp is the residue distribution of A modulo p. Define its second moment
+                                                 X
+                                         βp :=       µp (h)2 .
+                                               h∈Fp
+
+  The following lemma is based on Gallagher’s larger sieve [7].
+                         √
+Lemma 3.1. Let 2 ≤ Q ≤ N . Then
+                                                         
+                             X                             Q
+                                 βp log p ≤ log N + O           .                                 (1)
+                             p≤Q
+                                                          M
+Consequently, if |Ap | ≤ p/2 + C for every prime p ≤ Q, then
+                                               
+                        X                   1                N   Q
+                            log p βp −             ≪C 1 + log 2 + .                               (2)
+                        p≤Q
+                                        p/2 + C              Q   M
+
+Proof. For each prime p, the number of ordered pairs (a, a′ ) ∈ A2 with a ≡ a′ (mod p) and a ̸= a′
+is M 2 βp − M . Therefore
+                     X                         X X
+                         log p (M 2 βp − M ) ≤              log p ≤ M 2 log N.
+                     p≤Q                        a,a′ ∈A p≤Q
+                                                 a̸=a′ p|a−a′
+
+After dividing by M 2 , we get inequality (1). If |Ap | ≤ p/2 + C, then Mertens’ estimate gives
+                   X log p             X log p
+                                   =2              + OC (1) = 2 log Q + OC (1),
+                   p≤Q
+                         p/2 + C       p≤Q
+                                              p
+
+since (p/2 + C)−1 = 2p−1 + OC (p−2 ). Subtracting this from inequality (1) proves inequality (2).
+                                                                                               □
+  The following corollary will be useful in Section 7.
+Corollary 3.2. Fix constants D ≥ 0 and C ≥ 0. There are constants J = J(D, C), η =
+η(D, C) > 0, c1 = c1 (D, C) > 0, and N0 = N0 (D, C) such that      √ the following holds. Let
+N ≥ N0 , and let A, B ⊆ [N ] be nonempty sets satisfying |A|, |B| ≤ N . Put
+                           √                √
+                              N                N
+                     LA =       ,    LB =        ,      L = max(LA , LB ),
+                            |A|              |B|
+and assume that L ≤ (log N )D . Suppose that
+                                        |Ap | + |Bp | ≤ p + C
+for every prime p ≤ min(|A|, |B|). For each prime p, let βA,p and βB,p be the second moments of
+the residue distributions of A and B modulo p, respectively. Set
+                              z = η log N,       R0 = J(1 + log L),
+                                                  7
+and let P0 be the set of primes p such that
+             z/2 < p ≤ z,          p≡3        (mod 4),           pβA,p ≤ R0 ,   pβB,p ≤ R0 .
+Then                                                           √
+                                      X
+                                                  −1/2           log N
+                                              p          ≥ c1           .                       (3)
+                                      p∈P0
+                                                              log log N
+                    Q
+Moreover, if ∆0 =     p∈P0 p, then
+
+                                                  ∆0 ≤ N 1/10 .                            (4)
+                                   √
+Proof. Put M = min(|A|, |B|) = N /L. Since L ≤ (log N )D , we have M ≥ z for all sufficiently
+large N . Applying inequality (1) in Lemma 3.1 to A and B respectively, with Q = M , gives
+                            X
+                                (βA,p + βB,p ) log p ≤ 2 log N + O(1).                     (5)
+                             p≤M
+
+For p ≤ M , Cauchy–Schwarz and the local hypothesis give
+                                         1     1            4          4
+                        βA,p + βB,p ≥        +      ≥               ≥     .
+                                        |Ap | |Bp |   |Ap | + |Bp |   p+C
+Mertens’ estimate gives
+                                     X log p
+                                                     = log M + OC (1).                          (6)
+                                     p≤M
+                                         p+C
+            √
+Since M =    N /L, inequalities (5) and (6) imply that
+                                                        
+                      X                             4
+                           log p βA,p + βB,p −             ≪C 1 + log L.                        (7)
+                      p≤M
+                                                  p +  C
+
+   Let E be the set of primes p ≤ z for which either pβA,p > R0 or pβB,p > R0 . If p ∈ E, then, for
+all sufficiently large p,
+                                                  4       R0 − 4
+                                 βA,p + βB,p −         ≥         .
+                                                p+C          p
+Hence inequality (7) gives
+                                     X log p        1 + log L
+                                               ≪C             .
+                                           p         R 0−4
+                                     p∈E
+                                        p≤z
+
+Choosing J sufficiently large makes the right-hand side smaller than any prescribed absolute con-
+stant. Since, for z/2 < p ≤ z,
+                                                  √
+                                        −1/2        z log p
+                                      p      ≪               ,
+                                                 log z p
+we get
+                                                          √
+                                      X
+                                               −1/2         z
+                                             p      ≤ c0        ,
+                                      p∈E
+                                                         log  z
+                                        z/2<p≤z
+                                                          8
+where c0 > 0 can be made arbitrarily small by choosing J sufficiently large. The prime number
+theorem in arithmetic progressions gives
+                                                       √
+                                       X
+                                               −1/2      z
+                                             p      ≫       .
+                                                      log z
+                                           z/2<p≤z
+                                         p≡3 (mod 4)
+
+Taking J large enough proves inequality (3). Finally, after choosing η sufficiently small, we have
+inequality (4).                                                                                 □
+
+                            4. L OCAL QUADRATIC - CHARACTER WEIGHTS
+  In this section, we show that a positive quadratic-character variance can be converted into a
+positive logarithmic gain.
+  Let p ≡ 3 (mod 4) be a prime, and let χ = χp be the quadratic character on Fp , extended by
+χ(0) = 0. For a real number ξ, write ξ+ = max{ξ, 0}.
+Proposition 4.1. Let ν be a probability measure on Fp . Put
+                                              X
+                                  W (ν) := p      ν(y)2 − 1.
+                                                         y∈Fp
+
+If W (ν) > 0, then there are a sign ε ∈ {+1, −1} and a probability measure λ on Fp such that
+                                         X
+                                 Z(y) :=     λ(s)(1 + εχ(y − s))
+                                                s∈Fp
+
+satisfies Z(y) ≥ 1/2 for every y, and
+                       X
+                            ν(y) log Z(y) ≫ min W (ν), W (ν)1/2 p−1/2 ,
+                                               
+                          y∈Fp
+
+where the implied constant is absolute.
+Proof. We first recall a fact about the quadratic character: for y, z ∈ Fp ,
+                                                       (
+                              X                          p − 1, y = z,
+                                 χ(y − s)χ(z − s) =                                                  (8)
+                             s∈F
+                                                         −1,       y ̸= z.
+                                 p
+
+This identity is standard; see for example [13, Theorem 5.48].
+  Put W = W (ν). For each s ∈ Fp , define
+                                            X
+                                      θs =      ν(y)χ(y − s).
+                                                  y∈Fp
+
+By identity (8),
+               X                      X                X                     X
+                      θs2 = (p − 1)          ν(y)2 −          ν(y)ν(z) = p          ν(y)2 − 1 = W.   (9)
+               s∈Fp                   y∈Fp             y̸=z                  y∈Fp
+
+By equation (9), we choose ε ∈ {+1, −1} so that, with
+                                              X                                 X
+                       us = (εθs )+ ,  U1 =       us ,                  U2 =           u2s ,
+                                                          s∈Fp                  s∈Fp
+                                                              9
+one has U2 ≥ W/2. By Cauchy–Schwarz, U12 ≤ pU2 , and hence
+                                   s
+                              U2      U2
+                                 ≥        ≫ W 1/2 p−1/2 .                                      (10)
+                              U1        p
+  For each s ∈ Fp , let σ(s) = us /U1 . Then σ is a probability measure. For each y ∈ Fp , define
+                                            X
+                                    g(y) =      σ(s)εχ(y − s).
+                                               s∈Fp
+
+Then
+                                 X                     X                  U2
+                                        ν(y)g(y) =            σ(s)εθs =      .                 (11)
+                                 y∈Fp                  s∈Fp
+                                                                          U1
+Similar to equation (9), by identity (8), we have
+                                                             2
+                                      1   X     X
+                         Eunif g 2 =             us εχ(y − s)
+                                     pU12 y∈F s∈F
+                                               p        p
+
+                                       1     X             X
+                                 =                 u  u
+                                                     s s ′     χ(y − s)χ(y − s′ )
+                                      pU12 s,s′ ∈F         y∈F
+                                                   p           p
+
+                                   pU2 − U12  U2
+                                 =      2
+                                             ≤ 2.                                              (12)
+                                     pU1      U1
+  Write
+                                            pν(y) = 1 + f (y).
+Then
+                                      Eunif f = 0,          Eunif f 2 = W.
+Since |g| ≤ 1, Cauchy–Schwarz gives
+                        X
+                           ν(y)g(y)2 = Eunif (1 + f )g 2
+                                                         
+                          y∈Fp
+
+                                             ≤ Eunif g 2 + W 1/2 (Eunif g 4 )1/2
+                                             ≤ Eunif g 2 + W 1/2 (Eunif g 2 )1/2 .
+The assumption U2 ≥ W/2 and inequality (12) then imply that
+                                                2
+                         X
+                                       2     2 U2        √ U2
+                              ν(y)g(y) ≤               + 2 .                                   (13)
+                         y∈F
+                                            W U1            U1
+                                  p
+
+
+  Choose                                                  
+                                                     W U1
+                                      ρ = ρ0 min 1,           ,
+                                                       U2
+where ρ0 > 0 is a sufficiently small absolute constant, and set
+                                         λ = (1 − ρ)λunif + ρσ,
+                                                       10
+where λunif is the uniform distribution on Fp . Then λ is a probability measure on Fp . For each
+y ∈ Fp ,
+         X                               X                           X
+Z(y) =      λ(s)(1 + εχ(y − s)) = 1 +        λ(s)εχ(y − s) = 1 + ρ       σ(s)εχ(y − s) = 1 + ρg(y),
+         s∈Fp                                   s∈Fp                         s∈Fp
+
+and thus Z(y) ≥ 1/2.
+  Since log(1 + t) ≥ t − 2t2 for |t| ≤ 1/2, by equation (11) and inequality (13), we have
+                   X                       X                   X
+                       ν(y) log Z(y) ≥ ρ       ν(y)g(y) − 2ρ2       ν(y)g(y)2
+                     y∈Fp                         y∈Fp                y∈Fp
+                                                                  2         !
+                                                  U2           ρ2 U2       U2
+                                           ≥ρ        −O               + ρ2      .
+                                                  U1           W U1        U1
+If U2 /U1 ≤ W , then ρ = ρ0 , and hence
+                          X                                 U2   U2
+                               ν(y) log Z(y) ≥ ρ0 − O(ρ20 )     ≫    .
+                         y∈F
+                                                             U1   U1
+                               p
+
+If U2 /U1 > W , then ρ = ρ0 W U1 /U2 , and hence
+                          X
+                              ν(y) log Z(y) ≥ ρ0 − O(ρ20 ) W ≫ W.
+                                                          
+                            y∈Fp
+
+Thus                                                             
+                                   X                          U2
+                                       ν(y) log Z(y) ≫ min W,       .
+                                   y∈F
+                                                              U 1
+                                     p
+
+Combining this with inequality (10), we obtain
+                         X
+                              ν(y) log Z(y) ≫ min W, W 1/2 p−1/2 .
+                                                 
+                                                                                                 □
+                            y∈Fp
+
+                               5. C OMBINING THE LOCAL WEIGHTS
+   We now combine the local logarithmic gains and pass from congruences modulo a product of
+primes to an integral quadratic.
+Proposition 5.1. Let E be a nonempty subset of [N ]. Let P be a finite set of primes p ≡ 3 (mod 4),
+put                                             Y
+                                          ∆=         p,
+                                                         p∈P
+                        √
+and assume that ∆ ≤ ⌊ N ⌋/2. For each p ∈ P, let νp be the residue distribution of E modulo p.
+Suppose that there is a common sign ε ∈ {+1, −1} and, for each p ∈ P, a probability measure λp
+on Fp such that                        X
+                             Zp (y) :=    λp (s)(1 + εχp (y − s))
+                                                s∈Fp
+
+satisfies Zp (y) ≥ 1/2 for every y ∈ Fp , and
+                                     X
+                                           νp (y) log Zp (y) ≥ γp .
+                                         y∈Fp
+                                                         11
+Then there is an integral quadratic q(x) = m + εx2 such that
+                                                                        !
+                                            |E|   X
+                               |E ∩ q(Z)| ≫ √ exp     γp                    .
+                                             N    p∈P
+
+Proof. Define a probability measure w on Z/∆Z by assigning
+                                        #{a ∈ E : a ≡ r       (mod ∆)}
+                             w(r) =
+                                                    |E|
+                                                                                    Q
+for each r ∈ Z/∆Z. By the Chinese remainder theorem, we identify Z/∆Z with p∈P Fp . Ob-
+serve that for each p ∈ P, the p-marginal of w is νp . Choose r ∈ Z/∆Z according to w. For each
+p ∈ P, choose shifts sp mod p independently according to λp . For a shift vector s = (sp )p∈P , put
+                                            Y
+                                 Kε,s (r) =   (1 + εχp (rp − sp )),
+                                             p∈P
+
+where rp denotes the image of r modulo p.
+  Observe that we have
+                                                                                           !!
+                                    Y                              X
+                Er Es Kε,s (r) = Er   Zp (rp ) = Er        exp              log Zp (rp )        .
+                                     p∈P                           p∈P
+
+Since the exponential function is convex, Jensen’s inequality gives
+                                                           !!
+                                           X
+               Er Es Kε,s (r) ≥ exp Er         log Zp (rp )
+                                            p∈P
+                                                                                              !
+                                        XX                                           X
+                             = exp                νp (y) log Zp (y) ≥ exp                γp       .
+                                        p∈P y∈Fp                                     p∈P
+
+Thus some deterministic shift vector s = (sp )p∈P satisfies
+                                                                        !
+                                                             X
+                                Er Kε,s (r) ≥ G := exp             γp       .                           (14)
+                                                             p∈P
+
+  Choose an integer S ∈ [0, ∆) so that S ≡ sp (mod p) for all p ∈ P. Since χp (−1) = −1
+whenever p ∈ P, it follows from the Chinese Remainder Theorem that
+                       Kε,s (r) = #{x mod ∆ : r ≡ S + εx2               (mod ∆)}
+for each r ∈ Z/∆Z. Therefore, inequality (14) implies that
+                    X
+                       #{x mod ∆ : a ≡ S + εx2 (mod ∆)} ≥ |E|G.
+                      a∈E
+                                                        √
+  It remains to lift this
+                      √   congruence count. Since ∆ ≤ ⌊  N ⌋/2,
+                                                           √ every residue class modulo
+∆√contains at least ⌊ N ⌋/(2∆) integers x with 1 √ ≤ x ≤ ⌊ N ⌋. Hence there are at least
+⌊ N ⌋|E|G/(2∆) pairs (a, x) with a ∈ E, 1 ≤ x ≤ ⌊ N ⌋, and
+                                     a ≡ S + εx2         (mod ∆).
+                                                    12
+Each such pair satisfies a = S + εx2 + τ ∆ for some integer τ . Since a ∈ [N ], x2 ≤ N , and
+0 ≤ S < ∆, there are only O(N/∆) possible values of τ . Therefore, for some integer τ ,
+                                                              √
+                           √                  2           |E|⌊ N ⌋        |E|
+             #{1 ≤ x ≤ ⌊ N ⌋ : S + τ ∆ + εx ∈ E} ≫                  G ≫ √ G.
+                                                             N              N
+                                                       √
+The map x 7→ S + τ ∆ + εx2 is injective on 1 ≤ x ≤ ⌊ N ⌋, for both signs ε. This proves the
+proposition.                                                                              □
+
+                                  6. P ROOF OF T HEOREM 1.5
+   We first prove a prime-restricted version of Theorem 1.5. This is the form that will also be used
+in the inverse Goldbach application.
+Proposition 6.1. Fix C ≥ 0. There are constants c = c(C) > 0 and p0 = p0 (C) such that the
+following holds. Let A ⊆ [N ] be nonempty, and let P be a nonempty finite set of primes p ≡ 3
+(mod 4), all satisfying p ≥ p0 , such that
+                                         Y      √
+                                           p ≤ ⌊ N ⌋/2.
+                                            p∈P
+
+Suppose that
+                                                 p
+                                                |Ap | ≤
+                                                    +C
+                                                 2
+for every p ∈ P. Then there is an integral quadratic q(x) = m + x2 or q(x) = m − x2 such that
+                                                                  !
+                                             |A|         X
+                            |A ∩ q(Z)| ≫C √ exp c            p−1/2 .
+                                               N         p∈P
+
+Proof. For p ∈ P, let µp be the residue distribution of A modulo p. By Cauchy–Schwarz and the
+hypothesis,                     X                    p            p
+                    W (µp ) = p      µp (y)2 − 1 ≥       −1≥           − 1.
+                                y∈F
+                                                    |Ap|      p/2  + C
+                                    p
+
+Choosing p0 = p0 (C) sufficiently large, we have W (µp ) ≫C 1 for every p ∈ P. Proposition 4.1,
+applied to ν = µp , gives a sign εp ∈ {+1, −1}, a probability measure λp on Fp , and a weight
+                                         X                           
+                                Zp (y) =    λp (s) 1 + εp χp (y − s)
+                                          s∈Fp
+
+such that Zp (y) ≥ 1/2 for every y ∈ Fp , and
+                                  X
+                                     µp (y) log Zp (y) ≫C p−1/2 .
+                                 y∈Fp
+
+By pigeonholing the two possible signs, there are a sign ε ∈ {+1, −1} and a subcollection P ′ ⊆ P
+such that εp = ε for every p ∈ P ′ , and
+                                       X            X
+                                         p−1/2 ≫        p−1/2 .
+                                        p∈P ′                p∈P
+
+Moreover,                           Y             Y          √
+                                            p≤          p ≤ ⌊ N ⌋/2.
+                                    p∈P ′         p∈P
+                                                        13
+Therefore Proposition 5.1, applied to E = A and the prime set P ′ , gives an integral quadratic
+q(x) = m + εx2 such that
+                                                              !
+                                          |A|        X
+                           |A ∩ q(Z)| ≫C √ exp c         p−1/2 ,
+                                           N         p∈P
+
+after decreasing c = c(C) > 0. This proves the proposition.                                       □
+   Next we deduce Theorem 1.5.
+                                 √
+Proof
+ √    of Theorem   1.5. If |A| ≤   N , put E = A. Otherwise choose a subset E ⊆ A with |E| =
+⌊ N ⌋. Then
+                               |E|      1                     p
+                               √ ≫ ,          |Ep | ≤ |Ap | ≤ + C
+                                 N     L                      2
+for every prime p.
+   Choose η = η(C) > 0 sufficiently small, put z = η log N , and let
+                           P0 = {p : z/2 < p ≤ z, p ≡ 3               (mod 4)}.
+For all sufficiently large N , every prime in P0 is at least p0 (C). The prime number theorem in
+arithmetic progressions gives                         √
+                                      X
+                                           −1/2         log N
+                                         p      ≫C              .
+                                     p∈P
+                                                     log log N
+                                             0
+
+Also                                         Y           X
+                                       log          p≤         log p ≪ z.
+                                             p∈P0        p≤z
+After decreasing η if necessary,
+                                       Y                    √
+                                              p ≤ N 1/10 ≤ ⌊ N ⌋/2
+                                       p∈P0
+
+for all sufficiently large N . Applying Proposition 6.1 to E and P0 , we obtain an integral quadratic
+q(x) = m ± x2 such that
+                                                   √                        √          
+                                         |E|            log N          1           log N
+         |A ∩ q(Z)| ≥ |E ∩ q(Z)| ≫C √ exp c                      ≫C exp c                    ,
+                                          N          log log N        L         log log N
+after decreasing c = c(C) > 0, as required.                                                        □
+
+                      7. P ROOF OF T HEOREM 1.9 AND C OROLLARY 1.10
+  We now use a similar strategy to prove Theorem 1.9.
+Proof of Theorem 1.9. For each prime p, let µA,p and µB,p be the residue distributions of A and B
+modulo p, and put              X                          X
+                        βA,p =     µA,p (h)2 ,     βB,p =      µB,p (h)2 .
+                                   h                                  h
+Let R0 = J(1 + log L), and let P0 be the set of primes provided by Corollary 3.2. Thus
+                                          √
+                       X
+                              −1/2           log N        Y
+                            p      ≫D,C             ,         p ≤ N 1/10 ,
+                       p∈P
+                                         log  log N      p∈P
+                            0                                          0
+                                                         14
+and, for every p ∈ P0 ,
+                               pβA,p ≤ R0 ,                pβB,p ≤ R0 .
+For p ∈ P0 , Cauchy–Schwarz gives
+                                                         p
+                                             |Ap |, |Bp | ≥ .
+                                                        R0
+Together with |Ap | + |Bp | ≤ p + C, this implies, for all sufficiently large N ,
+                                                             
+                                                           1
+                                   |Ap |, |Bp | ≤ 1 −            p.
+                                                         2R0
+Indeed, here p ≍ log N and R0 ≪D,C log log N . Hence
+                                     X                        p
+                       W (µA,p ) = p       µA,p (y)2 − 1 ≥        − 1 ≫ R0−1 ,
+                                     y∈F
+                                                             |Ap|
+                                             p
+
+and similarly
+                                         W (µB,p ) ≫ R0−1 .
+We first treat A. Applying Proposition 4.1 to µA,p , for each p ∈ P0 , gives a sign εA,p ∈ {+1, −1},
+a probability measure λA,p , and a local weight
+                                        X                                
+                            ZA,p (y) =      λA,p (s) 1 + εA,p χp (y − s)
+                                         s∈Fp
+
+such that         X
+                         µA,p (y) log ZA,p (y) ≫ min W (µA,p ), W (µA,p )1/2 p−1/2 .
+                                                    
+                  y∈Fp
+
+Since W (µA,p ) ≫ R0−1 and p ≫ R0 , it follows that
+                                                           −1/2
+                            X
+                               µA,p (y) log ZA,p (y) ≥ κ2 R0 p−1/2
+                               y∈Fp
+
+for some κ2 = κ2 (D, C) > 0. By pigeonholing the two possible signs, there are a sign εA ∈
+{+1, −1} and a subcollection PA ⊆ P0 such that εA,p = εA for every p ∈ PA , and
+                                                   √
+                                 X
+                                      −1/2           log N
+                                    p      ≫D,C             .
+                                p∈P
+                                                  log log N
+                                         A
+
+Since                             Y          Y                    √
+                                        p≤          p ≤ N 1/10 ≤ ⌊ N ⌋/2
+                                 p∈PA        p∈P0
+
+for all sufficiently large N , Proposition 5.1 gives an integral quadratic qA (x) = mA + εA x2 such
+that                                                                        !
+                                             |A|             −1/2
+                                                                   X
+                         |A ∩ qA (Z)| ≫D,C √ exp κ2 R0                 p−1/2 .
+                                               N                  p∈PA
+The same argument applied to B gives a sign εB ∈ {+1, −1}, a subcollection PB ⊆ P0 , and an
+integral quadratic qB (x) = mB + εB x2 such that
+                                                    √
+                                   X
+                                         −1/2         log N
+                                       p      ≫D,C           ,
+                                  p∈P
+                                                   log log N
+                                         B
+                                                      15
+and                                                              !
+                                        |B|       −1/2
+                                                        X
+                      |B ∩ qB (Z)| ≫D,C √ exp κ2 R0         p−1/2 .
+                                         N             p∈PB
+
+Since R0 = J(1 + log L), the two displayed estimates imply the desired bounds, after decreasing
+the constant c = c(D, C) > 0. This proves the theorem.                                       □
+  We conclude the paper with a proof of Corollary 1.10.
+Proof of Corollary 1.10. Suppose that P ∼ A + B. Choose T so that every integer in (A + B) ∩
+[T, ∞) is prime. By Elsholtz–Harper [5, Theorem 2.6], there is a constant c∗ > 0 such that, for all
+sufficiently large N ,
+                                                            √
+                                                               N
+                           |A ∩ [N ]|, |B ∩ [N ]| ≥ c∗                 .
+                                                       log N log log N
+Put                                     $          √         %
+                                          c∗         N
+                                  Y =                          .
+                                          4 log N log log N
+For all sufficiently large N , we have 2Y ≥ T , and
+                                                          √
+                                                        c∗ N
+                    |A ∩ (Y, N ]|, |B ∩ (Y, N ]| ≥                 − Y ≥ Y.
+                                                   log N log log N
+Hence we can choose subsets
+               AN ⊆ A ∩ (Y, N ],           BN ⊆ B ∩ (Y, N ],        |AN | = |BN | = Y.
+For every prime p ≤ Y , we claim that
+                                       |(AN )p | + |(BN )p | ≤ p.
+Indeed, if a residue class occupied by AN met the negative of a residue class occupied by BN
+modulo p, then there would be a ∈ AN and b ∈ BN with p | a + b. But a + b > 2Y ≥ T , so a + b
+is prime, while a + b > p, a contradiction.
+   First apply Theorem 1.9 to AN , BN , with D = 2 and C = 0. Since
+                               √
+                                 N
+                                    ≪ log N log log N ≤ (log N )2 ,
+                                Y
+and
+                                          √ !
+                                             N
+                                    log         ≪ log log N,
+                                            Y
+                               (0)   (0)
+we obtain integral quadratics qA , qB such that
+                                                                  √
+                                                                                
+                (0)            (0)        Y                         log N
+         |AN ∩ qA (Z)|, |BN ∩ qB (Z)| ≫ √ exp c                 q        √
+                                                                                 
+                                           N           log log N 1 + log( N /Y )
+                                                  √            
+                                              ′       log N
+                                      ≥ exp c                     ,
+                                                (log log N )3/2
+                                                  16
+after decreasing the constant c′ > 0. Here we used
+                                        Y         1
+                                       √ ≍
+                                         N log N log log N
+and                                                               √   
+                                                             log N
+                           log(log N log log N ) = o                     .
+                                                       (log log N )3/2
+Renaming c′ as c, this proves the desired individual bounds.
+  We next prove the product estimate. Choose η > 0 sufficiently small, and put
+                      Q = {p : η log N/2 < p ≤ η log N, p ≡ 3                (mod 4)}.
+Then, for all sufficiently large N ,
+                                                                        √
+                             Y                    X
+                                                            −1/2          log N
+                                 p ≤ N 1/10 ,           p          ≫             .
+                            p∈Q                   p∈Q
+                                                                       log log N
+
+Split
+                       QA = {p ∈ Q : |(AN )p | ≤ p/2},                 QB = Q \ Q A .
+If p ∈ QB , then |(AN )p | > p/2, so the inequality
+                                        |(AN )p | + |(BN )p | ≤ p
+gives |(BN )p | < p/2.
+   Applying Proposition 6.1 to AN with the prime set QA , and to BN with the prime set QB , gives
+                     (1) (1)
+integral quadratics qA , qB such that
+                                                                    !
+                                  (1)        Y             X
+                           |AN ∩ qA (Z)| ≫ √ exp c1            p−1/2 ,
+                                              N           p∈QA
+
+and                                                                             !
+                                  (1)       Y                      X
+                           |BN ∩ qB (Z)| ≫ √          exp c1              p−1/2 .
+                                                  N                p∈QB
+
+If one of QA , QB is empty, the corresponding estimate is understood trivially, by choosing any
+quadratic meeting the relevant nonempty set. Multiplying the last two estimates and using
+                                                  √
+         X
+               −1/2
+                       X
+                             −1/2
+                                    X
+                                          −1/2      log N         Y             1
+             p      +      p      =     p      ≫           ,     √ ≍                     ,
+        p∈QA          p∈QB          p∈Q
+                                                 log log N         N     log N log log N
+
+we get, after decreasing c > 0,
+                                                                        √          
+                               (1)           (1)                             log N
+                        |AN ∩ qA (Z)| |BN ∩ qB (Z)| ≥ exp               c             .
+                                                                          log log N
+                                (0)     (1)                                                   (0)
+  Finally, choose qA among qA and qA so as to maximize |AN ∩ q(Z)|, and choose qB among qB
+     (1)
+and qB so as to maximize |BN ∩ q(Z)|. These choices preserve both the individual lower bounds
+and the product lower bound. Since AN ⊆ A ∩ [N ] and BN ⊆ B ∩ [N ], the same estimates hold
+with AN , BN replaced by A ∩ [N ] and B ∩ [N ]. This proves the corollary.                 □
+                                                   17
+                                             ACKNOWLEDGMENTS
+   The authors would like to thank Junzhe Mao and Cosmin Pohoata for helpful discussions.
+                                                  R EFERENCES
+ [1] E. S. Croot and V. F. Lev, Open problems in additive combinatorics, Additive combinatorics, CRM Proc. Lecture
+     Notes 43, Amer. Math. Soc., Providence, RI, 2007, 207–233.
+ [2] E. Croot, J. Mao, and C. H. Yip, An inverse theorem on sets with rich additive structure modulo primes,
+     arXiv:2510.08862.
+ [3] E. Croot, J. Mao, C. Pohoata, A. Sheffer, and C. H. Yip, A combinatorial large sieve for Sidon sets, distances,
+     and norm forms, arXiv:2606.17487.
+ [4] C. Elsholtz, The inverse Goldbach problem, Mathematika 48 (2001), no. 1–2, 151–158.
+ [5] C. Elsholtz and A. J. Harper, Additive decompositions of sets with restricted prime factors, Trans. Amer. Math.
+     Soc. 367 (2015), no. 10, 7403–7427.
+ [6] J. Friedlander and H. Iwaniec, Opera de cribro, American Mathematical Society Colloquium Publications 57,
+     American Mathematical Society, Providence, RI, 2010.
+ [7] P. X. Gallagher, A larger sieve, Acta Arith. 18 (1971), 77–81.
+ [8] B. Green and A. J. Harper, Inverse questions for the large sieve, Geom. Funct. Anal. 24 (2014), 1167–1203.
+ [9] B. Green, 100 Open Problems, available at https://people.maths.ox.ac.uk/greenbj/papers/
+     open-problems.pdf
+[10] B. Hanson, Additive correlation and the inverse problem for the large sieve, Math. Proc. Cambridge Philos. Soc.
+     168 (2020), 211–217.
+[11] H. A. Helfgott and A. Venkatesh, How small must ill-distributed sets be?, Analytic number theory, Cambridge
+     Univ. Press, 2009, 224–234.
+[12] B. Hornfeck, Ein Satz über die Primzahlmenge, Math. Z. 60 (1954), 271–273; Berichtigung, Math. Z. 62 (1955),
+     502.
+[13] R. Lidl and H. Niederreiter, Finite fields, second edition, Encyclopedia of Mathematics and its Applications, 20,
+     Cambridge Univ. Press, Cambridge, 1997.
+[14] H. L. Montgomery, The analytic principle of the large sieve, Bull. Amer. Math. Soc. 84 (1978), 547–567.
+[15] H. H. Ostmann, Additive Zahlentheorie. 1. Teil: Allgemeine Untersuchungen, Springer-Verlag, Berlin–
+     Heidelberg–New York, 1968.
+[16] X. Shao, Polynomial values modulo primes on average and sharpness of the larger sieve, Algebra Number
+     Theory 9 (2015), no. 10, 2325–2346.
+[17] X. Shao, On an inverse ternary Goldbach problem, Amer. J. Math. 138 (2016), 1167–1191.
+[18] M. N. Walsh, The inverse sieve problem in high dimensions, Duke Math. J. 161 (2012), no. 10, 2001–2022.
+[19] M. N. Walsh, The algebraicity of ill-distributed sets, Geom. Funct. Anal. 24 (2014), no. 3, 959–967.
+
+   S CHOOL OF M ATHEMATICS , G EORGIA I NSTITUTE OF T ECHNOLOGY , GA, U NITED S TATES
+   Email address: ernest.croot@math.gatech.edu
+
+  D EPARTMENT OF M ATHEMATICS , H ONG KONG U NIVERSITY OF S CIENCE AND T ECHNOLOGY, C LEAR WATER
+BAY, H ONG KONG
+  Email address: machyip@ust.hk
+
+
+
+
+                                                         18
+

@@ -1,14 +1,14 @@
 # Phase 142 — Row D: the clause (b′)⁺
 
-*Opened 2026-09-13 by the lead (`R142_000`) to decide the clause to which `R141_005` reduced row D.
-Rounds 1–2 complete: builder `R142_001`, hostile audit `R142_002` (0 FATAL, 5 MAJOR, 5 MINOR;
+*Opened by `R142_000` to decide the clause to which `R141_005` reduced row D.
+Rounds 1–2 complete: report `R142_001`, audit `R142_002` (0 FATAL, 5 MAJOR, 5 MINOR;
 Theorem D.31.12 **STANDS**), repairs and §D.32 in `R142_003`.*
 
 ## What the phase proved
 
 > **Theorem 12.3's hypothesis is unsatisfiable for `ξ` — and for every admissible `Z` with a simple
 > isolated on-line zero, `ξ_K` verbatim.** There is no `h⁰ : D^W → R_{≥0}` with (a), (b′), (c), for any
-> `χ`. (Theorem D.31.12; `PROVED` given the verified-zero import (X19); hostile-audited.)
+> `χ`. (Theorem D.31.12; `PROVED` given the verified-zero import (X19); audited.)
 
 **This is a statement about the frame, not about `ζ`.** The cause is that the effective cone of `D^W`
 is strictly thinner than the Riemann–Roch gate `{R > 0}` *transversally to the canonical ray* — in
@@ -55,10 +55,10 @@ Theorem 11.14.
 
 | file | content |
 |---|---|
-| `R142_000_LEAD_BLUEPRINT.md` | lead's blueprint: Q-A (1–3), Q-B (1–4), falsifier protocol, FATAL rule |
-| `R142_001_BUILDER_ROUND1.md` | **builder round 1, repaired in place for round 2** — §D.31: D.31.2 (the exact constant as a support function); D.31.4–5 (the sharp modulus bound, `s(γ,θ) < 1`, `s_1`); D.31.7 (`F_0`); D.31.8 (exact (C4.1)); **D.31.9 (decision: FALSE)**; **D.31.10–11**; **D.31.12 (obstruction)**; D.31.14 (ray-restricted); the table of eight necessary conditions × `ξ`/`ξ_K`/`Ξ_a`; falsifier runs; Q-B.1–4; corpus check; paper-facing list P46-26…P46-33; open list; §Label. Round-2 repairs carry bracketed `[…, round 2, finding H…]` notes |
-| `R142_002_HOSTILE_AUDIT.md` | hostile audit: verdict on D.31.12 (**STANDS**), findings H1–H10, independent recomputation of every constant, the geometric diagnosis, required actions |
-| `R142_003_BUILDER_ROUND2.md` | **round 2** — per-finding ledger (all ten accepted) and **§D.32**: what is vacuous / what survives; the geometric diagnosis as Restatement D.32.1; **Prop. D.32.3 (HORN A)**; **Thm D.32.4 (the HORN B test)** with the five-candidate table; O-18′, O-19, O-22, O-22′, O-23 |
+| `R142_000_BLUEPRINT.md` | the blueprint's blueprint: Q-A (1–3), Q-B (1–4), falsifier protocol, FATAL rule |
+| `R142_001_ROUND1.md` | **report round 1, repaired in place for round 2** — §D.31: D.31.2 (the exact constant as a support function); D.31.4–5 (the sharp modulus bound, `s(γ,θ) < 1`, `s_1`); D.31.7 (`F_0`); D.31.8 (exact (C4.1)); **D.31.9 (decision: FALSE)**; **D.31.10–11**; **D.31.12 (obstruction)**; D.31.14 (ray-restricted); the table of eight necessary conditions × `ξ`/`ξ_K`/`Ξ_a`; falsifier runs; Q-B.1–4; corpus check; paper-facing list P46-26…P46-33; open list; §Label. Round-2 repairs carry bracketed `[…, round 2, finding H…]` notes |
+| `R142_002_AUDIT.md` | audit: verdict on D.31.12 (**STANDS**), findings H1–H10, independent recomputation of every constant, the geometric diagnosis, required actions |
+| `R142_003_ROUND2.md` | **round 2** — per-finding ledger (all ten accepted) and **§D.32**: what is vacuous / what survives; the geometric diagnosis as Restatement D.32.1; **Prop. D.32.3 (HORN A)**; **Thm D.32.4 (the HORN B test)** with the five-candidate table; O-18′, O-19, O-22, O-22′, O-23 |
 | `scripts/certify_sF.py` | certifies `s_1 = 0.9984601627188091092345474…`, `u^* = 0.11099156…`, `d_0 = 324.9598…`, and the nonempty witness windows (mpmath, 40 digits) |
 | `scripts/certify_leakage.py` | proof-of-record leakage bound `L ≤ 5.46×10^{−91}` from (E2)+(V2)+Riemann–von Mangoldt, **no zero list**, against the margin `G(1−s_1) = 5.79×10^{−3}`; the zero-list sum is kept as an illustration only |
 
@@ -76,5 +76,5 @@ Ergebnisse **48** §2.2. **Beurling–Malliavin is a corpus cross-reference, not
 
 ## Next
 
-Lead's closing decision `R142_005`. Phase 143 opens on the two horns: **O-22 / O-18′** (Horn A) and
+Closing decision `R142_005`. Phase 143 opens on the two horns: **O-22 / O-18′** (Horn A) and
 **O-22′** (Horn B, i.e. (T1),(T2) and the `C'_{F_0} ≥ G` test for the trace-positive cone).

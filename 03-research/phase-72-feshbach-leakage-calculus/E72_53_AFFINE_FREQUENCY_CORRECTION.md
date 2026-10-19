@@ -1,7 +1,6 @@
 # E72.53 -- Affine-frequency correction for the scalar endpoint channel
 
-**Date:** 2026-07-08.
-**Role:** correct the finite-frequency expansion E72.51/E72.52. The scalar channel is finite-frequency
+**Purpose:** correct the finite-frequency expansion E72.51/E72.52. The scalar channel is finite-frequency
 plus affine-frequency, not a pure trigonometric polynomial.
 
 ## 0. The issue

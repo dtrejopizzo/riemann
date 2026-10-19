@@ -1,6 +1,5 @@
 # P123.026 — retain component gluing before analytic realization
 
-Date: 2026-09-05.
 
 ## Status and relation to the corpus
 

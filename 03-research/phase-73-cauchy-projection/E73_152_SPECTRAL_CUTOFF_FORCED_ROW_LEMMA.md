@@ -1,6 +1,5 @@
 # E73.152 - Spectral-cutoff forced row lemma
 
-Date: 2026-07-12.
 
 ## 1. Purpose
 

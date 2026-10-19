@@ -1,6 +1,5 @@
 # E73.118 Results - Low-Scale Exact LOCK Base Probe
 
-Date: 2026-07-12.
 
 Script:
 

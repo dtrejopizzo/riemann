@@ -112,7 +112,7 @@ be proved to move it, and §4 confirms the one architectural constraint
 
 ## 5. Scope
 
-This note is a synthesis of 108_50 and 108_51, written in this session; it
+This note is a synthesis of 108_50 and 108_51, written in this phase; it
 introduces no new mathematical content beyond aggregating their verdicts
 into the closing table above. Its own Scope restrictions are exactly the
 union of 108_50 §5 and 108_51 §5: Stage 0's internal definitions

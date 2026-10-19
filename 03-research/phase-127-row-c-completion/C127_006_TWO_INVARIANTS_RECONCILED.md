@@ -1,6 +1,6 @@
 # C127.006 — the two invariants of the series, reconciled
 
-Date: 2026-09-12.  Status: `PROVED`.  Full statement: Paper 45 §12.
+Status: `PROVED`. Full statement: Paper 45 §12.
 
 Closes the two items Paper 45's first draft had listed as open.
 

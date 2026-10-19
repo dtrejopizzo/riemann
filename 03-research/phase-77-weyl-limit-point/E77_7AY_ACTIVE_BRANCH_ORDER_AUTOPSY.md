@@ -1,6 +1,6 @@
 # E77.7ay - Active branch order autopsy
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

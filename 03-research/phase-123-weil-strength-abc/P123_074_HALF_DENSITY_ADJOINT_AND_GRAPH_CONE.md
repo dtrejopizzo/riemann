@@ -1,6 +1,6 @@
 # P123.074 — Half-density adjoint and source graph effectivity
 
-Date: 2026-09-06. Status: PROVED for the fixed-S graph-kernel sectors.
+Status: PROVED for the fixed-S graph-kernel sectors.
 This gives a geometric adjoint and effective cone in that sector, not
 their full numerical/RR descent on the stable category.
 

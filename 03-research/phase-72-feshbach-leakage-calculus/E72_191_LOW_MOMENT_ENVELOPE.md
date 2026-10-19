@@ -1,7 +1,6 @@
 # E72.191 -- Low-moment envelope search
 
-**Date:** 2026-07-09.
-**Role:** test whether D-ASRP can be reduced to low-degree moment inequalities.
+**Purpose:** test whether D-ASRP can be reduced to low-degree moment inequalities.
 
 ## 0. Target
 

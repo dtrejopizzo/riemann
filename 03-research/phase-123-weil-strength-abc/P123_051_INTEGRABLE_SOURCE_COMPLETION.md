@@ -1,6 +1,6 @@
 # P123.051 — An integrable completion for the source transgression
 
-Date: 2026-09-05. Status: CONSTRUCTED with continuous algebra operations
+Status: CONSTRUCTED with continuous algebra operations
 and traces for the two-prime extension. This is an additional source
 domain, not a claim of trace continuity on all rapid C_0 coefficients.
 

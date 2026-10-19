@@ -1,7 +1,6 @@
 # E72.174 -- Trace cycle identity for PTC
 
-**Date:** 2026-07-09.
-**Role:** express the polynomial trace certificate as a finite prime-power cycle identity.
+**Purpose:** express the polynomial trace certificate as a finite prime-power cycle identity.
 
 ## 0. Relative cell operators
 

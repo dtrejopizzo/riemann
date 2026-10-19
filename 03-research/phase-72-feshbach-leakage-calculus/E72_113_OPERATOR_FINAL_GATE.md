@@ -1,7 +1,6 @@
 # E72.113 -- Operator final gate for scalar WRL annihilation
 
-**Date:** 2026-07-09.
-**Role:** package the current Phase 72 route into one finite operator criterion.
+**Purpose:** package the current Phase 72 route into one finite operator criterion.
 
 ## 0. Finite objects
 

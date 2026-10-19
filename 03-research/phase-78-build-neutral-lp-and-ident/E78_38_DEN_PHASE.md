@@ -1,6 +1,6 @@
 # E78.38 - `DIRDEF_b,N` is exactly a denominator phase defect
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

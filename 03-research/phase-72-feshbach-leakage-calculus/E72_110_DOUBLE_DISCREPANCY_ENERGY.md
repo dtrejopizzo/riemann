@@ -1,7 +1,6 @@
 # E72.110 -- Double discrepancy energy for the quadratic flux
 
-**Date:** 2026-07-09.
-**Role:** expand the quadratic flux certificate as an explicit Chebyshev-discrepancy energy.
+**Purpose:** expand the quadratic flux certificate as an explicit Chebyshev-discrepancy energy.
 
 ## 0. Input
 

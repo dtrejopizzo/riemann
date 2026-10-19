@@ -1,6 +1,5 @@
 # E74.13 - Residual pairing estimate target
 
-Date: 2026-07-16.
 
 ## Purpose
 

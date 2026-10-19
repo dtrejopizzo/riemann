@@ -1,13 +1,13 @@
-# 104_83 — Gate Fourier de \(\Xi\): cumulantes exactos y cancelación modular de borde
+# 104_83 — Fourier gate for \(\Xi\): exact cumulants and modular boundary cancellation
 
-**Resultado.** La representación theta positiva lleva el observable profundo
-de `104_75` a una fórmula exacta en los cumulantes de una única ley de
-probabilidad. Esa fórmula no da una desigualdad nueva: el logaritmo conserva
-todos los ceros de \(\xi\), y el evento profundo es precisamente una cola de
-la transformada binomial de todos los cumulantes.
+**Result.** The positive theta representation carries the deep
+observable of `104_75` to an exact formula in the cumulants of a
+single probability law. That formula does not give a new inequality:
+the logarithm preserves all the zeros of \(\xi\), and the deep event
+is precisely a tail of the binomial transform of all the cumulants.
 
-La auditoría Fourier sí produce un falsificador específico del kernel de
-Riemann. Escribiendo el kernel como suma de sus modos theta,
+The Fourier audit does produce a falsifier specific to the Riemann
+kernel. Writing the kernel as a sum of its theta modes,
 
 \[
  \Phi(u)=\sum_{m\ge1}f_m(u),\qquad
@@ -15,16 +15,16 @@ Riemann. Escribiendo el kernel como suma de sus modos theta,
           e^{-\pi m^2e^{2u}},                                  \tag{1}
 \]
 
-se sabe por `103_47` que la cola puntual satisface
-\(0<(\Phi-f_1)/f_1<1/300\). Sin embargo, la modularidad obliga a
+it is known from `103_47` that the pointwise tail satisfies
+\(0<(\Phi-f_1)/f_1<1/300\). However, modularity forces
 
 \[
  \Phi^{(2j+1)}(0)=0\quad(j\ge0),                                \tag{2}
 \]
 
-mientras \(f_1'(0)>0\). En consecuencia, la cola, aunque puntualmente
-menor que \(1/300\), cancela **exactamente el cien por ciento** del primer
-jet impar. En Fourier la pérdida es completa:
+while \(f_1'(0)>0\). Consequently, the tail, although pointwise
+smaller than \(1/300\), cancels **exactly one hundred percent** of the
+first odd jet. In Fourier the loss is total:
 
 \[
  C_1(t):=\int_0^\infty f_1(u)\cos(tu)\,du
@@ -37,24 +37,24 @@ jet impar. En Fourier la pérdida es completa:
  \qquad {C_{\ge2}(t)\over C_1(t)}\longrightarrow-1.            \tag{4}
 \]
 
-Así, dominancia del primer modo, truncación de modos, PF de orden finito y
-cotas puntuales de la cola no controlan el observable profundo. La única
-posibilidad theta que sobrevive debe usar simultáneamente **todos** los
-pesos modulares, **todas** las cancelaciones (2), y el logaritmo antes de
-extraer coeficientes. No se demuestra aquí esa desigualdad restante, el
-límite profundo ni RH.
+Thus, first-mode dominance, mode truncation, finite-order PF, and
+pointwise tail bounds do not control the deep observable. The only
+surviving theta possibility must simultaneously use **all** the
+modular weights, **all** the cancellations (2), and the logarithm
+before extracting coefficients. That remaining inequality is not
+proved here, nor is the deep limit, nor RH.
 
 ---
 
-## 1. La coordenada probabilística exacta
+## 1. The exact probabilistic coordinate
 
-La identidad theta, con una constante positiva irrelevante, es
+The theta identity, with an irrelevant positive constant, is
 
 \[
  \xi(s)=c\int_{\mathbb R}\Phi(|u|)e^{(s-1/2)u}\,du.             \tag{5}
 \]
 
-Defina la probabilidad inclinada
+Define the tilted probability
 
 \[
  d\nu(u)={\Phi(|u|)e^{u/2}\,du
@@ -62,13 +62,13 @@ Defina la probabilidad inclinada
  \qquad U\sim\nu.                                                \tag{6}
 \]
 
-Entonces, para todo \(t\in\mathbb C\),
+Then, for every \(t\in\mathbb C\),
 
 \[
  M(t):=\mathbb E e^{tU}={\xi(1+t)\over\xi(1)}.                 \tag{7}
 \]
 
-Como \(1/(1-z)=1+z/(1-z)\), la identidad generadora de Li da
+Since \(1/(1-z)=1+z/(1-z)\), the Li generating identity gives
 
 \[
  \boxed{
@@ -76,8 +76,8 @@ Como \(1/(1-z)=1+z/(1-z)\), la identidad generadora de Li da
  =\log\mathbb E\exp\!\left({z\over1-z}U\right).}              \tag{8}
 \]
 
-Si \(\kappa_j\) es el cumulante de orden \(j\) de \(U\), la expansión
-es absolutamente legítima cerca de cero y produce
+If \(\kappa_j\) is the cumulant of order \(j\) of \(U\), the expansion
+is absolutely legitimate near zero and produces
 
 \[
  \boxed{
@@ -85,7 +85,7 @@ es absolutamente legítima cerca de cero y produce
  =\sum_{j=1}^n{\binom nj\over(j-1)!}\,\kappa_j.}               \tag{9}
 \]
 
-Por tanto el observable profundo es exactamente
+Therefore the deep observable is exactly
 
 \[
  {1\over H_X}\sum_{n\le X}{1\over n}
@@ -94,53 +94,53 @@ Por tanto el observable profundo es exactamente
   \le-e^{\sqrt X}\right\}}.                                   \tag{10}
 \]
 
-La positividad de \(\nu\) prueba \(\kappa_2\ge0\), pero no fija los
-cumulantes superiores. Más decisivamente, \(\log M\) tiene singularidades
-exactamente en los ceros de \(M\). Una cota de Cauchy para sus coeficientes
-que atraviese el primer cero interior ya presupone la ausencia de ese cero.
-Así (8) no elimina la obstrucción meromorfa de `104_80`; la expresa con una
-sola ley positiva.
+Positivity of \(\nu\) proves \(\kappa_2\ge0\), but does not fix the
+higher cumulants. More decisively, \(\log M\) has singularities
+exactly at the zeros of \(M\). A Cauchy bound for its coefficients
+that crosses the first interior zero already presupposes the absence
+of that zero. Thus (8) does not eliminate the meromorphic obstruction
+of `104_80`; it expresses it with a single positive law.
 
-## 2. Auditoría PF/total-positiva
+## 2. PF/total-positivity audit
 
-La log-concavidad estricta del kernel real \(\Phi(|u|)\) fue probada en
-`103_34`; esto proporciona la información de orden dos. No se puede elevar
-silenciosamente a PF\(_\infty\).
+The strict log-concavity of the real kernel \(\Phi(|u|)\) was proved
+in `103_34`; this provides second-order information. It cannot be
+silently lifted to PF\(_\infty\).
 
-En efecto, la caracterización de Schoenberg de las funciones de frecuencia
-de Pólya dice que, si una función integrable no nula es PF\(_\infty\), su
-transformada bilateral de Laplace es, en su franja de convergencia, el
-recíproco de una función entera de Laguerre--Pólya. En particular esa
-transformada no tiene ceros donde es finita. Aquí
+Indeed, Schoenberg's characterization of Pólya frequency functions
+states that, if a nonzero integrable function is PF\(_\infty\), its
+bilateral Laplace transform is, on its strip of convergence, the
+reciprocal of an entire Laguerre--Pólya function. In particular that
+transform has no zeros where it is finite. Here
 
 \[
  \int_{\mathbb R}\Phi(|u|)e^{itu}\,du=c^{-1}\xi(1/2+it)       \tag{11}
 \]
 
-tiene infinitos ceros reales incondicionalmente. Luego el kernel de
-traslación asociado a la \(Phi\) real **no es PF\(_\infty\)**.
+has unconditionally infinitely many real zeros. Hence the translation
+kernel associated with the real \(\Phi\) **is not PF\(_\infty\)**.
 
-Esto no contradice el PF de orden dos. Solo demuestra que alguna menor de
-orden finito superior debe fallar; no hace falta adivinarla ni usar un
-cálculo decimal. Por otra parte, imponer PF/Jensen a todos los órdenes a la
-sucesión central
+This does not contradict the second-order PF property. It only shows
+that some higher finite-order minor must fail; there is no need to
+guess which one or to use a decimal computation. On the other hand,
+imposing PF/Jensen at all orders on the central sequence
 
 \[
  c_N={1\over(2N)!}\int_{\mathbb R}u^{2N}\Phi(|u|)\,du           \tag{12}
 \]
 
-es precisamente la pertenencia de \(\Xi\) a Laguerre--Pólya, equivalente
-a RH (`103_31`). Por tanto:
+is precisely the membership of \(\Xi\) in Laguerre--Pólya, equivalent
+to RH (`103_31`). Therefore:
 
 ```text
-PF de traslación infinito: falso para el kernel real;
-PF/Jensen central infinito: criterio equivalente a RH;
-PF de cualquier orden fijo: insuficiente para (10).
+Infinite translation PF: false for the real kernel;
+Infinite central PF/Jensen: criterion equivalent to RH;
+Fixed-order PF: insufficient for (10).
 ```
 
-## 3. El primer jet ya destruye la dominancia modal
+## 3. The first jet already destroys modal dominance
 
-La derivada logarítmica del primer modo en cero es
+The logarithmic derivative of the first mode at zero is
 
 \[
  {f_1'(0)\over f_1(0)}
@@ -148,22 +148,23 @@ La derivada logarítmica del primer modo en cero es
  ={15\pi-4\pi^2-15/2\over2\pi-3}.                     \tag{13}
 \]
 
-Es estrictamente positiva con un certificado racional. La función
-\(g(x)=15x-4x^2-15/2\) decrece para \(x\ge3\), y \(\pi<22/7\); por tanto
+It is strictly positive with a rational certificate. The function
+\(g(x)=15x-4x^2-15/2\) decreases for \(x\ge3\), and \(\pi<22/7\);
+therefore
 
 \[
  g(\pi)>g(22/7)={13\over98}>0.                                 \tag{14}
 \]
 
-La transformación modular hace que \(\Phi(|u|)\) sea suave y par. En
-particular \(\Phi'(0)=0\). La serie de derivadas de (1) converge
-absolutamente en cero por el factor \(e^{-\pi m^2}\), de modo que
+The modular transformation makes \(\Phi(|u|)\) smooth and even. In
+particular \(\Phi'(0)=0\). The series of derivatives of (1) converges
+absolutely at zero by the factor \(e^{-\pi m^2}\), so that
 
 \[
  \boxed{\sum_{m\ge2}f_m'(0)=-f_1'(0)<0.}                        \tag{15}
 \]
 
-El contraste con la cota puntual es exacto:
+The contrast with the pointwise bound is exact:
 
 \[
  0<\sum_{m\ge2}f_m(0)<{f_1(0)\over300},
@@ -171,14 +172,14 @@ El contraste con la cota puntual es exacto:
  \sum_{m\ge2}f_m'(0)=-f_1'(0).                                \tag{16}
 \]
 
-La diferenciación amplifica los modos superiores por potencias de
-\(m^2\); no existe una estimación de Fourier que conserve el factor
-\(1/300\) sin contabilizar esta cancelación.
+Differentiation amplifies the higher modes by powers of
+\(m^2\); no Fourier estimate preserves the factor \(1/300\) without
+accounting for this cancellation.
 
-## 4. Prueba de la cancelación Fourier completa
+## 4. Proof of the complete Fourier cancellation
 
-Todas las derivadas de \(f_1\) son integrables en \([0,\infty)\). Cuatro
-integraciones por partes dan
+All derivatives of \(f_1\) are integrable on \([0,\infty)\). Four
+integrations by parts give
 
 \[
  C_1(t)=-{f_1'(0)\over t^2}
@@ -186,40 +187,40 @@ integraciones por partes dan
         +{1\over t^4}\int_0^\infty f_1^{(4)}(u)\cos(tu)\,du.   \tag{17}
 \]
 
-Esto prueba (3), y en particular \(C_1(t)<0\) para todo \(t\)
-suficientemente grande.
+This proves (3), and in particular \(C_1(t)<0\) for every
+sufficiently large \(t\).
 
-Para el kernel completo, la paridad suave da (2), y todas sus derivadas
-son integrables. Repitiendo la integración por partes \(2N\) veces,
+For the full kernel, smooth parity gives (2), and all its derivatives
+are integrable. Repeating integration by parts \(2N\) times,
 
 \[
  C(t):=\int_0^\infty\Phi(u)\cos(tu)\,du=O_N(t^{-2N})
  \qquad(N\ge1).                                                 \tag{18}
 \]
 
-Como \(C_{\ge2}=C-C_1\), las ecuaciones (17)--(18), con \(N=3\),
-prueban (4). En particular, en cada cero crítico suficientemente alto
-\(\gamma\) de \(\Xi\),
+Since \(C_{\ge2}=C-C_1\), equations (17)--(18), with \(N=3\),
+prove (4). In particular, at each sufficiently high critical zero
+\(\gamma\) of \(\Xi\),
 
 \[
  C_{\ge2}(\gamma)=-C_1(\gamma),                                \tag{19}
 \]
 
-y ambos miembros son no nulos. Hay infinitos tales ceros por el teorema
-incondicional de Hardy y por el signo eventual de \(C_1\). La cola theta
-no es una perturbación Fourier pequeña: es el término que cancela todos
-los jets algebraicos del modo principal.
+and both sides are nonzero. There are infinitely many such zeros, by
+the unconditional theorem of Hardy and by the eventual sign of
+\(C_1\). The theta tail is not a small Fourier perturbation: it is the
+term that cancels all the algebraic jets of the principal mode.
 
-## 5. La identidad residual que conserva todos los pesos y la modularidad
+## 5. The residual identity that preserves all the weights and modularity
 
-La traducción exacta de `103_47`,
+The exact translation of `103_47`,
 
 \[
  f_m(u)=m^{-1/2}f_1(u+\log m),                                  \tag{20}
 \]
 
-permite reordenar el kernel completo sin retirar ningún modo. Para todo
-\(w\in\mathbb C\), por convergencia absoluta localmente uniforme,
+allows the full kernel to be rearranged without removing any mode. For
+every \(w\in\mathbb C\), by locally uniform absolute convergence,
 
 \[
 \begin{aligned}
@@ -230,10 +231,10 @@ permite reordenar el kernel completo sin retirar ningún modo. Para todo
 \end{aligned}
 \]
 
-En efecto, se sustituye (20) y en el término \(m\) se cambia
-\(v=u+\log m\). El dominio pasa a ser \(v\ge\log m\); al intercambiar
-la suma y la integral sobreviven exactamente los enteros \(m\le e^v\).
-Equivalentemente, el corchete de (21) es
+Indeed, substitute (20) and, in the \(m\)-th term, change variables
+\(v=u+\log m\). The domain becomes \(v\ge\log m\); interchanging the
+sum and the integral, exactly the integers \(m\le e^v\) survive.
+Equivalently, the bracket in (21) is
 
 \[
  {1\over2}\left\{
@@ -241,49 +242,48 @@ Equivalentemente, el corchete de (21) es
  +e^{-wv}\sum_{m\le e^v}m^{-1/2+w}\right\}.           \tag{22}
 \]
 
-Esta es la posibilidad residual que conserva simultáneamente los pesos
-exactos de la suma theta, los desplazamientos modulares y la fase
-compleja. Para \(w\) real el integrando es positivo. Para
-\(w=b+it\), \(b\ne0\), las dos sumas de (22) son complejas y no tienen
-signo; su no anulación para todo \(t\) es justamente la localización de
-ceros que falta. Sustituirlas por su término integral, acotarlas por
-módulos o truncar \(m\) destruye las cancelaciones (2)--(4).
+This is the residual possibility that simultaneously preserves the
+exact weights of the theta sum, the modular shifts, and the complex
+phase. For real \(w\) the integrand is positive. For
+\(w=b+it\), \(b\ne0\), the two sums in (22) are complex and have no
+sign; their non-vanishing for every \(t\) is exactly the missing zero
+localization. Replacing them by their integral term, bounding them by
+moduli, or truncating \(m\) destroys the cancellations (2)--(4).
 
-La identidad (21) es por tanto un punto de entrada legítimamente
-theta-específico. No es una prueba de que su integral sea no nula fuera del
-eje imaginario.
+Identity (21) is therefore a legitimately theta-specific entry point.
+It is not a proof that its integral is nonzero off the imaginary axis.
 
-## 6. Consecuencia para Deep-\(\Lambda\)
+## 6. Consequence for Deep-\(\Lambda\)
 
-Las ecuaciones (8)--(10) muestran que una desigualdad de densidad puede
-formularse enteramente con el kernel positivo. Las ecuaciones (15)--(19)
-prueban que no puede obtenerse mediante ninguno de estos pasos:
+Equations (8)--(10) show that a density inequality can be formulated
+entirely with the positive kernel. Equations (15)--(19) prove it
+cannot be obtained through any of these steps:
 
-1. retirar los modos \(m\ge2\) por su tamaño puntual;
-2. conservar un número finito de cancelaciones de borde;
-3. usar PF/TP de orden fijo y pasar después al límite;
-4. sustituir el logaritmo de (8) por la transformada lineal (11).
+1. removing the modes \(m\ge2\) by their pointwise size;
+2. keeping a finite number of boundary cancellations;
+3. using fixed-order PF/TP and then passing to the limit;
+4. replacing the logarithm of (8) by the linear transform (11).
 
-El único sucesor Fourier no falsificado es una desigualdad **no local y a
-todos los órdenes** para la suma modular completa, aplicada después del
-logaritmo. Debe usar simultáneamente los pesos exactos
-\(m^{-1/2}\), los desplazamientos \(\log m\) de `103_47`, y la familia
-entera (2), por ejemplo directamente mediante (21)--(22). Separar
-cualquiera de esas tres piezas vuelve a (3)--(4).
+The only non-falsified Fourier successor is a **non-local, all-orders**
+inequality for the complete modular sum, applied after the logarithm.
+It must simultaneously use the exact weights
+\(m^{-1/2}\), the shifts \(\log m\) from `103_47`, and the entire
+family (2), for example directly via (21)--(22). Separating any of
+these three pieces returns to (3)--(4).
 
-Este sucesor es una especificación precisa, no un lema ya demostrado. El
-presente documento cierra el ataque por dominancia/PF Fourier, pero no
-prueba (10), Deep-\(\Lambda\), A1 ni RH.
+This successor is a precise specification, not an already proved
+lemma. The present document closes off the dominance/PF Fourier
+attack, but does not prove (10), Deep-\(\Lambda\), A1, or RH.
 
-## 7. Reproducción
+## 7. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 xi_fourier_deep_gate_check.py
 ```
 
-El checker certifica con `Fraction` el signo (14), verifica la cancelación
-de los primeros cuatro jets impares por suma theta y muestra, solo como
-diagnóstico de cuadratura, la cancelación Fourier en los tres primeros
-ceros críticos. La prueba de (3)--(4) es la integración por partes anterior
-y no depende del punto flotante.
+The checker certifies the sign (14) with `Fraction`, verifies the
+cancellation of the first four odd jets by the theta sum, and shows,
+only as a quadrature diagnostic, the Fourier cancellation at the first
+three critical zeros. The proof of (3)--(4) is the integration by
+parts above and does not depend on floating point.

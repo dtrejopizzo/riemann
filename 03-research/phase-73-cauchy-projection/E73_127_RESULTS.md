@@ -1,6 +1,5 @@
 # E73.127 Results - Characteristic Reformulation of CSV
 
-Date: 2026-07-12.
 
 Script:
 

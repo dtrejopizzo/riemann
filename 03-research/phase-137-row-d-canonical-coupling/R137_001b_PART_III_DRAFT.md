@@ -1,27 +1,27 @@
 # R137.001b — Paper 46 Part III (§§17–19), **draft, round 2**; not appended, and not appendable this round
 
-Author: builder (Opus 5), phase 137, revised in round 2 after `R137_002_HOSTILE_AUDIT.md`. Proofs and
-repairs: `R137_001_BUILDER_ROUND1.md` (round 1) as corrected by `R137_003_BUILDER_ROUND2.md` (round 2).
+Proofs and
+repairs: `R137_001_ROUND1.md` (round 1) as corrected by `R137_003_ROUND2.md` (round 2).
 
 ## 0. Status: NOT to be appended in this round, and why
 
-The hostile auditor's ruling is explicit ("Do not append"), the coordinator has confirmed it, and I
+The audit's ruling is explicit ("Do not append"), the coordinator has confirmed it, and I
 agree. Round 1's reasons stand and two more have been added:
 
-1. **Protocol.** Parts I and II entered Paper 46 only after builder → hostile → repair → confirmation.
+1. **Protocol.** Parts I and II entered Paper 46 only after report → audit → repair → confirmation.
    Round 2 is the repair; the confirmation round has not happened. Phase 135's own ledgers (§§9.2a,
    9.2b, 14.4a, 14.4b) record what round-1 material looked like before audit, on this very object.
 2. **An undeclared zero-location import.** §17.4 rests on `|ζ(1+iτ)|^{−1} ≪ \log^{7}(2+|τ|)`, a
    quantitative form of `ζ(1+iτ) ≠ 0`. Paper 46 §1.13 lists every zero-location fact the paper uses;
    the *qualitative* fact is already there (via (E2), Proposition 11.11a), the quantitative one is not.
-   Appending §17.4 requires the lead to add the §1.13 row and the §15 import tag (X19). The
+   Appending §17.4 requires adding the §1.13 row and the §15 import tag (X19). The
    zero-free-region-free alternative was worked out in round 2 (`R137_003` §2.4b) and **fails**: the
    degree ceiling `Φ_E(σ) ≤ m` holds only on `σ ∈ [0,1]`, inside which `ξ` may vanish, so the method is
    forced onto `\mathrm{Re}\,s = 1`.
 3. **One statement is `CANDIDATE`, not `PROVED`** (§17.6(ii), hypothesis `(H_a)`), and one is now a
    `HEURISTIC` question rather than a statement (§19.2).
 4. **§19 is a comparison, not a theorem.** Its placement — Part III, a subsection of §14, or outside the
-   paper — is a lead decision.
+   paper — is a decision.
 
 **Recommendation unchanged.** Append §§17–18 after a confirmation round and after §1.13 is amended;
 place §19 in §14 (connections) or leave it in the phase directory.

@@ -1,6 +1,5 @@
 # E73.214 - Bernoulli remainder lemma for the entry tail
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

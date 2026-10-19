@@ -230,7 +230,7 @@ that even where they meet, the pairing is infinite.
 
 This also explains, in one line, why Arakelov-style finiteness (lattice points
 in a ball — the mechanism behind CC's integer `dim H^0`, as recorded in
-`phase-39/120-inventario-CC-fuente.md`: divisors `sum n_i x_i` with
+`phase-39/120-source-inventory-of-the-connes-consani-moscovici.md`: divisors `sum n_i x_i` with
 `sum |n_i| <= e^a`) cannot be transplanted here. The ball is fine; it is the
 form on the lattice that is infinite.
 

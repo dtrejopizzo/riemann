@@ -1,6 +1,6 @@
 # E77.5a - SR-LOG-ERR core probe
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Statement
 

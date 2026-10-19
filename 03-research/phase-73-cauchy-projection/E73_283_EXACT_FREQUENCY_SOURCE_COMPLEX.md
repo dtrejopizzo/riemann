@@ -1,6 +1,5 @@
 # E73.283 - Exact frequency source complex
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

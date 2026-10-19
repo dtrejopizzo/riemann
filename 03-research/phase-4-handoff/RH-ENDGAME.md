@@ -2,7 +2,7 @@
 
 **For the external pure-math team. Read this before deciding where to spend effort.**
 
-After 22 days of hostile-audited proof work, it is time to reconnect candidly to the actual goal — RH —
+After 22 days of audited proof work, it is time to reconnect candidly to the actual goal — RH —
 and state, precisely, what the machinery does and does not deliver. The short version: **the program
 reaches a faithful spectral *reformulation* of RH; it does not, and by its nature cannot, reach RH itself.
 RH requires the *sign* of a bottom that all the sampling/density machinery leaves untouched.**
@@ -83,7 +83,7 @@ attacked **magnitude**, not **structure**. This — not more sampling/density �
    trace, the Bost–Connes square, de Branges chains.) Expect low odds; this is the hard core of RH that the
    whole field has not cracked. But it is the **only** route from here to a proof.
 3. **Stop expecting RH from the sampling/density branch.** It is not a branch in the pejorative sense — it
-   is the core of (A) — but it provably reformulates rather than proves. Twenty-two days of hostile audit
+   is the core of (A) — but it provably reformulates rather than proves. Twenty-two days of audit
    confirm: the difficulty of RH is the **sign**, and the sign needs **structure (a square)**, not
    **magnitude (a bound)**.
 

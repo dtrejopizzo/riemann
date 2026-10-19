@@ -1,6 +1,5 @@
 # E74.19 - Truncation and compression audit
 
-Date: 2026-07-16.
 
 ## Test
 

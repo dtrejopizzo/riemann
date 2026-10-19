@@ -41,7 +41,7 @@ on the primitive space, where
 \]
 
 \[
- A_{0,T}=C_{19}I-cJ_a,qquad
+ A_{0,T}=C_{19}I-cJ_a,\qquad
  C_{19}=\sum_{j=0}^{19}{2\over b_j}-m_0,                 \tag{2.3}
 \]
 
@@ -77,7 +77,7 @@ interchanged exactly by `J_a`.  Let `P` be the resulting step projection.
 Then
 
 \[
- \dim P=268,qquad [P,A_{0,T_c}]=0,qquad
+ \dim P=268,\qquad [P,A_{0,T_c}]=0,\qquad
  h_{max}<0.002992.                                       \tag{3.2}
 \]
 
@@ -103,7 +103,7 @@ Thus every finite entry is evaluated directly, without quadrature.
 Let
 
 \[
- h_+(x)=e^{x/2},\qquad h_-(x)=e^{-x/2},qquad
+ h_+(x)=e^{x/2},\qquad h_-(x)=e^{-x/2},\qquad
  H=|h_+\rangle\langle h_+|+|h_-\rangle\langle h_-|.     \tag{4.1}
 \]
 
@@ -148,7 +148,7 @@ where
 Directed evaluation on (1.2) gives
 
 \[
- \sqrt{I_{19}(T)}<71.020,qquad
+ \sqrt{I_{19}(T)}<71.020,\qquad
  \epsilon_K<0.13525.                                    \tag{5.3}
 \]
 

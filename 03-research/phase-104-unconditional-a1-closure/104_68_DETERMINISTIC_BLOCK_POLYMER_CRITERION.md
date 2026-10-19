@@ -1,13 +1,13 @@
-# 104_68 — Criterio de bloques deterministas y polímero prima--Laguerre
+# 104_68 — Deterministic block criterion and prime–Laguerre polymer
 
-**Resultado.** La existencia abstracta de bloques buenos de `104_61` puede
-reemplazarse por una sucesión completamente determinista:
+**Result.** The abstract existence of good blocks from `104_61` can be
+replaced by a fully deterministic sequence:
 
 \[
  I_L=\{L^2,L^2+1,\ldots,L^2+L-1\}.                         \tag{1}
 \]
 
-Defina
+Define
 
 \[
  a_n={1\over1+(n+1)e^{\lambda_n}},
@@ -15,7 +15,7 @@ Defina
  P_L=\prod_{n\in I_L}(1-a_n).                              \tag{2}
 \]
 
-Entonces
+Then
 
 \[
  \boxed{
@@ -26,51 +26,51 @@ Entonces
  P_L\longrightarrow1.}                                     \tag{3}
 \]
 
-Si RH es falsa ocurre la dicotomía opuesta:
+If RH is false the opposite dichotomy occurs:
 
 \[
  \liminf_{L\to\infty}\sum_{n\in I_L}a_n\geq1,
  \qquad P_L\longrightarrow0.                               \tag{4}
 \]
 
-El inverso de \(P_L\) posee una expansión exacta de polímeros finitos y un
-lift prima--Laguerre que conserva juntos polo, bloque arquimediano, primos y
-potencias primas. Más aún, el regulador puede diagonalizarse con la ventana:
-se obtiene una sola sucesión de productos Euler absolutamente convergentes,
-sin límite interior. La expansión no entrega aún una cota: es un gas sin
-interacciones cuya función de partición factoriza de nuevo grado por grado.
-Toda la dificultad permanece dentro de la actividad emparejada de cada
-grado. Este documento prueba (3)--(4), no A1 ni RH.
+The inverse of \(P_L\) has an exact finite-polymer expansion and a
+prime–Laguerre lift that keeps the pole, archimedean block, primes, and
+prime powers together. Moreover, the regulator can be diagonalized with
+the window: a single sequence of absolutely convergent Euler products is
+obtained, with no interior limit. The expansion does not yet deliver a
+bound: it is a gas without interactions whose partition function again
+factors degree by degree. All the difficulty remains inside the paired
+activity of each degree. This document proves (3)--(4), not A1 nor RH.
 
 ---
 
-## 1. Por qué las ventanas deterministas bastan
+## 1. Why deterministic windows suffice
 
-Ponga
+Set
 
 \[
  x_n=\lambda_n+\log(n+1),\qquad
  z_n=e^{-x_n}={e^{-\lambda_n}\over n+1}.                    \tag{5}
 \]
 
-Entonces
+Then
 
 \[
- a_n={z_n\over1+z_n},qquad
+ a_n={z_n\over1+z_n},\qquad
  1-a_n={1\over1+z_n}
  ={1\over1+e^{-(\lambda_n+\log(n+1))}}.                    \tag{6}
 \]
 
-### 1.1 Dirección RH
+### 1.1 RH direction
 
-Bajo RH, \(\lambda_n\geq0\), luego
+Under RH, \(\lambda_n\geq0\), so
 
 \[
- 0\leq a_n\leq{1\over n+2},qquad
+ 0\leq a_n\leq{1\over n+2},\qquad
  0\leq z_n\leq{1\over n+1}.                               \tag{7}
 \]
 
-Como \(|I_L|=L\) y \(n\geq L^2\) en (1),
+Since \(|I_L|=L\) and \(n\geq L^2\) in (1),
 
 \[
  \boxed{
@@ -78,32 +78,33 @@ Como \(|I_L|=L\) y \(n\geq L^2\) en (1),
  \leq{L\over L^2+2}\leq{1\over L}.}                      \tag{8}
 \]
 
-Para números \(0\leq a_n<1\),
+For numbers \(0\leq a_n<1\),
 
 \[
  1-\sum_{n\in I_L}a_n
  \leq\prod_{n\in I_L}(1-a_n)\leq1.                       \tag{9}
 \]
 
-Las ecuaciones (8)--(9) dan \(P_L\to1\).
+Equations (8)--(9) give \(P_L\to1\).
 
-### 1.2 Dirección no-RH
+### 1.2 Non-RH direction
 
-Si RH es falsa, `104_56` produce \(R>1\), \(c>0\), un entero \(M\) y un
-conjunto sindético \(D\), después de un prefijo, tales que
+If RH is false, `104_56` produces \(R>1\), \(c>0\), an integer \(M\) and
+a syndetic set \(D\), after a prefix, such that
 
 \[
  \lambda_n\leq-cR^n\qquad(n\in D).                         \tag{10}
 \]
 
-Todo intervalo de \(M\) enteros suficientemente lejano contiene un elemento
-de \(D\). Por tanto, para todo \(L\geq M\) grande existe
+Every sufficiently distant interval of \(M\) integers contains an
+element of \(D\). Hence, for every sufficiently large \(L\geq M\) there
+exists
 
 \[
  d_L\in I_L\cap D.                                         \tag{11}
 \]
 
-En ese índice,
+At that index,
 
 \[
  1-a_{d_L}
@@ -112,65 +113,65 @@ En ese índice,
  \leq(d_L+1)e^{-cR^{d_L}}\longrightarrow0,                 \tag{12}
 \]
 
-y, por ello, \(a_{d_L}\to1\). Se sigue que
+and hence \(a_{d_L}\to1\). It follows that
 
 \[
  \sum_{n\in I_L}a_n\geq a_{d_L}\longrightarrow1
- \quad\text{por abajo},                                   \tag{13}
+ \quad\text{from below},                                   \tag{13}
 \]
 
-mientras
+while
 
 \[
  0<P_L\leq1-a_{d_L}\longrightarrow0.                      \tag{14}
 \]
 
-Esto prueba (4) y las implicaciones recíprocas de (3). No se elige una
-subsucesión adaptada a los ceros: las ventanas cuadráticas (1) interceptan
-automáticamente cualquier conjunto sindético.
+This proves (4) and the reverse implications of (3). No subsequence
+adapted to the zeros is chosen: the quadratic windows (1) automatically
+intercept any syndetic set.
 
-La potencia dos no es esencial. La misma prueba vale para cualquier familia
-determinista de intervalos consecutivos \(J_k\) que satisfaga
+The power two is not essential. The same proof holds for any
+deterministic family of consecutive intervals \(J_k\) satisfying
 
 \[
- |J_k|\longrightarrow\infty,qquad
+ |J_k|\longrightarrow\infty,\qquad
  { |J_k|\over\min J_k}\longrightarrow0.                    \tag{14a}
 \]
 
-La primera condición intercepta todo conjunto sindético bajo no-RH; la
-segunda hace \(\sum_{n\in J_k}(n+2)^{-1}=o(1)\) bajo RH. La elección (1)
-es la normalización entera más simple y evita todo parámetro adaptativo.
+The first condition intercepts every syndetic set under non-RH; the
+second makes \(\sum_{n\in J_k}(n+2)^{-1}=o(1)\) under RH. Choice (1) is
+the simplest integer normalization and avoids any adaptive parameter.
 
-### 1.3 Equivalencia interna entre suma y producto
+### 1.3 Internal equivalence between sum and product
 
-La equivalencia de los dos límites de (3) no usa coeficientes de Li. De
+The equivalence of the two limits of (3) uses no Li coefficients. From
 (6),
 
 \[
  -\log P_L=\sum_{n\in I_L}\log(1+z_n),                     \tag{15}
 \]
 
-y para \(z\geq0\),
+and for \(z\geq0\),
 
 \[
  {z\over1+z}\leq\log(1+z)\leq z.                          \tag{16}
 \]
 
-Así
+So
 
 \[
  \sum_{n\in I_L}a_n\leq-\log P_L.                         \tag{17}
 \]
 
-La implicación \(P_L\to1\Rightarrow\sum a_n\to0\) sigue de (17); la
-otra ya sigue de (9). La normalización logística no oculta un pico: un solo
-\(a_n\to1\) fuerza el producto a cero.
+The implication \(P_L\to1\Rightarrow\sum a_n\to0\) follows from (17);
+the other already follows from (9). The logistic normalization hides no
+spike: a single \(a_n\to1\) forces the product to zero.
 
 ---
 
-## 2. Expansión de polímeros exacta
+## 2. Exact polymer expansion
 
-Por (5)--(6),
+By (5)--(6),
 
 \[
  \boxed{
@@ -181,15 +182,15 @@ Por (5)--(6),
  \{\lambda_n+\log(n+1)\}\right).}                         \tag{18}
 \]
 
-El conjunto vacío aporta uno. Si se define la actividad de un polímero
-\(S\) por
+The empty set contributes one. If the activity of a polymer
+\(S\) is defined by
 
 \[
  Z(S)=\prod_{n\in S}{e^{-\lambda_n}\over n+1},             \tag{19}
 \]
 
-(18) es la función de partición de un gas de sitios con ocupación cero o
-uno. Todos los pesos son positivos. Bajo RH, (7) da
+(18) is the partition function of a lattice gas with occupation zero or
+one. All weights are positive. Under RH, (7) gives
 
 \[
  0\leq P_L^{-1}-1
@@ -197,19 +198,19 @@ uno. Todos los pesos son positivos. Bajo RH, (7) da
  \leq e^{1/L}-1.                                           \tag{20}
 \]
 
-Si RH es falsa, el sitio \(d_L\) de (11) tiene
+If RH is false, the site \(d_L\) of (11) has
 
 \[
  z_{d_L}\geq{e^{cR^{d_L}}\over d_L+1},                    \tag{21}
 \]
 
-por lo que \(P_L^{-1}\geq1+z_{d_L}\to\infty\).
+so \(P_L^{-1}\geq1+z_{d_L}\to\infty\).
 
 ---
 
-## 3. Lift prima--Laguerre regulado
+## 3. Regulated prime–Laguerre lift
 
-Use la convención de `104_61`:
+Use the convention of `104_61`:
 
 \[
 \begin{aligned}
@@ -223,7 +224,7 @@ Use la convención de `104_61`:
 \end{aligned}
 \]
 
-Para \(\varepsilon>0\), ponga
+For \(\varepsilon>0\), set
 
 \[
  z_{n,\varepsilon}
@@ -233,10 +234,10 @@ Para \(\varepsilon>0\), ponga
  L_{n-1}^{(1)}(\log m)\right).                             \tag{23}
 \]
 
-El producto converge absolutamente en el logaritmo y
+The product converges absolutely in the logarithm and
 \(z_{n,\varepsilon}=e^{-\lambda_{n,\varepsilon}}/(n+1)\).
-Como \(I_L\) y su conjunto potencia son finitos para cada \(L\), se puede
-pasar al borde término a término:
+Since \(I_L\) and its power set are finite for each \(L\), one can
+pass to the boundary term by term:
 
 \[
 \boxed{
@@ -254,20 +255,20 @@ pasar al borde término a término:
 \end{aligned}}
 \]
 
-La ecuación (24) conserva, para cada polímero, el polo, el bloque
-arquimediano, todos los primos y todas las potencias primas hasta después de
-sumar los grados del polímero. El orden de límites es vinculante:
+Equation (24) keeps, for each polymer, the pole, the archimedean
+block, all the primes, and all the prime powers together until after
+summing the degrees of the polymer. The order of limits is binding:
 
 \[
- \varepsilon\downarrow0\quad\text{con }L\text{ fijo},
- \qquad\text{después }L\to\infty.                           \tag{25}
+ \varepsilon\downarrow0\quad\text{with }L\text{ fixed},
+ \qquad\text{then }L\to\infty.                           \tag{25}
 \]
 
-No se ha probado uniformidad que permita invertirlos.
+No uniformity allowing them to be swapped has been proved.
 
-### 3.1 Diagonal única para las ventanas cuadráticas
+### 3.1 Single diagonal for the quadratic windows
 
-La estimación de Cauchy de `104_66` elimina el doble límite de (25). Ponga
+The Cauchy estimate of `104_66` removes the double limit of (25). Set
 
 \[
  N_L=L^2+L-1,\qquad \varepsilon_L=e^{-N_L/100},
@@ -275,15 +276,15 @@ La estimación de Cauchy de `104_66` elimina el doble límite de (25). Ponga
  \qquad \eta={1\over100}-\log{200\over199}>0.              \tag{25a}
 \]
 
-Existe una constante fija \(M=M_{199/200}<\infty\) tal que, para \(L\)
-suficientemente grande y todo \(n\in I_L\),
+There is a fixed constant \(M=M_{199/200}<\infty\) such that, for
+sufficiently large \(L\) and every \(n\in I_L\),
 
 \[
  |\lambda_{n,\varepsilon_L}-\lambda_n|
  \le 2MN_Le^{-\eta N_L}=:\delta_L.                        \tag{25b}
 \]
 
-Defina
+Define
 
 \[
  a_{n,\varepsilon_L}={1\over1+(n+1)e^{\lambda_{n,\varepsilon_L}}},
@@ -291,9 +292,9 @@ Defina
  P_{L,\varepsilon_L}=\prod_{n\in I_L}(1-a_{n,\varepsilon_L}). \tag{25c}
 \]
 
-La logística es \(1/4\)-Lipschitz. Además, para vectores con coordenadas en
-\([0,1]\), la diferencia de sus productos está acotada por la suma de las
-diferencias coordenada a coordenada. Por tanto
+The logistic is \(1/4\)-Lipschitz. Moreover, for vectors with
+coordinates in \([0,1]\), the difference of their products is bounded
+by the sum of the coordinate-wise differences. Hence
 
 \[
 \begin{aligned}
@@ -305,7 +306,7 @@ diferencias coordenada a coordenada. Por tanto
 \end{aligned}                                             \tag{25d}
 \]
 
-y el lado derecho tiende exponencialmente a cero. En consecuencia,
+and the right-hand side tends exponentially to zero. Consequently,
 
 \[
 \boxed{
@@ -316,7 +317,7 @@ y el lado derecho tiende exponencialmente a cero. En consecuencia,
  P_{L,\varepsilon_L}\longrightarrow1.}                   \tag{25e}
 \]
 
-Para cada \(L\), la fórmula sin límite interior es
+For each \(L\), the formula with no interior limit is
 
 \[
 \boxed{
@@ -329,64 +330,65 @@ Para cada \(L\), la fórmula sin límite interior es
  \sum_{n\in S}L_{n-1}^{(1)}(\log m)\right).}             \tag{25f}
 \]
 
-La suma en \(S\) es finita y cada producto Euler converge absolutamente.
-La diagonal (25a) no prueba (25e); solo coloca el criterio exacto dentro de
-una única familia aritmética convergente.
+The sum over \(S\) is finite and each Euler product converges absolutely.
+The diagonal (25a) does not prove (25e); it only places the exact
+criterion inside a single convergent arithmetic family.
 
 ---
 
-## 4. Auditoría: el polímero no crea interacción aritmética nueva
+## 4. Audit: the polymer creates no new arithmetic interaction
 
-A pesar de la suma sobre subconjuntos, (18) es un gas **sin interacción**:
+Despite the sum over subsets, (18) is a gas **without interaction**:
 
 \[
  \log P_L^{-1}=\sum_{n\in I_L}\log(1+z_n).                 \tag{26}
 \]
 
-Los términos cruzados de (18) son exactamente productos de actividades
-individuales; desaparecen al tomar el logaritmo. No existe una reserva
-conectada entre grados que pueda pagar un sitio malo. Esto distingue (24)
-de una verdadera expansión de cúmulos con interacción firmada.
+The cross terms of (18) are exactly products of individual activities;
+they disappear upon taking the logarithm. There is no reserve connected
+across degrees that could pay for a bad site. This distinguishes (24)
+from a genuine cluster expansion with signed interaction.
 
-Además, todos los términos de (18) son positivos. Una cota superior
-\(P_L^{-1}=1+o(1)\) obliga ya a que cada actividad sea pequeña:
+Moreover, all the terms of (18) are positive. An upper bound
+\(P_L^{-1}=1+o(1)\) already forces each activity to be small:
 
 \[
- 0\leq z_n\leq P_L^{-1}-1\qquad(n\in I_L).                 \tag{27}
+ 0\leq z_n\leq P_L^{-1}-1\qquad(n\in I_L).                \tag{27}
 \]
 
-En particular, (20) no se puede obtener cancelando polímeros distintos.
-La única cancelación disponible es la interna de (23), entre
-\(p_n(\varepsilon)\) y la suma de Mangoldt, antes de exponenciar.
+In particular, (20) cannot be obtained by canceling distinct polymers.
+The only available cancellation is the internal one of (23), between
+\(p_n(\varepsilon)\) and the Mangoldt sum, before exponentiating.
 
-Para \(n\) fijo, ambas partes tienen tamaño \(\varepsilon^{-n}\). Separar
-los factores de (23) produce exponentes de ese tamaño y pierde la parte
-finita, como ya cuantifican `104_61` y `104_63`. Agrupar varios grados en
-\(S\) no cambia este hecho: el grado máximo de \(S\) domina la divergencia
-si los canales se estiman por separado.
+For fixed \(n\), both parts have size \(\varepsilon^{-n}\). Separating
+the factors of (23) produces exponents of that size and loses the
+finite part, as already quantified by `104_61` and `104_63`. Grouping
+several degrees into \(S\) does not change this fact: the maximum degree
+of \(S\) dominates the divergence if the channels are estimated
+separately.
 
-Por tanto (24) aporta un **objetivo determinista**, pero no un mecanismo de
-cota. Probar desde (24)
+Hence (24) contributes a **deterministic target**, but not a bounding
+mechanism. Proving from (24) that
 
 \[
  \boxed{P_L^{-1}=1+o(1)}                                    \tag{28}
 \]
 
-es exactamente la nueva formulación suficiente para RH.
+is exactly the new formulation sufficient for RH.
 
 ---
 
-## 5. Falsificador off-line
+## 5. Off-line falsifier
 
-Para el cuarteto racional de `104_17`,
+For the rational quadruple of `104_17`,
 
 \[
  Q_n=4-2\mathrm{Re}\,\{(2i)^n+(2i)^{-n}\}.            \tag{29}
 \]
 
-Cada intervalo de cuatro enteros contiene un \(d\equiv0\pmod4\), y para
-ese índice \(-Q_d\geq2^d\). Por tanto, para todo \(L\geq4\), existe
-\(d_L\in I_L\) tal que
+Every interval of four integers contains a \(d\equiv0\pmod4\), and at
+that index \(-Q_d\geq2^d\). Hence, for every \(L\geq4\), there is
+\(d_L\in I_L\) such that
 
 \[
  1-a_{d_L}
@@ -394,41 +396,42 @@ ese índice \(-Q_d\geq2^d\). Por tanto, para todo \(L\geq4\), existe
  P_L\leq(d_L+1)e^{-2^{d_L}}\longrightarrow0.               \tag{30}
 \]
 
-El criterio determinista rechaza el cuarteto en **cada** ventana grande,
-no solo en promedio o en una subsucesión.
+The deterministic criterion rejects the quadruple in **every** large
+window, not just on average or on a subsequence.
 
 ---
 
-## 6. Veredicto
+## 6. Verdict
 
-**Probado.** El criterio determinista (3), la dicotomía fuerte (4), la
-expansión de polímeros (18), el lift prima--Laguerre (24), la diagonal única
-(25e)--(25f) y el falsificador (30).
+**Proved.** The deterministic criterion (3), the strong dichotomy (4),
+the polymer expansion (18), the prime–Laguerre lift (24), the single
+diagonal (25e)--(25f), and the falsifier (30).
 
-**Ganancia.** Ya no hay un selector existencial de intervalos: basta la
-familia explícita \([L^2,L^2+L-1]\). El target es un límite escalar positivo,
-\(P_L^{-1}\to1\), con una expansión aritmética finita exacta.
+**Gain.** There is no longer an existential selector of intervals: the
+explicit family \([L^2,L^2+L-1]\) suffices. The target is a positive
+scalar limit, \(P_L^{-1}\to1\), with an exact finite arithmetic
+expansion.
 
-**No-go.** El polímero es no interactuante. La positividad de sus actividades
-impide cancelar subconjuntos, y la factorización devuelve la dificultad a
-cada actividad prima--polo emparejada. Presentar (18) como una interacción
-nueva sería incorrecto.
+**No-go.** The polymer is non-interacting. The positivity of its
+activities prevents canceling subsets, and the factorization returns
+the difficulty to each paired prime–pole activity. Presenting (18) as a
+new interaction would be incorrect.
 
-**No probado.** (28) para los pesos reales \(\Lambda(m)\), un bloque nuevo
-de coeficientes, A1 o RH.
+**Not proved.** (28) for the real weights \(\Lambda(m)\), a new block of
+coefficients, A1, or RH.
 
 ---
 
-## 7. Reproducción
+## 7. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 deterministic_block_polymer_check.py
 ```
 
-El checker usa `Fraction`. Verifica la cota RH modelo (8), las identidades
-(6), (9), (15)--(18) para actividades racionales, que cada \(I_L\) con
-\(L\geq4\) intercepta la clase mala del cuarteto, y la cota exacta
-\(-Q_d\geq2^d\). También comprueba la desigualdad telescópica de productos
-usada en (25d) y la caída de la envolvente diagonal. No certifica el límite
-aritmético (28).
+The checker uses `Fraction`. It verifies the RH model bound (8), the
+identities (6), (9), (15)--(18) for rational activities, that every
+\(I_L\) with \(L\geq4\) intercepts the bad class of the quadruple, and
+the exact bound \(-Q_d\geq2^d\). It also checks the telescoping product
+inequality used in (25d) and the decay of the diagonal envelope. It does
+not certify the arithmetic limit (28).

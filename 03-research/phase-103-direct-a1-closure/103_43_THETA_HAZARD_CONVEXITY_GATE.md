@@ -58,7 +58,7 @@ has no generic sign.
 
 Write
 \[
- \Phi=f_1(1+R),\qquad R=\sum_{m\ge2}r_m,qquad r_m={f_m\over f_1}.
+ \Phi=f_1(1+R),\qquad R=\sum_{m\ge2}r_m,\qquad r_m={f_m\over f_1}.
 \]
 As in `103_34`, with \(a=m^2-1\),
 \[
@@ -73,8 +73,8 @@ For \(u\ge1/4\), the elementary bounds \(\pi>3\) and
 Put \(D=d/du=2x\,d/dx\).  From the explicit rational expression in (7),
 or by differentiating \(\log r_m\), one obtains for \(ax\ge27/2\)
 \[
- |D\log r_m|<3ax,qquad
- |D^2\log r_m|<5ax,qquad
+ |D\log r_m|<3ax,\qquad
+ |D^2\log r_m|<5ax,\qquad
  |D^3\log r_m|<10ax.                                           \tag{9}
 \]
 Consequently

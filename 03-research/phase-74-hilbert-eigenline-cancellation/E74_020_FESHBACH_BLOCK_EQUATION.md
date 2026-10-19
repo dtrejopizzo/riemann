@@ -1,6 +1,5 @@
 # E74.20 - Exact Feshbach block equation and bootstrap target
 
-Date: 2026-07-16.
 
 ## Exact equation
 

@@ -1,6 +1,6 @@
 # E77.7h - Krylov window-resolution audit
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 
@@ -103,7 +103,7 @@ run of E77.7h, where 32 steps recovered `Sigma(delta)` to `~6e-18`.
 
 The planted build has a moderate ambient condition number and is resolved
 by very shallow Lanczos in the previous probe.  It stays compatible with the
-front-A audit: the algebra does not filter the planted build by sign or by
+front-An audit: the algebra does not filter the planted build by sign or by
 zeros.
 
 ## 4. Autopsy

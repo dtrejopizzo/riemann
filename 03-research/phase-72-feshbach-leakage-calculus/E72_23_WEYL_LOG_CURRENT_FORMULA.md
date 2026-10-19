@@ -1,7 +1,6 @@
 # E72.23 -- Weyl log-current formula for two-height convergence
 
-**Date:** 2026-07-08.
-**Role:** express the finite divisor Cauchy transform `F_x'/F_x` directly from the finite CCM Weyl data
+**Purpose:** express the finite divisor Cauchy transform `F_x'/F_x` directly from the finite CCM Weyl data
 without constructing the numerator polynomial.
 
 ## 0. Finite Weyl data

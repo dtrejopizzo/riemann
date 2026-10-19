@@ -1,8 +1,8 @@
-# Contexto maestro del programa RH
+# Master context of the RH program
 
-Este directorio congela la revisión integral del programa antes de continuar con \(\Omega_7\). No es una fase nueva y no contiene una afirmación de prueba de RH. Su función es impedir tres errores de investigación: contar una equivalencia como avance, reutilizar una afirmación retirada y volver a recorrer una clase ya cerrada por un no-go.
+This directory freezes the comprehensive review of the program carried out before continuing with \(\Omega_7\). It is not a new phase and contains no claim of a proof of RH. Its purpose is to prevent three research errors: counting an equivalence as progress, reusing a withdrawn claim, and walking again through a class already closed by a no-go.
 
-El dictamen central es:
+The central finding is:
 
 \[
 \mathrm{ARP\!\!-P}\Longleftrightarrow\mathrm{RH}
@@ -12,17 +12,17 @@ El dictamen central es:
 \bigl[\lambda_n\ge0\ \forall n\bigr].
 \]
 
-Esta cadena es una localización correcta de la dificultad, no una reducción de su fuerza. \(\Omega_7\) continúa abierto. La auditoría también obliga a corregir una afirmación previa más fuerte: no todas las piezas auxiliares anunciadas como cerradas en paper 36 están demostradas con el alcance declarado. En particular, \(\Omega_4\) mezcla dos blanqueamientos con dominios distintos y \(\Omega_5\) demuestra continuidad por orden fijo, pero no positividad incondicional.
+This chain correctly locates the difficulty; it does not reduce its strength. \(\Omega_7\) remains open. The audit also forces the correction of an earlier, stronger claim: not all auxiliary pieces announced as closed in paper 36 are proved with the stated scope. In particular, \(\Omega_4\) mixes two whitenings with different domains, and \(\Omega_5\) proves continuity at fixed order but not unconditional positivity.
 
-Hay además una corrección que cambia el reinicio. Del split exacto \(\lambda_n=\lambda_n^{\rm arch}+\lambda_n^{\rm prime}\), Ω₇ equivale a
+There is also a correction that changes the restart. From the exact split \(\lambda_n=\lambda_n^{\rm arch}+\lambda_n^{\rm prime}\), Ω₇ is equivalent to
 
 \[
 \lambda_n^{\rm prime}\ge-\lambda_n^{\rm arch}\qquad(n\ge1),
 \]
 
-no a \(|\lambda_n^{\rm prime}|<\lambda_n^{\rm arch}\). La dominación absoluta es una condición suficiente más fuerte y ni siquiera puede ser la equivalencia declarada en \(n=1\). Por eso el frente recomendado pasa a ser una desigualdad unilateral que preserve la cancelación firmada.
+not to \(|\lambda_n^{\rm prime}|<\lambda_n^{\rm arch}\). Absolute domination is a stronger sufficient condition and cannot even be the stated equivalence at \(n=1\). Hence the recommended front becomes a one-sided inequality that preserves the signed cancellation.
 
-La auditoría corrige también la fórmula que debe iniciar ese frente: la integración por partes impresa cambia el signo y omite el borde \(-n\). Con \(f_{n,\varepsilon}(y)=y^{-1-\varepsilon}L_{n-1}^{(1)}(\log y)\), la identidad válida es
+The audit also corrects the formula that should start that front: the printed integration by parts changes the sign and omits the boundary term \(-n\). With \(f_{n,\varepsilon}(y)=y^{-1-\varepsilon}L_{n-1}^{(1)}(\log y)\), the valid identity is
 
 \[
 \lambda_n^{\rm prime}
@@ -31,30 +31,30 @@ La auditoría corrige también la fórmula que debe iniciar ese frente: la integ
 \int_1^\infty(\psi(y)-y+1)f'_{n,\varepsilon}(y)\,dy.
 \]
 
-Por tanto ninguna continuación debe reutilizar la versión anterior sin reparación.
+No continuation should therefore reuse the earlier version without repair.
 
-## Orden de lectura
+## Reading order
 
-1. [`00_SCOPE_AND_METHOD.md`](00_SCOPE_AND_METHOD.md): corpus, protocolo y significado de las etiquetas.
-2. `MASTER_CONTEXT.md`: síntesis autocontenida del camino completo y estado matemático actual.
-3. `PAPER36_AUDIT.md`: columna lógica, resultados confirmados y reparaciones necesarias.
-4. `RH1_RH9_AUDIT.md`: balance de los nueve programas exploratorios.
-5. `PHASES_AUDIT.md`: recorrido de todas las fases, sin contar reparametrizaciones como cierres nuevos.
-6. `NO_GO_AND_RETRACTIONS.md`: registro de rutas descartadas, alcance exacto y precedencia de correcciones.
-7. `LIVE_FRONTIER_AND_RESTART_PLAN.md`: criterio de admisión y plan de reinicio centrado en el paso portador de fuerza-RH.
-8. `COVERAGE_INDEX.md`: comprobación de cobertura y tamaño del contexto.
+1. [`00_SCOPE_AND_METHOD.md`](00_SCOPE_AND_METHOD.md): corpus, protocol and meaning of the labels.
+2. `MASTER_CONTEXT.md`: self-contained synthesis of the whole path and current mathematical state.
+3. `PAPER36_AUDIT.md`: logical spine, confirmed results and necessary repairs.
+4. `RH1_RH9_AUDIT.md`: assessment of the nine exploratory programs.
+5. `PHASES_AUDIT.md`: walk through all phases, without counting reparametrisations as new closures.
+6. `NO_GO_AND_RETRACTIONS.md`: record of discarded routes, exact scope and precedence of corrections.
+7. `LIVE_FRONTIER_AND_RESTART_PLAN.md`: admission criterion and restart plan centred on the RH-strength step.
+8. `COVERAGE_INDEX.md`: coverage check and size of the context.
 
-Los archivos en [`fragments/`](fragments/) conservan las auditorías de bloque que sostienen la síntesis. Son evidencia de trazabilidad; ante cualquier discrepancia, prevalece una corrección matemática posterior que exhiba el paso exacto.
+The files in [`fragments/`](fragments/) keep the block audits that support the synthesis. They are traceability evidence; in case of discrepancy, a later mathematical correction exhibiting the exact step prevails.
 
-## Etiquetas vinculantes
+## Binding labels
 
-| Etiqueta | Significado |
+| Label | Meaning |
 |---|---|
-| **DEMOSTRADO** | La conclusión sigue de las hipótesis escritas. El alcance puede ser finito o restringido. |
-| **CONDICIONAL** | Falta probar al menos una hipótesis usada por la conclusión. |
-| **NUMÉRICO** | Evidencia para cortes, datos y precisión fijados; no es un límite. |
-| **REFUTADO** | El mecanismo concreto falla o contiene un error identificado. |
-| **FUERZA-RH** | Probar el enunciado resolvería RH bajo transferencias ya establecidas. No puede usarse como lema auxiliar. |
-| **ABIERTO** | El enunciado está bien tipado y aún no tiene demostración ni refutación. |
+| **PROVED** | The conclusion follows from the written hypotheses. The scope may be finite or restricted. |
+| **CONDITIONAL** | At least one hypothesis used by the conclusion remains to be proved. |
+| **NUMERICAL** | Evidence for fixed cut-offs, data and precision; not a limit. |
+| **REFUTED** | The specific mechanism fails or contains an identified error. |
+| **RH-STRENGTH** | Proving the statement would resolve RH through transfers already established. It cannot be used as an auxiliary lemma. |
+| **OPEN** | The statement is well typed and has neither proof nor refutation. |
 
-Una identidad finita demostrada no hereda automáticamente una conclusión cofinal. Una condición de fuerza-RH no es una brecha pequeña. Un no-go sólo cierra la clase de argumentos que sus hipótesis realmente cubren.
+A proved finite identity does not automatically inherit a cofinal conclusion. An RH-strength condition is not a small gap. A no-go closes only the class of arguments its hypotheses actually cover.

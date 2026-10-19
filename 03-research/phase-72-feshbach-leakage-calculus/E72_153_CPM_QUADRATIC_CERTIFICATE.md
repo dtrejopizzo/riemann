@@ -1,7 +1,6 @@
 # E72.153 -- CPM quadratic certificate
 
-**Date:** 2026-07-09.
-**Role:** state `CPM-ORTH` as one finite quadratic inequality.
+**Purpose:** state `CPM-ORTH` as one finite quadratic inequality.
 
 ## 0. Operator
 

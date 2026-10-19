@@ -1,6 +1,6 @@
 # Phase 149 — The additive pencil of `Spec Z` and the Deligne extraction
 
-**Row D · September 2026 · status: round 1 delivered; hostile audit `R149_002` done 2026-09-19 (D.61.10 and (P149) DOWNGRADE; see its §0); repairs `R149_003` and lead decision `R149_005` done; phase CLOSED**
+**Row D · · status: round 1 delivered; audit `R149_002` done (D.61.10 and (P149) DOWNGRADE; see its §0); repairs `R149_003` and closing decision `R149_005` done; phase CLOSED**
 
 ## The question
 
@@ -28,8 +28,8 @@ length `N`?
 
 | file | content |
 |---|---|
-| `R149_000_LEAD_BLUEPRINT.md` | the lead's orders (D.59–D.63), warnings W-H, W-a, the FATAL rule |
-| `R149_001_BUILDER_ROUND1.md` | **document of record for round 1**: D.59–D.63, full proofs, labels, corrections C1–C10, open list |
+| `R149_000_BLUEPRINT.md` | the blueprint's instructions (D.59–D.63), warnings W-H, W-a, the FATAL rule |
+| `R149_001_ROUND1.md` | **document of record for round 1**: D.59–D.63, full proofs, labels, corrections C1–C10, open list |
 
 ## Results in one page
 
@@ -106,6 +106,6 @@ same boundary `c = 1/2` (Huxley's number-field large sieve).
 
 ## Next
 
-Hostile audit `R149_002`; then repairs, confirmation, and the lead's closing decision `R149_005`.
+Audit `R149_002`; then repairs, confirmation, and the closing decision `R149_005`.
 Principal open item **O-149.5** should be recorded as the additive face of **O-148.2** — the two are
 two faces of one question.

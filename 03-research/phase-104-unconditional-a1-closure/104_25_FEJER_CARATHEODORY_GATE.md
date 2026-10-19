@@ -1,18 +1,19 @@
-# 104_25 — Gate Fejér--Carathéodory y barrera exacta de holomorfía
+# 104_25 — Fejér–Carathéodory gate and the exact holomorphy barrier
 
-**Rol.** Probar el mecanismo analítico más corto que convertiría el cociclo
-cúbico en el margen \(3\lambda_n-A_n\), y auditar si aporta información
-incondicional. El mecanismo es correcto: una cota de Carathéodory en el disco
-produce todos los signos por el kernel de Fejér. Sin embargo, para el cociclo
-completado, la mera holomorfía en esos discos cuando
-\(\varepsilon\downarrow0\) ya equivale a RH. En discos seguros más pequeños
-solo se obtienen medias amortiguadas, insuficientes coeficiente a coeficiente.
+**Role.** Test the shortest analytic mechanism that would turn the cubic
+cocycle into the margin \(3\lambda_n-A_n\), and audit whether it supplies
+unconditional information. The mechanism is correct: a Carathéodory bound
+on the disc produces every sign through the Fejér kernel. However, for the
+completed cocycle, mere holomorphy on those discs as
+\(\varepsilon\downarrow0\) is already equivalent to RH. On smaller safe
+discs one only obtains damped averages, insufficient
+coefficient-by-coefficient.
 
-Este documento no prueba A1 ni RH.
+This document proves neither A1 nor RH.
 
-## 1. Identidad exacta de Fejér
+## 1. Exact Fejér identity
 
-Fijemos \(u>0\), y escribamos
+Fix \(u>0\), and write
 
 \[
  \Phi(z)=\mathcal S_u^{[3]}(s_\varepsilon(z))
@@ -20,13 +21,13 @@ Fijemos \(u>0\), y escribamos
  \qquad s_\varepsilon(z)=1+\varepsilon+{z\over1-z}.       \tag{1}
 \]
 
-Definamos la normalización con el signo del margen:
+Define the margin-signed normalization:
 
 \[
  Q(z):={1-\Phi(z)\over u(1-z)^2}=\sum_{m\ge0}q_mz^m.      \tag{2}
 \]
 
-La multiplicación de series da, sin hipótesis analítica adicional,
+Multiplying series gives, with no additional analytic hypothesis,
 
 \[
  \boxed{
@@ -35,40 +36,41 @@ La multiplicación de series da, sin hipótesis analítica adicional,
  ={m+1\over u}\bigl(1-\sigma_m(\Phi;1)\bigr),}           \tag{3}
 \]
 
-donde
+where
 
 \[
  \sigma_m(\Phi;1)=
  \sum_{k=0}^m\left(1-{k\over m+1}\right)a_k.             \tag{4}
 \]
 
-Por `104_22`, sobre \(u=c\varepsilon\),
+By `104_22`, along \(u=c\varepsilon\),
 
 \[
  \boxed{q_{n-1}\longrightarrow 3\lambda_n-A_n.}          \tag{5}
 \]
 
-**Teorema 1.1 (Fejér--Carathéodory).** Supóngase que
-\(\Phi\in\mathrm{Hol}(\mathbb D)\), que sus coeficientes son reales y
-que
+**Theorem 1.1 (Fejér–Carathéodory).** Suppose
+\(\Phi\in\mathrm{Hol}(\mathbb D)\), that its coefficients are real, and
+that
 
 \[
  \Re\Phi(z)\le1\qquad(z\in\mathbb D).                    \tag{6}
 \]
 
-Entonces \(q_m\ge0\) para todo \(m\ge0\).
+Then \(q_m\ge0\) for every \(m\ge0\).
 
-**Demostración.** La función \(g=1-\Phi\) tiene parte real no negativa.
-Como \(g(0)=1-a_0\) y todos sus coeficientes son reales, su representación
-de Herglotz puede tomarse sin constante imaginaria, con una medida positiva
-\(\mu\) normalizada por \(\mu(\mathbb T)=g(0)\). La combinación de (3) es
+**Proof.** The function \(g=1-\Phi\) has non-negative real part. Since
+\(g(0)=1-a_0\) and all its coefficients are real, its Herglotz
+representation can be taken with no imaginary constant, with a positive
+measure \(\mu\) normalized by \(\mu(\mathbb T)=g(0)\). The combination in
+(3) is
 
 \[
  \boxed{
  q_m={m+1\over u}\int_{-\pi}^{\pi}F_m(t)\,d\mu(t),}       \tag{7}
 \]
 
-con
+with
 
 \[
  F_m(t)=1+2\sum_{k=1}^m
@@ -76,20 +78,20 @@ con
  ={1\over m+1}\left|\sum_{j=0}^me^{ijt}\right|^2\ge0.   \tag{8}
 \]
 
-Luego (7) es no negativa. En particular, la condición más fuerte
-\(|\Phi(z)|\le1\) también basta. \(\square\)
+Hence (7) is non-negative. In particular, the stronger condition
+\(|\Phi(z)|\le1\) also suffices. \(\square\)
 
-## 2. La holomorfía requerida ya equivale a RH
+## 2. The required holomorphy already equals RH
 
-Para \(u_j=c\varepsilon_j\), \(0<c<1\),
-\(\varepsilon_j\downarrow0\), sea
+For \(u_j=c\varepsilon_j\), \(0<c<1\),
+\(\varepsilon_j\downarrow0\), let
 
 \[
  \Phi_j(z)={Y_3(s_{\varepsilon_j}(z)-u_j)
                  \over Y_3(s_{\varepsilon_j}(z))}.        \tag{9}
 \]
 
-El mapa de Cayley (1) es una biyección
+The Cayley map (1) is a bijection
 
 \[
  s_\varepsilon(\mathbb D)
@@ -98,94 +100,97 @@ El mapa de Cayley (1) es una biyección
  z={s-1-\varepsilon\over s-\varepsilon}.                 \tag{10}
 \]
 
-**Teorema 2.1.** La siguiente afirmación es equivalente a RH:
+**Theorem 2.1.** The following statement is equivalent to RH:
 
-> existe una sucesión \(\varepsilon_j\downarrow0\) para la cual cada
-> \(\Phi_j\) es holomorfa en \(\mathbb D\).
+> there exists a sequence \(\varepsilon_j\downarrow0\) for which each
+> \(\Phi_j\) is holomorphic on \(\mathbb D\).
 
-**Demostración.** Bajo RH, el denominador de (9) no tiene ceros en el
-semiplano (10), por lo que (9) es holomorfa.
+**Proof.** Under RH, the denominator of (9) has no zeros in half-plane
+(10), so (9) is holomorphic.
 
-Recíprocamente, supóngase que \(\xi(\rho)=0\) con
-\(\Re\rho>1/2\). Para todo \(j\) suficientemente grande, \(\rho\) pertenece
-al semiplano (10). Como \(G\) es regular y no nulo en el strip crítico, la
-removibilidad en (9) fuerza
+Conversely, suppose \(\xi(\rho)=0\) with
+\(\Re\rho>1/2\). For every sufficiently large \(j\), \(\rho\) belongs to
+half-plane (10). Since \(G\) is regular and nonzero in the critical strip,
+removability in (9) forces
 
 \[
  \xi(\rho-c\varepsilon_j)=0.                              \tag{11}
 \]
 
-Una subsucesión da infinitos ceros distintos que convergen a \(\rho\), en
-contradicción con el aislamiento de los ceros de una función entera no
-nula. No hay, por tanto, ceros a la derecha de la línea. La ecuación
-funcional y la conjugación excluyen también los de la izquierda. \(\square\)
+A subsequence gives infinitely many distinct zeros converging to
+\(\rho\), contradicting the isolation of zeros of a nonzero entire
+function. There are, therefore, no zeros to the right of the line. The
+functional equation and conjugation also exclude those to the left.
+\(\square\)
 
-Así, aplicar directamente el Teorema 1.1 a una sucesión que retire el
-regulador introduciría la conclusión buscada ya en la hipótesis de
-holomorfía, antes de usar la desigualdad (6).
+Thus, directly applying Theorem 1.1 to a sequence that removes the
+regulator would introduce the desired conclusion already in the
+holomorphy hypothesis, before using inequality (6).
 
-## 3. Incluso el signo eventual a regulador fijo fuerza el disco
+## 3. Even an eventual sign at fixed regulator forces the disc
 
-Hay una versión coeficiente a coeficiente de la misma barrera. Fijado
-\(\varepsilon>0\), supóngase que los coeficientes de (2) satisfacen
-\(q_m\ge0\) para todo \(m\) suficientemente grande. El cociclo es regular
-para \(0<z<1\), porque allí \(s_\varepsilon(z)>1\). Si la cola fuera un
-polinomio, el radio de \(Q\) sería infinito. En otro caso, si el radio fuera
-\(R<1\), el teorema de Pringsheim, aplicado tras quitar el prefijo finito,
-obligaría a una singularidad en el punto real positivo \(z=R\). Pero la
-fórmula meromorfa de \(\Phi\) es holomorfa en un entorno de cada punto de
-\((0,1)\); por solapamiento continúa el germen hasta ese entorno, una
-contradicción. Por tanto \(R\ge1\), y (2) prolonga holomórficamente
-\(\Phi\) a \(\mathbb D\).
+There is a coefficient-by-coefficient version of the same barrier. With
+\(\varepsilon>0\) fixed, suppose the coefficients of (2) satisfy
+\(q_m\ge0\) for every sufficiently large \(m\). The cocycle is regular for
+\(0<z<1\), because there \(s_\varepsilon(z)>1\). If the tail were a
+polynomial, the radius of \(Q\) would be infinite. Otherwise, if the
+radius were \(R<1\), Pringsheim's theorem, applied after removing the
+finite prefix, would force a singularity at the positive real point
+\(z=R\). But the meromorphic formula for \(\Phi\) is holomorphic in a
+neighborhood of every point of \((0,1)\); by overlap the germ continues
+up to that neighborhood, a contradiction. Hence \(R\ge1\), and (2)
+holomorphically extends \(\Phi\) to \(\mathbb D\).
 
-En consecuencia, probar ese signo eventual para cada miembro de una
-sucesión \(\varepsilon_j\downarrow0\) vuelve a implicar RH por el Teorema
-2.1. Esto no hace circular al límite (5); muestra que una prueba que intente
-fortalecerlo a todos los coeficientes con regulador fijo ya contiene RH.
+Consequently, proving that eventual sign for each member of a sequence
+\(\varepsilon_j\downarrow0\) again implies RH by Theorem 2.1. This does
+not make limit (5) circular; it shows that a proof attempting to
+strengthen it to all coefficients at fixed regulator already contains RH.
 
-## 4. El disco seguro no transfiere el signo
+## 4. The safe disc does not transfer the sign
 
-La serie de Dirichlet Euler solo está garantizada en
-\(\Re s>1+u\). Poniendo \(\delta=\varepsilon-u\), para
-\(0<\delta<1/2\) el mayor disco centrado en cero que el mapa (1) coloca
-completamente en ese semiplano tiene radio
+The Euler Dirichlet series is only guaranteed on
+\(\Re s>1+u\). Setting \(\delta=\varepsilon-u\), for
+\(0<\delta<1/2\) the largest disc centered at zero that map (1) places
+entirely within that half-plane has radius
 
 \[
  R_\varepsilon={\varepsilon-u\over1-\varepsilon+u}
  \sim(1-c)\varepsilon\longrightarrow0.                    \tag{12}
 \]
 
-En general el radio es \(\min\{1,\delta/(1-\delta)\}\); la fórmula mostrada
-es la que rige el régimen usado aquí,
+In general the radius is \(\min\{1,\delta/(1-\delta)\}\); the formula
+shown is the one governing the regime used here,
 \(u=c\varepsilon\), \(\varepsilon\downarrow0\).
 
-Incluso concediendo una cota de Schur en \(|z|\le R_\varepsilon\), Fejér
-solo controlaría medias con factores \(R_\varepsilon^k\). No existe una
-transferencia formal al coeficiente sin amortiguar. El siguiente testigo lo
-prueba exactamente.
+Even granting a Schur bound on \(|z|\le R_\varepsilon\), Fejér would only
+control averages with damping factors \(R_\varepsilon^k\). There is no
+formal transfer to the undamped coefficient. The following witness proves
+this exactly.
 
-Sea \(0<R<1\), elíjase \(N\) de modo que \(R^{-N}>N+1\), y tome
+Let \(0<R<1\), choose \(N\) so that \(R^{-N}>N+1\), and take
 
 \[
  \Phi(z)=a+Mz^N,\qquad
  (N+1)(1-a)<M\le(1-a)R^{-N},\quad0\le a<1.       \tag{13}
 \]
 
-Entonces \(|\Phi(z)|\le1\) para \(|z|\le R\), pero
+Then \(|\Phi(z)|\le1\) for \(|z|\le R\), but
 
 \[
  q_N={(N+1)(1-a)-M\over u}<0.                    \tag{14}
 \]
 
-Por tanto la información en cualquier disco estrictamente menor no basta,
-sin una nueva desigualdad especial para el cociclo aritmético.
+Hence the information on any strictly smaller disc is not enough, without
+a new special inequality for the arithmetic cocycle.
 
-## Estado
+## Status
 
-- **Probado:** identidad (3), mecanismo Fejér--Carathéodory y equivalencia
-  exacta entre la holomorfía de los discos regulados y RH.
-- **Descartado:** obtener el margen cúbico aplicando Carathéodory/Schur en el
-  disco completo como input independiente; y transferir formalmente el signo
-  desde el pequeño disco de convergencia Euler.
-- **Abierto:** una desigualdad firmada que actúe directamente sobre el límite
-  (5), sin exigir holomorfía global ni signo eventual a regulador fijo.
+- **Proved:** identity (3), the Fejér–Carathéodory mechanism, and the
+  exact equivalence between holomorphy on the regulated discs and RH.
+- **Ruled out:** obtaining the cubic margin by applying
+  Carathéodory/Schur on the full disc as an independent input; and
+  formally transferring the sign from the small Euler convergence disc.
+- **Open:** a signed inequality acting directly on limit (5), with no
+  requirement of global holomorphy nor of an eventual sign at fixed
+  regulator.
+</content>

@@ -1,6 +1,5 @@
 # E73.269 - Master finite identity theorem for the scalar WRL gate
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

@@ -1,6 +1,5 @@
 # E73.154 Results - Cauchy-plane action
 
-Date: 2026-07-12.
 
 Script:
 

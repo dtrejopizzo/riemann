@@ -1,6 +1,5 @@
 # E73.152 Results - Spectral-cutoff forced row certificate
 
-Date: 2026-07-12.
 
 Script:
 

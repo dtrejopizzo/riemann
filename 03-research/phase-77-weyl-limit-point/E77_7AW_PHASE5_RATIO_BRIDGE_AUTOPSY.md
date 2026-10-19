@@ -1,6 +1,6 @@
 # E77.7aw - Phase-5 ratio bridge autopsy
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

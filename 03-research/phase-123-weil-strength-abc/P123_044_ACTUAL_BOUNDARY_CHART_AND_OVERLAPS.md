@@ -1,6 +1,6 @@
 # P123.044 — The induced normal space is an actual open source chart
 
-Date: 2026-09-05. Status: PROVED for the open-chart identification,
+Status: PROVED for the open-chart identification,
 its generic overlap, and the coefficient-level cover sequence. This
 does not assert descent of the regularized trace across that sequence.
 

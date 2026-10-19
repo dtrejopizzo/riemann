@@ -1330,7 +1330,7 @@ identically zero holomorphic product channel;
 Hermitian window exactly equivalent to the Cramer norm.     (19.2)
 ```
 
-This is a reduction and a closure audit, not progress on the force-RH
+This is a reduction and a closure audit, not progress on the RH-strength
 inequality.
 
 Add to the freeze list:

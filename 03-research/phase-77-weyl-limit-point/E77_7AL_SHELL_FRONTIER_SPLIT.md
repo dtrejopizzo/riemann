@@ -1,6 +1,6 @@
 # E77.7al - Shell frontier split
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

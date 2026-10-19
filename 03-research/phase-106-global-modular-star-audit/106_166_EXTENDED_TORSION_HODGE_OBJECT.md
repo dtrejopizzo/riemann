@@ -63,7 +63,7 @@ Put
 The functional equation and real structure give
 
 \[
- m(\gamma)\in\mathbb R,qquad m(-\gamma)=m(\gamma).          \tag{5}
+ m(\gamma)\in\mathbb R,\qquad m(-\gamma)=m(\gamma).          \tag{5}
 \]
 
 On \(H=L^2(\mathbb R,d\gamma)\), let \(M_m\) be the maximal

@@ -1,6 +1,5 @@
 # E73.123 - CSV Reduction Theorem for the Asymptotic Standard Box
 
-Date: 2026-07-12.
 
 This note records the first clean asymptotic reduction after E73.122.
 

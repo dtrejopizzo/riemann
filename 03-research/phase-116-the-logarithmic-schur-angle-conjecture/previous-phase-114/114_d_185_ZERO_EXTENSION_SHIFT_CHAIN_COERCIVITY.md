@@ -6,7 +6,7 @@ The zero-extension reference of D.182 has a global lower bound which is
 much stronger than the Gamma-only prolate bound.  Put
 
 \[
- I_T=(-T,T),\qquad L=2T,qquad N=\lfloor e^L\rfloor,
+ I_T=(-T,T),\qquad L=2T,\qquad N=\lfloor e^L\rfloor,
 \]
 
 and let

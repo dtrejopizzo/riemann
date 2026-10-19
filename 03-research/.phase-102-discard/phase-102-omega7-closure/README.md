@@ -17,7 +17,7 @@ snapshot stored in
 ]
 
 The working rule is simple: a statement is not avoided because it has
-force-RH. If it is true and necessary, it is a target. False statements are
+RH-strength. If it is true and necessary, it is a target. False statements are
 corrected; RH-strength statements are proved or isolated as the exact load
 still missing.
 
@@ -54,7 +54,7 @@ The remaining central target is the infinite range:
 - `PHASE_102_OBLIGATION_LEDGER.md`: live ledger of closed, reduced and open items.
 - `102_A0_UNIFORM_TAIL_TARGET.md`: first technical target for the direct Li route.
 - `102_A0_UNIFORM_TAIL_THEOREM.md`: proved tail theorem conditional only on explicit PNT and archimedean lower-bound constants.
-- `102_A1_SIGNED_CORE_TARGET.md`: force-RH signed core target.
+- `102_A1_SIGNED_CORE_TARGET.md`: RH-strength signed core target.
 - `102_BOUNDARY_LIMIT_AND_LIMIT_ORDER.md`: admissible order of limits and the compact-core passage.
 - `102_SCALE_DECOMPOSITION_AND_TRUNCATION.md`: scale bookkeeping and truncation rules.
 - `102_A1_ZERO_SIDE_DISCRIMINANT.md`: off-line sensitivity requirement.

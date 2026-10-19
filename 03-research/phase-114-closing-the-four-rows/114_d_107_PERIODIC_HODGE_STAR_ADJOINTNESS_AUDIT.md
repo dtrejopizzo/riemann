@@ -54,8 +54,8 @@ two even Tate classes, is the row-C nuclear character.
 Define an admissible periodic Hodge star to be an operator satisfying
 
 \[
- \star^2=I,qquad
- \star^*Q=Q\star,qquad
+ \star^2=I,\qquad
+ \star^*Q=Q\star,\qquad
  [\star,R_t]=0\quad(t>0).                                \tag{1.3}
 \]
 
@@ -112,7 +112,7 @@ free block.
 There is an algebraically positive choice,
 
 \[
- \star=J,qquad H=J^2=I.                                 \tag{2.5}
+ \star=J,\qquad H=J^2=I.                                 \tag{2.5}
 \]
 
 But
@@ -154,7 +154,7 @@ contradiction.
 If a fixed character has a generalized block
 
 \[
- A=i\gamma I+N,qquad N\text{ nilpotent},                  \tag{3.4}
+ A=i\gamma I+N,\qquad N\text{ nilpotent},                  \tag{3.4}
 \]
 
 then (3.1) reduces to

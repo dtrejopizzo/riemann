@@ -1,6 +1,5 @@
 # E74.9 - Harmonic left-coborder audit
 
-Date: 2026-07-16.
 
 ## 1. Purpose
 

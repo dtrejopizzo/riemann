@@ -1,6 +1,6 @@
 # E78.105 - The `y_b` blowup is carried by the intrinsic `h_b` source, not by the scalar `alpha_b,beta_b` branch
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** front B only, live object `AUX-DMU-SOURCE`.  
 **Class:** REDUCCION GENUINA.  
 **What we know after this doc that we did not know before:** the auxiliary

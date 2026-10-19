@@ -1,8 +1,7 @@
 # E67.20 -- audit of E67.19: the object is GLT/pseudodifferential (rigorous), not "heuristic"
 
-**Date:** 2026-07-06.
 **Script:** [E67_20_glt_audit.py](E67_20_glt_audit.py).
-**Role:** re-audit E67.19. Its data was right; its interpretation ("heuristic, not rigorous") was
+**Purpose:** re-audit E67.19. Its data was right; its interpretation ("heuristic, not rigorous") was
 too pessimistic.
 
 ## What the audit shows
@@ -43,5 +42,5 @@ detector : the 1-D band symbol is the position-averaged leading order (kept in f
 next     : identify kappa(x,theta) explicitly (GLT symbol calculus / Widom) -- Phase 68
 ```
 
-The user's instinct was right: the result is better than E67.19 stated. The rigorous home is GLT/Widom,
+The instinct was right: the result is better than E67.19 stated. The rigorous home is GLT/Widom,
 not a heuristic dead-end.

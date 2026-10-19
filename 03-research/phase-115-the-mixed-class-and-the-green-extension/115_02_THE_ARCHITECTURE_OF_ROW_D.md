@@ -141,7 +141,7 @@ After load 3 does its work, the positives that remain are those of
 \(G_\infty\) on the band \(|\tau|<2\pi\), where \(m_\infty>0\).  That band is
 finite-dimensional on a window of length \(2T\).
 
-Diagnostic measurement (`phase-114` session, floating point):
+Diagnostic measurement (`phase-114`, floating point):
 \(\mathrm{ind}_-(\Gamma)\) on \(\mathcal P_T\) reads
 \(1,1,2,3,5,7,10\) for \(T=0.69,\,0.80,\,0.90,\,1.24,\,1.70,\,2.30,\,3.00\) —
 growing roughly like \(3.3\,T\).  Over the same range \(r\) reads

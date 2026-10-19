@@ -1,6 +1,6 @@
 # Phase 69 -- the forcer on the gauge-robust exact signed index
 
-**Opened:** 2026-07-07. Successor to Phase 68.
+Successor to Phase 68.
 
 ## Why this phase
 

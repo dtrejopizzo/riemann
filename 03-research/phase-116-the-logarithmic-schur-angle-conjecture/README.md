@@ -1,6 +1,6 @@
 # Phase 116 — the Logarithmic Schur Angle Conjecture
 
-Snapshot created on 2026-08-14 from the row-(d) work that followed
+Snapshot created from the row-(d) work that followed
 phase-115 (reciprocal bands and the mean/oscillation Schur audit) and the
 immediately preceding phase-114 research tree. This directory was
 originally assembled under the working name "phase-115"; by the time it
@@ -48,13 +48,13 @@ conditional on.
 - `CANDIDATE_LOG_SCHUR_THEOREM.md`: the candidate Logarithmic Schur Angle
   theorem, its numerical support, and what an analytic proof would still
   have to establish.
-- `current-chat/outputs/`: all TeX deliverables produced while drafting
+- `working-notes/outputs/`: all TeX deliverables produced while drafting
   this material, including `main42new.tex`, audits v89–v131, and
   `main42new-conditional-row-d.tex` — an evaluation draft in which the
   construction of row (d) is recorded as complete while global positivity
   is explicitly conditional on the Logarithmic Schur Angle Conjecture; it
   does not claim that conjecture as proved.
-- `current-chat/work/`: source code and editable textual work products used
+- `working-notes/work/`: source code and editable textual work products used
   to build or test those deliverables, including
   `mean_zero_schur_scan.py` and its CSV output — the seeded, reproducible
   floating-point scan of the corrected Schur angle cited in
@@ -69,10 +69,10 @@ conditional on.
 - `MANIFEST.txt`: generated inventory of every file in this directory.
 
 Binary references and caches from phase 114 were deliberately not copied;
-the source texts and code were. The referenced ChatGPT conversation is not
+the source texts and code were. The referenced conversation is not
 available as a raw export on the filesystem. Its mathematical artifacts
 that were present locally are preserved here, but this directory does not
-claim to contain a verbatim transcript of every chat turn.
+claim to contain a verbatim transcript of every exchange.
 
 `paper-inputs/` (the five author-supplied source files) and
 `CHECKSUMS.sha256`, both mentioned in the original phase-115-era snapshot

@@ -75,7 +75,6 @@ def run_case(label, planted):
 def main():
     result = {
         "statement": "E78.107 v-source resolvent localization",
-        "date": "2026-07-19",
         "cases": [
             run_case("zeta", None),
             run_case("plant", PLANTED),

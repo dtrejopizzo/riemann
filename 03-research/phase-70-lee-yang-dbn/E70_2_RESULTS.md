@@ -1,6 +1,5 @@
 # E70.2 -- monotonicity confirms the direction problem (numerically)
 
-**Date:** 2026-07-07.
 **Script:** E70_2_monotone.py.
 
 ## Result (true xi, min Im N_lambda over a grid in the upper half z-plane)

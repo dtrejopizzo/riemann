@@ -5,7 +5,7 @@
 Let \(F\) be a local field and let
 
 \[
- m_u(x)=ux,qquad u\in F^\times,quad u\neq1,
+ m_u(x)=ux,\qquad u\in F^\times,quad u\neq1,
 \]
 
 act on the transverse line at a monoidal boundary fixed point.  The

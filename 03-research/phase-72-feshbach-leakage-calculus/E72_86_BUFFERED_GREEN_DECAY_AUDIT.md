@@ -1,7 +1,6 @@
 # E72.86 -- Buffered Green decay audit
 
-**Date:** 2026-07-09.
-**Role:** test whether physical cofactor tightness follows from an operator-norm Green decay between
+**Purpose:** test whether physical cofactor tightness follows from an operator-norm Green decay between
 separated physical bands.
 
 ## 0. Buffered operator

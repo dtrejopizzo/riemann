@@ -1,6 +1,6 @@
 # P123.059 — Displacement convolution and the local graph action
 
-Date: 2026-09-05. Status: PROVED for the local test algebra, its
+Status: PROVED for the local test algebra, its
 involution, graph representation and relative character. This does not
 construct the global mixed correspondence category or integral contact.
 

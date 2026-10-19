@@ -1,6 +1,6 @@
 # P123.054 — New-place relative integration and its exact dilation defect
 
-Date: 2026-09-05. Status: PROVED for the new-place divergence and the
+Status: PROVED for the new-place divergence and the
 relative integration identities on Bruhat tests. A completed semilocal
 trace-domain functor is not yet asserted.
 

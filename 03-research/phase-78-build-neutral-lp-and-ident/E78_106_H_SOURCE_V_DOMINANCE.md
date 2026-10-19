@@ -1,6 +1,6 @@
 # E78.106 - The intrinsic `h_b` source is completely dominated by the `b_b v` branch on the audited ladder
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** front B only, live object `H-DMU-SOURCE`.  
 **Class:** REDUCCION GENUINA.  
 **What we know after this doc that we did not know before:** inside

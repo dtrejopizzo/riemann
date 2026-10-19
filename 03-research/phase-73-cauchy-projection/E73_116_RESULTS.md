@@ -1,6 +1,5 @@
 # E73.116 Results - LOCK/TAIL/OUT Box-Domination Pilot
 
-Date: 2026-07-12.
 
 Script:
 

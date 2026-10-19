@@ -153,7 +153,6 @@ def run_case(label, planted):
 def main():
     result = {
         "statement": "E78.103 coupled-generator mu-derivative audit",
-        "date": "2026-07-19",
         "cases": [
             run_case("zeta", None),
             run_case("plant", PLANTED),

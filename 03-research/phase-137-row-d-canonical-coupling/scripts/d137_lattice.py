@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """d137_lattice.py -- certified constant checks for phase 137, D.11 (Paper 46 Sec 13 lattice).
 
-ROUND 2 (repairs H1, H5b, H18 of R137_002_HOSTILE_AUDIT.md).  Round 1's C2 defined u0 as the
+ROUND 2 (repairs H1, H5b, H18 of R137_002_AUDIT.md).  Round 1's C2 defined u0 as the
 last GRID point with PiK > 0 and then tested PiK < 0 only ABOVE that point, so the interval
 (0.235, 0.2386) where PiK is still positive was never probed and the reported u0 = 0.235 was
 false.  In round 2 the two facts that carry the theorems are PROVED analytically in
-R137_003_BUILDER_ROUND2.md Sec 2.0 and are only VERIFIED here:
+R137_003_ROUND2.md Sec 2.0 and are only VERIFIED here:
 
   (A)  PiK(u) < 0 for every u >= u0 := (1/2) log(5.1/pi) = 0.2422553269...,
        because K''(u) > K(u)/4 term by term once x := pi n^2 e^{2u} >= 5.1

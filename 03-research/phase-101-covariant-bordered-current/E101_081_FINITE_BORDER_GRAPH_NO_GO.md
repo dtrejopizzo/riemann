@@ -709,7 +709,7 @@ SINGULAR-DIAGONAL-PULLBACK:
 
 WEIGHTED-JET-POTENTIAL-CONVERGENCE:
   prove the scalar potential transfer of E101.079 directly, accepting it as
-  the force-RH theorem.                                              (11.2)
+  the RH-strength theorem.                                              (11.2)
 ```
 
 E101.084 closes `TERMINAL-RANKONE-COMPOUND` as an independent route: the

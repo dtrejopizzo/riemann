@@ -1,64 +1,63 @@
-# 104_104 — Jets reales, discos tangentes y gate del bloque de Li
+# 104_104 — Real jets, tangent discs, and the Li-block gate
 
-**Estado.** Este documento ataca directamente la propuesta de obtener
-bloques consecutivos con \(\lambda_n\ge-1\) a partir de la generatriz real
+**Status.** This document directly attacks the proposal of obtaining
+consecutive blocks with \(\lambda_n\ge-1\) from the real generating function
 
 \[
  \mathcal F(z):=\log\!\left(2\xi\!\left({1\over1-z}\right)\right)
  =\sum_{n\ge1}{\lambda_n\over n}z^n.                 \tag{1}
 \]
 
-El resultado no prueba RH. Produce tres conclusiones exactas.
+The result does not prove RH. It produces three exact conclusions.
 
-1. RH equivale a una cota de crecimiento de **jets sobre el eje real** de
-   \(\mathcal F\). Por tanto el eje real no pierde información.
-2. La serie de Euler con los pesos ordinarios \(\Lambda(m)\) prueba esa
-   cota solo en el horodisco \(|z-\tfrac12|<\tfrac12\), que corresponde a
-   \(\Re s>1\). La parte que falta de los discos tangentes es exactamente
-   la continuación a través de la franja crítica, no un error de una
-   constante.
-3. Ecuación funcional, realidad, positividad sobre \(s>1\), orden uno y
-   cualquier argumento **perturbativamente estable** que inspeccione una
-   cantidad finita de datos diferenciales reales no bastan: existe un factor
-   explícito, arbitrariamente invisible en esos datos, que introduce un
-   cuarteto fuera de la línea y excursiones negativas sindéticas. El factor
-   no conserva los \(\Lambda(m)\) exactos; conservarlos es imposible por
-   unicidad del logaritmo derivado.
+1. RH is equivalent to a growth bound on **jets along the real axis** of
+   \(\mathcal F\). Hence the real axis loses no information.
+2. The Euler series with the ordinary weights \(\Lambda(m)\) proves that
+   bound only on the horodisc \(|z-\tfrac12|<\tfrac12\), corresponding to
+   \(\Re s>1\). The missing part of the tangent discs is exactly the
+   continuation through the critical strip, not an error of one constant.
+3. Functional equation, reality, positivity on \(s>1\), order one, and any
+   **perturbatively stable** argument that inspects a finite amount of
+   real differential data are not enough: there is an explicit factor,
+   arbitrarily invisible in that data, that introduces an off-line
+   quartet and syndetic negative excursions. The factor does not preserve
+   the exact \(\Lambda(m)\); preserving them is impossible by uniqueness
+   of the logarithmic derivative.
 
-Así se descarta una familia precisa de ataques locales. El input que aún
-podría cerrar el criterio de bloques debe usar los \(\Lambda(m)\) reales de
-forma global y no perturbativamente estable.
-
----
-
-## 1. Auditoría de no duplicación
-
-`104_17` prueba que la positividad Abel radial de un cuarteto es compatible
-con coeficientes exponencialmente negativos. `104_62`, `104_64`, `104_69` y
-`104_75` muestran que Fejér, Abel y Fermi no recuperan la media no lineal
-desde una resolución radial fija. `104_56` y `104_61` prueban que basta
-obtener bloques buenos de longitud no acotada.
-
-`104_84` ya identifica el horodisco Euler, la unicidad desde valores exactos
-y un factor polinómico simétrico con un cuarteto off-line. Por tanto ni el
-horodisco ni el factor de la §4 se reclaman nuevos aquí. Se reutilizan para
-una auditoría más estrecha: el factor se hace cuantitativamente invisible en
-norma \(C^J\) y se conecta con las excursiones sindéticas del criterio de
-bloques. Los ingredientes nuevos respecto de ese documento son el criterio
-de radios tangentes en jets reales, la recurrencia exacta (12)--(13) con
-\(\Lambda(m)\), y la localización precisa de qué centros reales ya controla
-el horodisco.
-
-Aquí no se vuelve a promediar (1). Se estudia el radio de Taylor de su
-**germen en cada punto real** y se determina exactamente qué parte de ese
-radio está certificada por la serie de Euler ordinaria.
+This rules out a precise family of local attacks. Any input that could
+still close the block criterion must use the real \(\Lambda(m)\) globally
+and not in a perturbatively stable way.
 
 ---
 
-## 2. Un criterio de RH únicamente con jets reales
+## 1. Non-duplication audit
 
-Para \(0<r<1\), sea \(\mathcal F_r\) el germen de la rama real de (1) en
-\(r\), y defina
+`104_17` proves that radial Abel positivity of a quartet is compatible
+with exponentially negative coefficients. `104_62`, `104_64`, `104_69`,
+and `104_75` show that Fejér, Abel, and Fermi do not recover the nonlinear
+mean from a fixed radial resolution. `104_56` and `104_61` prove that it
+suffices to obtain good blocks of unbounded length.
+
+`104_84` already identifies the Euler horodisc, uniqueness from exact
+values, and a symmetric polynomial factor with an off-line quartet.
+Neither the horodisc nor the factor of §4 is claimed as new here. They
+are reused for a narrower audit: the factor is made quantitatively
+invisible in \(C^J\) norm and connected to the syndetic excursions of the
+block criterion. The new ingredients relative to that document are the
+tangent-radius criterion in real jets, the exact recurrence (12)–(13) with
+\(\Lambda(m)\), and the precise localization of which real centers are
+already controlled by the horodisc.
+
+Here (1) is not averaged again. The Taylor radius of its **germ at each
+real point** is studied, and it is determined exactly which part of that
+radius is certified by the ordinary Euler series.
+
+---
+
+## 2. An RH criterion using only real jets
+
+For \(0<r<1\), let \(\mathcal F_r\) be the germ of the real branch of (1) at
+\(r\), and define
 
 \[
  \mathscr R(r)^{-1}:=
@@ -66,14 +65,14 @@ Para \(0<r<1\), sea \(\mathcal F_r\) el germen de la rama real de (1) en
  \left({|\mathcal F_r^{(k)}(r)|\over k!}\right)^{1/k}. \tag{2}
 \]
 
-Por Cauchy--Hadamard, \(\mathscr R(r)\) es el radio de convergencia de ese
-germen. Las derivadas de orden positivo no dependen de sumar una constante
-\(2\pi i\) a la rama del logaritmo.
+By Cauchy–Hadamard, \(\mathscr R(r)\) is the radius of convergence of that
+germ. Derivatives of positive order do not depend on adding a constant
+\(2\pi i\) to the logarithm branch.
 
-**Teorema 2.1 (criterio de discos tangentes).** Son equivalentes:
+**Theorem 2.1 (tangent-disc criterion).** The following are equivalent:
 
 1. RH;
-2. para todo \(r\in(0,1)\),
+2. for every \(r\in(0,1)\),
 
    \[
     \boxed{\quad
@@ -82,45 +81,45 @@ germen. Las derivadas de orden positivo no dependen de sumar una constante
     \le {1\over1-r};\quad}                          \tag{3}
    \]
 
-3. (3) vale para todos los racionales \(r\in(0,\tfrac12)\).
+3. (3) holds for all rationals \(r\in(0,\tfrac12)\).
 
-**Demostración.** Un cero \(\rho\) de \(\xi\) se transporta a
+**Proof.** A zero \(\rho\) of \(\xi\) is transported to
 
 \[
  z_\rho=1-{1\over\rho}.                              \tag{4}
 \]
 
-Además
+Moreover
 
 \[
  |z_\rho|^2-1={1-2\Re\rho\over|\rho|^2}.            \tag{5}
 \]
 
-Bajo RH todos los puntos (4) están en \(|z|=1\). Por tanto
-\(\mathcal F\) es holomorfa en el disco unidad y el Taylor en \(r\) es
-holomorfo al menos en \(D(r,1-r)\). Cauchy--Hadamard da (3).
+Under RH all the points (4) lie on \(|z|=1\). Hence
+\(\mathcal F\) is holomorphic in the unit disc and the Taylor series at
+\(r\) is holomorphic at least in \(D(r,1-r)\). Cauchy–Hadamard gives (3).
 
-Recíprocamente, si RH falla, la simetría \(\rho\mapsto1-\rho\) proporciona
-un cero con \(\Re\rho>\tfrac12\), y (5) da un \(z_\rho\) dentro del disco
-unidad. Para cualquier
+Conversely, if RH fails, the symmetry \(\rho\mapsto1-\rho\) provides
+a zero with \(\Re\rho>\tfrac12\), and (5) gives a \(z_\rho\) inside the
+unit disc. For any
 
 \[
  0<r<{1-|z_\rho|^2\over2(1-\Re z_\rho)}              \tag{6}
 \]
 
-se tiene \(|z_\rho-r|<1-r\). El logaritmo posee una singularidad en
-\(z_\rho\), de modo que
-\(\mathscr R(r)\le|z_\rho-r|<1-r\), contradiciendo (3). Puede elegirse
-un \(r\) racional menor que el miembro derecho de (6), lo que prueba
-también 3 \(\Rightarrow\) 1. \(\square\)
+one has \(|z_\rho-r|<1-r\). The logarithm has a singularity at
+\(z_\rho\), so
+\(\mathscr R(r)\le|z_\rho-r|<1-r\), contradicting (3). One can choose
+a rational \(r\) smaller than the right-hand side of (6), which also
+proves 3 \(\Rightarrow\) 1. \(\square\)
 
-La unión geométrica usada en la prueba es
+The geometric union used in the proof is
 
 \[
  \boxed{\quad\mathbb D=\bigcup_{0<r<1}D(r,1-r).\quad} \tag{7}
 \]
 
-En efecto,
+Indeed,
 
 \[
  |z-r|<1-r
@@ -128,27 +127,27 @@ En efecto,
  r<{1-|z|^2\over2(1-\Re z)},                        \tag{8}
 \]
 
-y el miembro derecho es positivo para cada \(|z|<1\).
+and the right-hand side is positive for every \(|z|<1\).
 
-**Relación con los bloques.** `104_61` prueba
+**Relation to the blocks.** `104_61` proves
 
 \[
  \mathrm {RH}
  \iff
- \lambda_n\ge-1\ \hbox{en bloques consecutivos de longitud no acotada}.
+ \lambda_n\ge-1\ \hbox{on consecutive blocks of unbounded length}.
                                                                \tag{9}
 \]
 
-El Teorema 2.1 es otra formulación del mismo obstáculo: (9) excluye las
-excursiones sindéticas de los coeficientes; (3) excluye la singularidad
-interior que las genera. El teorema no convierte una cota local conocida
-en esos bloques.
+Theorem 2.1 is another formulation of the same obstacle: (9) excludes the
+syndetic excursions of the coefficients; (3) excludes the interior
+singularity that generates them. The theorem does not turn a known local
+bound into one on those blocks.
 
 ---
 
-## 3. Qué entregan exactamente los pesos \(\Lambda(m)\)
+## 3. What the weights \(\Lambda(m)\) exactly deliver
 
-Ponga
+Set
 
 \[
  s={1\over1-z},\qquad
@@ -156,7 +155,7 @@ Ponga
                  +\log\Gamma(s/2).                 \tag{10}
 \]
 
-Para \(\Re s>1\), la identidad de Euler absolutamente convergente es
+For \(\Re s>1\), the absolutely convergent Euler identity is
 
 \[
  \boxed{
@@ -164,15 +163,15 @@ Para \(\Re s>1\), la identidad de Euler absolutamente convergente es
    \sum_{m\ge2}{\Lambda(m)\over\log m}\,m^{-s}.}    \tag{11}
 \]
 
-Sea \(\mathscr D=s^2\,d/ds=d/dz\). Si
+Let \(\mathscr D=s^2\,d/ds=d/dz\). If
 
 \[
  P_0(s,L)=1,\qquad
  P_{k+1}(s,L)=s^2(\partial_s-L)P_k(s,L),             \tag{12}
 \]
 
-entonces, para cada \(r\in(0,1)\), \(s_r=(1-r)^{-1}\), y cada \(k\)
-fijo,
+then, for each \(r\in(0,1)\), \(s_r=(1-r)^{-1}\), and each fixed
+\(k\),
 
 \[
  \boxed{
@@ -182,10 +181,10 @@ fijo,
  m^{-s_r}P_k(s_r,\log m).}                          \tag{13}
 \]
 
-La suma es absolutamente convergente. Ésta es una identidad con los pesos
-ordinarios reales, no un modelo.
+The sum converges absolutely. This is an identity with the real ordinary
+weights, not a model.
 
-Sin embargo, su dominio natural en el plano \(z\) es
+However, its natural domain in the \(z\)-plane is
 
 \[
  \begin{aligned}
@@ -194,40 +193,41 @@ Sin embargo, su dominio natural en el plano \(z\) es
   &=\boxed{\left\{z:\left|z-{1\over2}\right|<{1\over2}\right\}}.
                                                                \tag{14}
  \end{aligned}
+\]
 
-Para \(r\ge\tfrac12\), el disco tangente requerido por (3) satisface
+For \(r\ge\tfrac12\), the tangent disc required by (3) satisfies
 
 \[
  D(r,1-r)\subset\Omega_E,                            \tag{15}
 \]
 
-porque la distancia entre sus centros más su radio es
-\((r-\tfrac12)+(1-r)=\tfrac12\). Así, (11) prueba
-incondicionalmente (3) para todo \(r\ge\tfrac12\).
+because the distance between their centers plus its radius equals
+\((r-\tfrac12)+(1-r)=\tfrac12\). Thus, (11) unconditionally proves (3)
+for every \(r\ge\tfrac12\).
 
-Para \(0<r<\tfrac12\), la serie de Euler garantiza directamente solo el
-disco \(D(r,r)\subset\Omega_E\), mientras el Teorema 2.1 necesita
-\(D(r,1-r)\). En términos de (2), la estimación geométrica disponible es
+For \(0<r<\tfrac12\), the Euler series directly guarantees only the
+disc \(D(r,r)\subset\Omega_E\), while Theorem 2.1 needs
+\(D(r,1-r)\). In terms of (2), the available geometric estimate is
 
 \[
  \mathscr R(r)^{-1}\le {1\over r},                  \tag{16}
 \]
 
-frente a la necesaria
+against the needed
 
 \[
  \mathscr R(r)^{-1}\le {1\over1-r}.                 \tag{17}
 \]
 
-La cancelación del polo en \(s=1\) extiende \(\mathcal F\) a través de
-\(z=0\), pero extender todos los discos (17) equivale, por el Teorema 2.1,
-a RH. Estimar por separado \(\mathcal A\) y la suma de (11) destruye
-precisamente esa cancelación.
+Cancellation of the pole at \(s=1\) extends \(\mathcal F\) across
+\(z=0\), but extending all the discs (17) is equivalent, by Theorem 2.1,
+to RH. Estimating \(\mathcal A\) and the sum in (11) separately destroys
+precisely that cancellation.
 
-### 3.1 Traducción exacta de vuelta a \(\lambda_n\)
+### 3.1 Exact translation back to \(\lambda_n\)
 
-Cuando el Taylor en \(r>0\) contiene a \(0\) en su disco de convergencia,
-la traslación exacta da
+When the Taylor series at \(r>0\) contains \(0\) in its disc of
+convergence, the exact translation gives
 
 \[
  \boxed{
@@ -236,20 +236,20 @@ la traslación exacta da
  \mathcal F^{(n+j)}(r).}                            \tag{18}
 \]
 
-En efecto, el miembro derecho es
-\(\mathcal F^{(n)}(0)/(n-1)!\). Para \(r\) suficientemente pequeño la
-hipótesis vale incondicionalmente, porque \(\xi(1)\ne0\).
+Indeed, the right-hand side is
+\(\mathcal F^{(n)}(0)/(n-1)!\). For \(r\) sufficiently small the
+hypothesis holds unconditionally, because \(\xi(1)\ne0\).
 
-La alternancia de (18) es vinculante. Ni \(\Lambda(m)\ge0\) en (13), ni
-una cota para un número finito de jets, produce un resto unilateral para
-(18). Usar (18) sin controlar esa cola solo vuelve a escribir
-\(\lambda_n\); no prueba los bloques (9).
+The alternation in (18) is binding. Neither \(\Lambda(m)\ge0\) in (13),
+nor a bound on a finite number of jets, produces a one-sided remainder
+for (18). Using (18) without controlling that tail just rewrites
+\(\lambda_n\); it does not prove the blocks (9).
 
 ---
 
-## 4. Refinamiento cuantitativo del falsificador de `104_84`
+## 4. Quantitative refinement of the `104_84` falsifier
 
-Fije \(\tfrac12<\beta<1\), \(\gamma>0\), y defina
+Fix \(\tfrac12<\beta<1\), \(\gamma>0\), and define
 
 \[
  P_{\beta,\gamma}(s):=
@@ -259,35 +259,37 @@ Fije \(\tfrac12<\beta<1\), \(\gamma>0\), y defina
   (\beta^2+\gamma^2)((1-\beta)^2+\gamma^2)}.        \tag{19}
 \]
 
-Este factor satisface exactamente
+This factor satisfies exactly
 
 \[
  \begin{gathered}
  P_{\beta,\gamma}(1-s)=P_{\beta,\gamma}(s),\qquad
  P_{\beta,\gamma}(\bar s)=\overline{P_{\beta,\gamma}(s)},\\
- P_{\beta,\gamma}(0)=P_{\beta,\gamma}(1)=1,qquad
+ P_{\beta,\gamma}(0)=P_{\beta,\gamma}(1)=1,\qquad
  P_{\beta,\gamma}(s)>0\quad(s\in\mathbb R),        \tag{20}
  \end{gathered}
-
-y posee los cuatro ceros
-
-\[
- \beta\pm i\gamma,qquad1-\beta\pm i\gamma.        \tag{21}
 \]
 
-Por tanto
+and it has the four zeros
+
+\[
+ \beta\pm i\gamma,\qquad1-\beta\pm i\gamma.        \tag{21}
+\]
+
+Hence
 
 \[
  \widetilde\xi_{\beta,\gamma}(s)
  :=\xi(s)P_{\beta,\gamma}(s)                       \tag{22}
 \]
 
-conserva la ecuación funcional, la realidad, la positividad en el eje real,
-la normalización en \(0,1\) y el orden uno de \(\xi\), pero viola RH.
+preserves the functional equation, reality, positivity on the real axis,
+the normalization at \(0,1\), and the order-one property of \(\xi\), but
+violates RH.
 
-**Teorema 4.1 (invisibilidad de jets finitos).** Para todo compacto
-\(K\subset\mathbb R\), todo \(J\ge0\) y todo \(\varepsilon>0\), puede
-elegirse \(\gamma\) de modo que
+**Theorem 4.1 (invisibility of finite jets).** For every compact
+\(K\subset\mathbb R\), every \(J\ge0\), and every \(\varepsilon>0\), one
+can choose \(\gamma\) so that
 
 \[
  \max_{0\le j\le J}\sup_{s\in K}
@@ -295,7 +297,7 @@ elegirse \(\gamma\) de modo que
  <\varepsilon.                                      \tag{23}
 \]
 
-**Demostración.** En un compacto fijo,
+**Proof.** On a fixed compact set,
 
 \[
  \log\big((s-a)^2+\gamma^2\big)
@@ -303,60 +305,60 @@ elegirse \(\gamma\) de modo que
                                                                \tag{24}
 \]
 
-Después de cancelar las constantes de normalización en (19), (24) y cada
-una de sus primeras \(J\) derivadas son \(O_{K,J}(\gamma^{-2})\). \(\square\)
+After canceling the normalization constants in (19), (24) and each
+of its first \(J\) derivatives are \(O_{K,J}(\gamma^{-2})\). \(\square\)
 
-No se trata solo de añadir ceros abstractos. Ponga, para cada cero \(\eta\)
-de (19),
+This is not merely adding abstract zeros. Set, for each zero \(\eta\)
+of (19),
 
 \[
  u_\eta={\eta\over\eta-1}.
 \]
 
-Si \(u_{\beta+i\gamma}=Re^{i\theta}\), entonces \(R>1\) y el aporte del
-factor (19) a los coeficientes de Li es
+If \(u_{\beta+i\gamma}=Re^{i\theta}\), then \(R>1\) and the contribution
+of factor (19) to the Li coefficients is
 
 \[
  \boxed{
  Q_n=4-2(R^n+R^{-n})\cos(n\theta).}                 \tag{25}
 \]
 
-Los retornos de \(n\theta\) a un entorno de \(0\) son sindéticos
-(periódicos si \(\theta/2\pi\in\mathbb Q\), y sindéticos por minimalidad
-de la rotación en caso contrario). En esos retornos, \(Q_n\) es negativo
-y exponencial. En particular, las simetrías y todos los datos locales
-listados en (20), incluso perturbados menos que cualquier \(\varepsilon\)
-finito en (23), son compatibles con la obstrucción exacta que impide los
-bloques de `104_61`.
+The returns of \(n\theta\) to a neighborhood of \(0\) are syndetic
+(periodic if \(\theta/2\pi\in\mathbb Q\), and syndetic by minimality
+of the rotation otherwise). At those returns, \(Q_n\) is negative
+and exponential. In particular, the symmetries and all the local data
+listed in (20), even perturbed by less than any finite \(\varepsilon\)
+in (23), are compatible with the exact obstruction that prevents the
+blocks of `104_61`.
 
-La secuencia total de (22) también tiene excursiones negativas sindéticas:
-si la \(\xi\) original ya posee un modo exterior, se aplica el teorema de
-modos dominantes de `104_56`; si no lo posee, (25) domina su parte
-subexponencial. No se está atribuyendo esa propiedad a la \(\xi\) original,
-sino a la completación perturbada (22).
+The full sequence of (22) also has syndetic negative excursions: if the
+original \(\xi\) already has an exterior mode, the dominant-mode theorem
+of `104_56` applies; if it does not, (25) dominates its subexponential
+part. This property is not being attributed to the original \(\xi\), but
+to the perturbed completion (22).
 
-Un testigo racional es \(u=2i\), equivalente a
-\(\rho=u/(u-1)=(4-2i)/5\). Entonces
+A rational witness is \(u=2i\), corresponding to
+\(\rho=u/(u-1)=(4-2i)/5\). Then
 
 \[
  Q_n=4-2(2^n+2^{-n})\cos{\pi n\over2},              \tag{26}
 \]
 
-y \(Q_{4k}<0\) para todo \(k\ge1\): todo bloque de cuatro índices contiene
-una excursión negativa.
+and \(Q_{4k}<0\) for every \(k\ge1\): every block of four indices contains
+a negative excursion.
 
-### 4.1 Interpolación exacta de cualquier familia finita de jets
+### 4.1 Exact interpolation of any finite family of jets
 
-La cercanía de (23) puede reforzarse a igualdad exacta si solo se retienen
-los axiomas cualitativos del eje real. Sean
+The closeness of (23) can be strengthened to exact equality if only the
+qualitative axioms of the real axis are kept. Let
 
 \[
  \mathcal S=\{s_1,\ldots,s_J\}\subset(1,\infty),
  \qquad K_1,\ldots,K_J\ge0.                          \tag{27}
 \]
 
-Ponga \(a_j=s_j-\tfrac12\), elija \(M_0\ge2\) y enteros \(M_j\) con
-\(2M_j>K_j\), y defina
+Set \(a_j=s_j-\tfrac12\), choose \(M_0\ge2\) and integers \(M_j\) with
+\(2M_j>K_j\), and define
 
 \[
  \begin{aligned}
@@ -368,8 +370,8 @@ Ponga \(a_j=s_j-\tfrac12\), elija \(M_0\ge2\) y enteros \(M_j\) con
  \end{aligned}
 \]
 
-**Teorema 4.2 (falsificador de jets finitos exactos).** El factor (28)
-satisface
+**Theorem 4.2 (exact finite-jet falsifier).** Factor (28)
+satisfies
 
 \[
  \begin{gathered}
@@ -383,32 +385,32 @@ satisface
  \end{gathered}
 \]
 
-Para \(c\) suficientemente grande, \(\mathcal Q_c\) tiene un cero
-\(\rho_c\) con
+For \(c\) sufficiently large, \(\mathcal Q_c\) has a zero
+\(\rho_c\) with
 
 \[
  {1\over2}<\Re\rho_c<1,
  \qquad \Im\rho_c\ne0.                              \tag{31}
 \]
 
-En consecuencia,
-\(\xi(s)\mathcal Q_c(s)\) coincide **exactamente** con \(\xi(s)\) en los
-jets logarítmicos prescritos por (27), conserva ecuación funcional,
-realidad, positividad real, normalización y orden uno, pero tiene ceros
-fuera de la línea.
+Consequently,
+\(\xi(s)\mathcal Q_c(s)\) coincides **exactly** with \(\xi(s)\) on the
+logarithmic jets prescribed by (27), preserves the functional equation,
+reality, real positivity, normalization, and order one, but has zeros
+off the line.
 
-**Demostración.** Escribiendo \(t=s-\tfrac12\), cada factor de
-\(\mathcal R\) es una potencia par de \(t^2-a^2\). Esto prueba la simetría
-y \(\mathcal R(s)\ge0\) sobre el eje real. En la línea crítica,
-\(t=iy\), todos los \(t^2-a^2\) son reales negativos y sus potencias pares
-son positivas; de ahí (29). En \(s_j\), \(\mathcal R\) tiene un cero de
-orden al menos \(2M_j\). Como
-\(\log(1+c\mathcal R)=c\mathcal R+O(\mathcal R^2)\), sigue (30). El factor
-\([s(s-1)]^{2M_0}\) prueba la normalización.
+**Proof.** Writing \(t=s-\tfrac12\), each factor of
+\(\mathcal R\) is an even power of \(t^2-a^2\). This proves the symmetry
+and \(\mathcal R(s)\ge0\) on the real axis. On the critical line,
+\(t=iy\), every \(t^2-a^2\) is a negative real number and its even
+powers are positive; hence (29). At \(s_j\), \(\mathcal R\) has a zero
+of order at least \(2M_j\). Since
+\(\log(1+c\mathcal R)=c\mathcal R+O(\mathcal R^2)\), (30) follows. The
+factor \([s(s-1)]^{2M_0}\) proves the normalization.
 
-Cerca de \(s=1\), escriba
-\(\mathcal R(s)=(s-1)^{2M_0}C(s)\), con \(C(1)>0\). Las raíces de
-\(1+c\mathcal R(s)=0\) poseen las expansiones
+Near \(s=1\), write
+\(\mathcal R(s)=(s-1)^{2M_0}C(s)\), with \(C(1)>0\). The roots of
+\(1+c\mathcal R(s)=0\) have the expansions
 
 \[
  s=1+c^{-1/(2M_0)}C(1)^{-1/(2M_0)}
@@ -416,26 +418,28 @@ Cerca de \(s=1\), escriba
  +o\!\left(c^{-1/(2M_0)}\right).                    \tag{32}
 \]
 
-Elija una fase con coseno negativo y seno no nulo. Para \(c\) grande, la
-raíz correspondiente satisface (31). La expansión (32) se obtiene por
-Rouché después de la escala
+Choose a phase with negative cosine and nonzero sine. For \(c\) large,
+the corresponding root satisfies (31). Expansion (32) is obtained by
+Rouché after the rescaling
 \(s-1=c^{-1/(2M_0)}w\). \(\square\)
 
-La composición \(s=(1-z)^{-1}\) no altera (30): por la regla de la cadena,
-los jets en \(z_j=1-1/s_j\) también coinciden hasta orden \(K_j\).
+The composition \(s=(1-z)^{-1}\) does not alter (30): by the chain
+rule, the jets at \(z_j=1-1/s_j\) also coincide up to order \(K_j\).
 
-Hay una salvedad esencial. Aunque (28) no tiene ceros sobre el eje real ni
-la línea crítica, puede tener otros ceros con \(\Re s>1\). Por tanto el
-Teorema 4.2 falsifica deducciones desde **finitos jets reales más axiomas
-cualitativos**, pero no una deducción que use la identidad Euler completa en
-todo \(\Re s>1\). El factor (19) sí mantiene sus ceros dentro de la franja,
-pero allí obtenemos cercanía arbitraria, no igualdad exacta.
+There is an essential caveat. Although (28) has no zeros on the real
+axis nor on the critical line, it may have other zeros with \(\Re s>1\).
+Hence Theorem 4.2 falsifies deductions made from **finitely many real
+jets plus qualitative axioms**, but not a deduction using the full
+Euler identity over all of \(\Re s>1\). Factor (19) does keep its zeros
+within the strip, but there we obtain arbitrary closeness, not exact
+equality.
 
-### 4.2 Por qué estos falsificadores no suplantan a los primos ordinarios
+### 4.2 Why these falsifiers do not supplant the ordinary primes
 
-El factor (19) cambia el logaritmo derivado y no conserva los pesos
-\(\Lambda(m)\). Esto no es una limitación reparable por otro factor con los
-mismos pesos. Si, para \(\Re s>1\), dos funciones normalizadas satisfacen
+Factor (19) changes the logarithmic derivative and does not preserve the
+weights \(\Lambda(m)\). This is not a limitation that another factor with
+the same weights could repair. If, for \(\Re s>1\), two normalized
+functions satisfy
 
 \[
  -{Z_1'(s)\over Z_1(s)}
@@ -443,44 +447,45 @@ mismos pesos. Si, para \(\Re s>1\), dos funciones normalizadas satisfacen
  =-{Z_2'(s)\over Z_2(s)},                           \tag{33}
 \]
 
-entonces \((\log Z_1-\log Z_2)'=0\). La normalización en
-\(\sigma\to+\infty\) da \(Z_1=Z_2\) en \(\Re s>1\), y la unicidad de la
-continuación analítica da la misma función global.
+then \((\log Z_1-\log Z_2)'=0\). Normalization as
+\(\sigma\to+\infty\) gives \(Z_1=Z_2\) in \(\Re s>1\), and uniqueness of
+analytic continuation gives the same global function.
 
-Análogamente, igualdad exacta de \(\mathcal F\) y
-\(\widetilde{\mathcal F}\) en cualquier intervalo real abierto fuerza
-igualdad global de sus gérmenes por el teorema de identidad. La ecuación
-(23) afirma cercanía arbitraria, no igualdad. Los valores o jets **infinitos
-y exactos** sí contienen toda la información; el falsificador descarta solo
-la inferencia local finita y estable.
+Likewise, exact equality of \(\mathcal F\) and
+\(\widetilde{\mathcal F}\) on any open real interval forces global
+equality of their germs by the identity theorem. Equation (23) asserts
+arbitrary closeness, not equality. **Infinite and exact** values or jets
+do contain all the information; the falsifier only rules out the finite,
+stable local inference.
 
-Por tanto no existe un «cero que no corresponda a un primo» manteniendo
-**exactamente** los \(\Lambda(m)\) ordinarios: esos pesos determinan a
-\(\zeta\), y con el factor arquimediano estándar fijo determinan a \(\xi\).
-Lo que falta demostrar es una propiedad global de esa única continuación,
-no descartar un segundo producto con los mismos coeficientes.
-
----
-
-## 5. Verificación reproducible
-
-`tools/real_jet_tangent_disk_gate_check.py` comprueba:
-
-1. las identidades geométricas (8), (14) y (15) sobre una malla racional;
-2. simetría, normalización y positividad de (19);
-3. el decaimiento \(O(\gamma^{-2})\) de los jets de orden \(0,1,2\) en un
-   compacto real;
-4. la fórmula racional (26) y la presencia de una excursión en cada bloque
-   de cuatro índices;
-5. para un caso de (28), igualdad de jets en los nodos prescritos y ceros
-   explícitos fuera de la línea.
-
-El checker verifica álgebra finita y diagnósticos de escala. El criterio de
-Cauchy--Hadamard y la unicidad (33) están probados en el texto.
+Therefore there is no "zero not corresponding to a prime" that
+**exactly** preserves the ordinary \(\Lambda(m)\): those weights
+determine \(\zeta\), and with the standard archimedean factor fixed they
+determine \(\xi\). What remains to be proved is a global property of that
+single continuation, not ruling out a second product with the same
+coefficients.
 
 ---
 
-## 6. Veredicto
+## 5. Reproducible verification
+
+`tools/real_jet_tangent_disk_gate_check.py` checks:
+
+1. the geometric identities (8), (14), and (15) on a rational grid;
+2. symmetry, normalization, and positivity of (19);
+3. the \(O(\gamma^{-2})\) decay of the order-\(0,1,2\) jets on a real
+   compact set;
+4. the rational formula (26) and the presence of an excursion in every
+   block of four indices;
+5. for a case of (28), equality of jets at the prescribed nodes and
+   explicit zeros off the line.
+
+The checker verifies finite algebra and scale diagnostics. The
+Cauchy–Hadamard criterion and the uniqueness (33) are proved in the text.
+
+---
+
+## 6. Verdict
 
 \[
  \boxed{
@@ -488,17 +493,17 @@ Cauchy--Hadamard y la unicidad (33) están probados en el texto.
  \mathrm {RH}
  \iff
  \mathscr R(r)\ge1-r\quad(0<r<1),\\
- \text{Euler--}\Lambda\text{ prueba esa desigualdad directamente solo en }
+ \text{Euler--}\Lambda\text{ proves that inequality directly only in }
  |z-\tfrac12|<\tfrac12,\\
- \text{ningún argumento estable bajo una cantidad finita de jets reales
- puede completar el paso faltante.}
+ \text{no argument stable under a finite number of real jets can
+ complete the missing step.}
  \end{gathered}}                                    \tag{34}
 \]
 
-**Probado:** (3), (13), la geometría del horodisco, (18), los falsificadores
-simétricos estable y de jets finitos exactos, y la unicidad con pesos
-exactos.
+**Proved:** (3), (13), the horodisc geometry, (18), the stable symmetric
+and exact finite-jet falsifiers, and uniqueness with exact weights.
 
-**No probado:** (3) para \(r<\tfrac12\) a partir de los
-\(\Lambda(m)\) ordinarios, la existencia de bloques (9), el límite Deep,
-A1 o RH.
+**Not proved:** (3) for \(r<\tfrac12\) from the ordinary
+\(\Lambda(m)\), existence of the blocks (9), the Deep limit,
+A1, or RH.
+</content>

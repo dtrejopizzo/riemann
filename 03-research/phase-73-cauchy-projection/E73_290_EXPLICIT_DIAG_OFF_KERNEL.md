@@ -1,6 +1,5 @@
 # E73.290 - Explicit diagonal/off-diagonal kernel
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

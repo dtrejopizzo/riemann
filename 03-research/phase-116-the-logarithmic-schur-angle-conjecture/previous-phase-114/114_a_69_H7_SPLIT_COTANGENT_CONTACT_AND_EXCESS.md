@@ -43,7 +43,7 @@ Functoriality and derived extension of scalars applied to `i` and `r` give
 
 \[
  s:L_X\longrightarrow
- C_p:=L_Y\otimes^{\mathbf L}_{B_Y}B_X,qquad
+ C_p:=L_Y\otimes^{\mathbf L}_{B_Y}B_X,\qquad
  \rho:C_p\longrightarrow L_X.                                        \tag{2.2}
 \]
 

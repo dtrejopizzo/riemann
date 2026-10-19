@@ -1,6 +1,6 @@
 # E78.74 - The quadratic shell margin is exactly a basepoint reserve budget
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

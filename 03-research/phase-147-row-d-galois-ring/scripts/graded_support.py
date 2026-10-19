@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """R147 Part B -- support functions on the chi-graded carrier.
    (Round 3 / confirmation C6: this docstring is the file of record and is aligned
-    with R147_003b_BUILDER_ROUND3.md.  Round 2's per-chi form and its "may choose
+    with R147_003b_ROUND3.md.  Round 2's per-chi form and its "may choose
     theta" clearing argument are WITHDRAWN and no longer appear here.)
 
 Carrier (Def. D.55.1', round 3): D_L := (+)_{chi in Ghat} (D^W (x) C) with the real
@@ -26,7 +26,7 @@ The effective cone (Def. D.55.5', candidate (ii)) is the isotypic image of the
 nonnegative COMPACTLY SUPPORTED SMOOTH tests on the projected model R x G of
 C_{F,S}:
     f >= 0, f in C_c^inf(R x G)  |-->  (f_chi)_chi ,  f_chi(u) = sum_g chi(g) f(u,g)
-(so f_chi lies in D^W (x) C: NO point masses -- hostile MAJOR 3).  Its support
+(so f_chi lies in D^W (x) C: NO point masses -- MAJOR 3).  Its support
 function is computed in two halves (Lemma D.31.4 per coset for '<=', concentration
 of f on one coset near the optimal u for '>='), Thm D.55.6':
     S(gamma,theta,m) = max_{0<=k<m} s(gamma, theta - 2 pi k/m),
@@ -89,7 +89,7 @@ def S_grid(sv, m):
         out = np.maximum(out, np.roll(sv, (k*sh) % NTH))
     return out
 
-print("=== [1] corrected cos(pi/m) lemma  (hostile MAJOR 6; the u = 0 entry alone)")
+print("=== [1] corrected cos(pi/m) lemma  (MAJOR 6; the u = 0 entry alone)")
 print("    L(m) := min_theta max_{0<=k<m} |cos(theta + 2 pi k/m)|")
 print(f"{'m':>3s} {'L(m) numeric':>14s} {'argmin theta':>13s} {'closed form':>13s} {'name':>12s} {'argmin*':>10s} {'margin':>9s}")
 TH = np.pi*np.arange(NTH)/NTH

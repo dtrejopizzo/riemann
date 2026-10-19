@@ -1,6 +1,5 @@
 # E73.142 - Two-Row Local Divisor Forcing
 
-Date: 2026-07-12.
 
 ## 1. Purpose
 

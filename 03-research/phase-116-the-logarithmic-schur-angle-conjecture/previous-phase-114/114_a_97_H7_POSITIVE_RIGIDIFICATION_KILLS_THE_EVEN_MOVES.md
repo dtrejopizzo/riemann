@@ -70,7 +70,7 @@ At `u=2`, the decorations of `a96` have
 Hence
 
 \[
- W(000)=3^3=27,qquad W(011)=3\cdot5^2=75.                           \tag{2.2}
+ W(000)=3^3=27,\qquad W(011)=3\cdot5^2=75.                           \tag{2.2}
 \]
 
 The real bio is a quotient invariant, so `P_000` and `P_011` cannot be

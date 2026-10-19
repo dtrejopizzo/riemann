@@ -1,6 +1,6 @@
-# Off-machine computation package — the two-prime window at `T = 0.58` (R154_030 §3, owner decision (b))
+# Off-machine computation package — the two-prime window at `T = 0.58` (R154_030 §3, decision (b))
 
-**Purpose.** Decide, by computation on a workstation (not the owner's machine), whether the lattice/hybrid
+**Purpose.** Decide, by computation on a workstation (not the local machine), whether the lattice/hybrid
 certificate class reaches `c > 0` at the first two-prime window `T = 0.58` (Galerkin upper bound
 `λ_min ≈ 2.16·10⁻⁴`; best certified value so far `−3.1802·10⁻³`, R154_015/028). Nothing here is
 mathematics; it is the value problem of R154_030 §2. All results are DIAGNOSTIC until the final

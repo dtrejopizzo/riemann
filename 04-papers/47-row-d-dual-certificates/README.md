@@ -1,7 +1,19 @@
 # Paper 47 — A Dual Theory of Weil Positivity at Finite Support
 
-**David Alejandro Trejo Pizzo.** LaTeX, 2026-09-21, R3 applied 2026-09-22. Source `main.tex`, compiled `main.pdf` (57 pp.: 50 pp. core, 5 pp. appendices, 2 pp. references).
-Hostile review R1: `TEX_HOSTILE_REVIEW_R1.md` — verdict ACCEPT WITH REPAIRS, no FATAL, 8 MAJOR / 11 MINOR / 4 COSMETIC; all 23 repairs applied 2026-09-21 (a priori ε_fp bound for Theorem C, abstract narrowed to λ^prim, K^prim moment conditions corrected, Identity M 'bounded' → band-limited, Prop. 8.1 proof added and negative branch corrected, envelope threshold with/without ‖ν‖_TV separated, phase references removed, etc.).
+> ** — §20 *The shape of a proof* and Problem (R) (DEFINITIVE_CHANGES.md, section dated ; source memo SHAPE_THEOREM.md after its independent adversarial review).** Backup `main_pre_shape.tex`; now 155 pp., 0 errors, 0 undefined references, 0 overfull boxes. Theorem `thm:shape` (three tiers: transfer PROVED for O₁–O₄, O₆–O₈, O₁₃–O₁₅; labelled for O₄^ε, O₅, O₉–O₁₂; structure), new PROVED pieces `prop:shape-eulerdel` (Euler-preserving prime deletion), `prop:shape-twist` (FE-preserving twist ζR, pointwise curvature barrier, not a window falsifier), `prop:shape-crit`(c) (mean square of the comb = 4T²), `prop:shape-inputs`; Problem `prob:region` (the admissible region) in §Open problems; bibitems Paper46, Titchmarsh1986.
+
+> ** — secondary items of §19 (SECONDARY_ITEMS.md).** Backup `main_pre_secondary.tex`; now 133 pp., 0 errors, 0 undefined references. PROVED: (H_G) (`lem:sl-HG`; `thm:sl-L2`, `cor:sl-split` unconditional), (H_f) (`prop:ftprim`; `thm:famFE` unconditional), rate O(1/log M) of the lattice ceilings (`thm:R` sharpened, `cor:Rrate`, `cor:CP` updated), 𝔊_T ≻ 0 on a right neighbourhood of ½log5 (`cor:beyond5`), the variational characterization of the optimal multipliers and of λ^prim = λ^W (`thm:mult`, new §11.4), and the equivalence of Problem `prob:annihilate` with window positivity (`prop:annihilate-equiv`). OPEN with precise statements: the dual-side deficit of Problem A, a certified window beyond ½log5, the two-sided law with sign, and λ^prim = λ^W at a given window (reduced to a finite condition; numerical evidence at ½log3 only).
+
+> ** — integration of the two verified draft sections (author decision ).** `DRAFT_SECTION_INERTIA_BARRIERS.tex` (parts I–II: §16 *Inertia, remainders and barrier theorems*, §17 *The semilocal Sonin decomposition at the first prime*) and `DRAFT_SECTION_COERCIVITY_REDUCTION.tex` (§18 *Archimedean coercivity on Tate-orthogonal blocks and the finite reduction*) pasted into `main.tex` between §15 (positivity at ½log5) and the concluding remarks; one new item in Open problems. Backup: `main_pre_integration.tex/.pdf` (88 pp.); now 104 pp., 0 errors, 0 undefined references/citations, 0 overfull boxes. Conflicts of `CHECK_TABLE.md` resolved with the paper's definitions: N1 (absolute semilocal trace formula asserted at level λ = 1 only, `rem:sl-level`); N3 (only the δ-version of the finite index, no "compact ⇒ n₋ < ∞"); N4 (Γ_T + Π_T^{(2)} = 𝔞_T only for T < ½log3, stated after `cor:sl-split`); C1 (cross term with factor 1 per unordered pair, quadratic coupling π/2, bilinear π; the ordered-pair convention noted in `rem:coer-nogo`(a)); C2 (‖Π_T‖ ≤ 𝒜_T/2 only for T ≤ log 2, `prop:coer-prime`, 1.6740 on (log 2, ½log5]); C3 (everything stated for λ_A(τ), nothing for λ^prim; the ARGUED extension to K^prim removed per R186_105); C4–C9 as in the drafts (form domain, lem:mbounds, lem:contA coverage, Dirichlet-basis Poincaré, closed-form C_B, form-domain Schur with sandwich). Adversarial corrections R186_105 applied: C_B ≤ 1.74 uniform, θ ≈ 0.22, λ_A(τ) = log(1/τ) − 0.510 and all Galerkin values marked numerical; "chain ∈ [π, 2π]" and the λ^prim extension not integrated; (L-W) of R186_047 not integrated (third draft). Precedents cited at Theorems A/B (`rem:coer-prec`): Yoshida 1992 Lemma 3, Connes–Consani Thm 3.6 / Cor 3.8 / Rem 3.9, Kim et al. 2607.24830 (numerical), Connes–van Suijlekom 2511.23257; finite-reduction precedents Zhu Thm 1.1/1.4, Groskin. New bib entries: Carleman 1923, CC 2008.10974, CCM 2310.18423, CCM 2403.01247, CvS 2511.23257, HLP Thm 316, Kim et al. 2026, Simon Trace Ideals. Held back: the detection theorem (R184_006, check table item 8: proof to be rewritten, Trudgian constants unverified) and the "Q ⟺ …" dichotomy (item 9); the "inertia alone" exclusion is stated with its model index as argued, not proved; `thm:sl-L2` notes two estimates used without full detail. All memo references (R18x_xxx) removed from the integrated text, as in the  revision; `Π_T` in §9.1 now written with Re. Forbidden-vocabulary grep on the new text: 0 hits.
+
+> ** — readability revision of `main.tex`.** Rewritten for publication style: new abstract and introduction; status tags, label table, repository paths, withdrawn/verdict paragraphs and programme vocabulary removed; the former Section 9 split into four sections plus concluding remarks; numerical (non-certified) values collected in Appendix C; `phase161_first_contact.tex` rewritten inline as the final section (continuity of λ_A made an explicit hypothesis in the first-contact lemma); citations to Papers 45/46 updated or replaced. No statement or proof changed otherwise. 91 → 83 pp. Backup: `main_pre_readability.tex.bak`.
+
+**David Alejandro Trejo Pizzo.** LaTeX, ; phase-161 first-contact construction integrated inline in `main.tex` on 2026-09-28.
+
+**Canonical row-D manuscript.** This is now the single current construction paper for row D. Paper 46 remains the historical campaign/method-constraint record; new row-D mathematical claims and the current terminal gate belong here.
+
+**Phase 161 integration.** The final section consolidates the finite Poisson--Chebyshev anomaly, renormalised continuum modulo Tate, faithful Gamma-pole Hankel observation, exact compressed collars, the equality-state balance and the spectral sign audit. It records that the strict Gamma--Euler contraction gives no independent closure: each proposed return inequality is equivalent to detector annihilation. The genuine open tasks are direct Gamma-moment annihilation using minimal first contact and oriented arithmetic, plus either continuity of the primitive bottom or a transfer from the continuous complete-form first contact. No closure of D or extension of the unconditional positivity range is claimed.
+Adversarial review R1: `TEX_ADVERSARIAL_REVIEW_R1.md` — verdict ACCEPT WITH REPAIRS, no FATAL, 8 MAJOR / 11 MINOR / 4 COSMETIC; all 23 repairs applied  (a priori ε_fp bound for Theorem C, abstract narrowed to λ^prim, K^prim moment conditions corrected, Identity M 'bounded' → band-limited, Prop. 8.1 proof added and negative branch corrected, envelope threshold with/without ‖ν‖_TV separated, phase references removed, etc.).
 
 **What it contains (phase 153–154 results of record, plus §7–8 written for the paper):**
 * §2 the archimedean multiplier as a Lévy exponent (`K = ½/sinh(u/2)+½/cosh(u/2)`, complete Bernstein in `τ²`,
@@ -29,7 +41,7 @@ Hostile review R1: `TEX_HOSTILE_REVIEW_R1.md` — verdict ACCEPT WITH REPAIRS, n
   round 1, audited): ν-independent ceiling on every lattice class = λ_min of an M×M Toeplitz matrix, concave in β; no lattice of step
   ≥ 2T/8 certifies ½log3; Theorem C's certificate is at 15 % of its class ceiling (numbers DIAGNOSTIC).
 
-**New 2026-09-22 (round 3 of the class-dependent programme; 41 pp., 0 errors).** Five additions.
+**New  (round 3 of the class-dependent programme; 41 pp., 0 errors).** Five additions.
 (1) §4 **Theorem P3 + Corollary A^P + Corollary C^P**: since (P) has no minimiser, the bounded-set
 reduction is made uniform over the near-optimal feasible set — every `μ` of value `≤ λ^P + ε` has
 `∫(m−C₀)dμ ≤ G(ε) = λ^P + ε + B` and `μ(|τ| ≥ R) ≤ η` for the explicit
@@ -103,7 +115,7 @@ Li weights `m^{−1}` are subcritical where the Weil weights `m^{−1/2}` are cr
 differ by `o(n log n)` (Bombieri–Lagarias, Coffey — bibliography extended).
 (e) §9 labels and the abstract updated accordingly.
 
-**New 2026-09-22 (round 6a: the arena, the nodal structure, and the PF₂ no-go; 53 pp., 0 errors).**
+**New  (round 6a: the arena, the nodal structure, and the PF₂ no-go; 53 pp., 0 errors).**
 Four additions. (i) §8, next to the two archimedean thresholds, **Proposition (nodal structure of
 `P_T`)**: the ground state of `Γ_T = C₀‖·‖² + 𝔈` on all of `L²(I_T)` is simple and a.e. strictly
 positive — `𝔈` is a pure-jump Dirichlet form `¼∬K(|x−y|)|F(x)−F(y)|² + ½∫κ|F|²` with killing
@@ -142,7 +154,7 @@ DIAGNOSTIC; Zhu 2026 (larger window, Galerkin) cited where our window is announc
 from primary reading (`phase-154/R154_031`).
 
 
-**Major revision R2 (2026-09-22).** Hostile review `TEX_HOSTILE_REVIEW_R2.md` — verdict MAJOR REVISION,
+**Major revision R2.** Adversarial review `TEX_ADVERSARIAL_REVIEW_R2.md` — verdict MAJOR REVISION,
 1 FATAL, 4 MAJOR, 11 MINOR, a restructuring proposal and a claim-by-claim abstract table; all 16
 findings and all 22 exact edits applied, plus two audited additions.
 
@@ -195,7 +207,7 @@ findings and all 22 exact edits applied, plus two audited additions.
   the measured never share a page. All labels are preserved, so every cross-reference survives.
   Compiles at 57 pages, 0 errors, no undefined or multiply-defined references.
 
-**R3 applied (2026-09-22).** Hostile review `TEX_HOSTILE_REVIEW_R3.md` — verdict ACCEPT WITH MINOR
+**R3 applied.** Adversarial review `TEX_ADVERSARIAL_REVIEW_R3.md` — verdict ACCEPT WITH MINOR
 REPAIRS; all eight residual edits applied. The substantive one (R3-1): Theorem AL′ carried a
 comb-vanishing hypothesis that missed the boundary atom when `2T = log n` — which is exactly the
 paper's headline window `T = ½log3` (`n = 3`), where `Def. W` forces `w(2T) = 1` so the atom cannot
@@ -212,8 +224,8 @@ structure, 9.2 the negative index, 9.3 the arena and the no-go (the log-2 direct
 own subsection §10.4). Compiles at 57 pages, 0 errors, no undefined or multiply-defined references.
 
 
-**Round 8 integrated (2026-09-22, integrating editor).** Order (b) of `R155_060` §4: what the round-8
-hostile audits cleared (`R155_058` for 8b, `R155_059` for 8d; `R155_057` for 8c, one sentence only) is
+**Round 8 integrated (integrating editor).** Order (b) of `R155_060` §4: what the round-8
+adversarial audits cleared (`R155_058` for 8b, `R155_059` for 8d; `R155_057` for 8c, one sentence only) is
 now in the paper, each statement checked against the paper's own definitions (`def:W`, `def:PD`,
 `eq:nuw`, `P_T`, `\lamP`/`\lamA`/`\lamW`, `𝒲_T`). Round 8a (the negative index) is **not** integrated,
 and §9.2 is untouched. **§2** Lemma `lem:monoT`: `λ_min(A_T|P_T)`, `λ^prim_T`, `λ^W_T` are nonincreasing
@@ -250,7 +262,7 @@ abstract unchanged. Bibliography: Paper 46, Platt–Trudgian 2021, Rosser 1941, 
 Compiles at 67 pages, 0 errors, no undefined or multiply-defined references, 0 labels deleted.
 Next: whole-paper review R4.
 
-**Round 8a integrated (2026-09-22, integrating editor).** What the hostile audit `R155_061` cleared from
+**Round 8a integrated (integrating editor).** What the adversarial audit `R155_061` cleared from
 `R155_052` (amended in place) is now in the paper, each statement checked against the paper's own
 definitions (`\Ainf = 2AB + Γ_T`, `Γ_T` of `prop:nodes`, `P_T`, `\laminfP` = bottom on the unit sphere of
 `P_T`, `m`, `C₀`, `K`, `S_c`, `Λ_k` of `thm:P`) and translated to its notation (the memo's `W`, `γ`, `K`,
@@ -272,14 +284,14 @@ exact values; **Corollary `cor:H1`** replaces `T₂ ≤ 0.9989426` by `sup T₂ 
 `rem:signfix`, `prop:negplane`, `lem:polround`, `lem:zeroext`, `lem:rzero`, certified margins.
 **App. C:** `rem:odd080` (n_odd(0.80), (H1)(0.80) OPEN; residual attribution and Galerkin bottoms
 DIAGNOSTIC); the τ_N ≈ 60 extrapolation is not in the paper. Certificates of record:
-`scripts/r8a/r8a_01_<T>_par<p>_rerun.json` (upper) and `scripts/r8a/r8a_03_recheck.json` (lower; the flag
+`03-research/phase-155-row-d-flat-kernel-criterion/scripts/r8a/r8a_01_<T>_par<p>_rerun.json` (upper) and `03-research/phase-155-row-d-flat-kernel-criterion/scripts/r8a/r8a_03_recheck.json` (lower; the flag
 of `r8a_02` is not a certificate). Abstract and intro gain one clause each; "What is not claimed" one
 sentence; labels table and reproduction section updated. No sign for ζ beyond `log 2`; nothing here is about
 `W_T` or zeros; endpoint of record unchanged. Backup `main_pre_8a.tex.bak`. Compiles at 73 pages, 0 errors,
 no undefined or multiply-defined references, 15 labels added, 0 deleted.
 
-**R4 applied (2026-09-22, `TEX_HOSTILE_REVIEW_R4.md`, verdict minor revision).** Backup `main_pre_R4apply.tex.bak`.
-**R4-1:** `scripts/r8d/r8d_margin_bound.py` fixed (`H⁸ → H⁹`), re-run by the editor (7.6 s, JSON regenerated);
+**R4 applied (`TEX_ADVERSARIAL_REVIEW_R4.md`, verdict minor revision).** Backup `main_pre_R4apply.tex.bak`.
+**R4-1:** `03-research/phase-155-row-d-flat-kernel-criterion/scripts/r8d/r8d_margin_bound.py` fixed (`H⁸ → H⁹`), re-run by the editor (7.6 s, JSON regenerated);
 `rem:margin` and the label-table row now read crossings `1.430`, `2.054` (were `1.226`, `1.852`), with the script
 named; App. C "five to eight" → "six to ten" orders (measured `6.3`–`9.6`); `thm:margin`, `eq:Bmargin`, `cor:margin1`
 unaffected (Cor. 1 ratio `0.7550 ≤ 1`); erratum appended to `R155_055`. **R4-2:** `cor:RH` (a)⇒(c) rewritten: Fatou on
@@ -290,9 +302,9 @@ for `T > T₀(A)`, nonpositive at `T₀(A)`; `prop:arch`(ii) endpoint via `cor:T
 restricted to real `F` with absolutely convergent zero sum; bridge sentence and intro updated. **R4-5:** `cor:H1`
 domain `T₂ > T*_{∞,P}`, `T₂ ≤ log 2` via `thm:index`(i); label row updated. **R4-6:** `rem:Cheb` reading corrected.
 **R4-7:** intro "any window" → "any window `T > ½log2` (`T > 0.74921` for sieve hypotheses)". **R4-8:** certificate
-files of `thm:N`, `thm:Bbeta`, `thm:Np` (`scripts/r3b/r3b_enclosure_<T>_M<M>.json`, `r3b_beta_box.json`),
-`thm:w11` (`scripts/r3c/r3c_04_enclosure_iv.json`, vector `r3c_02.json`), `thm:nest`
-(`scripts/r4a/r4a_02_<T>.json`, vectors `r4a_01.json`) and the margin script named; every path checked. **New
+files of `thm:N`, `thm:Bbeta`, `thm:Np` (`03-research/phase-155-row-d-flat-kernel-criterion/scripts/r3b/r3b_enclosure_<T>_M<M>.json`, `r3b_beta_box.json`),
+`thm:w11` (`03-research/phase-155-row-d-flat-kernel-criterion/scripts/r3c/r3c_04_enclosure_iv.json`, vector `r3c_02.json`), `thm:nest`
+(`03-research/phase-155-row-d-flat-kernel-criterion/scripts/r4a/r4a_02_<T>.json`, vectors `r4a_01.json`) and the margin script named; every path checked. **New
 (editor):** `thm:Np` displayed `Ceil(24,·)` values were the `a`-endpoints without the `β`-allowance, contradicting the
 proof's own sentence; corrected to the files' `ceiling_upper_bound`: `−7.493129·10⁻⁶`, `−6.584323·10⁻⁷` (the memo's
 `−6.584324` rounds the wrong way). **R4-9:** real splitting inlined in `lem:strict`; `lem:parity` remark points
@@ -304,13 +316,22 @@ row, unused macros `\dd`, `\AT` deleted, abstract/intro threshold-bracket wordin
 no undefined or multiply-defined references, every `\cite` ↔ `\bibitem`; 1 label added (`subsec:where`), 0 deleted.
 Row-D label unchanged; endpoint of record unchanged; no sign for ζ beyond `log 2`.
 
-**Phase 156 integrated (2026-09-23; item 156c as cleared by `03-research/phase-156-row-d-per-window-converse/R156_004_HOSTILE_AUDIT_CONVERSE.md`, from `R156_001_BUILDER_CONVERSE.md` as amended A1–A16).** Backup `main_pre_156.tex.bak`. Notation renamed per A15 (`𝔊_T`, `𝔤_ev/𝔤_odd`, `S^Sch_T`, `F^odd_T`), since `prop:finsupp` already uses `G_T`, `F_T`; the complete form is cited as `eq:W` throughout (`def:W` is the weight class).
-* §9.1 **`prop:archneg`** (Prop. 9.7): `𝒜_∞(t·1_{I_T}) ≤ U(T)` (elementary closed form), `U(0.4608) ∈ [−7.0159575, −7.0159574]·10⁻⁶` in interval arithmetic, hence `λ^∞ < 0` for `T ≥ 0.4608` and **`T*_∞ ≤ 0.4608 < 0.58 ≤ T*_{∞,P}`**. PROVED; certificate `scripts/r156/audit_r156_witness_t.py` (re-run by the editor, 1.2 s). It improves the proved bound `T*_∞ ≤ 0.60`; the Galerkin `0.3716` stays DIAGNOSTIC (not "improved"). `prop:arch`(iv) now points to it.
+**Phase 156 integrated ( item 156c as cleared by `03-research/phase-156-row-d-per-window-converse/R156_004_AUDIT_CONVERSE.md`, from `R156_001_CONVERSE.md` as amended A1–A16).** Backup `main_pre_156.tex.bak`. Notation renamed per A15 (`𝔊_T`, `𝔤_ev/𝔤_odd`, `S^Sch_T`, `F^odd_T`), since `prop:finsupp` already uses `G_T`, `F_T`; the complete form is cited as `eq:W` throughout (`def:W` is the weight class).
+* §9.1 **`prop:archneg`** (Prop. 9.7): `𝒜_∞(t·1_{I_T}) ≤ U(T)` (elementary closed form), `U(0.4608) ∈ [−7.0159575, −7.0159574]·10⁻⁶` in interval arithmetic, hence `λ^∞ < 0` for `T ≥ 0.4608` and **`T*_∞ ≤ 0.4608 < 0.58 ≤ T*_{∞,P}`**. PROVED; certificate `03-research/phase-156-row-d-per-window-converse/scripts/r156/audit_r156_witness_t.py` (re-run by the editor, 1.2 s). It improves the proved bound `T*_∞ ≤ 0.60`; the Galerkin `0.3716` stays DIAGNOSTIC (not "improved"). `prop:arch`(iv) now points to it.
 * §10.4: the **comb-level complete form** `W_T(a) := 𝔞^{(v(a))}_T + 2Re(AB̄)` defined next to `RD_T(a)`, with the statement that it is **not** the zero sum of `ζ_a` (A7).
-* §10.6 **`thm:parityschur`** (Thm 10.24; Lemma 1.0 + Thm 1.1 with the self-contained compact-resolvent/Lax–Milgram step A1, the sandwich only for `𝔤 > 0` A2, the range condition A3): per window `λ^W > 0 ⟺ [λ^A > 0 ∧ 𝔊_T ≻ 0]`, `λ^W ≥ 0 ⟺ [RD_T ∧ range ∧ 𝔊_T ⪰ 0]`, `n₋(W_T) = n₋(𝔞_T|P_T) + n₋(𝔊_T)`. PROVED. **`prop:polarcap`** (Prop 10.25): `𝔊_T = S^Sch_T + J` is the polar capacity `E_T(Φ_F(0),Φ_F(1))`. PROVED. **`cor:convfail`** (Cor 10.26; Cor 3.2 / Thm 3.3 / Cor 3.4 with A6–A9): the converse fails for `Λ1_{n≥5}` on `[0.4608, 0.58]` (odd-sector form on `[0.4608, log 2]`) and for `a_θ` at `½log 3` for every `θ ≤ 0.8148` (quintic witness, `scripts/r156/audit_r156_theta_quintic.py`, re-run 1.0 s; margin `2.8·10⁻⁸`); failure set `[0, θ_*)`, `0.8148 < θ_* < 1` (Zhu for `θ_* < 1`); method constraint (deletion-closed classes on `[0.4608, 0.58]`; classes closed under lowering one term at `½log 3`, one-sided `18.5 %`). PROVED as comb-level method constraints.
+* §10.6 **`thm:parityschur`** (Thm 10.24; Lemma 1.0 + Thm 1.1 with the self-contained compact-resolvent/Lax–Milgram step A1, the sandwich only for `𝔤 > 0` A2, the range condition A3): per window `λ^W > 0 ⟺ [λ^A > 0 ∧ 𝔊_T ≻ 0]`, `λ^W ≥ 0 ⟺ [RD_T ∧ range ∧ 𝔊_T ⪰ 0]`, `n₋(W_T) = n₋(𝔞_T|P_T) + n₋(𝔊_T)`. PROVED. **`prop:polarcap`** (Prop 10.25): `𝔊_T = S^Sch_T + J` is the polar capacity `E_T(Φ_F(0),Φ_F(1))`. PROVED. **`cor:convfail`** (Cor 10.26; Cor 3.2 / Thm 3.3 / Cor 3.4 with A6–A9): the converse fails for `Λ1_{n≥5}` on `[0.4608, 0.58]` (odd-sector form on `[0.4608, log 2]`) and for `a_θ` at `½log 3` for every `θ ≤ 0.8148` (quintic witness, `03-research/phase-156-row-d-per-window-converse/scripts/r156/audit_r156_theta_quintic.py`, re-run 1.0 s; margin `2.8·10⁻⁸`); failure set `[0, θ_*)`, `0.8148 < θ_* < 1` (Zhu for `θ_* < 1`); method constraint (deletion-closed classes on `[0.4608, 0.58]`; classes closed under lowering one term at `½log 3`, one-sided `18.5 %`). PROVED as comb-level method constraints.
 * §10.6 OPEN paragraph rewritten with the corrected chain A12: `∃Al_T ⟺ λ^W > 0 ⟺ [λ^A > 0 ∧ 𝔊_T ≻ 0] ⟹ KEP(T) indeterminate ⟹ λ^W ≥ 0`; OPEN: `RD_T ⟹ λ^P ≥ 0` per window, the effective window shift for ζ, the converse for ζ at `T > 0.8`. §11.1 item (5) no longer says indeterminacy is "exactly" `λ^W > 0`; §10.1 gains a sentence that the chain is an all-`T` statement.
 * **Citation slip A14 corrected** (no mathematics changed): `prop:arch`(iii) now cites the complete form at autocorrelation support `≤ log 2` [Yoshida, Bombieri] (and, certified, [Zhu, Thm 1.2]), Paper 42 dropped; "What is not claimed", intro l.148, §5 opening, §6.4 and `rem:twohalves` now name the form (primitive: `T ≤ log 2` Paper 42, `½log 3` Thm C, `≤ 0.8` via Zhu; complete: `T ≤ ½log 2` classical, `(½log 2, 0.8]` Zhu alone; nothing in the paper proves `λ^W ≥ 0` at any `T > ½log 2`).
 * App. C **`rem:polarcapdiag`** (DIAGNOSTIC only): Galerkin `𝔤_±` (upper bounds; positive values carry nothing), `S^Sch ≈ −J`, `θ_* ≈ 0.99991`, channel crossings `≈ 0.372 / 0.44`. Not integrated: the doubly-exponential thinness heuristic, the zero-side Remark 2.2, the extension of the failure to all of `(T*_∞, T*_{∞,P})`.
 * Format fix: the §11.2 label table was a single `tabularx` overflowing its page (pre-existing `Overfull \vbox 1444pt`; every row after `cor:Tarch` was cut off in the PDF); it is now a `longtable`. Label rows added for the five new labels and the chain.
 Compiles at 84 pages, 0 errors, no undefined or multiply-defined references, every `\cite` ↔ `\bibitem`; 5 labels added (`prop:archneg`, `thm:parityschur`, `prop:polarcap`, `cor:convfail`, `rem:polarcapdiag`), 0 deleted. Row-D label unchanged; endpoint of record unchanged; no sign for ζ at any new window.
 
+
+**Phase 157 integrated (integrating editor; items cleared by `03-research/phase-157-row-d-mechanism-search/R157_004_AUDIT_SEARCH.md` §5 and `R157_006_AUDIT_BERKOVICH.md` §12, from `R157_002` (O3, O4, Lemmas C, D) and `R157_005` (Lemma 3.3) as amended).** Backup `main_pre_157.tex.bak`. Checked against the paper's own definitions (`eq:W`, `eq:Aform`, `𝔞_T`, `P_T`, `\lamA`, `λ^W`, `c_F(u) = ∫F(t)F̄(t−u)dt`, `thm:finmod`, `cor:margin1/2`, `lem:cpos`, `thm:Z`, `def:PD` (D), `prop:P`). The autocorrelation `c_{F⋆}` is used throughout, not `Φ` (`Φ_F` is the Mellin-type transform of `eq:W`).
+* §2 **`lem:contT`**: `T ↦ λ^W_T` is continuous (dilation `U_r` plus the relative form bound `‖F‖²_Q ≤ W_T(F) + C′‖F‖²`; R157_004 Lemma C, written in the paper's normalisation), stated as a direct proof of Bombieri 2000 Thm 5 (`λ^W = min(μ₊, μ₋)`); also for `λ^∞`; nothing for `λ^A`, `λ^P` (`U_r` does not preserve `P_T`). PROVED, no novelty claimed.
+* §7.1 **`rem:normline`** after `thm:Z`: norm-line kernels `H(ℓ(x) − ℓ(y))` on `A^{1,an}_Z` realising `W_T` are exactly problem (D) at `β = (2,0)` (R157_006 Lemma B.3); "⇐" weak duality, "⇒" `thm:Zexh`(i) in ε-form; complete form; restatement, not a new object. Bibitem `Poineau2010` added.
+* §7.4 **`rem:nonzero`** after `thm:KEP3`: one-sentence RESTATEMENT, RH ⟺ `λ^W_T ≠ 0` for every `T` (Bombieri Thms 1, 3, 5; P45 Thm 10.4); if RH fails, `{T : λ^W = 0}` is a nonempty compact interval (compactness via Zhu, cited). **No "determinate" clause; no novelty claim.** Lemma E of R157_004 is **not** integrated: §5 of the audit does not clear it for the paper, and small-window positivity is already cited (`prop:arch`(iii), `cor:KEP08`).
+* §10.4 **`cor:Qp`** after `lem:cpos`: `Q_p(F^±_φ) = ∓v_p‖φ‖²`; each local prime form is negative definite on an infinite-dimensional subspace of `P_T` for every `T > ½log p` (R157_006 §4, stronger form of R157_005 Lemma 3.3), with the (b′) reading: positivity is never place by place, indefinite summands do not forbid a positive sum. PROVED, no sign.
+* §10.4 **`rem:resweights`** + **`lem:degen`** after `thm:finmod` (O3 amended A1–A5): `ε_*(T,n₀) = √n₀ λ^A_T/(2|c_{F⋆}(log n₀)|) ≤ 2·10⁹Te^{−14.449T}/|c_{F⋆}(log n₀)|` (`15.449`, prefactor `2√2·10⁹` at `n₀ = 2`); an upper bound (≤, not ≍); vacuous for `T ≤ 1.51`; sign restriction (lowering needs `Λ(n₀) ≥ ε`); primitive form, complete form through the `W_T`-minimiser `F^W`; non-degeneracy OPEN; Lemma D PROVED (if a minimiser has `c ≡ 0` on `log N_T`, `v_T(Λ)` globally maximises `V_T(v) = λ_min(A^{(v)}_T|P_T)`). **Placement:** the audit proposed "after `cor:margin2`", but the remark uses `RD_T(a)`, `𝔞^{(v)}_T`, `v_T(Λ)`, `W_T(a)` of §10.4, defined after §10.3; it sits after `thm:finmod` (whose proof it applies), and `rem:margin` now ends with a pointer to it.
+* **Sentences changed:** `prop:arch` proof ("no continuity being asserted" → continuity for `λ^∞` by `lem:contT`, not asserted for `λ^{∞,P}`, not used); §10.2 class-value paragraph ("no continuity in `T` is claimed for it" → continuous by `lem:contT` / Bombieri Thm 5, no continuity claimed for the sub-classes); `rem:margin` (pointer sentence); "What is not claimed" (one sentence on the new items). Label table: 5 rows added.
+Compiles at 86 pages (84 before), 0 errors, no undefined or multiply-defined references, every `\cite` ↔ `\bibitem`, overfull boxes unchanged (9, all pre-existing); 6 labels added (`lem:contT`, `rem:normline`, `rem:nonzero`, `cor:Qp`, `rem:resweights`, `lem:degen`), 0 deleted. Row-D label unchanged; endpoint of record unchanged; no sign for ζ at any window, in either form.

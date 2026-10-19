@@ -208,7 +208,7 @@ The new identities replace the formal Euler gauge by a concrete theta
 gauge:
 
 \[
- K=Zk_1,qquad k_1=MK,qquad
+ K=Zk_1,\qquad k_1=MK,\qquad
  A_\theta=(M\delta Z)k_1.                               \tag{17}
 \]
 

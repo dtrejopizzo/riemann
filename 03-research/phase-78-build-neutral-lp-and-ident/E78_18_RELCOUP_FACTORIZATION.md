@@ -1,6 +1,6 @@
 # E78.18 - Exact factorization of the relative coupling defect
 
-**Run:** 2026-07-18.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

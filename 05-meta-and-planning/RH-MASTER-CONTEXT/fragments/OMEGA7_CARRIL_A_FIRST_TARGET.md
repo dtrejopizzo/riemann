@@ -71,12 +71,12 @@ One sufficient shape is to choose `T(n)` as the least `T` satisfying
   \log {C n^2\over \lambda_n^{arch}},
 ]
 
-with all constants declared. This statement is not force-RH: it uses only an
+with all constants declared. This statement is not RH-strength: it uses only an
 unconditional tail estimate and does not try to prove the core sign.
 
-## A1: isolated force-RH core
+## A1: isolated RH-strength core
 
-After A0, the remaining signed core becomes the single force-RH target
+After A0, the remaining signed core becomes the single RH-strength target
 
 [
   \boxed{
@@ -97,4 +97,4 @@ A0 plus A1 gives
 
 and therefore closes the infinite range of Omega7. Thus A0 is the immediate
 technical target, while A1 is the first precisely isolated place where new
-mathematics of force-RH must enter.
+mathematics of RH-strength must enter.

@@ -1,6 +1,6 @@
 # P123.081 — Exact chart correction for the Tate excess determinant
 
-Date: 2026-09-06. Status: PROVED for the finite Tate models of P123.080,
+Status: PROVED for the finite Tate models of P123.080,
 including their coherent determinant transitions. No analytic metric
 or general mixed-correspondence RR is asserted.
 

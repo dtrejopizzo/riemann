@@ -1,0 +1,7 @@
+rho=0.932970+15.668250i quadruple -0.709151 ; on-line equivalent 0.016635 ; excess -7.26e-01
+rho=0.937667+29.983395i quadruple -0.083338 ; on-line equivalent 0.007627 ; excess -9.10e-02
+known off-line total -0.792489 = 22.779 % of D
+sup_{t>30}|h(t)| = 6.81e-02 ; int_30^inf |h| dt ~ 0.1208
+sup_{30<t<300}|h(t +- 0.3i)| = 7.78e-02
+sup_{30<t<300}|h(t +- 0.5i)| = 9.76e-02
+sup_{30<t<300}|h(t +- 0.7i)| = 1.35e-01

@@ -1,6 +1,5 @@
 # E73.265 - Commutator transport form of the paired theorem
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

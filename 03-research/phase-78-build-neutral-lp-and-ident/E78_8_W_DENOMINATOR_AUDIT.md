@@ -1,6 +1,6 @@
 # E78.8 - Denominator audit for the coupled-generator package
 
-**Run:** 2026-07-18.
+**Run:**
 **Target:** the zero-free denominator clause in the Phase-78 reduction
 
 ```text

@@ -1,7 +1,6 @@
 # E72.67 -- Falsifier for cell-Abel-only divisibility
 
-**Date:** 2026-07-08.
-**Role:** test whether the unnormalized continuous Abel transform of the CCM overlap cell already
+**Purpose:** test whether the unnormalized continuous Abel transform of the CCM overlap cell already
 carries the finite spectral divisor.
 
 ## Correction note

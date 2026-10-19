@@ -1,6 +1,5 @@
 # E73.185 - Grouped-frequency WR tail bound
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

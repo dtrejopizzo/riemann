@@ -1,0 +1,106 @@
+[
+  {
+    "length": "0.5",
+    "coefficients": [
+      "(1.0 + 0.0j)",
+      "(1.0 + 0.0j)",
+      "(1.0 + 0.0j)",
+      "(1.0 + 0.0j)"
+    ],
+    "original": "-3.37827549847197991",
+    "transported": "-3.37827549847197991",
+    "absolute_error": "1.4013e-45",
+    "certification": false
+  },
+  {
+    "length": "0.5",
+    "coefficients": [
+      "(1.0 + 0.0j)",
+      "(-1.0 + 0.0j)",
+      "(0.0 + 1.0j)",
+      "(2.0 - 1.0j)"
+    ],
+    "original": "8.33112737816632179",
+    "transported": "8.33112737816632179",
+    "absolute_error": "8.26766e-44",
+    "certification": false
+  },
+  {
+    "length": "1.6094379124341003746",
+    "coefficients": [
+      "(1.0 + 0.0j)",
+      "(1.0 + 0.0j)",
+      "(1.0 + 0.0j)",
+      "(1.0 + 0.0j)"
+    ],
+    "original": "-9.02435867423473995",
+    "transported": "-9.02435867423473995",
+    "absolute_error": "0.0",
+    "certification": false
+  },
+  {
+    "length": "1.6094379124341003746",
+    "coefficients": [
+      "(1.0 + 0.0j)",
+      "(-1.0 + 0.0j)",
+      "(0.0 + 1.0j)",
+      "(2.0 - 1.0j)"
+    ],
+    "original": "-1.26629047447742397",
+    "transported": "-1.26629047447742397",
+    "absolute_error": "8.07498e-44",
+    "certification": false
+  },
+  {
+    "length": "4.0",
+    "coefficients": [
+      "(1.0 + 0.0j)",
+      "(1.0 + 0.0j)",
+      "(1.0 + 0.0j)",
+      "(1.0 + 0.0j)"
+    ],
+    "original": "-13.9727658950239699",
+    "transported": "-13.9727658950239699",
+    "absolute_error": "1.4013e-45",
+    "certification": false
+  },
+  {
+    "length": "4.0",
+    "coefficients": [
+      "(1.0 + 0.0j)",
+      "(-1.0 + 0.0j)",
+      "(0.0 + 1.0j)",
+      "(2.0 - 1.0j)"
+    ],
+    "original": "-9.02259078382280157",
+    "transported": "-9.02259078382280157",
+    "absolute_error": "7.9874e-44",
+    "certification": false
+  },
+  {
+    "length": "12.0",
+    "coefficients": [
+      "(1.0 + 0.0j)",
+      "(1.0 + 0.0j)",
+      "(1.0 + 0.0j)",
+      "(1.0 + 0.0j)"
+    ],
+    "original": "-18.6291221569559308",
+    "transported": "-18.6291221569559308",
+    "absolute_error": "0.0",
+    "certification": false
+  },
+  {
+    "length": "12.0",
+    "coefficients": [
+      "(1.0 + 0.0j)",
+      "(-1.0 + 0.0j)",
+      "(0.0 + 1.0j)",
+      "(2.0 - 1.0j)"
+    ],
+    "original": "-20.6325183687925112",
+    "transported": "-20.6325183687925112",
+    "absolute_error": "8.40779e-44",
+    "certification": false
+  }
+]

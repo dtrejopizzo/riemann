@@ -1,11 +1,10 @@
-# R132.002 — hostile audit of record, row C, phase 132 round 1
+# R132.002 — audit of record, row C, phase 132 round 1
 
-Auditor: Claude Opus 5 (1M), adversarial auditor of record for phase 132.
-Date: 2026-09-12.  Target:
+Target:
 [Paper 45](../../04-papers/45-row-c-explicit-formula/main.md) as rebuilt in
 round 1 (1763 lines, every `[REBUILT, phase 132, round 1]` passage read), the
-builder record [R132.001](R132_001_BUILDER_ROUND1.md), the lead blueprint
-[R132.000](R132_000_LEAD_BLUEPRINT.md) and its supplement, and the audit that
+round-1 record [R132.001](R132_001_ROUND1.md), the blueprint
+[R132.000](R132_000_BLUEPRINT.md) and its supplement, and the audit that
 withdrew the old label, [D128.003](../phase-128-adversarial-audit/D128_003_AUDIT_C.md).
 
 Method: every load-bearing statement was **re-derived**, not re-read.  Every
@@ -70,7 +69,7 @@ they hold.
   expanded away before the shift), shift to `L_{1/2}`, giving
   `(1/πi)∫g n^{-s}ds = 2n^{-1/2}h(-\log n)`, and `h` even (because `F` is
   real) turns `2h(-\log n)` into `h(\log n)+h(-\log n)`.  Correct, and the
-  builder's "factor of 2" refutation of the blueprint is right: the single
+  R132.001's "factor of 2" refutation of the blueprint is right: the single
   line gives exactly half, and the other half is the `L_{1-c}` line.
 * Sum: (9.6).  This is the classical Weil explicit formula with the standard
   signs.  **`PROVED`, and the proof is in the repository.**  Clause C.8 is met
@@ -102,7 +101,7 @@ Lemma 10.1: `Φ_{ΠG} = (¼-(s-½)²)Φ_G = s(1-s)Φ_G`, `= ¼+τ² > 0` on the 
 Corollary 10.2: primitivity, support, parity, injectivity by analyticity.
 The quartet bookkeeping matches `106_11` (8),(11): with `z = (ρ-½)/i`,
 `Φ_F(ρ)Φ_F(1-ρ) = F(z)F(-z) = ±F(z)² = \overline{F(\bar z)}F(z)`.
-`ρ(1-ρ) = ¼+z² ≠ 0` at a nontrivial zero.  **Builder flag `P3` is disposed**
+`ρ(1-ρ) = ¼+z² ≠ 0` at a nontrivial zero.  **Flag `P3` is disposed**
 — see `n2`.
 
 **(f) Theorem 12.2.**  `\widehat{Γ_h}` is carried by `𝔠_0` and equals
@@ -134,7 +133,7 @@ harmless by evenness, which the paper proves rather than assumes.
 cited sources: `\hat W_∞(0,τ) = \log π - Reψ(¼+iτ/2)` = Paper 43 Thm 9.7(b) =
 P123.035 (4.1) ✔; `\log π - ψ(¼) ≈ 5.372` = Paper 43 (14.2) ✔ (and (14.2) is
 indeed the value **at** `𝔠_0, τ = 0`, bounding `m` from below, which is the
-direction Thm 12.2 needs — builder flag `P4` is moot, see `n3`);
+direction Thm 12.2 needs — flag `P4` is moot, see `n3`);
 `γ+\log4π+ψ(½) = \log π` ✔; `K(t) = ¼[1/\sinh(t/2)+1/\cosh(t/2)]` = Paper 43
 (8.5∞) ✔; `K(\log n) = n^{3/2}/(n²-1)` = Paper 44 (3bis.11) ✔;
 `d^*x_∞ = dx/(2|x|)` = Paper 43 (8.5b) ✔; `vol(Z_p^×) = \log p` = Paper 44
@@ -244,7 +243,7 @@ Thm 9bis.4(i); §14.2 row C.4.
    sum, and `A_S(½+iτ) → ∞` on the critical line, so `A` is not any limit of
    the chart symbols where the symbols live.  Calling it "the meromorphic
    symbol of the colimit trace" and headlining it as item (3) of §0.1 invites
-   exactly the reading that Cor. 9bis.3 then has to forbid.  The builder
+   exactly the reading that Cor. 9bis.3 then has to forbid.  R132.001
    flagged this himself (`P1`); I confirm the flag and I do not accept his own
    answer that "the rhetoric is the weakest point": §14.2's clause C.4 row
    cites **Theorem 9bis.2** as the discharge of "poles in the same
@@ -369,7 +368,7 @@ exists, the paper's central theorem rests on a citation its source forbids.
   makes `Σ_ρ|γ_ρ|^{-4} < ∞`.  D128 `C10`'s symmetric-order requirement is
   therefore harmless but unnecessary for this test class; saying so is
   stronger and removes an apparent fragility from (9.9), (9.11) and §14.4.
-* **`n2` (builder flag `P3`, resolved against the builder's worry).**  I
+* **`n2` (flag `P3`, resolved against R132.001's worry).**  I
   traced `106_11` myself.  Its (9) fixes `s_0 = x_0+iy_0` with
   **`x_0y_0 ≠ 0`**, glossing `y_0 ≠ 0` as "exactly the failure of the
   critical-line condition" and `x_0 ≠ 0` as "the classical absence of real
@@ -379,14 +378,14 @@ exists, the paper's central theorem rests on a citation its source forbids.
   `w_0 = s_0²` and (21) concludes the `R²→C` isomorphism.  **`s_0² ∉ R` is
   established by `106_11` itself; no degenerate case needs excluding by hand,
   and Paper 45's (10.1) is a faithful rendering.**  The `C10` fix is complete.
-* **`n3` (builder flag `P4`, moot).**  Theorem 12.2 does not need Paper 43
+* **`n3` (flag `P4`, moot).**  Theorem 12.2 does not need Paper 43
   (14.2) at all: Theorem 9.7(c) states outright that `T̂+c` "vanishes
   identically on **no** component" and has discrete zero set on each.  (14.2)
   is indeed a lower bound for `m := \sup_{Ĉ_S}T̂` **by the value at `𝔠_0,
   τ = 0`**, so the direction is right, and the extra remark that every
   finite-place term at `τ = 0` on `𝔠_0` is positive is correct (`ζ = p^{-1/2}`
   real positive).  No confusion of the two `m`'s occurs.
-* **`n4` (cross-paper, for the lead; does not touch row A's label).**  Paper 43
+* **`n4` (cross-paper, for the closing review; does not touch row A's label).**  Paper 43
   §14.1a — the section Paper 45 §14.3 cites as the handoff — is **stale**: it
   still offers row C "`c` the open constant of Remark 8.6b" (superseded by
   Def. 8A.7d), "the realization `Γ_n = E_{a_S(n)}` inside `G`" (a withdrawn-
@@ -502,7 +501,7 @@ complete.
    factor `= ` half the polar packet (`M3`'s repair).  Mertens enters **once**
    (Thm 9bis.4(ii), via Paper 43 Thm 10.8b, `CLASSICAL`, quarantined, with a
    deletion test), and its subject is `s = 1`, not the residue count at
-   `s = 0`.  The blueprint's §2.2 mechanism does not exist and the builder's
+   `s = 0`.  The blueprint's §2.2 mechanism does not exist and R132.001's
    refutation of it is correct.
 5. *Imports.*  (E1)–(E8), (R1) of §11, with (E3) split as in `M2`.  No
    spectral realization, no Meyer, no cutoff theorem.  Nothing else is used —

@@ -1,8 +1,8 @@
-# 104_75 — Transición dura en \(\log X\), poissonización y gate de Bessel
+# 104_75 — Hard transition in \(\log X\), poissonization, and the Bessel gate
 
-**Resultado.** La media Fermi de `104_69` puede reemplazarse, sin perder
-la equivalencia con RH, por una afirmación unilateral de densidad para el
-bloque prima--polo real. Una elección completamente explícita es
+**Result.** The Fermi mean of `104_69` can be replaced, without losing
+the equivalence with RH, by a one-sided density statement for the
+prime--pole real block. A fully explicit choice is
 
 \[
  B_X=\sqrt{\log(X+e)},\qquad
@@ -10,14 +10,14 @@ bloque prima--polo real. Una elección completamente explícita es
  {\bf1}_{\{\lambda_n+\log(n+1)\le B_X\}}.                 \tag{1}
 \]
 
-Entonces
+Then
 
 \[
  \boxed{\mathrm {RH}\quad\Longleftrightarrow\quad
  \Delta_X(B_X)\longrightarrow0.}                          \tag{2}
 \]
 
-Con la diagonal \(\varepsilon_X=e^{-X/100}\), (2) equivale exactamente a
+With the diagonal \(\varepsilon_X=e^{-X/100}\), (2) is exactly equivalent to
 
 \[
  {1\over H_X}\sum_{n\le X}{1\over n}
@@ -27,7 +27,7 @@ Con la diagonal \(\varepsilon_X=e^{-X/100}\), (2) equivale exactamente a
  \right\}}\longrightarrow0,                              \tag{3}
 \]
 
-donde
+where
 
 \[
  Q_{n,\varepsilon}
@@ -35,33 +35,37 @@ donde
  L_{n-1}^{(1)}(\log m).                                   \tag{4}
 \]
 
-Así, el input que falta no es una cota aditiva \(O(1)\) para cada grado:
-(3) es la capa dura exacta de Fermi. La §2.1 la debilita aún más: basta
-excluir, en densidad logarítmica, sobrepasos de tamaño \(e^{\sqrt X}\).
+Thus the missing input is not an additive \(O(1)\) bound for each
+degree: (3) is the exact hard layer of Fermi. §2.1 weakens it even
+further: it suffices to exclude, in logarithmic density, overshoots of
+size \(e^{\sqrt X}\).
 
-La misma frontera admite una versión poissonizada, localizada en grados
-\(n=t+O(\sqrt t)\). En esa coordenada la **primera media lineal** de los
-coeficientes prima--Laguerre tiene una transformada de Bessel cerrada. El
-cuarteto off-line demuestra, sin embargo, que esa media lineal no controla
-la transición: su media lineal poissonizada tiende a \(4\), mientras su
-detector Fermi tiende a \(1/4\). Por tanto Abel, Borel, Nörlund--Rice o la
-identidad de Bessel, usados solo al primer orden, no prueban (3).
+The same frontier admits a poissonized version, localized at degrees
+\(n=t+O(\sqrt t)\). In that coordinate the **first linear mean** of the
+prime--Laguerre coefficients has a closed Bessel transform. The
+off-line quartet shows, however, that this linear mean does not
+control the transition: its poissonized linear mean tends to \(4\),
+while its Fermi detector tends to \(1/4\). Therefore Abel, Borel,
+Nörlund--Rice, or the Bessel identity, used only at first order, do
+not prove (3).
 
-Este documento identifica el input mínimo que queda en la ruta \(\log X\)
-y cierra el ataque lineal poissonizado. No prueba (3), A1 ni RH.
+This document identifies the minimal input that remains on the
+\(\log X\) route and closes off the linear poissonized attack. It does
+not prove (3), A1, or RH.
 
-**No duplicación interna.** `104_62` estudia la representación de Fourier
-de la logística y su microfrecuencia; `104_63`, una energía cuadrática
-diádica; `104_69`, la diagonal finita en media logarítmica; y `104_73`,
-la representación Bernstein de la razón de presiones. Aquí las piezas nuevas
-son el nivel duro móvil (10)--(22), la localización poissonizada y el
-contraste exacto Bessel--Fermi (38)/(42).
+**No internal duplication.** `104_62` studies the Fourier
+representation of the logistic function and its microfrequency;
+`104_63`, a dyadic quadratic energy; `104_69`, the finite diagonal in
+logarithmic mean; and `104_73`, the Bernstein representation of the
+pressure ratio. Here the new pieces are the moving hard level
+(10)--(22), the poissonized localization, and the exact Bessel--Fermi
+contrast (38)/(42).
 
 ---
 
-## 1. Capa dura exacta de la media Fermi
+## 1. Exact hard layer of the Fermi mean
 
-Ponga
+Set
 
 \[
  x_n=\lambda_n+\log(n+1),\qquad
@@ -69,80 +73,82 @@ Ponga
  \mathfrak F(X)={1\over H_X}\sum_{n\le X}{a_n\over n}.   \tag{5}
 \]
 
-Para \(B\ge0\), defina
+For \(B\ge0\), define
 
 \[
  \Delta_X(B)={1\over H_X}\sum_{n\le X}{1\over n}
  {\bf1}_{\{x_n\le B\}}.                              \tag{6}
 \]
 
-**Lema 1.1 (sandwich de transición).** Para todo \(X\) y \(B\ge0\),
+**Lemma 1.1 (transition sandwich).** For all \(X\) and \(B\ge0\),
 
 \[
  \boxed{{1\over2}\Delta_X(0)\le\mathfrak F(X)
  \le\Delta_X(B)+e^{-B}.}                                 \tag{7}
 \]
 
-Además,
+Moreover,
 
 \[
  \boxed{
  \mathfrak F(X)\to0
  \quad\Longleftrightarrow\quad
- \text{existe }B_X\to\infty\text{ con }\Delta_X(B_X)\to0.} \tag{8}
+ \text{there exists }B_X\to\infty\text{ with }\Delta_X(B_X)\to0.} \tag{8}
 \]
 
-**Demostración.** Si \(x\le0\), entonces
-\((1+e^x)^{-1}\ge1/2\). Si \(x>B\), entonces
-\((1+e^x)^{-1}\le e^{-x}\le e^{-B}\). Esto prueba (7).
+**Proof.** If \(x\le0\), then
+\((1+e^x)^{-1}\ge1/2\). If \(x>B\), then
+\((1+e^x)^{-1}\le e^{-x}\le e^{-B}\). This proves (7).
 
-La implicación de derecha a izquierda en (8) sigue de (7). Para la
-recíproca, fije un entero \(k\ge1\). Sobre \(x_n\le k\),
+The right-to-left implication in (8) follows from (7). For the
+converse, fix an integer \(k\ge1\). On \(x_n\le k\),
 
 \[
  a_n\ge{1\over1+e^k},
  \qquad \Delta_X(k)\le(1+e^k)\mathfrak F(X)\longrightarrow0. \tag{9}
 \]
 
-Elija \(X_k\) creciente de modo que
-\(\Delta_X(k)\le1/k\) para \(X\ge X_k\), y ponga \(B_X=k\) en
-\([X_k,X_{k+1})\). Entonces \(B_X\to\infty\) y
+Choose an increasing \(X_k\) such that
+\(\Delta_X(k)\le1/k\) for \(X\ge X_k\), and set \(B_X=k\) on
+\([X_k,X_{k+1})\). Then \(B_X\to\infty\) and
 \(\Delta_X(B_X)\to0\). \(\square\)
 
-El lema separa dos preguntas que la forma suave mezcla: el valor de la
-logística lejos de su transición es inocuo; todo el contenido está en la
-densidad de los grados que cruzan el nivel \(x_n=B\).
+The lemma separates two questions that the smooth form mixes
+together: the value of the logistic function far from its transition
+is harmless; all the content lies in the density of the degrees that
+cross the level \(x_n=B\).
 
 ---
 
-## 2. Un nivel móvil explícito
+## 2. An explicit moving level
 
-El criterio no necesita escoger \(B_X\) después de conocer la sucesión.
+The criterion does not need to choose \(B_X\) after knowing the
+sequence.
 
-**Teorema 2.1.** Sea \(B_X\ge0\) cualquier función tal que
+**Theorem 2.1.** Let \(B_X\ge0\) be any function such that
 
 \[
  B_X\longrightarrow\infty,
  \qquad B_X=o(\log X).                                    \tag{10}
 \]
 
-Entonces
+Then
 
 \[
  \boxed{\mathrm {RH}\quad\Longleftrightarrow\quad
  \Delta_X(B_X)\longrightarrow0.}                         \tag{11}
 \]
 
-En particular sirve la elección de (1).
+In particular, the choice in (1) works.
 
-**Demostración.** Bajo RH, \(\lambda_n\ge0\). Por tanto
+**Proof.** Under RH, \(\lambda_n\ge0\). Therefore
 
 \[
  x_n\le B_X\quad\Longrightarrow\quad
  n+1\le e^{B_X}.
 \]
 
-De aquí
+Hence
 
 \[
  \Delta_X(B_X)
@@ -150,43 +156,43 @@ De aquí
  \le {B_X+O(1)\over\log X+O(1)}\longrightarrow0.          \tag{12}
 \]
 
-Si RH es falsa, `104_56` da \(c>0\), \(R>1\) y un conjunto
-\(D\) de densidad logarítmica \(d>0\) tales que
+If RH is false, `104_56` gives \(c>0\), \(R>1\), and a set
+\(D\) of logarithmic density \(d>0\) such that
 
 \[
  \lambda_n\le-cR^n\qquad(n\in D)                          \tag{13}
 \]
 
-desde un índice fijo. Ponga
+from a fixed index on. Set
 
 \[
  Y_X=\left\lceil{3\log\log(X+e^e)\over\log R}\right\rceil. \tag{14}
 \]
 
-Para \(n\in D\cap[Y_X,X]\), (10), (13) y
-\(R^{Y_X}\ge\{\log(X+e^e)\}^3\) dan, para \(X\) grande,
+For \(n\in D\cap[Y_X,X]\), (10), (13), and
+\(R^{Y_X}\ge\{\log(X+e^e)\}^3\) give, for large \(X\),
 
 \[
  x_n\le-cR^n+\log(X+1)\le B_X.                            \tag{15}
 \]
 
-La masa armónica retirada por \(n<Y_X\) es
-\(H_{Y_X}=O(\log\log\log X)=o(H_X)\). Luego
+The harmonic mass removed by \(n<Y_X\) is
+\(H_{Y_X}=O(\log\log\log X)=o(H_X)\). Hence
 
 \[
  \liminf_{X\to\infty}\Delta_X(B_X)\ge d>0,              \tag{16}
 \]
 
-contradiciendo el límite de (11). \(\square\)
+contradicting the limit in (11). \(\square\)
 
-La prueba solo usa la firma exponencial y de densidad positiva de un cero
-exterior. No usa la positividad coeficiente a coeficiente de Li en la
-dirección no-RH.
+The proof only uses the exponential, positive-density signature of an
+exterior zero. It does not use coefficient-by-coefficient positivity
+of Li in the non-RH direction.
 
-### 2.1 Un gate todavía más débil: tolerancia \(e^{\sqrt X}\)
+### 2.1 An even weaker gate: tolerance \(e^{\sqrt X}\)
 
-Para probar RH ni siquiera hace falta controlar la transición de Fermi.
-Fije \(0<\alpha<1\), ponga \(S_X=e^{X^\alpha}\) y defina
+To prove RH it is not even necessary to control the Fermi transition.
+Fix \(0<\alpha<1\), set \(S_X=e^{X^\alpha}\), and define
 
 \[
  \Omega_X^{(\alpha)}
@@ -194,39 +200,39 @@ Fije \(0<\alpha<1\), ponga \(S_X=e^{X^\alpha}\) y defina
  {\bf1}_{\{\lambda_n+\log(n+1)\le-S_X\}}.                \tag{16a}
 \]
 
-Entonces
+Then
 
 \[
  \boxed{\mathrm {RH}\quad\Longleftrightarrow\quad
  \Omega_X^{(\alpha)}\longrightarrow0.}                  \tag{16b}
 \]
 
-Bajo RH el indicador es idénticamente cero. Si RH es falsa, tome \(D,c,R\)
-como en (13) y elija \(K>1/\log R\). Para
+Under RH the indicator is identically zero. If RH is false, take
+\(D,c,R\) as in (13) and choose \(K>1/\log R\). For
 \(n\in D\cap[KX^\alpha,X]\),
 
 \[
  cR^n\ge 2e^{X^\alpha}+\log(X+1)                         \tag{16c}
 \]
 
-desde cierto \(X\). La densidad logarítmica de \(D\) da
+from some \(X\) on. The logarithmic density of \(D\) gives
 
 \[
  {1\over H_X}\sum_{\substack{KX^\alpha\le n\le X\\n\in D}}{1\over n}
  \longrightarrow d(1-\alpha)>0.                          \tag{16d}
 \]
 
-Por (13), esos índices están contados en (16a), lo que prueba la
-dirección contraria.
+By (13), these indices are counted in (16a), which proves the opposite
+direction.
 
-La elección concreta \(\alpha=1/2\) muestra la debilidad real del input:
-basta excluir, en densidad logarítmica, sobrepasos prima--polo de tamaño
-\(e^{\sqrt X}\). No hace falta decidir el signo ni obtener error aditivo
-\(O(1)\) en la franja de transición.
+The concrete choice \(\alpha=1/2\) shows the true weakness of the
+input: it suffices to exclude, in logarithmic density, prime--pole
+overshoots of size \(e^{\sqrt X}\). There is no need to decide the
+sign or obtain an additive error \(O(1)\) in the transition strip.
 
 ---
 
-## 3. Traducción diagonal a los pesos reales \(\Lambda(m)\)
+## 3. Diagonal translation to the real weights \(\Lambda(m)\)
 
 Use `104_69`,
 
@@ -236,7 +242,7 @@ Use `104_69`,
  \qquad \varepsilon_X=e^{-X/100}.                         \tag{17}
 \]
 
-Allí se prueba, con \(\eta=1/100-\log(200/199)>0\) y una constante
+There it is proved, with \(\eta=1/100-\log(200/199)>0\) and a constant
 \(M_0=M_{199/200}<\infty\),
 
 \[
@@ -245,7 +251,7 @@ Allí se prueba, con \(\eta=1/100-\log(200/199)>0\) y una constante
  \le2M_0Xe^{-\eta X}\longrightarrow0.                    \tag{18}
 \]
 
-Defina \(x_{n,\varepsilon}=\lambda_{n,\varepsilon}+\log(n+1)\) y
+Define \(x_{n,\varepsilon}=\lambda_{n,\varepsilon}+\log(n+1)\) and
 
 \[
  \Delta_{X,\varepsilon}(B)
@@ -253,7 +259,7 @@ Defina \(x_{n,\varepsilon}=\lambda_{n,\varepsilon}+\log(n+1)\) y
  {\bf1}_{\{x_{n,\varepsilon}\le B\}}.              \tag{19}
 \]
 
-Para \(X\) grande, \(\delta_X<1\), y por tanto
+For large \(X\), \(\delta_X<1\), and therefore
 
 \[
  \boxed{
@@ -261,23 +267,23 @@ Para \(X\) grande, \(\delta_X<1\), y por tanto
  \le\Delta_X(B+1).}                                      \tag{20}
 \]
 
-Si \(B_X\) satisface (10), también lo hacen \(B_X\pm1\). El Teorema
-2.1 y (20) prueban
+If \(B_X\) satisfies (10), so do \(B_X\pm1\). Theorem
+2.1 and (20) prove
 
 \[
  \boxed{\mathrm {RH}\quad\Longleftrightarrow\quad
  \Delta_{X,\varepsilon_X}(B_X)\longrightarrow0.}        \tag{21}
 \]
 
-La afirmación es una equivalencia lógica de los dos criterios, no la falsa
-estimación
-\(\Delta_{X,\varepsilon_X}(B_X)-\Delta_X(B_X)\to0\): un indicador duro
-no es Lipschitz y puede tener masa exactamente en la transición. Las dos
-inclusiones con niveles \(B_X\pm1\), junto con el cuantificador «todo nivel
-que satisface (10)» del Teorema 2.1, son precisamente lo que evita ese
-salto ilegítimo.
+The statement is a logical equivalence of the two criteria, not the
+false estimate
+\(\Delta_{X,\varepsilon_X}(B_X)-\Delta_X(B_X)\to0\): a hard indicator
+is not Lipschitz and may have mass exactly at the transition. The two
+inclusions at levels \(B_X\pm1\), together with the "for every level
+satisfying (10)" quantifier of Theorem 2.1, are precisely what avoids
+that illegitimate jump.
 
-Finalmente,
+Finally,
 
 \[
  x_{n,\varepsilon_X}\le B_X
@@ -286,11 +292,12 @@ Finalmente,
  A_n+p_n(\varepsilon_X)+\log(n+1)-B_X,                    \tag{22}
 \]
 
-lo que prueba (3). Para cada \(X\), (4) converge absolutamente. El blanco
-(3) conserva polo, Gamma, primos y potencias primas dentro de una sola
-comparación firmada; solo después cuenta los grados que la violan.
+which proves (3). For each \(X\), (4) converges absolutely. The target
+(3) keeps the pole, Gamma, primes, and prime powers together in a
+single signed comparison; only afterward does it count the degrees
+that violate it.
 
-La variante aún más débil de (16b) tiene la forma aritmética
+The even weaker variant of (16b) has the arithmetic form
 
 \[
  \boxed{
@@ -301,9 +308,10 @@ La variante aún más débil de (16b) tiene la forma aritmética
  \right\}}\longrightarrow0.}                            \tag{22a}
 \]
 
-La equivalencia con RH sigue de (16b), pero, como el observable es un
-indicador duro, no basta comparar informalmente el error \(o(1)\) con el
-tamaño del umbral. Ponga \(S_X=e^{\sqrt X}\), y denote por
+The equivalence with RH follows from (16b), but, since the observable
+is a hard indicator, it is not enough to informally compare the error
+\(o(1)\) with the size of the threshold. Set \(S_X=e^{\sqrt X}\), and
+denote by
 
 \[
  \Omega_X(S)
@@ -311,8 +319,8 @@ tamaño del umbral. Ponga \(S_X=e^{\sqrt X}\), y denote por
  {\bf1}_{\{\lambda_n+\log(n+1)\le-S\}},
 \]
 
-y por \(\Omega_{X,\varepsilon_X}(S)\) la misma expresión con
-\(\lambda_{n,\varepsilon_X}\). Cuando \(\delta_X<1\), (18) da
+and by \(\Omega_{X,\varepsilon_X}(S)\) the same expression with
+\(\lambda_{n,\varepsilon_X}\). When \(\delta_X<1\), (18) gives
 
 \[
  \boxed{
@@ -321,43 +329,42 @@ y por \(\Omega_{X,\varepsilon_X}(S)\) la misma expresión con
  \le \Omega_X(S_X-1).}                                  \tag{22b}
 \]
 
-Bajo RH, \(\lambda_n\ge0\), y los tres eventos son vacíos para \(X\)
-grande. Si RH es falsa, use (13) sobre el conjunto \(D\), y fije
-\(K>1/\log R\). Para
-\(n\in D\cap[K\sqrt X,X]\), tanto \(S_X+1\) como \(S_X-1\) son
-despreciables frente a \(cR^n\). Por sumación parcial y la densidad natural
-\(d\) de \(D\),
+Under RH, \(\lambda_n\ge0\), and the three events are empty for large
+\(X\). If RH is false, use (13) on the set \(D\), and fix
+\(K>1/\log R\). For
+\(n\in D\cap[K\sqrt X,X]\), both \(S_X+1\) and \(S_X-1\) are
+negligible compared with \(cR^n\). By partial summation and the natural
+density \(d\) of \(D\),
 
 \[
  {1\over H_X}\sum_{\substack{K\sqrt X\le n\le X\\n\in D}}{1\over n}
  \longrightarrow {d\over2}>0.                           \tag{22c}
 \]
 
-Por tanto los dos extremos de (22b) tienen límite inferior positivo bajo
-no-RH, y el observable central tiende a cero si y solo si RH. Esto prueba
-rigurosamente el lift diagonal de (16b). Entre (3) y (22a), el segundo es
-el target aritmético lógicamente más débil.
+Therefore both ends of (22b) have positive lower limit under non-RH,
+and the central observable tends to zero if and only if RH holds. This
+rigorously proves the diagonal lift of (16b). Between (3) and (22a),
+the second is the logically weaker arithmetic target.
 
 ---
 
-## 4. Poissonización localizada del mismo gate
+## 4. Localized poissonization of the same gate
 
-Sea \(N_t\sim\mathrm{Pois}(t)\) y defina
+Let \(N_t\sim\mathrm{Pois}(t)\) and define
 
 \[
  \mathfrak P(t)=e^{-t}\sum_{n\ge1}{t^n\over n!}
  {1\over1+(n+1)e^{\lambda_n}}.                            \tag{23}
 \]
 
-**Teorema 4.1.** Se tiene
+**Theorem 4.1.** One has
 
 \[
  \boxed{\mathrm {RH}\quad\Longleftrightarrow\quad
  \mathfrak P(t)\longrightarrow0.}                        \tag{24}
 \]
 
-**Demostración.** Bajo RH, el sumando es a lo sumo \(1/(n+2)\), de
-modo que
+**Proof.** Under RH, the summand is at most \(1/(n+2)\), so that
 
 \[
  0\le\mathfrak P(t)
@@ -365,33 +372,33 @@ modo que
  ={1-e^{-t}\over t}\longrightarrow0.                     \tag{25}
 \]
 
-Suponga RH falsa y use el conjunto sindético \(D\) de (13), con huecos
-a lo sumo \(M_D\). Sobre \(D\), el sumando de (23) tiende uniformemente a
-uno en la cola. En la ventana
+Suppose RH false and use the syndetic set \(D\) of (13), with gaps at
+most \(M_D\). On \(D\), the summand of (23) tends uniformly to one in
+the tail. In the window
 
 \[
  J_t=[t-2\sqrt t,t+2\sqrt t]\cap\mathbb N,                \tag{26}
 \]
 
-la razón entre dos masas de Poisson separadas por a lo sumo \(M_D\) tiende
-uniformemente a uno. Parta \(J_t\) en bloques de \(M_D\) enteros y elija un
-elemento de \(D\) en cada bloque. Como
+the ratio between two Poisson masses separated by at most \(M_D\)
+tends uniformly to one. Split \(J_t\) into blocks of \(M_D\) integers
+and choose an element of \(D\) in each block. Since
 
 \[
  \mathbb P(N_t\in J_t)\ge {3\over4}                       \tag{27}
 \]
 
-por Chebyshev, y los dos fragmentos de borde tienen masa \(o(1)\), existe
-\(c_{M_D}>0\) tal que
+by Chebyshev, and the two edge fragments have mass \(o(1)\), there
+exists \(c_{M_D}>0\) such that
 
 \[
  \liminf_{t\to\infty}\mathbb P(N_t\in D)\ge c_{M_D}.   \tag{28}
 \]
 
-Por tanto \(\liminf\mathfrak P(t)\ge c_{M_D}>0\). \(\square\)
+Therefore \(\liminf\mathfrak P(t)\ge c_{M_D}>0\). \(\square\)
 
-La misma prueba, sustituyendo la logística por el indicador, da para
-cualquier \(B_t\to\infty\), \(B_t=o(\log t)\),
+The same proof, replacing the logistic function by the indicator,
+gives for any \(B_t\to\infty\), \(B_t=o(\log t)\),
 
 \[
  \boxed{
@@ -401,23 +408,23 @@ cualquier \(B_t\to\infty\), \(B_t=o(\log t)\),
  \longrightarrow0.}                                      \tag{29}
 \]
 
-En la dirección RH, el evento obliga a
-\(N_t\le e^{B_t}=t^{o(1)}\), cuya probabilidad tiende a cero. En la
-dirección contraria, el evento contiene \(D\cap J_t\) para \(t\) grande.
+In the RH direction, the event forces
+\(N_t\le e^{B_t}=t^{o(1)}\), whose probability tends to zero. In the
+opposite direction, the event contains \(D\cap J_t\) for large \(t\).
 
-### 4.1 Una sola diagonal Euler
+### 4.1 A single Euler diagonal
 
-Ponga
+Set
 
 \[
  K_t=\lceil2t\rceil,
  \qquad \varepsilon_t=e^{-K_t/100},                       \tag{30}
 \]
 
-y trunque (23) en \(1\le n\le K_t\), sustituyendo
-\(\lambda_n\) por \(\lambda_{n,\varepsilon_t}\). Llame al resultado
-\(\mathfrak P_{\rm diag}(t)\). De (18), aplicado con \(X=K_t\), y de la
-Lipschitzianidad \(1/4\) de la logística,
+and truncate (23) at \(1\le n\le K_t\), replacing
+\(\lambda_n\) by \(\lambda_{n,\varepsilon_t}\). Call the result
+\(\mathfrak P_{\rm diag}(t)\). From (18), applied with \(X=K_t\), and
+from the \(1/4\)-Lipschitz property of the logistic function,
 
 \[
  |\mathfrak P_{\rm diag}(t)-\mathfrak P(t)|
@@ -425,13 +432,13 @@ Lipschitzianidad \(1/4\) de la logística,
  +\mathbb P(N_t>K_t).                                     \tag{31}
 \]
 
-La cota de Chernoff
+The Chernoff bound
 
 \[
  \mathbb P(N_t\ge2t)\le(e/4)^t                            \tag{32}
 \]
 
-hace tender (31) a cero. Para el detector duro, defina
+makes (31) tend to zero. For the hard detector, define
 
 \[
  \mathfrak D_{\rm diag}(t,B)
@@ -440,7 +447,7 @@ hace tender (31) a cero. Para el detector duro, defina
  \tag{32a}
 \]
 
-Cuando el error uniforme de (18) es menor que uno,
+When the uniform error of (18) is less than one,
 
 \[
  \mathfrak D(t,B-1)-\mathbb P(N_t>K_t)
@@ -448,18 +455,18 @@ Cuando el error uniforme de (18) es menor que uno,
  \le\mathfrak D(t,B+1),                                  \tag{32b}
 \]
 
-donde \(\mathfrak D(t,B)\) denota la suma infinita de (29) con nivel
-\(B\). Como \(B_t\pm1\) sigue satisfaciendo las hipótesis de (29), también
-el detector duro diagonal es equivalente a RH. Así (24) y (29) admiten
-una suma exterior finita y una única serie Euler absolutamente convergente
-para cada \(t\).
+where \(\mathfrak D(t,B)\) denotes the infinite sum of (29) at level
+\(B\). Since \(B_t\pm1\) still satisfies the hypotheses of (29), the
+diagonal hard detector is also equivalent to RH. Thus (24) and (29)
+admit a finite outer sum and a single absolutely convergent Euler
+series for each \(t\).
 
 ---
 
-## 5. La transformada lineal de Bessel
+## 5. The linear Bessel transform
 
-La poissonización sí simplifica exactamente el **primer momento** del
-bloque prima--Laguerre. Para \(u>0\),
+Poissonization does exactly simplify the **first moment** of the
+prime--Laguerre block. For \(u>0\),
 
 \[
  \boxed{
@@ -467,16 +474,16 @@ bloque prima--Laguerre. Para \(u>0\),
  =e^t\sqrt{t\over u}\,J_1(2\sqrt{tu}).}                  \tag{33}
 \]
 
-El valor en \(u=0\) se entiende por continuidad. La identidad sigue al
-comparar las series
+The value at \(u=0\) is understood by continuity. The identity follows
+by comparing the series
 
 \[
  J_1(2\sqrt{tu})
  =\sum_{j\ge0}{(-1)^j(tu)^{j+1/2}\over j!(j+1)!}.         \tag{34}
 \]
 
-Para \(\varepsilon>0\), la convergencia absoluta permite intercambiar
-sumas y obtener
+For \(\varepsilon>0\), absolute convergence allows interchanging sums
+to obtain
 
 \[
 \boxed{
@@ -486,9 +493,9 @@ sumas y obtener
  J_1(2\sqrt{t\log m}).}                                  \tag{35}
 \]
 
-Aquí la convergencia necesaria para el intercambio no se deduce de una
-cancelación de Bessel. En efecto, poniendo \(u=\log m\), la expansión
-finita de Laguerre da
+Here the convergence needed for the interchange is not deduced from a
+Bessel cancellation. Indeed, setting \(u=\log m\), the finite Laguerre
+expansion gives
 
 \[
  \sum_{n\ge1}{t^n\over n!}|L_{n-1}^{(1)}(u)|
@@ -496,21 +503,21 @@ finita de Laguerre da
  \le C_t e^{2\sqrt{tu}}.
 \]
 
-Para todo \(\varepsilon>0\), la desigualdad
-\(2\sqrt{tu}\le(\varepsilon/2)u+2t/\varepsilon\) reduce entonces la
-doble serie absoluta a una constante por
-\(\sum_m\Lambda(m)m^{-1-\varepsilon/2}<\infty\). Por tanto (35) es una
-identidad legítima de series absolutamente convergentes, no una
-reordenación formal.
+For every \(\varepsilon>0\), the inequality
+\(2\sqrt{tu}\le(\varepsilon/2)u+2t/\varepsilon\) then reduces the
+absolute double series to a constant times
+\(\sum_m\Lambda(m)m^{-1-\varepsilon/2}<\infty\). Hence (35) is a
+legitimate identity of absolutely convergent series, not a formal
+rearrangement.
 
-El polo también se suma exactamente. De la definición binomial,
+The pole also sums exactly. From the binomial definition,
 
 \[
  p_n(\varepsilon)=1-\left(1-{1\over\varepsilon}\right)^n
  =1+(-1)^{n-1}\left({1-\varepsilon\over\varepsilon}\right)^n,
 \]
 
-y por ello
+and therefore
 
 \[
  \boxed{
@@ -518,38 +525,38 @@ y por ello
  =1-e^{-t/\varepsilon}.}                                  \tag{36}
 \]
 
-Las ecuaciones (35)--(36) dan una transformada lineal cerrada y
-completamente aritmética. No dan una cota para el indicador de (29): la
-operación \(x\mapsto{\bf1}_{x\le B}\), o su suavizado Fermi, se aplica
-**antes** de promediar.
+Equations (35)--(36) give a closed, fully arithmetic linear transform.
+They do not give a bound for the indicator of (29): the operation
+\(x\mapsto{\bf1}_{x\le B}\), or its Fermi smoothing, is applied
+**before** averaging.
 
 ---
 
-## 6. No-go exacto del primer momento
+## 6. Exact no-go for the first moment
 
-Considere el cuarteto racional
+Consider the rational quartet
 
 \[
  q_n=4-2\mathrm{Re}\,\{w^n+w^{-n}\},
  \qquad w=2i.                                             \tag{37}
 \]
 
-Su media lineal poissonizada tiene la fórmula exacta
+Its poissonized linear mean has the exact formula
 
 \[
 \boxed{
  e^{-t}\sum_{n\ge1}{q_nt^n\over n!}
- =4-2\mathrm{Re}\,\left{
+ =4-2\mathrm{Re}\,\left\{
  e^{(w-1)t}+e^{(w^{-1}-1)t}\right}\longrightarrow4.}    \tag{38}
 \]
 
-En cambio, con
+By contrast, with
 
 \[
  a_n^q={1\over1+(n+1)e^{q_n}},                            \tag{39}
 \]
 
-se tiene
+one has
 
 \[
  a_n^q\longrightarrow
@@ -559,23 +566,24 @@ se tiene
  \end{cases}                                              \tag{40}
 \]
 
-La fórmula de filtro de raíces de la unidad da
+The root-of-unity filter formula gives
 
 \[
  \mathbb P(N_t\equiv r\!\!\pmod4)
  ={1\over4}\sum_{j=0}^3i^{-rj}e^{t(i^j-1)}\longrightarrow{1\over4}. \tag{41}
 \]
 
-Por consiguiente,
+Consequently,
 
 \[
  \boxed{e^{-t}\sum_{n\ge1}{a_n^qt^n\over n!}
  \longrightarrow{1\over4}.}                              \tag{42}
 \]
 
-El gate extremadamente permisivo (16a) también rechaza el cuarteto. Para
-\(\alpha=1/2\), solo la clase \(n\equiv0\pmod4\) contribuye, y la condición
-se cumple desde \(n=(1/\log2+o(1))\sqrt X\). Por sumación armónica,
+The extremely permissive gate (16a) also rejects the quartet. For
+\(\alpha=1/2\), only the class \(n\equiv0\pmod4\) contributes, and the
+condition holds from \(n=(1/\log2+o(1))\sqrt X\) on. By harmonic
+summation,
 
 \[
  \boxed{
@@ -584,45 +592,46 @@ se cumple desde \(n=(1/\log2+o(1))\sqrt X\). Por sumación armónica,
  \longrightarrow{1\over8}.}                              \tag{42a}
 \]
 
-En efecto, los múltiplos de cuatro aportan
-\(\frac14\{\log X-\frac12\log X+O(1)\}\), y las otras tres clases no
-cruzan el umbral.
+Indeed, the multiples of four contribute
+\(\frac14\{\log X-\frac12\log X+O(1)\}\), and the other three classes
+do not cross the threshold.
 
-El contraste (38)/(42) es el falsificador solicitado: la primera media de
-Bessel es positiva, acotada y asintóticamente inocua, mientras un cuarto de
-los grados cruza la transición por una distancia exponencial. Por tanto
-ninguna inferencia Tauberiana basada **solo en una cota o una asintótica de
-esa primera media** puede llevar desde (35), o desde una continuación
-Nörlund--Rice lineal equivalente, hasta (29) sin una hipótesis unilateral
-adicional. Esto no afirma que la transformada completa, conocida exactamente
-para todo \(t\), pierda información: como toda transformada exponencial de
-una sucesión de crecimiento admisible, puede invertirse coeficiente a
-coeficiente. El no-go concierne precisamente al uso de primer orden.
+The contrast (38)/(42) is the requested falsifier: the first Bessel
+mean is positive, bounded, and asymptotically harmless, while one
+quarter of the degrees crosses the transition by an exponential
+distance. Therefore no Tauberian inference based **solely on a bound
+or an asymptotic of that first mean** can go from (35), or from an
+equivalent linear Nörlund--Rice continuation, to (29) without an
+additional one-sided hypothesis. This does not claim that the full
+transform, known exactly for every \(t\), loses information: like any
+exponential transform of a sequence of admissible growth, it can be
+inverted coefficient by coefficient. The no-go concerns precisely the
+first-order use.
 
-Esto no refuta una identidad no lineal nueva que actúe directamente sobre
-el bloque emparejado. Precisa cuál debe ser su salida: (3), o su versión
-poissonizada (29).
+This does not refute a new nonlinear identity acting directly on the
+paired block. It specifies what its output must be: (3), or its
+poissonized version (29).
 
 ---
 
-## 7. Veredicto
+## 7. Verdict
 
-**Probado:** el sandwich (7), el nivel móvil explícito (11), su lift
-diagonal exacto (21)--(22), el criterio poissonizado (24)/(29), la diagonal
-finita (31), la transformada de Bessel (35), el polo (36) y el falsificador
-(38)--(42).
+**Proved:** the sandwich (7), the explicit moving level (11), its
+exact diagonal lift (21)--(22), the poissonized criterion (24)/(29),
+the finite diagonal (31), the Bessel transform (35), the pole (36),
+and the falsifier (38)--(42).
 
-**Reducción real:** ya no hace falta controlar
-\(Q_{n,\varepsilon}-A_n-p_n(\varepsilon)\) con error \(O(1)\) para cada
-\(n\). La capa exacta es (3), pero para probar RH basta el target mucho más
-débil (22a): los sobrepasos mayores que \(e^{\sqrt X}\) deben ocupar
-densidad logarítmica cero.
+**Real reduction:** it is no longer necessary to control
+\(Q_{n,\varepsilon}-A_n-p_n(\varepsilon)\) with error \(O(1)\) for
+each \(n\). The exact layer is (3), but to prove RH the much weaker
+target (22a) suffices: overshoots larger than \(e^{\sqrt X}\) must
+occupy zero logarithmic density.
 
-**No-go:** la primera media lineal, aunque posea la identidad de Bessel
-exacta, no controla esa densidad. La pieza que falta es una desigualdad de
-gran desviación unilateral para la diferencia prima--polo completa, incluso
-al nivel extremadamente permisivo (22a). Una cota de segundo momento con
-la escala correcta, por ejemplo
+**No-go:** the first linear mean, even though it has the exact Bessel
+identity, does not control that density. The missing piece is a
+one-sided large-deviation inequality for the full prime--pole
+difference, even at the extremely permissive level (22a). A
+second-moment bound at the correct scale, for example
 
 \[
  {1\over H_X}\sum_{n\le X}{1\over n}
@@ -632,21 +641,21 @@ la escala correcta, por ejemplo
  =o(e^{2\sqrt X}),
 \]
 
-sería suficiente por Chebyshev, pero `104_63` prueba que
-Parseval/Christoffel--Darboux desnudo vuelve a exigir la misma cancelación
-firmada.
+would suffice by Chebyshev, but `104_63` proves that
+bare Parseval/Christoffel--Darboux again requires the same signed
+cancellation.
 
-**No probado:** (3), (29), A1 o RH.
+**Not proved:** (3), (29), A1, or RH.
 
 ---
 
-## 8. Reproducción
+## 8. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 poisson_logx_hard_transition_check.py
 ```
 
-El checker verifica (33), (36), (38), la equidistribución de las clases
-módulo cuatro, el límite Fermi del cuarteto y la aproximación al límite
-profundo \(1/8\) de (42a).
+The checker verifies (33), (36), (38), the equidistribution of the
+classes modulo four, the Fermi limit of the quartet, and the
+approximation to the deep limit \(1/8\) of (42a).

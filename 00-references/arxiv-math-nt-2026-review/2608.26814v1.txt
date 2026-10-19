@@ -1,0 +1,1952 @@
+                                                    TWO-POINT CORRELATIONS OF MULTIPLICATIVE
+                                                          FUNCTIONS WITH DENSE ORBITS
+
+                                                                                     NÉO TARDY
+
+
+
+
+                                                   Abstract. Let f, g : N → T be completely multiplicative functions with dense
+                                                   images in the complex unit circle T. We prove that, for every non-empty open
+                                                   set U ⊂ T2 , the set of integers n such that (f (n), g(n + 1)) ∈ U has positive
+arXiv:2608.26814v1 [math.NT] 27 Aug 2026
+
+
+
+
+                                                   lower logarithmic density, unless the pair (f, g) is of a special form. This result
+                                                   strengthens earlier theorems of Klurman and Mangerel, as well as of Charamaras,
+                                                   Mountakis, and Tsinas, and yields substantially simpler proofs.
+
+
+                                                                                 1. Introduction
+                                              Denote by M the set of completely multiplicative functions f : N → T such that
+                                           the image {f (n)}n is dense in the unit circle T = {z ∈ C : |z| = 1}. Let f ∈ M
+                                           and n ≥ 1. Then, Q f (n) is determined   by its values at prime divisors of n via the
+                                                                        α
+                                           relation f (n) = pα ||n f (p) . Similarly, let g ∈ M, then g(n + 1) is determined
+                                           by the values of g(p) for all primes p|n + 1. Since n and n + 1 are coprime, one
+                                           might expect f (n) and g(n+1) to behave independently. In particular, since the sets
+                                           {f (n)}n and {g(n + 1)}n are dense in T, one might expect the set {(f (n), g(n + 1))}n
+                                           to be dense in T2 , which was the subject of a conjecture of Daróczy and Kátai [2]
+                                           in 1989. However, this heuristic fails in general, and one can construct explicit
+                                           counterexamples.
+                                                • Let p be prime and α, β two irrational numbers. Define f, g ∈ M by f (p) =
+                                                  e(α), g(p) = e(β) and f (q) = g(q) = 1 for all prime q ̸= p. Then, for all
+                                                  integers n ≥ 1, either f (n) or g(n + 1) is equal to 1. We denote the set of
+                                                  such pairs (f, g) by F.
+                                                • Let t be a nonzero real number. Define f, g ∈ M by f (n) = g(n) = nit .
+                                                  Then, g(n + 1) = f (n) + o(1). We denote the set of such pairs (f, g) by G.
+                                                                     2
+                                                • Let (f, g) ∈ M such that there exist K1 , K2 ∈ N such that (f K1 , g K2 ) ∈
+                                                  F ∪G. By replacing K1 and K2 by K1 K2 , we can assume that K1 = K2 = K.
+                                                  If (f K , g K ) ∈ F, then for all integers n ≥ 1, either f (n) or g(n + 1) is a K-th
+                                                  root of unity. If (f K , g K ) ∈ G, then    for n sufficiently large, the distance
+                                                                                           m                                        1
+                                                  of g(n + 1) from the set {f (n)e K           : 0 ≤ m ≤ K − 1} is at most 3K         .
+                                                                                                                       2
+                                                  Consequently, in both cases, we have {(f (n), g(n + 1))}n ̸= T .
+                                           The following theorem due to Klurman and Mangerel [12] states that when the pair
+                                                      2
+                                           (f, g) ∈ M is not one of the above examples, then {(f (n), g(n + 1))}n = T2 .
+                                           Theorem A. Let f, g ∈ M such that for all K ≥ 1, (f K , g K ) ∈     / F. Assume that
+                                                                    2
+                                           {(f (n), g(n + 1))}n ̸= T , i.e. there exist z, w ∈ T and ε > 0 such that
+                                                                                 ∀x ≥ 1, A(x) = ∅,                                       (1.1)
+                                           where
+                                                   A(x) = A (z, w, ε; f, g; x) := {n ≤ x : |f (n) − z| , |g(n + 1) − w| ≤ ε} .
+                                                                                           1
+2                                      N. TARDY
+
+Then, there exist K1 , K2 ∈ N and a nonzero real number T such that f K1 (n) =
+g K2 (n) = niT .
+    Note that (1.1) may be written as dtop (A) = 0, where
+                                 dtop (A) := 1A(∞)̸=∅ .
+We prove a quantitative refinement of Theorem A by replacing the topological den-
+sity dtop (A) of A by the lower logarithmic density
+                                               1    X 1
+                           dlog (A) := lim inf          ,
+                                        x→+∞ log x    n
+                                                     n∈A(x)
+
+which is sensitive to the analytic structure of A.
+Theorem 1.1. The statement of Theorem A holds when one replaces (1.1) by
+                                     dlog (A) = 0.                                (1.2)
+Remark. Our proof of Theorem 1.1 significantly simplifies the proof of Theorem A
+in [12] by avoiding the use of Szemerédi’s theorem. Instead, we rely on elementary
+techniques involving only basic arithmetic.
+Remark. The statement of Theorem 1.1 remains valid when one considers the pair
+(f (an + b), g(cn + d)), where a, b ≥ 1 and c, d ≥ 0 are integers satisfying ad −
+bc ̸= 0. Indeed, the proof requires only a minor modification of the parameters,
+since the arithmetic structure of a, b, c, d affects only finitely many prime powers.
+More precisely, our definition of F suggests that, compared with the setting of
+Theorem 1.1, the only additional sources of rotation on T2 arise from the divisors of
+ad − bc. From this observation, it is not difficult to see that Theorem 1.1 implies the
+result of Charamaras, Mountakis, and Tsinas [1], which characterizes the integers
+a, b, c, d such that, for every completely multiplicative function f : N → T,
+                         lim inf |f (an + b) − f (cn + d)| = 0.
+                         n→+∞
+
+This in turn generalizes earlier results of Klurman and Mangerel [11], corresponding
+to a = c = d = 1 and b = 0, and of Donoso, Le, Moreira, and Sun [5, Corollary 1.7],
+corresponding to a = c and b = 0. Using ergodic methods, Leung and Táfula [14,
+Theorem 1.2] recently extended these results to arbitrary finite family of completely
+multiplicative functions.
+  As an immediate corollary of Theorem 1.1, we prove the following conjecture of
+De Koninck, Kátai and Phong [4], stated with the logarithmic density
+                                            1   X 1
+                         dlog (A) := lim                .
+                                    x→+∞ log x        n
+                                                     n∈A(x)
+
+Conjecture 1.2. The statement of Theorem A holds when one replaces (1.1) by
+                                     dlog (A) = 0.
+Corollary 1.3. Conjecture 1.2 is true.
+  It is easy to see that Theorem 1.1 implies Theorem A, since dlog ≤ dtop . More-
+over, let us justify the choice of the lower logarithmic density in the statement of
+Theorem 1.1 rather than another more natural analytic density. For instance, one
+may ask what happens when one considers the lower natural density
+                                              1 X
+                              d(A) := lim inf         1,
+                                        x→+∞ x
+                                                  n∈A(x)
+  TWO-POINT CORRELATIONS OF MULTIPLICATIVE FUNCTIONS WITH DENSE ORBITS 3
+
+or the natural density
+                                             1 X
+                              d(A) := lim        1.
+                                        x→+∞ x
+                                                   n∈A(x)
+It is also interesting to consider more sensitive densities such as the lower double-
+logarithmic density
+                                               1     X      1
+                      dloglog (A) := lim inf                     ,
+                                      x→+∞ log log x     n log n
+                                                        n∈A(x)
+
+or the double-logarithmic density
+                                             1     X    1
+                     dloglog (A) := lim                      .
+                                    x→+∞ log log x   n log n
+                                                       n∈A(x)
+
+Corollary 1.4. The statement of Theorem A holds when one replaces (1.1) by one
+of the following:
+    (1) d(A) = 0 ;
+    (2) dloglog (A) = 0 ;
+    (3) dloglog (A) = 0.
+Proof.     (1) If d(A) = 0, then dlog (A) exists and is equal to 0, hence we can apply
+       Corollary 1.3.
+   (2) It follows by partial summation that dloglog (A) ≥ dlog (A), hence we can apply
+       Theorem 1.1.
+   (3) This follows from (2).
+                                                                                    □
+   If one replaces (1.1) by d(A) = 0, it appears that the conclusion of Theorem A
+fails, as we prove in the following proposition.
+Proposition 1.5. There exists f ∈ M such that for all K ∈ N, (f K , f K ) ∈
+                                                                          / F ∪ G,
+and
+                                1    X
+                        lim inf                1 = 0.
+                         x→+∞ x
+                                     n≤x
+                                     |f (n)f (n+1)+1|≤ 13
+
+  By Proposition 1.5, Theorem 1.1 is false when one replaces (1.2) by
+                                      d(A) = 0.
+Thus, the use of the lower logarithmic density in the statement of Theorem 1.1 is
+motivated by the fact that it provides the strongest version of Theorem A among
+the standard analytic densities.
+   Finally, we prove two corollaries of our main theorem. The first corollary answers
+positively a conjecture of De Koninck, Kátai and Phong [3, Conjecture 4] in the case
+of completely multiplicative functions, and states that there is no example of f in
+Proposition 1.5 for which the limit inferior is a limit.
+Corollary 1.6. Let f : N → T be a completely multiplicative function such that
+there exist some w ∈ T and some ε > 0 such that
+                                1       X       1
+                        lim inf                   = 0.
+                         x→+∞ log x             n
+                                        n≤x
+                                      |f (n)f (n+1)−w|≤ε
+
+Then, there exist K ≥ 1 and t ∈ R such that f K (n) = nit for all n ∈ N.
+4                                        N. TARDY
+
+Corollary 1.7. Let f, g : N → T be two completely multiplicative functions. Assume
+that
+                              1 X |f (n) − g(n + 1)|
+                      lim inf                           = 0.
+                       x→+∞ log x            n
+                                  n≤x
+
+Then, f (n) = g(n) = nit for some t ∈ R.
+Structure of the paper. In order to prove Theorem 1.1, we rely on the following
+guiding principle: a multiplicative function f : N → T is either close to some nit ,
+for t ∈ R (we say that f is pretentious), in which case it behaves like the structured
+function nit , or it is close to none of the nit (we say that f is non-pretentious), in
+which case it behaves like a random function. In the pretentious case, the position
+of f (n) on T can be controlled through the size of n. In the non-pretentious case, we
+exploit the arithmetic structure of the integers to rotate f (n) towards a prescribed
+direction (this is called the rotation trick, and was introduced by Klurman, Man-
+gerel, Pohoata and Teräväinen in [10]). This P    philosophy is motivated by P   Halász’s
+theorem, which asserts that the mean value x1 n≤x f (n) of f is close to x1 n≤x nit
+if f is close to some nit , and tends to 0 otherwise. This theorem is one of the cor-
+nerstones of pretentious multiplicative number theory, developed by Granville and
+Soundararajan in [6]. We make an extensive use of tools from pretentious theory,
+which we collect in Section 2.
+   In Section 3, we establish a few technical lemmas on the distribution of multi-
+plicative functions on the unit circle.
+   In Sections 4 and 5, we prove Theorem 1.1. In Section 4, we first reduce to the
+case where f K1 and g K2 are both pretentious for some integers K1 , K2 ≥ 1. We then
+complete the proof in the pretentious setting in Section 5. To this end, we assume,
+without loss of generality, that f K1 is close to nit but is not equal to it. In particular,
+there exists a prime p such that f (p) ̸= pit , and its powers provide an independent
+source of density, ultimately leading to a contradiction.
+   In Section 6, we prove Proposition 1.5, establishing the limits of possible general-
+izations of Theorem A.
+   Finally, in Section 7, we prove Corollaries 1.6 and 1.7.
+
+Notation. We denote by D (resp. T) the closed unit disk (resp. unit circle) of C.
+We write the elements of T as e(θ) := e2πiθ , where θ ∈ R. Let K ≥ 1. We denote by
+µK := {z ∈ C : z K = 1} the set of K-th roots of unity. Let z ∈ T and ρ ∈ (0, π], we
+write Bρ (z) ⊂ T for the open arc of length 4πρ with center z.
+   Throughout this paper, M denotes the set of multiplicative functions f : N → D.
+We denote by M the subset of completely multiplicative functions f : N → T whose
+images are dense in T.
+   If χ is a Dirichlet character mod q, we associate the T-valued completely multi-
+plicative function χe by replacing all its zero values at primes with 1:
+                                          (
+                                            1       if p|q,
+                              ∀p, χ
+                                  e(p) =
+                                            χ(p) if p ∤ q.
+  We use the standard Vinogradov notation ≪, ≫ and ≍.
+  Let n ≥ 1, we denote by P − (n) (resp. P + (n)) the minimal (resp. maximal) prime
+factor of n, with the convention that P − (1) = 1 (resp. P + (1) = 0).
+
+Acknowledgments. I am grateful to Oleksiy Klurman who introduced me to pre-
+tentious theory and guided me throughout this project. I would also like to thank
+  TWO-POINT CORRELATIONS OF MULTIPLICATIVE FUNCTIONS WITH DENSE ORBITS 5
+
+Besfort Shala for our insightful conversations. Finally, I thank the University of
+Bristol for providing excellent working conditions.
+                    2. Background in pretentious theory
+   In the proof of Theorem 1.1, we interpret the condition f (n) ∈ Bε (z) through the
+lens of pretentious theory. To be able to apply Halász-type theorems stated later in
+this section, we first need to approximate the indicator function of an arc of T by a
+Fourier series.
+Lemma 2.1. Let ε ∈ (0, 13 ) and δ ∈ 0, 2ε . Then for all z, u ∈ T such that uz ∈
+                                            
+                                                                                    /
+Bδ (e (±ε)), and X ≥ 1, we have
+                                   X sin (2πnε)  u n         
+                                                              1
+                     1Bε (z) (u) =                     +O
+                                         πn       z          δX
+                                 |n|≤X
+
+with the convention that for n = 0, sin (2πnε)
+                                            πn
+                                                 = 2ε.
+Proof. By replacing (z, u) with 1, uz , we may assume that z = 1. For n ∈ Z, write
+                                        
+
+cn 1Bε (1) the Fourier coefficients of 1Bε (1) . Then,
+                                      Z ε
+                                                       sin (2πnε)
+                        cn 1Bε (1) =       e (−ns) ds =            .
+                                       −ε                   πn
+It follows from the Dirichlet–Jordan test that
+                             X                     X sin (2πnε)
+                                  cn 1Bε (1) un =                 un + R,
+                                            
+               1Bε (1) (u) =
+                             n∈Z
+                                                            πn
+                                                |n|≤X
+
+where
+                                 2 X sin (2πnε) cos (2πnθ)
+                          R :=                             ,
+                                 π n>X         n
+with u = e(θ) (|θ| ≤ 12 and θ ∈
+                              / [−ε − δ, −ε + δ] ∪ [ε − δ, ε + δ]). By summation by
+parts, we have
+        1 X                              X 1 X
+  R≪             sin (2πnε) cos (2πnθ) +                sin (2πnε) cos (2πnθ). (2.1)
+        X 1≤n≤X                          N >X
+                                              N 2 1≤n≤N
+In addition, for all x ≥ 1, we have
+   X                             1 X
+        sin (2πnε) cos (2πnθ) =          (sin (2πn (θ + ε)) − sin (2πn (θ − ε))) . (2.2)
+  1≤n≤x
+                                 2 1≤n≤x
+
+Note that for all 0 < |α| ≤ 16 , we have
+  X                       −1       X                                             1
+       sin (2πnα) =                     (cos (2π(n + 1)α) − cos (2π(n − 1)α)) ≪     ,
+ 1≤n≤x
+                     2 sin (2πα)  1≤n≤x
+                                                                                |α|
+
+and that for all 61 < |α| < 56 , writing α = 12 + η, we have
+  X                    X
+      sin (2πnα) =         (−1)n sin (2πnη)
+ 1≤n≤x                1≤n≤x
+                            1      X
+                  =                     (−1)n−1 (cos (2π(n + 1)η) − cos (2π(n − 1)η))
+                      2 sin (2πη) 1≤n≤x
+                     1
+                  ≪     (|cos (2π (⌊x⌋ + 1) η) − cos (2π⌊x⌋η)| + |cos (2πη) − 1|)
+                    |η|
+                  ≪ 1.
+6                                              N. TARDY
+
+We deduce that (2.2) is
+                                            1       1     1
+                                     ≪          +        ≪ ,
+                                         |θ + ε| |θ − ε|  δ
+           1
+hence R ≪ δX by (2.1).                                                                            □
+  We now introduce some tools from pretentious multiplicative number theory. We
+recall the basic notions and refer to [6] for further details. Let x ∈ [1, ∞], we define
+the pretentious distance up to x on the set M of multiplicative functions taking
+values in the unit disk as follows:
+                                     X 1 − R(f (p)g(p))
+                     D2 (f, g; x) :=                      ∈ [0, ∞].
+                                     p≤x
+                                                p
+
+It satisfies the triangle inequalities
+                                D(f, h; x) ≤ D(f, g; x) + D(g, h; x)
+and
+                          D(f1 f2 , g1 g2 ; x) ≤ D(f1 , g1 ; x) + D(f2 , g2 ; x).
+The latter inequality is sometimes called the second triangle inequality. Another
+important property is that, if F denotes the Dirichlet series associated with f , then
+for all x ≥ 2 and t ∈ R, we have
+                                        ∞
+                                              f (2k )
+                         
+                  1                   X
+                                                            exp −D2 (f, nit ; x) .
+                                                                                
+         F 1+         + it ≍ (log x)              1
+                log x                       (1+ log x +it)k
+                                       k=0 2
+
+Let 1 ≤ y ≤ x, we also define
+                                                  X 1 − R(f (p)g(p))
+                            D2 (f, g; y, x) :=                               .
+                                                 y<p≤x
+                                                                  p
+
+Definition 2.2. Let f, g ∈ M. We say that f pretends to g if D(f, g; ∞) < ∞. We
+say that f is pretentious 1 if there exist a Dirichlet character χ and a real number t
+such that f pretends to χnit . Otherwise, we say that f is non-pretentious. Finally,
+we say that f is pseudo-pretentious if there exists a positive integer k such that f k
+is pretentious. Otherwise, we say that f is non-pseudo-pretentious.
+    We will use the following version of Halász’s theorem in arithmetic progressions.
+Lemma 2.3. Let f : N → D be completely multiplicative and non-pretentious, and
+1 ≤ a ≤ Q such that (a, Q) = 1. Then,
+                             1X
+                                   f (Qn + a) = o(1).
+                             x n≤x
+
+In particular,
+                                      1 X f (Qn + a)
+                                                     = o(1).
+                                    log x n≤x n
+
+Proof. See e.g. [6, Theorem 2.3.4] for the first estimate. Apply partial summation
+to obtain the second estimate.                                                   □
+    1In this paper, a pretentious function is a function that pretends to some χnit . This notion may
+vary in other contexts.
+  TWO-POINT CORRELATIONS OF MULTIPLICATIVE FUNCTIONS WITH DENSE ORBITS 7
+
+   We now focus on non-asymptotic tools in pretentious theory. The idea is that a
+pretentious multiplicative function f may still be at large distance from all functions
+of the form χnit , where χ has bounded period and t is bounded. In this case, averages
+of f are small, although they do not necessarily tend to 0.
+Definition 2.4. Let x ≥ A ≥ 1, say that f is (A, x)-non-pretentious if for all
+Dirichlet characters χ of period ≤ A and for all |t| ≤ Ax, we have D(f, χnit ; x) ≥ A.
+  The next lemma, due to Tao [15, Theorem 1.3], is the key result that gives us
+access to two-point correlations. It can be viewed as a non-asymptotic version of
+Lemma 2.3 for two-point correlations.
+Lemma 2.5. Let Q1 , Q2 , a1 , a2 ∈ N be such that a2 Q1 − a1 Q2 ̸= 0, and ε > 0. Then,
+there exists A0 = A0 (Q1 , Q2 , a1 , a2 , ε) ≥ 2 such that for all x ≥ A ≥ A0 and for all
+multiplicative functions f, g : N → D such that g is (A, x)-non-pretentious, we have
+                         1 X f (Q1 n + a1 )g(Q2 n + a2 )
+                                                         ≤ ε.
+                       log x n≤x          n
+
+  In the next Lemma, we prove that if f is a multiplicative function such that a
+power of f is pretentious, then all the other powers of f that do not divide k are
+non-pretentious in a non-asymptotic sense.
+Lemma 2.6. Let f : N → T be a multiplicative function such that there exist a
+completely multiplicative function h, a minimal integer k ≥ 1, a Dirichlet character
+χ mod q, and a real number t ∈ R satisfying hk = χ        e and D (f, hnit ; ∞) < ∞.
+Let m ∈ N be such that k ∤ m. Then, there exists A0 ≥ 1 such that for every
+A ≥ A0 , there exists x0 ≥ A such that for all x ≥ x0 , the function f m is (A, x)-non-
+pretentious. Moreover, A0 and x0 may be chosen independently of m.
+Proof. Let us first show that it suffices to prove the lemma in the cases f = hc , for
+every 1 ≤ c ≤ k − 1. Indeed, assume that the lemma is true in these cases, and
+assume for the sake of contradiction that f m is not (A, x)-non-pretentious for some
+arbitrarily large A and some arbitrarily large xA ≥ (m + 2) A. Then,   there exist a
+            ′                      ′                      m   ′ it′
+character χ of period ≤ A and |t | ≤ AxA such that D f , χ n ; xA < A. Writing
+m = kd + c, where 1 ≤ c ≤ k − 1, the second triangle inequality gives
+                                                                            
+          c   ′ it′   itk −d              m   ′ it′          −kd     itk −d
+                                                                       
+     D f , χ n χn            ; xA ≤ D f , χ n ; xA + D f , χn               ; xA
+                                  < (m + 1)A,
+since by another application of the second triangle inequality, we have
+                                                 
+         −kd     itk −d             kd    itk d
+                                                ; xA ≤ kdD f, hnit ; xA ≤ mA,
+                                                                      
+    D f , χn            ; xA = D f , χn
+
+where we took A ≥ kD (f, hnit ; ∞). Noting that D (f c , hc nitc ; xA ) ≤ A, we deduce
+by the triangle inequality that
+                                                
+                         c itc  ′ it′ itk −d
+                                         
+                    D h n , χ n χn           ; xA < (m + 2) A.
+
+Note that χ′ χ−d is a Dirichlet character of period ≤ (m + 2) A and |t′ − tm| ≤
+(m + 2) AxA by taking A ≥ |t|. Since the above inequalities hold for all sufficiently
+large A and xA , this contradicts the lemma for hc .
+   From now on, fix 1 ≤ c ≤ k − 1 and consider the case f = hc . Let A ≥ 1
+be sufficiently large, x ≥ A sufficiently large, χ′ a Dirichlet character of period
+3 ≤ q ′ ≤ A and |t′ | ≤ Ax. Note that hc takes values in µK , where K := kφ(q).
+8                                       N. TARDY
+
+  First, suppose that |t′ | > K3 . The second triangle inequality gives
+                       
+                            c   ′ it′
+                                            1      ′ K it′ K
+                                                                  
+                    D h , χ n ; x ≥ D 1, (χ ) n ; x .                     (2.3)
+                                            K
+Now, the Vinogradov-Korobov zero-free region for Dirichlet L-functions (see [8,
+Lemma 5.1]) yields
+                                              
+                              1       ′      K
+                 L 1+             + it K, χ′     ≪ log2/3 |t′ K| + log A.
+                           log x
+Taking x sufficiently large, it follows that
+                                                                            
+        
+              ′ K it′ K
+                                                        1               K
+      2
+    D 1, (χ ) n ; x ≥ log log x − log L 1 +                  + it′ K, χ′         − O(1)
+                                                       log x
+                                1
+                            ≥     log log x − O(1),
+                                4
+hence by (2.3), we have
+                                        ′
+                                              p
+                            D hc , χ′ nit ; x ≫ log log x.
+
+   Suppose now that |t′ | ≤ K3 . If
+                           
+                                    K     ′
+                                               1
+                         D 1, (χ′ ) nit K ; x ≥ D (hc , 1; x)                             (2.4)
+                                                C
+for some fixed constant C > 0, then we apply (2.3) to obtain
+                                           
+                                     ′ it′
+                                  c
+                           D h , χ n ; x ≫ D (hc , 1; x) .
+
+Suppose that (2.4) does not hold. Assume furthermore that χ′ is non-principal. By
+[6, Lemma 3.1.1], we have
+                             ′
+                                                             ′
+                                                                   
+                          K
+               D2 1, (χ′ ) nit K ; x ≍ log log x ≍ D2 1, χ′ nit ; x .
+As a consequence,
+                                            ′
+                                                             ′
+                                                                    
+                D (hc , 1; x) ≤ D hc , χ′ nit ; x + D 1, χ′ nit ; x
+                                                                    
+                                    c     ′ it′              ′ K it′ K
+                              ≪ D h , χ n ; x + D 1, (χ ) n ; x ,
+
+hence taking C sufficiently large, we obtain by (2.4),
+                                        
+                                   ′ it′
+                           D h , χ n ; x ≫ D (hc , 1; x) .
+                                c
+
+
+Finally, in all cases, we have
+                                  
+                             ′ it′
+                     D h , χ n ; x + log log log A ≫ D (hc , 1; x) ,
+                          c
+
+
+where if χ′ is principal, this is a consequence of [12, Lemma 3.1] and
+                                X1
+                                       = O (log log log A) .
+                                   ′
+                                     p
+                                p|q
+
+It remains to prove that D (hc , 1; x) ≥ C ′ A for some fixed large constant C ′ , and for
+some large x. Since x can be chosen sufficiently large depending on A, it suffices
+to show that D (hc , 1; ∞) = ∞. Indeed, if it were false, this would contradict the
+minimality of k.                                                                        □
+  TWO-POINT CORRELATIONS OF MULTIPLICATIVE FUNCTIONS WITH DENSE ORBITS 9
+
+   Finally, we state a concentration inequality for pretentious functions. Roughly
+speaking, it asserts that whenever f pretends to χnit , the values of f (n) are, on
+average, well approximated by χnit , provided that n is restricted to a suitable arith-
+metic progression. The need for such a restriction arises from the fact that we view
+this concentration inequality as a multiplicative analogue of the Turán–Kubilius in-
+equality, which asserts that, on average, f is close to its mean over a prescribed set
+of integers. Since the mean value of f is expected to be close to that of χnit , it is
+convenient, in order to retain the information carried by χ, to restrict the summa-
+tion to arithmetic progressions of the form n = Qm + a, where the modulus of χ
+divides Q.
+Lemma 2.7. Let f : N → T be a multiplicative function such that there exist a
+                                                                     it
+                                                        Q D(f, χn ; ∞) < ∞. Let
+Dirichlet character χ mod q and a real number t such that
+y ≥ 1, and 1 ≤ a ≤ Q such that (Q, a) = 1 and q, p≤y p|Q, then for Y ≥ 3
+sufficiently large depending on the other parameters, we have
+       1 X |f (Qn + a) − χ(a)(Qn)it exp (F (Q, Y ))|                           1
+                                                       ≪ D(f, χnit ; y, Y ) + √ ,
+     log Y n≤Y                    n                                             y
+where
+                                         X f (p)χ(p)p−it − 1
+                          F (Q, Y ) :=                         .
+                                         p≤Y
+                                                   p
+                                          p∤Q
+
+Proof. This follows from [10, Lemma 2.5].                                            □
+
+3. Technical lemmas on the distribution of multiplicative functions
+                         on the unit circle
+  In the first lemma of this section, we prove an equidistribution result for non-
+pseudo-pretentious multiplicative functions on an arithmetic progressions.
+Lemma 3.1. Let f be a non-pseudo-pretentious multiplicative function taking values
+in T, and let I ⊂ T be an arc. Then, for all 1 ≤ a ≤ Q such that (a, Q) = 1, we
+have
+                            1    X 1              |I|
+                                           −−−−→      .
+                          log x n≤x n x→+∞ 2π
+                                  f (Qn+a)∈I
+
+Proof. By Weyl’s criterion and Halász’s theorem in arithmetic progressions (Lemma 2.3),
+we have
+                      1                                    |I|
+                        #{n ≤ x : f (Qn + a) ∈ I} −−−−→        ,
+                      x                              x→+∞ 2π
+hence the lemma follows by partial summation.                                    □
+   In contrast with what happens for non-pseudo-pretentious functions, partial sums
+of the multiplicative function nit does not exhibit cancellation. Thus, we cannot
+apply Weyl’s criterion. However, one may take advantage of the structure of nit ,
+that allows us to access the position of nit on the unit circle from the size of n.
+Lemma 3.2. Let t be a nonzero real number, δ ∈ 0, min |t| , 31 , z ∈ T and Y ≥ Y0
+                                                                  
+for some Y0 = Y0 (t, δ) ≥ 2. Then,
+                                  X 1
+                                           ≍t δ log Y.
+                                  n≤Y
+                                         n
+                                nit ∈Bδ (z)
+10                                                     N. TARDY
+
+Proof. Assume, without loss of generality, that t > 0. Set E := e2π/t . Let C be a
+large constant depending only on t and δ, write by an E-adic decomposition,
+              X 1                                                 
+                               X       1    X                 log n
+                     ≍t                            1Bδ (z) e           .
+              n≤Y
+                   n     log C   log Y
+                                       Ek k    k+1
+                                                              log E
+                                       <k≤ log E            E <n≤E
+                               log E
+             nit ∈Bδ (z)
+
+If n ∈ E k , E k+1 , then we have loglog
+                                      (n+1)      log n         1        t
+                                                                           < 2δ and loglog
+                                                                                         (n+1)
+                   
+                                         E
+                                               − log  E
+                                                          ≤ n log E
+                                                                    ≤ 2πC                  E
+                                                                                               −
+                                                                                  
+ log n                                                                        log n
+       ≍t E1k , hence the set of n ∈ E k , E k+1 such that 1Bδ (z) e log
+                                                  
+log E                                                                             E
+                                                                                       = 1 is an
+                          
+interval Ik ⊂ E k , E k+1 of length ≍t δE k . We deduce that
+                            X 1                 X
+                                    ≍t δ                  1 ≍t δ log Y,
+                            n≤Y
+                                  n       log C     log Y
+                                                        log E
+                                                                <k≤ log E
+                           nit ∈Bδ (z)
+
+provided that Y is sufficiently large in terms of t and δ.                                                             □
+                                        2
+Lemma 3.3. Let (t1 , t     2 ) ∈ R be nonzero and linearly independent over Q. For
+                           1
+δ ∈ 0, min |t1 | , |t2 | , 3 , z, w ∈ T and Y ≥ 2 sufficiently large depending on t1 , t2
+and δ, we have
+                                          X              1
+                                                           ≫t1 ,t2 δ 2 log Y.
+                                          n≤Y
+                                                         n
+                             (nit1 ,nit2 )∈Bδ (z)×Bδ (w)
+Proof. Taking conjugates of z and w if necessary, we can assume without loss of
+generality that t1 , t2 > 0. Write z = e (θ1 ) and w = e (θ2 ) (|θ1 | , |θ2 | ≤ 21 ), and define
+                                                                             
+                                ∃k ∈ Z, log n − 2πθ1 − 2πk < 2πδ 
+                                                       t1      t1         t1
+            A(Y ) := n ≤ Y :                                                        .
+                                ∃ℓ ∈ Z, log n − 2πθ2 − 2πℓ < 2πδ 
+                                                      t2      t2         t2
+
+Then                                            X                   1   X 1
+                                                                      =     .
+                                                n≤Y
+                                                                    n     n
+                                                                            n∈A(Y )
+                          (nit1 ,nit2 )∈Bδ (z)×Bδ (w)
+Set y := tt12 ∈ R\Q and x0 := tt21 θ1 − θ2 , and define
+                                                                                  
+                       t1                                              δ
+       B(Y ) := k ≤       (log Y − θ1 − δ) : d (ky − x0 , Z) < t2                    .
+                       2π                                         2 max (t1 , t2 )
+Then,
+         X 1         X                                  X                          1
+                  ≥
+                n                                                           n
+        n∈A(Y )        k∈B(Y ) exp
+                                 2πθ          1 + 2πk −     2πθ
+                                                            2πδ
+                                                                          ≤n≤exp           1 + 2πk +     2πδ
+                                         t1        t1   2 max (t1 ,t2 )               t1        t1   2 max (t1 ,t2 )
+
+                   ≫t1 ,t2 δ |B(Y )| .
+
+Indeed, if log n − 2πθ
+                    t1
+                       1
+                         − 2πk
+                            t1
+                               < 2 max2πδ
+                                       (t1 ,t2 )
+                                                 for some k ∈ B(Y ), then let ℓ ∈ Z be
+such that |ky − x0 − ℓ| < t2 2 maxδ(t1 ,t2 ) , we have
+                  2πθ2 2πℓ       2πδ               θ2 θ1  k  ℓ    2πδ
+        log n −       −    ≤                  + 2π    − + −     ≤     .
+                   t2   t2   2 max (t1 , t2 )      t2  t1 t1 t2    t2
+Next, write B(Y ) = {k ≤ X : d (ky − x0 , Z) < η} for simplicity. It remains to prove
+that B(Y ) ≫ ηX. This follows from the fact that y is irrational, since an irrational
+rotation is equidistributed on the unit circle by Weyl’s criterion.                □
+  TWO-POINT CORRELATIONS OF MULTIPLICATIVE FUNCTIONS WITH DENSE ORBITS 11
+
+                   4. Reduction to the pretentious case
+  Let f and g be as in Theorem 1.1. In what follows, all the implicit constants may
+depend on z, w, f and g. Without loss of generality, we assume that ε is sufficiently
+small depending on these quantities.
+  By hypothesis, we can consider an infinite set N ⊂ N such that
+                                     1   X 1
+                              lim                = 0.
+                             x→+∞ log x        n
+                              x∈N              n∈A(x)
+
+  In the next proposition, we exclude the case when exactly one of the functions f
+and g is pseudo-pretentious.
+Proposition 4.1. The functions f and g are either both non-pseudo-pretentious or
+both pseudo-pretentious.
+Proof. Assume, for the sake of contradiction, and without loss of generality, that
+g is non-pseudo-pretentious and that there exists a minimal positive integer k, a
+completely multiplicative function h : N → T such that hk = χ      e, where χ is a
+Dirichlet character mod q, and a real number t , such that D (f, hnit ; ∞) < ∞.
+  Let 1 ≤ y ≤ Y with y (resp. Y ) sufficiently large in terms of ε−1 (resp. y). The
+dependence between the parameters may be summarized as follows:
+                      z, w, f, g, h, k, t, χ, q ≪ ε−1 ≪ y ≪ Y.
+   Set W1 := 2q p≤y p, and take an integer W2 ≥ 1 such that P + (W2 ) ≤ y, which
+                 Q
+
+depends at most on y and the underlying quantities. We take y such that P + (q) ≤ y.
+For ℓ ≥ 1, define nℓ = W ′ ℓ + n0 := W2 W1 (W1 ℓ + 1). By the pigeonhole principle,
+there exists an integer R ∈ [n0 , n0 + W ′ − 1] such that for infinitely many integers
+Y ≥ 1, we have W ′ Y +R ∈ N . From now on, Y is supposed to satisfy this condition.
+   Take y and Y sufficiently large, and apply Lemma 2.7 to the pretentious multi-
+plicative function f h to obtain
+                                          it                    7
+     1 X f (W1 ℓ + 1) − h(W1 ℓ + 1) (W1 ℓ) exp (iI(y, Y ) + O (ε ))
+                                                                    ≤ ε6 ,       (4.1)
+   log Y ℓ≤Y                         ℓ
+
+where                                                     
+                                                       −it
+                                        X I f (p)h(p)p
+                         I(y, Y ) :=                           .
+                                       y<p≤Y
+                                                        p
+
+By a compactness argument, restricting Y to belong to an increasing subsequence
+(Yj )j≥1 (which depends on y), we can assume that exp (iI(y, Yj )) → γ for some
+γ ∈ T depending on y. Then, for j sufficiently large in terms of y and the underlying
+quantities, we have exp (iI(y, Yj )) = γ + O (ε7 ), hence (4.1) yields
+                                                      it
+                 1 X f (W1 ℓ + 1) − h(W1 ℓ + 1) (W1 ℓ) γ
+                                                         ≤ 2ε6 .
+               log Yj ℓ≤Y             ℓ
+                        j
+
+
+Now, define
+                n                                                    o
+           Ij := ℓ ≤ Yj : f (W1 ℓ + 1) − h(W1 ℓ + 1) (W1 ℓ)it γ ≤ 2ε3 .
+12                                                           N. TARDY
+
+Then, by Rankin’s trick, we have
+                                                                it
+       1 X1            1     X f (W1 ℓ + 1) − h(W1 ℓ + 1) (W1 ℓ) γ
+                  ≤ 3                                              ≤ ε3 .                      (4.2)
+     log Yj ℓ≤Y ℓ  2ε log Yj ℓ≤Y                ℓ
+                  j                              j
+           ℓ∈I
+            / j
+
+In addition, for all ℓ ∈ Ij , we have
+                          f (nℓ ) = f (W2 )f (W1 )h(W1 ℓ + 1)W1it γℓit + O ε3 .
+                                                                             
+
+By density of {f (n)}n , let us choose W2 such that f (W2 ) = zf (W1 )W1it γ + O(ε3 ).
+This is possible despite the restriction P + (W2 ) ≤ y, since we can take y sufficiently
+large so that there exists a prime p ≤ y such that the set {f (pn )}n≥1 is at distance
+at most ε3 from every point of T. Thus, it suffices to fix such a p, take W2 = pn ,
+and choose n in terms of W1 , f and t. Therefore,
+                           f (nℓ ) = zh(W1 ℓ + 1)ℓit + O ε3 .
+                                                            
+                                                                                   (4.3)
+Next, define
+                                                                               
+                                
+                                            / A (W ′ Yj + R)
+                                         n ℓ ∈                                  
+                                                                                 
+                          Ij′ := ℓ ∈ Ij : ℓit ∈            ε
+                                                             
+                                              / Bε3 e ± 10                           .
+                                                    / B 3 we ± ε
+                                
+                                        
+                                         g(n + 1) ∈                           
+                                                                                 
+                                                             ℓ          ε   10
+
+By the union bound, Lemma 3.2 and (4.2), we have
+    1 X1         1      X       1
+              ≤
+  log Yj ℓ≤Y ℓ log Yj   ℓ≤Y
+                                ℓ
+              j                              j
+           / j′
+          ℓ∈I                       nℓ ∈A(W ′ Yj +R)
+
+                                 1      X 1 X
+                                                                                             3
+                                                                                               
+                           +                             1           ε    (g(n ℓ + 1)) + O ε     .
+                               log Yj 0≤r≤log Y er r      Bε3 ( we( 10 ))
+                                                                   ±
+                                                     r+1
+                                                     j       e ≤ℓ≤e
+
+Take j sufficiently large in terms of W ′ and ε. Using Lemma 3.1, we deduce that
+      1 X1              W′      X       1
+                  ≪
+    log Yj ℓ≤Y ℓ      log Yj      ′
+                                       n
+                      j                 n∈A(W Yj +R)
+             / j′
+            ℓ∈I
+
+                                  1      X 1 X                                                 (4.4)
+                            +                          1           ε    (g(nℓ + 1)) + ε3
+                                log Yj 0≤r≤log Y er r+1 Bε3 (we(± 10 ))
+                                                         j       ℓ≤e
+                                3
+                          ≪ε ,
+since W ′ Yj + R ∈ N .
+   Set
+                                       it
+                      1 X 1B 10ε (1) (ℓ ) 1h(W1 ℓ+1)=1 1B 10ε (w) (g(nℓ + 1))
+              Sj :=                                                           .
+                    log Yj ′
+                                                    ℓ
+                                      ℓ∈Ij
+
+Recalling (4.3) and the definition of A (W ′ Yj + R), since ε is assumed to be suffi-
+ciently small, note that Sj = 0. Now, by definition of Ij′ and applying Lemma 2.1,
+as well as the identity
+                                                    kφ(q)−1
+                                                 1   X
+                                1h(W1 ℓ+1)=1 =              hb (W1 ℓ + 1),
+                                               kφ(q) b=0
+  TWO-POINT CORRELATIONS OF MULTIPLICATIVE FUNCTIONS WITH DENSE ORBITS 13
+
+which follows from the fact that h(W1 ℓ + 1) ∈ µkφ(q) , we obtain for X ≥ 1,
+          X kφ(q)−1
+                 X sin 2πa ε sin 2πc ε
+                                                
+                               10             10      1 X ℓita hb (W1 ℓ + 1)g c (nℓ + 1)
+ Sj =
+                          π 2 acwc kφ(q)           log Yj                ℓ
+       |a|,|c|≤X b=0                                        ℓ∈Ij′
+                                                                                      
+                                                                                     1
+                                                                           +O 3          .
+                                                                                   εX
+                                                                                       (4.5)
+                                                   ita       
+                                            W   ℓ+1               X
+Assume that X ≤ W1 . Writing ℓita =           1
+                                             W1
+                                                         +O W1 , and then applying (4.4),
+we deduce that
+                 X kφ(q)−1
+                      X sin 2πa ε sin 2πc ε
+                                                          
+                                        10              10
+         Sj =
+                                 π 2 acW1ita wc kφ(q)
+                |a|,|c|≤X
+                      b=0
+
+                                           1 X (W1 ℓ + 1)ita hb (W1 ℓ + 1)g c (nℓ + 1)
+                                     ×
+                                         log Yj ℓ≤Y               ℓ
+                                                    j
+                                                                                  
+                                                         1     3    X              2
+                                                  +O 3 + ε +             (log X) ,
+                                                        εX          W1
+Let δ > 0 to be chosen later. If k ∤ b, apply Lemma 2.6 to hb . Take j sufficiently
+large in terms of y and the underlying quantities, and on δ and X. Then, Lemma 2.5
+implies that for all integers b ∈ [0, kφ(q) − 1] such that k ∤ b, and for all |c| ≤ X, we
+have
+                     1 X (W1 ℓ + 1)ita hb (W1 ℓ + 1)g c (nℓ + 1)
+                                                                    ≤ δ.
+                  log Yj ℓ≤Y                   ℓ
+                                 j
+
+Thus,
+                            φ(q)−1
+                             X sin 2πa ε sin 2πc ε
+                                                        
+                  X
+                                         10           10
+         Sj =
+                                  π 2 acW1ita wc kφ(q)
+                |a|,|c|≤X    d=0
+
+                                           1 X (W1 ℓ + 1)ita χd (W1 ℓ + 1)g c (nℓ + 1)
+                                     ×
+                                         log Yj ℓ≤Y               ℓ
+                                                    j
+                                                                                  
+                                                       1       3    X              2
+                                              +O 3 + δ+ε +               (log X) .
+                                                      εX            W1
+Then, since χ(W1 ℓ + 1) = 1, we obtain
+               X sin 2πa ε sin 2πc ε
+                                            
+                              10          10     1 X (nℓ + 1)ita g c (nℓ + 1)
+       Sj =                           ita
+            |a|,|c|≤X
+                      π 2 ac (W2 W12 ) wc k log Yj ℓ≤Yj        ℓ
+                                                                          
+                                               1        3  X               2
+                                       +O 3 + δ+ε +                (log X) .
+                                             εX            W1
+Now, g c is non-pretentious for c ̸= 0, hence by Lemma 2.3, taking j sufficiently large
+in terms of X, as well as y and the underlying quantities, we have
+                                           ε
+                                             
+                        ε X sin 2πa 10           1 X (nℓ + 1)ita
+                 Sj =                        ita
+                       5k       πa (W2 W12 ) log Yj ℓ≤Yj      ℓ
+                          |a|≤X
+                                                                 
+                                     1           3   X            2
+                            +O 3 + δ+ε +                   (log X) .
+                                   εX               W1
+14                                                  N. TARDY
+                                                 ita                       
+                                         nℓ +1                           X
+We use (4.4) and note that               W2 W12
+                                                         = ℓit + O       W1
+                                                                                  to deduce that
+                          ε
+                                                       
+       ε 1 X 1 X sin 2πa 10    ita    1   3  X           2
+ Sj =                         ℓ +O 3 + δ+ε +      (log X) .
+      5k log Yj ′
+                  ℓ  πa              εX      W1
+                   ℓ∈Ij     |a|≤X
+
+Then, apply Lemma 2.1 to obtain
+                                it
+             ε 1 X 1B 10ε (1) (ℓ )
+                                                           
+                                        1    3  X           2
+       Sj =                        +O 3 + δ+ε +      (log X) .
+            5k log Yj ℓ≤Y  ℓ           εX       W1
+                             j
+
+
+Choose X = ε16 and δ = ε3 , and take y sufficiently large in terms of ε. Then, by
+Lemma 3.2 (the inequality is trivial when t = 0), we have
+                                                     Sj ≫ ε2 ,
+which contradicts Sj = 0.                                                                          □
+  In order to prove that f and g are pseudo-pretentious, we will use the following
+result of Klurman and Mangerel [12, Proposition 2.2].
+Lemma 4.2. Let f, g : N → T be multiplicative functions. Assume that there are
+positive integers a and b such that
+                              1 X f a (n)g b (n + 1)
+                                                     ≫ 1.
+                            log x n≤x     n
+
+Then, f and g are pseudo-pretentious.
+     We now reduce the problem to the pretentious case.
+Theorem 4.3. The functions f and g are pseudo-pretentious.
+Proof. Suppose for contradiction that at least one of f and g is non-pseudo-pretentious.
+By Proposition 4.1, both are non-pseudo-pretentious. Let x ∈ N , define
+                               1   X 1B ε (z) (f (n)) 1B ε (w) (g(n + 1))
+                                       10                10
+                     S :=                                                 .
+                             log x n≤x                 n
+                                     n∈A(x)
+                                      /
+
+Assume that x is sufficiently large so that
+                                   1    X 1
+                                              ≤ ε3 .
+                                 log x      n
+                                                     n∈A(x)
+
+By definition of A(x), we have S = 0. Moreover, by Lemma 2.1, for X ≥ 1, we have
+                  X sin 2πa ε sin 2πb ε
+                                                
+           1                                        X f a (n)g b (n + 1)   
+                                                                              1
+                                                                                
+                              10              10
+    S=                                                                   +O 2
+         log x              π 2 abz a wb                       n             εX
+               |a|,|b|≤X                           n∈A(x)
+                                                    /
+                         X sin 2πa ε sin 2πb ε X f a (n)g b (n + 1)
+                                                        
+         ε2        1                    10            10
+      =      +
+         25 log x                     π 2 abz a wb         n≤x
+                                                                     n
+                           |a|,|b|≤X
+                          (a,b)̸=(0,0)
+
+                                           ε2
+                                                         
+                    1       3        2
+          +O            + ε   (log X)  +                      .
+                   ε2 X                  log x
+  TWO-POINT CORRELATIONS OF MULTIPLICATIVE FUNCTIONS WITH DENSE ORBITS 15
+
+Take X = ε−5 and x ≥ e100 . By the triangle inequality, we have
+
+                     ε2 2                X           1 X f a (n)g b (n + 1)
+                        π log x ≤                                           .
+                     50                              ab n≤x      n
+                                       |a|,|b|≤X
+                                      (a,b)̸=(0,0)
+
+By the pigeonhole principle, there exist a, b ∈ Z (independent of x) with |a| , |b| ≤ X
+and (a, b) ̸= 0 such that
+                                X f a (n)g b (n + 1)
+                                                              ≫ε log x                    (4.6)
+                                n≤x
+                                               n
+
+for all x ∈ X , where X is a set of positive integers whose lower asymptotic density is
+           1
+at least 10X 2 . Then, note that for all x ∈ X sufficiently large depending on X, there
+
+is an element of X in the interval (x, 11X 2 x]. Thus, (4.6) holds for all x sufficiently
+large depending on ε. Since pseudo-pretentiousness is invariant under conjugation,
+we may assume without loss of generality that a, b ≥ 0. Furthermore, we must have
+a, b ≥ 1, since otherwise the above inequality would contradict Lemma 2.3. We then
+conclude by Lemma 4.2.                                                                 □
+
+                           5. Proof of the main theorem
+   Let f and g be as in Theorem 1.1. We know by Theorem 4.3 that there are com-
+pletely multiplicative functions h1 and h2 , integers k1 , k2 ≥ 1, Dirichlet characters
+χ1 and χ2 of respective periods q1 and q2 , and t1 , t2 ∈ R such that hk11 = χ
+                                                                             f1 , hk22 = χ
+                                                                                         f2
+and D (f, h1 nit1 ; ∞) , D (g, h2 nit2 ; ∞) < ∞. We take k1 and k2 minimal.
+   In this section, we will introduce the parameters y and Y . Furthermore, without
+loss of generality, ε may be supposed to be sufficiently small. Using a similar con-
+vention to that in the proof of Proposition 4.1, the parameters are assumed to be
+large relatively to other parameters, following the hierarchy
+             z, w, f, g, h1 , h2 , k1 , k2 , t1 , t2 , χ1 , χ2 , q1 , q2 ≪ ε−1 ≪ y ≪ Y.
+  Let N ⊂ N be an infinite set such that
+                                    1    X 1
+                              lim            = 0.
+                            x→+∞ log x     n
+                             x∈N                     n∈A(x)
+
+  In the next two propositions, we construct arithmetic progressions on which f k1
+and g k2 take specific values. We make two different constructions depending on
+whether (t1 , t2 ) = (0, 0) or not.
+Proposition 5.1. Assume that (t1 , t2 ) ̸= (0, 0) and that the conclusion of Theo-
+rem 1.1 does not hold. Then, there exist
+     • a real number y ≥ 1 sufficiently large in terms of ε and the underlying
+       quantities;
+     • positive integers n0 ≤ W ′ only depending on y and the underlying quantities;
+     • an integer R ∈ [n0 , n0 + W ′ − 1] and an increasing infinite sequence (Yj )j≥1
+                                                  1, W ′ Yj + R ∈ N ;
+       of positive integers such that for all j ≥ P
+     • a subset Ij ⊂ [1, Yj ] ∩ N such that log1Yj ℓ∈Ij 1ℓ ≥ 1 − O (ε3 ) for all j suffi-
+       ciently large in terms of y and the underlying quantities;
+     • complex numbers u, v ∈ T independent of j,
+16                                           N. TARDY
+
+such that, if nℓ := W ′ ℓ + n0 , then
+                               (
+                                  f k1 (nℓ ) = uk1 ℓit1 k1 + O (ε9 ) ,
+                    ∀ℓ ∈ Ij , k2
+                                  g (nℓ + 1) = v k2 ℓit2 k2 + O (ε9 ) .
+In addition, if t1 = 0 (resp. t2 = 0), then we can take u = z (resp. v = w).
+If there are coprime s1 , s2 ∈ Z such that s1 t1 = s2 t2 ̸= 0, then we can require
+  z s1        s
+  u
+       = wv 2 + O(ε9 ).
+Proof. If at least one of t1 and t2 is nonzero, then we assume without loss of generality
+that t2 ̸= 0.
+   Let y ≥ 1 be sufficiently large in terms of ε and the underlying quantities, and
+(αp )p≤y be parameters, where the αp are positive integers. We assume that the αp
+depend at most on y and the underlying quantities. Set W := q1 q2 p≤y pαp . Let
+                                                                           Q
+
+r ≤ W be such that r ≡ 1 [q1 q2 ] and P − (r) > y (such an r exists by the Chinese
+remainder theorem, assuming for example that p|r + 1 for all p ≤ y such that
+p ∤ q1 q2 ). For ℓ ≥ 1, set nℓ = W ′ ℓ + n0 := W (2W ℓ + r).
+   By the pigeonhole principle, there exists an integer R ∈ [n0 , n0 + W ′ − 1] such
+that there are infinitely many integers Y ≥ 1 such that W ′ Y + R ∈ N . Take such a
+Y , that we suppose to be sufficiently large in terms of y. Since f k1 is pretentious (by
+the second triangle inequality), taking y and Y sufficiently large, Lemma 2.7 yields
+            1 X 1 k1
+                      f (2W ℓ + r) − (2W ℓ)it1 k1 exp iI1 (y, Y ) + O ε13    ≤ ε12
+                                                                          
+         log Y ℓ≤Y ℓ
+
+and
+   1 X 1 k2                             it k
+             g 2W 2 ℓ + W r + 1 − 2W 2 ℓ 2 2 exp iI2 (y, Y ) + O ε13    ≤ ε12 ,
+                                                                    
+ log Y ℓ≤Y ℓ
+
+where                                                               
+                                                      χ1 (p)p−it1 k1
+                                          X I f k1 (p)f
+                         I1 (y, Y ) :=
+                                         y<p≤Y
+                                                          p
+and                                                                 
+                                                      χ2 (p)p−it2 k2
+                                          X I g k2 (p)f
+                         I2 (y, Y ) :=                                    .
+                                         y<p≤Y
+                                                          p
+By a compactness argument, there is an increasing sequence (Yj )j≥1 of large values
+of Y such that
+                     eiI1 (y,Yj ) , eiI2 (y,Yj ) −−−−→ (γ1 , γ2 ) ∈ T2 ,
+                                                
+                                                 j→+∞
+
+for some γ1 and γ2 depending on y, and such that for all j ≥ 1, W ′ Yj + R ∈ N .
+Then, for all j ≥ 1 sufficiently large in terms of y and the underlying quantities, we
+have
+                                k1                    it1 k1
+                     1 X f (2W ℓ + r) − (2W ℓ)               γ1
+                                                                ≤ 2ε12
+                  log Yj ℓ≤Y                  ℓ
+                               j
+
+and
+                          k2 2               2                  it2 k2
+                 1 X g (2W ℓ + W r + 1) − (2W ℓ)                         γ2
+                                                                              ≤ 2ε12 .
+               log Yj ℓ≤Y           ℓ
+                         j
+  TWO-POINT CORRELATIONS OF MULTIPLICATIVE FUNCTIONS WITH DENSE ORBITS 17
+
+  Define
+                                                                                        
+                                f k1 (2W ℓ + r) − (2W ℓ)it1 k1 γ1 ≤ 4ε9                 
+        Ij :=       ℓ ≤ Yj :                                                                  .
+                                g k2 (2W 2 ℓ + W r + 1) − (2W 2 ℓ)it2 k2 γ2 ≤ 4ε9       
+
+By the union bound and by Rankin’s trick, we have
+                              k1                                it k
+                        1 X f (2W ℓ + r) − (2W ℓ)
+                                                  1 1
+                X1                                    γ1
+                      ≤ 9
+                ℓ≤Y
+                    ℓ  4ε ℓ≤Y            ℓ
+                    j                j
+                ℓ∈I
+                 / j
+
+                                  k2 2                  2                   it2 k2
+                            1 X g (2W ℓ + W r + 1) − (2W ℓ)                          γ2
+                          + 9
+                           4ε ℓ≤Y              ℓ
+                                         j
+
+                            3
+                        ≤ ε log Yj ,
+hence
+                                       1 X1
+                                                  ≥ 1 − O ε3 .
+                                                            
+                                     log Yj ℓ∈I ℓ
+                                               j
+
+In addition,
+                             (
+                              f k1 (nℓ ) = (2W ℓ)it1 k1 f k1 (W )γ1 + O (ε9 ) ,
+                    ∀ℓ ∈ Ij , k2                        it k                                        (5.1)
+                              g (nℓ + 1) = (2W 2 ℓ) 2 2 γ2 + O (ε9 ) .
+  If we have s1 t1 = s2 t2 ̸= 0 for some s1 , s2 ∈ Z coprime, then by assumption and
+by exchanging f and g if necessary, we can assume that there exists a prime p such
+that fp(p)
+       it1 = e(θp ) for some irrational θp . Thus, taking y ≥ p, we can suitably choose
+
+αp to have
+                                                  !1/s1
+                                            s /k
+                           f (W )     z s1 γ22 2              9
+                                                                
+                              it
+                                  =          s /k
+                                                        + O ε     ,
+                           W 1        ws2 γ11 1
+                                                                                              1/k
+where each root of unity may be chosen arbitrarily. Take u = (2W )it1 f (W )γ1 1 and
+                it  1/k
+v = (2W 2 ) 2 γ2 2 , where each root of unity may be chosen arbitrarily. In particular,
+we have
+                                                    s /k           s
+                       z s1  w −s2        z s1 γ22 2     W it1 1
+                                         =          s1 /k1
+                                                                       = 1 + O(ε9 ),
+                        u        v              s
+                                              w γ12         f  (W )
+            z s1      w s2
+                                   9
+hence u            = v      + O(ε ).
+   If t1 = 0 and t2 ̸= 0, then by density, for y sufficiently large in terms of ε (it is
+irrelevant that γ1 depends on y since it suffices to have a prime p ≤ y such that the
+set {f (pα )}α∈N is sufficiently close to every point of T in terms of ε), we can choose
+                                  −1/k
+W such that f (W ) = zγ1 1 + O (ε9 ).
+   If t1 , t2 ̸= 0 and (t1 , t2 ) is linearly independent over Q, then we choose W arbitrarily
+(e.g. αp = 1 for all p ≤ y).
+   In all the above cases, by (5.1) there exist u, v ∈ T independent of ℓ and j such
+that                                   (
+                                        f k1 (nℓ ) = uk1 ℓit1 k1 + O (ε9 ) ,
+                           ∀ℓ ∈ Ij , k2
+                                        g (nℓ + 1) = v k2 ℓit2 k2 + O (ε9 ) ,
+with u = z if t1 = 0.                                                                                  □
+18                                               N. TARDY
+
+Definition 5.2. Let f ∈ M. We say that f is eventually rational if
+                            ∃k ∈ N, ∃N0 ∈ N, ∀p ≥ N0 , f k (p) = 1.
+Otherwise, we say that f is irrational.
+Proposition 5.3. The conclusion of Proposition 5.1 holds if one assumes that t1 =
+t2 = 0.
+Proof. We first show that there exist distinct primes p1 and p2 such that the sets
+{f (pn1 )}n and {g (pn2 )}n are within distance at most ε9 to every point of T. If f or g
+is irrational, then this immediately follows by definition of irrationality and the fact
+that {fj (n)}n = T (j ∈ {1, 2}). Otherwise, f and g are both eventually rational.
+Thus, there exist k, N0 ∈ N such that for all p ≥ N0 , we have f k (p) = g k (p) = 1.
+Since f k (n) n and g k (n) n are dense, there are primes p1 , p2 < N0 such that,
+if we write f (p1 ) = e(α1 ) and g(p2 ) = e(α2 ), then α1 , α2 ∈ R\Q. We can choose
+p1 ̸= p2 thanks to the condition (f K , g K ) ∈  / F for all positive integer K such that
+k|K. By exchanging  Q    f and  g if necessary, let us assume that p2 ̸= 2.
+   Set W   :=  q1 q2 p≤y p, where y ≥ 1 is sufficiently large in terms of ε and the un-
+derlying quantities. Take y ≥ p1 , p2 , P + (q1 ), P + (q2 ). Let m1 , m2 ≥ 1 be parameters
+depending at most on ε and underlying quantities. For ℓ ≥ 1, define nℓ = W ′ ℓ+n0 :=
+2pm          m2
+   1 (2W p2 ℓ + r) for some r ≥ 1 independent of ℓ. By the Chinese remainder
+     1
+                                                                                 m1  the-
+                              m2              m2     m1                           2p1 r+1
+orem, we can take r ≤ W p2 such that p2 |2p1 r + 1 and P − (r), P −                   m
+                                                                                     p2 2
+                                                                                            >y
+                                   m1           m2
+                                                               m2 +1 
+(consider e.g. the relations 2p1 r + 1 ≡ p2 (p2 − 1) p2                 , r ≡ 1 [p1 ], r ≡ 1 [2],
+and for 3 ≤ p ≤ y such that p ̸= p1 , p2 , r ≡ rp [p], where −rp ∈ Fp is not 0 or the
+inverse of 2p1 mod p).
+   Now, let Y ≥ 1 be sufficiently large in terms of y. By the pigeonhole principle,
+there exists an integer R ∈ [n0 , n0 + W ′ − 1] such that W ′ Y + R ∈ N for infinitely
+many integers Y . From now on, we assume that W ′ Y + R ∈ N . By Lemma 2.7,
+taking y and Y sufficiently large, we have
+                         k1                  m                      iI (y,Y )+O(ε13 )
+                 1 X f (2W p2 ℓ + r) − χ1 (r)e
+                             2                 1
+
+                                                                                         ≤ ε12
+               log Y ℓ≤Y              ℓ
+and                                               m         
+                                                2p1 1 r+1
+                                                                 − eiI2 (y,Y )+O(ε )
+                                                                                    13
+
+                1 X g
+                              k2
+                                       4pm
+                                         1 Wℓ +
+                                           1
+                                                    m
+                                                  p 2
+                                                    2
+                                                                                         ≤ ε12 ,
+              log Y ℓ≤Y                                 ℓ
+where
+                                                                                            
+                       X I f k1 (p)f
+                                   χ1 (p)                                    X I g k2 (p)f
+                                                                                         χ2 (p)
+      I1 (y, Y ) :=                                 ;       I2 (y, Y ) :=                          .
+                      y<p≤Y
+                                         p                                  y<p≤Y
+                                                                                             p
+By a compactness argument, we can extract an increasing sequence (Yj )j≥1 of inte-
+gers and (γ1 , γ2 ) ∈ T2 depending on y such that
+                            eiI1 (y,Yj ) , eiI2 (y,Yj ) −−−−→ (γ1 , γ2 ) ,
+                                                       
+                                                            j→+∞
+                        ′
+and for all j ≥ 1, W Yj + R ∈ N . Then, for j sufficiently large in terms of y and the
+underlying quantities, we have
+                                      m
+                     1 X f k1 (2W p2 2 ℓ + r) − χ1 (r)γ1
+                                                             ≤ 2ε12
+                   log Yj ℓ≤Y              ℓ
+                                   j
+  TWO-POINT CORRELATIONS OF MULTIPLICATIVE FUNCTIONS WITH DENSE ORBITS 19
+
+and                                                m      
+                                         m        2p 1 r+1
+                          1     X g k2 4p1 1 W ℓ + 1pm2      − γ2
+                                                                2
+                                                                              ≤ 2ε12 .
+                        log Yj ℓ≤Y                         ℓ
+                                      j
+
+  Define
+                                                   (2W pm
+                        (                 (                                              )
+                                              f k1     2 ℓ + r) − χ1 (r)γ
+                                                          2
+                                                                       1 ≤ 4ε
+                                                                               9
+                Ij :=     ℓ ≤ Yj :                               m
+                                                               2p1 1 r+1                     .
+                                              g k2 4pm
+                                                     1 Wℓ +
+                                                       1
+                                                                   m
+                                                                 p2 2
+                                                                           − γ2 ≤ 4ε9
+
+By the union bound and by Rankin’s trick, we have
+                                          m
+                        X1  1 X f k1 (2W p2 2 ℓ + r) − χ1 (r)γ1
+                          ≤ 9
+                    ℓ≤Y
+                        ℓ  4ε ℓ≤Y               ℓ
+                            j                   j
+                    ℓ∈I
+                     / j
+                                                                 m       
+                                               k2      m1       2p1 1 r+1
+                                       1 X   g      4p 1  W ℓ +   p2
+                                                                    m 2     − γ2
+                                     + 9
+                                      4ε ℓ≤Y                  ℓ
+                                                    j
+
+                                      3
+                                ≤ ε log Yj .
+  By our choice of p1 and p2 , we can choose m1 and m2 such that
+                                                              
+               m1      m2                 −1/k1          −1/k2
+                                                                 + O ε9 ,
+                                                                       
+          (f (p1 ), g(p2 )) = z(χ1 (r)γ1 )      f (2), wγ2
+
+where each root of unity can be chosen arbitrarily. Then for ℓ ∈ Ij with j sufficiently
+large, we have
+             f k1 (nℓ ) = f k1 (pm   k1    k1
+                                              (2W pm            k1
+                                                                   + O ε9
+                                                                          
+                                 1 )f (2)f         2 ℓ + r) = z
+                                  1                  2
+
+
+
+and
+                                                               2pm
+                                                                      
+                                                                 1 r+1
+                                                                   1
+           k2                   k2
+                                     (pm    k2         m1
+                                                                         = w k 2 + O ε9 .
+                                                                                       
+        g (nℓ + 1) = g                 2 )g
+                                         2
+                                                     4p1 W ℓ +      m2
+                                                                  p2
+                                                                                                    □
+  We are now ready to prove our main theorem.
+Proof of Theorem 1.1. Assume, for the sake of contradiction, that the conclusion
+of the theorem does not hold, and let us use the notation in the statements of
+Propositions 5.1 and 5.3.
+  Define
+           n                          ε                               ε o
+     Ij′ := ℓ ∈ Ij : f (nℓ ) ∈
+                             / Bε3 ze ±             , g(nℓ + 1) ∈  / Bε3 we ±      .
+                                             10                                 10
+Taking ε sufficiently small, we have
+                 (          (                                     )
+                                          / Bk1 ε3 z k1 e ± k10
+                              uk1 ℓit1 k1 ∈                   1ε
+                  ℓ ∈ Ij :     k2 it2 k2             k2      k2 ε
+                                                                      ⊂ Ij′ .
+                              v ℓ         ∈
+                                          / Bk2 ε w e ± 10
+                                                 3
+
+
+As a consequence, by the union bound and Lemma 3.2, we obtain
+                             1 X1
+                                       ≥ 1 − O ε3 ,
+                                                 
+                                                                                                 (5.2)
+                           log Yj  ′
+                                     ℓ
+                                                    ℓ∈Ij
+
+where we used the fact that when t1 = 0 (resp. t2 = 0), then u = z (resp. v = w).
+20                                                      N. TARDY
+
+     Now, define
+
+                                     1 X 1B 10ε (z) (f (nℓ )) 1B 10ε (w) (g(nℓ + 1))
+                       Sj :=                                                         .
+                                   log Yj ′
+                                                               ℓ
+                                              ℓ∈Ij
+
+
+Let X ≥ 1. By Lemma 2.1 and by definition of Ij′ , we have
+         X sin 2πa ε sin 2πb ε
+                                   
+                                        1 X f a (nℓ )g b (nℓ + 1)
+                                                                        
+                       10        10                                    1
+   Sj =                                                           +O 3     .
+                 πaz a      πbwb      log Yj ′
+                                                        ℓ             εX
+           |a|,|b|≤X                                            ℓ∈Ij
+
+
+Let δ > 0. Take j sufficiently large in terms of X and δ. Apply (5.2), then Lem-
+mas 2.6 and 2.5 to obtain
+                                ε              ε
+                                                
+          1 X sin 2πck1 10          sin 2πdk2 10     1 X f k1 c (nℓ )g k2 d (nℓ + 1)
+   Sj =
+         k1 k2   X
+                       πcz k1 c        πdwk2 d     log Yj ℓ≤Y          ℓ
+                   |c|≤ k                                                      j
+                         1
+                   |d|≤ kX
+                          2
+                                                                                                    
+                                                                             1           3         2
+                                                                   +O            + (δ + ε ) (log X) .
+                                                                            ε3 X
+By Propositions 5.1 and 5.3, we deduce that
+                                          ε              ε
+                                                          
+                     1 X sin 2πck1 10         sin 2πdk2 10
+             Sj =
+                   k1 k2   X
+                                 πcz k1 c        πdwk2 d
+                                     |c|≤ k
+                                             1
+                                     |d|≤ kX
+                                              2
+
+                                                      1 X (uℓit1 ) 1 (vℓit2 ) 2 eO(Xε )
+                                                                   k c       k d     9
+
+                                                  ×
+                                                    log Yj               ℓ
+                                                           ℓ∈Ij′
+                                                                                    
+                                                                 1      3          2
+                                                       + O 3 + (δ + ε ) (log X) .
+                                                               εX
+
+Assume that X ≤ ε−9 . Then, it follows that
+                   X 1 X sin 2πck1 ε sin 2πdk2 ε  uℓit1 k1 c  vℓit2 k2 d
+                                                 
+            1                          10      10
+ Sj =
+      k1 k2 log Yj  ′
+                      ℓ  X
+                                  πc        πd      z             w
+                            ℓ∈Ij    |c|≤ k
+                                          1
+                                    |d|≤ kX
+                                             2
+                                                                                               
+                                                                      1          3    9
+                                                                                             2
+                                                            +O            + δ + ε + Xε (log X) .
+                                                                     ε3 X
+                                                                                                (5.3)
+     Now, define
+         (                          k1                    it2 k2                )
+                            uℓit1
+                                                                         
+                                                    k1 ε     vℓ                 k2 ε
+ Ij′′ :=   ℓ ∈ Ij′ :                      ∈
+                                          / Bε3 e ±        ,          ∈
+                                                                      / Bε3 e ±          .
+                             z                      10        w                 10
+
+By the union bound and Lemma 3.2, we have
+                                               1 X1
+                                                         ≥ 1 − O ε3 .
+                                                                   
+                                                                                                     (5.4)
+                                             log Yj ′′
+                                                       ℓ
+                                                     ℓ∈Ij
+  TWO-POINT CORRELATIONS OF MULTIPLICATIVE FUNCTIONS WITH DENSE ORBITS 21
+
+Take X = ε−6 and δ = ε3 . When j is sufficiently large in terms of ε, applying
+Lemma 2.1 again, we obtain by (5.3) and (5.4),
+                                                              
+                       1B  z k1  ℓit1 k1 1B  w k2  ℓit2 k2
+                         k1 ε ( u )          k2 ε ( v )
+                                                                           2
+            1      X
+                          10                  10                      3    1
+ Sj =                                                            + O ε log
+      k1 k2 log Yj  ′′
+                                           ℓ                               ε
+                  ℓ∈Ij
+                                       it                   it
+                   X 1B ε ( uz ) (ℓ 1 ) 1B ε ( wv ) (ℓ 2 )            2                 !
+            1                                                   3    1
+    ≥                  10                 10
+                                                           + O ε log                           .    (5.5)
+      k1 k2 log Yj ℓ≤Y                 ℓ                             ε
+                      j
+
+
+Let us deduce from (5.5) that Sj ≫ ε2 .
+    If
+     we have
+  z s1
+                s1 t1 = 9 s2 t2 ̸= 0 for some s1 , s2 ∈ N coprime, then we sknowz that
+            w s2
+  u
+       =     v
+                  + O (ε ). Hence, for some choices of µ, ν ∈ T such that µ 2 = u and
+ν s1 = wv , we have µ = ν + O (ε2 ). For ε sufficiently small, it follows that
+                                              t1                    t1 
+                                                is                     is
+                      1            1
+                             X B 10|sε | (µ)   ℓ   2   1 B ε (ν) ℓ 2
+                                                                                
+                                                                                      1
+                                                                                        
+                                                          10|s   |                2
+         Sj ≥                          2                       1
+                                                                            + O ε log
+                k1 k2 log Yj ℓ≤Y                      ℓ                               ε
+                                 j
+                                                         t1 
+                                                          i
+                      1      X B 20 max (|s |,|s |) (µ) ℓ s2
+                                   1      ε
+                                                                       
+                                                                              1
+                                                                                
+                                                                          2
+            ≥                               1   2
+                                                                   + O ε log
+                k1 k2 log Yj ℓ≤Y               ℓ                              ε
+                              j
+
+          ≫ε
+by Lemma 3.2.
+  If t1 = 0 and t2 ̸= 0 (the same argument holds if t2 = 0 and t1 ̸= 0), then we have
+u = z, and we apply Lemma 3.2.
+  If t1 , t2 ̸= 0 and (t1 , t2 ) is linearly independent over Q, then we conclude by
+Lemma 3.3.
+  If t1 = t2 = 0, since u = z and v = w, we immediately have Sj ≫ 1.
+  Therefore, we have shown that in all cases,
+                                    1       X       1
+                                                      ≫ ε2 .
+                                 log Yj     ℓ≤Y
+                                                    ℓ
+                                                       j
+                                            nℓ ∈A(W ′ Yj +R)
+
+This implies that, for j sufficiently large,
+                   1              X       1                      1               X             1
+                                                       ≥
+            log (W ′ Yj + R)                       n       log (3W ′ Yj )                      nℓ
+                                  n∈A(W ′ Yj +R)                                 ℓ≤Yj
+                                                                            nℓ ∈A(W ′ Yj +R)
+                                                              1                X          1
+                                                       ≫    ′
+                                                           W log Yj         ℓ≤Yj
+                                                                                          ℓ
+                                                                       nℓ ∈A(W ′ Yj +R)
+
+                                                           ε2
+                                                       ≫      ,
+                                                           W′
+contradicting the fact that
+                                 1                     X          1
+                                                                    −−−−→ 0.
+                          log (W ′ Yj + R)                        n j→+∞
+                                                n∈A(W ′ Yj +R)
+
+                                                                                                       □
+22                                           N. TARDY
+
+                             6. Proof of Proposition 1.5
+   We shall construct a multiplicative function f : N → C such that f (n) is close to
+f (n + 1) for most integers n. To achieve this, we construct f so that f (n) can be
+approximated by some nit on long intervals of integers n. It is possible to construct
+such long enough intervals of n. However, it is worth noting that the construction
+given below does not extend to logarithmic averages, since these intervals are not
+sufficiently long on the logarithmic scale.
+   We use the function f constructed by Klurman, Mangerel and Teräväinen in [13,
+Proposition 1.3]. For the sake of completeness, we recall their construction.
+   Set t1 = 100 and f (p) = 1 for p ≤ t1 . Recursively,
+                                                     n assume that f (p)o is defined
+                                                        is           tm
+for all p ≤ tm . By Kronecker’s theorem, the set (p )p≤tm : s > e         is dense in
+                                                tm
+Q
+   p≤tm T. It follows that there exists sm+1 > e   such that
+                                                                  1
+                             ∀p ≤ tm , f (p) − pism+1 ≤              .
+                                                                 t2m
+Define tm+1 = esm+1 , and for tm < p ≤ tm+1 , set f (p) = pism+1 .
+  This defines a completely multiplicative function f : N → T, as well as two se-
+quences (sm ) and (tm ) that tend to +∞ as m → +∞. Moreover, it is straightforward
+                                                               K    K
+to verify that              image, and that for all Kℓ ∈ N, (f , f ) ∈
+               2f has dense                                            / F ∪ G.
+  Let n ∈ sm+1 , tm+1 be such that, whenever p |n for some p ≤ tm , we have
+ℓ ≤ 10 log tm . Then,
+                                Pp≤tm ℓ                        O(tm )
+                    ism+1          1         ℓ       is
+                                            p ||n = n m+1 1 + O
+                                                                     1
+         f (n) = n          1+O 2
+                                  t                                 t2m
+                                m 
+                                   1
+               = nism+1 1 + O             .
+                                  tm
+                                     
+Hence, for all n ∈ s2m+1 , tm+1 − 1 be such that, whenever pℓ |n(n + 1) for some
+p ≤ tm , we have ℓ ≤ 10 log tm , we obtain
+                                        ism+1         
+                                     1                    1
+            f (n)f (n + 1) = 1 +                  1+O
+                                   n+1                   tm
+                                                    
+                                        sm+1               1
+                            = 1+O 2                1+O           = 1 + o(1).
+                                        sm+1              tm
+Further, the number of n ≤ tm+1 − 1 such that there exists pℓ |n(n + 1) with p ≤ tm
+and ℓ > 10 log tm is
+                  X      X                X X 1
+             ≤                  1 ≤ 2tm+1                   = o (tm+1 ) .
+                  p≤t  n≤t   −1           p≤t ℓ>10 log t
+                                                         pℓ
+                     m        m+1                        m       m
+               ℓ>10 log tm pℓ |n(n+1)
+
+It follows
+                         1           X                   s2m+1
+                                                    1≤         + o(1) → 0.
+                      tm+1          n≤tm+1
+                                                         tm+1
+                             |f (n)f (n+1)+1|≤ 31
+
+                   7. Some consequences of Theorem 1.1
+   The aim of this section is to prove two corollaries of Theorem 1.1. First, Corol-
+lary 1.6 generalizes the following conjecture of De Koninck, Kátai and Phong [3,
+Conjecture 4] in the case of completely multiplicative functions.
+  TWO-POINT CORRELATIONS OF MULTIPLICATIVE FUNCTIONS WITH DENSE ORBITS 23
+
+Conjecture 7.1. Let f : N → T be a multiplicative function such that there exist
+some w ∈ T and some ε > 0 such that
+                                1   X
+                        lim inf               1 = 0.
+                         x→+∞ x
+                                    n≤x
+                                               |f (n)f (n+1)−w|≤ε
+
+Then, there exist K ≥ 1 and t ∈ R such that f K (n) = nit for all n ∈ N.
+Proof of Corollary 1.6. If the image of f is not dense, then it is finite. Indeed, in
+this case, if we write f (p) = e(αp ) for all primes p, then (αp )p has to be a sequence
+of rational numbers with bounded denominators. Then, there exists K ∈ N such
+that f K = 1.
+   Assume from now on that the image of f is dense in T. The hypothesis implies
+                                  1            X          1
+                         lim inf                            = 0.
+                          x→+∞ log x                      n
+                                               n≤x
+                                            |f (n)−w|,|f (n+1)−1|≤ 2ε
+
+By Corollary 1.4, it suffices to show that (f K , f K ) ∈
+                                                        / F for all K ∈ N. Let K ∈ N,
+assume by contradiction that there exist a prime p and an irrational number α such
+that f (p) = e(α) and f K (q) = 1 for all primes q ̸= p. Assume further that K is
+minimal with this property. Then, by Lemma 2.6, for all A sufficiently large and
+for all x ≥ x0 = x0 (A), f is (A, x)-non-pretentious. Thus, by Lemma 2.5, for all
+integers j ∈ [1, K − 1], we have
+                                     j
+                          n
+             1   X    f   pk
+                              f (n + 1)
+           log x n≤x          n
+                 pk ||n
+                                                                                    j
+                 p−1
+                 X     1        X              f (pm + r)f (pk+1 m + pk r + 1)
+             =                                                                            → 0.
+                 r=1
+                     log x            kr
+                                                               pk+1 m + pk r
+                             0≤m≤ x−p
+                                   pk+1
+
+
+Fix k ∈ N such that |e(kα) − w| ≤ ε. It follows by orthogonality in µK that
+             1       X        1      1        X       1
+                                ≥
+           log x     n≤x
+                              n    log x      n≤x
+                                                      n
+                                                                     k
+                  |f (n)f (n+1)−w|≤ε                              p ||n
+                                                              n
+                                                      f              f (n+1)=1
+                                                              pk
+                                                                                    j
+                                                                          n
+                                               1
+                                                  K−1
+                                                  X    1              X f pk f (n + 1)
+                                           =
+                                               K j=0 log x n≤x                   n
+                                                                      pk ||n
+                                                                   
+                                                 1                1
+                                           −−−−→ k             1−     > 0,
+                                            x→+∞ p                p
+which contradicts the hypothesis.                                                                □
+Remark. The statement of Corollary 1.6 is optimal. Indeed, let f be a completely
+multiplicative function such that f K (n) = nit for some minimal K ≥ 1 and some
+t ∈ R. Then, write f (n) = h(n)nit/K . Note that nit/K (n + 1)−it/K −−−−→ 1, and
+                                                                                          n→+∞
+24                                           N. TARDY
+
+that h is a function taking values in the set µK of K-th roots of unity. Thus, taking
+w ∈ T\µK and ε > 0 sufficiently small, we have
+                                                           
+                                                                     
+            1      X             1        X                         1
+                            1≤                    1 + O(1) = O
+                                                                         .
+            x      n≤x
+                                 x         n≤x
+                                                                      x
+               |f (n)f (n+1)−w|≤ε           |h(n)h(n+1)−w|≤ε
+
+  Next, Corollary 1.7 is motivated by the following problem. Let f : N → T be
+a multiplicative function such that f (n) − f (n + 1) −−−−→ 0. Then, do we have
+                                                                 n→+∞
+          it
+f (n) = n for some t ∈ R? In 1996, Wirsing [16] proved that this is true. In
+addition, it is an exercise to deduce from this that, if f, g : N → T are two completely
+multiplicative functions such that f (n) − g(n + 1) −−−−→ 0, then f (n) = g(n) = nit
+                                                               n→+∞
+for some t ∈ R. In 1983, Kátai [7] conjectured a strengthened version of Wirsing’s
+result, assuming that lim log1 x n≤x |f (n)−fn(n+1)| = 0. It was proved by Klurman
+                                 P
+                           x→+∞
+[9] that Wirsing’s conclusion holds with this weaker hypothesis. Then, it is natural
+to ask whether lim log1 x n≤x |f (n)−g(n+1)| = 0 implies f (n) = g(n) = nit for some
+                          P
+                  x→+∞               n
+t ∈ R. It turns out that this is not a direct corollary of Klurman’s result. We now
+show that the statement nevertheless holds.
+Proof of Corollary 1.7. First, assume that f and g do not have dense images. Then,
+there exists an integer K ≥ 1 such that f K = g K = 1. If f = g = 1, then there
+is nothing to do. Thus, assume that f ̸= 1 and consider z ∈ µK \{1}. Then, the
+hypothesis implies that
+                                     1     X 1
+                             lim inf               = 0.                       (7.1)
+                              x→+∞ log x        n
+                                           n≤x
+                                                  f (n)=z
+                                                 g(n+1)=1
+
+On the other hand, by orthogonality in µK , we have
+                                        K−1    K−1
+                 1       X        1   1 X 1 X 1 X f a (n) g b (n + 1)
+                                    = 2                               .            (7.2)
+               log x      n≤x
+                                  n  K a=0 z a b=0 log x n≤x n
+                        f (n)=z
+                       g(n+1)=1
+
+By Lemmas 2.6 and 2.5, the only term that survive in (7.2) as x → +∞ is the one
+that corresponds to (a, b) = (0, 0). Thus,
+              1 X |f (n) − g(n + 1)|          1    X 1        1
+                                        ≥                 → 3 > 0,
+            log x n≤x         n            K log x n≤x n      K
+                                                             f (n)=z
+                                                            g(n+1)=1
+
+which contradicts (7.1).
+  Now, assume that f has a dense image, and that there exists an integer K ≥ 1
+such that g K = 1. Then, by the elementary inequality
+                         f K (n) − g K (n + 1) ≤ K |f (n) − g(n + 1)| ,
+the hypothesis implies
+                                         1 X f K (n) − 1
+                                  lim inf                = 0.
+                                  x→+∞ log x      n
+                                             n≤x
+  TWO-POINT CORRELATIONS OF MULTIPLICATIVE FUNCTIONS WITH DENSE ORBITS 25
+
+Since
+                 X f K (n) − 1            1        X            1   1         X           1
+                                     ≥                            ≥                         ,
+                 n≤x
+                           n              3        n≤x
+                                                                n   3         n≤x
+                                                                                          n
+                                              |f K (n)−1|> 13           |f K (n)+1|≤ 13
+we deduce that
+                                      1               X            1
+                               lim inf                               = 0.                       (7.3)
+                               x→+∞ log x                          n
+                                                       n≤x
+                                                 |f K (n)+1|≤ 13
+
+           KK1    K2
+                      always choose a function g ∈ M such that for all K1 , K2 ≥ 1,
+Now, note that one can
+we have f      ,g     ∈
+                      / F ∪ G. Thus, (7.3) contradicts Theorem 1.1.
+  From now on, we assume that f and g both have dense images. Let ε > 0. Then,
+by Rankin’s trick, we have
+                  1       X      1        1 X |f (n) − g(n + 1)|
+                                    ≤                             .
+                log x     n≤x
+                                 n     ε log x n≤x       n
+                       |f (n)−g(n+1)|>ε
+
+In particular, taking ε sufficiently small, we have
+                                  1          X                        1
+                        lim inf                                         = 0.
+                         x→+∞ log x                                   n
+                                             n≤x
+                                          |f (n)−1|,|g(n+1)+1|≤ε
+                                                                 
+By Theorem 1.1, there exists an integer
+                                       K ≥ 1 such that f K , g K ∈ F ∪ G.
+  Let us first assume that f K , g K ∈ F. As before, the hypothesis implies
+                               1 X f K (n) − g K (n + 1)
+                       lim inf                           = 0.                                   (7.4)
+                        x→+∞ log x           n
+                                   n≤x
+
+By definition of F, f K (p) and g K (p) are equal to 1 at all primes p except for a single
+prime p = p0 . Let α ∈ R\Q be such that f K (p0 ) = e(α). Restricting the sum-
+mation in (7.4) to integers n such that p0 ||n, in which case f K (n) − g K (n +1) =
+|e(α) − 1| > 0, we have that the left-hand side of (7.4) is ≥ |e(α) − 1| p10 − p12 > 0,
+                                                                                 0
+
+which yields a contradiction. As a consequence, we have f K , g K ∈ G.
+               K   K
+                      that K can be taken to be equal to 1. Take K ≥ 1 minimal
+   It remains to prove
+such that f , g       ∈ G, and let us prove that K = 1. Let t ∈ R be such that
+f K (n) = g K (n) = niKt . Write f (n) = f0 (n)nit and g(n) = g0 (n)nit , where f0 and g0
+are completely multiplicative functions taking values in µK . From the hypothesis,
+and using the observation that nit (n + 1)−it = 1 + Ot n1 , we have
+                               1 X |f0 (n) − g0 (n + 1)|
+                        lim inf                          = 0.
+                        x→+∞ log x           n
+                                   n≤x
+
+This implies that, for all z, w ∈ µK distinct, we have
+                                   lim inf S(x; z, w) = 0,                                      (7.5)
+                                    x→+∞
+
+where
+                                                     1          X       1
+                               S(x; z, w) :=                              .
+                                                   log x       n≤x
+                                                                        n
+                                                             f0 (n)=z
+                                                           g0 (n+1)=w
+26                                           N. TARDY
+
+Next, let K1 and K2 be minimal positive integers such that f0K1 = χ   f1 and g0K2 = χ
+                                                                                    f2 ,
+for some Dirichlet characters χ1 and χ2 . Let q be the period of χ2 . By orthogonality
+in µK , we have
+                         1      X       1
+         S(x; z, w) ≥
+                      q log x      x   m
+                                        m≤ q
+                                     f0 (mq)=z
+                                   g0 (mq+1)=w
+
+                       1 XX a                       X f a (m)g b (mq + 1)
+                                         −a −b 1       0      0
+                     = 2          f0 (q)z w                               .
+                      K q a≤K b≤K             log x  x         m
+                                                             m≤ q
+
+Let ε > 0. By Lemmas 2.6 and 2.5, for x sufficiently large in terms of ε, we have
+                   1 X X c             −K1 c −K2 d 1
+                                                         X χ  f1 c (m)
+      S(x; z, w) ≥ 2           χ
+                               f1 (q)z      w                          + O (ε) ,
+                  K q K     K
+                                                   log x    x    m
+                            c≤ K d≤ K                               m≤ q
+                               1       2
+
+
+where we used the fact that χ  f2 (mq + 1) = 1. Denote by r the order of χ1 . By [6,
+                   c
+Lemma 2.3.1], χ f1 does not pretend to any function of the form nit (t ∈ R) when
+r ∤ c. Thus, by the classical Halász theorem (see e.g. [6, Lemma 2.1.11]), we have
+                           1 X X −K1 re −K2 d 1 X 1
+            S(x; z, w) ≥ 2                z     w                  + O (ε)
+                         K q      K     K
+                                                       log x   x m
+                                   e≤ K r d≤ K                      m≤ q
+                                        1     2
+
+                            1zK1 r =1 1wK2 =1
+                        =                     + O (ε) ,
+                                  KK2
+since K1 r, K2 |K. Then, taking ε sufficiently small, (7.5) implies that for all z ̸= w
+in µK , at least one of z ∈
+                          / µK1 r or w ∈
+                                       / µK2 holds. This means that µK1 r ∪ µK2 = {1}.
+Thus, K1 = K2 = 1 and r = 1. By symmetry, if s denotes the order of χ2 ,
+then s = 1. Moreover, it is straightforward to see that K1 r is the minimal integer
+such that f0K1 r = 1, and that K2 s is the minimal integer such that g0K2 s = 1. By
+minimality of K, we have K = lcm (K1 r, K2 s) = 1.                                    □
+
+                                            References
+ [1] Dimitrios Charamaras, Andreas Mountakis, and Konstantinos Tsinas. On multiplicative re-
+     currence along linear patterns. Journal of the London Mathematical Society, 112(3):e70292,
+     2025.
+ [2] Zoltán Daróczy and Imre Kátai. Characterization of additive functions with values in the
+     circle group. Publicationes Mathematicae Debrecen, 36(1–4):1–7, 1989.
+ [3] Jean-Marie De Koninck, Imre Kátai, and Bui Minh Phong. On some consequences of recently
+     proved conjectures. In Annales Universitatis Scientiarum Budapestinensis de Rolando Eötvös
+     Nominatae. Sectio Computatorica, volume 49, 2019.
+ [4] Jean-Marie De Koninck, Imre Kátai, and Bui Minh Phong. On the variations of com-
+     pletely multiplicative functions at consecutive arguments. Publicationes Mathematicae De-
+     brecen, 98(1-2):219–230, 2021.
+ [5] Sebastián Donoso, Anh N Le, Joel Moreira, and Wenbo Sun. Additive averages of multiplica-
+     tive correlation sequences and applications. Journal d’Analyse Mathématique, 149(2):719–761,
+     2023.
+ [6] Andrew Granville and Kannan Soundarajan. Multiplicative number theory: The pretentious
+     approach. 2014. opublicerat manuskript.
+ [7] Imre Kátai. Some results and problems on arithmetical functions. Studia Sci. Math. Hungar.,
+     16:289–295, 1983.
+ [8] Tanmay Khale. An explicit Vinogradov–Korobov zero-free region for Dirichlet L-functions.
+     The Quarterly Journal of Mathematics, 75(1):299–332, 2024.
+  TWO-POINT CORRELATIONS OF MULTIPLICATIVE FUNCTIONS WITH DENSE ORBITS 27
+
+ [9] Oleksiy Klurman. Correlations of multiplicative functions and applications. Compositio Math-
+     ematica, 153(8):1622–1657, 2017.
+[10] Oleksiy Klurman, Alexander Mangerel, Cosmin Pohoata, and Joni Teräväinen. Multiplicative
+     functions that are close to their mean. Transactions of the American Mathematical Society,
+     374(11):7967–7990, 2021.
+[11] Oleksiy Klurman and Alexander P Mangerel. Rigidity theorems for multiplicative functions.
+     Mathematische Annalen, 372(1):651–697, 2018.
+[12] Oleksiy Klurman and Alexander P Mangerel. On the orbits of multiplicative pairs. Algebra &
+     Number Theory, 14(1), 2020.
+[13] Oleksiy Klurman, Alexander P Mangerel, and Joni Teräväinen. On Elliott’s conjecture and
+     applications. arXiv:2304.05344, 2023.
+[14] Sun-Kai Leung and Christian Táfula. Multiplicative recurrence of Möbius transformations.
+     arXiv:2409.12936, 2024.
+[15] Terence Tao. The logarithmically averaged Chowla and Elliott conjectures for two-point cor-
+     relations. Forum of Mathematics, Pi, 4, 2016.
+[16] Eduard Wirsing, Tang Yuan-Sheng, and Shao Pin-Tsung. On a conjecture of Kátai for additive
+     functions. Journal of Number Theory, 56(2):391–395, 1996.
+
+  DER de mathématiques, ENS Paris-Saclay, 91190 Gif-sur-Yvette, France
+  Email address: neo.tardy@ens-paris-saclay.fr
+

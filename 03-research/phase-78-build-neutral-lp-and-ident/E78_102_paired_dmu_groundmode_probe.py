@@ -59,7 +59,6 @@ def main():
     mp.mp.dps = 60
     results = {
         "statement": "E78.102 ground-mode audit for paired d_mu route",
-        "date": "2026-07-19",
         "zeta": audit_case("zeta", None, (6, 8, 10, 12), 60),
         "plant": audit_case("plant", PLANTED, (6, 8), 50),
     }

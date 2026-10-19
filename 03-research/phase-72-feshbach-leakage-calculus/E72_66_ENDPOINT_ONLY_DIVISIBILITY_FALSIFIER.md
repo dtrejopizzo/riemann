@@ -1,7 +1,6 @@
 # E72.66 -- Falsifier for endpoint-only spectral divisibility
 
-**Date:** 2026-07-08.
-**Role:** prevent a false shortcut after the endpoint reflection identity.
+**Purpose:** prevent a false shortcut after the endpoint reflection identity.
 
 ## 0. Tested shortcut
 

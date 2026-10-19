@@ -1,8 +1,8 @@
-# R153.007 — Builder, round 3, Track 1 (P153.5): the single off-line pair for `ζ` itself
+# R153.007 — Round 3, Track 1 (P153.5): the single off-line pair for `ζ` itself
 
-*Builder of record: Claude Opus 5. Date 2026-09-19. Orders: `R153_006_ROUND3_BLUEPRINT.md` §Track 1, questions (1)–(5).
-Conventions and prior results of record: `R153_003_BUILDER_ROUND2.md`, `R153_004_HOSTILE_CONFIRMATION.md`,
-`R153_005_LEAD_CLOSING_DECISION.md`. Scripts: `scripts/round3/{track1.py, run_tstar2.py, fatal_check.py}`,
+*Construction of record: . Orders: `R153_006_ROUND3_BLUEPRINT.md` §Track 1, questions (1)–(5).
+Conventions and prior results of record: `R153_003_ROUND2.md`, `R153_004_CONFIRMATION.md`,
+`R153_005_CLOSING_DECISION.md`. Scripts: `scripts/round3/{track1.py, run_tstar2.py, fatal_check.py}`,
 reusing the mesh-free spectral assembly of `scripts/audit/aud_spectral.py`.
 Labels: `PROVED` / `RESTATEMENT` / `DIAGNOSTIC-NUMERIC` / `OPEN` / `WITHDRAWN`.*
 

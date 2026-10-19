@@ -150,7 +150,7 @@ metric.  Since \(R_{N,M}\) is injective on the chamber, its polar part is
 It is characterized without a choice by
 
 \[
- V_{N,M}^*V_{N,M}=I,qquad
+ V_{N,M}^*V_{N,M}=I,\qquad
  \mathrm{Ran}\,V_{N,M}=\mathrm{Ran}\,R_{N,M}.  \tag{3.2}
 \]
 
@@ -175,7 +175,7 @@ Then \(\Lambda_rL_r=I\).  These are genuine adjoints for the periodic
 metric.  For several depth steps use the functorial iteration
 
 \[
- L_{r,s}=L_{s-1}\cdots L_r,qquad
+ L_{r,s}=L_{s-1}\cdots L_r,\qquad
  \Lambda_{s,r}=L_{r,s}^*.                               \tag{3.5}
 \]
 
@@ -188,7 +188,7 @@ decomposition, is the defined Frobenius-depth dynamics.
 Let
 
 \[
- u_r=d_r^{-1/2}\sum_{i<d_r}e_i,qquad
+ u_r=d_r^{-1/2}\sum_{i<d_r}e_i,\qquad
  d_r=ap^r-p+1.                                          \tag{4.1}
 \]
 
@@ -196,7 +196,7 @@ For one step, (3.3) gives
 
 \[
  \langle L_ru_r,u_{r+1}\rangle
- ={d_r-1+\sqrt{m_r}\over\sqrt{d_rd_{r+1}}},qquad
+ ={d_r-1+\sqrt{m_r}\over\sqrt{d_rd_{r+1}}},\qquad
  m_r=d_{r+1}-d_r+1.                                     \tag{4.2}
 \]
 
@@ -243,7 +243,7 @@ rule.
 The stationary cyclic representation of (4.5) is the Szegő vector
 
 \[
- h_p(z)={\sqrt{1-p^{-1}}\over1-p^{-1/2}z},qquad
+ h_p(z)={\sqrt{1-p^{-1}}\over1-p^{-1/2}z},\qquad
  \langle S^rh_p,S^sh_p\rangle=p^{-|r-s|/2}.             \tag{5.1}
 \]
 
@@ -258,7 +258,7 @@ representation it gives
 Adjoin the independent real boundary module
 
 \[
- A_\infty e_j=(j+\tfrac14)e_j,qquad
+ A_\infty e_j=(j+\tfrac14)e_j,\qquad
  \|\partial_\infty F\|^2
  =\int_0^\infty{e^{-r/2}\over1-e^{-2r}}
    \|F-S_rF\|^2,dr.                                    \tag{5.3}
@@ -300,7 +300,7 @@ identity.  If \(\rho=p^{-1/2}\), its bilateral symbol is
 At the two endpoints,
 
 \[
- P_\rho(1)-1={2\rho\over1-\rho}>0,qquad
+ P_\rho(1)-1={2\rho\over1-\rho}>0,\qquad
  P_\rho(-1)-1={-2\rho\over1+\rho}<0.                  \tag{6.2}
 \]
 

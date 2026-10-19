@@ -1,6 +1,6 @@
 # E78.85 - The endpoint quotient is an exact modulus quotient with a small angular denominator defect
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

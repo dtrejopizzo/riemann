@@ -1,6 +1,6 @@
 # E78.87 - Sigma monotonicity would reduce the modulus quotient to the left endpoint
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

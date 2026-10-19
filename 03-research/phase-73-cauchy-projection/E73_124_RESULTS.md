@@ -1,6 +1,5 @@
 # E73.124 Results - Source of the Cauchy Small-Value
 
-Date: 2026-07-12.
 
 Script:
 

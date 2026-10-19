@@ -1,6 +1,6 @@
 # E78.4b - Neutral-ground-Cauchy audit
 
-**Run:** 2026-07-18.
+**Run:**
 **Target:** the build-neutral remnant named in E78.1 section 7,
 
 ```text

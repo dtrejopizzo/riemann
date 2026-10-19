@@ -1,6 +1,5 @@
 # E73.305 - Hilbert product rule for the closed distribution
 
-Date: 2026-07-16.
 
 ## 1. Purpose
 

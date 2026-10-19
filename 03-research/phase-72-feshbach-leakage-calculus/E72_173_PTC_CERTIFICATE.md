@@ -1,7 +1,6 @@
 # E72.173 -- PTC certificate probe
 
-**Date:** 2026-07-09.
-**Role:** combine the polynomial trace certificate into one executable gate.
+**Purpose:** combine the polynomial trace certificate into one executable gate.
 
 ## 0. Gate
 

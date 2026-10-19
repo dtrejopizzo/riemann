@@ -1,47 +1,47 @@
-# (T★) — Veredicto del tribunal (· ·) Los tres atacaron (T★) — el único pendiente declarado no-RH-hard. **No convergieron.** Hay
-acuerdo total en varios wins reales, y **un desacuerdo agudo en el último paso** que es,
-francamente, el resultado del día: revela que (T★) **no era un solo enunciado RH-neutral**. --- ## ACUERDO UNÁNIME — wins reales, RH-neutrales, demostrados **W1 — La escala de borde es logarítmica no degenerada [PROBADO, RH-neutral].**
-`h(λ)=π−ω*=π/(2N+1)` exacto; `2N+1≍2logλ`; por tanto `(logλ)·h(λ)→π/2 ∈(0,∞)` (Thm 2.3).
-Ni colapsa (sub-log⟹espectro continuo) ni diverge (super-log⟹degenera). **La escala está cerrada.** **W2 — Capa de Landau–Widom, ancho `Θ(logλ)` [PROBADO vía teorema LW, ].**
-El ancho de rampa del prolato `P_c` (`c=2πλ²logλ`) es `W(λ)=Θ(logλ)`, y coincide con `Γ` de N2 y
-con `‖Ξ_T‖²` — **los tres son la MISMA capa logarítmica**. Confirma la predicción IV.1.4. **W3 — Reconciliación Airy/Bessel ↦ n² [RESUELTO, era una conflación].**
-El borde Airy/Bessel es del **concentrador** `P_c`; el `(k+1)²` es del **inverso-de-Green** (el SL).
-Miran porciones espectrales distintas (`μ→½` rampa vs `ν→∞` cola de Weyl). Green explícito
-`min(x,y)(1−max)` tiene autovalores `(kπ)^{−2}↓`, su inverso crece como `(k+1)²`. La objeción
--IV.4 **NO** refutaba (T★): era conflación concentrador↔inverso (versión espectral de C.2). **W4 — Tensión de escalas `1/logλ` vs `λ^{−2}` [RESUELTA, ].**
-Era **colisión de notación `ω`**, no dos escalas físicas: la `λ^{−2}` del Lema N2 es la **medida
-armónica** `ω_{[−R,R]}` (R≍λ²), no el carrier `ω*`; la `λ^{−2}` numérica era el **gap de frame**
-(conflación C.2, ya retirada). **La escala física es `1/logλ`**, por balance gap–longitud. **W5 — Espectro `n²` FORZADO bajo (T) [PROBADO condicionalmente].**
-Si la familia es tight (T), Mosco ⟹ límite discreto; el blow-up `y=(x−½)/h` con `h≍1/logλ` acota
-el potencial residual a `O(1)`, Sturm fija SL regular con Dirichlet BC, Weyl da `μ_k/μ_0→(k+1)²`,
-`γ→3`. **Sin input extra.** El `n²` ya no es un misterio: es consecuencia de (T). --- ## EL DESACUERDO (el resultado del día): ¿la tightness (T) es RH-neutral o RH-hard? Tras W1–W5, todo (T★) se reduce a **probar la tightness uniforme (T)** = una **cota inferior de
-Dirichlet** `c₁·𝓔_D ≤ Â_λ` con `c₁>0` uniforme. Aquí los tres se parten: **🔴 (Thm 1.3): la cota inferior ES RH.**
-> `c₁𝓔_D ≤ Â_λ=A_λ/ε₀` uniforme `⟺ ε₀>0 ⟺` Weil-positividad-local `⟺` RH-local.
-Razón: el potencial de Beurling–Deny `q(w)=Ω−2M₀` tiene **pozo central `q(0)≍−λ^{1/2}<0`** — el
-mismo objeto cuyo signo es ε₀. Dividir por ε₀ lo profundiza, no lo cura. **Veredicto: (T★)
-es ~⅔ análisis puro (W1–W5) + ⅓ muro RH (la cota inferior). (T★) NO cierra III incondicionalmente.**
-"El hueco no-RH-hard del tribunal era ilusión de contabilidad: la mitad de (T) es el muro,
-escondida en la cota inferior." **🟢 (CONF): la cota inferior es RH-NEUTRAL.**
+# (T★) — Tribunal verdict (· ·) The three attacked (T★) — the only declared pending non-RH-hard item. **They did not converge.** There is
+total agreement on several real wins, and **a sharp disagreement on the last step** which is,
+frankly, the result of the day: it reveals that (T★) **was not a single RH-neutral statement**. --- ## UNANIMOUS AGREEMENT — real wins, RH-neutral, proved **W1 — The edge scale is non-degenerate logarithmic [PROVED, RH-neutral].**
+`h(λ)=π−ω*=π/(2N+1)` exact; `2N+1≍2logλ`; hence `(logλ)·h(λ)→π/2 ∈(0,∞)` (Thm 2.3).
+Neither collapses (sub-log⟹continuous spectrum) nor diverges (super-log⟹degenerates). **The scale is closed.** **W2 — Landau–Widom layer, width `Θ(logλ)` [PROVED via LW theorem, ].**
+The ramp width of the prolate `P_c` (`c=2πλ²logλ`) is `W(λ)=Θ(logλ)`, and it matches `Γ` from N2 and
+`‖Ξ_T‖²` — **all three are the SAME logarithmic layer**. Confirms prediction IV.1.4. **W3 — Airy/Bessel ↦ n² reconciliation [RESOLVED, was a conflation].**
+The Airy/Bessel edge belongs to the **concentrator** `P_c`; the `(k+1)²` belongs to the **Green's inverse** (the SL).
+They look at different spectral portions (`μ→½` ramp vs `ν→∞` Weyl tail). Explicit Green's function
+`min(x,y)(1−max)` has eigenvalues `(kπ)^{−2}↓`, its inverse grows as `(k+1)²`. Objection
+IV.4 did **NOT** refute (T★): it was a concentrator↔inverse conflation (spectral version of C.2). **W4 — Scale tension `1/logλ` vs `λ^{−2}` [RESOLVED, ].**
+It was a **notation collision in `ω`**, not two physical scales: the `λ^{−2}` of Lemma N2 is the **harmonic
+measure** `ω_{[−R,R]}` (R≍λ²), not the carrier `ω*`; the numerical `λ^{−2}` was the **frame gap**
+(conflation C.2, already retracted). **The physical scale is `1/logλ`**, by gap–length balance. **W5 — Spectrum `n²` FORCED under (T) [proved conditionally].**
+If the family is tight (T), Mosco ⟹ discrete limit; the blow-up `y=(x−½)/h` with `h≍1/logλ` bounds
+the residual potential to `O(1)`, Sturm fixes a regular SL with Dirichlet BC, Weyl gives `μ_k/μ_0→(k+1)²`,
+`γ→3`. **No extra input.** The `n²` is no longer a mystery: it is a consequence of (T). --- ## THE DISAGREEMENT (the result of the day): is tightness (T) RH-neutral or RH-hard? After W1–W5, all of (T★) reduces to **proving uniform tightness (T)** = a **lower Dirichlet
+bound** `c₁·𝓔_D ≤ Â_λ` with `c₁>0` uniform. Here the three split: **🔴 (Thm 1.3): the lower bound IS RH.**
+> `c₁𝓔_D ≤ Â_λ=A_λ/ε₀` uniform `⟺ ε₀>0 ⟺` local Weil-positivity `⟺` RH-local.
+Reason: the Beurling–Deny potential `q(w)=Ω−2M₀` has a **central well `q(0)≍−λ^{1/2}<0`** — the
+same object whose sign is ε₀. Dividing by ε₀ deepens it, does not cure it. **Verdict: (T★)
+is ~⅔ pure analysis (W1–W5) + ⅓ RH wall (the lower bound). (T★) does NOT close III unconditionally.**
+"The tribunal's non-RH-hard gap was an accounting illusion: half of (T) is the wall,
+hidden in the lower bound." **🟢 (CONF): the lower bound is RH-NEUTRAL.**
 > `𝓔_prime(f) ≥ κ·logλ·∫_bulk|f|² − C∫|f'|²`, `κ>0`.
-Razón: usa `|Λ(n)|` (no el signo), **vale para DH**, es asintótica de Landau–Widom. El término de
-primos nonlocal **confina** (masa `≍λ²` en bulk vence al pozo `≍λ^{1/2}` por `λ^{3/2}`) ⟹ impone
-**Dirichlet BC efectivas** en capa `1/logλ` ⟹ tightness ⟹ Mosco ⟹ (k+1)². **Veredicto:
-(T★) se comprime a UNA desigualdad (CONF) RH-neutral; NO RH-hard.** **🟡: reducible a 3 constantes de capa de borde, no-RH-hard — pero marca el riesgo.**
-La no-degeneración y la tightness las prueba **por conteo + Landau–Widom**; lo que falta son tres
-constantes analíticas (la constante de matcheo `2N+1=W(λ)`, la **cota inferior de ε₀**, el potencial
-`V`). Explícitamente: *"la tightness descansa en la cota inferior de ε₀; sin circularidad si ε₀ se
-prueba por inverso-de-Green, con circularidad si se intenta al revés. Lo marco."* --- ## DÓNDE ESTÁ EXACTAMENTE EL CHOQUE y miran **objetos distintos** y por eso difieren:
-- acota `𝓔_prime` SOLA (la forma de primos, con `|Λ(n)|`) ⟹ confinamiento del **bulk**, genuinamente RH-neutral. **Esto es correcto** y es un win.
-- acota `Â_λ=A_λ/ε₀` COMPLETA (primos **menos** arquimedeano `q`, dividido por `ε₀`) ⟹ la positividad global, que **es** el signo de ε₀. **Esto también es correcto.** La pregunta no resuelta: **¿el confinamiento del bulk (CONF, RH-neutral) basta para la tightness
-de la familia, o la tightness exige además controlar el pozo negativo `q` (= signo de ε₀ = RH)?**
-- Si la EXISTENCIA del límite (posiblemente con masa escapando a 0) sólo necesita CONF ⟹ gana: el operador límite y su espectro RELATIVO `(k+1)²` son RH-neutrales.
-- Si la NO-DEGENERACIÓN del límite (que no se escape masa) necesita `q` controlado ⟹ gana: esa pieza es RH. ya lo formuló como dicotomía (su punto 5): **existencia del límite = RH-neutral;
-no-degeneración del límite = RH.** afirma que CONF da AMBAS. **Ese es el punto abierto.** --- ## ESTADO FRANCO DE (T★) **Probado RH-neutral (los tres):** escala log (W1), capa LW `Θ(logλ)` (W2), reconciliación Airy↦n²
-(W3), resolución de la tensión de escalas (W4), espectro `n²` forzado bajo (T) (W5). El **espectro
-RELATIVO** `(k+1)²` y la **existencia** del operador límite están esencialmente cerrados. **El punto de choque (no resuelto):** ¿la tightness/cota-inferior es CONF (RH-neutral,)
-o es ε₀>0 (RH,)? la marca como riesgo de circularidad. **El muro RH (intacto, los tres coinciden):** el **signo de ε₀** = (H-pos) = Weil-positividad =
-IV.2≡§V. No se movió un milímetro. La hoja `/ε₀` lo presupone. ## Corrección importante al mapa
-El veredicto previo decía *"los 4 huecos se comprimen a UN enunciado RH-neutral (T★)"*. **Eso era
-demasiado optimista** (lo refuta): (T★) **no es enteramente RH-neutral** — contiene una cota
-inferior de Dirichlet cuyo status (RH-neutral vs RH) es **el punto en disputa**. Lo no-RH-neutral
-de (T★), si tiene razón, es el mismo muro de siempre (signo de ε₀), no algo nuevo. — A. · C. · H. (tribunal, en desacuerdo)
+Reason: it uses `|Λ(n)|` (not the sign), **holds for DH**, is Landau–Widom asymptotics. The nonlocal
+prime term **confines** (mass `≍λ²` in the bulk beats the well `≍λ^{1/2}` by `λ^{3/2}`) ⟹ imposes
+**effective Dirichlet BC** in a `1/logλ` layer ⟹ tightness ⟹ Mosco ⟹ (k+1)². **Verdict:
+(T★) compresses to ONE RH-neutral inequality (CONF); NOT RH-hard.** **🟡: reducible to 3 edge-layer constants, non-RH-hard — but flags the risk.**
+It proves non-degeneration and tightness **by counting + Landau–Widom**; what is missing are three
+analytic constants (the matching constant `2N+1=W(λ)`, the **lower bound of ε₀**, the potential
+`V`). Explicitly: *"tightness rests on the lower bound of ε₀; no circularity if ε₀ is
+proved via Green's inverse, circularity if attempted the other way around. I flag it."* --- ## WHERE EXACTLY THE CLASH LIES and look at **different objects** and that is why they differ:
+- bounds `𝓔_prime` ALONE (the prime form, with `|Λ(n)|`) ⟹ confinement of the **bulk**, genuinely RH-neutral. **This is correct** and is a win.
+- bounds the FULL `Â_λ=A_λ/ε₀` (primes **minus** archimedean `q`, divided by `ε₀`) ⟹ global positivity, which **is** the sign of ε₀. **This is also correct.** The unresolved question: **does bulk confinement (CONF, RH-neutral) suffice for tightness of
+the family, or does tightness additionally require controlling the negative well `q` (= sign of ε₀ = RH)?**
+- If the EXISTENCE of the limit (possibly with mass escaping to 0) only needs CONF ⟹ wins: the limit operator and its RELATIVE spectrum `(k+1)²` are RH-neutral.
+- If the NON-DEGENERATION of the limit (that no mass escapes) needs `q` controlled ⟹ wins: that piece is RH. already formulated this as a dichotomy (point 5): **existence of the limit = RH-neutral;
+non-degeneration of the limit = RH.** claims that CONF gives BOTH. **That is the open point.** --- ## FRANK STATE OF (T★) **Proved RH-neutral (all three):** log scale (W1), LW layer `Θ(logλ)` (W2), Airy↦n² reconciliation
+(W3), resolution of the scale tension (W4), spectrum `n²` forced under (T) (W5). The **RELATIVE
+spectrum** `(k+1)²` and the **existence** of the limit operator are essentially closed. **The clash point (unresolved):** is the tightness/lower-bound CONF (RH-neutral,)
+or is it ε₀>0 (RH,)? flags it as a circularity risk. **The RH wall (intact, all three agree):** the **sign of ε₀** = (H-pos) = Weil-positivity =
+IV.2≡§V. Not moved an inch. The `/ε₀` sheet presupposes it. ## Important correction to the map
+The previous verdict said *"the 4 gaps compress to ONE RH-neutral statement (T★)"*. **That was
+too optimistic** (refutes it): (T★) **is not entirely RH-neutral** — it contains a lower
+Dirichlet bound whose status (RH-neutral vs RH) is **the point in dispute**. The non-RH-neutral
+part of (T★), if correct, is the same old wall (sign of ε₀), not something new. (tribunal, in disagreement)

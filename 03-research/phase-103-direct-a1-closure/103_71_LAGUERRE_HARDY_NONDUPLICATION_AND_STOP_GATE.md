@@ -88,7 +88,7 @@ The inspected public antecedents separate into three already-known pieces.
    <https://arxiv.org/abs/2505.07803>.
 
 Searches through arXiv and public mathematical repositories, through
-2026-07-25, found no paper proving the special ultra-long curved-contour
+found no paper proving the special ultra-long curved-contour
 mean square needed in 103_70, nor a paper closing RH through this Vaughan--
 Laguerre combination. Absence from a search is not a proof of novelty. In
 any event, the identities are assembled from known pieces; only a successful

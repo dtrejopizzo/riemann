@@ -26,7 +26,7 @@ using the continuous phase normalized by `phi_infinity(0)=0`.  Since
 `b_infinity(-tau)=conjugate(b_infinity(tau))`,
 
 \[
- \phi_\infty(-\tau)=-\phi_\infty(\tau),qquad
+ \phi_\infty(-\tau)=-\phi_\infty(\tau),\qquad
  \phi_\infty'(-\tau)=\phi_\infty'(\tau).          \tag{1.2}
 \]
 
@@ -35,21 +35,21 @@ For a prime, put
 \[
  c_p(\tau)={1-r_pe^{-ia_p\tau}\over
                  1-r_pe^{ia_p\tau}}
- =e^{i\phi_p(\tau)},qquad
+ =e^{i\phi_p(\tau)},\qquad
  r_p=p^{-1/2},\quad a_p=\log p,                    \tag{1.3}
 \]
 
 with `phi_p(0)=0`.  Again
 
 \[
- \phi_p(-\tau)=-\phi_p(\tau),qquad
+ \phi_p(-\tau)=-\phi_p(\tau),\qquad
  \phi_p'(-\tau)=\phi_p'(\tau).                    \tag{1.4}
 \]
 
 The exact derivatives are
 
 \[
- \phi_\infty'=g_\Gamma-m_0,qquad
+ \phi_\infty'=g_\Gamma-m_0,\qquad
  \phi_p'=a_p(P_p-1).                               \tag{1.5}
 \]
 
@@ -75,7 +75,7 @@ For every prime `p` and every `R`,
 
 \[
  \boxed{
- \Omega_R(\phi_\infty,\phi_p)=0,qquad
+ \Omega_R(\phi_\infty,\phi_p)=0,\qquad
  \Omega_R(\phi_p,\phi_\infty)=0.}                 \tag{2.2}
 \]
 
@@ -98,7 +98,7 @@ finite symmetric cutoff before a limit is taken.
 The finite completed scattering is
 
 \[
- \Theta_T=b_\infty\prod_{p\in S_T}c_p^{-1},qquad
+ \Theta_T=b_\infty\prod_{p\in S_T}c_p^{-1},\qquad
  \phi_T=\phi_\infty-\sum_{p\in S_T}\phi_p.         \tag{3.1}
 \]
 

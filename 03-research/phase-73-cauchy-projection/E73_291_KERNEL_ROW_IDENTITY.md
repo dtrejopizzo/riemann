@@ -1,6 +1,5 @@
 # E73.291 - Kernel-row identity and commutator unification
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

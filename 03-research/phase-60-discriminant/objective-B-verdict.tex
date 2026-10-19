@@ -11,13 +11,13 @@
 \newcommand{\GAP}{\textcolor{red!75!black}{\textsc{[gap]}}}
 
 \theoremstyle{plain}
-\newtheorem{theorem}{Teorema}
-\newtheorem{lemma}{Lema}
-\newtheorem{proposition}{Proposici\'on}
-\newtheorem{corollary}{Corolario}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
 \theoremstyle{definition}
-\newtheorem{remark}{Observaci\'on}
-\newtheorem{definition}{Definici\'on}
+\newtheorem{remark}{Remark}
+\newtheorem{definition}{Definition}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\half}{\tfrac12}
@@ -26,165 +26,168 @@
 \newcommand{\Aweil}{\mathcal A_\lambda}
 \DeclareMathOperator{\spec}{Spec}
 
-\title{\textbf{Objetivo B, veredicto: densidad vs.\ posici\'on.\\
-El $\varepsilon_0$ incondicional es el operador de \emph{frame} (densidad);\\
-RH vive en la brecha frame$\,\ne\,$Weil (posici\'on)}}
-\author{Programa \texttt{riemann-program} --- documento de trabajo}
+\title{\textbf{Objective B, verdict: density vs.\ position.\\
+The unconditional $\varepsilon_0$ is the \emph{frame} operator (density);\\
+RH lives in the gap frame$\,\ne\,$Weil (position)}}
+\author{\texttt{riemann-program} --- working document}
 \date{\today}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-La pregunta que decid\'ia si el programa CCM da un puente \emph{no circular} a RH era:
-¿la cota inferior $\varepsilon_0(\lambda)\ge c/\lambda^2$ se sigue de la \emph{densidad}
-de los ceros (PNT/Landau, no circular) o de su \emph{posici\'on} (RH)? La respuesta,
-una vez separados con cuidado dos operadores que el programa ven\'ia confundiendo, es
-n\'itida: \textbf{el $\varepsilon_0$ probado incondicionalmente es el menor autovalor
-del operador de \emph{frame} $\Sframe$ (puro de densidad, Landau--Beurling), y RH
-\emph{no} es ese objeto: RH es la coincidencia $\Aweil=\Sframe$ (la forma de Weil
-iguala al frame), que es exactamente la condici\'on de \emph{posici\'on}.} El programa
-entrega resultados de densidad genuinos e incondicionales; RH queda \emph{fuera} de su
-alcance no circular, en la brecha $\Aweil-\Sframe$, que es RH por definici\'on (criterio
-de Weil). Veredicto: reformulaci\'on limpia, no puente.
+The question that would decide whether the CCM program gives a \emph{non-circular}
+bridge to RH was: does the lower bound $\varepsilon_0(\lambda)\ge c/\lambda^2$ follow
+from the \emph{density} of the zeros (PNT/Landau, non-circular) or from their
+\emph{position} (RH)? The answer, once two operators the program had been conflating
+are carefully separated, is sharp: \textbf{the $\varepsilon_0$ proved unconditionally
+is the smallest eigenvalue of the \emph{frame} operator $\Sframe$ (pure density,
+Landau--Beurling), and RH is \emph{not} that object: RH is the coincidence
+$\Aweil=\Sframe$ (the Weil form equals the frame), which is exactly the
+\emph{position} condition.} The program delivers genuine, unconditional density
+results; RH remains \emph{outside} its non-circular reach, in the gap
+$\Aweil-\Sframe$, which is RH by definition (Weil's criterion). Verdict: a clean
+reformulation, not a bridge.
 \end{abstract}
 
 \tableofcontents
 
 % =====================================================================
-\section{Dos operadores que hay que separar}\label{sec:two}
+\section{Two operators that must be separated}\label{sec:two}
 % =====================================================================
 
-Sea $\El=\mathrm{PW}_{L/2}$, $L=2\log\lambda$, y $\{\gamma_j\}$ las alturas de los
-ceros no triviales $\rho_j=\beta_j+i\gamma_j$ de $\zeta$ con $\gamma_j$ bajo el
-horizonte $T^*\sim2\pi\lambda^2$.
+Let $\El=\mathrm{PW}_{L/2}$, $L=2\log\lambda$, and $\{\gamma_j\}$ the heights of the
+non-trivial zeros $\rho_j=\beta_j+i\gamma_j$ of $\zeta$ with $\gamma_j$ below the
+horizon $T^*\sim2\pi\lambda^2$.
 
-\begin{definition}[Operador de frame $\Sframe$ --- densidad]
+\begin{definition}[Frame operator $\Sframe$ --- density]
 \[
   \Sframe(f,f)\;:=\;\sum_{j}\bigl|\widehat f(\half+i\gamma_j)\bigr|^2,
   \qquad
   \varepsilon_0^{\Sframe}(\lambda):=\min_{f\in\El,\;\|f\|=1}\Sframe(f,f).
 \]
-Es la forma de muestreo de $\widehat f$ en las \emph{alturas reales} $\gamma_j$.
-Es $\ge0$ por construcci\'on (suma de cuadrados); $>0$ sii $\{\gamma_j\}$ es un
-\emph{frame} para $\El$, lo cual depende \emph{s\'olo de la densidad} de las
-$\gamma_j$ (teorema de densidad de Landau/Beurling).
+This is the sampling form of $\widehat f$ at the \emph{real heights} $\gamma_j$.
+It is $\ge0$ by construction (sum of squares); $>0$ iff $\{\gamma_j\}$ is a
+\emph{frame} for $\El$, which depends \emph{only on the density} of the
+$\gamma_j$ (Landau/Beurling density theorem).
 \end{definition}
 
-\begin{definition}[Forma de Weil $\Aweil$ --- posici\'on]
+\begin{definition}[Weil form $\Aweil$ --- position]
 \[
   \Aweil(f,f)\;:=\;\sum_{j}\widehat f(\rho_j)\,\overline{\widehat f(1-\overline{\rho_j})}
   \;=\;\sum_j \widehat f(\beta_j+i\gamma_j)\,\overline{\widehat f(1-\beta_j+i\gamma_j)} .
 \]
-Es la forma que aparece en la f\'ormula expl\'icita; involucra las \emph{posiciones
-completas} $\rho_j$ (parte real $\beta_j$ incluida).
+This is the form that appears in the explicit formula; it involves the \emph{full
+positions} $\rho_j$ (real part $\beta_j$ included).
 \end{definition}
 
 % =====================================================================
-\section{La identidad clave: $\Aweil=\Sframe \Leftrightarrow$ RH}\label{sec:key}
+\section{The key identity: $\Aweil=\Sframe \Leftrightarrow$ RH}\label{sec:key}
 % =====================================================================
 
-\begin{lemma}[Coincidencia frame--Weil]\label{lem:coincide}
-Para un cero individual $\rho_j$:
+\begin{lemma}[Frame--Weil coincidence]\label{lem:coincide}
+For an individual zero $\rho_j$:
 \[
   \widehat f(\rho_j)\,\overline{\widehat f(1-\overline{\rho_j})}
   \;=\;\bigl|\widehat f(\half+i\gamma_j)\bigr|^2
   \quad\Longleftrightarrow\quad
   \beta_j=\half .
 \]
-En efecto, $\rho_j=\half+i\gamma_j$ da $1-\overline{\rho_j}=\half+i\gamma_j=\rho_j$,
-y el t\'ermino se vuelve $|\widehat f(\rho_j)|^2$. Rec\'iprocamente, si
-$\beta_j\ne\half$ entonces $\rho_j\ne1-\overline{\rho_j}$ y el t\'ermino es un producto
-cruzado $\widehat f(\rho_j)\overline{\widehat f(1-\overline{\rho_j})}$, en general
-\emph{no} real $\ge0$.
+Indeed, $\rho_j=\half+i\gamma_j$ gives $1-\overline{\rho_j}=\half+i\gamma_j=\rho_j$,
+and the term becomes $|\widehat f(\rho_j)|^2$. Conversely, if
+$\beta_j\ne\half$ then $\rho_j\ne1-\overline{\rho_j}$ and the term is a cross
+product $\widehat f(\rho_j)\overline{\widehat f(1-\overline{\rho_j})}$, in general
+\emph{not} real $\ge0$.
 \end{lemma}
 
-\begin{theorem}[El $\varepsilon_0$ del programa es densidad; RH es posici\'on]
+\begin{theorem}[The program's $\varepsilon_0$ is density; RH is position]
 \label{thm:verdict}
 \begin{enumerate}[label=\textbf{(\alph*)},leftmargin=2em]
-\item \PR\ \emph{(Densidad, incondicional.)} $\varepsilon_0^{\Sframe}(\lambda)>0$ para
-todo $\lambda$, con $\varepsilon_0^{\Sframe}(\lambda)\sim C_0/\lambda^2$ (d\'eficit de
-muestreo cr\'itico, Landau--Beurling). \emph{Esto es lo que el programa midi\'o y
-``prob\'o''}; no usa la posici\'on de los ceros, s\'olo su densidad
+\item \PR\ \emph{(Density, unconditional.)} $\varepsilon_0^{\Sframe}(\lambda)>0$ for
+all $\lambda$, with $\varepsilon_0^{\Sframe}(\lambda)\sim C_0/\lambda^2$ (critical
+sampling deficit, Landau--Beurling). \emph{This is what the program measured and
+``proved''}; it does not use the position of the zeros, only their density
 $\tfrac1{2\pi}\log\tfrac{T}{2\pi}$.
-\item $\Aweil(f,f)=\Sframe(f,f)$ para todo $f\in\El$ y todo $\lambda$
-$\;\Longleftrightarrow\;$ $\beta_j=\half$ para todo $\gamma_j<T^*(\lambda)$
-$\;\Longleftrightarrow\;$ RH bajo el horizonte.
-\item \OP\ \emph{(Posici\'on $=$ RH.)} $\Aweil(f,f)\ge0$ para todo $f\in\El$
-$\;\Longleftrightarrow\;$ RH bajo el horizonte. La cota inferior
-$\varepsilon_0^{\Aweil}(\lambda)\ge c/\lambda^2$ es por tanto RH--equivalente.
+\item $\Aweil(f,f)=\Sframe(f,f)$ for all $f\in\El$ and all $\lambda$
+$\;\Longleftrightarrow\;$ $\beta_j=\half$ for all $\gamma_j<T^*(\lambda)$
+$\;\Longleftrightarrow\;$ RH below the horizon.
+\item \OP\ \emph{(Position $=$ RH.)} $\Aweil(f,f)\ge0$ for all $f\in\El$
+$\;\Longleftrightarrow\;$ RH below the horizon. The lower bound
+$\varepsilon_0^{\Aweil}(\lambda)\ge c/\lambda^2$ is therefore RH-equivalent.
 \end{enumerate}
 \end{theorem}
 \begin{proof}
-(a) es el teorema de densidad de Landau aplicado al frame $\{\gamma_j\}$ a densidad
-cr\'itica $L/2\pi$; la tasa $C_0/\lambda^2$ es el d\'eficit en el borde
-$T^*\sim2\pi\lambda^2$. (b) es el Lema \ref{lem:coincide} sumado sobre $j$ (los
-t\'erminos coinciden uno a uno sii cada $\beta_j=\half$). (c): si todos $\beta_j=\half$
-entonces $\Aweil=\Sframe\ge0$; si alg\'un $\beta_{j_0}\ne\half$ con $\gamma_{j_0}<T^*$,
-se elige $f$ concentrada espectralmente cerca de $\rho_{j_0}$ y $1-\overline{\rho_{j_0}}$
-con fases opuestas, haciendo $\Aweil(f,f)<0$; por homogeneidad
+(a) is Landau's density theorem applied to the frame $\{\gamma_j\}$ at critical
+density $L/2\pi$; the rate $C_0/\lambda^2$ is the deficit at the edge
+$T^*\sim2\pi\lambda^2$. (b) is Lemma \ref{lem:coincide} summed over $j$ (the
+terms coincide one by one iff each $\beta_j=\half$). (c): if every $\beta_j=\half$
+then $\Aweil=\Sframe\ge0$; if some $\beta_{j_0}\ne\half$ with $\gamma_{j_0}<T^*$,
+choose $f$ spectrally concentrated near $\rho_{j_0}$ and $1-\overline{\rho_{j_0}}$
+with opposite phases, making $\Aweil(f,f)<0$; by homogeneity
 $\varepsilon_0^{\Aweil}\le0$. \qed
 \end{proof}
 
 % =====================================================================
-\section{Por qu\'e la confusi\'on import\'o}\label{sec:confusion}
+\section{Why the confusion mattered}\label{sec:confusion}
 % =====================================================================
 
-\begin{remark}[La fuente del espejismo]
-A lo largo del programa, $\varepsilon_0$ se trat\'o como ``el margen de positividad de
-Weil'' \emph{y} como ``el menor autovalor del frame de los ceros'', como si fueran el
-mismo objeto. El Teorema \ref{thm:verdict} muestra que coinciden \emph{exactamente bajo
-RH} (Lema \ref{lem:coincide}) y \emph{s\'olo} entonces. Como toda la num\'erica usa los
-ceros \emph{verdaderos} (que est\'an en l\'inea hasta alturas enormes), se midi\'o
-siempre el r\'egimen $\Aweil=\Sframe$, y el $\varepsilon_0\sim C_0/\lambda^2$ observado
-es el del \emph{frame} (densidad). El contenido RH --- la posibilidad
-$\Aweil\ne\Sframe$ --- es \emph{invisible} a esa medici\'on, porque requerir\'ia un cero
-fuera de l\'inea, que no existe en el rango computado.
+\begin{remark}[The source of the mirage]
+Throughout the program, $\varepsilon_0$ was treated as ``the Weil-positivity
+margin'' \emph{and} as ``the smallest eigenvalue of the frame of the zeros'', as if
+they were the same object. Theorem \ref{thm:verdict} shows that they coincide
+\emph{exactly under RH} (Lemma \ref{lem:coincide}) and \emph{only} then. Since all
+the numerics use the \emph{true} zeros (which are on the line up to enormous
+heights), what was always measured was the regime $\Aweil=\Sframe$, and the observed
+$\varepsilon_0\sim C_0/\lambda^2$ is that of the \emph{frame} (density). The RH
+content --- the possibility $\Aweil\ne\Sframe$ --- is \emph{invisible} to that
+measurement, because it would require a zero off the line, which does not exist in
+the computed range.
 \end{remark}
 
-\begin{corollary}[Qu\'e da la densidad y qu\'e no]
+\begin{corollary}[What density gives and what it does not]
 \begin{itemize}[leftmargin=1.4em]
-\item \PR\ La densidad (PNT/Landau) da $\varepsilon_0^{\Sframe}\sim C_0/\lambda^2>0$:
-real, incondicional, pero es una propiedad de \emph{muestreo}, no de RH.
-\item Las regiones libres de ceros cl\'asicas (Vinogradov--Korobov) dan una cota
-\emph{parcial} y \emph{no uniforme} sobre $\beta_j$ ($\beta_j<1-c/(\log\gamma_j)^{2/3}$),
-que controla $\Aweil-\Sframe$ \emph{s\'olo} en una franja que se angosta; \textbf{no}
-alcanza $\beta_j=\half$.
-\item \OP\ El salto de ``franja que se angosta'' a $\beta_j=\half$ uniforme es
-exactamente RH. Ninguna entrada de densidad lo cubre.
+\item \PR\ Density (PNT/Landau) gives $\varepsilon_0^{\Sframe}\sim C_0/\lambda^2>0$:
+real, unconditional, but it is a \emph{sampling} property, not RH.
+\item The classical zero-free regions (Vinogradov--Korobov) give a \emph{partial}
+and \emph{non-uniform} bound on $\beta_j$ ($\beta_j<1-c/(\log\gamma_j)^{2/3}$),
+which controls $\Aweil-\Sframe$ \emph{only} in a narrowing strip; \textbf{it does not}
+reach $\beta_j=\half$.
+\item \OP\ The jump from ``narrowing strip'' to uniform $\beta_j=\half$ is exactly
+RH. No density input covers it.
 \end{itemize}
 \end{corollary}
 
 % =====================================================================
-\section{Veredicto del programa}\label{sec:verdict}
+\section{Program verdict}\label{sec:verdict}
 % =====================================================================
 
 \begin{enumerate}[leftmargin=1.6em]
-\item \textbf{Densidad o posici\'on:} \textbf{posici\'on}. La cota
-$\varepsilon_0\ge c/\lambda^2$ \emph{relevante para RH} es la del operador de Weil
-$\Aweil$, y $\Aweil\ge0\Leftrightarrow$ RH. La cota del frame $\Sframe$ (densidad) es
-incondicional pero \emph{no} es RH.
-\item \textbf{Lo que el programa S\'I logr\'o} (incondicional, real):
+\item \textbf{Density or position:} \textbf{position}. The bound
+$\varepsilon_0\ge c/\lambda^2$ \emph{relevant to RH} is that of the Weil operator
+$\Aweil$, and $\Aweil\ge0\Leftrightarrow$ RH. The frame bound $\Sframe$ (density) is
+unconditional but \emph{is not} RH.
+\item \textbf{What the program DID achieve} (unconditional, real):
 \begin{itemize}[leftmargin=1.3em]
-\item \PR\ Eslab\'on 1 (real--rootedness finita, H1+H2): $\xi$-truncadas con s\'olo
-ceros reales, sin suponer RH.
-\item \PR\ El motor CCM fiel (ceros a $10^{-50}$ con pocos primos).
-\item \PR\ $\varepsilon_0^{\Sframe}\sim C_0/\lambda^2$ (densidad cr\'itica,
-Landau--Beurling): un teorema de muestreo limpio.
-\item \PR\ La anatom\'ia del margen: torre $(k+1)^2$, $\mathcal L$ rango--1,
-direcci\'on--polo --- estructura del frame, no de RH.
+\item \PR\ Link 1 (finite real-rootedness, H1+H2): truncated $\xi$'s with only
+real zeros, without assuming RH.
+\item \PR\ The faithful CCM engine (zeros to $10^{-50}$ with few primes).
+\item \PR\ $\varepsilon_0^{\Sframe}\sim C_0/\lambda^2$ (critical density,
+Landau--Beurling): a clean sampling theorem.
+\item \PR\ The anatomy of the margin: tower $(k+1)^2$, rank-1 $\mathcal L$,
+pole-direction --- frame structure, not RH structure.
 \end{itemize}
-\item \textbf{Lo que queda fuera de alcance no circular:} RH misma. El \'ultimo paso
-($\Aweil\ge0$, o $\Aweil=\Sframe$) es el criterio de positividad de Weil, RH por
-definici\'on. \emph{El programa es una reformulaci\'on limpia y una fuente de resultados
-incondicionales de densidad, pero no un puente no circular a RH.}
+\item \textbf{What remains outside non-circular reach:} RH itself. The last step
+($\Aweil\ge0$, or $\Aweil=\Sframe$) is the Weil-positivity criterion, RH by
+definition. \emph{The program is a clean reformulation and a source of
+unconditional density results, but not a non-circular bridge to RH.}
 \end{enumerate}
 
-\noindent\textbf{Honestidad final.} Este es el desenlace esperable de cualquier
-ataque a RH v\'ia positividad de Weil: el criterio es RH--equivalente, y separar
-densidad de posici\'on muestra que la parte demostrable (densidad/frame) no toca la
-parte RH (posici\'on). El valor del programa no est\'a en cerrar RH --- no la cierra ---
-sino en (i)~los resultados incondicionales de los Eslabones 0,1 y del frame, y
-(ii)~haber localizado, con demostraci\'on, que el muro es $\Aweil-\Sframe=$ posici\'on
-$=$ RH, y no un operador $\mathcal L$ por descubrir ni una cola de Euler por acotar.
+\noindent\textbf{Final honesty.} This is the expectable outcome of any attack on RH
+via Weil positivity: the criterion is RH-equivalent, and separating density from
+position shows that the provable part (density/frame) does not touch the RH part
+(position). The value of the program is not in closing RH --- it does not close it
+--- but in (i)~the unconditional results of Links 0, 1 and of the frame, and
+(ii)~having located, with proof, that the wall is $\Aweil-\Sframe=$ position
+$=$ RH, and not an operator $\mathcal L$ yet to be discovered nor an Euler tail
+yet to be bounded.
 \end{document}

@@ -10,7 +10,7 @@
 
 Constructing the geometric class K_geom / SURF behind the Riemann Hypothesis
 
-You are an autonomous mathematics research agent. Work rigorously; report only what you can justify. A FALSE PROOF IS WORSE THAN AN CANDID NEGATIVE RESULT: never present an unproven step as proven, never cite an open conjecture as if established. This prompt is fully self-contained; assume no external context.
+You are an autonomous mathematics research run. Work rigorously; report only what you can justify. A FALSE PROOF IS WORSE THAN AN CANDID NEGATIVE RESULT: never present an unproven step as proven, never cite an open conjecture as if established. This task statement is fully self-contained; assume no external context.
 
 1. SETTING (definitions).
 Riemann zeta ζ(s), nontrivial zeros ρ = 1/2 + iγ_ρ. The Weil explicit formula: for test f with Fourier transform f̂, Σ_ρ f̂(γ_ρ) = A_∞(f) + (poles at s=0,1) − 2 Σ_n Λ(n) n^{−1/2} g(log n), where Λ = von Mangoldt, g = Fourier transform of f̂, and the archimedean density is Ψ(r) = Re ψ(1/4 + ir/2) − log π (ψ = digamma). Define the Weil pairing ⟨f,h⟩ = Σ_ρ f̂(γ_ρ) conj(ĥ(γ_ρ)); complete to a Kreĭn space H_W with indefinite form Q whose negative index κ = #(zeros off the critical line). There is a self-adjoint "Frobenius" operator T on H_W with spectrum {γ_ρ}, and a complex structure J from the spectral splitting. Let Π⊥ = primitive part (orthocomplement of the rank-2 pole part).

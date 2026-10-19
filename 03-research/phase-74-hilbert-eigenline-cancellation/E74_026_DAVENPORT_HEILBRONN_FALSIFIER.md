@@ -1,6 +1,5 @@
 # E74.26 - Davenport--Heilbronn nodal falsifier
 
-Date: 2026-07-16.
 
 ## Compatible engine
 

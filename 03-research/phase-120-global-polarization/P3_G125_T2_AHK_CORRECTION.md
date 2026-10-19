@@ -17,7 +17,7 @@ remains correct but has no compatible arithmetic matroid system to act on.
 The first audit did not route Candidates A and B through the strongest
 pre-existing obstruction to their mechanism.
 
-* `phase-41-build-G2/125-forma-interseccion-cuadrado.md` already constructs
+* `phase-41-build-G2/125-construction-of-the-intersection-form.md` already constructs
   the finite toy square $C_p\times C_p$, obtains Gram signature $(1,2)$,
   and proves negativity on its primitive plane.  Therefore a correct finite
   signature is not new evidence by itself.
@@ -192,7 +192,7 @@ There are only two outcomes:
 
 1. the regulator cup/biextension pairing forgets $\tau$ after (7.1), or
    retains only a derivative at the central Eisenstein parameter; Candidate C
-   collapses to the phase-15 height/special-value obstruction and dies;
+   collapses to the phase-15-arithmetic-hodge-index height/special-value obstruction and dies;
 2. the harmonic Green representative depends nontrivially on $\tau$ and its
    local Fourier multiplier is exactly
    $\log\pi-\operatorname{Re}\psi(1/4+i\tau/2)$; this escapes Attempt 6,

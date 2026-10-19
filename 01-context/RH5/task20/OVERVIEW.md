@@ -50,12 +50,12 @@ Within the limits of the available data, the main research hypothesis is support
 <artifact>
 <file-name>lchi5_zeros_N5000_dps80.npy</file-name>
 <artifact-type>agent_produced</artifact-type>
-<artifact-description>Generated in this session using PARI via cypari2 with lfuncreate([znstar(5,1),[1]]) and lfunzeros over height intervals, then truncated to the first 5000 zeros. The filename reflects the intended precision target from the project objective, but PARI returned only about 19–20 significant digits, consistent with the dataset caveat. The file contains the imaginary parts of the first 5000 critical-line zeros for the primitive order-4 Dirichlet character mod 5.</artifact-description>
+<artifact-description>Generated in this run using PARI via cypari2 with lfuncreate([znstar(5,1),[1]]) and lfunzeros over height intervals, then truncated to the first 5000 zeros. The filename reflects the intended precision target from the project objective, but PARI returned only about 19–20 significant digits, consistent with the dataset caveat. The file contains the imaginary parts of the first 5000 critical-line zeros for the primitive order-4 Dirichlet character mod 5.</artifact-description>
 </artifact>
 <artifact>
 <file-name>ldelta_zeros_N1298_dps80.npy</file-name>
 <artifact-type>agent_produced</artifact-type>
-<artifact-description>Partial Ramanujan-Delta zero list generated in this session using PARI modular-form routines mfinit([1,12],1), mfDelta(), lfunmf, and lfunzeros. Runtime constraints prevented completion of the requested N=5000 list, so this artifact contains only the first 1298 zeros obtained before timeout. It was used only for a partial Front I comparison and should not be treated as a complete N=5000 control.</artifact-description>
+<artifact-description>Partial Ramanujan-Delta zero list generated in this run using PARI modular-form routines mfinit([1,12],1), mfDelta(), lfunmf, and lfunzeros. Runtime constraints prevented completion of the requested N=5000 list, so this artifact contains only the first 1298 zeros obtained before timeout. It was used only for a partial Front I comparison and should not be treated as a complete N=5000 control.</artifact-description>
 </artifact>
 <artifact>
 <file-name>front1_model_selection.csv</file-name>

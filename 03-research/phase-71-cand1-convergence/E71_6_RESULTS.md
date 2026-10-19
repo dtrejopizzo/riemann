@@ -1,6 +1,5 @@
 # E71.6 -- characteristic-function convergence probe results
 
-**Date:** 2026-07-07.
 **Script:** `E71_6_characteristic_convergence_probe.py`.
 
 ## Output

@@ -1,6 +1,5 @@
 # E73.182 - Closed-series archimedean certificate
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

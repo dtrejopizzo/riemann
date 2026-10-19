@@ -55,34 +55,24 @@ of the Idele Class Group}
 \date{\today}
 
 \begin{abstract}
-Let $S=\{\infty\}\cup S_f$ be a finite set of places of $\Q$ containing the
-archimedean one, let $\CS$ denote the associated idele class carrier and let
-$\DA=C_c^\infty(\CS)$ be its commutative nuclear $\dagger$-algebra of test
-functions, equipped with the canonical trace $T=\sum_{v\in S}W_v$ constructed
-in the companion papers.  We prove, from named classical facts about the
-Riemann zeta function and nothing else, the Weil explicit formula in the form
-required by that trace, and we use it to identify the trace on the radial
-sector of $\DA$.  The main results are: a trace formula for radial classes
-valid with no support hypothesis; the explicit formula
-$\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)=2\Phi_F(0)\Phi_F(1)+\langle\mathcal
-A F,F\rangle$ for real $F\in C_c^\infty(\R)$, proved by the argument principle
-on rectangles avoiding the ordinates of the zeros together with a contour shift
-performed separately on each prime term, whose integrand is entire; the
-comparison theorem
-$T_\infty(\Gamma_{F\star F^\dagger})=2\Phi_F(0)\Phi_F(1)
--\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$
-on the colimit of the chart algebras; the resulting characterisation of
-$c=0$ as the unique identity-class constant compatible with that comparison;
-a residue computation showing that the continued Euler-product symbol
-$A(s)=\tfrac12\log\pi-\tfrac12\psi(s/2)-\zeta'/\zeta(s)$ has exactly two poles
-in $\{0,1\}$, both simple and each of residue $1$, against the chart residues
-$|S_f|+1$ and $0$, and identifying that pair of residues with the polar packet
-$2\Phi_F(0)\Phi_F(1)=\beta_T(M(\Gamma_F),M(\Gamma_F))$ of the Tate boundary;
-the identity $M(\Gamma_F)=(\Phi_F(1),\Phi_F(0))$; a theorem stating that a zero
-of the completed zeta function off the line $\Rel s=\tfrac12$ produces a
-nonzero primitive real test $F$ with $\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)<0$;
-and the vanishing of the radical of the intersection form on the radial sector
-at every finite chart.
+Let $C_S$ be the idele class group of $\Q$ attached to a finite set of places
+$S$ containing the archimedean one, and let $T=\sum_{v\in S}W_v$ be the
+canonical trace on the convolution algebra $C_c^\infty(C_S)$ constructed in
+the companion papers.  We evaluate $T$ on radial test functions.  After
+proving Weil's explicit formula in the normalization of $T$, by a contour
+argument in which no contour crosses a zero, we show that for real
+$F\in C_c^\infty(\R)$ the self-intersection of the radial class $\Gamma_F$ is
+\[
+  T_\infty(\Gamma_{F\star F^\dagger})
+  =2\Phi_F(0)\Phi_F(1)-\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho),
+\]
+where $\Phi_F$ is the Mellin transform of $F$ and $\rho$ runs over the zeros
+of the completed zeta function.  The polar term $2\Phi_F(0)\Phi_F(1)$ is the
+hyperbolic form of the Tate functionals, and it comes from the two simple
+poles, of residue $1$, of the continued Euler-product symbol.  We also show
+that the constant term of the trace is forced to vanish, that primitive
+radial test functions suffice to detect a zero off the critical line, and
+that the intersection form is nondegenerate on radial classes.
 \end{abstract}
 
 \maketitle
@@ -92,65 +82,54 @@ at every finite chart.
 \section{Introduction}
 \label{sec:intro}
 
-\subsection{The object}
-
 Fix a finite set $S=\{\infty\}\cup S_f$ of places of $\Q$, with $S_f$ a finite
-nonempty set of primes.  The companion papers \cite{P43,P44} construct, on the
-idele class carrier
+nonempty set of primes.  In \cite{P43,P44} we constructed, on the idele class
+group
 \[
   \CS\;\cong\;\R^\times\times\prod_{p\in S_f}\Z_p^\times ,
   \qquad |x|_S=|x_\infty|_\infty ,
 \]
-a commutative nuclear $\dagger$-algebra of test functions
-$\DA=C_c^\infty(\CS)$, with product the convolution $\star$ for the
-multiplicative Haar measure $d^*x$ and involution
-$F^\dagger(u)=\overline{F(u^{-1})}$, together with a canonical trace
+the commutative nuclear $\dagger$-algebra $\DA=C_c^\infty(\CS)$, with product
+the convolution $\star$ for the multiplicative Haar measure $d^*x$ and
+involution $F^\dagger(u)=\overline{F(u^{-1})}$, together with a trace
 \[
-  T(F)\;=\;\sum_{v\in S}W_v(F)\;+\;c\,F(1),\qquad c:=0 ,
+  T(F)\;=\;\sum_{v\in S}W_v(F)
 \]
-whose local terms $W_p$, $W_\infty$ are the regularised Weil orbital integrals
-of the local densities $\tau_v(x)=|x|_v^{1/2}/|1-x|_v$, with the local
-multiplicative measures normalised by $\vol_{d^*x}(p^k\Z_p^\times)=\log p$ and
-$d^*x_\infty=dx/(2|x|)$.  The trace carries a Hermitian intersection form
-\[
-  I_A(F,G):=T(F\star G^\dagger)
-\]
-and a boundary map $M=(\lambda_-,\lambda_+)\colon\DA\to \BT=\C^2$,
-$\lambda_\mp(F)=\int_{\CS}F(u)|u|_S^{\mp1/2}\,d^*u$, onto a hyperbolic plane
-$(\BT,\beta_T)$.  All of this is recalled precisely, with citations, in
-Section~\ref{sec:carrier}; nothing of it is constructed here.
+whose local terms $W_p$, $W_\infty$ are the regularized Weil orbital
+integrals of the local densities $\tau_v(x)=|x|_v^{1/2}/|1-x|_v$; the local
+measures are normalized by $\vol_{d^*x}(p^k\Z_p^\times)=\log p$ and
+$d^*x_\infty=dx/(2|x|)$.  The trace defines a Hermitian intersection form
+$I_A(F,G)=T(F\star G^\dagger)$, and the two Tate functionals
+$\lambda_\mp(F)=\int_{\CS}F(u)|u|_S^{\mp1/2}\,d^*u$ define a homomorphism
+$M=(\lambda_-,\lambda_+)$ onto a hyperbolic plane $(\BT,\beta_T)$.  These
+facts are recalled precisely in Section~\ref{sec:carrier}.
 
-The present paper is about one question: \emph{what is this trace, as a number,
-when it is evaluated on the radial sector of $\DA$?}  The answer is the Weil
-explicit formula, and the purpose of the paper is to prove that formula --- not
-to cite it --- and then to read the trace off it.
-
-\subsection{The main results}
+The subject of this paper is the value of $T$ on radial test functions, those
+that depend only on $|w|_S$.  The answer is the explicit formula, and we prove
+that formula here, in the normalization of $T$, rather than quote it.
 
 Throughout, $\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ is the
-completed zeta function, $\rho$ runs over the zeros of $\xi$ with multiplicity,
-and for $F\in C_c^\infty(\R)$ we write
+completed zeta function, $\rho$ runs over the zeros of $\xi$ with
+multiplicity, and for $F\in C_c^\infty(\R)$
 \[
   \Phi_F(s)=\int_\R F(t)e^{(s-\frac12)t}\,dt ,\qquad
   \hat u(\tau)=\int_\R u(t)e^{-i\tau t}\,dt .
 \]
-For $h\in C_c^\infty(\R)$ the associated \emph{radial class} is
+For $h\in C_c^\infty(\R)$ the \emph{radial class} of $h$ is
 $\Gamma_h(w)=h(-\log|w|_S)\in\DA$.
 
 \medskip
-\noindent\textbf{Theorem A} (Lemma~\ref{lem:radial-trace}; the radial trace,
-with no support hypothesis).
-\emph{For \emph{every} $h\in C_c^\infty(\R)$,}
+\noindent\textbf{Theorem A} (Lemma~\ref{lem:radial-trace}).
+\emph{For every $h\in C_c^\infty(\R)$,}
 \[
   T(\Gamma_h)=\sum_{p\in S_f}\sum_{k\ge1}(\log p)\,p^{-k/2}
       \bigl[h(k\log p)+h(-k\log p)\bigr]
-      +\frac1{2\pi}\int_\R \hat h(-\tau)\,\hat W_\infty(0,\tau)\,d\tau ,
+      +\frac1{2\pi}\int_\R \hat h(-\tau)\,\widehat W_\infty(0,\tau)\,d\tau ,
 \]
-\emph{the first sum finite and the integral absolutely convergent.}
+\emph{the first sum being finite and the integral absolutely convergent.}
 
 \medskip
-\noindent\textbf{Theorem B} (Theorem~\ref{thm:EF}; the explicit formula,
-proved here).
+\noindent\textbf{Theorem B} (Theorem~\ref{thm:EF}).
 \emph{Let $F\in C_c^\infty(\R)$ be real with $\supp F\subseteq[-T,T]$ and put
 $h=F\star F^\dagger$.  Then, the zero sum being taken in the symmetric order,}
 \[
@@ -165,9 +144,9 @@ $h=F\star F^\dagger$.  Then, the zero sum being taken in the symmetric order,}
 \]
 
 \medskip
-\noindent\textbf{Theorem C} (Theorem~\ref{thm:comparison}; the comparison
-theorem).
-\emph{For real $F\in C_c^\infty(\R)$, with $T_\infty$ the colimit trace,}
+\noindent\textbf{Theorem C} (Theorem~\ref{thm:comparison}).
+\emph{For real $F\in C_c^\infty(\R)$, with $T_\infty$ the trace on the
+colimit over all $S$,}
 \[
 \begin{aligned}
   I_\infty(\Gamma_F,\Gamma_F)=T_\infty(\Gamma_{F\star F^\dagger})
@@ -178,122 +157,94 @@ theorem).
 \]
 
 \medskip
-\noindent\textbf{Theorem D} (Corollary~\ref{cor:c-unique}; the constant).
-\emph{$c=0$ is the unique real constant in the family
-$T^{(c)}=\sum_v W_v+c\,(\,\cdot\,)(1)$ for which the identity of Theorem C
-holds.}
+\noindent\textbf{Theorem D} (Corollary~\ref{cor:c-unique}).
+\emph{Among the traces $T^{(c)}=\sum_v W_v+c\,(\,\cdot\,)(1)$, $c\in\R$, the
+identity of Theorem C holds only for $c=0$.}
 
 \medskip
-\noindent\textbf{Theorem E} (Theorem~\ref{thm:residues}; the polar packet).
-\emph{Let $A(s)=\tfrac12\log\pi-\tfrac12\psi(s/2)-\zeta'/\zeta(s)$, the
+\noindent\textbf{Theorem E} (Theorem~\ref{thm:residues}).
+\emph{Let $A(s)=\tfrac12\log\pi-\tfrac12\psi(s/2)-\zeta'/\zeta(s)$ be the
 Euler-product symbol continued from $\Rel s>1$, and let
-$A_S(s)=a(s)+\sum_{p\in S_f}f_p(s)$ be its chart truncation.  Then $A$ has
-exactly two poles in $\{0,1\}$, both simple and both of residue $1$ --- its
-remaining poles are the zeros of $\xi$, contributed by $-\xi'/\xi$ ---
-whereas $\Res_{s=0}A_S=|S_f|+1$ and $\Res_{s=1}A_S=0$ at every finite chart;
-and the pair of continued residues, evaluated against
-$g(s)=\Phi_F(s)\Phi_F(1-s)$, is exactly the polar packet
-$g(0)+g(1)=2\Phi_F(0)\Phi_F(1)=\beta_T(M(\Gamma_F),M(\Gamma_F))$ of Theorem
-C.}
+$A_S(s)=a(s)+\sum_{p\in S_f}f_p(s)$ be its truncation to $S$.  Then $A$ has
+simple poles at $s=0$ and $s=1$, each of residue $1$, whereas
+$\Res_{s=0}A_S=|S_f|+1$ and $\Res_{s=1}A_S=0$ for every finite $S$.
+Evaluated against $g(s)=\Phi_F(s)\Phi_F(1-s)$, the two residues of $A$ give
+exactly the polar term $2\Phi_F(0)\Phi_F(1)=\beta_T(M(\Gamma_F),M(\Gamma_F))$
+of Theorem C.}
 
 \medskip
-\noindent\textbf{Theorem F} (Theorem~\ref{thm:sufficiency}; sufficiency).
-\emph{If the completed zeta function has a zero off the line $\Rel s=\tfrac12$,
-then there exists a nonzero real $F\in C_c^\infty(\R)$ with
-$\Phi_F(0)=\Phi_F(1)=0$ and}
+\noindent\textbf{Theorem F} (Theorem~\ref{thm:sufficiency}).
+\emph{If $\xi$ has a zero off the line $\Rel s=\tfrac12$, then there is a
+nonzero real $F\in C_c^\infty(\R)$ with $\Phi_F(0)=\Phi_F(1)=0$ and}
 \[
-  \sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)<0 .
+  \sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)<0 ;
 \]
-\emph{One may take $F$ even, and one may take $F$ odd.}
+\emph{$F$ may be taken even, and it may be taken odd.}
 
 \medskip
-\noindent\textbf{Theorem G} (Theorem~\ref{thm:radical}; the radical on the
-radial sector).
-\emph{At every finite chart $S$ with $S_f\ne\emptyset$, the radical of $I_A$
-restricted to the radial sector $\DAr$ is zero.}
+\noindent\textbf{Theorem G} (Theorem~\ref{thm:radical}).
+\emph{For every finite $S$ with $S_f\ne\emptyset$, the form $I_A$ is
+nondegenerate on the radial classes.}
 
-\subsection{What is proved and what is imported}
+\medskip
+Theorem B is Weil's explicit formula \cite{Weil1952} for a compactly
+supported smooth test function; Barner \cite{Barner1981} gives it under
+minimal regularity.  The identity is classical, and we prove it for two
+reasons.  First, it is needed in exactly the normalization in which $T$ is
+defined.  Second, the proof in Section~\ref{sec:EF} is arranged so that no
+contour is shifted across a zero: the reflection $\xi'/\xi(1-s)=-\xi'/\xi(s)$
+is applied before the logarithmic derivative is expanded, so that one works on
+a single line $\Rel s=c>1$, and the shift to $\Rel s=\tfrac12$ is made
+separately on each prime term, where the integrand $g(s)n^{-s}$ is entire.
+Theorem C then reads the spectral side of the explicit formula as the trace
+$T_\infty$ on radial classes, and Theorems D and E identify the constant and
+the poles that make this identification exact.
 
-The classical facts used are listed once, in Appendix~\ref{app:classical}, with
-precise sources: the Euler product for $\zeta'/\zeta$; the analytic
-continuation, functional equation and zero structure of $\xi$; the Hadamard
-product of order one and the resulting partial-fraction expansion of
-$\xi'/\xi$; the local and global Riemann--von Mangoldt zero counts and the
-consequent estimate $\xi'/\xi(\sigma\pm iX)=O(\log^2X)$ along suitably chosen
-heights; Stirling's asymptotics for the digamma function; Fourier inversion and
-Plancherel; the Paley--Wiener theorem; Lerch's formula for the Hurwitz zeta
-function; and Mertens' theorem.  Every other analytic ingredient is proved in
-the text.  In particular the explicit formula itself is proved here, in
-Section~\ref{sec:EF}: this is the technical heart of the paper, and the reason
-it has to be proved rather than quoted is explained in
-Remark~\ref{rem:route}.
+The classical facts about the zeta function that we use are listed, with
+sources, in Appendix~\ref{app:classical}.  Results of \cite{P43,P44} are
+quoted as numbered propositions in Section~\ref{sec:carrier} and at a few
+other points, each stated in full.
 
-Results of the companion papers \cite{P43,P44} are quoted as numbered
-propositions and are never reproved; they concern the construction of the
-carrier, the algebra, the trace, its symbol and its Tate boundary, and the
-identification of the radial sector.  We have taken care to state each such
-import in a self-contained way, so that the present paper can be read as a
-theorem about the object described in Section~\ref{sec:carrier}.
+\subsection*{Place in the series}
+This is one of five papers on a single construction. Paper 43 \cite{P43} constructs the carrier: the algebra $D_A=C_c^\infty(C_S)$, its involution, the canonical trace $T=\sum_{v\in S}W_v$, its Fourier symbol, the Tate functionals $M=(\lambda_-,\lambda_+)$ and the numerical form $I_A$; Paper 44 \cite{P44} builds the arithmetic family on that carrier (the Frobenius measures $\mathrm{Frob}_n$, whose contact with the diagonal is $\Lambda(n)n^{-1/2}$) and its two Gram forms; This paper proves Weil's explicit formula in the normalization of $T$ and identifies the trace on radial classes with the spectral side; Paper 47 \cite{P47} studies the positivity of the resulting window form on the primitive subspace; that problem is open, and Paper 47 records what is proved about it; Paper 48 \cite{P48} is a map of the routes towards that positivity. The results are stated on the declared carrier of the series, the algebra $\DA$ of a fixed finite $S$ and its colimit over $S$. No sign and no positivity of $I_A$ or of the zero sum is asserted; the only statement about zeros is the detection result, Theorem F. The letter $T$ denotes the trace here and in \cite{P43,P44}; in Theorem B and in \cite{P47} a positive real $T$ also denotes the half-length of a support window, and the two are never mixed in one formula.
 
-\subsection{Relation to the classical explicit formula}
+Section~\ref{sec:carrier} recalls the algebra, the trace, its symbol and the
+Tate functionals.  Section~\ref{sec:radial} introduces the radial classes and
+fixes conventions, and Section~\ref{sec:trace} proves Theorem A.
+Sections~\ref{sec:normalization} and \ref{sec:arch} treat the normalization
+of the local measures and the archimedean place, and
+Section~\ref{sec:boundary} computes the Tate functionals on radial classes.
+Section~\ref{sec:EF} proves Theorem B, Section~\ref{sec:comparison} Theorems C
+and D, Section~\ref{sec:polar} Theorem E, Section~\ref{sec:sufficiency}
+Theorem F and Section~\ref{sec:radicalsec} Theorem G.
 
-Theorem B is Weil's explicit formula \cite{Weil1952}, in the version for a
-compactly supported smooth test function and the completed zeta function of
-$\Q$; Barner \cite{Barner1981} gives the general form under minimal regularity.
-We do not claim novelty for the identity.  What is new here is, first, that the
-proof given in Section~\ref{sec:EF} is arranged so that \emph{no contour is
-shifted across a zero}: the reflection $\xi'/\xi(1-s)=-\xi'/\xi(s)$ is applied
-\emph{before} the logarithmic derivative is expanded, so that after expansion
-one works on a single line $\Rel s=c>1$, and the shift to $\Rel s=\tfrac12$ is
-performed on each prime term separately, where the integrand $g(s)n^{-s}$ is
-entire.  Second, and this is the point of the paper, the identity is then read
-as a statement about the trace $T$ on $\DA$: Theorem C says that the spectral
-side of the explicit formula \emph{is} the canonical trace evaluated on the
-radial sector, and Theorems D and E say which normalisations and which poles
-make that identification exact.
-
-\subsection{Organisation}
-
-Section~\ref{sec:carrier} recalls the carrier, the algebra, the trace, the
-symbol and the Tate boundary.  Section~\ref{sec:radial} introduces the radial
-classes and fixes the coordinate, Fourier and Mellin dictionaries.
-Section~\ref{sec:trace} proves Theorem A.  Section~\ref{sec:normalisation}
-records the local normalisation as a consequence of a universal Tate residue.
-Section~\ref{sec:arch} treats the archimedean place and computes the
-archimedean Tate residue.  Section~\ref{sec:boundary} proves the swap
-$M(\Gamma_F)=(\Phi_F(1),\Phi_F(0))$ and identifies the polar packet with the
-hyperbolic form.  Section~\ref{sec:EF} proves Theorem B.
-Section~\ref{sec:comparison} proves Theorems C and D and records the order of
-limits.  Section~\ref{sec:polar} proves Theorem E.
-Section~\ref{sec:sufficiency} proves Theorem F.  Section~\ref{sec:radicalsec}
-proves Theorem G.  Appendix~\ref{app:classical} lists the classical facts with
-their sources.
-
-\section{The carrier, the algebra, the trace and its symbol}
+\section{The trace and its symbol}
 \label{sec:carrier}
 
-This section is entirely expository: every statement in it is a theorem of the
-companion papers \cite{P43,P44}, quoted with its number there.  Nothing in it
-is proved here, and nothing in it is claimed as new.
+Everything in this section is proved in \cite{P43}; we quote each statement
+with its number there.
 
-\subsection{The carrier}
+\subsection{The algebra}
 
-\begin{proposition}[\cite{P43}, Lemma 3.3 and Corollary 3.4]
+\begin{proposition}[\cite{P43}, Lemma 2.2, Definition 2.4]
 \label{prop:carrier}
 Let $S=\{\infty\}\cup S_f$ with $S_f$ a finite nonempty set of primes, let
 $\A_S^\times=\R^\times\times\prod_{p\in S_f}\Q_p^\times$ and let
 $\Gamma_S\subset\A_S^\times$ be the group of $S$-units.  The valuation
 homomorphism splits $\A_S^\times=\Gamma_S\times\ker\varphi$, so that the idele
-class carrier
+class group
 \[
   \CS:=\Gamma_S\backslash\A_S^\times\;\cong\;\ker\varphi\;\cong\;
   \R^\times\times\prod_{p\in S_f}\Z_p^\times
   \tag{2.1}
 \]
 is a locally compact abelian group, on which $|x|_S=|x_\infty|_\infty$.  Its
-multiplicative Haar measure is normalised by
-$\vol_{d^*x_p}(\Z_p^\times)=\log p$ at a finite place and by
-$d^*x_\infty=dx/(2|x|)$ at the archimedean one.  The space
+Haar measure $d^*u$ is the product of $d^*x_\infty=dx/(2|x|)$ on $\R^\times$
+and the \emph{probability} Haar measures of the factors $\Z_p^\times$
+(\cite{P43}, Lemma 2.2).  The normalization $\vol_{d^*x_p}(\Z_p^\times)=\log p$
+is that of the \emph{local} measure $d^*x_p$ on the slice $\Q_p^\times$,
+used in the local terms $W_p$ below; it is not a normalization of the Haar
+measure of $\CS$.  The space
 \[
   \DA:=C_c^\infty(\CS),\qquad
   (F\star G)(u)=\int_{\CS}F(v)G(uv^{-1})\,d^*v,\qquad
@@ -303,49 +254,55 @@ $d^*x_\infty=dx/(2|x|)$ at the archimedean one.  The space
 is a commutative nuclear LF $\dagger$-algebra.
 \end{proposition}
 
-We emphasise that $\CS$ is a \emph{group}: it carries no stratification, every
-coordinate is a unit, and the only distinguished loci are the valuation shells
-$j_p(p^k\Z_p^\times)$, where $j_p\colon\Q_p^\times\to\CS$ is the slice map that
-places its argument at $p$ and $1$ elsewhere.
+For a prime $p\in S_f$ we write $j_p\colon\Q_p^\times\to\CS$ is the slice map that
+places its argument at $p$ and $1$ elsewhere; the images
+$j_p(p^k\Z_p^\times)$ are the \emph{valuation shells}.
 
 \subsection{The trace}
 
-\begin{proposition}[\cite{P43}, Definitions 8.5--8.6, Remark 8.6a and
-Definition 8A.7d]
+\begin{proposition}[\cite{P43}, Definition 6.5, Conventions 6.6 and 6.11]
 \label{prop:trace}
 For $v\in S$ let $\tau_v(x)=|x|_v^{1/2}/|1-x|_v$ be the local Weil density.
 There are continuous linear functionals $W_v$ on $\DA$, one for each $v\in S$,
 defined by
 \begin{align*}
   W_p(F)&=\sum_{k\ne0}(\log p)\,p^{-|k|/2}\!\!\int_{\Z_p^\times}\!\!
-      (F\circ j_p)(p^ku)\,d^*u
+      (F\circ j_p)(p^ku)\,du
      +(\log p)\!\int_{\Z_p^\times}\!\frac{(F\circ j_p)(u)-(F\circ j_p)(1)}{|1-u|_p}\,du,\\
   W_\infty(F)&=(\gamma+\log4\pi)\,b(0)
      +\int_0^\infty K(t)\bigl[b(t)+b(-t)-2b(0)e^{-t/2}\bigr]\,dt,
   \qquad K(t)=\frac{e^{-t/2}}{1-e^{-2t}},
 \end{align*}
-where $b$ denotes the profile of $F$ in the logarithmic coordinate
-$t=\log|w|_S$.  The \emph{canonical trace} is
+where $du$ is the probability Haar measure of $\Z_p^\times$ (so that the
+factor $\log p$, the local volume of a shell, appears exactly once), and $b$
+denotes the profile of $F$ in the logarithmic coordinate $t=\log|w|_S$.
+This form of $W_\infty$ is the one valid for $F$ even under the sign
+($F(-w)=F(w)$), where $b$ is the common profile on the two real half-lines;
+for general $F$, \cite{P43} (Definition 6.5 and Convention 6.6)
+weights the positive half-line by $K_s(t)=1/(4\sinh(t/2))$ and the negative
+one by $K_c(t)=1/(4\cosh(t/2))$, $K=K_s+K_c$.  Every test function to which
+$W_\infty$ is applied in this paper is a radial class, hence even under the
+sign, so only the displayed form is used.  The \emph{canonical trace} is
 \[
   T(F):=\sum_{v\in S}W_v(F)+c\,F(1),\qquad c:=0 ,
   \tag{2.3}
 \]
-and the family $T^{(c)}:=\sum_v W_v+c\,(\,\cdot\,)(1)$, $c\in\R$, is the family
-of admissible normalisations.  The \emph{intersection form} is
+and more generally we write $T^{(c)}:=\sum_v W_v+c\,(\,\cdot\,)(1)$ for
+$c\in\R$.  The \emph{intersection form} is
 \[
   I_A(F,G):=T(F\star G^\dagger),
   \tag{2.4}
 \]
 Hermitian and jointly continuous on $\DA$, with trivial radical
-$\mathcal N=0$ \emph{(\cite{P43}, Definition 9.2 and Theorems 9.3, 9.8)}.
+$\mathcal N=0$ \emph{(\cite{P43}, Proposition 8.2 and Theorem 8.4)}.
 \end{proposition}
 
-\begin{proposition}[\cite{P43}, Theorem 8.8]
+\begin{proposition}[\cite{P43}, Theorem 6.7]
 \label{prop:offidentity}
 Let $\DA^{\mathrm{off}}\subset\DA$ be the subspace of test functions whose
 support misses the identity class.  On $\DA^{\mathrm{off}}$ each $W_v$ is the
 absolutely convergent integral $\int F(j_v(x))\tau_v(x)\,d^*x_v$; no
-counterterm and no regularisation occurs, and $W_v(F)=0$ for all but finitely
+counterterm and no regularization occurs, and $W_v(F)=0$ for all but finitely
 many $v$.
 \end{proposition}
 
@@ -356,8 +313,7 @@ the component of characters that are trivial on the compact part
 $\prod_{p\in S_f}\Z_p^\times$ and on $\{\pm1\}$, parametrised by
 $\tau\in\R$ through $w\mapsto|w|_S^{i\tau}$.
 
-\begin{proposition}[\cite{P43}, Theorem 9.7, equation (9.11),
-Theorem 9.7(d$'$)/(9.13$'$), and (14.2)]
+\begin{proposition}[\cite{P43}, Theorems 7.2(c),(d) and 15.1(c)]
 \label{prop:symbol}
 There is a function $\widehat T_S$ on $\widehat{\CS}$, the \emph{symbol} of
 $T$, with the following properties.
@@ -379,20 +335,18 @@ component is discrete.
   \tag{2.6}
 \]
 the integral absolutely convergent, with $d\chi|_{\cz}=d\tau/2\pi$; and the
-identity holds \emph{place by place}, $W_v(H)=\int\widehat H\,\widehat W_v\,d\chi$
+identity holds place by place, $W_v(H)=\int\widehat H\,\widehat W_v\,d\chi$
 for every $v\in S$, each integral absolutely convergent.  No support hypothesis
-is imposed on $H$.  The place-wise form is \cite{P43}, Theorem 9.7(d$'$),
-equation (9.13$'$); Lemma~\ref{lem:radial-trace} and Theorem~\ref{thm:radical}
-rest on it.
+is imposed on $H$.
 \item[(d)] $\widehat T_S(\cz,\cdot)$ is even, and
 $\widehat T_S(\cz,0)\ge\log\pi-\psi(\tfrac14)=\log\pi+\gamma+3\log2+\pi/2
-\approx5.3722$; this lower bound is \cite{P43}, equation (14.2).
+\approx5.3722$.
 \end{enumerate}
 \end{proposition}
 
-\subsection{The Tate boundary}
+\subsection{The Tate functionals}
 
-\begin{proposition}[\cite{P43}, Theorems 9.1 and 9.12]
+\begin{proposition}[\cite{P43}, Theorems 7.1 and 8.8]
 \label{prop:tate}
 The two \emph{Tate functionals}
 \[
@@ -411,19 +365,32 @@ with matrix $\begin{psmallmatrix}0&1\\1&0\end{psmallmatrix}$ in the basis
 $e_-,e_+$.
 \end{proposition}
 
-\begin{proposition}[\cite{P43}, Theorems 9.13(a), 9.14, 9.14a--9.14c$'$]
+\begin{proposition}[\cite{P43}, Theorems 8.9(a), 8.11, 8.13--8.17]
 \label{prop:rulings}
 There is no $\DA$-module splitting of the Tate boundary inside $\DA$; the two
-isotropic lines $\C e_\pm$ are realised only in the completion
+isotropic lines $\C e_\pm$ are realized only in the completion
 $\mathcal N_A^{\mathrm{dist}}=\overline{J(\DA)}\subseteq\DA'\oplus\BT$ of
 $\DA$ along $J(F)=(I_A(F,\cdot),M(F))$, as limits
-$e_\pm^{\mathrm{dist}}=(0,e_\pm)$ of spread Tate families.  The plane they span
+$e_\pm^{\mathrm{dist}}=(0,e_\pm)$ of spread Tate characters.  The plane they span
 is exactly the scalar radical of the completed form.
 \end{proposition}
 
+\medskip\noindent\phantomsection\label{rem:C2}%
+\emph{In what sense the Tate terms are realized.}
+One may ask for a realization of the trace on a complex that identifies the
+action and the two Tate terms.  This paper gives such a realization only in
+the following form: the two Tate terms are the
+functionals $M=(\lambda_-,\lambda_+)$ of Proposition~\ref{prop:tate} with
+values in the hyperbolic plane $(\BT,\beta_T)$, and the polar packet of
+Theorem~\ref{thm:polarpacket} is $\beta_T(M,M)$.  No realization of the
+trace as a Lefschetz trace on a cohomological complex (of Meyer's kind or any
+other) is constructed or used here; the action enters only through the
+algebra $\DA$, its trace $T$ and the boundary map $M$.
+\medskip
+
 \subsection{Charts and the colimit}
 
-\begin{proposition}[\cite{P43}, Theorem 8A.7c]
+\begin{proposition}[\cite{P43}, Theorem 11.6]
 \label{prop:colimit}
 The chart algebras $\DA(S)$ form a directed system under the maps
 $J_{ST}\colon\DA(S)\to\DA(T)$ for $S\subseteq T$, with colimit
@@ -437,35 +404,28 @@ the finite sum of the omitted local terms.  We write
 $I_\infty(F,G):=T_\infty(F\star G^\dagger)$.
 \end{proposition}
 
-\begin{remark}[the colimit convention]
+\begin{remark}
 \label{rem:C1}
-Every statement below in which the prime sum runs over \emph{all} primes is a
-statement about $T_\infty$ on $\DA^\infty$, and says so in its hypotheses.
-Statements about a fixed chart are labelled as such.  The convention is not
-applied to the continued Euler-product symbol of
-Section~\ref{sec:polar}, which is an analytic continuation and not a limit of
-chart symbols; Corollary~\ref{cor:noncommute} is precisely the failure of that
-exchange.
+Every statement below in which the prime sum runs over all primes is a
+statement about $T_\infty$ on $\DA^\infty$.  This does not apply to the
+continued Euler-product symbol of Section~\ref{sec:polar}, which is an
+analytic continuation and not a limit of chart symbols; see
+Corollary~\ref{cor:noncommute}.
 \end{remark}
 
-\subsection{The indefiniteness of the form}
+Finally we recall that the form $I_A$ has no sign.
 
-\begin{proposition}[\cite{P43}, Theorem 14.1]
+\begin{proposition}[\cite{P43}, Theorem 15.1(b),(d)]
 \label{prop:indefinite}
 With $c=0$, the form $I_A$ on $\DA$ is indefinite with infinite index on both
-sides, and the primitive sector $\{F: M(F)=0\}$ has trivial $I_A$-orthogonal
+sides, and the primitive part $\{F: M(F)=0\}$ has trivial $I_A$-orthogonal
 complement.
 \end{proposition}
 
-No statement of the present paper asserts a sign, and none of the identities
-proved below is accompanied by a positivity claim.
-
-\section{The radial sector and the dictionaries}
+\section{Radial classes}
 \label{sec:radial}
 
-\subsection{Radial classes}
-
-\begin{definition}[\cite{P44}, Definition 3bis.6]
+\begin{definition}[\cite{P44}, Definition 3.11]
 \label{def:radial}
 For $h\in C_c^\infty(\R)$ set
 \[
@@ -480,13 +440,12 @@ Elements of $\DAr$ are called \emph{radial classes}.  We write
 $R(\Gamma_h)=\sup\{|t|:t\in\supp h\}$.
 \end{definition}
 
-Each $\Gamma_h$ is a genuine element of $C_c^\infty(\CS)$: it is smooth because
-$|\cdot|_S$ is, and compactly supported because the compact factor
+Each $\Gamma_h$ lies in $C_c^\infty(\CS)$: it is smooth because
+$|\cdot|_S$ is, and compactly supported because the factor
 $\prod_{p\in S_f}\Z_p^\times\times\{\pm1\}$ is compact and $h$ has compact
-support in the modulus direction.  No distribution, no measure and no sum of
-point masses occurs anywhere in this paper's test class.
+support.
 
-\begin{proposition}[\cite{P44}, Lemma 3bis.6a]
+\begin{proposition}[\cite{P44}, Lemma 3.12]
 \label{prop:radalg}
 $\DAr$ is a $\dagger$-stable subalgebra of $\DA$ and $h\mapsto\Gamma_h$ is an
 isomorphism of $\dagger$-algebras from $(C_c^\infty(\R),*)$ onto it:
@@ -500,32 +459,35 @@ and $0\notin\supp h$ implies $\Gamma_h\in\DA^{\mathrm{off}}$.  Injectivity is
 immediate from \emph{(2.1)}, since $|\cdot|_S$ is surjective onto $\R_{>0}$.
 \end{proposition}
 
-\begin{remark}[typing]
+\begin{remark}
 \label{rem:typing}
-The point classes of the arithmetic family --- the Haar measures of the
-individual shells $j_p(p^k\Z_p^\times)$ and of the Frobenius strata --- are
-\emph{not} elements of $\DA$; by \cite{P44}, Definition--Theorem 3bis.8 and
-Theorems 8.3, 3ter.14, they are realised only in the completion
-$\mathcal N_A^{\mathrm{dist}}$, as limits in the strong dual, and the numbers
+The Haar measures of the individual shells $j_p(p^k\Z_p^\times)$, and the
+Frobenius measures of \cite{P44}, are not elements of $\DA$: a shell has the
+fixed archimedean coordinate $p^{-k}$, so its measure is singular for the Haar
+measure of $\CS$, and it acts on $\DA$ only as a continuous functional.  For
+the radial and Frobenius classes \cite{P44}, Theorems 4.2, 4.7 and 6.11 show
+that they are realized in the completion $\mathcal N_A^{\mathrm{dist}}$, as
+limits in the strong dual (for the shells themselves no separate theorem is
+stated there; none is used below), and the numbers
 $\Lambda(n)n^{-1/2}$ are the atom masses of the unique representing measure of
-the finite part of $T$.  Every statement of the present paper is made either on
-$\DAr$ or on the completion, and each theorem says which.
+the finite part of $T$.  All test functions in this paper are elements of
+$\DAr$, except in Proposition~\ref{prop:live}.
 \end{remark}
 
-\subsection{Coordinates and the half-density}
+\subsection{Coordinates}
 
 Three coordinates occur.  On $\R_{>0}^\times$ one may use the multiplicative
 variable $x$; on $\R$ the additive variable $t=\log x$; on $\CS$ the modulus
 coordinate $t=\log|w|_S$.  Under the disintegration $d^*w=dt\otimes\mu$, with
-$\mu$ the normalised (probability) Haar measure of the compact part
-\cite[proof of Theorem 9.14a]{P43}, the modulus coordinate identifies the
-radial sector with $C_c^\infty(\R)$.  The unnormalised multiplicative
+$\mu$ the normalized (probability) Haar measure of the compact part
+\cite[(10)]{P43}, the modulus coordinate identifies the
+radial classes with $C_c^\infty(\R)$.  The unnormalized multiplicative
 involution $f^\dagger(x)=x^{-1}\overline{f(x^{-1})}$ is carried to
 $F^\dagger(u)=\overline{F(u^{-1})}$ by $F\mapsto|\cdot|_S^{1/2}F$, which in the
-additive coordinate is $f\mapsto e^{t/2}f(e^t)$: the half-density is the change
-of gauge between the two conventions, not a weight inserted by hand.
+additive coordinate is $f\mapsto e^{t/2}f(e^t)$; so the half-density is the
+change of variables between the two conventions.
 
-\begin{lemma}[the profile and its transform]
+\begin{lemma}
 \label{lem:profile}
 For $h\in C_c^\infty(\R)$ the profile of $\Gamma_h$ in the coordinate
 $t=\log|w|_S$ is $t\mapsto h(-t)$.  Consequently
@@ -551,12 +513,11 @@ On that component the character is $w\mapsto|w|_S^{i\tau}$, so
 
 Since every symbol occurring below is even in $\tau$ on $\cz$
 (Proposition~\ref{prop:symbol}(d)), the sign in (3.3) never changes a value of
-$I_A$.  It does fix which of the two isotropic directions a given family
-approximates; see Remark~\ref{rem:swap}.
+$I_A$; see Remark~\ref{rem:swap}.
 
-\subsection{Fourier and Mellin}
+\subsection{Conventions}
 
-We fix once and for all
+We fix
 \begin{equation}
 \begin{aligned}
   \hat u(\tau)&=\int_\R u(t)e^{-i\tau t}\,dt,
@@ -573,10 +534,8 @@ so that, by (3.2),
 \tag{3.5}
 \end{equation}
 
-\subsection{The archimedean constants}
-
-For later reference we record the values that occur, all of them elementary
-consequences of Proposition~\ref{prop:symbol} and of the digamma facts (E4) of
+For later reference we record the archimedean constants, all of them
+elementary consequences of Proposition~\ref{prop:symbol} and of the digamma facts (E4) of
 Appendix~\ref{app:classical}:
 \begin{equation}
 \begin{aligned}
@@ -598,13 +557,13 @@ Theorem~\ref{thm:archsymbol}.
 \section{The radial trace}
 \label{sec:trace}
 
-\subsection{The prime packet}
+\subsection{Test functions vanishing near the identity}
 
-\begin{proposition}[\cite{P44}, Theorem 3bis.7]
+\begin{proposition}[\cite{P44}, Theorem 4.1]
 \label{prop:primepacket}
 Let $h\in C_c^\infty(\R)$ with $0\notin\supp h$, and let $c=0$.  Then
 $T(\Gamma_h)$ is an absolutely convergent finite sum plus a convergent
-integral, with no regularisation and no counterterm, and
+integral, with no regularization and no counterterm, and
 \begin{align}
   T(\Gamma_h)
   &=\sum_{p\in S_f}\sum_{k\ge1}(\log p)\,p^{-k/2}
@@ -614,42 +573,39 @@ integral, with no regularisation and no counterterm, and
      \bigl[h(\log n)+h(-\log n)\bigr]+\int_\R K(|t|)h(t)\,dt .
   \tag{4.2}
 \end{align}
-The proof has two steps: \emph{(i)} on a radial class the regularised unit
-packet of $W_p$ vanishes identically and pointwise, because
+The proof has two steps: \emph{(i)} on a radial class the regularized unit
+term of $W_p$ vanishes identically and pointwise, because
 $|j_p(u)|_S=1$ for $u\in\Z_p^\times$, so that $\Gamma_h\circ j_p$ is constant
 on $\Z_p^\times$; \emph{(ii)} what remains is the shell part, computed from
-$\tau_p\equiv p^{-|k|/2}$ on $p^k\Z_p^\times$ \emph{(\cite{P43}, Lemma 8.2(i))}
+$\tau_p\equiv p^{-|k|/2}$ on $p^k\Z_p^\times$ \emph{(\cite{P43}, Lemma 6.2(i))}
 and $\vol_{d^*x}(p^k\Z_p^\times)=\log p$.
 \end{proposition}
 
-Two remarks on the shape of (4.2).  First, only prime powers occur, and this is
-a structural fact about the carrier rather than an input from number theory:
-the finite part of $T(\Gamma_h)$ is a sum over the valuation shells
+Two remarks on (4.2).  First, only prime powers occur, and this is a fact
+about $\CS$ rather than an input from number theory: the finite part of $T(\Gamma_h)$ is a sum over the valuation shells
 $p^k\Z_p^\times$, whose moduli are exactly the prime powers, and no single
 place has a shell of modulus $1/n$ for composite $n$.  (At the level of
-objects the corresponding statement is \cite{P44}, Theorem 3ter.12: for
+objects the corresponding statement is \cite{P44}, Theorem 6.8: for
 composite $n$ the support of the Frobenius class meets no shell at all, whereas
-for $n=p^k$ it is the whole shell $j_p(p^k\Z_p^\times)$.  The two statements
-are different --- one is an evaluation of $T$ on the radial family, the other a
-support computation prior to any trace --- and should not be conflated.)
+for $n=p^k$ it is the whole shell $j_p(p^k\Z_p^\times)$.  That is a statement
+about supports, prior to any trace.)
 Second, in the atom mass $\Lambda(p^k)p^{-k/2}$ \emph{both} factors are local
 data of the single finite place $p$: $p^{-k/2}$ is the constant value of the
 local density $\tau_p$ on the shell, and $\log p$ is the shell's
 $d^*x$-volume.  The archimedean place contributes no atom at all; its
 contribution is the absolutely continuous density $K(|t|)\,dt$.
 
-\subsection{The radial trace without support hypothesis}
+\subsection{The general case}
 
-Proposition~\ref{prop:primepacket} is stated for $0\notin\supp h$, and that
-excluded case is precisely the one needed below: every application in this
+Proposition~\ref{prop:primepacket} is stated for $0\notin\supp h$, and the
+excluded case is the one needed below: every application in this
 paper has $h=F\star F^\dagger$, so that $h(0)=\|F\|_{L^2}^2>0$ and
 $0\in\supp h$ always.  Nor can the identity be obtained from (4.1) by
 continuity, because the naive archimedean integral $\int K(|t|)h(t)\,dt$
-\emph{diverges} at $t=0$, $K(t)\sim1/(2t)$.  The correct statement replaces the
-naive integral by the Plancherel form of the archimedean term and carries no
-support hypothesis whatever.
+diverges at $t=0$, since $K(t)\sim1/(2t)$.  The correct statement replaces the
+naive integral by the Plancherel form of the archimedean term.
 
-\begin{lemma}[the radial trace; Theorem A]
+\begin{lemma}[Theorem A]
 \label{lem:radial-trace}
 Let $h\in C_c^\infty(\R)$ be arbitrary and let $c=0$.  Then $\Gamma_h\in\DA$,
 $T(\Gamma_h)$ is defined, and
@@ -672,18 +628,16 @@ hypothesis.
 
 \emph{The finite places.}  By Proposition~\ref{prop:trace},
 $T(\Gamma_h)=\sum_{v\in S}W_v(\Gamma_h)$ with $c=0$, valid on all of $\DA$.  At
-a finite place $W_p$ is the sum of a shell integral and the regularised unit
-packet
+a finite place $W_p$ is the sum of a shell integral and the regularized unit
+term
 \[
   (\log p)\int_{\Z_p^\times}\frac{a(u)-a(1)}{|1-u|_p}\,du ,
   \qquad a:=\Gamma_h\circ j_p .
 \]
 For a radial class $a$ is \emph{constant} on $\Z_p^\times$: for a unit $u$ the
 idele $j_p(u)$ has $|j_p(u)|_S=1$, hence $a(u)=h(0)=a(1)$ for every
-$u\in\Z_p^\times$.  The unit packet therefore vanishes identically and
-pointwise, with no smallness and no support hypothesis; the argument uses
-radiality and nothing else.  What remains is the shell part, which we also
-compute here rather than import.  By \cite{P43}, Lemma 8.2(i), the local
+$u\in\Z_p^\times$.  The unit term therefore vanishes identically.  What
+remains is the shell part.  By \cite{P43}, Lemma 6.2(i), the local
 density $\tau_p$ is
 constant on the shell $p^k\Z_p^\times$, with value $p^{-|k|/2}$; and
 $\Gamma_h\circ j_p$ is constant on that shell, with value $h(k\log p)$, because
@@ -696,8 +650,8 @@ $\vol_{d^*x}(p^k\Z_p^\times)=\log p$, the shell part of $W_p(\Gamma_h)$ is
 the finite sum displayed in (4.3); it is finite because $\supp h$ is compact,
 so that only the finitely many $k$ with $|k|\log p\le R(\Gamma_h)$ contribute.
 
-\emph{The archimedean place.}  Here we do not use the defining expression for
-$W_\infty$ but its Plancherel form.  By Proposition~\ref{prop:symbol}(c) the
+\emph{The archimedean place.}  Here we use the Plancherel form of $W_\infty$
+instead of its definition.  By Proposition~\ref{prop:symbol}(c) the
 identity $W_v(H)=\int_{\widehat{\CS}}\widehat H\,\widehat W_v\,d\chi$ holds for
 every $v\in S$ and every $H\in\DA$, each integral absolutely convergent and no
 support hypothesis imposed.  Apply this with $H=\Gamma_h$.  By
@@ -712,7 +666,7 @@ absolutely convergent.  Adding the finite-place terms computed above gives
 subtraction $-2b(0)e^{-t/2}$ in the definition of $W_\infty$ are exactly what
 makes $W_\infty$ a continuous functional on all of $\DA$ with symbol
 $\widehat W_\infty$; the divergence of the naive $\int K(|t|)h(t)\,dt$ at $t=0$
-is what they remove, and (4.3) is the regularised value.)
+is what they remove, and (4.3) is the regularized value.)
 
 \emph{Consistency.}  If $0\notin\supp h$ then $b(0)=0$, both the counterterm
 and the subtraction vanish (Proposition~\ref{prop:offidentity}), and the
@@ -726,16 +680,15 @@ so the sum over all primes is finite and equals the chart sum for every chart
 containing the finitely many primes $\ell\le e^{R(\Gamma_h)}$.
 \end{proof}
 
-\section{The local normalisation and the universal Tate residue}
-\label{sec:normalisation}
+\section{The normalization of the local measures}
+\label{sec:normalization}
 
-The normalisation $\vol_{d^*x}(p^k\Z_p^\times)=\log p$ used above is not a
-stipulation of convenience.  It is forced, up to one global scale, by the
+The normalization $\vol_{d^*x}(p^k\Z_p^\times)=\log p$ used above is forced, up to one global scale, by the
 requirement that the local Tate residue be the same at every place.
 
-\begin{proposition}[\cite{P44}, Theorem 8bis.8 and Corollary 8bis.8a]
-\label{prop:normalisation}
-Declare the local multiplicative measures by
+\begin{proposition}[\cite{P44}, Theorem 11.1 and Corollary 11.2]
+\label{prop:normalization}
+Normalize the local multiplicative measures by
 $\vol_{d^*x_p}(\Z_p^\times)=c_p>0$ and $d^*x_\infty=dx/(2|x|)$, all other
 conventions unchanged, and define the \emph{local Tate residue} of a place $v$
 as $\Res_{s=0}\zeta_v(s)$ with
@@ -755,23 +708,21 @@ vanishing and no ratio.
 \label{cor:threenumbers}
 Under $c_p=\log p$ the following three numbers are equal to $\log p$:
 \emph{(i)} $\vol_{d^*x}(p^k\Z_p^\times)$, by
-Proposition~\ref{prop:normalisation}; \emph{(ii)} $\Lambda(p^k)$, the atom mass
+Proposition~\ref{prop:normalization}; \emph{(ii)} $\Lambda(p^k)$, the atom mass
 of the finite part of $T$, by Proposition~\ref{prop:primepacket}; and
-\emph{(iii)} $\log\#(\Z/p)$.  What \emph{(i)} and \emph{(ii)} share is a
-theorem; what \emph{(iii)} shares with them is a number.  No map, functor or
-pairing relating \emph{(iii)} to \emph{(i)} is exhibited here or in
-\cite{P44}, and none is claimed.
+\emph{(iii)} $\log\#(\Z/p)$.  The equality of \emph{(i)} and \emph{(ii)} is a
+theorem; the equality with \emph{(iii)} is a coincidence of values, and no map
+relating \emph{(iii)} to \emph{(i)} is asserted.
 \end{corollary}
 
 \begin{proof}
-(i) and (ii) are the two cited statements; (iii) is the definition of the
-residue degree.
+(i) and (ii) are the two cited statements; (iii) is clear.
 \end{proof}
 
 \section{The archimedean place}
 \label{sec:arch}
 
-The archimedean term of $T$ is the regularised integral of the local density
+The archimedean term of $T$ is the regularized integral of the local density
 $\tau_\infty$ against the profile.  This section identifies its symbol, records
 the spectral reading of its kernel, and computes the archimedean Tate residue,
 which is the archimedean half of the residue comparison of
@@ -798,9 +749,6 @@ For $t>0$,
 \begin{proof}
 Geometric series, convergent for $t>0$.
 \end{proof}
-
-Since $N_\Gamma$ is defined by its spectrum, this is a consistency check on
-Definition~\ref{def:NGamma}.
 
 \begin{proposition}[the zeta determinant]
 \label{prop:zetadet}
@@ -833,22 +781,20 @@ ${\det}_\zeta=\exp(-\zeta_{N_\Gamma,s}'(0))$:
 \]
 \end{proof}
 
-\begin{remark}[the scope of \emph{(6.1)}]
+\begin{remark}
 \label{rem:scope}
-Formula (6.1) delivers $\Gamma(s/2)$ only up to the scalar
+Formula (6.1) gives $\Gamma(s/2)$ only up to the scalar
 $\sqrt{2\pi}\,2^{\frac12-\frac s2}$, and the factor $\pi^{-s/2}$ of the
 completed zeta function is \emph{not} produced by $N_\Gamma$: reaching
 $\pi^{-s/2}\Gamma(s/2)$ requires the extra scalar $\sqrt\pi\,(2\pi)^{-s/2}$.
 The $\log\pi$ occurring in (6.2) below comes from the independently computed
-finite part of $W_\infty$, not from $N_\Gamma$.  No claim that a single
-operator produces both factors of the archimedean Euler factor is made here.
-None of Sections~\ref{sec:EF}--\ref{sec:radicalsec} uses
+finite part of $W_\infty$, not from $N_\Gamma$.  None of Sections~\ref{sec:EF}--\ref{sec:radicalsec} uses
 Proposition~\ref{prop:heattrace} or Proposition~\ref{prop:zetadet}.
 \end{remark}
 
 \subsection{The archimedean symbol}
 
-\begin{theorem}[the archimedean symbol and its constant]
+\begin{theorem}
 \label{thm:archsymbol}
 With $W_\infty$ as in Proposition~\emph{\ref{prop:trace}},
 \begin{equation}
@@ -867,7 +813,7 @@ $\gamma+\log4\pi-\gamma-2\log2=\log4\pi-\log4=\log\pi$.
 
 \subsection{The archimedean Tate residue}
 
-\begin{theorem}[the archimedean Tate residue is the local Tate residue]
+\begin{theorem}
 \label{thm:archresidue}
 Put $s=\tfrac12+i\tau$, so that $\tau=i/2$ corresponds to $s=0$ and
 $\tau=-i/2$ to $s=1$, and $ds=i\,d\tau$.  Set
@@ -909,7 +855,7 @@ residue there is $-1$ in $s$, hence $+i$ in $\tau$ at $\tau=-i/2$.
 (iii)  $\int_{|x|\le1}|x|^s\,dx/(2|x|)=2\cdot\tfrac12\int_0^1x^{s-1}dx=1/s$,
 of residue $1$.  At a finite place,
 $\zeta_p(s)=c_p/(1-p^{-s})$ has residue $c_p/\log p$ at $s=0$ by
-Proposition~\ref{prop:normalisation}, while
+Proposition~\ref{prop:normalization}, while
 $1-p^{-s}=s\log p+O(s^2)$ gives $f_p(s)=1/s+O(1)$, i.e.\ $\Res_{s=0}f_p=1$.
 \end{proof}
 
@@ -920,15 +866,15 @@ at $\tau=\mp i/2$ is, place by place and under the dictionary
 $s=\tfrac12+i\tau$, the pole at $s=0,1$ of the \emph{local Tate zeta integral},
 with the same residue at every place --- and that the requirement ``the same at
 every place'' is exactly what forces $\vol(\Z_p^\times)=\log p$
-(Proposition~\ref{prop:normalisation}).  What happens to these residues when
-one passes from a chart to the full Euler product is a different matter, and is
-the subject of Section~\ref{sec:polar}.
+(Proposition~\ref{prop:normalization}).  What happens to these residues when
+one passes from a chart to the full Euler product is the subject of
+Section~\ref{sec:polar}.
 \end{remark}
 
-\section{The Tate boundary, the swap, and the polar packet}
+\section{The Tate functionals on radial classes}
 \label{sec:boundary}
 
-\begin{theorem}[the polar packet is the hyperbolic ruling form]
+\begin{theorem}
 \label{thm:polarpacket}
 Let $(\BT,\beta_T)$ and $M=(\lambda_-,\lambda_+)$ be as in
 Proposition~\emph{\ref{prop:tate}}, and let $F\in C_c^\infty(\R)$ be real.
@@ -968,48 +914,45 @@ Writing $\sigma$ for the transposition of the two coordinates, part (i) reads
 $M(\Gamma_F)=\sigma\bigl(\Phi_F(0),\Phi_F(1)\bigr)$: the boundary value is the
 \emph{swap} of the pair $(\Phi_F(0),\Phi_F(1))$, not that pair itself.  The
 distinction decides which isotropic direction a given family of test classes
-approximates, and it is immaterial for every quadratic statement made here,
-because $\beta_T$ is $\sigma$-invariant,
+approximates, and it does not affect any quadratic statement, because $\beta_T$ is $\sigma$-invariant,
 \[
   \beta_T(\sigma z,\sigma w)=(\sigma z)_-\overline{(\sigma w)_+}
   +(\sigma z)_+\overline{(\sigma w)_-}
   =z_+\overline{w_-}+z_-\overline{w_+}=\beta_T(z,w).
 \]
-With the normalisation of Proposition~\ref{prop:tate}, the spread families of
-\cite{P43}, Theorem 9.14a, have $\lambda_+\to1$ and $\lambda_-\to0$, so they
+With the normalization of Proposition~\ref{prop:tate}, the spread families of
+\cite{P43}, Theorem 8.13, have $\lambda_+\to1$ and $\lambda_-\to0$, so they
 approximate $e_+$; and since $\lambda_+(\Gamma_F)=\Phi_F(0)$, the direction
 $e_+$ pairs with the value of $\Phi_F$ at $s=0$, that is, with the pole of
 $\xi$'s trivial factor at $s=0$.
 \end{remark}
 
-\begin{proposition}[\cite{P43}, Theorems 9.13(a), 9.14a--9.14c$'$ and
-Definition 9.14c0]
+\begin{proposition}[\cite{P43}, Theorems 8.9(a), 8.13, 8.15, 8.17 and
+Definition 8.16]
 \label{prop:live}
 The isotropic directions $e_\pm$ are not classes of $\DA$: by
 Proposition~\emph{\ref{prop:rulings}} there is no $\DA$-module splitting of the
 Tate boundary inside $\DA$, so the boundary component of a test class must be
 taken through $M$.  They exist in the completion
-$\mathcal N_A^{\mathrm{dist}}$, as limits of spread Tate families, and the
+$\mathcal N_A^{\mathrm{dist}}$, as limits of spread Tate characters, and the
 plane they span is exactly the scalar radical there.  In particular they are
 not radial classes: they are limits of the spread families of
-\cite{P43}, Definition 9.14c0, whose $L^1$-mass escapes to $|w|_S\to\infty$.
+\cite{P43}, Definition 8.16, whose $L^1$-mass escapes to $|w|_S\to\infty$.
 \end{proposition}
 
 \begin{proof}
-The three assertions are, in order, \cite{P43}, Theorem 9.13(a),
-Theorems 9.14a and 9.14c, and Definition 9.14c0 together with
-Theorem 9.14c$'$; they are quoted verbatim and nothing is added here.
+The three assertions are, in order, \cite{P43}, Theorem 8.9(a),
+Theorems 8.13 and 8.15, and Definition 8.16 together with
+Theorem 8.17.
 \end{proof}
 
 \section{The explicit formula}
 \label{sec:EF}
 
-This section proves Theorem B.  The classical facts used are (E1)--(E5) of
-Appendix~\ref{app:classical}, and nothing else; in particular no spectral
-realisation, no cutoff theorem and no statement about the location of a zero
-enters.
+This section proves Theorem B, using only the facts (E1)--(E5) of
+Appendix~\ref{app:classical}.
 
-\subsection{The test function and its transform}
+\subsection{Test functions}
 
 \begin{lemma}
 \label{lem:testfn}
@@ -1154,9 +1097,9 @@ using $g(1-u)=g(u)$ (Lemma~\ref{lem:testfn}).  This is (8.4), and (8.5) is the
 case $A=\xi'/\xi$.
 \end{proof}
 
-\subsection{The formula}
+\subsection{Proof of the explicit formula}
 
-\begin{theorem}[the explicit formula; Theorem B]
+\begin{theorem}[Theorem B]
 \label{thm:EF}
 Let $F\in C_c^\infty(\R)$ be real with $\supp F\subseteq[-T,T]$, put
 $h=F\star F^\dagger$, and let the zero sum be taken in the symmetric order
@@ -1182,8 +1125,8 @@ Lemma~\ref{lem:contour} and (8.5),
   \sum_\rho g(\rho)=\frac1{\pi i}\int_{L_c}g(s)\frac{\xi'}{\xi}(s)\,ds .
 \tag{8.7}
 \end{equation}
-It is essential that the reflection (8.5) be applied \emph{before} the
-logarithmic derivative is expanded; see Remark~\ref{rem:route}(2).
+The reflection (8.5) must be applied before the logarithmic derivative is
+expanded; see Remark~\ref{rem:route}(2).
 
 On $L_c$ with $c>1$, taking the logarithmic derivative of
 $\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ gives
@@ -1201,7 +1144,7 @@ $\zeta'/\zeta$ is bounded by (E1), and $g$ decays faster than any power by
 (8.2).  Hence (8.7) splits into three integrals, which we evaluate in turn.
 
 \medskip
-\noindent\textbf{(a) The polar terms.}  Since
+\noindent\textbf{(a) The polar term.}  Since
 $A_0(1-s)=\frac1{1-s}+\frac1{-s}=-A_0(s)$, Lemma~\ref{lem:reflection} gives
 \[
   \frac1{\pi i}\int_{L_c}gA_0\,ds
@@ -1280,7 +1223,7 @@ Adding (8.9), (8.10) and (8.11) and recalling
 $\sum_\rho g(\rho)=\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$ gives (8.6).
 \end{proof}
 
-\begin{corollary}[the same formula for an arbitrary real even test]
+\begin{corollary}
 \label{cor:EFeven}
 Let $h\in C_c^\infty(\R)$ be real and even with $\supp h\subseteq[-2T,2T]$, and
 put $g:=\Phi_h$.  Then $g$ is entire, $g(1-s)=g(s)$, $g(\tfrac12+i\tau)=\hat
@@ -1299,7 +1242,7 @@ $g(s)=\Phi_F(s)\Phi_F(1-s)$ and $\hat h=|\hat F|^2$.
 \end{corollary}
 
 \begin{proof}
-The proof of Theorem~\ref{thm:EF} is repeated verbatim with
+The proof of Theorem~\ref{thm:EF} is repeated with
 Lemma~\ref{lem:testfn} replaced by the following elementary facts.  $\Phi_h$ is
 entire and satisfies (8.1) with $C_N=\|h^{(N)}\|_{L^1}$ and $T$ replaced by
 $2T$, by the same integration by parts.  The symmetry $g(1-s)=g(s)$ \emph{is}
@@ -1321,7 +1264,7 @@ Lemma~\ref{lem:contour} uses, and it replaces (8.2), which was derived from a
 product of two transforms and is not available for a single one.
 \end{proof}
 
-\begin{remark}[the zero sum converges absolutely for this test class]
+\begin{remark}[absolute convergence]
 \label{rem:abs}
 For $h\in C_c^\infty(\R)$ real and even, (8.1) applied to $\Phi_h$ with $N=2$
 gives $|\Phi_h(\rho)|\le C_2e^{2T|\beta-\frac12|}|\rho-\tfrac12|^{-2}
@@ -1331,12 +1274,12 @@ $\sum_{|\gamma_\rho|\ge1}|\gamma_\rho|^{-2}<\infty$ by partial summation
 against $N(X)=O(X\log X)$, fact (E3d).  The zeros with $|\gamma_\rho|<1$ are
 finite in number, again by (E3d), and $\Phi_h$ is entire, so they contribute a
 finite amount.  Hence $\sum_\rho\Phi_h(\rho)$ converges absolutely.  The
-symmetric order is genuinely needed for the
+symmetric order is needed for the
 argument-principle step of Lemma~\ref{lem:contour}, and is stated there; it
 imposes no restriction on the \emph{value} of the sum.
 \end{remark}
 
-\begin{remark}[three features of the route]
+\begin{remark}[on the proof]
 \label{rem:route}
 \begin{enumerate}
 \item[(1)] The single integral $\int_{L_c}g(s)n^{-s}ds$, shifted to
@@ -1351,8 +1294,7 @@ combination would annihilate exactly the $\log\pi$ the formula needs.  This is
 why (8.5) is applied first and the expansion second.
 \item[(3)] The horizontal estimate requires $N\ge2$ in (8.1), i.e.\ two
 derivatives of $F$; $F\in C_c^\infty$ is ample, but a merely continuous
-compactly supported $F$ would not do, and the theorem is stated for
-$C_c^\infty$.
+compactly supported $F$ would not do.
 \item[(4)] No contour is shifted across a zero anywhere in the proof.  In
 step (c) the integrand is entire, so the shift is free; in step (b) the
 integrand is holomorphic in $\Rel s\ge\tfrac12$; and in step (a) the residues
@@ -1391,7 +1333,7 @@ notation Theorem~\emph{\ref{thm:EF}} reads
 \end{equation}
 \end{definition}
 
-\begin{lemma}[the trace is minus the Weil form]
+\begin{lemma}
 \label{lem:traceweil}
 Let $F\in C_c^\infty(\R)$ be real, $h=F\star F^\dagger$, and let $T_\infty$ be
 the colimit trace of Proposition~\emph{\ref{prop:colimit}} with $c=0$.  Then
@@ -1425,9 +1367,9 @@ $n=p^k$ using $\Lambda(p^k)=\log p$.  This is exactly $-\mathcal W(F)$.  The
 chart clause is Proposition~\ref{prop:colimit}.
 \end{proof}
 
-\subsection{The comparison theorem and the constant}
+\subsection{The comparison theorem}
 
-\begin{theorem}[the comparison theorem; Theorem C]
+\begin{theorem}[Theorem C]
 \label{thm:comparison}
 Let $F\in C_c^\infty(\R)$ be real, $h=F\star F^\dagger$, and let
 $\Gamma_F,\Gamma_h\in\DAr$ be the corresponding radial classes.  Let $c=0$ and
@@ -1441,13 +1383,13 @@ let $T_\infty$ be the colimit trace.  Then, the zero sum in symmetric order,
 \end{aligned}
 \tag{9.4}
 \end{equation}
-and consequently, on the primitive radial sector $M(\Gamma_F)=0$,
+and consequently, when $\Gamma_F$ is primitive, that is, when $M(\Gamma_F)=0$,
 \begin{equation}
   I_\infty(\Gamma_F,\Gamma_F)=-\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)
   =-\mathcal W(F).
 \tag{9.5}
 \end{equation}
-At a fixed finite chart $S$ identities \emph{(9.4)}--\emph{(9.5)} hold verbatim
+At a fixed finite chart $S$ identities \emph{(9.4)}--\emph{(9.5)} hold
 provided $R(\Gamma_h)<\log\ell_{\mathrm{next}}(S)$; outside that window the
 left-hand side omits the contributions of the primes $\ell\notin S_f$ and the
 identity fails.
@@ -1457,7 +1399,7 @@ identity fails.
 Combine (9.2) with (9.3): $\mathcal W(F)=\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)
 -2\Phi_F(0)\Phi_F(1)$, so
 $T_\infty(\Gamma_h)=-\mathcal W(F)=2\Phi_F(0)\Phi_F(1)
--\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$.  The identification of the polar packet
+-\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$.  The identification of the polar term
 with $\beta_T(M(\Gamma_F),M(\Gamma_F))$ is Theorem~\ref{thm:polarpacket}(i),
 and (9.5) is the case $M(\Gamma_F)=0$, which by
 Theorem~\ref{thm:polarpacket}(ii) is primitivity.  The chart clause is
@@ -1465,7 +1407,7 @@ Proposition~\ref{prop:colimit} and the chart clause of
 Lemma~\ref{lem:traceweil}.
 \end{proof}
 
-\begin{corollary}[the constant is unique; Theorem D]
+\begin{corollary}[Theorem D]
 \label{cor:c-unique}
 Let $c\in\R$ and let $T^{(c)}=\sum_vW_v+c\,(\,\cdot\,)(1)$ be the corresponding
 member of the family of Proposition~\emph{\ref{prop:trace}}, with
@@ -1477,7 +1419,7 @@ Then for every real $F\in C_c^\infty(\R)$:
    +c\,\|F\|_{L^2(\R)}^2$;
 \item[(ii)] for $F\ne0$ the correction $c\|F\|_{L^2}^2$ is strictly positive if
 $c>0$ and strictly negative if $c<0$, and it does \emph{not} vanish on the
-primitive sector: the condition $M(\Gamma_F)=0$ annihilates the polar packet,
+primitive classes: the condition $M(\Gamma_F)=0$ annihilates the polar term,
 not the $L^2$-norm;
 \item[(iii)] consequently $c=0$ is the unique real constant for which
 \emph{(9.4)} holds for all real $F\in C_c^\infty(\R)$.
@@ -1509,26 +1451,24 @@ differing by $(c-c')\|F\|_{L^2}^2\ne0$ for $F\ne0$, so at most one $c$ can
 satisfy (9.4); and $c=0$ does, by Theorem~\ref{thm:comparison}.
 \end{proof}
 
-\begin{remark}[the normalisation is load-bearing]
+\begin{remark}
 \label{rem:loadbearing}
-Every identity of Sections~\ref{sec:comparison}--\ref{sec:radicalsec} is a
-statement about the trace with $c=0$: for any other $c$ the right-hand side of
-(9.4) acquires the term $c\|F\|_{L^2}^2$, which does not vanish on the
-primitive sector.  The constant is nevertheless not a free choice, being pinned
-at the level of the identity by the comparison itself.  No assertion is made
-about whether a \emph{sign} condition of the form $I_\infty^{(c)}\le0$ on the
-primitive radial sector would remain equivalent to a statement about the zeros
-for $c\ne0$; that is a different question, and it is not addressed here.
+The identities of Sections~\ref{sec:comparison}--\ref{sec:sufficiency} concern
+the trace with $c=0$: for any other $c$ the right-hand side of (9.4) acquires
+the term $c\|F\|_{L^2}^2$, which does not vanish on primitive classes.  We do
+not consider here whether an inequality $I_\infty^{(c)}\le0$ on primitive
+radial classes would, for $c\ne0$, still be equivalent to a statement about the
+zeros.
 \end{remark}
 
 \subsection{The limit of the chart symbols}
 
-At a finite chart the symbol $\widehat T_S(\cz,\cdot)$ is a genuine
+At a finite chart the symbol $\widehat T_S(\cz,\cdot)$ is a
 real-analytic function (Proposition~\ref{prop:symbol}).  In the colimit there
 is no such function; what survives is a linear functional, and the explicit
 formula says exactly what it is.
 
-\begin{theorem}[the spectral side is the limit of the chart symbols]
+\begin{theorem}
 \label{thm:limitsymbols}
 Let $\mathcal E:=C_c^\infty(\R)^{\mathrm{even},\,\mathrm{real}}$, a real vector
 space, and for a chart $S$ and $h\in\mathcal E$ put
@@ -1563,87 +1503,44 @@ convergent.  The value (9.6) is Corollary~\ref{cor:EFeven} rearranged: add
 $\Phi_h(0)+\Phi_h(1)$ to (8.12) and use Lemma~\ref{lem:radial-trace}.
 \end{proof}
 
-\begin{remark}[what is and is not claimed in \emph{(9.6)}]
+\begin{remark}
 \label{rem:notafunction}
-Two things are deliberately not asserted.  No continuity of $L_\infty$ in any
-topology on $\mathcal E$ is claimed; the convergence asserted is
-pointwise-in-$h$ eventual constancy, which is stronger than pointwise
-convergence and weaker than uniform convergence on bounded sets, neither of
-which is claimed.  And the limit functional is \emph{not} given by integration
-against a function: at $\tau=0$ the finite-place part of the colimit symbol
+The convergence in Theorem~\ref{thm:limitsymbols} is eventual constancy for
+each fixed $h$; no continuity of $L_\infty$ on $\mathcal E$ is asserted.  The
+limit functional is not given by integration against a function: at $\tau=0$ the finite-place part of the colimit symbol
 diverges,
 \[
   \sum_p(\log p)\,\frac{2p^{-1/2}}{1-p^{-1/2}}=+\infty
 \]
-(\cite{P44}, Remark 8bis.4b(1)), so there is no function on the principal
-component against which $L_\infty$ integrates.  Identity (9.6) is the explicit
-formula and nothing more; in particular no rewriting of the zero sum as a sum
-of point masses on a line is asserted, since that would be a statement about
-the location of the zeros.
+(\cite{P44}, Remark 9.12), so there is no function on the principal
+component against which $L_\infty$ integrates.
 \end{remark}
 
-\begin{remark}[no zero location is used]
+\begin{remark}
 \label{rem:noposition}
-No step of Sections~\ref{sec:EF}--\ref{sec:comparison} uses the location of any
-zero.  Fact (E2) is used only through the statement that the zeros of $\xi$ are
+No step of Sections~\ref{sec:EF}--\ref{sec:comparison} uses the location of
+the zeros.  Fact (E2) is used only through the statement that the zeros of $\xi$ are
 the nontrivial zeros of $\zeta$ and lie in the critical strip; (E3a)--(E3d) use
 only their density and the Hadamard product; Lemma~\ref{lem:contour} chooses
 heights $X_j$ avoiding the ordinates, which requires no knowledge of where
 those ordinates are; and the contour shifts of Theorem~\ref{thm:EF} are
 performed on integrands that are entire or holomorphic in the relevant
-half-plane.  The zeros appear in the conclusion, which is the comparison
-theorem itself.
+half-plane.
 \end{remark}
 
-\subsection{The order of the limits}
-
-The analytic operations performed above, with the certificate attached to
-each, are the following.  No two of them are interchanged, and none is nested
-inside another.
-
-\begin{center}
-\begin{tabularx}{\textwidth}{@{}r>{\raggedright\arraybackslash}p{4.1cm}Y@{}}
-\toprule
- & operation & certificate \\
-\midrule
-1 & the local regularisation at a finite place & no limit occurs: on radial
-classes the unit packet vanishes identically and pointwise
-(Lemma~\ref{lem:radial-trace}) \\
-2 & the sum over primes & finite for each test, since $\supp h$ is compact and
-only shells of modulus $\le e^{R(\Gamma_h)}$ meet the support \\
-3 & the chart $S\subseteq T$ & stabilises exactly: the correction terms vanish
-identically for $\log\ell>R(\Gamma_h)$ (Proposition~\ref{prop:colimit}) \\
-4 & the support window $T$ & exact cutoff: $h(\pm\log n)=0$ for $\log n>2T$;
-no tail estimate is used \\
-5 & the archimedean integral & absolutely convergent, by the Plancherel form
-(2.6), which holds on all of $\DA$ \\
-6 & the zero sum and the contour & Lemma~\ref{lem:contour}: symmetric order,
-horizontal sides tending to $0$ along $(X_j)$ by (E3b), (E3c) and (8.2),
-verticals absolutely convergent; and by Remark~\ref{rem:abs} the sum is in fact
-absolutely convergent for this test class \\
-7 & the shift $L_c\to L_{1/2}$ & steps (b) and (c) of the proof of
-Theorem~\ref{thm:EF}: no residue is crossed, the integrands being holomorphic
-in $\Rel s\ge\tfrac12$ respectively entire \\
-8 & the interchange $\sum_n\leftrightarrow\int_{L_c}$ & Fubini, justified by
-$\sum_n\Lambda(n)n^{-c}<\infty$ and $\int_{L_c}|g|<\infty$ \\
-\bottomrule
-\end{tabularx}
-\end{center}
-
-\section{The residues of the continued Euler-product symbol}
+\section{Residues of the Euler-product symbol}
 \label{sec:polar}
 
-The polar packet $2\Phi_F(0)\Phi_F(1)$ of Theorem~\ref{thm:comparison} was
-produced in step (a) of the proof of Theorem~\ref{thm:EF} by two residues.
-This section identifies those two residues intrinsically, as the Tate residues
-of a single meromorphic function, and compares them with the residues of the
-chart symbols.  The comparison is asymmetric and instructive: at $s=0$ the
-chart residues diverge and the surviving residue is the archimedean one; at
-$s=1$ the chart has no pole at all and the pole is created only in the limit.
+The polar term $2\Phi_F(0)\Phi_F(1)$ of Theorem~\ref{thm:comparison} arose in
+step (a) of the proof of Theorem~\ref{thm:EF} from two residues.  In this
+section we identify them as the residues of a single meromorphic function and
+compare them with the residues of the chart symbols.  At $s=0$ the chart
+residues grow with $S$ and the surviving residue is the archimedean one; at
+$s=1$ no chart symbol has a pole, and the pole appears only in the limit.
 
 \subsection{The local symbols in the \texorpdfstring{$s$}{s}-variable}
 
-\begin{lemma}[the local symbols are $A(s)+A(1-s)$]
+\begin{lemma}
 \label{lem:localsymbols}
 Put $s=\tfrac12+i\tau$ and, for a prime $p$ and for the real place,
 \begin{equation}
@@ -1691,9 +1588,9 @@ from $a$ and $1$ from each $f_p$, $p\in S_f$, while $f_p(1-s)$ and $a(1-s)$ are
 regular there, taking the finite values $f_p(1)=(\log p)/(p-1)$ and $a(1)$.
 \end{proof}
 
-\subsection{The continued symbol and its poles at \texorpdfstring{$s=0$ and $s=1$}{s=0 and s=1}}
+\subsection{The poles at \texorpdfstring{$s=0$ and $s=1$}{s=0 and s=1}}
 
-\begin{definition}[the continued Euler-product symbol]
+\begin{definition}
 \label{def:A}
 Put
 \begin{equation}
@@ -1708,17 +1605,14 @@ $\widehat T_S(\cz,\cdot)=A_S(s)+A_S(1-s)$ by
 Lemma~\ref{lem:localsymbols}(iv).
 \end{definition}
 
-We stress that $A$ is \emph{not} the symbol of the colimit trace $T_\infty$,
-and no statement below says that it is.  By
+Note that $A$ is not the symbol of the colimit trace $T_\infty$.  By
 Theorem~\ref{thm:limitsymbols} and Remark~\ref{rem:notafunction}, $T_\infty$ is
 a finite sum at each test and has no Fourier-side function at all; $A$ is the
 analytic continuation of a prime sum that does not converge on the critical
-line, where the chart symbols live.  The colimit convention of
-Remark~\ref{rem:C1} governs statements about $T_\infty$; it does not govern
-$A$, and Corollary~\ref{cor:noncommute} below is exactly the failure of the
-corresponding exchange of limits.
+line, where the chart symbols live; compare
+Corollary~\ref{cor:noncommute} below.
 
-\begin{theorem}[the Tate residues; Theorem E]
+\begin{theorem}[Theorem E]
 \label{thm:residues}
 With the notation above:
 \begin{enumerate}
@@ -1741,10 +1635,10 @@ two summands of $A_0(s)=1/s+1/(s-1)$ contribute, against $g$, exactly the
 residues $g(0)$ and $g(1)$; by \emph{(i)} these are the same two poles as in
 \emph{(ii)}, with the same residues $1$ each.  Hence
 \[
-  \text{polar packet}=g(0)+g(1)=2\Phi_F(0)\Phi_F(1)
+  g(0)+g(1)=2\Phi_F(0)\Phi_F(1)
   =\beta_T\bigl(M(\Gamma_F),M(\Gamma_F)\bigr),
 \]
-that is, the polar packet is the pair of Tate poles of $A$, with coefficient
+that is, the polar term is given by the two poles of $A$, with coefficient
 exactly $1$ at each, the pole at $s=0$ corresponding under
 Theorem~\emph{\ref{thm:polarpacket}} and Remark~\emph{\ref{rem:swap}} to the
 isotropic direction $e_+$ and the pole at $s=1$ to $e_-$.
@@ -1772,8 +1666,8 @@ cross-check: at $s=0$ the function $\zeta'/\zeta$ is regular, since
 $\zeta(0)=-\tfrac12\ne0$, and $-\tfrac12\psi(s/2)=1/s+O(1)$ by (E4), so the
 residue is the \emph{archimedean} one; at $s=1$ the value $\psi(\tfrac12)$ is
 finite while $-\zeta'/\zeta(s)=1/(s-1)+O(1)$ by the simple pole of $\zeta$, so
-the residue is the \emph{finite-place} one, created by the whole Euler product
-at once.
+the residue comes from the finite places, that is, from the whole Euler
+product at once.
 
 (iii)  The first assertion is Lemma~\ref{lem:localsymbols}(iii),(iv).  For the
 second, $a$ is regular at $s=1$ and each $f_p$ has poles only on
@@ -1790,10 +1684,9 @@ $\beta_T(M(\Gamma_F),M(\Gamma_F))$.  The correspondence of the two poles with
 the two isotropic directions is Remark~\ref{rem:swap}.
 \end{proof}
 
-\begin{remark}[the two collapses, side by side]
+\begin{remark}
 \label{rem:collapses}
-Identities (10.3) and (10.4) together are the whole of the residue comparison,
-and they are asymmetric.
+The comparison of (10.3) with (10.4) is asymmetric.
 \begin{center}
 \begin{tabularx}{\textwidth}{@{}lllY@{}}
 \toprule
@@ -1810,12 +1703,11 @@ the rate at which the chart values approach it is Mertens'
 \bottomrule
 \end{tabularx}
 \end{center}
-At $s=0$ the chart overcounts and the excess evaporates; at $s=1$ the chart
-undercounts and the pole appears only at the end.  In both cases the
-continuation has residue exactly $1$, and the pair of them is the polar packet.
+In both cases the continuation has residue exactly $1$, and the two residues
+together give the polar term.
 \end{remark}
 
-\begin{remark}[the reflected sum vanishes]
+\begin{remark}
 \label{rem:reflected}
 Write $\Xi(s):=A(s)+A(1-s)$.  Then $\Xi\equiv0$ on $\C$: by
 Theorem~\ref{thm:residues}(i) and $\xi'/\xi(1-s)=-\xi'/\xi(s)$,
@@ -1825,18 +1717,15 @@ Theorem~\ref{thm:residues}(i) and $\xi'/\xi(1-s)=-\xi'/\xi(s)$,
 \]
 In particular the residue $+1$ of $A$ at $s=0$ is cancelled inside $\Xi$ by the
 residue $-1$ of $A(1-s)$ there, the latter coming from the pole of $\zeta$ at
-$s=1$.  This identity is a one-line restatement of the functional equation and
-carries no information beyond it; $\Xi$ is not the symbol of $T_\infty$, and no
-statement of this paper rests on $\Xi\equiv0$.  The informative statement is
-the one-sided residue computation of Theorem~\ref{thm:residues}(ii),(iv).
+$s=1$.  This identity is a restatement of the functional equation, and
+nothing below uses it.
 \end{remark}
 
-\begin{corollary}[summation over primes and continuation do not commute at
-$s=0$]
+\begin{corollary}
 \label{cor:noncommute}
 The map $S\mapsto\Res_{s=0}A_S=|S_f|+1$ diverges as $S\uparrow$, while
-$\Res_{s=0}A=1$.  There is no contradiction: the two numbers are computed by
-operations that do not commute.  Precisely,
+$\Res_{s=0}A=1$: summation over the primes and analytic continuation do not
+commute at $s=0$.  Precisely,
 $\sum_{p\in S_f}f_p(s)\to-\zeta'/\zeta(s)$ only on $\Rel s>1$; at $s=0$ each
 $f_p$ has a pole of residue $1$ while $-\zeta'/\zeta$, the analytic
 continuation of the sum, is regular there.  The omitted tail
@@ -1851,7 +1740,7 @@ Theorem~\ref{thm:residues}(ii),(iii); the divergence of the tail residues is
 the count of omitted primes.
 \end{proof}
 
-\begin{proposition}[the rate at $s=1$]
+\begin{proposition}
 \label{prop:mertens}
 For $S_f=\{p\le x\}$,
 \[
@@ -1874,52 +1763,29 @@ follows, $a(1)$ being a fixed finite constant.  The second is the simple pole
 of $\zeta$ at $s=1$, fact (E2).
 \end{proof}
 
-\begin{remark}[the scope of Mertens here]
+\begin{remark}
 \label{rem:mertens-scope}
 Fact (E8) is used only in Proposition~\ref{prop:mertens}, and through
-\cite{P43}, Theorem 10.8b, in the following statement, which we quote rather
-than reprove: in the colimit the form $I_\infty$ restricted to the plane of
+\cite{P43}, Theorem A.1 (an auxiliary result of the appendix of
+\cite{P43}, explicitly outside its construction), in the following statement,
+which we quote rather than reprove: in the colimit the form $I_\infty$ restricted to the plane of
 isotropic directions reproduces $\beta_T$, with structure constant
 $\beta_T(e_+,e_-)=1$ arising from the main term $\log x$ of Mertens' theorem.
-That statement is used here for one purpose only, namely to say that the
-hyperbolic form $\beta_T$ occurring in (9.4) is not an external decoration but
-the restriction of the colimit form to that plane.  It is \emph{not} used to
-identify the polar packet, which is Theorem~\ref{thm:residues}(iv) and needs no
-Mertens.  Nothing else in this paper depends on either of them:
-Theorems~\ref{thm:EF},
-\ref{thm:comparison}, \ref{thm:residues}, \ref{thm:radical},
-Corollaries~\ref{cor:EFeven}, \ref{cor:c-unique}, \ref{cor:noncommute} are all
-independent of both.
+It shows that the hyperbolic form $\beta_T$ in (9.4) is the restriction of the
+colimit form to that plane.  It is not used to identify the polar term, which
+is Theorem~\ref{thm:residues}(iv), and none of the main theorems depends on
+it.
 \end{remark}
 
-\begin{remark}[a mechanism that does not exist]
-\label{rem:nomechanism}
-It is tempting to imagine that the divergence of the chart residues at $s=0$ is
-cancelled by a compensating archimedean divergence, leaving coefficient $1$.
-That mechanism does not exist, for two independent reasons.  First, there is no
-archimedean divergence to cancel against: in the computation of
-$I_\infty$ on the spread Tate families the archimedean contribution is
-$O\bigl((1-e^{-2\alpha})^{-1}e^{-(n+m)\alpha}\bigr)$ and tends to $0$
-exponentially (\cite{P43}, Theorem 10.8b, Step 3), the value $1$ coming
-entirely from the finite places.  Second, the residue count at $s=0$ needs no
-absorption: by Corollary~\ref{cor:noncommute} the discrepancy is the failure of
-two limits to commute, the omitted tail supplying one $1/s$ per omitted prime
-while the continuation $-\zeta'/\zeta$ is regular at $0$.  Nothing is absorbed,
-and Mertens' theorem is not involved at $s=0$ at all.
-\end{remark}
-
-\section{Sufficiency of the primitive radial tests}
+\section{Primitive test functions detect zeros off the line}
 \label{sec:sufficiency}
 
-Theorem~\ref{thm:comparison} identifies the trace on the primitive radial
-sector with $-\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$.  The question addressed in
-this section is whether that sector is rich enough to detect an off-line zero:
-the test functions occurring in (9.5) are constrained by the two linear
-conditions $\Phi_F(0)=\Phi_F(1)=0$, and it is not \emph{a priori} clear that
-the classical constructions of negative tests, which use unconstrained test
-functions, survive the constraint.  They do, and the reason is that the
-constraint is imposed by multiplication by an explicit real even polynomial
-which is nonvanishing at every nontrivial zero.
+Theorem~\ref{thm:comparison} identifies the trace on primitive radial classes
+with $-\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)$.  The test functions in (9.5) are
+subject to the two linear conditions $\Phi_F(0)=\Phi_F(1)=0$, and we show that
+they still detect a zero off the critical line.  The reason is that the
+conditions are imposed by multiplication by an explicit real even polynomial
+which does not vanish at any zero of $\xi$.
 
 \subsection{The zero coordinate}
 
@@ -1952,7 +1818,7 @@ even then $\mathfrak F_F$ is even and the summand is $\mathfrak F_F(z)^2$,
 while if $F$ is odd then $\mathfrak F_F$ is odd and the summand is
 $-\mathfrak F_F(z)^2$.
 
-\subsection{The primitivisation operator}
+\subsection{Imposing the primitivity conditions}
 
 \begin{lemma}
 \label{lem:Pi}
@@ -1992,7 +1858,7 @@ $s\in\{0,1\}$, which are not zeros of $\xi$ by (E2).
 
 \subsection{The construction}
 
-\begin{theorem}[sufficiency; Theorem F]
+\begin{theorem}[Theorem F]
 \label{thm:sufficiency}
 Suppose the completed zeta function $\xi$ has a zero off the line
 $\Rel s=\tfrac12$.  Then there exist nonzero real $F_+\in C_c^\infty(\R)$ even
@@ -2009,7 +1875,7 @@ radial classes with $I_\infty(\Gamma_{F_\pm},\Gamma_{F_\pm})>0$.
 \end{theorem}
 
 \begin{proof}
-\emph{Step 1: the target quartet.}  Let $\rho_0$ be a zero of $\xi$ with
+\emph{Step 1: the quartet of a zero.}  Let $\rho_0$ be a zero of $\xi$ with
 $\Rel\rho_0\ne\tfrac12$ and let $z_0=x_0+iy_0:=(\rho_0-\tfrac12)/i$, so
 $x_0=\Iml\rho_0$ and $y_0=\tfrac12-\Rel\rho_0$.  Then $y_0\ne0$ by hypothesis,
 and $x_0\ne0$ because $\zeta$ has no real zero in $(0,1)$, which is the last
@@ -2024,7 +1890,7 @@ $\mathcal O_0:=\{z_0,-z_0,\bar z_0,-\bar z_0\}$ are distinct and all lie in
 $\mathcal Z$, with a common multiplicity $m_0\ge1$ by the two symmetries of the
 divisor.
 
-\emph{Step 2: a fixed damping factor.}  Choose a nonzero real even
+\emph{Step 2: a damping factor.}  Choose a nonzero real even
 $\varphi\in C_c^\infty(\R)$ with $D:=\hat\varphi$ satisfying $D(z_0)\ne0$; such
 a $\varphi$ exists, since for an even approximate identity concentrated at the
 origin one has $\hat\varphi(z_0)\to1$.  The function $D$ is entire of finite
@@ -2043,10 +1909,9 @@ of $\mathcal Z$ has $|\Rel z|=R$ and such that
      \frac{|D(z)|}{|D(z_0)|}\le\frac12 .
 \tag{11.7}
 \end{equation}
-The order matters: $D$ is fixed first, and only then is $R$ chosen from its
-strip decay.
+Note that $D$ is fixed first and $R$ is chosen afterwards.
 
-\emph{Step 3: annihilation of the finite non-target divisor.}  The set
+\emph{Step 3: the other zeros of bounded height.}  The set
 $\mathcal Z_R:=\{z\in\mathcal Z:|\Rel z|<R\}$ is finite, by (E3d).  Delete from
 it every occurrence of the quartet $\mathcal O_0$, with its multiplicity $m_0$
 (multiset subtraction), and put
@@ -2066,7 +1931,7 @@ $\mathcal O_0$ belongs to $\mathcal Z_R\setminus\mathcal O_0$, so
 $P(z_0)\ne0$ and $P(-z_0)\ne0$, and $\tfrac14+z_0^2\ne0$ by
 Corollary~\ref{cor:Pi}.
 
-\emph{Step 4: realising the target values with real coefficients.}  For a
+\emph{Step 4: prescribing the value at $z_0$.}  For a
 positive integer $N$ consider
 \begin{equation}
   \mathfrak F_{N,+}(z):=E(z)\,(a+bz^2)\,D(z)^N,
@@ -2091,9 +1956,8 @@ $N$ with
   |a_N|+|b_N|+|c_N|+|d_N|\le C_R\,|D(z_0)|^{-N}.
 \tag{11.10}
 \end{equation}
-It is essential that $a_N,b_N,c_N,d_N$ remain \emph{real}, which is why the
-target is realised by the real-linear surjectivity (11.9) and not by rescaling
-coefficients by the complex factor $\rho(1-\rho)$.
+The coefficients $a_N,b_N,c_N,d_N$ must be real; this is why the value at $z_0$
+is prescribed through the real-linear map (11.9).
 
 \emph{Step 5: the test functions.}  The function $\mathfrak F_{N,+}$ is entire
 of finite exponential type, has real Taylor coefficients and is even; hence
@@ -2115,7 +1979,7 @@ $\Phi_{F_{N,\pm}}(0)=\Phi_{F_{N,\pm}}(1)=0$.  (Equivalently, $F_{N,\pm}=\Pi
 G_{N,\pm}$ for a $G$ with $\mathfrak F_{G}=\mathfrak F_{N,\pm}/(\tfrac14+z^2)$,
 which is again of Paley--Wiener class; Corollary~\ref{cor:Pi}.)
 
-\emph{Step 6: the target quartet contributes $-4m_0$.}  By (11.3), the
+\emph{Step 6: the quartet $\mathcal O_0$ contributes $-4m_0$.}  By (11.3), the
 contribution of $\mathcal O_0$ to $\sum_{z}\mathfrak F(z)\mathfrak F(-z)$ is,
 in the even case,
 \[
@@ -2127,15 +1991,14 @@ using evenness and $\mathfrak F_{N,+}(\bar z)=\overline{\mathfrak F_{N,+}(z)}$;
 and in the odd case the summand is $-\mathfrak F_{N,-}(z)^2$, so the
 contribution is $-4m_0\Rel(1^2)=-4m_0$.
 
-\emph{Step 7: every other zero in the finite box contributes $0$.}  If
+\emph{Step 7: the other zeros with $|\Rel z|<R$ contribute $0$.}  If
 $w\in\mathcal Z_R\setminus\mathcal O_0$ then $Q(w)=0$ by Step 3, hence
 $\mathfrak F_{N,\pm}(w)=0$ and the corresponding summand of (11.3) vanishes;
 repeated occurrences vanish likewise.
 
-\emph{Step 8: the tail is dominated.}  Let $D_0$ be a fixed integer exceeding
+\emph{Step 8: the remaining zeros.}  Let $D_0$ be a fixed integer exceeding
 the degrees of the polynomial factors appearing in (11.8), namely
-$\deg E+3$; this is where the primitivisation factor $\tfrac14+z^2$ is
-absorbed, by raising the fixed degree by $2$.  From (11.10), for
+$\deg E+3$.  From (11.10), for
 $|\Iml z|\le\tfrac12$,
 \begin{equation}
   |\mathfrak F_{N,\pm}(z)|\le C_R(1+|z|)^{D_0}
@@ -2174,28 +2037,23 @@ Step 5.  The final assertion is Theorem~\ref{thm:comparison}, identity (9.5).
 
 \begin{remark}
 \label{rem:sufficiency}
-Theorem~\ref{thm:sufficiency} is a statement about the richness of the
-primitive radial sector, and nothing more.  Read contrapositively it says: if
+Read contrapositively, Theorem~\ref{thm:sufficiency} says: if
 $\sum_\rho\Phi_F(\rho)\Phi_F(1-\rho)\ge0$ for every primitive real
 $F\in C_c^\infty(\R)$, then every zero of $\xi$ lies on the line
-$\Rel s=\tfrac12$.  It is not a positivity statement and it does not make one
-available; indeed Proposition~\ref{prop:indefinite} shows that no Hodge-index
-decomposition of $\DA$ is available, the form being indefinite with infinite
-index on both sides and the primitive sector having trivial orthogonal
-complement, and \cite{P44}, Theorem 8bis.4a, shows that the corresponding
-positivity fails for the purely finite part of the kernel at every finite
-chart.  The content of the present section is only that the constraint
-$\Phi_F(0)=\Phi_F(1)=0$ costs nothing, because it is imposed by multiplication
-by a real even polynomial that is nonvanishing on $\mathcal Z$.
+$\Rel s=\tfrac12$.  It does not provide such an inequality: by
+Proposition~\ref{prop:indefinite} the form $I_A$ is indefinite with infinite
+index on both sides, and by \cite{P44}, Theorem 9.11, the finite-place part of
+the form takes a positive value on a primitive radial class at every finite
+chart.
 \end{remark}
 
-\section{The radical of the intersection form on the radial sector}
+\section{Nondegeneracy on radial classes}
 \label{sec:radicalsec}
 
 \begin{definition}
 \label{def:radsec}
 $\mathcal N_\cap:=\{\Gamma_h\in\DAr: I_A(\Gamma_h,\Gamma_g)=0\ \text{for all }
-\Gamma_g\in\DAr\}$, the radical of $I_A$ \emph{within} the radial sector.
+\Gamma_g\in\DAr\}$, the radical of $I_A$ on radial classes.
 \end{definition}
 
 \begin{theorem}[Theorem G]
@@ -2233,8 +2091,7 @@ $\widehat W_\infty(0,\tau)=\log\pi-\Rel\psi(\tfrac14+\tfrac{i\tau}2)$ is even.
 for every $c\in\R$, since Proposition~\ref{prop:symbol}(b) states that
 $\widehat T_S+c$ vanishes identically on no component and has discrete zero set
 on each, for every real $c$.  Unlike (9.4), this theorem is therefore not tied
-to $c=0$; the display (12.1) is written with $c=0$ because that is the declared
-value.
+to $c=0$.
 
 \emph{The radical.}  Let $\Gamma_h\in\mathcal N_\cap$.  By (12.1),
 \[
@@ -2254,7 +2111,7 @@ being positive because $\zeta_p=p^{-1/2}$ is real and positive there.  Hence
 $\hat h$ vanishes off a discrete set; being continuous, $\hat h\equiv0$, so
 $h=0$ and $\Gamma_h=0$.
 
-\emph{Surjectivity on the radial sector.}  The sector $\DAr$ is $\star$- and
+\emph{Surjectivity on radial classes.}  The subalgebra $\DAr$ is $\star$- and
 $\dagger$-stable by Proposition~\ref{prop:radalg}, which also gives
 $M(\Gamma_h)=\bigl(\int_\R h(t)e^{t/2}dt,\ \int_\R h(t)e^{-t/2}dt\bigr)$.
 These two linear functionals on $C_c^\infty(\R)$ are linearly independent: if
@@ -2266,13 +2123,13 @@ $h\mapsto M(\Gamma_h)$ is onto $\C^2=\BT$.  Proposition~\ref{prop:tate} gives
 surjectivity on all of $\DA$, which is a different statement.
 \end{proof}
 
-\begin{remark}[three different pairings]
+\begin{remark}
 \label{rem:three}
 Theorem~\ref{thm:radical} is not a corollary of the vanishing of the radical of
-$I_A$ on all of $\DA$ (\cite{P43}, Theorem 9.8): that statement pairs against
+$I_A$ on all of $\DA$ (\cite{P43}, Theorem 8.4): that statement pairs against
 all of $\DA$, whereas $\mathcal N_\cap$ pairs only against radial tests, and a
 smaller test space can only make a radical larger.  What makes the restricted
-statement true is that $\DAr$ is exactly the sector whose Fourier transforms
+statement true is that $\DAr$ is exactly the subalgebra whose Fourier transforms
 fill the Schwartz space on the single component $\cz$, where the symbol is
 already nonzero.  Conversely, on the completion
 $\mathcal N_A^{\mathrm{dist}}$ the radical of the scalar part of the form is
@@ -2284,30 +2141,27 @@ directions are not radial classes: they are limits of spread families whose
 $L^1$-mass escapes to $|w|_S\to\infty$.
 \end{remark}
 
-\begin{remark}[no colimit claim]
+\begin{remark}
 \label{rem:nocolimit}
-Theorem~\ref{thm:radical} is a fixed-chart statement.  Nothing is claimed here
-about the radical of $I_\infty$ on $\DA^\infty$: the Plancherel step does not
-transfer, because the colimit symbol is unbounded
+Theorem~\ref{thm:radical} concerns a fixed chart.  Its proof does not extend
+to $I_\infty$ on $\DA^\infty$, because the colimit symbol is unbounded
 (Remark~\ref{rem:notafunction}).
 \end{remark}
 
 \appendix
 
-\section{The classical facts used, and their sources}
+\section{Classical facts}
 \label{app:classical}
 
-Every analytic input to the proofs above is one of the following, and each is
-used only where it is named.  No spectral realisation of the zeros, no
-regularised cutoff theorem and no statement about the location of a zero is
-used anywhere.
+The following classical facts are used in the proofs, each where it is
+named.
 
 \begin{itemize}
 \item[\textbf{(E1)}] \emph{Euler product.}
 $\zeta'/\zeta(s)=-\sum_{n\ge2}\Lambda(n)n^{-s}$, absolutely convergent for
 $\Rel s>1$.  \emph{Used in:} step (c) of the proof of Theorem~\ref{thm:EF},
 Definition~\ref{def:A}, Theorem~\ref{thm:residues}.
-\emph{Source:} \cite[\S1.1]{Titchmarsh}, \cite[\S1.1]{IK}.
+\emph{Source:} \cite[\S1.1]{IK}.
 
 \item[\textbf{(E2)}] \emph{The completed zeta function.}
 $\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ is entire, satisfies
@@ -2318,20 +2172,19 @@ nontrivial zero of $\zeta$ is real: $\zeta(\sigma)\ne0$ for
 $\sigma\in(0,1)$.  \emph{Used in:} Lemma~\ref{lem:contour},
 Theorem~\ref{thm:EF}, Theorem~\ref{thm:residues}; the last clause \emph{only}
 in Step 1 of the proof of Theorem~\ref{thm:sufficiency}.
-\emph{Source:} \cite[\S\S2.1, 2.12]{Titchmarsh}, \cite[\S5.1]{IK}.
+\emph{Source:} \cite[\S5.1]{IK}.
 
 \item[\textbf{(E3a)}] \emph{Hadamard product.}  $\xi$ has order $1$, and
 $\xi'/\xi(s)=\sum_\rho\bigl(\frac1{s-\rho}+\frac1\rho\bigr)+B$, locally
 uniformly off the zeros.  \emph{Used in:} (E3c).
-\emph{Source:} \cite[ch.~12]{Davenport}, \cite[\S\S2.12, 3.1]{Titchmarsh}.
+\emph{Source:} \cite[ch.~12]{Davenport}.
 
-\item[\textbf{(E3b)}] \emph{Local Riemann--von Mangoldt.}
+\item[\textbf{(E3b)}] \emph{Local zero count.}
 $N(X+1)-N(X)=O(\log X)$.  Consequently, for each integer $j$ there is
 $X_j\in[j,j+1]$ whose distance to every ordinate of a zero is at least
 $c_0/\log j$: the $O(\log j)$ ordinates in $[j,j+1]$ cannot block every
 subinterval of length $\asymp1/\log j$.  \emph{Used in:}
-Lemma~\ref{lem:contour}.  \emph{Source:} \cite[ch.~15]{Davenport},
-\cite[\S9.2]{Titchmarsh}.
+Lemma~\ref{lem:contour}.  \emph{Source:} \cite[ch.~15]{Davenport}.
 
 \item[\textbf{(E3c)}] \emph{Strip estimate.}
 $\xi'/\xi(\sigma\pm iX_j)=O(\log^2X_j)$ uniformly for $\sigma$ in a fixed
@@ -2339,17 +2192,16 @@ vertical strip, along the heights $X_j$ of (E3b).  This follows from (E3a)
 together with (E3b): the $O(\log X_j)$ nearby terms of the partial-fraction
 expansion each contribute $O(\log X_j)$, and the remainder is $O(\log X_j)$.
 \emph{Used in:} Lemma~\ref{lem:contour}.
-\emph{Source:} \cite[ch.~17]{Davenport}, \cite[\S9.6]{Titchmarsh}.
-We stress that (E3b) and (E3c) are \emph{not} consequences of the global count
+\emph{Source:} \cite[ch.~17]{Davenport}.
+Note that (E3b) and (E3c) are not consequences of the global count
 (E3d): a bound on $N(X)$ says nothing about $N(X+1)-N(X)$, and the $O(\log^2)$
 bound needs the Hadamard expansion in addition.
 
-\item[\textbf{(E3d)}] \emph{Global Riemann--von Mangoldt.}
+\item[\textbf{(E3d)}] \emph{Global zero count.}
 $N(X)=\frac{X}{2\pi}\log\frac X{2\pi}-\frac X{2\pi}+O(\log X)$; only
 $N(X)=O(X\log X)$ is used.  \emph{Used in:} Remark~\ref{rem:abs} and Steps 3
 and 8 of the proof of Theorem~\ref{thm:sufficiency}.
-\emph{Source:} \cite[ch.~15]{Davenport}, \cite[\S9.4]{Titchmarsh},
-\cite[\S5.1]{IK}.
+\emph{Source:} \cite[ch.~15]{Davenport}, \cite[\S5.1]{IK}.
 
 \item[\textbf{(E4)}] \emph{Digamma asymptotics and special values.}
 $\psi(z)=O(\log|z|)$ as $|z|\to\infty$ away from the poles (Stirling);
@@ -2381,48 +2233,15 @@ $\zeta_H(0,\alpha)=\tfrac12-\alpha$ for the Hurwitz zeta function.
 
 \item[\textbf{(E8)}] \emph{Mertens.}
 $\sum_{N\le x}\Lambda(N)/N=\log x+O(1)$.  \emph{Used in:}
-Proposition~\ref{prop:mertens} and, through \cite{P43}, Theorem 10.8b, in
+Proposition~\ref{prop:mertens} and, through \cite{P43}, Theorem A.1 (appendix, auxiliary), in
 Remark~\ref{rem:mertens-scope}; nowhere else, and no statement of this paper
 other than those two depends on it (Remark~\ref{rem:mertens-scope}).
 \emph{Source:} \cite[\S2.2]{IK}, \cite[ch.~7]{Davenport}.
 \end{itemize}
 
-The explicit formula itself, Theorem~\ref{thm:EF}, is \emph{not} on this list:
-it is proved in Section~\ref{sec:EF} from (E1)--(E5).  It is of course the
-classical formula of Weil \cite{Weil1952}, whose general form under minimal
-regularity hypotheses is due to Barner \cite{Barner1981}; see also
-\cite[\S5.5]{IK}.  We have proved it here because the identification of its
-spectral side with the canonical trace, which is the point of
-Sections~\ref{sec:comparison}--\ref{sec:polar}, requires the formula in exactly
-the normalisation in which the trace is defined, and because the contour
-argument has to be arranged so that no contour crosses a zero.
-
-\section{Summary of the dependencies}
-\label{app:deps}
-
-The results proved here, and those quoted, are as follows.
-
-\emph{Proved here:} Lemmas~\ref{lem:profile}, \ref{lem:radial-trace},
-\ref{lem:testfn}, \ref{lem:contour}, \ref{lem:reflection},
-\ref{lem:traceweil}, \ref{lem:localsymbols}, \ref{lem:Pi};
-Theorems~\ref{thm:archresidue}, \ref{thm:polarpacket},
-\ref{thm:EF}, \ref{thm:comparison}, \ref{thm:limitsymbols},
-\ref{thm:residues}, \ref{thm:sufficiency}, \ref{thm:radical};
-Corollaries~\ref{cor:threenumbers}, \ref{cor:EFeven}, \ref{cor:c-unique},
-\ref{cor:noncommute}, \ref{cor:Pi};
-Propositions~\ref{prop:heattrace}, \ref{prop:zetadet}, \ref{prop:live},
-\ref{prop:mertens}.
-
-\emph{Quoted from the companion papers, with their numbers there:}
-Propositions~\ref{prop:carrier}, \ref{prop:trace}, \ref{prop:offidentity},
-\ref{prop:symbol}, \ref{prop:tate}, \ref{prop:rulings}, \ref{prop:colimit},
-\ref{prop:indefinite}, \ref{prop:radalg}, \ref{prop:primepacket},
-\ref{prop:normalisation}, and the symbol identity (6.2) of
-Theorem~\ref{thm:archsymbol}, of which only the constant reconciliation is
-proved here; together with the statement about the colimit form on
-the plane of isotropic directions quoted in Remark~\ref{rem:mertens-scope} and
-the statements about the arithmetic family quoted in
-Remarks~\ref{rem:typing} and \ref{rem:sufficiency}.
+The explicit formula itself (Theorem~\ref{thm:EF}) is proved in
+Section~\ref{sec:EF} from (E1)--(E5); for the classical statement see
+\cite{Weil1952}, \cite{Barner1981} and \cite[\S5.5]{IK}.
 
 \begin{thebibliography}{99}
 
@@ -2447,10 +2266,6 @@ Providence, RI, 2004.
 (eds.), \emph{NIST Handbook of Mathematical Functions},
 Cambridge University Press, Cambridge, 2010.
 
-\bibitem{Titchmarsh} E.~C.~Titchmarsh,
-\emph{The Theory of the Riemann Zeta-Function}, 2nd ed., revised by
-D.~R.~Heath-Brown, Oxford University Press, Oxford, 1986.
-
 \bibitem{Weil1952} A.~Weil,
 \emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},
 Comm. S\'em. Math. Univ. Lund (1952), 252--265.
@@ -2460,12 +2275,18 @@ Comm. S\'em. Math. Univ. Lund (1952), 252--265.
 Cambridge University Press, Cambridge, 1927.
 
 \bibitem{P43} D.~A.~Trejo Pizzo,
-\emph{The correspondence theory on the graph sector and the analytic trace
-invariant}, companion paper, 2026.
+\emph{A correspondence algebra with a canonical trace on the idele class
+group, its Tate symbol and its numerical form}, preprint.
 
 \bibitem{P44} D.~A.~Trejo Pizzo,
-\emph{The arithmetic family inside the correspondence algebra, and the
-separation of the two contacts}, companion paper, 2026.
+\emph{An arithmetic Frobenius family and its integral shadow on a
+correspondence algebra of the idele class group}, preprint.
+
+\bibitem{P47} D.~A.~Trejo Pizzo,
+\emph{Weil positivity on a finite window: duality, certificates and a finite reduction}, preprint.
+
+\bibitem{P48} D.~A.~Trejo Pizzo,
+\emph{A map of the routes to Weil positivity: eight arithmetic inputs, eight carriers, and the specification of a closing argument}, preprint.
 
 \end{thebibliography}
 

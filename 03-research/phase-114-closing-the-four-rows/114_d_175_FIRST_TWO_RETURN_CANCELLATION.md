@@ -13,14 +13,14 @@ difference.  In normalized source coordinates put
 Let
 
 \[
- r=X_0^*X_E,qquad l=Y_0^*Y_E,qquad H=R_0^\dagger r,
+ r=X_0^*X_E,\qquad l=Y_0^*Y_E,\qquad H=R_0^\dagger r,
  \qquad S=S_E,                                      \tag{0.2}
 \]
 
 and define
 
 \[
- h=R_0^{1/2}HS^{\dagger/2},qquad
+ h=R_0^{1/2}HS^{\dagger/2},\qquad
  q=R_0^{\dagger/2}(r-l)S^{\dagger/2}.              \tag{0.3}
 \]
 
@@ -42,7 +42,7 @@ The first two nontrivial return moments are therefore
 
 \[
  \boxed{
- c_1=(Dh-q)^*(Dh-q),qquad
+ c_1=(Dh-q)^*(Dh-q),\qquad
  c_2=(Dh-q)^*T(Dh-q),}                               \tag{0.5}
 \]
 

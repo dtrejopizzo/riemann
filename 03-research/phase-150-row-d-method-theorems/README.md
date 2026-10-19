@@ -1,6 +1,6 @@
 # Phase 150 — Method theorems T3, T4, T5 (row D)
 
-**Status: CLOSED 2026-09-19. Row D: no label, no sign.**
+**Status: CLOSED . Row D: no label, no sign.**
 
 Question: turn three repeated corpus observations into theorems — (T3) any proof of a zero-free strip must use the
 additive structure of `Z` beyond `Λ ≥ 0` + pole + Euler product (falsifier: Beurling systems, Diamond–Montgomery–
@@ -14,9 +14,9 @@ import (H-DMV, blocking O-150.1) and already present as an observation in `114_d
 
 | file | content |
 |---|---|
-| `R150_000_LEAD_BLUEPRINT.md` | orders |
-| `R150_001_BUILDER_ROUND1.md` | round 1 (Opus) |
-| `R150_002_HOSTILE_AUDIT.md` | audit: 3 wrong, 4 downgraded, 4 standing |
-| `R150_003_BUILDER_ROUND2.md` | repairs; polar/entire classification |
-| `R150_004_HOSTILE_CONFIRMATION.md` | confirmation; D-1: Prop. 5.7 round-1 was right (`‖b*b‖² = E(b)`) |
-| `R150_005_LEAD_CLOSING_DECISION.md` | **document of record** |
+| `R150_000_BLUEPRINT.md` | orders |
+| `R150_001_ROUND1.md` | round 1 |
+| `R150_002_AUDIT.md` | audit: 3 wrong, 4 downgraded, 4 standing |
+| `R150_003_ROUND2.md` | repairs; polar/entire classification |
+| `R150_004_CONFIRMATION.md` | confirmation; D-1: Prop. 5.7 round-1 was right (`‖b*b‖² = E(b)`) |
+| `R150_005_CLOSING_DECISION.md` | **document of record** |

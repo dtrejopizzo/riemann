@@ -1,11 +1,11 @@
-# Phase 104 — cerrar A1
+# Phase 104 — close A1
 
-**Fase cerrada.** El objetivo no fue demostrado. El balance vinculante,
-las piezas permanentes y el handoff a Phase 105 están en
-[`PHASE_104_CLOSURE.md`](PHASE_104_CLOSURE.md). Ningún documento de esta
-carpeta puede citarse como prueba de RH.
+**Phase closed.** The objective was not proved. The binding balance,
+the permanent pieces, and the handoff to Phase 105 are in
+[`PHASE_104_CLOSURE.md`](PHASE_104_CLOSURE.md). No document in this
+folder can be cited as proof of RH.
 
-Objetivo único: probar, incondicionalmente y para todo \(n\ge150\),
+Single objective: prove, unconditionally and for all \(n\ge150\),
 
 \[
 \text{(A1)}\qquad
@@ -13,695 +13,695 @@ Objetivo único: probar, incondicionalmente y para todo \(n\ge150\),
 \ \le\ q_n=\tfrac34A_n+1-L_n^{(1)}(\log 2).
 \]
 
-Con A0, los certificados finitos \(1\le n\le149\) y la identidad
-\(C_n(T)=\lambda_n-\frac14A_n-R_n(T)\) —los tres ya probados— esto cierra \(\Omega_7\)
-y por tanto RH. La cadena estable está en la subsección
-`The Phase 102--103 direct route`, etiquetas `prop:li-compact-tail`,
-`thm:a1-direct-collapse` y `cor:a1-to-omega7` del obstruction ledger.
+With A0, the finite certificates \(1\le n\le149\) and the identity
+\(C_n(T)=\lambda_n-\frac14A_n-R_n(T)\) —the three already proved— this closes \(\Omega_7\)
+and therefore RH. The stable chain is in the subsection
+`The Phase 102--103 direct route`, labels `prop:li-compact-tail`,
+`thm:a1-direct-collapse` and `cor:a1-to-omega7` of the obstruction ledger.
 
-**Restricción de cierre.** Un cierre condicional para \(n\ge n_{\rm eff}\) más un rango finito
-nunca completa RH. A1 debe quedar probada incondicionalmente para todos los índices restantes.
+**Closure restriction.** A conditional closure for \(n\ge n_{\rm eff}\) plus a finite range
+never completes RH. A1 must be proved unconditionally for all remaining indices.
 
-## Corrección vinculante 104_56A: el cutoff es cofinal
+## Binding correction 104_56A: the cutoff is cofinal
 
-La condición de A0 se impone sobre todo el rayo \(u\ge T\). Por tanto, si un cutoff es
-admisible, todo cutoff mayor también lo es, y para todo \(T\ge T_n^0\)
+The A0 condition is imposed on the whole ray \(u\ge T\). Therefore, if one cutoff is
+admissible, every larger cutoff is too, and for all \(T\ge T_n^0\)
 \[
  |R_n(T)|\le \frac{A_n}{4(1+T)}.
 \]
-En consecuencia, si \(\delta_n:=\lambda_n-A_n/4>0\), se puede elegir
+Consequently, if \(\delta_n:=\lambda_n-A_n/4>0\), one can choose
 \[
  T>\max\left\{T_n^0,\frac{A_n}{4\delta_n}-1\right\}
 \]
-y entonces \(C_n(T)>0\). El frente cofinal suficiente es, pues,
+and then \(C_n(T)>0\). The sufficient cofinal front is, therefore,
 \[
  \boxed{\;4\lambda_n>A_n\;},
 \]
-no el margen fijo \(4\lambda_n-A_n\ge A_n/1001\). La constante
-\(2002/501\) sigue siendo correcta como suficiente uniforme obtenido del piso bruto
-\(T\ge1000\), pero no es intrínseca. La elección adaptada usa la misma holgura que queda por
-probar y no constituye un mecanismo para obtenerla.
+not the fixed margin \(4\lambda_n-A_n\ge A_n/1001\). The constant
+\(2002/501\) remains correct as a uniform sufficient value obtained from the raw floor
+\(T\ge1000\), but it is not intrinsic. The adapted choice uses exactly the slack that is
+yet to be proved and does not constitute a mechanism for obtaining it.
 
-Hay además una distinción lógica que el registro anterior no hacía: demostrar
-\(4\lambda_n-A_n\ge0\) para todo \(n\ge150\) ya da \(\lambda_n>0\) y prueba RH directamente,
-aunque la igualdad no baste para deducir A1 en un cutoff finito usando solamente el techo
-bilateral de A0. Por tanto se retira la afirmación general de que una conclusión
-semidefinida nunca puede cerrar el objetivo maestro; solo era insuficiente para la
-transferencia A1 con cutoff prefijado.
+There is also a logical distinction that the previous record did not make: proving
+\(4\lambda_n-A_n\ge0\) for all \(n\ge150\) already gives \(\lambda_n>0\) and proves RH directly,
+even though equality does not suffice to deduce A1 at a finite cutoff using only the
+bilateral ceiling of A0. Therefore the general claim that a semidefinite conclusion
+can never close the master objective is withdrawn; it was only insufficient for the
+A1 transfer with a prefixed cutoff.
 
-## Corrección de cuantificador 104_56: densidad y bloques
+## Quantifier correction 104_56: density and blocks
 
-Si RH es falsa, los modos transformados de módulo máximo producen excursiones
-\(4\lambda_n-A_n<0\) sobre un conjunto sindético de densidad natural positiva. De aquí se
-deducen dos criterios equivalentes a RH:
+If RH is false, the transformed modes of maximal modulus produce excursions
+\(4\lambda_n-A_n<0\) on a syndetic set of positive natural density. From this
+two criteria equivalent to RH are deduced:
 
-1. \(4\lambda_n>A_n\) fuera de una excepción de densidad logarítmica superior cero;
-2. \(4\lambda_n>A_n\) en bloques consecutivos de longitudes no acotadas.
+1. \(4\lambda_n>A_n\) outside an exception of upper logarithmic density zero;
+2. \(4\lambda_n>A_n\) on consecutive blocks of unbounded lengths.
 
-No existe una constante universal positiva para la densidad mala deducible de los axiomas
-abstractos de Bombieri--Lagarias; una familia explícita de fases de Fejér hace esa densidad
-arbitrariamente pequeña. Esta relajación reduce el objetivo maestro, pero no prueba todavía
-ningún bloque bueno nuevo para la zeta. El objetivo literal de Phase 104 —A1 para cada
-\(n\ge150\)— permanece abierto.
+There is no positive universal constant for the bad density deducible from the
+abstract Bombieri--Lagarias axioms; an explicit family of Fejér phases makes that
+density arbitrarily small. This relaxation reduces the master objective, but does not yet
+prove any new good block for zeta. The literal objective of Phase 104 —A1 for every
+\(n\ge150\)— remains open.
 
-## Erratum vinculante: signo del coeficiente incompleto
+## Binding erratum: sign of the incomplete coefficient
 
-La importación anterior de Lagarias, ec. (1.15)--(1.17), tenía el signo del bloque incompleto
-invertido. Con
+The earlier import from Lagarias, eq. (1.15)--(1.17), had the sign of the incomplete block
+inverted. With
 \[
  k_n(s)=\left(1+\frac1s\right)^n-1,
 \]
-el residuo de \(k_n(s)(-L'/L)(s+1,\pi)\) en \(s=\rho-1\) es
-\(-m_\rho k_n(\rho-1)\). Al conservar también la orientación del contorno, la traducción
-corregida en el caso de \(\zeta\) es
+the residue of \(k_n(s)(-L'/L)(s+1,\pi)\) at \(s=\rho-1\) is
+\(-m_\rho k_n(\rho-1)\). Keeping also the orientation of the contour, the
+corrected translation in the \(\zeta\) case is
 \[
  \lambda_n=A_n+\lambda_n(\sqrt n)+O(\sqrt n\log n),
 \]
-no \(A_n-\lambda_n(\sqrt n)+O(\sqrt n\log n)\). Por tanto el resto pequeño correcto es
+not \(A_n-\lambda_n(\sqrt n)+O(\sqrt n\log n)\). Hence the correct small remainder is
 \[
  \widetilde\varepsilon_n:=A_n-\lambda_n+\lambda_n(\sqrt n)
  =O(\sqrt n\log n).
 \]
-La cantidad usada antes,
+The quantity used before,
 \[
  \varepsilon_n^-:=A_n-\lambda_n-\lambda_n(\sqrt n),
 \]
-sigue siendo una identidad exacta, pero
-\(\varepsilon_n^-=\widetilde\varepsilon_n-2\lambda_n(\sqrt n)\) y **no** tiene una cota
-incondicional \(O(\sqrt n\log n)\). Todo corolario que usaba tal cota, incluido el rango finito
-derivado de \(C_*\), queda retirado. Este erratum no toca la identidad prima--Laguerre ni A0--A1.
-La prueba de contorno requiere además reparar el tramo horizontal impreso:
-se toma primero \(T=2\sqrt n+\varepsilon_n\), donde la razón geométrica es
-\(e^{1/4}/2<1\), y se vuelve a \(\sqrt n\) acotando la banda intermedia por
+is still an exact identity, but
+\(\varepsilon_n^-=\widetilde\varepsilon_n-2\lambda_n(\sqrt n)\) and does **not** have an
+unconditional bound \(O(\sqrt n\log n)\). Every corollary that used such a bound, including the finite range
+derived from \(C_*\), is withdrawn. This erratum does not touch the prime--Laguerre identity nor A0--A1.
+The contour proof additionally needs the printed horizontal stretch repaired:
+one first takes \(T=2\sqrt n+\varepsilon_n\), where the geometric ratio is
+\(e^{1/4}/2<1\), and returns to \(\sqrt n\) bounding the intermediate band by
 \(O(\sqrt n\log n)\).
 
-## Dónde está el contenido nuevo
+## Where the new content is
 
-`104_00`–`104_03` son gate, normalización y auditoría: consolidan el terreno y traducen con
-rigor lo que ya existe en la literatura, sin reclamarlo como frente.
-**El trabajo matemático nuevo empezó en `104_10` (M1).** `104_11` cerró ese
-mecanismo con un stop-gate exacto. `104_12` auditó el sucesor M5: conserva la
-convolución Möbius--divisor firmada, pero no produce una métrica positiva ni una
-cota nueva. `104_13` descarta específicamente **positividad de Selberg + fórmula
-sumatoria \(O(x)\) + Riccati** como fuente autónoma; no descarta todo posible
-teorema acoplado especial para los pesos reales. `104_14` cierra también M3 en su especificación actual: el mapa
-estacionario organiza alturas, pero pierde el parámetro radial que determina el
-signo. `104_15` prueba que el complejo de Koszul positivo del cubo divisor
-cancela los cocientes \(p/q\), pero simultáneamente vuelve nulo-homotópica la
-conexión \(M\delta Z\); tampoco es el mecanismo faltante. El siguiente frente deberá aportar una identidad aritmética concreta para
-los pesos reales \(\Lambda\), no otra polarización de las mismas formas.
-`104_16` ensaya precisamente la jerarquía completa del cociclo de Jordan:
-prueba \(\mu*\log^k\ge0\) para todo \(k\), pero su primer jet polar--Euler es
-el mismo costo \(C_{n,\varepsilon}\) y pierde el signo ya en grados \(1,6\).
-La completación Gamma produce una familia Schur equivalente a RH y la mitad
-de completación tiene coeficiente exactamente \(-\Delta D_n/2\); no aparece
-una cota intermedia. Tras corregir el signo del bloque incompleto, `104_17`
-ataca directamente su cota inferior mediante promedios Abel--Fejér. Prueba
-que el germen Abel radial de cada cuarteto es estrictamente positivo incluso
-fuera de la línea, mientras sus coeficientes y promedios triangulares pueden
-ser exponencialmente negativos. Por tanto la positividad radial no transfiere
-el signo que A1 necesita. `104_18` conserva finitos y correlacionados
-\(u=c\varepsilon\) en el cociclo Jordan: obtiene una recurrencia y una
-renovación exactas, pero el límite es otra vez
-\(C_n=\lambda_n^{\rm prime}-\lambda_{n+1}^{\rm prime}\). El orden real, la
-monotonía en \(c\) y la anulación idéntica del canal explícito mediante
-pesos constantes fallan con testigos exactos. `104_19` incorpora el factor Gamma y elimina la raíz del
-medio-cociclo: deriva tres canales finitos exactos, pero su medida polar es
-firmada para todo \(c>0\), los canales aislados divergen y el límite vuelve a
-ser \(-\Delta D_n\).
-`104_20` combina cada torre prima y los tres canales antes de estimar. La
-fórmula se factoriza como un cuadrado algebraico exacto \(\mathsf C_p^2\),
-pero no como \(\mathsf C_p^*\mathsf C_p\): los bloques aritméticos reales
-tienen ambos signos. Muere el signo torre a torre; permanece viva la
-desigualdad de la suma multiplicativa global.
-`104_21` ejecuta ese gate global: la ley multiplicativa normalizada es
-compound-Poisson y ordenada por convolución, pero falla PF2 con un menor
-racional de los primos 2 y 3. Más decisivamente, el cociclo completado real
-no es completamente monótono: su densidad inversa de Laplace es negativa en
-\(x=\frac12\log2\), antes del primer átomo aritmético. Mueren las rutas
-PF/TP, variación disminuyente y medida positiva global; queda como sucesor
-la identidad global firmada de Stein--Mecke.
-`104_22` retiene el factor \((1+T_n)^{-1}\) que la última línea de A0
-descartaba. Con él, la A1 original ya no requiere
-\(2\lambda_n-A_n\ge0\): basta el margen estrictamente más débil
-\(3\lambda_n-A_n\ge0\). El cociclo exacto correspondiente es
-\(H_u^3K_u^2\); tres canales Euler y dos Gamma son positivos, y el único
-frente restante es controlar globalmente el polo cúbico acoplado.
-`104_23` usa además \(T_n\ge1000\): el margen suficiente baja al valor fijo
-\(r_*\lambda_n-A_n\ge0\), \(r_*=2002/501\), casi cuártico. Euler y Gamma
-siguen siendo positivos para este exponente real por divisibilidad infinita;
-el polo se suma como una densidad hipergeométrica firmada. `104_56A` corrige su
-interpretación: es el suficiente uniforme asociado al piso bruto, no el frente
-intrínseco cuando el cutoff puede aumentarse índice por índice.
-`104_24` ejecuta Stein--Mecke sobre el cociclo cúbico. Obtiene cuatro canales
-directos con \(L_k^{(1)}\) y una recurrencia global que conserva todos los
-otros primos, pero el generador completado es negativo ya en
-\(\frac12\log2\), antes del primer átomo primo. Muere el orden positivo del
-generador, no la desigualdad firmada especial.
-`104_25` aplica Fejér--Carathéodory al mismo cociclo. La identidad produce
-exactamente \(3\lambda_n-A_n\), pero la holomorfía necesaria en una sucesión
-de discos completos ya equivale a RH. El disco seguro de la serie Euler se
-contrae como \((1-c)\varepsilon\) y solo controla medias amortiguadas.
-`104_26` prueba que pasar al exponente entero cuatro tampoco crea una suma
-de cuadrados: la cuarta potencia local sigue siendo algebraica, falla PF2 y
-su parte cuadrática se anula en el límite directo. Su slack
-\(4\lambda_n-A_n\ge A_n/1001\) sigue siendo el costo exacto de la
-transferencia que fija únicamente \(T\ge1000\), pero `104_56A` retira la
-afirmación de que ese slack sea necesario para RH o para un cutoff cofinal
-adaptado: basta el signo no negativo para RH y el signo estricto para la
-transferencia cofinal a A1.
-`104_27` descarta recuperar ese slack declarando favorable el signo de la
-cola: bajo el mismo envelope VK hay discrepancias suaves y monótonas con
-\(R_n(T)\) de ambos signos. Cualquier signo real debe usar los pesos
+`104_00`–`104_03` are gate, normalization and audit: they consolidate the ground and translate with
+rigor what already exists in the literature, without claiming it as a front.
+**The new mathematical work started at `104_10` (M1).** `104_11` closed that
+mechanism with an exact stop-gate. `104_12` audited the successor M5: it preserves the
+signed Möbius--divisor convolution, but does not produce a positive metric or a
+new bound. `104_13` specifically rules out **Selberg positivity + \(O(x)\)
+summation formula + Riccati** as an autonomous source; it does not rule out every possible
+special coupled theorem for the real weights. `104_14` also closes M3 in its current specification: the
+stationary map organizes heights, but loses the radial parameter that determines the
+sign. `104_15` proves that the positive Koszul complex of the divisor cube
+cancels the \(p/q\) quotients, but simultaneously makes the
+\(M\delta Z\) connection null-homotopic; it is not the missing mechanism either. The next front must contribute a concrete arithmetic identity for
+the real weights \(\Lambda\), not another polarization of the same forms.
+`104_16` tests precisely the complete hierarchy of the Jordan cocycle:
+it proves \(\mu*\log^k\ge0\) for all \(k\), but its first polar--Euler jet is
+the same cost \(C_{n,\varepsilon}\) and loses the sign already at degrees \(1,6\).
+The Gamma completion produces a Schur family equivalent to RH and the completion
+half has coefficient exactly \(-\Delta D_n/2\); no intermediate bound appears.
+After correcting the sign of the incomplete block, `104_17`
+directly attacks its lower bound via Abel--Fejér averages. It proves
+that the radial Abel germ of each quartet is strictly positive even
+off the line, while its coefficients and triangular averages can
+be exponentially negative. Therefore the radial positivity does not transfer
+the sign A1 needs. `104_18` keeps finite and correlated
+\(u=c\varepsilon\) in the Jordan cocycle: it derives an exact recurrence and
+renewal, but the limit is again
+\(C_n=\lambda_n^{\rm prime}-\lambda_{n+1}^{\rm prime}\). The real order, the
+monotonicity in \(c\), and the identical vanishing of the explicit channel via
+constant weights fail with exact witnesses. `104_19` incorporates the Gamma factor and eliminates the root of the
+half-cocycle: it derives three exact finite channels, but its polar measure is
+signed for all \(c>0\), the isolated channels diverge, and the limit returns to
+\(-\Delta D_n\).
+`104_20` combines each prime tower and the three channels before estimating. The
+formula factors as an exact algebraic square \(\mathsf C_p^2\),
+but not as \(\mathsf C_p^*\mathsf C_p\): the real arithmetic blocks
+have both signs. The tower-by-tower sign dies; the inequality of the global
+multiplicative sum stays alive.
+`104_21` runs that global gate: the normalized multiplicative law is
+compound-Poisson and convolution-ordered, but fails PF2 with a rational minor
+from the primes 2 and 3. More decisively, the completed real cocycle
+is not completely monotone: its inverse Laplace density is negative at
+\(x=\frac12\log2\), before the first arithmetic atom. The PF/TP routes,
+decreasing variation, and global positive measure all die; the successor left
+is the signed Stein--Mecke global identity.
+`104_22` retains the factor \((1+T_n)^{-1}\) that the last line of A0
+discarded. With it, the original A1 no longer requires
+\(2\lambda_n-A_n\ge0\): the strictly weaker margin \(3\lambda_n-A_n\ge0\)
+suffices. The corresponding exact cocycle is
+\(H_u^3K_u^2\); three Euler channels and two Gamma channels are positive, and the only
+remaining front is globally controlling the coupled cubic pole.
+`104_23` additionally uses \(T_n\ge1000\): the sufficient margin drops to the fixed value
+\(r_*\lambda_n-A_n\ge0\), \(r_*=2002/501\), almost quartic. Euler and Gamma
+remain positive for this real exponent by infinite divisibility;
+the pole adds up as a signed hypergeometric density. `104_56A` corrects its
+interpretation: it is the uniform sufficient value associated with the raw floor, not the
+intrinsic front when the cutoff can be increased index by index.
+`104_24` runs Stein--Mecke on the cubic cocycle. It obtains four direct
+channels with \(L_k^{(1)}\) and a global recurrence that preserves all the
+other primes, but the completed generator is already negative at
+\(\frac12\log2\), before the first prime atom. The positive order of the
+generator dies, not the special signed inequality.
+`104_25` applies Fejér--Carathéodory to the same cocycle. The identity produces
+exactly \(3\lambda_n-A_n\), but the holomorphy needed on a sequence
+of full disks is already equivalent to RH. The safe disk of the Euler series
+shrinks like \((1-c)\varepsilon\) and only controls damped averages.
+`104_26` proves that moving to integer exponent four also does not create a sum
+of squares: the local fourth power is still algebraic, fails PF2, and
+its quadratic part vanishes in the direct limit. Its slack
+\(4\lambda_n-A_n\ge A_n/1001\) remains exactly the cost of the
+transfer that fixes only \(T\ge1000\), but `104_56A` withdraws the
+claim that this slack is necessary for RH or for an adapted cofinal
+cutoff: the non-negative sign suffices for RH and the strict sign for the
+cofinal transfer to A1.
+`104_27` rules out recovering that slack by declaring the tail sign favorable:
+under the same VK envelope there are smooth, monotone discrepancies with
+\(R_n(T)\) of both signs. Any real sign must use the weights
 \(\Lambda(m)\).
-`104_56`--`104_61` cambian por primera vez el cuantificador, en vez de
-volver a reformular la misma desigualdad puntual. Bajo \(\neg\mathrm{RH}\),
-los modos exteriores dominantes fuerzan excursiones exponenciales sobre un
-conjunto sindético. Por ello basta excluir en algunos intervalos largos una
-densidad positiva de excursiones más profundas que cualquier barrera
-subexponencial. `104_60` lo expresa mediante una barrera unilateral saturada;
-`104_61` obtiene el criterio todavía más débil \(\lambda_n\ge-1\) en bloques
-de longitud no acotada y una partición acotada de Fermi--Dirac que mide la
-densidad logarítmica de las excursiones. Su representación prima--Laguerre
-conserva polo, Gamma y todos los pesos \(\Lambda(m)\) dentro de la no
-linealidad. La partición exponencial
-\(\sum_{n\le X}e^{-t\lambda_n}/n\) queda como auxiliar algebraico más fuerte:
-su cota \(O(\log X)\) ya fuerza una cota inferior en cada grado y no explota
-la relajación de densidad. Ninguno de los dos límites está probado.
-`104_62` lleva Fermi a un producto prima--Laguerre unitario y localiza
-exactamente su señal en microfrecuencias \(s\asymp e^{-an}\). La coordenada
-diagonal \(s=e^{-nv}\) vuelve fija esa tasa, pero la generatriz solo controla
-el producto geométrico de fases: en la frontera todos los poderes de Hadamard
-sobreviven y la media aritmética de Fermi queda abierta. `104_63` cierra
-también el rescate por energía entre grados: Parseval y
-Christoffel--Darboux existen, pero sus piezas reguladas divergen como
-\(\varepsilon^{-4N}\) y solo el funcional completo cancela.
-`104_64` reemplaza la media logarítmica de Cesàro por una media Abel exacta:
-basta una subsucesión radial prefijada, aunque el falsificador muestra que la
-capa de Fourier debe alcanzar \(s=\exp(-c/h)\). `104_65` prueba que ninguna
-diferencia, promedio móvil o filtro local fijo elimina las excursiones
-dominantes salvo que aniquile también el contraejemplo. `104_66` diagonaliza
-el regulador con \(\varepsilon(h)=e^{-1/(100h)}\), de modo que cada escala
-usa una serie de Euler absolutamente convergente; separar polo y primos sigue
-costando una precisión \(\exp(-C/h^2+O(1/h))\). `104_67` refuerza la
-obstrucción: bajo no-RH hay excursiones exponenciales de ambos signos, cada
-una sindética y de densidad positiva. Finalmente, `104_68` elimina el
-selector existencial de bloques: las ventanas fijas
-\(I_L=[L^2,L^2+L-1]\) distinguen RH mediante una suma Fermi o un producto
-finito que tiende a \(1\) bajo RH y a \(0\) bajo no-RH. `104_69` da la
-versión global finita en \(\log X\), también sobre una diagonal Euler única.
-La auditoría `104_69B` separa estos repackagings de los antecedentes
-Bombieri--Lagarias y de la sumabilidad clásica. `104_70` prueba que bajar la
-temperatura de Fermi subexponencialmente conserva el detector, pero no puede
-amortiguar el polo con un regulador que tienda al borde: ambas obligaciones
-son cuantitativamente incompatibles. `104_71` da la dualidad entrópica exacta
-de las ventanas: las correlaciones pagan su multiinformación y el optimizador
-refactoriza, pero basta una cota variacional con slack
-\(\exp(o(L^2))\) en una sola subsucesión para probar RH. `104_72` vuelve
-al detector acotado mediante una razón de presiones: cada excursión profunda
-aporta solo un factor \(e^\tau\), de modo que se conserva la densidad y no la
-profundidad. La ganancia es real, pero la transición sigue dependiendo de la
-diferencia prima--polo completa con precisión aditiva \(O(1)\).
-`104_73` prueba que ni la representación positiva de Bernstein ni un ancho
-variable eliminan esa pared: toda anchura que detecta cada modo exterior deja
-un costo relativo \(\exp\{-X^2/100+o(X)\}\). `104_74` reformula la misma
-presión mediante un semigrupo de Hadamard y potenciales de Jensen; el contorno
-exterior queda polinómico, pero toda tasa exponencial reside exactamente en la
-suma finita de residuos interiores. Finalmente, `104_75` sustituye la
-transición \(O(1)\) por el blanco unilateral más débil obtenido hasta ahora:
-basta que los sobrepasos prima--polo de tamaño \(e^{\sqrt X}\) tengan densidad
-logarítmica nula. La transformada poissonizada de primer orden se cierra en
-forma de Bessel, pero el cuarteto demuestra que no controla ese evento raro.
-`104_76` muestra que la cola de ceros con
-\(\gamma>X^{1/4}\) es \(O(X\log X\,e^{\sqrt X/2})\), uniformemente en
-\(n\le X\): toda posible violación profunda queda localizada en el bloque
-\(\gamma\le X^{1/4}\). `104_77` obtiene la localización complementaria por
-contorno: la parte exterior es polinómica y la dificultad completa es una
-suma finita de residuos interiores; Jensen, Cartan y Turán detectan esos
-residuos, pero no los eliminan.
-`104_78` construye un falsificador Euler reticular con renovación unitaria,
-torres completas, pesos positivos, ecuación funcional y ley prima de grado:
-su cola profunda tiene densidad \(1/4\). No conserva el PNT continuo ni el
-factor Gamma, y por eso delimita —sin reemplazar— el problema real.
-`104_79` vuelve a los \(\Lambda(m)\) ordinarios: la representación exacta
-por la ley zeta tiene colas prima y semiprima de ambos signos con primeros
-excesos \(\ge e^{X^2/500}\). Así, truncar o concentrar cada cola por
-separado pierde la cancelación que determina la media.
+`104_56`--`104_61` change the quantifier for the first time, instead of
+reformulating the same pointwise inequality again. Under \(\neg\mathrm{RH}\),
+the dominant outer modes force exponential excursions on a
+syndetic set. Hence it suffices to exclude, on some long intervals, a
+positive density of excursions deeper than any subexponential barrier.
+`104_60` expresses this via a saturated one-sided barrier;
+`104_61` obtains the still weaker criterion \(\lambda_n\ge-1\) on blocks
+of unbounded length and a bounded Fermi--Dirac partition that measures the
+logarithmic density of excursions. Its prime--Laguerre representation
+keeps pole, Gamma, and all weights \(\Lambda(m)\) coupled inside the non-
+linearity. The exponential partition
+\(\sum_{n\le X}e^{-t\lambda_n}/n\) remains as a stronger algebraic auxiliary:
+its bound \(O(\log X)\) already forces a lower bound in each degree and does not exploit
+the density relaxation. Neither limit is proved.
+`104_62` carries Fermi to a unitary prime--Laguerre product and localizes
+its signal exactly at microfrequencies \(s\asymp e^{-an}\). The
+diagonal coordinate \(s=e^{-nv}\) fixes that rate, but the generating function only controls
+the geometric product of phases: at the boundary all Hadamard powers
+survive and the arithmetic Fermi average remains open. `104_63` also closes
+the cross-degree energy rescue: Parseval and
+Christoffel--Darboux exist, but their regulated pieces diverge like
+\(\varepsilon^{-4N}\) and only the complete functional cancels.
+`104_64` replaces the Cesàro logarithmic average by an exact Abel average:
+a prefixed radial subsequence suffices, although the falsifier shows that the
+Fourier layer must reach \(s=\exp(-c/h)\). `104_65` proves that no
+difference, moving average, or fixed local filter removes the dominant
+excursions unless it also annihilates the counterexample. `104_66` diagonalizes
+the regulator with \(\varepsilon(h)=e^{-1/(100h)}\), so that each scale
+uses an absolutely convergent Euler series; separating pole and primes still
+costs a precision \(\exp(-C/h^2+O(1/h))\). `104_67` reinforces the
+obstruction: under non-RH there are exponential excursions of both signs, each
+syndetic and of positive density. Finally, `104_68` eliminates the
+existential block selector: the fixed windows
+\(I_L=[L^2,L^2+L-1]\) distinguish RH via a Fermi sum or a
+finite product tending to \(1\) under RH and to \(0\) under non-RH. `104_69` gives the
+finite global version in \(\log X\), also on a single Euler diagonal.
+The `104_69B` audit separates these repackagings from the
+Bombieri--Lagarias antecedents and from classical summability. `104_70` proves that lowering the
+Fermi temperature subexponentially preserves the detector, but cannot
+damp the pole with a regulator tending to the boundary: both obligations
+are quantitatively incompatible. `104_71` gives the exact entropic duality
+of the windows: correlations pay their multi-information and the optimizer
+refactors, but a variational bound with slack
+\(\exp(o(L^2))\) on a single subsequence suffices to prove RH. `104_72` returns
+to the bounded detector via a pressure ratio: each deep excursion
+contributes only a factor \(e^\tau\), so density is preserved but not
+depth. The gain is real, but the transition still depends on the
+complete prime--pole difference with additive precision \(O(1)\).
+`104_73` proves that neither the positive Bernstein representation nor a
+variable width removes that wall: any width that detects every outer mode leaves
+a relative cost \(\exp\{-X^2/100+o(X)\}\). `104_74` reformulates the same
+pressure via a Hadamard semigroup and Jensen potentials; the outer contour
+becomes polynomial, but every exponential rate resides exactly in the
+finite sum of interior residues. Finally, `104_75` replaces the
+\(O(1)\) transition by the weakest one-sided target obtained so far:
+it suffices that prime--pole overshoots of size \(e^{\sqrt X}\) have
+logarithmic density zero. The first-order Poissonized transform closes in
+Bessel form, but the quartet shows that it does not control that rare event.
+`104_76` shows that the tail of zeros with
+\(\gamma>X^{1/4}\) is \(O(X\log X\,e^{\sqrt X/2})\), uniformly in
+\(n\le X\): every possible deep violation is localized in the block
+\(\gamma\le X^{1/4}\). `104_77` obtains the complementary localization by
+contour: the outer part is polynomial and the whole difficulty is a
+finite sum of interior residues; Jensen, Cartan, and Turán detect those
+residues but do not eliminate them.
+`104_78` constructs a lattice Euler falsifier with unitary renewal,
+complete towers, positive weights, functional equation, and a prime degree law:
+its deep tail has density \(1/4\). It does not preserve the continuous PNT nor the
+Gamma factor, and so it delimits —without replacing— the real problem.
+`104_79` returns to the ordinary \(\Lambda(m)\): the exact representation
+by the zeta law has prime and semiprime tails of both signs with first
+excesses \(\ge e^{X^2/500}\). Thus, truncating or concentrating each tail
+separately loses the cancellation that determines the mean.
 
-## Documentos
+## Documents
 
-| file | rol | contenido |
+| file | role | content |
 |---|---|---|
-| `104_00_BIBLIOGRAPHY_GATE.md` | gate (bloqueante) | veredicto duplica / no-duplica por mecanismo, con etiqueta condicional/incondicional explícita |
-| `104_01_THETA_FAMILY.md` | normalización | familia \(C_n^\theta\), reserva \(q_{n,\theta}\), \(T_n(\theta)\) efectivo, transporte firmado \(\Delta_{n,\theta}\) |
-| `104_02_LAGARIAS_TRANSLATION.md` | **erratum de signo vinculante** | coordenada corregida \(-\lambda_n(\sqrt n)+\widetilde\varepsilon_n\); retirados el antiguo Teorema A y el corolario finito basado en \(C_*\) |
-| `104_03_CONTOUR_RESIDUE_AUDIT.md` | auditoría | contorno de \(R(t)\), polos triviales, identidad de Cayley, mapa estacionario |
-| `104_10_M1_COLLECTIVE_KERNEL.md` | mecanismo auditado | identidad colectiva y no-go local-PSD |
-| `104_11_M1_GLOBAL_MAX_STOP_GATE.md` | **stop-gate exacto** | el compensador es la energía `max`; cancelación de Hessianas y colapso al funcional lineal original |
-| `104_12_M5_MOBIUS_DIVISOR_AUDIT.md` | **identidad exacta + stop-gate de Gram** | convolución Möbius--divisor en grado; comparación con E70.11--12 y 103_71; el inverso de Möbius no puede ser un adjunto positivo |
-| `104_13_M5_SELBERG_RICCATI_GATE.md` | **recurrencia exacta + stop-gate de escala** | recurrencia Selberg--Riccati en grado; la colisión regulada cuesta \(\varepsilon^{-n-1}\) y la sumatoria \(O(x)\) pierde \(\exp((1+o(1))n\log n)\) |
-| `104_14_M3_NONLOCAL_STOP_GATE.md` | **forma completada + stop-gate bulk** | A1 como autocorrelación de Weil menos reserva y cola; un cuarteto off-line y un divisor crítico con las mismas alturas dan signos opuestos |
-| `104_15_EULER_GAMMA_COMPLEX_GATE.md` | **construcción mínima + stop-gate cohomológico** | complejo de Koszul positivo en los posets \(\{1,p\}\), \(\{1,p,q,pq\}\); cancela cocientes mixtos, pero hace exacto \(M\delta Z\) |
-| `104_16_JORDAN_COCYCLE_ATTACK.md` | **jerarquía positiva + stop-gate Cayley/Schur** | cociclo \(\zeta(s-u)/\zeta(s)\), \(\mu*\log^k\ge0\); el emparejamiento polar pierde signo, el presupuesto es \(-\Delta D_n/2\) y la contractividad completada equivale a RH |
-| `104_17_INCOMPLETE_LI_ABEL_STOP_GATE.md` | **teorema Abel + stop-gate Tauberiano** | fórmulas exactas para el cuarteto incompleto y sus promedios; positividad Abel radial compatible con coeficientes exponencialmente negativos |
-| `104_18_CORRELATED_SHIFT_STOP_GATE.md` | **identidad finita + stop-gate de orden** | recurrencia exacta para \(u=c\varepsilon\), forma de renovación firmada; el límite vuelve a \(C_n\), el orden real no controla coeficientes y pesos constantes finitos no anulan idénticamente el canal explícito |
-| `104_19_THREE_CHANNEL_BRANCH_FREE_GATE.md` | **expansión exacta + stop-gate polar** | cociclo \(Y(s-u)/Y(s)\) en tres canales Jordan--Beta; medida polar firmada, divergencia al separar y límite exacto \(-\Delta D_n\) |
-| `104_20_LOCAL_TOWER_SQUARE_AND_GLOBAL_GATE.md` | **factorización local + gate global vivo** | segunda diferencia exacta de \(b_u(p^k)\), cuadrado operacional \(\mathsf C_p^2\), testigo de ambos signos por fondos; la cancelación entre todas las torres queda como frente |
-| `104_21_GLOBAL_COMPOUND_POISSON_TP_GATE.md` | **producto global + stop-gate PF/CM** | ley compound-Poisson exacta sobre todos los primos; menor PF2 racional \(-1/2916\); densidad inversa completada negativa antes de \(\log2\); sucesor Stein--Mecke identificado |
-| `104_22_CUBIC_MARGIN_REDUCTION.md` | **reducción nueva + gate cúbico vivo** | A0 retenido da \(|R_n|\le A_n/[4(1+T_n)]\); \(3\lambda_n-A_n\ge0\) implica la A1 original; cociclo \(H_u^3K_u^2\) y normalización directa con límite \(-(3\lambda-A)\) |
-| `104_23_NEAR_QUARTIC_REAL_MARGIN.md` | **reducción uniforme desde el piso de A0 + gate real vivo** | \(r_*=2002/501\) es suficiente usando solo \(T_n\ge1000\); potencias reales Euler--Gamma positivas; polo exacto \(-rce^{-q}{}_1F_1(1-r;2;cq)\) |
-| `104_24_DIRECT_CHANNELS_AND_STEIN_GATE.md` | **identidad global + stop-gate Stein positivo** | cuatro canales \(L_k^{(1)}\), base \(k+1\), recurrencia Stein--Mecke; densidad completada negativa antes de \(\log2\), sin refutar el signo global especial |
-| `104_25_FEJER_CARATHEODORY_GATE.md` | **positividad analítica + stop-gate de holomorfía** | Fejér convierte \(\Re\Phi\le1\) en el margen cúbico; holomorfía de los discos regulados \(\Longleftrightarrow\) RH; testigo exacto contra transferencia desde discos menores |
-| `104_26_QUARTIC_SQUARE_STOP_GATE.md` | **cuarta potencia + stop-gate de cuadrados** | cuarta diferencia local, menor PF2 exacto, bloque real de ambos signos y falsificador off-line; \(D_n^{[4]}\ge A_n/1001\) es solo el costo suficiente del cutoff fijado por el piso \(T\ge1000\), no una coercividad intrínsecamente necesaria |
-| `104_27_TAIL_SIGN_NO_GO.md` | **auditoría A0+ + stop-gate de signo** | dos discrepancias bajo el mismo envelope VK producen colas opuestas; versión suave compatible con monotonicidad final |
-| `104_28_FIXED_VECTOR_BRIDGE_AND_WHITENING_STOP_GATE.md` | **puente hard-edge exacto + stop-gate de whitening** | \(g_n=e^{-x/2}L_{n-1}^{(1)}=\sum_{k<n}e^{-x/2}L_k\); forma prima--polo sobre un solo rayo; el archimedeano Toeplitz tiene \(A_1<0\), por lo que no existe el cociente espectral propuesto |
-| `104_29_LOG2_COMPENSATED_SPLIT_GATE.md` | **corte exacto en el primer primo + stop-gate de masas** | generador compensado, bloques \(J_n^<+J_n^\ge\); la comparación de masas da un falso positivo y la desigualdad ponderada exterior recompone exactamente \(D_n^{[r]}\ge0\) |
-| `104_30_FLAG_HARD_EDGE_REFERENCE_AND_SCHUR_GATE.md` | **referencia positiva exacta + gate espectral** | la bandera diagonal satisface \(A_{\rm flag}[g_n]=A_n\); polarización prima--polo y blanqueo finito exactos; el diagnóstico espectral es favorable pero Schur/Gershgorin exige controlar \(\Delta^2(A-\lambda)\) |
-| `104_31_EPSILON_FLOW_OBSERVABILITY_STOP_GATE.md` | **flujo birth--death exacto + stop-gate de dominio** | \(c'=Qc\), \(Q=-M_x\); el test backward exige \(\varepsilon<1/2\) y el operador Euler separado exige \(\varepsilon>1/2\); \(A_{\rm flag}\) no es invariante ni mueve el umbral |
-| `104_32_HIGHER_PRIME_POWER_BUDGET.md` | **separación exacta + presupuesto explícito** | \(H_{\ge2}=-\sum_{j\ge2}\mu(j)(-\zeta'/\zeta)(js)\); polo \(j=2\) en \(z=-1\), cota \(\lvert P_{n-1}^{(\ge2)}(1)\rvert<14n+1\) y reducción cuártica exacta al canal primos--polo |
-| `104_33_FLAG_SYMBOL_BOUNDARY_RESIDUE_GATE.md` | **símbolo exacto + stop-gate frontera--residuos** | \(h(z)=-\zeta'/\zeta((1-z)^{-1})-1/(s-1)\); el momento de bandera es frontera más residuos off-line; un cuarteto conserva la frontera real y cambia el momento exponencialmente |
-| `104_34_FLAG_PREFIX_CURVATURE_AND_ADJACENT_SCHUR_GATE.md` | **curvatura refutada + gate de Schur adyacente** | el certificado outward prueba \(\nabla_c^2(\lambda-501A/2002)_{220}<0\); la compresión \(\mathrm{span}\,\{g_n,\phi_n\}\) da el criterio coercivo suficiente \(4H_nd_n\ge(H_n+d_n-H_{n+1})^2\), todavía abierto uniformemente |
-| `104_35_SIMPLE_PRIME_POLE_SELBERG_GATE.md` | **correlación \(\theta\) exacta + stop-gate Selberg simple** | \(B_n^{(p+\mathrm{pole})}=-n-\int(\theta(e^u)-e^u)e^{-u}L_{n-1}^{(2)}\); identidad colectiva solo primos/semiprimos; núcleo inverso no coercivo y testigo sobre soporte primo real |
-| `104_36_SIMPLE_PRIME_CHOLESKY_DOMAIN_GATE.md` | **Cholesky colectivo exacto + stop-gate de dominio** | \(B_{n,a}^{(p+\mathrm{pole})}=\langle V_{n,a},g_n\rangle\) y norma large-sieve exacta para \(a>2\); residuos de ceros impiden continuar la norma a \(a=1\), con divergencia \(\gg(a-1)^{-1}\) incluso por ceros críticos |
-| `104_37_TAPERED_SELBERG_HANKEL_GATE.md` | **taper Schur exacto + stop-gate Hankel de dos puntos** | el test óptimo es \(ae^{-au}[L_{n-1}^{(1)}+tL_n+t(t-1)]\); después de invertir Selberg, todo \(t\) tiene un menor de cola con término principal \(8^d-9^d<0\), también sobre logaritmos de primos reales |
-| `104_38_CANONICAL_SELBERG_SQUARE_CANCELLATION_GATE.md` | **completación Schur exacta + stop-gate del cuadrado canónico** | el término \(\mu*\mu\) de Selberg cancela idénticamente el cuadrado de la inversión; si se lo reserva para pagar el Schur, el kernel residual tiene diagonal \(-a^{2n+2}e^{-2aR}R^{2n}/[4d(n!)^2](1+o(1))<0\), incluso en un átomo \((\log p)\delta_{\log p}\) |
-| `104_39_ADJACENT_RICCATI_TRIANGLE_STOP_GATE.md` | **factorización triangular exacta + stop-gate de suficiencia** | el determinante adyacente equivale a desigualdades triangulares entre \(\sqrt{H_n},\sqrt{d_n},\sqrt{H_{n+1}}\); un cuarteto crítico mantiene el margen escalar y rompe el gate, por lo que éste es estrictamente más fuerte que el objetivo |
-| `104_40_CANONICAL_EULER_RESOLVENT_STOP_GATE.md` | **resolvente del rayo fijo + stop-gate de módulo** | la optimización sobre todo multiplicador positivo conserva primos--polo hasta el último paso, pero su costo óptimo es \(\int|\widehat g_n|^2|M|\), que diverge logarítmicamente por los ceros críticos; los ceros off-line aparecen antes como residuos de cruce |
-| `104_41_FULL_MANGOLDT_PHASE_HOMOTOPY_GATE.md` | **fase Mangoldt completa + stop-gate de homotopía** | para \(M_\Lambda=(s-1)^{-1}+\zeta'/\zeta\), polo y todos los \(p^k\) acoplados, la fase exacta prueba \(|\mathcal B_{n,a}|\le3n\) en \(a\ge4\); al bajar a \(a=1\), cada cero derecho cruza en \(a=2\Re\rho\) y aporta el residuo de `104_33`; un cuarteto racional conserva toda la fase crítica y cambia el momento exponencialmente |
-| `104_42_DEGREE_ADAPTED_NONCOMMUTATIVE_PRECONDITIONER_GATE.md` | **óptimo cuadrático no conmutativo + stop-gate de grado** | el ínfimo algebraico sobre todo \(R>0\) es \(|\langle v,g\rangle|\); la proyección a los primeros \(n\) Laguerre conserva la fase, pero el dato nuevo reaparece con factor \(\sqrt{n/2}>1\) |
-| `104_43_ZETA_SIZE_BIAS_DIVISOR_MARTINGALE_GATE.md` | **factorización size-biased exacta + stop-gate probabilístico** | \(N^*=DN'\), con \(D\) de ley \(\Lambda(d)d^{-s}\) y selector \(\Lambda(d)/\log N\); el comparador polar es un split Gamma uniforme, pero el orden cambia de signo, la comparación marginal es exactamente \(R\) y Efron--Stein separado pierde \(\varepsilon^{-2n+2}\) |
-| `104_44_DIVISOR_MARKOV_LAGUERRE_TRANSPORT_GATE.md` | **transporte \(\Lambda*1=\log\) + stop-gate de escala** | el operador divisor es Markov pero tiene brecha cero aun en media cero; la adición de Laguerre conserva la convolución completa y su continuo Gamma contrae por grado, pero cambiar al test no escalado cuesta exactamente \((2/\varepsilon-1)^{n-1}\) |
-| `104_45_CROSSED_DIVISOR_GAMMA_STEIN_GATE.md` | **Stein cruzado exacto + kernel firmado canónico** | cualquier coupling recompone el mismo kernel de colas \(K_s\), que cambia de signo alrededor de \(\log2\); sobre exponenciales sí vale \(R(q)<0\), pero no hay completa monotonía y sobre Laguerre la identidad vuelve exactamente a \(B_n\) |
-| `104_46_FIXED_LAGUERRE_MARKOV_EXTREMAL_GATE.md` | **stop-gate específico del vector fijo** | para \(s>1\) próximo a uno, el propio Laguerre centrado satisface \(Q_r(s)\to1\) en el selector divisor, mientras el comparador Gamma satisface \(Q_r^\Gamma(s)\to0\); una brecha de Markov no puede dar la coercividad buscada |
-| `104_47_SIZE_BIASED_HOMOTOPY_FLUX_GATE.md` | **flujo exacto de la homotopía** | \(a\partial_a\mathcal B_{n,a}=n(\mathcal B_{n+1,a}-\mathcal B_{n,a})\); su flujo integrado es equivalente sin resto al margen, y el cuarteto off-line aparece como un pulso exponencial |
-| `104_48_PRIME_TOWER_SIGNED_COERCIVITY_GATE.md` | **cierre por torre + gate de multiplicidad unitaria** | \(\Phi_n\) tiene una fórmula de Poisson y una cota unilateral en dirección inútil; constancia por torre + PNT admite un testigo en \(n=151\), por lo que solo sobrevive la renovación unitaria global \(\Lambda*{\bf1}=\log\) |
-| `104_49_UNIT_DIVISOR_RENEWAL_SIGNED_GATE.md` | **Palm unitario + stop-gate momento--cumulante** | el exponente marcado es uniforme dentro de cada torre y distingue a \(\omega_c\), pero selector y transporte cancelan exactamente el momento total grado por grado; su combinación Laguerre vuelve a \(B_n\) |
-| `104_50_SECOND_ORDER_UNIT_PALM_COVARIANCE_GATE.md` | **Palm unitario de segundo orden + gate de orientación** | la covarianza centrada cancela todas las torres distintas; el defecto no centrado las retiene, pero su cuadrado completado es varianza más el cuadrado del margen y pierde exactamente la orientación |
-| `104_51_MOBIUS_INVERTED_LCM_RESERVE_GATE.md` | **inversión doble del Gram `lcm` + gate de reserva** | \(K=Z^TWZ\) y \(M^TKM=W\) diagonalizan exactamente el kernel; la reserva infinita es indefinida en un vector de dos niveles, y su cutoff local tiene signos opuestos para el Laguerre real \(P_{150}\) en \(p=2,7\) |
-| `104_52_CONNECTED_TWO_TOWER_FLUX_GATE.md` | **Hessiano completado + cancelación conectada** | el margen exacto tiene Hessiano torre--polo--Gamma, pero todos los pares entre primos distintos y los cruces primo--polo se cancelan; el Hessiano y el cociclo Laguerre tienen ambos signos |
-| `104_53_CONNECTED_CUMULANT_CANCELLATION_THEOREM.md` | **clasificación Hopf de identidades aditivas** | todo observable polinómico aditivo en los momentos es combinación lineal de cumulantes; para la ley zeta cada cumulante queda dentro de una sola torre, de modo que una identidad multi-torre exacta no puede dejar una reserva desconectada |
-| `104_54_GIBBS_CHERNOFF_UNIT_PALM_GATE.md` | **gate no aditivo Gibbs--Chernoff** | para todo \(n\ge4\), \(s>1\) y \(t\ne0\), \(\mathbb E_s e^{tD_{n,s}}=\infty\); fibras primas y semiprimas producen colas opuestas de orden \((\log N)^n\), y el bound variacional es infinito |
-| `104_55_THREE_MARK_UNIT_PALM_ORIENTATION_GATE.md` | **Palm de tres marcas + gate cúbico** | tercer momento, determinante y tercera diferencia carecen de signo; la polarización orientada es exactamente varianza positiva por el margen desconocido, y la asimetría unitaria real ya cambia de signo entre \(N=6\) y \(N=18\) |
-| `104_56_DENSITY_RELAXED_LI_CRITERION.md` | **teorema de cuantificador relajado** | si RH falla, el margen cuártico falla sobre un conjunto sindético de densidad positiva; RH equivale al margen fuera de densidad logarítmica cero o en bloques buenos no acotados; no hay densidad universal desde los axiomas BL |
-| `104_56A_CUTOFF_FREEDOM_AUDIT.md` | **erratum de frente intrínseco** | A0 es cofinal en el cutoff; \(4\lambda_n>A_n\) permite un cutoff adaptado que cierra A1, mientras \(2002/501\) solo codifica el piso \(T\ge1000\) |
-| `104_56B_DENSITY_NOVELTY_AUDIT.md` | **gate bibliográfico específico** | modos dominantes y negatividad exponencial i.o. son conocidos; no se localizaron en las fuentes primarias revisadas los refuerzos de densidad positiva, sindeticidad, bloques ni el lift Fermi prima--Laguerre, sin reclamar prioridad exhaustiva |
-| `104_57_LOW_ZERO_BLOCK_BUDGET.md` | **mapa cuantitativo del bloque bajo** | la cola regularizada \(|\gamma|\ge\sqrt n\) reproduce \(A_n\) con error \(O(\sqrt n\log n)\); el bloque restante tiene \(\asymp\sqrt n\log n\) etiquetas y se fija el presupuesto exacto de todo sucesor |
-| `104_58_TRANSLATIONAL_DENSITY_ATTACK.md` | **ventanas de grado + no-go de homotopía** | toda ventana traslacional fija conserva una clase de fallos off-line de densidad positiva; la cota de fase en \(a\ge4\) no se transporta a \(a=1\) sin los residuos cruzados |
-| `104_59_PRELOG_MAJORISATION_GATE.md` | **auditoría Schur/Karamata** | la mayorización pre-log clásica ya estaba contenida en 104_21/43/44; el test Laguerre tiene curvatura de ambos signos y el selector divisor real invierte orientación |
-| `104_60_NONLINEAR_DEGREE_BARRIER_CRITERION.md` | **criterio de gran desviación en el grado** | RH equivale a que una barrera saturada de las excursiones \(4\lambda_n-A_n\le-b_n\), \(b_n=e^{o(n)}\), tenga media tendiendo a cero en algunos intervalos largos |
-| `104_61_SUBEXPONENTIAL_DENSITY_AND_NONLINEAR_PARTITION.md` | **criterio débil + particiones emparejadas** | basta \(\lambda_n\ge-1\) en bloques no acotados; la partición Fermi acotada detecta exactamente densidad logarítmica positiva y tiene representación prima--Laguerre completa; la partición exponencial es un criterio auxiliar coeficiente a coeficiente |
-| `104_62_UNITARY_FERMI_MICROFREQUENCY_GATE.md` | **lift unitario + stop-gate de microfrecuencia** | Fourier conserva todos los canales como fases de módulo uno, pero una excursión de profundidad \(Y\) vive en \(s=O(Y^{-1})\); el escalado diagonal solo controla el producto geométrico, no la media Fermi |
-| `104_63_CROSS_DEGREE_H2_ENERGY_GATE.md` | **Parseval/CD entre grados + no-go cuantitativo** | la energía diádica detecta exactamente el primer polo interior; el kernel CD es positivo, pero polo², primos² y cruce son de orden \(\varepsilon^{-4N}\) y no pueden separarse |
-| `104_64_LOG_ABEL_FERMI_BOUNDARY_GATE.md` | **criterio Abel logarítmico + gate de capa** | la media Fermi de Cesàro y la de Abel son equivalentes y basta una subsucesión fija; el falsificador exige microfrecuencias hasta \(s=\exp(-c/h)\) |
-| `104_65_LOCAL_FILTER_LONG_BLOCK_GATE.md` | **clasificación de filtros locales** | toda diferencia, promedio móvil o filtro finito conserva excursiones negativas sindéticas salvo aniquilación exacta de los modos dominantes; el cuarteto exhibe esa pérdida de información |
-| `104_66_DIAGONAL_ABEL_REGULATOR_GATE.md` | **diagonal Euler exacta + stop-gate de separación** | \(\varepsilon(h)=e^{-1/(100h)}\) aproxima uniformemente los grados \(n\le1/h\) dentro de una serie Euler convergente; polo y primos requieren cancelación relativa superexponencial |
-| `104_67_TWO_SIDED_EXCURSION_GATE.md` | **excursiones bilaterales** | bajo no-RH existen conjuntos sindéticos de densidad positiva con \(\lambda_n\ge cR^n\) y con \(\lambda_n\le-cR^n\); barreras subexponenciales superiores, inferiores o bilaterales en bloques no acotados equivalen a RH |
-| `104_68_DETERMINISTIC_BLOCK_POLYMER_CRITERION.md` | **ventanas deterministas + partición finita** | RH equivale a que la suma Fermi sobre \([L^2,L^2+L-1]\) tienda a cero, o a que su producto tienda a uno; \(\varepsilon_L=e^{-(L^2+L-1)/100}\) da una única sucesión Euler convergente, pero el gas refactoriza y no crea cancelación nueva |
-| `104_69_FINITE_LOGX_DIAGONAL_FERMI_CRITERION.md` | **criterio finito en \(\log X\) + diagonal Euler** | RH equivale a una sola media logarítmica Fermi; \(\varepsilon_X=e^{-X/100}\) sustituye simultáneamente los primeros \(X\) grados por una fórmula prima--Laguerre absolutamente convergente, con error exponencial |
-| `104_69B_COUNTEREXAMPLE_ROUTE_NOVELTY_AUDIT.md` | **gate bibliográfico Fermi/bloques** | separa el modo exterior conocido y la sumabilidad log-Cesàro/Abel clásica de la sindeticidad/densidad potencialmente sustantiva; Fermi, producto, ventanas cuadráticas y diagonal Euler se registran como corolarios o repackagings no localizados exactamente, sin reclamar prioridad |
-| `104_70_VARIABLE_TEMPERATURE_FERMI_GATE.md` | **temperatura variable + no-go polar** | temperaturas subexponenciales conservan el detector de todos los modos exteriores, pero toda escala que amortigua el polo con \(\varepsilon_n\to0\) pierde necesariamente esa sensibilidad; el condicionamiento relativo no mejora |
-| `104_71_ENTROPIC_BLOCK_VARIATIONAL_ATTACK.md` | **dualidad Bernoulli--entropía + gate de interacción** | la partición de bloques es una esperanza Bernoulli con factor telescópico; Gibbs la convierte en una cota uniforme sobre \(G_{L,q}\), admisible con slack \(\exp(o(L^2))\), pero la multiinformación elimina toda correlación y el optimizador refactoriza |
-| `104_72_BOUNDED_PRESSURE_RATIO_ATTACK.md` | **razón de presiones saturada + gate de transición** | una razón de dos particiones limita cada sitio a \([1,e^\tau]\) y conserva solo la densidad de excursiones; el lift diagonal es exacto, pero decidir la transición \(z\asymp1\) exige la diferencia prima--polo con error aditivo \(O(1)\) |
-| `104_73_BERNSTEIN_PRESSURE_WIDTH_GATE.md` | **Bernstein exacto + gate de ancho variable** | la presión es una mezcla positiva de probabilidades Poisson; no admite mayorante afín global no trivial y toda anchura que conserva todos los modos exteriores mantiene el condicionamiento cuadrático prima--polo |
-| `104_74_HADAMARD_JENSEN_PRESSURE_GATE.md` | **semigrupo Hadamard + Jensen + residuos interiores** | el exponencial de Hadamard tiene radio positivo exactamente bajo RH; Jensen representa la presión por cruces de anillos, mientras un contorno seguro deja toda tasa exponencial en una suma finita de polos interiores |
-| `104_75_POISSON_LOGX_HARD_TRANSITION_GATE.md` | **transición dura + gate profundo de densidad** | RH equivale a densidad logarítmica nula de sobrepasos prima--polo \(\ge e^{\sqrt X}\); poissonización localiza los grados y da una identidad de Bessel para el primer momento, pero el cuarteto prueba que ese momento no controla la cola no lineal |
-| `104_76_DEEP_TAIL_HEIGHT_LOCALIZATION.md` | **localización de altura + gate de momentos** | los ceros con \(\gamma>X^{1/4}\) aportan \(O(X\log X\,e^{\sqrt X/2})\); bajo RH parcial hasta \(X^{1/4}\) el observable profundo es idénticamente cero, y todo obstáculo queda en el bloque bajo |
-| `104_77_CARTAN_TURAN_DEEP_TAIL_GATE.md` | **contorno seguro + gate Cartan--Turán** | el error exterior es \(O(n^5\log^2n)\) y toda cola profunda reside en una suma finita de polos interiores; Jensen, Cartan y Turán no la anulan, y un cuarteto con continuación positiva en el rayo real conserva densidad profunda \(1/8\) |
-| `104_78_UNIT_RENEWAL_EULER_DEEP_TAIL_FALSIFIER.md` | **falsificador Euler unitario reticular** | renovación, torres unitarias, positividad, ecuación funcional y una ley prima de grado exponencialmente precisa aún permiten ceros off-line y densidad profunda \(1/4\); el modelo no satisface el PNT continuo ni contiene el Gamma de Riemann |
-| `104_79_ZETA_LAW_DEEP_TRUNCATION_GATE.md` | **ley zeta exacta + gate de truncación** | \(Q-p\) es la esperanza de un defecto prima--polo con \(\Lambda\) real; sus excesos positivo y negativo sobre \(e^{\sqrt X}\) son al menos \(e^{X^2/500}\) en la diagonal, por lo que concentración o truncación separada no transporta la media |
-| `104_80_MAXIMAL_SIGNED_LAMBDA_IDENTITY_GATE.md` | **identidad firmada máxima + polo no removible** | Möbius--Laguerre recompone exactamente \(-\partial_z\log\{(s-1)\zeta(s)\}\); cada cero \(\Re\rho>1/2+\varepsilon\) deja un polo interior de residuo \(-m_\rho\) y coeficientes \(m_\rho z_\rho^{-n}\), de modo que ningún reagrupamiento exacto elimina la obstrucción |
+| `104_00_BIBLIOGRAPHY_GATE.md` | gate (blocking) | duplicates / does-not-duplicate verdict by mechanism, with explicit conditional/unconditional label |
+| `104_01_THETA_FAMILY.md` | normalization | family \(C_n^\theta\), reserve \(q_{n,\theta}\), effective \(T_n(\theta)\), signed transport \(\Delta_{n,\theta}\) |
+| `104_02_LAGARIAS_TRANSLATION.md` | **binding sign erratum** | corrected coordinate \(-\lambda_n(\sqrt n)+\widetilde\varepsilon_n\); the old Theorem A and the finite corollary based on \(C_*\) are withdrawn |
+| `104_03_CONTOUR_RESIDUE_AUDIT.md` | audit | contour of \(R(t)\), trivial poles, Cayley identity, stationary map |
+| `104_10_M1_COLLECTIVE_KERNEL.md` | audited mechanism | collective identity and local-PSD no-go |
+| `104_11_M1_GLOBAL_MAX_STOP_GATE.md` | **exact stop-gate** | the compensator is the `max` energy; cancellation of Hessians and collapse to the original linear functional |
+| `104_12_M5_MOBIUS_DIVISOR_AUDIT.md` | **exact identity + Gram stop-gate** | Möbius--divisor convolution by degree; comparison with E70.11--12 and 103_71; the Möbius inverse cannot be a positive adjoint |
+| `104_13_M5_SELBERG_RICCATI_GATE.md` | **exact recurrence + scale stop-gate** | Selberg--Riccati recurrence by degree; the regulated collision costs \(\varepsilon^{-n-1}\) and the \(O(x)\) summation loses \(\exp((1+o(1))n\log n)\) |
+| `104_14_M3_NONLOCAL_STOP_GATE.md` | **completed form + bulk stop-gate** | A1 as Weil autocorrelation minus reserve and tail; an off-line quartet and a critical divisor with the same heights give opposite signs |
+| `104_15_EULER_GAMMA_COMPLEX_GATE.md` | **minimal construction + cohomological stop-gate** | positive Koszul complex on the posets \(\{1,p\}\), \(\{1,p,q,pq\}\); cancels mixed quotients, but makes \(M\delta Z\) exact |
+| `104_16_JORDAN_COCYCLE_ATTACK.md` | **positive hierarchy + Cayley/Schur stop-gate** | cocycle \(\zeta(s-u)/\zeta(s)\), \(\mu*\log^k\ge0\); the polar pairing loses sign, the budget is \(-\Delta D_n/2\), and the completed contractivity is equivalent to RH |
+| `104_17_INCOMPLETE_LI_ABEL_STOP_GATE.md` | **Abel theorem + Tauberian stop-gate** | exact formulas for the incomplete quartet and its averages; radial Abel positivity compatible with exponentially negative coefficients |
+| `104_18_CORRELATED_SHIFT_STOP_GATE.md` | **finite identity + order stop-gate** | exact recurrence for \(u=c\varepsilon\), signed renewal form; the limit returns to \(C_n\), the real order does not control coefficients, and finite constant weights do not identically annihilate the explicit channel |
+| `104_19_THREE_CHANNEL_BRANCH_FREE_GATE.md` | **exact expansion + polar stop-gate** | cocycle \(Y(s-u)/Y(s)\) in three Jordan--Beta channels; signed polar measure, divergence upon separating, and exact limit \(-\Delta D_n\) |
+| `104_20_LOCAL_TOWER_SQUARE_AND_GLOBAL_GATE.md` | **local factorization + live global gate** | exact second difference of \(b_u(p^k)\), operational square \(\mathsf C_p^2\), witness of both signs by backgrounds; the cancellation across all towers remains as the front |
+| `104_21_GLOBAL_COMPOUND_POISSON_TP_GATE.md` | **global product + PF/CM stop-gate** | exact compound-Poisson law over all primes; rational PF2 minor \(-1/2916\); completed inverse density negative before \(\log2\); Stein--Mecke identified as successor |
+| `104_22_CUBIC_MARGIN_REDUCTION.md` | **new reduction + live cubic gate** | retained A0 gives \(|R_n|\le A_n/[4(1+T_n)]\); \(3\lambda_n-A_n\ge0\) implies the original A1; cocycle \(H_u^3K_u^2\) and direct normalization with limit \(-(3\lambda-A)\) |
+| `104_23_NEAR_QUARTIC_REAL_MARGIN.md` | **uniform reduction from the A0 floor + live real gate** | \(r_*=2002/501\) is sufficient using only \(T_n\ge1000\); real Euler--Gamma powers positive; exact pole \(-rce^{-q}{}_1F_1(1-r;2;cq)\) |
+| `104_24_DIRECT_CHANNELS_AND_STEIN_GATE.md` | **global identity + positive Stein stop-gate** | four channels \(L_k^{(1)}\), base \(k+1\), Stein--Mecke recurrence; completed density negative before \(\log2\), without refuting the special global sign |
+| `104_25_FEJER_CARATHEODORY_GATE.md` | **analytic positivity + holomorphy stop-gate** | Fejér turns \(\Re\Phi\le1\) into the cubic margin; holomorphy of the regulated disks \(\Longleftrightarrow\) RH; exact witness against transfer from smaller disks |
+| `104_26_QUARTIC_SQUARE_STOP_GATE.md` | **fourth power + square stop-gate** | local fourth difference, exact PF2 minor, real block of both signs and off-line falsifier; \(D_n^{[4]}\ge A_n/1001\) is only the sufficient cost of the cutoff fixed by the floor \(T\ge1000\), not an intrinsically necessary coercivity |
+| `104_27_TAIL_SIGN_NO_GO.md` | **A0+ audit + sign stop-gate** | two discrepancies under the same VK envelope produce opposite tails; smooth version compatible with eventual monotonicity |
+| `104_28_FIXED_VECTOR_BRIDGE_AND_WHITENING_STOP_GATE.md` | **exact hard-edge bridge + whitening stop-gate** | \(g_n=e^{-x/2}L_{n-1}^{(1)}=\sum_{k<n}e^{-x/2}L_k\); prime--pole form on a single ray; the archimedean Toeplitz has \(A_1<0\), so the proposed spectral quotient does not exist |
+| `104_29_LOG2_COMPENSATED_SPLIT_GATE.md` | **exact cut at the first prime + mass stop-gate** | compensated generator, blocks \(J_n^<+J_n^\ge\); the mass comparison gives a false positive and the outer weighted inequality recomposes exactly \(D_n^{[r]}\ge0\) |
+| `104_30_FLAG_HARD_EDGE_REFERENCE_AND_SCHUR_GATE.md` | **exact positive reference + spectral gate** | the diagonal flag satisfies \(A_{\rm flag}[g_n]=A_n\); exact prime--pole polarization and finite whitening; the spectral diagnostic is favorable but Schur/Gershgorin requires controlling \(\Delta^2(A-\lambda)\) |
+| `104_31_EPSILON_FLOW_OBSERVABILITY_STOP_GATE.md` | **exact birth--death flow + domain stop-gate** | \(c'=Qc\), \(Q=-M_x\); the backward test requires \(\varepsilon<1/2\) and the separated Euler operator requires \(\varepsilon>1/2\); \(A_{\rm flag}\) is neither invariant nor does it move the threshold |
+| `104_32_HIGHER_PRIME_POWER_BUDGET.md` | **exact separation + explicit budget** | \(H_{\ge2}=-\sum_{j\ge2}\mu(j)(-\zeta'/\zeta)(js)\); pole \(j=2\) at \(z=-1\), bound \(\lvert P_{n-1}^{(\ge2)}(1)\rvert<14n+1\) and exact quartic reduction to the prime--pole channel |
+| `104_33_FLAG_SYMBOL_BOUNDARY_RESIDUE_GATE.md` | **exact symbol + boundary--residue stop-gate** | \(h(z)=-\zeta'/\zeta((1-z)^{-1})-1/(s-1)\); the flag moment is boundary plus off-line residues; a quartet preserves the real boundary and changes the moment exponentially |
+| `104_34_FLAG_PREFIX_CURVATURE_AND_ADJACENT_SCHUR_GATE.md` | **curvature refuted + adjacent Schur gate** | the outward certificate proves \(\nabla_c^2(\lambda-501A/2002)_{220}<0\); the compression \(\mathrm{span}\,\{g_n,\phi_n\}\) gives the sufficient coercive criterion \(4H_nd_n\ge(H_n+d_n-H_{n+1})^2\), still open uniformly |
+| `104_35_SIMPLE_PRIME_POLE_SELBERG_GATE.md` | **exact \(\theta\) correlation + simple Selberg stop-gate** | \(B_n^{(p+\mathrm{pole})}=-n-\int(\theta(e^u)-e^u)e^{-u}L_{n-1}^{(2)}\); collective identity for primes/semiprimes only; non-coercive inverse kernel and witness on real prime support |
+| `104_36_SIMPLE_PRIME_CHOLESKY_DOMAIN_GATE.md` | **exact collective Cholesky + domain stop-gate** | \(B_{n,a}^{(p+\mathrm{pole})}=\langle V_{n,a},g_n\rangle\) and exact large-sieve norm for \(a>2\); zero residues prevent continuing the norm to \(a=1\), with divergence \(\gg(a-1)^{-1}\) even from critical zeros |
+| `104_37_TAPERED_SELBERG_HANKEL_GATE.md` | **exact Schur taper + two-point Hankel stop-gate** | the optimal test is \(ae^{-au}[L_{n-1}^{(1)}+tL_n+t(t-1)]\); after inverting Selberg, every \(t\) has a tail minor with leading term \(8^d-9^d<0\), also over real prime logarithms |
+| `104_38_CANONICAL_SELBERG_SQUARE_CANCELLATION_GATE.md` | **exact Schur completion + canonical square stop-gate** | the Selberg \(\mu*\mu\) term identically cancels the square of the inversion; if reserved to pay for Schur, the residual kernel has diagonal \(-a^{2n+2}e^{-2aR}R^{2n}/[4d(n!)^2](1+o(1))<0\), even on a single atom \((\log p)\delta_{\log p}\) |
+| `104_39_ADJACENT_RICCATI_TRIANGLE_STOP_GATE.md` | **exact triangular factorization + sufficiency stop-gate** | the adjacent determinant is equivalent to triangular inequalities among \(\sqrt{H_n},\sqrt{d_n},\sqrt{H_{n+1}}\); a critical quartet keeps the scalar margin and breaks the gate, so the gate is strictly stronger than the objective |
+| `104_40_CANONICAL_EULER_RESOLVENT_STOP_GATE.md` | **fixed-ray resolvent + modulus stop-gate** | optimization over every positive multiplier preserves prime--pole up to the last step, but its optimal cost is \(\int|\widehat g_n|^2|M|\), which diverges logarithmically from critical zeros; off-line zeros appear earlier as crossing residues |
+| `104_41_FULL_MANGOLDT_PHASE_HOMOTOPY_GATE.md` | **complete Mangoldt phase + homotopy stop-gate** | for \(M_\Lambda=(s-1)^{-1}+\zeta'/\zeta\), pole and all \(p^k\) coupled, the exact phase proves \(|\mathcal B_{n,a}|\le3n\) for \(a\ge4\); lowering to \(a=1\), each right zero crosses at \(a=2\Re\rho\) and contributes the residue from `104_33`; a rational quartet preserves the whole critical phase and changes the moment exponentially |
+| `104_42_DEGREE_ADAPTED_NONCOMMUTATIVE_PRECONDITIONER_GATE.md` | **non-commutative quadratic optimum + degree stop-gate** | the algebraic infimum over every positive preconditioner is exactly \(|\langle v,g\rangle|\); the projection onto the first \(n\) Laguerre terms preserves phase, but the new datum reappears with factor \(\sqrt{n/2}>1\) |
+| `104_43_ZETA_SIZE_BIAS_DIVISOR_MARTINGALE_GATE.md` | **exact size-biased factorization + probabilistic stop-gate** | \(N^*=DN'\), with \(D\) of law \(\Lambda(d)d^{-s}\) and selector \(\Lambda(d)/\log N\); the polar comparator is a uniform split Gamma, but the order changes sign, the marginal comparison is exactly \(R\), and separated Efron--Stein loses \(\varepsilon^{-2n+2}\) |
+| `104_44_DIVISOR_MARKOV_LAGUERRE_TRANSPORT_GATE.md` | **transport \(\Lambda*1=\log\) + scale stop-gate** | the divisor operator is Markov but has zero gap even at mean zero; Laguerre addition preserves the full convolution and its Gamma continuum contracts by degree, but switching to the unscaled test costs exactly \((2/\varepsilon-1)^{n-1}\) |
+| `104_45_CROSSED_DIVISOR_GAMMA_STEIN_GATE.md` | **exact crossed Stein + canonical signed kernel** | any coupling recomposes the same tail kernel \(K_s\), which changes sign around \(\log2\); over exponentials \(R(q)<0\) does hold, but there is no complete monotonicity, and over Laguerre the identity returns exactly to \(B_n\) |
+| `104_46_FIXED_LAGUERRE_MARKOV_EXTREMAL_GATE.md` | **specific fixed-vector stop-gate** | for \(s>1\) close to one, the centered arithmetic Laguerre itself satisfies \(Q_r(s)\to1\) at the divisor selector, while the Gamma comparator satisfies \(Q_r^\Gamma(s)\to0\); a Markov gap cannot give the sought coercivity |
+| `104_47_SIZE_BIASED_HOMOTOPY_FLUX_GATE.md` | **exact homotopy flow** | \(a\partial_a\mathcal B_{n,a}=n(\mathcal B_{n+1,a}-\mathcal B_{n,a})\); its integrated flow is equivalent without remainder to the margin, and the off-line quartet appears as an exponential pulse |
+| `104_48_PRIME_TOWER_SIGNED_COERCIVITY_GATE.md` | **closure by tower + unit multiplicity gate** | \(\Phi_n\) has a Poisson formula and a one-sided bound in a useless direction; tower constancy + PNT admits a witness at \(n=151\), so only the global unit renewal \(\Lambda*{\bf1}=\log\) survives |
+| `104_49_UNIT_DIVISOR_RENEWAL_SIGNED_GATE.md` | **unit Palm + moment--cumulant stop-gate** | the marked exponent is uniform within each tower and distinguishes \(\omega_c\), but selector and transport exactly cancel the total moment degree by degree; its Laguerre combination returns to \(B_n\) |
+| `104_50_SECOND_ORDER_UNIT_PALM_COVARIANCE_GATE.md` | **second-order unit Palm + orientation gate** | the centered covariance cancels all distinct towers; the uncentered defect retains them, but its completed square is variance plus the square of the margin and loses exactly the orientation |
+| `104_51_MOBIUS_INVERTED_LCM_RESERVE_GATE.md` | **double Möbius inversion of the `lcm` Gram + reserve gate** | \(K=Z^TWZ\) and \(M^TKM=W\) exactly diagonalize the kernel; the infinite reserve is indefinite on a two-level vector, and its local cutoff has opposite signs for the real Laguerre \(P_{150}\) at \(p=2,7\) |
+| `104_52_CONNECTED_TWO_TOWER_FLUX_GATE.md` | **completed Hessian + connected cancellation** | the exact margin has a tower--pole--Gamma Hessian, but all pairs between distinct primes and the prime--pole crossings cancel; the Hessian and the Laguerre cocycle have both signs |
+| `104_53_CONNECTED_CUMULANT_CANCELLATION_THEOREM.md` | **Hopf classification of additive identities** | every additive polynomial observable in the moments is a linear combination of cumulants; for the zeta law each cumulant stays within a single tower, so no exact multi-tower identity can leave a disconnected reserve |
+| `104_54_GIBBS_CHERNOFF_UNIT_PALM_GATE.md` | **non-additive Gibbs--Chernoff gate** | for all \(n\ge4\), \(s>1\) and \(t\ne0\), \(\mathbb E_s e^{tD_{n,s}}=\infty\); prime and semiprime fibers produce opposite tails of order \((\log N)^n\), and the variational bound is infinite |
+| `104_55_THREE_MARK_UNIT_PALM_ORIENTATION_GATE.md` | **three-mark Palm + cubic gate** | third moment, determinant and third difference lack a sign; the oriented polarization is exactly positive variance times the unknown margin, and the real unit asymmetry already changes sign between \(N=6\) and \(N=18\) |
+| `104_56_DENSITY_RELAXED_LI_CRITERION.md` | **relaxed-quantifier theorem** | if RH fails, the quartic margin fails on a syndetic set of positive density; RH is equivalent to the margin outside logarithmic density zero or on unbounded good blocks; there is no universal density from the BL axioms |
+| `104_56A_CUTOFF_FREEDOM_AUDIT.md` | **intrinsic-front erratum** | A0 is cofinal in the cutoff; \(4\lambda_n>A_n\) allows an adapted cutoff closing A1, while \(2002/501\) only encodes the floor \(T\ge1000\) |
+| `104_56B_DENSITY_NOVELTY_AUDIT.md` | **specific bibliographic gate** | dominant modes and exponential negativity i.o. are known; the positive-density/syndeticity/blocks reinforcements and the prime--Laguerre Fermi lift were not located in the primary sources reviewed, without claiming exhaustive priority |
+| `104_57_LOW_ZERO_BLOCK_BUDGET.md` | **quantitative map of the low block** | the regularized tail \(|\gamma|\ge\sqrt n\) reproduces \(A_n\) with error \(O(\sqrt n\log n)\); the remaining block has \(\asymp\sqrt n\log n\) labels and the exact budget of every successor is fixed |
+| `104_58_TRANSLATIONAL_DENSITY_ATTACK.md` | **degree windows + homotopy no-go** | every fixed translational window preserves a class of off-line failures of positive density; the phase bound at \(a\ge4\) does not transport to \(a=1\) without the crossed residues |
+| `104_59_PRELOG_MAJORISATION_GATE.md` | **Schur/Karamata audit** | the classical pre-log majorization was already contained in 104_21/43/44; the Laguerre test has curvature of both signs and the real divisor selector reverses orientation |
+| `104_60_NONLINEAR_DEGREE_BARRIER_CRITERION.md` | **large-deviation criterion in the degree** | RH is equivalent to a saturated barrier of the excursions \(4\lambda_n-A_n\le-b_n\), \(b_n=e^{o(n)}\), having mean tending to zero on some long intervals |
+| `104_61_SUBEXPONENTIAL_DENSITY_AND_NONLINEAR_PARTITION.md` | **weak criterion + paired partitions** | \(\lambda_n\ge-1\) on unbounded blocks suffices; the bounded Fermi partition detects exactly positive logarithmic density and has a complete prime--Laguerre representation; the exponential partition is a coefficient-by-coefficient auxiliary criterion |
+| `104_62_UNITARY_FERMI_MICROFREQUENCY_GATE.md` | **unitary lift + microfrequency stop-gate** | Fourier preserves every channel as unit-modulus phases, but an excursion of depth \(Y\) lives at \(s=O(Y^{-1})\); diagonal scaling only controls the geometric product, not the Fermi mean |
+| `104_63_CROSS_DEGREE_H2_ENERGY_GATE.md` | **cross-degree Parseval/CD + quantitative no-go** | the dyadic energy detects exactly the first interior pole; the CD kernel is positive, but pole², primes², and cross terms are of order \(\varepsilon^{-4N}\) and cannot be separated |
+| `104_64_LOG_ABEL_FERMI_BOUNDARY_GATE.md` | **logarithmic Abel criterion + layer gate** | the Cesàro and Abel Fermi averages are equivalent and a fixed subsequence suffices; the falsifier requires microfrequencies up to \(s=\exp(-c/h)\) |
+| `104_65_LOCAL_FILTER_LONG_BLOCK_GATE.md` | **classification of local filters** | every difference, moving average, or finite filter preserves syndetic negative excursions unless it also annihilates the dominant modes; the quartet exhibits that loss of information |
+| `104_66_DIAGONAL_ABEL_REGULATOR_GATE.md` | **exact Euler diagonal + separation stop-gate** | \(\varepsilon(h)=e^{-1/(100h)}\) uniformly approximates the degrees \(n\le1/h\) within a convergent Euler series; separating pole and primes requires superexponential relative cancellation |
+| `104_67_TWO_SIDED_EXCURSION_GATE.md` | **two-sided excursions** | under non-RH there exist syndetic sets of positive density with \(\lambda_n\ge cR^n\) and with \(\lambda_n\le-cR^n\); subexponential upper, lower, or two-sided barriers on unbounded blocks are equivalent to RH |
+| `104_68_DETERMINISTIC_BLOCK_POLYMER_CRITERION.md` | **deterministic windows + finite partition** | RH is equivalent to the Fermi sum over \([L^2,L^2+L-1]\) tending to zero, or its product tending to one; \(\varepsilon_L=e^{-(L^2+L-1)/100}\) gives a single convergent Euler sequence, but the gas refactors and creates no new cancellation |
+| `104_69_FINITE_LOGX_DIAGONAL_FERMI_CRITERION.md` | **finite criterion in \(\log X\) + Euler diagonal** | RH is equivalent to a single logarithmic Fermi mean; \(\varepsilon_X=e^{-X/100}\) simultaneously replaces the first \(X\) degrees by an absolutely convergent prime--Laguerre formula, with exponential error |
+| `104_69B_COUNTEREXAMPLE_ROUTE_NOVELTY_AUDIT.md` | **Fermi/blocks bibliographic gate** | separates the known outer mode and classical log-Cesàro/Abel summability from the potentially substantive syndeticity/density; Fermi, product, quadratic windows, and Euler diagonal are recorded as corollaries or repackagings not located exactly, without claiming priority |
+| `104_70_VARIABLE_TEMPERATURE_FERMI_GATE.md` | **variable temperature + polar no-go** | subexponential temperatures preserve the detector of every outer mode, but any scale that damps the pole with \(\varepsilon_n\to0\) necessarily loses that sensitivity; relative conditioning does not improve |
+| `104_71_ENTROPIC_BLOCK_VARIATIONAL_ATTACK.md` | **Bernoulli--entropy duality + interaction gate** | the block partition is a Bernoulli expectation with a telescoping factor; Gibbs converts it into a uniform bound over \(G_{L,q}\), admissible with slack \(\exp(o(L^2))\), but multi-information eliminates all correlation and the optimizer refactors |
+| `104_72_BOUNDED_PRESSURE_RATIO_ATTACK.md` | **saturated pressure ratio + transition gate** | a ratio of two partitions limits each site to \([1,e^\tau]\) and preserves only the excursion density; the diagonal lift is exact, but deciding the transition \(z\asymp1\) requires the prime--pole difference with additive error \(O(1)\) |
+| `104_73_BERNSTEIN_PRESSURE_WIDTH_GATE.md` | **exact Bernstein + variable-width gate** | the pressure is a positive mixture of Poisson probabilities; it admits no non-trivial global affine majorant, and any width that preserves every outer mode keeps the quadratic prime--pole conditioning |
+| `104_74_HADAMARD_JENSEN_PRESSURE_GATE.md` | **Hadamard semigroup + Jensen + interior residues** | the Hadamard exponential has positive radius exactly under RH; Jensen represents the pressure by ring crossings, while a safe contour leaves every exponential rate in a finite sum of interior poles |
+| `104_75_POISSON_LOGX_HARD_TRANSITION_GATE.md` | **hard transition + deep density gate** | RH is equivalent to zero logarithmic density of prime--pole overshoots \(\ge e^{\sqrt X}\); Poissonization localizes the degrees and gives a Bessel identity for the first moment, but the quartet proves that moment does not control the nonlinear tail |
+| `104_76_DEEP_TAIL_HEIGHT_LOCALIZATION.md` | **height localization + moment gate** | zeros with \(\gamma>X^{1/4}\) contribute \(O(X\log X\,e^{\sqrt X/2})\); under partial RH up to \(X^{1/4}\) the deep observable is identically zero, and every obstacle remains in the low block |
+| `104_77_CARTAN_TURAN_DEEP_TAIL_GATE.md` | **safe contour + Cartan--Turán gate** | the outer error is \(O(n^5\log^2n)\) and every deep tail resides in a finite sum of interior poles; Jensen, Cartan, and Turán do not annihilate it, and a quartet with positive continuation on the real ray preserves deep density \(1/8\) |
+| `104_78_UNIT_RENEWAL_EULER_DEEP_TAIL_FALSIFIER.md` | **lattice unit Euler falsifier** | renewal, unit towers, positivity, functional equation, and an exponentially precise prime degree law still allow off-line zeros and deep density \(1/4\); the model does not satisfy the continuous PNT nor contain Riemann's Gamma |
+| `104_79_ZETA_LAW_DEEP_TRUNCATION_GATE.md` | **exact zeta law + truncation gate** | \(Q-p\) is the expectation of a prime--pole defect with real \(\Lambda\); its positive and negative excesses above \(e^{\sqrt X}\) are at least \(e^{X^2/500}\) on the diagonal, so separate concentration or truncation does not transport the mean |
+| `104_80_MAXIMAL_SIGNED_LAMBDA_IDENTITY_GATE.md` | **maximal signed identity + non-removable pole** | Möbius--Laguerre exactly recomposes \(-\partial_z\log\{(s-1)\zeta(s)\}\); each zero \(\Re\rho>1/2+\varepsilon\) leaves an interior pole of residue \(-m_\rho\) and coefficients \(m_\rho z_\rho^{-n}\), so no exact regrouping removes the obstruction |
 
-| 104_81_ON_OFF_LINE_DEEP_OBSERVABLE_CONTROLS.md | **controles on/off-line del observable profundo** | un cuarteto crítico da densidad \(0\) exactamente y uno exterior da \(1/8\), incluso con el regulador diagonal; dos modelos Euler positivos dan respectivamente \(0\) y \(1/4\), validando el detector pero sin probar el límite para los \(\Lambda(m)\) ordinarios |
+| 104_81_ON_OFF_LINE_DEEP_OBSERVABLE_CONTROLS.md | **validated on/off-line controls of the deep observable** | a critical quartet gives density \(0\) exactly and an outer one gives \(1/8\), even with the diagonal regulator; two positive Euler models give \(0\) and \(1/4\) respectively, validating the detector but without proving the limit for the ordinary \(\Lambda(m)\) |
 
-## Reglas de proceso
+## Process rules
 
-1. Pre-registro: enunciado + **enumeración explícita de axiomas e inputs** + falsificador
-   off-line construido para satisfacer exactamente esos axiomas.
-2. Nunca valores absolutos sobre el kernel. Polo + Γ + primos + conjugación + borde acoplados
-   hasta después de estimar.
-3. \(q_n\) exacto, nunca la forma asintótica \(\frac38 n\log n\).
-4. Erratum vinculante: \(\lambda_n^{\rm prime}=-n+\int(\psi-y)f'=\int(\psi-y+1)f'\).
-   El borde \(-n\) no se descarta.
-5. Etiquetado condicional/incondicional explícito en todo enunciado importado.
-6. Aritmética racional con intervalos outward en todo certificado.
-7. Ledger adversarial al cierre, estilo `103_13`.
+1. Pre-registration: statement + **explicit enumeration of axioms and inputs** + off-line
+   falsifier constructed to satisfy exactly those axioms.
+2. Never absolute values on the kernel. Pole + Γ + primes + conjugation + boundary coupled
+   until after estimating.
+3. Exact \(q_n\), never the asymptotic form \(\frac38 n\log n\).
+4. Binding erratum: \(\lambda_n^{\rm prime}=-n+\int(\psi-y)f'=\int(\psi-y+1)f'\).
+   The boundary term \(-n\) is not discarded.
+5. Explicit conditional/unconditional labeling on every imported statement.
+6. Rational arithmetic with outward intervals in every certificate.
+7. Adversarial ledger at closure, `103_13` style.
 
 ## Tools
 
-`cd tools && python3 <file>` — Python puro + numpy, sin dependencias externas, igual que
-phase-103. `m1_global_hessian_check.py` y `jordan_cocycle_sign_gate.py` usan
-solamente aritmética racional `Fraction` para sus decisiones de signo;
-`incomplete_abel_stop_gate_check.py` hace lo mismo para el testigo de `104_17`.
-`three_channel_cocycle_check.py` verifica con `Fraction` la convolución en
-potencias primas y las identidades polares de `104_19`.
-`local_tower_square_check.py` verifica exactamente los operadores y el
-umbral de signo local de `104_20`.
-`global_cocycle_probe.py` reproduce el diagnóstico Cauchy/Borwein de la suma
-global; es `float64`, no un certificado.
-`global_compound_poisson_tp_check.py` usa `Fraction` para el menor PF2 de dos
-primos y registra el certificado integral exacto de la desigualdad `atanh`
-de `104_21`; no toma decisiones de signo en coma flotante.
-`cubic_cocycle_probe.py` compara dos radios de Cauchy para el cociclo
-\(Y_r(s-u)/Y_r(s)\); es un diagnóstico `float64`, nunca un certificado. Para
-\(r\notin\mathbb Z\) usa logaritmos principales punto a punto, no una rama
-analítica desenrollada; por eso sus filas no enteras son solo exploratorias y
-no se citan como evidencia.
-`near_quartic_margin_check.py` verifica con `Fraction` el valor
-\(r_*=2002/501\), la igualdad límite de A0, los signos binomiales del polo y
-doce coeficientes de su suma hipergeométrica; no prueba el signo global.
-`fejer_caratheodory_gate_check.py` verifica con `Fraction` la identidad de
-coeficientes de `104_25` y el testigo \(R=1/2\), \(\Phi(z)=6z^4\), para el que
-la norma local es \(3/8\) pero \(q_4=-1\).
-`quartic_square_stop_gate_check.py` verifica con `Fraction` el testigo
-cuártico de grado dos, la relación exacta entre \(D^{[r_*]}\) y \(D^{[4]}\),
-y la fase off-line del índice \(150\).
-`fixed_vector_bridge_check.py` verifica con `Fraction` la identidad
-Laguerre--prefijo y la telescopía Toeplitz--Fejér.
-`log2_compensated_split_check.py` verifica la compensación en cero, el
-orden exacto \(\varepsilon^{-n}\) de los momentos separados y el signo
-estricto de la densidad antes del primer primo.
-`flag_hard_edge_spectrum.py` construye y diagonaliza las secciones blanqueadas
-de `104_30`; usa dos extracciones Cauchy/FFT en `float64` y es solamente un
-diagnóstico, nunca un certificado.
-`epsilon_flow_observability_gate_check.py` usa exclusivamente `Fraction` para
-verificar la recurrencia de Laguerre, el flujo polar, la generatriz racional
-del test transportado y la fuga exacta \(M(M-1)=22350\) de la bandera en
+`cd tools && python3 <file>` — pure Python + numpy, no external dependencies, same as
+phase-103. `m1_global_hessian_check.py` and `jordan_cocycle_sign_gate.py` use
+only `Fraction` rational arithmetic for their sign decisions;
+`incomplete_abel_stop_gate_check.py` does the same for the `104_17` witness.
+`three_channel_cocycle_check.py` verifies with `Fraction` the convolution on
+prime powers and the polar identities of `104_19`.
+`local_tower_square_check.py` exactly verifies the operators and the
+local sign threshold of `104_20`.
+`global_cocycle_probe.py` reproduces the Cauchy/Borwein diagnostic of the
+global sum; it is `float64`, not a certificate.
+`global_compound_poisson_tp_check.py` uses `Fraction` for the PF2 minor of two
+primes and records the exact integral certificate of the `atanh` inequality
+of `104_21`; it makes no sign decisions in floating point.
+`cubic_cocycle_probe.py` compares two Cauchy radii for the cocycle
+\(Y_r(s-u)/Y_r(s)\); it is a `float64` diagnostic, never a certificate. For
+\(r\notin\mathbb Z\) it uses pointwise principal logarithms, not an unwound
+analytic branch; that is why its non-integer rows are only exploratory and
+are not cited as evidence.
+`near_quartic_margin_check.py` verifies with `Fraction` the value
+\(r_*=2002/501\), the limiting equality of A0, the binomial signs of the pole, and
+twelve coefficients of its hypergeometric sum; it does not prove the global sign.
+`fejer_caratheodory_gate_check.py` verifies with `Fraction` the coefficient
+identity of `104_25` and the witness \(R=1/2\), \(\Phi(z)=6z^4\), for which
+the local norm is \(3/8\) but \(q_4=-1\).
+`quartic_square_stop_gate_check.py` verifies with `Fraction` the degree-two
+quartic witness, the exact relation between \(D^{[r_*]}\) and \(D^{[4]}\),
+and the off-line phase of index \(150\).
+`fixed_vector_bridge_check.py` verifies with `Fraction` the
+Laguerre--prefix identity and the Toeplitz--Fejér telescoping.
+`log2_compensated_split_check.py` verifies the compensation at zero, the
+exact order \(\varepsilon^{-n}\) of the separated moments, and the strict
+sign of the density before the first prime.
+`flag_hard_edge_spectrum.py` builds and diagonalizes the whitened sections
+of `104_30`; it uses two Cauchy/FFT extractions in `float64` and is only a
+diagnostic, never a certificate.
+`epsilon_flow_observability_gate_check.py` uses exclusively `Fraction` to
+verify the Laguerre recurrence, the polar flow, the rational generating
+function of the transported test, and the exact leak \(M(M-1)=22350\) of the flag at
 \(M=150\).
-`higher_prime_power_budget_check.py` verifica con `Fraction` la
-descomposición del polo \(j=2\), sus coeficientes paritarios y el slack
-racional de los umbrales \(e^{28032}\) y \(e^{112116}\).
-`flag_symbol_residue_check.py` verifica con racionales gaussianos la
-identidad exacta frontera--residuos para el cuarteto \(w=i/2\), incluido
-que su par derecho aporta \(-Q_n\) y que el logaritmo derivado del cuarteto
-es puramente imaginario sobre la línea crítica.
-`flag_prefix_curvature_gate.py` usa el generador Hasse--eta outward de
-`103_51` para certificar \(\nabla_c^2H_{220}<0\) y, en el mismo rango,
-\(\mathcal T_{219}>2220\), sin `float` en los signos.
-`flag_prefix_adjacent_schur_diagnostic.py` compara dos radios Cauchy/FFT,
-localiza los bloques de curvatura negativa y mide el determinante de Schur
-adyacente; es solo diagnóstico `float64`.
-`simple_prime_pole_selberg_check.py` verifica con `Fraction` la identidad
-de borde Laguerre, su masa exacta \(n\), y la expansión centrada de Selberg
-para el canal de primos simples.
-`simple_prime_cholesky_gate.py` verifica con racionales gaussianos y
-`Fraction` las transformadas de Laplace de Laguerre, el polo continuo y
-el cuarteto \(w=i/2\), \(\rho=(4+2i)/5\): en \(n=152\) el residuo tiene
-amplitud \(1-2^{-152}\), crecimiento \(e^{3x/10}\) y contribución de Li
-negativa.
-`tapered_selberg_hankel_gate_check.py` verifica con `Fraction` la
-polarización tapered, el término obligatorio \(t(t-1)\), la identidad de
-Schur en ambos gauges y el menor principal \(8^d-9^d<0\); no usa signos
-en coma flotante.
-`canonical_selberg_square_gate_check.py` verifica con `Fraction` la
-cancelación exacta del cuadrado Selberg, la respuesta Laguerre de la entrada
-cruzada, el grado dominante negativo del kernel Schur residual y el defecto
-de colisión \(-2n^2a^4\); no aproxima primos ni \(\zeta\).
-`adjacent_riccati_gate_check.py` verifica con `Fraction` la factorización
-triangular del determinante adyacente, un cuarteto crítico que conserva
-todos los márgenes positivos pero rompe ese determinante, y el cruce exacto
-del cuarteto racional off-line
+`higher_prime_power_budget_check.py` verifies with `Fraction` the
+decomposition of the pole \(j=2\), its parity coefficients, and the
+rational slack of the thresholds \(e^{28032}\) and \(e^{112116}\).
+`flag_symbol_residue_check.py` verifies with Gaussian rationals the
+exact boundary--residue identity for the quartet \(w=i/2\), including
+that its right pair contributes \(-Q_n\) and that the quartet's derived logarithm
+is purely imaginary on the critical line.
+`flag_prefix_curvature_gate.py` uses the outward Hasse--eta generator of
+`103_51` to certify \(\nabla_c^2H_{220}<0\) and, in the same range,
+\(\mathcal T_{219}>2220\), without `float` in the signs.
+`flag_prefix_adjacent_schur_diagnostic.py` compares two Cauchy/FFT radii,
+locates the blocks of negative curvature, and measures the adjacent Schur
+determinant; it is only a `float64` diagnostic.
+`simple_prime_pole_selberg_check.py` verifies with `Fraction` the Laguerre
+boundary identity, its exact mass \(n\), and the centered Selberg expansion
+for the simple-primes channel.
+`simple_prime_cholesky_gate.py` verifies with Gaussian rationals and
+`Fraction` the Laguerre Laplace transforms, the continuous pole, and
+the quartet \(w=i/2\), \(\rho=(4+2i)/5\): at \(n=152\) the residue has
+amplitude \(1-2^{-152}\), growth \(e^{3x/10}\), and a negative Li
+contribution.
+`tapered_selberg_hankel_gate_check.py` verifies with `Fraction` the
+tapered polarization, the mandatory term \(t(t-1)\), the Schur identity
+in both gauges, and the principal minor \(8^d-9^d<0\); it uses no signs
+in floating point.
+`canonical_selberg_square_gate_check.py` verifies with `Fraction` the
+exact cancellation of the Selberg square, the Laguerre response of the
+crossed entry, the negative dominant degree of the residual Schur kernel,
+and the collision defect \(-2n^2a^4\); it approximates neither primes nor \(\zeta\).
+`adjacent_riccati_gate_check.py` verifies with `Fraction` the triangular
+factorization of the adjacent determinant, a critical quartet that preserves
+all positive margins but breaks that determinant, and the exact crossing
+of the rational off-line quartet
 \(\rho=16/41+(20/41)i\).
-`canonical_euler_resolvent_gate_check.py` verifica con racionales
-gaussianos el cruce off-line, el multiplicador residual y la optimización
-de Young para resolventes positivos; su tabla `asinh` solo ilustra la
-divergencia logarítmica probada en `104_40`.
-`full_mangoldt_phase_homotopy_gate_check.py` verifica con `Fraction` la
-cota racional de fase, el conteo \(\mathrm{TV}(W_n)=8n\), la ley de
-cruce \(a=2\Re\rho\), la fase crítica invariante del cuarteto \(w=i/2\) y
-su defecto exponencial en \(n=152\).
-`degree_adapted_noncommutative_gate_check.py` verifica con `Fraction` el
-óptimo cuadrático no conmutativo para productos internos de ambos signos,
-la compresión Toeplitz por grado, el coeficiente defectuoso \(n/2\) y el
-cuarteto racional off-line de `104_42`.
-`zeta_size_bias_martingale_gate_check.py` verifica con enteros y `Fraction`
-la desintegración size-biased, los signos opuestos del selector divisor en
-\(2\) y \(30\), y las constantes líderes de la pérdida Efron--Stein.
-`divisor_markov_laguerre_check.py` verifica con `Fraction` la identidad
-divisor, la adición y dilatación de Laguerre, y la contracción exacta del
-comparador Gamma; no evalúa ceros ni toma decisiones en punto flotante.
-`crossed_divisor_gamma_stein_gate_check.py` verifica la identidad de segmento
-orientado, la derivada Laguerre, la cancelación de símbolos y el fallo exacto
-de completa monotonía registrado en `104_45`.
-`fixed_laguerre_markov_extremal_check.py` verifica las identidades de
-dilatación y el cociente Gamma exacto de `104_46`; la transferencia PNT del
-saddle se prueba analíticamente en el documento.
-`size_bias_homotopy_flux_gate_check.py` verifica la ley diferencial, el
-canal polar y el pulso gaussiano racional del cuarteto de `104_47`.
-`prime_tower_signed_coercivity_gate_check.py` verifica las identidades de
-torre, los átomos de fase desplazados y el testigo alternante \(n=151\).
-`unit_divisor_renewal_signed_gate_check.py` verifica la marca Palm uniforme,
-la cancelación momento--cumulante, los dos signos del defecto unitario en
-grado 151 y la pérdida de uniformidad del selector desplazado.
-`second_order_unit_palm_covariance_check.py` verifica el Palm cuadrático, el
-kernel `lcm`, la descomposición bilineal completada y el falsificador racional.
-`mobius_inverted_lcm_reserve_gate_check.py` verifica \(K=Z^TWZ\), su inversión
-doble, la indefinitud del kernel infinito y los dos signos locales certificados
-del vector \(P_{150}\) en torres primas reales.
-`connected_two_tower_flux_gate_check.py` verifica la cancelación conectada,
-el Hessiano torre--polo--Gamma, su cambio de signo y el cociclo Laguerre.
-`connected_cumulant_cancellation_check.py` verifica con `Fraction` la
-aditividad de cumulantes hasta orden doce y las cancelaciones desconectadas
-en órdenes bajos; la clasificación general se prueba en `104_53`.
-`gibbs_chernoff_unit_palm_gate_check.py` verifica los coeficientes líderes de
-las fibras prima y semiprima que fuerzan la divergencia bilateral de Gibbs.
-`three_mark_unit_palm_orientation_check.py` verifica el Palm cúbico, el factor
-polar seis, la polarización orientada, los dos sesgos aritméticos y los signos
-de la tercera diferencia Laguerre.
-`cutoff_freedom_audit_check.py` verifica con `Fraction` la monotonía de
-\(r_{\max}(T)\), la identidad \(r_{\max}(1000)=2002/501\) y el cutoff adaptado.
-`density_relaxed_li_criterion_check.py` verifica la orientación de Cayley, el
-cuarteto racional y la familia periódica de Fejér que impide una densidad mala
-universal. `low_zero_block_budget_check.py` verifica las equivalencias del
-bloque \(|\gamma|<\sqrt n\) y las cotas de activación por cuarteto.
-`translational_density_attack_check.py` verifica exactamente que toda ventana
-fija conserva el falsificador \(w=2i\). `prelog_majorisation_gate_check.py`
-certifica los dos signos de curvatura y la inversión de orientación aritmética.
-`nonlinear_degree_barrier_check.py` verifica con racionales gaussianos que la
-barrera saturada detecta exactamente la clase \(n\equiv0\pmod4\) del cuarteto y
-que su media tiende a \(1/4\). `subexponential_density_partition_check.py`
-certifica la barrera polinómica, la ausencia de bloques buenos de longitud
-cuatro y la incompatibilidad con el germen Abel positivo del mismo cuarteto.
-`unitary_fermi_microfrequency_check.py` verifica las generatrices armónica y
-no armónica de Laguerre, el polo regulado y la escala exponencial del cuarteto;
-su cuadratura de Fourier es diagnóstica. `cross_degree_h2_energy_check.py`
-certifica exactamente Christoffel--Darboux y el polo de Laplace, y comprueba
-diagnósticamente la normalización de cuarta raíz para un polo interior.
-`log_abel_fermi_boundary_check.py` verifica el límite Fermi \(1/4\) del
-cuarteto, la masa armónica por progresiones y la transición
-doblemente logarítmica de la nueva coordenada Abel; sus límites se prueban
-en `104_64`.
-`diagonal_abel_regulator_gate_check.py` verifica la fórmula polar cerrada,
-la constante diagonal \(C=1/100\), la escala \(C/h^2\) y la estabilidad de
-un modo exterior desplazado de `104_66`.
-`local_filter_long_block_check.py`, `two_sided_excursion_check.py` y
-`deterministic_block_polymer_check.py` verifican respectivamente la
-clasificación de filtros finitos, los dos signos del cuarteto y las
-identidades exactas suma--producto--polímero de las ventanas cuadráticas.
-`finite_logx_diagonal_fermi_check.py` verifica la versión finita de la
-diagonal, el umbral \(X=70\), el valor \(1/4\) del cuarteto y el costo
-polar \(e^{X^2/100}\) de `104_69`.
-`variable_temperature_fermi_gate_check.py` verifica la caracterización
-exacta del regulador polar, la incompatibilidad temperatura--detección, el
-cuarteto y la escala diagonal de `104_70`.
-`entropic_block_variational_check.py` verifica con racionales la identidad
-Bernoulli telescópica de `104_71`, y numéricamente la dualidad de Gibbs, la
-regla de cadena entrópica, el polinomio Laguerre combinado y el falsificador.
-`bounded_pressure_ratio_check.py` verifica las identidades finitas de la
-razón acotada de `104_72`, la constante aguda de sensibilidad
-\(\tanh(\tau/4)\), la densidad \(1/4\) del cuarteto y el costo diagonal
-\(e^{-X^2/100+O(1)}\) de resolver la transición al separar canales.
-`bernstein_pressure_width_check.py` verifica la identidad de Bernstein, sus
-signos, el mayorante de Mellin, el cambio de curvatura y la incompatibilidad
-anchura--polo de `104_73`. `hadamard_jensen_pressure_check.py` comprueba las
-identidades Hadamard--Jensen y el costo exponencial de truncación de `104_74`.
-`poisson_logx_hard_transition_check.py` verifica los sandwiches de nivel, la
-transformada de Bessel, el promedio Poisson del polo y los límites
-\(4,1/4,1/8\) del cuarteto en `104_75`.
-`deep_tail_height_localization_check.py` verifica la geometría de cuartetos,
-la escala \(X^{1/4}\), la cola muy alta y la separación exponencial de
-`104_76`. `cartan_turan_deep_tail_check.py` verifica la continuación
-racional positiva, los signos por clases residuales y la densidad profunda
-\(1/8\) de `104_77`.
-`unit_renewal_euler_deep_tail_falsifier.py` verifica las multiplicidades
-de collares, renovación, ecuación funcional, modo Li dominante, densidad
-\(1/4\) y la falla del PNT continuo del modelo `104_78`.
-`zeta_law_deep_truncation_check.py` certifica con racionales las fibras
-prima/semiprima, sus signos opuestos y las escalas cuadráticas de `104_79`;
-la masa de las fibras usa PNT en la prueba, no primos flotantes.
+`canonical_euler_resolvent_gate_check.py` verifies with Gaussian
+rationals the off-line crossing, the residual multiplier, and the Young
+optimization for positive resolvents; its `asinh` table only illustrates
+the logarithmic divergence proved in `104_40`.
+`full_mangoldt_phase_homotopy_gate_check.py` verifies with `Fraction` the
+rational phase bound, the count \(\mathrm{TV}(W_n)=8n\), the
+crossing law \(a=2\Re\rho\), the invariant critical phase of the quartet \(w=i/2\), and
+its exponential defect at \(n=152\).
+`degree_adapted_noncommutative_gate_check.py` verifies with `Fraction` the
+non-commutative quadratic optimum for inner products of both signs,
+the Toeplitz compression by degree, the defective coefficient \(n/2\), and the
+rational off-line quartet of `104_42`.
+`zeta_size_bias_martingale_gate_check.py` verifies with integers and `Fraction`
+the size-biased decomposition, the opposite signs of the divisor selector at
+\(2\) and \(30\), and the leading constants of the Efron--Stein loss.
+`divisor_markov_laguerre_check.py` verifies with `Fraction` the divisor
+identity, the Laguerre addition and dilation, and the exact contraction of
+the Gamma comparator; it does not evaluate zeros nor make floating-point decisions.
+`crossed_divisor_gamma_stein_gate_check.py` verifies the oriented segment
+identity, the Laguerre derivative, the symbol cancellation, and the exact
+failure of complete monotonicity recorded in `104_45`.
+`fixed_laguerre_markov_extremal_check.py` verifies the dilation identities
+and the exact Gamma quotient of `104_46`; the PNT transfer of the
+saddle is proved analytically in the document.
+`size_bias_homotopy_flux_gate_check.py` verifies the differential law, the
+polar channel, and the rational Gaussian pulse of the `104_47` quartet.
+`prime_tower_signed_coercivity_gate_check.py` verifies the tower
+identities, the shifted phase atoms, and the alternating witness at \(n=151\).
+`unit_divisor_renewal_signed_gate_check.py` verifies the uniform Palm mark,
+the moment--cumulant cancellation, the two signs of the unit defect at
+degree 151, and the loss of uniformity of the shifted selector.
+`second_order_unit_palm_covariance_check.py` verifies the quadratic Palm, the
+`lcm` kernel, the completed bilinear decomposition, and the rational falsifier.
+`mobius_inverted_lcm_reserve_gate_check.py` verifies \(K=Z^TWZ\), its double
+inversion, the indefiniteness of the infinite kernel, and the two certified local
+signs of the vector \(P_{150}\) on real prime towers.
+`connected_two_tower_flux_gate_check.py` verifies the connected cancellation,
+the tower--pole--Gamma Hessian, its sign change, and the Laguerre cocycle.
+`connected_cumulant_cancellation_check.py` verifies with `Fraction` the
+additivity of cumulants up to order twelve and the disconnected cancellations
+at low orders; the general classification is proved in `104_53`.
+`gibbs_chernoff_unit_palm_gate_check.py` verifies the leading coefficients of
+the prime and semiprime fibers that force the bilateral Gibbs divergence.
+`three_mark_unit_palm_orientation_check.py` verifies the cubic Palm, the
+polar factor six, the oriented polarization, the two arithmetic biases, and the signs
+of the third Laguerre difference.
+`cutoff_freedom_audit_check.py` verifies with `Fraction` the monotonicity of
+\(r_{\max}(T)\), the identity \(r_{\max}(1000)=2002/501\), and the adapted cutoff.
+`density_relaxed_li_criterion_check.py` verifies the Cayley orientation, the
+rational quartet, and the periodic Fejér family that prevents a universal
+bad density. `low_zero_block_budget_check.py` verifies the equivalences of the
+block \(|\gamma|<\sqrt n\) and the activation bounds by quartet.
+`translational_density_attack_check.py` exactly verifies that every fixed
+window preserves the falsifier \(w=2i\). `prelog_majorisation_gate_check.py`
+certifies the two curvature signs and the arithmetic orientation inversion.
+`nonlinear_degree_barrier_check.py` verifies with Gaussian rationals that the
+saturated barrier exactly detects the class \(n\equiv0\pmod4\) of the quartet and
+that its mean tends to \(1/4\). `subexponential_density_partition_check.py`
+certifies the polynomial barrier, the absence of good blocks of length
+four, and the incompatibility with the positive Abel germ of the same quartet.
+`unitary_fermi_microfrequency_check.py` verifies the harmonic and
+non-harmonic Laguerre generating functions, the regulated pole, and the exponential
+scale of the quartet; its Fourier quadrature is diagnostic. `cross_degree_h2_energy_check.py`
+exactly certifies Christoffel--Darboux and the Laplace pole, and diagnostically
+checks the fourth-root normalization for an interior pole.
+`log_abel_fermi_boundary_check.py` verifies the Fermi limit \(1/4\) of the
+quartet, the harmonic mass by progressions, and the doubly logarithmic
+transition of the new Abel coordinate; its limits are proved
+in `104_64`.
+`diagonal_abel_regulator_gate_check.py` verifies the closed polar formula,
+the diagonal constant \(C=1/100\), the scale \(C/h^2\), and the stability of
+a shifted outer mode from `104_66`.
+`local_filter_long_block_check.py`, `two_sided_excursion_check.py`, and
+`deterministic_block_polymer_check.py` verify, respectively, the
+classification of finite filters, the two signs of the quartet, and the
+exact sum--product--polymer identities of the quadratic windows.
+`finite_logx_diagonal_fermi_check.py` verifies the finite version of the
+diagonal, the threshold \(X=70\), the value \(1/4\) of the quartet, and the
+polar cost \(e^{X^2/100}\) of `104_69`.
+`variable_temperature_fermi_gate_check.py` verifies the exact
+characterization of the polar regulator, the temperature--detection
+incompatibility, the quartet, and the diagonal scale of `104_70`.
+`entropic_block_variational_check.py` verifies with rationals the telescoping
+Bernoulli identity of `104_71`, and numerically the Gibbs duality, the
+entropic chain rule, the combined Laguerre polynomial, and the falsifier.
+`bounded_pressure_ratio_check.py` verifies the finite identities of the
+bounded ratio of `104_72`, the sharp sensitivity constant
+\(\tanh(\tau/4)\), the density \(1/4\) of the quartet, and the diagonal cost
+\(e^{-X^2/100+O(1)}\) of resolving the transition when separating channels.
+`bernstein_pressure_width_check.py` verifies the Bernstein identity, its
+signs, the Mellin majorant, the curvature change, and the width--pole
+incompatibility of `104_73`. `hadamard_jensen_pressure_check.py` checks the
+Hadamard--Jensen identities and the exponential truncation cost of `104_74`.
+`poisson_logx_hard_transition_check.py` verifies the level sandwiches, the
+Bessel transform, the Poisson average of the pole, and the limits
+\(4,1/4,1/8\) of the quartet in `104_75`.
+`deep_tail_height_localization_check.py` verifies the quartet geometry,
+the scale \(X^{1/4}\), the very high tail, and the exponential separation of
+`104_76`. `cartan_turan_deep_tail_check.py` verifies the positive
+rational continuation, the signs by residue classes, and the deep density
+\(1/8\) of `104_77`.
+`unit_renewal_euler_deep_tail_falsifier.py` verifies the collar
+multiplicities, renewal, functional equation, dominant Li mode, density
+\(1/4\), and the failure of the continuous PNT for the `104_78` model.
+`zeta_law_deep_truncation_check.py` certifies with rationals the prime/
+semiprime fibers, their opposite signs, and the quadratic scales of `104_79`;
+the mass of the fibers uses PNT in the proof, not floating-point primes.
 
 ## Status
 
-| doc | estado |
+| doc | status |
 |---|---|
-| `104_00` | **cerrado.** Dos rutas eliminadas por duplicación (lcm/Stieltjes ← Coffey; espacio modelo ← Suzuki). El rango finito con altura verificada es terreno mayormente bibliográfico: no es el frente |
-| `104_01` | **cerrado** (álgebra + cota PNT explícita de Johnston--Yang + diagnóstico). Bajar \(\theta\) **no regala nada**: \(-2\theta A_n\le\mathcal N_n\le\frac12A_n\), signo indeterminado. **Se fija \(\theta=\frac14\)** |
-| `104_02` | **corregido por erratum.** La cota para \(\varepsilon_n^-=A_n-\lambda_n-\lambda_n(\sqrt n)\) y sus antiguos corolarios quedan retirados. La coordenada pequeña correcta es \(\widetilde\varepsilon_n=A_n-\lambda_n+\lambda_n(\sqrt n)\); por sí sola no produce una cota incondicional uniforme de A1, porque ahora hace falta controlar por abajo el bloque incompleto |
-| `104_03` | **cerrado.** Contorno local y signos auditados; la suma desnuda de residuos triviales diverge y la suma canónica exacta es \(\Delta A_n+(\gamma+\log4\pi)/2-1\) |
-| `104_10` | **cerrado como no-go local.** Identidad finita y bloques exactos; la versión local-PSD murió porque cruces/bordes no tienen signo y el \(H_j\) real cambia de signo |
-| `104_11` | **cerrado como stop-gate global.** El correlador sobreviviente tiene Hessiana nula: las dos energías `max` se cancelan con el borde exacto y queda \(-\int E\tau'\). M1 no aporta la desigualdad |
-| `104_12` | **cerrado como auditoría M5.** La convolución de grado es el pullback Laguerre de \(Z^{-1}\delta Z\); Riccati no añade signo y separar normas reproduce 103_71. No existe métrica positiva que realice \(Z^{-1}=Z^\dagger\) en un poset divisor no trivial. M5 no aporta hoy una cota nueva |
-| `104_13` | **cerrado como stop-gate Selberg--Riccati.** La recurrencia exacta conserva la colisión polo--primos, pero su coeficiente centrado cancela otra pieza de orden \(\varepsilon^{-n-1}\). La positividad de \(\Lambda\log+\Lambda*\Lambda\) no sobrevive al pullback y su sumatoria \(O(x)\) tiene norma dual al menos \(n(n-1)^n-1\) para \(\varepsilon=1/n\) |
-| `104_14` | **cerrado como stop-gate M3.** Directamente para A1, \(C_n^\theta=\frac12\mathcal W_\zeta(f_n*f_n^\#)-\theta A_n-R_n\). El falsificador queda dentro del bulk y prueba que el mapa cero--lóbulo no aporta signo; sigue faltando un teorema especial para la sucesión real \(\Lambda\) |
-| `104_15` | **cerrado como stop-gate del complejo mínimo.** El Koszul divisor tiene métrica positiva y \(d_E^2=0\); la anticomutación cancela \(p/q\), pero \(N_p=d_E\iota_p+\iota_pd_E\), de modo que \(M\delta Z\) induce cero en cohomología. El alcance no incluye complejos no locales que no hagan exactos los \(N_p\) |
-| `104_16` | **cerrado como stop-gate del cociclo Jordan.** La jerarquía \(\mu*\log^k\) es no negativa, pero el polo la convierte en \(D_k-kD_{k-1}/(s-1)\). El primer jet Cayley satisface \(C_1<0<C_6\) con intervalos racionales; el falsificador \(\xi(s+a)\xi(s-a)\) conserva jerarquía Euler positiva y ecuación funcional con ceros off-line. La familia completada \(\xi(s-u)/\xi(s)\) es Schur para todo \(u\downarrow0\) si y solo si RH, y su medio presupuesto vuelve exactamente a \(\Delta D_n\ge0\) |
-| `104_17` | **cerrado como stop-gate Abel--Fejér del bloque incompleto.** Para cada cuarteto, el germen Abel radial es positivo aun off-line. El testigo exacto \(w=2i\) tiene \(Q_4=-225/8\), \(F_8=-10885/128\) y, sin embargo, germen Abel positivo. Ningún promedio radial de orden fijo aporta la cota inferior coeficiente a coeficiente |
-| `104_18` | **cerrado como stop-gate del shift correlacionado.** Mantener \(u=c\varepsilon\) produce una identidad finita no divergente, pero al retirar el regulador reaparece exactamente \(C_n\). La monotonía real de \((s-1)\zeta(s)\) es compatible con \(C_6>0\); la tercera diferencia en \(c\) tiene el signo contrario al de Hausdorff, y la unicidad de series de Dirichlet impide anular idénticamente el canal explícito con un sistema finito no trivial de pesos constantes |
-| `104_19` | **cerrado como stop-gate de positividad inmediata; cociclo global no descartado.** \(A_u^2\) tiene coeficientes \(J_u*J_u\ge0\) y Gamma una medida Beta positiva, pero el factor polar al cuadrado tiene medida \(\delta_0+c(cr-2)e^{-r}dr\), negativa cerca de cero para todo \(c>0\). Los tres canales solo convergen acoplados y su límite es el gate fuerte \(-\Delta D_n\). El falsificador desplazado muestra que Jordan + Beta + ecuación funcional no determinan por sí solos el signo Cayley |
-| `104_20` | **cerrado localmente; gate global activo.** La identidad \(b_u(p^k)=\nabla^2((k+1)p^{ku})\) absorbe torre y canales en \(\mathsf C_p^2\), pero el cuadrado no es de norma. El bloque de grado uno cambia de signo al variar el fondo \(m\), y todo grado par tiene infinitos bloques positivos. Un diagnóstico no certificado mantiene \(g_n<0\) hasta 1200; probar el signo de la suma global, conservando interacciones entre primos, es el frente vivo |
-| `104_21` | **cerrado como stop-gate PF/TP/CM global.** \(\log N\) tiene una medida compound-Poisson exacta y creciente en \(u\), pero la retícula de exponentes falla PF2 con menor \(-1/2916\). Para \(u=1,\varepsilon=2\), la inversa de Laplace del cociclo aritmético--Gamma--polar completo tiene densidad negativa en \(\frac12\log2\); no existe representación probabilística positiva que transfiera el orden al gate. El signo global de \(g_n\) no queda refutado ni probado; el sucesor concreto es una desigualdad firmada Stein--Mecke para el test Laguerre completado |
-| `104_22` | **reducción cerrada; gate cúbico activo.** La estimación A0 exacta conserva \((1+T_n)^{-1}\), de modo que \(D_n^{[3]}=3\lambda_n-A_n\ge0\) implica \(C_n(T_n)\ge0\) para \(T_n\ge2\). Es estrictamente más débil que el margen cuadrático. El cociclo \(Y_3(s-u)/Y_3(s)=H_u^3K_u^2\), normalizado por \(u(1-z)^2\), converge directamente a \(-D_n^{[3]}\); el diagnóstico permanece negativo hasta el índice 1201, pero falta probar su signo global |
-| `104_23` | **reducción cerrada; gate casi cuártico activo.** Como \(T_n\ge1000\), basta \(D_n^{[r_*]}=r_*\lambda_n-A_n\ge0\), \(r_*=2002/501\), equivalente a pedir solo \(\lambda_n/A_n\ge501/2002\). Las potencias reales de Euler y Gamma conservan medidas positivas; el polo real es firmado. Es el margen uniforme más débil obtenido hasta ahora usando solo el piso declarado del cutoff; no se reclama optimalidad absoluta |
-| `104_24` | **cuatro canales cerrados; Stein positivo descartado.** La normalización directa tiene base \(k+1\) y límite exacto \(-(3\lambda_{k+1}-A_{k+1})\). La medida de Lévy \(\nu_A^{[3]}+2\nu_K-3\nu_P\) entra en una recurrencia Stein--Laguerre global, pero es negativa en un intervalo anterior a \(\log2\), incluso en el límite regulado. Queda abierta solo una cancelación firmada no local específica |
-| `104_25` | **Fejér cerrado; gate global circular descartado.** Si \(\Re\Phi\le1\) en el disco, Herglotz--Fejér da todos los signos del margen cúbico. Pero la holomorfía de \(Y_3(s-u)/Y_3(s)\) en esos discos para \(\varepsilon\downarrow0\) ya equivale a RH. El radio Euler seguro tiende a cero y un testigo polinómico exacto impide transferir su signo al coeficiente sin amortiguar |
-| `104_26` | **ataque cuártico cerrado como no-go SOS.** \(J_u^{*4}\) da una cuarta diferencia exacta, pero falla PF2 y los bloques completos cambian de signo. El cuadrado formal \(H_u^4K_u^3=(H_u^2K_u^{3/2})^2\) se linealiza al retirar \(u\). El margen \(4\lambda_n-A_n\ge A_n/1001\) corresponde al cutoff fijo basado solo en \(T\ge1000\); `104_56A` retiró su pretendida necesidad intrínseca |
-| `104_27` | **signo de cola descartado desde A0/VK.** Más allá del último cero de Laguerre, dos funciones que saturan el mismo envelope dan \(R_n(T)\) estrictamente positivo y negativo. El testigo puede suavizarse y conservar monotonicidad eventual; no conserva soporte primo, que es precisamente el input nuevo que haría falta |
-| `104_28` | **puente de vector fijo cerrado; diagnóstico \(v_{\max}\) descartado.** El test Li es exactamente el estado de kernel reproductor hard-edge \(g_n/\sqrt n\) y la suma prima es una forma Abel-renormalizada sobre ese rayo. El operador blanqueado antiguo vive en otro gauge; la polarización natural de \(A_n\) es indefinida y el Gram de referencia normaliza por \(n\), no por \(A_n\). No hay proyector casi-extremal fiel sin construir primero una nueva forma renormalizada cerrada |
-| `104_29` | **corte \(\log2\) cerrado como identidad, balance de masas descartado.** La versión válida usa \(\varphi_n=L_{n-1}^{(1)}-n\) contra el generador compensado. El bloque exterior conserva todos los primos, pero la cota que se necesita sobre él es algebraicamente \(D_n^{[r]}\ge0\). Separar polo y primos cuesta \(\varepsilon^{-n}\) y repite 103_53--103_57 |
-| `104_30` | **referencia de bandera cerrada; desigualdad espectral abierta.** La forma positiva diagonal evalúa exactamente \(A_n\) sobre cada prefijo y permite el cociente fiel de sección finita. El diagnóstico de masa es favorable, pero no certificado; las cotas de Schur/Gershgorin pierden la cancelación y requieren el control firmado de \(\Delta^2(A_n-\lambda_n)\) que no está probado |
-| `104_31` | **flujo en \(\varepsilon\) cerrado como stop-gate Hilbert.** La realización unitaria es \(Q=-M_x\). No existe regulador que sea simultáneamente seguro para el operador Euler separado y para el transporte inverso del prefijo. La referencia \(A_{\rm flag}\) fuga fuera de su bandera, no simetriza \(Q\) y conserva exactamente el borde \(1/2\). La forma acoplada y renormalizada de `104_30` no queda descartada |
-| `104_32` | **potencias superiores retiradas de la regularización; gate primos--polo abierto.** El bloque \(k\ge2\) converge ordinariamente y satisface \(\lvert P_{n-1}^{(\ge2)}(1)\rvert<14n+1=o(A_n)\). En el margen cuártico entra con factor \(-4\), y su absorción por valor absoluto en \(A_n/1001\) solo queda probada desde \(n\ge e^{112116}\), no desde \(150\). La obligación exacta restante es la desigualdad primos--polo (26) de `104_32` |
-| `104_33` | **símbolo cerrado; prueba solo por frontera descartada.** Cada cero con \(\Re\rho>1/2\) aporta exactamente \(m_\rho\mathcal F_n(w_\rho)/[\rho(\rho-1)]\) al momento. Un cuarteto recíproco deja idéntica la frontera real y cambia \(B_n/A_n\) exponencialmente; una prueba debe controlar la suma firmada de residuos con aritmética específica, no suponer holomorfía Hardy |
-| `104_34` | **dominación por curvatura descartada; compresión adyacente abierta.** El ansatz \(q_d(B)\le(1501/2002)q_d(A)\) falla rigurosamente en \(d=220\), ya dentro del rango infinito. La compresión exacta de bandera produce \(\mathcal T_n=4H_nd_n-(H_n+d_n-H_{n+1})^2\); probar \(\mathcal T_n\ge0\) para todo \(n\ge149\) propaga el certificado finito y cierra el margen, pero ese teorema firmado no está probado |
-| `104_35` | **canal \(\theta\) cerrado como identidad; Selberg simple descartado como coercividad.** El borde correcto es \(-n\), y la obligación (26) de `104_32` se vuelve una correlación exacta de \(\theta-x\). La medida Selberg de primos/semiprimos es positiva, pero su inversa Hankel tiene ambos signos. Incluso con soporte en los primos verdaderos, PNT y escala Selberg no fijan el funcional si se altera un peso; queda abierto únicamente un teorema global para los pesos canónicos \(\log p\) |
-| `104_36` | **Cholesky primos--polo construido y descartado como cierre por norma.** Para \(a>2\) la norma conserva todas las interacciones dentro de \(\lvert(s-1)^{-1}-Q(s)\rvert^2\). Su Laplace tiene en \(z=\rho/a-1/2\) residuo \(m_\rho[1-(1-a/\rho)^n]\): dos prefijos \(L^2\) consecutivos ya excluyen \(\Re\rho>a/2\), y los ceros críticos fuerzan \(\|V_{n,a}\|_2^2\gg(a-1)^{-1}\). Sobrevive solo una cota unilateral de la proyección firmada, no de la norma |
-| `104_37` | **el taper adyacente queda cerrado como identidad y descartado como energía Hankel.** La forma en \(g_n+t\phi_n\) conserva exactamente bloque arquimediano, potencias superiores y primos--polo. La inversión colectiva da un kernel cuyo menor sobre \(\{R,2R\}\) es \(C^2e^{-6aR}R^{2d}(8^d-9^d+O(R^{-1}))<0\) para todo \(t\), incluido \(t_n^*\). Sigue abierto \(\mathcal T_n\ge0\) mediante una cancelación especial de los pesos canónicos, no mediante PSD Hankel |
-| `104_38` | **la completación Selberg del cuadrado de Schur queda descartada.** Al mantener la identidad centrada completa, \(-\langle G,\mu*\mu\rangle+\mathcal Q_G(\mu)=0\) exactamente. Si se intenta reservar \(\mathcal Q_G\) para dominar la entrada cruzada, el kernel diferencia ya es negativo sobre un solo átomo primo canónico en la cola; además el cuadrado de la respuesta cruzada no es Hankel, con defecto de colisión \(-2n^2a^4x^2+O(x^3)\). Queda abierto únicamente el valor conjunto firmado para toda la medida canónica |
-| `104_39` | **Riccati adyacente cerrado como stop-gate de necesidad.** El determinante equivale a las desigualdades triangulares para \(\sqrt{H_n},\sqrt{d_n},\sqrt{H_{n+1}}\). Un cuarteto sobre la línea mantiene \(H_n>0\) y rompe el gate exactamente, de modo que éste es más fuerte que el margen; bajo RH sí es positivo para todo \(n\) suficientemente grande. Optimizar la referencia da el óptimo circular \(D=H_n+H_{n+1}\), y la referencia de prefijos ortogonales solo cambia \(\Delta B_n\) por \(B_n+B_{n+1}\). No se descarta el gate para la zeta, pero deja de ser el único frente |
-| `104_40` | **resolvente Euler canónico descartado como cota cuadrática conmutativa.** En el rayo fijo, el precondicionador positivo óptimo reemplaza \(\Re M\) por \(-|M|\). Su costo diverge como \(\log(1/(a-1))\) por un cero crítico no resonante, mientras un cero off-line obliga a sumar el residuo al cruzar \(a=2\Re\rho\). Sobrevive únicamente una estimación firmada/no conmutativa o el criterio \(\mathcal T_n\ge0\) |
-| `104_41` | **cota de fase completa probada en el semiplano Euler; transporte descartado sin residuos.** Con \(F=(s-1)\zeta(s)\), \(\mathcal B_{n,a}=-(2\pi)^{-1}\int W_n\,d\arg F\), \(\mathrm{TV}(W_n)=8n\) y \(|\arg F|<3\pi/4\) dan \(|\mathcal B_{n,a}|\le3n\) para \(a\ge4\). El transporte a \(a=1\) cruza exactamente los ceros con \(\Re\rho>1/2\); el defecto es la suma firmada de residuos. El cuarteto \(w=i/2\) deja idéntica la fase completa sobre la línea y aporta \(2(2^{152}+2^{-152})-4>0\) al defecto. Sigue faltando un teorema específico para los pesos exactos \(\Lambda(m)\) que controle esos residuos |
-| `104_42` | **optimización cuadrática no conmutativa descartada; compresión de grado cerrada como stop-gate.** Para el operador Euler--polo completo, con todas las \(\Lambda(p^k)\), el ínfimo algebraico sobre todo precondicionador positivo es exactamente \(|B_n|\); en el régimen peligroso devuelve el objetivo mismo. Si la continuación vectorial está en \(L^2\), todo costo acotado exige \(\mathrm{cond}\,R\gg(a-1)^{-1}\). La proyección de los primeros \(n\) estados conserva fase y da una fórmula exacta en \(\Delta B_j\), pero el dato nuevo entra con ganancia \(\sqrt{n/2}>1\). No se descarta una cota aritmética nueva para un \(R\) explícito; la optimización por sí sola no la suministra |
-| `104_43` | **factorización size-biased cerrada; orden y energía separada descartados.** El selector divisor canónico conserva exactamente todas las \(\Lambda(p^k)\), pero está por encima del selector uniforme en \(n=2\) y por debajo en \(n=30\). Su error marginal es exactamente \(R\), y la energía Efron--Stein del Laguerre no escalado diverge como \(\{\binom{2n-2}{n-1}-1\}\varepsilon^{-2n+2}\). Queda abierta solo una comparación cruzada, firmada y no monótona |
-| `104_44` | **transporte divisor--Markov cerrado como stop-gate operatorial y de escala.** La desintegración de `104_43` tiene norma uno incluso en media cero, de modo que no existe brecha global. El continuo Gamma sí contrae \(L_r(\varepsilon x)\), pero recomponer \(L_r(x)\) tiene carga \((2/\varepsilon-1)^r\); para \(\varepsilon=1/n\) reproduce la pared \(\exp(n\log n)\). No se descarta una estimación especial que conserve toda la suma alternada |
-| `104_45` | **coupling cruzado cerrado como identidad y stop-gate local.** El kernel Stein es único e independiente del coupling. Tiene patrón \(-,+,-\) alrededor de \(\log2\). El orden \(R(q)<0\) vale para exponenciales y sus mezclas positivas, pero \(-R\) no es completamente monótona; el test Laguerre recompone exactamente \(B_n\) |
-| `104_46` | **no-alineación del vector fijo descartada.** Para todo \(s\in(1,s_0)\), el cociente centrado del Laguerre aritmético converge a uno; el del split Gamma converge a cero. Los cocientes centrados son además invariantes por traslación y no observan la diferencia firmada de medias |
-| `104_47` | **flujo size-biased cerrado como stop-gate.** La homotopía satisface una ecuación exacta entre grados, pero integrar el flujo da \(\mathcal B_{n,a_0}-B_n\); exigir el signo necesario es exactamente el margen original. Positividad/Markov genérica también vale para \(\zeta(s+c)\zeta(s-c)\) con ceros off-line |
-| `104_48` | **fase por torre cerrada; multiplicidad local descartada.** La fórmula de Poisson da solo un minorante no sumable y también acepta los pesos desplazados. Una torre completa de multiplicidad \(1+t\) conserva soporte, constancia y PNT, pero viola cualquier techo proporcional en \(n=151\). El único input no falsado es la renovación unitaria completa \(\Lambda*{\bf1}=\log\) |
-| `104_49` | **renovación unitaria cerrada como identidad lineal; coercividad aún abierta.** El Palm geométrico selecciona uniformemente una altura de la torre, propiedad que \(\omega_c\) pierde. Sin embargo, en cada grado el defecto selector \(\kappa_r-m_r/r\) y el transporte \(m_r/r-(r-1)!\varepsilon^{-r}\) cancelan exactamente \(m_r\), y el Laguerre recompone \(B_n\). El defecto condicionado ya tiene ambos signos en \(n=151\). Solo sobrevive una correlación no lineal entre varias torres que no desaparezca al promediar |
-| `104_50` | **covarianza Palm cerrada como stop-gate.** El kernel centrado se diagonaliza por torre. Mantener el defecto total da \(\mathrm{Cov}(D_f,D_g)+M_s(f)M_s(g)\); para el test real, completar el cuadrado produce varianza más \((\mathcal B_{n,s}-\kappa A_n)^2\). Derivada, primitiva y score vuelven a coeficientes desconocidos o al flujo ya abierto |
-| `104_51` | **inversión Möbius cuadrática cerrada como stop-gate.** La congruencia \(M^TKM=W\) elimina toda correlación `lcm`. Para el kernel infinito, la diferencia entre las energías es indefinida sobre un vector de dos niveles; para \(P_{150}\), el cutoff divisor local tiene signos opuestos en \(p=2,7\). No se afirma ese signo para la forma infinita sobre el Laguerre fijo. Polarizar la diagonal vuelve a una diferencia de cuadrados sin orientación |
-| `104_52` | **flujo conectado de dos torres descartado.** El Hessiano exacto del margen conserva torre, polo y Gamma, pero la proyección logarítmica cancela con coeficiente cero todos los pares de torres distintas. Cambia de signo entre \(s=1\) y \(s=10\), y su cociclo Laguerre también tiene ambos signos |
-| `104_53` | **jerarquía polinómica aditiva clasificada.** En el álgebra universal de momentos, los primitivos son exactamente las combinaciones lineales de cumulantes. Como los cumulantes zeta son sumas de una sola torre, ninguna identidad polinómica aditiva de orden finito puede conservar una reserva multi-torre. El teorema no cubre desigualdades no aditivas arbitrarias |
-| `104_54` | **Gibbs/Chernoff descartado rigurosamente.** El defecto unitario Laguerre tiene colas aritméticas de ambos signos y orden \((\log N)^n\), mientras la ley zeta solo decae como \(e^{-s\log N}\). Todos sus momentos exponenciales no triviales divergen; añadir polo o presupuesto solo traslada por una constante |
-| `104_55` | **formas cúbicas canónicas descartadas.** El Palm de tres marcas conserva el momento desconectado, pero el tercer central no tiene signo, el determinante alternante promedia cero y su cuadrado es genérico. Toda orientación obtenida multiplicando una copia independiente por una energía positiva factoriza exactamente como energía por el margen. Queda fuera del no-go únicamente una desigualdad no aditiva no canónica que correlacione la reflexión unitaria local con el entero total antes de la proyección conectada |
-| `104_56` | **cuantificador reducido rigurosamente.** Bajo \(\neg\mathrm{RH}\), los fallos del margen contienen un conjunto sindético de densidad positiva. Basta probar bloques buenos de longitud no acotada o una excepción de densidad logarítmica cero. Esto reduce el objetivo, pero no suministra todavía esos bloques para zeta |
-| `104_56A` | **corrección cofinal cerrada.** El cutoff puede crecer con \(n\) y con la holgura; \(4\lambda_n>A_n\) cierra A1 en un cutoff adaptado. \(A_n/1001\) no es un slack intrínseco. La adaptación no prueba la holgura que usa |
-| `104_56B` | **auditoría de antecedente cerrada.** La parte de modos dominantes/excursiones infinitas ya está en Bombieri--Lagarias y en trabajos posteriores. El refuerzo topológico a densidad positiva/sindeticidad y el lift Fermi prima--Laguerre no aparecieron explícitos en la búsqueda primaria dirigida; se registran como no localizados, no como prioridad establecida |
-| `104_57` | **bloque bajo aislado.** La obligación RH-strength queda en \(\asymp\sqrt n\log n\) etiquetas bajo \(\sqrt n\), con error de transporte de la misma escala y un criterio de presupuesto explícito. No se obtuvo una cota inferior nueva |
-| `104_58` | **promedio traslacional fijo descartado.** Toda ventana fija conserva los modos exteriores y falla sobre densidad positiva bajo \(\neg\mathrm{RH}\). La fase Euler en \(a\ge4\) tampoco controla esos fallos al cruzar a \(a=1\) |
-| `104_59` | **mayorización clásica descartada.** Las masas sin etiquetas pierden \(m\mapsto\log m\), los Laguerre no tienen curvatura global y el selector divisor cambia de orientación. Solo sobrevive la misma comparación global firmada específica de \(\Lambda\) |
-| `104_60` | **barrera no lineal construida; estimación abierta.** Para cualquier \(b_n=e^{o(n)}\), RH equivale a que la profundidad negativa saturada tenga media cero en una sucesión de intervalos largos. El criterio pasa el cuarteto y queda fuera de 104_17/104_53, pero falta probar su media para zeta |
-| `104_61` | **particiones exactas construidas; cotas abiertas.** RH equivale ya a \(\lambda_n\ge-1\) en bloques no acotados y a que la partición Fermi acotada \(\mathfrak F_{t,b}(X)\) tienda a cero. Su forma prima--Laguerre emparejada es exacta y conserva la relajación de densidad. \(\mathcal Z_t(X)=O_t(\log X)\) queda como criterio auxiliar más fuerte que sí implica una cota grado a grado |
-| `104_62` | **lift Fermi unitario construido; rama diagonal cerrada.** La señal de una excursión \(-Y\) está en \(s=O(Y^{-1})\), por lo que toda resolución polinómica falla en el cuarteto. El cambio \(s=e^{-nv}\) fija la tasa, pero la generatriz radial ve un producto geométrico y no la media aritmética; en la frontera no existe truncación a orden finito |
-| `104_63` | **energía cross-degree cerrada como no-go.** \(\limsup \mathcal E_N^{1/(4N)}=1/r_0\) localiza exactamente el primer polo transformado. Parseval/CD conserva el cuadrado completo, pero toda estimación separada pierde una cancelación de orden \(\varepsilon^{-4N}\) |
-| `104_64` | **Abel logarítmico exacto; truncación de microfrecuencia cerrada.** La media Fermi de Cesàro tiende a cero si y solo si su media Abel lo hace; basta incluso una subsucesión radial. El lift prima--Laguerre exterior infinito es exacto. En el cuarteto, la corrección mala obedece una ley uniforme en \(\alpha=\log\log(1/s)/\log(1/h)\), y capturarla completa exige llegar a \(s=\exp(-c/h)\). Una cancelación previa entre todos los canales no queda descartada |
-| `104_65` | **filtros locales clasificados y cerrados.** Todo filtro finito que no aniquile los modos exteriores conserva excursiones exponenciales negativas sobre un conjunto sindético; diferencias y promedios móviles fijos no fabrican bloques buenos. Un aniquilador exacto puede ocultar el cuarteto, por lo que tampoco es un detector fiel |
-| `104_66` | **diagonal regulador--Abel probada; separación cerrada.** Con \(\varepsilon(h)=e^{-1/(100h)}\), \(\lambda_{n,\varepsilon(h)}\to\lambda_n\) uniformemente para \(n\le1/h\), y el criterio Fermi puede formularse con una única serie de Euler absolutamente convergente. Separar polo y primos exige precisión relativa \(\exp(-C/h^2+O(1/h))\); el producto completo vuelve a la fase Fermi desconocida |
-| `104_67` | **dicotomía bilateral probada.** Si RH es falsa, hay excursiones positivas y negativas de la misma tasa exponencial máxima sobre sendos conjuntos sindéticos de densidad positiva. En consecuencia basta una barrera superior, inferior o bilateral subexponencial sobre bloques de longitud no acotada; transportar la cota Euler superior desde \(a\ge4\) a \(a=1\) cruza los mismos residuos off-line |
-| `104_68` | **selector de bloques y doble límite eliminados.** Las ventanas deterministas \(I_L=[L^2,L^2+L-1]\) bastan: la suma Fermi tiende a cero y el producto asociado a uno bajo RH, mientras bajo no-RH la suma tiene \(\liminf\ge1\) y el producto tiende a cero. Con \(\varepsilon_L=e^{-(L^2+L-1)/100}\) queda una sola familia Euler convergente. El gas prima--Laguerre sigue siendo no interactuante; probar su cota queda abierto |
-| `104_69` | **criterio \(\log X\) finito y diagonal Euler probados.** RH equivale a \(H_X^{-1}\sum_{n\le X}[n\{1+(n+1)e^{\lambda_n}\}]^{-1}\to0\). Con \(\varepsilon_X=e^{-X/100}\), los primeros \(X\) coeficientes se aproximan uniformemente y queda una única fórmula prima--Laguerre absolutamente convergente. El cuarteto da \(1/4\); separar polo y primos cuesta precisión \(e^{-X^2/100+O(X)}\) |
-| `104_69B` | **auditoría de novedad cerrada.** Li/Bombieri--Lagarias/Bucur et al. ya contienen el mecanismo de excursión exponencial, Palojärvi es adyacente por intervalos finitos y Bingham--Gashi contiene la capa log-Cesàro/Abel. No se localizó la forma exacta Fermi--bloque--producto--diagonal; se registra como repackaging/corolario, no como prioridad. La pieza potencialmente sustantiva es el refuerzo densidad/sindeticidad de `104_56`, si su prueba permanece íntegra |
-| `104_70` | **temperatura variable construida; ahorro polar descartado.** \(t_n=e^{-\sqrt n}\), \(b_n=e^{2\sqrt n}\) conserva un criterio Fermi equivalente a RH. En general, si \(\varepsilon_n\to0\) y \(t_n|p_n(\varepsilon_n)-1|\) queda acotado, entonces \(t_nR^n\to0\) para todo \(R>1\); esto contradice la sensibilidad necesaria a todo modo off-line. El lift acoplado existe, pero el costo relativo sigue siendo \(e^{-X^2/100+O(X)}\) |
-| `104_71` | **dualidad entrópica exacta; interacción refactorizada.** \(P_L^{-1}=C_L\mathbb E_{\nu_L}e^{-\sum B_n\lambda_n}\) y Gibbs reduce el supremo completo a perfiles Bernoulli \(q_n\). La entropía no crea interacción: toda correlación paga multiinformación. Bajo no-RH el logaritmo crece al menos como \(cR^{L^2}\); por ello basta una cota uniforme con slack \(\exp(o(L^2))\) en una subsucesión. La cota para los pesos reales queda abierta |
-| `104_72` | **razón de presiones acotada construida; transición emparejada abierta.** Para \(g_\tau(x)=\tau^{-1}\log\{(1+e^{-x})/(1+e^{-x-\tau})\}\), RH equivale a \(\sum_{n\in I_L}g_\tau(\lambda_n+\log(n+1))\to0\). Cada sitio aporta un factor entre \(1\) y \(e^\tau\), de modo que, a diferencia de `104_71`, la profundidad exponencial se satura y sobrevive solo la densidad de excursiones. El lift prima--Laguerre diagonal es exacto, pero la franja \(z\asymp1\) exige la diferencia prima--polo con error aditivo \(O(1)\), es decir precisión relativa \(e^{-X^2/100+O(1)}\) si se separan canales. El cuarteto da densidad \(1/4\); la cota para los pesos reales sigue abierta |
-| `104_73` | **representación Bernstein cerrada; rescates afín, Jensen y ancho variable descartados.** La medida positiva tiene masa \(\tau\), pero sus momentos vuelven a las particiones exponenciales. La anchura efectiva es \(w(\tau)=\tau/\tanh(\tau/4)\); transportar un bloque de \(L\) sitios requiere error uniforme \(o(w/L)\). Toda anchura sensible a cada \(R^X\) conserva el costo \(e^{-X^2/100+o(X)}\); una anchura que absorbe el polo destruye esa sensibilidad |
-| `104_74` | **Hadamard--Jensen construido; residuo interior aislado.** \(\sum e^{-t\lambda_n}z^n\) es entera de orden \(2/t\) bajo RH y tiene radio cero bajo no-RH. La presión es una mezcla exacta de incrementos de Jensen. Un contorno común a \(N\le n\le2N\) deja un término \(O(N^5\log^2N)\) y la suma finita de polos \(|w_\rho|<r_N\); ninguna estimación obtenida elimina esa suma. El truncamiento Hadamard necesita orden \(\Theta(2^n)\) en el cuarteto |
-| `104_75` | **criterio duro y profundo probado; cota aritmética abierta.** Para cualquier \(0<\alpha<1\), RH equivale a que los índices con \(\lambda_n+\log(n+1)\le-e^{X^\alpha}\) tengan densidad logarítmica tendiendo a cero. Con \(\alpha=1/2\) y \(\varepsilon_X=e^{-X/100}\), esto es exactamente el evento \(Q_{n,\varepsilon_X}\ge A_n+p_n(\varepsilon_X)+\log(n+1)+e^{\sqrt X}\). Poisson y Bessel cierran el primer momento, pero el cuarteto da primer momento \(4\) y colas no lineales \(1/4\) y \(1/8\); la estimación de densidad para los pesos reales no está probada |
-| `104_76` | **cola alta cerrada en valor absoluto; bloque bajo abierto.** Por cuartetos funcionales, \(\sup_{n\le X}|\lambda_n^{(\gamma>X^{1/4})}|\ll X\log X\,e^{\sqrt X/2}\). Si RH está verificada hasta \(X^{1/4}\), el indicador profundo vale cero en todos los grados \(n\le X\). Markov y segundo momento ya tienen margen después de retirar ese bloque; sin retirarlo, un solo cuarteto exterior fijo produce densidad positiva |
-| `104_77` | **reducción compleja cerrada; suma de residuos abierta.** Un radio seguro da \(\lambda_n=C_{n,n}-Z_n\) con \(C_{n,n}=O(n^5\log^2n)\), de modo que el criterio profundo equivale a una cola unilateral de la suma finita \(Z_n\). Jensen mide la masa interior, Cartan puede retirarla y Turán fuerza sus excursiones; ninguno prueba que sea nula. El cuarteto \(w=2i\) tiene continuación positiva en \(0<r<1\) y densidad profunda \(1/8\) |
-| `104_78` | **falsificador Euler reticular validado; alcance delimitado.** El monoide formal tiene primos con multiplicidad entera, torres unitarias, renovación exacta, FE y ley de grado \(6^k+1-3^k-2^k\), pero ceros off-line y densidad profunda \(1/4\). No satisface \(\psi(x)\sim x\) continuo: es reticular y tiene polos periódicos en \(\Re s=1\). Por tanto descarta solo teoremas universales basados en los axiomas discretos conservados |
-| `104_79` | **representación por ley zeta exacta; truncación separada descartada.** \(Q_{n,\varepsilon}-p_n(\varepsilon)=\mathbb E[J_n(N)-U_n(Y)]\). En la diagonal y para \(X/2\le n\le X\), los excesos positivo y negativo por encima de \(e^{\sqrt X}\) son \(\ge e^{X^2/500}\), ya sobre fibras prima y semiprima reales. Esto impide concentración más error de truncación por colas separadas; no excluye una identidad firmada que las cancele conjuntamente |
-| `104_80` | **identidad conjunta encontrada; cierre negativo.** \(\sum_{n\ge1}(Q_{n,\varepsilon}-p_n(\varepsilon))z^{n-1}=-\partial_z\log\{(s_\varepsilon(z)-1)\zeta(s_\varepsilon(z))\}\). La involución Möbius cancela las fibras multiprimo, pero un cero \(\rho\) produce el polo \(z_{\rho,\varepsilon}=(\rho-1-\varepsilon)/(\rho-\varepsilon)\) con coeficientes \(m_\rho z_{\rho,\varepsilon}^{-n}\). Un reagrupamiento exacto no puede borrarlo por unicidad meromorfa; el límite profundo sigue sin probarse |
+| `104_00` | **closed.** Two routes eliminated by duplication (lcm/Stieltjes ← Coffey; model space ← Suzuki). The finite range with verified height is mostly bibliographic ground: it is not the front |
+| `104_01` | **closed** (algebra + explicit Johnston--Yang PNT bound + diagnostic). Lowering \(\theta\) **gains nothing**: \(-2\theta A_n\le\mathcal N_n\le\frac12A_n\), indeterminate sign. **\(\theta=\frac14\) is fixed** |
+| `104_02` | **corrected by erratum.** The bound for \(\varepsilon_n^-=A_n-\lambda_n-\lambda_n(\sqrt n)\) and its old corollaries are withdrawn. The correct small coordinate is \(\widetilde\varepsilon_n=A_n-\lambda_n+\lambda_n(\sqrt n)\); by itself it does not produce a uniform unconditional bound for A1, because now the incomplete block must be controlled from below |
+| `104_03` | **closed.** Local contour and signs audited; the bare sum of trivial residues diverges and the exact canonical sum is \(\Delta A_n+(\gamma+\log4\pi)/2-1\) |
+| `104_10` | **closed as local no-go.** Finite identity and exact blocks; the local-PSD version died because crossings/boundaries have no sign and the real \(H_j\) changes sign |
+| `104_11` | **closed as global stop-gate.** The surviving correlator has zero Hessian: the two `max` energies cancel with the exact boundary and what remains is \(-\int E\tau'\). M1 does not contribute the inequality |
+| `104_12` | **closed as M5 audit.** The degree convolution is the Laguerre pullback of \(Z^{-1}\delta Z\); Riccati adds no sign and separating norms reproduces 103_71. There is no positive metric realizing \(Z^{-1}=Z^\dagger\) on a non-trivial divisor poset. M5 contributes no new bound today |
+| `104_13` | **closed as Selberg--Riccati stop-gate.** The exact recurrence preserves the pole--primes collision, but its centered coefficient cancels another piece of order \(\varepsilon^{-n-1}\). The positivity of \(\Lambda\log+\Lambda*\Lambda\) does not survive the pullback and its \(O(x)\) summation has dual norm at least \(n(n-1)^n-1\) for \(\varepsilon=1/n\) |
+| `104_14` | **closed as M3 stop-gate.** Directly for A1, \(C_n^\theta=\frac12\mathcal W_\zeta(f_n*f_n^\#)-\theta A_n-R_n\). The falsifier stays within the bulk and proves the zero--lobe map contributes no sign; a special theorem for the real sequence \(\Lambda\) is still missing |
+| `104_15` | **closed as minimal-complex stop-gate.** The divisor Koszul complex has a positive metric and \(d_E^2=0\); anticommutation cancels \(p/q\), but \(N_p=d_E\iota_p+\iota_pd_E\), so \(M\delta Z\) induces zero in cohomology. The scope does not include non-local complexes that do not make the \(N_p\) exact |
+| `104_16` | **closed as Jordan-cocycle stop-gate.** The hierarchy \(\mu*\log^k\) is non-negative, but the pole converts it into \(D_k-kD_{k-1}/(s-1)\). The first Cayley jet satisfies \(C_1<0<C_6\) with rational intervals; the falsifier \(\xi(s+a)\xi(s-a)\) preserves the positive Euler hierarchy and functional equation with off-line zeros. The completed family \(\xi(s-u)/\xi(s)\) is Schur for all \(u\downarrow0\) if and only if RH, and its half-budget returns exactly to \(\Delta D_n\ge0\) |
+| `104_17` | **closed as Abel--Fejér stop-gate of the incomplete block.** For every quartet, the radial Abel germ is positive even off-line. The exact witness \(w=2i\) has \(Q_4=-225/8\), \(F_8=-10885/128\) and, nevertheless, a positive Abel germ. No fixed-order radial average contributes the coefficient-by-coefficient lower bound |
+| `104_18` | **closed as correlated-shift stop-gate.** Keeping \(u=c\varepsilon\) produces a finite non-divergent identity, but removing the regulator brings back exactly \(C_n\). The real monotonicity of \((s-1)\zeta(s)\) is compatible with \(C_6>0\); the third difference in \(c\) has the sign opposite to Hausdorff's, and the uniqueness of Dirichlet series prevents identically annihilating the explicit channel with a non-trivial finite system of constant weights |
+| `104_19` | **closed as immediate-positivity stop-gate; global cocycle not ruled out.** \(A_u^2\) has coefficients \(J_u*J_u\ge0\) and Gamma a positive Beta measure, but the squared polar factor has measure \(\delta_0+c(cr-2)e^{-r}dr\), negative near zero for all \(c>0\). The three channels converge only when coupled and their limit is the strong gate \(-\Delta D_n\). The shifted falsifier shows that Jordan + Beta + functional equation do not by themselves determine the Cayley sign |
+| `104_20` | **closed locally; global gate active.** The identity \(b_u(p^k)=\nabla^2((k+1)p^{ku})\) absorbs tower and channels into \(\mathsf C_p^2\), but the square is not a norm. The degree-one block changes sign as the background \(m\) varies, and every even degree has infinitely many positive blocks. An uncertified diagnostic keeps \(g_n<0\) up to 1200; proving the sign of the global sum, preserving interactions between primes, is the live front |
+| `104_21` | **closed as global PF/TP/CM stop-gate.** \(\log N\) has an exact compound-Poisson measure increasing in \(u\), but the exponent lattice fails PF2 with minor \(-1/2916\). For \(u=1,\varepsilon=2\), the inverse Laplace of the full arithmetic--Gamma--polar cocycle has negative density at \(\frac12\log2\); there is no positive probabilistic representation that transfers the order to the gate. The global sign of \(g_n\) is neither refuted nor proved; the concrete successor is a signed Stein--Mecke inequality for the completed Laguerre test |
+| `104_22` | **reduction closed; cubic gate active.** The exact A0 estimate preserves \((1+T_n)^{-1}\), so \(D_n^{[3]}=3\lambda_n-A_n\ge0\) implies \(C_n(T_n)\ge0\) for \(T_n\ge2\). It is strictly weaker than the quadratic margin. The cocycle \(Y_3(s-u)/Y_3(s)=H_u^3K_u^2\), normalized by \(u(1-z)^2\), converges directly to \(-D_n^{[3]}\); the diagnostic remains negative up to index 1201, but proving its global sign is still missing |
+| `104_23` | **reduction closed; near-quartic gate active.** Since \(T_n\ge1000\), it suffices that \(D_n^{[r_*]}=r_*\lambda_n-A_n\ge0\), \(r_*=2002/501\), equivalent to requiring only \(\lambda_n/A_n\ge501/2002\). The real powers of Euler and Gamma preserve positive measures; the real pole is signed. It is the weakest uniform margin obtained so far using only the declared cutoff floor; absolute optimality is not claimed |
+| `104_24` | **four channels closed; positive Stein ruled out.** The direct normalization has base \(k+1\) and exact limit \(-(3\lambda_{k+1}-A_{k+1})\). The Lévy measure \(\nu_A^{[3]}+2\nu_K-3\nu_P\) enters a global Stein--Laguerre recurrence, but is negative on an interval before \(\log2\), even in the regulated limit. Only a specific non-local signed cancellation remains open |
+| `104_25` | **Fejér closed; circular global gate ruled out.** If \(\Re\Phi\le1\) on the disk, Herglotz--Fejér gives all the signs of the cubic margin. But the holomorphy of \(Y_3(s-u)/Y_3(s)\) on those disks as \(\varepsilon\downarrow0\) is already equivalent to RH. The safe Euler radius tends to zero and an exact polynomial witness prevents transferring its sign to the coefficient without damping |
+| `104_26` | **quartic attack closed as SOS no-go.** \(J_u^{*4}\) gives an exact fourth difference, but fails PF2 and the complete blocks change sign. The formal square \(H_u^4K_u^3=(H_u^2K_u^{3/2})^2\) linearizes when \(u\) is removed. The margin \(4\lambda_n-A_n\ge A_n/1001\) corresponds to the fixed cutoff based only on \(T\ge1000\); `104_56A` withdrew its claimed intrinsic necessity |
+| `104_27` | **tail sign ruled out from A0/VK.** Beyond the last Laguerre zero, two functions saturating the same envelope give \(R_n(T)\) strictly positive and strictly negative. The witness can be smoothed and preserve eventual monotonicity; it does not preserve prime support, which is precisely the new input that would be needed |
+| `104_28` | **fixed-vector bridge closed; \(v_{\max}\) diagnostic ruled out.** The Li test is exactly the hard-edge reproducing-kernel state \(g_n/\sqrt n\) and the prime sum is an Abel-renormalized form on that ray. The old whitened operator lives in another gauge; the natural polarization of \(A_n\) is indefinite, and the reference Gram normalizes by \(n\), not by \(A_n\). There is no faithful almost-extremal projector without first constructing a new closed renormalized form |
+| `104_29` | **\(\log2\) cut closed as identity, mass balance ruled out.** The valid version uses \(\varphi_n=L_{n-1}^{(1)}-n\) against the compensated generator. The outer block preserves all primes, but the bound needed on it is algebraically \(D_n^{[r]}\ge0\). Separating pole and primes costs \(\varepsilon^{-n}\) and repeats 103_53--103_57 |
+| `104_30` | **flag reference closed; spectral inequality open.** The diagonal positive form evaluates \(A_n\) exactly over every prefix and allows the faithful finite-section quotient. The mass diagnostic is favorable, but not certified; the Schur/Gershgorin bounds lose the cancellation and require the signed control of \(\Delta^2(A_n-\lambda_n)\), which is not proved |
+| `104_31` | **flow in \(\varepsilon\) closed as Hilbert stop-gate.** The unitary realization is \(Q=-M_x\). There is no regulator simultaneously safe for the separated Euler operator and for the inverse prefix transport. The reference \(A_{\rm flag}\) leaks outside its flag, does not symmetrize \(Q\), and preserves exactly the boundary \(1/2\). The coupled, renormalized form of `104_30` is not ruled out |
+| `104_32` | **higher powers removed from the regularization; prime--pole gate open.** The block \(k\ge2\) converges ordinarily and satisfies \(\lvert P_{n-1}^{(\ge2)}(1)\rvert<14n+1=o(A_n)\). In the quartic margin it enters with factor \(-4\), and its absorption by absolute value into \(A_n/1001\) is only proved from \(n\ge e^{112116}\), not from \(150\). The remaining exact obligation is the prime--pole inequality (26) of `104_32` |
+| `104_33` | **symbol closed; boundary-only proof ruled out.** Every zero with \(\Re\rho>1/2\) contributes exactly \(m_\rho\mathcal F_n(w_\rho)/[\rho(\rho-1)]\) to the moment. A reciprocal quartet leaves the real boundary identical and changes \(B_n/A_n\) exponentially; a proof must control the signed sum of residues with specific arithmetic, not assume Hardy holomorphy |
+| `104_34` | **curvature domination ruled out; adjacent compression open.** The ansatz \(q_d(B)\le(1501/2002)q_d(A)\) fails rigorously at \(d=220\), already within the infinite range. The exact flag compression produces \(\mathcal T_n=4H_nd_n-(H_n+d_n-H_{n+1})^2\); proving \(\mathcal T_n\ge0\) for all \(n\ge149\) propagates the finite certificate and closes the margin, but that signed theorem is not proved |
+| `104_35` | **\(\theta\) channel closed as identity; simple Selberg ruled out as coercivity.** The correct boundary is \(-n\), and obligation (26) of `104_32` becomes an exact \(\theta-x\) correlation. The Selberg measure of primes/semiprimes is positive, but its Hankel inverse has both signs. Even with support on the real primes, PNT and the Selberg scale do not fix the functional if a weight is altered; only a global theorem for the canonical weights \(\log p\) remains open |
+| `104_36` | **prime--pole Cholesky built and ruled out as norm closure.** For \(a>2\) the norm preserves all interactions within \(\lvert(s-1)^{-1}-Q(s)\rvert^2\). Its Laplace transform has, at \(z=\rho/a-1/2\), residue \(m_\rho[1-(1-a/\rho)^n]\): two consecutive \(L^2\) prefixes already exclude \(\Re\rho>a/2\), and critical zeros force \(\|V_{n,a}\|_2^2\gg(a-1)^{-1}\). Only a one-sided bound of the signed projection survives, not of the norm |
+| `104_37` | **the adjacent taper is closed as identity and ruled out as Hankel energy.** The form in \(g_n+t\phi_n\) preserves exactly the archimedean block, higher powers, and prime--pole. The collective inversion gives a kernel whose minor on \(\{R,2R\}\) is \(C^2e^{-6aR}R^{2d}(8^d-9^d+O(R^{-1}))<0\) for all \(t\), including \(t_n^*\). \(\mathcal T_n\ge0\) remains open via a special cancellation of the canonical weights, not via Hankel PSD |
+| `104_38` | **the Selberg completion of the Schur square is ruled out.** Keeping the full centered identity, \(-\langle G,\mu*\mu\rangle+\mathcal Q_G(\mu)=0\) exactly. If \(\mathcal Q_G\) is reserved to dominate the crossed entry, the difference kernel is already negative on a single canonical prime atom in the tail; moreover the square of the crossed response is not Hankel, with collision defect \(-2n^2a^4x^2+O(x^3)\). Only the joint signed value for the whole canonical measure remains open |
+| `104_39` | **adjacent Riccati closed as necessity stop-gate.** The determinant is equivalent to the triangular inequalities for \(\sqrt{H_n},\sqrt{d_n},\sqrt{H_{n+1}}\). An on-line quartet keeps \(H_n>0\) and breaks the gate exactly, so the gate is stronger than the objective; under RH it is indeed positive for all sufficiently large \(n\). Optimizing the reference gives the circular optimum \(D=H_n+H_{n+1}\), and the orthogonal-prefix reference only changes \(\Delta B_n\) by \(B_n+B_{n+1}\). The gate for zeta is not ruled out, but it stops being the only front |
+| `104_40` | **canonical Euler resolvent ruled out as commutative quadratic bound.** On the fixed ray, the optimal positive preconditioner replaces \(\Re M\) by \(-|M|\). Its cost diverges like \(\log(1/(a-1))\) from a non-resonant critical zero, while an off-line zero forces adding the residue upon crossing \(a=2\Re\rho\). Only a signed/non-commutative estimate or the criterion \(\mathcal T_n\ge0\) survives |
+| `104_41` | **complete phase bound proved on the Euler half-plane; transport ruled out without residues.** With \(F=(s-1)\zeta(s)\), \(\mathcal B_{n,a}=-(2\pi)^{-1}\int W_n\,d\arg F\), \(\mathrm{TV}(W_n)=8n\), and \(|\arg F|<3\pi/4\) give \(|\mathcal B_{n,a}|\le3n\) for \(a\ge4\). Transport to \(a=1\) crosses exactly the zeros with \(\Re\rho>1/2\); the defect is the signed sum of residues. The quartet \(w=i/2\) leaves the whole on-line phase identical and contributes \(2(2^{152}+2^{-152})-4>0\) to the defect. A specific theorem for the exact weights \(\Lambda(m)\) controlling those residues is still missing |
+| `104_42` | **non-commutative quadratic optimization ruled out; degree compression closed as stop-gate.** For the full Euler--pole operator, with all \(\Lambda(p^k)\), the algebraic infimum over every positive preconditioner is exactly \(|B_n|\); in the dangerous regime it returns the objective itself. If the vector continuation is in \(L^2\), every bounded cost requires \(\mathrm{cond}\,R\gg(a-1)^{-1}\). Projecting the first \(n\) states preserves phase and gives an exact formula in \(\Delta B_j\), but the new datum enters with gain \(\sqrt{n/2}>1\). A new arithmetic bound for an explicit \(R\) is not ruled out; optimization alone does not supply it |
+| `104_43` | **size-biased factorization closed; order and separate energy ruled out.** The canonical divisor selector preserves exactly all the \(\Lambda(p^k)\), but lies above the uniform selector at \(n=2\) and below it at \(n=30\). Its marginal error is exactly \(R\), and the Efron--Stein energy of the unscaled Laguerre diverges like \(\{\binom{2n-2}{n-1}-1\}\varepsilon^{-2n+2}\). Only a cross, signed, non-monotone comparison remains open |
+| `104_44` | **divisor--Markov transport closed as operator and scale stop-gate.** The `104_43` disintegration has norm one even at mean zero, so no global gap exists. The Gamma continuum does contract \(L_r(\varepsilon x)\), but recomposing \(L_r(x)\) carries a charge \((2/\varepsilon-1)^r\); for \(\varepsilon=1/n\) this reproduces the wall \(\exp(n\log n)\). A special estimate preserving the whole alternating sum is not ruled out |
+| `104_45` | **crossed coupling closed as identity and local stop-gate.** The Stein kernel is unique and independent of the coupling. It has pattern \(-,+,-\) around \(\log2\). The order \(R(q)<0\) holds for exponentials and their positive mixtures, but \(-R\) is not completely monotone; the Laguerre test recomposes exactly \(B_n\) |
+| `104_46` | **fixed-vector non-alignment ruled out.** For all \(s\in(1,s_0)\), the centered arithmetic Laguerre ratio converges to one; the split-Gamma one converges to zero. The centered ratios are also translation-invariant and do not observe the signed mean difference |
+| `104_47` | **size-biased flow closed as stop-gate.** The homotopy satisfies an exact equation between degrees, but integrating the flow gives \(\mathcal B_{n,a_0}-B_n\); requiring the needed sign is exactly the original margin. Generic positivity/Markov also holds for \(\zeta(s+c)\zeta(s-c)\) with off-line zeros |
+| `104_48` | **tower-by-tower phase closed; local multiplicity ruled out.** The Poisson formula gives only a non-summable minorant and also accepts the shifted weights. A full tower of multiplicity \(1+t\) preserves support, constancy, and PNT, but violates any proportional ceiling at \(n=151\). The only unfalsified input is the full unit renewal \(\Lambda*{\bf1}=\log\) |
+| `104_49` | **unit renewal closed as linear identity; coercivity still open.** The geometric Palm uniformly selects one height of the tower, a property \(\omega_c\) loses. However, at each degree the selector defect \(\kappa_r-m_r/r\) and the transport \(m_r/r-(r-1)!\varepsilon^{-r}\) exactly cancel \(m_r\), and the Laguerre recomposes \(B_n\). The conditioned defect already has both signs at \(n=151\). Only a non-linear correlation between several towers that does not vanish upon averaging survives |
+| `104_50` | **Palm covariance closed as stop-gate.** The centered kernel diagonalizes by tower. Keeping the total defect gives \(\mathrm{Cov}(D_f,D_g)+M_s(f)M_s(g)\); for the real test, completing the square produces variance plus \((\mathcal B_{n,s}-\kappa A_n)^2\). Derivative, primitive, and score revert to unknown coefficients or to the already open flow |
+| `104_51` | **quadratic Möbius inversion closed as stop-gate.** The congruence \(M^TKM=W\) eliminates every `lcm` correlation. For the infinite kernel, the difference between the energies is indefinite on a two-level vector; for \(P_{150}\), the local divisor cutoff has opposite signs at \(p=2,7\). That sign is not claimed for the infinite form on the fixed Laguerre. Polarizing the diagonal returns to a difference of squares without orientation |
+| `104_52` | **connected two-tower flow ruled out.** The exact Hessian of the margin preserves tower, pole, and Gamma, but the logarithmic projection cancels every pair of distinct towers with coefficient zero. It changes sign between \(s=1\) and \(s=10\), and its Laguerre cocycle also has both signs |
+| `104_53` | **additive polynomial hierarchy classified.** In the universal algebra of moments, the primitives are exactly the linear combinations of cumulants. Since the zeta cumulants are sums over a single tower, no finite-order additive polynomial identity can preserve a multi-tower reserve. The theorem does not cover arbitrary non-additive inequalities |
+| `104_54` | **Gibbs/Chernoff rigorously ruled out.** The unit Laguerre defect has arithmetic tails of both signs and order \((\log N)^n\), while the zeta law only decays like \(e^{-s\log N}\). All its non-trivial exponential moments diverge; adding pole or budget only shifts by a constant |
+| `104_55` | **canonical cubic forms ruled out.** The three-mark Palm preserves the disconnected moment, but the third central moment has no sign, the alternating determinant averages to zero, and its square is generic. Every orientation obtained by multiplying an independent copy by a positive energy factors exactly as energy times the margin. Only a non-canonical non-additive inequality correlating the local unit reflection with the total integer before the connected projection remains outside the no-go |
+| `104_56` | **quantifier rigorously reduced.** Under \(\neg\mathrm{RH}\), the margin failures contain a syndetic set of positive density. It suffices to prove good blocks of unbounded length or an exception of logarithmic density zero. This reduces the objective, but does not yet supply those blocks for zeta |
+| `104_56A` | **cofinal correction closed.** The cutoff can grow with \(n\) and with the slack; \(4\lambda_n>A_n\) closes A1 at an adapted cutoff. \(A_n/1001\) is not an intrinsic slack. The adaptation does not prove the slack it uses |
+| `104_56B` | **antecedent audit closed.** The dominant-mode/infinite-excursion part is already in Bombieri--Lagarias and later works. The topological reinforcement to positive density/syndeticity and the prime--Laguerre Fermi lift did not appear explicitly in the directed primary search; they are recorded as not located, not as established priority |
+| `104_57` | **low block isolated.** The RH-strength obligation stays at \(\asymp\sqrt n\log n\) labels below \(\sqrt n\), with transport error of the same scale and an explicit budget criterion. No new lower bound was obtained |
+| `104_58` | **fixed translational average ruled out.** Every fixed window preserves the outer modes and fails on positive density under \(\neg\mathrm{RH}\). The Euler phase at \(a\ge4\) also fails to control those failures when crossing to \(a=1\) |
+| `104_59` | **classical majorization ruled out.** The unlabeled masses lose \(m\mapsto\log m\), the Laguerre terms have no global curvature, and the divisor selector reverses orientation. Only the same specific signed global comparison for \(\Lambda\) survives |
+| `104_60` | **non-linear barrier built; estimate open.** For any \(b_n=e^{o(n)}\), RH is equivalent to the saturated negative depth having mean zero on a sequence of long intervals. The criterion passes the quartet and stays outside 104_17/104_53, but proving its mean for zeta is still missing |
+| `104_61` | **exact partitions built; bounds open.** RH is already equivalent to \(\lambda_n\ge-1\) on unbounded blocks and to the bounded Fermi partition \(\mathfrak F_{t,b}(X)\) tending to zero. Its paired prime--Laguerre form is exact and preserves the density relaxation. \(\mathcal Z_t(X)=O_t(\log X)\) remains as a stronger auxiliary criterion that does imply a degree-by-degree bound |
+| `104_62` | **unitary Fermi lift built; diagonal branch closed.** The signal of an excursion \(-Y\) lives at \(s=O(Y^{-1})\), so every polynomial resolution fails on the quartet. The change \(s=e^{-nv}\) fixes that rate, but the radial generating function sees a geometric product, not the arithmetic mean; at the boundary there is no finite-order truncation |
+| `104_63` | **cross-degree energy closed as no-go.** \(\limsup \mathcal E_N^{1/(4N)}=1/r_0\) localizes exactly the first transformed pole. Parseval/CD preserves the complete square, but every separated estimate loses a cancellation of order \(\varepsilon^{-4N}\) |
+| `104_64` | **exact logarithmic Abel; microfrequency truncation closed.** The Cesàro Fermi average tends to zero if and only if its Abel average does; even a radial subsequence suffices. The infinite outer prime--Laguerre lift is exact. In the quartet, the bad correction obeys a uniform law in \(\alpha=\log\log(1/s)/\log(1/h)\), and capturing it completely requires reaching \(s=\exp(-c/h)\). A prior cancellation among all channels is not ruled out |
+| `104_65` | **local filters classified and closed.** Every finite filter that does not annihilate the outer modes preserves negative exponential excursions on a syndetic set; fixed differences and moving averages do not fabricate good blocks. An exact annihilator can hide the quartet, so it is not a faithful detector either |
+| `104_66` | **regulator--Abel diagonal proved; separation closed.** With \(\varepsilon(h)=e^{-1/(100h)}\), \(\lambda_{n,\varepsilon(h)}\to\lambda_n\) uniformly for \(n\le1/h\), and the Fermi criterion can be formulated with a single absolutely convergent Euler series. Separating pole and primes requires relative precision \(\exp(-C/h^2+O(1/h))\); the full product returns to the unknown Fermi phase |
+| `104_67` | **two-sided dichotomy proved.** If RH is false, there are positive and negative excursions of the same maximal exponential rate on respective syndetic sets of positive density. Consequently an upper, lower, or two-sided subexponential barrier on blocks of unbounded length suffices; transporting the upper Euler bound from \(a\ge4\) to \(a=1\) crosses the same off-line residues |
+| `104_68` | **block selector and double limit eliminated.** The deterministic windows \(I_L=[L^2,L^2+L-1]\) suffice: the Fermi sum tends to zero and the associated product to one under RH, while under non-RH the sum has \(\liminf\ge1\) and the product tends to zero. With \(\varepsilon_L=e^{-(L^2+L-1)/100}\) a single convergent Euler family remains. The prime--Laguerre gas is still non-interacting; proving its bound is open |
+| `104_69` | **finite \(\log X\) criterion and Euler diagonal proved.** RH is equivalent to \(H_X^{-1}\sum_{n\le X}[n\{1+(n+1)e^{\lambda_n}\}]^{-1}\to0\). With \(\varepsilon_X=e^{-X/100}\), the first \(X\) coefficients are uniformly approximated and a single absolutely convergent prime--Laguerre formula remains. The quartet gives \(1/4\); separating pole and primes costs precision \(e^{-X^2/100+O(X)}\) |
+| `104_69B` | **novelty audit closed.** Li/Bombieri--Lagarias/Bucur et al. already contain the exponential-excursion mechanism, Palojärvi is adjacent via finite intervals, and Bingham--Gashi contains the log-Cesàro/Abel layer. The exact Fermi--block--product--diagonal form was not located; it is recorded as a repackaging/corollary, not as a priority. The potentially substantive piece is the density/syndeticity reinforcement of `104_56`, if its proof remains intact |
+| `104_70` | **variable temperature built; polar saving ruled out.** \(t_n=e^{-\sqrt n}\), \(b_n=e^{2\sqrt n}\) preserves a Fermi criterion equivalent to RH. In general, if \(\varepsilon_n\to0\) and \(t_n|p_n(\varepsilon_n)-1|\) stays bounded, then \(t_nR^n\to0\) for all \(R>1\); this contradicts the sensitivity required to every off-line mode. The coupled lift exists, but the relative cost remains \(e^{-X^2/100+O(X)}\) |
+| `104_71` | **exact entropic duality; interaction refactored.** \(P_L^{-1}=C_L\mathbb E_{\nu_L}e^{-\sum B_n\lambda_n}\) and Gibbs reduces the full supremum to Bernoulli profiles \(q_n\). Entropy creates no interaction: every correlation pays multi-information. Under non-RH the logarithm grows at least like \(cR^{L^2}\); hence a uniform bound with slack \(\exp(o(L^2))\) on a subsequence suffices. The bound for the real weights remains open |
+| `104_72` | **bounded pressure ratio built; paired transition open.** For \(g_\tau(x)=\tau^{-1}\log\{(1+e^{-x})/(1+e^{-x-\tau})\}\), RH is equivalent to \(\sum_{n\in I_L}g_\tau(\lambda_n+\log(n+1))\to0\). Each site contributes a factor between \(1\) and \(e^\tau\), so, unlike `104_71`, exponential depth saturates and only the excursion density survives. The diagonal prime--Laguerre lift is exact, but the band \(z\asymp1\) requires the prime--pole difference with additive error \(O(1)\), i.e. relative precision \(e^{-X^2/100+O(1)}\) if channels are separated. The quartet gives density \(1/4\); the bound for the real weights remains open |
+| `104_73` | **Bernstein representation closed; affine, Jensen, and variable-width rescues ruled out.** The positive measure has mass \(\tau\), but its moments return to the exponential partitions. The effective width is \(w(\tau)=\tau/\tanh(\tau/4)\); transporting a block of \(L\) sites requires uniform error \(o(w/L)\). Any width sensitive to every \(R^X\) preserves the cost \(e^{-X^2/100+o(X)}\); a width that absorbs the pole destroys that sensitivity |
+| `104_74` | **Hadamard--Jensen built; interior residue isolated.** \(\sum e^{-t\lambda_n}z^n\) is entire of order \(2/t\) under RH and has zero radius under non-RH. The pressure is an exact mixture of Jensen increments. A common contour for \(N\le n\le2N\) leaves a term \(O(N^5\log^2N)\) and the finite sum of poles \(|w_\rho|<r_N\); no estimate obtained eliminates that sum. The Hadamard truncation needs order \(\Theta(2^n)\) in the quartet |
+| `104_75` | **hard, deep criterion proved; arithmetic bound open.** For any \(0<\alpha<1\), RH is equivalent to the indices with \(\lambda_n+\log(n+1)\le-e^{X^\alpha}\) having logarithmic density tending to zero. With \(\alpha=1/2\) and \(\varepsilon_X=e^{-X/100}\), this is exactly the event \(Q_{n,\varepsilon_X}\ge A_n+p_n(\varepsilon_X)+\log(n+1)+e^{\sqrt X}\). Poisson and Bessel close the first moment, but the quartet gives first moment \(4\) and nonlinear tails \(1/4\) and \(1/8\); the density estimate for the real weights is not proved |
+| `104_76` | **high tail closed in absolute value; low block open.** By functional quartets, \(\sup_{n\le X}|\lambda_n^{(\gamma>X^{1/4})}|\ll X\log X\,e^{\sqrt X/2}\). If RH is verified up to \(X^{1/4}\), the deep indicator is zero at every degree \(n\le X\). Markov and the second moment already have margin after removing that block; without removing it, a single fixed outer quartet produces positive density |
+| `104_77` | **complex reduction closed; sum of residues open.** A safe radius gives \(\lambda_n=C_{n,n}-Z_n\) with \(C_{n,n}=O(n^5\log^2n)\), so the deep criterion is equivalent to a one-sided tail of the finite sum \(Z_n\). Jensen measures the interior mass, Cartan can remove it, and Turán forces its excursions; none proves it is zero. The quartet \(w=2i\) has positive continuation on \(0<r<1\) and deep density \(1/8\) |
+| `104_78` | **lattice Euler falsifier validated; scope delimited.** The formal monoid has primes with integer multiplicity, unit towers, exact renewal, FE, and a degree law \(6^k+1-3^k-2^k\), but off-line zeros and deep density \(1/4\). It does not satisfy continuous \(\psi(x)\sim x\): it is lattice-based and has periodic poles on \(\Re s=1\). Hence it rules out only universal theorems based on the preserved discrete axioms |
+| `104_79` | **exact zeta-law representation; separate truncation ruled out.** \(Q_{n,\varepsilon}-p_n(\varepsilon)=\mathbb E[J_n(N)-U_n(Y)]\). On the diagonal and for \(X/2\le n\le X\), the positive and negative excesses above \(e^{\sqrt X}\) are \(\ge e^{X^2/500}\), already over real prime and semiprime fibers. This prevents concentration plus separate truncation error over the tails; it does not exclude a signed identity cancelling them jointly |
+| `104_80` | **joint identity found; negative closure.** \(\sum_{n\ge1}(Q_{n,\varepsilon}-p_n(\varepsilon))z^{n-1}=-\partial_z\log\{(s_\varepsilon(z)-1)\zeta(s_\varepsilon(z))\}\). The Möbius involution cancels the multiprime fibers, but a zero \(\rho\) produces the pole \(z_{\rho,\varepsilon}=(\rho-1-\varepsilon)/(\rho-\varepsilon)\) with coefficients \(m_\rho z_{\rho,\varepsilon}^{-n}\). An exact regrouping cannot erase it by meromorphic uniqueness; the deep limit remains unproved |
 
-| 104_81 | **detector adversarial validado.** Para el cuarteto \(\{i,-i,i,-i\}\), \(\ell_n=4-4\cos(\pi n/2)\ge0\) y la densidad profunda es \(0\). Para \(\{Ri,-Ri,i/R,-i/R\}\), \(R=201/200\), solo \(4\mid n\) produce \(-\Theta(R^n)\) y la densidad es \(1/8\); \(R<e^{1/100}\) conserva el resultado bajo \(\varepsilon_X=e^{-X/100}\). Un par adicional de productos Euler con multiplicidades primas no negativas separa \(0\) (todos los ceros on-line) de \(1/4\) (ceros off-line). Esto descarta tautología y error de signo, pero no establece el límite para la zeta real |
+| 104_81 | **adversarial detector validated.** For the quartet \(\{i,-i,i,-i\}\), \(\ell_n=4-4\cos(\pi n/2)\ge0\) and the deep density is \(0\). For \(\{Ri,-Ri,i/R,-i/R\}\), \(R=201/200\), only \(4\mid n\) produces \(-\Theta(R^n)\) and the density is \(1/8\); \(R<e^{1/100}\) preserves the result under \(\varepsilon_X=e^{-X/100}\). An additional pair of Euler products with non-negative prime multiplicities separates \(0\) (all zeros on-line) from \(1/4\) (off-line zeros). This rules out tautology and sign error, but does not establish the limit for the real zeta |
 
-**Objetivo, en su forma exacta** (independiente de Lagarias, \(\theta=\frac14\)):
+**Objective, in its exact form** (independent of Lagarias, \(\theta=\frac14\)):
 \[
 \int_{\log2}^{T_n}\bigl(\psi(e^u)-e^u\bigr)e^{-u}L_{n-1}^{(2)}(u)\,du
 \ \le\ \tfrac34A_n+1-L_n^{(1)}(\log2)
-\qquad(n\ge150),\ \text{incondicionalmente},
+\qquad(n\ge150),\ \text{unconditionally},
 \]
-equivalentemente
+equivalently
 \[
  A_n-\lambda_n+R_n(T_n)\le\tfrac34A_n
  \iff
  \lambda_n\ge\tfrac14A_n+R_n(T_n).
 \]
-En la coordenada incompleta corregida, la misma desigualdad es
+In the corrected incomplete coordinate, the same inequality is
 \[
  -\lambda_n(\sqrt n)+\widetilde\varepsilon_n+R_n(T_n)
  \le\tfrac34A_n.
 \]
 
-**Dos trampas registradas, que no deben repetirse:**
-1. No existe una cota incondicional
-   \(|A_n-\lambda_n-\lambda_n(\sqrt n)|\ll\sqrt n\log n\). El resto pequeño tiene el signo
-   opuesto, \(A_n-\lambda_n+\lambda_n(\sqrt n)\), y usar el resto antiguo como pequeño introduce
-   exactamente contenido RH-strength.
-2. Para A1 no basta \(\lambda_n>0\): la condición exacta es
-   \(\lambda_n\ge A_n/4+R_n(T_n)\). La antigua cota grosera de A0 hacía
-   suficiente el **strong margin** \(2\lambda_n-A_n\ge0\), pero no necesario.
-   Para un cutoff prescrito, reteniendo el factor de A0 basta el margen
-   dependiente de \(T_n\); el valor \(r_*=2002/501\) es solo la versión uniforme
-   obtenida del piso \(T\ge1000\). Si se permite aumentar el cutoff después de
-   conocer una holgura positiva, \(4\lambda_n>A_n\) es suficiente. Separadamente,
-   \(4\lambda_n-A_n\ge0\) para todos los índices ya prueba RH directamente y no
-   necesita pasar por A1.
+**Two recorded traps, not to be repeated:**
+1. There is no unconditional bound
+   \(|A_n-\lambda_n-\lambda_n(\sqrt n)|\ll\sqrt n\log n\). The small remainder has the
+   opposite sign, \(A_n-\lambda_n+\lambda_n(\sqrt n)\), and using the old remainder as the small one introduces
+   exactly RH-strength content.
+2. For A1, \(\lambda_n>0\) is not enough: the exact condition is
+   \(\lambda_n\ge A_n/4+R_n(T_n)\). The old coarse bound of A0 made
+   the **strong margin** \(2\lambda_n-A_n\ge0\) sufficient, but not necessary.
+   For a prescribed cutoff, retaining the A0 factor, the margin depending
+   on \(T_n\) suffices; the value \(r_*=2002/501\) is only the uniform version
+   obtained from the floor \(T\ge1000\). If the cutoff is allowed to grow after
+   a positive slack is known, \(4\lambda_n>A_n\) is sufficient. Separately,
+   \(4\lambda_n-A_n\ge0\) for all indices already proves RH directly and does
+   not need to go through A1.
 
-**Nuevo frente maestro.** Para cerrar la afirmación literal de esta fase sigue
-haciendo falta A1 en cada \(n\ge150\). Para probar RH basta ahora un objetivo
-mucho más débil: por ejemplo \(\lambda_n\ge-1\) en bloques consecutivos de
-longitudes no acotadas, o, para \(b_n=\log(n+1)\) y algún \(t>0\), el límite
+**New master front.** To close the literal statement of this phase, A1
+is still needed for every \(n\ge150\). To prove RH, a much weaker
+objective now suffices: for example \(\lambda_n\ge-1\) on consecutive blocks of
+unbounded lengths, or, for \(b_n=\log(n+1)\) and some \(t>0\), the limit
 \[
  \mathfrak F_{t,b}(X)
  ={1\over H_X}\sum_{n\le X}{1\over n}
  {1\over1+e^{t(\lambda_n+b_n)}}\longrightarrow0.
 \]
-`104_61` da una representación aritmética exacta de esa partición que mantiene
-acoplados polo, Gamma, primos y potencias primas. Ningún documento actual
-prueba todavía el límite para la zeta real. La cota
-\(\mathcal Z_t(X)\ll_t\log X\) sigue disponible como blanco auxiliar, pero es
-coeficiente a coeficiente y no es el frente de densidad. `104_62` y
-`104_63` registran que Fourier unitario, escalado diagonal, Parseval y
-Christoffel--Darboux tampoco aportan esa estimación. `104_64` permite buscar
-el límite sobre una sola subsucesión Abel, pero prueba que truncar la capa
-antes de \(s=\exp(-c/h)\) pierde una contribución de orden uno en el
-falsificador. `104_68` elimina incluso la elección de los intervalos: basta
-probar
+`104_61` gives an exact arithmetic representation of that partition keeping
+pole, Gamma, primes, and prime powers coupled. No current document
+yet proves the limit for the real zeta. The bound
+\(\mathcal Z_t(X)\ll_t\log X\) remains available as an auxiliary target, but it is
+coefficient-by-coefficient and not the density front. `104_62` and
+`104_63` record that unitary Fourier, diagonal scaling, Parseval, and
+Christoffel--Darboux do not contribute that estimate either. `104_64` allows searching
+for the limit over a single Abel subsequence, but proves that truncating the layer
+before \(s=\exp(-c/h)\) loses an order-one contribution in the
+falsifier. `104_68` eliminates even the choice of intervals: it suffices to
+prove
 \[
  \sum_{n=L^2}^{L^2+L-1}{1\over1+(n+1)e^{\lambda_n}}\longrightarrow0,
 \]
-equivalentemente que el producto complementario tienda a uno. `104_69`
-elimina el doble límite del frente global: con \(\varepsilon_X=e^{-X/100}\),
-RH equivale a que tienda a cero una única media finita en \(n\le X\), cuya
-entrada prima--Laguerre es absolutamente convergente para cada \(X\). La
-cota de cualquiera de estas dos expresiones para los pesos reales
-\(\Lambda(m)\) sigue abierta y es exactamente el contenido RH-strength.
-`104_71` debilita todavía más el blanco de ventanas: no hace falta probar el
-límite cero. Basta acotar, en una subsucesión, el supremo entrópico combinado
-contra \(G_{L,q}=\sum q_nL_{n-1}^{(1)}\) por cualquier
-\(B_L=\exp(o(L^2))\). La dualidad prueba que esta formulación es exacta, pero
-también que la entropía por sí sola no suministra la cota.
-`104_72` conserva mejor la relajación original: basta demostrar
+equivalently that the complementary product tends to one. `104_69`
+eliminates the double limit of the global front: with \(\varepsilon_X=e^{-X/100}\),
+RH is equivalent to a single finite average over \(n\le X\) tending to zero, whose
+prime--Laguerre input is absolutely convergent for each \(X\). The
+bound for either of these two expressions for the real weights
+\(\Lambda(m)\) remains open and is exactly the RH-strength content.
+`104_71` weakens the window target even further: proving the zero
+limit is not needed. It suffices to bound, on a subsequence, the combined entropic
+supremum against \(G_{L,q}=\sum q_nL_{n-1}^{(1)}\) by any
+\(B_L=\exp(o(L^2))\). The duality proves this formulation is exact, but
+also that entropy alone does not supply the bound.
+`104_72` better preserves the original relaxation: it suffices to prove
 \[
  \sum_{n\in I_L}{1\over\tau}\log
  {1+e^{-(\lambda_n+\log(n+1))}
   \over1+e^{-(\lambda_n+\log(n+1)+\tau)}}\longrightarrow0.
 \]
-El observable es una razón de presiones con factores uniformemente acotados;
-bajo no-RH crece linealmente en la cantidad de sitios malos. Su forma Euler
-diagonal está cerrada, pero la cota para \(\Lambda(m)\) sigue siendo el único
-input RH-strength.
-`104_73` y `104_74` auditan directamente esa última frase: Bernstein,
-Jensen, ancho variable y exponenciación Hadamard dan representaciones exactas,
-pero no una cota superior de la diferencia ya cancelada. `104_75` reduce el
-blanco todavía más. Con
+The observable is a pressure ratio with uniformly bounded factors;
+under non-RH it grows linearly in the number of bad sites. Its diagonal
+Euler form is closed, but the bound for \(\Lambda(m)\) remains the only
+RH-strength input.
+`104_73` and `104_74` directly audit that last claim: Bernstein,
+Jensen, variable width, and Hadamard exponentiation give exact representations,
+but not an upper bound for the already-cancelled difference. `104_75` reduces the
+target even further. With
 \[
  \varepsilon_X=e^{-X/100},\qquad
  Q_{n,\varepsilon}
  =\sum_{m\ge2}{\Lambda(m)\over m^{1+\varepsilon}}
  L_{n-1}^{(1)}(\log m),
 \]
-basta demostrar
+it suffices to prove
 \[
  {1\over H_X}\sum_{n\le X}{1\over n}
  {\bf1}_{\left\{
@@ -709,466 +709,467 @@ basta demostrar
  A_n+p_n(\varepsilon_X)+\log(n+1)+e^{\sqrt X}
  \right\}}\longrightarrow0.                              \tag{Deep-\Lambda}
 \]
-Este enunciado solo excluye sobrepasos de tamaño \(e^{\sqrt X}\) en densidad
-logarítmica positiva; no pide signo, transición \(O(1)\), ni control grado a
-grado. Es el blanco aritmético más débil del ledger y es equivalente a RH.
-La identidad poissonizada de Bessel controla únicamente el primer momento;
-el cuarteto da primer momento inocuo y, simultáneamente, una cola profunda de
-densidad positiva. Ningún documento actual prueba (Deep-\(\Lambda\)) para los
-pesos reales.
-`104_76` sí elimina incondicionalmente la cola
-\(\gamma>X^{1/4}\) con margen \(e^{\sqrt X/2}\): si los ceros del bloque
-\(\gamma\le X^{1/4}\) están en la recta, el indicador es cero en todos los
-grados \(n\le X\). `104_77` confirma desde el contorno que ese bloque bajo
-es exactamente la suma finita de residuos interiores; Jensen, Cartan y Turán
-la detectan pero no aportan la cota unilateral. Por tanto el frente ya no
-contiene ceros altos, una cola condicional ni un problema de primer momento:
-contiene solamente la exclusión aritmética de un polo interior bajo.
-`104_78` muestra que renovación unitaria, torres, positividad, FE y una
-ley prima fuerte **de grado** todavía admiten ese polo; el modelo deja de ser
-comparable justo en el PNT continuo, el soporte ordinario y Gamma. `104_79`
-usa ya la ley zeta y los \(\Lambda(m)\) reales, pero prueba que sus colas
-prima y semiprima antes de promediar tienen excesos bilaterales
-\(e^{\Theta(X^2)}\). Por tanto tampoco sirve truncarlas o concentrarlas por
-separado. Sobrevive únicamente una cancelación firmada conjunta, específica
-de la ubicación ordinaria \(\{\log p\}\), el polo y Gamma.
-`104_80` ejecuta esa cancelación conjunta a nivel de identidad:
+This statement only excludes overshoots of size \(e^{\sqrt X}\) in positive
+logarithmic density; it asks for no sign, no \(O(1)\) transition, and no
+degree-by-degree control. It is the weakest arithmetic target in the ledger and is
+equivalent to RH.
+The Poissonized Bessel identity controls only the first moment;
+the quartet gives an innocuous first moment and, simultaneously, a deep tail of
+positive density. No current document proves (Deep-\(\Lambda\)) for the
+real weights.
+`104_76` does unconditionally eliminate the tail
+\(\gamma>X^{1/4}\) with margin \(e^{\sqrt X/2}\): if the zeros of the block
+\(\gamma\le X^{1/4}\) are on the line, the indicator is zero at every
+degree \(n\le X\). `104_77` confirms from the contour that this low block
+is exactly the finite sum of interior residues; Jensen, Cartan, and Turán
+detect it but do not contribute the one-sided bound. Hence the front no longer
+contains high zeros, a conditional tail, or a first-moment problem:
+it contains only the arithmetic exclusion of a low interior pole.
+`104_78` shows that unit renewal, towers, positivity, FE, and a
+strong prime **degree** law still allow that pole; the model stops being
+comparable exactly at the continuous PNT, ordinary support, and Gamma. `104_79`
+already uses the zeta law and the real \(\Lambda(m)\), but proves that its prime
+and semiprime tails before averaging have bilateral excesses
+\(e^{\Theta(X^2)}\). Hence truncating or concentrating them
+separately does not work either. Only a joint signed cancellation, specific
+to the ordinary location \(\{\log p\}\), the pole, and Gamma, survives.
+`104_80` carries out that joint cancellation at the identity level:
 \[
  \sum_{n\ge1}(Q_{n,\varepsilon}-p_n(\varepsilon))z^{n-1}
  =-\partial_z\log\{(s_\varepsilon(z)-1)
                      \zeta(s_\varepsilon(z))\}.
 \]
-La involución Möbius elimina exactamente las fibras multiprimo, pero deja
-las torres \(p^k\), y cada cero exterior reaparece como un polo interior de
-residuo positivo. Por unicidad meromorfa, ninguna reescritura exacta de esa
-convolución puede suministrar la cota: el sucesor tendría que ser una
-desigualdad nueva sobre la ubicación de los primos ordinarios, no otra
-identidad algebraica.
+The Möbius involution exactly eliminates the multiprime fibers, but leaves
+the towers \(p^k\), and every outer zero reappears as an interior pole of
+positive residue. By meromorphic uniqueness, no exact rewriting of that
+convolution can supply the bound: the successor would have to be a
+new inequality on the location of the ordinary primes, not another
+algebraic identity.
 
-**Política de fuentes** (`104_00` §7): arXiv, Zenodo, repositorios institucionales y revistas
-con revisión por pares son admisibles para importar resultados. ResearchGate, Academia.edu y
-viXra no justifican ningún lema, pero se registran y comparan como posibles antecedentes de
-prioridad.
+**Source policy** (`104_00` §7): arXiv, Zenodo, institutional repositories, and peer-reviewed
+journals are admissible for importing results. ResearchGate, Academia.edu, and
+viXra do not justify any lemma, but are recorded and compared as possible
+priority antecedents.
 
-104_81 somete ese observable a dos controles adversariales. El cuarteto
-crítico lo anula exactamente, mientras el cuarteto exterior de radio
-\(201/200\) produce densidad \(1/8\) y permanece estable bajo la diagonal
-\(\varepsilon_X=e^{-X/100}\). Un segundo par con productos Euler y
-multiplicidades primas no negativas separa igualmente densidad \(0\)
-(todos los ceros sobre la línea) de \(1/4\) (ceros fuera). Así queda
-verificado que el gate detecta el fenómeno correcto y no es una tautología
-de la normalización. Estos controles no prueban su anulación para los
-pesos ordinarios \(\Lambda(m)\).
+104_81 subjects that observable to two adversarial controls. The critical
+quartet annihilates it exactly, while the outer quartet of radius
+\(201/200\) produces density \(1/8\) and remains stable under the diagonal
+\(\varepsilon_X=e^{-X/100}\). A second pair with Euler products and
+non-negative prime multiplicities likewise separates density \(0\)
+(all zeros on the line) from \(1/4\) (zeros off it). This
+verifies that the gate detects the correct phenomenon and is not a tautology
+of the normalization. These controls do not prove its vanishing for the
+ordinary weights \(\Lambda(m)\).
 
-`104_82` elimina la independencia racional de las longitudes como posible
-input faltante. El lift toral da Haar y Parseval, pero la evaluación
-*untwisted* es no acotada; además, el modelo Euler exterior puede deformarse
-a longitudes totalmente \(\mathbb Q\)-independientes sin perder su densidad
-profunda positiva. `104_83` hace la auditoría theta complementaria: todos
-los cumulantes entran en Deep-\(\Lambda\), la cola theta puntualmente menor
-que \(1/300\) cancela el cien por ciento de los jets de borde del primer
-modo, y ni dominancia modal, PF finito ni una parte imaginaria unilateral
-controlan la transformada completa.
+`104_82` eliminates the rational independence of the lengths as a possible
+missing input. The toral lift gives Haar and Parseval, but the
+*untwisted* evaluation is unbounded; moreover, the outer Euler model can be deformed
+to totally \(\mathbb Q\)-independent lengths without losing its positive
+deep density. `104_83` performs the complementary theta audit: all
+cumulants enter Deep-\(\Lambda\), the theta tail pointwise smaller
+than \(1/300\) cancels one hundred percent of the first mode's boundary
+jets, and neither modal dominance, finite PF, nor a one-sided imaginary part
+control the complete transform.
 
-`104_84` identifica canónicamente la obstrucción restante. Para
-\(E(z)=(s(z)-1)\zeta(s(z))\), \(s(z)=(1-z)^{-1}\), Deep-\(\Lambda\) equivale
-a la ausencia de su factor de Blaschke interior. Jensen da exactamente
+`104_84` canonically identifies the remaining obstruction. For
+\(E(z)=(s(z)-1)\zeta(s(z))\), \(s(z)=(1-z)^{-1}\), Deep-\(\Lambda\) is equivalent
+to the absence of its interior Blaschke factor. Jensen gives exactly
 \[
  {1\over2\pi}\int_{-\infty}^{\infty}
  {\log|\zeta(1/2+it)|\over t^2+1/4}\,dt
  =-\log B(0)\ge0,
 \]
-y RH equivale a la igualdad. El mismo documento prueba que toda identidad
-Euler local analítica —Möbius, *squarefree*, \(\zeta(2s)\), o una
-combinación finita— conserva ese factor interior o borra también el
-observable. Por tanto el único sucesor no descartado es una desigualdad
-genuinamente no local para los primos ordinarios que pruebe \(B(0)=1\).
+and RH is equivalent to equality. The same document proves that every local
+analytic Euler identity —Möbius, *squarefree*, \(\zeta(2s)\), or a
+finite combination— preserves that interior factor or also erases the
+observable. Hence the only successor not ruled out is a genuinely non-local
+inequality for the ordinary primes proving \(B(0)=1\).
 
-`104_85` prueba que las dos realizaciones no locales inmediatas conservan
-exactamente la misma obstrucción. Un producto *all-primes* renormalizado es
-entero, cero-libre y converge a \((s-1)\zeta(s)\) hasta \(\Re s=1\); su
-convergencia local uniforme en \(\Re s>1/2\) equivale a RH por Hurwitz. La
-forma Nyman--Báez-Duarte mantiene todas las interacciones mediante el kernel
-PSD \(1/\max(m,n)\), pero cada cero derecho fuerza una distancia
-\((2\beta-1)/|\rho|^2\). Probar que esa distancia se anula vuelve a ser
-exactamente \(B\equiv1\).
+`104_85` proves that the two immediate non-local realizations preserve
+exactly the same obstruction. A renormalized *all-primes* product is
+entire, zero-free, and converges to \((s-1)\zeta(s)\) up to \(\Re s=1\); its
+uniform local convergence on \(\Re s>1/2\) is equivalent to RH by Hurwitz. The
+Nyman--Báez-Duarte form keeps all interactions via the
+PSD kernel \(1/\max(m,n)\), but every right-hand zero forces a distance
+\((2\beta-1)/|\rho|^2\). Proving that distance vanishes again amounts
+exactly to \(B\equiv1\).
 
-`104_86` ensaya una coordenada de signo único distinta. El kernel Bose
-\(q(x)=x^{-1}-(e^x-1)^{-1}>0\) satisface
-\(-\Gamma(s)\zeta(s)=\int x^{s-1}q(x)dx\) y la autorreflexión exacta
+`104_86` tests a different single-sign coordinate. The Bose kernel
+\(q(x)=x^{-1}-(e^x-1)^{-1}>0\) satisfies
+\(-\Gamma(s)\zeta(s)=\int x^{s-1}q(x)dx\) and the exact self-reflection
 \[
  q(x)={1\over\pi}\int_0^\infty q(t)
        \sin\!\left({xt\over2\pi}\right)dt.
 \]
-El operador seno es necesariamente firmado. El kernel es PF2/log-cóncavo
-en escala logarítmica, pero falla complete monotonicity con el menor exacto
-\(-1/144\), y no es PF infinito. Una mezcla positiva explícita conserva
-signo, monotonía, asintóticos y la misma autorreflexión, pero introduce
-cuartetos off-line. Por tanto tampoco esas propiedades fuerzan el caso
-Deep-\(\Lambda\)=0.
+The sine operator is necessarily signed. The kernel is PF2/log-concave
+on a logarithmic scale, but fails complete monotonicity with the exact minor
+\(-1/144\), and is not infinitely PF. An explicit positive mixture preserves
+sign, monotonicity, asymptotics, and the same self-reflection, but introduces
+off-line quartets. Hence these properties do not force the
+Deep-\(\Lambda\)=0 case either.
 
-`104_87` cierra la auditoría de la sección finita de Nyman sin reabrir
-Hurwitz como frente. La inversión de \(1/\max(m,n)\) es tridiagonal y la
-identidad \(\mu*1=\delta\) anula exactamente el residual en
-\((1/N,1]\). Toda la energía queda en una cola positiva de pisos. En su
-primer bloque aparece exactamente
-\(M(m)-M(N)+N\sum_{k\le N}\mu(k)/k\); PNT no controla la escala cuadrática
-necesaria. El inverso resuelve el prefijo, no la cola.
+`104_87` closes the audit of the Nyman finite section without reopening
+Hurwitz as a front. The inversion of \(1/\max(m,n)\) is tridiagonal and the
+identity \(\mu*1=\delta\) exactly annihilates the residual on
+\((1/N,1]\). All the energy stays in a positive tail of floors. Its
+first block contains exactly
+\(M(m)-M(N)+N\sum_{k\le N}\mu(k)/k\); PNT does not control the quadratic scale
+needed. The inverse resolves the prefix, not the tail.
 
-`104_88` vuelve al observable directo y genera una visualización
-reproducible. La zeta ordinaria tiene indicador profundo cero en el rango
-diagnóstico estable \(n\le2000\); el cuarteto exterior crece hacia su límite
-exacto \(1/8\). También prueba la unicidad pertinente: cualquier función
-meromorfa con la derivada logarítmica de los \(\Lambda(m)\) ordinarios y la
-misma normalización es la propia \(\zeta\). Por ello no existe un
-contra-modelo distinto con **todos** los pesos exactos; excluir que la zeta
-misma tenga un cero exterior sigue siendo precisamente Deep-\(\Lambda\).
+`104_88` returns to the direct observable and produces a reproducible
+visualization. The ordinary zeta has deep indicator zero in the stable
+diagnostic range \(n\le2000\); the outer quartet grows toward its exact
+limit \(1/8\). It also proves the relevant uniqueness: any meromorphic
+function with the logarithmic derivative of the ordinary \(\Lambda(m)\) and the
+same normalization is \(\zeta\) itself. Hence there is no
+distinct counter-model with **all** the exact weights; excluding that zeta
+itself has an outer zero remains precisely Deep-\(\Lambda\).
 
-`104_89` normaliza las truncaciones Euler globales de `104_85` y prueba
-que su log-módulo tiene media de Poisson exactamente cero para cada corte.
-La media del límite \((s-1)\zeta(s)\) es el defecto BSY
-\(D_B=-\log|B(0)|\). De aquí sale el blanco unilateral exacto
+`104_89` normalizes the global Euler truncations of `104_85` and proves
+that their log-modulus has exactly zero Poisson mean for every cutoff.
+The mean of the limit \((s-1)\zeta(s)\) is the BSY defect
+\(D_B=-\log|B(0)|\). From this follows the exact one-sided target
 \[
  D_B\le\int
  \bigl(\log|(s-1)\zeta(s)|-\log|\widehat F_X(s)|\bigr)_+\,d\nu.
 \]
-Probar que el miembro derecho tiende a cero para alguna sucesión de cortes
-probaría RH. Un pozo de Poisson explícito muestra que convergencia interior,
-convergencia fronteriza casi en todas partes y media cero no bastan; una
-familia \(\xi(s-a)\xi(s+a)\) muestra lo mismo aun con canal Euler positivo
-sobre las potencias de los primos ordinarios. La pieza no probada sigue
-siendo impedir ese escape usando las alturas **exactas** \(\Lambda(m)\).
-El mismo documento prueba ahora la dirección recíproca condicional:
-bajo RH, la energía de Cramér permite escoger una subsucesión de cortes con
-convergencia \(L^1(\nu)\). Así el gate con subsucesión es equivalente a RH,
-no una condición accidentalmente más fuerte.
+Proving that the right-hand side tends to zero for some sequence of cutoffs
+would prove RH. An explicit Poisson sink shows that interior convergence,
+almost-everywhere boundary convergence, and zero mean do not suffice; a
+family \(\xi(s-a)\xi(s+a)\) shows the same even with a positive Euler channel
+over the ordinary prime powers. The unproved piece remains
+preventing that escape using the **exact** heights \(\Lambda(m)\).
+The same document now proves the conditional converse direction:
+under RH, the Cramér energy allows choosing a subsequence of cutoffs with
+\(L^1(\nu)\) convergence. Thus the gate with a subsequence is equivalent to RH,
+not an accidentally stronger condition.
 
-104_90 efectiviza el ataque directo a la escala profunda. Una altura
-verificada \(H\), VK y el conteo \(\mathcal N(T)\le25T\log T\) dan
+104_90 makes the direct attack on the deep scale effective. A verified
+height \(H\), VK, and the count \(\mathcal N(T)\le25T\log T\) give
 \[
  \lambda_n\ge-500n(\log(2n)+1)(1+e^{a_Hn}),
  \qquad a_H<{1\over2H^2},
 \]
-y por ello solamente
-\(\limsup\mathcal D_X\le1/2\), no el límite cero. Para
-\(H=3\cdot10^{12}\), el cambio de régimen aparece cerca de
-\(3.24\cdot10^{50}\). El mismo documento subordina el modelo reticular
-exterior a la torre \(7^k\): conserva pesos Euler no negativos, PNT de
-tipo VK y un completamiento entero simétrico, pero tiene ceros exteriores.
-Sus polos Euler adicionales y sus pesos modificados impiden llamarlo
-contraejemplo a RH; prueba exactamente que ese paquete amplio no sustituye
-los valores ordinarios literales.
+and therefore only
+\(\limsup\mathcal D_X\le1/2\), not the zero limit. For
+\(H=3\cdot10^{12}\), the regime change appears near
+\(3.24\cdot10^{50}\). The same document subordinates the outer lattice
+model to the tower \(7^k\): it preserves non-negative Euler weights, PNT of
+VK type, and a symmetric integer completion, but has outer zeros.
+Its additional Euler poles and its modified weights prevent calling it a
+counterexample to RH; it proves exactly that this broad package does not substitute for
+the literal ordinary values.
 
-`104_91` audita la forma dual de `104_89`. Por Bochner, exigir que
-\(K\) y \(e^{-|y|/2}-K\) sean definidas positivas es exactamente
-equivalente a \(K=\widehat{\varphi\nu}\) con
-\(0\leq\varphi\leq1\): el minimax PD no relaja el selector unilateral. La
-parte Euler--comparador se escribe en una sola integral contra
-\(d(J-\mathrm{Li})\). Además, para cada prefijo \(M\) se construye
-un contramodelo que conserva todos los pesos ordinarios hasta \(M\) y
-todas salvo una torre prima remota, junto con
-positividad, PNT/VK y simetría funcional, pero tiene un cero derecho y
-defecto Jensen explícito. Esto descarta cierres por compactación de
-prefijos o por las restricciones PD solas; no descarta una desigualdad que
-use literalmente todas las torres y el completamiento exacto de Riemann.
+`104_91` audits the dual form of `104_89`. By Bochner, requiring
+\(K\) and \(e^{-|y|/2}-K\) to be positive definite is exactly
+equivalent to \(K=\widehat{\varphi\nu}\) with
+\(0\leq\varphi\leq1\): the PD minimax does not relax the one-sided selector. The
+Euler--comparator part is written as a single integral against
+\(d(J-\mathrm{Li})\). Moreover, for each prefix \(M\) a
+counter-model is built that preserves all the ordinary weights up to \(M\) and
+all but one remote prime tower, together with
+positivity, PNT/VK, and functional symmetry, but has a right-hand zero and
+an explicit Jensen defect. This rules out closures by prefix
+compactification or by the PD constraints alone; it does not rule out an inequality that
+literally uses all the towers and the exact Riemann completion.
 
-`104_92` suaviza directamente el cutoff Euler, sin volver a Hurwitz o
-Nyman. Las medias Riesz--Cesàro y el Abel aritmético
-\(e^{-\varepsilon m}\) conservan los pesos ordinarios literales, son
-cero-libres y tienen media Poisson cero. El Abel en \(\log X\) se calcula
-exactamente como \(H(s+\eta)/H(1+\eta)\), de modo que su barrera
-\(\eta=1/2\) es otra forma de la frontera RH. Un spike alineado demuestra
-que toda matriz positiva regular puede conservar íntegra la fuga unilateral.
-Un modelo continuo con medida de Mangoldt positiva, PNT
-\(x+O(x^\beta)\), polo simple y ceros simétricos \(\beta,1-\beta\)
-cuantifica la falla: los defectos Cesàro y Abel crecen respectivamente como
-\(X^{\beta-1/2}/\log^2X\) y
-\(\varepsilon^{1/2-\beta}/\log^2(1/\varepsilon)\). El modelo no conserva
-el soporte ni los valores ordinarios; por tanto cierra el principio general
-de tightness, no el target exacto para \(\Lambda(m)\).
+`104_92` directly smooths the Euler cutoff, without returning to Hurwitz or
+Nyman. The Riesz--Cesàro averages and the arithmetic Abel
+\(e^{-\varepsilon m}\) preserve the literal ordinary weights, are
+zero-free, and have zero Poisson mean. The Abel average in \(\log X\) computes
+exactly as \(H(s+\eta)/H(1+\eta)\), so its barrier
+\(\eta=1/2\) is another form of the RH boundary. An aligned spike demonstrates
+that every regular positive matrix can preserve the one-sided leak intact.
+A continuous model with positive Mangoldt measure, PNT
+\(x+O(x^\beta)\), simple pole, and symmetric zeros \(\beta,1-\beta\)
+quantifies the failure: the Cesàro and Abel defects grow respectively like
+\(X^{\beta-1/2}/\log^2X\) and
+\(\varepsilon^{1/2-\beta}/\log^2(1/\varepsilon)\). The model preserves
+neither the support nor the ordinary values; hence it closes the general
+tightness principle, not the exact target for \(\Lambda(m)\).
 
-`104_93` registra la energía discreta exacta
+`104_93` records the exact discrete energy
 \[
  \mathcal E(N)=\sum_{m\le N}{1\over m(m+1)}
  \left\{\sum_{2\le n\le m}{\Lambda(n)-1\over\log n}\right\}^{\!2}
 \]
-y prueba
+and proves
 \(\mathrm{RH}\Longleftrightarrow\sup_N\mathcal E(N)<\infty
-\Longleftrightarrow\mathcal E(N)=N^{o(1)}\). Un cero de parte real
-\(\beta>1/2\) fuerza exponente energético al menos \(2\beta-1\). La
-identidad finita del kernel es
-\(1/\max(r,s)-(N+1)^{-1}\): el término faltante vive en el cociente
-\(r/s\), mientras toda la jerarquía Selberg empuja las marcas al producto
-\(rs\). Al centrar, el segundo coeficiente ya satisface
-\(r(2)<0<r(3)\); sin centrar, la positividad pierde la cancelación con el
-comparador. Por tanto variar el orden de Selberg o aplicar Vaughan con
-normas diagonales no prueba la cota: conservar la correlación firmada deja
-exactamente una condición equivalente a RH. El documento no establece esa
-cota incondicionalmente. La equivalencia (L^2) continua subyacente es
-clásica (marco Cramér--Ingham--Titchmarsh); queda pendiente el gate externo
-con referencias exactas y no se reclama novedad para esa equivalencia ni
-para su discretización estándar. Esta coordenada queda fuera del frente
-activo porque pierde el andamiaje compacto--cola de Li--Laguerre.
+\Longleftrightarrow\mathcal E(N)=N^{o(1)}\). A zero of real part
+\(\beta>1/2\) forces an energy exponent of at least \(2\beta-1\). The
+finite kernel identity is
+\(1/\max(r,s)-(N+1)^{-1}\): the missing term lives in the quotient
+\(r/s\), while the whole Selberg hierarchy pushes the marks toward the product
+\(rs\). Upon centering, the second coefficient already satisfies
+\(r(2)<0<r(3)\); without centering, positivity loses the cancellation with the
+comparator. Hence varying the Selberg order or applying Vaughan with
+diagonal norms does not prove the bound: preserving the signed correlation leaves
+exactly a condition equivalent to RH. The document does not establish that
+bound unconditionally. The underlying continuous \((L^2)\) equivalence is
+classical (the Cramér--Ingham--Titchmarsh framework); the external gate
+with exact references remains pending, and no novelty is claimed for that equivalence or
+for its standard discretization. This coordinate stays outside the
+active front because it loses the Li--Laguerre compact--tail scaffolding.
 
-`104_94` separa por primera vez esa energía en el canal de primos
-ordinarios y el de potencias propias. La identidad exacta
-\(\Lambda(p^k)/\log(p^k)=1/k\) da
+`104_94` separates for the first time that energy into the ordinary-prime
+channel and the proper-power channel. The exact identity
+\(\Lambda(p^k)/\log(p^k)=1/k\) gives
 \[
  B_m=\pi(m)-\sum_{n=2}^m{1\over\log n}
      +\sum_{k\ge2}{1\over k}\pi(m^{1/k}).
 \]
-Usando solo Chebyshev, el último sumando es
-\(O(\sqrt m/\log m+m^{1/3})\), y por tanto tiene energía discreta
-finita. Se sigue que \(\mathcal E(N)=N^{o(1)}\) equivale exactamente a
-la misma cota para \(\pi(m)-\mathrm{Li}_2(m)\). La inversión de
-Möbius muestra además que \(J\leftrightarrow\pi\) es un cambio de
-coordenadas finito e invertible; lcm frente a radical del factorial añade
-precisamente el bloque de potencias de energía finita. Esto descarta que la
-contabilidad exacta de potencias primas sea la desigualdad ausente: el
-obstáculo vive ya en la colocación de los primos ordinarios. No prueba la
-cota subpolinomial ni RH.
+Using only Chebyshev, the last summand is
+\(O(\sqrt m/\log m+m^{1/3})\), and hence has finite discrete
+energy. It follows that \(\mathcal E(N)=N^{o(1)}\) is exactly equivalent to
+the same bound for \(\pi(m)-\mathrm{Li}_2(m)\). Möbius
+inversion also shows that \(J\leftrightarrow\pi\) is a finite, invertible
+change of coordinates; lcm versus the factorial's radical adds
+precisely the finite-energy power block. This rules out the exact
+accounting of prime powers being the missing inequality: the
+obstacle already lives in the placement of the ordinary primes. It does not prove the
+subpolynomial bound or RH.
 
-`104_95` cierra la variante Landau basada en polinomios diferenciales de
-\(\ell=-\zeta'/\zeta\). En orden cuadrático, la única combinación no
-constante que cancela ambos términos polares en \(s=1\) es
-\(A(\ell'+\ell^2+2\gamma\ell)\); su coeficiente primo
-\(A\log p(2\gamma-\log p)\) cambia de signo ya entre \(p=2\) y
-\(p=11\). Más generalmente, si
-\(P(\ell,\delta\ell,\ldots,\delta^r\ell)\) tiene coeficientes de Dirichlet
-no negativos y es holomorfo en \(1\), entonces \(P\) es constante. La
-prueba aísla cada grado sobre productos *squarefree* de exactamente ese
-número de primos y usa la divergencia de \(\sum_p1/p\). Por tanto ningún
-polinomio diferencial de coeficientes constantes puede cancelar el polo,
-conservar positividad y retener polos en los ceros. El teorema extiende el
-gate Riccati particular de `104_13`; no cubre operadores no polinómicos o
-no locales y no prueba RH.
+`104_95` closes the Landau variant based on differential polynomials of
+\(\ell=-\zeta'/\zeta\). At quadratic order, the only non-constant
+combination that cancels both polar terms at \(s=1\) is
+\(A(\ell'+\ell^2+2\gamma\ell)\); its prime coefficient
+\(A\log p(2\gamma-\log p)\) already changes sign between \(p=2\) and
+\(p=11\). More generally, if
+\(P(\ell,\delta\ell,\ldots,\delta^r\ell)\) has non-negative Dirichlet
+coefficients and is holomorphic at \(1\), then \(P\) is constant. The
+proof isolates each degree over *squarefree* products of exactly that
+number of primes and uses the divergence of \(\sum_p1/p\). Hence no
+constant-coefficient differential polynomial can cancel the pole,
+preserve positivity, and retain poles at the zeros. The theorem extends the
+particular Riccati gate of `104_13`; it does not cover non-polynomial or
+non-local operators, and it does not prove RH.
 
-`104_102` cierra la ampliación analítica/racional de ese gate. Para un
-germen holomorfo arbitrario
-\(\Phi(\ell_0,\ldots,\ell_r)\), el soporte *squarefree* de exactamente
-\(k\) primos sigue aislando el grado \(k\) del Taylor infinito. Si la
-serie de Dirichlet ensamblada tiene coeficientes no negativos, llega a
-\(\Re s>1\) y la misma rama es holomorfa en \(1\), la divergencia de
-\(\sum_p1/p\) fuerza que todos los grados positivos desaparezcan. Para
-cocientes racionales se prueba además que poseer una serie de Dirichlet
-ordinaria ya fuerza regularidad en el origen: al proyectar sobre
-\(r+1\) primos, el jacobiano
-\((\log p_i)^{j+1}\) es Vandermonde e invertible. La salvedad exacta es
-que holomorfía solo local en \(1\) no basta:
-\(1/(c-\ell_0)\) tiene coeficientes positivos y un cero en \(1\), pero
-fabrica un polo real \(\sigma_c>1\). En general, todo transformado no
-constante de esta clase tiene abscisa \(\sigma_c>1\), que Landau convierte
-en una singularidad real situada antes que los ceros no triviales. No
-surge una prueba de la cota energética ni de RH.
+`104_102` closes the analytic/rational extension of that gate. For an
+arbitrary holomorphic germ
+\(\Phi(\ell_0,\ldots,\ell_r)\), the *squarefree* support of exactly
+\(k\) primes still isolates degree \(k\) of the infinite Taylor expansion. If the
+assembled Dirichlet series has non-negative coefficients, reaches
+\(\Re s>1\), and the same branch is holomorphic at \(1\), the divergence of
+\(\sum_p1/p\) forces all positive degrees to vanish. For
+rational quotients it is further proved that possessing an ordinary Dirichlet
+series already forces regularity at the origin: projecting onto
+\(r+1\) primes, the Jacobian
+\((\log p_i)^{j+1}\) is Vandermonde and invertible. The exact caveat is
+that holomorphy merely local at \(1\) is not enough:
+\(1/(c-\ell_0)\) has positive coefficients and a zero at \(1\), but
+produces a real pole \(\sigma_c>1\). In general, every non-constant transform
+of this class has abscissa \(\sigma_c>1\), which Landau turns
+into a real singularity located before the non-trivial zeros. No
+proof of the energy bound or of RH arises.
 
-`104_96` calcula la energía discreta literal hasta \(N=10^7\) y la separa
-en bloques diádicos. En el rango \(9\le j\le23\) se observa
-\(0.0519<j^2\Delta_j<0.0982\), lo que propone el blanco falsable y
-sumable \(\Delta_j\le1/(8j^2)\). Probarlo para todos los bloques implicaría
-RH por `104_93`; el cálculo finito no lo prueba. Controles prescritos con
-primitivo \(m^\beta\cos(7\log m)/\log m\) verifican escala constante en
-\(\beta=1/2\) y crecimiento \(2^{(2\beta-1)j}\) en \(\beta=0.65\). El
-mismo diagnóstico refuta monotonía de \(j^2\Delta_j\) y la cota más fuerte
-\(1/(20j^2)\). Se auditan la tabla de potencias primas, `float64` frente a
-`longdouble` y la independencia del *chunk*; sigue faltando demostrar una
-cota sumable para todos los bloques.
+`104_96` computes the literal discrete energy up to \(N=10^7\) and splits
+it into dyadic blocks. In the range \(9\le j\le23\), one observes
+\(0.0519<j^2\Delta_j<0.0982\), which proposes the falsifiable, summable
+target \(\Delta_j\le1/(8j^2)\). Proving it for all blocks would imply
+RH via `104_93`; the finite computation does not prove it. Prescribed controls with
+primitive \(m^\beta\cos(7\log m)/\log m\) verify constant scale at
+\(\beta=1/2\) and growth \(2^{(2\beta-1)j}\) at \(\beta=0.65\). The
+same diagnostic refutes monotonicity of \(j^2\Delta_j\) and the stronger bound
+\(1/(20j^2)\). The prime-power table, `float64` versus
+`longdouble`, and chunk independence are audited; proving a
+summable bound for all blocks is still missing.
 
-`104_97` audita adversarialmente la constante candidata \(1/8\). Para el
-primitivo crítico exacto
-\(B_m=c\sqrt m\cos(\gamma\log m+\phi)/\log m\) prueba
+`104_97` adversarially audits the candidate constant \(1/8\). For the
+exact critical primitive
+\(B_m=c\sqrt m\cos(\gamma\log m+\phi)/\log m\), it proves
 \[
  j^2\Delta_j={c^2\over\log^22}
  \int_{(j-1)\log2}^{j\log2}\cos^2(\gamma t+\phi)\,dt+o(1).
 \]
-Con \(c=1,\gamma=7\), el liminf es mayor que \(0.574>1/8\); con la
-normalización de residuo de un par crítico de multiplicidad cuatro en la
-primera ordenada, es mayor que \(0.222>1/8\). Por tanto \(1/8\) no es una
-constante impuesta por la escala o por la mera localización espectral en
-la línea. Estos son controles críticos, no la zeta ordinaria: no refutan
-la cota para sus pesos. El blanco de `104_96` queda como conjetura
-aritmética adicional de fuerza al menos RH, no como consecuencia
-automática de RH; el control general válido bajo RH es solamente la
-sumabilidad de los bloques.
+With \(c=1,\gamma=7\), the liminf exceeds \(0.574>1/8\); with the
+residue normalization of a critical pair of multiplicity four at the
+first ordinate, it exceeds \(0.222>1/8\). Hence \(1/8\) is not a
+constant imposed by the scale or by mere spectral localization on
+the line. These are critical controls, not the ordinary zeta: they do not refute
+the bound for its weights. The `104_96` target remains an additional
+arithmetic conjecture of strength at least RH, not an automatic
+consequence of RH; the general control valid under RH is only the
+summability of the blocks.
 
-`104_98` factoriza exactamente la energía literal de
-\(P_m=\pi(m)-\mathrm{Li}_2(m)\) sobre la recta Mellin:
+`104_98` exactly factors the literal energy of
+\(P_m=\pi(m)-\mathrm{Li}_2(m)\) on the Mellin line:
 \[
  \sum_{m\le N}{P_m^2\over m(m+1)}
  ={1\over2\pi}\int_{\mathbb R}
  \left|{\Phi_N(1/2+it)\over1/2+it}\right|^2dt,
 \]
-con el borde móvil
+with the moving boundary
 \(\Phi_N(s)=\sum_{m\le N}(P_m-P_{m-1})m^{-s}
--P_N(N+1)^{-s}\). Su símbolo infinito es prime-zeta menos el comparador
-discretizado; la diferencia con
-\(E_1((s-1)\log2)\) es holomorfa en \(\Re s>0\). En
-\(\Re s>1/2\), un cero exterior de multiplicidad \(m\) produce
-exactamente la rama \(m\log(s-\rho)\). La monodromía tiene un piso Hardy
-positivo \(m^2\pi^2/6\), pero ese piso pertenece al promedio de las dos
-hojas. En una sola hoja queda el término firmado
-\(\pm2\pi m\,\Im\Phi_0\). La fórmula explícita reproduce la misma pérdida:
-diagonal cero--cero positiva más interferencias de ambos signos. Así se
-localiza exactamente el signo ausente, pero no se demuestra la cota
-energética subpolinomial ni RH.
+-P_N(N+1)^{-s}\). Its infinite symbol is the prime zeta minus the
+discretized comparator; the difference with
+\(E_1((s-1)\log2)\) is holomorphic on \(\Re s>0\). On
+\(\Re s>1/2\), an outer zero of multiplicity \(m\) produces
+exactly the branch \(m\log(s-\rho)\). The monodromy has a positive Hardy
+floor \(m^2\pi^2/6\), but that floor belongs to the average of the two
+sheets. On a single sheet, the signed term
+\(\pm2\pi m\,\Im\Phi_0\) remains. The explicit formula reproduces the same loss:
+positive zero-zero diagonal plus interferences of both signs. This
+exactly localizes the missing sign, but does not prove the
+subpolynomial energy bound or RH.
 
-`104_99` ejecuta el ataque exacto de Eratóstenes sobre el núcleo de
-`104_94`. Con \(P(z)=\prod_{p\le z}p\), prueba
+`104_99` runs the exact Eratosthenes attack on the `104_94` kernel. With
+\(P(z)=\prod_{p\le z}p\), it proves
 \[
  \pi(x)=\pi(\sqrt x)-1+
  \sum_{d\mid P(\sqrt x)}\mu(d)\lfloor x/d\rfloor
 \]
-y mantiene, sin módulos, el residuo firmado completo. La pareja de
-paridad \(a_n^\pm=1\pm(-1)^{\Omega(n)}\) produce además la identidad
-exacta
+and keeps, without moduli, the complete signed residue. The parity
+pair \(a_n^\pm=1\pm(-1)^{\Omega(n)}\) additionally produces the exact
+identity
 \[
  \sum_{d\mid P(\sqrt x)}L(\lfloor x/d\rfloor)
  =1+\pi(\sqrt x)-\pi(x),
  \qquad L(y)=\sum_{n\le y}(-1)^{\Omega(n)}.
 \]
-Como \(1+\pi(\sqrt m)\) tiene energía finita, RH equivale a energía
-subpolinomial de
+Since \(1+\pi(\sqrt m)\) has finite energy, RH is equivalent to subpolynomial
+energy of
 \(\mathrm{Li}_2(m)+\sum_{d\mid P(\sqrt m)}L(\lfloor m/d\rfloor)\).
-Esto no prueba esa cota, pero localiza la cancelación completa. Para todo
-nivel \(D\le x^{1-\eta}\), los datos de divisibilidad de \(a^+\) y
-\(a^-\) difieren en \(O_A(x/\log^A x)\) para todo \(A\), mientras sus
-masas cribadas difieren en \(\sim2x/\log x\). Por ello ninguna
-inclusión--exclusión/criba estable de nivel subcompleto puede cerrar la
-energía; el nivel completo escapa al falsificador, pero allí la identidad
-recompone exactamente el error primo original.
+This does not prove that bound, but localizes the complete cancellation. For every
+level \(D\le x^{1-\eta}\), the divisibility data of \(a^+\) and
+\(a^-\) differ by \(O_A(x/\log^A x)\) for every \(A\), while their
+sieved masses differ by \(\sim2x/\log x\). Hence no stable
+inclusion--exclusion/sieve at a sub-complete level can close the
+energy; the full level escapes the falsifier, but there the identity
+exactly recomposes the original prime error.
 
-`104_100` ejecuta el promedio de las dos hojas de `104_98` con el
-completamiento exacto. Escribiendo
-\(\Phi=\log\xi+G\), ecuación funcional y conjugación centran las hojas de
-\(\log\xi\), pero en el símbolo primo queda exactamente
+`104_100` runs the two-sheet average of `104_98` with the
+exact completion. Writing
+\(\Phi=\log\xi+G\), the functional equation and conjugation center the sheets of
+\(\log\xi\), but in the prime symbol exactly
 \[
- |\Phi_+|^2-|\Phi_-|^2=4\pi m\,\Im G(1/2+i\gamma).
+ |\Phi_+|^2-|\Phi_-|^2=4\pi m\,\Im G(1/2+i\gamma)
 \]
-Las simetrías preservan, en vez de invertir, el carácter de monodromía.
-En los prefijos reales, el promedio se reduce exactamente a la
-descomposición pitagórica entre \(\Re\Phi_N\) e \(\Im\Phi_N\); ambos
-polinomios siguen siendo monovaluados y no contienen la diagonal.
-Un cuarteto polinomial funcionalmente simétrico con corrector entero
-\(c(s-1/2)\) cancela exactamente una hoja y duplica la otra, de modo que
-el promedio no selecciona la hoja aritmética. Para la zeta real, el
-corrector tampoco es una perturbación finita:
-\(\Re G(1/2+it)=\pi|t|/4+O(\sqrt{|t|}+\log|t|)\), y su energía en
-\([T,2T]\) es \((\pi^2/16+o(1))T\). BSY conserva el factor de Blaschke
-interior y Weil conserva el defecto radial firmado del cuarteto. Por tanto
-el completamiento no entrega la cota subpolinomial ni prueba RH.
+remains. The symmetries preserve, rather than invert, the monodromy
+character. In the real prefixes, the average reduces exactly to the
+Pythagorean decomposition between \(\Re\Phi_N\) and \(\Im\Phi_N\); both
+polynomials remain single-valued and do not contain the diagonal.
+A functionally symmetric polynomial quartet with integer corrector
+\(c(s-1/2)\) exactly cancels one sheet and doubles the other, so
+the average does not select the arithmetic sheet. For the real zeta, the
+corrector is also not a finite perturbation:
+\(\Re G(1/2+it)=\pi|t|/4+O(\sqrt{|t|}+\log|t|)\), and its energy on
+\([T,2T]\) is \((\pi^2/16+o(1))T\). BSY preserves the interior Blaschke
+factor and Weil preserves the signed radial defect of the quartet. Hence
+the completion does not deliver the subpolynomial bound nor prove RH.
 
-`104_101` pasa la energía de `104_94` a gaps consecutivos sin pérdida. En
-cada celda \([p_k,p_{k+1})\) obtiene
+`104_101` carries the `104_94` energy over to consecutive gaps without loss. In
+each cell \([p_k,p_{k+1})\) it obtains
 \[
  \mathcal E_k=W_k(c_k-\bar\ell_k)^2+V_k,
  \qquad W_k=p_k^{-1}-p_{k+1}^{-1},
  \qquad c_{k+1}=c_k+1-\ell_{k,g_k}.
 \]
-La completación cuadrática decide el signo del intento variacional: la
-convexidad da un mínimo celular, mientras la cota superior requiere
-controlar el paseo acumulado de los gaps normalizados. Para cualquier
-rueda fija \(W\), \(1/2<\beta<1\) y \(c>0\), construye una sucesión
-\(0\)-\(1\), apoyada en \((n,W)=1\), con PNT/VK, gaps
-\(O(\log x)\) y
+The quadratic completion decides the sign of the variational attempt: the
+convexity gives a cellular minimum, while the upper bound requires
+controlling the accumulated walk of the normalized gaps. For any
+fixed wheel \(W\), \(1/2<\beta<1\), and \(c>0\), it constructs a
+\(0\)-\(1\) sequence, supported on \((n,W)=1\), with PNT/VK, gaps
+\(O(\log x)\), and
 \[
  A(x)-\sum_{n\le x}{1\over\log n}=cx^\beta+O(1),\qquad
  \mathcal E_A(N)\sim{c^2\over2\beta-1}N^{2\beta-1}.
 \]
-Así las restricciones relajadas de composición, densidad y gap no
-fuerzan energía subpolinomial. Imponer a la vez «seleccionado implica
-primo» y «omitido implica compuesto» deja el singleton de los primos
-literales; no queda una comparación convexa independiente y estimarlo es
-el problema original.
+Thus the relaxed restrictions on composition, density, and gap do not
+force subpolynomial energy. Imposing simultaneously "selected implies
+prime" and "omitted implies composite" leaves the singleton of the
+literal primes; no independent convex comparison remains and estimating it is
+the original problem.
 
-`104_103` refuerza adversarialmente ese diagnóstico hasta la composición
-de Euler abstracta. Para cualquier cero prescrito
-\(\rho=\beta+i\gamma\), \(1/2<\beta<1\), y cualquier rueda fija,
-redondea la densidad
+`104_103` adversarially reinforces that diagnostic up to abstract Euler
+composition. For any prescribed zero
+\(\rho=\beta+i\gamma\), \(1/2<\beta<1\), and any fixed wheel,
+it rounds the density
 \[
  {1-2x^{\beta-1}\cos(\gamma\log x)\over\log x}
 \]
-a una escalera literal \(0\)-\(1\), de normas enteras y gaps
-\(O(\log x)\). Al declarar sus puntos generadores de un monoide
-conmutativo libre, obtiene pesos \(\Lambda_{\mathcal P}\ge0\), Euler
-producto exacto y la identidad coeficiente a coeficiente
+into a literal \(0\)-\(1\) staircase, with integer norms and gaps
+\(O(\log x)\). By declaring its generating points to form a free
+commutative monoid, it obtains weights \(\Lambda_{\mathcal P}\ge0\), an exact Euler
+product, and the coefficient-by-coefficient identity
 \[
  g(m)\log m=\sum_{d\mid m}g(m/d)\Lambda_{\mathcal P}(d),
 \]
-pero la zeta resultante tiene ceros simples en \(\rho,\bar\rho\) y su
-energía crece como \(N^{2\beta-1}/\log^2N\). Por tanto integridad,
-escalonamiento, gaps, PNT/VK y factorización de Euler abstracta no
-excluyen una excursión exterior. La propiedad no conservada queda
-identificada exactamente: que las normas generadoras sean los
-irreducibles ordinarios de \((\mathbb N,\cdot)\), sin colisiones de
-norma. Un teorema de rigidez interno prueba que una norma inyectiva
-fuerza \(P_{\mathcal Q}(x)\le\pi(x)\), y que una norma biyectiva fuerza
-exactamente el sistema primo ordinario. Imponerla devuelve el singleton
-de los primos literales y, con
-él, el blanco energético original. Este falsificador no prueba la cota
-para los primos ordinarios ni RH.
+but the resulting zeta has simple zeros at \(\rho,\bar\rho\) and its
+energy grows like \(N^{2\beta-1}/\log^2N\). Hence integrality,
+step structure, gaps, PNT/VK, and abstract Euler factorization do not
+exclude an outer excursion. The property not preserved is
+identified exactly: that the generating norms be the
+ordinary irreducibles of \((\mathbb N,\cdot)\), without norm
+collisions. An internal rigidity theorem proves that an injective
+norm forces \(P_{\mathcal Q}(x)\le\pi(x)\), and that a bijective norm forces
+exactly the ordinary prime system. Imposing it returns the singleton
+of the literal primes and, with
+it, the original energy target. This falsifier does not prove the bound
+for the ordinary primes nor RH.
 
-`104_104` ataca directamente el criterio de bloques desde los valores y
-derivadas reales de
-\(\mathcal F(z)=\log(2\xi((1-z)^{-1}))\). Prueba el criterio exacto
+`104_104` directly attacks the block criterion from the real values and
+derivatives of
+\(\mathcal F(z)=\log(2\xi((1-z)^{-1}))\). It proves the exact criterion
 \[
  \mathrm {RH}\iff
  \limsup_{k\to\infty}
  \left({|\mathcal F^{(k)}(r)|\over k!}\right)^{1/k}
  \le {1\over1-r}\qquad(0<r<1),
 \]
-incluso bastando los \(r\in\mathbb Q\cap(0,1/2)\). La identidad de Euler
-con los \(\Lambda(m)\) ordinarios da fórmulas absolutamente convergentes
-para cada jet, pero certifica los discos requeridos directamente solo en
-el horodisco \(|z-1/2|<1/2\), equivalente a \(\Re s>1\). Para
-\(r<1/2\), pasar del radio seguro \(r\) al radio \(1-r\) es exactamente la
-continuación que excluye ceros interiores. Un factor polinómico explícito
-\(P_{\beta,\gamma}\), positivo en el eje real y compatible con ecuación
-funcional, realidad y orden uno, se vuelve \(C^J\)-arbitrariamente invisible
-en cualquier compacto real mientras añade un cuarteto off-line y excursiones
-negativas sindéticas. Es el falsificador cualitativo de `104_84` refinado
-cuantitativamente, no una nueva familia de completaciones. Esto descarta
-inferencias estables desde una cantidad
-finita de jets. Un segundo factor
+with even \(r\in\mathbb Q\cap(0,1/2)\) sufficing. The Euler identity
+with the ordinary \(\Lambda(m)\) gives absolutely convergent formulas
+for each jet, but directly certifies the required disks only within
+the horodisk \(|z-1/2|<1/2\), equivalent to \(\Re s>1\). For
+\(r<1/2\), moving from the safe radius \(r\) to radius \(1-r\) is exactly the
+continuation that excludes interior zeros. An explicit polynomial factor
+\(P_{\beta,\gamma}\), positive on the real axis and compatible with the functional
+equation, reality, and order one, becomes \(C^J\)-arbitrarily invisible
+on any real compact while adding an off-line quartet and syndetic
+negative excursions. It is the qualitative falsifier of `104_84` refined
+quantitatively, not a new family of completions. This rules out
+stable inferences from a finite
+number of jets. A second factor
 \(1+c[s(s-1)]^{2M_0}\prod_j((s-1/2)^2-a_j^2)^{2M_j}\)
-iguala además **exactamente** cualquier familia finita prescrita de jets
-reales y aún introduce un cero con \(1/2<\Re\rho<1\); la salvedad explícita
-es que puede introducir otros ceros en \(\Re s>1\). Ninguno de los dos es
-un contramodelo con los mismos primos. Tener exactamente
-los mismos \(\Lambda(m)\) fuerza la misma \(\zeta\) por unicidad del
-logaritmo derivado. El gate no prueba los bloques, Deep, A1 ni RH.
+also **exactly** matches any prescribed finite family of real jets
+and still introduces a zero with \(1/2<\Re\rho<1\); the explicit caveat
+is that it may introduce other zeros on \(\Re s>1\). Neither is
+a counter-model with the same primes. Having exactly
+the same \(\Lambda(m)\) forces the same \(\zeta\) by uniqueness of the
+derived logarithm. The gate proves neither the blocks, Deep, A1, nor RH.
 
-`104_106` calcula el filtro de bloque general sobre el defecto de
-residuos:
+`104_106` computes the general block filter on the residue
+defect:
 \[
  \sum_ja_j\mathscr R_{N+j}
  =\sum_{\Re\rho>1/2}m_\rho
  \{w_\rho^NA(w_\rho)+w_\rho^{-N}A(w_\rho^{-1})-2A(1)\}.
 \]
-Caja, Cesàro y Fejér son solo elecciones de \(A\) y no orientan el modo
-exterior. El cuarteto racional \(w=i/2\) tiene, en todo bloque que empieza
-en \(N\equiv2\pmod4\),
+Box, Cesàro, and Fejér are just choices of \(A\) and do not orient the outer
+mode. The rational quartet \(w=i/2\) has, on every block starting
+at \(N\equiv2\pmod4\),
 \[
  q_N>2^{N+1},\qquad
  \sum_{j=0}^3q_{N+j}
  =16-6\,2^N+\tfrac32\,2^{-N}<0.
 \]
-Así una media firmada favorable no fabrica un bloque bueno. La operación
-correcta es
+So a favorable signed average does not fabricate a good block. The
+correct operation is
 \(\sum(-\mathscr R_n)_+=\sup_{0\le a_j\le1}-\sum a_j\mathscr R_{N+j}\).
-Se obtiene un criterio determinista exacto sobre
-\([L^2,L^2+L-1]\), pero la cota para ese supremo con los
-\(\Lambda(m)\) ordinarios no está probada.
+An exact deterministic criterion is obtained on
+\([L^2,L^2+L-1]\), but the bound for that supremum with the
+ordinary \(\Lambda(m)\) is not proved.
 
-`104_107` vuelve a la coordenada Li--Laguerre y combina por primera vez la
-cota de fase de `104_41` con la relajación por bloques de `104_67`. Para
-los pesos triangulares
-\(\alpha_{L,k}=(L-|k|)/L^2\), \(|k|<L\), prueba
+`104_107` returns to the Li--Laguerre coordinate and combines for the first time the
+phase bound of `104_41` with the block relaxation of `104_67`. For
+the triangular weights
+\(\alpha_{L,k}=(L-|k|)/L^2\), \(|k|<L\), it proves
 \[
  |\mathcal B^\triangle_{N,L,a}|
  \le {3\pi\over2}{N\over L}+2(1-L^{-2}),\qquad a\ge4.
 \]
-Así un bloque de \(2L-1\) grados con \(N\asymp L\) tiene costo de fase
-absoluto, en vez de \(O(N)\). El transporte de residuos también queda
-cerrado exactamente:
+So a block of \(2L-1\) degrees with \(N\asymp L\) has absolute phase
+cost, instead of \(O(N)\). The residue transport is also closed
+exactly:
 \[
  {1\over\rho(\rho-1)}
  \sum_{|k|<L}\alpha_{L,k}\mathcal F_{N+k}(w_\rho)
@@ -1177,198 +1178,198 @@ cerrado exactamente:
  T_{N,L}(w)=w^{N-L+1}
  \left({1-w^L\over L(1-w)}\right)^2.
 \]
-El multiplicador no tiene ceros en \(|w|<1\), y el término recíproco
-conserva tamaño \(\asymp |w|^{-N-L}/L^2\). El cuarteto \(w=i/2\)
-produce ambos signos exponenciales mientras preserva la fase crítica.
-Por ello el promedio elimina el costo de frontera pero no el defecto
-off-line. Además, una media firmada acotada no da un bloque bueno
-coeficiente a coeficiente: para aplicar `104_67` aún haría falta controlar
-la parte positiva, el máximo o cada grado. La cota unilateral acoplada
-para los \(\Lambda(m)\) ordinarios permanece sin probar.
+The multiplier has no zeros on \(|w|<1\), and the reciprocal term
+preserves size \(\asymp |w|^{-N-L}/L^2\). The quartet \(w=i/2\)
+produces both exponential signs while preserving the critical phase.
+Hence averaging removes the boundary cost but not the
+off-line defect. Moreover, a bounded signed average does not give a good block
+coefficient by coefficient: applying `104_67` would still require controlling
+the positive part, the maximum, or every degree. The coupled one-sided bound
+for the ordinary \(\Lambda(m)\) remains unproved.
 
-`104_108` reduce ese cubo de tests a una familia uniparamétrica
-de Fejér modulada. Para \(a\ge4\), uniformemente en \(\phi\),
+`104_108` reduces that cube of tests to a one-parameter family
+of modulated Fejér. For \(a\ge4\), uniformly in \(\phi\),
 \[
  |\mathcal B^\triangle_{N,L,a}(\phi)|
  \le3\pi N/L+4.
 \]
-Parseval identifica su promedio \(L^2\) con
-\(\sum\alpha_{L,k}^2B_{N+k}^2\), por lo que una cota uniforme
-subexponencial en \(\phi\) detectaría cualquier excursión exterior y es
-equivalente a RH. Al transportar a \(a=1\), el residuo es
+Parseval identifies its \(L^2\) average with
+\(\sum\alpha_{L,k}^2B_{N+k}^2\), so a uniform subexponential bound
+in \(\phi\) would detect any outer excursion and is
+equivalent to RH. Transporting to \(a=1\), the residue is
 \[
  w_\rho^NK_L(w_\rho e^{-i\phi})
  +w_\rho^{-N}K_L(w_\rho^{-1}e^{-i\phi})-2H_L(\phi).
 \]
-La frecuencia emparejada conserva tamaño
-\(|w_\rho|^{-N-L+1}/L^2\). Para el cuarteto completo \(w=i/2\),
-\(N=2L\) y \(L\) par, el filtro vale al menos
-\(2^{3L}/L^2-4\), sin cancelación del conjugado. Esta es una reducción
-estructurada de coordenadas, no un debilitamiento de la fuerza RH ni una
-prueba: la cota aritmética uniforme en la frontera sigue abierta.
+The paired frequency preserves size
+\(|w_\rho|^{-N-L+1}/L^2\). For the full quartet \(w=i/2\),
+\(N=2L\), and \(L\) even, the filter is at least
+\(2^{3L}/L^2-4\), with no conjugate cancellation. This is a structured
+reduction of coordinates, not a weakening of RH-strength or a
+proof: the uniform arithmetic bound at the boundary remains open.
 
-`104_109` combina el residuo de `104_33`--`104_41`
-con la localización alta de `104_76`. Para
+`104_109` combines the residue of `104_33`--`104_41`
+with the high localization of `104_76`. For
 \[
  D_n(Y)=2\Re\sum_{\substack{\Re\rho>1/2\\0<\Im\rho\le Y}}
  {m_\rho\mathcal F_n(w_\rho)\over\rho(\rho-1)}
 \]
-prueba uniformemente
+it uniformly proves
 \[
  |\lambda_n+D_n(Y)|
  \ll Y\log Y+X\log X\{1+e^{X/(2Y^2)}\}\qquad(n\le X).
 \]
-Así RH equivale a la existencia de bloques
-\(I\subset[N,2N]\), de longitudes no acotadas, en los que
-\(D_n((2N)^{1/4})\ge-\tfrac12e^{\sqrt N}\) grado a grado. La escala
-correcta del gate profundo es \(N^{1/4}\), no \(\sqrt N\). El cuarteto
-\(w=4i/5\) prueba que una media firmada puede ser favorable sobre bloques
-arbitrariamente largos mientras persisten excursiones positivas
-exponenciales, y que el promedio binomial de \(a=4\) vuelve contractivos
-ambos modos. Por tanto la cota de fase y un promedio lineal no entregan la
-barrera; falta una cota para el máximo o la parte positiva de la forma
-prima--Laguerre exacta.
+So RH is equivalent to the existence of blocks
+\(I\subset[N,2N]\), of unbounded lengths, on which
+\(D_n((2N)^{1/4})\ge-\tfrac12e^{\sqrt N}\) degree by degree. The
+correct scale of the deep gate is \(N^{1/4}\), not \(\sqrt N\). The quartet
+\(w=4i/5\) proves that a signed average can be favorable over blocks
+of arbitrary length while exponential positive excursions persist, and
+that the binomial average with \(a=4\) makes both modes contractive.
+Hence the phase bound and a linear average do not deliver the
+barrier; a bound for the maximum or the positive part of the exact
+prime--Laguerre form is still missing.
 
-`104_110` vuelve a la forma prima literal del filtro modulado de
-`104_108`. Si
+`104_110` returns to the literal prime form of the modulated filter of
+`104_108`. If
 \[
  P_{L,\phi}=\sum_{|k|<L}\alpha_{L,k}e^{-ik\phi}
  L_{2L+k-1}^{(1)},\qquad
  Q_{L,\phi}=\sum_{|k|<L}\alpha_{L,k}e^{-ik\phi}
  L_{2L+k-1}^{(2)},
 \]
-prueba la identidad completa
+it proves the complete identity
 \[
  \mathcal B^\triangle_{2L,L,1}(\phi)
  =P_{L,\phi}(0)+\int_0^\infty
  E(e^u)e^{-u}Q_{L,\phi}(u)\,du,
 \]
-además de un contorno cerrado con
-\(M_\Lambda((1-z)^{-1})K_L(e^{-i\phi}/z)\). Para
-\(\phi=\pi\), todos los grados tienen exactamente el mismo signo en el
-rayo exterior. En la escala
-\(U_L=L^{5/3}(\log L)^{1/3}\), el majorante VK es al menos
+together with a closed contour with
+\(M_\Lambda((1-z)^{-1})K_L(e^{-i\phi}/z)\). For
+\(\phi=\pi\), all degrees have exactly the same sign on the
+outer ray. At the scale
+\(U_L=L^{5/3}(\log L)^{1/3}\), the VK majorant is at least
 \[
  \exp\{(4/3)L\log L+(2/3)L\log\log L-O(L)\}.
 \]
-Así PNT/VK, incluso conservando polo y potencias primas hasta después de
-integrar por partes e incluso añadiendo monotonía, no entrega la barrera
-subexponencial uniforme. Esto descarta ese método de estimación, no la cota
-para los pesos literales \(\Lambda(m)\), cuya cancelación firmada sigue
-abierta.
+Thus PNT/VK, even preserving pole and prime powers through integration
+by parts and even adding monotonicity, do not deliver the uniform
+subexponential barrier. This rules out that estimation method, not the bound
+for the literal weights \(\Lambda(m)\), whose signed cancellation remains
+open.
 
-Ningún documento de esta fase puede citarse como prueba de RH.
+No document in this phase can be cited as proof of RH.
 
-104_111 audita directamente el límite Deep de 104_75 mediante la
-factorización canónica de
-\(E(z)=((1-z)^{-1}-1)\zeta((1-z)^{-1})\). Prueba
+104_111 directly audits the Deep limit of 104_75 via the
+canonical factorization of
+\(E(z)=((1-z)^{-1}-1)\zeta((1-z)^{-1})\). It proves
 \[
  \lambda_n=C_n-Z_n,\qquad C_n=O(n^2\log(n+1)),
 \]
-donde \(Z_n\) contiene exactamente los coeficientes del producto de
-Blaschke de los ceros con \(\Re\rho>1/2\). En consecuencia, \(\Omega_X\)
-queda atrapado entre los eventos
-\(Z_n\ge(1\pm o(1))e^{\sqrt X}\), y
-\(\Omega_X\to0\iff B\equiv1\iff\mathrm{RH}\). También corrige una laguna
-expositiva de 104_75: el lift diagonal del indicador duro se prueba por
-inclusiones con umbrales \(e^{\sqrt X}\pm1\), no solo comparando escalas.
-El resultado localiza exactamente el factor interior pendiente; no lo
-anula y no prueba RH.
+where \(Z_n\) contains exactly the coefficients of the Blaschke
+product of the zeros with \(\Re\rho>1/2\). Consequently, \(\Omega_X\)
+is trapped between the events
+\(Z_n\ge(1\pm o(1))e^{\sqrt X}\), and
+\(\Omega_X\to0\iff B\equiv1\iff\mathrm{RH}\). It also fixes an expository
+gap in 104_75: the diagonal lift of the hard indicator is proved by
+inclusions with thresholds \(e^{\sqrt X}\pm1\), not just by comparing scales.
+The result localizes exactly the pending interior factor; it does not
+cancel it and does not prove RH.
 
-`104_112` cierra la interpretación de Markov del límite Deep. Para un
-cuarteto exterior
+`104_112` closes the Markov interpretation of the Deep limit. For an
+outer quartet
 \[
  q_n(\rho)=4-4\cosh(na_\rho)\cos(n\theta_\rho),
  \qquad
  a_\rho={1\over2}\log {|\rho|^2\over|\rho-1|^2},
 \]
-el umbral \(e^{\sqrt X}\) se dispara en retornos con
-\(\cos(n\theta_\rho)\ge1/2\) exactamente cuando
+the threshold \(e^{\sqrt X}\) triggers at returns with
+\(\cos(n\theta_\rho)\ge1/2\) exactly when
 \[
  a_\rho>2X^{-1/2}+o(X^{-1/2}).
 \]
-Como \(a_\rho\asymp(\beta-\tfrac12)/\gamma^2\), el observable profundo
-equivale operacionalmente a excluir ceros en la caja
+Since \(a_\rho\asymp(\beta-\tfrac12)/\gamma^2\), the deep observable
+is operationally equivalent to excluding zeros in the box
 \[
  0<\gamma\lesssim X^{1/4},\qquad
  \beta-\tfrac12\gtrsim \gamma^2X^{-1/2}.
 \]
-La frontera de esa caja toca \(\Re s=1/2\) cuando \(X\to\infty\). Además,
-si se orienta \(D_n(Y)\) para que los cuartetos exteriores aporten parte
-positiva, entonces bajo RH \(D_n(Y)_+\equiv0\), mientras que un solo cero
-en la caja fuerza
+The boundary of that box touches \(\Re s=1/2\) as \(X\to\infty\). Moreover,
+if \(D_n(Y)\) is oriented so that the outer quartets contribute a positive
+part, then under RH \(D_n(Y)_+\equiv0\), while a single zero
+in the box forces
 \[
  \sum_{n\le X}{D_n(X^{1/4})_+\over n}
  \gg e^{Xa_\rho/2}-O(X^{1/4}\log X).
 \]
-Por tanto Markov no tiene slack: vale cero o falla por encima del umbral.
-También queda registrado que una cota
-\(\limsup\Omega_X\le c\) con cualquier \(c>0\) no descarta los modelos de
-fase dominante de `104_56`. El límite Deep sigue siendo un criterio exacto,
-no una prueba; el mecanismo faltante tendría que excluir la caja usando los
-primos ordinarios literales y fallar para los modelos Euler exteriores.
+Hence Markov has no slack: it is either zero or fails above the threshold.
+It is also recorded that a bound
+\(\limsup\Omega_X\le c\) with any \(c>0\) does not rule out the dominant-phase
+models of `104_56`. The Deep limit remains an exact criterion,
+not a proof; the missing mechanism would have to exclude the box using the
+literal ordinary primes and fail for the outer Euler models.
 
-`104_113` reescala esa caja con \(T=X^{1/4}\):
+`104_113` rescales that box with \(T=X^{1/4}\):
 \[
  0<\gamma\lesssim T,\qquad
  \beta-\tfrac12\gtrsim\gamma^2/T^2.
 \]
-Esto muestra por qué los inputs clásicos no cierran el límite Deep. Las
-regiones libres de ceros viven cerca de \(\Re s=1\), mientras la caja toca
-\(\Re s=1/2\) para \(\gamma=o(T)\). Los teoremas de densidad dan conteos
-positivos en \(\sigma=1/2+o(1)\), no ausencia de un solo cero. La
-verificación hasta altura \(H\) solo cubre \(X\le H^4\), nunca el límite
-asintótico. El frente queda reducido a una exclusión aritmética literal de
-la caja, no a conteo, altura finita o mejora de constantes.
+This shows why the classical inputs do not close the Deep limit. The
+zero-free regions live near \(\Re s=1\), while the box touches
+\(\Re s=1/2\) for \(\gamma=o(T)\). Density theorems give positive
+counts at \(\sigma=1/2+o(1)\), not the absence of a single zero. The
+verification up to height \(H\) only covers \(X\le H^4\), never the
+asymptotic limit. The front is reduced to a literal arithmetic exclusion of
+the box, not to counting, finite height, or improved constants.
 
-`104_114` construye el detector local exacto de esa caja en el disco de
-Cayley. Con
+`104_114` builds the exact local detector of that box on the Cayley
+disk. With
 \[
  E(z)=((1-z)^{-1}-1)\zeta((1-z)^{-1})=B(z)O(z),
 \]
-la cantidad
+the quantity
 \[
  \mathcal J(z)=P_z(\log|E^*|)-\log|E(z)|
  =\sum_{\Re\rho>1/2}m_\rho
  \log\left|{1-\overline{a_\rho}z\over z-a_\rho}\right|
 \]
-es precisamente el potencial de Green del factor de Blaschke interior. Un
-cero en la caja produce un pico local \(\gg1\), y
-\(\mathcal J\equiv0\iff B\equiv1\iff\mathrm{RH}\). Esto prueba que la ruta
-Poisson--Jensen detecta la caja sin pérdida, pero no aporta signo nuevo:
-la desigualdad que anula \(\mathcal J\) es exactamente la eliminación del
-factor interior, es decir Weil/RH en esa familia de tests.
+is precisely the Green potential of the interior Blaschke factor. A
+zero in the box produces a local peak \(\gg1\), and
+\(\mathcal J\equiv0\iff B\equiv1\iff\mathrm{RH}\). This proves that the
+Poisson--Jensen route detects the box without loss, but contributes no new
+sign: the inequality that annihilates \(\mathcal J\) is exactly the removal of
+the interior factor, i.e. Weil/RH on that family of tests.
 
-`104_115` audita el certificado resolvente escalar sobre el retículo de
-factorizaciones. El generador que intercambia todas las torres tiene tasa
-de salida infinita para (0<\varepsilon\le1), el cruzado
-\(\langle i[X,S]g_n,g_n\rangle\) es exactamente cero para el vector
-Laguerre real y (C g_n) no satisface en general la compatibilidad de
-Poisson con las constantes de cada capa (\Omega\). El pivote a primos
-consecutivos, con tasa difusiva
-\(\log(p_{j+1}/p_j)^{-2}\), repara el dominio y hace positivo el
-resolvente después de proyectar el núcleo. Un twist complejo recupera la
-fase pero cambia de signo con (n). El sucesor mínimo queda fijado como un
-lift de dos grados Laguerre y una corriente conservativa sobre ciclos de
-tres torres cercanas; el certificado escalar original queda retirado.
-La corriente finita satisface un Schur exacto con constante computable;
-el único puente aún no obtenido es una identidad Mecke de segundo orden
-que convierta ese cruzado de dos grados en el funcional lineal real
-(B_{n,\varepsilon}).
+`104_115` audits the scalar resolvent certificate over the lattice of
+factorizations. The generator that exchanges all towers has infinite
+exit rate for \(0<\varepsilon\le1\), the crossed term
+\(\langle i[X,S]g_n,g_n\rangle\) is exactly zero for the real
+Laguerre vector, and \(Cg_n\) does not in general satisfy the Poisson
+compatibility with the constants of each layer \(\Omega\). Pivoting to
+consecutive primes, with diffusive rate
+\(\log(p_{j+1}/p_j)^{-2}\), repairs the domain and makes the
+resolvent positive after projecting the kernel. A complex twist recovers the
+phase but changes sign with \(n\). The minimal successor is fixed as a
+two-degree Laguerre lift and a conservative current over cycles of
+three nearby towers; the original scalar certificate is withdrawn.
+The finite current satisfies an exact Schur bound with a computable constant;
+the only bridge not yet obtained is a second-order Mecke identity
+that would turn that two-degree crossed term into the real linear functional
+\(B_{n,\varepsilon}\).
 
-`104_116` demuestra la identidad Mecke de intercambio solicitada. Para
-una corriente antisimétrica (\omega), su forma es
+`104_116` proves the requested exchange Mecke identity. For
+an antisymmetric current \(\omega\), its form is
 \[
  \langle F,J_\omega G\rangle_s
  =\sum_{p,q}{\omega_{pq}\over(pq)^{s/2}}
    \mathbb E_s\{\overline{F(qN)}G(pN)\}.
 \]
-La condición conservativa (J\mathbf1=0) es
-\(\omega(p^{-s/2})_p=0\); sobre tres primos fija una circulación única y
-la forma se vuelve un determinante cíclico de los tres desplazamientos.
-La comparación exacta cierra negativamente el puente de `104_115`: la
-corriente es alternante y bilineal, mientras (B_{n,s}) es la fuente
-lineal prima--polo. Abrir la corriente hacia el comparador continuo
-reproduce exactamente (M_s(f)), y cerrarla para obtener positividad lo
-elimina. Por tanto Mecke queda demostrado, pero no aporta el resto positivo
-requerido para A1.
+The conservative condition \(J\mathbf1=0\) is
+\(\omega(p^{-s/2})_p=0\); over three primes it fixes a unique circulation and
+the form becomes a cyclic determinant of the three shifts.
+The exact comparison closes the `104_115` bridge negatively: the
+current is alternating and bilinear, while \(B_{n,s}\) is the
+linear prime--pole source. Opening the current toward the continuous comparator
+exactly reproduces \(M_s(f)\), and closing it to obtain positivity
+eliminates it. Hence Mecke is proved, but it does not supply the positive remainder
+required for A1.

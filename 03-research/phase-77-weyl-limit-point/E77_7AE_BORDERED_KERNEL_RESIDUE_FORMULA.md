@@ -1,6 +1,6 @@
 # E77.7ae - Bordered kernel residue formula
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

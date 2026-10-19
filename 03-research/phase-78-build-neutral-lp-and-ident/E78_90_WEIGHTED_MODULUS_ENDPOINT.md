@@ -1,6 +1,6 @@
 # E78.90 - The candid endpoint target is a constant envelope for the weighted modulus quotient
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front, left endpoint slice `sigma=1.0`.
 
 ## 1. Purpose

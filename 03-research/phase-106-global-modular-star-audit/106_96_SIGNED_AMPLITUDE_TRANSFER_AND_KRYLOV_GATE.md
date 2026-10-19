@@ -189,7 +189,7 @@ The choice \(\psi=z\) in Theorem 1 gives
 
 \[
  Q_1={R^2\over R+L},\qquad
- R=\|z\|^2,qquad L=\langle z,Bz\rangle,         \tag{14}
+ R=\|z\|^2,\qquad L=\langle z,Bz\rangle,         \tag{14}
 \]
 
 which is precisely the matched-filter bound of 106.83 and the sharp

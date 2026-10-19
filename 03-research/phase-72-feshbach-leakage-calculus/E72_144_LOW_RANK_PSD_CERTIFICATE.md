@@ -1,7 +1,6 @@
 # E72.144 -- Low-rank PSD certificate audit
 
-**Date:** 2026-07-09.
-**Role:** test whether `PSD-DIST` can be certified with a low-rank positive approximant.
+**Purpose:** test whether `PSD-DIST` can be certified with a low-rank positive approximant.
 
 ## 0. Rank-truncated positive part
 

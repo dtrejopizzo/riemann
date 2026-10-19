@@ -1,6 +1,6 @@
 # E78.66 - The cocycle aligns with the `old-old` shell chain, and there the transfer-ratio polarization is exact
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

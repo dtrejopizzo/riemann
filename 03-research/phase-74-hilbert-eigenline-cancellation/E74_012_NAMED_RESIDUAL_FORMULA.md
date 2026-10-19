@@ -1,6 +1,5 @@
 # E74.12 - Named residual formula after the quotient bridge
 
-Date: 2026-07-16.
 
 ## Purpose
 

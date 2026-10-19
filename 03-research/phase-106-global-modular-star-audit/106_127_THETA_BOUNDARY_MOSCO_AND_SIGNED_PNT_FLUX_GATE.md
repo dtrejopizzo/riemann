@@ -114,7 +114,7 @@ operators.
 Put
 
 \[
- h(x)=\cosh(x/2),\qquad c_K=\frac12,qquad
+ h(x)=\cosh(x/2),\qquad c_K=\frac12,\qquad
  w(x)={h(x)K(x)\over c_K}.
  \tag{6}
 \]
@@ -570,7 +570,7 @@ coordinate,
 \[
 \boxed{
  \liminf_{R\to\infty}
- \left{
+ \left\{
   \mathcal P_D(g_R)
   +\mathfrak b_{\Gamma,*}(g_R)
   +\text{the coupled outgoing PNT term}

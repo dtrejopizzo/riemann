@@ -1,6 +1,6 @@
 # P123.092 — An explicit orbit-decay ideal with the original trace
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY on the single-zero
+Status: PROVED-IN-REPOSITORY on the single-zero
 two-prime boundary. This constructs and compares a stronger domain;
 surjectivity of its corner tensor map is not assumed.
 

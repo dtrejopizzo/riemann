@@ -1,6 +1,6 @@
 # P123.108 — The normal determinant composition law and its nonzero anomaly
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY for compact multiplicative
+Status: PROVED-IN-REPOSITORY for compact multiplicative
 Bruhat tests near zero, with fixed finite valuation and unit supports.
 The correction is an explicit boundary determinant limit. It is not
 identified with the geometric biextension or arithmetic RR correction.

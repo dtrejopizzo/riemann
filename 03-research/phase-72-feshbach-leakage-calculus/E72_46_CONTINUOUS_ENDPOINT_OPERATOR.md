@@ -1,7 +1,6 @@
 # E72.46 -- Continuous endpoint operator estimate
 
-**Date:** 2026-07-08.
-**Role:** replace the unproved "quadratic taper" expectation by a continuous endpoint operator estimate
+**Purpose:** replace the unproved "quadratic taper" expectation by a continuous endpoint operator estimate
 that follows directly from the exact cell taper.
 
 ## 0. Continuous endpoint operator

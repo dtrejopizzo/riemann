@@ -1,7 +1,6 @@
 # E72.147 -- Combined semialgebraic certificate probe
 
-**Date:** 2026-07-09.
-**Role:** evaluate the E72.146 certificate in one finite table.
+**Purpose:** evaluate the E72.146 certificate in one finite table.
 
 ## 0. Quantities
 

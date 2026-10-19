@@ -52,7 +52,7 @@ Unique factorization gives a canonical Hilbert tensor factorization
 Let \(S_p|j\rangle=|j+1\rangle\) on the \(p\)-factor.  Then
 
 \[
- V_n=\prod_pS_p^{v_p(n)},qquad
+ V_n=\prod_pS_p^{v_p(n)},\qquad
  V_n^*\phi_r=
  \begin{cases}
  \phi_{r/n},&n\mid r,\\0,&n\nmid r.
@@ -62,7 +62,7 @@ Let \(S_p|j\rangle=|j+1\rangle\) on the \(p\)-factor.  Then
 Consequently
 
 \[
- V_n^*V_n=I,qquad
+ V_n^*V_n=I,\qquad
  D_n:=I-V_nV_n^*\ge0.                                      \tag{1.3}
 \]
 
@@ -219,8 +219,8 @@ The failure of Fock defects does not mean the local contact kernel is
 indefinite.  Define the commutative nonunital algebra
 
 \[
- \mathcal A_\Lambda=c_{00}(\mathbb P),qquad
- e_pe_q=\delta_{pq}e_p,qquad e_p^*=e_p,                   \tag{5.1}
+ \mathcal A_\Lambda=c_{00}(\mathbb P),\qquad
+ e_pe_q=\delta_{pq}e_p,\qquad e_p^*=e_p,                   \tag{5.1}
 \]
 
 with positive semifinite trace
@@ -247,7 +247,7 @@ Then
 with both sides zero when incompatible prime supports occur, and
 
 \[
- \boxed{\tau_\Lambda(\eta_n)=\Lambda(n),qquad
+ \boxed{\tau_\Lambda(\eta_n)=\Lambda(n),\qquad
  \tau_\Lambda(\eta_m^*\eta_n)=\Lambda(mn).}               \tag{5.5}
 \]
 

@@ -699,7 +699,7 @@ GRAPH-BORDER-CANCELLATION:
 
 WEIGHTED-JET-POTENTIAL-CONVERGENCE:
   prove E101.079(8.2) directly from the signed source, accepting that this
-  is the force-RH step rather than a character bypass.               (13.2)
+  is the RH-strength step rather than a character bypass.               (13.2)
 ```
 
 No exact antecedent for the first two source-specific targets was located.

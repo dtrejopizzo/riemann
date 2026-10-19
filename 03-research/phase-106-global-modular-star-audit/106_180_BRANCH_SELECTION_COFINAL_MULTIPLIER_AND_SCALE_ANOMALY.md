@@ -24,7 +24,7 @@ joined CCM Gamma--polar trace formula.
 Let
 
 \[
- C=\sum_iw_i,qquad A=\sum_iw_iU_i,qquad T=C^{-1}A,
+ C=\sum_iw_i,\qquad A=\sum_iw_iU_i,\qquad T=C^{-1}A,
 \tag{1}
 \]
 

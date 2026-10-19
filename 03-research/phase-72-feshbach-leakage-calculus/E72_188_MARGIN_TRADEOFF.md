@@ -1,7 +1,6 @@
 # E72.188 -- ASRP margin tradeoff
 
-**Date:** 2026-07-09.
-**Role:** choose a proof-friendly margin for the adaptive ASRP certificate.
+**Purpose:** choose a proof-friendly margin for the adaptive ASRP certificate.
 
 ## 0. Motivation
 

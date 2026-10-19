@@ -1,6 +1,6 @@
 # The critical primitive finite part (Stage 4): positivity is free, boundedness is the only wall
 
-*Pure mathematics. We carry out Stage 4 of the Critical Tate–Weil Hodge Module $\mathsf{TW}_\Z$ and
+* We carry out Stage 4 of the Critical Tate–Weil Hodge Module $\mathsf{TW}_\Z$ and
 reach a clean, candid consolidation. The decisive new input is Theorem 2 of the local construction:
 **every finite Euler colligation $K_P$ is unconditionally a positive kernel.** Combined with the
 elementary fact that **weak limits of positive operators are positive**, this shows that the

@@ -1,6 +1,5 @@
 # E73.218 - Cauchy projection radius budget
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

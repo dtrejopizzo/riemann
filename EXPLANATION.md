@@ -1,6 +1,6 @@
 # The Riemann Hypothesis, in Plain Language
 
-After 119 phases of work, my simple explanation is no longer the textbook one. It goes in
+After two hundred phases of work, the simple explanation is no longer the textbook one. It goes in
 layers, from the simplest to the deepest — and the last layer is what *we* learned.
 
 ## Layer 1 — The problem, without formulas
@@ -46,14 +46,14 @@ An off-line zero would be a dissipative mode: an unstable resonance. A century o
 not found the system; our program went down that road (Arc B, the operator $H_C$, the
 Pontryagin space) and measured exactly why it fails.
 
-And there is another physical reading I find even more suggestive: the de Bruijn–Newman
+And there is another physical reading that is even more suggestive: the de Bruijn–Newman
 constant. There is a parameter $\Lambda$ such that if you "heat" the zeta function
 ($t > \Lambda$), all the zeros fall onto the line; if you "cool" it, they escape. It was proved
 (Rodgers–Tao 2018) that $\Lambda \geq 0$, and RH is $\Lambda = 0$. The physicist's translation:
 the universe of the primes is sitting exactly at a critical point of a phase transition — not
 near, not approximately: exactly on the edge. "RH is true by a hair's breadth," wrote Tao. No
 generic physical system spontaneously sits at its critical point unless something (a symmetry,
-a self-organization, a variational principle) forces it there. *What* forces it is, for me, the
+a self-organization, a variational principle) forces it there. *What* forces it is the
 real physical question behind RH.
 
 ## Layer 4 — Why it is fiendishly hard (what our program understood)
@@ -91,58 +91,37 @@ somewhere," but "prove this one specific, classical, textbook-statable inequalit
 this program tried to prove it by (phases 64–76) ran back into the same handful of structural
 walls the earlier phases had already named.
 
-## Layer 6 — A second, independent attempt at the missing geometry (phases 107–119)
+## Layer 6 — Building the missing geometry (phases 107–209)
 
-Layer 4 named the missing thing precisely: for function fields (Weil, Deligne), the bridge from
-"true on average" to "true without exception" was crossed by *geometry* — a space whose rigidity
-counts the zeros one by one. For the integers, no one has ever built that space.
+Layer 4 named the missing thing: for function fields (Weil, Deligne), the bridge from "true on
+average" to "true without exception" was crossed by geometry — a space whose rigidity counts the
+zeros one by one. For the integers no one has built that space.
 
-After phase 76, instead of pushing the Li–Keiper reduction further, the program went back and
-tried to build that space directly — literally imitating Weil's 1948 argument, step by step, over
-the integers. Four ingredients, the way Weil needed them for curves: a space, a way to count
-coincidences on it (correspondences), an intersection number, and — the ingredient that actually
-proves positivity in Weil's original argument — the Hodge index theorem, which for curves is a
-consequence of Riemann–Roch: count the sections of a bundle, watch them grow, and growth alone
-forces the sign you need.
+From phase 107 on, the program tried to build it directly, imitating Weil's 1948 argument step by
+step over the idele class group of $\mathbb Q$. Weil needed four ingredients, which we call rows:
+a space with correspondences and a trace (row A), the Frobenius family acting on it (row B), the
+explicit formula for that trace (row C), and the sign — the positivity that, for curves, comes from
+the Hodge index theorem (row D). Rows A, B and C are built and closed (Papers 43–45).
 
-Three of the four ingredients were built (phases 107–116; the results are paper 42). The fourth —
-Riemann–Roch's growth argument — turned out to be **impossible to build inside the natural home
-for this construction**, and we could prove why, three independent ways: the space of divisors is
-a plain vector space with no room to grow (nothing to count); the natural way of discretizing the
-correspondences fails because of a number that is exactly `1/2` — the very location of the critical
-line, showing up as an obstruction to the geometry rather than as its conclusion; and the relevant
-operator has no gap in its spectrum, so no compactness argument can close it either.
-
-With growth blocked, the one thing left to supply — call it "the space has enough sections to be
-positive" — turned out, when checked directly, to **be** RH exactly. Not close to it, not a
-reformulation of it dressed up in geometry: the same statement, provably, in both directions. And
-then, completely independently, by a different and much more classical method — summing the
-explicit formula itself directly against real zeros of zeta, and checking the arithmetic to ten
-decimal digits — the program found the *same* wall a second time, from the analytic side instead
-of the geometric one.
-
-Two structurally unrelated routes, one algebraic and one analytic, landing on the identical
-statement is not proof of anything about RH itself. But it is real information: it means the
-difficulty is not an accident of either construction. It is something RH itself is doing.
+Row D asks that a single quadratic form, built from the gamma factor, the pole and the primes, be
+non-negative on test functions supported in a window $[-T,T]$. This is proved for every window up
+to $T=\tfrac12\log15$ by explicit certificates checked with interval arithmetic (Paper 47). Beyond
+that it is open. The work since has produced a precise picture of what a proof must look like: it
+must use that the primes come from the Euler product over all integers (a model with the same
+shape but fake prime weights breaks it), and a long list of natural methods — sums of squares,
+size bounds, linear rigidity, continuation in $T$, and others — provably cannot produce the sign.
+What remains is one inequality, the "node": the fluctuation of the primes around their average must
+dominate a deficit of the gamma factor in every direction but one.
 
 ## A closing thought
 
-That is my candid understanding. And notice that the intuition "the primes must have an order
-inside the apparent chaos" has a precise answer from this map: the order is *already* proved
-(the GUE statistics, the balance on average, the critical point $\Lambda \geq 0$); what remains
-to prove is that the order has not a single exception. RH is not "find the hidden pattern" — it
-is "prove the visible pattern is exact," and after 119 phases that exactness now has two names,
-reached independently: Li–Keiper positivity, and the Hodge-index step of the arithmetic-Lefschetz
-construction.
+The intuition "the primes must have an order inside the apparent chaos" has a precise answer from
+this map: the order is already proved on average (the GUE statistics, the balance of the explicit
+formula, positivity on small windows); what remains is to prove that it has no exception. The two
+questions from Layer 3 are where thinking like a physicist can bite:
 
-And Layer 3 holds the two places where thinking like physicists can really bite:
+1. What principle forces a system to sit exactly at its critical point?
+2. What kind of object counts modes one by one instead of averaging?
 
-1. *What physical principle forces a system to sit exactly at its critical point?*
-2. *What kind of object "counts modes one by one" instead of averaging?*
-
-Those two questions — together with the structural walls this program mapped and named
-(catalogued in `NO-GO-LIST.md`) — are the live edges where the next real idea, if there is one,
-would have to come from. Not every open question in this corpus is as hard as RH itself, though:
-`OPTIONS.md` lists several genuinely weaker targets nobody has closed, including one — does the
-number of off-line zeros even have a finite upper bound? — that would be real progress without
-needing to be RH at all.
+The routes already tried, and why each failed, are indexed in
+`05-meta-and-planning/ROUTES-TRIED-INDEX/` and classified in Paper 48.

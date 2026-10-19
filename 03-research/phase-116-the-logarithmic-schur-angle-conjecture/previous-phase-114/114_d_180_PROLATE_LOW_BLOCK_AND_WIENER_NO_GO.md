@@ -21,7 +21,7 @@ time--band concentration operator on the two-Tate primitive source, let
 (0<\eta<1), and put
 
 \[
- P_{\rm lo}=\mathbf1_{(\eta,1]}(C_{T,R}),qquad
+ P_{\rm lo}=\mathbf1_{(\eta,1]}(C_{T,R}),\qquad
  P_{\rm hi}=I-P_{\rm lo}.                            \tag{0.2}
 \]
 
@@ -56,8 +56,8 @@ Moreover there is an exact decomposition
 
 \[
  \boxed{
- \mathcal R_T^{-1}=G_{\rm hi}+G_{\rm lo},qquad
- \|G_{\rm hi}\|\le{1\over(1-\eta)h_{5/4}(R)},qquad
+ \mathcal R_T^{-1}=G_{\rm hi}+G_{\rm lo},\qquad
+ \|G_{\rm hi}\|\le{1\over(1-\eta)h_{5/4}(R)},\qquad
  \mathrm{rank}\,G_{\rm lo}\le2\mathrm{rank}\,P_{\rm lo}.} \tag{0.6}
 
 Thus every return word splits into a pure high-mode word, with an explicit

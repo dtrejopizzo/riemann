@@ -1,6 +1,6 @@
 # P123.086 — External boundary shadows on the integrable module sector
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY at each fixed external
+Status: PROVED-IN-REPOSITORY at each fixed external
 parameter on the two-prime carrier of P123.085. Parameterwise traces
 are not asserted to constitute a distributional character.
 

@@ -1,7 +1,6 @@
 # E72.19 -- Real-support closure for divisor currents
 
-**Date:** 2026-07-08.
-**Role:** prove the functional theorem behind the finite residue cobordism: if finite CCM divisor
+**Purpose:** prove the functional theorem behind the finite residue cobordism: if finite CCM divisor
 currents supported on the real axis converge as currents to the global `Xi` divisor current, then RH
 follows.
 

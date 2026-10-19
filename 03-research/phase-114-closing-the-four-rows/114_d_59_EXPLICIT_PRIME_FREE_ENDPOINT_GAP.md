@@ -86,7 +86,7 @@ and the endpoint identities give
 \]
 
 \[
- f'(-T)=bf(-T),qquad f'(T)=-bf(T).                       \tag{3.2}
+ f'(-T)=bf(-T),\qquad f'(T)=-bf(T).                       \tag{3.2}
 \]
 
 In the odd channel the largest eigenvalue is
@@ -161,7 +161,7 @@ for every odd `F`.  This bound does not even use the odd Tate moment.
 Let
 
 \[
- h(t)=\cosh(t/2),qquad
+ h(t)=\cosh(t/2),\qquad
  \|h\|_2^2=T+\sinh T.                                    \tag{5.1}
 \]
 

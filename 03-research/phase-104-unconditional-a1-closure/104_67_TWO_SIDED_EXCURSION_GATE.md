@@ -1,14 +1,14 @@
-# 104_67 — Excursiones bilaterales y gate de la barrera superior
+# 104_67 — Two-sided excursions and upper-barrier gate
 
-**Pregunta.** El criterio de bloques de `104_61` usa las excursiones
-negativas. ¿La media Haar cero de los caracteres dominantes produce también
-excursiones positivas y permite atacar RH mediante una cota **superior** más
-accesible?
+**Question.** The block criterion of `104_61` uses negative excursions.
+Does the zero-Haar-mean of the dominant characters also produce positive
+excursions, allowing RH to be attacked via a more accessible **upper**
+bound?
 
-**Resultado.** Sí a la primera pregunta, no con las herramientas actuales a
-la segunda. Si RH es falsa, \(\lambda_n\) tiene excursiones positivas y
-negativas de la misma tasa exponencial máxima, cada una sobre un conjunto
-sindético de densidad positiva. Por tanto cualquiera de las condiciones
+**Result.** Yes to the first question, not with current tools to the
+second. If RH is false, \(\lambda_n\) has positive and negative
+excursions of the same maximal exponential rate, each on a syndetic set
+of positive density. Hence any of the conditions
 
 \[
  \lambda_n\geq-e^{\sqrt n},\qquad
@@ -16,74 +16,73 @@ sindético de densidad positiva. Por tanto cualquiera de las condiciones
  |\lambda_n|\leq e^{\sqrt n}                                \tag{1}
 \]
 
-en bloques consecutivos de longitud no acotada es, por sí sola, equivalente
-a RH.
+on consecutive blocks of unbounded length is, by itself, equivalent to
+RH.
 
-La barrera superior se traduce en una cota inferior muy débil para el
-funcional prima--polo \(B_n=A_n-\lambda_n\). En el semiplano Euler esa cota
-ya está disponible: `104_41` prueba \(|\mathcal B_{n,a}|\leq3n\) para
-\(a\geq4\). Pero transportarla a \(a=1\) cruza exactamente los residuos de
-los ceros a la derecha; esos residuos generan las excursiones positivas
-recién probadas. Así la ruta superior llega al mismo gate de homotopía con
-un signo distinto. No prueba A1 ni RH.
+The upper barrier translates into a very weak lower bound for the
+prime–pole functional \(B_n=A_n-\lambda_n\). In the Euler half-plane
+that bound is already available: `104_41` proves \(|\mathcal B_{n,a}|\leq3n\)
+for \(a\geq4\). But transporting it to \(a=1\) crosses exactly the
+residues of the zeros to the right; those residues generate the positive
+excursions just proved. So the upper route reaches the same homotopy
+gate with a different sign. It proves neither A1 nor RH.
 
 ---
 
-## 1. Teorema bilateral de modos dominantes
+## 1. Two-sided dominant-mode theorem
 
-Suponga que RH es falsa. En la notación de `104_56`, existen
+Suppose RH is false. In the notation of `104_56`, there exist
 
 \[
  R>1,\qquad1<R_1<R,\qquad
  S(n)=\sum_{j=1}^Km_j\cos(n\phi_j),                         \tag{2}
 \]
 
-con \(m_j>0\), tales que
+with \(m_j>0\), such that
 
 \[
  \lambda_n=C_0-R^nS(n)+O(n^2R_1^n+n^2).                   \tag{3}
 \]
 
-Los ángulos iguales y opuestos se han agrupado. Sea
+Equal and opposite angles have been grouped. Let
 
 \[
  H=\overline{\{n\phi:n\in\mathbb Z\}}\subset\mathbb T^K,
  \qquad F(x)=\sum_{j=1}^Km_j\cos x_j.                       \tag{4}
 \]
 
-Cada carácter de (4) es no trivial: un cero no trivial tiene ordenada no
-nula. Por ortogonalidad de caracteres,
+Each character of (4) is nontrivial: a nontrivial zero has nonzero
+ordinate. By character orthogonality,
 
 \[
  \int_HF\,d\mu_H=0.                                        \tag{5}
 \]
 
-Además \(F(0)=\sum_jm_j>0\), de modo que \(F\) no es idénticamente cero.
-La continuidad y (5) obligan a que \(F\) tome también valores negativos.
-Elija \(\eta>0\) tal que los abiertos
+Also \(F(0)=\sum_jm_j>0\), so \(F\) is not identically zero. Continuity
+and (5) force \(F\) to also take negative values. Choose \(\eta>0\)
+such that the open sets
 
 \[
  U_-:=\{F>2\eta\},\qquad U_+:=\{F<-2\eta\}                 \tag{6}
 \]
 
-sean no vacíos y tengan fronteras de medida de Haar cero. La rotación por
-\(\phi\) es mínima y únicamente ergódica en \(H\). Por tanto sus conjuntos
-de retornos
+are nonempty and have boundaries of zero Haar measure. Rotation by
+\(\phi\) is minimal and uniquely ergodic on \(H\). Hence its return sets
 
 \[
  D_-:=\{n:n\phi\in U_-\},\qquad
  D_+:=\{n:n\phi\in U_+\}                                   \tag{7}
 \]
 
-tienen densidades naturales positivas. Ambos son sindéticos: las
-traslaciones de cada abierto cubren \(H\), y una subcubierta finita acota
-los tiempos de retorno.
+have positive natural density. Both are syndetic: the translations of
+each open set cover \(H\), and a finite subcover bounds the return
+times.
 
-La brecha \(R_1<R\) en (3) da el siguiente refuerzo de `104_56`.
+The gap \(R_1<R\) in (3) gives the following strengthening of `104_56`.
 
-**Teorema 1.1 (excursiones bilaterales).** Si RH es falsa, existen
-\(c>0\), \(n_0\), \(R>1\) y dos conjuntos sindéticos \(D_+,D_-\), cada
-uno de densidad natural positiva, tales que
+**Theorem 1.1 (two-sided excursions).** If RH is false, there exist
+\(c>0\), \(n_0\), \(R>1\) and two syndetic sets \(D_+,D_-\), each of
+positive natural density, such that
 
 \[
  \boxed{
@@ -91,51 +90,51 @@ uno de densidad natural positiva, tales que
  \lambda_n\leq-cR^n\quad(n\in D_-),}                       \tag{8}
 \]
 
-para \(n\geq n_0\). Los dos conjuntos pueden tener distintas densidades y
-distintos gaps; no se afirma una constante universal.
+for \(n\geq n_0\). The two sets may have different densities and
+different gaps; no universal constant is claimed.
 
-La segunda desigualdad es `104_56`. La primera es el contenido nuevo:
-proviene de los retornos a \(U_+\) en vez de los retornos a un entorno del
-origen.
+The second inequality is `104_56`. The first is the new content: it
+comes from the returns to \(U_+\) instead of the returns to a
+neighborhood of the origin.
 
 ---
 
-## 2. Criterios de bloques por arriba y bilateral
+## 2. Upper and two-sided block criteria
 
-Bajo RH, el teorema de Lagarias da
+Under RH, Lagarias's theorem gives
 
 \[
  \lambda_n=A_n+O(\sqrt n\log n)=O(n\log n).                 \tag{9}
 \]
 
-En particular, las tres desigualdades de (1) valen eventualmente. Si RH es
-falsa, (8) vence \(e^{\sqrt n}\) en \(D_+\) y \(D_-\). Como ambos conjuntos
-son sindéticos, ninguna de las tres desigualdades puede valer en bloques de
-longitud no acotada.
+In particular, all three inequalities of (1) eventually hold. If RH is
+false, (8) beats \(e^{\sqrt n}\) on \(D_+\) and \(D_-\). Since both sets
+are syndetic, none of the three inequalities can hold on blocks of
+unbounded length.
 
-**Corolario 2.1.** Son equivalentes:
+**Corollary 2.1.** The following are equivalent:
 
 1. RH;
-2. existen bloques consecutivos de longitud no acotada en los que
-   \(\lambda_n\leq e^{\sqrt n}\) para cada índice;
-3. existen tales bloques con \(|\lambda_n|\leq e^{\sqrt n}\);
-4. existen tales bloques con \(\lambda_n\geq-e^{\sqrt n}\).
+2. there exist consecutive blocks of unbounded length on which
+   \(\lambda_n\leq e^{\sqrt n}\) at every index;
+3. there exist such blocks with \(|\lambda_n|\leq e^{\sqrt n}\);
+4. there exist such blocks with \(\lambda_n\geq-e^{\sqrt n}\).
 
-La versión 4 es más débil que la barrera \(-1\) de `104_61`; se incluye
-para exhibir la simetría de tasas. La versión 2 es lógicamente independiente
-del signo de Li: no pide positividad, sino ausencia local de crecimiento
-positivo exponencial.
+Version 4 is weaker than the \(-1\) barrier of `104_61`; it is
+included to display the symmetry of rates. Version 2 is logically
+independent of Li's sign: it does not require positivity, but the
+local absence of exponential positive growth.
 
-El mismo argumento permite excepciones. Cada una de las barreras de (1),
-fuera de un conjunto de densidad logarítmica superior cero, equivale a RH.
-No basta que la excepción tenga densidad pequeña fija: las densidades de
-retorno dependen de las fases dominantes.
+The same argument allows exceptions. Each of the barriers of (1),
+outside a set of zero upper logarithmic density, is equivalent to RH.
+It does not suffice for the exception to have a small fixed density: the
+return densities depend on the dominant phases.
 
 ---
 
-## 3. Detectores de tasa positiva, negativa y bilateral
+## 3. Positive, negative, and two-sided rate detectors
 
-Para \(V>0\), defina
+For \(V>0\), define
 
 \[
 \begin{aligned}
@@ -149,7 +148,7 @@ Para \(V>0\), defina
 \end{aligned}
 \]
 
-Sus identidades de capa son
+Their layer identities are
 
 \[
 \begin{aligned}
@@ -160,7 +159,7 @@ Sus identidades de capa son
 \end{aligned}
 \]
 
-Con \(H_X=\sum_{n\leq X}1/n\), ponga
+With \(H_X=\sum_{n\leq X}1/n\), set
 
 \[
  \mathfrak R_V^\sigma(X)={1\over H_X}
@@ -168,7 +167,7 @@ Con \(H_X=\sum_{n\leq X}1/n\), ponga
  \qquad\sigma\in\{+,-,\pm\}.                               \tag{12}
 \]
 
-**Teorema 3.1 (criterio bilateral acotado).** Para cada \(V>0\) y cada
+**Theorem 3.1 (bounded two-sided criterion).** For each \(V>0\) and each
 \(\sigma\in\{+,-,\pm\}\),
 
 \[
@@ -177,7 +176,7 @@ Con \(H_X=\sum_{n\leq X}1/n\), ponga
  \liminf_{X\to\infty}\mathfrak R_V^\sigma(X)=0.}           \tag{13}
 \]
 
-**Demostración.** Bajo RH, (9) implica
+**Proof.** Under RH, (9) implies
 
 \[
  \Psi^+_{V,n}(\lambda_n),\qquad
@@ -185,9 +184,9 @@ Con \(H_X=\sum_{n\leq X}1/n\), ponga
  \qquad \Psi^-_{V,n}(\lambda_n)=0.                         \tag{14}
 \]
 
-Como \(\sum_{n\geq2}(\log n)/n^2<\infty\), las medias (12) tienden a
-cero. Bajo no-RH, (8) y la densidad logarítmica positiva de \(D_+\) y
-\(D_-\) dan
+Since \(\sum_{n\geq2}(\log n)/n^2<\infty\), the averages (12) tend to
+zero. Under non-RH, (8) and the positive logarithmic density of \(D_+\)
+and \(D_-\) give
 
 \[
 \begin{aligned}
@@ -199,9 +198,9 @@ cero. Bajo no-RH, (8) y la densidad logarítmica positiva de \(D_+\) y
 \end{aligned}
 \]
 
-y la versión bilateral domina ambas. \(\square\)
+and the two-sided version dominates both. \(\square\)
 
-Para el cuarteto \(w=2i\) de `104_17`,
+For the quadruple \(w=2i\) of `104_17`,
 
 \[
  Q_{4k}=-2^{4k+1}+O(1),\qquad
@@ -209,7 +208,7 @@ Para el cuarteto \(w=2i\) de `104_17`,
  Q_{2k+1}=4.                                                  \tag{16}
 \]
 
-Por tanto
+Hence
 
 \[
 \boxed{
@@ -221,31 +220,31 @@ Por tanto
 \end{aligned}}
 \]
 
-Así el detector superior pasa el falsificador con el mismo margen que el
-inferior; el bilateral ve las dos clases exponenciales.
+So the upper detector passes the falsifier with the same margin as the
+lower one; the two-sided one sees both exponential classes.
 
 ---
 
-## 4. Traducción prima--Laguerre de la barrera superior
+## 4. Prime–Laguerre translation of the upper barrier
 
-Ponga, como en `104_60`,
+Set, as in `104_60`,
 
 \[
  B_n:=A_n-\lambda_n.                                        \tag{18}
 \]
 
-La barrera superior de (1) equivale exactamente a
+The upper barrier of (1) is exactly equivalent to
 
 \[
  \boxed{B_n\geq A_n-e^{\sqrt n}.}                           \tag{19}
 \]
 
-Como \(A_n=O(n\log n)\), el lado derecho es
-\(-e^{\sqrt n}(1+o(1))\). Esto parece mucho más débil que A1: solo pide que
-el funcional primo completo no tenga una cola negativa de tasa exponencial
-fija.
+Since \(A_n=O(n\log n)\), the right-hand side is
+\(-e^{\sqrt n}(1+o(1))\). This looks much weaker than A1: it only
+requires that the complete prime functional not have a negative tail of
+fixed exponential rate.
 
-Con el regulador de `104_61`,
+With the regulator of `104_61`,
 
 \[
  B_n=\lim_{\varepsilon\downarrow0}
@@ -255,25 +254,25 @@ Con el regulador de `104_61`,
  \right\}.                                                  \tag{20}
 \]
 
-La positividad de \(\Lambda(m)\) no da (19), porque
-\(L_{n-1}^{(1)}\) cambia de signo y los dos términos de (20) son de orden
-\(\varepsilon^{-n}\). Separarlos por valor absoluto vuelve a perder la
-parte finita, exactamente como en `104_61`, `104_63` y `104_65`.
+The positivity of \(\Lambda(m)\) does not give (19), because
+\(L_{n-1}^{(1)}\) changes sign and the two terms of (20) are of order
+\(\varepsilon^{-n}\). Separating them by absolute value again loses the
+finite part, exactly as in `104_61`, `104_63` and `104_65`.
 
 ---
 
-## 5. Por qué la cota fuerte del semiplano Euler no se transporta
+## 5. Why the strong Euler half-plane bound does not transport
 
-La orientación superior sí encaja con una estimación ya probada. Para la
-deformación completa prima--polo de `104_41`,
+The upper orientation does fit an already-proved estimate. For the
+complete prime–pole deformation of `104_41`,
 
 \[
  |\mathcal B_{n,a}|\leq3n\qquad(a\geq4).                    \tag{21}
 \]
 
-En particular, \(\mathcal B_{n,a}\geq-3n\), mucho más fuerte que (19).
-El problema completo se concentra al mover \(a\downarrow1\). La fórmula
-exacta es
+In particular, \(\mathcal B_{n,a}\geq-3n\), much stronger than (19).
+The whole problem concentrates when moving \(a\downarrow1\). The exact
+formula is
 
 \[
  B_n=\mathcal P_n+
@@ -282,49 +281,48 @@ exacta es
  \qquad w_\rho=1-{1\over\rho}.                             \tag{22}
 \]
 
-La fase crítica \(\mathcal P_n\) no ve un cuarteto recíproco off-line; la
-suma de residuos sí. En las clases donde ese cuarteto aporta
-\(\lambda_n\gg R^n\), cambia \(B_n\) en \(-\lambda_n\ll-R^n\) y viola
-(19). Por el Teorema 1.1, esas clases forman en general un conjunto
-sindético, no una excepción dispersa que un criterio de bloques pueda
-ignorar.
+The critical phase \(\mathcal P_n\) does not see a reciprocal off-line
+quadruple; the residue sum does. On the classes where that quadruple
+contributes \(\lambda_n\gg R^n\), it changes \(B_n\) by \(-\lambda_n\ll-R^n\)
+and violates (19). By Theorem 1.1, those classes generally form a
+syndetic set, not a scattered exception a block criterion can ignore.
 
-Por tanto transportar solo la cota inferior
-\(\mathcal B_{n,a}\geq-3n\) hasta el borde probaría ya la barrera superior
-equivalente a RH. La homotopía no se simplifica al cambiar el signo del
-objetivo: el residuo que antes producía una excursión negativa ahora produce
-la positiva.
-
----
-
-## 6. Veredicto
-
-**Probado.** Excursiones bilaterales sindéticas (8), criterios de bloques
-superior y bilateral, detectores acotados (10)--(17), y traducción exacta de
-la barrera superior al canal prima--polo.
-
-**Ganancia.** Ya no es necesario atacar la positividad de Li: una cota
-superior subexponencial en bloques también cerraría RH. La formulación
-bilateral identifica la tasa exterior sin escoger signo.
-
-**No-go distinto.** La cota inferior necesaria para \(B_n\) está probada en
-el semiplano Euler con margen enorme, pero su transporte a \(a=1\) falla
-exactamente por las excursiones positivas del nuevo Teorema 1.1. No es una
-pérdida de constante ni de módulo; es la misma suma firmada de residuos.
-
-**No probado.** Un bloque nuevo para la barrera superior, el límite cero de
-cualquiera de (12), (19), A1 o RH.
+Hence transporting only the lower bound
+\(\mathcal B_{n,a}\geq-3n\) to the boundary would already prove the
+upper barrier equivalent to RH. The homotopy does not simplify by
+flipping the sign of the target: the residue that formerly produced a
+negative excursion now produces a positive one.
 
 ---
 
-## 7. Reproducción
+## 6. Verdict
+
+**Proved.** Syndetic two-sided excursions (8), upper and two-sided block
+criteria, bounded detectors (10)--(17), and the exact translation of the
+upper barrier to the prime–pole channel.
+
+**Gain.** It is no longer necessary to attack Li's positivity: a
+subexponential upper bound on blocks would also close RH. The two-sided
+formulation identifies the exterior rate without choosing a sign.
+
+**Distinct no-go.** The lower bound needed for \(B_n\) is proved on the
+Euler half-plane with a huge margin, but its transport to \(a=1\) fails
+exactly because of the positive excursions of the new Theorem 1.1. It is
+not a loss of constant or modulus; it is the same signed residue sum.
+
+**Not proved.** A new block for the upper barrier, the zero limit of any
+of (12), (19), A1, or RH.
+
+---
+
+## 7. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 two_sided_excursion_check.py
 ```
 
-El checker usa `Fraction`. Verifica las dos clases exponenciales de (16),
-la ausencia de bloques unilaterales de longitud cuatro en el cuarteto, y las
-densidades armónicas \(1/4,1/4,1/2\) de (17). La prueba de retornos
-sindéticos se encuentra en §1 y no depende de muestreo.
+The checker uses `Fraction`. It verifies the two exponential classes of
+(16), the absence of one-sided blocks of length four in the quadruple,
+and the harmonic densities \(1/4,1/4,1/2\) of (17). The proof of
+syndetic returns is in §1 and does not depend on sampling.

@@ -1,6 +1,5 @@
 # E73.216 - Sector constant budget for Bernoulli remainder
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

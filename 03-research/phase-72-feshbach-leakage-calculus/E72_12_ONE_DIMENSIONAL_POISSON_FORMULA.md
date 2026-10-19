@@ -1,7 +1,6 @@
 # E72.12 -- One-dimensional formula for the Doob-Poisson primitive
 
-**Date:** 2026-07-08.
-**Role:** turn DPS from an abstract model inverse into an explicit cumulative-force estimate.
+**Purpose:** turn DPS from an abstract model inverse into an explicit cumulative-force estimate.
 
 ## 0. Starting point
 

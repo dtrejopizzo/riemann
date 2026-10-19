@@ -1,6 +1,6 @@
 # B126.002 — the lattice index is the ramified half of the shadow
 
-Date: 2026-09-12.  Status: `PROVED`.  Full statement: Paper 44 §6.1, Thm. 6.1.
+Status: `PROVED`. Full statement: Paper 44 §6.1, Thm. 6.1.
 
 P123.038 §5 and P123.039 §5 both close on the same missing arrow: "the
 lattice-index operation must be realized as the admissible diagonal shadow",

@@ -1,7 +1,6 @@
 # E72.78 -- Core Cauchy root identity
 
-**Date:** 2026-07-08.
-**Role:** identify the unshorted actual-divisor core as an exact divided difference of the finite Weyl
+**Purpose:** identify the unshorted actual-divisor core as an exact divided difference of the finite Weyl
 function.
 
 ## 0. Finite Weyl function

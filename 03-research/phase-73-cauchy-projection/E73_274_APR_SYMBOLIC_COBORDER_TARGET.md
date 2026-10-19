@@ -1,6 +1,5 @@
 # E73.274 - APR symbolic coborder target
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

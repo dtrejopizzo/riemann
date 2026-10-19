@@ -1,7 +1,6 @@
 # E72.47 -- Fourier overlap bound for the continuous endpoint operator
 
-**Date:** 2026-07-08.
-**Role:** remove the dimension-loss obstruction in E72.46 by using the Fourier-overlap structure of
+**Purpose:** remove the dimension-loss obstruction in E72.46 by using the Fourier-overlap structure of
 the CCM cells.
 
 ## 0. Overlap representation

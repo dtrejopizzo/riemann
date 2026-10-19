@@ -1,6 +1,6 @@
 # E77.7r - Low-block resonant autopsy
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

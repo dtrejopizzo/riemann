@@ -1,7 +1,6 @@
 # E72.140 -- Negative Hilbert-Schmidt certificate for RFBD
 
-**Date:** 2026-07-09.
-**Role:** replace the relative arithmetic form bound by one scalar finite spectral inequality.
+**Purpose:** replace the relative arithmetic form bound by one scalar finite spectral inequality.
 
 ## 0. Relative perturbation
 

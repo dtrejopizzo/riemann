@@ -16,18 +16,18 @@ product), explicitly distinguished from the signed Davenport–Heilbronn (DH) co
 never builds a canonical class / Weil form / polar block for a specific Epstein zeta; it is used
 only as a name in a classification argument.
 
-- `03-research/phase-8/PLAN-RH-PHASE8-heat-flow.md:21-24`:
+- `03-research/phase-8-heat-flow-monotonicity/PLAN-RH-PHASE8-heat-flow.md:21-24`:
   > "Epstein zeta functions (lattice zeta functions) **generically violate RH** (off-line zeros
   > are proven for many quadratic forms / class number `>1`)... what separates ζ from Epstein
   > zetas is the **Euler product**."
-- `03-research/phase-58-full-audit/192-conj-179-6-rigidez-de-euler.md:87` (search for a
+- `03-research/phase-58-full-audit/192-attack-on-conjecture-179-6-141-e.md:87` (search for a
   counterexample in the Selberg-class category):
-  > "Zetas de Epstein con número de clase h>1: ceros off conocidos (Davenport–Heilbronn mismo
-  > método) pero **sin Euler** (la forma cuadrática no es multiplicativa para h>1) — fuera de la
-  > categoría ✓ consistente... No se conoce ningún miembro de la clase de Selberg con un solo
-  > cero off... Resultado de la búsqueda: vacía, y vacía por la razón estructural correcta (todo
-  > lo que tiene ceros off conocidos carece de Euler)."
-- `03-research/phase-137-row-d-canonical-coupling/R137_006_HOSTILE_FINAL.md:141-142`:
+  > "Epstein zetas with class number h>1: known off-line zeros (Davenport–Heilbronn, same
+  > method) but **without Euler** (the quadratic form is not multiplicative for h>1) — outside the
+  > category ✓ consistent... No member of the Selberg class with a single
+  > off-line zero is known... Search result: empty, and empty for the correct structural reason (everything
+  > with known off-line zeros lacks Euler)."
+- `03-research/phase-137-row-d-canonical-coupling/R137_006_AUDIT_FINAL.md:141-142`:
   > "**Epstein zeta functions** `Z_Q(s)` do have a simple pole, a functional equation and, for
   > class number `> 1`, **proven off-line zeros** (Davenport–Heilbronn) — but they have no Euler
   > product, so `−Z_Q'/Z_Q`..." [excluded from the falsifier class G4 needs].
@@ -67,7 +67,7 @@ class has a proven off-line zero**, so it cannot be used to adjudicate the row-D
 way. This is a corrected finding (an earlier claim that the falsifier class was *empty* was
 itself found **false**).
 
-- `03-research/phase-137-row-d-canonical-coupling/R137_006_HOSTILE_FINAL.md:14`:
+- `03-research/phase-137-row-d-canonical-coupling/R137_006_AUDIT_FINAL.md:14`:
   > "the vacuity claim... is **false as stated** — the falsifier class is not empty, it contains
   > every Dedekind zeta function."
 - Same file, the corrected no-go paragraph (§4, "The falsifier test is vacuous here, not
@@ -80,14 +80,14 @@ itself found **false**).
   > chain either way — and a sound chain would prove GRH for all number fields."
   > "**No-go recorded.** *Do not reuse the pattern "uniform bound on a renormalized `P`-family +
   > Vitali/Montel across the strip" as a route to RH.*"
-- `03-research/phase-137-row-d-canonical-coupling/R137_007_LEAD_CLOSING_DECISION.md:29`:
+- `03-research/phase-137-row-d-canonical-coupling/R137_007_CLOSING_DECISION.md:29`:
   > "the falsifier class... is large — every Dedekind zeta `ζ_K` — but contains no member with
   > proven off-line zeros."
 - `NO-GO-LIST.md:638` (same finding, corpus-wide reference copy).
-- Artin L-functions and Selberg-class emptiness: `03-research/phase-58-full-audit/192-conj-179-6-rigidez-de-euler.md:87`:
-  > "L de Artin no probadamente enteras: tienen Euler; su pertenencia a S depende de holomorfía
-  > (Artin abierta), y bajo las conjeturas estándar son automorfas ⟹ GRH esperada — ningún cero
-  > off conocido."
+- Artin L-functions and Selberg-class emptiness: `03-research/phase-58-full-audit/192-attack-on-conjecture-179-6-141-e.md:87`:
+  > "Artin L-functions not provably entire: they have Euler; their membership in S depends on holomorphy
+  > (Artin's conjecture open), and under the standard conjectures they are automorphic ⟹ GRH expected — no
+  > off-line zero known."
 - "Field-uniform" / "uniform in the field" / "for every global field" formulations of the Weil
   form or carrier: no hits anywhere in the corpus (`grep -rniE "field.uniform|uniform in the
   field|for every global field"` returns nothing outside this search). This specific framing —
@@ -115,19 +115,19 @@ arithmetic transcription of the Hodge-index / Castelnuovo–Severi step specific
 consistent, explicit verdict that the geometric intersection identities and Hodge index on the
 square are the missing, unconstructed piece, not something re-derived from scratch.
 
-- `03-research/phase-33-dbn/74-campos-de-funciones-mecanismo-weil.md:153`:
-  > "Weil utilizó la teoría de correspondencias en la variedad producto `C × C` sobre `F_q`. La
-  > forma de intersección sobre divisores de `C × C` es positiva definida en cierto sentido (la
-  > desigualdad de Castelnuovo-Severi), y esto fuerza `|α_j| = q^{1/2}`."
-  > "El Teorema de Weil no es trivial. Su demostración (completada por Weil y clarificada por
-  > Grothendieck-Deligne) reposa sobre tres pilares." (line 127)
-- `03-research/phase-33-dbn/80-castelnuovo-severi-aritmetico.md:11`: attempts to build the
+- `03-research/phase-33-dbn/74-weil-mechanism-function-field-number-field.md:153`:
+  > "Weil used the theory of correspondences on the product variety `C × C` over `F_q`. The
+  > intersection form on divisors of `C × C` is positive definite in a certain sense (the
+  > Castelnuovo-Severi inequality), and this forces `|α_j| = q^{1/2}`."
+  > "Weil's Theorem is not trivial. Its proof (completed by Weil and clarified by
+  > Grothendieck-Deligne) rests on three pillars." (line 127)
+- `03-research/phase-33-dbn/80-arithmetic-castelnuovo-severi-construction-and-critical.md:11`: attempts to build the
   arithmetic analogue of the Castelnuovo–Severi quadratic form directly:
-  > "El resultado es un diagnóstico preciso: se construye una candidata natural `Q`... se
-  > establece que es semidefinida positiva (Proposición 5.2), y se identifica con precisión el
-  > obstáculo que impide cerrar el argumento: el núcleo de `Q` no es trivial..."
-  Also (line 45): "no puede servir como análogo de Castelnuovo-Severi, por la razón siguiente:
-  `Tr(M_N) = 0` para todo `N`..." — a specific negative result about a specific candidate form,
+  > "The result is a precise diagnosis: a natural candidate `Q` is built... it is
+  > established that it is positive semidefinite (Proposition 5.2), and the
+  > obstruction preventing the argument from closing is precisely identified: the kernel of `Q` is not trivial..."
+  Also (line 45): "cannot serve as a Castelnuovo-Severi analogue, for the following reason:
+  `Tr(M_N) = 0` for every `N`..." — a specific negative result about a specific candidate form,
   not a general refutation.
 - `04-papers/42-arithmetic-lefschetz-programme/main.tex:130,165`:
   > "(d) the Hodge index theorem, in the Castelnuovo--Severi form." ... "derived from the explicit
@@ -141,13 +141,13 @@ square are the missing, unconstructed piece, not something re-derived from scrat
   > a surface, whose [proof does not transfer]."..."the constructed pairing, *Hodge index* and
   > *RH* are the same statement, in [the arithmetic setting]" — i.e. the transcription collapses
   > to a restatement of RH, not an independent proof route.
-- `03-research/phase-39-G1G2-interface/120-inventario-CC-fuente.md:533,547` and
-  `03-research/phase-39-G1G2-interface/119-axiomas-forzados.md:165,186`: the model proof (Mattuck–
+- `03-research/phase-39-G1G2-interface/120-source-inventory-of-the-connes-consani-moscovici.md:533,547` and
+  `03-research/phase-39-G1G2-interface/119-forced-axioms-backward-derivation.md:165,186`: the model proof (Mattuck–
   Tate/Grothendieck) and Grothendieck's *Standard Conjectures on Algebraic Cycles* (Gro69) are
   both named and cited as the classical machinery whose arithmetic analogue is sought, with
   standard-conjecture-style positivity of the Lefschetz form on motivic cohomology named as the
-  needed ingredient (`03-research/phase-29/46-matematica-nueva-quiebre.md:255`,
-  `03-research/phase-29/49-geometria-motivica-deficit.md:195,222` — via Beilinson–Deligne mixed
+  needed ingredient (`03-research/phase-29-zeta-spectral-triples/46-break-three-new-mathematical-structures.md:255`,
+  `03-research/phase-29-zeta-spectral-triples/49-motivic-geometry-of-the-deficit-the-arithmetic.md:195,222` — via Beilinson–Deligne mixed
   motives, explicitly flagged as conjectural).
 - Deligne's Weil I tensor-power / Rankin–Selberg weight argument: named and used piecemeal
   (`03-research/phase-116-.../previous-phase-114/114_a_183_DELIGNE_NUCLEAR_SPHERICAL_SURFACE.md:107-143`,
@@ -192,24 +192,24 @@ re-imports the zero data instead of deriving it.
   > the Bost–Connes system, whose **partition function is literally `Z(β)=ζ(β)`**."
   > "**THEOREM.** This is the cleanest full no-go in the corpus: canonicity and RH-freedom are
   > proved structurally incompatible for the entire family of approaches..."
-- `03-research/phase-6/M-OS-2-S2-local-REFUTATION.md:61-63,102,110,120`:
+- `03-research/phase-6-osterwalder-schrader-reflection/M-OS-2-S2-local-REFUTATION.md:61-63,102,110,120`:
   > "making that precise — and gluing the KMS states across places — is precisely the
   > Connes–Bost–Connes program. So the OS route, pushed candidly, **reduces to Connes**..."
   > "Connes–Bost–Connes KMS/partition-function positivity, which is the field's open core, not
   > something our [construction discharges]."
   > "Salvage (multiplicative/KMS per-place positivity) — ⬜ = Connes/Bost–Connes; low odds; the
   > candid frontier."
-- `03-research/phase-8/PLAN-RH-PHASE8-heat-flow.md:23-24` (item 3 of the candid triage):
+- `03-research/phase-8-heat-flow-monotonicity/PLAN-RH-PHASE8-heat-flow.md:23-24` (item 3 of the candid triage):
   > "the archimedean place is provably positive (prolate `λ<1`), the obstruction is the finite
   > places, same wall... the obstruction does not become a thermodynamic invariant; it stays the
   > finite-place positivity. *Verdict: done; same wall.*"
-- `03-research/phase-52-homotopy-inertia/163-destructor-inercia-homotopica.md:176` and
-  `162-construccion-inercia-homotopica.md:12,330,421` (three independent occurrences, same
+- `03-research/phase-52-homotopy-inertia/163-destructor-of-secondary-homotopic-inertia.md:176` and
+  `162-homotopic-inertia-is-m-a-metric-free.md:12,330,421` (three independent occurrences, same
   finding): "función de partición ζ (D161 §161.5: Z(β)=Σk^{-β}=ζ(β), idéntico a Bost–Connes)... el
   muro es la *signatura de inercia*."
 - Connes' actual spectral realization (not a self-adjoint operator with eigenvalues γ_ρ, but a
-  trace-formula-as-sum-over-places reading): `03-research/phase-53-quantum-import/165-destructor-import-cuantico.md:87`:
-  > "Connes (1999)... **no** construye un operador autoadjunto cuyos autovalores sean los γ_ρ."
+  trace-formula-as-sum-over-places reading): `03-research/phase-53-quantum-import/165-destructor-of-the-quantum-import-stone-wave.md:87`:
+  > "Connes (1999)... does **not** construct a self-adjoint operator whose eigenvalues are the γ_ρ."
 - Connes–Consani's archimedean-place positivity (2006.13771) is the one genuinely *positive*
   (unconditional) result extracted from this cluster — see item 6's cross-reference to
   `03-research/phase-136-row-d-map/MAP_5_LITERATURE_VS_CORPUS.md:16` and the "unpainted-but-lit"
@@ -232,7 +232,7 @@ as a proof strategy in its own right) — effectively NEW as a direct row-D aven
 - The only substantial engagement is with the **Motohashi/Kuznetsov spectral expansion of the
   shifted-convolution problem** (phase 14), used to check whether a *different* invariant
   (a `z`-weighted moment) is sensitive to ζ's zeros — not to derive positivity:
-  `03-research/phase-14/M14.2-verdict-nontrivial-spectral-modification.md:36`:
+  `03-research/phase-14-off-diagonal-anchor-asymmetry/M14.2-verdict-nontrivial-spectral-modification.md:36`:
   > "the spectral weight in the Motohashi/Kuznetsov expansion therefore **carries the ζ**-zeros
   > [information]" — a detection-sensitivity finding, not a positivity result, and not pursued
   > further as a proof avenue in later phases.
@@ -311,7 +311,7 @@ bounds
 self-intersection theorem, and a local Tate-colligation positivity test), but never assembled into
 a full Deligne-style weight-monodromy argument, and Sato–Tate itself is not engaged at all.**
 
-- `03-research/phase-15/M1-arithmetic-intersection-pairing.md` — Theorem B, the strongest
+- `03-research/phase-15-arithmetic-hodge-index/M1-arithmetic-intersection-pairing.md` — Theorem B, the strongest
   concrete use of the Rankin–Selberg trick in the corpus:
   > "**Theorem B** — the Frobenius self-intersection is a nonnegative Rankin–Selberg second
   > moment (effectivity), `Γ·Γ≥0`" (line 175) — verified numerically to `2×10⁻⁶` relative error
@@ -323,11 +323,11 @@ a full Deligne-style weight-monodromy argument, and Sato–Tate itself is not en
   > "factor having nonnegative coefficients... iff the Euler factor has nonnegative coefficients;
   > DH fails locally." — nonnegative-coefficient Euler factors used as a *local* passivity test
   > (distinguishing ζ from DH at each prime), not a global sign/weight bound via ρ⊗ρ̄.
-- `03-research/phase-30/55-puente-langlands-cinfty.md:118-132` engages Rankin–Selberg
+- `03-research/phase-30-langlands-bridge-c-infinity/55-langlands-bridge-for-automorphic-l-functions.md:118-132` engages Rankin–Selberg
   `L(s,π×π̃)` positivity on `(1/2,∞)` directly and states a proposition (6.2) about it, but this is
   used for a *different* functional `C_∞^{(F)}`, not for RH's sign.
-  Also `03-research/phase-15/M2-ample-cone-edge-positivity.md:156` and
-  `03-research/phase-15/SYNTHESIS-M1-to-M3-and-the-precise-gap.md:23`: Rankin–Selberg-square
+  Also `03-research/phase-15-arithmetic-hodge-index/M2-ample-cone-edge-positivity.md:156` and
+  `03-research/phase-15-arithmetic-hodge-index/SYNTHESIS-M1-to-M3-and-the-precise-gap.md:23`: Rankin–Selberg-square
   language reused across the M1–M3 milestone chain, all converging on the same open M3 gap.
 - Deligne's actual weight/tensor-power argument (Weil I, ρ⊗ρ̄ has nonnegative coefficients as a
   weight bound): only fragmentary use of "tensor powers of determinant lines" appears (phase-116
@@ -354,10 +354,10 @@ row-B/C-specific vocabulary (`Sh_Z(Frob_n)`, bidegrees `(n^{1/2},n^{-1/2})`, Gra
 but the trace-inequality / Castelnuovo step on the arithmetic square is not closed.
 
 - Direct attempt at the arithmetic Castelnuovo–Severi quadratic form:
-  `03-research/phase-33-dbn/80-castelnuovo-severi-aritmetico.md:11,45,53,177-353` (already quoted
+  `03-research/phase-33-dbn/80-arithmetic-castelnuovo-severi-construction-and-critical.md:11,45,53,177-353` (already quoted
   in item 3): builds a candidate `Q`, proves it PSD (Prop. 5.2), but identifies a nontrivial kernel
-  and an unresolved regularization; explicitly states "no existe... una desigualdad lineal entre
-  `Tr(M_N²)` y la traza de `M_N` que transporte información no trivial." (line 53).
+  and an unresolved regularization; explicitly states "there is no... linear inequality between
+  `Tr(M_N²)` and the trace of `M_N` that carries nontrivial information." (line 53).
 - `03-research/phase-107-arithmetic-lefschetz-reconstruction/107_241_HODGE_INDEX_FOR_THE_CORNER_PAIRING.md:184,195`
   (already quoted in item 3): a "corner pairing" Hodge index statement collapses to a restatement
   of RH (Corollary 3.3).
@@ -395,11 +395,11 @@ one open, buildable task; a "from nothing" re-derivation is not recommended.
 
 | # | Topic | Status | Key files | Recommendation |
 |---|---|---|---|---|
-| 1 | Epstein zeta falsifiers | TRIED–PARTIAL | phase-8 PLAN; phase-58 doc192; phase-137 R137_006 | reuse classification; build canonical class/polar block if needed |
+| 1 | Epstein zeta falsifiers | TRIED–PARTIAL | phase-8-heat-flow-monotonicity PLAN; phase-58 doc192; phase-137 R137_006 | reuse classification; build canonical class/polar block if needed |
 | 2 | Dedekind/Artin/field-uniform GRH | TRIED–NO-GO (falsifier route) / NEW (field-uniform framing) | phase-137 R137_006, R137_007; phase-58 doc192 | do not reopen falsifier search; field-uniform formulations are open if truly needed |
 | 3 | Weil's proof transcribed; Grothendieck/Deligne; Paper 42 | TRIED–PARTIAL | phase-33 docs 74/77/80; phase-107 (140 docs); Paper 42; phase-39 docs 119/120 | do not re-derive pillar naming; build one consolidated ledger |
-| 4 | Bost–Connes/KMS positivity | TRIED–NO-GO | AUDIT_A_CATEGORY_CHANGES (Thm 161.9); phase-6 M-OS-2-S2; phase-8 PLAN; phase-52 docs | do not reopen; reuse Connes–Consani archimedean-only result only |
-| 5 | Family positivity (Kuznetsov/ILS/one-level density) | NEW (essentially untouched) | phase-14 M14.2 (tangential) | build, with caution re: phase-60 "phase not magnitude" risk |
+| 4 | Bost–Connes/KMS positivity | TRIED–NO-GO | AUDIT_A_CATEGORY_CHANGES (Thm 161.9); phase-6-osterwalder-schrader-reflection M-OS-2-S2; phase-8-heat-flow-monotonicity PLAN; phase-52 docs | do not reopen; reuse Connes–Consani archimedean-only result only |
+| 5 | Family positivity (Kuznetsov/ILS/one-level density) | NEW (essentially untouched) | phase-14-off-diagonal-anchor-asymmetry M14.2 (tangential) | build, with caution re: phase-60 "phase not magnitude" risk |
 | 6 | Unimodularity → global positivity | TRIED–PARTIAL (stopping point precisely known) | Paper 44; phase-136 MAP_4, MAP_5, SYNTHESIS | reuse proved local-purity theorems; build the coupling step, no precedent exists |
-| 7 | Rankin–Selberg/tensor tricks/Sato–Tate | TRIED–PARTIAL / NEW (Sato–Tate) | phase-15 M1 Thm B; phase-64 Tate-colligation; phase-30 doc55 | reuse Thm B; Deligne weight argument and Sato–Tate are open |
+| 7 | Rankin–Selberg/tensor tricks/Sato–Tate | TRIED–PARTIAL / NEW (Sato–Tate) | phase-15-arithmetic-hodge-index M1 Thm B; phase-64 Tate-colligation; phase-30-langlands-bridge-c-infinity doc55 | reuse Thm B; Deligne weight argument and Sato–Tate are open |
 | 8 | Castelnuovo/Hodge index on the square | TRIED–PARTIAL (corpus's central open gap) | phase-33 doc80; phase-107 doc241; phase-136 SYNTHESIS; phase-41 doc125 | reuse tropical toy (phase 41) as template; transport onto Paper 44 carrier |

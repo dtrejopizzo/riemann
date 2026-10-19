@@ -1,6 +1,6 @@
 # E78.64 - `PAIRNUM_N` is not the `Q_theta` / `safe_u` object: the shell-vs-sigma bridge remains open
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

@@ -1,11 +1,11 @@
-# 104_17 — Bloque incompleto: stop-gate Abel--Fejér tras el erratum
+# 104_17 — Incomplete block: Abel–Fejér stop-gate after the erratum
 
-**Rol.** Primer ataque a la cota inferior que queda después de corregir el
-signo de Lagarias. No prueba A1. Descarta una familia precisa: obtener el
-signo coeficiente a coeficiente desde positividad radial Abel o desde
-promedios Cesàro/Fejér del bloque incompleto.
+**Role.** First attack on the lower bound that remains after correcting
+Lagarias's sign. It does not prove A1. It rules out a precise family:
+obtaining the coefficient-by-coefficient sign from radial Abel positivity or
+from Cesàro/Fejér averages of the incomplete block.
 
-La coordenada correcta de `104_02` es
+The correct coordinate from `104_02` is
 
 \[
  \mathrm {A1}_{\theta}
@@ -14,50 +14,50 @@ La coordenada correcta de `104_02` es
  +R_n(T_n(\theta))\le(1-\theta)A_n.                 \tag{1}
 \]
 
-Por tanto hace falta una cota **inferior** para
-\(\lambda_n(\sqrt n)\). El promedio no puede sustituirla sin un teorema
-Tauberiano firmado.
+Hence a **lower** bound for
+\(\lambda_n(\sqrt n)\) is needed. Averaging cannot replace it without a signed
+Tauberian theorem.
 
-## 1. Auditoría de no duplicación interna
+## 1. Internal non-duplication audit
 
-`103_27` y `103_28` ya prueban que la positividad puntual de Fejér sobre el
-círculo no sobrevive a un cuarteto recíproco fuera de la línea. Este
-documento no repite ese resultado. Añade:
+`103_27` and `103_28` already prove that pointwise Fejér positivity on the
+circle does not survive a reciprocal off-line quartet. This document does not
+repeat that result. It adds:
 
-1. las sumas acumulada y triangular exactas del cuarteto;
-2. un teorema de positividad Abel radial para **todo** cuarteto, incluso
-   fuera de la línea;
-3. un testigo racional donde el germen Abel es positivo pero el coeficiente
-   y el promedio triangular son negativos.
+1. the exact cumulative and triangular sums of the quartet;
+2. a radial Abel positivity theorem for **every** quartet, even off the
+   line;
+3. a rational witness where the Abel germ is positive but the coefficient
+   and the triangular average are negative.
 
-La extensión identifica por qué un argumento Tauberiano radial no puede ser
-el mecanismo faltante.
+The extension identifies why a radial Tauberian argument cannot be the
+missing mechanism.
 
-## 2. Contribución exacta de un cuarteto
+## 2. Exact contribution of a quartet
 
-Sea \(\rho=\beta+i\gamma\), con \(0<\beta<1\), \(\gamma\ne0\) y
-\(\beta\ne\tfrac12\), y sea
+Let \(\rho=\beta+i\gamma\), with \(0<\beta<1\), \(\gamma\ne0\), and
+\(\beta\ne\tfrac12\), and let
 
 \[
  \mathcal O(\rho)=\{\rho,\bar\rho,1-\rho,1-\bar\rho\}.
 \]
 
-Póngase
+Set
 
 \[
  w_\eta=1-{1\over\eta},\qquad
  w=w_\rho=re^{i\vartheta}=e^{a+i\vartheta}.
 \]
 
-Las simetrías dan
+The symmetries give
 
 \[
- w_{\bar\rho}=\bar w,qquad
+ w_{\bar\rho}=\bar w,\qquad
  w_{1-\rho}=w^{-1},\qquad
  w_{1-\bar\rho}=\bar w^{-1}.                       \tag{2}
 \]
 
-La contribución del cuarteto al coeficiente de Li es, por tanto,
+The quartet's contribution to the Li coefficient is, therefore,
 
 \[
 \begin{aligned}
@@ -69,40 +69,40 @@ La contribución del cuarteto al coeficiente de Li es, por tanto,
 \end{aligned}
 \]
 
-El factor es \(4\), no \(8\). La forma de Weil
-\(2\mathrm{Re}\,\lambda_n\) duplica (3); esa es la fuente del factor
-\(8\) en `103_69` y `104_14`.
+The factor is \(4\), not \(8\). The Weil form
+\(2\mathrm{Re}\,\lambda_n\) doubles (3); that is the source of the factor
+\(8\) in `103_69` and `104_14`.
 
-## 3. Los dos promedios finitos conservan la obstrucción exponencial
+## 3. The two finite averages preserve the exponential obstruction
 
-Defínanse
+Define
 
 \[
  G_N(z)=\sum_{n=1}^Nz^n={z(1-z^N)\over1-z},
 \]
 
-y
+and
 
 \[
  V_N(z)=\sum_{n=1}^N(N+1-n)z^n
  ={z\{N-(N+1)z+z^{N+1}\}\over(1-z)^2}.             \tag{4}
 \]
 
-Sumando (3) se obtiene exactamente
+Summing (3) gives exactly
 
 \[
  \sum_{n=1}^NQ_n
  =4N-2\mathrm{Re}\,\{G_N(w)+G_N(w^{-1})\},     \tag{5}
 \]
 
-y, para el promedio triangular,
+and, for the triangular average,
 
 \[
  \sum_{n=1}^N(N+1-n)Q_n
  =2N(N+1)-2\mathrm{Re}\,\{V_N(w)+V_N(w^{-1})\}.\tag{6}
 \]
 
-Si \(r>1\), las partes dominantes de (5)--(6) son, respectivamente,
+If \(r>1\), the dominant parts of (5)–(6) are, respectively,
 
 \[
  2\mathrm{Re}{w^{N+1}\over1-w},
@@ -110,23 +110,22 @@ Si \(r>1\), las partes dominantes de (5)--(6) son, respectivamente,
  -2\mathrm{Re}{w^{N+2}\over(1-w)^2}.        \tag{7}
 \]
 
-Luego las dos sumaciones retienen una carga de tamaño \(r^N\); no la
-convierten en un error polinómico. El mismo cálculo, tras un número fijo de
-sumaciones, solo añade una potencia fija de \((1-w)^{-1}\) y conserva
-\(r^N\).
+So both summations retain a load of size \(r^N\); they do not turn it into a
+polynomial error. The same computation, after a fixed number of summations,
+only adds a fixed power of \((1-w)^{-1}\) and keeps \(r^N\).
 
-## 4. Teorema: positividad Abel radial de toda órbita funcional
+## 4. Theorem: radial Abel positivity for every functional orbit
 
-Defínase
+Define
 
 \[
  \mathcal A_\rho(q)=\sum_{n\ge1}Q_nq^n.
 \]
 
-La serie converge ordinariamente para
+The series converges ordinarily for
 \(0<q<e^{-|a|}=\min(r,r^{-1})\).
 
-**Teorema.** Para todo \(q\) en ese intervalo,
+**Theorem.** For every \(q\) in that interval,
 
 \[
  \boxed{
@@ -134,19 +133,19 @@ La serie converge ordinariamente para
  ={2q(1+q)\over(1-q)^3}{X\over X^2+Y^2}>0,}         \tag{8}
 \]
 
-donde
+where
 
 \[
  x={q\over1-q},\qquad
- X=(x+\beta)(x+1-\beta)+\gamma^2>0,qquad
+ X=(x+\beta)(x+1-\beta)+\gamma^2>0,\qquad
  Y=\gamma(1-2\beta).                                \tag{9}
 \]
 
-El miembro racional de (8) continúa como función estrictamente positiva
-sobre todo \(0<q<1\). La igualdad con la **serie** se afirma solo dentro de
-su radio de convergencia.
+The rational side of (8) continues as a strictly positive function over
+the whole interval \(0<q<1\). Equality with the **series** is asserted only
+within its radius of convergence.
 
-*Demostración.* Para cada \(\eta\in\mathcal O(\rho)\),
+*Proof.* For each \(\eta\in\mathcal O(\rho)\),
 
 \[
 \begin{aligned}
@@ -157,9 +156,9 @@ su radio de convergencia.
 \end{aligned}
 \]
 
-En la última igualdad se usaron
-\(1-w_\eta=1/\eta\) y
-\(1-qw_\eta=((1-q)\eta+q)/\eta\). Sumando el cuarteto,
+The last equality uses
+\(1-w_\eta=1/\eta\) and
+\(1-qw_\eta=((1-q)\eta+q)/\eta\). Summing over the quartet,
 
 \[
  \mathcal A_\rho(q)
@@ -167,34 +166,34 @@ En la última igualdad se usaron
  \left({1\over x+\rho}+{1\over x+1-\rho}\right).  \tag{11}
 \]
 
-El paréntesis es
+The parenthesis is
 
 \[
  {1+2x\over(x+\rho)(x+1-\rho)},                   \tag{12}
 \]
 
-y
+and
 
 \[
  (x+\rho)(x+1-\rho)=X+iY.                         \tag{13}
 \]
 
-Como \(\mathrm{Re}(X+iY)^{-1}=X/(X^2+Y^2)\) y
-\(1+2x=(1+q)/(1-q)\), (8) sigue de (11)--(13). Todos
-los factores son estrictamente positivos. \(\square\)
+Since \(\mathrm{Re}(X+iY)^{-1}=X/(X^2+Y^2)\) and
+\(1+2x=(1+q)/(1-q)\), (8) follows from (11)–(13). All
+the factors are strictly positive. \(\square\)
 
-Si \(\beta=\tfrac12\), las cuatro etiquetas duplican el par conjugado; se
-divide (8) por dos y la positividad permanece.
+If \(\beta=\tfrac12\), the four labels duplicate the conjugate pair; (8) is
+divided by two and positivity remains.
 
-## 5. Testigo racional exacto
+## 5. Exact rational witness
 
-Tómese
+Take
 
 \[
  \rho={1+2i\over5},\qquad w=2i.
 \]
 
-La aritmética exacta de (3) da
+The exact arithmetic of (3) gives
 
 \[
 \begin{array}{c|rrrrrrrr}
@@ -203,14 +202,14 @@ Q_n&4&25/2&4&-225/8&4&4225/32&4&-65025/128.
 \end{array}                                                     \tag{14}
 \]
 
-Con
+With
 
 \[
- C_N=\sum_{n=1}^NQ_n,qquad
+ C_N=\sum_{n=1}^NQ_n,\qquad
  F_N=\sum_{n=1}^N(N+1-n)Q_n,
 \]
 
-se obtiene
+one obtains
 
 \[
  \boxed{
@@ -218,8 +217,8 @@ se obtiene
  F_4={267\over8}>0,\quad F_8=-{10885\over128}<0.} \tag{15}
 \]
 
-Así, \(F_4\) enmascara el coeficiente negativo, pero \(F_8\) prueba que
-el promedio tampoco conserva positividad. En cambio, para \(0<q<1/2\),
+So \(F_4\) masks the negative coefficient, but \(F_8\) proves that the
+average does not preserve positivity either. By contrast, for \(0<q<1/2\),
 
 \[
  \boxed{
@@ -227,21 +226,21 @@ el promedio tampoco conserva positividad. En cambio, para \(0<q<1/2\),
  ={4q\over1-q}+{8q^2\over1+4q^2}+{2q^2\over4+q^2}>0,}          \tag{16}
 \]
 
-aunque
+even though
 
 \[
  Q_{4k}=4-2(2^{4k}+2^{-4k})\longrightarrow-\infty.             \tag{17}
 \]
 
-## 6. Por qué no hay transferencia al cutoff móvil
+## 6. Why there is no transfer to the moving cutoff
 
-Para una altura fija \(T\), si
+For a fixed height \(T\), if
 
 \[
  \lambda_n(T)=\sum_{|\Im\rho|<T}(1-w_\rho^n),
 \]
 
-entonces
+then
 
 \[
  \Delta^k\lambda_n(T)
@@ -249,56 +248,57 @@ entonces
  \qquad k\ge1.                                      \tag{18}
 \]
 
-No tiene signo. Para \(T=\sqrt n\), la diferencia contiene además los
-ceros del cascarón
-\([\sqrt n,\sqrt{n+1})\), también sin signo. Las identidades de recuperación
+This has no fixed sign. For \(T=\sqrt n\), the difference also contains the
+zeros of the shell
+\([\sqrt n,\sqrt{n+1})\), likewise with no sign. The recovery identities
 
 \[
- Q_N=C_N-C_{N-1},qquad
+ Q_N=C_N-C_{N-1},\qquad
  Q_N=F_N-2F_{N-1}+F_{N-2}                           \tag{19}
 \]
 
-muestran la pérdida exacta: una cota de tamaño para \(C_N\) o \(F_N\) no
-controla la diferencia firmada requerida. Una hipótesis de variación fuerte
-suficiente para (19) ya excluiría (15)--(17) y contendría el mismo dato
-RH-strength.
+show the exact loss: a size bound on \(C_N\) or \(F_N\) does not control the
+required signed difference. A strong-variation hypothesis sufficient for
+(19) would already exclude (15)–(17) and would contain the same RH-strength
+datum.
 
-## 7. Decisión
+## 7. Decision
 
 ```text
-probado:
-  fórmulas exactas del cuarteto y de sus dos sumaciones;
-  positividad Abel radial estricta incluso para cuartetos off-line;
-  testigo racional con coeficiente y promedio Fejér negativos;
-  ausencia de signo en las diferencias con cutoff fijo o móvil.
+proved:
+  exact formulas for the quartet and its two summations;
+  strict radial Abel positivity even for off-line quartets;
+  rational witness with a negative coefficient and a negative Fejér average;
+  absence of a fixed sign in the differences, with either fixed or moving
+  cutoff.
 
-descartado como fuente autónoma de A1:
-  positividad Abel radial;
-  un número fijo de promedios Cesàro/Fejér;
-  transferencia Tauberiana sin una hipótesis angular o de variación nueva.
+ruled out as an autonomous source of A1:
+  radial Abel positivity;
+  a fixed number of Cesàro/Fejér averages;
+  Tauberian transfer without a new angular or variation hypothesis.
 
-no descartado:
-  una identidad específica de los pesos reales de zeta que controle
-  simultáneamente el ángulo y la recuperación coeficiente a coeficiente.
+not ruled out:
+  a specific identity for the real weights of zeta that simultaneously
+  controls the angle and the coefficient-by-coefficient recovery.
 
-no probado:
-  la cota inferior de lambda_n(sqrt n), A1 o RH.
+not proved:
+  the lower bound for lambda_n(sqrt n), A1, or RH.
 ```
 
-El sucesor natural no es otro promedio radial. El control angular uniforme
-es el gate Toeplitz--Herglotz/Weil ya auditado en phases 102--103. El frente
-que se ensaya a continuación conserva, en cambio, el cociclo Euler--polo a
-desplazamiento finito correlacionado \(u=c\varepsilon\), que `104_16` no
-eliminó.
+The natural successor is not another radial average. Uniform angular control
+is the Toeplitz–Herglotz/Weil gate already audited in phases 102–103. The
+front attempted next instead keeps the Euler–pole cocycle at finite
+correlated shift \(u=c\varepsilon\), which `104_16` did not eliminate.
 
-## 8. Reproducción exacta
+## 8. Exact reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 incomplete_abel_stop_gate_check.py
 ```
 
-El programa usa solo `Fraction`: certifica (14)--(15) y compara las dos
-formas racionales de (8)/(16) en tres valores racionales de \(q\). La
-positividad para todo el intervalo es el argumento algebraico de (8)--(13),
-no un muestreo numérico.
+The program uses only `Fraction`: it certifies (14)–(15) and compares the two
+rational forms of (8)/(16) at three rational values of \(q\). Positivity over
+the whole interval is the algebraic argument of (8)–(13), not a numerical
+sampling.
+</content>

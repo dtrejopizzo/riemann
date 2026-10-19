@@ -1,0 +1,2858 @@
+                                                    BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS
+
+                                                                                        TRISTAN FREIBERG
+
+
+                                                    Abstract. Assuming a suitably uniform Hardy–Littlewood prime tuples hypothesis, we ob-
+                                                    tain a second-order asymptotic for the proportion of short intervals containing a prescribed
+                                                    number of primes, when the interval length is comparable to the average prime spacing. The
+arXiv:2609.33692v1 [math.NT] 27 Sep 2026
+
+
+
+
+                                                    leading term is Poisson, but the arithmetic correction differs from the binomial correction
+                                                    in Cramér’s independent model and predicts a stronger bias toward counts near the mean.
+                                                    The proof combines inclusion–exclusion with singular-series estimates of Montgomery and
+                                                    Soundararajan and a finite-sieve argument that controls the required alternating sums as the
+                                                    truncation order grows. We also give a refined random model that reproduces the correction
+                                                    and numerical comparisons that support the prediction.
+
+
+
+
+                                                                                            Contents
+                                              1. Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .             3
+                                              1.1. Beyond the Poisson approximation . . . . . . . . . . . . . . . . . . . . . . . . .                   4
+                                              1.2. Organization of the paper . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                5
+                                              Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                 6
+                                              2. Notation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .             6
+                                              3. Back of the envelope . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .               8
+                                              4. Bookkeeping . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .               10
+                                              4.1. Prime tuples and the Hardy–Littlewood residual . . . . . . . . . . . . . . . . .                    11
+                                              4.2. The singular-series approximation . . . . . . . . . . . . . . . . . . . . . . . . .                 12
+                                              4.3. The corrected Poisson expression and averaging . . . . . . . . . . . . . . . . .                    13
+                                              4.4. Truncation residuals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .              14
+                                              4.5. Combining the residuals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .               14
+                                              5. A Bonferroni sandwich . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                 15
+                                              6. The singular series through a finite sieve . . . . . . . . . . . . . . . . . . . . . . .              16
+                                              6.1. A finite probability space . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .              17
+                                              6.2. An upper bound uniform in the number of shifts . . . . . . . . . . . . . . . . .                    19
+                                              6.3. The second and fourth moments . . . . . . . . . . . . . . . . . . . . . . . . . .                   20
+                                              6.4. Thinning the survivors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .              21
+                                              6.5. The signed residuals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .              23
+                                              6.6. Integration over the starting points . . . . . . . . . . . . . . . . . . . . . . . . .              24
+                                              7. Averaging the logarithmic density . . . . . . . . . . . . . . . . . . . . . . . . . .                 25
+                                              7.1. Uniform bounds for the corrected Poisson expression . . . . . . . . . . . . . .                     26
+
+                                              Date: September 29, 2026.
+                                              2020 Mathematics Subject Classification. Primary 11N05; Secondary 11N35, 11N36.
+                                              Key words and phrases. primes in short intervals, Hardy–Littlewood prime tuples conjecture, singular series,
+                                           Poisson distribution, Selberg sieve.
+                                              The use of AI in developing the proof and preparing the exposition is described in Appendix C.
+
+
+                                                                                                 1
+2                                              T. FREIBERG
+
+
+    7.2. The averaging residual . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      28
+    7.3. The effective mean . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      30
+    8. From prime tuples to prime counts . . . . . . . . . . . . . . . . . . . . . . . . . .         32
+    8.1. A quantitative transfer statement . . . . . . . . . . . . . . . . . . . . . . . . . .       33
+    8.2. Sufficient Hardy–Littlewood hypotheses . . . . . . . . . . . . . . . . . . . . . .          35
+    8.3. The corrected Poisson asymptotic . . . . . . . . . . . . . . . . . . . . . . . . . .        38
+    9. A random model for the arithmetic correction . . . . . . . . . . . . . . . . . . . .          40
+    9.1. Sieve first, then toss coins . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    40
+    9.2. The variance from pairs of survivors . . . . . . . . . . . . . . . . . . . . . . . .        41
+    9.3. Where the logarithm comes from . . . . . . . . . . . . . . . . . . . . . . . . . .          42
+    9.4. From the variance deficit to the correction . . . . . . . . . . . . . . . . . . . . .       43
+    9.5. What the model explains . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       44
+    9.6. Further corrections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     45
+    References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   46
+    Appendix A. Numerical comparisons . . . . . . . . . . . . . . . . . . . . . . . . . .            48
+    Appendix B. From Gauss to Cramér . . . . . . . . . . . . . . . . . . . . . . . . . . .           51
+    B.1. Gauss’s counts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      51
+    B.2. From a density to coin flips . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      52
+    B.3. Arithmetic correlations on average . . . . . . . . . . . . . . . . . . . . . . . . .        53
+    Appendix C. AI assistance, provenance and verification . . . . . . . . . . . . . . . .           55
+                      BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                     3
+
+
+                                         1. Introduction
+   Let 𝜋(𝑥) denote the number of primes less than or equal to 𝑥. One way to formulate the
+prime number theorem is as follows: for fixed 𝜆 > 0,
+
+                            𝑁
+                         1
+                           ∑ (𝜋(𝑛 + 𝜆 log 𝑛) − 𝜋(𝑛)) ∼ 𝜆        (𝑁 → ∞).
+                         𝑁 𝑛=1
+
+Thus, on average over 𝑛 ⩽ 𝑁 , the short interval (𝑛, 𝑛 + 𝜆 log 𝑛] contains 𝜆 primes.
+  Cramér’s random model [2, 3] predicts a Poisson distribution for the number of primes in
+short intervals; see [13, equation (15)] and [29, Exercise 1]. Specifically, for each fixed real
+𝜆 > 0 and integer 𝑚 ⩾ 0,
+
+             1                                             𝑒 −𝜆 𝜆𝑚
+               |{1 ⩽ 𝑛 ⩽ 𝑁 ∶ 𝜋(𝑛 + 𝜆 log 𝑛) − 𝜋(𝑛) = 𝑚}| ∼                 (𝑁 → ∞).
+             𝑁                                                𝑚!
+
+Gallagher [9] showed that this follows from a sufficiently uniform version of the Hardy–
+Littlewood prime 𝑘-tuples conjecture. Earlier, Hooley [17, p. 137, Problem (iii)] had remarked
+that a suitable form of those conjectures implies an exponential distribution for the normal-
+ized gaps (𝑝𝑛+1 − 𝑝𝑛 )/ log 𝑝𝑛 , where 𝑝𝑛 denotes the 𝑛th prime. He described this as a gamma
+distribution with parameter 1.
+   Gallagher’s proof used the method of moments, with the key input that the singular se-
+ries in the Hardy–Littlewood prime 𝑘-tuples conjecture [16] is of average order 1. The au-
+thor [7, Theorem 4.1] gave an alternative proof by direct inclusion-exclusion, also treating
+the joint distribution of prime counts in several disjoint short intervals. This approach allows
+error terms in the prime-tuple estimates to be tracked explicitly. It was suggested in [7, Sec-
+tion 5] that combining it with the more precise singular-series average of Montgomery and
+Soundararajan [25, equation (17)] could yield lower-order terms in the conditional asymptotic
+for the distribution of primes in short intervals. We carry out this program here.
+   The general results require some preparation, so we state here a representative theorem for
+intervals with left endpoint between 1 and 𝑁 . The more general statements, with substantially
+weaker hypotheses, appear in Section 8.
+   Write 𝔖(ℋ) for the singular series associated with a finite set ℋ of integer shifts; its defini-
+tion is recalled in Subsection 4.1. We use the following strong form of the Hardy–Littlewood
+prime 𝑘-tuples conjecture.
+Hypothesis 1.1 (Uniform Hardy–Littlewood). For every fixed 𝑈 > 0 and 𝜖 > 0,
+
+                                                                 𝑁
+                                                                     𝑑𝑡
+    |{1 ⩽ 𝑛 ⩽ 𝑁 ∶ 𝑛 + ℎ is prime for every ℎ ∈ ℋ}| = 𝔖(ℋ) ∫                + 𝑂𝑈 ,𝜖 (𝑁 1/2+𝜖 ) ,
+                                                                2 (log 𝑡)𝑘
+
+uniformly for integers
+                                2 ⩽ 𝐻 ⩽ 𝑈 log 𝑁 ,    2 ⩽ 𝑘 ⩽ log 𝐻 ,
+
+and all 𝑘-element subsets ℋ of {1, … , 𝐻 }. In particular, the implied constant is independent of 𝑘
+and ℋ.
+4                                               T. FREIBERG
+
+
+Theorem 1.2. Assume Hypothesis 1.1. Fix an integer 𝑚 ⩾ 0 and real numbers 0 < 𝑉 ⩽ 𝑈 . For
+integers 𝐻 satisfying 𝑉 log 𝑁 ⩽ 𝐻 ⩽ 𝑈 log 𝑁 , put
+
+                                                       𝐻
+                                           𝜆 ∶=              .
+                                                   log 𝑁 − 1
+
+Then, as 𝑁 → ∞, uniformly over this range of 𝐻 ,
+
+    1
+      |{1 ⩽ 𝑛 ⩽ 𝑁 ∶ 𝜋(𝑛 + 𝐻 ) − 𝜋(𝑛) = 𝑚}|
+    𝑁
+                              𝑒 −𝜆 𝜆𝑚      log 𝐻 + log(2𝜋) + 𝛾 − 1                      1
+                           =          {1 −                         ((𝑚 − 𝜆)2 − 𝑚)} + 𝑜 ( ) ,
+                                 𝑚!                  2𝐻                                 𝐻
+
+where 𝛾 is the Euler–Mascheroni constant.
+
+   The hypothesis above is chosen for simplicity. Section 8 replaces it by weaker hypotheses
+on averages of prime-tuple counts and allows the left endpoints to range over (𝑀, 𝑀 + 𝑁 ].
+   Related biases occur in the residue classes of consecutive terms of arithmetic sequences.
+Lemke Oliver and Soundararajan [20] used the Hardy–Littlewood prime 𝑘-tuples conjecture to
+predict lower-order terms favoring certain residue patterns among consecutive primes. David,
+Devin, Nam and Schlitt [4] developed an analogous explanation for consecutive sums of two
+squares, using conjectures for correlations of that sequence and estimates for averages of the
+associated singular series. Our use of the term “bias” is in the same spirit: the leading Poisson
+law is accompanied by an arithmetic correction favoring certain prime counts over others.
+Here the statistic is the number of primes in a short interval, rather than the residue pattern
+of consecutive terms.
+1.1. Beyond the Poisson approximation. The correction in Theorem 1.2 differs even from
+the correction obtained by retaining the binomial distribution in the independent model. To
+see this, consider 𝐻 independent coin flips, each with success probability 𝜆/𝐻 , so that the
+expected number of successes is 𝜆. The probability of exactly 𝑚 successes is
+                                                     𝑚           𝐻 −𝑚
+                                         𝐻   𝜆      𝜆
+                                  𝑏𝑚 ∶= ( ) ( ) (1 − )                  .
+                                         𝑚 𝐻        𝐻
+
+For fixed 𝑚 and 𝜆 in a compact subset of (0, ∞), expanding the finite product in the binomial
+coefficient and the logarithm of the last factor gives
+
+                                𝑏𝑚              𝑚(𝑚 − 1) 𝑚𝜆   𝜆2
+                    log (                 )=−           +   −    + 𝑂(𝐻 −2 ).
+                            𝑒 −𝜆 𝜆𝑚 /𝑚!           2𝐻      𝐻   2𝐻
+
+Thus, writing
+                                      𝐶2 (𝑚; 𝜆) ∶= (𝑚 − 𝜆)2 − 𝑚,
+the second Charlier polynomial in this normalization, we obtain
+
+                                      𝑒 −𝜆 𝜆𝑚      𝐶2 (𝑚; 𝜆)
+                               𝑏𝑚 =           {1 −           + 𝑂(𝐻 −2 )} .
+                                         𝑚!           2𝐻
+                      BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                    5
+
+
+The theorem has the same polynomial, but replaces its coefficient 1/(2𝐻 ) by
+
+                                    log 𝐻 + log(2𝜋) + 𝛾 − 1
+                                                            .
+                                              2𝐻
+The arithmetic correction is therefore larger by a factor asymptotic to log 𝐻 , wherever 𝐶2 (𝑚; 𝜆)
+stays away from zero.
+   Here 𝜆 = 𝐻 /(log 𝑁 −1) matches the averaged density to the precision required. It is not the
+local mean at every starting point: Cramér’s model assigns probability 1/ log 𝑛 to the integer 𝑛.
+Averaging over this varying density changes the comparison only by 𝑂(𝐻 −2 ) when 𝐻 ≍ log 𝑁 ,
+as the estimates in Section 7 explain. It does not account for the correction of order (log 𝐻 )/𝐻 .
+   The distinction comes from arithmetic dependence. Independent trials assign the same
+probability to every set of 𝑘 successes, whereas the Hardy–Littlewood conjecture weights each
+set of shifts by its singular series. Gallagher’s result that these weights have average order 1
+explains why independence gives the correct first-order prediction. The more precise singular-
+series average retains a lower-order contribution, which inclusion-exclusion turns into the
+correction above.
+   The sign also explains the bias: the correction increases the Poisson mass where (𝑚 − 𝜆)2 <
+𝑚 and decreases it where the reverse inequality holds. Thus counts near the mean are favored,
+with a stronger correction than the independent binomial model predicts.
+   Unconditionally, even the existence of infinitely many such intervals for every fixed 𝜆 > 0
+and 𝑚 ⩾ 0 required further progress. Building on Maynard’s breakthrough on small gaps
+between primes [23, 24], the author [6, Theorem 1.1] proved that
+
+                      |{1 ⩽ 𝑛 ⩽ 𝑁 ∶ 𝜋(𝑛 + 𝜆 log 𝑛) − 𝜋(𝑛) = 𝑚}| ⩾ 𝑁 1−𝑜(1) .
+
+This establishes the occurrence of every prescribed prime count on this scale, although it falls
+short of the positive limiting proportion predicted by the Poisson conjecture. For 𝜆 sufficiently
+small in terms of 𝑚, Mastrostefano improved this lower bound to ≫𝑚,𝜆 𝑁 / log 𝑁 [21, Theo-
+rem 1.2], and subsequently to ≫𝑚,𝜆 𝑁 [22, Theorem 1.1]. Thus a positive proportion of these
+intervals contain exactly 𝑚 primes in this restricted range of parameters. For sufficiently large
+𝑚, Sono [28, Corollary 1.2] gives an explicit quantitative refinement of the positive-proportion
+bound, again with 𝜆 restricted in terms of 𝑚. Gallagher also obtained an unconditional expo-
+nential upper bound for the upper tail: for positive constants 𝜈 ⩾ 𝜆 ⩾ 1,
+
+                  |{𝑛 ⩽ 𝑁 ∶ 𝜋(𝑛 + 𝜆 log 𝑁 ) − 𝜋(𝑛) > 𝜈}| ⩽ (1 + 𝑜(1))𝑁 𝑒 −𝑐𝜈/𝜆 ,
+
+where 𝑐 > 0 is an absolute constant [9, Theorem 2].
+1.2. Organization of the paper. Section 2 records our notation and conventions. Section 3
+sketches the argument with the errors suppressed, showing how inclusion–exclusion produces
+the Poisson main term and its arithmetic correction. Section 4 then defines the quantities
+and residuals needed to make this calculation precise, and Section 5 gives the unconditional
+Bonferroni sandwich with all residuals retained.
+   The technical heart of the proof is Section 6. A finite sieve allows us to control the alternat-
+ing singular-series sums as the truncation order grows, using precise estimates only for low
+moments. This also gives the required bounds for the singular-series and truncation residuals.
+6                                            T. FREIBERG
+
+
+Section 7 uses Taylor expansion about the averaged density to replace the integrated approx-
+imation by an expression at a single effective mean. Section 8 identifies sufficient Hardy–
+Littlewood hypotheses, which supply the sole unproved input, and combines the estimates to
+prove the general conditional theorem and its introductory special case.
+   Section 9 explains the arithmetic correction through a refinement of Cramér’s random
+model. Appendix A compares the approximations numerically with the Poisson and binomial
+predictions. Appendix B gives a historical perspective, beginning with Gauss’s prime-count
+tables, and Appendix C records the provenance of the work, the use of AI and the verification
+of the arguments.
+
+Acknowledgments. I thank Andrew Granville for his encouragement and for a calculation
+he sent me in June 2023, which clarified the treatment of the logarithmic integral and corrected
+the coefficient of the secondary term.
+
+                                           2. Notation
+   The set of primes is denoted by 𝒫, its indicator by 1𝒫 , and the number of primes less than or
+equal to 𝑥 by 𝜋(𝑥). Sums and products indexed by 𝑝 run over primes. Euler’s totient function
+is denoted by 𝜙, and we write gcd(𝑎, 𝑏) for the greatest common divisor of integers 𝑎 and 𝑏.
+   For a finite set 𝑆, we write |𝑆| for its cardinality, and put [𝐻 ] ∶= {1, … , 𝐻 } for a positive
+integer 𝐻 . The set ℋ mod 𝑝 consists of the residue classes modulo 𝑝 represented in ℋ. Empty
+sums and products have values 0 and 1, respectively. Binomial coefficients with nonnegative
+integer arguments are taken to be zero when the lower argument is larger than the upper
+argument.
+   The Euler–Mascheroni constant is denoted by 𝛾 = 0.577215 ….
+   The interval length 𝐻 , the lower endpoint 𝑀 of the averaging range, and the length 𝑁 of
+that range are integers satisfying 𝐻 ⩾ 1, 𝑀 ⩾ 0 and 𝑁 ⩾ 2. For an integer 𝑛 ⩾ 0, put
+
+                                  𝑋 (𝑛; 𝐻 ) ∶= 𝜋(𝑛 + 𝐻 ) − 𝜋(𝑛).
+
+The proportion of intervals containing exactly 𝑚 primes is
+
+                                         1
+                   𝑃(𝑚; 𝐻 , 𝑀, 𝑁 ) ∶=      |{𝑀 < 𝑛 ⩽ 𝑀 + 𝑁 ∶ 𝑋 (𝑛; 𝐻 ) = 𝑚}| ,
+                                         𝑁
+
+where 𝑚 ⩾ 0 is an integer and 𝑛 ranges over integers. Whether 𝑚 is fixed or allowed to vary
+is specified in each result.
+   The singular series of a finite set ℋ of integers is
+
+                                                                    −|ℋ|
+                                               |ℋ mod 𝑝|       1
+                        𝔖(ℋ) ∶= ∏ (1 −                   ) (1 − )          .
+                                     𝑝            𝑝            𝑝
+
+The set ℋ is admissible if |ℋ mod 𝑝| < 𝑝 for every prime 𝑝, equivalently if 𝔖(ℋ) > 0, and
+inadmissible otherwise. In particular, 𝔖(∅) = 𝔖({ℎ}) = 1 for every integer ℎ.
+   For an integer 𝑘 ⩾ 0, the tuple average 𝑇 (𝑘; 𝐻 , 𝑀, 𝑁 ) is the average number of ways to
+choose 𝑘 primes from (𝑛, 𝑛 + 𝐻 ], over the integers 𝑀 < 𝑛 ⩽ 𝑀 + 𝑁 . The corresponding
+                      BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                     7
+
+
+singular-series sum 𝑆(𝑘; 𝐻 ) is over the 𝑘-element subsets of [𝐻 ], each counted once. Thus
+                                    𝑁
+                                 1     𝑋 (𝑀 + 𝑛; 𝐻 )
+           𝑇 (𝑘; 𝐻 , 𝑀, 𝑁 ) ∶=     ∑(                ),           𝑆(𝑘; 𝐻 ) ∶=     ∑ 𝔖(ℋ).
+                                 𝑁 𝑛=1      𝑘                                   ℋ ⊆ [𝐻 ]
+                                                                                |ℋ| = 𝑘
+
+The logarithmic density factor is
+                                                       𝑀+𝑁
+                                                   1             𝑑𝑡
+                                 𝐽 (𝑘; 𝑀, 𝑁 ) ∶=     ∫                 .
+                                                   𝑁 max{2,𝑀} (log 𝑡)𝑘
+
+We write 𝐺(𝑘; 𝐻 ) for the two-term approximation to 𝑆(𝑘; 𝐻 ):
+
+                         𝐻𝑘       𝑘                               log 𝐻 + log(2𝜋) + 𝛾 − 1
+           𝐺(𝑘; 𝐻 ) ∶=      (1 − ( )𝜂(𝐻 )) ,           𝜂(𝐻 ) ∶=                           .
+                         𝑘!       2                                          𝐻
+
+  We reserve ℙ for probability and write 𝔼𝑍 for the expectation of a random variable 𝑍 . The
+underlying probability space is specified where it is introduced. The Poisson mass at 𝑚 with
+mean 𝑢 ⩾ 0 is 𝑝𝑚 (𝑢) ∶= 𝑒 −𝑢 𝑢 𝑚 /𝑚!, with values at 𝑢 = 0 understood by continuity; we put
+𝑝𝑚 (𝑢) = 0 for negative integers 𝑚. The corrected Poisson approximation is
+                                                       𝜂(𝐻 )
+                         𝑄(𝑚; 𝑢, 𝐻 ) ∶= 𝑝𝑚 (𝑢) {1 −          ((𝑚 − 𝑢)2 − 𝑚)} .
+                                                         2
+Its average over the logarithmic density is denoted by 𝐹 (𝑚; 𝐻 , 𝑀, 𝑁 ), and the averaged density
+parameter by 𝜇 = 𝜇(𝐻 , 𝑀, 𝑁 ):
+                                     𝑀+𝑁
+                                 1                  𝐻
+          𝐹 (𝑚; 𝐻 , 𝑀, 𝑁 ) ∶=                𝑄 (𝑚;       , 𝐻 ) 𝑑𝑡,         𝜇 ∶= 𝐻 𝐽 (1; 𝑀, 𝑁 ).
+                                 𝑁 ∫max{2,𝑀}       log 𝑡
+
+The exact mean prime count is 𝑇 (1; 𝐻 , 𝑀, 𝑁 ); 𝜇 is its logarithmic-integral approximation.
+   We use 𝜆 for a Poisson parameter, with its precise choice specified in each occurrence. The
+indexed coefficients 𝜆𝑑 in the proof of Lemma 6.5 are local sieve weights and are unrelated to
+this parameter.
+   The signed residuals ΔHL , ΔMS , Δtr and Δav record, respectively, the Hardy–Littlewood
+approximation, the singular-series approximation, truncation of the exponential series, and
+replacement of 𝐹 by 𝑄 evaluated at 𝜇. Their precise definitions are given in Section 4. The
+corresponding weighted or integrated residuals are denoted by 𝑅HL , 𝑅MS and 𝑅tr , and their
+sum by ℛ. Dependence on 𝐻 , 𝑀 and 𝑁 is sometimes suppressed, as indicated in the text.
+   For functions 𝑓 and 𝑔, with 𝑔 positive, we write 𝑓 = 𝑂(𝑔), or equivalently 𝑓 ≪ 𝑔, if |𝑓 | ⩽ 𝐶𝑔
+throughout the range under consideration for some constant 𝐶 > 0. The notation 𝑔 ≫ 𝑓 has
+the same meaning. For positive functions, 𝑓 ≍ 𝑔 means that 𝑓 ≪ 𝑔 and 𝑔 ≪ 𝑓 . Subscripts
+indicate permitted dependence of the implied constant. Any dependence on additional fixed
+parameters is stated in the relevant result. Uniformity in a parameter means that the implied
+constant is independent of that parameter throughout the stated range.
+   We write 𝑓 = 𝑜(𝑔) if 𝑓 /𝑔 → 0, and 𝑓 ∼ 𝑔 if 𝑓 /𝑔 → 1. The limiting parameter, usually 𝑁 or
+𝐻 , and the allowed dependence of the other parameters are specified in the text. A uniform
+𝑜(𝑔) bound means that the supremum of |𝑓 /𝑔| over the stated parameter ranges tends to zero.
+8                                            T. FREIBERG
+
+
+                                    3. Back of the envelope
+   We first sketch the argument assuming 𝑀 = 0, suppressing some parameters and temporar-
+ily ignoring all errors. The notation in this section is provisional and will be superseded by the
+formal definitions in Section 4. We use ≈ to indicate a proposed approximation whose error
+remains to be considered.
+   Let 𝐻 ⩾ 1, 𝑁 ⩾ 2 and 0 ⩽ 𝑚 ⩽ 𝐻 be integers. Write 𝜋(𝑥) for the number of primes less
+than or equal to 𝑥, and put
+
+                             1
+                   𝑃(𝑟) ∶=     |{𝑛 ⩽ 𝑁 ∶ 𝜋(𝑛 + 𝐻 ) − 𝜋(𝑛) = 𝑟}|       (𝑟 ⩾ 0).
+                             𝑁
+
+Here 𝑛 and 𝑟 are integers, and vertical bars denote cardinality. We wish to estimate 𝑃(𝑚).
+   Hardy–Littlewood estimates concern prescribed prime tuples, so our first task is to express
+𝑃(𝑚) in terms of counts of such tuples. Write [𝐻 ] = {1, … , 𝐻 } and let 1𝒫 be the indicator of
+the primes 𝒫. For 𝑘 ⩾ 0, put
+
+                                                    𝑁
+                                        1
+                             𝑇 (𝑘) ∶=      ∑ ∑ ∏ 1 (𝑛 + ℎ).
+                                        𝑁 ℋ ⊆ [𝐻 ] 𝑛 = 1 ℎ ∈ ℋ 𝒫
+                                          |ℋ| = 𝑘
+
+An interval containing 𝑟 primes contributes once for each choice of 𝑘 of them. Interchanging
+the sums and grouping the intervals by their prime counts therefore gives
+
+                                    𝑁                           𝐻
+                                 1     𝜋(𝑛 + 𝐻 ) − 𝜋(𝑛)          𝑟
+                       𝑇 (𝑘) =     ∑(                   ) = ∑ ( )𝑃(𝑟).
+                                 𝑁 𝑛=1        𝑘             𝑟 =0 𝑘
+
+We use the usual conventions for empty products and for binomial coefficients with nonneg-
+ative integer arguments; in particular, 𝑇 (0) = 1 and 𝑇 (𝑘) = 0 for 𝑘 > 𝐻 .
+   Taking 𝑘 = 𝑚 counts the intervals we want, but also counts intervals with more than 𝑚
+primes:
+                                                            𝐻
+                                                          𝑟
+                  𝑇 (𝑚) = 𝑃(𝑚) + (𝑚 + 1)𝑃(𝑚 + 1) + ∑ ( )𝑃(𝑟) ⩾ 𝑃(𝑚).
+                                                  𝑟 = 𝑚+2 𝑚
+
+To remove the contribution from intervals with exactly 𝑚 + 1 primes, subtract (𝑚 + 1)𝑇 (𝑚 + 1).
+This over-corrects the contributions from intervals with still more primes:
+
+                                                        𝐻
+                                                     𝑟
+            𝑇 (𝑚) − (𝑚 + 1)𝑇 (𝑚 + 1) = 𝑃(𝑚) − ∑ ( )(𝑟 − 𝑚 − 1)𝑃(𝑟) ⩽ 𝑃(𝑚).
+                                             𝑟 = 𝑚+2 𝑚
+
+Adding the next correction removes the contribution from intervals with exactly 𝑚 + 2 primes
+and gives another overcount:
+
+                                                 𝑚+2
+                     𝑇 (𝑚) − (𝑚 + 1)𝑇 (𝑚 + 1) + (    )𝑇 (𝑚 + 2) ⩾ 𝑃(𝑚).
+                                                  𝑚
+                      BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                              9
+
+
+Continuing in this way gives the exact inclusion–exclusion identity
+
+                                         𝐻 −𝑚
+                                                𝑚+ℓ
+                                𝑃(𝑚) = ∑ (−1)ℓ (    )𝑇 (𝑚 + ℓ).
+                                       ℓ=0       𝑚
+
+For estimates, we stop earlier. If
+
+                                              𝑗
+                                                   𝑚+ℓ
+                               𝐵(𝑚, 𝑗) ∶= ∑ (−1)ℓ (    )𝑇 (𝑚 + ℓ),
+                                          ℓ=0       𝑚
+
+then the Bonferroni inequalities give
+
+                                    𝐵(𝑚, 𝐿 + 1) ⩽ 𝑃(𝑚) ⩽ 𝐵(𝑚, 𝐿)
+
+for every even integer 𝐿 ⩾ 0. We shall choose 𝐿 to grow with 𝐻 , so that both bounds can be
+approximated by the same expression to the required precision.
+   The definition of 𝑇 (𝑘) shows where the Hardy–Littlewood conjecture enters. For each set
+of shifts ℋ, it predicts
+
+                     𝑁                                    𝑁
+                                                                 𝑑𝑡
+                    ∑ ∏ 1𝒫 (𝑛 + ℎ) ≈ 𝔖(ℋ) ∫                            ,       𝑘 = |ℋ|,
+                    𝑛=1ℎ∈ℋ                                2   (log 𝑡)𝑘
+
+where the singular series 𝔖(ℋ) accounts for congruence restrictions on the shifts. Summing
+these proposed main terms gives
+
+                                                      𝑁
+                                              1      𝑑𝑡
+          𝑇 (𝑘) ≈ 𝐽 (𝑘)𝑆(𝑘),       𝐽 (𝑘) ∶=     ∫          ,               𝑆(𝑘) ∶=     ∑ 𝔖(ℋ).
+                                              𝑁 2 (log 𝑡)𝑘                           ℋ ⊆ [𝐻 ]
+                                                                                     |ℋ| = 𝑘
+
+
+The prime-tuple counts have thus led us to an average of the singular series. Montgomery and
+Soundararajan’s estimate [25, equation (17)], for fixed 𝑘 and after division by 𝑘! to pass from
+ordered tuples to subsets, suggests the replacement
+
+                                   𝐻𝑘       𝑘                                  log 𝐻 + log(2𝜋) + 𝛾 − 1
+    𝑆(𝑘) ≈ 𝐺(𝑘),         𝐺(𝑘) ∶=      (1 − ( )𝜂(𝐻 )) ,            𝜂(𝐻 ) ∶=                             ,
+                                   𝑘!       2                                             𝐻
+
+where 𝛾 is the Euler–Mascheroni constant. The fixed-𝑘 estimate alone does not justify this
+substitution throughout our growing sums. We will need to control the combined contribution
+of the singular-series residuals.
+   Substituting 𝐽 (𝑘)𝐺(𝑘) for 𝑇 (𝑘) in 𝐵(𝑚, 𝑗) and moving the finite sum inside the integral gives
+
+                         𝑁                        𝑗
+                      1    (𝐻 / log 𝑡)𝑚     (−𝐻 / log 𝑡)ℓ       𝑚+ℓ
+             𝐵(𝑚, 𝑗) ≈ ∫                ∑                 (1 − (    )𝜂(𝐻 )) 𝑑𝑡.
+                      𝑁 2       𝑚!      ℓ=0      ℓ!              2
+10                                              T. FREIBERG
+
+
+The factorials simplify because
+
+                                    𝑚 + ℓ 𝐻 𝑚+ℓ   𝐻𝑚 𝐻ℓ
+                                   (     )      =       .
+                                     𝑚 (𝑚 + ℓ)!   𝑚! ℓ!
+
+We now complete the finite sum inside the integral to an infinite series. With 𝑢 = 𝐻 / log 𝑡,
+denote the resulting integrand by
+
+                                            ∞
+                                       𝑢𝑚      (−𝑢)ℓ        𝑚+ℓ
+                          𝑄(𝑚; 𝑢) ∶=      ∑          (1 − (     )𝜂(𝐻 )) .
+                                       𝑚! ℓ = 0 ℓ!           2
+
+The leading term gives the series for 𝑒 −𝑢 . For the correction, expanding (𝑚 + ℓ)(𝑚 + ℓ − 1) and
+shifting indices gives
+
+              ∞
+                 𝑚 + ℓ (−𝑢)ℓ 𝑒 −𝑢                           𝑒 −𝑢
+             ∑(       )     =     (𝑚(𝑚 − 1) − 2𝑚𝑢 + 𝑢 2 ) =      ((𝑚 − 𝑢)2 − 𝑚) .
+             ℓ=0   2     ℓ!    2                              2
+
+Consequently,
+                                       𝑒 −𝑢 𝑢 𝑚      𝜂(𝐻 )
+                          𝑄(𝑚; 𝑢) =             {1 −       ((𝑚 − 𝑢)2 − 𝑚)} .
+                                          𝑚!           2
+The factor 𝑒 −𝑢 𝑢 𝑚 /𝑚! is the probability that a Poisson random variable of mean 𝑢 takes the value
+𝑚. The correction in braces comes from the second term in the singular-series approximation.
+   Both Bonferroni sums therefore lead to the same proposed main term, which we denote by
+𝐹 (𝑚):
+                                                            𝑁
+                                                        1            𝐻
+                         𝑃(𝑚) ≈ 𝐹 (𝑚),        𝐹 (𝑚) ∶= ∫ 𝑄 (𝑚;           ) 𝑑𝑡.
+                                                        𝑁 2        log 𝑡
+Finally, to obtain an expression at a single parameter, we compare this integral with 𝑄 evalu-
+ated at the averaged logarithmic density:
+
+                                                                    𝑁
+                                                               1    𝐻
+                        𝐹 (𝑚) ≈ 𝑄(𝑚; 𝜇),         𝜇 ∶= 𝐻 𝐽 (1) = ∫        𝑑𝑡.
+                                                               𝑁 2 log 𝑡
+
+This last approximation has its own error, since averaging a nonlinear function need not give
+its value at the averaged argument.
+   There are thus four contributions to keep track of: the Hardy–Littlewood residuals, the
+singular-series residuals, the tails introduced by completing the finite sums, and the difference
+between 𝐹 (𝑚) and 𝑄(𝑚; 𝜇). In the next section we define each residual exactly, retaining its
+sign. The Bonferroni sandwich proposition of Section 5 then bounds 𝑃(𝑚) − 𝑄(𝑚; 𝜇) in terms
+of their weighted combinations, without requiring any estimates for them.
+
+                                           4. Bookkeeping
+     For integers 𝐻 ⩾ 1 and 𝑛 ⩾ 0, denote the number of primes in the interval (𝑛, 𝑛 + 𝐻 ] by
+
+                                  𝑋 (𝑛; 𝐻 ) ∶= 𝜋(𝑛 + 𝐻 ) − 𝜋(𝑛).
+                        BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                                  11
+
+
+For integers 𝑀 ⩾ 0, 𝑁 ⩾ 2 and 𝑚 ⩾ 0, define
+
+                                             1
+                      𝑃(𝑚; 𝐻 , 𝑀, 𝑁 ) ∶=       |{𝑀 < 𝑛 ⩽ 𝑀 + 𝑁 , 𝑋 (𝑛; 𝐻 ) = 𝑚}| .
+                                             𝑁
+
+Here |𝑆| denotes the cardinality of the finite set 𝑆. Thus 𝑃(𝑚; 𝐻 , 𝑀, 𝑁 ) is the proportion of
+length-𝐻 intervals with integer left endpoint in (𝑀, 𝑀 + 𝑁 ] that contain exactly 𝑚 primes.
+
+4.1. Prime tuples and the Hardy–Littlewood residual. The singular series1 associated
+with a finite set of integers ℋ is
+
+                                                                             −|ℋ|
+                                                   |ℋ mod 𝑝|       1
+                           𝔖(ℋ) ∶= ∏ (1 −                    ) (1 − )               ,
+                                         𝑝            𝑝            𝑝
+
+where the product is over all primes and
+
+                                   ℋ mod 𝑝 ∶= {ℎ + 𝑝ℤ ∶ ℎ ∈ ℋ}
+
+is the set of residue classes modulo 𝑝 represented in ℋ. If |ℋ| = 𝑘, then |ℋ mod 𝑝| = 𝑘 for
+all sufficiently large 𝑝, so the corresponding factor is 1 + 𝑂𝑘 (1/𝑝 2 ) and the product converges
+absolutely. If ℋ is empty or a singleton, every factor is 1; thus 𝔖(∅) = 𝔖({ℎ}) = 1 for every
+integer ℎ.
+   We call ℋ admissible if |ℋ mod 𝑝| < 𝑝 for every prime 𝑝, equivalently if 𝔖(ℋ) > 0,
+and inadmissible otherwise. The empty set and every singleton set are admissible. If ℋ is
+inadmissible, choose a prime 𝑝 for which |ℋ mod 𝑝| = 𝑝. Every translate consisting entirely
+of primes must contain 𝑝, so its translation parameter belongs to {𝑝 − ℎ ∶ ℎ ∈ ℋ}. There are
+therefore at most 𝑘 such translates.
+   Write 𝒫 for the set of primes and 1𝒫 for its indicator. For a fixed finite set ℋ of 𝑘 nonneg-
+ative integers, the prime 𝑘-tuples conjecture of Hardy and Littlewood asserts that
+
+                  𝑁                                             𝑁
+                                                                    𝑑𝑡
+                 ∑ ∏ 1𝒫 (𝑛 + ℎ) = (𝔖(ℋ) + 𝑜(1)) ∫                                 (𝑁 → ∞).
+                𝑛=1ℎ∈ℋ                                         2 (log 𝑡)𝑘
+
+
+For inadmissible ℋ, this assertion is degenerate and holds trivially: the singular series van-
+ishes and the sum is bounded. For admissible ℋ, the case 𝑘 = 0 is immediate and the case 𝑘 = 1
+follows from the prime number theorem; the assertion remains conjectural for 𝑘 ⩾ 2. Hardy
+and Littlewood deduced the admissible-case asymptotic from their Hypothesis X [16, Theo-
+rem X 1].
+   Put [𝐻 ] ∶= {1, … , 𝐻 }. We take binomial coefficients with nonnegative integer arguments
+to be zero when the lower argument exceeds the upper argument. For every integer 𝑘 ⩾ 0,
+define
+                                                   𝑁
+                                                1     𝑋 (𝑀 + 𝑛; 𝐻 )
+                            𝑇 (𝑘; 𝐻 , 𝑀, 𝑁 ) ∶=   ∑(                ).
+                                                𝑁 𝑛=1      𝑘
+
+  1Hardy and Littlewood introduced it as a series and then derived its product representation [16, pp. 55–61].
+12                                                  T. FREIBERG
+
+
+We can also express this as an average of prime-tuple counts:
+
+                                                           𝑁
+                                            1
+                      𝑇 (𝑘; 𝐻 , 𝑀, 𝑁 ) =       ∑ ∑ ∏ 1 (𝑀 + 𝑛 + ℎ).
+                                            𝑁 ℋ ⊆ [𝐻 ] 𝑛 = 1 ℎ ∈ ℋ 𝒫
+                                                |ℋ| = 𝑘
+
+To see this, interchange the two sums on the right. For each fixed 𝑛, the product is 1 precisely
+when every element of 𝑀 + 𝑛 + ℋ is prime, and is 0 otherwise. Summing over ℋ therefore
+counts the ways to choose 𝑘 primes from the 𝑋 (𝑀 + 𝑛; 𝐻 ) primes in (𝑀 + 𝑛, 𝑀 + 𝑛 + 𝐻 ], giving
+the binomial coefficient in the definition of 𝑇 . This also holds for 𝑘 = 0: the only choice is
+ℋ = ∅, and the empty product is 1.
+   The corresponding singular-series sum and logarithmic integral are
+                                                                              𝑀+𝑁
+                                                                         1              𝑑𝑡
+              𝑆(𝑘; 𝐻 ) ∶=     ∑ 𝔖(ℋ),                  𝐽 (𝑘; 𝑀, 𝑁 ) ∶=                        .
+                            ℋ ⊆ [𝐻 ]
+                                                                         𝑁 ∫max{2,𝑀} (log 𝑡)𝑘
+                            |ℋ| = 𝑘
+
+We define the signed Hardy–Littlewood residual by
+
+                    ΔHL (𝑘; 𝐻 , 𝑀, 𝑁 ) ∶= 𝑇 (𝑘; 𝐻 , 𝑀, 𝑁 ) − 𝐽 (𝑘; 𝑀, 𝑁 )𝑆(𝑘; 𝐻 ).                (4.1)
+
+Thus ΔHL is the sum of the individual prime-tuple residuals, divided by 𝑁 :
+                                           𝑁                                         𝑀+𝑁
+                            1                                            𝑑𝑡
+     ΔHL (𝑘; 𝐻 , 𝑀, 𝑁 ) =      ∑ { ∑ ∏ 1 (𝑀 + 𝑛 + ℎ) − 𝔖(ℋ) ∫                  }.
+                            𝑁 ℋ ⊆ [𝐻 ] 𝑛 = 1 ℎ ∈ ℋ 𝒫         max{2,𝑀} (log 𝑡)𝑘
+                               |ℋ| = 𝑘
+
+No estimate for this residual is assumed in this section; sufficient hypotheses for controlling
+its weighted sums are given in Subsection 8.2. At 𝑘 = 0, the definitions give
+
+                                                            max{2 − 𝑀, 0}
+                                 ΔHL (0; 𝐻 , 𝑀, 𝑁 ) =                     .
+                                                                 𝑁
+4.2. The singular-series approximation. Let 𝛾 be the Euler–Mascheroni constant, and put
+
+                                               log 𝐻 + log(2𝜋) + 𝛾 − 1
+                                 𝜂(𝐻 ) ∶=                              .
+                                                          𝐻
+Motivated by Montgomery and Soundararajan’s singular-series average, after division by 𝑘!
+to pass from ordered tuples to subsets, define the main term and the signed residual by
+
+                            𝐻𝑘       𝑘
+            𝐺(𝑘; 𝐻 ) ∶=        (1 − ( )𝜂(𝐻 )) ,             ΔMS (𝑘; 𝐻 ) ∶= 𝑆(𝑘; 𝐻 ) − 𝐺(𝑘; 𝐻 ).   (4.2)
+                            𝑘!       2
+
+In particular, ΔMS (0; 𝐻 ) = ΔMS (1; 𝐻 ) = 0. Gallagher’s earlier estimate [9, equation (3)], trans-
+lated from ordered tuples to our subset normalization, gives, for every fixed integer 𝑘 ⩾ 1,
+
+                                                     𝐻𝑘
+                                       𝑆(𝑘; 𝐻 ) ∼              (𝐻 → ∞).
+                                                     𝑘!
+                        BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS             13
+
+
+His proof starts from the Euler product for the singular series, expands it into an absolutely
+convergent series, and averages the resulting congruence conditions by a lattice-point count
+using the Chinese remainder theorem; see in particular [9, equations (8)–(10)]. Montgomery
+and Soundararajan’s estimate [25, equation (17)] sharpens this first-order average by identify-
+ing the secondary term in (4.2). In our normalization, for every fixed integer 𝑘 ⩾ 2 and every
+𝜖 > 0, it gives
+                                   ΔMS (𝑘; 𝐻 ) ≪𝑘,𝜖 𝐻 𝑘−3/2+𝜖 .
+Where Gallagher’s proof is essentially an Euler-product and lattice-point averaging argument,
+Montgomery and Soundararajan pass to centered singular-series sums and relate them to mo-
+ments of reduced residues. The case 𝑘 = 2 uses Goldston’s sharper pair average, which sup-
+plies the constant term in 𝜂(𝐻 ) [25, equations (47)–(48)].
+   We state this estimate to explain the choice of main terms; the argument below will require
+control of weighted sums in which 𝑘 is allowed to grow with 𝐻 . The definition of ΔMS applies
+to every integer 𝑘 ⩾ 0, including 𝑘 > 𝐻 , when 𝑇 (𝑘; 𝐻 , 𝑀, 𝑁 ) = 𝑆(𝑘; 𝐻 ) = 0. Proposition 5.1
+uses only the definition of this residual. The estimates needed for its weighted sums will be
+proved unconditionally in Section 6.
+4.3. The corrected Poisson expression and averaging. For 𝑢 ⩾ 0, put
+
+                                          𝑒 −𝑢 𝑢 𝑚      𝜂(𝐻 )
+                         𝑄(𝑚; 𝑢, 𝐻 ) ∶=            {1 −       ((𝑚 − 𝑢)2 − 𝑚)} ,           (4.3)
+                                             𝑚!           2
+
+where the value at 𝑢 = 0 is defined by continuity. Thus 𝑄(0; 0, 𝐻 ) = 1 and 𝑄(𝑚; 0, 𝐻 ) = 0 for
+𝑚 ⩾ 1. The first factor is the probability that a Poisson random variable of mean 𝑢 takes the
+value 𝑚. As we shall see in Subsection 4.4, the leading term in the singular-series approxima-
+tion produces this Poisson factor under inclusion–exclusion, while the term involving 𝜂(𝐻 )
+produces the correction in braces. We average the whole expression over the varying logarith-
+mic density:
+                                               𝑀+𝑁
+                                           1                  𝐻
+                      𝐹 (𝑚; 𝐻 , 𝑀, 𝑁 ) ∶= ∫            𝑄 (𝑚;       , 𝐻 ) 𝑑𝑡.              (4.4)
+                                          𝑁 max{2,𝑀}         log 𝑡
+  To compare this average with 𝑄 evaluated at a single parameter, put
+                                                                  𝑀+𝑁
+                                                              1           𝐻
+                       𝜇 = 𝜇(𝐻 , 𝑀, 𝑁 ) ∶= 𝐻 𝐽 (1; 𝑀, 𝑁 ) =     ∫              𝑑𝑡
+                                                              𝑁 max{2,𝑀} log 𝑡
+
+and define the signed averaging residual by
+
+                          Δav (𝑚; 𝐻 , 𝑀, 𝑁 ) ∶= 𝐹 (𝑚; 𝐻 , 𝑀, 𝑁 ) − 𝑄(𝑚; 𝜇, 𝐻 ).           (4.5)
+
+The parameter 𝜇 retains the logarithmic integral exactly; no approximation involving log 𝑁
+has been made. The exact mean count is 𝑇 (1; 𝐻 , 𝑀, 𝑁 ). Interchanging the sums and shifting
+the endpoints gives
+
+                          𝐻
+                       1                              𝐻                        𝐻2
+  𝑇 (1; 𝐻 , 𝑀, 𝑁 ) =     ∑ (𝜋(𝑀 + 𝑁 + ℎ) − 𝜋(𝑀 + ℎ)) = (𝜋(𝑀 + 𝑁 ) − 𝜋(𝑀)) + 𝑂 ( ) .
+                       𝑁 ℎ=1                          𝑁                        𝑁
+14                                             T. FREIBERG
+
+
+Thus estimates for the prime count in (𝑀, 𝑀 + 𝑁 ] give corresponding estimates for the differ-
+ence between the mean count and 𝜇. In particular, when 0 ⩽ 𝑀 ⩽ 𝐶𝑁 for a fixed constant
+𝐶 > 0 and 𝐻 ≍ log 𝑁 , the quantitative prime number theorem gives 𝑇 (1; 𝐻 , 𝑀, 𝑁 )−𝜇 = 𝑜(1/𝐻 )
+uniformly in 𝑀. This provides a natural range for the later asymptotic results, although the
+definitions and the Bonferroni sandwich require no such restriction.
+
+4.4. Truncation residuals. In the proof of the Bonferroni sandwich proposition below, we
+shall encounter finite alternating sums. The following series representation of 𝑄 will allow us
+to identify their main terms:
+
+                                              ∞
+                                         𝑢𝑚      (−𝑢)ℓ       𝑚+ℓ
+                         𝑄(𝑚; 𝑢, 𝐻 ) =      ∑          (1 − (    )𝜂(𝐻 )) .
+                                         𝑚! ℓ = 0 ℓ!          2
+
+Indeed, expanding (𝑚 + ℓ)(𝑚 + ℓ − 1) and shifting indices in the exponential series gives
+
+            ∞
+               𝑚 + ℓ (−𝑢)ℓ 𝑒 −𝑢                           𝑒 −𝑢
+           ∑(       )     =     (𝑚(𝑚 − 1) − 2𝑚𝑢 + 𝑢 2 ) =      ((𝑚 − 𝑢)2 − 𝑚) .
+           ℓ=0   2     ℓ!    2                              2
+
+   As we shall see, substituting the expression subtracted in the definition of ΔMS into those
+alternating sums produces truncations of the series representing 𝑄. To record the difference
+between the sum through ℓ = 𝑗 and 𝑄, define the signed truncation residual
+
+                                              𝑢𝑚      (−𝑢)ℓ       𝑚+ℓ
+                     Δtr (𝑚, 𝑗; 𝑢, 𝐻 ) ∶= −      ∑          (1 − (    )𝜂(𝐻 ))               (4.6)
+                                              𝑚! ℓ > 𝑗 ℓ!          2
+
+for integers 𝑚, 𝑗 ⩾ 0. Thus
+
+                     𝑗
+                𝑢𝑚      (−𝑢)ℓ       𝑚+ℓ
+                   ∑          (1 − (    )𝜂(𝐻 )) = 𝑄(𝑚; 𝑢, 𝐻 ) + Δtr (𝑚, 𝑗; 𝑢, 𝐻 ).
+                𝑚! ℓ = 0 ℓ!          2
+
+The series converges absolutely and locally uniformly for 𝑢 ⩾ 0, and Δtr (𝑚, 𝑗; 0, 𝐻 ) = 0, with
+values at 𝑢 = 0 understood by continuity.
+
+4.5. Combining the residuals. The Bonferroni sandwich will involve the following weighted
+sums of the Hardy–Littlewood and Montgomery–Soundararajan residuals, together with the
+averaged truncation residual:
+   Put
+
+                                         𝑗
+                                              𝑚+ℓ
+            𝑅HL (𝑚, 𝑗; 𝐻 , 𝑀, 𝑁 ) ∶= ∑ (−1)ℓ (    )ΔHL (𝑚 + ℓ; 𝐻 , 𝑀, 𝑁 ),
+                                     ℓ=0       𝑚
+
+                                         𝑗
+                                              𝑚+ℓ
+            𝑅MS (𝑚, 𝑗; 𝐻 , 𝑀, 𝑁 ) ∶= ∑ (−1)ℓ (    )𝐽 (𝑚 + ℓ; 𝑀, 𝑁 )ΔMS (𝑚 + ℓ; 𝐻 ),
+                                     ℓ=0       𝑚
+                        BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                          15
+
+
+and
+                                               𝑀+𝑁
+                                           1                    𝐻
+                𝑅tr (𝑚, 𝑗; 𝐻 , 𝑀, 𝑁 ) ∶=              Δ (𝑚, 𝑗;       , 𝐻 ) 𝑑𝑡.
+                                           𝑁 ∫max{2,𝑀} tr      log 𝑡
+
+Their sum is denoted by
+
+       ℛ(𝑚, 𝑗; 𝐻 , 𝑀, 𝑁 ) ∶= 𝑅HL (𝑚, 𝑗; 𝐻 , 𝑀, 𝑁 ) + 𝑅MS (𝑚, 𝑗; 𝐻 , 𝑀, 𝑁 ) + 𝑅tr (𝑚, 𝑗; 𝐻 , 𝑀, 𝑁 ).
+
+                                     5. A Bonferroni sandwich
+   We now combine the identities of Section 4 with the Bonferroni inequalities. Recall that
+𝑃(𝑚; 𝐻 , 𝑀, 𝑁 ) is the proportion of intervals containing exactly 𝑚 primes, and 𝐹 (𝑚; 𝐻 , 𝑀, 𝑁 )
+is the integrated corrected Poisson expression. The combined residual ℛ is the sum of the
+weighted Hardy–Littlewood, singular-series and truncation residuals defined in Subsection 4.5.
+The bounds below retain their signs and require no estimates for them.
+Proposition 5.1 (Bonferroni sandwich). Let 𝐻 ⩾ 1, 𝑀 ⩾ 0, 𝑁 ⩾ 2 and 𝑚 ⩾ 0 be integers, and
+let 𝐿 ⩾ 0 be an even integer. Throughout the statement and proof, we suppress the dependence on
+𝐻 , 𝑀, 𝑁 in the notation and write 𝜂 = 𝜂(𝐻 ). Then
+
+                                ℛ(𝑚, 𝐿 + 1) ⩽ 𝑃(𝑚) − 𝐹 (𝑚) ⩽ ℛ(𝑚, 𝐿).                                  (5.1)
+
+Equivalently,
+                        ℛ(𝑚, 𝐿 + 1) ⩽ 𝑃(𝑚) − 𝑄(𝑚; 𝜇) − Δav (𝑚) ⩽ ℛ(𝑚, 𝐿).                              (5.2)
+
+In particular, if
+                               𝐸(𝑚, 𝐿) ∶=        max        |Δav (𝑚) + ℛ(𝑚, 𝑗)| ,
+                                              𝑗 ∈ {𝐿,𝐿+1}
+
+then
+                                        |𝑃(𝑚) − 𝑄(𝑚; 𝜇)| ⩽ 𝐸(𝑚, 𝐿).                                    (5.3)
+
+The separate residuals give the further bound
+
+                𝐸(𝑚, 𝐿) ⩽ |Δav (𝑚)| +      max        {|𝑅HL (𝑚, 𝑗)| + |𝑅MS (𝑚, 𝑗)| + |𝑅tr (𝑚, 𝑗)|} .
+                                        𝑗 ∈ {𝐿,𝐿+1}
+
+All these statements are unconditional.
+
+Proof. For each integer 𝑗 ⩾ 0, put
+
+                                                 𝑗
+                                                     𝑚+ℓ
+                                 𝐵(𝑚, 𝑗) ∶= ∑ (−1)ℓ (    )𝑇 (𝑚 + ℓ).
+                                            ℓ=0       𝑚
+
+We first compare this partial sum with 𝑃(𝑚). For integers 𝑥 > 𝑚,
+
+            𝑗                                         𝑗
+                   𝑚+ℓ          𝑥       𝑥           𝑥 −𝑚            𝑥 𝑥 −𝑚−1
+          ∑ (−1)ℓ (    )(          ) = ( ) ∑ (−1)ℓ (     ) = (−1)𝑗 ( )(      ).
+          ℓ=0           𝑚      𝑚+ℓ      𝑚 ℓ=0         ℓ             𝑚    𝑗
+16                                               T. FREIBERG
+
+
+The last equality follows by telescoping Pascal’s identity. For 𝑥 = 𝑚 the sum is 1, and for
+0 ⩽ 𝑥 < 𝑚 it is 0. Substituting 𝑥 = 𝑋 (𝑀 + 𝑛) and averaging over 1 ⩽ 𝑛 ⩽ 𝑁 gives
+
+                                               𝑁
+                                 (−1)𝑗                      𝑋 (𝑀 + 𝑛) 𝑋 (𝑀 + 𝑛) − 𝑚 − 1
+             𝐵(𝑚, 𝑗) − 𝑃(𝑚) =                  ∑           (         )(                 ).        (5.4)
+                                  𝑁           𝑛=1               𝑚             𝑗
+                                         𝑋 (𝑀+𝑛) ⩾ 𝑚+𝑗+1
+
+Every summand is nonnegative. Since 𝐿 is even, (5.4) implies
+
+                                    𝐵(𝑚, 𝐿 + 1) ⩽ 𝑃(𝑚) ⩽ 𝐵(𝑚, 𝐿).                                 (5.5)
+
+     We now separate the proposed main terms from the residuals. By (4.1) and (4.2),
+
+                               𝑇 (𝑘) = 𝐽 (𝑘)𝐺(𝑘) + 𝐽 (𝑘)ΔMS (𝑘) + ΔHL (𝑘).
+
+Consequently,
+
+                                                       𝑗
+                                                           𝑚+ℓ
+              𝐵(𝑚, 𝑗) − 𝑅HL (𝑚, 𝑗) − 𝑅MS (𝑚, 𝑗) = ∑ (−1)ℓ (    )𝐽 (𝑚 + ℓ)𝐺(𝑚 + ℓ).                (5.6)
+                                                  ℓ=0       𝑚
+
+The series representation of 𝑄 in Section 4 and the definition (4.6) give
+
+                           𝑗
+                      𝑢𝑚      (−𝑢)ℓ       𝑚+ℓ
+                         ∑          (1 − (    )𝜂) = 𝑄(𝑚; 𝑢) + Δtr (𝑚, 𝑗; 𝑢).                      (5.7)
+                      𝑚! ℓ = 0 ℓ!          2
+
+By the definition of 𝐺(𝑘) in (4.2) and the definition of 𝐽 (𝑘), the right side of (5.6) is the integral
+of the left side of (5.7), with 𝑢 = 𝐻 / log 𝑡, over max{2, 𝑀} ⩽ 𝑡 ⩽ 𝑀 + 𝑁 , divided by 𝑁 . The
+sum is finite, so interchanging it with the integral requires no limiting argument. Using (4.4)
+and the definition of 𝑅tr , we obtain
+
+                                         𝐵(𝑚, 𝑗) = 𝐹 (𝑚) + ℛ(𝑚, 𝑗).                               (5.8)
+
+Combining (5.8) with (5.5) proves (5.1). Substitution of (4.5) gives (5.2). Thus 𝑃(𝑚) − 𝑄(𝑚; 𝜇)
+lies between Δav (𝑚) + ℛ(𝑚, 𝐿 + 1) and Δav (𝑚) + ℛ(𝑚, 𝐿), proving (5.3). The final bound follows
+by the triangle inequality.                                                                   □
+
+                       6. The singular series through a finite sieve
+   We estimate the signed sums of singular series that occur in the Bonferroni sandwich (Propo-
+sition 5.1). The argument uses a pair average of Goldston [12] and a fourth-moment estimate
+of Montgomery and Soundararajan [25]. An elementary upper bound for the number of sur-
+vivors of a finite sieve supplies the uniformity needed for the remaining terms. In particular,
+we never apply a fixed-𝑘 asymptotic with 𝑘 tending to infinity.
+   Recall from Section 4 that
+                                     𝑆(𝑘; 𝐻 ) = ∑ 𝔖(ℋ).
+                                                    ℋ ⊆ [𝐻 ]
+                                                    |ℋ| = 𝑘
+                       BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                         17
+
+
+The sum is over subsets, so each set of shifts is counted once, and 𝑆(𝑘; 𝐻 ) = 0 for 𝑘 > 𝐻 . The
+corrected Poisson expression is
+
+                    𝑒 −𝑢 𝑢 𝑚      𝜂(𝐻 )                                    log 𝐻 + log(2𝜋) + 𝛾 − 1
+    𝑄(𝑚; 𝑢, 𝐻 ) =            {1 −       ((𝑚 − 𝑢)2 − 𝑚)} ,        𝜂(𝐻 ) =                           .
+                       𝑚!           2                                                 𝐻
+
+We shall compare 𝑄 with a finite alternating sum of the singular-series averages. For integers
+𝐻 ⩾ 2 and 𝑚, 𝑗 ⩾ 0, and a real number 𝑢 ⩾ 0, write
+
+                                            𝑗
+                                                 𝑚 + ℓ 𝑢 𝑚+ℓ
+                      𝒜(𝑚, 𝑗; 𝑢, 𝐻 ) ∶= ∑ (−1)ℓ (     )( )   𝑆(𝑚 + ℓ; 𝐻 ).
+                                        ℓ=0       𝑚     𝐻
+
+Values at 𝑢 = 0 are understood by continuity. Substituting 𝑢 = 𝐻 / log 𝑡 and averaging over
+the starting points will connect this estimate to the Bonferroni sandwich in Subsection 6.6.
+Theorem 6.1. There is an absolute constant 𝐶 ⩾ 1 such that, for every fixed 𝑈 > 0 and 𝜖 > 0,
+uniformly for 𝐻 ⩾ 2, 0 ⩽ 𝑢 ⩽ 𝑈 and integers 𝑚, 𝑗 ⩾ 0,
+
+                                                                           (𝐶𝑢)𝑚+𝑗+1
+                  𝒜(𝑚, 𝑗; 𝑢, 𝐻 ) = 𝑄(𝑚; 𝑢, 𝐻 ) + 𝑂𝑈 ,𝜖 (2−𝑚 𝐻 −3/2+𝜖 +                ).           (6.1)
+                                                                           𝑚!(𝑗 + 1)!
+
+The implied constant is independent of 𝑚 and 𝑗.
+
+Corollary 6.2. Fix an integer 𝑚 ⩾ 0 and real numbers 𝑈 , 𝛿 > 0. Let 𝐿 be the least even integer
+greater than or equal to (1 + 𝛿) log 𝐻 / log log 𝐻 . As 𝐻 → ∞, uniformly for 0 ⩽ 𝑢 ⩽ 𝑈 and
+𝑗 ∈ {𝐿, 𝐿 + 1},
+
+                  𝒜(𝑚, 𝑗; 𝑢, 𝐻 ) = 𝑄(𝑚; 𝑢, 𝐻 ) + 𝑂𝑚,𝑈 ,𝛿,𝜖 (𝐻 −3/2+𝜖 + 𝐻 −1−𝛿+𝑜(1) ) .
+
+In particular, the error is 𝑜(1/𝐻 ) if 0 < 𝜖 < 1/2.
+
+Proof of Corollary 6.2. Apply Theorem 6.1, noting that by Stirling’s formula,
+
+              (𝐶𝑈 )𝑚+𝑗+1
+      log (               ) = −(𝑗 + 1) log(𝑗 + 1) + 𝑂𝑚,𝑈 (𝑗 + 1) = −(1 + 𝛿) log 𝐻 + 𝑜(log 𝐻 ).
+               𝑚!(𝑗 + 1)!
+
+                                                                                                       □
+6.1. A finite probability space. Throughout the proof put
+
+                                                                𝜙(𝑞)         1
+                    𝑦 ∶= 𝐻 3 ,        𝑞 ∶= ∏ 𝑝,          𝜌 ∶=        = ∏ (1 − ) ,
+                                            𝑝⩽𝑦                  𝑞     𝑝⩽𝑦   𝑝
+
+where 𝜙 is Euler’s totient function. Mertens’ product estimate gives 𝜌 ≍ 1/ log 𝐻 , with abso-
+lute implied constants. Choose 𝑎 uniformly from the residue classes modulo 𝑞, and let
+
+                                 𝑌 (𝑎) ∶= |{ℎ ∈ [𝐻 ] ∶ gcd(𝑎 + ℎ, 𝑞) = 1}| .
+18                                              T. FREIBERG
+
+
+We write ℙ and 𝔼 for probability and expectation on this finite space. Equivalently, for each
+prime 𝑝 ⩽ 𝑦, independently choose one residue class to exclude from [𝐻 ]. The Chinese re-
+mainder theorem identifies these choices with −𝑎 mod 𝑞. These probabilities express finite
+averages of explicitly defined sets; they make no assumption about the distribution of primes.
+   For a subset ℋ of [𝐻 ], define the finite singular series and its sum by
+
+                                                       −|ℋ|
+                             |ℋ mod 𝑝|       1
+      𝔖𝑦 (ℋ) ∶= ∏ (1 −                 ) (1 − )               ,     𝑆𝑦 (𝑘; 𝐻 ) ∶=     ∑ 𝔖𝑦 (ℋ).
+                   𝑝⩽𝑦          𝑝            𝑝                                      ℋ ⊆ [𝐻 ]
+                                                                                    |ℋ| = 𝑘
+
+Both empty-set values are 1, and 𝑆𝑦 (𝑘; 𝐻 ) = 0 for 𝑘 > 𝐻 .
+Lemma 6.3. For every integer 𝑘 ⩾ 0,
+
+                                          𝑌
+                                        𝔼( ) = 𝜌 𝑘 𝑆𝑦 (𝑘; 𝐻 ).                                    (6.2)
+                                          𝑘
+
+In particular, 𝔼𝑌 = 𝐻 𝜌.
+
+Proof. For a fixed 𝑘-element set ℋ, the probability that all its elements survive is
+
+                                                                   |ℋ mod 𝑝|
+         ℙ (gcd(𝑎 + ℎ, 𝑞) = 1 for every ℎ ∈ ℋ) = ∏ (1 −                      ) = 𝜌 𝑘 𝔖𝑦 (ℋ).
+                                                        𝑝⩽𝑦           𝑝
+
+Here and below, ordinary probabilities are averages over the 𝑞 possible values of 𝑎. The bino-
+mial coefficient counts the 𝑘-element sets of survivors, so summing these probabilities proves
+(6.2).                                                                                      □
+
+Lemma 6.4. Uniformly for 0 ⩽ 𝑘 ⩽ 𝐻 ,
+
+                                                              𝑘2
+                              0 ⩽ 𝑆𝑦 (𝑘; 𝐻 ) − 𝑆(𝑘; 𝐻 ) ≪        𝑆 (𝑘; 𝐻 ).                       (6.3)
+                                                              𝑦 𝑦
+
+The implied constant is absolute, and the difference is zero for 𝑘 = 0, 1.
+
+Proof. If 𝑝 > 𝑦 > 𝐻 , all elements of a 𝑘-element subset of [𝐻 ] represent distinct residue classes
+modulo 𝑝. Consequently,
+
+                                                                                       −𝑘
+                                                                  𝑘      1
+                𝔖(ℋ) = 𝔖𝑦 (ℋ) 𝑡(𝑘; 𝑦),           𝑡(𝑘; 𝑦) ∶= ∏ (1 − ) (1 − )                 .
+                                                            𝑝>𝑦   𝑝      𝑝
+
+For 𝑘 = 0, 1 the last product is 1. For 2 ⩽ 𝑘 ⩽ 𝐻 , expand the logarithms to obtain
+
+                                 ∞
+                                      𝑘𝑟 − 𝑘                                     1 𝑘2
+            log 𝑡(𝑘; 𝑦) = − ∑ ∑           𝑟 ,        0 ⩽ − log 𝑡(𝑘; 𝑦) ≪ 𝑘 2 ∑ 2 ≪ .
+                           𝑝 > 𝑦 𝑟 = 2 𝑟𝑝                                    𝑛>𝑦 𝑛 𝑦
+                        BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                              19
+
+
+The estimates are uniform because 𝑘/𝑝 ⩽ 𝐻 /𝑦 ⩽ 1/4. It follows that
+
+                                                                         𝑘2
+                                  0 ⩽ 1 − 𝑡(𝑘; 𝑦) ⩽ − log 𝑡(𝑘; 𝑦) ≪         .
+                                                                         𝑦
+
+Multiply by the nonnegative finite singular series and sum. The same argument includes in-
+admissible sets, for which both singular series vanish.                                 □
+
+6.2. An upper bound uniform in the number of shifts. We need only an upper bound
+for the high factorial moments. The following elementary form of the Selberg upper-bound
+sieve is sufficient; see [26, Section 3.2]. We include the proof to make the uniformity in the
+translate explicit and to record its consequence for all factorial moments.
+Lemma 6.5. There is an absolute constant 𝐶0 ⩾ 1 such that
+
+                                                𝑌 (𝑎) ⩽ 𝐶0 𝐻 𝜌                                            (6.4)
+
+for every residue class 𝑎 mod 𝑞 and every integer 𝐻 ⩾ 2. Consequently, for every integer 𝑘 ⩾ 0,
+
+                                                                 (𝐶0 𝐻 )𝑘
+                                   0 ⩽ 𝑆(𝑘; 𝐻 ) ⩽ 𝑆𝑦 (𝑘; 𝐻 ) ⩽            .                               (6.5)
+                                                                   𝑘!
+
+
+Proof. It suffices first to take 𝐻 large. Put 𝑧 = 𝐻 1/8 , and let 𝒟 be the set of squarefree positive
+integers less than or equal to 𝑧. Every member of 𝒟 divides 𝑞. Write 𝜔(𝑑) for the number of
+distinct prime divisors of 𝑑, and put2
+
+                      1                   (−1)𝜔(𝑟)
+         𝒯 ∶= ∑           ,       𝑏𝑟 ∶=            ,       𝜆𝑑 ∶= 𝑑 ∑ (−1)𝜔(𝑟/𝑑) 𝑏𝑟         (𝑑 ∈ 𝒟).
+                𝑟 ∈𝒟
+                     𝜙(𝑟)                  𝜙(𝑟)𝒯                     𝑟 ∈𝒟
+                                                                       𝑑 ∣𝑟
+
+
+Then 𝜆1 = 1 and |𝜆𝑑 | ⩽ 𝑑. Inversion over the squarefree divisors gives
+
+                                             𝜆𝑑
+                                         ∑      = 𝑏𝑟         (𝑟 ∈ 𝒟).
+                                        𝑑 ∈𝒟
+                                             𝑑
+                                         𝑟 ∣𝑑
+
+
+Indeed, after substituting the definition of 𝜆𝑑 , the coefficient of 𝑏𝑠 is the sum of (−1)𝜔(𝑠/𝑑) over
+𝑟 ∣ 𝑑 ∣ 𝑠, which is 1 if 𝑠 = 𝑟 and 0 otherwise. Using gcd(𝑑, 𝑒) = ∑𝑟 ∣ 𝑑, 𝑟 ∣ 𝑒 𝜙(𝑟), we therefore have
+
+                                                                          2
+                                                          ⎛        ⎞
+                                        𝜆𝑑 𝜆𝑒                    𝜆   1
+                                ∑                = ∑ 𝜙(𝑟) ⎜ ∑ 𝑑 ⎟ = .
+                              𝑑,𝑒 ∈ 𝒟
+                                      lcm(𝑑,  𝑒)  𝑟 ∈𝒟
+                                                                 𝑑
+                                                          ⎜𝑑 ∈ 𝒟 ⎟   𝒯
+                                                          ⎝ 𝑟 ∣𝑑   ⎠
+   2The coefficients 𝜆 are sieve weights used only in this proof; they are unrelated to the Poisson parameter 𝜆
+                      𝑑
+used elsewhere.
+20                                           T. FREIBERG
+
+
+If ℎ survives, the sum of 𝜆𝑑 over 𝑑 ∈ 𝒟 dividing 𝑎 + ℎ is 𝜆1 = 1. Its square is nonnegative for
+all other ℎ. Counting multiples of lcm(𝑑, 𝑒) in an interval of 𝐻 consecutive integers now gives
+
+                                       2
+                                                      2
+                        𝐻 ⎛        ⎞
+                                     𝐻                     𝐻
+               𝑌 (𝑎) ⩽ ∑ ⎜ ∑ 𝜆𝑑 ⎟ =    + 𝑂 (( ∑ |𝜆𝑑 |) ) =   + 𝑂(𝑧 4 ).
+                          ⎜
+                       ℎ=1 𝑑 ∈𝒟    ⎟ 𝒯       𝑑 ∈𝒟
+                                                           𝒯
+                          ⎝𝑑 ∣ 𝑎+ℎ ⎠
+
+All constants here are independent of 𝑎.
+    For completeness, 𝒯 ≫ log 𝑧. The number of nonsquarefree integers less than or equal to
+                    ∞
+𝑥 is at most 𝑥 ∑𝑟 = 2 𝑟 −2 , and this sum is less than 1. Thus the number of squarefree integers
+less than or equal to 𝑥 is bounded below by a positive constant times 𝑥, apart from an absolute
+additive constant. Partial summation gives ∑𝑟 ∈ 𝒟 1/𝑟 ≫ log 𝑧, and 1/𝜙(𝑟) ⩾ 1/𝑟. Since
+𝑧 4 = 𝐻 1/2 , the preceding estimate proves 𝑌 (𝑎) ≪ 𝐻 / log 𝐻 ≪ 𝐻 𝜌. Increasing an absolute
+constant covers the remaining values of 𝐻 .
+    Finally, (6.2) and (6.4) give
+
+                                                                      𝑘
+                                               𝑌    𝔼𝑌 𝑘   (𝐶0 𝐻 𝜌)
+                            𝜌 𝑘 𝑆𝑦 (𝑘; 𝐻 ) = 𝔼( ) ⩽      ⩽          .
+                                               𝑘     𝑘!        𝑘!
+
+Together with Lemma 6.4, this proves (6.5); for 𝑘 > 𝐻 both sums are zero.                     □
+6.3. The second and fourth moments. Let 𝑏 ∶= 𝐻 𝜌 be the mean of 𝑌 , and write
+
+                                           𝑣 ∶= 𝔼(𝑌 − 𝑏)2
+
+for its variance. The two moment estimates below use Goldston’s pair average [12, equa-
+tion (33)], also recorded in [25, equations (47)–(48)], and the fourth-moment case of Mont-
+gomery and Soundararajan’s Theorem 1 [25]. All moment orders used in these inputs are
+fixed.
+Lemma 6.6. For every 𝜖 > 0,
+
+                            𝑣 − 𝑏 = −𝜌 2 𝐻 2 𝜂(𝐻 ) + 𝑂𝜖 (𝜌 2 𝐻 1/2+𝜖 ) .                   (6.6)
+
+Moreover, with absolute implied constants,
+
+                 𝑣 ≪ 𝐻 𝜌,        𝔼(𝑌 − 𝑏)4 ≪ 𝐻 2 𝜌 2 ,      𝔼|𝑌 − 𝑏|3 ≪ (𝐻 𝜌)3/2 .         (6.7)
+
+
+Proof. Goldston’s pair average [12, equation (33)] gives
+
+                             𝐻
+               2𝑆(2; 𝐻 ) = 2 ∑ (𝐻 − 𝑑)𝔖({0, 𝑑}) = 𝐻 2 (1 − 𝜂(𝐻 )) + 𝑂𝜖 (𝐻 1/2+𝜖 ).
+                            𝑑 =1
+
+The first equality follows by grouping pairs of shifts according to their difference; the same
+form of the estimate appears in [25, equation (48)]. By (6.3) and (6.5), replacing 𝑆(2; 𝐻 ) by
+                      BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                    21
+
+
+𝑆𝑦 (2; 𝐻 ) introduces an error 𝑂(𝐻 2 /𝑦) = 𝑂(𝐻 −1 ). Since 𝑌 2 = 𝑌 (𝑌 − 1) + 𝑌 , the identity (6.2)
+gives
+                         𝑣 − 𝑏 = 𝔼𝑌 (𝑌 − 1) − 𝑏 2 = 𝜌 2 (2𝑆𝑦 (2; 𝐻 ) − 𝐻 2 ) .
+
+This proves (6.6). Taking, for example, 𝜖 = 1/4 there, and recalling 𝜌 ≍ 1/ log 𝐻 , also proves
+𝑣 ≪ 𝐻 𝜌.
+   In the notation of [25, equations (10)–(11)], the normalized centered moments of 𝑌 are
+𝔼(𝑌 − 𝑏)𝑟 = 𝜌 𝑟 𝑉𝑟 (𝑞; 𝐻 ). In particular, 𝑉2 (𝑞; 𝐻 ) = 𝑣/𝜌 2 . Their Theorem 1, used only at 𝑟 = 4,
+reads
+                             𝑉4 (𝑞; 𝐻 ) = 3𝑉2 (𝑞; 𝐻 )2 + 𝑂 (𝐻 2−1/28 𝜌 −18 ) .
+
+Multiplying by 𝜌 4 gives
+
+                           𝔼(𝑌 − 𝑏)4 = 3𝑣 2 + 𝑂 (𝐻 2−1/28 𝜌 −14 ) ≪ 𝐻 2 𝜌 2 .
+
+Indeed, the ratio of the error term to 𝐻 2 𝜌 2 is 𝑂(𝐻 −1/28 (log 𝐻 )16 ), which tends to zero. This
+proves the bound for all sufficiently large 𝐻 ; increasing the absolute implied constant covers
+the remaining integers 𝐻 ⩾ 2. Finally, Hölder’s inequality gives 𝔼|𝑌 − 𝑏|3 ⩽ (𝔼(𝑌 − 𝑏)4 )3/4 .
+This proves (6.7).                                                                               □
+6.4. Thinning the survivors. For fixed 𝑈 > 0 and sufficiently large 𝐻 , uniformly for 0 ⩽
+𝑢 ⩽ 𝑈 , the number
+                                          𝑢    𝑢
+                                    𝜃 ∶=     =
+                                         𝐻𝜌 𝑏
+lies in [0, 1]. Independently retain each of the 𝑌 survivors with probability 𝜃, and call the num-
+ber retained 𝑍 . Conditional on 𝑌 , the variable 𝑍 has the binomial distribution with parameters
+𝑌 and 𝜃. In particular, 𝔼𝑍 = 𝑢 and, for every complex number 𝑧,
+
+                                               𝐻
+                                          𝑌                𝑢 𝑘
+                     𝔼𝑧 = 𝔼 (1 + 𝜃(𝑧 − 1)) = ∑ 𝑆𝑦 (𝑘; 𝐻 ) ( ) (𝑧 − 1)𝑘 .
+                       𝑍                                                                       (6.8)
+                                             𝑘 =0
+                                                           𝐻
+
+The second equality follows by the binomial theorem and (6.2). This identity converts an entire
+sum over tuple sizes into one function of 𝑌 .
+Proposition 6.7. Define
+
+                                               𝐻
+                                                             𝑢 𝑘
+                             𝒢(𝑧; 𝑢, 𝐻 ) ∶= ∑ 𝑆(𝑘; 𝐻 ) (       ) (𝑧 − 1)𝑘 .
+                                             𝑘 =0
+                                                             𝐻
+
+For every fixed 𝑈 , 𝑅, 𝜖 > 0, uniformly for 0 ⩽ 𝑢 ⩽ 𝑈 and complex 𝑧 with |𝑧| ⩽ 𝑅,
+
+                                               𝜂(𝐻 )𝑢 2
+                 𝒢(𝑧; 𝑢, 𝐻 ) = 𝑒 𝑢(𝑧−1) (1 −            (𝑧 − 1)2 ) + 𝑂𝑈 ,𝑅,𝜖 (𝐻 −3/2+𝜖 ).      (6.9)
+                                                  2
+
+For sufficiently large 𝐻 , depending on 𝑈 , the random variable 𝑍 is defined for every 0 ⩽ 𝑢 ⩽ 𝑈 ,
+and the same expansion holds with 𝒢(𝑧; 𝑢, 𝐻 ) replaced by 𝔼𝑧 𝑍 .
+22                                                  T. FREIBERG
+
+
+Proof. Put 𝑤 = 𝑧 − 1, 𝐷 = 𝑌 − 𝑏, and 𝑠 = log(1 + 𝜃𝑤), using the power series for the logarithm
+near 1. For 𝐻 sufficiently large in terms of 𝑈 and 𝑅, we have |𝜃𝑤| ⩽ 1/2. Taylor expansion
+gives
+
+                𝜃 2𝑤 2                                    𝑏𝜃 2 𝑤 2
+     𝑠 = 𝜃𝑤 −          + 𝑂𝑅 (𝜃 3 ),         𝑏𝑠 = 𝑢𝑤 −              + 𝑂𝑈 ,𝑅 (𝑏 −2 ),    𝑠 2 = 𝜃 2 𝑤 2 + 𝑂𝑅 (𝜃 3 ).
+                   2                                         2
+Here 𝑏𝜃 = 𝑢 and 𝑏𝜃 3 ≪𝑈 𝑏 −2 . The upper bound (6.4) implies |𝐷| ⩽ (𝐶0 + 1)𝑏, and hence
+|𝑠𝐷| ≪𝑈 ,𝑅 1. The remainder in the expansion of 𝑒 𝑠𝐷 is therefore bounded by a constant times
+|𝑠𝐷|3 , uniformly for every outcome. Since 𝔼𝐷 = 0, Lemma 6.6 gives
+
+                                 𝑠2𝑣                             𝜃 2𝑤 2𝑣
+                  𝔼𝑒 𝑠𝐷 = 1 +        + 𝑂𝑈 ,𝑅 (|𝑠|3 𝔼|𝐷|3 ) = 1 +         + 𝑂𝑈 ,𝑅 (𝑏 −3/2 ).
+                                  2                                 2
+The replacement of 𝑠 2 by 𝜃 2 𝑤 2 costs 𝑂𝑈 ,𝑅 (𝜃 3 𝑣) = 𝑂𝑈 ,𝑅 (𝑏 −2 ), since 𝑣 ≪ 𝑏. Similarly,
+
+                                                         𝑏𝜃 2 𝑤 2
+                                      𝑒 𝑏𝑠 = 𝑒 𝑢𝑤 (1 −            + 𝑂𝑈 ,𝑅 (𝑏 −2 )) .
+                                                            2
+
+Multiplying these two expansions in 𝔼𝑧 𝑍 = 𝑒 𝑏𝑠 𝔼𝑒 𝑠𝐷 yields
+
+                                                   𝜃 2 (𝑣 − 𝑏) 2
+                             𝔼𝑧 𝑍 = 𝑒 𝑢𝑤 (1 +                 𝑤 ) + 𝑂𝑈 ,𝑅 (𝑏 −3/2 ).                           (6.10)
+                                                         2
+
+The cross term has size 𝑂𝑈 ,𝑅 (𝑏 −2 ). This is the cancellation on which the argument depends:
+the second term from the binomial thinning subtracts the mean 𝑏 from the variance 𝑣.
+   Now (6.6) gives
+                            𝜃 2 (𝑣 − 𝑏) = −𝑢 2 𝜂(𝐻 ) + 𝑂𝑈 ,𝜖 (𝐻 −3/2+𝜖 ).
+Also, 𝑏 −3/2 ≪ (log 𝐻 /𝐻 )3/2 ≪𝜖 𝐻 −3/2+𝜖 . Substitution in (6.10) proves the assertion for 𝔼𝑧 𝑍 .
+  It remains to restore the omitted Euler factors. By (6.3), (6.5) and (6.8),
+                                                    𝐻       2               𝑘
+                                                 1      𝑘 (𝐶0 𝑢|𝑧 − 1|)      1
+                    |𝒢(𝑧; 𝑢, 𝐻 ) − 𝔼𝑧 𝑍 | ≪        ∑                    ≪𝑈 ,𝑅 = 𝐻 −3 .
+                                                 𝑦 𝑘 =0        𝑘!            𝑦
+
+This is smaller than the asserted error and proves (6.9).                                                           □
+Proof of Theorem 6.1. Apply Proposition 6.7 on the circle |𝑧| = 2. Cauchy’s coefficient formula
+bounds the coefficient of 𝑧 𝑚 in the error by 𝑂𝑈 ,𝜖 (2−𝑚 𝐻 −3/2+𝜖 ), uniformly for every 𝑚 ⩾ 0. The
+coefficient of 𝑧 𝑚 in 𝒢 is
+                                  ∞
+                                                𝑚 + ℓ 𝑢 𝑚+ℓ
+                                 ∑ (−1)ℓ (           )( )   𝑆(𝑚 + ℓ; 𝐻 ),
+                                 ℓ=0             𝑚     𝐻
+
+a finite sum because 𝑆(𝑘; 𝐻 ) = 0 for 𝑘 > 𝐻 . The coefficient in the main expression in (6.9) is
+𝑄(𝑚; 𝑢, 𝐻 ). To see this without exceptions at 𝑚 = 0, 1, observe that
+         ∞
+                                              𝜂(𝐻 )𝑢 2 𝜕 2 𝑢(𝑧−1)                       2
+                                                                      𝑢(𝑧−1) (1 − 𝜂(𝐻 )𝑢 (𝑧 − 1)2 ) .
+        ∑ 𝑄(𝑚; 𝑢, 𝐻 )𝑧 𝑚 = 𝑒 𝑢(𝑧−1) −                      𝑒      = 𝑒
+       𝑚=0                                       2 𝜕𝑢 2                              2
+                      BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                     23
+
+
+For 𝑢 > 0, differentiating 𝑒 −𝑢 𝑢 𝑚 /𝑚! twice gives the defining factor ((𝑚−𝑢)2 −𝑚)/𝑢 2 ; continuity
+handles 𝑢 = 0.
+  Finally, (6.5) bounds the part with ℓ > 𝑗 in absolute value by
+
+                               (𝐶0 𝑢)𝑚   (𝐶 𝑢)ℓ         (𝐶 𝑢)𝑚+𝑗+1
+                                       ∑ 0      ⩽ 𝑒 𝐶0 𝑢 0          .
+                                 𝑚! ℓ > 𝑗 ℓ!             𝑚!(𝑗 + 1)!
+
+Here we used (𝑗 + 1 + 𝑟)! ⩾ (𝑗 + 1)!𝑟! for 𝑟 ⩾ 0. Subtracting this tail proves (6.1), with any
+absolute 𝐶 ⩾ 𝐶0 . The proof applies for sufficiently large 𝐻 in terms of 𝑈 ; increasing the implied
+constant covers the remaining 𝐻 . For this last assertion, coefficient bounds on |𝑧| = 2 still give
+uniformity in 𝑚, and the same tail estimate is uniform in 𝑗.                                     □
+6.5. The signed residuals. We now translate the estimate for 𝒜 − 𝑄 into bounds for the
+residuals defined in Section 4. Recall that
+
+                           𝐻𝑘       𝑘
+              𝐺(𝑘; 𝐻 ) =      (1 − ( )𝜂(𝐻 )) ,          ΔMS (𝑘; 𝐻 ) = 𝑆(𝑘; 𝐻 ) − 𝐺(𝑘; 𝐻 ),
+                           𝑘!       2
+
+and that the signed truncation residual is
+
+                                              𝑢𝑚      (−𝑢)ℓ       𝑚+ℓ
+                      Δtr (𝑚, 𝑗; 𝑢, 𝐻 ) = −      ∑          (1 − (    )𝜂(𝐻 )) .
+                                              𝑚! ℓ > 𝑗 ℓ!          2
+
+Replacing 𝑆 by 𝐺 + ΔMS in 𝒜 expresses 𝒜 − 𝑄 as a weighted sum of ΔMS plus Δtr . The theorem
+therefore controls their combination. We first bound Δtr separately by an elementary factorial
+estimate, then deduce the bound for the weighted singular-series residual.
+Lemma 6.8. Put 𝐾 ∶= 𝑚 + 𝑗 + 1. For 𝐻 ⩾ 2, 𝑢 ⩾ 0 and integers 𝑚, 𝑗 ⩾ 0,
+
+                                              𝑒𝑢 𝑢𝐾         𝜂(𝐻 )
+                    |Δtr (𝑚, 𝑗; 𝑢, 𝐻 )| ⩽              {1 +       ((𝐾 + 𝑢)2 + 𝑢)} .           (6.11)
+                                            𝑚!(𝑗 + 1)!        2
+
+Consequently there is an absolute constant 𝐶1 ⩾ 1 such that, for every fixed 𝑈 > 0, uniformly for
+0 ⩽ 𝑢 ⩽ 𝑈,
+                                                     (𝐶 𝑢)𝑚+𝑗+1
+                               |Δtr (𝑚, 𝑗; 𝑢, 𝐻 )| ≪𝑈 1          .                         (6.12)
+                                                      𝑚!(𝑗 + 1)!
+
+Proof. Take absolute values in the defining series, write ℓ = 𝑗 +1+𝑟, and use (𝑚+ℓ
+                                                                                2
+                                                                                   ) ⩽ (𝐾 +𝑟)2 /2
+and (𝑗 + 1 + 𝑟)! ⩾ (𝑗 + 1)!𝑟!. The remaining sums are
+
+                      ∞                      ∞
+                          𝑢𝑟                     𝑢𝑟
+                     ∑       = 𝑒𝑢 ,         ∑       (𝐾 + 𝑟)2 = 𝑒 𝑢 ((𝐾 + 𝑢)2 + 𝑢) .
+                     𝑟 =0 𝑟!                𝑟 =0 𝑟!
+
+This proves (6.11), since 𝜂(𝐻 ) > 0. For the last assertion, 𝜂(𝐻 ) is bounded for 𝐻 ⩾ 2, and
+1 + 𝐾 2 ≪ 4𝐾 for 𝐾 ⩾ 1. Absorbing the resulting factor into the base of the power proves (6.12),
+with 𝐶1 = 4, for example.                                                                    □
+24                                                T. FREIBERG
+
+
+Corollary 6.9. After increasing the absolute constant 𝐶 in Theorem 6.1 if necessary, uniformly
+in the same ranges,
+
+         𝑗
+                     𝑚 + ℓ 𝑢 𝑚+ℓ                                      (𝐶𝑢)𝑚+𝑗+1
+        ∑ (−1)ℓ (         )( )   ΔMS (𝑚 + ℓ; 𝐻 ) ≪𝑈 ,𝜖 2−𝑚 𝐻 −3/2+𝜖 +            .                  (6.13)
+        ℓ=0           𝑚     𝐻                                         𝑚!(𝑗 + 1)!
+
+
+Proof. The definitions and the truncated exponential identity from the Bonferroni sandwich
+give the exact relation
+                                     𝑗
+                                         𝑚 + ℓ 𝑢 𝑚+ℓ
+ 𝒜(𝑚, 𝑗; 𝑢, 𝐻 ) − 𝑄(𝑚; 𝑢, 𝐻 ) = ∑ (−1)ℓ (     )( )   ΔMS (𝑚 + ℓ; 𝐻 ) + Δtr (𝑚, 𝑗; 𝑢, 𝐻 ). (6.14)
+                                ℓ=0       𝑚     𝐻
+
+Apply (6.1) and (6.12), taking 𝐶 ⩾ max{𝐶0 , 𝐶1 }.                                                      □
+   The identity (6.14) is useful because it preserves cancellation. The left side of (6.13) is a
+signed sum. We have not estimated it by adding the absolute values of fixed-𝑘 Montgomery–
+Soundararajan error bounds. Instead, the finite sieve represents the whole sum, its second and
+fourth moments control the expansion, and the uniform upper bound controls the tail. This
+distinction is what permits 𝑗 to grow.
+6.6. Integration over the starting points. We finish by connecting the pointwise estimates
+to the residuals in the sandwich. The result is uniform in the translation 𝑀 and includes 𝑀 = 0.
+The restriction on 𝐻 below is only an upper bound; no lower bound on 𝐻 / log 𝑁 is needed
+here.
+Proposition 6.10. Fix an integer 𝑚 ⩾ 0 and real numbers 𝑈 , 𝜖 > 0. There is an absolute constant
+𝐶2 ⩾ 1 such that, uniformly for integers 𝑀 ⩾ 0, 𝑁 ⩾ 2, 2 ⩽ 𝐻 ⩽ 𝑈 log 𝑁 and 𝑗 ⩾ 0,
+
+                 |𝑅MS (𝑚, 𝑗; 𝐻 , 𝑀, 𝑁 )| + |𝑅tr (𝑚, 𝑗; 𝐻 , 𝑀, 𝑁 )|
+                                                    (𝐶2 𝑈 )𝑚+𝑗+1 1 + (𝑗 + 1)(𝐶2 𝐻 )𝑚+𝑗              (6.15)
+                             ≪𝑚,𝑈 ,𝜖 𝐻 −3/2+𝜖 +                 +                      .
+                                                     𝑚!(𝑗 + 1)!           √𝑁
+The implied constant is independent of 𝑀 and 𝑗.
+
+Corollary 6.11. Fix 𝑚 ⩾ 0 and 𝑈 , 𝛿 > 0. Suppose that 𝐻 → ∞, 𝐻 ⩽ 𝑈 log 𝑁 , and let 𝐿 be the
+least even integer greater than or equal to (1 + 𝛿) log 𝐻 / log log 𝐻 . Uniformly for 𝑀 ⩾ 0 and
+𝑗 ∈ {𝐿, 𝐿 + 1},
+
+             |𝑅MS (𝑚, 𝑗; 𝐻 , 𝑀, 𝑁 )| + |𝑅tr (𝑚, 𝑗; 𝐻 , 𝑀, 𝑁 )| ≪𝑚,𝑈 ,𝛿,𝜖 𝐻 −3/2+𝜖 + 𝐻 −1−𝛿+𝑜(1) .
+
+In particular, both residuals are 𝑜(1/𝐻 ) if 0 < 𝜖 < 1/2.
+
+Proof of Corollary 6.11. The factorial term in (6.15) is 𝐻 −1−𝛿+𝑜(1) , as before. The logarithm of
+its final numerator is 𝑂𝑚,𝛿 ((log 𝐻 )2 / log log 𝐻 ) = 𝑜(𝐻 ). Since log 𝑁 ⩾ 𝐻 /𝑈 , the final term
+is bounded by exp(−𝐻 /(2𝑈 ) + 𝑜(𝐻 )), which is smaller than every fixed negative power of 𝐻 .
+Apply Proposition 6.10.                                                                         □
+                        BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                        25
+
+
+Proof of Proposition 6.10. Write 𝑎0 ∶= max{2, 𝑀}. By the definition of 𝐽 , the residual 𝑅MS is
+the integral, divided by 𝑁 , of the left side of (6.13), with 𝑢 = 𝐻 / log 𝑡, over 𝑎0 ⩽ 𝑡 ⩽ 𝑀 + 𝑁 .
+The corresponding statement for 𝑅tr is its definition. Split these integrals at 𝑡 = √𝑁 , omitting
+either piece if it is empty.
+   For 𝑡 ⩾ √𝑁 , we have 𝑢 ⩽ 2𝑈 . The interval of integration has length at most 𝑁 , so (6.13) and
+(6.12) give the first two terms in (6.15), with 𝐶2 ⩾ 2𝐶.
+   For 2 ⩽ 𝑡 < √𝑁 , we use finite sums, rather than an absolute bound for an exponential series
+at the potentially large parameter 𝑢. There is an absolute constant 𝐶3 ⩾ 1 such that, for every
+𝑘 ⩾ 0,
+                                                          (𝐶 𝐻 )𝑘
+                                  𝑆(𝑘; 𝐻 ) + |𝐺(𝑘; 𝐻 )| ≪ 3       .
+                                                             𝑘!
+For 𝑆 this follows from (6.5). For 𝐺 it follows from its definition, the boundedness of 𝜂(𝐻 ),
+and 1 + 𝑘 2 ≪ 4𝑘 . Since 𝑢 ⩽ 𝐻 / log 2, taking absolute values in the finite weighted sum for
+ΔMS = 𝑆 − 𝐺 gives
+
+                    𝑗
+                           𝑚 + ℓ 𝑢 𝑚+ℓ
+                | ∑ (−1)ℓ (     )( )   ΔMS (𝑚 + ℓ; 𝐻 )| ≪ (𝑗 + 1)(𝐶2 𝐻 )𝑚+𝑗 ,
+                 ℓ=0        𝑚     𝐻
+
+provided 𝐶2 ⩾ 𝐶3 / log 2 and 𝐶2 ⩾ 1.
+   The truncated exponential identity also writes Δtr as the finite weighted sum involving
+𝐺, minus 𝑄(𝑚; 𝑢, 𝐻 ). The same estimate bounds that finite sum. Moreover, for fixed 𝑚, the
+expression 𝑒 −𝑢 𝑢 𝑚 (1 + (𝑚 + 𝑢)2 ) is bounded on 𝑢 ⩾ 0, so |𝑄(𝑚; 𝑢, 𝐻 )| ≪𝑚 1. Thus
+
+                              |Δtr (𝑚, 𝑗; 𝑢, 𝐻 )| ≪𝑚 1 + (𝑗 + 1)(𝐶2 𝐻 )𝑚+𝑗 .
+
+The small-𝑡 part has length at most √𝑁 . Dividing its contribution by 𝑁 gives the last term in
+(6.15) and completes the proof.                                                             □
+   Thus the Montgomery–Soundararajan and truncation residuals can both be made 𝑜(1/𝐻 )
+unconditionally in the range relevant to the sandwich. The Hardy–Littlewood residual and
+the replacement of the integrated main term by 𝑄(𝑚; 𝜇, 𝐻 ) are separate questions.
+
+                             7. Averaging the logarithmic density
+   The Bonferroni sandwich (Proposition 5.1) compares 𝑃(𝑚; 𝐻 , 𝑀, 𝑁 ), the proportion of in-
+tervals containing exactly 𝑚 primes, with the averaged expression 𝐹 (𝑚; 𝐻 , 𝑀, 𝑁 ). We now
+replace 𝐹 (𝑚; 𝐻 , 𝑀, 𝑁 ) by 𝑄(𝑚; 𝜇, 𝐻 ), evaluating the corrected Poisson expression at the aver-
+aged density. The error is smaller than 1/𝐻 in the range needed below, uniformly in 𝑚.
+   Recall from Section 4 that
+
+                    𝑒 −𝑢 𝑢 𝑚      𝜂(𝐻 )                                    log 𝐻 + log(2𝜋) + 𝛾 − 1
+    𝑄(𝑚; 𝑢, 𝐻 ) =            {1 −       ((𝑚 − 𝑢)2 − 𝑚)} ,        𝜂(𝐻 ) =                           ,
+                       𝑚!           2                                                 𝐻
+
+with values at 𝑢 = 0 understood by continuity. Its average over the varying logarithmic density
+is
+                                             𝑀+𝑁
+                                         1                   𝐻
+                       𝐹 (𝑚; 𝐻 , 𝑀, 𝑁 ) = ∫           𝑄 (𝑚;       , 𝐻 ) 𝑑𝑡.
+                                         𝑁 max{2,𝑀}         log 𝑡
+26                                           T. FREIBERG
+
+
+The parameter at which we shall evaluate 𝑄 is
+
+                                                         𝑀+𝑁
+                                               1           𝐻
+                             𝜇 = 𝜇(𝐻 , 𝑀, 𝑁 ) = ∫               𝑑𝑡,
+                                               𝑁 max{2,𝑀} log 𝑡
+
+and the signed residual to be estimated is
+
+                         Δav (𝑚; 𝐻 , 𝑀, 𝑁 ) = 𝐹 (𝑚; 𝐻 , 𝑀, 𝑁 ) − 𝑄(𝑚; 𝜇, 𝐻 ).
+
+The exact choice of 𝜇 matters: Taylor expansion of 𝑄(𝑚; 𝑢, 𝐻 ) about 𝑢 = 𝜇 cancels the inte-
+grated linear term, apart from a small correction when 𝑀 = 0 or 1. The remaining error is
+controlled by the mean square variation of 𝐻 / log 𝑡 from 𝜇.
+Proposition 7.1 (Density averaging). Fix real numbers 𝐶, 𝑈 > 0. Uniformly for integers 𝑁 ⩾ 2,
+0 ⩽ 𝑀 ⩽ 𝐶𝑁 , 1 ⩽ 𝐻 ⩽ 𝑈 log 𝑁 and 𝑚 ⩾ 0,
+
+                                                              𝐻2       1
+                             |Δav (𝑚; 𝐻 , 𝑀, 𝑁 )| ≪𝐶,𝑈              4
+                                                                      + .                   (7.1)
+                                                           (log 𝑁 )    𝑁
+
+The implied constant is independent of 𝑚.
+
+  Before proving the proposition, we record its consequence at the precision needed for the
+Bonferroni sandwich.
+Corollary 7.2. As 𝑁 → ∞, uniformly over the ranges in Proposition 7.1,
+
+                                    Δav (𝑚; 𝐻 , 𝑀, 𝑁 ) = 𝑜(1/𝐻 ).
+
+In particular, when 𝐻 ≍ log 𝑁 , the residual is 𝑂𝐶,𝑈 ((log 𝑁 )−2 ), uniformly for 𝑚 ⩾ 0.
+
+Proof of Corollary 7.2. Multiplying the right side of (7.1) by 𝐻 gives
+
+                                𝐻3      𝐻     𝑈3    𝑈 log 𝑁
+                                      +   ⩽       +         → 0.
+                             (log 𝑁 )4 𝑁    log 𝑁      𝑁
+
+The second assertion follows from 𝐻 ⩽ 𝑈 log 𝑁 .                                               □
+
+    The uniformity in 𝑚 concerns an absolute error. When 𝑚 is large, the Poisson main term
+and the arithmetic correction in 𝑄(𝑚; 𝜇, 𝐻 ) may both be smaller in magnitude than this error
+bound. An estimate that distinguishes these terms requires further restrictions on 𝑚.
+    The proof uses Taylor expansion of 𝑄(𝑚; 𝑢, 𝐻 ) about 𝑢 = 𝜇, with the remainder controlled by
+its second derivative. We give the derivative and integral estimates explicitly; no probabilistic
+limit theorem is needed.
+
+7.1. Uniform bounds for the corrected Poisson expression. For integers 𝑚 ⩾ 0 and real
+𝑢 ⩾ 0, write
+                                           𝑒 −𝑢 𝑢 𝑚
+                                 𝑝𝑚 (𝑢) ∶=          ,
+                                              𝑚!
+                        BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                 27
+
+
+again using continuity at 𝑢 = 0, and put 𝑝𝑚 (𝑢) = 0 for negative integers 𝑚. These functions are
+the Poisson probabilities. Their derivatives are finite differences of the same functions, which
+allows us to avoid bounds involving powers of 𝑚. All derivatives below are with respect to 𝑢.
+Lemma 7.3. For all integers 𝑚, 𝑟 ⩾ 0 and real 𝑢 ⩾ 0,
+
+                                   𝑟
+                          (𝑟)                𝑟                        (𝑟)
+                         𝑝𝑚 (𝑢) = ∑ (−1)𝑟−𝑖 ( )𝑝𝑚−𝑖 (𝑢),            |𝑝𝑚 (𝑢)| ⩽ 2𝑟 .           (7.2)
+                                  𝑖=0        𝑖
+
+For 𝐻 ⩾ 1, the corrected Poisson approximation satisfies
+
+                                                           𝜂(𝐻 ) 2 ″
+                                 𝑄(𝑚; 𝑢, 𝐻 ) = 𝑝𝑚 (𝑢) −         𝑢 𝑝𝑚 (𝑢)                      (7.3)
+                                                             2
+and
+                        𝜕𝑟                          |𝜂(𝐻 )|
+                   |       𝑟 𝑄(𝑚; 𝑢, 𝐻 )| ⩽ 2𝑟 {1 +         (4𝑢 2 + 4𝑟𝑢 + 𝑟(𝑟 − 1))} .        (7.4)
+                       𝜕𝑢                              2
+Consequently, for fixed 𝑉 > 0 and integer 𝑟 ⩾ 0, these derivatives are 𝑂𝑉 ,𝑟 (1) uniformly for
+0 ⩽ 𝑢 ⩽ 𝑉 , 𝐻 ⩾ 1 and 𝑚 ⩾ 0.
+
+                              ′ =𝑝
+Proof. Differentiation gives 𝑝𝑚     𝑚−1 − 𝑝𝑚 , including when 𝑚 = 0. Induction on 𝑟 proves the
+identity in (7.2). The exponential series gives
+                                              ∞
+                                              ∑ 𝑝𝑚 (𝑢) = 1,
+                                             𝑚=0
+
+so 0 ⩽ 𝑝𝑚 (𝑢) ⩽ 1 for every integer 𝑚. Taking absolute values in the finite-difference identity
+proves the derivative bound.
+   For 𝑢 > 0, direct differentiation also gives
+
+               𝑢 2 𝑝𝑚
+                    ″ (𝑢) = (𝑚(𝑚 − 1) − 2𝑚𝑢 + 𝑢 2 ) 𝑝 (𝑢) = ((𝑚 − 𝑢)2 − 𝑚) 𝑝 (𝑢).
+                                                     𝑚                      𝑚
+
+Substitution into the definition of 𝑄 proves (7.3), and continuity extends it to 𝑢 = 0. For 𝑟 ⩾ 2,
+Leibniz’s rule gives
+
+                 𝑑𝑟         ″ (𝑢)) = 𝑢 2 𝑝 (𝑟+2) (𝑢) + 2𝑟𝑢 𝑝 (𝑟+1) (𝑢) + 𝑟(𝑟 − 1)𝑝 (𝑟) (𝑢).
+                    𝑟 (𝑢 2 𝑝𝑚             𝑚                 𝑚                     𝑚
+                 𝑑𝑢
+For 𝑟 = 0 or 1, the same formula holds with the terms having zero coefficients omitted. Ap-
+plying (7.2) to each term proves (7.4). Finally, 𝜂(𝐻 ) is bounded for 𝐻 ⩾ 1, which proves the
+assertion on bounded 𝑢-intervals.                                                          □
+  We shall use the lemma with 𝑟 = 0, 1, 2. In particular, the case 𝑟 = 0 gives a bound valid
+even when 𝑢 is large:
+                         |𝑄(𝑚; 𝑢, 𝐻 )| ⩽ 1 + 2|𝜂(𝐻 )|𝑢 2 ≪ 1 + 𝑢 2 .                    (7.5)
+The implied constant is absolute. This crude bound will suffice on the short portion of the
+integral where 𝐻 / log 𝑡 need not be bounded.
+28                                               T. FREIBERG
+
+
+7.2. The averaging residual. We first estimate the variation of the logarithmic density. In
+the rest of this subsection write
+
+                                                  𝐻                     𝐻                  max{2 − 𝑀, 0}
+     𝐼 ∶= [max{2, 𝑀}, 𝑀 + 𝑁 ],       𝑢(𝑡) ∶=           ,       𝑎 ∶=         ,       𝑑 ∶=                 .
+                                                 log 𝑡                log 𝑁                     𝑁
+
+Thus the interval 𝐼 has length 𝑁 (1 − 𝑑). We retain the normalization by 𝑁 used in Section 4
+(bookkeeping). In particular,
+
+                1                       1                            1
+                     𝑑𝑡 = 1 − 𝑑,             𝑢(𝑡)𝑑𝑡 = 𝜇,                  (𝑢(𝑡) − 𝜇)𝑑𝑡 = 𝑑𝜇.            (7.6)
+                𝑁 ∫𝐼                    𝑁 ∫𝐼                         𝑁 ∫𝐼
+
+The last integral vanishes for 𝑀 ⩾ 2, but not necessarily for 𝑀 = 0 or 1.
+Lemma 7.4. Fix 𝐶 > 0. For integers 𝑁 ⩾ 2, 0 ⩽ 𝑀 ⩽ 𝐶𝑁 and 𝐻 ⩾ 1,
+
+                                   1                        𝐻2
+                                     ∫ (𝑢(𝑡) − 𝑎)2 𝑑𝑡 ≪𝐶           ,                                    (7.7)
+                                   𝑁 𝐼                   (log 𝑁 )4
+
+and
+                                              𝐻                             𝐻
+                           |𝜇 − 𝑎| ≪𝐶                ,     0 ⩽ 𝜇 ≪𝐶             .                       (7.8)
+                                           (log 𝑁 )2                      log 𝑁
+Consequently,
+                                   1                        𝐻2
+                                     ∫ (𝑢(𝑡) − 𝜇)2 𝑑𝑡 ≪𝐶           .                                    (7.9)
+                                   𝑁 𝐼                   (log 𝑁 )4
+No upper bound on 𝐻 is needed in this lemma.
+
+Proof. We may suppose 𝑁 ⩾ 4. For 𝑁 = 2, 3, both 𝑢(𝑡) and 𝑎 are 𝑂(𝐻 ) throughout 𝐼 , and the
+assertions follow by increasing the implied constants.
+   Split 𝐼 into its intersections with [2, √𝑁 ) and [√𝑁 , ∞). On the first part, 𝑢(𝑡) and 𝑎 are 𝑂(𝐻 ),
+and its length is at most √𝑁 . Its contribution to the left side of (7.7) is therefore 𝑂(𝐻 2 /√𝑁 ).
+   On the second part,
+
+                                            𝐻 | log(𝑡/𝑁 )| 2𝐻 | log(𝑡/𝑁 )|
+                            |𝑢(𝑡) − 𝑎| =                  ⩽                .
+                                             log 𝑡 log 𝑁     (log 𝑁 )2
+
+Since 𝑀 + 𝑁 ⩽ (𝐶 + 1)𝑁 , the change of variable 𝑠 = 𝑡/𝑁 gives
+
+                                                               𝐶+1
+                       1
+                                       | log(𝑡/𝑁 )|2 𝑑𝑡 ⩽ ∫          | log 𝑠|2 𝑑𝑠 ≪𝐶 1.
+                       𝑁 ∫𝐼 ∩ [√𝑁 , ∞)                     0
+
+The integral at zero converges; for example, an antiderivative on 𝑠 > 0 is 𝑠((log 𝑠)2 − 2 log 𝑠 + 2),
+which tends to zero as 𝑠 → 0. Combining the two parts yields
+
+                      1                     𝐻2    𝐻2           𝐻2
+                        ∫ (𝑢(𝑡) − 𝑎)2 𝑑𝑡 ≪𝐶    +         ≪𝐶           .
+                      𝑁 𝐼                   √𝑁 (log 𝑁 )4    (log 𝑁 )4
+                        BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                     29
+
+
+Here the last step uses the boundedness of (log 𝑁 )4 /√𝑁 for 𝑁 ⩾ 4.
+  To compare 𝜇 with 𝑎, note that
+
+                                                1
+                                     𝜇−𝑎 =           (𝑢(𝑡) − 𝑎)𝑑𝑡 − 𝑑𝑎.
+                                                𝑁 ∫𝐼
+
+Cauchy–Schwarz, the fact that the length of 𝐼 is at most 𝑁 , and (7.7) give
+
+                                              1/2
+                       1                                         𝐻            𝐻          𝐻
+         |𝜇 − 𝑎| ⩽ (        (𝑢(𝑡) − 𝑎)2 𝑑𝑡)         + 𝑑𝑎 ≪𝐶              +         ≪𝐶           .
+                       𝑁 ∫𝐼                                   (log 𝑁 ) 2   𝑁 log 𝑁    (log 𝑁 )2
+
+This proves (7.8). Finally, the pointwise inequality
+
+                                 (𝑢(𝑡) − 𝜇)2 ⩽ 2(𝑢(𝑡) − 𝑎)2 + 2(𝑎 − 𝜇)2
+
+proves (7.9) after integration.                                                                     □
+  We can now compare the average of 𝑄 with its value at 𝜇. For 𝑀 ⩾ 2, the calculation is the
+familiar cancellation of the linear term in a Taylor expansion about the mean. We keep the
+small defect in the total mass throughout, so the same proof covers 𝑀 = 0 and 1.
+Proof of Proposition 7.1. Within this proof write 𝑞(𝑢) ∶= 𝑄(𝑚; 𝑢, 𝐻 ). By (7.8) and 𝐻 ⩽ 𝑈 log 𝑁 ,
+we have 𝜇 ≪𝐶 𝑈 . Lemma 7.3 therefore gives
+
+                                         |𝑞(𝜇)| + |𝑞 ′ (𝜇)| ≪𝐶,𝑈 1,
+
+uniformly in 𝑚. We may suppose 𝑁 ⩾ 4: when 𝑁 = 2, 3, the upper bound on 𝐻 bounds both
+𝑢(𝑡) and 𝜇 in terms of 𝑈 , so the proposition follows from the same lemma by increasing the
+implied constant.
+   Put
+                               𝑔(𝑢) ∶= 𝑞(𝑢) − 𝑞(𝜇) − (𝑢 − 𝜇)𝑞 ′ (𝜇).
+
+For 𝑡 ⩾ √𝑁 , we have 0 ⩽ 𝑢(𝑡) ⩽ 2𝑈 . The entire segment between 𝑢(𝑡) and 𝜇 is therefore
+contained in a bounded interval depending only on 𝐶 and 𝑈 . Taylor’s theorem with integral
+remainder gives
+                                                     1
+                             𝑔(𝑢) = (𝑢 − 𝜇)2 ∫ (1 − 𝑠)𝑞 ″ (𝜇 + 𝑠(𝑢 − 𝜇))𝑑𝑠.
+                                                    0
+
+The uniform bound for 𝑞 ″ from Lemma 7.3, followed by (7.9), now gives
+
+                1                                 1               2 𝑑𝑡 ≪        𝐻2
+                                |𝑔(𝑢(𝑡))|𝑑𝑡 ≪          (𝑢(𝑡) − 𝜇)                      .
+                𝑁 ∫𝐼 ∩ [√𝑁 , ∞)               𝐶,𝑈
+                                                  𝑁 ∫𝐼                   𝐶,𝑈
+                                                                             (log 𝑁 )4
+
+   For 2 ⩽ 𝑡 < √𝑁 , use (7.5) to bound 𝑞(𝑢(𝑡)), and (7.4) with 𝑟 = 0, 1 to bound 𝑞(𝜇) and 𝑞 ′ (𝜇).
+Since 𝑢(𝑡) ⩽ 𝐻 / log 2 and 𝜇 ≪𝐶 𝑈 ,
+
+                       |𝑔(𝑢(𝑡))| ⩽ |𝑞(𝑢(𝑡))| + |𝑞(𝜇)| + |𝑢(𝑡) − 𝜇| |𝑞 ′ (𝜇)| ≪𝐶,𝑈 𝐻 2 .
+30                                              T. FREIBERG
+
+
+This part has length at most √𝑁 , so
+
+                        1                                 𝐻2         𝐻2
+                                        |𝑔(𝑢(𝑡))|𝑑𝑡 ≪        ≪              .
+                        𝑁 ∫𝐼 ∩ [2, √𝑁 )               𝐶,𝑈
+                                                          √𝑁
+                                                              𝐶,𝑈
+                                                                  (log 𝑁 )4
+Both estimates are independent of 𝑚.
+  It remains to integrate the constant and linear terms exactly. The identities (7.6) give
+
+                                                                   1
+                      Δav (𝑚; 𝐻 , 𝑀, 𝑁 ) = 𝑑 (𝜇𝑞 ′ (𝜇) − 𝑞(𝜇)) +        𝑔(𝑢(𝑡))𝑑𝑡.           (7.10)
+                                                                   𝑁 ∫𝐼
+The first term in (7.10) is 𝑂𝐶,𝑈 (1/𝑁 ) because 0 ⩽ 𝑑 ⩽ 2/𝑁 . The bounds for the remaining
+integral prove (7.1).                                                                   □
+    To bound 𝐹 (𝑚; 𝐻 , 𝑀, 𝑁 )−𝑄(𝑚; 𝜇, 𝐻 ), a direct application of the mean value theorem to 𝑄 as
+a function of 𝑢 would bound the difference by the mean absolute deviation of 𝐻 / log 𝑡 from 𝜇.
+Our estimates would then give only 𝑂𝐶,𝑈 (𝐻 /(log 𝑁 )2 + 1/𝑁 ). By retaining the linear term in
+the Taylor expansion about 𝑢 = 𝜇 and integrating it before taking absolute values, we exploit
+its cancellation and obtain 𝑂𝐶,𝑈 (𝐻 2 /(log 𝑁 )4 + 1/𝑁 ) instead. When 𝐻 ≍ log 𝑁 , this improves
+the error bound from 𝑂(1/𝐻 ) to 𝑂(1/𝐻 2 ).
+7.3. The effective mean. The preceding proof retained the logarithmic integral in 𝜇 exactly.
+To relate it to a single logarithm, we now expand that integral to two terms. The second term
+depends on the position of the averaging interval. This dependence accounts for the different
+normalizations in (0, 𝑁 ] and (𝑁 , 2𝑁 ].
+   For 𝛼 ⩾ 0, put
+                                 𝛼+1
+                     𝑐(𝛼) ∶= ∫         log 𝑠 𝑑𝑠 = (𝛼 + 1) log(𝛼 + 1) − 𝛼 log 𝛼 − 1,          (7.11)
+                                𝛼
+
+where 0 log 0 is interpreted as zero. The integral at 𝛼 = 0 is improper and converges. In
+particular, 𝑐 is continuous on [0, ∞) and bounded on each interval [0, 𝐶].
+Proposition 7.5. Fix 𝐶 > 0, and put 𝛼 = 𝑀/𝑁 . As 𝑁 → ∞, uniformly for integers 0 ⩽ 𝑀 ⩽ 𝐶𝑁
+and 𝐻 ⩾ 1,
+                                   𝐻              𝐻                 𝐻
+                  𝜇(𝐻 , 𝑀, 𝑁 ) =        − 𝑐(𝛼)          2
+                                                          + 𝑂𝐶 (           ).        (7.12)
+                                 log 𝑁         (log 𝑁 )          (log 𝑁 )3
+Equivalently, for all sufficiently large 𝑁 ,
+
+                                                 𝐻                 𝐻
+                           𝜇(𝐻 , 𝑀, 𝑁 ) =                + 𝑂𝐶 (           ).                 (7.13)
+                                            log 𝑁 + 𝑐(𝛼)        (log 𝑁 )3
+
+The implied constants are independent of 𝐻 and 𝑀; in particular, no upper bound on 𝐻 is needed
+for these expansions.
+
+Proof. Write 𝑏 = log 𝑁 within this proof. For 𝑡 > 1, the identity
+                                                                        2
+                                  1    1 log(𝑡/𝑁 ) (log(𝑡/𝑁 ))
+                                      = −         +                                          (7.14)
+                                log 𝑡  𝑏    𝑏2        𝑏 2 log 𝑡
+                      BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                     31
+
+
+is exact. On 𝑡 ⩾ √𝑁 , the absolute value of the last term is at most 2| log(𝑡/𝑁 )|2 /𝑏 3 . As in the
+proof of Lemma 7.4, its integral over the relevant range, divided by 𝑁 , is 𝑂𝐶 (𝑏 −3 ).
+   We compare the original integral with the first two terms of (7.14) integrated over the full
+interval [𝑀, 𝑀 + 𝑁 ]. Only the portion below √𝑁 needs separate treatment, including the
+missing interval below 2 when 𝑀 = 0 or 1. The original integrand contributes at most
+
+                                              √𝑁
+                                     1              𝑑𝑡      1
+                                                        ⩽         .
+                                     𝑁 ∫2          log 𝑡 √𝑁 log 2
+
+For the two elementary terms we use
+
+                                         √𝑁
+                                 1                               𝑏/2 + 1
+                                              | log(𝑡/𝑁 )|𝑑𝑡 =             .
+                                 𝑁 ∫0                             √𝑁
+
+Including the integral of 1/𝑏, their contribution below √𝑁 is 𝑂(𝑁 −1/2 /𝑏) for 𝑁 ⩾ 4. Thus the
+entire error made on this portion is 𝑂(𝑁 −1/2 ), which is 𝑂(𝑏 −3 ).
+  We have proved
+                                    𝑀+𝑁
+                          𝜇     1          1 log(𝑡/𝑁 )
+                            = ∫          ( −            ) 𝑑𝑡 + 𝑂𝐶 (𝑏 −3 ).
+                         𝐻     𝑁 𝑀         𝑏       𝑏2
+The first term integrates to 1/𝑏. In the second, the change of variable 𝑠 = 𝑡/𝑁 gives 𝑐(𝛼) as
+defined in (7.11). This proves (7.12), including uniformly when 𝛼 approaches zero.
+   Since 𝑐(𝛼) is bounded for 0 ⩽ 𝛼 ⩽ 𝐶, the denominator 𝑏 + 𝑐(𝛼) is positive for all sufficiently
+large 𝑁 , uniformly in 𝛼. The elementary identity
+
+                                  1     1 𝑐(𝛼)    𝑐(𝛼)2
+                                       = − 2 + 2
+                               𝑏 + 𝑐(𝛼) 𝑏  𝑏   𝑏 (𝑏 + 𝑐(𝛼))
+
+then proves (7.13).                                                                              □
+
+  For the two averaging intervals of particular interest,
+
+                                𝑐(0) = −1,            𝑐(1) = 2 log 2 − 1.
+
+Consequently, (7.13) gives
+
+                                                   𝐻            𝐻
+                             𝜇(𝐻 , 0, 𝑁 ) =              +𝑂(           )
+                                               log 𝑁 − 1     (log 𝑁 )3
+
+and
+                                                 𝐻                  𝐻
+                       𝜇(𝐻 , 𝑁 , 𝑁 ) =                       +𝑂(           ).
+                                         log 𝑁 + 2 log 2 − 1     (log 𝑁 )3
+
+These shifted logarithms describe the average of the varying density 1/ log 𝑡 over the chosen
+interval. They do not replace that density pointwise.
+32                                          T. FREIBERG
+
+
+Corollary 7.6. Fix 𝐶, 𝑈 > 0, and write
+
+                                                  𝐻
+                                    𝜆 ∶=                   ,
+                                           log 𝑁 + 𝑐(𝑀/𝑁 )
+
+where the function 𝑐 is defined in (7.11). As 𝑁 → ∞, uniformly for integers 0 ⩽ 𝑀 ⩽ 𝐶𝑁 ,
+1 ⩽ 𝐻 ⩽ 𝑈 log 𝑁 and 𝑚 ⩾ 0,
+
+                                                                  𝐻        1
+                     𝐹 (𝑚; 𝐻 , 𝑀, 𝑁 ) = 𝑄(𝑚; 𝜆, 𝐻 ) + 𝑂𝐶,𝑈 (            3
+                                                                          + ).
+                                                               (log 𝑁 )    𝑁
+
+The error is 𝑜(1/𝐻 ) uniformly in these ranges.
+
+Proof. Proposition 7.5 gives |𝜇 −𝜆| ≪𝐶 𝐻 /(log 𝑁 )3 . Both 𝜇 and 𝜆 are nonnegative and bounded
+in terms of 𝐶 and 𝑈 for all sufficiently large 𝑁 . The first-derivative bound in Lemma 7.3 and
+the mean value theorem therefore give
+
+                                                                  𝐻
+                           |𝑄(𝑚; 𝜇, 𝐻 ) − 𝑄(𝑚; 𝜆, 𝐻 )| ≪𝐶,𝑈              ,
+                                                               (log 𝑁 )3
+
+uniformly in 𝑚. Combine this with Proposition 7.1, using
+
+                                         𝐻2        𝑈𝐻
+                                               ⩽          .
+                                      (log 𝑁 )4 (log 𝑁 )3
+
+Finally, multiplying the error bound in the corollary by 𝐻 gives
+
+                        𝐻       1        𝐻2      𝐻     𝑈2    𝑈 log 𝑁
+                𝐻(            +   ) =          +   ⩽       +         → 0.
+                     (log 𝑁 )3 𝑁      (log 𝑁 )3 𝑁    log 𝑁      𝑁
+
+Thus the error is 𝑜(1/𝐻 ) uniformly in the stated ranges.                                    □
+   The second term of (7.12) explains why replacing 𝜇 by 𝐻 / log 𝑁 would lose the required
+precision. When 𝐻 ≍ log 𝑁 and 𝑐(𝑀/𝑁 ) stays away from zero, the change in the parameter
+has order 1/𝐻 . Its first-order effect on 𝑄 can therefore affect the part of the singular-series
+correction proportional to 1/𝐻 . Keeping 𝜇 exactly, or using the shifted logarithm with its
+stated error, makes the averaging error 𝑜(1/𝐻 ).
+
+                           8. From prime tuples to prime counts
+   The preceding sections leave one residual to control: the signed Hardy–Littlewood residual
+in the Bonferroni sandwich (Proposition 5.1). We first give a quantitative transfer statement,
+keeping this residual explicit. We then derive sufficient conditions on averaged prime-tuple
+counts and on individual prime-tuple counts. These conditions are hypotheses, not conse-
+quences of the usual conjecture for each fixed tuple. The distinction matters because both the
+set of shifts and its cardinality vary with 𝑁 .
+   Except where the full notation is useful, we suppress 𝐻 , 𝑀 and 𝑁 as arguments, as in
+Section 5. The integer 𝑚 is fixed in the asymptotic conclusions of this section. Some of the
+                      BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                      33
+
+
+intermediate inequalities hold uniformly in 𝑚, but the integrated singular-series estimate used
+here was stated for fixed 𝑚.
+   Recall that the averaged prime-tuple residual and its weighted sum are
+
+                                     ΔHL (𝑘) = 𝑇 (𝑘) − 𝐽 (𝑘)𝑆(𝑘)
+
+and
+                                            𝑗
+                                                 𝑚+ℓ
+                           𝑅HL (𝑚, 𝑗) = ∑ (−1)ℓ (    )ΔHL (𝑚 + ℓ).
+                                        ℓ=0       𝑚
+
+Here 𝑇 (𝑘) is the average number of ways to choose 𝑘 primes from an interval, and 𝐽 (𝑘)𝑆(𝑘)
+is its Hardy–Littlewood prediction. It is the signed sum 𝑅HL , at the two truncation orders
+in the Bonferroni sandwich, that the conditional argument needs to control. Bounds for the
+individual residuals ΔHL (𝑘) will provide sufficient conditions.
+
+8.1. A quantitative transfer statement. We collect the unconditional singular-series and
+truncation bounds in an error term 𝐸an , where the subscript stands for “analytic”. Keeping the
+Hardy–Littlewood residual explicit shows what precision is needed and allows any suitable
+bound for that residual to be inserted directly, without revisiting the preceding proofs.
+Proposition 8.1. There is an absolute constant 𝐷 ⩾ 1 with the following property. Fix an integer
+𝑚 ⩾ 0 and real numbers 𝑈 , 𝜖 > 0. Let 𝑀 ⩾ 0, 𝑁 ⩾ 2 and 2 ⩽ 𝐻 ⩽ 𝑈 log 𝑁 be integers, and let
+𝐿 ⩾ 0 be even. Write
+
+                                         (𝐷𝑈 )𝑚+𝐿+1 1 + (𝐿 + 2)(𝐷𝐻 )𝑚+𝐿+1
+                   𝐸an ∶= 𝐻 −3/2+𝜖 +                 +                    .                      (8.1)
+                                          𝑚!(𝐿 + 1)!          √𝑁
+Then, uniformly in 𝑀 and 𝐿,
+
+
+                      𝑃(𝑚) = 𝐹 (𝑚) + 𝑂𝑚,𝑈 ,𝜖 ( max                |𝑅HL (𝑚, 𝑗)| + 𝐸an ) .         (8.2)
+                                                    𝑗 ∈ {𝐿,𝐿+1}
+
+If also 0 ⩽ 𝑀 ⩽ 𝐶𝑁 for a fixed 𝐶 > 0, then
+
+                                                                                    𝐻2     1
+           𝑃(𝑚) = 𝑄(𝑚; 𝜇) + 𝑂𝑚,𝐶,𝑈 ,𝜖 ( max             |𝑅HL (𝑚, 𝑗)| + 𝐸an +              + ).   (8.3)
+                                          𝑗 ∈ {𝐿,𝐿+1}                            (log 𝑁 )4 𝑁
+
+Both statements are unconditional.
+
+Proof. Proposition 5.1 (Bonferroni sandwich) gives
+
+               |𝑃(𝑚) − 𝐹 (𝑚)| ⩽     max         {|𝑅HL (𝑚, 𝑗)| + |𝑅MS (𝑚, 𝑗)| + |𝑅tr (𝑚, 𝑗)|} .
+                                  𝑗 ∈ {𝐿,𝐿+1}
+
+
+Apply Proposition 6.10 at 𝑗 = 𝐿 and 𝑗 = 𝐿+1. Choose 𝐷 at least as large as the absolute constant
+𝐶2 in that proposition. The last term there is bounded by the last term in (8.1). For the factorial
+term, increasing 𝑗 from 𝐿 to 𝐿 + 1 multiplies the expression with base 𝐷𝑈 by 𝐷𝑈 /(𝐿 + 2),
+34                                                T. FREIBERG
+
+
+which is bounded in terms of 𝑈 . This proves (8.2). The identity 𝐹 (𝑚) = 𝑄(𝑚; 𝜇) + Δav (𝑚) and
+Proposition 7.1 give (8.3).                                                                 □
+   The truncation order can now be chosen once and for all. We record the resulting condi-
+tional statement before examining sufficient conditions for its hypothesis.
+Corollary 8.2. Fix an integer 𝑚 ⩾ 0 and real numbers 𝑈 , 𝛿 > 0. Suppose that 𝐻 → ∞ and
+𝐻 ⩽ 𝑈 log 𝑁 , and let 𝐿 be the least even integer satisfying
+
+                                                            log 𝐻
+                                            𝐿 ⩾ (1 + 𝛿)             .                           (8.4)
+                                                          log log 𝐻
+
+On any family of integers 𝑀 ⩾ 0, 𝑁 ⩾ 2 and 𝐻 in these ranges for which
+
+                                max         |𝑅HL (𝑚, 𝑗; 𝐻 , 𝑀, 𝑁 )| = 𝑜(1/𝐻 )                   (8.5)
+                              𝑗 ∈ {𝐿,𝐿+1}
+
+holds uniformly, we have, with the same uniformity,
+
+                             𝑃(𝑚; 𝐻 , 𝑀, 𝑁 ) = 𝐹 (𝑚; 𝐻 , 𝑀, 𝑁 ) + 𝑜(1/𝐻 ).                      (8.6)
+
+If also 0 ⩽ 𝑀 ⩽ 𝐶𝑁 for a fixed 𝐶 > 0, then
+
+                              𝑃(𝑚; 𝐻 , 𝑀, 𝑁 ) = 𝑄(𝑚; 𝜇, 𝐻 ) + 𝑜(1/𝐻 ).                          (8.7)
+
+
+Proof. Fix 0 < 𝜖 < 1/2 in Proposition 8.1. Stirling’s formula and the choice of 𝐿 give
+
+             (𝐷𝑈 )𝑚+𝐿+1
+     log (               ) = −(𝐿 + 1) log(𝐿 + 1) + 𝑂𝑚,𝑈 (𝐿 + 1) = −(1 + 𝛿) log 𝐻 + 𝑜(log 𝐻 ).
+              𝑚!(𝐿 + 1)!
+
+Thus this term is 𝐻 −1−𝛿+𝑜(1) . Moreover,
+
+                                                                    (log 𝐻 )2
+                     log (1 + (𝐿 + 2)(𝐷𝐻 )𝑚+𝐿+1 ) = 𝑂𝑚,𝛿 (                    ) = 𝑜(𝐻 ).
+                                                                   log log 𝐻
+
+Since log 𝑁 ⩾ 𝐻 /𝑈 , the last term in (8.1) is at most exp(−𝐻 /(2𝑈 ) + 𝑜(𝐻 )). All three terms in
+𝐸an are therefore 𝑜(1/𝐻 ). This proves (8.6). For the second assertion, the remaining terms in
+(8.3) satisfy
+                                 𝐻2        1        𝑈3    𝑈 log 𝑁
+                         𝐻(            4
+                                         +   ) ⩽        +         → 0.
+                              (log 𝑁 )     𝑁      log 𝑁      𝑁
+                                                                                                  □
+  Condition (8.5) retains cancellation within each tuple average and between the different
+tuple sizes. It is a sufficient condition tailored to the argument, rather than a claim of logical
+necessity. Indeed, the signed sandwich requires only an upper bound for 𝑅HL (𝑚, 𝐿) and a
+lower bound for 𝑅HL (𝑚, 𝐿 + 1). The weaker condition
+
+                           max {0, 𝑅HL (𝑚, 𝐿), −𝑅HL (𝑚, 𝐿 + 1)} = 𝑜(1/𝐻 )
+                     BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                  35
+
+
+would suffice as well. We use the symmetric form because it follows conveniently from bounds
+on prime-tuple residuals.
+
+8.2. Sufficient Hardy–Littlewood hypotheses. We first remove the empty tuple and the
+singleton tuples from the unproved part of the argument. The identity for 𝑘 = 0 is exact. For
+𝑘 = 1, the quantitative prime number theorem supplies more precision than we need.
+Lemma 8.3. We have
+                                                     max{2 − 𝑀, 0}
+                              ΔHL (0; 𝐻 , 𝑀, 𝑁 ) =                 .
+                                                          𝑁
+For every fixed 𝐶, 𝐵 > 0, uniformly for integers 0 ⩽ 𝑀 ⩽ 𝐶𝑁 , 𝑁 ⩾ 2 and 𝐻 ⩾ 1,
+
+                                                         𝐻        𝐻2
+                            ΔHL (1; 𝐻 , 𝑀, 𝑁 ) ≪𝐶,𝐵             +    .                      (8.8)
+                                                      (log 𝑁 )𝐵   𝑁
+
+In particular, for fixed 𝑈 > 0, both residuals are 𝑜(1/𝐻 ) uniformly when 𝐻 ⩽ 𝑈 log 𝑁 and
+𝑁 → ∞.
+
+Proof. The empty-tuple identity follows from 𝑇 (0) = 𝑆(0) = 1 and the length of the integral
+defining 𝐽 (0). For the singleton residual, the endpoint calculation in Subsection 4.3 gives
+
+                                    𝐻                         𝐻2
+                          𝑇 (1) =     (𝜋(𝑀 + 𝑁 ) − 𝜋(𝑀)) + 𝑂 ( ) .
+                                    𝑁                         𝑁
+
+We use the quantitative prime number theorem in the form
+
+                                    𝑥
+                                       𝑑𝑡             𝑥
+                        𝜋(𝑥) = ∫            + 𝑂𝐵 (          )      (𝑥 ⩾ 2),                 (8.9)
+                                    2 log 𝑡        (log 𝑥)𝐵
+
+valid for each fixed 𝐵 > 0. This follows from the stronger exponential error bound in [26,
+Theorem 6.9] and is the only additional analytic input in this section.
+   At the upper endpoint, (8.9) has error 𝑂𝐶,𝐵 (𝑁 /(log 𝑁 )𝐵 ). The same bound holds at the lower
+endpoint uniformly in 𝑀: use (8.9) when 𝑀 ⩾ √𝑁 and the trivial bound 𝑂(√𝑁 ) for the prime
+count and the integral when 2 ⩽ 𝑀 < √𝑁 . For 𝑀 = 0, 1, the lower prime count and the lower
+integral are both absent. Consequently,
+
+                                             𝑀+𝑁
+                                                       𝑑𝑡               𝑁
+                   𝜋(𝑀 + 𝑁 ) − 𝜋(𝑀) = ∫                     + 𝑂𝐶,𝐵 (           ).
+                                             max{2,𝑀} log 𝑡          (log 𝑁 )𝐵
+
+Since 𝑆(1; 𝐻 ) = 𝐻 , substitution proves (8.8). To obtain the final assertion, take 𝐵 > 2 and
+multiply the bound by 𝐻 , using 𝐻 ⩽ 𝑈 log 𝑁 .                                              □
+
+   We next make the binomial weights explicit. In the following lemma, the numbers 𝑒𝑘 are
+bounds for the already averaged, signed residuals ΔHL (𝑘); no absolute values are taken inside
+the sum over sets of shifts defining those residuals.
+36                                                   T. FREIBERG
+
+
+Lemma 8.4. Let 𝑚, 𝐿 ⩾ 0 be integers, and put 𝐾 ∶= 𝑚 + 𝐿 + 1. Suppose that 𝑒𝑘 ⩾ 0 and
+|ΔHL (𝑘)| ⩽ 𝑒𝑘 for 2 ⩽ 𝑘 ⩽ 𝐾 . Then
+
+                                                                          𝐾
+                                                     2                             𝑘
+                        max         |𝑅HL (𝑚, 𝑗)| ⩽     + |ΔHL (1)| +     ∑        ( )𝑒𝑘 .    (8.10)
+                      𝑗 ∈ {𝐿,𝐿+1}                    𝑁               𝑘 = max{2,𝑚}
+                                                                                   𝑚
+
+In particular, if 𝐴 ⩾ 1, 𝜉 ⩾ 0 and
+
+                                                             𝑘
+                                          𝜉 𝐴𝑘   𝐻
+                              |ΔHL (𝑘)| ⩽      (     )              (2 ⩽ 𝑘 ⩽ 𝐾 ),            (8.11)
+                                            𝑘! log 𝑁
+
+then                                                                          𝑚
+                                            2               𝜉 (𝐴𝐻 / log 𝑁 )        𝐴𝐻
+               max         |𝑅HL (𝑚, 𝑗)| ⩽     + |ΔHL (1)| +                 exp (       ).   (8.12)
+             𝑗 ∈ {𝐿,𝐿+1}                    𝑁                      𝑚!             log 𝑁
+
+These inequalities do not require 𝑚 or 𝐿 to be fixed.
+
+Proof. In the definition of 𝑅HL (𝑚, 𝑗), put 𝑘 = 𝑚 + ℓ and take absolute values. The term 𝑘 = 0,
+when present, is at most 2/𝑁 . The coefficient of the term 𝑘 = 1, when present, has absolute
+value 1. The remaining terms are bounded by the sum in (8.10).
+   For the second assertion, put 𝑎 ∶= 𝐴𝐻 / log 𝑁 . The factorial in (8.11) cancels part of the
+binomial coefficient:
+                                𝑘 𝑎𝑘      𝑎𝑚 𝑎𝑘−𝑚
+                              ( ) =                       (𝑘 ⩾ 𝑚).
+                                𝑚 𝑘!      𝑚! (𝑘 − 𝑚)!
+
+Completing the resulting positive exponential series gives
+
+                                      𝐾
+                                             𝑘 𝜉𝑎
+                                                  𝑘   𝜉 𝑎𝑚 ∞ 𝑎ℓ 𝜉 𝑎𝑚 𝑎
+                                     ∑      ( )     ⩽      ∑       =    𝑒 .
+                               𝑘 = max{2,𝑚}
+                                             𝑚 𝑘!      𝑚! ℓ = 0 ℓ!   𝑚!
+
+This proves (8.12).                                                                             □
+  For fixed 𝐴, 𝑈 , the factor multiplying 𝜉 in (8.12) is bounded independently of 𝐿. It is even
+bounded independently of 𝑚, since 𝑎𝑚 /𝑚! ⩽ 𝑒 𝑎 for 𝑎 ⩾ 0. Thus the growing number of terms
+does not by itself entail a loss: the factorial decay absorbs the binomial weights.
+  More explicitly, retain the ranges of Corollary 8.2, impose 0 ⩽ 𝑀 ⩽ 𝐶𝑁 , and put 𝐾 =
+𝑚 + 𝐿 + 1. A sufficient averaged Hardy–Littlewood hypothesis is that, for some fixed 𝐴 ⩾ 1,
+
+                                                     𝑘
+                                     𝑘! log 𝑁
+                             max        (     ) |ΔHL (𝑘; 𝐻 , 𝑀, 𝑁 )| = 𝑜(1/𝐻 ),              (8.13)
+                           2 ⩽ 𝑘 ⩽ 𝐾 𝐴𝑘   𝐻
+
+uniformly over the stated ranges. Under this hypothesis, apply (8.12) with 𝜉 equal to the
+maximum in (8.13), and use Lemma 8.3. Thus (8.13) implies (8.5).
+   One can weaken (8.13) by prescribing different bounds for different 𝑘 and requiring only
+that the sum in (8.10) be 𝑜(1/𝐻 ). One can weaken it further by estimating 𝑅HL with its signs
+                     BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                     37
+
+
+intact. The bound (8.11) is convenient because its factorial decay absorbs the binomial weights,
+leaving only the requirement 𝜉 = 𝑜(1/𝐻 ).
+   For comparison, we give two sufficient hypotheses on individual tuples. They sacrifice
+cancellation over sets of shifts but show how much stronger a power saving in 𝑁 would be
+than the precision required here.
+   For both hypotheses, fix an integer 𝑚 ⩾ 0 and real numbers 𝐶, 𝑈 , 𝛿 > 0. Consider integers
+𝐻 , 𝑀 and 𝑁 with 𝐻 → ∞, 0 ⩽ 𝑀 ⩽ 𝐶𝑁 and 𝐻 ⩽ 𝑈 log 𝑁 . Let 𝐿 be the least even integer
+satisfying (8.4), and put 𝐾 ∶= 𝑚 + 𝐿 + 1.
+Hypothesis 8.5 (Logarithmic saving). There are fixed constants 𝐴 ⩾ 1 and 𝜎 > 0 such that,
+uniformly for 2 ⩽ 𝑘 ⩽ 𝐾 and all 𝑘-element subsets ℋ of [𝐻 ],
+
+              𝑁                                     𝑀+𝑁
+                                                               𝑑𝑡           𝐴𝑘 𝑁
+            | ∑ ∏ 1𝒫 (𝑀 + 𝑛 + ℎ) − 𝔖(ℋ) ∫                            |≪               .    (8.14)
+            𝑛=1ℎ∈ℋ                                 max{2,𝑀} (log 𝑡)𝑘    (log 𝑁 )𝑘+1+𝜎
+
+The implied constant may depend on 𝑚, 𝐶, 𝑈 , 𝛿, 𝐴, 𝜎 but is independent of 𝑘, ℋ, 𝐻 , 𝑀 and 𝑁 .
+
+Hypothesis 8.6 (Power saving). There are fixed constants 𝐴 ⩾ 1 and 0 < 𝜃 < 1 such that the
+absolute value on the left side of (8.14) is
+
+                                           𝑂 (𝐴𝑘 𝑁 1−𝜃 )                                   (8.15)
+
+uniformly over the same tuples and parameter ranges. The implied constant may depend on
+𝑚, 𝐶, 𝑈 , 𝛿, 𝐴, 𝜃 but is independent of 𝑘, ℋ, 𝐻 , 𝑀 and 𝑁 .
+
+Proposition 8.7. With the parameters and ranges specified above, either Hypothesis 8.5 or Hy-
+pothesis 8.6 implies (8.5). Hypothesis 8.5 also implies the averaged condition (8.13).
+
+
+Proof. If 𝐸𝑘 bounds the absolute residual for every 𝑘-element tuple, summing over the tuples
+and dividing by 𝑁 gives
+                                                1 𝐻      𝐻𝑘
+                                  |ΔHL (𝑘)| ⩽    ( )𝐸𝑘 ⩽     𝐸 .                           (8.16)
+                                                𝑁 𝑘      𝑁 𝑘! 𝑘
+
+For 𝑘 > 𝐻 the first bound is zero, so there is no exception in that range. Under (8.14), we
+obtain
+                                                           𝑘
+                                       1      𝐴𝑘   𝐻
+                    |ΔHL (𝑘)| ≪                  (     )         (2 ⩽ 𝑘 ⩽ 𝐾 ).
+                                  (log 𝑁 )1+𝜎 𝑘! log 𝑁
+
+Since 𝐻 /(log 𝑁 )1+𝜎 ⩽ 𝑈 /(log 𝑁 )𝜎 → 0, this proves (8.13). In fact, (8.12) and (8.8), with 𝐵 >
+2 + 𝜎 , give
+                                                              1
+                            max |𝑅HL (𝑚, 𝑗)| ≪𝑚,𝐶,𝑈 ,𝐴,𝜎             .
+                         𝑗 ∈ {𝐿,𝐿+1}                     (log 𝑁 )1+𝜎
+
+The fixed implied constant in the hypothesis is understood to be included in the implied con-
+stant here.
+38                                                  T. FREIBERG
+
+
+     Under (8.15), formula (8.16) instead gives
+
+
+                                                              (𝐴𝐻 )𝑘
+                                          |ΔHL (𝑘)| ≪ 𝑁 −𝜃           .
+                                                                𝑘!
+
+
+This time we keep the sum finite. Taking 𝐻 large enough that 𝐴𝐻 ⩾ 1, Lemma 8.4 gives
+
+
+                                                    2                    𝐿+2
+                       max         |𝑅HL (𝑚, 𝑗)| ≪     + |ΔHL (1)| + 𝑁 −𝜃     (𝐴𝐻 )𝐾 .
+                     𝑗 ∈ {𝐿,𝐿+1}                    𝑁                     𝑚!
+
+
+Here we used 1/(𝑘 − 𝑚)! ⩽ 1 and bounded each of the at most 𝐿 + 2 powers by (𝐴𝐻 )𝐾 . For
+fixed 𝑚, 𝐴 and 𝛿,
+
+
+                                                               (log 𝐻 )2
+                       log ((𝐿 + 2)(𝐴𝐻 )𝐾 ) = 𝑂𝑚,𝐴,𝛿 (                   ) = 𝑜(log 𝑁 ).
+                                                              log log 𝐻
+
+
+The last equality follows from 𝐻 ⩽ 𝑈 log 𝑁 . The last term in the preceding bound is therefore
+𝑁 −𝜃+𝑜(1) , hence 𝑜(1/𝐻 ). The empty and singleton contributions are 𝑜(1/𝐻 ) by Lemma 8.3. □
+
+
+
+   The uniformity in 𝑘 in these hypotheses is essential. A statement with an unspecified im-
+plied constant depending on 𝑘, valid for each fixed 𝑘, does not justify substitution of 𝑘 ⩽ 𝐾 (𝐻 )
+tending to infinity. In contrast, (8.15) allows a stated exponential dependence 𝐴𝑘 ; the proof
+shows explicitly that its cost is 𝑁 𝑜(1) in our range. In particular, an error 𝑂(𝑁 1/2+𝜖 ) uniform
+in these tuples, with fixed 0 < 𝜖 < 1/2, is more than sufficient.
+   The hypotheses were written for all sets of shifts to agree with the definition of 𝑆(𝑘; 𝐻 ).
+For inadmissible ℋ, the singular series is zero and the tuple count is at most 𝑘, as observed in
+Subsection 4.1. Both proposed individual-tuple error bounds exceed 𝑘 uniformly for 2 ⩽ 𝑘 ⩽ 𝐾
+once 𝑁 is sufficiently large: indeed, 𝐾 log log 𝑁 = 𝑜(log 𝑁 ), so the right side of (8.14) without
+its implied constant is 𝑁 1−𝑜(1) , while 𝑁 1−𝜃 also exceeds 𝐾 . Thus the substantive assumptions
+concern admissible tuples of size at least two.
+
+
+
+
+8.3. The corrected Poisson asymptotic. We finish by spelling out the conclusion when the
+interval length is comparable to the average spacing between primes. In this range the Poisson
+main term stays on a fixed scale for fixed 𝑚, while the arithmetic correction contains terms of
+orders (log 𝐻 )/𝐻 and 1/𝐻 . The remainder below is smaller than both of these scales.
+                          BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                  39
+
+
+Theorem 8.8. Fix an integer 𝑚 ⩾ 0, real numbers 𝐶, 𝛿 > 0, and 0 < 𝑉 ⩽ 𝑈 . As 𝑁 → ∞, consider
+integers in the ranges
+
+                              0 ⩽ 𝑀 ⩽ 𝐶𝑁 ,        𝑉 log 𝑁 ⩽ 𝐻 ⩽ 𝑈 log 𝑁 .
+
+Let 𝐿 be the least even integer satisfying (8.4), and suppose that (8.5) holds uniformly in these
+ranges. This hypothesis follows, in particular, from (8.13), or from either individual-tuple hypoth-
+esis in Proposition 8.7.
+Put
+                            𝐻
+              𝜆 ∶=                   ,         𝑐(𝛼) ∶= (𝛼 + 1) log(𝛼 + 1) − 𝛼 log 𝛼 − 1,
+                     log 𝑁 + 𝑐(𝑀/𝑁 )
+with 0 log 0 = 0, as in Subsection 7.3. Then, uniformly over the stated ranges,
+
+                          𝑒 −𝜆 𝜆𝑚      log 𝐻 + log(2𝜋) + 𝛾 − 1
+      𝑃(𝑚; 𝐻 , 𝑀, 𝑁 ) =           {1 −                         ((𝑚 − 𝜆)2 − 𝑚)} + 𝑜(1/𝐻 ).      (8.17)
+                             𝑚!                  2𝐻
+
+The same formula holds with 𝜆 replaced throughout by 𝜇(𝐻 , 𝑀, 𝑁 ).
+
+Proof. Corollary 8.2 gives (8.7). Equivalently, its integrated conclusion (8.6), followed by Corol-
+lary 7.6, gives
+                             𝑃(𝑚; 𝐻 , 𝑀, 𝑁 ) = 𝑄(𝑚; 𝜆, 𝐻 ) + 𝑜(1/𝐻 ).
+
+Substitute the definitions of 𝑄 and 𝜂(𝐻 ) to obtain (8.17). Substitution into (8.7) gives the version
+with 𝜇.                                                                                             □
+
+   In particular, the parameter in (8.17) is
+
+                         𝐻                                      𝐻
+                𝜆=                  (𝑀 = 0),       𝜆=                         (𝑀 = 𝑁 ).
+                     log 𝑁 − 1                          log 𝑁 + 2 log 2 − 1
+
+Each specialization requires the stated Hardy–Littlewood hypothesis on the corresponding
+averaging range; the case 𝑀 = 𝑁 is included in the theorem when 𝐶 ⩾ 1.
+  For a quantitative version, under (8.14) the error in (8.17) is bounded by
+
+                𝑂𝑚,𝐶,𝑈 ,𝑉 ,𝐴,𝜎,𝛿,𝜖 (𝐻 −3/2+𝜖 + 𝐻 −1−𝛿+𝑜(1) + (log 𝑁 )−1−𝜎 + (log 𝑁 )−2 )
+
+for any fixed 0 < 𝜖 < 1/2, with the fixed implied constant in the hypothesis also allowed. This
+follows from (8.2), the estimates in the proof of Corollary 8.2, and Corollary 7.6. The factorial
+term can instead be retained in the explicit form (8.1) if a bound without 𝑜(1) in the exponent
+is preferred.
+   No hypothesis on the Montgomery–Soundararajan residual or on the truncation or density-
+averaging residuals is required. The sole unproved input is the specified control of prime-
+tuple counts. When 𝐻 / log 𝑁 → 𝜅 > 0, the theorem in particular recovers the Poisson limit
+𝑃(𝑚; 𝐻 , 𝑀, 𝑁 ) → 𝑒 −𝜅 𝜅 𝑚 /𝑚!; the displayed formula retains the arithmetic correction and the
+dependence of the effective mean on the averaging interval.
+40                                              T. FREIBERG
+
+
+Proof of Theorem 1.2. The introductory Hardy–Littlewood hypothesis implies (8.5) by Propo-
+sition 8.7: choose any fixed 0 < 𝜖 < 1/2, so that its error is a power saving in 𝑁 , and note that
+the required tuple orders satisfy 𝑚 + 𝐿 + 1 ⩽ log 𝐻 for sufficiently large 𝐻 . Apply Theorem 8.8
+with 𝑀 = 0, observing that 𝑐(0) = −1 and hence 𝜆 = 𝐻 /(log 𝑁 − 1).                              □
+
+                       9. A random model for the arithmetic correction
+     We now explain the arithmetic correction through a random model. Recall that
+
+                      𝑒 −𝑢 𝑢 𝑚      𝜂(𝐻 )                                 log 𝐻 + log(2𝜋) + 𝛾 − 1
+      𝑄(𝑚; 𝑢, 𝐻 ) =            {1 −       ((𝑚 − 𝑢)2 − 𝑚)} ,     𝜂(𝐻 ) =                           ,
+                         𝑚!           2                                              𝐻
+
+with values at 𝑢 = 0 understood by continuity. In the model below, local divisibility conditions
+reduce the count variance relative to the Poisson value 𝑢. The polynomial multiplying 𝜂(𝐻 )
+records the first effect of this variance deficit on the probabilities of individual counts. We
+use the finite sieve from Section 6: its second moment suggests both the polynomial and its
+coefficient, while the higher-moment estimates in that section justify the approximation.
+   The construction belongs to an established family of refinements of Cramér’s model. Granville
+and Lumley [14, Sections 5 and 8] first sieve out multiples of small primes and then retain the
+surviving integers independently with an adjusted probability. Banks, Ford and Tao [1, Sec-
+tion 1.3] instead construct a random set by excluding independently chosen residue classes,
+with the sieve level depending on the location of the interval. We use random residue classes
+on a finite interval, followed by independent thinning. This gives a particularly direct expla-
+nation of the correction in the range where the expected count remains bounded.
+9.1. Sieve first, then toss coins. Fix 𝑈 > 0, let 𝐻 tend to infinity through the integers, and
+prescribe a mean 0 ⩽ 𝑢 ⩽ 𝑈 . As in Subsection 6.1, put
+
+                                                                   1
+                𝑦 ∶= 𝐻 3 ,       𝑞 ∶= ∏ 𝑝,          𝜌 ∶= ∏ (1 −      ),        𝑏 ∶= 𝐻 𝜌.
+                                       𝑝⩽𝑦                𝑝⩽𝑦      𝑝
+
+For each prime 𝑝 ⩽ 𝑦, choose a residue class 𝑎𝑝 mod 𝑝 uniformly and independently, and
+remove all members of [𝐻 ] in that class. Let 𝑌 be the number of survivors. Each position sur-
+vives with probability 𝜌, so 𝔼𝑌 = 𝑏. The Chinese remainder theorem identifies these choices
+with a uniformly chosen translate modulo 𝑞, exactly as in the earlier construction.
+   Independently retain each survivor with probability
+                                                     𝑢
+                                                 𝜃 ∶= ,
+                                                     𝑏
+and let 𝑍 be the number retained. Mertens’ product estimate gives 𝑏 ≍ 𝐻 / log 𝐻 , so there is a
+threshold 𝐻0 (𝑈 ) such that 0 ⩽ 𝜃 ⩽ 1 whenever 𝐻 ⩾ 𝐻0 (𝑈 ) and 0 ⩽ 𝑢 ⩽ 𝑈 . Throughout this
+section, statements about 𝑍 are restricted to these ranges. Conditional on 𝑌 , the distribution
+of 𝑍 is binomial with parameters 𝑌 and 𝜃. Consequently,
+
+                 𝔼𝑍 = 𝑢,         Var 𝑍 = 𝜃(1 − 𝜃)𝑏 + 𝜃 2 Var 𝑌 = 𝑢 + 𝜃 2 (Var 𝑌 − 𝑏) .            (9.1)
+
+The variance identity follows by adding the average conditional variance, 𝜃(1 − 𝜃)𝑏, to the
+variance of the conditional mean, 𝜃 2 Var 𝑌 .
+                      BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                     41
+
+
+   The final coin tosses are independent, but the set on which they act is random and reflects
+the residue classes removed by the sieve. Thus the indicators of retention at different positions
+are dependent after averaging over the sieve. If we retained every position independently with
+probability 𝑢/𝐻 , the result would instead have variance 𝑢 − 𝑢 2 /𝐻 . The difference between the
+two models can therefore be read from the variance of 𝑌 .
+
+9.2. The variance from pairs of survivors. Consider two positions separated by 𝑑, where
+1 ⩽ 𝑑 < 𝐻 . If 𝑝 ∣ 𝑑, they occupy the same residue class modulo 𝑝, and both survive this stage
+with probability 1 − 1/𝑝. Otherwise they occupy two classes, and the probability is 1 − 2/𝑝.
+Independence between the choices for different primes gives the joint survival probability
+
+                                                         1         2
+                                  𝑎𝑦 (𝑑) ∶= ∏ (1 −         ) ∏ (1 − ) .
+                                           𝑝⩽𝑦           𝑝 𝑝⩽𝑦     𝑝
+                                           𝑝∣𝑑              𝑝∤𝑑
+
+
+There are 𝐻 − 𝑑 unordered pairs with separation 𝑑. Since 𝑌 (𝑌 − 1) counts ordered pairs of
+distinct survivors,
+                                                 𝐻 −1
+                                Var 𝑌 − 𝑏 = 2 ∑ (𝐻 − 𝑑)𝑎𝑦 (𝑑) − 𝐻 2 𝜌 2 .                       (9.2)
+                                                 𝑑 =1
+
+This is an exact calculation in the finite probability space. No conjecture about primes has
+entered it.
+   After division by 𝜌 2 , the joint survival probability is the finite Euler product for the pair
+singular series. Write
+
+                                                                         1
+                            𝑠(𝑑) ∶= 𝔖({0, 𝑑}),          𝔠 ∶= ∏ (1 −            ).
+                                                            𝑝>2       (𝑝 − 1)2
+
+The local factors give 𝑠(𝑑) = 0 for odd 𝑑 and
+
+                                                     𝑝−1
+                                    𝑠(2𝑟) = 2𝔠 ∏                  (𝑟 ⩾ 1).                      (9.3)
+                                                 𝑝∣𝑟
+                                                     𝑝−2
+                                                 𝑝>2
+
+
+Thus the singular series arises here simply by comparing the probability that both positions
+survive with the product of their individual survival probabilities.
+  For 𝑝 > 𝑦 > 𝐻 , the two positions are distinct modulo 𝑝, so
+
+                   𝑎𝑦 (𝑑)                 1                             1
+          𝑠(𝑑) =             ∏ (1 −             ),         ∏ (1 −             ) = 1 + 𝑂(1/𝑦).
+                    𝜌2      𝑝>𝑦        (𝑝 − 1)2           𝑝>𝑦        (𝑝 − 1)2
+
+This includes odd 𝑑, when both sides of the first identity vanish. It remains to understand one
+weighted sum over the separations 𝑑.
+42                                             T. FREIBERG
+
+
+9.3. Where the logarithm comes from. The main feature of that sum can be seen by the
+elementary argument in Goldston [11, Lemma 3, pp. 161–162]. We give the calculation because
+it explains the factor log 𝐻 without requiring a general singular-series average.
+    Define 𝑓 (𝑑) to be zero unless 𝑑 is odd and squarefree, and in the remaining cases put
+
+                                                           1
+                                        𝑓 (𝑑) ∶= ∏             .
+                                                     𝑝∣𝑑
+                                                         𝑝 − 2
+
+In particular, 𝑓 (1) = 1. Expanding the product in (9.3) gives
+
+                                        𝑠(2𝑟) = 2𝔠 ∑ 𝑓 (𝑑).
+                                                         𝑑 ∣𝑟
+
+
+Put 𝑥 = 𝐻 /2, allowing 𝑥 to be a half-integer. On changing the order of summation, we obtain
+
+                          𝐻 −1
+                                                             𝑥
+                        2 ∑ (𝐻 − 𝑑)𝑠(𝑑) = 8𝔠 ∑ 𝑑𝑓 (𝑑) ∑ ( − 𝑟) .                                        (9.4)
+                          𝑑 =1              𝑑 ⩽𝑥     𝑟 ⩽ 𝑥/𝑑
+                                                             𝑑
+
+The endpoint term is zero when 𝑥/𝑑 is an integer. The useful observation is the elementary
+identity
+                                      𝑣2 𝑣
+                          ∑ (𝑣 − 𝑟) =    − + 𝑂(1)       (𝑣 ⩾ 1).
+                          𝑟 ⩽𝑣        2    2
+
+The quadratic term produces the leading term 𝐻 2 . The linear term produces the logarithmic
+deficit. More explicitly, (9.4) becomes
+
+              𝐻 −1
+                                             𝑓 (𝑑)
+             2 ∑ (𝐻 − 𝑑)𝑠(𝑑) = 4𝔠𝑥 2 ∑             − 4𝔠𝑥 ∑ 𝑓 (𝑑) + 𝑂 ( ∑ 𝑑𝑓 (𝑑)) .                      (9.5)
+              𝑑 =1                      𝑑 ⩽𝑥
+                                               𝑑         𝑑 ⩽𝑥         𝑑 ⩽𝑥
+
+The estimates needed here are
+
+              𝑓 (𝑑) 1                                           log 𝑥
+         ∑         = + 𝑂(1/𝑥),              ∑ 𝑓 (𝑑) =                 + 𝑂(1),           ∑ 𝑑𝑓 (𝑑) ≪ 𝑥.   (9.6)
+         𝑑 ⩽𝑥
+                𝑑   𝔠                       𝑑 ⩽𝑥
+                                                                  2𝔠                  𝑑 ⩽𝑥
+
+   For completeness, these estimates have a short verification. Define a multiplicative function
+𝑔 by 𝑔(1) = 1, 𝑔(2) = −1/2, and, for odd primes 𝑝, by
+
+                                    2                                             1
+                       𝑔(𝑝) =                      and           𝑔(𝑝 2 ) = −            .
+                                 𝑝(𝑝 − 2)                                      𝑝(𝑝 − 2)
+
+Its values at all other prime powers are zero. Checking prime powers gives
+
+                                       ∞                                            ∞
+                            𝑔(𝑑)                                                               1
+            𝑓 (𝑛) = ∑            ,    ∑ |𝑔(𝑑)|(1 + log 𝑑) < ∞,                     ∑ 𝑔(𝑑) =       .
+                     𝑑𝑟 = 𝑛
+                             𝑟        𝑑 =1                                         𝑑 =1
+                                                                                               2𝔠
+                       BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                  43
+
+
+The absolute convergence follows from |𝑔(𝑝)|+|𝑔(𝑝 2 )| ≪ 𝑝 −2 and the convergence of the same
+prime sum with an additional factor log 𝑝. The last identity follows by multiplying the local
+factors: the factor at 2 is 1/2, and the factor at an odd prime is 1 + 1/(𝑝(𝑝 − 2)). Summing the
+convolution and using the harmonic sum now gives
+
+                                                                  log 𝑥
+                      ∑ 𝑓 (𝑛) = ∑ 𝑔(𝑑) (log(𝑥/𝑑) + 𝑂(1)) =              + 𝑂(1).
+                      𝑛⩽𝑥        𝑑 ⩽𝑥
+                                                                    2𝔠
+
+Also, the Euler product gives ∑𝑑⩾1 𝑓 (𝑑)/𝑑 = 1/𝔠. Partial summation applied to the estimate
+just proved bounds its tail by 𝑂(1/𝑥) and gives ∑𝑑⩽𝑥 𝑑𝑓 (𝑑) ≪ 𝑥. This proves (9.6).
+   Substituting these estimates into (9.5), and recalling 𝑥 = 𝐻 /2, yields
+
+                             𝐻 −1
+                            2 ∑ (𝐻 − 𝑑)𝑠(𝑑) = 𝐻 2 − 𝐻 log 𝐻 + 𝑂(𝐻 ).                          (9.7)
+                             𝑑 =1
+
+The logarithm has come from the harmonic growth of the divisor weights, multiplied by the
+linear term in the triangular sum. In particular, its appearance does not require a conjecture
+about prime tuples or an estimate involving large tuple sizes.
+   Keeping the term of order 𝐻 requires a more precise evaluation. Goldston [12, equation (33),
+p. 295] records
+
+               𝐻 −1
+             2 ∑ (𝐻 − 𝑑)𝑠(𝑑) = 𝐻 2 − 𝐻 (log 𝐻 + log(2𝜋) + 𝛾 − 1) + 𝑂𝜖 (𝐻 1/2+𝜖 ).             (9.8)
+               𝑑 =1
+
+This is also the pair average used by Montgomery and Soundararajan [25, equations (47)–(48)].
+The elementary calculation above identifies the leading deficit; (9.8) supplies its constant term.
+  Replacing 𝑠(𝑑) by 𝑎𝑦 (𝑑)/𝜌 2 in this sum costs 𝑂(𝐻 2 /𝑦), by the common Euler-product tail
+and (9.7). Equations (9.1) and (9.2) therefore give
+
+                                                                 log 𝐻 + log(2𝜋) + 𝛾 − 1
+         Var 𝑍 = 𝑢 − 𝑢 2 𝜂(𝐻 ) + 𝑂𝑈 ,𝜖 (𝐻 −3/2+𝜖 ),    𝜂(𝐻 ) =                           .    (9.9)
+                                                                            𝐻
+
+Here 𝑦 = 𝐻 3 makes the error from the omitted Euler factors smaller than the displayed error.
+The coefficient of 𝑢 2 in the variance deficit is thus larger by a factor of order log 𝐻 than the
+coefficient 1/𝐻 in the independent binomial model.
+9.4. From the variance deficit to the correction. We next explain why a variance deficit
+suggests the particular polynomial in 𝑄. For a bounded nonnegative integer-valued random
+variable 𝑊 of mean 𝑢, expansion at 𝑤 = 0 gives
+
+                                                  Var 𝑊 − 𝑢 2
+                         log 𝔼(1 + 𝑤)𝑊 = 𝑢𝑤 +              𝑤 + 𝑂𝑊 (𝑤 3 ).                    (9.10)
+                                                      2
+
+Indeed, the first two coefficients of 𝔼(1 + 𝑤)𝑊 are 𝔼𝑊 and 𝔼(𝑊 (𝑊 − 1))/2, and taking the
+logarithm subtracts 𝑢 2 /2 from the second coefficient. These coefficients of the logarithm, mul-
+tiplied by the corresponding factorials, are called the factorial cumulants. Only the first two
+are needed for this explanation.
+44                                            T. FREIBERG
+
+
+  If the higher terms are negligible at the required precision, substituting (9.9) into (9.10) and
+exponentiating suggests
+
+                                                     𝜂(𝐻 )𝑢 2
+                              𝔼𝑧 𝑍 ≈ 𝑒 𝑢(𝑧−1) (1 −            (𝑧 − 1)2 ) .
+                                                        2
+
+This step is a prediction from the second moment, not a consequence of the second moment
+alone. In particular, the Taylor remainder in (9.10) need not be uniform as the distribution
+changes with 𝐻 . To obtain probabilities of individual counts, one needs control of the gener-
+ating function beyond a merely formal expansion at 𝑧 = 1.
+   For the present model that control was proved in Proposition 6.7. Uniformly for 0 ⩽ 𝑢 ⩽ 𝑈
+and complex 𝑧 with |𝑧| ⩽ 2,
+
+                                            𝜂(𝐻 )𝑢 2
+                     𝔼𝑧 𝑍 = 𝑒 𝑢(𝑧−1) (1 −            (𝑧 − 1)2 ) + 𝑂𝑈 ,𝜖 (𝐻 −3/2+𝜖 ).            (9.11)
+                                               2
+
+The mechanism is visible without repeating that proof. Conditional on 𝑌 , the generating
+function is (1 + 𝜃(𝑧 − 1))𝑌 . Writing 𝑌 = 𝑏 + (𝑌 − 𝑏), the binomial expansion contributes
+−𝑏𝜃 2 (𝑧 − 1)2 /2, while averaging the centered fluctuation contributes 𝜃 2 Var 𝑌 (𝑧 − 1)2 /2. Their
+sum is exactly the variance-minus-mean term in (9.1). A uniform upper bound for 𝑌 and its
+fourth centered moment control the remaining terms. This is where the earlier proof makes
+the second-moment prediction rigorous.
+   Put 𝑝𝑚 (𝑢) ∶= 𝑒 −𝑢 𝑢 𝑚 /𝑚! for 𝑚 ⩾ 0. Since 𝑒 𝑢(𝑧−1) is its generating function and differentiation
+twice with respect to 𝑢 introduces (𝑧 − 1)2 , the coefficient of 𝑧 𝑚 in the main expression in (9.11)
+is
+                      𝜂(𝐻 )𝑢 2 ″       𝑒 −𝑢 𝑢 𝑚      𝜂(𝐻 )
+             𝑝𝑚 (𝑢) −         𝑝𝑚 (𝑢) =          {1 −        ((𝑚 − 𝑢)2 − 𝑚)} = 𝑄(𝑚; 𝑢, 𝐻 ).
+                          2               𝑚!           2
+
+Values at 𝑢 = 0 are understood by continuity. The polynomial ((𝑚 − 𝑢)2 − 𝑚) is the second
+Poisson–Charlier polynomial in the normalization used here. Cauchy’s coefficient formula on
+|𝑧| = 2 now gives the unconditional model estimate
+
+                    ℙ(𝑍 = 𝑚) = 𝑄(𝑚; 𝑢, 𝐻 ) + 𝑂𝑈 ,𝜖 (2−𝑚 𝐻 −3/2+𝜖 )           (𝑚 ⩾ 0).           (9.12)
+
+The estimate holds uniformly for 𝐻 ⩾ 𝐻0 (𝑈 ), 0 ⩽ 𝑢 ⩽ 𝑈 and integers 𝑚 ⩾ 0. The implied
+constant depends only on 𝑈 and 𝜖. For 0 < 𝜖 < 1/2, the error is 𝑜(1/𝐻 ).
+   Thus the local residue conditions predict the variance deficit, and that deficit determines
+the first correction to the Poisson probabilities once the remaining terms are controlled. Inde-
+pendent Bernoulli trials give the same polynomial, with 1/𝐻 in place of 𝜂(𝐻 ). The polynomial
+reflects the form of the second-moment correction; its coefficient records the arithmetic.
+9.5. What the model explains. The correction preserves both the total mass and the mean.
+Its generating function is
+
+                         ∞
+                                                             𝜂(𝐻 )𝑢 2
+                        ∑ 𝑄(𝑚; 𝑢, 𝐻 )𝑧 𝑚 = 𝑒 𝑢(𝑧−1) (1 −              (𝑧 − 1)2 ) .
+                       𝑚=0                                      2
+                      BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                    45
+
+
+Evaluating at 𝑧 = 1 and differentiating there gives the exact identities
+
+                          ∞                          ∞
+                         ∑ 𝑄(𝑚; 𝑢, 𝐻 ) = 1,         ∑ 𝑚𝑄(𝑚; 𝑢, 𝐻 ) = 𝑢
+                         𝑚=0                        𝑚=0
+
+and
+                               ∞
+                               ∑ (𝑚 − 𝑢)2 𝑄(𝑚; 𝑢, 𝐻 ) = 𝑢 − 𝑢 2 𝜂(𝐻 ).
+                              𝑚=0
+
+All these sums converge absolutely. For 𝑢 > 0, however, 𝑄(𝑚; 𝑢, 𝐻 ) becomes negative when 𝑚
+is sufficiently large. It is therefore a signed approximation to a probability mass function. The
+variable 𝑍 supplies a genuine probability distribution approximated by it in (9.12).
+    Relative to the Poisson probabilities, the correction is positive when (𝑚 − 𝑢)2 < 𝑚 and
+negative when (𝑚 − 𝑢)2 > 𝑚. This describes precisely the bias toward central counts. It also
+makes clear why adjusting only the mean cannot account for the effect: the correction leaves
+the mean unchanged and reduces the second centered moment.
+    Granville and Lumley [14, Appendix B] observe that their numerical distributions, grouped
+by the number of survivors of a small-prime sieve, are narrower than the corresponding bi-
+nomial predictions. They compare the variances with the prediction of Montgomery and
+Soundararajan and suggest incorporating further dependence into the model. The calculation
+above describes such dependence and its effect on individual count probabilities when the
+mean is bounded. Their questions about extreme counts and tails involve other ranges; the
+absolute error in (9.12) does not give a relative approximation to very small tail probabilities.
+    There is also a methodological connection with Banks, Ford and Tao [1, Section 2.6]: they
+explain how interpreting singular-series sums probabilistically can avoid restrictions in the
+available uniformity in the number of shifts. Here the same viewpoint permits the full gen-
+erating function to be handled through the survivor count, with precise asymptotics needed
+only for low moments.
+    Finally, the parameter 𝑢 is local. To model intervals starting near 𝑡, we take 𝑢 = 𝐻 / log 𝑡
+and then average over the starting points. For 𝐻 ⩽ 𝑈 log 𝑁 , this parameter is bounded on
+𝑡 ⩾ √𝑁 ; the initial portion is negligible at our precision, as in the density-averaging argument.
+Averaging the local approximation leads to 𝐹 (𝑚; 𝐻 , 𝑀, 𝑁 ), and Section 7 replaces this by 𝑄 at
+the averaged density 𝜇, or at the shifted parameter 𝜆. In particular, the shift in the denomi-
+nator of 𝜆 comes from averaging the varying density. The factor 𝜂(𝐻 ) comes from the pair
+correlations within an interval. These are separate effects.
+    All statements about the random variables above are unconditional. Applying the model
+to primes is a heuristic step: a uniform random translate modulo the very large modulus 𝑞
+is not the same as an integer starting point chosen from (𝑀, 𝑀 + 𝑁 ]. The Hardy–Littlewood
+hypotheses in Section 8 give the conditional passage to the actual prime-count distribution.
+The model explains how one can anticipate the correction from local divisibility and a second-
+moment calculation before carrying out that passage.
+9.6. Further corrections. Further corrections would require more precise information about
+higher centered singular-series sums. Kuperberg [18, Theorem 1.2] proves that the sum over
+ordered triples of distinct shifts is 𝑂(𝐻 (log 𝐻 )5 ) and conjectures the smaller scale 𝐻 (log 𝐻 )2
+[18, Conjecture 1.1]. Such estimates are relevant to the third factorial cumulant of the sieve
+46                                                  T. FREIBERG
+
+
+model and hence to further Poisson–Charlier terms. They do not yet identify the next correc-
+tion: this would also require a sharper treatment of the pair-average remainder and control of
+the remaining higher-order contributions.
+
+
+
+                                                   References
+ [1] Banks, W., K. Ford and T. Tao. “Large prime gaps and probabilistic models.” Invent. Math. 233(3):1471–1518,
+     2023. doi:10.1007/s00222-023-01199-0
+ [2] Cramér, H. “Prime numbers and probability.” Skand. Mat.-Kongr. 8:107–115, 1935. Zbl:0011.40801
+ [3] Cramér, H. “On the order of magnitude of the difference between consecutive prime numbers.” Acta Arith.
+     2(1):23–46, 1936. doi:10.4064/aa-2-1-23-46
+ [4] David, C., L. Devin, J. Nam and J. Schlitt. “Lemke Oliver and Soundararajan bias for consecutive sums of two
+     squares.” Math. Ann. 384(3):1181–1242, 2022. doi:10.1007/s00208-021-02307-2
+ [5] de la Vallée Poussin, C.-J. “Recherches analytiques sur la théorie des nombres premiers. Première partie.
+     La fonction 𝜁 (𝑠) de Riemann et les nombres premiers en général.” Ann. Soc. Sci. Bruxelles 20:183–256, 1896.
+     archive.org:recherchesanalyt00lava
+ [6] Freiberg, T. “Short intervals with a given number of primes.” J. Number Theory 163:159–171, 2016.
+     doi:10.1016/j.jnt.2015.11.009
+ [7] Freiberg, T. “A note on the distribution of primes in intervals.” In Irregularities in the Distribution of Prime
+     Numbers: From the Era of Helmut Maier’s Matrix Method and Beyond, J. Pintz and M. Th. Rassias (eds.),
+     pp. 23–44. Springer, Cham, 2018. doi:10.1007/978-3-319-92777-0_2
+ [8] Freiberg, T. “Primes in intervals.” Software, version 1.1.0. Zenodo, 2026. doi:10.5281/zenodo.22982661
+ [9] Gallagher, P. X. “On the distribution of primes in short intervals.” Mathematika 23(1):4–9, 1976.
+     doi:10.1112/S0025579300016442
+[10] Gauss, C. F. “Tafel der Frequenz der Primzahlen.” In Werke, Band II: Höhere Arithmetik, E. Schering (ed.),
+     pp. 435–448. Königliche Gesellschaft der Wissenschaften, Göttingen, 1863. Reprinted in Cambridge Library
+     Collection—Mathematics, Cambridge University Press, Cambridge, 2011. doi:10.1017/CBO9781139058230.019
+[11] Goldston, D. A. “The second moment for prime numbers.” Quart. J. Math. Oxford Ser. (2) 35(2):153–163, 1984.
+     doi:10.1093/qmath/35.2.153
+[12] Goldston, D. A. “Linnik’s theorem on Goldbach numbers in short intervals.” Glasgow Math. J. 32(3):285–297,
+     1990. doi:10.1017/S001708950000937X
+[13] Granville, A. “Harald Cramér and the distribution of prime numbers.” Scand. Actuar. J. 1995(1):12–28, 1995.
+     doi:10.1080/03461238.1995.10413946
+[14] Granville, A. and A. Lumley. “Primes in short intervals: Heuristics and calculations.” Exp. Math. 32(2):378–404,
+     2023. doi:10.1080/10586458.2021.1927256
+[15] Hadamard, J. “Sur la distribution des zéros de la fonction 𝜁 (𝑠) et ses conséquences arithmétiques.”
+     Bull. Soc. Math. France 24:199–220, 1896. doi:10.24033/bsmf.545
+[16] Hardy, G. H. and J. E. Littlewood. “Some problems of ‘Partitio numerorum’; III: On the expression of a
+     number as a sum of primes.” Acta Math. 44:1–70, 1923. doi:10.1007/BF02403921
+[17] Hooley, C. “On the intervals between consecutive terms of sequences.” In Analytic Number Theory (St. Louis,
+     MO, 1972), H. G. Diamond (ed.), Proc. Sympos. Pure Math. 24:129–140. American Mathematical Society,
+     Providence, 1973. doi:10.1090/pspum/024
+[18] Kuperberg, V. “Odd moments in the distribution of primes.” Algebra Number Theory 19(4):617–666, 2025.
+     doi:10.2140/ant.2025.19.617
+[19] Legendre, A.-M. Théorie des nombres. 3rd ed., vol. 2, Firmin Didot frères, Paris, 1830, pp. 71–79. doi:10.3931/e-
+     rara-59737
+[20] Lemke Oliver, R. J. and K. Soundararajan. “Unexpected biases in the distribution of consecutive primes.”
+     Proc. Natl. Acad. Sci. USA 113(31):E4446–E4454, 2016. doi:10.1073/pnas.1605366113
+[21] Mastrostefano, D. “Short intervals containing a prescribed number of primes.” J. Number Theory 197:49–61,
+     2019. doi:10.1016/j.jnt.2018.06.013
+[22] Mastrostefano, D. “Positive proportion of short intervals containing a prescribed number of primes.”
+     Bull. Aust. Math. Soc. 100(3):378–387, 2019. doi:10.1017/S0004972719000467
+                         BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                                47
+
+
+[23] Maynard, J. “Small gaps between primes.” Ann. of Math. (2) 181(1):383–413, 2015.
+     doi:10.4007/annals.2015.181.1.7
+[24] Maynard, J. “Dense clusters of primes in subsets.” Compos. Math. 152(7):1517–1554, 2016.
+     doi:10.1112/S0010437X16007296
+[25] Montgomery, H. L. and K. Soundararajan. “Primes in short intervals.” Comm. Math. Phys. 252(1–3):589–617,
+     2004. doi:10.1007/s00220-004-1222-4
+[26] Montgomery, H. L. and R. C. Vaughan. Multiplicative number theory I: Classical theory. Cam-
+     bridge Studies in Advanced Mathematics, vol. 97, Cambridge University Press, Cambridge, 2006.
+     doi:10.1017/CBO9780511618314
+[27] Riemann, B. “Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse.” Monats-
+     ber. Königl. Preuss. Akad. Wiss. Berlin pp. 671–680, 1859. claymath.org
+[28] Sono, K. “Bounded intervals containing a given number of primes.” Preprint, 2026; to appear in Math. Rep. (Bu-
+     cur.). arXiv:2609.18414
+[29] Soundararajan, K. “The distribution of prime numbers.” In Equidistribution in Number Theory, An Introduction,
+     A. Granville and Z. Rudnick (eds.), pp. 59–83. Springer, Dordrecht, 2007. doi:10.1007/978-1-4020-5404-4_4
+[30] Tschinkel, Y. “About the cover: On the distribution of primes—Gauss’ tables.” Bull. Amer. Math. Soc. (N.S.)
+     43(1):89–91, 2006. doi:10.1090/S0273-0979-05-01096-7
+48                                          T. FREIBERG
+
+
+                             Appendix A. Numerical comparisons
+  We compare the empirical distribution with the corrected approximations and with the
+Poisson and binomial predictions of the independent model. Throughout this section 𝑀 = 0,
+and we suppress 𝐻 and 𝑁 where convenient. Thus
+
+                                          1
+              𝑃(𝑚) ∶= 𝑃(𝑚; 𝐻 , 0, 𝑁 ) =     |{1 ⩽ 𝑛 ⩽ 𝑁 ∶ 𝜋(𝑛 + 𝐻 ) − 𝜋(𝑛) = 𝑚}| .
+                                          𝑁
+We use nine pairs (𝑁 , 𝐻 ), chosen by
+
+                                                                                 1
+              𝑁 ∈ {107 , 108 , 109 },   𝜅 ∈ {1, 3, 6},        𝐻 = ⌊𝜅(log 𝑁 − 1) + ⌋ .
+                                                                                 2
+Here 𝜅 is a target mean; all predictions use the actual integer 𝐻 . These choices keep the
+effective mean close to 𝜅 as 𝑁 increases. A sieve generates the primes needed through 𝑁 +
+𝐻 , and a moving-window counter tallies the starting points giving each prime count. All 𝑁
+intervals are counted, including those whose endpoints are prime. The implementation, exact
+counts, supplementary comparisons and animations are available with the accompanying code
+and Quarto book [8].
+   Write 𝑝𝑚 (𝑢) ∶= 𝑒 −𝑢 𝑢 𝑚 /𝑚!. The averaged Poisson prediction and its arithmetic correction
+are
+                                               𝑁
+                                           1           𝐻
+                                  𝐹0 (𝑚) ∶= ∫ 𝑝𝑚 (          ) 𝑑𝑡
+                                           𝑁 2        log 𝑡
+and
+                                                          𝑁
+                                                  1         𝐻
+                       𝐹 (𝑚) ∶= 𝐹 (𝑚; 𝐻 , 0, 𝑁 ) = ∫ 𝑄 (𝑚;       , 𝐻 ) 𝑑𝑡,
+                                                  𝑁 2      log 𝑡
+where 𝑄 is defined in (4.3). To distinguish the arithmetic correction from the ordinary binomial
+correction, we also use
+                               𝑁             𝑚                 𝐻 −𝑚
+                          1     𝐻   1           1
+             𝐵av (𝑚) ∶=        ( )(    ) (1 −       )                 𝑑𝑡   (0 ⩽ 𝑚 ⩽ 𝐻 ),
+                          𝑁 ∫𝑒 𝑚 log 𝑡        log 𝑡
+
+with 𝐵av (𝑚) = 0 for 𝑚 > 𝐻 . This averages the local binomial approximation to Cramér’s
+model; the lower limit 𝑒 ensures that the success probability is at most 1. Finally, put
+                                                                 𝑁
+                                       𝐻                𝐻    𝑑𝑡
+                              𝜆 ∶=           ,      𝜇 ∶= ∫        ,
+                                   log 𝑁 − 1            𝑁 2 log 𝑡
+
+and write 𝑄𝜆 (𝑚) ∶= 𝑄(𝑚; 𝜆, 𝐻 ) and 𝑄𝜇 (𝑚) ∶= 𝑄(𝑚; 𝜇, 𝐻 ). The former is the expression in
+Theorem 1.2; the latter retains the exact averaged density. None of these parameters is fitted
+to the observed frequencies.
+   For an approximation 𝐴, we measure the discrepancies by
+
+                        ∞                                        ∞                   1/2
+           𝐷1 (𝐴) ∶= ∑ |𝑃(𝑚) − 𝐴(𝑚)|,            𝐷2 (𝐴) ∶= ( ∑ |𝑃(𝑚) − 𝐴(𝑚)|2 )            .
+                       𝑚=0                                      𝑚=0
+                     BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                  49
+
+        Table 1. Discrepancies for the nine pairs (𝑁 , 𝐻 ), rounded to five decimal
+        places. The three lengths at each scale target means 1, 3 and 6, respectively.
+        Smaller values indicate closer agreement with the empirical proportions.
+
+                                         𝐷1 discrepancy
+                        𝑁     𝐻         𝐹0        𝐵av          𝐹        𝑄𝜆
+                         7
+                       10     15   0.17400    0.13604     0.02914   0.02772
+                              45   0.19931    0.16732     0.04997   0.04532
+                              91   0.23342    0.20190     0.06765   0.05322
+                       108    17   0.15485    0.12208     0.02460   0.02377
+                              52   0.17661    0.14736     0.03929   0.03607
+                             105   0.20266    0.17519     0.05221   0.04085
+                       109    20   0.14254    0.11372     0.02277   0.02202
+                              59   0.15905    0.13323     0.03242   0.03009
+                             118   0.17975    0.15544     0.04232   0.03389
+
+                                         𝐷2 discrepancy
+                        𝑁     𝐻         𝐹0        𝐵av          𝐹        𝑄𝜆
+                       107    15   0.08882    0.06965     0.01479   0.01358
+                              45   0.07931    0.06683     0.01986   0.01684
+                              91   0.07512    0.06526     0.02188   0.01656
+                       108    17   0.07937    0.06272     0.01234   0.01159
+                              52   0.06949    0.05864     0.01566   0.01352
+                             105   0.06486    0.05623     0.01667   0.01290
+                       109    20   0.07195    0.05741     0.01069   0.01015
+                              59   0.06217    0.05259     0.01304   0.01145
+                             118   0.05771    0.05003     0.01356   0.01073
+
+
+
+
+   Both sums include prime counts that never occur in the data. The predictions are neither
+clipped nor renormalized: 𝐹 and 𝐹0 have total mass 1 − 2/𝑁 , while 𝐵av has total mass 1 − 𝑒/𝑁 .
+The corrected expressions may take negative values, which enter the discrepancies with their
+signs intact. In these experiments the total negative mass ∑𝑚 ⩾ 0 max{−𝐹 (𝑚), 0} ranges from
+0.00145 to 0.00367.
+   The integrals are evaluated by adaptive numerical quadrature after the substitution 𝑡 = 𝑎𝑒 𝑠 ,
+where 𝑎 is the lower integration limit. The sums defining the discrepancies are truncated be-
+yond both 𝐻 and the largest observed count, with omitted absolute tails less than 10−12 for
+every displayed approximation. Quadrature tolerances were tightened and the predictions re-
+calculated separately; the resulting discrepancies agreed well beyond the five decimal places
+reported below. A further comparison with 30-digit quadrature for selected bins of the rep-
+resentative case gave differences below 4 × 10−16 for 𝐹 and 𝐹0 . These are numerical checks,
+rather than certified bounds for the quadrature error.
+50                                                                       T. FREIBERG
+
+
+   Table 1 shows that 𝐹 improves on both 𝐹0 and 𝐵av in every case and in both norms. Rel-
+ative to 𝐹0 , the reduction is approximately 71–84% in 𝐷1 and 71–85% in 𝐷2 . Both 𝑄𝜆 and 𝑄𝜇
+give smaller discrepancies than 𝐹 in all nine cases; the values for 𝑄𝜇 are included in the sup-
+plementary data. The integral arising naturally in the proof need not be the most accurate
+approximation at a particular finite scale.
+   Figure 1 shows the preselected representative case 𝑁 = 109 , 𝐻 = 59. The lower panel
+compares the observed departure from the averaged Poisson prediction with the predicted
+arithmetic correction. The correction captures the sign and much of the size of the depar-
+ture, though a visible discrepancy remains near the center. These computations support the
+predicted correction across the nine prescribed cases; they do not isolate its constant term or
+establish an asymptotic error rate. The summed discrepancies also assess the whole distribu-
+tion, whereas the conditional theorem is stated for each fixed 𝑚.
+
+                                                                         𝑁 = 109 ,     𝐻 = 59
+
+                                    0.25                                                                                  𝑃(𝑚)
+                                                                                                                          𝐹0 (𝑚)
+          Proportion of intervals
+
+
+
+
+                                    0.20                                                                                  𝐵av (𝑚)
+                                                                                                                          𝐹 (𝑚)
+                                    0.15
+
+                                    0.10
+
+                                    0.05
+
+                                    0.00
+     Departure from Poisson
+
+
+
+
+                                    0.04
+                                                                                                                    𝑃(𝑚) − 𝐹0 (𝑚)
+                                    0.02                                                                            𝐹 (𝑚) − 𝐹0 (𝑚)
+
+                                    0.00
+
+                                    -0.02
+
+                                            0   1   2   3    4   5   6      7    8     9   10   11   12   13   14    15    16   17
+                                                                         𝑚 (number of primes)
+
+
+                                      Figure 1. Prime counts for 𝑁 = 109 and 𝐻 = 59, with 𝜆 = 2.99139 … and
+                                                                            1
+                                      𝜇 = 3.00010 …. Above: empirical proportions 𝑃(𝑚) and the predictions 𝐹0 (𝑚),
+                                      𝐵av (𝑚) and 𝐹 (𝑚). Below: the observed departure 𝑃(𝑚) − 𝐹0 (𝑚) and the pre-
+                                      dicted correction 𝐹 (𝑚) − 𝐹0 (𝑚). Only integer values of 𝑚 are plotted. The
+                                      displayed range contains all observed counts; the discrepancy sums also in-
+                                      clude the predicted tails. Negative values of 𝐹 are retained, with minimum
+                                      approximately −0.000654 at 𝑚 = 10.
+                      BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                      51
+
+
+                             Appendix B. From Gauss to Cramér
+   The distribution of prime counts in short intervals has a rather distinguished numerical
+precedent. Among the tables preserved in Gauss’s Nachlass are tallies of the number of blocks
+of one hundred consecutive integers containing exactly 𝑚 primes. They record the same kind
+of statistic as the empirical distributions in Appendix A, with the starting points restricted to
+multiples of one hundred.
+
+
+B.1. Gauss’s counts. In his letter to Johann Franz Encke of December 24, 1849, Gauss recalled
+counting primes in chiliads, or blocks of one thousand integers, as early as 1792 or 1793 [10,
+pp. 444–447]. These counts suggested that the frequency of primes near 𝑡 was approximately
+1/ log 𝑡. Integrating this proposed density gives
+
+                                                    𝑁
+                                                      𝑑𝑡
+                                         𝜋(𝑁 ) ≈ ∫         .
+                                                   2 log 𝑡
+
+The density was the starting point; the estimate for the cumulative count followed by inte-
+gration. In the same letter, while discussing Legendre’s approximation 𝑁 /(log 𝑁 − 1.08366)
+(see [19, p. 65, §VIII, no. 394]), Gauss suggested that the differential of the counting function
+should be simpler than the function itself [10, p. 446].
+    Gauss described returning to the tables in an “idle quarter of an hour”; an English transla-
+tion of this passage is reproduced by Tschinkel [30]. Goldschmidt later filled gaps in the first
+million and extended the count through the first three million, using published factor tables.
+For the second and third million, Gauss prescribed a scheme that retained more information
+than the total number of primes. It recorded how many blocks of one hundred integers con-
+tained each possible prime count. These blocks are called centades in the manuscript, and
+Hecatontaden in the letter’s explanation of the scheme [10, p. 447].
+    Figure 2 shows the summary for the third million. The ten columns headed 210, 220, … , 300
+have right endpoints in units of 104 : the first covers 2,000,000 to 2,100,000, and the last 2,900,000
+to 3,000,000. Each column accounts for 1,000 centades. The row labeled 𝑚 records the num-
+ber containing exactly 𝑚 primes, and the final column aggregates the 10,000 centades in the
+whole million. Multiplying each row total by 𝑚 and summing recovers the reported prime
+count, 67,862. The correct count is 67,883, a difference of just 21; the logarithmic integral writ-
+ten beneath the table is approximately 67,915.73. Thus the actual mean is 6.7883 primes per
+centade. The rightmost column records the whole distribution around that mean.
+    These are non-overlapping intervals of fixed length 100. Our asymptotic problem averages
+over every integer starting point and lets 𝐻 grow on the scale of the logarithm. The connection
+is the question being asked: how often does an interval contain a prescribed number of primes?
+The table supplies an empirical distribution, but the letter does not propose a Poisson law for
+it.
+    Riemann’s memoir of 1859 [27] connected the prime count with the zeros of the zeta func-
+tion. Hadamard [15] and de la Vallée Poussin [5] proved the prime number theorem in 1896,
+establishing the first-order asymptotic suggested by the logarithmic integral. A prediction for
+the full distribution of short-interval counts requires a further idea.
+52                                      T. FREIBERG
+
+
+
+
+       Figure 2. The centade tally for primes between two and three million, from
+       Gauss’s Nachlass; a printed version appears in [10, p. 443]. The entries re-
+       produce the historical computation, including its errors. Source: Niedersäch-
+       sische Staats- und Universitätsbibliothek Göttingen, mathematical Nachlass,
+       Math. 18; page 20 of the manuscript scan made available by Yuri Tschinkel
+       and cited in [30].
+
+
+B.2. From a density to coin flips. The indicator notation makes that idea particularly sim-
+ple. The prime count in an interval is a sum of zeros and ones:
+
+                                            𝐻
+                                 𝑋 (𝑛; 𝐻 ) = ∑ 1𝒫 (𝑛 + ℎ).
+                                           ℎ=1
+                     BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                    53
+
+
+Cramér’s model [2, 3] replaces the indicators 1𝒫 (𝑗), for 𝑗 ⩾ 3, by independent Bernoulli vari-
+ables 𝐵𝑗 with
+                                       1                            1
+                        ℙ(𝐵𝑗 = 1) =        ,   ℙ(𝐵𝑗 = 0) = 1 −          .
+                                     log 𝑗                        log 𝑗
+In other words, an independent coin flip decides whether each integer is declared prime, with
+a success probability chosen to match the proposed density.
+   For a short interval near a large integer 𝑛, freeze the probabilities at 1/ log 𝑛. This gives a
+binomial approximation to the original model. Write 𝑌 for the sum of these 𝐻 independent
+trials, and put 𝑢 ∶= 𝐻 / log 𝑛. Choosing the 𝑚 successful trials gives
+
+                                        𝐻   𝑢 𝑚    𝑢 𝐻 −𝑚
+                            ℙ(𝑌 = 𝑚) = ( ) ( ) (1 − )     .
+                                        𝑚 𝐻        𝐻
+
+For fixed 𝑚, the passage to a Poisson probability needs only a finite product and the elementary
+exponential limit. Indeed,
+
+                                       𝑚−1
+                                  𝑢𝑚        𝑖       𝑢 𝐻    𝑢 −𝑚
+                    ℙ(𝑌 = 𝑚) =       [∏ (1 − )] (1 − ) (1 − ) .
+                                  𝑚! 𝑖 = 0  𝐻       𝐻      𝐻
+
+If 𝐻 → ∞ and 𝑢 → 𝜅 > 0, the finite product and the last factor tend to 1, while the middle
+factor tends to 𝑒 −𝜅 . Thus
+                                              𝑒 −𝜅 𝜅 𝑚
+                                 ℙ(𝑌 = 𝑚) →            .
+                                                 𝑚!
+This permits 𝐻 to be an integer throughout: for example, take 𝐻 = ⌊𝜅 log 𝑛⌋. Freezing the den-
+sity suffices for this first-order heuristic. At the precision of our secondary term, the varying
+density must be retained and averaged as in Section 7.
+B.3. Arithmetic correlations on average. Independence is the vulnerable step. For 𝑎 > 2,
+the indicators 1𝒫 (𝑎) and 1𝒫 (𝑎 + 1) cannot both be 1: one of the two integers is even. More
+generally, divisibility conditions create correlations between shifted prime indicators.
+   To give the probabilistic language a precise meaning for the actual primes, choose 𝑎 uni-
+formly among the integers in (𝑛, 2𝑛]. For a fixed set ℋ of 𝑘 distinct nonnegative shifts, the
+Hardy–Littlewood conjecture predicts, to first order,
+
+                                              𝔖(ℋ) + 𝑜(1)
+                       𝔼 ∏ 1𝒫 (𝑎 + ℎ) =                         (𝑛 → ∞).
+                          ℎ∈ℋ                   (log 𝑛)𝑘
+
+The expectation here is over the starting point 𝑎. The independent model has the same first-
+order expression with 𝔖(ℋ) replaced by 1. The singular series records the arithmetic depen-
+dence; for example, 𝔖({0, 1}) = 0.
+  The reason the independent model nevertheless gives the expected first-order answer is
+Gallagher’s singular-series average [9]: for each fixed 𝑘,
+
+                              1
+                                    ∑ 𝔖(ℋ) → 1             (𝐻 → ∞).
+                             (𝐻𝑘 ) ℋ ⊆ [𝐻 ]
+                                   |ℋ| = 𝑘
+54                                         T. FREIBERG
+
+
+The singular series can be far from 1 for an individual set of shifts, but its average over those
+sets tends to 1. These are precisely the averages that enter inclusion-exclusion for the event
+𝑋 (𝑎; 𝐻 ) = 𝑚. With sufficient uniformity in the Hardy–Littlewood conjecture, their leading
+terms therefore give the same Poisson limit as independent coin flips.
+   The arithmetic dependence has not disappeared. The more precise average of Montgomery
+and Soundararajan [25, equation (17)] retains a contribution that the first-order limit discards.
+Our argument carries that contribution through inclusion-exclusion, producing the correction
+of order (log 𝐻 )/𝐻 . In this sense the singular-series average explains both why Cramér’s
+prediction succeeds to first order and why arithmetic reappears in the next term.
+                     BIASES IN THE DISTRIBUTION OF PRIMES IN SHORT INTERVALS                 55
+
+
+                Appendix C. AI assistance, provenance and verification
+   The question studied in this paper predates the use of generative AI in its preparation. In
+the concluding remarks of [7, Section 5], the author proposed obtaining lower-order terms
+in the distribution of prime counts in short intervals by combining inclusion–exclusion with
+more precise singular-series averages and a sufficiently uniform Hardy–Littlewood hypothe-
+sis. The project subsequently appeared in his research statements. Related code, numerical
+experiments and exposition have been available in his GitHub repository since 2023; version
+1.1.0 of that repository is archived in the 2026 release [8].
+   Before the present collaboration, the author had developed the formal approximation and
+the inclusion–exclusion argument and investigated the predicted bias numerically. He had
+also identified the necessary scale (log 𝐻 )/ log log 𝐻 for the truncation index. A calculation
+communicated by Andrew Granville in June 2023 clarified the treatment of the logarithmic
+integral and corrected the coefficient of the secondary term. The unresolved difficulty was to
+control the singular-series contribution when the truncation index grows with 𝐻 . This was
+the main obstacle to completing the project.
+   The author used GPT-6 Astra (OpenAI) in an extended dialogue to resume the project, sup-
+plying the earlier work and relevant mathematical sources. The principal new proof idea
+supplied by GPT-6 Astra was the finite-sieve argument in Section 6. It proposed represent-
+ing the singular-series sums through factorial moments of a finite random sieve, combining
+a deterministic bound for the number of survivors with low-moment estimates, and using a
+generating function to control the required alternating sums. This resolved the obstacle with-
+out an additional conjecture about singular-series averages or an extension of a fixed-order
+asymptotic to growing tuple sizes.
+   GPT-6 Astra also contributed to the organization of the residuals, the development and
+drafting of proofs, the density-averaging argument in Section 7, the interpretation through a
+random model, and the exposition. The author directed the investigation, questioned proposed
+arguments, checked the proofs and revised the text through repeated exchanges. Claude Fa-
+ble 5.1 (Anthropic) assisted with revising and checking the numerical code and with preparing
+the computations and plots reported in Appendix A. The original research program and the
+earlier heuristic, inclusion–exclusion and numerical work were the author’s; the substantial
+mathematical and computational contributions of the AI systems are identified above.
+   Drafts of the mathematical arguments were submitted to Claude Fable 5.1 for separate au-
+dits, with particular attention to the finite-sieve proof and the random-model section. The
+author examined the reports and checked the issues they raised; these audits informed further
+revisions. They supplemented the author’s own verification of the proofs.
+   The author has checked the arguments, including some determined attempts to break them,
+and is prepared to defend the proofs presented here. He takes responsibility for the correctness
+of the mathematical claims, the use of sources and the final text. Any error found will require
+correction or, if necessary, withdrawal of the affected claims.
+  Montréal, Canada
+

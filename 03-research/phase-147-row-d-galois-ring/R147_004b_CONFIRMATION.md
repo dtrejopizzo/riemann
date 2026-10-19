@@ -1,8 +1,7 @@
-# R147.004b — Hostile confirmation of `R147_003b_BUILDER_ROUND3.md` (phase 147, row D)
+# R147.004b — Confirmation of `R147_003b_ROUND3.md` (phase 147, row D)
 
-*Auditor: Opus 5. Date 2026-09-14. Read in full: `R147_003b_BUILDER_ROUND3.md` (521 lines), the
-`Corrections of record` **D1–D20** appended to `R147_003_BUILDER_ROUND2.md`, `README.md` (rewritten), and
-my own `R147_004_HOSTILE_AUDIT_R2.md`. `scripts/graded_support.py` **re-run with `--fast`**, full output
+`Corrections of record` **D1–D20** appended to `R147_003_ROUND2.md`, `README.md` (rewritten), and
+my own `R147_004_AUDIT_R2.md`. `scripts/graded_support.py` **re-run with `--fast`**, full output
 compared line by line against the round-3 tables; docstring re-read after the claimed fix.
 Re-checked in the corpus: `R139_001` §D.20.2 (H1–H3 as used), `R147_001` D.51.3 and its
 `\deg K_{Q_𝔄} = ½`, Paper 46 (19.2)/Prop. 19.18/Def. 19.19/Thm 19.23, Paper 46 Thm 11.8(v).*
@@ -101,7 +100,7 @@ non-isometry half is kept, and it is correctly identified as the only half the E
 **But `K_H ∉ 𝓒` is asserted, not proved** — see MINOR C5, where I give the two available proofs and note
 that the non-trivial one rests on a `CERTIFIED` table.
 
-## (iv) Theorem D.55.9′ — read with maximal hostility
+## (iv) Theorem D.55.9′ — read critically
 
 This is the theorem the closing rests on, and it is the weakest-presented object in the round.
 
@@ -276,7 +275,7 @@ disposition and it should be on the record.
 
 **ACCEPT, with two required repairs (MAJOR C1, MAJOR C2) and five editorial ones (C3–C7).** All seven
 MAJORs, all nine MINORs and the NOTE of `R147_004` are discharged in substance; D1–D20 record them
-accurately and against the builder's own interest; the numbers reproduce exactly; the script's verdict
+accurately and against this round's own interest; the numbers reproduce exactly; the script's verdict
 block has been reframed correctly; and the two repairs I predicted would be forced (packet pairing,
 `C_c^∞` tests) do what I predicted — they turn every round-2 `CANDIDATE` into a theorem, with no residue.
 **No FATAL.** Nothing in rounds 1–3 proves RH, `¬`RH or GRH; no `h⁰` is produced; Theorem 12.3 / D.31.12

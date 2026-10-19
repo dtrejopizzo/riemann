@@ -1,7 +1,6 @@
 # E72.68 -- Half-power Abel concomitant for scalar WRL
 
-**Date:** 2026-07-08.
-**Role:** write the correct finite Abel-WRL concomitant after the `u^(-1/2)` normalization.
+**Purpose:** write the correct finite Abel-WRL concomitant after the `u^(-1/2)` normalization.
 
 ## 0. Correction from E72.67
 

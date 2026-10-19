@@ -1,6 +1,6 @@
 # P123.099 — Smooth tangential diagonals on the actual finite-unit boundaries
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY at finite unit levels,
+Status: PROVED-IN-REPOSITORY at finite unit levels,
 including the transition on tangential homology. A completed limit and
 its comparison with the full source are not assumed.
 

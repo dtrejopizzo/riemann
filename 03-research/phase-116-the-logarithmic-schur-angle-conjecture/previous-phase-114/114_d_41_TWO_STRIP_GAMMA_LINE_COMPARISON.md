@@ -94,7 +94,7 @@ Conversely, let `h in E`.  Meyer's range theorem says that
 if and only if
 
 \[
- u_+=h/\zeta(s)\in\mathcal U_+,qquad
+ u_+=h/\zeta(s)\in\mathcal U_+,\qquad
  u_-=h/\zeta(1-s)\in\mathcal U_-.                  \tag{2.3}
 \]
 

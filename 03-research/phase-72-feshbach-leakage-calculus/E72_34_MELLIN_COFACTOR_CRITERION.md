@@ -1,7 +1,6 @@
 # E72.34 -- Mellin cofactor criterion for finite spectral divisibility
 
-**Date:** 2026-07-08.
-**Role:** turn the open divisibility statement
+**Purpose:** turn the open divisibility statement
 
 ```text
 M_x(s;z)=P_x(z)A_x(s;z)+E_x(s;z)

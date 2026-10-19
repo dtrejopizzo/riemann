@@ -1,6 +1,6 @@
 # D128.003 — row C audit: findings and dispositions
 
-Date: 2026-09-12.  Target: Paper 45.
+Target: Paper 45.
 
 ## Accepted (verified) — the crux fails
 

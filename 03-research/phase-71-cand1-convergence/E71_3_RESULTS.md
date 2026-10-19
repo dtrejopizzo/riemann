@@ -1,6 +1,5 @@
 # E71.3 -- convergence-rate/PNT diagnostic results
 
-**Date:** 2026-07-07.
 **Script:** `E71_3_convergence_rate_pnt.py`.
 
 ## Fixed `lambda=5` scan

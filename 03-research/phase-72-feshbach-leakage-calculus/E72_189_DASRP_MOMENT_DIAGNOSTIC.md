@@ -1,7 +1,6 @@
 # E72.189 -- D-ASRP moment diagnostic
 
-**Date:** 2026-07-09.
-**Role:** identify what controls the pure diagonal ASRP estimate for the recommended margin `m_*=0.03`.
+**Purpose:** identify what controls the pure diagonal ASRP estimate for the recommended margin `m_*=0.03`.
 
 ## 0. Question
 

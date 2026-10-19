@@ -42,7 +42,7 @@ via degree, elliptic-curve proof of RH, positive-definite quadratic form on End(
 
 * The elliptic-curve/function-field analogy is a **recurring reference point**, always cited as the
   *model case* that the programme cannot yet transport, never as something disproved for Spec Z:
-  - `03-research/phase-43-hodge-foliated-specZ/130-test-circularidad-deninger.md:22,66,82` (quoted in
+  - `03-research/phase-43-hodge-foliated-specZ/130-circularity-to-destruction-test-of-deninger-s.md:22,66,82` (quoted in
     `CORPUS_CHECK_R146.md` §5): the elliptic-curve-over-`F_q` case "builds its Kähler/positive-definite
     metric **using Hasse's theorem (`|ξ|²=q`, the function-field RH) as input**... RH follows from the
     index computation on this pre-constructed space, not from positivity alone." This is a **TRIED–
@@ -55,7 +55,7 @@ via degree, elliptic-curve proof of RH, positive-definite quadratic form on End(
     records it **PROVED-IMPOSSIBLE for the "row-c" legacy source grammar** — a real-curve counterexample
     kills that *specific* local-packet realization, not the abstract degree-form idea.
   - Lefschetz-number language recurs at `03-research/phase-125-row-a-completion/A125_006_FIXED_POINT_DICHOTOMY_AND_THE_MIXED_SECTOR.md:20`
-    and `03-research/phase-15/M1-arithmetic-intersection-pairing.md:80` ("the (local) zero count, the
+    and `03-research/phase-15-arithmetic-hodge-index/M1-arithmetic-intersection-pairing.md:80` ("the (local) zero count, the
     arithmetic Lefschetz number") — always as the *intended* meaning of an arithmetic intersection
     number with the diagonal, never assembled into a positive-definite form on an additive Frobenius
     ring.
@@ -80,13 +80,13 @@ single most robust recurring finding, and directly the obstruction phase 146 mus
   full derivation §8bis, `main.md:3250-3669`) is the canonical statement: the Gram/self-intersection
   quantity diverges — `Delta . Delta = -infinity (infinite genus), AT A FIXED CHART` (also recorded
   verbatim at `04-papers/44-row-b-arithmetic-family/main.md:72,330`, and rebuilt across
-  `03-research/phase-131-row-b-closure/R131_007_BUILDER_ROUND3.md:65,71`,
-  `R131_014_AUDIT_ROUND5.md:157`, `R131_017_AUDIT_ROUND6.md:66`, `R131_018_BUILDER_ROUND7.md:64`).
+  `03-research/phase-131-row-b-closure/R131_007_ROUND3.md:65,71`,
+  `R131_014_AUDIT_ROUND5.md:157`, `R131_017_AUDIT_ROUND6.md:66`, `R131_018_ROUND7.md:64`).
 * Earlier independent derivations of the same fact, predating Paper 44:
-  - `03-research/phase-10/M10.1-verdict-degenerate-hodge.md:31`: "candidate 'arithmetic surface' has
+  - `03-research/phase-10-hodge-envelope-degeneration/M10.1-verdict-degenerate-hodge.md:31`: "candidate 'arithmetic surface' has
     **infinite genus with a vanishing Hodge gap**: the primitive intersection..." — the finite-rank
     Hodge argument (which is exactly what powers the elliptic-curve `#ker ≥ 0` proof) **does not
-    transfer** (`03-research/phase-10/experiments/M10_1_hodge_envelope.py:16,44,58`).
+    transfer** (`03-research/phase-10-hodge-envelope-degeneration/experiments/M10_1_hodge_envelope.py:16,44,58`).
   - `03-research/phase-63-lefschetz-realization/E99_RESULTS.md:38,52`: "gaplessness is the analytic
     shadow of Spec Z having 'infinite genus'... because it has infinitely many, accumulating zeros...
     The crossing requires an candidly infinite-dimensional [argument]."
@@ -99,10 +99,10 @@ single most robust recurring finding, and directly the obstruction phase 146 mus
   idempotent semilattice"* — i.e. even the literature's own source for the analogy confirms `End`
   is not the endomorphism ring of an abelian variety, which is precisely why the elliptic-curve
   argument (which needs `End(E)` finite-rank, positive-definite on a lattice) does not transfer as-is.
-* `03-research/phase-139-row-d-two-falsifiers/R139_001_BUILDER_ROUND1.md:1044` (table row W4c) states
+* `03-research/phase-139-row-d-two-falsifiers/R139_001_ROUND1.md:1044` (table row W4c) states
   the comparison explicitly: `Δ·Δ = 2−2g` (finite genus, the elliptic/function-field case) **vs.**
   `Δ·Δ = −∞` (Spec Z) — classified **PRESENT** "as a recorded degeneration, not as an analogue," citing
-  Paper 46 §13.3 "the three genera, recorded and not reconciled" (`04-papers/46-row-d-the-sign/main.md:3561`
+  Paper 46 §13.3 "the three genera, recorded and not reconciled" (`04-papers/46-intersection-frame-defect/archive/main.md:3561`
   region — three different growth regimes for the diagonal self-intersection, never reconciled into one
   finite invariant).
 * Attempts to assign the divergence a **finite regularized value** exist and are recorded as the
@@ -149,7 +149,7 @@ transport fails. Cite Thm 8bis.2 and W4c directly rather than re-deriving genus 
   discussion, `main.md:3273-3313`) — i.e. the same infinite-genus phenomenon of §3, arrived at from the
   Gram-form side rather than the intersection-theory side.
 * Phase 141 (`03-research/phase-141-row-d-frobenius-traces/`) already built the candidate quadratic form
-  `Q_{C^Frob}` directly from this Gram (`R141_000_LEAD_BLUEPRINT.md:67`, quoted in full in
+  `Q_{C^Frob}` directly from this Gram (`R141_000_BLUEPRINT.md:67`, quoted in full in
   `CORPUS_CHECK_R146.md` §2) and the outcome was: **"auditor verified `γ_C > 0`, zero-trace
   indefiniteness, the trace-level unsignedness"** — proved **indefinite at trace level**, not
   sign-definite, and the phase closed on an unrelated clause. This is the closest existing attempt to
@@ -173,7 +173,7 @@ fields approximating ζ
 **Status: TRIED–EQUIVALENT-TO-RH / TRIED–NO-GO (as a route in itself), well documented, phases 28 and 103
 as expected.**
 
-* `03-research/phase-28/08-decomposition-sectors.md:184,209,238`: "Esto es esencialmente el programa de
+* `03-research/phase-28-four-fronts/08-decomposition-sectors.md:184,209,238`: "Esto es esencialmente el programa de
   la clase de Laguerre–Pólya y el problema de Pólya (pregunta abierta desde 1927)"; final line: RH ⟺
   `ξ(1/2+it) ∈` Laguerre–Pólya class — a full equivalence, not a proof route. Filed program-wide as
   `EQUIVALENT-TO-RH`.
@@ -187,7 +187,7 @@ as expected.**
 * No hit for the specific phrase "curves over finite fields approximating ζ" as a named construction;
   the closest is the Deninger/elliptic-curve analogy of §2 (finite-field model case), and Connes–
   Consani's remark (§3) that the target is "not an abelian variety."
-* `03-research/phase-55-two-arrows/175-dicotomia-de-energia.md` (extensive, Spanish) develops a
+* `03-research/phase-55-two-arrows/175-energy-dichotomy-lp-112-i-0.md` (extensive, Spanish) develops a
   quantitative Rouché–Hurwitz "energy dichotomy" for self-approximation of ζ, concluding (per its own
   text) that self-approximation with a zero off the line is unprecedented in either direction in the
   literature — filed as an open dichotomy conditional on "LP-112", not a resolved approximation route.
@@ -195,7 +195,7 @@ as expected.**
 **Recommendation:** confirm `TRIED–EQUIVALENT-TO-RH` status per the phase-138 corpus check; do not
 reopen finite-genus/Hurwitz approximation as an independent route for phase 146 — if used at all, use
 only as a *heuristic* for what a finite-rank truncation of `Z[Frob]` would need to satisfy, citing
-phase-28/103/138 rather than re-deriving the equivalence.
+phase-28-four-fronts/103/138 rather than re-deriving the equivalence.
 
 ---
 
@@ -282,9 +282,9 @@ full in `CORPUS_CHECK_R146.md`, and should be cited rather than re-derived.
 | # | Item | Status | Key path:line |
 |---|------|--------|----------------|
 | 1 | `Z[Frob]`/`Z[π]` additive ring structure | NEW | `44/main.md:3250` (mult. only); `136/PHASE_136_MAP_SYNTHESIS_AND_PLAN.md:53` |
-| 2 | Degree form `deg(m+nπ)=#ker≥0`, elliptic-curve-proof analogy for Spec Z | NEW (analogy TRIED as background/no-go-for-transport) | `43/130-test-circularidad-deninger.md:22,66,82`; `107/107_00_...md:222`; `107/107_133_...md:78-80` |
+| 2 | Degree form `deg(m+nπ)=#ker≥0`, elliptic-curve-proof analogy for Spec Z | NEW (analogy TRIED as background/no-go-for-transport) | `43/130-circularity-to-destruction-test-of-deninger-s.md:22,66,82`; `107/107_00_...md:222`; `107/107_133_...md:78-80` |
 | 3 | Infinite genus `Δ·Δ=−∞` as named obstruction | TRIED–PROVED (settled, recurring) | `44/main.md:3669` (Thm 8bis.2); `10/M10.1-verdict-degenerate-hodge.md:31`; `139/R139_001...md:1044` (W4c) |
-| 4 | Frobenius Gram form read as degree form (off-diag counts, diagonal undefined/divergent) | TRIED–PARTIAL/REFUTED | `44/main.md:3317-3386` (Thm 8bis.1); `44/main.md:3312` (Rem 8bis.1c); `141/R141_000_LEAD_BLUEPRINT.md:67` (`Q_{C^Frob}` indefinite) |
+| 4 | Frobenius Gram form read as degree form (off-diag counts, diagonal undefined/divergent) | TRIED–PARTIAL/REFUTED | `44/main.md:3317-3386` (Thm 8bis.1); `44/main.md:3312` (Rem 8bis.1c); `141/R141_000_BLUEPRINT.md:67` (`Q_{C^Frob}` indefinite) |
 | 5 | Hurwitz/finite-genus approximation/LP-class closure | TRIED–EQUIVALENT-TO-RH / NO-GO | `28/08-decomposition-sectors.md:238`; `138/CORPUS_CHECK_R138.md:220-263` |
 | 6 | Power maps/dilations `x↦x^k` as correspondences | TRIED (unrelated context, row A/cyclotomic) — NEW for idele class group | `123/P123_037...md`; `123/P123_061...md` |
 | 7 | "Sign in additive structure" vs. "multiplicative semigroup not enough" | NEW | no hits; closest is `136/PHASE_136_MAP_SYNTHESIS_AND_PLAN.md:53` (phase-coherence, not additive) |

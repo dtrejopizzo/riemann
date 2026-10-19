@@ -1,7 +1,6 @@
 # E72.176 -- Certified error for SRP
 
-**Date:** 2026-07-09.
-**Role:** certify the uniform polynomial errors used in the signed residual polynomial gate.
+**Purpose:** certify the uniform polynomial errors used in the signed residual polynomial gate.
 
 ## 0. Method
 

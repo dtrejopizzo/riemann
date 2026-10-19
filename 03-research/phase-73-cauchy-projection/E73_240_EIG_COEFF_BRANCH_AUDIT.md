@@ -1,6 +1,5 @@
 # E73.240 - Eigen-coefficient branch audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

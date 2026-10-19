@@ -1,101 +1,101 @@
-# Primera campaña: viabilidad del portador y del contacto
+# First campaign: viability of the carrier and of the contact
 
-Fecha: 2026-09-05. Estado: **ejecución iniciada tras aprobación del usuario**.
+Status: **execution started after approval**.
 
-Avances y límites: [registro de la primera campaña](../../03-research/phase-123-weil-strength-abc/P123_024_FIRST_CAMPAIGN_LEDGER.md). Las secciones siguientes conservan los criterios originales; no todos están cerrados.
+Progress and limits: [first campaign record](../../03-research/phase-123-weil-strength-abc/P123_024_FIRST_CAMPAIGN_LEDGER.md). The sections below keep the original criteria; not all of them are closed.
 
-Objetivo: decidir si la candidata de fase 123 se puede reparar en una categoría que aloje el contacto aritmético. No intentar cerrar RR ni RH en este bloque.
+Goal: decide whether the phase 123 candidate can be repaired into a category that hosts the arithmetic contact. Do not attempt to close RR or RH in this block.
 
-## 1. Fijar el contrato local
+## 1. Fix the local contract
 
-Trabajar primero con `S={infinito,2,3}` y después con inclusiones de cartas. Explicitar si Gamma_S incluye signos o sólo unidades positivas y cómo se compara con las fuentes que usan todas las unidades.
+Work first with `S={infinity,2,3}` and then with chart inclusions. State explicitly whether Gamma_S includes signs or only positive units and how it compares with the sources that use all units.
 
-Mantener distintos el ideal rápido K_S, su unitización, su álgebra de multiplicadores, la representación C* de control y el núcleo de tests suaves. Escribir dónde viven U_gamma, la diagonal y cada bimódulo.
+Keep distinct the fast ideal K_S, its unitization, its multiplier algebra, the control C* representation and the smooth test kernel. Write down where U_gamma, the diagonal and each bimodule live.
 
-Entregable propuesto: `P123_019_REPAIRED_LOCAL_BIMODULE_CONTRACT.md`.
+Proposed deliverable: `P123_019_REPAIRED_LOCAL_BIMODULE_CONTRACT.md`.
 
-Aceptación: cada fórmula tiene dominio/codominio; no usa `1 in K_S` ni `U_gamma in K_S+C1` para gamma distinto de 1.
+Acceptance: every formula has domain/codomain; it does not use `1 in K_S` nor `U_gamma in K_S+C1` for gamma different from 1.
 
-## 2. Demostrar el cambio de levantamiento en la categoría elegida
+## 2. Prove the lift change in the chosen category
 
-Para cada automorfismo beta_a, construir el bimódulo esencial correspondiente. Probar que el multiplicador U_gamma induce un entrelazador válido entre los levantamientos a y gamma*a.
+For each automorphism beta_a, build the corresponding essential bimodule. Prove that the multiplier U_gamma induces a valid intertwiner between the lifts a and gamma*a.
 
-Demostrar composición y coherencia de tres cambios de levantamiento. En el modelo no unital, probar la identificación del tensor balanceado mediante la herramienta realmente disponible —unidad aproximada, esencialidad o teorema de correspondencias— y verificar sus hipótesis en el núcleo rápido.
+Prove composition and coherence of three lift changes. In the non-unital model, prove the identification of the balanced tensor using the tool that is actually available — approximate unit, essentiality or correspondence theorem — and check its hypotheses on the fast kernel.
 
-Si sólo se obtiene el teorema C*, etiquetarlo así. La versión nuclear/rápida permanece abierta hasta demostrar la comparación.
+If only the C* theorem is obtained, label it as such. The nuclear/fast version remains open until the comparison is proved.
 
-**Primera oportunidad de éxito:** un teorema local de independencia de levantamiento que repare una fórmula actualmente mal tipada.
+**First opportunity for success:** a local lift-independence theorem that repairs a currently ill-typed formula.
 
-## 3. Construir una transición real de cartas
+## 3. Build a real chart transition
 
-Usar como regresión exacta el par de representantes `(1,1)` y `(2,2)` en `S={infinito,2}`. La transición corregida debe reconocer su equivalencia al incorporar el lugar 3, sin enviar ingenuamente ambos a extensiones por uno.
+Use as exact regression the pair of representatives `(1,1)` and `(2,2)` in `S={infinity,2}`. The corrected transition must recognize their equivalence when place 3 is incorporated, without naively sending both to extensions by one.
 
-Proponer un span/inducción compatible con la inclusión de coeficientes o definir el objeto global y derivar sus restricciones. Escribir la acción sobre objetos y flechas y comprobar `S -> S' -> S''`.
+Propose a span/induction compatible with the inclusion of coefficients, or define the global object and derive its restrictions. Write the action on objects and arrows and check `S -> S' -> S''`.
 
-Entregable propuesto: `P123_020_TRUE_CHART_TRANSITIONS.md`.
+Proposed deliverable: `P123_020_TRUE_CHART_TRANSITIONS.md`.
 
-Aceptación: diagrama de coherencia demostrado, conexión explícita con el haz de coeficientes y alcance topológico declarado. Una elección de representante canónico, si se usa, necesita su propia coherencia multiplicativa; no equivale a un mapa inducido por extensión por uno.
+Acceptance: coherence diagram proved, explicit connection with the coefficient sheaf and declared topological scope. A choice of canonical representative, if used, needs its own multiplicative coherence; it is not equivalent to a map induced by extension by one.
 
-## 4. Probar que el núcleo de tests es estable
+## 4. Prove that the test kernel is stable
 
-La acción sobre coeficientes C_0 es continua; determinar su subespacio de vectores suaves y los niveles localmente constantes adecuados. Comprobar el producto de dos secciones y dagger dentro de ese subespacio.
+The action on coefficients C_0 is continuous; determine its subspace of smooth vectors and the appropriate locally constant levels. Check the product of two sections and dagger within that subspace.
 
-Probar las estimaciones locales que después sostendrán la continuidad LF. No declarar la completación total en esta etapa por analogía con las funciones escalares.
+Prove the local estimates that will later support LF continuity. Do not declare the total completion at this stage by analogy with scalar functions.
 
-## 5. Controlar la categoría clásica y la efectividad
+## 5. Control the classical category and effectiveness
 
-Rehacer P123.011 en un caso de dimensión cero y una curva sencilla:
+Redo P123.011 in a dimension-zero case and a simple curve:
 
-- permutación de tres puntos: grafo efectivo frente a positividad matricial;
-- diagonal y rulings;
-- grafo de un endomorfismo finito y su transpuesto;
-- Frobenius: convención y diferencia entre transposición e inverso;
-- intersección de ciclos frente al carácter del kernel perfecto, con cualquier corrección RR necesaria.
+- permutation of three points: effective graph versus matrix positivity;
+- diagonal and rulings;
+- graph of a finite endomorphism and its transpose;
+- Frobenius: convention and difference between transposition and inverse;
+- intersection of cycles versus the character of the perfect kernel, with any RR correction needed.
 
-Entregable propuesto: `P123_021_CLASSICAL_COMPARISON_AND_CONE_TEST.md`.
+Proposed deliverable: `P123_021_CLASSICAL_COMPARISON_AND_CONE_TEST.md`.
 
-Aceptación: relación precisa entre las dos teorías, incluso si la conclusión es que debe ampliarse la categoría. No afirmar equivalencia de conos porque ambos admitan sumas.
+Acceptance: precise relation between the two theories, even if the conclusion is that the category must be enlarged. Do not claim cone equivalence just because both admit sums.
 
-## 6. Test decisivo B: 2, 4, 3 y 6
+## 6. Decisive test B: 2, 4, 3 and 6
 
-Construir los objetos, antes de asignarles un grado. Calcular sus composiciones y contactos derivados. Valores esperados sólo como test externo:
+Build the objects before assigning them a degree. Compute their compositions and derived contacts. Expected values only as an external test:
 
-| n | Phi_n(1) | Contacto aritmético esperado |
+| n | Phi_n(1) | Expected arithmetic contact |
 |---|---:|---|
 | 2 | 2 | `[Z --2--> Z]` |
 | 4 | 2 | `[Z --2--> Z]` |
 | 3 | 3 | `[Z --3--> Z]` |
-| 6 | 1 | complejo acíclico |
+| 6 | 1 | acyclic complex |
 
-Exigir `Gamma_2 star Gamma_2 ~= Gamma_4` y `Gamma_2 star Gamma_3 ~= Gamma_6`. El contacto no tiene por qué ser multiplicativo: justamente debe deducirse cómo un producto no trivial puede tener contacto acíclico.
+Require `Gamma_2 star Gamma_2 ~= Gamma_4` and `Gamma_2 star Gamma_3 ~= Gamma_6`. The contact need not be multiplicative: precisely what must be deduced is how a nontrivial product can have acyclic contact.
 
-Comparar la construcción con el contacto lineal `1-u^(-1)` y con la realización Witt de Deninger/Haran. Identificar el morfismo o exceso que produce Phi_n(1); si no aparece, el modelo de grafos simples todavía no pasa el test.
+Compare the construction with the linear contact `1-u^(-1)` and with the Deninger/Haran Witt realization. Identify the morphism or excess that produces Phi_n(1); if it does not appear, the simple-graph model still does not pass the test.
 
-Entregable propuesto: `P123_022_MINIMAL_ARITHMETIC_CONTACT_TEST.md`.
+Proposed deliverable: `P123_022_MINIMAL_ARITHMETIC_CONTACT_TEST.md`.
 
-Aceptación: complejos y mapas derivados, no etiquetas numéricas ni una categoría producto que transporte un complejo añadido.
+Acceptance: complexes and derived maps, not numerical labels nor a product category that carries an added complex.
 
-## 7. Mantener una pregunta concreta de D durante la campaña
+## 7. Keep a concrete question about D during the campaign
 
-Leer P122.028 y P122.029 como cálculos existentes. Formular una relación global de borde candidata que pudiera demostrar flujo cero o transmisión en un espacio fuente definido antes de imponer el signo.
+Read P122.028 and P122.029 as existing computations. Formulate a candidate global boundary relation that could prove zero flow or transmission in a source space defined before imposing the sign.
 
-Anotar por separado:
+Note separately:
 
-1. la identidad fuente que se puede demostrar;
-2. la comparación con los canales físicos;
-3. la estimación o condición aún pendiente;
-4. un contramodelo que decida si lo demostrado alcanza.
+1. the source identity that can be proved;
+2. the comparison with the physical channels;
+3. the estimate or condition still pending;
+4. a counter-model that decides whether what was proved is enough.
 
-No es un requisito cerrar D para aceptar el bloque local. Sí es obligatorio comprobar que A conserva los datos que esa futura ley necesitaría: lugares, orientaciones, Gamma y Tate antes de scalarizar.
+Closing D is not a requirement for accepting the local block. It is mandatory to check that A preserves the data that future law would need: places, orientations, Gamma and Tate before scalarizing.
 
-## 8. Decisión al terminar
+## 8. Decision at the end
 
-| Resultado | Continuación |
+| Result | Continuation |
 |---|---|
-| Bimódulos y transiciones pasan; contacto derivado pasa | Completar A: traza, topología numérica, efectividad y RR; generalizar B. |
-| Sólo pasa el modelo C* | Mantenerlo como control analítico; construir el puente integral/suave antes de promoverlo. |
-| Contacto lineal no produce el ciclotómico | Examinar ampliación a correspondencias finitas/Witt; no seguir completando los grafos solos. |
-| Transiciones semilocales fallan para la candidata | Estudiar la variante global con un teorema explícito de recuperación de cartas. |
-| Sólo aparecen identidades del defecto de D | Retenerlas como diagnóstico; el teorema de signo sigue abierto. |
+| Bimodules and transitions pass; derived contact passes | Complete A: trace, numerical topology, effectiveness and RR; generalize B. |
+| Only the C* model passes | Keep it as an analytic control; build the integral/smooth bridge before promoting it. |
+| Linear contact does not produce the cyclotomic | Examine extension to finite correspondences/Witt; do not keep completing the graphs alone. |
+| Semilocal transitions fail for the candidate | Study the global variant with an explicit chart-recovery theorem. |
+| Only identities of the D defect appear | Keep them as diagnostics; the sign theorem remains open. |
 
-Ningún resultado se acepta por el tamaño del archivo ni por un PASS matricial. Cada salida debe cambiar una obligación concreta y actualizar el plan maestro sin borrar el historial de los fallos.
+No result is accepted because of file size or a matrix PASS. Each output must change a concrete obligation and update the master plan without erasing the history of failures.

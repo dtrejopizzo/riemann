@@ -1,7 +1,6 @@
 # E72.193 -- LM8-ASRP certificate
 
-**Date:** 2026-07-09.
-**Role:** replace diagonal ASRP by fixed degree-8 low-moment envelopes.
+**Purpose:** replace diagonal ASRP by fixed degree-8 low-moment envelopes.
 
 ## 0. Gate
 

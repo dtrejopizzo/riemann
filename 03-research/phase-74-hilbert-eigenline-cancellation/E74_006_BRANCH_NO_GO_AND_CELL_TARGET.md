@@ -1,6 +1,5 @@
 # E74.6 - Branch no-go and return to the cell target
 
-Date: 2026-07-16.
 
 ## Purpose
 

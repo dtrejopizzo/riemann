@@ -1,6 +1,5 @@
 # E74.3 - Harmonic-symbol normal form
 
-Date: 2026-07-16.
 
 ## Input from E74.2
 

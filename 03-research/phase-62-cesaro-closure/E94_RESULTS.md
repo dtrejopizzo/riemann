@@ -1,6 +1,6 @@
 # E94 — Quaternionic Hodge–Riemann polarization: ζ carries it, DH and random do not
 
-**Date:** 2026-06-26 · dps=40 · λ = 7,9,11,13,15,17,19,21 · ζ vs DH falsador vs random-symmetric.
+dps=40 · λ = 7,9,11,13,15,17,19,21 · ζ vs DH falsador vs random-symmetric.
 Builds on E92 (wrong involutive structure) → E93 (found AJ ≈ antisymmetric for ζ) → E94 (correct test).
 
 ## Setup

@@ -147,7 +147,7 @@ Because \(P\) is bounded, the form sum (1) is an operator sum:
 Consequently every normalized eigenstate
 
 \[
- Aq=\alpha q,qquad 0<\alpha<\frac12,
+ Aq=\alpha q,\qquad 0<\alpha<\frac12,
  \tag{12}
 \]
 

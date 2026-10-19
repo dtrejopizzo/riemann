@@ -1,26 +1,26 @@
-# 104_91 — Dualidad PD exacta y gate de la torre remota
+# 104_91 — Exact PD duality and the remote tower gate
 
-**Resultado.** La formulación dual de la cota unilateral de 104_89 no
-contiene una relajación oculta. Si
+**Result.** The dual formulation of the one-sided bound of 104_89
+contains no hidden relaxation. If
 
 \[
  d\nu(t)={dt\over2\pi(t^2+1/4)},\qquad
  k(y)=\int_{\mathbb R}e^{ity}\,d\nu(t)=e^{-|y|/2},       \tag{1}
 \]
 
-entonces los núcleos que aparecen al variar \(0\leq\varphi\leq1\) son
-exactamente
+then the kernels that appear when \(0\leq\varphi\leq1\) varies are
+exactly
 
 \[
- \mathcal K=\{K\in C(\mathbb R;\mathbb R):K\text{ es par, y }
-              K,\ k-K\text{ son definidas positivas}\}.         \tag{2}
+ \mathcal K=\{K\in C(\mathbb R;\mathbb R):K\text{ is even, and }
+              K,\ k-K\text{ are positive definite}\}.         \tag{2}
 \]
 
-No se gana coercividad reemplazando el supremo sobre selectores por un
-supremo sobre (2): son el mismo problema, y los puntos extremos vuelven a
-ser los selectores indicadores.
+No coercivity is gained by replacing the supremum over selectors with
+a supremum over (2): they are the same problem, and the extreme points
+are again the indicator selectors.
 
-La parte aritmética del funcional posee la forma global cerrada
+The arithmetic part of the functional has the closed global form
 
 \[
  \int\varphi u_X\,d\nu
@@ -29,16 +29,16 @@ La parte aritmética del funcional posee la forma global cerrada
  d\{J(x)-\mathrm{Li}(x)\},                       \tag{3}
 \]
 
-donde
+where
 
 \[
  dJ=\sum_{p^a}{1\over a}\,\delta_{p^a},\qquad
  d\mathrm{Li}(x)={dx\over\log x}.               \tag{4}
 \]
 
-Como \(d\mathrm{Li}\,\) tiene masa infinita en \(1^+\), (3) no
-declara que su diferencia sea una medida de Radon en un entorno de uno.
-La notación significa el funcional impropio regularizado
+Since \(d\mathrm{Li}\,\) has infinite mass at \(1^+\), (3) does not
+assert that their difference is a Radon measure in a neighborhood of
+one. The notation means the regularized improper functional
 
 \[
  \int_{1^-}^Xq\,d(J-\mathrm{Li})
@@ -47,25 +47,25 @@ La notación significa el funcional impropio regularizado
                   q(x){dx\over\log x},                 \tag{4a}
 \]
 
-para los tests \(q(x)=O(\log x)\) que aparecen aquí.
+for the test functions \(q(x)=O(\log x)\) that appear here.
 
-Así (3) conserva a la vez todas las torres y el comparador. La inversión
-de renovación/Möbius no añade un término de signo: reconstruye la misma
-discrepancia regularizada, como ya anticipan 104_80 y E101_087, §11.
+Thus (3) jointly preserves all towers and the comparator. Renewal/Möbius
+inversion adds no sign term: it reconstructs the same regularized
+discrepancy, as 104_80 and E101_087, §11, already anticipate.
 
-Se prueba además un gate cuantitativo más fuerte que el modelo fijo de
-104_90. Para cada prefijo \(M\) existe un primo ordinario \(P>M\) y un
-sistema Euler que:
+A stronger quantitative gate than the fixed model of 104_90 is also
+proved. For every prefix \(M\) there is an ordinary prime \(P>M\) and
+an Euler system that:
 
-1. coincide literalmente con \(\Lambda(n)\) para todo \(n\leq M\);
-2. coincide con la zeta en todas las torres salvo \(P^a\);
-3. tiene pesos no negativos sobre las potencias de primos ordinarios;
-4. conserva un PNT continuo con error de tipo Vinogradov--Korobov;
-5. admite un completamiento entero con simetría \(s\leftrightarrow1-s\);
-6. tiene un cero real
+1. agrees literally with \(\Lambda(n)\) for all \(n\leq M\);
+2. agrees with zeta on every tower except \(P^a\);
+3. has nonnegative weights on ordinary prime powers;
+4. preserves a continuous PNT with Vinogradov--Korobov-type error;
+5. admits an entire completion with symmetry \(s\leftrightarrow1-s\);
+6. has a real zero
    \(\beta_P=\tfrac12+\log(3/2)/(2\log P)>1/2\).
 
-Su defecto de Jensen contiene al menos
+Its Jensen defect contains at least
 
 \[
  \boxed{
@@ -73,116 +73,116 @@ Su defecto de Jensen contiene al menos
                  \log P-\log(3/2)}>0.}                 \tag{5}
 \]
 
-Por tanto ningún argumento basado en prefijos exactos, restricciones PD,
-positividad, soporte primo, PNT y una ecuación funcional amplia puede
-probar la cota unilateral. Una demostración para la zeta real tiene que
-usar simultáneamente la igualdad literal de todas las torres y los datos
-exactos de su completamiento. El contramodelo altera una torre y tiene
-polos Euler adicionales; no es un contraejemplo a RH.
+Therefore no argument based on exact prefixes, PD restrictions,
+positivity, prime support, PNT, and a broad functional equation can
+prove the one-sided bound. A proof for the real zeta function must
+simultaneously use the literal equality of all towers and the exact
+data of its completion. The countermodel alters one tower and has
+additional Euler poles; it is not a counterexample to RH.
 
-Este documento no prueba el límite Deep-\(\Lambda\), A1 ni RH.
+This document does not prove the Deep-\(\Lambda\) limit, A1, or RH.
 
 ---
 
-## 1. La clase PD es exactamente el intervalo de selectores
+## 1. The PD class is exactly the selector interval
 
-Como \(u(t)\) y \(u_X(t)\) son pares, en
+Since \(u(t)\) and \(u_X(t)\) are even, in
 
 \[
  I_X=\sup_{0\leq\varphi\leq1}
        \int\varphi(t)\{u(t)-u_X(t)\}\,d\nu(t)           \tag{6}
 \]
 
-se puede reemplazar \(\varphi\) por
-\((\varphi(t)+\varphi(-t))/2\). Suponga desde ahora que \(\varphi\) es
-par y defina
+\(\varphi\) can be replaced by
+\((\varphi(t)+\varphi(-t))/2\). Assume from now on that \(\varphi\) is
+even and define
 
 \[
  K_\varphi(y)=\int\varphi(t)e^{ity}\,d\nu(t)
               =\int\varphi(t)\cos(ty)\,d\nu(t).        \tag{7}
 \]
 
-Las medidas positivas \(\varphi\nu\) y \((1-\varphi)\nu\) tienen
-transformadas \(K_\varphi\) y \(k-K_\varphi\). El teorema de Bochner da
-inmediatamente que ambas son definidas positivas.
+The positive measures \(\varphi\nu\) and \((1-\varphi)\nu\) have
+transforms \(K_\varphi\) and \(k-K_\varphi\). Bochner's theorem
+immediately gives that both are positive definite.
 
-La recíproca es igual de importante. Si \(K\) y \(k-K\) son continuas y
-definidas positivas, Bochner produce medidas positivas simétricas
-\(\mu,\eta\) tales que
+The converse is just as important. If \(K\) and \(k-K\) are continuous
+and positive definite, Bochner produces symmetric positive measures
+\(\mu,\eta\) such that
 
 \[
  \widehat\mu=K,\qquad \widehat\eta=k-K.                 \tag{8}
 \]
 
-Por unicidad de la transformada de Fourier de medidas finitas,
+By uniqueness of the Fourier transform of finite measures,
 
 \[
  \mu+\eta=\nu.                                         \tag{9}
 \]
 
-Luego \(0\leq\mu\leq\nu\), existe
-\(\varphi=d\mu/d\nu\) con \(0\leq\varphi\leq1\), y
-\(K=K_\varphi\). Esto prueba
+Hence \(0\leq\mu\leq\nu\), there exists
+\(\varphi=d\mu/d\nu\) with \(0\leq\varphi\leq1\), and
+\(K=K_\varphi\). This proves
 
 \[
  \boxed{
- \{K_\varphi:0\leq\varphi\leq1,\ \varphi\text{ par}\}
+ \{K_\varphi:0\leq\varphi\leq1,\ \varphi\text{ even}\}
  =\mathcal K.}                                         \tag{10}
 \]
 
-El intervalo de orden \(0\leq\varphi\leq1\) tiene como puntos extremos
-las funciones características. Por (10), también son los puntos extremos
-de \(\mathcal K\). En particular el selector óptimo
+The order interval \(0\leq\varphi\leq1\) has the characteristic
+functions as extreme points. By (10), these are also the extreme
+points of \(\mathcal K\). In particular the optimal selector
 
 \[
  \varphi_X=\mathbf1_{\{u>u_X\}}                        \tag{11}
 \]
 
-no desaparece bajo la traducción PD. Un minimax que solo reemplace (6) por
-(2) vuelve exactamente a (6).
+does not disappear under the PD translation. A minimax that merely
+replaces (6) by (2) returns exactly to (6).
 
-## 2. Forma de Stieltjes que conserva todas las torres
+## 2. Stieltjes form preserving all towers
 
-Ponga
+Set
 
 \[
  h_x(t)=x^{-1/2}\cos(t\log x)-x^{-1}.                  \tag{12}
 \]
 
-La ecuación (10) de 104_89 se escribe, sin separar torres,
+Equation (10) of 104_89 is written, without separating towers, as
 
 \[
  \boxed{u_X(t)=\int_{1^-}^{X}h_x(t)\,
               d\{J(x)-\mathrm{Li}(x)\}.}        \tag{13}
 \]
 
-En efecto, el átomo en \(p^a\) tiene masa
-\(1/a=\Lambda(p^a)/\log(p^a)\). La parte continua de (13), con
-\(x=e^y\), es
+Indeed, the atom at \(p^a\) has mass
+\(1/a=\Lambda(p^a)/\log(p^a)\). The continuous part of (13), with
+\(x=e^y\), is
 
 \[
  -\int_1^Xh_x(t){dx\over\log x}
  =\int_0^{\log X}{1-e^{y/2}\cos(ty)\over y}\,dy.      \tag{14}
 \]
 
-La singularidad en \(x=1\) es removible porque
-\(h_x(t)=O(\log x)\). Como (13) es finita, Fubini es legítimo. Si
-\(c=K_\varphi(0)=\int\varphi\,d\nu\), entonces
+The singularity at \(x=1\) is removable because
+\(h_x(t)=O(\log x)\). Since (13) is finite, Fubini is legitimate. If
+\(c=K_\varphi(0)=\int\varphi\,d\nu\), then
 
 \[
  \int\varphi h_x\,d\nu
  =x^{-1/2}K_\varphi(\log x)-{c\over x}.                \tag{15}
 \]
 
-Las ecuaciones (13)--(15) prueban (3).
+Equations (13)--(15) prove (3).
 
-Para registrar el dual completo, sea
+To record the full dual, let
 
 \[
  \mathcal U(K)=\int\varphi_K(t)u(t)\,d\nu(t),          \tag{16}
 \]
 
-donde \(\varphi_K\) es la densidad única de (10). Entonces
+where \(\varphi_K\) is the unique density of (10). Then
 
 \[
  \boxed{
@@ -195,22 +195,22 @@ donde \(\varphi_K\) es la densidad única de (10). Entonces
  \right].}                                             \tag{17}
 \]
 
-La positividad definida restringe conjuntamente todos los valores
-\(K(\log p^a)\), pero (10) muestra que no impone nada que no estuviera ya
-en el selector original. Probar que (17) tiende a cero sigue siendo la
-desigualdad aritmética unilateral de 104_89.
+Positive definiteness jointly restricts all the values
+\(K(\log p^a)\), but (10) shows that it imposes nothing that was not
+already in the original selector. Proving that (17) tends to zero
+remains the one-sided arithmetic inequality of 104_89.
 
-La renovación exacta tampoco produce una reserva. En coordenada
-logarítmica, \(L*N=yN\), o equivalentemente
-\(\Lambda*1=\log\). Resolverla para \(L\) da de nuevo
-\(L=\mu*\log\); exponenciar \(dJ\) reconstruye el mismo producto Euler.
-104_80, ecuaciones (10)--(13), demuestra que esta inversión vuelve al
-mismo germ meromorfo y conserva cada polo procedente de un cero. Por eso
-no se reabre aquí como mecanismo distinto.
+Exact renewal likewise produces no reserve. In the logarithmic
+coordinate, \(L*N=yN\), or equivalently \(\Lambda*1=\log\). Solving
+for \(L\) again gives \(L=\mu*\log\); exponentiating \(dJ\)
+reconstructs the same Euler product. 104_80, equations (10)--(13),
+proves that this inversion returns to the same meromorphic germ and
+preserves every pole coming from a zero. For this reason it is not
+reopened here as a distinct mechanism.
 
-## 3. Contramodelo en una torre prima arbitrariamente remota
+## 3. Countermodel on an arbitrarily remote prime tower
 
-Sea \(P>6\) un primo ordinario y defina
+Let \(P>6\) be an ordinary prime and define
 
 \[
  Z_-(T)={(1-3T)(1-2T)\over(1-T)(1-6T)},\qquad
@@ -221,20 +221,20 @@ Sea \(P>6\) un primo ordinario y defina
  W_P(s)=Z_-(T_P(s)),\qquad Z_P(s)=\zeta(s)W_P(s).       \tag{19}
 \]
 
-Para
+For
 
 \[
  A_a=6^a+1-3^a-2^a=(3^a-1)(2^a-1)>0                  \tag{20}
 \]
 
-se tiene, donde converge absolutamente,
+one has, where it converges absolutely,
 
 \[
  \log W_P(s)=\sum_{a\geq1}{A_a\over a}
                     (P/6)^{a/2}P^{-as}.                \tag{21}
 \]
 
-Por tanto
+Hence
 
 \[
  -{W_P'\over W_P}(s)
@@ -246,7 +246,7 @@ Por tanto
  b_P(P^a)=\log P\,(P/6)^{a/2}A_a>0.}                  \tag{23}
 \]
 
-El canal Euler de \(Z_P\) tiene pesos
+The Euler channel of \(Z_P\) has weights
 
 \[
  \Lambda_P(n)=
@@ -256,78 +256,79 @@ El canal Euler de \(Z_P\) tiene pesos
  \end{cases}                                           \tag{24}
 \]
 
-Si \(P>M\), entonces (24) coincide con la función de Mangoldt ordinaria
-para todo \(n\leq M\), y coincide en todas las torres salvo una.
+If \(P>M\), then (24) coincides with the ordinary Mangoldt function
+for all \(n\leq M\), and agrees on every tower but one.
 
-### 3.1. PNT continuo
+### 3.1. Continuous PNT
 
-Ponga
+Set
 
 \[
  \sigma_P={\log\sqrt{6P}\over\log P}
  ={1\over2}+{\log6\over2\log P}<1.                    \tag{25}
 \]
 
-Como \(A_a\leq2\,6^a\), una suma geométrica da
+Since \(A_a\leq2\,6^a\), a geometric sum gives
 
 \[
  \sum_{P^a\leq x}b_P(P^a)=O_P(x^{\sigma_P}).          \tag{26}
 \]
 
-En consecuencia
+Consequently
 
 \[
  \psi_P(x)=x+O\{xe^{-\eta(\log x)}+x^{\sigma_P}\}
             =x+O_P\{xe^{-\eta(\log x)}\},             \tag{27}
 \]
 
-porque \(\sigma_P<1\) y \(\eta(y)=o(y)\). El umbral y la constante de
-(27) pueden depender de \(P\); el exponente VK no cambia.
+because \(\sigma_P<1\) and \(\eta(y)=o(y)\). The threshold and the
+constant of (27) may depend on \(P\); the VK exponent does not
+change.
 
-### 3.2. Completamiento y cero exterior
+### 3.2. Completion and exterior zero
 
-Defina
+Define
 
 \[
  r_P(s)={1\over2}+{\log P\over\log6}
                    \left(s-{1\over2}\right),          \tag{28}
 \]
 
-de modo que \(T_P(s)=6^{-r_P(s)}\) y
-\(r_P(1-s)=1-r_P(s)\). La función
+so that \(T_P(s)=6^{-r_P(s)}\) and
+\(r_P(1-s)=1-r_P(s)\). The function
 
 \[
  \Xi_-(r)=6^r-5+6^{1-r}                               \tag{29}
 \]
 
-es entera y satisface \(\Xi_-(1-r)=\Xi_-(r)\). Por ello
+is entire and satisfies \(\Xi_-(1-r)=\Xi_-(r)\). Hence
 
 \[
  \mathcal X_P(s)=\xi(s)\Xi_-(r_P(s))                  \tag{30}
 \]
 
-es entera y simétrica bajo \(s\mapsto1-s\). Es realmente un
-completamiento de (19): si \(q=6^r\), entonces
+is entire and symmetric under \(s\mapsto1-s\). It is a genuine
+completion of (19): if \(q=6^r\), then
 
 \[
  \Xi_-(r)={(q-1)(q-6)\over q}\,Z_-(q^{-1}).            \tag{30a}
 \]
 
-El factor delante de \(Z_-\) cancela precisamente sus polos adicionales.
-Los ceros añadidos del completamiento son
+The factor in front of \(Z_-\) cancels exactly its additional poles.
+The added zeros of the completion are
 
 \[
  {1\over2}\pm{\log(3/2)\over2\log P}
        +{2\pi ik\over\log P},\qquad k\in\mathbb Z.     \tag{31}
 \]
 
-En particular
+In particular
 
 \[
  \beta_P={1\over2}+{\log(3/2)\over2\log P}>{1\over2}. \tag{32}
 \]
 
-El término de Jensen de ese cero real es
+The Jensen term of that real zero is
 
 \[
  \log{\beta_P\over1-\beta_P}
@@ -335,65 +336,65 @@ El término de Jensen de ese cero real es
               \log P-\log(3/2)}=D_P>0,                \tag{33}
 \]
 
-que prueba (5). Los demás ceros derechos solo añaden términos no
-negativos.
+which proves (5). The remaining right-hand zeros only add nonnegative
+terms.
 
-Además, al hacer \(P\to\infty\), se tiene
+Moreover, as \(P\to\infty\), one has
 
 \[
  D_P\sim{2\log(3/2)\over\log P},\qquad
  \beta_P\downarrow{1\over2},                          \tag{34}
 \]
 
-y \(W_P\to1\) localmente uniformemente en cada
-\(\Re s\geq1/2+\delta\). Por tanto los contramodelos pueden coincidir en
-prefijos cada vez mayores y ser localmente invisibles a distancia fija de
-la frontera, aunque cada uno conserve un defecto positivo.
+and \(W_P\to1\) locally uniformly on every
+\(\Re s\geq1/2+\delta\). Hence the countermodels can agree on
+ever-longer prefixes and be locally invisible at fixed distance from
+the boundary, even though each preserves a positive defect.
 
-## 4. Alcance exacto del falsificador
+## 4. Exact scope of the falsifier
 
-El sistema (19) no conserva todos los datos de la zeta:
+System (19) does not preserve all the data of zeta:
 
-* altera la torre \(P^a\) mediante (23);
-* \(W_P\) posee polos Euler adicionales, que son cancelados por el factor
-  explícito que relaciona \(W_P\) con (29);
-* (30) contiene un factor simétrico adicional y no es el completamiento
-  literal de Riemann.
+* it alters the tower \(P^a\) via (23);
+* \(W_P\) has additional Euler poles, which are cancelled by the
+  explicit factor relating \(W_P\) to (29);
+* (30) contains an additional symmetric factor and is not the literal
+  Riemann completion.
 
-Por la unicidad de 104_88, ningún contramodelo distinto puede conservar
-simultáneamente todos los valores \(\Lambda(n)\) y la misma normalización:
-eso fijaría a \(\zeta\). Así el alcance correcto es
+By the uniqueness theorem of 104_88, no different countermodel can
+simultaneously preserve all the values \(\Lambda(n)\) and the same
+normalization: that would pin down \(\zeta\). Thus the correct scope
+is
 
 \[
  \begin{gathered}
- \text{prefijos exactos arbitrariamente largos + PD + positividad +}\\
- \text{soporte ordinario + PNT/VK + FE amplia}
- \not\Longrightarrow \text{cota unilateral},          \tag{35}\\
- \text{pero (35) no descarta una desigualdad que use literalmente todas}\\
- \text{las torres ordinarias y el completamiento exacto de Riemann.}
+ \text{arbitrarily long exact prefixes + PD + positivity +}\\
+ \text{ordinary support + PNT/VK + broad FE}
+ \not\Longrightarrow \text{one-sided bound},          \tag{35}\\
+ \text{but (35) does not rule out an inequality that literally uses all}\\
+ \text{ordinary towers and the exact Riemann completion.}
  \end{gathered}
 \]
 
-La consecuencia operativa es doble:
+The operative consequence is twofold:
 
-1. la coordenada PD/minimax de (17) no reduce el target;
-2. ningún certificado por compactación de prefijos puede cerrarlo con
-   constantes uniformes obtenidas solo de los datos cualitativos de
-   (35).
+1. the PD/minimax coordinate of (17) does not reduce the target;
+2. no certificate by prefix compactness can close it with uniform
+   constants obtained only from the qualitative data of (35).
 
-El frente restante sigue siendo una cota global específica de la
-discrepancia regularizada \(dJ-d\mathrm{Li}\,\) de los enteros
-ordinarios.
+The remaining front is still a global bound specific to the
+regularized discrepancy \(dJ-d\mathrm{Li}\,\) of the ordinary
+integers.
 
-## 5. Reproducción
+## 5. Reproduction
 
-Desde el directorio tools:
+From the tools directory:
 
     python3 dual_pd_remote_tower_gate_check.py
 
-El programa verifica la identidad dual finita, la positividad numérica de
-las dos matrices PD para un selector de prueba, las identidades algebraicas
-(20)--(23), la simetría (28)--(31), la coincidencia en prefijos y el defecto
-(33). Las afirmaciones para todo \(P\), todo prefijo y todo núcleo están
-probadas arriba; el cálculo es un control de implementación, no su
-sustituto.
+The program verifies the finite dual identity, the numerical
+positivity of the two PD matrices for a test selector, the algebraic
+identities (20)--(23), the symmetry (28)--(31), the agreement on
+prefixes, and the defect (33). The claims for all \(P\), all prefixes,
+and all kernels are proved above; the computation is an implementation
+check, not a substitute for it.

@@ -1,0 +1,650 @@
+                                                    Spectral Riccati–Gamma Concavity, Symmetric Zero
+                                                                       Cancellation,
+                                                    and Conditional Criteria for the Riemann Hypothesis
+                                                                                  Dragoş-Pătru Covei
+                                                                            Department of Applied Mathematics
+                                                                          Bucharest University of Economic Studies
+arXiv:2606.24924v2 [math.GM] 27 Jun 2026
+
+
+
+
+                                                                        6 Piaţa Romană, 010374 Bucharest, Romania
+                                                                                  coveidragos@yahoo.com
+
+                                                                                        June 30, 2026
+
+
+                                                                                            Abstract
+                                                     We examine a Riccati–Gamma approach to the logarithmic derivative of the completed
+                                                 Riemann zeta function. The first part proves, in full local detail, that a naive two-sided
+                                                 vertical concavity criterion for Ξ′ /Ξ cannot be a proof of the Riemann Hypothesis, because
+                                                 every zero produces opposite vertical curvatures on the two horizontal sides of the pole
+                                                 of the logarithmic derivative. The second part replaces this obstruction by a rigorously
+                                                 formulated finite spectral averaging framework. We prove cancellation at the critical line,
+                                                 positivity of the off-critical paired contribution on the left of the critical line under a con-
+                                                 crete low-frequency kernel condition, a conditional zero-density consequence, and a precise
+                                                 conditional theorem showing which additional localisation hypotheses would imply the Rie-
+                                                 mann Hypothesis. The results are therefore not presented as an unconditional proof of RH.
+                                                 They give a partial resolution of the Riccati–Gamma question: one natural route is ruled
+                                                 out unconditionally, a second symmetric mechanism is proved at the finite spectral level,
+                                                 and the remaining step is isolated as explicit analytic hypotheses. Reproducible Python
+                                                 routines and numerical figures accompany the analytic discussion.
+
+
+                                           1     Introduction
+                                           Let
+                                                                                     ∞
+                                                                                     X (−1)n−1
+                                                                            η(s) =                    ,        Re(s) > 0,
+                                                                                             ns
+                                                                                     n=1
+
+                                           and recall that η(s) = (1 − 21−s )ζ(s). The completed zeta function is
+                                                                                   1             s
+                                                                          ξ(s) = s(s − 1)π −s/2 Γ     ζ(s).
+                                                                                   2               2
+                                           It is entire of order one and satisfies ξ(s) = ξ(1 − s). We write Ξ = ξ and study
+                                                                                                      Ξ′ (s)
+                                                                                           R(s) =
+                                                                                                      Ξ(s)
+                                           away from the zeros of Ξ.
+                                              The motivation comes from Riccati–Gamma analyses of gamma-completed Dirichlet series,
+                                           where logarithmic derivatives satisfy Riccati identities and inherit asymptotic information from
+                                           gamma factors; see Covei [1]. The central point of this article is that such identities are useful
+                                           but not by themselves decisive for RH. A zero-location theorem requires sign information strong
+                                           enough to control the poles of R.
+
+                                                                                                  1
+Problem 1.1 (The Riccati–Gamma RH question). Can vertical concavity information for the
+logarithmic derivative R = Ξ′ /Ξ, possibly after symmetric spectral averaging, be formulated so
+as to constrain the nontrivial zeros of ζ?
+
+    We give three rigorous, partial answers. First, a pointwise two-sided concavity criterion
+fails locally at every zero. Second, symmetric zero pairs cancel at the critical line, so averaging
+exactly on Re(s) = 1/2 cannot detect off-critical pairs. Third, evaluating a low-frequency
+spectral average on the left of the critical line creates a positive paired contribution from any
+off-critical zero pair. This leads to a conditional zero-density theorem and to concrete sufficient
+hypotheses under which RH follows.
+
+
+2    Standard analytic facts
+Proposition 2.1 (Completed zeta function). The function
+                                   1              s
+                           Ξ(s) = s(s − 1)π −s/2 Γ      ζ(s)
+                                   2                2
+extends to an entire function of order one. Its zeros are exactly the nontrivial zeros of ζ, counted
+with multiplicity, and it satisfies Ξ(s) = Ξ(1 − s).
+
+Proof. The zeta function has a meromorphic continuation to C with a single simple pole at
+s = 1. The factor s(s − 1) removes this pole and the harmless zero at s = 0 of the completed
+expression. The poles of Γ(s/2) occur at nonpositive even integers and are cancelled by the
+trivial zeros of ζ at the negative even integers. Hence Ξ is entire. The functional equation of ζ
+is equivalent to Ξ(s) = Ξ(1 − s) in this normalization. Stirling’s formula for Γ(s/2) and classical
+growth estimates for ζ give order one. After the pole, gamma poles, and trivial zeros have been
+accounted for, the remaining zeros are precisely the nontrivial zeros of ζ; see [2, Chs. 1–2] and
+[3, Chs. 1–2].
+
+Proposition 2.2 (Explicit logarithmic derivative). At every point where ζ(s) ̸= 0 and s ̸= 0, 1,
+
+                                     1   1  1       1  s  ζ ′ (s)
+                            R(s) =     +   − log π + ψ     +        ,
+                                     s s−1 2        2   2    ζ(s)
+
+where ψ = Γ′ /Γ is the digamma function.
+
+Proof. Take the logarithmic derivative of
+                                       1
+                                 Ξ(s) = s(s − 1)π −s/2 Γ(s/2)ζ(s).
+                                       2
+The factors s, s − 1, π −s/2 , Γ(s/2), and ζ(s) contribute, respectively,
+
+                      1         1           1            1             ζ ′ (s)
+                        ,          ,       − log π,        ψ(s/2),             .
+                      s        s−1          2            2             ζ(s)
+Summing the contributions gives the formula.
+
+Proposition 2.3 (Poles of logarithmic derivatives). Let F be nonzero and holomorphic near ρ,
+and suppose that F has a zero of order m ≥ 1 at ρ. Then
+                                        F ′ (s)    m
+                                                =     + H(s),
+                                        F (s)     s−ρ
+
+where H is holomorphic near ρ. Thus every zero of F becomes a simple pole of F ′ /F , with
+residue equal to its multiplicity.
+
+                                                 2
+Proof. Write F (s) = (s − ρ)m G(s), where G is holomorphic and G(ρ) ̸= 0. Logarithmic differ-
+entiation gives
+                                    F ′ (s)    m    G′ (s)
+                                            =     +        .
+                                    F (s)     s−ρ   G(s)
+Since G(ρ) ̸= 0, the last term is holomorphic near ρ.
+
+Proposition 2.4 (Functional symmetries of R). Away from the zeros of Ξ,
+
+                              R(1 − s) = −R(s),               R(s) = R(s).
+
+Proof. Differentiate Ξ(s) = Ξ(1 − s) to obtain Ξ′ (s) = −Ξ′ (1 − s). Division by Ξ(s) = Ξ(1 − s)
+gives the first identity. The second identity follows from Ξ(s) = Ξ(s), which is a consequence
+of the real Taylor coefficients of Ξ.
+
+
+3    Riccati identities and their limits
+Definition 3.1 (Riccati–Gamma transform). For a meromorphic function F that is not iden-
+tically zero, its logarithmic Riccati transform is
+                                                          F ′ (s)
+                                          RF (s) =
+                                                          F (s)
+on the complement of the zeros and poles of F . If
+                                              d
+                                              Y
+                                    F (s) =         Γ(λj s + µj )L(s),
+                                              j=1
+
+with λj > 0 and L a Dirichlet series or an L-function after continuation, we call RF a Riccati–
+Gamma transform.
+Proposition 3.2 (Tautological Riccati equation). Let F be meromorphic and nonzero on a
+domain D, and let RF = F ′ /F on a simply connected subdomain avoiding the zeros and poles
+of F . Then
+                                          F ′′ (s)
+                                RF′ (s) =          − RF (s)2 .
+                                          F (s)
+In particular R = Ξ′ /Ξ satisfies
+
+                                                                           Ξ′′ (s)
+                          R′ (s) = QΞ (s) − R(s)2 ,             QΞ (s) =           ,
+                                                                           Ξ(s)
+away from the zeros of Ξ.
+Proof. Differentiate RF = F ′ /F and apply the quotient rule:
+                                                              ′ 2
+                               ′   F ′′ F − (F ′ )2   F ′′    F
+                             RF =           2
+                                                    =      −        .
+                                          F           F       F
+The specialization to F = Ξ is immediate.
+
+Remark 3.3. Proposition 3.2 is an identity, not a zero-location theorem. The difficult part in
+any RH application is not the existence of a Riccati equation, but the derivation of global sign,
+monotonicity, or positivity information strong enough to constrain all zeros. Covei’s Riccati–
+Gamma framework [1] is relevant because it seeks such information for generalized eta-type
+functions under explicit hypotheses. Those hypotheses must be verified for Ξ; they cannot be
+transferred by analogy alone.
+
+                                                      3
+4    Local obstruction to vertical concavity
+The preliminary criterion asked for strict concavity of
+
+                                        t 7−→ Re R(σ + it)
+
+through a two-sided strip around Re(s) = 1/2. The next theorem shows that this cannot hold
+in any neighbourhood that passes horizontally through a zero.
+
+Theorem 4.1 (Curvature forced by a zero). Let F be holomorphic near ρ = β + iγ and suppose
+that ρ is a zero of order m ≥ 1. Put
+                                                      F ′ (σ + it)
+                                      uσ (t) = Re
+                                                      F (σ + it)
+where the expression is defined. For a > 0 sufficiently small,
+
+                              d2                         d2
+                                  uβ−a (γ) > 0,              uβ+a (γ) < 0.
+                              dt2                        dt2
+Consequently no open two-sided vertical strip containing the zero can support strict vertical
+concavity of Re(F ′ /F ) on both sides of the zero.
+
+Proof. By Proposition 2.3,
+                                      F ′ (s)    m
+                                              =     + H(s),
+                                      F (s)     s−ρ
+with H holomorphic near ρ. Write s = β + x + i(γ + y). The real part of the principal term is
+                                             m       mx
+                                      Re          = 2     .
+                                           x + iy  x + y2
+For fixed x ̸= 0,
+                                  ∂ 2 mx          2mx(3y 2 − x2 )
+                                                =                 .
+                                  ∂y 2 x2 + y 2     (x2 + y 2 )3
+At y = 0 this equals −2m/x3 . Thus it is 2m/a3 > 0 at x = −a and −2m/a3 < 0 at x = a. The
+function Re H(β + x + i(γ + y)) has bounded second y-derivative in a sufficiently small closed
+disc. Since the principal curvature tends to ±∞ as a ↓ 0, the asserted signs dominate for all
+sufficiently small a > 0.
+
+Corollary 4.2 (Failure of the naive two-sided criterion). The following assertion is false: there
+exist δ > 0 and T0 such that, for every σ ∈ [1/2 − δ, 1/2 + δ], the function
+
+                                                  Ξ′ (σ + it)
+                                        t 7→ Re
+                                                  Ξ(σ + it)
+
+is strictly concave for all |t| ≥ T0 wherever it is defined, and this assertion is equivalent to RH.
+
+Proof. Hardy’s theorem states that infinitely many nontrivial zeros of ζ lie on the critical line;
+see [2, Ch. 10]. Let ρ = 1/2 + iγ be such a zero with |γ| ≥ T0 + 1. Applying Theorem 4.1 to
+F = Ξ at ρ shows that for all sufficiently small a > 0,
+
+                                 d2     Ξ′ (1/2 − a + it)
+                                     Re                     > 0.
+                                 dt2    Ξ(1/2 − a + it) t=γ
+
+Choosing a < δ contradicts strict concavity on the left side of the critical line. Therefore the
+proposed two-sided concavity assertion fails even in the presence of zeros on the critical line. A
+false assertion cannot be equivalent to RH.
+
+                                                  4
+5    Finite spectral averaging
+The formal expansion of Ξ′ /Ξ as a sum over zeros is only conditionally meaningful unless it is
+symmetrically regularised. We therefore use finite sums and state all limiting steps as explicit
+hypotheses.
+
+Definition 5.1 (Symmetric zero window). For Y > 0, let
+
+                               ZY = {ρ = β + iγ : Ξ(ρ) = 0, |γ| ≤ Y },
+
+with multiplicities. Define the finite zero field
+                                                        X      1
+                                         RY (s) =                 .
+                                                              s−ρ
+                                                    ρ∈ZY
+
+For an even Schwartz test function ϕ and t0 ∈ R, set
+                                         Z
+                        MY (σ; t0 , ϕ) =   ϕ(t − t0 ) Re RY (σ + it) dt.
+                                               R
+
+Lemma 5.2 (Differentiation of the finite average). If the vertical segment {σ+it : t ∈ supp(ϕ(·−
+t0 ))} contains no zero in ZY , then
+
+                                                          2ϕ(t − t0 )
+                                          X          Z
+                           ′′
+                         MY (σ; t0 , ϕ) =        Re                   3
+                                                                        dt.
+                                             ρ=β+iγ∈ZY R (σ + it − ρ)
+
+
+Proof. The sum defining RY is finite. On the support of the integral, each summand is smooth
+in σ by the stated zero-avoidance condition. Differentiating twice under the integral sign gives
+
+                                     ∂2      1              2
+                                                    =               ,
+                                    ∂σ 2 σ + it − ρ   (σ + it − ρ)3
+
+and summing the finitely many terms proves the formula.
+
+Lemma 5.3 (Fourier   kernel identity). Let ϕ be real-valued, even, and Schwartz, with Fourier
+               = R ϕ(t)e−iut dt. For x ̸= 0 and y ∈ R,
+                R
+transform ϕ(u)
+          b
+                       Z                                    Z ∞
+                          2ϕ(t)
+                 Re                 3
+                                      dt = sgn(x)                 u2 e−|x|u cos(yu)ϕ(u)
+                                                                                   b du.
+                    R (x + i(t − y))                          0
+
+Proof. If x > 0, use                               Z ∞
+                                      2
+                                               =            u2 e−xu e−i(t−y)u du,
+                               (x + i(t − y))3      0
+                       R∞
+which follows from     0    u2 e−au du = 2/a3 for Re a > 0. Multiplying by ϕ(t), integrating, and
+using Fubini gives                      Z ∞
+                                              u2 e−xu eiyu ϕ(u)
+                                                           b du.
+                                         0
+Taking real parts proves the formula for x > 0. If x < 0, write
+                                               Z ∞
+                                  2
+                                           =−       u2 exu ei(t−y)u du
+                           (x + i(t − y))3       0
+
+and repeat the same calculation. Since ϕ is real and even, ϕb is real and even, and the asserted
+sign is obtained.
+
+
+                                                        5
+Proposition 5.4 (Cancellation on the critical line). Let ϕ be as in Lemma 5.3. In the symmet-
+rically paired finite sum over zeros, the contribution of every off-critical pair to MY′′ (1/2; t0 , ϕ)
+is zero. Zeros on the critical line contribute no term in the paired formula away from their
+singular ordinates.
+
+Proof. The zeros of Ξ are symmetric under conjugation and under reflection in the critical line.
+Pair ρ = β + iγ with 1 − ρ = (1 − β) + iγ in the vertically reflected list. At σ = 1/2 the two
+real displacements are
+
+                           x1 = 1/2 − β,             x2 = 1/2 − (1 − β) = −x1 .
+
+Lemma 5.3 gives equal exponential and cosine factors for the pair, while sgn(x1 ) = − sgn(x2 ).
+The two terms therefore cancel. If β = 1/2, then the paired expression has zero horizontal
+displacement; the limiting left-right contribution is odd and gives no off-critical detection at the
+critical line.
+
+Proposition 5.5 (Positive paired signal on the left). Fix δ0 > 0 and evaluate at σ = 1/2 − δ0 .
+Let ρ = β + iγ be an off-critical zero with β > 1/2 + δ0 , paired with 1 − ρ = (1 − β) + iγ. If
+ϕb ≥ 0 and
+                  cos((γ − t0 )u) ≥ c0 > 0     for all u ∈ supp(ϕ)
+                                                                 b ∩ [0, ∞),
+
+then the paired contribution to MY′′ (1/2 − δ0 ; t0 , ϕ) is at least
+                               Z ∞
+                           2c0     u2 e−(β−1/2)u sinh(δ0 u)ϕ(u)b du ≥ 0.
+                                       0
+
+It is strictly positive if ϕb is positive on a set of positive measure.
+
+Proof. For the zero β + iγ the horizontal displacement is 1/2 − δ0 − β < 0. For the paired zero
+(1 − β) + iγ it is β − 1/2 − δ0 > 0. Lemma 5.3 gives the paired sum
+                             Z ∞
+                           −     u2 e−(β−1/2+δ0 )u cos((γ − t0 )u)ϕ(u)
+                                                                  b du
+                                   0
+                                   Z ∞
+                               +           u2 e−(β−1/2−δ0 )u cos((γ − t0 )u)ϕ(u)
+                                                                            b du.
+                                   0
+Combining the exponentials yields
+                      Z ∞
+                    2     u2 e−(β−1/2)u sinh(δ0 u) cos((γ − t0 )u)ϕ(u)
+                                                                  b du.
+                           0
+
+The assumed lower bound for the cosine and the nonnegativity of ϕb give the claimed estimate.
+
+
+Theorem 5.6 (Partial resolution of the Riccati–Gamma question). Problem 1.1 has the fol-
+lowing unconditional partial resolution.
+
+  1. Pointwise two-sided vertical concavity of Re(Ξ′ /Ξ) cannot prove RH, because it fails locally
+     at every zero on the critical line.
+
+  2. Symmetric spectral averaging exactly on Re(s) = 1/2 cannot detect an off-critical reflected
+     pair.
+
+  3. A left-shifted low-frequency average detects such a pair by a nonnegative, and under the
+     stated kernel condition strictly positive, finite spectral signal.
+
+
+                                                        6
+Thus the paper proves a genuine partial result about the proposed method, not an unconditional
+proof of the Riemann Hypothesis.
+
+Proof. The first assertion is Corollary 4.2. The second assertion is Proposition 5.4. The third
+assertion is Proposition 5.5. These three statements cover the pointwise, critical-line averaged,
+and left-shifted averaged versions of Problem 1.1, respectively, and each statement is finite or
+local; no passage to an unproved infinite zero expansion is used.
+
+
+6    Conditional consequences for RH
+The following hypotheses are concrete: they specify the kernel family, the limiting operation,
+and the sign condition needed to turn the Riccati–Gamma program into a zero-location theorem.
+They are not known unconditionally.
+
+Hypothesis 6.1 (Uniform spectral concavity). There exist δ > 0, λ0 > 0, and    R a family of real
+even Schwartz kernels ϕλ , 0 < λ ≤ λ0 , such that ϕλ ≥ 0, supp ϕλ ⊂ [−λ, λ], ϕλ = 1, and for
+                                                   b              b
+every σ ∈ [1/2 − δ, 1/2), every t0 ∈ R, and every sufficiently large symmetric height Y ,
+
+                                   MY′′ (σ; t0 , ϕλ ) ≤ Eλ (Y, t0 , σ),
+
+where lim supY →∞ Eλ (Y, t0 , σ) ≤ 0 uniformly for t0 in bounded intervals.
+
+Lemma 6.2 (Smooth band-limited kernels). There are kernels satisfying the structural part of
+Hypothesis 6.1. More precisely, let η ∈ Cc∞ (R) be real, even, nonnegative, supported in [−1, 1],
+and normalised by η(0) = 1. For 0 < λ ≤ λ0 define
+                                                          Z
+                                                       1
+                       ϕλ (u) = η(u/λ),
+                        b                    ϕλ (t) =       ϕbλ (u)eitu du.
+                                                      2π R
+                                                                   R
+Then ϕλ is real, even, Schwartz, ϕbλ ≥ 0, supp ϕbλ ⊂ [−λ, λ], and R ϕλ (t) dt = 1.
+
+Proof. The inverse Fourier transform of a Cc∞ function is Schwartz, so ϕλ is Schwartz. Evenness
+and reality follow from the evenness and reality of ϕbλ . Nonnegativity and support are inherited
+directly from η. Finally, with the Fourier convention used in Lemma 5.3,
+                                 Z
+                                    ϕλ (t) dt = ϕbλ (0) = η(0) = 1.
+                                  R
+
+
+
+
+Hypothesis 6.3 (Localising positive kernels). For every L > 0 and every ε > 0 there is λ such
+that ϕbλ is supported in [0, ε] ∪ [−ε, 0] up to a tail whose contribution to Proposition 5.5 is o(1)
+uniformly for |γ − t0 | ≤ L.
+
+Proposition 6.4 (Localisation for smooth band-limited kernels). The kernel family of Lemma 6.2
+satisfies Hypothesis 6.3.
+
+Proof. Choose 0 < λ ≤ ε. Then supp ϕbλ ⊂ [−λ, λ] ⊂ [−ε, ε]. The frequency tail outside
+[−ε, ε] is therefore identically zero, so its contribution to Proposition 5.5 is zero, uniformly in
+|γ − t0 | ≤ L.
+
+Hypothesis 6.5 (Controlled background). After isolating a fixed reflected off-critical pair, the
+sum of all remaining zero contributions, truncation terms, and the gamma-arithmetic back-
+ground arising in the comparison with the full logarithmic derivative R contributes an error
+bounded uniformly on compact σ-strips and cannot cancel the strictly positive paired signal
+when t0 is chosen at the ordinate of the pair and λ is sufficiently localised.
+
+                                                    7
+Proposition 6.6 (Size of the gamma background). Let
+                                       1   1  1       1
+                             B(s) =      +   − log π + ψ(s/2).
+                                       s s−1 2        2
+For fixed 0 < a < b < 1 and |t| ≥ 2,
+                          Re B ′′ (σ + it) = Oa,b (|t|−2 )      (a ≤ σ ≤ b).
+In particular the gamma-factor curvature is bounded on every closed vertical strip away from
+s = 0, 1 and decays quadratically along high vertical lines. This estimate does not prove Hypoth-
+esis 6.5; it only identifies one controlled component of the background.
+Proof. Differentiating twice gives
+                                            2       2       1
+                               B ′′ (s) =    3
+                                               +         3
+                                                           + ψ ′′ (s/2).
+                                            s    (s − 1)    8
+The rational terms are Oa,b (|t|−3 ) on the strip. The standard asymptotic expansion for the
+polygamma function in sectors away from the negative real axis gives ψ ′′ (z) = −z −2 + O(|z|−3 )
+as |z| → ∞. With z = s/2 this is O(|t|−2 ) uniformly for a ≤ σ ≤ b. Taking real parts proves
+the estimate.
+
+Theorem 6.7 (Conditional affirmative answer to RH). Assume Hypotheses 6.1, 6.3, and 6.5.
+Then the Riemann Hypothesis holds.
+Proof. Suppose, for contradiction, that RH is false. Then there is a zero ρ = β + iγ with
+β > 1/2; by symmetry there is also a zero 1 − ρ = (1 − β) + iγ. Choose
+                                      0 < δ0 < min(δ, β − 1/2)
+and evaluate at σ = 1/2−δ0 with t0 = γ. By Hypothesis 6.3, choose a kernel ϕλ so low-frequency
+localised that cos((γ − t0 )u) = 1 for the target zero and the remaining kernel tail is negligible.
+Proposition 5.5 then gives a strictly positive contribution from the pair {ρ, 1 − ρ}.
+    Hypothesis 6.5 states that the remaining zero, truncation, gamma, and arithmetic terms
+cannot cancel this fixed positive signal after the limiting procedure. Therefore, for sufficiently
+large Y and after the comparison specified in the hypothesis,
+                                      MY′′ (1/2 − δ0 ; γ, ϕλ ) > 0.
+This contradicts the uniform spectral concavity asserted in Hypothesis 6.1. Hence no off-critical
+zero can exist, and every nontrivial zero of ζ lies on Re(s) = 1/2.
+
+Theorem 6.8 (Conditional zero-density consequence). Assume Hypotheses 6.1 and 6.3 in the
+following averaged form. For each σ0 > 1/2 there are δ0 , λ, ℓ, κ > 0 with 1/2 + δ0 < σ0 such that
+every zero ρ = β + iγ, β ≥ σ0 , 0 ≤ γ ≤ T , gives total paired signal at least κ on a t0 -interval
+of length ℓ centred at γ, while the integrated concavity deficit, background, and tail errors over
+t0 ∈ [0, T ] are o(T ). Then
+                                         N (σ0 , T ) = o(T ),
+where N (σ0 , T ) denotes the number of zeros ρ = β + iγ with β ≥ σ0 and 0 ≤ γ ≤ T , counted
+with multiplicity.
+Proof. For the fixed parameters supplied by the hypothesis, Proposition 5.5 gives a nonnegative
+contribution from each reflected off-critical pair, and the averaged assumption gives integrated
+contribution at least κℓ from each zero with β ≥ σ0 , apart from endpoints contributing O(1).
+Since the paired signals are nonnegative, overlaps of the t0 -windows only add contributions.
+The total positive contribution is therefore at least κℓN (σ0 , T ) + O(1). The averaged spectral
+concavity and the assumed o(T ) control of the residual terms bound the same total positive
+contribution by o(T ). Hence κℓN (σ0 , T ) ≤ o(T ), which proves the claim.
+
+                                                    8
+Remark 6.9. Theorems 6.7 and 6.8 identify exactly where the mathematical difficulty remains.
+The positive paired signal is elementary once the kernel assumptions are imposed. The deep
+open part is proving the uniform spectral concavity and background-control hypotheses for the
+actual completed zeta function. Establishing them would be a result of very high importance,
+because it would transform Riccati–Gamma concavity from a structural analogy into a genuine
+zero-location principle for the central open problem of the field.
+
+
+7    Numerical analysis
+The numerical experiments are designed to illustrate, not prove, the analytic results. They
+compare the full logarithmic derivative, its universal pole model, symmetric cancellation at the
+critical line, and the positive off-critical signal predicted by the conditional spectral framework.
+
+
+
+
+Figure 1: Real part of Ξ′ /Ξ near the first zero on three vertical lines. The side lines σ = 0.45
+and σ = 0.55 show the pole-like attraction and repulsion predicted by the local term (s − ρ1 )−1 .
+
+     Figures 1–3 illustrate the local part of the theory. The agreement, in the displayed neigh-
+bourhood, between the computed curvature of Ξ′ /Ξ and the elementary pole model shows that
+the obstruction to naive concavity is not a numerical artefact. It is forced by the Laurent
+expansion at a zero.
+     Figures 4–8 address the spectral part. The critical-line evaluation hides off-critical informa-
+tion through exact symmetric cancellation. A left shift breaks this cancellation and creates a
+positive signal when the cosine factor remains positive on the support of ϕbλ . The kernel pro-
+files in Figure 7 verify, for the displayed examples, the structural assumptions actually used in
+the proofs: evenness, nonnegativity, compact frequency support, and normalisation. The heat
+map shows the price of increasing bandwidth: localisation in physical ordinate improves, but
+oscillation in cos((γ − t0 )u) eventually creates sign leakage.
+     Figure 9 separates a proved background estimate from the unresolved part of the method.
+The gamma-factor component is small at large height and follows the quadratic decay predicted
+by Proposition 6.6. This is favourable for the conditional programme, but it is not a substitute
+for controlling the arithmetic part of ζ ′ /ζ or the limiting error in replacing the finite zero
+field by the full logarithmic derivative. The numerical evidence therefore supports the internal
+consistency of the finite spectral mechanism, while confirming that the decisive background-
+control hypothesis remains the main open obstacle.
+
+                                                 9
+Figure 2: Finite-difference approximation of the vertical curvature d2 / dt2 Re Ξ′ /Ξ. The cur-
+vature is positive on the left side of the zero and negative on the right side at t = γ1 , matching
+Theorem 4.1.
+
+
+
+
+Figure 3: Curvature of the model pole Re(a + i(t − γ))−1 = a/(a2 + (t − γ)2 ). This isolates the
+universal local mechanism from the arithmetic content of ζ.
+
+
+
+
+                                                10
+Figure 4: Model contribution of a symmetric off-critical pair at σ = 1/2. The left and right
+zero contributions cancel, illustrating Proposition 5.4.
+
+
+
+
+Figure 5: The same symmetric pair evaluated at σ = 1/2 − δ0 . The cancellation is broken and
+the paired signal is positive under a low-frequency nonnegative kernel, as in Proposition 5.5.
+
+
+
+
+                                             11
+Figure 6: Dependence of the paired signal on spectral bandwidth. Narrower low-frequency ker-
+nels suppress cosine oscillation and better preserve positivity; broader kernels show oscillatory
+leakage.
+
+
+
+
+Figure 7: Frequency profiles of the smooth kernels used in the numerical model. The curves are
+even, nonnegative, normalised by ϕbλ (0) = 1, and supported in [−λ, λ], matching the structural
+assumptions in Lemma 6.2.
+
+
+
+
+                                               12
+Figure 8: Heat map of the left-shifted paired signal as a function of the ordinate mismatch
+t0 − γ and the bandwidth λ. The positive region contracts as λ increases, reflecting the cosine
+condition in Proposition 5.5.
+
+
+
+
+Figure 9: Magnitude of the gamma-background curvature Re B ′′ (σ + it) compared with a fixed
+model paired signal. The observed t−2 decay agrees with Proposition 6.6; the figure does not
+test the unresolved arithmetic part of Hypothesis 6.5.
+
+
+
+
+                                              13
+8    Conclusion
+This article gives a rigorous partial solution of the Riccati–Gamma concavity problem posed
+in Problem 1.1. The naive pointwise route is ruled out by a complete local proof. The finite
+spectral framework then identifies a more promising mechanism: symmetric off-critical pairs
+cancel at the critical line but produce a positive low-frequency signal when viewed from the left.
+    The Riemann Hypothesis is not proved here unconditionally. What is demonstrated is par-
+tial: the obstruction, cancellation, and positive-pair mechanisms are proved, while the global
+concavity and background-control assertions remain explicit hypotheses. Proving those hy-
+potheses for Ξ would have major significance for analytic number theory, because it would
+convert Riccati–Gamma concavity into a direct zero-location principle for the completed zeta
+function.
+
+
+9    Reproducible Python script
+The local reproducibility material is the self-contained script https://github.com/coveidragos/
+Code_Python_Riemann. It generates all nine figures used in the numerical section. The compu-
+tations use NumPy, Matplotlib, and mpmath. The script is illustrative: it verifies the hypothe-
+ses for the displayed finite model examples and does not constitute numerical evidence for an
+unconditional proof of RH.
+
+
+Disclosure statement
+The author declares that he has no conflict of interest.
+
+
+Data availability statement
+No external datasets were used.
+
+
+Notes on contributor(s)
+The author is solely responsible for the conception, analysis, numerical implementation, and
+writing of this manuscript.
+
+
+Acknowledgements
+The author thanks the developers of open-source mathematical-software ecosystems whose li-
+braries (NumPy, SciPy, and Matplotlib) were used to produce the numerical validations. The
+core ideas, structural formulations, and numerical simulations presented in this article were
+developed with the invaluable assistance of free AI models.
+
+
+References
+[1] D.-P. Covei, Riccati–Gamma Dynamics for Concavity and Asymptotics of Generalized
+    Dirichlet Eta Functions, arXiv:2605.20238, 2026. Available at: https://arxiv.org/pdf/
+    2605.20238.
+
+[2] E. C. Titchmarsh, The Theory of the Riemann Zeta-Function, 2nd ed., revised by D. R.
+    Heath-Brown, Oxford University Press, 1986.
+
+
+
+                                               14
+[3] H. M. Edwards, Riemann’s Zeta Function, Academic Press, 1974.
+
+[4] H. Iwaniec and H. Kowalski, Analytic Number Theory, American Mathematical Society
+    Colloquium Publications, vol. 53, American Mathematical Society, 2004.
+
+[5] J. B. Conrey, The Riemann Hypothesis, Notices of the American Mathematical Society
+    50 (2003), no. 3, 341–353.
+
+[6] G. H. Hardy, Sur les zeros de la fonction ζ(s) de Riemann, Comptes Rendus de l’Academie
+    des Sciences 158 (1914), 1012–1014.
+
+[7] D. A. Goldston and S. M. Gonek, A note on S(t) and the zeros of the Riemann zeta-
+    function, arXiv:math/0511092, 2005.
+
+
+
+
+                                            15
+

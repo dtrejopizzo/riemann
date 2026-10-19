@@ -1,7 +1,6 @@
 # E72.156 -- Uniform tau-window kernel saturation
 
-**Date:** 2026-07-09.
-**Role:** test whether `KERN-ORTH` holds uniformly in a physical tau window.
+**Purpose:** test whether `KERN-ORTH` holds uniformly in a physical tau window.
 
 ## 0. Motivation
 

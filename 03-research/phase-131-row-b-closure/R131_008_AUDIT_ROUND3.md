@@ -1,6 +1,5 @@
-# R131.008 — Hostile audit of Paper 44, round 3 (§3ter, §6bis, §8bis)
+# R131.008 — Audit of Paper 44, round 3 (§3ter, §6bis, §8bis)
 
-Auditor: Claude (Opus 5, 1M), adversarial. Date: 2026-09-12.
 Scope: every `[REBUILT, phase 131, round 3]` passage of
 `04-papers/44-row-b-arithmetic-family/main.md`, checked against Paper 43
 (Lemma 3.3, (8.5), (8.5∞), (8.5b), Rem. 8.6a, Thm. 8.8, Thm. 9.7(b)/9.7b,
@@ -8,7 +7,7 @@ Lemma 9.14a0, Thms. 9.14–9.14b, Thm. 14.1), P123.022 §2, P123.038 §2–§4,
 P123.042 §1, P123.082, and against `R131.002/.003/.005/.006/.007`.
 Method: re-derivation from the declared formulas, not re-reading of the proofs.
 
-**Headline.** §3ter and §6bis survive a hostile re-derivation essentially
+**Headline.** §3ter and §6bis survive an independent re-derivation essentially
 intact — they are the strongest mathematics in the paper, and they do dissolve
 R1, R3, R6 and (in degree) R2. §8bis does **not**: its central claim, that the
 Gram form of the Frobenius family *is* the Weil kernel, is **refuted by the
@@ -39,7 +38,7 @@ large `N` the off-diagonal Gram entries are `W_{fin}(\log m − \log n)`
 **with no archimedean term at all**, and for small `N` they are the
 archimedean weight multiplied by an arithmetic indicator in `{0,1}` — in
 neither case the Weil kernel, whose archimedean part is the density
-`K(|\log m − \log n|)` for every pair. The builder's own report `R131.007` §2
+`K(|\log m − \log n|)` for every pair. The construction's own report `R131.007` §2
 ("a fourth correction") states this correction; §8bis was then written as if
 it did not apply.
 
@@ -160,7 +159,7 @@ blueprint claim of the same status as W13–W15 and is recorded only inside
 Cor. 3ter.10b. Given F1, it is the *most* consequential of the four. It should
 be W16.
 
-### F10 `NOTE` — ledger/lead discrepancy on B.7
+### F10 `NOTE` — ledger discrepancy on B.7
 
 `R131.005` §2 **ruled** B.7 `PROVED` (test and mechanism). Paper 44's §10 table
 still reads "`PROVED` (the test); `PARTIAL` (the mechanism)". Round 3 changed
@@ -189,7 +188,7 @@ Re-derived independently and **correct**:
   group), bidegree `(n^{1/2},n^{−1/2})` from `λ_∓=∫|x|^{∓1/2}` with `|x|≡1/n`.
   Rem. 3ter.6a is honest: the analogy with `Γ_FΓ_F^t=qΔ` is flagged as an
   analogy, the discrepancy is recorded, and it is used nowhere. Confirmed.
-* **Thm. 3ter.7 and the builder's refutation of the `Q_{>0}^×` indexing**:
+* **Thm. 3ter.7 and the construction's refutation of the `Q_{>0}^×` indexing**:
   verified. `Frob_2⋆Frob_1^† = μ_{j_2(2)K_{\{2\}}}` and
   `Frob_6⋆Frob_3^† = μ_{j_2(2)K_{\{2,3\}}}` have supports of different
   dimension; measures determine supports; the blueprint's assignment is not
@@ -202,7 +201,7 @@ Re-derived independently and **correct**:
   the **centre** of `n^{−1}(1+r^NZ_r)`, so every indicator is `1` **for every
   `N`** — this is the real reason the identity is exact at every level, and it
   is correct. `a_p` is constant `= h(1/n)` on the shell, hence the **point
-  evaluation** rather than `∫h`: the builder's refutation B2 of the blueprint
+  evaluation** rather than `∫h`: the construction's refutation B2 of the blueprint
   is right and the corrected statement is stronger. `τ_p ≡ p^{−k/2}`
   (Lemma 8.2(i)) and `vol = \log p` give `Λ(n)n^{−1/2}h(1/n)`.
   **Unit packets vanish at every `q`, including `q|n`**: `j_q(Z_q^×)` has
@@ -240,11 +239,11 @@ Re-derived independently and **correct**:
   Plancherel, and the **uniform** finite bound `|Σ\hat W_p| ≤ A_S` (correct:
   `|ζ_p/(1−ζ_p)| ≤ p^{−1/2}/(1−p^{−1/2})`, `S_f` finite) give
   `−ε^{−1}\|φ\|_2^2(\log(1/ε)+O(1))`, and the `L^2`-normalized form
-  `−\log(1/ε)+O(1)`. The builder's refutation B3 of the blueprint's `−2\log(1/ε)`
+  `−\log(1/ε)+O(1)`. The construction's refutation B3 of the blueprint's `−2\log(1/ε)`
   is **correct**; the blueprint's coefficient and its `ε`-power are both wrong.
   `Δ·Δ = −∞` is `PROVED`, the divergence is entirely archimedean, and
   Cor. 8bis.2a is correctly labelled an interpretation and used nowhere.
-* **The converse density argument**: the builder's claim that the naive
+* **The converse density argument**: the construction's claim that the naive
   argument fails is **verified**. `\log(n+1)−\log n → 0` only at `+∞`; in a
   fixed window `[a,b]` the gaps are `≥ \log(1+e^{−b}) > 0`, so bumps of width
   `ε ≪ e^{−b}` at `\{\log n\}∩[a,b]` span nothing dense in `C_c^∞((a,b))`.
@@ -297,7 +296,7 @@ The **one** inconsistency is F1's: §0, §8bis and the §10 block all repeat
 | **B.1** | `PROVED`. The inverse-semigroup completion `𝔉_S` (Thm. 3ter.7) is real and correctly indexed by `(r,F)`; R3's "no dagger in the source" is answered, not relabelled. |
 | **B.2** | `PROVED` and, since round 3, **non-vacuous**: the realization is strict, injective, has a true unit, and does not factor through the modulus (Rem. 3ter.4a is a correct obstruction argument). R1 dissolved. |
 | **B.3** | `PROVED`, with a true unit. Thm. 3ter.6 verified; the analogy with `Γ_FΓ_F^t=qΔ` is honestly quarantined. |
-| **B.4** | `REFUTED AS STATED`; `PROVED AS AMENDED` (owner-accepted), **and now proved on objects in degree** (Thm. 6bis.4). Verified. The Scope quotation is faithful. R2 dissolved *as far as a `C`-linear carrier permits*; `Sh_Z` is a functor on the divisor poset and a function on the monoid (F8). |
+| **B.4** | `REFUTED AS STATED`; `PROVED AS AMENDED` (accepted), **and now proved on objects in degree** (Thm. 6bis.4). Verified. The Scope quotation is faithful. R2 dissolved *as far as a `C`-linear carrier permits*; `Sh_Z` is a functor on the divisor poset and a function on the monoid (F8). |
 | **B.5** | `PROVED` (unchanged, re-checked through (6bis.4)). |
 | **B.6** | `PROVED`, both halves non-vacuous (Thm. 3ter.12; Thm. 3ter.14 modulo F6). R6 dissolved. |
 | **B.7** | `PROVED` as a test; `PARTIAL` as a mechanism, as the paper says. I do **not** endorse `R131.005`'s upgrade to `PROVED`: Rem. 6.5a′ is still the truth (F10). |
@@ -321,7 +320,7 @@ clause verdict. It is, however, the entirety of round 3's answer to R5.
   P123.022 §2 permits, and the paper says so. An auditor who read R2 as asking
   for an object-level identification in `G` should note that this is
   **refuted**, not open, and stop asking.
-* **R4 `PARTLY DISSOLVED`** (F7), exactly as the builder claims. The
+* **R4 `PARTLY DISSOLVED`** (F7), exactly as the construction claims. The
   attribution moved from a symbol to an object; the normalization did not move.
 * **R5 `NOT DISSOLVED`** — F1. The interface delivers the **finite half** of
   the Weil kernel, an uncomputed divergent diagonal (F2), a missing hypothesis
@@ -332,8 +331,8 @@ clause verdict. It is, however, the entirety of round 3's answer to R5.
 **Grade: the label is NOT EARNED in round 3 beyond the round-2 position.**
 Round 3's mathematics is a real advance — §3ter and §6bis are correct and they
 retire three of the six reservations outright and a fourth as far as the
-declared carrier allows — but §8bis overstates its result in the one place the
-lead asked for honesty, and does so against a theorem the same paper proves
+declared carrier allows — but §8bis overstates its result in the one place where honesty
+was required, and does so against a theorem the same paper proves
 three sections earlier. Repair F1–F3 (the repairs are available and make the
 paper *more* interesting: the complementary-slice dichotomy is the right
 statement, and it says the Weil kernel needs a **mixed** family), record the

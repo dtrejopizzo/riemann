@@ -1,4 +1,4 @@
-# R154.006 — Lead blueprint, round 3 of phase 154. Date 2026-09-20.
+# R154.006 — Blueprint, round 3 of phase 154.
 
 ## 0. State after R154_005
 Theorem A (exact, two-condition primitive class), Theorem W (E-L = finite-interval Wiener–Hopf, non-elliptic symbol), Theorem O (dual
@@ -31,4 +31,4 @@ tail column; novelty credit lines).
 ## 2. Rules
 Corpus-check lines (grep "strong duality", "dualidad fuerte", "Fenchel", "Beurling–Selberg", "Selberg majorant", "extremal function");
 labels; FATAL rule; no sign for ζ beyond `T ≤ log 2` (a certificate at `½log3` or `log 2` re-proves certified facts by a new method — that is
-the point); scripts in `scripts/round3/`; deliverable `R154_007_BUILDER_ROUND3.md` (≤ 5000 words) with the explicit certificate if found.
+the point); scripts in `scripts/round3/`; deliverable `R154_007_ROUND3.md` (≤ 5000 words) with the explicit certificate if found.

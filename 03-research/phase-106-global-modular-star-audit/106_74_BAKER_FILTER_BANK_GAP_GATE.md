@@ -128,13 +128,13 @@ Let
 
 \[
  b(x)=\mathrm{sech}(x/2),\qquad
- a_u(x)=K(x)K(x-u),qquad u>0,
+ a_u(x)=K(x)K(x-u),\qquad u>0,
 \]
 
 and
 
 \[
- D_u=\int a_u(x)b(x)^2dx,qquad
+ D_u=\int a_u(x)b(x)^2dx,\qquad
  C_u=\int a_u(x)b(x)b(x-u)dx.                     \tag{7}
 \]
 
@@ -236,7 +236,7 @@ offset list and its dimension.
 The large-prime theorem 106.73 gives, on a (d)-mode block,
 
 \[
- P_p=\beta_pv_pv_p^*+\mathcal E_p,qquad
+ P_p=\beta_pv_pv_p^*+\mathcal E_p,\qquad
  \beta_p\asymp(\log p)p^2e^{-2\pi p}.             \tag{17}
 \]
 

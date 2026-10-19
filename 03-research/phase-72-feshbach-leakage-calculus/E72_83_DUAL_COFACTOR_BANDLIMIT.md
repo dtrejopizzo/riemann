@@ -1,7 +1,6 @@
 # E72.83 -- Dual cofactor bandlimit
 
-**Date:** 2026-07-09.
-**Role:** identify the first positive compactness mechanism after the dual cofactor transport
+**Purpose:** identify the first positive compactness mechanism after the dual cofactor transport
 identity.
 
 **Correction:** E72.84 replaces the fixed-index version below by the invariant physical-height

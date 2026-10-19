@@ -1,7 +1,6 @@
 # E72.4 -- Dual variational form of reduced leakage
 
-**Date:** 2026-07-08.
-**Role:** convert the reduced leakage target of E72.3 into an exact dual variational estimate, suitable
+**Purpose:** convert the reduced leakage target of E72.3 into an exact dual variational estimate, suitable
 for a Sonin/Feshbach integration-by-parts proof.
 
 ## 0. Why this document exists

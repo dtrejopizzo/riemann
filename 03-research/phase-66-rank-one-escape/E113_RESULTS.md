@@ -1,6 +1,6 @@
 # E113 — T_N is Toeplitz (symbol = -ζ'/ζ on the critical line); ‖T_N‖ SATURATES in N
 
-**Date:** 2026-07-05 · `E113_TN_closedform.py` (closed-form overlaps, no quadrature, N up to 250).
+`E113_TN_closedform.py` (closed-form overlaps, no quadrature, N up to 250).
 
 ## RETRACTION of E112's extrapolation
 E112 fit `λ_max(T_N) ~ N^{2/3}` from N≤50 and inferred the loglog border extends to `(log|t0|)^{3/2}`.

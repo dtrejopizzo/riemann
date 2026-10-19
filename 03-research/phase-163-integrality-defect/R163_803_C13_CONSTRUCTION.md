@@ -1,0 +1,181 @@
+# R163_803 — Conjecture C_{1/3}: a discrete construction
+
+Pure math, no numerics. Sources:
+- R163_101 §4 (the conjecture and its heuristic);
+- R163_191 (FIX 1: the K-bound was only a sketch; FIX 2: the diagonal term contributes ≪ x^θ);
+- Broucke 2409.10051 §6.1 (ζ_θ, Lemma 6.2 at line 2537, the restriction θ ≥ ½ at line 2600);
+- BDV 2004.11501 §6 (the DMV random-prime method).
+
+Gate 1 and Row D stay OPEN. The theorem below concerns Beurling systems only, not ζ.
+
+**Verdict: PROVED (audit pass R163_891: VALID WITH FIXES; fixes applied ).** Conjecture C_{1/3} holds in the following strengthened form.
+
+> **Theorem C.** Fix θ ∈ (1/3, ½). There is a discrete Beurling system 𝒫, constructed at random, that has the following properties with probability 1. Its generalized primes have nonnegative integer multiplicities, its integers have nonnegative integer multiplicities, and
+> - (i) N_𝒫(x) = ρx + O_ε(x^{θ+ε}) for every ε > 0, with ρ > 0;
+> - (ii) ζ_𝒫(s) extends meromorphically to σ > (1−θ)/2. Its zeros there are exactly the points θ + (1−θ)ϱ, where ϱ runs over the nontrivial zeros of ζ, with the same multiplicities;
+> - (iii) in particular ζ_𝒫 has infinitely many zeros on Re s = (1+θ)/2 > ½, and in fact a positive proportion of zeros there (Selberg).
+
+So for θ ∈ (1/3, ½), an integer error O(x^{θ+ε}) with θ+ε < ½ does **not** force the Beurling RH in the discrete class. This settles the "θ < ½ ⇒ RH" side of BF_θ^disc negatively on (1/3, ½) (Paper 48 Problem 6). Precisely (audit pass R163_891): the error is x^{θ+ε}, so all statements hold **up to an arbitrarily small loss**. As an Axiom-A system the parameter is θ′ = θ + ε and the zeros lie at (1+θ′)/2 − ε/2. So for every θ′ ∈ (1/3, ½) the implication "N = ρx + O(x^{θ′}) ⇒ Beurling RH" fails in the discrete class, and Broucke's density range α > (1+θ′)/2 (proved optimal only for θ > ½, 2409:245–246) is optimal for discrete systems up to an arbitrarily small ε-loss. It is not shown to be sharp at a fixed θ′.
+
+The three steps of the brief are resolved as follows.
+- **(a)** The short-window K-bound is not needed. A rigorous replacement, Prop. 4, is proved by moments and needs no Perron formula.
+- **(b)** The full exp_* chaos is controlled exactly. It is a random multiplicative function with independent prime factors (§2), and every moment is bounded by a convergent Euler product (Lemma 3).
+- **(c)** No Rouché or Hurwitz argument is needed. ζ_𝒫/ζ_θ is a.s. analytic and zero-free in σ > (1−θ)/2, by an exact factorization (§5).
+
+## 0. The structural observation
+
+Write a = θ/(1−θ) ∈ (½, 1) and use the variable w = (s−θ)/(1−θ), so that s/(1−θ) = w + a.
+
+Every atom of Broucke's system ζ_θ(s) = ζ(w) lies on the set {n^{1/(1−θ)}}, and (n^{1/(1−θ)})^{−s} = n^{−(w+a)}.
+
+If the primes are taken at the points p^{k/(1−θ)}, then every product of primes is again of the form n^{1/(1−θ)}. The random factor ζ_𝒫/ζ_θ is then an ordinary Dirichlet series in w whose coefficients form a **multiplicative function with independent values at distinct rational primes p**. The exp_* chaos that R163_101 could not control factorizes over p. The threshold θ = 1/3 is exactly a = ½, which is where Σ_p p^{−2a} converges.
+
+## 1. Construction
+
+**Witt exponents.** For q > 1 and k ≥ 1 put c_k(q) = k^{−1} Σ_{d|k} μ(k/d) q^d. This is the necklace polynomial at real q. Then, as formal power series in z,
+
+  −log(1 − qz) = Σ_{k≥1} c_k(q) Σ_{j≥1} z^{kj}/j,  that is,  (1−qz)^{−1} = Π_k (1 − z^k)^{−c_k(q)}.  (1.1)
+
+This holds because Σ_{k|n} k c_k = q^n, by Möbius inversion. Both sides converge absolutely for |z| < 1/q, since |c_k(q)| ≤ 2q^k/k.
+
+**Sign of c_k.**
+- Suppose q ≥ 2. Then k c_k ≥ q^k − Σ_{d≤k/2} q^d ≥ q^k − 2q^{⌊k/2⌋} ≥ 0 for k ≥ 2, and c_1 = q > 0. So c_k ≥ 0 for all k.
+- Suppose 1 < q < 2. Then k c_k ≥ q^k − q^{k/2+1}/(q−1) > 0 for all k ≥ k₀(q). So c_k < 0 for only finitely many k.
+
+Put q_p = p^a. Then c_{p,k} := c_k(p^a) < 0 only for p < 2^{1/a} < 4, that is, p ∈ {2,3}, and only for finitely many k. Let 𝓔 be this finite exceptional set and c⁺_{p,k} = max(c_{p,k}, 0).
+
+**The random system.**
+- Let (b_{p,k}) be independent random variables, with b_{p,k} ∈ {⌊c⁺_{p,k}⌋, ⌈c⁺_{p,k}⌉} and E b_{p,k} = c⁺_{p,k}.
+- Put ε_{p,k} = b_{p,k} − c⁺_{p,k} ∈ (−1, 1). It has mean 0, and ε = 0 when c⁺ ∈ ℤ.
+- 𝒫 has b_{p,k} generalized primes at the point v_{p,k} = p^{k/(1−θ)} > 1. The multiplicities are nonnegative integers and the set of points is locally finite.
+- So ζ_𝒫(s) = Π_{p,k} (1 − v_{p,k}^{−s})^{−b_{p,k}}, and dN_𝒫 = exp_*(dΠ_𝒫) has nonnegative integer masses. It is a discrete system.
+
+**Factorization.** By (1.1) with z = p^{−(w+a)} we have q_p z = p^{−w}. Hence
+
+  ζ_𝒫(s) = ζ(w) · F(w) · G(w),  with
+  F(w) = Π_{(p,k)∈𝓔} (1 − p^{−k(w+a)})^{−|c_{p,k}|}  and  G(w) = Π_{p,k} (1 − p^{−k(w+a)})^{−ε_{p,k}}.  (1.2)
+
+This holds first for Re w > 1. F is a finite product, and it is analytic and zero-free for Re w > −a.
+
+## 2. The random multiplicative function
+
+Expand F·G = Σ_{n≥1} g_n n^{−(w+a)} and put γ_n = g_n n^{−a}, so that F(w)G(w) = Σ γ_n n^{−w}.
+
+**Lemma 1.**
+- (i) γ is multiplicative. The family (γ_{p^j})_{j≥0} depends only on (ε_{p,k})_{k≤j}, so these families are independent for distinct p.
+- (ii) γ_p = ε_{p,1} p^{−a}, so E γ_p = 0.
+- (iii) For every η > 0 there is C_η such that |γ_{p^j}| ≤ C_η (1+η)^j p^{−ja} for all p and j.
+
+*Proof.*
+- (i) The factor of F·G attached to p is a power series in p^{−w} whose coefficients involve only the ε_{p,k}.
+- (ii) Only the k = 1 factor contributes to p^{−w}. Here c_{p,1} = p^a > 0, so (p,1) ∉ 𝓔.
+- (iii) For |ε| < 1 and i ≥ 1, |binom(ε+i−1, i)| = Π_{j<i}|ε+j|/i! ≤ i!/i! = 1. So (1−z^k)^{−ε} is coefficientwise majorized by (1−z^k)^{−1}. The p-factor is therefore majorized by Π_k (1−z^k)^{−1} · Π_{(p,k)∈𝓔}(1−z^k)^{−|c|}, a fixed series analytic in |z| < 1. Its coefficients are ≤ C_η(1+η)^j. ∎
+
+**Exact formula for N_𝒫.** Write X = x^{1−θ}.
+
+Since ζ(w) = Σ d^a d^{−(w+a)}, the integers of 𝒫 are the points n^{1/(1−θ)} with mass Σ_{dm=n} d^a g_m. Hence
+
+  N_𝒫(x) = Σ_{m≤X} g_m S_a(X/m),  where S_a(Y) = Σ_{d≤Y} d^a.  (2.1)
+
+Also, N_𝒫(x) depends only on ⌊X⌋.
+
+For a < 1 and Y ≥ 1, Euler–Maclaurin gives an **exact** identity. It is checked at Y = 1 using ζ(−a) = a/(a+1) − ½ + a∫_1^∞ψ t^{a−1}dt:
+
+  S_a(Y) = Y^{a+1}/(a+1) + ζ(−a) + Y^a Φ(Y),  Φ(Y) := −ψ(Y) − aY^{−a}∫_Y^∞ ψ(t)t^{a−1}dt.  (2.2)
+
+Here ψ(t) = t − ⌊t⌋ − ½. Integrating by parts against ψ₁ (|ψ₁| ≤ 1/8) gives |∫_Y^∞ψ t^{a−1}dt| ≤ Y^{a−1}/4, hence |Φ(Y)| ≤ ½ + a/(4Y) ≤ 1.
+
+Insert (2.2) into (2.1). Since X^{a+1}/(a+1) = (1−θ)x and X^a = x^θ, this gives
+
+  N_𝒫(x) = (1−θ)x Σ_{m≤X} γ_m/m + ζ(−a) Σ_{m≤X} γ_m m^a + x^θ T(X),  T(X) := Σ_{m≤X} γ_m Φ(X/m).  (2.3)
+
+(2.3) is exact. No term of the chaos has been discarded, and the diagonal terms of R163_191 FIX 2 are included in γ.
+
+## 3. Moments: the chaos at all orders
+
+**Lemma 3 (uniform moments).** Let θ > 1/3, so 2a > 1, and let q ≥ 1 be an integer. There is a constant K_q, depending on θ and q only, such that for every finite family (c_m) with |c_m| ≤ 1,
+
+  E |Σ_m c_m γ_m|^{2q} ≤ K_q.
+
+*Proof.* Expand the (finite) power. Since γ is real, E(Σc_mγ_m)^{2q} = E|Σc_mγ_m|^{2q}, and
+
+  E|Σ c_mγ_m|^{2q} ≤ Σ_{m_1,…,m_{2q}} |E Π_i γ_{m_i}|.
+
+By Lemma 1(i), E Π_i γ_{m_i} = Π_p E Π_i γ_{p^{e_i(p)}}, where e_i(p) = v_p(m_i). Let E_p = Σ_i e_i(p).
+- If E_p = 1, the p-factor is E γ_p = 0, by Lemma 1(ii).
+- Otherwise, by Lemma 1(iii), the p-factor is bounded by C_η^{2q} r_p^{E_p}, where r_p = (1+η)p^{−a}. Choose η so that r_2 < 1.
+
+The number of 2q-tuples of exponents with sum E is binom(E+2q−1, 2q−1). The bounds are nonnegative, so the sum over **all** tuples (not just the finite family) is at most the Euler product
+
+  Π_p (1 + C_η^{2q} Σ_{E≥2} binom(E+2q−1, 2q−1) r_p^E).
+
+For r_p ≤ ½ the inner sum is ≤ K'_q r_p² ≪_q p^{−2a}, and Σ_p p^{−2a} < ∞ because 2a > 1. The finitely many p with r_p > ½ each give a finite factor. ∎
+
+The **only** place θ > 1/3 enters is the E = 2 term, which is Σ_p p^{−2a}. This is the variance threshold (1−θ)/2 of R163_101 in the w-normalisation.
+
+**Corollary 3′.** For every ε > 0, almost surely:
+- Γ(Y) := Σ_{m≤Y} γ_m ≪ Y^ε, and
+- T(X) ≪ X^ε,
+
+for all real Y ≥ 1 and all integers X ≥ 1.
+
+*Proof.* Γ is a step function of ⌊Y⌋, so integer Y suffice. T(X) is needed only at integer X: N_𝒫(x) depends only on ⌊X⌋, and ρx changes by ≪ x^θ when X ranges over [j, j+1). Apply Lemma 3, with c_m = 1_{m≤Y} or c_m = Φ(X/m)1_{m≤X}. Chebyshev gives P(|·| > Y^ε) ≤ K_q Y^{−2qε}. Take q > 1/ε and apply Borel–Cantelli. Then intersect over ε = 1/n. ∎
+
+**Proposition 4 (R163_101's K-bound, now proved).** Almost surely, K(Y) := Σ_{m≤Y} g_m = Σ_{m≤Y} γ_m m^a ≪ Y^{1/2+ε}. In the s-variable this is K(y) ≪ y^{(1−θ)/2+ε'}.
+
+*Proof.* (Restated after R163_891; the weight m^a is not covered by |c_m| ≤ 1.) Write K(Y) = Σ_{m≤Y} m^{½+ε}·γ′_m with γ′_m := m^{a−½−ε}γ_m. Then γ′ is multiplicative, the families (γ′_{p^j})_j are independent across p, Eγ′_p = 0, and |γ′_{p^j}| ≤ C_η(1+η)^j p^{−j(½+ε)}, i.e. Lemma 1 holds with r′_p = (1+η)p^{−½−ε}, and Σ_p r′_p² < ∞. Since 0 ≤ m^{½+ε}/Y^{½+ε} ≤ 1 for m ≤ Y, Lemma 3's proof applied to γ′ with c_m = (m/Y)^{½+ε}1_{m≤Y} gives E|K(Y)/Y^{½+ε}|^{2q} ≤ K′_q. Chebyshev and Borel–Cantelli over integers Y (q > 1/ε) give K(Y) ≪ Y^{½+2ε} a.s.; rename ε. ∎
+
+Prop. 4 is not needed for Theorem C. It answers step (a) of the brief rigorously, without Perron.
+
+## 4. Proof of Theorem C(i)
+
+Fix ε > 0 and work on the a.s. event of Cor. 3′.
+
+**First term.** For Re w ≥ 1, Σ|γ_n|n^{−Re w} < ∞ a.s., because E Σ|γ_n|n^{−1} ≤ Π_p(1 + O(p^{−1−a})) < ∞. So Σ_m γ_m/m = F(1)G(1) =: ρ/(1−θ). Here ρ > 0: F(1) is a finite product of positive numbers, and log G(1) = Σ_{p,k} ε_{p,k}(−log(1−p^{−k(1+a)})) converges absolutely, since |ε| < 1 and Σ_{p,k} p^{−k(1+a)} < ∞. So G(1) = exp(log G(1)) is a finite positive number (positivity of each local factor alone would not suffice).
+
+By partial summation with Γ(y) ≪ y^ε,
+
+  Σ_{m>X} γ_m/m = −Γ(X)/X + ∫_X^∞ Γ(y)y^{−2}dy ≪ X^{−1+ε}.
+
+So the first term of (2.3) is ρx + O(x·X^{−1+ε}) = ρx + O(x^{θ+ε'}).
+
+**Second term.** Σ_{m≤X} γ_m m^a = Γ(X)X^a − a∫_1^X Γ(y) y^{a−1} dy ≪ X^{a+ε} ≪ x^{θ+ε'}.
+
+**Third term.** x^θ T(X) ≪ x^θ X^ε.
+
+Hence N_𝒫(x) = ρx + O(x^{θ+ε'}). ∎
+
+The total-variation loss of Broucke (B2) (error x^{1−θ}) is replaced by an ℓ²-type bound. The obstruction at θ < ½ in 2409:2600 is bypassed.
+
+## 5. Proof of Theorem C(ii)–(iii)
+
+From (1.2), log G(w) = L(w) + R(w), where:
+- L(w) = Σ_p ε_{p,1} p^{−a} p^{−w};
+- R(w) = Σ_p ε_{p,1} Σ_{j≥2} p^{−j(w+a)}/j + Σ_p Σ_{k≥2} ε_{p,k} (−log(1−p^{−k(w+a)})).
+
+**R.** |ε| < 1, and the number of terms is controlled by Σ_p p^{−2(σ+a)}. So R converges absolutely and locally uniformly for Re w > ½ − a.
+
+**L.** L has independent, bounded, mean-zero coefficients with Σ_p Var(ε_{p,1})p^{−2a−2σ} < ∞ for σ > ½ − a. Kolmogorov's one-series (variance) criterion — independent mean-zero terms with summable variances — gives a.s. convergence at each point of a countable sequence σ_n ↓ ½ − a. By the Jensen–Cahen theorem, convergence of a Dirichlet series at s₀ implies locally uniform convergence in Re s > Re s₀. Since exp(L+R) = G on Re w > 1, the identity theorem extends the identity. So L is a.s. analytic in Re w > ½ − a.
+
+**Conclusion.** G = exp(L + R) is a.s. analytic and **zero-free** in Re w > ½ − a, and so is F. Note ½ − a < 0, and in the s-variable Re w > ½ − a is σ > θ + (1−θ)(½−a) = (1−θ)/2. By (1.2), ζ_𝒫/ζ(w) is analytic and zero-free there. This gives (ii): the trivial zeros w = −2, −4, … lie outside the region.
+
+For (iii): Hardy's zeros (and Selberg's positive proportion) on Re w = ½ map to Re s = θ + (1−θ)/2 = (1+θ)/2. ∎
+
+No sup bound for G is needed, so step (c) of the brief is vacuous.
+
+## 6. Checks against the record
+
+- **Révész 2207:1935 / Hilberdink.** For discrete systems, θ₀ = max(θ, sup β) > θ when θ < ½. Here sup β ≥ (1+θ)/2 > θ. Consistent.
+- **Hilberdink matching.** The ψ-exponent is ≥ (1+θ)/2 > ½, and 1/ζ_𝒫 has the same poles, so the M-exponent is also large. Consistent.
+- **R163_101 heuristic.** Θ(θ) = max(θ, (1−θ)/2). For θ > 1/3 it is confirmed rigorously (Thm C(i) and Prop. 4).
+- **R163_191 FIX 2.** The diagonal terms are inside γ_{p^j}, j ≥ 2, with E ≠ 0. They enter Lemma 3 through E_p ≥ 2 and are bounded at the same scale x^θ, as FIX 2 predicted.
+- **θ = ½.** Here a = 1 and (2.2) needs a < 1, so the theorem does not cover θ = ½. The extension at x^{½+ε} is a routine variant and is not claimed here.
+
+## 7. Limits of the method and residuals
+
+- **θ ≤ 1/3.** Then a ≤ ½ and Σ_p p^{−2a} = ∞. Lemma 3 fails already at q = 1, and E T(X)² ≫ Σ_{p≤X} p^{−2a} grows. Within this construction the variance is the true size, so the random-rounding exponent is max(θ, (1−θ)/2) as in R163_101.
+- **O163.803a.** Is there a discrete system with N = ρx + O(x^{θ}), θ ≤ 1/3, and a zero with β > ½? The quadratic-field Dedekind zetas (θ = 1/3, GRH expected) sit exactly at the boundary. Beating 1/3 needs rounding with negatively correlated ε (for example, dependent rounding across p), so that Σ Var does not diverge. This is open.
+- **O163.803b.** At θ = 1/3 the same proof gives T(X) ≪ exp(C√(log X)) in moments of order q ≍ √(log X). This is a plausible but unchecked refinement; it is not claimed.
+- **O163.803c.** The audit pass should check (2.2), the majorization in Lemma 1(iii) at the exceptional primes 2 and 3, and the Kolmogorov step.
+
+Program status: BF_θ^disc ("θ < ½ ⇒ Beurling RH") is **refuted for every θ′ ∈ (1/3, ½)** in the form "O(x^{θ′}) ⇏ RH" (up to arbitrarily small ε-loss; audit pass R163_891: VALID WITH FIXES, fixes applied; v1 kept as R163_803_v1.md). The open window is θ ≤ 1/3. Row D and Gate 1 are unchanged.

@@ -1,6 +1,5 @@
 # E74.5 - Exact 2x2 Schur branch formula
 
-Date: 2026-07-16.
 
 ## Purpose
 

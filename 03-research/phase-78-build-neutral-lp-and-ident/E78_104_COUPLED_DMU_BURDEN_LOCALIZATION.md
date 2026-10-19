@@ -1,6 +1,6 @@
 # E78.104 - The coupled `d_mu` burden localizes to the auxiliary branch `c_b -> y_b`
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** front B only, live object `DMU-COUPLED-GENERATOR` from E78.103.  
 **Class:** REDUCCION GENUINA.  
 **What we know after this doc that we did not know before:** within the exact

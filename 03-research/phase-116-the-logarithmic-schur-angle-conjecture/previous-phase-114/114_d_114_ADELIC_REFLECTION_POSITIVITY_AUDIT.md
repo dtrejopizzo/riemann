@@ -54,7 +54,7 @@ Fix a prime \(p\) and put \(\rho=p^{-1/2}\).  The centrally normalized
 sum-depth contact is
 
 \[
- H_p(r,s)=\log p\,\rho^{r+s},qquad r,s\geq0.           \tag{2.1}
+ H_p(r,s)=\log p\,\rho^{r+s},\qquad r,s\geq0.           \tag{2.1}
 \]
 
 For finitely supported coefficients \(a_r\),
@@ -82,7 +82,7 @@ cyclic Szegő vector
 Indeed
 
 \[
- P_{\mathbb Ch_p}S^kh_p=\rho^kh_p,qquad
+ P_{\mathbb Ch_p}S^kh_p=\rho^kh_p,\qquad
  \langle S^rh_p,S^sh_p\rangle=\rho^{|r-s|}.            \tag{2.5}
 \]
 
@@ -104,7 +104,7 @@ kernel of D.110.  Multiplication by \(\log p\) gives every
 Let
 
 \[
- A_\infty e_j=(j+\tfrac14)e_j,qquad j\geq0.           \tag{3.1}
+ A_\infty e_j=(j+\tfrac14)e_j,\qquad j\geq0.           \tag{3.1}
 \]
 
 For \(r,s>0\), define the heat Hankel kernel
@@ -197,7 +197,7 @@ Suppose there is a contraction
 
 \[
  \mathbb E_X:\overline{Y_+(\mathcal P)}
- \longrightarrow\overline{Y_-(\mathcal P)},qquad
+ \longrightarrow\overline{Y_-(\mathcal P)},\qquad
  Y_-F=\mathbb E_XY_+F                                   \tag{6.1}
 \]
 

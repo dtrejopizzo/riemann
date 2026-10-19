@@ -189,7 +189,7 @@ remark in Corollary 110.1.5, and is flagged as such).
 L_s$, $\mathrm{Prin}'(\mathcal G)$ (108\_03, 108\_31); the statement
 that $U_f$'s defining integral diverges for $f=f_s$ (108\_03 §1); the
 corner-pairing Weil-formula identity for $I_\partial$ (quoted in the phase
-prompt, 110\_00 §1).
+statement, 110\_00 §1).
 
 **Verified numerically:** Proposition 110.1.2's closed form (3.1), by direct
 quadrature under refinement of the truncation window; the divergence claims

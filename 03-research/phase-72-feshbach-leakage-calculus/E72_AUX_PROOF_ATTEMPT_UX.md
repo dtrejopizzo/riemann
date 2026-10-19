@@ -1,6 +1,5 @@
 # E72 auxiliary proof attempt -- constructing the non-circular primitive `u_x`
 
-**Date:** 2026-07-08.
 **Scope:** Phase 72 only.
 **Write constraint:** this file only.
 

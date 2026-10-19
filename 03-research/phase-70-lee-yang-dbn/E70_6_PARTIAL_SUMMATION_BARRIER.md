@@ -1,7 +1,6 @@
 # E70.6 — Partial-summation attack on the Hardy-Euler inequality
 
-**Date:** 2026-07-07.
-**Role:** attack the autocorrelation inequality directly and isolate the exact arithmetic cancellation
+**Purpose:** attack the autocorrelation inequality directly and isolate the exact arithmetic cancellation
 required.
 
 ## Starting inequality

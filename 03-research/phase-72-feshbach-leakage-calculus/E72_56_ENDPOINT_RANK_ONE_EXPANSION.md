@@ -1,7 +1,6 @@
 # E72.56 -- Endpoint rank-one expansion of the CCM overlap cells
 
-**Date:** 2026-07-08.
-**Role:** extract the boundary Taylor structure behind the Loewner cancellation observed in E72.55.
+**Purpose:** extract the boundary Taylor structure behind the Loewner cancellation observed in E72.55.
 
 ## 0. Endpoint coordinate
 

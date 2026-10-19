@@ -1,6 +1,6 @@
 # E78.60 - The denominator core is a normalized ternary cocycle, and the ternarity survives normalization
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

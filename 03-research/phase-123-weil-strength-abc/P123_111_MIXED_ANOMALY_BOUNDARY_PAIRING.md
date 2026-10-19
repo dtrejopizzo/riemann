@@ -1,6 +1,6 @@
 # P123.111 — The mixed anomaly is an exact boundary pairing
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY for the external
+Status: PROVED-IN-REPOSITORY for the external
 Bruhat test algebra in the induced single-zero representation. This
 pairing measures escape from a normal cutoff; it is not identified
 with the global arithmetic intersection form.

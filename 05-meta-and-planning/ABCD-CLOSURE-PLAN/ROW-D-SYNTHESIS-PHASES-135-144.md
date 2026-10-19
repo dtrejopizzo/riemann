@@ -1,6 +1,6 @@
-# Row D — lead synthesis after phases 135–144 (2026-09-13) and the decision point
+# Row D — synthesis after phases 135–144 and the decision point
 
-## 1. What was built (all hostile-audited; labels as recorded)
+## 1. What was built (all independently audited; labels as recorded)
 * The frame: Weil class `D^W`, canonical class `K` (Pólya kernel, `Φ_K = ξ`, `K > 0`), degree, affine
   duality `σ_K`, spectral bound Thm 11.14 with its exact constant (support function of the effective cone);
   splitting `D^W = Λ ⊥ P^W` with explicit `K_odd`; field-uniform version (`K_K` by contour shift; base
@@ -58,4 +58,4 @@ Close the trace-cone route with Restatement D.38.3a as its final form. Open phas
 function-field model of the frame, with the frame defect theorem as the test. Reason: it is the only
 proposal whose outcome is decidable in one phase and informative either way, and it would tell us
 *which* geometric ingredient the arithmetic frame lacks before we try to build (α). Then (α) in phase 146
-with that ingredient named. Owner decides.
+with that ingredient named. Author decides.

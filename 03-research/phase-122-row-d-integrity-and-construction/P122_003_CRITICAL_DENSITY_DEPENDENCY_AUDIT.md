@@ -42,10 +42,9 @@ critical-line zero would instead give `gg R log R` zeros.  Therefore
 
 No numerical value beyond a fixed positive proportion is used.
 
-## 2026 citation defect
+## Citation defect
 
-The phase-121 note formerly attributed arXiv `2608.13637` to
-"Claude/Anthropic".  The arXiv record lists Levent Alpöge and Ralph Furman
+The phase-121 note formerly misattributed arXiv `2608.13637`.  The arXiv record lists Levent Alpöge and Ralph Furman
 as the authors of *More than two thirds of the zeta zeros are simple and
 on the critical line*.  Its stronger bound is unnecessary here.  The
 phase-121 text has been corrected to use Conrey as the proof dependency

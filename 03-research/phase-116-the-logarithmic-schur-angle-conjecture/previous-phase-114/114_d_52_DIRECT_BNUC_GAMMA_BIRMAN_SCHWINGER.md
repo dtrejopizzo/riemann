@@ -6,7 +6,7 @@ There are three operators on the same compact window and confusing them
 reverses the index problem.  With
 
 \[
- L_T\geq0,qquad
+ L_T\geq0,\qquad
  m_T=2\sum_{(p,k)\in\mathcal P_T}{\log p\over p^{k/2}}+m_0,
  \qquad R_2=M_T^*CM_T,                                      \tag{1.1}
 \]
@@ -15,8 +15,8 @@ the exact identities are
 
 \[
  \boxed{
- B_T:=B_{{\rm nuc},T}=m_TI-L_T,qquad
- H_{0,T}=L_T-m_TI=-B_T,qquad
+ B_T:=B_{{\rm nuc},T}=m_TI-L_T,\qquad
+ H_{0,T}=L_T-m_TI=-B_T,\qquad
  QW_T=R_2-B_T.}                                              \tag{1.2}
 \]
 
@@ -35,7 +35,7 @@ Therefore row D asks for
 The direct Hodge certificate of D.47 is
 
 \[
- n_+(B_T)=1,qquad
+ n_+(B_T)=1,\qquad
  \mathrm{In}(M_TB_T^{-1}M_T^*)=(1,1,0),               \tag{1.5}
 \]
 
@@ -126,7 +126,7 @@ This is the direct Birman--Schwinger index problem.  It is not the scalar
 ground-state equation of D.49.  Along the path
 
 \[
- \mathcal B_T(s)=J_{\Gamma,T}+sK_T,qquad0\leq s\leq1,       \tag{3.4}
+ \mathcal B_T(s)=J_{\Gamma,T}+sK_T,\qquad0\leq s\leq1,       \tag{3.4}
 \]
 
 the desired theorem says that all but one of the initially positive Gamma
@@ -201,7 +201,7 @@ At a singular window one must replace (4.2) by the reduced inverse and
 verify
 
 \[
- M_T^*(\mathbb C^2)\subseteq\mathrm{Ran}\,B_T,qquad
+ M_T^*(\mathbb C^2)\subseteq\mathrm{Ran}\,B_T,\qquad
  \ker B_T\cap\ker M_T=0,                                    \tag{4.5}
 \]
 
@@ -215,7 +215,7 @@ criterion:
 > If, on every Galerkin cutoff and uniformly in its exhaustion,
 > 
 > \[
-> n_+(J_{\Gamma,T}+K_T)=1,qquad g_e(T)g_o(T)<0,              \tag{5.1}
+> n_+(J_{\Gamma,T}+K_T)=1,\qquad g_e(T)g_o(T)<0,              \tag{5.1}
 > \]
 > 
 > and (4.5) holds through singular limits, then
@@ -262,7 +262,7 @@ arithmetic oscillation estimate is presently available.
 The direct target
 
 \[
- n_+(B_T)=1,qquad \mathrm{In}(G_T)=(1,1,0)             \tag{7.1}
+ n_+(B_T)=1,\qquad \mathrm{In}(G_T)=(1,1,0)             \tag{7.1}
 \]
 
 implies the primitive sign and, after exhaustion, row D.  By the already

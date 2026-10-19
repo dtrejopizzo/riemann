@@ -1,6 +1,5 @@
 # E73.159 - Endpoint symmetric image audit
 
-Date: 2026-07-12.
 
 ## 1. Purpose
 

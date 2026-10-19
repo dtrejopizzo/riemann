@@ -1,157 +1,157 @@
-# III y IV.1 por matemática pura — dictamen C. > Referee: **Caterina **. Programa CCM, `phase-60-discriminant`.
-> Regla: frío. Un teorema forzado es peor que un hueco admitido. **No se prueba RH.**
-> Entrada (no re-derivada): QW forma de Weil real simétrica `(2N+1)²`; `ε₀=λ_min(QW)`,
-> `signo(ε₀)=RH-hasta-T*`, `T*=2πλ²`. Lema del horizonte (mío, B.2):
-> `N(T*)=2λ²logλ−λ²+O(logλ)`, `DOF(PW_Ω)=4λ²logλ`, densidad ceros/Nyquist `=1−1/(2logλ)<1`,
-> defecto `m≈2λ²`. `S_λ` = frame de ceros, `λ_min(S_λ)=0`, núcleo de dim `≈2λ²`.
-> `L=2logλ`, `Ω=logλ`, `d_k=2πk/L`. --- ## 0. La separación que gobierna todo (anti-conflación C.2) Antes de cualquier asintótica, fijo la distinción que el tribunal marcó como C.2 y que es la
-fuente de todos los auto-engaños posibles en III/IV.1: ``` S_λ = Σ_{|γ_ρ|≤T*} K_{γ_ρ} ⊗ K_{γ_ρ} (FRAME DE CEROS, núcleo de reproducción de PW_Ω) QW = forma de Weil completa = S_λ-parte + arquimediano w_arch + polo 𝒫
-``` - `λ_min(S_λ) = 0` **incondicionalmente**, porque `S_λ` es una suma de rango-1 PSD con núcleo no trivial (underspanning, B.2). Esto es **trivial y RH-neutral**.
-- `ε₀ = λ_min(QW)`. Su **tamaño** `|ε₀|` es análisis. Su **signo** es RH-hasta-T*. **La trampa.** El documento maestro (pre-auditoría) escribió "déficit `ε₀~C₀/λ²`" como si el
-conteo sub-crítico de `S_λ` controlara `ε₀`. **Es falso de raíz:** el conteo controla la
-geometría de `S_λ` (dimensión del núcleo, gap de frame), no el menor autovalor de `QW`, que
-recibe la contribución de `w_arch` y `𝒫` — y esa contribución es justamente la que carga el
-signo. Todo lo que sigue respeta esta separación al milímetro. Lo que el conteo SÍ controla lo
-demuestro abajo (Lema III.1); lo que NO controla lo declaro RH-hard con razón (§III.4). --- ## III. Lo que el conteo sub-crítico dice — y lo que no ### III.1 — El conteo controla la geometría del frame, no el signo de ε₀ **Lema III.1 (gap de frame inferior, incondicional). [SÓLIDO]**
-Sea `S_λ` el operador de frame de los ceros sobre `PW_Ω` restringido a `[−T*,T*]`, y sea
-`P_λ` la proyección al complemento ortogonal de `ker S_λ` (el rango efectivo, `dim ≈ 4λ²logλ`).
-Entonces sobre `ran P_λ`,
+# III and IV.1 by pure mathematics — ruling C. > Referee: **Caterina**. CCM Program, `phase-60-discriminant`.
+> Rule: cold. A forced theorem is worse than an admitted gap. **RH is not proved.**
+> Input (not re-derived): QW real symmetric Weil form `(2N+1)²`; `ε₀=λ_min(QW)`,
+> `sign(ε₀)=RH-up-to-T*`, `T*=2πλ²`. Horizon lemma (mine, B.2):
+> `N(T*)=2λ²logλ−λ²+O(logλ)`, `DOF(PW_Ω)=4λ²logλ`, zero density/Nyquist `=1−1/(2logλ)<1`,
+> deficit `m≈2λ²`. `S_λ` = zero frame, `λ_min(S_λ)=0`, kernel of dimension `≈2λ²`.
+> `L=2logλ`, `Ω=logλ`, `d_k=2πk/L`. --- ## 0. The separation that governs everything (anti-conflation C.2) Before any asymptotics, I fix the distinction that the panel flagged as C.2 and which is the
+source of every possible self-deception in III/IV.1: ``` S_λ = Σ_{|γ_ρ|≤T*} K_{γ_ρ} ⊗ K_{γ_ρ} (ZERO FRAME, reproducing kernel of PW_Ω) QW = full Weil form = S_λ-part + archimedean w_arch + pole 𝒫
+``` - `λ_min(S_λ) = 0` **unconditionally**, because `S_λ` is a sum of rank-1 PSD terms with nontrivial kernel (underspanning, B.2). This is **trivial and RH-neutral**.
+- `ε₀ = λ_min(QW)`. Its **size** `|ε₀|` is analysis. Its **sign** is RH-up-to-T*. **The trap.** The pre-audit master document wrote "deficit `ε₀~C₀/λ²`" as if the
+sub-critical count of `S_λ` controlled `ε₀`. **This is false at the root:** the count controls the
+geometry of `S_λ` (kernel dimension, frame gap), not the smallest eigenvalue of `QW`, which
+receives the contribution of `w_arch` and `𝒫` — and that contribution is exactly what carries the
+sign. Everything that follows respects this separation to the letter. What the count DOES
+control is proved below (Lemma III.1); what it does NOT control I declare RH-hard, with reason (§III.4). --- ## III. What the sub-critical count says — and what it does not ### III.1 — The count controls the frame geometry, not the sign of ε₀ **Lemma III.1 (lower frame gap, unconditional). [SOLID]**
+Let `S_λ` be the frame operator of the zeros on `PW_Ω` restricted to `[−T*,T*]`, and let
+`P_λ` be the projection onto the orthogonal complement of `ker S_λ` (the effective range, `dim ≈ 4λ²logλ`).
+Then on `ran P_λ`,
 ``` B_- ‖g‖² ≤ ⟨g, S_λ g⟩ ≤ B_+ ‖g‖², 0 < B_-, B_+ < ∞,
 ```
-con cotas de Plancherel–Pólya: `B_+ ≤ C logλ` (densidad de ceros local `≈ (logλ)/2π`,
-Nikolskii sobre `PW_Ω`), y `B_- > 0` por separación uniforme de los `γ_ρ` (gaps de Riemann–von
-Mangoldt `≥ c/logT > 0` en `|γ|≤T*`). *Prueba.* Sobre `ran P_λ` el sistema `{K_{γ_ρ}}_{|γ_ρ|≤T*}` es un frame de Riesz de su span,
-por la desigualdad de Plancherel–Pólya para `PW_Ω`: para nodos `{γ_ρ}` con separación
-`δ_ρ ≥ c/logT`, `Σ_ρ |g(γ_ρ)|² ≍ ‖g‖²` con constantes que dependen sólo de `δ` y de `Ω`. La
-cota superior `B_+ = O(logλ)` es Nikolskii (misma constante que `‖ξ̂‖²_{L²}=πlogλ` de N2). La
-inferior `B_->0` es la mitad inferior de Plancherel–Pólya, finita porque la separación es
-uniforme. ∎ **Lectura.** El sub-criticismo `1−1/(2logλ)<1` NO degrada `B_-` a 0 sobre `ran P_λ`: el
-underspanning vive **enteramente** en `ker S_λ` (las `≈2λ²` direcciones faltantes), y `ran P_λ`
-queda con un frame de Riesz genuino. Esto es lo máximo que el conteo da por sí solo, y es
-puramente análisis. **No toca a `ε₀`.** ### III.2 — Por qué el underspanning NO fuerza ε₀→0 (refutación de un atajo tentador) Sería tentador argüir: "como `ker S_λ` tiene dim `≈2λ²` y `Ξ_T` casi-vive ahí
-(`Ξ_T(γ_ρ)=O(e^{−πλ²})`), el menor autovalor de QW colapsa con `λ`." **Esto es un
-non-sequitur** y lo demuestro: **Obs III.2.** `λ_min(QW) = ε₀` NO está acotado por `λ_min(S_λ)=0`. Para una forma
-`QW = S_λ + W` con `W = w_arch + 𝒫` simétrica, Weyl da sólo
+with Plancherel–Pólya bounds: `B_+ ≤ C logλ` (local zero density `≈ (logλ)/2π`,
+Nikolskii on `PW_Ω`), and `B_- > 0` by uniform separation of the `γ_ρ` (Riemann–von
+Mangoldt gaps `≥ c/logT > 0` for `|γ|≤T*`). *Proof.* On `ran P_λ` the system `{K_{γ_ρ}}_{|γ_ρ|≤T*}` is a Riesz frame for its span,
+by the Plancherel–Pólya inequality for `PW_Ω`: for nodes `{γ_ρ}` with separation
+`δ_ρ ≥ c/logT`, `Σ_ρ |g(γ_ρ)|² ≍ ‖g‖²` with constants depending only on `δ` and `Ω`. The
+upper bound `B_+ = O(logλ)` is Nikolskii (the same constant as `‖ξ̂‖²_{L²}=πlogλ` from N2). The
+lower bound `B_->0` is the lower half of Plancherel–Pólya, finite because the separation is
+uniform. ∎ **Reading.** The sub-criticality `1−1/(2logλ)<1` does NOT degrade `B_-` to 0 on `ran P_λ`: the
+underspanning lives **entirely** in `ker S_λ` (the `≈2λ²` missing directions), and `ran P_λ`
+is left with a genuine Riesz frame. This is as much as the count alone gives, and it is
+pure analysis. **It does not touch `ε₀`.** ### III.2 — Why underspanning does NOT force ε₀→0 (refutation of a tempting shortcut) It would be tempting to argue: "since `ker S_λ` has dim `≈2λ²` and `Ξ_T` almost-lives there
+(`Ξ_T(γ_ρ)=O(e^{−πλ²})`), the smallest eigenvalue of QW collapses with `λ`." **This is a
+non-sequitur**, and I prove it: **Obs III.2.** `λ_min(QW) = ε₀` is NOT bounded by `λ_min(S_λ)=0`. For a form
+`QW = S_λ + W` with `W = w_arch + 𝒫` symmetric, Weyl gives only
 ``` λ_min(S_λ) + λ_min(W) ≤ ε₀ ≤ λ_min(S_λ) + λ_max(W), ⟹ λ_min(W) ≤ ε₀ ≤ λ_max(W).
 ```
-El término `S_λ` **cae fuera** de la cota (su `λ_min=0` no impone nada sobre `ε₀` salvo via
-`W`). Es decir: **el menor autovalor de QW está fijado por la parte arquimediana+polo `W`
-restringida al núcleo y rango de `S_λ`, no por la degeneración del frame.** El conteo da la
-geometría de `S_λ`; el signo y tamaño de `ε₀` los da `W` proyectado — y eso es exactamente la
-positividad de Weil. ∎ **Conclusión III.2.** *El underspanning NO fuerza `ε₀→0`.* Lo que el underspanning fuerza es
-que `ε₀` se decida en un subespacio de codimensión `≈2λ²` (donde `S_λ` es no degenerado) MÁS la
-acción de `W` sobre `ker S_λ`. La tasa de `ε₀` queda indeterminada por el conteo. **Esto
-desactiva, con prueba, la heurística `ε₀~C/λ²` como consecuencia del conteo.** ### III.3 — Cota de TAMAÑO incondicional para |ε₀| (lo que sí es análisis) Lo que sí puedo probar incondicionalmente es una **cota superior** de `|ε₀|` por el método de
-Rayleigh con un vector test — sin tocar el signo. **Lema III.3 (cota superior incondicional de |ε₀|). [SÓLIDO]**
-``` |ε₀| = |λ_min(QW)| ≤ min_{‖g‖=1, g∈PW_Ω} |⟨g,QW g⟩| (si la forma cambia de signo)
+The term `S_λ` **falls outside** the bound (its `λ_min=0` imposes nothing on `ε₀` except via
+`W`). That is: **the smallest eigenvalue of QW is fixed by the archimedean+pole part `W`
+restricted to the kernel and range of `S_λ`, not by the degeneracy of the frame.** The count gives
+the geometry of `S_λ`; the sign and size of `ε₀` are given by the projected `W` — and that is exactly the
+Weil positivity. ∎ **Conclusion III.2.** *Underspanning does NOT force `ε₀→0`.* What underspanning forces is
+that `ε₀` is decided on a subspace of codimension `≈2λ²` (where `S_λ` is non-degenerate) PLUS the
+action of `W` on `ker S_λ`. The rate of `ε₀` is left undetermined by the count. **This
+disables, with proof, the heuristic `ε₀~C/λ²` as a consequence of the count.** ### III.3 — Unconditional SIZE bound for |ε₀| (what analysis does give) What I can prove unconditionally is an **upper bound** on `|ε₀|` by the Rayleigh method
+with a test vector — without touching the sign. **Lemma III.3 (unconditional upper bound on |ε₀|). [SOLID]**
+``` |ε₀| = |λ_min(QW)| ≤ min_{‖g‖=1, g∈PW_Ω} |⟨g,QW g⟩| (if the form changes sign)
 ```
-y en particular, tomando como test el cuasi-elemento del núcleo `g₀ = Ξ_T/‖Ξ_T‖`,
-``` ⟨g₀, S_λ g₀⟩ = Σ_ρ |Ξ_T(γ_ρ)|² / ‖Ξ_T‖² = O(λ² e^{−2πλ²}/‖Ξ_T‖²) (super-pequeño), ⟹ |ε₀| ≤ ⟨g₀, QW g₀⟩ = ⟨g₀, W g₀⟩ + O(e^{−2πλ²}).
+and in particular, taking as test the near-kernel element `g₀ = Ξ_T/‖Ξ_T‖`,
+``` ⟨g₀, S_λ g₀⟩ = Σ_ρ |Ξ_T(γ_ρ)|² / ‖Ξ_T‖² = O(λ² e^{−2πλ²}/‖Ξ_T‖²) (super-small), ⟹ |ε₀| ≤ ⟨g₀, QW g₀⟩ = ⟨g₀, W g₀⟩ + O(e^{−2πλ²}).
 ```
-*Prueba.* Min-max de Courant–Fischer: `ε₀ ≤ ⟨g,QW g⟩` para todo `g` unitario; con `g₀` el
-término `S_λ` es exponencialmente pequeño por la propiedad de cuasi-anulación de `Ξ_T` en los
-ceros. Lo que queda, `⟨g₀,W g₀⟩`, es **un número determinado, analítico** (integral
-arquimediana + residuo de polo evaluados en `Ξ_T`). ∎ **Lo franco sobre la tasa.** `⟨g₀,W g₀⟩` es la **explicit-formula de Weil evaluada en `Ξ_T`**:
-es el término arquimediano `∫ Ξ_T · (Γ′/Γ)(¼+it/2)…` menos el de polo, normalizado por
-`‖Ξ_T‖² ≍ logλ` (Plancherel–Pólya). Su orden de magnitud es `O(1)` en escala absoluta y
-`O(1/logλ)` tras normalizar por `‖Ξ_T‖²`. **Pero su SIGNO es exactamente la positividad de Weil
-en `Ξ_T` = RH-local.** Por tanto: ``` ┌─────────────────────────────────────────────────────────────────────┐ │ |ε₀| ≲ |W(Ξ_T)|/‖Ξ_T‖² = O(1/logλ) — TAMAÑO, análisis (cota sup.) │ │ signo(ε₀) = signo de la forma de Weil en su minimizador — RH-local │ └─────────────────────────────────────────────────────────────────────┘
-``` **Aclaración crítica frente al documento maestro.** Esta cota es `O(1/logλ)`, **no** `C/λ²`. La
-afirmación pre-auditoría `ε₀~C₀/λ²` **no se sostiene** por este camino incondicional: confundía
-el gap de frame (geométrico, `O(λ²)` direcciones) con el autovalor de QW. Lo que el método de
-Rayleigh entrega francamente es `O(1/logλ)` (vía `‖Ξ_T‖²≍logλ`), y **sólo como cota superior
-del valor absoluto**. No puedo derivar la potencia exacta de `λ` sin la asintótica del operador
-de borde (IV.1), que está abierta. Declaro `ε₀ ~ C/λ²` **NO PROBADO** por medios de conteo. ### III.4 — El signo de ε₀ es RH y el conteo no lo alcanza (con razón demostrada) **Prop III.4.** El conteo sub-crítico es **invariante bajo el reflejo de un cero fuera del
-eje**. *Prueba:* mover `γ_ρ → x_ρ ± iη_ρ` no cambia `N(T*)` (el conteo cuenta ceros con
-`|γ|≤T*` por su parte real / módulo, Riemann–von Mangoldt es estable bajo perturbación de
-ordenadas pequeñas) ni `DOF(PW_Ω)` (depende sólo de `Ω` y `T*`). Luego densidad
-`=1−1/(2logλ)` en **ambos** regímenes (RH-true y RH-false). ∎ **Corolario (la pared).** Como el conteo no distingue RH-true de RH-false, **ningún argumento
-puramente de conteo/densidad puede fijar el signo de `ε₀`.** El signo entra por la
-**indefinición** de la forma: bajo RH, `A_λ(g,g)=Σ_ρ|g(γ_ρ)|²≥0` (suma de cuadrados, `ε₀≥0`);
-sin RH, los términos `g(γ_ρ)conj(g(conj γ_ρ))` con `γ_ρ∉ℝ` son **cruzados**, la forma es
-indefinida, `ε₀<0` posible. Eso es estructura de la forma cuadrática, no del conteo. **C.2/C.1
-confirmados: el signo es RH-hard.** ### III.5 — Consecuencia para el gap γ(λ) (separar finito de uniforme) **Lema III.5.** A cada `λ` finito, `γ(λ)=ε₁/ε₀−1>0` (B.3, simplicidad de H1). El conteo
-sub-crítico **no** da `liminf_λ γ(λ)>0`, y lo demuestro: *Prueba de la obstrucción.* `ε₁/ε₀` es un cociente de dos autovalores de QW; ambos heredan su
-escala de `W` proyectado sobre subespacios de `ran P_λ ⊕ ker S_λ`. El conteo fija la
-**dimensión** de esos subespacios (`≈2λ²` de núcleo), pero no la **brecha relativa** entre los
-dos autovalores más bajos, que es un dato del operador de borde tras `/ε₀` (IV.1). Como el
-conteo es invariante RH (III.4) y `γ` no lo es necesariamente (depende de `W`), **el conteo no
-puede entregar la uniformidad**. ∎ **Veredicto III.** Lo probado incondicionalmente por el conteo: (a) Lema III.1, frame de Riesz
-sobre `ran P_λ` con `B_->0`; (b) Obs III.2, el underspanning **no** fuerza `ε₀→0`; (c) Lema
-III.3, cota superior de tamaño `|ε₀|=O(1/logλ)`; (d) Prop III.4, el conteo es RH-neutral, luego
-el **signo de `ε₀` queda RH-hard**; (e) Lema III.5, `γ(λ)>0` finito pero **uniformidad
-abierta**. La afirmación `ε₀~C/λ²` se **retira** como no derivada. (H-pos) sigue siendo
-RH-hasta-T*. --- ## IV.1 — El operador límite al reescalar por la densidad ### IV.1.0 El factor 1−1/(2logλ) y el reescalamiento de horizonte El factor de densidad `ρ(λ)=1−1/(2logλ)` mide cuánto los ceros sub-muestrean la banda. La
-pregunta es: ¿hay un operador límite natural al reescalar el horizonte por `ρ`? **Lema IV.1.1 (escala natural del horizonte). [SÓLIDO, análisis]**
-Defino la coordenada de horizonte reescalada `τ = t/T*`, `τ∈[−1,1]`, y la densidad local de
-ceros en esa coordenada,
+*Proof.* Courant–Fischer min-max: `ε₀ ≤ ⟨g,QW g⟩` for any unit `g`; with `g₀` the
+`S_λ` term is exponentially small by the quasi-vanishing property of `Ξ_T` at the
+zeros. What remains, `⟨g₀,W g₀⟩`, is **a determined, analytic number** (archimedean
+integral + pole residue evaluated at `Ξ_T`). ∎ **Candidly about the rate.** `⟨g₀,W g₀⟩` is the **Weil explicit formula evaluated at `Ξ_T`**:
+it is the archimedean term `∫ Ξ_T · (Γ′/Γ)(¼+it/2)…` minus the pole term, normalized by
+`‖Ξ_T‖² ≍ logλ` (Plancherel–Pólya). Its order of magnitude is `O(1)` on the absolute scale and
+`O(1/logλ)` after normalizing by `‖Ξ_T‖²`. **But its SIGN is exactly the Weil positivity
+at `Ξ_T` = local RH.** Hence: ``` ┌─────────────────────────────────────────────────────────────────────┐ │ |ε₀| ≲ |W(Ξ_T)|/‖Ξ_T‖² = O(1/logλ) — SIZE, analysis (upper bound) │ │ sign(ε₀) = sign of the Weil form at its minimizer — local RH │ └─────────────────────────────────────────────────────────────────────┘
+``` **Critical clarification against the master document.** This bound is `O(1/logλ)`, **not** `C/λ²`. The
+pre-audit claim `ε₀~C₀/λ²` **does not hold up** via this unconditional route: it confused
+the frame gap (geometric, `O(λ²)` directions) with the eigenvalue of QW. What the Rayleigh method
+candidly delivers is `O(1/logλ)` (via `‖Ξ_T‖²≍logλ`), and **only as an upper bound on the absolute
+value**. I cannot derive the exact power of `λ` without the edge-operator asymptotics (IV.1),
+which is open. I declare `ε₀ ~ C/λ²` **NOT PROVED** by counting means. ### III.4 — The sign of ε₀ is RH, and the count cannot reach it (with proven reason) **Prop III.4.** The sub-critical count is **invariant under reflecting a zero off the
+axis**. *Proof:* moving `γ_ρ → x_ρ ± iη_ρ` does not change `N(T*)` (the count counts zeros with
+`|γ|≤T*` by their real part / modulus, Riemann–von Mangoldt is stable under small perturbations of
+the ordinates) nor `DOF(PW_Ω)` (which depends only on `Ω` and `T*`). Hence the density
+`=1−1/(2logλ)` holds in **both** regimes (RH-true and RH-false). ∎ **Corollary (the wall).** Since the count does not distinguish RH-true from RH-false, **no
+purely counting/density argument can fix the sign of `ε₀`.** The sign enters through the
+**indefiniteness** of the form: under RH, `A_λ(g,g)=Σ_ρ|g(γ_ρ)|²≥0` (sum of squares, `ε₀≥0`);
+without RH, the terms `g(γ_ρ)conj(g(conj γ_ρ))` with `γ_ρ∉ℝ` are **cross terms**, the form is
+indefinite, `ε₀<0` possible. That is structure of the quadratic form, not of the count. **C.2/C.1
+confirmed: the sign is RH-hard.** ### III.5 — Consequence for the gap γ(λ) (separating finite from uniform) **Lemma III.5.** At each finite `λ`, `γ(λ)=ε₁/ε₀−1>0` (B.3, H1 simplicity). The sub-critical
+count does **not** give `liminf_λ γ(λ)>0`, and I prove it: *Proof of the obstruction.* `ε₁/ε₀` is a ratio of two eigenvalues of QW; both inherit their
+scale from `W` projected onto subspaces of `ran P_λ ⊕ ker S_λ`. The count fixes the
+**dimension** of those subspaces (`≈2λ²` of kernel), but not the **relative gap** between the
+two lowest eigenvalues, which is a datum of the edge operator after `/ε₀` (IV.1). Since the
+count is RH-invariant (III.4) and `γ` is not necessarily so (it depends on `W`), **the count
+cannot deliver the uniformity**. ∎ **Verdict III.** Proved unconditionally by the count: (a) Lemma III.1, Riesz frame
+on `ran P_λ` with `B_->0`; (b) Obs III.2, underspanning **does not** force `ε₀→0`; (c) Lemma
+III.3, size upper bound `|ε₀|=O(1/logλ)`; (d) Prop III.4, the count is RH-neutral, hence
+the **sign of `ε₀` remains RH-hard**; (e) Lemma III.5, `γ(λ)>0` finite but **uniformity
+open**. The claim `ε₀~C/λ²` is **withdrawn** as underived. (H-pos) remains
+RH-up-to-T*. --- ## IV.1 — The limit operator upon rescaling by density ### IV.1.0 The factor 1−1/(2logλ) and the horizon rescaling The density factor `ρ(λ)=1−1/(2logλ)` measures how much the zeros undersample the band. The
+question is: is there a natural limit operator upon rescaling the horizon by `ρ`? **Lemma IV.1.1 (natural horizon scale). [SOLID, analysis]**
+Define the rescaled horizon coordinate `τ = t/T*`, `τ∈[−1,1]`, and the local zero
+density in that coordinate,
 ``` n_λ(τ) dτ = #{γ_ρ ∈ [T*τ, T*(τ+dτ)]}.
 ```
-Por Riemann–von Mangoldt, `n_λ(τ) = (T*/2π)·log(T*τ/2π)·(1+o(1)) = λ²·(logλ + log|τ|+…)`.
-Normalizando por la densidad de Nyquist `ν = T*·Ω/π = λ²·2logλ` (DOF por unidad de `τ`):
-``` n_λ(τ)/ν = ½ · [1 + (log|τ|)/(2logλ)] → ½ uniformemente en compactos de (0,1].
+By Riemann–von Mangoldt, `n_λ(τ) = (T*/2π)·log(T*τ/2π)·(1+o(1)) = λ²·(logλ + log|τ|+…)`.
+Normalizing by the Nyquist density `ν = T*·Ω/π = λ²·2logλ` (DOF per unit `τ`):
+``` n_λ(τ)/ν = ½ · [1 + (log|τ|)/(2logλ)] → ½ uniformly on compacts of (0,1].
 ```
-*Prueba.* Cociente directo de las dos asintóticas; el `log|τ|` queda dividido por `2logλ→∞`. ∎ **Lectura.** El reescalamiento por densidad **colapsa el factor `1−1/(2logλ)` a la constante
-`½`** en el bulk: la densidad de ceros tiende a la mitad de Nyquist en escala de horizonte. El
-defecto `1/(2logλ)` es un efecto de **orden subprincipal uniforme**, no localizado — vive
-distribuido en toda la banda, no en un borde. **Esto es informativo y es lo que el conteo da.** ### IV.1.2 — Por qué el conteo solo NO determina el operador límite (prueba) Ahora el punto severo. El reescalamiento da una **medida de muestreo límite** (densidad `½` de
-Nyquist), pero **no** un operador. Lo demuestro: **Prop IV.1.2 (no-determinación). [SÓLIDO]** Dos operadores con el mismo conteo asintótico de
-autovalores pueden tener operadores límite distintos tras `/ε₀`. *Prueba por exhibición:* el
-espectro relativo medido es `ε_k/ε₀ → (k+1)² = n²` con paridad alternante `(−1)^k`. El conteo
-de Weyl de un operador de 2º orden de Sturm–Liouville en `[0,1]` con condiciones de borde da
-`N(E) ~ (√E)/π · (longitud)`, es decir `E_k ~ c k²` — **compatible con `n²`**. Pero el **mismo**
-conteo `E_k~ck²` es compartido por:
-- el Laplaciano de Dirichlet `−d²/dx²` (constante),
-- cualquier `−d²/dx² + V(x)` con `V∈L¹` (mismo orden principal de Weyl, `V` sólo mueve subprincipales),
-- y operadores de Loewner/integrales compactos con núcleo ajustado al mismo conteo. El conteo `n²` fija sólo el **símbolo principal** (2º orden, una dimensión espacial), **no** el
-potencial `V` ni el coeficiente variable. ∎ **Corolario IV.1.2.** El espectro relativo `n²` es **necesario pero no suficiente** para
-identificar `Â_∞`. El conteo determina:
-- **orden** del operador límite: 2 (de `E_k ~ k²`),
-- **dimensión**: 1 (de la ley de Weyl unidimensional),
-- **paridad** `(−1)^k`: firma de operador de 2º orden auto-adjunto con espectro simple en intervalo (autofunciones con `k` nodos), y **no determina**: el potencial `V(x)`, los coeficientes variables, las condiciones de borde
-exactas (`ω*≈0.966π` es un dato de borde **no** capturado por el conteo). Esto es C.4 del
-tribunal, ahora con prueba: **la compacidad del Loewner crudo + la no-unicidad de Weyl obstruyen
-derivar el operador desde el conteo.** ### IV.1.3 — Lo que sí queda fijado: la clase del operador límite **Teorema IV.1.3 (clasificación parcial incondicional). [SÓLIDO]** Si el límite de escala
-`Â_∞ = lim_λ A_λ/ε₀` existe en resolvente fuerte (H-lim, abierto), entonces es un operador
-auto-adjunto en `L²(0,1)` (o `(0,ω*/π)`) con:
-1. resolvente compacta (espectro discreto `ε_k/ε₀→n²`),
-2. símbolo principal de 2º orden (ley de Weyl `n²` ⟹ no puede ser orden ≠2 ni dim ≠1),
-3. ground state simple y de signo... **NO determinado**: el carrier de borde `ω*≈0.966π≠π` prohíbe el signo definido (esto es exactamente la obstrucción de E1, ver M1). *Prueba.* (1)+(2) por la ley de Weyl inversa unidimensional (Birman–Schwinger / Weyl: el orden
-de crecimiento de los autovalores fija orden y dimensión del operador diferencial límite,
-unívocamente entre operadores diferenciales). (3) por el carrier de borde medido. ∎ **Lo que falta para cerrar IV.1 (declarado).** Pinear `V(x)` y las CB exactas requiere la
-asintótica fina del operador de borde: **Landau–Widom** (asintótica de autovalores de operadores
-de tipo Toeplitz/Wiener–Hopf truncados — el régimen correcto para frames band-limited
-sub-críticos) o la teoría de **de Branges** del espacio `H(E)` asociado a `ξ̂`. Esto es
-**análisis duro pero NO RH-hard**: el operador límite `Â_∞` es una pregunta espectral
-incondicional. Su identificación NO cierra RH; sólo cerraría (H-gap-uniforme) y (H-lim). El
-muro RH sigue en IV.2 (`ξ̂_∞=Ξ`), intocado por IV.1. ### IV.1.4 — Conexión Landau–Widom (la vía correcta, esbozada) El régimen sub-crítico `densidad = 1−1/(2logλ) < 1` es **exactamente** el régimen de
-Landau–Widom para operadores de concentración (prolate/Wiener–Hopf) **por debajo** del umbral
-crítico. En ese régimen el número de autovalores "próximos a 1" del operador de concentración
-`P_Ω 1_{[−T*,T*]} P_Ω` es `≈ (densidad)·DOF`, con una **capa de transición de ancho
-`O(log(T*Ω))`** alrededor del umbral. Mi predicción incondicional:
-``` #{autovalores de concentración ∈ (δ,1−δ)} = O(log(T* Ω)) = O(logλ),
+*Proof.* Direct ratio of the two asymptotics; the `log|τ|` term gets divided by `2logλ→∞`. ∎ **Reading.** Rescaling by density **collapses the factor `1−1/(2logλ)` to the constant
+`½`** in the bulk: the zero density tends to half of Nyquist in horizon scale. The
+defect `1/(2logλ)` is a **uniform subprincipal-order** effect, not localized — it lives
+distributed over the whole band, not at an edge. **This is informative, and it is what the count gives.** ### IV.1.2 — Why the count ALONE does not determine the limit operator (proof) Now the severe point. The rescaling gives a **limit sampling measure** (density `½` of
+Nyquist), but **not** an operator. I prove it: **Prop IV.1.2 (non-determination). [SOLID]** Two operators with the same asymptotic eigenvalue
+count can have different limit operators after `/ε₀`. *Proof by exhibition:* the
+measured relative spectrum is `ε_k/ε₀ → (k+1)² = n²` with alternating parity `(−1)^k`. The Weyl
+count of a 2nd-order Sturm–Liouville operator on `[0,1]` with boundary conditions gives
+`N(E) ~ (√E)/π · (length)`, i.e. `E_k ~ c k²` — **compatible with `n²`**. But the **same**
+count `E_k~ck²` is shared by:
+- the Dirichlet Laplacian `−d²/dx²` (constant),
+- any `−d²/dx² + V(x)` with `V∈L¹` (same Weyl leading order, `V` only shifts subprincipal terms),
+- and Loewner/compact integral operators with a kernel tuned to the same count. The count `n²` only fixes the **principal symbol** (2nd order, one spatial dimension), **not** the
+potential `V` nor the variable coefficient. ∎ **Corollary IV.1.2.** The relative spectrum `n²` is **necessary but not sufficient** to
+identify `Â_∞`. The count determines:
+- the **order** of the limit operator: 2 (from `E_k ~ k²`),
+- the **dimension**: 1 (from the one-dimensional Weyl law),
+- the parity `(−1)^k`: the signature of a self-adjoint 2nd-order operator with simple spectrum on an interval (eigenfunctions with `k` nodes), and it does **not determine**: the potential `V(x)`, the variable coefficients, the exact
+boundary conditions (`ω*≈0.966π` is a boundary datum **not** captured by the count). This is C.4 of
+the panel, now with proof: **the compactness of the crude Loewner kernel + the non-uniqueness of Weyl
+obstruct deriving the operator from the count.** ### IV.1.3 — What IS fixed: the class of the limit operator **Theorem IV.1.3 (partial unconditional classification). [SOLID]** If the scaling
+limit `Â_∞ = lim_λ A_λ/ε₀` exists in strong resolvent sense (H-lim, open), then it is a
+self-adjoint operator on `L²(0,1)` (or `(0,ω*/π)`) with:
+1. compact resolvent (discrete spectrum `ε_k/ε₀→n²`),
+2. 2nd-order principal symbol (Weyl's law `n²` ⟹ it cannot be of order ≠2 nor dim ≠1),
+3. a simple ground state of... sign **NOT determined**: the boundary carrier `ω*≈0.966π≠π` forbids a definite sign (this is exactly the E1 obstruction, see M1). *Proof.* (1)+(2) by the inverse one-dimensional Weyl law (Birman–Schwinger / Weyl: the growth
+order of the eigenvalues fixes the order and dimension of the limit differential operator,
+uniquely among differential operators). (3) by the measured boundary carrier. ∎ **What is missing to close IV.1 (stated plainly).** Pinning down `V(x)` and the exact boundary conditions requires the
+fine asymptotics of the edge operator: **Landau–Widom** (eigenvalue asymptotics of Toeplitz/Wiener–Hopf-type
+truncated operators — the correct regime for sub-critical band-limited frames)
+or **de Branges** theory of the `H(E)` space associated to `ξ̂`. This is
+**hard analysis but NOT RH-hard**: the limit operator `Â_∞` is an unconditional spectral
+question. Identifying it does NOT close RH; it would only close (H-gap-uniform) and (H-lim). The
+RH wall remains in IV.2 (`ξ̂_∞=Ξ`), untouched by IV.1. ### IV.1.4 — Landau–Widom connection (the correct route, sketched) The sub-critical regime `density = 1−1/(2logλ) < 1` is **exactly** the Landau–Widom regime
+for concentration operators (prolate/Wiener–Hopf) **below** the critical threshold. In that regime
+the number of eigenvalues "close to 1" of the concentration operator
+`P_Ω 1_{[−T*,T*]} P_Ω` is `≈ (density)·DOF`, with a **transition layer of width
+`O(log(T*Ω))`** around the threshold. My unconditional prediction:
+``` #{concentration eigenvalues ∈ (δ,1−δ)} = O(log(T* Ω)) = O(logλ),
 ```
-que coincide en orden con la amplitud `Γ=O(logλ)` de N2 (no es coincidencia: ambos miden la
-capa de transición de Landau–Widom). El operador de borde `Â_∞` es el **límite reescalado de
-esa capa de transición**, y su espectro `n²` es el espectro del generador de la capa
-(2º orden por la teoría de Slepian del bulk-edge de prolatos). **Esto da una identificación
-candidata concreta y falsable, no fenomenológica — pero su verificación es el residual IV.1
-abierto.** --- ## Veredicto final (III + IV.1) **Probado incondicionalmente (análisis puro):**
-- **III.1** frame de Riesz sobre `ran P_λ`, `0<B_-≤B_+=O(logλ)` (Plancherel–Pólya/Nikolskii).
-- **III.2** el underspanning **NO** fuerza `ε₀→0` (Weyl: `S_λ` cae fuera de la cota de `ε₀`).
-- **III.3** cota superior de **tamaño** `|ε₀| = O(1/logλ)` por Rayleigh con test `Ξ_T` (no `C/λ²` — eso se retira como no derivado).
-- **III.4** el conteo es **RH-neutral** (invariante bajo reflejo de ceros) ⟹ signo de `ε₀` fuera de su alcance.
-- **III.5** `γ(λ)>0` finito (B.3); uniformidad `liminf γ>0` **abierta** (no es del conteo).
-- **IV.1.1** el reescalamiento por densidad colapsa `1−1/(2logλ)→½` (densidad mitad de Nyquist).
-- **IV.1.2** el conteo `n²` fija orden=2, dim=1, paridad `(−1)^k`, y **NO** el potencial/CB (no-unicidad de Weyl + compacidad Loewner = C.4 con prueba).
-- **IV.1.3** clasificación parcial de `Â_∞` (auto-adjunto, resolvente compacta, 2º orden).
-- **IV.1.4** vía Landau–Widom como identificación candidata falsable (residual abierto). **RH-hard (con razón demostrada, no movido un milímetro):**
-- **signo(ε₀)** = positividad de Weil-hasta-T* (III.4): el conteo es invariante RH.
-- **(H-pos)** y **H1′** siguen siendo RH-hasta-T*.
-- **IV.2 (`ξ̂_∞=Ξ`)** intocado: IV.1 sólo identificaría la *forma* de `Â_∞`, no que su ground state sea `Ξ_T` (eso es el déficit de frame RH-hard, C.1). **Frase final ().** El conteo sub-crítico es un instrumento de **geometría** (dimensión
-de núcleo, gap de frame, densidad de muestreo, orden del operador de borde) y entrega todo eso
-limpiamente. Pero es **estructuralmente ciego al signo**: invariante bajo el reflejo de un cero,
-no puede ver RH. La tentación de leer `ε₀~C/λ²` desde el conteo era una **conflación
-`S_λ` vs `QW`** (C.2) y queda refutada: lo franco es `|ε₀|=O(1/logλ)` como cota de tamaño, con
-el signo RH-hard. IV.1 es análisis duro (Landau–Widom) que cerraría el gap uniforme pero **no
-toca el muro**. El corazón no se mueve. — C. 
+which matches in order the amplitude `Γ=O(logλ)` from N2 (not a coincidence: both measure
+the Landau–Widom transition layer). The edge operator `Â_∞` is the **rescaled limit of
+that transition layer**, and its spectrum `n²` is the spectrum of the layer's generator
+(2nd order, by Slepian's theory of the prolate bulk-edge). **This gives a concrete, falsifiable
+candidate identification, not a phenomenological one — but its verification is the open
+IV.1 residual.** --- ## Final verdict (III + IV.1) **Proved unconditionally (pure analysis):**
+- **III.1** Riesz frame on `ran P_λ`, `0<B_-≤B_+=O(logλ)` (Plancherel–Pólya/Nikolskii).
+- **III.2** underspanning does **NOT** force `ε₀→0` (Weyl: `S_λ` falls outside the bound on `ε₀`).
+- **III.3** **size** upper bound `|ε₀| = O(1/logλ)` via Rayleigh with test `Ξ_T` (not `C/λ²` — withdrawn as underived).
+- **III.4** the count is **RH-neutral** (invariant under reflecting zeros) ⟹ the sign of `ε₀` is out of its reach.
+- **III.5** `γ(λ)>0` finite (B.3); uniformity `liminf γ>0` **open** (not given by the count).
+- **IV.1.1** rescaling by density collapses `1−1/(2logλ)→½` (half-Nyquist density).
+- **IV.1.2** the count `n²` fixes order=2, dim=1, parity `(−1)^k`, and does **NOT** fix the potential/boundary conditions (Weyl non-uniqueness + Loewner compactness = C.4 with proof).
+- **IV.1.3** partial classification of `Â_∞` (self-adjoint, compact resolvent, 2nd order).
+- **IV.1.4** Landau–Widom route as a falsifiable candidate identification (open residual). **RH-hard (with proven reason, not moved an inch):**
+- **sign(ε₀)** = Weil positivity up to T* (III.4): the count is RH-invariant.
+- **(H-pos)** and **H1′** remain RH-up-to-T*.
+- **IV.2 (`ξ̂_∞=Ξ`)** untouched: IV.1 would only identify the *form* of `Â_∞`, not that its ground state is `Ξ_T` (that is the frame deficit, RH-hard, C.1). **Final sentence (C.).** The sub-critical count is an instrument of **geometry** (kernel
+dimension, frame gap, sampling density, boundary operator order) and delivers all of that
+cleanly. But it is **structurally blind to the sign**: invariant under reflecting a zero,
+it cannot see RH. The temptation to read `ε₀~C/λ²` from the count was a **conflation of
+`S_λ` vs `QW`** (C.2) and is refuted: what is candid is `|ε₀|=O(1/logλ)` as a size bound, with
+the sign RH-hard. IV.1 is hard analysis (Landau–Widom) that would close the uniform gap but **does not
+touch the wall**. The core does not move. — C.

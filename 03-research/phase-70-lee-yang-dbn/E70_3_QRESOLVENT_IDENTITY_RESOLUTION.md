@@ -1,7 +1,6 @@
 # E70.3 — Resolution of the q-resolvent identity
 
-**Date:** 2026-07-07.
-**Role:** answer whether the Phase-70 closure identity can be solved as a standalone mathematical
+**Purpose:** answer whether the Phase-70 closure identity can be solved as a standalone mathematical
 identity.
 
 ## Verdict

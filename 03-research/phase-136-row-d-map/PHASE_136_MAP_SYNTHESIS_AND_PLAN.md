@@ -1,10 +1,9 @@
 # Phase 136 — the map of where not to go, what it proves, and the plan for row D
 
-Author: session lead (Fable 5.1). Date: 2026-09-13. Inputs: MAP_1 (walls and master
+Inputs: MAP_1 (walls and master
 documents), MAP_2 sectors (phases 0–60), MAP_3 sectors (61–110), MAP_4 (111–135 and
 Papers 42–46), MAP_5 (literature vs corpus), LEAD_NOTE (off-the-page candidates), and
-Connes–Consani 2006.13771 read from source. All sector reports were produced by
-Sonnet-class agents with grep-verified quotes; the synthesis and the decisions are mine.
+Connes–Consani 2006.13771 read from source. All sector reports were produced with grep-verified quotes.
 
 ## 0. Thermometer
 
@@ -71,7 +70,7 @@ lattice through an object that (i) is not model-uniform, (ii) grows quadraticall
 |---|---|---|
 | MW-5 / R16 "no quadratic Riemann–Roch over `Spec Z`" | over-generalized: answered only for CC's *curve* object; the square was never tested; Paper 46 Thm 12.3 needs only `h⁰ ≥ 0`, not integrality | **reopened** (this campaign) |
 | P122.007 "arithmetic Hodge index not applicable" | correct as an *import* ban; never asked whether the Hilbert–Samuel **mechanism** (fibre rank × archimedean size) can be rebuilt on the `S`-square | reopened as D-HS (LEAD_NOTE §1) |
-| Phase 65 `RH-PROOF.md` (Vitali/Montel strip-crossing capstone, self-styled "complete, RH-free chain") | **never audited**; uses the same strip-crossing extension that the same phase's D8.5b-i refutes for a parallel object; MAP_3 flags it as the strongest circularity concern in the corpus | **mandatory hostile audit** (a purported proof cannot sit unaudited in the repository) |
+| Phase 65 `RH-PROOF.md` (Vitali/Montel strip-crossing capstone, self-styled "complete, RH-free chain") | **never audited**; uses the same strip-crossing extension that the same phase's D8.5b-i refutes for a parallel object; MAP_3 flags it as the strongest circularity concern in the corpus | **mandatory audit** (a purported proof cannot sit unaudited in the repository) |
 | GAP-135.B (semilocal object with `a ≥ 0` and polar block, "next document") | never written | reopened (S2 below) |
 | ES-8 signed `ψ(x) − x` route | only the absolute-value route is closed | admissible, low priority |
 | Phase 62/63 "gapless" verdicts | float64 noise floor, not theorems; the analytic statement "margin → 0" is heuristic | not reopened as a route (cluster B), but the analytic gaplessness theorem is a clean target for a later note |
@@ -146,17 +145,17 @@ block is paid. No campaign target is "prove the sign".
 
 ## 6. Phase 136 campaign design
 
-Rules: builder + hostile auditor every round; lead as audit of record with independent
+Rules: independent
 derivations written before reading; labels as in phases 131–135; numerics only as
 identity checks with a fast mode; every theorem run against `Ξ_a` and Davenport–
 Heilbronn; nothing defined through the zeros' location; a theorem valid for `Ξ_a`
 carries no sign and says so.
 
-Round 0 (lead): blueprint R136_000 with S1–S4 as theorems D.11–D.14 and the mandatory
-hostile audit of phase 65 `RH-PROOF.md` as item D.0.
-Round 1 (builder): D.0 audit report; D.11 (S1) full-lattice growth — theorem or refutation;
+Round 0: blueprint R136_000 with S1–S4 as theorems D.11–D.14 and the mandatory
+audit of phase 65 `RH-PROOF.md` as item D.0.
+Round 1: D.0 audit report; D.11 (S1) full-lattice growth — theorem or refutation;
 D.12 (S2) semilocal positivity with polar block — exact scope; D.13 (S3) dictionary.
-Round 2 (hostile), round 3 (builder repairs), round 4 (hostile confirmation), lead decision.
+Round 2 (audit), round 3 (repairs), round 4 (confirmation), decision.
 Round 5+ (only if D.11 gives super-logarithmic growth or D.12 gives a positive scope
 beyond `log 2`): D.14 (S4) definability T1 and growth T2.
 

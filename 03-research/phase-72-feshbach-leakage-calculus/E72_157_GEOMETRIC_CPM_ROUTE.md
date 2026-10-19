@@ -1,7 +1,6 @@
 # E72.157 -- Geometric CPM route
 
-**Date:** 2026-07-09.
-**Role:** replace root-specific `CPM-ORTH` by a uniform geometric kernel estimate.
+**Purpose:** replace root-specific `CPM-ORTH` by a uniform geometric kernel estimate.
 
 ## 0. Uniform kernel estimate
 

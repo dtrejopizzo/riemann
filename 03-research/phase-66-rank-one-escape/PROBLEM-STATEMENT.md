@@ -1,6 +1,5 @@
 # Phase 66 — The rank-one escape dichotomy (CAND-1, operator convergence, not positivity)
 
-**Opened:** 2026-07-05
 **Route:** CAND-1 (Zeta Spectral Triples, Connes–Consani–Moscovici 2025–26, arXiv:2511.22755).
 **Why this and not the positivity routes:** the operators are self-adjoint BY CONSTRUCTION
 (Carathéodory–Fejér), so there is **no Weil positivity to prove** — Master Wall MW-1 is sidestepped.

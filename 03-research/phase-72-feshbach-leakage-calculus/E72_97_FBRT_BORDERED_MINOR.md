@@ -1,7 +1,6 @@
 # E72.97 -- FBRT bordered minor
 
-**Date:** 2026-07-09.
-**Role:** express the finite-band Stieltjes defect as a single bordered determinant.
+**Purpose:** express the finite-band Stieltjes defect as a single bordered determinant.
 
 ## 0. Input
 

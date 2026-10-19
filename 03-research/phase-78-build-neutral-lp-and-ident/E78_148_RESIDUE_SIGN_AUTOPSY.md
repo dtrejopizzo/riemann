@@ -1,6 +1,6 @@
 # E78.148 - Residue sign autopsy: the Herglotz route to the zero-side is dead
 
-**Run:** 2026-07-21.
+**Run:**
 **Scope:** IDENT, fixed-L; companion to E78.147.
 **Class:** AUTOPSIA (refutes one rigorization route; sharpens the open lemma).
 

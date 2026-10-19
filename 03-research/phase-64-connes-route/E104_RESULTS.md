@@ -1,6 +1,6 @@
 # E104 — Connes round 2, §7: Pick-matrix passivity of the shifted scattering family (CONFIRMED, sharp)
 
-**Date:** 2026-06-27 · mpmath dps=30 · the decisive test from Connes' second reply.
+mpmath dps=30 · the decisive test from Connes' second reply.
 
 ## The object
 
@@ -49,7 +49,7 @@ Pick-PSD for **all** point-sets and **all** `ω>0` (equivalently the de Branges 
 exactly Connes' adelic statement: *the critical de Branges kernel is the Gram kernel of an adelic
 passive colligation* — the unconditional `ω>½` colligation continued to `ω=0`.
 
-## Audit (2026-06-28) — precision correction, claim upheld
+## Audit — precision correction, claim upheld
 
 The float64 Pick eigenvalues are **unreliable**: with stress points placed *near actual zero
 ordinates*, the Pick matrix is extremely ill-conditioned (cond ~1e16) and its min eig sits at the

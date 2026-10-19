@@ -1,6 +1,6 @@
 # E78.27 - Quantitative contraction form of `SAFE-U-DECAY`
 
-**Run:** 2026-07-18.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 # ======================================================================================
-# Phase 60 — CCM alta precision (mpmath).  Baseline de convergencia para ζ (RH-true).
+# Phase 60 — high-precision CCM (mpmath).  Convergence baseline for ζ (RH-true).
 #
-# E4 (float64) reprodujo los ceros a 1e-15 pero se degrada a N grande (limite de maquina).
-# Para medir TASAS de convergencia honestamente (Eslabon 2a: N->inf ; 2b: lambda->inf)
-# hace falta alta precision. Aqui repetimos la construccion CCM fiel en mpmath y medimos
-#   err_1(λ,N) = |raiz_1(λ,N) - γ_1|     con γ_1 = 14.134725141734693790...
-# como funcion de N (a λ fijo) y de λ (a N fijo). Esta curva es el BASELINE RH-true
-# contra el que se comparara L_DH (RH-false) en E5.
+# E4 (float64) reproduced the zeros to 1e-15 but degrades at large N (machine limit).
+# To measure convergence RATES reliably (Link 2a: N->inf ; 2b: lambda->inf)
+# high precision is needed. Here the faithful CCM construction is repeated in mpmath, measuring
+#   err_1(λ,N) = |root_1(λ,N) - γ_1|     with γ_1 = 14.134725141734693790...
+# as a function of N (at fixed λ) and of λ (at fixed N). This curve is the RH-true BASELINE
+# against which L_DH (RH-false) is compared in E5.
 #
-# Construccion (identica a E4, eq 3.13-3.16 CCM 2511.22755), en mpmath:
+# Construction (identical to E4, eq 3.13-3.16 CCM 2511.22755), in mpmath:
 #   QW[m,n] = W02#(F) - WR#(F) - Σ_p Wp#(F),  F=q(U_m,U_n)∘log
-#   eigenvalues = raices de f(s)=Σ_k ξ_k/(s-2πk/L), ξ=autovector menor autovalor.
+#   eigenvalues = roots of f(s)=Σ_k ξ_k/(s-2πk/L), ξ=eigenvector of the smallest eigenvalue.
 # ======================================================================================
 import mpmath as mp
 mp.mp.dps = 40
@@ -64,7 +64,7 @@ def lowest_xi(lam,N):
 def root_near(xi,idx,L,target):
     d=[2*mp.pi*k/L for k in idx]
     f=lambda s: mp.fsum([xi[i]/(s-d[i]) for i in range(len(d))])
-    # bracket alrededor de target entre polos consecutivos
+    # bracket around target between consecutive poles
     ds=sorted(d)
     lo=max([x for x in ds if x<target], default=target-1)
     hi=min([x for x in ds if x>target], default=target+1)
@@ -79,7 +79,7 @@ def root_near(xi,idx,L,target):
 if __name__=="__main__":
     g1=mp.mpf('14.134725141734693790')
     print("="*70)
-    print(" CCM alta precision: convergencia de la raiz 1 a γ_1 (RH-true ζ)")
+    print(" High-precision CCM: convergence of root 1 to γ_1 (RH-true ζ)")
     print(f" γ_1 = {g1}")
     print("="*70)
     print("\n Eslabon 2a: N->inf a λ=3.7 fijo (primos<=13)")

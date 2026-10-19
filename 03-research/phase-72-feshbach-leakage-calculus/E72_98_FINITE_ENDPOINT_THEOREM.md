@@ -1,7 +1,6 @@
 # E72.98 -- Finite endpoint theorem
 
-**Date:** 2026-07-09.
-**Role:** state the final finite reduction obtained in Phase 72.
+**Purpose:** state the final finite reduction obtained in Phase 72.
 
 ## 0. Finite data
 

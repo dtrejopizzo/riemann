@@ -49,7 +49,7 @@ to \(n\in\mathbb N^\times\).  The time evolution is
 In the canonical low-temperature representation,
 
 \[
- H\epsilon_n=(\log n)\epsilon_n,qquad e^{itH}\epsilon_n=n^{it}\epsilon_n.
+ H\epsilon_n=(\log n)\epsilon_n,\qquad e^{itH}\epsilon_n=n^{it}\epsilon_n.
                                                                   \tag{1.2}
 \]
 
@@ -124,7 +124,7 @@ In the Gibbs range,
 For one prime,
 
 \[
- Z_p(\beta)={1\over1-p^{-\beta}},qquad
+ Z_p(\beta)={1\over1-p^{-\beta}},\qquad
  -\partial_\beta\log Z_p(\beta)
  ={(\log p)p^{-\beta}\over1-p^{-\beta}}
  =\sum_{k\geq1}(\log p)p^{-k\beta}.                   \tag{3.2}
@@ -140,7 +140,7 @@ Thus the modular logarithmic derivative does produce \(\Lambda\), not
 \(d(n)\).  Globally, however,
 
 \[
- \sum_n n^{-1/2}=\infty,qquad
+ \sum_n n^{-1/2}=\infty,\qquad
  \sum_p{(\log p)p^{-1/2}\over1-p^{-1/2}}=\infty.       \tag{3.4}
 \]
 
@@ -170,7 +170,7 @@ The same occurs for the positive modular Dirichlet form
 
 \[
  \mathcal E_\beta(x)=
- \varphi_\beta(\delta(x)^*\delta(x)),qquad
+ \varphi_\beta(\delta(x)^*\delta(x)),\qquad
  \delta(\mu_n)=i(\log n)\mu_n.                         \tag{4.3}
 \]
 

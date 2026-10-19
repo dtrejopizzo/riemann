@@ -1,7 +1,6 @@
 # E70.4 — AHM reduces to Weil positivity on Cauchy test squares
 
-**Date:** 2026-07-07.
-**Role:** push the Arithmetic Herglotz Majorization route as far as it can go without fabricating a
+**Purpose:** push the Arithmetic Herglotz Majorization route as far as it can go without fabricating a
 proof of RH.
 
 ## Verdict

@@ -1,0 +1,2156 @@
+                                                  ZERO DENSITY THEOREMS FOR SHORT INTERVALS
+
+
+                                                                                    ANDREW FIORI
+
+
+                                                    Abstract. We provide explicit bounds on the number of zeros for ζ in short
+arXiv:2609.22624v1 [math.NT] 18 Sep 2026
+
+
+
+
+                                                    intervals near the edge of the critical strip. Ultimately we show that even in
+                                                    short intervals a positive proportion of zeros will not be near the edge of the
+                                                    critical strip. For example with h > 100 and t > 10100 the proportion of zeros
+                                                                                                                          1 15
+                                                    of ζ with imaginary part in [t − h, t + h] which have real part in [ 16 , 16 ] is at
+                                                    least 13% and a positive proportion is already obtained at t > 10 . 43
+
+
+
+
+                                              The aim of this article is to provide bounds on the number of zeros in small
+                                           sections of the critical strip, particularly along the boundary of the critical strip.
+                                           We will look at primarily two types of regions, circular, and rectangular.
+                                              Throughout the article we shall denote by
+                                                  • N (T ) the number of zeros, ρ of ζ with imaginary 0 < ℑ(ρ) ≤ T .
+                                                  • N (s, α) the number of zeros ρ of ζ with |ρ − s| ≤ α.
+                                                  • N (T1 , T2 , α) the number of zeros ρ of ζ with T1 ≤ ℑ(ρ) ≤ T2 and ℜ(ρ) >
+                                                    1 − α.
+                                           In all cases zeros are counted with multiplicity and we shall maintain the convention
+                                           that zeros on the boundary count with 1/2 their multiplicity. We note that using
+                                           this last convention, as opposed to including or excluding the boundary does not
+                                           impact the bounds we would prove except for the degenerate cases T = 0, α = 0,
+                                           or T1 = T2 .
+                                              Note that other sources write N (σ, T ) for the number of zeros ρ of ζ with
+                                           0 < ℑ(ρ) ≤ T and ℜ(ρ) > σ. We don’t anticipate this causing any confusion.
+                                              There are many results on zero density, however most of these consider T2 −T1 to
+                                           be large in comparison to the size of T2 . Our aim is to treat much smaller intervals.
+                                           At the same time, we note that bounds on the number of zeros in short intervals are
+                                           a key ingredient to a common strategy for proving bounds on zeros in long intervals
+                                           (see for example [5]).
+                                              One of the simplest to interpret corollaries to our main theorem is
+                                           Corollary 1. Suppose 0 < α < 1/6. For h0 and t0 sufficiently large, and for all
+                                           t > t0 and t2/3 > h > h0 , the proportion of zeros ρ of ζ(s) with ℑ(ρ) ∈ [t − h, t + h]
+                                           for which ℜ(ρ) ∈ [α, 1 − α] is bounded below by an explicitly computable positive
+                                           constant. That is
+                                                                       2N (t − h, t + h, α)
+                                                                1−                          > Cα,h0 ,t0 > 0.
+                                                                     N (t + h) − N (t − h)
+                                           Example values of Cα,h0 ,t0 are given in Table 1.
+
+                                              2020 Mathematics Subject Classification. Primary 11M26; Secondary 11M06, 11Y35.
+                                              Key words and phrases. Riemann zeta function, zero density, short intervals, explicit estimates.
+                                              Andrew Fiori thanks and acknowledges the University of Lethbridge for their financial support
+                                           as well as the support of NSERC Discovery Grant RGPIN-2020-05316.
+                                                                                             1
+2                                       A. FIORI
+
+
+   This is an immediate consequence of Corollary 4 or Corollary 5, taking Cα,h0 ,t0 =
+1 − 2C2 for the relevant C2 ; the factor of 2 accounts for the zeros with ℜ(ρ) < α,
+which the functional equation puts in bijection with those having ℜ(ρ) > 1 − α.
+
+        Table 1. Table of values for Corollary 1. For t > t0 and t2/3 >
+        h > h0 the proportion of zeros with imaginary part within h of
+        t whose real part is in [α, 1 − α] is at least Cα,h0 ,t0 . The column
+        “mechanism” records which of Corollary 4 (J) and Corollary 5 (L)
+        gives the stronger bound. The constants Cα,h0 ,t0 are rounded
+        down.
+
+                       α      h0      t0      mechanism     Cα,h0 ,t0
+                      1/7     100   1010000       L         0.0628
+                      1/8     100   101000        L         0.0970
+                      1/9      10   1010000       L         0.0760
+                     1/10      5    1010000       L         0.0236
+                     1/12      5    1010000       L         0.1040
+                     1/16      5    1010000       L         0.2122
+                     1/16     100    1043         L         0.0054
+                     1/16     100    10100        L         0.1374
+                     1/16     100   1010000       L         0.3484
+                     1/32     100    10100        L         0.2157
+                     1/64      2    101000        J         0.1649
+                     1/64     100    1050         L         0.1312
+                     1/128    100   101000        L         0.5527
+                     1/256      1   1010000       L         0.0934
+                    1/2048    100   1010000       L         0.7163
+
+   The above says that a positive proportion of zeros are not near the edge of the
+critical strip in relatively small intervals. Tables 8 and 9 allow one to get many
+more explicit examples of positive proportions, whereas Tables 10 and 11 illustrate
+minimal values for t0 for which a positive proportion result is attainable.
+   This result is in some ways qualitatively weaker than other estimates about
+zeros being on or near the critical line. For example the approach of Levinson, as
+improved by Conrey and then Pratt, Robles, Zaharescu and Zeindler (See [14, 26,
+32]) establishes that, as t → ∞, a little over 40% are on the critical line. However,
+the approach only appears to work on long intervals, that is, intervals of length at
+least ω(T ). In fact, since roughly 40% of the zeros less than (5/4)T are less than
+(3/4)T the result barely tells you that in an interval of width T /2 at height T there
+must be any zeros on the critical line. The recent claimed improvement to 2/3 in
+[1] doesn’t fundamentally alter this. Karatsuba’s proof of Selberg’s conjecture does
+lower that threshold to powers of T , and subsequent work ultimately establishes
+that almost every relatively short (sub-exponential in log(T )) interval contains zeros
+on the critical line (see [24]). But almost all intervals still isn’t all, and they still
+aren’t obtaining a positive proportion. Standard zero-density results going back at
+least to Bohr and Landau (see [8]) tell us 100% of zeros are within ϵ of the critical
+line. But again this tells us nothing about short intervals. In the opposite direction,
+results of Montgomery in fact tell us that if there are zeros very near the edge of
+the critical strip, there will somehow be many of them (see [27, Chapter 11]).
+                  ZERO DENSITY THEOREMS FOR SHORT INTERVALS                                     3
+
+
+   We recall that [31] has verified that up to height H0 := 3 · 1012 every non-trivial
+zero of ζ has been verified to lie exactly on the critical line.
+   The above illustrates the result; the new type of theorem we are actually pro-
+viding is:
+Theorem 2 (Jensen mechanism). Suppose 0 < α < r < 1, α < 1/6. For any t ≥ e
+and t2/3 ≥ h ≥ 0 we have
+                                                                    
+                                                            3.35
+              N (t − h, t + h, α) < UJ (α, r, h, t) + O∗               .
+                                                           Dr,α t1/3
+where
+                                                                                
+                                 B1,α,r
+  UJ (α, r, h, t) :=(2h + 2α̂r )        log |t| + B2,α,r log log |t| + B3,α,r        + B4,α,r
+                                   π
+with α̂r , B1,α,r , . . . , B4,α,r as in Theorem 24 below. Sample values are in Table 5.
+Proof. The case of t − h > H0 is precisely a consequence of Theorem 24, restricted
+to h < t2/3 and t > 1012 .
+   The t + h < H0 case is truly trivial.
+   For the case t − h < H0 and t + h > H0 simply replace t and h by t′ = t + δ and
+h′ = h − δ where δ = 12 (H0 − t + h) so that t′ − h′ = H0 and t′ + h′ = t + h. Then
+Theorem 24, applied with t′ and h′ , translates back to a stronger claim in terms of
+t and h than what the Theorem claims.                                             □
+
+   Note that if h ≫ t2/3 and t > 1012 , the claim becomes an easy consequence of
+standard zero-density estimates for ζ. We provide a sketch but omit the details.
+By [22] we have
+                                        8
+   N (t − h, t + h, α) ≪ (t + h) 3 α log(t + h)3 ≪ UJ (α, r, h, 1012 ) < UJ (α, r, h, t)
+                                                      3
+Since α < 1/6 and h > 108 the coefficient log(h)
+                                           h1−4α shrinks faster as α → 0 than B1,α,r
+can. The main obstacle between t 2/3
+                                      < h ≪ t2/3 is the O∗ term, which would need
+to be weakened in the statement above, or tightened in our source.
+Theorem 3 (Littlewood mechanism). Suppose 0 < α < r, α < 1/6. For any
+t ≥ ee and t2/3 ≥ h ≥ 0 we have
+                                                                            
+                                                ∗       1              0.51
+      N (t − h, t + h, α) < UL (α, r, h, t) + O               0.335 +            ,
+                                                    t(r − α)          log |t|
+where
+                          2A1,α,r h + 2A4,α,r
+     UL (α, r, h, t) :=                       log |t| + (2A2,α,r h + 2A5,α,r ) log log |t|
+                                   π
+                          + 2A3,α,r h + A6,α,r
+with A1,α,r , . . . , A6,α,r as in Theorem 32 below. Sample values are in Table 7.
+Proof. The proof is as in Theorem 2’s proof, using Theorem 32 in place of Theo-
+rem 24                                                                       □
+
+  Using that by [6, Corollary 1.3] we have
+                                     t      t
+                          N (t) −      log     < 0.097 log |t| + 4.954
+                                    2π     2πe
+4                                               A. FIORI
+
+
+we conclude that, for t > 1012 and 0 < h < t − 1 we have:
+                                             (1 − log 2)h2
+                                                          
+                                  1      t
+N (t+h)−N (t−h) ≥ L(h, t) :=        log    −                 h−0.194 log |t|−9.908.
+                                  π     2π        πt2
+This directly leads to the following two Corollaries, one per mechanism.
+Corollary 4 (Jensen). Suppose 0 < α < r < 1 and α < 1/6 and then for t0 > 1012
+and                                                         
+                                            4954
+                          97π       1 + 97 log(t0 )
+                     h0 >                                    
+                          500 1 − 2/31−log 2
+                                               − log(2π)
+                                                    log(t0 )
+                                                  t0     log(t0 )
+                                         2/3
+we have that for all t > t0 and t              > h > h0
+                              N (t − h, t + h, α)
+                                                   < C2J (α, r, h0 , t0 )
+                             N (t + h) − N (t − h)
+where
+                                                                        
+                                           πB     log log |t|   πB3,α,r      πB4,α,r
+                      (2 + 2α̂hr ) B1,α,r + 2,α,r
+                                               log |t|        +  log |t|   + h log            3.35π
+                                                                                   |t| + Dr,α ht1/3 log |t|
+C2J (α, r, h, t) :=
+                                        1 − log(2π)     1−log 2
+                                             log |t| − t2/3 log |t| −
+                                                                      0.194π
+                                                                         h   − h9.908π
+                                                                                 log |t|
+
+is decreasing in both h0 and t0 for any fixed α and r.                            A table of values for
+C2J (α, r, h0 , t0 ) is given in Table 8.
+Proof. By inspection we have
+                                                                       
+                       2α̂r              πB2,α,r log log |t|   πB3,α,r      πB4,α,r          3.35π
+UJ (α, r, h, t)   (2 +  h   )   B1,α,r +      log |t|        +  log |t|   + h log |t| + Dr,α ht1/3 log |t|
+                <                                                                                          .
+   L(h, t)                           1 − log(2π) − 2/3
+                                               log |t|
+                                                       1−log 2
+                                                            t
+                                                                − 0.194π − 9.908π
+                                                                    log |t|   h       h log |t|
+
+and the right hand side is clearly decreasing in both h and t provided the de-
+nominator is positive. The lower bound on h0 precisely ensures this condition is
+met.                                                                          □
+
+Corollary 5 (Littlewood). Suppose 0 < α < r and α < 1/6 and then for t0 > 1012
+and                                                           
+                          97π       1 + 97 4954
+                                              log(t0 )
+                     h0 >                                      
+                          500 1 − 2/3 1−log 2
+                                                 − log(2π)
+                                                      log(t0 )
+                                                  t0     log(t0 )
+                                         2/3
+we have that for all t > t0 and t              > h > h0
+                              N (t − h, t + h, α)
+                                                   < C2L (α, r, h0 , t0 )
+                             N (t + h) − N (t − h)
+where C2L (α, r, h, t) is given by
+                                                                                      π (0.335+ log |t| )
+                                                                                                   0.51
+                                           ) logloglog|t||t| + log3,α,r
+            2A4,α,r                 2A                          2πA           πA6,α,r
+2A1,α,r +     h     + π(2A2,α,r + 5,α,rh                            |t| + h log |t| + (r−α)ht log |t|
+
+                        1 − log(2π)      1−log 2
+                             log |t| − t2/3 log |t| −
+                                                            0.194π
+                                                               h   − h9.908π
+                                                                        log |t|
+
+is decreasing in both h0 and t0 for any fixed α and r.                            A table of values for
+C2L (α, r, h0 , t0 ) is given in Table 9.
+Proof. The proof is the same as the above.                                                           □
+                  ZERO DENSITY THEOREMS FOR SHORT INTERVALS                              5
+
+
+   These allow us to conclude that if B1,α,r < 1/4 or A1,α,r < 1/4 then there exists
+a finite h0 , so that for t sufficiently large a positive proportion of zeros in intervals
+of width at least h0 will have real part in [α, 1 − α].
+   One approach we use relies on bounds for N (s, α). As such we provide updated
+explicit versions of such bounds in Theorems 16 and 18. We note that such bounds
+on N (s, α) are used in many applications directly. For example in log-free zero-
+density results (see for example [5, Corollary 2.3] and [29, Lemmas 1 and 2]).
+Various approaches to zero-free regions use these types of results as well (see for
+example [4, 17, 27]). Bounds like those in Theorems 2 and 3 also have the potential
+to be used to improve other zero density results such as in [3, 5, 30] where there can
+be benefit in bounding the number of zeros in a rectangular region rather than a
+square one.
+   We organize this paper as follows:
+      • In Section 1 we apply Jensen’s theorem to bound N (s, α). In order to
+        provide sharp bounds we provide methods to improve estimates for the
+        integral inside the critical strip in Section 1.1 and outside the critical strip
+        in Section 1.2.
+      • In Sections 2 and 3 we provide bounds on N (t − h, t + h, α) arising from
+        two different zero detectors, the first of which is better for α smaller, and
+        the second better for α larger.
+      • In order to implement the approach of Section 3 in Section 3.1 we provide an
+        improved mechanism to bound the arg integrals which arising as secondary
+        error terms in more standard zero density results.
+      • In Appendix A we provide a number of explicit bounds for log |ζ(s)| and
+        log(Γ(s)) which we needed elsewhere.
+   There are a number of avenues of future exploration which could improve the
+result here, particularly for small t. Firstly, there are many choices for zero detectors
+we could use for N (s, α). In this article we currently use a classical version of
+Jensen’s formula. It would be interesting to explore other detectors such as those
+                                                                            ′
+in [5, 17, 18, 20, 35]. As these methods tend to involve estimating | ζζ |, or higher
+                                      ′
+derivatives, the ability to bound | ζζ | seems to be a limiting factor here. However,
+following the approach of Section 2 it is possible that even if they can’t improve
+results for N (1 + it, α), they could nonetheless provide improvements for bounds
+on N (t − h, t + h, α).
+   A second natural direction of exploration is parts of our analysis away from the
+1-line to work at either 1 + η or 1 + η(t). This would almost certainly improve the
+qualitative values obtained for smaller t by minimizing the coefficients of log log |t|
+and the O(1) terms at the expense of the coefficient of log |t|.
+   In the other direction, for extremely large values of t, and small values of α,
+producing a variant of Theorem 24 using Theorem 18 would asymptotically be
+better.
+   If one wants an improved result for small values of h, then further developing Re-
+mark 21 is appropriate, as would be developing alternatives to, or simply not using,
+the optimizations of Section 2.1 since for short intervals bounding the integrand
+will provide a better bound than bounding its anti-derivative at the endpoints.
+
+0.1. AI Use Declaration. All of the ideas, theorems, and proofs in this article
+were developed by the author.
+6                                          A. FIORI
+
+
+   AI tools (Claude Opus 5 and Fable 5.1) were used to formalize the content
+of this article into Lean. In doing so it identified and corrected a number of
+minor errors. The errors were primarily grammatical, typographical, or miss-
+ing implicit hypothesis. It also produced code to verify numerics tables. The
+current tables were produced using its code. The formalization and associated
+code will be made available on GitHub at https://github.com/andrewfiori/
+ZeroDensityInShortIntervals.
+
+                                   1. Jensen bounds
+    In this section we provide initial bounds for the number of zeros in a circular
+region using Jensen’s formula. Our focus in this section is setting up the argument.
+In Sections 1.1 and 1.2 we will optimize aspects of the approach.
+    Denoting by ρ a zero of the function ζ a standard way to express Jensen’s formula
+is that
+                                           Z 3π/2
+    X                                    1
+           log(r) − log(|ρ − 1 + it|) =           log |ζ(1 + it + reiθ )| dθ − log |ζ(1 + it)|
+                                        2π −π/2
+|ρ−1+it|<r
+                                                                                          (1)
+This leads to
+Proposition 6. For any s ∈ C and 0 < α < r we have
+                               Z 3π/2                                 !
+                      1     1                      iθ
+       N (s, α) ≤                     log |ζ(s + re )| dθ − log |ζ(s)| .
+                  log(r/α) 2π −π/2
+
+Proof. Since each zero ρ with |s − ρ| ≤ α contributes at least log(r/α) to the sum
+on the left, the result is immediate from Equation (1).                          □
+    The simplest bound for
+                                 Z π/2
+                             1
+                                         log |ζ(1 + it + reiθ )| dθ
+                            2π    −π/2
+
+comes from simply taking the uniform bound of log |ζ(1 + it + reiθ )| < log log |t| in
+this region which leads to a bound of log log |t|/2 + O(1) for the integral.
+   If one uses instead log |ζ(1 + it + reiθ )| < r−σ                   σ−1
+                                                   r−1 (log log |t|) + r−1 log(ζ(r)) from
+[16, Section 4.1] one will instead have
+                             
+                       1    1                 log(ζ(1 + r))
+                         −      log log |t| +                + O(1).
+                       2 π                          π
+We shall provide better bounds for this term in Section 1.2 so we shall not dwell
+too long on this term for now.
+   The simplest bound for
+                            Z 3π/2
+                          1
+                                   log |ζ(1 + it + reiθ )| dθ
+                         2π π/2
+we consider comes from log |ζ(1 + it + reiθ )| < 13 r cos(θ) log |t| + log log |t| + O(1)
+which leads to the bound
+           Z 3π/2
+         1                                      r          1
+                  log |ζ(1 + it + reiθ )| dθ <    log |t| + log log |t| + O(1).
+        2π π/2                                 3π          2
+                    ZERO DENSITY THEOREMS FOR SHORT INTERVALS                             7
+
+
+Bounding − log |ζ(1 + it)| < log log |t| + O(1) and combining terms thus gives:
+   X                                     r            1
+         log(r)−log(|ρ−1+it0 |) <          log |t|+(2− ) log log |t|+log(ζ(r))+O(1).
+                                        3π            π
+|ρ−1+it0 |<r
+
+Counting the contribution from each zero we find that for α < r the number of
+zeros in a circle of radius α is bounded by
+                r                1                 log(ζ(1+r))
+               3π log |t| + (2 − π ) log log |t| +      π      + log(ζ(r)) + O(1)
+                                                                                        (2)
+                                           log(r/α)
+It is clear that we can use a different bounds for ζ, for example using the sharper
+bounds on ζ for r < 2/7 one can improve this (for r < 2/7) to
+                      r                1                 log(ζ(1+r))
+                     4π log |t| + (2 − π ) log log |t| +      π      + O(1)
+                                                                              .         (3)
+                                           log(r/α)
+The next section focuses on optimizing this bound further.
+
+1.1. Bounding Integrals Inside the Critical Strip. The bounds from Equation
+(2) are already useful but we wish to refine it. Specifically, it is possible to improve
+                 r
+the coefficient kπ by splitting the integral from π/2 to 3π/2 based on the condition
+r cos(θ) = 1 − σk where σk are chosen lines where we have better bounds. This has
+been done previously for example in bounding N (T ), see for example [7].
+   The idea is to define piecewise functions Fc,r : [−π, π] → R such that
+                              log |ζ(1 + it + reiθ )| ≤ F1+it,r (θ)
+and then integrate the function F1+it,r (θ).
+  To this end we shall define for k ≥ 0
+                                       k+3                      k+3
+                          σk = 1 −                    σ−k =                             (4)
+                                     2k+3 − 2                 2k+3 − 2
+so that these are the vertical lines for which [38], combined with Lemma 36 provides
+bounds. We then define for k ≥ 0
+                                1                                   1
+                      vk =                 v−k = σk − 1/2 +
+                             2k+3 − 2                            2k+3 − 2
+which define the corresponding coefficient of log |t| for the bounds on ζ(σk + it).
+  Define also
+       vk′ = 1                    vk′′ = log(1.546)                               k>0
+       v0′′ = log(0.611)          vk′′ = log(1.546) + (σk − 1/2) log |π|          k<0
+respectively the coefficients of log log |t| and the constant terms.
+Remark 7. It is also admissible to set either
+                                                        
+                           ′′                  4.04972
+                         v0 = log 0.470795 +
+                                                log |T |
+or
+                        27
+                 v0 =       ,    v0′ = 0, and v0′′ = log(66.7).
+                       164
+These values are used in all displayed tables.
+8                                            A. FIORI
+
+
+    Now define
+                                vk − vk+1
+                           mk =               bk = vk − mk σk                       (5)
+                                σk − σk+1
+so that for σ ∈ [σk , σk+1 ] the formula mk σ + bk describes the coefficient of log |T |
+in the bound on log |ζ(σ + it)|. Similarly, define
+                                    vk′ − vk+1
+                                           ′
+                           m′k =                     b′k = vk′ − m′k σk                          (6)
+                                    σk − σk+1
+and
+                             vk′′ − vk+1
+                                     ′′
+                           m′′k =           b′′k = vk′′ − m′′k σk                                (7)
+                             σk − σk+1
+    Now, for each k with r ≥ 1 − σk we define
+                                    θk,r = arcsin((1 − σk )/r)                                   (8)
+and define θ−∞,r = π/2.
+  Now set K = inf k (r ≥ 1 − σk ) where K = −∞ is admissible. Finally, we define
+      c1,r = (mK−1 + bK−1 )(π/2 − θK,r ) − mK−1 r cos(θK,r )
+                   ∞
+                   X
+               +         [(mk + bk )(θk,r − θk+1,r ) + mk r (cos(θk,r ) − cos(θk+1,r ))]
+                   k=K
+      c2,r = (m′K−1 + b′K−1 )(π/2 − θK,r ) − m′K−1 r cos(θK,r )
+                   ∞
+                   X
+               +         [(m′k + b′k )(θk,r − θk+1,r ) + m′k r (cos(θk,r ) − cos(θk+1,r ))]
+                   k=K
+      c3,r = (m′′K−1 + b′′K−1 )(π/2 − θK,r ) − m′′K−1 r cos(θK,r )
+                   ∞
+                   X
+               +         [(m′′k + b′′k )(θk,r − θk+1,r ) + m′′k r (cos(θk,r ) − cos(θk+1,r ))]
+                   k=K
+We note that every sum above is rapidly convergent, even if K = −∞, and can be
+accurately computed.
+   The following proposition summarizes the result
+Proposition 8. Suppose 0 < r < 1 and t > 13. With c1,r , c2,r and c3,r as defined
+above we have
+   Z 3π/2
+ 1                                     c1,r           c2,r               c3,r
+          log |ζ(1 + it + reiθ )| dθ ≤      log |t| +      log log |t| +
+2π π/2                                  π              π                  π
+                                                                                              
+                                                    5            1                579
+                                       + O∗               +            +
+                                                6(t − 1) (t − 1)2         8(t − 1)2 log(t − 1)
+Some values for c1,r , c2,r and c3,r are given in Table 2.
+Proof. The key is that by construction between θk+1,r + π/2 and θk,r + π/2 that
+                                                           
+         F1+it,r (θ) = (mk + bk ) − mk r sin(θ − π/2) log |t + r|
+                         + (m′k + b′k ) − m′k r sin(θ − π/2) log log |t + r|
+                                                               
+
+                         + (m′′k + b′′k ) − m′′k r sin(θ − π/2)
+                                                               
+                                                                  
+                                    2                   579
+                         + O∗              +
+                                (t − r)2     4(t − r)2 log |t − r|
+bounds log |ζ(1 + it + reiθ )|.
+                  ZERO DENSITY THEOREMS FOR SHORT INTERVALS                                   9
+
+
+   The O∗ term is obtained by carefully considering the Taylor expansions of
+                              |1+r/t|
+log |1 + r/t| and log 1 + loglog |t|  in rt and telescoping the defining sums c1,r
+and c2,r .                                                                      □
+  From what we have done already this would lead to the bound
+                                                              
+                             1     c1,r              c2,r    1
+         N (1 + it, α) <                log |t| +         −      log log |t|
+                         log(r/α) π                    π     π
+                                                                       !
+                                 1                c3,r
+                               + log(ζ(r)) +            + log(29.388) .
+                                 π                 π
+                                                   1
+Remark 9. For r = 1/2 this reduces the value from 6π to 0.1480612309
+                                                              π      , other values
+are in Table 2.
+Remark 10. If one wants to bound the number of zeros in a circle of radius α
+using (2) the best choice of r, asymptotically, would be r = eα as this minimizes
+            sα
+the ratio log(s) which is the coefficient of log |t|.
+   The optimal choice for r when using cr is more complex as the derivative of cr
+with respect to r is complex, see Table 2.
+Remark 11. Extending the result past r > 1 or for s = c + it with c > 1 can
+be done and is used in some applications. Typically this is done to decrease the
+coefficient of log log |t| by moving the − log(ζ(c + it) term far enough to the right
+so that it becomes O(log(ζ(c))). This will come at the expense of increasing the
+coefficient of log |t|.
+  Using instead the Richert type bound we get instead
+Proposition 12. Assume that r > 0 and that for t ∈ [T − r, T + r] and (1 − σ) < r
+we have a bound
+                                                        2
+               log |ζ(σ + it)| < B(1 − σ)3/2 log |T | + log log |T | + A
+                                                        3
+then
+       Z 3π/2
+     1                                     E1/2 Br3/2           1               A
+              log |ζ(1 + it + reiθ )| dθ ≤            log |T | + log log |T | +   (9)
+   2π π/2                                      π                3               2
+where
+                  Z π/2                     Z π/2
+                                        1                     1
+         E1/2 =           cos(θ)3/2 =               q                      ∼ 0.874019 . . .
+                   0                    3    0          1 − 2 sin2 (θ/2)
+comes from an elliptic integral of the first kind.
+Remark 13. For (9) with a fixed α the best choice for r is r = e2/3 α. This would
+give the bound
+                                                                              !
+                    3 E1/2 eBα3/2
+                                                       
+                                                 1    1
+    N (1 + it, α) <               log |t| + 1 −    +      log log |t| + Or (1)
+                    2       π                   2π 3
+For example with r = 2e11/3 and α = 2e
+                                     1
+                                       we have a lead term 0.623846
+                                                              2π    log |t| which is
+weaker than the previous result. Indeed, to see an improvement you would need α
+to be quite small.
+10                                        A. FIORI
+
+                                              3e
+   We do however note that the constant 2π       E1/2 ∼ 1.134375 < 1.3478, which
+was the constant obtained by Ford in [17, Lemma 4.2; 18]. Our advantage over
+Ford comes entirely from our ability to work at 1 + it, whereas he must work at
+                                         ′
+1 + 0.6421α + it in order to handle a ζζ term.
+   Note, although working on the line 1 + it is good for our main term, it would be
+worthwhile to explore the application of these methods along 1 + η + it which may
+improve results for smaller values of t.
+Remark 14. We make some final remarks about minor improvements one could
+make to the main term integral
+                         Z 3π/2
+                                log |ζ(1 + it + reiθ )| dθ.
+                               π/2
+
+     (1) In principle it would be best to pick the critical-line bound based on the
+         height t at which one is working. The critical-line bound could give small
+         savings on the main term and the secondary log log term, at the expense
+         of constant terms.
+     (2) We have been wasteful in considering k = 3 · · · ∞. For small t at some point
+         (for instance when you enter the zero-free region) these bounds are actually
+         worse than other available bounds. For large t they will (eventually) be
+         worse than the Richter bound.
+            For smaller t, if one is using α that are constant size, then the savings
+         here are modest since the width of the region where there would be an
+         improvement is quite thin.
+     (3) For r very small, say O(log log |t|/ log |t|) or O(log log |t|2/3 / log |t|2/3 ), it
+         should be noted that the log log |t| terms become the dominant error term.
+         On this scale other methods are likely to be superior to these.
+1.2. Integration outside the critical strip. We now focus our attention on
+optimizing the secondary error terms.
+   For the bounds in Equation (2) we bounded
+                          Z π/2
+                                 log |ζ(1 + it + reiθ )| dθ
+                                −π/2
+
+by using the bounds on |ζ(s)| outside the critical strip.
+   The bound we obtain outside the critical strip is far from optimal. In particular,
+for r of constant size the integral can be bounded independent of t.
+Proposition 15. For t > 2 and 0 < r < t, we have that
+                      Z π/2
+                    1
+                            log |ζ(1 + it + reiθ )| dθ ≤ c4,r
+                   2π −π/2
+where                                         Z 1
+                     1                 r            ζ ′ (1 + ru)
+                c4,r = log(ζ(1 + r)) −                           arcsin(u) du.
+                     2                 π       0    ζ(1 + ru)
+Moreover, if r ≤ 2, we have
+                  1                 log(2) (π − 2)r       r2 (γ 2 + 2γ1 )
+             c4,r < log(ζ(1 + r)) +       −         γ+
+                  2                   2       2π                  8
+where γ is the Euler-Mascheroni constant and γ1 is a Stieltjes constant.
+  Table 2 provides examples of computed values for c4,r .
+                      ZERO DENSITY THEOREMS FOR SHORT INTERVALS                                    11
+
+
+Proof. We have for θ ∈ (−π/2, π/2) that
+                          log |ζ(1 + it + reiθ )| dθ < log(ζ(1 + r cos(θ)))
+and hence
+                  Z π/2                                      Z π/2
+          1                                              1
+                          log |ζ(1 + it + reiθ )| dθ <               log(ζ(1 + r cos(θ))) dθ
+         2π        −π/2                                  π    0
+
+provided this integral converges, which one can verify that it does (say by an integral
+comparison test). Through the substitution u = cos(θ) we have
+              1 π/2                             1 1 log(ζ(1 + ru))
+                Z                                Z
+                      log(ζ(1 + r cos(θ))) dθ =          √            du.
+             π 0                                π 0        1 − u2
+And integration by parts yields
+    1 1 log(ζ(1 + ru))
+      Z
+                               1
+             √          du =      lim log(ζ(1 + ru)) arcsin(u)
+    π 0        1−u  2          π u→1−
+                                    1
+                                 −     lim log(ζ(1 + ru)) arcsin(u)
+                                    π u→0+
+                                    1 1 ζ ′ (1 + ru)
+                                      Z
+                                 −        r          arcsin(u) du
+                                    π 0 ζ(1 + ru)
+                                                 r 1 ζ′
+                                                   Z
+                               1
+                            = log(ζ(1 + r)) −            (1 + ru) arcsin(u) du.
+                               2                 π 0 ζ
+              ′                                                                                ′
+Although ζζ has a simple pole at 1, arcsin has a simple zero at 0, so that ζζ (1 +
+                                                                                 ′
+ru)) arcsin(u) extends to an analytic function at 0, and hence ζζ (1 + ru)) arcsin(u)
+is continuous on [0, 1]. From which it follows that the integral exists, and we have
+the first claim.
+   By Lemma 38 we have the bound
+                                    ζ ′ (1 + z)  1
+                                −               < − γ + (γ 2 + 2γ1 )z
+                                    ζ(1 + z)     z
+where γ is the Euler-Mascheroni constant and γ1 is a Stieltjes constant, this gives
+         r 1 ζ′
+            Z
+       −         (1 + ru)) arcsin(u) du
+         π 0 ζ
+                  1 1 arcsin(u)
+                    Z
+               <                  − rγ arcsin(u) + (γ 2 + 2γ1 )r2 u arcsin(u) du
+                  π 0       u
+                  log(2) (π − 2)r       r2 (γ 2 + 2γ1 )
+               =        −            γ+                                           □
+                    2          2π               8
+  We now state our final Theorems on bounds for circular regions, the first being
+based on sub-convexity bounds for ζ and the second based on Richert bounds.
+Theorem 16. Let 1 > r > α and t > 13 then
+                 C1,α,r
+ N (1 + it, α) ≤        log |t| + C2,α,r log log |t| + C3,α,r
+                   π                                                               
+                        ∗        1          5            1              579
+                   +O                              +          +
+                            log(r/α) 6(t − 1) (t − 1)2          8(t − 1)2 log(t − 1)
+12                                             A. FIORI
+
+
+where
+                                c1,r
+                    C1,α,r =
+                             log(r/α)
+                                 c2,r       1
+                    C2,α,r =           +
+                             log(r/α)π log(r/α)
+                                 c3,r      c4,r    log(29.388)
+                    C3,α,r =           +         +             .
+                             π log(r/α) log(r/α)     log(r/α)
+Table 3 contains computed values of the constants where we optimized r so as to
+minimize C1,α,r . Table 4 contains the associated values for ci,r .
+
+Proof. Jensen’s formula gives us that
+                                      Z 3π/2                                             !
+                         1        1                               iθ
+     N (1 + it, α) <                            log |ζ(1 + it + re )| dθ − log |ζ(1 + it)|
+                     log(r/α)    2π    −π/2
+
+The result now follows from a direct application of Propositions 8, 15 and the bound
+
+                       − log |ζ(1 + it)| < log log |t| + log(29.388)
+
+from [25].                                                                                   □
+
+   To apply the above for more general values of α than are in the tables we give
+also
+
+Proposition 17. Let 1 > r > α0 > α and r ≥ eα0 then
+                                          α                                3
+               C1,α,(α/α0 )r ≤ C1,α0 ,r             C2,α,(α/α0 )r ≤                .
+                                          α0                          2 log(r/α0 )
+Proof. The claim about C1,α,(α/α0 )r is a consequence of the claim
+
+                                 c1,(α/α0 )r ≤ (α/α0 )c1,r .
+                                                    d 1,r  c
+This claim follows from the observation that dr        r is positive. To see this note
+that
+P∞    θk,r −  θ k+1,r decreases as r increases, but mk + bk ≤ 0. Additionally, although
+  k=K (− cos(θk,r ) + cos(θk+1,r )) is constant as r changes, but, as r increases, the
+weight shifts to lower values of k for which mk is larger. With these observations,
+the first claim now follows by inspection.
+   For the secondclaim, note again that ((α/α0 )r)/α = r/α0 , so that C2,α,(α/α0 )r =
+ c2,(α/α0 )r /π + 1 / log(r/α0 ). Telescoping the c2,r sum then gives the result.     □
+
+Theorem 18. Let 0 < α ≤ 1 and t > 2. Assume that for τ ∈ [t − e2/3 α, t + e2/3 α]
+and (1 − σ) < e2/3 α we have a bound
+                                                               2
+                log |ζ(σ + iτ )| < B(1 − σ)3/2 log |τ | +        log log |τ | + A
+                                                               3
+then
+                                      C̃1,α
+                    N (1 + it, α) ≤         log |t| + 2 log log |t| + C̃3,α
+                                        π
+                 ZERO DENSITY THEOREMS FOR SHORT INTERVALS                          13
+
+
+where
+                   3E1/2 eBα3/2
+           C̃1,α =              ,
+                         2
+                   3A 3c4,e2/3 α    3 log(29.388)
+           C̃3,α =    +           +
+                    4       2             2
+                   3A 3              2/3       3 log(2) 3 log(29.388)
+                 <    + log(ζ(1 + e α)) +              +              .
+                    4    4                         4          2
+Proof. Follows as above using Proposition 12 in place of Proposition 8, with r =
+e2/3 α, so that log(r/α) = 32 .                                                □
+
+
+        Table 2. Sample values for c1,r , c2,r , c3,r as defined in Propo-
+        sition 8, c4,r as defined in Proposition 15, and c5,r as defined in
+        Proposition 23.
+
+        r            c1,r           c2,r         c3,r         c4,r        c5,r
+        1         0.4260491      1.320694     1.233886    0.5099522   0.8331601
+       1/2        0.1467868     0.9393432     3.061478    0.7795712    1.126439
+       1/3       0.08122972     1.491029     0.9846382    0.9546469   1.271554
+       1/4       0.05402652     1.570797     0.6843504     1.084244   1.360125
+       1/5       0.03956564     1.570797     0.6843504     1.187130   1.420588
+       1/6       0.03071227     1.570797     0.6843504     1.272441   1.464849
+       1/7       0.02516876     1.570797     0.6843504     1.345309   1.498839
+       1/8       0.02110448     1.570797     0.6843504     1.408902   1.525868
+       1/9       0.01803813     1.570797     0.6843504     1.465317   1.547944
+      1/10       0.01569390     1.570797     0.6843504     1.516009   1.566357
+      1/11       0.01393216     1.570797     0.6843504     1.562034   1.581977
+      1/12       0.01249892     1.570797     0.6843504     1.604178   1.595417
+      1/13       0.01129907     1.570797     0.6843504     1.643045   1.607118
+      1/14       0.01028337     1.570797     0.6843504     1.679108   1.617407
+      1/15      0.009416022     1.570797     0.6843504    1.712745    1.626535
+      1/16      0.008670644     1.570797     0.6843504    1.744261    1.634694
+      1/32      0.003703026     1.570797     0.6843504    2.085161    1.702482
+      1/64      0.001626574     1.570797     0.6843504    2.428881    1.743167
+      1/128   7.256286 · 10−4   1.570797     0.6843504    2.774023    1.766930
+      1/256   3.277390 · 10−4   1.570797     0.6843504    3.119880    1.780529
+      1/512   1.495313 · 10−4   1.570797     0.6843504    3.466095    1.788188
+     1/1024   6.880172 · 10−5   1.570797     0.6843504    3.812489    1.792449
+     1/2048   3.188568 · 10−5   1.570797     0.6843504    4.158973    1.794794
+
+
+
+                           2. Rectangular intervals
+   We now work to bound the number of zeros in rectangular regions near the one
+line. We recall that N (t − h, t + h, α) denotes the number of zeros in the rectangle
+with vertices 1 + it − ih, 1 + it + ih, 1 + it − ih − α, and 1 + it + ih − α. We shall
+ultimately provide two methods to obtain similar results, each method performs
+better for a different range of values α.
+14                                          A. FIORI
+
+          Table 3. Values for C1,α,r , C1,α,r , and C1,α,r as defined in Theo-
+          rem 16. Values, including r, are rounded up.
+
+          α        r                  C1,α,r                C2,α,r     C3,α,r         r/α
+         1/3   0.6490511            0.3264740              1.965836   7.446222     1.947154
+         1/4   0.5022756            0.2117515              1.858502   7.369401     2.009103
+         1/5   0.3940064            0.1538013              2.093277   7.054466     1.970032
+         1/6   0.3242696            0.1170874              2.225533   6.965111     1.945618
+         1/7   0.2897366           0.09333569              2.120321   6.530988     2.028157
+         1/8   0.2606756           0.07783097              2.040920   6.345352     2.085405
+         1/9   0.2276378           0.06616898              2.091395   6.588795     2.048740
+        1/10   0.2030836           0.05706802              2.117307   6.744948     2.030836
+        1/11   0.1851792           0.04988792              2.108330   6.776810     2.036971
+        1/12   0.1729682           0.04420265              2.054067   6.646159     2.075618
+        1/13   0.1668192           0.03972128              1.937723   6.291698     2.168650
+        1/14   0.1550286           0.03611895              1.935706   6.329759     2.170400
+        1/15   0.1433184           0.03302353              1.959855   6.457329     2.149775
+        1/16   0.1333413           0.03033976              1.979559   6.567526     2.133460
+        1/32  0.06834560           0.01242107              1.916792   6.771429     2.187059
+        1/64  0.03512879           0.005269206             1.851512   6.944143     2.248243
+       1/128  0.01817011           0.002295522             1.777141   7.052067     2.325774
+       1/256 0.009413507           0.001021403             1.705384   7.139335     2.409858
+       1/512 0.004727625         4.607252 · 10−4           1.696848   7.492183     2.420544
+       1/1024 0.002374581        2.099090 · 10−4           1.688169   7.840865     2.431570
+       1/2048 0.001192880        9.643198 · 10−5           1.679292   8.184763     2.443018
+
+
+     To bound N (t − h, t + h, α) we define
+                                          p
+                                    α̂r = r2 − α2                                               (10)
+
+and consider the integral
+  Z h+α̂r     Z 2π                                                       
+             1                              iθ
+                    log |ζ(1 + i(t + x) + re )| dθ − log |ζ(1 + i(t + x))| dx                   (11)
+   −h−α̂r   2π 0
+
+so that each zero lying within a radius r of a point on the line i(t − h − α̂r − r) to
+(t − h − α̂r − r) contributes to the integral. We get the following: For 0 < α < r
+write
+                            p                         p
+                 Dr,α := 2r 1 − (α/r)2 − 2α tan−1 ( (r/α)2 − 1)
+for the quantity appearing repeatedly as a denominator below.
+
+Proposition 19. Suppose 0 < α < r and 0 < h < t − α̂r − r.
+                                      Z h+α̂r        Z 2π
+                                1                1
+       N (t − h, t + h, α) ≤                                 log |ζ(1 + i(t + x) + reiθ )| dθ
+                               Dr,α    −h−α̂r   2π     0
+                                                                            !
+                                                − log |ζ(1 + i(t + x))| dx.
+                     ZERO DENSITY THEOREMS FOR SHORT INTERVALS                                    15
+
+        Table 4. Values for c1,r , c2,r , c3,r as defined in Proposition 8, and
+        c4,r as defined in Proposition 15, for the unrounded r values from
+        Table 3. All values are rounded up.
+
+              r                    c1,r             c2,r            c3,r          c4,r
+         0.6490511              0.2175520       0.9738017        2.853749     0.6729643
+         0.5022756              0.1477365       0.9319669        3.089081     0.7776710
+         0.3940064              0.1042849        1.317413        1.638224     0.8812288
+         0.3242696             0.07793089       1.511949        0.9058834     0.9668954
+         0.2897366             0.06600019       1.568710        0.6922055      1.017316
+         0.2606756             0.05720288       1.570797        0.6843504      1.065177
+         0.2276378             0.04745803       1.570797        0.6843504      1.127225
+         0.2030836             0.04042969       1.570797        0.6843504      1.180019
+         0.1851792             0.03549344       1.570797        0.6843504      1.223032
+         0.1729682             0.03227938       1.570797        0.6843504      1.254995
+         0.1668192             0.03074843       1.570797        0.6843504      1.272011
+         0.1550286             0.02798899       1.570797        0.6843504      1.306581
+         0.1433183             0.02527499       1.570797        0.6843504      1.343779
+         0.1333413             0.02298980       1.570797        0.6843504      1.378087
+         0.06834559           0.009720201       1.570797        0.6843504     1.700612
+         0.03512879           0.004268841       1.570797        0.6843504     2.027367
+         0.01817011           0.001937541       1.570797        0.6843504     2.353894
+        0.009413510         8.983930 · 10−4     1.570797        0.6843504     2.681106
+        0.004727620         4.072770 · 10−4     1.570797        0.6843504     3.024609
+        0.002374580         1.865119 · 10−4     1.570797        0.6843504     3.368478
+        0.001192880         8.613635 · 10−5     1.570797        0.6843504     3.712486
+
+
+
+Proof. From Equation 1 we have
+                                                   Z 2π
+           X                                   1
+                     log(r/|ρ − 1 + it|) =                log |ζ(1 + i(t + x) + reiθ )| dθ
+                                              2π    0
+       |ρ−1+it|<r
+
+                                              − log |ζ(1 + i(t + x))|.
+
+As such we have
+    Z h+α̂r         Z 2π                                                              
+                 1                                      iθ
+                            log |ζ(1 + i(t + x) + re )| dθ − log |ζ(1 + i(t + x))|           dx
+      −h−α̂r    2π    0
+           Z h+α̂r        X
+       =                         log(r/|ρ − 1 + it|) dt.
+            −h−α̂r |ρ−1+it|<r
+
+
+Exchanging the integral and the sum gives that this is larger than
+
+                             X        Z ℑ(ρ)+α̂r
+                                                   log(r/|ρ − 1 + it|)dt}
+                        1−ℜ(ρ)<α       ℑ(ρ)−α̂r
+                      −h<ℑ(ρ)−t0 <h
+16                                          A. FIORI
+
+
+So that the integral detects each zero with weight
+   Z ℑ(ρ)+α̂r                                Z α̂r
+              log(r) − log(|ρ − 1 + it|)dt =       log(r) − log((ℜ(ρ) − 1)2 + t2 )dt
+      ℑ(ρ)−α̂r                                       −α̂r
+                                                    Z α̂r
+                                                                       1
+                                               >            log(r) −     log(α2 + t2 )dt.
+                                                     −α̂r              2
+Since                   Z α̂r
+                                            1
+                                 log(r) −     log(α2 + t2 )dt = Dr,α
+                          −α̂r              2
+we have the claimed result.                                                                   □
+     It follows simply by integrating equation (2) that for r > α
+                                                 1
+                                                3π log |t| + O(log log |t|)
+     N (t − h, t + h, α) < (2h + 2α̂r ) p                             p
+                                       2 1 − (α/r)2 − 2(α/r) tan−1 ( (r/α)2 − 1)
+Remark 20. In contrast to the situation with circular region for a fixed α the
+naive optimal value for r would appear to be to simply take the largest possible r,
+however, in practice better values of cr for smaller r eventually provide a benefit.
+See Table 5.
+     Taking α = 1/8 and r = 1/2 gives
+                                                    c1,1/2
+                                        √             π    log |t| + 1.5 log log |t| + O(1)
+        N (t − h, t + h, 1/8) < (2h +       15/4)       √                     −1
+                                                                                   √
+                                                            15/4 − (1/4) tan     ( 15)
+so that we get the dominant term
+                                    0.45964
+                                            h log |t|.
+                                       π
+This will tell us that for t and h large enough that at least 8.07% of zeros have real
+part in the interval [1/8, 7/8].
+Remark 21. It is possible to tune differently the range of integration, for example
+integrating from −h to +h completely removes the 2α̂r term but gives instead
+                                      1
+                                        log |t| + (1 − π1 + 1) log log |t| + C
+        N (t − h, t + h, α) < (4h) p 3π                            p
+                                  2 1 − (α/r)2 − 2(α/r) tan−1 ( (r/α)2 − 1)
+which is clearly worse√ for large h, but in the example r = 1/2, α = 1/8 is an
+improvement for h < 15/8
+2.1. Integration outside the critical strip: Part II. As with circular regions
+there is advantage to taking a more refined approach to integrals outside the critical
+strip. That is, rather than integrating our bound on the error term arising in
+Proposition 15 we shall exchange the order of integration in this region. That is we
+shall integrate
+                                      Z π/2
+                                    1
+                 log |ζ(1 + it)| +          log |ζ(1 + it + reiθ )| dθ.
+                                   2π −π/2
+Proposition 22. Suppose h ≥ 0 and T > h + α̂r then
+                       Z T +h+α̂r
+                     1                                Φ(1)
+                                  log |ζ(1 + it)|dt ≤
+                    2π T −h−α̂r                        π
+                  ZERO DENSITY THEOREMS FOR SHORT INTERVALS                             17
+
+
+where
+                                          X      Λ(n)
+                                 Φ(s) =             2 ns
+                                                                                     (12)
+                                          n>1
+                                              log(n)
+is an anti-derivative of − log(ζ(s)). Moreover,
+                             Φ(1) < 1.7975699586287395.
+Proof. By the Fundamental Theorem of Calculus for all ϵ > 0 we have
+Z T +h+α̂r
+           log |ζ(1 + ϵ + it)|dt = ℜ(Φ(1 + ϵ + i(t + h + α̂r )) − Φ(1 + ϵ + i(t − h − α̂r )))
+ T −h−α̂r
+                                ≤ 2Φ(1 + ϵ).
+Since log(ζ(1 + ϵ + it)) is uniformly continuous for ϵ ∈ [0, 1] and t ∈ [T − h − α̂r , T +
+h+ α̂r ] and since Φ(s) is continuous on [1, ∞), the result follows by taking the limit.
+   The bound for Φ(1) comes from an explicit rigorous computation of the defining
+integral.                                                                                □
+
+Proposition 23. Suppose T > h + α̂r then
+              Z h+α̂r      Z π/2
+                        1
+                                 log |ζ(1 + it + ix + reiθ )| dθ dx ≤ c5,r
+                −h−α̂r 2π   −π/2
+                             R1
+where c5,r = Φ(1 + r) + 2r π 0 log(ζ(1 + ru)) arcsin(u) du. Moreover, if 0 < r ≤ 2
+then                                                                   
+                                  −4          γr              2 log(2r)
+             c5,r ≤ Φ(1 + r) +         +1+       − log(r) +               r
+                                   π          4                   π
+Values for c5,r are given in Table 2
+Proof. By exchanging the order of integration we have
+  Z h+α̂r    Z π/2
+           1
+−                  log |ζ(1 + it + ix + reiθ )| dθ dx
+   −h−α̂r 2π −π/2
+                     Z π/2 Z h+α̂r                                   !
+                1                                           iθ
+          =− ℜ                       log(ζ(1 + it + ix + re )) dx dθ
+               2π      −π/2 −h−α̂r
+                    Z π/2                                                                    !
+              1
+          =      ℜ        Φ(1 + i(t + h + α̂r ) + reiθ ) − Φ(1 + i(t − h − α̂r ) + reiθ ) dθ
+             2π      −π/2
+
+             1 π/2
+                Z
+          ≤          Φ(1 + r cos(θ)) dθ
+             π −π/2
+             2 1 Φ(1 + ru)
+                Z
+          =         √         du
+             π 0      1 − u2
+                            Z 1
+                         2r
+          = Φ(1 + r) +          log(ζ(1 + ru)) arcsin(u) du
+                         π 0
+Noting that limu→0 log(ζ(1 + ru)) arcsin(u) = 0 we conclude the integral is conver-
+gent and get the first claim.
+  For the second claim use the bound from Lemma 38
+                           log(ζ(1 + ru)) ≤ − log(ru) + γru
+18                                         A. FIORI
+
+
+to obtain
+      Z 1                                     Z 1
+            log(ζ(1 + ru)) arcsin(u) du ≤           (− log(ru) + γru) arcsin(u) du
+        0                                      0
+                                                      π γπr π log(r)
+                                           = −2 +       +   −        + log(2r).
+                                                      2   8     2
+                                                                                         □
+Theorem 24. Suppose 0 < α < r < 1, 0 < h and t − h − α̂r > 13, then
+                                                                                
+                                     B1,α,r
+N (t − h, t + h, α) ≤ (2h + 2α̂r )          log |t| + B2,α,r log log |t| + B3,α,r + B4,α,r
+                                       π
+                                  
+                              1          5(h + α̂r )             2(h + α̂r )
+                      + O∗                               +
+                            Dr,α 3(t − h − α̂r − 1) (t − h − α̂r − 1)2
+                                                                             
+                                              1158(h + α̂r )
+                             +
+                                8(t − h − α̂r − 1)2 log(t − h − α̂r − 1)
+where
+                                            c1,r
+                                   B1,α,r =
+                                            Dr,α
+                                             c2,r
+                                   B2,α,r =
+                                            πDr,α
+                                             c3,r
+                                   B3,α,r =
+                                            πDr,α
+                                            2Φ(1) + c5,r
+                                   B4,α,r =              .
+                                                Dr,α
+See Table 5 for some optimized values of B1,α,r , B2,α,r , B3,α,r , and B4,α,r .
+  If in addition t > 1012 and h < t2/3 , then the O∗ term can be replaced with
+                                                            
+                           1    3.34 4.01           291
+                     O∗              +         +                 .
+                          Dr,α t1/3       t4/3   t4/3 log |t|
+Proof. The result follows from Proposition 19 by applying the bounds from Propo-
+sitions 8, 22 and 23.                                                         □
+
+
+                         3. Littlewood Zero Detection
+   An alternative to the use of Jensen’s formula is Littlewood’s zero counting
+strategy. This is often used to count zeros on large intervals (see for example
+[11, 12, 15, 22, 34]). This approach can be adapted to the current setting. In
+other applications one often mollifies the L-function whose zeros are being counted.
+However, for short intervals this isn’t needed.
+   The core idea of the method arises from the Littlewood’s zero detector (see
+[36, Section 9.9])
+  Z σ1                           Z T2                        Z T2
+                               1
+        N (σ, T1 , T2 ), dσ =         log |f (σ0 + it)| dt −      log |f (σ1 + it)| dt
+    σ0                        2π  T1                          T1
+                                                                               !       (13)
+                              σ1
+                              Z                        Z    σ1
+                         +         arg f (u + iT2 ) du −         arg f (u + iT1 ) du .
+                             σ0                            σ0
+                  ZERO DENSITY THEOREMS FOR SHORT INTERVALS                             19
+
+      Table 5. Values for Theorem 24. Values, including r, are rounded up.
+
+   α         r            B1,α,r      B2,α,r      B3,α,r     B4,α,r          α̂r      r/α
+  1/7    0.5647100     0.2457053   0.3900919    1.450119   6.518765   0.5463417 3.952970
+  1/8    0.5185446     0.2294753   0.4239720    1.514935   6.977388   0.5032529 4.148357
+  1/9    0.5030821     0.2172051   0.4340594    1.446353   6.922300   0.4906586 4.527739
+  1/10   0.4821212     0.2079206   0.4778655    1.331336   7.058488   0.4716364 4.821212
+  1/11   0.3820330     0.1991813   0.8624038   0.9519504   9.637060   0.3710589 4.202362
+  1/12   0.3390065     0.1907470    1.076388   0.7557944 11.128858    0.3286046 4.068078
+  1/13   0.3165097     0.1832274    1.186113   0.6552031 11.906782    0.3070199 4.114626
+  1/14   0.3035626     0.1767236    1.236003   0.6023857 12.253958    0.2950393 4.249876
+  1/15   0.2957571     0.1711536    1.252382   0.5730817 12.349950    0.2881455 4.436356
+  1/16   0.2909922     0.1663861    1.250289   0.5551999 12.302409    0.2842010 4.655874
+  1/32   0.1701799     0.1273443    2.016620   0.8785824 20.388630    0.1672861 5.445757
+  1/64  0.09924636     0.1023306    3.292282    1.434352 33.994587 0.09800867 6.351767
+ 1/128 0.05717608     0.08524602    5.501905    2.397021 57.665580 0.05663982 7.318538
+ 1/256 0.03250649     0.07294429    9.396536    4.093798 99.501950 0.03227093 8.321661
+ 1/512 0.01825477     0.06370419   16.349070    7.122815 174.312148 0.01814999 9.346441
+ 1/1024 0.01014060    0.05652525   28.889451   12.586295 309.383987 0.01009347 10.383974
+ 1/2048 0.005580532   0.05079351   51.707199   22.527325 555.296995 0.005559130 11.428930
+
+
+         Table 6. Values for c1,r , c2,r , c3,r as defined in Proposition 8, and
+         c5,r as defined in Proposition 23 for the unrounded r values from
+         Table 5. All values are rounded up.
+
+              r             c1,r                   c2,r     c3,r           c5,r
+          0.5647100     0.1761601              0.8786375 3.266227       1.078532
+          0.5185446     0.1548203              0.8986260 3.210968       1.112301
+          0.5030821     0.1480773              0.9296458 3.097724       1.124066
+          0.4821212     0.1394940               1.007195 2.806049       1.140402
+          0.3820329     0.09963112              1.355212 1.495928       1.225349
+          0.3390065     0.08331889              1.477082 1.037145       1.265982
+          0.3165097     0.07515015              1.528325 0.8442389      1.288392
+          0.3035626     0.07062081              1.551699 0.7562453      1.301685
+          0.2957571     0.06797647              1.562641 0.7150543      1.309847
+          0.2909922     0.06640649              1.567667 0.6961340      1.314886
+          0.1701799     0.03157371              1.570797 0.6843504      1.460012
+         0.09924635     0.01554098              1.570797 0.6843504      1.567632
+         0.05717607    0.007746955              1.570797 0.6843504      1.645371
+         0.03250649    0.003881447              1.570797 0.6843504      1.699469
+         0.01825477    0.001948252              1.570797 0.6843504      1.735811
+         0.01014060 9.783026 · 10−4            1.570797 0.6843504       1.759479
+         0.005580530 4.911646 · 10−4           1.570797 0.6843504       1.774490
+
+
+In the above arg f is always defined by continuous variation along a vertical line to
+the right of any zeros (that is, to the right of 1) followed by passing along a horizontal
+line, provided that horizontal line does not contain a zero of f . One handles the
+situation where there is a zero on the horizontal line by defining, compatibly with
+the halving convention for N (σ, T1 , T2 )
+                             1
+                         lim   (arg f (T2 + ϵ) + arg f (T2 − ϵ))
+                         ϵ→0 2
+20                                       A. FIORI
+
+
+so that (13) still holds.
+   The standard way to make use of this is to translate it to a bound on N (T −
+h, T + h, α) through:
+ N (T − h, T + h, α)
+                           Z T +h                       Z T +h
+                1
+        ≤                         log |ζ(σ0 + it)| dt −        log |ζ(σ1 + it)| dt
+          2π(1 − σ0 − α) T −h                            T −h                      (14)
+                  Z σ1                             Z σ1                         !
+                +      arg ζ(u + i(T + h)) du −         arg ζ(u + i(T − h)) du .
+                     σ0                               σ0
+
+However, this is not necessarily the best use of Equation (13), see Remark 34.
+                    R T +h
+   We shall bound T −h log |ζ(σ0 + it)| dt trivially. We will use the approach of
+                        R T +h
+Section 1.2 to bound − T −h log |ζ(σ1 +it)| dt and in Section 3.1 we shall provide an
+                               Rσ                           Rσ
+improved method of bounding σ10 arg ζ(u+i(T +h))du and σ10 arg ζ(u+i(T −h))du.
+   The improvements from Section 3.1 are crucial to our method, but also provide
+a strategy to improve the secondary error terms of essentially every recent paper
+that employs this strategy as they all rely on a Lemma of Kadiri, Lumley and Ng
+(See [22, Lemma 4.12]) which bounds the integral by bounding the argument at
+1/2 + iT rather than by bounding the integral itself.
+Lemma 25. With notation as defined in Equations (4), (5), (6), (7) suppose that
+σk ≤ σ < σk+1 , that 0 < h, and that T − h > 12, then
+   Z T +h
+ 1                                mk σ + b k               m′ σ + b′k
+          log |ζ(σ + it)| dt < h               log |T | + k           log log |T |
+2π T −h                                π                       π
+                                                 !
+                                   m′′k σ + b′′k
+                                                                                          
+                                                        ∗        h                 1158
+                                 +                 +O                     2+                   .
+                                         π                  π(T − h)2          8 log(T − h)
+
+Proof. This follows immediately from the validity of the bound on log |ζ(σ + it)|.
+   To obtain the given O∗ term one should actually integrate the log |t| and log log |t|
+terms along with the O∗ error terms from Proposition 35, rather than taking the
+naive bound, and eventually consider the Taylor expansions of various terms as a
+function of ht .                                                                     □
+
+Lemma 26. Suppose that 0 ≤ h < T and 1 ≤ σ then
+                        Z T +h
+                      1                             Φ(σ)
+                   −           log |ζ(σ + it)| dt ≤
+                     2π T −h                         π
+where Φ(σ) is the anti-derivative of − log(ζ) as defined in (12).
+Proof. This follows from the fundamental theorem of calculus and the absolute
+convergence of the series defining Φ.                                      □
+
+     We shall denote by
+                          ∆ arg f (x)|ba = arg(f (b)) − arg(f (a))
+the change in arg f along the line from a to b. We shall only use this when there
+should be no ambiguity about the path.
+                      ZERO DENSITY THEOREMS FOR SHORT INTERVALS                          21
+
+
+Lemma 27. Suppose that 1 < σ1 and σ0 ≤ σ1 then
+              | arg(ζ(σ1 + iT + ih)) − arg(ζ(σ1 + iT − ih))| ≤ 2 log(ζ(σ1 ))
+and hence
+               Z σ1                              Z σ1                        !
+          1
+                      arg ζ(u + i(T + h)) du −          arg ζ(u + i(T − h)) du
+         2π     σ0                                σ0
+                                                   Z σ1
+                          σ1 − σ0                1
+                      ≤           log(ζ(σ1 )) +         ∆ arg ζ(iT + ih + x)|uσ1 du
+                             π                  2π σ0
+                                  Z σ1
+                                1
+                            −          ∆ arg ζ(iT − ih + x)|uσ1 du.
+                               2π σ0
+Proof. We have | arg(ζ(σ + iT + ih)| < | log(ζ(σ + iT + ih)| < log(ζ(σ)).                 □
+
+   In the next section we discuss how to bound the integral of the change in
+argument of a function.
+
+3.1. Bounding Integrals of ∆ arg f (x). Backlund’s method has become a stan-
+dard method to bound the argument of an L-function in the critical strip [2,7,19,37].
+   However, in the context of the use of Littlewood’s zero detection method as
+above we do not need to bound the argument per-se but rather we can write
+   Z σ0                                                    Z σ0
+        arg f (σ + iT ) dσ = (σ0 − σ1 ) arg f (σ1 + iT ) +      ∆ arg f (x + iT )|uσ1 du.
+    σ1                                                          σ1
+
+We provide here a re-interpretation of Backlund’s trick which is tuned to bounding
+directly
+                            Z σ0
+                                 ∆ arg f (x + iT )|uσ1 du.
+                                   σ1
+For L-functions this method is particularly well adapted to the situation where
+σ1 > 1/2. The advantage of our approach is that we don’t need to consider f in
+the region to the left of σ1 , for instance on the left half of the critical strip where its
+values are known to be large by virtue of the functional equation and the Γ factors.
+   A standard strategy to bound the change in the argument of a function is to count
+the number of zeros of ℜ(f ) along the path. This can be amplified by considering
+                                 1
+                                   f (u + c + iT )N + f (u + c − iT )N
+                                                                       
+                      FN (u) =
+                                 2
+which has ℜ(f (c + u + iT )N ) = FN (u).
+   The following Lemma provides the core of the new idea here, which is to recognize
+we wish to integrate this number of zeros, rather than focus on bounding the number
+of zeros.
+Lemma 28. Fix T > 0, N > 0, σ0 < σ1 and c > (σ0 + σ1 )/2 then
+   Z σ0                                                     Z c−σ0           
+                          u       π                                 nFN (u)
+        ∆ arg f (x + iT )|σ1 du ≤     (σ1 − σ0 ) + Cc,σ0 ,σ1                du
+    σ1                            N                           0       u
+where
+                                 1
+                                   f (u + c + iT )N + f (u + c − iT )N )
+                                                                        
+                      FN (u) =
+                                 2
+22                                                 A. FIORI
+
+
+and nFN (u) denotes the number of complex zeros for the function FN in a ball of
+radius u and                                                     
+                                                σ − σ0
+                Cc,σ0 ,σ1 = sup                                     .
+                           σ∈[σ0 ,σ1 ] log(c − σ0 ) − log |σ − c|
+
+Proof. First, note that we can reduce to the case of having no zeros on the horizontal
+line through the halving convention described after (13) using uniform continuity.
+   Next, we note that both the left and right hand integrals can be bounded in
+terms of zeros of FN .
+   Let SL denote the zeros of ℜ(f ) between c and σ0 and let SR denote the zeros
+between c and σ1 . We have
+                                                                            
+       Z σ0
+                                       π                 X
+            ∆ arg f (x + iT )|uσ1 du ≤     (σ1 − σ0 ) +          (ℜ(ρ) − σ0 ) .
+         σ1                            N
+                                                                           ρ∈SL ∪SR
+
+This follows from the observation that arg f can be bounded by a step function
+                     π
+which increases by N    every time ℜ(f (u)N ) = 0, that is, precisely when FN (u) = 0,
+                                 π
+and which starts at the value N     at u = σ1 . The formula on the right is precisely
+the integral of this step function.
+   On the other hand, the right hand integral can be rewritten as
+         Z c−σ0                                     
+                 nFN (u)         X            c − σ0
+                         du =           log
+          0         u                           |ρ|
+                                      FN (ρ)=0
+                                      |ρ|<c−σ0
+                                                                                                   
+                                       X                c − σ0            X                 c − σ0
+                                  ≥          log                      +          log                      ,
+                                                       c − ℜ(ρ)                            ℜ(ρ) − c
+                                      ρ∈SL                                ρ∈SR
+
+since every real zero is a complex zero and the dropped terms are nonnegative. As
+we have defined Cc,σ0 ,σ1 to be the maximum possible ratio between the weight for
+a zero in the respective sums, this gives the result.                          □
+
+   Depending on where c is in the interval ((σ0 + σ1 )/2, ∞) the supremum defining
+Cc,σ0 ,σ1 will occur at different places.
+   We define η ∈ (0, 1) to be the unique solution to
+                                         1 + η + log(η) = 0.                                                  (15)
+Note that η = 0.27846454276 . . .
+Lemma 29. We have
+                                                                         
+                                               σ − σ0
+                        sup                                                   ≤ c − σ0
+                      σ∈[σ0 ,c]       log(c − σ0 ) − log |σ − c|
+
+and, provided σ0 +σ2
+                     1
+                       < c,
+                                                
+                              σ − σ0                          σ1 − σ0
+           sup                                     ≤                              .
+         σ∈[c,σ1 ]   log(c − σ 0 ) − log |σ − c|     log(c − σ 0 ) − log |σ1 − c|
+
+Moreover, if σ1 − c ≤ η(c − σ0 ) where η is as defined in (15) then
+                                                         
+                                        σ − σ0
+                     sup                                    ≤ c − σ0
+                   σ∈[σ0 ,σ1 ] log(c − σ0 ) − log |σ − c|
+                  ZERO DENSITY THEOREMS FOR SHORT INTERVALS                           23
+
+
+Proof. We are looking for extreme values of
+                                     σ − σ0
+                                                        .
+                            log(c − σ0 ) − log(|σ − c|)
+differentiating with respect to σ gives
+                          log(c − σ0 ) − log(|σ − c|) + σ−σ
+                                                         σ−c
+                                                            0
+
+                                                                .
+                              (log(c − σ0 ) − log(|σ − c|))2
+To the left of c, there is potentially a critical point which occurs at σ̂ a solution to
+                     (log(c − σ0 ) − log(c − σ̂))(c − σ̂) = (σ̂ − σ0 )
+substituting this back into
+                                        σ − σ0
+                                                           .
+                               log(c − σ0 ) − log(|σ − c|)
+tells us the critical value will be
+                                      (c − σ̂) ≤ c − σ0 .
+As this is in fact the value of the limit at the left end point of the interval, and
+since the ratio tends to 0 as σ → c this bounds the supremum, which gives us the
+first claim.
+    On the right of c we see that the function is increasing, this gives the second
+claim.
+    For the final claim, if (σ1 − c) ≤ η(c − σ0 ) then
+                         σ1 − σ 0               (c − σ0 ) + (σ1 − c)
+                                           =
+                log(c − σ0 ) − log(σ1 − c)   log(c − σ0 ) − log(σ1 − c)
+                                             (1 + η)(c − σ0 )
+                                           ≤                  = c − σ0
+                                                − log(η)
+so that the extreme value from the right is not larger than c − σ0 .                  □
+Remark 30. The above optimization will allow us to consider having c = 1 even
+if σ1 > 1. However, it should be noted that in applications of Backlund’s trick to
+bounding N (σ, T ) there can be lower bounds on σ1 arising from the need to bound
+arg(f (σ1 + iT )) or to bound an integral outside the critical strip.
+   These lower bounds are often of the form σ1 > 1 + k log    log(T )
+                                                           log(T ) , (see [15]). Thus,
+when considering N (σ, T ) for very small σ extra care must be taken.
+Theorem 31. Assume c ∈ [σ0 , σ1 ] satisfies σ1 − c ≤ η(c − σ0 ) where η is as defined
+in Equation (15). Let r = c − σ0 . Suppose f is analytic on the disc of radius r
+centered at c + iT , that f (s) = f (s) and that f has no zeros on the line connecting
+σ0 + iT to σ1 + iT . Suppose Fc,r (θ) is an even, integrable real valued function such
+that
+            max log |f (c + reiθ + iT )|, log |f (c + reiθ − iT )| ≤ Fc,r (θ).
+                                                                  
+
+Then
+          Z σ0
+       1
+               arg f (σ + iT ) dσ − (σ0 − σ1 ) arg f (σ1 + iT )
+      2π σ1
+                                                                 1 π
+                                                                                
+                                  c − σ0
+                                                                    Z
+                               ≤           − log |f (c + iT )| +      Fc,r (θ) dθ .
+                                     2                           π 0
+24                                      A. FIORI
+
+
+In the above arg f denotes a continuous argument of f along the line segment
+connecting σ0 + iT to σ1 + iT .
+Proof. First, note that we can reduce to the case of having no zeros on the horizontal
+line through the halving convention described after (13) using uniform continuity.
+    Now, beginning from
+     Z σ0                                                       Z σ0
+  1                                                           1
+          arg f (σ + iT ) dσ − (σ0 − σ1 ) arg f (σ1 + iT ) =         ∆ arg f (x + iT )|uσ1 du
+2π σ1                                                        2π σ1
+Next, we note (as in [19, Lemma 3.3]) that there exists an infinite collection of N
+such that FN (0) ̸= 0, and for such N , by applying Lemmas 28, 29 and then Jensen’s
+Theorem, we have
+          Z σ0
+       1
+               arg f (σ + iT ) dσ − (σ0 − σ1 ) arg f (σ1 + iT )
+      2π σ1
+         σ1 − σ0     c − σ0 r nFN (u)
+                            Z
+      ≤           +                      du
+           2N          2N     0    u
+                                                         Z 3π/2                  !
+         σ1 − σ0     c − σ0      1                   1                     iθ
+      =           +           − log |FN (0)| +                  log |FN (re )| dθ .
+           2N           2       N                 2πN −π/2
+
+        σ1 − σ0   c − σ0      1
+      =         +           − log |FN (0)|
+          2N         2        N
+                 Z π                                         !
+              1                   iθ               −iθ
+                                                        
+         +             log |FN (re )| + log |FN (re )| dθ .
+            2πN 0
+                                                    Z π                  !
+        σ1 − σ0   c − σ0      1                  1                 iθ
+      =         +           − log |FN (0)| +            log |FN (re )| dθ .
+          2N         2        N                πN 0
+
+Note that the last line is using FN (reiθ ) = FN (re−iθ ) so that they have the same
+absolute values.
+   We may apply Backlund’s trick (as in [19, Lemma 3.3]) to get a sequence Nm
+such that
+                     lim log |FNm (c + iT )| = Nm log |f (c + iT )|.
+                    m→∞
+Moreover, we have
+           1    1
+             log f (c + iT + reiθ )N + f (σ + iT + reiθ )N
+           N    2
+                  1                           N                    N
+                                                                      
+               ≤    log max f (c + iT + reiθ ) , f (σ − iT + reiθ )
+                  N
+               = log max f (c + iT + reiθ ) , f (c + iT + re−iθ )
+                                                                  
+
+                ≤ Fc,r (θ).
+Taking m to infinity we obtain
+                  Z σ0
+               1
+                       arg f (σ + iT ) dσ − (σ0 − σ1 ) arg f (σ1 + iT )
+              2π σ1
+                                                     1 π
+                                                                     
+                      c − σ0
+                                                       Z
+                   ≤           − log |f (c + iT )| +       Fc,r (θ) dθ .               □
+                         2                           π 0
+                   ZERO DENSITY THEOREMS FOR SHORT INTERVALS                           25
+
+
+3.2. Application to ζ for zero density for short intervals.
+Theorem 32. With notation as defined in Equations (4), (5), (6), (7), and (15).
+Suppose t − h > 13, 0 < h and 0 < α < r < 1. Suppose that σk ≤ (1 − r) < σk+1
+then
+                      2A1,α,r h + 2A4,α,r
+N (t − h, t + h, α) <                      log |t| + (2A2,α,r h + 2A5,α,r ) log log |t|
+                               π
+                      + 2A3,α,r h + A6,α,r
+                                                                   
+                         ∗     1         h                 1158
+                      +O                           2+
+                            r − α π(t − h)2            8 log(t − h)
+                            
+                          r         2r                       r                         2
+                        +                    +                               +
+                          4 3(t + h − r) (t + h − r) log(t + h) − r (t + h − r)2
+                                             1158                      2r
+                             +                2
+                                                               +
+                                8(t + h − r) log(t + h − r) 3(t − h − r)
+                                              r                      2
+                             +                              +
+                                (t − h − r) log(t − h) − r (t − h − r)2
+                                                               !!
+                                             1158
+                             +
+                                8(t − h − r)2 log(t − h − r)
+where A1,α,r , . . . , A6,α,r are defined by:
+           mk (1 − r) + bk
+  A1,α,r =
+                2(r − α)
+           m′k (1 − r) + b′k
+  A2,α,r =
+               2π(r − α)
+           m′′k (1 − r) + b′′k
+  A3,α,r =
+               2π(r − α)
+            c1,r r
+  A4,α,r =
+           (r − α)
+           c2,r r + πr
+  A5,α,r =
+            π(r − α)
+           c3,r r + c4,r πr + π log(29.388)r + Φ(1 + ηr) + (1 + η)r log(ζ(1 + ηr))
+  A6,α,r =                                                                         .
+                                            π(r − α)
+Calculated values for these constants are provided in Table 7.
+  If in addition t > 1012 and h < t2/3 , then the O∗ term can be replaced with
+                                                                         
+       ∗       1              0.502     1.001    72.48     0.64     46.3
+     O                0.334 +         +       +           + 1/3 + 1/3         .
+           t(r − α)           log |t|     t     t log |t|   t    t log |t|
+Proof. This follows from Equation (14) with σ0 = 1 − r and σ1 = 1 + ηr. We use
+Lemma 25 to bound the first integral which gives the A1,α,r , A2,α,r , and A3,α,r
+terms. We use Lemma 26 to bound the integral outside the critical strip, this
+contributes Φ(1 + ηr)/π to A6,α,r . We use Lemma 27 to convert the arg ζ integrals
+into ∆ arg ζ integrals. Using
+       arg ζ(1 + ηr + i(t ± h)) ≤ | log(ζ(1 + ηr + i(t ± h)))| < log(ζ(1 + ηr))
+contributes (1 + η)r log(ζ(1 + ηr))/π to A6,α,r .
+26                                         A. FIORI
+
+         Table 7. Values for Theorem 32. All values, including r, are
+         rounded up.
+
+  α         r          A1,α,r    A2,α,r    A3,α,r          A4,α,r   A5,α,r     A6,α,r       r/α
+ 1/6    0.5000000   0.2469513         0 2.005451       0.2201801 1.948504 10.269668 3.000000
+ 1/7    0.5000000   0.2304879         0 1.871754       0.2055015 1.818604    9.585023 3.500000
+ 1/8    0.5000000   0.2195122         0 1.782623       0.1957157 1.732003    9.128594 4.000000
+ 1/9    0.2857143   0.2045455 0.9115238 0.3971245      0.1059233 2.454546 12.040681 2.571429
+ 1/10   0.2857143   0.1923077 0.8569882 0.3733649     0.09958597 2.307693 11.320299 2.857143
+ 1/11   0.2857143   0.1833334 0.8169954 0.3559412     0.09493862 2.200000 10.792018 3.142858
+ 1/12   0.2857143   0.1764706 0.7864127 0.3426172     0.09138477 2.117648 10.388039 3.428572
+ 1/13   0.2857143   0.1710527 0.7622685 0.3320983     0.08857910 2.052632 10.069108 3.714286
+ 1/14   0.2857143   0.1666667 0.7427231 0.3235829     0.08630784 2.000000    9.810926 4.000000
+ 1/15   0.2857143   0.1630435 0.7265770 0.3165485     0.08443158 1.956522    9.597645 4.285715
+ 1/16   0.2857143   0.1600000 0.7130142 0.3106396     0.08285553 1.920001    9.418489 4.571429
+ 1/32   0.1666667   0.1230770 1.175299 0.5120433      0.03779972 1.846154 11.325849 5.333334
+ 1/64 0.09677420 0.09937889 1.961264 0.8544655        0.01794826 1.788820 14.441878 6.193549
+1/128 0.05555556 0.08311689 3.333573 1.452341        0.008701209 1.745455 19.713406 7.111112
+1/256 0.03149607 0.07134895 5.768613 2.513217        0.004266277 1.712375 28.844815 8.062993
+1/512 0.01764706 0.06246950 10.141176 4.418216       0.002105235 1.686677 44.972432 9.035295
+1/1024 0.009784736 0.05554351 18.069007 7.872142     0.001042787 1.666306 73.905261 10.019570
+1/2048 0.005376345 0.04999512 32.559922 14.185413 5.177350 · 10−4 1.649839 126.451532 11.010753
+
+
+
+   Now for each of the two ∆ arg ζ integrals we take c = 1 and define Fc,r (θ) to
+be log(ζ(r cos(θ))) when 0 ≤ θ ≤ π/2 and defined as in the proof of Proposition 8.
+The combined contribution from these two integrals is then precisely 1 − σ0 = r
+times the bound obtained in Theorem 16. This explains the additional terms in
+A4,α,r , A5,α,r , and A6,α,r .
+   Finally, the O∗ term tracks the errors that accumulate from the inputs above
+that carried their own O∗ error.                                                □
+
+Remark 33. In contrast to optimizing r for B1,α,r the strategy for A1,α,r is
+relatively straightforward as it is essentially defined by a piecewise fractional linear
+map:
+                                   −mk r + mk + bk
+                                         r−α
+so that on any interval its derivative
+                                        mk α + mk + bk
+                                           (r − α)2
+doesn’t change sign. As such, the optimal is at an endpoint.
+
+Remark 34. It is worth noting that in some applications the bound in Equation
+(13) can be used directly rather than needing to translate to a bound through
+Theorem 32. This is because in applications we are often interested in bounding
+                            Z σ2
+                                 f (σ)N (σ, T1 , T2 )dσ
+                                   σ1
+
+and integration by parts allows, for at least some of the terms, to be bounded by
+a direct use of equation (13). This would typically result in a better final bound
+than using the bound from Theorem 32 immediately.
+                  ZERO DENSITY THEOREMS FOR SHORT INTERVALS                             27
+
+
+                              4. Tables of C2 values
+   For each α in Table 3’s list with α < 1/6, and each pair (h0 , t0 ), the value of
+r ∈ (α, 1) minimizing C2 was located numerically and the resulting C2 recorded.
+Since C2 is decreasing in both h0 and t0 , each row bounds the zero-density ratio for
+all t > t0 and t2/3 > h > h0 . Rows attaining C2 < 1/2 guarantee that a positive
+proportion, (1 − 2C2 ), of the zeros in the interval have real part in [α, 1 − α]; these
+are the values recorded in Table 1.
+
+
+                         Appendix A. Bounds For Zeta
+  In this Appendix we recall or establish bounds on ζ which we have used
+  First, we recall the subconvexity bounds
+
+                           |ζ(1/2 + it)| ≤ 0.618|t|1/6 log |t|
+
+from [21] with recent claimed improvements to
+
+                           |ζ(1/2 + it)| ≤ 0.611|t|1/6 log |t|
+
+in [33]. We note however that both works provide better asymptotic results,
+specifically [21, Equation (3.23)] proves
+                                         1                              1
+            |ζ(1/2 + it)| < 0.478013|t| 6 log |t| + 3.853165|t| 6 − 2.914229
+
+for t > 1012 and [33, Remark 3.1]
+                                 1                          1
+                     0.470795|t| 6 log |t| + 4.04972|t| 6 − 21.5437
+
+for t > 7 · 1011 , from which one can in fact conclude that
+                                                1                              1
+                   |ζ(1/2 + it)| < 0.470795|t| 6 log |t| + 4.04972|t| 6
+
+for |t| > 3, which is better than 0.611|t|1/6 log |t| for large t and worse for small t.
+   For even larger values of t we have the better bound
+                                                            27
+                                |ζ(1/2 + it)| ≤ 66.7t 164
+
+due to [28].
+  Inside the critical strip by [38] we have that for any k ≥ 4
+                                                        k
+             |ζ(1 − k/(2k − 2) + it)| < 1.546|t|1/(2 −2) log |t|               t ≥ 3.
+
+A better bound for large t and σ close to 1, valid for |t| > 3 and 1/2 ≤ σ ≤ 1, is
+                                                     3/2
+                      |ζ(σ + it)| < 70.7|t|4.438(1−σ)           (log |t|)2/3
+
+from [4].
+   Using the version of the Phragmén-Lindelöf from [16], and following the approach
+of [16, Section 4] we can essentially interpolate bounds on log |ζ(σ + it)| as follows:
+
+Proposition 35. For t > 12 we have the following bounds on log |ζ(σ + it)| .
+28                                       A. FIORI
+
+
+     (1) For 1/2 ≤ σ ≤ 5/7, we have the following bounds
+                                                        
+                    47      107               14         1
+log |ζ(σ + it)| ≤        −      σ log |t| +        σ−        log log |t|
+                    123 246                    3         2
+                                                           
+                    14 5                         14         1
+                  +          − σ log(66.7) +          σ−        log(1.546)
+                     3 7                         3          2
+                                           
+                           3        283
+                  + O∗        + 2
+                          2t2    4t log |t|
+                                                                       
+                    4(1 − σ)      1                            14 5
+log |ζ(σ + it)| ≤             −       log |t| + log log |t| +          − σ log(0.611)
+                        9        18                             3 7
+                                
+                    14         1
+                  +       σ−       log(1.546)
+                     3         2
+                                           
+                      ∗    3        579
+                  +O          + 2
+                          2t2    4t log |t|
+                                   
+                    4(1 − σ)      1
+log |ζ(σ + it)| ≤             −       log |t| + log log |t|
+                        9        18
+                                                                           
+                    14 5                              4.04972         14      1
+                  +          − σ log 0.470795 +                    +       σ−     log(1.546)
+                     3 7                               log |t|         3      2
+                                           
+                           3        567
+                  + O∗        + 2
+                          2t2    4t log |t|
+    (2) For k ≥ 4 and 1 − 2kk−2 ≤ σ ≤ 1 − 2k+1 k+1
+                                                 −2
+                                                     (this line only needs t > 3)
+                                                   
+                       (1 − σ)               1
+ log |ζ(σ + it)| ≤             1−k
+                                   − k                log |t| + log log |t| + log(1.546)
+                     k−1+2            2 (k − 1) + 2
+                                          
+                           3        7
+                   + O∗      2
+                               + 2
+                          2t     t log |t|
+Proof. Applying the Phragmén-Lindelöf Theorem as in [16, Section 4] to bound |ζ|
+and taking the logarithm will allow one to obtain the result.
+    The hardest case which is new is perhaps the third bound in (1) so we will
+illustrate how the proof goes for this case. We define
+                                    G0 (s) = (1 + s),
+                     1
+          G1 (s) =     (log(4e + 1 + s) + log(4e + 1 − s))0.470795 + 4.04972,
+                     2
+and
+                          1.546
+                     G2 (s) =   (log(4e + s) + log(4e + 2 − s)).
+                            2
+The bounds we wish to interpolate are:
+           |ζ(1/2 + it)| < |G0 (1/2 + it)|1/6 |G1 (1/2 + it)|1 |G2 (1/2 + it)|0
+and
+          |ζ(5/7 + it)| < |G0 (5/7 + it)|1/14 |G1 (5/7 + it)|0 |G2 (5/7 + it)|1 .
+Note that the functions G0 and G1 are increasing in σ for |t| large whereas G2 is
+decreasing, they thus satisfy the conditions coming from [16, Theorem 7] related to
+how the exponents are changing. One can also verify that the necessary condition
+is satisfied in the compact region |t| ≤ 4e + 1 ≈ 11.87 via the Maximum Modulus
+                   ZERO DENSITY THEOREMS FOR SHORT INTERVALS                           29
+
+
+Principle. The final O∗ term is established by looking at how quickly G0 , G1 , and
+G2 converge to |t|, 0.470795 log |t| + 4.04972, and 1.546 log |t|.                □
+
+
+
+  To get bounds for ζ(σ + it) for −1 ≤ σ ≤ 1/2 one can use the following.
+
+Lemma 36. For 0 ≤ σ ≤ 1/2 and t > 10 we have
+
+
+     log |ζ(σ + it)| = log |ζ(1 − σ + it)| + (1/2 − σ) log |t/2| + (σ − 1/2) log |π|
+                                                    √            ! !
+                                                      3     0.17   1
+                                           + O∗         +              .
+                                                   216        t    t2
+
+
+For −1 ≤ σ ≤ 0 and t > 10 we have:
+
+
+     log |ζ(σ + it)| = log |ζ(1 − σ + it)| + (1/2 − σ) log |t/2| + (σ − 1/2) log |π|
+                                                            
+                                               ∗    1 1.4 1
+                                           +O         +            .
+                                                    2    t     t2
+
+Proof. The functional equation for ζ gives
+
+
+                                                         Γ((1 − σ + it)/2)
+log |ζ(σ+it)| = log |ζ(1−σ+it)|+(σ−1/2) log |π|+log                        ((σ + it)/2) .
+                                                                Γ
+
+
+A precise version of Stirling’s approximation (See [9, Section 2]) gives us
+
+
+                                                  1           B2
+               log Γ(z) = (z − 1/2) log z − z +     log(2π) +    + R2 (z)
+                                                  2           2z
+
+                                       √
+for ℜ(z) > 0 where |R2 (z)| < | (1+12z2π)B
+                                       3
+                                          4
+                                            |. From this we may derive that for
+0 ≤ a, b ≤ 1 and t > 2:
+
+
+ log(Γ(a + it/2)) − log(Γ(b + it/2))
+        = (a + it/2 − 1/2) log(a + it/2) − (b + it/2 − 1/2) log(b + it/2) + (b − a)
+            B2 (a − it/2) B2 (b − it/2)
+           +               −                + R2 (a + it/2) − R2 (b + it/2)
+             2(a2 + t2 /4)    2(b2 + t2 /4)
+        = (a − b) log(t/2) + (a + it/2 − 1/2) log(i + 2a/t)
+           − (b + it/2 − 1/2) log(i + 2b/t) + (b − a)
+               B2 (a − it/2) B2 (b − it/2)
+           +                 −               + R2 (a + it/2) − R2 (b + it/2).
+               2(a2 + t2 /4)   2(b2 + t2 /4)
+30                                           A. FIORI
+
+
+Taking real parts we obtain
+
+     log |Γ(a + it/2)| − log |Γ(b + it/2)|
+                                    a − 1/2                     b − 1/2
+            = (a − b) log(t/2) +            log(1 + 4a2 /t2 ) −         log(1 + 4b2 /t2 )
+                                       2                           2
+                t
+              +   (arctan (2a/t) − arctan (2b/t)) + (b − a)
+                2
+                    B2 a            B2 b
+              +              −
+                2(a2 + t2 /4) 2(b2 + t2 /4)
+              + ℜ(R2 (a + it/2) − R2 (b + it/2))
+                                 2a2 (a − 1/2) − 2b2 (b − 1/2) − 43 (a3 − b3 )
+            = (a − b) log (t/2) +
+                                                      t2
+                                         2
+                2B2 (a − b)(1 − 4ab/t )
+              + 2
+                 t (1 + 4a2 /t2 )(1 + 4b2 /t2 )
+                     4|a − 1/2|a4 + 4|b − 1/2|b4               5      5
+                                                                     
+                                                         ∗ 16(a + b )
+              + O∗                                 +  O
+                                  t4                           5t4
+                               √     !
+                     4B4 (1 + 2π)
+              + O∗
+                           3t3
+
+
+
+A more careful analysis of the error terms yields the result.
+  For −1 ≤ σ ≤ 0 we must apply
+
+       log |Γ((σ + it)/2)| = log |Γ((σ + it)/2 + 1)| − log |(σ + it)/2)|
+                                                                   1
+                           = log |Γ((σ + it)/2 + 1)| − log |t/2| − log(1 + σ 2 /t2 )
+                                                                   2  
+                                                                         1
+                           = log |Γ((σ + it)/2 + 1)| − log |t/2| + O∗ 2 .
+                                                                        t
+
+Additionally, in the comparison
+
+                   log |Γ(1 + σ/2 + it/2)| − log |Γ(1/2 − σ/2 + it/2)|
+
+we now take a = 1/2 − σ/2 and b = σ/2 + 1 will have a − b = −1/2 − σ and
+1/2 ≤ a, b ≤ 1. As above, combining terms and checking bounds will give the
+result.                                                                  □
+
+
+     A similar argument also bounds changes in the argument of Γ:
+
+Lemma 37. For −1/2 ≤ δ ≤ 1 and t > 10 we have
+
+                                                             δπ δ 2
+                                                                                
+                                                                            0.21
+        arg Γ(1/2 + it/2) − arg Γ(1/2 + δ/2 + it/2) = −         +    + O∗
+                                                              4   4t         t3
+
+Note that here arg Γ refers to the analytic continuation, not the principal branch.
+                         ZERO DENSITY THEOREMS FOR SHORT INTERVALS                          31
+
+
+Proof. We start from
+      log(Γ(a + it/2)) − log(Γ(b + it/2))
+                 = (a − b) log(t/2) + (a + it/2 − 1/2) log(i + 2a/t)
+                     − (b + it/2 − 1/2) log(i + 2b/t) + (b − a)
+                         B2 (a − it/2) B2 (b − it/2)
+                     +                 −               + R2 (a + it/2) − R2 (b + it/2).
+                         2(a2 + t2 /4)   2(b2 + t2 /4)
+Now taking the imaginary part gives
+    arg Γ(a + it/2) − arg Γ(b + it/2)
+                 t      1 + 4a2 /t2          π
+             =     log        2   2
+                                    + (a − b) − (a − 1/2) arctan(2a/t)
+                 4      1 + 4b /t            2
+                 + (b − 1/2) arctan(2b/t)
+                     4B2          a2 − b2
+                 +                                    + ℑ(R2 (a + it/2) − R2 (b + it/2)).
+                      t3 (1 + 4a2 /t2 )(1 + 4b2 /t2 )
+Taking a = 1/2 and b = 1/2 + δ/2, then several applications of Taylor’s Theorem
+to verify upper and lower bounds, gives the result.                           □
+Lemma 38. Write the Laurent series for ζ ′ /ζ centered at 1 as
+                                             ∞
+                                ζ′        1 X
+                               − (1 + z) = +   (−1)n+1 an z n
+                                ζ         z n=0
+then we have for n ≥ 1
+                                                                            
+                                                                   6
+                         an = 3−n−1 + 5−n−1 + 7−n−1 + O∗             · 7−n
+                                                                  10
+and hence we have for any x ∈ (0, 2] and any N ≥ 0 that
+                2N                               2N −1
+             1 X                    ζ′        1   X
+              +    (−1)n+1 an xn < − (1 + x) < +       (−1)n+1 an xn
+             x n=0                  ζ         x   n=0
+and hence
+             2N −1                                                 2N
+              X                an n+1                              X         an n+1
+− log(x) +            (−1)n       x   < log(ζ(1 + x)) < − log(x) +    (−1)n     x
+             n=0
+                              n+1                                  n=0
+                                                                            n+1
+where an upper index of −1 denotes the empty sum.
+Proof. The first claim follows the proof of Chirre-Helfgott [10, Lemma A.7], their
+proof there attributed to A. Kalmynin [23]. We instead use a radius of 7 and remove
+the singularities at 1, −2, −4, and −6. Setting
+                                  ζ′          1   1   1   1
+                         G(z) =      (1 + z) + −    −   −    .
+                                  ζ           z  z+3 z+5 z+7
+We bound the Taylor coefficients of G(z), which is analytic on |z| ≤ 7 by the Cauchy
+                                                                                   6
+integral formula. We rigorously verify the bound on the boundary of |G(z)| < 10
+for |z| = 7. Rearranging and elementary calculations then give the result.
+   The second claim is then a simple consequence of this being an alternating series.
+We see that the sequence is positive by noting that a0 is positive and that the only
+negative term decreases at least as quickly as the positive terms. The same idea
+32                                            A. FIORI
+
+            d
+applied to dn (an 2n ) gives that the an 2n are a decreasing sequence for n ≥ 2, one
+can checks the first few terms through direct computations.
+   The third comes from the first using
+                           Z x                                   Z x
+                                                                       1 ζ′
+                                                                                    
+                                d
+log(ζ(1+x)) = − log(x)+           (log(uζ(1+u))) du = − log(x)+          + (1 + u) du
+                            0 du                                  0    u    ζ
+                                                                                  □
+Remark 39. The coefficients an above have the formulas
+                               m
+                                               !              !
+                  1           X   log(k)n Λ(k)     (log m)n+1
+           an = −     lim                        −              .
+                  n! m→∞               k              n+1
+                                        k=1
+and are related to the Stieltjes constants (See [13]).
+
+                                         References
+ [1] Levent Alpöge and Ralph Furman, More than two thirds of the zeros of the riemann zeta
+     function are simple and on the critical line, posted on 2026, DOI 10.48550/arXiv.2608.13637,
+     available at 2608.13637.
+ [2] R. J. Backlund, Über die nullstellen der riemannschen zetafunktion, Acta Mathematica 41
+     (1916), 345–375, DOI 10.1007/BF02422950.
+ [3] Chiara Bellotti, Explicit zero density estimate near unity, posted on 2023, DOI
+     10.48550/arXiv.2311.05136, available at 2311.05136.
+ [4]         , Explicit bounds for the riemann zeta function and a new zero-free region, J. Math.
+     Anal. Appl. 536 (2024), no. 2, 128249, DOI 10.1016/j.jmaa.2024.128249.
+ [5]         , An explicit log-free zero density estimate for the riemann zeta-function, Journal of
+     Number Theory 269 (2025), 37–77, DOI 10.1016/j.jnt.2024.10.001.
+ [6] Chiara Bellotti and Peng-Jie Wong, Counting zeros of artin l-functions, posted on 2026, DOI
+     10.48550/arXiv.2606.31441, available at 2606.31441.
+ [7] Chiara Bellotti, Peng-Jie Wong, and Andrew Fiori, On the argument of the Rie-
+     mann zeta-function, Mathematics of Computation 94 (2025), no. 353, 1495–1522, DOI
+     10.1090/mcom/4133.
+ [8] Harald Bohr and Edmund Landau, Über das verhalten von ζ(s) und ζk (s) in der nähe
+     der geraden σ = 1, Nachrichten von der Königlichen Gesellschaft der Wissenschaften zu
+     Göttingen, Mathematisch-Physikalische Klasse 1913 (1913), 711–731.
+ [9] Richard P. Brent, On the accuracy of asymptotic approximations of to the log-gamma and
+     riemann-siegel theta functions, Journal of the Australian Mathematical Society 107 (2019),
+     no. 3, 319–337, DOI 10.1017/S1446788718000393.
+[10] Andrés Chirre and Harald Andrés Helfgott, Optimal bounds for sums of non-negative arith-
+     metic functions, posted on 2025, DOI 10.48550/arXiv.2512.15709.
+[11] Shashi Chourasiya, An explicit version of carlson’s theorem, posted on 2024, DOI
+     10.48550/arXiv.2412.02068, available at 2412.02068.
+[12] Shashi Chourasiya and Aleksander Simonič, An explicit form of ingham’s zero density esti-
+     mate, posted on 2025, DOI 10.48550/arXiv.2507.15184, available at 2507.15184.
+[13] Mark W. Coffey, The Stieltjes constants, their relation to the ηj coefficients, and represen-
+     tation of the Hurwitz zeta function, posted on 2009, DOI 10.1524/anly.2010.1048.
+[14] J.B. Conrey, More than two fifths of the zeros of the riemann zeta function are on the critical
+     line., Journal für die reine und angewandte Mathematik 1989 (1989), no. 399, 1–26, DOI
+     10.1515/crll.1989.399.1.
+[15] Golnoush Farzanfard, Explicit zero density for the riemann zeta function, Master’s Thesis,
+     Lethbridge, Alta., 2024. URI: https://hdl.handle.net/10133/7053.
+[16] Andrew Fiori, A note on the phragmén-lindelöf theorem, Journal of Mathematical Analysis
+     and Applications 559 (2026), no. 1, 130404, DOI 10.1016/j.jmaa.2026.130404.
+[17] Kevin Ford, Zero-free regions for the Riemann zeta function, Proceedings of the London
+     Mathematical Society. Third Series 85 (2002), no. 3, 565–633.
+[18]         , Zero-free regions for the riemann zeta function, posted on 2019, DOI
+     10.48550/arXiv.1910.08205, available at 1910.08205.
+                    ZERO DENSITY THEOREMS FOR SHORT INTERVALS                                  33
+
+
+[19] Elchin Hasanalizade, Quanli Shen, and Peng-Jie Wong, Counting zeros of the riemann zeta
+     function, Journal of Number Theory 235 (2022), 219–241, DOI 10.1016/j.jnt.2021.06.032.
+[20] D. R. Heath-Brown, Zero-free regions for Dirichlet L-functions, and the least prime in an
+     arithmetic progression, Proceedings of the London Mathematical Society. Third Series 64
+     (1992), no. 2, 265–338, DOI 10.1112/plms/s3-64.2.265.
+[21] Ghaith A. Hiary, Dhir Patel, and Andrew Yang, An improved explicit estimate for ζ(1/2+it),
+     Journal of Number Theory 256 (2024), 195–217, DOI 10.1016/j.jnt.2023.09.003.
+[22] Habiba Kadiri, Allysa Lumley, and Nathan Ng, Explicit zero density for the riemann zeta
+     function, Journal of Mathematical Analysis and Applications 465 (2018), no. 1, 22–46, DOI
+     10.1016/j.jmaa.2018.04.071.
+[23] Alexandr Kalmynin, Sign of Laurent coefficients of −ζ ′ (s)/ζ(s) at s = 1, 2025. https:
+     //mathoverflow.net/q/501199 (version: 2025-10-09).
+[24] Anatolii Alekseevich Karatsuba, On the number of zeros of the riemann zeta-function lying
+     in almost all short intervals of the critical line, Izvestiya: Mathematics 40 (1993), no. 2,
+     353–364, DOI 10.1070/IM1993v040n02ABEH002168.
+[25] Nicol Leong, Explicit estimates for the logarithmic derivative and the reciprocal of the rie-
+     mann zeta-function, posted on 2024, DOI 10.1016/j.jnt.2026.01.007.
+[26] Norman Levinson, More than one third of zeros of riemann’s zeta-function are on σ = 1/2,
+     Advances in Mathematics 13 (1974), no. 4, 383–436, DOI 10.1016/0001-8708(74)90074-7.
+[27] Hugh Lowell Montgomery, Topics in multiplicative number theory, Ph.D. Thesis, Cambridge,
+     UK, 1973. Lecture Notes in Mathematics, Vol. 227.
+[28] Dhir Patel and Andrew Yang, An explicit sub-weyl bound for ζ(1/2 + it), J. Number Theory,
+     posted on 2024, DOI 10.1016/j.jnt.2024.03.011.
+[29] János Pintz, Some new density theorems for Dirichlet L-functions, Banach Center Publica-
+     tions 118 (2019), 231–244, DOI 10.4064/bc118-14. Number Theory Week 2017.
+[30]          , A remark on density theorems for Riemann’s zeta-function, Science China Mathe-
+     matics 66 (2023), no. 12, 2795–2802, DOI 10.1007/s11425-023-2215-7.
+[31] David J. Platt and Timothy S. Trudgian, The riemann hypothesis is true up to 3×1012 , Bul-
+     letin of the London Mathematical Society 53 (2021), no. 3, 792–797, DOI 10.1112/blms.12460.
+[32] Kyle Pratt, Nicolas Robles, Alexandru Zaharescu, and Dirk Zeindler, More than five-twelfths
+     of the zeros of ζ are on the critical line, Research in the Mathematical Sciences 7 (2020),
+     no. 1, 2, DOI 10.1007/s40687-019-0199-8.
+[33] Michael Revers, A new improved explicit estimate for ζ (1/2 + it), posted on 2026, DOI
+     10.48550/arXiv.2602.05614, available at 2602.05614.
+[34] Aleksander Simonič, Explicit zero density estimate for the riemann zeta-function near the
+     critical line, posted on 2019, DOI 10.1016/j.jmaa.2020.124303, available at 1910.08274.
+[35] Jesse Thorner and Asif Zaman, An explicit version of Bombieri’s log-free density estimate
+     and Sárközy’s theorem for shifted primes, Forum Mathematicum 36 (2024), no. 4, 1059–1080,
+     DOI 10.1515/forum-2023-0091.
+[36] Edward Charles Titchmarsh, The theory of the riemann zeta-function, 2nd ed., Oxford
+     University Press, Oxford, 1986. Revised by D.R. Heath-Brown.
+[37] Timothy S. Trudgian, An improved upper bound for the argument of the riemann zeta-
+     function on the critical line ii, Journal of Number Theory 134 (2014), 280–292, DOI
+     10.1016/j.jnt.2013.07.017.
+[38] Andrew Yang, Explicit bounds on ζ(s) in the critical strip and a zero-free region, J. Math.
+     Anal. Appl. 534 (2024), no. 2, 128124, DOI 10.1016/j.jmaa.2024.128124.
+
+  Department of Mathematics and Statistics, University of Lethbridge, 4401 Uni-
+versity Drive, Lethbridge, Alberta, T1K 3M4, Canada
+  Email address: andrew.fiori@uleth.ca
+34                                             A. FIORI
+
+
+            Table 8. Values of C2J (α, r, h0 , t0 ) for Corollary 4, with r chosen
+            to minimise C2J , at selected t0 ; only entries with C2J < 1/2 are
+            shown. For each α the rows are for h0 = 100 and, when a smaller
+            value succeeds, for the smallest h0 ∈ {1, 2, 5, 10} with C2J < 1/2 at
+            some tabulated t0 .
+
+       α         r       h0      t0         C2J        α          r       h0       t0        C2J
+      1/7    0.5636350   100   1010000   0.4986622    1/32    0.2013314    2    101000    0.4865377
+      1/8    0.5342314   100   101000    0.4775715    1/32    0.1675280    2    1010000   0.4082385
+      1/8    0.5189671   100   1010000   0.4657350    1/32    0.5517097   100    1050     0.4818041
+      1/9    0.5000332   10    1010000   0.4872129    1/32    0.5027604   100    10100    0.4124018
+      1/9    0.5121283   100   101000    0.4528088    1/32    0.2266519   100   101000    0.2964409
+      1/9    0.5034450   100   1010000   0.4408710    1/32    0.1731060   100   1010000   0.2624836
+     1/10    0.5001816   10    101000    0.4808442    1/64    0.1689264    2    101000    0.4175095
+     1/10    0.4196975   10    1010000   0.4644748    1/64    0.1011201    2    1010000   0.3266227
+     1/10    0.5030004   100   101000    0.4337894    1/64    0.5286353   100    1050     0.4594898
+     1/10    0.4952519   100   1010000   0.4220812    1/64    0.4999542   100    10100    0.3918022
+     1/11    0.3444898    5    1010000   0.4893983    1/64    0.1712617   100   101000    0.2563107
+     1/11    0.5002041   100   101000    0.4189652    1/64    0.1053448   100   1010000   0.2153473
+     1/11    0.3919117   100   1010000   0.4049475   1/128    0.1492711    2    101000    0.3854116
+     1/12    0.3663995    5    101000    0.4975744   1/128    0.0678735    2    1010000   0.2793925
+     1/12    0.3199260    5    1010000   0.4666552   1/128    0.5203543   100    1050     0.4486379
+     1/12    0.5613468   100    10100    0.4907737   1/128    0.4238279   100    10100    0.3812776
+     1/12    0.4330556   100   101000    0.4064223   1/128    0.1630512   100   101000    0.2370474
+     1/12    0.3456430   100   1010000   0.3882898   1/128    0.0712326   100   1010000   0.1859247
+     1/13    0.3408036    5    101000    0.4799246   1/256    0.0558222    1    1010000   0.4669492
+     1/13    0.3050524    5    1010000   0.4472619   1/256    0.5166588   100    1050     0.4433041
+     1/13    0.5483231   100    10100    0.4805636   1/256    0.3934370   100    10100    0.3755101
+     1/13    0.3792615   100   101000    0.3941154   1/256    0.1248878   100   101000    0.2265346
+     1/13    0.3211564   100   1010000   0.3733128   1/256    0.0561011   100   1010000   0.1664993
+     1/14    0.3235592    5    101000    0.4644272   1/512    0.0442182    1    1010000   0.4384521
+     1/14    0.2959856    5    1010000   0.4308666   1/512    0.5151511   100    1050     0.4406617
+     1/14    0.5389238   100    10100    0.4718842   1/512    0.3805800   100    10100    0.3725238
+     1/14    0.3482491   100   101000    0.3826411   1/512    0.1141511   100   101000    0.2206397
+     1/14    0.3066785   100   1010000   0.3602738   1/512    0.0399347   100   1010000   0.1560074
+     1/15    0.3113914    5    101000    0.4509017   1/1024   0.0378093    1    1010000   0.4217035
+     1/15    0.2907171    5    1010000   0.4170120   1/1024   0.5143367   100    1050     0.4393469
+     1/15    0.5318671   100    10100    0.4644368   1/1024   0.3746734   100    10100    0.3710083
+     1/15    0.3287816   100   101000    0.3722727   1/1024   0.1101808   100   101000    0.2176024
+     1/15    0.2980066   100   1010000   0.3490520   1/1024   0.0339743   100   1010000   0.1493438
+     1/16    0.3029161    5    101000    0.4391156   1/2048   0.0354201    1    1010000   0.4127839
+     1/16    0.2876722    5    1010000   0.4052587   1/2048   0.5139859   100    1050     0.4386911
+     1/16    0.5264389   100    10100    0.4579894   1/2048   0.3717163   100    10100    0.3702453
+     1/16    0.3156734   100   101000    0.3630387   1/2048   0.1082799   100   101000    0.2160693
+     1/16    0.2926453   100   1010000   0.3394116   1/2048   0.0324890   100   1010000   0.1458626
+                ZERO DENSITY THEOREMS FOR SHORT INTERVALS                                        35
+
+
+       Table 9. Values of C2L (α, r, h0 , t0 ) for Corollary 5, with r chosen
+       to minimise C2L , at selected t0 ; only entries with C2L < 1/2 are
+       shown. For each α the rows are for h0 = 100 and, when a smaller
+       value succeeds, for the smallest h0 ∈ {1, 2, 5, 10} with C2L < 1/2 at
+       some tabulated t0 .
+
+  α         r       h0       t0        C2L        α          r       h0      t0         C2L
+ 1/7    0.5000553   100   101000    0.4740568    1/16    0.2856104   100   1010000   0.3257779
+ 1/7    0.5000553   100   1010000   0.4685756    1/32    0.1665465    2    101000    0.4906269
+ 1/8    0.4998543   100   101000    0.4514720    1/32    0.0968092    2    1010000   0.4025658
+ 1/8    0.4998543   100   1010000   0.4462476    1/32    0.5000232   100    1050     0.4488857
+ 1/9    0.2857554   10    101000    0.4882517    1/32    0.2856721   100    10100    0.3921085
+ 1/9    0.2857554   10    1010000   0.4619823    1/32    0.1665465   100   101000    0.2756404
+ 1/9    0.5000332   100    10100    0.4852020    1/32    0.1665465   100   1010000   0.2518982
+ 1/9    0.3669506   100   101000    0.4349491    1/64    0.0968954    2    101000    0.4205741
+ 1/9    0.2857554   100   1010000   0.4164824    1/64    0.0698280    2    1010000   0.3224734
+1/10    0.2856093    5    1010000   0.4881779    1/64    0.4999542   100    1030     0.4952642
+1/10    0.5000258   100    10100    0.4717227    1/64    0.4999542   100    1050     0.4343990
+1/10    0.2858613   100   101000    0.4092675    1/64    0.2856453   100    10100    0.3694248
+1/10    0.2856093   100   1010000   0.3915972    1/64    0.0968954   100   101000    0.2451846
+1/11    0.2857759    5    101000    0.4975185    1/64    0.0966197   100   1010000   0.2060796
+1/11    0.2856729    5    1010000   0.4653739   1/128    0.0967824    2    101000    0.3836244
+1/11    0.4999496   100    10100    0.4612366   1/128    0.0555481    2    1010000   0.2709904
+1/11    0.2857759   100   101000    0.3901638   1/128    0.4999620   100    1030     0.4874013
+1/11    0.2856186   100   1010000   0.3733105   1/128    0.4999620   100    1050     0.4275029
+1/12    0.2857673    5    101000    0.4788967   1/128    0.2856832   100    10100    0.3590329
+1/12    0.2857673    5    1010000   0.4479777   1/128    0.0967824   100   101000    0.2236500
+1/12    0.4999684   100    10100    0.4528478   1/128    0.0555481   100   1010000   0.1771132
+1/12    0.2857673   100   101000    0.3755607   1/256    0.0315258    1    1010000   0.4532725
+1/12    0.2857673   100   1010000   0.3593345   1/256    0.4999032   100    1030     0.4835693
+1/13    0.2856637    5    101000    0.4641766   1/256    0.4999032   100    1050     0.4241374
+1/13    0.2844701    5    1010000   0.4341935   1/256    0.2857891   100    10100    0.3540689
+1/13    0.5000111   100    1050     0.4973387   1/256    0.0968742   100   101000    0.2142779
+1/13    0.5000111   100    10100    0.4459882   1/256    0.0315258   100   1010000   0.1603663
+1/13    0.2857189   100   101000    0.3640172   1/512    0.0313678    1    1010000   0.4232869
+1/13    0.2856637   100   1010000   0.3482876   1/512    0.4999329   100    1030     0.4816696
+1/14    0.2855528    5    101000    0.4522763   1/512    0.4999329   100    1050     0.4224735
+1/14    0.2422993    5    1010000   0.4217659   1/512    0.2855712   100    10100    0.3516266
+1/14    0.4999153   100    1050     0.4909741   1/512    0.0967377   100   101000    0.2098309
+1/14    0.4999153   100    10100    0.4402708   1/512    0.0313678   100   1010000   0.1497831
+1/14    0.2855528   100   101000    0.3547038   1/1024   0.0222964    1    1010000   0.4076979
+1/14    0.2855528   100   1010000   0.3393624   1/1024   0.4998957   100    1030     0.4807305
+1/15    0.2814622    5    101000    0.4424253   1/1024   0.4998957   100    1050     0.4216470
+1/15    0.1984167    5    1010000   0.4086917   1/1024   0.2856039   100    10100    0.3504178
+1/15    0.4999850   100    1050     0.4855666   1/1024   0.0967583   100   101000    0.2076897
+1/15    0.4999850   100    10100    0.4354286   1/1024   0.0313244   100   1010000   0.1449718
+1/15    0.2857290   100   101000    0.3469773   1/2048   0.0177013    1    1010000   0.3970552
+1/15    0.2857290   100   1010000   0.3319817   1/2048   0.4999310   100    1030     0.4802571
+1/16    0.2506745    5    101000    0.4333652   1/2048   0.4999310   100    1050     0.4212344
+1/16    0.1668332    5    1010000   0.3938998   1/2048   0.2857073   100    10100    0.3498109
+1/16    0.4999745   100    1050     0.4809436   1/2048   0.0965963   100   101000    0.2066454
+1/16    0.4998122   100    10100    0.4312874   1/2048   0.0177013   100   1010000   0.1418188
+1/16    0.2856104   100   101000    0.3405016
+36                                        A. FIORI
+
+
+        Table 10. Smallest n with C2J (α, r, h0 , 10n ) < 1/2, with r chosen
+        to minimise C2J . The last column is the resulting proportion 1 −
+        2C2J of zeros with real part in [α, 1 − α], rounded down; since C2J
+        is decreasing in t0 , it is a lower bound for every t0 ≥ 10n . For each
+        α the rows are for h0 = 100 and, when it exists, for the smallest
+        h0 ∈ {1, 2, 5, 10} with such an n ≤ 105 .
+
+      α         r       h0   n    1 − 2C2J       α          r       h0   n    1 − 2C2J
+     1/7    0.5664448   100 5094 6.42 · 10−7    1/16    0.3863327    5  305 2.70 · 10−4
+     1/8    0.5699492   100 326 1.34 · 10−4     1/16    0.5756069   100  64  1.31 · 10−3
+     1/9    0.5035988   10 1157 1.75 · 10−5     1/32    0.2117772    2  838 3.64 · 10−5
+     1/9    0.5722963   100 178 8.89 · 10−5     1/32    0.5750673   100  44  2.58 · 10−3
+     1/10   0.5056153   10 428 9.33 · 10−6      1/64    0.2075002    2  447 5.18 · 10−4
+     1/10   0.5731932   100 129 5.77 · 10−4     1/64    0.5731529   100  38  4.73 · 10−3
+     1/11   0.3636817    5 2547 4.01 · 10−6    1/128    0.0599781    1 17023 4.07 · 10−6
+     1/11   0.5745233   100 104 1.82 · 10−4    1/128    0.5759244   100  35  1.06 · 10−3
+     1/12   0.3712620    5  921 4.01 · 10−5    1/256    0.0600973    1  6152 1.13 · 10−5
+     1/12   0.5742356   100 90 1.39 · 10−3     1/256    0.5745321   100  34  2.55 · 10−3
+     1/13   0.3769730    5  580 9.78 · 10−5    1/512    0.0599954    1  4585 4.19 · 10−6
+     1/13   0.5750566   100 80 9.64 · 10−4     1/512    0.5700385   100  34  7.91 · 10−3
+     1/14   0.3810698    5  435 1.79 · 10−4    1/1024   0.0598071    1  4055 5.36 · 10−5
+     1/14   0.5755687   100 73 7.86 · 10−4     1/1024   0.5756496   100  33  8.67 · 10−4
+     1/15   0.3841120    5  355 1.47 · 10−4    1/2048   0.0598000    1  3830 3.50 · 10−5
+     1/15   0.5754424   100 68 1.27 · 10−3     1/2048   0.5744293   100  33  2.20 · 10−3
+
+        Table 11. Smallest n with C2L (α, r, h0 , 10n ) < 1/2, with r chosen
+        to minimise C2L . The last column is the resulting proportion
+        1 − 2C2L of zeros with real part in [α, 1 − α], rounded down; since
+        C2L is decreasing in t0 , it is a lower bound for every t0 ≥ 10n .
+        For each α the rows are for h0 = 100 and, when it exists, for the
+        smallest h0 ∈ {1, 2, 5, 10} with such an n ≤ 105 .
+
+      α         r       h0   n    1 − 2C2L       α          r       h0   n    1 − 2C2L
+     1/7    0.5000553   100 189 1.43 · 10−4     1/16    0.2856104    5  287 3.67 · 10−4
+     1/8    0.3037963   10 17628 1.03 · 10−7    1/16    0.4999745   100  43  5.46 · 10−3
+     1/8    0.5000993   100 106 1.34 · 10−4     1/32    0.1665465    2  889 1.58 · 10−4
+     1/9    0.3235928   10  675 5.83 · 10−5     1/32    0.5000232   100  33  5.28 · 10−3
+     1/9    0.5000332   100  79  3.90 · 10−5    1/64    0.1453621    2  515 6.21 · 10−5
+     1/10   0.2856093    5  2545 1.14 · 10−5    1/64    0.4999542   100  30  9.47 · 10−3
+     1/10   0.5000258   100  66  7.79 · 10−4   1/128    0.0438441    1 14496 3.68 · 10−6
+     1/11   0.2857759    5  930 3.06 · 10−5    1/128    0.4999620   100  28  3.52 · 10−3
+     1/11   0.4999496   100  58  7.48 · 10−4   1/256    0.0353495    1  5572 1.70 · 10−6
+     1/12   0.2857673    5  593 8.86 · 10−5    1/256    0.4999032   100  28  1.13 · 10−2
+     1/12   0.4999684   100  53  1.89 · 10−3   1/512    0.0315405    1  4167 5.02 · 10−5
+     1/13   0.2856637    5  450 2.70 · 10−4    1/512    0.4999329   100  27  3.30 · 10−3
+     1/13   0.5000111   100  49  1.10 · 10−3   1/1024   0.0316041    1  3688 4.50 · 10−5
+     1/14   0.2858128    5  371 2.69 · 10−4    1/1024   0.4998957   100  27  5.25 · 10−3
+     1/14   0.4999153   100  46  2.69 · 10−4   1/2048   0.0315832    1  3486 2.57 · 10−5
+     1/15   0.2857290    5  321 2.62 · 10−4    1/2048   0.4999310   100  27  6.23 · 10−3
+     1/15   0.4999850   100  44  1.27 · 10−3
+

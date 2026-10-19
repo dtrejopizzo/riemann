@@ -128,9 +128,9 @@ and (8) follows. \(\square\)
 For a prime \(p\), put
 
 \[
- a_p=p^{-1/2},qquad
+ a_p=p^{-1/2},\qquad
  (\nabla_px)_h
- =\frac{x_{h+1}-p^{-1/2}x_h}{\sqrt{1-p^{-1}}},qquad
+ =\frac{x_{h+1}-p^{-1/2}x_h}{\sqrt{1-p^{-1}}},\qquad
  \partial_px=x_0.                                         \tag{13}
 \]
 

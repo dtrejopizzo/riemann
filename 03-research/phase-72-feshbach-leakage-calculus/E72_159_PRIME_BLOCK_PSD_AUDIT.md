@@ -1,7 +1,6 @@
 # E72.159 -- Prime-block PSD audit
 
-**Date:** 2026-07-09.
-**Role:** test whether `PSD-DIST` is global over coherent prime-position blocks.
+**Purpose:** test whether `PSD-DIST` is global over coherent prime-position blocks.
 
 ## 0. Block candidate
 

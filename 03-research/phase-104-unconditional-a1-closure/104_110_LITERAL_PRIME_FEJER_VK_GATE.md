@@ -1,6 +1,6 @@
-# 104_110 — Núcleo primo literal de Fejér y gate VK del rayo exterior
+# 104_110 — Literal prime Fejér kernel and the exterior-ray VK gate
 
-**Pregunta.** ¿Puede probarse la cota uniforme que sobrevive en `104_108`,
+**Question.** Can the uniform bound surviving in `104_108`,
 
 \[
  \sup_{\phi\in\mathbb R}
@@ -8,18 +8,19 @@
  \le \exp(o(L)),                                           \tag{1}
 \]
 
-insertando directamente el PNT efectivo de Vinogradov--Korobov en la
-forma prima--Laguerre, sin separar polo, primos ni potencias primas?
+be proved by directly inserting the effective Vinogradov–Korobov PNT
+into the prime–Laguerre form, without separating the pole, the primes,
+and the prime powers?
 
-**Resultado.** La forma prima literal sí admite un núcleo finito y un
-contorno cerrados. Si
+**Result.** The literal prime form does admit a closed finite kernel and
+contour. If
 
 \[
  \alpha_{L,k}={L-|k|\over L^2}\quad (|k|<L),
  \qquad q=e^{-i\phi},
 \]
 
-se definen
+one defines
 
 \[
  \begin{aligned}
@@ -32,7 +33,7 @@ se definen
  \end{aligned}                                             \tag{2}
 \]
 
-entonces, con \(E(x)=\psi(x)-x\),
+then, with \(E(x)=\psi(x)-x\),
 
 \[
  \boxed{
@@ -41,52 +42,52 @@ entonces, con \(E(x)=\psi(x)-x\),
    \int_0^\infty E(e^u)e^{-u}Q_{L,\phi}(u)\,du.}           \tag{3}
 \]
 
-La identidad conserva conjuntamente la masa continua polar y todos los
-átomos \(p^j\), con su peso real \(\Lambda(p^j)=\log p\).
+The identity jointly preserves the continuous polar mass and all the
+atoms \(p^j\), with their real weight \(\Lambda(p^j)=\log p\).
 
-Sin embargo, (1) **no** se deduce de la envolvente VK. Para la frecuencia
-exacta \(\phi=\pi\), todos los sumandos de \(Q_{L,\pi}\) tienen el mismo
-signo en el rayo exterior. Si
+However, (1) **does not** follow from the VK envelope. At the exact
+frequency \(\phi=\pi\), every summand of \(Q_{L,\pi}\) has the same sign
+on the exterior ray. If
 
 \[
  \eta(u)=c u^{3/5}(\log u)^{-1/5},\qquad
  U_L=L^{5/3}(\log L)^{1/3},                               \tag{4}
 \]
 
-entonces el majorante que resulta de
+then the majorant resulting from
 
 \[
  |E(e^u)|\le C e^u e^{-\eta(u)}                            \tag{5}
 \]
 
-satisface
+satisfies
 
 \[
  \boxed{
  \int_0^\infty e^{-\eta(u)}|Q_{L,\pi}(u)|\,du
  \ge
- \exp\!\left{
+ \exp\!\left\{
  {4\over3}L\log L+{2\over3}L\log\log L-O(L)
- \right}.}                                               \tag{6}
+ \right\}.}                                               \tag{6}
 \]
 
-Así, el suavizado triangular y la modulación que reducen el costo de fase
-en \(a\ge4\) a \(O(1)\) no reducen el costo absoluto VK en \(a=1\): la
-frecuencia \(\pi\) alinea el rayo final. El déficit respecto de (1) es
-\(\exp((4/3+o(1))L\log L)\), no una constante perdida.
+Thus the triangular smoothing and the modulation that reduce the phase
+cost at \(a\ge4\) to \(O(1)\) do not reduce the absolute VK cost at
+\(a=1\): frequency \(\pi\) aligns the entire exterior ray. The deficit
+relative to (1) is \(\exp((4/3+o(1))L\log L)\), not a lost constant.
 
-Esto es un no-go para **PNT/VK + módulo después del acoplamiento
-prima--polo**. No es una cota inferior para la expresión aritmética real de
-(3). La cancelación firmada específica de los pesos literales
-\(\Lambda(m)\) sigue siendo exactamente el teorema faltante. Este documento
-no prueba (1), A1 ni RH.
+This is a no-go for **PNT/VK + modulus after the prime–pole coupling**.
+It is not a lower bound for the real arithmetic expression (3). The
+specific signed cancellation of the literal weights \(\Lambda(m)\)
+remains exactly the missing theorem. This document does not prove (1),
+A1, or RH.
 
 ---
 
-## 1. Forma prima--polo antes de retirar el regulador
+## 1. Prime–pole form before removing the regulator
 
-Retenga la definición de `104_41`. Para \(a>1\), la convergencia absoluta
-permite sumar primero en el grado:
+Keep the definition of `104_41`. For \(a>1\), absolute convergence allows
+summing first over the degree:
 
 \[
  \begin{aligned}
@@ -96,15 +97,15 @@ permite sumar primero en el grado:
  \end{aligned}
 \]
 
-La notación de Stieltjes en (7) no es cosmética:
+The Stieltjes notation in (7) is not cosmetic:
 
 \[
  d\psi(y)=\sum_{m\ge2}\Lambda(m)\,\delta_m,
- \qquad d y=\hbox{canal polar continuo}.                  \tag{8}
+ \qquad d y=\hbox{continuous polar channel}.                  \tag{8}
 \]
 
-Por tanto (7) contiene, antes de estimar, el polo, todos los primos y todas
-las potencias primas. Equivalentemente,
+Hence (7) contains, before any estimate, the pole, all the primes, and
+all the prime powers. Equivalently,
 
 \[
  \begin{aligned}
@@ -115,12 +116,12 @@ las potencias primas. Equivalentemente,
  \end{aligned}
 \]
 
-No se asignará significado separado a los dos términos de (9) en \(a=1\).
-Su combinación es la que continúa.
+No separate meaning will be assigned to the two terms of (9) at
+\(a=1\). It is their combination that continues.
 
-## 2. Generatriz y contorno finito exactos
+## 2. Exact generating function and finite contour
 
-Escriba
+Write
 
 \[
  K_L(z)=\sum_{|k|<L}\alpha_{L,k}z^k
@@ -128,7 +129,7 @@ Escriba
        L^2(1-z)(1-z^{-1})}.                               \tag{10}
 \]
 
-Las generatrices ordinarias
+The ordinary generating functions
 
 \[
  \sum_{d\ge0}L_d^{(1)}(u)z^d
@@ -138,7 +139,7 @@ Las generatrices ordinarias
  ={e^{-uz/(1-z)}\over(1-z)^3}                             \tag{11}
 \]
 
-dan, para un círculo pequeño alrededor de cero,
+give, for a small circle around zero,
 
 \[
  \boxed{
@@ -148,7 +149,7 @@ dan, para un círculo pequeño alrededor de cero,
  K_L(q/z)\,dz,}                                          \tag{12}
 \]
 
-y
+and
 
 \[
  \boxed{
@@ -158,16 +159,17 @@ y
  K_L(q/z)\,dz.}                                          \tag{13}
 \]
 
-Aquí \(K_L(q/z)\) es un polinomio de Laurent finito; no se ha introducido
-una serie bilateral ni una región de convergencia nueva.
+Here \(K_L(q/z)\) is a finite Laurent polynomial; no two-sided series or
+new region of convergence has been introduced.
 
-También hay un contorno cerrado directamente para el observable. Sea
+There is also a direct closed contour for the observable. Let
 
 \[
  M_\Lambda(s)={1\over s-1}+{\zeta'(s)\over\zeta(s)}.
 \]
 
-La ecuación (8) de `104_41`, diferenciada en la variable generatriz, da
+Equation (8) of `104_41`, differentiated in the generating variable,
+gives
 
 \[
  \sum_{n\ge1}B_nz^{n-1}
@@ -175,7 +177,7 @@ La ecuación (8) de `104_41`, diferenciada en la variable generatriz, da
  M_\Lambda\!\left({1\over1-z}\right).                   \tag{14}
 \]
 
-En consecuencia,
+Consequently,
 
 \[
  \boxed{
@@ -185,15 +187,15 @@ En consecuencia,
    (1-z)^2z^{2L}}K_L(q/z)\,dz.}                           \tag{15}
 \]
 
-La función \(M_\Lambda=F'/F\), con \(F(s)=(s-1)\zeta(s)\), es regular en
-\(s=1\). Por ello (15) es un contorno local legítimo, no una deformación a
-través de ceros.
+The function \(M_\Lambda=F'/F\), with \(F(s)=(s-1)\zeta(s)\), is regular
+at \(s=1\). Hence (15) is a legitimate local contour, not a deformation
+across zeros.
 
-## 3. Retirada conjunta del regulador
+## 3. Joint removal of the regulator
 
-Para cada \(L\) fijo, VK hace desaparecer el borde en infinito al integrar
-(7) por partes y bajar \(a\) hasta \(1\). En el borde inferior
-\(E(1)=-1\). Como
+For each fixed \(L\), VK makes the boundary term at infinity vanish when
+integrating (7) by parts and lowering \(a\) down to \(1\). At the lower
+boundary \(E(1)=-1\). Since
 
 \[
  {d\over du}L_d^{(1)}(u)=-L_{d-1}^{(2)}(u),
@@ -201,13 +203,13 @@ Para cada \(L\) fijo, VK hace desaparecer el borde en infinito al integrar
  L_d^{(2)}(u)=L_d^{(1)}(u)+L_{d-1}^{(2)}(u),              \tag{16}
 \]
 
-se tiene exactamente
+one has exactly
 
 \[
  P_{L,\phi}(u)-P'_{L,\phi}(u)=Q_{L,\phi}(u).             \tag{17}
 \]
 
-Así,
+Hence,
 
 \[
  \begin{aligned}
@@ -218,36 +220,36 @@ Así,
  \end{aligned}                                           \tag{18}
 \]
 
-que, mediante \(y=e^u\), prueba (3). Para un solo grado, (18) es la
-identidad conocida
+which, via \(y=e^u\), proves (3). For a single degree, (18) is the known
+identity
 
 \[
  B_n=n+\int_0^\infty E(e^u)e^{-u}L_{n-1}^{(2)}(u)\,du.   \tag{19}
 \]
 
-La frontera \(n\) de (19) no se ha descartado; al promediarla produce
-exactamente \(P_{L,\phi}(0)\).
+The boundary term \(n\) of (19) has not been discarded; averaging it
+produces exactly \(P_{L,\phi}(0)\).
 
-## 4. La frecuencia \(\pi\) alinea todo el rayo final
+## 4. Frequency \(\pi\) aligns the entire exterior ray
 
-Necesitamos una cota elemental para los ceros de Laguerre. Los ceros de
-\(L_d^{(\alpha)}\) son los autovalores del truncamiento \(d\times d\) de
-la matriz de Jacobi con diagonal \(2j+\alpha+1\) y extradiagonales
-\(\sqrt{(j+1)(j+\alpha+1)}\). Gershgorin y
+We need an elementary bound for the Laguerre zeros. The zeros of
+\(L_d^{(\alpha)}\) are the eigenvalues of the \(d\times d\) truncation of
+the Jacobi matrix with diagonal \(2j+\alpha+1\) and off-diagonal
+\(\sqrt{(j+1)(j+\alpha+1)}\). Gershgorin and
 
 \[
  \sqrt{j(j+\alpha)}\le j+{\alpha\over2}
 \]
 
-dan
+give
 
 \[
  0<x_{d,j}<4d+2\alpha+2.                                 \tag{20}
 \]
 
-En (2), los grados \(d=2L+k-1\) satisfacen \(d\le3L-2\). Para
-\(u\ge24L\), (20) con \(\alpha=2\) da \(x_{d,j}<u/2\). Como el coeficiente
-principal de \(L_d^{(2)}\) es \((-1)^d/d!\),
+In (2), the degrees \(d=2L+k-1\) satisfy \(d\le3L-2\). For
+\(u\ge24L\), (20) with \(\alpha=2\) gives \(x_{d,j}<u/2\). Since the
+leading coefficient of \(L_d^{(2)}\) is \((-1)^d/d!\),
 
 \[
  (-1)^dL_d^{(2)}(u)
@@ -255,14 +257,15 @@ principal de \(L_d^{(2)}\) es \((-1)^d/d!\),
  \ge{(u/2)^d\over d!}.                                   \tag{21}
 \]
 
-Tome ahora \(\phi=\pi\), de modo que \(q^k=(-1)^k\). Puesto que
+Now take \(\phi=\pi\), so that \(q^k=(-1)^k\). Since
 
 \[
  (-1)^k(-1)^{2L+k-1}=-1,                                 \tag{22}
 \]
 
-**cada** sumando de \(Q_{L,\pi}(u)\) es negativo en \(u\ge24L\). No hay
-cancelación entre grados. Reteniendo solo \(k=0\), cuyo peso es \(1/L\),
+**every** summand of \(Q_{L,\pi}(u)\) is negative for \(u\ge24L\). There
+is no cancellation between degrees. Keeping only \(k=0\), whose weight is
+\(1/L\),
 
 \[
  \boxed{
@@ -271,18 +274,18 @@ cancelación entre grados. Reteniendo solo \(k=0\), cuyo peso es \(1/L\),
  \qquad(u\ge24L).}                                      \tag{23}
 \]
 
-Esta alineación exacta es la contraparte prima--Laguerre de la resonancia
-de residuos de `104_108`, pero no usa ceros de \(\zeta\).
+This exact alignment is the prime–Laguerre counterpart of the residue
+resonance of `104_108`, but it uses no zeros of \(\zeta\).
 
-## 5. Brecha de escala para VK
+## 5. Scale gap for VK
 
-Para \(U_L\) de (4), se tiene \(U_L\ge24L\) cuando \(L\) es grande y
+For \(U_L\) from (4), one has \(U_L\ge24L\) for \(L\) large, and
 
 \[
  \eta(U_L+1)=O(L).                                       \tag{24}
 \]
 
-La función \(\eta\) es creciente en ese rango. De (23), sobre
+The function \(\eta\) is increasing in that range. From (23), over
 \([U_L,U_L+1]\),
 
 \[
@@ -294,34 +297,35 @@ La función \(\eta\) es creciente en ese rango. De (23), sobre
  \end{aligned}
 \]
 
-La cota elemental
+The elementary bound
 
 \[
  \log d!\le d\log d-d+O(\log d)
 \]
 
-convierte (25) en (6). En particular, ni siquiera una cota
-\(e^{cL}\) puede obtenerse tomando módulos después de (3), mucho menos la
-barrera \(e^{\sqrt L}\) de `104_108`.
+turns (25) into (6). In particular, not even a bound
+\(e^{cL}\) can be obtained by taking moduli after (3), let alone the
+barrier \(e^{\sqrt L}\) of `104_108`.
 
-El mismo cálculo tiene una lectura como operador: la norma del funcional
-\(E\mapsto\int E(e^u)e^{-u}Q_{L,\pi}(u)du\) sobre la bola ponderada de VK
-es al menos el lado derecho de (6). La aritmética real puede estar muy lejos
-de un extremal de esa bola; VK, por sí sola, no cuantifica esa distancia.
+The same computation has an operator-theoretic reading: the norm of the
+functional \(E\mapsto\int E(e^u)e^{-u}Q_{L,\pi}(u)du\) over the VK
+weighted ball is at least the right-hand side of (6). The real arithmetic
+may be very far from an extremal of that ball; VK alone does not
+quantify that distance.
 
-## 6. La monotonía tampoco repara el majorante
+## 6. Monotonicity does not repair the majorant either
 
-El punto anterior no depende de permitir errores arbitrariamente
-oscilatorios. Fije una función suave \(0\le\chi_L\le1\), soportada en
-\([U_L,U_L+1]\), igual a uno en
-\([U_L+1/4,U_L+3/4]\), y con \(|\chi_L'|\le5\). Ponga
+The previous point does not depend on allowing arbitrarily oscillatory
+errors. Fix a smooth function \(0\le\chi_L\le1\), supported on
+\([U_L,U_L+1]\), equal to one on
+\([U_L+1/4,U_L+3/4]\), with \(|\chi_L'|\le5\). Set
 
 \[
  E_L(e^u)=-1-{1\over2}e^u e^{-\eta(U_L+1)}\chi_L(u),
  \qquad \Psi_L(y)=y+E_L(y).                              \tag{26}
 \]
 
-Para (L) grande,
+For \(L\) large,
 
 \[
  \Psi_L'(y)
@@ -330,21 +334,21 @@ Para (L) grande,
  \ge0.                                                    \tag{27}
 \]
 
-Además, por monotonía de \(\eta\),
+Moreover, by monotonicity of \(\eta\),
 
 \[
  |E_L(e^u)|\le e^u e^{-\eta(u)}                         \tag{28}
 \]
 
-para todo \(u\) suficientemente grande; sobre un compacto inicial puede
-ajustarse la constante de la envolvente. La parte constante \(-1\) de
-\(E_L\) cancela exactamente el borde:
+for every sufficiently large \(u\); on an initial compact set the
+envelope constant can be adjusted. The constant part \(-1\) of
+\(E_L\) exactly cancels the boundary term:
 
 \[
  P_{L,\pi}(0)-\int_0^\infty e^{-u}Q_{L,\pi}(u)\,du=0.    \tag{28a}
 \]
 
-Además,
+Moreover,
 
 \[
  |P_{L,\pi}(0)|
@@ -352,65 +356,67 @@ Además,
  \le3L.                                                   \tag{28b}
 \]
 
-Como el resto de \(E_L\) y \(Q_{L,\pi}\) son ambos negativos en todo el
-soporte, (23) muestra que la versión de (3) asociada a \(\Psi_L\) tiene
-tamaño
+Since the remainder of \(E_L\) and \(Q_{L,\pi}\) are both negative
+throughout the support, (23) shows that the version of (3) associated
+with \(\Psi_L\) has size
 
 \[
- \exp\!\left{
+ \exp\!\left\{
  {4\over3}L\log L+{2\over3}L\log\log L-O(L)
- \right}.                                                \tag{29}
+ \right\}.                                                \tag{29}
 \]
 
-Por tanto VK más monotonía de la función acumulativa tampoco fuerza (1).
-Este comparador es continuo y no tiene soporte en potencias primas. No es
-un contraejemplo para los \(\Lambda(m)\) ordinarios; identifica exactamente
-la información adicional que tendría que usar una prueba aritmética.
+Hence VK plus monotonicity of the accumulating function also fails to
+force (1). This comparator is continuous and has no support on prime
+powers. It is not a counterexample for the ordinary \(\Lambda(m)\); it
+identifies exactly the additional information an arithmetic proof would
+have to use.
 
-## 7. Auditoría frente a las fases anteriores
+## 7. Audit against earlier phases
 
-- `103_56` ya prueba que el módulo de un kernel Laguerre individual bajo
-  VK tiene escala incorrecta. Aquí se cierra el caso nuevo que dejó
-  `104_108`: un bloque triangular de longitud comparable al grado y con
-  modulación uniforme. La identidad (22) muestra por qué ese suavizado no
-  ayuda en la frecuencia \(\pi\).
-- `103_70`--`103_71` descartan normas Hardy separadas después de una
-  descomposición de Vaughan. Aquí no se descompone \(\Lambda\): (7), (15)
-  y (18) mantienen el observable completo.
-- `104_41` y `104_107` prueban cotas (O(L)) y (O(1)), respectivamente,
-  en \(a\ge4\). La ecuación (6) cuantifica por qué VK no transporta esas
-  cotas hasta \(a=1\).
-- `104_53` clasifica identidades polinómicas aditivas de momentos. El
-  presente argumento no introduce momentos ni cumulantes.
-- `104_65` trata filtros locales fijos. El filtro triangular aquí depende
-  de \(L\), tiene ancho \(2L-1\), y por ello no está cubierto por aquel
-  teorema.
+- `103_56` already proves that the modulus of a single Laguerre kernel
+  under VK has the wrong scale. Here the new case left open by
+  `104_108` is closed: a triangular block of length comparable to the
+  degree with uniform modulation. Identity (22) shows why that smoothing
+  does not help at frequency \(\pi\).
+- `103_70`–`103_71` rule out separate Hardy norms after a Vaughan
+  decomposition. Here \(\Lambda\) is not decomposed: (7), (15),
+  and (18) keep the full observable.
+- `104_41` and `104_107` prove bounds \(O(L)\) and \(O(1)\), respectively,
+  at \(a\ge4\). Equation (6) quantifies why VK does not transport those
+  bounds down to \(a=1\).
+- `104_53` classifies additive polynomial moment identities. The present
+  argument introduces neither moments nor cumulants.
+- `104_65` deals with fixed local filters. The triangular filter here
+  depends on \(L\), has width \(2L-1\), and is therefore not covered by
+  that theorem.
 
-## 8. Veredicto
+## 8. Verdict
 
-**Probado:** la forma prima literal (7)--(9), los núcleos cerrados
-(12)--(13), el contorno completo (15), la retirada conjunta (3), la
-alineación exacta del rayo exterior (22)--(23) y la brecha VK (6).
+**Proved:** the literal prime form (7)–(9), the closed kernels
+(12)–(13), the complete contour (15), the joint removal (3), the exact
+alignment of the exterior ray (22)–(23), and the VK gap (6).
 
-**Descartado:** obtener la cota uniforme de `104_108` usando solamente el
-PNT/VK, aun conservando el acoplamiento prima--polo hasta la integración por
-partes y aun añadiendo monotonía de la función acumulativa.
+**Ruled out:** obtaining the uniform bound of `104_108` using only
+PNT/VK, even keeping the prime–pole coupling through the integration by
+parts and even adding monotonicity of the accumulating function.
 
-**Sobrevive:** demostrar, para los pesos literales \(\Lambda(m)\), una
-cancelación firmada que haga pequeño (3) uniformemente en \(\phi\). Debe
-usar información que no esté contenida en el tamaño VK ni en la monotonía;
-por `104_108`, una barrera subexponencial de ese tipo probaría RH.
+**Remains:** proving, for the literal weights \(\Lambda(m)\), a signed
+cancellation that makes (3) small uniformly in \(\phi\). It must use
+information not contained in the VK size nor in monotonicity; by
+`104_108`, a subexponential barrier of that type would prove RH.
 
-**No probado:** esa cancelación literal, (1), A1 o RH.
+**Not proved:** that literal cancellation, (1), A1, or RH.
 
-## 9. Reproducción
+## 9. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 literal_prime_fejer_vk_gate_check.py
 ```
 
-El checker usa `Fraction`. Verifica las identidades finitas de generatriz,
-\(P-P'=Q\), la alineación de signos y la cota exterior (23) en familias
-exactas. La estimación asintótica (25) está demostrada en el texto y no se
-sustituye por muestreo.
+The checker uses `Fraction`. It verifies the finite generating-function
+identities, \(P-P'=Q\), the sign alignment, and the exterior bound (23)
+on exact families. The asymptotic estimate (25) is proved in the text
+and is not replaced by sampling.
+</content>

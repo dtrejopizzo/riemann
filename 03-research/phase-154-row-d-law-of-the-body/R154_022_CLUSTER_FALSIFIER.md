@@ -1,6 +1,6 @@
-# R154.022 — Round 8 builder: the clustered-atom falsifier at `T = 0.58`
+# R154.022 — Round 8: the clustered-atom falsifier at `T = 0.58`
 
-*Builder, round 8 of phase 154. Date 2026-09-21. Orders: `R154_021` (single falsifier LP authorised),
+* Orders: `R154_021` (single falsifier LP authorised),
 `R154_020 §5` (amendments: upper/lower separation, report the F1 slack, run a matched control).
 Compute actually used: **one process, two LP solves, 63 s of wall time** (budget 15 min).
 Code: `scripts/round8/r8cluster.py`, reusing `scripts/round6/r6lp.py` (cutting planes) and
@@ -124,7 +124,7 @@ period they induce. That gap between "atom count" and "useful dimension" is what
 | Lemma F1 slack | noted as a risk (`R154_020 §5`) | **measured as the binding obstruction** in any small-`h′` class |
 | endpoint of record | `λ_min(A_{½log3}) ≥ 8.8577·10⁻⁵` | unchanged |
 
-**Recommendation to the lead:** close the clustered-atom line. The one reusable product of round 8 is
+**Recommendation for the next round:** close the clustered-atom line. The one reusable product of round 8 is
 the negative measurement of §3.3 — *the graded tail lemma's conservatism scales with the period and is
 the first thing that must be fixed before any refinement of the atom lattice can matter.* That is a
 clean, `OPEN`, purely analytic problem (sharpen `k₀, k₁` in Lemma F1, or replace the worst-cased tail by

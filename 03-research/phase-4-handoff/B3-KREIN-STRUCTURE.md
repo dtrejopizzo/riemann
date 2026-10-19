@@ -194,7 +194,7 @@ sign* (it reaches the Connes–Consani wall and stops, §6).
    is worth something, but is not progress past Connes–Consani.
 
 **Bottom line for the team:** the math you wrote is *right* and elegant, and it correctly identifies the
-object as a compression of a Krein symmetry with RH $=\{\|K\|\le1\}$. The hostile-referee finding is that
+object as a compression of a Krein symmetry with RH $=\{\|K\|\le1\}$. The audit finding is that
 this is **strongly analogous to** Connes–Consani's frontier (not proven identical) — we have independently
 reconstructed a state-of-the-art-*type* reduction, not surpassed it. The depth-leverage hope is closed by §8.
 

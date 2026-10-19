@@ -1,4 +1,4 @@
-# R154.027 — Lead blueprint, round 10: the hybrid certificate (lattice + canonical Lévy column) and the repair of Lemma V. Date 2026-09-21.
+# R154.027 — Blueprint, round 10: the hybrid certificate (lattice + canonical Lévy column) and the repair of Lemma V.
 
 ## 0. State after R154_026
 Lemma T PROVED but its tail cost is linear in `Σ|a_j|` for atoms (full mass) and in `A = Σ|c_k|p_k!` for columns; Theorem O forces `A → ∞`,
@@ -29,4 +29,4 @@ linear in ℓ¹; not removed"; "residual penalty reducible to 0" → extrapolati
 
 ## 2. Rules
 Labels; FATAL rule (T = 0.58 < log 2, Paper-42-certified; new-method proof is the point); corpus-check lines ("hybrid certificate",
-"canonical column", "columna canónica"); one LP only; deliverable `R154_028_BUILDER_ROUND10.md` (≤ 4000 words) + `scripts/round10/`.
+"canonical column", "columna canónica"); one LP only; deliverable `R154_028_ROUND10.md` (≤ 4000 words) + `scripts/round10/`.

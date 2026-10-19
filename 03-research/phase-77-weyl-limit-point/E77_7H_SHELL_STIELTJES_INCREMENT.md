@@ -1,6 +1,6 @@
 # E77.7h - Shell Stieltjes-increment identity
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 
@@ -138,7 +138,7 @@ the shell increment itself collapses by about four orders of magnitude from
 | 18 -> 20 | 0.187423 | -0.001716 | 0.185707 | -inf |
 
 The plant also satisfies the algebraic identity, but does not show the same
-short-window shell decay.  This is acceptable for the front-A audit: the
+short-window shell decay.  This is acceptable for the front-An audit: the
 identity is neutral, while the cofinal quantitative behavior remains a real
 proof obligation.
 

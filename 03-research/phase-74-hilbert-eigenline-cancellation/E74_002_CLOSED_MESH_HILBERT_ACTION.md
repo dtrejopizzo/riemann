@@ -1,6 +1,5 @@
 # E74.2 - Closed finite-mesh Hilbert action on Cauchy rows
 
-Date: 2026-07-16.
 
 ## Statement
 

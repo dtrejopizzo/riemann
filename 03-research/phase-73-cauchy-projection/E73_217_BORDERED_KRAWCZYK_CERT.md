@@ -1,6 +1,5 @@
 # E73.217 - Bordered Krawczyk certificate from BALL-ENTRY-CERT
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

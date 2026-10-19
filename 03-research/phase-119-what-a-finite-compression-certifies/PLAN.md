@@ -65,7 +65,7 @@ spectrum), `phase-47/146` (GAP-141.DH, the fat/sub-resolution trichotomy for
 Davenport–Heilbronn), `04-papers/36-obstruction-ledger` (all no-gos).
 
 Deliverable: a single page listing, for each recorded obstruction, whether the
-`deg_det` input evades it. **Phase 118 spent five agents re-deriving MW-1 because
+`deg_det` input evades it. **Phase 118 re-derived MW-1 from scratch because
 this step was skipped. Do not skip it.**
 
 ---

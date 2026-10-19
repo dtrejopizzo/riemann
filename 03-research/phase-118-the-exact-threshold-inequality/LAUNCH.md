@@ -1,16 +1,16 @@
 # Launch sheet — relaunch the phase-118 campaign
 
-Stopped mid-flight on 2026-08-17 to stay inside a session limit. Everything
+Stopped mid-flight to stay inside a resource limit. Everything
 needed to resume is on disk. Nothing has been written to the paper, per
 instruction.
 
-## Round 2 outcome (2026-08-17, session limit reached)
+## Round 2 outcome (resource limit reached)
 
 **Landed.** W3 (`W3_SCATTERING.md`) and W4 (`W4_CERTIFIED_RANGE.md`) completed.
 W5 verified the Weil identity against real zeta zeros to `5e-11`-`2e-9` before
 dying — see `PROOF_ARCHITECTURE.md` §2, now upgraded to **verified**.
 
-**Killed by the session limit, no report written:** W1, W2, W5. Their scripts and
+**Killed by the resource limit, no report written:** W1, W2, W5. Their scripts and
 result files survive in `scripts/` (`W1_hp_*` high-precision library,
 `W2_sweep*.json`, `W2_coercivity_summary.json`, `W2_deep_check.*`,
 `W2_tate_closedform.py`, `W5_highprec.log`, `W5_crossvalidate_assembly.log`,
@@ -23,7 +23,7 @@ conclusion in the campaign is suspended until it is settled.
 
 **Do not relaunch W3 or W4** — they are done.
 
-## Reading order for any agent
+## Reading order
 
 1. `SPEC.md` — the inequality, the code, the rules.
 2. `RESUME.md` — what is already settled; do not redo it.
@@ -57,10 +57,9 @@ report `L` with an candid uncertainty.
 
 ## The five workstreams to relaunch
 
-All five ran only minutes before the stop; none wrote its report. Relaunch as
-`general-purpose` agents on Sonnet, in background, all five in parallel. Each
-brief below is a summary — the full prompts are reconstructible from these plus
-the three documents above.
+All five ran only minutes before the stop; none wrote its report. Relaunch
+all five in parallel. Each brief below is a summary — the full briefs are
+reconstructible from these plus the three documents above.
 
 | | file to write | question |
 |---|---|---|

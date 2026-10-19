@@ -54,7 +54,7 @@ for every integer `lambda`.
 For any abelian group `M`, homogeneous normalized symmetric two-cocycles
 
 \[
- f:\mathbb Z\times\mathbb Z\longrightarrow M,qquad
+ f:\mathbb Z\times\mathbb Z\longrightarrow M,\qquad
  f(\lambda a,\lambda b)=\lambda f(a,b),                       \tag{2.1}
 \]
 
@@ -62,7 +62,7 @@ are naturally in bijection with arbitrary families `(m_p)_{p prime}` in
 `M` together with an element `t in M[2]`.  For positive `n` the family gives
 
 \[
- q(n)=\sum_{p\mid n}v_p(n)\frac{n}{p}m_p,qquad
+ q(n)=\sum_{p\mid n}v_p(n)\frac{n}{p}m_p,\qquad
  f(a,b)=q(a)+q(b)-q(a+b),                                    \tag{2.2}
 \]
 

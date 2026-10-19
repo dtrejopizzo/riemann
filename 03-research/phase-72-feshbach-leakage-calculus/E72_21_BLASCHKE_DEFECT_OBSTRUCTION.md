@@ -1,7 +1,6 @@
 # E72.21 -- Blaschke defect obstruction to boundary-modulus identification
 
-**Date:** 2026-07-08.
-**Role:** prevent the false proof of E72.20 by real-axis modulus convergence alone.
+**Purpose:** prevent the false proof of E72.20 by real-axis modulus convergence alone.
 
 ## 0. The tempting false move
 

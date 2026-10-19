@@ -1,6 +1,5 @@
 # E73.267 - Cell commutator formula for the remaining theorem
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

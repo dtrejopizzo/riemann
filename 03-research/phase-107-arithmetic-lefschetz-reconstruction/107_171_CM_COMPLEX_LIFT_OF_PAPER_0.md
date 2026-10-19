@@ -29,7 +29,7 @@ with discriminant \(-11\).  The Hilbert class polynomial is
 Sage produces the rational CM model
 
 \[
- E_{\rm CM}/\mathbb Q:qquad
+ E_{\rm CM}/\mathbb Q:\qquad
  y^2+y=x^3-x^2-7x+10,
  \qquad j(E_{\rm CM})=-32768.
  \tag{1.1}
@@ -69,8 +69,8 @@ Put
 over \(\mathbb C\), and let
 
 \[
- F_1=E_{\rm CM}\times\{0\},qquad
- F_2=\{0\}\times E_{\rm CM},qquad
+ F_1=E_{\rm CM}\times\{0\},\qquad
+ F_2=\{0\}\times E_{\rm CM},\qquad
  \Delta=\Gamma_1.
 \]
 

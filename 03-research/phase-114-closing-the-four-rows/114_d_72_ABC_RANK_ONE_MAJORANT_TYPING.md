@@ -89,7 +89,7 @@ if and only if there is a contraction `K` on the closure of `Ran(X)` such
 that
 
 \[
- S=KX,qquad\|K\|\le1.                                     \tag{2.2}
+ S=KX,\qquad\|K\|\le1.                                     \tag{2.2}
 \]
 
 Apply this with `S=mathbf S_P` and `X=X_(P,z,C)`.  We obtain:
@@ -100,7 +100,7 @@ Apply this with `S=mathbf S_P` and `X=X_(P,z,C)`.  We obtain:
 > \boxed{
 > \mathfrak K_{P,z,C}:
 > \overline{\mathrm{Ran}\,X_{P,z,C}}longrightarrow
-> \overline{\mathrm{Ran}\,\mathbf S_P},qquad
+> \overline{\mathrm{Ran}\,\mathbf S_P},\qquad
 > \mathbf S_P=\mathfrak K_{P,z,C}X_{P,z,C}.}               \tag{2.3}
 > \]
 > Consequently any source construction of (0.1) must supply either this
@@ -146,7 +146,7 @@ and determinant lines.  They do **not** specify
 
 \[
  f\longmapsto f^*,\qquad
- \mathrm{End}(H)_+,qquad
+ \mathrm{End}(H)_+,\qquad
  \|f\|,\qquad
  f^*f\ge0.                                                 \tag{3.3}
 \]
@@ -246,7 +246,7 @@ to be contractive after removing its two local jet directions.
 It is not.  In the Hardy model put `r=p^(-1/2)`,
 
 \[
- h_r(z)={\sqrt{1-r^2}\over1-rz},qquad
+ h_r(z)={\sqrt{1-r^2}\over1-rz},\qquad
  V_N(z)=z^2(1+z+\cdots+z^{N-1}),\quad N\ge2.              \tag{6.2}
 \]
 

@@ -1,7 +1,6 @@
 # E72.41 -- Weighted channel refinement
 
-**Date:** 2026-07-08.
-**Role:** correct the too-strong uniform channel target from E72.40.
+**Purpose:** correct the too-strong uniform channel target from E72.40.
 
 ## 0. Numerical check
 

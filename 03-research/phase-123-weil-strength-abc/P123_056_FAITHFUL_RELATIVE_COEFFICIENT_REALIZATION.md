@@ -1,6 +1,6 @@
 # P123.056 — Faithful realization of the semilocal relative coefficients
 
-Date: 2026-09-05. Status: PROVED by explicit finite-rank approximations.
+Status: PROVED by explicit finite-rank approximations.
 This resolves the coefficient-faithfulness requirement in P123.055.
 
 ## 1. Local finite-place approximations

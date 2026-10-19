@@ -1,6 +1,5 @@
 # Phase 72 -- Pole-relative Feshbach leakage calculus
 
-**Opened:** 2026-07-07.
 
 Phase 71 reduced the CCM stable-divisor problem to the convergence of the finite Weil ground state
 `theta_x` to the prolate model state `k_lambda`. The first reduction asked for the strong global

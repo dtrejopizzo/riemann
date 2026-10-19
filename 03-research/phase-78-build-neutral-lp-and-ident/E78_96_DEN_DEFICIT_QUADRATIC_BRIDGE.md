@@ -1,6 +1,6 @@
 # E78.96 - The denominator deficit is exactly a normalized quadratic margin
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

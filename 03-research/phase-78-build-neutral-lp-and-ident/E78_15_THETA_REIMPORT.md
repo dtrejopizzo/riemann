@@ -1,6 +1,6 @@
 # E78.15 - Re-import of theta-logderivative into the IDENT front
 
-**Run:** 2026-07-18.
+**Run:**
 **Scope:** IDENT only.
 
 ## 1. Purpose

@@ -1,6 +1,6 @@
-# 104_105 — Auditoría adversarial de Deep-Λ y de la energía discreta
+# 104_105 — Adversarial audit of Deep-Λ and of the discrete energy
 
-**Veredicto.** Las dos equivalencias auditadas resisten:
+**Verdict.** The two audited equivalences hold up:
 
 \[
  \mathrm{RH}\iff
@@ -9,7 +9,7 @@
  \longrightarrow0,                                      \tag{D}
 \]
 
-y, con
+and, with
 
 \[
  b_n={\Lambda(n)-1\over\log n},\qquad
@@ -23,23 +23,23 @@ y, con
  \sum_{m=2}^N{B_m^2\over m(m+1)}=N^{o(1)}.              \tag{E}
 \]
 
-No se encontró una implicación circular, un cambio de orientación de los
-modos exteriores ni una pérdida en la sumación de Abel. Estos son criterios
-equivalentes a RH, no estimaciones ya demostradas para los primos. Esta
-auditoría no prueba el límite de (D), la cota de (E), A1 ni RH.
+No circular implication, orientation flip of the exterior modes, or loss
+in the Abel summation was found. These are criteria equivalent to RH, not
+estimates already proved for the primes. This audit does not prove the
+limit in (D), the bound in (E), A1, or RH.
 
 ---
 
-## 1. Convención del modo exterior
+## 1. Exterior-mode convention
 
-Ponga
+Set
 
 \[
  z_\rho=1-{1\over\rho}={\rho-1\over\rho},\qquad
  u_\rho=z_\rho^{-1}={\rho\over\rho-1}.
 \]
 
-La orientación usada en `104_56` es correcta, pues
+The orientation used in `104_56` is correct, since
 
 \[
  |u_\rho|^2-1
@@ -47,59 +47,59 @@ La orientación usada en `104_56` es correcta, pues
  ={2\Re\rho-1\over|\rho-1|^2}.                         \tag{1}
 \]
 
-Así, un cero a la derecha de la línea produce \(|u_\rho|>1\). La aparente
-discrepancia con la definición usual
-\(\lambda_n=\sum_\rho^*(1-z_\rho^n)\) desaparece al aplicar la simetría
-\(\rho\mapsto1-\bar\rho\):
+Thus a zero to the right of the line produces \(|u_\rho|>1\). The
+apparent discrepancy with the usual definition
+\(\lambda_n=\sum_\rho^*(1-z_\rho^n)\) disappears upon applying the
+symmetry \(\rho\mapsto1-\bar\rho\):
 
 \[
  z_{1-\bar\rho}=\overline{u_\rho}.                     \tag{2}
 \]
 
-Reindexar el multiconjunto de ceros y usar que \(\lambda_n\) es real
-convierte la suma en la versión con \(u_\rho^n\). Por tanto los modos
-dominantes de una hipotética violación son precisamente los de la derecha,
-no sus inversos contractivos.
+Reindexing the zero multiset and using that \(\lambda_n\) is real turns
+the sum into the version with \(u_\rho^n\). Hence the dominant modes of a
+hypothetical violation are precisely the ones on the right, not their
+contractive inverses.
 
-Si RH falla, \(|u_\rho|\to1\) al crecer \(|\Im\rho|\), de modo que el
-máximo \(R>1\) se alcanza en un conjunto finito. Separando esos modos se
-obtiene, con multiplicidades positivas,
+If RH fails, \(|u_\rho|\to1\) as \(|\Im\rho|\) grows, so the
+maximum \(R>1\) is attained on a finite set. Separating those modes gives,
+with positive multiplicities,
 
 \[
  \lambda_n=-R^nS(n)+O(n^2R_1^n+n^2),\qquad
  S(n)=\sum_{j=1}^K\cos(n\phi_j),\quad 1<R_1<R.           \tag{3}
 \]
 
-Éste es exactamente el signo que requiere Deep-Λ: cerca del origen del
-toro, \(S(n)>0\) y \(\lambda_n\) es exponencialmente negativo.
+This is exactly the sign that Deep-Λ requires: near the origin of the
+torus, \(S(n)>0\) and \(\lambda_n\) is exponentially negative.
 
-## 2. Densidad y sindicidad
+## 2. Density and syndeticity
 
-Sea \(H=\overline{\{n\alpha:n\in\mathbb Z\}}\), con
-\(\alpha=(\phi_1,\ldots,\phi_K)\). La rotación por \(\alpha\) es mínima y
-únicamente ergódica en el grupo compacto monotético \(H\). Como
-\(S(0)=K\), existe un nivel regular \(\eta\in(K/2,K)\) para el cual
+Let \(H=\overline{\{n\alpha:n\in\mathbb Z\}}\), with
+\(\alpha=(\phi_1,\ldots,\phi_K)\). Rotation by \(\alpha\) is minimal and
+uniquely ergodic on the compact monothetic group \(H\). Since
+\(S(0)=K\), there is a regular level \(\eta\in(K/2,K)\) for which
 
 \[
  U=\{x\in H:\textstyle\sum_j\cos x_j>\eta\}
 \]
 
-tiene borde de medida de Haar cero y medida \(d>0\). En consecuencia,
+has Haar-measure-zero boundary and measure \(d>0\). Consequently,
 
 \[
  D=\{n\ge1:n\alpha\in U\}                               \tag{4}
 \]
 
-tiene densidad natural \(d\). Es además sindético: las traslaciones
-\(U-j\alpha\), \(j\ge0\), cubren \(H\), y una subcubierta finita da una
-cota uniforme para los huecos de (4). Por (3), salvo un prefijo,
+has natural density \(d\). It is also syndetic: the translates
+\(U-j\alpha\), \(j\ge0\), cover \(H\), and a finite subcover gives a
+uniform bound on the gaps of (4). By (3), apart from a prefix,
 
 \[
  \lambda_n\le-cR^n\qquad(n\in D).                       \tag{5}
 \]
 
-La densidad natural se transfiere sin pérdida a densidad logarítmica. Si
-\(D(x)=dx+o(x)\), la sumación parcial da
+The natural density transfers without loss to logarithmic density. If
+\(D(x)=dx+o(x)\), partial summation gives
 
 \[
  \sum_{\substack{n\le X\\n\in D}}{1\over n}
@@ -107,22 +107,22 @@ La densidad natural se transfiere sin pérdida a densidad logarítmica. Si
  =d\log X+o(\log X).                                    \tag{6}
 \]
 
-No se usa una constante universal de densidad: \(d\) puede depender de la
-configuración exterior hipotética.
+No universal density constant is used: \(d\) may depend on the
+hypothetical exterior configuration.
 
-## 3. Implicaciones del observable profundo
+## 3. Implications of the deep observable
 
-Bajo RH, \(\lambda_n\ge0\); por ello el indicador de (D) es idénticamente
-cero.
+Under RH, \(\lambda_n\ge0\); hence the indicator in (D) is identically
+zero.
 
-Si RH falla, fije \(K>1/\log R\). Para
-\(n\in D\cap[K\sqrt X,X]\), (5) da, desde cierto \(X\),
+If RH fails, fix \(K>1/\log R\). For
+\(n\in D\cap[K\sqrt X,X]\), (5) gives, from some point \(X\) on,
 
 \[
  \lambda_n+\log(n+1)\le-e^{\sqrt X}.                   \tag{7}
 \]
 
-Usando (6),
+Using (6),
 
 \[
  {1\over H_X}
@@ -130,26 +130,26 @@ Usando (6),
  \longrightarrow {d\over2}>0.                          \tag{8}
 \]
 
-Así el límite de (D) no puede ser cero. Esto audita también los dos puntos
-que podían ocultar una pérdida: retirar \(n<K\sqrt X\) cuesta exactamente
-la mitad de la masa logarítmica, no toda ella, y el factor constante \(c\)
-de (5) es absorbido por la desigualdad estricta
+So the limit in (D) cannot be zero. This also audits the two points that
+could have hidden a loss: discarding \(n<K\sqrt X\) costs exactly half
+the logarithmic mass, not all of it, and the constant factor \(c\)
+in (5) is absorbed by the strict inequality
 \(K\log R>1\).
 
-La traducción diagonal de `104_75` tampoco altera el criterio. La cota
-uniforme de `104_69`,
+The diagonal translation of `104_75` does not alter the criterion either.
+The uniform bound of `104_69`,
 
 \[
  \sup_{n\le X}|\lambda_{n,e^{-X/100}}-\lambda_n|=o(1),   \tag{9}
 \]
 
-es despreciable frente a \(e^{\sqrt X}\). No se usa continuidad de un
-indicador duro: las inclusiones con umbrales desplazados, o directamente
-la distancia creciente del umbral profundo, justifican el paso.
+is negligible compared with \(e^{\sqrt X}\). No continuity of a hard
+indicator is used: inclusions with shifted thresholds, or directly the
+growing distance of the deep threshold, justify the step.
 
-## 4. Identidades finitas de la energía
+## 4. Finite energy identities
 
-Con \(B(x)=B_m\) en \([m,m+1)\), la telescopía exacta es
+With \(B(x)=B_m\) on \([m,m+1)\), the exact telescoping is
 
 \[
  \mathcal E(N)=\int_2^{N+1}{B(x)^2\over x^2}\,dx
@@ -157,10 +157,10 @@ Con \(B(x)=B_m\) en \([m,m+1)\), la telescopía exacta es
  \left({1\over\max(r,s)}-{1\over N+1}\right).           \tag{10}
 \]
 
-El borde \(-B_N^2/(N+1)\) está presente. El checker adjunto verifica (10)
-en aritmética racional para datos firmados arbitrarios.
+The boundary term \(-B_N^2/(N+1)\) is present. The attached checker
+verifies (10) in rational arithmetic for arbitrary signed data.
 
-Para \(\Re s>1\),
+For \(\Re s>1\),
 
 \[
  G(s)=\sum_{n\ge2}b_nn^{-s}
@@ -168,63 +168,64 @@ Para \(\Re s>1\),
  C(s)=\sum_{n\ge2}{n^{-s}\over\log n},                 \tag{11}
 \]
 
-y \(C'(s)=1-\zeta(s)\). Por tanto
+and \(C'(s)=1-\zeta(s)\). Hence
 
 \[
  G'(s)={\zeta'(s)\over\zeta(s)}+\zeta(s)-1.             \tag{12}
 \]
 
-La sumación de Abel no tiene término omitido:
+Abel summation has no omitted term:
 
 \[
  G(s)=s\int_2^\infty B(x)x^{-s-1}\,dx.                 \tag{13}
 \]
 
-En particular, si se trunca una sucesión después de \(M\), el valor
-constante \(B_M\) sobre \([M,\infty)\) suministra exactamente el borde
-\(B_M(M+1)^{-s}\) que completa la identidad. Esto también se verifica
-de manera racional en el checker.
+In particular, if a sequence is truncated after \(M\), the constant value
+\(B_M\) on \([M,\infty)\) supplies exactly the boundary term
+\(B_M(M+1)^{-s}\) that completes the identity. This is also verified
+rationally in the checker.
 
-## 5. De energía subpolinomial a RH
+## 5. From subpolynomial energy to RH
 
-Suponga \(\mathcal E(N)=N^{o(1)}\). Para todo \(\delta>0\), sumación por
-partes contra los incrementos positivos de \(\mathcal E\) da
+Suppose \(\mathcal E(N)=N^{o(1)}\). For every \(\delta>0\), summation by
+parts against the positive increments of \(\mathcal E\) gives
 
 \[
  \int_2^\infty B(x)^2x^{-2-\delta}\,dx<\infty.           \tag{14}
 \]
 
-Si \(\sigma>1/2\), elija \(0<\delta<2\sigma-1\). Entonces
-Cauchy--Schwarz aplicado a (13) da
+If \(\sigma>1/2\), choose \(0<\delta<2\sigma-1\). Then
+Cauchy–Schwarz applied to (13) gives
 
 \[
  \int_2^\infty|B(x)|x^{-\sigma-1}\,dx<\infty.           \tag{15}
 \]
 
-La elección puede hacerse uniformemente en compactos, de modo que (13)
-prolonga \(G\) holomórficamente a \(\Re s>1/2\). Si allí hubiera un cero
-\(\rho\) de multiplicidad \(m\), el lado derecho de (12) tendría residuo
-\(m\) en \(\rho\), mientras \(G'\) y \(\zeta-1\) serían holomorfas. La
-identidad meromorfa, prolongada desde \(\Re s>1\), lo impide. La ecuación
-funcional excluye entonces los ceros simétricos a la izquierda.
+The choice can be made uniformly on compact sets, so that (13) extends
+\(G\) holomorphically to \(\Re s>1/2\). If there were a zero
+\(\rho\) of multiplicity \(m\) there, the right-hand side of (12) would
+have residue \(m\) at \(\rho\), while \(G'\) and \(\zeta-1\) would be
+holomorphic. The meromorphic identity, extended from \(\Re s>1\), forbids
+this. The functional equation then excludes the symmetric zeros on the
+left.
 
-Este argumento no presupone una rama global de \(\log\zeta\): después de
-derivar, (12) es una identidad meromorfa monovaluada.
+This argument does not presuppose a global branch of \(\log\zeta\): after
+differentiating, (12) is a single-valued meromorphic identity.
 
-## 6. De RH a energía finita
+## 6. From RH to finite energy
 
-El único input externo profundo en esta dirección está correctamente
-etiquetado como **condicional a RH**: la cota media cuadrática de Cramér
+The only deep external input in this direction is correctly labeled
+**conditional on RH**: Cramér's mean-square bound
 
 \[
  \int_Y^{2Y}|\psi(x)-x|^2\,dx\ll Y^2.                   \tag{16}
 \]
 
-No se la usa incondicionalmente. Es un teorema clásico bajo RH; resultados
-explícitos modernos prueban incluso una constante absoluta para el cociente
-por \(Y^2\).
+It is not used unconditionally. It is a classical theorem under RH;
+modern explicit results even prove an absolute constant for the ratio
+over \(Y^2\).
 
-La identidad de Stieltjes
+The Stieltjes identity
 
 \[
  J(x)-\mathrm{Li}_2(x)
@@ -232,44 +233,46 @@ La identidad de Stieltjes
  +\int_2^x{\psi(t)-t\over t\log^2t}\,dt+{2\over\log2}  \tag{17}
 \]
 
-junto con (16) da una contribución \(O(1/j^2)\) al primer término en el
-bloque \(x\asymp2^j\), y el término integral es
-\(O(\sqrt x/\log^2x)+O(1)\). Ambos cuadrados, divididos por \(x^2\), son
-integrables. Finalmente,
+together with (16) gives an \(O(1/j^2)\) contribution to the first term
+in the block \(x\asymp2^j\), and the integral term is
+\(O(\sqrt x/\log^2x)+O(1)\). Both squares, divided by \(x^2\), are
+integrable. Finally,
 
 \[
  0\le\sum_{n=2}^m{1\over\log n}-\int_2^m{dt\over\log t}
  \le {1\over\log2}                                      \tag{18}
 \]
 
-muestra que reemplazar el comparador continuo por el discreto solo añade
-una función acotada. Esto prueba \(\sup_N\mathcal E(N)<\infty\).
+shows that replacing the continuous comparator with the discrete one only
+adds a bounded function. This proves \(\sup_N\mathcal E(N)<\infty\).
 
-## 7. Resultado de la auditoría
+## 7. Audit result
 
-1. La convención \(u_\rho=\rho/(\rho-1)\) tiene la orientación correcta.
-2. Las excursiones negativas forman un conjunto de densidad natural
-   positiva y sindético; no se supone una densidad universal.
-3. El umbral \(-e^{\sqrt X}\) conserva una masa logarítmica positiva bajo
-   no-RH.
-4. La identidad de Abel y el borde móvil de la energía son exactos.
-5. \(\mathcal E(N)=N^{o(1)}\) realmente excluye todo cero con
-   \(\Re\rho>1/2\); RH realmente implica energía finita mediante (16).
+1. The convention \(u_\rho=\rho/(\rho-1)\) has the correct orientation.
+2. The negative excursions form a set of positive natural density that is
+   syndetic; no universal density is assumed.
+3. The threshold \(-e^{\sqrt X}\) retains a positive logarithmic mass
+   under non-RH.
+4. The Abel identity and the moving boundary term of the energy are
+   exact.
+5. \(\mathcal E(N)=N^{o(1)}\) really does exclude every zero with
+   \(\Re\rho>1/2\); RH really does imply finite energy via (16).
 
-Por tanto ninguno de los dos blancos se vuelve más fácil por un error de
-formulación. Probar cualquiera de los límites aritméticos pendientes para
-los pesos ordinarios de Mangoldt probaría RH.
+Therefore neither of the two targets becomes easier through a
+formulation error. Proving either of the pending arithmetic limits for
+the ordinary Mangoldt weights would prove RH.
 
 ---
 
-## 8. Reproducción
+## 8. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 deep_energy_equivalence_audit_check.py
 ```
 
-El checker certifica solo las identidades algebraicas finitas y la
-orientación racional del modo exterior. Los pasos asintóticos y analíticos
-están demostrados arriba; el programa no pretende certificarlos por punto
-flotante.
+The checker certifies only the finite algebraic identities and the
+rational orientation of the exterior mode. The asymptotic and analytic
+steps are proved above; the program does not claim to certify them in
+floating point.
+</content>

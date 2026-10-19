@@ -1,27 +1,27 @@
-# 104_85 — Renormalización global de primos, Hurwitz y forma no local de Nyman
+# 104_85 — Global renormalization of primes, Hurwitz, and non-local Nyman form
 
-**Resultado.** Después del gate local de `104_84`, hay dos construcciones
-que conservan genuinamente la interacción global de los primos.
+**Result.** After the local gate of `104_84`, there are two constructions
+that genuinely preserve the global interaction of the primes.
 
-1. Existe una sucesión explícita de funciones enteras y cero-libres,
-   construida con todos los pesos \(\Lambda(m)\le X\) y el comparador
-   continuo, que converge a \((s-1)\zeta(s)\) hasta \(\Re s=1\).
-   Su convergencia local uniforme en \(\Re s>1/2\) es **equivalente a RH**.
-2. La aproximación Möbius de Nyman--Báez-Duarte produce una forma Gram no
-   local y positiva con kernel \(1/\max(m,n)\). Un solo cero
-   \(\rho=\beta+i\gamma\), \(\beta>1/2\), impone a todo residual una norma
-   al menos \((2\beta-1)/|\rho|^2\). Probar que esa norma tiende a cero es
-   exactamente eliminar el factor de Blaschke de `104_84`.
+1. There is an explicit sequence of entire, zero-free functions,
+   built with all weights \(\Lambda(m)\le X\) and the continuous
+   comparator, that converges to \((s-1)\zeta(s)\) up to \(\Re s=1\).
+   Its locally uniform convergence on \(\Re s>1/2\) is **equivalent to RH**.
+2. The Möbius approximation of Nyman--Báez-Duarte produces a non-local,
+   positive Gram form with kernel \(1/\max(m,n)\). A single zero
+   \(\rho=\beta+i\gamma\), \(\beta>1/2\), imposes on every residual a norm
+   at least \((2\beta-1)/|\rho|^2\). Proving that this norm tends to zero is
+   exactly eliminating the Blaschke factor of `104_84`.
 
-Por tanto ni la renormalización global ni la energía cuadrática pierden la
-obstrucción: la localizan de forma exacta. Este documento no prueba
-Deep-\(\Lambda\), A1 ni RH.
+Hence neither the global renormalization nor the quadratic energy lose the
+obstruction: they localize it exactly. This document does not prove
+Deep-\(\Lambda\), A1, or RH.
 
 ---
 
-## 1. Producto global renormalizado
+## 1. Renormalized global product
 
-Ponga
+Set
 
 \[
  E(x)=\psi(x)-x,
@@ -30,15 +30,15 @@ Ponga
          -\int_1^Xx^{-s}\,dx.                            \tag{1}
 \]
 
-La segunda función es entera: la aparente singularidad de la integral en
-\(s=1\) es removible. Defina
+The second function is entire: the apparent singularity of the integral at
+\(s=1\) is removable. Define
 
 \[
  F_X(s)=\zeta(2)\exp\left\{-\int_2^sG_X(w)\,dw\right\}. \tag{2}
 \]
 
-La integral no depende del camino porque \(G_X\) es entera. Cada \(F_X\)
-es entera y nunca se anula. Integrando los dos términos de (1),
+The integral does not depend on the path because \(G_X\) is entire. Each
+\(F_X\) is entire and never vanishes. Integrating the two terms of (1),
 
 \[
 \begin{aligned}
@@ -48,11 +48,11 @@ es entera y nunca se anula. Integrando los dos términos de (1),
  &+\int_1^X{x^{-2}-x^{-s}\over\log x}\,dx\Bigg\},      \tag{3}
 \end{aligned}
 
-donde el cociente en \(x=1\) se entiende por continuidad. La fórmula usa
-simultáneamente todas las potencias primas hasta \(X\); no es un cambio
-local fijo de factores Euler.
+where the quotient at \(x=1\) is understood by continuity. The formula uses
+simultaneously all prime powers up to \(X\); it is not a fixed local
+change of Euler factors.
 
-La integración de Stieltjes da la identidad exacta
+Stieltjes integration gives the exact identity
 
 \[
  \boxed{
@@ -60,19 +60,19 @@ La integración de Stieltjes da la identidad exacta
         +s\int_1^XE(x)x^{-s-1}\,dx.}                    \tag{4}
 \]
 
-En efecto,
+Indeed,
 
 \[
  \sum_{m\le X}\Lambda(m)m^{-s}
  =\psi(X)X^{-s}+s\int_1^X\psi(x)x^{-s-1}\,dx,          \tag{5}
 \]
 
-y la parte con \(\psi(x)=x\) menos el comparador de (1) es exactamente
-uno.
+and the part with \(\psi(x)=x\) minus the comparator of (1) is exactly
+one.
 
-## 2. Semiplano alcanzado incondicionalmente
+## 2. Unconditionally reached half-plane
 
-La cota Vinogradov--Korobov efectiva tiene la forma
+The effective Vinogradov--Korobov bound has the form
 
 \[
  |E(x)|\le x\exp\{-\eta(\log x)\},
@@ -80,8 +80,8 @@ La cota Vinogradov--Korobov efectiva tiene la forma
  \eta(u)\asymp u^{3/5}(\log u)^{-1/5}.                  \tag{6}
 \]
 
-Por (4), el borde y la cola convergen uniformemente en compactos de
-\(\Re s\ge1\). Para \(\Re s>1\),
+By (4), the boundary term and the tail converge uniformly on compacta of
+\(\Re s\ge1\). For \(\Re s>1\),
 
 \[
  G_X(s)\longrightarrow
@@ -89,52 +89,52 @@ Por (4), el borde y la cola convergen uniformemente en compactos de
  =-{d\over ds}\log\{(s-1)\zeta(s)\}.                  \tag{7}
 \]
 
-La normalización \(F_X(2)=\zeta(2)=(2-1)\zeta(2)\) prueba
+The normalization \(F_X(2)=\zeta(2)=(2-1)\zeta(2)\) proves
 
 \[
  F_X(s)\longrightarrow (s-1)\zeta(s)                  \tag{8}
 \]
 
-localmente uniformemente en el semiplano certificado.
+locally uniformly on the certified half-plane.
 
-VK no entrega ningún \(\Re s>1-\delta\), \(\delta>0\) fijo. En efecto, la
-majorante que resulta de (4) contiene
+VK does not deliver any \(\Re s>1-\delta\), \(\delta>0\) fixed. Indeed, the
+majorant resulting from (4) contains
 
 \[
  \int^\infty
  \exp\{\delta u-\eta(u)\}\,du=\infty,                 \tag{9}
 \]
 
-y el borde es
-\(\exp\{\delta\log X-\eta(\log X)\}\), que tampoco tiende a cero.
-Cambiar las constantes de (6) no altera esta barrera de exponentes.
+and the boundary term is
+\(\exp\{\delta\log X-\eta(\log X)\}\), which also does not tend to zero.
+Changing the constants of (6) does not alter this exponent barrier.
 
-## 3. Equivalencia de Hurwitz
+## 3. Hurwitz equivalence
 
-Se tiene
+We have
 
 \[
  \boxed{
  F_X\longrightarrow(s-1)\zeta(s)
- \text{ localmente uniformemente en }\Re s>{1\over2}
+ \text{ locally uniformly on }\Re s>{1\over2}
  \quad\Longleftrightarrow\quad \mathrm{RH}.}           \tag{10}
 \]
 
-Si ocurre la convergencia, el teorema de Hurwitz y el hecho de que cada
-\(F_X\) es cero-libre implican que \((s-1)\zeta(s)\) es cero-libre en ese
-semiplano. La simetría funcional da RH.
+If the convergence holds, Hurwitz's theorem and the fact that each
+\(F_X\) is zero-free imply that \((s-1)\zeta(s)\) is zero-free on that
+half-plane. The functional symmetry gives RH.
 
-Recíprocamente, RH implica la cota de von Koch
+Conversely, RH implies the von Koch bound
 
 \[
  E(x)=O(x^{1/2}\log^2x),                                \tag{11}
 \]
 
-y (4) converge uniformemente en cada compacto de \(\Re s>1/2\), lo que
-prueba (10).
+and (4) converges uniformly on every compact subset of \(\Re s>1/2\), which
+proves (10).
 
-La falla es cuantitativamente visible. Si \(\rho\) es un cero derecho y
-el círculo \(|s-\rho|=r\) no contiene otros ceros, entonces para todo
+The failure is quantitatively visible. If \(\rho\) is a right-hand zero and
+the circle \(|s-\rho|=r\) contains no other zeros, then for all
 \(X\)
 
 \[
@@ -143,14 +143,14 @@ el círculo \(|s-\rho|=r\) no contiene otros ceros, entonces para todo
  \ge \min_{|s-\rho|=r}|(s-1)\zeta(s)|>0.}              \tag{12}
 \]
 
-De lo contrario, Rouché obligaría a la función cero-libre \(F_X\) a tener
-un cero dentro del círculo. Un modo \(E_\rho(x)\asymp x^\rho\) produce la
-misma obstrucción en (4) mediante un término
+Otherwise, Rouché's theorem would force the zero-free function \(F_X\) to
+have a zero inside the circle. A mode \(E_\rho(x)\asymp x^\rho\) produces
+the same obstruction in (4) through a term
 \(X^{\rho-s}/(s-\rho)\).
 
-## 4. Residual no local de Nyman
+## 4. Non-local Nyman residual
 
-Defina
+Define
 
 \[
  g_N=\sum_{k\le N}{\mu(k)\over k},
@@ -159,13 +159,13 @@ Defina
           -Ng_NN^{-s}.                                  \tag{13}
 \]
 
-Entonces \(A_N(1)=0\), lo que cancela el polo de \(\zeta\), y el residual
+Then \(A_N(1)=0\), which cancels the pole of \(\zeta\), and the residual
 
 \[
  f_N(s)={1-\zeta(s)A_N(s)\over s}                       \tag{14}
 \]
 
-tiene norma de Hardy
+has Hardy norm
 
 \[
  d_N^2={1\over2\pi}\int_{-\infty}^{\infty}
@@ -173,8 +173,8 @@ tiene norma de Hardy
   \over t^2+1/4}\,dt.                                  \tag{15}
 \]
 
-En la coordenada de Mellin, si un residual finito se escribe
-\(\sum_m r_mm^{-s}\), Plancherel da la forma exacta
+In the Mellin coordinate, if a finite residual is written as
+\(\sum_m r_mm^{-s}\), Plancherel gives the exact form
 
 \[
  \boxed{
@@ -182,7 +182,7 @@ En la coordenada de Mellin, si un residual finito se escribe
  =\sum_{m,n}{r_m\overline{r_n}\over\max(m,n)}.}        \tag{16}
 \]
 
-El kernel conserva todas las interacciones y es PSD porque
+The kernel preserves all interactions and is PSD because
 
 \[
  {1\over\max(m,n)}
@@ -190,49 +190,49 @@ El kernel conserva todas las interacciones y es PSD porque
  \mathbf1_{\{x\le1/m\}}\mathbf1_{\{x\le1/n\}}\,dx.  \tag{17}
 \]
 
-## 5. Un cero impone una distancia positiva
+## 5. A zero imposes a positive distance
 
-Si \(\rho=\beta+i\gamma\), \(\beta>1/2\), es cero de \(\zeta\), entonces
-para **todo** multiplicador \(A_N\)
+If \(\rho=\beta+i\gamma\), \(\beta>1/2\), is a zero of \(\zeta\), then
+for **every** multiplier \(A_N\)
 
 \[
  f_N(\rho)={1\over\rho}.                                \tag{18}
 \]
 
-La desigualdad de evaluación en
-\(H^2(\Re s>1/2)\) da
+The evaluation inequality in
+\(H^2(\Re s>1/2)\) gives
 
 \[
  |f_N(\rho)|^2\le {d_N^2\over2\beta-1}.
 \]
 
-Por tanto
+Hence
 
 \[
  \boxed{d_N^2\ge{2\beta-1\over|\rho|^2}>0}            \tag{19}
 \]
 
-para cualquier elección de pesos, no solo (13). En el disco,
-\((2\beta-1)/|\rho|^2=1-|w_\rho|^2\), exactamente el defecto de un factor
-de Blaschke elemental.
+for any choice of weights, not only (13). On the disk,
+\((2\beta-1)/|\rho|^2=1-|w_\rho|^2\), exactly the defect of an elementary
+Blaschke factor.
 
-Ponga, en el disco,
+Set, on the disk,
 
 \[
  \mathcal G(z)=z\,\zeta\!\left({1\over1-z}\right),
  \qquad \mathcal G(0)=1.                                \tag{20}
 \]
 
-Esta función pertenece a \(H^2(\mathbb D)\) y tiene el mismo factor
-interior \(B\) que `104_84`; los factores que la distinguen de \(E\) son
-exteriores. En la normalización Hardy canónica, el cierre de todos los
-multiplicadores exteriores satisface
+This function belongs to \(H^2(\mathbb D)\) and has the same inner
+factor \(B\) as `104_84`; the factors that distinguish it from \(E\) are
+outer. In the canonical Hardy normalization, the closure of all
+outer multipliers satisfies
 
 \[
  \inf_P\|1-\mathcal G P\|_2^2=1-|B(0)|^2.              \tag{21}
 \]
 
-donde \(B\) es el factor interior de `104_84`. Así
+where \(B\) is the inner factor of `104_84`. Thus
 
 \[
  d_N\longrightarrow0
@@ -240,24 +240,24 @@ donde \(B\) es el factor interior de `104_84`. Así
  \quad\Longleftrightarrow\quad\mathrm{RH}.             \tag{22}
 \]
 
-La positividad de (16) no da una cota superior tendiente a cero. Los pesos
-de Möbius son el candidato aritmético canónico, pero demostrar (22) es
-precisamente el criterio Nyman--Beurling/Báez-Duarte.
+The positivity of (16) does not give an upper bound tending to zero. The
+Möbius weights are the canonical arithmetic candidate, but proving (22) is
+precisely the Nyman--Beurling/Báez-Duarte criterion.
 
-## 6. Decisión
+## 6. Decision
 
 ```text
-probado:
-  renormalización cero-libre all-primes (1)--(4);
-  su convergencia hasta Re s=1 por VK;
-  convergencia hasta Re s>1/2 iff RH;
-  residual Nyman y forma Gram no local exacta;
-  todo cero derecho impone la distancia positiva (19).
+proved:
+  all-primes zero-free renormalization (1)--(4);
+  its convergence up to Re s=1 by VK;
+  convergence up to Re s>1/2 iff RH;
+  Nyman residual and exact non-local Gram form;
+  every right-hand zero imposes the positive distance (19).
 
-descartado:
-  PNT/VK + producto parcial renormalizado + Hurwitz => RH;
-  positividad de la forma Gram, sin una cota superior nueva => RH.
+ruled out:
+  PNT/VK + renormalized partial product + Hurwitz => RH;
+  positivity of the Gram form, without a new upper bound => RH.
 
-no probado:
-  la convergencia de (10), d_N->0, B(0)=1, Deep-Lambda, A1 o RH.
+not proved:
+  the convergence of (10), d_N->0, B(0)=1, Deep-Lambda, A1, or RH.
 ```

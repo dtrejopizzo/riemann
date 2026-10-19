@@ -1,6 +1,5 @@
 # E74.11 - Algebraic quotient bridge
 
-Date: 2026-07-16.
 
 ## Purpose
 

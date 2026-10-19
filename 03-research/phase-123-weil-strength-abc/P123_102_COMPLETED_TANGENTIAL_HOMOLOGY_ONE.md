@@ -1,6 +1,6 @@
 # P123.102 — Exact degree-one diagonal homology in the nuclear completion
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY in degrees zero and
+Status: PROVED-IN-REPOSITORY in degrees zero and
 one for S=S(Y) of P123.101. An explicit continuous linear filling proves
 the degree-one boundary image closed. Higher degrees remain uncomputed.
 

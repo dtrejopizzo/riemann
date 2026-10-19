@@ -1,6 +1,5 @@
 # E73.210 - Asymptotic enclosure for the digamma tail
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

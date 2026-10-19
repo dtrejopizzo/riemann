@@ -1,6 +1,6 @@
 # E78.71 - The radial old-old log drift is exactly the sigma-integral of the safe shell derivative
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

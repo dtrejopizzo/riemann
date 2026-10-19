@@ -1,6 +1,6 @@
 # E78.68 - The old-old shell numerator is exactly a radial-plus-wrapped-phase log-q gain
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

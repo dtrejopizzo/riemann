@@ -14,20 +14,20 @@ Every geometric fibre is the smooth projective surface
 classes.  Their intersection ring satisfies
 
 \[
- A^2=B^2=0,qquad A\cdot B=1.
+ A^2=B^2=0,\qquad A\cdot B=1.
  \tag{1.1}
 \]
 
 Choose
 
 \[
- H=A+B,qquad D=A-B.
+ H=A+B,\qquad D=A-B.
 \]
 
 Then
 
 \[
- H^2=2,qquad D\cdot H=0,qquad D^2=-2.
+ H^2=2,\qquad D\cdot H=0,\qquad D^2=-2.
  \tag{1.2}
 \]
 

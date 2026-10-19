@@ -1,8 +1,7 @@
 # E71.9 -- relative determinant with archimedean/free background
 
-**Date:** 2026-07-07.
 **Script:** `E71_9_relative_arch_background_probe.py`.
-**Role:** test the first zero-independent candidate for the background determinant `B_N`.
+**Purpose:** test the first zero-independent candidate for the background determinant `B_N`.
 
 ## Motivation
 

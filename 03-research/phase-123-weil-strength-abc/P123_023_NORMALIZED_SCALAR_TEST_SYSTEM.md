@@ -1,6 +1,5 @@
 # P123.023 — a compatible scalar test system on normalized class groups
 
-Date: 2026-09-05.
 
 ## Status
 

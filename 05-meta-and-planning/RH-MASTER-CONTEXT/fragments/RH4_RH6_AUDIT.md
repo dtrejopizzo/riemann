@@ -1,256 +1,251 @@
-# Auditoría RH4–RH6
+# RH4–RH6 Audit
 
-## Dictamen ejecutivo
+## Executive verdict
 
-Los tres programas dejan una base útil de instrumentación, controles y
-contraejemplos, pero no una cadena hacia RH. RH4 descarta su premisa central:
-la covarianza interclase negativa y un papel singular de \(\omega=2\). RH5
-identifica correctamente que las matrices de Gram de ceros son PSD por
-construcción y, por ello, no pueden detectar una desviación horizontal. RH6
-aporta una calibración numérica interesante del formulario localizado de
-Weil, pero no resuelve —ni puede sustituir— el paso uniforme de datos finitos
-a la positividad de Weil. Ese paso es precisamente equivalente a RH cuando
-se formula para toda la clase de pruebas admisibles.
+The three programs leave a useful base of instrumentation, controls and
+counterexamples, but not a chain toward RH. RH4 discards its central premise:
+negative inter-class covariance and a singular role for \(\omega=2\). RH5
+correctly identifies that zero Gram matrices are PSD by construction and,
+therefore, cannot detect a horizontal deviation. RH6 provides an interesting
+numerical calibration of the localized Weil formulary, but does not resolve
+—nor can it replace— the uniform step from finite data to Weil positivity.
+That step is precisely equivalent to RH when formulated for the entire class
+of admissible test functions.
 
-La lectura conjunta impone una separación estricta entre:
+The joint reading imposes a strict separation between:
 
-1. identidades y desigualdades elementales de la descomposición por
+1. elementary identities and inequalities of the decomposition by
    \(\omega(n)\);
-2. resultados numéricos de longitud, ventana, normalización y familia fijas;
-3. equivalencias clásicas con RH; y
-4. inferencias que no sobreviven controles de construcción, truncación o
-   validación por familias.
+2. numerical results of fixed length, window, normalization and family;
+3. classical equivalences with RH; and
+4. inferences that do not survive construction, truncation or
+   family-validation controls.
 
-## Convención de estados
+## State convention
 
-| Estado | Sentido en este inventario |
+| State | Meaning in this inventory |
 |---|---|
-| **PROBADO** | Derivación autocontenida o teorema clásico correctamente aplicado, sin paso numérico esencial. |
-| **CONDICIONAL** | Válido al añadir una hipótesis explícita no demostrada. |
-| **NUMÉRICO** | Observado en los datos, malla, precisión y controles indicados; no extrapolable por sí solo. |
-| **CONJETURAL** | Propuesta sin demostración ni validación suficiente. |
-| **REFUTADO** | Contradicho por la auditoría o por el control prescrito. |
-| **REFORMULACIÓN-EQUIVALENTE-A-RH** | Criterio correcto cuyo cierre universal es RH bajo otra formulación. |
+| **PROVED** | Self-contained derivation or classical theorem correctly applied, without an essential numerical step. |
+| **CONDITIONAL** | Valid when adding an explicit, unproved hypothesis. |
+| **NUMERICAL** | Observed in the indicated data, mesh, precision and controls; not extrapolable by itself. |
+| **CONJECTURAL** | Proposal without proof or sufficient validation. |
+| **REFUTED** | Contradicted by the audit or by the prescribed control. |
+| **EQUIVALENT-REFORMULATION-TO-RH** | Correct criterion whose universal closure is RH under another formulation. |
 
-## Cobertura documental
+## Documentary coverage
 
-Se leyeron los tres `README.md` y todos los `OVERVIEW.md` existentes. Los
-cuadernos, archivos de resultados y fuentes matemáticas se usaron solamente
-para comprobar puntos que cambian el dictamen: normalización DH, matrices PSD,
-fórmula explícita, listas de ceros, momentos y escalas de desplazamiento.
+The three `README.md` files and every existing `OVERVIEW.md` were read. The
+notebooks, result files and mathematical sources were used only to check
+points that change the verdict: DH normalization, PSD matrices, explicit
+formula, zero lists, moments and shift scales.
 
-| Programa | Directorios cubiertos | Directorios sin respuesta | Uso en la síntesis |
+| Program | Directories covered | Directories without an answer | Use in the synthesis |
 |---|---|---|---|
-| RH4 | `task1`–`task83` | `task11`, `task19`, `task22`, `task35`, `task39`, `task46`, `task49`, `task60`, `task68`, `task70`, `task73` | Motor \(\omega\), clasificación, ablation aritmética, intentos de puente inverso y auditoría de supuestos heredados. |
-| RH5 | `task1`–`task60` | `task5` | Reconstrucción por ceros, calibraciones de potencia, Jacobi/Gram/Weil, TDA y registro de cuellos de botella. |
-| RH6 | `task1`–`task68` | `task7`, `task26` | Forma localizada de Weil, generación de ceros, momentos por \(\omega\), persistencia H0 y pruebas de sensibilidad. |
+| RH4 | `task1`–`task83` | `task11`, `task19`, `task22`, `task35`, `task39`, `task46`, `task49`, `task60`, `task68`, `task70`, `task73` | \(\omega\) engine, classification, arithmetic ablation, reverse-bridge attempts and audit of inherited assumptions. |
+| RH5 | `task1`–`task60` | `task5` | Reconstruction from zeros, power calibrations, Jacobi/Gram/Weil, TDA and bottleneck log. |
+| RH6 | `task1`–`task68` | `task7`, `task26` | Localized Weil form, zero generation, moments by \(\omega\), H0 persistence and sensitivity tests. |
 
-Los intervalos de la tabla son inclusivos: constituyen la lista completa de
-directorios `task` de cada programa, incluidos los que no contienen respuesta.
+The intervals in the table are inclusive: they constitute the complete list
+of `task` directories of each program, including those without an answer.
 
-## RH4 — reconstrucción
+## RH4 — reconstruction
 
-### Objetivo y método real
+### Goal and actual method
 
-RH4 intentó convertir estadísticas de picos de polinomios de Dirichlet
-estratificados por \(\omega(n)\) en una cadena analítica que distinguiera
-funciones con y sin ceros fuera de la recta. El diseño combinó:
+RH4 attempted to convert peak statistics of Dirichlet polynomials stratified
+by \(\omega(n)\) into an analytic chain distinguishing functions with and
+without zeros off the line. The design combined:
 
-- una auditoría de la constante de Davenport–Heilbronn y de coeficientes;
-- la descomposición \(D=\sum_k S_k\), matrices de picos
-  \(M_{jk}=\mathbb E\,\Re(S_j\overline{S_k})\), razones de amplificación y
-  entropías espectrales;
-- clasificación con controles por familias y por ventana temporal;
-- inyección de ceros en una fórmula explícita truncada; y
-- ablaciones de coeficientes en primos ramificados.
+- an audit of the Davenport–Heilbronn constant and of coefficients;
+- the decomposition \(D=\sum_k S_k\), peak matrices
+  \(M_{jk}=\mathbb E\,\Re(S_j\overline{S_k})\), amplification ratios and
+  spectral entropies;
+- classification with controls by family and by time window;
+- injection of zeros into a truncated explicit formula; and
+- ablations of coefficients at ramified primes.
 
-El resultado metodológico importante es negativo: \(M_{jk}\) es, ante todo,
-un observable de coeficientes, conductor, soporte y condicionamiento por
-picos. No se comporta como una reconstrucción inversa de la parte real de un
-cero.
+The important methodological result is negative: \(M_{jk}\) is, above all,
+an observable of coefficients, conductor, support and peak conditioning. It
+does not behave as an inverse reconstruction of the real part of a zero.
 
-### Ledger de claims
+### Claims ledger
 
-| Claim | Estado | Evidencia y alcance |
+| Claim | State | Evidence and scope |
 |---|---|---|
-| \(\kappa\) DH real, aproximadamente \(0.28408\), y no \((1+i)/2\) | **NUMÉRICO** | La anulación en los cuatro ceros canónicos y la coherencia con la ecuación funcional resuelven la inconsistencia operativa. La derivación de la fase debe mantenerse separada de la verificación de sumas truncadas. |
-| Validación Kahan/`mpmath` y \(\sum_kS_k=D\) | **NUMÉRICO** | Concordancia de alrededor de doce dígitos en la muestra completada; la auditoría registra que no se completaron todos los puntos previstos. Es un certificado de motor, no de una propiedad de RH. |
-| La cota \(1+r\le K_N\) y \(|D|^2\le K_N^2\max_k|S_k|^2\) | **PROBADO** | Cauchy–Schwarz y conteo de clases. No depende de picos ni de ceros. |
-| \(\max_{t,k}|S_k(t;N)|^2\le N^\varepsilon\Rightarrow\) Lindelöf | **CONDICIONAL** | La implicación es suficiente y es más fuerte que Lindelöf; no es una equivalencia y no implica RH. |
-| Predominio de 67% de covarianzas fuera de diagonal negativas | **REFUTADO** | `task55` y la síntesis: intervalos de remuestreo incluyen 50% y excluyen el 67% en la corrida de mayor tamaño; el condicionamiento a picos desplaza el patrón hacia acoplamientos positivos. |
-| \(\omega=2\) como causa única de un cambio de aproximadamente 30% | **REFUTADO** | `task47`: \(\omega=1,2,3\) tienen masas y ablaciones comparables; el máximo de Erdős–Kac explica una contribución grande, no una singularidad. |
-| Modo principal positivo y de baja dimensión en matrices de picos | **NUMÉRICO** | Reaparece para \(\zeta\) y DH. Describe interferencia constructiva condicionada; no separa por sí mismo RH de no-RH. |
-| Entropía espectral de matrices promediadas como separador de las clases disponibles | **NUMÉRICO** | Separación fuerte en el panel y resultado LOOCV cercano a 10/11, pero Liouville es un contraejemplo de la lectura “RH”; el tamaño de clase es pequeño y las funciones construidas no forman una muestra de la clase de Selberg. |
-| Clasificador de picos como prueba de una firma universal | **REFUTADO** | Validaciones por familia, temporal y por clase muestran AUC que cae hacia azar o asimetrías F4/F12. Las cifras in-sample y bootstrap estratificado miden identidad de familia. |
-| \(M_{kk}\) está escalado por \(C_k=\sum_{\omega(n)=k}|a_n|^2/n\) | **NUMÉRICO** | Relación log-log fuerte y relación lineal moderada; el condicionamiento de picos agrega amplificación dependiente de clase y estrato. |
-| Los momentos cruzados no condicionados predicen \(M_{jk}\) | **REFUTADO** | El ajuste global es débil; el ajuste intraclase no autoriza una ley transversal. |
-| La inyección de uno o cuatro ceros DH reproduce \(M_{jk}(DH)-M_{jk}(\zeta)\) | **REFUTADO** | `task25`; desajuste de signo y norma. El análogo F12 frente a \(\zeta\) también falla en `task26`. |
-| La ablación de múltiplos de los primos de conductor reproduce diferencias DH/F12 frente a \(\zeta\) | **NUMÉRICO** | Similitudes coseno altas en los pares probados. Explica un mecanismo aritmético específico, no una ley de todos los \(L\)-funciones. |
-| La localización de un cero fuera de recta puede recuperarse de normas/espectros de \(\Delta M\) | **REFUTADO** | No hay correlación estable con \(\beta\); tras retirar \(|\kappa|\), la señal desaparece. |
-| El ajuste GEV heredado con bloques \(2\pi/\log N\) | **REFUTADO** | Cambiar a \(2\pi/\log T\) desplaza el parámetro fuera del intervalo heredado. |
+| Real DH \(\kappa\), approximately \(0.28408\), and not \((1+i)/2\) | **NUMERICAL** | The vanishing at the four canonical zeros and the consistency with the functional equation resolve the operational inconsistency. The phase derivation must be kept separate from the verification of truncated sums. |
+| Kahan/`mpmath` validation and \(\sum_kS_k=D\) | **NUMERICAL** | Agreement of about twelve digits in the completed sample; the audit records that not all planned points were completed. It is an engine certificate, not a property of RH. |
+| The bound \(1+r\le K_N\) and \(|D|^2\le K_N^2\max_k|S_k|^2\) | **PROVED** | Cauchy–Schwarz and class counting. It does not depend on peaks or on zeros. |
+| \(\max_{t,k}|S_k(t;N)|^2\le N^\varepsilon\Rightarrow\) Lindelöf | **CONDITIONAL** | The implication is sufficient and is stronger than Lindelöf; it is not an equivalence and does not imply RH. |
+| Predominance of 67% of negative off-diagonal covariances | **REFUTED** | `task55` and the synthesis: resampling intervals include 50% and exclude the 67% in the largest run; peak conditioning shifts the pattern toward positive couplings. |
+| \(\omega=2\) as the sole cause of an approximately 30% change | **REFUTED** | `task47`: \(\omega=1,2,3\) have comparable masses and ablations; the Erdős–Kac maximum explains a large contribution, not a singularity. |
+| Dominant positive, low-dimensional mode in peak matrices | **NUMERICAL** | Reappears for \(\zeta\) and DH. It describes conditioned constructive interference; it does not by itself separate RH from non-RH. |
+| Spectral entropy of averaged matrices as a separator of the available classes | **NUMERICAL** | Strong separation in the panel and an LOOCV result near 10/11, but Liouville is a counterexample to the "RH" reading; the class size is small and the constructed functions do not form a sample of the Selberg class. |
+| Peak classifier as proof of a universal signature | **REFUTED** | Family, temporal and class validations show AUC falling toward chance or F4/F12 asymmetries. The in-sample and stratified bootstrap figures measure family identity. |
+| \(M_{kk}\) is scaled by \(C_k=\sum_{\omega(n)=k}|a_n|^2/n\) | **NUMERICAL** | Strong log-log relation and moderate linear relation; peak conditioning adds class- and stratum-dependent amplification. |
+| Unconditioned cross moments predict \(M_{jk}\) | **REFUTED** | The global fit is weak; the within-class fit does not authorize a cross-sectional law. |
+| Injecting one or four DH zeros reproduces \(M_{jk}(DH)-M_{jk}(\zeta)\) | **REFUTED** | `task25`; sign and norm mismatch. The F12 vs. \(\zeta\) analogue also fails in `task26`. |
+| Ablating multiples of conductor primes reproduces DH/F12 differences vs. \(\zeta\) | **NUMERICAL** | High cosine similarities in the tested pairs. It explains a specific arithmetic mechanism, not a law for all \(L\)-functions. |
+| The location of an off-line zero can be recovered from norms/spectra of \(\Delta M\) | **REFUTED** | There is no stable correlation with \(\beta\); after removing \(|\kappa|\), the signal disappears. |
+| The inherited GEV fit with blocks \(2\pi/\log N\) | **REFUTED** | Switching to \(2\pi/\log T\) shifts the parameter outside the inherited interval. |
 
-### Dependencias, retiros y rutas cerradas
+### Dependencies, retractions and closed routes
 
-1. Los controles DH, F12 y F14 son construcciones sin producto de Euler o
-   combinaciones aditivas. Sirven para refutar inferencias, pero una etiqueta
-   binaria “GRH verdadera/falsa” sobre ese conjunto no identifica una
-   propiedad universal de la clase de Selberg.
-2. Las columnas `S_0` y, para familias módulo 5 a esta longitud, `S_7`, son
-   fugas estructurales. No deben entrar en un clasificador como evidencia
-   aritmética.
-3. Se retiran: señal negativa interclase, excepcionalidad de \(S_2\),
-   predicción por grado/conductor, SVM in-sample/LOOCV como test franco, y
-   reconstrucción inversa de ceros desde \(M_{jk}\).
-4. La herencia válida es más modesta: usar la descomposición \(\omega\) como
-   contabilidad de energía y como banco de controles para distinguir efectos
-   de coeficiente de efectos de ceros. No volver a presentar una firma de
-   picos como puente a RH sin un teorema que elimine esos confusores.
+1. The DH, F12 and F14 controls are constructions without an Euler product
+   or additive combinations. They are useful for refuting inferences, but a
+   binary "GRH true/false" label over that set does not identify a universal
+   property of the Selberg class.
+2. The `S_0` columns and, for modulus-5 families at this length, `S_7`, are
+   structural leaks. They must not enter a classifier as arithmetic evidence.
+3. Retracted: inter-class negative signal, exceptionality of \(S_2\),
+   prediction by degree/conductor, in-sample/LOOCV SVM as an honest test, and
+   inverse reconstruction of zeros from \(M_{jk}\).
+4. The valid inheritance is more modest: use the \(\omega\) decomposition as
+   energy accounting and as a control bank to distinguish coefficient effects
+   from zero effects. Do not again present a peak signature as a bridge to RH
+   without a theorem that eliminates those confounders.
 
-## RH5 — reconstrucción
+## RH5 — reconstruction
 
-### Objetivo y método real
+### Goal and actual method
 
-RH5 desplazó el foco a listas de ceros: reconstrucción de matrices de Jacobi,
-coeficientes de Li, matrices de Mercer, formas de Weil y TDA. Introdujo una
-calibración saludable: deformar ceros de \(\zeta\) y medir sensibilidad antes
-de interpretar un observable. También documentó fallos de generación y
-precisión de listas de ceros para DH, \(L(\chi)\) y \(L(\Delta)\).
+RH5 shifted the focus to zero lists: reconstruction of Jacobi matrices, Li
+coefficients, Mercer matrices, Weil forms and TDA. It introduced a healthy
+calibration: deform zeros of \(\zeta\) and measure sensitivity before
+interpreting an observable. It also documented failures in generation and
+precision of zero lists for DH, \(L(\chi)\) and \(L(\Delta)\).
 
-### Ledger de claims
+### Claims ledger
 
-| Claim | Estado | Evidencia y alcance |
+| Claim | State | Evidence and scope |
 |---|---|---|
-| Una matriz de Gram formada sólo con evaluaciones de ceros en recta puede generar negatividad | **REFUTADO** | Es PSD por construcción. La positividad de una matriz así es tautológica y no prueba RH. |
-| Reconstrucciones Jacobi que sólo usan ordenadas detectan desplazamientos horizontales | **REFUTADO** | La coordenada real fue descartada; la calibración de potencia muestra ceguera estructural. |
-| Coeficientes de Li finitos positivos verifican RH | **REFUTADO** | La positividad para todos los índices es el criterio de Li; verificar un tramo finito no transfiere al infinito. |
-| Criterio de Li / positividad de Weil universal | **REFORMULACIÓN-EQUIVALENTE-A-RH** | Son equivalencias clásicas, útiles para localizar el obstáculo, no soluciones por truncación. |
-| TDA H1 y varianza numérica separan DH de los controles disponibles | **NUMÉRICO** | Separación finita de un contraejemplo sin producto de Euler; no hay implicación de RH ni invariancia entre familias. |
-| Forma localizada de Weil, restando lado aritmético completo, detecta una anomalía DH cerca de su altura | **NUMÉRICO** | La calibración local y los controles son informativos como detector de una anomalía conocida. No excluyen ceros desconocidos. |
-| Una lista finita de ceros y corte finito de primos permiten concluir positividad/inexistencia global | **REFUTADO** | El propio Ledger reconoce colas de ceros, corte aritmético, dependencia de base y ausencia de cota uniforme. |
-| Generación de los catálogos de tamaño objetivo | **REFUTADO** | Varias tareas terminan con listas parciales, precisión efectiva menor a la requerida o procesos interrumpidos. Cualquier análisis que presuponga los catálogos completos debe marcarse como incompleto. |
+| A Gram matrix built only from on-line zero evaluations can generate negativity | **REFUTED** | It is PSD by construction. The positivity of such a matrix is tautological and does not prove RH. |
+| Jacobi reconstructions that use only ordinates detect horizontal shifts | **REFUTED** | The real coordinate was discarded; the power calibration shows structural blindness. |
+| Finite positive Li coefficients verify RH | **REFUTED** | Positivity for all indices is Li's criterion; verifying a finite stretch does not transfer to infinity. |
+| Li's criterion / universal Weil positivity | **EQUIVALENT-REFORMULATION-TO-RH** | These are classical equivalences, useful for locating the obstacle, not solutions by truncation. |
+| TDA H1 and numerical variance separate DH from the available controls | **NUMERICAL** | Finite separation from a counterexample without an Euler product; there is no implication for RH nor invariance across families. |
+| Localized Weil form, subtracting the full arithmetic side, detects a DH anomaly near its height | **NUMERICAL** | The local calibration and controls are informative as a detector of a known anomaly. They do not exclude unknown zeros. |
+| A finite zero list and a finite prime cutoff allow concluding global positivity/nonexistence | **REFUTED** | The ledger itself acknowledges zero tails, arithmetic cutoff, basis dependence and the absence of a uniform bound. |
+| Generation of the target-size catalogs | **REFUTED** | Several tasks end with partial lists, effective precision below what was required, or interrupted processes. Any analysis presupposing the complete catalogs must be flagged as incomplete. |
 
-### Circularidad que debe corregirse
+### Circularity to be corrected
 
-Hay dos objetos diferentes que deben mantenerse separados.
+There are two different objects that must be kept separate.
 
-- La forma de Weil \(B(f,f)\), definida por la fórmula explícita, tiene
-  positividad universal equivalente a RH.
-- La discrepancia numérica “lado de ceros menos lado aritmético truncado” es
-  un residuo de truncación. Cuando ambos lados están completos, la fórmula
-  explícita los iguala; esa discrepancia no es por sí una nueva forma
-  positiva.
+- The Weil form \(B(f,f)\), defined by the explicit formula, has universal
+  positivity equivalent to RH.
+- The numerical discrepancy "zero side minus truncated arithmetic side" is a
+  truncation residue. When both sides are complete, the explicit formula
+  equates them; that discrepancy is not by itself a new positive form.
 
-Por tanto, una afirmación de que una cota uniforme del residuo de secciones
-finitas implica la positividad universal debe demostrar una desigualdad nueva
-que no presuponga el criterio de Weil. Si la cota uniforme equivale ya a la
-positividad de Weil, el paso es **REFORMULACIÓN-EQUIVALENTE-A-RH**, no un
-lema técnico disponible. Esta distinción impide confundir una excelente
-calibración de detector con un avance deductivo hacia RH.
+Therefore, a claim that a uniform bound on the residue of finite sections
+implies universal positivity must prove a new inequality that does not
+presuppose Weil's criterion. If the uniform bound is already equivalent to
+Weil positivity, the step is **EQUIVALENT-REFORMULATION-TO-RH**, not an
+available technical lemma. This distinction prevents confusing an excellent
+detector calibration with a deductive advance toward RH.
 
-### Herencia y no-go
+### Inheritance and no-go
 
-Conservar: calibración mediante desplazamientos controlados, comparación de
-resolución frente a \(\delta\), y la exigencia de curvas de convergencia para
-objetos deterministas. No repetir: Gram PSD como detector, extrapolar signos
-finitos de Li/Mercer, llamar “prueba” a TDA, ni regenerar en cada tarea listas
-que deben ser un único artefacto validado.
+Keep: calibration via controlled shifts, resolution-vs-\(\delta\)
+comparison, and the requirement of convergence curves for deterministic
+objects. Do not repeat: Gram PSD as a detector, extrapolating finite Li/Mercer
+signs, calling TDA a "proof," or regenerating in every task lists that should
+be a single validated artifact.
 
-## RH6 — reconstrucción
+## RH6 — reconstruction
 
-### Objetivo y método real
+### Goal and actual method
 
-RH6 concentró el esfuerzo en una base Hermite–Gauss localizada para la fórmula
-explícita, sensibilidad a desplazamientos de ceros y momentos de
-\(\omega\)-clases. Es el programa con la mejor separación entre un detector
-operativo y el salto de prueba, aunque sus propias tareas revelan
-inconsistencias de escala y de datos que impiden elevar el resultado.
+RH6 concentrated effort on a localized Hermite–Gauss basis for the explicit
+formula, sensitivity to zero shifts and \(\omega\)-class moments. It is the
+program with the best separation between an operational detector and the
+proof gap, although its own tasks reveal scale and data inconsistencies that
+prevent elevating the result.
 
-### Ledger de claims
+### Claims ledger
 
-| Claim | Estado | Evidencia y alcance |
+| Claim | State | Evidence and scope |
 |---|---|---|
-| Una forma cero-sólo es PSD | **PROBADO** | Suma de productos exteriores. Explica el fallo de `task44` y elimina esa ruta. |
-| La respuesta H0 a un corrimiento horizontal pequeño es cuadrática | **PROBADO** | Para el modelo de nube vertical, \(\sqrt{s^2+\delta^2}-s=O(\delta^2)\); las mediciones de bottleneck y Wasserstein concuerdan. |
-| H0 separa DH de controles con alturas comparables | **REFUTADO** | Permutaciones no significativas y fuerte confusión por rango de alturas. |
-| Fracciones de segundo momento por \(\omega\) convergen a una firma | **REFUTADO** | Migran con \(N\), como anticipa Erdős–Kac. |
-| Exponentes de ajuste de momentos distinguen \(\zeta\), \(L(\Delta)\), DH en la malla disponible | **NUMÉRICO** | Ajustes descriptivos de pocos valores de \(N\); inestables al retirar un punto y dependientes de ventana. |
-| Descomposición de cuarto momento ofrece huella finita de producto de Euler | **NUMÉRICO** | Los residuos cambian de signo y magnitud con ventana y longitud; es una descripción de régimen finito. |
-| La forma localizada detecta una deformación prescrita de \(\zeta\) y la anomalía DH cuando se centra cerca | **NUMÉRICO** | Sensibilidad espacial y de base bien calibrada; depende de conocer altura, geometría y lado aritmético. |
-| Ley cuadrática en \(\delta\) para un cuarteto simétrico desplazado | **NUMÉRICO** | `task32` da exponente cercano a dos en ese montaje. |
-| Ley lineal universal en el desplazamiento real | **REFUTADO** | `task68` informa ley lineal en otro montaje; ambas no pueden ser la misma ley universal. La paridad, qué ceros se desplazan y la definición de matriz deben declararse antes de comparar. |
-| Amplificación superpolinómica con dimensión de base | **NUMÉRICO** | Sensible a truncación, centro y aritmética incompleta; no es una cota uniforme en \(J\). |
-| Cola de primos Hermite–Gauss controlada de modo suficiente para pasar a RH | **CONDICIONAL** | La caída gaussiana de un kernel puede acotar una cola para parámetros fijos, pero falta una cota conjunta en centro, ancho, dimensión, cola de ceros y normalización. Sin ella no hay transferencia global. |
-| Positividad localizada finita implica RH | **REFUTADO** | Regla R6/R7 y los resultados lo reconocen: es una sección finita, no la forma en todas las pruebas. |
-| Positividad de Weil para toda prueba admisible equivale a RH | **REFORMULACIÓN-EQUIVALENTE-A-RH** | Es el marco correcto del problema; la parte nueva debe ser una desigualdad independiente que permita alcanzar esa cuantificación. |
+| A zero-only form is PSD | **PROVED** | Sum of outer products. It explains the failure of `task44` and closes that route. |
+| The H0 response to a small horizontal shift is quadratic | **PROVED** | For the vertical-cloud model, \(\sqrt{s^2+\delta^2}-s=O(\delta^2)\); bottleneck and Wasserstein measurements agree. |
+| H0 separates DH from controls with comparable heights | **REFUTED** | Permutations are not significant and there is strong confounding by height range. |
+| Second-moment fractions by \(\omega\) converge to a signature | **REFUTED** | They migrate with \(N\), as anticipated by Erdős–Kac. |
+| Moment-fit exponents distinguish \(\zeta\), \(L(\Delta)\), DH on the available mesh | **NUMERICAL** | Descriptive fits over few values of \(N\); unstable when removing one point and window-dependent. |
+| Fourth-moment decomposition offers a finite fingerprint of the Euler product | **NUMERICAL** | Residuals change sign and magnitude with window and length; it is a description of a finite regime. |
+| The localized form detects a prescribed deformation of \(\zeta\) and the DH anomaly when centered nearby | **NUMERICAL** | Well-calibrated spatial and basis sensitivity; it depends on knowing height, geometry and the arithmetic side. |
+| Quadratic law in \(\delta\) for a shifted symmetric quartet | **NUMERICAL** | `task32` gives an exponent close to two in that setup. |
+| Universal linear law in the real shift | **REFUTED** | `task68` reports a linear law in another setup; both cannot be the same universal law. Parity, which zeros are shifted, and the matrix definition must be declared before comparing. |
+| Superpolynomial amplification with basis dimension | **NUMERICAL** | Sensitive to truncation, center and incomplete arithmetic; it is not a uniform bound in \(J\). |
+| Hermite–Gauss prime tail controlled sufficiently to pass to RH | **CONDITIONAL** | The Gaussian decay of a kernel can bound a tail for fixed parameters, but a joint bound in center, width, dimension, zero tail and normalization is missing. Without it there is no global transfer. |
+| Finite localized positivity implies RH | **REFUTED** | Rules R6/R7 and the results acknowledge it: it is a finite section, not the form over all test functions. |
+| Weil positivity for every admissible test function is equivalent to RH | **EQUIVALENT-REFORMULATION-TO-RH** | This is the correct framework of the problem; the new part must be an independent inequality that achieves that quantification. |
 
-### Dependencias abiertas y errores operativos
+### Open dependencies and operational errors
 
-- Los catálogos requeridos por la regla de caché no estaban todos presentes;
-  repetidas tareas de generación DH terminaron en puntos de control parciales.
-  No se deben mezclar listas de distinta completitud como si fueran el mismo
-  experimento.
-- La consistencia de signo y escala de \(Q\) requiere una especificación
-  única de transformada, contribuciones polar/arquimediana, simetrización de
-  cuartetos y error de cada truncación. La divergencia entre las leyes lineal
-  y cuadrática es una alarma de especificación, no un nuevo fenómeno físico.
-- Las afirmaciones sobre Keating–Snaith y sobre límites de momentos necesitan
-  un régimen asintótico y cotas de error; los cuatro o menos valores de
-  \(N\) no lo proporcionan.
+- The catalogs required by the caching rule were not all present; repeated
+  DH generation tasks ended at partial checkpoints. Lists of different
+  completeness must not be mixed as if they were the same experiment.
+- The sign and scale consistency of \(Q\) requires a single specification of
+  transform, polar/archimedean contributions, quartet symmetrization and the
+  error of each truncation. The divergence between the linear and quadratic
+  laws is a specification alarm, not a new physical phenomenon.
+- The claims about Keating–Snaith and about moment limits need an asymptotic
+  regime and error bounds; four or fewer values of \(N\) do not provide that.
 
-### Herencia válida y rutas que no deben repetirse
+### Valid inheritance and routes not to be repeated
 
-Conservar la prueba de potencia local, los controles de base/corte, la
-separación de error de datos y error de fórmula, y el no-go H0. No repetir:
-usar DH como único sustituto de una alternativa general a RH, promover ajustes
-de exponente a leyes asintóticas, o tratar la cancelación del residuo de
-fórmula explícita como una nueva positividad.
+Keep the local power test, the basis/cutoff controls, the separation of data
+error from formula error, and the H0 no-go. Do not repeat: using DH as the
+sole substitute for a general alternative to RH, promoting exponent fits to
+asymptotic laws, or treating the cancellation of the explicit-formula residue
+as a new positivity.
 
-## Dependencias transversales y mapa de decisión
+## Cross-cutting dependencies and decision map
 
-| Componente | Resultado heredable | Límite no negociable |
+| Component | Heritable result | Non-negotiable limit |
 |---|---|---|
-| Descomposición \(\omega\) | Contabilidad de energía, controles de soporte y prueba de confusores aritméticos | No es criterio de RH ni predictor inverso de ceros. |
-| Clasificación | Diagnóstico para construir controles y detectar fuga de variables | No sustituye una cuantificación matemática; clases construidas no son distribución de contraejemplos. |
-| DH y combinaciones aditivas | Contraejemplos para invalidar inferencias que sólo usan ecuación funcional | No representan una familia de \(L\)-funciones con producto de Euler. |
-| TDA | Medición geométrica auxiliar y no-go H0 | Ninguna distancia finita de nubes prueba una afirmación sobre todos los ceros. |
-| Forma de Weil | Marco exacto en que RH es positividad | El paso uniforme de truncaciones a todas las pruebas es el problema, no una consecuencia de la simulación. |
+| \(\omega\) decomposition | Energy accounting, support controls and arithmetic-confounder testing | It is not an RH criterion nor an inverse predictor of zeros. |
+| Classification | Diagnostic for building controls and detecting variable leakage | It does not replace a mathematical quantification; constructed classes are not a distribution of counterexamples. |
+| DH and additive combinations | Counterexamples to invalidate inferences that use only the functional equation | They do not represent a family of \(L\)-functions with an Euler product. |
+| TDA | Auxiliary geometric measurement and H0 no-go | No finite cloud distance proves a statement about all zeros. |
+| Weil form | Exact framework in which RH is positivity | The uniform step from truncations to all test functions is the problem, not a consequence of the simulation. |
 
-## Replanteo global recomendado
+## Recommended global restatement
 
-1. Fijar un único objeto objetivo: la forma de Weil clásica, con dominio,
-   convención de Fourier y términos completos escritos una vez. Distinguir
-   explícitamente la forma de su residuo numérico truncado.
-2. Formular cualquier lema nuevo como desigualdad uniforme verificable sin
-   asumir positividad de Weil. Debe cuantificar simultáneamente dimensión de
-   base, centro, ancho, corte de primos y cola de ceros. Si su conclusión es
-   la positividad para toda prueba, clasificarlo desde el inicio como
-   **REFORMULACIÓN-EQUIVALENTE-A-RH**.
-3. Mantener RH4/RH6 sólo como banco de falsación: antes de atribuir un efecto
-   a ceros, abatir coeficientes, conductor, soporte, ventana, selección de
-   picos y normalización. La prueba mínima debe sobrevivir a controles con
-   producto de Euler y a deformaciones sintéticas cuyo lado aritmético esté
-   definido de forma coherente.
-4. Congelar catálogos de ceros versionados, con certificado de cobertura y
-   precisión. Ningún resultado posterior puede combinar puntos de control
-   parciales con listas completas sin señalar el corte efectivo.
-5. Tratar las huellas de momentos, entropía y TDA como resultados numéricos
-   negativos o descriptivos, nunca como hitos de demostración. El único
-   frente que conserva relevancia lógica es una estimación uniforme nueva para
-   la forma de Weil, con auditoría adversarial previa de circularidad.
+1. Fix a single target object: the classical Weil form, with domain,
+   Fourier convention and complete terms written once. Explicitly distinguish
+   the form from its truncated numerical residue.
+2. Formulate any new lemma as a uniform, verifiable inequality that does not
+   assume Weil positivity. It must simultaneously quantify basis dimension,
+   center, width, prime cutoff and zero tail. If its conclusion is positivity
+   for every test function, classify it from the start as
+   **EQUIVALENT-REFORMULATION-TO-RH**.
+3. Keep RH4/RH6 only as a falsification bank: before attributing an effect
+   to zeros, rule out coefficients, conductor, support, window, peak
+   selection and normalization. The minimal proof must survive controls with
+   an Euler product and synthetic deformations whose arithmetic side is
+   coherently defined.
+4. Freeze versioned zero catalogs, with a coverage and precision
+   certificate. No later result may combine partial checkpoints with
+   complete lists without flagging the effective cutoff.
+5. Treat the moment, entropy and TDA fingerprints as negative or descriptive
+   numerical results, never as proof milestones. The only front that retains
+   logical relevance is a new uniform estimate for the Weil form, with prior
+   adversarial circularity auditing.
 
-## Hallazgos críticos para no perder
+## Critical findings not to lose
 
-- La hipótesis de interferencia negativa que motivó el frente omega está
-  retirada; los picos observados son constructivos y la masa \(\omega=2\) no
-  es singular.
-- Las matrices de picos codifican principalmente aritmética de coeficientes;
-  el éxito de ablaciones por primos ramificados y el fracaso de inyecciones de
-  ceros cierran el puente inverso propuesto.
-- Toda positividad de una Gram cero-sólo es tautológica. La forma de Weil y
-  la discrepancia truncada deben dejar de intercambiarse en el lenguaje y en
-  el código.
-- La forma localizada es un detector numérico calibrado, no una exclusión de
-  todos los ceros fuera de recta. Su obstáculo uniforme es el núcleo real de
-  RH bajo esa formulación.
-- H0, los clasificadores y los ajustes de momentos quedan como no-go o
-  fenomenología finita; no deben recibir presupuesto de prueba.
+- The negative-interference hypothesis that motivated the omega front is
+  retracted; the observed peaks are constructive and the \(\omega=2\) mass
+  is not singular.
+- Peak matrices mainly encode coefficient, conductor and support arithmetic;
+  the success of ramified-prime ablations and the failure of zero injections
+  close the proposed inverse bridge.
+- Any positivity of a zero-only Gram matrix is tautological. The Weil form
+  and the truncated discrepancy must stop being interchanged in language and
+  in code.
+- The localized form is a calibrated numerical detector, not an exclusion of
+  all off-line zeros. Its uniform obstacle is the real core of RH under that
+  formulation.
+- H0, the classifiers and the moment fits remain as no-go results or finite
+  phenomenology; they must not receive proof budget.

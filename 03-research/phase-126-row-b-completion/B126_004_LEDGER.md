@@ -1,6 +1,5 @@
 # B126.004 — row B ledger
 
-Date: 2026-09-12.
 
 ```text
 ROW B:  WEIL-STRENGTH-COMPLETE  on the graph sector G of Paper 43, for the

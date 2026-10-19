@@ -1,6 +1,5 @@
 # E74.21 - Cauchy-jet no-go and critical numerator endpoint
 
-Date: 2026-07-16.
 
 ## Bootstrap test
 

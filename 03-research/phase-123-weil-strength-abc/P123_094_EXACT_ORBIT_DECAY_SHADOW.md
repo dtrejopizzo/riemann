@@ -1,6 +1,6 @@
 # P123.094 — The exact continuous shadow of the orbit-decay boundary
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for J=J_orb of
+Status: PROVED-IN-REPOSITORY for J=J_orb of
 P123.092. This computes the Hausdorff degree-zero shadow, not a
 derived determinant target or the numerical quotient required by A.6.
 

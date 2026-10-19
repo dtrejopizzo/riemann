@@ -1,7 +1,6 @@
 # E72.60 -- Post-main scalar endpoint discrepancy probe
 
-**Date:** 2026-07-08.
-**Role:** measure the corrected scalar endpoint object after subtracting the continuous PNT main term.
+**Purpose:** measure the corrected scalar endpoint object after subtracting the continuous PNT main term.
 
 ## 0. Correct object
 

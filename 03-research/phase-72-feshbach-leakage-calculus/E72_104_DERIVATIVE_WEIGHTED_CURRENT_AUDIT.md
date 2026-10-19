@@ -1,7 +1,6 @@
 # E72.104 -- Derivative-weighted current audit
 
-**Date:** 2026-07-09.
-**Role:** test the residue-weighted version of the relative root-current subtraction.
+**Purpose:** test the residue-weighted version of the relative root-current subtraction.
 
 ## 0. Motivation
 

@@ -1,118 +1,118 @@
-# Cobertura del corpus para el plan A–B–C–D
+# Corpus coverage for the A–B–C–D plan
 
-Fecha del inventario: 2026-09-05, antes de crear estos documentos. Estado: **inventario y revisión estratégica; no certificado de validez matemática**.
+Inventory date: , before creating these documents. Status: **inventory and strategic review; not a certificate of mathematical validity**.
 
-## Método y límites
+## Method and limits
 
-- Se enumeraron todos los directorios `phase-*` en `03-research` y los 42 directorios numerados de `04-papers`.
-- Se leyeron mecánicamente los 5.359 textos con extensiones `.md`, `.tex`, `.txt` de `01-context`, `02-foundations`, `03-research`, `04-papers` y `05-meta-and-planning` para localizar vocabulario de estados y obstrucciones. Leerlos mediante un script no equivale a revisar sus pruebas.
-- Se extrajeron encabezados de documentos de fase y abstracts/encabezados de las fuentes principales de los papers. Los extractos y el índice general orientaron la selección; no se afirma haber leído íntegros los 42 fuentes.
-- La lectura detallada de esta campaña de planificación se concentró en P123.006, .010, .011, .014–.018, contrato/plan de fase 123; P122.002, .008, .020, .028, .029, especificación D, índice y auditoría de fuentes A/B/C; cierre de fase 120; índice de fase 121; resultados de fase 119; pasajes pertinentes del paper 42 y documentación de certificados. Se consultaron además los mapas raíz, OPTIONS, índice de papers y dossier histórico de auditorías.
-- Los binarios, notebooks no extraídos y salidas masivas no se trataron como pruebas. No se regeneraron certificados numéricos durante la elaboración de este plan.
-- Los hashes de fuentes fijan el material inventariado, no validan su contenido. Los recuentos incluyen duplicados históricos dentro de cada fase.
+- All `phase-*` directories in `03-research` and the 42 numbered directories of `04-papers` were enumerated.
+- The 5,359 texts with extensions `.md`, `.tex`, `.txt` in `01-context`, `02-foundations`, `03-research`, `04-papers` and `05-meta-and-planning` were read mechanically to locate state and obstruction vocabulary. Reading them via a script is not equivalent to reviewing their proofs.
+- Headings were extracted from phase documents, along with abstracts/headings from the main sources of the papers. The excerpts and the general index guided the selection; it is not claimed that all 42 sources were read in full.
+- The detailed reading for this planning campaign focused on P123.006, .010, .011, .014–.018, phase 123 contract/plan; P122.002, .008, .020, .028, .029, spec D, index and A/B/C source audit; phase 120 closure; phase 121 index; phase 119 results; relevant passages of paper 42 and certificate documentation. The root maps, OPTIONS, paper index and historical audit dossier were also consulted.
+- Binaries, unextracted notebooks and bulk outputs were not treated as proofs. No numerical certificates were regenerated while drafting this plan.
+- Source hashes fix the inventoried material; they do not validate its content. The counts include historical duplicates within each phase.
 
-Hay 123 directorios de fases: la numeración llega a 123, faltan las etiquetas 1 y 2 y existen dos directorios con la etiqueta 44. No confundir número máximo con número de directorios.
+There are 123 phase directories: the numbering reaches 123, labels 1 and 2 are missing, and two directories share the label 44. The maximum number should not be confused with the number of directories.
 
-## Reutilización transversal
+## Cross-cutting reuse
 
-| Sector | Uso propuesto | Condición |
+| Sector | Proposed use | Condition |
 |---|---|---|
-| RH1–RH9 | Controles empíricos, historia omega y falsadores | Auditar datos concretos sólo si se usan en un argumento. |
-| Fases 0–28 | Detectores, signos, truncación e inercia | Verificar hipótesis; no trasladar positividad auxiliar. |
-| Fases 29–61 | CCM, correspondencias, Hodge, recurrencia y barreras | No reabrir una clase refutada sin cambiar una hipótesis relevante. |
-| Fases 62–76 | Índice, Feshbach y Pick | Reutilizar identidades; no hacer de LP+IDENT una obligación extra de A–D. |
-| Fases 77–101 | Anclajes, transporte y defectos | Separar identidad exacta de control del límite o de signo. |
-| Fases 102–106 | Li firmado, análisis primo–Gamma y falsadores | Reserva analítica y controles de completación. |
-| Fases 107–118 | Desarrollo histórico de los cuatro rows | Leer con las auditorías posteriores; Schur logarítmico retractado. |
-| Fase 119 | Separadores aritméticos y pérdida por agrupación de normas | Mantener etiquetas de lugares. |
-| Fases 120–122 | Identidades de Green, rigidez, primer contacto y transmisión | Los detectores no prueban su propia anulación. |
-| Fase 123 | Portador de correspondencias candidato | Corregir P123.018 antes de completar A. |
+| RH1–RH9 | Empirical controls, omega history and falsifiers | Audit concrete data only if used in an argument. |
+| Phases 0–28 | Detectors, signs, truncation and inertia | Verify hypotheses; do not transfer auxiliary positivity. |
+| Phases 29–61 | CCM, correspondences, Hodge, recurrence and barriers | Do not reopen a refuted class without changing a relevant hypothesis. |
+| Phases 62–76 | Index, Feshbach and Pick | Reuse identities; do not make LP+IDENT an extra obligation of A–D. |
+| Phases 77–101 | Anchors, transport and defects | Separate exact identity from limit control or sign. |
+| Phases 102–106 | Signed Li, prime–Gamma analysis and falsifiers | Analytic reserve and completion controls. |
+| Phases 107–118 | Historical development of the four rows | Read together with later audits; logarithmic Schur retracted. |
+| Phase 119 | Arithmetic separators and loss from norm grouping | Keep place labels. |
+| Phases 120–122 | Green identities, rigidity, first contact and transmission | Detectors do not prove their own vanishing. |
+| Phase 123 | Candidate correspondence carrier | Correct P123.018 before completing A. |
 
-## Los 42 papers
+## The 42 papers
 
-Las funciones asignadas son decisiones de planificación basadas en índices y extractos, no juicios definitivos de validez o novedad. Cada uso como lema exige lectura de su prueba y dependencias.
+The assigned functions are planning decisions based on indices and excerpts, not definitive judgments of validity or novelty. Each use as a lemma requires reading its proof and dependencies.
 
-| Paper / fuente | Líneas del fuente | Papel en el plan | SHA-256 (prefijo) |
+| Paper / source | Source lines | Role in the plan | SHA-256 (prefix) |
 |---|---:|---|---|
-| [01-critical-line-survey](../../04-papers/01-critical-line-survey/main.tex) | 1245 | Mapa bibliográfico histórico; verificar fechas y fuentes antes de reutilizar. | `b94222f7f1c3b81d` |
-| [02-omega-class-decomposition](../../04-papers/02-omega-class-decomposition/main.tex) | 1073 | Descomposición omega; recurso lateral, sin puente automático a D. | `bdf6445d69f012f2` |
-| [03-sign-interclass-interference](../../04-papers/03-sign-interclass-interference/main.tex) | 351 | Corrección de signos en interferencia; disciplina de controles. | `5531de3b7822f524` |
-| [04-davenport-heilbronn-null](../../04-papers/04-davenport-heilbronn-null/main.tex) | 1198 | Control Davenport–Heilbronn y límites de observación finita. | `0af3a3ad82321c33` |
-| [05-omega-hierarchy-chaos](../../04-papers/05-omega-hierarchy-chaos/main.tex) | 491 | Diccionario de caos/omega; recurso independiente, no premisa de cierre. | `f20a9c6938f60a84` |
-| [06-why-rh-resists](../../04-papers/06-why-rh-resists/main.tex) | 335 | Clasificador de mecanismos; usar como heurística, no veto universal. | `b9662b45ae5ec64b` |
-| [07-localized-weil-detector](../../04-papers/07-localized-weil-detector/main.tex) | 522 | Detector localizado y truncación; auditar antes de reutilizar en C/D. | `f9ac5ced085f1a47` |
-| [08-weil-krein-realization](../../04-papers/08-weil-krein-realization/main.tex) | 628 | Realización de Krein; comprobar hipótesis de semiboundedness y dominios. | `3bef955560eee14e` |
-| [09-stable-arithmetic-fingerprints](../../04-papers/09-stable-arithmetic-fingerprints/main.tex) | 226 | Estabilidad de datos locales; útil para errores y controles. | `6d194087696b6924` |
-| [10-anatomy-local-invariant](../../04-papers/10-anatomy-local-invariant/main.tex) | 500 | Información aritmética recuperable; posible control de fidelidad en B/C. | `379f2d4d9502c7d1` |
-| [11-pontryagin-index-finite-defect](../../04-papers/11-pontryagin-index-finite-defect/main.tex) | 205 | Defecto finito; archivo de límites de esta estrategia. | `da93c84eda388333` |
-| [12-band-limited-weil-carleson](../../04-papers/12-band-limited-weil-carleson/main.tex) | 318 | Puente finito–global y saturación; control de cuantificadores en D. | `d74d4064491811c5` |
-| [13-heat-flow-lyapunov](../../04-papers/13-heat-flow-lyapunov/main.tex) | 247 | Flujo de calor; no importar monotonicidad como signo inicial. | `5c0da9f55c2039d4` |
-| [14-modern-routes-wrong-sign](../../04-papers/14-modern-routes-wrong-sign/main.tex) | 252 | Reformulaciones Hodge/hiperbolicidad; revisar alcance exacto. | `26c117fef0b0eacb` |
-| [15-finite-to-full-uniformity](../../04-papers/15-finite-to-full-uniformity/main.tex) | 383 | Uniformidad de torres; herramientas candidatas para límites, bajo hipótesis. | `5898b0f6da7b0ad4` |
-| [16-unconditional-finite-bottom](../../04-papers/16-unconditional-finite-bottom/main.tex) | 369 | Cotas parciales incondicionales; no sustituyen el signo de D. | `54adc4cfea9416b4` |
-| [17-lefschetz-dichotomy](../../04-papers/17-lefschetz-dichotomy/main.tex) | 482 | Obstrucción Lefschetz en clase declarada; comprobar antes del control clásico. | `de5bb79557f29e55` |
-| [18-localized-weil-krein-index](../../04-papers/18-localized-weil-krein-index/main.tex) | 794 | Índice de Krein y detectores; recurso para diagnóstico de D. | `e5c7e11fb42314b0` |
-| [19-arithmetic-defect-offline-zeros](../../04-papers/19-arithmetic-defect-offline-zeros/main.tex) | 515 | Inercia y defecto fuera de línea; conservar normalización de cuádruplos. | `f0fcd9cc8f949fe2` |
-| [20-herglotz-criterion](../../04-papers/20-herglotz-criterion/main.tex) | 267 | Criterio Herglotz; blanco alternativo, no teorema de positividad. | `1e8864ee41f45273` |
-| [21-omega-information-barrier](../../04-papers/21-omega-information-barrier/main.tex) | 530 | Barrera de información omega; no confundir estadística y signo. | `096243c5fb3d6b73` |
-| [22-moment-rigidity-criterion](../../04-papers/22-moment-rigidity-criterion/main.tex) | 753 | Rigidez de momentos; criterio alternativo sujeto a hipótesis. | `57fb968fc6e801ae` |
-| [23-ccm-jacobi-incidence-equivalence](../../04-papers/23-ccm-jacobi-incidence-equivalence/main.tex) | 471 | Incidencia/Jacobi; recurso de realización, requiere identificación correcta. | `95e65e08cffbb03d` |
-| [24-trace-measure-criterion](../../04-papers/24-trace-measure-criterion/main.tex) | 359 | Medida/traza; revisar qué afirmaciones son criterios y cuáles pruebas. | `981064569bfcc267` |
-| [25-bridge-theorem](../../04-papers/25-bridge-theorem/main.tex) | 558 | Puente entre índices; importar sólo después de revalidar dominios. | `1bd61b908ef83350` |
-| [26-weil-toeplitz-logistic-criterion](../../04-papers/26-weil-toeplitz-logistic-criterion/main.tex) | 1715 | Geometría Weil–Toeplitz; revisar sentidos de las equivalencias. | `5c77f78b97a1dcef` |
-| [27-exhaustion-1d-propagation](../../04-papers/27-exhaustion-1d-propagation/main.tex) | 544 | Propagación unidimensional; no-go con alcance limitado a sus mecanismos. | `241b63d011ae726d` |
-| [28-amplification-survivor](../../04-papers/28-amplification-survivor/main.tex) | 541 | Amplificación; archivo de rutas y sus estimaciones pendientes. | `89b18d73b4b4a304` |
-| [29-master-quantifier](../../04-papers/29-master-quantifier/main.tex) | 451 | Cuantificadores promedio/uniforme; control permanente del cierre. | `b8585cfb13c8709f` |
-| [30-two-lemma-architecture](../../04-papers/30-two-lemma-architecture/main.tex) | 438 | Finitud más rigidez; alternativa, no dependencia obligatoria A–D. | `02085b96bfd65d86` |
-| [31-curvature-lp-synthesis](../../04-papers/31-curvature-lp-synthesis/main.tex) | 570 | Curvatura/LP; otras coordenadas del signo. | `ab747ebbca01fee5` |
-| [32-stepanov-band](../../04-papers/32-stepanov-band/main.tex) | 527 | Resultado Stepanov; no extender a la versión en una sola recta sin prueba. | `f601e6a54d634fc0` |
-| [33-energy-decomposition](../../04-papers/33-energy-decomposition/main.tex) | 1077 | Energía fuera de línea; alternativa parcial, no puente construido a A. | `c3ba9e2189751b73` |
-| [34-architecture-of-obstruction](../../04-papers/34-architecture-of-obstruction/main.tex) | 1476 | Mapa histórico de obstrucciones; contrastar con correcciones posteriores. | `7ccb775a7ecf59df` |
-| [35-colligation-route](../../04-papers/35-colligation-route/main.tex) | 527 | Coligación y Doob; distinguir curvatura local y constante global. | `886bc32b19b3dab7` |
-| [36-obstruction-ledger](../../04-papers/36-obstruction-ledger/main.tex) | 11996 | Li–Keiper/Pick; reserva de prueba firmada y registro de obstrucciones. | `5bd49289e2ec42ac` |
-| [37-death-of-the-positivity-family](../../04-papers/37-death-of-the-positivity-family/main.tex) | 3812 | Falsadores de transferencias positivas; conservar corrección del cutoff. | `a6ae79080e4a8854` |
-| [38-li-fir-stability](../../04-papers/38-li-fir-stability/main.tex) | 1131 | Filtros FIR y Li; blanco alternativo, no resolverlo además de D obligatoriamente. | `f3934f5dcf8a33f8` |
-| [39-cofinal-weil-summability](../../04-papers/39-cofinal-weil-summability/main.tex) | 3156 | Sumabilidad y defectos de transporte; posible infraestructura C/D. | `f7263cafdce1310e` |
-| [40-connes-proof-skeleton](../../04-papers/40-connes-proof-skeleton/main.tex) | 3674 | Fuentes primo–Gamma e inercia; reutilizar identidades verificadas. | `bddf2b4e6861eed4` |
-| [41-obstruction-catalogue](../../04-papers/41-obstruction-catalogue/main.tex) | 1490 | Catálogo de 31 mecanismos; clasificar no-go, falsador y contramodelo. | `cf15e600e3affc9d` |
-| [42-arithmetic-lefschetz-programme](../../04-papers/42-arithmetic-lefschetz-programme/main.tex) | 7270 | Programa A/B/C/D principal; contrato restringido sujeto a P122 y P123.018. | `c12c1584e68245f1` |
+| [01-critical-line-survey](../../04-papers/01-critical-line-survey/main.tex) | 1245 | Historical bibliographic map; verify dates and sources before reuse. | `b94222f7f1c3b81d` |
+| [02-omega-class-decomposition](../../04-papers/02-omega-class-decomposition/main.tex) | 1073 | Omega decomposition; side resource, no automatic bridge to D. | `bdf6445d69f012f2` |
+| [03-sign-interclass-interference](../../04-papers/03-sign-interclass-interference/main.tex) | 351 | Sign correction in interference; control discipline. | `5531de3b7822f524` |
+| [04-davenport-heilbronn-null](../../04-papers/04-davenport-heilbronn-null/main.tex) | 1198 | Davenport–Heilbronn control and finite observation limits. | `0af3a3ad82321c33` |
+| [05-omega-hierarchy-chaos](../../04-papers/05-omega-hierarchy-chaos/main.tex) | 491 | Chaos/omega dictionary; independent resource, not a closure premise. | `f20a9c6938f60a84` |
+| [06-why-rh-resists](../../04-papers/06-why-rh-resists/main.tex) | 335 | Mechanism classifier; use as heuristic, not a universal veto. | `b9662b45ae5ec64b` |
+| [07-localized-weil-detector](../../04-papers/07-localized-weil-detector/main.tex) | 522 | Localized detector and truncation; audit before reuse in C/D. | `f9ac5ced085f1a47` |
+| [08-weil-krein-realization](../../04-papers/08-weil-krein-realization/main.tex) | 628 | Krein realization; check semiboundedness hypotheses and domains. | `3bef955560eee14e` |
+| [09-stable-arithmetic-fingerprints](../../04-papers/09-stable-arithmetic-fingerprints/main.tex) | 226 | Stability of local data; useful for errors and controls. | `6d194087696b6924` |
+| [10-anatomy-local-invariant](../../04-papers/10-anatomy-local-invariant/main.tex) | 500 | Recoverable arithmetic information; possible fidelity control in B/C. | `379f2d4d9502c7d1` |
+| [11-pontryagin-index-finite-defect](../../04-papers/11-pontryagin-index-finite-defect/main.tex) | 205 | Finite defect; archive of limits of this strategy. | `da93c84eda388333` |
+| [12-band-limited-weil-carleson](../../04-papers/12-band-limited-weil-carleson/main.tex) | 318 | Finite–global bridge and saturation; quantifier control in D. | `d74d4064491811c5` |
+| [13-heat-flow-lyapunov](../../04-papers/13-heat-flow-lyapunov/main.tex) | 247 | Heat flow; do not import monotonicity as an initial sign. | `5c0da9f55c2039d4` |
+| [14-modern-routes-wrong-sign](../../04-papers/14-modern-routes-wrong-sign/main.tex) | 252 | Hodge/hyperbolicity reformulations; review exact scope. | `26c117fef0b0eacb` |
+| [15-finite-to-full-uniformity](../../04-papers/15-finite-to-full-uniformity/main.tex) | 383 | Tower uniformity; candidate tools for limits, under hypotheses. | `5898b0f6da7b0ad4` |
+| [16-unconditional-finite-bottom](../../04-papers/16-unconditional-finite-bottom/main.tex) | 369 | Unconditional partial bounds; do not replace the sign of D. | `54adc4cfea9416b4` |
+| [17-lefschetz-dichotomy](../../04-papers/17-lefschetz-dichotomy/main.tex) | 482 | Lefschetz obstruction in the declared class; check before the classical control. | `de5bb79557f29e55` |
+| [18-localized-weil-krein-index](../../04-papers/18-localized-weil-krein-index/main.tex) | 794 | Krein index and detectors; resource for D diagnosis. | `e5c7e11fb42314b0` |
+| [19-arithmetic-defect-offline-zeros](../../04-papers/19-arithmetic-defect-offline-zeros/main.tex) | 515 | Inertia and off-line defect; keep quadruple normalization. | `f0fcd9cc8f949fe2` |
+| [20-herglotz-criterion](../../04-papers/20-herglotz-criterion/main.tex) | 267 | Herglotz criterion; alternative target, not a positivity theorem. | `1e8864ee41f45273` |
+| [21-omega-information-barrier](../../04-papers/21-omega-information-barrier/main.tex) | 530 | Omega information barrier; do not confuse statistics and sign. | `096243c5fb3d6b73` |
+| [22-moment-rigidity-criterion](../../04-papers/22-moment-rigidity-criterion/main.tex) | 753 | Moment rigidity; alternative criterion subject to hypotheses. | `57fb968fc6e801ae` |
+| [23-ccm-jacobi-incidence-equivalence](../../04-papers/23-ccm-jacobi-incidence-equivalence/main.tex) | 471 | Incidence/Jacobi; realization resource, requires correct identification. | `95e65e08cffbb03d` |
+| [24-trace-measure-criterion](../../04-papers/24-trace-measure-criterion/main.tex) | 359 | Measure/trace; review which statements are criteria and which are proofs. | `981064569bfcc267` |
+| [25-bridge-theorem](../../04-papers/25-bridge-theorem/main.tex) | 558 | Bridge between indices; import only after revalidating domains. | `1bd61b908ef83350` |
+| [26-weil-toeplitz-logistic-criterion](../../04-papers/26-weil-toeplitz-logistic-criterion/main.tex) | 1715 | Weil–Toeplitz geometry; review the directions of the equivalences. | `5c77f78b97a1dcef` |
+| [27-exhaustion-1d-propagation](../../04-papers/27-exhaustion-1d-propagation/main.tex) | 544 | One-dimensional propagation; no-go limited in scope to its mechanisms. | `241b63d011ae726d` |
+| [28-amplification-survivor](../../04-papers/28-amplification-survivor/main.tex) | 541 | Amplification; archive of routes and their pending estimates. | `89b18d73b4b4a304` |
+| [29-master-quantifier](../../04-papers/29-master-quantifier/main.tex) | 451 | Average/uniform quantifiers; permanent closure control. | `b8585cfb13c8709f` |
+| [30-two-lemma-architecture](../../04-papers/30-two-lemma-architecture/main.tex) | 438 | Finiteness plus rigidity; alternative, not a mandatory A–D dependency. | `02085b96bfd65d86` |
+| [31-curvature-lp-synthesis](../../04-papers/31-curvature-lp-synthesis/main.tex) | 570 | Curvature/LP; other coordinates of the sign. | `ab747ebbca01fee5` |
+| [32-stepanov-band](../../04-papers/32-stepanov-band/main.tex) | 527 | Stepanov result; do not extend to the single-line version without proof. | `f601e6a54d634fc0` |
+| [33-energy-decomposition](../../04-papers/33-energy-decomposition/main.tex) | 1077 | Off-line energy; partial alternative, no bridge built to A. | `c3ba9e2189751b73` |
+| [34-architecture-of-obstruction](../../04-papers/34-architecture-of-obstruction/main.tex) | 1476 | Historical map of obstructions; contrast with later corrections. | `7ccb775a7ecf59df` |
+| [35-colligation-route](../../04-papers/35-colligation-route/main.tex) | 527 | Colligation and Doob; distinguish local curvature from global constant. | `886bc32b19b3dab7` |
+| [36-obstruction-ledger](../../04-papers/36-obstruction-ledger/main.tex) | 11996 | Li–Keiper/Pick; signed proof reserve and obstruction ledger. | `5bd49289e2ec42ac` |
+| [37-death-of-the-positivity-family](../../04-papers/37-death-of-the-positivity-family/main.tex) | 3812 | Falsifiers of positive transfers; keep the cutoff correction. | `a6ae79080e4a8854` |
+| [38-li-fir-stability](../../04-papers/38-li-fir-stability/main.tex) | 1131 | FIR filters and Li; alternative target, not mandatory in addition to D. | `f3934f5dcf8a33f8` |
+| [39-cofinal-weil-summability](../../04-papers/39-cofinal-weil-summability/main.tex) | 3156 | Summability and transport defects; possible C/D infrastructure. | `f7263cafdce1310e` |
+| [40-connes-proof-skeleton](../../04-papers/40-connes-proof-skeleton/main.tex) | 3674 | Prime–Gamma and inertia sources; reuse verified identities. | `bddf2b4e6861eed4` |
+| [41-obstruction-catalogue](../../04-papers/41-obstruction-catalogue/main.tex) | 1490 | Catalogue of 31 mechanisms; classify no-go, falsifier and counter-model. | `cf15e600e3affc9d` |
+| [42-arithmetic-lefschetz-programme](../../04-papers/42-arithmetic-lefschetz-programme/main.tex) | 7270 | Main A/B/C/D programme; restricted contract subject to P122 and P123.018. | `c12c1584e68245f1` |
 
-## Inventario completo de fases
+## Complete phase inventory
 
-Cada fila acredita presencia y recuento. El enlace lleva al directorio; la clasificación estratégica por intervalos está arriba. No se promueve la etiqueta histórica `closure` a teorema revisado.
+Each row records presence and count. The link leads to the directory; the strategic classification by range is above. The historical label `closure` is not promoted to a reviewed theorem here.
 
-| Fase | Archivos de texto | Archivos totales |
+| Phase | Text files | Total files |
 |---|---:|---:|
 | [phase-0-foundations](../../03-research/phase-0-foundations/) | 5 | 5 |
 | [phase-3-uniform-inequality](../../03-research/phase-3-uniform-inequality/) | 2 | 2 |
 | [phase-4-handoff](../../03-research/phase-4-handoff/) | 30 | 32 |
 | [phase-5-structural](../../03-research/phase-5-structural/) | 10 | 16 |
-| [phase-6](../../03-research/phase-6/) | 4 | 4 |
-| [phase-7](../../03-research/phase-7/) | 3 | 7 |
-| [phase-8](../../03-research/phase-8/) | 5 | 9 |
-| [phase-9](../../03-research/phase-9/) | 4 | 7 |
-| [phase-10](../../03-research/phase-10/) | 7 | 13 |
-| [phase-11](../../03-research/phase-11/) | 4 | 8 |
-| [phase-12](../../03-research/phase-12/) | 6 | 13 |
-| [phase-13](../../03-research/phase-13/) | 1 | 4 |
-| [phase-14](../../03-research/phase-14/) | 9 | 17 |
-| [phase-15](../../03-research/phase-15/) | 17 | 33 |
-| [phase-16](../../03-research/phase-16/) | 10 | 26 |
-| [phase-17](../../03-research/phase-17/) | 5 | 9 |
-| [phase-18](../../03-research/phase-18/) | 2 | 4 |
-| [phase-19](../../03-research/phase-19/) | 6 | 11 |
-| [phase-20](../../03-research/phase-20/) | 4 | 5 |
-| [phase-21](../../03-research/phase-21/) | 3 | 3 |
-| [phase-22](../../03-research/phase-22/) | 4 | 4 |
-| [phase-23](../../03-research/phase-23/) | 4 | 4 |
-| [phase-24](../../03-research/phase-24/) | 4 | 4 |
-| [phase-25](../../03-research/phase-25/) | 5 | 5 |
-| [phase-26](../../03-research/phase-26/) | 2 | 2 |
-| [phase-27](../../03-research/phase-27/) | 4 | 4 |
-| [phase-28](../../03-research/phase-28/) | 9 | 9 |
-| [phase-29](../../03-research/phase-29/) | 55 | 55 |
-| [phase-30](../../03-research/phase-30/) | 3 | 3 |
-| [phase-31](../../03-research/phase-31/) | 1 | 1 |
+| [phase-6-osterwalder-schrader-reflection](../../03-research/phase-6-osterwalder-schrader-reflection/) | 4 | 4 |
+| [phase-7-weil-carleson-sine-kernel](../../03-research/phase-7-weil-carleson-sine-kernel/) | 3 | 7 |
+| [phase-8-heat-flow-monotonicity](../../03-research/phase-8-heat-flow-monotonicity/) | 5 | 9 |
+| [phase-9-unconditional-universality](../../03-research/phase-9-unconditional-universality/) | 4 | 7 |
+| [phase-10-hodge-envelope-degeneration](../../03-research/phase-10-hodge-envelope-degeneration/) | 7 | 13 |
+| [phase-11-hyperbolicity-total-positivity](../../03-research/phase-11-hyperbolicity-total-positivity/) | 4 | 8 |
+| [phase-12-meta-obstruction-moment-problem](../../03-research/phase-12-meta-obstruction-moment-problem/) | 6 | 13 |
+| [phase-13-omega-class-multiplicative-chaos](../../03-research/phase-13-omega-class-multiplicative-chaos/) | 1 | 4 |
+| [phase-14-off-diagonal-anchor-asymmetry](../../03-research/phase-14-off-diagonal-anchor-asymmetry/) | 9 | 17 |
+| [phase-15-arithmetic-hodge-index](../../03-research/phase-15-arithmetic-hodge-index/) | 17 | 33 |
+| [phase-16-surf-witness-variety](../../03-research/phase-16-surf-witness-variety/) | 10 | 26 |
+| [phase-17-surf-2-design](../../03-research/phase-17-surf-2-design/) | 5 | 9 |
+| [phase-18-negative-directions-portrait](../../03-research/phase-18-negative-directions-portrait/) | 2 | 4 |
+| [phase-19-omega-rate-freezing](../../03-research/phase-19-omega-rate-freezing/) | 6 | 11 |
+| [phase-20-zero-omega-bridge](../../03-research/phase-20-zero-omega-bridge/) | 4 | 5 |
+| [phase-21-negative-directions-geometry](../../03-research/phase-21-negative-directions-geometry/) | 3 | 3 |
+| [phase-22-pontryagin-finite-defect](../../03-research/phase-22-pontryagin-finite-defect/) | 4 | 4 |
+| [phase-23-two-scale-defect-structure](../../03-research/phase-23-two-scale-defect-structure/) | 4 | 4 |
+| [phase-24-lower-bounds-bj](../../03-research/phase-24-lower-bounds-bj/) | 4 | 4 |
+| [phase-25-lower-bounds-bj-audit](../../03-research/phase-25-lower-bounds-bj-audit/) | 5 | 5 |
+| [phase-26-krein-connes-bridge](../../03-research/phase-26-krein-connes-bridge/) | 2 | 2 |
+| [phase-27-adelic-rigidity](../../03-research/phase-27-adelic-rigidity/) | 4 | 4 |
+| [phase-28-four-fronts](../../03-research/phase-28-four-fronts/) | 9 | 9 |
+| [phase-29-zeta-spectral-triples](../../03-research/phase-29-zeta-spectral-triples/) | 55 | 55 |
+| [phase-30-langlands-bridge-c-infinity](../../03-research/phase-30-langlands-bridge-c-infinity/) | 3 | 3 |
+| [phase-31-selberg-moments-c-infinity](../../03-research/phase-31-selberg-moments-c-infinity/) | 1 | 1 |
 | [phase-32-ccm](../../03-research/phase-32-ccm/) | 11 | 11 |
 | [phase-33-dbn](../../03-research/phase-33-dbn/) | 20 | 20 |
 | [phase-34-new-directions](../../03-research/phase-34-new-directions/) | 8 | 8 |
@@ -207,23 +207,23 @@ Cada fila acredita presencia y recuento. El enlace lleva al directorio; la clasi
 | [phase-122-row-d-integrity-and-construction](../../03-research/phase-122-row-d-integrity-and-construction/) | 35 | 37 |
 | [phase-123-weil-strength-abc](../../03-research/phase-123-weil-strength-abc/) | 21 | 33 |
 
-## Discrepancias materiales detectadas
+## Material discrepancies detected
 
-1. Los índices raíz todavía describen principalmente el estado hasta fase 119; el presente inventario llega a 123.
-2. El dossier RH-MASTER-CONTEXT conserva un inventario histórico hasta fase 101. Se usa como auditoría de ese corte, no como censo actual.
-3. El traspaso proponía realizar el modelo finito de dos primos, pero P122.028 ya contiene su cálculo y resultado negativo para la inferencia harmonicidad → flujo cero.
-4. `OPTIONS.md` desaconseja trabajar en Weil por ser equivalente a RH; el reinicio histórico corrige expresamente ese veto. Se adopta la corrección lógica.
-5. P123.018 invalida dos mapas explícitos y reabre otras obligaciones: prevalece sobre las etiquetas anteriores de aceptación global.
-6. El control clásico P123.011 requiere revisión del puente de categorías y de la relación entre cuadrados y ciclos efectivos; no se certifica nuevamente aquí.
+1. The root indices still mainly describe the state up to phase 119; the present inventory reaches 123.
+2. The RH-MASTER-CONTEXT dossier keeps a historical inventory up to phase 101. It is used as an audit of that cut, not as the current census.
+3. The handoff proposed carrying out the finite two-prime model, but P122.028 already contains its computation and a negative result for the harmonicity → zero-flow inference.
+4. `OPTIONS.md` advises against working on Weil because it is equivalent to RH; the historical reset expressly corrects that veto. The logical correction is adopted.
+5. P123.018 invalidates two explicit maps and reopens other obligations: it prevails over the earlier labels of global acceptance.
+6. The classical control P123.011 requires review of the category bridge and of the relation between squares and effective cycles; it is not certified again here.
 
-## Fuentes externas contrastadas para orientar el plan
+## External sources consulted to guide the plan
 
-- [Connes–Consani, Knots, primes and class field theory](https://arxiv.org/html/2501.06560v1), §5: haz algebraico y mapas de coeficientes. Se contrastaron los enunciados relevantes; no se auditó toda la demostración.
-- [Deninger, Rational Witt vectors and associated sheaves](https://arxiv.org/html/2508.05329v1), Teorema 5.1 y Proposición 5.2: punto de entrada a ciclos finitos, con sus hipótesis. No es un puente ya construido hacia Corr_A.
-- [Meyer, A spectral interpretation for the zeros of the Riemann zeta function](https://arxiv.org/abs/math/0412277v3): título y versión corregidos. La atribución más amplia del documento de traspaso no es el título de este identificador.
-- [Connes–Consani, On the Jacobian of Spec Z compactificado](https://arxiv.org/abs/2602.15941): ficha y abstract contrastados; recurso geométrico, sin importar un Hodge mixto.
-- [Grubb, teoría de mu-transmisión](https://arxiv.org/abs/1310.0951): referencia contrastada; su aplicabilidad a los saltos concretos se rige por P122.029.
+- [Connes–Consani, Knots, primes and class field theory](https://arxiv.org/html/2501.06560v1), §5: algebraic sheaf and coefficient maps. The relevant statements were contrasted; not the whole proof was audited.
+- [Deninger, Rational Witt vectors and associated sheaves](https://arxiv.org/html/2508.05329v1), Theorem 5.1 and Proposition 5.2: entry point to finite cycles, with its hypotheses. Not a bridge already built towards Corr_A.
+- [Meyer, A spectral interpretation for the zeros of the Riemann zeta function](https://arxiv.org/abs/math/0412277v3): title and version corrected. The broader attribution of the handoff document is not the title of this identifier.
+- [Connes–Consani, On the Jacobian of Spec Z compactified](https://arxiv.org/abs/2602.15941): entry and abstract contrasted; geometric resource, without importing a mixed Hodge structure.
+- [Grubb, mu-transmission theory](https://arxiv.org/abs/1310.0951): source contrasted; its applicability to the concrete jumps is governed by P122.029.
 
-## Qué queda por auditar al ejecutar
+## What remains to be audited upon execution
 
-El cierre de dependencias de cada lema elegido, los teoremas externos completos y su mapa de hipótesis, los funtores no construidos, las estimaciones globales y los certificados realmente utilizados. No hace falta volver a demostrar resultados que se importen correctamente, pero sí comprobar que dicen lo que la prueba necesita.
+The dependency closure of each chosen lemma, the full external theorems and their hypothesis map, the unconstructed functors, the global estimates, and the certificates actually used. There is no need to re-prove results that are imported correctly, but it must be checked that they say what the proof needs.

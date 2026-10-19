@@ -13,7 +13,7 @@ The fixed mesh has
 After subtracting the worst residual, the midpoint parity minima are
 
 \[
- \lambda_e(0.4)=0.1128900\ldots,qquad
+ \lambda_e(0.4)=0.1128900\ldots,\qquad
  \lambda_o(0.4)=0.1059453\ldots.
 \]
 
@@ -21,7 +21,7 @@ Both endpoint diagnostics remain positive.  Nevertheless the leaf cannot
 be certified by midpoint plus Frobenius variation:
 
 \[
- \|R(.395)-R(.4)\|_F=0.54036\ldots,qquad
+ \|R(.395)-R(.4)\|_F=0.54036\ldots,\qquad
  \|R(.405)-R(.4)\|_F=0.52490\ldots.
 \]
 

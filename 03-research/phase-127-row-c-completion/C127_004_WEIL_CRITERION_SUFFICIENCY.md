@@ -1,6 +1,6 @@
 # C127.004 — closing the exhaustion gap to Weil's criterion
 
-Date: 2026-09-12.  Status: `PROVED`.  Full statement: Paper 45 §10, Thm. 10.4.
+Status: `PROVED`. Full statement: Paper 45 §10, Thm. 10.4.
 
 ## The gap
 

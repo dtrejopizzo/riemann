@@ -1,6 +1,6 @@
 # P123.062 — Local operator conjugacy along the integral deformation
 
-Date: 2026-09-05. Status: PROVED for the compact p-adic neighborhood,
+Status: PROVED for the compact p-adic neighborhood,
 arithmetic dilation semigroup and finite-rank traces specified below.
 This is not a global deformation-invariance theorem for the Weil shadow.
 

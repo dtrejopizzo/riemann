@@ -1,6 +1,5 @@
 # E73.146 Results - Signed Tail Forcing Probe
 
-Date: 2026-07-12.
 
 Script:
 

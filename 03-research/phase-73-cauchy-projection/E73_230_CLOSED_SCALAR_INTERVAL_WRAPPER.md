@@ -1,6 +1,5 @@
 # E73.230 - Closed scalar interval wrapper
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

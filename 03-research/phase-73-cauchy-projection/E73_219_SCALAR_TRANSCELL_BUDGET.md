@@ -1,6 +1,5 @@
 # E73.219 - Scalar TRANS-CELL radius budget
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

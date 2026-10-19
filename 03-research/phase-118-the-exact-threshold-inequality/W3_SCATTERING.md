@@ -1,6 +1,6 @@
 # W3 — the scattering question: is there an explicit contraction `Phi` with `Y_T = Phi X_T`?
 
-Workstream W3, phase 118. Written 2026-08-17. All numbers below are **measured**
+Workstream W3, phase 118. Written . All numbers below are **measured**
 by the scripts named at each step, all living in `scripts/`, none of which
 modifies `rowd_assembly.py` or `rowd_threshold.py`. Distinguishes measured /
 derived / conjectured throughout, per SPEC Rules.
@@ -143,14 +143,14 @@ The Gamma column *is* individually the largest single entry in every row at
 every threshold tested (e.g. `const` row at `q=37`: `Gamma=0.404` vs the next
 largest `ant_5=0.180`, more than 2x) — so in a "which single place matters
 most" sense the archimedean channel is special, consistent with the
-intuition in the prompt. But **as an operator norm restricted to just that
+intuition in the brief. But **as an operator norm restricted to just that
 column, `||Phi[:,Gamma]||` *decreases* with `q` (0.845 → 0.774 → 0.682) while
 `||Phi[:,finite]||` increases (0.631 → 0.745 → 0.836) toward the full
 `||Phi||`**: collectively, the growing family of finite contacts can
 almost by itself reach nearly the same norm as the whole operator, while the
 archimedean channel alone falls further behind. **Measured, only 3
 thresholds — reported as a clear trend, not asserted as an asymptotic law.**
-The elementary obstruction noted in the prompt (`Phi` cannot be
+The elementary obstruction noted in the brief (`Phi` cannot be
 block-diagonal over places) is consistent with this: it is not that the
 archimedean channel pays for everything, it is that *no single channel* can,
 and the finite channels' collective share grows with `T`.
@@ -263,7 +263,7 @@ failed:
 - *Toeplitz-in-`log n`, Hankel-in-`log n`* for the finite-finite block of
   `Phi` itself (§3): `R^2 <= 0.16` throughout — already dead, so any `Psi`
   built from those forms is dead too.
-- *Block-diagonal-over-places* `Psi`: explicitly excluded by the prompt's own
+- *Block-diagonal-over-places* `Psi`: explicitly excluded by the brief's own
   elementary obstruction (would force `Re<S_nF,F> <= -Re<S_nF,F>`, false),
   confirmed consistent with §3's finding that no single channel carries the
   whole defect.

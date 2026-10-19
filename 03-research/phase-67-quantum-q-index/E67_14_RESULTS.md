@@ -1,6 +1,5 @@
 # E67.14 -- the forcer precondition (FIRST positive result of the quantum arc)
 
-**Date:** 2026-07-06.
 **Script:** [E67_14_negligible_forcer.py](E67_14_negligible_forcer.py).
 
 ## Mechanism under test

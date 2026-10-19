@@ -1,6 +1,6 @@
 # P123.123 — Semilocal unit obstruction and equivariant crossed composition
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY for the actual common
+Status: PROVED-IN-REPOSITORY for the actual common
 source inclusions and the tempered equivariant domains specified below.
 This repairs transport through the added lattice on that domain. It does
 not assert that every old correspondence already has the needed lift.

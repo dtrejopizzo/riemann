@@ -1,6 +1,5 @@
 # E73.173 - Eigenline Cauchy-transform audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

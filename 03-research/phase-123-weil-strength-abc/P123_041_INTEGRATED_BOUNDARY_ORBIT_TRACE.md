@@ -1,6 +1,6 @@
 # P123.041 — integrated boundary-orbit representation and its trace
 
-Date: 2026-09-05. Status: CONSTRUCTED and PROVED for the compact
+Status: CONSTRUCTED and PROVED for the compact
 single-zero boundary orbit. This resolves its tangential trace after
 integration against scalar tests. The normal coefficient complex,
 higher strata and the common global shadow remain OPEN.

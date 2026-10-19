@@ -1,6 +1,6 @@
 # P123.058 — Exact comparison of relative source integration and local Fourier trace
 
-Date: 2026-09-05. Status: PROVED for the local functional comparison and
+Status: PROVED for the local functional comparison and
 its operator relative-trace value. This is not a convolution-preserving
 source realization of the displacement operation.
 

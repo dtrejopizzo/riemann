@@ -1,7 +1,6 @@
 # E72.91 -- Low-band cofactor identity
 
-**Date:** 2026-07-09.
-**Role:** factor finite-band root transport through a single transported cofactor vector.
+**Purpose:** factor finite-band root transport through a single transported cofactor vector.
 
 ## 0. Transport vector
 

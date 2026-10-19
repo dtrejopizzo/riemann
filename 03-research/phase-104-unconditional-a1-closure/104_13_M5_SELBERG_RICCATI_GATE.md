@@ -1,35 +1,35 @@
-# 104_13 — M5 Selberg–Riccati: recurrencia exacta y barrera de escala
+# 104_13 — M5 Selberg–Riccati: exact recurrence and scale barrier
 
-**Estado.** La identidad positiva de Selberg
+**Status.** Selberg's positive identity
 
 \[
  b=\Lambda\log+\Lambda*\Lambda=\mu*\log ^2\geq0
 \]
 
-sí induce una recurrencia exacta en el grado Laguerre para el correlador
-regulado de `104_12`. Sin embargo, no induce una desigualdad unilateral. Al
-separar el doble polo, el coeficiente de Selberg centrado cancela un término
-de la recurrencia de tamaño \(\varepsilon^{-n-1}\). La estimación sumatoria
-clásica \(O(x)\) controla ambas piezas solamente a esa misma escala; con
-\(\varepsilon=1/n\), su norma dual es al menos
-\(n(n-1)^n-1\), frente al presupuesto \(O(\log n)\).
+does induce an exact recurrence in the Laguerre degree for the regulated
+correlator of `104_12`. However, it induces no one-sided inequality. When the
+double pole is separated, the centered Selberg coefficient cancels a term of the
+recurrence of size \(\varepsilon^{-n-1}\). The classical summatory estimate
+\(O(x)\) controls both pieces only at that same scale; with
+\(\varepsilon=1/n\), its dual norm is at least
+\(n(n-1)^n-1\), against the budget \(O(\log n)\).
 
-Por tanto, **la positividad de \(b\), su fórmula sumatoria efectiva y la
-identidad de Riccati no producen la nueva cota incondicional**. Una estimación
-del residuo acoplado que sí fuera suficiente volvería a contener explícitamente
-el correlador \(C_{n,\varepsilon}\). Este documento es un stop-gate del uso
-autónomo de Selberg–Riccati; no descarta un teorema aritmético nuevo sobre los
-pesos reales de von Mangoldt y no prueba A1 ni RH.
+Hence, **the positivity of \(b\), its effective summatory formula, and the
+Riccati identity do not produce the new unconditional bound**. A coupled-residue
+estimate that actually sufficed would again explicitly contain the correlator
+\(C_{n,\varepsilon}\). This document is a stop-gate on the autonomous use of
+Selberg–Riccati; it does not rule out a new arithmetic theorem on the real von
+Mangoldt weights, and it proves neither A1 nor RH.
 
-## 1. Notación regulada
+## 1. Regulated notation
 
-Fíjese
+Fix
 
 \[
  a=1+\varepsilon>1,\qquad t={z\over1-z},\qquad s=a+t,
 \]
 
-y póngase
+and set
 
 \[
  \ell(s)=-{\zeta'(s)\over\zeta(s)}
@@ -37,7 +37,7 @@ y póngase
 \tag{1}
 \]
 
-Definimos
+We define
 
 \[
  p_n=\sum_{m\ge2}{\Lambda(m)\over m^a}L_n(\log m),
@@ -52,8 +52,8 @@ Definimos
 \tag{3}
 \]
 
-Así, \(c_n=C_{n,\varepsilon}\) en la normalización de `104_11`–`104_12`.
-Sus generatrices son
+So \(c_n=C_{n,\varepsilon}\) in the `104_11`–`104_12` normalization.
+Its generating functions are
 
 \[
  P(z)=\sum_{n\ge0}p_nz^n={1\over1-z}\ell(a+t),
@@ -63,7 +63,7 @@ Sus generatrices son
 \tag{4}
 \]
 
-La identidad de Selberg es
+Selberg's identity is
 
 \[
  {\zeta''\over\zeta}(s)=-\ell'(s)+\ell(s)^2
@@ -73,7 +73,7 @@ La identidad de Selberg es
 \tag{5}
 \]
 
-La última igualdad también es \(b=\mu*\log^2\). En particular,
+The last equality is also \(b=\mu*\log^2\). In particular,
 
 \[
  b(p^k)=(2k-1)(\log p)^2,
@@ -82,9 +82,9 @@ La última igualdad también es \(b=\mu*\log^2\). En particular,
 \tag{6}
 \]
 
-y \(b(m)=0\) si \(m\) tiene al menos tres divisores primos distintos.
+and \(b(m)=0\) if \(m\) has at least three distinct prime divisors.
 
-Sean
+Let
 
 \[
  \beta_n=\sum_{m\ge1}{b(m)\over m^a}L_n(\log m),
@@ -94,7 +94,7 @@ Sean
 \tag{7}
 \]
 
-El doble polo de (7) tiene generatriz
+The double pole of (7) has generating function
 
 \[
  Q(z)={2\over(1-z)(\varepsilon+t)^2}
@@ -103,7 +103,7 @@ El doble polo de (7) tiene generatriz
 \tag{8}
 \]
 
-Escribimos
+We write
 
 \[
  d_n=\beta_n-q_n,
@@ -111,17 +111,17 @@ Escribimos
 \tag{9}
 \]
 
-## 2. Recurrencia exacta en el grado
+## 2. Exact recurrence in the degree
 
-Para dos sucesiones \(x,y\), denote
+For two sequences \(x,y\), denote
 
 \[
  (x*y)_n=\sum_{k=0}^nx_ky_{n-k},
  \qquad x_{-1}=0.
 \]
 
-**Teorema 1 (recurrencia Selberg–Riccati).** Para todo
-\(n\ge0\) y \(\varepsilon>0\),
+**Theorem 1 (Selberg–Riccati recurrence).** For every
+\(n\ge0\) and \(\varepsilon>0\),
 
 \[
 \boxed{
@@ -133,7 +133,7 @@ Para dos sucesiones \(x,y\), denote
 \tag{10}
 \]
 
-En particular,
+In particular,
 
 \[
 \boxed{
@@ -145,8 +145,8 @@ En particular,
 \tag{11}
 \]
 
-**Prueba.** De (4), \(\ell=(1-z)P\), mientras
-\(ds/dz=(1-z)^{-2}\). Por tanto
+**Proof.** From (4), \(\ell=(1-z)P\), while
+\(ds/dz=(1-z)^{-2}\). Hence
 
 \[
  {1\over1-z}\{-\ell'(s)+\ell(s)^2\}
@@ -154,14 +154,14 @@ En particular,
 \tag{12}
 \]
 
-La misma identidad con \(P\) reemplazado por \(J\) da exactamente \(Q\),
-porque para \(r=s-1\)
+The same identity with \(P\) replaced by \(J\) gives exactly \(Q\),
+because for \(r=s-1\)
 
 \[
  -\left({1\over r}\right)'+{1\over r^2}={2\over r^2}.
 \]
 
-Restando ambas identidades y usando \(P=J+C\),
+Subtracting both identities and using \(P=J+C\),
 
 \[
  D=(1-z)C-(1-z)^2C'
@@ -169,29 +169,29 @@ Restando ambas identidades y usando \(P=J+C\),
 \tag{13}
 \]
 
-Extraer \([z^n]\) en (13) prueba (10), y despejar \(c_{n+1}\) prueba
-(11). \(\square\)
+Extracting \([z^n]\) in (13) proves (10), and solving for \(c_{n+1}\)
+proves (11). \(\square\)
 
-La recurrencia es triangular, pero no es una inducción con signo: el nuevo
-input \(d_n\) es un coeficiente Laguerre firmado de la medida de Selberg.
+The recurrence is triangular, but it is not a signed induction: the new
+input \(d_n\) is a signed Laguerre coefficient of the Selberg measure.
 
-## 3. La colisión del polo ocurre dentro de la recurrencia
+## 3. The pole collision occurs inside the recurrence
 
-Póngase
+Set
 
 \[
  h(s)=\ell(s)-{1\over s-1}.
 \tag{14}
 \]
 
-La función \(h\) es analítica en \(s=1\) y
+The function \(h\) is analytic at \(s=1\) and
 
 \[
  h(1)=-\gamma.
 \tag{15}
 \]
 
-La identidad centrada detrás de (13) es
+The centered identity behind (13) is
 
 \[
  {\zeta''\over\zeta}(s)-{2\over(s-1)^2}
@@ -199,13 +199,13 @@ La identidad centrada detrás de (13) es
 \tag{16}
 \]
 
-Como
+Since
 
 \[
- {2h(s)\over s-1}=-{2\gamma\over s-1}+\text{función analítica en }s=1,
+ {2h(s)\over s-1}=-{2\gamma\over s-1}+\text{a function analytic at }s=1,
 \]
 
-para cada \(n\) fijo se tiene
+for each fixed \(n\) one has
 
 \[
  \boxed{d_n=-2\gamma j_n+O_n(1)
@@ -213,7 +213,7 @@ para cada \(n\) fijo se tiene
 \tag{17}
 \]
 
-Por otra parte, \(c_0=h(1+\varepsilon)=-\gamma+O(\varepsilon)\), y entonces
+On the other hand, \(c_0=h(1+\varepsilon)=-\gamma+O(\varepsilon)\), and so
 
 \[
  2\{(j*c)_n-(j*c)_{n-1}\}
@@ -221,13 +221,13 @@ Por otra parte, \(c_0=h(1+\varepsilon)=-\gamma+O(\varepsilon)\), y entonces
 \tag{18}
 \]
 
-Las dos cantidades principales de (17)–(18), cada una de orden
-\(\varepsilon^{-n-1}\), se cancelan en (10). Los órdenes inferiores también
-se cancelan exactamente porque el miembro restante de (10) tiene límite
-finito. Estimar \(d_n\) y \((j*c)_n\) por separado destruye la
-renormalización polo–primos que hizo finito a \(c_n\).
+The two leading quantities of (17)–(18), each of order
+\(\varepsilon^{-n-1}\), cancel in (10). The lower orders also cancel
+exactly because the remaining term of (10) has a finite limit. Estimating
+\(d_n\) and \((j*c)_n\) separately destroys the pole–prime renormalization
+that made \(c_n\) finite.
 
-El coeficiente del doble polo en (8) es explícito. Si
+The coefficient of the double pole in (8) is explicit. If
 \(r=(1-\varepsilon)/\varepsilon\),
 
 \[
@@ -236,30 +236,30 @@ El coeficiente del doble polo en (8) es explícito. Si
 \tag{19}
 \]
 
-donde el segundo sumando se interpreta como cero para \(n=0\). En
+where the second summand is interpreted as zero for \(n=0\). In
 particular,
 
 \[
  \beta_n=q_n-2\gamma j_n+O_n(1)
- =2(n+1)(-1)^n\varepsilon^{-n-2}{1+O_n(\varepsilon)\}.
+ =2(n+1)(-1)^n\varepsilon^{-n-2}\{1+O_n(\varepsilon)\}.
 \tag{20}
 \]
 
-Así, aun para los coeficientes aritméticos reales y positivos \(b(m)\), el
-pullback Laguerre alterna de signo cerca del límite crítico.
+Thus, even for the real, positive arithmetic coefficients \(b(m)\), the
+Laguerre pullback alternates sign near the critical limit.
 
-## 4. Falsificador de signo dentro de la medida aritmética real
+## 4. Sign falsifier within the real arithmetic measure
 
-La pérdida de signo no requiere una medida competidora. Para \(n=1\), (20)
-da
+The loss of sign requires no competing measure. For \(n=1\), (20)
+gives
 
 \[
  \beta_1<0
 \]
 
-cuando \(a>1\) está suficientemente cerca de \(1\). En cambio, cuando
-\(a\to\infty\), el término \(m=2\) domina la serie absolutamente convergente
-y
+when \(a>1\) is sufficiently close to \(1\). On the other hand, as
+\(a\to\infty\), the term \(m=2\) dominates the absolutely convergent series
+and
 
 \[
  \beta_1
@@ -267,16 +267,16 @@ y
 \tag{21}
 \]
 
-porque \(b(2)=(\log2)^2\) y \(L_1(\log2)=1-\log2>0\). Por continuidad,
-\(\beta_1(a)\) cambia de signo en \((1,\infty)\).
+because \(b(2)=(\log2)^2\) and \(L_1(\log2)=1-\log2>0\). By continuity,
+\(\beta_1(a)\) changes sign on \((1,\infty)\).
 
-Por consiguiente, \(b(m)\ge0\) no proporciona ni siquiera el signo del
-primer coeficiente transformado a lo largo del regulador real. Cualquier
-uso de (11) necesita información firmada adicional.
+Consequently, \(b(m)\ge0\) does not even supply the sign of the first
+transformed coefficient along the real regulator. Any use of (11) needs
+additional signed information.
 
-## 5. Precio exacto de la fórmula sumatoria de Selberg
+## 5. Exact price of Selberg's summatory formula
 
-Sea
+Let
 
 \[
  S_b(x)=\sum_{m\le x}b(m),
@@ -285,29 +285,29 @@ Sea
 \tag{22}
 \]
 
-El término sustraído es exacto, pues
+The subtracted term is exact, since
 
 \[
  \int_1^\infty 2\log x\,x^{-s}\,dx={2\over(s-1)^2}.
 \]
 
-La fórmula de simetría de Selberg da la escala
+Selberg's symmetry formula gives the scale
 
 \[
  |R_b(x)|\le Kx
 \tag{23}
 \]
 
-con una constante efectiva después de agrandarla para el rango inicial. La
-integración de Stieltjes por partes, con
-\(f_{n,a}(x)=x^{-a}L_n(\log x)\), da
+with an effective constant after enlarging it for the initial range. Stieltjes
+integration by parts, with
+\(f_{n,a}(x)=x^{-a}L_n(\log x)\), gives
 
 \[
  d_n=-\int_1^\infty R_b(x)f_{n,a}'(x)\,dx.
 \tag{24}
 \]
 
-Por tanto, el uso de (23) por dualidad produce exactamente la carga
+Hence, using (23) by duality produces exactly the load
 
 \[
  |d_n|\le K\,\mathcal N_n(\varepsilon),
@@ -318,12 +318,12 @@ Por tanto, el uso de (23) por dualidad produce exactamente la carga
 \tag{25}
 \]
 
-Esta es la norma operatorial del funcional (24) en la bola
-\(|R_b(x)|\le Kx\): el signo de \(R_b\) puede aproximar el signo de
-\(-f_{n,a}'\). No es solamente una cota elegida de manera torpe.
+This is the operator norm of functional (24) on the ball
+\(|R_b(x)|\le Kx\): the sign of \(R_b\) can approximate the sign of
+\(-f_{n,a}'\). It is not merely a clumsily chosen bound.
 
-La carga tiene el siguiente límite inferior exacto. Integrando una vez por
-partes y usando (2),
+The load has the following exact lower bound. Integrating once by
+parts and using (2),
 
 \[
  \int_0^\infty e^{-\varepsilon u}
@@ -332,20 +332,20 @@ partes y usando (2),
 \tag{26}
 \]
 
-Luego
+Hence
 
 \[
  \boxed{\mathcal N_n(\varepsilon)\ge |1+j_n|.}
 \tag{27}
 \]
 
-En la elección diagonal \(\varepsilon=1/n\), \(n\ge2\),
+Choosing the diagonal \(\varepsilon=1/n\), \(n\ge2\),
 
 \[
  j_n=(-1)^n n(n-1)^n,
 \]
 
-y por tanto
+and hence
 
 \[
  \boxed{
@@ -354,16 +354,16 @@ y por tanto
 \tag{28}
 \]
 
-El presupuesto del gate de primera diferencia es
-\(\frac12\Delta A_n=O(\log n)\). Así, la fórmula sumatoria \(O(x)\) pierde
-un factor superexponencial en el grado. La positividad no repara (28): la
-Sección 4 muestra que el pullback de la medida positiva real ya tiene ambos
-signos, y `103_63` construye además modelos de medida positiva que satisfacen
-la escala sumatoria de Selberg y dan ambos signos al funcional cuantílico.
+The budget of the first-difference gate is
+\(\frac12\Delta A_n=O(\log n)\). So the \(O(x)\) summatory formula loses a
+superexponential factor in the degree. Positivity does not repair (28): Section 4
+shows that the pullback of the real positive measure already has both signs, and
+`103_63` further builds positive-measure models that satisfy Selberg's
+summatory scale and give both signs to the quantile functional.
 
-## 6. Certificado de no circularidad
+## 6. Non-circularity certificate
 
-La única resta que elimina la divergencia principal de (10) es
+The only subtraction that removes the leading divergence of (10) is
 
 \[
  \widetilde d_n
@@ -371,8 +371,7 @@ La única resta que elimina la divergencia principal de (10) es
 \tag{29}
 \]
 
-Pero (29) contiene la sucesión original \(c\). La recurrencia se convierte
-en
+But (29) contains the original sequence \(c\). The recurrence becomes
 
 \[
  \widetilde d_n
@@ -381,38 +380,39 @@ en
 \tag{30}
 \]
 
-Por ello, postular una cota firmada para \(\widetilde d_n\) suficientemente
-fuerte como para controlar \(c_{n+1}\) no es una consecuencia de la
-positividad o la sumatoria de \(b\): es un nuevo teorema acoplado que ya
-reintroduce el correlador A1. Las identidades (10) y (30) son válidas y
-pueden servir de coordenada para tal teorema, pero no aportan su signo.
+Hence, postulating a signed bound for \(\widetilde d_n\) strong enough to
+control \(c_{n+1}\) is not a consequence of the positivity or the summation of
+\(b\): it is a new coupled theorem that already reintroduces the A1 correlator.
+Identities (10) and (30) are valid and may serve as a coordinate for such a
+theorem, but they supply no sign.
 
-## 7. Decisión
+## 7. Decision
 
 ```text
-probado:
-  recurrencia Selberg–Riccati exacta en el grado Laguerre;
-  cancelación interna de escala epsilon^(-n-1) en esa recurrencia;
-  cambio de signo del primer pullback para la medida b real;
-  carga dual >= |1+j_n| para todo uso de la sumatoria O(x);
-  carga >= n(n-1)^n-1 al tomar epsilon=1/n.
+proved:
+  exact Selberg–Riccati recurrence in the Laguerre degree;
+  internal cancellation of the epsilon^(-n-1) scale within that recurrence;
+  sign change of the first pullback for the real measure b;
+  dual load >= |1+j_n| for any use of the O(x) summation;
+  load >= n(n-1)^n-1 when taking epsilon=1/n.
 
-descartado:
-  positividad de b como signo coeficiente a coeficiente;
-  fórmula sumatoria de Selberg + parcial summation como cota A1;
-  Riccati como inducción unilateral autónoma;
-  estimación separada del coeficiente centrado y la colisión polo–primos.
+ruled out:
+  positivity of b as a coefficient-by-coefficient sign;
+  Selberg summatory formula + partial summation as an A1 bound;
+  Riccati as an autonomous one-sided induction;
+  separate estimation of the centered coefficient and the pole–prime collision.
 
-no descartado:
-  un nuevo teorema firmado para la aritmética real que estime directamente
-  el residuo acoplado (29) sin asumir la cota buscada.
+not ruled out:
+  a new signed theorem for the real arithmetic that directly estimates the
+  coupled residue (29) without assuming the sought bound.
 
-no probado:
-  la cota de primera diferencia, A1 o RH.
+not proved:
+  the first-difference bound, A1, or RH.
 ```
 
-## Verificación mecánica
+## Mechanical verification
 
-`tools/m5_riccati_degree_check.py` verifica (10), (19) y la resta del doble
-polo con aritmética `Fraction` para una serie de Dirichlet atómica formal. No
-usa valores de \(\zeta\), punto flotante ni localización de ceros.
+`tools/m5_riccati_degree_check.py` verifies (10), (19), and the subtraction of
+the double pole using `Fraction` arithmetic for a formal atomic Dirichlet series.
+It uses no values of \(\zeta\), no floating point, and no zero localization.
+</content>

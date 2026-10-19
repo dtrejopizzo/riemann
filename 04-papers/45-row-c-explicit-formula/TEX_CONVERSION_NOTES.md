@@ -86,7 +86,7 @@ algebra of the idele class group); the Riemann hypothesis is named nowhere, and
 Theorem F is stated purely as a theorem about a zero off the line
 `Re s = 1/2`.
 
-Language check: `grep -oiE "row [A-D]|phase|round [0-9]|builder|auditor|honest|
+Language check: `grep -oiE "row [A-D]|phase|round [0-9]|construction|auditor|honest|
 candidly|Riemann hypothesis|\bRH\b|W45\.|106_|P124|P123|D128|ledger"` over
 `main.tex` returns nothing (the only hits for `classical` are the ordinary
 English adjective).
@@ -194,7 +194,7 @@ proof.
 
 ## Repairs after review R1
 
-Applied to `main.tex` in response to `TEX_HOSTILE_REVIEW_R1.md`
+Applied to `main.tex` in response to `TEX_ADVERSARIAL_REVIEW_R1.md`
 (verdict MAJOR REPAIRS NEEDED: 4 MAJOR, 12 MINOR). All 16 findings applied.
 Line numbers below are those of the **repaired** file.
 

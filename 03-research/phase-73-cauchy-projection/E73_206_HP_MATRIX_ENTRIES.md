@@ -1,6 +1,5 @@
 # E73.206 - High-precision closed matrix entries
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

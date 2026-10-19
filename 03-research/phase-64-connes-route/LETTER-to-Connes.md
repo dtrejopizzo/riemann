@@ -20,8 +20,8 @@ Following your three replies, we took the de Branges / Lax–Phillips colligatio
 genuine ζ and against the Davenport–Heilbronn (DH) falsifier, every object you named: the Herglotz
 property of `m=−Ξ'/Ξ`; the Pick-matrix passivity of the shifted scattering `Θ_ω` down to ω=0, failing
 off-line exactly at `ω=β−½`; the de Branges kernel `K_κ` positivity; the Kreĭn–Langer index; and the
-regularized continuation margin surviving `ω↓0`. With those confirmed, we switched, at your encouragement
-and the user's, to **pure mathematics** and proved what could be proved.
+regularized continuation margin surviving `ω↓0`. With those confirmed, we switched, at your encouragement,
+to **pure mathematics** and proved what could be proved.
 
 ## 2. What is now unconditional (four results)
 

@@ -1,8 +1,8 @@
 # R152.001 — Feasibility, phase 152 round 0: two never-analyzed non-positivity mechanisms
 
-*Builder: Opus 5, 2026-09-19. Deliverable of `R152_000_LEAD_BLUEPRINT.md` §D. FATAL rule in force: nothing
+* FATAL rule in force: nothing
 below is a new zero-free region, a new moment bound or a new cancellation estimate. **No sign is claimed; row D
-keeps no label.** Every external statement is marked `IMPORTED` (read and known precisely by the builder) or
+keeps no label.** Every external statement is marked `IMPORTED` (read and known precisely here) or
 `CERTIFIED` (believed on memory of the literature, not re-read here); where the exact form of a theorem is
 uncertain this is said in the line itself. No reference is invented.*
 
@@ -21,7 +21,7 @@ Neither (P152.A) nor (P152.B) is formulated. Both deaths are documented with the
 
 ## §1 Corpus check
 
-Command template, run 2026-09-19 from the repository root:
+Command template, run from the repository root:
 
 ```
 grep -rli --include=*.md "<name>" 03-research 04-papers 05-meta-and-planning NO-GO-LIST.md
@@ -29,13 +29,13 @@ grep -rli --include=*.md "<name>" 03-research 04-papers 05-meta-and-planning NO-
 
 | name | files | reading |
 |---|---|---|
-| Dyatlov | 3 | only `R152_000`, `ABCD-CLOSURE-PLAN/PLAN.md`, `ROW-D-CLOSURE-PLAN-2026-09-19.md` — i.e. **this phase's own planning only**. NEW. |
+| Dyatlov | 3 | only `R152_000`, `ABCD-CLOSURE-PLAN/PLAN.md`, `ROW-D-CLOSURE-PLAN.md` — i.e. **this phase's own planning only**. NEW. |
 | Bourgain | 9+ | all hits are Bourgain–Gamburd / Bourgain's sum-product or large-sieve work in phases 136, 149–150, 60–61; **no** Bourgain–Dyatlov. NEW. |
 | Dolgopyat | 4 | `R151_005`, `R152_000`, the two plan files. NEW. |
 | Naud | many | every hit is the Spanish word *nada* / OCR noise inside audit matrices (phase 107) plus this phase's files; **no** F. Naud. NEW. |
 | Baladi | 2 | `R152_000`, `ROW-D-CLOSURE-PLAN`. NEW. |
-| Vallée | 4 non-"Vallée Poussin" files | phase-24 setup, phase-29 doc 39, `phase-151/README`, `R152_000`; none is Baladi–Vallée dynamical analysis. NEW. |
-| Mayer | 2 | phase-29 doc 52 (motivic context, incidental), `R152_000`. NEW as transfer operator. |
+| Vallée | 4 non-"Vallée Poussin" files | phase-24-lower-bounds-bj setup, phase-29-zeta-spectral-triples doc 39, `phase-151/README`, `R152_000`; none is Baladi–Vallée dynamical analysis. NEW. |
+| Mayer | 2 | phase-29-zeta-spectral-triples doc 52 (motivic context, incidental), `R152_000`. NEW as transfer operator. |
 | Lewis (–Zagier) | 3 | this phase's planning only. NEW. |
 | Maass | 8+ | phase 16 (docs 01–06), phase 102 audit fragments. **Not new**: phase 16 is the corpus's Route A. |
 | "scattering determinant" | 6 | phase 16 doc 01; phase 106 `SELFADJOINT_EULER_DETERMINANT_NO_GO`; phase 120 `P3_G125_T2_AHK`; phase 71. **Not new.** |
@@ -131,7 +131,7 @@ Three independent hypotheses of (A.0.3) fail for the modular surface, and it is 
 2. **Finite volume with a cusp.** (A.0.3) is a theorem about infinite-volume convex cocompact surfaces, where
    the continuous spectrum comes from funnels. The modular surface's continuous spectrum is the **cusp's**, and
    the resonances are poles of a `1×1` scattering matrix which is an explicit ratio of completed zeta values.
-   No FUP-type resonance-gap theorem for cusped finite-area surfaces is known to the builder.
+   No FUP-type resonance-gap theorem for cusped finite-area surfaces is known to this record.
 3. **Pressure threshold.** All pre-FUP gaps (Patterson–Sullivan/Naud, and Nonnenmacher–Zworski's
    `P(½) < 0 ⟹ gap`, `CERTIFIED`) require the topological pressure at `½` to be negative, i.e. `δ < ½`. For a
    lattice `δ = 1` and `P(½) > 0`; the leading resonance is `s = 1`, which under `s = ρ/2` is **the pole of `ζ`
@@ -145,7 +145,7 @@ so the mechanism is not a restatement; it is an unreachable target with no known
 
 ### A.2 (Q2) Any dynamical/microlocal constraint on resonances of finite-area surfaces beyond Maass–Selberg?
 
-**Answer: none known to the builder, and the negative is structural rather than accidental.** Survey, all
+**Answer: none known to this record, and the negative is structural rather than accidental.** Survey, all
 `CERTIFIED` except where marked:
 
 * **Selberg's `3/16`** bounds the smallest nonzero **`L²` (cuspidal/residual) eigenvalue** for congruence
@@ -157,7 +157,7 @@ so the mechanism is not a restatement; it is an unreachable target with no known
   that fails at `δ = 1` (above).
 * **Dyatlov–Zahl, Dyatlov–Jin (FUP for porous sets), Dyatlov–Jin–Nonnenmacher**: FUP has been extended beyond
   Ahlfors–David regularity (porosity) and used for **control/observability** of eigenfunctions on hyperbolic
-  surfaces of all `δ`; the builder is **not** aware of any consequence of these for the location of scattering
+  surfaces of all `δ`; there is **not** aware of any consequence of these for the location of scattering
   poles of a finite-area surface, and does not assert the exact statements of these papers.
 * **Expositions** (Zworski's survey of resonances; Sarnak's writings on the spectrum of `PSL₂(Z)\H`) present
   the `ρ/2` dictionary as a dictionary. `CERTIFIED`.
@@ -185,7 +185,7 @@ Hecke-recurrent dimension.* Three findings.
 2. **(ii) Implication for `Re ρ`.** None. A non-concentration bound is a lower bound on the spread of mass on a
    compact piece; the location of the resonance enters the Maass–Selberg identity through the **cusp**
    contribution `T^{2σ−1}` and through the oscillating term `φ(s)T^{2it}/(2it)`. Compact-part non-concentration
-   is orthogonal to the cusp asymptotics. The builder finds no route from (i) to `σ = ¼`, and the general
+   is orthogonal to the cusp asymptotics. R152_001 finds no route from (i) to `σ = ¼`, and the general
    principle in the corpus applies: a lower bound on a positive quantity (mass) is MW-4, the wrong sign.
 3. **(iii) Circularity.** The one proved instance of QUE for Eisenstein series (Luo–Sarnak) is proved **on the
    critical line** `s = ½+it` and its proof uses bounds on `ζ(1+2it)` (and in the rate, subconvexity); using it
@@ -208,7 +208,7 @@ Hecke-recurrent dimension.* Three findings.
 many inverse branches, and their derivatives `|T'|^{−1} ≍ n^{−2}`, so the branch series is `Σ n^{−2σ}`. ∎
 
 > **Corollary A.5 (the obstruction, and its identification).** Dolgopyat's method is, in every version known to
-> the builder, an estimate on the **cancellation among the branch sums of `L_s^n`** under a UNI hypothesis on
+> R152_001, an estimate on the **cancellation among the branch sums of `L_s^n`** under a UNI hypothesis on
 > the temporal distance function; it produces `‖L_{σ+it}^n‖ ≤ C|t|^{ε}θ^n` with `θ < ρ(L_σ)`, *perturbatively
 > around a `σ` where `L_σ` is a genuine positive Ruelle operator with a spectral gap*. On `Re s ∈ (¼,½)` none of
 > these objects exists (Prop. A.4). Hence the failure is not a failure of the UNI hypothesis — **the UNI
@@ -240,7 +240,7 @@ record, the gates were checked and are moot but instructive:
   groups with several cusps and of Bianchi groups, as entries and in linear combinations; Davenport–Heilbronn
   produces off-line zeros from such combinations for class number `≥ 2`. Whether the *determinant* of such a
   scattering matrix can have off-line poles is exactly the question of whether a Dedekind zeta or a Hecke
-  `L`-function can, i.e. GRH. **The builder is not certain of the exact form of the Bianchi scattering
+  `L`-function can, i.e. GRH. **R152_001 is not certain of the exact form of the Bianchi scattering
   determinant and does not assert it.** What is certain is that any purely geometric/dynamical gap theorem
   valid for all cusped hyperbolic surfaces would have to be compatible with the existence of off-line zeros of
   Epstein-type combinations, and therefore could not be blind to which combination is taken — a gate the
@@ -257,7 +257,7 @@ spectrum of `Z` with the trivial norm: multiplicative seminorms on `Z` bounded b
 with root the trivial absolute value `|·|₀`, one branch for each prime `p` carrying `|·|_p^ε`, `ε ∈ (0,∞]`, the
 end `ε = ∞` being the seminorm with kernel `(p)` (the "residue field `F_p`" point), and one archimedean branch
 carrying `|·|_∞^ε`, `ε ∈ (0,1]`. Reference: J. Poineau, *La droite de Berkovich sur `Z`*, Astérisque **334**
-(2010); Lemanissier–Poineau, *Espaces de Berkovich globaux*. (The builder has not re-read these; the tree
+(2010); Lemanissier–Poineau, *Espaces de Berkovich globaux*. (R152_001 has not re-read these; the tree
 picture is standard and is asserted only in this shape.)
 
 **(B.0.2) The dictionary (RESTATEMENT).** On the `p`-branch use `u = −log|p|_p^ε = ε log p`. Then `ε = k ∈ N`
@@ -329,7 +329,7 @@ gates fail simultaneously**, for the single reason that the tree sees only locat
 
 ### B.2 (Q6) Frobenius and a pairing on the square
 
-* **Frobenius.** Poineau's `Z`-analytic spaces are built from `M(Z)` and its affine lines; the builder knows of
+* **Frobenius.** Poineau's `Z`-analytic spaces are built from `M(Z)` and its affine lines; R152_001 knows of
   **no** Frobenius endomorphism on them, and none can come from the ring: `Hom(Spec Z, Spec Z) = {id}`, which
   is exactly **Theorem 22.17** of Paper 46 (`Spec Z` is terminal, so there is no ring of Frobenius
   correspondences). The branch parameter `ε` is a **flow**, not an endomorphism of the base; naming it
@@ -337,11 +337,11 @@ gates fail simultaneously**, for the single reason that the tree sees only locat
 * **Comparison with `F₁`/`λ`-rings.** Connes–Consani's arithmetic site and Borger's `Λ`-ring/Witt structure do
   carry `ψ_p`, and phase 16 doc 01 records that the `ψ_p` eigenvalues are **integer Adams weights (local
   data)**, not the global `γ_ρ`. **A published comparison between Poineau's global `Z`-analytic geometry and
-  either of these is not known to the builder; nothing is asserted.** This is the one literature item that
+  either of these is not known to this record; nothing is asserted.** This is the one literature item that
   would have to be checked before any further work, and it does not change the verdict, because even a
   comparison would deliver `ψ_p` with local eigenvalues (phase 16, Route B/C rejection).
 * **A pairing on `M(Z) × M(Z)`.** Arakelov theory on `Spec Z` is one-dimensional: the arithmetic Chow group is
-  `R` and there is no square. The product of two trees is a two-dimensional cell complex; the builder knows of
+  `R` and there is no square. The product of two trees is a two-dimensional cell complex; R152_001 knows of
   **no** published intersection theory or pairing on it, and the Chambert-Loir–Ducros calculus is for
   analytifications over a *fixed* valued field, hence does not apply to a product over two different places.
   The corpus records the same wall independently (MW-5; Theorems 25.6, 25.7: positivity-type constraints on the
@@ -424,7 +424,7 @@ been removed.
 | Dictionary B.1 | `RESTATEMENT` |
 | Proposition B.2 (tree energy is `f`-independent; diverges as `Σ(log p)³/p`) | `PROVED` |
 | **Proposition B.3** (meet vs difference) | `PROVED`; the one genuinely new piece for mechanism B |
-| "no Frobenius on Poineau's spaces", "no published pairing on `M(Z)×M(Z)`" | `NOT KNOWN TO THE BUILDER`, not asserted as literature facts; the ring-level statement is Thm 22.17, `IMPORTED` from Paper 46 |
+| "no Frobenius on Poineau's spaces", "no published pairing on `M(Z)×M(Z)`" | `NOT KNOWN TO US`, not asserted as literature facts; the ring-level statement is Thm 22.17, `IMPORTED` from Paper 46 |
 | §4 reserve paragraphs | `CERTIFIED` survey + corpus cross-reference |
 | FATAL rule | **not triggered**: no zero-free region, moment bound or cancellation is claimed anywhere above |
 

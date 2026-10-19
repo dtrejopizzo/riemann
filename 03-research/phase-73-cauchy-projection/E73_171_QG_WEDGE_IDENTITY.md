@@ -1,6 +1,5 @@
 # E73.171 - QG wedge identity
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

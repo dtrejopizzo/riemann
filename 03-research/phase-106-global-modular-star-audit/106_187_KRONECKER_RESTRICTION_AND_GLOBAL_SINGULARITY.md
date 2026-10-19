@@ -20,7 +20,7 @@ completion.
 Retain
 
 \[
- G=\log\mathbb Q_+^\times,qquad
+ G=\log\mathbb Q_+^\times,\qquad
  \widehat G=\prod_p\mathbb T,                                \tag{1}
 \]
 
@@ -40,7 +40,7 @@ with characteristic function
 Define the Kronecker embedding
 
 \[
- \kappa:\mathbb R\longrightarrow\widehat G,qquad
+ \kappa:\mathbb R\longrightarrow\widehat G,\qquad
  \kappa(\xi)_p=p^{i\xi}.                                    \tag{4}
 \]
 
@@ -115,7 +115,7 @@ coordinates at \(2\) and \(3\).  Conditional on a value
 \(z_2=e^{i\theta_2}\), a point on \(\mathcal C\) must have
 
 \[
- \xi=\frac{\theta_2+2\pi k}{\log2},qquad k\in\mathbb Z.     \tag{10}
+ \xi=\frac{\theta_2+2\pi k}{\log2},\qquad k\in\mathbb Z.     \tag{10}
 \]
 
 Its \(3\)-coordinate must therefore belong to the countable set

@@ -236,7 +236,7 @@ The failure above can also be seen at the level of the prime-counting
 remainder.  Put
 
 \[
- E(x)=\psi(x)-x,qquad
+ E(x)=\psi(x)-x,\qquad
  C_F(a)=2\mathrm{Re}\,\langle F,S_aF\rangle.          \tag{5.1}
 \]
 

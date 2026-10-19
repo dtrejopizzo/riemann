@@ -1,7 +1,6 @@
 # E72.114 -- SVD alignment certificate for the direct energy
 
-**Date:** 2026-07-09.
-**Role:** replace the coarse operator split by an exact singular-mode energy identity.
+**Purpose:** replace the coarse operator split by an exact singular-mode energy identity.
 
 ## 0. Setup
 

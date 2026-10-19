@@ -1,6 +1,5 @@
 # E69.2 -- decomposition overturns the arch-cushion hope; positivity is prime-side
 
-**Date:** 2026-07-07.
 **Script:** E69_2_decompose.py.
 
 ## Test

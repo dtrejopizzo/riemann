@@ -37,7 +37,7 @@ Consequently the D.55 core `E_T`, its complement `Q_T`, the high inverse and
 the Schur matrix all split:
 
 \[
- E_T=E_{T,e}\oplus E_{T,o},qquad
+ E_T=E_{T,e}\oplus E_{T,o},\qquad
  S_T=S_{T,e}\oplus S_{T,o}.                               \tag{2.1}
 \]
 
@@ -142,7 +142,7 @@ normalized core projection of `cosh(t/2)` is the canonical choice—and let
 The even certificate is
 
 \[
- \boxed{D_v<0,qquad
+ \boxed{D_v<0,\qquad
  \sigma_e:=a-\langle b,D_v^{-1}b\rangle>0.}               \tag{5.5}
 \]
 
@@ -155,7 +155,7 @@ Gaussian elimination gives
 Therefore (5.3)--(5.5) imply
 
 \[
- n_+(B_o)=0,qquad n_+(B_e)=1,qquad n_+(B_T)=1.           \tag{5.7}
+ n_+(B_o)=0,\qquad n_+(B_e)=1,\qquad n_+(B_T)=1.           \tag{5.7}
 \]
 
 Equivalently, (5.5) supplies the desired `rank one minus positive`

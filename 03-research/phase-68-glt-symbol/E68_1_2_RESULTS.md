@@ -1,6 +1,5 @@
 # E68.1-E68.2 -- the GLT symbol: not a clean GLT sequence, but a faithful depth detector
 
-**Date:** 2026-07-06.
 **Scripts:** [E68_1_glt_symbol.py](E68_1_glt_symbol.py), [E68_2_glt_interior.py](E68_2_glt_interior.py).
 
 ## Test

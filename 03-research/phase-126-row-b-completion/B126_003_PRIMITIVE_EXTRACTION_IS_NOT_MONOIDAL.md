@@ -1,6 +1,6 @@
 # B126.003 — primitive extraction cannot be monoidal
 
-Date: 2026-09-12.  Status: `PROVED` (refutation of a requirement).
+Status: `PROVED` (refutation of a requirement).
 Full statement: Paper 44 §5.3, Thm. 5.4, Cor. 5.5.
 
 Three places in the corpus record the same open item — P123.037 §5,

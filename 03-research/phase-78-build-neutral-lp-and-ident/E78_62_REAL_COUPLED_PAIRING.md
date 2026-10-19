@@ -1,6 +1,6 @@
 # E78.62 - The real normalized ternary cocycle is a single coupled pairing over a positive denominator
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

@@ -32,7 +32,7 @@ print('atoms',len(us),'P',P,'rows',len(tau),len(tp),flush=True)
 t0=time.time(); sol=lp(T,us,tau,tp,P,taumax,v,rhomax=rhomax); print('LP',sol['c'],time.time()-t0,flush=True)
 a,b0,b1=sol['a'],sol['b0'],sol['b1']
 pickle.dump(dict(T=T,M=M,U=U,us=us,a=a,b0=b0,b1=b1,lp=sol['c'],taumax=taumax,P=P,v=v),
-            open('/tmp/claude-1000/-home-trabajo-Documentos-research-riemann/c6ebb662-5a2c-43cb-b81f-8c5cf439f332/scratchpad/cert.pkl','wb'))
+            open('cert.pkl','wb'))
 # rho on one period, rigorous
 Ln=2*float(np.sum(np.abs(a)*us)); h=2e-5; tpf=np.arange(0.0,P,h)
 nuf=np.empty(len(tpf))

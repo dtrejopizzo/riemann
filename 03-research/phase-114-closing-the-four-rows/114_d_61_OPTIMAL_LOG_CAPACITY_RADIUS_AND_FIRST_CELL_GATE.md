@@ -104,7 +104,7 @@ This proves (1.1)--(1.2).
 Put
 
 \[
- G=D_0-m_0,qquad A=2cD_0,qquad B={8c\over\pi},qquad
+ G=D_0-m_0,\qquad A=2cD_0,\qquad B={8c\over\pi},\qquad
  L=\log(2R).                                              \tag{4.1}
 \]
 
@@ -118,7 +118,7 @@ It is strictly convex at its critical point.  The critical equation and
 the zero-margin equation are
 
 \[
- {Bh\over2}e^L={A\over L^2},qquad
+ {Bh\over2}e^L={A\over L^2},\qquad
  G=A\left({1\over L}+{1\over L^2}\right).               \tag{4.3}
 \]
 

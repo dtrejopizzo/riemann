@@ -1,14 +1,14 @@
-# 104_108 — Fejér modulado, filtros emparejados y gate resonante
+# 104_108 — Modulated Fejér, matched filters, and the resonance gate
 
-**Pregunta.** El selector malo bajo no-RH no es arbitrario: es un Bohr set
-determinado por el polinomio trigonométrico de los modos dominantes.
-¿Permite esa estructura reemplazar el cubo completo de selectores de
-`104_106` por filtros de Fourier y transportar la cota de fase de
+**Question.** The bad selector under non-RH is not arbitrary: it is a
+Bohr set determined by the trigonometric polynomial of the dominant
+modes. Does that structure allow replacing the full selector cube of
+`104_106` with Fourier filters and transporting the phase bound of
 `104_41`?
 
-**Resultado.** Sí hay una reducción estructural de los tests. Basta una
-familia uniparamétrica de filtros de Fejér modulados. Para \(N\ge L\),
-\(a\ge4\) y todo \(\phi\in\mathbb R\), se prueba
+**Result.** Yes, there is a structural reduction of the tests. A
+one-parameter family of modulated Fejér filters suffices. For \(N\ge L\),
+\(a\ge4\), and every \(\phi\in\mathbb R\), one proves
 
 \[
  \boxed{
@@ -16,58 +16,58 @@ familia uniparamétrica de filtros de Fejér modulados. Para \(N\ge L\),
  \le 3\pi {N\over L}+4.}                                \tag{1}
 \]
 
-Esta cota es uniforme en la frecuencia y conserva polo, todos los primos y
-todas las potencias primas dentro de la fase completa.
+This bound is uniform in the frequency and preserves the pole, all the
+primes, and all the prime powers within the full phase.
 
-Además, Parseval muestra que controlar estos filtros uniformemente en
-\(\phi\) controla todos los grados del bloque en norma cuadrática. En
+Moreover, Parseval shows that controlling these filters uniformly in
+\(\phi\) controls every degree of the block in quadratic norm. In
 particular,
 
 \[
  \mathrm {RH}\quad\Longleftrightarrow\quad
  \sup_\phi|\mathcal B^{\triangle}_{2L,L,1}(\phi)|
- \le e^{\sqrt L}\quad\hbox{eventualmente}.               \tag{2}
+ \le e^{\sqrt L}\quad\hbox{eventually}.               \tag{2}
 \]
 
-Pero al bajar \(a\) hasta \(1\), un cero derecho produce exactamente un
-filtro resonante. Si \(w_\rho=re^{i\theta}\), la elección
-\(\phi=-\theta\) contiene el factor positivo
-\(K_L(r^{-1})\ge r^{-L+1}/L^2\), y el residuo conserva tamaño
-\(r^{-N-L+1}/L^2\). Así (1) no se transporta: el único término que falta
-es nuevamente el residuo que (2) excluiría.
+But when \(a\) is lowered down to \(1\), a right zero produces exactly
+one resonant filter. If \(w_\rho=re^{i\theta}\), choosing
+\(\phi=-\theta\) picks out the positive factor
+\(K_L(r^{-1})\ge r^{-L+1}/L^2\), and the residue keeps size
+\(r^{-N-L+1}/L^2\). So (1) does not transport: the only missing term is
+again the residue that (2) would exclude.
 
-La ganancia respecto de `104_106` es precisa: para detectar un
-coeficiente exponencial no hace falta controlar todos los selectores
-\(a_j\in[0,1]\); una sola frecuencia continua basta por Parseval. Esto
-reduce la familia de tests, pero no debilita la dificultad lógica: (2)
-sigue siendo equivalente a RH. El documento no prueba la cota (2) en
-\(a=1\), A1 ni RH.
-
----
-
-## 1. No duplicación interna
-
-`104_62`, §5.2, ya prueba que el selector variacional óptimo puede
-concentrarse en clases periódicas y que los selectores geométricos no
-controlan ese supremo. `104_58` y `104_65` prueban que
-ventanas y filtros locales fijos conservan los modos exteriores.
-`104_107` obtiene la cota de fase para el Fejér **no modulado**.
-
-Por tanto no se reclama como nueva la observación general «hacen falta
-selectores periódicos». Las piezas nuevas de este documento son exactamente:
-
-1. la cota de fase uniforme en la modulación \(\phi\), (1);
-2. la reducción por Parseval desde todos los grados a esa familia
-   uniparamétrica, (11)--(12);
-3. la fórmula de transporte modulado (15) y su resonancia exacta (16);
-4. el falsificador del cuarteto completo, sin cancelación conjugada,
-   (18)--(19).
+The gain relative to `104_106` is precise: to detect an exponential
+coefficient one does not need to control all the selectors
+\(a_j\in[0,1]\); a single continuous frequency suffices by Parseval.
+This reduces the family of tests, but does not weaken the logical
+difficulty: (2) is still equivalent to RH. The document does not prove
+bound (2) at \(a=1\), nor A1, nor RH.
 
 ---
 
-## 2. El filtro modulado
+## 1. Internal non-duplication
 
-Ponga
+`104_62`, §5.2, already proves that the optimal variational selector can
+be concentrated on periodic classes and that geometric selectors do not
+control that supremum. `104_58` and `104_65` prove that fixed local
+windows and filters preserve the exterior modes. `104_107` obtains the
+phase bound for the **unmodulated** Fejér filter.
+
+So the general observation "periodic selectors are needed" is not
+claimed as new. The new pieces of this document are exactly:
+
+1. the modulation-uniform phase bound, (1);
+2. the Parseval reduction from every degree to this one-parameter
+   family, (11)–(12);
+3. the modulated transport formula (15) and its exact resonance (16);
+4. the falsifier for the full quartet, with no conjugate cancellation,
+   (18)–(19).
+
+---
+
+## 2. The modulated filter
+
+Set
 
 \[
  \alpha_{L,k}={L-|k|\over L^2}\quad(|k|<L),
@@ -76,7 +76,7 @@ Ponga
  =\left({\sin(Lx/2)\over L\sin(x/2)}\right)^2.           \tag{3}
 \]
 
-Para una frecuencia real \(\phi\), defina
+For a real frequency \(\phi\), define
 
 \[
  \begin{aligned}
@@ -88,8 +88,8 @@ Para una frecuencia real \(\phi\), defina
  \end{aligned}                                           \tag{4}
 \]
 
-Los pesos ya no son reales, pero la identidad de fase de `104_41` es
-lineal y puede aplicarse a partes real e imaginaria:
+The weights are no longer real, but the phase identity of `104_41` is
+linear and can be applied to the real and imaginary parts:
 
 \[
  \mathcal B^{\triangle}_{N,L,a}(\phi)
@@ -97,8 +97,8 @@ lineal y puede aplicarse a partes real e imaginaria:
  d\vartheta_a(t).                                        \tag{5}
 \]
 
-En la variable \(\theta\), donde
-\(W_n=2-e^{in\theta}-e^{-in\theta}\), la suma de (4) es
+In the variable \(\theta\), where
+\(W_n=2-e^{in\theta}-e^{-in\theta}\), the sum in (4) is
 
 \[
  \boxed{
@@ -108,23 +108,23 @@ En la variable \(\theta\), donde
  -e^{-iN\theta}H_L(\theta+\phi).}                       \tag{6}
 \]
 
-En particular \(V_{N,L,\phi}(0)=0\), como exige el borde
+In particular \(V_{N,L,\phi}(0)=0\), as required by the boundary
 \(|t|\to\infty\).
 
 ---
 
-## 3. Cota uniforme de variación y fase
+## 3. Uniform bound on variation and phase
 
-La integral de \(H_L\) en un período es \(2\pi/L\). La cota de variación
-probada en `104_107` implica
+The integral of \(H_L\) over one period is \(2\pi/L\). The variation
+bound proved in `104_107` implies
 
 \[
  \mathrm{TV}_{[0,2\pi]}(H_L)
  \le {8\over3}\left(1-{1\over L^2}\right)<{8\over3}.   \tag{7}
 \]
 
-Diferenciando (6), usando \(H_L\ge0\), y extendiendo cada intervalo de
-longitud \(\pi\) a un período completo,
+Differentiating (6), using \(H_L\ge0\), and extending each interval of
+length \(\pi\) to a full period,
 
 \[
  \begin{aligned}
@@ -137,15 +137,15 @@ longitud \(\pi\) a un período completo,
  \end{aligned}
 \]
 
-Las dos semirrectas de \(t\) dan entonces
+The two half-lines of \(t\) then give
 
 \[
  \mathrm{TV}_{\mathbb R}(V_{N,L,\phi})
  \le {8\pi N\over L}+{32\over3}.                        \tag{9}
 \]
 
-Para \(a\ge4\), `104_41` da
-\(|\vartheta_a(t)|<3\pi/4\). Integrando (5) por partes y usando (9),
+For \(a\ge4\), `104_41` gives
+\(|\vartheta_a(t)|<3\pi/4\). Integrating (5) by parts and using (9),
 
 \[
  |\mathcal B^{\triangle}_{N,L,a}(\phi)|
@@ -154,14 +154,15 @@ Para \(a\ge4\), `104_41` da
  \le3\pi {N\over L}+4,                                  \tag{10}
 \]
 
-uniformemente en \(\phi\). Esto prueba (1). No se tomó módulo dentro de
-\(M_\Lambda\); el módulo aparece solo después de integrar la fase completa.
+uniformly in \(\phi\). This proves (1). No modulus was taken inside
+\(M_\Lambda\); the modulus appears only after integrating the full
+phase.
 
 ---
 
-## 4. Parseval reemplaza el cubo de selectores
+## 4. Parseval replaces the selector cube
 
-Para cualquier sucesión real \(x_n\), ortogonalidad en \(\phi\) da
+For any real sequence \(x_n\), orthogonality in \(\phi\) gives
 
 \[
  \boxed{
@@ -171,7 +172,7 @@ Para cualquier sucesión real \(x_n\), ortogonalidad en \(\phi\) da
  =\sum_{|k|<L}\alpha_{L,k}^2x_{N+k}^2.}                 \tag{11}
 \]
 
-Por tanto
+Hence
 
 \[
  \sup_\phi
@@ -179,19 +180,19 @@ Por tanto
  \ge\max_{|k|<L}\alpha_{L,k}|x_{N+k}|.                 \tag{12}
 \]
 
-Esta es la versión rigurosa de la intuición de Bohr/matched filter. No es
-necesario aproximar el indicador discontinuo del Bohr set: si un modo
-exterior crea una excursión en cualquier grado del bloque, alguna frecuencia
-de (4) la detecta automáticamente. (11) es una identidad de promedio
-\(L^2\) en \(\phi\); (12) pasa de ese promedio al supremo. Ninguna de las
-dos afirma que una media firmada produzca un bloque bueno. Para eso sigue
-haciendo falta la parte positiva de `104_106`, (16).
+This is the rigorous version of the Bohr/matched-filter intuition. There
+is no need to approximate the discontinuous indicator of the Bohr set: if
+an exterior mode creates an excursion at any degree of the block, some
+frequency in (4) detects it automatically. (11) is an \(L^2\)-average
+identity in \(\phi\); (12) passes from that average to the supremum.
+Neither of the two states that a signed average produces a good block.
+For that one still needs the positive part of `104_106`, (16).
 
-Tome ahora \(x_n=B_n=A_n-\lambda_n\), \(N=2L\). Bajo RH,
-\(B_n=O(n\log n)\), luego el supremo de (2) es \(O(L\log L)\). Si RH es
-falsa, `104_67` produce un conjunto sindético \(D_+\) y constantes
-\(c>0,R>1\) con \(\lambda_n\ge cR^n\) en \(D_+\). Para todo \(L\) grande
-existe \(d_L\in D_+\cap[2L,2L+G]\), donde \(G\) es un gap fijo. Entonces
+Now take \(x_n=B_n=A_n-\lambda_n\), \(N=2L\). Under RH,
+\(B_n=O(n\log n)\), so the supremum in (2) is \(O(L\log L)\). If RH is
+false, `104_67` produces a syndetic set \(D_+\) and constants
+\(c>0,R>1\) with \(\lambda_n\ge cR^n\) on \(D_+\). For every large \(L\)
+there is \(d_L\in D_+\cap[2L,2L+G]\), where \(G\) is a fixed gap. Then
 
 \[
  |B_{d_L}|\ge {c\over2}R^{d_L},
@@ -199,40 +200,39 @@ existe \(d_L\in D_+\cap[2L,2L+G]\), donde \(G\) es un gap fijo. Entonces
  \alpha_{L,d_L-2L}\ge {L-G\over L^2}.                  \tag{13}
 \]
 
-Las ecuaciones (12)--(13) muestran que el supremo de (2) es
-\(\gg R^{2L}/L\), y por tanto supera \(e^{\sqrt L}\). Esto prueba (2).
+Equations (12)–(13) show that the supremum in (2) is
+\(\gg R^{2L}/L\), and therefore exceeds \(e^{\sqrt L}\). This proves (2).
 
-Equivalentemente, se puede tomar \(x_n=\mathscr R_n\) de `104_106`:
-la parte crítica es \(O(n\log n)\), de modo que no cambia la dicotomía
-subexponencial/exponencial.
+Equivalently, one may take \(x_n=\mathscr R_n\) from `104_106`:
+the critical part is \(O(n\log n)\), so it does not change the
+subexponential/exponential dichotomy.
 
-El criterio (2) usa valor absoluto y es bilateral. Grado por grado es más
-fuerte que pedir solo la barrera superior de `104_67`, y el
-supremo de Fourier no construye por sí mismo un bloque bueno. Su
-equivalencia con RH proviene de las excursiones **bilaterales** de
-`104_67`: bajo no-RH, cualquiera de los dos signos produce un
-coeficiente exponencial que (11)--(12) detectan. Por tanto (2) es una
-reexpresión estructurada de fuerza RH, no un nuevo debilitamiento lógico
-del objetivo.
+Criterion (2) uses absolute value and is two-sided. Degree by degree it
+is stronger than merely requiring the upper barrier of `104_67`, and the
+Fourier supremum does not by itself construct a good block. Its
+equivalence with RH comes from the **two-sided** excursions of
+`104_67`: under non-RH, either sign produces an exponential coefficient
+that (11)–(12) detect. Hence (2) is a structured re-expression of RH
+strength, not a new logical weakening of the target.
 
 ---
 
-## 5. Transporte exacto y resonancia
+## 5. Exact transport and resonance
 
-Introduzca el polinomio de Laurent
+Introduce the Laurent polynomial
 
 \[
  K_L(z)=\sum_{|k|<L}\alpha_{L,k}z^k
  ={(1-z^L)(1-z^{-L})\over L^2(1-z)(1-z^{-1})}.           \tag{14}
 \]
 
-Para un cero derecho \(\rho\), con \(w=w_\rho\), la identidad
+For a right zero \(\rho\), with \(w=w_\rho\), the identity
 
 \[
  {\mathcal F_n(w)\over\rho(\rho-1)}=w^n+w^{-n}-2
 \]
 
-da, sin resto,
+gives, with nothing omitted,
 
 \[
 \boxed{
@@ -246,14 +246,14 @@ da, sin resto,
  \end{aligned}}                                         \tag{15}
 \]
 
-Escriba \(w=re^{i\theta}\), \(0<r<1\). En la frecuencia emparejada
+Write \(w=re^{i\theta}\), \(0<r<1\). At the matched frequency
 \(\phi=-\theta\),
 
 \[
  w^{-1}e^{-i\phi}=r^{-1}>1,
 \]
 
-y todos los términos de \(K_L(r^{-1})\) son positivos. En particular,
+and all the terms of \(K_L(r^{-1})\) are positive. In particular,
 
 \[
  \boxed{
@@ -263,33 +263,34 @@ y todos los términos de \(K_L(r^{-1})\) son positivos. En particular,
  \ge {r^{-N-L+1}\over L^2}.}                            \tag{16}
 \]
 
-La frecuencia conjugada empareja el conjugado del mismo cero. Un filtro
-modulado detecta, no cancela, la parte principal exterior.
+The conjugate frequency matches the conjugate of the same zero. A
+modulated filter detects, rather than cancels, the main exterior part.
 
-La falta de selectividad angular fuera del círculo es también explícita.
-Si \(z=Re^{i\delta}\), \(R>1\), entonces el término extremo de \(K_L(z)\)
-tiene tamaño \(R^{L-1}/L^2\). Una desalineación fija de \(\delta\) solo
-cambia la fase; no aporta decaimiento exponencial. La localización de Bohr
-vive en el polinomio trigonométrico normalizado \(R^{-n}B_n\), mientras un
-promedio no normalizado queda dominado por el extremo radial del bloque.
+The lack of angular selectivity outside the circle is also explicit. If
+\(z=Re^{i\delta}\), \(R>1\), then the extreme term of \(K_L(z)\) has
+size \(R^{L-1}/L^2\). A fixed misalignment in \(\delta\) only changes the
+phase; it provides no exponential decay. Bohr localization lives in the
+normalized trigonometric polynomial \(R^{-n}B_n\), while an unnormalized
+average is dominated by the radial extreme of the block.
 
-Por (15), bajar \(a:4\to1\) en (10) cruza exactamente la contribución
-resonante (16). Una continuación que conservara la cota polinómica (10)
-probaría (2), y por tanto RH. No existe una deducción de esa continuación a
-partir de la fase en \(a\ge4\): es el teorema aritmético faltante.
+By (15), lowering \(a:4\to1\) in (10) crosses exactly the resonant
+contribution (16). A continuation that preserved the polynomial bound
+(10) would prove (2), and hence RH. There is no deduction of that
+continuation from the phase at \(a\ge4\): it is the missing arithmetic
+theorem.
 
 ---
 
-## 6. Falsificador racional
+## 6. Rational falsifier
 
-Tome
+Take
 
 \[
  w={i\over2},\qquad \rho={4+2i\over5},\qquad
  \phi=-{\pi\over2}.
 \]
 
-Entonces \(e^{-i\phi}=i\) y
+Then \(e^{-i\phi}=i\) and
 
 \[
  w^{-1}e^{-i\phi}=(-2i)i=2,
@@ -297,8 +298,8 @@ Entonces \(e^{-i\phi}=i\) y
  K_L(2)\ge{2^{L-1}\over L^2}.                            \tag{17}
 \]
 
-Para auditar el cuarteto completo, sume también el conjugado. Si
-\(4\mid N\), la contribución conjunta a (15) es exactamente
+To audit the full quartet, also sum the conjugate. If
+\(4\mid N\), the joint contribution to (15) is exactly
 
 \[
 \begin{aligned}
@@ -308,16 +309,16 @@ Para auditar el cuarteto completo, sume también el conjugado. Si
 \end{aligned}
 \]
 
-Como \(0\le H_L(\pi/2)\le1\), y el mayor exponente par menor que \(L\)
-da en ambos casos de paridad
+Since \(0\le H_L(\pi/2)\le1\), and the largest even exponent less than
+\(L\) gives in both parity cases
 
 \[
  K_L(2)+K_L(-2)
- =2\sum_{\substack{|k|<L\\k\ {\rm par}}}\alpha_{L,k}2^k
+ =2\sum_{\substack{|k|<L\\k\ {\rm even}}}\alpha_{L,k}2^k
  \ge {2^L\over L^2},
 \]
 
-se obtiene la cota firmada
+one obtains the signed bound
 
 \[
  \boxed{
@@ -325,49 +326,49 @@ se obtiene la cota firmada
  \ge {2^{N+L}\over L^2}-4.}                              \tag{19}
 \]
 
-En particular, con \(N=2L\) y \(L\) par, el cuarteto completo produce
-\(\ge2^{3L}/L^2-4\). No hay cancelación escondida al añadir el conjugado.
-El mismo cuarteto deja idéntica la fase sobre la línea crítica, como en
-`104_41`, y la frecuencia conjugada \(+\pi/2\) da la orientación
-conjugada. Esto pasa el falsificador off-line obligatorio.
+In particular, with \(N=2L\) and \(L\) even, the full quartet produces
+\(\ge2^{3L}/L^2-4\). There is no hidden cancellation when adding the
+conjugate. The same quartet leaves the phase on the critical line
+unchanged, as in `104_41`, and the conjugate frequency \(+\pi/2\) gives
+the conjugate orientation. This passes the mandatory off-line falsifier.
 
-El cuarteto no posee el Euler producto de los primos ordinarios. No refuta
-una cota específica de \(\Lambda(m)\); refuta transportar (10) sin la suma
-de residuos (15).
+The quartet does not have the Euler product of the ordinary primes. It
+does not refute a specific bound on \(\Lambda(m)\); it refutes
+transporting (10) without the residue sum (15).
 
 ---
 
-## 7. Veredicto
+## 7. Verdict
 
-**Probado:** identidad del test modulado (6), cota uniforme de fase (1),
-Parseval (11), criterio uniparamétrico (2), transporte exacto (15) y
-resonancia (16).
+**Proved:** the modulated test identity (6), the uniform phase bound (1),
+Parseval (11), the one-parameter criterion (2), the exact transport
+(15), and the resonance (16).
 
-**Ganancia:** el target de selectores de `104_106` se reduce a una
-familia continua de una sola frecuencia. La norma uniforme de filtros
-emparejados es una condición subexponencial concreta, conserva el andamiaje
-Li--Laguerre y detecta cualquier excursión exterior por Parseval. Es una
-reducción de coordenadas, no una prueba ni un debilitamiento de la fuerza
-RH del target.
+**Gain:** the selector target of `104_106` is reduced to a continuous
+single-frequency family. The uniform norm of matched filters is a
+concrete subexponential condition, preserves the Li–Laguerre scaffolding,
+and detects any exterior excursion by Parseval. It is a coordinate
+reduction, not a proof nor a weakening of the target's RH strength.
 
-**Descartado:** que la estructura de Bohr, una modulación de Fourier o el
-promedio de Fejér permitan trasladar automáticamente la cota de fase desde
-\(a\ge4\) hasta \(a=1\).
+**Ruled out:** that Bohr structure, a Fourier modulation, or the Fejér
+average allow automatically carrying the phase bound from
+\(a\ge4\) down to \(a=1\).
 
-**Sobrevive:** una cota aritmética uniforme en \(\phi\) para
-\(\mathcal B^{\triangle}_{2L,L,1}(\phi)\), obtenida de los pesos literales
-\(\Lambda(m)\), con crecimiento \(e^{o(L)}\). Por (2), tal cota probaría
-RH.
+**Remains:** a \(\phi\)-uniform arithmetic bound for
+\(\mathcal B^{\triangle}_{2L,L,1}(\phi)\), obtained from the literal
+weights \(\Lambda(m)\), with growth \(e^{o(L)}\). By (2), such a bound
+would prove RH.
 
-**No probado:** esa cota en \(a=1\), A1 o RH.
+**Not proved:** that bound at \(a=1\), A1, or RH.
 
-## 8. Reproducción
+## 8. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 modulated_fejer_matched_filter_check.py
 ```
 
-El checker usa `Fraction` y racionales gaussianos. Verifica (6),
-(11), (14)--(19) en familias finitas exactas. La cota analítica de variación
-(8)--(10) está demostrada en el texto y no se sustituye por muestreo.
+The checker uses `Fraction` and Gaussian rationals. It verifies (6),
+(11), (14)–(19) on exact finite families. The analytic variation bound
+(8)–(10) is proved in the text and is not replaced by sampling.
+</content>

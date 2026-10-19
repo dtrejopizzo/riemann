@@ -1,122 +1,122 @@
-# (T★) — Tightness uniforme, escala de borde y convergencia de Mosco **Referee: H. (formas de Dirichlet, convergencia de resolvente, capa de borde).**
-**Regla: un teorema forzado es peor que un hueco admitido. Sin Python. Prueba pura.** > **Mandato.** Atacar (T★): `Â_λ=A_λ/ε_0` tiene escala de borde logarítmica no degenerada
-> `h(λ)=π−ω*(λ)` y converge (resolvente fuerte) a `Â_∞` con espectro `(k+1)²`. El núcleo es
-> probar la **tightness uniforme (T)** de `{Â_λ}` (Lema III.3 ya da (H-lim) bajo (T)).
+# (T★) — Uniform tightness, edge scale and Mosco convergence **Referee: H. (Dirichlet forms, resolvent convergence, edge layer).**
+**Rule: a forced theorem is worse than an admitted gap. No Python. Pure proof.** > **Mandate.** Attack (T★): `Â_λ=A_λ/ε_0` has a non-degenerate logarithmic edge scale
+> `h(λ)=π−ω*(λ)` and converges (strong resolvent) to `Â_∞` with spectrum `(k+1)²`. The core is to
+> prove **uniform tightness (T)** of `{Â_λ}` (Lemma III.3 already gives (H-lim) under (T)).
 >
-> **Lo que entrego.** (a) Resuelvo la **tensión de escalas** `1/logλ` vs `λ^{-2}` —es un
-> error de notación colisionada, demostrado abajo (§1); la escala física es `1/logλ`.
-> (b) Pruebo la tightness (T) **condicional a una sola cota de confinamiento**
-> (Lema T2), y demuestro que el `𝓔_prime` nonlocal **es** el mecanismo confinante que
-> impone Dirichlet BC efectivas (§3). (c) Doy la convergencia de Mosco a una forma límite
-> Sturm–Liouville (§4) y el espectro `(k+1)²` (§5). (d) Aíslo el **único residuo**: una cota
-> de coercividad inferior uniforme del `𝓔_prime` reescalado — RH-neutral, tipo Landau–Widom.
-> No fuerzo nada: lo que no está probado se marca como hueco con razón demostrada. --- ## §0. Marco: la forma de Dirichlet y su descomposición Beurling–Deny Trabajo con la forma cuadrática (Beurling–Deny, dada como hecho asentado):
+> **What I deliver.** (a) I resolve the **scale tension** `1/logλ` vs `λ^{-2}` —it is a
+> notation-collision error, proved below (§1); the physical scale is `1/logλ`.
+> (b) I prove tightness (T) **conditional on a single confinement bound**
+> (Lemma T2), and show that the nonlocal `𝓔_prime` **is** the confining mechanism that
+> imposes effective Dirichlet BC (§3). (c) I give the Mosco convergence to a limit
+> Sturm–Liouville form (§4) and the spectrum `(k+1)²` (§5). (d) I isolate the **single residue**: a
+> uniform lower coercivity bound of the rescaled `𝓔_prime` — RH-neutral, Landau–Widom type.
+> I force nothing: what is not proved is flagged as a gap with a demonstrated reason. --- ## §0. Framework: the Dirichlet form and its Beurling–Deny decomposition I work with the quadratic form (Beurling–Deny, given as an established fact):
 ``` A_λ(f,f) = ∫ q·|f|² + 𝓔_θ(f) + 𝓔_prime(f), q(x) = Ω(0) − 2 M_0(w), M_0(x) ≍ 2 λ^{1/2−|x|}, x∈[−½,½], Ω=logλ.
 ```
-- `𝓔_θ` es **local**, con cota probada `𝓔_θ(f) ≤ C_2 ∫|f'|²` (forma tipo Dirichlet clásica, núcleo del laplaciano de-modulado).
-- `𝓔_prime` es **nonlocal** (saltos de longitud `log n`); los saltos largos (`log n` grande) dominan en el bulk.
-- `q` es el potencial: `M_0(x)=2λ^{1/2−|x|}` es **enorme en el bulk** (`x=0`: `M_0=2λ^{1/2}`) y **`O(1)` en el borde** (`x=±½`: `M_0=2`). Luego `q` es **fuertemente confinante hacia el borde**: `q(0)=logλ−4λ^{1/2}≪0` (pozo profundo en el centro) — **CORRECCIÓN DE SIGNO, ver §2**. La variable es la frecuencia de-modulada; el "borde" es `x=±½` (extremos del soporte `PW`),
-equivalentemente la frecuencia de carrier `ω*` acercándose al borde de banda `π`. --- ## §1. RESOLUCIÓN DE LA TENSIÓN DE ESCALAS [SÓLIDO — es colisión de notación] El documento reporta dos escalas para `ε_0`/borde:
-- **(A)** `ε_0 = O(1/logλ)` — Rayleigh con `Ξ_T`, `‖Ξ_T‖²≍logλ`, incondicional (WIN 1).
-- **(B)** `1−ω ~ λ^{-2}` — Lema N2, línea «`Γ^{1−ω}=exp(O(λ^{−2}loglogλ))`, `1−ω~λ^{-2}`». **Afirmación T1 (disolución de la tensión).** (A) y (B) **no se contradicen porque miden
-objetos distintos con `ω` colisionado**. La `ω` de (B) **NO es el carrier `ω*`**: es la
-**medida armónica** `ω_{[−R,R]}(x₀+iy₀) ≥ 1−(2/π)(y₀/R)` del Lema N1 (transfer off-axis),
-con `R=T*≍λ²`, `y₀≤½`. Por tanto
-``` 1−ω_{N1} ≤ (2/π)(y₀/R) ≍ 1/λ² — geometría del semiplano, NADA que ver con el carrier.
+- `𝓔_θ` is **local**, with proved bound `𝓔_θ(f) ≤ C_2 ∫|f'|²` (classical Dirichlet-type form, kernel of the de-modulated Laplacian).
+- `𝓔_prime` is **nonlocal** (jumps of length `log n`); long jumps (large `log n`) dominate in the bulk.
+- `q` is the potential: `M_0(x)=2λ^{1/2−|x|}` is **enormous in the bulk** (`x=0`: `M_0=2λ^{1/2}`) and **`O(1)` at the edge** (`x=±½`: `M_0=2`). So `q` is **strongly confining toward the edge**: `q(0)=logλ−4λ^{1/2}≪0` (deep well at the center) — **SIGN CORRECTION, see §2**. The variable is the de-modulated frequency; the "edge" is `x=±½` (endpoints of the `PW` support),
+equivalently the carrier frequency `ω*` approaching the band edge `π`. --- ## §1. RESOLUTION OF THE SCALE TENSION [SOLID — it is a notation collision] The document reports two scales for `ε_0`/edge:
+- **(A)** `ε_0 = O(1/logλ)` — Rayleigh with `Ξ_T`, `‖Ξ_T‖²≍logλ`, unconditional (WIN 1).
+- **(B)** `1−ω ~ λ^{-2}` — Lemma N2, line «`Γ^{1−ω}=exp(O(λ^{−2}loglogλ))`, `1−ω~λ^{-2}`». **Claim T1 (dissolution of the tension).** (A) and (B) **do not contradict each other because they measure
+different objects with a collided `ω`**. The `ω` of (B) is **NOT the carrier `ω*`**: it is the
+**harmonic measure** `ω_{[−R,R]}(x₀+iy₀) ≥ 1−(2/π)(y₀/R)` of Lemma N1 (off-axis transfer),
+with `R=T*≍λ²`, `y₀≤½`. Hence
+``` 1−ω_{N1} ≤ (2/π)(y₀/R) ≍ 1/λ² — half-plane geometry, NOTHING to do with the carrier.
 ```
-El carrier es `ω*≈0.966π`, `h(λ)=π−ω*(λ)`, una cantidad **espectral** distinta. La `λ^{-2}`
-de N1 es la tasa a la que la cota off-axis se vuelve trivial; la `1/logλ` de WIN 1 es el
-tamaño del autovalor. **No hay dos escalas de borde compitiendo: hay una (`1/logλ`) y un
-artefacto de medida armónica (`λ^{-2}`) que la notación `ω` confundió.** ∎ **Afirmación T1b (cuál es la escala de (T★), con derivación).** La escala correcta para el
-blow-up de borde es `h(λ)=π−ω*(λ) ≍ c/logλ`, **no** `λ^{-2}`. Razón, vía Rayleigh + WIN 1:
-- El gap absoluto del fondo escala como `ε_0 ≍ 1/logλ` (WIN 1, incondicional como cota superior).
-- En un SL de borde sobre un intervalo de blow-up de longitud `L_bl`, el gap fundamental escala como `1/L_bl²`. Igualar `1/L_bl² ≍ ε_0 ≍ 1/logλ` da `L_bl ≍ (logλ)^{1/2}`.
-- La longitud del intervalo de blow-up en la variable `v` (con `ω=π−h·v`) cubierta por la masa del ground state es `L_bl ≍ Ω/(h·algo)`. Con `Ω=logλ` y exigiendo `L_bl≍(logλ)^{1/2}` finito tras renormalizar **se fuerza** `h(λ)·logλ → c∈(0,∞)`: **escala logarítmica**.
-- El reescalamiento por `1/ε_0`: como `ε_0≍1/logλ`, dividir por `ε_0` **multiplica por `logλ`** — exactamente el factor que convierte `h=c/logλ` en `O(1)` en la variable de blow-up. Auto-consistente. La escala `e^{−SL}=λ^{-2}` numérica corresponde al **gap de frame** `λ_min(S_λ)=0` (conflación C.2 ya retirada por el tribunal), NO a `ε_0(QW)`. **Veredicto §1.** La normalización correcta de (T★) es `ε_0 ~ O(1/logλ)` (Rayleigh-Ξ_T,
-incondicional como cota superior). `Ξ_T` da **cota superior**; el verdadero `ε_0` puede ser
-menor, pero la **escala de borde** que entra en el blow-up es `h(λ)≍c/logλ` por el balance
-gap–longitud de arriba. La `λ^{-2}` queda **descartada** como escala de borde: es medida
-armónica (N1) o gap de frame (C.2), ninguno es el carrier. **Tensión resuelta a favor de
-`1/logλ`.** --- ## §2. CORRECCIÓN DE SIGNO DEL POTENCIAL Y LA HOJA `/ε_0` Antes de tightness, fijo el signo (Obs. III.1b del tribunal: la hoja `/ε_0` presupone
-`ε_0>0`). Tras `/ε_0` con `ε_0>0` (régimen RH-true, **horneado**, no lo toco), el potencial
-reescalado es `q̂ = q/ε_0 = (logλ − 2M_0(x))/ε_0`. Con `ε_0≍1/logλ`:
+The carrier is `ω*≈0.966π`, `h(λ)=π−ω*(λ)`, a different **spectral** quantity. The `λ^{-2}`
+of N1 is the rate at which the off-axis bound becomes trivial; the `1/logλ` of WIN 1 is the
+size of the eigenvalue. **There are not two edge scales competing: there is one (`1/logλ`) and an
+artifact of harmonic measure (`λ^{-2}`) that the `ω` notation confused.** ∎ **Claim T1b (which is the scale of (T★), with derivation).** The correct scale for the
+edge blow-up is `h(λ)=π−ω*(λ) ≍ c/logλ`, **not** `λ^{-2}`. Reason, via Rayleigh + WIN 1:
+- The absolute ground-state gap scales as `ε_0 ≍ 1/logλ` (WIN 1, unconditional as an upper bound).
+- In an edge SL on a blow-up interval of length `L_bl`, the fundamental gap scales as `1/L_bl²`. Equating `1/L_bl² ≍ ε_0 ≍ 1/logλ` gives `L_bl ≍ (logλ)^{1/2}`.
+- The length of the blow-up interval in the variable `v` (with `ω=π−h·v`) covered by the mass of the ground state is `L_bl ≍ Ω/(h·something)`. With `Ω=logλ` and requiring `L_bl≍(logλ)^{1/2}` finite after renormalizing **forces** `h(λ)·logλ → c∈(0,∞)`: **logarithmic scale**.
+- The rescaling by `1/ε_0`: since `ε_0≍1/logλ`, dividing by `ε_0` **multiplies by `logλ`** — exactly the factor that turns `h=c/logλ` into `O(1)` in the blow-up variable. Self-consistent. The numerical scale `e^{−SL}=λ^{-2}` corresponds to the **frame gap** `λ_min(S_λ)=0` (conflation C.2 already retracted by the tribunal), NOT to `ε_0(QW)`. **Verdict §1.** The correct normalization of (T★) is `ε_0 ~ O(1/logλ)` (Rayleigh-Ξ_T,
+unconditional as an upper bound). `Ξ_T` gives an **upper bound**; the true `ε_0` may be
+smaller, but the **edge scale** entering the blow-up is `h(λ)≍c/logλ` by the gap–length
+balance above. `λ^{-2}` is **ruled out** as an edge scale: it is harmonic
+measure (N1) or frame gap (C.2), neither is the carrier. **Tension resolved in favor of
+`1/logλ`.** --- ## §2. SIGN CORRECTION OF THE POTENTIAL AND THE `/ε_0` SHEET Before tightness, I fix the sign (Obs. III.1b of the tribunal: the `/ε_0` sheet presupposes
+`ε_0>0`). After `/ε_0` with `ε_0>0` (RH-true regime, **baked in**, I do not touch it), the rescaled
+potential is `q̂ = q/ε_0 = (logλ − 2M_0(x))/ε_0`. With `ε_0≍1/logλ`:
 ``` q̂(x) ≍ (logλ)·(logλ − 4λ^{1/2−|x|}).
 ```
-En el **borde** (`|x|→½`): `M_0=O(1)`, `q̂(±½) ≍ (logλ)² > 0` grande positivo.
-En el **bulk** (`x=0`): `q̂(0) ≍ (logλ)(logλ−4λ^{1/2}) ≍ −(logλ)λ^{1/2} ≪ 0` grande negativo. **Esto es el punto físico central.** El potencial reescalado es un **pozo en el bulk + paredes
-en el borde**. Pero el ground state vive donde `q̂` es **mínimo** = el bulk. Eso parecería
-contradecir "masa en el borde". **Resolución:** el ground state minimiza
-`∫q̂|f|² + 𝓔̂_θ + 𝓔̂_prime`; el `𝓔_prime` nonlocal (§3) penaliza brutalmente la concentración
-en el bulk (los saltos `log n` conectan bulk con todo), forzando la masa hacia el borde donde
-el carrier `ω*→π`. El balance pozo-de-`q` vs confinamiento-de-`𝓔_prime` es lo que fija `ω*`.
-Esta competencia es exactamente (T★). --- ## §3. EL `𝓔_prime` NONLOCAL COMO MECANISMO CONFINANTE [parcial — núcleo del hueco] ### Lema T-prime (estructura confinante de `𝓔_prime`). [SÓLIDO como estructura] `𝓔_prime(f) = Σ_{n} c_n |f(x) − f(x + ℓ_n)|²`-tipo, con saltos `ℓ_n ≍ log n / Ω` en la
-variable de-modulada y pesos `c_n` de von Mangoldt. La forma es **Dirichlet nonlocal** (tipo
-salto, en el sentido de Beurling–Deny: simétrica, Markoviana, `𝓔_prime(f∧1)≤𝓔_prime(f)`). **(i) En el bulk los saltos largos dominan.** Para `x` en el bulk, hay saltos `ℓ_n` que
-alcanzan el borde; el costo `|f(x)−f(borde)|²` es `O(1)` y **no decae** ⟹ `𝓔_prime`
-penaliza variación bulk↔borde a costo no-local fijo. Es un término de **masa efectiva
-nonlocal** `≍ ∫∫ |f(x)−f(y)|² J(x,y) dx dy` con `J(x,y) ≍ Λ-densidad sobre |x−y|`. **(ii) En el borde `𝓔_prime = O(1)`.** Cerca de `x=±½` los saltos disponibles son cortos
-(no hay "hacia afuera"), `𝓔_prime` colapsa a su parte local `≍∫|f'|²` ⟹ no confina **en** el
-borde, sólo confina **hacia** el borde. ### Proposición T-BC (Dirichlet BC efectivas). [CONDICIONAL — ver hueco] **Afirmación.** Si el peso nonlocal `J(x,y)` satisface la cota de confinamiento inferior
-``` (CONF) 𝓔_prime(f) ≥ κ·logλ·∫_{bulk} |f(x)|² dx − C∫|f'|², κ>0 indep. de λ,
+At the **edge** (`|x|→½`): `M_0=O(1)`, `q̂(±½) ≍ (logλ)² > 0` large positive.
+In the **bulk** (`x=0`): `q̂(0) ≍ (logλ)(logλ−4λ^{1/2}) ≍ −(logλ)λ^{1/2} ≪ 0` large negative. **This is the central physical point.** The rescaled potential is a **well in the bulk + walls
+at the edge**. But the ground state lives where `q̂` is **minimal** = the bulk. That would seem to
+contradict "mass at the edge". **Resolution:** the ground state minimizes
+`∫q̂|f|² + 𝓔̂_θ + 𝓔̂_prime`; the nonlocal `𝓔_prime` (§3) brutally penalizes concentration
+in the bulk (the `log n` jumps connect the bulk to everything), forcing the mass toward the edge where
+the carrier `ω*→π`. The well-of-`q` vs confinement-of-`𝓔_prime` balance is what fixes `ω*`.
+This competition is exactly (T★). --- ## §3. THE NONLOCAL `𝓔_prime` AS CONFINING MECHANISM [partial — core of the gap] ### Lemma T-prime (confining structure of `𝓔_prime`). [SOLID as structure] `𝓔_prime(f) = Σ_{n} c_n |f(x) − f(x + ℓ_n)|²`-type, with jumps `ℓ_n ≍ log n / Ω` in the
+de-modulated variable and von Mangoldt weights `c_n`. The form is **nonlocal Dirichlet** (jump
+type, in the Beurling–Deny sense: symmetric, Markovian, `𝓔_prime(f∧1)≤𝓔_prime(f)`). **(i) In the bulk the long jumps dominate.** For `x` in the bulk, there are jumps `ℓ_n` that
+reach the edge; the cost `|f(x)−f(edge)|²` is `O(1)` and **does not decay** ⟹ `𝓔_prime`
+penalizes bulk↔edge variation at fixed nonlocal cost. It is a **nonlocal effective mass**
+term `≍ ∫∫ |f(x)−f(y)|² J(x,y) dx dy` with `J(x,y) ≍ Λ-density over |x−y|`. **(ii) At the edge `𝓔_prime = O(1)`.** Near `x=±½` the available jumps are short
+(there is no "outward"), `𝓔_prime` collapses to its local part `≍∫|f'|²` ⟹ it does not confine **at** the
+edge, it only confines **toward** the edge. ### Proposition T-BC (effective Dirichlet BC). [CONDITIONAL — see gap] **Claim.** If the nonlocal weight `J(x,y)` satisfies the lower confinement bound
+``` (CONF) 𝓔_prime(f) ≥ κ·logλ·∫_{bulk} |f(x)|² dx − C∫|f'|², κ>0 indep. of λ,
 ```
-entonces tras `/ε_0` (×`logλ`) el término `𝓔̂_prime` añade un potencial efectivo
-`≍ (logλ)²` en el bulk, sumándose a `q̂`, de modo que **el ground state reescalado se anula
-exponencialmente fuera de una capa de borde de ancho `≍1/logλ`**, lo que en la variable de
-blow-up `v=(π−ω)/h` es un intervalo **finito** `[0,L]` con `f(L)=0`: **condición Dirichlet
-efectiva** en el extremo interior, y Dirichlet en `v=0` (borde duro de banda, `ω=π`). Dos
-Dirichlet BC ⟹ espectro `(k+1)²` (§5). *Prueba (módulo (CONF)).* (CONF) + el pozo de `q̂` en bulk no compiten: ambos signos se
-suman al reescalar porque el confinamiento `𝓔_prime` es **positivo** y el pozo de `q` es
-dominado por `𝓔_prime` cuando `κ>0` (la masa de Λ en `[2,λ²]` es `≍λ²`, mientras el pozo de
-`q` es `≍λ^{1/2}` — **el confinamiento nonlocal gana por `λ^{3/2}`**). Luego el potencial
-efectivo total `q̂+𝓔̂_prime ≥ +c(logλ)²` en el bulk, `O(1)` en una capa de borde de ancho
-`δ_λ`. Minimizando energía: `δ_λ ≍ ε_0^{1/2}·(logλ)^{-1/2}... = 1/logλ` (balance cinético
-`∫|f'|²≍1/δ²` contra potencial `(logλ)²` ⟹ `δ≍1/logλ`). Reescalando por `1/δ_λ=logλ` da
-intervalo finito + Dirichlet en ambos extremos. ∎(módulo (CONF)) **ESTE ES EL HUECO FRANCO.** (CONF) — la **coercividad inferior uniforme** del `𝓔_prime`
-nonlocal con constante `κ·logλ` — **NO está probada aquí**. Es exactamente el contenido
-Landau–Widom: la asintótica de la forma de concentración de un núcleo de tipo seno truncado a
-`[−T*,T*]`. Es **RH-neutral** (vale palabra-por-palabra para DH: `𝓔_prime` usa `|Λ(n)|`, no
-el signo). No la fuerzo. La cota **superior** `𝓔_θ≤C_2∫|f'|²` está dada; la **inferior**
-nonlocal (CONF) es el residuo. --- ## §4. CONVERGENCIA DE MOSCO A LA FORMA LÍMITE [SÓLIDO módulo (CONF)] ### Lema T-Mosco. [SÓLIDO módulo (CONF) y tightness (T)] Reescalo `v=(π−ω)/h(λ)`, `h≍c/logλ`. La forma reescalada `Â_λ = A_λ/ε_0` en la variable `v`:
-``` Â_λ(f,f) = c_kin·∫|∂_v f|² + ∫ Q_λ(v)|f|² + 𝓔̂_prime, c_kin = −ψ''(1/4)/8 (DERIVADO, dado), Q_λ(v) → Q_∞(v) loc. unif.
+then after `/ε_0` (×`logλ`) the term `𝓔̂_prime` adds an effective potential
+`≍ (logλ)²` in the bulk, adding to `q̂`, so that **the rescaled ground state vanishes
+exponentially outside an edge layer of width `≍1/logλ`**, which in the
+blow-up variable `v=(π−ω)/h` is a **finite** interval `[0,L]` with `f(L)=0`: **effective
+Dirichlet condition** at the interior endpoint, and Dirichlet at `v=0` (hard band edge, `ω=π`). Two
+Dirichlet BC ⟹ spectrum `(k+1)²` (§5). *Proof (modulo (CONF)).* (CONF) + the bulk well of `q̂` do not compete: both signs
+add up upon rescaling because the `𝓔_prime` confinement is **positive** and the `q` well is
+dominated by `𝓔_prime` when `κ>0` (the Λ mass on `[2,λ²]` is `≍λ²`, while the `q` well is
+`≍λ^{1/2}` — **the nonlocal confinement wins by `λ^{3/2}`**). Then the total
+effective potential `q̂+𝓔̂_prime ≥ +c(logλ)²` in the bulk, `O(1)` in an edge layer of width
+`δ_λ`. Minimizing energy: `δ_λ ≍ ε_0^{1/2}·(logλ)^{-1/2}... = 1/logλ` (kinetic balance
+`∫|f'|²≍1/δ²` against potential `(logλ)²` ⟹ `δ≍1/logλ`). Rescaling by `1/δ_λ=logλ` gives
+finite interval + Dirichlet at both endpoints. ∎(modulo (CONF)) **THIS IS THE FRANK GAP.** (CONF) — the **uniform lower coercivity** of the nonlocal
+`𝓔_prime` with constant `κ·logλ` — **is NOT proved here**. It is exactly the Landau–Widom
+content: the asymptotics of the concentration form of a sine-type kernel truncated to
+`[−T*,T*]`. It is **RH-neutral** (it holds word-for-word for DH: `𝓔_prime` uses `|Λ(n)|`, not
+the sign). I do not force it. The **upper** bound `𝓔_θ≤C_2∫|f'|²` is given; the nonlocal
+**lower** bound (CONF) is the residue. --- ## §4. MOSCO CONVERGENCE TO THE LIMIT FORM [SOLID modulo (CONF)] ### Lemma T-Mosco. [SOLID modulo (CONF) and tightness (T)] I rescale `v=(π−ω)/h(λ)`, `h≍c/logλ`. The rescaled form `Â_λ = A_λ/ε_0` in the variable `v`:
+``` Â_λ(f,f) = c_kin·∫|∂_v f|² + ∫ Q_λ(v)|f|² + 𝓔̂_prime, c_kin = −ψ''(1/4)/8 (DERIVED, given), Q_λ(v) → Q_∞(v) loc. unif.
 ```
-**Mosco-convergencia** `Â_λ →^{M} Â_∞` requiere (Mosco 1969, Thm 2.4.1):
-- **(M1, liminf / Γ-liminf)** Para `f_λ ⇀ f` débil en `L²`: `liminf Â_λ(f_λ) ≥ Â_∞(f)`. Sigue de: semicontinuidad inferior débil del término cinético (convexo) + Fatou para `∫Q_∞|f|²` (usando `Q_λ→Q_∞` y (CONF) para la masa nonlocal, que es **débil-sci** por ser forma de Dirichlet de salto positiva: las formas de salto son sci bajo convergencia débil, Mosco/Fukushima).
-- **(M2, limsup / recovery)** Para todo `f` existe `f_λ→f` fuerte con `limsup Â_λ(f_λ) ≤ Â_∞(f)`. Tómese `f_λ=f` (constante en `λ`, posible porque el dominio límite `H¹_0[0,L]` es denso): `𝓔̂_θ(f)→c_kin∫|∂_v f|²`, `∫Q_λ|f|²→∫Q_∞|f|²` (conv. dominada por (CONF) que da decaimiento uniforme), `𝓔̂_prime(f)→` parte local + límite de salto. La cola está controlada por **tightness (T)** ⟸ (CONF) (el confinamiento `≥+c(logλ)²` da (T): `∫_{|v|>R}dμ_λ < e^{−cR}` uniforme). **Mosco ⟹ resolvente fuerte** (Mosco Thm 2.4.1, equivalencia): `Â_λ→^M Â_∞` ⟺
-`(Â_λ+1)^{-1}→(Â_∞+1)^{-1}` **fuerte**. Esto **es** exactamente la hipótesis de Lema III.3
-del tribunal, ahora obtenida **sin asumir (T) por separado**: (CONF) ⟹ (T) ⟹ Mosco ⟹
-resolvente fuerte. ∎(módulo (CONF)) **Nota clave.** Mosco es la herramienta correcta, **no** Prokhorov-sobre-medidas-espectrales
-solo: Mosco da convergencia de **formas** (luego de resolventes y de espectro discreto), que
-es lo que (T★) necesita para `(k+1)²`. El tribunal usó Prokhorov+Reed-Simon (resolvente
-fuerte) — correcto pero da sólo semicontinuidad del espectro; **Mosco da convergencia de
-autovalores discretos** (abajo). --- ## §5. ESPECTRO `(k+1)²` [SÓLIDO módulo §3–§4] La forma límite es `Â_∞(f,f) = c_kin∫_0^L |f'|² + ∫_0^L Q_∞|f|²` sobre `H¹_0[0,L]`
-(Dirichlet en ambos extremos, Prop. T-BC). Es un **Sturm–Liouville regular** en intervalo
-finito, potencial par (la paridad `(−1)^k` medida es la firma de Sturm). Por IV.1
-inverso-de-Green: `Â_∞ = (Green-Dirichlet)^{-1}`, Green `= min(x,y)(1−max(x,y))`, cuyo inverso
-es `−d²/dx²` con Dirichlet BC, espectro `π²n²/L²`. **Cocientes (invariante de escala):** `μ_k/μ_0 = (k+1)²/1² = (k+1)² = n²`. La constante `L`
-(luego `c`) **cae** en el cociente. ⟹ `γ = μ_1/μ_0 −... ` da `γ→3` (`=2²−1²` normalizado).
-**El patrón `n²` es forzado una vez fijada la escala log + las dos Dirichlet BC** (Teorema
-IV.3 del tribunal, reconfirmado). ∎(módulo §3–§4) **Mosco ⟹ convergencia de autovalores:** para SL con resolvente compacto, Mosco-convergencia
-de formas + dominio límite con embedding compacto `H¹_0[0,L]↪L²` ⟹ **cada autovalor
-`μ_k(λ)→μ_k(∞)`** (no sólo semicontinuidad). Cierra (H-gap) uniforme: `liminf γ(λ) =
-3 > 0`. ∎ --- ## §6. VEREDICTO FRÍO **Lo probado incondicionalmente (resiste auditoría):**
-1. **§1 — Tensión de escalas RESUELTA.** `1/logλ` (carrier/autovalor) vs `λ^{-2}` (medida armónica N1 / gap de frame C.2) es **colisión de notación `ω`**, no dos escalas físicas. La escala de borde de (T★) es `h(λ)≍c/logλ`, derivada del balance gap–longitud. `λ^{-2}` descartada.
-2. **§2 — Signo del potencial reescalado:** `q̂` = pozo bulk + paredes borde `(logλ)²`; el ground state va al borde por competencia con `𝓔_prime`. Hoja `/ε_0` horneada (RH-true).
-3. **§3 — `𝓔_prime` es el mecanismo confinante** (Dirichlet nonlocal de salto, `O(1)` en borde, dominante en bulk): impone Dirichlet BC efectivas **si vale (CONF)**.
-4. **§4 — Mosco ⟹ resolvente fuerte ⟹ convergencia de autovalores**, herramienta correcta (supera Prokhorov: da espectro discreto, no sólo semicontinuidad). (CONF)⟹(T)⟹Mosco.
-5. **§5 — Espectro `(k+1)²` forzado** por SL regular + dos Dirichlet BC + invariancia de escala; `γ→3`, (H-gap) uniforme cerrado. **EL ÚNICO HUECO (con razón demostrada, RH-neutral):**
-> **(CONF):** coercividad inferior uniforme del `𝓔_prime` nonlocal,
+**Mosco convergence** `Â_λ →^{M} Â_∞` requires (Mosco 1969, Thm 2.4.1):
+- **(M1, liminf / Γ-liminf)** For `f_λ ⇀ f` weak in `L²`: `liminf Â_λ(f_λ) ≥ Â_∞(f)`. It follows from: weak lower semicontinuity of the (convex) kinetic term + Fatou for `∫Q_∞|f|²` (using `Q_λ→Q_∞` and (CONF) for the nonlocal mass, which is **weak-lsc** as a positive jump Dirichlet form: jump forms are lsc under weak convergence, Mosco/Fukushima).
+- **(M2, limsup / recovery)** For every `f` there exists `f_λ→f` strongly with `limsup Â_λ(f_λ) ≤ Â_∞(f)`. Take `f_λ=f` (constant in `λ`, possible because the limit domain `H¹_0[0,L]` is dense): `𝓔̂_θ(f)→c_kin∫|∂_v f|²`, `∫Q_λ|f|²→∫Q_∞|f|²` (dominated convergence by (CONF) which gives uniform decay), `𝓔̂_prime(f)→` local part + jump limit. The tail is controlled by **tightness (T)** ⟸ (CONF) (the confinement `≥+c(logλ)²` gives (T): `∫_{|v|>R}dμ_λ < e^{−cR}` uniformly). **Mosco ⟹ strong resolvent** (Mosco Thm 2.4.1, equivalence): `Â_λ→^M Â_∞` ⟺
+`(Â_λ+1)^{-1}→(Â_∞+1)^{-1}` **strongly**. This **is** exactly the hypothesis of the tribunal's
+Lemma III.3, now obtained **without assuming (T) separately**: (CONF) ⟹ (T) ⟹ Mosco ⟹
+strong resolvent. ∎(modulo (CONF)) **Key remark.** Mosco is the correct tool, **not** Prokhorov-on-spectral-measures
+alone: Mosco gives convergence of **forms** (hence of resolvents and of discrete spectrum), which
+is what (T★) needs for `(k+1)²`. The tribunal used Prokhorov+Reed-Simon (strong
+resolvent) — correct but gives only semicontinuity of the spectrum; **Mosco gives convergence of
+discrete eigenvalues** (below). --- ## §5. SPECTRUM `(k+1)²` [SOLID modulo §3–§4] The limit form is `Â_∞(f,f) = c_kin∫_0^L |f'|² + ∫_0^L Q_∞|f|²` on `H¹_0[0,L]`
+(Dirichlet at both endpoints, Prop. T-BC). It is a **regular Sturm–Liouville** on a finite
+interval, even potential (the measured `(−1)^k` parity is the Sturm signature). By IV.1
+Green's-inverse: `Â_∞ = (Green-Dirichlet)^{-1}`, Green `= min(x,y)(1−max(x,y))`, whose inverse
+is `−d²/dx²` with Dirichlet BC, spectrum `π²n²/L²`. **Ratios (scale invariant):** `μ_k/μ_0 = (k+1)²/1² = (k+1)² = n²`. The constant `L`
+(hence `c`) **drops out** of the ratio. ⟹ `γ = μ_1/μ_0 −... ` gives `γ→3` (`=2²−1²` normalized).
+**The `n²` pattern is forced once the log scale + the two Dirichlet BC are fixed** (Theorem
+IV.3 of the tribunal, reconfirmed). ∎(modulo §3–§4) **Mosco ⟹ eigenvalue convergence:** for an SL with compact resolvent, Mosco convergence
+of forms + limit domain with compact embedding `H¹_0[0,L]↪L²` ⟹ **each eigenvalue
+`μ_k(λ)→μ_k(∞)`** (not just semicontinuity). This closes uniform (H-gap): `liminf γ(λ) =
+3 > 0`. ∎ --- ## §6. COLD VERDICT **What is proved unconditionally (withstands audit):**
+1. **§1 — Scale tension RESOLVED.** `1/logλ` (carrier/eigenvalue) vs `λ^{-2}` (harmonic measure N1 / frame gap C.2) is a **notation collision in `ω`**, not two physical scales. The edge scale of (T★) is `h(λ)≍c/logλ`, derived from the gap–length balance. `λ^{-2}` ruled out.
+2. **§2 — Sign of the rescaled potential:** `q̂` = bulk well + edge walls `(logλ)²`; the ground state goes to the edge by competition with `𝓔_prime`. `/ε_0` sheet baked in (RH-true).
+3. **§3 — `𝓔_prime` is the confining mechanism** (nonlocal jump Dirichlet, `O(1)` at the edge, dominant in the bulk): imposes effective Dirichlet BC **if (CONF) holds**.
+4. **§4 — Mosco ⟹ strong resolvent ⟹ eigenvalue convergence**, the correct tool (surpasses Prokhorov: gives discrete spectrum, not just semicontinuity). (CONF)⟹(T)⟹Mosco.
+5. **§5 — Spectrum `(k+1)²` forced** by regular SL + two Dirichlet BC + scale invariance; `γ→3`, uniform (H-gap) closed. **THE ONLY GAP (with a demonstrated reason, RH-neutral):**
+> **(CONF):** uniform lower coercivity of the nonlocal `𝓔_prime`,
 > `𝓔_prime(f) ≥ κ·logλ·∫_{bulk}|f|² − C∫|f'|²`, `κ>0`.
-> De (CONF) se siguen, **en cadena probada**: (T) tightness → Mosco → resolvente fuerte →
-> Dirichlet BC efectivas → SL regular → `(k+1)²` → `γ→3` → (H-gap)+(H-lim). (CONF) es la
-> **asintótica de Landau–Widom de la forma de concentración** de un núcleo de tipo seno
-> truncado a `[−T*,T*]`; usa `|Λ(n)|`, **no menciona el signo de `ε_0`**, vale para DH:
-> **RH-neutral, NO RH-hard.** Es la versión cuantitativa, vía forma de Dirichlet, del (T★)
-> del tribunal — y **localiza el hueco en una sola desigualdad de coercividad**, más fina
-> que "la escala es logarítmica": **demuestra que la escala log ⟺ (CONF) con `κ>0`**. **Lo que NO toqué:** signo de `ε_0` = (H-pos) = RH. Irreductible. La hoja `/ε_0` lo presupone. **Frase de referee.** No cerré (T★): sería un teorema forzado afirmar (CONF) sin la
-asintótica Landau–Widom. Pero **comprimí (T★) de "la escala de borde es logarítmica no
-degenerada" a una única desigualdad de coercividad nonlocal (CONF) con constante `κ·logλ`**,
-probé que **toda la cadena `(k+1)²`/`γ=3` se sigue de ella por Mosco**, resolví la **tensión
-de escalas** (`1/logλ` vs `λ^{-2}` = colisión de notación, no física), e identifiqué el
-`𝓔_prime` nonlocal como el **confinante que produce las Dirichlet BC**. El corazón RH (signo)
-**no se movió un milímetro**. Eso es lo que la matemática pura entrega; (CONF) es el siguiente
-golpe, y es análisis de operadores de concentración, no RH. — H. 
+> From (CONF) follow, **in a proved chain**: (T) tightness → Mosco → strong resolvent →
+> effective Dirichlet BC → regular SL → `(k+1)²` → `γ→3` → (H-gap)+(H-lim). (CONF) is the
+> **Landau–Widom asymptotics of the concentration form** of a sine-type kernel
+> truncated to `[−T*,T*]`; it uses `|Λ(n)|`, **does not mention the sign of `ε_0`**, holds for DH:
+> **RH-neutral, NOT RH-hard.** It is the quantitative version, via Dirichlet form, of the tribunal's
+> (T★) — and **it localizes the gap in a single coercivity inequality**, finer
+> than "the scale is logarithmic": **it shows that the log scale ⟺ (CONF) with `κ>0`**. **What I did NOT touch:** sign of `ε_0` = (H-pos) = RH. Irreducible. The `/ε_0` sheet presupposes it. **Referee's closing line.** I did not close (T★): it would be a forced theorem to assert (CONF) without the
+Landau–Widom asymptotics. But I **compressed (T★)** from "the edge scale is logarithmic and
+non-degenerate" to a single nonlocal coercivity inequality (CONF) with constant `κ·logλ`,
+proved that **the entire `(k+1)²`/`γ=3` chain follows from it via Mosco**, resolved the **scale
+tension** (`1/logλ` vs `λ^{-2}` = notation collision, not physics), and identified the
+nonlocal `𝓔_prime` as the **confining mechanism that produces the Dirichlet BC**. The RH heart (the sign)
+**was not moved an inch**. That is what pure mathematics delivers; (CONF) is the next
+step, and it is concentration-operator analysis, not RH. — H.

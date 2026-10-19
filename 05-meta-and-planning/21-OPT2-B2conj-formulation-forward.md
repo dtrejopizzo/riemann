@@ -150,7 +150,7 @@ roots depend analytically and non-trivially on $\sigma$) --- a finite, RH-indepe
 
 ## 7. CLOSURE (Day 43): the converse is a theorem in the localized-detector regime
 
-`phase-14/experiments/B2_autocorrelation_zeros.py` confirms the analytic picture exactly:
+`phase-14-off-diagonal-anchor-asymmetry/experiments/B2_autocorrelation_zeros.py` confirms the analytic picture exactly:
 - **(a)** the pure-Gaussian (lowest-mode) ground state has $c_0(u)>0$ for all $u$ (zero real zeros, all $\sigma$);
 - **(b)** a pure excited mode $H_k$ has autocorrelation $c_0(u)=L_k(u^2/2\sigma^2)e^{-u^2/4\sigma^2}$ with exactly $k$
   real zeros ($H_2\!\to\!2$, $H_4\!\to\!4$, $H_6\!\to\!6$, verified);

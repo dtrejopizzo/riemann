@@ -1,6 +1,5 @@
 # P123.019 — a multiplier-containing rapid algebra and local bimodule repair
 
-Date: 2026-09-05.
 
 ## Status and scope
 

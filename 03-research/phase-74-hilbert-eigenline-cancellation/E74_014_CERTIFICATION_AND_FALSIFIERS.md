@@ -1,6 +1,5 @@
 # E74.14 - Certification and falsifiers
 
-Date: 2026-07-16.
 
 ## Purpose
 

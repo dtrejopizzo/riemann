@@ -1,6 +1,5 @@
 # E73.141 - Local Divisor Row Theorem
 
-Date: 2026-07-12.
 
 ## 0. Audit position
 

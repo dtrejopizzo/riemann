@@ -1,101 +1,101 @@
-# Auditoría integral de las fases
+# Comprehensive audit of the phases
 
-## Dictamen
+## Verdict
 
-Las fases no forman una secuencia de más de cien cierres acumulativos. Forman una búsqueda con bifurcaciones, correcciones y numerosos cambios de coordenada. Hay resultados demostrados y reutilizables, pero ningún enlace incondicional desde la aritmética finita hasta \(\Omega_7\).
+The phases do not form a sequence of more than a hundred cumulative closures. They form a search with branches, corrections, and numerous coordinate changes. There are proved, reusable results, but no unconditional link from finite arithmetic to \(\Omega_7\).
 
-La trayectoria completa puede comprimirse así:
+The full trajectory can be compressed as follows:
 
 \[
 \begin{aligned}
-&\text{Weil localizado y operador}
-\to \text{no-go de signo}
-\to \text{Hodge/índice/geometría}\\
+&\text{localized Weil operator}
+\to \text{sign no-go}
+\to \text{Hodge/index/geometry}\\
 &\to \text{Connes/CCM}
-\to \text{Feshbach--Cauchy--adjugado}
+\to \text{Feshbach--Cauchy--adjugate}
 \to \text{LP+IDENT}\\
 &\to \text{RDI-ANCHOR}
-\to \text{corriente bordeada/divisor}
-\to \boxed{\text{identificación aritmética firmada abierta}}.
+\to \text{bordered current/divisor}
+\to \boxed{\text{signed arithmetic identification still open}}.
 \end{aligned}
 \]
 
-La caja final no se hizo más pequeña al cambiar de notación. Las fases recientes consiguieron identificar qué partes son álgebra finita, cuáles son convergencia y cuál es la identificación que debe fallar ante un divisor fuera de línea. También descubrieron que la atribución de toda la fuerza a un único `DISCRIMINANT` todavía no está probada.
+The final box did not shrink when the notation changed. The recent phases did manage to identify which parts are finite algebra, which are convergence, and which is the identification that must fail against an off-line divisor. They also found that attributing all the strength to a single `DISCRIMINANT` is still unproved.
 
-## Cobertura y anomalías del árbol
+## Tree coverage and anomalies
 
-Se revisaron los 101 directorios `phase-*`. Los rótulos 1 y 2 no existen; el rótulo 44 aparece en dos directorios. Se conservaron ambas ramas. Los detalles de lectura archivo por archivo están en los fragmentos enlazados al final.
+The 101 `phase-*` directories were reviewed. Labels 1 and 2 do not exist; label 44 appears in two directories. Both branches were kept. File-by-file reading details are in the fragments linked at the end.
 
-## Recorrido canónico por bloques
+## Canonical block-by-block tour
 
-| Fases | Trabajo real | Estado heredable |
+| Phases | Actual work | Inheritable status |
 |---|---|---|
-| 0 | Traducción a Weil, Connes y de Branges | Criterio y cartografía demostrados; fidelidad operatorial y signo global abiertos. |
-| 1–2 | Sin directorios | No se infiere contenido. |
-| 3 | Desigualdad uniforme y calibración | Detector numérico; el límite universal es equivalente a RH. |
-| 4 | Realización semibounded y Kreĭn | Varias identidades; coercividad central depende de hipótesis (H) y exige reauditoría de dominios. El no-go de obtener signo desde profundidades sobrevive. |
-| 5–9 | Residuos, OS, Carleson, calor y universalidad | Cierran mecanismos concretos de signo equivocado; no entregan positividad uniforme. |
-| 10–14 | Hodge regularizado, Jensen, caos y \(\omega\) | Resultados descriptivos y nuevas identidades independientes; el puente a ceros es estadístico o autorreferencial. |
-| 15–18 | SURF, Lefschetz, Pontryagin y resonancias | Especificación de una geometría faltante; no construcción global ni polarización independiente. |
-| 19–20 | Flujo directo desde primos a clases \(\omega\) | Matemática aritmética parcial; sin puente inverso a ceros. |
-| 21–25 | Defecto finito y distancia a la línea | Consecuencias bajo finitud del defecto; no excluyen infinitas órbitas ni distancias arbitrariamente pequeñas. |
-| 26–29 | Kreĭn–Connes, CCM y medida de déficit | Reducciones condicionales; promedio y momentos no fijan el cero individual. |
-| 30–38 | DBN, Selberg, Pontryagin, física y auditorías | Corrigen transferencias falsas y varias positividades; no construyen la medida o el índice global. |
-| 39–45 | G1/G2, Hodge, Deninger, Hodge–Witt y Fredholm | Juguetes y axiomas; faltan objeto, polarización, Fredholmicidad y lector de inercia. |
-| 46–50 | Pureza, dos primos, transversalidad y hebra diofántica | No-go de clases locales y promedios; queda sin teorema el transporte no local fase→inercia. |
-| 51–59 | Functor, homotopía, Stone, métrica e índice | Cierran rutas formales; sobreviven dos torres condicionales y no-go acotados. |
-| 60–63 | Discriminante de multiplicatividad, Cesàro y Lefschetz | Multiplicatividad y Cesàro refutados como palancas; Hodge cuaterniónico y Frobenius son detectores finitos. |
-| 64–71 | Connes, continuidad de signatura, rango uno, GLT, índice, Lee–Yang y aproximantes | La convergencia útil hacia \(\Xi\) tiene fuerza-RH. El QED de fase 65 queda retirado por correcciones posteriores. |
-| 72–75 | Feshbach, Cauchy, autolínea y adjugado | Muchas identidades finitas; `PW-Cauchy`, `HPR-DIV`, `EG_LOCK` y `ADJ-ARITH-LOCK` son el mismo faltante firmado. |
-| 76–79 | Razón segura, LP, IDENT, GAP-Z y discriminantes de nube | Corrigen el endpoint y producen un atlas; LP/GAP-Z no están probados y E79.6 no pasa de firma numérica/conjetural. |
-| 80–89 | Determinante relativo, coborde Euler, paridad, Abel, deformación y capa | Identidades exactas y autopsias; todas las rutas regresan a `RDI-ANCHOR`. |
-| 90–101 | Kato, cofactores, Jacobiano, respuesta prima, corriente covariante y divisor | Cambios exactos de coordenada del ancla; la identificación de soporte/multiplicidad sigue abierta y tiene fuerza-RH. |
+| 0 | Translation to Weil, Connes, and de Branges | Criterion and cartography proved; operator fidelity and the global sign remain open. |
+| 1–2 | No directories | No content can be inferred. |
+| 3 | Uniform inequality and calibration | Numerical detector; the universal limit is equivalent to RH. |
+| 4 | Semibounded realization and Kreĭn | Several identities; central coercivity depends on hypothesis (H) and requires re-auditing domains. The no-go for obtaining a sign from depths survives. |
+| 5–9 | Residues, OS, Carleson, heat, and universality | Close off concrete wrong-sign mechanisms; do not deliver uniform positivity. |
+| 10–14 | Regularized Hodge, Jensen, chaos, and \(\omega\) | Descriptive results and new independent identities; the bridge to zeros is statistical or self-referential. |
+| 15–18 | SURF, Lefschetz, Pontryagin, and resonances | A specification of a missing geometry; no global construction or independent polarization. |
+| 19–20 | Direct flow from primes to \(\omega\) classes | Partial arithmetic mathematics; no inverse bridge to zeros. |
+| 21–25 | Finite defect and distance to the line | Consequences under finiteness of the defect; do not exclude infinitely many orbits or arbitrarily small distances. |
+| 26–29 | Kreĭn–Connes, CCM, and deficit measure | Conditional reductions; averaging and moments do not fix the individual zero. |
+| 30–38 | dBN, Selberg, Pontryagin, physics, and audits | Correct false transfers and several positivities; do not construct the measure or the global index. |
+| 39–45 | G1/G2, Hodge, Deninger, Hodge–Witt, and Fredholm | Toy models and axioms; the object, polarization, Fredholm property, and inertia reader are missing. |
+| 46–50 | Purity, two primes, transversality, and the Diophantine thread | No-go results on local classes and averages; the non-local phase→inertia transport remains without a theorem. |
+| 51–59 | Functor, homotopy, Stone, metric, and index | Close off formal routes; two conditional towers and bounded no-gos survive. |
+| 60–63 | Multiplicativity discriminant, Cesàro, and Lefschetz | Multiplicativity and Cesàro refuted as levers; quaternionic Hodge and Frobenius are finite detectors. |
+| 64–71 | Connes, signature continuity, rank one, GLT, index, Lee–Yang, and approximants | Useful convergence toward \(\Xi\) has RH-strength. Phase 65's QED is withdrawn by later corrections. |
+| 72–75 | Feshbach, Cauchy, self-line, and adjugate | Many finite identities; `PW-Cauchy`, `HPR-DIV`, `EG_LOCK`, and `ADJ-ARITH-LOCK` are the same signed missing piece. |
+| 76–79 | Safe ratio, LP, IDENT, GAP-Z, and cloud discriminants | Correct the endpoint and produce an atlas; LP/GAP-Z are unproved and E79.6 does not go beyond a numerical/conjectural signature. |
+| 80–89 | Relative determinant, Euler coboundary, parity, Abel, deformation, and shell | Exact identities and autopsies; all routes return to `RDI-ANCHOR`. |
+| 90–101 | Kato, cofactors, Jacobian, prime response, covariant current, and divisor | Exact coordinate changes of the anchor; the support/multiplicity identification remains open and has RH-strength. |
 
-## Fases 0–25: detector, paredes y geometría faltante
+## Phases 0–25: detector, walls, and missing geometry
 
-La fase 0 identifica correctamente que la forma completa de Weil es el objeto natural. La fase 3 construye la instrumentación y ya reconoce que una desigualdad uniforme para toda la clase de tests sería RH. La fase 4 intenta una realización de Kreĭn; el resultado robusto es negativo: representar fielmente una forma no determina su signo. La coercividad que sostiene parte de la realización depende de una hipótesis de densidad uniforme y no debe citarse como incondicional.
+Phase 0 correctly identifies that the full Weil form is the natural object. Phase 3 builds the instrumentation and already recognizes that a uniform inequality over the whole test class would be RH. Phase 4 attempts a Kreĭn realization; the robust result is negative: faithfully representing a form does not determine its sign. The coercivity underpinning part of the realization depends on a uniform density hypothesis and must not be cited as unconditional.
 
-Las fases 5–11 prueban o experimentan varias maneras de obtener signo: descomposición residual, reflexión, Carleson, calor, universalidad, marcos de Riesz e hiperbolicidad. Cada ruta termina en una positividad equivalente o en una cota con dirección incorrecta. Las fases 12–14 abren el frente probabilístico y \(\omega\); producen estructura independiente, pero la ausencia de ceros no se deduce de estadísticas típicas. El intento \(\omega\to\) ceros se vuelve autorreferencial mediante factores construidos con \(\zeta\).
+Phases 5–11 prove or experiment with several ways of obtaining a sign: residual decomposition, reflection, Carleson, heat, universality, Riesz frames, and hyperbolicity. Every route ends in an equivalent positivity or a bound pointing the wrong way. Phases 12–14 open the probabilistic and \(\omega\) front; they produce independent structure, but the absence of zeros does not follow from typical statistics. The attempt \(\omega\to\) zeros becomes self-referential via factors built with \(\zeta\).
 
-Las fases 15–18 formulan el frente SURF/Hodge: una superficie, cohomología y polarización podrían imitar la prueba en cuerpos de funciones. El corpus no construye esos objetos. Los modelos funcionales o testbeds no equivalen a una geometría con correspondencias y un índice de Hodge.
+Phases 15–18 formulate the SURF/Hodge front: a surface, cohomology, and polarization could imitate the proof over function fields. The corpus does not build those objects. Functional models or testbeds are not equivalent to a geometry with correspondences and a Hodge index.
 
-Las fases 21–25 estudian un número finito de defectos fuera de línea. La paridad del índice y varias fórmulas de defecto son resultados condicionales útiles, pero todo depende de una Hipótesis D de finitud. El complemento de RH no tiene por qué satisfacerla.
+Phases 21–25 study a finite number of off-line defects. Index parity and several defect formulas are useful conditional results, but everything depends on a finiteness Hypothesis D. The complement of RH need not satisfy it.
 
-## Fases 26–50: promedio, Hodge y fase→inercia
+## Phases 26–50: averaging, Hodge, and phase→inertia
 
-La fase 26 no realiza el puente Kreĭn–Connes necesario. Las fases 27–33 exploran CCM, problemas de momentos, de Bruijn–Newman y medidas de déficit. El patrón es:
+Phase 26 does not carry out the necessary Kreĭn–Connes bridge. Phases 27–33 explore CCM, moment problems, de Bruijn–Newman, and deficit measures. The pattern is:
 
 \[
-\text{promedio pequeño o subsucesión convergente}
+\text{small average or convergent subsequence}
 \not\Rightarrow
-\text{átomo ausente o cero individual sobre la línea}.
+\text{absent atom or an individual zero on the line}.
 \]
 
-Las fases 39–45 formalizan G1/G2, Hodge dinámica, Hodge foliado y Fredholm. Los resultados dentro de juguetes o categorías supuestas son válidos en su dominio; la aplicación a \(\zeta\) necesita justamente la geometría o positividad que falta. La fase 41 señala correctamente que una positividad genérica no suministra el índice de Hodge particular.
+Phases 39–45 formalize G1/G2, dynamical Hodge, foliated Hodge, and Fredholm theory. The results within toy models or assumed categories are valid in their domain; the application to \(\zeta\) needs precisely the geometry or positivity that is missing. Phase 41 correctly points out that a generic positivity does not supply the particular Hodge index.
 
-Las fases 46–50 convierten afirmaciones optimistas en gaps explícitos. La transversalidad racional de \(\{\log p\}\) actúa en el toro de fases, pero no transporta esa información a inercia. Los no-go son de clases locales/tauberianas y de promedio; no descartan todo posible teorema diofántico no local.
+Phases 46–50 turn optimistic claims into explicit gaps. The rational transversality of \(\{\log p\}\) acts on the phase torus, but does not transport that information to inertia. The no-go results are about local/Tauberian classes and averaging; they do not rule out every possible non-local Diophantine theorem.
 
-La fase 27 conserva inconsistencias de metadatos. El rótulo 44 tiene dos ramas distintas y ambas deben citarse por nombre, no sólo por número.
+Phase 27 retains metadata inconsistencies. Label 44 has two distinct branches, and both must be cited by name, not only by number.
 
-## Fases 51–75: equivalencias y residuo firmado
+## Phases 51–75: equivalences and the signed residual
 
-Las fases 51–59 prueban que homotopía, Stone, métrica variable e índice abstracto no fuerzan la flecha aritmética. Entregan teoremas dentro de hipótesis y dos torres condicionales, no una cadena cerrada.
+Phases 51–59 prove that homotopy, Stone duality, a variable metric, and an abstract index do not force the arithmetic arrow. They deliver theorems within hypotheses and two conditional towers, not a closed chain.
 
-La fase 60 prueba numéricamente que su discriminante localizado no detecta multiplicatividad: controles suaves no multiplicativos superan a \(\zeta\). La fase 62 muestra que Cesàro conserva crecimiento de un defecto fuera de línea. La fase 63 no reproduce el mecanismo de Frobenius de cuerpos finitos.
+Phase 60 proves numerically that its localized discriminant does not detect multiplicativity: smooth non-multiplicative controls outperform \(\zeta\). Phase 62 shows that Cesàro summation preserves the growth of an off-line defect. Phase 63 does not reproduce the Frobenius mechanism from finite fields.
 
-Las fases 64–71 realizan un giro decisivo: toda construcción útil termina pidiendo que aproximantes con ceros reales converjan localmente a \(\Xi\), o que la signatura sobreviva al límite. Hurwitz hace entonces el resto. Esa convergencia no es un detalle; es una condición de fuerza-RH. En fase 65, el archivo que anuncia QED queda superado por las correcciones que dejan `D8.5` abierto.
+Phases 64–71 make a decisive turn: every useful construction ends up requiring that approximants with real zeros converge locally to \(\Xi\), or that the signature survive the limit. Hurwitz's theorem then does the rest. That convergence is not a detail; it is an RH-strength condition. In phase 65, the file announcing QED is superseded by later corrections that leave `D8.5` open.
 
-Las fases 72–75 aportan la infraestructura algebraica más rica del corpus:
+Phases 72–75 provide the richest algebraic infrastructure in the corpus:
 
 \[
-\text{fuga Feshbach}
-\to \text{corriente}
-\to \text{interpolación Cauchy}
-\to \text{divisibilidad}
-\to \text{adjugado bordeado}.
+\text{Feshbach leak}
+\to \text{current}
+\to \text{Cauchy interpolation}
+\to \text{divisibility}
+\to \text{bordered adjugate}.
 \]
 
-Sin embargo, los nombres terminales no son cuatro lemas distintos:
+However, the terminal names are not four distinct lemmas:
 
 \[
 \texttt{PW-Cauchy}
@@ -107,35 +107,35 @@ Sin embargo, los nombres terminales no son cuatro lemas distintos:
 \texttt{ADJ-ARITH-LOCK}.
 \]
 
-Todos exigen la misma cancelación aritmética firmada que no se obtiene de cotas absolutas, smoothing, gap único, dos jets ni pseudoinversa.
+All require the same signed arithmetic cancellation, which is not obtained from absolute bounds, smoothing, a single gap, two jets, or a pseudoinverse.
 
-## Fases 76–79: el punto donde apareció la espiral
+## Phases 76–79: where the spiral appeared
 
-La fase 76 corrige la ambigüedad de escala del autovector mediante una característica normalizada, construye cálculo en eje seguro y separa
+Phase 76 fixes the eigenvector scale ambiguity via a normalized characteristic, builds computation on a safe axis, and separates
 
 \[
 \texttt{SAFE-LIMIT-POINT}=\texttt{LP}+\texttt{IDENT}.
 \]
 
-Las identidades finitas y la cola Euler en \(\Re s>1\) sobreviven. `LP`, `IDENT`, `RDP-SHELL`, PROLATE y WEIL-TAIL siguen abiertos.
+The finite identities and the Euler tail for \(\Re s>1\) survive. `LP`, `IDENT`, `RDP-SHELL`, PROLATE, and WEIL-TAIL remain open.
 
-La fase 77 corrige la formulación literal de LP. Como \(H_L=D_L+B_L\) tiene resolvente compacto, el autovalor inferior \(\mu_L\) tiene núcleo no trivial. El blanco pasa a ser divergencia de energía `BTG-DIV` y contracción del disco bordeado. La neutralidad de LP frente al control plantado se proclamó desde Outcome A, pero la evidencia usa secciones finitas y un \(\mu_{\rm ref}\), no el verdadero límite en \(\mu_L\). Por eso:
+Phase 77 fixes the literal formulation of LP. Since \(H_L=D_L+B_L\) has compact resolvent, the lower eigenvalue \(\mu_L\) has nontrivial kernel. The target shifts to energy divergence `BTG-DIV` and the contraction of the bordered disk. LP's neutrality against the planted control was proclaimed starting from Outcome A, but the evidence uses finite sections and a \(\mu_{\rm ref}\), not the true limit at \(\mu_L\). Hence:
 
 \[
 \text{LP build-neutral}
-\quad\text{es todavía}\quad
-\textbf{CONDICIONAL},
+\quad\text{is still}\quad
+\textbf{CONDITIONAL},
 \]
 
-no un teorema.
+not a theorem.
 
-La fase 78 obtiene la descomposición exacta
+Phase 78 obtains the exact decomposition
 
 \[
 g_{N+2}-g_N=\texttt{ZERO}+\texttt{MESH}+\texttt{BND},
 \]
 
-con
+with
 
 \[
 \texttt{MESH}=O(N^{-2}),
@@ -143,57 +143,57 @@ con
 \texttt{BND}=O(N^{-3}).
 \]
 
-El término `ZERO` permanece abierto. Acotarlo por suma de magnitudes de shells está prohibido por la propia auditoría K3, porque borra la cancelación firmada. Éste es `GAP-Z`.
+The `ZERO` term remains open. Bounding it by a sum of shell magnitudes is forbidden by the K3 audit itself, because it erases the signed cancellation. This is `GAP-Z`.
 
-La fase 79 recorre una gran familia de proxies: cierre codimensión uno, balance, coherencia de nube, escape rango uno, leyes de dos escalas y número de cruces. Son sondas numéricas. Varias se corrigen entre sí: E78.154 se retracta; el número de cruces deja de discriminar; una deriva se anula al subir precisión; y `mean(d)` cambia silenciosamente de definición. E79.6 no quedó demostrado ni como necesidad ni como suficiencia para IDENT.
+Phase 79 goes through a large family of proxies: codimension-one closure, balance, cloud coherence, rank-one escape, two-scale laws, and crossing number. These are numerical probes. Several correct one another: E78.154 is retracted; the crossing number stops discriminating; a drift vanishes as precision is increased; and `mean(d)` silently changes definition. E79.6 was proved neither as necessary nor as sufficient for IDENT.
 
-La conclusión correcta no es “GAP-Z ya es neutral y DISCRIMINANT contiene exactamente toda RH”, sino:
+The correct conclusion is not "GAP-Z is already neutral and DISCRIMINANT contains exactly all of RH," but rather:
 
 \[
 \begin{cases}
-\texttt{GAP-Z}:&\text{convergencia firmada abierta, diseñada para ser neutral};\\
-\texttt{DISCRIMINANT}:&\text{separador aritmético propuesto, numérico/conjetural};\\
-\texttt{LP}:&\text{abierto; neutralidad no certificada en el verdadero }\mu_L.
+\texttt{GAP-Z}:&\text{signed convergence still open, designed to be neutral};\\
+\texttt{DISCRIMINANT}:&\text{proposed arithmetic separator, numerical/conjectural};\\
+\texttt{LP}:&\text{open; neutrality not certified at the true }\mu_L.
 \end{cases}
 \]
 
-## Fases 80–89: tres bucles hacia el mismo ancla
+## Phases 80–89: three loops toward the same anchor
 
-La fase 80 establece un producto Euler–Gamma independiente en el semiplano seguro y separa
+Phase 80 establishes an independent Euler–Gamma product on the safe half-plane and separates
 
 \[
 \texttt{RDI-CONV}
-\qquad\text{de}\qquad
+\qquad\text{from}\qquad
 \texttt{RDI-ANCHOR}.
 \]
 
-Convergencia y coherencia no identifican el límite aritmético. `RDI-ANCHOR` es el puente ausente.
+Convergence and coherence do not identify the arithmetic limit. `RDI-ANCHOR` is the missing bridge.
 
-Las fases siguientes forman tres bucles:
+The following phases form three loops:
 
 \[
-81\to82\to(\text{LP+colas}),
+81\to82\to(\text{LP+tails}),
 \]
 
-porque el límite proyectivo homogéneo pierde la fuente;
+because the homogeneous projective limit loses the source;
 
 \[
 83\to84\to85\to86\to\texttt{RDI-ANCHOR},
 \]
 
-porque el coborde distribucional reduce a sumas de paridad firmadas; y
+because the distributional coboundary reduces to signed parity sums; and
 
 \[
 87\to88\to89\to\texttt{PROFILE-ROTATION-RDI}\to\texttt{RDI-ANCHOR},
 \]
 
-porque la capa Feshbach cancela escalas pero no identifica el perfil Euler.
+because the Feshbach shell cancels scales but does not identify the Euler profile.
 
-Resultados durables: forma secular sin dividir por un escalar que puede anularse; representación Euler–Möbius; obstrucción \(\ker X=\{0\}\) en \(L^2\); reparación con \(\delta_0\); defectos Weyl de paridad; identidad Abel; deformación Euler; Feshbach de capa y corriente proyectiva. Ninguno prueba el ancla.
+Durable results: a secular form without dividing by a scalar that can vanish; Euler–Möbius representation; the obstruction \(\ker X=\{0\}\) in \(L^2\); repair via \(\delta_0\); parity Weyl defects; the Abel identity; Euler deformation; shell Feshbach; and projective current. None proves the anchor.
 
-## Fases 90–101: atlas de una sola carga
+## Phases 90–101: an atlas with a single charge
 
-Las fases 90–93 convierten Kato, coborde y numerador bordeado en la implicación
+Phases 90–93 convert Kato theory, coboundary, and the bordered numerator into the implication
 
 \[
 \texttt{DIRECT-BORDERED-ANCHOR}
@@ -201,16 +201,16 @@ Las fases 90–93 convierten Kato, coborde y numerador bordeado en la implicaci�
 \Omega_7.
 \]
 
-Las fases 94–100 expresan el mismo objeto como cofactores, Jacobiano característico, respuesta von Mangoldt, conmutador Euler, cáscara Fourier y regla de la cadena. Esas identidades son avances algebraicos, no siete cierres. El término característico del adjugado no desaparece; es la regla de la cadena y debe recombinarse.
+Phases 94–100 express the same object as cofactors, characteristic Jacobian, von Mangoldt response, Euler commutator, Fourier shell, and the chain rule. Those identities are algebraic advances, not seven closures. The characteristic term of the adjugate does not disappear; it is the chain rule and must be recombined.
 
-La fase 101 construye un atlas de transformadas Stieltjes, momentos, calor, Abel y corrientes. Sus resultados finales fijan cuatro límites:
+Phase 101 builds an atlas of Stieltjes transforms, moments, heat, Abel, and currents. Its final results fix four limits:
 
-1. `C_core` es la fuente correcta tras extraer el factor exterior;
-2. identificar su límite en un intervalo seguro tiene fuerza-RH por propagación Pick–Nevanlinna;
-3. una estrella finita o normalidad de rasgos no transporta automáticamente el divisor de \(\Xi\);
-4. momentos holomorfos de un nivel y productos de trazas pierden soporte transversal o multiplicidad lineal.
+1. `C_core` is the correct source after extracting the outer factor;
+2. identifying its limit on a safe interval has RH-strength by Pick–Nevanlinna propagation;
+3. a finite star or normality of features does not automatically transport the divisor of \(\Xi\);
+4. holomorphic moments of one level and products of traces lose transverse support or linear multiplicity.
 
-Los nombres recientes
+The recent names
 
 \[
 \texttt{LOCAL-COVARIANT-IDENT},
@@ -219,38 +219,38 @@ Los nombres recientes
 \texttt{TRUE-DIVISOR-IDENT}
 \]
 
-son versiones del mismo problema de identificación, la última más fuerte que la condición mínima.
+are versions of the same identification problem, the last one stronger than the minimal condition.
 
-## Qué se cerró realmente
+## What was really closed
 
-1. Muchas identidades finitas de Weil localizado, Feshbach, Cauchy, adjugado, cofactores, Jacobianos, conmutadores y Abel.
-2. Varios no-go específicos: Gram cero-sólo, multiplicatividad por el discriminante ensayado, Cesàro, GLT limpio, pseudoinversa singular, matching por celdas, inversión holomorfa de un nivel y escala única de paridad.
-3. Correcciones importantes: retiro de QED en fase 65; reemplazo del LP de núcleo trivial; separación raw/core; preservación del término característico; distinción entre convergencia e identificación.
-4. Una cartografía del faltante que es mucho más precisa que al comienzo.
+1. Many finite identities of localized Weil theory, Feshbach, Cauchy, adjugate, cofactors, Jacobians, commutators, and Abel.
+2. Several specific no-go results: zero-only Gram matrices, multiplicativity via the tested discriminant, Cesàro, clean GLT, singular pseudoinverse, cell matching, holomorphic inversion of one level, and single parity scale.
+3. Important corrections: withdrawal of QED in phase 65; replacement of the trivial-kernel LP; raw/core separation; preservation of the characteristic term; the distinction between convergence and identification.
+4. A map of what is missing that is far more precise than at the start.
 
-## Qué no se cerró
+## What was not closed
 
-1. Positividad aritmética global, \(\Omega_7\) o RH.
-2. LP/BTG en el verdadero \(\mu_L\).
-3. `GAP-Z`, por el término `ZERO` firmado.
-4. `RDI-ANCHOR` o cualquier equivalente de identificación Euler–Gamma.
-5. Las colas direccionales y puentes downstream necesarios para la ruta LP+IDENT.
-6. Una geometría externa con polarización independiente.
-7. Una convergencia de divisor que preserve soporte real y multiplicidad sin asumir RH.
+1. Global arithmetic positivity, \(\Omega_7\), or RH.
+2. LP/BTG at the true \(\mu_L\).
+3. `GAP-Z`, because of the signed `ZERO` term.
+4. `RDI-ANCHOR` or any equivalent Euler–Gamma identification.
+5. The directional tails and downstream bridges needed for the LP+IDENT route.
+6. An external geometry with independent polarization.
+7. A divisor convergence that preserves real support and multiplicity without assuming RH.
 
-## Regla de contabilidad futura
+## Rule for future accounting
 
-Un documento nuevo sólo cuenta como avance si hace al menos una de estas cosas:
+A new document counts as progress only if it does at least one of these things:
 
-- demuestra una obligación abierta con hipótesis estrictamente anteriores;
-- refuta la obligación mediante contraejemplo;
-- reduce el número de obligaciones sin sustituir una por un equivalente;
-- prueba que una pieza es neutral en una clase que contiene un control fuera de línea;
-- crea una identidad aritmética firmada independiente que distingue ese control.
+- proves an open obligation with strictly earlier hypotheses;
+- refutes the obligation by a counterexample;
+- reduces the number of obligations without substituting one for an equivalent;
+- proves that a piece is neutral on a class containing an off-line control;
+- creates an independent signed arithmetic identity that distinguishes that control.
 
-Una nueva fórmula para el mismo ancla cuenta como coordenada útil, no como cierre.
+A new formula for the same anchor counts as a useful coordinate, not as a closure.
 
-## Auditorías detalladas
+## Detailed audits
 
 - [`fragments/PHASES_000_025_AUDIT.md`](fragments/PHASES_000_025_AUDIT.md)
 - [`fragments/PHASES_026_050_AUDIT.md`](fragments/PHASES_026_050_AUDIT.md)

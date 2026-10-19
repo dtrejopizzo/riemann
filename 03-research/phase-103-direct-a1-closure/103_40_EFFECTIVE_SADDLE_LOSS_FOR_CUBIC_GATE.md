@@ -108,7 +108,7 @@ and similarly for every fixed higher derivative.  On the Gaussian scale,
 the standardized cubic and quartic terms therefore have sizes
 \[
  {S_k^{(3)}\over A_k^{3/2}}
- =O\left(\sqrt{u_k/k}\right),qquad
+ =O\left(\sqrt{u_k/k}\right),\qquad
  {S_k^{(4)}\over A_k^2}=O(u_k/k).                               \tag{15}
 \]
 The odd cubic contribution integrates to zero in the symmetric leading
@@ -137,7 +137,7 @@ The saddle scales (9), (13) imply at leading order
 \]
 and
 \[
- {d_N\over r_N}=1-{r_{N+1}\over r_N}=\Theta(N^{-1}),qquad
+ {d_N\over r_N}=1-{r_{N+1}\over r_N}=\Theta(N^{-1}),\qquad
  {d_N-d_{N+1}\over d_N}=O(N^{-1}).                              \tag{19}
 \]
 Substitution in the exact factorization from `103_36`,

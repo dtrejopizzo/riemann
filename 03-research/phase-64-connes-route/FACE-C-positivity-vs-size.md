@@ -1,6 +1,6 @@
 # Does unconditional positivity ($K_P\succeq0$) constrain the fluctuation Carleson norm? — a diagonal-domination reduction, and why sign is orthogonal to size
 
-*Pure mathematics. We have two unconditional facts from this phase: (i) the canonical Gram
+* We have two unconditional facts from this phase: (i) the canonical Gram
 identity gives $K_P\succeq0$ (`CANONICAL-FOUNDATION.md`); (ii) compactness $=$ a Carleson box
 bound whose smooth part is unconditional and whose fluctuation is the wall (`FACE-C-compactness.md`).
 The natural lever: does the **sign we already have for free** buy anything on the **size that is the

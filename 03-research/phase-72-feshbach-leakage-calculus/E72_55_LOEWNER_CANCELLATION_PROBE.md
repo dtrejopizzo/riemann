@@ -1,7 +1,6 @@
 # E72.55 -- Loewner cancellation probe
 
-**Date:** 2026-07-08.
-**Role:** test whether the half-power scalar endpoint channel comes from separate smallness of the two
+**Purpose:** test whether the half-power scalar endpoint channel comes from separate smallness of the two
 pieces in E72.54 or from cancellation between them.
 
 ## 0. Split

@@ -1,6 +1,6 @@
 # E78.19 - LOGT-CANCEL as discrete curvature of the section-lag error
 
-**Run:** 2026-07-18.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

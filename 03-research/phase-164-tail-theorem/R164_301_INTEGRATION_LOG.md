@@ -1,0 +1,171 @@
+# R164_301 — Editor log, phase 164 line L3
+
+*Editor pass. No commits, no numerics. No statement label changed (PROVED / PROVED-CITED / ARGUED / OPEN
+copied from the source files). Backups: `*_pre_p164*` (grid JSON, grid MD, script, Paper 48 `main_pre_p164.tex`, phase-163 README);
+`R163_401_v6.md`.*
+
+## 1. Grid (R162_2300)
+- New `grid/R162_2300_part13.jsonl`: 17 routes (R163_401, 402, 501, 502, 601, 602, 603, 701, 702, 801, 802, 803, 901, 1001a/b/c, 1001O).
+  Audits (490, 590/591, 790, 891/892, 991) are recorded in the notes of the route they audit, not as separate routes.
+- `scripts/r162_2300_refine_grid.py`: part12/part13 block added after `C.update(upd10)`, same pattern as parts 10–11 (merge flag,
+  `partN_tools`, cell updates `upd13`). Rerun: 975 routes, **■ 10 · ◩ 20 · ◧ 34 · □ 0** (before: ■ 10 · ◩ 21 · ◧ 33, 953 routes).
+- Only symbol change: **7B ◩ → ◧** (R163_401 is a PARTIAL route not superseded; its gap (★_cell) is RH at the witness, Rem 4.8a).
+- **Deviation from the spec, flagged.** The spec asked for "5E/5F DEAD (killer E1+W3′)". R163_1001 §7 says its routes are DEAD there but that it
+  does **not** touch the live residues of 5E (O1802.3, O2802.1; two PARTIAL routes R162_1802/1902) or of 5F (O2302.1/2). I marked the R163_1001
+  routes DEAD (5E: E1 + decoupled invariants; 5F: W3′ + E1) and left the cell symbols (5E ◧, 5F ◩) as §8.3 of the grid requires. If
+  decides those residues are also dead, both cells become ■ and the counts become ■ 12 · ◩ 19 · ◧ 33.
+- MASTER_GRID.md: header, §1 table and count paragraph, §2 regenerated from the script, §3 W3′, §4 rows f_χ and f_t, §6 residues
+  (O163.803a, BF_θ^disc θ≤1/3, (TC)), §7 ranking (separators on-line abundance and Riemann–Siegel REMOVED; two left: Euler product above the
+  window (L1) and BF_θ^disc θ≤1/3 (L2)), §8 item 7 dated . 1G residue sharpened to "GRH in degree one, uniform in χ". 5G: O163.101a
+  replaced by O163.803a (Theorem C covers θ∈(1/3,½)).
+
+## 2. Paper 48
+- f_χ: definition paragraph in §falsifiers and a row in `tab:falsifiers`; the f_t row's "candidate separators" updated (abundance and
+  Riemann–Siegel excluded). Meta-theorem W3′ and Theorem O (`thm:O`, labelled PROVED given the cited off-line zeros) after W3. Status paragraph
+  after Problem 6 (Thm O; two surviving separators). Grid totals updated (10/20/34/0, 975 routes). Index row R163_1001, R164_000.
+- New bibitems: BombieriHejhal1995, KaczorowskiKulas2007, SaiasWeingartner2009 (the last two carry a `% citation to be checked` comment).
+- pdflatex run twice (no bibtex; thebibliography inline): **0 errors, no undefined references, 25 pages.**
+
+## 3. R163_401 → v7
+Boxed gap, §4.11(c) Separators, §4.11 Summary: on-line abundance and Riemann–Siegel structure removed, with reasons (Bombieri–Hejhal, R163_602 F2;
+FE-only, shared by f_χ, R163_603 L2.1). §4.11(e) added (R163_1001: f_χ, Thm O, W3′), pointing to R164_000 for (TC). Rows §4.11(e) added to the
+status table and ledger. The (A-loc) balance gap (line "no on-line abundance result is on record") is untouched: abundance remains an *input*
+of balance, it is only removed as a *separator*.
+
+## 4. Citation checks (from memory; no library access in this pass)
+| item | finding | confidence |
+|---|---|---|
+| Zhang 2007 | The record's entry — W.-B. Zhang, *Beurling primes with RH and Beurling primes with large oscillation*, Math. Ann. **337** (2007), 671–704 — agrees with my recollection. The title "Beurling primes with error term" in the task does not match any paper I can place; I recommend keeping the record's title. | title and journal: high; page range: medium |
+| Diamond–Zhang, *Beurling Generalized Numbers*, AMS Math. Surveys Monogr. 213 (2016) | Bibliographic data correct. **Content of Ch. 17: I cannot reliably name it.** I remember that the late chapters treat Beurling systems with RH and with large oscillation (DMV-type and Zhang-type examples), but I cannot say which chapter number holds which. The priority check of Theorem C (R163_892) still needs a full-text reading. | low; flag stays |
+| Gonek–Hughes–Keating 2007 | S. M. Gonek, C. P. Hughes and J. P. Keating, *A hybrid Euler–Hadamard product for the Riemann zeta function*, Duke Math. J. **136** (2007), no. 3, 507–549. Matches R164_000. As I recall it, the formula holds unconditionally for s=½+it and 2≤X≤t^{1/2} (roughly), with a smooth weight in the cut. I do not recall the exact error term or how uniform it is, so both must be checked before L1 relies on them. | title and journal: high; pages: medium; error term: low |
+| Bombieri–Hejhal 1995 | E. Bombieri and D. A. Hejhal, *On the distribution of zeros of linear combinations of Euler products*, Duke Math. J. **80** (1995), no. 3, 821–862. Content: assuming GRH for the components and a weak pair-correlation/independence hypothesis, 100 % of the zeros lie on the line. That infinitely many zeros lie off the line is a separate result (Davenport–Heilbronn type, made general for such combinations by Kaczorowski–Kulas and Saias–Weingartner). The record's sentence combines the two correctly, but "Bombieri–Hejhal" alone does not prove that zeros exist off the line. | high |
+| Kaczorowski–Kulas 2007 | Monatsh. Math. **150** (2007); title as entered in Paper 48 ("On the non-trivial zeros off the critical line for L-functions from the extended Selberg class") from memory; pages 217–232 uncertain. | medium |
+| Saias–Weingartner 2009 | Acta Arith. **140** (2009), *Zeros of Dirichlet series with periodic coefficients*; pages 335–344 uncertain. | medium |
+
+Not checked in this pass (R164_000 §3 lists them too): ATAP Thm 19.3, the value of κ for DH, the Epstein normalisation, DMV. The Paper 48
+bibitem for DMV (Math. Ann. 334 (2006) 1–36) matches my memory.
+
+## 5. Status
+(★_cell), (TC), (A-loc), row D: **OPEN**.
+
+---
+
+# Ronda 2 — editor pass p164b
+
+*No commits. No statement label changed (labels copied from R164_190, whose verified labels are authoritative).
+Backups: `*_pre_p164b*` (grid JSON, grid MD, script, Paper 48 `main_pre_p164b.tex`, both READMEs, this log, R163_401 `_pre_p164b.md.bak`);
+`R163_401_v7.md`.*
+
+## 6. Grid, R163_401 v8, Paper 48, READMEs
+- New `grid/R162_2300_part14.jsonl`: 5 routes. R164_101 (4F, DEAD, E1); R164_102 (4F, DEAD, Thm A / W-identification; residue
+  O164.102.1 closed by Thm R); R164_201 (5G, PROVED-TOOL: Theorem L, L2a closed negative in 𝒦_θ, residue O164.201a ARGUED off-lattice);
+  R164_401 (4F, PROVED-TOOL: Thm R, O164.101 ⟺ ¬RH, W-identification); R164_402 (4F, DEAD, superseded by R164_401; Props P/S/F/B PROVED).
+  Script: part14 block after `C.update(upd13)` (same pattern; `upd14` for 5G and 4F; 5G residue O163.803a replaced by O164.201a).
+  Rerun: **980 routes, ■ 10 · ◩ 20 · ◧ 34 · □ 0** (no symbol change: 4F keeps GAP-157.A / O2802.1 / generating object; 5G keeps
+  BF_θ^disc θ≤1/3, O164.201a, O163.101b/c, O102.x).
+- MASTER_GRID.md: header, §1 table + count paragraph, §2 regenerated, §3 wall **W-identification** (table of R164_190 round-2 synthesis),
+  §5 Thm R + Theorem L, §6 parte-14 line (O164.201a), §7 ranking ("all class routes closed by identification; only BF_θ^disc θ≤1/3
+  off-lattice remains as non-identification content"), §8 item 8.
+- R163_401 v7 → v8: §4.11(f) (KZ = E1; positive tail DEAD; Thm R; identification theorem); boxed gap's "Candidate separators" line replaced
+  by the identification statement; status-table row §4.11(f); §4.11 summary. (★_cell) OPEN.
+- Paper 48: §"Identification (phase 164)" after the Beurling-frontier subsection (thm:R with the sinc proof; thm:ident with the itemized
+  table; rem:onlynonident), meta-theorem W-identification after thm:O, Problem 6 status paragraph after phase 164, grid totals 980, index row.
+  pdflatex ×2: **0 errors, no undefined references, 27 pages.**
+
+## 7. Literature note on Thm R (all FROM MEMORY, unverified at page level)
+| work | relation to Thm R |
+|---|---|
+| Hamburger 1921 (Math. Z.) | **Implied by Thm R** (case supp N ⊂ ℕ; Remark (i) of R164_401). |
+| Bochner 1951 (Ann. Math., modular relations) / Chandrasekharan–Narasimhan 1961 | **Implied-by / used in**: supplies Lemma 1 (FE ⟺ self-dual theta measure for general frequencies). Says nothing about positivity; does not imply Thm R. |
+| Kahane–Mandelbrojt 1958 (Ann. Sci. ENS, FE of Riemann and Poisson summation) | **Closest candidate prior art; status unknown.** They study Dirichlet series with Riemann's FE and general frequencies via Poisson-type formulas; I do not recall a positivity-plus-gap rigidity statement there. Must be checked first. |
+| Córdoba 1989 (Dirac combs, Lett. Math. Phys.) | **Disjoint hypotheses, same conclusion type.** Uniformly discrete support and spectrum (with finitely many coefficient values, as I recall) ⟹ generalized comb. Thm R assumes no discreteness (continuous parts allowed) but uses self-duality, positivity off ℤ and a gap. Neither implies the other. |
+| Lev–Olevskii 2015 (Invent. Math., quasicrystals and Poisson) | **Disjoint.** Positive measure with uniformly discrete support and spectrum ⟹ finite union of translated lattices (in dim 1). Again discreteness of both sides is assumed; Thm R gets support in ℤ from the sinc argument instead. Neither implies the other. |
+| Cohn–Elkies 2003 (Ann. Math., LP bound) | **Method source, disjoint statement.** The auxiliary function vanishing on the lattice plus Poisson summation and sign conditions is the device of Lemma 2; the theorem is a packing bound and does not imply Thm R. |
+| Radchenko–Viazovska 2019 (Publ. IHÉS, Fourier interpolation) | **Disjoint, but relevant to the gap.** Even Schwartz f is determined by f(√n), f̂(√n); this gives uniqueness for self-dual-type pairings at the √n nodes, with no positivity. It does not imply Thm R (different nodes, no gap hypothesis), and Thm R does not imply it. Its interpolation basis could perhaps remove the gap (O164.401.1); unexamined. |
+| (also) Guinand 1959; Kurasov–Sarnak 2020; Meyer (crystalline measures) | **Show positivity is needed**: signed self-dual / crystalline discrete measures that are not combs exist, so dropping (b) fails (cf. f_t). Consistent with Thm R. |
+
+Verdict: Thm R stays **PROVED, novelty to be verified** (as in R164_190); first check Kahane–Mandelbrojt and the post-2015 crystalline-measure
+literature (Lev–Olevskii, Kurasov–Sarnak, Olevskii–Ulanovskii).
+
+## 8. Status
+(★_cell), (TC), row D: **OPEN**.
+
+## 9. Grid parte 15, Paper 48, R163_401 v9, READMEs (rondas 3–4; phase 164 cerrada)
+*No commits. No statement label changed (labels copied from R164_190 rounds 3–4 and "Cierre").
+Backups: `*_pre_p164c*` (grid JSON, grid MD, script, Paper 48 `main_pre_p164c.tex`, both READMEs, this log, R163_401 `_pre_p164c.md.bak`);
+`R163_401_v8.md`.*
+- New `grid/R162_2300_part15.jsonl`: 9 entries. R164_501 (7A, DEAD [E1, no room]; Thm SA, Cor SA.1 in note); R164_501P (7F, PROVED-TOOL, Prop 4);
+  R164_502 / 502b / 502c (4A, 4E, 8D, DEAD; L4, L5, L6 tools in 8D note); R164_503 (5G, OPEN: Goal B ≥ RH + quadratic GRH, prime-side cap x^{1/2}
+  ARGUED, O164.503a–d); R164_601 (7F, DEAD [W2/M + Thm 3.1], O164.501.1 CLOSED); R164_601T (2A, PROVED-TOOL, Props 1.1/1.3); R164_491 (4F, audited, fixes applied).
+  Script: part15 block after `C.update(upd14)`; `upd15` appends O164.503a–d to 5G and O164.601.1 to 7F, notes for 7A/7F/4A/4E/8D/2A/4F; codes unchanged.
+  Rerun: **989 routes, ■ 10 · ◩ 20 · ◧ 34 · □ 0** (no symbol change).
+- MASTER_GRID.md: header, §1 table + count paragraph, §2 regenerated, §4 row "M_m con ventana" (satisfies the tail-sign inequality, R164_601),
+  §5 phase-164 part-15 tools, §6 part-15 line (O164.501.1 done; O164.601.1, O164.503a–d), §7 ranking (phase 164 closed; all routes return to (★_cell);
+  identification theorem), §8 item 9.
+- Paper 48: thm:R hypothesis (c) rewritten with explicit residues Res_{s=1}=1, Res_{s=0}=−1 of ζ's completion and the F3 remark; novelty sentence
+  replaced ("not found in this form", classical ingredients, close to Córdoba 1989 / Kahane–Mandelbrojt 1958, plausibly folklore; names in text,
+  no new bib entries); paragraph "Phase 164, rounds 3–4" (Thm SA, L1, Prop 4, Thm 3.1, dlVP cap, R164_503) ending "every route returns to
+  (★_cell)"; grid totals 989; index row extended. pdflatex ×2: **0 errors, no undefined references, 27 pages.**
+- R163_401 v8 → v9: §4.11(f) sub-list "Rounds 3–4 of phase 164" (Thm SA, Prop 4, drop-term principle, spectral invariants = window data, R164_503).
+- READMEs: phase 164 (index 501/502/503/491/601, rounds 3–4 section, status "phase cerrada en rondas 1–4; (★_cell) OPEN"); phase 163 one line.
+
+## 10. Status
+Phase 164 closed (rounds 1–4). (★_cell), (TC), row D: **OPEN**.
+
+## 11. Phase 165: grilla parte 16, R163_401 v10, Paper 48, READMEs
+*No commits. No statement label changed (labels copied from R165_190, authoritative). Backups: `*_pre_p165*` (grid JSON, grid MD,
+script, Paper 48 `main_pre_p165.tex`, phase-163/164 READMEs, this log, R163_401 `_pre_p165.md.bak`); `R163_401_v9.md`.*
+- New `grid/R162_2300_part16.jsonl`: 8 entries. R165_101 (7A, PROVED-TOOL, Det+) + R165_101D (7D, same theorem, dup-marked); R165_102 (7A, DEAD:
+  Det− false for large δΛ, contact = min_ρ T_det) + R165_102T (7D, PROVED-TOOL, Thm 1/Cor 2(c)) + R165_102P (2A, PROVED-TOOL, Prop 4/Cor 2);
+  R165_201 (7A, DEAD: Thm 3(a); tools Thm 2, Cor 2.2); R165_202 (7E, PARTIAL/E1); R165_202A (7A, DEAD: "contact forces EC").
+  Script: part16 block after `C.update(upd15)`; `upd16`: 7A residue D.16-γ replaced by "ω(E) en el contacto = Rem 4.8a"; 7D += O102.1/O102.2/O701.1–3;
+  7E += node monotonicity / parity simplicity OPEN; notes 2A. Codes unchanged. Rerun: **997 routes, ■ 10 · ◩ 20 · ◧ 34 · □ 0** (no symbol change).
+- MASTER_GRID.md: header, §1 table + count paragraph, §2 regenerated, §5 phase-165 tools, §6 item 25 HECHO (negativo, R165_201/202) + part-16 residue line,
+  §7 ranking (phase 165 closed; geometric branch refuted; T_c bracket PROVED), §8 item 10.
+- R163_401 v9 → v10: §4.11(g) (Det+ bracket with clustering caveat, Det− negative, phase identity and ω(E) = Rem 4.8a, interlacing refuted, real-rootedness
+  at every simple T); status-table row §4.11(g).
+- Paper 48: paragraph "Phase 165" after "Phase 164, rounds 3–4" (Det+ statement with T_L(γ)=½log(γ/2π), proof idea, Det− negative, sin/cos example, phase
+  identity); grid total 997; index row. pdflatex ×2: **0 errors, no undefined references, 28 pages.**
+- READMEs: phase 165 created (Spanish); one line each in phase 164 and phase 163.
+
+## 12. Status
+Phase 165 closed. (★_cell), (TC), row D: **OPEN**.
+
+## 13. Phase 166: grilla parte 17, R163_401 v11, Paper 48, READMEs
+*No commits. No statement label changed (labels copied from R166_190, authoritative). Backups: `*_pre_p166*` (grid JSON, grid MD,
+script, Paper 48 `main_pre_p166.tex`, phase-163/165/166 READMEs, this log, R163_401 `_pre_p166.md.bak`); `R163_401_v10.md`.*
+- New `grid/R162_2300_part17.jsonl`: 12 entries. R166_101 (7A, DEAD E1; tool Thm 2.1); R166_102 (7E, DEAD W2/M) + R166_102F (7F) + R166_102I (1F),
+  dup-marked; R166_103A (6C, DEAD f_t/M_m), R166_103B (4F, DEAD Thm A/Cor R.1/Landau), R166_103T (4F, PROVED-TOOL, rough-zeta split B1–B2),
+  R166_103G (2F, DEAD, falsifier P_{a,c}); R166_201 (7A, DEAD E1; tools Thm 1.3, Cor 1.4, Prop 2.2) + R166_201E (7E, dup) + R166_201S (2A, DEAD);
+  R166_202 (6C, DEAD vacuous/E1; OS-2 closed negative; residue O202.1). Script: part17 block after `C.update(upd16)`; `upd17`: 6C residue OS-2
+  replaced by O202.1 (6C stays ◩); notes on 1F, 2A, 2F, 4F, 7A (ω(E) as global phase), 7E, 7F. Rerun: **1009 routes, ■ 10 · ◩ 20 · ◧ 34 · □ 0** (no symbol change).
+- MASTER_GRID.md: header, §1 table + count paragraph, §2 regenerated, §3 rows W-jet and wall dichotomy, §4 row P_{a,c} ("M_m con ventana" already present),
+  §5 phase-166 tools, §6 part-17 line (O202.1; ω(E) global phase), §7 ranking (phase 166 closed; requirements (i)–(iii)), §8 item 11.
+- R163_401 v10 → v11: §4.11(h) (jet hierarchy, no pole singularity, rough-zeta split, P_{a,c}, five DEAD mechanisms, requirements (i)–(iii)); status-table row.
+- Paper 48: paragraph "Phase 166" after "Phase 165" (Theorem thm:jet with proof sketch, Remark wall dichotomy with (i)–(iii), rough-zeta split as tool),
+  P_{a,c} row in tab:falsifiers, tab:tools row, grid total 1009, index row. pdflatex ×2: **0 errors, no undefined references, 29 pages.**
+- READMEs: phase 166 completed (index, rounds 6–7, status); one line each in phase 165 and phase 163.
+
+## 14. Status
+Phase 166 closed. (★_cell), row D: **OPEN**.
+
+## 15. Phases 166 (rondas 9–12) y 167: grilla parte 18, R163_401 v12, Paper 48, READMEs
+*No commits. No statement label changed (labels copied from R166_190 rondas 9–12 and R167_190 after R167_291, authoritative).
+Backups: `*_pre_p167*` (grid JSON, grid MD, script, Paper 48 `main_pre_p167.tex`, phase-163/166 READMEs, this log, R163_401 `_pre_p167.md.bak`); `R163_401_v11.md`.*
+- New `grid/R162_2300_part18.jsonl`: 13 entries. R166_501 (7B, PROVED-TOOL, Thm A (iii) ⇒ (ii)); R166_502 (6C, DEAD, repeat E70_11/12);
+  R166_601 (4F, DEAD E1); R166_701 (5G, DEAD as route [(N)]) + R166_701T (5G, PROVED-TOOL T0–T4); R166_702 (5G, DEAD; Lemma PT);
+  R166_801 (7C, DEAD E1/f_t); R166_802 (3A, DEAD circular) + R166_802T (3A, tools Thm 0/3/4); R167_101 (3A, PROVED-TOOL, (WS*));
+  R167_102 (3A, DEAD, W-sieve); R167_103 (3G, PROVED-TOOL, Theorem S); R167_291 (3A, DEAD, Lemma K demoted).
+  Script: part18 block after `C.update(upd17)`; `upd18`: 7C residue "correlación de pares" removed (item 46 HECHO) ⇒ **7C ◩ → ■** by §8.3;
+  residues added: C1/C2 → 5G; O167.101.1–2 → 7D; O166.802.1 and (WS*) → 3A; O166.501.1 → 7B. Rerun: **1022 routes, ■ 11 · ◩ 19 · ◧ 34 · □ 0**.
+- MASTER_GRID.md: header, §1 table + count paragraph, §2 regenerated, §3 rows W-sieve and (N′), §4 rows b_θ and DMV/Zhang (sieve falsifier),
+  §5 tools, §6 item 46 HECHO + part-18 residue line, §7 ranking (phases 166–167 closed; (G)+(N′); (WS*) stated), §8 item 12.
+- R163_401 v11 → v12: §4.11(i) (families P/Q, Thm A, θ = 0 tools, 7C, circularity theorem and (N′), (WS*) and status); status-table row.
+- Paper 48: paragraph "Phases 166–167" after "Phase 166" (itemized survey, Theorem thm:iiiii with sketch, (G)+(N′), boxed (WS*) with its
+  three-part characterisation), rows b_θ and DMV/Zhang in tab:falsifiers, Problem 6 status (T3/T4, C1/C2), tab:tools row, index row, grid
+  totals 1022 (11/19/34). The tikz figure of the grid remains the earlier 953-route snapshot (unchanged since phase 163). pdflatex ×2:
+  **0 errors, no undefined references, 31 pages.**
+- READMEs: phase 167 created (Spanish; index, result, status); phase 166 updated (index 400–405, 501, 502, 601, 701, 702, 801, 802; rounds 9–12; status); one line in phase 163.
+
+## 16. Status
+Phases 166 and 167 closed. (WS*) characterised: unreachable without zeros, circular with them. (★_cell), row D: **OPEN**.

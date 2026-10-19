@@ -17,8 +17,8 @@ the same ground is not covered a third time.
 
 ## 0. Chronology
 
-`main.tex` and its four row files were last modified **2026-08-06 15:02**.
-The notes discussed below were written **2026-08-08, 07:56--08:40**.  The
+`main.tex` and its four row files were last modified .
+The notes discussed below were written **, 07:56--08:40**. The
 paper is untracked in git, so no commit history is available; the filesystem
 timestamps are the evidence, and they are unambiguous for this claim.  No
 file in `04-papers/42-*` was modified by this campaign.

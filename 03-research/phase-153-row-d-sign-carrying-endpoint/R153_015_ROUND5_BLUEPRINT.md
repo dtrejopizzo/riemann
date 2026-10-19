@@ -1,6 +1,5 @@
-# R153.015 — Lead blueprint, round 5: construct Φ_N — the symbol-level payment and a conceptual proof of the endpoint
+# R153.015 — Blueprint, round 5: construct Φ_N — the symbol-level payment and a conceptual proof of the endpoint
 
-*Lead: Fable 5.1, 2026-09-19. Owner: "no lo enuncies, construilo".*
 
 ## 0. The construction to be carried out
 

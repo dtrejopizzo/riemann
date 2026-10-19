@@ -1,16 +1,16 @@
 # Panel 3 — Honesty of labels, the renaming test, and the chain to RH
 
-Reviewer 3 of the three-member independent review panel, phase 133.
-Date: 2026-09-12.  Scope: Papers 43 (row A), 44 (row B), 45 (row C), the
+Panel 3 of the three-part independent review, phase 133.
+Scope: Papers 43 (row A), 44 (row B), 45 (row C), the
 acceptance specification `P123_A_ACCEPTANCE_SPECIFICATION.md`, the closure
-plan `ABCD-CLOSURE-PLAN/PLAN.md` §§5–8, and the three leads' decisions of
+plan `ABCD-CLOSURE-PLAN/PLAN.md` §§5–8, and the decisions of
 record `R130.005`, `R131.019`, `R132.007`.
 
-**No paper was edited.**  This file is the reviewer's opinion only; it
+**No paper was edited.**  This file is an opinion only; it
 grants and withdraws nothing.
 
 **One-sentence summary.**  The three labels are *procedurally* honest —
-every qualification a hostile reader would demand is written down somewhere
+every qualification a demanding reader would expect is written down somewhere
 in the papers, usually in the papers' own words and often more harshly than
 I would put it — but the **name** of the label is not, because the
 specification defines "Weil-strength" as *equality of structural burden with
@@ -19,7 +19,7 @@ that equality "is **not** established".  What is honestly closed is a
 clause list, on a declared carrier, on the invertible sector, with a
 declared trace.  Three clauses (A.7, C.3, and the first half of C.6) are
 discharged by a definition with disclosure; two dissents (A.8, B.7) are
-resolved by a lead ruling where the dissenting auditor is, in my judgement,
+resolved by a ruling where the dissenting assessment is, in this judgement,
 right; and the one genuinely new theorem in the whole set with respect to
 the RH literature is Paper 45 Theorem 10.4.
 
@@ -27,7 +27,7 @@ the RH literature is Paper 45 Theorem 10.4.
 
 ## 1. Clause-by-clause: is the label honest against the text?
 
-Conventions.  "Honest" = the recorded verdict is what a hostile reader who
+Conventions.  "Honest" = the recorded verdict is what a demanding reader who
 has read the cited theorems would also record, **given the paper's own
 reading of the clause**.  "Definitional" = the clause is discharged by
 choosing a definition that makes it true, with nothing proved that could
@@ -42,7 +42,7 @@ earned?**
 | A.2 | PROVED (Thm 8A.12) | **honest, thin** | The objects are `E_H = λ(H)`, `H` in a commutative Banach `†`-algebra `𝓐_tr`; the "category" is the regular representation of a convolution algebra on an abelian group.  A.2 demands "geometric localization on `Y` or a proved Morita-equivalent localization"; I did not find that half discharged by a theorem anywhere, and R130.005 does not cite one.  The clause is met on the reading "closed under its declared completion" only.  Not a renaming of the explicit formula — genuinely a different kind of object — but far from "admissible mixed correspondences on a noncollapsed square". |
 | A.3, A.4 | PROVED on `G` | **honest** | Composition is convolution; the dagger is `F^†(u)=\overline{F(u^{-1})}` with the half-density twist (Lemma 8.4 is the one real computation).  Both are proved, both are source-defined, and A.4's prohibition ("cannot be selected from the desired sign of a later scalar form") is respected.  The clause's escape hatch — "if composition is written by pull–tensor–push on `X^3`, all functors … must be proved" — is avoided by not writing it that way.  Honest, and much lighter than the classical burden. |
 | A.5 | PROVED | **honest only because the word "declared" is everywhere; the load-bearing normalization is not a theorem** | `T` is **defined** (Def 8.6) as `Σ_v W_v + c·F(1)` from the two repository-proved local formulas.  Consequences: (i) place-additivity is a definition, not a localization theorem (Paper 45 §5.1 concedes this in terms); (ii) cyclicity is automatic because the algebra is commutative; (iii) **O-A5-5** — that the local weight *is* the Lefschetz/Hochschild shadow — is a **theorem at the unit shells** and a **declared half-density–Lefschetz normalization at the non-unit shells**, and the non-unit shells `p^kZ_p^×`, `k≠0`, are exactly where `Λ(p^k)=\log p` comes from.  The ledger says this (`O-A5-5: CLOSED IN THE EXACT FORM (8A.24)–(8A.24′) … and in no stronger form`).  So the arithmetic content of the trace rests on a declared normalization at precisely the locus that produces the prime side.  Paper 44 Thm 8bis.8 softens this — `vol(Z_p^×)=\log p` is the *unique* normalization with a universal Tate residue, up to one global scale — which is a self-consistency theorem, not a geometric derivation.  The verdict `PROVED` is honest **for the declared trace**; it would not be honest for "the" trace of a geometry. |
-| A.6 | PROVED under the 2026-09-12 amendment | **honest** | See §2.  The amendment is recorded in the specification itself, with the refuted original wording preserved, and the refutation (Thm 9.13(a)) is a real theorem. |
+| A.6 | PROVED under the amendment | **honest** | See §2. The amendment is recorded in the specification itself, with the refuted original wording preserved, and the refutation (Thm 9.13(a)) is a real theorem. |
 | A.7 | PROVED | **honest label, definitional content** | `Eff_A` = "all coefficients real and nonnegative" (Def 10.1, Def 10.2a).  The clause asks for a cone "constructed from the source geometry" that "descends to the numerical theory to the extent needed by Riemann–Roch"; since row A's Riemann–Roch needs nothing from the cone, the second half is vacuously true.  Thm 10.2(e) (not the operator-positive cone) is the only content that could have failed.  R130.005 and the paper both call this "a thin reading of a thin clause".  **This is a clause satisfied by a definition, and it is flagged as such.** |
 | A.8 | PROVED WITH TARGET `Pic_b(B_T)`; dissent recorded | **over-graded; see §3** | The honest verdict is the auditor's restatement.  Notably, Weil's `D·D' = P·P' + d_1d_2' + d_2d_1'` is *not* proved: (10.10) is, in logarithms, the decomposition of an ordered pair, and the paper says so. |
 | A.9 | PASSED FOR THE FORMALISM, on the automorphism sector | **honest, and the most consequential qualification in row A** | Thm 6.1 constructs `Φ: G_Λ → Perf(C×C)` for `Λ → Aut(C)`.  It recovers composition, unit, transpose and diagonal contact — for **automorphism graphs**.  The classical falsifiers that motivated the clause (P123.021: `Γ_F⋆Γ_F^t = q·Δ`, so the transpose is not the inverse for `\deg > 1`) are not met; they are **avoided** by restricting to the invertible sector.  A.9 is called "an acceptance test for structural correctness"; the test is passed on the sub-sector from which the phenomenon Weil's proof is about has been removed.  Honest as written ("for the formalism"), weak as a control. |
@@ -54,8 +54,7 @@ category with excision, a half-density dagger, `𝓝 = 0`, the exact Tate
 sequence and the rulings-as-limits are statements the explicit formula does
 not make.  A.5 is the pressure point and R130.005 §2 puts it correctly:
 constructing the left-hand side of the identity from fixed-point data is not
-a renaming of the identity.  I agree — **with one qualification the lead
-does not make**: what is constructed is the left-hand side *by definition*
+a renaming of the identity.  This agrees — **with one qualification not otherwise made**: what is constructed is the left-hand side *by definition*
 (Def 8.6), from local formulas already proved elsewhere in the repository.
 The non-trivial step "these local orbital integrals assemble into a trace of
 a correspondence theory" is real for the unit shells and *declared* for the
@@ -69,10 +68,10 @@ partly declared", not an unqualified pass.
 | B.1 | PROVED (upgraded from PARTIAL) | **honest, generous** | The upgrade holds "only on the reading 'no functor into `G` is demanded'", and the paper prints that sentence.  The inverse-semigroup completion `𝔉` (Thm 3ter.7) is real content and answers the missing-dagger objection.  A reader who reads B.1 as demanding realized divisor arrows gets `PARTIAL`; the paper gives him the material to do so. |
 | B.2 | PROVED on the label monoid, non-vacuous | **honest, and an improvement** | `n ↦ Frob_n` is strong monoidal with a true unit, injective, and the object determines `(n,P(n))` (Thm 3ter.4(iv)).  Round 2's fatal objection — the radial realization factors through the modulus and therefore forgets factorization — is answered by a different object, not by rewording.  Good. |
 | B.3 | PROVED, true unit | **honest** | `Frob_n⋆Frob_n^† = Δ^{(n)} ≠ Δ` is stated, not hidden.  Note what this is: the half-density-normalized form of Weil's `Γ_F⋆Γ_F^t = qΔ` with `q` divided out.  See §5. |
-| B.4 | REFUTED AS STATED; PROVED AS AMENDED (owner-accepted); PROVED ON OBJECTS since round 3 | **honest** | See §2.  The refutation is real (P123.060, P123.022), the original text is preserved verbatim, and the round-2 type error (`T(Γ_n^{rad})` undefined, naive place-wise evaluation `= 0`) is recorded in the clause row itself.  That is the right way to do this. |
+| B.4 | REFUTED AS STATED; PROVED AS AMENDED (accepted); PROVED ON OBJECTS since round 3 | **honest** | See §2.  The refutation is real (P123.060, P123.022), the original text is preserved verbatim, and the round-2 type error (`T(Γ_n^{rad})` undefined, naive place-wise evaluation `= 0`) is recorded in the clause row itself.  That is the right way to do this. |
 | B.5 | PROVED twice, and the two proved equal | **honest** | Thm 3bis.7 (shell volume) and Thm 5.3 (`Z`-linear model) with Thm 3bis.10(iii) the bridge.  `n=1` handled as identity/excess via `c·F(1)` with `c:=0`, not by the degree formula, as the clause demands. |
 | B.6 | both halves PROVED, non-vacuous | **honest** | Thm 3ter.12 (support of `Frob_n` meets no fixed-point stratum for composite `n`) is a statement about the object, not about a trace value, which is exactly what "by structure, not by extrapolation" asks for.  Thm 3ter.14 puts the classes in `N_A^{dist}` with a **nonzero** ruling component — i.e. the Frobenii are *not* primitive, stated plainly. |
-| B.7 | PROVED by lead ruling; auditor dissents `PARTIAL` | **over-graded; see §3** | |
+| B.7 | PROVED by ruling; dissent recorded as `PARTIAL` | **over-graded; see §3** | |
 | B.8 | PROVED | **honest** | Table plus `verify_131_contacts.py`; the index by places is preserved as phase 119 requires. |
 | B.9 | PROVED, "with the independence inherited, not earned" | **honest, and unusually candid** | The self-qualification is correct: row B inherits `Λ = vol(p^kZ_p^×)` from Paper 43 Rem 9.7a and adds the attachment to the family and to the contact locus. |
 
@@ -106,9 +105,9 @@ overturn one sentence of R132.007 §3.
 
 ---
 
-## 2. The two owner-accepted amendments
+## 2. The two accepted amendments
 
-### 2.1 A.6 (Paper 43 §14.2; specification §2, amendment record 2026-09-12)
+### 2.1 A.6 (Paper 43 §14.2; specification §2, amendment record )
 
 **Original demanded.**  The Hausdorff quotient `N_A` **contains** the ruling
 plane and a nonzero completed mixed sector — "contains" read as "has a
@@ -139,8 +138,7 @@ does **not** extend continuously to `N_A^{dist} × N_A^{dist}`
 **That span, with one form defined on all of it, does not exist here.**  The
 amendment is honest, the theorems behind it are real, and the loss is
 directly the loss that makes a Hodge-index argument unavailable in §4(d).
-The specification's amendment record states the reason and names the
-decision-maker.  No complaint about the process; the mathematical cost is
+The specification's amendment record states the reason.  The mathematical cost is
 larger than the amendment's wording suggests.
 
 ### 2.2 B.4 (PLAN §6 item 4; Paper 44 §6.2a′, §10 table)
@@ -185,9 +183,8 @@ is acyclic — i.e. the integral content does not live in the declared
 
 ## 3. The two recorded dissents
 
-### 3.1 A.8 — hostile auditor (R130.002) vs lead (R130.005 / Paper 43 §10.3.3)
+### 3.1 A.8 — audit (R130.002) vs ruling (R130.005 / Paper 43 §10.3.3)
 
-**Auditor:** "NOT EARNED as written; EARNED-WITH-REPAIRS available … the
 clause is discharged by a definition (Def 10.6c) plus bi-additivity, so the
 only thing A.8 adds beyond A.6 is Thms 9.14a–c, which are already what
 closes A.6."
@@ -196,7 +193,7 @@ closes A.6."
 a theorem (10.8), not chosen"; F3 accepted in full; the requested
 restatement inserted as "What A.8's closure actually consists of".
 
-**My assessment: the auditor is right, and the lead's own concessions prove
+**Assessment: the audit's reading is right, and the ruling's own concessions prove
 it.**  The clause asks that `λ_{RR}` **extend** the intrinsic periodic
 ruling determinant to the mixed sector, with five named requirements.  What
 the paper proves is:
@@ -221,18 +218,15 @@ verdict is the auditor's own restatement, which is true and modest: *the
 ruling determinant is the Tate component of `λ_{RR}`, and the consistency of
 that definition with the test sector is Thms 9.14a, 9.14c′.*
 
-The lead's counter — that the target is *forced* by Thm 10.8 — is correct
+The counter-argument — that the target is *forced* by Thm 10.8 — is correct
 and is the strongest thing that can be said, but forcing a target does not
-convert a definition into an extension.  I would record A.8 as
-**`PROVED IN THE RESTATED FORM; the clause as written is NOT EARNED`**, and
-I note that this is the same logical situation as A.6 and B.4, both of which
-were sent to the owner as amendments.  A.8 was resolved by a lead ruling
-instead.  That inconsistency of protocol is my principal procedural finding
+convert a definition into an extension.  A.8 is better recorded as
+**`PROVED IN THE RESTATED FORM; the clause as written is NOT EARNED`**; this is the same logical situation as A.6 and B.4, both of which
+went forward as amendments.  A.8 was instead resolved by a ruling.  That inconsistency of protocol is the principal procedural finding
 on row A.
 
-### 3.2 B.7 — hostile auditor (R131.008 §4) vs lead (R131.005 §2, adopted in Paper 44 §10)
+### 3.2 B.7 — audit (R131.008 §4) vs ruling (R131.005 §2, adopted in Paper 44 §10)
 
-**Auditor:** "`PROVED` as a test; `PARTIAL` as a mechanism, as the paper
 says.  I do **not** endorse `R131.005`'s upgrade to `PROVED`: Rem 6.5a′ is
 still the truth."
 
@@ -241,15 +235,15 @@ locates the mechanism (trivial fixed-point weight on the shell; `k`-
 independent Haar volume), and the passage to `Φ_{p^k}(1)` is *refuted*, not
 open.
 
-**My assessment: the auditor is right.**  The clause is conditional: *"if
+**Assessment: the audit's reading is right.**  The clause is conditional: *"if
 they differ, the geometric mechanism producing the cyclotomic factor must be
 located."*  They do differ — `0` versus `Z/p` in the `p`-primary part
 (Thm 6.4).  What is then produced is **two** mechanisms in **two** places:
 the shell volume on the carrier, and deck `μ_n` versus fixed `μ_{n-1}` on
 `G_m/Z`, with **no map, functor or comparison between them**, and with a
 theorem (P123.022) saying that no such map can exist in the declared
-`C`-linear category.  Rem 6.5a′ — kept unchanged in the paper, to the
-builder's credit — says the equality of constants holds for an unrelated
+`C`-linear category.  Rem 6.5a′ — kept unchanged in the paper —
+says the equality of constants holds for an unrelated
 reason, and cites P123.039 §5's rule that a coincidence of constants does
 not locate a mechanism.
 
@@ -257,10 +251,10 @@ not locate a mechanism.
 bridge does not discharge a clause that demands a bridge; it shows the
 clause is **unsatisfiable on this carrier** — which is precisely the
 situation that produced the A.6 and B.4 amendments.  The correct dispositions
-are either `PARTIAL` (the auditor's, and the paper's own §6.2/§6.3 text) or
-an owner-decided amendment restricting B.7 to the test plus the on-carrier
-weight computation.  A lead ruling that upgrades the verdict while leaving
-the contradicting remark in place, so that "a reader who follows the auditor
+are either `PARTIAL` (per the audit, and the paper's own §6.2/§6.3 text) or
+an amendment restricting B.7 to the test plus the on-carrier
+weight computation.  A ruling that upgrades the verdict while leaving
+the contradicting remark in place, so that "a reader who follows the audit
 reads `PARTIAL` there and loses nothing", is candid but is not a resolution:
 the ledger and the body of the paper disagree, and the ledger is what the
 label is computed from.
@@ -491,15 +485,15 @@ make precise, with theorems, which shapes it cannot have.
 > no sign.
 
 **Honest as recorded: YES, with two reservations.**  Every qualification a
-hostile reader needs is present in §14.0a–b, §14.1 and §11bis, usually in
-sharper words than a reviewer would use, and Thm 14.1 is published *against
+demanding reader needs is present in §14.0a–b, §14.1 and §11bis, usually in
+sharper words than this note would use, and Thm 14.1 is published *against
 interest*.  Reservations:
 
 1. **A.8 is over-graded.**  `PROVED WITH TARGET` should read `PROVED IN THE
-   RESTATED FORM; the clause as written is NOT EARNED` (§3.1).  The lead's
-   own acceptance of F3 in full concedes the substance; only the grading
-   word differs.  A.6 and B.4 were sent to the owner as amendments in the
-   same logical situation; A.8 was not.
+   RESTATED FORM; the clause as written is NOT EARNED` (§3.1).  The full
+   acceptance of F3 concedes the substance; only the grading
+   word differs.  A.6 and B.4 went forward as amendments in the
+   same logical situation; A.8 did not.
 2. **The label's name overstates.**  The specification defines Weil-strength
    as *equality of structural burden* (§1); Paper 43 §11bis item 4 states
    that this equality "is **not** established", and item 5 narrows but does
@@ -521,12 +515,12 @@ them true.
 ### Paper 44 (row B)
 
 > `ROW B: WEIL-STRENGTH-COMPLETE` on Paper 43's declared carrier, as a
-> theorem about row A's declared trace; B.4 amended; B.7 by lead ruling
+> theorem about row A's declared trace; B.4 amended; B.7 by ruling
 > with dissent recorded.
 
 **Honest as recorded: YES, except that B.7 should read `PARTIAL`.**  Row B
 is the most disciplined of the three ledgers: `(Wgr)` was withdrawn as
-**false** by the lead's own counter-computation after it had been carried
+**false** by a counter-computation after it had been carried
 for two rounds; a round-4 `PROVED` was withdrawn as a non-sequitur (W19);
 the interface with Weil's criterion is declared a colimit statement and
 declared **false at a finite chart**; `I_A(Frob_n,Frob_n)` is declared
@@ -534,7 +528,7 @@ non-existent rather than given a convention-dependent rate.  That is what
 honest labelling looks like.  The one blemish is B.7 (§3.2): the ledger says
 `PROVED`, the body of the paper says `PARTIAL`, and the body is right.
 Under the closure rule that would make the label conditional on a B.7
-amendment, exactly as R131.005 had it for B.4 before the owner's decision.
+amendment, exactly as R131.005 had it for B.4 before that decision.
 
 ### Paper 45 (row C)
 
@@ -542,7 +536,7 @@ amendment, exactly as R131.005 had it for B.4 before the owner's decision.
 > theorem about row A's declared trace with `c = 0`, the explicit formula
 > proved in the repository (Thm 9.4).
 
-**Honest as recorded: YES, with one sentence of the lead's audit to be
+**Honest as recorded: YES, with one sentence of the audit to be
 qualified.**  This is the strongest paper of the three in proof content:
 Thm 9.4 is a correct proof with every classical input named (including the
 round-2 self-correction on (E3b)/(E3c), which is exactly the failure mode

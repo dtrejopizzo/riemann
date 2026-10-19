@@ -216,12 +216,12 @@ no candidate has been offered to test.
 
 | # | file | condition | status |
 |---|---|---|---|
-| R1 | 113_08 | an `h^0` quantifying over the zeros or over `sign Q` is circular | OPEN (standing rule) |
+| R1 | 113_08 | an `h^0` quantifying over the zeros or over `sign Q` is circular | OPEN (structural) |
 | R2 | 113_08 | deformation-blind `h^0` cannot deliver (E) | OPEN |
 | R3 | 113_08 | must fail the Davenport–Heilbronn test | OPEN |
 | R4 | 113_08 | (R) must hold for every nonzero effective `D` | **PASSED** (113_10 Thm 2.5) |
 | R5 | 113_10 | an `h^0` on a scaling-stable cone cannot grow | **FIRED** — this is O1, and 113_11 reported it as required |
-| R6 | 113_10 | circularity, restated for `(E^o)` | OPEN (standing rule) |
+| R6 | 113_10 | circularity, restated for `(E^o)` | OPEN (structural) |
 | R7 | 113_10 | any `h^0` must give `h^0(H) >= 1` | **PASSED** by Ansatz A (tight, `= 1`) |
 | R8 | 113_10 | no nonzero element of `rad` may be effective | **PASSED** by Ansatz A |
 | R9 | 113_11 | `h^1([3f_v - f_h]) > h^1([H])` at equal degree | **PASSED** by Ansatz A, margin 3 |
@@ -262,7 +262,7 @@ no candidate has been offered to test.
 **Proved here.** Nothing. This file is an audit; every entry is a citation.
 
 **Read from source.** All files named in the tables of §1–§4. The three CC facts
-used in §4 are second-hand, via `phase-39-G1G2-interface/120-inventario-CC-fuente.md`
+used in §4 are second-hand, via `phase-39-G1G2-interface/120-source-inventory-of-the-connes-consani-moscovici.md`
 (`[VERIFICADO]`-tagged there, not re-read from the papers here).
 
 **Verified numerically here.** `xi(0) = xi(1) = 1/2` and the five intersection

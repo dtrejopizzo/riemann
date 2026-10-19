@@ -1,6 +1,6 @@
 # E78.100 - Autopsy of the `SHELL-LOG` route
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` core.  
 **Class:** AUTOPSIA theorem-grade.  
 **What we know after this doc that we did not know before:** the exact reason

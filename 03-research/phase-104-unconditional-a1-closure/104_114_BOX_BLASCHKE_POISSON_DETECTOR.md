@@ -1,41 +1,40 @@
-# 104_114 — Detector Blaschke--Poisson de la caja profunda
+# 104_114 — Blaschke–Poisson detector of the deep box
 
-**Pregunta.** Después de `104_112`--`104_113`, el frente es excluir la caja
+**Question.** After `104_112`–`104_113`, the front is excluding the box
 
 \[
  0<\gamma\lesssim T,\qquad
  \beta-\frac12\gtrsim{\gamma^2\over T^2}.                \tag{1}
 \]
 
-¿Hay una forma local, en el disco de Cayley, que detecte exactamente esos
-ceros y pueda transformarse en una desigualdad nueva para los primos
-ordinarios?
+Is there a local form, in the Cayley disc, that detects exactly those
+zeros and can be turned into a new inequality for the ordinary primes?
 
-**Resultado.** Hay un detector exacto, pero no es una fuente nueva de
-signo. En la coordenada
+**Result.** There is an exact detector, but it is not a new source of
+sign. In the coordinate
 
 \[
  s={1\over1-z},\qquad E(z)=(s-1)\zeta(s),
 \]
 
-los ceros con \(\Re\rho>1/2\) son los ceros interiores
+the zeros with \(\Re\rho>1/2\) are the interior zeros
 
 \[
  a_\rho={\rho-1\over\rho}=e^{-a_\rho^{\rm rad}+i\theta_\rho}.
 \]
 
-La caja (1) es equivalente a una familia de cajas de Carleson
+Box (1) is equivalent to a family of Carleson boxes
 
 \[
  1-|a_\rho|\gtrsim T^{-2},\qquad |\theta_\rho|\gtrsim T^{-1}
- \quad(\hbox{con } |\theta_\rho|\asymp \gamma^{-1}).      \tag{2}
+ \quad(\hbox{with } |\theta_\rho|\asymp \gamma^{-1}).      \tag{2}
 \]
 
-Para \(z\in\mathbb D\), la factorización de `104_111`
+For \(z\in\mathbb D\), the factorization from `104_111`
 \[
  E(z)=B(z)O(z)
 \]
-da el déficit exacto
+gives the exact deficit
 
 \[
  \boxed{
@@ -49,46 +48,47 @@ da el déficit exacto
  }                                                       \tag{3}
 \]
 
-Aquí \(P_z\) es la integral de Poisson en el borde. Por tanto
+Here \(P_z\) is the Poisson integral at the boundary. Hence
 \[
  \mathrm{RH}\quad\Longleftrightarrow\quad
  \mathcal J(z)\equiv0\quad(z\in\mathbb D).              \tag{4}
 \]
 
-Además, un cero en la caja (1) produce un pico positivo de tamaño
-\(\gg1\) en \(\mathcal J(z)\) para un \(z\) de la misma caja hiperbólica.
-Así, excluir \(R_T\) equivale a probar
+Moreover, a zero in box (1) produces a positive spike of size
+\(\gg1\) in \(\mathcal J(z)\) for a \(z\) in the same hyperbolic box. So,
+excluding \(R_T\) is equivalent to proving
 \[
  \sup_{z\in\mathcal C_T}\mathcal J(z)\longrightarrow0
 \]
-en una familia cofinal de cajas \(\mathcal C_T\).
+over a cofinal family of boxes \(\mathcal C_T\).
 
-Este detector es útil como coordenada exacta del obstáculo, pero no prueba
-RH. Toda prueba de \(\mathcal J=0\) es exactamente la eliminación del
-factor de Blaschke interior de `104_111`. La frontera \(P_z(\log|E^*|)\)
-vive en la recta crítica; convertirla en una desigualdad prima ordinaria
-vuelve a la fórmula explícita de Weil. Por tanto la vía
-Poisson--Jensen/outer-function no es una fuente independiente de signo.
+This detector is useful as an exact coordinate for the obstacle, but it
+does not prove RH. Any proof of \(\mathcal J=0\) is exactly the removal
+of the interior Blaschke factor of `104_111`. The boundary term
+\(P_z(\log|E^*|)\) lives on the critical line; turning it into an
+ordinary prime inequality returns to Weil's explicit formula. Hence the
+Poisson–Jensen/outer-function route is not an independent source of
+sign.
 
 ---
 
-## 1. Geometría de la caja en el disco
+## 1. Geometry of the box in the disc
 
-Para \(\rho=\beta+i\gamma\), \(\beta>1/2\), ponga
+For \(\rho=\beta+i\gamma\), \(\beta>1/2\), set
 
 \[
  a_\rho^{\rm rad}
  ={1\over2}\log{|\rho|^2\over|\rho-1|^2}.
 \]
 
-Entonces
+Then
 
 \[
  |a_\rho|=e^{-a_\rho^{\rm rad}},\qquad
  a_\rho^{\rm rad}\asymp{\beta-\frac12\over\gamma^2}.
 \]
 
-La fase satisface
+The phase satisfies
 
 \[
  \theta_\rho=\arg{\,\rho-1\over\rho}
@@ -96,104 +96,107 @@ La fase satisface
  \qquad |\theta_\rho|\asymp{1\over\gamma}
 \]
 
-para \(\gamma\ge2\). Por tanto (1) se traduce en
+for \(\gamma\ge2\). Hence (1) translates into
 
 \[
  1-|a_\rho|\asymp a_\rho^{\rm rad}\gtrsim T^{-2},
  \qquad |\theta_\rho|\gtrsim T^{-1}.                    \tag{5}
 \]
 
-El borde radial \(T^{-2}\) coincide con la escala del detector Deep:
-un modo con \(1-|a|\asymp T^{-2}\) tiene crecimiento
-\(\exp(n/T^2)\), y en grados \(n\asymp T^4\) alcanza
+The radial boundary \(T^{-2}\) coincides with the scale of the Deep
+detector: a mode with \(1-|a|\asymp T^{-2}\) has growth
+\(\exp(n/T^2)\), and at degrees \(n\asymp T^4\) it reaches
 \(\exp(T^2)=e^{\sqrt X}\).
 
-## 2. Jensen local exacto
+## 2. Exact local Jensen
 
-La factorización de `104_111` da \(E=BO\), sin factor interior singular.
-Para el producto de Blaschke normalizado
+The factorization from `104_111` gives \(E=BO\), with no singular
+interior factor. For the normalized Blaschke product
 
 \[
  b_a(z)={|a|\over a}{a-z\over1-\bar a z},
  \qquad b_a(0)=|a|,
 \]
 
-se tiene
+one has
 \[
  \log|B(z)|
  =\sum_{\Re\rho>1/2}m_\rho
  \log\left|{a_\rho-z\over1-\overline{a_\rho}z}\right|.
 \]
 
-Como \(O\) es exterior,
+Since \(O\) is exterior,
 
 \[
  \log|O(z)|=P_z(\log|E^*|).
 \]
 
-Restando \(\log|E(z)|=\log|B(z)|+\log|O(z)|\), resulta (3). La cantidad
-\(\mathcal J(z)\) es no negativa y se anula en un punto si y solo si no
-hay ceros interiores que contribuyan al potencial visto desde ese punto.
-Se anula identicamente si y solo si \(B\equiv1\).
+Subtracting \(\log|E(z)|=\log|B(z)|+\log|O(z)|\) gives (3). The quantity
+\(\mathcal J(z)\) is non-negative and vanishes at a point if and only if
+no interior zero contributes to the potential seen from that point. It
+vanishes identically if and only if \(B\equiv1\).
 
-## 3. Un cero de la caja produce un pico
+## 3. A zero of the box produces a spike
 
-Sea \(a\in\mathbb D\) un cero interior. Tome \(z\) en el mismo radio y con
+Let \(a\in\mathbb D\) be an interior zero. Take \(z\) on the same radius,
+with
 \[
  1-|z|=\kappa(1-|a|),\qquad 0<\kappa<1,\qquad \arg z=\arg a.
 \]
 
-Entonces
+Then
 \[
  \left|{1-\bar a z\over z-a}\right|
  ={1-|a||z|\over ||z|-|a||}
  ={(1-|a|)+|a|(1-|z|)\over |(1-|a|)-(1-|z|)|}.
 \]
 
-Si \(1-|z|=\kappa(1-|a|)\), el cociente tiende a
+If \(1-|z|=\kappa(1-|a|)\), the ratio tends to
 \[
  {1+\kappa\over1-\kappa}
 \]
-cuando \(|a|\to1\). Así un solo cero de la caja aporta al menos
+as \(|a|\to1\). So a single zero of the box contributes at least
 \[
  \log{1+\kappa\over1-\kappa}+o(1)                       \tag{6}
 \]
-a \(\mathcal J(z)\), con multiplicidad. La detección es local y de tamaño
-constante; no se pierde en promedios.
+to \(\mathcal J(z)\), with multiplicity. The detection is local and of
+constant size; it is not lost in averages.
 
-## 4. Por qué no es un mecanismo nuevo de cierre
+## 4. Why this is not a new closing mechanism
 
-La identidad (3) prueba que el detector correcto existe y es positivo. El
-problema es que su positividad es la del factor de Blaschke, no una
-desigualdad aritmética que lo anule. Para concluir RH habría que demostrar
+Identity (3) proves that the correct detector exists and is positive. The
+problem is that its positivity is that of the Blaschke factor, not an
+arithmetic inequality that makes it vanish. To conclude RH one would have
+to prove
 
 \[
  P_z(\log|E^*|)\le \log|E(z)|
  \qquad(z\in\mathbb D),                                  \tag{7}
 \]
 
-porque la desigualdad opuesta es la subarmonicidad automática de
-\(\log|E|\). Pero (7) es exactamente decir que no hay factor interior.
+because the opposite inequality is the automatic subharmonicity of
+\(\log|E|\). But (7) is exactly saying that there is no interior factor.
 
-En términos de primos, \(\log E(z)\) en \(\Re s>1\) tiene serie de Euler,
-pero \(P_z(\log|E^*|)\) vive en la frontera \(\Re s=1/2\). Transportar
-esa frontera a los primos requiere la fórmula explícita de Weil con un
-test adaptado al núcleo de Poisson. La contribución de un cero interior es
-precisamente el término positivo de (3). Por tanto la desigualdad que
-anularía \(\mathcal J\) es Weil-positivity/RH en esta familia de tests, no
-una consecuencia de PNT, densidad, o de la factorización exterior.
+In terms of primes, \(\log E(z)\) in \(\Re s>1\) has an Euler series, but
+\(P_z(\log|E^*|)\) lives on the boundary \(\Re s=1/2\). Transporting that
+boundary to the primes requires Weil's explicit formula with a test
+adapted to the Poisson kernel. The contribution of an interior zero is
+precisely the positive term of (3). Hence the inequality that would make
+\(\mathcal J\) vanish is Weil-positivity/RH for this family of tests, not
+a consequence of PNT, density, or the exterior factorization.
 
-## 5. Consecuencia
+## 5. Consequence
 
-La caja profunda puede ser atacada en dos coordenadas equivalentes:
+The deep box can be attacked in two equivalent coordinates:
 
-1. la coordenada Li/Deep de `104_75`--`104_113`, donde un cero en la caja
-   produce excursiones negativas profundas;
-2. la coordenada Blaschke--Poisson (3), donde el mismo cero produce un pico
-   positivo local de Green.
+1. the Li/Deep coordinate of `104_75`–`104_113`, where a zero in the box
+   produces deep negative excursions;
+2. the Blaschke–Poisson coordinate (3), where the same zero produces a
+   local positive Green spike.
 
-Ambas aíslan el mismo factor interior. Ninguna reduce la última tarea. Un
-sucesor real tendría que probar una desigualdad prima ordinaria que fuerce
-\(\mathcal J(z)=0\) en cajas cofinales y que falle para los modelos Euler
-exteriores. En ausencia de esa desigualdad, el detector es una coordenada
-limpia del obstáculo, no una prueba de RH.
+Both isolate the same interior factor. Neither reduces the final task. A
+genuine successor would have to prove an ordinary prime inequality
+forcing \(\mathcal J(z)=0\) on cofinal boxes and failing for the exterior
+Euler models. In the absence of that inequality, the detector is a clean
+coordinate for the obstacle, not a proof of RH.
+</content>

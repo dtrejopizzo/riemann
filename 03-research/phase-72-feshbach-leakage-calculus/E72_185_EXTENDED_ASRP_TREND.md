@@ -1,7 +1,6 @@
 # E72.185 -- Extended ASRP trend
 
-**Date:** 2026-07-09.
-**Role:** stress the stable arithmetic certificate beyond E72.184 and identify the dominant term.
+**Purpose:** stress the stable arithmetic certificate beyond E72.184 and identify the dominant term.
 
 ## 0. Question
 

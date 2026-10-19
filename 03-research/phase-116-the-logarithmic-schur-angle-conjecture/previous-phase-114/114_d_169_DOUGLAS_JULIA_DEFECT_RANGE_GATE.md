@@ -5,7 +5,7 @@
 The factorization suggested by the integer-cell orthogonality,
 
 \[
- z_N=(I-K_N)^{1/2}w_N,qquad
+ z_N=(I-K_N)^{1/2}w_N,\qquad
  \|w_N\|^2\le c_N,                                   \tag{0.1}
 \]
 
@@ -18,7 +18,7 @@ contraction; an explicit Witt--Poisson formula for (w_N) and a proof of
 Let
 
 \[
- D_N=I-K_N\ge0,qquad
+ D_N=I-K_N\ge0,\qquad
  z_N=\Gamma_N^{-1/2}\mathcal B_N:E_N\longrightarrow H_N.            \tag{0.2}
 \]
 
@@ -164,7 +164,7 @@ The next admissible construction must therefore provide one of:
 2. a residual factorization
 
    \[
-   \mathfrak r_N=D_N^{1/2}\widetilde w_N,qquad
+   \mathfrak r_N=D_N^{1/2}\widetilde w_N,\qquad
    \|w_N^{\rm amb}\oplus\widetilde w_N\|^2\le c_N.   \tag{4.1}
    \]
 

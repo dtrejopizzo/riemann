@@ -1,6 +1,6 @@
 # E78.36 - Polarization law for the quadratic-defect drift
 
-**Run:** 2026-07-19.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

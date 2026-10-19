@@ -1,7 +1,6 @@
 # E72.115 -- Mass alignment gate
 
-**Date:** 2026-07-09.
-**Role:** isolate the finite projection estimate behind the mass condition `(MOP)`.
+**Purpose:** isolate the finite projection estimate behind the mass condition `(MOP)`.
 
 ## 0. Mass row
 

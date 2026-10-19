@@ -1,6 +1,6 @@
 # P123.109 — The coupled induced relative determinant and its chart compatibility
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY for scalar external
+Status: PROVED-IN-REPOSITORY for scalar external
 Bruhat tests in the induced single-zero normal representation of
 P123.043, at each finite semilocal set containing q. The determinant
 is a holomorphic germ. Its geometric RR identification remains open.

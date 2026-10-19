@@ -324,8 +324,8 @@ form is
 with eigenvalues
 
 \[
- H_\infty u=\frac3{10}u,qquad
- H_\infty v=-\frac1{10}v,qquad
+ H_\infty u=\frac3{10}u,\qquad
+ H_\infty v=-\frac1{10}v,\qquad
  H_\infty r=0.                                    \tag{24}
 \]
 

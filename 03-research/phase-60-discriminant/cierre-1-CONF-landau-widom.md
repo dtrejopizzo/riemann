@@ -1,32 +1,32 @@
-# Cierre de #1 (CONF / operador límite IV.1) — vía el método de CCN Objetivo: cerrar la identificación del operador límite 𝓛_∞ = lim (1/ε₀)A_λ y la tightness (CONF),
-que da (H-lim)+(H-gap)+IV.1+γ=3, RH-neutral. Usa el apéndice de –van Suijlekom (2511.23257). ## Reformulación limpia [RIGUROSA, CCN Prop ~7, línea 1630]
-Q = convolución por D(|x−y|) truncada a [0,L]. Para ζ: A_λ = conv. por D_ζ(|x−y|) |_{[0,L]}, D_ζ(u)=w_arch(u) − Σ_{n≤λ²}(Λ(n)/√n)δ(u−log n), L=2logλ.
-Wiener–Hopf truncado puro. Reemplaza el potencial M_0(w) posición-dependiente (más limpio). ## Modelo resuelto por CCN [RIGUROSO, líneas 1677–1694]
-D=δ_0+2πb sin(2πx): autovectores límite sin(πx),cos(πx) (máx 8/3), sin(3πx),cos(3πx) (mín −8/5).
-FT h±,k± enteras, TODOS los ceros reales (múltiplos impares de π). Son modos de DIRICHLET en [0,1].
-Núcleo del operador: μ(x,y)=2π Sign(x−y)sin(2π(x−y)) = Green-inverso de un 2º orden. ⟹ template
-riguroso de "inverso-de-Green / 2º orden / FT real-rooted" para el esqueleto par. ## Mecanismo de cierre (dos piezas que no compiten)
-(1a) ARQUIMEDIANO → cinético c(−d²/dx²), c=−ψ''(1/4)/8 [DERIVADO + confirmado por CCN model]. Autofunciones sin(mπx/ℓ). CERRADO.
-(1b) PRIMOS → Dirichlet BC [INSIGHT que destraba la nonlocalidad]: saltos log n son GRANDES (hasta 2logλ) vs ancho de capa de borde 1/logλ ⟹ un salto desde la capa aterriza FUERA ⟹ el término de primos NO es potencial local V(x): es FUGA = absorción = condición de Dirichlet efectiva en el borde interior de la capa. Resuelve por qué la nonlocalidad (85% peso en saltos grandes) NO rompe el 2º orden: lo CONFINA. Los autovectores Dirichlet sin(mπx) de CCN lo confirman.
-RESULTADO: 𝓛_∞ = c(−d²/dx²) en intervalo finito con Dirichlet BC ⟹ espectro c(kπ/ℓ)² ⟹ relativo
-(k+1)², γ→3, paridad alternante. (H-lim)+(H-gap)+IV.1 cerrados módulo el lema único de abajo. ## LEMA ÚNICO RESTANTE (CONF, versión final) [RH-neutral, abierto]
-Los saltos grandes Σ Λ(n)/√n por log n ≫ (ancho de capa) truncados a [0,L] convergen, en el
-reescalamiento de borde, a una condición de Dirichlet en el extremo interior, con tightness
-uniforme. = Wiener–Hopf truncado clásico, multi-frecuencia (log n), vía el núcleo Sign(x−y) de CCN.
-Reemplaza la vieja (CONF) del κ·logλ (que era inconsistente: el pozo es λ^{1/2}, no logλ). ## RESOLUCIÓN de la inconsistencia (offset / ubicación del fondo) — diagnóstico sobre motor validado
-Apareció una tensión: a(t)≈a(0)+½a''(0)t² con a(0)≈−2λ daría offset, pero E11 mide ε_k/ε_0=(k+1)²
-SIN offset. Resuelto:
-- ERROR mío: tomé el ínfimo del símbolo a(0)≈−2λ como el autovalor de fondo. NO lo es. La función que alcanza a(0) (concentrada en t=0) NO es admisible en el espacio truncado/band-limited; la compresión de Wiener–Hopf SUBE el fondo hasta el ε_0 minúsculo (~e^{−SL}, E7/E11). a(0) es el inf del símbolo (inaccesible), no el fondo.
-- Diagnóstico float64 (lam=3.7,5,7, N=16): autovalores ~1e-15 = RUIDO (cond≈1e16) — confirma ε_0 minúsculo, no −2λ. (El espectro fino real está en E11/mpmath dps=45: ε_k/ε_0→(k+1)².)
-- Variable t↔ω*: dual (de-modulación). t=0 del símbolo ⟺ carrier ω*≈π. Reconciliado analíticamente por fase estacionaria: ξ_k≈(−1)^k env(k) ⟹ ξ(x) concentrada en x=−L/2 (borde).
-- (k+1)² es CUADRÁTICO en k ⟹ caja de Dirichlet (paredes DURAS), no pozo armónico (que daría lineal en k). EL ESPECTRO MISMO confirma (L1): fuga→absorción→Dirichlet duro. ## OPERADOR LÍMITE — IDENTIFICADO (consistente con el motor) 𝓛_∞ = −c d²/dx² en caja con Dirichlet en ambos extremos, c=−ψ''(1/4)/8, espectro (k+1)².
-Todas las piezas cierran entre sí: dualidad t↔ω* ✓; a(0)=inf del símbolo (no el fondo) ✓; fondo ε_0
-minúsculo positivo (E11) signo=RH ✓; (k+1)² puro = caja Dirichlet dura ✓ confirma L1; c derivado ✓. ## LO QUE QUEDA (rigor pleno, RH-neutral, estándar)
-Teorema cuantitativo Landau–Widom/Agmon: el espectro bajo del Wiener–Hopf truncado CONVERGE a la
-caja de Dirichlet (k+1)² con tightness uniforme. Ya NO es misterio: resultado estándar "convolución
-truncada con mínimo interior de símbolo → caja de Dirichlet en el borde", ingredientes determinados.
-Técnico, RH-neutral, cerrable por maquinaria establecida — no es investigación abierta (a diferencia
-del muro = signo de ε_0). ## Estado de #1
-Identificación del operador límite COMPLETA y sin contradicciones internas (verificada vs motor).
-Cierra IV.1 + (H-lim)+(H-gap)+γ=3 a nivel de identificación. Falta sólo la tightness cuantitativa
-(Landau–Widom), RH-neutral. El blocker conceptual (offset/carrier/ubicación) está despejado.
+# Closure of #1 (CONF / limit operator IV.1) — via the CCN method Goal: close the identification of the limit operator 𝓛_∞ = lim (1/ε₀)A_λ and the tightness (CONF),
+which gives (H-lim)+(H-gap)+IV.1+γ=3, RH-neutral. Uses the –van Suijlekom appendix (2511.23257). ## Clean reformulation [RIGOROUS, CCN Prop ~7, line 1630]
+Q = convolution by D(|x−y|) truncated to [0,L]. For ζ: A_λ = conv. by D_ζ(|x−y|) |_{[0,L]}, D_ζ(u)=w_arch(u) − Σ_{n≤λ²}(Λ(n)/√n)δ(u−log n), L=2logλ.
+Pure truncated Wiener–Hopf. Replaces the position-dependent potential M_0(w) (cleaner). ## Model solved by CCN [RIGOROUS, lines 1677–1694]
+D=δ_0+2πb sin(2πx): limit eigenvectors sin(πx),cos(πx) (max 8/3), sin(3πx),cos(3πx) (min −8/5).
+FT h±,k± entire, ALL zeros real (odd multiples of π). They are DIRICHLET modes on [0,1].
+Operator kernel: μ(x,y)=2π Sign(x−y)sin(2π(x−y)) = Green-inverse of a 2nd order operator. ⟹ rigorous
+template of "Green-inverse / 2nd order / real-rooted FT" for the even skeleton. ## Closure mechanism (two pieces that do not compete)
+(1a) ARCHIMEDEAN → kinetic c(−d²/dx²), c=−ψ''(1/4)/8 [DERIVED + confirmed by CCN model]. Eigenfunctions sin(mπx/ℓ). CLOSED.
+(1b) PRIMES → Dirichlet BC [INSIGHT that unlocks the nonlocality]: the log n jumps are LARGE (up to 2logλ) vs boundary-layer width 1/logλ ⟹ a jump from the layer lands OUTSIDE ⟹ the prime term is NOT a local potential V(x): it is LEAKAGE = absorption = effective Dirichlet condition at the inner edge of the layer. Resolves why the nonlocality (85% weight in large jumps) does NOT break the 2nd order: it CONFINES it. CCN's Dirichlet eigenvectors sin(mπx) confirm it.
+RESULT: 𝓛_∞ = c(−d²/dx²) on a finite interval with Dirichlet BC ⟹ spectrum c(kπ/ℓ)² ⟹ ratio
+(k+1)², γ→3, alternating parity. (H-lim)+(H-gap)+IV.1 closed modulo the single remaining lemma below. ## SINGLE REMAINING LEMMA (CONF, final version) [RH-neutral, open]
+The large jumps Σ Λ(n)/√n per log n ≫ (layer width) truncated to [0,L] converge, in the
+boundary rescaling, to a Dirichlet condition at the inner endpoint, with uniform
+tightness. = classical truncated Wiener–Hopf, multi-frequency (log n), via CCN's Sign(x−y) kernel.
+Replaces the old (CONF) of κ·logλ (which was inconsistent: the well is λ^{1/2}, not logλ). ## RESOLUTION of the inconsistency (offset / location of the bottom) — diagnostic on a validated engine
+A tension appeared: a(t)≈a(0)+½a''(0)t² with a(0)≈−2λ would give an offset, but E11 measures ε_k/ε_0=(k+1)²
+WITHOUT offset. Resolved:
+- MY ERROR: I took the infimum of the symbol a(0)≈−2λ as the bottom eigenvalue. It is NOT. The function that attains a(0) (concentrated at t=0) is NOT admissible in the truncated/band-limited space; the Wiener–Hopf compression RAISES the bottom up to the tiny ε_0 (~e^{−SL}, E7/E11). a(0) is the inf of the symbol (inaccessible), not the bottom.
+- float64 diagnostic (lam=3.7,5,7, N=16): eigenvalues ~1e-15 = NOISE (cond≈1e16) — confirms tiny ε_0, not −2λ. (The real fine spectrum is at E11/mpmath dps=45: ε_k/ε_0→(k+1)².)
+- Variable t↔ω*: dual (de-modulation). t=0 of the symbol ⟺ carrier ω*≈π. Reconciled analytically by stationary phase: ξ_k≈(−1)^k env(k) ⟹ ξ(x) concentrated at x=−L/2 (boundary).
+- (k+1)² is QUADRATIC in k ⟹ Dirichlet box (HARD walls), not a harmonic well (which would give linear in k). THE SPECTRUM ITSELF confirms (L1): leakage→absorption→hard Dirichlet. ## LIMIT OPERATOR — IDENTIFIED (consistent with the engine) 𝓛_∞ = −c d²/dx² in a box with Dirichlet at both endpoints, c=−ψ''(1/4)/8, spectrum (k+1)².
+All the pieces close with each other: duality t↔ω* ✓; a(0)=inf of the symbol (not the bottom) ✓; tiny positive
+bottom ε_0 (E11) sign=RH ✓; pure (k+1)² = hard Dirichlet box ✓ confirms L1; c derived ✓. ## WHAT REMAINS (full rigor, RH-neutral, standard)
+Quantitative Landau–Widom/Agmon theorem: the low spectrum of the truncated Wiener–Hopf CONVERGES to the
+Dirichlet box (k+1)² with uniform tightness. It is no longer a mystery: standard result "truncated
+convolution with interior minimum of the symbol → Dirichlet box at the boundary", ingredients determined.
+Technical, RH-neutral, closable by established machinery — not open research (unlike
+the wall = sign of ε_0). ## Status of #1
+Identification of the limit operator COMPLETE and free of internal contradictions (verified against the engine).
+Closes IV.1 + (H-lim)+(H-gap)+γ=3 at the identification level. Only the quantitative tightness
+(Landau–Widom) is missing, RH-neutral. The conceptual blocker (offset/carrier/location) has been cleared.

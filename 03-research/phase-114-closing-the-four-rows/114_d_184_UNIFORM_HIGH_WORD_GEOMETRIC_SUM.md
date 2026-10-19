@@ -13,8 +13,8 @@ fixed-\(k\) asymptotic is required.  Choose
 Let
 
 \[
- b_N^2=V_N+H_N,qquad
- V_N=\sum_{n\le N}{\Lambda(n)^2\over n},qquad
+ b_N^2=V_N+H_N,\qquad
+ V_N=\sum_{n\le N}{\Lambda(n)^2\over n},\qquad
  H_N={\Lambda_2(N)\over\sqrt N}.                    \tag{0.2}
 \]
 

@@ -1,58 +1,58 @@
-# Reparación de los tres puntos 🟠: Normalización, N5c-DH, IV.2≡§V (conflación) Resolución matemática pura. La tercera (IV.2) destapó un hallazgo de fondo: **H1 sobre-afirma
-"QW PSD"**, y la renormalización `/ε_0` tiene positividad de Weil (RH) horneada. --- ## 1. Normalización — RESUELTO limpio **El cabo:** `ξ̂_λ` es autovector, definido salvo escala; `ε_loc=sup|ξ̂_λ−Ξ|` no está bien
-definido sin fijar escala. **Resolución:** la conclusión de la cadena es **Hurwitz**, que es **invariante por constante
-no nula**: si `c_λ ξ̂_λ → Ξ` uniforme con `c_λ≠0` y `ξ̂_λ` real-rooted, entonces `Ξ` es
-real-rooted (las raíces de `c_λ ξ̂_λ` = las de `ξ̂_λ` = reales). Por tanto la normalización
-es **libre** y se fija canónicamente:
-``` ξ̂_λ(0):= Ξ(0) (match de valor en el centro; ambas pares, valor central ≠0).
+# Repair of the three 🟠 points: Normalization, N5c-DH, IV.2≡§V (conflation) Pure mathematical resolution. The third (IV.2) uncovered a deeper finding: **H1 over-claims
+"QW PSD"**, and the `/ε_0` renormalization has Weil positivity (RH) baked in. --- ## 1. Normalization — cleanly RESOLVED **The loose end:** `ξ̂_λ` is an eigenvector, defined up to scale; `ε_loc=sup|ξ̂_λ−Ξ|` is not well
+defined without fixing the scale. **Resolution:** the conclusion of the chain is **Hurwitz**, which is **invariant under a
+nonzero constant**: if `c_λ ξ̂_λ → Ξ` uniformly with `c_λ≠0` and `ξ̂_λ` real-rooted, then `Ξ` is
+real-rooted (the roots of `c_λ ξ̂_λ` = those of `ξ̂_λ` = real). Therefore the normalization
+is **free** and is fixed canonically:
+``` ξ̂_λ(0):= Ξ(0) (match of value at the center; both even, central value ≠0).
 ```
-Concretamente `ξ̂_λ(0)=ξ_0·L/2` (residuo `k=0`), no nulo (fundamental par); se reescala `ξ`
-para igualar `Ξ(0)`. Con esto:
-- `ε_loc=sup|ξ̂_λ−Ξ|` queda **bien definido**.
-- `Γ=sup|ξ̂_λ| = O(1)` (no `O(logλ)`): `ξ̂_λ≈Ξ`, `sup|Ξ|=O(1)` por el decaimiento gamma. **Mejora N2.**
-- La conclusión RH es **independiente** de la elección (Hurwitz-invariante). **[RESUELTO]** Cabo cerrado para N2, III, Thm 2. (En III se puede usar también la
-normalización `L²`; ambas son válidas y Hurwitz-invariantes.) --- ## 2. N5c-DH — RESUELTO a inputs nombrados (y corrige de paso la fuente de real-rootedness) **El cabo:** la cota `sup|ξ̂_f−Ξ_f| ≥ |Ξ_f(x₀)|>0` usa (i) `ξ̂_f` real-rooted y (ii)
-convergencia en eje real `ξ̂_f(x₀)→Ξ_f(x₀)`, asumida. **Resolución de (i) — y hallazgo:** `ξ̂_DH` **ES** real-rooted, y esto **NO viene de
-`Λ(n)≥0`/PF** (DH tiene `b(n)` con cambios de signo, PF falla) sino de la **realización
-espectral auto-adjunta de CCM** (las raíces seculares del autovector fundamental de un
-operador auto-adjunto). Empíricamente confirmado (E9b: raíces DH reales 78,…,85.73,…).
-**Esto corrige la fuente de E1:** la real-rootedness vale para ζ **y** DH ⟹ no puede
-depender del signo de los coeficientes ⟹ su mecanismo es Hermite–Biehler/auto-adjunto, no
-Perron–Frobenius. (Consistente con la reparación E1: el contraejemplo mostró que la
-positividad no la da, y aquí vemos que ni siquiera es necesaria — DH la tiene sin
-positividad.) **Resolución de (ii):** la convergencia en el eje real `ξ̂_f(x₀)→Ξ_f(x₀)` en un punto
-interior fijo `x₀` (bien debajo del horizonte para `λ` grande) **es** el análogo para `f`
-del andamiaje E2.a + horizonte (probado para ζ, mismo mecanismo de construcción). No es
-gratis pero **no es un gap nuevo**: es el andamiaje ya probado, instanciado en `f`. **[RESUELTO a dependencias nombradas]:** N5c-DH es **sólida módulo** (i) real-rootedness de
-CCM [auto-adjunta, cierta para DH] + (ii) convergencia-en-eje [= andamiaje E2.a/horizonte].
-La monotonía `|g(x+iy)|≥|g(x)|` es correcta. No es un gap profundo; hereda E1 (real-root) y
-E2.a (eje). Baja de 🟠 a "sólida módulo andamiaje". --- ## 3. IV.2≡§V — NO hay conflación, PERO destapa que H1 sobre-afirma y `/ε_0` asume Weil≥0 **El cabo (2 partes):** (1) "dim=N(T*) pinea `g∝Ξ_T`" heurístico; (2) conflación: ¿es el
-operador CCM `A_λ` la forma de Weil cruda? **Resolución de (2) — NO hay conflación:** por la fórmula explícita de Weil,
-``` QW = (archimedean) − (arithmetic) = Σ_ρ g(γ_ρ) conj(g(conj γ_ρ)) [lado-ceros].
+Concretely `ξ̂_λ(0)=ξ_0·L/2` (residue `k=0`), nonzero (even fundamental); `ξ` is rescaled
+to match `Ξ(0)`. With this:
+- `ε_loc=sup|ξ̂_λ−Ξ|` becomes **well defined**.
+- `Γ=sup|ξ̂_λ| = O(1)` (not `O(logλ)`): `ξ̂_λ≈Ξ`, `sup|Ξ|=O(1)` by the gamma decay. **Improves N2.**
+- The RH conclusion is **independent** of the choice (Hurwitz-invariant). **[RESOLVED]** Loose end closed for N2, III, Thm 2. (In III the `L²` normalization can
+also be used; both are valid and Hurwitz-invariant.) --- ## 2. N5c-DH — RESOLVED to named inputs (and along the way corrects the source of real-rootedness) **The loose end:** the bound `sup|ξ̂_f−Ξ_f| ≥ |Ξ_f(x₀)|>0` uses (i) `ξ̂_f` real-rooted and (ii)
+convergence on the real axis `ξ̂_f(x₀)→Ξ_f(x₀)`, assumed. **Resolution of (i) — and finding:** `ξ̂_DH` **IS** real-rooted, and this **does NOT come from
+`Λ(n)≥0`/PF** (DH has `b(n)` with sign changes, PF fails) but from the **self-adjoint spectral
+realization of CCM** (the secular roots of the fundamental eigenvector of a
+self-adjoint operator). Empirically confirmed (E9b: real DH roots 78,…,85.73,…).
+**This corrects the source of E1:** real-rootedness holds for ζ **and** DH ⟹ it cannot
+depend on the sign of the coefficients ⟹ its mechanism is Hermite–Biehler/self-adjoint, not
+Perron–Frobenius. (Consistent with the E1 repair: the counterexample showed that
+positivity does not give it, and here we see it is not even necessary — DH has it without
+positivity.) **Resolution of (ii):** the convergence on the real axis `ξ̂_f(x₀)→Ξ_f(x₀)` at a fixed
+interior point `x₀` (well below the horizon for large `λ`) **is** the analogue for `f`
+of the E2.a + horizon scaffolding (proved for ζ, same construction mechanism). It is not
+free, but **it is not a new gap**: it is the already-proved scaffolding, instantiated at `f`. **[RESOLVED to named dependencies]:** N5c-DH is **solid modulo** (i) real-rootedness of
+CCM [self-adjoint, true for DH] + (ii) axis-convergence [= E2.a/horizon scaffolding].
+The monotonicity `|g(x+iy)|≥|g(x)|` is correct. It is not a deep gap; it inherits E1 (real-root) and
+E2.a (axis). Drops from 🟠 to "solid modulo scaffolding". --- ## 3. IV.2≡§V — there is NO conflation, BUT it uncovers that H1 over-claims and `/ε_0` assumes Weil≥0 **The loose end (2 parts):** (1) "dim=N(T*) pins down `g∝Ξ_T`" heuristic; (2) conflation: is the
+CCM operator `A_λ` the raw Weil form? **Resolution of (2) — there is NO conflation:** by Weil's explicit formula,
+``` QW = (archimedean) − (arithmetic) = Σ_ρ g(γ_ρ) conj(g(conj γ_ρ)) [zero side].
 ```
-Las entradas `QW[m,n]=∫q_{mn}w_arch − Σ Λ(n)/√n q_{mn}` **son** la forma de Weil. ⟹ el
-ground state CCM `ξ̂_λ` **ES** el minimizador de Weil. **No son operadores distintos.** El
-argumento variacional es sobre el objeto correcto. **[conflación DESCARTADA]** **Resolución de (1) — refinada, no exacta:** el minimizador `g_0` es el autovector del
-fondo del operador de frame `S=Σ_ρ K_{γ_ρ}⊗K_{γ_ρ}|_{PW_Ω}`. NO es exactamente `Ξ_T` a `λ`
-finito; es `g_0 = Ξ_T + O(déficit)`, y `g_0 → Ξ_T` cuando `λ→∞` (el déficit
-`ε_0 ~ C_0/λ² → 0`). El conteo `dim≈N(T*)` (densidad crítica, Landau–Beurling) hace el
-espacio casi-nulo de baja dimensión con `Ξ_T` adentro. **Rigorizable** (análisis de déficit
-de frame), pero "exactamente `Ξ_T`" es **falso a λ finito** — es límite. **HALLAZGO DE FONDO (lo importante):** como `QW = forma de Weil`,
-``` QW PSD (todos ε_k≥0) ⟺ Weil-positividad en banda log λ ⟺ RH hasta altura T*.
+The entries `QW[m,n]=∫q_{mn}w_arch − Σ Λ(n)/√n q_{mn}` **are** the Weil form. ⟹ the
+CCM ground state `ξ̂_λ` **IS** the Weil minimizer. **They are not distinct operators.** The
+variational argument is over the correct object. **[conflation RULED OUT]** **Resolution of (1) — refined, not exact:** the minimizer `g_0` is the bottom eigenvector of
+the frame operator `S=Σ_ρ K_{γ_ρ}⊗K_{γ_ρ}|_{PW_Ω}`. It is NOT exactly `Ξ_T` at finite `λ`;
+it is `g_0 = Ξ_T + O(deficit)`, and `g_0 → Ξ_T` as `λ→∞` (the deficit
+`ε_0 ~ C_0/λ² → 0`). The count `dim≈N(T*)` (critical density, Landau–Beurling) makes the
+low-dimensional near-null space contain `Ξ_T`. **Rigorizable** (frame-deficit
+analysis), but "exactly `Ξ_T`" is **false at finite λ** — it is a limit. **DEEPER FINDING (the important part):** since `QW = Weil form`,
+``` QW PSD (all ε_k≥0) ⟺ Weil-positivity at bandwidth log λ ⟺ RH up to height T*.
 ```
-Consecuencias:
-- **H1 SOBRE-AFIRMA.** El memo dice "H1 prueba QW PSD incondicional vía PF". **Falso.** Perron–Frobenius da fondo **simple + autovector positivo** (estructura del ground state), **NO** da `ε_0≥0` (PSD). El signo de `ε_0` ES Weil-positividad ⟺ RH-hasta-T*. PF ≠ PSD. Si H1 probara PSD incondicional, probaría RH — imposible. **Corregir H1: PF da estructura, no positividad.**
-- **La renormalización `/ε_0` (III) asume `ε_0>0` = Weil-positividad-hasta-T*** (≈RH-hasta-T*). Es decir, el "truco" que disuelve el gap exp-pequeño **tiene RH horneada** en `ε_0>0`. (Parcheable usando `/|ε_0|`, pero la estructura del fondo es RH-dependiente.) ⟹ III es condicional **también** a `ε_0>0`, además de (H-gap)+(H-lim).
-- Esto **confirma y profundiza** que IV.2≡§V es el núcleo RH: no sólo el límite `ξ̂_∞=Ξ` es RH-equivalente; la **propia renormalización** que sostiene III lleva Weil-positividad. **[RESUELTO]:** conflación descartada (QW=Weil form, mismo objeto); heurístico refinado a
-`g_0=Ξ_T+O(déficit)→Ξ_T` (límite, Landau–Beurling); y **destapado** que H1 sobre-afirma PSD
-y que `/ε_0` asume `ε_0>0`=Weil. El relato no se cae (no hay crack lógico de conflación),
-pero **la positividad de Weil aparece en más lugares de los que el cuadro admitía** (H1, III). --- ## Resumen de las tres | punto | resolución |
+Consequences:
+- **H1 OVER-CLAIMS.** The memo says "H1 proves QW PSD unconditionally via PF". **False.** Perron–Frobenius gives a **simple bottom + positive eigenvector** (structure of the ground state), **NOT** `ε_0≥0` (PSD). The sign of `ε_0` IS Weil-positivity ⟺ RH-up-to-T*. PF ≠ PSD. If H1 proved unconditional PSD, it would prove RH — impossible. **Correction to H1: PF gives structure, not positivity.**
+- **The `/ε_0` (III) renormalization assumes `ε_0>0` = Weil-positivity-up-to-T*** (≈RH-up-to-T*). That is, the "trick" that dissolves the exp-small gap **has RH baked in** via `ε_0>0`. (Patchable using `/|ε_0|`, but the structure of the bottom is RH-dependent.) ⟹ III is conditional **also** on `ε_0>0`, in addition to (H-gap)+(H-lim).
+- This **confirms and deepens** that IV.2≡§V is the RH core: not only is the limit `ξ̂_∞=Ξ` RH-equivalent; the **renormalization itself** that supports III carries Weil-positivity. **[RESOLVED]:** conflation ruled out (QW=Weil form, same object); heuristic refined to
+`g_0=Ξ_T+O(deficit)→Ξ_T` (limit, Landau–Beurling); and it was **uncovered** that H1 over-claims PSD
+and that `/ε_0` assumes `ε_0>0`=Weil. The narrative does not collapse (there is no logical
+conflation crack), but **Weil positivity shows up in more places than the picture admitted** (H1, III). --- ## Summary of the three | point | resolution |
 |---|---|
-| **Normalización** | **RESUELTO**: `ξ̂_λ(0)=Ξ(0)`, Hurwitz-invariante; `Γ=O(1)` |
-| **N5c-DH** | **RESUELTO a inputs**: real-rootedness (CCM auto-adjunta, no PF) + conv-eje (andamiaje E2.a) |
-| **IV.2 conflación** | **descartada** (QW=Weil form); heurístico→límite; **hallazgo: H1 sobre-afirma PSD, `/ε_0` asume Weil≥0** | **Lo más valioso:** (a) la **conflación temida NO existe** — `ξ̂_λ` SÍ es el minimizador de
-Weil, el relato es coherente. (b) Pero la auditoría destapó que **H1 sobre-afirma** ("PSD"
-es RH, no PF) y que **la renormalización `/ε_0` asume Weil-positividad** — la RH-hardness
-está más distribuida de lo que el cuadro mostraba. (c) Y se corrigió la **fuente de
-real-rootedness**: es auto-adjunta/HB (vale para DH sin `Λ≥0`), **no** Perron–Frobenius —
-lo que alinea con la reparación de E1.
+| **Normalization** | **RESOLVED**: `ξ̂_λ(0)=Ξ(0)`, Hurwitz-invariant; `Γ=O(1)` |
+| **N5c-DH** | **RESOLVED to inputs**: real-rootedness (self-adjoint CCM, not PF) + axis-conv (E2.a scaffolding) |
+| **IV.2 conflation** | **ruled out** (QW=Weil form); heuristic→limit; **finding: H1 over-claims PSD, `/ε_0` assumes Weil≥0** | **The most valuable part:** (a) the **feared conflation does NOT exist** — `ξ̂_λ` IS indeed the
+Weil minimizer, the narrative is coherent. (b) But the audit uncovered that **H1 over-claims**
+("PSD" is RH, not PF) and that **the `/ε_0` renormalization assumes Weil-positivity** — the RH-hardness
+is more distributed than the picture showed. (c) And the **source of
+real-rootedness** was corrected: it is self-adjoint/HB (holds for DH without `Λ≥0`),
+**not** Perron–Frobenius — which aligns with the E1 repair.

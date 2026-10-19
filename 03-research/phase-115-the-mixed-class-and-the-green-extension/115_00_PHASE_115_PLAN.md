@@ -1,6 +1,6 @@
 # Phase 115 — The mixed class and the Green extension
 
-**Opened:** 2026-08-08, from `phase-114/PHASE_114_CLOSURE.md`.
+**, from `phase-114/PHASE_114_CLOSURE.md`.
 
 Row (d) is not missing an inequality.  It is missing an **object**.  This phase
 builds it, or proves it cannot exist.

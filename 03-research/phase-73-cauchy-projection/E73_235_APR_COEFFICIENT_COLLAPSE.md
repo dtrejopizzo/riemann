@@ -1,6 +1,5 @@
 # E73.235 - APR coefficient collapse and the finite divisibility target
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

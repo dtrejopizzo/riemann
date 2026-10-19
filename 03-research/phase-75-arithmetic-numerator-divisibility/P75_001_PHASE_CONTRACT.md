@@ -1,6 +1,5 @@
 # P75.001 - Phase contract and closure ledger
 
-Date: 2026-07-16.
 
 ## Target
 
@@ -47,7 +46,7 @@ ARITH-LOCK
 I_L={-N_L,...,-1,1,...,N_L}
 ```
 
-or the locally established equivalent from the Phase 71/72 builder.  The
+or the locally established equivalent from the Phase 71/72 construction.  The
 mesh is
 
 ```text

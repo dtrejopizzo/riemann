@@ -71,7 +71,7 @@ automatic.  They remain independent analytic obligations.
 The conservation principle is therefore recorded precisely as
 
 ```text
-at least one member of the sufficient cut carries force-RH;
+at least one member of the sufficient cut carries RH-strength;
 the current architecture locates the required arithmetic separation in B1;
 the other members must still be proved build-neutrally.                 (4.1)
 ```

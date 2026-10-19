@@ -1,13 +1,13 @@
-# 104_54 — Gate Gibbs--Chernoff del defecto Palm unitario
+# 104_54 — Gibbs--Chernoff gate for the unitary Palm defect
 
-**Resultado.** El frente no aditivo sugerido por `104_50` no admite una
-cota de Chernoff. Para
+**Result.** The non-additive front suggested by `104_50` does not admit a
+Chernoff bound. For
 
 \[
  f_{n,s}(x)=L_{n-1}^{(1)}(sx),\qquad s>1,                 \tag{1}
 \]
 
-sea el defecto unitario
+let the unitary defect be
 
 \[
  D_{n,s}(N)=
@@ -16,111 +16,111 @@ sea el defecto unitario
  -{1-L_n(s\log N)\over s}.                               \tag{2}
 \]
 
-Entonces, para todo entero \(n\ge4\), en particular para todo
+Then, for every integer \(n\ge4\), in particular for every
 \(n\ge150\),
 
 \[
  \boxed{\mathbb E_s e^{tD_{n,s}}=+\infty
-        \quad\hbox{para cada }t\in\mathbb R\setminus\{0\}.} \tag{3}
+        \quad\hbox{for every }t\in\mathbb R\setminus\{0\}.} \tag{3}
 \]
 
-La obstrucción es bilateral y aritmética. Sobre primos grandes,
-\(D_{n,s}\) tiene signo \((-1)^{n-1}\) y tamaño
-\(\asymp(\log p)^n\). Sobre productos de dos primos con logaritmos
-comparables tiene el signo contrario y el mismo orden. El peso zeta
-\(N^{-s}\) solo aporta \(-s\log N\) al logaritmo del sumando; no puede
-competir con \(c(\log N)^n\).
+The obstruction is bilateral and arithmetic. On large primes,
+\(D_{n,s}\) has sign \((-1)^{n-1}\) and size
+\(\asymp(\log p)^n\). On products of two primes with comparable
+logarithms it has the opposite sign and the same order. The zeta weight
+\(N^{-s}\) only contributes \(-s\log N\) to the logarithm of the term; it
+cannot compete with \(c(\log N)^n\).
 
-Reinsertar el polo no cambia el veredicto. La variable completada de
-`104_50`,
+Reinserting the pole does not change the verdict. The completed variable
+from `104_50`,
 
 \[
  Z_{n,s}=D_{n,s}+T_s(f_{n,s}),                              \tag{4}
 \]
 
-difiere de \(D_{n,s}\) por una constante finita. Lo mismo ocurre al
-restar el presupuesto \(\kappa A_n/s\),
-\(\kappa=1501/2002\). Por tanto ninguna de las tres variables posee un
-momento exponencial no trivial en ninguno de los dos signos.
+differs from \(D_{n,s}\) by a finite constant. The same holds when
+subtracting the budget \(\kappa A_n/s\),
+\(\kappa=1501/2002\). Hence none of the three variables has a nontrivial
+exponential moment on either sign.
 
-La forma variacional de Gibbs confirma que esto no es una mala elección
-del parámetro. Para \(t\ne0\), medidas delta apoyadas en las sucesiones
-prima o semiprima hacen
+The Gibbs variational form confirms that this is not a bad choice of
+parameter. For \(t\ne0\), delta measures supported on the prime or
+semiprime sequences make
 
 \[
  t\,\mathbb E_QD_{n,s}-\mathrm{KL}(Q\|\mathbb P_s)
  \longrightarrow+\infty.                                  \tag{5}
 \]
 
-Así, el mejor bound entrópico es literalmente \(+\infty\). No aparece
-una desigualdad finita que pueda compararse con
+Thus the best entropic bound is literally \(+\infty\). No finite
+inequality appears that could be compared with
 
 \[
  B_n\le{1501\over2002}A_n.                                 \tag{6}
 \]
 
-El falsificador desplazado pasa este gate. Para
-\(Z_c(s)=\zeta(s+c)\zeta(s-c)\), el selector correcto coincide
-**exactamente** con el unitario sobre primos y semiprimos squarefree. Las
-mismas dos sucesiones prueban divergencia bilateral de su Gibbs funcional,
-aunque la completada \(\xi(s+c)\xi(s-c)\) tenga ceros fuera de la línea
-crítica.
+The shifted falsifier passes this gate. For
+\(Z_c(s)=\zeta(s+c)\zeta(s-c)\), the correct selector coincides
+**exactly** with the unitary one on primes and squarefree semiprimes. The
+same two sequences prove bilateral divergence of its Gibbs functional,
+even though the completed \(\xi(s+c)\xi(s-c)\) has zeros off the critical
+line.
 
-Queda descartado el mecanismo estrecho
+The narrow mechanism
 
 ```text
-defecto Palm unitario antes de centrar
-+ tilt exponencial / Gibbs / Chernoff
-+ optimización en t
-    => cota unilateral proporcional para B_n.
+unitary Palm defect before centering
++ exponential tilt / Gibbs / Chernoff
++ optimization in t
+    => one-sided bound proportional to B_n.
 ```
 
-No se descarta una transformación acotada o truncada acompañada de un
-teorema aritmético uniforme de colas. Tal teorema tendría que controlar
-precisamente las dos sucesiones que causan (3), y no sería una consecuencia
-de Chernoff. Este documento no prueba (6), A1 ni RH.
+is ruled out. A bounded or truncated transformation accompanied by a
+uniform arithmetic tail theorem is not ruled out. Such a theorem would
+have to control precisely the two sequences that cause (3), and would not
+be a consequence of Chernoff. This document does not prove (6), A1 or RH.
 
-## 0. No duplicación interna
+## 0. No internal duplication
 
-`104_49` prueba que el defecto (2) cambia de signo en grado \(151\).
-`104_50` construye su covarianza y demuestra que el cuadrado completado
-pierde la orientación del margen. `104_52`--`104_53` prueban que cumulantes
-conectados cancelan las interacciones entre torres distintas.
+`104_49` proves that the defect (2) changes sign at degree \(151\).
+`104_50` constructs its covariance and shows that the completed square
+loses the orientation of the margin. `104_52`--`104_53` prove that
+connected cumulants cancel the interactions between distinct towers.
 
-Aquí no se cuenta de nuevo ninguno de esos resultados. La adición es la
-clasificación completa de integrabilidad exponencial para **cada**
-\(n\ge4\), la divergencia de la fórmula variacional por medidas delta y la
-transferencia exacta de los dos testigos al divisor desplazado.
+None of those results is counted again here. The addition is the complete
+classification of exponential integrability for **every**
+\(n\ge4\), the divergence of the variational formula via delta measures,
+and the exact transfer of the two witnesses to the shifted divisor.
 
-## 1. Dos expansiones exactas del defecto
+## 1. Two exact expansions of the defect
 
-Escriba
+Write
 
 \[
  P_n(x)=L_{n-1}^{(1)}(x).
 \]
 
-Su coeficiente principal es
+Its leading coefficient is
 
 \[
  P_n(x)={(-1)^{n-1}\over(n-1)!}x^{n-1}+O_n(x^{n-2}).       \tag{7}
 \]
 
-La primitiva exacta es
+The exact antiderivative is
 
 \[
  \int_0^X P_n(sx)\,dx={1-L_n(sX)\over s}.                 \tag{8}
 \]
 
-### 1.1. Fibra prima
+### 1.1. Prime fiber
 
-Si \(N=p\) y \(x=\log p\), (2) da
+If \(N=p\) and \(x=\log p\), (2) gives
 
 \[
  D_{n,s}(p)=xP_n(sx)-{1-L_n(sx)\over s}.                   \tag{9}
 \]
 
-Comparando los coeficientes principales de (7)--(8),
+Comparing the leading coefficients of (7)--(8),
 
 \[
  \boxed{
@@ -129,7 +129,7 @@ Comparando los coeficientes principales de (7)--(8),
  +O_{n,s}(x^{n-1}).}                                      \tag{10}
 \]
 
-Por tanto existe \(x_0(n,s)\) tal que, para todo primo
+Hence there exists \(x_0(n,s)\) such that, for every prime
 \(p>e^{x_0}\),
 
 \[
@@ -137,19 +137,19 @@ Por tanto existe \(x_0(n,s)\) tal que, para todo primo
  |D_{n,s}(p)|\ge c_{n,s}(\log p)^n                         \tag{11}
 \]
 
-con algún \(c_{n,s}>0\).
+with some \(c_{n,s}>0\).
 
-### 1.2. Fibra de dos torres
+### 1.2. Two-tower fiber
 
-Si \(N=pq\), con \(p\ne q\) primos, \(x=\log p\), \(y=\log q\),
-la multiplicidad unitaria produce exactamente
+If \(N=pq\), with \(p\ne q\) primes, \(x=\log p\), \(y=\log q\),
+the unitary multiplicity produces exactly
 
 \[
  D_{n,s}(pq)=xP_n(sx)+yP_n(sy)
              -{1-L_n(s(x+y))\over s}.                     \tag{12}
 \]
 
-Su parte homogénea de grado \(n\) es
+Its homogeneous part of degree \(n\) is
 
 \[
  \boxed{
@@ -157,28 +157,28 @@ Su parte homogénea de grado \(n\) es
  \left\{x^n+y^n-{(x+y)^n\over n}\right\}.}               \tag{13}
 \]
 
-Para cada \(J\ge1\), el postulado de Bertrand permite escoger
+For each \(J\ge1\), Bertrand's postulate allows choosing
 
 \[
  2^J<p_J<2^{J+1},\qquad
  2^{J+1}<q_J<2^{J+2}.                                      \tag{14}
 \]
 
-Los intervalos son disjuntos y
+The intervals are disjoint and
 
 \[
  {\log p_J\over J\log2}\longrightarrow1,\qquad
  {\log q_J\over J\log2}\longrightarrow1.                \tag{15}
 \]
 
-Al dividir (13) por \((J\log2)^n\), el corchete converge a
+Dividing (13) by \((J\log2)^n\), the bracket converges to
 
 \[
  2-{2^n\over n}<0\qquad(n\ge4).                            \tag{16}
 \]
 
-Los términos de grado menor desaparecen. En consecuencia, para todo
-\(J\) suficientemente grande,
+The lower-degree terms vanish. Consequently, for every
+\(J\) large enough,
 
 \[
  \mathrm{sgn}\,D_{n,s}(p_Jq_J)=(-1)^n,\qquad
@@ -186,21 +186,21 @@ Los términos de grado menor desaparecen. En consecuencia, para todo
        \{\log(p_Jq_J)\}^n                                 \tag{17}
 \]
 
-con \(c'_{n,s}>0\). Las ecuaciones (11) y (17) dan colas no acotadas de
-ambos signos para todo \(n\ge4\).
+with \(c'_{n,s}>0\). Equations (11) and (17) give unbounded tails of
+both signs for every \(n\ge4\).
 
-## 2. Clasificación completa de los momentos exponenciales
+## 2. Complete classification of the exponential moments
 
-La esperanza bajo la ley zeta es
+The expectation under the zeta law is
 
 \[
  \mathbb E_se^{tD_{n,s}}
  ={1\over\zeta(s)}\sum_{m\ge1}m^{-s}e^{tD_{n,s}(m)}.       \tag{18}
 \]
 
-Todos sus sumandos son positivos. Si \(t(-1)^{n-1}>0\), use la sucesión
-prima de (11). Si \(t(-1)^{n-1}<0\), use la sucesión semiprima de (17).
-En ambos casos existe \(m_j\to\infty\) tal que
+All of its terms are positive. If \(t(-1)^{n-1}>0\), use the prime
+sequence of (11). If \(t(-1)^{n-1}<0\), use the semiprime sequence of
+(17). In both cases there exists \(m_j\to\infty\) such that
 
 \[
  tD_{n,s}(m_j)-s\log m_j-\log\zeta(s)
@@ -208,34 +208,34 @@ En ambos casos existe \(m_j\to\infty\) tal que
  \longrightarrow+\infty.                                  \tag{19}
 \]
 
-Los sumandos de (18) ni siquiera tienden a cero sobre esa subsucesión.
-Esto prueba (3).
+The terms of (18) do not even tend to zero along that subsequence.
+This proves (3).
 
-En contraste, la media ordinaria existe absolutamente. Para una constante
+In contrast, the ordinary mean exists absolutely. For a constant
 \(C_{n,s}\),
 
 \[
  |D_{n,s}(m)|\le C_{n,s}\{1+(\log m)^n\},                 \tag{20}
 \]
 
-y \(\sum m^{-s}(\log m)^n<\infty\). Así, el fallo de Gibbs no
-proviene de que el funcional lineal esté indefinido: proviene de colas
-más pesadas que cualquier exponencial lineal en \(D_{n,s}\).
+and \(\sum m^{-s}(\log m)^n<\infty\). Thus the failure of Gibbs does not
+come from the linear functional being undefined: it comes from tails
+heavier than any exponential linear in \(D_{n,s}\).
 
-Como \(T_s(f_{n,s})\) y \(\kappa A_n/s\) son constantes finitas,
+Since \(T_s(f_{n,s})\) and \(\kappa A_n/s\) are finite constants,
 
 \[
  \mathbb E_s e^{tZ_{n,s}}
  =e^{tT_s(f_{n,s})}\mathbb E_s e^{tD_{n,s}},               \tag{21}
 \]
 
-y la misma identidad, con otro factor finito, vale para
-\(Z_{n,s}-\kappa A_n/s\). Por (3), ambas esperanzas son infinitas para
-todo \(t\ne0\).
+and the same identity, with another finite factor, holds for
+\(Z_{n,s}-\kappa A_n/s\). By (3), both expectations are infinite for
+every \(t\ne0\).
 
-## 3. El mejor bound variacional es infinito
+## 3. The best variational bound is infinite
 
-La fórmula extendida de Gibbs es
+The extended Gibbs formula is
 
 \[
  \log\mathbb E_s e^{tD_{n,s}}
@@ -244,15 +244,15 @@ La fórmula extendida de Gibbs es
              -\mathrm{KL}(Q\|\mathbb P_s)\right\}.  \tag{22}
 \]
 
-No hace falta importar (22) para probar la divergencia: sus testigos son
-explícitos. Para \(Q_j=\delta_{m_j}\),
+There is no need to import (22) to prove the divergence: its witnesses
+are explicit. For \(Q_j=\delta_{m_j}\),
 
 \[
  \mathrm{KL}(Q_j\|\mathbb P_s)
  =s\log m_j+\log\zeta(s).                                  \tag{23}
 \]
 
-Por (19),
+By (19),
 
 \[
  t\mathbb E_{Q_j}D_{n,s}
@@ -260,129 +260,129 @@ Por (19),
                                                                     \tag{24}
 \]
 
-Para \(t>0\), la desigualdad de Jensen--Chernoff solo produce
+For \(t>0\), the Jensen--Chernoff inequality only yields
 
 \[
  \mathbb E_sD_{n,s}\le{1\over t}
        \log\mathbb E_se^{tD_{n,s}}=+\infty.                \tag{25}
 \]
 
-Para \(t<0\), la cota inferior análoga es igualmente vacía. Optimizar en
-\(t\) no ayuda: el dominio efectivo de la transformada log-Laplace es el
-singleton \(\{0\}\).
+For \(t<0\), the analogous lower bound is equally vacuous. Optimizing in
+\(t\) does not help: the effective domain of the log-Laplace transform is
+the singleton \(\{0\}\).
 
-## 4. El divisor desplazado conserva exactamente los testigos
+## 4. The shifted divisor exactly preserves the witnesses
 
-Sea
+Let
 
 \[
  Z_c(s)=\zeta(s+c)\zeta(s-c)
        =\sum_{m\ge1}{a_c(m)\over m^s},\qquad 0<c<{1\over2}, \tag{26}
 \]
 
-y \(s>1+c\). Sus pesos logarítmicos son
+and \(s>1+c\). Its logarithmic weights are
 
 \[
  \omega_c(d)=2\Lambda(d)\cosh(c\log d)>0.                 \tag{27}
 \]
 
-El selector correcto es
+The correct selector is
 
 \[
  J_{f,c}(m)={1\over a_c(m)}\sum_{d\mid m}
        \omega_c(d)a_c(m/d)f(\log d).                       \tag{28}
 \]
 
-Para un primo \(p\),
+For a prime \(p\),
 
 \[
  a_c(p)=p^c+p^{-c},\qquad
  \omega_c(p)=(\log p)a_c(p),                               \tag{29}
 \]
 
-y por tanto
+and therefore
 
 \[
  J_{f,c}(p)=(\log p)f(\log p).                             \tag{30}
 \]
 
-Si \(p\ne q\) son primos, la multiplicatividad da
+If \(p\ne q\) are primes, multiplicativity gives
 
 \[
  a_c(pq)=a_c(p)a_c(q),
 \]
 
-mientras \(\omega_c(pq)=0\). Por ello
+while \(\omega_c(pq)=0\). Hence
 
 \[
  \boxed{J_{f,c}(pq)
  = (\log p)f(\log p)+(\log q)f(\log q).}                  \tag{31}
 \]
 
-Las variables desplazadas
+The shifted variables
 
 \[
  D_{n,s,c}(m)=J_{f_{n,s},c}(m)
        -{1-L_n(s\log m)\over s}                            \tag{32}
 \]
 
-coinciden exactamente con (9) y (12) sobre las dos sucesiones testigo.
-Además, \(a_c(p),a_c(pq)>1\). Así, en la ley positiva
+coincide exactly with (9) and (12) on the two witness sequences.
+Moreover, \(a_c(p),a_c(pq)>1\). Thus, under the positive law
 
 \[
  \mathbb P_{s,c}(N=m)={a_c(m)m^{-s}\over Z_c(s)},          \tag{33}
 \]
 
-los términos correspondientes de
-\(\mathbb E_{s,c}e^{tD_{n,s,c}}\) son mayores que los de (18), salvo una
-constante normalizadora. La divergencia bilateral (3) vuelve a valer.
+the corresponding terms of
+\(\mathbb E_{s,c}e^{tD_{n,s,c}}\) are larger than those of (18), up to a
+normalizing constant. The bilateral divergence (3) again holds.
 
-Puede tomarse el ejemplo exacto
+The exact example
 
 \[
  c={\log2\over\log5}\in(0,1/2),                           \tag{34}
 \]
 
-porque \(2<\sqrt5\). La completada
-\(\Xi_c(s)=\xi(s+c)\xi(s-c)\) posee ceros
-\(1/2\pm c+i\gamma\) fuera de la línea crítica. Por tanto la falla de
-integrabilidad de Gibbs es compatible con un sistema off-line y no puede
-codificar el margen de Li.
+may be taken, because \(2<\sqrt5\). The completed
+\(\Xi_c(s)=\xi(s+c)\xi(s-c)\) has zeros
+\(1/2\pm c+i\gamma\) off the critical line. Hence the failure of Gibbs
+integrability is compatible with an off-line system and cannot encode the
+Li margin.
 
-## 5. Veredicto y sucesor
+## 5. Verdict and successor
 
-Queda probado incondicionalmente:
+The following is proved unconditionally:
 
-1. los dos signos exactos de las fibras prima y semiprima (10)--(17);
-2. la divergencia bilateral de todos los momentos exponenciales (3);
-3. la existencia de la media ordinaria (20);
-4. la divergencia explícita del supremo de Gibbs mediante deltas (23)--(24);
-5. la estabilidad exacta de los testigos bajo el divisor desplazado
+1. the two exact signs of the prime and semiprime fibers (10)--(17);
+2. the bilateral divergence of all exponential moments (3);
+3. the existence of the ordinary mean (20);
+4. the explicit divergence of the Gibbs supremum via deltas (23)--(24);
+5. the exact stability of the witnesses under the shifted divisor
    (29)--(33).
 
-Queda descartado:
+The following is ruled out:
 
 ```text
-tilt lineal exp(t D_{n,s}) para cualquier t != 0;
-Chernoff unilateral en cualquiera de los dos signos;
-Gibbs/Donsker--Varadhan como generador automático de coercividad;
-regularizar solo por el polo o por el presupuesto arquimediano.
+linear tilt exp(t D_{n,s}) for any t != 0;
+one-sided Chernoff in either of the two signs;
+Gibbs/Donsker--Varadhan as an automatic generator of coercivity;
+regularizing only through the pole or the archimedean budget.
 ```
 
-El sucesor mínimo, si se insiste en un método variacional, debe truncar o
-comprimir no linealmente \(D_{n,s}\) **y** demostrar una cota uniforme del
-error de truncación con signo. Las identidades presentes no aportan esa
-cota; al retirar el truncamiento se reencuentran las dos colas de (11) y
-(17).
+The minimal successor, if a variational method is insisted upon, must
+truncate or nonlinearly compress \(D_{n,s}\) **and** prove a uniform
+signed bound on the truncation error. The present identities do not
+supply that bound; removing the truncation brings back the two tails of
+(11) and (17).
 
-## 6. Reproducción
+## 6. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 gibbs_chernoff_unit_palm_gate_check.py
 ```
 
-El checker usa solo enteros, `Fraction` y polinomios racionales. Verifica
-los coeficientes principales de (10) y (13), los signos de (16), la
-dominancia superlineal exacta para grados pares e impares, y las identidades
-locales desplazadas (29)--(31). No evalúa zeta, A1 ni RH.
+The checker uses only integers, `Fraction` and rational polynomials. It
+verifies the leading coefficients of (10) and (13), the signs of (16), the
+exact superlinear dominance for even and odd degrees, and the shifted
+local identities (29)--(31). It does not evaluate zeta, A1 or RH.

@@ -1,7 +1,6 @@
 # E72.139 -- Relative negative spectrum of the arithmetic perturbation
 
-**Date:** 2026-07-09.
-**Role:** refine `RFBD` by isolating the negative relative arithmetic modes.
+**Purpose:** refine `RFBD` by isolating the negative relative arithmetic modes.
 
 ## 0. Relative perturbation
 

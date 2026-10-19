@@ -1,6 +1,5 @@
 # E73.147 - Current Analytic Frontier
 
-Date: 2026-07-12.
 
 ## 1. What is now proved
 

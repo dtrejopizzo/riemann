@@ -1,154 +1,154 @@
-# Actualización A/B/C/D del paper 42
+# A/B/C/D update of paper 42
 
-Actualizada el 7 de septiembre de 2026: el texto integrado y el PDF de 94 páginas incorporan los resultados hasta P123.123. `a-progress-2026-09-07.tex` desarrolla la continuación P123.063–123 y sus límites. Las entradas cronológicas inferiores que dicen «no integrado» describen el estado anterior a esta edición y quedan superadas en ese punto. A/B/C/D siguen abiertos como filas completas.
+Updated on September 7, 2026: the integrated text and the 94-page PDF incorporate the results up to P123.123. `a-progress.tex` develops the continuation P123.063–123 and its limits. The chronological entries below that say "not integrated" describe the state prior to this edition and are superseded at that point. A/B/C/D remain open as complete rows.
 
-- `../main.tex`: resumen y tabla de estado corregidos; avisos de alcance en las secciones históricas A/B/C; inclusión de la nueva sección.
-- `abcd-current.tex`: exposición integrada de las reparaciones, construcciones, comparaciones y obligaciones abiertas de las cuatro filas.
-- `2026-09-05/phase-123/`: copia completa de las notas de investigación, scripts y evidencia de la campaña, hasta P123.062. Incluye los resultados previos que fueron corregidos; el ledger y las notas posteriores determinan su alcance vigente.
-- `2026-09-05/closure-plan/`: plan aprobado y criterios de aceptación.
-- `2026-09-05/source-manifest.json`: hashes SHA-256 del archivo incorporado.
-- `2026-09-05/before-update-main.tex` y `before-update-main.pdf`: copia del manuscrito existente antes de esta integración, incluidos los cambios locales del usuario.
+- `../main.tex`: corrected summary and status table; scope notices in the historical A/B/C sections; inclusion of the new section.
+- `abcd-current.tex`: integrated exposition of the repairs, constructions, comparisons and open obligations of the four rows.
+- `update-01/phase-123/`: complete copy of the research notes, scripts and evidence of the campaign, up to P123.062. Includes the earlier results that were corrected; the ledger and the later notes determine their current scope.
+- `update-01/closure-plan/`: approved plan and acceptance criteria.
+- `update-01/source-manifest.json`: SHA-256 hashes of the incorporated archive.
+- `update-01/before-update-main.tex` and `before-update-main.pdf`: copy of the existing manuscript before this integration, including the author's local changes.
 
-Las secciones anteriores se conservan con avisos explícitos: las afirmaciones históricas de cierre completo de A–C están sustituidas por el estado corregido. La nueva sección integra los resultados y sus límites; las demostraciones completas de cada nota se conservan en el archivo adjunto. Ninguna fila completa ni RH se declara demostrada.
+The earlier sections are kept with explicit notices: the historical claims of full closure of A–C are replaced by the corrected status. The new section integrates the results and their limits; the full proofs of each note are kept in the attached archive. No complete row nor RH is declared proved.
 
-La compilación comprueba el documento y sus referencias; no constituye una nueva verificación matemática de todas las notas. Los certificados numéricos existentes no se vuelven a ejecutar para esta edición.
+The compilation checks the document and its references; it does not constitute a new mathematical verification of all the notes. The existing numerical certificates are not re-run for this edition.
 
-Continuación de investigación del 6 de septiembre: `2026-09-06/`
-conserva las notas P123.063–083. Son anexos de trabajo; todavía no están
-integradas en el texto ni en el PDF compilado. P123.082 delimita la
-categoría de twists y P123.083 incorpora ideales localizados con
-composición demostrada. El cierre completo de A sigue pendiente.
+Research continuation of September 6: `update-02/`
+keeps the notes P123.063–083. They are working annexes; they are not yet
+integrated into the text or the compiled PDF. P123.082 delimits the
+twist category and P123.083 incorporates localized ideals with
+proved composition. The full closure of A is still pending.
 
-P123.084 se añade al mismo anexo: calcula la traza continua de grado
-cero del sector localizado y demuestra su anulación fuera del origen.
-Este resultado exige compatibilizar composición y dominio integrable;
-no afirma anulación de una futura traza derivada o renormalizada.
+P123.084 is added to the same annex: it computes the continuous degree-zero
+trace of the localized sector and proves its vanishing away from the origin.
+This result requires making composition and the integrable domain compatible;
+it does not claim vanishing of a future derived or renormalized trace.
 
-P123.085 se añade al anexo: localización exacta de módulos integrables
-y dos clases de traza de borde independientes. Sigue pendiente el
-determinante y el Riemann–Roch mixto; esta nota no está integrada en el PDF.
+P123.085 is added to the annex: exact localization of integrable modules
+and two independent classes of boundary trace. The determinant and the
+mixed Riemann–Roch are still pending; this note is not integrated into the PDF.
 
-P123.086 se añade al anexo: trazas externas integrables, rotación cíclica,
-cambios de representante y transposición. Las identidades son por parámetro;
-el carácter distribucional y el determinante global siguen pendientes.
+P123.086 is added to the annex: integrable external traces, cyclic rotation,
+representative changes and transposition. The identities are per parameter;
+the distributional character and the global determinant remain pending.
 
-P123.087 se añade al anexo: periodización de densidades integrables
-y comparación con trazas relativas de compresiones normales, incluido
-el factor logarítmico del volumen. Alcance: coeficientes escalares de
-borde; aún no es la realización de todas las correspondencias mixtas.
+P123.087 is added to the annex: periodization of integrable densities
+and comparison with relative traces of normal compressions, including
+the logarithmic volume factor. Scope: scalar boundary coefficients;
+it is not yet the realization of all mixed correspondences.
 
-P123.088 se añade al anexo: representación multiplicativa de todas las
-etiquetas en el borde mediante campos de operadores, con traza integrada
-igual a la traza fuente. El germen logarítmico construido no se identifica
-con el determinante geométrico pendiente. No se actualizó el PDF.
+P123.088 is added to the annex: multiplicative representation of all
+boundary labels via operator fields, with integrated trace equal to
+the source trace. The logarithmic germ constructed is not identified
+with the pending geometric determinant. The PDF was not updated.
 
-P123.089 se añade al anexo: representación covariante conjunta normal
-y de todas las etiquetas, con comparación de traza para parámetros que
-fijan el cociente de borde. Falta la comparación distribucional completa.
+P123.089 is added to the annex: joint normal covariant representation
+of all labels, with trace comparison for parameters that fix the
+boundary quotient. The full distributional comparison is missing.
 
-P123.090 se añade al anexo: descenso mediante cortes transportados,
-identificación con la representación normal inducida y conservación de
-la traza relativa W_q. El resultado es del borde de un solo cero.
+P123.090 is added to the annex: descent via transported cuts,
+identification with the induced normal representation, and preservation
+of the relative trace W_q. The result concerns the boundary of a single zero.
 
-P123.091 se añade al anexo: identifica el rincón con C(B_q) y prueba
-que el tensor inverso de módulos no recupera toda el álgebra rápida
-actual. Incluye un contraejemplo con todos los momentos integrables.
-El descenso de operadores de P123.090 permanece válido.
+P123.091 is added to the annex: it identifies the corner with C(B_q) and proves
+that the inverse tensor of modules does not recover the whole current fast
+algebra. It includes a counterexample with all moments integrable.
+The operator descent of P123.090 remains valid.
 
-P123.092 se añade al anexo: ideal de decaimiento orbital, comparaciones
-densas con los dominios anteriores y conservación de las trazas y
-operaciones. La comparación tensorial aún no se da por demostrada.
+P123.092 is added to the annex: orbital-decay ideal, dense comparisons
+with the earlier domains and preservation of the traces and
+operations. The tensor comparison is not yet proved.
 
-P123.093 se añade al anexo: ambas identidades tensoriales completadas
-demostradas en J_orb mediante una inversa convergente explícita.
-La comparación no se extiende automáticamente al álgebra más amplia.
+P123.093 is added to the annex: both completed tensor identities
+proved in J_orb via an explicit convergent inverse.
+The comparison does not automatically extend to the larger algebra.
 
-P123.094 se añade al anexo: cálculo exacto del cociente continuo por
-conmutadores como C(B_q), con identificación de todas sus trazas escalares
-y de la traza Haar original. Su alcance sigue siendo de grado cero.
+P123.094 is added to the annex: exact computation of the continuous
+commutator quotient as C(B_q), with identification of all its scalar
+traces and of the original Haar trace. Its scope remains degree zero.
 
-P123.095 se añade al anexo: línea determinante graduada en el sector
-perfecto generado por el corte, compatible con conos, cambios de corte
-y traza fuente. No se identifica con el determinante aritmético pendiente.
+P123.095 is added to the annex: graded determinant line in the perfect
+sector generated by the cut, compatible with cones, cut changes
+and source trace. It is not identified with the pending arithmetic determinant.
 
-P123.096 se añade al anexo: contracción continua del bar diagonal
-torcido cuando la traslación externa no tiene puntos fijos en el borde.
-El sector fijo y la comparación distribucional siguen pendientes.
+P123.096 is added to the annex: continuous contraction of the twisted
+diagonal bar when the external translation has no fixed points on the boundary.
+The fixed sector and the distributional comparison remain pending.
 
-P123.097 se añade al anexo: cálculo del bar fijo continuo como B[0]
-mediante cuasi-isomorfismo estricto. La prueba no afirma contracción
-lineal continua ni comparación uniforme al variar el parámetro.
+P123.097 is added to the annex: computation of the continuous fixed bar
+as B[0] via a strict quasi-isomorphism. The proof does not claim continuous
+linear contraction nor uniform comparison as the parameter varies.
 
-P123.098 se añade al anexo: obstrucción de rango virtual para la familia
-perfecta continua y modelo suave de círculo con exceso tangencial de
-grado uno. Falta compararlo con el dominio aritmético y sus cartas.
+P123.098 is added to the annex: virtual-rank obstruction for the continuous
+perfect family and a smooth circle model with tangential excess of
+degree one. It remains to compare it with the arithmetic domain and its charts.
 
-P123.099 se añade al anexo: diagonales suaves de los bordes aritméticos
-a nivel finito de unidades y transición tangencial que preserva dt.
-La familia derivada completa entre niveles sigue pendiente.
+P123.099 is added to the annex: smooth diagonals of the arithmetic boundaries
+at a finite level of units and a tangential transition preserving dt.
+The full derived family between levels remains pending.
 
-P123.100 se añade al anexo: transiciones derivadas completas entre
-niveles finitos, con todos los grafos de cubierta y sus factores
-determinantes. No se afirma convergencia al pasar a infinitos niveles.
+P123.100 is added to the annex: complete derived transitions between
+finite levels, with all covering graphs and their determinant
+factors. Convergence when passing to infinite levels is not claimed.
 
-P123.101 se añade al anexo: completación suave nuclear con pesos de
-frecuencia y conductor, cuadrado tensorial explícito, promedios de unidades
-y traza Haar original. La diagonal completada sigue pendiente.
+P123.101 is added to the annex: nuclear smooth completion with frequency
+and conductor weights, explicit tensor square, unit averages
+and original Haar trace. The completed diagonal remains pending.
 
-P123.102 se añade al anexo: H_1 exacto de la diagonal suave completada,
-con rellenos lineales continuos y cotas polinómicas en el conductor.
-No se afirma todavía la anulación de los grados superiores.
+P123.102 is added to the annex: exact H_1 of the completed smooth diagonal,
+with continuous linear fillings and polynomial bounds in the conductor.
+Vanishing of the higher degrees is not yet claimed.
 
-P123.103 se añade al anexo: cotas para invertir frecuencias tangenciales,
-contracción de diagonales móviles completadas y divergencia de la traza
-de calor sin regularización al crecer los niveles de unidades.
+P123.103 is added to the annex: bounds for inverting tangential frequencies,
+contraction of completed moving diagonals, and divergence of the unregularized
+heat trace as the unit levels grow.
 
-P123.104 se añade al anexo: determinante de Fredholm tangencial y
-convergencia cuantificada desde niveles finitos. Sigue pendiente el
-determinante normal regularizado y su identificación con el de RR.
+P123.104 is added to the annex: tangential Fredholm determinant and
+quantified convergence from finite levels. The regularized normal
+determinant and its identification with that of RR remain pending.
 
-P123.105 se añade al anexo: determinante normal relativo exacto para
-tests de unidades, con contratermino determinantal no lineal y recuperación
-de la traza prescrita. Falta incorporar dilataciones fuera de las unidades.
+P123.105 is added to the annex: exact relative normal determinant for
+unit tests, with a non-linear determinantal counterterm and recovery
+of the prescribed trace. Incorporating dilations outside the units is missing.
 
-P123.106 se añade al anexo: matrices normales exactas con dilataciones
-fuera de las unidades, ambos signos de valuación y corrección de la bola
-central. La convergencia del determinante renormalizado sigue pendiente.
+P123.106 is added to the annex: exact normal matrices with dilations
+outside the units, both signs of valuation and correction of the central
+ball. Convergence of the renormalized determinant remains pending.
 
-P123.107 se añade al anexo: convergencia del germen determinantal normal
-completo, contratermino explícito y cota de la cola de todas las trazas.
-Faltan la ley de composición general y la comparación geométrica de RR.
+P123.107 is added to the annex: convergence of the complete normal
+determinantal germ, explicit counterterm and a tail bound for all traces.
+The general composition law and the geometric comparison with RR are missing.
 
-`2026-09-07/` añade P123.108: ley local de composición del determinante
-normal relativo con anomalía de borde, identidad de cociclo y ejemplo
-1/(1-st). Sigue pendiente su identificación con la corrección geométrica
-de RR. Es un anexo de investigación, aún no integrado en el PDF.
+`update-03/` adds P123.108: local composition law of the relative
+normal determinant with boundary anomaly, cocycle identity and the
+example 1/(1-st). Its identification with the geometric RR correction
+remains pending. It is a research annex, not yet integrated into the PDF.
 
-P123.109 se añade a `2026-09-07/`: determinante relativo de la acción
-inducida tangencial-normal conjunta, derivada W_q y compatibilidad con
-los pullbacks escalares semilocales prescritos. Sigue pendiente la
-identificación geométrica de RR; esta nota aún no está en el PDF.
+P123.109 is added to `update-03/`: relative determinant of the joint
+tangential-normal induced action, derivative W_q, and compatibility with
+the prescribed semilocal scalar pullbacks. The geometric identification
+with RR remains pending; this note is not yet in the PDF.
 
-P123.110 se añade a `2026-09-07/`: composición del determinante
-acoplado, corrección de Fredholm en los extremos, cociclo y compatibilidad
-semilocal. Sigue pendiente su identificación con la geometría de RR.
+P123.110 is added to `update-03/`: composition of the coupled
+determinant, Fredholm correction at the endpoints, cocycle and semilocal
+compatibility. Its identification with the geometry of RR remains pending.
 
-P123.111 se añade a `2026-09-07/`: emparejamiento mixto de la anomalía
-como traza exacta de extremos y energía de escape del corte. No se
-identifica con la intersección aritmética ni con la positividad global.
+P123.111 is added to `update-03/`: mixed pairing of the anomaly
+as an exact trace of endpoints and escape energy of the cut. It is not
+identified with the arithmetic intersection nor with global positivity.
 
-P123.112 se añade a `2026-09-07/`: contraejemplo a la estabilidad
-por composición del radical de la anomalía local y comparación explícita
-con el emparejamiento de traza del producto. No hay conclusión de signo global.
+P123.112 is added to `update-03/`: counterexample to composition
+stability of the local anomaly radical, and explicit comparison
+with the trace pairing of the product. There is no global sign conclusion.
 
-P123.113 se añade a `2026-09-07/`: radical nulo y descripción espectral
-del emparejamiento local de traza del producto, con signos opuestos en
-tests explícitos. No se deduce ningún signo global.
+P123.113 is added to `update-03/`: null radical and spectral
+description of the local trace pairing of the product, with opposite
+signs in explicit tests. No global sign is deduced.
 
-P123.114 se añade a `2026-09-07/`: identidad cuadrática exacta entre
-traza del producto, anomalía y Hessiano del determinante. Es una
-comparación analítica; aún no identifica la métrica geométrica de RR.
+P123.114 is added to `update-03/`: exact quadratic identity between
+the trace of the product, the anomaly and the Hessian of the determinant.
+It is an analytic comparison; it does not yet identify the geometric metric of RR.
 
-P123.115 se añade a `2026-09-07/`: métrica de Gram estabilizada con
-forma de Levi igual a la energía de borde. Se distingue de la variación
-holomorfa del determinante; no se identifica aún con la métrica aritmética.
+P123.115 is added to `update-03/`: stabilized Gram metric with the
+Levi form equal to the boundary energy. It is distinguished from the
+holomorphic variation of the determinant; it is not yet identified with the arithmetic metric.

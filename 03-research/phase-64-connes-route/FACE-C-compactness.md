@@ -1,6 +1,6 @@
 # Face (C): canonical-Hamiltonian compactness as a Carleson-measure condition — the smooth part is unconditional, the fluctuation is the wall
 
-*Pure mathematics. We attack the third face of the rank-one escape theorem: uniform boundedness of the
+* We attack the third face of the rank-one escape theorem: uniform boundedness of the
 primitive Tate–Weil Hamiltonians in the critical ($\exp\tfrac12$) scale. We reformulate it as a
 **Carleson-measure** condition on the prime measure, prove that its **smooth (PNT) part is an
 unconditional bounded Carleson measure**, and identify the **fluctuation** (the zero-sum / the

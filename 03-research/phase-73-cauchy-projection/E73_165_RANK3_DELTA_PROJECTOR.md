@@ -1,6 +1,5 @@
 # E73.165 - Rank-3 delta projector
 
-Date: 2026-07-12.
 
 ## 1. Purpose
 

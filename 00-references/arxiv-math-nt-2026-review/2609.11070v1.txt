@@ -1,0 +1,1243 @@
+                                                       EFFECTIVE ESTIMATES FOR EXPONENTIAL SUMS WITH
+                                                                 MULTIPLICATIVE COEFFICIENTS
+
+                                                                                         NICOLAS ROBLES
+
+
+                                                   Abstract. Let f be multiplicative, with |f (p)| ≤ A at primes and n≤x |f (n)|2 ≤ A2 x for every
+                                                                                                                      P
+                                                                          −2
+                                                   x ≥ 1. If |α − a/q| ≤ q , (a, q) = 1, and 3 ≤ R ≤ q ≤ N/R, we prove
+                                                                             X                     N      N p
+arXiv:2609.11070v1 [math.NT] 10 Sep 2026
+
+
+
+
+                                                                                  f (n) e(nα) ≪A       +√     log log(3R)
+                                                                                                 log N     R
+                                                                             n≤N
+
+                                                   with effective implied constants. Montgomery and Vaughan proved this with        √ second term
+                                                   N R−1/2 (log R)3/2 , and,√for 1-bounded functions, Bachman replaced it by N R−1/2 log R log log R.
+                                                   We remove the factor log R from Bachman’s second term while retaining the original coefficient
+                                                   hypotheses of Montgomery and Vaughan. A more precise estimate records the distance from a
+                                                   rational number. The proof combines the Brun-Titchmarsh inequality on short intervals with
+                                                   maximal Fourier estimates derived from the Carleson-Hunt theorem; the local bounds permit
+                                                   arbitrary prime-dependent prefixes. We also prove sharpness of the square-root displacement
+                                                   dependence.
+
+
+
+
+                                                                                         1. Introduction
+                                           1.1. Previous literature and new results. Write N = {1, 2, . . .} and e(t) = exp(2πit). A
+                                           multiplicative function is a function f : N → C with f (1) = 1 and f (mn) = f (m)f (n) when-
+                                           ever (m, n) = 1. For fixed A ≥ 1, let FA be the class of multiplicative functions introduced by
+                                           Montgomery and Vaughan [MV, Section 1], namely those satisfying
+                                                                                          X
+                                           (1.1)                 |f (p)| ≤ A (p prime),      |f (n)|2 ≤ A2 x (x ≥ 1).
+                                                                                                   n≤x
+
+                                           For f ∈ FA , real x ≥ 1, and α ∈ R, put
+                                                                                                  X
+                                           (1.2)                                    Sf (x, α) =         f (n) e(nα).
+                                                                                                  n≤x
+
+                                           The bounds below are uniform in f : the function may depend on both the length and the phase.
+                                              An early result is Daboussi’s theorem for multiplicative functions with |f (n)| ≤ 1: for each
+                                           irrational α, one has Sf (N, α) = o(N ) as N → ∞; see [D, Theorem 1, p. 322], an account based
+                                           on joint work with Delange, and the note [DD], which its authors describe as the starting point
+                                           of [MV] ([DD2, p. 246]). The detailed proofs appeared       in [DD2], whose Theorem 1 gives the
+                                           same conclusion under the mean-square condition n≤x |f (n)|2 = O(x), without a separate bound
+                                                                                             P
+                                           at primes, hence for every f ∈ FA . For a quantitative statement in FA , we use the formulation
+                                           recorded and attributed to Daboussi in [MV, equation (3), p. 69]: if |α−a0 /q| ≤ q −2 , (a0 , q) = 1, and
+                                           3 ≤ q ≤ (N/ log N )1/2 , then |Sf (N, α)| ≪A N (log log q)−1/2 uniformly for f ∈ FA . Montgomery
+                                           and Vaughan [MV, Corollary 1] sharpened it as follows: if |α − a0 /q| ≤ q −2 , (a0 , q) = 1, and
+
+                                              2020 Mathematics Subject Classification. Primary 11L07; Secondary 11N36, 11N37, 42A20.
+                                              Key words and phrases. Multiplicative functions, exponential sums, Brun-Titchmarsh inequality, maximal Fourier
+                                           inequality, effective constants.
+                                                                                                   1
+2                                                   N. ROBLES
+
+
+2 ≤ R ≤ q ≤ N/R, then
+                                                       N     N
+(1.3)                              |Sf (N, α)| ≪A          + √ (log R)3/2 .
+                                                     log N    R
+For multiplicative functions satisfying |f (n)| ≤ 1 for every n, Bachman [B, Theorem 5] replaced
+the second term by
+                                  N p
+(1.4)                            √     log R log log R     (R ≥ 3).
+                                   R
+The term N/ log N cannot be uniformly decreased in this class; see [MV, Section 7]. The question
+of the optimal dependence on R is discussed in [BBK, Section 1]. Here the improvement is relative
+to the specified
+        √        estimates (1.3) and (1.4); no complete optimality statement for R is made. We
+remove log R from the term (1.4), retain the original class (1.1), and obtain effective constants.
+The more precise statement records the displacement from a rational number. Throughout, φ
+denotes Euler’s totient function, with φ(1) = 1.
+Theorem 1.1. Let A ≥ 1, f ∈ FA , and N ≥ 3. Put
+(1.5)                                      L = log N,       Q0 = N/L3 .
+Suppose that a ∈ Z and r ∈ N satisfy
+                                                                  a                   1
+(1.6)                (a, r) = 1,           1 ≤ r ≤ Q0 ,      α=     + β,     |β| ≤       .
+                                                                  r                  rQ0
+With B = max{1, N |β|}, one has
+                                                            N       N
+(1.7)                                   |Sf (N, α)| ≪A          +p       .
+                                                          log N    φ(r)B
+The bound is uniform in f, N, a, r, β subject to these hypotheses, and the implied constant is effective.
+Corollary 1.1. Let A ≥ 1, f ∈ FA , and N ≥ 3. Suppose that a0 ∈ Z, q ∈ N, and R ∈ R satisfy
+                                                   a0
+(1.8)                   (a0 , q) = 1,         α−      ≤ q −2 ,     3 ≤ R ≤ q ≤ N/R.
+                                                   q
+Then, uniformly in these parameters,
+                                                     N    N p
+(1.9)                           |Sf (N, α)| ≪A           +√   log log(3R).
+                                                   log N    R
+The implied constant is effective.
+  Both results are unconditional. Effective means that a bound for the constant can in principle
+be computed from A, not that a numerical value is supplied; see Section 7.1.
+  The hypotheses (1.1) allow unbounded functions. For example, put w(n) = σ(n)/n = d|n d−1 ,
+                                                                                      P
+              P
+where σ(n) = d|n d. Factoring divisors of coprime products shows that w is multiplicative, and
+w(p) = 1 + 1/p ≤ 3/2. For every real x ≥ 1,
+                 X            X 1j x k          X 1 X 1             245
+                    w(n)2 =                  ≤x       3       2 2
+                                                                  ≤     x < 4x.
+                                  de [d, e]         g       a b      64
+                  n≤x              d,e≥1                    g≥1   a,b≥1
+
+Here [d, e] denotes the least common multiple; the inequality follows byPwriting d = ga, e =
+gb, (a, b) = 1, and dropping the coprimality condition. The bounds              −2 ≤ 7/4 and
+                                                                         m≥1 m
+          −3 ≤ 5/4 follow by comparing the tails from m = 3 with the respective integrals over
+P
+   m≥1 m
+[2, ∞). Thus w ∈ F2 , although w(m!) ≥ d≤m d−1 → ∞. More generally, if f ∈ FA and u is a
+                                        P
+                      EXPONENTIAL SUMS WITH MULTIPLICATIVE COEFFICIENTS                                 3
+
+
+pointwise 1-bounded multiplicative function, then f u ∈ FA with the same A, since both inequal-
+ities in (1.1) are preserved. In particular, wu ∈ F2 uniformly in u. Applying [DD2, Lemma 1] to
+g = |f |2 also gives, for every M > 1,
+                                           1      X 1            1
+                                 lim inf                  ≥1−      .
+                                  x→∞ log log x         p        M
+                                                     p≤x
+                                                 |f (p)|2 <M
+
+This example illustrates the coefficient hypotheses; no comparison with specialized estimates for
+this weight is intended.
+   Related work extends the coefficients and describes the structure of large sums. Jiang, Lü, and
+Wang [JLW, conditions (C.1)-(C.3) and Theorem 1.1] replace bounded prime values by averaged
+prime-coefficient conditions and a weighted prime-pair sieve hypothesis, with automorphic applica-
+tions. Our global theorem retains (1.1); the more general local estimates below do not by themselves
+extend it to that framework. De la Bretèche and Granville [dBG, Theorem 4 and Section 10.1] de-
+scribe large sums for 1-bounded completely multiplicative functions through character twists. Their
+refined conjecture [dBG, equation (1.4)] has (r(1 + N |β|))−1/2 in place of (φ(r)B)−1/2 , and their
+main-term analysis already exhibits square-root displacement decay. Granville and Lamzouri [GL,
+Theorem 1.1, Corollary 1.1, Section 1.4] work with 1-bounded multiplicative functions and link large
+sums to additive bias on large primes for |α − a/q| ≤ (qN )−1 and (log N )2+ε ≤ q ≤ N/(log N )3+ε ,
+                                                  √
+0 < ε < 1/10. They summarize N/ log N + N/ q as proved outside q = (log N )2+o(1) , and there
+if φ(q) ≫ q. Our effective displacement result retains FA ; the optimal factor remains open. Maier    √
+and Sankaranarayanan [MS, Theorem 1.2] reprove, with Siegel-Walfisz, the bound x/ log x + x/ r
+for |f | ≤ 1, α = s/r with r prime and (s, r) = 1, and r ≤ x/((log x)2 log log x log log log x) for large
+x. This case of Bachman’s Theorems 4 and 5 follows from Theorem 1.1 and Corollary 1.1.
+
+1.2. Comparison and the  p logarithmic transition. Under (1.6), Bachman’s Theorem 4 gives
+|Sf (N, α)| ≪ N/L + N/ φ(r) for 1-bounded multiplicative functions, and the estimate (3.1) in
+his proof records the displacement dependence
+                                             N        N    p
+(1.10)                         |Sf (N, α)| ≪    +p           log(2B);
+                                             L       φ(r)B
+                                                                                     p
+see [B, Theorem 4 and equation (3.1)]. The gain in Theorem 1.1 is the removal of log(2B), not
+the case B = 1. The common term N/L means that the whole estimate need not improve by an
+unbounded factor in every range; Remark 1.1 below gives a rational family on which it does, for
+Theorem 1.1 against (1.10) and for Corollary 1.1 against (1.3) and (1.4).
+   Writing L = log N , the second term in (1.3) is O(N/L) when R has order L2 (log L)3 . Bachman’s
+refinement (1.4) reaches that scale when R has order L2 log L log log L, whereas Corollary 1.1
+requires only R of order L2 log log L. At each scale, log R ≍ log L and log log R ≍ log log L, so the
+claims follow by substitution as N → ∞. These are sufficient scales for the displayed bounds, not
+necessary conditions for every method or choice of rational approximation.
+Remark 1.1. The following family shows that the whole bound can improve by an unbounded
+factor. The comparison is restrictedQto 1-bounded multiplicative functions, the class common to
+the bounds discussed here. Let r = p≤z p run through the primorials, and put
+                               r                 √
+                       H=         ,    N = ⌊exp( rH)⌋,       L = log N,
+                             φ(r)
+        2
+     PL ∼ rH. The Euler product for H contains the reciprocal of every integer at most z, so
+so that
+H ≥ n≤z 1/n → ∞, while H ≪ log log(3r) by (2.3). Let M be the least integer with M ≡ −1
+(mod r) and M ≥ N/(rH 2 ); its difference from N/(rH 2 ) is less than r, and r2 H 2 /N → 0, so
+4                                             N. ROBLES
+
+
+M ∼ N/(rH 2 ). Put
+                                       (M + 1)/r       1     1
+                                    α=              = +        .
+                                            M          r rM
+For the approximation a/r = 1/r one has β = 1/(rM ), B = N/(rM ) ∼ H 2 > 1, and
+                                              N
+                                   φ(r)B =         ∼ rH ∼ L2 .
+                                             HM
+Moreover r/Q0 → 0 and Q0 /M ∼ rH 2 /L3 ∼ H/L → 0, so r ≤ Q0 , M ≥ Q0 , and |β| ≤ 1/(rQ0 ):
+                                     p 1.1 gives |Sf (N, α)| ≪A N/L. The right-hand side of (1.10)
+the hypotheses (1.6) hold, and Theorem
+at the same approximant is ≍ (N/L) log(2H), which exceeds N/L by an unbounded factor, and
+1/r is the only admissible approximant: if a reduced fraction b/s ̸= 1/r satisfied s ≤ Q0 and
+|α − b/s| ≤ 1/(sQ0 ), then
+           1      b 1       1       1                        r     s     r   Q0
+              ≤    −    ≤      +      ,     so that    1≤       +     ≤    +     = o(1),
+          rs      s r      sQ0 rM                           Q0 M        Q0    M
+a contradiction.
+   The same family separates the total bounds in the form of Corollary 1.1. The fraction α =
+((M + 1)/r)/M is reduced, since a common divisor of (M + 1)/r and M divides both M and M + 1.
+Let b/q be a reduced fraction with |α − b/q| ≤ q −2 . If b/q ̸= α, then 1/(M q) ≤ |α − b/q| ≤ q −2
+gives q ≤ M ; if moreover q > 2r, then b/q ̸= 1/r and
+                      1    b 1   1   1                                  r   q
+                         ≤  −  ≤ 2+    ,              so that      1≤     +   ,
+                      rq   q r  q   rM                                  q M
+whence q > M/2. Thus every admissible denominator satisfiesP          q ≤ 2r or M/2 < q ≤ M . We
+also need H ≍ log log r: the upper bound is (2.3), and H ≥               n≤z 1/n ≥ log z together with
+         P
+log r = p≤z log p ≤ z log z gives log log r ≤ 2 log z ≤ 2H for z ≥ 3.
+√ Corollary 1.1 √ applies with√a0 /q = α, q = M , and R = N/M , since M 2 ≥ N for large r. As
+   N M ∼ N/(H r) ∼ N/(L H) and log log(3N/M ) ≤ log(2 log r) + o(1) ≪ H, its second term
+satisfies
+                                      √      p                    N
+                                        N M log log(3N/M ) ≪ ,
+                                                                  L
+so that (1.9) gives |Sf (N, α)| ≪A N/L. In (1.3) and (1.4), on the other hand, let (a0 /q, R) be
+any admissible choice, so that R ≤ 2r if q ≤ 2r, and R ≤ N/q < 2N/M if M/2 < q ≤ M . The
+functions (log t)3 /t and log t log log t/t decrease for t ≥ 21. For 2 ≤ R < 21 in (1.3), and for
+3 ≤ R < 21 in (1.4), the respective second term is bounded below by a positive absolute multiple of
+N . For R ≥ 21, the denominator dichotomy and monotonicity show that Bachman’s second term
+is bounded below by a positive absolute multiple of
+                            (          √
+                               (N/L) H log r log log r,      q ≤ 2r,
+                                       p
+                               (N/L) log r log log r/H, M/2 < q ≤ M.
+                                                                                                 √
+Indeed these are its orders at R = 2r and R = 2N/M , respectively. Both are ≫ (N/L) log            √ r
+because H ≍ log log r. The same comparison for (1.3) gives a second term ≫ (N/L)(log r) / H    3/2
+
+for every admissible choice. Consequently, when each displayed right-hand side is regarded as a pos-
+itive comparison expression with its implicit constant omitted, its infimum over the corresponding
+admissible (a0 /q, R) has order
+                                  N (log r)3/2       Np              N
+                                         √     ,          log r,       ,
+                                  L        H         L               L
+for (1.3), (1.4), and (1.9), respectively. These orders are achieved, up to absolute constant factors,
+by q = M and R = N/M . For this denominator, N/q ∼ rH 2 ≍ L2 log log L. This compares direct
+substitutions into the specified expressions at the same length N . It is not a lower bound for the
+                     EXPONENTIAL SUMS WITH MULTIPLICATIVE COEFFICIENTS                             5
+
+
+actual sum, nor a claim that every other estimate or indirect combination of methods has the same
+limitation.
+1.3. Overview of the proof. A logarithmic identity reduces the problem to prime-integer bilin-
+ear sums, and the original Montgomery-Vaughan bound removes the small primes. In a remaining
+block P < p ≤ 2P , Cauchy-Schwarz leaves a nonnegative prime-weighted square. Brun-Titchmarsh
+bounds the prime mass in reduced residue classes on intervals of length comparable to P/B. An
+elementary variation inequality transfers this bound to continuous maximal Fourier expressions.
+Carleson-Hunt and a short-sequence estimate over reduced residues control those expressions with-
+out a logarithmic loss. Propositions 6.1 and 6.2 allow arbitrary coefficient vectors and prime-
+dependent prefixes; the global application uses only n ≤ N/p. No stronger prime-pair sieve is
+required. Section 5 compares these choices with the arguments of Montgomery-Vaughan and Bach-
+man and identifies the logarithmic sums that occur in the quoted estimates.
+   Bachman also applies Cauchy-Schwarz in the prime variable. His completed weight is treated
+by a Siegel-Walfisz asymptotic, introducing an ineffective constant [B, equations (2.6)-(2.7)]. His
+Theorems 4 and 5 assume |f | ≤ 1; boundedness enters both Lemma 1 and the passage to (3.1),
+for example in [B, equations (2.6), (2.14), and (3.1)]. Our prime-block argument instead bounds a
+nonnegative expression using Brun-Titchmarsh, without a progression asymptotic; see Section 5.
+   The term N/L cannot be uniformly decreased throughout FA : Montgomery and Vaughan [MV,
+Section 7, example (i)] construct, for each prescribed N, α, a completely multiplicative 1-bounded
+function with |Sf (N, α)| ≫ N/L. Proposition 8.1 shows that B −1/2 is also sharp in the stated
+uniform setting. Neither example settles the optimal totient dependence for multiplicative co-
+efficients; see Remark 8.1. The displacement dependence in (1.7) also yields, in Corollary 7.2,
+an effective bound ≪A (log N )4 /N for the measure of a single exceptional set outside which
+|Sf (N, α)| ≤ cA N/ log N holds simultaneously for every f ∈ FA .
+
+1.4. Notation. Sums with real upper limits run over positive integers up to their floor; upper
+limits below 1 give empty sums. A dyadic number is a power of two, (m, n) is the greatest common
+divisor, and 1E is 1 when the indicated condition holds and 0 otherwise. We write X ≪A Y , for
+Y ≥ 0, when |X| ≤ C(A)Y with a constant depending only on A; an omitted subscript denotes
+an absolute constant. For positive quantities, X ≍ Y means X ≪ Y ≪ X, and X ∼ Y means
+X/Y → 1 in the limit considered. The notation OA (Y ) has the same constant dependence as
+≪A Y .
+
+1.5. Organization of the paper. Sections 2-4 collect the imported estimates and the new lem-
+mas. Section 5 compares the earlier arguments with the choices used here. Section 6 contains the
+prime-block estimates, Section 7 the proofs of the main results and the exceptional-set corollary,
+and Section 8 treats sharpness before the conclusion and the directions for future work.
+
+                          2. Preliminaries and imported estimates
+  We first record the external inputs used in the main proof. Their constants are effective. The
+new estimates (1.7) and (1.9) are not used in any of the reductions in this section or in Section 3.
+Lemma 2.1. For f ∈ FA and x ≥ 1,
+                        X                              X |f (n)|2
+(2.1)                       |f (n)| ≤ Ax,                            ≤ 4A2 .
+                             n≤x                       n≥1
+                                                              n4/3
+
+For x ≥ 2,
+                                    X                   X log p
+(2.2)                     ϑ(x) :=         log p ≪ x,                 ≪ log(2x).
+                                                                p
+                                    p≤x                 p≤x
+6                                             N. ROBLES
+
+
+For every integer m ≥ 1,
+                                            m
+(2.3)                                            ≪ log log(3m).
+                                          φ(m)
+                                                                        1/2 (A2 x)1/2 ≤ Ax. If M (t) =
+                                                 P
+Proof. Cauchy’s inequality and (1.1) give           n≤x |f (n)| ≤ ⌊x⌋                           2
+             2
+P
+  n≤t |f (n)|  , partial summation  gives
+                                        ˆ                       ˆ
+                        X |f (n)|2    4 ∞ M2 (t)            4 2 ∞ −4/3
+                              4/3
+                                   =            7/3
+                                                     dt ≤ A          t       dt = 4A2 .
+                            n         3 1     t             3     1
+                        n≥1
+
+For an integer m ≥ 1, the product of primes in (m, 2m] divides 2m
+                                                                           
+                                                                         m , so ϑ(2m) − ϑ(m) ≤ 2m log 2.
+Summing this inequality at powers of two proves ϑ(x) ≪ x. The identity
+                                     X log p                ˆ x
+                                                   ϑ(x)         ϑ(t)
+                                               =         +           dt
+                                           p         x        2  t2
+                                    p≤x
+
+gives the other estimate in (2.2). Finally, (2.3) is the usual uniform form of the lower bound for
+φ(m); see [K, Corollary 3.6]. The finitely many small values of m, including m = 1, are absorbed
+in an absolute constant.                                                                        □
+Proposition 2.1 (Montgomery-Vaughan). Let f ∈ FA and x ≥ 3 be real. If u ∈ Z, v ∈ N, and
+R0 ≥ 2 satisfy
+                   (u, v) = 1,      |γ − u/v| ≤ v −2 ,   R0 ≤ v ≤ x/R0 ,
+then
+                                           x         x
+(2.4)                   |Sf (x, γ)| ≪A          + √ (log(2R0 ))3/2 .
+                                        log(2x)       R0
+    This is Corollary 1 of [MV]; the proof below only records the passage from integral to real x.
+Proof. For integer x, this is [MV, Corollary 1, p. 70], with harmless changes from log x and log R0
+to the displayed logarithms. For real x, bounded x or 2 ≤ R0 < 4 follows from |Sf (x, γ)| ≤ Ax.
+Otherwise set n = ⌊x⌋ ≥ x/2 and apply the integer result with range parameter R0 /2. Indeed,
+R0 /2 ≤ v ≤ x/R0 ≤ 2n/R0 , and R0 /2 ≥ 2. The resulting bound implies (2.4), since n ≍ x. The
+constant is effective: the proof of this corollary in [MV, Sections 2-6] uses elementary estimates
+and effective upper-bound sieve inequalities, not Siegel-Walfisz.                                 □
+Lemma 2.2. For every Q ≥ 1 and γ ∈ R there are u ∈ Z and v ∈ N with
+                                                                1
+                     (u, v) = 1,   1 ≤ v ≤ Q,      |γ − u/v| ≤    .
+                                                               vQ
+Proof. Write {t} = t − ⌊t⌋ for the fractional part of a real number t. Put m = ⌊Q⌋ and consider
+the m + 1 points 0, {γ}, . . . , {mγ} on R/Z. If two coincide, a difference of their indices yields an
+exact rational representation with denominator at most m. Otherwise one circular gap has length
+at most 1/(m + 1). The difference of the corresponding indices gives 1 ≤ v0 ≤ m and an integer u0
+such that |v0 γ − u0 | ≤ 1/(m + 1) < 1/Q. Reduce u0 /v0 to u/v. Since v ≤ v0 , its approximation
+error is at most 1/(v0 Q) ≤ 1/(vQ).                                                                  □
+Proposition 2.2 (Brun-Titchmarsh on an arbitrary interval). There is an effective absolute con-
+stant CBT such that, for real x ≥ h ≥ r ≥ 1, integers r, b with (b, r) = 1,
+                                                                          h
+(2.5)             #{p : x − h < p ≤ x, p ≡ b (mod r)} ≤ CBT                       .
+                                                                   φ(r) log(2h/r)
+The constant is independent of the location x of the interval.
+  This is the Brun-Titchmarsh inequality in the form given by Montgomery and Vaughan [MV2];
+the proof records the source used and the endpoint convention.
+                       EXPONENTIAL SUMS WITH MULTIPLICATIVE COEFFICIENTS                                7
+
+
+Proof. This is the constant-factor consequence of [K, Theorem 21.4, p. 219], whose proof is by
+Selberg’s upper-bound sieve. Writing t = h/r, its displayed numerator is 2 + O(log log(3t)/ log t),
+which is bounded effectively for t ≥ 2. For 1 ≤ h/r < 2, counting all integers in the residue class
+gives at most h/r + 1 ≤ 2h/r, which also implies (2.5), since φ(r) ≤ r and log(2h/r) ≤ log 4. This
+includes r = 1.                                                                                  □
+Proposition 2.3 (Finite-prefix Carleson-Hunt inequality). There is an effective absolute constant
+CCH such that for every integer U ≥ 1 and all c1 , . . . , cU ∈ C,
+                          ˆ 1        X               2             X
+(2.6)                          max       cn e(nθ) dθ ≤ CCH           |cn |2 .
+                              0 0≤K≤U    n≤K                          n≤U
+
+The maximum is over integer K, and the sum for K = 0 is zero.
+   This is the L2 case of the Carleson-Hunt theorem [C, H] for trigonometric polynomials; the proof
+records the passage from the tail-maximal form in the source to the prefix-maximal form used here.
+Proof. The classical Carleson-Hunt theorem is stated in tail-maximal form in [HS, Theorem 1.2,
+p. 87]. Let Ctail denote the absolute constant in that tail-maximal inequality. Apply it to the
+                             PU         n
+                  P F (z) =n n=1 cn z , with all other
+analytic polynomial                                       Taylor coefficients zero. Its tail beginning at
+K + 1 is F (z) − n≤K cn z . The inequality |u − v|2 ≤ 2|u|2 + 2|v|2 , followed by the tail-maximal
+bound and Parseval’s identity, gives (2.6) with CCH = 2(1 + Ctail ). Normalized measure on the unit
+circle becomes dθ under z = exp(2πiθ). The quantitative proofs of the Carleson-Hunt bound permit
+an effective absolute constant; see also [L] for a proof and the equivalent Fourier-series formulation.
+No numerical value of CCH is required here.                                                            □
+
+                        3. The logarithmic identity and small primes
+Lemma 3.1. Uniformly for f ∈ FA , real N ≥ 3, and α ∈ R,
+                                     X
+(3.1)            (log N )Sf (N, α) =     f (p)Sf (N/p, pα) log p + OA (N ).
+                                              p≤N
+
+Proof. By (2.1) and partial summation,
+                                                    ˆ N
+                        X                                 1X
+                             |f (n)| log(N/n) =              |f (n)| dt ≤ A(N − 1).
+                                                     1    t
+                       n≤N                                 n≤t
+
+It therefore suffices to compare the sum weighted by log n with the prime sum in        P(3.1). For
+pj ∥n (meaning pj | n and pj+1 ∤ n), write n = pj m with p ∤ m. Using log n =             pj ∥n j log p,
+multiplicativity shows that the difference of the two coefficients belonging to this prime is
+                                  jf (pj ) − f (p)f (pj−1 ) f (m) log p.
+                                                           
+
+For j = 1 this is zero. The remaining error is bounded by
+                                 X X log p
+                                                j|f (pj )| + A|f (pj−1 )| .
+                                                                         
+(3.2)                         AN           j
+                                  p
+                                          p
+                                        j≥2
+
+The series with the first term satisfies
+             X X j|f (pj )| log p  X |f (n)|2 1/2  X X j 2 (log p)2 1/2
+                                    ≤                                       ≪A 1.
+              p j≥2
+                            pj               n4/3     p j≥2
+                                                              p2j/3
+                                         n≥1
+
+For the convergence of the second squared factor, the sum over j ≥ 2 is ≪ p−4/3 (log p)2 ; its sum
+over primes is bounded by the convergent sum over integers. Distinct pairs (p, j) give distinct prime
+8                                              N. ROBLES
+
+
+powers, which justifies the first factor. The other series in (3.2) is at most
+                                 X log p A X X |f (pj )| log p
+                             A2           +                          ≪A 1.
+                                  p
+                                      p2    2 p             pj
+                                                    j≥2
+
+Here the first term is the contribution from the exponent 2 in (3.2); for the other exponents put
+j equal to that exponent minus one and use p−1 ≤ 1/2. This proves (3.1). The reduction is the
+phase-independent form of the preliminary reduction in [MV, Section 2]; the details above show
+explicitly that no bound on f (pj ) for j ≥ 2 has been inserted.                               □
+Lemma 3.2. Let f ∈ FA , γ = b/s + δ, (b, s) = 1, and set
+                                  H = max{1, x|δ|},         D0 = sH.
+If x ≥ 16D02 , then
+                                                  x      x(log(2D0 ))3/2
+(3.3)                         |Sf (x, γ)| ≪A           +      √          .
+                                               log(2x)          D0
+Proof. For 1 ≤ D0 < 16, the second term in (3.3) is bounded below by a positive absolute multiple
+of x, so (2.1) suffices. Assume D0 ≥ 16. If H = 1, then D0 = s, |δ| ≤ x−1 ≤ s−2 , and s ≤ x/s.
+Apply Proposition 2.1 with R0 = s.
+   Suppose H > 1. Put Q = ⌊2x/D0 ⌋ and use Lemma 2.2 to choose a reduced fraction c/t with
+                                   t ≤ Q,        |γ − c/t| ≤ 1/(tQ).
+Since x/D0 ≥ 16D0 , we have Q ≥ x/D0 and
+                                         D0 Q         D0
+                                               ≥2−       > 1.
+                                          x           x
+Thus b/s ̸= c/t: equality of these reduced fractions would give sQ|δ| ≤ 1, whereas sQ|δ| = D0 Q/x >
+1. Separation of distinct reduced fractions yields
+                                  1 ≤ st|δ| + s/Q = D0 t/x + s/Q.
+The bound s/Q ≤ sD0 /x ≤ D02 /x ≤ 1/16 therefore implies
+                                             x      2x
+                                                ≤t≤    .
+                                            2D0     D0
+In particular, for R0 = D0 /4, we have R0 ≥ 2, R0 ≤ t ≤ x/R0 , and |γ − c/t| ≤ t−2 . Applying
+Proposition 2.1 with these parameters gives (3.3).                                          □
+Lemma 3.3. Let f ∈ FA , N ≥ 3, L = log N , and√α = a/r + β, where a ∈ Z, r ∈ N, and (a, r) = 1.
+Put B = max{1, N |β|} and D = rB. If 2 ≤ Y ≤ N and N/Y ≥ 16D2 , then
+                                           log(2Y ) (log(2D))3/2 log(2Y ) (log(2D))5/2
+        X                                                                               
+(3.4)       f (p)Sf (N/p, pα) log p ≪A N           +        √            +      √          .
+                                              L               D                   D
+        p≤Y
+
+In particular, suppose D ≤ L3 and Y is the least power of two not smaller than 16D2 . For all
+sufficiently large N , with an effective absolute threshold,
+                                  X
+(3.5)                                 f (p)Sf (N/p, pα) log p = OA (N ).
+                                p≤Y
+
+Proof. For p ≤ Y , put x = N/p and dp = (p, r), so dp ∈ {1, p}. The reduced denominator of the
+rational part of pα is r/dp , while
+                          max{1, x|pβ|} = B,         D0 = (r/dp )B = D/dp .
+                      EXPONENTIAL SUMS WITH MULTIPLICATIVE COEFFICIENTS                                  9
+                                                                                √
+Thus x ≥ 16D02 , and Lemma 3.2 applies. Also, log(2x) ≥ L/2 because p ≤             N . Using |f (p)| ≤ A,
+the first term of (3.3) contributes
+                                     N X log p       N log(2Y )
+                                  ≪A            ≪A              .
+                                     L      p            L
+                                            p≤Y
+
+For p ∤ r, its second term contributes
+                          N (log(2D))3/2 X log p    N (log(2D))3/2 log(2Y )
+                     ≪A        √                 ≪A          √              .
+                                 D           p                 D
+                                         p≤Y
+
+For p | r, use D0 = D/p ≥ 1 to bound that contribution by
+                            N (log(2D))3/2 X log p      N (log(2D))5/2
+                        ≪A       √             √ ≪A          √         .
+                                   D             p             D
+                                           p|r
+
+Indeed the prime sum is empty for r = 1, and otherwise it is at most log r ≤ log D. This proves
+(3.4).
+   For the stated dyadic choice,
+(3.6)                        16D2 ≤ Y < 32D2 ,         log(2Y ) ≪ log(2D).
+                      √                                                                √
+The conditions Y ≤ N and N/Y ≥ 16D2 follow, uniformly for D ≤ L3 , from 32L6 < N and
+512L12 < N . These inequalities hold beyond a computable absolute threshold. The bound (3.4) is
+then
+                                     log(2D) (log(2D))5/2 
+                               ≪A N           +   √          ≪A N.
+                                         L          D
+                                            √
+Here log(2D) ≪ log(2L), and (log(2D))5/2 / D is bounded for D ≥ 1. All constants and thresholds
+used in this proof are effective.                                                            □
+
+                              4. Finite maximal Fourier estimates
+  For r ∈ N write
+                    A(r) = {0, 1, . . . , r − 1},   R(r) = {b ∈ A(r) : (b, r) = 1}.
+In particular, R(1) = {0}. For an integer U ≥ 1 and a vector c = (c1 , . . . , cU ) ∈ CU , set
+                              X                              X
+(4.1)                  E(c) =     |cn |2 ,  Mc (θ) = max         cn e(nθ) .
+                                                           0≤K≤U
+                                 n≤U                               n≤K
+The maximum is over integer K, including
+                                     ´1      the zero prefix. The function Mc is continuous and
+1-periodic. Proposition 2.3 says that 0 Mc (θ)2 dθ ≤ CCH E(c).
+Lemma 4.1. For integers 1 ≤ U ≤ r and any c1 , . . . , cU ∈ C,
+                                               2
+                     1    X X                                  X
+(4.2)                              cn e(bn/r) ≪ log log(3U )     |cn |2 .
+                    φ(r)
+                              b∈R(r) n≤U                                 n≤U
+
+The implied constant is absolute.
+Proof. The case U = 1 is immediate, since the left side equals |c1 |2 and log log 3 > 0. For U ≥ 2,
+choose a divisor d | r with (d, r/d) = 1 and d ≥ U , and write r = ds. The map (u, v) 7→ us + vd
+(mod r) is a bijection from R(d) × R(s) to R(r). The expression on the left of (4.2) therefore
+equals
+                                                                         2
+                           1    X      1   X X
+                                                     cn e(vn/s) e(un/d) .
+                         φ(s)        φ(d)
+                                v∈R(s)        u∈R(d) n≤U
+10                                                  N. ROBLES
+
+
+Enlarge the inner sum to all u mod d. Since n, m ≤ U ≤ d, the condition d | n − m forces n = m.
+Orthogonality bounds the preceding expression by
+                                          d X
+(4.3)                                             |cn |2 .
+                                         φ(d)
+                                                       n≤U
+
+  It remains to choose d. If a full prime-power factor pν ∥r satisfies pν ≥ U , take d = pν ; then
+d/φ(d) = p/(p − 1) ≤ 2. Otherwise all full prime-power factors of r are less than U . Multiply
+them, in any order, until their product first reaches U . Such a point is reached because their total
+product is r ≥ U . The selected product satisfies
+                                      U ≤ d < U 2,           (d, r/d) = 1.
+In this case (2.3) gives d/φ(d) ≪ log log(3d) ≪ log log(3U ). Insert either choice into (4.3).       □
+Lemma 4.2. For integers U, r ≥ 1, c ∈ CU , and real θ,
+                              X
+(4.4)                              Mc (θ + b/r)2 ≪ (U + r)E(c).
+                                   b mod r
+If U ≤ r, then also
+                                1   X
+(4.5)                                 Mc (θ + b/r)2 ≪ log log(3U )E(c).
+                               φ(r)
+                                    b∈R(r)
+
+Both constants are absolute and effective, and both bounds are uniform in θ.
+                                                                 ´1
+Proof. For 1-periodic functions use the convolution (g ∗ h)(θ) = 0 g(θ − v)h(v) dv and the Fourier
+                   ´1
+coefficient gb(k) = 0 g(v) e(−kv) dv. For an integer m ≥ 1, define the Fejér kernel
+                                       m−1      2
+                                     1 X           X     |k| 
+                            Km (v) =       e(jv) =     1−       e(kv).
+                                     m                    m
+                                             j=0             |k|<m
+
+It is nonnegative and has integral 1. Put
+                                VU = 2K2U − KU ,      WU = 2K2U + KU .
+                                                                ´1
+Then VbU (k) = 1 for every
+                      P    integer |k| ≤ U , |VU | ≤ W  U , and  0 WU = 3. Consequently every prefix
+polynomial FK (θ) = n≤K cn e(nθ) satisfies FK = FK ∗ VU . Weighted Cauchy-Schwarz gives
+                                             ˆ 1
+                              |FK (θ)|2 ≤ 3      |FK (θ − v)|2 WU (v) dv.
+                                                   0
+Taking the maximum only after this inequality, we obtain
+                                        ˆ 1
+                                   2
+(4.6)                       Mc (θ) ≤ 3      Mc (θ − v)2 WU (v) dv.
+                                                   0
+No Fourier support is asserted for Mc itself.
+   For every η ∈ R, orthogonality and Cauchy-Schwarz imply
+                                                         2
+            X                    r X          X             r m    
+(4.7)            Km (η + b/r) =                     e(jη) ≤      + 1 m = m + r.
+                                 m                          m r
+              b mod r                   s mod r      0≤j<m
+                                                   j≡s (mod r)
+        P
+Thus        b WU (η + b/r) ≤ 5U + 3r. After translating the integration variable in (4.6), we find
+                         X                       ˆ 1           X
+                               Mc (θ + b/r)2 ≤ 3     Mc (t)2         WU (θ + b/r − t) dt.
+                       b mod r                    0          b mod r
+Equation (4.7) and Proposition 2.3 prove (4.4).
+                      EXPONENTIAL SUMS WITH MULTIPLICATIVE COEFFICIENTS                               11
+
+
+  For reduced residues, first suppose m ≤ r. Apply Lemma 4.1 to c′n = m−1/2 e((n − 1)η),
+1 ≤ n ≤ m. This vector has squared norm 1; shifting the exponents from 0, . . . , m − 1 to 1, . . . , m
+only multiplies the polynomial by a number of modulus one. It follows that
+                                1   X
+                                      Km (η + b/r) ≪ log log(3m).
+                               φ(r)
+                                       b∈R(r)
+
+We need this for m = U, 2U . If m = 2U > r, use (4.7) instead. Since U ≤ r < 2U ,
+                      1   X                 2U + r    3r
+                            K2U (η + b/r) ≤        ≤      ≪ log log(3U ).
+                     φ(r)                    φ(r)    φ(r)
+                          b∈R(r)
+
+We therefore have, in both cases,
+                                1   X
+                                      WU (η + b/r) ≪ log log(3U ).
+                               φ(r)
+                                       b∈R(r)
+
+Sum (4.6) over these residues, translate the integration variable as above, and apply Proposition 2.3.
+This proves (4.5) with an effective constant.                                                       □
+
+Lemma 4.3. For P > 0, c ∈ CU , a ∈ Z, r ∈ N, (a, r) = 1, and β ̸= 0,
+                     X ˆ 2P
+(4.8)                          Mc (ab/r + βt)2 dt ≪ (rP + |β|−1 )E(c).
+                         b mod r   P
+
+The constant is absolute and effective.
+
+Proof. Substitute θ = ab/r + βt in each integral. The r image intervals have length ℓ = |β|P , and
+their translation parameters are a permutation of 0, 1/r, . . . , (r − 1)/r modulo one. For a fixed
+point of the circle, its covering multiplicity, counting multiple windings, is bounded by the number
+of points of a lattice of spacing 1/r in an interval of length ℓ. This is at most rℓ + 2. Reversing
+endpoints when β < 0 gives the same bound. Hence the left side of (4.8) is at most
+                                                    ˆ
+                                                2  1
+                                         rP +           Mc (θ)2 dθ.
+                                                |β| 0
+Proposition 2.3 completes the proof.                                                                  □
+
+Lemma 4.4. Let I be a compact interval of length h > 0 and let F : I → C be continuously
+differentiable. Then
+                                              ˆ                 ˆ
+                                            2
+(4.9)                                    2
+                              sup |F (t)| ≤      |F (t)| dt + 2h |F ′ (t)|2 dt.
+                                                        2
+                              t∈I           h  I                 I
+                                                        ´t ′
+Proof. For s, t´ ∈ I, the identity F (t) = F (s) + s F (v) dv and Cauchy-Schwarz give |F (t)|2 ≤
+2|F (s)|2 + 2h I |F ′ (v)|2 dv. Average over s ∈ I, then take the supremum over t.             □
+
+
+                   5. The mechanism: where the logarithms come from
+   This section explains the estimates used in the proof. It distinguishes losses in the cited arguments
+from limitations of those particular estimates; no necessity claim about all possible methods is
+intended. The details of the present argument are proved in Sections 3, 4, 6, and 7.
+12                                            N. ROBLES
+
+
+5.1. The bilinear reduction. Put L = log N . Lemma 3.1 reduces the problem to bounding
+                              X              X
+(5.1)                            f (p) log p    f (n) e(αpn)
+                                  p≤N           n≤N/p
+
+by OA (N ) plus L times the second term of (1.7). The hyperbolic truncation couples the two
+variables. Our argument uses Cauchy-Schwarz and the coefficient bounds in (1.1), followed by an
+upper-bound sieve for the resulting nonnegative expression. This is a choice of method, not an
+assertion that multiplicativity admits no other useful exploitation.
+
+5.2. The Montgomery-Vaughan argument. In [MV, Sections 3-5], the region pn ≤ N is de-
+composed into rectangles and a remainder. The refinement depths satisfy Ji ≪ log(2N/q); they
+need not all be comparable to this upper bound. Cauchy-Schwarz in the integer variable leaves
+a square in the prime variable. After triangular smoothing, its off-diagonal terms involve pairs of
+primes with difference h. The prime-pair sieve bound supplies two logarithmic savings, which offset
+the two prime logarithmic weights in the upper bound. The diagonal terms and the remainder of
+the partition are estimated separately.
+   For the auxiliary expression in [MV, equations (18)-(19)], put ∥t∥ = mink∈Z |t − k|. For the
+interval-length parameters X, Y ≥ 1 used there, with q ≤ XY and the other hypotheses of that
+fundamental estimate,
+              X      h              1         XY
+                        min Y,           2
+                                             ≪       + X + Y log(2X) + q log(2XY /q).
+                   φ(h)         Y ∥ha/q∥        φ(q)
+            1≤h≤X
+
+The minimum is interpreted as Y when ha/q is an integer. The last logarithm arises in a harmonic
+divisor summation and enters the bilinear bound under a square root. In the summation over the
+refinement layers in [MV, Section 5], it combines with the upper bound for Ji to give the displayed
+power 3/2. The disjointness hypotheses of [MV, equation (16)] do not directly allow all layers to be
+merged into one family. This observation does not exclude a different treatment of their overlaps.
+The rational estimate is then transferred to the R-form in [MV, Section 6].
+
+5.3. Bachman’s displacement logarithm. Bachman introduces the completed weight in [B,
+equation (2.7)], using Siegel-Walfisz for its distribution in the coprime residue classes. In the
+notation of this paper his parameter x/x̄ equals B. The subdivision in [B, equation (2.15), p. 50]
+introduces weights 1/j for 1 ≤ j ≤ ⌈B⌉. In the estimatep leading to [B, equation (3.1), p. 51], their
+sum is O(log(2B)). The square root yields the factor log(2B) in (1.10).
+
+5.4. Retaining the prefixes. For a block P < p ≤ 2P , set U = ⌊N/P ⌋ and cn = f (n) for n ≤ U .
+We majorize the moving prefix by Mc (αp), with Mc as in (4.1). The Carleson-Hunt inequality
+controls this maximum in L2 over a period with an absolute constant, not a logarithmic loss. This
+avoids the further rectangular refinement of the hyperbolic cutoff in the remaining blocks; the
+dyadic subdivision in P is still used. Cauchy-Schwarz in the prime variable leaves the nonnegative
+expression Q∗P (c) of (6.1); this orientation is also Bachman’s [B, equation (2.6)]. Expanding a fixed
+prefix square here would produce pairs of integer indices n, m, rather than prime pairs. We instead
+retain the square and compare its values at primes with integrals of maximal functions.
+   On each short interval, the Brun-Titchmarsh bound controls the prime mass in every reduced
+residue class. Lemma 4.4 is applied separately to the smooth prefix polynomials, after which the
+bounds are majorized by Mc and by Md , where dn = ncn . This proves the positive transfer estimate
+(6.6). Neither the maximum nor the moving integer cutoff is differentiated. There is no prime-pair
+divisor weight at this step and no termwise harmonic summation of the oscillatory pair kernels.
+                      EXPONENTIAL SUMS WITH MULTIPLICATIVE COEFFICIENTS                            13
+
+
+5.5. The interval length and the arithmetic factor. Put B = max{1, N |β|} and D = rB.
+The sufficient condition P ≥ 16D2 , with h = P/⌈B⌉, gives
+                                                       h    √
+                                       h|β|U ≤ 1,        ≥ 2 P.
+                                                       r
+After applying the same sampling or covering estimate to c and d, the derivative contribution is
+controlled by h2 |β|2 E(d) ≤ h2 |β|2 U 2 E(c) ≤ E(c). The second inequality above makes log(2h/r)
+comparable to log P , so the sieve denominator offsets the weight log p. These are sufficient choices
+for this proof, not an optimality claim for the local range P ≥ 16D2 . The case β = 0 uses maximal
+sampling, not a bound involving |β|−1 .
+   The factor 1/φ(r) in the displacement term enters through (6.5) and remains after the covering
+estimate. For B > 1, this gives Q∗P (c) ≪ (rP + N/B)E(c)/φ(r). The short reduced-residue
+estimate has a different role: it handles P > N/r, whose total contribution is OA (N ) before
+division by L. The iterated logarithm in (1.9) comes from the totient bound (2.3) in the transference
+argument. Remark 8.1 rules out an absolute O(E(c)) replacement in that particular unrestricted
+reduced-residue inequality; it does not establish the optimal totient dependence for multiplicative
+coefficients.
+
+5.6. The global ranges and effectivity. First handle r ≥ L3 by Proposition 2.1. In the re-
+maining range r < L3 , the hypotheses (1.6) give D ≤ L3 : this uses D = r when B = 1 and
+D = rN |β| ≤ L3 otherwise. Lemma 3.3 then removes primes up to a dyadic Y ≍ D2 . The remain-
+ing blocks are summed using (6.10) for P ≤ N/r and (6.11) for P > N/r. The choice Q0 = N/L3 ,
+also used by Bachman [B, Theorems 1 and 4], is convenient for these reductions; no maximal range
+of validity is claimed for this choice.
+   The prime-block argument requires only the effective one-sided Brun-Titchmarsh estimate, not
+an asymptotic in arithmetic progressions. It therefore avoids the ineffective Siegel-Walfisz input in
+the completion route. The remaining constants are accounted for in Section 7.1. This avoids the
+ineffective input; it does not make Siegel’s constant computable.
+
+                             6. Effective prime-block estimates
+Proposition 6.1. Let N > P , U = ⌊N/P ⌋, and α = a/r + β, where a ∈ Z, r ∈ N, (a, r) = 1, and
+β ∈ R. Set B = max{1, N |β|} and D = rB. For c ∈ CU , write E = E(c) and
+                                         X
+(6.1)                          Q∗P (c) =       Mc (αp)2 log p.
+                                            P <p≤2P
+
+If P ≥ 16D2 , then
+                                                  rP + N/B
+(6.2)                                 Q∗P (c) ≪            E.
+                                                     φ(r)
+If also U ≤ r, then
+(6.3)                                Q∗P (c) ≪ P log log(3U )E.
+The constants are absolute and effective. There is no multiplicativity hypothesis on c.
+Proof. Put J = ⌈B⌉ and h = P/J. Partition (P, 2P ] into the half-open intervals Ij = (P + (j −
+1)h, P + jh], 1 ≤ j ≤ J. Their closures are used when taking suprema and integrals. Since
+B ≤ J ≤ 2B, P U ≤ N , and N |β| ≤ B,
+                              P                        h     P     √
+(6.4)                   h≥      ,    |β|hU ≤ 1,          ≥     ≥ 2 P.
+                             2B                        r    2D
+Also P ≥ 16D2 ≥ 16r2 > r, so every prime in (P, 2P ] is coprime to r.
+14                                             N. ROBLES
+
+
+   For b ∈ R(r), Proposition 2.2 applies to Ij with upper endpoint P + jh and length h. It gives
+                             X                      h log(2P )      h
+(6.5)                                log p ≤ CBT                 ≪      .
+                                                  φ(r) log(2h/r)   φ(r)
+                                p∈Ij
+                          p≡b    (mod r)
+                                                           √
+The last constant is effective: by (6.4), log(2h/r) ≥ log(4 P ), whose ratio to log(2P ) is bounded
+below by a positive absolute constant.
+  For 0 ≤ K ≤ U put
+                             X                     
+                  FK,b (t) =     cn e n(ab/r + βt) ,      dn = ncn (1 ≤ n ≤ U ).
+                            n≤K
+
+Then E(d) ≤ U 2 E and |FK,b ′ (t)| ≤ 2π|β|M (ab/r + βt). Apply Lemma 4.4 to each fixed K on the
+                                             d
+closure of Ij . Bounding its two integrands by the corresponding maximal expressions gives a bound
+independent of K, and hence
+                                    ˆ                                ˆ
+                              2   2                   2       2    2
+          sup Mc (ab/r + βt) ≤          Mc (ab/r + βt) dt + 8π h|β|      Md (ab/r + βt)2 dt.
+          t∈Ij                    h  Ij                               Ij
+
+For a prime p ≡ b (mod r), periodicity gives Mc (αp) = Mc (ab/r + βp). Multiply the last inequality
+by the prime-mass bound (6.5), and sum over j and b. We obtain the positive transfer estimate
+                        1    X ˆ 2P
+               ∗
+                                         Mc (ab/r + βt)2 + h2 |β|2 Md (ab/r + βt)2 dt.
+                                                                                  
+(6.6)         QP (c) ≪
+                       φ(r)        P
+                             b∈R(r)
+
+Only the fixed prefix polynomials were differentiated, not the maximum and not any prime-
+dependent truncation.
+  If B > 1, enlarge the residue sum to all classes and apply Lemma 4.3, once to c and once to d.
+Equation (6.6) is then
+                            rP + |β|−1                      2(rP + N/B)
+                        ≪              (E + h2 |β|2 E(d)) ≤             E
+                               φ(r)                             φ(r)
+up to an effective absolute constant. Here |β|−1 = N/B and (6.4) was used. This proves (6.2) in
+this case.
+   If B = 1, including β = 0, apply (4.4) at each fixed t, again to both vectors. It bounds (6.6) by
+                                P (U + r)                      N + rP
+                            ≪             (E + h2 |β|2 E(d)) ≪        E.
+                                   φ(r)                         φ(r)
+This is (6.2) with B = 1.
+  Finally, when U ≤ r, keep reduced residues in (6.6) and apply (4.5) at each t. The outcome is
+                    Q∗P (c) ≪ P log log(3U )(E + h2 |β|2 E(d)) ≪ P log log(3U )E.
+This proves (6.3) for every β, including zero.                                                    □
+Proposition 6.2. Use the parameter hypotheses of Proposition 6.1, including P ≥ 16D2 . Let ap
+for P < p ≤ 2P and cn for 1 ≤ n ≤ U be complex coefficients satisfying
+                          X                           X
+                                |ap |2 log p ≤ A21 P,     |cn |2 ≤ A22 U,
+                          P <p≤2P                           n≤U
+
+where A1 , A2 ≥ 0. For any integers K(p) with 0 ≤ K(p) ≤ U , put
+                                        X              X
+                          Ta,c,K (P ) =       ap log p     cn e(αpn).
+                                           P <p≤2P         n≤K(p)
+                        EXPONENTIAL SUMS WITH MULTIPLICATIVE COEFFICIENTS                            15
+
+
+Then
+                                                                        s        
+                                                            N                rN P
+(6.7)                         |Ta,c,K (P )| ≪ A1 A2 p      +                        .
+                                                     φ(r)B                   φ(r)
+If U ≤ r, one also has
+                                                                r
+                                                         log log(3U )
+(6.8)                             |Ta,c,K (P )| ≪ A1 A2 N             .
+                                                               U
+The constants are absolute and effective, independently of the choices of K(p) and of the coefficients.
+Proof. Cauchy-Schwarz gives
+                                         |Ta,c,K (P )|2 ≤ A21 P Q∗P (c).
+By (6.2) and P U ≤ N , this is
+                                      P (rP + N/B)U            rN P    N2 
+                          ≪ A21 A22                 ≤ A21 A22        +
+                                            φ(r)                φ(r)   φ(r)B
+up to anpabsolute constant. Taking square roots proves (6.7). Using (6.3) instead gives |Ta,c,K (P )| ≪
+A1 A2 P U log log(3U ). The inequality P U ≤ N proves (6.8).                                          □
+  For f ∈ FA , define
+                                          X                      X
+(6.9)                        T (P ) =             f (p) log p           f (n) e(αpn).
+                                        P <p≤2P                 n≤N/p
+
+Taking ap = f (p), cn = f (n), and K(p) = ⌊N/p⌋, we have 0 ≤ K(p) ≤ U and explicitly
+                           X                      X
+                     E=        |f (n)|2 ≤ A2 U,         |f (p)|2 log p ≪ A2 P.
+                            n≤U                           P <p≤2P
+
+The second estimate follows from (2.2). Thus Proposition 6.2 gives
+                                               s
+                                       N         rN P
+(6.10)                   |T (P )| ≪A p       +             (P ≥ 16D2 ),
+                                      φ(r)B      φ(r)
+and, when U ≤ r,
+                                                        r
+                                                      log log(3U )
+(6.11)                                  |T (P )| ≪A N              .
+                                                            U
+For p > N the chosen prefix is zero, so the final dyadic block needs no special endpoint convention.
+These local estimates do not require multiplicativity. The global reductions do; in particular, the
+local coefficient generality does not by itself extend the final theorem beyond FA .
+
+                                  7. Proofs of the main results
+Proof of Theorem 1.1. We may assume N exceeds a sufficiently large effective absolute constant.
+On the remaining bounded interval, |Sf (N, α)| ≤ AN proves the assertion after an effective increase
+in a constant depending only on A. If r ≥ L3 , then (1.6) gives L3 ≤ r ≤ N/L3 and |β| ≤ r−2 .
+Proposition 2.1, with R0 = L3 , gives
+                                             N    N (log(2L3 ))3/2    N
+                             |Sf (N, α)| ≪A     +                  ≪A .
+                                             L          L3/2          L
+                                                                3
+The last inequality holds effectively for large L, since (log L) /L → 0.
+   Assume henceforth that r < L3 . Put D = rB and choose Y as in (3.6). If B = 1, then
+D = r < L3 ; otherwise D = rN |β| ≤ L3 by (1.6). For all sufficiently large N we have uniformly
+                           √
+(7.1)                Y < N,          N/Y ≥ 16D2 ,         Y < N/r,     r2 < N.
+16                                             N. ROBLES
+
+
+The first two inequalities were checked in Lemma 3.3. For the third, use rY < 32rD2 ≤ 32L9 < N ;
+the fourth follows from r2 < L6 < N . All these thresholds are effective and absolute.
+   Lemmas 3.1 and 3.3 now imply
+                                              X
+(7.2)                           LSf (N, α) =        T (P ) + OA (N ).
+                                              Y ≤P <N
+                                              P dyadic
+
+Every prime Y < p ≤ N belongs to exactly one displayed block. Each block satisfies P ≥ Y ≥ 16D2 ,
+which verifies the sufficient hypothesis of (6.10) and (6.11).
+   For Y ≤ P ≤ N/r, use (6.10). There are O(L) such blocks, and hence the sum of their first
+terms is
+                                                    NL
+(7.3)                                       ≪A p          .
+                                                   φ(r)B
+The second terms form a geometric sum:
+                               s          s     r
+                          X       rN P      rN    N   N
+(7.4)                                   ≪           =p     ≤ N.
+                                   φ(r)     φ(r) r    φ(r)
+                            Y ≤P ≤N/r
+                             P dyadic
+
+If N/r ≥ N (that is, r = 1), only the already specified blocks P < N are included; the same upper
+bound holds.
+   For the remaining blocks N/r < P < N , we have U = ⌊N/P ⌋ < r, so (6.11) applies. Let P∗ be
+the largest power of two strictly less than N and put λ = N/P∗ ∈ (1, 2]. For P = P∗ 2−j , j ≥ 0,
+                                        2j ≤ U = ⌊λ2j ⌋ ≤ 2j+1 .
+Consequently the sum over the selected blocks is at most
+                    X       q                         X
+                       2−j/2 log log(3 · 2j+1 ) ≪A N     2−j/2 log(j + 3) ≪A N.
+                                                              p
+(7.5)        ≪A N
+                      j≥0                                  j≥0
+
+The convergent series has an effective absolute bound. Combining (7.2)-(7.5), we obtain
+                                                          NL
+                                    L|Sf (N, α)| ≪A N + p      .
+                                                         φ(r)B
+Division by L proves (1.7).                                                                          □
+
+ Corollary 1.1 is stated for R ≥ 3 to match (1.4); for 2 ≤ R < 3, the right-hand side of (1.9) is
+≫ N , so (2.1) gives the same conclusion for R ≥ 2, as in [MV, Corollary 1].
+
+Proof of Corollary 1.1. For N in a fixed bounded interval the trivial estimate suffices. For all larger
+N , Q0 = N/(log N )3 ≥ 1. Choose a/r by Lemma 2.2 with parameter Q0 , and put β = α − a/r,
+B = max{1, N |β|}. All hypotheses of Theorem 1.1 hold. We show that
+                                          1     log log(3R)
+(7.6)                                         ≪             .
+                                        φ(r)B         R
+If R/2 ≤ r < R, use B ≥ 1, (2.3), and 1/r ≤ 2/R to obtain (7.6). If r ≥ R, the same conclusion
+follows since u 7→ log log(3u)/u is decreasing for u ≥ 3. Indeed its derivative is
+                            1/ log(3u) − log log(3u)
+                                                     <0            (u ≥ 3).
+                                       u2
+No monotonicity property of φ is required.
+                       EXPONENTIAL SUMS WITH MULTIPLICATIVE COEFFICIENTS                                 17
+
+
+   Suppose now r < R/2. Since q ≥ R, the reduced fractions a/r and a0 /q are distinct and r < q/2.
+Therefore
+                                           1    1      1
+                                    |β| ≥    −     ≥      .
+                                           rq q 2     2rq
+It follows that
+                                                   N     R
+                                   rB ≥ rN |β| ≥      ≥ ,
+                                                   2q    2
+and hence, by (2.3) and r < R,
+                               1     r/φ(r)   log log(3r)   log log(3R)
+                                   =        ≪             ≤             .
+                             φ(r)B     rB          R              R
+This proves (7.6) in all cases. Insert it into (1.7) to obtain (1.9).                                    □
+
+7.1. Effective dependence of the constants. The arithmetic input in the prime-block estimate
+is the one-sided, effective inequality (2.5). Its constant is uniform in the interval location, its length,
+and the reduced residue class. The constants in the logarithmic identity and in the prime-power
+series are bounded by explicit convergent numerical series and powers of A. The coarse near-
+rational estimate and the range r ≥ L3 use only the effective Montgomery-Vaughan bound (2.4).
+The finite Fourier lemmas depend on the effective absolute Carleson-Hunt constant and the effective
+totient bound (2.3); their remaining steps are finite identities, Cauchy-Schwarz, and integration.
+The elementary thresholds in (7.1) can also be found effectively.
+   It follows by composition that a constant C(A) in each main result can be bounded by a com-
+putable function of A. We have not optimized or evaluated it numerically. The proofs of Theo-
+rem 1.1 and Corollary 1.1 neither exclude an exceptional real character nor use a zero-free region
+for Dirichlet L-functions. The discussion of Siegel-Walfisz concerns the alternative completion
+route, not a dependency of these proofs. The effective prime-mass argument avoids the progression
+asymptotic used in the earlier completion proof; it does not make Siegel’s constant computable.
+
+7.2. A simultaneous exceptional set. Let T = R/Z, with Lebesgue measure meas normalized
+by meas(T) = 1. For A ≥ 1, N ≥ 3, and λ > 0 put
+(7.7)                 EA (N, λ) = {α ∈ T : |Sf (N, α)| > λN for some f ∈ FA },
+an open set, being a union of open superlevel sets of continuous functions. Montgomery and
+Vaughan’s Corollary 2 [MV] gives |Sf (N, α)| ≪A N/ log N for almost all fixed α and all N > N0 (α),
+uniformly in f ∈ FA . The statement below fixes N instead and bounds the measure of the set of
+phases that has to be excluded for the whole class at once. It requires a count of denominators with
+bounded totient; the count is classical, and the elementary proof given keeps the constant effective.
+Lemma 7.1. There is an effective absolute constant Cφ such that
+(7.8)                         #{r ∈ N : φ(r) ≤ H} ≤ Cφ H           (H ≥ 1).
+                                            with g(p) = (1 − 1/p)−2 − 1 = (2p − 1)/(p − 1)2 and
+Proof. Let g be the multiplicative function P
+   j
+g(p ) = 0 for j ≥ 2. Then (n/φ(n)) =  2
+                                             d|n g(d), both sides being multiplicative with value
+         −2
+(1 − 1/p) at every prime power p , and 0 ≤ g(p)/p ≤ 6/p2 , with equality at p = 2. Hence, for
+                                    k
+
+real X ≥ 1,
+      X  n 2       X       jX k                     Y      g(p)        X 1 
+                  =      g(d)       ≤ C2 X,     C2 =      1+         ≤ exp 6        2
+                                                                                       ≤ e6 .
+           φ(n)                 d                      p
+                                                                p                 m
+        n≤X            d≤X                                                           m≥2
+
+There are at most H integers r ≤ H, and for j ≥ 0 an integer 2j H < r ≤ 2j+1 H with φ(r) ≤ H
+has (r/φ(r))2 > 4j , so at most 4−j C2 2j+1 H = 21−j C2 H such r exist. Summing over j gives (7.8)
+with Cφ = 1 + 4C2 .                                                                             □
+18                                               N. ROBLES
+
+
+Corollary 7.2. Let A ≥ 1. There are effective constants cA ≥ 6 and KA > 0, depending only on
+A, such that for every real N ≥ 3 and every λ with cA / log N ≤ λ ≤ 1,
+                                                          KA
+(7.9)                                  meas EA (N, λ) ≤        .
+                                                         N λ4
+In particular, for N ≥ ecA there is a set EA (N ) ⊆ T of measure ≪A (log N )4 /N such that
+|Sf (N, α)| ≤ cA N/ log N for all α ∈
+                                    / EA (N ) and all f ∈ FA .
+Proof. Let C = C(A) ≥ 1 be an admissible constant in (1.7), put cA = max{6, 2C}, and let
+cA /L ≤ λ ≤ 1, where L = log N ; then L ≥ 6 and Q0 = eL /L3 ≥ 1. Let α ∈ EA (N, λ), with a
+witness f , and choose a/r by Lemma 2.2 with parameter
+                                              p        Q0 , so that (1.6) holds with β = α − a/r.
+Since CN/L ≤ λN/2, Theorem 1.1 forces CN/ φ(r)B > λN/2, that is,
+                             2C 2                                     B       H
+             φ(r)B < H :=           ,  so that   φ(r) ≤ H,       |β| ≤     <         .
+                               λ                                        N     N φ(r)
+Reducing a modulo r, we see that EA (N, λ) is covered by the arcs of radius H/(N φ(r)) about the
+points a/r with φ(r) ≤ H and a ∈ R(r). There are φ(r) arcs for each r, each of measure at most
+2H/(N φ(r)), and Lemma 7.1 gives
+                                        X 2H         2Cφ H 2   2Cφ (2C)4
+                      meas EA (N, λ) ≤            ≤          =            .
+                                               N       N          N λ4
+                                          φ(r)≤H
+
+This is (7.9) with KA = 2Cφ   (2C)4 . For N ≥ ecA take λ = c   A /L and EA (N ) = EA (N, cA /L).      □
+   For a fixed f , Parseval’s identity gives an exceptional set of measure at most A2 /(N λ2 ), but
+that set may depend on f ; the corollary controls the union over the class. For pointwise 1-bounded
+multiplicative functions, the same measure order follows from (1.10), not necessarily with effective
+constants. Indeed, for c/ log N ≤ λ ≤ 1 with a sufficiently large absolute c, a value exceeding λN
+forces φ(r)B/ log(2B) < HB with HB ≍ λ−2 . In the range 2j ≤ B < 2j+1 , put Yj = HB (j +
+2)2−j . The possible                                                                         j+1
+                   Pdenominators have2 φ(r) ≤ Yj , and the approximation error is at most 2 /N .
+Lemma 7.1 gives φ(r)≤Yj φ(r) ≪ Yj when Yj ≥ 1; there are no such denominators otherwise.
+The covering arcs therefore have total measure
+                                       H2 X                   1
+                                   ≪ B        (j + 2)2 2−j ≪      .
+                                       N                     N λ4
+                                           j≥0
+
+This is a deduction from Bachman’s bound, not a formulation quoted from his paper. The present
+corollary supplies the full class FA and effective constants; no optimality of the exponent is asserted.
+
+                8. The displacement exponent and a Fourier obstruction
+Proposition 8.1. For positive integers N → ∞, put B = log N , α = B/N , and fN (n) = n−iπB .
+Then fN ∈ F1 , the auxiliary approximation 0/1 satisfies (1.6), and
+                                                         N
+(8.1)                                    |SfN (N, α)| ∼ √ .
+                                                         2B
+In particular, for any fixed ε > 0, replacing B −1/2 by B −1/2−ε in (1.7) is false uniformly in the
+same class and range, even when r = 1.
+Proof. The function is completely multiplicative and has modulus one. The approximation 0/1 has
+displacement B/N ≤ (log N )3 /N for large N , and 1 ≤ Q0 then. Thus the parameter called B in
+the theorem is exactly the present B.
+   Let                                                           
+                               G(x) = exp i(2πBx/N − πB log x) .
+                      EXPONENTIAL SUMS WITH MULTIPLICATIVE COEFFICIENTS                                19
+
+
+Comparison on each unit interval gives
+                 XN          ˆ N                ˆ N
+                    G(n) −        G(x) dx ≤ 1 +     |G′ (x)| dx ≪ 1 + B log N.
+                    n=1           1                     1
+
+After x = N u, and extension of the lower endpoint from 1/N to 0 at a cost at most 1 after
+multiplication by N , it remains to estimate
+                                  ˆ 1
+                          I(B) =      eiBψ(u) du, ψ(u) = 2πu − π log u.
+                                      0
+This improper integral is absolutely convergent, since the integrand has modulus one. Its only
+stationary point is u0 = 1/2, with ψ ′′ (u0 ) = 4π. We give the local stationary-phase calculation to
+specify the error.
+   Choose a fixed smooth function χ supported in a sufficiently small interval about u0 , equal to 1
+near u0 . For the part with amplitude 1 − χ, integration by parts against (iBψ ′ (u))−1 (eiBψ(u) )′ gives
+O(B −1 ). This is valid at 0: the function 1/ψ ′ (u) = u/(π(2u − 1)) is O(u) there and its derivative
+is bounded near 0. Away from u0 the remaining derivative and boundary terms are integrable and
+bounded.
+   On the support of χ, make the smooth change of variables
+                                                     r
+                                                        ψ(u) − ψ(u0 )
+                                    y = sgn(u − u0 )                   .
+                                                               2π
+Taylor’s formula gives y ′ (u0 ) = 1, so this is a local diffeomorphism. If u = u(y) is its inverse, the
+smooth compactly supported amplitude a(y) = χ(u(y))u′ (y) satisfies a(0) = 1, and
+                            ˆ 1                              ˆ
+                                                                          2
+                                 χ(u)eiBψ(u) du = eiBψ(u0 )     a(y)e2πiBy dy.
+                            0                                R
+Choose a fixed smooth compactly supported η equal to 1 near 0. There is a smooth compactly
+                                                                                   2                2
+supported b with a(y) =  ´ η(y) + yb(y). Integrating the second term using (e2πiBy )′ = 4πiBye2πiBy
+bounds it by (4πB)−1 R |b′ (y)| dy. Integrating by parts on the two tails where 1 − η is nonzero
+shows that         ˆ                      ˆ
+                            2πiBy 2                2                eiπ/4
+                       η(y)e         dy =    e2πiBy dy + O(B −1 ) = √     + O(B −1 ).
+                    R                      R                          2B
+                                   2                                  √
+For the last equality, insert e−δy , evaluate the Gaussian integral as π(δ −2πiB)−1/2 with positive-
+real-part branch, and let δ ↓ 0. Integration by parts bounds the tails beyond |y| = T by O((BT )−1 ),
+uniformly in δ ≥ 0, so the limit agrees with the improper Fresnel integral. We have proved
+                                             eiBψ(1/2)+iπ/4
+                                  I(B) =         √          + O(B −1 ).
+                                                   2B
+Therefore
+                             N                                    
+(8.2)        SfN (N, α) = √       exp iBψ(1/2) − iπB log N + iπ/4 + O(N/B + B log N + 1).
+                             2B
+                                         √
+When√B = log N , the error is o(N/ B), which gives (8.1). Finally, N/ log N + N/B 1/2+ε =
+o(N/ B) for every fixed ε > 0. The dependence of fN on N is permitted in a bound uniform over
+the coefficient class, so this disproves the proposed stronger exponent.                   □
+Remark 8.1. The remaining totient factor is a different issue. In Lemma 4.1, take U = r,
+b0 ∈ R(r), and cn = e(−b0 n/r) for 1 ≤ n ≤ r. Then E(c) = r and exact orthogonality gives
+                                                  2
+                          1   X X                      r2      r
+                                        cn e(bn/r) =       =      E(c).
+                        φ(r)                          φ(r)   φ(r)
+                                b∈R(r) n≤r
+20                                             N. ROBLES
+
+
+Since r/φ(r) is unbounded, this disproves an absolute O(E(c)) bound for this particular reduced-
+residue mean over arbitrary vectors. It does not prove optimality of the totient factor for mul-
+tiplicative functions, since the displayed vector need not be multiplicative. Improving the final
+arithmetic dependence would require additional information or a change in the reduction to that
+unrestricted mean.
+
+                                9. Conclusion and future work
+   We have refined the Montgomery-Vaughan bound, and Bachman’s sharpening of it, in the original
+coefficient class, removing a logarithmic factor with effective implied constants. The argument
+combines short-interval upper bounds for primes with maximal Fourier estimates, and the square-
+root dependence on the displacement parameter is sharp in the stated uniform setting.
+   The remaining arithmetic dependence presents a different question. Remark 8.1 rules out re-
+placing the right-hand side of (4.2) by O(E(c)) uniformly for arbitrary coefficient vectors. This
+does not establish the optimal arithmetic factor in the multiplicative-function theorem. A possible
+direction is to retain multiplicativity or other structure before passing to the unrestricted coefficient
+estimate, or to change that reduction; this will be the subject of future research. No improvement
+of the totient factor is proved here.
+   A second direction concerns the range of D = rB. The hypothesis P ≥ 16D2 of Proposition 6.1
+makes the Brun-Titchmarsh bound lossless against the weight log p; below the Brun-Titchmarsh
+scale the same argument still gives a bound, at the cost of a logarithm. Let B > 1 and r ≤ P <
+r⌈B⌉, and let J = ⌈B⌉, h = P/J and the intervals Ij be as in the proof of Proposition 6.1, so that
+h < r. Every prime in (P, 2P ] exceeds r and is therefore coprime    P to r, and an interval of length
+h < r contains at most one integer in each class modulo r; hence p∈Ij , p≡b (mod r) log p ≤ log(2P )
+for every b ∈ R(r) and every j. Using this in place of (6.5), the argument leading to (6.6) gives
+                                 X ˆ 2P  1                                            
+               ∗
+             QP (c) ≪ log(2P )                  Mc (ab/r + βt)2 + h|β|2 Md (ab/r + βt)2 dt.
+                                        P     h
+                               b∈R(r)
+
+Enlarging the sum to all b modulo r and applying Lemma 4.3 to both integrals, with E(d) ≤ U 2 E(c)
+and h|β|U ≤ B/J ≤ 1, we obtain
+                                     N  1                               N
+            Q∗P (c) ≪ log(2P ) rP +          + h|β|2 U 2 E(c) ≪ log(2P ) D +     E(c),
+                                       B   h                                 P
+since rP/h = rJ ≤ 2D, (N/B)/h = N J/(BP ) ≤ 2N/P , rP h|β|2 U 2 ≤ rP |β|U ≤ D, and
+(N/B) h|β|2 U 2 ≤ (N/B)|β|U ≤ N/P . The proof of Proposition 6.2 then gives, in this range,
+                                                            r
+                                         p                    log(2P )
+                             |T (P )| ≪A N D log(2P ) + N              .
+                                                                 P
+For P ≥ r⌈B⌉ one may instead keep the Brun-Titchmarsh factor log(2P )/ log(2P/(rJ)) arising from
+(2.5) with h = P/J. Together with the small-prime range of Lemma 3.3, these bounds suggest a
+three-range argument for larger D; we will pursue this optimization in future work.
+
+                                        Acknowledgement
+  The author is grateful to Dirk Zeindler for feedback on the manuscript and for fruitful discussions.
+The original idea and conception of the paper, together with the overall strategy of the proof and
+the first draft, are due to the author.
+  Subsequently, ChatGPT Sol 5.6 was used for exposition and final revision. The author led
+the effort to make the implied constants effective, with its assistance. An adversarial audit of an
+earlier proof of the main theorem led to the effective form of the final estimates. The revised
+proof retains the maximal Fourier approach but replaces the Siegel-Walfisz completion step by a
+one-sided Brun-Titchmarsh argument on short intervals, combined with maximal sampling and an
+                         EXPONENTIAL SUMS WITH MULTIPLICATIVE COEFFICIENTS                                         21
+
+
+elementary variation estimate; see Section 6 and (6.6). This replacement avoids the ineffective input
+rather than making the constant in Siegel’s theorem computable; see Section 7.1. All mathematical
+content was verified by the author, who takes full responsibility for it.
+
+                                                  References
+[B]   G. Bachman, On exponential sums with multiplicative coefficients, II, Acta Arith. 106 (2003), no. 1, 41-57.
+[BBK] M. Bordignon, C. Bortolotto, and B. Kerr, Weyl sums with multiplicative coefficients and joint equidistribution,
+      Algebra Number Theory 19 (2025), no. 8, 1549-1580.
+[C]   L. Carleson, On convergence and growth of partial sums of Fourier series, Acta Math. 116 (1966), 135-157.
+[D]   H. Daboussi, Fonctions multiplicatives presque périodiques B, Journées Arithmétiques de Bordeaux (Conf.
+      Univ. Bordeaux, 1974), Astérisque 24-25 (1975), 321-324.
+[DD] H. Daboussi and H. Delange, Quelques propriétés des fonctions multiplicatives de module au plus égal à 1, C.
+      R. Acad. Sci. Paris Sér. A 278 (1974), 657-660.
+[DD2] H. Daboussi and H. Delange, On multiplicative arithmetical functions whose modulus does not exceed one, J.
+      London Math. Soc. (2) 26 (1982), 245-264.
+[dBG] R. de la Bretèche and A. Granville, Exponential sums with multiplicative coefficients and applications, Trans.
+      Amer. Math. Soc. 375 (2022), no. 10, 6875-6901.
+[GL] A. Granville and Y. Lamzouri, Large values of exponential sums with multiplicative coefficients,
+      arXiv:2604.02306v1, 2026.
+[H]   R. A. Hunt, On the convergence of Fourier series, in: Orthogonal Expansions and their Continuous Analogues
+      (Proc. Conf., Edwardsville, Ill., 1967), Southern Illinois Univ. Press, Carbondale, Ill., 1968, 235-255.
+[HS] H. Hedenmalm and E. Saksman, Carleson’s convergence theorem for Dirichlet series, Pacific J. Math. 208
+      (2003), no. 1, 85-109.
+[JLW] Y. Jiang, G. Lü, and Z. Wang, Exponential sums with multiplicative coefficients without the Ramanujan
+      conjecture, Math. Ann. 379 (2021), 589-632.
+[K]   D. Koukoulopoulos, The distribution of prime numbers, Grad. Stud. Math. 203, Amer. Math. Soc., Providence,
+      RI, 2019.
+[L]   M. T. Lacey, Carleson’s theorem: proof, complements, variations, Publ. Mat. 48 (2004), no. 2, 251-307.
+[MS] H. Maier and A. Sankaranarayanan, On a certain general exponential sum, Int. J. Number Theory 1 (2005),
+      no. 2, 183-192.
+[MV] H. L. Montgomery and R. C. Vaughan, Exponential sums with multiplicative coefficients, Invent. Math. 43
+      (1977), 69-82.
+[MV2] H. L. Montgomery and R. C. Vaughan, The large sieve, Mathematika 20 (1973), 119-134.
+
+   RAND Corporation, Engineering and Applied Sciences, Arlington, VA 22202, USA
+   Email address: robles.nicolas.m@gmail.com
+

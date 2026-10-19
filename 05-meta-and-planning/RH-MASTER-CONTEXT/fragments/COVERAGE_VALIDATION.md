@@ -1,29 +1,29 @@
-# Validación mecánica de cobertura
+# Mechanical coverage validation
 
-## Dictamen
+## Verdict
 
-La cobertura documental es completa para los tres ámbitos declarados. No se detectaron enlaces rotos, referencias de catálogo inexistentes, desequilibrios LaTeX ni contradicciones entre las fórmulas centrales y el plan de reinicio.
+Documentary coverage is complete for the three declared scopes. No broken links, nonexistent catalog references, LaTeX imbalances, or contradictions between the central formulas and the restart plan were detected.
 
-## Inventario contrastado
+## Cross-checked inventory
 
-- Paper 36: `04-papers/36-obstruction-ledger/main.tex` tiene 8.806 líneas y 54.962 palabras. Existen la auditoría principal y su fragmento lógico.
-- RH1--RH9: hay 626 directorios `task`, distribuidos como 89, 94, 83, 83, 60, 68, 43, 27 y 79. Cada serie es continua desde `task1` hasta su máximo y pertenece a una auditoría de bloque.
-- Fases: hay 101 directorios `phase-*`. Los rótulos 001 y 002 no existen y el 044 tiene dos rutas; ambas anomalías están registradas. Las cinco auditorías cubren todos los intervalos desde 000 hasta 101.
-- El bloque 076--089 contabiliza los 512 Markdown presentes. El barrido nominal de cierres no encontró candidatos fuera de los directorios auditados.
+- Paper 36: `04-papers/36-obstruction-ledger/main.tex` has 8,806 lines and 54,962 words. The main audit and its logical fragment exist.
+- RH1–RH9: there are 626 `task` directories, distributed as 89, 94, 83, 83, 60, 68, 43, 27, and 79. Each series is continuous from `task1` to its maximum and belongs to a block audit.
+- Phases: there are 101 `phase-*` directories. Labels 001 and 002 do not exist and 044 has two paths; both anomalies are on record. The five audits cover every interval from 000 to 101.
+- Block 076–089 accounts for the 512 Markdown files present. The nominal sweep for closures found no candidates outside the audited directories.
 
-## Navegación y tamaño
+## Navigation and size
 
-Los 42 enlaces Markdown locales resuelven. Los ocho documentos del orden de lectura, las referencias textuales del alcance y el mapa del índice existen.
+The 42 local Markdown links resolve. The eight reading-order documents, the textual scope references, and the index map exist.
 
-Excluyendo este informe para evitar circularidad, los otros diecinueve Markdown contienen 45.101 palabras, 320.961 caracteres Unicode y 326.879 bytes. La cota mecánica de un token por byte queda en 326.879 tokens. Al incorporar este informe, el dossier conserva veinte Markdown, menos de 50.000 palabras y menos de 350.000 bytes, dentro del límite declarado.
+Excluding this report to avoid circularity, the other nineteen Markdown files contain 45,101 words, 320,961 Unicode characters, and 326,879 bytes. The mechanical bound of one token per byte comes to 326,879 tokens. Including this report, the dossier keeps twenty Markdown files, fewer than 50,000 words, and fewer than 350,000 bytes, within the declared limit.
 
-## Balance LaTeX
+## LaTeX balance
 
-En todos los Markdown coinciden los delimitadores de matemática de bloque e inline, los pares `begin`/`end` y los pares `left`/`right`. No quedan filas alineadas terminadas con una sola barra inversa ni secuencias de espaciado RDI mal formadas.
+In all the Markdown files the block and inline math delimiters match, as do the `begin`/`end` pairs and the `left`/`right` pairs. No aligned rows are left ending with a single backslash, nor are there malformed RDI spacing sequences.
 
-## Fórmulas verificadas
+## Verified formulas
 
-La fórmula unilateral es una consecuencia algebraica exacta del split declarado:
+The one-sided formula is an exact algebraic consequence of the declared split:
 
 \[
 \lambda_n=\lambda_n^{\rm arch}+\lambda_n^{\rm prime},
@@ -39,18 +39,18 @@ Su tratamiento por signo es correcto. La fórmula exacta de la parte arquimedian
 I_-:=\{n\ge1:\lambda_n^{\rm arch}<0\}=\{1,2,\ldots,7\}.
 \]
 
-El contraste numérico independiente reproduce \(d_3\approx0{,}00626036\), \(\lambda_7^{\rm arch}\approx-0{,}355731\) y \(\lambda_8^{\rm arch}\approx0{,}020900\). Por ello, fuera de \(I_-\) puede formularse el control de la parte negativa; dentro de \(I_-\) debe conservarse el lower bound completo.
+The independent numerical check reproduces \(d_3\approx0{,}00626036\), \(\lambda_7^{\rm arch}\approx-0{,}355731\), and \(\lambda_8^{\rm arch}\approx0{,}020900\). Hence, outside \(I_-\) the control of the negative part can be formulated; inside \(I_-\) the full lower bound must be kept.
 
-El límite Laguerre está correctamente pareado. Para \(\varepsilon>0\), el primer sumando es la integral de \(f_{n,\varepsilon}\) contra Lebesgue y el segundo es la integral contra \(d\psi\); ambos usan el mismo regulador. En \(n=1\), la diferencia tiende a \(\gamma\), como exige \(\lambda_1^{\rm prime}\).
+The Laguerre limit is correctly paired. For \(\varepsilon>0\), the first summand is the integral of \(f_{n,\varepsilon}\) against Lebesgue measure and the second is the integral against \(d\psi\); both use the same regulator. At \(n=1\), the difference tends to \(\gamma\), as required by \(\lambda_1^{\rm prime}\).
 
-Con
+With
 
 \[
 f_{n,\varepsilon}(y)=y^{-1-\varepsilon}L_{n-1}^{(1)}(\log y),
 \qquad f_{n,\varepsilon}(1)=n,
 \]
 
-la integración por partes conserva el signo y el borde inferior:
+integration by parts preserves the sign and the lower boundary:
 
 \[
 \lambda_n^{\rm prime}
@@ -60,7 +60,7 @@ la integración por partes conserva el signo y el borde inferior:
 \int_1^\infty(\psi(y)-y+1)f'_{n,\varepsilon}(y)\,dy.
 \]
 
-Las dos formas coinciden porque \(\int_1^\infty f'_{n,\varepsilon}=-n\). La normalización asintótica también es consistente:
+The two forms agree because \(\int_1^\infty f'_{n,\varepsilon}=-n\). The asymptotic normalization is also consistent:
 
 \[
 \lambda_n^{\rm arch}
@@ -69,12 +69,12 @@ Las dos formas coinciden porque \(\int_1^\infty f'_{n,\varepsilon}=-n\). La norm
 +\frac34+O(n^{-1}).
 \]
 
-El término lineal no se absorbe en \(O(\sqrt n\log n)\), y toda cota con ese factor comienza en \(n\ge2\).
+The linear term is not absorbed into \(O(\sqrt n\log n)\), and every bound with that factor starts at \(n\ge2\).
 
-## Consistencia del plan RDI
+## Consistency of the RDI plan
 
-La ruta RDI permanece abierta y subordinada al resultado del triage LP/GAP-Z. El plan no la presenta como requisito del ataque unilateral ni como cierre ya obtenido. Si sobrevive la atribución, congela una sola coordenada, `C_core`, exige orden de límites y fuente Gamma--Euler explícitos, y rechaza nuevas reformulaciones sin una estimación adicional. Esta jerarquía coincide con `MASTER_CONTEXT.md`, `PHASES_AUDIT.md` y el registro de retiros.
+The RDI route remains open and subordinate to the outcome of the LP/GAP-Z triage. The plan does not present it as a requirement of the one-sided attack nor as an already-obtained closure. If the attribution survives, it freezes a single coordinate, `C_core`, requires an explicit order of limits and Gamma–Euler source, and rejects new reformulations without an additional estimate. This hierarchy agrees with `MASTER_CONTEXT.md`, `PHASES_AUDIT.md`, and the record of withdrawals.
 
-## Controles de forma
+## Form checks
 
-El barrido completo no encuentra las dos voces restringidas ni campos temporales de metadatos. Los conteos de formatos auxiliares certifican presencia, no contenido matemático.
+The full sweep finds neither the two restricted voices nor temporal metadata fields. The auxiliary format counts certify presence, not mathematical content.

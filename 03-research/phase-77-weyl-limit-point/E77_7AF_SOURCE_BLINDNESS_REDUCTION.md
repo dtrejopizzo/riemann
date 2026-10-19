@@ -1,6 +1,6 @@
 # E77.7af - Source-blindness reduction to a full boundary-zero eigenvector
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

@@ -1,6 +1,6 @@
 # P123.082 — Classification of the full twisted-bimodule intertwiners
 
-Date: 2026-09-06. Status: PROVED for the repaired coefficient-unitized
+Status: PROVED for the repaired coefficient-unitized
 rapid algebra with nonempty S_f. This identifies a limitation of the
 stable twist-only category, not of every possible mixed source category.
 

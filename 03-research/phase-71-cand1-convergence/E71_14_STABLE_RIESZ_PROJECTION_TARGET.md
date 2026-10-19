@@ -1,7 +1,6 @@
 # E71.14 -- stable Riesz/Fredholm projection target
 
-**Date:** 2026-07-07.
-**Role:** convert the successful persistence diagnostic into a precise theorem target.
+**Purpose:** convert the successful persistence diagnostic into a precise theorem target.
 
 ## What E71.12-E71.13 found
 

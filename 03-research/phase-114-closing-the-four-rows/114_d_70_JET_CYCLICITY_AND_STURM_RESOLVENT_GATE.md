@@ -33,7 +33,7 @@ modified.
 Let `I_T=(-T,T)`, let `P_T` be restriction after zero extension, and write
 
 \[
- v_{e,T}=1_{I_T}u_e,qquad v_{o,T}=1_{I_T}u_o.              \tag{1.1}
+ v_{e,T}=1_{I_T}u_e,\qquad v_{o,T}=1_{I_T}u_o.              \tag{1.1}
 \]
 
 Both are nonzero compactly supported functions.  Their Fourier transforms
@@ -114,7 +114,7 @@ on the half-line is
 
 \[
  b(\tau)=-\mathfrak a(\tau)
- +{2\log2\over\sqrt2}\cos(\tau\log2),qquad \tau\ge0.     \tag{2.2}
+ +{2\log2\over\sqrt2}\cos(\tau\log2),\qquad \tau\ge0.     \tag{2.2}
 \]
 
 D.69 proves, at
@@ -218,7 +218,7 @@ If
 are the eigenvalues of `B`, then
 
 \[
- m(z)=\sum_{j=1}^N{w_j\over\lambda_j-z},qquad w_j>0.      \tag{4.3}
+ m(z)=\sum_{j=1}^N{w_j\over\lambda_j-z},\qquad w_j>0.      \tag{4.3}
 \]
 
 The derivative is positive between poles.  The eigenvalues
@@ -266,7 +266,7 @@ Thus `u` is cyclic, all resolvent weights are positive, and strict
 interlacing (4.5) holds.  Nevertheless the two-dimensional space spanned by
 
 \[
- v_1=(1,-1,0,0)^T,qquad v_2=(1,0,-1,0)^T                 \tag{5.3}
+ v_1=(1,-1,0,0)^T,\qquad v_2=(1,0,-1,0)^T                 \tag{5.3}
 \]
 
 lies in `u^perp`, and the restricted Gram matrix of `B` is

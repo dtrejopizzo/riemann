@@ -336,7 +336,7 @@ finite-support-on-a-proper-global-model mechanism.
   cyclotomic prime-power support law and diagonal resultant vanishing of
   `107_04`.
 - `107_34_paper_a_prime_power_support_preflight.py` — exact verifier for
-  that finite-place Paper A audit.
+  that finite-place Paper An audit.
 - `107_35_PAPER_A_CONNECTED_EXTRACTION_AUDIT.md` — exact audit of the
   Eulerian primitive extractor of `107_03` and its fixed-control
   function-field specialization.
@@ -471,7 +471,7 @@ finite-support-on-a-proper-global-model mechanism.
   fail for explicit structural reasons.
 - `107_63_paper_c_universal_model_exclusion_audit.py` — exact verifier
   for that universal-model exclusion audit.
-- `107_64_PAPER_A_DIAGONAL_COHERENCE_AUDIT.md` — exact Paper A audit
+- `107_64_PAPER_A_DIAGONAL_COHERENCE_AUDIT.md` — exact Paper An audit
   that the diagonal-coherence claim of `107_05` survives one finite
   matched-cutoff and polarization shadow.
 - `107_64_paper_a_diagonal_coherence_audit.py` — exact verifier for
@@ -524,7 +524,7 @@ finite-support-on-a-proper-global-model mechanism.
   reject extra singular directions.
 - `107_74_paper_c_integrability_profile_intrinsicity_audit.py` — exact
   verifier for that integrability-profile intrinsicity audit.
-- `107_75_PAPER_A_UNIFIED_SYNTHESIS_AUDIT.md` — exact Paper A audit
+- `107_75_PAPER_A_UNIFIED_SYNTHESIS_AUDIT.md` — exact Paper An audit
   that one finite symbolic model realizes the unified Milestone I
   synthesis of connected extraction, prime-power support, and common
   Green closure.

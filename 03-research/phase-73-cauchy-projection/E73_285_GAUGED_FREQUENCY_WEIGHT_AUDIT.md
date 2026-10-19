@@ -1,6 +1,5 @@
 # E73.285 - Gauged frequency weight audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

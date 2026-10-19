@@ -1,6 +1,6 @@
 # P123.090 — Explicit cutoff descent to the induced normal action
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY on the single-zero
+Status: PROVED-IN-REPOSITORY on the single-zero
 boundary. The projection and transport coefficients below are elements
 of the boundary crossed product. No idempotent lift to the full source
 across its other strata is asserted.

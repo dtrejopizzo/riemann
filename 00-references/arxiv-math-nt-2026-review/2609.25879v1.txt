@@ -1,0 +1,1578 @@
+                                             THE LARGE SIEVE THROUGH PARSEVAL, LARGE SIFTED
+                                                            SETS ARE REGULAR
+
+
+                                                                                 OLIVIER RAMARÉ
+arXiv:2609.25879v1 [math.NT] 22 Sep 2026
+
+
+
+
+                                                    Abstract. We modify the approach to the arithmetical form of the large
+                                                    sieve by relying on the Parseval identity rather than on an approximate Bessel
+                                                    inequality and as a consequence, we prove that sifted sets are either small or the
+                                                    attached Fourier polynomial is very regular at the origin. We also discuss the
+                                                                                                                     şδ
+                                                    optimality of this approach and shall show in passing that N ´δ      |Spβq|2 dβ ě
+                                                           ?
+                                                    p1 ´ 2{ δN q|Sp0q|2 for any trigonometric polynomial of length N .
+
+
+                                                   1. A lightning introduction to roughly assess the results
+                                              Since their discovery by V. Brun in [3, 4], sieve methods have proved very efficient
+                                           to bound above quantities defined by the exclusion of some or several residue classes.
+                                           Sieve methods are now classified in three main categories: the combinatorial sieves,
+                                           the Selberg (or Λ2 ) sieve and the large sieves. Gallagher’s larger sieve introduced
+                                           in [6] remains an isolated tool, though a powerful one where it applies. We are
+                                           concerned in this paper with the large sieves. We only mention here that these
+                                           arose from the initial work of Yu. V. Linnik in [13]; we refer the readers to the
+                                           monographs [16] by H. L. Montgomery and [24] for more historical details.
+                                              In the classical sieve setting, we start from a sequence of (excluded) subsets
+                                           Lp Ă Z{pZ for each prime p ď Q, for some Q, and consider the integers n from a
+                                           host sequence, say an interval rM ` 1, M ` N s, that are such that, for every p ď Q,
+                                           we have n R Lp . Here is a first corollary of our method.
+                                           Corollary 1.1. Let Z be the set of integers n P rM ` 1, M ` N s that do not belong
+                                           to any of the sets Lp , for p ď Q. Choose two positive real parameters Q ď M
+                                           and V ď N {2. We have
+                                                                            ż8 ˇ ÿ
+                                                      1 ´ 2V {N ˇˇ ÿ ˇˇ2                 ˇ2 dt    1 ` Q2 {V ÿ
+                                                                       1ˇ ď            1ˇ                       1
+                                                                                ˇ        ˇ
+                                                                                                ď
+                                                                                           4V 2
+                                                                 ˇ              ˇ
+                                                          N        nPZ       ´8   nPZ
+                                                                                                    LpQq nPZ
+                                                                                        |n´t|ďV
+
+                                           where
+                                                                                     ÿ             ź       |Lp |
+                                           (1)                            LpQq “          µ2 pqq                   .
+                                                                                    qďQ
+                                                                                                         p ´ |Lp |
+                                                                                                   p|q
+
+                                              This is to be compared with the classical large sieve bound which, in this case,
+                                           yields the upper bound
+                                                                     1 ˇˇ ÿ ˇˇ2   1 ` Q2 {N ÿ
+                                           (2)                          ˇ  1ˇ ď                   1.
+                                                                     N nPZ           LpQq nPZ
+                                           The parameter V thus introduces a small loss, replacing in most cases a 1 by
+                                           a 1`op1q, but, aside from the method which follows an untrodden path, the cornered
+                                           quantity is of interest. Here is a corollary.
+
+                                             2010 Mathematics Subject Classification. Primary: 11N13, 11N35, 11N36, Secondary:
+                                             Key words and phrases. Large sieve inequality.
+                                                                                            1
+2
+
+
+Corollary 1.2. Assume the number Z of primes inside rM ` 1, M ` N s satisfies,
+for some positive C:
+                                            2N
+                               Zě                       .
+                                    log N ` C log log N
+Then, for any A ě 2, we have:
+             ż plog N qA {N ˇ                    ˇ2
+                            ˇSpβq ´ Z            ˇ dβ !A,C Z log log N .
+                            ˇ           ÿ        ˇ
+                                           epnβq
+                        A
+              ´plog N q {N
+                            ˇ       N  nďN
+                                                 ˇ          plog N q2
+
+    A more general version is stated in Corollary 2.6, while an L8 -version is proved
+in Corollary 2.3.
+    We recall that we know that, see [26], that Z ď 2N {p3.53 ` log N q provided N
+is large enough. One would like to increase this constant 3.53, and possibly show
+that it may be taken infinitely large. The above corollary tells us that, if this
+quantity 3.53 remains smaller than C log log N , then the associated trigonometric
+polynomial is very regular on a long interval around the origin. We propose in
+Corollary 2.3 an L8 -version of this bound and in Corollary 2.4 a version for primes
+in arithmetic progressions.
+    Improving on the inequality on Z may have consequences on the location of the
+possible Siegel zero, see for instance [18] by Y. Motohashi or [22] by K. Ramachan-
+dra, A. Sankaranarayanan & K. Srinivas.
+
+                               2. Introduction and results
+    Let us now proceed more slowly.
+A short roadmap on the Large Sieve. When using the large sieve inequality
+for sieving purpose, whether as Linnik originally did or in the modern version that
+is Montgomery’s sieve, we rely on two pieces of informations:
+       ‚ Some local lower bounds of arithmetical nature, see Theorem 3.1 or (22)
+         below,
+       ‚ and a global upper bound, usually the Large Sieve inequality, see (21) below.
+When applied to the primes-in-interval situation, we first define
+                                ÿ
+(3)                 Spαq “            eppαq, pepβq “ exp 2iπβq
+                                 M ăpďM `N
+
+where p denotes a prime number and M and N ě 1 are real numbers. We readily
+find that, when q ď M , we have
+                           ÿ                µ2 pqq
+(4)                             |Spa{qq|2 ě        |Sp0q|2
+                             ˚
+                                            φpqq
+                                a mod q
+                         ˚
+(the notation a mod q denotes a summation over every reduced residue classes a
+modulo q) and the Large Sieve inequality (see Theorem 1 in [17]) tells us that
+                     ÿ ÿ
+(5)                             |Spa{qq|2 ď pN ` Q2 qSp0q.
+                             qďQ a mod˚ q
+
+When we join both, we swiftly infer that
+                                 ÿ µ2 pqq
+              plog Qq|Sp0q|2 ď            |Sp0q|2 ď pN ` Q2 qSp0q
+                                qďQ
+                                     φpqq
+from which we deduce that the number Sp0q of primes in the interval pM, M ` N s
+is at most1 p2 ` op1qqN { log N . This is a simple version of the celebrated Brun-
+Titchmarsh Inequality (see Theorem 2 in [17]).
+    1We selected Q “
+                       ?
+                        N { log N and assumed that Q ď M , an assumption that is easily lifted.
+                                                                                           3
+
+
+   A distinctive feature of the Large Sieve situation, with respect to sieves in gen-
+eral is that we sieve out intervals and not some general host sequence, typically a
+sequence of polynomial values.
+
+On the method. We rely on (a slightly more general but essentially) the same
+local lower estimate, but modify the global inequality. A first path goes through
+an approximated Bessel inequality, like Proposition 1 in [1] by E. Bombieri. Mont-
+gomery & Vaughan in [17] use a (weighted or not ) version of Hilbert’s inequality.
+We refer the readers to [32] by W. Yangjit and to [5] by E. Carneiro & F. Littmann
+for recent work on this inequality. Instead of that, we rely on the Farey dissection
+of the unit interval, as in the circle method; our global inequality is a consequence
+of the Parseval Identity. It is recalled in Lemma 4.1.
+
+A more general result. We presented sieving in the first paragraph through an
+exclusion hypothesis. This approach, though natural and historically older, leads
+to difficulties. It is better to say that n P Kp “ Z{pZzLp . This is for instance
+the viewpoint adopted by M. N. Huxley in his book [9] and by the present author
+in [24, 25, 23].
+   Let us present the sieving situation from scratch. A subset Kq Ă Z{qZ is said to
+be multiplicative 2 if, when the decomposition of q in prime factors reads
+                         q “ pe11 pe22 ¨ ¨ ¨ perr ,   p@i ‰ j,    pi ‰ pj q,
+and the Chinese Remainder Map is defined by
+                                             ź
+                           σ : Z{qZ Ñ             Z{pei i Z
+                                           1ďiďr
+                                    x ÞÑ x mod pei i ,
+                                           `              ˘
+
+                        ´1
+                           ` ` ˘˘
+we have
+      ś the property σ      σ Kq “ Kq . This is often written in the shorter form
+Kq “ 1ďiďr Kpei . We further say that the sequence pKq qqďQ is consistent when
+                 i
+Kq {dZ “ Kd whenever d|q. It may be expedient to restrict the modulus q to
+square-free values, it would solely be more difficult to write, as we should write
+                                       pKq qqďQ,q square-free .
+We finally say that the Johnsen-Gallagher condition holds whenever
+(6)                @d|q, @y P Kd ,       #tx P Kq : x ” yrdu “ |Kq |{|Kd |.
+This is equivalent to saying that the number of preimages in Kq of any point y
+of Kd does not depend on y. When q is square-free and Kq is multiplicative, this
+condition always holds.
+   Given a consistent multiplicative sequence pKq qqďQ , we define
+                                 ź ˆ pα         pα´1
+                                                        ˙
+(7)                      gpqq “              ´            .
+                                  α
+                                       |Kpα | |Kpα´1 |
+                                         p }q
+
+  A sequence pun qM ănďM `N of complex numbers is said have support on pKq qqďQ
+whenever, when un ‰ 0, then n belongs to every Kq for q ď Q. We may now state
+our main theorem.
+Theorem 2.1 (A localized weighted sieve). Let pun qM ănďM `N be a sequence of
+non-negative real numbers having support on a consistent multiplicative sequence
+
+  2In earlier work, I used multiplivatively split instead of the simpler multiplicative.
+4
+
+
+pKq qqďQ that satisfies the Johnsen-Gallagher condition. For any parameter V ď
+N {2, we have
+  1 ´ 2V {N ˇˇ    ÿ          ˇ2 ż 8 ˇ     ÿ        ˇ2 dt        ÿ
+                          un ˇ ď                un ˇ      ď 2V     u2n {L˚ pQ, V q
+                             ˇ      ˇ              ˇ
+       N
+             ˇ                      ˇ
+                                                     4V 2
+              M ănďM `N          ´8   M ănďM `N                nďN
+                                         |n´t|ďV
+
+where
+                                         ÿ       gpqq
+(8)                       L˚ pQ, V q “                     .
+                                         qďQ
+                                             2V ` qpq ` Qq
+The function g is defined at (7).
+   Theorem 2.5 proposes a very close version of the same result that may be more
+accessible. This is to be compared with the weighted sieve proposed by H. Mont-
+gomery & R. C. Vaughan in Corollary 1 of [17] which reads in our notation
+                       ˇ    ÿ       ˇ2    ÿ
+(9)                              un ˇ ď      u2n {L˚˚ pQ, N q
+                       ˇ            ˇ
+                       ˇ
+                        M ănďM `N            nďN
+
+where
+                                             ÿ    gpqq
+(10)                        L˚˚ pQ, N q “                .
+                                         qďQ
+                                              N ` 32 qQ
+                                                b        a
+The coefficient 3{2 may even be replaced by 1 ` 23 6{5 “ 1.315 . . . after the
+work of E. Preissmann in [21], and this appears to be the last improvement on this
+matter. The relative strength of our result lies in the localization property, i.e. on
+the parameter V which can be chosen typically of size N {plog N qA .
+   Corollary 1.1 is an immediate consequence of this result. We presented the siev-
+ing situation by using consistent sequences and the Johnsen-Gallagher condition.
+An approach closer to the one employed by A. Selberg in [28] is proposed in [11].
+Notice that the non-negativity is superfluous as we may apply the result to p|un |q
+rather than to pun q. We can even allow complex values.
+Nearby values. As announced at the beginning of this section, we may exploit
+the local character of Theorem 2.1. We start with an L8 -bound and continue with
+an L2 -bound.
+Theorem 2.2. When pum q is as in Theorem 2.1, Sp0q ą 0 and V ă N {4, and
+under the assumption
+                               2Sp0q2 ě N }S}22 {LpQq
+where L is given in (1) (or any positive lower bound of it), we have
+           ˇ        ż N `V        ˇ d       2
+           ˇ Spβq              dt ˇ ď N }S}2 {LpQq ´ 1 ` ?  2Q
+                                  ˇ
+           ˇ
+           ˇ Sp0q ´      epβtq                  2
+                                                                ` 7|β|V.
+                     ´V        N  ˇ        Sp0q              V
+    The approximation is rather weak, but the range in β is very large.
+    It is worth trying this result on a typical problem.
+Corollary 2.3. Assume the number Z of primes inside rM ` 1, M ` N s satisfies,
+for some positive C:
+                                          2N
+                            Zě                       .
+                                 log N ` C log log N
+Then, for any B ě 2, we have for N " e4B {B:
+           ˇ                     żN          ˇ     d
+           ˇ      ÿ                  epβtqdt ˇ ď 2Z pB ` Cq log log N
+                                             ˇ
+           ˇ           eppβq ´ 2
+           ˇ
+             M `1ďpďM `N          0   log N  ˇ           log N
+                                                                                      5
+
+
+uniformly for every β such that N |β| ď plog N qB .
+  Let us specify that the implied constant in N " e4B {B is also independent of C.
+We stated these results for primes in interval, for clarity without any additional
+congruence condition attached to these primes, but the same results hold in the
+more general setting. Let us record such a statement.
+Corollary 2.4. Let q ě 1 be a modulus and a be coprime to q. Let N ą q be given.
+Assume the number Z of primes confurent to a modulo q inside rM ` 1, M ` N s
+satisfies, for some positive C:
+                                           2N
+                        Zě                                    .
+                             φpqqplogpN {qq ` C log logpN {qq
+Then, for any B ě 2, we have for N {q " e4B {B:
+         ˇ                    żN         ˇ      d
+         ˇ     ÿ                 epβtqdt ˇ ď 2Z pB ` Cq log logpN {qq
+                                         ˇ
+         ˇ          eppβq ´ 2
+         ˇ
+          M `1ďpďM `N          0  log N  ˇ           logpN {qq
+                 p”arqs
+
+uniformly for every β such that pN {qq|β| ď logB pN {qq.
+  Here is another expression of the same phenomenom.
+Theorem 2.5. Let pun qM ănďM `N be a sequence of non-negative real numbers
+having support on a consistent multiplicative sequence pKq qqďQ that satisfies the
+Johnsen-Gallagher condition. For any parameter V ď N {2 and such that V ´ 12 is
+an integer, we have
+                                        ˇ2 ˇ
+                                        ˇ ˇ sin πp2V ´ 1qβ ˇ2
+  ż 1{2 ˇ                                                  ˇ
+         ˇSpβq ´ Sp0q
+         ˇ                  ÿ
+                                  epnβqˇ ˇ
+                                        ˇ  ˇ               ˇ dβ
+    ´1{2
+         ˇ        N ´2V ănăN `2V               2V sin πβ ˇ
+                                          |Sp0q|2
+                                                  ˆ       ˙ ÿ
+                                                       2V
+                                     `              1´        ď   u2n {p2V L˚ pQ, V qq
+                                             N          N       n
+                                           ř
+where L˚ is defined in (8) and Spβq “ n un epnβq.
+
+   This result gives access to the deviation of Spβq from Sp0q                  2
+                                                                 ř
+                                                              N    n epnβq in L -norm
+while Theorem 2.2 gives access to single point deviation. Here is a simpler version
+aimed at applications.
+Corollary 2.6. Let Z be the number of points n that belong to every Kq , where
+pKq qqďQ is a consistent multiplicative sequence that satisfies the Johnsen-Gallagher
+condition. Assume that LpQq satisfies LpQq “ Cplog Qqκ p1 ` Op1{ log Qqq when
+Q ě 2, for some C ą 0 and κ ě 0. For any parameter A ě 1, we have
+ż plog N qA {N ˇ                   ˇ2       ˆ               ˙
+               ˇSpβq ´ Z                         N                1        N log log N
+               ˇ          ÿ        ˇ
+                             epnβqˇ dβ !A
+                                   ˇ             ?     ´Z              κ
+                                                                         `
+           A
+ ´plog N q {N
+               ˇ       N nďN                  Lp N q          plog N q     plog N q2κ`1
+                 ř
+where Spβq “ n epnβq.
+   The condition on LpQq is usually replaced by saying that “the sieve is of dimen-
+sion κ”, by which we mean that we have
+          ÿ                                      ÿ
+(11)          gppk q logppk q “ κ log P ` Op1q,       gppk qgppν q logppk q ď A.
+         pk ďP                                    p,k,νě2
+
+Under such hypotheses, we have, when Q ě 2,
+                         ÿ
+                LpQq “      gpqq “ Cplog Qqκ p1 ` Op1{ log Qqq
+                           qďQ
+6
+
+
+for some positive constant C that can be fully described. This result can be found
+in Theorem 21.1 of [24], but, when gppk q “ 0 as soon as k ě 2, this result is much
+older and can for instance be found for instance in [8] by H. Halberstam & H.E.
+Richert.
+
+A problem in Harmonic Analysis. The reader will find in Subsection 9.2 a
+problem of Harmonic Analysis on which we stumbled and which has some indepen-
+dent interest.
+
+Acknowledgement. The present paper was started when the author was enjoying
+the hospitality of the Anhui university in China, and completed when the author
+was enjoying the hospitality of the International Centre for Theoretical Sciences
+(ICTS) in Bengaluru, India during the program - The Classical Circle Method and
+the Large Sieve 2026 (code: ICTS/CCMLSS2026/05). Most of the computations
+have been run by Pari/GP [20] and, for the figures, either the data in svg-format
+have been piped to Inskscape [10] for functions, or to Sage [30] to obtain the plots.
+
+                            3. A local lower bound
+   This section is devoted to proving the next lower bound. This theorem is new
+only in its generality. See for instance the proof of Theorem 6 in the book [2]
+by E. Bombieri or Eq. (8.8) in the book [9] by M. N. Huxley. The proof we give
+may have further consequences, in particular Identity (15) which is an important
+ingredient in the proof of Theorem 1.4 in [27].
+Theorem 3.1. When pun q has support on the consistent and multiplicative se-
+quence
+ř      pKd qd|q which satisfies the Johnsen-Gallagher condition, and with Spαq “
+   u
+  n n epnαq,  we have
+                             ÿ
+                                  |Spa{qq|2 ě gpqq|Sp0q|2 .
+                          a mod˚ q
+
+   We provide two proofs of this result; the first one is restricted to the case of
+the primes but its sheer simplicity should be enlightening to the readers. Notice
+that this inequality may be expected to be optimal. It is so at least in the case
+of the primes from the initial segment (i.e. from r1, N s) and when q is not too
+large. See Theorems 3 and 4 of [14] by Liu, Jianya & Zhan, Tao again concerning
+the case of the primes from the initial segment but for moduli q roughly up to
+N 1{3 . We propose
+            ?       Figures 1 and 2 on the behaviour when the modulus q becomes
+of the size N . We should however warn the readers against too fast deductions
+from these plots: in many situations, the behaviour of the small primes does not
+reflect the generic situation. Some regular patterns seem nonetheless to appear,
+including some accumulation directions. Furthermore the less prime factors has the
+modulus q, the larger the sum we consider. This phenomenom will appear more
+strongly in Figures 5 and 6 displayed at the end of this paper and that concern the
+prime twin case.
+
+Proof of Theorem 3.1 for the primes. Let us recall that the Ramanujan sum
+                                      ÿ
+                             cq pnq “       epna{qq
+                                           a mod˚ q
+
+is such that cq pnq “ µpqq when pn, qq “ gcdpn, qq “ 1. Therefore
+             ÿ              ÿ       ÿ               ÿ
+                   Spa{qq “   un         epna{qq “     un µpqq “ µpqqSp0q
+          a mod˚ q          n        a mod˚ q         n
+                                                                                    7
+
+
+
+
+           Figure 1. On the optimality of Theorem 3.1 for the primes
+
+
+
+
+           Figure 2. On the optimality of Theorem 3.1 for the primes
+
+
+by our hypothesis on pun q. Using Cauchy’s inequality on this identity leads to
+                                             ÿ
+                      |Sp0q|2 µ2 pqq ď φpqq      |Spa{qq|2
+                                              a mod˚ q
+
+and the claimed inequality is proved since, in this case, we have gpqq “ µ2 pqq{φpqq.
+                                                                                   □
+
+Proof of Theorem 3.1 in general. Let us define, as per Eq. (11.13) from [24], the
+function:
+                                     ÿ            δ
+(12)                       ψq˚ pnq “     µpq{δq
+                                                |Kδ |
+                                        δ|q
+                                       nPKδ
+8
+
+
+so that
+                           ÿ                                    q
+(13)                             ψδ˚ pnq “ ψq pnq “                 1K pnq.
+                                                               |Kq | q
+                           δ|q
+
+The function ψq is the local model modulo q for our sequence and ψq˚ is its “new”
+part. Notice the following important property:
+
+                         When n P Kq , we have ψq˚ pnq “ gpqq.
+
+Let us compute the Fourier decomposition modulo q of ψq . We find that
+                         1ÿ q       ÿ ÿ
+                ψq pnq “                     epab{δqep´na{δq
+                         q    |Kq |    ˚ bPK
+                                  δ|q            a mod δ        q
+                            ÿ 1                  ÿ      ÿ
+                          “                                    epac{δqep´na{δq.
+                             |Kδ |
+                             δ|q             a mod˚ δ cPKδ
+
+By identification, or by using the Moebius inversion formula, we infer that
+                      ÿ                                       1 ÿ
+(14)     ψq˚ pnq “        ψ̂q˚ paqep´na{qq where ψ̂q˚ paq “           epac{qq.
+                        ˚
+                                                            |Kq | cPK
+                  a mod q                                                                   q
+
+
+This quantity computation may also be found in the paper [12] by I. Kobayashi
+(this is bq,a therein). Consequently, we find that
+                             ÿ
+(15)                             ψ̂q˚ paqSpa{qq “ gpqqSp0q.
+                            a mod˚ q
+
+On reading carefully Chapter 8, and precisely Eq (8.4) therein, of the book [9] by
+M. N. Huxley, the reader will discover the very same (fundamental) identity.
+  We compute furthermore:
+      ÿ                    1      ÿ                      1      ÿ    ÿ
+           |ψ̂q˚ paq|2 “      2
+                                       cq pb1 ´ b2 q “      2
+                                                                       dµpq{dq
+        ˚
+                         |Kq | b ,b PK                 |Kq | b ,b PK
+       a mod q                     1     2   q                            1   2   q d|b1 ´b2
+                                                                                      d|q
+                                                           2
+                           1      ÿ                  |Kq |
+                     “                   dµpq{dq            |Kd | “ gpqq.
+                         |Kq |2                      |Kd |2
+                                   d|q
+
+Thus, using Cauchy’s inequality on (15) and on using the above L2 -norm compu-
+tation, we reach Theorem 3.1.                                               □
+
+                  4. A large sieve inequality alternative
+   The large sieve inequality for the Farey sequence states that
+                      ÿ ÿ                    ÿ
+(16)                             |Spa{qq|2 ď    |un |2 pN ` Q2 q.
+                     qďQ a mod˚ q                          n
+
+This inequality joined with Lemma 3.1 forms the gives the bedrock of a proof of
+the Brun-Titchmarsh inequality. Let us start with a consequence of the Parseval
+equality that has a similar flavour.
+Lemma 4.1. We have
+                                   1
+                              ż qpq`Qq  ˇ ˆ     ˙ˇ2
+                                        ˇS a ` β ˇ dβ ď
+             ÿ ÿ                        ˇ        ˇ       ÿ
+                                                            |un |2 ,
+                 qďQ a mod q˚
+                                     1
+                               ´ qpq`Qq
+                                        ˇ   q    ˇ
+                                                        nďN
+
+the parameter Q ě 1 being real number.
+                                                                                     9
+
+
+   This inequality is immediate for anyone used to the Circle Method. Notice the
+absence of the factor N ` Q2 that appears in (16). The price to pay is to have an
+integral around a{q. As a comparaison, let us mention the inequality
+                               ˇ
+                          ÿ ˇ ˆa            ˙ˇ2
+              ÿ ÿ                        ℓ ˇˇ      ÿ
+(17)                           ˇS     `   2
+                                                ď     |un |2 pN ` Q2 q.
+             qďQ       ˚  ℓPZ
+                               ˇ    q   Q    ˇ
+                                                  nďN
+                   a mod q
+                             2q|ℓ|ďQ
+
+proved in Theorem 1.8 of [23].
+Proof. We use the Parseval identity together with the subsets
+                                 „                    ȷ
+                             a        ´1         1
+(18)              IQ pa{qq “ `              ,           , q ď Q.
+                             q     qpq ` Qq qpq ` Qq
+These subsets are disjoint as, with an obvious notation,
+              ˇ                ˇ
+              ˇa
+              ˇ ` β ´ ã ´ β̃ ˇ ą |aq̃ ´ ãq| ´     1          1
+                               ˇ
+              ˇq                                         ´
+                         q̃    ˇ       q q̃     qpq ` Qq q̃pq̃ ` Qq
+                                            1       1           1
+                                       ą       ´         ´           “ 0.
+                                           q q̃ qpq ` q̃q q̃pq̃ ` qq
+The Kloosterman arcs decomposition would also leads to a proof of our lemma.        □
+
+                                5. Norm decomposition
+  We prove in this preliminary section a lemma that will be used later on.
+Lemma 5.1. When the function a is Riemann-integrable and supported on r´V, V s,
+and pum qmďN are complex numbers, we have
+  ż 8 ˇÿ
+                            |Σ|2
+                     ˇ2          ˆ       ˙
+                                     2V ˇˇ ÿ ˇˇ2
+       ˇ um apt ´ mqˇ dt “        1´       ˇ um ˇ
+       ˇ             ˇ
+   ´8 m                      N       N       m
+                                        ż N `V ˇÿ                 ř     ˇ2
+                                               ˇ um apt ´ mq ´ Σ m um ˇ dt.
+                                               ˇ                        ˇ
+                                     `
+                                         ´V
+                                               ˇ
+                                                 m
+                                                                   N    ˇ
+           şV
+where Σ “ ´V aptqdt.
+                       ř
+Proof. Let us set X “ m um . We first find that
+            ż N `V ÿ                 ÿ      ż N `V
+                     um apt ´ mqdt “    um         apt ´ mqdt “ ΣX.
+              ´V     m                         m       ´V
+
+Therefore
+  ż N `V ˇÿ                     ˇ2
+         ˇ um apt ´ mq ´ ΣX ˇ dt
+         ˇ                      ˇ
+   ´V
+         ˇ
+            m
+                            N ˇ
+  ż N `V ˇ ÿ             ˇ2               ż N `V ÿ
+          ˇ              ˇ        2Σ                               |Σ|2 pN ` 2V q
+“         ˇ     um apt´mqˇ dt´
+                         ˇ            ℜX            um apt´mqdt`                  |X|2
+    ´V
+          ˇ
+            mďV
+                                  N        ´V     m
+                                                                         N2
+                            ż N `V ˇÿ                ˇ2        2             2    2
+                                                     ˇ dt ´ |Σ| |X|2 ` 2V |Σ| |X| .
+                                    ˇ                ˇ
+                         “          ˇ   um  apt ´ mq
+                             ´V
+                                    ˇ
+                                      m
+                                                     ˇ       N             N2
+The lemma follows readily.                                                          □
+Lemma 5.2. Let pum q be a finite complex sequence which we extend by 0 when the
+index lies outside the initial range of definition. When V ´ 21 is an integer, we have
+                                                         ˇ sin πp2V ´ 1qβ ˇ2
+            ż 8 ˇÿ                ˇ2     ż 1{2           ˇ                ˇ
+                ˇ um a0 pt ´ mqˇ dt “           |Spβq|2 ˇˇ                ˇ dβ.
+                ˇ                 ˇ
+             ´8 m                         ´1{2                  sin πβ    ˇ
+10
+
+
+Proof. We associate to pum q the distribution
+                                         ÿ
+(19)                            U ptq “     um δm
+                                                  mPZ
+so that
+                                ż8                              ÿ
+(20)             pU ‹ aqptq “         U pyqapt ´ yqdy “             um apt ´ mq.
+                                  8                         mPZ
+We may directly check from the expression in (20) that
+                                  Uz
+                                   ‹ apxq “ Spxqâpxq.
+By Parseval, this gives us that
+                    ż8                      ż8
+(21)                     |pU ‹ aqptq|2 dt “    |Spxq|2 |âpxq|2 dx.
+                      ´8                            ´8
+We also find that
+                                                  sin 2πV x
+(22)                                  â0 pxq “             .
+                                                      πx
+Consequently
+               ż 8 ˇÿ             ˇ2     ż8          ˇ           ˇ2
+                                                   2 ˇ sin 2πV x ˇ
+                                                     ˇ           ˇ
+                   ˇ um a0 pt ´ mqˇ dt “                            dx.
+                   ˇ              ˇ
+                                             |Spxq| ˇ
+                ´8 m                      ´8               πx ˇ
+As Spxq is 1-periodical, we find that
+      ż8           ˇ           ˇ2      ż 1{2         ÿ ˆ sin 2πV px ´ mq ˙2
+                 2 ˇ sin 2πV x ˇ
+                   ˇ           ˇ                   2
+           |Spxq| ˇ               dx “       |Spxq|                         dx.
+       ´8                πx ˇ           ´1{2         mPZ
+                                                             πpx ´ mq
+Let us set
+                                             ˆ  ˙2
+                                     sin 2πV x
+(23)                      FV pxq “                 .
+                                         πx
+By Poisson summation formula, we have
+                 ÿ ˆ sin 2πV px ´ mq ˙2 ÿ
+(24)                                     “      F̂V pℓqep´ℓxq.
+                mPZ
+                         πpx ´ mq           ℓPZ
+We find that
+                           ż8 ˆ         ˙2
+                              sin 2πV x
+               F̂V pyq “                   ep´xyqdx
+                         ´8       πx
+                        ż8      ˆ           ˙2
+                                  sin π2V x
+                      “      2V                ep´p2V xqy{p2V qqdp2V xq
+                         ´8         2V πx
+                           z2 py{p2V qq “ 2V p1 ´ |y{p2V q|q`
+                      “ 2V sinc
+so that
+                ÿ ˆ sin 2πV px ´ mq ˙2                   ÿ ˆ     |ℓ|
+                                                                         ˙
+                                              “ 2V         1´                ep´ℓxq
+               mPZ
+                           πpx ´ mq                              2V
+                                                    |ℓ|ď2V
+                                                 ˇ ÿ          ˇ2
+                                                 ˇ            ˇ
+(25)                                          “ ˇˇ     ep´ℓxqˇˇ
+                                                   |ℓ|ďL
+
+the last equality being valid when V “ L ` 12 where L is an integer. Therefore
+                       ÿ ˆ sin 2πV px ´ mq ˙2 ˇˇ sin 2πLx ˇˇ2
+(26)                                          “ ˇˇ         ˇ .
+                      mPZ
+                               πpx ´ mq            sin πx  ˇ
+
+This concludes the proof of this lemma.                                               □
+                                                                                                11
+
+
+Lemma 5.3. When V ´ 12 is an integer, we have
+
+                  ˇ sin πp2V ´ 1qβ ˇ2
+  ż 1{2           ˇ                 ˇ            2
+                                                      ˆ        ˙
+         |Spβq|2 ˇˇ                 ˇ dβ ě |Sp0q| 4V 2 1 ´ 2V
+    ´1{2                 sin πβ     ˇ         N             N
+                                                             ˇ2 ˇ
+                                                             ˇ ˇ sin πp2V ´ 1qβ ˇ2
+                           ż 1{2 ˇ                                              ˇ
+                                 ˇ       Sp0q      ÿ
+                                 ˇSpβq ´ N              epnβqˇ ˇ
+                        `        ˇ                           ˇ  ˇ               ˇ dβ.
+                            ´1{2              ´2V ănăN `2V
+                                                                      sin πβ    ˇ
+
+Proof. Let us set
+                                                               ˇ2 ˇ
+                                                               ˇ ˇ sin πp2V ´ 1qβ ˇ2
+               ż 1{2 ˇ                      ÿ                                     ˇ
+                     ˇ
+          Σ“         ˇSpβq ´ Zθ                          epnβqˇˇ ˇˇ               ˇ dβ
+                 ´1{2
+                     ˇ
+                                      ´2LďnďN `2L
+                                                                        sin πβ    ˇ
+
+for some real θ and where Z “ Sp0q. On expanding the square, we readily find that
+                ż 1{2          ˇ                ˇ2
+                             2 ˇ sin πp2V ´ 1qβ ˇ
+                               ˇ                ˇ
+(27)      Σ“          |Spβq| ˇ                  ˇ dβ
+                 ´1{2                 sin πβ
+                                                           ˇ sin 2πV β ˇ2
+                         ż 1{2               ÿ             ˇ           ˇ
+(28)            ´ 2θℜZ            Spβq              epnβqˇˇ            ˇ dβ
+                           ´1{2         ´2LďnďN `2L
+                                                               sin πβ ˇ
+                                                     ˇ2 ˇ
+                                                     ˇ ˇ sin 2πp2V ´ 1qβ ˇ2
+                          ż 1{2 ˇ        ÿ                                  ˇ
+                      2 2
+                                  ˇ
+(29)            ` |Z| θ           ˇ            epnβqˇ ˇ
+                                                     ˇ  ˇ                   ˇ dβ.
+                                  ˇ
+                           ´1{2 ´2LďnďN `2L                     sin πβ      ˇ
+
+Let us simplify the last two terms. Concerning the first of these, we get, with
+2V ´ 1 “ 2L,
+                                  ˇ sin πp2V ´ 1qβ ˇ2
+    ż 1{2           ÿ             ˇ                ˇ
+          Spβq              epnβqˇˇ                ˇ dβ
+     ´1{2      ´2LďnďN `2L
+                                         sin πβ    ˇ
+
+                   ÿ      ż 1{2                 ÿ            ˇ ÿ        ˇ2
+                                                             ˇ          ˇ
+               “       um       ep´mβq                 epnβqˇˇ   ep´ℓβqˇˇ dβ
+                     mďN         ´1{2               ´2LďnďN `2L            |ℓ|ďL
+                      ÿ                 ÿ                ÿ             ÿ
+                 “         um                       1“         um             p2L ` 1 ´ |h|q.
+                     mďN        nďN,|ℓ1 |,|ℓ2 |ďL        mďN        nďN,|h|ď2L
+                                 m“n`ℓ1 ´ℓ2                          m“n`h
+
+We find that
+                           ÿ
+                                     p2L ` 1 ´ |h|q “ p2L ` 1q2 “ 4V 2 ,
+                     ´2LďnďN `2L
+                       0ď|h|ď2L
+                        m“n`h
+
+since, giving any m and any h,řa proper n exists. The treatment concerning the
+last term is similar, but with ´2LďnďN `2L epnβq rather than Spβq. The range
+in n is different, so we have to modify that part when ´2L ď n ď 0 and when
+N ` 1 ď n ď 2L. The total contribution is at most p4L ` 1qV 2 so that we get
+                                ˇ2 ˇ
+                                ˇ ˇ sin 2πp2V ´ 1qβ ˇ2
+         ż 1{2 ˇ   ÿ
+                                                    ˇ
+               ˇ
+ |Z|2 θ2       ˇ           epnβqˇ ˇ                 ˇ dβ ď |Z|2 θ2 pN ` 4L ` 1q4V 2 .
+               ˇ
+          ´1{2 ´2LďnďN `2L
+                                ˇ ˇ      sin πβ     ˇ
+
+This leads to the inequality
+(30)
+                ˇ sin πp2V ´ 1qβ ˇ2
+ ż 1{2          ˇ                ˇ
+       |Spβq|2 ˇˇ                ˇ dβ ě Σ ` 2|Z|2 θp4V 2 q ´ |Z|2 θ2 pN ` 4L ` 1qp4V 2 q.
+  ´1{2                 sin πβ    ˇ
+
+We choose θ “ 1{N , and this ends this proof.                                                   □
+12
+
+
+                                  6. A special function
+   Let us follow the classical paper [31] by J. Vaaler. We first introduce some
+notation and define
+                         $
+                         &1
+                         ’                       if t “ 0,
+(31)              ˆ “ πtp1 ´ |t|q cot πt ` |t| if 0 ă |t| ă 1,
+                  Jptq
+                         ’
+                            0                    if 1 ď |t|.
+                         %
+
+As per [31, Theorem 6], the function Jˆ is even, non-negative, continuously differen-
+tiable, and strictly decreasing on r0, 1s. We continue with the definitions from the
+same paper:
+                     ˆ        ˙2          ˆ        ˙2 ˆ ÿ               ˙
+                       sin πz               sin πz          sgnpmq    2
+(32)        Kpzq “               , Hpzq “                           `
+                         πz                    π       mPZ
+                                                           pz ´ mq2   z
+(with sgn 0 “ 1), and the Beurling-Selberg function Bpxq “ Kpxq ` Hpxq. We
+finally set
+(33)               2Cra,bs,δ pxq “ Bpδpb ´ xqq ` Bpδpx ´ aqq ě 21xPra,bs .
+Lemma 6.1. Let δ ą 0 and M ě 0 be two parameters. The function Cr´M,M s,δ is
+an upper bound for the characteristic function of r´M, M s. When |t| ď δ, we have
+                                                                  ˆ ´1 tq
+                                                                  Jpδ
+              Ĉr´M,M s,δ ptq “ δ ´1 p1 ´ |δ ´1 t|q cos 2πM t `           sin 2πM t.
+                                                                    πt
+When |t| ě δ, we have Ĉr´M,M s,δ ptq “ 0. We have |Ĉr´M,M s,δ ptq| ď Ĉr´M,M s,δ p0q “
+2M ` δ ´1 .
+Notice that Ĉr´M,M s,δ ptq “ δ ´1 Ĉr´δM,δM s,1 pδ ´1 tq.
+Proof. Let us start with somewhat more generality and write
+2Cra,bs,δ pxq “ 21xPra,bs ` Bpδpb ´ xqq ´ sgn δpb ´ xq ` Bpδpx ´ aqq ´ sgn δpx ´ aq.
+Set F pxq “ Bpxq ´ sgn x and F2 pxq “ F pδpb ´ xqq. By [31, Corollary 7], we have
+                                                  1 `ˆ       ˘
+                      F̂ ptq “ p1 ´ |t|q1|t|ď1 `     Jptq ´ 1
+                                                 iπt
+and classically F̂2 ptq “ epbtqδ ´1 F̂ p´t{δq. This leads to
+                     epbtq ´ epatq
+          2Ĉra,bs,δ ptq “         ` δ ´1 epbtqF̂ p´δ ´1 tq ` δ ´1 epatqF̂ pδ ´1 tq.
+                          iπt
+Let us proceed by specializing a “ ´b “ ´M , we get
+                                                                   epM tq ´ ep´M tq ˆ ´1
+     2δ Ĉr´M,M s,δ ptq “ pepM tq ` ep´M tqqp1 ´ |δ ´1 t|q` `                      Jpδ tq.
+                                                                        iπδ ´1 t
+Finally, we find that
+                                                                  ˆ ´1 tq
+                                                                  Jpδ
+              δ Ĉr´M,M s,δ ptq “ p1 ´ |δ ´1 t|q` cos 2πM t `              sin 2πM t
+                                                                   πδ ´1 t
+                               “ Ĉr´δM,δM s,1 pδ ´1 tq.
+The lemma follows readily.                                                                   □
+Lemma 6.2. Let λ be a positive parameter. When |u| ď 1, we have
+                                                             ˆ
+                                                             Jpuq
+                    Ĉr´λ,λs,1 puq “ p1 ´ |u|q cos 2πλu `         sin 2πλu.
+                                                              πu
+When |u| ě 1, we have Ĉr´λ,λs,1 puq “ 0. When |y| ď λ, we have Cr´λ,λs,1 pyq ě 1.
+                                                                                                          13
+
+
+                           7. A family of Fourier transforms
+  Let us start with an easy lemma.
+Lemma 7.1. Let us set a0 ptq “ 1|t|ďV . When y P r0, 2V s, we find that
+            ż8                                            ż 2V
+(34)            a0 ptqa0 pt ´ yqdt “ maxp0, 2V ´ |y|q “        1dt.
+                     ´8                                                      |y|
+
+   We introduce a family of functions in (35) to clarify our process. The main case
+will be a “ a0 as defined and investigated around (34). As it turns out, it is also
+the one that governs the proof of Lemma 7.2.
+Lemma 7.2. Let a be a non-negative even Rieman-integrable function in L2 pRq X
+L1 pRq that is non-increasing on r0, 8q. The function
+                                       ż `8
+                          pa ‹ aqpyq “      aptqapy ´ tqdt
+                                                  ´8
+
+is even and non-increasing on r0, 8q.
+Proof. Let us start with the next stream of identities.
+              ż `8                   ż `8                  ż `8
+ pa ‹ aqpyq “       aptqapt ´ yqdt “      apt ` yqaptqdt “      ap´t ´ yqap´tqdt
+                   ´8                         ´8                             ´8
+                   ż `8
+               “          app´yq ´ tqaptqdt “ pa ‹ aqp´yq.
+                   ´8
+
+This shows that the function pa ‹ aq is indeed even. When aptq “ 1|t|ďT , we have
+pa ‹ aqpyq “ p2T ´ |y|q` which is indeed non-increasing when y ě 0. This property
+extends to linear combinations of similar functions, provided the coefficients are
+non-negative. The proof is complete.                                            □
+Lemma 7.3. şLet a be a function asşin Lemma 7.2 and let us define the non-negative
+              `8                    8
+function b by ´8 aptqapt ´ yqdt “ |y| bptqdt. For δ ą 0, we consider
+                                    ż8
+(35)                    D̂a,δ puq “    Ĉr´λ,λs,δ puqbpλqdλ
+                                              0
+
+where Cr´λ,λs,δ is defined in Eq. (33). We have D̂a,δ puq “ 0 when |u| ě δ, then
+           ş8
+D̂a,δ puq ď 0 pδ ´1 ` 2λqbpλqdλ “ δ ´1 Apaq ` Bpaq where Apaq “ }a}22 , Bpaq “ }a}21
+and
+                                ż8           ż `8
+(36)                 Da,δ pyq ě    bpλqdλ “       aptqapt ´ yqdt.
+                                        |y|                ´8
+
+Proof. Most of this lemma is a rather trivial consequence of Lemma ş8 6.1 and the
+properties of the different players. We find at first that Bpaq “ 2 0 λbpλqdλ. Let
+us express this quantity in terms of a. Let us set
+                                         ż8
+(37)                              γpyq “     bptqdt.
+                                                      y
+
+We have
+            ż8                     ż8                          ż8
+ Bpaq “ 2          λbpλqdλ “ ´2           λγ 1 pλqdλ “ 2            γpλqdλ
+            0                       0                           0
+           ż8ż8                               ż8ż8                                   ˆż 8            ˙2
+       “                aptqapt ´ λqdt dλ `                    aptqapt ` λqdt dλ “          aptqdt        .
+           0       ´8                             0       ´8                           ´8
+The lemma follows swiftly.                                                                                □
+14
+
+
+                        8. Explicit formulae for plots
+  Let us more closely the case a0 ptq “ 1|t|ďV . Lemma 7.1 contains the necessary
+material and we find that
+(38)                       Apa0 q “ 2V,   Bpa0 q “ 4V 2 .
+We have 1{p2Q2 q ď δ ď 1{p2Qq and we may use
+
+                              D̂a0 ,δ puq
+(39)                                       ď 1r´δ,δs puq.
+                            2V δ ´1 ` 4V 2
+In the main case, which is δ large, 4V 2 is much larger than 2V δ ´1 . We have, on
+recalling Lemma 7.3, 6.1 and 6.2,
+                       ż 2V                         ż 2V
+                                                 ´1
+         D̂a0 ,δ puq “      Ĉr´λ,λs,δ puqdλ “ δ         Ĉr´δλ,δλs,1 pδ ´1 uqdλ
+                    0                          0
+                       ż 2V ˆ                        ˆ ´1 uq
+                                                     Jpδ
+                                                                      ˙
+                    ´1              ´1
+                “δ           p1 ´ |δ u|q cos 2πλu `           sin 2πλu dλ
+                        0                             πδ ´1 u
+                       ˆ                         ˆ ´1 uq 1 ´ cos 4πV u ˙
+                                      sin 4πV u Jpδ
+                “ δ ´1 p1 ´ |δ ´1 u|q          `
+                                         2πu     πδ ´1 u      2πu
+Consequently, we find that
+                           ˆ                      ˆ
+                                       sin 4πW w Jpwq 2 sin2 2πW w
+                                                                   ˙
+                        ´2
+        D̂a0 ,δ puq “ δ      p1 ´ |w|q          `
+                                          2πw     πw       2πw
+                                                        ˆ
+                              `                                       ˘
+(40)                “ 2δ V p1 ´ |w|q sinc 4πW w ` 2W Jpwq sinc2 2πW w
+                         ´1
+
+
+with w “ δ ´1 u and W “ δV , and where sinc u “ psin uq{u called also the cardinal
+sine.
+
+ 0.98431
+
+
+
+
+-0.21371
+        -1.2                                                                  1.2
+
+               Figure 3. D̂a0 ,δ puq{p4V 2 ` 2δ ´1 V q with δV “ 40
+                                                                                            15
+
+
+                      9. A Harmonic Analysis divertimento
+   This section is somehow off-topic, but prepares to a problem we will find later
+on. We consider the quadratic form
+                         żδ               ÿ         sinp2πpm ´ nqδq
+(41)          Qppun qq “     |Spβq|2 dβ “     um un                 .
+                          ´δ              m,n
+                                                        πpm ´ nq
+
+To be in accordance with other works, we assume that N is an integer.3
+
+9.1. Some references on the eigenvectors / eigenvalues of Q. The eigen-
+vectors of this quadratic form are called the discrete prolate spheroidal sequences,
+DPSS in short. Following D. Slepian in [29], we write
+                ÿ sinp2πpn ´ mqδq pkq                    pkq
+(42)                             vm´1 pN, δq “ λk pN, δqvn´1 pN, δq.
+                m
+                      πpn ´ mq
+
+These eigenvalues are normalized so that
+                               ÿ pkq
+(43)                              vn´1 pN, δq2 “ 1,
+                                     n
+
+and
+                 ÿ pkq                   ÿ                   pkq
+(44)              vn´1 pN, δq ě 0,            pN ` 1 ´ 2nqvn´1 pN, δq ě 0.
+                  n                       n
+
+They are furthermore ordered in k P t0, ¨ ¨ ¨ , N ´1u with decreasing values of λk pN, δq.
+The reader will find numerous papers and numerics on these sequences. (Voir [7])
+
+9.2. A minimization problem. As it turns out, the problem will shall meet is
+to find the best constant CpN, δq such that
+                          żδ
+(45)                         |Spβq|2 dβ ě CpN, δq|Sp0q|2 .
+                              ´δ
+
+And we would even be able to restrict this question to sequences pun q that are
+non-negative, obtaining a constant C` pN, δq.
+Lemma 9.1. Let pun q be a sequence of non-negative real numbers. With the nota-
+tion of Lemma 7.3, we have
+            żδ                             ż 8 ˇÿ                 ˇ2
+                                    1
+                |Spβq|2 dβ ě ´1                 ˇ um apt ´ mqˇ dt
+                                                ˇ                 ˇ
+             ´δ               δ Apaq ` Bpaq ´8 m
+             ř
+where Spβq “ nďN un epnβq. We also have
+                   żδ              ˆ                 ˙
+                              2               2
+                 N      |Spβq| dβ ě 1 ´     ?           |Sp0q|2 .
+                    ´δ                  1 ` δN ` 1
+  A usual question in Harmonic Analysis is to show that the Fourier transform
+cannot be too concentrated, and this is linked with the Uncertainty Principle. It is
+not the place to detail such a huge area, and we simply refer the reader to two pa-
+pers, the first one [15] by V. N. Logvinenko & Ju. F. Sereda and the second one [19]
+by F. L. Nazarov. We failed to find references concerning CpN, δq or C ` pN, δq.
+
+   3Except that D. Slepian considers sequences pu q
+                                                     n 0ďnďN ´1 while we have pun q1ďnďN . This
+explains several of the ´1 the reader will see in the indices.
+16
+
+
+Proof. We use Lemma 7.3. which simplifies in:
+                                         D̂a,δ pβq
+                                                     ď 1r´δ,δs pβq
+                                    δ ´1 Apaq ` Bpaq
+This gives us
+                        żδ                      żδ
+                                                            D̂a,δ pβqdβ
+                                 |Spβq|2 dβ ě      |Spβq|2 ´1             .
+                           ´δ                   ´δ        δ   Apaq ` Bpaq
+We may extend the integral over R by positivity obtaining
+           żδ
+                                    1         ÿ
+               |Spβq|2 dβ ě ´1                   um un Da,δ pm ´ nq
+            ´δ               δ Apaq ` Bpaq m,n
+
+on using Lemma 7.3. As pun q is assumed to be non-negative, we may bound below
+                  ş`8
+Da,δq pm ´ nq by ´8 aptqapt ´ yqdt, getting
+            żδ                               ż 8 ˇÿ            ˇ2
+                                    1
+                 |Spβq|2 dβ ě ´1                 ˇ um apt ´ mqˇ dt.
+                                                 ˇ             ˇ
+              ´δ             δ   Apaq ` Bpaq  ´8 m
+
+This establishes the first part of the lemma. Let us now select a “ a0 and use
+Lemma 5.1. We infer that, since Σ2 “ Bpaq,
+  żδ                                  ˆ       ˙                  ˆ        ˙
+             2            Bpa0 q           2V         2    2δV        2δV
+N     |Spβq| dβ ě ´1                    1´      |Sp0q| ě           1´      |Sp0q|2 .
+   ´δ              δ Apa0 q ` Bpa0 q       N             1 ` 2δV      δN
+With v “ 2δV and w “ δN , we readily find?that the optimal optimal choice for V
+is given by v 2 ` 2v ´ w “ 0, i.e. v “ ´1 ` 1 ` w. The resulting constant is
+                                             ?
+           vpw ´ vq     v 2 pv ` 1q   w`2´2 w`1                 2
+                     “              “               “1´        ?      .
+           pv ` 1qw     pv ` 1qw           w              1` w`1
+The proof is complete.                                                                          □
+
+   In the notation above, the last part of Lemma 9.1 implies that
+                                        ˆ        ˙
+                                              2
+(46)                       C` pN, δq ě 1 ´ ?       {N.
+                                              δN
+It is easy to show that (when 1{2 ě δ)
+(47)                                 1{N ě CpN, δq ě C` pN, δq.
+This is simply proved by noticing that
+               ż 1{2 ˇÿ      ˇ2     ż δ ˇÿ     ˇ2            ˇ ÿ ˇ2
+          N“         ˇ epnβqˇ dβ ě      ˇ epnβqˇ dβ ě CpN, δqˇ 1 ˇ .
+                     ˇ       ˇ          ˇ      ˇ             ˇ   ˇ
+                    ´1{2     n                       ´δ   n                     n
+
+9.3. Numerical optimization with positivity conditions. We may consider
+this problem with Kuhn-Tucker conditions, i.e. examine the function
+                          ÿ                          ÿ            ˆÿ       ˙
+(48) HN,δ ppun q, λq “ 2δ   um un sincp2πpm ´ nqδq ´    λn un ` µ    un ´ 1 .
+                                   m,n                             n                n
+                                         ř
+For every local minima of 2δ m,n um un sincp2πpm ´ nqδq under the conditions
+´un ď 0 for every n and n un “ 1, there exists4 for every n some λn ě 0 and a
+                        ř
+
+
+     4In our present problem, this necessary condition can furthermore be proved to be sufficient.
+                                                                                           17
+
+
+real µ such that
+                   $        ÿ
+                   ’
+                   ’ @m, 2δ   un sincp2πpm ´ nqδq “ λm ´ µ,
+                   ’
+                   ’        n
+                   &
+(49)                 @m, um ě 0 and λm um “ 0,
+                   ’
+                   ’ ÿ
+                   ’ un “ 1.
+                   ’
+                   %
+                       n
+In which case the minimum is readily checked to be ´µ. This means that there
+exists a subset I Ă t1, ¨ ¨ ¨ , N u of indices that are such that um “ 0 and that λm “ 0
+when m R I. Since in each case, we get a linear system of N ´ |I| ` 1 unknowns
+(the `1 is for the µ-variable), with N ´ |I| ` 1 equations. Such a system is likely
+to be non-degenerate (its determinant is a real analytic function of δ, so it cannot
+vanish on any non-trivial interval without vanishing everywhere; this implies that
+we need only move δ by a tiny amount to get a non-zero determinant).
+                                                  N δ “ 0.2       δ “ 0.1
+                                                 10 0.8488... 0.7105...
+                                                 11 0.8593... 0.7333...
+                                                 12 0.8567... 0.7474...
+                                                 13 0.8608... 0.7471...
+                                                 14 0.8794... 0.7458...
+   We get the next table for N C` pN, δq:
+                                                 15 0.8882... 0.7426...
+                                                 16 0.8896... 0.7563...
+                                                 17 0.8852... 0.7773...
+                                                 18 0.8973... 0.7943...
+                                                 19 0.9063... 0.8063...
+                                                 20 0.9098... 0.8143...
+                                            ?
+   And a table for N C` pN, δq{p1 ´ 2{ δN q:
+                                     N          19           20           21          22
+                                   δ “ 0.3   5.8499...   5.1885...21   4.6818...   4.3113...
+
+    Sadly enough, this last data is barely significant as N δ is not large enough. A
+major slowing factor is that we have to investigate every possible subset of in-
+dices. One may remark that when an admissible optimum (i.e. a minimum with
+non-negative coordinates) has been found for a given subset, it is not required to
+investigate the subsets of this subset. This remark does not speed the process, as
+it turns out that checking that a given subset does not belong to the list of cleared
+ones takes too much time.
+
+  Here is the Pari-GP script used to compute the above tables.
+{getmin(listindices, delta) =
+   my(locN = length(listindices), mymat = matrix(locN + 1),
+      vecimage = vector(locN + 1), res, isok = 1, firstnonzeron = 1);
+
+   \\ Initialization:
+   for(m = 1, locN,
+      for(n = m, locN,
+         mymat[m, n] = sinc(2*Pi*(listindices[m]-listindices[n])*delta)*2*delta;
+         mymat[n, m] = mymat[m, n]));
+   for(m = 1, locN, mymat[m, locN + 1] = 1);
+   for(n = 1, locN, mymat[locN + 1, n] = 1);
+
+   for(n = 1, locN, vecimage[n] = 0);
+   vecimage[locN + 1] = 1;
+18
+
+
+     \\ Get possible minimum:
+     res = matsolve(mymat, vecimage~);
+
+     \\ Analyze the result:
+     while(res[firstnonzeron] == 0, firstnonzeron++);
+     if(res[firstnonzeron] < 0, res = -res);
+     for(n = firstnonzeron + 1, locN,
+        if(res[n] < 0, isok = 0; break,));
+     return([isok, - res[locN + 1]]);}
+
+{work(N, delta, DoTell = 1) =
+   my(locres, res = 1);
+   forsubset(N, listindices,
+      if(length(listindices) == 0,,
+         locres = getmin(listindices, delta);
+         if(locres[1] == 1,
+            if(DoTell == 1,
+              print("Minimum at ", listindices, " = ", locres[2]),);
+            res = min(locres[2], res),)));
+   return(res);}
+
+
+
+                     10. Base Camp, proof of Theorem 2.1
+     Here is the first key point of the method we propose.
+Lemma 10.1. The function a being as in Lemma 7.2, and the hypotheses of The-
+orem 2.1 being met, we have
+  ˆ        ˙ ÿ                          ˇ ÿ ˇ2
+       2V                 gpqq
+    1´                                  ˇ um ˇ {N
+                                        ˇ      ˇ
+        N qďQ 1 ` qpq ` QqApaq{Bpaq m
+                                            ż 8 ˇÿ            ˇ2
+                   ÿ            gpqq                                 ÿ
+                                                 ˇ um apt ´ mqˇ dt ď   |un |2 .
+                                                 ˇ            ˇ
+                ď
+                  qďQ
+                       Bpaq `  qpq ` QqApaq  ´8    m                 n
+
+   This inequality leads to the classical Brun-Titchmarsh
+                                                       ? inequality, i.e. with the
+factor 2 ` op1q if we are to choose V “ N { log N , Q “ V { log V . The novelty is
+that we have expressed the error term as an integral of a positive quantity over a
+set of density 1.
+
+Proof. We start from Lemma 4.1 and set δq´1 “ qpq ` Qq. We find, by using
+Lemma 3.1, that:
+                   ÿ ż δq ˇ ˆ a
+                            ˇ       ˙ˇ2     ż δq
+                                     ˇ
+                            ˇS   ` β ˇ dβ ě
+                                     ˇ           |Spβq|2 dβ.
+                     ˚  ´δq
+                            ˇ  q             ´δq
+                    a mod q
+
+As pun q is assumed to be non-negative, Lemma 9.1 applies to this quantity, getting
+        ÿ ż δq ˇˇ ˆ a       ˙ˇ2                     ż8 ÿ
+                  ˇS
+                             ˇ            gpqq          ˇ um apt ´ mqˇ2 dt.
+                                                        ˇ               ˇ
+                        ` β  ˇ dβ ě
+                                     ´1
+                  ˇ   q      ˇ      δq Apaq ` Bpaq ´8 m
+     a mod˚ q ´δq
+
+We conclude this segment of the proof by appealing to Lemma 5.1 and on noticing
+that Σ2 “ Bpaq. We sum over q ď Q and appeal to Lemma 4.1 to bound above the
+left-hand side. Our lemma readily follows.                                    □
+
+Proof of Theorem 2.1. We simply apply Lemma 10.1 to a “ a0 and recall (38).      □
+                                                                                    19
+
+
+                             11. Using the localization
+Lemma 11.1. Let pum qmďN be a sequence of complex numbers. We have
+                   ż8 ˇ ÿ           ˇ2
+          N
+                                u   ˇ dt
+                       ˇ            ˇ
+                                 m
+  4V 2 p1 ´ 2V {N q ´8
+                       ˇ
+                        |m´t|ďV
+                                                                            ˇ2
+                                           Sp0q N `V
+                                   ˇ           ż
+                                   ˇ                                        ˇ
+                      ě |Sp0q|2 ` ˇˇSpβq ´         epβtqdt ` O˚ p2πβV Sp0qqˇˇ .
+                                            N ´V
+                                  ř         ř
+Proof. Let us notice that Sp0q “ m um “ m |um |. We set
+                              ż N `V ˇ ÿ                   ˇ2
+                                       ˇ          2V Sp0q ˇˇ
+(50)               ∆pN, V q “          ˇ     um ´             dt.
+                                ´V
+                                       ˇ             N ˇ
+                                          |m´t|ďV
+
+We swiftly obtain:
+                                                             ˘ 2V Sp0q ˇ2
+                 ż N `V ˇ     ÿ                                          ˇ
+                        ˇ             `               ˚
+    ∆pN, V q “          ˇ         um eppm ´ tqβq ` O p2πβV q ´           ˇ dt
+                  ´V
+                        ˇ                                           N ˇ
+                          |m´t|ďV
+
+                                                          ˘ 2V Sp0qepβtq ˇ2
+                 ż N `V ˇ ÿ                                              ˇ
+                        ˇ            `           ˚
+               “        ˇ         um   epmβq ` O   p2πβV q ´             ˇ dt
+                  ´V
+                        ˇ                                        N       ˇ
+                            |m´t|ďV
+
+We may then use Cauchy’s inequality (in reverse) to infer that
+                     ˇż N `V ˆ ÿ                                                ˙ ˇ2
+                     ˇ                  `           ˚
+                                                              ˘ 2V Sp0qepβtq         ˇ
+pN ` 2V q∆pN, V q ě ˇˇ                um epmβq ` O p2πβV q ´                      dtˇˇ
+                       ´V                                               N
+                              |m´t|ďV
+                                                                               ˇ2
+                                                   ˘ 2V Sp0q N `V
+                     ˇ                                           ż
+                     ˇ ÿ `                                                     ˇ
+                  ě ˇˇ2V     um epmβq ` O˚ p2πβV q ´                   epβtqdtˇˇ
+                           m
+                                                          N       ´V
+                     ˇ                                      ż N `V         ˇ2
+                     ˇ                             2V Sp0q                 ˇ
+                  ě ˇˇ2V Spβq ` O˚ p2πβV 2 Sp0qq ´                 epβtqdtˇˇ
+                                                      N      ´V
+                          ˇ           ˆż N `V                         ˙ˇ2
+                        2ˇ
+                          ˇ      Sp0q                     ˚
+                                                                        ˇ
+                  ě 4V ˇSpβq ´                epβtqdt ` O p2πβV N q ˇˇ .
+                                   N    ´V
+
+We finally only have to plug this inequality in Lemma 5.1, and to simplify the
+expression to get the present lemma.                                        □
+
+Proof of Theorem 2.2. We start from Theorem 2.1 and minorize the left-hand side
+through Lemma 11.1. We obtain, when V ă N {2,
+                                                    ˇ2
+                   Sp0q N `V
+           ˇ
+                                                                 N }S}22
+                       ż
+           ˇ                                        ˇ
+|Sp0q|2 ` ˇˇSpβq ´         epβtqdt ` O˚ p2πβV Sp0qqˇˇ ď                           .
+                    N ´V                                2V p1 ´ 2V {N qL˚ pQ, V q
+Shuffling the terms around gives the next bound
+         ˇ        ż N `V       ˇ d
+         ˇ Spβq             dt ˇ         N }S}22 {Sp0q2
+         ˇ Sp0q ´
+         ˇ             epβtq ˇˇ ď                            ´ 1 ` 2π|β|V.
+                   ´V       N      2V p1 ´ 2V {N qL˚ pQ, V q
+                                                                               ?
+In practice, the modification from L of (1)?to L˚ of (8) allows to raise Q from V {plog V qA
+for some positive A to some multiple of V . But since V is going to already be of
+the shape N {plog N qA , since saving is often quantitative only. It is clearer to use
+the bound
+                                               2V
+(51)                       2V L˚ pQ, V q ě            LpQq.
+                                            2V ` 2Q2
+20
+
+
+This leads to the bound
+         ˇ        ż N `V        ˇ d       2       2
+         ˇ Spβq              dt ˇ ď 1 ` Q {V N }S}2 {LpQq ´ 1 ` 2π|β|V.
+                                ˇ
+         ˇ      ´      epβtq
+         ˇ Sp0q
+                   ´V        Nˇ     1 ´ 2V {N   Sp0q2
+This inequality will be useful when Sp0q2 is close to N }S}22 {LpQq. So let us continue
+with the mild hypothesis of the theorem, namely
+                                2Sp0q2 ě N }S}22 {LpQq.
+          ?            ?    ?
+On using a ` b ď a ` b for non-negative a and b, and on assuming further
+that V ď 4N to simplify the outcome, we reach
+         ˇ        ż N `V        ˇ d      2
+         ˇ Spβq              dt                        2Q
+                                ˇ ď N }S}2 {LpQq ´ 1 ` ?
+                                ˇ
+         ˇ
+         ˇ Sp0q ´      epβtq                2
+                                                           ` 2π|β|V.
+                   ´V        N  ˇ      Sp0q              V
+This ends the proof.                                                                 □
+
+Proof of Corollary 2.3. We find classically, in this case, we have?LpQq ě log Q, so
+                                                                                 1
+we may use this value. We select V “ N {plog N qB`1 and Q “ N {plog N q 2 B`1 .
+We find that
+                         N                   2
+                               ď                            .
+                         L       log N ´ pB ` 2q log log N
+Notice that Z ě N { log N provided that N is large enough in terms of C. On
+adopting an obvious notation and with y “ plog log N q{ log N , Theorem 2.2 gives
+us
+      ˇ        ż N `V        ˇ d
+      ˇ Spβq             dt ˇˇ         1 ` Cy                2          7|β|N
+      ˇ Z ´
+      ˇ             epβtq ˇ ď                    ´1` ?            `
+                ´V       N          1 ´ pB ` 2qy           log N     plog N qB`1
+                                 d
+                                    pB ` 2 ` Cqy        2          7
+                               ď                  `?           `        .
+                                    1 ´ pB ` 2qy       log N     log N
+We deduce from this inequality that
+              ˇ         żN          ˇ   d
+              ˇ Spβq             dt ˇ     pB ` C ` 1q log log N
+              ˇ Z ´
+              ˇ             epβtq ˇˇ ď 2
+                         0       N               log N
+provided that 1 ´ pB ` 2qy ě 1{2 and N is large enough (independently of the
+choice of C and/or of A) The reader will swiftly complete the proof from there. □
+
+Proof of Theorem 2.5. We start from Lemma 10.1 with a “ a0 and express the
+integral by Lemma 5.2 to get
+                                                   ˇ2
+                 L˚ 1{2
+                     ż            ˇ
+                                2 ˇ sin πp2V ´ 1qβ ˇ
+                                  ˇ                ˇ          2
+                 2V ´1{2
+                          |Spβq| ˇ
+                                         sin πβ    ˇ dβ ď Sp0q .
+
+We finally appeal to Lemma 5.3.                                                      □
+
+Proof of Corollary 2.6. Let us select V “ rN {plog N qA s and Q2 “ N {plog N q2A in
+Theorem 2.5 and use for un the characteristic function of the set we are counting.
+The large sieve gives us the a-priori bound Z ! N {plog N qκ , and therefore
+                             |Sp0q|2 2V        Z
+                                        !             .
+                               N     N    plog N qκ`A
+Furthermore, we have
+                                                     2V
+                           2V L˚ pQ, V q ě LpQq
+                                                  2V ` 2Q2
+                                                                                        21
+
+
+so that we reach
+   ż plog N qA {N ˇ                         ˇ2
+                  ˇSpβq ´ Z
+                  ˇ              ÿ          ˇ
+                                      epnβqˇˇ dβ
+    ´plog N qA {N
+                  ˇ       N ´2V ănăN `2V
+                                              ˆ         ˙      ˆ             ˙
+                                                 N        Z           Z
+                                          ď          ´Z     `O                 .
+                                                LpQq      N      plog N qκ`A
+We next shorten the summation in n by appealing to the inequality
+ˇ                   ˇ2  ˇ                          ˇ2    ˇ                   ˇ2
+ˇSpβq ´ Z                       Z
+ˇ          ÿ        ˇ   ˇ               ÿ          ˇ     ˇZ       ÿ          ˇ
+              epnβqˇ ď 2ˇSpβq ´
+                    ˇ   ˇ                     epnβqˇ ` 2ˇ
+                                                   ˇ     ˇ             epnβqˇˇ .
+ˇ       N nďN                   N ´2V ănăN `2V             N ´2V ănăN `2V
+                                                                         nRr1,N s
+
+Consequently, we get
+  ż plog N qA {N ˇ                  ˇ2
+                 ˇSpβq ´ Z
+                 ˇ          ÿ       ˇ
+                               epnβqˇ dβ
+   ´plog N qA {N
+                 ˇ       N nďN      ˇ
+
+                                                                     Z 2V
+                                   ˆ          ˙      ˆ                    ˙
+                                       N        Z           Z
+                                 ď2        ´Z     `O               `        .
+                                      LpQq      N      plog N qκ`A   N2
+                        ?
+We may replace Q by N by noticing that
+                            N     N      N plog log N q
+                               ´ ?     “
+                           LpQq Lp N q    plog N qκ`1
+from which the lemma follows readily.                                                    □
+
+                                12. Additional notes
+    The optimality of the present proof may be questioned, at three stations: the
+local lower bound provided by Theorem 3.1, the lower bound in Lemma 4.1 and
+the replacement of the characteristic function 1r´δq ,δq s pα ´ a{qq of the arc ra{q ´
+δq , a{q ` δq s by the function Fq pα ´ a{qq “ D̂r0,N s,δq pα ´ aq q which has a sharp peak
+at α “ a{q. The circle method philosophy relies (in most cases) on the fact that
+the trigonometric polynomial Spαq has its maximum at rational points, and this
+for varying values of N . Such a regularity should lead to a sharp peak at α “ a{q.
+This argument goes in favour of saying that the replacement of 1r´δq ,δq s pα ´ a{qq
+by Fq pα´a{qq does not loose much. And then we may believe that the lower bound
+of Lemma 4.1 does not loose much either.
+    As noted earlier, Theorem 3.1 may be thought as optimal in its form: when
+we use the Cauchy’s inequality on the equality (15), the result is an equality
+when Spa{qq and ψ̂q˚ paq are proportional and therefore a plausible set of values
+for Spa{qq is available that takes care of the support condition. This being said,
+Figures 1 and 2 seem to say that the lower bound in ?            Theorem 3.1 is often not
+sharp enough when the modulus q becomes of the size N . It also hints that, if
+we are to rely on a single modulus, then Theorem 3.1 will be hard to improve, as
+the minimum seems to increase, but very slowly.
+    The behaviour for a single q but varying length N is also relevant; the plots we
+obtain show a very stable situation.
+    We supplement these figures with the same plot but concerning the twin primes
+from the initial segment, see Figures 5 and 6. The appearance of separate families
+of moduli where the quantity
+              µ2 pqq         ÿ                             ˆ              ÿ          ˙
+                                           2       2
+      ś                           |Spa{qq| {|Sp0q|           Spαq “             eppαq
+         p|q,pą2 2{pp ´ 2q
+                         a mod q˚                                        pďN
+                                                                   p ` 2 prime
+22
+
+
+
+
+         Figure 4. A single modulus but varying length, in the prime case
+
+have a different behaviour occurs clearly. The number of prime factors is the de-
+ciding quantity.
+
+
+
+
+         Figure 5. On the optimality of Theorem 3.1 for the twin primes
+
+
+                                         References
+ [1] E. Bombieri. A note on the large sieve. Acta Arith., 18:401–404, 1971.
+ [2] E. Bombieri. Le grand crible dans la théorie analytique des nombres, volume 18. 1987/1974.
+ [3] V. Brun. La série 51 ` 17 ` 11
+                                   1
+                                     ` 131
+                                           ` 171
+                                                  ` 191    1
+                                                        ` 29    1
+                                                             ` 31 ` 411    1
+                                                                        ` 43     1
+                                                                              ` 59    1
+                                                                                   ` 61  ` ¨ ¨ ¨ où
+     les dénominateurs sont ”nombres premiers jumeaux” est convergente ou finie. Darboux Bull.,
+     43(2):100–104, 124–128, 1919.
+ [4] V. Brun. Le crible d’Erathosthène et le théorème de Goldbach. C.R., 168:544–546, 1919.
+ [5] Emanuel Carneiro and Friedrich Littmann. Monotone extremal functions and the weighted
+     Hilbert’s inequality. Port. Math., 81(1-2):127–134, 2024.
+ [6] P.X. Gallagher. A larger sieve. Acta Aritmetica, 18:77–81, 1971.
+                                                                                              23
+
+
+
+
+         Figure 6. On the optimality of Theorem 3.1 for the twin primes
+
+
+
+ [7] F. Alberto Gruenbaum. Eigenvectors of a Toeplitz matrix: Discrete version of the prolate
+     spheroidal wave functions. SIAM J. Algebraic Discrete Methods, 2:136–141, 1981.
+ [8] H. Halberstam and H.E. Richert. Mean value theorems for a class of arithmetic functions.
+     Acta Arith., 18:243–256, 1971.
+ [9] M.N Huxley. The distribution of prime numbers. Large sieves and zero-density theorems.
+     Oxford Mathematical Monographs, Clarendon Press, Oxford, 1972. x+128 pp.
+[10] Inkscape. Inkscape: Open Source Scalable Vector Graphics Editor, 2026.
+[11] Bina Jha, D. Surya Ramana, and Olivier Ramaré. The Large Sieve Bound with Sieving by
+     Prime Powers.
+[12] I. Kobayashi. A note on the Selberg sieve and the large sieve. Proc. Japan Acad., 49(1):1–5,
+     1973.
+[13] Yu.V. Linnik. A remark on the least quadratic non-residue. Doklady Akad. Nauk SSSR,
+     36:119–120, 1942.
+[14] Jianya Liu and Tao Zhan. The ternary Goldbach problem in arithmetic progressions. Acta
+     Arith., 82(3):197–227, 1997.
+[15] V. N. Logvinenko and Ju. F. Sereda. Equivalent norms in spaces of entire functions of expo-
+     nential type. Teor. Funkciı̆ Funkcional. Anal. i Priložen., (Vyp. 20):102–111, 175, 1974.
+[16] H.L. Montgomery. Topics in Multiplicative Number Theory. Lecture Notes in Mathematics
+     (Berlin), 227:178pp, 1971.
+[17] H.L. Montgomery and R.C. Vaughan. The large sieve. Mathematika, 20(2):119–133, 1973.
+[18] Y. Motohashi. A note on Siegel’s zeros. Proc. Jap. Acad., Ser. A, 55:190–192, 1979.
+[19] F. L. Nazarov. On the theorems of Turán, Amrein and Berthier, and Zygmund. Zap. Nauchn.
+     Sem. S.-Peterburg. Otdel. Mat. Inst. Steklov. (POMI), 201(Issled. po Linein. Oper. Teor.
+     Funktsii. 20):117–123, 191, 1992.
+[20] The PARI Group, Bordeaux. PARI/GP, version 2.7.0, 2014. http://pari.math.
+     u-bordeaux.fr/.
+[21] E. Preissmann. Sur une inégalité de Montgomery et Vaughan. Enseign. Math., 30:95–113,
+     1984.
+[22] K. Ramachandra, A. Sankaranarayanan, and K. Srinivas. Ramanujan’s lattice point problem,
+     prime number theory and other remarks. Hardy and Ramanujan journal, 19, 1996.
+[23] D. S. Ramana and O. Ramaré. Arithmetical aspects of the large sieve inequality – Revision
+     2026. Texts and Readings in Mathematics. Hindustan Book Agency and Springer, 2026.
+[24] O. Ramaré. Arithmetical aspects of the large sieve inequality, volume 1 of Harish-Chandra
+     Research Institute Lecture Notes. Hindustan Book Agency, New Delhi, 2009. With the col-
+     laboration of D. S. Ramana.
+[25] O. Ramaré. On long κ-tuples with few prime factors. Proc. of the London Math. Soc.,
+     104(1):158–196, 2012.
+24
+
+
+[26] O. Ramaré and J.-C. Schlage-Puchta. Improving on the Brun-Titchmarsh theorem. Acta
+     Arith., 131(4):351–366, 2008.
+[27] Olivier Ramaré. Cusps of dense subsets of the primes – Bypassing the W -trick. Analysis,
+     page 44pp, 2026.
+[28] A. Selberg. Remarks on multiplicative functions. Lectures Notes in Mathematics (Berlin),
+     626:232–241, 1976.
+[29] D. Slepian. Prolate spheroidal wave functions, Fourier analysis, and uncertainty - V: The
+     discrete case. Bell Syst. Tech. J., 57:1371–1430, 1978.
+[30] W. A. Stein et al. Sage Mathematics Software (Version 9.5). The Sage Development Team,
+     2024.
+[31] J.D. Vaaler. Some Extremal Functions in Fourier Analysis. Bull. A. M. S., 12:183–216, 1985.
+[32] Wijit Yangjit. On the Montgomery-Vaughan weighted generalization of Hilbert’s inequality.
+     Proc. Amer. Math. Soc. Ser. B, 10:439–454, 2023.
+
+    (O. Ramaré) CNRS/ Institut de Mathématiques de Marseille, Aix Marseille Univer-
+sité, U.M.R. 7373, Site Sud, Campus de Luminy, Case 907, 13288 Marseille Cedex 9,
+France.
+    Email address: olivier.ramare@univ-amu.fr
+

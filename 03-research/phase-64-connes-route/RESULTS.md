@@ -1,6 +1,6 @@
 # Phase 64 — Connes' route: first results (Tasks A, B, D)
 
-**Date:** 2026-06-27 · dps=40 · ζ vs DH falsador · engine `A=L_arch−L_prime`, quaternionic `J`.
+dps=40 · ζ vs DH falsador · engine `A=L_arch−L_prime`, quaternionic `J`.
 
 ---
 

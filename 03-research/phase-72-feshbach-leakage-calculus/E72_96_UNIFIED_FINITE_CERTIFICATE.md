@@ -1,7 +1,6 @@
 # E72.96 -- Unified finite certificate
 
-**Date:** 2026-07-09.
-**Role:** package the current Phase 72 reduction into one explicit finite certificate.
+**Purpose:** package the current Phase 72 reduction into one explicit finite certificate.
 
 ## 0. Input
 

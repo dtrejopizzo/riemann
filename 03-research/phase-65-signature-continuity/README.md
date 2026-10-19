@@ -1,6 +1,6 @@
 # Phase 65 — Signature-Continuity: constructing the index-graded determinant
 
-**Status:** open · started 2026-06-29 · **pure mathematics only, no computation.**
+**Status:** open · started · **pure mathematics only, no computation.**
 
 Phase 65 has a single objective: construct one new mathematical object and prove one theorem, which
 together are the Riemann Hypothesis. It is a *construction* phase, not an estimation phase — there is
@@ -18,7 +18,7 @@ nothing to compute, only an object to define and its continuity to prove.
 After Connes/Consani's monograph-level map, Phase 65 is reorganized around the **Witt–Nevanlinna sourced
 determinant**: don't topologize scalar entire functions (signature-blind, N1) — topologize the
 two-variable **signature kernels** via **sourced determinants** `D_A^src: V ↦ det_reg(I+A+V)`, after
-**Feshbach-shorting** (not subtracting) the one positive divergent pole. Plan: `/Users/dt/.claude/plans/sequential-riding-meerkat.md`.
+**Feshbach-shorting** (not subtracting) the one positive divergent pole.
 The decisive burden is **D8+D9**: `Short_{H_P} K_{A_P} → K_Ξ^{G5}`.
 
 - [D0-FOUNDATIONS.md](D0-FOUNDATIONS.md) — **DONE.** Fixes conventions; **pins the endpoint kernel

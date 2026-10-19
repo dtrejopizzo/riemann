@@ -51,7 +51,7 @@ Define
 The recurrence used for exact preflight calculations is
 
 \[
- a_0=2,qquad a_1=-3,qquad
+ a_0=2,\qquad a_1=-3,\qquad
  a_n=-3a_{n-1}-5a_{n-2}.
  \tag{5}
 \]
@@ -157,7 +157,7 @@ derive
 For the fixed curve,
 
 \[
- B_1=9,qquad B_2=9,qquad B_3=33.
+ B_1=9,\qquad B_2=9,\qquad B_3=33.
  \tag{15}
 \]
 

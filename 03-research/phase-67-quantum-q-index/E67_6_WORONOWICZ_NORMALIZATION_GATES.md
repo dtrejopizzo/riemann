@@ -1,7 +1,6 @@
 # E67.6 — Normalization gates for the Woronowicz route
 
-**Date:** 2026-07-06.
-**Role:** prevent the modular route from hiding a scalar Euler/counit normalization.
+**Purpose:** prevent the modular route from hiding a scalar Euler/counit normalization.
 
 ## The normalization risk
 

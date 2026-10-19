@@ -1,7 +1,6 @@
 # E72.155 -- KERN-ORTH root specificity
 
-**Date:** 2026-07-09.
-**Role:** test whether the kernel saturation in E72.154 is genuinely tied to finite CCM roots.
+**Purpose:** test whether the kernel saturation in E72.154 is genuinely tied to finite CCM roots.
 
 ## 0. Question
 

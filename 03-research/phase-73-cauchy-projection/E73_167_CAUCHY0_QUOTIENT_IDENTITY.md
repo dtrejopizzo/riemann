@@ -1,6 +1,5 @@
 # E73.167 - Cauchy0 quotient identity
 
-Date: 2026-07-12.
 
 ## 1. Purpose
 

@@ -1,6 +1,6 @@
 # P123.039 — finite orbit trace, integral torsion and the prime packet
 
-Date: 2026-09-05. Status: CONSTRUCTED, with the finite trace/determinant
+Status: CONSTRUCTED, with the finite trace/determinant
 comparison below proved on the orbit lattices of P123.038. A global
 mixed-correspondence shadow and its nuclear realization remain OPEN.
 

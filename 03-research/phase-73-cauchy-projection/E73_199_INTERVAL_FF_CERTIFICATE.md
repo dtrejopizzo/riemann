@@ -1,6 +1,5 @@
 # E73.199 - Finite-frequency certificate with digamma WR tail
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

@@ -1,8 +1,8 @@
-# 104_115 — Gate del resolvente global y pivote a torres primas vecinas
+# 104_115 — Global resolvent gate and pivot to neighboring prime towers
 
-## Resultado
+## Result
 
-Se auditó el certificado escalar propuesto
+The proposed scalar certificate was audited
 
 \[
  \left\|(-S_\varepsilon)^{1/2}g_n+
@@ -11,36 +11,36 @@ Se auditó el certificado escalar propuesto
  \qquad C_\varepsilon=i[X,S_\varepsilon].                 \tag{1}
 \]
 
-El generador global de intercambios entre todas las torres no define un
-operador de Markov en el régimen de Abel (\varepsilon\downarrow0). Aun
-si se lo trunca, el término cruzado de (1) es idénticamente cero para el
-vector Laguerre real y la ecuación de Poisson no satisface en general la
-condición de compatibilidad con el núcleo por capas. Por tanto (1) no
-puede ser el certificado de A1 tal como fue enunciado.
+The global generator of exchanges between all towers does not define a
+Markov operator in the Abel regime (\varepsilon\downarrow0). Even if
+truncated, the cross term of (1) is identically zero for the real
+Laguerre vector, and the Poisson equation does not in general satisfy the
+compatibility condition with the layered kernel. Hence (1) cannot be the
+A1 certificate as originally stated.
 
-El pivote a intercambios entre primos consecutivos sí produce un generador
-autoadjunto bien definido. Después de proyectar las constantes de cada
-capa, la ecuación de Poisson se resuelve y el término resolvente es
-positivo. Un twist complejo recupera un término de fase, pero éste cambia
-de signo con el grado Laguerre. El sucesor correcto no es otro certificado
-escalar: debe ser un lift de al menos dos componentes que acople grados
-Laguerre adyacentes mediante una corriente local entre torres.
+The pivot to exchanges between consecutive primes does produce a
+well-defined self-adjoint generator. After projecting out the constants
+of each layer, the Poisson equation is solved and the resolvent term is
+positive. A complex twist recovers a phase term, but it changes sign with
+the Laguerre degree. The correct successor is not another scalar
+certificate: it must be a lift of at least two components coupling
+adjacent Laguerre degrees via a local current between towers.
 
-Este documento prueba el gate y construye el operador local. No prueba
-A1 ni RH.
+This document proves the gate and builds the local operator. It does not
+prove A1 or RH.
 
 ---
 
-## 1. El generador global no existe cerca de Abel
+## 1. The global generator does not exist near Abel
 
-Escriba
+Write
 
 \[
  \nu=(\nu_p)_p,\qquad m(\nu)=\prod_pp^{\nu_p},\qquad
  X(\nu)=\log m(\nu),
 \]
 
-y
+and
 
 \[
  \pi_\varepsilon(\nu)
@@ -48,8 +48,8 @@ y
                                                                \tag{2}
 \]
 
-El generador propuesto mueve una unidad desde la torre (q) hasta la
-torre (p), con tasa
+The proposed generator moves one unit from tower (q) to tower (p), with
+rate
 
 \[
  r_{q\to p}(\nu)
@@ -57,50 +57,50 @@ torre (p), con tasa
    \left({q\over p}\right)^{(1+\varepsilon)/2}.              \tag{3}
 \]
 
-Las tasas satisfacen balance detallado formal. En efecto, si
+The rates satisfy formal detailed balance. Indeed, if
 
 \[
  \nu'=\nu+e_p-e_q,
 \]
 
-entonces
+then
 
 \[
  {\pi_\varepsilon(\nu')\over\pi_\varepsilon(\nu)}
  =\left({q\over p}\right)^{1+\varepsilon},
 \]
 
-y por ello
+and hence
 
 \[
  \pi_\varepsilon(\nu)r_{q\to p}(\nu)
  =\pi_\varepsilon(\nu')r_{p\to q}(\nu').                   \tag{4}
 \]
 
-Pero desde el estado (\nu=e_q), la tasa total de salida domina, salvo
-una constante dependiente de (q),
+But from state (\nu=e_q), the total outgoing rate is dominated, up to a
+constant depending on (q), by
 
 \[
  \sum_p {\sqrt{\log p}\over p^{(1+\varepsilon)/2}}.          \tag{5}
 \]
 
-La serie sobre primos de (5) diverge cuando
-((1+\varepsilon)/2\le1), es decir, para todo
-(0<\varepsilon\le1). Éste contiene el régimen completo requerido para
-tomar (\varepsilon\downarrow0). Así el generador global no tiene tasa
-de salida finita y (1) no está definido.
+The sum over primes in (5) diverges when
+((1+\varepsilon)/2\le1), that is, for every
+(0<\varepsilon\le1). This contains the entire regime needed to
+take (\varepsilon\downarrow0). So the global generator has no finite
+outgoing rate, and (1) is not defined.
 
-## 2. Dos obstrucciones algebraicas independientes
+## 2. Two independent algebraic obstructions
 
-Suponga momentáneamente que se truncó el conjunto de primos, de modo que
-(S_\varepsilon) es una matriz real autoadjunta en
-(L^2(\pi_\varepsilon)). Sea (X) multiplicación por (\log m) y
+Suppose momentarily that the set of primes has been truncated, so that
+(S_\varepsilon) is a real self-adjoint matrix on
+(L^2(\pi_\varepsilon)). Let (X) be multiplication by (\log m) and
 
 \[
  C_\varepsilon=i[X,S_\varepsilon].                         \tag{6}
 \]
 
-Entonces (C_\varepsilon) es autoadjunto. Para todo vector real (g),
+Then (C_\varepsilon) is self-adjoint. For every real vector (g),
 
 \[
 \begin{aligned}
@@ -112,57 +112,55 @@ Entonces (C_\varepsilon) es autoadjunto. Para todo vector real (g),
 \end{aligned}
 \]
 
-En particular, para
+In particular, for
 
 \[
  g_n(\nu)=L_{n-1}^{(1)}(X(\nu)),                            \tag{8}
 \]
 
-el supuesto término de interacción (I_2) desaparece exactamente. La
-norma de (1) contiene solo dos términos positivos y no retiene la
-orientación firmada que debía controlar (B_n).
+the supposed interaction term (I_2) vanishes exactly. The norm in (1)
+contains only two positive terms and retains none of the signed
+orientation that was supposed to control (B_n).
 
-Hay además un núcleo grande. Los intercambios conservan
+There is also a large kernel. The exchanges preserve
 
 \[
  \Omega(\nu)=\sum_p\nu_p,
 \]
 
-de modo que toda función constante en una capa (\{\Omega=k\}) pertenece
-al núcleo de (S_\varepsilon). Si (\mathbf1_k) es la constante de esa
-capa,
+so that every function constant on a layer (\{\Omega=k\}) belongs to the
+kernel of (S_\varepsilon). If (\mathbf1_k) is the constant on that layer,
 
 \[
  \langle\mathbf1_k,C_\varepsilon g\rangle
  =-i\langle S_\varepsilon X\mathbf1_k,g\rangle,             \tag{9}
 \]
 
-que no es cero en general. Por tanto
+which is in general nonzero. Hence
 
 \[
  -S_\varepsilon h=C_\varepsilon g                           \tag{10}
 \]
 
-no satisface la condición de Fredholm. La ecuación correcta tendría que
-ser
+does not satisfy the Fredholm condition. The correct equation should be
 
 \[
  -S_\varepsilon h=(I-\Pi)C_\varepsilon g,                  \tag{11}
 \]
 
-donde (\Pi) proyecta sobre las constantes de cada capa. El (I_3) de la
-propuesta original tampoco estaba definido sin esta proyección.
+where (\Pi) projects onto the constants of each layer. The (I_3) of the
+original proposal was likewise undefined without this projection.
 
-## 3. Generador localizado en torres vecinas
+## 3. Generator localized on neighboring towers
 
-Enumere los primos (p_1<p_2<\cdots), ponga
+Enumerate the primes (p_1<p_2<\cdots), set
 
 \[
  d_j=\log {p_{j+1}\over p_j},\qquad a_j=d_j^{-2},           \tag{12}
 \]
 
-y permita solamente los movimientos
-(p_j\leftrightarrow p_{j+1}). Las tasas son
+and allow only the moves
+(p_j\leftrightarrow p_{j+1}). The rates are
 
 \[
 \begin{aligned}
@@ -176,41 +174,41 @@ y permita solamente los movimientos
 \end{aligned}
 \]
 
-Cada estado tiene a lo sumo (2\Omega(\nu)) movimientos distintos; su
-tasa total es finita. La misma cuenta de (4) prueba balance detallado.
-El factor (d_j^{-2}) es la normalización difusiva natural en la variable
-(X=\log m): compensa exactamente el cuadrado del salto entre torres
-cercanas.
+Each state has at most (2\Omega(\nu)) distinct moves; its total rate is
+finite. The same computation as in (4) proves detailed balance. The
+factor (d_j^{-2}) is the natural diffusive normalization in the variable
+(X=\log m): it exactly compensates the square of the jump between
+nearby towers.
 
-En cada truncamiento finito de una capa, (S_\varepsilon^{\rm nb}) es
-autoadjunto, irreducible y tiene como núcleo solo las constantes. La
-ecuación proyectada
+In every finite truncation of a layer, (S_\varepsilon^{\rm nb}) is
+self-adjoint, irreducible, and has only the constants as kernel. The
+projected equation
 
 \[
  -S_\varepsilon^{\rm nb}h
  =(I-\Pi)C_\varepsilon^{\rm nb}g                            \tag{14}
 \]
 
-tiene solución única bajo la normalización (\Pi h=0), y
+has a unique solution under the normalization (\Pi h=0), and
 
 \[
  \langle h,(I-\Pi)C_\varepsilon^{\rm nb}g\rangle
  =\langle h,-S_\varepsilon^{\rm nb}h\rangle\ge0.           \tag{15}
 \]
 
-Así el término resolvente queda reparado, sin suponer una brecha espectral
-uniforme al retirar los truncamientos.
+Thus the resolvent term is repaired, with no need to assume a uniform
+spectral gap when the truncations are removed.
 
-## 4. Qué recupera y qué no recupera un twist de fase
+## 4. What a phase twist recovers and what it does not
 
-Sea (c_{xy}=\pi(x)r(x,y)=c_{yx}) la conductancia de una arista no
-orientada y (d_{xy}=X(y)-X(x)). Para
+Let (c_{xy}=\pi(x)r(x,y)=c_{yx}) be the conductance of an unoriented edge
+and (d_{xy}=X(y)-X(x)). For
 
 \[
  g_\tau(x)=e^{i\tau X(x)}F(X(x)),\qquad F\ \hbox{real},     \tag{16}
 \]
 
-la forma del conmutador es
+the form of the commutator is
 
 \[
  \boxed{
@@ -219,30 +217,30 @@ la forma del conmutador es
    \sin(\tau d_{xy})F(X(x))F(X(y)).}                      \tag{17}
 \]
 
-La fase reaparece, pero el producto de Laguerres en (17) cambia de signo
-al cruzar sus ceros. Por ello cercanía de torres no implica signo uniforme.
-Conectar solamente aristas dentro de un mismo lóbulo haría positivo el
-producto, pero separaría precisamente los bordes entre lóbulos donde vive
-la cancelación buscada.
+The phase reappears, but the product of Laguerre functions in (17)
+changes sign as it crosses its zeros. Hence closeness of towers does not
+imply a uniform sign. Connecting only edges within the same lobe would
+make the product positive, but it would separate precisely the boundaries
+between lobes, where the sought cancellation lives.
 
-La verificación finita `tools/neighbor_prime_resolvent_check.py`, en la
-capa (\Omega=1), confirma:
+The finite verification `tools/neighbor_prime_resolvent_check.py`, on the
+layer (\Omega=1), confirms:
 
-* balance detallado y autoadjunción con errores menores que (3\cdot10^{-15});
-* (\langle Cg_n,g_n\rangle=0) para el vector real;
-* incompatibilidad no nula de la ecuación de Poisson sin proyectar;
-* residuo menor que (3\cdot10^{-12}) en la ecuación proyectada;
-* positividad de (15);
-* cambio de signo del término de fase: con 48 primos,
-  (\varepsilon=1/2) y (\tau=1/5), vale aproximadamente
-  (+0.2111) en (n=24), (-0.3859) en (n=32) y
-  (-0.7145) en (n=48).
+* detailed balance and self-adjointness with errors smaller than (3\cdot10^{-15});
+* (\langle Cg_n,g_n\rangle=0) for the real vector;
+* nonzero incompatibility of the Poisson equation without projecting;
+* residual smaller than (3\cdot10^{-12}) in the projected equation;
+* positivity of (15);
+* sign change of the phase term: with 48 primes,
+  (\varepsilon=1/2) and (\tau=1/5), it is approximately
+  (+0.2111) at (n=24), (-0.3859) at (n=32), and
+  (-0.7145) at (n=48).
 
-## 5. Sucesor exacto
+## 5. Exact successor
 
-El fallo de (7) es propio de un certificado escalar. La forma mínima que
-puede tener interacción real es un lift de dos componentes. Póngase, por
-ejemplo,
+The failure of (7) is intrinsic to a scalar certificate. The minimal form
+that can have real interaction is a two-component lift. Set, for
+example,
 
 \[
  G_n=
@@ -252,15 +250,15 @@ ejemplo,
  \end{pmatrix},                                          \tag{18}
 \]
 
-usando que
+using that
 
 \[
  {d\over dX}L_{n-1}^{(1)}(X)=-L_{n-2}^{(2)}(X).           \tag{19}
 \]
 
-El nuevo blanco es construir una corriente local (J_\varepsilon),
-antisimétrica y con (J_\varepsilon\mathbf1=0), sobre ciclos de tres
-torres consecutivas, y demostrar una identidad de la forma
+The new target is to build a local current (J_\varepsilon),
+antisymmetric and with (J_\varepsilon\mathbf1=0), on cycles of three
+consecutive towers, and to prove an identity of the form
 
 \[
  {3\over4}A_n-\delta_n-B_{n,\varepsilon}
@@ -272,7 +270,7 @@ torres consecutivas, y demostrar una identidad de la forma
  +\mathcal R_{n,\varepsilon}.                            \tag{20}
 \]
 
-Aquí sí aparece el cruzado real
+Here the real cross term does appear,
 
 \[
  2\eta_n\left\langle
@@ -280,40 +278,39 @@ Aquí sí aparece el cruzado real
  \right\rangle,                                         \tag{21}
 \]
 
-que puede conservar la orientación de la recurrencia Laguerre. Los ciclos
-de longitud tres son necesarios: una cadena de vecinos es un árbol y no
-posee una corriente local no trivial que sea simultáneamente
-antisimétrica, conservativa y nula sobre constantes.
+which can preserve the orientation of the Laguerre recurrence. Cycles of
+length three are necessary: a chain of neighbors is a tree and has no
+nontrivial local current that is simultaneously antisymmetric,
+conservative, and vanishing on constants.
 
-El paso bloqueante de (20) ya no es invertir un generador global. Es una
-identidad Mecke de segundo orden que relacione la corriente de tres torres
-con el término lineal real (B_{n,\varepsilon}), seguida de una cota de
-Schur para la matriz de (20). Éste es el próximo ataque falsable; (1) queda
-retirado.
+The blocking step of (20) is no longer inverting a global generator. It
+is a second-order Mecke identity relating the three-tower current to the
+real linear term (B_{n,\varepsilon}), followed by a Schur bound for the
+matrix in (20). This is the next falsifiable attack; (1) is withdrawn.
 
-El script `tools/neighbor_prime_two_component_check.py` construye esta
-corriente en la capa finita (\Omega=1). Verifica (J^*=-J),
-(J\mathbf1=0) y calcula la constante de Schur exacta
+The script `tools/neighbor_prime_two_component_check.py` builds this
+current on the finite layer (\Omega=1). It verifies (J^*=-J),
+(J\mathbf1=0), and computes the exact Schur constant
 
 \[
  \eta_{\max}
  =\left\|(-S)^{-1/2}J(-S)^{-1/2}\right\|^{-1}.             \tag{22}
 \]
 
-Para 48 primos y (\varepsilon=1/2) obtiene
-(\eta_{\max}\simeq0.7194) y una forma de bloques no negativa en todos
-los grados ensayados. El cruzado de los grados adyacentes es positivo en
-(4\le n\le48) en ese truncamiento. En truncamientos mayores se observan
-ambos signos cuando (\varepsilon) todavía está lejos de cero, mientras
-los ensayos cercanos al régimen Abel vuelven a ser positivos. Esto es solo
-un diagnóstico: al disminuir (\varepsilon), una fracción creciente de
-la medida estacionaria queda fuera de todo truncamiento fijo. No se usa
-como lema.
+For 48 primes and (\varepsilon=1/2) it obtains
+(\eta_{\max}\simeq0.7194) and a non-negative block form at all the
+degrees tested. The cross term of adjacent degrees is positive for
+(4\le n\le48) in that truncation. In larger truncations both signs are
+observed when (\varepsilon) is still far from zero, while trials close
+to the Abel regime become positive again. This is only a diagnostic: as
+(\varepsilon) decreases, a growing fraction of the stationary measure
+falls outside any fixed truncation. It is not used as a lemma.
 
-## Reproducción
+## Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 neighbor_prime_resolvent_check.py
 python3 neighbor_prime_two_component_check.py
 ```
+</content>

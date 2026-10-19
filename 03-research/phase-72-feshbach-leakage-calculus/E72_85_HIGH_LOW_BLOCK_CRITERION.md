@@ -1,7 +1,6 @@
 # E72.85 -- High/low block criterion
 
-**Date:** 2026-07-09.
-**Role:** turn physical cofactor tightness into a block estimate for the pole-relative even complement.
+**Purpose:** turn physical cofactor tightness into a block estimate for the pole-relative even complement.
 
 ## 0. Setup
 

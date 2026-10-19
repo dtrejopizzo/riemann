@@ -1,7 +1,7 @@
-# 104_96 — Diagnóstico visual diádico de la energía discreta de Cramér
+# 104_96 — Dyadic visual diagnostic of the discrete Cramér energy
 
-**Resultado (diagnóstico, no prueba de RH).** Para los pesos ordinarios
-literales, ponga
+**Result (diagnostic, not a proof of RH).** For the literal ordinary
+weights, set
 
 \[
  b_n={\Lambda(n)-1\over\log n},\qquad
@@ -9,32 +9,32 @@ literales, ponga
  \tag{1}
 \]
 
-y use la energía exacta de `104_93`,
+and use the exact energy from `104_93`,
 
 \[
  \mathcal E(N)=\sum_{m=2}^{N}{B_m^2\over m(m+1)}.
  \tag{2}
 \]
 
-El nuevo checker calcula (1)--(2) hasta \(N=10^7\), sin aproximar
-\(\Lambda\): usa la identidad combinatoria
+The new checker computes (1)--(2) up to \(N=10^7\), without approximating
+\(\Lambda\): it uses the combinatorial identity
 
 \[
  {\Lambda(p^k)\over\log(p^k)}={1\over k}
  \tag{3}
 \]
 
-en todas las potencias primas. Solo \(1/\log n\) y la acumulación final
-son numéricas.
+on all prime powers. Only \(1/\log n\) and the final accumulation
+are numerical.
 
-Si
+If
 
 \[
  \Delta_j:=\mathcal E(2^j)-\mathcal E(2^{j-1}),
  \tag{4}
 \]
 
-los datos dan
+the data give
 
 \[
  0.0519113<j^2\Delta_j<0.0981871
@@ -42,17 +42,17 @@ los datos dan
  \tag{5}
 \]
 
-Esto sugiere el blanco concreto
+This suggests the concrete target
 
 \[
  \boxed{\Delta_j\le {1\over8j^2}\quad(j\ge9).}
  \tag{C}
 \]
 
-No es un ajuste vacío: la potencia \(j^{-2}\) es la escala crítica que
-separa una energía sumable de la contribución de un cero exterior, y la
-constante racional \(1/8\) deja un margen observado de más del \(21\%\).
-Si (C) se demostrara para todos los bloques, entonces
+It is not an empty fit: the power \(j^{-2}\) is the critical scale that
+separates a summable energy from the contribution of an off-axis zero, and the
+rational constant \(1/8\) leaves an observed margin of more than \(21\%\).
+If (C) were proved for all blocks, then
 
 \[
  \sup_N\mathcal E(N)
@@ -60,26 +60,26 @@ Si (C) se demostrara para todos los bloques, entonces
  \tag{6}
 \]
 
-y `104_93` daría RH. Pero (C) es estrictamente más puntual que la mera
-convergencia de la energía; RH no ha sido usada aquí para probar esa
-constante. `104_97` demuestra que la mera localización de un espectro en
-la línea crítica no impone (1/8), sin afirmar por ello que (C) falle
-para la zeta ordinaria. El rango finito (5) es evidencia, no certificado
-asintótico.
+and `104_93` would give RH. But (C) is strictly more pointwise than mere
+convergence of the energy; RH has not been used here to prove that
+constant. `104_97` shows that the mere localization of a spectrum on
+the critical line does not impose (1/8), without thereby asserting that (C) fails
+for the ordinary zeta. The finite range (5) is evidence, not an asymptotic
+certificate.
 
-El mismo cálculo **refuta** dos atajos naturales:
+The same computation **refutes** two natural shortcuts:
 
-* \(j^2\Delta_j\) no es monótona;
-* la cota más fuerte \(\Delta_j\le1/(20j^2)\) ya falla en el rango
-  calculado.
+* \(j^2\Delta_j\) is not monotone;
+* the stronger bound \(\Delta_j\le1/(20j^2)\) already fails in the
+  computed range.
 
-Por tanto no hay una extrapolación por monotonía escondida en (C).
+Hence there is no monotonicity-based extrapolation hidden in (C).
 
 ---
 
-## 1. Coordenada aritmética exacta
+## 1. Exact arithmetic coordinate
 
-La identidad (3) reescribe el primitivo como
+Identity (3) rewrites the primitive as
 
 \[
  B_m=\pi(m)-\sum_{n=2}^{m}{1\over\log n}
@@ -87,13 +87,13 @@ La identidad (3) reescribe el primitivo como
  \tag{7}
 \]
 
-que coincide con la separación probada en `104_94`. El programa criba
-los primos, inserta cada primo con peso uno e inserta cada potencia propia
-\(p^k\) con peso \(1/k\). Una segunda rutina por división de prueba
-reconstruye independientemente la tabla hasta \(10^4\) y exige igualdad
-entrada a entrada antes de producir el gráfico.
+which matches the split proved in `104_94`. The program sieves
+the primes, inserts each prime with weight one and inserts each proper power
+\(p^k\) with weight \(1/k\). A second trial-division routine
+independently reconstructs the table up to \(10^4\) and requires
+entrywise equality before producing the plot.
 
-Los valores globales obtenidos son
+The global values obtained are
 
 \[
 \begin{array}{c|c}
@@ -105,7 +105,7 @@ B_N&-90.8934853592657\\
 \tag{8}
 \]
 
-En todo el prefijo,
+Over the whole prefix,
 
 \[
  \min B_m=-98.4290621774\quad(m=9993078),
@@ -114,7 +114,7 @@ En todo el prefijo,
  \tag{9}
 \]
 
-Algunos bloques relevantes son
+Some relevant blocks are
 
 \[
 \begin{array}{c|c|c}
@@ -129,13 +129,14 @@ j&\Delta_j&j^2\Delta_j\\ \hline
 \tag{10}
 \]
 
-Las subidas de \(j=9\) a \(10\), de \(13\) a \(14\), y de \(18\) a
-\(19\) son contraejemplos finitos a la monotonía propuesta.
+The increases from \(j=9\) to \(10\), from \(13\) to
+\(14\), and from \(18\) to \(19\) are finite counterexamples to the
+proposed monotonicity.
 
-## 2. Controles crítico y exterior
+## 2. Critical and off-axis controls
 
-Para comprobar que la visualización distingue la escala correcta, se
-prescribe exactamente el primitivo de control
+To check that the visualization distinguishes the correct scale, we
+prescribe exactly the control primitive
 
 \[
  B_m^{(\beta,\gamma)}
@@ -144,12 +145,12 @@ prescribe exactamente el primitivo de control
  \tag{11}
 \]
 
-y se define su incremento por
+and define its increment by
 \(b_m^{(\beta,\gamma)}=B_m^{(\beta,\gamma)}-
-B_{m-1}^{(\beta,\gamma)}\). Por tanto no hay una reconstrucción ni un
-ajuste: (11) es el primitivo exacto que entra en (2).
+B_{m-1}^{(\beta,\gamma)}\). Hence there is no reconstruction nor a
+fit: (11) is the exact primitive that enters (2).
 
-Una comparación suma--integral, seguida de \(t=\log x\), da
+A sum--integral comparison, followed by \(t=\log x\), gives
 
 \[
 \begin{aligned}
@@ -162,38 +163,38 @@ Una comparación suma--integral, seguida de \(t=\log x\), da
 \tag{12}
 \]
 
-Para \(\beta=1/2\), \(j^2\Delta_j\) queda en escala constante. Para el
-control exterior \(\beta=0.65\), crece en escala
-\(2^{0.3j}\). En los cinco últimos bloques del gráfico, el control
-crítico da
+For \(\beta=1/2\), \(j^2\Delta_j\) stays at constant scale. For the
+off-axis control \(\beta=0.65\), it grows at scale
+\(2^{0.3j}\). In the last five blocks of the plot, the critical
+control gives
 
 \[
  0.6422\le j^2\Delta_j^{(1/2,7)}\le0.9025,
  \tag{13}
 \]
 
-mientras el exterior da
+while the off-axis one gives
 
 \[
  37.26\le j^2\Delta_j^{(0.65,7)}\le80.84.
  \tag{14}
 \]
 
-Dividiendo (14) por \(2^{0.3j}\), los valores quedan entre \(0.58\) y
-\(0.81\), como predice (12). Éste es el control visual de la obstrucción
-cuantitativa \(2\beta-1\) de `104_93`; no afirma que (11) sea una función
-zeta alternativa.
+Dividing (14) by \(2^{0.3j}\), the values stay between \(0.58\) and
+\(0.81\), as predicted by (12). This is the visual control of the
+quantitative obstruction \(2\beta-1\) from `104_93`; it does not assert that (11) is an
+alternative zeta function.
 
-## 3. Auditoría de estabilidad
+## 3. Stability audit
 
-La ejecución publicada realiza tres controles distintos:
+The published run performs three distinct checks:
 
-1. tabla de potencias primas contra factorización independiente hasta
+1. prime-power table against independent factorization up to
    \(10^4\);
-2. acumulación `float64` contra `longdouble` hasta \(10^6\);
-3. repetición del prefijo con cortes de bloque distintos.
+2. `float64` accumulation against `longdouble` up to \(10^6\);
+3. repetition of the prefix with different block cuts.
 
-En el segundo control se obtuvo
+In the second check one obtained
 
 \[
  |B_{10^6}^{(64)}-B_{10^6}^{(LD)}|=6.148\cdot10^{-13},
@@ -203,41 +204,41 @@ En el segundo control se obtuvo
  \tag{15}
 \]
 
-Estas cifras auditan estabilidad de punto flotante, no convierten (5) en
-aritmética intervalar certificada. El margen de (C) es, sin embargo, más
-de doce órdenes mayor que la discrepancia energética observada.
+These figures audit floating-point stability; they do not turn (5) into
+certified interval arithmetic. The margin of (C) is, however, more
+than twelve orders of magnitude larger than the observed energy discrepancy.
 
-## 4. Qué enseña y qué no
+## 4. What it shows and what it does not
 
-La figura separa limpiamente tres comportamientos:
+The figure cleanly separates three behaviors:
 
 ```text
-Lambda ordinaria, rango medido:       j^2 Delta_j ~ 0.05--0.10
-control crítico beta=1/2:             j^2 Delta_j ~ constante
-control exterior beta=0.65:           j^2 Delta_j ~ 2^(0.3j)
+ordinary Lambda, measured range:      j^2 Delta_j ~ 0.05--0.10
+critical control beta=1/2:            j^2 Delta_j ~ constant
+off-axis control beta=0.65:           j^2 Delta_j ~ 2^(0.3j)
 ```
 
-La desigualdad (C) es ahora un blanco unilateral concreto, expresado solo
-con los pesos ordinarios reales. También es un enunciado de fuerza RH:
-ningún dato finito, ni el gráfico, ni la estabilidad numérica lo prueban
-para todo \(j\). El aporte de este documento es localizar visualmente la
-escala sumable, registrar una constante candidata falsable y descartar la
-monotonía que habría permitido una extrapolación ilegítima.
+Inequality (C) is now a concrete one-sided target, expressed only
+with the real ordinary weights. It is also an RH-strength statement:
+no finite data, nor the plot, nor the numerical stability proves it
+for all \(j\). The contribution of this document is to visually locate the
+summable scale, to record a candidate falsifiable constant and to rule out the
+monotonicity that would have allowed an illegitimate extrapolation.
 
-En particular, este documento **no prueba** (C), Deep-\(\Lambda\), A1 ni
+In particular, this document **does not prove** (C), Deep-\(\Lambda\), A1 nor
 RH.
 
-## 5. Reproducción
+## 5. Reproduction
 
-Desde `tools/`:
+From `tools/`:
 
 ```bash
 python3 discrete_cramer_energy_visual.py --limit 10000000 \
   --chunk 500000 --audit-limit 1000000
 ```
 
-Archivos producidos:
+Files produced:
 
 * `discrete_cramer_energy_dyadic.csv`;
 * `discrete_cramer_energy_visual.svg`;
-* `discrete_cramer_energy_visual.png` (conversión reproducible del SVG).
+* `discrete_cramer_energy_visual.png` (reproducible conversion of the SVG).

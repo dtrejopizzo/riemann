@@ -61,7 +61,7 @@ The Fourier characters of \(R_N\) diagonalize (4), with eigenvalues
 \[
  \lambda_j
  =2-e^{2\pi ij/N}-e^{-2\pi ij/N}
- =|1-e^{2\pi ij/N}|^2,qquad 0\le j<N.                    \tag{7}
+ =|1-e^{2\pi ij/N}|^2,\qquad 0\le j<N.                    \tag{7}
 \]
 
 The eigenvalue at \(j=0\) is zero.  Since

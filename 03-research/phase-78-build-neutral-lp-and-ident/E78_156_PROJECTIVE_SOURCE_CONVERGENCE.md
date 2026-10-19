@@ -1,6 +1,6 @@
 # E78.156 - PROJECTIVE-SOURCE-CONVERGENCE: point-2 existence via option (ii)
 
-**Run:** 2026-07-21.
+**Run:**
 **Scope:** LP interface / point 2 (A2-d existence). Validates E78.151 option (ii).
 **Class:** REDUCCION GENUINA (numerically decisive; analytic proof = the shared
 N^{-2} law).
@@ -8,7 +8,7 @@ N^{-2} law).
 ## 1. What was tested
 
 Point-2 existence (A2-d) requires a normalized l2 class. Ledger E77.7i reduces
-uniqueness (via the author's Cauchy-row separation lemma) to `(I-3) dim E_L=1 and
+uniqueness (via a Cauchy-row separation lemma) to `(I-3) dim E_L=1 and
 ell_0(v_0) != 0`. The source-selected response (E78.151 Thm 5.1)
 
 ```text

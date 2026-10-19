@@ -181,8 +181,7 @@ if __name__=='__main__':
 \setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
 \title{\textbf{The Riemann Program --- Proof Log (Bit\'acora)}\\[4pt]
 \large A continuous research diary, Days 0--46}
-\author{David Alejandro Trejo Pizzo}
-\date{June 2026}
+\date{}
 \begin{document}
 \maketitle
 \noindent\emph{Faithful LaTeX rendering of the running \texttt{00-PROOF-LOG.md}.

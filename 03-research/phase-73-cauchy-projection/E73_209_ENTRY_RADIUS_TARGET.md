@@ -1,6 +1,5 @@
 # E73.209 - Entry-radius target for the Krawczyk matrix interval
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

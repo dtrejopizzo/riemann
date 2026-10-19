@@ -70,7 +70,7 @@ Prove the signed core inequality:
   \qquad(n\ge8).
 ]
 
-This is the first isolated force-RH target in this phase.
+This is the first isolated RH-strength target in this phase.
 
 ## Alternative route
 

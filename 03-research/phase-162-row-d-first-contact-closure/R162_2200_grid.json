@@ -1,0 +1,1333 @@
+{
+ "meta": {
+  "file": "R162_2200_grid.json",
+  "date": "",
+  "rows": {
+   "1": "identidad/ecuación funcional",
+   "2": "positividad/soporte (Λ≥0, supp potencias de primos)",
+   "3": "estimación cuantitativa",
+   "4": "multiplicatividad/producto de Euler",
+   "5": "integralidad de ℤ (floors, torsión, periodización)",
+   "6": "valores exactos de Λ (Λ*1=log, Selberg, Chebyshev)",
+   "7": "lado de ceros/fórmula explícita",
+   "8": "sin aritmética (estructural, ciego al peso)"
+  },
+  "cols": {
+   "A": "forma cuadrática de una ventana",
+   "B": "vector núcleo del primer contacto (lineal en F)",
+   "C": "funcionales cuadráticos/superiores de F",
+   "D": "espectro (autovalores, Perron, nodal)",
+   "E": "flujo/familia en T",
+   "F": "transformadas globales en T",
+   "G": "familias de funciones L/cuerpos",
+   "H": "objetos geométricos/dinámicos"
+  },
+  "killers": {
+   "F1": "λ=0 no usado",
+   "F2": "orientación/cuadrado de PC",
+   "F3": "pasa falsificador (DH, deletion/κ, Λχ₂, Beurling)",
+   "F4": "límite lineal",
+   "M": "Teorema M margen doble-exponencial",
+   "E1": "reformulación de RH"
+  }
+ },
+ "cells": [
+  {
+   "row": "1",
+   "row_name": "identidad/ecuación funcional",
+   "col": "A",
+   "col_name": "forma cuadrática de una ventana",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "arcs I-II / phase 120",
+     "verdict": "EQUIV",
+     "killer": "E1",
+     "note": "Kreĭn E*JE, de Branges, sistemas canónicos, cuadrado global A*A"
+    },
+    {
+     "id": "Li/Keiper, Nyman–Beurling, KEP, κ=0",
+     "verdict": "EQUIV",
+     "killer": "E1",
+     "note": "núcleo de Li en frontera polar δ=0 (D4 Thm 4.2)"
+    },
+    {
+     "id": "R162_206",
+     "verdict": "NO-GO",
+     "killer": "F4",
+     "note": "(PC+) diferencia algebraica cero con (PC−)"
+    },
+    {
+     "id": "R162_2101",
+     "verdict": "STRUCTURE",
+     "killer": "M",
+     "note": "para s₂=1, T<½log3 la forma de ventana ES la forma completa de ζ"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "1",
+   "row_name": "identidad/ecuación funcional",
+   "col": "B",
+   "col_name": "vector núcleo del primer contacto (lineal en F)",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_305",
+     "verdict": "NO-GO",
+     "killer": "trivial-zero cancellation",
+     "note": "Ward exterior: derivada = cero algebraico; δD sólo vía ζ(−2j)=0"
+    },
+    {
+     "id": "R162_402",
+     "verdict": "NO-GO",
+     "killer": "F1",
+     "note": "diccionario de reflexión probado; mecanismo Hardy muerto"
+    },
+    {
+     "id": "R162_204",
+     "verdict": "NO-GO",
+     "killer": "F3 (finmod)",
+     "note": "jet regularizado invariante bajo toda modificación finita"
+    },
+    {
+     "id": "R162_1201",
+     "verdict": "NO-GO",
+     "killer": "E1,F1,F2,F3",
+     "note": "rango de Sonin: (S_m) ⟺ HF=0, Müntz todo-o-nada"
+    },
+    {
+     "id": "R161_008-011,017-018,022-023",
+     "verdict": "NO-GO",
+     "killer": "F4 / open (4.2)",
+     "note": "puertos product-Hardy colapsan a (4.2); completaciones lineales tautológicas"
+    }
+   ],
+   "residual": "(4.2) rango de Sonin global = sumidero E1 de toda la columna B/C"
+  },
+  {
+   "row": "1",
+   "row_name": "identidad/ecuación funcional",
+   "col": "C",
+   "col_name": "funcionales cuadráticos/superiores de F",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_1003",
+     "verdict": "NO-GO",
+     "killer": "E1,F3",
+     "note": "Thm S canales=4(Re D)²; Thm R resuma a Σ_ρ (⟺RH); tamiz de Selberg imposible; vale para DH"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "1",
+   "row_name": "identidad/ecuación funcional",
+   "col": "D",
+   "col_name": "espectro (autovalores, Perron, nodal)",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_1301",
+     "verdict": "NO-GO",
+     "killer": "F3,E1",
+     "note": "cuerdas de Robin (Thm 1 nuevo); isotropía=Gate 1; DH sigue CM"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "1",
+   "row_name": "identidad/ecuación funcional",
+   "col": "E",
+   "col_name": "flujo/familia en T",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_1802",
+     "verdict": "EQUIV/PARTIAL",
+     "killer": "E1",
+     "note": "Thm R: RH ⟺ ventana de residuo no vacía ∀T; Prop 4.2 reetiquetada PARTIAL (2090)"
+    },
+    {
+     "id": "R162_902",
+     "verdict": "NO-GO",
+     "killer": "E1,F3,DH",
+     "note": "Conj 6.1 ⟺ RH; mitad incondicional ya en R160_M4"
+    }
+   ],
+   "residual": "ancho ≥0 de la ventana movido a integralidad (ver 5E)"
+  },
+  {
+   "row": "1",
+   "row_name": "identidad/ecuación funcional",
+   "col": "F",
+   "col_name": "transformadas globales en T",
+   "status": "EMPTY",
+   "routes": [],
+   "residual": "transformada global en T de la EF que no pase por ξ′/ξ (803 aterriza en Herglotz, ver 7F)"
+  },
+  {
+   "row": "1",
+   "row_name": "identidad/ecuación funcional",
+   "col": "G",
+   "col_name": "familias de funciones L/cuerpos",
+   "status": "EMPTY",
+   "routes": [],
+   "residual": "teoremas conversos/Hamburger como mecanismo de signo en familia (Hamburger sólo usado como diccionario en 1203)"
+  },
+  {
+   "row": "1",
+   "row_name": "identidad/ecuación funcional",
+   "col": "H",
+   "col_name": "objetos geométricos/dinámicos",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_1002",
+     "verdict": "NO-GO",
+     "killer": "E1,F2",
+     "note": "cuasicristal: rigidez presupone ceros reales; clase de un miembro; sin unicidad local"
+    },
+    {
+     "id": "R162_1203",
+     "verdict": "NO-GO",
+     "killer": "F1-F4,E1",
+     "note": "Laumon ε: L4–L6 faltan; Thm W es REMARK (1390); ε-datos = escalar C₀"
+    },
+    {
+     "id": "R160_C8",
+     "verdict": "NO-GO",
+     "killer": "F3 (Λχ₂,Ξ_a)",
+     "note": "ε-fase: Thm 1 textual para falsificadores"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "2",
+   "row_name": "positividad/soporte (Λ≥0, supp potencias de primos)",
+   "col": "A",
+   "col_name": "forma cuadrática de una ventana",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "arcs I,VIII",
+     "verdict": "NO-GO",
+     "killer": "Φ combs,E1",
+     "note": "positividad por lugar/primo, S finito"
+    },
+    {
+     "id": "phase 155 prop:archneg",
+     "verdict": "NO-GO",
+     "killer": "—",
+     "note": "arquimediana indefinida desde T≈0.58"
+    },
+    {
+     "id": "R162_1603",
+     "verdict": "NO-GO",
+     "killer": "F2,F3,E1",
+     "note": "candado de positividad Thm P; = Gate 1 en clase coherente"
+    },
+    {
+     "id": "phase 156",
+     "verdict": "NO-GO",
+     "killer": "Φ combs",
+     "note": "converse por ventana: condición 2×2 de capacidad polar falla en combs"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "2",
+   "row_name": "positividad/soporte (Λ≥0, supp potencias de primos)",
+   "col": "B",
+   "col_name": "vector núcleo del primer contacto (lineal en F)",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_101",
+     "verdict": "NO-GO",
+     "killer": "F1",
+     "note": "primera variación cero"
+    },
+    {
+     "id": "R162_103",
+     "verdict": "NO-GO",
+     "killer": "F3 (κ)",
+     "note": "a^κ tienen primeros contactos genuinos"
+    },
+    {
+     "id": "R162_405",
+     "verdict": "NO-GO",
+     "killer": "F1",
+     "note": "minimalidad derecha = monotonía"
+    },
+    {
+     "id": "R162_407",
+     "verdict": "NO-GO",
+     "killer": "F3 (DH)",
+     "note": "(LB) ⟺ 𝒱≤0 en N; ciego al peso"
+    },
+    {
+     "id": "R162_703",
+     "verdict": "NO-GO",
+     "killer": "F3 (deletion)",
+     "note": "Tipo II no excluible; Prop 4.1 sólo ⟹ (990)"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "2",
+   "row_name": "positividad/soporte (Λ≥0, supp potencias de primos)",
+   "col": "C",
+   "col_name": "funcionales cuadráticos/superiores de F",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R161_027-029",
+     "verdict": "NO-GO",
+     "killer": "F2",
+     "note": "contactos primos crudos: términos cruzados indefinidos"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "2",
+   "row_name": "positividad/soporte (Λ≥0, supp potencias de primos)",
+   "col": "D",
+   "col_name": "espectro (autovalores, Perron, nodal)",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_504",
+     "verdict": "NO-GO",
+     "killer": "F3 (DH línea v_n≥0)",
+     "note": "Perron–Frobenius, escalera de paridad, dicotomía Tipo I/II"
+    },
+    {
+     "id": "R162_702",
+     "verdict": "NO-GO",
+     "killer": "F3 (κ),M",
+     "note": "clase 𝒞={a≥0,supp PP} contiene κ-modelos con contacto"
+    },
+    {
+     "id": "R162_1601",
+     "verdict": "UNCERTIFIED",
+     "killer": "F3 (deletion)",
+     "note": "S=2 también para deletion (Tipo II)"
+    },
+    {
+     "id": "R162_1803",
+     "verdict": "UNCERTIFIED",
+     "killer": "F3 (sΛ)",
+     "note": "(C2) falso con comb; signo ⟨u₂,φ̂⟩ cambia en familia sΛ"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "2",
+   "row_name": "positividad/soporte (Λ≥0, supp potencias de primos)",
+   "col": "E",
+   "col_name": "flujo/familia en T",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_802",
+     "verdict": "NO-GO",
+     "killer": "F3,M,F4",
+     "note": "leyes monótonas valen para κ/finmod/DH; 'RH ⟺ dos límites' RETIRADO (990)"
+    },
+    {
+     "id": "R162_1402",
+     "verdict": "PARTIAL+NO-GO",
+     "killer": "F3,E1",
+     "note": "Q_m monótona, ley de collar; todas transportan a DH/deletion/Beurling"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "2",
+   "row_name": "positividad/soporte (Λ≥0, supp potencias de primos)",
+   "col": "F",
+   "col_name": "transformadas globales en T",
+   "status": "EMPTY",
+   "routes": [],
+   "residual": "monotonía completa/Bernstein de λ_A(T) o de su transformada como objeto global"
+  },
+  {
+   "row": "2",
+   "row_name": "positividad/soporte (Λ≥0, supp potencias de primos)",
+   "col": "G",
+   "col_name": "familias de funciones L/cuerpos",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "Paper 46 T5 (phases 141-149)",
+     "verdict": "NO-GO",
+     "killer": "T5",
+     "note": "familia no negativa"
+    },
+    {
+     "id": "phase 150 T3",
+     "verdict": "CONDITIONAL",
+     "killer": "Beurling",
+     "note": "puerta Beurling"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "2",
+   "row_name": "positividad/soporte (Λ≥0, supp potencias de primos)",
+   "col": "H",
+   "col_name": "objetos geométricos/dinámicos",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "Paper 46 (tropical/Künneth)",
+     "verdict": "NO-GO",
+     "killer": "T5, polar/entire",
+     "note": "efectividad mixta"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "3",
+   "row_name": "estimación cuantitativa",
+   "col": "A",
+   "col_name": "forma cuadrática de una ventana",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "arcs I,X",
+     "verdict": "NO-GO",
+     "killer": "M,Φ",
+     "note": "densidad, PNT, zonas libres, cribas"
+    },
+    {
+     "id": "phase 151 dlVP",
+     "verdict": "NO-GO",
+     "killer": "M",
+     "note": "capado por densidad arquimediana"
+    },
+    {
+     "id": "phase 154 Paper 47",
+     "verdict": "NO-GO",
+     "killer": "finZ,M",
+     "note": "sin dual alcanzado ni truncación finita"
+    },
+    {
+     "id": "phase 155 TK/N/AL′",
+     "verdict": "NO-GO",
+     "killer": "TK ceiling",
+     "note": "retículo pierde Θ(1/M)"
+    },
+    {
+     "id": "R162_303/703",
+     "verdict": "CERTIFIED",
+     "killer": "M (no mecanismo)",
+     "note": "λ_A,λ_W>0 en (0,½log5]"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "3",
+   "row_name": "estimación cuantitativa",
+   "col": "B",
+   "col_name": "vector núcleo del primer contacto (lineal en F)",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_001/190",
+     "verdict": "PROVED",
+     "killer": "—",
+     "note": "continuidad λ_A"
+    },
+    {
+     "id": "R162_407 tasa",
+     "verdict": "PROVED",
+     "killer": "F3 (DH)",
+     "note": "λ_A(T*+δ)≥−2A*Q*/log(1/δ), ciego al peso"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "3",
+   "row_name": "estimación cuantitativa",
+   "col": "C",
+   "col_name": "funcionales cuadráticos/superiores de F",
+   "status": "PARTIAL",
+   "routes": [
+    {
+     "id": "R160_M7",
+     "verdict": "EQUIV",
+     "killer": "E1",
+     "note": "cálculo bilineal reescribe eq:form"
+    },
+    {
+     "id": "R162_502 Part B",
+     "verdict": "PARTIAL→NO-GO",
+     "killer": "—",
+     "note": "cuadrado bilineal acoplado en el vector de contacto; B3: ningún input admitido lo orienta"
+    }
+   ],
+   "residual": "cota con signo uniforme en T del bloque de baja frecuencia (Opción 3 R160_020) fuera del vector de contacto; M7 Prop 5.2(c) sugiere E1 global"
+  },
+  {
+   "row": "3",
+   "row_name": "estimación cuantitativa",
+   "col": "D",
+   "col_name": "espectro (autovalores, Perron, nodal)",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_1402 Thm 5",
+     "verdict": "WRONG→weak",
+     "killer": "—",
+     "note": "Markov–Kreĭn WRONG como enunciado (1590); sólo j≤2"
+    },
+    {
+     "id": "R162_1502",
+     "verdict": "NO-GO",
+     "killer": "F2,F3,M",
+     "note": "objetivo uniforme |x_m|²≤Cλ contradicho por datos de ζ"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "3",
+   "row_name": "estimación cuantitativa",
+   "col": "E",
+   "col_name": "flujo/familia en T",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "159 G2",
+     "verdict": "NO-GO",
+     "killer": "M,I-13,E1",
+     "note": "bootstrap en T, SOS, mollifiers, cálculo de saltos"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "3",
+   "row_name": "estimación cuantitativa",
+   "col": "F",
+   "col_name": "transformadas globales en T",
+   "status": "EMPTY",
+   "routes": [],
+   "residual": "estimaciones sobre una transformada global (Mellin en T) no lineal"
+  },
+  {
+   "row": "3",
+   "row_name": "estimación cuantitativa",
+   "col": "G",
+   "col_name": "familias de funciones L/cuerpos",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_1004",
+     "verdict": "NO-GO",
+     "killer": "F1,F2,E1,P149",
+     "note": "potencia tensorial: cota polinomial en d ⟺ RH; Thm 3.1 cuantificador corregido (1190)"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "3",
+   "row_name": "estimación cuantitativa",
+   "col": "H",
+   "col_name": "objetos geométricos/dinámicos",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "phase 152",
+     "verdict": "NO-GO",
+     "killer": "no form",
+     "note": "FUP/Dolgopyat, Berkovich–Poineau"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "4",
+   "row_name": "multiplicatividad/producto de Euler",
+   "col": "A",
+   "col_name": "forma cuadrática de una ventana",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R161_001-004",
+     "verdict": "NO-GO",
+     "killer": "F2",
+     "note": "cuadrado suma×producto contiene el cuadrado de Weil truncado"
+    },
+    {
+     "id": "R162_203",
+     "verdict": "EQUIV",
+     "killer": "E1",
+     "note": "ESB = desregularización"
+    },
+    {
+     "id": "phase 153 Thm A",
+     "verdict": "NO-GO",
+     "killer": "Ξ_Q,Beurling",
+     "note": "separa ζ sólo de Ξ_a"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "4",
+   "row_name": "multiplicatividad/producto de Euler",
+   "col": "B",
+   "col_name": "vector núcleo del primer contacto (lineal en F)",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_201/202",
+     "verdict": "EQUIV",
+     "killer": "E1",
+     "note": "ESB/fuga Sonin multiprimo"
+    },
+    {
+     "id": "R162_301",
+     "verdict": "NO-GO",
+     "killer": "F3",
+     "note": "fuga Brown–Halmos independiente del símbolo"
+    },
+    {
+     "id": "R162_503",
+     "verdict": "NO-GO",
+     "killer": "DH line empty",
+     "note": "transporte a toda serie de Dirichlet de grado 1"
+    },
+    {
+     "id": "R162_404",
+     "verdict": "NO-GO",
+     "killer": "F1",
+     "note": "jets de Tate como λ⟨Γ_PF,φ⟩"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "4",
+   "row_name": "multiplicatividad/producto de Euler",
+   "col": "C",
+   "col_name": "funcionales cuadráticos/superiores de F",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R160_M8",
+     "verdict": "NO-GO",
+     "killer": "Φ",
+     "note": "signo + es signo de un cuadrado"
+    },
+    {
+     "id": "R162_502 B2",
+     "verdict": "PROVED rewrite",
+     "killer": "E1",
+     "note": "M_T(Λ)=ZXZ⁻¹−X"
+    },
+    {
+     "id": "R162_207",
+     "verdict": "NO-GO",
+     "killer": "F1",
+     "note": "curvatura Euler/fuente plana"
+    },
+    {
+     "id": "R160_020 Opción 6",
+     "verdict": "NOT RUN",
+     "killer": "—",
+     "note": "clase mixta S+D de Meyer; D2 dice estéril"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "4",
+   "row_name": "multiplicatividad/producto de Euler",
+   "col": "D",
+   "col_name": "espectro (autovalores, Perron, nodal)",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R152_002; 159 G1 K3",
+     "verdict": "NO-GO",
+     "killer": "no form/K3",
+     "note": "Hecke no acotado; Hecke autoadjunto en L²(Γ\\𝔥) excluido"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "4",
+   "row_name": "multiplicatividad/producto de Euler",
+   "col": "E",
+   "col_name": "flujo/familia en T",
+   "status": "EMPTY",
+   "routes": [],
+   "residual": "flujo de inserción primo a primo acoplado por el producto de Euler (1801 homotopía en s es ciega al peso)"
+  },
+  {
+   "row": "4",
+   "row_name": "multiplicatividad/producto de Euler",
+   "col": "F",
+   "col_name": "transformadas globales en T",
+   "status": "EMPTY",
+   "routes": [],
+   "residual": "objeto generador global con producto de Euler entrando antes de regularizar"
+  },
+  {
+   "row": "4",
+   "row_name": "multiplicatividad/producto de Euler",
+   "col": "G",
+   "col_name": "familias de funciones L/cuerpos",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_1102",
+     "verdict": "NO-GO",
+     "killer": "F1,F2,F3,M",
+     "note": "Thm O: suma sobre χ sin aritmética"
+    },
+    {
+     "id": "arcs III,VIII; 144-149",
+     "verdict": "NO-GO",
+     "killer": "T1/T2, rationality wall",
+     "note": "transporte desde cuerpos finitos, Deligne"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "4",
+   "row_name": "multiplicatividad/producto de Euler",
+   "col": "H",
+   "col_name": "objetos geométricos/dinámicos",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "159 G1",
+     "verdict": "NO-GO",
+     "killer": "OT-5′ walls",
+     "note": "Bost–Connes, Borger/Witt, sitio de escala"
+    },
+    {
+     "id": "R162_1302",
+     "verdict": "NO-GO",
+     "killer": "F1,F3,E1",
+     "note": "Euler = separabilidad; monodromía maximal"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "5",
+   "row_name": "integralidad de ℤ (floors, torsión, periodización)",
+   "col": "A",
+   "col_name": "forma cuadrática de una ventana",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_1902",
+     "verdict": "NO-GO",
+     "killer": "F2,E1",
+     "note": "B₂/sawtooth: valor lineal en c = ∫|F̂|²Re ζ, ambos signos"
+    },
+    {
+     "id": "R162_801",
+     "verdict": "NO-GO",
+     "killer": "F1,F2,M",
+     "note": "ledger: D_a≡0 ⟺ a=Λ pero por ventana reescritura de pesos"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "5",
+   "row_name": "integralidad de ℤ (floors, torsión, periodización)",
+   "col": "B",
+   "col_name": "vector núcleo del primer contacto (lineal en F)",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_701",
+     "verdict": "NO-GO",
+     "killer": "E1,F1",
+     "note": "(B4.1) identidad, igualdad en N"
+    },
+    {
+     "id": "R162_1101",
+     "verdict": "NO-GO",
+     "killer": "F2,F3,E1",
+     "note": "polo en −2m lee sólo átomo 0; Thm 4.1(b) WRONG (1390)"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "5",
+   "row_name": "integralidad de ℤ (floors, torsión, periodización)",
+   "col": "C",
+   "col_name": "funcionales cuadráticos/superiores de F",
+   "status": "PARTIAL",
+   "routes": [
+    {
+     "id": "R162_903",
+     "verdict": "NO-GO",
+     "killer": "F1,F2,M",
+     "note": "Gram unipotente, colapso de Moore; lectura Λχ₂ corregida (1190)"
+    }
+   ],
+   "residual": "funcional discontinuo que separe ℤ de Beurling y 1 de χ₂, no invariante unipotente"
+  },
+  {
+   "row": "5",
+   "row_name": "integralidad de ℤ (floors, torsión, periodización)",
+   "col": "D",
+   "col_name": "espectro (autovalores, Perron, nodal)",
+   "status": "EMPTY",
+   "routes": [],
+   "residual": "integralidad en el espectro (multiplicidades/forma de Smith del Gram del contacto)"
+  },
+  {
+   "row": "5",
+   "row_name": "integralidad de ℤ (floors, torsión, periodización)",
+   "col": "E",
+   "col_name": "flujo/familia en T",
+   "status": "PARTIAL",
+   "routes": [
+    {
+     "id": "R162_1802 O1802.3",
+     "verdict": "OPEN",
+     "killer": "—",
+     "note": "ancho ≥0 vía integralidad"
+    },
+    {
+     "id": "R162_1902",
+     "verdict": "NO-GO (lineal)",
+     "killer": "F2,E1",
+     "note": "sólo cerró la versión lineal en c"
+    }
+   ],
+   "residual": "ancho de la ventana de residuo ≥0 mediante integralidad NO lineal en c, seguido en T"
+  },
+  {
+   "row": "5",
+   "row_name": "integralidad de ℤ (floors, torsión, periodización)",
+   "col": "F",
+   "col_name": "transformadas globales en T",
+   "status": "EMPTY",
+   "routes": [],
+   "residual": "periodización/Poisson en la variable T de un objeto global"
+  },
+  {
+   "row": "5",
+   "row_name": "integralidad de ℤ (floors, torsión, periodización)",
+   "col": "G",
+   "col_name": "familias de funciones L/cuerpos",
+   "status": "EMPTY",
+   "routes": [],
+   "residual": "integralidad a través de familias (conductores, torsión de cuerpos)"
+  },
+  {
+   "row": "5",
+   "row_name": "integralidad de ℤ (floors, torsión, periodización)",
+   "col": "H",
+   "col_name": "objetos geométricos/dinámicos",
+   "status": "PARTIAL",
+   "routes": [
+    {
+     "id": "R162_1001",
+     "verdict": "NO-GO",
+     "killer": "F1,F2,F3",
+     "note": "cociclo Φ_Λ ⟺ a=Λ, separa Λχ₂ y Beurling (𝒩_B⊄ℤ); tests band-limited leen sólo primos"
+    },
+    {
+     "id": "R160_M12",
+     "verdict": "PARTIAL",
+     "killer": "—",
+     "note": "×p"
+    }
+   ],
+   "residual": "Pila–Wilkie / teoría de modelos / rigidez de medidas ×p frente a W_T nunca analizados"
+  },
+  {
+   "row": "6",
+   "row_name": "valores exactos de Λ (Λ*1=log, Selberg, Chebyshev)",
+   "col": "A",
+   "col_name": "forma cuadrática de una ventana",
+   "status": "PARTIAL",
+   "routes": [
+    {
+     "id": "R160_D4 Thm 5.1",
+     "verdict": "NO-GO",
+     "killer": "window shift",
+     "note": "identidad en tests = traslación a T+½log X"
+    },
+    {
+     "id": "D4 Cor 5.2",
+     "verdict": "NO-GO",
+     "killer": "F3",
+     "note": "finitos valores exactos"
+    },
+    {
+     "id": "R162_406",
+     "verdict": "NO-GO",
+     "killer": "datum cancels",
+     "note": "coef. de borde se anula en umbrales compuestos"
+    }
+   ],
+   "residual": "O-D4.2: núcleo de 𝒲 / cono 𝒞′ en tests decrecientes de soporte no acotado"
+  },
+  {
+   "row": "6",
+   "row_name": "valores exactos de Λ (Λ*1=log, Selberg, Chebyshev)",
+   "col": "B",
+   "col_name": "vector núcleo del primer contacto (lineal en F)",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_1401",
+     "verdict": "NO-GO",
+     "killer": "F3,E1",
+     "note": "log sólo toca X en s=1 (Tate); inerte en deletion/DH"
+    },
+    {
+     "id": "R162_1502",
+     "verdict": "NO-GO",
+     "killer": "F2,F3,M",
+     "note": "derrame de comb, Λ-paso inerte"
+    },
+    {
+     "id": "R162_403",
+     "verdict": "NO-GO",
+     "killer": "F1",
+     "note": "H^(P)=0; identidades de símbolo"
+    },
+    {
+     "id": "R162_401",
+     "verdict": "NO-GO",
+     "killer": "F4",
+     "note": "[X,S_N]=−K_N"
+    },
+    {
+     "id": "R162_502 A",
+     "verdict": "NO-GO",
+     "killer": "equivariance",
+     "note": "Hecke"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "6",
+   "row_name": "valores exactos de Λ (Λ*1=log, Selberg, Chebyshev)",
+   "col": "C",
+   "col_name": "funcionales cuadráticos/superiores de F",
+   "status": "PARTIAL",
+   "routes": [
+    {
+     "id": "R162_501",
+     "verdict": "PROVED/no sign",
+     "killer": "—",
+     "note": "identidad Selberg–virial"
+    },
+    {
+     "id": "R162_901",
+     "verdict": "PARTIAL",
+     "killer": "F2,E1,F3,M",
+     "note": "Selberg en canal suma ε²; canal diferencia sin control; polo ε_c<1"
+    }
+   ],
+   "residual": "controlar canal diferencia |Σw_n n^{it}|² sin resumar a Σ_ρ (lección 1003)"
+  },
+  {
+   "row": "6",
+   "row_name": "valores exactos de Λ (Λ*1=log, Selberg, Chebyshev)",
+   "col": "D",
+   "col_name": "espectro (autovalores, Perron, nodal)",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_702 residuo",
+     "verdict": "OPEN→dead",
+     "killer": "F3,M",
+     "note": "sólo valores exactos separan Λ en 𝒞"
+    },
+    {
+     "id": "R162_1603",
+     "verdict": "NO-GO",
+     "killer": "F3",
+     "note": "cancelación en umbrales compuestos"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "6",
+   "row_name": "valores exactos de Λ (Λ*1=log, Selberg, Chebyshev)",
+   "col": "E",
+   "col_name": "flujo/familia en T",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_802",
+     "verdict": "NO-GO",
+     "killer": "window shift",
+     "note": "Λ*1=log = traslación de ventana en el flujo"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "6",
+   "row_name": "valores exactos de Λ (Λ*1=log, Selberg, Chebyshev)",
+   "col": "F",
+   "col_name": "transformadas globales en T",
+   "status": "EMPTY",
+   "routes": [],
+   "residual": ""
+  },
+  {
+   "row": "6",
+   "row_name": "valores exactos de Λ (Λ*1=log, Selberg, Chebyshev)",
+   "col": "G",
+   "col_name": "familias de funciones L/cuerpos",
+   "status": "EMPTY",
+   "routes": [],
+   "residual": ""
+  },
+  {
+   "row": "6",
+   "row_name": "valores exactos de Λ (Λ*1=log, Selberg, Chebyshev)",
+   "col": "H",
+   "col_name": "objetos geométricos/dinámicos",
+   "status": "EMPTY",
+   "routes": [],
+   "residual": ""
+  },
+  {
+   "row": "7",
+   "row_name": "lado de ceros/fórmula explícita",
+   "col": "A",
+   "col_name": "forma cuadrática de una ventana",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "Paper 47 Thm Z / finZ",
+     "verdict": "EQUIV",
+     "killer": "E1",
+     "note": "certificado = fórmula explícita"
+    },
+    {
+     "id": "phase 155 r5",
+     "verdict": "EQUIV",
+     "killer": "E1",
+     "note": "indeterminación de Kreĭn"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "7",
+   "row_name": "lado de ceros/fórmula explícita",
+   "col": "B",
+   "col_name": "vector núcleo del primer contacto (lineal en F)",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_1501",
+     "verdict": "AUDIT",
+     "killer": "—",
+     "note": "R_LF=0 ⟺ F=0; Lemma D (Descartes) infinitos cambios de signo; objetivos R-A/B/C luego muertos"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "7",
+   "row_name": "lado de ceros/fórmula explícita",
+   "col": "C",
+   "col_name": "funcionales cuadráticos/superiores de F",
+   "status": "EMPTY",
+   "routes": [],
+   "residual": "funcional no lineal con datos de ceros (correlación de pares como input exacto, no estadístico)"
+  },
+  {
+   "row": "7",
+   "row_name": "lado de ceros/fórmula explícita",
+   "col": "D",
+   "col_name": "espectro (autovalores, Perron, nodal)",
+   "status": "PARTIAL",
+   "routes": [
+    {
+     "id": "R162_2101",
+     "verdict": "PROVED structure",
+     "killer": "M",
+     "note": "casi-núcleo = radical truncado de ζ (Pólya), margen doble-exponencial"
+    },
+    {
+     "id": "R162_2190",
+     "verdict": "CONFIRMED float",
+     "killer": "—",
+     "note": "s₂^c=0.9997678"
+    }
+   ],
+   "residual": "R-C.b para ζ necesita input del lado de ceros; per-ventana → choca con M"
+  },
+  {
+   "row": "7",
+   "row_name": "lado de ceros/fórmula explícita",
+   "col": "E",
+   "col_name": "flujo/familia en T",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_1802 Thm R",
+     "verdict": "EQUIV",
+     "killer": "E1",
+     "note": "ventana ∀T"
+    },
+    {
+     "id": "R162_902",
+     "verdict": "EQUIV",
+     "killer": "E1",
+     "note": "asíntota"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "7",
+   "row_name": "lado de ceros/fórmula explícita",
+   "col": "F",
+   "col_name": "transformadas globales en T",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_803",
+     "verdict": "NO-GO",
+     "killer": "E1,F1,F3",
+     "note": "Thm G = criterio Herglotz de Lagarias; primer contacto invisible"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "7",
+   "row_name": "lado de ceros/fórmula explícita",
+   "col": "G",
+   "col_name": "familias de funciones L/cuerpos",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "phase 149",
+     "verdict": "NO-GO",
+     "killer": "rationality wall",
+     "note": "momentos gaussianos/extracción Deligne"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "7",
+   "row_name": "lado de ceros/fórmula explícita",
+   "col": "H",
+   "col_name": "objetos geométricos/dinámicos",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "arcs III-V,X; 158",
+     "verdict": "EQUIV",
+     "killer": "E1,T1,OT-5′",
+     "note": "CCM/Ω₇, métrica unitarizante, ceros como espectro, espacio de clases de adeles"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "8",
+   "row_name": "sin aritmética (estructural, ciego al peso)",
+   "col": "A",
+   "col_name": "forma cuadrática de una ventana",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "arc II; phase 120-121",
+     "verdict": "EQUIV",
+     "killer": "E1,trilemma",
+     "note": "Pontryagin, APS/η, Maslov; flecha F2"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "8",
+   "row_name": "sin aritmética (estructural, ciego al peso)",
+   "col": "B",
+   "col_name": "vector núcleo del primer contacto (lineal en F)",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_408",
+     "verdict": "PROVED",
+     "killer": "E1",
+     "note": "(NE) exacta; Conj 7.1 ⟺ no contacto"
+    },
+    {
+     "id": "P124_004-010",
+     "verdict": "NO-GO",
+     "killer": "F1",
+     "note": "virial/Mourre en collar"
+    },
+    {
+     "id": "R161_016",
+     "verdict": "NO-GO",
+     "killer": "F1",
+     "note": "pullback de Markov"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "8",
+   "row_name": "sin aritmética (estructural, ciego al peso)",
+   "col": "C",
+   "col_name": "funcionales cuadráticos/superiores de F",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_1202",
+     "verdict": "NO-GO",
+     "killer": "F2,F3,E1",
+     "note": "colapso polinomial a rango Sonin en cualquier grado (Thm C); Thm A sólo en grandes círculos (1390)"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "8",
+   "row_name": "sin aritmética (estructural, ciego al peso)",
+   "col": "D",
+   "col_name": "espectro (autovalores, Perron, nodal)",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "R162_1602",
+     "verdict": "NO-GO",
+     "killer": "universal",
+     "note": "resolvente no TP₂; conteo de dos restricciones HEURISTIC (1890)"
+    },
+    {
+     "id": "R162_1701",
+     "verdict": "PARTIAL",
+     "killer": "E1",
+     "note": "R-C.a ⟺ RH dado R-C.b"
+    },
+    {
+     "id": "R162_1801",
+     "verdict": "NO-GO",
+     "killer": "3×3 counterexample",
+     "note": "homotopía/polarización"
+    },
+    {
+     "id": "R162_1901",
+     "verdict": "NO-GO",
+     "killer": "3×3 model",
+     "note": "modelo con contacto Tipo I; §3(iv) WRONG (2090)"
+    },
+    {
+     "id": "R162_2001/2190",
+     "verdict": "FALSIFIER FIRES",
+     "killer": "two-atom Type I curve",
+     "note": "R-C.b falso ciego al peso"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "8",
+   "row_name": "sin aritmética (estructural, ciego al peso)",
+   "col": "E",
+   "col_name": "flujo/familia en T",
+   "status": "PAINTED",
+   "routes": [
+    {
+     "id": "arcs I,IV; 159 G2",
+     "verdict": "NO-GO",
+     "killer": "Φ (DH,Ξ_a)",
+     "note": "dBN, Jensen, Lee–Yang, Pólya–Schur"
+    }
+   ],
+   "residual": ""
+  },
+  {
+   "row": "8",
+   "row_name": "sin aritmética (estructural, ciego al peso)",
+   "col": "F",
+   "col_name": "transformadas globales en T",
+   "status": "EMPTY",
+   "routes": [],
+   "residual": ""
+  },
+  {
+   "row": "8",
+   "row_name": "sin aritmética (estructural, ciego al peso)",
+   "col": "G",
+   "col_name": "familias de funciones L/cuerpos",
+   "status": "EMPTY",
+   "routes": [],
+   "residual": "pruebas uniformes en el cuerpo permitidas por T1 (phase 157)"
+  },
+  {
+   "row": "8",
+   "row_name": "sin aritmética (estructural, ciego al peso)",
+   "col": "H",
+   "col_name": "objetos geométricos/dinámicos",
+   "status": "PARTIAL",
+   "routes": [
+    {
+     "id": "159 G1",
+     "verdict": "NO-GO",
+     "killer": "OT-5′ walls",
+     "note": "motivos, Arakelov, álgebras de operadores"
+    },
+    {
+     "id": "R160_C1",
+     "verdict": "NO-GO",
+     "killer": "Thm Z",
+     "note": "laminación holomorfa: un polo ⇒ ≤1 par"
+    },
+    {
+     "id": "R160_C3/D2",
+     "verdict": "NO-GO",
+     "killer": "Thm H, Thm T",
+     "note": "Meyer H¹"
+    },
+    {
+     "id": "phases 135-140",
+     "verdict": "NO-GO",
+     "killer": "S-11",
+     "note": "h⁰ real / RR"
+    }
+   ],
+   "residual": "D1: laminación Torelli-failing con puntos fijos (Teichmüller lemma sin probar); única clase de carrier no excluida"
+  }
+ ]
+}

@@ -207,7 +207,7 @@ or asymptotic statement.
 One might instead retain the two divergent feature spaces in
 
 \[
- \mathcal K=H\oplus H,qquad
+ \mathcal K=H\oplus H,\qquad
  [(x,y),(x',y')]=\langle x,x'\rangle-\langle y,y'\rangle,   \tag{5.1}
 \]
 

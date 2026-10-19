@@ -1,6 +1,6 @@
 # E77.7k - Bordered Weyl completeness and the singular-section correction
 
-**Run:** 2026-07-18.
+**Run:**
 
 ## 1. Purpose
 

@@ -1,6 +1,6 @@
 # P123.113 — Exact radical and sign of the local trace-of-product pairing
 
-Date: 2026-09-07. Status: PROVED-IN-REPOSITORY on compact
+Status: PROVED-IN-REPOSITORY on compact
 multiplicative Bruhat tests on Q_q^*, with probability unit Haar.
 This is a local calculation, not the global numerical theory of A.6.
 

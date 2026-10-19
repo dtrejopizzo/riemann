@@ -9,7 +9,7 @@ For signed cells
 
 ```text
 A_n^+ delta_n + A_n^- delta_{n^{-1}},
-qquad A_n^-=(A_n^+)^*,
+\qquad A_n^-=(A_n^+)^*,
 ```
 
 the resonant words of length `2` are exactly

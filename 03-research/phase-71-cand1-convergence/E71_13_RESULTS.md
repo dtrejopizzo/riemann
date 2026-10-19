@@ -1,6 +1,5 @@
 # E71.13 -- persistent-divisor product results
 
-**Date:** 2026-07-07.
 **Script:** `E71_13_persistent_product_probe.py`.
 
 ## Output

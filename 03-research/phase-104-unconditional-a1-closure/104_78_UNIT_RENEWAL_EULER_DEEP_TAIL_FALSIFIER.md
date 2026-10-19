@@ -1,20 +1,19 @@
-# 104_78 — Falsificador Euler unitario para la cola profunda
+# 104_78 — Unitary Euler falsifier for the deep tail
 
-**Resultado.** La renovación exacta
+**Result.** The exact renewal
 
 \[
  \sum_{D\mid N}\Lambda(D)=\log |N|,
  \tag{1}
 \]
 
-la constancia \(\Lambda(P^k)=\log |P|\) sobre cada torre, la positividad de
-los pesos, un producto de Euler con multiplicidades primas enteras no
-negativas, una ecuación funcional \(s\leftrightarrow1-s\) y una ley prima
-**de grado** con error relativo exponencial **no bastan**, ni
-conjuntamente, para demostrar el gate profundo de `104_75`.
+the constancy \(\Lambda(P^k)=\log |P|\) over each tower, the positivity of
+the weights, an Euler product with non-negative integer prime
+multiplicities, a functional equation \(s\leftrightarrow1-s\) and a
+**degree** prime law with exponential relative error **do not suffice**,
+not even jointly, to prove the deep gate of `104_75`.
 
-Se construye un monoide aritmético libre y completamente explícito cuyo
-zeta es
+A free, fully explicit arithmetic monoid is constructed whose zeta is
 
 \[
  \boxed{
@@ -22,35 +21,34 @@ zeta es
  \tag{2}
 \]
 
-Su producto de Euler tiene un número entero no negativo de primos en cada
-grado, todas sus torres tienen multiplicidad unitaria y
+Its Euler product has a non-negative integer number of primes at each
+degree, all its towers have unit multiplicity and
 
 \[
  Z(1/(6T))=Z(T).                                          \tag{3}
 \]
 
-Además, si \(\Psi_k\) es la masa de von Mangoldt en grado \(k\)
-normalizada por \(\log6\), entonces
+Moreover, if \(\Psi_k\) is the von Mangoldt mass at degree \(k\)
+normalized by \(\log6\), then
 
 \[
  \boxed{\Psi_k=6^k+1-3^k-2^k,}                           \tag{4}
 \]
 
-de modo que, coeficiente a coeficiente en la variable de grado, el error
-relativo es \(O(2^{-k})\). Esta es la versión reticular del PNT propia del
-modelo; no es el PNT ordinario \(\psi(x)\sim x\) en una variable continua
-de norma (véase la \S5).
+so that, coefficient by coefficient in the degree variable, the relative
+error is \(O(2^{-k})\). This is the lattice version of the PNT proper to
+the model; it is not the ordinary PNT \(\psi(x)\sim x\) in a continuous
+norm variable (see §5).
 
-No obstante, los ceros
+Nevertheless, the zeros
 
 \[
  \beta_+=\log_6 3>{1\over2},\qquad
  \beta_-=\log_6 2=1-\beta_+                              \tag{5}
 \]
 
-están fuera de la recta central. La forma prima--Laguerre regulada, con
-polo, bloque complementario, primos y potencias primas conservados hasta
-el final, satisface
+lie off the central line. The regulated prime--Laguerre form, with pole,
+complementary block, primes and prime powers kept to the end, satisfies
 
 \[
  {1\over H_X}\sum_{n\le X}{1\over n}
@@ -60,92 +58,92 @@ el final, satisface
  \qquad \varepsilon_X=e^{-X/100}.                        \tag{6}
 \]
 
-Así (6) es un falsificador más fuerte que el cuarteto abstracto de
-`104_75`/`104_77`: posee un producto de Euler positivo, renovación exacta y
-torres unitarias. No es, sin embargo, un contraejemplo para los pesos
-ordinarios \(\Lambda(m)\): sus primos son primos formales graduados, con
-normas \(6^d\) y multiplicidades. El veredicto preciso es que cualquier
-prueba de la cola profunda para la zeta real debe usar una propiedad que
-distinga la colocación de los primos ordinarios de este sistema; no puede
-deducirse solo de (1), de las torres, de la ley prima de grado, de la
-ecuación funcional y de positividad.
+Thus (6) is a stronger falsifier than the abstract quartet of
+`104_75`/`104_77`: it has a positive Euler product, exact renewal and
+unitary towers. It is not, however, a counterexample for the ordinary
+weights \(\Lambda(m)\): its primes are formal graded primes, with norms
+\(6^d\) and multiplicities. The precise verdict is that any proof of the
+deep tail for the real zeta must use a property that distinguishes the
+placement of the ordinary primes from this system; it cannot be deduced
+solely from (1), from the towers, from the degree prime law, from the
+functional equation and from positivity.
 
-Este documento no prueba el límite de `104_75`, A1 ni RH.
+This document does not prove the limit of `104_75`, A1 or RH.
 
 ---
 
-## 1. Primos formales y multiplicidades enteras
+## 1. Formal primes and integer multiplicities
 
-Sea
+Let
 
 \[
  M_d(r)={1\over d}\sum_{e\mid d}\mu(e)r^{d/e}            \tag{7}
 \]
 
-el número de collares aperiódicos de longitud \(d\) sobre un alfabeto de
-\(r\) letras. Defina
+be the number of aperiodic necklaces of length \(d\) over an alphabet of
+\(r\) letters. Define
 
 \[
  \boxed{\pi_d=M_d(6)+M_d(1)-M_d(3)-M_d(2).}              \tag{8}
 \]
 
-Cada \(\pi_d\) es entero. También es no negativo: tome dentro de un
-alfabeto de seis letras dos subalfabetos disjuntos de tamaños tres y dos.
-Los collares aperiódicos que usan solo el primero y los que usan solo el
-segundo son subconjuntos disjuntos de los collares sobre seis letras. Por
-ello \(M_d(6)\ge M_d(3)+M_d(2)\), y sumar \(M_d(1)\ge0\)
-prueba la afirmación.
+Each \(\pi_d\) is an integer. It is also non-negative: take, within an
+alphabet of six letters, two disjoint subalphabets of sizes three and
+two. The aperiodic necklaces that use only the first, and those that use
+only the second, are disjoint subsets of the necklaces over six letters.
+Hence \(M_d(6)\ge M_d(3)+M_d(2)\), and adding \(M_d(1)\ge0\) proves the
+claim.
 
-Construya el monoide abeliano libre que tiene \(\pi_d\) generadores
-primos de grado \(d\), y asigne a cada generador la norma \(6^d\). La
-identidad clásica de collares
+Build the free abelian monoid with \(\pi_d\) prime generators of degree
+\(d\), and assign each generator the norm \(6^d\). The classical necklace
+identity
 
 \[
  \prod_{d\ge1}(1-T^d)^{-M_d(r)}={1\over1-rT}             \tag{9}
 \]
 
-da, como identidad de series formales,
+gives, as an identity of formal series,
 
 \[
  \prod_{d\ge1}(1-T^d)^{-\pi_d}
  ={(1-3T)(1-2T)\over(1-T)(1-6T)}=Z(T).                   \tag{10}
 \]
 
-No hay pesos fraccionarios ni torres truncadas en (10). Si \(P\) es uno
-de esos primos, defina
+There are no fractional weights or truncated towers in (10). If \(P\) is
+one of these primes, define
 
 \[
  \Lambda_{\mathcal P}(P^j)=\deg(P)\log6,
  \qquad \Lambda_{\mathcal P}(N)=0
- \quad\hbox{si \(N\) no es potencia de un primo}.       \tag{11}
+ \quad\hbox{if \(N\) is not a prime power}.       \tag{11}
 \]
 
-Para \(N=\prod_P P^{a_P}\),
+For \(N=\prod_P P^{a_P}\),
 
 \[
  \sum_{D\mid N}\Lambda_{\mathcal P}(D)
  =\sum_P a_P\deg(P)\log6=\log|N|,                       \tag{12}
 \]
 
-que es la renovación unitaria exacta, elemento por elemento.
+which is the exact unitary renewal, element by element.
 
-Tomando derivada logarítmica en (10),
+Taking the logarithmic derivative in (10),
 
 \[
  \sum_{d\mid k}d\pi_d=6^k+1-3^k-2^k.                  \tag{13}
 \]
 
-La masa de Mangoldt no normalizada en grado \(k\) es \(\log6\) veces el
-miembro izquierdo. En lo sucesivo absorbemos \(\log6\) en el kernel y
-llamamos \(\Psi_k\) al entero de (13). La ecuación (4) y la ley prima
-fuerte **de grado** quedan probadas. No se la identificará en lo que
-sigue con el PNT continuo de los enteros ordinarios.
+The unnormalized Mangoldt mass at degree \(k\) is \(\log6\) times the
+left-hand side. Hereafter we absorb \(\log6\) into the kernel and call
+\(\Psi_k\) the integer in (13). Equation (4) and the strong **degree**
+prime law are thereby proved. It will not be identified below with the
+continuous PNT for ordinary integers.
 
 ---
 
-## 2. Ecuación funcional y cero exterior
+## 2. Functional equation and the outer zero
 
-Una sustitución directa prueba (3):
+A direct substitution proves (3):
 
 \[
  \begin{aligned}
@@ -156,22 +154,22 @@ Una sustitución directa prueba (3):
  \end{aligned}                                          \tag{14}
 \]
 
-Quitando los dos polos, la función completada puede tomarse como
+Removing the two poles, the completed function may be taken as
 
 \[
  \Xi(s)=6^s(1-3\,6^{-s})(1-2\,6^{-s}).                  \tag{15}
 \]
 
-De (14), \(\Xi(1-s)=\Xi(s)\). Sus ceros son
+From (14), \(\Xi(1-s)=\Xi(s)\). Its zeros are
 
 \[
  \beta_\pm+{2\pi i k\over\log6},\qquad k\in\mathbb Z, \tag{16}
 \]
 
-con \(\beta_\pm\) dados por (5). En particular el sistema viola su
-análogo de RH.
+with \(\beta_\pm\) given by (5). In particular the system violates its
+analogue of RH.
 
-Defina sus coeficientes de Li por
+Define its Li coefficients by
 
 \[
  \lambda_n^{\mathcal P}
@@ -179,8 +177,8 @@ Defina sus coeficientes de Li por
  \{s^{n-1}\log\Xi(s)\}\right|_{s=1}.                  \tag{17}
 \]
 
-Sea \(h=\log6\), \(L_{n-1}=L_{n-1}^{(1)}\). Al desarrollar los dos
-logaritmos de (15), la identidad
+Let \(h=\log6\), \(L_{n-1}=L_{n-1}^{(1)}\). Expanding the two logarithms
+of (15), the identity
 
 \[
  {1\over(n-1)!}\left.{d^n\over ds^n}
@@ -188,7 +186,7 @@ logaritmos de (15), la identidad
  =-u e^{-u}L_{n-1}(u)                                    \tag{18}
 \]
 
-produce la fórmula aritmética convergente
+yields the convergent arithmetic formula
 
 \[
  \boxed{
@@ -196,7 +194,7 @@ produce la fórmula aritmética convergente
  =hn+h\sum_{k\ge1}{2^{-k}+3^{-k}\}L_{n-1}(kh).}        \tag{19}
 \]
 
-La generatriz
+The generating function
 
 \[
  \mathcal G_{\mathcal P}(z)
@@ -204,25 +202,25 @@ La generatriz
  =\sum_{n\ge1}\lambda_n^{\mathcal P}z^n               \tag{20}
 \]
 
-tiene su singularidad de menor módulo en
+has its singularity of smallest modulus at
 
 \[
  w_0=1-{1\over\beta_+}
- =-{\log2\over\log3},qquad
+ =-{\log2\over\log3},\qquad
  R:=|w_0|^{-1}={\log3\over\log2}>1.                    \tag{21}
 \]
 
-Es única: para \(\rho=\beta_++i\gamma\),
+It is unique: for \(\rho=\beta_++i\gamma\),
 
 \[
  \left|1-{1\over\rho}\right|^2
  ={(1-\beta_+)^2+\gamma^2\over\beta_+^2+\gamma^2},     \tag{22}
 \]
 
-que es estrictamente mínima en \(\gamma=0\); los ceros con parte real
-\(\beta_-<1/2\) dan módulos mayores que uno. Restando la parte principal
-en \(w_0\) y aplicando Cauchy en un círculo hasta la siguiente
-singularidad se obtiene
+which is strictly minimal at \(\gamma=0\); zeros with real part
+\(\beta_-<1/2\) give moduli larger than one. Subtracting the principal
+part at \(w_0\) and applying Cauchy's formula on a circle up to the next
+singularity gives
 
 \[
  \boxed{
@@ -230,7 +228,7 @@ singularidad se obtiene
  \qquad 1<R_1<R.}                                       \tag{23}
 \]
 
-En particular, para \(n\) par,
+In particular, for even \(n\),
 
 \[
  \lambda_n^{\mathcal P}=-(1+o(1))R^n.                  \tag{24}
@@ -238,10 +236,10 @@ En particular, para \(n\) par,
 
 ---
 
-## 3. Forma prima--polo completamente acoplada
+## 3. Fully coupled prime--pole form
 
-El falsificador puede escribirse exactamente en la forma del gate
-aritmético. Para \(\varepsilon>0\), ponga
+The falsifier can be written exactly in the form of the arithmetic gate.
+For \(\varepsilon>0\), set
 
 \[
  \begin{aligned}
@@ -256,8 +254,8 @@ aritmético. Para \(\varepsilon>0\), ponga
  \end{aligned}
 \]
 
-Todas las series de (25) convergen absolutamente. Usando (4), sin separar
-ninguna torre,
+All series in (25) converge absolutely. Using (4), without separating
+any tower,
 
 \[
  \begin{aligned}
@@ -268,20 +266,20 @@ ninguna torre,
  \end{aligned}
 \]
 
-Por (19), \(\lambda_{n,\varepsilon}^{\mathcal P}\to
-\lambda_n^{\mathcal P}\) para cada \(n\). Más importa aquí la diagonal
-\(\varepsilon_X=e^{-X/100}\). El cero dominante de la contribución
-\(2^{-k}6^{-\varepsilon_Xk}\) se desplaza de \(\beta_+\) a
-\(\beta_+-\varepsilon_X\); por tanto
+By (19), \(\lambda_{n,\varepsilon}^{\mathcal P}\to
+\lambda_n^{\mathcal P}\) for each \(n\). What matters more here is the
+diagonal \(\varepsilon_X=e^{-X/100}\). The dominant zero of the
+contribution \(2^{-k}6^{-\varepsilon_Xk}\) shifts from \(\beta_+\) to
+\(\beta_+-\varepsilon_X\); hence
 
 \[
  w_X=1-{1\over\beta_+-\varepsilon_X}=w_0+O(\varepsilon_X).
  \tag{27}
 \]
 
-Las demás singularidades permanecen separadas uniformemente de \(w_X\).
-Para hacer explícito que no se perdió ningún factor, (26) es el
-coeficiente de Li de la función meromorfa
+The remaining singularities stay uniformly separated from \(w_X\). To
+make explicit that no factor was lost, (26) is the Li coefficient of the
+meromorphic function
 
 \[
  \Xi_\varepsilon(s)=6^s(1-6^{-s})
@@ -290,19 +288,18 @@ coeficiente de Li de la función meromorfa
   \over 1-6^{-(s+\varepsilon)}}.                        \tag{27a}
 \]
 
-En efecto, desarrollar sus cuatro logaritmos reproduce término a
-término (26). El cero exterior está en
-\(\beta_+-\varepsilon\), el polo artificial está en
-\(-\varepsilon\), y el cero fijo restante está en \(0\), en cada caso
-junto con sus traslaciones por \(2\pi i\mathbb Z/h\). Las familias con
-parte real \(0\) o \(-\varepsilon\) se envían por
-\(s=(1-z)^{-1}\) fuera del disco unidad; la familia con parte real
-\(\beta_--\varepsilon<1/2\) también. Las singularidades no reales de la
-familia \(\beta_+-\varepsilon\) quedan uniformemente más lejos del origen
-que \(w_X\). Por tanto, tras sustraer la parte principal en \(w_X\), existe
-un disco fijo, mayor que \(|w_X|\), en el que el resto es holomorfo y
-uniformemente acotado para \(\varepsilon\) pequeño. Cauchy da, ahora
-uniformemente para \(\varepsilon_X\to0\),
+Indeed, expanding its four logarithms reproduces (26) term by term. The
+outer zero is at \(\beta_+-\varepsilon\), the artificial pole is at
+\(-\varepsilon\), and the remaining fixed zero is at \(0\), in each case
+together with its translates by \(2\pi i\mathbb Z/h\). The families with
+real part \(0\) or \(-\varepsilon\) are sent by \(s=(1-z)^{-1}\) outside
+the unit disk; so is the family with real part \(\beta_--\varepsilon<1/2\).
+The non-real singularities of the family \(\beta_+-\varepsilon\) remain
+uniformly farther from the origin than \(w_X\). Hence, after subtracting
+the principal part at \(w_X\), there is a fixed disk, larger than
+\(|w_X|\), on which the remainder is holomorphic and uniformly bounded
+for small \(\varepsilon\). Cauchy's formula then gives, now uniformly as
+\(\varepsilon_X\to0\),
 
 \[
  \boxed{
@@ -311,44 +308,43 @@ uniformemente para \(\varepsilon_X\to0\),
  1\le n\le X,}                                           \tag{28}
 \]
 
-para algún \(1<R_1<R\), con constante absoluta uniforme en \(n\) y en
-\(X\) grande. Como
-\(n\varepsilon_X\to0\) uniformemente en \(n\le X\),
+for some \(1<R_1<R\), with an absolute constant uniform in \(n\) and in
+large \(X\). Since \(n\varepsilon_X\to0\) uniformly for \(n\le X\),
 
 \[
  |w_X|^{-n}=R^n(1+o(1)).                                 \tag{29}
 \]
 
-Las ecuaciones (28)--(29) conservan el canal polar y toda la suma Euler:
-son una evaluación de su diferencia exacta (25), no una cota separada.
+Equations (28)--(29) keep the polar channel and the whole Euler sum: they
+are an evaluation of its exact difference (25), not a separate bound.
 
 ---
 
-## 4. La cola profunda tiene densidad \(1/4\)
+## 4. The deep tail has density \(1/4\)
 
-El evento de (6) equivale exactamente a
+The event in (6) is exactly equivalent to
 
 \[
  \lambda_{n,\varepsilon_X}^{\mathcal P}+\log(n+1)
  \le-e^{\sqrt X}.                                       \tag{30}
 \]
 
-Fije \(\delta>0\). Por (28)--(29), para \(X\) grande, todo entero par
+Fix \(\delta>0\). By (28)--(29), for large \(X\), every even integer
 
 \[
  n\ge {1+\delta\over\log R}\sqrt X                     \tag{31}
 \]
 
-satisface (30), y ningún entero impar en ese rango la satisface. Del otro
-lado, (28) y una cota de Cauchy uniforme para los grados menores muestran
-que (30) no se cumple cuando
+satisfies (30), and no odd integer in that range satisfies it. On the
+other side, (28) together with a uniform Cauchy bound for the smaller
+degrees show that (30) fails to hold when
 
 \[
  n\le {1-\delta\over\log R}\sqrt X.                    \tag{32}
 \]
 
-La franja entre (31) y (32) tiene masa armónica \(O_\delta(1)\), que es
-\(o(H_X)\). Finalmente,
+The strip between (31) and (32) has harmonic mass \(O_\delta(1)\), which
+is \(o(H_X)\). Finally,
 
 \[
  \sum_{\substack{c\sqrt X\le n\le X\\2\mid n}}{1\over n}
@@ -356,44 +352,44 @@ La franja entre (31) y (32) tiene masa armónica \(O_\delta(1)\), que es
  ={1\over4}\log X+O_c(1).                              \tag{33}
 \]
 
-Dividir por \(H_X=\log X+O(1)\), y luego dejar
-\(\delta\downarrow0\), prueba (6).
+Dividing by \(H_X=\log X+O(1)\), and then letting \(\delta\downarrow0\),
+proves (6).
 
 ---
 
-## 5. Alcance exacto del no-go
+## 5. Exact scope of the no-go
 
-El sistema (2) satisface simultáneamente:
+System (2) simultaneously satisfies:
 
-1. pesos de Mangoldt no negativos y constantes en cada torre;
-2. multiplicidad unitaria de cada primo formal;
-3. renovación divisora exacta (12);
-4. producto de Euler con \(\pi_d\in\mathbb Z_{\ge0}\);
-5. ecuación funcional exacta (3);
-6. ley prima de grado con error relativo \(O(2^{-k})\);
-7. la misma fase Laguerre y el mismo acoplamiento polo--Euler de (25).
+1. non-negative Mangoldt weights, constant on each tower;
+2. unit multiplicity of each formal prime;
+3. exact divisor renewal (12);
+4. Euler product with \(\pi_d\in\mathbb Z_{\ge0}\);
+5. exact functional equation (3);
+6. a degree prime law with relative error \(O(2^{-k})\);
+7. the same Laguerre phase and the same pole--Euler coupling of (25).
 
-Y, aun así, falla el límite profundo con valor exacto \(1/4\). Por tanto
-ninguna desigualdad **universal** derivada solo de esos siete inputs puede
-probar `104_75`.
+And yet it fails the deep limit, with exact value \(1/4\). Hence no
+**universal** inequality derived solely from those seven inputs can prove
+`104_75`.
 
-El sistema no comparte varios datos esenciales de la zeta de Riemann: el
-espectro de normas son potencias de seis con multiplicidad, no todos los
-enteros con factorización ordinaria; su completamiento no contiene el
-factor Gamma real de \(\zeta\); y es un sistema graduado, por lo que tiene
-periodicidad vertical y polos en toda la progresión
-\(1+2\pi i\mathbb Z/\log6\), no un único polo sobre la recta
+The system does not share several essential features of the Riemann
+zeta: the norm spectrum consists of powers of six with multiplicity, not
+all integers with ordinary factorization; its completion does not
+contain the real Gamma factor of \(\zeta\); and it is a graded system, so
+it has vertical periodicity and poles along the whole progression
+\(1+2\pi i\mathbb Z/\log6\), not a single pole on the line
 \(\Re s=1\).
 
-En particular, tampoco satisface el PNT ordinario en la variable continua
-de norma. Si
+In particular, it also fails the ordinary PNT in the continuous norm
+variable. If
 
 \[
  \psi_{\mathcal P}(x)
    =\sum_{|N|\le x}\Lambda_{\mathcal P}(N),
 \]
 
-entonces
+then
 
 \[
  \psi_{\mathcal P}(6^k)
@@ -401,37 +397,37 @@ entonces
  ={6h\over5}\,6^k+O(3^k+k),                             \tag{34}
 \]
 
-mientras la misma función permanece constante en
-\([6^k,6^{k+1})\). Así, \(\psi_{\mathcal P}(x)/x\) oscila entre límites
-distintos (desde \(h/5\) hasta \(6h/5\), salvo la convención en los
-extremos) y no tiende a \(1\).
+while the same function remains constant on \([6^k,6^{k+1})\). Thus
+\(\psi_{\mathcal P}(x)/x\) oscillates between distinct limits (from
+\(h/5\) to \(6h/5\), up to the convention at the endpoints) and does not
+tend to \(1\).
 
-Estos datos no son defectos ocultos del falsificador: delimitan
-exactamente su alcance. El documento descarta un teorema universal basado
-en los siete inputs de grado enumerados arriba; **no** descarta un
-argumento que use el PNT continuo, el soporte no reticular
-\(\{\log m:m\in\mathbb N\}\), la multiplicidad uno de cada norma entera
-ordinaria o el factor Gamma. Una prueba para los pesos reales
-\(\Lambda(m)\) debe usar de manera esencial al menos una propiedad que el
-modelo no conserve.
+These features are not hidden defects of the falsifier: they mark
+exactly its scope. The document rules out a universal theorem based on
+the seven degree inputs listed above; it does **not** rule out an
+argument that uses the continuous PNT, the non-lattice support
+\(\{\log m:m\in\mathbb N\}\), the multiplicity-one property of every
+ordinary integer norm, or the Gamma factor. A proof for the real weights
+\(\Lambda(m)\) must essentially use at least one property that the model
+does not preserve.
 
-**Veredicto.** El selector unitario y las interacciones multiplicativas de
-`104_20`/`104_48`/`104_49` no pueden, como axiomas abstractos, dar la cota
-unilateral pedida. El único frente sobreviviente sigue siendo una
-desigualdad específica de la localización ordinaria \(\{\log p\}\) y del
-factor Gamma de Riemann. No se obtuvo esa desigualdad aquí.
+**Verdict.** The unitary selector and the multiplicative interactions of
+`104_20`/`104_48`/`104_49` cannot, as abstract axioms, give the requested
+one-sided bound. The only surviving front remains a specific inequality
+about the ordinary placement \(\{\log p\}\) and about Riemann's Gamma
+factor. That inequality was not obtained here.
 
 ---
 
-## 6. Reproducción
+## 6. Reproduction
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 unit_renewal_euler_deep_tail_falsifier.py
 ```
 
-El checker verifica exactamente las multiplicidades, (13), la renovación
-en elementos formales de prueba y (14). Numéricamente verifica la
-singularidad dominante de (20) por extracción de Cauchy y la convergencia
-de la densidad armónica del modelo dominante a \(1/4\). La prueba de los
-enunciados para todo grado está en el texto.
+The checker verifies exactly the multiplicities, (13), the renewal on
+formal test elements, and (14). It numerically verifies the dominant
+singularity of (20) by Cauchy extraction and the convergence of the
+model's dominant harmonic density to \(1/4\). The proof of the statements
+for every degree is in the text.

@@ -1,0 +1,23 @@
+(1) D_T(F)/||F||^2 from comb = -3.479097
+(2) a^zeta template: C0 -5.372183 levy 5.862433 comb 1.444788 total 1.935038
+    sum over first   50 zeta zeros (both signs): 1.931050
+    sum over first  100 zeta zeros (both signs): 1.932526
+    sum over first  200 zeta zeros (both signs): 1.933822
+    sum over first  400 zeta zeros (both signs): 1.934422
+    sum over first  400 zeta zeros (both signs): 1.934422
+    + smoothed-density tail beyond gamma_N (to 2e4): 0.083949 -> 2.018371
+    h(t) samples: {0: 0.000305, 2: 0.015143, 5: 0.032617, 10: 0.02179, 15.67: 0.003952, 30: 0.002414, 60: 0.000339, 100: 6.7e-05}
+(3) off-line zeros of Z_Q (Re>1/2, 0<t<60), Newton grid:
+    rho = (0.932969697485 + 15.6682495313j) : quadruple contribution -0.709151 ; same zeros on the line 0.016635 ; excess -0.725786
+    rho = (0.9376669067 + 29.9833952352j) : quadruple contribution -0.083338 ; same zeros on the line 0.007627 ; excess -0.090965
+    rho = (0.696927045312 + 36.3740636864j) : quadruple contribution 0.003644 ; same zeros on the line 0.003790 ; excess -0.000146
+    rho = (0.823187316478 + 44.0001131802j) : quadruple contribution -0.000733 ; same zeros on the line 0.000102 ; excess -0.000834
+    rho = (0.634907601915 + 46.758408657j) : quadruple contribution 0.000871 ; same zeros on the line 0.000819 ; excess 0.000052
+    rho = (0.597437301598 + 52.7432664083j) : quadruple contribution 0.001743 ; same zeros on the line 0.001725 ; excess 0.000018
+    rho = (0.811172081206 + 58.5077373277j) : quadruple contribution 0.002394 ; same zeros on the line 0.001936 ; excess 0.000458
+    total off-line quadruples = -0.784571  vs D = -3.479097  (ratio 0.2255)
+(4) limit symbol of D on modulated indicators, lambda in [0,200]: max 3.2616  min -3.3976  mean -0.00104
+(5) sigma=1.2  y=-1.4477942  log cosh y=0.80844032 >= 0
+(5) sigma=1.5  y=-0.92205314  log cosh y=0.37574421 >= 0
+(5) sigma=2.0  y=-0.52690099  log cosh y=0.13282811 >= 0
+(5) sigma=3.0  y=-0.20582137  log cosh y=0.021033338 >= 0

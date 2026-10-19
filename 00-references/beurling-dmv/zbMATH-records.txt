@@ -1,0 +1,24 @@
+zbMATH Open API records, fetched 2026-09-23 from
+https://api.zbmath.org/v1/document/_search?search_string=ti:Beurling primes with large oscillation
+(open access; saved by the R157_003 auditor so that quotations are file:line checkable)
+
+=== zbMATH 5009587 Zbl 1207.11105
+title: Beurling primes with large oscillation
+authors: Diamond, Harold G.; Montgomery, Hugh L.; Vorhauer, Ulrike M. A.
+source: Math. Ann. 334, No. 1, 1-36 (2006).
+contribution type: summary | reviewer: None
+text:
+zbMATH Open Web Interface contents unavailable due to conflicting licenses.
+
+=== zbMATH 5145030 Zbl 1121.11061
+title: Beurling primes with RH and Beurling primes with large oscillation
+authors: Zhang, Wen-Bin
+source: Math. Ann. 337, No. 3, 671-704 (2007).
+contribution type: review | reviewer: Helmut Müller (Hamburg)
+text:
+From the author's abstract: Two Beurling generalized number systems, both with \(N(x)=kx+O(x^{1/2}\exp\{c(\log x)^{2/3}\})\) and \(k>0\) are constructed. The associated zeta function of the first satisfies the RH (Riemann Hypothesis) and ist prime counting function satisfies \(\pi(x)=li(x)+O(x^{1/2}\). The associated zeta function of the second has infinitely many zeros on the curve \(\sigma=1-1/\log t\) and no zeros to the right of the curve and the Chebyshev function \(\psi(x)\) of its primes satisfies 
+\[
+\begin{aligned} &\limsup\bigl(\psi(x)-x\bigr)/\bigl(x\exp\{-2\sqrt{\log x}\,\}\bigr)=2 \qquad \text{and}\\ &\liminf\bigl(\psi(x)-x\bigr)/\bigl(x\exp\{-2\sqrt{\log x}\,\}\bigr)=-2. \end{aligned}
+\]
+ A sharpened form of the Diamond-Montgomery-Vorhauer random approximation and elements of analytic number theory are used in the construction.
+

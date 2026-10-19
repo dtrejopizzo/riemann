@@ -1,6 +1,5 @@
 # E74.24 - Endpoint autopsy after the Schur and nodal audits
 
-Date: 2026-07-16.
 
 ## Proven reductions
 

@@ -1,7 +1,6 @@
 # E72.31 -- Scalar Abel form of Weyl-reduced leakage
 
-**Date:** 2026-07-08.
-**Role:** expand the minimal WRL estimate from E72.30 into a single scalar Abel-Chebyshev kernel.
+**Purpose:** expand the minimal WRL estimate from E72.30 into a single scalar Abel-Chebyshev kernel.
 
 ## 0. WRL
 

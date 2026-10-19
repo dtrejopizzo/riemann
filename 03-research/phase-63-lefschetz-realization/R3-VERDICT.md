@@ -1,6 +1,6 @@
 # R3 verdict — F_q positive control: the contrast is exact, MW-5 made precise
 
-**Date:** 2026-06-27 · Phase 63 · [E98_fq_control.py](E98_fq_control.py). Genuine elliptic curves (real point counts).
+Phase 63 · [E98_fq_control.py](E98_fq_control.py). Genuine elliptic curves (real point counts).
 
 ## What was checked
 

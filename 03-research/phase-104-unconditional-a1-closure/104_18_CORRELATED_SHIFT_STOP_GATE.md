@@ -1,18 +1,18 @@
-# 104_18 — Desplazamiento correlacionado finito: identidad y stop-gate
+# 104_18 — Finite correlated shift: identity and stop-gate
 
-**Rol.** Mantener finitos y correlacionados el regulador
-\(\varepsilon\downarrow0\) y el desplazamiento de Jordan \(u\downarrow0\),
-antes de tomar el primer jet. El objetivo era comprobar si la positividad
-exacta de \(J_u\) sobrevive a la colisión polo--Euler y produce la cota de
-A1. El resultado es negativo pero preciso: se obtiene una identidad finita
-nueva, una ecuación de renovación exacta y tres falsificadores. El límite
-vuelve al costo firmado \(C_n\) de `104_16`.
+**Role.** Keep the regulator
+\(\varepsilon\downarrow0\) and the Jordan shift \(u\downarrow0\) finite and
+correlated, before taking the first jet. The goal was to check whether the
+exact positivity of \(J_u\) survives the pole–Euler collision and produces
+the A1 bound. The result is negative but precise: a new finite identity is
+obtained, an exact renewal equation, and three falsifiers. The limit returns
+to the signed cost \(C_n\) of `104_16`.
 
-Este documento **no prueba A1 ni RH**.
+This document **does not prove A1 or RH**.
 
-## 1. Pre-registro y no duplicación interna
+## 1. Pre-registration and internal non-duplication
 
-Sean
+Let
 
 \[
  F(s)=(s-1)\zeta(s),\qquad
@@ -21,35 +21,35 @@ Sean
  \tag{1}
 \]
 
-`104_16` ya demostró el jet infinitesimal
+`104_16` already proved the infinitesimal jet
 
 \[
  \left.\partial_uH_u(s)\right|_{u=0}=-{F'(s)\over F(s)}
  \tag{2}
 \]
 
-y su pullback Cayley--Laguerre. Lo que se ensaya aquí no es otro jet:
-se fija
+and its Cayley–Laguerre pullback. What is tested here is not another jet:
+one fixes
 
 \[
  s_\varepsilon(z)=1+\varepsilon+{z\over1-z},
- \qquad u=c\varepsilon,qquad 0<c<1,                 \tag{3}
+ \qquad u=c\varepsilon,\qquad 0<c<1,                 \tag{3}
 \]
 
-y se conserva \(H_{c\varepsilon}\) exacto hasta después de extraer el
-coeficiente.
+and keeps \(H_{c\varepsilon}\) exact right up until after the coefficient is
+extracted.
 
-**Inputs permitidos.** Solo se usan la serie absolutamente convergente de
-\(A_u\) en \(\Re s>1+u\), la identidad generatriz de Laguerre, sumación de
-Abel y el orden real de \(F\) en \((1,\infty)\).
+**Allowed inputs.** Only the absolutely convergent series of
+\(A_u\) in \(\Re s>1+u\), the Laguerre generating identity, Abel
+summation, and the real order of \(F\) on \((1,\infty)\) are used.
 
-**Falsificador obligatorio.** Cualquier inferencia de signo debe sobrevivir
-al producto simétrico \(X_a(s)=\xi(s+a)\xi(s-a)\), que tiene ceros fuera de
-la línea \(1/2\) para todo \(a>0\).
+**Mandatory falsifier.** Any sign inference must survive the symmetric
+product \(X_a(s)=\xi(s+a)\xi(s-a)\), which has zeros off the line
+\(1/2\) for every \(a>0\).
 
-## 2. Teorema de coeficientes finitos
+## 2. Finite coefficient theorem
 
-Para \(\Re s>1+u\),
+For \(\Re s>1+u\),
 
 \[
  A_u(s)=\sum_{m\ge1}{J_u(m)\over m^s},
@@ -57,7 +57,7 @@ Para \(\Re s>1+u\),
  J_u(m)=m^u\prod_{p\mid m}(1-p^{-u})\ge0.            \tag{4}
 \]
 
-Defínase
+Define
 
 \[
  a_n(u,\varepsilon)
@@ -65,13 +65,13 @@ Defínase
                     L_n(\log m).                    \tag{5}
 \]
 
-La identidad generatriz
+The generating identity
 
 \[
  {e^{-xz/(1-z)}\over1-z}=\sum_{n\ge0}L_n(x)z^n
 \]
 
-da, para \(z\) en un entorno del origen,
+gives, for \(z\) in a neighborhood of the origin,
 
 \[
  \boxed{
@@ -79,13 +79,13 @@ da, para \(z\) en un entorno del origen,
  =\sum_{n\ge0}a_n(u,\varepsilon)z^n.}               \tag{6}
 \]
 
-Como
+Since
 
 \[
  H_u(s)=\left(1-{u\over s-1}\right)A_u(s),          \tag{7}
 \]
 
-para \(u=c\varepsilon\) el factor polar es exactamente
+for \(u=c\varepsilon\) the polar factor is exactly
 
 \[
  P_{c,\varepsilon}(z)
@@ -93,14 +93,14 @@ para \(u=c\varepsilon\) el factor polar es exactamente
    \over \varepsilon+(1-\varepsilon)z}.             \tag{8}
 \]
 
-Si
+If
 
 \[
  {H_u(s_\varepsilon(z))\over1-z}
  =\sum_{n\ge0}b_n(u,\varepsilon)z^n,                \tag{9}
 \]
 
-entonces (6)--(8) prueban la recurrencia finita
+then (6)–(8) prove the finite recurrence
 
 \[
  \boxed{
@@ -112,12 +112,12 @@ entonces (6)--(8) prueban la recurrencia finita
  \end{aligned}}                                      \tag{10}
 \]
 
-No se ha separado ninguna cantidad divergente: (10) conserva acoplados el
-polo y los coeficientes positivos de Jordan.
+No divergent quantity has been separated: (10) keeps the pole and the
+positive Jordan coefficients coupled.
 
-## 3. Forma de renovación exacta
+## 3. Exact renewal form
 
-Póngase
+Set
 
 \[
  G_{n,c,\varepsilon}
@@ -125,13 +125,13 @@ Póngase
              \over c\varepsilon(1-z)}.              \tag{11}
 \]
 
-Y sea
+And let
 
 \[
  S_u(x):=\sum_{m\le x}{J_u(m)\over m}.              \tag{12}
 \]
 
-Entonces
+Then
 
 \[
  \boxed{
@@ -145,37 +145,37 @@ Entonces
  \end{aligned}}                                      \tag{13}
 \]
 
-*Demostración.* De (7),
+*Proof.* From (7),
 
 \[
  {H_u(s)-1\over u}={A_u(s)-1\over u}-{A_u(s)\over s-1}. \tag{14}
 \]
 
-El primer término produce la suma de (13) mediante (6). Para el segundo,
-sumación de Abel da, absolutamente en el semiplano usado,
+The first term produces the sum in (13) via (6). For the second, Abel
+summation gives, absolutely in the half-plane used,
 
 \[
  {A_u(s)\over s-1}
  =\int_1^\infty x^{-s}S_u(x)\,dx.                   \tag{15}
 \]
 
-Aplicar la misma generatriz de Laguerre dentro de (15) prueba (13).
+Applying the same Laguerre generating function within (15) proves (13).
 \(\square\)
 
-La fórmula (13) exhibe el problema sin estimaciones: es la diferencia de
-dos medidas positivas, pero ambas se prueban contra el polinomio firmado
-\(L_n\). La positividad de \(J_u\) no decide el signo.
+Formula (13) displays the problem with no estimates: it is the difference
+of two positive measures, but both are tested against the signed polynomial
+\(L_n\). The positivity of \(J_u\) does not decide the sign.
 
-## 4. El límite correlacionado es independiente de \(c\)
+## 4. The correlated limit is independent of \(c\)
 
-Para cada \(n\ge1\) fijo, la analiticidad de \(F\) en \(s=1\) y (2) dan
+For each fixed \(n\ge1\), analyticity of \(F\) at \(s=1\) and (2) give
 
 \[
  \lim_{\varepsilon\downarrow0}G_{n,c,\varepsilon}
  =[z^n]{-F'(1+z/(1-z))/F(1+z/(1-z))\over1-z}.       \tag{16}
 \]
 
-La identidad exacta de `103_59`/`104_16` identifica este coeficiente como
+The exact identity of `103_59`/`104_16` identifies this coefficient as
 
 \[
  \boxed{
@@ -183,28 +183,28 @@ La identidad exacta de `103_59`/`104_16` identifica este coeficiente como
  =C_n:=\lambda_n^{\rm prime}-\lambda_{n+1}^{\rm prime},} \tag{17}
 \]
 
-independientemente de \(c\in(0,1)\). En particular, conservar el
-desplazamiento finito no crea un margen nuevo: al retirar el regulador
-regresa exactamente el gate anterior.
+independently of \(c\in(0,1)\). In particular, keeping the finite shift
+creates no new margin: removing the regulator returns exactly the earlier
+gate.
 
-## 5. El orden real no controla los coeficientes Cayley
+## 5. The real order does not control the Cayley coefficients
 
-Alzer--Kwong, Corolario 4.1, prueba que
+Alzer–Kwong, Corollary 4.1, proves that
 
 \[
  {(s-1)\zeta(s)\over s^\alpha}
- \quad\hbox{es estrictamente creciente en }(1,\infty)
+ \quad\hbox{is strictly increasing on }(1,\infty)
  \quad\Longleftrightarrow\quad \alpha\le\gamma.
 \]
 
-La elección \(\alpha=0\) implica que \(F\) es estrictamente creciente.
-Por tanto, para \(0\le r<1\),
+The choice \(\alpha=0\) implies that \(F\) is strictly increasing.
+Hence, for \(0\le r<1\),
 
 \[
  0<H_{c\varepsilon}(s_\varepsilon(r))<1.            \tag{18}
 \]
 
-Sin embargo, `104_16` certifica exactamente
+However, `104_16` certifies exactly
 
 \[
  C_6\in
@@ -212,19 +212,18 @@ Sin embargo, `104_16` certifica exactamente
   0.008107486973374973910461].                       \tag{19}
 \]
 
-Por (17), para cada \(c\in(0,1)\) fijo se tiene
-\(G_{6,c,\varepsilon}>0\) para todo \(\varepsilon>0\)
-suficientemente pequeño, aunque la función de (11) sea negativa sobre el
-rayo real. Así, el orden radial (18) no implica orden coeficiente a
-coeficiente tras el pullback Cayley.
+By (17), for each fixed \(c\in(0,1)\), \(G_{6,c,\varepsilon}>0\) holds for
+every sufficiently small \(\varepsilon>0\), even though the function in (11)
+is negative on the real ray. So radial order (18) does not imply
+coefficient-by-coefficient order after the Cayley pullback.
 
-Referencia: H. Alzer y M. K. Kwong, *Some inequalities for the Riemann
+Reference: H. Alzer and M. K. Kwong, *Some inequalities for the Riemann
 zeta function*, Rend. Istit. Mat. Univ. Trieste 53 (2021),
-[PDF oficial](https://rendiconti.dmi.units.it/volumi/53/005.pdf).
+[official PDF](https://rendiconti.dmi.units.it/volumi/53/005.pdf).
 
-## 6. La variable \(c\) tampoco es completamente monótona
+## 6. The variable \(c\) is not completely monotone either
 
-En el centro \(z=0\), defínase
+At the center \(z=0\), define
 
 \[
  h_\varepsilon(c)
@@ -232,7 +231,7 @@ En el centro \(z=0\), defínase
  ={F(1+(1-c)\varepsilon)\over F(1+\varepsilon)}.    \tag{20}
 \]
 
-Entonces
+Then
 
 \[
  h_\varepsilon'''(c)
@@ -240,15 +239,15 @@ Entonces
                     \over F(1+\varepsilon)}.        \tag{21}
 \]
 
-Con la convención
+With the convention
 
 \[
  \zeta(1+t)={1\over t}+
      \sum_{k\ge0}{(-1)^k\gamma_k\over k!}t^k,
 \]
 
-se tiene \(F'''(1)=3\gamma_2<0\). El signo no se toma de una aproximación:
-`tools/jordan_cocycle_sign_gate.py` certifica racionalmente
+one has \(F'''(1)=3\gamma_2<0\). The sign is not taken from an
+approximation: `tools/jordan_cocycle_sign_gate.py` rationally certifies
 
 \[
  -3\gamma_2\in
@@ -256,9 +255,9 @@ se tiene \(F'''(1)=3\gamma_2<0\). El signo no se toma de una aproximación:
   0.029071089578616955453592].
 \]
 
-Por continuidad, existe
-\(\varepsilon_0>0\) tal que \(h_\varepsilon'''(c)>0\) para
-\(0<\varepsilon<\varepsilon_0\) y \(0\le c\le3/4\). Integrando tres veces,
+By continuity, there exists
+\(\varepsilon_0>0\) such that \(h_\varepsilon'''(c)>0\) for
+\(0<\varepsilon<\varepsilon_0\) and \(0\le c\le3/4\). Integrating three times,
 
 \[
  \boxed{
@@ -266,117 +265,118 @@ Por continuidad, existe
  +3h_\varepsilon(1/4)-h_\varepsilon(0)>0.}          \tag{22}
 \]
 
-Una representación Hausdorff/completamente monótona exigiría que esta
-tercera diferencia fuera \(\le0\). El fallo ocurre ya antes de extraer
-coeficientes en \(z\).
+A Hausdorff/completely-monotone representation would require this third
+difference to be \(\le0\). The failure occurs even before extracting
+coefficients in \(z\).
 
-## 7. No-go para anular idénticamente el canal explícito con shifts finitos
+## 7. No-go for identically canceling the explicit channel with finite shifts
 
-Sean \(c_1,\ldots,c_M>0\) distintos y \(w_1,\ldots,w_M\) constantes.
-En una combinación lineal de (7) con **pesos constantes**, la anulación
-idéntica del canal explícito proporcional a \((s-1)^{-1}\) exigiría
+Let \(c_1,\ldots,c_M>0\) be distinct and \(w_1,\ldots,w_M\) constants.
+In a linear combination of (7) with **constant weights**, identically
+canceling the explicit channel proportional to \((s-1)^{-1}\) would require
 
 \[
  \sum_{j=1}^M w_jc_jA_{c_j\varepsilon}(s)=0.        \tag{23}
 \]
 
-Multiplicando por \(\zeta(s)\),
+Multiplying by \(\zeta(s)\),
 
 \[
  \sum_{j=1}^M w_jc_j\zeta(s-c_j\varepsilon)=0.     \tag{24}
 \]
 
-La unicidad de series de Dirichlet convierte (24) en
-\(\sum_jw_jc_jm^{c_j\varepsilon}=0\) para todo \(m\). Hacer
-\(m\to\infty\) elimina sucesivamente el exponente mayor y prueba
+Uniqueness of Dirichlet series turns (24) into
+\(\sum_jw_jc_jm^{c_j\varepsilon}=0\) for every \(m\). Letting
+\(m\to\infty\) successively eliminates the largest exponent and proves
 
 \[
  w_1=\cdots=w_M=0.                                  \tag{25}
 \]
 
-Esto no afirma que \(H_u\) tenga un polo real en \(s=1\): el cero de
-\(A_u\) cancela el factor aparente. Afirma solo que ningún sistema finito de
-pesos constantes borra por separado ese canal en la identidad (7).
+This does not assert that \(H_u\) has a real pole at \(s=1\): the zero of
+\(A_u\) cancels the apparent factor. It only asserts that no finite system
+of constant weights erases that channel separately in identity (7).
 
-Para los shifts normalizados \((H_{c_j\varepsilon}-1)/(c_j\varepsilon)\),
-la misma prueba se aplica sin el factor \(c_j\). En esa familia normalizada,
-cancelar solo el primer orden mediante \(\sum_jw_j=0\) tampoco ayuda: por
-(17), cancela simultáneamente el objetivo \(C_n\).
+For the normalized shifts \((H_{c_j\varepsilon}-1)/(c_j\varepsilon)\),
+the same proof applies without the factor \(c_j\). In that normalized
+family, canceling only the first order via \(\sum_jw_j=0\) does not help
+either: by (17), it simultaneously cancels the target \(C_n\).
 
-Dentro de la clase de productos finitos de los factores explícitos
-\((1-c_jx)\) con exponentes constantes, una combinación multiplicativa
-tampoco puede borrar ese canal. Si
+Within the class of finite products of the explicit factors
+\((1-c_jx)\) with constant exponents, a multiplicative combination cannot
+erase that channel either. If
 
 \[
  \prod_{j=1}^M(1-c_jx)^{\alpha_j}\equiv1,           \tag{26}
 \]
 
-el logaritmo de (26) da
-\(\sum_j\alpha_jc_j^k=0\) para todo \(k\ge1\). Las primeras \(M\)
-ecuaciones forman un sistema de Vandermonde y fuerzan
+taking the logarithm of (26) gives
+\(\sum_j\alpha_jc_j^k=0\) for every \(k\ge1\). The first \(M\)
+equations form a Vandermonde system and force
 \(\alpha_1=\cdots=\alpha_M=0\).
 
-## 8. Falsificador off-line
+## 8. Off-line falsifier
 
-Sea
+Let
 
 \[
  X_a(s)=\xi(s+a)\xi(s-a),\qquad 0<a<\tfrac12.       \tag{27}
 \]
 
-Esta función satisface \(X_a(1-s)=X_a(s)\) y tiene ceros
-\(1/2\pm a+i\gamma\), fuera de la línea de simetría. Su componente
-polo--Euler es
+This function satisfies \(X_a(1-s)=X_a(s)\) and has zeros
+\(1/2\pm a+i\gamma\), off the line of symmetry. Its pole–Euler component
+is
 
 \[
  F_a(s)=F(s+a)F(s-a),
 \]
 
-y el cociclo factoriza como
+and the cocycle factors as
 
 \[
  {F_a(s-u)\over F_a(s)}=H_u(s+a)H_u(s-a).           \tag{28}
 \]
 
-En el semiplano real seguro, ambos factores satisfacen el orden (18). Las
-series de los cocientes Euler son productos de series con coeficientes
-Jordan no negativos en \(\Re s>1+a+u\). Por tanto esos inputs locales son
-compatibles con ceros fuera de la línea. Este ejemplo, por sí solo, no
-transporta la positividad hasta el germen Cayley crítico; la obstrucción
-precisa para tal regla de continuación se demuestra en `104_19` §7.
+In the safe real half-plane, both factors satisfy order (18). The series of
+the Euler quotients are products of series with non-negative Jordan
+coefficients in \(\Re s>1+a+u\). Hence these local inputs are compatible
+with zeros off the line. This example, by itself, does not transport
+positivity up to the critical Cayley germ; the precise obstruction for such
+a continuation rule is proved in `104_19` §7.
 
-## 9. Veredicto y sucesor
+## 9. Verdict and successor
 
-El desplazamiento correlacionado deja cuatro resultados exactos:
+The correlated shift leaves four exact results:
 
-1. la recurrencia finita (10);
-2. la renovación acoplada (13);
-3. el colapso inevitable al costo firmado (17);
-4. los stop-gates (19), (22), (25)--(28).
+1. the finite recurrence (10);
+2. the coupled renewal (13);
+3. the inevitable collapse to the signed cost (17);
+4. the stop-gates (19), (22), (25)–(28).
 
-Queda descartada esta inferencia:
+The following inference is ruled out:
 
 \[
  J_{c\varepsilon}\ge0
- +H_{c\varepsilon}<1\text{ en el rayo real}
+ +H_{c\varepsilon}<1\text{ on the real ray}
  \quad\Longrightarrow\quad
- C_n\text{ tiene el signo requerido}.              \tag{29}
+ C_n\text{ has the required sign.}              \tag{29}
 \]
 
-El sucesor mínimo que conserva además la mitad Gamma del strong margin es
-el cociclo sin ramas
+The minimal successor that additionally preserves the Gamma half of the
+strong margin is the branch-free cocycle
 
 \[
  \mathcal S_u(s)={Y(s-u)\over Y(s)}=H_u(s)^2K_u(s), \tag{30}
 \]
 
-con \(Y\) de `103_49`/`103_59`. No es un objeto nuevo: es el cuadrado del
-medio-cociclo de `104_16`. Solo queda por auditar si sus tres canales
-finitos
+with \(Y\) from `103_49`/`103_59`. This is not a new object: it is the
+square of the half-cocycle of `104_16`. What remains to be audited is
+whether its three finite channels
 
 \[
  A_u(s)^2\left(1-{2u\over s-1}+{u^2\over(s-1)^2}\right)K_u(s) \tag{31}
 \]
 
-conservan una cancelación que se pierde al tomar el jet. Ese es el ataque
-siguiente; (17) impide contarlo de antemano como progreso hacia A1.
+preserve a cancellation that is lost when taking the jet. That is the next
+attack; (17) prevents counting it in advance as progress toward A1.
+</content>

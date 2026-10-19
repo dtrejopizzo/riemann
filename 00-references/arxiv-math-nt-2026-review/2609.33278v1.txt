@@ -1,0 +1,710 @@
+                                                   PRIME-DETECTING IDENTITIES FROM DIRICHLET
+                                                        INVERSION AND JORDAN TOTIENTS
+
+
+                                                                                      ZHICHEN LIU
+arXiv:2609.33278v1 [math.NT] 27 Sep 2026
+
+
+
+
+                                                                                                         P               (−1)
+                                                    Abstract. For each integer k ≥ 1, let σk (n) =         d|n
+                                                                                                               dk , let σk     denote
+                                                    its Dirichlet inverse, and let Jk denote the kth Jordan totient function. For
+                                                                              (−1)
+                                                    n ∈ N, define Fk (n) = σk      (n) + µ(n) + Jk (n) + 3. We determine the zero
+                                                    set of Fk completely. We prove that F1 (n) = 0 if and only if n is prime or
+                                                    n = 18, whereas for every k ≥ 2, Fk (n) = 0 if and only if n is prime. The
+                                                    proof separates squarefree integers, integers divisible by a prime cube, and
+                                                    cube-free nonsquarefree integers. In the last case, the zero equation forces an
+                                                    integer multiple of the kth power of a squarefree factor to equal −3; this yields
+                                                    the exceptional solution 18 when k = 1 and is impossible when k ≥ 2. The
+                                                    argument uses the convolution identities σk = 1 ∗ Ik and Jk = µ ∗ Ik , where
+                                                                                                                        (−1)
+                                                    Ik (n) = nk , together with an explicit prime-power formula for σk       . We also
+                                                                                                 (−1)
+                                                    prove the companion characterization σk      (n) + nk = −1 if and only if n
+                                                    is prime, for k ≥ 1 and n > 1. Lambert-series coefficient identities recover
+                                                    the three constituent functions, while an exact intermediate-divisor relation
+                                                    explains the connection between the two characterizations and the exceptional
+                                                    value 18.
+
+
+
+
+                                                                                 1. Introduction
+                                              Prime characterizations built from arithmetic functions are most useful when
+                                           the functions involved share a structural origin. The identity studied here arises
+                                           from two standard transforms of the completely multiplicative function Ik (n) = nk .
+                                           Under Dirichlet convolution,
+                                                                           σk = 1 ∗ I k ,        Jk = µ ∗ Ik ,                           (1)
+                                           where 1(n) = 1 and µ is the Möbius function. Thus σk is the ordinary divisor
+                                           transform of Ik , while Jk is its Möbius transform.
+                                              At a prime p, these related functions satisfy
+                                                           (−1)
+                                                         σk       (p) = −(1 + pk ),         µ(p) = −1,       Jk (p) = pk − 1.            (2)
+                                           Their sum is therefore always −3, independently of both p and k. This observation
+                                           explains the constant in
+                                                                                  (−1)
+                                                                      Fk (n) := σk       (n) + µ(n) + Jk (n) + 3.                        (3)
+                                           Throughout, N = {1, 2, 3, . . .}. The purpose of this note is to decide whether the
+                                           local cancellation at primes can also occur at composite integers.
+                                              Our main result gives a uniform answer.
+
+                                              2020 Mathematics Subject Classification. Primary 11A25; Secondary 11A41.
+                                              Key words and phrases. arithmetic functions, Dirichlet inverse, Jordan totient function, Möbius
+                                           function, prime characterization.
+                                                                                             1
+2                                       ZHICHEN LIU
+
+
+Theorem 1. Let k, n ∈ N. Then
+                                            (
+                                                n is prime or n = 18,          k = 1,
+                  Fk (n) = 0      ⇐⇒                                                              (4)
+                                                n is prime,                    k ≥ 2.
+   The exceptional value 18 is not an isolated numerical accident. It is the only
+composite that survives a divisibility condition by 3, and that condition becomes
+impossible as soon as k ≥ 2. Before proving this classification, we place it among
+the classical prime criteria and the literature on inverse arithmetic functions.
+
+                       2. Related work and contribution
+   Several classical arithmetic functions characterize primes by their values at a
+single integer. For n > 1, one has
+                           φ(n) = n − 1            ⇐⇒         n is prime,                         (5)
+while Lehmer’s celebrated problem asks whether the stronger divisibility φ(n) | n − 1
+can hold for a composite n [1]. The Jordan analogue is Jk (n) = nk − 1 at primes.
+Subbarao and Siva Rama Prasad studied the corresponding divisibility condition
+Jk (n) | nk − 1 and related analogues of Lehmer’s totient problem [2]. Likewise,
+σk (n) = nk + 1 characterizes primes because a composite integer has a proper divisor
+other than 1.
+   These familiar criteria use the values of σk or Jk themselves. The present work
+instead uses the inverse of σk in the ring of arithmetic functions. Cashwell and
+Everett developed the ring-theoretic setting for arithmetic functions under Dirichlet
+convolution [3]; McCarthy gives a systematic account of multiplicative functions and
+convolution [4]. General explicit expressions for Dirichlet inverses were studied by
+Haukkanen [5]. Brown gave an expository treatment of inverse arithmetic functions
+and, for the ordinary divisor sum, recorded
+         (−1)                           (−1)                        (−1)
+       σ1       (p) = −(p + 1),        σ1        (p2 ) = p,       σ1       (pa ) = 0    (a ≥ 3)   (6)
+[6]; the same sequence is catalogued as OEIS A046692 [7]. The corresponding
+generalized formulas also occur in analytic work on L-functions [8, eqs. (4.7)–(4.8)],
+and follow immediately from σk = 1 ∗ Ik .
+   To the author’s knowledge, the literature on inverse arithmetic functions cited
+above does not combine these formulas with µ and Jk to classify the zeros of (3).
+The novelty claimed here is limited to this mixed zero-set classification and its
+uniform extension in k; none of the component identities is new. The global converse
+shows that the prime-level cancellation forced by the convolution identities has no
+composite solutions for k ≥ 2, while at k = 1 it has exactly one, namely 18. This
+simultaneously explains the constant 3, identifies the exceptional mechanism, and
+shows why that mechanism disappears throughout the higher Jordan family.
+   The result is structural rather than algorithmic. Direct evaluation of the multi-
+plicative formulas generally presupposes a prime factorization, so the criterion is
+not proposed as a faster primality test. Its significance is instead that it links three
+operations on the same basic function Ik : divisor summation, Möbius transforma-
+tion, and inversion in the Dirichlet ring. Theorem 1 supplies the nontrivial global
+classification for Ik (n) = nk . We first derive the three functions from their Lambert-
+series identities and then organize their local values according to the three possible
+prime-exponent patterns. After proving the zero-set classification, we establish the
+             PRIME-DETECTING IDENTITIES FROM DIRICHLET INVERSION                        3
+
+
+companion criterion and the exact intermediate-divisor relation between the two
+results.
+
+                             3. Lambert-series derivation
+   For arithmetic functions f and g, their Dirichlet convolution is
+                                        X
+                           (f ∗ g)(n) =     f (d)g(n/d).                              (7)
+                                             d|n
+
+Its identity is the function ε, defined by ε(1) = 1 and ε(n) = 0 for n > 1. If
+f (1) ̸= 0, its Dirichlet inverse f (−1) is determined by f ∗ f (−1) = ε. Throughout this
+article, f (−1) denotes this convolution inverse, not a pointwise reciprocal. Standard
+background may be found in [9, Chapter 2] and [10, Chapter 27].
+   All identities in this section are formal power-series identities, so every coefficient
+comparison is finite and requires no analytic convergence assumption. For any
+arithmetic function a,
+                                                            
+                          X∞ X ∞                ∞
+                                                X    X
+                                   a(r)xrm =           a(d) xn .                     (8)
+                        r=1 m=1               n=1       d|n
+
+Indeed, the coefficient of xn on the left comes from precisely the pairs (r, m) for
+which rm = n, equivalently from the positive divisors r of n.
+  Taking a = µ in (8) gives the first generating identity,
+                                  ∞ X
+                                  X ∞
+                                            µ(r)xrm = x.                              (9)
+                                  r=1 m=1
+
+Coefficient comparison yields
+                                                      (
+                       X                               1,          n = 1,
+                             µ(d) = ε(n),      ε(n) =                                (10)
+                       d|n
+                                                       0,          n > 1.
+
+In particular, the coefficients are determined recursively by
+                                              X
+                     µ(1) = 1,       µ(n) = −    µ(d) (n > 1).                       (11)
+                                                   d|n
+                                                   d<n
+
+Multiplication by nk gives the arithmetic function (µIk )(n) = nk µ(n) that appears
+below.
+   Taking a = Jk in (8) gives the second generating identity,
+                              ∞ X
+                              X ∞                     ∞
+                                                      X
+                                        Jk (r)xrm =           nk xn .                (12)
+                              r=1 m=1                 n=1
+
+Its coefficient identity is
+                  X
+                     Jk (d) = nk ,       or equivalently           1 ∗ Jk = Ik .     (13)
+                 d|n
+
+Convolving with µ = 1(−1) gives the standard formula
+                                        Jk = µ ∗ Ik .                                (14)
+For k = 1, this is J1 = φ.
+4                                          ZHICHEN LIU
+
+
+    The third generating identity is
+                        ∞ X ∞               ∞
+                                 (−1)
+                       X                    X
+                                σk (r)xrm =   nk µ(n)xn .                                 (15)
+                        r=1 m=1                             n=1
+Coefficient comparison gives
+              X (−1)                                                     (−1)
+                 σk (d) = nk µ(n),                     that is,     1 ∗ σk      = µIk .   (16)
+              d|n
+
+Convolving with µ yields
+                                          (−1)
+                                σk    = µ ∗ (µIk ).                                       (17)
+Complete multiplicativity of Ik gives
+                                   X
+                                      dk µ(n/d)(n/d)k
+                           
+                Ik ∗ (µIk ) (n) =
+                                           d|n
+                                                 X                                        (18)
+                                      = nk             µ(n/d) = nk ε(n) = ε(n).
+                                                 d|n
+
+This is indeed the Dirichlet inverse of σk = 1 ∗ Ik , because
+                                    
+              (1 ∗ Ik ) ∗ µ ∗ (µIk ) = (1 ∗ µ) ∗ (Ik ∗ µIk ) = ε ∗ ε = ε.                 (19)
+The coefficients may equivalently be computed by the recurrence
+            (−1)             (−1)
+                                                X (−1)
+           σk (1) = 1,      σk (n) = nk µ(n) −      σk (d) (n > 1).                       (20)
+                                                                  d|n
+                                                                  d<n
+Thus the three Lambert series lead directly to the standard functions µ, Jk , and
+ (−1)
+σk    used in the two prime characterizations.
+
+                    4. Local values and factorization cases
+   We now extract the local values needed in the proof. Expanding the convolution
+in (17) gives
+               (−1)
+                         X                        X
+              σk (n) =       µ(d)µ(n/d)(n/d)k =       dk µ(d)µ(n/d),         (21)
+                              d|n                                 d|n
+
+where the second sum follows from the first by replacing d with the complementary
+divisor n/d.
+   The prime-power values follow directly from the divisor identity. Let p be prime
+and set q = pk . From (16),
+                              a
+                                 (−1)
+                            X
+                                σk (pj ) = q a µ(pa ).                          (22)
+                                    j=0
+
+For a ≥ 1, subtracting the same identity with a − 1 in place of a gives
+                          (−1)
+                         σk      (pa ) = q a µ(pa ) − q a−1 µ(pa−1 ).                     (23)
+                          a
+Since µ(p) = −1 and µ(p ) = 0 for a ≥ 2, this yields
+                                    
+                                    
+                                     1,           a = 0,
+                                    
+                                    −(q + 1), a = 1,
+                         (−1)
+                       σk (pa ) =                                                         (24)
+                                    
+                                    
+                                     q,           a = 2,
+                                      0,           a ≥ 3.
+                                    
+                 PRIME-DETECTING IDENTITIES FROM DIRICHLET INVERSION                                     5
+
+                 (−1)                                              (−1)
+Explicitly, σk (p) = q(−1) − 1 = −(q + 1), σk (p2 ) = 0 − q(−1) = q, and
+ (−1)
+σk (pa ) = 0 for a ≥ 3. The Jordan totient has the familiar formulas
+                             X                 Y
+                    Jk (n) =   µ(n/d)dk = nk     (1 − p−k ),         (25)
+                                         d|n                      p|n
+
+so that
+                                  Jk (pa ) = q a−1 (q − 1),             a ≥ 1.                         (26)
+                                           (−1)
+   Equations (17) and (14) show that both σk    and Jk are multiplicative. We now
+record the three factorization cases explicitly so that the subsequent proof can be
+read case by case.
+4.1. The three prime-exponent patterns.
+Proposition 2. Let n > 1. Exactly one of the following three cases occurs.
+Case I: The integer n is squarefree. Write
+                                  Y r
+                             n=       pj , qj = pkj ,                                                  (27)
+                                               j=1
+
+with distinct primes pj . Then
+                          r                                                            r
+    (−1)
+                          Y                                                            Y
+   σk (n) = (−1)r              (qj + 1),             µ(n) = (−1) ,r
+                                                                            Jk (n) =       (qj − 1).   (28)
+                          j=1                                                          j=1
+
+Case II: A prime cube divides n. If p3 | n for some prime p, then
+                           (−1)
+                         σk       (n) = 0,           µ(n) = 0,          Jk (n) > 0.                    (29)
+Case III: The integer n is cube-free but not squarefree. There are unique squarefree
+integers a, b such that
+                              n = ab2 ,         gcd(a, b) = 1,            b > 1.                       (30)
+The primes dividing a occur to the first power in n, whereas those dividing b occur
+to the second power. Consequently,
+       (−1)
+      σk      (ab2 ) = µ(a)bk σk (a),           µ(ab2 ) = 0,          Jk (ab2 ) = bk Jk (a)Jk (b).     (31)
+Proof. The three cases exhaust the possible prime exponents. In Case I, (28) follows
+by multiplying the exponent-one values in (24) and (26). In Case II, a local factor
+  (−1)
+σk (pa ) = 0 with a ≥ 3 makes the full multiplicative product zero, while the
+repeated prime factor also gives µ(n) = 0. The product formula in (25) gives
+Jk (n) > 0.
+   For Case III, place the primes of exponent one into a and those of exponent two
+into b. The resulting a, b are squarefree, coprime, and unique. Multiplying the local
+values gives
+                   (−1)
+                                Y             Y k
+                 σk (ab2 ) =       −(1 + pk )      p = µ(a)bk σk (a),            (32)
+                                         p|a                p|b
+and                                Y         Y
+                    Jk (ab2 ) =     (pk − 1)   pk (pk − 1) = bk Jk (a)Jk (b).                          (33)
+                                   p|a               p|b
+
+Since b > 1, the integer ab2 has a repeated prime factor, so µ(ab2 ) = 0. This proves
+(31) and completes the proof of the proposition.                                   □
+6                                         ZHICHEN LIU
+
+
+Proof organization. Part I treats k = 1 through the three factorization cases,
+including the odd/even subcases for the squarefree factor a and, when a is even,
+the possibility that its remaining odd factor equals 1. After that classification is
+complete, Part II lists the value of Fk (n) in each of the same three cases for k ≥ 2
+and excludes every composite possibility.
+
+                                      5. The zero set
+Proof of Theorem 1. At n = 1,
+                                  Fk (1) = 1 + 1 + 1 + 3 = 6.                     (34)
+For every prime p and every k ≥ 1,
+                       Fk (p) = −(1 + pk ) − 1 + (pk − 1) + 3 = 0.                (35)
+It remains to classify the composite zeros. We first prove the statement for k = 1
+and then treat k ≥ 2 separately.
+Part I: The case k = 1. Assume that F1 (n) = 0. By (34), we have n > 1.
+Case I: The integer n is squarefree. For squarefree n,
+                         (−1)
+                       σ1       (n) = µ(n)σ1 (n),       J1 (n) = φ(n),            (36)
+Substituting (36) into (3) gives
+                                                  
+                          F1 (n) = µ(n) σ1 (n) + 1 + φ(n) + 3.                    (37)
+Subcase I(a): µ(n) = 1. Equation (37) gives
+                                F1 (n) = σ1 (n) + φ(n) + 4 > 0.                   (38)
+Subcase I(b): µ(n) = −1. Now F1 (n) = 0 is equivalent to
+                                      σ1 (n) − φ(n) = 2.                          (39)
+If n has one prime factor, then n is prime. If n is composite, it has a divisor d with
+1 < d < n, and
+                 σ1 (n) − φ(n) ≥ (1 + d + n) − (n − 1) = d + 2 > 2,               (40)
+contradicting (39). Thus the squarefree solutions are exactly the primes.
+Case II: A prime cube divides n. If p3 | n for some prime p, then
+                                      (−1)
+                                     σ1      (n) = µ(n) = 0,                      (41)
+so (41) and (3) give
+                              F1 (n) = φ(n) + 3 > 0.                              (42)
+This case contains no solutions.
+Case III: The integer n is cube-free but not squarefree. Write
+             n = ab2 ,          a, b squarefree,      gcd(a, b) = 1,     b > 1.   (43)
+For the factorization (43), equation (31) with k = 1 gives
+                  (−1)
+                 σ1      (ab2 ) = µ(a)bσ1 (a),        φ(ab2 ) = bφ(a)φ(b).        (44)
+Together with µ(ab2 ) = 0, equation (44) gives
+                                                       
+                  F1 (n) = 0 ⇐⇒ b µ(a)σ1 (a) + φ(a)φ(b) + 3 = 0
+                                                                                 (45)
+                             ⇐⇒ b µ(a)σ1 (a) + φ(a)φ(b) = −3.
+             PRIME-DETECTING IDENTITIES FROM DIRICHLET INVERSION                        7
+
+
+Therefore b | 3. Because b > 1, we have b = 3, and (45) becomes
+                                µ(a)σ1 (a) + 2φ(a) = −1.                              (46)
+Positivity forces µ(a) = −1, and hence a > 1.
+Subcase III(a): a is odd. Then
+                                         Y
+                                σ1 (a) =  (p + 1).                                    (47)
+                                                  p|a
+
+By (47), the left side of (46) is even, whereas its right side is odd. This is impossible.
+Subcase III(b): a is even. Write a = 2c, where c is odd and squarefree. Since
+                            σ1 (a) = 3σ1 (c),             φ(a) = φ(c),                (48)
+substitution of (48) into (46) reduces the equation to
+                                      3σ1 (c) − 2φ(c) = 1.                            (49)
+Subcase III(b1): c > 1. Here
+                  3σ1 (c) − 2φ(c) ≥ 3(c + 1) − 2(c − 1) = c + 5 > 1,                  (50)
+contradicting (49).
+Subcase III(b2): c = 1. Then a = 2 and
+                                   n = ab2 = 2 · 32 = 18.                             (51)
+Moreover,
+                    (−1)            (−1)          (−1)
+                   σ1      (18) = σ1          (2)σ1      (32 ) = (−3)(3) = −9,
+                                                                                      (52)
+                        µ(18) = 0,             φ(18) = 6,
+so F1 (18) = −9 + 0 + 6 + 3 = 0. This completes the classification for k = 1: the
+zeros are exactly the primes and 18.
+Part II: The case k ≥ 2. Assume that k ≥ 2 and that a composite integer n satisfies
+Fk (n) = 0. We write the three components of Fk (n) explicitly in each factorization
+case.
+Case I: The integer n is squarefree. Write
+                                r
+                                Y
+                           n=          pj ,       qj = pkj ,      r ≥ 2,              (53)
+                                j=1
+
+where the primes pj are distinct. Then
+                                                         r
+                                (−1)
+                                                         Y
+                              σk       (n) = (−1)r           (qj + 1),
+                                                         j=1
+                                    µ(n) = (−1)r ,                                    (54)
+                                                r
+                                                Y
+                                   Jk (n) =           (qj − 1).
+                                                j=1
+
+Substituting (54) into (3) gives
+                                                           
+                                       r
+                                       Y                          r
+                                                                  Y
+                Fk (n) = (−1)r               (qj + 1) + 1 +         (qj − 1) + 3.   (55)
+                                       j=1                        j=1
+8                                                   ZHICHEN LIU
+
+
+If r is even, every term in (55) is positive. If r is odd and n is composite, then r ≥ 3.
+The equation Fk (n) = 0 would require
+                                   r
+                                   Y                       r
+                                                           Y
+                                         (qj + 1) −               (qj − 1) = 2.                                (56)
+                                   j=1                     j=1
+
+However,
+                                                                                                           
+    r
+    Y                r
+                     Y                        r
+                                              Y                     r
+                                                                    Y                 r
+                                                                                      Y            r
+                                                                                                   Y
+        (qj + 1) −       (qj − 1) =                (qj + 1) −            qj  +           qj −       (qj − 1)
+    j=1              j=1                      j=1                   j=1               j=1          j=1
+                                                                                                               (57)
+                                              r
+                                              Y
+                                     ≥2             qj > 2.                                                    (58)
+                                              j=2
+                                                  Qr
+In (57), each parenthesized difference is at least j=2 qj , and this product is greater
+than 1 because r ≥ 3 and qj = pkj ≥ 4. Thus no squarefree composite is a zero.
+Case II: A prime cube divides n. If p3 | n for some prime p, then
+            (−1)
+                                                        Y
+          σk (n) = 0,       µ(n) = 0,       Jk (n) = nk   (1 − q −k ) > 0.                                     (59)
+                                                                               q|n
+
+Therefore, (59) and (3) give
+
+                                         Fk (n) = Jk (n) + 3 > 0.                                              (60)
+
+Thus this case contains no zeros.
+Case III: The integer n is cube-free but not squarefree. Write
+
+              n = ab2 ,           a, b squarefree,                  gcd(a, b) = 1,           b > 1.            (61)
+
+In (61), the primes dividing a occur to the first power in n, while the primes dividing
+b occur to the second power. Therefore,
+                                          (−1)
+                                         σk      (n) = µ(a)bk σk (a),
+                                               µ(n) = 0,                                                       (62)
+                                              Jk (n) = bk Jk (a)Jk (b).
+
+Therefore, (62) and (3) give
+
+                           Fk (n) = bk µ(a)σk (a) + Jk (a)Jk (b) + 3.
+                                                                
+                                                                                                               (63)
+
+If Fk (n) = 0, then (63) gives
+
+                              bk µ(a)σk (a) + Jk (a)Jk (b) = −3.
+                                                          
+                                                                                                               (64)
+
+We now expand both factors on the left. Since a and b are squarefree, write
+                            s
+                            Y                        t
+                                                     Y
+                      a=          ui ,         b=          vℓ ,       s ≥ 0,          t ≥ 1.                   (65)
+                            i=1                      ℓ=1
+            PRIME-DETECTING IDENTITIES FROM DIRICHLET INVERSION                            9
+
+
+In (65), the ui and vℓ are primes. Set xi = uki and yℓ = vℓk . With the convention
+that an empty product equals 1, the four terms in the bracket are
+                                                                s
+                                                                Y
+                       µ(a) = (−1)s ,                σk (a) =       (xi + 1),
+                                                                i=1
+                                 s                               t
+                                                                                         (66)
+                                 Y                              Y
+                    Jk (a) =           (xi − 1),     Jk (b) =         (yℓ − 1).
+                                 i=1                            ℓ=1
+
+Also,
+                                            t
+                                            Y
+                                    bk =          yℓ ≥ 2k ≥ 4.                           (67)
+                                            ℓ=1
+
+Set
+                       s
+                       Y                              s
+                                                      Y                t
+                                                                       Y
+                A :=         (xi + 1),        B :=          (xi − 1)         (yℓ − 1).   (68)
+                       i=1                            i=1              ℓ=1
+
+Using (66) and (68), the bracketed factor becomes the integer
+                   T := µ(a)σk (a) + Jk (a)Jk (b) = (−1)s A + B.                         (69)
+By (69), if s is even, then T = A + B > 0, so bk T > 0. If s is odd, then T = −A + B.
+When B ≥ A, we have T ≥ 0; when B < A, integrality gives T ≤ −1, and hence
+(67) gives bk T ≤ −4. In no case can bk T = −3, contradicting (64). Therefore no
+composite integer is a zero when k ≥ 2. By (35), every prime is a zero, so the zeros
+for k ≥ 2 are exactly the primes. This completes the proof.                        □
+
+                        6. A companion prime criterion
+   The same local calculation produces a shorter criterion that does not have an
+exceptional composite.
+Theorem 3. For every k ≥ 1 and n > 1,
+                       (−1)
+                     σk       (n) + nk = −1           ⇐⇒        n is prime.              (70)
+Proof. We first verify the equality for primes and then exclude every composite
+integer through the following exhaustive cases.
+Case I: The integer n is prime. Write n = p, where p is prime. By (24), the two
+terms in (70) and their sum are
+                                 (−1)
+                               σk       (p) = −(1 + pk ),
+                                         nk = pk ,                                       (71)
+                         (−1)
+                        σk (p) + pk = −(1 + pk ) + pk = −1.
+
+Thus every prime satisfies the equation on the left side of (70).
+  For the converse, let n > 1 be composite.
+Case II: A prime cube divides n. Write
+                       n = pa m,           a ≥ 3,           gcd(p, m) = 1,               (72)
+10                                          ZHICHEN LIU
+
+
+where p is prime and m ∈ N. By multiplicativity and (24), the two terms and their
+sum are
+                              (−1)
+                          σk         (n) = 0,
+                                     nk = pak mk ,                                              (73)
+                      (−1)
+                     σk (n) + nk = 0 + pak mk = pak mk > 0.
+Therefore the sum cannot equal −1, so this case contains no solutions.
+Case III: The integer n is cube-free but not squarefree. Some prime p occurs to
+exponent 2. Write
+                             n = p2 m,              gcd(p, m) = 1.                              (74)
+Here p is prime and m is cube-free. By multiplicativity and (24), the two terms and
+their sum are
+                               (−1)                  (−1)
+                             σk       (n) = pk σk             (m),
+                                        k       2k        k
+                                      n =p m ,
+                       (−1)             (−1)
+                                                                                                (75)
+                      σk (n) + nk = pk σk (m) + p2k mk
+                                         (−1)
+                                  = pk σk (m) + pk mk .
+                                                       
+
+                                                                                         (−1)
+   The quantity in parentheses is an integer. If it is zero, then (75) gives σk (n) +
+n = 0. If it is nonzero, then the sum is a nonzero multiple of pk , so its absolute
+ k
+
+value is at least pk ≥ 2. In either case, the sum cannot equal −1.
+Case IV: The integer n is squarefree and composite. Write
+                               r
+                               Y
+                          n=         pj ,       qj = pkj ,            r ≥ 2,                    (76)
+                               j=1
+
+where the primes pj are distinct. By (28), the two terms and their sum are
+                                                          r
+                             (−1)
+                                                          Y
+                          σk        (n) = (−1)r               (qj + 1),
+                                                      j=1
+                                             r
+                                             Y
+                                     nk =          qj ,                                         (77)
+                                             j=1
+                                                          r                 r
+                     (−1)
+                                                          Y                 Y
+                    σk (n) + nk = (−1)r                       (qj + 1) +          qj .
+                                                      j=1                   j=1
+
+Subcase IV(a): r is even. Under this condition,
+                                              r                      r
+                      (−1)
+                                              Y                      Y
+                     σk      (n) + nk =            (qj + 1) +              qj > 0.              (78)
+                                              j=1                    j=1
+
+Therefore the sum cannot equal −1.
+Subcase IV(b): r is odd. Since n is composite, this subcase has r ≥ 3. Expanding
+the
+Qr difference of products below gives a sum of positive monomials. It contains
+  j=2 qj together with additional positive terms, so the difference is greater than
+             PRIME-DETECTING IDENTITIES FROM DIRICHLET INVERSION                                11
+
+
+q2 q3 . Therefore,
+                                                                               
+                     r                r                r                 r
+ (−1)
+                     Y                Y                Y                 Y
+σk (n) + nk = −          (qj + 1) +         qj = −        (qj + 1) −          qj  < −q2 q3 < −1.
+                     j=1              j=1              j=1               j=1
+                                                                                (79)
+Therefore the sum cannot equal −1.
+   Cases II–IV exclude every composite integer, while Case I gives every prime. This
+proves (70).                                                                      □
+
+
+
+                      7. The intermediate-divisor relation
+  There is also an exact relation between the two criteria. It shows how the criterion
+changes when only the endpoint terms of the divisor sums are kept. For k ≥ 1 and
+n > 1, define
+                                      X                  
+                           Rk (n) :=       µ(d) + Jk (d) .                        (80)
+                                         d|n
+                                        1<d<n
+
+An empty sum in (80) is understood to be 0. Adding the divisor identities (10) and
+(13), and using ε(n) = 0 for n > 1, gives
+                               X
+                          nk =
+                                                  
+                                    µ(d) + Jk (d)
+                               d|n                                             (81)
+                             = 2 + µ(n) + Jk (n) + Rk (n),
+where the second line separates the contributions from d = 1, 1 < d < n, and d = n,
+and uses µ(1) + Jk (1) = 2.
+Proposition 4. For every k ≥ 1 and n > 1,
+                                                  (−1)
+                           Fk (n) + Rk (n) = σk          (n) + nk + 1.                        (82)
+Consequently,
+                       Fk (n) + Rk (n) = 0         ⇐⇒        n is prime.                      (83)
+Proof. Using the definition of Fk and then (81),
+                                      (−1)
+                Fk (n) + Rk (n) = σk         (n) + µ(n) + Jk (n) + 3 + Rk (n)                 (84)
+                                      (−1)
+                                = σk         (n) + nk + 1.                                    (85)
+Equation (83) is now exactly Theorem 3 with 1 added to both sides.                              □
+
+   For a prime p, there are no intermediate divisors and Rk (p) = 0. At the
+exceptional composite for k = 1, however,
+                F1 (18) = 0,     R1 (18) = 18 − 2 − µ(18) − φ(18) = 10,                       (86)
+and hence F1 (18) + R1 (18) = 10 ̸= 0. Thus the remainder term explains precisely
+why the exact divisor relation rejects the composite exception whereas the shortened
+three-function identity does not.
+12                                        ZHICHEN LIU
+
+
+                                       8. Conclusion
+  For k, n ∈ N in the first equivalence, and for k ≥ 1 and n > 1 in the second, the
+two classifications proved in this note are
+                                              (
+   (−1)                                         n is prime or n = 18, k = 1,
+  σk (n) + µ(n) + Jk (n) + 3 = 0 ⇐⇒
+                                                n is prime,            k ≥ 2, (87)
+                   (−1)
+                 σk       (n) + nk = −1     ⇐⇒      n is prime        (k ≥ 1, n > 1).
+The first equivalence isolates the unique composite exception 18, while the second
+excludes it. Together they expose the common local origin of the two criteria in
+Dirichlet inversion. The generating equations (9), (12), and (15) give Lambert-
+series forms of the three functions, while the exact bridge (82) shows how the two
+classifications are related and why retaining the intermediate divisors removes the
+exceptional value 18. These are structural characterizations, not computational
+substitutes for standard primality tests.
+
+                  Use of generative AI-assisted technologies
+   During the preparation of this manuscript, the author used OpenAI Codex as
+an editorial assistant for language polishing, organization and transitions, reference
+discovery and formatting, and LATEX and PDF preparation. All mathematical ideas,
+theorem statements, derivations, case analyses, calculations, and proofs are the
+author’s own work. OpenAI Codex did not originate or establish any mathematical
+claim. The author independently checked the mathematical content and cited
+sources and takes full responsibility for the final manuscript.
+
+                                        References
+ [1] D. H. Lehmer, On Euler’s totient function, Bull. Amer. Math. Soc. 38 (1932), no. 10, 745–751,
+     https://doi.org/10.1090/S0002-9904-1932-05521-5.
+ [2] M. V. Subbarao and V. Siva Rama Prasad, Some analogues of a Lehmer problem on the
+     totient function, Rocky Mountain J. Math. 15 (1985), no. 2, 609–620, https://doi.org/10.
+     1216/rmj-1985-15-2-609.
+ [3] E. D. Cashwell and C. J. Everett, The ring of number-theoretic functions, Pacific J. Math. 9
+     (1959), no. 4, 975–985, https://doi.org/10.2140/pjm.1959.9.975.
+ [4] P. J. McCarthy, Introduction to Arithmetical Functions, Universitext, Springer-Verlag, New
+     York, 1986, https://doi.org/10.1007/978-1-4613-8620-9.
+ [5] P. Haukkanen, Expressions for the Dirichlet inverse of arithmetical functions, Notes Num-
+     ber Theory Discrete Math. 6 (2000), no. 4, 118–124, https://nntdm.net/volume-06-2000/
+     number-4/118-124/.
+ [6] P. G. Brown, Some comments on inverse arithmetic functions, Math. Gaz. 89 (2005), no. 516,
+     403–408, https://doi.org/10.1017/S0025557200178246.
+ [7] OEIS Foundation Inc., A046692: Dirichlet inverse of sigma function, https://oeis.org/
+     A046692, accessed September 26, 2026.
+ [8] R. P. Zacharias, Moments of L-Functions and Exponential Sums, Ph.D. thesis, EPFL,
+     Lausanne, 2019, Thesis no. 7904, https://doi.org/10.5075/epfl-thesis-7904.
+ [9] T. M. Apostol, Introduction to Analytic Number Theory, Springer-Verlag, New York, 1976.
+[10] NIST Digital Library of Mathematical Functions, Chapter 27: Functions of number theory,
+     https://dlmf.nist.gov/27, accessed September 26, 2026.
+

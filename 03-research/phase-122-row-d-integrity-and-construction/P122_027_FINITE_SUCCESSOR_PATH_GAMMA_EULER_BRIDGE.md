@@ -65,7 +65,7 @@ complement.  QED.
 For a prime, the endpoint is exactly the Frobenius vacuum image:
 
 \[
- V_pe_0=e_{p-1},qquad \|g_p\|^2=\log p.           \tag{1.6}
+ V_pe_0=e_{p-1},\qquad \|g_p\|^2=\log p.           \tag{1.6}
 \]
 
 Hence the Frobenius length is the energy of the unique additive successor

@@ -1,6 +1,6 @@
-# R154.024 — Lead blueprint, round 9: smooth exponential certificates (the tail problem solved by construction) and mass-vs-value. Date 2026-09-21.
+# R154.024 — Blueprint, round 9: smooth exponential certificates (the tail problem solved by construction) and mass-vs-value.
 
-*Owner: aggressive, do not stop; new insights required. Compute: pure mathematics first; ONE short LP (≤ 10 min, one process) only after the
+*Aggressive pace, do not stop; new insights required. Compute: pure mathematics first; ONE short LP (≤ 10 min, one process) only after the
 tail lemma is PROVED on paper.*
 
 ## 0. The two problems and the idea
@@ -45,4 +45,4 @@ non-finite object; say exactly which, and whether a finite truncation with a sig
 
 ## 2. Rules
 Labels PROVED / RESTATEMENT / DIAGNOSTIC-NUMERIC / OPEN / REFUTED; FATAL rule; no sign for ζ beyond `log 2`; corpus-check lines; compute limits
-as stated (`timeout 600`, single process). Deliverable `R154_025_BUILDER_ROUND9.md` (≤ 5000 words) + `scripts/round9/`. Hostile audit follows.
+as stated (`timeout 600`, single process). Deliverable `R154_025_ROUND9.md` (≤ 5000 words) + `scripts/round9/`. Audit follows.

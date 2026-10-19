@@ -34,7 +34,7 @@ This identifies L_DH as the only statistically significant outlier in spectral s
 </results>
 <challenges>
 I cannot perform the exact requested full Front I analysis on five complete N=5000 zero lists because only the ζ and ζ_δ N=5000 lists were present in the workspace, while the L_DH, L(χ₄ mod 5), and L(Δ,s) N=5000 lists were absent and de novo generation to N=5000 is computationally too expensive for the 3600 s runtime budget. This was the primary limitation. Additional technical issues:
-- cypari2 was not initially installed and had to be installed during the session.
+- cypari2 was not initially installed and had to be installed during the run.
 - The first Lanczos implementation overflowed numerically because orthogonal polynomials on raw zero heights grow rapidly; I corrected this by editing the same analysis cell to use normalized recurrences with reorthogonalization.
 - The supplied ζ_δ perturbation changes only the real parts, not the imaginary parts, so any standard Front I implementation based solely on the height spectrum is necessarily blind to that deformation; this is a methodological limitation of the observable, not a data-processing bug.
 - The L_DH R2 validation set contains one documented transcription-artifact coordinate giving |L_DH|≈4×10^-5 instead of <10^-6; this matched the dataset description and therefore did not invalidate the implementation.

@@ -339,7 +339,7 @@ now a theorem that such work would have to prove RH.
 
 ## 7B. Status update: phases 114–118
 
-*Added 2026-08-17. Five phases have run since the map was written. None of them
+*Five phases have run since the map was written. None of them
 changes §7's priority list; all of them strengthen §6 point 5. Recorded here so
 the map is not read as stale.*
 

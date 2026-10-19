@@ -165,7 +165,7 @@ archimedean symbol.
 ## (c) Statements whose Markdown proof was incomplete
 
 All six items below were flagged in the first conversion; after the review of
-2026-09-13 four of them are resolved, one is corrected as a genuine error of
+ four of them are resolved, one is corrected as a genuine error of
 the source, and one remains a stated import.
 
 1. **`thm:gramoff`, the convolution constant — this was a genuine mathematical
@@ -217,9 +217,9 @@ the source, and one remains a stated import.
    pointer, the carrier paper establishing `θ_p = arg ∏_{q≠p} κ_q(p)` and
    `θ_p = 0` on the principal component, where every `κ_q` is trivial.
 
-## Repairs after review R1 (2026-09-13)
+## Repairs after review R1
 
-Every finding of the hostile review was applied. Grouped by kind.
+Every finding of the adversarial review was applied. Grouped by kind.
 
 **Blocking.**
 - *A1.* The former §13 ("Nine labels, as a check"), including its two tables,

@@ -32,7 +32,7 @@ Let \(K,r\) be even and put
 
 \[
 J_u(r)=\int_{\mathbb R}K(x)K(x-u)
- |r(x)-r(x-u)|^2\,dx,qquad u>0.                    \tag{2}
+ |r(x)-r(x-u)|^2\,dx,\qquad u>0.                    \tag{2}
 \]
 
 For a positive density \(w(u)\,du\), define
@@ -86,7 +86,7 @@ orientations of \(|x-y|\), and the crossing part is the level set
 Recall
 
 \[
-d\mu_K(x)=\frac{h(x)K(x)}{c_K}\,dx,qquad
+d\mu_K(x)=\frac{h(x)K(x)}{c_K}\,dx,\qquad
 h(x)=\cosh(x/2),\qquad c_K=\frac12.                 \tag{6}
 \]
 

@@ -1,6 +1,5 @@
 # E73.157 - Endpoint equivalence after RCE
 
-Date: 2026-07-12.
 
 ## 1. Purpose
 

@@ -1,6 +1,5 @@
 # E73.159 Results - Endpoint symmetric image probe
 
-Date: 2026-07-12.
 
 Script:
 

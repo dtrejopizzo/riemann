@@ -86,7 +86,7 @@ following:
    Herglotz property, or variational principle that fails for an admissible
    off-line control.
 
-The third item is the actual force-RH theorem. The determinant quotient is
+The third item is the actual RH-strength theorem. The determinant quotient is
 only useful if it exposes that theorem.
 
 ## Minimal live theorem

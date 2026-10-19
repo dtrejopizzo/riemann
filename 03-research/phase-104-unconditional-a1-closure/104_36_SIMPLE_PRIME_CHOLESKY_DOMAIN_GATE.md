@@ -1,62 +1,63 @@
-# 104_36 — Cholesky primos--polo y gate de dominio por residuos
+# 104_36 — Simple-prime–pole Cholesky and the residue-domain gate
 
-**Estado.** El canal de primos simples--polo de `104_32` y `104_35`
-admite una factorización de Cholesky/large-sieve exacta antes de llegar al
-punto de Li. La factorización conserva conjuntamente todos los primos: su
-norma es el módulo cuadrado de la diferencia prima--polo completa, no una
-suma de valores absolutos por primo.
+**Status.** The simple-prime–pole channel of `104_32` and `104_35`
+admits an exact Cholesky/large-sieve factorization before reaching the Li
+point. The factorization jointly preserves every prime: its norm is the
+squared modulus of the complete prime–pole difference, not a sum of
+per-prime absolute values.
 
-La continuación de esa norma al punto de Li, sin embargo, no existe. Cada
-cero crítico produce un polo que se aproxima a la frontera de Hardy cuando
-el regulador tiende a \(a\downarrow1\), y la norma cuadrada crece al menos
-como \((a-1)^{-1}\). Un cero con \(\Re\rho>a/2\) coloca el polo dentro
-del semiplano de Laplace y hace imposible incluso la pertenencia a
-\(L^2(0,\infty)\). Para dos prefijos consecutivos, la pertenencia a
-\(L^2\) ya implica que no hay tales ceros. En el límite \(a\downarrow1\)
-esa condición contiene RH.
+Continuing that norm to the Li point, however, does not exist. Each
+critical zero produces a pole approaching the Hardy boundary as the
+regulator tends to \(a\downarrow1\), and the squared norm grows at least
+like \((a-1)^{-1}\). A zero with \(\Re\rho>a/2\) places the pole inside
+the Laplace half-plane and makes even membership in
+\(L^2(0,\infty)\) impossible. For two consecutive prefixes, membership in
+\(L^2\) already implies there are no such zeros. In the limit
+\(a\downarrow1\) that condition contains RH.
 
-Por tanto el Cholesky natural no produce la coercividad de (26) en
-`104_32`: pierde precisamente la cancelación firmada que mantiene finito el
-momento escalar. El documento no prueba esa desigualdad, A1 ni RH.
+Hence the natural Cholesky approach does not produce the coercivity of
+(26) in `104_32`: it loses precisely the signed cancellation that keeps
+the scalar moment finite. The document proves neither that inequality,
+nor A1, nor RH.
 
-## 1. Prerregistro y no duplicación
+## 1. Pre-registration and non-duplication
 
-El blanco es
+The target is
 
 \[
  3A_n+4B_n^{(p+\mathrm{pole})}
  \ge {A_n\over1001}+4P_{n-1}^{(\ge2)}(1),            \tag{1}
 \]
 
-equivalente a (26) de `104_32`. Se ensaya una sola idea: escribir
-\(B_{n,a}^{(p+\mathrm{pole})}\) como producto interno de un vector de
-discrepancia prima--continua con el prefijo hard-edge, y usar una norma
-cuadrática que conserve todos los términos cruzados.
+equivalent to (26) of `104_32`. A single idea is tested: writing
+\(B_{n,a}^{(p+\mathrm{pole})}\) as the inner product of a
+prime–continuum discrepancy vector with the hard-edge prefix, and using a
+quadratic norm that keeps all the cross terms.
 
-`104_11` factoriza el kernel `max` de M1 y prueba que su Hessiana se cancela
-al recomponer el funcional lineal. `104_31` estudia el flujo birth--death
-en el grado. `104_33` lleva el símbolo de bandera a la línea crítica y
-separa frontera y residuos. `104_35` obtiene la fórmula exacta en
-\(\theta-x\) y descarta el Riccati de Selberg simple como fuente autónoma
-de signo.
+`104_11` factorizes the `max` kernel of M1 and proves that its Hessian
+cancels when the linear functional is recomposed. `104_31` studies the
+birth–death flow in the degree. `104_33` carries the flag symbol to the
+critical line and separates boundary from residues. `104_35` obtains the
+exact \(\theta-x\) formula and rules out the simple Selberg Riccati as an
+autonomous source of sign.
 
-Lo nuevo aquí es distinto: se construye el vector de Cholesky global del
-canal simple, se calcula su norma por Plancherel y se determina exactamente
-su dominio mediante los residuos de \(Q(s)=\sum_p\log p\,p^{-s}\).
+What is new here is different: the global Cholesky vector of the simple
+channel is built, its norm is computed via Plancherel, and its domain is
+determined exactly via the residues of \(Q(s)=\sum_p\log p\,p^{-s}\).
 
-El falsificador es el cuarteto racional
+The falsifier is the rational quartet
 
 \[
  w={i\over2},\qquad \rho={1\over1-w}={4+2i\over5}.       \tag{2}
 \]
 
-En el índice \(n=152\) su modo de Cholesky crece como
-\(e^{3x/10}\) y no pertenece a \(L^2\). Así la factorización falla, en vez
-de certificar falsamente, frente a un divisor off-line.
+At index \(n=152\), its Cholesky mode grows like
+\(e^{3x/10}\) and does not belong to \(L^2\). So the factorization fails,
+rather than falsely certifying anything, against an off-line divisor.
 
-## 2. Semigrupo hard-edge y vector de discrepancia
+## 2. Hard-edge semigroup and discrepancy vector
 
-Sea
+Let
 
 \[
  \mathcal H=L^2(0,\infty),\qquad
@@ -64,48 +65,48 @@ Sea
  T_t=e^{-t/2}S_t.                                      \tag{3}
 \]
 
-El semigrupo \(T_t\) es contractivo. Para
+Semigroup \(T_t\) is contractive. For
 
 \[
  g_n(x)=e^{-x/2}L_{n-1}^{(1)}(x)                       \tag{4}
 \]
 
-la ortogonalidad de Laguerre y la identidad
-\(L_{n-1}^{(1)}=\sum_{j=0}^{n-1}L_j\) dan
+Laguerre orthogonality and the identity
+\(L_{n-1}^{(1)}=\sum_{j=0}^{n-1}L_j\) give
 
 \[
  \|g_n\|_2^2=n.                                        \tag{5}
 \]
 
-La correlación de traslaciones de `104_28` se vuelve
+The translation correlation of `104_28` becomes
 
 \[
  \boxed{\langle T_tg_n,g_n\rangle
        =e^{-t}L_{n-1}^{(1)}(t).}                       \tag{6}
 \]
 
-Póngase
+Set
 
 \[
  d\theta(y)=\sum_p\log p\,\delta_p(dy),
  \qquad d\sigma(y)=dy-d\theta(y).                     \tag{7}
 \]
 
-Para \(a>2\), la integral de Bochner
+For \(a>2\), the Bochner integral
 
 \[
  \boxed{
  V_{n,a}:=a\int_1^\infty T_{a\log y}g_n\,d\sigma(y)}   \tag{8}
 \]
 
-converge absolutamente en \(\mathcal H\), porque
+converges absolutely in \(\mathcal H\), because
 
 \[
  \|T_{a\log y}g_n\|_2=\sqrt n\,y^{-a/2}
 \]
 
-y tanto \(\int_1^\infty y^{-a/2}dy\) como
-\(\sum_p\log p\,p^{-a/2}\) convergen. De (6),
+and both \(\int_1^\infty y^{-a/2}dy\) and
+\(\sum_p\log p\,p^{-a/2}\) converge. From (6),
 
 \[
 \begin{aligned}
@@ -116,35 +117,35 @@ y tanto \(\int_1^\infty y^{-a/2}dy\) como
 \end{aligned}                                             \tag{9}
 \]
 
-La segunda igualdad es exactamente (4)--(6) de `104_35`, incluidos el
-polo continuo y el signo. Por Cauchy--Schwarz,
+The second equality is exactly (4)–(6) of `104_35`, including the
+continuous pole and its sign. By Cauchy–Schwarz,
 
 \[
  B_{n,a}^{(p+\mathrm{pole})}
  \ge-\sqrt n\,\|V_{n,a}\|_2.                         \tag{10}
 \]
 
-Ésta es la cota inferior de tipo coercivo que (1) necesitaría si la norma
-permaneciera uniformemente finita al retirar el regulador.
+This is the coercive-type lower bound (1) would need if the norm remained
+uniformly finite as the regulator is removed.
 
-## 3. Identidad large-sieve exacta
+## 3. Exact large-sieve identity
 
-Adoptemos
+Adopt
 
 \[
  Q(s)=\sum_p{\log p\over p^s},\qquad
  M(s)={1\over s-1}-Q(s)                               \tag{11}
 \]
 
-en \(\Re s>1\). La transformada de Fourier de (4), extendida por cero a
-la recta, es
+in \(\Re s>1\). The Fourier transform of (4), extended by zero to the
+line, is
 
 \[
  \widehat g_n(t)
  =1-\left({-1/2+it\over1/2+it}\right)^n.              \tag{12}
 \]
 
-Para \(a>2\), todas las integraciones de (8) son absolutas y
+For \(a>2\), every integration in (8) is absolute and
 
 \[
  \boxed{
@@ -152,7 +153,7 @@ Para \(a>2\), todas las integraciones de (8) son absolutas y
  =a\widehat g_n(t)M\!\left(a(1/2+it)\right).}          \tag{13}
 \]
 
-Plancherel da el Cholesky colectivo buscado:
+Plancherel gives the sought collective Cholesky:
 
 \[
  \boxed{
@@ -162,34 +163,34 @@ Plancherel da el Cholesky colectivo buscado:
  \left|M\!\left(a(1/2+it)\right)\right|^2dt.}        \tag{14}
 \]
 
-La suma sobre primos y el polo se forman dentro de \(M\) antes de tomar el
-módulo. Al expandir (14) aparecen todas las interacciones entre dos primos
-y entre primos y continuo. No se ha usado positividad término a término ni
-la desigualdad triangular en la suma de Euler.
+The sum over primes and the pole are formed inside \(M\) before taking
+the modulus. Expanding (14) brings in every interaction between two
+primes and between primes and the continuum. Neither term-by-term
+positivity nor the triangle inequality has been used in the Euler sum.
 
-El problema de (14) no es algebraico, sino su dominio: la condición
-\(a>2\) coloca toda la recta de integración en el semiplano del producto de
-Euler. Llegar a \(a=1\) mueve esa recta hasta la línea crítica.
+The problem with (14) is not algebraic, but its domain: the condition
+\(a>2\) places the entire integration line within the half-plane of the
+Euler product. Reaching \(a=1\) moves that line onto the critical line.
 
-## 4. Forma exacta en \(\theta-x\)
+## 4. Exact form in \(\theta-x\)
 
-Aunque (8) no sea una integral de Bochner para \(a\le2\), define una
-función localmente cuadrado-integrable punto a punto: para cada \(x\) solo
-intervienen \(y\le X=e^{x/a}\). Sea
+Although (8) is not a Bochner integral for \(a\le2\), it defines a
+pointwise locally square-integrable function: for each \(x\) only
+\(y\le X=e^{x/a}\) enter. Let
 
 \[
  D_\theta(X)=X-1-\theta(X).                             \tag{15}
 \]
 
-Como
+Since
 
 \[
  (T_{a\log y}g_n)(x)
  =e^{-x/2}L_{n-1}^{(1)}(x-a\log y){\bf1}_{y\le X},      \tag{16}
 \]
 
-una integración de Stieltjes, usando
-\((L_{n-1}^{(1)})'=-L_{n-2}^{(2)}\), da para \(n\ge2\)
+a Stieltjes integration, using
+\((L_{n-1}^{(1)})'=-L_{n-2}^{(2)}\), gives for \(n\ge2\)
 
 \[
  \boxed{
@@ -198,34 +199,34 @@ una integración de Stieltjes, usando
  L_{n-2}^{(2)}(x-a\log y)\,dy\right].}              \tag{17}
 \]
 
-Para \(n=1\), el término integral desaparece:
+For \(n=1\), the integral term vanishes:
 
 \[
  \boxed{V_{1,a}(x)=ae^{-x/2}D_\theta(e^{x/a}),}        \tag{18}
 \]
 
-y por tanto
+and hence
 
 \[
  \boxed{\|V_{1,a}\|_2^2
  =a^3\int_1^\infty D_\theta(X)^2X^{-a-1}\,dX}         \tag{19}
 \]
 
-si cualquiera de los lados es finito. La norma de Cholesky ya contiene,
-en su primer estado, la energía cuadrática completa del error de PNT. No
-es un estimador más débil del momento lineal.
+if either side is finite. The Cholesky norm already contains, at its
+first state, the full quadratic energy of the PNT error. It is not a
+weaker estimator of the linear moment.
 
-## 5. Transformada de Laplace y residuos de los ceros
+## 5. Laplace transform and the residues of the zeros
 
-Para \(\Re z>1/a-1/2\), la transformada de Laplace de (17) se puede calcular
-en el semiplano de convergencia absoluta. Definiendo
+For \(\Re z>1/a-1/2\), the Laplace transform of (17) can be computed in
+the half-plane of absolute convergence. Defining
 
 \[
  G_n(z)=\int_0^\infty e^{-zx}g_n(x)\,dx
  =1-\left({z-1/2\over z+1/2}\right)^n,                \tag{20}
 \]
 
-se obtiene
+one obtains
 
 \[
  \boxed{
@@ -233,31 +234,31 @@ se obtiene
  =aG_n(z)M\!\left(a(z+1/2)\right).}                  \tag{21}
 \]
 
-La continuación meromorfa relevante no necesita separar potencias primas.
-Si
+The relevant meromorphic continuation needs no separation of prime
+powers. If
 
 \[
  \mathcal L_\zeta(s)=-{\zeta'\over\zeta}(s),
 \]
 
-la inversión de Möbius da
+Möbius inversion gives
 
 \[
  Q(s)=\sum_{k\ge1}\mu(k)\mathcal L_\zeta(ks).         \tag{22}
 \]
 
-En \(\Re s>1/2\), los términos \(k\ge2\) son regulares y la serie converge
-normalmente en compactos, salvo el borde \(s=1/2\). Por ello, si \(\rho\)
-es un cero no trivial de multiplicidad \(m_\rho\), entonces \(M\) tiene en
-\(s=\rho\) residuo \(+m_\rho\).
+In \(\Re s>1/2\), the terms \(k\ge2\) are regular and the series converges
+normally on compact sets, except at the boundary \(s=1/2\). Hence, if
+\(\rho\) is a nontrivial zero of multiplicity \(m_\rho\), then \(M\) has
+residue \(+m_\rho\) at \(s=\rho\).
 
-La ecuación (21) tiene entonces un polo en
+Equation (21) then has a pole at
 
 \[
  z_{\rho,a}={\rho\over a}-{1\over2}                   \tag{23}
 \]
 
-con residuo exacto
+with exact residue
 
 \[
  \boxed{
@@ -266,107 +267,107 @@ con residuo exacto
  =m_\rho\left[1-\left(1-{a\over\rho}\right)^n\right].} \tag{24}
 \]
 
-Esto da un gate de dominio, no solo una cota mala. Si
-\(V_{n,a}\in L^2(0,\infty)\), su transformada de Laplace es holomorfa en
-\(\Re z>0\). En consecuencia, para cada cero con
-\(\Re\rho>a/2\) necesariamente
+This gives a domain gate, not merely a bad bound. If
+\(V_{n,a}\in L^2(0,\infty)\), its Laplace transform is holomorphic on
+\(\Re z>0\). Consequently, for each zero with
+\(\Re\rho>a/2\), necessarily
 
 \[
  \left(1-{a\over\rho}\right)^n=1.                   \tag{25}
 \]
 
-La condición (25) no puede valer para dos índices consecutivos. Si valiera
-para \(n\) y \(n+1\), su cociente daría \(1-a/\rho=1\), imposible. Se ha
-probado así:
+Condition (25) cannot hold for two consecutive indices. If it held for
+\(n\) and \(n+1\), their quotient would give \(1-a/\rho=1\), impossible.
+This proves:
 
-> **Teorema de dominio.** Si \(V_{n,a}\) y \(V_{n+1,a}\) pertenecen a
-> \(L^2(0,\infty)\), entonces \(\zeta\) no tiene ceros en
-> \(\Re s>a/2\). En particular, disponer de la factorización de Hilbert
-> para todos los prefijos \(n\ge150\) y para \(a\downarrow1\) ya excluye
-> todos los ceros con \(\Re\rho>1/2\), es decir, ya contiene RH por la
-> simetría funcional.
+> **Domain theorem.** If \(V_{n,a}\) and \(V_{n+1,a}\) belong to
+> \(L^2(0,\infty)\), then \(\zeta\) has no zeros in
+> \(\Re s>a/2\). In particular, having the Hilbert factorization for
+> every prefix \(n\ge150\) and for \(a\downarrow1\) already excludes every
+> zero with \(\Re\rho>1/2\), that is, already contains RH by the
+> functional symmetry.
 
-No se ha supuesto una fórmula explícita para demostrar este teorema: basta
-la unicidad de la transformada de Laplace de una función \(L^2\) y el
-residuo (24).
+No explicit formula was assumed to prove this theorem: uniqueness of the
+Laplace transform of an \(L^2\) function and residue (24) suffice.
 
-## 6. Los ceros críticos hacen divergir la norma aun bajo RH
+## 6. Critical zeros make the norm diverge even under RH
 
-El problema persiste incluso si todos los ceros son críticos. Fijemos un
-cero \(\rho=1/2+i\gamma\) y un índice \(n\) para el cual
+The problem persists even if every zero is critical. Fix a zero
+\(\rho=1/2+i\gamma\) and an index \(n\) for which
 
 \[
  1-\left(1-{1\over\rho}\right)^n\ne0.                \tag{26}
 \]
 
-Tal cero existe para todo \(n\): hay infinitos ceros críticos, mientras
-que (26) puede fallar solo cuando \(1-1/\rho\) pertenece al conjunto finito
-de raíces \(n\)-ésimas de la unidad.
+Such a zero exists for every \(n\): there are infinitely many critical
+zeros, while (26) can fail only when \(1-1/\rho\) belongs to the finite
+set of \(n\)-th roots of unity.
 
-Para \(a>1\), el polo (23) está a distancia
+For \(a>1\), pole (23) lies at distance
 
 \[
  \delta_a={a-1\over2a}                                      \tag{27}
 \]
 
-a la izquierda del eje imaginario. Aislando ese polo en un disco sin otros
-ceros, (21) tiene sobre la frontera la forma
+to the left of the imaginary axis. Isolating that pole in a disc with no
+other zeros, (21) has on the boundary the form
 
 \[
  aG_n(it)M(a(1/2+it))
  ={R_{n,a}\over\delta_a+i(t-\gamma/a)}+H_{n,a}(t),     \tag{28}
 \]
 
-donde \(R_{n,a}\) tiende al valor no nulo de (26) multiplicado por
-\(m_\rho\), y \(H_{n,a}\) queda uniformemente acotada en un intervalo fijo
-tras sustraer la parte principal. Integrando el cuadrado en ese intervalo,
+where \(R_{n,a}\) tends to the nonzero value of (26) multiplied by
+\(m_\rho\), and \(H_{n,a}\) remains uniformly bounded on a fixed interval
+after subtracting the principal part. Integrating the square over that
+interval,
 
 \[
  \int {dt\over\delta_a^2+(t-\gamma/a)^2}
  \asymp{1\over\delta_a},                                  \tag{29}
 \]
 
-se obtiene, para \(a\downarrow1\),
+one obtains, as \(a\downarrow1\),
 
 \[
  \boxed{\|V_{n,a}\|_2^2\ge {c_{n,\rho}\over a-1}}
  \qquad(c_{n,\rho}>0),                                     \tag{30}
 \]
 
-si la continuación pertenece a \(L^2\). En \(a=1\) el polo cae exactamente
-sobre la frontera y el multiplicador no es cuadrado-integrable.
+if the continuation belongs to \(L^2\). At \(a=1\) the pole falls exactly
+on the boundary, and the multiplier is not square-integrable.
 
-La divergencia (30) es incondicional porque la existencia de infinitos
-ceros sobre la línea crítica es el teorema de Hardy. La cantidad escalar
-\(B_{n,a}^{(p+\mathrm{pole})}=\langle V_{n,a},g_n\rangle\) sí tiene límite
-finito: la proyección contra el test fijo \(g_n\), que decae
-exponencialmente, integra cada modo de frontera. La norma de Cholesky
-elimina ese test amortiguador y eleva al cuadrado el polo de frontera.
+Divergence (30) is unconditional because the existence of infinitely many
+zeros on the critical line is Hardy's theorem. The scalar quantity
+\(B_{n,a}^{(p+\mathrm{pole})}=\langle V_{n,a},g_n\rangle\) does have a
+finite limit: the projection against the fixed test \(g_n\), which decays
+exponentially, integrates each boundary mode. The Cholesky norm removes
+that damping test and squares the boundary pole.
 
-## 7. Falsificador off-line cuantitativo
+## 7. Quantitative off-line falsifier
 
-Para el cuarteto (2),
+For quartet (2),
 
 \[
  \Re\rho-{1\over2}={3\over10}.                       \tag{31}
 \]
 
-En \(a=1\) y \(n=152\),
+At \(a=1\) and \(n=152\),
 
 \[
  G_{152}(\rho-1/2)
  =1-w^{152}=1-2^{-152}>0.                              \tag{32}
 \]
 
-Por (23)--(24), el vector de Cholesky tendría un modo no nulo proporcional
-a
+By (23)–(24), the Cholesky vector would have a nonzero mode proportional
+to
 
 \[
  e^{(3/10+2i/5)x},                                      \tag{33}
 \]
 
-que no pertenece a \(L^2(0,\infty)\). Para fijar la normalización, la
-contribución de este cuarteto al coeficiente de Li es
+which does not belong to \(L^2(0,\infty)\). To fix the normalization,
+this quartet's contribution to the Li coefficient is
 
 \[
  Q_n^{\mathrm{off}}
@@ -374,21 +375,20 @@ contribución de este cuarteto al coeficiente de Li es
  =4-4\cosh(n\log2)\cos(n\pi/2).                      \tag{34}
 \]
 
-Como \(152\equiv0\pmod4\),
+Since \(152\equiv0\pmod4\),
 
 \[
  \boxed{Q_{152}^{\mathrm{off}}
  =4-4\cosh(152\log2)<0.}                               \tag{35}
 \]
 
-Así el mecanismo no es ciego al falsificador: su dominio se rompe antes de
-producir una desigualdad falsa. `tools/simple_prime_cholesky_gate.py`
-verifica (31)--(32) y las transformadas racionales de Laguerre con
-`Fraction`.
+So the mechanism is not blind to the falsifier: its domain breaks before
+producing a false inequality. `tools/simple_prime_cholesky_gate.py`
+verifies (31)–(32) and the rational Laguerre transforms with `Fraction`.
 
-## 8. Consecuencia para el frente proporcional
+## 8. Consequence for the proportional front
 
-De (10), una condición suficiente para (1) habría sido
+From (10), a sufficient condition for (1) would have been
 
 \[
  \sqrt n\,\liminf_{a\downarrow1}\|V_{n,a}\|_2
@@ -396,35 +396,37 @@ De (10), una condición suficiente para (1) habría sido
           -4P_{n-1}^{(\ge2)}(1)\over4}.                \tag{36}
 \]
 
-El lado derecho es finito. El lado izquierdo diverge por (30). Por tanto
-(36), y toda prueba que aplique Cauchy a este vector sin una resta adicional,
-queda descartada.
+The right-hand side is finite. The left-hand side diverges by (30).
+Hence (36), and every proof applying Cauchy–Schwarz to this vector with no
+additional subtraction, is ruled out.
 
-Restar los modos (24) antes de tomar la norma vuelve finita la construcción,
-pero exige identificar todos los residuos críticos y decidir qué hacer con
-los residuos interiores off-line. Al devolver esas contribuciones a la
-proyección sobre \(g_n\), se recuperan exactamente los términos de Li que
-la desigualdad pretende controlar. Esa renormalización no es una cota nueva.
+Subtracting the modes (24) before taking the norm makes the construction
+finite, but requires identifying every critical residue and deciding what
+to do with the off-line interior residues. Returning those contributions
+to the projection onto \(g_n\) exactly recovers the Li terms the
+inequality aims to control. That renormalization is not a new bound.
 
-## Decisión
+## Decision
 
 ```text
-probado incondicionalmente:
-  vector de discrepancia prima--polo (8) para a>2;
-  identidad escalar (9) y Cholesky/large-sieve colectivo (14);
-  fórmula exacta en theta-x (17)--(19);
-  transformada de Laplace (21) y residuo de cada cero (24);
-  dos prefijos L2 consecutivos => región Re rho <= a/2;
-  divergencia de norma >= c/(a-1) por un cero crítico;
-  ruptura exponencial para el cuarteto racional off-line.
+proved unconditionally:
+  the prime--pole discrepancy vector (8) for a>2;
+  the scalar identity (9) and the collective Cholesky/large-sieve (14);
+  the exact theta-x formula (17)--(19);
+  the Laplace transform (21) and each zero's residue (24);
+  two consecutive L2 prefixes => region Re rho <= a/2;
+  norm divergence >= c/(a-1) from a critical zero;
+  exponential breakdown for the rational off-line quartet.
 
-descartado:
-  Cauchy--Schwarz sobre el vector global como cierre de (1);
-  continuar la norma segura a=2+ hasta a=1 sin pagar residuos;
-  llamar "large sieve" a la resta de esos residuos sin reinsertar Li.
+ruled out:
+  Cauchy--Schwarz on the global vector as a closure of (1);
+  continuing the safe norm from a=2+ down to a=1 without paying residues;
+  calling "large sieve" the subtraction of those residues without
+  reinserting Li.
 
-permanece abierto:
-  una cota unilateral de la proyección firmada
-  <V_{n,a},g_n> que sobreviva al límite sin controlar la norma completa;
-  (1), A1 y RH.
+remains open:
+  a one-sided bound for the signed projection
+  <V_{n,a},g_n> surviving the limit without controlling the full norm;
+  (1), A1, and RH.
 ```
+</content>

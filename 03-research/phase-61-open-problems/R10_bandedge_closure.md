@@ -1,91 +1,91 @@
-# R10 — La ruta de cierre de 2.3.F-Loc: borde de banda de la Jacobi intrínseca acotada
+# R10 — The closure route for 2.3.F-Loc: band edge of the bounded intrinsic Jacobi
 
-**Fecha:** 2026-06-25. **Experimento:** `E85_bandedge_closure.py` (λ=9,13,17,21; engine_cache, dps=40).
-**Tesis:** 2.3.F-Loc es **RH-neutral** y se reduce a teoría espectral estándar de operadores de
-Jacobi acotados — NO al muro.
+Experiment:** `E85_bandedge_closure.py` (λ=9,13,17,21; engine_cache, dps=40).
+**Thesis:** 2.3.F-Loc is **RH-neutral** and reduces to standard spectral theory of bounded
+Jacobi operators — NOT to the wall.
 
-## El punto de partida (ya probado): 2.3.F-Loc es RH-neutral por R1
+## The starting point (already proved): 2.3.F-Loc is RH-neutral by R1
 
-Por R1 (probado), tras conjugar por el estado base positivo `u_0` (Perron–Frobenius, Teorema 2.2,
-**incondicional** a λ finito), el operador de Doob
+By R1 (proved), after conjugating by the positive ground state `u_0` (Perron–Frobenius, Theorem 2.2,
+**unconditional** at finite λ), the Doob operator
 
 > `G_λ(v,v) = A_λ(u_0 v, u_0 v) − ε_0‖u_0 v‖²  ≥  0`
 
-es **manifiestamente positivo a cada λ, se cumpla RH o no**. Sus autovalores `e_k = ε_k − ε_0 > 0`.
-2.3.F-Loc es la afirmación sobre los **ratios** `(e_k)/(e_1) → k(k+2)` (forma desplazada de Doob)
-— una pregunta espectral **incondicional** sobre `G_λ`. El muro (12.1) es el **signo** de `ε_0`: un
-enunciado distinto. Por tanto el contenido restante de 2.3.F es analítico puro y RH-neutral.
+is **manifestly positive at every λ, whether RH holds or not**. Its eigenvalues `e_k = ε_k − ε_0 > 0`.
+2.3.F-Loc is the statement about the **ratios** `(e_k)/(e_1) → k(k+2)` (Doob-shifted form)
+— an **unconditional** spectral question about `G_λ`. The wall (12.1) is the **sign** of `ε_0`: a
+different statement. Hence the remaining content of 2.3.F is pure analysis and RH-neutral.
 
-## El mecanismo de cierre (identificado y demostrado, E85)
+## The closure mechanism (identified and proved, E85)
 
-**(i) `G_λ` es, en su marco de Lanczos intrínseco, una Jacobi de coeficientes ACOTADOS O(1).**
-Lanczos exacto sobre `A` (N1/E79) reproduce el espectro completo (la escalera `(k+1)²`, rep_err=0).
-Los coeficientes son acotados y **period-2** (acoplamiento de paridad): `α ≈ [0.79, 3.69, 0.85, 3.68,…]`.
-**Boundedness uniforme en λ verificado (E85, B0):** `max|A_ij| = 4.25, 4.77, 5.71, 4.50` para
-λ=9,13,17,21 — **se queda O(1), NO crece como λ**. Crucial: el balance `ARCH=PRIME` mantiene el
-operador acotado (la suma cruda `Σ Λ(n)n^{−1/2} ~ 2λ` divergería; el balance la cancela). Esta
-acotación es **incondicional** (propiedad de las entradas de la forma de Weil).
+**(i) `G_λ` is, in its intrinsic Lanczos frame, a Jacobi operator with BOUNDED O(1) coefficients.**
+Exact Lanczos on `A` (N1/E79) reproduces the full spectrum (the `(k+1)²` ladder, rep_err=0).
+The coefficients are bounded and **period-2** (parity coupling): `α ≈ [0.79, 3.69, 0.85, 3.68,…]`.
+**Uniform boundedness in λ verified (E85, B0):** `max|A_ij| = 4.25, 4.77, 5.71, 4.50` for
+λ=9,13,17,21 — **stays O(1), does NOT grow like λ**. Crucially: the `ARCH=PRIME` balance keeps the
+operator bounded (the raw sum `Σ Λ(n)n^{−1/2} ~ 2λ` would diverge; the balance cancels it). This
+boundedness is **unconditional** (a property of the entries of the Weil form).
 
-**(ii) Extremos Dirichlet** (Lema 2.3.F-Box, **probado**, E20): el time-limiting fuerza `H¹_0`.
+**(ii) Dirichlet ends** (Lemma 2.3.F-Box, **proved**, E20): time-limiting forces `H¹_0`.
 
-**(iii) Una Jacobi acotada con extremos Dirichlet tiene, genéricamente, borde de banda
-CUADRÁTICO** ⟹ `(e_k − e_0)/(e_1 − e_0) → k(k+2)`. **DEMOSTRADO en E85 (T3):** construyendo la
-Jacobi period-2 LÍMITE con SOLO los coeficientes **promediados** del bulk (`a_par, a_impar, b`
-constantes) sobre la cadena finita con Dirichlet, los ratios desplazados salen:
+**(iii) A bounded Jacobi operator with Dirichlet ends generically has a QUADRATIC band
+edge** ⟹ `(e_k − e_0)/(e_1 − e_0) → k(k+2)`. **PROVED in E85 (T3):** building the
+LIMIT period-2 Jacobi with ONLY the **averaged** bulk coefficients (`a_even, a_odd, b`
+constants) on the finite chain with Dirichlet ends, the shifted ratios come out as:
 
-| λ | T3 (solo promedios) | target k(k+2) |
+| λ | T3 (averages only) | target k(k+2) |
 |---|---|---|
 | 9  | [0, 1, 2.64, 4.88, 7.66, 10.91] | [0, 1, 2.667, 5, 8, 11.667] |
 | 13 | [0, 1, 2.66, 4.95, 7.85, 11.32] | |
 | 17 | [0, 1, 2.65, 4.90, 7.73, 11.07] | |
 | 21 | [0, 1, 2.66, 4.97, 7.91, 11.47] | |
 
-La escalera se reproduce **a partir de los promedios solamente** (a ~2–4%, con el undershoot la
-corrección de cadena finita `O((k/M)⁴) → 0`). El "suavizado" running-mean crudo (T2) la rompe
-—porque introduce un gradiente espurio—; el **límite period-2 limpio (T3) es la homogeneización
-correcta y funciona.**
+The ladder is reproduced **from the averages alone** (to ~2–4%, with the undershoot the
+finite-chain correction `O((k/M)⁴) → 0`). The crude running-mean "smoothing" (T2) breaks
+it —because it introduces a spurious gradient—; the **clean period-2 limit (T3) is the correct
+homogenization and works.**
 
-## Por qué esto es RH-neutral (el argumento decisivo)
+## Why this is RH-neutral (the decisive argument)
 
-El borde de banda cuadrático es **genérico** para *cualquier* Jacobi acotada: los modos bajos de
-borde de banda tienen longitud de onda `~ M` (largo de la cadena) `≫ 1` (espaciado), así que por
-**homogeneización** solo ven los coeficientes **promediados (Cesàro)**, no las fluctuaciones.
-**La escalera NO se puede afinar con RH** — vale para todo operador de Jacobi acotado con extremos
-Dirichlet. La aritmética solo debe aportar (i) que el operador sea asintóticamente Jacobi acotada
-[incondicional, verificado] y (ii) Dirichlet [probado]. Por eso E84 falló (suavizar los primos
-rompía el balance/marginalidad = el SIGNO), mientras E85 funciona (suaviza la Jacobi del operador
-ya-positivo `G_λ` = la FORMA).
+The quadratic band edge is **generic** for *any* bounded Jacobi operator: the low band-edge
+modes have wavelength `~ M` (chain length) `≫ 1` (spacing), so by **homogenization** they only
+see the **averaged (Cesàro)** coefficients, not the fluctuations.
+**The ladder CANNOT be fine-tuned by RH** — it holds for every bounded Jacobi operator with
+Dirichlet ends. Arithmetic only needs to supply (i) that the operator is asymptotically a bounded
+Jacobi operator [unconditional, verified] and (ii) Dirichlet [proved]. That is why E84 failed
+(smoothing the primes broke the balance/marginality = the SIGN), while E85 works (it smooths
+the Jacobi operator of the already-positive `G_λ` = the FORM).
 
-## Estado: la ruta de cierre, con lo que falta RH-neutral y estándar
+## Status: the closure route, with what RH-neutral and standard pieces remain
 
-**2.3.F-Loc queda reducido a tres lemas, todos RH-neutrales, ninguno el muro:**
-1. **Acotación uniforme** `sup_λ max_{ij}|A_ij| < ∞` (⟹ Jacobi intrínseca acotada). *Numéricamente
-   verificado (O(1) hasta λ=21).* Falta la cota analítica incondicional desde la fórmula explícita.
-2. **No-degeneración del borde de banda** (mínimo cuadrático, no cuártico). *Numéricamente
-   confirmado (escalera `k(k+2)`, no `k⁴`).* Falta: curvatura del símbolo `> 0`.
-3. **Homogeneización de borde de banda** (los modos bajos ven solo el promedio Cesàro). *Demostrado
-   numéricamente (T3).* Es teoría estándar (Sturm–Liouville / efecto de masa efectiva), falta
-   redactarla.
+**2.3.F-Loc is reduced to three lemmas, all RH-neutral, none the wall:**
+1. **Uniform boundedness** `sup_λ max_{ij}|A_ij| < ∞` (⟹ bounded intrinsic Jacobi). *Numerically
+   verified (O(1) up to λ=21).* The unconditional analytic bound from the explicit formula is still needed.
+2. **Band-edge non-degeneracy** (quadratic minimum, not quartic). *Numerically
+   confirmed (`k(k+2)` ladder, not `k⁴`).* Needed: symbol curvature `> 0`.
+3. **Band-edge homogenization** (the low modes see only the Cesàro average). *Proved
+   numerically (T3).* It is standard theory (Sturm–Liouville / effective-mass effect), still
+   needs to be written up.
 
-**Ninguno de los tres toca el signo `ε_0` (el muro).** Esto es un avance material respecto del crux
-previo ("portadora θ afín / asintótica prolato-Sonin del balance exacto", que se *sentía*
-entrelazado con el muro): ahora 2.3.F-Loc es **teoría espectral estándar de una Jacobi acotada**,
-RH-neutral por construcción (R1) y con el mecanismo **demostrado** (E85 T3). El cierre completo
-requiere redactar (1)–(3) — análisis estándar e incondicional, **nuestro, no de Connes/Consani.**
+**None of the three touches the sign `ε_0` (the wall).** This is material progress relative to the
+previous crux ("affine θ carrier / prolate-Sonin asymptotics of the exact balance", which *felt*
+entangled with the wall): now 2.3.F-Loc is **standard spectral theory of a bounded Jacobi
+operator**, RH-neutral by construction (R1) and with the mechanism **proved** (E85 T3). The full
+closure requires writing up (1)–(3) — standard, unconditional analysis, **ours, not Connes/Consani's.**
 
 ---
 
-## CORRECCIÓN FRANCA (2026-06-25, posterior) — el Lema 1 NO es RH-neutral
+## FRANK CORRECTION (later) — Lemma 1 is NOT RH-neutral
 
-Al **intentar probar el Lema 1** (acotación) en vez de solo verificarlo, descompuse la entrada:
-`A_ij = (∫e^{-u/2}q_ij − WR_ij)[acotado] − (PRIME − PRIME_smooth)_ij[fluctuación de CEROS]`.
-El segundo término **es la suma sobre ceros** (fórmula explícita). Medido: **CRECE con λ**
-(max|fluct| = 2.78, 3.59, 4.06, 3.66 en λ=7,11,15,21). Cotas analíticas:
-- incondicional (dVP, `|ψ−t|≪t e^{−c√log t}`): **DIVERGE** (~λ/polylog);
-- incluso con RH (`|ψ−t|≪√t log²t`): **DIVERGE** (~log³λ);
-- la acotación real necesita la **cancelación oscilatoria de `Σ_ρ ĝ(γ_ρ)`** = maquinaria
-  de Branges/Sonin = **el muro**.
-⟹ **El Lema 1, apenas se intenta DEMOSTRAR (no solo verificar num.), reconecta con el control de
-ceros = el muro.** R10 sobre-afirmó al llamarlo "análisis estándar RH-neutral". El mecanismo de
-borde de banda (E85) sigue siendo correcto y útil como ENTENDIMIENTO, pero NO da un cierre
-incondicional vía Lema 1. Ver R11 (ángulo Weyl/homogeneización) para el intento siguiente.
+When **attempting to prove Lemma 1** (boundedness) instead of merely verifying it, I decomposed the entry:
+`A_ij = (∫e^{-u/2}q_ij − WR_ij)[bounded] − (PRIME − PRIME_smooth)_ij[ZERO fluctuation]`.
+The second term **is the sum over zeros** (explicit formula). Measured: it **GROWS with λ**
+(max|fluct| = 2.78, 3.59, 4.06, 3.66 at λ=7,11,15,21). Analytic bounds:
+- unconditional (dVP, `|ψ−t|≪t e^{−c√log t}`): **DIVERGES** (~λ/polylog);
+- even under RH (`|ψ−t|≪√t log²t`): **DIVERGES** (~log³λ);
+- the real bound needs the **oscillatory cancellation of `Σ_ρ ĝ(γ_ρ)`** = de Branges/Sonin
+  machinery = **the wall**.
+⟹ **Lemma 1, as soon as one tries to PROVE it (not just verify it numerically), reconnects with zero
+control = the wall.** R10 overstated by calling it "RH-neutral standard analysis". The band-edge
+mechanism (E85) remains correct and useful as UNDERSTANDING, but does NOT give an unconditional
+closure via Lemma 1. See R11 (Weyl angle/homogenization) for the next attempt.

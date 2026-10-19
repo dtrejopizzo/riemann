@@ -1,6 +1,5 @@
 # P75.016 - Final ledger
 
-Date: 2026-07-16.
 
 ## Completed work
 

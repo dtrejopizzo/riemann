@@ -1,6 +1,5 @@
 # E73.293 - Two-symbol Loewner normal form
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

@@ -1,6 +1,6 @@
 # P123.076 — Complete scalar Tate self-tensor via a continuous Koszul model
 
-Date: 2026-09-06. Status: PROVED over the scalar rapid label algebra D_S.
+Status: PROVED over the scalar rapid label algebra D_S.
 Comparison with the full source self-tensor remains a separate problem.
 
 Write S_f={p_1,...,p_r}, r>=1, and identify a label with its exponent

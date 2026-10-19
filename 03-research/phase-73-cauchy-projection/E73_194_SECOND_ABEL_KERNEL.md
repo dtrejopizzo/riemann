@@ -1,6 +1,5 @@
 # E73.194 - Second Abel kernel for balanced packets
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

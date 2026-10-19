@@ -231,14 +231,14 @@ open:      whether the L=4/L=6 blowup is a maxn/prime-cutoff artifact or a
            proposed in Section 6.1); whether a better-chosen taper (built on
            the C3 family) can convert BOUNDED-KERNEL-RESIDUAL into genuine
            decay at larger L; mu_N -> 0 itself (Point 1) remains fully OPEN.
-live:      Section 6 recommendations, none started this session.
+live:      Section 6 recommendations, none started yet.
 ```
 
 ---
 
-## 10. Combined status of Point 1 (`mu_N -> 0`) across this session
+## 10. Combined status of Point 1 (`mu_N -> 0`) across this phase
 
-Three real, independent mechanisms were tested against Point 1 this session,
+Three real, independent mechanisms were tested against Point 1 in this phase,
 each producing an candid, verified, negative or inconclusive result — not a
 closure:
 

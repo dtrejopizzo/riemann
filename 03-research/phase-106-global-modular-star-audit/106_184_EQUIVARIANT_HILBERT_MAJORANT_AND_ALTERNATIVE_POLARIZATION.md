@@ -47,8 +47,8 @@ Then \(U_t\) preserves \(\Omega\).  A positive polarization independent
 of Rosati is a real-linear operator \(J'\) such that
 
 \[
- (J')^2=-I,qquad
- \Omega(J'u,J'v)=\Omega(u,v),qquad
+ (J')^2=-I,\qquad
+ \Omega(J'u,J'v)=\Omega(u,v),\qquad
  \Omega(u,J'u)>0\quad(u\ne0),                               \tag{5}
 \]
 
@@ -91,7 +91,7 @@ Alternation implies
 Consequently \(-A^2=A^*A\) is positive and boundedly invertible.  Put
 
 \[
- |A|=(-A^2)^{1/2},qquad
+ |A|=(-A^2)^{1/2},\qquad
  \boxed{J'=A|A|^{-1}.}                                      \tag{10}
 \]
 
@@ -112,7 +112,7 @@ Since \(A\) is skew-adjoint, it is normal and commutes with \(|A|\).
 Therefore
 
 \[
- (J')^2=A^2|A|^{-2}=-I,qquad (J')^*=-J',qquad (J')^*J'=I. \tag{12}
+ (J')^2=A^2|A|^{-2}=-I,\qquad (J')^*=-J',\qquad (J')^*J'=I. \tag{12}
 \]
 
 Thus \(J'\) is an orthogonal complex structure.  Using

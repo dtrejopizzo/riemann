@@ -1,6 +1,5 @@
 # E73.262 - UNIF-ETA frontier and prior audit
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

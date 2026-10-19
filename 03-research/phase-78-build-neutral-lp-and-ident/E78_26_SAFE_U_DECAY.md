@@ -1,6 +1,6 @@
 # E78.26 - `SAFE-U-WEIGHTED-MONOTONICITY` is strict decay of `A_N = N Delta safe_u_N`
 
-**Run:** 2026-07-18.  
+**Run:**
 **Scope:** IDENT, fixed-`L` finite front.
 
 ## 1. Purpose

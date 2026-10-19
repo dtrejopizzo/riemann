@@ -1,40 +1,40 @@
-# 104_87 — Sección finita de Nyman, inversión de `max` y cola de Möbius
+# 104_87 — Finite Nyman section, `max` inversion, and Möbius tail
 
-**Resultado.** La identidad de inversión divisora sí da una cancelación
-exacta para el residual de Nyman construido con los coeficientes de Möbius:
-el residual se anula en todo el intervalo macroscópico \((1/N,1]\). Su
-norma completa queda concentrada en \((0,1/N]\), donde admite una serie
-positiva exacta. En el primer bloque de esa serie aparece, sin pérdidas, un
-incremento centrado de la función de Mertens.
+**Result.** The divisor inversion identity does give an exact cancellation
+for the Nyman residual built with the Möbius coefficients: the residual
+vanishes on the whole macroscopic interval \((1/N,1]\). Its full norm
+remains concentrated on \((0,1/N]\), where it admits an exact positive
+series. In the first block of that series there appears, without loss, a
+centered increment of the Mertens function.
 
-Más precisamente, si
+More precisely, if
 
 \[
  g_N=\sum_{k\le N}{\mu(k)\over k},\qquad
  b_{k,N}=\mu(k)-Ng_N\mathbf 1_{\{k=N\}},                 \tag{1}
 \]
 
-entonces \(\sum_{k\le N}b_{k,N}/k=0\) y el residual
+then \(\sum_{k\le N}b_{k,N}/k=0\) and the residual
 
 \[
  \mathcal R_N(x)=1+\sum_{k\le N}b_{k,N}
        \left\{{1\over kx}\right\}                       \tag{2}
 \]
 
-satisface
+satisfies
 
 \[
  \boxed{\mathcal R_N(x)=0\quad(1/N<x\le1).}             \tag{3}
 \]
 
-Poniendo
+Setting
 
 \[
  R_N(m)=1-\sum_{k\le N}b_{k,N}\left\lfloor{m\over k}\right\rfloor,
                                                                     \tag{4}
 \]
 
-se tiene la identidad de norma
+we have the norm identity
 
 \[
  \boxed{
@@ -42,13 +42,13 @@ se tiene la identidad de norma
  =\sum_{m=N}^{\infty}{R_N(m)^2\over m(m+1)}.}           \tag{5}
 \]
 
-En particular, si \(M(y)=\sum_{k\le y}\mu(k)\), entonces
+In particular, if \(M(y)=\sum_{k\le y}\mu(k)\), then
 
 \[
  \boxed{R_N(m)=M(m)-M(N)+Ng_N\quad(N\le m<2N)}          \tag{6}
 \]
 
-y por tanto
+and therefore
 
 \[
  \boxed{
@@ -56,61 +56,61 @@ y por tanto
  \{M(m)-M(N)+Ng_N\}^2.}                                \tag{7}
 \]
 
-Así, la convergencia de este aproximante explícito exigiría la condición
-necesaria
+Thus, convergence of this explicit approximant would require the
+necessary condition
 
 \[
  \sum_{m=N}^{2N-1}\{M(m)-M(N)+Ng_N\}^2=o(N^2),         \tag{8}
 \]
 
-es decir, tamaño cuadrático medio \(o(\sqrt N)\) en el primer bloque.
-PNT/Vinogradov--Korobov no alcanza esa escala. La inversión tridiagonal del
-kernel \(1/\max(m,n)\) no mejora (5): es exactamente la operación que
-convierte los coeficientes del Dirichlet residual en las sumas parciales
-\(R_N(m)\).
+that is, mean-square size \(o(\sqrt N)\) in the first block.
+PNT/Vinogradov--Korobov does not reach that scale. The tridiagonal
+inversion of the kernel \(1/\max(m,n)\) does not improve (5): it is exactly
+the operation that converts the coefficients of the Dirichlet residual
+into the partial sums \(R_N(m)\).
 
-El documento no afirma que (8) sea suficiente, ni que falle para los
-Möbius ordinarios. Prueba que la telescopía divisora, por sí sola, no da la
-cota superior que cerraría Nyman. Para coeficientes optimizados, demostrar
-que el ínfimo de las normas tiende a cero sigue siendo el criterio de
-Nyman--Báez-Duarte y, por tanto, RH. No se prueba Deep-\(\Lambda\), A1 ni
-RH.
+The document does not claim that (8) is sufficient, nor that it fails for
+the ordinary Möbius coefficients. It proves that divisor telescoping, by
+itself, does not give the upper bound that would close Nyman. For
+optimized coefficients, proving that the infimum of the norms tends to
+zero remains the Nyman--Báez-Duarte criterion and hence RH. Neither
+Deep-\(\Lambda\), A1, nor RH is proved.
 
 ---
 
-## 1. Forma de pisos para un polinomio de Dirichlet
+## 1. Floor form for a Dirichlet polynomial
 
-Sea
+Let
 
 \[
  A(s)=\sum_{k\le N}{a_k\over k^s},\qquad
  \sum_{k\le N}{a_k\over k}=0.                           \tag{9}
 \]
 
-El residual de Hardy--Nyman es
+The Hardy--Nyman residual is
 
 \[
  f_A(s)={1-\zeta(s)A(s)\over s}.                        \tag{10}
 \]
 
-La transformada de Mellin de
+The Mellin transform of
 
 \[
  \mathcal R_A(x)=1+\sum_{k\le N}a_k
        \left\{{1\over kx}\right\},\qquad 0<x<1,       \tag{11}
 \]
 
-es (10). En efecto, para \(\Re s>1\),
+is (10). Indeed, for \(\Re s>1\),
 
 \[
  \int_0^1\left\{{1\over kx}\right\}x^{s-1}\,dx
  ={1\over k(s-1)}-{\zeta(s)\over sk^s},                \tag{12}
 \]
 
-y el primer término se cancela al sumar por (9). La identidad se prolonga
-al espacio de Hardy por continuidad.
+and the first term cancels when summed by (9). The identity extends
+to the Hardy space by continuity.
 
-Si \(m\le1/x<m+1\), (9) convierte (11) en
+If \(m\le1/x<m+1\), (9) turns (11) into
 
 \[
  \mathcal R_A(x)=R_A(m),\qquad
@@ -118,7 +118,7 @@ Si \(m\le1/x<m+1\), (9) convierte (11) en
                                                                     \tag{13}
 \]
 
-Por consiguiente,
+Consequently,
 
 \[
  \boxed{
@@ -126,13 +126,13 @@ Por consiguiente,
  =\sum_{m\ge1}{|R_A(m)|^2\over m(m+1)}.}               \tag{14}
 \]
 
-La última igualdad usa solamente que
-\((1/(m+1),1/m]\) tiene longitud \(1/[m(m+1)]\).
+The last equality uses only that
+\((1/(m+1),1/m]\) has length \(1/[m(m+1)]\).
 
-## 2. La elección Möbius y la cancelación del prefijo
+## 2. The Möbius choice and cancellation of the prefix
 
-La elección (1) satisface la restricción (9). Para \(m<N\), el corrector
-en \(k=N\) no contribuye y la inversión de Möbius da
+The choice (1) satisfies constraint (9). For \(m<N\), the corrector
+at \(k=N\) does not contribute and Möbius inversion gives
 
 \[
  \sum_{k\le N}b_{k,N}\left\lfloor{m\over k}\right\rfloor
@@ -140,45 +140,45 @@ en \(k=N\) no contribuye y la inversión de Möbius da
  =1.                                                     \tag{15}
 \]
 
-Esto prueba (3). Para \(m\ge N\), (4) se escribe
+This proves (3). For \(m\ge N\), (4) is written
 
 \[
  R_N(m)=1-\sum_{k\le N}\mu(k)\left\lfloor{m\over k}\right\rfloor
  +Ng_N\left\lfloor{m\over N}\right\rfloor.           \tag{16}
 \]
 
-Si \(N\le m<2N\), el último piso vale uno. Al restar de la identidad
-completa
+If \(N\le m<2N\), the last floor equals one. Subtracting from the
+complete identity
 
 \[
  \sum_{k\le m}\mu(k)\left\lfloor{m\over k}\right\rfloor=1,        \tag{17}
 \]
 
-los términos con \(N<k\le m\) tienen piso uno. Luego
+the terms with \(N<k\le m\) have floor one. Hence
 
 \[
  R_N(m)=\sum_{N<k\le m}\mu(k)+Ng_N
        =M(m)-M(N)+Ng_N,                                 \tag{18}
 \]
 
-que prueba (6). Como \(m(m+1)<4N^2\) en ese bloque, (5) implica (7).
+which proves (6). Since \(m(m+1)<4N^2\) in that block, (5) implies (7).
 
-## 3. El kernel `max` y su inversa exacta
+## 3. The `max` kernel and its exact inverse
 
-Sea \(r=(r_1,\ldots,r_M)^T\), \(S_j=\sum_{m\le j}r_m\), y
+Let \(r=(r_1,\ldots,r_M)^T\), \(S_j=\sum_{m\le j}r_m\), and
 
 \[
  K_M(i,j)={1\over\max(i,j)}.                            \tag{19}
 \]
 
-Partiendo \((0,1]\) en intervalos recíprocos se obtiene
+Partitioning \((0,1]\) into reciprocal intervals gives
 
 \[
  r^TK_Mr
  =\sum_{j=1}^{M-1}{S_j^2\over j(j+1)}+{S_M^2\over M}. \tag{20}
 \]
 
-En particular, \(K_M^{-1}\) es tridiagonal:
+In particular, \(K_M^{-1}\) is tridiagonal:
 
 \[
  (K_M^{-1})_{j,j}=
@@ -187,47 +187,48 @@ En particular, \(K_M^{-1}\) es tridiagonal:
  (K_M^{-1})_{j,j+1}=(K_M^{-1})_{j+1,j}=-j(j+1),         \tag{21}
 \]
 
-y las demás entradas son cero. La inversión no crea una reserva: (20)
-muestra que solo cambia entre los incrementos \(r_j\) y sus primitivas
-\(S_j\).
+and the remaining entries are zero. The inversion creates no reserve: (20)
+shows that it only changes between the increments \(r_j\) and their
+primitives \(S_j\).
 
-Para el residual de (10), los coeficientes de Dirichlet son
+For the residual of (10), the Dirichlet coefficients are
 
 \[
  r_A(m)=\mathbf1_{\{m=1\}}-
         \sum_{\substack{k\le N\\k\mid m}}a_k,         \tag{22}
 \]
 
-y su suma parcial es precisamente (13). Así, el límite de (20) es (14).
-No queda un término de borde omitido por pasar a la inversa tridiagonal.
+and its partial sum is precisely (13). Thus, the limit of (20) is (14).
+No boundary term is omitted by passing to the tridiagonal inverse.
 
-## 4. Escala del input que falta
+## 4. Scale of the missing input
 
-De PNT con región libre de ceros de tipo Vinogradov--Korobov se obtiene,
-para alguna constante efectiva \(c>0\),
+From PNT with a Vinogradov--Korobov-type zero-free region one obtains,
+for some effective constant \(c>0\),
 
 \[
  M(x),\;xg_x
  \ll x\exp\{-c(\log x)^{3/5}(\log\log x)^{-1/5}\}.     \tag{23}
 \]
 
-Aplicar (23) término a término en (7) solo produce la escala
+Applying (23) term by term in (7) only produces the scale
 
 \[
  N\exp\{-2c(\log N)^{3/5}(\log\log N)^{-1/5}\},        \tag{24}
 \]
 
-que no tiende a cero. Esto no demuestra que el miembro izquierdo de (7)
-sea grande: demuestra que el input PNT puntual no certifica (8).
+which does not tend to zero. This does not prove that the left-hand side
+of (7) is large: it proves that the pointwise PNT input does not certify
+(8).
 
-Para coeficientes arbitrarios sujetos a (9), un cero
-\(\rho=\beta+i\gamma\), \(\beta>1/2\), impone por evaluación de Hardy
+For arbitrary coefficients subject to (9), a zero
+\(\rho=\beta+i\gamma\), \(\beta>1/2\), imposes, by Hardy evaluation,
 
 \[
  \|f_A\|_{H^2}^2\ge {2\beta-1\over|\rho|^2}.           \tag{25}
 \]
 
-Por tanto una construcción de coeficientes con \(\liminf\|f_A\|=0\)
-excluiría todos los ceros derechos y probaría RH. Las ecuaciones
-(3)--(8) son una localización exacta de ese problema para el truncado
-Möbius; no constituyen tal construcción.
+Hence a construction of coefficients with \(\liminf\|f_A\|=0\)
+would exclude all right-hand zeros and prove RH. Equations
+(3)--(8) are an exact localization of that problem for the truncated
+Möbius case; they do not constitute such a construction.

@@ -1,13 +1,13 @@
-# 104_107 — Bloques de Fejér y gate exacto del transporte de fase
+# 104_107 — Fejér blocks and the exact phase-transport gate
 
-**Pregunta.** ¿La relajación por bloques de `104_67`, aplicada antes de
-transportar la cota de fase de `104_41` desde \(a\geq4\) hasta \(a=1\),
-reduce el costo lo suficiente para controlar el defecto de residuos de
+**Question.** Does the block relaxation of `104_67`, applied before
+transporting the phase bound of `104_41` from \(a\geq4\) down to
+\(a=1\), reduce the cost enough to control the residue defect of
 `104_33`?
 
-**Resultado.** El suavizado correcto sí produce una ganancia fuerte y
-uniforme en el semiplano Euler. Sobre \(2L-1\) grados consecutivos, un
-promedio triangular centrado en \(N\) satisface
+**Result.** The correct smoothing does produce a strong, uniform gain in
+the Euler half-plane. Over \(2L-1\) consecutive degrees, a triangular
+average centered at \(N\) satisfies
 
 \[
  \boxed{
@@ -16,10 +16,11 @@ promedio triangular centrado en \(N\) satisface
        +2\left(1-{1\over L^2}\right),\qquad a\geq4.}       \tag{1}
 \]
 
-En particular, para \(N\asymp L\), el lado derecho es una constante, en
-vez de la cota \(3n\) grado a grado. No se pierde ningún borde en (1).
+In particular, for \(N\asymp L\), the right-hand side is a constant,
+instead of the degree-by-degree bound \(3n\). No boundary term is lost
+in (1).
 
-Sin embargo, el filtro evaluado en un residuo interior es exactamente
+However, the filter evaluated at an interior residue is exactly
 
 \[
  T_{N,L}(w)+T_{N,L}(w^{-1})-2,
@@ -28,38 +29,38 @@ Sin embargo, el filtro evaluado en un residuo interior es exactamente
  \left({1-w^L\over L(1-w)}\right)^2.                       \tag{2}
 \]
 
-Para \(|w|<1\), el segundo sumando de (2) tiene tamaño
+For \(|w|<1\), the second summand of (2) has size
 
 \[
  { |1-w^L|^2\over L^2|1-w|^2}\,|w|^{-N-L+1},              \tag{3}
 \]
 
-y nunca se anula: los únicos ceros de \(1-w^L\) están sobre
-\(|w|=1\). Así el promedio que reduce la variación de frontera a
-\(O(N/L+1)\) conserva, e incluso localiza en el extremo alto, la carga
-exponencial de todo cero con parte real \(>1/2\).
+and it never vanishes: the only zeros of \(1-w^L\) lie on
+\(|w|=1\). So the averaging that reduces the boundary variation to
+\(O(N/L+1)\) preserves — and even localizes at the high end — the
+exponential load of every zero with real part \(>1/2\).
 
-El cuarteto racional \(w=i/2\) da ambos signos con tamaño
-\(\asymp2^{N+L}/L^2\), mientras deja idéntica la fase sobre la línea
-crítica. Por tanto queda refutado el transporte unilateral del promedio
-de bloques usando solo la cota de fase y la homotopía. La desigualdad
-correspondiente para los pesos literales \(\Lambda(m)\) sigue siendo un
-teorema aritmético nuevo de fuerza RH; este documento no la prueba, ni
-prueba A1 o RH.
+The rational quartet \(w=i/2\) gives both signs of size
+\(\asymp2^{N+L}/L^2\), while leaving the phase on the critical line
+unchanged. Hence the one-sided transport of the block average, using
+only the phase bound and the homotopy, is refuted. The corresponding
+inequality for the literal weights \(\Lambda(m)\) remains a new
+arithmetic theorem of RH strength; this document does not prove it, nor
+does it prove A1 or RH.
 
 ---
 
-## 1. Dos promedios consecutivos y por qué se usa el triangular
+## 1. Two consecutive averages and why the triangular one is used
 
-Sea, como en `104_41`,
+As in `104_41`, let
 
 \[
  W_n(t)=2-2\cos(n\theta(t)),\qquad
  {-1/2+it\over1/2+it}=e^{i\theta(t)},\qquad t>0,           \tag{4}
 \]
 
-donde \(\theta\) decrece de \(\pi\) a \(0\). Para el promedio uniforme
-de \(L\) grados \(N,\ldots,N+L-1\),
+where \(\theta\) decreases from \(\pi\) to \(0\). For the uniform average
+of \(L\) degrees \(N,\ldots,N+L-1\),
 
 \[
  W^{\rm unif}_{N,L}(\theta)
@@ -67,7 +68,7 @@ de \(L\) grados \(N,\ldots,N+L-1\),
  \cos\left({(2N+L-1)\theta\over2}\right).                 \tag{5}
 \]
 
-Su variación exacta es
+Its exact variation is
 
 \[
  \mathrm{TV}_{\mathbb R}(W^{\rm unif}_{N,L})
@@ -75,7 +76,7 @@ Su variación exacta es
  \left|\sum_{n=N}^{N+L-1}n\sin(n\theta)\right|d\theta.   \tag{6}
 \]
 
-Ortogonalidad y Cauchy--Schwarz dan
+Orthogonality and Cauchy–Schwarz give
 
 \[
  \mathrm{TV}_{\mathbb R}(W^{\rm unif}_{N,L})
@@ -83,17 +84,17 @@ Ortogonalidad y Cauchy--Schwarz dan
        \left(\sum_{n=N}^{N+L-1}n^2\right)^{1/2}.           \tag{7}
 \]
 
-Esto mejora \(O(N)\) a \(O(N/\sqrt L)\), pero no es la escala óptima
-para un bloque largo.
+This improves \(O(N)\) to \(O(N/\sqrt L)\), but it is not the optimal
+scale for a long block.
 
-Para obtenerla, suponga \(N\geq L\geq1\) y ponga
+To get the optimal scale, suppose \(N\geq L\geq1\) and set
 
 \[
  \alpha_{L,k}:={L-|k|\over L^2},\qquad |k|<L,
  \qquad \sum_{|k|<L}\alpha_{L,k}=1.                       \tag{8}
 \]
 
-Defina
+Define
 
 \[
  \begin{aligned}
@@ -104,9 +105,9 @@ Defina
  \end{aligned}                                             \tag{9}
 \]
 
-Estos son promedios genuinos de los grados consecutivos
-\(N-L+1,\ldots,N+L-1\); no aparece ningún coeficiente de signo
-negativo. La transformada exacta de (8) es
+These are genuine averages of the consecutive degrees
+\(N-L+1,\ldots,N+L-1\); no coefficient of negative sign appears. The
+exact transform of (8) is
 
 \[
  H_L(\theta):=\sum_{|k|<L}\alpha_{L,k}e^{ik\theta}
@@ -114,7 +115,7 @@ negativo. La transformada exacta de (8) es
                                                                \tag{10}
 \]
 
-Por tanto
+Hence
 
 \[
  \boxed{
@@ -122,46 +123,46 @@ Por tanto
  =2-2H_L(\theta)\cos(N\theta).}                           \tag{11}
 \]
 
-En particular \(W^\triangle_{N,L}\geq0\), por ser un promedio de los
-\(W_n\), y \(W^\triangle_{N,L}(t)\to0\) cuando
-\(|t|\to\infty\). En el otro extremo,
+In particular \(W^\triangle_{N,L}\geq0\), being an average of the
+\(W_n\), and \(W^\triangle_{N,L}(t)\to0\) as
+\(|t|\to\infty\). At the other end,
 
 \[
  W^\triangle_{N,L}(0)
  =\begin{cases}
- 2,&L\text{ par},\\
- 2-2(-1)^N/L^2,&L\text{ impar}.
+ 2,&L\text{ even},\\
+ 2-2(-1)^N/L^2,&L\text{ odd}.
  \end{cases}                                               \tag{12}
 \]
 
-La ecuación (12) se registra para evitar desechar el borde \(t=0\) al
-partir la integral en dos semirrectas. En la integral sobre toda
-\(\mathbb R\) no es un borde; los únicos bordes de la integración por
-partes están en \(\pm\infty\), donde (11) se anula.
+Equation (12) is recorded so as not to discard the boundary \(t=0\) when
+splitting the integral into two half-lines. In the integral over all of
+\(\mathbb R\) it is not a boundary; the only boundaries of the
+integration by parts are at \(\pm\infty\), where (11) vanishes.
 
 ---
 
-## 2. Variación total del bloque de Fejér
+## 2. Total variation of the Fejér block
 
-De (11) y de la monotonía de \(\theta(t)\) en cada semirrecta se obtiene
-la identidad exacta
+From (11) and the monotonicity of \(\theta(t)\) on each half-line one
+obtains the exact identity
 
 \[
  \boxed{
  \mathrm{TV}_{\mathbb R}(W^\triangle_{N,L})
  =4\int_0^\pi
-   \left|{d\over d\theta}{H_L(\theta)\cos(N\theta)\}
+   \left|{d\over d\theta}\{H_L(\theta)\cos(N\theta)\}
    \right|d\theta.}                                      \tag{13}
 \]
 
-Además,
+Moreover,
 
 \[
  \int_0^\pi H_L(\theta)d\theta={\pi\over L}.             \tag{14}
 \]
 
-Necesitamos también una cota uniforme, con constante explícita, para la
-variación de \(H_L\):
+We also need a uniform bound, with an explicit constant, for the
+variation of \(H_L\):
 
 \[
  \boxed{
@@ -169,34 +170,35 @@ variación de \(H_L\):
  \le {4\over3}\left(1-{1\over L^2}\right).}              \tag{15}
 \]
 
-Aquí están todos los lóbulos. Para probar (15), escriba
-\(x=\theta/2\). Entre dos ceros consecutivos de
-\(\sin(Lx)/\sin x=U_{L-1}(\cos x)\) hay exactamente un punto crítico:
-Rolle da uno y el grado de \(U'_{L-1}\) impide que haya más. El lóbulo
-que empieza en \(x=j\pi/L\), \(j\geq1\), tiene altura a lo sumo
+This accounts for all the lobes. To prove (15), write
+\(x=\theta/2\). Between two consecutive zeros of
+\(\sin(Lx)/\sin x=U_{L-1}(\cos x)\) there is exactly one critical point:
+Rolle's theorem gives one, and the degree of \(U'_{L-1}\) prevents there
+being more. The lobe starting at \(x=j\pi/L\), \(j\geq1\), has height at
+most
 
 \[
  {1\over L^2\sin^2(j\pi/L)}.                              \tag{16}
 \]
 
-Para \(L\) par, la identidad
+For \(L\) even, the identity
 
 \[
  \sum_{j=1}^{L/2-1}\csc^2(j\pi/L)={L^2-4\over6}           \tag{17}
 \]
 
-da (15), contando una vez la caída del lóbulo principal y dos veces cada
-lóbulo interior. Para \(L\) impar se usa
+gives (15), counting the drop of the main lobe once and each interior
+lobe twice. For \(L\) odd one uses
 
 \[
  \sum_{j=1}^{(L-1)/2}\csc^2(j\pi/L)={L^2-1\over6},        \tag{18}
 \]
 
-se retira el último sumando, que es al menos \(1\), y se añade el borde
-\(H_L(\pi)=1/L^2\). El mismo lado derecho de (15) resulta. Para \(L=1\),
-ambos lados valen cero.
+the last summand, which is at least \(1\), is removed, and the boundary
+\(H_L(\pi)=1/L^2\) is added. The same right-hand side of (15) results.
+For \(L=1\), both sides equal zero.
 
-Aplicando la regla del producto en (13), y luego (14)--(15),
+Applying the product rule in (13), and then (14)–(15),
 
 \[
  \boxed{
@@ -207,9 +209,9 @@ Aplicando la regla del producto en (13), y luego (14)--(15),
 
 ---
 
-## 3. Cota unilateral en el semiplano Euler
+## 3. One-sided bound in the Euler half-plane
 
-La identidad de fase de `104_41` es lineal en \(W_n\). Por (9),
+The phase identity of `104_41` is linear in \(W_n\). By (9),
 
 \[
  \mathcal B^\triangle_{N,L,a}
@@ -217,12 +219,12 @@ La identidad de fase de `104_41` es lineal en \(W_n\). Por (9),
  W^\triangle_{N,L}(t)d\vartheta_a(t).                     \tag{20}
 \]
 
-Para \(a\geq4\), `104_41` prueba
-\(|\vartheta_a(t)|<3\pi/4\). Integrando (20) por partes sobre toda la
-recta, los bordes de \(\pm\infty\) son cero por (11). Las posibles
-variaciones en \(t=0\) desde las dos semirrectas se cancelan porque tanto
-\(W^\triangle_{N,L}\) como la rama conjugada de la fase son continuas
-allí. De (19),
+For \(a\geq4\), `104_41` proves
+\(|\vartheta_a(t)|<3\pi/4\). Integrating (20) by parts over the whole
+line, the boundaries at \(\pm\infty\) vanish by (11). The possible
+variations at \(t=0\) from the two half-lines cancel because both
+\(W^\triangle_{N,L}\) and the conjugate branch of the phase are
+continuous there. From (19),
 
 \[
  \begin{aligned}
@@ -234,41 +236,43 @@ allí. De (19),
  \end{aligned}                                             \tag{21}
 \]
 
-que prueba (1). En particular, para \(N=2L+O(1)\), el bloque completo
-está acotado por \(3\pi+2+o(1)\). Esta es una desigualdad bilateral y,
-por tanto, contiene las dos versiones unilaterales. No se usó
+which proves (1). In particular, for \(N=2L+O(1)\), the entire block is
+bounded by \(3\pi+2+o(1)\). This is a two-sided inequality and therefore
+contains both one-sided versions. We did not use
 
 \[
  \left|\int gh\right|\leq\int|g||h|;
 \]
 
-solo la fase completa prima--polo y la variación del test combinado.
+only the full prime–pole phase and the variation of the combined test
+function.
 
-Hay una distinción lógica vinculante. La cota (21) controla la **media
-firmada** de los \(2L-1\) grados; no afirma que esos grados formen un
-bloque bueno en el sentido coeficiente a coeficiente de `104_67`. Valores
-positivos y negativos grandes pueden cancelarse dentro de la media. Para
-usar directamente el criterio de `104_67` haría falta controlar el máximo,
-la parte positiva o cada grado del bloque. Ninguna de esas operaciones es
-lineal en \(W_n\), y (21) no las estima.
+There is a binding logical distinction. Bound (21) controls the
+**signed average** of the \(2L-1\) degrees; it does not claim that these
+degrees form a good block in the coefficient-by-coefficient sense of
+`104_67`. Large positive and negative values can cancel within the
+average. To use the `104_67` criterion directly one would need to
+control the maximum, the positive part, or every single degree of the
+block. None of those operations is linear in \(W_n\), and (21) does not
+estimate them.
 
 ---
 
-## 4. Transporte exacto de los residuos del bloque
+## 4. Exact transport of the block residues
 
-Para un cero \(\rho\) con \(\Re\rho>1/2\), ponga
+For a zero \(\rho\) with \(\Re\rho>1/2\), set
 
 \[
  w=1-{1\over\rho},\qquad |w|<1.                            \tag{22}
 \]
 
-La identidad de `104_33`, sin omitir factores, es
+The identity of `104_33`, with no factors omitted, is
 
 \[
  {\mathcal F_n(w)\over\rho(\rho-1)}=w^n+w^{-n}-2.          \tag{23}
 \]
 
-La transformada algebraica de los pesos (8) vale para todo \(w\ne0,1\):
+The algebraic transform of the weights (8) holds for every \(w\ne0,1\):
 
 \[
  \begin{aligned}
@@ -278,8 +282,8 @@ La transformada algebraica de los pesos (8) vale para todo \(w\ne0,1\):
  \end{aligned}
 \]
 
-Promediando (23) se obtiene exactamente (2). Por consiguiente, la
-versión en bloques de (22) de `104_41` es
+Averaging (23) gives exactly (2). Consequently, the block version of
+(22) from `104_41` is
 
 \[
  \boxed{
@@ -288,11 +292,11 @@ versión en bloques de (22) de `104_41` es
  \{T_{N,L}(w_\rho)+T_{N,L}(w_\rho^{-1})-2\}.}             \tag{25}
 \]
 
-La suma se entiende con las mismas órbitas funcionales y el mismo límite
-simétrico que en `104_33`; el promedio es finito, así que puede
-intercambiarse con cada suma parcial. No aparece término de borde nuevo.
+The sum is understood with the same functional orbits and the same
+symmetric limit as in `104_33`; the average is finite, so it can be
+interchanged with each partial sum. No new boundary term appears.
 
-Usando (24) dos veces,
+Using (24) twice,
 
 \[
  \begin{aligned}
@@ -302,28 +306,27 @@ Usando (24) dos veces,
 \end{aligned}
 \]
 
-Si \(|w|<1\), el coeficiente de \(w^{-N-L+1}\) en (26) no es cero, pues
-\(w^L\ne1\). Su módulo es exactamente (3). Así la reducción de variación
-de (21) no produce reducción exponencial en los residuos: el extremo
-superior \(N+L-1\), cuyo peso es solo \(L^{-2}\), domina una evaluación
-fuera del círculo.
+If \(|w|<1\), the coefficient of \(w^{-N-L+1}\) in (26) is not zero,
+since \(w^L\ne1\). Its modulus is exactly (3). So the variation
+reduction of (21) produces no exponential reduction in the residues: the
+upper endpoint \(N+L-1\), whose weight is only \(L^{-2}\), dominates an
+evaluation outside the circle.
 
 ---
 
-## 5. Falsificador racional de ambos signos
+## 5. Rational falsifier of both signs
 
-Tome
+Take
 
 \[
  w={i\over2},\qquad \rho={1\over1-w}={4+2i\over5}.         \tag{27}
 \]
 
-Complete el cuarteto funcional como en `104_41`. Su polinomio es
-estrictamente positivo sobre \(\Re s=1/2\), de modo que multiplicar el
-completamiento por cualquier potencia del cuarteto no cambia la fase en
-la línea crítica.
+Complete the functional quartet as in `104_41`. Its polynomial is
+strictly positive on \(\Re s=1/2\), so multiplying the completion by any
+power of the quartet does not change the phase on the critical line.
 
-Sea \(4\mid L\) y defina
+Let \(4\mid L\) and define
 
 \[
  c_L:={(1-2^{-L})^2\over L^2},\qquad
@@ -331,93 +334,94 @@ Sea \(4\mid L\) y defina
  =c_L\,{12+16i\over25}.                                  \tag{28}
 \]
 
-Para \(N_+=2L+1\), los exponentes en (26) son \(L+2\) y \(-3L\), y
+For \(N_+=2L+1\), the exponents in (26) are \(L+2\) and \(-3L\), and
 
 \[
  \Re\{T_{N_+,L}(w)+T_{N_+,L}(w^{-1})\}
  ={12c_L\over25}\{2^{3L}-2^{-L-2}\}.                    \tag{29}
 \]
 
-Para \(N_-=2L+3\), son \(L+4\) y \(-(3L+2)\), y
+For \(N_-=2L+3\), they are \(L+4\) and \(-(3L+2)\), and
 
 \[
  \Re\{T_{N_-,L}(w)+T_{N_-,L}(w^{-1})\}
  =-{12c_L\over25}\{2^{3L+2}-2^{-L-4}\}.                 \tag{30}
 \]
 
-La contribución de Li del cuarteto al promedio es
+The Li contribution of the quartet to the average is
 
 \[
  Q^\triangle_{N,L}
  =4-2\Re\{T_{N,L}(w)+T_{N,L}(w^{-1})\},                  \tag{31}
 \]
 
-y el cambio correspondiente en \(B^\triangle_{N,L}\) es
-\(-M Q^\triangle_{N,L}\) para multiplicidad \(M\). De (29), el cambio
-es positivo y de tamaño \(\asymp M2^{3L}/L^2\); de (30), es negativo y
-del mismo tamaño. En cambio (21), con \(N_\pm/L=2+O(1/L)\), tiene un
-lado derecho menor que una constante absoluta.
+and the corresponding change in \(B^\triangle_{N,L}\) is
+\(-M Q^\triangle_{N,L}\) for multiplicity \(M\). From (29), the change
+is positive and of size \(\asymp M2^{3L}/L^2\); from (30), it is negative
+and of the same size. In contrast, (21), with \(N_\pm/L=2+O(1/L)\), has
+a right-hand side smaller than an absolute constant.
 
-Por tanto fallan **ambos** transportes candidatos
+Hence **both** candidate transports fail,
 
 \[
  B^\triangle_{N,L}\leq C,
  \qquad B^\triangle_{N,L}\geq-C,                         \tag{32}
 \]
 
-si solo se usan fase crítica, simetrías funcionales y homotopía sin el
-término (25). El cuarteto no tiene los pesos de Euler de los primos
-ordinarios; por eso (29)--(30) no refutan una desigualdad específica de
-\(\Lambda(m)\). Sí prueban que el promedio de bloques no permite
-transportar (21) por una razón de escala o por cancelación automática del
-filtro.
+if only the critical phase, functional symmetries, and the homotopy are
+used without the term (25). The quartet does not carry the Euler
+weights of the ordinary primes; that is why (29)–(30) do not refute a
+specific inequality for \(\Lambda(m)\). What they do prove is that the
+block average does not allow transporting (21) by a scaling argument or
+by automatic cancellation of the filter.
 
 ---
 
-## 6. Decisión
+## 6. Decision
 
 ```text
-probado:
-  fórmula cerrada para el promedio uniforme y su TV exacta;
-  filtro triangular positivo sobre 2L-1 grados consecutivos;
-  TV exacta como integral y cota explícita O(N/L+1);
-  cota de fase |B^triangle_{N,L,a}|=O(N/L+1), a>=4;
-  transporte exacto del filtro a cada residuo interior;
-  ausencia de ceros del multiplicador dentro del disco;
-  cuarteto racional con defectos de ambos signos ~2^(N+L)/L^2.
+proved:
+  closed formula for the uniform average and its exact TV;
+  positive triangular filter over 2L-1 consecutive degrees;
+  exact TV as an integral and explicit bound O(N/L+1);
+  phase bound |B^triangle_{N,L,a}|=O(N/L+1), a>=4;
+  exact transport of the filter to each interior residue;
+  absence of zeros of the multiplier inside the disc;
+  rational quartet with defects of both signs ~2^(N+L)/L^2.
 
-ganancia real:
-  el promedio por bloques elimina por completo el costo lineal de la
-  frontera cuando L es comparable con N.
+real gain:
+  the block average completely removes the linear boundary cost when
+  L is comparable to N.
 
-descartado:
-  que esa ganancia de frontera atenúe o cancele el defecto off-line;
-  transportar cualquiera de las dos desigualdades unilaterales de (21)
-  usando solo fase, simetría y homotopía.
+ruled out:
+  that this boundary gain attenuates or cancels the off-line defect;
+  transporting either of the two one-sided inequalities of (21) using
+  only phase, symmetry, and homotopy.
 
-sobrevive:
-  probar directamente para los pesos ordinarios Lambda(m) una cota
-  unilateral de bloques que acople P^triangle con la suma de (25).
+remains:
+  proving directly, for the ordinary weights Lambda(m), a one-sided
+  block bound that couples P^triangle with the sum in (25).
 
-no probado:
-  esa cota aritmética, el criterio de bloques, A1 o RH.
+not proved:
+  that arithmetic bound, the block criterion, A1, or RH.
 ```
 
-El resultado no es otra coordenada de energía: conserva exactamente el
-andamiaje \(a\geq4\), la fase completa, la suma de residuos y el
-falsificador de la ruta Li--Laguerre.
+The result is not another energy coordinate: it preserves exactly the
+\(a\geq4\) scaffolding, the full phase, the residue sum, and the
+falsifier of the Li–Laguerre route.
 
-## 7. Verificación reproducible
+## 7. Reproducible verification
 
-El archivo `tools/fejer_block_phase_transport_check.py` usa únicamente
-`Fraction` y racionales gaussianos. Comprueba la normalización y el
-centro de los pesos, (24), (23), (26), y las fórmulas firmadas
-(28)--(31) para múltiples \(L\). La cota analítica de variación se prueba
-en §2 y no se sustituye por muestreo.
+The file `tools/fejer_block_phase_transport_check.py` uses only
+`Fraction` and Gaussian rationals. It checks the normalization and
+centering of the weights, (24), (23), (26), and the signed formulas
+(28)–(31) for multiple values of \(L\). The analytic variation bound is
+proved in §2 and is not replaced by sampling.
 
-Se reproduce con
+Reproduce with
 
 ```bash
 cd 03-research/phase-104-unconditional-a1-closure/tools
 python3 fejer_block_phase_transport_check.py
 ```
+</content>

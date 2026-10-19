@@ -1,6 +1,6 @@
 # P123.042 — Actual normal dilation and its finite-rank relative trace
 
-Date: 2026-09-05. Status: PROVED for the local operator and eventual
+Status: PROVED for the local operator and eventual
 relative-trace identity below. The common global shadow and its mixed
 Riemann–Roch comparison remain open.
 

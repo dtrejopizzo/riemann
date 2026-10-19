@@ -1,6 +1,5 @@
 # E73.184 - High-order WR tail certificate
 
-Date: 2026-07-14.
 
 ## 1. Purpose
 

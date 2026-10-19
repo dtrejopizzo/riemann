@@ -1,8 +1,6 @@
 # Phase 4 — Pure-Mathematics Work Program: The Faithfulness of the Localized Weil Form
 
 **For:** the pure-mathematics team.
-**Prepared by:** D. A. Trejo Pizzo (with the program's computational record).
-**Date:** 2026-06.
 
 This document states, self-contained and precisely, the one mathematical question to which the
 entire computational program has reduced, and decomposes it into a dependency-ordered list of

@@ -34,7 +34,7 @@ there second-hand through the phase-39 inventory — upgraded to first-hand
 here), 113_12 section 5 (Ansatz A, Thm 5.1, R16), 114_d3_01 (the imported index
 theorems, Gap G-1).
 
-External sources, read in this session:
+External sources consulted:
 - Wei He, *Numerical cohomology for arithmetic surfaces and applications*,
   arXiv:2512.01811v2, at
   `00-references/papers-nuevos/D/arXiv-2512.01811v2/Numerical_cohomology_for_arithmetic_surfaces_and_applications.tex`.
@@ -366,8 +366,7 @@ forced — a realisation could match `s` without matching the canonical class.
 > `zeta'_{D}(0)` in terms of `D^2` — the arithmetic-surface analogue of the
 > Ray–Singer estimates; or a Noether-type formula bounding `chi_X(O_X) +
 > (1/2) log det Delta_{O_infinity}` (Wei He's Prop 3.1 (`Noe`), due to Faltings
-> and Moret-Bailly, is exactly such a formula and was **not read** in this
-> session).
+> and Moret-Bailly, is exactly such a formula and was **not read**).
 >
 > *Believed hard.* Unclear, and *interestingly* so: this is an analytic estimate
 > about a fixed Riemann surface, not a statement about zeros. It is the first
@@ -413,8 +412,7 @@ Continuing from R28 of 114_d3_01.
 
 ## 8. Verifier output
 
-Real output of `python3 114_d3_02_linear_vs_quadratic_chi.py`, run in this
-session:
+Real output of `python3 114_d3_02_linear_vs_quadratic_chi.py`:
 
 ```
 A. RR for arithmetic curves (Wei He eq. (rrc), van der Geer-Schoof) over Spec Z

@@ -1,6 +1,5 @@
 # E73.121 - Asymptotic Gate Target after the Finite Manifest
 
-Date: 2026-07-12.
 
 E73.120 gives a finite machine-checkable gate for the declared scale boxes.
 It does not prove the uniform theorem.  The remaining target is now precise:

@@ -1,6 +1,6 @@
 # P123.096 — Continuous contraction of the moving boundary diagonal
 
-Date: 2026-09-06. Status: PROVED-IN-REPOSITORY for the completed
+Status: PROVED-IN-REPOSITORY for the completed
 twisted Hochschild bar over the compact boundary corner. The comparison
 with the full-source diagonal is not inferred from degree-zero Morita
 identities alone.

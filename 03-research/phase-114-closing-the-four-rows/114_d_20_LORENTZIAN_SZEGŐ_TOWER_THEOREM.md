@@ -57,7 +57,7 @@ degree.
 Write
 
 \[
- h_n=a_n1+r_n,qquad a_n=\sqrt{1-n^{-2}},qquad r_n\perp1.
+ h_n=a_n1+r_n,\qquad a_n=\sqrt{1-n^{-2}},\qquad r_n\perp1.
 \]
 
 Then

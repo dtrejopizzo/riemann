@@ -1,6 +1,6 @@
 # P123.070 — The diagonal target has an infinite nuclear scalar retract
 
-Date: 2026-09-06. Status: PROVED for the repaired coefficient-unitized
+Status: PROVED for the repaired coefficient-unitized
 algebras with a nonempty finite prime set. This determines a constraint
 on the target realization of A.5, not a proof of its existence.
 

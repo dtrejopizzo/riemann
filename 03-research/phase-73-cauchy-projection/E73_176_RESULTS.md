@@ -1,6 +1,5 @@
 # E73.176 results - quotient packet linearity
 
-Date: 2026-07-14.
 
 Script:
 
